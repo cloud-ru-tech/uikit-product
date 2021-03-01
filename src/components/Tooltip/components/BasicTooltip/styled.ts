@@ -1,0 +1,54 @@
+import { styled } from '@linaria/react';
+import { css } from '@linaria/core';
+
+import Z_INDEX from 'vars/zIndex';
+import { COLORS_TOOLTIP } from 'theme/color/vars';
+
+export const containerStyle = css`
+  z-index: ${Z_INDEX.TOOLTIP};
+  max-width: 265px;
+  box-sizing: border-box;
+
+  border: none;
+  color: var(${COLORS_TOOLTIP.CONTAINER_COLOR});
+  background-color: var(${COLORS_TOOLTIP.CONTAINER_BG});
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 20px;
+`;
+
+export const containerWithIconStyle = css`
+  padding-right: 44px;
+`;
+
+export const TooltipWrapper = styled.div`
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-word;
+`;
+
+export const IconWrapper = styled.span`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  fill: var(${COLORS_TOOLTIP.ICON_FILL});
+
+  &[data-action='true'] {
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      fill: var(${COLORS_TOOLTIP.ICON_HOVER_FILL});
+    }
+    &:active {
+      fill: var(${COLORS_TOOLTIP.ICON_ACTIVE_FILL});
+    }
+  }
+`;
+
+export const triggerStyle = css`
+  display: inline-block;
+  cursor: pointer;
+`;

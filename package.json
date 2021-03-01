@@ -1,0 +1,100 @@
+{
+  "name": "@sbercloud/ui-kit",
+  "version": "2.0.0",
+  "description": "SberCloud UI-Kit",
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "prepack": "node scripts/prepublish.js",
+    "storybook": "yarn start-storybook -p 6006",
+    "build:storybook": "build-storybook",
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "clean": "yarn rimraf dist && node scripts/clean.js",
+    "build": "yarn run-s clean build:types build:es build:cjs",
+    "build:watch": "yarn run-p build:types:watch build:es:watch build:cjs:watch",
+    "build:es": "BUILD_TYPE=es yarn babel src --out-dir dist/esm --extensions '.ts,.tsx' --copy-files fonts",
+    "build:es:watch": "yarn build:es -- --watch",
+    "build:types": "yarn tsc -p tsconfig.types.json",
+    "build:types:watch": "yarn build:types -- -w",
+    "build:cjs": "BUILD_TYPE=cjs yarn babel src --out-dir dist/cjs --extensions '.ts,.tsx'",
+    "build:cjs:watch": "yarn build:cjs -- --watch"
+  },
+  "files": [],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "npm run lint",
+      "prettier --write"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@aicloud/ui-icons": "0.0.16",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-modal": "^3.12.1",
+    "react-select": "^4.1.0"
+  },
+  "peerDependencies": {
+    "@linaria/core": "^3.0.0-beta.1",
+    "@linaria/react": "^3.0.0-beta.1"
+  },
+  "devDependencies": {
+    "@atamore/eslint-config-atamore": "^1.0.0",
+    "@babel/cli": "^7.12.7",
+    "@babel/core": "^7.12.7",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "@babel/plugin-transform-typescript": "^7.12.1",
+    "@babel/preset-react": "^7.12.10",
+    "@linaria/babel-preset": "^3.0.0-beta.1",
+    "@linaria/cli": "^3.0.0-beta.1",
+    "@linaria/core": "^3.0.0-beta.1",
+    "@linaria/react": "^3.0.0-beta.1",
+    "@linaria/shaker": "^3.0.0-beta.1",
+    "@linaria/webpack-loader": "^3.0.0-beta.1",
+    "@storybook/addon-actions": "^6.1.2",
+    "@storybook/addon-essentials": "^6.1.2",
+    "@storybook/addon-links": "^6.1.2",
+    "@storybook/addons": "^6.1.20",
+    "@storybook/cli": "^6.1.15",
+    "@storybook/react": "^6.1.2",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-modal": "^3.12.0",
+    "@types/react-select": "^4.0.13",
+    "@typescript-eslint/eslint-plugin": "^4.8.1",
+    "@typescript-eslint/parser": "^4.8.1",
+    "babel-loader": "^8.2.1",
+    "babel-plugin-inline-react-svg": "^1.1.2",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "fs-extra": "^9.0.1",
+    "husky": "=4",
+    "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "react-docgen-typescript": "^1.21.0",
+    "rimraf": "^3.0.2",
+    "semantic-release": "^17.3.3",
+    "storybook": "^6.1.20",
+    "storybook-addon-designs": "^5.4.2",
+    "storybook-addon-themes": "^6.0.1",
+    "tsconfig-paths-webpack-plugin": "^3.3.0",
+    "typescript": "^4.1.2"
+  }
+}
