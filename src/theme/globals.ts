@@ -1,0 +1,91 @@
+import { css } from '@linaria/core';
+import { COLORS, COLORS_GENERAL } from './color/vars';
+
+export const globals = css`
+  :global() {
+    @font-face {
+      font-family: 'SB Sans Interface';
+      src: url('./fonts/SBSansInterface-Semibold.woff2') format('woff2'),
+        url('./fonts/SBSansInterface-Semibold.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SB Sans Interface';
+      src: url('./fonts/SBSansInterface-Light.woff2') format('woff2'),
+        url('./fonts/SBSansInterface-Light.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SB Sans Interface';
+      src: url('./fonts/SBSansInterface-Bold.woff2') format('woff2'),
+        url('./fonts/SBSansInterface-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SB Sans Interface Caps';
+      src: url('./fonts/SBSansInterface-Caps.woff2') format('woff2'),
+        url('./fonts/SBSansInterface-Caps.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SB Sans Interface';
+      src: url('./fonts/SBSansInterface-Regular.woff2') format('woff2'),
+        url('./fonts/SBSansInterface-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    .react-contextmenu-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      box-shadow: none;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      height: 100%;
+      background: var(${COLORS_GENERAL.BACKGROUND});
+
+      transition: all 0.4s ease-in-out;
+
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body,
+    button,
+    input {
+      font-family: SB Sans Interface, Helvetica, Arial, sans-serif;
+      color: var(${COLORS_GENERAL.TEXT});
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+`;
