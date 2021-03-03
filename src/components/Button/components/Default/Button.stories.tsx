@@ -17,12 +17,14 @@ const Group = styled.div`
   display: flex;
 `;
 
-const Item = styled.div`
+const Item = styled.div<{ background?: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-left: 42px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: ${({ background }) => background || 'transparent'};
 `;
 
 const Title = styled.div`
@@ -32,21 +34,22 @@ const Title = styled.div`
 const buttons: Array<{
   name: string;
   type: TButtonTypes;
+  background?: string;
   icon?: React.ReactNode;
 }> = [
   { name: 'FILLED', type: 'filled' },
   { name: 'OUTLINED', type: 'outlined' },
   { name: 'TRANSPERENT', type: 'transparent' },
-  { name: 'WHITE', type: 'white' },
+  { name: 'WHITE', type: 'white', background: '#5558FA' },
   { name: 'WITH_ICON', type: 'filled', icon: <CopySVG /> },
 ];
 
 const Template: Story<IButtonProps> = ({ children, ...args }) => (
   <Group>
-    {buttons.map(({ name, type, icon }) => (
-      <Item key={name}>
+    {buttons.map(({ name, type, icon, background }) => (
+      <Item key={name} background={background}>
         <Title>
-          <H4>{name}</H4>
+          <H4 color={background ? '#fff' : ''}>{name}</H4>
         </Title>
         <Button {...args} type={type} icon={icon}>
           {children}
