@@ -194,5 +194,5 @@ export const IconWrap = styled.div<{ position: 'before' | 'after' }>`
   display: inline-flex;
   align-items: center;
   margin: ${({ position }) =>
-    position === 'before' ? '0px 10px 0px 0px' : '0px 0px 0px 10px'};
+    position === 'before' ? '0px 8px 0px 0px' : '0px 0px 0px 8px'};
 `;
