@@ -23,7 +23,7 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/no-use-before-define': ['error'],
-    // 'react/jsx-fragments': [true, 'syntax'],
+    'react/jsx-fragments': [2, 'syntax'],
     'react/no-unused-prop-types': 0,
   },
   overrides: [
