@@ -5,7 +5,7 @@ export const decorators = [
   Story => {
     const root = document.querySelector('body');
     if (root && !root.getAttribute('data-theme')) {
-      root.setAttribute('data-theme', 'purpleDark');
+      root.setAttribute('data-theme', 'purple');
     }
     return (
       // Add global styles and theme variables
@@ -36,13 +36,8 @@ export const parameters = {
   },
   themes: {
     list: [
-      { name: 'purple', class: purple, color: '#f3f3fe' },
-      {
-        name: 'purpleDark',
-        class: purpleDark,
-        color: '#bcbced',
-        default: true,
-      },
+      { name: 'purple', class: purple, color: '#f3f3fe', default: true },
+      { name: 'purpleDark', class: purpleDark, color: '#bcbced' },
     ],
     onChange: changeTheme,
   },
