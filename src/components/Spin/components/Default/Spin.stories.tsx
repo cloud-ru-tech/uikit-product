@@ -1,24 +1,17 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import {
-  SIZES,
-  Spin,
-  ISpinDefaultProps,
-} from './Spin';
+import { SIZES, Spin, ISpinDefaultProps } from './Spin';
 
 export default {
   title: 'Components/Spin',
   component: Spin,
 } as Meta;
 
-const Template: Story<ISpinDefaultProps> = args => (
-  <Spin {...args} />
-);
+const Template: Story<ISpinDefaultProps> = args => <Spin {...args} />;
 
 export const spin = Template.bind({});
 spin.args = {
-  text: "Text"
+  text: 'Text',
 };
 
 spin.argTypes = {

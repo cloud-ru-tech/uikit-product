@@ -36,7 +36,7 @@ export const Default: Story<IModalProps> = () => {
         // onRequestClose={closeModal}
         appElement={document.body}
         title='Удаление тега'
-        description={`Вы действительно хотите удалить тег «ёлочек»?`}
+        description={'Вы действительно хотите удалить тег «ёлочек»?'}
         approve={openDrawer}
         approveText='Drawer'
         // cancel={(): void => {
@@ -106,5 +106,4 @@ export const Default: Story<IModalProps> = () => {
 //   );
 // };
 
-Default.parameters = {
-};
+Default.parameters = {};

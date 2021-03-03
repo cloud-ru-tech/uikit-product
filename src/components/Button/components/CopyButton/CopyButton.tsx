@@ -1,10 +1,10 @@
-import React, { FC, useState, useCallback, useRef } from "react";
-import { css } from "@linaria/core";
-import { CopySVG, CopyCompletedSVG } from "@aicloud/ui-icons";
+import { FC, useState, useCallback, useRef } from 'react';
+import { css } from '@linaria/core';
+import { CopySVG, CopyCompletedSVG } from '@aicloud/ui-icons';
 
-import { Button } from "components/Button";
+import { Button } from 'components/Button';
 
-import { copyText } from "utils/copyText";
+import { copyText } from 'utils/copyText';
 
 const iconStyle = css`
   transition: opacity 1s, visibility 0s;
@@ -20,7 +20,7 @@ export interface ICopyButtonProps {
 
 export const CopyButton: FC<ICopyButtonProps> = ({
   disabled,
-  text = "",
+  text = '',
   overrideClick,
   onClick: propOnClick,
   className,
@@ -40,7 +40,9 @@ export const CopyButton: FC<ICopyButtonProps> = ({
   const handleClickCopy = useCallback(
     (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
       copy();
-      propOnClick && propOnClick(event);
+      if (propOnClick) {
+        propOnClick(event);
+      }
     },
     [copy, propOnClick],
   );
@@ -53,12 +55,16 @@ export const CopyButton: FC<ICopyButtonProps> = ({
   return (
     <Button
       className={className}
-      type={"transparent"}
-      size="xs"
+      type='transparent'
+      size='xs'
       disabled={disabled}
       onClick={handleClickCopy}
     >
-      {isCopyCompleted ? <CopyCompletedSVG className={iconStyle} /> : <CopySVG className={iconStyle} />}
+      {isCopyCompleted ? (
+        <CopyCompletedSVG className={iconStyle} />
+      ) : (
+        <CopySVG className={iconStyle} />
+      )}
     </Button>
   );
 };

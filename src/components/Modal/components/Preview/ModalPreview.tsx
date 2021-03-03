@@ -1,11 +1,10 @@
-import React from 'react';
 import RCModal from 'react-modal';
 import { CancelSVG } from '@aicloud/ui-icons';
 
 import { Button } from 'components/Button';
 
-import { previewCloseBtn, Title, Content } from './styled';
 import { Divider } from 'components/Divider';
+import { previewCloseBtn, Title, Content } from './styled';
 
 interface IReactModalProps extends ReactModal.Props {
   isOpen: boolean;
@@ -15,7 +14,7 @@ interface IReactModalProps extends ReactModal.Props {
   className?: string;
   onAfterClose?(): void;
   overlayClassName?: string;
-  appElement?: HTMLElement | {};
+  appElement?: HTMLElement | Record<string, unknown>;
   onRequestClose?(event: React.MouseEvent | React.KeyboardEvent): void;
   closeTimeoutMS?: number;
   ariaHideApp?: boolean;

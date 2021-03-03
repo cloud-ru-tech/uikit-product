@@ -1,6 +1,5 @@
-import React from 'react';
-import { Wrapper, Spinner, textCSS } from './styled';
 import { TableText } from 'typography/Table';
+import { Wrapper, Spinner, textCSS } from './styled';
 
 export const SIZES = {
   small: 'small',
@@ -62,20 +61,18 @@ export const Spin: React.FC<ISpinDefaultProps> = ({
   reverse,
   wrapperClassName,
   text,
-}) => {
-  return (
-    <Wrapper className={wrapperClassName}>
-      <Spinner
-        size={getSize(size)}
-        borderSize={getBorderSize(size, borderSize)}
-        data-reverse={reverse}
-        className={className}
-      />
-      {text && (
-        <TableText className={textCSS} data-reverse={reverse}>
-          {text}
-        </TableText>
-      )}
-    </Wrapper>
-  );
-};
+}) => (
+  <Wrapper className={wrapperClassName}>
+    <Spinner
+      size={getSize(size)}
+      borderSize={getBorderSize(size, borderSize)}
+      data-reverse={reverse}
+      className={className}
+    />
+    {text && (
+      <TableText className={textCSS} data-reverse={reverse}>
+        {text}
+      </TableText>
+    )}
+  </Wrapper>
+);

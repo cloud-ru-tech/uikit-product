@@ -47,7 +47,7 @@ export const BasicTooltip: FC<IBasicTooltipProps> = ({
   iconAction,
   ...props
 }) => {
-  console.log(Boolean(iconAction))
+  console.log(Boolean(iconAction));
   return (
     <TooltipTrigger
       trigger={trigger}
@@ -84,10 +84,7 @@ export const BasicTooltip: FC<IBasicTooltipProps> = ({
           )}
           <TooltipWrapper>{tooltip}</TooltipWrapper>
           {icon && (
-            <IconWrapper
-              onClick={iconAction}
-              data-action={Boolean(iconAction)}
-            >
+            <IconWrapper onClick={iconAction} data-action={Boolean(iconAction)}>
               {icon}
             </IconWrapper>
           )}

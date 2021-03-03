@@ -1,20 +1,18 @@
-import React from 'react';
 import RCModal from 'react-modal';
 import { CancelSVG } from '@aicloud/ui-icons';
 
 import { Button } from 'components/Button';
 
 import { BasicTooltip } from 'components/Tooltip';
+import Z_INDEX from 'vars/zIndex';
+import { COLORS_MODAL } from 'theme/color/vars';
 import {
   closeButtonStyle,
   Title,
   Description,
   ButtonWrapper,
   buttonCSS,
-  contentCSS,
 } from './styled';
-import Z_INDEX from 'vars/zIndex';
-import { COLORS_MODAL } from 'theme/color/vars';
 
 interface IReactModalProps extends ReactModal.Props {
   isOpen: boolean;
@@ -24,7 +22,7 @@ interface IReactModalProps extends ReactModal.Props {
   className?: string;
   onAfterClose?(): void;
   overlayClassName?: string;
-  appElement?: HTMLElement | {};
+  appElement?: HTMLElement;
   onRequestClose?(
     event: React.MouseEvent | React.KeyboardEvent,
     type?: ModalCloseType,
@@ -114,6 +112,7 @@ export const Modal: React.FC<IModalProps> = props => {
     contentStyles,
     zIndex = Z_INDEX.MODAL,
     parentId,
+    parentSelector,
   } = props;
 
   if (appElement) RCModal.setAppElement(appElement as HTMLElement);
@@ -133,7 +132,7 @@ export const Modal: React.FC<IModalProps> = props => {
         parentId
           ? (): HTMLElement =>
               document.getElementById(parentId) || document.body
-          : props.parentSelector
+          : parentSelector
       }
     >
       {hideCross ? null : (

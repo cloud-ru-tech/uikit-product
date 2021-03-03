@@ -1,5 +1,4 @@
-import React from "react";
-import { styled } from "@linaria/react";
+import { styled } from '@linaria/react';
 import { COLORS_DIVIDER } from 'theme/color/vars';
 
 type TStyleProps = {
@@ -7,14 +6,14 @@ type TStyleProps = {
 };
 
 type TDividerProps = {
-  color?:  "light" | "middle" | "dark" | string;
+  color?: 'light' | 'middle' | 'dark' | string;
   style?: React.CSSProperties;
 };
 
 const DividerWithStyle = styled.hr<TStyleProps>`
   border: none;
-  color: ${(props) => props.color};
-  background: ${(props) => props.color};
+  color: ${props => props.color};
+  background: ${props => props.color};
   height: 1px;
 `;
 
@@ -24,6 +23,7 @@ const DEFAULT_COLOR: { [key: string]: string } = {
   dark: `var(${COLORS_DIVIDER.COLOR_DARK})`,
 };
 
-export const Divider: React.FC<TDividerProps> = ({ color = "light", style }) => (
-  <DividerWithStyle color={DEFAULT_COLOR[color] || color} style={style} />
-);
+export const Divider: React.FC<TDividerProps> = ({
+  color = 'light',
+  style,
+}) => <DividerWithStyle color={DEFAULT_COLOR[color] || color} style={style} />;

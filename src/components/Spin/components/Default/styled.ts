@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import {  COLORS_SPIN } from 'theme/color/vars';
+import { COLORS_SPIN } from 'theme/color/vars';
 import { css } from '@linaria/core';
 
 type ISpinnerProps = {

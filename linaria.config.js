@@ -1,4 +1,5 @@
-const PACKAGE = require("./package.json");
+const PACKAGE = require('./package.json');
+
 module.exports = {
   evaluate: true,
   displayName: true,

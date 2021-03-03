@@ -17,12 +17,15 @@ module.exports = {
     'no-param-reassign': ['error', { props: false }],
     'react/display-name': 0,
     'react/jsx-props-no-spreading': 0,
+    'arrow-body-style': ['error', 'as-needed'],
     '@typescript-eslint/no-empty-interface': 0,
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/ban-ts-comment': 0,
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/no-use-before-define': ['error'],
-    'react/jsx-fragments': [true, 'syntax'],
+    'react/react-in-jsx-scope': 0,
+    'react/no-unused-prop-types': 0,
+    'react/jsx-fragments': 0,
   },
   overrides: [
     {

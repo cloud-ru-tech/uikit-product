@@ -2,8 +2,9 @@ import React, { FC } from 'react';
 import TooltipTrigger from 'react-popper-tooltip';
 import { css } from '@linaria/core';
 
-import { ITooltipProps } from '../../types';
 import Z_INDEX from 'vars/zIndex';
+
+import { ITooltipProps } from './types';
 
 export const tooltipStyle = css`
   border: none;

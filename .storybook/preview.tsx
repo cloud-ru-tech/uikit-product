@@ -5,7 +5,7 @@ export const decorators = [
   Story => {
     const root = document.querySelector('body');
     if (root && !root.getAttribute('data-theme')) {
-      root.setAttribute('data-theme', 'purple');
+      root.setAttribute('data-theme', 'purpleDark');
     }
     return (
       // Add global styles and theme variables
@@ -31,18 +31,18 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
-      order: [
-        'Components',
-        ['Button', ['Default']],
-        'Typography',
-        'Variables',
-      ],
+      order: ['Components', ['Button', ['Default']], 'Typography', 'Variables'],
     },
   },
   themes: {
     list: [
-      { name: 'purple', class: purple, color: '#f3f3fe', default: true },
-      { name: 'purpleDark', class: purpleDark, color: '#bcbced' },
+      { name: 'purple', class: purple, color: '#f3f3fe' },
+      {
+        name: 'purpleDark',
+        class: purpleDark,
+        color: '#bcbced',
+        default: true,
+      },
     ],
     onChange: changeTheme,
   },

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Wrapper, Item, Color } from './styled';
 import { COLORS } from 'theme/color/vars';
+import { Wrapper, Item, Color } from './styled';
 
 export default {
   title: 'Variables/Colors',
@@ -10,9 +10,9 @@ export default {
 
 const Template: Story<typeof COLORS> = () => (
   <Wrapper>
-    {Object.entries(COLORS).map(([key, value]) => (
+    {Object.entries(COLORS).map(([key, color]) => (
       <Item key={key}>
-        <Color background={value} />
+        <Color background={color} />
 
         <p>{key}</p>
       </Item>
