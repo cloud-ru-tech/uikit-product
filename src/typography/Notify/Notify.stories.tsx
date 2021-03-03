@@ -1,9 +1,11 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
+
 import { COLORS_GENERAL } from 'theme/color/vars';
+
 import { NotifyText, TNotifyProps } from './index';
 
 export default {
-  title: 'Typography/Table',
+  title: 'Typography/Notify',
   component: NotifyText,
 } as Meta;
 

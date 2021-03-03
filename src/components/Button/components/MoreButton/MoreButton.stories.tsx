@@ -13,5 +13,6 @@ const Template: Story<TMoreButtonProps> = ({ ...args }) => (
 
 export const moreButton = Template.bind({});
 moreButton.args = {
+  // eslint-disable-next-line no-console
   actions: [{ name: 'Уладить', onClick: () => console.log('Удалить') }],
 };

@@ -152,6 +152,18 @@ export const ButtonComponent = styled.button`
       color: var(${COLORS_BUTTON.WHITE_FOCUS_COLOR});
       background-color: var(${COLORS_BUTTON.WHITE_FOCUS_BG});
       box-shadow: 0px 0px 0px 4px var(${COLORS_BUTTON.WHITE_FOCUS_OUTLINE});
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        left: -1px;
+        top: -1px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(${COLORS_BUTTON.WHITE_FOCUS_BORDER});
+        border-radius: 4px;
+      }
     }
   }
 

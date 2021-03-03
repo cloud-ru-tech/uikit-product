@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 
-import { Divider } from './Divider';
+import { Divider, TDividerProps } from './Divider';
 
 export default {
   title: 'Components/Divider',
@@ -9,7 +9,7 @@ export default {
   decorators: [withDesign],
 } as Meta;
 
-const Template: Story<any> = ({ ...args }) => <Divider {...args} />;
+const Template: Story<TDividerProps> = ({ ...args }) => <Divider {...args} />;
 
 export const divider = Template.bind({});
 divider.args = {

@@ -5,7 +5,7 @@ type TStyleProps = {
   color: string;
 };
 
-type TDividerProps = {
+export type TDividerProps = {
   color?: 'light' | 'middle' | 'dark' | string;
   style?: React.CSSProperties;
 };

@@ -75,6 +75,7 @@ export const COLORS_BUTTON = {
   WHITE_FOCUS_COLOR: '--button-white-focus-color',
   WHITE_FOCUS_BG: '--button-white-focus-bg',
   WHITE_FOCUS_OUTLINE: '--button-white-focus-outline',
+  WHITE_FOCUS_BORDER: '--button-white-focus-border',
 
   ROUNDED_COLOR: '--button-rounded-color',
   ROUNDED_BG: '--button-rounded-bg',

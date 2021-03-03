@@ -17,9 +17,9 @@ export const decorators = [
 ];
 
 const changeTheme = theme => {
-  const root = document
-    .querySelector('#storybook-preview-iframe')
-    ?.contentDocument?.querySelector('body');
+  const root = (document.querySelector(
+    '#storybook-preview-iframe',
+  ) as HTMLIFrameElement)?.contentDocument?.querySelector('body');
 
   if (!root) {
     return;

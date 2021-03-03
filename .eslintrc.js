@@ -25,7 +25,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/react-in-jsx-scope': 0,
     'react/no-unused-prop-types': 0,
-    'react/jsx-fragments': 0,
+    'react/jsx-fragments': [2, 'syntax'],
   },
   overrides: [
     {
