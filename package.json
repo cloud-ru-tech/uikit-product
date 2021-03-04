@@ -13,7 +13,7 @@
     "clean": "yarn rimraf dist && node scripts/clean.js",
     "build": "yarn run-s clean build:types build:es build:cjs",
     "build:watch": "yarn run-p build:types:watch build:es:watch build:cjs:watch",
-    "build:es": "BUILD_TYPE=es yarn babel src --out-dir dist/esm --extensions '.ts,.tsx' --copy-files src/theme/fonts",
+    "build:es": "BUILD_TYPE=es yarn babel src --out-dir dist/esm --extensions '.ts,.tsx' --copy-files fonts",
     "build:es:watch": "yarn build:es -- --watch",
     "build:types": "yarn tsc -p tsconfig.types.json",
     "build:types:watch": "yarn build:types -- -w",
