@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/ui-kit",
+  "name": "@sbercloud/uikit2.0",
   "version": "2.0.0",
   "description": "SberCloud UI-Kit",
   "main": "dist/esm/index.js",
