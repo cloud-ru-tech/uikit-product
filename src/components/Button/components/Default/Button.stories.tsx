@@ -41,17 +41,20 @@ const buttons: Array<{
   { name: 'OUTLINED', type: 'outlined' },
   { name: 'TRANSPERENT', type: 'transparent' },
   { name: 'WHITE', type: 'white', background: '#5558FA' },
-  { name: 'WITH_ICON', type: 'filled', icon: <CopySVG /> },
 ];
 
-const Template: Story<IButtonProps> = ({ children, ...args }) => (
+const Template: Story<IButtonProps & { showIcon: boolean }> = ({
+  children,
+  showIcon,
+  ...args
+}) => (
   <Group>
-    {buttons.map(({ name, type, icon, background }) => (
+    {buttons.map(({ name, type, background }) => (
       <Item key={name} background={background}>
         <Title>
           <H4 color={background ? '#fff' : ''}>{name}</H4>
         </Title>
-        <Button {...args} type={type} icon={icon}>
+        <Button {...args} type={type} icon={showIcon ? <CopySVG /> : null}>
           {children}
         </Button>
       </Item>
@@ -66,4 +69,10 @@ Default.args = {
   iconPosition: 'after',
 };
 
-Default.argTypes = {};
+Default.argTypes = {
+  showIcon: {
+    control: {
+      type: 'boolean',
+    },
+  },
+};
