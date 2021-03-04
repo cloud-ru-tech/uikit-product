@@ -7,6 +7,18 @@ export const SIZES = {
   large: 'large',
 };
 
+const DEFAULT_SIZE = {
+  [SIZES.small]: 28,
+  [SIZES.medium]: 68,
+  [SIZES.large]: 100,
+};
+
+const DEFAULT_BORDER_SIZE = {
+  [SIZES.small]: 2,
+  [SIZES.medium]: 4,
+  [SIZES.large]: 8,
+};
+
 export interface ISpinDefaultProps {
   size?: keyof typeof SIZES | number;
   borderSize?: number;
@@ -17,19 +29,10 @@ export interface ISpinDefaultProps {
 }
 
 const getSize = (size: ISpinDefaultProps['size']): number => {
-  switch (size) {
-    case SIZES.small:
-      return 28;
-
-    case SIZES.medium:
-      return 68;
-
-    case SIZES.large:
-      return 100;
-
-    default:
-      return (size as number) || 68;
+  if (typeof size === 'number') {
+    return size;
   }
+  return (size && DEFAULT_SIZE[size]) || DEFAULT_SIZE[SIZES.medium];
 };
 
 const getBorderSize = (
@@ -39,19 +42,10 @@ const getBorderSize = (
   if (borderSize) {
     return borderSize;
   }
-  switch (size) {
-    case SIZES.small:
-      return 2;
 
-    case SIZES.medium:
-      return 4;
-
-    case SIZES.large:
-      return 8;
-
-    default:
-      return borderSize || 4;
-  }
+  return (
+    (size && DEFAULT_BORDER_SIZE[size]) || DEFAULT_BORDER_SIZE[SIZES.medium]
+  );
 };
 
 export const Spin: React.FC<ISpinDefaultProps> = ({

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
 
 import { Button } from 'components/Button';
 // import { toastDanger, toastSuccess, toastInProcess, ToastContainer } from "components/Toast";
@@ -36,7 +35,7 @@ export const Default: Story<IModalProps> = () => {
         // onRequestClose={closeModal}
         appElement={document.body}
         title='Удаление тега'
-        description={'Вы действительно хотите удалить тег «ёлочек»?'}
+        description='Вы действительно хотите удалить тег «ёлочек»?'
         approve={openDrawer}
         approveText='Drawer'
         // cancel={(): void => {

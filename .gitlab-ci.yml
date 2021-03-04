@@ -1,0 +1,78 @@
+---
+
+include:
+#  - project: templates/pipelines
+#    ref: uikit
+#    file: /templates/test/yarn_unit_test.yaml
+  - project: templates/pipelines
+    ref: uikit
+    file: /templates/lint/yarn_lint.yaml
+  - project: templates/pipelines
+    ref: uikit
+    file: /templates/lint/sonarqube.yaml
+  - project: templates/pipelines
+    ref: uikit
+    file: /templates/build/yarn_build.yaml
+#  - project: templates/pipelines
+#    ref: uikit
+#    file: /templates/test/yarn_integration_test.yaml
+  - project: templates/pipelines
+    ref: uikit
+    file: /templates/push/yarn_push.yaml
+  - project: templates/pipelines
+    ref: uikit
+    file: /templates/image/storybook_kaniko_image.yaml
+  - project: templates/pipelines
+    ref: uikit
+    file: /templates/deploy/storybook_deploy.yaml
+  - project: templates/pipelines
+    ref: uikit
+    file: /templates/notification/slack_notify.yaml
+
+stages:
+#- unit-test
+- lint
+- build-npm
+#- integration-test
+- push-npm
+- image
+- deploy-storybook
+- notification
+
+#unit-test:
+#  extends: .yarn-unit-test
+
+lint:
+  extends: .yarn-lint
+  
+lint-sonarqube:
+  extends: .sonarqube
+
+build-npm:
+  extends: .npm-build
+
+#integration-test:
+#  extends: .yarn-integration-test
+
+push-npm:
+  extends: .npm-push
+
+image-storybook:
+  extends: .kaniko-image
+  only:
+    - develop
+    - develop-ci
+    - master
+
+deploy-storybook:
+  extends: .storybook-deploy   
+  only:
+    - develop
+    - develop-ci
+    - master
+
+Notify fail:
+  extends: .notify_fail_slack
+
+Notify success:
+  extends: .notify_success_slack

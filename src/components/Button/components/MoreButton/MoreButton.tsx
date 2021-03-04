@@ -32,7 +32,7 @@ export const MoreButton: React.FC<TMoreButtonProps> = ({ actions }) => (
       }: {
         on: boolean;
         set(): void;
-        hide: () => void;
+        hide(): void;
       }): React.ReactNode => (
         <Tooltip
           clickOutside
