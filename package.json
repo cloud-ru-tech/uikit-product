@@ -33,10 +33,10 @@
     ]
   },
   "publishConfig": {
-    "access": "public"
+    "registry": "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/"
   },
   "dependencies": {
-    "@aicloud/ui-icons": "0.0.16",
+    "@aicloud/ui-icons": "^0.0.16",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-modal": "^3.12.1",
