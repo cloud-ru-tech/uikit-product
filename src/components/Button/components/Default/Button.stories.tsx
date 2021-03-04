@@ -35,7 +35,6 @@ const buttons: Array<{
   name: string;
   type: TButtonTypes;
   background?: string;
-  icon?: React.ReactNode;
 }> = [
   { name: 'FILLED', type: 'filled' },
   { name: 'OUTLINED', type: 'outlined' },
