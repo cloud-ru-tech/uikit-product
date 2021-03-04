@@ -36,11 +36,15 @@ export const Button: React.FC<IButtonProps> = ({
     {...props}
   >
     {icon && iconPosition === 'before' ? (
-      <IconWrap position='before'>{icon}</IconWrap>
+      <IconWrap position='before' setMargin={!!children}>
+        {icon}
+      </IconWrap>
     ) : null}
     {children}
     {icon && iconPosition === 'after' ? (
-      <IconWrap position='after'>{icon}</IconWrap>
+      <IconWrap position='after' setMargin={!!children}>
+        {icon}
+      </IconWrap>
     ) : null}
   </ButtonComponent>
 );

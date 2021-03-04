@@ -190,9 +190,21 @@ export const ButtonComponent = styled.button`
   }
 `;
 
-export const IconWrap = styled.div<{ position: 'before' | 'after' }>`
+export const IconWrap = styled.div<{
+  position: 'before' | 'after';
+  setMargin: boolean;
+}>`
   display: inline-flex;
   align-items: center;
-  margin: ${({ position }) =>
-    position === 'before' ? '0px 8px 0px 0px' : '0px 0px 0px 8px'};
+  margin: ${({ position, setMargin }) => {
+    if (!setMargin) {
+      return '0px';
+    }
+
+    if (position === 'before') {
+      return '0px 8px 0px 0px';
+    }
+
+    return '0px 0px 0px 8px';
+  }};
 `;
