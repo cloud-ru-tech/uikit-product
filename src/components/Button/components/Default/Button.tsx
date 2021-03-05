@@ -1,37 +1,51 @@
-import React from 'react';
-import { ButtonComponent } from './styled';
+import { TButtonTypes } from './types';
+import { ButtonComponent, IconWrap } from './styled';
 
 export interface IButtonProps {
-  type?: 'filled' | 'outlined' | 'transparent';
-  size?: 'xs' | 's' | 'm';
   rounded?: boolean;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  children?: React.ReactNode;
   className?: string;
   disabled?: boolean;
+  type?: TButtonTypes;
+  icon?: React.ReactNode;
+  size?: 'xs' | 's' | 'm';
+  children?: React.ReactNode;
+  iconPosition?: 'before' | 'after';
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
 export const Button: React.FC<IButtonProps> = ({
-  onClick,
-  disabled,
   size,
   type,
+  icon,
+  onClick,
+  disabled,
   children,
   className,
   rounded = false,
+  iconPosition = 'after',
   ...props
 }) => (
   <ButtonComponent
-    className={className}
+    type='button'
     data-size={size}
     data-type={type}
-    data-round={rounded}
-    onClick={disabled ? undefined : onClick}
-    type='button'
     disabled={disabled}
+    data-round={rounded}
+    className={className}
+    onClick={disabled ? undefined : onClick}
     {...props}
   >
+    {icon && iconPosition === 'before' ? (
+      <IconWrap position='before' setMargin={!!children}>
+        {icon}
+      </IconWrap>
+    ) : null}
     {children}
+    {icon && iconPosition === 'after' ? (
+      <IconWrap position='after' setMargin={!!children}>
+        {icon}
+      </IconWrap>
+    ) : null}
   </ButtonComponent>
 );
 

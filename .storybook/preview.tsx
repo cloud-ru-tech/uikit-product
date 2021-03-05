@@ -17,9 +17,9 @@ export const decorators = [
 ];
 
 const changeTheme = theme => {
-  const root = document
-    .querySelector('#storybook-preview-iframe')
-    ?.contentDocument?.querySelector('body');
+  const root = (document.querySelector(
+    '#storybook-preview-iframe',
+  ) as HTMLIFrameElement)?.contentDocument?.querySelector('body');
 
   if (!root) {
     return;
@@ -31,12 +31,7 @@ export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
-      order: [
-        'Components',
-        ['Button', ['Default']],
-        'Typography',
-        'Variables',
-      ],
+      order: ['Components', ['Button', ['Default']], 'Typography', 'Variables'],
     },
   },
   themes: {

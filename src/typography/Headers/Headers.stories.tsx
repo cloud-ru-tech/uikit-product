@@ -1,6 +1,5 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { COLORS, COLORS_GENERAL } from 'theme/color/vars';
+import { COLORS_GENERAL } from 'theme/color/vars';
 import { H1, H2, H3, H3Semibold, H4, H5, TFontProps } from './index';
 
 export default {

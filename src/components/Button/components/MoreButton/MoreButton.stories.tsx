@@ -1,4 +1,3 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { MoreButton, TMoreButtonProps } from './MoreButton';
@@ -14,5 +13,5 @@ const Template: Story<TMoreButtonProps> = ({ ...args }) => (
 
 export const moreButton = Template.bind({});
 moreButton.args = {
-  actions: [{ name: 'Уладить', onClick: () => console.log('Удалить') }],
+  actions: [{ name: 'Удалить', onClick: () => {} }],
 };

@@ -42,7 +42,6 @@ export const ButtonComponent = styled.button`
       background-color: var(${COLORS_BUTTON.FILLED_DISABLED_BG});
     }
     &:focus-visible {
-      border-radius: 4px;
       background-color: var(${COLORS_BUTTON.FILLED_FOCUS_BG});
     }
   }
@@ -54,7 +53,6 @@ export const ButtonComponent = styled.button`
 
     &:before {
       content: '';
-      z-index: -1;
       position: absolute;
       bottom: -1px;
       right: -1px;
@@ -82,9 +80,6 @@ export const ButtonComponent = styled.button`
     &:focus-visible {
       color: var(${COLORS_BUTTON.OUTLINED_FOCUS_COLOR});
       fill: var(${COLORS_BUTTON.OUTLINED_FOCUS_COLOR});
-      &:before {
-        border-color: var(${COLORS_BUTTON.OUTLINED_FOCUS_BORDER});
-      }
     }
 
     &:disabled {
@@ -98,7 +93,7 @@ export const ButtonComponent = styled.button`
 
   &[data-type='transparent'] {
     color: var(${COLORS_BUTTON.TRANSPARENT_COLOR});
-    fill: var(${COLORS_BUTTON.TRANSPARENT_FILL});
+    fill: var(${COLORS_BUTTON.TRANSPARENT_COLOR});
     background-color: transparent;
     &:hover {
       color: var(${COLORS_BUTTON.TRANSPARENT_HOVER_COLOR});
@@ -119,7 +114,55 @@ export const ButtonComponent = styled.button`
       fill: var(${COLORS_BUTTON.TRANSPARENT_FOCUS_COLOR});
       background-color: var(${COLORS_BUTTON.TRANSPARENT_FOCUS_BG});
       &:before {
-        border: 1px solid var(${COLORS_BUTTON.TRANSPARENT_FOCUS_BORDER});
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        left: -1px;
+        top: -1px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(${COLORS_BUTTON.TRANSPARENT_FOCUS_BORDER});
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &[data-type='white'] {
+    fill: var(${COLORS_BUTTON.WHITE_COLOR});
+    color: var(${COLORS_BUTTON.WHITE_COLOR});
+    background-color: var(${COLORS_BUTTON.WHITE_BG});
+    &:hover {
+      fill: var(${COLORS_BUTTON.WHITE_HOVER_COLOR});
+      color: var(${COLORS_BUTTON.WHITE_HOVER_COLOR});
+      background-color: var(${COLORS_BUTTON.WHITE_HOVER_BG});
+    }
+    &:active {
+      fill: var(${COLORS_BUTTON.WHITE_ACTIVE_COLOR});
+      color: var(${COLORS_BUTTON.WHITE_ACTIVE_COLOR});
+      background-color: var(${COLORS_BUTTON.WHITE_ACTIVE_BG});
+    }
+    &:disabled {
+      fill: var(${COLORS_BUTTON.WHITE_DISABLED_COLOR});
+      color: var(${COLORS_BUTTON.WHITE_DISABLED_COLOR});
+      background-color: var(${COLORS_BUTTON.WHITE_DISABLED_BG});
+    }
+    &:focus-visible {
+      fill: var(${COLORS_BUTTON.WHITE_FOCUS_COLOR});
+      color: var(${COLORS_BUTTON.WHITE_FOCUS_COLOR});
+      background-color: var(${COLORS_BUTTON.WHITE_FOCUS_BG});
+      box-shadow: 0px 0px 0px 4px var(${COLORS_BUTTON.WHITE_FOCUS_OUTLINE});
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        right: -1px;
+        left: -1px;
+        top: -1px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(${COLORS_BUTTON.WHITE_FOCUS_BORDER});
+        border-radius: 4px;
       }
     }
   }
@@ -128,12 +171,40 @@ export const ButtonComponent = styled.button`
     border-radius: 50px;
     padding: 4px 12px;
     line-height: 20px;
+    &:before {
+      border-radius: 50px;
+    }
+    &:focus-visible {
+      &:before {
+        border-radius: 50px;
+      }
+    }
   }
 
   &:focus-visible {
-    border: 4px solid var(${COLORS_BUTTON.FOCUS_BORDER});
+    box-shadow: 0px 0px 0px 4px var(${COLORS_BUTTON.FOCUS_SHADOW});
   }
+
   &:disabled {
     cursor: not-allowed;
   }
+`;
+
+export const IconWrap = styled.div<{
+  position: 'before' | 'after';
+  setMargin: boolean;
+}>`
+  display: inline-flex;
+  align-items: center;
+  margin: ${({ position, setMargin }) => {
+    if (!setMargin) {
+      return '0px';
+    }
+
+    if (position === 'before') {
+      return '0px 8px 0px 0px';
+    }
+
+    return '0px 0px 0px 8px';
+  }};
 `;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 
@@ -20,19 +19,11 @@ const TooltipWrapper = styled.div`
   margin: 30px;
 `;
 
-const Template: Story = ({ children, ...args }) => (
+const Template: Story = () => (
   <TooltipWrapper>
     <TooltipStateContainer>
-      {/*TODO: fix any + maybe context/hooks*/}
-      {({
-        on,
-        set,
-        hide,
-      }: {
-        on: boolean;
-        set: () => void;
-        hide: () => void;
-      }) => (
+      {/* TODO: fix any + maybe context/hooks */}
+      {({ on, set }: { on: boolean; set: () => void; hide: () => void }) => (
         <Tooltip
           clickOutside
           closeOnReferenceHidden

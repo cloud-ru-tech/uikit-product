@@ -1,4 +1,3 @@
-import React from 'react';
 import { styled } from '@linaria/react';
 import { COLORS_DIVIDER } from 'theme/color/vars';
 
@@ -6,7 +5,7 @@ type TStyleProps = {
   color: string;
 };
 
-type TDividerProps = {
+export type TDividerProps = {
   color?: 'light' | 'middle' | 'dark' | string;
   style?: React.CSSProperties;
 };

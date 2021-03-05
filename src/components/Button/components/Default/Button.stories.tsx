@@ -1,9 +1,12 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
 
+import { CopySVG } from '@aicloud/ui-icons';
+
 import { H4 } from 'typography/Headers';
+
 import { Button, IButtonProps } from './Button';
+import { TButtonTypes } from './types';
 
 export default {
   title: 'Components/Button/Default',
@@ -14,49 +17,61 @@ const Group = styled.div`
   display: flex;
 `;
 
-const Item = styled.div`
+const Item = styled.div<{ background?: string }>`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-left: 42px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: ${({ background }) => background || 'transparent'};
 `;
+
 const Title = styled.div`
   margin-bottom: 12px;
 `;
 
-const Template: Story<IButtonProps> = ({ children, ...args }) => (
+const buttons: Array<{
+  name: string;
+  type: TButtonTypes;
+  background?: string;
+}> = [
+  { name: 'FILLED', type: 'filled' },
+  { name: 'OUTLINED', type: 'outlined' },
+  { name: 'TRANSPERENT', type: 'transparent' },
+  { name: 'WHITE', type: 'white', background: '#5558FA' },
+];
+
+const Template: Story<IButtonProps & { showIcon: boolean }> = ({
+  children,
+  showIcon,
+  ...args
+}) => (
   <Group>
-    <Item>
-      <Title>
-        <H4>FILLED</H4>
-      </Title>
-      <Button {...args} type='filled'>
-        {children}
-      </Button>
-    </Item>
-    <Item>
-      <Title>
-        <H4>OUTLINED</H4>
-      </Title>
-      <Button {...args} type='outlined'>
-        {children}
-      </Button>
-    </Item>
-    <Item>
-      <Title>
-        <H4>TRANSPERENT</H4>
-      </Title>
-      <Button {...args} type='transparent'>
-        {children}
-      </Button>
-    </Item>
+    {buttons.map(({ name, type, background }) => (
+      <Item key={name} background={background}>
+        <Title>
+          <H4 color={background ? '#fff' : ''}>{name}</H4>
+        </Title>
+        <Button {...args} type={type} icon={showIcon ? <CopySVG /> : null}>
+          {children}
+        </Button>
+      </Item>
+    ))}
   </Group>
 );
 
 export const Default = Template.bind({});
+
 Default.args = {
   children: 'Button',
+  iconPosition: 'after',
 };
 
-Default.argTypes = {};
+Default.argTypes = {
+  showIcon: {
+    control: {
+      type: 'boolean',
+    },
+  },
+};

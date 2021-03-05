@@ -1,4 +1,4 @@
-import React, { FC, useState, useCallback, useRef } from 'react';
+import { FC, useState, useCallback, useRef } from 'react';
 import { css } from '@linaria/core';
 import { CopySVG, CopyCompletedSVG } from '@aicloud/ui-icons';
 

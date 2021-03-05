@@ -1,4 +1,3 @@
-import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { COLORS_GENERAL } from 'theme/color/vars';
 import { TableText, TTableProps } from './index';

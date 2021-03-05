@@ -1,4 +1,3 @@
-import React from 'react';
 import RCModal from 'react-modal';
 import { CancelSVG } from '@aicloud/ui-icons';
 

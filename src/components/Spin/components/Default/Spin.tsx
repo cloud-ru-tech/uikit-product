@@ -1,4 +1,3 @@
-import React from 'react';
 import { TableText } from 'typography/Table';
 import { Wrapper, Spinner, textCSS } from './styled';
 
