@@ -50,7 +50,10 @@ lint-sonarqube:
 
 build-npm:
   extends: .npm-build
-
+  artifacts:
+    paths:
+      - dist/
+    expire_in: 1 day
 #integration-test:
 #  extends: .yarn-integration-test
 
