@@ -18,9 +18,6 @@ include:
 #    file: /templates/test/yarn_integration_test.yaml
   - project: templates/pipelines
     ref: uikit
-    file: /templates/push/yarn_push.yaml
-  - project: templates/pipelines
-    ref: uikit
     file: /templates/image/storybook_kaniko_image.yaml
   - project: templates/pipelines
     ref: uikit
@@ -34,7 +31,6 @@ stages:
 - lint
 - build-npm
 #- integration-test
-- push-npm
 - image
 - deploy-storybook
 - notification
@@ -50,15 +46,8 @@ lint-sonarqube:
 
 build-npm:
   extends: .npm-build
-  artifacts:
-    paths:
-      - dist/
-    expire_in: 1 day
 #integration-test:
 #  extends: .yarn-integration-test
-
-push-npm:
-  extends: .npm-push
 
 image-storybook:
   extends: .kaniko-image
