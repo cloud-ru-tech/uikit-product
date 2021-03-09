@@ -36,9 +36,6 @@ lint-sonarqube:
 build-npm:
   extends: .npm-build
 
-push-npm:
-  extends: .npm-push
-
 image-storybook:
   extends: .kaniko-image
   only:
