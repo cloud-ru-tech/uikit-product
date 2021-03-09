@@ -12,7 +12,7 @@ import { Button } from '../Default';
 
 export type TMoreButtonProps = {
   actions: {
-    name: string;
+    name: React.ReactNode;
     onClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
   }[];
 };

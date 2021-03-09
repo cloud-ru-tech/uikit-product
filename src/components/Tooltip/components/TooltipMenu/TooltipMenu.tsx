@@ -4,19 +4,24 @@ import { styled } from '@linaria/react';
 import { COLORS_TOOLTIP } from 'theme/color/vars';
 
 export type TooltipMenuItemProps = {
+  disabled?: boolean;
   onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
 };
 
-const TooltipWrapper = styled.div`
+type TTooltipWrapper = { disabled?: boolean };
+
+const TooltipWrapper = styled.div<TTooltipWrapper>`
   gap: 10px;
   height: 36px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  cursor: pointer;
+  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
+  color: ${({ disabled }) => (disabled ? '#6c6c6c' : 'inherit')};
   padding: 0 12px;
   &:hover {
-    background-color: var(${COLORS_TOOLTIP.MENU_ITEM_HOVER_BG});
+    background-color: ${({ disabled }) =>
+      disabled ? 'inherit' : `var(${COLORS_TOOLTIP.MENU_ITEM_HOVER_BG})`};
   }
 `;
 
