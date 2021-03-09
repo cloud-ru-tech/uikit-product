@@ -26,6 +26,7 @@ module.exports = {
     'react/react-in-jsx-scope': 0,
     'react/no-unused-prop-types': 0,
     'react/jsx-fragments': [2, 'syntax'],
+    'react-hooks/exhaustive-deps': 0,
   },
   overrides: [
     {

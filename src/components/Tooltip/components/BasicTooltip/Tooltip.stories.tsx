@@ -1,6 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { CopySVG, HelpSVG } from '@aicloud/ui-icons';
-import { withDesign } from 'storybook-addon-designs';
 import { styled } from '@linaria/react';
 
 import { copyText } from 'utils/copyText';
@@ -11,7 +10,6 @@ import { BasicTooltip, IBasicTooltipProps } from '.';
 export default {
   title: 'Components/Tooltip/Basic Tooltip',
   component: BasicTooltip,
-  decorators: [withDesign],
 } as Meta;
 
 const TooltipWrapper = styled.div`
@@ -55,5 +53,4 @@ const Basic: Story<IBasicTooltipProps> = () => {
 export const basicTooltip = Basic.bind({});
 
 basicTooltip.args = {};
-
 basicTooltip.parameters = {};

@@ -9,6 +9,7 @@ import {
   COLORS_SPIN,
   COLORS_MODAL,
   COLORS_TOOLTIP,
+  COLORS_TAG,
 } from './vars';
 
 export const purpleDark = css`
@@ -115,6 +116,18 @@ export const purpleDark = css`
       ${COLORS_TOOLTIP.ICON_FILL}: var(${COLORS.VIOLET_3});
       ${COLORS_TOOLTIP.ICON_HOVER_FILL}: var(${COLORS.WHITE});
       ${COLORS_TOOLTIP.ICON_ACTIVE_FILL}: var(${COLORS.VIOLET_3});
+
+      ${COLORS_TAG.TAG_TEXT_COLOR}: var(${COLORS.WHITE});
+      ${COLORS_TAG.TAG_BG_GREEN}: #527771;
+      ${COLORS_TAG.TAG_BG_BLUE}: #517086;
+      ${COLORS_TAG.TAG_BG_PURPLE}: #6a5b8c;
+      ${COLORS_TAG.TAG_BG_PINK}: #8a5273;
+      ${COLORS_TAG.TAG_BG_RED}: #98605b;
+      ${COLORS_TAG.TAG_BG_GRAY_DEFAULT}: #6c6f71;
+      ${COLORS_TAG.TAG_BG_GRAY}: #515558;
+      ${COLORS_TAG.TAG_BG_BROWN}: #685c56;
+      ${COLORS_TAG.TAG_BG_ORANGE}: #9a754f;
+      ${COLORS_TAG.TAG_BG_YELLOW}: #9e9056;
     }
   }
 `;

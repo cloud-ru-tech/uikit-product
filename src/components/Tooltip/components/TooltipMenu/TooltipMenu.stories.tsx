@@ -1,5 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
 
 import { styled } from '@linaria/react';
 import {
@@ -12,7 +11,6 @@ import {
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
-  decorators: [withDesign],
 } as Meta;
 
 const TooltipWrapper = styled.div`

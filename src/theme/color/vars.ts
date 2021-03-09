@@ -122,3 +122,17 @@ export const COLORS_TOOLTIP = {
   ICON_HOVER_FILL: '--tooltip-icon-hover-fill',
   ICON_ACTIVE_FILL: '--tooltip-icon-active-fill',
 };
+
+export const COLORS_TAG = {
+  TAG_TEXT_COLOR: '--tag-text-color',
+  TAG_BG_GREEN: '--tag-bg-green',
+  TAG_BG_BLUE: '--tag-bg-blue',
+  TAG_BG_PURPLE: '--tag-bg-purple',
+  TAG_BG_PINK: '--tag-bg-pink',
+  TAG_BG_RED: '--tag-bg-red',
+  TAG_BG_GRAY_DEFAULT: '--tag-bg-gray-default',
+  TAG_BG_GRAY: '--tag-bg-gray',
+  TAG_BG_BROWN: '--tag-bg-brown',
+  TAG_BG_ORANGE: '--tag-bg-orange',
+  TAG_BG_YELLOW: '--tag-bg-yellow',
+};
