@@ -53,12 +53,6 @@ build-npm:
   artifacts:
     paths:
       - dist/
-      - components/
-      - general/
-      - theme/
-      - typography/
-      - utils/
-      - vars/
     expire_in: 1 day
 #integration-test:
 #  extends: .yarn-integration-test
