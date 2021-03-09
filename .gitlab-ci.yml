@@ -1,9 +1,6 @@
 ---
 
 include:
-#  - project: templates/pipelines
-#    ref: uikit
-#    file: /templates/test/yarn_unit_test.yaml
   - project: templates/pipelines
     ref: uikit
     file: /templates/lint/yarn_lint.yaml
@@ -13,12 +10,6 @@ include:
   - project: templates/pipelines
     ref: uikit
     file: /templates/build/yarn_build.yaml
-#  - project: templates/pipelines
-#    ref: uikit
-#    file: /templates/test/yarn_integration_test.yaml
-  - project: templates/pipelines
-    ref: uikit
-    file: /templates/push/yarn_push.yaml
   - project: templates/pipelines
     ref: uikit
     file: /templates/image/storybook_kaniko_image.yaml
@@ -30,17 +21,11 @@ include:
     file: /templates/notification/slack_notify.yaml
 
 stages:
-#- unit-test
 - lint
 - build-npm
-#- integration-test
-- push-npm
 - image
 - deploy-storybook
 - notification
-
-#unit-test:
-#  extends: .yarn-unit-test
 
 lint:
   extends: .yarn-lint
@@ -50,18 +35,6 @@ lint-sonarqube:
 
 build-npm:
   extends: .npm-build
-  artifacts:
-    paths:
-      - dist/
-      - components/
-      - general/
-      - theme/
-      - typography/
-      - utils/
-      - vars/
-    expire_in: 1 day
-#integration-test:
-#  extends: .yarn-integration-test
 
 push-npm:
   extends: .npm-push
