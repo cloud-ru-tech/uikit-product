@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { ISelectProps } from 'components/Select';
@@ -22,10 +22,8 @@ export const CustomOption = <CustomOptionType,>(
     ): JSX.Element => <StyledReactSelectOption {...data} />;
   }
 
-  const PrefixOptionComponent = prefixOption ? React.memo(prefixOption) : Stub;
-  const PostfixOptionComponent = postfixOption
-    ? React.memo(postfixOption)
-    : Stub;
+  const PrefixOptionComponent = prefixOption ? memo(prefixOption) : Stub;
+  const PostfixOptionComponent = postfixOption ? memo(postfixOption) : Stub;
 
   return (
     data: React.ComponentProps<typeof ReactSelectComponents.Option>,

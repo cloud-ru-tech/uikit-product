@@ -1,30 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Meta } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
 
-import { Select } from '../Default';
-import { TreeView } from '../TreeView';
-import {
-  UsersByGroupSelect,
-  IOptionType,
-  CheckedType,
-} from '../InlineTreeSelect/InlineTreeSelect';
+import { treeOptions } from 'components/Select/helpers/mockData';
+import { IOptionType } from 'components/Select/helperComponents/InlineTreeSelect';
+
+import { UsersByGroupSelect, CheckedType } from './InlineTreeSelect';
 
 export default {
-  title: 'Example/Select',
-  component: Select,
-  decorators: [withDesign],
+  title: 'Components/Select',
+  component: UsersByGroupSelect,
 } as Meta;
 
-export const treeView = (): JSX.Element => (
-  <div>
-    <TreeView options={TreeOptions} />
-  </div>
-);
-
-export const usersByGroupSelect = (): JSX.Element => {
+const Template = (): JSX.Element => {
   const defautVal = { checked: ['b'] };
-  const [tree, setTree] = useState<IOptionType[]>(TreeOptions as IOptionType[]);
+  const [tree, setTree] = useState<IOptionType[]>(treeOptions as IOptionType[]);
   const [checked, setChecked] = useState<CheckedType | undefined>(defautVal);
   const [isDisabled, setDisabled] = useState<boolean>(false);
 
@@ -43,6 +32,7 @@ export const usersByGroupSelect = (): JSX.Element => {
         }}
       />
       <button
+        type='button'
         style={{ marginTop: 20 }}
         onClick={(): void => {
           setChecked(defautVal);
@@ -51,6 +41,7 @@ export const usersByGroupSelect = (): JSX.Element => {
         Set default
       </button>
       <button
+        type='button'
         style={{ marginLeft: 20 }}
         onClick={(): void => {
           setDisabled(!isDisabled);
@@ -59,6 +50,7 @@ export const usersByGroupSelect = (): JSX.Element => {
         Trigger disabled
       </button>
       <button
+        type='button'
         style={{ marginLeft: 20 }}
         onClick={(): void => {
           const nextTree = [...tree];
@@ -76,20 +68,4 @@ export const usersByGroupSelect = (): JSX.Element => {
   );
 };
 
-const parameters = {
-  design: {
-    type: 'figma',
-    url:
-      'https://www.figma.com/file/9UAhwzTGUnOFaczS5Q5v5c/SberCloud-%E2%86%92-WHITE_Design_System?node-id=7%3A19911',
-  },
-};
-
-RoundLight.parameters = parameters;
-RoundGray.parameters = parameters;
-medium.parameters = parameters;
-large.parameters = parameters;
-withLogo.parameters = parameters;
-prefixOption.parameters = parameters;
-postfixOption.parameters = parameters;
-multi.parameters = parameters;
-treeView.parameters = parameters;
+export const inlineTreeSelect = Template.bind({});

@@ -1,6 +1,8 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { SIZES, Spin, ISpinDefaultProps } from './Spin';
+import { SIZES } from 'components/Spin/helpers/constants';
+
+import { Spin, ISpinDefaultProps } from './Spin';
 
 export default {
   title: 'Components/Spin',
@@ -13,7 +15,6 @@ export const spin = Template.bind({});
 spin.args = {
   text: 'Text',
 };
-
 spin.argTypes = {
   size: {
     control: {

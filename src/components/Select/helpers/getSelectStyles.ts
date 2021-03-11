@@ -24,32 +24,32 @@ import { styles as colorStyles } from 'components/Select/styles/color';
 import { styles as tagStyles } from 'components/Select/styles/tag';
 import { SELECT_TYPES } from 'components/Select/helpers/types';
 
-const getTheme = (type?: string): themeFn => {
-  const themes = {
-    [SELECT_TYPES.ROUND_LIGHT]: roundLightTheme,
-    [SELECT_TYPES.ROUND_GRAY]: roundGrayTheme,
-    [SELECT_TYPES.MEDIUM]: mediumTheme,
-    [SELECT_TYPES.LARGE]: largeTheme,
-    [SELECT_TYPES.WITH_LOGO]: withLogoTheme,
-  };
+const themes = {
+  [SELECT_TYPES.ROUND_LIGHT]: roundLightTheme,
+  [SELECT_TYPES.ROUND_GRAY]: roundGrayTheme,
+  [SELECT_TYPES.MEDIUM]: mediumTheme,
+  [SELECT_TYPES.LARGE]: largeTheme,
+  [SELECT_TYPES.WITH_LOGO]: withLogoTheme,
+};
 
-  const theme = themes[type] || mediumTheme;
+const getTheme = (type?: string): themeFn => {
+  const theme = type ? themes[type] : mediumTheme;
 
   return theme;
 };
 
-const getCustomStyles = (type?: string): Styles => {
-  const styles = {
-    [SELECT_TYPES.ROUND_LIGHT]: roundLightStyles,
-    [SELECT_TYPES.ROUND_GRAY]: roundGrayStyles,
-    [SELECT_TYPES.MEDIUM]: mediumStyles,
-    [SELECT_TYPES.LARGE]: largeStyles,
-    [SELECT_TYPES.WITH_LOGO]: withLogoStyles,
-    [SELECT_TYPES.COLOR]: colorStyles,
-    [SELECT_TYPES.TAG]: tagStyles,
-  };
+const styles = {
+  [SELECT_TYPES.ROUND_LIGHT]: roundLightStyles,
+  [SELECT_TYPES.ROUND_GRAY]: roundGrayStyles,
+  [SELECT_TYPES.MEDIUM]: mediumStyles,
+  [SELECT_TYPES.LARGE]: largeStyles,
+  [SELECT_TYPES.WITH_LOGO]: withLogoStyles,
+  [SELECT_TYPES.COLOR]: colorStyles,
+  [SELECT_TYPES.TAG]: tagStyles,
+};
 
-  const style = styles[type] || mediumStyles;
+const getCustomStyles = (type?: string): Styles => {
+  const style = type ? styles[type] : mediumStyles;
 
   return style;
 };

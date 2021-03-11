@@ -1,12 +1,11 @@
-import React from 'react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Story, Meta } from '@storybook/react/types-6-0';
 import { HelpSVG } from '@aicloud/ui-icons';
 import { styled } from '@linaria/react';
 
-import { Avatar } from './Avatar';
+import { Avatar, IAvatarProps } from './Avatar';
 
 export default {
-  title: 'Components/Avatar/Default',
+  title: 'Components/Avatar',
   component: Avatar,
 } as Meta;
 
@@ -15,14 +14,24 @@ const avatarSrc =
 
 const Wrapper = styled.div`
   display: flex;
+
+  & > * {
+    margin-right: 20px;
+  }
 `;
 
-export const Template = (): JSX.Element => (
+const Template: Story<IAvatarProps> = ({ ...args }) => (
   <Wrapper>
-    <Avatar>Test Name</Avatar>
-    <Avatar src={avatarSrc}>Test Name</Avatar>
-    <Avatar icon={<HelpSVG size={14} />}>Test Name</Avatar>
+    <Avatar {...args}>Test Name</Avatar>
+    <Avatar {...args} src={avatarSrc}>
+      Test Name
+    </Avatar>
+    <Avatar {...args} icon={<HelpSVG size={14} />}>
+      Test Name
+    </Avatar>
   </Wrapper>
 );
 
-Template.parameters = {};
+export const avatar = Template.bind({});
+avatar.args = {};
+avatar.parameters = {};

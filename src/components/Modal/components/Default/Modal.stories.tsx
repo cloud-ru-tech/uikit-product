@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Button } from 'components/Button';
@@ -11,14 +11,14 @@ import { Modal, IModalProps } from './Modal';
 // import { ModalPreview, IModalPreviewProps } from "./ModalPreview";
 
 export default {
-  title: 'Components/Modal/Default',
+  title: 'Components/Modal',
   component: Modal,
 } as Meta;
 
-export const Default: Story<IModalProps> = () => {
-  const [open, setOpen] = useState(false);
+const Template: Story<IModalProps> = ({ ...args }) => {
+  const [, /* open */ setOpen] = useState(false);
   const openDrawer = (): void => setOpen(true);
-  const closeDrawer = (): void => setOpen(false);
+  // const closeDrawer = (): void => setOpen(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = (): void => setIsOpen(true);
   // const closeModal = (): void => setIsOpen(false);
@@ -31,13 +31,14 @@ export const Default: Story<IModalProps> = () => {
         shouldCloseOnEsc={false}
         overlayOffset={{ top: 44 }}
         zIndex={1}
-        isOpen={modalIsOpen}
         // onRequestClose={closeModal}
         appElement={document.body}
         title='Удаление тега'
         description='Вы действительно хотите удалить тег «ёлочек»?'
         approve={openDrawer}
         approveText='Drawer'
+        {...args}
+        isOpen={modalIsOpen}
         // cancel={(): void => {
         //   console.log("cancel");
         // }}
@@ -105,4 +106,6 @@ export const Default: Story<IModalProps> = () => {
 //   );
 // };
 
-Default.parameters = {};
+export const modal = Template.bind({});
+modal.args = {};
+modal.argTypes = {};

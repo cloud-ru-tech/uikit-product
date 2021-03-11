@@ -1,4 +1,3 @@
-import React from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { StyledSelectContainer } from './styled';

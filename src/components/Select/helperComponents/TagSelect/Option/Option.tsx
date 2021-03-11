@@ -1,25 +1,20 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { css } from '@linaria/core';
+import { useState, useEffect, useRef } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { EditOutlinedSVG, ApproveSVG, DeleteSVG } from '@aicloud/ui-icons';
 
-import { OptionTypeColor } from 'components/Select';
+import { ColorPicker, OptionTypeColor } from 'components/Select';
 
 import {
   StyledTag,
   StyledOption,
   StyledTagButton,
   StyledTagOption,
-  StyledColorPicker,
+  tagInputClassName,
   StyledTagOptionLabel,
+  colorPickerClassName,
   StyledTagButtonWrapper,
 } from './styled';
-
-const tagInputClassName = css`
-  line-height: 20px;
-  font-size: 14px;
-`;
 
 export const Option = (
   props: React.ComponentProps<typeof ReactSelectComponents.Option>,
@@ -27,12 +22,18 @@ export const Option = (
   const {
     data,
     innerRef,
-    selectProps: { onTagChange, approveDeleting, isSelected },
+    selectProps: {
+      onTagChange,
+      approveDeleting,
+      isSelected,
+      colorDropdownPlacement,
+      setMenuListBlockScroll,
+    },
   } = props;
 
   const [isEdit, setEdit] = useState(false);
   const [tag, setTag] = useState(data);
-  const [, setColorVal] = useState({ value: tag.color });
+  const [colorVal, setColorVal] = useState({ value: tag.color });
 
   if (isEdit) {
     props.innerProps.onClick = (e): void => {
@@ -86,7 +87,7 @@ export const Option = (
               }}
             />
             <StyledTagButtonWrapper>
-              <StyledColorPicker<OptionTypeColor>
+              <ColorPicker
                 dropdownPlacement={colorDropdownPlacement}
                 defaultValue={colorVal}
                 onChange={(color: OptionTypeColor): void => {
@@ -100,6 +101,7 @@ export const Option = (
                 onMenuClose={(): void => {
                   setMenuListBlockScroll(false);
                 }}
+                className={colorPickerClassName}
               />
               <StyledTagButton
                 type='transparent'

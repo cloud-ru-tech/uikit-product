@@ -1,4 +1,3 @@
-import React from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 export const Control = (
@@ -10,6 +9,7 @@ export const Control = (
 
   const isFunc = typeof customControl === 'function';
   if (isFunc) {
+    console.log(customControl);
     return customControl({
       toggleMenu: props.selectProps.toggleMenu,
       menuIsOpen,

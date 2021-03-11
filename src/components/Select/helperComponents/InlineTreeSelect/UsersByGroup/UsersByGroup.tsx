@@ -2,7 +2,7 @@ import { FC, useState, useEffect, useMemo } from 'react';
 import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
 
-import { UserStubSVG, GroupStubSVG_v1 } from '@aicloud/ui-icons';
+import { UserStubColorSVG, GroupStub1ColorSVG } from '@aicloud/ui-icons';
 
 import { Avatar, IAvatarProps } from 'components/Avatar';
 
@@ -24,7 +24,7 @@ const Icon = ({ data }: { data: IOptionType }): React.ReactNode => {
       size='m'
       src={data?.src}
       shape={data?.avatarShape}
-      icon={hasChildren ? <GroupStubSVG_v1 /> : <UserStubSVG />}
+      icon={hasChildren ? <GroupStub1ColorSVG /> : <UserStubColorSVG />}
     />
   );
 };
@@ -130,13 +130,10 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
   }
 
   return (
-    <StyledContainer className={classnames(mlspace)}>
+    <StyledContainer>
       <RcTree
         {...treeProps}
         checkedKeys={checked}
-        className={classnames({
-          'mlspace-filtered': Boolean(filter),
-        })}
         treeData={stateOptions}
         checkable
         virtual={false}
@@ -163,7 +160,11 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
               const group = groupKeys?.filter(
                 groupKey => !`${checkedKey}`.indexOf(`${groupKey}`),
               )?.[0];
-              if (!group) return;
+
+              if (!group) {
+                return '';
+              }
+
               const reg = new RegExp(`^${group}${DELIMETR}`);
 
               return `${checkedKey}`.replace(reg, '');

@@ -1,9 +1,9 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { Tag } from 'components/Tag';
 import { Button } from 'components/Button';
-import { ColorPicker } from 'components/Select';
 
 export const StyledTagOption = styled.div`
   max-width: 100%;
@@ -43,6 +43,11 @@ export const StyledTagOptionLabel = styled(Tag)`
   margin-right: 12px;
 `;
 
-export const StyledColorPicker = styled(ColorPicker)`
+export const tagInputClassName = css`
+  line-height: 20px;
+  font-size: 14px;
+`;
+
+export const colorPickerClassName = css`
   padding: 0 2px;
 `;

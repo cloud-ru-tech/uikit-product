@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 import { css } from '@linaria/core';
 
@@ -22,11 +22,11 @@ import {
 } from './Select';
 
 export default {
-  title: 'Example/Select',
+  title: 'Components/Select',
   component: Select,
 } as Meta;
 
-export const Template = () => {
+const Template = () => {
   const [value, setValue] = useState<OptionTypeBase>();
 
   return (
@@ -188,12 +188,4 @@ export const Template = () => {
   );
 };
 
-const parameters = {
-  design: {
-    type: 'figma',
-    url:
-      'https://www.figma.com/file/9UAhwzTGUnOFaczS5Q5v5c/SberCloud-%E2%86%92-WHITE_Design_System?node-id=7%3A19911',
-  },
-};
-
-Template.parameters = parameters;
+export const select = Template.bind({});

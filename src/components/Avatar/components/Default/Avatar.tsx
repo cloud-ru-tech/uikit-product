@@ -1,4 +1,11 @@
-import React, { useMemo, CSSProperties } from 'react';
+import { useMemo } from 'react';
+
+import {
+  getAbbreviation,
+  getCustomBg,
+  getCustomRadius,
+  getCustomStyles,
+} from 'components/Avatar/helpers/helpers';
 
 import { StyledAvatar } from './styled';
 
@@ -11,57 +18,6 @@ export interface IAvatarProps {
   className?: string;
   radius?: number;
 }
-
-const getAbbreviation = (str = '', size = 2): string => {
-  const SPACE = ' ';
-  const trimStr = str.trim();
-
-  if (!trimStr) {
-    return '';
-  }
-
-  if (str && str.length > size) {
-    trimStr
-      .replace(/(\s{2,})/g, SPACE)
-      .split(SPACE)
-      .slice(0, 2)
-      .map(el => el?.charAt(0)?.toUpperCase())
-      .join('');
-  }
-
-  return trimStr;
-};
-
-export default getAbbreviation;
-
-const getCustomStyles = (
-  isCustomSize: boolean,
-  size: IAvatarProps['size'],
-  letterSize: IAvatarProps['letterSize'],
-): CSSProperties => {
-  if (!isCustomSize) {
-    return {};
-  }
-
-  return {
-    width: `${size}px`,
-    height: `${size}px`,
-    fontSize: `${letterSize}px`,
-  };
-};
-
-const getCustomBg = (src: IAvatarProps['src']): CSSProperties => {
-  if (!src) {
-    return {};
-  }
-
-  return { backgroundImage: `url(${src})`, backgroundSize: 'cover' };
-};
-
-const getCustomRadius = (
-  isCustomRadius: boolean,
-  radius: IAvatarProps['radius'],
-): CSSProperties => (isCustomRadius ? { borderRadius: `${radius}px` } : {});
 
 export const Avatar: React.FC<IAvatarProps> = props => {
   const {

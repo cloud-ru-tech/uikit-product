@@ -1,16 +1,18 @@
 import { forwardRef, useCallback, useState, useEffect } from 'react';
-import { css } from '@linaria/core';
 
-import { CloseSVG, CopySVG, CopyCompletedSVG } from '@aicloud/ui-icons';
+import { CloseSVG, EyeSVG, EyeClosedSVG } from '@aicloud/ui-icons';
 
-import { copyText } from 'utils/copyText';
-import { InputProps } from 'components/Input/helpers/types';
+import { CopyButton } from 'components/Button';
+import { IInputProps } from 'components/Input/helpers/types';
 
 import {
-  CopyButton,
+  Label,
+  StyledWrap,
   StyledInput,
   StyledClearButton,
+  StyledIconWrapper,
   StyledInputWrapper,
+  StyledSecurityButton,
 } from './styled';
 
 const TYPE_SETTINGS: { [key: string]: string } = {
@@ -18,11 +20,7 @@ const TYPE_SETTINGS: { [key: string]: string } = {
   number: 'number',
 };
 
-const iconStyle = css`
-  transition: opacity 1s, visibility 0s;
-`;
-
-export const Input = forwardRef<HTMLInputElement, InputProps>(
+export const Input = forwardRef<HTMLInputElement, IInputProps>(
   (
     {
       type = 'default',
@@ -36,12 +34,14 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       allowCopy,
       numberMax,
       numberMin,
+      label,
+      labelMinWidth,
       disabled = false,
     },
     ref,
   ) => {
     const [correctValue, setCorrectValue] = useState(value);
-    const [isCompleted, setIsCompleted] = useState(false);
+    const [isViewMode, setViewMode] = useState(type !== 'security');
 
     const handleChange = useCallback(
       e => {
@@ -94,51 +94,56 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
       handleChange(e);
     };
 
-    return (
-      <StyledInputWrapper
-        ref={ref}
-        data-type={type}
-        data-disabled={disabled}
-        className={wrapperClassName}
-      >
-        <StyledInput
-          type={TYPE_SETTINGS[type] || 'text'}
-          onChange={handleChange}
-          value={correctValue}
-          data-type={type}
-          data-disabled={disabled}
-          className={className}
-          placeholder={placeholder}
-          min={numberMin}
-          max={numberMax}
-          step={1}
-          disabled={disabled}
-        />
-        {!disabled && allowClear && correctValue && correctValue !== '' && (
-          <StyledClearButton onClick={handleClickClear}>
-            <CloseSVG />
-          </StyledClearButton>
-        )}
-        <div>{postfix}</div>
-        {allowCopy && (
-          <CopyButton
-            onClick={(): void => {
-              copyText(correctValue);
-              setIsCompleted(true);
+    const handleCopyButtonClick = (
+      e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    ): void => {
+      e.stopPropagation();
+    };
 
-              setTimeout(() => {
-                setIsCompleted(false);
-              }, 3000);
-            }}
-          >
-            {isCompleted ? (
-              <CopyCompletedSVG className={iconStyle} />
-            ) : (
-              <CopySVG className={iconStyle} />
+    return (
+      <StyledWrap>
+        {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
+        <StyledInputWrapper ref={ref} className={wrapperClassName}>
+          <StyledInput
+            type={
+              type === 'security' && !isViewMode
+                ? TYPE_SETTINGS[type] || 'text'
+                : 'text'
+            }
+            onChange={handleChange}
+            value={correctValue}
+            data-type={type}
+            data-disabled={disabled}
+            className={className}
+            placeholder={placeholder}
+            min={numberMin}
+            max={numberMax}
+            step={1}
+            disabled={disabled}
+          />
+          <StyledIconWrapper>
+            {!disabled && allowClear && correctValue && correctValue !== '' && (
+              <StyledClearButton onClick={handleClickClear}>
+                <CloseSVG />
+              </StyledClearButton>
             )}
-          </CopyButton>
-        )}
-      </StyledInputWrapper>
+            <div>{postfix}</div>
+            {type === 'security' ? (
+              <StyledSecurityButton
+                onClick={(): void => setViewMode(!isViewMode)}
+              >
+                {isViewMode ? <EyeSVG /> : <EyeClosedSVG />}
+              </StyledSecurityButton>
+            ) : null}
+            {allowCopy && (
+              <CopyButton
+                text={value.toString()}
+                onClick={handleCopyButtonClick}
+              />
+            )}
+          </StyledIconWrapper>
+        </StyledInputWrapper>
+      </StyledWrap>
     );
   },
 );

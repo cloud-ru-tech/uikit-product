@@ -5,12 +5,15 @@ export const TooltipStateContainer: FC = ({ children }) => {
   const set = useCallback(on => setOn(on), []);
   const hide = useCallback(() => setOn(false), []);
   const toggle = useCallback(() => setOn(prevState => !prevState), []);
-  return typeof children === 'function'
-    ? children({
-        on,
-        set,
-        toggle,
-        hide,
-      })
-    : null;
+
+  if (typeof children !== 'function') {
+    return null;
+  }
+
+  return children({
+    on,
+    set,
+    toggle,
+    hide,
+  });
 };

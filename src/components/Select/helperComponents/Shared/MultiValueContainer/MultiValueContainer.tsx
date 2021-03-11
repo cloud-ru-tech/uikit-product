@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { ISelectProps } from 'components/Select';
@@ -21,7 +21,7 @@ export const MultiValueContainer = <CustomOptionType,>(
   }
 
   const PrefixMultiValueContainerComponent = prefixMultiValueContainer
-    ? React.memo(prefixMultiValueContainer)
+    ? memo(prefixMultiValueContainer)
     : Stub;
 
   return (

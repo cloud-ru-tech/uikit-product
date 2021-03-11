@@ -1,4 +1,3 @@
-import React from 'react';
 import { css } from '@linaria/core';
 import { components as ReactSelectComponents } from 'react-select';
 
@@ -25,6 +24,7 @@ export const Menu = (
   const dropdownStyles =
     dropdownPlacement === 'right' ? { right: 0 } : { left: 0 };
 
+  console.log(props);
   return (
     <div
       style={{

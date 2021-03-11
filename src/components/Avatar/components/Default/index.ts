@@ -1,1 +1,1 @@
-export * as Avatar from './Avatar';
+export * from './Avatar';

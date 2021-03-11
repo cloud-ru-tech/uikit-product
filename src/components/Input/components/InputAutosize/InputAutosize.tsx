@@ -2,5 +2,5 @@ import RCAutosizeInput, {
   AutosizeInputProps as RIAAutosizeInputProps,
 } from 'react-input-autosize';
 
-export type AutosizeInputProps = RIAAutosizeInputProps;
+export interface IAutosizeInputProps extends RIAAutosizeInputProps {}
 export const InputAutosize = RCAutosizeInput;

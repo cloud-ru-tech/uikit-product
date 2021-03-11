@@ -1,8 +1,6 @@
-import React from 'react';
-
 import { Select, ISelectProps } from 'components/Select';
 import { PRESET_COLORS, PresetColorType } from 'components/Tag/helpers/colors';
-import * as ColorComponents from '../../helperComponents/ColorPicker';
+import * as ColorComponents from 'components/Select/helperComponents/ColorPicker';
 
 const colors = PRESET_COLORS.map(color => ({ value: color }));
 

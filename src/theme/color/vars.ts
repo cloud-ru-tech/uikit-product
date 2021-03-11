@@ -136,3 +136,28 @@ export const COLORS_TAG = {
   TAG_BG_ORANGE: '--tag-bg-orange',
   TAG_BG_YELLOW: '--tag-bg-yellow',
 };
+
+export const COLORS_INPUT = {
+  INPUT_BG: '--input-bg',
+  INPUT_BORDER: '--input-border',
+  INPUT_PLACEHOLDER_COLOR: '--input-placeholder',
+  INPUT_TEXT_COLOR: '--input-text',
+  INPUT_FOCUS_BORDER: '--input-focus-border',
+  INPUT_FOCUS_BACKGROUND: '--input-focus-bg',
+  INPUT_HOVER_BORDER: '--input-hover-border',
+  INPUT_HOVER_PLACEHOLDER_COLOR: '--input-hover-placeholder-color',
+  INPUT_HOVER_BACKGROUND: '--input-hover-bg',
+  INPUT_ERROR: '--input-error',
+  INPUT_DISABLED_BACKGROUND: '--input-disabled-bg',
+  INPUT_DISABLED_COLOR: '--input-disabled-color',
+  INPUT_DISABLED_BORDER: '--input-disabled-border',
+};
+
+export const COLORS_RADIO = {
+  COLOR: '--radio-color',
+  HOVER_COLOR: '--radio-hover-color',
+  DISABLED_COLOR: '--radio-disabled-color',
+  CHECKED_COLOR: '--radio-checked-color',
+  CHECKED_HOVER_COLOR: '--radio-checked-hover-color',
+  CHECKED_DISABLED_COLOR: '--radio-checked-disabled-color',
+};

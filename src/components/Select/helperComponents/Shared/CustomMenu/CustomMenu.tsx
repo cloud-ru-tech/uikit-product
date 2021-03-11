@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { css } from '@linaria/core';
 import { components as ReactSelectComponents } from 'react-select';
 

@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { css } from '@linaria/core';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { Tag } from 'components/Tag';
-import { Button } from 'components/Button';
 import { ColorPicker, OptionTypeColor } from 'components/Select';
 import getRandomInt from 'components/Select/helpers/getRandomInt';
 import { PRESET_COLORS } from 'components/Tag/helpers/colors';

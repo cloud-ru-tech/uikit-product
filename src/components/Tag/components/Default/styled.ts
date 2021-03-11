@@ -2,10 +2,9 @@ import { styled } from '@linaria/react';
 
 import { COLORS_TAG } from 'theme/color/vars';
 import { InputAutosize } from 'components/Input';
+import { PRESET_COLORS } from 'components/Tag/helpers/colors';
 
-import { PRESET_COLORS } from '../../helpers/colors';
-
-export const Tag = styled.div<{ background?: string }>`
+export const StyledTag = styled.div`
   max-width: 100%;
   min-width: 30px;
   display: inline-block;
@@ -15,48 +14,47 @@ export const Tag = styled.div<{ background?: string }>`
   font-size: 14px;
   line-height: 20px;
   color: var(${COLORS_TAG.TAG_TEXT_COLOR});
-  background-color: ${({ background }) => background || 'transparent'};
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 
-  &[data-tag-color='${PRESET_COLORS[0]}']: {
+  &[data-tag-color='green'] {
     background-color: var(${COLORS_TAG.TAG_BG_GREEN});
   }
 
-  &[data-tag-color='${PRESET_COLORS[1]}']: {
+  &[data-tag-color='${PRESET_COLORS[1]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_BLUE});
   }
 
-  &[data-tag-color='${PRESET_COLORS[2]}']: {
+  &[data-tag-color='${PRESET_COLORS[2]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_PURPLE});
   }
 
-  &[data-tag-color='${PRESET_COLORS[3]}']: {
+  &[data-tag-color='${PRESET_COLORS[3]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_PINK});
   }
 
-  &[data-tag-color='${PRESET_COLORS[4]}']: {
+  &[data-tag-color='${PRESET_COLORS[4]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_RED});
   }
 
-  &[data-tag-color='${PRESET_COLORS[5]}']: {
+  &[data-tag-color='${PRESET_COLORS[5]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_GRAY_DEFAULT});
   }
 
-  &[data-tag-color='${PRESET_COLORS[6]}']: {
+  &[data-tag-color='${PRESET_COLORS[6]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_GRAY});
   }
 
-  &[data-tag-color='${PRESET_COLORS[7]}']: {
+  &[data-tag-color='${PRESET_COLORS[7]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_BROWN});
   }
 
-  &[data-tag-color='${PRESET_COLORS[8]}']: {
+  &[data-tag-color='${PRESET_COLORS[8]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_ORANGE});
   }
 
-  &[data-tag-color='${PRESET_COLORS[9]}']: {
+  &[data-tag-color='${PRESET_COLORS[9]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_YELLOW});
   }
 `;
@@ -71,48 +69,52 @@ export const StyledInputAutosize = styled(InputAutosize)`
   font-size: 14px;
   line-height: 20px;
   color: var(${COLORS_TAG.TAG_TEXT_COLOR});
-  background-color: ${({ background }) => background || 'transparent'};
-  border: 0;
-  outline: 0;
-  appearance: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
-  &[data-tag-color='${PRESET_COLORS[0]}']: {
+  & > input {
+    border-style: none;
+    background: transparent;
+  }
+
+  &[data-tag-color='${PRESET_COLORS[0]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_GREEN});
   }
 
-  &[data-tag-color='${PRESET_COLORS[1]}']: {
+  &[data-tag-color='${PRESET_COLORS[1]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_BLUE});
   }
 
-  &[data-tag-color='${PRESET_COLORS[2]}']: {
+  &[data-tag-color='${PRESET_COLORS[2]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_PURPLE});
   }
 
-  &[data-tag-color='${PRESET_COLORS[3]}']: {
+  &[data-tag-color='${PRESET_COLORS[3]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_PINK});
   }
 
-  &[data-tag-color='${PRESET_COLORS[4]}']: {
+  &[data-tag-color='${PRESET_COLORS[4]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_RED});
   }
 
-  &[data-tag-color='${PRESET_COLORS[5]}']: {
+  &[data-tag-color='${PRESET_COLORS[5]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_GRAY_DEFAULT});
   }
 
-  &[data-tag-color='${PRESET_COLORS[6]}']: {
+  &[data-tag-color='${PRESET_COLORS[6]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_GRAY});
   }
 
-  &[data-tag-color='${PRESET_COLORS[7]}']: {
+  &[data-tag-color='${PRESET_COLORS[7]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_BROWN});
   }
 
-  &[data-tag-color='${PRESET_COLORS[8]}']: {
+  &[data-tag-color='${PRESET_COLORS[8]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_ORANGE});
   }
 
-  &[data-tag-color='${PRESET_COLORS[9]}']: {
+  &[data-tag-color='${PRESET_COLORS[9]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_YELLOW});
   }
 `;

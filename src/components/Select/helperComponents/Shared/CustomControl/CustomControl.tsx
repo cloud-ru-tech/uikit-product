@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { ISelectProps } from 'components/Select';
@@ -20,9 +20,7 @@ export const CustomControl = <CustomOptionType,>(
     );
   }
 
-  const PrefixControlComponent = prefixControl
-    ? React.memo(prefixControl)
-    : Stub;
+  const PrefixControlComponent = prefixControl ? memo(prefixControl) : Stub;
 
   return (
     data: React.ComponentProps<typeof ReactSelectComponents.Control>,

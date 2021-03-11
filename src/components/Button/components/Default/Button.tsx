@@ -1,11 +1,12 @@
-import { TButtonTypes } from './types';
+import { TButtonType } from 'components/Button/helpers/types';
+
 import { ButtonComponent, IconWrap } from './styled';
 
 export interface IButtonProps {
   rounded?: boolean;
   className?: string;
   disabled?: boolean;
-  type?: TButtonTypes;
+  type?: TButtonType;
   icon?: React.ReactNode;
   size?: 'xs' | 's' | 'm';
   children?: React.ReactNode;

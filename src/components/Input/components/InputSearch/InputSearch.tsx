@@ -4,7 +4,7 @@ import { css } from '@linaria/core';
 import { SearchSVG, CrossSVG } from '@aicloud/ui-icons';
 
 import { Input } from 'components/Input';
-import { InputProps } from 'components/Input/helpers/types';
+import { IInputProps } from 'components/Input/helpers/types';
 
 // TODO: we have to create className instead of wrapping component because of a bug
 // https://github.com/NervJS/taro/issues/8325
@@ -25,7 +25,7 @@ export const crossIconClassName = css`
   }
 `;
 
-export interface IInputSearchProps extends Omit<InputProps, 'onChange'> {
+export interface IInputSearchProps extends Omit<IInputProps, 'onChange'> {
   value?: string;
   onChange?: (search?: string) => void;
 }

@@ -6,20 +6,16 @@ import { Input } from 'components/Input';
 import { InputSearch, IInputSearchProps } from './InputSearch';
 
 export default {
-  title: 'Components/Input/InputSearch',
+  title: 'Components/Input',
   component: Input,
 } as Meta;
 
-const Template: Story<IInputSearchProps> = () => {
+const Template: Story<IInputSearchProps> = ({ ...args }) => {
   const [value, setValue] = useState<string | undefined>();
-  return (
-    <div style={{ backgroundColor: '#ededed', padding: 10 }}>
-      <InputSearch value={value} onChange={setValue} />
-    </div>
-  );
+
+  return <InputSearch value={value} onChange={setValue} {...args} />;
 };
 
-export const Default = Template.bind({});
-Default.args = {};
-
-Default.parameters = {};
+export const inputSearch = Template.bind({});
+inputSearch.args = {};
+inputSearch.parameters = {};

@@ -1,18 +1,14 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
 
-import { Input } from 'components/Input';
-
-import { Textarea } from './Textarea';
+import { Textarea, ITextareaProps } from './Textarea';
 
 export default {
-  title: 'Example/Input',
-  component: Input,
-  decorators: [withDesign],
+  title: 'Components/Input',
+  component: Textarea,
 } as Meta;
 
-const Template: Story = () => <Textarea />;
+const Template: Story<ITextareaProps> = ({ ...args }) => <Textarea {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {};
-Default.parameters = {};
+export const textarea = Template.bind({});
+textarea.args = {};
+textarea.parameters = {};

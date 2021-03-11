@@ -1,6 +1,6 @@
 import { ChangeEvent } from 'react';
 
-export type InputProps = {
+export type IInputProps = {
   type?: 'default' | 'embed' | 'security' | 'number';
   onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
   value?: string | number;
@@ -14,4 +14,6 @@ export type InputProps = {
   numberMax?: number;
   valueFormatter?: (val: React.ReactText) => React.ReactText;
   disabled?: boolean;
+  label?: string;
+  labelMinWidth?: string;
 };

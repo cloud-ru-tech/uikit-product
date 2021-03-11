@@ -1,4 +1,4 @@
-import React, { FC, useState, useCallback, ChangeEvent } from 'react';
+import { FC, useState, useCallback, ChangeEvent } from 'react';
 import { css } from '@linaria/core';
 import RcTree from 'rc-tree';
 import { DataNode } from 'rc-tree/lib/interface';
@@ -45,7 +45,6 @@ const avatarClassName = css`
 
 // TODO: we have to create className instead of wrapping component because of a bug
 // https://github.com/NervJS/taro/issues/8325
-
 const searchIconClassname = css`
   position: absolute;
   right: 14px;

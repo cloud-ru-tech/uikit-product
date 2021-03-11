@@ -1,9 +1,10 @@
 import RCModal from 'react-modal';
+
 import { CancelSVG } from '@aicloud/ui-icons';
 
 import { Button } from 'components/Button';
-
 import { Divider } from 'components/Divider';
+
 import { previewCloseBtn, Title, Content } from './styled';
 
 interface IReactModalProps extends ReactModal.Props {
@@ -68,7 +69,10 @@ export const ModalPreview: React.FC<IModalPreviewProps> = props => {
     contentClassName,
   } = props;
 
-  if (appElement) RCModal.setAppElement(appElement as HTMLElement);
+  if (appElement) {
+    RCModal.setAppElement(appElement as HTMLElement);
+  }
+
   return (
     <RCModal {...props} style={customStyles}>
       <Button

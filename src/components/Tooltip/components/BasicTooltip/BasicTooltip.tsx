@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
-import TooltipTrigger, { TooltipTriggerProps } from 'react-popper-tooltip';
+import { FC } from 'react';
 import { cx } from '@linaria/core';
+import TooltipTrigger, { TooltipTriggerProps } from 'react-popper-tooltip';
+
 import {
   containerStyle,
   containerWithIconStyle,
@@ -46,63 +47,60 @@ export const BasicTooltip: FC<IBasicTooltipProps> = ({
   icon,
   iconAction,
   ...props
-}) => {
-  console.log(Boolean(iconAction));
-  return (
-    <TooltipTrigger
-      trigger={trigger}
-      placement={placement}
-      modifiers={modifiers}
-      delayShow={delayShow}
-      delayHide={delayHide}
-      {...props}
-      tooltip={({
-        arrowRef,
-        tooltipRef,
-        getArrowProps,
-        getTooltipProps,
-        placement,
-      }): JSX.Element => (
-        <div
-          {...getTooltipProps({
-            ref: tooltipRef,
-            className: cx(
-              containerStyle,
-              Boolean(icon) && containerWithIconStyle,
-              className,
-            ),
+}) => (
+  <TooltipTrigger
+    trigger={trigger}
+    placement={placement}
+    modifiers={modifiers}
+    delayShow={delayShow}
+    delayHide={delayHide}
+    {...props}
+    tooltip={({
+      arrowRef,
+      tooltipRef,
+      getArrowProps,
+      getTooltipProps,
+      placement,
+    }): JSX.Element => (
+      <div
+        {...getTooltipProps({
+          ref: tooltipRef,
+          className: cx(
+            containerStyle,
+            Boolean(icon) && containerWithIconStyle,
+            className,
+          ),
+        })}
+      >
+        {!hideArrow && (
+          <div
+            {...getArrowProps({
+              ref: arrowRef,
+              className: [classNameArrow],
+              'data-placement': placement,
+            })}
+          />
+        )}
+        <TooltipWrapper>{tooltip}</TooltipWrapper>
+        {icon && (
+          <IconWrapper onClick={iconAction} data-action={Boolean(iconAction)}>
+            {icon}
+          </IconWrapper>
+        )}
+      </div>
+    )}
+  >
+    {({ getTriggerProps, triggerRef }): JSX.Element => (
+      <>
+        <span
+          {...getTriggerProps({
+            ref: triggerRef,
+            className: cx(triggerStyle, classNameTrigger),
           })}
         >
-          {!hideArrow && (
-            <div
-              {...getArrowProps({
-                ref: arrowRef,
-                className: [classNameArrow],
-                'data-placement': placement,
-              })}
-            />
-          )}
-          <TooltipWrapper>{tooltip}</TooltipWrapper>
-          {icon && (
-            <IconWrapper onClick={iconAction} data-action={Boolean(iconAction)}>
-              {icon}
-            </IconWrapper>
-          )}
-        </div>
-      )}
-    >
-      {({ getTriggerProps, triggerRef }): JSX.Element => (
-        <>
-          <span
-            {...getTriggerProps({
-              ref: triggerRef,
-              className: cx(triggerStyle, classNameTrigger),
-            })}
-          >
-            {children}
-          </span>
-        </>
-      )}
-    </TooltipTrigger>
-  );
-};
+          {children}
+        </span>
+      </>
+    )}
+  </TooltipTrigger>
+);

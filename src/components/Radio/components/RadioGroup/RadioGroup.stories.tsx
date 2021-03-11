@@ -5,7 +5,7 @@ import { RadioGroup } from './RadioGroup';
 import { Radio } from '../Default';
 
 export default {
-  title: 'Components/RadioGroup',
+  title: 'Components/Radio',
   component: Radio,
 } as Meta;
 
@@ -22,19 +22,17 @@ const Template: Story = ({ children, ...args }) => {
     >
       {[...new Array(3)].map((_value, index) => (
         <Radio
-          {...args}
           key={index}
           value={`story${index}`}
           label={`story${index}`}
           description={`description${index}`}
+          {...args}
         />
       ))}
     </RadioGroup>
   );
 };
 
-export const RadioGroupTemplate = Template.bind({});
-
-RadioGroupTemplate.args = {};
-
-RadioGroupTemplate.parameters = {};
+export const radioGroup = Template.bind({});
+radioGroup.args = {};
+radioGroup.parameters = {};

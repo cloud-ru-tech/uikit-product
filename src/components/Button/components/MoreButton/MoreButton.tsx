@@ -1,28 +1,24 @@
 import { css } from '@linaria/core';
 import { MoreSVG } from '@aicloud/ui-icons';
 
-import {
-  TooltipStateContainer,
-  TooltipMenu,
-  TooltipMenuItem,
-  Tooltip,
-} from 'components/Tooltip';
+import { Button } from 'components/Button';
+import { Tooltip, TooltipMenu } from 'components/Tooltip';
+import { TooltipMenuItem } from 'components/Tooltip/helperComponents/TooltipMenuItem';
+import { TooltipStateContainer } from 'components/Tooltip/helperComponents/TooltipStateContainer';
 
-import { Button } from '../Default';
-
-export type TMoreButtonProps = {
+export interface IMoreButtonProps {
   actions: {
     name: string;
     onClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
   }[];
-};
+}
 
 const iconStyle = css`
   cursor: pointer;
   width: 100%;
 `;
 
-export const MoreButton: React.FC<TMoreButtonProps> = ({ actions }) => (
+export const MoreButton: React.FC<IMoreButtonProps> = ({ actions }) => (
   <Button type='transparent'>
     <TooltipStateContainer>
       {({

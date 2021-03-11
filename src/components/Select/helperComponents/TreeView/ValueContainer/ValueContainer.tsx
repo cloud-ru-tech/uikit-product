@@ -1,4 +1,3 @@
-import React from 'react';
 import { ValueContainerProps } from 'react-select';
 
 import { IOptionProps } from 'components/Select/helperComponents/TreeView/Menu';

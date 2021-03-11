@@ -1,11 +1,12 @@
 import RCModal from 'react-modal';
+
 import { CancelSVG } from '@aicloud/ui-icons';
 
-import { Button } from 'components/Button';
-
-import { BasicTooltip } from 'components/Tooltip';
 import Z_INDEX from 'vars/zIndex';
+import { Button } from 'components/Button';
+import { BasicTooltip } from 'components/Tooltip';
 import { COLORS_MODAL } from 'theme/color/vars';
+
 import {
   closeButtonStyle,
   Title,

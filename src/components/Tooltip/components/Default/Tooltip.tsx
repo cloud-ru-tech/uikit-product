@@ -1,22 +1,11 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import TooltipTrigger from 'react-popper-tooltip';
-import { css } from '@linaria/core';
 
-import Z_INDEX from 'vars/zIndex';
+import { ITooltipProps } from 'components/Tooltip/helpers/types';
 
-import { ITooltipProps } from './types';
+import { tooltipStyle, triggerStyle } from './styled';
 
-export const tooltipStyle = css`
-  border: none;
-  border-radius: 4px;
-  background-color: #ffffff;
-  z-index: ${Z_INDEX.TOOLTIP};
-`;
-
-export const triggerStyle = css`
-  height: 100%;
-`;
-// FIXME: any; + может стоит переименовать, так как будет еще другой тултип с подсказкой
+// FIXME: может стоит переименовать, так как будет еще другой тултип с подсказкой
 export const Tooltip: FC<ITooltipProps> = ({
   children,
   tooltip,

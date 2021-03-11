@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useMemo,
-  useEffect,
-  useRef,
-  useCallback,
-} from 'react';
+import { useState, useMemo, useEffect, useRef, useCallback } from 'react';
 import RCSelect, {
   components,
   SelectComponentsConfig,

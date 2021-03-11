@@ -5,10 +5,10 @@ import { styled } from '@linaria/react';
 import { H4 } from 'typography/Headers';
 import { PRESET_COLORS } from 'components/Tag/helpers/colors';
 
-import { Tag, TTagProps } from './Tag';
+import { Tag, ITagProps } from './Tag';
 
 export default {
-  title: 'Components/Tag/Default',
+  title: 'Components/Tag',
   component: Tag,
 } as Meta;
 
@@ -20,32 +20,36 @@ const Row = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+  margin-right: 50px;
 `;
 
 const TagWrap = styled.div`
   padding: 10px;
 `;
 
-export const Template: Story<TTagProps> = ({ ...args }) => {
+const Title = styled(H4)`
+  margin-bottom: 20px;
+`;
+
+const Template: Story<ITagProps> = ({ ...args }) => {
   const [tagText, setTagText] = useState('TagText');
 
   return (
     <Row>
       <Column>
-        <H4>Default tags (preset color)</H4>
+        <Title>Default tags (preset color)</Title>
         {PRESET_COLORS.map(color => (
           <TagWrap key={color}>
-            <Tag color={color} {...args}>
+            <Tag {...args} color={color}>
               {color}
             </Tag>
           </TagWrap>
         ))}
       </Column>
       <Column>
-        <H4>Input tag</H4>
+        <Title>Input tag with custom color</Title>
         <Tag
           {...args}
-          color={PRESET_COLORS[0]}
           value={tagText}
           tag='input'
           onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -57,4 +61,6 @@ export const Template: Story<TTagProps> = ({ ...args }) => {
   );
 };
 
-Template.parameters = {};
+export const tag = Template.bind({});
+tag.args = { color: 'aqua' };
+tag.parameters = {};

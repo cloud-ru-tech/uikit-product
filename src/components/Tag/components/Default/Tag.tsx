@@ -1,17 +1,18 @@
-import React, { useCallback } from 'react';
+import { useCallback } from 'react';
 
+import { COLORS_TAG } from 'theme/color/vars';
 import { PRESET_COLORS, PresetColorType } from 'components/Tag/helpers/colors';
 
-import { Tag as StyledTag, StyledInputAutosize } from './styled';
+import { StyledTag, StyledInputAutosize } from './styled';
 
-export const TAG_TYPES = {
+const TAG_TYPES = {
   SPAN: 'span',
   INPUT: 'input',
-} as const;
+};
 
-type TTagType = TAG_TYPES.SPAN | TAG_TYPES.INPUT;
+type TTagType = 'span' | 'input';
 
-export interface TTagProps {
+export interface ITagProps {
   size?: number;
   value?: string;
   tag?: TTagType;
@@ -27,16 +28,51 @@ const PresetColorRegex = new RegExp(
   `^(${PRESET_COLORS.join('|')})(-inverse)?$`,
 );
 
-export const Tag: React.FC<TTagProps> = ({
-  children,
+const presetColors = {
+  [PRESET_COLORS[0]]: COLORS_TAG.TAG_BG_GREEN,
+  [PRESET_COLORS[1]]: COLORS_TAG.TAG_BG_BLUE,
+  [PRESET_COLORS[2]]: COLORS_TAG.TAG_BG_PURPLE,
+  [PRESET_COLORS[3]]: COLORS_TAG.TAG_BG_PINK,
+  [PRESET_COLORS[4]]: COLORS_TAG.TAG_BG_RED,
+  [PRESET_COLORS[5]]: COLORS_TAG.TAG_BG_GRAY_DEFAULT,
+  [PRESET_COLORS[6]]: COLORS_TAG.TAG_BG_GRAY,
+  [PRESET_COLORS[7]]: COLORS_TAG.TAG_BG_BROWN,
+  [PRESET_COLORS[8]]: COLORS_TAG.TAG_BG_ORANGE,
+  [PRESET_COLORS[9]]: COLORS_TAG.TAG_BG_YELLOW,
+};
+
+const getTagStyles = ({
+  isPresetBackground,
+  style,
+  tag,
+  color,
+}: {
+  isPresetBackground: boolean;
+  style?: React.CSSProperties;
+  tag?: TTagType;
+  color?: string;
+}) => {
+  if (isPresetBackground) {
+    if (tag === TAG_TYPES.INPUT && color) {
+      return { ...style, backgroundColor: `var(${presetColors[color]})` };
+    }
+
+    return style;
+  }
+
+  return { ...style, backgroundColor: color };
+};
+
+export const Tag: React.FC<ITagProps> = ({
   color,
   style,
-  className,
-  inputClassNames,
-  tag = 'span',
-  value = '',
   onChange,
+  children,
   inputRef,
+  value = '',
+  tag = 'span',
+  className = '',
+  inputClassNames,
 }) => {
   const isPresetColor = useCallback((): boolean => {
     if (!color) {
@@ -45,13 +81,15 @@ export const Tag: React.FC<TTagProps> = ({
     return PresetColorRegex.test(color);
   }, [color]);
 
+  const isPresetBackground = isPresetColor();
+  const tagStyles = getTagStyles({ isPresetBackground, tag, style, color });
+
   const tagProps = {
-    ...(isPresetColor() ? { 'data-tag-color': color } : { background: color }),
-    style,
+    ...(isPresetBackground ? { 'data-tag-color': color } : {}),
+    style: tagStyles,
     className,
   };
 
-  // TODO: check input styles and style prop
   if (tag === TAG_TYPES.INPUT) {
     return (
       <StyledInputAutosize
@@ -65,8 +103,4 @@ export const Tag: React.FC<TTagProps> = ({
   }
 
   return <StyledTag {...tagProps}>{children || value}</StyledTag>;
-};
-
-Tag.defaultProps = {
-  className: '',
 };
