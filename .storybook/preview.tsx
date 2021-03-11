@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { globals, purple, purpleDark } from '../src/theme';
+import { globals, purple, purpleDark, green } from '../src/theme';
 
 export const decorators = [
   Story => {
@@ -38,6 +38,7 @@ export const parameters = {
     list: [
       { name: 'purple', class: purple, color: '#f3f3fe', default: true },
       { name: 'purpleDark', class: purpleDark, color: '#bcbced' },
+      { name: 'green', class: green, color: '#07E897' },
     ],
     onChange: changeTheme,
   },

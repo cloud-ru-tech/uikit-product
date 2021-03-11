@@ -22,11 +22,36 @@ export const COLORS = {
   GREEN_1: '--color-default-green-1',
   GREEN_2: '--color-default-green-2',
   GREEN_3: '--color-default-green-3',
+  GREEN_4: '--color-default-green-4',
+  GREEN_5: '--color-default-green-5',
+  GREEN_6: '--color-default-green-6',
+  GREEN_7: '--color-default-green-7',
+  GREEN_8: '--color-default-green-8',
   BLUE_1: '--color-default-blue-1',
   BLUE_2: '--color-default-blue-2',
   RED_1: '--color-default-red-1',
   RED_2: '--color-default-red-2',
   YELLOW: '--color-default-yellow',
+};
+
+export const COLORS_BRAND = {
+  GREEN: '--color-brand-green',
+  GREEN_GRADIENT: '--color-brand-green-gradient',
+  BLACK: '--color-brand-black',
+  GRAY: '--color-brand-gray',
+};
+
+export const COLORS_TAG = {
+  RED: '--color-tag-red',
+  PINK: '--color-tag-pink',
+  PURPLE: '--color-tag-purple',
+  BLUE: '--color-tag-blue',
+  GREEN: '--color-tag-green',
+  YELLOW: '--color-tag-yellow',
+  ORANGE: '--color-tag-orange',
+  BROWN: '--color-tag-brown',
+  GRAY_1: '--color-tag-gray-1',
+  GRAY_2: '--color-tag-gray-2',
 };
 
 export const COLORS_GENERAL = {
@@ -38,6 +63,7 @@ export const COLORS_BUTTON = {
   FOCUS_SHADOW: '--button-focus-shadow',
 
   FILLED_COLOR: '--button-filled-color',
+  FILLED_ICON_COLOR: '--button-filled-icon-color',
   FILLED_BG: '--button-filled-bg',
   FILLED_HOVER_BG: '--button-filled-hover-bg',
   FILLED_ACTIVE_BG: '--button-filled-active-bg',
@@ -50,7 +76,9 @@ export const COLORS_BUTTON = {
   OUTLINED_HOVER_COLOR: '--button-outlined-hover-color',
   OUTLINED_HOVER_BORDER: '--button-outlined-hover-border',
   OUTLINED_ACTIVE_COLOR: '--button-outlined-active-color',
+  OUTLINED_ACTIVE_BORDER: '--button-outlined-active-border',
   OUTLINED_DISABLED_COLOR: '--button-outlined-disabled-color',
+  OUTLINED_DISABLED_BORDER: '--button-outlined-disabled-border',
   OUTLINED_FOCUS_COLOR: '--button-outlined-focus-color',
   OUTLINED_FOCUS_BORDER: '--button-outlined-focus-border',
 
@@ -63,6 +91,14 @@ export const COLORS_BUTTON = {
   TRANSPARENT_FOCUS_COLOR: '--button-transparent-focus-color',
   TRANSPARENT_FOCUS_BG: '--button-transparent-focus-bg',
   TRANSPARENT_FOCUS_BORDER: '--button-transparent-focus-border',
+
+  FILLED_GREEN_COLOR: '--button-filled-green-color',
+  FILLED_GREEN_BG: '--button-filled-green-bg',
+  FILLED_GREEN_HOVER_BG: '--button-filled-green-hover-bg',
+  FILLED_GREEN_ACTIVE_BG: '--button-filled-green-active-bg',
+  FILLED_GREEN_DISABLED_COLOR: '--button-filled-green-disabled-color',
+  FILLED_GREEN_DISABLED_BG: '--button-filled-green-disabled-bg',
+  FILLED_GREEN_FOCUS_BG: '--button-filled-green-focus-bg',
 
   WHITE_COLOR: '--button-white-color',
   WHITE_BG: '--button-white-bg',

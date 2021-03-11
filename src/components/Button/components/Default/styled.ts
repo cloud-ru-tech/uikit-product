@@ -28,7 +28,7 @@ export const ButtonComponent = styled.button`
 
   &[data-type='filled'] {
     color: var(${COLORS_BUTTON.FILLED_COLOR});
-    fill: var(${COLORS_BUTTON.FILLED_COLOR});
+    fill: var(${COLORS_BUTTON.FILLED_ICON_COLOR});
     background-color: var(${COLORS_BUTTON.FILLED_BG});
     &:hover {
       background-color: var(${COLORS_BUTTON.FILLED_HOVER_BG});
@@ -74,7 +74,7 @@ export const ButtonComponent = styled.button`
       color: var(${COLORS_BUTTON.OUTLINED_ACTIVE_COLOR});
       fill: var(${COLORS_BUTTON.OUTLINED_ACTIVE_COLOR});
       &:before {
-        border-color: var(${COLORS_BUTTON.OUTLINED_ACTIVE_COLOR});
+        border-color: var(${COLORS_BUTTON.OUTLINED_ACTIVE_BORDER});
       }
     }
     &:focus-visible {
@@ -86,7 +86,7 @@ export const ButtonComponent = styled.button`
       color: var(${COLORS_BUTTON.OUTLINED_DISABLED_COLOR});
       fill: var(${COLORS_BUTTON.OUTLINED_DISABLED_COLOR});
       &:before {
-        border-color: var(${COLORS_BUTTON.OUTLINED_DISABLED_COLOR});
+        border-color: var(${COLORS_BUTTON.OUTLINED_DISABLED_BORDER});
       }
     }
   }
@@ -125,6 +125,26 @@ export const ButtonComponent = styled.button`
         border-color: var(${COLORS_BUTTON.TRANSPARENT_FOCUS_BORDER});
         border-radius: 4px;
       }
+    }
+  }
+
+  &[data-type='filled-green'] {
+    color: var(${COLORS_BUTTON.FILLED_GREEN_COLOR});
+    fill: var(${COLORS_BUTTON.FILLED_GREEN_COLOR});
+    background-color: var(${COLORS_BUTTON.FILLED_GREEN_BG});
+    &:hover {
+      background-color: var(${COLORS_BUTTON.FILLED_GREEN_HOVER_BG});
+    }
+    &:active {
+      background-color: var(${COLORS_BUTTON.FILLED_GREEN_ACTIVE_BG});
+    }
+    &:disabled {
+      color: var(${COLORS_BUTTON.FILLED_GREEN_DISABLED_COLOR});
+      fill: var(${COLORS_BUTTON.FILLED_GREEN_DISABLED_COLOR});
+      background-color: var(${COLORS_BUTTON.FILLED_GREEN_DISABLED_BG});
+    }
+    &:focus-visible {
+      background-color: var(${COLORS_BUTTON.FILLED_GREEN_FOCUS_BG});
     }
   }
 
