@@ -1,10 +1,11 @@
 {
-  "name": "@sbercloud/ui-kit",
+  "name": "@sbercloud/uikit2.0",
   "version": "2.0.0",
   "description": "SberCloud UI-Kit",
   "main": "dist/esm/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/types/index.d.ts",
+  "license": "UNLICENSED",
   "scripts": {
     "prepack": "node scripts/prepublish.js",
     "storybook": "yarn start-storybook -p 6006",
@@ -20,7 +21,6 @@
     "build:cjs": "BUILD_TYPE=cjs yarn babel src --out-dir dist/cjs --extensions '.ts,.tsx'",
     "build:cjs:watch": "yarn build:cjs -- --watch"
   },
-  "files": [],
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -32,9 +32,6 @@
       "prettier --write"
     ]
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "dependencies": {
     "@aicloud/ui-icons": "0.0.27",
     "lodash.debounce": "^4.0.8",
@@ -44,6 +41,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-modal": "^3.12.1",
+    "react-popper-tooltip": "3.1.0",
     "react-select": "^4.1.0"
   },
   "peerDependencies": {
@@ -103,5 +101,11 @@
     "storybook-addon-themes": "^6.0.1",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typescript": "^4.1.2"
-  }
+  },
+  "publishConfig": {
+    "registry": "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/"
+  },
+  "files": [
+    "dist"
+  ]
 }

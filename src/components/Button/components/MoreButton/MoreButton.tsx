@@ -8,7 +8,7 @@ import { TooltipStateContainer } from 'components/Tooltip/helperComponents/Toolt
 
 export interface IMoreButtonProps {
   actions: {
-    name: string;
+    name: React.ReactNode;
     onClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
   }[];
 }
