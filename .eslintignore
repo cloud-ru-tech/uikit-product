@@ -2,3 +2,4 @@ node_modules
 scripts
 gitlab-ci.yml
 dist
+src/theme/

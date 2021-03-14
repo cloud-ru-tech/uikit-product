@@ -2,6 +2,217 @@
 # yarn lockfile v1
 
 
+"@ag-grid-community/all-modules@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/all-modules/-/all-modules-25.1.0.tgz#cb5b9fc6386d9e45f233ed7a680c3204edeef5fe"
+  integrity sha512-EaDuCv8iKwQigTlzw/yvrQ3tta31CvIuALtJQBXzjlfyiCxTxV6WHWxKHHk9QSVoEktMGcwhgGnRZFhzNp+/pA==
+  dependencies:
+    "@ag-grid-community/client-side-row-model" "~25.1.0"
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-community/csv-export" "~25.1.0"
+    "@ag-grid-community/infinite-row-model" "~25.1.0"
+
+"@ag-grid-community/client-side-row-model@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/client-side-row-model/-/client-side-row-model-25.1.0.tgz#39e86a320e18941e976862ff9fefa649ae2bdd2a"
+  integrity sha512-/SLSXYO2Nn8SkoI65/0g7TWNZpP6OaRjvT8ncoTOXgT1g+mY1CeWROUtKccTjMtwOiam1Dn7oAImq0utDoEFjw==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+
+"@ag-grid-community/core@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/core/-/core-25.1.0.tgz#bc7ef99a0c402cbaccf2fd223b46c1e1c515aad9"
+  integrity sha512-svbWNlNVtBHJZWs+JgaCsQctW5W/tuOiuO1bbm4vYQA2M6tXAgg4BaDpuHScG8w3ZlOhlz5jkrh8l96ODbAuQA==
+
+"@ag-grid-community/csv-export@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/csv-export/-/csv-export-25.1.0.tgz#894f12ee7ddb69dbc76f6fe95621d93fca9b55d2"
+  integrity sha512-TOpyQHee8NkwEY4IvWzras40KXeHnUc2/v3BOhgIm8PjhnS3WTPTWB8b671P1OmOqSEB5MaEoe5AT/kIrt0EZw==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+
+"@ag-grid-community/infinite-row-model@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/infinite-row-model/-/infinite-row-model-25.1.0.tgz#ff00104cdfb3942885aac0a2f46c8314b9f37587"
+  integrity sha512-CZKmS6cqeAW11TyNaU+Kz4tweJLkXTftqc7qNpSD0eyTN1D8KX0jsd9d9cM/VRkrWZwi9RhbsioTWH/v9cIWrA==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+
+"@ag-grid-community/react@^25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/react/-/react-25.1.0.tgz#30d2ceb5835260514f566716270995c874ee8a31"
+  integrity sha512-c3ZgN7/1Zvvzxb5j82wspxF9MkK3tN43/yDJVmvHFqsKdVt3ihrHnJd7LJpWFxpubq/WdE1jIxxkv+TPHSZ76w==
+  dependencies:
+    prop-types "^15.6.2"
+
+"@ag-grid-enterprise/all-modules@^25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/all-modules/-/all-modules-25.1.0.tgz#fa69e8e1f5a50ba52bf387be8fe61aa8de4ee956"
+  integrity sha512-OuwcN626H3JJBzS0ckffDkf50mrQP8cLsu3UXmCqgdbvsO4e303VUPM3XXJzv957cQ9JD4u1odPI2ewAsDshSA==
+  dependencies:
+    "@ag-grid-community/all-modules" "~25.1.0"
+    "@ag-grid-enterprise/charts" "~25.1.0"
+    "@ag-grid-enterprise/clipboard" "~25.1.0"
+    "@ag-grid-enterprise/column-tool-panel" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+    "@ag-grid-enterprise/excel-export" "~25.1.0"
+    "@ag-grid-enterprise/filter-tool-panel" "~25.1.0"
+    "@ag-grid-enterprise/master-detail" "~25.1.0"
+    "@ag-grid-enterprise/menu" "~25.1.0"
+    "@ag-grid-enterprise/multi-filter" "~25.1.0"
+    "@ag-grid-enterprise/range-selection" "~25.1.0"
+    "@ag-grid-enterprise/rich-select" "~25.1.0"
+    "@ag-grid-enterprise/row-grouping" "~25.1.0"
+    "@ag-grid-enterprise/server-side-row-model" "~25.1.0"
+    "@ag-grid-enterprise/set-filter" "~25.1.0"
+    "@ag-grid-enterprise/side-bar" "~25.1.0"
+    "@ag-grid-enterprise/status-bar" "~25.1.0"
+    "@ag-grid-enterprise/viewport-row-model" "~25.1.0"
+
+"@ag-grid-enterprise/charts@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/charts/-/charts-25.1.0.tgz#d2bb830252a822ec6a493603cdb9a0c379a6de09"
+  integrity sha512-S4s3baOTyORR9c4ZjcAM6pERf5xLCSHU/8Bk9EbDdEoJeyQ5ZA4kRdUI2m0oQZGjQdpMOGIQms1zWOTpvJ05jA==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+    "@ag-grid-enterprise/range-selection" "~25.1.0"
+    ag-charts-community "~3.1.0"
+
+"@ag-grid-enterprise/clipboard@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/clipboard/-/clipboard-25.1.0.tgz#a09a52380b419859179633518ebe1a4d021908a1"
+  integrity sha512-+1Mxyox80P18VCaROGnoIw412QmRwxp1Ep98+nJSj0xdVoLIVsrm+ZQhop52nq/l8/2Bpq5cxeU0HkwOrCwGFA==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-community/csv-export" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/column-tool-panel@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/column-tool-panel/-/column-tool-panel-25.1.0.tgz#37b80475d0380fcb9a91ac71ca792674933e467e"
+  integrity sha512-BzQSffJf5iOAAx55HAtFcBe79TuF6N8E94BBQ2eNPHJSsVBm7n08g/Y9oeEayYEJpZIRQ2Zg/QSTZFPTKlpnkg==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+    "@ag-grid-enterprise/row-grouping" "~25.1.0"
+    "@ag-grid-enterprise/side-bar" "~25.1.0"
+
+"@ag-grid-enterprise/core@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/core/-/core-25.1.0.tgz#a22df0150c2591870c886d798ad06c532b2db9a3"
+  integrity sha512-l5IQEClZH5xEiTlkLWxyIwt83ENJg/d+/rKFRa1LUG2h+4xfflkvW1RddRB9sNEZjrgcrbJS6zaBC6T42/GcaA==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+
+"@ag-grid-enterprise/excel-export@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/excel-export/-/excel-export-25.1.0.tgz#2ba847ec9ca16d8aeb710bc3fd1e679c3e45d5ae"
+  integrity sha512-+X4wSihSQvAuPpghf4oD7J7xZRC/OTsc1HBHGq1/tJlZ5yCS3/4hQYwfOoJtlQEq9gPz9PjcrJwkB4+9tXYdlQ==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-community/csv-export" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/filter-tool-panel@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/filter-tool-panel/-/filter-tool-panel-25.1.0.tgz#32a8fbc88b9c134128372cfa98e7875d677dfb06"
+  integrity sha512-oYHUpv7nXmczuN7cHVjwPq04lWM7wkLyl2fzSmufqsT1VKlEyAhReZRNcxW2RlzIJABIvJTGy9gfnPb5zjIOnA==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+    "@ag-grid-enterprise/side-bar" "~25.1.0"
+
+"@ag-grid-enterprise/master-detail@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/master-detail/-/master-detail-25.1.0.tgz#92b36551467d16ba53c8aed2076fe406fba1cf19"
+  integrity sha512-0ytJF4DUNiRboyqlxxJc9bIhEMvwKVPG2w8FHUr4PaU8qKFZ6QZolTqljm349khJnkT000iVmu7Jf5CfVB33aA==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/menu@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/menu/-/menu-25.1.0.tgz#256764d88b212fbd363a27a845c7af20ef929d4b"
+  integrity sha512-H6FeD8CaFcLW+gYRePmSSMC6EsJNRnZhSROP24gXD2HauJKlCePAmXlSJXByNEcuD7oaeE1NP7Lt8pJbSW5HTQ==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/column-tool-panel" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/multi-filter@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/multi-filter/-/multi-filter-25.1.0.tgz#89916f5f9021f78f26b5c02f893dd17e5e61291d"
+  integrity sha512-UknYqFrqYW6EErRCquQF+NtzKLeLs4eTd0i4URulvY3o6YDzCJtZZfIoKLcOJzlIu3dpE+s1jUt1agftrENbTA==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+    "@ag-grid-enterprise/menu" "~25.1.0"
+
+"@ag-grid-enterprise/range-selection@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/range-selection/-/range-selection-25.1.0.tgz#b7f6aab320bbd72f838251b162c231a832325658"
+  integrity sha512-ZfOlj7GaTD54pNGnpIyo5Wxx4Lv72gGujl6Wa1vYmTDp/7Ya4y5ONEkjpHUuo6G39vlbjSDMSfURtYzwLpsNRg==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/rich-select@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/rich-select/-/rich-select-25.1.0.tgz#312f57e70afd89eb3e7f8f9ee9bdedbac8cce1c7"
+  integrity sha512-iiFjkaNnp2ZgE6TyNticIo1/vazw/lA8ONGs1sUWek6KhpqAaCm/l0050gXgXOofvkIZeuih+YVhz6UNBSbBhA==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/row-grouping@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/row-grouping/-/row-grouping-25.1.0.tgz#f86db96578ac5e5cf930c6ce036ff9f59dc4c412"
+  integrity sha512-MRY4wnjEtqjCluzojbkrKPvcmERydmPwpsRHMxlSpROQHBtOLXZvFXWmi7ied91ZyPV694MNC2ANW3xyl5y9Zg==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/server-side-row-model@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/server-side-row-model/-/server-side-row-model-25.1.0.tgz#8fea65a704c6cb4f4e8bb4703ec22e320b62e860"
+  integrity sha512-LnGkHvviIQCJDZjkQh3yKHaSYrvF7+kPLaJBm4CFT56N7JgbRhDbgKhUIxZfT2oJ5JUo26sPQLT/uflSf/lV/Q==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/set-filter@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/set-filter/-/set-filter-25.1.0.tgz#18fc1d04ea461374c553ef58c0eb27624ffbdd5e"
+  integrity sha512-bp7ohIHL5Vh8cXWC6wQ5cdccBOiKQOzxdQWRTO//LKd4DkJ5aDPBbfJBqQzASsxrVJIXX+YXXEctvk2YeQeJKw==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/side-bar@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/side-bar/-/side-bar-25.1.0.tgz#e34e0dd72397e6af97ee95c5aa52a85c56620fed"
+  integrity sha512-LgZLu8v6CtNWxojJYP7ikYERdtysQOKA5gYnnfyfz9PhaImqdv4q24hAMfNAFgwPGGbTeEEdJ4bMlEIabQF8ug==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/status-bar@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/status-bar/-/status-bar-25.1.0.tgz#9b379bd137ddf7c6b6d513ece9427a0bbcc51ad8"
+  integrity sha512-WzyQURgV+JFOUcBBT+DFAgqod3v+Xr730oE4j3WjeR+Ic7W6lpN2DkhDqb6tIGrm2sZoz1VQlpNDLvoVLLF2IA==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
+"@ag-grid-enterprise/viewport-row-model@~25.1.0":
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-enterprise/viewport-row-model/-/viewport-row-model-25.1.0.tgz#4919991455fbe075ad53513b205d431623d0ee85"
+  integrity sha512-aPIpCNqr+eh1sekCWkeHbr+J2AeGUIBGSnRqZWLWLFs8rYy6Naa8F0uiTHF0PYV90euWGiFBGNYvUzF5EFu6qw==
+  dependencies:
+    "@ag-grid-community/core" "~25.1.0"
+    "@ag-grid-enterprise/core" "~25.1.0"
+
 "@atamore/eslint-config-atamore@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@atamore/eslint-config-atamore/-/eslint-config-atamore-1.1.0.tgz#5a1c9b153bdaf23a0f83cad528601c0ae67e9069"
@@ -1460,7 +1671,11 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
+<<<<<<< HEAD
 "@npmcli/arborist@^2.0.0", "@npmcli/arborist@^2.3.0":
+=======
+"@npmcli/arborist@^2.0.0", "@npmcli/arborist@^2.3.0", "@npmcli/arborist@^2.4.0":
+>>>>>>> AICDC-1657 | add ag-grid
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/@npmcli/arborist/-/arborist-2.4.0.tgz#34e7d7ead0140268ff7f9418b305993e8f2ce0d7"
   integrity sha512-rCoRrUSmXdBDBBgL/O0oehIR53ey99Pds8dId7gztARZmx6/NBoeiUOu9RnvXSe15XZLc3JSz9sHPcbQ9NQ53Q==
@@ -1493,7 +1708,7 @@
     treeverse "^1.0.4"
     walk-up-path "^1.0.0"
 
-"@npmcli/ci-detect@^1.0.0", "@npmcli/ci-detect@^1.2.0":
+"@npmcli/ci-detect@^1.2.0", "@npmcli/ci-detect@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@npmcli/ci-detect/-/ci-detect-1.3.0.tgz#6c1d2c625fb6ef1b9dea85ad0a5afcbef85ef22a"
   integrity sha512-oN3y7FAROHhrAt7Rr7PnTSwrHrZVRTS2ZbyxeQwSSYD0ifwM3YNgQqbaRmjcWoPyq77MjchusjJDspbzMmip1Q==
@@ -1582,7 +1797,11 @@
   dependencies:
     infer-owner "^1.0.4"
 
+<<<<<<< HEAD
 "@npmcli/run-script@^1.8.2", "@npmcli/run-script@^1.8.3", "@npmcli/run-script@^1.8.4":
+=======
+"@npmcli/run-script@^1.8.2", "@npmcli/run-script@^1.8.3", "@npmcli/run-script@^1.8.4", "@npmcli/run-script@^1.8.5":
+>>>>>>> AICDC-1657 | add ag-grid
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@npmcli/run-script/-/run-script-1.8.5.tgz#f250a0c5e1a08a792d775a315d0ff42fc3a51e1d"
   integrity sha512-NQspusBCpTjNwNRFMtz2C5MxoxyzlbuJ4YEhxAKrIonTiirKDtatsZictx9RgamQIx6+QuHMNmPl0wQdoESs9A==
@@ -3136,6 +3355,28 @@ address@1.1.2, address@^1.0.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/address/-/address-1.1.2.tgz#bf1116c9c758c51b7a933d296b72c221ed9428b6"
   integrity sha512-aT6camzM4xEA54YVJYSqxz1kv4IHnQZRtThJJHhUMRExaU5spC7jX5ugSwTaTgJliIgs4VhZOk7htClvQ/LmRA==
+
+ag-charts-community@~3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ag-charts-community/-/ag-charts-community-3.1.0.tgz#66093d42ef1ea08c09db0be979104431cb519a94"
+  integrity sha512-eCcmd2SmAZm04fR6Kcpi1hGTIOyG8a+6ERE7uWqGYJRA1QoYvswQl3IFn9bivNUNeExpFdqXyj97JUsshafnIA==
+
+ag-grid-community@^25.1.0:
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-25.1.0.tgz#7e132835789586900e0dd24d18cb71d68e09106f"
+  integrity sha512-sKJp6SZG8J50OlOeECtrLFSp/iwdx1mcG0+BmIkHsXmWoyXv5ZaTJyVg1/hMk6s3JVTm1ipg6LepbTaigWEL2A==
+
+ag-grid-enterprise@^25.1.0:
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/ag-grid-enterprise/-/ag-grid-enterprise-25.1.0.tgz#4edac3cc7b2aee9bb285634de5d79c575dd0b007"
+  integrity sha512-Q+LO/orMGNcwTUD40ncyUMCUdY2iMmqL7R9KaUNrwZzDVecyBY4vg3UrLxCmui7qSkOizkD/uSZ6MoNMCnwXBA==
+
+ag-grid-react@^25.1.0:
+  version "25.1.0"
+  resolved "https://registry.yarnpkg.com/ag-grid-react/-/ag-grid-react-25.1.0.tgz#a045071802eabf426a0a652558f7f2e508e63a26"
+  integrity sha512-9xboQWDde2oANitsI/RbsS/rMFVLzXLGyteEBjxSyKGrGDOwAK6XHgvfbGSBL2yWVrYDUD5HRHCdfNejO4FPGA==
+  dependencies:
+    prop-types "^15.6.2"
 
 agent-base@5:
   version "5.1.1"
@@ -7401,7 +7642,7 @@ ini@^1.3.5, ini@~1.3.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
   integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
-init-package-json@^2.0.2:
+init-package-json@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/init-package-json/-/init-package-json-2.0.3.tgz#c8ae4f2a4ad353bcbc089e5ffe98a8f1a314e8fd"
   integrity sha512-tk/gAgbMMxR6fn1MgMaM1HpU1ryAmBWWitnxG5OhuNXeX0cbpbgV5jA4AIpQJVNoyOfOevTtO6WX+rPs+EFqaQ==
@@ -8351,7 +8592,11 @@ levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+<<<<<<< HEAD
 libnpmaccess@^4.0.1:
+=======
+libnpmaccess@^4.0.2:
+>>>>>>> AICDC-1657 | add ag-grid
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/libnpmaccess/-/libnpmaccess-4.0.2.tgz#781832fb7ccb867b26343a75a85ad9c43e50406e"
   integrity sha512-avXtJibZuGap0/qADDYqb9zdpgzVu/yG5+tl2sTRa7MCkDNv2ZlGwCYI0r6/+tmqXPj0iB9fKexHz426vB326w==
@@ -8375,6 +8620,22 @@ libnpmdiff@^2.0.4:
     pacote "^11.3.0"
     tar "^6.1.0"
 
+libnpmexec@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/libnpmexec/-/libnpmexec-1.0.1.tgz#a23f5bbe2bd4f8103a4f53eea8b113f7742f1903"
+  integrity sha512-YK2kEhZNCcaDEqOIUWjadhJl9MgS69YHgMmGD5P3yntF0UXNOQfEqABoMTZv9ngPOJTJQGlU4Dfp2xb3bpUKzw==
+  dependencies:
+    "@npmcli/arborist" "^2.3.0"
+    "@npmcli/ci-detect" "^1.3.0"
+    "@npmcli/run-script" "^1.8.4"
+    chalk "^4.1.0"
+    mkdirp-infer-owner "^2.0.0"
+    npm-package-arg "^8.1.2"
+    pacote "^11.3.1"
+    proc-log "^1.0.0"
+    read "^1.0.7"
+    read-package-json-fast "^2.0.2"
+
 libnpmfund@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/libnpmfund/-/libnpmfund-1.0.2.tgz#d9552d4b76dd7f0a1a61b7af6b8f27184e51b0f5"
@@ -8382,7 +8643,11 @@ libnpmfund@^1.0.2:
   dependencies:
     "@npmcli/arborist" "^2.0.0"
 
+<<<<<<< HEAD
 libnpmhook@^6.0.1:
+=======
+libnpmhook@^6.0.2:
+>>>>>>> AICDC-1657 | add ag-grid
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/libnpmhook/-/libnpmhook-6.0.2.tgz#4a7ad17d7c0f7e0d0e4268c443147938f6bfc534"
   integrity sha512-fTw+8i6iyz9v6azSvQEVYxQhAaE2X1eiVMAUqsiwECWeylyc5KUoghHyYg0Kz5jEy9IOTaWYJXc6gMf0rQFpow==
@@ -8390,7 +8655,11 @@ libnpmhook@^6.0.1:
     aproba "^2.0.0"
     npm-registry-fetch "^10.0.0"
 
+<<<<<<< HEAD
 libnpmorg@^2.0.1:
+=======
+libnpmorg@^2.0.2:
+>>>>>>> AICDC-1657 | add ag-grid
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/libnpmorg/-/libnpmorg-2.0.2.tgz#395344d6b43c0b63a7b03f9e29c191144c0dd7f9"
   integrity sha512-FY5Mzd2CblVqLWwhEIuefzdWwZOxYN1Vvk8KnXxrPhXHDijuQqaN9wgxZlsHwdGC02kPoDKkg67mH/ir/W/YLQ==
@@ -8407,7 +8676,11 @@ libnpmpack@^2.0.1:
     npm-package-arg "^8.1.0"
     pacote "^11.2.6"
 
+<<<<<<< HEAD
 libnpmpublish@^4.0.0:
+=======
+libnpmpublish@^4.0.1:
+>>>>>>> AICDC-1657 | add ag-grid
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/libnpmpublish/-/libnpmpublish-4.0.1.tgz#08ca2cbb5d7f6be1ce4f3f9c49b3822682bcf166"
   integrity sha512-hZCrZ8v4G9YH3DxpIyBdob25ijD5v5LNzRbwsej4pPDopjdcLLj1Widl+BUeFa7D0ble1JYL4F3owjLJqiA8yA==
@@ -8418,14 +8691,22 @@ libnpmpublish@^4.0.0:
     semver "^7.1.3"
     ssri "^8.0.1"
 
+<<<<<<< HEAD
 libnpmsearch@^3.1.0:
+=======
+libnpmsearch@^3.1.1:
+>>>>>>> AICDC-1657 | add ag-grid
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/libnpmsearch/-/libnpmsearch-3.1.1.tgz#418ad6a2587b77b68222210f0a864a96d3841d57"
   integrity sha512-XpJpsc7cg7+gdsC5IglXrPjeGzJh+GLhy8yLv4iKPhUFoe1s7dQvhsP5lN7YF0T98WwdEoMkKmbRJRCjEn3pEw==
   dependencies:
     npm-registry-fetch "^10.0.0"
 
+<<<<<<< HEAD
 libnpmteam@^2.0.2:
+=======
+libnpmteam@^2.0.3:
+>>>>>>> AICDC-1657 | add ag-grid
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/libnpmteam/-/libnpmteam-2.0.3.tgz#dee3f113f9f8901ecbebb49ead13845874ed845d"
   integrity sha512-bCNyYddHmvGEfxOYIk5WcdWHXHIygfAo5tmcGf19YyIG42igd0+CckpuXXJgtIAMZSTFhwskWx9YZ9CmWL94CA==
@@ -9486,12 +9767,17 @@ npm-pick-manifest@^6.0.0, npm-pick-manifest@^6.1.0, npm-pick-manifest@^6.1.1:
     npm-package-arg "^8.1.2"
     semver "^7.3.4"
 
+<<<<<<< HEAD
 npm-profile@^5.0.2:
+=======
+npm-profile@^5.0.3:
+>>>>>>> AICDC-1657 | add ag-grid
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/npm-profile/-/npm-profile-5.0.3.tgz#d7f519002f477ebec925cd4b6c02287674f8b09c"
   integrity sha512-fZbRtN7JyEPBkdr+xLlj0lQrNI42TKlw/3EvEB7OzrwiUNl4veHsu2u06N2MrF5EiQbNUuZ54156Qr1K4R+91w==
   dependencies:
     npm-registry-fetch "^10.0.0"
+<<<<<<< HEAD
 
 npm-registry-fetch@^10.0.0:
   version "10.1.0"
@@ -9505,13 +9791,14 @@ npm-registry-fetch@^10.0.0:
     minipass-json-stream "^1.0.1"
     minizlib "^2.0.0"
     npm-package-arg "^8.0.0"
+=======
+>>>>>>> AICDC-1657 | add ag-grid
 
-npm-registry-fetch@^9.0.0:
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-9.0.0.tgz#86f3feb4ce00313bc0b8f1f8f69daae6face1661"
-  integrity sha512-PuFYYtnQ8IyVl6ib9d3PepeehcUeHN9IO5N/iCRhyg9tStQcqGQBRVHmfmMWPDERU3KwZoHFvbJ4FPXPspvzbA==
+npm-registry-fetch@^10.0.0, npm-registry-fetch@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/npm-registry-fetch/-/npm-registry-fetch-10.1.0.tgz#3b618126b1011af74c12e75d6077712bda411da4"
+  integrity sha512-XcKu0h6OuRTB7HO5uv8htavPQJ1dYTLAXLE5AMs4GFQ1LbY+LlHiNoqIbVshE3rk0vLk+nKxpA/4WJm1kE7eqg==
   dependencies:
-    "@npmcli/ci-detect" "^1.0.0"
     lru-cache "^6.0.0"
     make-fetch-happen "^8.0.9"
     minipass "^3.1.3"
@@ -9555,14 +9842,14 @@ npm-user-validate@^1.0.1:
   integrity sha512-uQwcd/tY+h1jnEaze6cdX/LrhWhoBxfSknxentoqmIuStxUExxjWd3ULMLFPiFUrZKbOVMowH6Jq2FRWfmhcEw==
 
 npm@^7.0.0:
-  version "7.10.0"
-  resolved "https://registry.yarnpkg.com/npm/-/npm-7.10.0.tgz#8d164a30f6065e479df255f8e890d1e932860695"
-  integrity sha512-DD4eEB71HGVt6pS6n4LmFD4eHsrglJ+QtLhv/kP2UWNKkJalL8TPfsiw9p8LmWKa6ed61LHPw5FE6krS3aGv0A==
+  version "7.11.0"
+  resolved "https://registry.yarnpkg.com/npm/-/npm-7.11.0.tgz#a5a86141e78517166f8c327891b8e30f941aab83"
+  integrity sha512-uX+UBniFs4rs+uOku9bxiHppDOCpeOPRvYTtxqVqf6TR9ML7yRlPpzW1GheTmMDJlaZW6MOq8H1BlBhL4QWw5Q==
   dependencies:
-    "@npmcli/arborist" "^2.3.0"
+    "@npmcli/arborist" "^2.4.0"
     "@npmcli/ci-detect" "^1.2.0"
     "@npmcli/config" "^2.1.0"
-    "@npmcli/run-script" "^1.8.4"
+    "@npmcli/run-script" "^1.8.5"
     abbrev "~1.1.1"
     ansicolors "~0.3.2"
     ansistyles "~0.1.3"
@@ -9578,19 +9865,20 @@ npm@^7.0.0:
     graceful-fs "^4.2.6"
     hosted-git-info "^4.0.2"
     ini "^2.0.0"
-    init-package-json "^2.0.2"
+    init-package-json "^2.0.3"
     is-cidr "^4.0.2"
     json-parse-even-better-errors "^2.3.1"
     leven "^3.1.0"
-    libnpmaccess "^4.0.1"
+    libnpmaccess "^4.0.2"
     libnpmdiff "^2.0.4"
+    libnpmexec "^1.0.1"
     libnpmfund "^1.0.2"
-    libnpmhook "^6.0.1"
-    libnpmorg "^2.0.1"
+    libnpmhook "^6.0.2"
+    libnpmorg "^2.0.2"
     libnpmpack "^2.0.1"
-    libnpmpublish "^4.0.0"
-    libnpmsearch "^3.1.0"
-    libnpmteam "^2.0.2"
+    libnpmpublish "^4.0.1"
+    libnpmsearch "^3.1.1"
+    libnpmteam "^2.0.3"
     libnpmversion "^1.2.0"
     make-fetch-happen "^8.0.14"
     minipass "^3.1.3"
@@ -9603,12 +9891,12 @@ npm@^7.0.0:
     npm-audit-report "^2.1.4"
     npm-package-arg "^8.1.2"
     npm-pick-manifest "^6.1.1"
-    npm-profile "^5.0.2"
-    npm-registry-fetch "^9.0.0"
+    npm-profile "^5.0.3"
+    npm-registry-fetch "^10.1.0"
     npm-user-validate "^1.0.1"
     npmlog "~4.1.2"
     opener "^1.5.2"
-    pacote "^11.3.1"
+    pacote "^11.3.2"
     parse-conflict-json "^1.1.1"
     qrcode-terminal "^0.12.0"
     read "~1.0.7"
@@ -9972,7 +10260,11 @@ package-json@^6.3.0:
     registry-url "^5.0.0"
     semver "^6.2.0"
 
+<<<<<<< HEAD
 pacote@^11.1.11, pacote@^11.2.6, pacote@^11.3.0, pacote@^11.3.1:
+=======
+pacote@^11.1.11, pacote@^11.2.6, pacote@^11.3.0, pacote@^11.3.1, pacote@^11.3.2:
+>>>>>>> AICDC-1657 | add ag-grid
   version "11.3.2"
   resolved "https://registry.yarnpkg.com/pacote/-/pacote-11.3.2.tgz#2bef04f6ec6bafceb5eb2f5b3965f0d00aee4d7e"
   integrity sha512-lMO7V9aMhyE5gfaSFxKfW3OTdXuFBNQJfuNuet3NPzWWhOYIW90t85vHcHLDjdhgmfAdAHyh9q1HAap96ea0XA==
@@ -10436,6 +10728,11 @@ private@^0.1.8:
   version "0.1.8"
   resolved "https://registry.yarnpkg.com/private/-/private-0.1.8.tgz#2381edb3689f7a53d653190060fcf822d2f368ff"
   integrity sha512-VvivMrbvd2nKkiG38qjULzlc+4Vx4wm/whI9pQD35YrARNnhxeiRktSOhSukRLFNlzg6Br/cJPet5J/u19r/mg==
+
+proc-log@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/proc-log/-/proc-log-1.0.0.tgz#0d927307401f69ed79341e83a0b2c9a13395eb77"
+  integrity sha512-aCk8AO51s+4JyuYGg3Q/a6gnrlDO09NpVWePtjp7xwphcoQ04x5WAfCyugcsbLooWcMJ87CLkD4+604IckEdhg==
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
@@ -11189,7 +11486,7 @@ read-pkg@^5.0.0, read-pkg@^5.2.0:
     parse-json "^5.0.0"
     type-fest "^0.6.0"
 
-read@1, read@~1.0.1, read@~1.0.7:
+read@1, read@^1.0.7, read@~1.0.1, read@~1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/read/-/read-1.0.7.tgz#b3da19bd052431a97671d44a42634adf710b40c4"
   integrity sha1-s9oZvQUkMal2cdRKQmNK33ELQMQ=
