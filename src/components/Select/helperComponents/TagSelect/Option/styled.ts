@@ -1,6 +1,5 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { components as ReactSelectComponents } from 'react-select';
 
 import { Tag } from 'components/Tag';
 import { Button } from 'components/Button';
@@ -13,7 +12,7 @@ export const StyledTagOption = styled.div`
   align-items: center;
 `;
 
-export const StyledOption = styled(ReactSelectComponents.Option)`
+export const optionClass = css`
   &[data-is-edit='true']: {
     background-color: #f5f5f5 !important;
   }

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { HelpSVG } from '@aicloud/ui-icons';
@@ -78,37 +77,25 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({ ...args }) => {
           prefixControl={({ getValue }: ControlPrefixProps) => {
             const values = getValue() || [];
 
-            return values.map(
-              ({ value, logo: LogoComponent }: OptionTypeBase) => (
-                <StyledLogoWrap key={value}>
-                  <LogoComponent wrapperSize={40} size={22} />
-                </StyledLogoWrap>
-              ),
-            );
+            return values.map(({ value, logo }: OptionTypeBase) => (
+              <StyledLogoWrap key={value}>{logo}</StyledLogoWrap>
+            ));
           }}
           prefixOption={({
             data,
-            data: { logo: LogoComponent },
+            data: { logo },
             hasValue,
             getValue,
           }: OptionPrefixProps) => {
             const isChecked =
               hasValue && (getValue() || []).indexOf(data) !== -1;
 
-            const wrapperStyles = css`
-              flex-shrink: 0;
-            `;
-
             return (
               <>
                 <StyledLogoWrap>
                   <RadioIcon checked={isChecked} />
                 </StyledLogoWrap>
-                <LogoComponent
-                  size={20}
-                  wrapperSize={30}
-                  wrapperClasses={wrapperStyles}
-                />
+                {logo}
               </>
             );
           }}

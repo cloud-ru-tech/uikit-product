@@ -1,13 +1,10 @@
 import { memo } from 'react';
+import clsx from 'clsx';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { ISelectProps } from 'components/Select';
 
-import {
-  StyledReactSelectOption,
-  StyledDescWrap,
-  StyledOption,
-} from './styled';
+import { StyledDescWrap, StyledOption, optionClass } from './styled';
 
 const Stub = (): JSX.Element => <></>;
 
@@ -19,7 +16,12 @@ export const CustomOption = <CustomOptionType,>(
   if (!prefixOption && !postfixOption) {
     return (
       data: React.ComponentProps<typeof ReactSelectComponents.Option>,
-    ): JSX.Element => <StyledReactSelectOption {...data} />;
+    ): JSX.Element => (
+      <ReactSelectComponents.Option
+        className={clsx(data.className, optionClass)}
+        {...data}
+      />
+    );
   }
 
   const PrefixOptionComponent = prefixOption ? memo(prefixOption) : Stub;
@@ -28,13 +30,16 @@ export const CustomOption = <CustomOptionType,>(
   return (
     data: React.ComponentProps<typeof ReactSelectComponents.Option>,
   ): JSX.Element => (
-    <StyledReactSelectOption {...data}>
+    <ReactSelectComponents.Option
+      className={clsx(data.className, optionClass)}
+      {...data}
+    >
       <StyledOption>
         <PrefixOptionComponent {...data} />
         <StyledDescWrap>{data.children}</StyledDescWrap>
         <PostfixOptionComponent {...data} />
       </StyledOption>
-    </StyledReactSelectOption>
+    </ReactSelectComponents.Option>
   );
 };
 

@@ -1,9 +1,9 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { components as ReactSelectComponents } from 'react-select';
 
 import { Tag } from 'components/Tag';
 
-export const StyledOption = styled(ReactSelectComponents.Option)`
+export const optionClass = css`
   flex-basis: 33.33%;
   background-color: transparent;
   line-height: 0;
