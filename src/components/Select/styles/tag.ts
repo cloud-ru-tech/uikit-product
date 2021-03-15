@@ -14,7 +14,7 @@ export const theme = commonTheme({
 export const styles = commonStyles({
   control: (
     styles: CSSProperties,
-    { isDisabled }: ControlProps<{ [key: string]: any }, false>,
+    { isDisabled }: ControlProps<{ [key: string]: any }>,
   ): CSSProperties => ({
     ...styles,
     border: 0,
@@ -35,7 +35,7 @@ export const styles = commonStyles({
   }),
   menuList: (
     styles: CSSProperties,
-    data: ControlProps<{ [key: string]: any }, false>,
+    data: ControlProps<{ [key: string]: any }>,
   ) => ({
     ...styles,
     overflowY: data.selectProps.menuListBlockScroll ? 'hidden' : 'auto',

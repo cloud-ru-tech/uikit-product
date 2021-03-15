@@ -21,15 +21,14 @@ export type MultiValueContainerPrefixProps = React.ComponentProps<
 >;
 export type OptionTypeBase = RCOptionTypeBase;
 export type ValueType<
-  OptionType extends OptionTypeBase,
-  IsMulti extends boolean = false
-> = RCValueType<OptionType, IsMulti>;
+  OptionType extends OptionTypeBase
+> = RCValueType<OptionType>;
 
 type RCProps = React.ComponentProps<typeof RCSelect>;
 
 const toLow = (str?: string): string => (str ? `${str}`.toLowerCase() : '');
 
-export interface ISelectProps<CustomOptionType, IsMulti extends boolean = false>
+export interface ISelectProps<CustomOptionType>
   extends Omit<RCProps, 'components'> {
   type?: SelectType;
   prefixControl?: (props: ControlPrefixProps) => JSX.Element;
@@ -39,19 +38,16 @@ export interface ISelectProps<CustomOptionType, IsMulti extends boolean = false>
   prefixOption?: (props: OptionPrefixProps) => JSX.Element;
   postfixOption?: (props: OptionPrefixProps) => JSX.Element;
   className?: string;
-  components?: SelectComponentsConfig<CustomOptionType, IsMulti>;
+  components?: SelectComponentsConfig<CustomOptionType>;
   optionNoWrap?: boolean;
   menuRelative?: boolean;
   isSearchableCustom?: boolean;
   searchableProps?: string[];
-  customRef?: (instance: RCSelect<CustomOptionType, IsMulti> | null) => void;
+  customRef?: (instance: RCSelect<CustomOptionType> | null) => void;
 }
 
-export const Select = <
-  CustomOptionType extends OptionTypeBase,
-  IsMulti extends boolean = false
->(
-  props: ISelectProps<CustomOptionType, IsMulti>,
+export const Select = <CustomOptionType extends OptionTypeBase>(
+  props: ISelectProps<CustomOptionType>,
 ): JSX.Element => {
   const selectRef = useRef<HTMLDivElement>(null);
   const {
@@ -178,11 +174,11 @@ export const Select = <
 
   return (
     <div className={className} ref={selectRef}>
-      <RCSelect<CustomOptionType, IsMulti>
+      <RCSelect<CustomOptionType>
         {...props}
         onMenuClose={onMenuClose}
         ref={(instance): void => {
-          customRef?.(instance as RCSelect<CustomOptionType, IsMulti>);
+          customRef?.(instance as RCSelect<CustomOptionType>);
         }}
         onChange={(...args): void => {
           props?.onChange?.(...args);

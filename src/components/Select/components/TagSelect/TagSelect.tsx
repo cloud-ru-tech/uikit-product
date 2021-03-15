@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import RCSelect from 'react-select';
+import RCSelect, { ValueType } from 'react-select';
 
 import { Modal } from 'components/Modal';
 import { PresetColorType } from 'components/Tag/helpers/colors';
@@ -53,7 +53,7 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
   const [inputValue, setInputSearch] = useState('');
   const [isOpen, setIsOpen] = useState(false);
   const [menuListBlockScroll, setMenuListBlockScroll] = useState(false);
-  const [currentTag, setCurrentTag] = useState(value);
+  const [currentTag, setCurrentTag] = useState<ValueType<OptionTypeTag>>(value);
   const [customStyles] = useState(getSelectorStyles('tag'));
 
   const [modalInstance, setModalInstance] = useState<HTMLDivElement | null>(

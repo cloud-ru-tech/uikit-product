@@ -1,5 +1,4 @@
 import { CSSProperties } from 'react';
-import { ControlProps } from 'react-select';
 
 import { COLORS_SELECT } from 'theme/color/vars';
 
@@ -15,10 +14,7 @@ export const styles = commonStyles({
     width: '20px',
     border: 0,
   }),
-  dropdownIndicator: (
-    styles: CSSProperties,
-    data: ControlProps<{ [key: string]: any }, true>,
-  ): CSSProperties => ({
+  dropdownIndicator: (styles: CSSProperties, data): CSSProperties => ({
     ...styles,
     fill: data.selectProps.menuIsOpen
       ? `var(${COLORS_SELECT.TEXT_COLOR})`

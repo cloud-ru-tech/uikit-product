@@ -43,9 +43,9 @@ const NoOptionsMessage = (
 
 const IndicatorSeparator = () => null;
 
-export default <CustomOptionType, IsMulti extends boolean = false>(
+export default <CustomOptionType,>(
   props: ISelectProps<CustomOptionType>,
-): SelectComponentsConfig<CustomOptionType, IsMulti> => {
+): SelectComponentsConfig<CustomOptionType> => {
   const customControl = CustomControl<CustomOptionType>(props);
   const customOption = CustomOption<CustomOptionType>(props);
   const multiValueContainer = MultiValueContainer<CustomOptionType>(props);

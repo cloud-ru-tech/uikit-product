@@ -4,8 +4,6 @@ import { IOptionProps } from 'components/Select/helperComponents/TreeView/Menu';
 
 import { StyledContainer } from './styled';
 
-export const ValueContainer: React.FC<
-  ValueContainerProps<IOptionProps, false>
-> = ({ selectProps: { placeholder } }) => (
-  <StyledContainer>{placeholder}</StyledContainer>
-);
+export const ValueContainer: React.FC<ValueContainerProps<IOptionProps>> = ({
+  selectProps: { placeholder },
+}) => <StyledContainer>{placeholder}</StyledContainer>;

@@ -1,4 +1,4 @@
-import { Select, ISelectProps } from 'components/Select';
+import { Select, ISelectProps, OptionTypeBase } from 'components/Select';
 import { PRESET_COLORS, PresetColorType } from 'components/Tag/helpers/colors';
 import * as ColorComponents from 'components/Select/helperComponents/ColorPicker';
 
@@ -7,16 +7,19 @@ const colors = PRESET_COLORS.map(color => ({ value: color }));
 export type OptionTypeColor = { value: PresetColorType };
 
 // TODO: check type error
-export interface IColorPicker extends ISelectProps {
+export interface IColorPicker<OptionTypeColor>
+  extends ISelectProps<OptionTypeColor> {
   defaultValue?: OptionTypeColor;
   dropdownPlacement?: 'left' | 'right';
 }
 
-export const ColorPicker: React.FC<IColorPicker> = (props): JSX.Element => {
+export const ColorPicker = <OptionTypeColor extends OptionTypeBase>(
+  props: IColorPicker<OptionTypeColor>,
+): JSX.Element => {
   const { defaultValue = colors[0], dropdownPlacement = 'left' } = props;
 
   return (
-    <Select
+    <Select<OptionTypeColor>
       {...props}
       dropdownPlacement={dropdownPlacement}
       defaultValue={defaultValue}

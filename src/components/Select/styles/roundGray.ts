@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { Theme, ControlProps } from 'react-select';
+import { Theme } from 'react-select';
 
 import { COLORS_SELECT, COLORS } from 'theme/color/vars';
 
@@ -20,10 +20,7 @@ export const styles = commonStyles({
   }),
   control: (
     styles: CSSProperties,
-    {
-      isDisabled,
-      selectProps: { menuIsOpen },
-    }: ControlProps<{ [key: string]: any }, false>,
+    { isDisabled, selectProps: { menuIsOpen } },
   ): CSSProperties & {
     '&:hover': CSSProperties;
     '&:focus': CSSProperties;
