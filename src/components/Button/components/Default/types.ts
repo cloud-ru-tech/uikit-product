@@ -3,4 +3,4 @@ export type TButtonTypes =
   | 'outlined'
   | 'transparent'
   | 'white'
-  | 'filled-green';
+  | 'filled-brand';

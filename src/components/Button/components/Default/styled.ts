@@ -128,23 +128,23 @@ export const ButtonComponent = styled.button`
     }
   }
 
-  &[data-type='filled-green'] {
-    color: var(${COLORS_BUTTON.FILLED_GREEN_COLOR});
-    fill: var(${COLORS_BUTTON.FILLED_GREEN_COLOR});
-    background-color: var(${COLORS_BUTTON.FILLED_GREEN_BG});
+  &[data-type='filled-brand'] {
+    color: var(${COLORS_BUTTON.FILLED_BRAND_COLOR});
+    fill: var(${COLORS_BUTTON.FILLED_BRAND_COLOR});
+    background-color: var(${COLORS_BUTTON.FILLED_BRAND_BG});
     &:hover {
-      background-color: var(${COLORS_BUTTON.FILLED_GREEN_HOVER_BG});
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_HOVER_BG});
     }
     &:active {
-      background-color: var(${COLORS_BUTTON.FILLED_GREEN_ACTIVE_BG});
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_ACTIVE_BG});
     }
     &:disabled {
-      color: var(${COLORS_BUTTON.FILLED_GREEN_DISABLED_COLOR});
-      fill: var(${COLORS_BUTTON.FILLED_GREEN_DISABLED_COLOR});
-      background-color: var(${COLORS_BUTTON.FILLED_GREEN_DISABLED_BG});
+      color: var(${COLORS_BUTTON.FILLED_BRAND_DISABLED_COLOR});
+      fill: var(${COLORS_BUTTON.FILLED_BRAND_DISABLED_COLOR});
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_DISABLED_BG});
     }
     &:focus-visible {
-      background-color: var(${COLORS_BUTTON.FILLED_GREEN_FOCUS_BG});
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_FOCUS_BG});
     }
   }
 
