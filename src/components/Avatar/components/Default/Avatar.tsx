@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
 
 import {
-  getAbbreviation,
   getCustomBg,
   getCustomRadius,
   getCustomStyles,
-} from 'components/Avatar/helpers/helpers';
+} from 'components/Avatar/helpers/styleHelpers';
+import { getAbbreviation } from 'components/Avatar/helpers/getAbbreviation';
 
 import { StyledAvatar } from './styled';
 

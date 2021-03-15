@@ -1,5 +1,5 @@
 import { TableText } from 'typography/Table';
-import { getSize, getBorderSize } from 'components/Spin/helpers/helpers';
+import { getSize, getBorderSize } from 'components/Spin/helpers/sizes';
 import { SIZES } from 'components/Spin/helpers/constants';
 
 import { Wrapper, Spinner, textCSS } from './styled';
