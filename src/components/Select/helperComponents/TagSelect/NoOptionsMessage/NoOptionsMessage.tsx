@@ -29,8 +29,7 @@ export const NoOptionsMessage = (
   return (
     <ReactSelectComponents.NoOptionsMessage {...props}>
       <StyledButton
-        // TODO: check type error
-        theme='transparent'
+        type='transparent'
         size='xs'
         onClick={(): void => {
           const tag = { value: Math.random(), label: search, color };

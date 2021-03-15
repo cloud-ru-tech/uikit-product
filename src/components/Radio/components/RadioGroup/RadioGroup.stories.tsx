@@ -9,7 +9,7 @@ export default {
   component: Radio,
 } as Meta;
 
-const Template: Story<IRadioProps> = ({ children, ...args }) => {
+const Template: Story<IRadioProps> = ({ ...args }) => {
   const [value, setValue] = useState('story2');
 
   return (
@@ -22,11 +22,11 @@ const Template: Story<IRadioProps> = ({ children, ...args }) => {
     >
       {[...new Array(3)].map((_value, index) => (
         <Radio
+          {...args}
           key={index}
           value={`story${index}`}
           label={`story${index}`}
           description={`description${index}`}
-          {...args}
         />
       ))}
     </RadioGroup>

@@ -53,9 +53,7 @@ const StyledRadioWrap = styled.div`
   flex-shrink: 0;
 `;
 
-const Template: Story<ISelectProps<OptionTypeBase, boolean>> = ({
-  ...args
-}) => {
+const Template: Story<ISelectProps<OptionTypeBase>> = ({ ...args }) => {
   const [value, setValue] = useState<OptionTypeBase>();
 
   return (

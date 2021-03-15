@@ -27,13 +27,8 @@ export interface IOptionProps extends DataNode {
 export type OptionsProps = IOptionProps[];
 
 type ChildrenProps = { key: string; title: string };
-type SelectedProps = {
-  options: OptionsProps;
-  onChange: (val: OptionsProps) => void;
-  value: IOptionProps;
-};
 
-export interface IMenuProps extends MenuProps<IOptionProps, true> {
+export interface IMenuProps extends MenuProps<IOptionProps> {
   placeholderSearch?: string;
   selectProps: Props<IOptionProps>;
 }
@@ -77,7 +72,7 @@ export const Menu: FC<IMenuProps> = props => {
     const getRes = (): IOptionProps[] => {
       if (Array.isArray(options) && options.length) {
         // TODO: check type error
-        return options.reduce<ChildrenProps[]>((acc, option) => {
+        return options.reduce((acc, option) => {
           const searchValues: ChildrenProps[] = option.children.filter(
             (child: IOptionProps) => selectedKeys.includes(child.key),
           );
@@ -85,7 +80,7 @@ export const Menu: FC<IMenuProps> = props => {
             return [...acc, ...searchValues];
           }
           return acc;
-        }, []);
+        }, [] as IOptionProps[]);
       }
       return [];
     };

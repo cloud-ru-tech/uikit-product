@@ -36,8 +36,7 @@ export const Menu = (
     >
       <StyledSearchInput
         value={search}
-        // TODO: check type error
-        onChange={(search: string): void => onSearch(search)}
+        onChange={(val): void => onSearch(val)}
         wrapperClassName={searchInputWrapClassname}
       />
       {children}
