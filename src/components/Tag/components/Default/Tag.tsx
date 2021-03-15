@@ -13,7 +13,6 @@ const TAG_TYPES = {
 type TTagType = 'span' | 'input';
 
 export interface ITagProps {
-  size?: number;
   value?: string;
   tag?: TTagType;
   className?: string;

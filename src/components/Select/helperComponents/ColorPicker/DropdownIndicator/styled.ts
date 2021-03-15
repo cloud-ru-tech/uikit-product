@@ -4,7 +4,7 @@ import { components as ReactSelectComponents } from 'react-select';
 import { Tag } from 'components/Tag';
 
 export const StyledDropdown = styled(ReactSelectComponents.DropdownIndicator)`
-  padding: 0;
+  padding: 0 !important;
 `;
 
 export const StyledTag = styled(Tag)`

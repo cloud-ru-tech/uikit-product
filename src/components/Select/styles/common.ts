@@ -1,6 +1,7 @@
 import { CSSProperties } from 'react';
-import { Props, Theme, ControlProps } from 'react-select';
-import CSSVar from 'components/Select/helpers/CSSVar';
+import { Props, Theme, ControlProps, Styles } from 'react-select';
+
+import { COLORS_SELECT } from 'theme/color/vars';
 
 export const theme = (typeTheme?: Partial<Theme>) => (theme: Theme): Theme => ({
   ...theme,
@@ -15,42 +16,61 @@ export const theme = (typeTheme?: Partial<Theme>) => (theme: Theme): Theme => ({
   },
   colors: {
     ...theme.colors,
-    primary: CSSVar('--select-primary-color'),
-    primary25: CSSVar('--select-conrtrol-hover-color'),
     ...(typeTheme?.colors || {}),
   },
 });
 
-// TODO
-// eslint-disable-next-line
-export const styles = (typeStyles?: any): any => ({
+export const styles = (typeStyles?: Styles): Styles => ({
   valueContainer: (styles: CSSProperties): CSSProperties => ({
     ...styles,
     padding: '0 8px',
   }),
   control: (
     styles: CSSProperties,
-    data: ControlProps<{ [key: string]: unknown }, false>,
-  ): CSSProperties & { '&:hover': CSSProperties } => {
-    const { isDisabled, isMulti } = data;
-    const hover = {} as { '&:hover': CSSProperties };
-    if (!isMulti) {
-      hover['&:hover'] = {
-        backgroundColor: CSSVar('--select-option-hover-color'),
-      };
-    }
-    return {
-      ...styles,
-      border: `1px solid ${CSSVar('--select-conrtrol-border-color')}`,
-      ...(isDisabled
-        ? { color: CSSVar('--select-option-disabled-color') }
-        : {}),
-      ...hover,
-    };
-  },
+    {
+      isDisabled,
+      selectProps: { menuIsOpen },
+    }: ControlProps<{ [key: string]: any }, false>,
+  ): CSSProperties & {
+    '&:hover': CSSProperties;
+    '&:focus': CSSProperties;
+  } => ({
+    ...styles,
+    border: menuIsOpen
+      ? `1px solid var(${COLORS_SELECT.BORDER_FOCUS_COLOR})`
+      : `1px solid var(${COLORS_SELECT.BORDER_COLOR})`,
+    ...(isDisabled
+      ? {
+          borderColor: `var(${COLORS_SELECT.DISABLED_BORDER_COLOR})`,
+          color: `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`,
+          background: `var(${COLORS_SELECT.DISABLED_BACKGROUND})`,
+        }
+      : {}),
+    background: `var(${COLORS_SELECT.BACKGROUND})`,
+    boxShadow: 'none !importrant',
+    '&:focus': {
+      borderColor: `var(${COLORS_SELECT.BORDER_FOCUS_COLOR}) !imporant`,
+    },
+    '&:hover': {
+      cursor: 'pointer',
+      background: `var(${COLORS_SELECT.BACKGROUND_HOVER})`,
+      borderColor: menuIsOpen
+        ? `var(${COLORS_SELECT.BORDER_FOCUS_COLOR})`
+        : `var(${COLORS_SELECT.BORDER_HOVER_COLOR})`,
+    },
+  }),
+  menuList: (styles: CSSProperties): CSSProperties => ({
+    ...styles,
+    backgroundColor: `var(${COLORS_SELECT.BACKGROUND})`,
+  }),
+  singleValue: (styles: CSSProperties): CSSProperties => ({
+    ...styles,
+    color: `var(${COLORS_SELECT.TEXT_COLOR})`,
+  }),
   dropdownIndicator: (styles: CSSProperties, data: Props): CSSProperties => ({
     ...styles,
     padding: '0 8px',
+    fill: `var(${COLORS_SELECT.TEXT_COLOR})`,
     transform: data.selectProps.menuIsOpen && 'rotate(180deg)',
   }),
   input: (styles: CSSProperties): CSSProperties => ({
@@ -73,20 +93,33 @@ export const styles = (typeStyles?: any): any => ({
     boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
     ...(state?.selectProps?.menuRelative ? { position: 'relative' } : {}),
   }),
-  option: (styles: CSSProperties, state: Props): CSSProperties => ({
+  option: (
+    styles: CSSProperties,
+    state: Props,
+  ): CSSProperties & {
+    '&:hover': CSSProperties;
+  } => ({
     ...styles,
     ...(state?.selectProps?.optionNoWrap ? { whiteSpace: 'nowrap' } : {}),
-    color: CSSVar('--select-option-color'),
+    color: `var(${COLORS_SELECT.TEXT_COLOR})`,
+    backgroundColor: state.isOptionSelected
+      ? `var(${COLORS_SELECT.BORDER_HOVER_COLOR})`
+      : `var(${COLORS_SELECT.BACKGROUND})`,
+    '&:hover': {
+      cursor: 'pointer',
+      backgroundColor: `var(${COLORS_SELECT.BACKGROUND_HOVER})`,
+    },
   }),
   multiValue: (styles: CSSProperties): CSSProperties => ({
     ...styles,
-    backgroundColor: CSSVar('--select-primary-color'),
-    color: CSSVar('--select-option-color'),
+    backgroundColor: `var(${COLORS_SELECT.TEXT_COLOR})`,
+    color: `var(${COLORS_SELECT.BACKGROUND})`,
   }),
   multiValueLabel: (styles: CSSProperties): CSSProperties => ({
     ...styles,
     fontSize: '12px',
     lineHeight: '16px',
+    color: `var(${COLORS_SELECT.BACKGROUND})`,
   }),
   group: (
     styles: CSSProperties,
@@ -111,10 +144,10 @@ export const styles = (typeStyles?: any): any => ({
     styles: CSSProperties,
   ): CSSProperties & { '&:hover': CSSProperties } => ({
     ...styles,
-    fill: CSSVar('--select-conrtrol-multiValueRemove-color'),
+    fill: `var(${COLORS_SELECT.BACKGROUND})`,
     '&:hover': {
       backgroundColor: 'transparent',
-      fill: CSSVar('--select-conrtrol-multiValueRemove-hover-color'),
+      fill: `var(${COLORS_SELECT.TEXT_COLOR})`,
     },
   }),
   ...(typeStyles || {}),

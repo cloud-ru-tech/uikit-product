@@ -1,25 +1,28 @@
 import { CSSProperties } from 'react';
 import { ControlProps } from 'react-select';
-import { css } from '@linaria/core';
+
+import { COLORS_SELECT } from 'theme/color/vars';
 
 import { theme as commonTheme, styles as commonStyles } from './common';
 
 export const theme = commonTheme();
 
 export const styles = commonStyles({
-  control: css`
-    min-height: 20px;
-    height: 20px;
-    width: 20px;
-    box-sizing: content-box;
-    border: 0;
-  `,
+  control: (styles: CSSProperties) => ({
+    ...styles,
+    minHeight: '20px',
+    height: '20px',
+    width: '20px',
+    border: 0,
+  }),
   dropdownIndicator: (
     styles: CSSProperties,
-    data: ControlProps<{ [key: string]: unknown }, true>,
+    data: ControlProps<{ [key: string]: any }, true>,
   ): CSSProperties => ({
     ...styles,
-    fill: data.selectProps.menuIsOpen ? '#343f48' : 'none',
+    fill: data.selectProps.menuIsOpen
+      ? `var(${COLORS_SELECT.TEXT_COLOR})`
+      : 'none',
     transform: data.selectProps.menuIsOpen ? 'rotate(180deg)' : 'none',
   }),
   menu: (styles: CSSProperties) => ({

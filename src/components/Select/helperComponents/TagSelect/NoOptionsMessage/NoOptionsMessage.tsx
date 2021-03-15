@@ -29,6 +29,7 @@ export const NoOptionsMessage = (
   return (
     <ReactSelectComponents.NoOptionsMessage {...props}>
       <StyledButton
+        // TODO: check type error
         theme='transparent'
         size='xs'
         onClick={(): void => {
@@ -44,6 +45,7 @@ export const NoOptionsMessage = (
         <Tag color={color}>{search}</Tag>
       </StyledTagWrapper>
       <ColorPicker
+        // TODO: check type error
         className={colorPickerClassName}
         defaultValue={{ value: color }}
         onChange={(color: OptionTypeColor): void => {

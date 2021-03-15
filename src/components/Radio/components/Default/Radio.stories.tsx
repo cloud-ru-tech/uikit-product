@@ -7,7 +7,7 @@ export default {
   component: Radio,
 } as Meta;
 
-const Template: Story<IRadioProps> = ({ children, ...args }) => (
+const Template: Story<IRadioProps> = ({ ...args }) => (
   <Radio {...args} value='story1' />
 );
 

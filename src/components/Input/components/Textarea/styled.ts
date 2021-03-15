@@ -9,7 +9,12 @@ export const StyledTextareaAutosize = styled(TextareaAutosize)`
 
   padding: 12px;
 
+  font-family: SB Sans Interface;
   color: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
   border: 1px solid var(${COLORS_INPUT.INPUT_BORDER});
   box-sizing: border-box;
   border-radius: 4px;

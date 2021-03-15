@@ -49,11 +49,12 @@ export const StyledContainer = styled.div`
 `;
 
 export const StyledInputContainer = styled.div`
-  padding: 8px 8px 0 8px;
+  padding: 0px 8px;
   position: relative;
-  height: 28px;
+  height: 36px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
 
 export const StyledSearchInput = styled.input`

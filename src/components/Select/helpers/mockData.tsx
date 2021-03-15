@@ -1,3 +1,5 @@
+import { GroupStub0SVG } from '@aicloud/ui-icons';
+
 import { TruncateString } from 'components/TruncateString';
 
 export const connectors = [
@@ -154,19 +156,19 @@ export const services = [
     value: 'AmazonS3',
     label: 'Amazon S3',
     labelText: 'Amazon S3',
-    logo: <div>Logo image</div>,
+    logo: GroupStub0SVG,
   },
   {
     value: 'BigQuery',
     label: 'BigQuery',
     labelText: 'BigQuery',
-    logo: <div>Logo image</div>,
+    logo: GroupStub0SVG,
   },
   {
     value: 'Ds',
     label: 'AICloud',
     labelText: 'AICloud',
-    logo: <div>Logo image</div>,
+    logo: GroupStub0SVG,
   },
   {
     value: 'GoogleCloudstorage',
@@ -177,31 +179,31 @@ export const services = [
       />
     ),
     labelText: 'Google Cloud storage',
-    logo: <div>Logo image</div>,
+    logo: GroupStub0SVG,
   },
   {
     value: 'ApacheSpark',
     label: 'Apache Spark',
     labelText: 'Apache Spark',
-    logo: <div>Logo image</div>,
+    logo: GroupStub0SVG,
   },
   {
     value: 'MicrosoftSqlServer',
     label: 'Microsoft SQL Server',
     labelText: 'Microsoft SQL Server',
-    logo: <div>Logo image</div>,
+    logo: GroupStub0SVG,
   },
   {
     value: 'MySql',
     label: 'MySql',
     labelText: 'MySql',
-    logo: <div>Logo image</div>,
+    logo: GroupStub0SVG,
   },
   {
     value: 'Postgre',
     label: 'PostgreSQL',
     labelText: 'PostgreSQL',
-    logo: <div>Logo image</div>,
+    logo: GroupStub0SVG,
   },
 ];
 

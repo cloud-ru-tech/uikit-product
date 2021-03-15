@@ -24,7 +24,6 @@ export const Menu = (
   const dropdownStyles =
     dropdownPlacement === 'right' ? { right: 0 } : { left: 0 };
 
-  console.log(props);
   return (
     <div
       style={{
@@ -37,6 +36,7 @@ export const Menu = (
     >
       <StyledSearchInput
         value={search}
+        // TODO: check type error
         onChange={(search: string): void => onSearch(search)}
         wrapperClassName={searchInputWrapClassname}
       />

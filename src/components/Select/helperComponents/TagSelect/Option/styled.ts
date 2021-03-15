@@ -8,6 +8,7 @@ import { Button } from 'components/Button';
 export const StyledTagOption = styled.div`
   max-width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 `;
@@ -27,6 +28,9 @@ export const StyledTag = styled(Tag)`
 
 export const StyledTagButtonWrapper = styled.div`
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   line-height: 0;
   flex-shrink: 0;
 `;

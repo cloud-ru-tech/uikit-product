@@ -5,7 +5,13 @@ import { CancelSVG } from '@aicloud/ui-icons';
 import { Button } from 'components/Button';
 import { Divider } from 'components/Divider';
 
-import { previewCloseBtn, Title, Content } from './styled';
+import {
+  Title,
+  Content,
+  previewCloseBtn,
+  contentClassname,
+  overlayClassname,
+} from './styled';
 
 interface IReactModalProps extends ReactModal.Props {
   isOpen: boolean;
@@ -39,27 +45,6 @@ export interface IModalPreviewProps extends IReactModalProps {
   contentClassName?: string;
 }
 
-const customStyles = {
-  overlay: {
-    zIndex: 99999,
-    backgroundColor: 'rgba(52, 63, 72, 0.2)',
-    top: 44,
-  },
-  content: {
-    top: 24,
-    left: 26,
-    right: 26,
-    bottom: 24,
-    background: '#EDEDED',
-    padding: 0,
-    border: 0,
-    boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
-    borderRadius: 8,
-    display: 'flex',
-    flexDirection: 'column',
-  } as React.CSSProperties,
-};
-
 export const ModalPreview: React.FC<IModalPreviewProps> = props => {
   const {
     onRequestClose,
@@ -74,7 +59,11 @@ export const ModalPreview: React.FC<IModalPreviewProps> = props => {
   }
 
   return (
-    <RCModal {...props} style={customStyles}>
+    <RCModal
+      {...props}
+      overlayClassName={overlayClassname}
+      className={`${contentClassname} ${contentClassName}`}
+    >
       <Button
         type='transparent'
         onClick={onRequestClose}
@@ -85,7 +74,7 @@ export const ModalPreview: React.FC<IModalPreviewProps> = props => {
       {title && (
         <>
           <Title>{title}</Title>
-          <Divider color='#D2D2D2' style={{ width: '100%', margin: 0 }} />
+          <Divider />
         </>
       )}
       {content && <Content className={contentClassName}>{content}</Content>}

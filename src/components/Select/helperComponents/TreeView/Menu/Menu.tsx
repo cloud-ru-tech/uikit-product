@@ -76,6 +76,7 @@ export const Menu: FC<IMenuProps> = props => {
     const selectedKeys = checked;
     const getRes = (): IOptionProps[] => {
       if (Array.isArray(options) && options.length) {
+        // TODO: check type error
         return options.reduce<ChildrenProps[]>((acc, option) => {
           const searchValues: ChildrenProps[] = option.children.filter(
             (child: IOptionProps) => selectedKeys.includes(child.key),
@@ -92,6 +93,8 @@ export const Menu: FC<IMenuProps> = props => {
     setValue(res, 'set-value');
 
     if (onChange) {
+      // FIXME -ts Пока не понятно что за второй аргумент (
+      // @ts-ignore-next-line
       onChange(res);
     }
   }, []);

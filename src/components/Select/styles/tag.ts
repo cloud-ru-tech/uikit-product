@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import { Props, Theme, ControlProps } from 'react-select';
 
-import CSSVar from 'components/Select/helpers/CSSVar';
+import { COLORS_SELECT } from 'theme/color/vars';
 
 import { theme as commonTheme, styles as commonStyles } from './common';
 
@@ -14,13 +14,19 @@ export const theme = commonTheme({
 export const styles = commonStyles({
   control: (
     styles: CSSProperties,
-    { isDisabled }: ControlProps<{ [key: string]: unknown }, false>,
+    { isDisabled }: ControlProps<{ [key: string]: any }, false>,
   ): CSSProperties => ({
     ...styles,
     border: 0,
     boxShadow: 'none',
     flexWrap: 'nowrap',
-    ...(isDisabled ? { color: CSSVar('--select-option-disabled-color') } : {}),
+    ...(isDisabled
+      ? {
+          borderColor: `var(${COLORS_SELECT.DISABLED_BORDER_COLOR})`,
+          color: `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`,
+          background: `var(${COLORS_SELECT.DISABLED_BACKGROUND})`,
+        }
+      : {}),
   }),
   valueContainer: (styles: CSSProperties): CSSProperties => ({
     ...styles,
@@ -29,7 +35,7 @@ export const styles = commonStyles({
   }),
   menuList: (
     styles: CSSProperties,
-    data: ControlProps<{ [key: string]: unknown }, false>,
+    data: ControlProps<{ [key: string]: any }, false>,
   ) => ({
     ...styles,
     overflowY: data.selectProps.menuListBlockScroll ? 'hidden' : 'auto',
@@ -49,7 +55,7 @@ export const styles = commonStyles({
     return {
       ...styles,
       outline: 0,
-      color: CSSVar('--select-option-color'),
+      color: `var(${COLORS_SELECT.TEXT_COLOR})`,
       ...backgroundColor,
       ...hover,
     };

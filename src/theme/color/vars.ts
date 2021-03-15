@@ -161,3 +161,16 @@ export const COLORS_RADIO = {
   CHECKED_HOVER_COLOR: '--radio-checked-hover-color',
   CHECKED_DISABLED_COLOR: '--radio-checked-disabled-color',
 };
+
+export const COLORS_SELECT = {
+  TEXT_COLOR: '--select-text-color',
+  PLACEHOLDER_TEXT_COLOR: '--select-placeholder-text-color',
+  BACKGROUND: '--select-bg-color',
+  BACKGROUND_HOVER: '--select-bg-hover-color',
+  BORDER_COLOR: '--select-border-color',
+  BORDER_HOVER_COLOR: '--select-border-hover-color',
+  BORDER_FOCUS_COLOR: '--select-border-focus-color',
+  DISABLED_TEXT_COLOR: '--select-disabled-text-color',
+  DISABLED_BORDER_COLOR: '--select-disabled-border-color',
+  DISABLED_BACKGROUND: '--select-disabled-background',
+};

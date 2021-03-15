@@ -6,6 +6,7 @@ const colors = PRESET_COLORS.map(color => ({ value: color }));
 
 export type OptionTypeColor = { value: PresetColorType };
 
+// TODO: check type error
 export interface IColorPicker extends ISelectProps {
   defaultValue?: OptionTypeColor;
   dropdownPlacement?: 'left' | 'right';

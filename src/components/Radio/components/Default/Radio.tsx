@@ -16,7 +16,7 @@ import {
 
 export interface IRadioIcon {
   checked?: boolean;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 export const RadioIcon: FC<IRadioIcon> = ({ checked, disabled }) => (

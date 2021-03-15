@@ -1,6 +1,11 @@
-import RCAutosizeInput, {
-  AutosizeInputProps as RIAAutosizeInputProps,
-} from 'react-input-autosize';
+import { FC } from 'react';
+import RCAutosizeInput, { AutosizeInputProps } from 'react-input-autosize';
 
-export interface IAutosizeInputProps extends RIAAutosizeInputProps {}
-export const InputAutosize = RCAutosizeInput;
+import { inputClassname } from './styled';
+
+export interface IAutosizeInputProps extends AutosizeInputProps {}
+
+export const InputAutosize: FC<IAutosizeInputProps> = props => (
+  // TODO: check type error
+  <RCAutosizeInput inputClassName={inputClassname} {...props} />
+);

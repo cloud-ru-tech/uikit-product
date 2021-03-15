@@ -25,12 +25,12 @@ export type ValueType<
   IsMulti extends boolean = false
 > = RCValueType<OptionType, IsMulti>;
 
-type rcProps = React.ComponentProps<typeof RCSelect>;
+type RCProps = React.ComponentProps<typeof RCSelect>;
 
 const toLow = (str?: string): string => (str ? `${str}`.toLowerCase() : '');
 
 export interface ISelectProps<CustomOptionType, IsMulti extends boolean = false>
-  extends Omit<rcProps, 'components'> {
+  extends Omit<RCProps, 'components'> {
   type?: SelectType;
   prefixControl?: (props: ControlPrefixProps) => JSX.Element;
   prefixMultiValueContainer?: (
@@ -186,10 +186,13 @@ export const Select = <
         }}
         onChange={(...args): void => {
           props?.onChange?.(...args);
-          if (closeMenuOnSelect) closeMenu();
+          if (closeMenuOnSelect) {
+            closeMenu();
+          }
         }}
         options={stateOptions}
         menuIsOpen={isOpen}
+        // TODO: check type error
         components={componentsState}
         styles={customStyles.styles}
         theme={customStyles.theme}

@@ -2,7 +2,6 @@ import { FC, useState, useEffect, useCallback } from 'react';
 import { styled } from '@linaria/react';
 import isEqual from 'lodash.isequal';
 
-import { InputSearch } from 'components/Input';
 import { Divider } from 'components/Divider';
 import {
   ValueContainer,
@@ -10,6 +9,7 @@ import {
   IUsersByGroupProps,
   IOptionType,
 } from 'components/Select/helperComponents/InlineTreeSelect';
+import { InputSearch } from 'components/Select/helperComponents/Shared/InputSearch';
 import { selectUserDeclination } from 'components/Select/helpers/declination';
 
 const Content = styled.div`

@@ -2,6 +2,8 @@ import { useRef, useEffect } from 'react';
 import { css } from '@linaria/core';
 import { components as ReactSelectComponents } from 'react-select';
 
+import { COLORS_SELECT } from 'theme/color/vars';
+
 import { StyledInputSearch } from './styled';
 
 const inputWrapperClassName = css`
@@ -9,6 +11,7 @@ const inputWrapperClassName = css`
   border-top-right-radius: 4px;
   border-bottom: 1px solid #cccccc;
   padding: 4px 0;
+  background: var(${COLORS_SELECT.BACKGROUND});
 `;
 
 export const CustomMenu = (

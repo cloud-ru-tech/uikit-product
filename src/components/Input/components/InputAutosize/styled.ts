@@ -1,8 +1,8 @@
-import { styled } from '@linaria/react';
+import { css } from '@linaria/core';
 
 import { COLORS_INPUT } from 'theme/color/vars';
 
-export const StyledInput = styled.input`
+export const inputClassname = css`
   flex-grow: 1;
   box-sizing: border-box;
   width: 100%;
@@ -16,8 +16,7 @@ export const StyledInput = styled.input`
   background-color: var(${COLORS_INPUT.INPUT_BG});
   border: 1px solid var(${COLORS_INPUT.INPUT_BORDER});
   border-radius: 4px;
-  height: 44px;
-  padding: 12px;
+  padding: 11px;
 
   &::placeholder {
     color: var(${COLORS_INPUT.INPUT_PLACEHOLDER_COLOR});
@@ -75,67 +74,4 @@ export const StyledInput = styled.input`
     border: 0 !important;
     border-radius: 0;
   }
-`;
-
-export const StyledClearButton = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  margin-right: 8px;
-  fill: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
-  :hover {
-    fill: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
-  }
-`;
-
-// TODO
-export const CopyButton = styled.div`
-  cursor: pointer;
-  margin-right: 8px;
-  fill: #d2d2d2;
-  :hover {
-    fill: #343f48;
-  }
-`;
-
-export const StyledSecurityButton = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  margin: 0 8px 0 0;
-  color: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
-  fill: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
-  :hover {
-    color: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
-    fill: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
-  }
-`;
-
-export const Label = styled.span<{ minWidth: string }>`
-  min-width: ${(props): string => props.minWidth};
-  margin-right: 12px;
-  color: #a0a0a0;
-`;
-
-export const StyledWrap = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
-
-export const StyledInputWrapper = styled.div`
-  position: relative;
-  width: 100%;
-`;
-
-export const StyledIconWrapper = styled.div`
-  position: absolute;
-  top: 0px;
-  right: 12px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
 `;

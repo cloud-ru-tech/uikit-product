@@ -8,7 +8,6 @@ import { Button } from 'components/Button';
 // import { Drawer } from "components/Drawer";
 
 import { Modal, IModalProps } from './Modal';
-// import { ModalPreview, IModalPreviewProps } from "./ModalPreview";
 
 export default {
   title: 'Components/Modal',
@@ -29,7 +28,6 @@ const Template: Story<IModalProps> = ({ ...args }) => {
       <Modal
         shouldCloseOnOverlayClick={false}
         shouldCloseOnEsc={false}
-        overlayOffset={{ top: 44 }}
         zIndex={1}
         // onRequestClose={closeModal}
         appElement={document.body}
@@ -84,27 +82,6 @@ const Template: Story<IModalProps> = ({ ...args }) => {
     </>
   );
 };
-
-// export const modalPreview: Story<IModalPreviewProps> = () => {
-//   const [modalIsOpen, setIsOpen] = useState(false);
-//   const openModal = (): void => setIsOpen(true);
-//   const closeModal = (): void => setIsOpen(false);
-
-//   return (
-//     <>
-//       {/* <Button onClick={openModal}>Open Modal</Button> */}
-//       <ModalPreview
-//         isOpen={modalIsOpen}
-//         onRequestClose={closeModal}
-//         appElement={document.body}
-//         title="Screenshot 2020-10-30 at 15.22.41.png"
-//         content={
-//           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/440px-Wikipedia-logo-v2-en.svg.png" />
-//         }
-//       />
-//     </>
-//   );
-// };
 
 export const modal = Template.bind({});
 modal.args = {};

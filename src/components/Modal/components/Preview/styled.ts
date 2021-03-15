@@ -1,6 +1,8 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
+import { COLORS_MODAL } from 'theme/color/vars';
+
 export const previewCloseBtn = css`
   position: absolute;
   top: 24px;
@@ -9,6 +11,7 @@ export const previewCloseBtn = css`
   &:focus,
   &:hover {
     fill: #343f48;
+    background: transparent !important;
   }
 `;
 
@@ -32,4 +35,25 @@ export const Content = styled.div`
     max-width: 100%;
     max-height: 100%;
   }
+`;
+
+export const overlayClassname = css`
+  z-index: 99999;
+  background-color: transparent;
+  top: 44px;
+`;
+
+export const contentClassname = css`
+  top: 24px;
+  left: 26px;
+  right: 26px;
+  bottom: 24px;
+  background: #ededed;
+  padding: 0px;
+  border: 0px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(${COLORS_MODAL.BG});
 `;

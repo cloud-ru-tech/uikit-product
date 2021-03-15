@@ -90,6 +90,7 @@ export const Option = (
               <ColorPicker
                 dropdownPlacement={colorDropdownPlacement}
                 defaultValue={colorVal}
+                // TODO: check type error
                 onChange={(color: OptionTypeColor): void => {
                   setColorVal(color);
                   setTag({ ...tag, color: color.value });

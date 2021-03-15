@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import { Theme, ControlProps } from 'react-select';
 
-import CSSVar from 'components/Select/helpers/CSSVar';
+import { COLORS_SELECT } from 'theme/color/vars';
 
 import { theme as commonTheme, styles as commonStyles } from './common';
 
@@ -15,20 +15,38 @@ export const theme = commonTheme({
 export const styles = commonStyles({
   control: (
     styles: CSSProperties,
-    data: ControlProps<{ [key: string]: unknown }, false>,
-  ): CSSProperties & { '&:hover': CSSProperties } => {
-    const { isDisabled } = data;
-    return {
-      ...styles,
-      border: 0,
-      ...(isDisabled
-        ? { color: CSSVar('--select-option-disabled-color') }
-        : {}),
-      '&:hover': {
-        backgroundColor: CSSVar('--select-option-hover-color'),
-      },
-    };
-  },
+    {
+      isDisabled,
+      selectProps: { menuIsOpen },
+    }: ControlProps<{ [key: string]: any }, false>,
+  ): CSSProperties & {
+    '&:hover': CSSProperties;
+    '&:focus': CSSProperties;
+  } => ({
+    ...styles,
+    border: menuIsOpen
+      ? `1px solid var(${COLORS_SELECT.BORDER_FOCUS_COLOR})`
+      : `1px solid var(${COLORS_SELECT.BORDER_COLOR})`,
+    ...(isDisabled
+      ? {
+          borderColor: `var(${COLORS_SELECT.DISABLED_BORDER_COLOR})`,
+          color: `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`,
+          background: `var(${COLORS_SELECT.DISABLED_BACKGROUND})`,
+        }
+      : {}),
+    background: `var(${COLORS_SELECT.BACKGROUND})`,
+    boxShadow: 'none !importrant',
+    '&:focus': {
+      borderColor: `var(${COLORS_SELECT.BORDER_FOCUS_COLOR}) !imporant`,
+    },
+    '&:hover': {
+      cursor: 'pointer',
+      background: `var(${COLORS_SELECT.BACKGROUND_HOVER})`,
+      borderColor: menuIsOpen
+        ? `var(${COLORS_SELECT.BORDER_FOCUS_COLOR})`
+        : `var(${COLORS_SELECT.BORDER_HOVER_COLOR})`,
+    },
+  }),
   singleValue: (styles: CSSProperties): CSSProperties => ({
     ...styles,
     fontSize: '12px',

@@ -9,7 +9,6 @@ export const Control = (
 
   const isFunc = typeof customControl === 'function';
   if (isFunc) {
-    console.log(customControl);
     return customControl({
       toggleMenu: props.selectProps.toggleMenu,
       menuIsOpen,

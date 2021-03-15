@@ -35,3 +35,11 @@ const Template: Story<IAvatarProps> = ({ ...args }) => (
 export const avatar = Template.bind({});
 avatar.args = {};
 avatar.parameters = {};
+avatar.argTypes = {
+  size: {
+    control: {
+      type: 'radio',
+      options: ['m', 'l', 30, 40, 50],
+    },
+  },
+};

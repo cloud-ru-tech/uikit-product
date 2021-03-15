@@ -54,10 +54,8 @@ const Template = (): JSX.Element => {
           }}
         />
         <TagSelect
-          customControl={({ toggleMenu, menuIsOpen }): JSX.Element => (
-            <Button onClick={(): void => toggleMenu()} active={menuIsOpen}>
-              Добавить тег
-            </Button>
+          customControl={({ toggleMenu }): JSX.Element => (
+            <Button onClick={(): void => toggleMenu()}>Добавить тег</Button>
           )}
           isSelected={false}
           options={stateTags}
