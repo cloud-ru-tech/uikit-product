@@ -1,6 +1,7 @@
 import { components as ReactSelectComponents } from 'react-select';
+import clsx from 'clsx';
 
-import { StyledTag, StyledOption } from './styled';
+import { StyledTag, optionClass } from './styled';
 
 export const Option = ({
   data,
@@ -8,7 +9,11 @@ export const Option = ({
   data: { value },
   ...restProps
 }: React.ComponentProps<typeof ReactSelectComponents.Option>): JSX.Element => (
-  <StyledOption {...restProps} data={data} className={className}>
+  <ReactSelectComponents.Option
+    {...restProps}
+    data={data}
+    className={clsx(className, optionClass)}
+  >
     <StyledTag color={value} />
-  </StyledOption>
+  </ReactSelectComponents.Option>
 );

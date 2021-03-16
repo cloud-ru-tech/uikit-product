@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import clsx from 'clsx';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { EditOutlinedSVG, ApproveSVG, DeleteSVG } from '@aicloud/ui-icons';
@@ -6,8 +7,8 @@ import { EditOutlinedSVG, ApproveSVG, DeleteSVG } from '@aicloud/ui-icons';
 import { ColorPicker, OptionTypeColor } from 'components/Select';
 
 import {
+  optionClass,
   StyledTag,
-  StyledOption,
   StyledTagButton,
   StyledTagOption,
   tagInputClassName,
@@ -22,6 +23,7 @@ export const Option = (
   const {
     data,
     innerRef,
+    className,
     selectProps: {
       onTagChange,
       approveDeleting,
@@ -65,8 +67,9 @@ export const Option = (
   };
 
   return (
-    <StyledOption
+    <ReactSelectComponents.Option
       {...props}
+      className={clsx(className, optionClass)}
       innerRef={ref}
       key={tag.value}
       data-is-edit={isEdit}
@@ -90,7 +93,6 @@ export const Option = (
               <ColorPicker
                 dropdownPlacement={colorDropdownPlacement}
                 defaultValue={colorVal}
-                // TODO: check type error
                 onChange={(color: OptionTypeColor): void => {
                   setColorVal(color);
                   setTag({ ...tag, color: color.value });
@@ -156,6 +158,6 @@ export const Option = (
           </>
         )}
       </StyledTagOption>
-    </StyledOption>
+    </ReactSelectComponents.Option>
   );
 };

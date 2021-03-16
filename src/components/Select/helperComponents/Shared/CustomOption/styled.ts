@@ -1,7 +1,7 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { components as ReactSelectComponents } from 'react-select';
 
-export const StyledReactSelectOption = styled(ReactSelectComponents.Option)`
+export const optionClass = css`
   outline: 0;
 `;
 
