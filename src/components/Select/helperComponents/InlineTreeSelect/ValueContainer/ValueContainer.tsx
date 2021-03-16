@@ -3,21 +3,7 @@ import { css } from '@linaria/core';
 
 import { ArrowDownSVG } from '@aicloud/ui-icons';
 
-import { StyledContainer } from './styled';
-
-const iconClass = css`
-  color: #343f48;
-  fill: #343f48;
-  &[data-open='true'] {
-    transform: rotate(180deg);
-  }
-`;
-
-const iconWrapperClass = css`
-  position: absolute;
-  top: 12px;
-  right: 8px;
-`;
+import { StyledContainer, iconClass, iconWrapperClass } from './styled';
 
 export interface IValueContainerProps {
   value?: React.ReactText[];

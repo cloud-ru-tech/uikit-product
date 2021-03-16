@@ -44,7 +44,6 @@ export const NoOptionsMessage = (
         <Tag color={color}>{search}</Tag>
       </StyledTagWrapper>
       <ColorPicker
-        // TODO: check type error
         className={colorPickerClassName}
         defaultValue={{ value: color }}
         onChange={(color: OptionTypeColor): void => {

@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import clsx from 'clsx';
+import isEqual from 'lodash.isequal';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { EditOutlinedSVG, ApproveSVG, DeleteSVG } from '@aicloud/ui-icons';
@@ -135,7 +136,25 @@ export const Option = (
               >
                 <DeleteSVG />
               </StyledTagButton>
-              <StyledTagButton type='transparent'>
+              <StyledTagButton
+                size='xs'
+                type='transparent'
+                onClick={(): void => {
+                  setEdit(false);
+                  if (!isEqual(data, tag) && tag.label) {
+                    const dataIndex = props.options.indexOf(data);
+
+                    if (dataIndex < 0) return;
+                    const nextTags = [...props.options];
+                    nextTags.splice(dataIndex, 1, tag);
+
+                    onTagChange(nextTags, dataIndex, tag, 'edit');
+                    if (props.isSelected) {
+                      props.setValue(tag, 'set-value');
+                    }
+                  }
+                }}
+              >
                 <ApproveSVG />
               </StyledTagButton>
             </StyledTagButtonWrapper>

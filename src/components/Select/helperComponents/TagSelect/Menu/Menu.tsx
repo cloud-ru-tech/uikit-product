@@ -1,14 +1,6 @@
-import { css } from '@linaria/core';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { StyledSearchInput } from './styled';
-
-const searchInputWrapClassname = css`
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom: 1px solid #cccccc;
-  padding: 4px 0;
-`;
+import { StyledSearchInput, searchInputWrapClassname } from './styled';
 
 export const Menu = (
   props: React.ComponentProps<typeof ReactSelectComponents.Menu>,

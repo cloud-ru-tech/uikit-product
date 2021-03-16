@@ -149,6 +149,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
     },
     [options],
   );
+
   return (
     <InlineTreeSelect
       value={value}

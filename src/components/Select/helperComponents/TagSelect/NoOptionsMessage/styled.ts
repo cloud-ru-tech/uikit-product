@@ -4,10 +4,8 @@ import { Button } from 'components/Button';
 
 export const StyledButton = styled(Button)`
   width: 64px;
-  color: #1b1b1b;
-
   &:hover {
-    color: #5558fa;
+    background-color: transparent;
   }
 `;
 

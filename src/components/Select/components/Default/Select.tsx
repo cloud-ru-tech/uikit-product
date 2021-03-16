@@ -188,7 +188,6 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
         }}
         options={stateOptions}
         menuIsOpen={isOpen}
-        // TODO: check type error
         components={componentsState}
         styles={customStyles.styles}
         theme={customStyles.theme}

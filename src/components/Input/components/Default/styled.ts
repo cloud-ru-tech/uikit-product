@@ -50,7 +50,7 @@ export const StyledInput = styled.input`
 
   &:focus {
     background-color: var(${COLORS_INPUT.INPUT_FOCUS_BACKGROUND});
-    border: 1px solid var(${COLORS_INPUT.INPUT_FOCUS_BORDER});
+    border: 1px solid var(${COLORS_INPUT.INPUT_FOCUS_BORDER}) !important;
   }
 
   &[data-disabled='true'] {

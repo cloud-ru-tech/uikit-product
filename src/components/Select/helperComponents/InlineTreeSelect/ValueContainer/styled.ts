@@ -1,4 +1,7 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
+import { COLORS_SELECT } from 'theme/color/vars';
 
 interface IContainerType {
   open: boolean;
@@ -12,35 +15,55 @@ export const StyledContainer = styled.div<IContainerType>`
   padding: 12px 8px;
   display: flex;
   align-items: center;
-  background: ${(props): string => (props.disabled ? '#f2f2f2' : '#ffffff')};
-  border: 1px solid ${(props): string => (props.open ? '#484bd5' : '#d2d2d2')};
+  background: ${(props): string =>
+    props.disabled
+      ? `var(${COLORS_SELECT.DISABLED_BACKGROUND})`
+      : `var(${COLORS_SELECT.BACKGROUND})`};
+  border: 1px solid ${(props): string =>
+    props.open
+      ? `var(${COLORS_SELECT.BORDER_FOCUS_COLOR})`
+      : `var(${COLORS_SELECT.BORDER_COLOR})`};
   box-sizing: border-box;
   border-radius: 4px;
   cursor: ${(props): string => (props.disabled ? 'default' : 'pointer')};
   color: ${({ disabled, hasValue }): string => {
     if (disabled) {
-      return '#a0a0a0';
+      return `${COLORS_SELECT.DISABLED_TEXT_COLOR}`;
     }
 
     if (hasValue) {
-      return '#1b1b1b';
+      return `${COLORS_SELECT.TEXT_COLOR}`;
     }
 
-    return '#6C6C6C';
+    return `${COLORS_SELECT.TEXT_COLOR}`;
   }}
 
   &:hover {
     border: 1px solid
       ${({ disabled, open }): string => {
         if (disabled) {
-          return '#d2d2d2';
+          return `${COLORS_SELECT.DISABLED_BORDER_COLOR}`;
         }
 
         if (open) {
-          return '#484bd5';
+          return `${COLORS_SELECT.BORDER_FOCUS_COLOR}`;
         }
 
-        return '#aaabfc';
+        return `${COLORS_SELECT.BORDER_HOVER_COLOR}`;
       }};
   }
+`;
+
+export const iconClass = css`
+  color: var(${COLORS_SELECT.TEXT_COLOR});
+  fill: var(${COLORS_SELECT.TEXT_COLOR});
+  &[data-open='true'] {
+    transform: rotate(180deg);
+  }
+`;
+
+export const iconWrapperClass = css`
+  position: absolute;
+  top: 12px;
+  right: 8px;
 `;

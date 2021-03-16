@@ -3,6 +3,7 @@ import { styled } from '@linaria/react';
 
 import { Tag } from 'components/Tag';
 import { Button } from 'components/Button';
+import { COLORS_SELECT } from 'theme/color/vars';
 
 export const StyledTagOption = styled.div`
   max-width: 100%;
@@ -22,7 +23,7 @@ export const StyledTag = styled(Tag)`
   padding: 0;
   margin: 0;
   flex-grow: 1;
-  max-width: calc(100% - 94px);
+  display: block;
 `;
 
 export const StyledTagButtonWrapper = styled.div`
@@ -35,10 +36,10 @@ export const StyledTagButtonWrapper = styled.div`
 `;
 
 export const StyledTagButton = styled(Button)`
-  fill: #d2d2d2;
+  fill: var(${COLORS_SELECT.TEXT_COLOR});
   &:focus,
   &:hover {
-    fill: #343f48;
+    fill: var(${COLORS_SELECT.TEXT_COLOR});
   }
 `;
 

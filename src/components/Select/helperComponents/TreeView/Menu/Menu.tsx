@@ -71,7 +71,6 @@ export const Menu: FC<IMenuProps> = props => {
     const selectedKeys = checked;
     const getRes = (): IOptionProps[] => {
       if (Array.isArray(options) && options.length) {
-        // TODO: check type error
         return options.reduce((acc, option) => {
           const searchValues: ChildrenProps[] = option.children.filter(
             (child: IOptionProps) => selectedKeys.includes(child.key),

@@ -1,4 +1,5 @@
 import { styled } from '@linaria/react';
+import { COLORS_SELECT } from 'theme/color/vars';
 
 export const StyledContainer = styled.div`
   position: relative;
@@ -15,10 +16,9 @@ export const StyledContainer = styled.div`
   :global() {
     .mlspace {
       margin: 0;
-      border: 1px solid transparent;
     }
     .mlspace-focused:not(.mlspace-active-focused) {
-      border-color: cyan;
+      border-color: var(${COLORS_SELECT.BACKGROUND});
     }
     .mlspace .mlspace-treenode {
       display: flex;
@@ -31,20 +31,20 @@ export const StyledContainer = styled.div`
       white-space: nowrap;
       list-style: none;
       outline: 0;
-      background-color: #ffffff;
+      background-color: var(${COLORS_SELECT.BACKGROUND});
 
       &:hover {
-        background-color: #ededed;
+        background-color: var(${COLORS_SELECT.BACKGROUND_HOVER});
       }
     }
 
     .mlspace .mlspace-treenode-expanded {
-      border-top: 4px solid #ffffff;
+      border-top: 4px solid var(${COLORS_SELECT.BACKGROUND});
     }
 
     .mlspace-treenode-expanded:hover
       ~ .mlspace-treenode:not(.mlspace-treenode-expanded) {
-      background: #ededed;
+      background: var(${COLORS_SELECT.BACKGROUND_HOVER});
     }
     .mlspace-treenode-expanded:hover
       ~ .mlspace-treenode-expanded
@@ -58,11 +58,11 @@ export const StyledContainer = styled.div`
     }
 
     .mlspace .mlspace-treenode-checkbox-checked {
-      background: #f5f5f5;
+      background: var(${COLORS_SELECT.BACKGROUND_HOVER});
     }
 
     .mlspace .mlspace-treenode .draggable {
-      color: #333;
+      color: var(${COLORS_SELECT.TEXT_COLOR});
       -moz-user-select: none;
       -khtml-user-select: none;
       -webkit-user-select: none;
@@ -84,14 +84,12 @@ export const StyledContainer = styled.div`
       border-left: 2px solid chocolate;
     }
     .mlspace .mlspace-treenode.drop-target {
-      background-color: yellowgreen;
+      background-color: var(${COLORS_SELECT.BACKGROUND});
     }
     .mlspace .mlspace-treenode.drop-target ~ .mlspace-treenode {
       border-left: none;
     }
-    /* .mlspace .mlspace-treenode.filter-node > .mlspace-node-content-wrapper {
-        color: #a60000 !important;
-      } */
+
     .mlspace .mlspace-treenode ul {
       margin: 0;
       padding: 0 0 0 18px;
@@ -184,7 +182,7 @@ export const StyledContainer = styled.div`
       .mlspace-treenode
       span.mlspace-checkbox.mlspace-checkbox-indeterminate.mlspace-checkbox-disabled {
       position: relative;
-      background: #ccc;
+      background: var(${COLORS_SELECT.DISABLED_BACKGROUND});
       border-radius: 3px;
     }
     .mlspace
@@ -195,7 +193,7 @@ export const StyledContainer = styled.div`
       left: 3px;
       width: 5px;
       height: 0;
-      border: 2px solid #fff;
+      border: 2px solid var(${COLORS_SELECT.DISABLED_BORDER_COLOR});
       border-top: 0;
       border-left: 0;
       -webkit-transform: scale(1);
@@ -214,14 +212,14 @@ export const StyledContainer = styled.div`
     .mlspace-treenode-disabled > span:not(.mlspace-switcher),
     .mlspace-treenode-disabled > a,
     .mlspace-treenode-disabled > a span {
-      color: #767676;
+      color: var(${COLORS_SELECT.DISABLED_TEXT_COLOR});
       cursor: not-allowed;
     }
     .mlspace-treenode-active {
       background: rgba(0, 0, 0, 0.1);
     }
     .mlspace-node-selected {
-      background-color: #ffe6b0;
+      background-color: var(${COLORS_SELECT.BORDER_HOVER_COLOR});
       box-shadow: 0 0 0 1px #ffb951;
       opacity: 0.8;
     }
@@ -230,6 +228,7 @@ export const StyledContainer = styled.div`
       vertical-align: top;
     }
     .mlspace-title {
+      color: var(${COLORS_SELECT.TEXT_COLOR});
       display: inline-block;
     }
     .mlspace-indent {

@@ -1,8 +1,9 @@
 import { styled } from '@linaria/react';
+import { COLORS_INPUT, COLORS_SELECT } from 'theme/color/vars';
 
 export const StyledContainer = styled.div`
   border-radius: 4px;
-  background: #ffffff;
+  background: var(${COLORS_SELECT.BACKGROUND});
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
@@ -67,9 +68,9 @@ export const StyledSearchInput = styled.input`
   border: none;
   width: 100%;
   outline: none;
-  color: #1b1b1b;
+  color: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
   &::placeholder {
-    color: #a0a0a0;
+    color: var(${COLORS_INPUT.INPUT_PLACEHOLDER_COLOR});
   }
 `;
 

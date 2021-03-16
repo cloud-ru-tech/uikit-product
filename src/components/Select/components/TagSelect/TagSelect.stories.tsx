@@ -23,8 +23,8 @@ const Wrap = styled.div`
   width: 100%;
   height: 100px;
   display: flex;
-  align-items: center;
-  flex-direction: row;
+  align-items: flex-start;
+  flex-direction: column;
   justify-content: space-around;
 `;
 

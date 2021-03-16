@@ -10,7 +10,7 @@ export default {
   component: ModalPreview,
 } as Meta;
 
-const Template: Story<IModalPreviewProps> = () => {
+const Template: Story<IModalPreviewProps> = ({ ...args }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = (): void => setIsOpen(true);
   const closeModal = (): void => setIsOpen(false);
@@ -19,6 +19,7 @@ const Template: Story<IModalPreviewProps> = () => {
     <>
       <Button onClick={openModal}>Open Modal</Button>
       <ModalPreview
+        {...args}
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         appElement={document.body}

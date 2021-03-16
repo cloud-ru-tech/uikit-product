@@ -20,7 +20,7 @@ const Template: Story<IModalProps> = ({ ...args }) => {
   // const closeDrawer = (): void => setOpen(false);
   const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = (): void => setIsOpen(true);
-  // const closeModal = (): void => setIsOpen(false);
+  const closeModal = (): void => setIsOpen(false);
 
   return (
     <>
@@ -37,6 +37,7 @@ const Template: Story<IModalProps> = ({ ...args }) => {
         approveText='Drawer'
         {...args}
         isOpen={modalIsOpen}
+        onRequestClose={closeModal}
         // cancel={(): void => {
         //   console.log("cancel");
         // }}

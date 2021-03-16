@@ -1,4 +1,5 @@
 import { styled } from '@linaria/react';
+import { COLORS_SELECT } from 'theme/color/vars';
 
 export const StyledContainer = styled.div`
   font-family: SB Sans Interface;
@@ -6,6 +7,6 @@ export const StyledContainer = styled.div`
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  color: #6c6c6c;
+  color: var(${COLORS_SELECT.TEXT_COLOR});
   padding: 12px;
 `;

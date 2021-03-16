@@ -25,7 +25,6 @@ export const TreeView: FC<ITreeViewProps> = props => {
     [],
   );
 
-  // TODO: check type error
   // TODO: IndicatorSeparator, DropdownIndicator добавить в react-select по умолчанию
   return (
     <Select
