@@ -4,6 +4,7 @@ import { CloseSVG, EyeSVG, EyeClosedSVG } from '@aicloud/ui-icons';
 
 import { CopyButton } from 'components/Button';
 import { IInputProps } from 'components/Input/helpers/types';
+import { getInputType } from 'components/Input/helpers/getInputType';
 
 import {
   Label,
@@ -14,11 +15,6 @@ import {
   StyledInputWrapper,
   StyledSecurityButton,
 } from './styled';
-
-const TYPE_SETTINGS: { [key: string]: string } = {
-  security: 'password',
-  number: 'number',
-};
 
 export const Input = forwardRef<HTMLInputElement, IInputProps>(
   (
@@ -105,11 +101,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
         {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
         <StyledInputWrapper ref={ref} className={wrapperClassName}>
           <StyledInput
-            type={
-              type === 'security' && !isViewMode
-                ? TYPE_SETTINGS[type] || 'text'
-                : 'text'
-            }
+            type={getInputType({ type, isViewMode })}
             onChange={handleChange}
             value={correctValue}
             data-type={type}

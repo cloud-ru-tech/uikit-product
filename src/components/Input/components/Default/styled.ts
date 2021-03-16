@@ -35,16 +35,12 @@ export const StyledInput = styled.input`
     }
   }
 
-  &[data-disabled='true'] {
-    color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
-  }
-
   &[data-type='embed'] {
     height: 40px;
     padding: 10px 12px;
   }
 
-  &:hover {
+  &:not([data-disabled='true']):hover {
     background-color: var(${COLORS_INPUT.INPUT_HOVER_BACKGROUND});
     border: 1px solid var(${COLORS_INPUT.INPUT_HOVER_BORDER});
     &::placeholder {
@@ -65,9 +61,7 @@ export const StyledInput = styled.input`
       color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
     }
     &:hover {
-      &::placeholder {
-        color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
-      }
+      cursor: not-allowed;
     }
   }
 
@@ -83,19 +77,9 @@ export const StyledClearButton = styled.div`
   justify-content: center;
   cursor: pointer;
   margin-right: 8px;
-  fill: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
+  fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   :hover {
-    fill: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
-  }
-`;
-
-// TODO
-export const CopyButton = styled.div`
-  cursor: pointer;
-  margin-right: 8px;
-  fill: #d2d2d2;
-  :hover {
-    fill: #343f48;
+    fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   }
 `;
 
@@ -105,11 +89,11 @@ export const StyledSecurityButton = styled.div`
   justify-content: center;
   cursor: pointer;
   margin: 0 8px 0 0;
-  color: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
-  fill: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
+  color: var(${COLORS_INPUT.INPUT_ICON_COLOR});
+  fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   :hover {
-    color: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
-    fill: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
+    color: var(${COLORS_INPUT.INPUT_ICON_COLOR});
+    fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   }
 `;
 

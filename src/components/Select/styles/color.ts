@@ -33,5 +33,6 @@ export const styles = commonStyles({
     flexDirection: 'row',
     flexWrap: 'wrap',
     padding: 8,
+    backgroundColor: `var(${COLORS_SELECT.BACKGROUND})`,
   }),
 });

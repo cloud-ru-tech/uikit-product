@@ -58,6 +58,7 @@ export const styles = (typeStyles?: Styles): Styles => ({
   }),
   menuList: (styles: CSSProperties): CSSProperties => ({
     ...styles,
+    color: 'red',
     backgroundColor: `var(${COLORS_SELECT.BACKGROUND})`,
   }),
   singleValue: (styles: CSSProperties): CSSProperties => ({
