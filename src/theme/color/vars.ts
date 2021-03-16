@@ -174,4 +174,9 @@ export const COLORS_SELECT = {
   DISABLED_TEXT_COLOR: '--select-disabled-text-color',
   DISABLED_BORDER_COLOR: '--select-disabled-border-color',
   DISABLED_BACKGROUND: '--select-disabled-background',
+  DROPDOWN_BACKGROUND: '--select-dropdown-background',
+  DROPDOWN_HOVER_BACKGROUND: '--select-dropdown-hover-background',
+  DROPDOWN_FOCUS_BACKGROUND: '--select-dropdown-focus-background',
+  DROPDOWN_ICON_COLOR: '--select-dropdown-icon-color',
+  DROPDOWN_ICON_HOVER_COLOR: '--select-dropdown-icon-hover-color',
 };

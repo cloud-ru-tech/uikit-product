@@ -79,7 +79,7 @@ export const StyledClearButton = styled.div`
   margin-right: 8px;
   fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   :hover {
-    fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
+    fill: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
   }
 `;
 
@@ -92,8 +92,8 @@ export const StyledSecurityButton = styled.div`
   color: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   :hover {
-    color: var(${COLORS_INPUT.INPUT_ICON_COLOR});
-    fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
+    color: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
+    fill: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
   }
 `;
 

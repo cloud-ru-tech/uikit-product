@@ -57,24 +57,24 @@ export const styles = commonStyles({
     ...styles,
     overflowY: data.selectProps.menuListBlockScroll ? 'hidden' : 'auto',
     paddingTop: 0,
-    backgroundColor: `var(${COLORS_SELECT.BACKGROUND})`,
+    backgroundColor: `var(${COLORS_SELECT.DROPDOWN_BACKGROUND})`,
   }),
   option: (styles: CSSProperties, props: Props) => {
     const { isSelected } = props;
     const backgroundColor = isSelected
-      ? { backgroundColor: `var(${COLORS.GRAY_3})` }
-      : { backgroundColor: 'transparent' };
-    console.log(backgroundColor);
+      ? { backgroundColor: `var(${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND})` }
+      : { backgroundColor: `var(${COLORS_SELECT.DROPDOWN_BACKGROUND})` };
+
     const hover = {} as { '&:hover': CSSProperties };
     if (!isSelected) {
       hover['&:hover'] = {
-        backgroundColor: 'transparent',
+        backgroundColor: `var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND})`,
       };
     }
     return {
       ...styles,
       outline: 0,
-      color: `var(${COLORS_SELECT.TEXT_COLOR})`,
+      color: `var(${COLORS.BLACK_1})`,
       ...backgroundColor,
       ...hover,
     };

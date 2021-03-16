@@ -15,7 +15,7 @@ export const StyledTagOption = styled.div`
 
 export const optionClass = css`
   &[data-is-edit='true']: {
-    background-color: #f5f5f5 !important;
+    background-color: ${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND} !important;
   }
 `;
 
@@ -36,10 +36,14 @@ export const StyledTagButtonWrapper = styled.div`
 `;
 
 export const StyledTagButton = styled(Button)`
-  fill: var(${COLORS_SELECT.TEXT_COLOR});
+  fill: var(${COLORS_SELECT.DROPDOWN_ICON_COLOR}) !important;
+  color: var(${COLORS_SELECT.DROPDOWN_ICON_COLOR}) !important;
+  background: transparent !important;
   &:focus,
   &:hover {
-    fill: var(${COLORS_SELECT.TEXT_COLOR});
+    fill: var(${COLORS_SELECT.DROPDOWN_ICON_HOVER_COLOR}) !important;
+    fill: var(${COLORS_SELECT.DROPDOWN_ICON_HOVER_COLOR}) !important;
+    background: transparent !important;
   }
 `;
 

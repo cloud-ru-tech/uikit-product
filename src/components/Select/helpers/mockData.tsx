@@ -146,11 +146,6 @@ export const connectors = [
   },
 ];
 
-export const storage = [
-  { value: 'S3', label: 'S3' },
-  { value: 'NFS', label: 'NFS' },
-];
-
 export const services = [
   {
     value: 'AmazonS3',
@@ -211,12 +206,12 @@ export const groupedServices = [
   {
     label: 'S3 Connectors',
     options: [
-      { value: 'AmazonS3', label: 'Amazon S3', logo: <div>Logo image</div> },
-      { value: 'Ds', label: 'AICloud', logo: <div>Logo image</div> },
+      { value: 'AmazonS3', label: 'Amazon S3', logo: <GroupStub0SVG /> },
+      { value: 'Ds', label: 'AICloud', logo: <GroupStub0SVG /> },
       {
         value: 'GoogleCloudstorage',
         label: 'Google Cloud storage',
-        logo: <div>Logo image</div>,
+        logo: <GroupStub0SVG />,
       },
     ],
   },
