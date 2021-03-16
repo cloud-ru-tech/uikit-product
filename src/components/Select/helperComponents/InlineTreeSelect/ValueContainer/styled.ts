@@ -61,9 +61,3 @@ export const iconClass = css`
     transform: rotate(180deg);
   }
 `;
-
-export const iconWrapperClass = css`
-  position: absolute;
-  top: 12px;
-  right: 8px;
-`;

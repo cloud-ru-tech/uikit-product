@@ -7,10 +7,10 @@ export const getAbbreviation = (str = '', size = 2): string => {
   }
 
   if (str && str.length > size) {
-    trimStr
+    return trimStr
       .replace(/(\s{2,})/g, SPACE)
       .split(SPACE)
-      .slice(0, 2)
+      .slice(0, size)
       .map(el => el?.charAt(0)?.toUpperCase())
       .join('');
   }

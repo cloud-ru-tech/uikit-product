@@ -5,7 +5,7 @@ import { InputSearch } from 'components/Select/helperComponents/Shared/InputSear
 import { COLORS_SELECT } from 'theme/color/vars';
 
 export const StyledSearchInput = styled(InputSearch)`
-  height: 28px;
+  max-height: 28px;
   padding: 4px 12px;
 `;
 

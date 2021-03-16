@@ -1,9 +1,8 @@
 import { FC, useCallback } from 'react';
-import { css } from '@linaria/core';
 
 import { ArrowDownSVG } from '@aicloud/ui-icons';
 
-import { StyledContainer, iconClass, iconWrapperClass } from './styled';
+import { StyledContainer, iconClass } from './styled';
 
 export interface IValueContainerProps {
   value?: React.ReactText[];
@@ -44,11 +43,7 @@ export const ValueContainer: FC<IValueContainerProps> = ({
       }
     >
       {getVal()}
-      <ArrowDownSVG
-        wrapperClasses={iconWrapperClass}
-        className={iconClass}
-        data-open={open}
-      />
+      <ArrowDownSVG className={iconClass} data-open={open} />
     </StyledContainer>
   );
 };
