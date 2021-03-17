@@ -1,4 +1,6 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
 import { COLORS_SELECT } from 'theme/color/vars';
 
 export const StyledContainer = styled.div`
@@ -12,7 +14,9 @@ export const StyledContainer = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
   }
+`;
 
+export const selectClassname = css`
   :global() {
     .mlspace {
       margin: 0;
@@ -159,6 +163,18 @@ export const StyledContainer = styled.div`
       }
     }
 
+    .mlspace {
+      & .mlspace-treenode-expanded:hover {
+        & ~ .mlspace-treenode:not(.mlspace-treenode-expanded) {
+          background: var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND});
+        }
+
+        & ~ .mlspace-treenode-expanded ~ .mlspace-treenode {
+          background: transparent;
+        }
+      }
+    }
+
     .mlspace .mlspace-treenode span.mlspace-switcher.mlspace-icon__customize,
     .mlspace .mlspace-treenode span.mlspace-checkbox.mlspace-icon__customize,
     .mlspace .mlspace-treenode span.mlspace-iconEle.mlspace-icon__customize {
@@ -196,6 +212,7 @@ export const StyledContainer = styled.div`
       transform: scale(1);
       content: ' ';
     }
+
     .mlspace:not(.mlspace-show-line) .mlspace-treenode .mlspace-switcher-noop {
       background: none;
     }

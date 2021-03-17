@@ -6,7 +6,7 @@ import { UserStubColorSVG, GroupStub1ColorSVG } from '@aicloud/ui-icons';
 
 import { Avatar, IAvatarProps } from 'components/Avatar';
 
-import { StyledContainer } from './styled';
+import { StyledContainer, selectClassname } from './styled';
 
 export interface IOptionType extends DataNode {
   src?: string;
@@ -130,7 +130,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
   }
 
   return (
-    <StyledContainer>
+    <StyledContainer className={selectClassname}>
       <RcTree
         {...treeProps}
         checkedKeys={checked}

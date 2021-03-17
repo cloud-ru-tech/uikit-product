@@ -55,6 +55,9 @@ export const StyledContainer = styled.div<IContainerType>`
 `;
 
 export const iconClass = css`
+  position: absolute;
+  top: 12px;
+  right: 8px;
   color: var(${COLORS_SELECT.TEXT_COLOR});
   fill: var(${COLORS_SELECT.TEXT_COLOR});
   &[data-open='true'] {
