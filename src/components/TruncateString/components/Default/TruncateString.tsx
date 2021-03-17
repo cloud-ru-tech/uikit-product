@@ -20,6 +20,7 @@ export const TruncateString: FC<ITruncateStringProps> = ({
   style,
   className,
 }) => {
+  console.log('test');
   const componentEl = useRef<HTMLDivElement>(null);
   const textEl = useRef<HTMLSpanElement>(null);
   const ellipsisEl = useRef<HTMLSpanElement>(null);

@@ -20,10 +20,11 @@ export const optionClass = css`
 `;
 
 export const StyledTag = styled(Tag)`
-  padding: 0;
+  padding: 0px 8px;
   margin: 0;
   flex-grow: 1;
   display: block;
+  text-overflow: clip;
 `;
 
 export const StyledTagButtonWrapper = styled.div`

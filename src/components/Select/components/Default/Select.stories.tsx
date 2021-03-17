@@ -89,11 +89,15 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
       }: OptionPrefixProps): JSX.Element => {
         const isChecked = hasValue && (getValue() || []).indexOf(data) !== -1;
 
-        if (optionPosition === 'prefix') {
+        if (optionPosition && optionPosition.includes('prefix')) {
           return (
             <>
               <StyledRadioWrap
-                position={optionPosition === 'prefix' ? 'left' : 'right'}
+                position={
+                  optionPosition && optionPosition.includes('prefix')
+                    ? 'left'
+                    : 'right'
+                }
               >
                 <RadioIcon checked={isChecked} />
               </StyledRadioWrap>
@@ -106,7 +110,11 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
           <>
             {logo}
             <StyledRadioWrap
-              position={optionPosition === 'prefix' ? 'left' : 'right'}
+              position={
+                optionPosition && optionPosition.includes('prefix')
+                  ? 'left'
+                  : 'right'
+              }
             >
               <RadioIcon checked={isChecked} />
             </StyledRadioWrap>
@@ -118,12 +126,37 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
     return () => <HelpSVG size={20} />;
   };
 
-  const optionProp =
-    optionPosition === 'prefix'
-      ? {
-          prefixOption: getOption(),
-        }
-      : { postfixOption: getOption() };
+  const getOptionProp = () => {
+    if (!optionPosition) {
+      return {};
+    }
+
+    const isPrefix = optionPosition.includes('prefix');
+    const isPostfix = optionPosition.includes('postfix');
+
+    if (isPrefix && isPostfix) {
+      return {
+        prefixOption: getOption(),
+        postfixOption: getOption(),
+      };
+    }
+
+    if (isPrefix) {
+      return {
+        prefixOption: getOption(),
+      };
+    }
+
+    if (isPostfix) {
+      return {
+        postfixOption: getOption(),
+      };
+    }
+
+    return {};
+  };
+
+  const optionProp = getOptionProp();
 
   return (
     <Select
@@ -190,7 +223,7 @@ select.argTypes = {
   },
   optionPosition: {
     control: {
-      type: 'radio',
+      type: 'check',
       options: ['prefix', 'postfix'],
     },
   },

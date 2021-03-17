@@ -29,14 +29,16 @@ const Template: Story<ITruncateStringProps> = ({ ...args }) => {
   const [width, setWidth] = useState<number>(200);
 
   return (
-    <Column width={width}>
-      <TruncateString text={`${exampleText}_${exampleText}`} {...args} />
-      <Row>
-        <TruncateString text={exampleText} {...args} />
-        <TruncateString text={exampleText} {...args} />
-      </Row>
+    <>
+      <Column width={width}>
+        <TruncateString text={`${exampleText}_${exampleText}`} {...args} />
+        <Row>
+          <TruncateString text={exampleText} {...args} />
+          <TruncateString text={exampleText} {...args} />
+        </Row>
+      </Column>
       <Slider value={width} min={100} max={1100} onChange={setWidth} />
-    </Column>
+    </>
   );
 };
 

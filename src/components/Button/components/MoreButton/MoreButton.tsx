@@ -23,12 +23,12 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({ actions }) => (
     <TooltipStateContainer>
       {({
         on,
-        set,
         hide,
+        toggle,
       }: {
         on: boolean;
-        set(): void;
         hide(): void;
+        toggle(): void;
       }): React.ReactNode => (
         <Tooltip
           clickOutside
@@ -37,7 +37,7 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({ actions }) => (
           placement='bottom-start'
           trigger='click'
           tooltipShown={on}
-          onVisibilityChange={set}
+          onVisibilityChange={toggle}
           tooltip={
             <TooltipMenu>
               {actions.map(menuItem => {

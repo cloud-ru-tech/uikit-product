@@ -111,6 +111,9 @@ export const COLORS_MODAL = {
   BG: '--modal-bg',
   TITLE_COLOR: '--modal-title-color',
   DESCRIPTION_COLOR: '--modal-description-color',
+  PREVIEW_BG: '--modal-preview-bg',
+  PREVIEW_CLOSE_ICON_COLOR: '--modal-preview-close-icon-color',
+  PREVIEW_CLOSE_ICON_HOVER_COLOR: '--modal-preview-close-icon-hover-color',
 };
 
 export const COLORS_TOOLTIP = {
