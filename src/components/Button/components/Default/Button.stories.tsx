@@ -37,8 +37,9 @@ const buttons: Array<{
   background?: string;
 }> = [
   { name: 'FILLED', type: 'filled' },
+  { name: 'FILLED-BRAND', type: 'filled-brand' },
   { name: 'OUTLINED', type: 'outlined' },
-  { name: 'TRANSPERENT', type: 'transparent' },
+  { name: 'TRANSPARENT', type: 'transparent' },
   { name: 'WHITE', type: 'white', background: '#5558FA' },
 ];
 

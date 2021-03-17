@@ -7,6 +7,9 @@ export const COLORS = {
   GRAY_6: '--color-default-gray-6',
   GRAY_7: '--color-default-gray-7',
   GRAY_8: '--color-default-gray-8',
+  GRAY_9: '--color-default-gray-9',
+  GRAY_10: '--color-default-gray-10',
+  GRAY_11: '--color-default-gray-11',
   BLACK_1: '--color-default-black-1',
   BLACK_2: '--color-default-black-2',
   WHITE: '--color-default-white',
@@ -22,11 +25,36 @@ export const COLORS = {
   GREEN_1: '--color-default-green-1',
   GREEN_2: '--color-default-green-2',
   GREEN_3: '--color-default-green-3',
+  GREEN_4: '--color-default-green-4',
+  GREEN_5: '--color-default-green-5',
+  GREEN_6: '--color-default-green-6',
+  GREEN_7: '--color-default-green-7',
+  GREEN_8: '--color-default-green-8',
   BLUE_1: '--color-default-blue-1',
   BLUE_2: '--color-default-blue-2',
   RED_1: '--color-default-red-1',
   RED_2: '--color-default-red-2',
   YELLOW: '--color-default-yellow',
+};
+
+export const COLORS_BRAND = {
+  GREEN: '--color-brand-green',
+  GREEN_GRADIENT: '--color-brand-green-gradient',
+  BLACK: '--color-brand-black',
+  GRAY: '--color-brand-gray',
+};
+
+export const COLORS_TAG = {
+  RED: '--color-tag-red',
+  PINK: '--color-tag-pink',
+  PURPLE: '--color-tag-purple',
+  BLUE: '--color-tag-blue',
+  GREEN: '--color-tag-green',
+  YELLOW: '--color-tag-yellow',
+  ORANGE: '--color-tag-orange',
+  BROWN: '--color-tag-brown',
+  GRAY_1: '--color-tag-gray-1',
+  GRAY_2: '--color-tag-gray-2',
 };
 
 export const COLORS_GENERAL = {
@@ -38,6 +66,7 @@ export const COLORS_BUTTON = {
   FOCUS_SHADOW: '--button-focus-shadow',
 
   FILLED_COLOR: '--button-filled-color',
+  FILLED_ICON_COLOR: '--button-filled-icon-color',
   FILLED_BG: '--button-filled-bg',
   FILLED_HOVER_BG: '--button-filled-hover-bg',
   FILLED_ACTIVE_BG: '--button-filled-active-bg',
@@ -50,7 +79,9 @@ export const COLORS_BUTTON = {
   OUTLINED_HOVER_COLOR: '--button-outlined-hover-color',
   OUTLINED_HOVER_BORDER: '--button-outlined-hover-border',
   OUTLINED_ACTIVE_COLOR: '--button-outlined-active-color',
+  OUTLINED_ACTIVE_BORDER: '--button-outlined-active-border',
   OUTLINED_DISABLED_COLOR: '--button-outlined-disabled-color',
+  OUTLINED_DISABLED_BORDER: '--button-outlined-disabled-border',
   OUTLINED_FOCUS_COLOR: '--button-outlined-focus-color',
   OUTLINED_FOCUS_BORDER: '--button-outlined-focus-border',
 
