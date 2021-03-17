@@ -7,6 +7,9 @@ import { COLORS_TOOLTIP } from 'theme/color/vars';
 export const containerStyle = css`
   z-index: ${Z_INDEX.TOOLTIP};
   max-width: 265px;
+  max-height: 220px;
+  overflow-x: hidden;
+  overflow-y: auto;
   box-sizing: border-box;
 
   border: none;
