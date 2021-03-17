@@ -43,7 +43,11 @@ export const ValueContainer: FC<IValueContainerProps> = ({
       }
     >
       {getVal()}
-      <ArrowDownSVG className={iconClass} data-open={open} />
+      <ArrowDownSVG
+        className={iconClass}
+        data-open={open}
+        data-disabled={disabled}
+      />
     </StyledContainer>
   );
 };

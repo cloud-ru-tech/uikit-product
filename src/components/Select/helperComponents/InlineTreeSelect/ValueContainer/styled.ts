@@ -19,37 +19,37 @@ export const StyledContainer = styled.div<IContainerType>`
     props.disabled
       ? `var(${COLORS_SELECT.DISABLED_BACKGROUND})`
       : `var(${COLORS_SELECT.BACKGROUND})`};
-  border: 1px solid ${(props): string =>
-    props.open
-      ? `var(${COLORS_SELECT.BORDER_FOCUS_COLOR})`
-      : `var(${COLORS_SELECT.BORDER_COLOR})`};
+  border: 1px solid
+    ${(props): string =>
+      props.open
+        ? `var(${COLORS_SELECT.BORDER_FOCUS_COLOR})`
+        : `var(${COLORS_SELECT.BORDER_COLOR})`};
   box-sizing: border-box;
   border-radius: 4px;
-  cursor: ${(props): string => (props.disabled ? 'default' : 'pointer')};
   color: ${({ disabled, hasValue }): string => {
     if (disabled) {
-      return `${COLORS_SELECT.DISABLED_TEXT_COLOR}`;
+      return `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`;
     }
 
     if (hasValue) {
-      return `${COLORS_SELECT.TEXT_COLOR}`;
+      return `var(${COLORS_SELECT.TEXT_COLOR})`;
     }
 
-    return `${COLORS_SELECT.TEXT_COLOR}`;
-  }}
-
+    return `var(${COLORS_SELECT.TEXT_COLOR})`;
+  }};
+  cursor: ${(props): string => (props.disabled ? 'default' : 'pointer')};
   &:hover {
     border: 1px solid
       ${({ disabled, open }): string => {
         if (disabled) {
-          return `${COLORS_SELECT.DISABLED_BORDER_COLOR}`;
+          return `var(${COLORS_SELECT.DISABLED_BORDER_COLOR})`;
         }
 
         if (open) {
-          return `${COLORS_SELECT.BORDER_FOCUS_COLOR}`;
+          return `var(${COLORS_SELECT.BORDER_FOCUS_COLOR})`;
         }
 
-        return `${COLORS_SELECT.BORDER_HOVER_COLOR}`;
+        return `var(${COLORS_SELECT.BORDER_HOVER_COLOR})`;
       }};
   }
 `;
@@ -62,5 +62,9 @@ export const iconClass = css`
   fill: var(${COLORS_SELECT.TEXT_COLOR});
   &[data-open='true'] {
     transform: rotate(180deg);
+  }
+  &[data-disabled='true'] {
+    color: var(${COLORS_SELECT.DISABLED_TEXT_COLOR});
+    fill: var(${COLORS_SELECT.DISABLED_TEXT_COLOR});
   }
 `;

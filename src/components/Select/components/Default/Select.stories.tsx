@@ -46,6 +46,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
   showOption,
   optionPosition,
   isSearchableCustom,
+  ...restProps
 }) => {
   const [value, setValue] = useState<OptionTypeBase>();
 
@@ -192,6 +193,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
         );
       }}
       type={showLogo || showOption ? 'with-logo' : type}
+      {...restProps}
     />
   );
 };
@@ -228,6 +230,11 @@ select.argTypes = {
     },
   },
   showLogo: {
+    control: {
+      type: 'boolean',
+    },
+  },
+  isDisabled: {
     control: {
       type: 'boolean',
     },

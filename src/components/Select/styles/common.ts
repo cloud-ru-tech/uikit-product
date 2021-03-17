@@ -45,6 +45,7 @@ export const styles = (typeStyles?: Styles): Styles => ({
       : {}),
     background: `var(${COLORS_SELECT.BACKGROUND})`,
     boxShadow: 'none !importrant',
+    cursor: isDisabled ? 'not-allowed' : 'default',
     '&:focus': {
       borderColor: `var(${COLORS_SELECT.BORDER_FOCUS_COLOR}) !imporant`,
     },
@@ -65,11 +66,16 @@ export const styles = (typeStyles?: Styles): Styles => ({
     ...styles,
     color: `var(${COLORS_SELECT.TEXT_COLOR})`,
   }),
-  dropdownIndicator: (styles: CSSProperties, data: Props): CSSProperties => ({
+  dropdownIndicator: (
+    styles: CSSProperties,
+    { selectProps: { menuIsOpen }, isDisabled }: Props,
+  ): CSSProperties => ({
     ...styles,
     padding: '0 8px',
-    fill: `var(${COLORS_SELECT.TEXT_COLOR})`,
-    transform: data.selectProps.menuIsOpen && 'rotate(180deg)',
+    fill: isDisabled
+      ? `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`
+      : `var(${COLORS_SELECT.TEXT_COLOR})`,
+    transform: menuIsOpen && 'rotate(180deg)',
   }),
   input: (styles: CSSProperties): CSSProperties => ({
     ...styles,
@@ -79,10 +85,13 @@ export const styles = (typeStyles?: Styles): Styles => ({
     fontSize: '14px',
     lineHeight: '20px',
   }),
-  placeholder: (styles: CSSProperties): CSSProperties => ({
+  placeholder: (styles: CSSProperties, { isDisabled }): CSSProperties => ({
     ...styles,
     fontSize: '14px',
     lineHeight: '20px',
+    color: isDisabled
+      ? `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`
+      : `var(${COLORS_SELECT.PLACEHOLDER_TEXT_COLOR})`,
   }),
   menu: (styles: CSSProperties, state: Props): CSSProperties => ({
     ...styles,
