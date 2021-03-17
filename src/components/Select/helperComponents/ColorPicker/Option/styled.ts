@@ -22,8 +22,4 @@ export const StyledTag = styled(Tag)`
   width: 28px;
   height: 28px;
   border: 1px solid transparent;
-
-  &:hover {
-    border-color: #5558fa;
-  }
 `;

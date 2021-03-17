@@ -34,12 +34,8 @@ export const StyledContainer = styled.div`
       background-color: var(${COLORS_SELECT.BACKGROUND});
 
       &:hover {
-        background-color: var(${COLORS_SELECT.BACKGROUND_HOVER});
+        background-color: var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND});
       }
-    }
-
-    .mlspace .mlspace-treenode-expanded {
-      border-top: 4px solid var(${COLORS_SELECT.BACKGROUND});
     }
 
     .mlspace-treenode-expanded:hover
@@ -58,7 +54,7 @@ export const StyledContainer = styled.div`
     }
 
     .mlspace .mlspace-treenode-checkbox-checked {
-      background: var(${COLORS_SELECT.BACKGROUND_HOVER});
+      background: var(${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND});
     }
 
     .mlspace .mlspace-treenode .draggable {
@@ -219,7 +215,7 @@ export const StyledContainer = styled.div`
       background: rgba(0, 0, 0, 0.1);
     }
     .mlspace-node-selected {
-      background-color: var(${COLORS_SELECT.BORDER_HOVER_COLOR});
+      background-color: var(${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND});
       box-shadow: 0 0 0 1px #ffb951;
       opacity: 0.8;
     }

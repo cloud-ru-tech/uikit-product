@@ -76,6 +76,7 @@ export const StyledInputAutosize = styled(InputAutosize)`
   & > input {
     border-style: none;
     background: transparent;
+    outline: none;
   }
 
   &[data-tag-color='${PRESET_COLORS[0]}'] {

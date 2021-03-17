@@ -58,6 +58,7 @@ export const contentClassname = css`
   bottom: 24px;
   padding: 0px;
   border: 0px;
+  outline: none;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   display: flex;

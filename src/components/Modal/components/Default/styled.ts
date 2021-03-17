@@ -40,6 +40,7 @@ export const contentClassname = css`
   width: 316px;
   padding: 32px;
   border: 0;
+  outline: none;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   background-color: var(${COLORS_MODAL.BG});

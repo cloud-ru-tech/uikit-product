@@ -75,6 +75,9 @@ export const styles = commonStyles({
       ...styles,
       outline: 0,
       color: `var(${COLORS.BLACK_1})`,
+      '&:active': {
+        backgroundColor: `var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND})`,
+      },
       ...backgroundColor,
       ...hover,
     };

@@ -96,16 +96,22 @@ export const styles = (typeStyles?: Styles): Styles => ({
     state: Props,
   ): CSSProperties & {
     '&:hover': CSSProperties;
+    '&:active': CSSProperties;
   } => ({
     ...styles,
     ...(state?.selectProps?.optionNoWrap ? { whiteSpace: 'nowrap' } : {}),
     color: `var(${COLORS_SELECT.TEXT_COLOR})`,
-    backgroundColor: state.isOptionSelected
-      ? `var(${COLORS_SELECT.BORDER_HOVER_COLOR})`
+    outline: 'none',
+    backgroundColor: state.isSelected
+      ? `var(${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND})`
       : `var(${COLORS_SELECT.BACKGROUND})`,
     '&:hover': {
       cursor: 'pointer',
-      backgroundColor: `var(${COLORS_SELECT.BACKGROUND_HOVER})`,
+      borderColor: 'transparent',
+      backgroundColor: `var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND})`,
+    },
+    '&:active': {
+      backgroundColor: `var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND})`,
     },
   }),
   multiValue: (styles: CSSProperties): CSSProperties => ({
