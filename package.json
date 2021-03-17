@@ -33,12 +33,18 @@
     ]
   },
   "dependencies": {
+    "clsx": "^1.1.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.isequal": "^4.5.0",
+    "rc-slider": "^9.7.1",
+    "rc-tree": "^4.1.2",
     "@aicloud/ui-icons": "0.0.28-231ed6b2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-input-autosize": "^3.0.0",
     "react-modal": "^3.12.1",
     "react-popper-tooltip": "3.1.0",
-    "react-select": "^4.1.0"
+    "react-select": "3.1.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.1",
@@ -63,9 +69,12 @@
     "@storybook/addons": "^6.1.20",
     "@storybook/cli": "^6.1.15",
     "@storybook/react": "^6.1.2",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/lodash.isequal": "^4.5.5",
     "@types/react-dom": "^17.0.0",
+    "@types/react-input-autosize": "^2.2.0",
     "@types/react-modal": "^3.12.0",
-    "@types/react-select": "^4.0.13",
+    "@types/react-select": "3.0.21",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
     "babel-loader": "^8.2.1",

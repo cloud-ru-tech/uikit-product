@@ -1,13 +1,13 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { MoreButton, TMoreButtonProps } from './MoreButton';
+import { MoreButton, IMoreButtonProps } from './MoreButton';
 
 export default {
   title: 'Components/Button/More Button',
   component: MoreButton,
 } as Meta;
 
-const Template: Story<TMoreButtonProps> = ({ ...args }) => (
+const Template: Story<IMoreButtonProps> = ({ ...args }) => (
   <MoreButton {...args} />
 );
 

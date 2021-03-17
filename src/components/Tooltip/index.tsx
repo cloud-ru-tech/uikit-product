@@ -1,6 +1,4 @@
 export * from './components/BasicTooltip';
 export * from './components/Default';
 export * from './components/TooltipMenu';
-export * from './components/TooltipStateContainer';
-
-export * from './components/Default/types';
+export * from './helpers/types';

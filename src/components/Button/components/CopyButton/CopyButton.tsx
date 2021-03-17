@@ -1,14 +1,11 @@
 import { FC, useState, useCallback, useRef } from 'react';
-import { css } from '@linaria/core';
+
 import { CopySVG, CopyCompletedSVG } from '@aicloud/ui-icons';
 
 import { Button } from 'components/Button';
-
 import { copyText } from 'utils/copyText';
 
-const iconStyle = css`
-  transition: opacity 1s, visibility 0s;
-`;
+import { iconStyle } from './styled';
 
 export interface ICopyButtonProps {
   text?: string;

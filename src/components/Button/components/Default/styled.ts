@@ -1,5 +1,6 @@
-import { COLORS_BUTTON } from 'theme/color/vars';
 import { styled } from '@linaria/react';
+
+import { COLORS_BUTTON } from 'theme/color/vars';
 
 export const ButtonComponent = styled.button`
   position: relative;

@@ -1,17 +1,19 @@
 import RCModal from 'react-modal';
+
 import { CancelSVG } from '@aicloud/ui-icons';
 
-import { Button } from 'components/Button';
-
-import { BasicTooltip } from 'components/Tooltip';
 import Z_INDEX from 'vars/zIndex';
-import { COLORS_MODAL } from 'theme/color/vars';
+import { Button } from 'components/Button';
+import { BasicTooltip } from 'components/Tooltip';
+
 import {
   closeButtonStyle,
   Title,
   Description,
   ButtonWrapper,
   buttonCSS,
+  overlayClassname,
+  contentClassname,
 } from './styled';
 
 interface IReactModalProps extends ReactModal.Props {
@@ -56,7 +58,7 @@ export interface IModalProps extends IReactModalProps {
   description?: React.ReactNode;
   approveText?: string;
   disableApprove?: boolean;
-  disableApproveTooltip?: string;
+  disableApproveTooltip?: boolean;
   approve?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   cancelText?: string;
   cancel?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
@@ -72,28 +74,6 @@ export const MODAL_CLOSE_TYPE = {
   CROSS: 'cross',
 } as const;
 export type ModalCloseType = typeof MODAL_CLOSE_TYPE[keyof typeof MODAL_CLOSE_TYPE];
-
-// TODO Вынести в css-in-js
-const customStyles = {
-  overlay: {
-    zIndex: Z_INDEX.MODAL,
-    backgroundColor: 'rgba(52, 63, 72, 0.2)',
-  },
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    width: 316,
-    padding: 32,
-    border: 0,
-    boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
-    borderRadius: 8,
-    backgroundColor: `var(${COLORS_MODAL.BG})`,
-  },
-};
 
 export const Modal: React.FC<IModalProps> = props => {
   const {
@@ -115,19 +95,23 @@ export const Modal: React.FC<IModalProps> = props => {
     parentSelector,
   } = props;
 
-  if (appElement) RCModal.setAppElement(appElement as HTMLElement);
+  if (appElement) {
+    RCModal.setAppElement(appElement as HTMLElement);
+  }
+
   return (
     <RCModal
       {...props}
       style={{
         overlay: {
-          ...customStyles.overlay,
           ...(overlayOffset || {}),
           zIndex,
           position: parentId ? 'absolute' : 'fixed',
         },
-        content: { ...customStyles.content, ...(contentStyles || {}) },
+        content: contentStyles || {},
       }}
+      overlayClassName={overlayClassname}
+      className={contentClassname}
       parentSelector={
         parentId
           ? (): HTMLElement =>
@@ -150,7 +134,7 @@ export const Modal: React.FC<IModalProps> = props => {
       {description && <Description>{description}</Description>}
       {(approve || cancel) && (
         <ButtonWrapper>
-          {approve && disableApproveTooltip && (
+          {approve && !disableApproveTooltip && (
             <BasicTooltip tooltip={disableApproveTooltip}>
               <Button
                 className={buttonCSS}
@@ -164,7 +148,7 @@ export const Modal: React.FC<IModalProps> = props => {
               </Button>
             </BasicTooltip>
           )}
-          {approve && (
+          {approve && disableApproveTooltip && (
             <Button
               className={buttonCSS}
               disabled={disableApprove}

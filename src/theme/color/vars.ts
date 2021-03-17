@@ -55,6 +55,17 @@ export const COLORS_TAG = {
   BROWN: '--color-tag-brown',
   GRAY_1: '--color-tag-gray-1',
   GRAY_2: '--color-tag-gray-2',
+  TAG_TEXT_COLOR: '--tag-text-color',
+  TAG_BG_GREEN: '--tag-bg-green',
+  TAG_BG_BLUE: '--tag-bg-blue',
+  TAG_BG_PURPLE: '--tag-bg-purple',
+  TAG_BG_PINK: '--tag-bg-pink',
+  TAG_BG_RED: '--tag-bg-red',
+  TAG_BG_GRAY_DEFAULT: '--tag-bg-gray-default',
+  TAG_BG_GRAY: '--tag-bg-gray',
+  TAG_BG_BROWN: '--tag-bg-brown',
+  TAG_BG_ORANGE: '--tag-bg-orange',
+  TAG_BG_YELLOW: '--tag-bg-yellow',
 };
 
 export const COLORS_GENERAL = {
@@ -142,6 +153,9 @@ export const COLORS_MODAL = {
   BG: '--modal-bg',
   TITLE_COLOR: '--modal-title-color',
   DESCRIPTION_COLOR: '--modal-description-color',
+  PREVIEW_BG: '--modal-preview-bg',
+  PREVIEW_CLOSE_ICON_COLOR: '--modal-preview-close-icon-color',
+  PREVIEW_CLOSE_ICON_HOVER_COLOR: '--modal-preview-close-icon-hover-color',
 };
 
 export const COLORS_TOOLTIP = {
@@ -152,4 +166,48 @@ export const COLORS_TOOLTIP = {
   ICON_FILL: '--tooltip-icon-fill',
   ICON_HOVER_FILL: '--tooltip-icon-hover-fill',
   ICON_ACTIVE_FILL: '--tooltip-icon-active-fill',
+};
+
+export const COLORS_INPUT = {
+  INPUT_BG: '--input-bg',
+  INPUT_BORDER: '--input-border',
+  INPUT_PLACEHOLDER_COLOR: '--input-placeholder',
+  INPUT_TEXT_COLOR: '--input-text',
+  INPUT_FOCUS_BORDER: '--input-focus-border',
+  INPUT_FOCUS_BACKGROUND: '--input-focus-bg',
+  INPUT_HOVER_BORDER: '--input-hover-border',
+  INPUT_HOVER_PLACEHOLDER_COLOR: '--input-hover-placeholder-color',
+  INPUT_HOVER_BACKGROUND: '--input-hover-bg',
+  INPUT_ERROR: '--input-error',
+  INPUT_DISABLED_BACKGROUND: '--input-disabled-bg',
+  INPUT_DISABLED_COLOR: '--input-disabled-color',
+  INPUT_DISABLED_BORDER: '--input-disabled-border',
+  INPUT_ICON_COLOR: '--input-icon-color',
+};
+
+export const COLORS_RADIO = {
+  COLOR: '--radio-color',
+  HOVER_COLOR: '--radio-hover-color',
+  DISABLED_COLOR: '--radio-disabled-color',
+  CHECKED_COLOR: '--radio-checked-color',
+  CHECKED_HOVER_COLOR: '--radio-checked-hover-color',
+  CHECKED_DISABLED_COLOR: '--radio-checked-disabled-color',
+};
+
+export const COLORS_SELECT = {
+  TEXT_COLOR: '--select-text-color',
+  PLACEHOLDER_TEXT_COLOR: '--select-placeholder-text-color',
+  BACKGROUND: '--select-bg-color',
+  BACKGROUND_HOVER: '--select-bg-hover-color',
+  BORDER_COLOR: '--select-border-color',
+  BORDER_HOVER_COLOR: '--select-border-hover-color',
+  BORDER_FOCUS_COLOR: '--select-border-focus-color',
+  DISABLED_TEXT_COLOR: '--select-disabled-text-color',
+  DISABLED_BORDER_COLOR: '--select-disabled-border-color',
+  DISABLED_BACKGROUND: '--select-disabled-background',
+  DROPDOWN_BACKGROUND: '--select-dropdown-background',
+  DROPDOWN_HOVER_BACKGROUND: '--select-dropdown-hover-background',
+  DROPDOWN_FOCUS_BACKGROUND: '--select-dropdown-focus-background',
+  DROPDOWN_ICON_COLOR: '--select-dropdown-icon-color',
+  DROPDOWN_ICON_HOVER_COLOR: '--select-dropdown-icon-hover-color',
 };

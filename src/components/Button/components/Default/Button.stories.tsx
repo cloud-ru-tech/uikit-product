@@ -4,9 +4,9 @@ import { styled } from '@linaria/react';
 import { CopySVG } from '@aicloud/ui-icons';
 
 import { H4 } from 'typography/Headers';
+import { TButtonType } from 'components/Button/helpers/types';
 
 import { Button, IButtonProps } from './Button';
-import { TButtonTypes } from './types';
 
 export default {
   title: 'Components/Button/Default',
@@ -33,7 +33,7 @@ const Title = styled.div`
 
 const buttons: Array<{
   name: string;
-  type: TButtonTypes;
+  type: TButtonType;
   background?: string;
 }> = [
   { name: 'FILLED', type: 'filled' },

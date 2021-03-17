@@ -1,30 +1,39 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-
 import { styled } from '@linaria/react';
-import {
-  Tooltip,
-  TooltipStateContainer,
-  TooltipMenu,
-  TooltipMenuItem,
-} from '../..';
+
+import { Tooltip, TooltipMenu } from 'components/Tooltip';
+import { TooltipMenuItem } from 'components/Tooltip/helperComponents/TooltipMenuItem';
+import { TooltipStateContainer } from 'components/Tooltip/helperComponents/TooltipStateContainer';
 
 export default {
   title: 'Components/Tooltip',
   component: Tooltip,
-  decorators: [withDesign],
 } as Meta;
 
 const TooltipWrapper = styled.div`
   margin: 30px;
 `;
 
-const Template: Story = () => (
+const menuItems = [
+  'Сведения об объекте',
+  'Предварительный просмотр',
+  'Целевое действие',
+  'Изменить права доступа',
+  'Изменить тип данных',
+  'Добавить в избранное',
+  'Переименовать',
+  'Переместить',
+  'Скачать',
+  'Удалить',
+];
+
+const Template: Story = ({ ...args }) => (
   <TooltipWrapper>
     <TooltipStateContainer>
-      {/* TODO: fix any + maybe context/hooks */}
+      {/* TODO: maybe context/hooks */}
       {({ on, set }: { on: boolean; set: () => void; hide: () => void }) => (
         <Tooltip
+          {...args}
           clickOutside
           closeOnReferenceHidden
           hideArrow
@@ -34,16 +43,9 @@ const Template: Story = () => (
           onVisibilityChange={set}
           tooltip={
             <TooltipMenu>
-              <TooltipMenuItem>Сведения об объекте</TooltipMenuItem>
-              <TooltipMenuItem>Предварительный просмотр</TooltipMenuItem>
-              <TooltipMenuItem>Целевое действие</TooltipMenuItem>
-              <TooltipMenuItem>Изменить права доступа</TooltipMenuItem>
-              <TooltipMenuItem>Изменить тип данных</TooltipMenuItem>
-              <TooltipMenuItem>Добавить в избранное</TooltipMenuItem>
-              <TooltipMenuItem>Переименовать</TooltipMenuItem>
-              <TooltipMenuItem>Переместить</TooltipMenuItem>
-              <TooltipMenuItem>Скачать</TooltipMenuItem>
-              <TooltipMenuItem>Удалить</TooltipMenuItem>
+              {menuItems.map(menuItem => (
+                <TooltipMenuItem key={menuItem}>{menuItem}</TooltipMenuItem>
+              ))}
             </TooltipMenu>
           }
         >
@@ -54,8 +56,6 @@ const Template: Story = () => (
   </TooltipWrapper>
 );
 
-export const menu = Template.bind({});
-
-menu.args = {};
-
-menu.parameters = {};
+export const tooltipMenu = Template.bind({});
+tooltipMenu.args = {};
+tooltipMenu.parameters = {};

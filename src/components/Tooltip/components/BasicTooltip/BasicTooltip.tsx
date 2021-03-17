@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
-import TooltipTrigger, { TooltipTriggerProps } from 'react-popper-tooltip';
+import { FC } from 'react';
 import { cx } from '@linaria/core';
+import TooltipTrigger, { TooltipTriggerProps } from 'react-popper-tooltip';
+
 import {
   containerStyle,
   containerWithIconStyle,
