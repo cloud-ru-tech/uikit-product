@@ -48,20 +48,6 @@ export const globals = css`
       font-display: swap;
     }
 
-    .react-contextmenu-wrapper {
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      outline: none;
-      box-shadow: none;
-    }
-
     html {
       height: 100%;
     }
@@ -72,9 +58,6 @@ export const globals = css`
       background: var(${COLORS_GENERAL.BACKGROUND});
 
       transition: all 0.4s ease-in-out;
-
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     body,

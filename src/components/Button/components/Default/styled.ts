@@ -29,7 +29,7 @@ export const ButtonComponent = styled.button`
 
   &[data-type='filled'] {
     color: var(${COLORS_BUTTON.FILLED_COLOR});
-    fill: var(${COLORS_BUTTON.FILLED_COLOR});
+    fill: var(${COLORS_BUTTON.FILLED_ICON_COLOR});
     background-color: var(${COLORS_BUTTON.FILLED_BG});
     &:hover {
       background-color: var(${COLORS_BUTTON.FILLED_HOVER_BG});
@@ -75,7 +75,7 @@ export const ButtonComponent = styled.button`
       color: var(${COLORS_BUTTON.OUTLINED_ACTIVE_COLOR});
       fill: var(${COLORS_BUTTON.OUTLINED_ACTIVE_COLOR});
       &:before {
-        border-color: var(${COLORS_BUTTON.OUTLINED_ACTIVE_COLOR});
+        border-color: var(${COLORS_BUTTON.OUTLINED_ACTIVE_BORDER});
       }
     }
     &:focus-visible {
@@ -87,7 +87,7 @@ export const ButtonComponent = styled.button`
       color: var(${COLORS_BUTTON.OUTLINED_DISABLED_COLOR});
       fill: var(${COLORS_BUTTON.OUTLINED_DISABLED_COLOR});
       &:before {
-        border-color: var(${COLORS_BUTTON.OUTLINED_DISABLED_COLOR});
+        border-color: var(${COLORS_BUTTON.OUTLINED_DISABLED_BORDER});
       }
     }
   }
@@ -126,6 +126,26 @@ export const ButtonComponent = styled.button`
         border-color: var(${COLORS_BUTTON.TRANSPARENT_FOCUS_BORDER});
         border-radius: 4px;
       }
+    }
+  }
+
+  &[data-type='filled-brand'] {
+    color: #343f48;
+    fill: #343f48;
+    background-color: #07e897;
+    &:hover {
+      background-color: #07d88d;
+    }
+    &:active {
+      background-color: #07cc85;
+    }
+    &:disabled {
+      color: #cfcfcf;
+      fill: #cfcfcf;
+      background-color: #ededed;
+    }
+    &:focus-visible {
+      background-color: #07d88d;
     }
   }
 

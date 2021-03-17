@@ -1,1 +1,6 @@
-export type TButtonType = 'filled' | 'outlined' | 'transparent' | 'white';
+export type TButtonTypes =
+  | 'filled'
+  | 'outlined'
+  | 'transparent'
+  | 'white'
+  | 'filled-brand';
