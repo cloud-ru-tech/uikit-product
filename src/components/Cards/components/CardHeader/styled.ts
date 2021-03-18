@@ -1,6 +1,8 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
+import { COLORS_CARD } from 'theme/color/vars';
+
 export const StyledButtonGroup = styled.div`
   display: flex;
   flex-direction: row;
@@ -23,14 +25,14 @@ export const StyledHeader = styled.div`
 
 export const favouriteButtonClassName = css`
   cursor: pointer;
-  fill: #d2d2d2;
+  fill: ${COLORS_CARD.CARD_FAVOURITE_ICON_COLOR};
 
   transition: all 0.2s ease-in-out;
   &:hover {
-    fill: #5558fa;
+    fill: ${COLORS_CARD.CARD_FAVOURITE_ICON_HOVER_COLOR};
   }
   &[data-filled='true'] {
-    fill: #f0d559;
+    fill: ${COLORS_CARD.CARD_FAVOURITE_ICON_FILLED_COLOR};
   }
 `;
 
