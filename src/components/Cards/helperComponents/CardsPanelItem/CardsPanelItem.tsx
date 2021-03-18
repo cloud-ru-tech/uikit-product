@@ -1,29 +1,16 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 
-import { StarSVG } from '@aicloud/ui-icons';
+import { Card, CardHeader } from 'components/Cards';
 
-import { Card } from 'components/Cards';
-import { Checkbox } from 'components/Checkbox';
-import { MoreButton } from 'components/Button';
-
-import {
-  StyledHeader,
-  StyledContent,
-  StyledContainer,
-  StyledHeaderItem,
-  StyledButtonGroup,
-  StyledMoreButtonWrap,
-  favouriteButtonClassname,
-} from './styled';
+import { StyledContent, StyledContainer } from './styled';
 
 export interface ICardsPanelItemProps {
   isVertical: boolean;
   selected?: boolean;
   additionalHover?: boolean;
-  header?: string | React.ReactNode;
-  defaultFavorite?: boolean;
+  defaultFavourite?: boolean;
   onClick?(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void;
-  onFavoriteChange?(isFavorite: boolean): void;
+  onFavouriteChange?(isFavourite: boolean): void;
   checked?: boolean;
   onCheckedClick?(check: boolean): void;
   moreActions?: {
@@ -35,10 +22,9 @@ export interface ICardsPanelItemProps {
 
 export const CardsPanelItem: FC<ICardsPanelItemProps> = props => {
   const {
-    defaultFavorite = false,
-    onFavoriteChange,
+    defaultFavourite = false,
+    onFavouriteChange,
     children,
-    header,
     checked,
     onCheckedClick,
     moreActions,
@@ -49,37 +35,12 @@ export const CardsPanelItem: FC<ICardsPanelItemProps> = props => {
     isVertical,
   } = props;
 
-  const [isFavorite, setIsFavorite] = useState(defaultFavorite);
-
   const handlerCardClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ): void => {
     const target = e.target as HTMLButtonElement;
     if (target?.id !== 'more-button' && onClick) {
       onClick(e);
-    }
-  };
-
-  const handleFavoriteClick = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-  ): void => {
-    e.stopPropagation();
-    const newFav = !isFavorite;
-    setIsFavorite(newFav);
-
-    if (onFavoriteChange) {
-      onFavoriteChange(newFav);
-    }
-  };
-
-  const handleCheckedClick = (
-    check: boolean,
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-  ): void => {
-    e.stopPropagation();
-
-    if (onCheckedClick) {
-      onCheckedClick(check);
     }
   };
 
@@ -92,28 +53,14 @@ export const CardsPanelItem: FC<ICardsPanelItemProps> = props => {
       className={className}
     >
       <StyledContainer>
-        <StyledHeader>
-          {onCheckedClick && checked !== undefined && (
-            <Checkbox value={checked || false} onChange={handleCheckedClick} />
-          )}
-          {header && <StyledHeaderItem>{header}</StyledHeaderItem>}
-        </StyledHeader>
+        <CardHeader
+          checked={checked}
+          moreActions={moreActions}
+          onCheckboxClick={onCheckedClick}
+          defaultFavourite={defaultFavourite}
+          onFavouriteChange={onFavouriteChange}
+        />
         <StyledContent>{children}</StyledContent>
-        <StyledButtonGroup>
-          {onFavoriteChange && (
-            <div onClick={handleFavoriteClick}>
-              <StarSVG
-                className={favouriteButtonClassname}
-                data-filled={isFavorite}
-              />
-            </div>
-          )}
-          {moreActions && (
-            <StyledMoreButtonWrap>
-              <MoreButton actions={moreActions} />
-            </StyledMoreButtonWrap>
-          )}
-        </StyledButtonGroup>
       </StyledContainer>
     </Card>
   );

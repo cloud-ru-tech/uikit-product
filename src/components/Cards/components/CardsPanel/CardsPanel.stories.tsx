@@ -35,6 +35,10 @@ const StyledTagWrap = styled.div`
   margin-right: 5px;
 `;
 
+const StyledTagsWrap = styled.div`
+  height: 26px;
+`;
+
 const data = [
   { additionalHover: true },
   { selected: true },
@@ -48,6 +52,7 @@ const data = [
 
 const Template: Story<ICardsPanelProps> = ({ ...args }) => {
   const [favourite, setFavourite] = useState(false);
+  const [checkedCards, setCheckedCards] = useState<number[]>([]);
 
   return (
     <CardsPanel {...args}>
@@ -57,24 +62,34 @@ const Template: Story<ICardsPanelProps> = ({ ...args }) => {
           additionalHover={additionalHover}
           selected={selected}
           key={index.toString()}
-          header={null}
-          defaultFavorite={favourite}
-          onFavoriteChange={() => {
+          defaultFavourite={favourite}
+          onFavouriteChange={() => {
             setFavourite(!favourite);
           }}
-          checked={false}
+          checked={checkedCards.includes(index)}
           moreActions={[
             { name: 'Удалить', onClick: () => console.log('Удалить') },
           ]}
-          onCheckedClick={check => console.log(check)}
+          onCheckedClick={check => {
+            if (check) {
+              setCheckedCards([...checkedCards, index]);
+              return;
+            }
+
+            setCheckedCards(
+              checkedCards.filter(cardIndex => cardIndex !== index),
+            );
+          }}
           onClick={() => console.log('onClick')}
         >
-          {additionalHover ? (
-            <StyledTagWrap>
-              <Tag color='purple'>AdditionalHover</Tag>
-            </StyledTagWrap>
-          ) : null}
-          {selected ? <Tag color='red'>Selected</Tag> : null}
+          <StyledTagsWrap>
+            {additionalHover ? (
+              <StyledTagWrap>
+                <Tag color='purple'>AdditionalHover</Tag>
+              </StyledTagWrap>
+            ) : null}
+            {selected ? <Tag color='red'>Selected</Tag> : null}
+          </StyledTagsWrap>
           <StyledTitle>{`Сontainer-registry-${index}`}</StyledTitle>
           <StyledDate>
             {new Date('2020-10-26T00:09:27.249000').toLocaleDateString()}

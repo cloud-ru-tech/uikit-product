@@ -39,10 +39,6 @@ export const StyledContainer = styled.button<{
       left: 0px;
     }
   }
-
-  &:active {
-    background-color: var(${COLORS_CARD.CARD_SELECTED_BACKGROUND});
-  }
 `;
 
 export const StyledCardContentWrap = styled.div`

@@ -11,7 +11,7 @@ export default {
 } as Meta;
 
 const Template: Story<IInputProps> = ({ ...args }) => {
-  const [value, setValue] = useState<string | undefined>();
+  const [value, setValue] = useState<string | undefined>('test');
 
   return (
     <Input
