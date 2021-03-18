@@ -211,3 +211,20 @@ export const COLORS_SELECT = {
   DROPDOWN_ICON_COLOR: '--select-dropdown-icon-color',
   DROPDOWN_ICON_HOVER_COLOR: '--select-dropdown-icon-hover-color',
 };
+
+export const COLORS_CHECKBOX = {
+  CHECKBOX_COLOR: '--checkbox-color',
+  CHECKBOX_HOVER_COLOR: '--checkbox-hover-color',
+  CHECKBOX_DISABLED_COLOR: '--checkbox-disabled-color',
+  CHECKBOX_FILLED_COLOR: '--checkbox-filled-color',
+  CHECKBOX_FILLED_HOVER_COLOR: '--checkbox-filled-hover-color',
+  CHECKBOX_FILLED_DISABLED_COLOR: '--checkbox-filled-disabled-color',
+};
+
+export const COLORS_CARD = {
+  CARD_BACKGROUND: '--card-background',
+  CARD_HOVER_BACKGROUND: '--card-hover-background',
+  CARD_SELECTED_BACKGROUND: '--card-selected-background',
+  CARD_HOVER_SHADOW: '--card-hover-shadow',
+  CARD_ADDITIONAL_HOVER_COLOR: '--card-additional-hover-color',
+};
