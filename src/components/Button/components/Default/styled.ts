@@ -130,22 +130,22 @@ export const ButtonComponent = styled.button`
   }
 
   &[data-type='filled-brand'] {
-    color: #343f48;
-    fill: #343f48;
-    background-color: #07e897;
+    color: var(${COLORS_BUTTON.FILLED_BRAND_COLOR});
+    fill: var(${COLORS_BUTTON.FILLED_BRAND_COLOR});
+    background-color: var(${COLORS_BUTTON.FILLED_BRAND_BG});
     &:hover {
-      background-color: #07d88d;
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_HOVER_BG});
     }
     &:active {
-      background-color: #07cc85;
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_ACTIVE_BG});
     }
     &:disabled {
-      color: #cfcfcf;
-      fill: #cfcfcf;
-      background-color: #ededed;
+      color: var(${COLORS_BUTTON.FILLED_BRAND_DISABLED_COLOR});
+      fill: var(${COLORS_BUTTON.FILLED_BRAND_DISABLED_COLOR});
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_DISABLED_BG});
     }
     &:focus-visible {
-      background-color: #07d88d;
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_FOCUS_BG});
     }
   }
 
