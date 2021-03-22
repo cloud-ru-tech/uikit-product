@@ -25,14 +25,14 @@ export const StyledHeader = styled.div`
 
 export const favouriteButtonClassName = css`
   cursor: pointer;
-  fill: ${COLORS_CARD.CARD_FAVOURITE_ICON_COLOR};
+  fill: var(${COLORS_CARD.CARD_FAVOURITE_ICON_COLOR});
 
   transition: all 0.2s ease-in-out;
   &:hover {
-    fill: ${COLORS_CARD.CARD_FAVOURITE_ICON_HOVER_COLOR};
+    fill: var(${COLORS_CARD.CARD_FAVOURITE_ICON_HOVER_COLOR});
   }
   &[data-filled='true'] {
-    fill: ${COLORS_CARD.CARD_FAVOURITE_ICON_FILLED_COLOR};
+    fill: var(${COLORS_CARD.CARD_FAVOURITE_ICON_FILLED_COLOR});
   }
 `;
 

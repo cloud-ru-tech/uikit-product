@@ -231,3 +231,9 @@ export const COLORS_CARD = {
   CARD_FAVOURITE_ICON_HOVER_COLOR: '--card-favourite-icon-hover-color',
   CARD_FAVOURITE_ICON_FILLED_COLOR: '--card-favourite-icon-filled-color',
 };
+
+export const COLORS_PAGINATE = {
+  PAGINATE_ACTIVE_COLOR: '--paginate-active-color',
+  PAGINATE_DISABLED_COLOR: '--paginate-disabled-color',
+  PAGINATE_WHITE_COLOR: '--paginate-white-color',
+};
