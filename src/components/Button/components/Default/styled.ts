@@ -27,7 +27,7 @@ export const ButtonComponent = styled.button`
     padding: 12px 16px;
   }
 
-  &[data-type='filled'] {
+  &[data-variant='filled'] {
     color: var(${COLORS_BUTTON.FILLED_COLOR});
     fill: var(${COLORS_BUTTON.FILLED_ICON_COLOR});
     background-color: var(${COLORS_BUTTON.FILLED_BG});
@@ -47,7 +47,7 @@ export const ButtonComponent = styled.button`
     }
   }
 
-  &[data-type='outlined'] {
+  &[data-variant='outlined'] {
     color: var(${COLORS_BUTTON.OUTLINED_COLOR});
     fill: var(${COLORS_BUTTON.OUTLINED_COLOR});
     background-color: transparent;
@@ -92,7 +92,7 @@ export const ButtonComponent = styled.button`
     }
   }
 
-  &[data-type='transparent'] {
+  &[data-variant='transparent'] {
     color: var(${COLORS_BUTTON.TRANSPARENT_COLOR});
     fill: var(${COLORS_BUTTON.TRANSPARENT_COLOR});
     background-color: transparent;
@@ -129,7 +129,7 @@ export const ButtonComponent = styled.button`
     }
   }
 
-  &[data-type='filled-brand'] {
+  &[data-variant='filled-brand'] {
     color: var(${COLORS_BUTTON.FILLED_BRAND_COLOR});
     fill: var(${COLORS_BUTTON.FILLED_BRAND_COLOR});
     background-color: var(${COLORS_BUTTON.FILLED_BRAND_BG});
@@ -149,7 +149,7 @@ export const ButtonComponent = styled.button`
     }
   }
 
-  &[data-type='white'] {
+  &[data-variant='white'] {
     fill: var(${COLORS_BUTTON.WHITE_COLOR});
     color: var(${COLORS_BUTTON.WHITE_COLOR});
     background-color: var(${COLORS_BUTTON.WHITE_BG});

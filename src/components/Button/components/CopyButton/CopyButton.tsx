@@ -52,7 +52,7 @@ export const CopyButton: FC<ICopyButtonProps> = ({
   return (
     <Button
       className={className}
-      type='transparent'
+      variant='transparent'
       size='xs'
       disabled={disabled}
       onClick={handleClickCopy}
