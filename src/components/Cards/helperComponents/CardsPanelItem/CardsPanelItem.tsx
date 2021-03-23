@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Card, CardHeader } from 'components/Cards';
 
-import { StyledContent, StyledContainer } from './styled';
+import { ContentStyled, ContainerStyled } from './styled';
 
 export interface ICardsPanelItemProps {
   isVertical: boolean;
@@ -52,7 +52,7 @@ export const CardsPanelItem: FC<ICardsPanelItemProps> = props => {
       onClick={handlerCardClick}
       className={className}
     >
-      <StyledContainer>
+      <ContainerStyled>
         <CardHeader
           checked={checked}
           moreActions={moreActions}
@@ -60,8 +60,8 @@ export const CardsPanelItem: FC<ICardsPanelItemProps> = props => {
           defaultFavourite={defaultFavourite}
           onFavouriteChange={onFavouriteChange}
         />
-        <StyledContent>{children}</StyledContent>
-      </StyledContainer>
+        <ContentStyled>{children}</ContentStyled>
+      </ContainerStyled>
     </Card>
   );
 };

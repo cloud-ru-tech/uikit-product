@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { SelectedSVG, UnSelectedSVG, SelectedPartSVG } from '@aicloud/ui-icons';
 
-import { StyledCheckboxWrap } from './styled';
+import { CheckboxWrapStyled, svgClassName } from './styled';
 
 export interface ICheckboxProps {
   defaultChecked?: boolean;
@@ -49,38 +49,47 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
 
   if (partChecked) {
     return (
-      <StyledCheckboxWrap
-        data-selected={partChecked || checked || value}
-        data-disabled={disabled}
+      <CheckboxWrapStyled
         className={className}
         onClick={handlerClick}
+        data-disabled={disabled}
       >
-        <SelectedPartSVG />
-      </StyledCheckboxWrap>
+        <SelectedPartSVG
+          className={svgClassName}
+          data-selected={partChecked || checked || value}
+          data-disabled={disabled}
+        />
+      </CheckboxWrapStyled>
     );
   }
 
   if (checked || value) {
     return (
-      <StyledCheckboxWrap
-        data-selected={partChecked || checked || value}
-        data-disabled={disabled}
+      <CheckboxWrapStyled
         className={className}
         onClick={handlerClick}
+        data-disabled={disabled}
       >
-        <SelectedSVG />
-      </StyledCheckboxWrap>
+        <SelectedSVG
+          className={svgClassName}
+          data-selected={partChecked || checked || value}
+          data-disabled={disabled}
+        />
+      </CheckboxWrapStyled>
     );
   }
 
   return (
-    <StyledCheckboxWrap
-      data-selected={partChecked || checked || value}
-      data-disabled={disabled}
+    <CheckboxWrapStyled
       className={className}
       onClick={handlerClick}
+      data-disabled={disabled}
     >
-      <UnSelectedSVG />
-    </StyledCheckboxWrap>
+      <UnSelectedSVG
+        className={svgClassName}
+        data-selected={partChecked || checked || value}
+        data-disabled={disabled}
+      />
+    </CheckboxWrapStyled>
   );
 };

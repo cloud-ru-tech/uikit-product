@@ -6,9 +6,9 @@ import { Checkbox } from 'components/Checkbox';
 import { MoreButton } from 'components/Button';
 
 import {
-  StyledHeader,
-  StyledButtonGroup,
-  StyledFavouriteWrap,
+  HeaderStyled,
+  ButtonGroupStyled,
+  FavouriteWrapStyled,
   moreButtonClassName,
   favouriteButtonClassName,
 } from './styled';
@@ -64,23 +64,23 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
   };
 
   return (
-    <StyledHeader className={className}>
-      {onCheckboxClick && checked !== undefined && (
+    <HeaderStyled className={className}>
+      {onCheckboxClick && typeof checked === 'boolean' && (
         <Checkbox value={checked || false} onChange={handleCheckedClick} />
       )}
-      <StyledButtonGroup>
+      <ButtonGroupStyled>
         {onFavouriteChange && (
-          <StyledFavouriteWrap onClick={handleFavouriteClick}>
+          <FavouriteWrapStyled onClick={handleFavouriteClick}>
             <StarSVG
               className={favouriteButtonClassName}
               data-filled={isFavourite}
             />
-          </StyledFavouriteWrap>
+          </FavouriteWrapStyled>
         )}
         {moreActions && (
           <MoreButton actions={moreActions} className={moreButtonClassName} />
         )}
-      </StyledButtonGroup>
-    </StyledHeader>
+      </ButtonGroupStyled>
+    </HeaderStyled>
   );
 };

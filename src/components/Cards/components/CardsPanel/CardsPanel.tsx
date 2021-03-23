@@ -1,18 +1,24 @@
 import { FC } from 'react';
 
-import { StyledContainer } from './styled';
+import { ContainerStyled } from './styled';
 
 export interface ICardsPanelProps {
   className?: string;
+  autoFill?: boolean;
   cardsPerRow?: number;
 }
 
 export const CardsPanel: FC<ICardsPanelProps> = ({
   children,
+  autoFill,
   className,
   cardsPerRow = 4,
 }) => (
-  <StyledContainer cardsPerRow={cardsPerRow} className={className}>
+  <ContainerStyled
+    autoFill={autoFill}
+    className={className}
+    cardsPerRow={cardsPerRow}
+  >
     {children}
-  </StyledContainer>
+  </ContainerStyled>
 );

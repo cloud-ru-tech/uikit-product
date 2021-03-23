@@ -1,10 +1,10 @@
 import { styled } from '@linaria/react';
 
-export const StyledContent = styled.div`
+export const ContentStyled = styled.div`
   margin-top: 16px;
 `;
 
-export const StyledContainer = styled.div`
+export const ContainerStyled = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;

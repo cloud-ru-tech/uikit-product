@@ -1,10 +1,10 @@
 import { FC } from 'react';
 
 import {
-  StyledContainer,
-  StyledAdditionalHover,
-  StyledCardContentWrap,
-  StyledAdditionalHoverImage,
+  ContainerStyled,
+  AdditionalHoverStyled,
+  CardContentWrapStyled,
+  AdditionalHoverImageStyled,
 } from './styled';
 
 export interface ICardProps {
@@ -13,6 +13,7 @@ export interface ICardProps {
   selected?: boolean;
   hoverClassName?: string;
   additionalHover?: boolean;
+  additionalHoverImage?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
@@ -24,8 +25,9 @@ export const Card: FC<ICardProps> = ({
   isVertical,
   hoverClassName,
   additionalHover,
+  additionalHoverImage,
 }) => (
-  <StyledContainer
+  <ContainerStyled
     className={className}
     type='button'
     onClick={onClick}
@@ -33,14 +35,16 @@ export const Card: FC<ICardProps> = ({
     additionalHover={additionalHover}
   >
     {additionalHover ? (
-      <StyledAdditionalHover
+      <AdditionalHoverStyled
         data-additional-hover
         isVertical={isVertical}
         className={hoverClassName}
       >
-        <StyledAdditionalHoverImage />
-      </StyledAdditionalHover>
+        <AdditionalHoverImageStyled
+          additionalHoverImage={additionalHoverImage}
+        />
+      </AdditionalHoverStyled>
     ) : null}
-    <StyledCardContentWrap>{children}</StyledCardContentWrap>
-  </StyledContainer>
+    <CardContentWrapStyled>{children}</CardContentWrapStyled>
+  </ContainerStyled>
 );
