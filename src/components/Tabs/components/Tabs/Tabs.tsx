@@ -23,7 +23,6 @@ export enum TabsTheme {
 }
 
 export interface ITabsProps {
-  label?: string;
   theme?: TabsTheme;
   className?: string;
   defaultKey?: ITabProps['identKey'];
@@ -35,20 +34,20 @@ export const Tabs: FC<ITabsProps> = ({
   className,
   defaultKey,
 }) => {
-  // FIXME: useReducer types
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
-    if (defaultKey) {
+    if (typeof defaultKey !== 'undefined') {
       dispatch(setValue(defaultKey));
       return;
     }
 
     if (Array.isArray(children) && children.length) {
+      const firstChildValue = (children[0] as ReactElement | Component)?.props
+        ?.identKey;
+
       dispatch(
-        setValue(
-          (children[0] as ReactElement | Component)?.props?.identKey || '',
-        ),
+        setValue(typeof firstChildValue !== 'undefined' ? firstChildValue : ''),
       );
     }
   }, []);

@@ -2,46 +2,49 @@ import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { Avatar } from 'components/Avatar';
-// import { CollapsePanel, CollapsePanelItem } from 'components/CollapsePanel';
+import { CollapsePanel, CollapsePanelItem } from 'components/CollapsePanel';
 import { Tab } from 'components/Tabs/helperComponents/Tab';
 
-import { Tabs, TabsTheme } from './Tabs';
+import { Tabs, TabsTheme, ITabsProps } from './Tabs';
 
 export default {
   title: 'Components/Tabs',
   component: Tabs,
 } as Meta;
 
-const Template: Story = ({ ...args }) => (
-  <Tabs theme={TabsTheme.gray} defaultKey={1}>
+const Template: Story<ITabsProps> = ({ ...args }) => (
+  <Tabs
+    theme={args.theme === 'gray' ? TabsTheme.gray : TabsTheme.default}
+    {...args}
+  >
     <Tab
       label='Группы в управлении 2'
       identKey={0}
-      onClick={ee => console.log('click', ee)}
+      onClick={e => console.log('click', e)}
     >
-      {/* <CollapsePanel isShowFavorites>
+      <CollapsePanel isShowFavourites>
         <CollapsePanelItem
-          index='a'
+          index={0}
           header={
             <Avatar shape='square' size={72}>
               G O
             </Avatar>
           }
         >
-          <div style={{ marginTop: '20px' }}>Content</div>
+          Content1
         </CollapsePanelItem>
         <CollapsePanelItem
-          index='b'
+          index={1}
+          isFavourite
           header={
             <Avatar shape='square' size={72}>
               G O
             </Avatar>
           }
-          isFavorites
         >
-          <div style={{ marginTop: '20px' }}>Content</div>
+          Content2
         </CollapsePanelItem>
-      </CollapsePanel> */}
+      </CollapsePanel>
     </Tab>
     <Tab label='Мои группы 3' identKey={1}>
       Мои группы
@@ -55,3 +58,12 @@ const Template: Story = ({ ...args }) => (
 export const tabs = Template.bind({});
 tabs.args = {};
 tabs.parameters = {};
+tabs.argTypes = {
+  theme: {
+    defaultValue: 'gray',
+    control: {
+      type: 'radio',
+      options: ['default', 'gray'],
+    },
+  },
+};

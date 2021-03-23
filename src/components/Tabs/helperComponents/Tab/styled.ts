@@ -1,18 +1,16 @@
 import { styled } from '@linaria/react';
 
+import { COLORS_TABS } from 'theme/color/vars';
+
 export const ListItemStyled = styled.li`
-  padding: 16px 0;
+  padding: 16px 12px;
   cursor: pointer;
-  font-family: SB Sans Interface;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
   line-height: 24px;
-  color: #a0a0a0;
+  color: var(${COLORS_TABS.TAB_TEXT_COLOR});
 
   &[data-blue='true'] {
-    color: $activeColor;
-    box-shadow: 0 2px 0 0 #5558fa;
+    color: var(${COLORS_TABS.TAB_ACTIVE_COLOR});
+    box-shadow: 0 1px 0 0 var(${COLORS_TABS.TAB_ACTIVE_COLOR});
     transition: all 500ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
 `;

@@ -1,15 +1,16 @@
 import { styled } from '@linaria/react';
 
+import { COLORS_TABS } from 'theme/color/vars';
+
 export const GroupStyled = styled.ul`
   margin: 0 0 24px 0;
   display: flex;
   list-style-type: none;
   flex-direction: row;
-  gap: 24px;
-  padding: 0 0 0 24px;
-  border-bottom: 1px solid #ededed;
+  padding: 0px;
+  border-bottom: 1px solid var(${COLORS_TABS.TAB_BORDER_COLOR});
 
   &[data-gray='true'] {
-    border-bottom: 1px solid #d2d2d2;
+    border-bottom: 1px solid var(${COLORS_TABS.TAB_GRAY_BORDER_COLOR});
   }
 `;

@@ -7,7 +7,7 @@ import { ListItemStyled } from './styled';
 
 export interface ITabProps {
   label: string;
-  identKey: string | number;
+  identKey: number;
   onClick?(identKey: ITabProps['identKey']): void;
 }
 
