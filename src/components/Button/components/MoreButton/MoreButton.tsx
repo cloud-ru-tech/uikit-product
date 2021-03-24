@@ -19,7 +19,7 @@ const iconStyle = css`
 `;
 
 export const MoreButton: React.FC<IMoreButtonProps> = ({ actions }) => (
-  <Button type='transparent'>
+  <Button variant='transparent'>
     <TooltipStateContainer>
       {({
         on,

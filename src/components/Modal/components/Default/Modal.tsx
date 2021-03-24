@@ -121,7 +121,7 @@ export const Modal: React.FC<IModalProps> = props => {
     >
       {hideCross ? null : (
         <Button
-          type='transparent'
+          variant='transparent'
           onClick={(e): void => {
             onRequestClose?.(e, MODAL_CLOSE_TYPE.CROSS);
           }}
@@ -163,7 +163,7 @@ export const Modal: React.FC<IModalProps> = props => {
           {cancel && (
             <Button
               className={buttonCSS}
-              type='outlined'
+              variant='outlined'
               onClick={(e): void => {
                 cancel(e);
                 onRequestClose?.(e, MODAL_CLOSE_TYPE.CANCEL);
