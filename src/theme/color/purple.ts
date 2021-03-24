@@ -13,6 +13,8 @@ import {
   COLORS_INPUT,
   COLORS_RADIO,
   COLORS_SELECT,
+  COLORS_BADGE,
+  COLORS_TOOLBAR,
 } from './vars';
 
 export const purple = css`
@@ -180,6 +182,12 @@ export const purple = css`
       ${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND}: var(${COLORS.GRAY_1});
       ${COLORS_SELECT.DROPDOWN_ICON_COLOR}: var(${COLORS.GRAY_3});
       ${COLORS_SELECT.DROPDOWN_ICON_HOVER_COLOR}: var(${COLORS.BLACK_2});
+
+      ${COLORS_BADGE.BORDER_COLOR}: var(${COLORS.WHITE});
+      ${COLORS_BADGE.TEXT_COLOR}: var(${COLORS.WHITE});
+      ${COLORS_BADGE.DEFAULT_BACKGROUND}: var(${COLORS.VIOLET_5});
+
+      ${COLORS_TOOLBAR.BACKGROUND}: var(${COLORS.WHITE});
     }
   }
 `;

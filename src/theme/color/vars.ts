@@ -219,3 +219,13 @@ export const COLORS_SELECT = {
   DROPDOWN_ICON_COLOR: '--select-dropdown-icon-color',
   DROPDOWN_ICON_HOVER_COLOR: '--select-dropdown-icon-hover-color',
 };
+
+export const COLORS_BADGE = {
+  DEFAULT_BACKGROUND: '--badge-default-background',
+  BORDER_COLOR: '--badge-border-color',
+  TEXT_COLOR: '--badge-text-color',
+};
+
+export const COLORS_TOOLBAR = {
+  BACKGROUND: '--toolbar-background',
+};

@@ -5,8 +5,6 @@ import { ArrowDownSVG } from '@aicloud/ui-icons';
 
 import { StyledDropdown, StyledTag } from './styled';
 
-// TODO: we have to create className instead of wrapping component because of a bug
-// https://github.com/NervJS/taro/issues/8325
 export const arrowDownClassName = css`
   fill: inherit;
 

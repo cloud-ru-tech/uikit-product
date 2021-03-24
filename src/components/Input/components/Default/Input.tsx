@@ -16,6 +16,8 @@ import {
   StyledSecurityButton,
 } from './styled';
 
+export type { IInputProps };
+
 export const Input = forwardRef<HTMLInputElement, IInputProps>(
   (
     {
@@ -97,9 +99,9 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
     };
 
     return (
-      <StyledWrap>
+      <StyledWrap className={wrapperClassName}>
         {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
-        <StyledInputWrapper ref={ref} className={wrapperClassName}>
+        <StyledInputWrapper ref={ref}>
           <StyledInput
             type={getInputType({ type, isViewMode })}
             onChange={handleChange}
