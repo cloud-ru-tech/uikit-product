@@ -12,3 +12,9 @@ export const ContainerStyled = styled.div<{
     minmax(min(270px, 100%), 1fr)
   );
 `;
+
+export const CardsPanelStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+`;

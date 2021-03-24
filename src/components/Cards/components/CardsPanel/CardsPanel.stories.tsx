@@ -126,7 +126,7 @@ const data = [
 ];
 
 interface IStoryProps extends ICardsPanelProps {
-  pageCount?: number;
+  usePagination?: boolean;
 }
 
 const Template: Story<IStoryProps> = ({ ...args }) => {
@@ -135,7 +135,18 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
 
   return (
     <div>
-      <CardsPanel {...args}>
+      <CardsPanel
+        {...args}
+        paginateProps={
+          args.usePagination
+            ? {
+                page: 0,
+                pageSize: 3,
+                position: 'top',
+              }
+            : undefined
+        }
+      >
         {data.map(({ additionalHover, selected }, index) => (
           <CardsPanelItem
             isVertical={args.cardsPerRow !== 1}
@@ -206,6 +217,11 @@ cardsPanel.argTypes = {
   pageCount: {
     control: {
       type: 'number',
+    },
+  },
+  usePagination: {
+    control: {
+      type: 'boolean',
     },
   },
 };

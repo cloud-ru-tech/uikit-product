@@ -2,13 +2,13 @@ import { FC, useState } from 'react';
 
 import { Paginate, IPaginateProps } from 'components/Paginate';
 
-import { ContainerStyled } from './styled';
+import { ContainerStyled, CardsPanelStyled } from './styled';
 
 export interface ICardsPanelProps {
   className?: string;
   autoFill?: boolean;
   cardsPerRow?: number;
-  paginateProps?: Partial<IPaginateProps> & {
+  paginateProps?: IPaginateProps & {
     page: number;
     pageSize: number;
     position: 'top' | 'bottom';
@@ -22,7 +22,7 @@ export const CardsPanel: FC<ICardsPanelProps> = ({
   cardsPerRow = 4,
   paginateProps,
 }) => {
-  const [page, setPage] = useState(paginateProps.page);
+  const [page, setPage] = useState(paginateProps?.page || 0);
   const isArrayChildren = Array.isArray(children);
   const pagesAmount =
     isArrayChildren && paginateProps
@@ -32,11 +32,7 @@ export const CardsPanel: FC<ICardsPanelProps> = ({
 
   if (paginateProps) {
     return (
-      <ContainerStyled
-        autoFill={autoFill}
-        className={className}
-        cardsPerRow={cardsPerRow}
-      >
+      <CardsPanelStyled>
         {paginateProps.position === 'top' ? (
           <Paginate
             {...paginateProps}
@@ -45,13 +41,19 @@ export const CardsPanel: FC<ICardsPanelProps> = ({
             onPageChange={({ selected }) => setPage(selected)}
           />
         ) : null}
-        {isArrayChildren
-          ? (children as Array<React.ReactNode>).filter(
-              (_card, index) =>
-                index >= page * paginateProps.pageSize &&
-                index < (page + 1) * paginateProps.pageSize,
-            )
-          : children}
+        <ContainerStyled
+          autoFill={autoFill}
+          className={className}
+          cardsPerRow={cardsPerRow}
+        >
+          {isArrayChildren
+            ? (children as Array<React.ReactNode>).filter(
+                (_card, index) =>
+                  index >= page * paginateProps.pageSize &&
+                  index < (page + 1) * paginateProps.pageSize,
+              )
+            : children}
+        </ContainerStyled>
         {paginateProps.position === 'bottom' ? (
           <Paginate
             {...paginateProps}
@@ -60,7 +62,7 @@ export const CardsPanel: FC<ICardsPanelProps> = ({
             onPageChange={({ selected }) => setPage(selected)}
           />
         ) : null}
-      </ContainerStyled>
+      </CardsPanelStyled>
     );
   }
 
