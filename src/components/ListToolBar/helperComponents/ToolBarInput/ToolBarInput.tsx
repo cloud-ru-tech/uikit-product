@@ -11,7 +11,9 @@ import {
   inputClassName,
 } from './styled';
 
-export type IToolBarInputProps = IInputProps;
+export interface IToolBarInputProps extends Omit<IInputProps, 'onChange'> {
+  onChange: (value: string) => void;
+}
 
 export const ToolBarInput: FC<IToolBarInputProps> = ({
   value,
@@ -36,14 +38,21 @@ export const ToolBarInput: FC<IToolBarInputProps> = ({
       {...inputProps}
       ref={customInputRef}
       value={value}
-      onChange={onChange}
+      onChange={event => {
+        onChange(event.target.value);
+      }}
       wrapperClassName={clsx(inputClassName, wrapperClassName)}
       type='embed'
       data-has-prev-sibling={hasPrevSibling || undefined}
       data-has-next-sibling={hasNextSibling || undefined}
       postfix={
         value ? (
-          <CrossSVG className={crossIconClassName} onClick={(): void => {}} />
+          <CrossSVG
+            className={crossIconClassName}
+            onClick={(): void => {
+              onChange('');
+            }}
+          />
         ) : (
           <SearchSVG className={searchIconClassname} />
         )

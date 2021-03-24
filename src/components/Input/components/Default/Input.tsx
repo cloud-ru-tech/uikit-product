@@ -121,7 +121,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
                 <CloseSVG />
               </StyledClearButton>
             )}
-            <div>{postfix}</div>
+            {postfix}
             {type === 'security' ? (
               <StyledSecurityButton
                 onClick={(): void => setViewMode(!isViewMode)}

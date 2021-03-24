@@ -191,6 +191,7 @@ export const COLORS_INPUT = {
   INPUT_DISABLED_COLOR: '--input-disabled-color',
   INPUT_DISABLED_BORDER: '--input-disabled-border',
   INPUT_ICON_COLOR: '--input-icon-color',
+  INPUT_ICON_HOVER_COLOR: '--input-icon-hover-color',
 };
 
 export const COLORS_RADIO = {

@@ -15,11 +15,11 @@ export default {
   title: 'Components/List Tool Bar',
 } as Meta;
 
-const Template: Story<IListToolBarWrapperProps> = () => {
-  const [value, setValue] = useState<string | undefined>();
+const Template: Story<IListToolBarWrapperProps> = ({ ...args }) => {
+  const [value, setValue] = useState<string>('');
 
   return (
-    <ListToolBar.Wrapper>
+    <ListToolBar.Wrapper {...args}>
       <ListToolBar.Button>
         <RefreshSVG />
       </ListToolBar.Button>
@@ -32,7 +32,7 @@ const Template: Story<IListToolBarWrapperProps> = () => {
           setValue(value);
         }}
       />
-      <ListToolBar.Button>
+      <ListToolBar.Button badgeText={'3'}>
         <FilterSVG />
       </ListToolBar.Button>
       <ListToolBar.Button>

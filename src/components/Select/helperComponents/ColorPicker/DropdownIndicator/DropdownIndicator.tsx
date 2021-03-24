@@ -1,18 +1,8 @@
 import { components as ReactSelectComponents } from 'react-select';
-import { css } from '@linaria/core';
 
 import { ArrowDownSVG } from '@aicloud/ui-icons';
 
-import { StyledDropdown, StyledTag } from './styled';
-
-export const arrowDownClassName = css`
-  fill: inherit;
-
-  &:hover,
-  &:focus {
-    fill: #343f48;
-  }
-`;
+import { StyledDropdown, StyledTag, arrowDownClassName } from './styled';
 
 export const DropdownIndicator = (
   props: React.ComponentProps<typeof ReactSelectComponents.DropdownIndicator>,
