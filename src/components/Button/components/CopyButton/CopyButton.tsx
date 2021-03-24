@@ -1,6 +1,6 @@
 import { FC, useState, useCallback, useRef } from 'react';
 
-import { CopySVG, CopyCompletedSVG } from '@aicloud/ui-icons';
+import { CopySVG, CopyCompletedSVG } from '@sbercloud/icons';
 
 import { Button } from 'components/Button';
 import { copyText } from 'utils/copyText';

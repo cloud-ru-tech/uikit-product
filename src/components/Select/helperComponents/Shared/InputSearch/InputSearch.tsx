@@ -1,6 +1,6 @@
 import { forwardRef, useState, useEffect } from 'react';
 
-import { SearchSVG, CrossSVG } from '@aicloud/ui-icons';
+import { SearchSVG, CrossSVG } from '@sbercloud/icons';
 
 import { Input } from 'components/Input';
 import { IInputProps } from 'components/Input/helpers/types';

@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import isEqual from 'lodash.isequal';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { EditOutlinedSVG, ApproveSVG, DeleteSVG } from '@aicloud/ui-icons';
+import { EditOutlinedSVG, ApproveSVG, DeleteSVG } from '@sbercloud/icons';
 
 import { ColorPicker, OptionTypeColor } from 'components/Select';
 

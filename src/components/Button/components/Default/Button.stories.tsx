@@ -1,7 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
 
-import { CopySVG } from '@aicloud/ui-icons';
+import { CopySVG } from '@sbercloud/icons';
 
 import { H4 } from 'typography/Headers';
 import { TButtonType } from 'components/Button/helpers/types';

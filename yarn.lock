@@ -2,14 +2,6 @@
 # yarn lockfile v1
 
 
-"@aicloud/ui-icons@0.0.28-231ed6b2":
-  version "0.0.28-231ed6b2"
-  resolved "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/@aicloud/ui-icons/-/ui-icons-0.0.28-231ed6b2.tgz#b220b1dcbd3584087074ae0c7f07e3cef58b6e2f"
-  integrity sha512-MXZBj69gY8cWHNUw7Du6u/gCFd2i1Se8/fucYZ3XV+sRovAgQ9KuZat6VwMdaNWJIEh99pjR7cglpzXBxpRO5g==
-  dependencies:
-    react "^17.0.1"
-    react-dom "^17.0.1"
-
 "@atamore/eslint-config-atamore@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@atamore/eslint-config-atamore/-/eslint-config-atamore-1.0.0.tgz#440719ff388511fbdddb23f030e05f1465622917"
@@ -1032,14 +1024,14 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.3.1", "@babel/runtime@^7.5.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.7.6", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
   version "7.13.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.9.tgz#97dbe2116e2630c489f22e0656decd60aaa1fcee"
   integrity sha512-aY2kU+xgJ3dJ1eU6FMB9EH8dIe8dmusF1xEku52joLvw6eAFN0AI+WxCLDnpev2LEejWBAy2sBvBOBAjI3zmvA==
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.4":
+"@babel/runtime@^7.10.1", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.4.4":
   version "7.13.10"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
   integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
@@ -1605,6 +1597,14 @@
     invariant "^2.2.3"
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
+
+"@sbercloud/icons@^1.0.2":
+  version "1.0.2"
+  resolved "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/@sbercloud/icons/-/icons-1.0.2.tgz#c2dfe34923698768808f2fa18327af62a7b2aea8"
+  integrity sha512-1Ualc6hCJSyd1GRRrogt4wlKVHoOL+xihi7iQpCBE8kz/t7rFV5fRURX4o/gsUSiG4YDc8QCe2rAv1/8+WG3gA==
+  dependencies:
+    react "^17.0.1"
+    react-dom "^17.0.1"
 
 "@semantic-release/commit-analyzer@^8.0.0":
   version "8.0.1"
@@ -7269,7 +7269,7 @@ hmac-drbg@^1.0.1:
     minimalistic-assert "^1.0.0"
     minimalistic-crypto-utils "^1.0.1"
 
-hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.1:
+hoist-non-react-statics@^3.3.0:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz#ece0acaf71d62c2969c2ec59feff42a4b1a85b45"
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
@@ -11489,7 +11489,7 @@ react-inspector@^5.0.1:
     is-dom "^1.0.0"
     prop-types "^15.0.0"
 
-react-is@^16.7.0, react-is@^16.8.1:
+react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
