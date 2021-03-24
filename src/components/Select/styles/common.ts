@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import { Props, Theme, Styles } from 'react-select';
 
-import { COLORS_SELECT } from 'theme/color/vars';
+import { COLORS_GENERAL, COLORS_SELECT } from 'theme/color/vars';
 
 export const theme = (typeTheme?: Partial<Theme>) => (theme: Theme): Theme => ({
   ...theme,
@@ -109,6 +109,7 @@ export const styles = (typeStyles?: Styles): Styles => ({
   } => ({
     ...styles,
     ...(state?.selectProps?.optionNoWrap ? { whiteSpace: 'nowrap' } : {}),
+    ...(state?.selectProps?.collapsedGroup ? { paddingLeft: 40 } : {}),
     color: `var(${COLORS_SELECT.TEXT_COLOR})`,
     outline: 'none',
     backgroundColor: state.isSelected
@@ -143,16 +144,34 @@ export const styles = (typeStyles?: Styles): Styles => ({
       borderTop: '1px solid #e4e4e4',
     },
   }),
-  groupHeading: (styles: CSSProperties): CSSProperties => ({
-    ...styles,
-    textTransform: 'none',
-    margin: 0,
-    padding: '8px 12px 4px 12px',
-    fontSize: '12px',
-    lineHeight: '16px',
-    fontWeight: 400,
-    color: '#A0A0A0',
-  }),
+  groupHeading: (styles: CSSProperties, props: Props): CSSProperties => {
+    const collapsedGroup = props?.selectProps?.collapsedGroup;
+
+    const collapsedStyles: CSSProperties = {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      margin: '4px 0 0 0',
+      padding: '8px 12px',
+      fontSize: 'inherit',
+      lineHeight: 'inherit',
+      color: `var(${COLORS_GENERAL.TEXT})`,
+      fill: `var(${COLORS_GENERAL.TEXT})`,
+      cursor: 'pointer',
+    };
+
+    return {
+      ...styles,
+      textTransform: 'none',
+      margin: 0,
+      padding: '8px 12px 4px 12px',
+      fontSize: '12px',
+      lineHeight: '16px',
+      fontWeight: 400,
+      color: `var(${COLORS_SELECT.GROUP_HEADING_TEXT_COLOR})`,
+      ...(collapsedGroup ? collapsedStyles : {}),
+    };
+  },
   multiValueRemove: (
     styles: CSSProperties,
   ): CSSProperties & { '&:hover': CSSProperties } => ({

@@ -158,9 +158,7 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
               setFavourite(!favourite);
             }}
             checked={checkedCards.includes(index)}
-            moreActions={[
-              { name: 'Удалить', onClick: () => console.log('Удалить') },
-            ]}
+            moreActions={[{ name: 'Удалить', onClick: () => {} }]}
             onCheckedClick={check => {
               if (check) {
                 setCheckedCards([...checkedCards, index]);
@@ -171,7 +169,7 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
                 checkedCards.filter(cardIndex => cardIndex !== index),
               );
             }}
-            onClick={() => console.log('onClick')}
+            onClick={() => {}}
           >
             <TagsWrapStyled>
               {additionalHover ? (

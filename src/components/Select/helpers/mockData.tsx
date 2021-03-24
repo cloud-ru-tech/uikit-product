@@ -205,6 +205,7 @@ export const services = [
 export const groupedServices = [
   {
     label: 'S3 Connectors',
+    open: true,
     options: [
       {
         value: 'AmazonS3',

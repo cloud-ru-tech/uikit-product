@@ -2,10 +2,6 @@ import { useState } from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Button } from 'components/Button';
-// import { toastDanger, toastSuccess, toastInProcess, ToastContainer } from "components/Toast";
-// import { Form } from "components/FormControl";
-// import { Input } from "components/Input";
-// import { Drawer } from "components/Drawer";
 
 import { Modal, IModalProps } from './Modal';
 
@@ -42,44 +38,6 @@ const Template: Story<IModalProps> = ({ ...args }) => {
         //   console.log("cancel");
         // }}
       />
-      {/* <Drawer
-        open={open}
-        onClose={closeDrawer}
-        onBackClick={() => console.log("re")}
-        headerText={"Header"}
-        footer={
-          <Button
-            onClick={(): void => {
-              closeDrawer();
-              toastInProcess({
-                title: "Создание workspace",
-                info: <>Процесс может занять несколько&nbsp;минут</>,
-              });
-            }}
-          >
-            Process
-          </Button>
-        }
-      >
-        <Form.Group
-          number={1}
-          label=" Группа"
-          labelTooltip="Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт."
-        >
-          <Form.Item
-            label="Не обязательное поле"
-            labelTooltip="Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт."
-          >
-            <Input
-              value={"test"}
-              onChange={(e) => console.log(e.target.value)}
-              placeholder={"Пример: Project1-bucket106"}
-              allowClear
-            ></Input>
-          </Form.Item>
-        </Form.Group>
-      </Drawer>
-      <ToastContainer /> */}
     </>
   );
 };

@@ -31,6 +31,7 @@ module.exports = {
     [
       'inline-react-svg',
       {
+        ignorePattern: /assets\.svg$/,
         svgo: {
           plugins: [
             {

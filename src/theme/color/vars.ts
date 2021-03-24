@@ -210,9 +210,12 @@ export const COLORS_RADIO = {
 
 export const COLORS_SELECT = {
   TEXT_COLOR: '--select-text-color',
+  GROUP_HEADING_TEXT_COLOR: '--select-group-heading-text-color',
   PLACEHOLDER_TEXT_COLOR: '--select-placeholder-text-color',
   BACKGROUND: '--select-bg-color',
   BACKGROUND_HOVER: '--select-bg-hover-color',
+  BACKGROUND_WITH_LOGO: '--select-bg-whith-logo-color',
+  BACKGROUND_WITH_LOGO_HOVER: '--select-bg-with-logo-hover-color',
   BORDER_COLOR: '--select-border-color',
   BORDER_HOVER_COLOR: '--select-border-hover-color',
   BORDER_FOCUS_COLOR: '--select-border-focus-color',

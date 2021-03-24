@@ -45,12 +45,9 @@ const Template: Story<ICardHeaderProps> = ({ ...args }) => {
             checked={checked}
             onCheckboxClick={isChecked => {
               setChecked(isChecked);
-              console.log({ isChecked });
             }}
-            onFavouriteChange={isFavourite => console.log({ isFavourite })}
-            moreActions={[
-              { name: 'Удалить', onClick: () => console.log('Удалить') },
-            ]}
+            onFavouriteChange={() => {}}
+            moreActions={[{ name: 'Удалить', onClick: () => {} }]}
           />
           <CardContentStyled>
             <H3>Example card</H3>
