@@ -23,7 +23,7 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({
   actions,
   className,
 }) => (
-  <Button type='transparent' className={className}>
+  <Button variant='transparent' className={className}>
     <TooltipStateContainer>
       {({
         on,

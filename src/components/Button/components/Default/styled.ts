@@ -27,7 +27,7 @@ export const ButtonComponent = styled.button`
     padding: 12px 16px;
   }
 
-  &[data-type='filled'] {
+  &[data-variant='filled'] {
     color: var(${COLORS_BUTTON.FILLED_COLOR});
     fill: var(${COLORS_BUTTON.FILLED_ICON_COLOR});
     background-color: var(${COLORS_BUTTON.FILLED_BG});
@@ -47,7 +47,7 @@ export const ButtonComponent = styled.button`
     }
   }
 
-  &[data-type='outlined'] {
+  &[data-variant='outlined'] {
     color: var(${COLORS_BUTTON.OUTLINED_COLOR});
     fill: var(${COLORS_BUTTON.OUTLINED_COLOR});
     background-color: transparent;
@@ -92,7 +92,7 @@ export const ButtonComponent = styled.button`
     }
   }
 
-  &[data-type='transparent'] {
+  &[data-variant='transparent'] {
     color: var(${COLORS_BUTTON.TRANSPARENT_COLOR});
     fill: var(${COLORS_BUTTON.TRANSPARENT_COLOR});
     background-color: transparent;
@@ -129,27 +129,27 @@ export const ButtonComponent = styled.button`
     }
   }
 
-  &[data-type='filled-brand'] {
-    color: #343f48;
-    fill: #343f48;
-    background-color: #07e897;
+  &[data-variant='filled-brand'] {
+    color: var(${COLORS_BUTTON.FILLED_BRAND_COLOR});
+    fill: var(${COLORS_BUTTON.FILLED_BRAND_COLOR});
+    background-color: var(${COLORS_BUTTON.FILLED_BRAND_BG});
     &:hover {
-      background-color: #07d88d;
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_HOVER_BG});
     }
     &:active {
-      background-color: #07cc85;
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_ACTIVE_BG});
     }
     &:disabled {
-      color: #cfcfcf;
-      fill: #cfcfcf;
-      background-color: #ededed;
+      color: var(${COLORS_BUTTON.FILLED_BRAND_DISABLED_COLOR});
+      fill: var(${COLORS_BUTTON.FILLED_BRAND_DISABLED_COLOR});
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_DISABLED_BG});
     }
     &:focus-visible {
-      background-color: #07d88d;
+      background-color: var(${COLORS_BUTTON.FILLED_BRAND_FOCUS_BG});
     }
   }
 
-  &[data-type='white'] {
+  &[data-variant='white'] {
     fill: var(${COLORS_BUTTON.WHITE_COLOR});
     color: var(${COLORS_BUTTON.WHITE_COLOR});
     background-color: var(${COLORS_BUTTON.WHITE_BG});

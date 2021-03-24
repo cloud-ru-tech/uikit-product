@@ -4,7 +4,6 @@ import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Tag } from 'components/Tag';
 import { Input } from 'components/Input';
-import { Paginate } from 'components/Paginate';
 import { Card, CardHeader } from 'components/Cards';
 
 import { CardsPanel, ICardsPanelProps } from './CardsPanel';
@@ -38,10 +37,6 @@ const TagWrapStyled = styled.div`
 
 const TagsWrapStyled = styled.div`
   height: 26px;
-`;
-
-const PaginateWrapStyled = styled.div`
-  margin-bottom: 20px;
 `;
 
 const ContentStyled = styled.div`
@@ -136,84 +131,69 @@ interface IStoryProps extends ICardsPanelProps {
 
 const Template: Story<IStoryProps> = ({ ...args }) => {
   const [favourite, setFavourite] = useState(false);
-  const [page, setPage] = useState(0);
   const [checkedCards, setCheckedCards] = useState<number[]>([]);
-
-  const cardsPerPage = data.length / (args.pageCount || 1);
 
   return (
     <div>
-      <PaginateWrapStyled>
-        <Paginate
-          pageCount={args.pageCount}
-          initialPage={page}
-          onPageChange={({ selected }) => setPage(selected)}
-        />
-      </PaginateWrapStyled>
       <CardsPanel {...args}>
-        {data
-          .filter(
-            (_card, index) =>
-              index >= page * cardsPerPage && index < (page + 1) * cardsPerPage,
-          )
-          .map(({ additionalHover, selected }, index) => (
-            <CardsPanelItem
-              isVertical={args.cardsPerRow !== 1}
-              additionalHover={additionalHover}
-              selected={selected}
-              key={index.toString()}
-              defaultFavourite={favourite}
-              onFavouriteChange={() => {
-                setFavourite(!favourite);
-              }}
-              checked={checkedCards.includes(index)}
-              moreActions={[
-                { name: 'Удалить', onClick: () => console.log('Удалить') },
-              ]}
-              onCheckedClick={check => {
-                if (check) {
-                  setCheckedCards([...checkedCards, index]);
-                  return;
-                }
+        {data.map(({ additionalHover, selected }, index) => (
+          <CardsPanelItem
+            isVertical={args.cardsPerRow !== 1}
+            additionalHover={additionalHover}
+            selected={selected}
+            key={index.toString()}
+            defaultFavourite={favourite}
+            onFavouriteChange={() => {
+              setFavourite(!favourite);
+            }}
+            checked={checkedCards.includes(index)}
+            moreActions={[
+              { name: 'Удалить', onClick: () => console.log('Удалить') },
+            ]}
+            onCheckedClick={check => {
+              if (check) {
+                setCheckedCards([...checkedCards, index]);
+                return;
+              }
 
-                setCheckedCards(
-                  checkedCards.filter(cardIndex => cardIndex !== index),
-                );
-              }}
-              onClick={() => console.log('onClick')}
-            >
-              <TagsWrapStyled>
-                {additionalHover ? (
-                  <TagWrapStyled>
-                    <Tag color='purple'>AdditionalHover</Tag>
-                  </TagWrapStyled>
-                ) : null}
-                {selected ? <Tag color='red'>Selected</Tag> : null}
-              </TagsWrapStyled>
-              <TitleStyled>{`Сontainer-registry-${index}`}</TitleStyled>
-              <DateStyled>
-                {new Date('2020-10-26T00:09:27.249000').toLocaleDateString()}
-              </DateStyled>
-              <InputWrapStyled>
-                <Input
-                  disabled
-                  allowCopy
-                  label='Image'
-                  labelMinWidth='40px'
-                  value='qwewerwerwerwer'
-                />
-              </InputWrapStyled>
-              <InputWrapStyled>
-                <Input
-                  disabled
-                  allowCopy
-                  label='URL'
-                  labelMinWidth='40px'
-                  value='sdmncv,mshfwld'
-                />
-              </InputWrapStyled>
-            </CardsPanelItem>
-          ))}
+              setCheckedCards(
+                checkedCards.filter(cardIndex => cardIndex !== index),
+              );
+            }}
+            onClick={() => console.log('onClick')}
+          >
+            <TagsWrapStyled>
+              {additionalHover ? (
+                <TagWrapStyled>
+                  <Tag color='purple'>AdditionalHover</Tag>
+                </TagWrapStyled>
+              ) : null}
+              {selected ? <Tag color='red'>Selected</Tag> : null}
+            </TagsWrapStyled>
+            <TitleStyled>{`Сontainer-registry-${index}`}</TitleStyled>
+            <DateStyled>
+              {new Date('2020-10-26T00:09:27.249000').toLocaleDateString()}
+            </DateStyled>
+            <InputWrapStyled>
+              <Input
+                disabled
+                allowCopy
+                label='Image'
+                labelMinWidth='40px'
+                value='qwewerwerwerwer'
+              />
+            </InputWrapStyled>
+            <InputWrapStyled>
+              <Input
+                disabled
+                allowCopy
+                label='URL'
+                labelMinWidth='40px'
+                value='sdmncv,mshfwld'
+              />
+            </InputWrapStyled>
+          </CardsPanelItem>
+        ))}
       </CardsPanel>
     </div>
   );

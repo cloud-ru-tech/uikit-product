@@ -1,4 +1,4 @@
-export type TButtonType =
+export type TButtonVariant =
   | 'filled'
   | 'outlined'
   | 'transparent'
