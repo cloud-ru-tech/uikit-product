@@ -50,8 +50,6 @@ export const Option = (
     };
   }
 
-  console.log(tag);
-
   const ref = useRef<HTMLDivElement>();
   useEffect(() => {
     if (props.isSelected) {

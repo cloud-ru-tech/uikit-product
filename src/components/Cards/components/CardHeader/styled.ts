@@ -20,6 +20,7 @@ export const HeaderStyled = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
   justify-content: space-between;
 `;
 

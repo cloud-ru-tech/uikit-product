@@ -38,6 +38,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
     ref,
   ) => {
     const [correctValue, setCorrectValue] = useState(value);
+    const [isCopyCompleted, setIsCopyCompleted] = useState(false);
     const [isViewMode, setViewMode] = useState(type !== 'security');
 
     const handleChange = useCallback(
@@ -104,7 +105,12 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
         return;
       }
 
+      setIsCopyCompleted(true);
       copyText(correctValue);
+
+      setTimeout(() => {
+        setIsCopyCompleted(false);
+      }, 3000);
     };
 
     return (
@@ -145,6 +151,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
               <CopyButton
                 text={value.toString()}
                 onClick={handleCopyButtonClick}
+                showCopyCompleted={isCopyCompleted}
               />
             )}
           </StyledIconWrapper>

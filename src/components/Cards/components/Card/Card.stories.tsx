@@ -32,11 +32,9 @@ const Template: Story<ICardProps> = ({ ...args }) => {
       <StyledCardWrap showBackground>
         <Card {...args}>
           <Checkbox
-            value={checked}
-            onChange={(
-              checked: boolean,
-              e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-            ) => {
+            id='checkboxId0'
+            checked={checked}
+            handleChange={(checked, e) => {
               e.stopPropagation();
               setChecked(checked);
             }}
@@ -47,11 +45,9 @@ const Template: Story<ICardProps> = ({ ...args }) => {
       <StyledCardWrap>
         <Card {...args}>
           <Checkbox
-            value={checked}
-            onChange={(
-              checked: boolean,
-              e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-            ) => {
+            id='checkboxId1'
+            checked={checked}
+            handleChange={(checked, e) => {
               e.stopPropagation();
               setChecked(checked);
             }}

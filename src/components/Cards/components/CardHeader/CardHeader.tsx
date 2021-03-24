@@ -19,7 +19,7 @@ export interface ICardHeaderProps {
   defaultFavourite?: boolean;
   onCheckboxClick?: (
     check: boolean,
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
   ) => void;
   onFavouriteChange?: (isFavourite: boolean) => void;
   moreActions?: {
@@ -54,7 +54,7 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
 
   const handleCheckedClick = (
     check: boolean,
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
   ): void => {
     e.stopPropagation();
 
@@ -66,7 +66,11 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
   return (
     <HeaderStyled className={className}>
       {onCheckboxClick && typeof checked === 'boolean' && (
-        <Checkbox value={checked || false} onChange={handleCheckedClick} />
+        <Checkbox
+          id='checkbox'
+          checked={checked || false}
+          handleChange={handleCheckedClick}
+        />
       )}
       <ButtonGroupStyled>
         {onFavouriteChange && (
