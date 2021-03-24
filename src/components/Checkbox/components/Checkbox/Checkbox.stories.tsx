@@ -33,8 +33,9 @@ const Template: Story<ICheckboxProps> = ({ ...args }) => {
       <StyledCheckboxWrap showBackground>
         <Checkbox
           {...args}
-          value={value}
-          onChange={check => {
+          id='checkboxId0'
+          checked={value}
+          handleChange={check => {
             setValue(check);
           }}
         />
@@ -42,8 +43,9 @@ const Template: Story<ICheckboxProps> = ({ ...args }) => {
       <StyledCheckboxWrap>
         <Checkbox
           {...args}
-          value={value}
-          onChange={check => {
+          checked={value}
+          id='checkboxId1'
+          handleChange={check => {
             setValue(check);
           }}
         />

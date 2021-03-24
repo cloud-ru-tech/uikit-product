@@ -1,86 +1,128 @@
-import { useState } from 'react';
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
 import { SelectedSVG, UnSelectedSVG, SelectedPartSVG } from '@aicloud/ui-icons';
 
-import { StyledCheckboxWrap } from './styled';
+import { CheckboxStyled, CheckboxLabelStyled, svgClassName } from './styled';
 
-export interface ICheckboxProps {
-  defaultChecked?: boolean;
-  value?: boolean;
+export interface ICheckboxProps
+  extends Partial<
+    DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
+  > {
+  id: string;
+  checked: boolean;
   partChecked?: boolean;
   disabled?: boolean;
-  onChange(
+  handleChange(
     checked: boolean,
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
   ): void;
-  className?: string;
+  wrapClassName?: string;
+  labelClassName?: string;
+  inputClassName?: string;
 }
 
 export const Checkbox: React.FC<ICheckboxProps> = ({
+  id,
+  checked,
   disabled,
-  value = false,
-  defaultChecked = false,
+  handleChange,
   partChecked,
-  onChange,
-  className,
+  wrapClassName,
+  labelClassName,
+  inputClassName,
+  ...restProps
 }) => {
-  const [checked, setChecked] = useState(defaultChecked);
-  const handlerClick = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+  const handleClick = (
+    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
   ): void => {
     if (disabled) {
       return;
     }
 
     if (partChecked) {
-      onChange(false, e);
+      handleChange(false, e);
       return;
     }
 
-    const isValueUndefined = value === undefined;
-    const correctChecked = isValueUndefined ? !checked : !value;
-
-    if (isValueUndefined) {
-      setChecked(correctChecked);
-    }
-
-    onChange(correctChecked, e);
+    handleChange(!checked, e);
   };
 
   if (partChecked) {
     return (
-      <StyledCheckboxWrap
-        data-selected={partChecked || checked || value}
-        data-disabled={disabled}
-        className={className}
-        onClick={handlerClick}
-      >
-        <SelectedPartSVG />
-      </StyledCheckboxWrap>
+      <div className={wrapClassName}>
+        <CheckboxStyled
+          {...restProps}
+          id={id}
+          type='checkbox'
+          checked={checked}
+          disabled={disabled}
+          className={inputClassName}
+        />
+        <CheckboxLabelStyled
+          htmlFor={id}
+          className={labelClassName}
+          onClick={handleClick}
+          data-disabled={disabled || undefined}
+        >
+          <SelectedPartSVG
+            className={svgClassName}
+            data-selected={partChecked || checked || undefined}
+            data-disabled={disabled || undefined}
+          />
+        </CheckboxLabelStyled>
+      </div>
     );
   }
 
-  if (checked || value) {
+  if (checked) {
     return (
-      <StyledCheckboxWrap
-        data-selected={partChecked || checked || value}
-        data-disabled={disabled}
-        className={className}
-        onClick={handlerClick}
-      >
-        <SelectedSVG />
-      </StyledCheckboxWrap>
+      <div className={wrapClassName}>
+        <CheckboxStyled
+          {...restProps}
+          id={id}
+          type='checkbox'
+          checked={checked}
+          disabled={disabled}
+          className={inputClassName}
+        />
+        <CheckboxLabelStyled
+          htmlFor={id}
+          className={labelClassName}
+          onClick={handleClick}
+          data-disabled={disabled || undefined}
+        >
+          <SelectedSVG
+            className={svgClassName}
+            data-selected={partChecked || checked || undefined}
+            data-disabled={disabled || undefined}
+          />
+        </CheckboxLabelStyled>
+      </div>
     );
   }
 
   return (
-    <StyledCheckboxWrap
-      data-selected={partChecked || checked || value}
-      data-disabled={disabled}
-      className={className}
-      onClick={handlerClick}
-    >
-      <UnSelectedSVG />
-    </StyledCheckboxWrap>
+    <div className={wrapClassName}>
+      <CheckboxStyled
+        {...restProps}
+        id={id}
+        type='checkbox'
+        checked={checked}
+        disabled={disabled}
+        className={inputClassName}
+      />
+      <CheckboxLabelStyled
+        htmlFor={id}
+        className={labelClassName}
+        onClick={handleClick}
+        data-disabled={disabled || undefined}
+      >
+        <UnSelectedSVG
+          className={svgClassName}
+          data-selected={partChecked || checked || undefined}
+          data-disabled={disabled || undefined}
+        />
+      </CheckboxLabelStyled>
+    </div>
   );
 };

@@ -3,23 +3,24 @@ import { styled } from '@linaria/react';
 
 import { COLORS_CARD } from 'theme/color/vars';
 
-export const StyledButtonGroup = styled.div`
+export const ButtonGroupStyled = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
 `;
 
-export const StyledFavouriteWrap = styled.div`
+export const FavouriteWrapStyled = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
 `;
 
-export const StyledHeader = styled.div`
+export const HeaderStyled = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
   justify-content: space-between;
 `;
 

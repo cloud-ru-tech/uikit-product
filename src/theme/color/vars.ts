@@ -106,6 +106,14 @@ export const COLORS_BUTTON = {
   TRANSPARENT_FOCUS_BG: '--button-transparent-focus-bg',
   TRANSPARENT_FOCUS_BORDER: '--button-transparent-focus-border',
 
+  FILLED_BRAND_COLOR: '--button-filled-brand-color',
+  FILLED_BRAND_BG: '--button-filled-brand-bg',
+  FILLED_BRAND_HOVER_BG: '--button-filled-brand-hover-bg',
+  FILLED_BRAND_ACTIVE_BG: '--button-filled-brand-active-bg',
+  FILLED_BRAND_DISABLED_COLOR: '--button-filled-brand-disabled-color',
+  FILLED_BRAND_DISABLED_BG: '--button-filled-brand-disabled-bg',
+  FILLED_BRAND_FOCUS_BG: '--button-filled-brand-focus-bg',
+
   WHITE_COLOR: '--button-white-color',
   WHITE_BG: '--button-white-bg',
   WHITE_HOVER_BG: '--button-white-hover-bg',

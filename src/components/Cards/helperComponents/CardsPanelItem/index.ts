@@ -1,1 +1,0 @@
-export { CardsPanelItem } from './CardsPanelItem';

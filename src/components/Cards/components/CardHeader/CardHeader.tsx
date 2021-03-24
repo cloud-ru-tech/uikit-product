@@ -6,9 +6,9 @@ import { Checkbox } from 'components/Checkbox';
 import { MoreButton } from 'components/Button';
 
 import {
-  StyledHeader,
-  StyledButtonGroup,
-  StyledFavouriteWrap,
+  HeaderStyled,
+  ButtonGroupStyled,
+  FavouriteWrapStyled,
   moreButtonClassName,
   favouriteButtonClassName,
 } from './styled';
@@ -19,7 +19,7 @@ export interface ICardHeaderProps {
   defaultFavourite?: boolean;
   onCheckboxClick?: (
     check: boolean,
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
   ) => void;
   onFavouriteChange?: (isFavourite: boolean) => void;
   moreActions?: {
@@ -54,7 +54,7 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
 
   const handleCheckedClick = (
     check: boolean,
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
   ): void => {
     e.stopPropagation();
 
@@ -64,23 +64,27 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
   };
 
   return (
-    <StyledHeader className={className}>
-      {onCheckboxClick && checked !== undefined && (
-        <Checkbox value={checked || false} onChange={handleCheckedClick} />
+    <HeaderStyled className={className}>
+      {onCheckboxClick && typeof checked === 'boolean' && (
+        <Checkbox
+          id='checkbox'
+          checked={checked || false}
+          handleChange={handleCheckedClick}
+        />
       )}
-      <StyledButtonGroup>
+      <ButtonGroupStyled>
         {onFavouriteChange && (
-          <StyledFavouriteWrap onClick={handleFavouriteClick}>
+          <FavouriteWrapStyled onClick={handleFavouriteClick}>
             <StarSVG
               className={favouriteButtonClassName}
               data-filled={isFavourite}
             />
-          </StyledFavouriteWrap>
+          </FavouriteWrapStyled>
         )}
         {moreActions && (
           <MoreButton actions={moreActions} className={moreButtonClassName} />
         )}
-      </StyledButtonGroup>
-    </StyledHeader>
+      </ButtonGroupStyled>
+    </HeaderStyled>
   );
 };

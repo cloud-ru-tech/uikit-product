@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { styled } from '@linaria/react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
+import { Card } from 'components/Cards';
+import { H3 } from 'typography/Headers';
+
 import { CardHeader, ICardHeaderProps } from './CardHeader';
 
 export default {
@@ -9,28 +12,52 @@ export default {
   component: CardHeader,
 } as Meta;
 
-const StyledCardHeaderWrap = styled.div`
-  max-width: 200px;
+const CardContentWrapStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  justify-content: space-between;
+`;
+
+const StoryWrap = styled.div`
+  max-width: 270px;
+`;
+
+const CardContentStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
 `;
 
 const Template: Story<ICardHeaderProps> = ({ ...args }) => {
   const [checked, setChecked] = useState(false);
 
   return (
-    <StyledCardHeaderWrap>
-      <CardHeader
-        {...args}
-        checked={checked}
-        onCheckboxClick={isChecked => {
-          setChecked(isChecked);
-          console.log({ isChecked });
-        }}
-        onFavouriteChange={isFavourite => console.log({ isFavourite })}
-        moreActions={[
-          { name: 'Удалить', onClick: () => console.log('Удалить') },
-        ]}
-      />
-    </StyledCardHeaderWrap>
+    <StoryWrap>
+      Card with header
+      <Card isVertical>
+        <CardContentWrapStyled>
+          <CardHeader
+            {...args}
+            checked={checked}
+            onCheckboxClick={isChecked => {
+              setChecked(isChecked);
+              console.log({ isChecked });
+            }}
+            onFavouriteChange={isFavourite => console.log({ isFavourite })}
+            moreActions={[
+              { name: 'Удалить', onClick: () => console.log('Удалить') },
+            ]}
+          />
+          <CardContentStyled>
+            <H3>Example card</H3>
+          </CardContentStyled>
+        </CardContentWrapStyled>
+      </Card>
+    </StoryWrap>
   );
 };
 

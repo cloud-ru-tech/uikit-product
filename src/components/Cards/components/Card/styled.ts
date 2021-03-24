@@ -4,7 +4,7 @@ import { COLORS_CARD } from 'theme/color/vars';
 
 import cardBackground from '../../assets/card_background.png';
 
-export const StyledContainer = styled.button<{
+export const ContainerStyled = styled.button<{
   selected?: boolean;
   additionalHover?: boolean;
 }>`
@@ -19,12 +19,6 @@ export const StyledContainer = styled.button<{
   border: none;
   width: 100%;
   outline: none;
-
-  font-family: SB Sans Interface;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
   overflow: hidden;
 
   &:hover {
@@ -41,7 +35,7 @@ export const StyledContainer = styled.button<{
   }
 `;
 
-export const StyledCardContentWrap = styled.div`
+export const CardContentWrapStyled = styled.div`
   position: relative;
   display: flex;
   flex-direction: row;
@@ -50,7 +44,7 @@ export const StyledCardContentWrap = styled.div`
   z-index: 1;
 `;
 
-export const StyledAdditionalHover = styled.div<{ isVertical: boolean }>`
+export const AdditionalHoverStyled = styled.div<{ isVertical: boolean }>`
   position: absolute;
   top: ${({ isVertical }) => (isVertical ? '-64px' : '0px')};
   left: ${({ isVertical }) => (isVertical ? '0px' : '-64px')};
@@ -65,11 +59,16 @@ export const StyledAdditionalHover = styled.div<{ isVertical: boolean }>`
   overflow: hidden;
 `;
 
-export const StyledAdditionalHoverImage = styled.div`
-  filter: blur(35px);
+export const AdditionalHoverImageStyled = styled.div<{
+  additionalHoverImage?: string;
+}>`
+  filter: blur(20px);
   height: 100%;
   width: 100%;
-  background-image: url(${cardBackground});
   background-size: cover;
   background-color: var(${COLORS_CARD.CARD_ADDITIONAL_HOVER_COLOR});
+  background-image: ${({ additionalHoverImage }) =>
+    additionalHoverImage
+      ? `url(${additionalHoverImage})`
+      : `url(${cardBackground})`};
 `;
