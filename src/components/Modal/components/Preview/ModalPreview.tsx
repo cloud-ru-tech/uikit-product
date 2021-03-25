@@ -65,7 +65,7 @@ export const ModalPreview: React.FC<IModalPreviewProps> = props => {
       className={`${contentClassname} ${contentClassName}`}
     >
       <Button
-        type='transparent'
+        variant='transparent'
         onClick={onRequestClose}
         className={previewCloseBtn}
       >

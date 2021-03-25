@@ -5,6 +5,7 @@ import { CloseSVG, EyeSVG, EyeClosedSVG } from '@aicloud/ui-icons';
 import { CopyButton } from 'components/Button';
 import { IInputProps } from 'components/Input/helpers/types';
 import { getInputType } from 'components/Input/helpers/getInputType';
+import { copyText } from 'utils/copyText';
 
 import {
   Label,
@@ -39,6 +40,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
     ref,
   ) => {
     const [correctValue, setCorrectValue] = useState(value);
+    const [isCopyCompleted, setIsCopyCompleted] = useState(false);
     const [isViewMode, setViewMode] = useState(type !== 'security');
 
     const handleChange = useCallback(
@@ -98,23 +100,41 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       e.stopPropagation();
     };
 
+    const handleInputClick = (e: React.MouseEvent<HTMLInputElement>) => {
+      e.stopPropagation();
+
+      if (!allowCopy || !correctValue) {
+        return;
+      }
+
+      setIsCopyCompleted(true);
+      copyText(correctValue);
+
+      setTimeout(() => {
+        setIsCopyCompleted(false);
+      }, 3000);
+    };
+
     return (
       <StyledWrap className={wrapperClassName}>
         {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
         <StyledInputWrapper ref={ref}>
-          <StyledInput
-            type={getInputType({ type, isViewMode })}
-            onChange={handleChange}
-            value={correctValue}
-            data-type={type}
-            data-disabled={disabled}
-            className={className}
-            placeholder={placeholder}
-            min={numberMin}
-            max={numberMax}
-            step={1}
-            disabled={disabled}
-          />
+          <div onClick={handleInputClick}>
+            <StyledInput
+              allowCopy={allowCopy}
+              type={getInputType({ type, isViewMode })}
+              onChange={handleChange}
+              value={correctValue}
+              data-type={type}
+              data-disabled={disabled}
+              className={className}
+              placeholder={placeholder}
+              min={numberMin}
+              max={numberMax}
+              step={1}
+              disabled={disabled}
+            />
+          </div>
           <StyledIconWrapper>
             {!disabled && allowClear && correctValue && correctValue !== '' && (
               <StyledClearButton onClick={handleClickClear}>
@@ -133,6 +153,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
               <CopyButton
                 text={value.toString()}
                 onClick={handleCopyButtonClick}
+                showCopyCompleted={isCopyCompleted}
               />
             )}
           </StyledIconWrapper>

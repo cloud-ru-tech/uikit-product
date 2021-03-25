@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 
 import { COLORS_INPUT } from 'theme/color/vars';
 
-export const StyledInput = styled.input`
+export const StyledInput = styled.input<{ allowCopy?: boolean }>`
   flex-grow: 1;
   box-sizing: border-box;
   width: 100%;
@@ -56,12 +56,12 @@ export const StyledInput = styled.input`
   &[data-disabled='true'] {
     background-color: var(${COLORS_INPUT.INPUT_DISABLED_BACKGROUND});
     border: 1px solid var(${COLORS_INPUT.INPUT_DISABLED_BORDER});
-    color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR})
+    color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
     &::placeholder {
       color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
     }
     &:hover {
-      cursor: not-allowed;
+      cursor: ${({ allowCopy }) => (allowCopy ? 'pointer' : 'not-allowed')};
     }
   }
 

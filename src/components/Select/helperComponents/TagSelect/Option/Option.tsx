@@ -50,8 +50,6 @@ export const Option = (
     };
   }
 
-  console.log(tag);
-
   const ref = useRef<HTMLDivElement>();
   useEffect(() => {
     if (props.isSelected) {
@@ -110,7 +108,7 @@ export const Option = (
                 className={colorPickerClassName}
               />
               <StyledTagButton
-                type='transparent'
+                variant='transparent'
                 size='xs'
                 onClick={(): void => {
                   const dataIndex = props.options.indexOf(data);
@@ -140,7 +138,7 @@ export const Option = (
               </StyledTagButton>
               <StyledTagButton
                 size='xs'
-                type='transparent'
+                variant='transparent'
                 onClick={(): void => {
                   setEdit(false);
                   if (!isEqual(data, tag) && tag.label) {
@@ -167,7 +165,7 @@ export const Option = (
               {data.label}
             </StyledTagOptionLabel>
             <StyledTagButton
-              type='transparent'
+              variant='transparent'
               size='xs'
               onClick={(e): void => {
                 e.stopPropagation();

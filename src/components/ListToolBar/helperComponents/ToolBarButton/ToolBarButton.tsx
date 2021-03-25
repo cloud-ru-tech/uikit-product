@@ -18,7 +18,7 @@ export const ToolBarButton: FC<IToolBarButtonProps> = ({
 }) => (
   <Button
     {...buttonProps}
-    type='transparent'
+    variant='transparent'
     className={clsx(className, toolbarButtonClassName)}
   >
     {badgeText ? <Badge text={badgeText}>{children}</Badge> : children}

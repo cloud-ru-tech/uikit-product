@@ -1,12 +1,12 @@
-import { TButtonType } from 'components/Button/helpers/types';
+import { TButtonVariant } from 'components/Button/helpers/types';
 
 import { ButtonComponent, IconWrap } from './styled';
 
-export interface IButtonProps {
+interface IButtonCustomProps {
   rounded?: boolean;
   className?: string;
   disabled?: boolean;
-  type?: TButtonType;
+  variant?: TButtonVariant;
   icon?: React.ReactNode;
   size?: 'xs' | 's' | 'm';
   children?: React.ReactNode;
@@ -14,9 +14,12 @@ export interface IButtonProps {
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
+export type IButtonProps = IButtonCustomProps &
+  React.ComponentProps<typeof ButtonComponent>;
+
 export const Button: React.FC<IButtonProps> = ({
   size,
-  type,
+  variant,
   icon,
   onClick,
   disabled,
@@ -27,9 +30,8 @@ export const Button: React.FC<IButtonProps> = ({
   ...props
 }) => (
   <ButtonComponent
-    type='button'
     data-size={size}
-    data-type={type}
+    data-variant={variant}
     disabled={disabled}
     data-round={rounded}
     className={className}
@@ -51,7 +53,7 @@ export const Button: React.FC<IButtonProps> = ({
 );
 
 Button.defaultProps = {
-  type: 'filled',
+  variant: 'filled',
   size: 'm',
   className: '',
 };

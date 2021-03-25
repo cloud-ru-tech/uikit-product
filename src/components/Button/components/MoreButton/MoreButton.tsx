@@ -7,6 +7,7 @@ import { TooltipMenuItem } from 'components/Tooltip/helperComponents/TooltipMenu
 import { TooltipStateContainer } from 'components/Tooltip/helperComponents/TooltipStateContainer';
 
 export interface IMoreButtonProps {
+  className?: string;
   actions: {
     name: React.ReactNode;
     onClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
@@ -18,8 +19,11 @@ const iconStyle = css`
   width: 100%;
 `;
 
-export const MoreButton: React.FC<IMoreButtonProps> = ({ actions }) => (
-  <Button type='transparent'>
+export const MoreButton: React.FC<IMoreButtonProps> = ({
+  actions,
+  className,
+}) => (
+  <Button variant='transparent' className={className}>
     <TooltipStateContainer>
       {({
         on,

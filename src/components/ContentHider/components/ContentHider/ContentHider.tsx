@@ -38,7 +38,7 @@ export const ContentHider: FC<IContentHiderProps> = ({
       </ContentHiderStyled>
       <Button
         size='m'
-        type='outlined'
+        variant='outlined'
         onClick={() => setShowContent(showContent => !showContent)}
       >
         {showContent ? hideContentText : showContentText}

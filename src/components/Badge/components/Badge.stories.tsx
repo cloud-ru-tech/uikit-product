@@ -11,7 +11,7 @@ export default {
 
 const Template: Story<IBadgeProps> = ({ ...args }) => (
   <Badge text='5' {...args}>
-    <Button type='outlined'>Button</Button>
+    <Button variant='outlined'>Button</Button>
   </Badge>
 );
 

@@ -4,7 +4,7 @@ import { styled } from '@linaria/react';
 import { CopySVG } from '@aicloud/ui-icons';
 
 import { H4 } from 'typography/Headers';
-import { TButtonType } from 'components/Button/helpers/types';
+import { TButtonVariant } from 'components/Button/helpers/types';
 
 import { Button, IButtonProps } from './Button';
 
@@ -33,14 +33,14 @@ const Title = styled.div`
 
 const buttons: Array<{
   name: string;
-  type: TButtonType;
+  variant: TButtonVariant;
   background?: string;
 }> = [
-  { name: 'FILLED', type: 'filled' },
-  { name: 'FILLED-BRAND', type: 'filled-brand' },
-  { name: 'OUTLINED', type: 'outlined' },
-  { name: 'TRANSPARENT', type: 'transparent' },
-  { name: 'WHITE', type: 'white', background: '#5558FA' },
+  { name: 'FILLED', variant: 'filled' },
+  { name: 'FILLED-BRAND', variant: 'filled-brand' },
+  { name: 'OUTLINED', variant: 'outlined' },
+  { name: 'TRANSPARENT', variant: 'transparent' },
+  { name: 'WHITE', variant: 'white', background: '#5558FA' },
 ];
 
 const Template: Story<IButtonProps & { showIcon: boolean }> = ({
@@ -49,12 +49,16 @@ const Template: Story<IButtonProps & { showIcon: boolean }> = ({
   ...args
 }) => (
   <Group>
-    {buttons.map(({ name, type, background }) => (
+    {buttons.map(({ name, variant, background }) => (
       <Item key={name} background={background}>
         <Title>
           <H4 color={background ? '#fff' : ''}>{name}</H4>
         </Title>
-        <Button {...args} type={type} icon={showIcon ? <CopySVG /> : null}>
+        <Button
+          {...args}
+          variant={variant}
+          icon={showIcon ? <CopySVG /> : null}
+        >
           {children}
         </Button>
       </Item>
