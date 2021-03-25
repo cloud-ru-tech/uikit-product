@@ -1,6 +1,6 @@
 import { forwardRef, useCallback, useState, useEffect } from 'react';
 
-import { CloseSVG, EyeSVG, EyeClosedSVG } from '@aicloud/ui-icons';
+import { CloseSVG, EyeSVG, EyeClosedSVG } from '@sbercloud/icons';
 
 import { CopyButton } from 'components/Button';
 import { IInputProps } from 'components/Input/helpers/types';

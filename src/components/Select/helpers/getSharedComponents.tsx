@@ -4,7 +4,7 @@ import {
 } from 'react-select';
 import { css } from '@linaria/core';
 
-import { ArrowDownSVG, CrossSVG } from '@aicloud/ui-icons';
+import { ArrowDownSVG, CrossSVG } from '@sbercloud/icons';
 
 import { ISelectProps } from 'components/Select';
 

@@ -1,6 +1,6 @@
 import RCModal from 'react-modal';
 
-import { CancelSVG } from '@aicloud/ui-icons';
+import { CancelSVG } from '@sbercloud/icons';
 
 import Z_INDEX from 'vars/zIndex';
 import { Button } from 'components/Button';

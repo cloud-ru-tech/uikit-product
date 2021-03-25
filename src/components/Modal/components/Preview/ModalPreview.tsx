@@ -1,6 +1,6 @@
 import RCModal from 'react-modal';
 
-import { CancelSVG } from '@aicloud/ui-icons';
+import { CancelSVG } from '@sbercloud/icons';
 
 import { Button } from 'components/Button';
 import { Divider } from 'components/Divider';

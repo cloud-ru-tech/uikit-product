@@ -2,7 +2,7 @@ import { FC, useState, useEffect, useMemo } from 'react';
 import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
 
-import { UserStubColorSVG, GroupStub1ColorSVG } from '@aicloud/ui-icons';
+import { UserStubColorSVG, GroupStub1ColorSVG } from '@sbercloud/icons';
 
 import { Avatar, IAvatarProps } from 'components/Avatar';
 
