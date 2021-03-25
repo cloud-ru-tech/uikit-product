@@ -32,7 +32,6 @@ const Template: Story<ICardProps> = ({ ...args }) => {
       <StyledCardWrap showBackground>
         <Card {...args}>
           <Checkbox
-            id='checkboxId0'
             checked={checked}
             handleChange={(checked, e) => {
               e.stopPropagation();
@@ -45,7 +44,6 @@ const Template: Story<ICardProps> = ({ ...args }) => {
       <StyledCardWrap>
         <Card {...args}>
           <Checkbox
-            id='checkboxId1'
             checked={checked}
             handleChange={(checked, e) => {
               e.stopPropagation();

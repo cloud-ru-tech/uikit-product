@@ -67,7 +67,6 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
     <HeaderStyled className={className}>
       {onCheckboxClick && typeof checked === 'boolean' && (
         <Checkbox
-          id='checkbox'
           checked={checked || false}
           handleChange={handleCheckedClick}
         />
