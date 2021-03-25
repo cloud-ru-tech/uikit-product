@@ -1,5 +1,5 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { HelpSVG } from '@aicloud/ui-icons';
+import { HelpSVG } from '@sbercloud/icons';
 import { styled } from '@linaria/react';
 
 import { Avatar, IAvatarProps } from './Avatar';

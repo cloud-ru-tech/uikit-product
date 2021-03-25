@@ -24,15 +24,16 @@ export const MultiValueContainer = <CustomOptionType,>(
     ? memo(prefixMultiValueContainer)
     : Stub;
 
-  return (
-    data: React.ComponentProps<
-      typeof ReactSelectComponents.MultiValueContainer
-    >,
-  ): JSX.Element => (
-    <ReactSelectComponents.MultiValueContainer {...data}>
+  return ({
+    children,
+    ...restData
+  }: React.ComponentProps<
+    typeof ReactSelectComponents.MultiValueContainer
+  >): JSX.Element => (
+    <ReactSelectComponents.MultiValueContainer {...restData}>
       <StyledMultiValueContainer>
-        <PrefixMultiValueContainerComponent {...data} />
-        {data.children}
+        <PrefixMultiValueContainerComponent {...restData} />
+        {children}
       </StyledMultiValueContainer>
     </ReactSelectComponents.MultiValueContainer>
   );

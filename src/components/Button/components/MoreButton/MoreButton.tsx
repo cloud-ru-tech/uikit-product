@@ -1,5 +1,5 @@
 import { css } from '@linaria/core';
-import { MoreSVG } from '@aicloud/ui-icons';
+import { MoreSVG } from '@sbercloud/icons';
 
 import { Button } from 'components/Button';
 import { Tooltip, TooltipMenu } from 'components/Tooltip';

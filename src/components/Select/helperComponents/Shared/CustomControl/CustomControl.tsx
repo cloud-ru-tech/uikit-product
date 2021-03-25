@@ -13,23 +13,36 @@ export const CustomControl = <CustomOptionType,>(
   if (!prefixControl) {
     return (
       data: React.ComponentProps<typeof ReactSelectComponents.Control>,
-    ): JSX.Element => (
-      <div onClick={data.selectProps.toggleMenu}>
-        <ReactSelectComponents.Control {...data} />
-      </div>
-    );
+    ): JSX.Element => {
+      const {
+        selectProps: { toggleMenu },
+      } = data;
+
+      return (
+        <div onClick={toggleMenu}>
+          <ReactSelectComponents.Control {...data} />
+        </div>
+      );
+    };
   }
 
   const PrefixControlComponent = prefixControl ? memo(prefixControl) : Stub;
 
   return (
     data: React.ComponentProps<typeof ReactSelectComponents.Control>,
-  ): JSX.Element => (
-    <div onClick={data.selectProps.toggleMenu}>
-      <ReactSelectComponents.Control {...data}>
-        <PrefixControlComponent {...data} />
-        {data.children}
-      </ReactSelectComponents.Control>
-    </div>
-  );
+  ): JSX.Element => {
+    const {
+      children,
+      selectProps: { toggleMenu },
+    } = data;
+
+    return (
+      <div onClick={toggleMenu}>
+        <ReactSelectComponents.Control {...data}>
+          <PrefixControlComponent {...data} />
+          {children}
+        </ReactSelectComponents.Control>
+      </div>
+    );
+  };
 };

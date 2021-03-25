@@ -1,6 +1,6 @@
 import { FC, useCallback } from 'react';
 
-import { ArrowDownSVG } from '@aicloud/ui-icons';
+import { ArrowDownSVG } from '@sbercloud/icons';
 
 import { StyledContainer, iconClass } from './styled';
 

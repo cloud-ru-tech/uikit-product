@@ -14,12 +14,15 @@ export const CustomOption = <CustomOptionType,>(
   const { prefixOption, postfixOption } = props;
 
   if (!prefixOption && !postfixOption) {
-    return (
-      data: React.ComponentProps<typeof ReactSelectComponents.Option>,
-    ): JSX.Element => (
+    return ({
+      className,
+      ...restData
+    }: React.ComponentProps<
+      typeof ReactSelectComponents.Option
+    >): JSX.Element => (
       <ReactSelectComponents.Option
-        className={clsx(data.className, optionClass)}
-        {...data}
+        className={clsx(className, optionClass)}
+        {...restData}
       />
     );
   }
@@ -27,17 +30,21 @@ export const CustomOption = <CustomOptionType,>(
   const PrefixOptionComponent = prefixOption ? memo(prefixOption) : Stub;
   const PostfixOptionComponent = postfixOption ? memo(postfixOption) : Stub;
 
-  return (
-    data: React.ComponentProps<typeof ReactSelectComponents.Option>,
-  ): JSX.Element => (
+  return ({
+    className,
+    children,
+    ...restData
+  }: React.ComponentProps<
+    typeof ReactSelectComponents.Option
+  >): JSX.Element => (
     <ReactSelectComponents.Option
-      className={clsx(data.className, optionClass)}
-      {...data}
+      className={clsx(className, optionClass)}
+      {...restData}
     >
       <StyledOption>
-        <PrefixOptionComponent {...data} />
-        <StyledDescWrap>{data.children}</StyledDescWrap>
-        <PostfixOptionComponent {...data} />
+        <PrefixOptionComponent {...restData} children={children} />
+        <StyledDescWrap>{children}</StyledDescWrap>
+        <PostfixOptionComponent {...restData} children={children} />
       </StyledOption>
     </ReactSelectComponents.Option>
   );

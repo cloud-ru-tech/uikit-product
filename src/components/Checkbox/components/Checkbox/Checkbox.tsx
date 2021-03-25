@@ -1,6 +1,6 @@
 import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
-import { SelectedSVG, UnSelectedSVG, SelectedPartSVG } from '@aicloud/ui-icons';
+import { SelectedSVG, UnSelectedSVG, SelectedPartSVG } from '@sbercloud/icons';
 
 import useElementId from 'utils/useElementId';
 
