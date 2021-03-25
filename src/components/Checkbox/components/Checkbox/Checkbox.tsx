@@ -2,23 +2,25 @@ import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
 import { SelectedSVG, UnSelectedSVG, SelectedPartSVG } from '@aicloud/ui-icons';
 
+import useElementId from 'utils/useElementId';
+
 import { CheckboxStyled, CheckboxLabelStyled, svgClassName } from './styled';
 
 export interface ICheckboxProps
   extends Partial<
     DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
   > {
-  id: string;
   checked: boolean;
+  id?: string;
   partChecked?: boolean;
   disabled?: boolean;
+  wrapClassName?: string;
+  labelClassName?: string;
+  inputClassName?: string;
   handleChange(
     checked: boolean,
     e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
   ): void;
-  wrapClassName?: string;
-  labelClassName?: string;
-  inputClassName?: string;
 }
 
 export const Checkbox: React.FC<ICheckboxProps> = ({
@@ -32,6 +34,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
   inputClassName,
   ...restProps
 }) => {
+  const checkboxId = useElementId(id);
   const handleClick = (
     e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
   ): void => {
@@ -52,14 +55,14 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       <div className={wrapClassName}>
         <CheckboxStyled
           {...restProps}
-          id={id}
+          id={checkboxId}
           type='checkbox'
           checked={checked}
           disabled={disabled}
           className={inputClassName}
         />
         <CheckboxLabelStyled
-          htmlFor={id}
+          htmlFor={checkboxId}
           className={labelClassName}
           onClick={handleClick}
           data-disabled={disabled || undefined}
@@ -79,14 +82,14 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
       <div className={wrapClassName}>
         <CheckboxStyled
           {...restProps}
-          id={id}
+          id={checkboxId}
           type='checkbox'
           checked={checked}
           disabled={disabled}
           className={inputClassName}
         />
         <CheckboxLabelStyled
-          htmlFor={id}
+          htmlFor={checkboxId}
           className={labelClassName}
           onClick={handleClick}
           data-disabled={disabled || undefined}
@@ -105,14 +108,14 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
     <div className={wrapClassName}>
       <CheckboxStyled
         {...restProps}
-        id={id}
+        id={checkboxId}
         type='checkbox'
         checked={checked}
         disabled={disabled}
         className={inputClassName}
       />
       <CheckboxLabelStyled
-        htmlFor={id}
+        htmlFor={checkboxId}
         className={labelClassName}
         onClick={handleClick}
         data-disabled={disabled || undefined}

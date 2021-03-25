@@ -37,6 +37,7 @@
     "clsx": "^1.1.1",
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",
+    "nanoid": "^3.1.22",
     "rc-slider": "^9.7.1",
     "rc-tree": "^4.1.2",
     "react": "^17.0.1",
