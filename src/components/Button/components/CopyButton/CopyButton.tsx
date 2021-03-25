@@ -10,6 +10,7 @@ import { iconStyle } from './styled';
 export interface ICopyButtonProps {
   text?: string;
   overrideClick?: number;
+  showCopyCompleted?: boolean;
   onClick?(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void;
   disabled?: boolean;
   className?: string;
@@ -18,9 +19,10 @@ export interface ICopyButtonProps {
 export const CopyButton: FC<ICopyButtonProps> = ({
   disabled,
   text = '',
-  overrideClick,
-  onClick: propOnClick,
   className,
+  overrideClick,
+  showCopyCompleted,
+  onClick: propOnClick,
 }) => {
   const [isCopyCompleted, setIsCopyCompleted] = useState(false);
   const oldOverrideClick = useRef<number>();
@@ -57,7 +59,7 @@ export const CopyButton: FC<ICopyButtonProps> = ({
       disabled={disabled}
       onClick={handleClickCopy}
     >
-      {isCopyCompleted ? (
+      {showCopyCompleted || isCopyCompleted ? (
         <CopyCompletedSVG className={iconStyle} />
       ) : (
         <CopySVG className={iconStyle} />
