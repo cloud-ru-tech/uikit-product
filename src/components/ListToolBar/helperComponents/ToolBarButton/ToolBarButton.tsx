@@ -1,12 +1,9 @@
 import { FC } from 'react';
-import clsx from 'clsx';
 
-import { Button, IButtonProps } from 'components/Button';
+import { TableMenuButton, ITableMenuButtonProps } from 'components/Button';
 import { Badge } from 'components/Badge';
 
-import { toolbarButtonClassName } from './styled';
-
-export interface IToolBarButtonProps extends IButtonProps {
+export interface IToolBarButtonProps extends ITableMenuButtonProps {
   badgeText?: string;
 }
 
@@ -16,11 +13,7 @@ export const ToolBarButton: FC<IToolBarButtonProps> = ({
   badgeText,
   ...buttonProps
 }) => (
-  <Button
-    {...buttonProps}
-    variant='transparent'
-    className={clsx(className, toolbarButtonClassName)}
-  >
+  <TableMenuButton {...buttonProps} className={className}>
     {badgeText ? <Badge text={badgeText}>{children}</Badge> : children}
-  </Button>
+  </TableMenuButton>
 );

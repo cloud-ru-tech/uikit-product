@@ -3,7 +3,7 @@ import { styled } from '@linaria/react';
 import { COLORS_BADGE } from 'theme/color/vars';
 
 export const BadgeStyled = styled.span`
-  display: inline-block;
+  display: inline-flex;
   position: relative;
 `;
 

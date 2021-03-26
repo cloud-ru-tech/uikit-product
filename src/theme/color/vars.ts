@@ -114,6 +114,11 @@ export const COLORS_BUTTON = {
   FILLED_BRAND_DISABLED_BG: '--button-filled-brand-disabled-bg',
   FILLED_BRAND_FOCUS_BG: '--button-filled-brand-focus-bg',
 
+  TABLE_MENU_BUTTON_COLOR: '--button-table-menu-color',
+  TABLE_MENU_BUTTON_HOVER_COLOR: '--button-table-menu-hover-color',
+  TABLE_MENU_BUTTON_DISABLED_COLOR: '--button-table-menu-disabled-color',
+  TABLE_MENU_BUTTON_ACTIVE_COLOR: '--button-table-menu-active-color',
+
   WHITE_COLOR: '--button-white-color',
   WHITE_BG: '--button-white-bg',
   WHITE_HOVER_BG: '--button-white-hover-bg',
@@ -229,8 +234,6 @@ export const COLORS_BADGE = {
 
 export const COLORS_TOOLBAR = {
   BACKGROUND: '--toolbar-background',
-  ICON_COLOR: '--toolbar-icon-color',
-  ICON_HOVER_COLOR: '--toolbar-icon-hover-color',
   INPUT_BORDER: '--toolbar-border-color',
 };
 
