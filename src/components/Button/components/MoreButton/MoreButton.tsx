@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { MoreSVG } from '@sbercloud/icons';
 
-import { TableMenuButton } from 'components/Button';
+import { Button } from 'components/Button';
 import { Tooltip, TooltipMenu } from 'components/Tooltip';
 import { TooltipMenuItem } from 'components/Tooltip/helperComponents/TooltipMenuItem';
 import { TooltipStateContainer } from 'components/Tooltip/helperComponents/TooltipStateContainer';
@@ -23,7 +23,7 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({
   actions,
   className,
 }) => (
-  <TableMenuButton className={className}>
+  <Button variant='table-menu' className={className}>
     <TooltipStateContainer>
       {({
         on,
@@ -68,5 +68,5 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({
         </Tooltip>
       )}
     </TooltipStateContainer>
-  </TableMenuButton>
+  </Button>
 );
