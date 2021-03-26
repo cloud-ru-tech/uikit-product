@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
 
-import { HelpSVG } from '@aicloud/ui-icons';
+import { HelpSVG } from '@sbercloud/icons';
 
 import { Avatar } from 'components/Avatar';
 import { RadioIcon } from 'components/Radio';

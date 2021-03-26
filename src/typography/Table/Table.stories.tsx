@@ -7,19 +7,21 @@ export default {
   component: TableText,
 } as Meta;
 
-const Template: Story<TTableProps & { children: string }> = args => (
+const Template: Story<TTableProps & { children: string }> = ({
+  children,
+  ...restArgs
+}) => (
   <div>
-    <TableText {...args}>{args.children} (TableText)</TableText>
+    <TableText {...restArgs}>{children} (TableText)</TableText>
   </div>
 );
 
-export const Default = Template.bind({});
-Default.args = {
+export const table = Template.bind({});
+table.args = {
   color: `var(${COLORS_GENERAL.TEXT})`,
   children: 'Пример',
 };
-
-Default.argTypes = {
+table.argTypes = {
   color: {
     control: {
       type: 'color',

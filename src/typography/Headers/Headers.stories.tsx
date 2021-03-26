@@ -7,24 +7,26 @@ export default {
   component: H1,
 } as Meta;
 
-const Template: Story<TFontProps & { children: string }> = args => (
+const Template: Story<TFontProps & { children: string }> = ({
+  children,
+  ...restArgs
+}) => (
   <div>
-    <H1 {...args}>{args.children} (H1)</H1>
-    <H2 {...args}>{args.children} (H2)</H2>
-    <H3 {...args}>{args.children} (H3)</H3>
-    <H3Semibold {...args}>{args.children} (H3Semibold)</H3Semibold>
-    <H4 {...args}>{args.children} (H4)</H4>
-    <H5 {...args}>{args.children} (H5)</H5>
+    <H1 {...restArgs}>{children} (H1)</H1>
+    <H2 {...restArgs}>{children} (H2)</H2>
+    <H3 {...restArgs}>{children} (H3)</H3>
+    <H3Semibold {...restArgs}>{children} (H3Semibold)</H3Semibold>
+    <H4 {...restArgs}>{children} (H4)</H4>
+    <H5 {...restArgs}>{children} (H5)</H5>
   </div>
 );
 
-export const Default = Template.bind({});
-Default.args = {
+export const headers = Template.bind({});
+headers.args = {
   color: `var(${COLORS_GENERAL.TEXT})`,
   children: 'Пример',
 };
-
-Default.argTypes = {
+headers.argTypes = {
   color: {
     control: {
       type: 'color',
