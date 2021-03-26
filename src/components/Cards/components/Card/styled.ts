@@ -9,7 +9,7 @@ export const ContainerStyled = styled.button<{
   additionalHover?: boolean;
 }>`
   position: relative;
-  padding: 24px;
+  padding: 20px;
   border-radius: 4px;
   background-color: ${({ selected }) =>
     selected
