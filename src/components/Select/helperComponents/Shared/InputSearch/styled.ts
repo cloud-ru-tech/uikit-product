@@ -1,20 +1,21 @@
 import { css } from '@linaria/core';
 
-// TODO: we have to create className instead of wrapping component because of a bug
-// https://github.com/NervJS/taro/issues/8325
+import { COLORS_INPUT } from 'theme/color/vars';
+
 export const searchIconClassname = css`
-  fill: #d2d2d2;
+  fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   cursor: pointer;
   &:focus,
   &:hover {
-    fill: #343f48;
+    fill: var(${COLORS_INPUT.INPUT_ICON_HOVER_COLOR});
   }
 `;
 
 export const crossIconClassName = css`
-  fill: #d2d2d2;
+  fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
+  cursor: pointer;
   &:focus,
   &:hover {
-    fill: #343f48;
+    fill: var(${COLORS_INPUT.INPUT_ICON_HOVER_COLOR});
   }
 `;

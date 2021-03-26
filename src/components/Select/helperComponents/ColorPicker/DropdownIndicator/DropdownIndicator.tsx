@@ -1,20 +1,8 @@
 import { components as ReactSelectComponents } from 'react-select';
-import { css } from '@linaria/core';
 
 import { ArrowDownSVG } from '@sbercloud/icons';
 
-import { StyledDropdown, StyledTag } from './styled';
-
-// TODO: we have to create className instead of wrapping component because of a bug
-// https://github.com/NervJS/taro/issues/8325
-export const arrowDownClassName = css`
-  fill: inherit;
-
-  &:hover,
-  &:focus {
-    fill: #343f48;
-  }
-`;
+import { StyledDropdown, StyledTag, arrowDownClassName } from './styled';
 
 export const DropdownIndicator = (
   props: React.ComponentProps<typeof ReactSelectComponents.DropdownIndicator>,

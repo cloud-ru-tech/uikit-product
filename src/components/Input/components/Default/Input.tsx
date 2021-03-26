@@ -17,6 +17,8 @@ import {
   StyledSecurityButton,
 } from './styled';
 
+export type { IInputProps };
+
 export const Input = forwardRef<HTMLInputElement, IInputProps>(
   (
     {
@@ -34,6 +36,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       label,
       labelMinWidth,
       disabled = false,
+      wrapperRef,
     },
     ref,
   ) => {
@@ -114,11 +117,12 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
     };
 
     return (
-      <StyledWrap>
+      <StyledWrap className={wrapperClassName} ref={wrapperRef}>
         {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
-        <StyledInputWrapper ref={ref} className={wrapperClassName}>
+        <StyledInputWrapper>
           <div onClick={handleInputClick}>
             <StyledInput
+              ref={ref}
               allowCopy={allowCopy}
               type={getInputType({ type, isViewMode })}
               onChange={handleChange}
@@ -139,7 +143,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
                 <CloseSVG />
               </StyledClearButton>
             )}
-            <div>{postfix}</div>
+            {postfix}
             {type === 'security' ? (
               <StyledSecurityButton
                 onClick={(): void => setViewMode(!isViewMode)}

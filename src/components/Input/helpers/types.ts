@@ -1,4 +1,4 @@
-import { ChangeEvent } from 'react';
+import { ChangeEvent, RefObject } from 'react';
 
 export type IInputProps = {
   type?: 'default' | 'embed' | 'security' | 'number';
@@ -16,4 +16,5 @@ export type IInputProps = {
   disabled?: boolean;
   label?: string;
   labelMinWidth?: string;
+  wrapperRef?: RefObject<HTMLDivElement>;
 };

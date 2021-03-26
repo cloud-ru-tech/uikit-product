@@ -1,4 +1,5 @@
 export * from './Avatar';
+export * from './Badge';
 export * from './Button';
 export * from './Cards';
 export * from './Checkbox';
@@ -6,6 +7,7 @@ export * from './CollapsePanel';
 export * from './ContentHider';
 export * from './Divider';
 export * from './Input';
+export * from './ListToolBar';
 export * from './Modal';
 export * from './Radio';
 export * from './Select';

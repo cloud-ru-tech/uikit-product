@@ -114,6 +114,11 @@ export const COLORS_BUTTON = {
   FILLED_BRAND_DISABLED_BG: '--button-filled-brand-disabled-bg',
   FILLED_BRAND_FOCUS_BG: '--button-filled-brand-focus-bg',
 
+  TABLE_MENU_BUTTON_COLOR: '--button-table-menu-color',
+  TABLE_MENU_BUTTON_HOVER_COLOR: '--button-table-menu-hover-color',
+  TABLE_MENU_BUTTON_DISABLED_COLOR: '--button-table-menu-disabled-color',
+  TABLE_MENU_BUTTON_ACTIVE_COLOR: '--button-table-menu-active-color',
+
   WHITE_COLOR: '--button-white-color',
   WHITE_BG: '--button-white-bg',
   WHITE_HOVER_BG: '--button-white-hover-bg',
@@ -191,6 +196,7 @@ export const COLORS_INPUT = {
   INPUT_DISABLED_COLOR: '--input-disabled-color',
   INPUT_DISABLED_BORDER: '--input-disabled-border',
   INPUT_ICON_COLOR: '--input-icon-color',
+  INPUT_ICON_HOVER_COLOR: '--input-icon-hover-color',
 };
 
 export const COLORS_RADIO = {
@@ -218,6 +224,17 @@ export const COLORS_SELECT = {
   DROPDOWN_FOCUS_BACKGROUND: '--select-dropdown-focus-background',
   DROPDOWN_ICON_COLOR: '--select-dropdown-icon-color',
   DROPDOWN_ICON_HOVER_COLOR: '--select-dropdown-icon-hover-color',
+};
+
+export const COLORS_BADGE = {
+  DEFAULT_BACKGROUND: '--badge-default-background',
+  BORDER_COLOR: '--badge-border-color',
+  TEXT_COLOR: '--badge-text-color',
+};
+
+export const COLORS_TOOLBAR = {
+  BACKGROUND: '--toolbar-background',
+  INPUT_BORDER: '--toolbar-border-color',
 };
 
 export const COLORS_CHECKBOX = {
