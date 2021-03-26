@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import { StarSVG, ArrowUpSVG } from '@aicloud/ui-icons';
+import { StarSVG, ArrowUpSVG } from '@sbercloud/icons';
 
 import { Divider } from 'components/Divider';
 
@@ -46,7 +46,7 @@ export const CollapsePanelItem: FC<ICollapsePanelItemProps> = ({
   return (
     <ContainerStyled showHover={hasHeaderClickCollapsed}>
       <HeaderGroupStyled
-        data-clicked={hasHeaderClickCollapsed}
+        data-clicked={hasHeaderClickCollapsed || undefined}
         onClick={hasHeaderClickCollapsed ? handleClick : undefined}
       >
         <HeaderStyled>{header}</HeaderStyled>
@@ -54,14 +54,14 @@ export const CollapsePanelItem: FC<ICollapsePanelItemProps> = ({
           {isShowFavourites && (
             <StarSVG
               className={favouriteButtonClassName}
-              data-filled={isFavouriteState}
+              data-filled={isFavouriteState || undefined}
               onClick={() => setIsFavourite(isFavourite => !isFavourite)}
             />
           )}
           {isShowCollapse && (
             <CollapseButtonStyled
               onClick={handleClick}
-              data-rotate={isCollapsed}
+              data-rotate={isCollapsed || undefined}
             >
               <ArrowUpSVG className={collapseIconClassName} />
             </CollapseButtonStyled>
@@ -69,9 +69,11 @@ export const CollapsePanelItem: FC<ICollapsePanelItemProps> = ({
         </ButtonGroupStyled>
       </HeaderGroupStyled>
       <ContentWrapStyled
-        data-expanded={!isCollapsed}
-        data-collapsed={isCollapsed}
-        data-expanded-animation={hasExpandedAnimation && !isCollapsed}
+        data-expanded={!isCollapsed || undefined}
+        data-collapsed={isCollapsed || undefined}
+        data-expanded-animation={
+          (hasExpandedAnimation && !isCollapsed) || undefined
+        }
         aria-expanded={isCollapsed}
       >
         <ContentStyled>

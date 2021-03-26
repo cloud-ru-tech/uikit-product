@@ -11,7 +11,7 @@ import {
 import { TState } from 'components/Tabs/helpers/types';
 import { TabsContext } from 'components/Tabs/helpers/context';
 import { reducer, setValue } from 'components/Tabs/helpers/reducer';
-import { ITabProps } from 'components/Tabs/helperComponents/Tab';
+import { ITabProps } from 'components/Tabs/components/Tab';
 
 import { GroupStyled } from './styled';
 
@@ -54,7 +54,10 @@ export const Tabs: FC<ITabsProps> = ({
 
   return (
     <TabsContext.Provider value={{ state, dispatch }}>
-      <GroupStyled data-gray={theme === TabsTheme.gray} className={className}>
+      <GroupStyled
+        data-gray={theme === TabsTheme.gray || undefined}
+        className={className}
+      >
         {children}
       </GroupStyled>
       <>

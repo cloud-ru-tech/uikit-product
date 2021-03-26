@@ -1,9 +1,8 @@
-import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
+import { Tab } from 'components/Tabs';
 import { Avatar } from 'components/Avatar';
 import { CollapsePanel, CollapsePanelItem } from 'components/CollapsePanel';
-import { Tab } from 'components/Tabs/helperComponents/Tab';
 
 import { Tabs, TabsTheme, ITabsProps } from './Tabs';
 

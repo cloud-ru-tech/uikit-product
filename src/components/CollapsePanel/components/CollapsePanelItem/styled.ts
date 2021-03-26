@@ -30,7 +30,7 @@ export const HeaderStyled = styled.div`
 
 export const HeaderGroupStyled = styled.div`
   display: flex;
-  &[data-clicked='true'] {
+  &[data-clicked] {
     cursor: pointer;
   }
 `;
@@ -53,7 +53,7 @@ export const CollapseButtonStyled = styled.button`
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  &[data-rotate='true'] {
+  &[data-rotate] {
     transform: rotate(0.5turn);
   }
 `;
@@ -64,19 +64,19 @@ export const collapseIconClassName = css`
 `;
 
 export const ContentWrapStyled = styled.div`
-  &[data-collapsed='true'] {
+  &[data-collapsed] {
     max-height: 0;
     transition: max-height 0.2s ease-out;
     overflow: hidden;
   }
 
-  &[data-expanded='true'] {
+  &[data-expanded] {
     max-height: 500px;
   }
 
-  &[data-expanded-animation='true'] {
+  &[data-expanded-animation] {
     transition: max-height 0.5s ease-in;
-    overflow: hidden;
+    overflow: scroll;
   }
 `;
 
@@ -94,7 +94,7 @@ export const favouriteButtonClassName = css`
       ${COLORS_COLLAPSE_PANEL.COLLAPSE_PANEL_FAVOURITE_ICON_HOVER_COLOR}
     );
   }
-  &[data-filled='true'] {
+  &[data-filled] {
     fill: var(
       ${COLORS_COLLAPSE_PANEL.COLLAPSE_PANEL_FAVOURITE_ICON_FILLED_COLOR}
     );

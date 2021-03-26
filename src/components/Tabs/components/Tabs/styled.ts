@@ -10,7 +10,7 @@ export const GroupStyled = styled.ul`
   padding: 0px;
   border-bottom: 1px solid var(${COLORS_TABS.TAB_BORDER_COLOR});
 
-  &[data-gray='true'] {
+  &[data-gray] {
     border-bottom: 1px solid var(${COLORS_TABS.TAB_GRAY_BORDER_COLOR});
   }
 `;

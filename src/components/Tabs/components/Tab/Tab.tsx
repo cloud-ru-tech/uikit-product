@@ -22,14 +22,12 @@ export const Tab: FC<ITabProps> = ({ identKey, label, onClick }) => {
     }
   };
 
-  const { state } = context || {};
+  const stateValue = context?.state?.value;
 
-  const isActive = useMemo(() => identKey === context?.state?.value, [
-    state?.value,
-  ]);
+  const isActive = useMemo(() => identKey === stateValue, [stateValue]);
 
   return (
-    <ListItemStyled onClick={handleClick} data-blue={isActive}>
+    <ListItemStyled onClick={handleClick} data-blue={isActive || undefined}>
       {label}
     </ListItemStyled>
   );
