@@ -13,7 +13,7 @@ export const ToolBarButton: FC<IToolBarButtonProps> = ({
   badgeText,
   ...buttonProps
 }) => (
-  <TableMenuButton {...buttonProps} className={className}>
+  <TableMenuButton {...buttonProps} size='m' className={className}>
     {badgeText ? <Badge text={badgeText}>{children}</Badge> : children}
   </TableMenuButton>
 );
