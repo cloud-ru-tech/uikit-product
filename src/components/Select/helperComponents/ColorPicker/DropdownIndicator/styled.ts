@@ -18,7 +18,6 @@ export const StyledTag = styled(Tag)`
 
 export const arrowDownClassName = css`
   cursor: pointer;
-  fill: var(${COLORS_SELECT.DROPDOWN_ICON_COLOR});
 
   &:hover,
   &:focus {

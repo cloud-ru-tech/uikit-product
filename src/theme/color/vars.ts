@@ -229,6 +229,9 @@ export const COLORS_BADGE = {
 
 export const COLORS_TOOLBAR = {
   BACKGROUND: '--toolbar-background',
+  ICON_COLOR: '--toolbar-icon-color',
+  ICON_HOVER_COLOR: '--toolbar-icon-hover-color',
+  INPUT_BORDER: '--toolbar-border-color',
 };
 
 export const COLORS_CHECKBOX = {

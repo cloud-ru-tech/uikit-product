@@ -1,14 +1,14 @@
-import React, { FC, useEffect, useState } from 'react';
-import clsx from 'clsx';
+import { createRef, FC, useEffect, useState } from 'react';
 
-import { SearchSVG, CrossSVG } from '@aicloud/ui-icons';
+import { SearchSVG, CrossSVG } from '@sbercloud/icons';
 
 import { Input, IInputProps } from 'components/Input';
 
 import {
+  InputWrapStyled,
+  inputClassName,
   crossIconClassName,
   searchIconClassname,
-  inputClassName,
 } from './styled';
 
 export interface IToolBarInputProps extends Omit<IInputProps, 'onChange'> {
@@ -21,43 +21,50 @@ export const ToolBarInput: FC<IToolBarInputProps> = ({
   wrapperClassName,
   ...inputProps
 }) => {
-  const customInputRef = React.createRef<HTMLInputElement>();
+  const inputWrapperRef = createRef<HTMLDivElement>();
   const [hasPrevSibling, setPrevSibling] = useState<undefined | boolean>();
   const [hasNextSibling, setNextSibling] = useState<undefined | boolean>();
 
   useEffect(() => {
-    const inputEL = customInputRef?.current;
-    if (!inputEL) return;
+    const inputWrapper = inputWrapperRef?.current;
 
-    setPrevSibling(Boolean(inputEL.previousSibling) || undefined);
-    setNextSibling(Boolean(inputEL.nextSibling) || undefined);
-  }, [customInputRef]);
+    if (!inputWrapper) {
+      return;
+    }
+
+    setPrevSibling(Boolean(inputWrapper.previousElementSibling) || undefined);
+    setNextSibling(Boolean(inputWrapper.nextElementSibling) || undefined);
+  }, [inputWrapperRef]);
 
   return (
-    <Input
-      {...inputProps}
-      ref={customInputRef}
-      value={value}
-      onChange={event => {
-        onChange(event.target.value);
-      }}
-      wrapperClassName={clsx(inputClassName, wrapperClassName)}
-      type='embed'
+    <InputWrapStyled
+      ref={inputWrapperRef}
       data-has-prev-sibling={hasPrevSibling || undefined}
       data-has-next-sibling={hasNextSibling || undefined}
-      postfix={
-        value ? (
-          <CrossSVG
-            className={crossIconClassName}
-            onClick={(): void => {
-              onChange('');
-            }}
-          />
-        ) : (
-          <SearchSVG className={searchIconClassname} />
-        )
-      }
-      placeholder='Поиск'
-    />
+    >
+      <Input
+        {...inputProps}
+        value={value}
+        onChange={event => {
+          onChange(event.target.value);
+        }}
+        className={inputClassName}
+        wrapperClassName={wrapperClassName}
+        type='embed'
+        postfix={
+          value ? (
+            <CrossSVG
+              className={crossIconClassName}
+              onClick={(): void => {
+                onChange('');
+              }}
+            />
+          ) : (
+            <SearchSVG className={searchIconClassname} />
+          )
+        }
+        placeholder='Поиск'
+      />
+    </InputWrapStyled>
   );
 };

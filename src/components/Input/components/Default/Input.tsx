@@ -36,6 +36,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       label,
       labelMinWidth,
       disabled = false,
+      wrapperRef,
     },
     ref,
   ) => {
@@ -116,11 +117,12 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
     };
 
     return (
-      <StyledWrap className={wrapperClassName}>
+      <StyledWrap className={wrapperClassName} ref={wrapperRef}>
         {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
-        <StyledInputWrapper ref={ref}>
+        <StyledInputWrapper>
           <div onClick={handleInputClick}>
             <StyledInput
+              ref={ref}
               allowCopy={allowCopy}
               type={getInputType({ type, isViewMode })}
               onChange={handleChange}

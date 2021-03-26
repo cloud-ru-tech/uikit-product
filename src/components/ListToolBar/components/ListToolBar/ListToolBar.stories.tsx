@@ -7,12 +7,12 @@ import {
   RefreshSVG,
   ExcludeSVG,
   RowExpandedSVG,
-} from '@aicloud/ui-icons';
+} from '@sbercloud/icons';
 
 import { ListToolBar, IListToolBarWrapperProps } from './ListToolBar';
 
 export default {
-  title: 'Components/List Tool Bar',
+  title: 'Components/ListToolBar',
 } as Meta;
 
 const Template: Story<IListToolBarWrapperProps> = ({ ...args }) => {

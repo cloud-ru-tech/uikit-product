@@ -15,7 +15,7 @@ export const Badge: FC<IBadgeProps> = ({
   className,
 }) => {
   if (!text) {
-    return <>{children}</>;
+    return <>children</>;
   }
 
   return (
