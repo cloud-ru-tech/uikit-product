@@ -70,8 +70,7 @@ export const Description = styled.div`
   line-height: 15px;
   color: var(${COLORS_GENERAL.TEXT});
 `;
-// TODO: we have to create className instead of wrapping component because of a bug
-// https://github.com/NervJS/taro/issues/8325
+
 export const radioCheckedClassName = css`
   position: absolute;
   animation-name: checked;
