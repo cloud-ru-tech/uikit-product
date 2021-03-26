@@ -9,7 +9,7 @@ export const ContainerStyled = styled.div<{
   width: '100%';
   grid-template-columns: repeat(
     ${({ cardsPerRow, autoFill }) => (autoFill ? 'auto-fill' : cardsPerRow)},
-    minmax(min(270px, 100%), 1fr)
+    minmax(min(300px, 100%), 1fr)
   );
 `;
 
