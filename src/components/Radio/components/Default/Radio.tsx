@@ -1,6 +1,6 @@
 import { FC, useCallback, useContext, useMemo } from 'react';
 
-import { RadioUncheckedSVG, RadioCheckedSVG } from '@aicloud/ui-icons';
+import { RadioUncheckedSVG, RadioCheckedSVG } from '@sbercloud/icons';
 
 import { RadioGroupContext } from 'components/Radio/components/RadioGroup/context';
 

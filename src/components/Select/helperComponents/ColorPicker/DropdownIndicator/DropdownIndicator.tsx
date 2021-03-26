@@ -1,6 +1,6 @@
 import { components as ReactSelectComponents } from 'react-select';
 
-import { ArrowDownSVG } from '@aicloud/ui-icons';
+import { ArrowDownSVG } from '@sbercloud/icons';
 
 import { StyledDropdown, StyledTag, arrowDownClassName } from './styled';
 

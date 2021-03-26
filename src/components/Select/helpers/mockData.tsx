@@ -1,4 +1,4 @@
-import { GroupStub0SVG } from '@aicloud/ui-icons';
+import { GroupStub0SVG } from '@sbercloud/icons';
 
 import { TruncateString } from 'components/TruncateString';
 

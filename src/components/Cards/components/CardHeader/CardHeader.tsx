@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import { StarSVG } from '@aicloud/ui-icons';
+import { StarSVG } from '@sbercloud/icons';
 
 import { Checkbox } from 'components/Checkbox';
 import { MoreButton } from 'components/Button';

@@ -9,19 +9,21 @@ export default {
   component: NotifyText,
 } as Meta;
 
-const Template: Story<TNotifyProps & { children: string }> = args => (
+const Template: Story<TNotifyProps & { children: string }> = ({
+  children,
+  ...restArgs
+}) => (
   <div>
-    <NotifyText {...args}>{args.children} (NotifyText)</NotifyText>
+    <NotifyText {...restArgs}>{children} (NotifyText)</NotifyText>
   </div>
 );
 
-export const Default = Template.bind({});
-Default.args = {
+export const notify = Template.bind({});
+notify.args = {
   color: `var(${COLORS_GENERAL.TEXT})`,
   children: 'Пример',
 };
-
-Default.argTypes = {
+notify.argTypes = {
   color: {
     control: {
       type: 'color',

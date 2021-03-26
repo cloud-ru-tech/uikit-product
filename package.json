@@ -33,7 +33,7 @@
     ]
   },
   "dependencies": {
-    "@aicloud/ui-icons": "0.0.28-231ed6b2",
+    "@sbercloud/icons": "^1.0.2",
     "clsx": "^1.1.1",
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",
@@ -46,7 +46,8 @@
     "react-modal": "^3.12.1",
     "react-paginate": "^7.1.0",
     "react-popper-tooltip": "3.1.0",
-    "react-select": "3.1.0"
+    "react-select": "3.1.0",
+    "react-textarea-autosize": "^8.3.2"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.1",

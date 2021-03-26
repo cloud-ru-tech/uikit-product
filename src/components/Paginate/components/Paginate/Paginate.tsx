@@ -2,7 +2,7 @@ import { FC } from 'react';
 import ReactPaginate, { ReactPaginateProps } from 'react-paginate';
 import clsx from 'clsx';
 
-import { LeftSVG, RightSVG } from '@aicloud/ui-icons';
+import { LeftSVG, RightSVG } from '@sbercloud/icons';
 
 import {
   pageClassName,
