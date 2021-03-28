@@ -7,6 +7,7 @@ import {
   COLORS_BUTTON,
   COLORS_TAG,
   COLORS_STATUS,
+  COLORS_SWITCH,
 } from './vars';
 
 export const green = css`
@@ -119,6 +120,13 @@ export const green = css`
       ${COLORS_STATUS.SUCCESS_BG}: var(${COLORS.GREEN_5});
       ${COLORS_STATUS.WARNING_BG}: var(${COLORS.YELLOW});
       ${COLORS_STATUS.UNACTIVE_BG}: var(${COLORS.GRAY_6});
+
+      ${COLORS_SWITCH.UNACTIVE_BG}: var(${COLORS.GRAY_3});
+      ${COLORS_SWITCH.UNACTIVE_HOVER_BG}: var(${COLORS.GRAY_6});
+      ${COLORS_SWITCH.UNACTIVE_DISABLED_BG}: var(${COLORS.GRAY_3});
+      ${COLORS_SWITCH.ACTIVE_BG}: var(${COLORS.GREEN_5});
+      ${COLORS_SWITCH.ACTIVE_HOVER_BG}: var(${COLORS.GREEN_6});
+      ${COLORS_SWITCH.ACTIVE_DISABLED_BG}: var(${COLORS.GREEN_3});
     }
   }
 `;

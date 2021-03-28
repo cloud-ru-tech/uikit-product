@@ -289,3 +289,12 @@ export const COLORS_STATUS = {
   WARNING_BG: '--status-warning-bg',
   UNACTIVE_BG: '--status-unactive-bg',
 };
+
+export const COLORS_SWITCH = {
+  UNACTIVE_BG: '--switch-unactive-bg',
+  UNACTIVE_HOVER_BG: '--switch-unactive-hover-bg',
+  UNACTIVE_DISABLED_BG: '--switch-unactive-disabled-bg',
+  ACTIVE_BG: '--switch-active-bg',
+  ACTIVE_HOVER_BG: '--switch-active-hover-bg',
+  ACTIVE_DISABLED_BG: '--switch-active-disabled-bg',
+};
