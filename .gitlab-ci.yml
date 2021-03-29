@@ -25,7 +25,7 @@ stages:
 - lint
 - yarn-build
 - image
-- deploy-storybook
+- deploy
 - notification
 
 lint:
@@ -40,7 +40,7 @@ yarn-build:
   variables:
     YARN_PREPACK: "true"
 
-image-storybook:
+image:
   extends: .kaniko-image
   only:
     - develop
@@ -48,7 +48,7 @@ image-storybook:
     - master
     - migration
 
-deploy-storybook:
+deploy:
   extends: .helm-deploy
   only:
     - migration
