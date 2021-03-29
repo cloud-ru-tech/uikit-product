@@ -39,6 +39,8 @@ yarn-build:
     YARN_PREPACK: "true"
 
 kaniko:image:
+  before_script:
+    - cat $NPMRC > .npmrc
   extends: .kaniko-image
   only:
     - develop
