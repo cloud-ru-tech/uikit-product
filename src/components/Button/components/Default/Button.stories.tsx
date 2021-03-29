@@ -40,6 +40,7 @@ const buttons: Array<{
   { name: 'FILLED-BRAND', variant: 'filled-brand' },
   { name: 'OUTLINED', variant: 'outlined' },
   { name: 'TRANSPARENT', variant: 'transparent' },
+  { name: 'TABLE-MENU', variant: 'table-menu' },
   { name: 'WHITE', variant: 'white', background: '#5558FA' },
 ];
 
@@ -57,9 +58,9 @@ const Template: Story<IButtonProps & { showIcon: boolean }> = ({
         <Button
           {...args}
           variant={variant}
-          icon={showIcon ? <CopySVG /> : null}
+          icon={showIcon || variant === 'table-menu' ? <CopySVG /> : null}
         >
-          {children}
+          {variant !== 'table-menu' && children}
         </Button>
       </Item>
     ))}

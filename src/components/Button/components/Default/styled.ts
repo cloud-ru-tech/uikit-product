@@ -15,6 +15,10 @@ export const ButtonComponent = styled.button`
 
   box-sizing: border-box;
 
+  &[data-size='xxs'] {
+    padding: 0;
+  }
+
   &[data-size='xs'] {
     padding: 0 2px;
   }
@@ -125,6 +129,24 @@ export const ButtonComponent = styled.button`
         border-style: solid;
         border-color: var(${COLORS_BUTTON.TRANSPARENT_FOCUS_BORDER});
         border-radius: 4px;
+      }
+    }
+  }
+
+  &[data-variant='table-menu'] {
+    fill: var(${COLORS_BUTTON.TABLE_MENU_BUTTON_COLOR});
+    background-color: transparent;
+    &:hover {
+      fill: var(${COLORS_BUTTON.TABLE_MENU_BUTTON_HOVER_COLOR});
+    }
+    &:active {
+      fill: var(${COLORS_BUTTON.TABLE_MENU_BUTTON_ACTIVE_COLOR});
+    }
+    &:disabled {
+      fill: var(${COLORS_BUTTON.TABLE_MENU_BUTTON_DISABLED_COLOR});
+
+      &:hover {
+        fill: var(${COLORS_BUTTON.TABLE_MENU_BUTTON_DISABLED_COLOR});
       }
     }
   }

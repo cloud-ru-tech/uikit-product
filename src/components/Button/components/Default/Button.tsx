@@ -8,7 +8,7 @@ interface IButtonCustomProps {
   disabled?: boolean;
   variant?: TButtonVariant;
   icon?: React.ReactNode;
-  size?: 'xs' | 's' | 'm';
+  size?: 'xxs' | 'xs' | 's' | 'm';
   children?: React.ReactNode;
   iconPosition?: 'before' | 'after';
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;

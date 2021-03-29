@@ -3,4 +3,5 @@ export type TButtonVariant =
   | 'outlined'
   | 'transparent'
   | 'white'
-  | 'filled-brand';
+  | 'filled-brand'
+  | 'table-menu';
