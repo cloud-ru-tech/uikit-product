@@ -36,7 +36,7 @@ lint-sonarqube:
   allow_failure: true
 
 build-npm:
-  extends: .npm-build
+  extends: .yarn-build
   variables:
     YARN_PREPACK: "true"
 
