@@ -1,5 +1,3 @@
----
-
 include:
   - project: templates/pipelines
     ref: uikit
@@ -40,7 +38,7 @@ yarn-build:
   variables:
     YARN_PREPACK: "true"
 
-image:
+kaniko:image:
   extends: .kaniko-image
   only:
     - develop
