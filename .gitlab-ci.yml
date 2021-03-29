@@ -5,17 +5,17 @@ include:
     ref: uikit
     file: /templates/lint/yarn_lint.yaml
   - project: templates/pipelines
-    ref: uikit
+    ref: v1.3.0
     file: /templates/lint/sonarqube.yaml
   - project: templates/pipelines
-    ref: uikit
+    ref: v1.3.0
     file: /templates/build/yarn_build.yaml
   - project: templates/pipelines
-    ref: uikit
-    file: /templates/image/storybook_kaniko_image.yaml
+    ref: v1.3.0
+    file: /templates/image/kaniko_image.yaml
   - project: templates/pipelines
-    ref: uikit
-    file: /templates/deploy/storybook_deploy.yaml
+    ref: v1.3.0
+    file: /templates/deploy/helm_deploy.yaml
   - project: templates/pipelines
     ref: uikit
     file: /templates/notification/slack_notify.yaml
@@ -33,9 +33,12 @@ lint:
   
 lint-sonarqube:
   extends: .sonarqube
+  allow_failure: true
 
 build-npm:
   extends: .npm-build
+  variables:
+    YARN_PREPACK: "true"
 
 image-storybook:
   extends: .kaniko-image
@@ -43,13 +46,15 @@ image-storybook:
     - develop
     - develop-ci
     - master
+    - migration
 
 deploy-storybook:
-  extends: .storybook-deploy   
+  extends: .helm-deploy
   only:
-    - develop
-    - develop-ci
-    - master
+    - migration
+  variables:
+    K8S_NAMESPACE: "uikit"
+    K8S_CLUSTER_CONF: ${k8s_devops_test}
 
 Notify fail:
   extends: .notify_fail_slack
