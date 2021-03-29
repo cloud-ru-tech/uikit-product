@@ -28,6 +28,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       placeholder,
       className,
       wrapperClassName,
+      copyButtonClassName,
       postfix,
       allowClear,
       allowCopy,
@@ -155,6 +156,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
               <CopyButton
                 text={value.toString()}
                 onClick={handleCopyButtonClick}
+                className={copyButtonClassName}
                 showCopyCompleted={isCopyCompleted}
               />
             )}
