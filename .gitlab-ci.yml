@@ -6,7 +6,7 @@ include:
     ref: v1.3.0
     file: /templates/lint/sonarqube.yaml
   - project: templates/pipelines
-    ref: v1.3.0
+    ref: master
     file: /templates/build/yarn_build.yaml
   - project: templates/pipelines
     ref: v1.3.0
