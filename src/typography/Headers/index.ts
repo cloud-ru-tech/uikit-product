@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { COLORS, COLORS_GENERAL } from 'theme/color/vars';
+import { COLORS_GENERAL } from 'theme/color/vars';
 
 export type TFontProps = {
   color?: string;

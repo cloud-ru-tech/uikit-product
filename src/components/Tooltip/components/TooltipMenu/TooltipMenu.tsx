@@ -11,7 +11,7 @@ export interface ITooltipMenuProps {
 export const TooltipMenu: FC<ITooltipMenuProps> = memo(function TooltipMenu(
   props,
 ) {
-  const { children, tooltipRef, className, ...otherProps } = props;
+  const { children, className, ...otherProps } = props;
 
   return (
     <Container className={className} {...otherProps}>

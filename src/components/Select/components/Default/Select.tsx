@@ -44,6 +44,7 @@ export interface ISelectProps<CustomOptionType>
   isSearchableCustom?: boolean;
   searchableProps?: string[];
   customRef?: (instance: RCSelect<CustomOptionType> | null) => void;
+  collapsedGroup?: boolean;
 }
 
 export const Select = <CustomOptionType extends OptionTypeBase>(
@@ -64,6 +65,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     prefixOption,
     postfixOption,
     prefixMultiValueContainer,
+    collapsedGroup,
   } = props;
   const [stateOptions, setOptions] = useState<CustomOptionType[]>();
   const [inputValue, setInputSearch] = useState<string>();
@@ -146,12 +148,14 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
         prefixOption,
         postfixOption,
         prefixMultiValueContainer,
+        collapsedGroup,
       }),
     [
       prefixControl?.toString(),
       prefixOption?.toString(),
       postfixOption?.toString(),
       prefixMultiValueContainer?.toString(),
+      collapsedGroup,
     ],
   );
 
@@ -202,6 +206,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
           /* todo: fix this `dirty` hack */
           e.defaultPrevented = true;
         }}
+        collapsedGroup={collapsedGroup}
       />
     </div>
   );

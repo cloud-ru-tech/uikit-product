@@ -12,6 +12,8 @@ import { CustomOption } from '../helperComponents/Shared/CustomOption';
 import { CustomControl } from '../helperComponents/Shared/CustomControl';
 import { CustomMenu } from '../helperComponents/Shared/CustomMenu';
 import { MultiValueContainer } from '../helperComponents/Shared/MultiValueContainer';
+import { CustomGroup } from '../helperComponents/Shared/CustomGroup';
+import { CustomGroupHeading } from '../helperComponents/Shared/CustomGroupHeading';
 
 const crossSVGClassName = css`
   fill: inherit;
@@ -49,6 +51,8 @@ export default <CustomOptionType,>(
   const customControl = CustomControl<CustomOptionType>(props);
   const customOption = CustomOption<CustomOptionType>(props);
   const multiValueContainer = MultiValueContainer<CustomOptionType>(props);
+  const group = CustomGroup<CustomOptionType>(props);
+  const groupHeading = CustomGroupHeading<CustomOptionType>(props);
 
   return {
     MultiValueRemove,
@@ -59,5 +63,7 @@ export default <CustomOptionType,>(
     Control: customControl,
     MultiValueContainer: multiValueContainer,
     Menu: CustomMenu,
+    Group: group,
+    GroupHeading: groupHeading,
   };
 };

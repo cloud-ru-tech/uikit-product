@@ -1,5 +1,5 @@
 import { css } from '@linaria/core';
-import { COLORS, COLORS_GENERAL } from './color/vars';
+import { COLORS_GENERAL } from './color/vars';
 
 export const globals = css`
   :global() {

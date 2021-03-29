@@ -1,5 +1,5 @@
 import { CSSProperties } from 'react';
-import { Props, Theme, ControlProps } from 'react-select';
+import { Props, Theme } from 'react-select';
 
 import { COLORS_SELECT, COLORS } from 'theme/color/vars';
 
@@ -13,8 +13,8 @@ export const theme = commonTheme({
 
 export const styles = commonStyles({
   control: (
-    styles: CSSProperties,
-    { isDisabled, menuIsOpen }: ControlProps<{ [key: string]: any }>,
+    styles,
+    { isDisabled, menuIsOpen },
   ): CSSProperties & {
     '&:hover': CSSProperties;
     '&:focus': CSSProperties;
@@ -50,10 +50,7 @@ export const styles = commonStyles({
     padding: '0 8px',
     flexWrap: 'nowrap',
   }),
-  menuList: (
-    styles: CSSProperties,
-    data: ControlProps<{ [key: string]: any }>,
-  ) => ({
+  menuList: (styles, data) => ({
     ...styles,
     overflowY: data.selectProps.menuListBlockScroll ? 'hidden' : 'auto',
     paddingTop: 0,

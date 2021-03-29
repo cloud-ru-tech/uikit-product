@@ -6,7 +6,7 @@ import { Button } from 'components/Button';
 import { PRESET_COLORS } from 'components/Tag/helpers/colors';
 import getRandomInt from 'components/Select/helpers/getRandomInt';
 
-import { OptionTypeTag, TagSelect } from './TagSelect';
+import { TagSelect } from './TagSelect';
 
 export default {
   title: 'Components/Select',
@@ -49,9 +49,7 @@ const Template = (): JSX.Element => {
           onTagChange={(tags): void => {
             setTags(tags);
           }}
-          onChange={(tag: OptionTypeTag): void => {
-            console.log('tag: ', tag);
-          }}
+          onChange={() => {}}
         />
         <TagSelect
           customControl={({ toggleMenu }): JSX.Element => (
