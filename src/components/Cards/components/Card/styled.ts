@@ -66,7 +66,6 @@ export const AdditionalHoverImageStyled = styled.div<{
   height: 100%;
   width: 100%;
   background-size: cover;
-  background-color: var(${COLORS_CARD.CARD_ADDITIONAL_HOVER_COLOR});
   background-image: ${({ additionalHoverImage }) =>
     additionalHoverImage
       ? `url(${additionalHoverImage})`

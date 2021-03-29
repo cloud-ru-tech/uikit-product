@@ -251,7 +251,6 @@ export const COLORS_CARD = {
   CARD_HOVER_BACKGROUND: '--card-hover-background',
   CARD_SELECTED_BACKGROUND: '--card-selected-background',
   CARD_HOVER_SHADOW: '--card-hover-shadow',
-  CARD_ADDITIONAL_HOVER_COLOR: '--card-additional-hover-color',
   CARD_FAVOURITE_ICON_COLOR: '--card-favourite-icon-color',
   CARD_FAVOURITE_ICON_HOVER_COLOR: '--card-favourite-icon-hover-color',
   CARD_FAVOURITE_ICON_FILLED_COLOR: '--card-favourite-icon-filled-color',
