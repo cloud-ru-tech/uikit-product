@@ -6,6 +6,7 @@ export type IInputProps = {
   value?: string | number;
   placeholder?: string;
   wrapperClassName?: string;
+  copyButtonClassName?: string;
   className?: string;
   postfix?: React.ReactNode;
   allowClear?: boolean;
