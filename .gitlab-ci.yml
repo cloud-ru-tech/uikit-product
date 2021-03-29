@@ -48,7 +48,7 @@ kaniko:image:
 deploy:
   extends: .helm-deploy
   only:
-    - migration
+    - develop
   variables:
     K8S_NAMESPACE: "uikit"
     K8S_CLUSTER_CONF: ${k8s_devops_test}
