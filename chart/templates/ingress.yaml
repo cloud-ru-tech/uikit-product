@@ -18,6 +18,6 @@ spec:
       http:
         paths:
           - backend:
-              serviceName: uikit
+              serviceName: uikit20
               servicePort: 80
             path: /
