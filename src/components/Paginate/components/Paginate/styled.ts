@@ -69,7 +69,7 @@ export const iconLinkClassName = css`
   outline: 0;
 
   &[aria-disabled='true'] {
-    cursor: auto;
+    cursor: not-allowed;
     fill: var(${COLORS_PAGINATE.PAGINATE_DISABLED_COLOR});
   }
 `;

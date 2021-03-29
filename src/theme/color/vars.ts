@@ -262,3 +262,20 @@ export const COLORS_PAGINATE = {
   PAGINATE_DISABLED_COLOR: '--paginate-disabled-color',
   PAGINATE_WHITE_COLOR: '--paginate-white-color',
 };
+
+export const COLORS_COLLAPSE_PANEL = {
+  COLLAPSE_PANEL_BACKGROUND: '--collapse-panel-background',
+  COLLAPSE_PANEL_FAVOURITE_ICON_COLOR: '--collapse-panel-favourite-icon-color',
+  COLLAPSE_PANEL_FAVOURITE_ICON_HOVER_COLOR:
+    '--collapse-panel-favourite-icon-hover-color',
+  COLLAPSE_PANEL_FAVOURITE_ICON_FILLED_COLOR:
+    '--collapse-panel-favourite-icon-filled-color',
+  COLLAPSE_PANEL_BACKGROUND_HOVER: '--collapse-panel-background-hover',
+};
+
+export const COLORS_TABS = {
+  TAB_BORDER_COLOR: '--tab-border-color',
+  TAB_GRAY_BORDER_COLOR: '--tab-gray-border-color',
+  TAB_ACTIVE_COLOR: '--tab-active-color',
+  TAB_TEXT_COLOR: '--tab-text-color',
+};

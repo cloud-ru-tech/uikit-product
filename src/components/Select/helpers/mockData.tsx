@@ -151,19 +151,19 @@ export const services = [
     value: 'AmazonS3',
     label: 'Amazon S3',
     labelText: 'Amazon S3',
-    logo: <GroupStub0SVG />,
+    logo: <GroupStub0SVG size={20} />,
   },
   {
     value: 'BigQuery',
     label: 'BigQuery',
     labelText: 'BigQuery',
-    logo: <GroupStub0SVG />,
+    logo: <GroupStub0SVG size={20} />,
   },
   {
     value: 'Ds',
     label: 'AICloud',
     labelText: 'AICloud',
-    logo: <GroupStub0SVG />,
+    logo: <GroupStub0SVG size={20} />,
   },
   {
     value: 'GoogleCloudstorage',
@@ -174,31 +174,31 @@ export const services = [
       />
     ),
     labelText: 'Google Cloud storage',
-    logo: <GroupStub0SVG />,
+    logo: <GroupStub0SVG size={20} />,
   },
   {
     value: 'ApacheSpark',
     label: 'Apache Spark',
     labelText: 'Apache Spark',
-    logo: <GroupStub0SVG />,
+    logo: <GroupStub0SVG size={20} />,
   },
   {
     value: 'MicrosoftSqlServer',
     label: 'Microsoft SQL Server',
     labelText: 'Microsoft SQL Server',
-    logo: <GroupStub0SVG />,
+    logo: <GroupStub0SVG size={20} />,
   },
   {
     value: 'MySql',
     label: 'MySql',
     labelText: 'MySql',
-    logo: <GroupStub0SVG />,
+    logo: <GroupStub0SVG size={20} />,
   },
   {
     value: 'Postgre',
     label: 'PostgreSQL',
     labelText: 'PostgreSQL',
-    logo: <GroupStub0SVG />,
+    logo: <GroupStub0SVG size={20} />,
   },
 ];
 
@@ -206,12 +206,16 @@ export const groupedServices = [
   {
     label: 'S3 Connectors',
     options: [
-      { value: 'AmazonS3', label: 'Amazon S3', logo: <GroupStub0SVG /> },
-      { value: 'Ds', label: 'AICloud', logo: <GroupStub0SVG /> },
+      {
+        value: 'AmazonS3',
+        label: 'Amazon S3',
+        logo: <GroupStub0SVG size={20} />,
+      },
+      { value: 'Ds', label: 'AICloud', logo: <GroupStub0SVG size={20} /> },
       {
         value: 'GoogleCloudstorage',
         label: 'Google Cloud storage',
-        logo: <GroupStub0SVG />,
+        logo: <GroupStub0SVG size={20} />,
       },
     ],
   },

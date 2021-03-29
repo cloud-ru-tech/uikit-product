@@ -1,0 +1,34 @@
+import { FC, useContext, useMemo } from 'react';
+
+import { TabsContext, ITabsContext } from 'components/Tabs/helpers/context';
+import { setValue } from 'components/Tabs/helpers/reducer';
+
+import { ListItemStyled } from './styled';
+
+export interface ITabProps {
+  label: string;
+  identKey: number;
+  onClick?(identKey: ITabProps['identKey']): void;
+}
+
+export const Tab: FC<ITabProps> = ({ identKey, label, onClick }) => {
+  const context = useContext<ITabsContext | null>(TabsContext);
+
+  const handleClick = (): void => {
+    context?.dispatch(setValue(identKey));
+
+    if (onClick) {
+      onClick(identKey);
+    }
+  };
+
+  const stateValue = context?.state?.value;
+
+  const isActive = useMemo(() => identKey === stateValue, [stateValue]);
+
+  return (
+    <ListItemStyled onClick={handleClick} data-blue={isActive || undefined}>
+      {label}
+    </ListItemStyled>
+  );
+};

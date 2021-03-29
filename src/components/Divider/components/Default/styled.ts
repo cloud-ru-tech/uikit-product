@@ -9,4 +9,5 @@ export const StyledDivider = styled.hr<IStyleProps>`
   color: ${props => props.color};
   background: ${props => props.color};
   height: 1px;
+  width: 100%;
 `;

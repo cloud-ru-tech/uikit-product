@@ -184,7 +184,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
 
         return (val || []).map(
           ({ value, logo }: OptionTypeBase): JSX.Element => {
-            if (isMulti || typeof isMulti === 'undefined') {
+            if (isMulti) {
               return <></>;
             }
 
