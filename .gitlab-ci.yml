@@ -44,9 +44,6 @@ kaniko:image:
   extends: .kaniko-image
   only:
     - develop
-    - develop-ci
-    - master
-    - migration
 
 deploy:
   extends: .helm-deploy
