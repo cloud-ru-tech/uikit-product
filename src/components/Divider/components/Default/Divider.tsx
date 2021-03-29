@@ -5,6 +5,7 @@ import { StyledDivider } from './styled';
 export interface IDividerProps {
   color?: 'light' | 'middle' | 'dark' | string;
   style?: React.CSSProperties;
+  className?: string;
 }
 
 const DEFAULT_COLOR: { [key: string]: string } = {
@@ -16,4 +17,11 @@ const DEFAULT_COLOR: { [key: string]: string } = {
 export const Divider: React.FC<IDividerProps> = ({
   color = 'light',
   style,
-}) => <StyledDivider color={DEFAULT_COLOR[color] || color} style={style} />;
+  className,
+}) => (
+  <StyledDivider
+    color={DEFAULT_COLOR[color] || color}
+    style={style}
+    className={className}
+  />
+);
