@@ -12,6 +12,6 @@ service:
 ingress:
   enabled: false
   annotations: {}
-  host: uikit.devops.sbercloud.dev
+  host: uikit.test.sbercloud.dev
 
 

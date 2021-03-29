@@ -7,12 +7,14 @@ metadata:
     nginx.ingress.kubernetes.io/auth-url: https://oauth2.devops.sbercloud.dev/oauth2/auth
     nginx.ingress.kubernetes.io/proxy-body-size: 2048m
     nginx.ingress.kubernetes.io/proxy-buffer-size: 64k
+    cert-manager.io/cluster-issuer: letsencrypt-http
+
   name: uikit
 spec:
   tls:
     - hosts:
-        - uikit.devops.sbercloud.dev
-      secretName: uikit-https-dev
+        - {{ .Values.ingress.host }}
+      secretName: uikit-https-letsencrypt
   rules:
     - host: {{ .Values.ingress.host }}
       http:
