@@ -23,19 +23,19 @@ include:
 
 stages:
 - lint
-- build-npm
+- yarn-build
 - image
 - deploy-storybook
 - notification
 
 lint:
   extends: .yarn-lint
-  
+
 lint-sonarqube:
   extends: .sonarqube
   allow_failure: true
 
-build-npm:
+yarn-build:
   extends: .yarn-build
   variables:
     YARN_PREPACK: "true"
