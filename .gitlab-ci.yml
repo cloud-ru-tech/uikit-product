@@ -54,7 +54,7 @@ deploy:
     - migration
   variables:
     K8S_NAMESPACE: "uikit"
-    K8S_CLUSTER_CONF: ${k8s_devops_test}
+    K8S_CLUSTER_CONF: ${k8s_devops}
 
 Notify fail:
   extends: .notify_fail_slack
