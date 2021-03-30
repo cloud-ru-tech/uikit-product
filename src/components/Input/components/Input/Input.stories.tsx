@@ -6,7 +6,7 @@ import { IInputProps } from 'components/Input/helpers/types';
 import { Input } from './Input';
 
 export default {
-  title: 'Components/Input/Default',
+  title: 'Components/Input/Input',
   component: Input,
 } as Meta;
 
@@ -16,7 +16,6 @@ const Template: Story<IInputProps> = ({ ...args }) => {
   return (
     <Input
       {...args}
-      placeholder='Пример: Project1-bucket106'
       value={value}
       onChange={(e): void => {
         setValue(e.target.value);
@@ -25,6 +24,11 @@ const Template: Story<IInputProps> = ({ ...args }) => {
   );
 };
 
-export const Default = Template.bind({});
-Default.args = {};
-Default.parameters = {};
+export const input = Template.bind({});
+input.args = {};
+input.parameters = {};
+input.argTypes = {
+  placeholder: {
+    defaultValue: 'Пример: Project1-bucket106',
+  },
+};
