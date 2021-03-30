@@ -1,0 +1,17 @@
+replicaCount: 1
+
+image:
+  repository: registry.ai.4cloud.cf/uikit
+  pullPolicy: Always
+  tag: "0.1.5"
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+  host: uikit.test.devops.sbercloud.dev
+
+

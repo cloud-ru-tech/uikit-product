@@ -1,21 +1,19 @@
----
-
 include:
   - project: templates/pipelines
     ref: uikit
     file: /templates/lint/yarn_lint.yaml
   - project: templates/pipelines
-    ref: uikit
+    ref: v1.3.0
     file: /templates/lint/sonarqube.yaml
   - project: templates/pipelines
-    ref: uikit
+    ref: master
     file: /templates/build/yarn_build.yaml
   - project: templates/pipelines
-    ref: uikit
-    file: /templates/image/storybook_kaniko_image.yaml
+    ref: v1.3.0
+    file: /templates/image/kaniko_image.yaml
   - project: templates/pipelines
-    ref: uikit
-    file: /templates/deploy/storybook_deploy.yaml
+    ref: v1.3.0
+    file: /templates/deploy/helm_deploy.yaml
   - project: templates/pipelines
     ref: uikit
     file: /templates/notification/slack_notify.yaml
@@ -23,33 +21,37 @@ include:
 
 stages:
 - lint
-- build-npm
+- yarn-build
 - image
-- deploy-storybook
+- deploy
 - notification
 
 lint:
   extends: .yarn-lint
-  
+
 lint-sonarqube:
   extends: .sonarqube
+  allow_failure: true
 
-build-npm:
-  extends: .npm-build
+yarn-build:
+  extends: .yarn-build
+  variables:
+    YARN_PREPACK: "true"
 
-image-storybook:
+kaniko:image:
+  before_script:
+    - cat $NPMRC > .npmrc
   extends: .kaniko-image
   only:
     - develop
-    - develop-ci
-    - master
 
-deploy-storybook:
-  extends: .storybook-deploy   
+deploy:
+  extends: .helm-deploy
   only:
     - develop
-    - develop-ci
-    - master
+  variables:
+    K8S_NAMESPACE: "uikit"
+    K8S_CLUSTER_CONF: ${k8s_devops_test}
 
 Notify fail:
   extends: .notify_fail_slack
