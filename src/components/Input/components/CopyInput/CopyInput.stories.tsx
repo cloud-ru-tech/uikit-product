@@ -15,7 +15,7 @@ export const copyInput = Template.bind({});
 copyInput.args = {};
 copyInput.parameters = {};
 copyInput.argTypes = {
-  placeholder: {
-    value: 'Пример: Project1-bucket106',
+  value: {
+    defaultValue: 'Пример: Project1-bucket106',
   },
 };
