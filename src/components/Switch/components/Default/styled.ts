@@ -2,7 +2,9 @@ import { css } from '@linaria/core';
 
 import { COLORS_SWITCH } from 'theme/color/vars';
 
-export const switchClassNameDisabled = css``;
+export const switchClassNameDisabled = css`
+  cursor: not-allowed;
+`;
 
 export const switchClassName = css`
   .react-switch-bg {
