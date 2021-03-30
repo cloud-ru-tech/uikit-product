@@ -21,6 +21,7 @@ import {
   COLORS_COLLAPSE_PANEL,
   COLORS_TABS,
   COLORS_STATUS,
+  COLORS_SWITCH,
 } from './vars';
 
 export const purple = css`
@@ -240,6 +241,13 @@ export const purple = css`
       ${COLORS_STATUS.SUCCESS_BG}: var(${COLORS.GREEN_2});
       ${COLORS_STATUS.WARNING_BG}: var(${COLORS.YELLOW});
       ${COLORS_STATUS.UNACTIVE_BG}: var(${COLORS.GRAY_6});
+
+      ${COLORS_SWITCH.UNACTIVE_BG}: var(${COLORS.GRAY_3});
+      ${COLORS_SWITCH.UNACTIVE_HOVER_BG}: var(${COLORS.GRAY_6});
+      ${COLORS_SWITCH.UNACTIVE_DISABLED_BG}: var(${COLORS.GRAY_3});
+      ${COLORS_SWITCH.ACTIVE_BG}: var(${COLORS.VIOLET_5});
+      ${COLORS_SWITCH.ACTIVE_HOVER_BG}: var(${COLORS.VIOLET_6});
+      ${COLORS_SWITCH.ACTIVE_DISABLED_BG}: var(${COLORS.VIOLET_4});
     }
   }
 `;

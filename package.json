@@ -47,6 +47,7 @@
     "react-paginate": "^7.1.0",
     "react-popper-tooltip": "3.1.0",
     "react-select": "3.1.0",
+    "react-switch": "^6.0.0",
     "react-textarea-autosize": "^8.3.2"
   },
   "peerDependencies": {
