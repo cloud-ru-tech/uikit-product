@@ -6,6 +6,7 @@ import {
   COLORS_GENERAL,
   COLORS_BUTTON,
   COLORS_TAG,
+  COLORS_STATUS,
 } from './vars';
 
 export const green = css`
@@ -112,6 +113,12 @@ export const green = css`
       ${COLORS_BUTTON.WHITE_FOCUS_BG}: var(${COLORS.GREEN_6});
       ${COLORS_BUTTON.WHITE_FOCUS_OUTLINE}: var(${COLORS.GREEN_3});
       ${COLORS_BUTTON.WHITE_FOCUS_BORDER}: transparent;
+
+      ${COLORS_STATUS.COLOR}: var(${COLORS.GRAY_7});
+      ${COLORS_STATUS.FAILED_BG}: var(${COLORS.RED_2});
+      ${COLORS_STATUS.SUCCESS_BG}: var(${COLORS.GREEN_5});
+      ${COLORS_STATUS.WARNING_BG}: var(${COLORS.YELLOW});
+      ${COLORS_STATUS.UNACTIVE_BG}: var(${COLORS.GRAY_6});
     }
   }
 `;

@@ -20,6 +20,7 @@ import {
   COLORS_PAGINATE,
   COLORS_COLLAPSE_PANEL,
   COLORS_TABS,
+  COLORS_STATUS,
 } from './vars';
 
 export const purple = css`
@@ -233,6 +234,12 @@ export const purple = css`
       ${COLORS_TABS.TAB_BORDER_COLOR}: var(${COLORS.GRAY_2});
       ${COLORS_TABS.TAB_GRAY_BORDER_COLOR}: var(${COLORS.GRAY_3});
       ${COLORS_TABS.TAB_TEXT_COLOR}: var(${COLORS.GRAY_6});
+
+      ${COLORS_STATUS.COLOR}: var(${COLORS.GRAY_7});
+      ${COLORS_STATUS.FAILED_BG}: var(${COLORS.RED_2});
+      ${COLORS_STATUS.SUCCESS_BG}: var(${COLORS.GREEN_2});
+      ${COLORS_STATUS.WARNING_BG}: var(${COLORS.YELLOW});
+      ${COLORS_STATUS.UNACTIVE_BG}: var(${COLORS.GRAY_6});
     }
   }
 `;

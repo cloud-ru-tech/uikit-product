@@ -281,3 +281,11 @@ export const COLORS_TABS = {
   TAB_ACTIVE_COLOR: '--tab-active-color',
   TAB_TEXT_COLOR: '--tab-text-color',
 };
+
+export const COLORS_STATUS = {
+  COLOR: '--status-color',
+  FAILED_BG: '--status-failed-bg',
+  SUCCESS_BG: '--status-success-bg',
+  WARNING_BG: '--status-warning-bg',
+  UNACTIVE_BG: '--status-unactive-bg',
+};
