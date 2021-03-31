@@ -12,6 +12,8 @@ export * from './Modal';
 export * from './Radio';
 export * from './Select';
 export * from './Spin';
+export * from './Status';
+export * from './Switch';
 export * from './Tabs';
 export * from './Tag';
 export * from './Tooltip';
