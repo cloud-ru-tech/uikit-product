@@ -32,7 +32,6 @@ const Template: Story = () => {
         onChange={event => {
           setSearch(event.target.value.toLowerCase());
         }}
-        // type='embed'
         postfix={
           search ? (
             <Icons.CrossSVG
