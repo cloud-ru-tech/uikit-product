@@ -16,11 +16,7 @@ const Template: Story<ITabsProps> = ({ ...args }) => (
     theme={args.theme === 'gray' ? TabsTheme.gray : TabsTheme.default}
     {...args}
   >
-    <Tab
-      label='Группы в управлении 2'
-      identKey={0}
-      onClick={e => console.log('click', e)}
-    >
+    <Tab label='Группы в управлении 2' identKey={0} onClick={() => {}}>
       <CollapsePanel isShowFavourites>
         <CollapsePanelItem
           index={0}

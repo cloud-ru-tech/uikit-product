@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import clsx from 'clsx';
+import { cx } from '@linaria/core';
 import isEqual from 'lodash.isequal';
 import { components as ReactSelectComponents } from 'react-select';
 
@@ -70,7 +70,7 @@ export const Option = (
   return (
     <ReactSelectComponents.Option
       {...props}
-      className={clsx(className, optionClass)}
+      className={cx(className, optionClass)}
       innerRef={ref}
       key={tag.value}
       data-is-edit={isEdit}

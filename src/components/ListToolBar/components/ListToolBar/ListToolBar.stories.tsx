@@ -32,13 +32,13 @@ const Template: Story<IListToolBarWrapperProps> = ({ ...args }) => {
           setValue(value);
         }}
       />
-      <ListToolBar.Button badgeText={'3'}>
+      <ListToolBar.Button badgeText='3'>
         <FilterSVG />
       </ListToolBar.Button>
       <ListToolBar.Button>
         <RowExpandedSVG />
       </ListToolBar.Button>
-      <ListToolBar.Button>
+      <ListToolBar.Button isActive>
         <ExcludeSVG />
       </ListToolBar.Button>
     </ListToolBar.Wrapper>

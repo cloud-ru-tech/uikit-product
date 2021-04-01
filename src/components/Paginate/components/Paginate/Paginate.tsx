@@ -1,6 +1,6 @@
 import { FC } from 'react';
+import { cx } from '@linaria/core';
 import ReactPaginate, { ReactPaginateProps } from 'react-paginate';
-import clsx from 'clsx';
 
 import { LeftSVG, RightSVG } from '@sbercloud/icons';
 
@@ -28,8 +28,8 @@ export const Paginate: FC<IPaginateProps> = ({
     nextLabel={<RightSVG size={36} />}
     breakLabel='...'
     breakClassName={pageClassName}
-    breakLinkClassName={clsx(pageLinkClassName, pageLinkActiveClassName)}
-    containerClassName={clsx(paginationClassName, placementStyle[placement])}
+    breakLinkClassName={cx(pageLinkClassName, pageLinkActiveClassName)}
+    containerClassName={cx(paginationClassName, placementStyle[placement])}
     pageClassName={pageClassName}
     pageLinkClassName={pageLinkClassName}
     activeLinkClassName={pageActiveClassName}

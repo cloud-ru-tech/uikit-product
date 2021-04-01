@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import clsx from 'clsx';
+import { cx } from '@linaria/core';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { ISelectProps } from 'components/Select';
@@ -21,7 +21,7 @@ export const CustomOption = <CustomOptionType,>(
       typeof ReactSelectComponents.Option
     >): JSX.Element => (
       <ReactSelectComponents.Option
-        className={clsx(className, optionClass)}
+        className={cx(className, optionClass)}
         {...restData}
       />
     );
@@ -38,7 +38,7 @@ export const CustomOption = <CustomOptionType,>(
     typeof ReactSelectComponents.Option
   >): JSX.Element => (
     <ReactSelectComponents.Option
-      className={clsx(className, optionClass)}
+      className={cx(className, optionClass)}
       {...restData}
     >
       <StyledOption>
