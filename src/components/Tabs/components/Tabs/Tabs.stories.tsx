@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { Tab } from 'components/Tabs';
