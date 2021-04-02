@@ -50,5 +50,4 @@ export const IconWrapper = styled.span`
 
 export const triggerStyle = css`
   display: inline-block;
-  cursor: pointer;
 `;

@@ -2,7 +2,7 @@ import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
 import { SelectedSVG, UnSelectedSVG, SelectedPartSVG } from '@sbercloud/icons';
 
-import useElementId from 'utils/useElementId';
+import { useElementId } from 'utils/useElementId';
 
 import { CheckboxStyled, CheckboxLabelStyled, svgClassName } from './styled';
 
