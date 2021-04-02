@@ -178,7 +178,6 @@ export const COLORS_TOOLTIP = {
   MENU_ITEM_HOVER_BG: '--tooltip-menu-item-hover-bg',
   ICON_FILL: '--tooltip-icon-fill',
   ICON_HOVER_FILL: '--tooltip-icon-hover-fill',
-  ICON_ACTIVE_FILL: '--tooltip-icon-active-fill',
 };
 
 export const COLORS_INPUT = {
