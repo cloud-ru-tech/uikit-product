@@ -11,6 +11,7 @@
     "storybook": "yarn start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --max-warnings=0",
+    "typecheck": "tsc --noEmit",
     "clean": "yarn rimraf dist && node scripts/clean.js",
     "build": "yarn run-s clean build:types build:es build:cjs",
     "build:watch": "yarn run-p build:types:watch build:es:watch build:cjs:watch",
