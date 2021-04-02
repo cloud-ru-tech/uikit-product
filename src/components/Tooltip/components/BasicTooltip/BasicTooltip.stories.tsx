@@ -8,7 +8,7 @@ import { H4 } from 'typography/Headers';
 import { BasicTooltip, IBasicTooltipProps } from './BasicTooltip';
 
 export default {
-  title: 'Components/Tooltip/Basic Tooltip',
+  title: 'Components/Tooltip',
   component: BasicTooltip,
 } as Meta;
 
