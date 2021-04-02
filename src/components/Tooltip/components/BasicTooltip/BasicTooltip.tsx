@@ -47,8 +47,12 @@ export const BasicTooltip: FC<IBasicTooltipProps> = ({
   icon,
   iconAction,
   ...props
-}) =>
-  tooltip ? (
+}) => {
+  if (!tooltip) {
+    return <>{children}</>;
+  }
+
+  return (
     <TooltipTrigger
       trigger={trigger}
       placement={placement}
@@ -104,6 +108,5 @@ export const BasicTooltip: FC<IBasicTooltipProps> = ({
         </>
       )}
     </TooltipTrigger>
-  ) : (
-    <>{children}</>
   );
+};
