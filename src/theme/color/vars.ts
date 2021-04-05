@@ -298,3 +298,7 @@ export const COLORS_SWITCH = {
   ACTIVE_HOVER_BG: '--switch-active-hover-bg',
   ACTIVE_DISABLED_BG: '--switch-active-disabled-bg',
 };
+
+export const COLORS_DRAWER = {
+  BACKGROUND: '--drawer-background',
+};

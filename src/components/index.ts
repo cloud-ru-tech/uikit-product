@@ -6,6 +6,7 @@ export * from './Checkbox';
 export * from './CollapsePanel';
 export * from './ContentHider';
 export * from './Divider';
+export * from './Drawer';
 export * from './Input';
 export * from './ListToolBar';
 export * from './Modal';
