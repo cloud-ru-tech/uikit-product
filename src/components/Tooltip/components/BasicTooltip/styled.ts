@@ -45,13 +45,9 @@ export const IconWrapper = styled.span`
     &:hover {
       fill: var(${COLORS_TOOLTIP.ICON_HOVER_FILL});
     }
-    &:active {
-      fill: var(${COLORS_TOOLTIP.ICON_ACTIVE_FILL});
-    }
   }
 `;
 
 export const triggerStyle = css`
   display: inline-block;
-  cursor: pointer;
 `;

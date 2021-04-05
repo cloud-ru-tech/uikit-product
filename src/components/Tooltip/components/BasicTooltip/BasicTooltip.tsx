@@ -12,7 +12,7 @@ import {
 
 export interface IBasicTooltipProps
   extends Partial<Omit<TooltipTriggerProps, 'tooltip' | 'children'>> {
-  tooltip: TooltipTriggerProps['tooltip'] | React.ReactNode | JSX.Element;
+  tooltip?: TooltipTriggerProps['tooltip'] | React.ReactNode | JSX.Element;
   children: TooltipTriggerProps['children'] | React.ReactNode | JSX.Element;
   icon?: React.ReactNode | JSX.Element;
   iconAction?: () => void;
@@ -47,60 +47,66 @@ export const BasicTooltip: FC<IBasicTooltipProps> = ({
   icon,
   iconAction,
   ...props
-}) => (
-  <TooltipTrigger
-    trigger={trigger}
-    placement={placement}
-    modifiers={modifiers}
-    delayShow={delayShow}
-    delayHide={delayHide}
-    {...props}
-    tooltip={({
-      arrowRef,
-      tooltipRef,
-      getArrowProps,
-      getTooltipProps,
-      placement,
-    }): JSX.Element => (
-      <div
-        {...getTooltipProps({
-          ref: tooltipRef,
-          className: cx(
-            containerStyle,
-            Boolean(icon) && containerWithIconStyle,
-            className,
-          ),
-        })}
-      >
-        {!hideArrow && (
-          <div
-            {...getArrowProps({
-              ref: arrowRef,
-              className: [classNameArrow],
-              'data-placement': placement,
-            })}
-          />
-        )}
-        <TooltipWrapper>{tooltip}</TooltipWrapper>
-        {icon && (
-          <IconWrapper onClick={iconAction} data-action={Boolean(iconAction)}>
-            {icon}
-          </IconWrapper>
-        )}
-      </div>
-    )}
-  >
-    {({ getTriggerProps, triggerRef }): JSX.Element => (
-      <>
-        <span
-          {...getTriggerProps({
-            ref: triggerRef,
-            className: cx(triggerStyle, classNameTrigger),
+}) => {
+  if (!tooltip) {
+    return <>{children}</>;
+  }
+
+  return (
+    <TooltipTrigger
+      trigger={trigger}
+      placement={placement}
+      modifiers={modifiers}
+      delayShow={delayShow}
+      delayHide={delayHide}
+      {...props}
+      tooltip={({
+        arrowRef,
+        tooltipRef,
+        getArrowProps,
+        getTooltipProps,
+        placement,
+      }): JSX.Element => (
+        <div
+          {...getTooltipProps({
+            ref: tooltipRef,
+            className: cx(
+              containerStyle,
+              Boolean(icon) && containerWithIconStyle,
+              className,
+            ),
           })}
         >
-          {children}
-        </span>
-      </>
-    )}
-  </TooltipTrigger>
-);
+          {!hideArrow && (
+            <div
+              {...getArrowProps({
+                ref: arrowRef,
+                className: [classNameArrow],
+                'data-placement': placement,
+              })}
+            />
+          )}
+          <TooltipWrapper>{tooltip}</TooltipWrapper>
+          {icon && (
+            <IconWrapper onClick={iconAction} data-action={Boolean(iconAction)}>
+              {icon}
+            </IconWrapper>
+          )}
+        </div>
+      )}
+    >
+      {({ getTriggerProps, triggerRef }): JSX.Element => (
+        <>
+          <span
+            {...getTriggerProps({
+              ref: triggerRef,
+              className: cx(triggerStyle, classNameTrigger),
+            })}
+          >
+            {children}
+          </span>
+        </>
+      )}
+    </TooltipTrigger>
+  );
+};

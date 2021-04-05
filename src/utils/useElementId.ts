@@ -1,10 +1,8 @@
 import { useRef } from 'react';
 import { nanoid } from 'nanoid';
 
-const useElementId = (id?: string): string => {
+export const useElementId = (id?: string): string => {
   const { current: generatedId } = useRef(nanoid());
 
   return id || generatedId;
 };
-
-export default useElementId;

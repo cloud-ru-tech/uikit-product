@@ -8,6 +8,7 @@ import {
   COLORS_TAG,
   COLORS_STATUS,
   COLORS_SWITCH,
+  COLORS_TOOLTIP,
 } from './vars';
 
 export const green = css`
@@ -127,6 +128,13 @@ export const green = css`
       ${COLORS_SWITCH.ACTIVE_BG}: var(${COLORS.GREEN_5});
       ${COLORS_SWITCH.ACTIVE_HOVER_BG}: var(${COLORS.GREEN_6});
       ${COLORS_SWITCH.ACTIVE_DISABLED_BG}: var(${COLORS.GREEN_3});
+
+      ${COLORS_TOOLTIP.CONTAINER_COLOR}: var(${COLORS.WHITE});
+      ${COLORS_TOOLTIP.CONTAINER_BG}: var(${COLORS.BLACK_2});
+      ${COLORS_TOOLTIP.ICON_FILL}: var(${COLORS.GRAY_3});
+      ${COLORS_TOOLTIP.ICON_HOVER_FILL}: var(${COLORS.WHITE});
+      ${COLORS_TOOLTIP.MENU_BG}: var(${COLORS.WHITE});
+      ${COLORS_TOOLTIP.MENU_ITEM_HOVER_BG}: var(${COLORS.GRAY_2});
     }
   }
 `;
