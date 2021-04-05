@@ -298,3 +298,18 @@ export const COLORS_SWITCH = {
   ACTIVE_HOVER_BG: '--switch-active-hover-bg',
   ACTIVE_DISABLED_BG: '--switch-active-disabled-bg',
 };
+
+export const COLORS_FORM_GROUP = {
+  NUMBER_COLOR: '--form-group-number-color',
+  NUMBER_BG: '--form-group-number-bg',
+  HINT_COLOR: '--form-group-hint-color',
+};
+
+export const COLORS_FORM_FIELD = {
+  HINT_COLOR: '--form-group-hint-color',
+  ERROR_COLOR: '--form-group-error-color',
+};
+
+export const COLORS_DRAWER = {
+  BG: '--drawer-bg',
+};

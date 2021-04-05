@@ -9,6 +9,9 @@ import {
   COLORS_STATUS,
   COLORS_SWITCH,
   COLORS_TOOLTIP,
+  COLORS_FORM_FIELD,
+  COLORS_FORM_GROUP,
+  COLORS_DRAWER,
 } from './vars';
 
 export const green = css`
@@ -135,6 +138,15 @@ export const green = css`
       ${COLORS_TOOLTIP.ICON_HOVER_FILL}: var(${COLORS.WHITE});
       ${COLORS_TOOLTIP.MENU_BG}: var(${COLORS.WHITE});
       ${COLORS_TOOLTIP.MENU_ITEM_HOVER_BG}: var(${COLORS.GRAY_2});
+
+      ${COLORS_FORM_GROUP.NUMBER_COLOR}: var(${COLORS.BLACK_2});
+      ${COLORS_FORM_GROUP.NUMBER_BG}: var(${COLORS.GREEN_5});
+      ${COLORS_FORM_GROUP.HINT_COLOR}: var(${COLORS.GRAY_3});
+
+      ${COLORS_FORM_FIELD.HINT_COLOR}: var(${COLORS.GRAY_3});
+      ${COLORS_FORM_FIELD.ERROR_COLOR}: var(${COLORS.RED_1});
+
+      ${COLORS_DRAWER.BG}: var(${COLORS.WHITE});
     }
   }
 `;
