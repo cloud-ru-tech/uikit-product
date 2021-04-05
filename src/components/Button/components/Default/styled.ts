@@ -113,6 +113,10 @@ export const ButtonComponent = styled.button`
     &:disabled {
       color: var(${COLORS_BUTTON.TRANSPARENT_DISABLED_COLOR});
       fill: var(${COLORS_BUTTON.TRANSPARENT_DISABLED_COLOR});
+
+      &:hover {
+        background-color: transparent;
+      }
     }
     &:focus-visible {
       color: var(${COLORS_BUTTON.TRANSPARENT_FOCUS_COLOR});

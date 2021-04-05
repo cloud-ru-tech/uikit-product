@@ -22,6 +22,7 @@ import {
   COLORS_TABS,
   COLORS_STATUS,
   COLORS_SWITCH,
+  COLORS_BREADCRUMBS,
 } from './vars';
 
 export const purple = css`
@@ -248,6 +249,9 @@ export const purple = css`
       ${COLORS_SWITCH.ACTIVE_BG}: var(${COLORS.VIOLET_5});
       ${COLORS_SWITCH.ACTIVE_HOVER_BG}: var(${COLORS.VIOLET_6});
       ${COLORS_SWITCH.ACTIVE_DISABLED_BG}: var(${COLORS.VIOLET_4});
+
+      ${COLORS_BREADCRUMBS.ACTIVE_COLOR}: var(${COLORS.BLACK_1});
+      ${COLORS_BREADCRUMBS.INACTIVE_COLOR}: var(${COLORS.GRAY_7});
     }
   }
 `;
