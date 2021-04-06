@@ -12,6 +12,7 @@ import {
   COLORS_FORM_GROUP,
   COLORS_FORM_FIELD,
   COLORS_DRAWER,
+  COLORS_TOAST,
 } from './vars';
 
 export const greenDark = css`
@@ -148,6 +149,19 @@ export const greenDark = css`
       ${COLORS_FORM_FIELD.ERROR_COLOR}: var(${COLORS.RED_1});
 
       ${COLORS_DRAWER.BG}: var(${COLORS.GRAY_9});
+
+      ${COLORS_TOAST.INFO_COLOR}: var(${COLORS.WHITE});
+      ${COLORS_TOAST.INFO_BG}: var(${COLORS.GRAY_5});
+      ${COLORS_TOAST.INFO_SECONDARY_COLOR}: var(${COLORS.GRAY_2});
+      ${COLORS_TOAST.INFO_ICON_BG}: rgba(255, 255, 255, 0.1);
+      ${COLORS_TOAST.INFO_ACTION_COLOR}: #cfcfcf;
+      ${COLORS_TOAST.INFO_ACTION_HOVER_COLOR}: var(${COLORS.WHITE});
+      ${COLORS_TOAST.ERROR_COLOR}: var(${COLORS.WHITE});
+      ${COLORS_TOAST.ERROR_BG}: var(${COLORS.RED_1});
+      ${COLORS_TOAST.ERROR_SECONDARY_COLOR}: #f5f5f5;
+      ${COLORS_TOAST.ERROR_ICON_BG}: rgba(255, 255, 255, 0.1);
+      ${COLORS_TOAST.ERROR_ACTION_COLOR}: #ededed;
+      ${COLORS_TOAST.ERROR_ACTION_HOVER_COLOR}: var(${COLORS.WHITE});
     }
   }
 `;

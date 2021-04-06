@@ -48,7 +48,8 @@
     "react-popper-tooltip": "3.1.0",
     "react-select": "3.1.0",
     "react-switch": "^6.0.0",
-    "react-textarea-autosize": "^8.3.2"
+    "react-textarea-autosize": "^8.3.2",
+    "react-toastify": "^7.0.3"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.1",
