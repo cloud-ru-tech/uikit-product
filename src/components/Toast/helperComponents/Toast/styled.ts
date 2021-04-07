@@ -2,28 +2,10 @@ import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
 
 import { ResettedButton } from 'components';
-
 import { H5, Text3 } from 'typography';
 import { COLORS_TOAST } from 'theme/color/vars';
 
-import { VARIANT } from './Toast';
-
-export const toastContainerClassName = css``;
-
-export const toastClassName = css`
-  .${toastContainerClassName} & {
-    padding: 0;
-    border-radius: 8px;
-    background-color: transparent;
-  }
-`;
-
-export const toastBodyClassName = css`
-  .${toastContainerClassName} & {
-    padding: 0;
-    width: 100%;
-  }
-`;
+import { VARIANT } from '../../helpers/constants';
 
 export const progressClassName = css`
   animation: spin 0.7s infinite steps(8);

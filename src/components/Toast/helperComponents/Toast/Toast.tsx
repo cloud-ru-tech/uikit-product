@@ -1,14 +1,9 @@
-import React, { ReactNode } from 'react';
-
-import {
-  toast as rcToast,
-  ToastContainer as RCToastContainer,
-  ToastContainerProps,
-  ToastContentProps,
-  ToastOptions,
-} from 'react-toastify';
+import { ReactNode } from 'react';
+import { ToastContentProps } from 'react-toastify';
 
 import { CheckSVG, SmileSadSVG, LoadingSVG, CloseSVG } from '@sbercloud/icons';
+
+import { VARIANT } from '../../helpers/constants';
 
 import {
   Wrapper,
@@ -19,20 +14,10 @@ import {
   Text,
   Actions,
   Action,
-  toastClassName,
-  toastContainerClassName,
-  toastBodyClassName,
   ActionText,
   Close,
   progressClassName,
 } from './styled';
-
-import 'react-toastify/dist/ReactToastify.css';
-
-export const VARIANT = {
-  INFO: 'info',
-  ERROR: 'error',
-} as const;
 
 export interface ToastAction {
   title: string;
@@ -98,26 +83,3 @@ export const Toast: React.FC<ToastProps> = ({
     </Content>
   </Wrapper>
 );
-
-export const ToastContainer: React.FC<ToastContainerProps> = props => (
-  <RCToastContainer
-    hideProgressBar
-    autoClose={8000}
-    closeButton={false}
-    closeOnClick={false}
-    draggable={false}
-    pauseOnHover
-    pauseOnFocusLoss
-    className={toastContainerClassName}
-    toastClassName={toastClassName}
-    bodyClassName={toastBodyClassName}
-    {...props}
-  />
-);
-
-export const toast = (
-  toastProps: ToastProps,
-  options: ToastOptions = {},
-): void => {
-  rcToast(<Toast {...toastProps} />, options);
-};
