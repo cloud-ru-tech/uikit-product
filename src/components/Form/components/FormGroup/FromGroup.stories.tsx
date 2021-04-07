@@ -34,6 +34,7 @@ const dividerClassName = css`
 const Template: Story = () => {
   const [value, setValue] = useState(8);
   const [limit, setLimit] = useState('unlimited');
+  const [selected, setSelected] = useState({ value: 'ipv4', label: 'IPv4' });
 
   return (
     <Wrapper>
@@ -87,6 +88,8 @@ const Template: Story = () => {
         <FormField label='IPv4/IPv6' error='Некорректный формат'>
           <Select
             type='large'
+            value={selected}
+            onChange={setSelected}
             options={[
               { value: 'ipv4', label: 'IPv4' },
               { value: 'ipv6', label: 'IPv6' },
