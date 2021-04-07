@@ -1,7 +1,12 @@
 import { ReactNode } from 'react';
 import { ToastContentProps } from 'react-toastify';
 
-import { CheckSVG, SmileSadSVG, LoadingSVG, CloseSVG } from '@sbercloud/icons';
+import {
+  CheckFilledSVG,
+  SmileSadSVG,
+  LoadingSVG,
+  CloseSVG,
+} from '@sbercloud/icons';
 
 import { VARIANT } from '../../helpers/constants';
 
@@ -21,7 +26,7 @@ import {
 
 export interface ToastAction {
   title: string;
-  onClick: () => void;
+  onClick: (closeToast?: () => void) => void;
 }
 
 export interface ToastProps extends Partial<ToastContentProps> {
@@ -56,7 +61,7 @@ export const Toast: React.FC<ToastProps> = ({
     )}
 
     <StyledIcon>
-      {variant === VARIANT.INFO && !progress && <CheckSVG size={24} />}
+      {variant === VARIANT.INFO && !progress && <CheckFilledSVG size={24} />}
       {variant === VARIANT.INFO && progress && (
         <LoadingSVG className={progressClassName} size={24} />
       )}
@@ -74,7 +79,7 @@ export const Toast: React.FC<ToastProps> = ({
       {Array.isArray(actions) && (
         <Actions>
           {actions.map(({ title, onClick }) => (
-            <Action key={title} onClick={onClick}>
+            <Action key={title} onClick={() => onClick(closeToast)}>
               <ActionText>{title}</ActionText>
             </Action>
           ))}

@@ -35,5 +35,8 @@ export const toast = (
   toastProps: ToastProps,
   options: ToastOptions = {},
 ): void => {
-  rcToast(<Toast {...toastProps} />, options);
+  rcToast(<Toast {...toastProps} />, {
+    closeOnClick: !Array.isArray(toastProps.actions),
+    ...options,
+  });
 };
