@@ -1,6 +1,8 @@
 import { css } from '@linaria/core';
 
-export const toastContainerClassName = css``;
+export const toastContainerClassName = css`
+  width: 304px !important;
+`;
 
 export const toastClassName = css`
   .${toastContainerClassName} & {
