@@ -1712,10 +1712,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@sbercloud/icons@^1.0.9":
-  version "1.0.9"
-  resolved "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/@sbercloud/icons/-/icons-1.0.9.tgz#c688c580c4230bc39f793e40f17fc03bd57fb87e"
-  integrity sha512-z3XY/maYnyYu09/0+ydXi+rutg+hehAFLEp8UzW1Z26aUa1M5KPu7g2qZOjr7WQxsg5/RSlZ27Q0j0SHKDRz4g==
+"@sbercloud/icons@^1.0.11":
+  version "1.0.11"
+  resolved "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/@sbercloud/icons/-/icons-1.0.11.tgz#0ecd30b563243e796d9b63118ac133c972ae7faa"
+  integrity sha512-YjdTlLPSoPBo4FgEulDfZQ2L+M4A9qPwG2WoHsRe7vQ2us+ch7nNdAzLbu070h/U1uQXR36pZDNt2UcnQiIMKg==
   dependencies:
     react "^17.0.1"
     react-dom "^17.0.1"

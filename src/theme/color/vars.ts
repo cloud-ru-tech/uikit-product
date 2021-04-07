@@ -204,11 +204,16 @@ export const COLORS_INPUT = {
 
 export const COLORS_RADIO = {
   COLOR: '--radio-color',
-  HOVER_COLOR: '--radio-hover-color',
+  SECONDARY_COLOR: '--radio-secondary-color',
   DISABLED_COLOR: '--radio-disabled-color',
-  CHECKED_COLOR: '--radio-checked-color',
-  CHECKED_HOVER_COLOR: '--radio-checked-hover-color',
-  CHECKED_DISABLED_COLOR: '--radio-checked-disabled-color',
+  HOVER_BG: '--radio-hover-bg',
+  ICON_COLOR: '--radio-icon-color',
+  ICON_BG: '--radio-icon-bg',
+  ICON_HOVER_COLOR: '--radio-icon-hover-color',
+  ICON_DISABLED_COLOR: '--radio-icon-disabled-color',
+  CHECKED_ICON_COLOR: '--radio-checked-icon-color',
+  CHECKED_ICON_HOVER_COLOR: '--radio-checked-icon-hover-color',
+  CHECKED_ICON_DISABLED_COLOR: '--radio-checked-icon-disabled-color',
 };
 
 export const COLORS_SELECT = {

@@ -1,4 +1,7 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
+import { styled } from '@linaria/react';
+
+import { COLORS_DRAWER } from 'theme/color/vars';
 
 import { Radio, IRadioProps } from './Radio';
 
@@ -7,10 +10,20 @@ export default {
   component: Radio,
 } as Meta;
 
+const Wrapper = styled.div`
+  background-color: var(${COLORS_DRAWER.BG});
+  padding: 10px;
+`;
+
 const Template: Story<IRadioProps> = ({ ...args }) => (
-  <Radio {...args} value='story1' />
+  <Wrapper>
+    <Radio {...args} />
+  </Wrapper>
 );
 
 export const radio = Template.bind({});
-radio.args = {};
+radio.args = {
+  value: 'story1',
+  label: 'story1',
+};
 radio.parameters = {};

@@ -14,16 +14,8 @@ export const RadioGroup: FC<TRadioGroupProps> = ({
   onChange,
   value,
   name,
-}) => {
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (onChange) {
-      onChange(event);
-    }
-  };
-
-  return (
-    <RadioGroupContext.Provider value={{ name, onChange: handleChange, value }}>
-      <StyledRadioGroup>{children}</StyledRadioGroup>
-    </RadioGroupContext.Provider>
-  );
-};
+}) => (
+  <RadioGroupContext.Provider value={{ name, onChange, value }}>
+    <StyledRadioGroup>{children}</StyledRadioGroup>
+  </RadioGroupContext.Provider>
+);
