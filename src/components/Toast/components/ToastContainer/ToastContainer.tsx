@@ -20,9 +20,9 @@ export type { ToastOptions };
 export const ToastContainer: React.FC<ToastContainerProps> = props => (
   <RCToastContainer
     hideProgressBar
+    closeOnClick
     autoClose={false}
     closeButton={false}
-    closeOnClick={false}
     draggable={false}
     className={toastContainerClassName}
     toastClassName={toastClassName}
