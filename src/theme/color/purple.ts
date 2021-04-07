@@ -22,6 +22,9 @@ import {
   COLORS_TABS,
   COLORS_STATUS,
   COLORS_SWITCH,
+  COLORS_FORM_GROUP,
+  COLORS_FORM_FIELD,
+  COLORS_DRAWER,
 } from './vars';
 
 export const purple = css`
@@ -120,7 +123,7 @@ export const purple = css`
       ${COLORS_ICON.ACTIVE_FILL}: var(${COLORS.GRAY_2});
 
       ${COLORS_DIVIDER.COLOR_LIGHT}: var(${COLORS.GRAY_2});
-      ${COLORS_DIVIDER.COLOR_MIDDLE}: #d2d2d2;
+      ${COLORS_DIVIDER.COLOR_MIDDLE}: var(${COLORS.GRAY_3});
       ${COLORS_DIVIDER.COLOR_DARK}: var(${COLORS.BLACK_2});
 
       ${COLORS_SPIN.BORDER}: var(${COLORS.GRAY_3});
@@ -248,6 +251,15 @@ export const purple = css`
       ${COLORS_SWITCH.ACTIVE_BG}: var(${COLORS.VIOLET_5});
       ${COLORS_SWITCH.ACTIVE_HOVER_BG}: var(${COLORS.VIOLET_6});
       ${COLORS_SWITCH.ACTIVE_DISABLED_BG}: var(${COLORS.VIOLET_4});
+
+      ${COLORS_FORM_GROUP.NUMBER_COLOR}: var(${COLORS.WHITE});
+      ${COLORS_FORM_GROUP.NUMBER_BG}: var(${COLORS.VIOLET_5});
+      ${COLORS_FORM_GROUP.HINT_COLOR}: var(${COLORS.GRAY_3});
+
+      ${COLORS_FORM_FIELD.HINT_COLOR}: var(${COLORS.GRAY_3});
+      ${COLORS_FORM_FIELD.ERROR_COLOR}: var(${COLORS.RED_1});
+
+      ${COLORS_DRAWER.BG}: var(${COLORS.WHITE});
     }
   }
 `;

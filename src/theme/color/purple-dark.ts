@@ -22,6 +22,9 @@ import {
   COLORS_TABS,
   COLORS_STATUS,
   COLORS_SWITCH,
+  COLORS_FORM_GROUP,
+  COLORS_FORM_FIELD,
+  COLORS_DRAWER,
 } from './vars';
 
 export const purpleDark = css`
@@ -251,6 +254,15 @@ export const purpleDark = css`
       ${COLORS_SWITCH.ACTIVE_BG}: var(${COLORS.VIOLET_5});
       ${COLORS_SWITCH.ACTIVE_HOVER_BG}: var(${COLORS.VIOLET_6});
       ${COLORS_SWITCH.ACTIVE_DISABLED_BG}: var(${COLORS.VIOLET_3});
+
+      ${COLORS_FORM_GROUP.NUMBER_COLOR}: var(${COLORS.WHITE});
+      ${COLORS_FORM_GROUP.NUMBER_BG}: var(${COLORS.VIOLET_5});
+      ${COLORS_FORM_GROUP.HINT_COLOR}: var(${COLORS.GRAY_4});
+
+      ${COLORS_FORM_FIELD.HINT_COLOR}: var(${COLORS.GRAY_4});
+      ${COLORS_FORM_FIELD.ERROR_COLOR}: var(${COLORS.RED_1});
+
+      ${COLORS_DRAWER.BG}: var(${COLORS.BLACK_1});
     }
   }
 `;

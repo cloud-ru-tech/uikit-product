@@ -16,7 +16,8 @@ divider.args = {
 divider.argTypes = {
   color: {
     control: {
-      type: 'color',
+      type: 'radio',
+      options: ['dark', 'middle', 'light'],
     },
   },
 };

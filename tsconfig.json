@@ -15,9 +15,12 @@
     "baseUrl": "./",
     "paths": {
       "vars/*": ["src/vars/*"],
+      "components": ["src/components"],
       "components/*": ["src/components/*"],
+      "typography": ["src/typography"],
       "typography/*": ["src/typography/*"],
       "theme/*": ["src/theme/*"],
+      "utils": ["src/utils"],
       "utils/*": ["src/utils/*"]
     }
   },

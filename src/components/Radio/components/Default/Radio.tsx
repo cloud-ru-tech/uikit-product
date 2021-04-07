@@ -35,8 +35,8 @@ export const RadioIcon: FC<IRadioIcon> = ({ checked, disabled }) => (
 export interface IRadioProps {
   value: string;
   label: string;
-  disabled: boolean;
-  description: string;
+  disabled?: boolean;
+  description?: string;
 }
 
 // TODO: можно добавить поддержку неконтроллируемого компонента(useState)
