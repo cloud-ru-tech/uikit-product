@@ -1,4 +1,5 @@
 import ReactSwitch, { ReactSwitchProps } from 'react-switch';
+import { cx } from '@linaria/core';
 
 import {
   switchClassName,
@@ -14,14 +15,12 @@ export const Switch: React.FC<ReactSwitchProps> = ({ className, ...rest }) => (
     uncheckedIcon={false}
     checkedIcon={false}
     activeBoxShadow=''
-    className={[
+    className={cx(
       switchClassName,
       rest.checked && switchClassNameChecked,
       rest.disabled && switchClassNameDisabled,
       className,
-    ]
-      .filter(Boolean)
-      .join(' ')}
+    )}
     {...rest}
   />
 );

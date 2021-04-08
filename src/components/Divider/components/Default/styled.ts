@@ -10,4 +10,5 @@ export const StyledDivider = styled.hr<IStyleProps>`
   background: ${props => props.color};
   height: 1px;
   width: 100%;
+  margin: 0;
 `;
