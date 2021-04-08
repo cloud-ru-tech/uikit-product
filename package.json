@@ -29,12 +29,12 @@
   },
   "lint-staged": {
     "*.{js,ts,tsx}": [
-      "npm run lint",
+      "eslint --quiet --fix --max-warnings=0",
       "prettier --write"
     ]
   },
   "dependencies": {
-    "@sbercloud/icons": "^1.0.5",
+    "@sbercloud/icons": "^1.0.9",
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",
     "nanoid": "^3.1.22",
@@ -49,7 +49,8 @@
     "react-popper-tooltip": "3.1.0",
     "react-select": "3.1.0",
     "react-switch": "^6.0.0",
-    "react-textarea-autosize": "^8.3.2"
+    "react-textarea-autosize": "^8.3.2",
+    "react-toastify": "^7.0.3"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.1",

@@ -299,6 +299,32 @@ export const COLORS_SWITCH = {
   ACTIVE_DISABLED_BG: '--switch-active-disabled-bg',
 };
 
+export const COLORS_FORM_GROUP = {
+  NUMBER_COLOR: '--form-group-number-color',
+  NUMBER_BG: '--form-group-number-bg',
+  HINT_COLOR: '--form-group-hint-color',
+};
+
+export const COLORS_FORM_FIELD = {
+  HINT_COLOR: '--form-group-hint-color',
+  ERROR_COLOR: '--form-group-error-color',
+};
+
 export const COLORS_DRAWER = {
   BACKGROUND: '--drawer-background',
+};
+
+export const COLORS_TOAST = {
+  INFO_COLOR: '--toast-info-color',
+  INFO_BG: '--toast-info-bg',
+  INFO_SECONDARY_COLOR: '--toast-info-secondary-color',
+  INFO_ICON_BG: '--toast-info-icon-bg',
+  INFO_ACTION_COLOR: '--toast-info-action-color',
+  INFO_ACTION_HOVER_COLOR: '--toast-info-action-hover-color',
+  ERROR_COLOR: '--toast-error-color',
+  ERROR_BG: '--toast-error-bg',
+  ERROR_SECONDARY_COLOR: '--toast-error-secondary-color',
+  ERROR_ICON_BG: '--toast-error-icon-bg',
+  ERROR_ACTION_COLOR: '--toast-error-action-color',
+  ERROR_ACTION_HOVER_COLOR: '--toast-error-action-hover-color',
 };

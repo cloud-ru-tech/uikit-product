@@ -1600,10 +1600,10 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
-"@sbercloud/icons@^1.0.5":
-  version "1.0.6"
-  resolved "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/@sbercloud/icons/-/icons-1.0.6.tgz#ebd1d5bb352ee089410c9ca07137b7c1127a047e"
-  integrity sha512-SlWU7Gbn+FI8seJ0Xhz7SdcO2IlmNv89sA9psK59pZ+aC2vaE2Ym8DN948Yn8G01IaeSA5REs9AXSGnlTa621g==
+"@sbercloud/icons@^1.0.9":
+  version "1.0.9"
+  resolved "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/@sbercloud/icons/-/icons-1.0.9.tgz#c688c580c4230bc39f793e40f17fc03bd57fb87e"
+  integrity sha512-z3XY/maYnyYu09/0+ydXi+rutg+hehAFLEp8UzW1Z26aUa1M5KPu7g2qZOjr7WQxsg5/RSlZ27Q0j0SHKDRz4g==
   dependencies:
     react "^17.0.1"
     react-dom "^17.0.1"
@@ -4513,6 +4513,11 @@ clone@^1.0.2:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
+
+clsx@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/clsx/-/clsx-1.1.1.tgz#98b3134f9abbdf23b2663491ace13c5c03a73188"
+  integrity sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==
 
 cmd-shim@^3.0.0, cmd-shim@^3.0.3:
   version "3.0.3"
@@ -11651,6 +11656,13 @@ react-textarea-autosize@^8.1.1, react-textarea-autosize@^8.3.2:
     "@babel/runtime" "^7.10.2"
     use-composed-ref "^1.0.0"
     use-latest "^1.0.0"
+
+react-toastify@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/react-toastify/-/react-toastify-7.0.3.tgz#93804c777ecf918872ba3b5be9c654db14547f85"
+  integrity sha512-cxZ5rfurC8LzcZQMTYc8RHIkQTs+BFur18Pzk6Loz6uS8OXUWm6nXVlH/wqglz4Z7UAE8xxcF5mRjfE13487uQ==
+  dependencies:
+    clsx "^1.1.1"
 
 react-transition-group@^4.3.0:
   version "4.4.1"

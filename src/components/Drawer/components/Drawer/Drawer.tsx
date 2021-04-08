@@ -29,6 +29,7 @@ export interface IDrawerProps {
   headerText?: string | React.ReactNode;
   footer?: React.ReactNode;
   hasPaddingMode?: boolean;
+  container?: string | HTMLElement | (() => HTMLElement);
   onBackClick?(): void;
 }
 
@@ -44,51 +45,42 @@ export const Drawer: React.FC<IDrawerProps> = ({
   footer,
   children,
   hasPaddingMode,
+  container,
   ...ownProps
-}) => {
-  if (hasPaddingMode) {
-    window.addEventListener('mlspace-header-click', () => {
-      if (openFromProps) {
-        onCloseFromProps();
-      }
-    });
-  }
-
-  return (
-    <RcDrawer
-      level={null}
-      width={width}
-      height={height}
-      className={cx(
-        className,
-        drawerClassName,
-        hasPaddingMode && drawerPaddingModeClassName,
-      )}
-      wrapperClassName={drawerWrapperClassName}
-      handler={false}
-      open={openFromProps}
-      onClose={onCloseFromProps}
-      placement={placement}
-      getContainer={hasPaddingMode ? '#mlspace-body' : undefined}
-      {...ownProps}
-    >
-      <HeaderBoxStyled width={typeof width === 'number' ? `${width}px` : width}>
-        <HeaderTextBoxStyled>
-          {onBackClick && (
-            <LeftIconBoxStyled>
-              <LeftSVG size={36} onClick={onBackClick} />
-            </LeftIconBoxStyled>
-          )}
-          {headerText && <Header text={headerText} />}
-        </HeaderTextBoxStyled>
-        <CloseButtonStyled onClick={onCloseFromProps}>
-          <CloseSVG />
-        </CloseButtonStyled>
-      </HeaderBoxStyled>
-      <ContentBoxStyled footerPadding={footer ? 80 : 0}>
-        {children}
-      </ContentBoxStyled>
-      {footer && <FooterBoxStyled>{footer}</FooterBoxStyled>}
-    </RcDrawer>
-  );
-};
+}) => (
+  <RcDrawer
+    level={null}
+    width={width}
+    height={height}
+    className={cx(
+      className,
+      drawerClassName,
+      hasPaddingMode && drawerPaddingModeClassName,
+    )}
+    wrapperClassName={drawerWrapperClassName}
+    handler={false}
+    open={openFromProps}
+    onClose={onCloseFromProps}
+    placement={placement}
+    getContainer={hasPaddingMode ? container : undefined}
+    {...ownProps}
+  >
+    <HeaderBoxStyled width={typeof width === 'number' ? `${width}px` : width}>
+      <HeaderTextBoxStyled>
+        {onBackClick && (
+          <LeftIconBoxStyled>
+            <LeftSVG size={36} onClick={onBackClick} />
+          </LeftIconBoxStyled>
+        )}
+        {headerText && <Header text={headerText} />}
+      </HeaderTextBoxStyled>
+      <CloseButtonStyled onClick={onCloseFromProps}>
+        <CloseSVG />
+      </CloseButtonStyled>
+    </HeaderBoxStyled>
+    <ContentBoxStyled footerPadding={footer ? 80 : 0}>
+      {children}
+    </ContentBoxStyled>
+    {footer && <FooterBoxStyled>{footer}</FooterBoxStyled>}
+  </RcDrawer>
+);
