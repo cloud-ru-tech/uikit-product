@@ -9,12 +9,15 @@ export default {
 
 const Template: Story<{ color: string; children: string }> = ({
   children,
+  color,
   ...restArgs
 }) => (
-  <div style={{ color: restArgs.color }}>
+  <div style={{ color }}>
     <Text1 {...restArgs}>{children} (Text1)</Text1>
     <Text2 {...restArgs}>{children} (Text2)</Text2>
-    <Text2Link {...restArgs}>{children} (Text2Link)</Text2Link>
+    <Text2Link {...restArgs} href='https://sbercloud.ru' target='_blank'>
+      {children} (Text2Link)
+    </Text2Link>
     <Text3 {...restArgs}>{children} (Text3)</Text3>
     <Text4 {...restArgs}>{children} (Text4)</Text4>
   </div>

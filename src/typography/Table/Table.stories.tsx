@@ -9,9 +9,10 @@ export default {
 
 const Template: Story<{ color: string; children: string }> = ({
   children,
+  color,
   ...restArgs
 }) => (
-  <div style={{ color: restArgs.color }}>
+  <div style={{ color }}>
     <TableText {...restArgs}>{children} (TableText)</TableText>
   </div>
 );

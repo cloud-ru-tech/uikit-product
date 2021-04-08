@@ -8,9 +8,10 @@ export default {
 
 const Template: Story<{ color: string; children: string }> = ({
   children,
+  color,
   ...restArgs
 }) => (
-  <div style={{ color: restArgs.color }}>
+  <div style={{ color }}>
     <H1 {...restArgs}>{children} (H1)</H1>
     <H2 {...restArgs}>{children} (H2)</H2>
     <H3 {...restArgs}>{children} (H3)</H3>
