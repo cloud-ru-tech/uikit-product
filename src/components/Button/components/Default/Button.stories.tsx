@@ -53,7 +53,7 @@ const Template: Story<IButtonProps & { showIcon: boolean }> = ({
     {buttons.map(({ name, variant, background }) => (
       <Item key={name} background={background}>
         <Title>
-          <H4 color={background ? '#fff' : ''}>{name}</H4>
+          <H4 style={{ color: background ? '#fff' : undefined }}>{name}</H4>
         </Title>
         <Button
           {...args}

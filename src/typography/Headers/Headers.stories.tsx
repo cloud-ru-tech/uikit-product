@@ -1,17 +1,16 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { COLORS_GENERAL } from 'theme/color/vars';
-import { H1, H2, H3, H3Semibold, H4, H5, TFontProps } from './index';
+import { H1, H2, H3, H3Semibold, H4, H5 } from './index';
 
 export default {
   title: 'Typography/Headers',
   component: H1,
 } as Meta;
 
-const Template: Story<TFontProps & { children: string }> = ({
+const Template: Story<{ color: string; children: string }> = ({
   children,
   ...restArgs
 }) => (
-  <div>
+  <div style={{ color: restArgs.color }}>
     <H1 {...restArgs}>{children} (H1)</H1>
     <H2 {...restArgs}>{children} (H2)</H2>
     <H3 {...restArgs}>{children} (H3)</H3>
@@ -23,7 +22,6 @@ const Template: Story<TFontProps & { children: string }> = ({
 
 export const headers = Template.bind({});
 headers.args = {
-  color: `var(${COLORS_GENERAL.TEXT})`,
   children: 'Пример',
 };
 headers.argTypes = {

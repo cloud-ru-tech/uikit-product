@@ -1,12 +1,6 @@
 import { styled } from '@linaria/react';
-import { COLORS, COLORS_GENERAL } from 'theme/color/vars';
 
-export type TTextProps = {
-  color?: string;
-};
-
-export const Text1 = styled.span<TTextProps>`
-  color: ${props => props.color || `var(${COLORS_GENERAL.TEXT})`};
+export const Text1 = styled.span`
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -14,8 +8,7 @@ export const Text1 = styled.span<TTextProps>`
   margin: 0;
 `;
 
-export const Text2 = styled.span<TTextProps>`
-  color: ${props => props.color || `var(${COLORS_GENERAL.TEXT})`};
+export const Text2 = styled.span`
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -23,8 +16,7 @@ export const Text2 = styled.span<TTextProps>`
   margin: 0;
 `;
 
-export const Text2Link = styled.span<TTextProps>`
-  color: ${props => props.color || `var(${COLORS.VIOLET_5})`};
+export const Text2Link = styled.span`
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -32,8 +24,7 @@ export const Text2Link = styled.span<TTextProps>`
   margin: 0;
 `;
 
-export const Text3 = styled.span<TTextProps>`
-  color: ${props => props.color || `var(${COLORS_GENERAL.TEXT})`};
+export const Text3 = styled.span`
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -41,8 +32,7 @@ export const Text3 = styled.span<TTextProps>`
   margin: 0;
 `;
 
-export const Text4 = styled.span<TTextProps>`
-  color: ${props => props.color || `var(${COLORS_GENERAL.TEXT})`};
+export const Text4 = styled.span`
   font-style: normal;
   font-weight: normal;
   font-size: 10px;

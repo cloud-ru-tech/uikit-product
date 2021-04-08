@@ -1,17 +1,17 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
-import { COLORS_GENERAL } from 'theme/color/vars';
-import { Text1, Text2, Text2Link, Text3, Text4, TTextProps } from './index';
+
+import { Text1, Text2, Text2Link, Text3, Text4 } from './index';
 
 export default {
   title: 'Typography/Text',
   component: Text1,
 } as Meta;
 
-const Template: Story<TTextProps & { children: string }> = ({
+const Template: Story<{ color: string; children: string }> = ({
   children,
   ...restArgs
 }) => (
-  <div>
+  <div style={{ color: restArgs.color }}>
     <Text1 {...restArgs}>{children} (Text1)</Text1>
     <Text2 {...restArgs}>{children} (Text2)</Text2>
     <Text2Link {...restArgs}>{children} (Text2Link)</Text2Link>
@@ -22,7 +22,6 @@ const Template: Story<TTextProps & { children: string }> = ({
 
 export const text = Template.bind({});
 text.args = {
-  color: `var(${COLORS_GENERAL.TEXT})`,
   children: 'Пример',
 };
 text.argTypes = {
