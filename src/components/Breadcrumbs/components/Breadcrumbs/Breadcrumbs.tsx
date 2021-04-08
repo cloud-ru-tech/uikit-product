@@ -33,6 +33,7 @@ export interface IBreadcrumbProps {
   itemClassName?: string;
   children?: React.ReactNode;
   isFixedWidth?: boolean;
+  renderItem?: (item: StateItem, index: number) => React.ReactNode;
 }
 
 export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
@@ -42,6 +43,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
   className,
   itemClassName,
   isFixedWidth,
+  renderItem,
 }): JSX.Element => {
   const [isVisible, setVisible] = useState(false);
   const [hasHideElements, setHasHideElements] = useState(true);
@@ -153,6 +155,23 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
 
     return el;
   };
+
+  if (renderItem) {
+    return (
+      <ContainerStyled
+        className={className}
+        ref={breadcrumbsEl}
+        style={{ visibility: isVisible ? 'visible' : 'hidden' }}
+      >
+        {stateItems.map(renderItem)}
+        {children && (
+          <ChildrenContainerStyled data-extension>
+            {children}
+          </ChildrenContainerStyled>
+        )}
+      </ContainerStyled>
+    );
+  }
 
   return (
     <ContainerStyled
