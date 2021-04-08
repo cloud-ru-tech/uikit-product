@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     process.env.BUILD_TYPE === 'cjs' &&
       '@babel/plugin-transform-modules-commonjs',
-
+    '@babel/plugin-proposal-optional-chaining',
     [
       'module-resolver',
       {
