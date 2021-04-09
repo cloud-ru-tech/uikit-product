@@ -1,13 +1,14 @@
 import { styled } from '@linaria/react';
 
-import { COLORS } from 'theme/color/vars';
+import { COLORS_AVATAR } from 'theme/color/vars';
 
 export const StyledAvatar = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(${COLORS.GRAY_3});
-  color: var(${COLORS.BLACK_2});
+  background-color: var(${COLORS_AVATAR.BG});
+  color: var(${COLORS_AVATAR.COLOR});
+  fill: var(${COLORS_AVATAR.COLOR});
 
   &[data-size='m'] {
     width: 20px;

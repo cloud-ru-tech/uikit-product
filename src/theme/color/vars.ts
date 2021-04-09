@@ -343,3 +343,15 @@ export const COLORS_TOAST = {
   ERROR_ACTION_COLOR: '--toast-error-action-color',
   ERROR_ACTION_HOVER_COLOR: '--toast-error-action-hover-color',
 };
+
+export const COLORS_AVATAR = {
+  COLOR: '--avatar-color',
+  BG: '--avatar-bg',
+};
+
+export const COLORS_SLIDER = {
+  BG: '--slider-bg',
+  BG_HOVER: '--slider-bg-hover',
+  BG_ACTIVE: '--slider-bg-active',
+  INACTIVE_BG: '--slider-inactive-bg',
+};

@@ -1,4 +1,5 @@
 import { css } from '@linaria/core';
+import { COLORS_SLIDER } from 'theme/color/vars';
 
 export const sliderStyles = css`
   .rc-slider-handle-click-focused {
@@ -8,12 +9,15 @@ export const sliderStyles = css`
     border: none !important;
     box-shadow: none !important;
   }
+  .rc-slider-rail {
+    background-color: var(${COLORS_SLIDER.INACTIVE_BG});
+  }
   .rc-slider-track {
-    background-color: #5558fa;
+    background-color: var(${COLORS_SLIDER.BG});
   }
   .rc-slider-handle {
     border: none;
-    background-color: #5558fa;
+    background-color: var(${COLORS_SLIDER.BG});
   }
   .rc-slider-handle:active {
     box-shadow: none !important;
@@ -25,5 +29,21 @@ export const sliderStyles = css`
   .rc-slider-dot {
     border: none;
     background-color: transparent;
+  }
+  &:hover {
+    .rc-slider-track {
+      background-color: var(${COLORS_SLIDER.BG_HOVER});
+    }
+    .rc-slider-handle {
+      background-color: var(${COLORS_SLIDER.BG_HOVER});
+    }
+  }
+  &:active {
+    .rc-slider-track {
+      background-color: var(${COLORS_SLIDER.BG_ACTIVE});
+    }
+    .rc-slider-handle {
+      background-color: var(${COLORS_SLIDER.BG_ACTIVE});
+    }
   }
 `;
