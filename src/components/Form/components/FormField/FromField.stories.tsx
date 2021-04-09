@@ -15,7 +15,7 @@ export default {
 
 const Wrapper = styled.div`
   padding: 24px;
-  background-color: var(${COLORS_DRAWER.BG});
+  background-color: var(${COLORS_DRAWER.BACKGROUND});
 `;
 
 const Template: Story = ({ label, hint, error }) => {

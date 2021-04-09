@@ -315,7 +315,8 @@ export const COLORS_FORM_FIELD = {
 };
 
 export const COLORS_DRAWER = {
-  BG: '--drawer-bg',
+  BACKGROUND: '--drawer-background',
+  BORDER_COLOR: '--drawer-border',
 };
 
 export const COLORS_TOAST = {

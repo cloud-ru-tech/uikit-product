@@ -150,7 +150,7 @@ export const green = css`
       ${COLORS_FORM_FIELD.HINT_COLOR}: var(${COLORS.GRAY_3});
       ${COLORS_FORM_FIELD.ERROR_COLOR}: var(${COLORS.RED_1});
 
-      ${COLORS_DRAWER.BG}: var(${COLORS.WHITE});
+      ${COLORS_DRAWER.BACKGROUND}: var(${COLORS.WHITE});
 
       ${COLORS_TOAST.INFO_COLOR}: var(${COLORS.WHITE});
       ${COLORS_TOAST.INFO_BG}: var(${COLORS.BLACK_2});
