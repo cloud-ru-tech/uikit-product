@@ -1,78 +1,71 @@
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { COLORS_GENERAL, COLORS_RADIO } from 'theme/color/vars';
+import { TableText, Text4 } from 'typography';
+import { COLORS_RADIO } from 'theme/color/vars';
 
 export const HiddenRadio = styled.input`
-  opacity: 0;
   display: none;
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+
+  stroke: var(${COLORS_RADIO.ICON_COLOR});
+  fill: var(${COLORS_RADIO.ICON_BG});
+
+  &:not([data-disabled='true']) {
+    &:hover {
+      stroke: var(${COLORS_RADIO.ICON_HOVER_COLOR});
+    }
+  }
+
+  &[data-disabled='true'] {
+    stroke: var(${COLORS_RADIO.ICON_DISABLED_COLOR});
+    fill: none;
+  }
+
+  &[data-checked='true'] {
+    stroke: var(${COLORS_RADIO.CHECKED_ICON_COLOR});
+
+    &:hover {
+      stroke: var(${COLORS_RADIO.CHECKED_ICON_HOVER_COLOR});
+    }
+
+    &[data-disabled='true'] {
+      stroke: var(${COLORS_RADIO.CHECKED_ICON_DISABLED_COLOR});
+    }
+  }
+`;
+
+export const Label = styled(TableText)`
+  display: block;
+  color: var(${COLORS_RADIO.COLOR});
+`;
+
+export const Description = styled(Text4)`
+  display: block;
+  color: var(${COLORS_RADIO.SECONDARY_COLOR});
 `;
 
 export const TextContainer = styled.div`
   padding-left: 8px;
 `;
 
-// TODO: check hover styles
-export const IconContainer = styled.div`
+export const Wrapper = styled.label`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 14px;
-  height: 14px;
+  align-items: flex-start;
+  padding: 8px 12px;
 
-  stroke: var(${COLORS_RADIO.COLOR});
-
-  &:hover {
-    stroke: var(${COLORS_RADIO.HOVER_COLOR});
-  }
-
-  &[data-checked='true'] {
-    stroke: var(${COLORS_RADIO.CHECKED_COLOR});
-    fill: var(${COLORS_RADIO.CHECKED_COLOR});
-
-    &:hover {
-      fill: var(${COLORS_RADIO.CHECKED_HOVER_COLOR});
-      stroke: var(${COLORS_RADIO.CHECKED_HOVER_COLOR});
-    }
+  &:not([data-disabled='true']):hover {
+    background-color: var(${COLORS_RADIO.HOVER_BG});
   }
 
   &[data-disabled='true'] {
-    stroke: var(${COLORS_RADIO.DISABLED_COLOR});
-    fill: var(${COLORS_RADIO.DISABLED_COLOR});
+    cursor: not-allowed;
 
-    &:hover {
-      stroke: var(${COLORS_RADIO.DISABLED_COLOR});
-      fill: var(${COLORS_RADIO.DISABLED_COLOR});
+    ${Label},
+    ${Description} {
+      color: var(${COLORS_RADIO.DISABLED_COLOR});
     }
   }
-`;
-
-export const CheckboxContainer = styled.label`
-  display: inline-flex;
-  padding: 8px;
-`;
-
-export const Label = styled.div`
-  font-family: SB Sans Interface;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1;
-  color: var(${COLORS_GENERAL.TEXT});
-`;
-
-export const Description = styled.div`
-  font-family: SB Sans Interface;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 15px;
-  color: var(${COLORS_GENERAL.TEXT});
-`;
-
-export const radioCheckedClassName = css`
-  position: absolute;
-  animation-name: checked;
-  animation-duration: 0.5s;
 `;

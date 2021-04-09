@@ -1,4 +1,4 @@
-import { FC, useCallback, useContext, useMemo } from 'react';
+import { FC, useContext } from 'react';
 
 import { RadioUncheckedSVG, RadioCheckedSVG } from '@sbercloud/icons';
 
@@ -10,8 +10,7 @@ import {
   IconContainer,
   Label,
   Description,
-  CheckboxContainer,
-  radioCheckedClassName,
+  Wrapper,
 } from './styled';
 
 export interface IRadioIcon {
@@ -21,14 +20,7 @@ export interface IRadioIcon {
 
 export const RadioIcon: FC<IRadioIcon> = ({ checked, disabled }) => (
   <IconContainer data-checked={checked} data-disabled={disabled}>
-    <RadioUncheckedSVG size={14} />
-    {checked && (
-      <RadioCheckedSVG
-        size={8}
-        data-disabled={disabled}
-        className={radioCheckedClassName}
-      />
-    )}
+    {checked ? <RadioCheckedSVG size={20} /> : <RadioUncheckedSVG size={20} />}
   </IconContainer>
 );
 
@@ -39,43 +31,30 @@ export interface IRadioProps {
   description?: string;
 }
 
-// TODO: можно добавить поддержку неконтроллируемого компонента(useState)
 export const Radio: FC<IRadioProps> = ({
-  value = '',
+  value,
   label,
   description,
   disabled,
 }) => {
   const RadioGroup = useContext(RadioGroupContext);
-  const checked = useMemo(
-    () => RadioGroup !== null && RadioGroup.value === value,
-    [value, RadioGroup],
-  );
 
-  const handleChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      if (!RadioGroup || disabled) {
-        return;
-      }
-
-      RadioGroup.onChange(e);
-    },
-    [RadioGroup],
-  );
+  const checked = RadioGroup?.value === value;
 
   return (
-    <CheckboxContainer>
+    <Wrapper data-disabled={disabled}>
       <HiddenRadio
         type='radio'
         value={value}
+        disabled={disabled}
         checked={checked}
-        onChange={handleChange}
+        onChange={RadioGroup?.onChange}
       />
       <RadioIcon checked={checked} disabled={disabled} />
       <TextContainer>
         <Label>{label}</Label>
         <Description>{description}</Description>
       </TextContainer>
-    </CheckboxContainer>
+    </Wrapper>
   );
 };
