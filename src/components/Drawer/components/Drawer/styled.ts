@@ -39,7 +39,7 @@ export const HeaderBoxStyled = styled.div<{ width: string }>`
   justify-content: space-between;
   width: ${props => props.width};
   background: inherit;
-  border-bottom: solid 1px #e4e4e4;
+  border-bottom: solid 1px ${COLORS_DRAWER.BORDER_COLOR};
 `;
 
 export const FooterBoxStyled = styled.div`
@@ -47,7 +47,7 @@ export const FooterBoxStyled = styled.div`
   background: inherit;
   width: 100%;
   padding: 16px 24px;
-  border-top: solid 1px #e4e4e4;
+  border-top: solid 1px ${COLORS_DRAWER.BORDER_COLOR};
   position: absolute;
   bottom: 0px;
 `;
