@@ -303,6 +303,11 @@ export const COLORS_SWITCH = {
   ACTIVE_DISABLED_BG: '--switch-active-disabled-bg',
 };
 
+export const COLORS_BREADCRUMBS = {
+  ACTIVE_COLOR: '--breadcrumbs-active-color',
+  INACTIVE_COLOR: '--breadcrumbs-inactive-color',
+};
+
 export const COLORS_FORM_GROUP = {
   NUMBER_COLOR: '--form-group-number-color',
   NUMBER_BG: '--form-group-number-bg',
