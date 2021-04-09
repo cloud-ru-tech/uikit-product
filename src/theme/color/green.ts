@@ -13,6 +13,7 @@ import {
   COLORS_FORM_GROUP,
   COLORS_DRAWER,
   COLORS_TOAST,
+  COLORS_TYPOGRAPHY,
 } from './vars';
 
 export const green = css`
@@ -61,6 +62,8 @@ export const green = css`
 
       ${COLORS_GENERAL.BACKGROUND}: var(${COLORS.GRAY_2});
       ${COLORS_GENERAL.TEXT}: var(${COLORS.BLACK_2});
+
+      ${COLORS_TYPOGRAPHY.LINK}: var(${COLORS.BLACK_2});
 
       ${COLORS_BUTTON.FOCUS_SHADOW}: var(${COLORS.GREEN_3});
 

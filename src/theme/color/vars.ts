@@ -73,6 +73,10 @@ export const COLORS_GENERAL = {
   TEXT: '--color-default-text',
 };
 
+export const COLORS_TYPOGRAPHY = {
+  LINK: '--color-typography-link',
+};
+
 export const COLORS_BUTTON = {
   FOCUS_SHADOW: '--button-focus-shadow',
 

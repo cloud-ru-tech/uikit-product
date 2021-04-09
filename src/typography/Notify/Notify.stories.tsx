@@ -1,26 +1,24 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { COLORS_GENERAL } from 'theme/color/vars';
-
-import { NotifyText, TNotifyProps } from './index';
+import { NotifyText } from './index';
 
 export default {
   title: 'Typography/Notify',
   component: NotifyText,
 } as Meta;
 
-const Template: Story<TNotifyProps & { children: string }> = ({
+const Template: Story<{ color: string; children: string }> = ({
   children,
+  color,
   ...restArgs
 }) => (
-  <div>
+  <div style={{ color }}>
     <NotifyText {...restArgs}>{children} (NotifyText)</NotifyText>
   </div>
 );
 
 export const notify = Template.bind({});
 notify.args = {
-  color: `var(${COLORS_GENERAL.TEXT})`,
   children: 'Пример',
 };
 notify.argTypes = {

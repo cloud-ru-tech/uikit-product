@@ -26,6 +26,7 @@ import {
   COLORS_FORM_FIELD,
   COLORS_DRAWER,
   COLORS_TOAST,
+  COLORS_TYPOGRAPHY,
 } from './vars';
 
 export const purpleDark = css`
@@ -62,6 +63,8 @@ export const purpleDark = css`
 
       ${COLORS_GENERAL.BACKGROUND}: var(${COLORS.BLACK_2});
       ${COLORS_GENERAL.TEXT}: var(${COLORS.GRAY_1});
+
+      ${COLORS_TYPOGRAPHY.LINK}: var(${COLORS.VIOLET_5});
 
       ${COLORS_BUTTON.FOCUS_SHADOW}: var(${COLORS.VIOLET_8});
 
