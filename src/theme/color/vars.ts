@@ -73,6 +73,10 @@ export const COLORS_GENERAL = {
   TEXT: '--color-default-text',
 };
 
+export const COLORS_TYPOGRAPHY = {
+  LINK: '--color-typography-link',
+};
+
 export const COLORS_BUTTON = {
   FOCUS_SHADOW: '--button-focus-shadow',
 
@@ -316,7 +320,8 @@ export const COLORS_FORM_FIELD = {
 };
 
 export const COLORS_DRAWER = {
-  BG: '--drawer-bg',
+  BACKGROUND: '--drawer-background',
+  BORDER_COLOR: '--drawer-border',
 };
 
 export const COLORS_TOAST = {

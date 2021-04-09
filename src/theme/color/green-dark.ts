@@ -13,6 +13,7 @@ import {
   COLORS_FORM_FIELD,
   COLORS_DRAWER,
   COLORS_TOAST,
+  COLORS_TYPOGRAPHY,
 } from './vars';
 
 export const greenDark = css`
@@ -62,6 +63,8 @@ export const greenDark = css`
 
       ${COLORS_GENERAL.BACKGROUND}: var(${COLORS.GRAY_11});
       ${COLORS_GENERAL.TEXT}: var(${COLORS_BRAND.GRAY});
+
+      ${COLORS_TYPOGRAPHY.LINK}: var(${COLORS_BRAND.GRAY});
 
       ${COLORS_BUTTON.FOCUS_SHADOW}: var(${COLORS.GREEN_7});
 
@@ -148,7 +151,7 @@ export const greenDark = css`
       ${COLORS_FORM_FIELD.HINT_COLOR}: var(${COLORS.GRAY_4});
       ${COLORS_FORM_FIELD.ERROR_COLOR}: var(${COLORS.RED_1});
 
-      ${COLORS_DRAWER.BG}: var(${COLORS.GRAY_9});
+      ${COLORS_DRAWER.BACKGROUND}: var(${COLORS.GRAY_9});
 
       ${COLORS_TOAST.INFO_COLOR}: var(${COLORS.WHITE});
       ${COLORS_TOAST.INFO_BG}: var(${COLORS.GRAY_5});

@@ -5,6 +5,7 @@ dist
 vscode
 build.bat
 .npmrc
+package-lock.json
 
 # Logs
 logs
