@@ -11,7 +11,7 @@ export default {
 } as Meta;
 
 const Wrapper = styled.div`
-  background-color: var(${COLORS_DRAWER.BG});
+  background-color: var(${COLORS_DRAWER.BACKGROUND});
   padding: 10px;
 `;
 

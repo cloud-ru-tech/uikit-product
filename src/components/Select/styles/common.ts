@@ -65,6 +65,8 @@ export const styles = (typeStyles?: Styles): Styles => ({
   singleValue: (styles: CSSProperties): CSSProperties => ({
     ...styles,
     color: `var(${COLORS_SELECT.TEXT_COLOR})`,
+    fontSize: '14px',
+    lineHeight: '20px',
   }),
   dropdownIndicator: (
     styles: CSSProperties,
@@ -115,6 +117,8 @@ export const styles = (typeStyles?: Styles): Styles => ({
     backgroundColor: state.isSelected
       ? `var(${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND})`
       : `var(${COLORS_SELECT.BACKGROUND})`,
+    fontSize: '14px',
+    lineHeight: '20px',
     '&:hover': {
       cursor: 'pointer',
       borderColor: 'transparent',

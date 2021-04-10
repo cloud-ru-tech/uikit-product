@@ -45,11 +45,12 @@ export const HeaderBoxStyled = styled.div<{ width: string }>`
 export const FooterBoxStyled = styled.div`
   z-index: 2;
   background: inherit;
-  width: 100%;
   padding: 16px 24px;
   border-top: solid 1px var(${COLORS_DRAWER.BORDER_COLOR});
   position: absolute;
   bottom: 0px;
+  left: 0px;
+  right: 0px;
 `;
 
 export const drawerPaddingModeClassName = css`
