@@ -62,9 +62,11 @@ export const styles = (typeStyles?: Styles): Styles => ({
     color: 'red',
     backgroundColor: `var(${COLORS_SELECT.BACKGROUND})`,
   }),
-  singleValue: (styles: CSSProperties): CSSProperties => ({
+  singleValue: (styles: CSSProperties, { isDisabled }): CSSProperties => ({
     ...styles,
-    color: `var(${COLORS_SELECT.TEXT_COLOR})`,
+    color: `var(${
+      isDisabled ? COLORS_SELECT.DISABLED_TEXT_COLOR : COLORS_SELECT.TEXT_COLOR
+    })`,
     fontSize: '14px',
     lineHeight: '20px',
   }),
