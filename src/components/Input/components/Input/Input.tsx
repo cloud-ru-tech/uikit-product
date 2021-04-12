@@ -38,6 +38,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       labelMinWidth,
       disabled = false,
       wrapperRef,
+      ...rest
     },
     ref,
   ) => {
@@ -136,6 +137,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
               max={numberMax}
               step={1}
               disabled={disabled}
+              {...rest}
             />
           </div>
           <StyledIconWrapper>

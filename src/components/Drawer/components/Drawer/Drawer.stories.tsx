@@ -3,9 +3,7 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Input } from 'components/Input';
-import { Button } from 'components/Button';
-import { Radio, RadioGroup } from 'components/Radio';
+import { Input, Divider, Button, Radio, RadioGroup } from 'components';
 
 import { Drawer, IDrawerProps } from './Drawer';
 
@@ -20,6 +18,10 @@ const buttonStyle = css`
 
 const DrawerContent = styled.div`
   padding: 12px;
+`;
+
+const dividerClassName = css`
+  margin: 24px -12px;
 `;
 
 const Template: Story<IDrawerProps> = ({ ...args }) => {
@@ -51,6 +53,7 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
             onChange={e => setValue(e.target.value)}
             placeholder='Пример: Project1-bucket106'
           />
+          <Divider color='middle' className={dividerClassName} />
           <RadioGroup
             name='stories'
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

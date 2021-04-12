@@ -53,7 +53,6 @@ export const globals = css`
     }
 
     body {
-      margin: 0;
       height: 100%;
       background: var(${COLORS_GENERAL.BACKGROUND});
 

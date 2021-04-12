@@ -28,6 +28,8 @@ import {
   COLORS_FORM_FIELD,
   COLORS_TOAST,
   COLORS_TYPOGRAPHY,
+  COLORS_AVATAR,
+  COLORS_SLIDER,
 } from './vars';
 
 export const purpleDark = css`
@@ -290,6 +292,14 @@ export const purpleDark = css`
       ${COLORS_TOAST.ERROR_ICON_BG}: rgba(255, 255, 255, 0.1);
       ${COLORS_TOAST.ERROR_ACTION_COLOR}: #ededed;
       ${COLORS_TOAST.ERROR_ACTION_HOVER_COLOR}: var(${COLORS.WHITE});
+
+      ${COLORS_AVATAR.COLOR}: var(${COLORS.BLACK_2});
+      ${COLORS_AVATAR.BG}: var(${COLORS.GRAY_3});
+
+      ${COLORS_SLIDER.BG}: var(${COLORS.VIOLET_5});
+      ${COLORS_SLIDER.BG_HOVER}: var(${COLORS.VIOLET_6});
+      ${COLORS_SLIDER.BG_ACTIVE}: var(${COLORS.VIOLET_7});
+      ${COLORS_SLIDER.INACTIVE_BG}: var(${COLORS.GRAY_3});
     }
   }
 `;
