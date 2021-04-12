@@ -58,7 +58,7 @@ export interface IModalProps extends IReactModalProps {
   description?: React.ReactNode;
   approveText?: string;
   disableApprove?: boolean;
-  disableApproveTooltip?: boolean;
+  disableApproveTooltip?: string;
   approve?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   cancelText?: string;
   cancel?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
@@ -134,8 +134,21 @@ export const Modal: React.FC<IModalProps> = props => {
       {description && <Description>{description}</Description>}
       {(approve || cancel) && (
         <ButtonWrapper>
-          {approve && !disableApproveTooltip && (
-            <BasicTooltip tooltip={disableApproveTooltip}>
+          {approve &&
+            (disableApprove && disableApproveTooltip ? (
+              <BasicTooltip tooltip={disableApproveTooltip}>
+                <Button
+                  className={buttonCSS}
+                  disabled={disableApprove}
+                  onClick={(e): void => {
+                    approve(e);
+                    onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
+                  }}
+                >
+                  {approveText || 'Подтвердить'}
+                </Button>
+              </BasicTooltip>
+            ) : (
               <Button
                 className={buttonCSS}
                 disabled={disableApprove}
@@ -146,20 +159,7 @@ export const Modal: React.FC<IModalProps> = props => {
               >
                 {approveText || 'Подтвердить'}
               </Button>
-            </BasicTooltip>
-          )}
-          {approve && disableApproveTooltip && (
-            <Button
-              className={buttonCSS}
-              disabled={disableApprove}
-              onClick={(e): void => {
-                approve(e);
-                onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
-              }}
-            >
-              {approveText || 'Подтвердить'}
-            </Button>
-          )}
+            ))}
           {cancel && (
             <Button
               className={buttonCSS}

@@ -44,4 +44,8 @@ const Template: Story<IModalProps> = ({ ...args }) => {
 
 export const modal = Template.bind({});
 modal.args = {};
-modal.argTypes = {};
+modal.argTypes = {
+  disableApproveTooltip: {
+    defaultValue: 'Tooltip',
+  },
+};
