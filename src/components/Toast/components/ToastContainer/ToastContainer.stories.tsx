@@ -73,8 +73,8 @@ const PREDEFINED_ITEMS: {
           onClick: () => {},
         },
         {
-          title: 'Отменить',
-          onClick: () => {},
+          title: 'Закрыть',
+          onClick: (_, closeToast) => closeToast && closeToast(),
         },
       ],
     },

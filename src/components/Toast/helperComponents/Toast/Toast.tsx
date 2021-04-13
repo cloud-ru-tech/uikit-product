@@ -26,7 +26,10 @@ import {
 
 export interface ToastAction {
   title: string;
-  onClick: (closeToast?: () => void) => void;
+  onClick: (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    closeToast?: () => void,
+  ) => void;
 }
 
 export interface ToastProps extends Partial<ToastContentProps> {
@@ -79,7 +82,13 @@ export const Toast: React.FC<ToastProps> = ({
       {Array.isArray(actions) && (
         <Actions>
           {actions.map(({ title, onClick }) => (
-            <Action key={title} onClick={() => onClick(closeToast)}>
+            <Action
+              key={title}
+              onClick={e => {
+                e.stopPropagation();
+                onClick(e, closeToast);
+              }}
+            >
               <ActionText>{title}</ActionText>
             </Action>
           ))}
