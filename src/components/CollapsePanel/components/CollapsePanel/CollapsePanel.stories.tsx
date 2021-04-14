@@ -35,10 +35,24 @@ const Template: Story<ICollapsePanelProps> = ({ ...args }) => (
     </CollapsePanelItem>
     <CollapsePanelItem
       index={1}
+      header={<div>Vertical Scrolling</div>}
+      isFavourite
+    >
+      <ContentStyled>{'Content '.repeat(500)}</ContentStyled>
+    </CollapsePanelItem>
+    <CollapsePanelItem
+      index={2}
+      header={<div>Horizontal Scrolling</div>}
+      isFavourite
+    >
+      <ContentStyled>{'Content'.repeat(100)}</ContentStyled>
+    </CollapsePanelItem>
+    <CollapsePanelItem
+      index={3}
       header={<Avatar shape='square' size={72} src={avatarSrc} />}
       isFavourite
     >
-      <ContentStyled>Content</ContentStyled>
+      <ContentStyled>{'Content'}</ContentStyled>
     </CollapsePanelItem>
   </CollapsePanel>
 );
