@@ -76,7 +76,7 @@ export const ContentWrapStyled = styled.div`
 
   &[data-expanded-animation] {
     transition: max-height 0.5s ease-in;
-    overflow: scroll;
+    overflow: auto;
   }
 `;
 
