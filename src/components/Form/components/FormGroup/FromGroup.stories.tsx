@@ -24,11 +24,14 @@ export default {
 
 const Wrapper = styled.div`
   padding: 24px;
+  position: relative;
   background-color: var(${COLORS_DRAWER.BACKGROUND});
 `;
 
 const dividerClassName = css`
-  margin: 0 -24px;
+  position absolute;
+  left: 0;
+  right: 0;
 `;
 
 const Template: Story = () => {
@@ -38,7 +41,7 @@ const Template: Story = () => {
 
   return (
     <Wrapper>
-      <Divider className={dividerClassName} />
+      <Divider className={dividerClassName} color='middle' />
 
       <FormGroup number={1} title='Общая информация'>
         <FormField label='Произвольное число'>
@@ -78,12 +81,11 @@ const Template: Story = () => {
         </FormField>
       </FormGroup>
 
-      <Divider className={dividerClassName} />
-
       <FormGroup
         number={2}
         title='Настройки'
         hint='Укажите необходимые значения для запуска'
+        variant={null}
       >
         <FormField label='IPv4/IPv6' error='Некорректный формат'>
           <Select
@@ -98,7 +100,7 @@ const Template: Story = () => {
         </FormField>
       </FormGroup>
 
-      <Divider className={dividerClassName} />
+      <Divider className={dividerClassName} color='middle' />
     </Wrapper>
   );
 };

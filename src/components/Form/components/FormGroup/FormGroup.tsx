@@ -12,19 +12,25 @@ import {
   tooltipTriggerClassName,
 } from './styled';
 
+export const VARIANT = {
+  POPUP: 'popup',
+} as const;
+
 export interface FormGroupProps {
   number: number;
   title: string;
   hint?: string;
+  variant?: typeof VARIANT[keyof typeof VARIANT] | null;
 }
 
 export const FormGroup: React.FC<FormGroupProps> = ({
   number,
   title,
   hint,
+  variant = VARIANT.POPUP,
   children,
 }) => (
-  <Wrapper>
+  <Wrapper data-variant={variant}>
     <Header>
       <Number>{number}</Number>
 

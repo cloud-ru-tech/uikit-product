@@ -1,8 +1,10 @@
 import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
 
-import { COLORS_FORM_GROUP } from 'theme/color/vars';
+import { COLORS_DIVIDER, COLORS_FORM_GROUP } from 'theme/color/vars';
 import { H3, TableText } from 'typography';
+
+import { VARIANT } from './FormGroup';
 
 export const hintClassName = css`
   fill: var(${COLORS_FORM_GROUP.HINT_COLOR});
@@ -16,6 +18,14 @@ export const tooltipTriggerClassName = css`
 
 export const Wrapper = styled.div`
   padding: 24px 0;
+
+  &[data-variant='${VARIANT.POPUP}'] {
+    padding: 24px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(${COLORS_DIVIDER.COLOR_MIDDLE});
+    }
+  }
 `;
 
 export const Header = styled.div`
