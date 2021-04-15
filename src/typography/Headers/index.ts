@@ -1,49 +1,33 @@
 import { styled } from '@linaria/react';
 
+import { H_1, H_2, H_3, H_3_SEMIBOLD, H_4, H_5 } from 'typography/vars';
+
 export const H1 = styled.h1`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 44px;
-  line-height: 44px;
+  ${H_1}
   margin: 0;
 `;
 
 export const H2 = styled.h2`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 40px;
+  ${H_2}
   margin: 0;
 `;
 
 export const H3 = styled.h3`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 26px;
+  ${H_3}
   margin: 0;
 `;
 
 export const H3Semibold = styled.h3`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 26px;
+  ${H_3_SEMIBOLD}
   margin: 0;
 `;
 
 export const H4 = styled.h4`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+  ${H_4}
   margin: 0;
 `;
 
 export const H5 = styled.h5`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
+  ${H_5}
   margin: 0;
 `;

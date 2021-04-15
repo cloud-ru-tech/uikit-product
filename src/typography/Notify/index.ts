@@ -1,9 +1,8 @@
 import { styled } from '@linaria/react';
 
+import { NOTIFY_TEXT } from 'typography/vars';
+
 export const NotifyText = styled.span`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
+  ${NOTIFY_TEXT}
   margin: 0;
 `;

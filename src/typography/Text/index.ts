@@ -1,45 +1,28 @@
 import { styled } from '@linaria/react';
 
-import { COLORS_TYPOGRAPHY } from 'theme/color/vars';
+import { TEXT_1, TEXT_2, TEXT_2_LINK, TEXT_3, TEXT_4 } from 'typography/vars';
 
 export const Text1 = styled.span`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+  ${TEXT_1}
   margin: 0;
 `;
 
 export const Text2 = styled.span`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
+  ${TEXT_2}
   margin: 0;
 `;
 
 export const Text2Link = styled.a`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
+  ${TEXT_2_LINK}
   margin: 0;
-  color: var(${COLORS_TYPOGRAPHY.LINK});
-  text-decoration: underline;
 `;
 
 export const Text3 = styled.span`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 16px;
+  ${TEXT_3}
   margin: 0;
 `;
 
 export const Text4 = styled.span`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 15px;
+  ${TEXT_4}
   margin: 0;
 `;
