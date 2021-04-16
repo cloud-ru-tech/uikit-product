@@ -26,4 +26,10 @@ radio.args = {
   value: 'story1',
   label: 'story1',
 };
-radio.parameters = {};
+radio.parameters = {
+  disabled: {
+    control: {
+      type: 'boolean',
+    },
+  },
+};

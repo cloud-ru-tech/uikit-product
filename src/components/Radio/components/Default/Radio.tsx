@@ -42,7 +42,7 @@ export const Radio: FC<IRadioProps> = ({
   const checked = RadioGroup?.value === value;
 
   return (
-    <Wrapper data-disabled={disabled}>
+    <Wrapper data-disabled={disabled} data-checked={checked}>
       <HiddenRadio
         type='radio'
         value={value}
