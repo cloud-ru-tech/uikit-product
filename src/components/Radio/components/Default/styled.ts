@@ -56,6 +56,10 @@ export const Wrapper = styled.label`
   align-items: flex-start;
   padding: 8px 12px;
 
+  &[data-checked='true'] {
+    background-color: var(${COLORS_RADIO.CHECKED_BG});
+  }
+
   &:not([data-disabled='true']):hover {
     background-color: var(${COLORS_RADIO.HOVER_BG});
   }

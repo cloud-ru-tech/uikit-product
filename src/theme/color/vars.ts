@@ -207,6 +207,7 @@ export const COLORS_RADIO = {
   SECONDARY_COLOR: '--radio-secondary-color',
   DISABLED_COLOR: '--radio-disabled-color',
   HOVER_BG: '--radio-hover-bg',
+  CHECKED_BG: '--radio-checked-bg',
   ICON_COLOR: '--radio-icon-color',
   ICON_BG: '--radio-icon-bg',
   ICON_HOVER_COLOR: '--radio-icon-hover-color',
