@@ -1,9 +1,8 @@
 import { styled } from '@linaria/react';
 
+import { TABLE_TEXT } from 'typography/vars';
+
 export const TableText = styled.span`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
+  ${TABLE_TEXT}
   margin: 0;
 `;

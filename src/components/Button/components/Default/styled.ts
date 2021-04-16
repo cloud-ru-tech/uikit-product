@@ -1,6 +1,7 @@
 import { styled } from '@linaria/react';
 
 import { COLORS_BUTTON } from 'theme/color/vars';
+import { H_4, TABLE_TEXT } from 'typography/vars';
 
 export const ButtonComponent = styled.button`
   position: relative;
@@ -14,6 +15,8 @@ export const ButtonComponent = styled.button`
   justify-content: center;
 
   box-sizing: border-box;
+
+  ${TABLE_TEXT}
 
   &[data-size='xxs'] {
     padding: 0;
@@ -217,7 +220,9 @@ export const ButtonComponent = styled.button`
   &[data-round='true'] {
     border-radius: 50px;
     padding: 4px 12px;
-    line-height: 20px;
+
+    ${H_4}
+
     &:before {
       border-radius: 50px;
     }
