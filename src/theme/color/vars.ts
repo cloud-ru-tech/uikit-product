@@ -356,3 +356,39 @@ export const COLORS_SLIDER = {
   BG_ACTIVE: '--slider-bg-active',
   INACTIVE_BG: '--slider-inactive-bg',
 };
+
+export const COLORS_ICON_BUTTON = {
+  BLUE_COLOR: '--icon-button-blue-color',
+  BLUE_BORDER_COLOR: '--icon-button-blue-border-color',
+  BLUE_COLOR_HOVER: '--icon-button-blue-color-hover',
+  BLUE_BORDER_COLOR_HOVER: '--icon-button-blue-border-color-hover',
+  BLUE_COLOR_ACTIVE: '--icon-button-blue-color-active',
+  BLUE_BORDER_COLOR_ACTIVE: '--icon-button-blue-border-color-active',
+  BLUE_COLOR_DISABLED: '--icon-button-blue-color-disabled',
+  BLUE_BORDER_COLOR_DISABLED: '--icon-button-blue-border-color-disabled',
+  BLUE_COLOR_FOCUS: '--icon-button-blue-color-focus',
+  BLUE_BORDER_COLOR_FOCUS: '--icon-button-border-blue-color-focus',
+  BLUE_FOCUS_SHADOW: '--icon-button-blue-focus-shadow',
+
+  WHITE_COLOR: '--icon-button-white-color',
+  WHITE_COMMON_BG: '--icon-button-white-common-bg',
+  WHITE_BORDER_COLOR: '--icon-button-white-border-color',
+  WHITE_COLOR_HOVER: '--icon-button-white-color-hover',
+  WHITE_BORDER_COLOR_HOVER: '--icon-button-white-border-color-hover',
+  WHITE_COLOR_ACTIVE: '--icon-button-white-color-active',
+  WHITE_BORDER_COLOR_ACTIVE: '--icon-button-white-border-color-active',
+  WHITE_COLOR_DISABLED: '--icon-button-white-color-disabled',
+  WHITE_BORDER_COLOR_DISABLED: '--icon-button-white-border-color-disabled',
+  WHITE_COLOR_FOCUS: '--icon-button-white-color-focus',
+  WHITE_BORDER_COLOR_FOCUS: '--icon-button-border-white-color-focus',
+  WHITE_FOCUS_SHADOW: '--icon-button-white-focus-shadow',
+
+  HEADER_COLOR: '--icon-button-header-color',
+  HEADER_COLOR_HOVER: '--icon-button-header-color-hover',
+
+  HEADER_MENU_COLOR: '--icon-button-header-menu-color',
+  HEADER_MENU_COLOR_HOVER: '--icon-button-header-menu-color-hover',
+
+  SIDEBAR_COLOR: '--icon-button-sidebar-color',
+  SIDEBAR_COLOR_HOVER: '--icon-button-sidebar-color-hover',
+};
