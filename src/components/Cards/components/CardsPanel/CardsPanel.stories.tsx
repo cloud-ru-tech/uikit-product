@@ -3,7 +3,7 @@ import { styled } from '@linaria/react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import { Tag } from 'components/Tag';
-import { Input } from 'components/Input';
+import { CopyInput } from 'components/Input';
 import { Card, CardHeader } from 'components/Cards';
 
 import { CardsPanel, ICardsPanelProps } from './CardsPanel';
@@ -184,20 +184,16 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
               {new Date('2020-10-26T00:09:27.249000').toLocaleDateString()}
             </DateStyled>
             <InputWrapStyled>
-              <Input
-                disabled
-                allowCopy
+              <CopyInput
                 label='Image'
-                labelMinWidth='40px'
+                labelMinWidth='80px'
                 value='qwewerwerwerwer'
               />
             </InputWrapStyled>
             <InputWrapStyled>
-              <Input
-                disabled
-                allowCopy
+              <CopyInput
                 label='URL'
-                labelMinWidth='40px'
+                labelMinWidth='80px'
                 value='sdmncv,mshfwld'
               />
             </InputWrapStyled>

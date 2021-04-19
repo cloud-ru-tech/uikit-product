@@ -55,7 +55,7 @@ export const AdditionalHoverStyled = styled.div<{ isVertical: boolean }>`
   border-bottom-left-radius: ${({ isVertical }) =>
     isVertical ? '18px' : '0px'};
   z-index: 0;
-  transition: all 0.2s ease;
+  transition: ${({ isVertical }) => (isVertical ? 'top' : 'left')} 0.2s ease;
   overflow: hidden;
 `;
 

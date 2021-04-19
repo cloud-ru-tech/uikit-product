@@ -17,6 +17,10 @@ export const optionClass = css`
   &[data-is-edit='true']: {
     background-color: ${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND} !important;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const StyledTag = styled(Tag)`

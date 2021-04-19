@@ -200,6 +200,10 @@ export const COLORS_INPUT = {
   INPUT_DISABLED_BORDER: '--input-disabled-border',
   INPUT_ICON_COLOR: '--input-icon-color',
   INPUT_ICON_HOVER_COLOR: '--input-icon-hover-color',
+  COPY_INPUT_BACKGROUND: '--input-copy-background',
+  COPY_INPUT_COLOR: '--input-copy-color',
+  COPY_INPUT_ICON_COLOR: '--input-copy-icon-color',
+  COPY_INPUT_ICON_BACKGROUND_COLOR: '--input-copy-icon-background-color',
 };
 
 export const COLORS_RADIO = {
@@ -248,6 +252,7 @@ export const COLORS_TOOLBAR = {
   BACKGROUND: '--toolbar-background',
   INPUT_BORDER: '--toolbar-border-color',
   ACTIVE_BUTTON: '--toolbar-active-button',
+  PLACEHOLDER_COLOR: '--toolbar-placeholder-color',
 };
 
 export const COLORS_CHECKBOX = {

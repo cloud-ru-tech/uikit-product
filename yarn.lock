@@ -1725,9 +1725,9 @@
     react-lifecycles-compat "^3.0.4"
 
 "@sbercloud/icons@^1.0.11":
-  version "1.0.11"
-  resolved "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/@sbercloud/icons/-/icons-1.0.11.tgz#0ecd30b563243e796d9b63118ac133c972ae7faa"
-  integrity sha512-YjdTlLPSoPBo4FgEulDfZQ2L+M4A9qPwG2WoHsRe7vQ2us+ch7nNdAzLbu070h/U1uQXR36pZDNt2UcnQiIMKg==
+  version "1.0.12"
+  resolved "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/@sbercloud/icons/-/icons-1.0.12.tgz#c8412081b7740cfc2d2fb3870cd43c52acaccc30"
+  integrity sha512-gf05Ulj7/yTQk7jmgcmNhBsAYI4BvCdDeainLqa0qTglOVlluf3jlFzT6dnS3zqDQSkSqZhQlU08rV8ERUMtNg==
   dependencies:
     react "^17.0.1"
     react-dom "^17.0.1"

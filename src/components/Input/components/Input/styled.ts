@@ -17,7 +17,8 @@ export const StyledInput = styled.input<{ allowCopy?: boolean }>`
   border: 1px solid var(${COLORS_INPUT.INPUT_BORDER});
   border-radius: 4px;
   height: 44px;
-  padding: 12px;
+  text-overflow: ${({ allowCopy }) => (allowCopy ? 'ellipsis' : '')};
+  padding: ${({ allowCopy }) => (allowCopy ? '12px 40px 12px 12px' : '12px')};
 
   &::placeholder {
     color: var(${COLORS_INPUT.INPUT_PLACEHOLDER_COLOR});
@@ -37,7 +38,8 @@ export const StyledInput = styled.input<{ allowCopy?: boolean }>`
 
   &[data-type='embed'] {
     height: 40px;
-    padding: 10px 12px;
+    padding: ${({ allowCopy }) =>
+      allowCopy ? '10px 40px 10px 12px' : '10px 12px'};
   }
 
   &:not([data-disabled='true']):hover {
