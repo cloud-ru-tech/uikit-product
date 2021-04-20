@@ -14,47 +14,24 @@
 6. Добавить в **webpack.config.js**:
 
 ```js
-resolve: {
-   alias: {
-      react: path.resolve(__dirname, "node_modules", "react"),
-      "react-dom": path.resolve(__dirname, "node_modules", "react-dom"),
-      "@linaria/react": path.resolve(
-         __dirname,
-         "node_modules",
-         "@linaria/react"
-      ),
-      "@linaria/core": path.resolve(
-         __dirname,
-         "node_modules",
-         "@linaria/core"
-      ),
-   },
-},
-...
-plugins: [
-   new webpack.ProvidePlugin({
-      React: "react",
-   }),
-]
-...
 module: {
-   rules: [
-      {
-         test: /\.js$/,
-         include: /node_modules\/@sbercloud\/uikit2.0/,
-         use: [
-         {
-            loader: "babel-loader",
-         },
-         {
-            loader: "@linaria/webpack-loader",
-            options: {
-               sourceMap: process.env.NODE_ENV !== "production",
-            },
-         },
-         ],
-      },
-   ]
+  rules: [
+    {
+      test: /\.js$/,
+      include: /node_modules\/@sbercloud\/uikit2.0/,
+      use: [
+        {
+          loader: 'babel-loader',
+        },
+        {
+          loader: '@linaria/webpack-loader',
+          options: {
+            sourceMap: process.env.NODE_ENV !== 'production',
+          },
+        },
+      ],
+    },
+  ];
 }
 ```
 
