@@ -34,7 +34,7 @@
     ]
   },
   "dependencies": {
-    "@sbercloud/icons": "^1.0.11",
+    "@sbercloud/icons": "1.0.11",
     "lodash.debounce": "^4.0.8",
     "lodash.isequal": "^4.5.0",
     "nanoid": "^3.1.22",
@@ -111,7 +111,7 @@
     "storybook-addon-designs": "^5.4.2",
     "storybook-addon-themes": "^6.0.1",
     "tsconfig-paths-webpack-plugin": "^3.3.0",
-    "typescript": "^4.1.2"
+    "typescript": "4.2.4"
   },
   "publishConfig": {
     "registry": "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/"

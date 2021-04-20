@@ -1,9 +1,10 @@
 export type BreadcrumbItem = {
   text: string;
-  link?: string;
+  link?: unknown;
   key?: string;
   isActive?: boolean;
   LinkComponent?: React.ReactNode;
+  fullVisible?: boolean;
 };
 
 export type StateItem = {
@@ -15,4 +16,6 @@ export type StateItem = {
   visible: boolean;
   tooltip: boolean;
   width?: number;
+  fullVisible?: boolean;
+  isLastForceVisible?: boolean;
 };
