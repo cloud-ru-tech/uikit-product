@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { Wrapper, Dot, Content } from './styled';
 
 export const TYPE = {

@@ -16,11 +16,12 @@ const Group = styled.div`
   overflow: auto;
 `;
 
-const Item = styled.div`
+const Item = styled.div<{ stroke: boolean }>`
   margin: 0.5rem;
   padding: 0.5rem;
   text-align: center;
   width: 150px;
+  stroke: ${({ stroke }) => (stroke ? '#000' : 'inherit')};
 `;
 
 const Template: Story = () => {
@@ -49,7 +50,7 @@ const Template: Story = () => {
         {Object.entries(Icons)
           .filter(([key]) => key.toLowerCase().includes(search))
           .map(([key, Icon]) => (
-            <Item key={key}>
+            <Item key={key} stroke={key === 'UploadSVG'}>
               <Button variant='transparent'>
                 <Icon />
               </Button>
