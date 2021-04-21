@@ -16,6 +16,7 @@ export const Dot = styled.span`
   border-radius: 100%;
 
   margin-right: 8px;
+  background-color: ${props => props.color || COLORS_STATUS.SUCCESS_BG};
 
   &[data-type='${TYPE.FAILED}'] {
     background-color: var(${COLORS_STATUS.FAILED_BG});
