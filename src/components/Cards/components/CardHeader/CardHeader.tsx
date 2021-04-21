@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import { StarSVG } from '@sbercloud/icons';
+import { FavSVG } from '@sbercloud/icons';
 
 import { Checkbox } from 'components/Checkbox';
 import { MoreButton } from 'components/Button';
@@ -74,7 +74,7 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
       <ButtonGroupStyled>
         {onFavouriteChange && (
           <FavouriteWrapStyled onClick={handleFavouriteClick}>
-            <StarSVG
+            <FavSVG
               className={favouriteButtonClassName}
               data-filled={isFavourite}
             />

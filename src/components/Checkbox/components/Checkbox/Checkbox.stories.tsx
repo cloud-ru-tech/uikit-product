@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { styled } from '@linaria/react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
@@ -25,32 +24,17 @@ const StyledCheckboxWrap = styled.div<{ showBackground?: boolean }>`
   align-items: center;
 `;
 
-const Template: Story<ICheckboxProps> = ({ ...args }) => {
-  const [value, setValue] = useState(false);
+const Template: Story<ICheckboxProps> = ({ ...args }) => (
+  <StyledContainer>
+    <StyledCheckboxWrap showBackground>
+      <Checkbox {...args} />
+    </StyledCheckboxWrap>
+    <StyledCheckboxWrap>
+      <Checkbox {...args} />
+    </StyledCheckboxWrap>
+  </StyledContainer>
+);
 
-  return (
-    <StyledContainer>
-      <StyledCheckboxWrap showBackground>
-        <Checkbox
-          {...args}
-          checked={value}
-          handleChange={check => {
-            setValue(check);
-          }}
-        />
-      </StyledCheckboxWrap>
-      <StyledCheckboxWrap>
-        <Checkbox
-          {...args}
-          checked={value}
-          handleChange={check => {
-            setValue(check);
-          }}
-        />
-      </StyledCheckboxWrap>
-    </StyledContainer>
-  );
-};
 export const checkbox = Template.bind({});
 checkbox.args = {};
 checkbox.parameters = {};

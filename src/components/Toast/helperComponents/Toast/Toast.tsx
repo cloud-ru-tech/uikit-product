@@ -5,7 +5,7 @@ import {
   CheckFilledSVG,
   SmileSadSVG,
   LoadingSVG,
-  CloseSVG,
+  CrossSVG,
 } from '@sbercloud/icons';
 
 import { VARIANT } from '../../helpers/constants';
@@ -59,7 +59,7 @@ export const Toast: React.FC<ToastProps> = ({
   <Wrapper className={className} data-variant={variant}>
     {closeButton && (
       <Close onClick={closeToast}>
-        <CloseSVG size={16} />
+        <CrossSVG size={16} />
       </Close>
     )}
 

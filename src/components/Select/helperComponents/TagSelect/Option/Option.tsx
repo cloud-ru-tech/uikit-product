@@ -3,7 +3,7 @@ import { cx } from '@linaria/core';
 import isEqual from 'lodash.isequal';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { EditOutlinedSVG, ApproveSVG, DeleteSVG } from '@sbercloud/icons';
+import { EditSVG, CircleCheckSVG, DeleteSVG } from '@sbercloud/icons';
 
 import { ColorPicker, OptionTypeColor } from 'components/Select';
 
@@ -155,7 +155,7 @@ export const Option = (
                   }
                 }}
               >
-                <ApproveSVG />
+                <CircleCheckSVG />
               </StyledTagButton>
             </StyledTagButtonWrapper>
           </>
@@ -172,7 +172,7 @@ export const Option = (
                 setEdit(true);
               }}
             >
-              <EditOutlinedSVG />
+              <EditSVG />
             </StyledTagButton>
           </>
         )}

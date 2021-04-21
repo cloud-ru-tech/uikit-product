@@ -12,7 +12,12 @@ module.exports = {
   sourceType: 'unambiguous',
   presets: [
     !process.env.BUILD_TYPE && '@babel/preset-env',
-    '@babel/preset-react',
+    [
+      '@babel/preset-react',
+      {
+        runtime: 'automatic',
+      },
+    ],
     '@babel/preset-typescript',
     !process.env.BUILD_TYPE && '@linaria',
   ].filter(Boolean),

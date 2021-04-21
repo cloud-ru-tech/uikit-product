@@ -1,7 +1,7 @@
 import RcDrawer from 'rc-drawer';
 import { cx } from '@linaria/core';
 
-import { CloseSVG, LeftSVG } from '@sbercloud/icons';
+import { CrossSVG, BackSVG } from '@sbercloud/icons';
 
 import { Header } from 'components/Drawer/helperComponents/Header';
 
@@ -69,13 +69,13 @@ export const Drawer: React.FC<IDrawerProps> = ({
       <HeaderTextBoxStyled>
         {onBackClick && (
           <LeftIconBoxStyled>
-            <LeftSVG size={36} onClick={onBackClick} />
+            <BackSVG size={20} onClick={onBackClick} />
           </LeftIconBoxStyled>
         )}
         {headerText && <Header text={headerText} />}
       </HeaderTextBoxStyled>
       <CloseButtonStyled onClick={onCloseFromProps}>
-        <CloseSVG />
+        <CrossSVG />
       </CloseButtonStyled>
     </HeaderBoxStyled>
     <ContentBoxStyled footerPadding={footer ? 80 : 0}>

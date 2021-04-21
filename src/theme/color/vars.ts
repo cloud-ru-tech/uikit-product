@@ -200,6 +200,10 @@ export const COLORS_INPUT = {
   INPUT_DISABLED_BORDER: '--input-disabled-border',
   INPUT_ICON_COLOR: '--input-icon-color',
   INPUT_ICON_HOVER_COLOR: '--input-icon-hover-color',
+  COPY_INPUT_BACKGROUND: '--input-copy-background',
+  COPY_INPUT_COLOR: '--input-copy-color',
+  COPY_INPUT_ICON_COLOR: '--input-copy-icon-color',
+  COPY_INPUT_ICON_BACKGROUND_COLOR: '--input-copy-icon-background-color',
 };
 
 export const COLORS_RADIO = {
@@ -248,6 +252,7 @@ export const COLORS_TOOLBAR = {
   BACKGROUND: '--toolbar-background',
   INPUT_BORDER: '--toolbar-border-color',
   ACTIVE_BUTTON: '--toolbar-active-button',
+  PLACEHOLDER_COLOR: '--toolbar-placeholder-color',
 };
 
 export const COLORS_CHECKBOX = {
@@ -257,6 +262,7 @@ export const COLORS_CHECKBOX = {
   CHECKBOX_FILLED_COLOR: '--checkbox-filled-color',
   CHECKBOX_FILLED_HOVER_COLOR: '--checkbox-filled-hover-color',
   CHECKBOX_FILLED_DISABLED_COLOR: '--checkbox-filled-disabled-color',
+  CHECKBOX_PART_CHECKED_RECT_COLOR: '--checkbox-part-checked-rect-color',
 };
 
 export const COLORS_CARD = {

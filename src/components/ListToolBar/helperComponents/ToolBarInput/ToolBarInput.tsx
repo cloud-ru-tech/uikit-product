@@ -63,7 +63,6 @@ export const ToolBarInput: FC<IToolBarInputProps> = ({
             <SearchSVG className={searchIconClassname} />
           )
         }
-        placeholder='Поиск'
       />
     </InputWrapStyled>
   );

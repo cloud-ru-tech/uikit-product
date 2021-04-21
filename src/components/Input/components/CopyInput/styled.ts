@@ -1,5 +1,7 @@
 import { css } from '@linaria/core';
 
+import { COLORS_INPUT } from 'theme/color/vars';
+
 // TODO: узнать у дизайнера про темную тему
 const wrapperClassName = css`
   width: 319px;
@@ -8,8 +10,8 @@ const wrapperClassName = css`
 
 const inputClassName = css`
   &[data-disabled='true'] {
-    background-color: #f5f5f5;
-    color: #6c6c6c;
+    background-color: var(${COLORS_INPUT.COPY_INPUT_BACKGROUND});
+    color: var(${COLORS_INPUT.COPY_INPUT_COLOR});
     border-radius: 2px;
   }
 `;
@@ -22,11 +24,11 @@ const copyButtonClassName = css`
   }
 
   &[data-variant='transparent'] {
-    fill: #d2d2d2;
+    fill: var(${COLORS_INPUT.COPY_INPUT_ICON_COLOR});
 
     &:hover {
-      fill: #d2d2d2;
-      background: #ededed;
+      fill: var(${COLORS_INPUT.COPY_INPUT_ICON_COLOR});
+      background: var(${COLORS_INPUT.COPY_INPUT_ICON_BACKGROUND_COLOR});
     }
   }
 `;

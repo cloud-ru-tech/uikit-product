@@ -23,6 +23,10 @@ export const inputClassName = css`
       background-color: var(${COLORS_TOOLBAR.BACKGROUND});
     }
   }
+
+  &::placeholder {
+    color: var(${COLORS_TOOLBAR.PLACEHOLDER_COLOR});
+  }
 `;
 
 export const InputWrapStyled = styled.div`

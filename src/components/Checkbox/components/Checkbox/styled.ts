@@ -32,6 +32,10 @@ export const svgClassName = css`
     color: var(${COLORS_CHECKBOX.CHECKBOX_HOVER_COLOR});
   }
 
+  & rect {
+    fill: var(${COLORS_CHECKBOX.CHECKBOX_PART_CHECKED_RECT_COLOR}) !important;
+  }
+
   &[data-disabled] {
     fill: var(${COLORS_CHECKBOX.CHECKBOX_DISABLED_COLOR});
     color: var(${COLORS_CHECKBOX.CHECKBOX_DISABLED_COLOR});

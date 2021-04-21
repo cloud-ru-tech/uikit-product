@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
 
-import { ChevronRightSVG } from '@sbercloud/icons';
+import { ArrowRightSVG } from '@sbercloud/icons';
 
 import { BasicTooltip } from 'components/Tooltip';
 import {
@@ -185,7 +185,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
           isFixedWidth={!!isFixedWidth}
           style={{ width: item.width }}
         >
-          {index !== 0 && <ChevronRightSVG className={chevronClassName} />}
+          {index !== 0 && <ArrowRightSVG className={chevronClassName} />}
           {textWrapper(
             item.tooltip || Boolean(item.width),
             item.text,
@@ -200,7 +200,7 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
           )}
           {index === 0 && hasHideElements && (
             <>
-              <ChevronRightSVG className={chevronClassName} />
+              <ArrowRightSVG className={chevronClassName} />
               <ItemTextStyled>...</ItemTextStyled>
             </>
           )}
