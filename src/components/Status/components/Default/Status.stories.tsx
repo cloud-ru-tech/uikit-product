@@ -19,9 +19,7 @@ const Template: Story = ({ ...args }) => (
     <Status type='success'>Success</Status>
     <Status type='warning'>Warning</Status>
     <Status type='unactive'>Unactive</Status>
-    <Status type='unactive' {...args}>
-      Custom Dot Color
-    </Status>
+    <Status {...args}>Custom Dot Color</Status>
   </Wrapper>
 );
 
