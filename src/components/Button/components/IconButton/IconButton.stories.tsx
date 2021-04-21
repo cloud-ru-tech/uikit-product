@@ -4,7 +4,7 @@ import { styled } from '@linaria/react';
 import {
   FavFilledSVG,
   MenuSVG,
-  EnvTasksSVG,
+  ListSVG,
   SearchSVG,
   EditSVG,
 } from '@sbercloud/icons';
@@ -50,7 +50,7 @@ const ITEMS: {
   },
   {
     variant: 'header-menu',
-    icon: <EnvTasksSVG />,
+    icon: <ListSVG />,
   },
   {
     variant: 'header',
