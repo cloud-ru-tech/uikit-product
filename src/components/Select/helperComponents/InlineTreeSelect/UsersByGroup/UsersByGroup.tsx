@@ -2,7 +2,7 @@ import { FC, useState, useEffect, useMemo } from 'react';
 import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
 
-import { UserStubColorSVG, GroupStub1ColorSVG } from '@sbercloud/icons';
+import { UserColorSVG, GroupStub1ColorSVG } from '@sbercloud/icons';
 
 import { Avatar, IAvatarProps } from 'components/Avatar';
 
@@ -24,7 +24,7 @@ const Icon = ({ data }: { data: IOptionType }): React.ReactNode => {
       size='m'
       src={data?.src}
       shape={data?.avatarShape}
-      icon={hasChildren ? <GroupStub1ColorSVG /> : <UserStubColorSVG />}
+      icon={hasChildren ? <GroupStub1ColorSVG /> : <UserColorSVG />}
     />
   );
 };

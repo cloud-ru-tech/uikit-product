@@ -1,6 +1,6 @@
 import RCModal from 'react-modal';
 
-import { CancelSVG } from '@sbercloud/icons';
+import { CrossSVG } from '@sbercloud/icons';
 
 import { Button } from 'components/Button';
 import { Divider } from 'components/Divider';
@@ -69,7 +69,7 @@ export const ModalPreview: React.FC<IModalPreviewProps> = props => {
         onClick={onRequestClose}
         className={previewCloseBtn}
       >
-        <CancelSVG />
+        <CrossSVG />
       </Button>
       {title && (
         <>

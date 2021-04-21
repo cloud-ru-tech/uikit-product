@@ -262,6 +262,7 @@ export const COLORS_CHECKBOX = {
   CHECKBOX_FILLED_COLOR: '--checkbox-filled-color',
   CHECKBOX_FILLED_HOVER_COLOR: '--checkbox-filled-hover-color',
   CHECKBOX_FILLED_DISABLED_COLOR: '--checkbox-filled-disabled-color',
+  CHECKBOX_PART_CHECKED_RECT_COLOR: '--checkbox-part-checked-rect-color',
 };
 
 export const COLORS_CARD = {

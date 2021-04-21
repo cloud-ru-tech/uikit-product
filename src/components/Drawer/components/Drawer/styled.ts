@@ -14,6 +14,7 @@ export const LeftIconBoxStyled = styled.div`
   flex-direction: column;
   justify-content: center;
   cursor: pointer;
+  margin-right: 12px;
   fill: var(${COLORS_GENERAL.TEXT});
 `;
 
@@ -27,7 +28,7 @@ export const ContentBoxStyled = styled.div<{ footerPadding: number }>`
 `;
 
 export const HeaderTextBoxStyled = styled.div`
-  margin-left: 8px;
+  margin-left: 12px;
   display: flex;
   align-items: center;
 `;

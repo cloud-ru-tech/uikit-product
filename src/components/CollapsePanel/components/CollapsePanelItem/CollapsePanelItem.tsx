@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import { StarSVG, ArrowUpSVG } from '@sbercloud/icons';
+import { FavSVG, ArrowUpSVG } from '@sbercloud/icons';
 
 import { Divider } from 'components/Divider';
 
@@ -52,7 +52,7 @@ export const CollapsePanelItem: FC<ICollapsePanelItemProps> = ({
         <HeaderStyled>{header}</HeaderStyled>
         <ButtonGroupStyled>
           {isShowFavourites && (
-            <StarSVG
+            <FavSVG
               className={favouriteButtonClassName}
               data-filled={isFavouriteState || undefined}
               onClick={() => setIsFavourite(isFavourite => !isFavourite)}

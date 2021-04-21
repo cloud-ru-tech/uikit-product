@@ -1,6 +1,6 @@
 import RCModal from 'react-modal';
 
-import { CancelSVG } from '@sbercloud/icons';
+import { CrossSVG } from '@sbercloud/icons';
 
 import Z_INDEX from 'vars/zIndex';
 import { Button } from 'components/Button';
@@ -127,7 +127,7 @@ export const Modal: React.FC<IModalProps> = props => {
           }}
           className={closeButtonStyle}
         >
-          <CancelSVG />
+          <CrossSVG />
         </Button>
       )}
       {title && <Title>{title}</Title>}
