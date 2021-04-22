@@ -4,7 +4,6 @@ import { COLORS_INPUT } from 'theme/color/vars';
 
 // TODO: узнать у дизайнера про темную тему
 const wrapperClassName = css`
-  width: 319px;
   max-width: 100%;
 `;
 
