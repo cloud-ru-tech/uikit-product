@@ -13,8 +13,8 @@ RUN yarn && yarn build-storybook
 ## COPY --from=builder /storybook-static /usr/share/nginx/html
 ## COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 
-RUN npx http-server storybook-static -p 80
+## RUN npx http-server storybook-static -p 80
 
 EXPOSE 80
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npx http-server storybook-static -p 80"]
