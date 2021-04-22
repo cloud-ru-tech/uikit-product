@@ -27,9 +27,14 @@ stages:
 - notification
 
 lint:
+  before_script:
+    - cat $NPMRC > .npmrc
   extends: .yarn-lint
 
 lint-sonarqube:
+  before_script:
+    - cat $NPMRC > .npmrc
+    - npm install
   extends: .sonarqube
   allow_failure: true
 
