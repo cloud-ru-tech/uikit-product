@@ -17,4 +17,4 @@ RUN yarn && yarn build-storybook
 
 EXPOSE 80
 
-CMD ["npx http-server storybook-static -p 80"]
+CMD ["npx", "http-server", "storybook-static", "-p 80"]
