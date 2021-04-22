@@ -27,20 +27,20 @@ const changeTheme = theme => {
   root.setAttribute('data-theme', theme?.name);
 };
 
-export const parameters = {
-  //   actions: { argTypesRegex: '^on[A-Z].*' },
-  //   options: {
-  //     storySort: {
-  //       order: ['Components', ['Button', ['Default']], 'Typography', 'Variables'],
-  //     },
-  //   },
-  themes: {
-    list: [
-      { name: 'purple', class: purple, color: '#f3f3fe', default: true },
-      { name: 'purpleDark', class: purpleDark, color: '#bcbced' },
-      { name: 'green', class: green, color: '#07E897' },
-      { name: 'greenDark', class: greenDark, color: '#157552' },
-    ],
-    onChange: changeTheme,
-  },
-};
+// export const parameters = {
+//  actions: { argTypesRegex: '^on[A-Z].*' },
+//  options: {
+//  storySort: {
+//  order: ['Components', ['Button', ['Default']], 'Typography', 'Variables'],
+//  },
+//  },
+//   themes: {
+//     list: [
+//       { name: 'purple', class: purple, color: '#f3f3fe', default: true },
+//       { name: 'purpleDark', class: purpleDark, color: '#bcbced' },
+//       { name: 'green', class: green, color: '#07E897' },
+//       { name: 'greenDark', class: greenDark, color: '#157552' },
+//     ],
+//     onChange: changeTheme,
+//   },
+// };
