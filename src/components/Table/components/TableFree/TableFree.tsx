@@ -1,37 +1,27 @@
 import { useCallback, useMemo } from 'react';
 import { AgGridReact, AgGridReactProps } from 'ag-grid-react';
-import clsx from 'clsx';
+import { cx } from '@linaria/core';
 
-import { tableClass } from '../styles/tableClass';
+import {
+  tableHeaderHeight,
+  tableRowHeight,
+  TableCheckboxColumnDefine,
+} from 'components/Table/helpers/constants';
+import { tableClass } from 'components/Table/styles/tableClass';
 
 import 'ag-grid-community/dist/styles/ag-grid.min.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.min.css';
 
-const tableHeaderHeight = 28;
-const tableRowHeight = 44;
-const tableHeaderMinColumnWidth = 44;
-
-const TableCheckboxColumnDefine = {
-  width: tableHeaderMinColumnWidth,
-  checkboxSelection: true,
-  headerCheckboxSelection: true,
-  headerCheckboxSelectionFilteredOnly: true,
-  unSortIcon: false,
-  headerClass: 'ag-header-checkbox-selection-cell',
-  colId: 'checked',
-};
-
-export interface ITableFreeProp extends AgGridReactProps {
+export interface ITableFreeProps extends AgGridReactProps {
   classNameContainer?: string;
   checkboxSelection?: boolean;
 }
 
-export const TableFree: React.FC<ITableFreeProp> = ({
+export const TableFree: React.FC<ITableFreeProps> = ({
   rowData = [],
   columnDefs = [],
   gridOptions = {},
   onGridReady,
-  // frameworkComponents,
   checkboxSelection = false,
   classNameContainer,
   ...tableProps
@@ -48,21 +38,8 @@ export const TableFree: React.FC<ITableFreeProp> = ({
     return [...columnDefs];
   }, [checkboxSelection, columnDefs]);
 
-  // const frameworkComponentsMemo = useMemo(() => {
-  //   const resFramework: { [key: string]: React.ReactNode } = {};
-  //   columnDefs.forEach(colSettings => {
-  //     const cellRenderer: string = colSettings?.cellRenderer;
-  //     if (cellRenderer) {
-  //       try {
-  //         resFramework[cellRenderer] = FrameworkComponents[cellRenderer];
-  //       } catch (error) {}
-  //     }
-  //   });
-  //   return { ...resFramework, ...frameworkComponents };
-  // }, [columnDefs]);
-
   return (
-    <div className={clsx('ag-theme-alpine', tableClass, classNameContainer)}>
+    <div className={cx('ag-theme-alpine', tableClass, classNameContainer)}>
       <AgGridReact
         gridOptions={{
           suppressCellSelection: true,
@@ -78,12 +55,11 @@ export const TableFree: React.FC<ITableFreeProp> = ({
           },
           ...gridOptions,
         }}
-        domLayout={'autoHeight'}
+        domLayout='autoHeight'
         onGridReady={onGridReady}
         rowData={rowData}
         columnDefs={colDefs}
         onFirstDataRendered={onFirstDataRendered}
-        // frameworkComponents={frameworkComponentsMemo}
         loadingOverlayComponent='LoadingOverlay'
         {...tableProps}
       />

@@ -11,7 +11,7 @@ const alias = Object.entries(tsConfig.compilerOptions.paths).reduce(
 module.exports = {
   sourceType: 'unambiguous',
   presets: [
-    !process.env.BUILD_TYPE && '@babel/preset-env',
+    '@babel/preset-env',
     [
       '@babel/preset-react',
       {
@@ -25,7 +25,6 @@ module.exports = {
   plugins: [
     process.env.BUILD_TYPE === 'cjs' &&
       '@babel/plugin-transform-modules-commonjs',
-    '@babel/plugin-proposal-optional-chaining',
     [
       'module-resolver',
       {

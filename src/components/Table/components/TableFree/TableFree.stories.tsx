@@ -1,13 +1,13 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { TableFree, ITableFreeProp } from './TableFree';
+import { TableFree, ITableFreeProps } from './TableFree';
 
 export default {
   title: 'Components/Table',
   component: TableFree,
 } as Meta;
 
-const Template: Story<ITableFreeProp> = args => <TableFree {...args} />;
+const Template: Story<ITableFreeProps> = args => <TableFree {...args} />;
 
 export const free = Template.bind({});
 free.args = {

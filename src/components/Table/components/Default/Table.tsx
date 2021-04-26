@@ -1,51 +1,53 @@
-import { useCallback, useMemo } from 'react';
-import clsx from 'clsx';
+import { useMemo, useState, useEffect } from 'react';
+import { cx } from '@linaria/core';
 
 import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
 import { ModuleRegistry } from '@ag-grid-community/core';
 import { AllModules } from '@ag-grid-enterprise/all-modules';
+import debounce from 'lodash.debounce';
 
-import { tableClass } from '../styles/tableClass';
+import {
+  tableHeaderHeight,
+  tableRowHeight,
+  TableCheckboxColumnDefine,
+} from 'components/Table/helpers/constants';
+import { TableBasicTypes } from 'components/Table/helpers/types';
+import { tableClass } from 'components/Table/styles/tableClass';
 
 import 'ag-grid-enterprise/dist/styles/ag-grid.min.css';
 import 'ag-grid-enterprise/dist/styles/ag-theme-alpine.min.css';
 
 ModuleRegistry.registerModules(AllModules);
 
-// import * as FrameworkComponents from './FrameworkComponents';
-
-const tableHeaderHeight = 28;
-const tableRowHeight = 44;
-const tableHeaderMinColumnWidth = 44;
-
-const TableCheckboxColumnDefine = {
-  width: tableHeaderMinColumnWidth,
-  checkboxSelection: true,
-  headerCheckboxSelection: true,
-  headerCheckboxSelectionFilteredOnly: true,
-  unSortIcon: false,
-  headerClass: 'ag-header-checkbox-selection-cell',
-  colId: 'checked',
-};
-
-export interface ITableProp extends AgGridReactProps {
+export interface ITableProps extends AgGridReactProps {
   classNameContainer?: string;
   checkboxSelection?: boolean;
 }
 
-export const Table: React.FC<ITableProp> = ({
+export const Table: React.FC<ITableProps> = ({
   rowData = [],
   columnDefs = [],
   gridOptions = {},
-  onGridReady,
-  // frameworkComponents,
   checkboxSelection = false,
   classNameContainer,
+  onGridReady,
   ...tableProps
 }) => {
-  const onFirstDataRendered = useCallback(params => {
+  const [gridApi, setGridApi] = useState<TableBasicTypes.GridApi>();
+
+  const handleGridReady = (params: TableBasicTypes.GridReadyEvent) => {
     params.api.sizeColumnsToFit();
-  }, []);
+    setGridApi(params.api);
+    onGridReady?.(params);
+  };
+
+  useEffect(() => {
+    const resize = debounce(() => {
+      gridApi?.sizeColumnsToFit();
+    }, 300);
+    window.addEventListener('resize', resize);
+    return () => window.removeEventListener('resize', resize);
+  }, [gridApi]);
 
   const colDefs = useMemo(() => {
     if (checkboxSelection) {
@@ -55,21 +57,8 @@ export const Table: React.FC<ITableProp> = ({
     return [...columnDefs];
   }, [checkboxSelection, columnDefs]);
 
-  // const frameworkComponentsMemo = useMemo(() => {
-  //   const resFramework: { [key: string]: React.ReactNode } = {};
-  //   columnDefs.forEach(colSettings => {
-  //     const cellRenderer: string = colSettings?.cellRenderer;
-  //     if (cellRenderer) {
-  //       try {
-  //         resFramework[cellRenderer] = FrameworkComponents[cellRenderer];
-  //       } catch (error) {}
-  //     }
-  //   });
-  //   return { ...resFramework, ...frameworkComponents };
-  // }, [columnDefs]);
-
   return (
-    <div className={clsx('ag-theme-alpine', tableClass, classNameContainer)}>
+    <div className={cx('ag-theme-alpine', tableClass, classNameContainer)}>
       <AgGridReact
         gridOptions={{
           suppressCellSelection: true,
@@ -77,20 +66,20 @@ export const Table: React.FC<ITableProp> = ({
           rowHeight: tableRowHeight,
           rowSelection: 'multiple',
           suppressRowClickSelection: true,
+          suppressContextMenu: true,
           defaultColDef: {
-            flex: 1,
             resizable: true,
             sortable: true,
             unSortIcon: true,
+            suppressMenu: true,
           },
           ...gridOptions,
         }}
-        domLayout={'autoHeight'}
-        onGridReady={onGridReady}
+        domLayout='autoHeight'
+        onGridReady={handleGridReady}
         rowData={rowData}
         columnDefs={colDefs}
-        onFirstDataRendered={onFirstDataRendered}
-        // frameworkComponents={frameworkComponentsMemo}
+        // onFirstDataRendered={onFirstDataRendered}
         loadingOverlayComponent='LoadingOverlay'
         {...tableProps}
       />

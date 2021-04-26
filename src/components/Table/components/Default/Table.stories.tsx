@@ -1,13 +1,13 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Table, ITableProp } from './Table';
+import { Table, ITableProps } from './Table';
 
 export default {
   title: 'Components/Table',
   component: Table,
 } as Meta;
 
-const Template: Story<ITableProp> = args => <Table {...args} />;
+const Template: Story<ITableProps> = args => <Table {...args} />;
 
 export const table = Template.bind({});
 table.args = {
@@ -15,6 +15,17 @@ table.args = {
   rowData: [
     {
       name: 'Test',
+      lastModified: 1599838941,
+      createDate: 1599838943,
+      dataType: 'dataset',
+      status: 'success',
+      access: 'Ограниченный',
+      size: 1000,
+      type: 'file',
+      disabled: true,
+    },
+    {
+      name: 'Test2',
       lastModified: 1599838941,
       createDate: 1599838943,
       dataType: 'dataset',
