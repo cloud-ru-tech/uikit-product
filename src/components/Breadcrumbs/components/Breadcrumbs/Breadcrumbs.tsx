@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, useMemo } from 'react';
+import debounce from 'lodash.debounce';
 
 import { ArrowRightSVG } from '@sbercloud/icons';
 
@@ -9,25 +10,30 @@ import {
 } from 'components/Breadcrumbs/helpers/types';
 
 import {
+  getWidth,
+  isEllipsisActive,
+  getSubstr,
+  getDiffWidth,
+  setUniqueKey,
+  getUniqueKey,
+  measureText,
+} from 'components/Breadcrumbs/helpers/calc';
+
+import {
   ContainerStyled,
   ChildrenContainerStyled,
   ItemStyled,
   ItemTextStyled,
   chevronClassName,
   cutTextClassName,
+  Collapsed,
 } from './styled';
-
-const isEllipsisActive = (element: HTMLElement): boolean =>
-  element.offsetWidth < element.scrollWidth;
-
-const getUniqueKey = (items: (BreadcrumbItem | StateItem)[]): string =>
-  items.reduce((acc, item) => acc + item.key, '');
 
 export interface IBreadcrumbProps {
   items: BreadcrumbItem[];
   onClick?(
     e: React.MouseEvent<HTMLParagraphElement, MouseEvent>,
-    link?: string,
+    link?: unknown,
   ): void;
   className?: string;
   itemClassName?: string;
@@ -36,7 +42,7 @@ export interface IBreadcrumbProps {
   renderItem?: (item: StateItem, index: number) => React.ReactNode;
 }
 
-export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
+export const Breadcrumbs = ({
   items,
   children,
   onClick,
@@ -44,99 +50,194 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
   itemClassName,
   isFixedWidth,
   renderItem,
-}): JSX.Element => {
+}: IBreadcrumbProps): JSX.Element => {
   const [isVisible, setVisible] = useState(false);
+  const [isTextCut, setTextCut] = useState(false);
+  const [visibleElementsCount, setVisibleElementsCount] = useState(1);
   const [hasHideElements, setHasHideElements] = useState(true);
-  const [stateItems, setItems] = useState<StateItem[]>(
-    items.map(item => ({ ...item, visible: true } as StateItem)),
-  );
+  const [stateItems, setItems] = useState<StateItem[]>(setUniqueKey(items));
   const [metaItems, setMetaItems] = useState<StateItem[]>();
   const breadcrumbsEl = useRef<HTMLDivElement>(null);
 
-  const stateKey = useMemo(() => getUniqueKey(items), [items]);
+  const stateKey = useMemo(() => getUniqueKey(setUniqueKey(items)), [items]);
   const metaKey = useMemo(() => getUniqueKey(stateItems), [stateItems]);
 
-  useEffect(() => {
+  const resetBreadcrumbs = () => {
     setVisible(false);
-    const nextItems = items.map(
-      item => ({ ...item, visible: true } as StateItem),
-    );
+    setTextCut(false);
+    setHasHideElements(true);
+    setVisibleElementsCount(1);
+    const nextItems = setUniqueKey(items);
     setItems(nextItems);
-  }, [stateKey]);
+  };
+  const debounceResetBreadcrumbs = debounce(resetBreadcrumbs, 300);
+
+  useEffect(resetBreadcrumbs, [stateKey]);
 
   useEffect(() => {
-    const el = breadcrumbsEl.current;
+    window.addEventListener('resize', debounceResetBreadcrumbs);
 
-    if ((!el || !isEllipsisActive(el)) && !hasHideElements) {
-      setMetaItems(stateItems);
-      setVisible(true);
-      return;
-    }
-
-    const maxWidth = el?.offsetWidth || 0;
-    const firstChild = el?.firstChild as HTMLDivElement;
-    const firstChildWidth = firstChild.offsetWidth;
-
-    const elementChildren = [
-      ...Array.from(el?.children || []),
-    ] as HTMLDivElement[];
-
-    const extensionWidth = elementChildren.reduce((acc, curr) => {
-      if (curr.dataset.extension && curr?.offsetWidth) {
-        const style = window?.getComputedStyle(curr);
-        const margin =
-          parseFloat(style.marginLeft) + parseFloat(style.marginRight);
-
-        return acc + (curr?.offsetWidth || 0) + (margin || 0);
-      }
-      return acc;
-    }, 0);
-    const children = elementChildren?.filter(el => !el.dataset.extension);
-
-    const nextItems = [...items] as StateItem[];
-    nextItems[0] = {
-      ...nextItems[0],
-      visible: true,
-      tooltip: false,
+    return () => {
+      window.removeEventListener('resize', debounceResetBreadcrumbs);
     };
+  }, [debounceResetBreadcrumbs]);
 
-    const res = {
-      maxWidth: maxWidth - firstChildWidth - extensionWidth,
-    };
+  useEffect(() => {
+    setTimeout(() => {
+      const el = breadcrumbsEl.current;
 
-    for (let i = children.length - 1; i > 0; i--) {
-      const isLast = children.length - 1 === i;
-      const child = children[i];
-      const textEl = child.querySelector('p');
-      const hasTooltip = Boolean(textEl && isEllipsisActive(textEl));
-
-      const nextWidth = res.maxWidth - child.offsetWidth;
-
-      const lastElementWidth =
-        nextWidth > 0 && children.length > 2 ? undefined : res.maxWidth;
-
-      if (nextWidth < 0 && !isLast) {
-        break;
+      if (el && !isEllipsisActive(el) && !isTextCut) {
+        setMetaItems(stateItems);
+        setHasHideElements(false);
+        setVisible(true);
+        return;
       }
 
-      nextItems[i] = {
-        ...nextItems[i],
-        visible: true,
-        tooltip: hasTooltip,
-        width: lastElementWidth,
+      if (!isTextCut) {
+        setMetaItems(stateItems);
+        setTextCut(true);
+        return;
+      }
+
+      const maxWidth = getWidth(el);
+
+      const childsEl: HTMLDivElement[] = Array.from(
+        el?.children || [],
+      ) as HTMLDivElement[];
+
+      const extensionWidth = childsEl.reduce((acc, curr) => {
+        let next = acc;
+        if (curr.dataset.extension && getWidth(curr)) {
+          const style = window?.getComputedStyle(curr);
+          const margin =
+            parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+          next += getWidth(curr) + (margin || 0);
+        }
+        return next;
+      }, 0);
+      const childs = childsEl?.filter(el => !el.dataset.extension);
+      if (!childs.length) return;
+
+      const nextItems = [...items] as StateItem[];
+      let visibleWidth = 0;
+
+      const chevronBlock = el?.querySelector('[data-chevron]');
+      const chevronBlockWidth = getWidth(chevronBlock);
+
+      const collapsedBlock = el?.querySelector('[data-collapsed]');
+      const collapsedBlockWidth = getWidth(collapsedBlock);
+
+      for (const [index, item] of nextItems.entries()) {
+        if (index !== 0 && !item.fullVisible) break;
+        const child = childs[index];
+        const isFirst = index === 0;
+        const isLastVisible = !stateItems[index + 1]?.fullVisible;
+        const defaultWidth = getWidth(child);
+        const textWidth = measureText(child, stateItems[index].text).width;
+
+        const width = isFirst
+          ? getDiffWidth(child, collapsedBlock)
+          : defaultWidth;
+
+        nextItems[index] = {
+          ...nextItems[index],
+          visible: true,
+          tooltip: textWidth > width,
+          width,
+          isLastForceVisible: isLastVisible,
+        };
+        visibleWidth += getWidth(childs[index]);
+      }
+
+      const visibleCount = nextItems.filter(item => item.visible).length;
+      setVisibleElementsCount(visibleCount);
+
+      const res = {
+        maxWidth:
+          maxWidth - visibleWidth - extensionWidth + collapsedBlockWidth,
+        maxVisibleWidth: maxWidth - extensionWidth,
       };
 
-      res.maxWidth = nextWidth;
-    }
+      const notForceVisible = nextItems.filter(item => !item.visible);
+      const isOnlyVisible = nextItems.length === visibleCount;
 
-    const onlyVisible = nextItems.filter(item => item.visible);
-    setMetaItems(onlyVisible);
+      for (let i = 0; i < notForceVisible.length && !isOnlyVisible; i++) {
+        const lastIndex = childs.length - 1;
+        const currIndex = lastIndex - i;
+        const isLast = lastIndex === i;
+        const child = childs[currIndex];
 
-    const isEqual = onlyVisible?.length === items.length;
-    setHasHideElements(!isEqual);
+        const nextWidth = res.maxWidth - getWidth(child);
+        const textWidth =
+          measureText(child, stateItems[currIndex].text).width +
+          chevronBlockWidth;
 
-    setVisible(true);
-  }, [metaKey]);
+        const lastElWidth = textWidth > res.maxWidth ? res.maxWidth : textWidth;
+
+        const elWidth =
+          nextWidth > 0 && childs.length > 2 ? getWidth(child) : lastElWidth;
+
+        if (nextWidth < 0 && !isLast) {
+          const child = childs[lastIndex];
+          const textWidth =
+            measureText(child, stateItems[lastIndex].text).width +
+            chevronBlockWidth;
+          const restWidth = (nextItems[lastIndex]?.width || 0) + elWidth;
+          const nextWidth = textWidth > restWidth ? restWidth : textWidth;
+
+          nextItems[lastIndex] = {
+            ...nextItems[lastIndex],
+            width: nextWidth,
+            visible: true,
+          };
+          break;
+        }
+
+        if (currIndex === 1 && nextWidth > 0) {
+          nextItems[lastIndex] = {
+            ...nextItems[lastIndex],
+            width: (nextItems[lastIndex]?.width || 0) + nextWidth,
+          };
+        }
+
+        nextItems[currIndex] = {
+          ...nextItems[currIndex],
+          visible: true,
+          tooltip: textWidth > elWidth,
+          width: elWidth,
+        };
+
+        res.maxWidth = nextWidth;
+      }
+
+      const onlyVisible = nextItems.filter(item => item.visible);
+
+      const isEqual = onlyVisible?.length === items.length;
+      setHasHideElements(!isEqual);
+
+      if (isOnlyVisible) {
+        const lastIndex = onlyVisible.length - 1;
+        onlyVisible[lastIndex] = {
+          ...onlyVisible[lastIndex],
+          width: res.maxVisibleWidth - (onlyVisible[lastIndex].width || 0),
+        };
+      }
+
+      if (!isEqual) {
+        const lastForceIndex = onlyVisible.findIndex(
+          el => el.isLastForceVisible,
+        );
+        onlyVisible[lastForceIndex] = {
+          ...onlyVisible[lastForceIndex],
+          tooltip: true,
+        };
+      }
+
+      setMetaItems(onlyVisible);
+
+      setVisible(true);
+    }, 0);
+  }, [metaKey, isTextCut]);
 
   const visibleItems = isVisible ? metaItems : stateItems;
 
@@ -185,9 +286,11 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
           isFixedWidth={!!isFixedWidth}
           style={{ width: item.width }}
         >
-          {index !== 0 && <ArrowRightSVG className={chevronClassName} />}
+          {index !== 0 && (
+            <ArrowRightSVG className={chevronClassName} data-chevron />
+          )}
           {textWrapper(
-            item.tooltip || Boolean(item.width),
+            item.tooltip,
             item.text,
             <ItemTextStyled
               className={itemClassName}
@@ -195,14 +298,14 @@ export const Breadcrumbs: React.FC<IBreadcrumbProps> = ({
               data-link={item.link || undefined}
               onClick={onClick ? (e): void => onClick(e, item.link) : undefined}
             >
-              {item.text}
+              {isTextCut && !isVisible ? getSubstr(item.text) : item.text}
             </ItemTextStyled>,
           )}
-          {index === 0 && hasHideElements && (
-            <>
+          {index === visibleElementsCount - 1 && hasHideElements && (
+            <Collapsed data-collapsed>
               <ArrowRightSVG className={chevronClassName} />
               <ItemTextStyled>...</ItemTextStyled>
-            </>
+            </Collapsed>
           )}
         </ItemStyled>
       ))}

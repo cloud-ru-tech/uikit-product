@@ -57,3 +57,66 @@ export const docker = [
     isActive: true,
   },
 ];
+
+export const fm = [
+  {
+    text: 'Обзор хранилища',
+    key: '/file-manager/',
+    link: {},
+    isActive: false,
+  },
+  {
+    text: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-ntm0w79t',
+    key: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-ntm0w79t',
+    link: {
+      bucket: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-ntm0w79t',
+    },
+    isActive: false,
+    fullVisible: true,
+  },
+  {
+    text: 'aicloud',
+    key: 'aicloudaicloud/',
+    link: {
+      bucket: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-ntm0w79t',
+      path: 'aicloud/',
+    },
+    isActive: false,
+  },
+  {
+    text: 'airflow',
+    key: 'airflowaicloud/airflow/',
+    link: {
+      bucket: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-ntm0w79t',
+      path: 'aicloud/airflow/',
+    },
+    isActive: false,
+  },
+  {
+    text: 'airflow',
+    key: 'airflowaicloud/airflow/airflow/',
+    link: {
+      bucket: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-ntm0w79t',
+      path: 'aicloud/airflow/airflow/',
+    },
+    isActive: false,
+  },
+  {
+    text: 'www',
+    key: 'wwwaicloud/airflow/airflow/www/',
+    link: {
+      bucket: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-ntm0w79t',
+      path: 'aicloud/airflow/airflow/www/',
+    },
+    isActive: false,
+  },
+  {
+    text: 'templates',
+    key: 'templatesaicloud/airflow/airflow/www/templates/',
+    link: {
+      bucket: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-ntm0w79t',
+      path: 'aicloud/airflow/airflow/www/templates/',
+    },
+    isActive: true,
+  },
+];
