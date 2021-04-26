@@ -30,6 +30,7 @@ import {
   COLORS_TYPOGRAPHY,
   COLORS_AVATAR,
   COLORS_SLIDER,
+  COLORS_LOGS_VIEW,
 } from './vars';
 
 export const purple = css`
@@ -304,6 +305,8 @@ export const purple = css`
       ${COLORS_SLIDER.BG_HOVER}: var(${COLORS.VIOLET_6});
       ${COLORS_SLIDER.BG_ACTIVE}: var(${COLORS.VIOLET_7});
       ${COLORS_SLIDER.INACTIVE_BG}: var(${COLORS.GRAY_3});
+
+      ${COLORS_LOGS_VIEW.BG}: var(${COLORS.GRAY_1});
     }
   }
 `;

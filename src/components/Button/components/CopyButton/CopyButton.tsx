@@ -1,10 +1,12 @@
-import { FC, useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 
 import { CopySVG, CopyCompletedSVG } from '@sbercloud/icons';
 
 import { Button } from 'components/Button';
 import { copyText } from 'utils/copyText';
 
+import { TButtonVariant } from 'components/Button/helpers/types';
+import { ButtonVariant } from 'components/Button/helpers/constants';
 import { iconStyle } from './styled';
 
 export interface ICopyButtonProps {
@@ -14,16 +16,18 @@ export interface ICopyButtonProps {
   onClick?(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void;
   disabled?: boolean;
   className?: string;
+  variant?: TButtonVariant;
 }
 
-export const CopyButton: FC<ICopyButtonProps> = ({
+export const CopyButton = ({
   disabled,
   text = '',
   className,
   overrideClick,
   showCopyCompleted,
+  variant = Button.variants.transparent,
   onClick: propOnClick,
-}) => {
+}: ICopyButtonProps) => {
   const [isCopyCompleted, setIsCopyCompleted] = useState(false);
   const oldOverrideClick = useRef<number>();
 
@@ -54,8 +58,8 @@ export const CopyButton: FC<ICopyButtonProps> = ({
   return (
     <Button
       className={className}
-      variant='transparent'
-      size='xs'
+      variant={variant}
+      size={Button.sizes.xs}
       disabled={disabled}
       onClick={handleClickCopy}
     >
@@ -67,3 +71,5 @@ export const CopyButton: FC<ICopyButtonProps> = ({
     </Button>
   );
 };
+
+CopyButton.variants = ButtonVariant;

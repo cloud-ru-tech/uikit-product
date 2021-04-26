@@ -1,6 +1,6 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { MoreButton, IMoreButtonProps } from './MoreButton';
+import { MoreButton, IMoreButtonProps } from 'components';
 
 export default {
   title: 'Components/Button/More Button',

@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 import { MoreSVG } from '@sbercloud/icons';
+import React from 'react';
 
 import { Button } from 'components/Button';
 import { Tooltip, TooltipMenu } from 'components/Tooltip';
@@ -23,7 +24,7 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({
   actions,
   className,
 }) => (
-  <Button variant='table-menu' className={className}>
+  <Button variant={Button.variants.tableMenu} className={className}>
     <TooltipStateContainer>
       {({
         on,
