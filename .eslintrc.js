@@ -34,6 +34,7 @@ module.exports = {
       rules: {
         'react/prop-types': 'off',
         'no-restricted-syntax': 'off',
+        '@typescript-eslint/explicit-module-boundary-types': 'off',
       },
     },
   ],

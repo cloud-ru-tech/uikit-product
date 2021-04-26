@@ -398,3 +398,7 @@ export const COLORS_ICON_BUTTON = {
   SIDEBAR_COLOR: '--icon-button-sidebar-color',
   SIDEBAR_COLOR_HOVER: '--icon-button-sidebar-color-hover',
 };
+
+export const COLORS_LOGS_VIEW = {
+  BG: '--logs-view-bg',
+};

@@ -25,6 +25,7 @@ import {
   COLORS_AVATAR,
   COLORS_SLIDER,
   COLORS_ICON_BUTTON,
+  COLORS_LOGS_VIEW,
 } from './vars';
 
 export const green = css`
@@ -294,6 +295,8 @@ export const green = css`
 
       ${COLORS_ICON_BUTTON.SIDEBAR_COLOR}: var(${COLORS.GRAY_3});
       ${COLORS_ICON_BUTTON.SIDEBAR_COLOR_HOVER}: var(${COLORS.GRAY_6});
+
+      ${COLORS_LOGS_VIEW.BG}: var(${COLORS.GRAY_1});
     }
   }
 `;

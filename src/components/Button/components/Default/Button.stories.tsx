@@ -4,8 +4,8 @@ import { styled } from '@linaria/react';
 import { CopySVG } from '@sbercloud/icons';
 
 import { H4 } from 'typography/Headers';
-import { TButtonVariant } from 'components/Button/helpers/types';
 
+import { TButtonVariant } from 'components/Button/helpers/types';
 import { Button, IButtonProps } from './Button';
 
 export default {

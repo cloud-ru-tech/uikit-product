@@ -1,5 +1,6 @@
-import { TButtonVariant } from 'components/Button/helpers/types';
-
+import React from 'react';
+import { TButtonSize, TButtonVariant } from 'components/Button/helpers/types';
+import { ButtonSize, ButtonVariant } from 'components/Button/helpers/constants';
 import { ButtonComponent, IconWrap } from './styled';
 
 interface IButtonCustomProps {
@@ -8,7 +9,7 @@ interface IButtonCustomProps {
   disabled?: boolean;
   variant?: TButtonVariant;
   icon?: React.ReactNode;
-  size?: 'xxs' | 'xs' | 's' | 'm';
+  size?: TButtonSize;
   children?: React.ReactNode;
   iconPosition?: 'before' | 'after';
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
@@ -17,7 +18,7 @@ interface IButtonCustomProps {
 export type IButtonProps = IButtonCustomProps &
   React.ComponentProps<typeof ButtonComponent>;
 
-export const Button: React.FC<IButtonProps> = ({
+export const Button = ({
   size,
   variant,
   icon,
@@ -28,7 +29,7 @@ export const Button: React.FC<IButtonProps> = ({
   rounded = false,
   iconPosition = 'after',
   ...props
-}) => (
+}: IButtonProps) => (
   <ButtonComponent
     data-size={size}
     data-variant={variant}
@@ -52,8 +53,10 @@ export const Button: React.FC<IButtonProps> = ({
   </ButtonComponent>
 );
 
+Button.variants = ButtonVariant;
+Button.sizes = ButtonSize;
 Button.defaultProps = {
-  variant: 'filled',
-  size: 'm',
+  variant: ButtonVariant.filled,
+  size: ButtonSize.m,
   className: '',
 };
