@@ -19,7 +19,7 @@ module.exports = {
       },
     ],
     '@babel/preset-typescript',
-    !process.env.BUILD_TYPE && '@linaria',
+    '@linaria',
   ].filter(Boolean),
   ignore: process.env.BUILD_TYPE ? ['src/**/*.stories.tsx'] : [],
   plugins: [
