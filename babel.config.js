@@ -11,7 +11,7 @@ const alias = Object.entries(tsConfig.compilerOptions.paths).reduce(
 module.exports = {
   sourceType: 'unambiguous',
   presets: [
-    '@babel/preset-env',
+    !process.env.BUILD_TYPE && '@babel/preset-env',
     [
       '@babel/preset-react',
       {
@@ -19,12 +19,14 @@ module.exports = {
       },
     ],
     '@babel/preset-typescript',
-    '@linaria',
+    !process.env.BUILD_TYPE && '@linaria',
   ].filter(Boolean),
   ignore: process.env.BUILD_TYPE ? ['src/**/*.stories.tsx'] : [],
   plugins: [
     process.env.BUILD_TYPE === 'cjs' &&
       '@babel/plugin-transform-modules-commonjs',
+    '@babel/plugin-proposal-optional-chaining',
+    '@babel/plugin-proposal-nullish-coalescing-operator',
     [
       'module-resolver',
       {
