@@ -23,7 +23,7 @@ export const CustomMenu = (
     className,
     cx,
     getStyles,
-    selectProps: { isSearchableCustom, searchValue, onSearch },
+    selectProps: { isSearchableCustom, searchValue, onSearch, footer },
   } = props;
 
   useEffect(() => {
@@ -50,6 +50,7 @@ export const CustomMenu = (
         />
       )}
       {children}
+      {footer}
     </div>
   );
 };

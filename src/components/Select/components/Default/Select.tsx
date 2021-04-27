@@ -43,6 +43,7 @@ export interface ISelectProps<CustomOptionType>
   menuRelative?: boolean;
   isSearchableCustom?: boolean;
   searchableProps?: string[];
+  footer?: React.ReactNode;
   customRef?: (instance: RCSelect<CustomOptionType> | null) => void;
   collapsedGroup?: boolean;
 }
@@ -67,6 +68,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     prefixMultiValueContainer,
     collapsedGroup,
   } = props;
+
   const [stateOptions, setOptions] = useState<CustomOptionType[]>();
   const [inputValue, setInputSearch] = useState<string>();
   const [isOpen, setIsOpen] = useState(false);
