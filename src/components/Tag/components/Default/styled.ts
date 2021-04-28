@@ -4,7 +4,9 @@ import { COLORS_TAG } from 'theme/color/vars';
 import { InputAutosize } from 'components/Input';
 import { PRESET_COLORS } from 'components/Tag/helpers/colors';
 
-export const StyledTag = styled.div`
+import { TTagType } from './Tag';
+
+export const StyledTag = styled.div<{ type: TTagType }>`
   max-width: 100%;
   min-width: 30px;
   display: inline-block;
@@ -13,12 +15,25 @@ export const StyledTag = styled.div`
   box-sizing: border-box;
   font-size: 14px;
   line-height: 20px;
-  color: var(${COLORS_TAG.TAG_TEXT_COLOR});
+  color: ${({ type }) => {
+    if (type === 'card') {
+      return `var(${COLORS_TAG.TAG_TYPE_CARD_COLOR})`;
+    }
+
+    return `var(${COLORS_TAG.TAG_TEXT_COLOR})`;
+  }};
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  background-color: ${({ type }) => {
+    if (type === 'card') {
+      return `var(${COLORS_TAG.TAG_TYPE_CARD_BACKGROUND})`;
+    }
 
-  &[data-tag-color='green'] {
+    return `var(${COLORS_TAG.TAG_BG_GRAY})`;
+  }};
+
+  &[data-tag-color='${PRESET_COLORS[0]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_GREEN});
   }
 

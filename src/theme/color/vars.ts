@@ -66,6 +66,8 @@ export const COLORS_TAG = {
   TAG_BG_BROWN: '--tag-bg-brown',
   TAG_BG_ORANGE: '--tag-bg-orange',
   TAG_BG_YELLOW: '--tag-bg-yellow',
+  TAG_TYPE_CARD_BACKGROUND: '--tag-type-card-background',
+  TAG_TYPE_CARD_COLOR: '--tag-type-card-color',
 };
 
 export const COLORS_GENERAL = {
@@ -203,6 +205,7 @@ export const COLORS_INPUT = {
   COPY_INPUT_BACKGROUND: '--input-copy-background',
   COPY_INPUT_COLOR: '--input-copy-color',
   COPY_INPUT_ICON_COLOR: '--input-copy-icon-color',
+  COPY_INPUT_ICON_HOVER_COLOR: '--input-copy-icon-hover-color',
   COPY_INPUT_ICON_BACKGROUND_COLOR: '--input-copy-icon-background-color',
 };
 

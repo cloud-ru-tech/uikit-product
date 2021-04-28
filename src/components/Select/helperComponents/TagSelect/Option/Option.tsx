@@ -84,7 +84,7 @@ export const Option = (
               }}
               color={tag.color}
               value={tag.label}
-              tag='input'
+              type='input'
               inputClassNames={tagInputClassName}
               onChange={(e): void => {
                 setTag({ ...tag, label: e.target.value });
