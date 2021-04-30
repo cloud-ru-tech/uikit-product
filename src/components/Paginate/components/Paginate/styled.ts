@@ -9,6 +9,14 @@ export const paginationClassName = css`
   align-items: center;
   padding: 0;
   margin: 0;
+
+  .previous {
+    margin-right: 2px;
+  }
+
+  .next {
+    margin-left: 2px;
+  }
 `;
 
 export const placementStyle = {
@@ -63,6 +71,8 @@ export const pageLinkActiveClassName = css`
 `;
 
 export const iconLinkClassName = css`
+  line-height: 0;
+  vertical-align: middle;
   fill: var(${COLORS_PAGINATE.PAGINATE_ACTIVE_COLOR});
   cursor: pointer;
   border: 0;

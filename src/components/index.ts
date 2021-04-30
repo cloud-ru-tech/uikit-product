@@ -24,3 +24,4 @@ export * from './Tag';
 export * from './Toast';
 export * from './Tooltip';
 export * from './TruncateString';
+export * from './Table';
