@@ -5,7 +5,8 @@ COPY . .
 RUN npm config set @sbercloud:registry https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/
 
 RUN mkdir storybook-static
-RUN yarn && yarn build-storybook
+RUN yarn
+RUN yarn build-storybook
 
 
 ## create image
