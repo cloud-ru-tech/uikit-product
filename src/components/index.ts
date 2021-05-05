@@ -11,6 +11,7 @@ export * from './Drawer';
 export * from './Form';
 export * from './Input';
 export * from './ListToolBar';
+export * from './LogsView';
 export * from './Modal';
 export * from './Paginate';
 export * from './Radio';

@@ -51,7 +51,7 @@ const Template: Story<ITagProps> = ({ ...args }) => {
         <Tag
           {...args}
           value={tagText}
-          tag='input'
+          type='input'
           onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
             setTagText(e.target.value);
           }}

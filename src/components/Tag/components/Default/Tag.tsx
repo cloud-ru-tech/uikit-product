@@ -6,17 +6,19 @@ import { PRESET_COLORS, PresetColorType } from 'components/Tag/helpers/colors';
 import { StyledTag, StyledInputAutosize } from './styled';
 
 const TAG_TYPES = {
+  CARD: 'card',
   SPAN: 'span',
   INPUT: 'input',
 };
 
-type TTagType = 'span' | 'input';
+export type TTagType = 'span' | 'input' | 'card';
 
 export interface ITagProps {
   value?: string;
-  tag?: TTagType;
+  type?: TTagType;
   className?: string;
   inputClassNames?: string;
+  children?: React.ReactNode;
   style?: React.CSSProperties;
   color?: PresetColorType | string;
   inputRef?: (instance: HTMLInputElement | null) => void;
@@ -43,16 +45,16 @@ const presetColors = {
 const getTagStyles = ({
   isPresetBackground,
   style,
-  tag,
+  type,
   color,
 }: {
   isPresetBackground: boolean;
   style?: React.CSSProperties;
-  tag?: TTagType;
+  type?: TTagType;
   color?: string;
 }) => {
   if (isPresetBackground) {
-    if (tag === TAG_TYPES.INPUT && color) {
+    if (type === TAG_TYPES.INPUT && color) {
       return { ...style, backgroundColor: `var(${presetColors[color]})` };
     }
 
@@ -62,17 +64,17 @@ const getTagStyles = ({
   return { ...style, backgroundColor: color };
 };
 
-export const Tag: React.FC<ITagProps> = ({
+const Tag = ({
   color,
   style,
   onChange,
   children,
   inputRef,
   value = '',
-  tag = 'span',
+  type = 'span',
   className = '',
   inputClassNames,
-}) => {
+}: ITagProps) => {
   const isPresetColor = useCallback((): boolean => {
     if (!color) {
       return false;
@@ -81,15 +83,17 @@ export const Tag: React.FC<ITagProps> = ({
   }, [color]);
 
   const isPresetBackground = isPresetColor();
-  const tagStyles = getTagStyles({ isPresetBackground, tag, style, color });
+  const tagStyles = getTagStyles({ isPresetBackground, type, style, color });
 
   const tagProps = {
-    ...(isPresetBackground ? { 'data-tag-color': color } : {}),
+    ...(isPresetBackground && type !== 'card'
+      ? { 'data-tag-color': color }
+      : {}),
     style: tagStyles,
     className,
   };
 
-  if (tag === TAG_TYPES.INPUT) {
+  if (type === TAG_TYPES.INPUT) {
     return (
       <StyledInputAutosize
         {...tagProps}
@@ -101,5 +105,13 @@ export const Tag: React.FC<ITagProps> = ({
     );
   }
 
-  return <StyledTag {...tagProps}>{children || value}</StyledTag>;
+  return (
+    <StyledTag {...tagProps} type={type}>
+      {children || value}
+    </StyledTag>
+  );
 };
+
+Tag.TAG_TYPES = TAG_TYPES;
+
+export { Tag };

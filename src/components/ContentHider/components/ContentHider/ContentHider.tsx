@@ -13,11 +13,13 @@ export interface IContentHiderProps {
   showContentText: string;
   displayedHeight: number;
   backgroundColor?: string;
+  gradientClassName?: string;
 }
 
 export const ContentHider: FC<IContentHiderProps> = ({
   children,
   backgroundColor,
+  gradientClassName,
   displayedHeight = 500,
   hideContentText = 'Свернуть',
   showContentText = 'Читать полностью',
@@ -33,6 +35,7 @@ export const ContentHider: FC<IContentHiderProps> = ({
         <ContentWrapperStyled>{children}</ContentWrapperStyled>
         <ContentWrapperGradientStyled
           showContent={showContent}
+          className={gradientClassName}
           backgroundColor={backgroundColor}
         />
       </ContentHiderStyled>

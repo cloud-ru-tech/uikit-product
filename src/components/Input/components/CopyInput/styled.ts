@@ -32,9 +32,10 @@ const copyButtonClassName = css`
 
   &[data-variant='transparent'] {
     fill: var(${COLORS_INPUT.COPY_INPUT_ICON_COLOR});
+    background: var(${COLORS_INPUT.COPY_INPUT_ICON_BACKGROUND_COLOR});
 
     &:hover {
-      fill: var(${COLORS_INPUT.COPY_INPUT_ICON_COLOR});
+      fill: var(${COLORS_INPUT.COPY_INPUT_ICON_HOVER_COLOR});
       background: var(${COLORS_INPUT.COPY_INPUT_ICON_BACKGROUND_COLOR});
     }
   }

@@ -38,12 +38,20 @@ const StyledRadioWrap = styled.div<{ position: string }>`
   flex-shrink: 0;
 `;
 
+const Footer = styled.div`
+  background: #d2d2d2;
+  height: 20px;
+  width: 100%;
+  padding: 20px;
+`;
+
 const Template: Story<ISelectProps<OptionTypeBase>> = ({
   type,
   isMulti,
   showLogo,
   isGrouped,
   showOption,
+  showFooter,
   optionPosition,
   isSearchableCustom,
   ...restProps
@@ -161,6 +169,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
 
   return (
     <Select
+      {...restProps}
       isSearchable={isSearchableCustom}
       searchableProps={['value', 'labelText']}
       menuRelative
@@ -192,8 +201,8 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
           },
         );
       }}
+      footer={showFooter ? <Footer>Footer</Footer> : null}
       type={showLogo || showOption ? 'with-logo' : type}
-      {...restProps}
     />
   );
 };
@@ -214,6 +223,11 @@ select.argTypes = {
     },
   },
   isMulti: {
+    control: {
+      type: 'boolean',
+    },
+  },
+  showFooter: {
     control: {
       type: 'boolean',
     },
