@@ -18,6 +18,7 @@ export interface ITagProps {
   type?: TTagType;
   className?: string;
   inputClassNames?: string;
+  children: React.ReactNode;
   style?: React.CSSProperties;
   color?: PresetColorType | string;
   inputRef?: (instance: HTMLInputElement | null) => void;
@@ -63,7 +64,7 @@ const getTagStyles = ({
   return { ...style, backgroundColor: color };
 };
 
-export const Tag: React.FC<ITagProps> = ({
+const Tag = ({
   color,
   style,
   onChange,
@@ -73,7 +74,7 @@ export const Tag: React.FC<ITagProps> = ({
   type = 'span',
   className = '',
   inputClassNames,
-}) => {
+}: ITagProps) => {
   const isPresetColor = useCallback((): boolean => {
     if (!color) {
       return false;
@@ -110,3 +111,7 @@ export const Tag: React.FC<ITagProps> = ({
     </StyledTag>
   );
 };
+
+Tag.TAG_TYPES = TAG_TYPES;
+
+export { Tag };
