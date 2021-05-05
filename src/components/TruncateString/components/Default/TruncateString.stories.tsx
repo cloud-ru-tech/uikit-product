@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { styled } from '@linaria/react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Slider } from 'components/TruncateString/helperComponents/Slider';
+import { Slider } from 'components/Slider';
 
 import { TruncateString, ITruncateStringProps } from './TruncateString';
 
