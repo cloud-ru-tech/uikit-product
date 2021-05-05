@@ -18,7 +18,7 @@ export interface ITagProps {
   type?: TTagType;
   className?: string;
   inputClassNames?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   style?: React.CSSProperties;
   color?: PresetColorType | string;
   inputRef?: (instance: HTMLInputElement | null) => void;
