@@ -1,11 +1,18 @@
 import { css } from '@linaria/core';
 
 import { COLORS_INPUT } from 'theme/color/vars';
+import { styled } from '@linaria/react';
 
 // TODO: узнать у дизайнера про темную тему
 const wrapperClassName = css`
-  width: 319px;
   max-width: 100%;
+`;
+
+interface CopyInputWrapperProps {
+  width?: string;
+}
+const CopyInputWrapper = styled.div<CopyInputWrapperProps>`
+  width: ${props => props.width || 'auto'};
 `;
 
 const inputClassName = css`
@@ -33,4 +40,9 @@ const copyButtonClassName = css`
   }
 `;
 
-export { wrapperClassName, inputClassName, copyButtonClassName };
+export {
+  wrapperClassName,
+  inputClassName,
+  copyButtonClassName,
+  CopyInputWrapper,
+};

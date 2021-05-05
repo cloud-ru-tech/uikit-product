@@ -71,5 +71,6 @@ export const drawerWrapperClassName = css`
 
   .drawer-content {
     width: 100%;
+    background: inherit;
   }
 `;

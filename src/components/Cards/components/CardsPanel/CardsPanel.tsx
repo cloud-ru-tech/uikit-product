@@ -2,7 +2,7 @@ import { FC, useState } from 'react';
 
 import { Paginate, IPaginateProps } from 'components/Paginate';
 
-import { ContainerStyled, CardsPanelStyled } from './styled';
+import * as S from './styled';
 
 export interface ICardsPanelProps {
   className?: string;
@@ -11,7 +11,7 @@ export interface ICardsPanelProps {
   paginateProps?: IPaginateProps & {
     page: number;
     pageSize: number;
-    position: 'top' | 'bottom';
+    position?: 'top' | 'bottom';
   };
 }
 
@@ -32,16 +32,18 @@ export const CardsPanel: FC<ICardsPanelProps> = ({
 
   if (paginateProps) {
     return (
-      <CardsPanelStyled>
+      <S.CardsPanel>
         {paginateProps.position === 'top' ? (
-          <Paginate
-            {...paginateProps}
-            pageCount={pagesAmount}
-            initialPage={page}
-            onPageChange={({ selected }) => setPage(selected)}
-          />
+          <S.PageWrapper>
+            <Paginate
+              {...paginateProps}
+              pageCount={pagesAmount}
+              initialPage={page}
+              onPageChange={({ selected }) => setPage(selected)}
+            />
+          </S.PageWrapper>
         ) : null}
-        <ContainerStyled
+        <S.Container
           autoFill={autoFill}
           className={className}
           cardsPerRow={cardsPerRow}
@@ -53,26 +55,30 @@ export const CardsPanel: FC<ICardsPanelProps> = ({
                   index < (page + 1) * paginateProps.pageSize,
               )
             : children}
-        </ContainerStyled>
-        {paginateProps.position === 'bottom' ? (
-          <Paginate
-            {...paginateProps}
-            pageCount={pagesAmount}
-            initialPage={page}
-            onPageChange={({ selected }) => setPage(selected)}
-          />
+        </S.Container>
+        {paginateProps.position === 'bottom' ||
+        paginateProps.position === undefined ? (
+          <S.PageWrapper>
+            <Paginate
+              placement='right'
+              {...paginateProps}
+              pageCount={pagesAmount}
+              initialPage={page}
+              onPageChange={({ selected }) => setPage(selected)}
+            />
+          </S.PageWrapper>
         ) : null}
-      </CardsPanelStyled>
+      </S.CardsPanel>
     );
   }
 
   return (
-    <ContainerStyled
+    <S.Container
       autoFill={autoFill}
       className={className}
       cardsPerRow={cardsPerRow}
     >
       {children}
-    </ContainerStyled>
+    </S.Container>
   );
 };

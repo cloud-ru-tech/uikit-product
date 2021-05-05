@@ -4,28 +4,33 @@ import {
   wrapperClassName,
   inputClassName,
   copyButtonClassName,
+  CopyInputWrapper,
 } from './styled';
 
 export interface ICopyInputProps {
   value: string;
   label?: string;
+  width?: string;
   labelMinWidth?: string;
 }
 
 export const CopyInput: React.FC<ICopyInputProps> = ({
   value,
   label,
+  width,
   labelMinWidth,
 }) => (
-  <Input
-    disabled
-    allowCopy
-    type='embed'
-    value={value}
-    label={label}
-    className={inputClassName}
-    labelMinWidth={labelMinWidth}
-    wrapperClassName={wrapperClassName}
-    copyButtonClassName={copyButtonClassName}
-  />
+  <CopyInputWrapper width={width}>
+    <Input
+      disabled
+      allowCopy
+      type='embed'
+      value={value}
+      label={label}
+      className={inputClassName}
+      labelMinWidth={labelMinWidth}
+      wrapperClassName={wrapperClassName}
+      copyButtonClassName={copyButtonClassName}
+    />
+  </CopyInputWrapper>
 );

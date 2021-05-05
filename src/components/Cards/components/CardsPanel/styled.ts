@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-export const ContainerStyled = styled.div<{
+export const Container = styled.div<{
   autoFill?: boolean;
   cardsPerRow: number;
 }>`
@@ -13,8 +13,12 @@ export const ContainerStyled = styled.div<{
   );
 `;
 
-export const CardsPanelStyled = styled.div`
+export const CardsPanel = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+`;
+
+export const PageWrapper = styled.div`
+  margin: 8px 0;
 `;

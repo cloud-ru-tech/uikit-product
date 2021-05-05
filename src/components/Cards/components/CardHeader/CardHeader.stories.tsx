@@ -60,4 +60,10 @@ const Template: Story<ICardHeaderProps> = ({ ...args }) => {
 
 export const cardHeader = Template.bind({});
 cardHeader.args = {};
-cardHeader.parameters = {};
+cardHeader.argTypes = {
+  children: {
+    control: {
+      type: 'text',
+    },
+  },
+};
