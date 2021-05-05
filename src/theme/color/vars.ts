@@ -398,3 +398,26 @@ export const COLORS_ICON_BUTTON = {
   SIDEBAR_COLOR: '--icon-button-sidebar-color',
   SIDEBAR_COLOR_HOVER: '--icon-button-sidebar-color-hover',
 };
+
+export const COLORS_LOGS_VIEW = {
+  BG: '--logs-view-bg',
+};
+
+export const COLORS_TABLE = {
+  TABLE_ROW_BACKGROUND: '--table-row-background',
+  TABLE_ROW_COLOR: '--table-row-color',
+  TABLE_ROW_ODD_BACKGROUND: '--table-row-odd-background',
+  TABLE_ROW_HOVER_SHADOW_LEFT: '--table-row-hover-shadow-left',
+  TABLE_ROW_HOVER_SHADOW_TOP_BOTTOM: '--table-row-hover-shadow-top-bottom',
+  TABLE_ROW_SELECTED_BACKGROUND: '--table-row-selected-background',
+  TABLE_HEADER_BACKGROUND: '--table-header-background',
+  TABLE_HEADER_COLOR: '--table-header-color',
+  TABLE_HEADER_RESIZE_ICON_COLOR: '--table-header-resize-icon-color',
+
+  TABLE_FAVOURITE_ICON_COLOR: '--table-favourite-icon-color',
+  TABLE_FAVOURITE_ICON_HOVER_COLOR: '--table-favourite-icon-hover-color',
+  TABLE_FAVOURITE_ICON_FILLED_COLOR: '--table-favourite-icon-filled-color',
+  TABLE_RADIO_ICON_DISABLED_COLOR: '--table-radio-icon-disabled-color',
+  TABLE_HELP_ICON_COLOR: '--table-help-icon-color',
+  TABLE_HELP_ICON_HOVER_COLOR: '--table-help-icon-hover-color',
+};

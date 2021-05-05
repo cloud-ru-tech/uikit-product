@@ -1,20 +1,6 @@
-import * as React from 'react';
+import React from 'react';
+import { addDecorator, addParameters } from '@storybook/react';
 import { globals, purple, purpleDark, green, greenDark } from '../src/theme';
-
-export const decorators = [
-  Story => {
-    const root = document.querySelector('body');
-    if (root && !root.getAttribute('data-theme')) {
-      root.setAttribute('data-theme', 'purple');
-    }
-    return (
-      // Add global styles and theme variables
-      <div className={globals} id='story-root'>
-        <Story />
-      </div>
-    );
-  },
-];
 
 const changeTheme = theme => {
   const root = (document.querySelector(
@@ -27,7 +13,20 @@ const changeTheme = theme => {
   root.setAttribute('data-theme', theme?.name);
 };
 
-export const parameters = {
+addDecorator(Story => {
+  const root = document.querySelector('body');
+  if (root && !root.getAttribute('data-theme')) {
+    root.setAttribute('data-theme', 'purple');
+  }
+  return (
+    // Add global styles and theme variables
+    <div className={globals} id='story-root'>
+      <Story />
+    </div>
+  );
+});
+
+addParameters({
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
@@ -43,4 +42,4 @@ export const parameters = {
     ],
     onChange: changeTheme,
   },
-};
+});

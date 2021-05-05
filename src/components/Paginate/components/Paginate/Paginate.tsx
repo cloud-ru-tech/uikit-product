@@ -24,8 +24,8 @@ export const Paginate: FC<IPaginateProps> = ({
   ...props
 }) => (
   <ReactPaginate
-    previousLabel={<BackSVG size={36} />}
-    nextLabel={<ForwardSVG size={36} />}
+    previousLabel={<BackSVG />}
+    nextLabel={<ForwardSVG />}
     breakLabel='...'
     breakClassName={pageClassName}
     breakLinkClassName={cx(pageLinkClassName, pageLinkActiveClassName)}

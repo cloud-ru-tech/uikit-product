@@ -4,10 +4,11 @@ import { styled } from '@linaria/react';
 import { COLORS_BREADCRUMBS } from 'theme/color/vars';
 
 export const ContainerStyled = styled.div`
+  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  max-width: 100%;
   overflow: hidden;
 `;
 
@@ -18,6 +19,8 @@ export const ItemStyled = styled.div<{ isFixedWidth: boolean }>`
   align-items: center;
   gap: 10px;
   max-width: ${({ isFixedWidth }) => (isFixedWidth ? '200px' : 'auto')};
+  font-size: 20px;
+  line-height: 26px;
 
   &:first-child:last-child {
     max-width: ${({ isFixedWidth }) =>
@@ -28,8 +31,8 @@ export const ItemStyled = styled.div<{ isFixedWidth: boolean }>`
 export const ItemTextStyled = styled.p<{ isActive?: boolean }>`
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: inherit;
+  line-height: inherit;
   color: ${({ isActive }) =>
     isActive
       ? `var(${COLORS_BREADCRUMBS.ACTIVE_COLOR})`
@@ -51,10 +54,17 @@ export const chevronClassName = css`
 
 export const cutTextClassName = css`
   overflow: hidden;
+  font-size: inherit;
+  line-height: inherit;
 `;
 
 export const ChildrenContainerStyled = styled.div`
   margin-left: 8px;
-  width: 100%;
-  display: flex;
+  display: inline-flex;
+`;
+
+export const Collapsed = styled.div`
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 `;
