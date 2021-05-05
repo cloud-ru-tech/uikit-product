@@ -25,6 +25,7 @@ module.exports = {
   plugins: [
     process.env.BUILD_TYPE === 'cjs' &&
       '@babel/plugin-transform-modules-commonjs',
+    '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-nullish-coalescing-operator',
     [
