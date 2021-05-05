@@ -35,6 +35,7 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
     moreActions,
     onCheckboxClick,
     onFavouriteChange,
+    children,
     defaultFavourite = false,
   } = props;
 
@@ -71,6 +72,7 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
           handleChange={handleCheckedClick}
         />
       )}
+      {children}
       <ButtonGroupStyled>
         {onFavouriteChange && (
           <FavouriteWrapStyled onClick={handleFavouriteClick}>
