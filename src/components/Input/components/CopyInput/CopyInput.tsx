@@ -12,6 +12,7 @@ export interface ICopyInputProps {
   label?: string;
   width?: string;
   labelMinWidth?: string;
+  copyInputWrapperClassName?: string;
 }
 
 export const CopyInput: React.FC<ICopyInputProps> = ({
@@ -19,8 +20,9 @@ export const CopyInput: React.FC<ICopyInputProps> = ({
   label,
   width,
   labelMinWidth,
+  copyInputWrapperClassName,
 }) => (
-  <CopyInputWrapper width={width}>
+  <CopyInputWrapper width={width} className={copyInputWrapperClassName}>
     <Input
       disabled
       allowCopy
