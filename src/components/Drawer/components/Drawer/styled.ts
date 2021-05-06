@@ -43,15 +43,14 @@ export const HeaderBoxStyled = styled.div<{ width: string }>`
   border-bottom: solid 1px var(${COLORS_DRAWER.BORDER_COLOR});
 `;
 
-export const FooterBoxStyled = styled.div`
+export const FooterBoxStyled = styled.div<{ width: string }>`
   z-index: 2;
   background: inherit;
   padding: 16px 24px;
   border-top: solid 1px var(${COLORS_DRAWER.BORDER_COLOR});
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
+  position: fixed;
+  width: ${props => props.width};
+  bottom: 0;
 `;
 
 export const drawerPaddingModeClassName = css`

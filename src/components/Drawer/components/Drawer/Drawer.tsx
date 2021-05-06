@@ -81,6 +81,10 @@ export const Drawer: React.FC<IDrawerProps> = ({
     <ContentBoxStyled footerPadding={footer ? 80 : 0}>
       {children}
     </ContentBoxStyled>
-    {footer && <FooterBoxStyled>{footer}</FooterBoxStyled>}
+    {footer && (
+      <FooterBoxStyled width={typeof width === 'number' ? `${width}px` : width}>
+        {footer}
+      </FooterBoxStyled>
+    )}
   </RcDrawer>
 );
