@@ -17,7 +17,6 @@ export const StyledInput = styled.input<{ allowCopy?: boolean }>`
   border: 1px solid var(${COLORS_INPUT.INPUT_BORDER});
   border-radius: 4px;
   height: 44px;
-  text-overflow: ${({ allowCopy }) => (allowCopy ? 'ellipsis' : '')};
   padding: ${({ allowCopy }) => (allowCopy ? '12px 40px 12px 12px' : '12px')};
 
   &::placeholder {
