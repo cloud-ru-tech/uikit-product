@@ -39,6 +39,7 @@ const StyledInput = styled.div`
   color: var(${COLORS_INPUT.COPY_INPUT_COLOR});
   text-overflow: ellipsis;
   overflow: hidden;
+  white-space: nowrap;
 
   &::placeholder {
     color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
