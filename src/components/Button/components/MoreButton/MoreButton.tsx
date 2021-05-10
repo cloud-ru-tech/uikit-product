@@ -69,7 +69,7 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({
           variant={Button.variants.tableMenu}
           className={className}
         >
-          <MoreSVG className={iconStyle} />
+          <MoreSVG id='more-button' className={iconStyle} />
         </Button>
       </Tooltip>
     )}
