@@ -169,7 +169,9 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
                 checkedCards.filter(cardIndex => cardIndex !== index),
               );
             }}
-            onClick={() => {}}
+            onClick={() => {
+              console.log('dfd');
+            }}
           >
             <TagsWrapStyled>
               {additionalHover ? (
