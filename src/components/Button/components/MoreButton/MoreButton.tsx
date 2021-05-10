@@ -24,50 +24,54 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({
   actions,
   className,
 }) => (
-  <Button variant={Button.variants.tableMenu} className={className}>
-    <TooltipStateContainer>
-      {({
-        on,
-        hide,
-        toggle,
-      }: {
-        on: boolean;
-        hide(): void;
-        toggle(): void;
-      }): React.ReactNode => (
-        <Tooltip
-          clickOutside
-          closeOnReferenceHidden
-          hideArrow
-          placement='bottom-start'
-          trigger='click'
-          tooltipShown={on}
-          onVisibilityChange={toggle}
-          tooltip={
-            <TooltipMenu>
-              {actions.map(menuItem => {
-                const handlerOnClick = (
-                  event: React.MouseEvent<HTMLDivElement, MouseEvent>,
-                ): void => {
-                  event?.stopPropagation();
-                  menuItem.onClick(event);
-                  hide();
-                };
-                return (
-                  <TooltipMenuItem
-                    key={`menu-item-${menuItem.name}`}
-                    onClick={handlerOnClick}
-                  >
-                    {menuItem.name}
-                  </TooltipMenuItem>
-                );
-              })}
-            </TooltipMenu>
-          }
+  <TooltipStateContainer>
+    {({
+      on,
+      hide,
+      toggle,
+    }: {
+      on: boolean;
+      hide(): void;
+      toggle(): void;
+    }): React.ReactNode => (
+      <Tooltip
+        clickOutside
+        closeOnReferenceHidden
+        hideArrow
+        placement='bottom-start'
+        trigger='click'
+        tooltipShown={on}
+        onVisibilityChange={toggle}
+        tooltip={
+          <TooltipMenu>
+            {actions.map(menuItem => {
+              const handlerOnClick = (
+                event: React.MouseEvent<HTMLDivElement, MouseEvent>,
+              ): void => {
+                event?.stopPropagation();
+                menuItem.onClick(event);
+                hide();
+              };
+              return (
+                <TooltipMenuItem
+                  key={`menu-item-${menuItem.name}`}
+                  onClick={handlerOnClick}
+                >
+                  {menuItem.name}
+                </TooltipMenuItem>
+              );
+            })}
+          </TooltipMenu>
+        }
+      >
+        <Button
+          id='more-button'
+          variant={Button.variants.tableMenu}
+          className={className}
         >
-          <MoreSVG id='more-button' className={iconStyle} />
-        </Tooltip>
-      )}
-    </TooltipStateContainer>
-  </Button>
+          <MoreSVG className={iconStyle} />
+        </Button>
+      </Tooltip>
+    )}
+  </TooltipStateContainer>
 );
