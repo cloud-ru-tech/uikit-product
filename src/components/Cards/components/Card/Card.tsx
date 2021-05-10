@@ -26,25 +26,36 @@ export const Card: FC<ICardProps> = ({
   hoverClassName,
   additionalHover,
   additionalHoverImage,
-}) => (
-  <ContainerStyled
-    className={className}
-    type='button'
-    onClick={onClick}
-    selected={selected}
-    additionalHover={additionalHover}
-  >
-    {additionalHover ? (
-      <AdditionalHoverStyled
-        data-additional-hover
-        isVertical={isVertical}
-        className={hoverClassName}
-      >
-        <AdditionalHoverImageStyled
-          additionalHoverImage={additionalHoverImage}
-        />
-      </AdditionalHoverStyled>
-    ) : null}
-    <CardContentWrapStyled>{children}</CardContentWrapStyled>
-  </ContainerStyled>
-);
+}) => {
+  const handlerCardClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ): void => {
+    const target = e.target as HTMLButtonElement;
+    if (target?.id !== 'more-button' && onClick) {
+      onClick(e);
+    }
+  };
+
+  return (
+    <ContainerStyled
+      className={className}
+      type='button'
+      onClick={handlerCardClick}
+      selected={selected}
+      additionalHover={additionalHover}
+    >
+      {additionalHover ? (
+        <AdditionalHoverStyled
+          data-additional-hover
+          isVertical={isVertical}
+          className={hoverClassName}
+        >
+          <AdditionalHoverImageStyled
+            additionalHoverImage={additionalHoverImage}
+          />
+        </AdditionalHoverStyled>
+      ) : null}
+      <CardContentWrapStyled>{children}</CardContentWrapStyled>
+    </ContainerStyled>
+  );
+};
