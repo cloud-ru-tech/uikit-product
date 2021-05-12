@@ -1,4 +1,4 @@
-import { LicenseManager } from 'ag-grid-enterprise';
+import { LicenseManager } from '@ag-grid-enterprise/core';
 
 export const enabledEnterpriseLicenseAgGrid = (): void => {
   const key =

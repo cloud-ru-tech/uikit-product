@@ -80,6 +80,138 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
               description='description3'
             />
           </RadioGroup>
+          <Input
+            label='Label'
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            placeholder='Пример: Project1-bucket106'
+          />
+          <Divider color='middle' className={dividerClassName} />
+          <RadioGroup
+            name='stories'
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setValue(e.target.value)
+            }
+            value={value}
+          >
+            <Radio
+              disabled={false}
+              value='story1'
+              label='story1'
+              description='description1'
+            />
+            <Radio
+              disabled={false}
+              value='story2'
+              label='story2'
+              description='description2'
+            />
+            <Radio
+              disabled={false}
+              value='story3'
+              label='story3'
+              description='description3'
+            />
+          </RadioGroup>
+          <Input
+            label='Label'
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            placeholder='Пример: Project1-bucket106'
+          />
+          <Divider color='middle' className={dividerClassName} />
+          <RadioGroup
+            name='stories'
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setValue(e.target.value)
+            }
+            value={value}
+          >
+            <Radio
+              disabled={false}
+              value='story1'
+              label='story1'
+              description='description1'
+            />
+            <Radio
+              disabled={false}
+              value='story2'
+              label='story2'
+              description='description2'
+            />
+            <Radio
+              disabled={false}
+              value='story3'
+              label='story3'
+              description='description3'
+            />
+          </RadioGroup>
+          <Input
+            label='Label'
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            placeholder='Пример: Project1-bucket106'
+          />
+          <Divider color='middle' className={dividerClassName} />
+          <RadioGroup
+            name='stories'
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setValue(e.target.value)
+            }
+            value={value}
+          >
+            <Radio
+              disabled={false}
+              value='story1'
+              label='story1'
+              description='description1'
+            />
+            <Radio
+              disabled={false}
+              value='story2'
+              label='story2'
+              description='description2'
+            />
+            <Radio
+              disabled={false}
+              value='story3'
+              label='story3'
+              description='description3'
+            />
+          </RadioGroup>
+          <Input
+            label='Label'
+            value={value}
+            onChange={e => setValue(e.target.value)}
+            placeholder='Пример: Project1-bucket106'
+          />
+          <Divider color='middle' className={dividerClassName} />
+          <RadioGroup
+            name='stories'
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setValue(e.target.value)
+            }
+            value={value}
+          >
+            <Radio
+              disabled={false}
+              value='story1'
+              label='story1'
+              description='description1'
+            />
+            <Radio
+              disabled={false}
+              value='story2'
+              label='story2'
+              description='description2'
+            />
+            <Radio
+              disabled={false}
+              value='story3'
+              label='story3'
+              description='description3'
+            />
+          </RadioGroup>
         </DrawerContent>
       </Drawer>
     </>
