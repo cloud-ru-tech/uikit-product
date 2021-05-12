@@ -46,12 +46,7 @@ const StyledInput = styled.div`
   }
 
   &:hover {
-    cursor: pointer;
-  }
-
-  &:focus {
-    background-color: var(${COLORS_INPUT.INPUT_FOCUS_BACKGROUND});
-    border: 1px solid var(${COLORS_INPUT.INPUT_FOCUS_BORDER}) !important;
+    cursor: copy;
   }
 `;
 

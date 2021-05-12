@@ -1,6 +1,6 @@
 import { useState } from 'react';
+import copyText from 'copy-to-clipboard';
 
-import { copyText } from 'utils/copyText';
 import { CopyButton } from 'components/Button';
 
 import {

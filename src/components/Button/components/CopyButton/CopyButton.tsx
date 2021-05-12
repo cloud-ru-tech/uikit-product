@@ -1,9 +1,9 @@
-import React, { useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef } from 'react';
+import copyText from 'copy-to-clipboard';
 
 import { CopySVG, CopyCompletedSVG } from '@sbercloud/icons';
 
 import { Button } from 'components/Button';
-import { copyText } from 'utils/copyText';
 
 import { TButtonVariant } from 'components/Button/helpers/types';
 import { ButtonVariant } from 'components/Button/helpers/constants';

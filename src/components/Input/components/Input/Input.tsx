@@ -1,11 +1,11 @@
 import { forwardRef, useCallback, useState, useEffect } from 'react';
+import copyText from 'copy-to-clipboard';
 
 import { CrossSVG, EyeSVG, EyeClosedSVG } from '@sbercloud/icons';
 
 import { CopyButton } from 'components/Button';
 import { IInputProps } from 'components/Input/helpers/types';
 import { getInputType } from 'components/Input/helpers/getInputType';
-import { copyText } from 'utils/copyText';
 
 import {
   Label,
@@ -111,7 +111,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       }
 
       setIsCopyCompleted(true);
-      copyText(correctValue);
+      copyText(correctValue.toString());
 
       setTimeout(() => {
         setIsCopyCompleted(false);
