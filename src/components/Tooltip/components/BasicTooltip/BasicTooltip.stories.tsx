@@ -1,8 +1,8 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { CopySVG, HelpSVG } from '@sbercloud/icons';
 import { styled } from '@linaria/react';
+import copyText from 'copy-to-clipboard';
 
-import { copyText } from 'utils/copyText';
 import { H4 } from 'typography/Headers';
 
 import { BasicTooltip, IBasicTooltipProps } from './BasicTooltip';

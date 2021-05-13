@@ -1,36 +1,63 @@
-import { Input } from 'components/Input';
+import { useState } from 'react';
+import copyText from 'copy-to-clipboard';
+
+import { CopyButton } from 'components/Button';
 
 import {
-  wrapperClassName,
-  inputClassName,
+  Label,
+  StyledWrap,
+  StyledInput,
+  StyledIconWrapper,
+  StyledInputWrapper,
   copyButtonClassName,
-  CopyInputWrapper,
 } from './styled';
 
 export interface ICopyInputProps {
   value: string;
   label?: string;
-  width?: string;
   labelMinWidth?: string;
+  wrapperClassName?: string;
 }
 
 export const CopyInput: React.FC<ICopyInputProps> = ({
   value,
   label,
-  width,
   labelMinWidth,
-}) => (
-  <CopyInputWrapper width={width}>
-    <Input
-      disabled
-      allowCopy
-      type='embed'
-      value={value}
-      label={label}
-      className={inputClassName}
-      labelMinWidth={labelMinWidth}
-      wrapperClassName={wrapperClassName}
-      copyButtonClassName={copyButtonClassName}
-    />
-  </CopyInputWrapper>
-);
+  wrapperClassName,
+}) => {
+  const [isCopyCompleted, setIsCopyCompleted] = useState(false);
+
+  const handleCopyButtonClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+  ): void => {
+    e.stopPropagation();
+  };
+
+  const handleInputClick = (e: React.MouseEvent<HTMLInputElement>) => {
+    e.stopPropagation();
+
+    setIsCopyCompleted(true);
+    copyText(value);
+
+    setTimeout(() => {
+      setIsCopyCompleted(false);
+    }, 3000);
+  };
+
+  return (
+    <StyledWrap className={wrapperClassName}>
+      {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
+      <StyledInputWrapper>
+        <StyledInput onClick={handleInputClick}>{value}</StyledInput>
+        <StyledIconWrapper>
+          <CopyButton
+            text={value.toString()}
+            onClick={handleCopyButtonClick}
+            className={copyButtonClassName}
+            showCopyCompleted={isCopyCompleted}
+          />
+        </StyledIconWrapper>
+      </StyledInputWrapper>
+    </StyledWrap>
+  );
+};

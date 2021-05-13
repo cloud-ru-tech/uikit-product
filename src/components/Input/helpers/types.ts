@@ -1,8 +1,8 @@
-import { ChangeEvent, RefObject } from 'react';
+import { RefObject } from 'react';
 
 export type IInputProps = {
   type?: 'default' | 'embed' | 'security' | 'number';
-  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string | number;
   placeholder?: string;
   wrapperClassName?: string;
@@ -18,4 +18,5 @@ export type IInputProps = {
   label?: string;
   labelMinWidth?: string;
   wrapperRef?: RefObject<HTMLDivElement>;
+  onScroll?: (event: React.UIEvent<HTMLInputElement>) => void | boolean;
 };

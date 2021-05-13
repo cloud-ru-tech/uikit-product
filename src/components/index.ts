@@ -15,6 +15,7 @@ export * from './LogsView';
 export * from './Modal';
 export * from './Paginate';
 export * from './Radio';
+export * from './Range';
 export * from './Select';
 export * from './Slider';
 export * from './Spin';
