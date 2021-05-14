@@ -424,3 +424,24 @@ export const COLORS_TABLE = {
   TABLE_HELP_ICON_COLOR: '--table-help-icon-color',
   TABLE_HELP_ICON_HOVER_COLOR: '--table-help-icon-hover-color',
 };
+
+export const TABLE_BUTTON_COLORS = {
+  TEXT_ICON_CONTENT: '--table-button-text-icon-content',
+  TEXT_ICON_CONTENT_DISABLED: '--table-button-text-icon-content-disabled',
+  TEXT_ICON_BACKGROUND: '--table-button-text-icon-background',
+  TEXT_ICON_BACKGROUND_DISABLED: '--table-button-text-icon-background-disabled',
+  TEXT_ICON_BACKGROUND_HOVER: '--table-button-text-icon-background-hover',
+  TEXT_ICON_BACKGROUND_FOCUS: '--table-button-text-icon-background-focus',
+  TEXT_ICON_BACKGROUND_ACTIVE: '--table-button-text-icon-background-active',
+  TEXT_ICON_BACKGROUND_IN_PROGRESS:
+    '--table-button-text-icon-background-in-progress',
+
+  ICON_CONTENT: '--table-button-icon-content',
+  ICON_CONTENT_DISABLED: '--table-button-icon-content-disabled',
+  ICON_BACKGROUND: '--table-button-icon-background',
+  ICON_BACKGROUND_DISABLED: '--table-button-icon-background-disabled',
+  ICON_BACKGROUND_HOVER: '--table-button-icon-background-hover',
+  ICON_BACKGROUND_FOCUS: '--table-button-icon-background-focus',
+  ICON_BACKGROUND_ACTIVE: '--table-button-icon-background-active',
+  ICON_BACKGROUND_IN_PROGRESS: '--table-button-icon-background-in-progress',
+};
