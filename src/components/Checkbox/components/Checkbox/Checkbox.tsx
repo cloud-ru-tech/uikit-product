@@ -4,7 +4,12 @@ import { SelectedSVG, UnSelectedSVG, SelectedPartSVG } from '@sbercloud/icons';
 
 import { useElementId } from 'utils/useElementId';
 
-import { CheckboxStyled, CheckboxLabelStyled, svgClassName } from './styled';
+import {
+  CheckboxStyled,
+  CheckboxLabelStyled,
+  svgClassName,
+  CheckboxChildrenStyled,
+} from './styled';
 
 export interface ICheckboxProps
   extends Partial<
@@ -32,6 +37,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
   wrapClassName,
   labelClassName,
   inputClassName,
+  children,
   ...restProps
 }) => {
   const checkboxId = useElementId(id);
@@ -50,59 +56,41 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
     handleChange(!checked, e);
   };
 
-  if (partChecked) {
-    return (
-      <div className={wrapClassName}>
-        <CheckboxStyled
-          {...restProps}
-          id={checkboxId}
-          type='checkbox'
-          checked={checked}
-          disabled={disabled}
-          className={inputClassName}
-        />
-        <CheckboxLabelStyled
-          htmlFor={checkboxId}
-          className={labelClassName}
-          onClick={handleClick}
+  const Icon = () => {
+    const iconData = {
+      default: (
+        <UnSelectedSVG
+          className={svgClassName}
+          data-selected={partChecked || checked || undefined}
           data-disabled={disabled || undefined}
-        >
-          <SelectedPartSVG
-            className={svgClassName}
-            data-selected={partChecked || checked || undefined}
-            data-disabled={disabled || undefined}
-          />
-        </CheckboxLabelStyled>
-      </div>
-    );
-  }
+        />
+      ),
+      partChecked: (
+        <SelectedPartSVG
+          className={svgClassName}
+          data-selected={partChecked || checked || undefined}
+          data-disabled={disabled || undefined}
+        />
+      ),
+      checked: (
+        <SelectedSVG
+          className={svgClassName}
+          data-selected={partChecked || checked || undefined}
+          data-disabled={disabled || undefined}
+        />
+      ),
+    };
 
-  if (checked) {
-    return (
-      <div className={wrapClassName}>
-        <CheckboxStyled
-          {...restProps}
-          id={checkboxId}
-          type='checkbox'
-          checked={checked}
-          disabled={disabled}
-          className={inputClassName}
-        />
-        <CheckboxLabelStyled
-          htmlFor={checkboxId}
-          className={labelClassName}
-          onClick={handleClick}
-          data-disabled={disabled || undefined}
-        >
-          <SelectedSVG
-            className={svgClassName}
-            data-selected={partChecked || checked || undefined}
-            data-disabled={disabled || undefined}
-          />
-        </CheckboxLabelStyled>
-      </div>
-    );
-  }
+    if (partChecked) {
+      return iconData.partChecked;
+    }
+
+    if (checked) {
+      return iconData.checked;
+    }
+
+    return iconData.default;
+  };
 
   return (
     <div className={wrapClassName}>
@@ -120,11 +108,10 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
         onClick={handleClick}
         data-disabled={disabled || undefined}
       >
-        <UnSelectedSVG
-          className={svgClassName}
-          data-selected={partChecked || checked || undefined}
-          data-disabled={disabled || undefined}
-        />
+        <Icon />
+        {children && (
+          <CheckboxChildrenStyled>{children}</CheckboxChildrenStyled>
+        )}
       </CheckboxLabelStyled>
     </div>
   );

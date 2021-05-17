@@ -18,7 +18,7 @@ const StyledCheckboxWrap = styled.div<{ showBackground?: boolean }>`
   padding: 10px;
   background: ${({ showBackground }) =>
     showBackground ? '#fff' : 'transparent'};
-  max-width: 40px;
+  /* max-width: 40px; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -31,6 +31,12 @@ const Template: Story<ICheckboxProps> = ({ ...args }) => (
     </StyledCheckboxWrap>
     <StyledCheckboxWrap>
       <Checkbox {...args} />
+    </StyledCheckboxWrap>
+    <StyledCheckboxWrap showBackground>
+      <Checkbox {...args}>test</Checkbox>
+    </StyledCheckboxWrap>
+    <StyledCheckboxWrap>
+      <Checkbox {...args}>test</Checkbox>
     </StyledCheckboxWrap>
   </StyledContainer>
 );
