@@ -446,3 +446,5 @@ export const TABLE_BUTTON_COLORS = {
   ICON_BACKGROUND_ACTIVE: '--table-button-icon-background-active',
   ICON_BACKGROUND_IN_PROGRESS: '--table-button-icon-background-in-progress',
 };
+
+export default COLORS;
