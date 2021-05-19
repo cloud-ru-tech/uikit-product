@@ -46,7 +46,7 @@ const StyledInput = styled.div`
   }
 
   &:hover {
-    cursor: copy;
+    cursor: pointer;
   }
 `;
 
