@@ -1,4 +1,4 @@
-export const COLORS = {
+const COLORS = {
   GRAY_1: '--color-default-gray-1',
   GRAY_2: '--color-default-gray-2',
   GRAY_3: '--color-default-gray-3',
@@ -37,14 +37,14 @@ export const COLORS = {
   YELLOW: '--color-default-yellow',
 };
 
-export const COLORS_BRAND = {
+const COLORS_BRAND = {
   GREEN: '--color-brand-green',
   GREEN_GRADIENT: '--color-brand-green-gradient',
   BLACK: '--color-brand-black',
   GRAY: '--color-brand-gray',
 };
 
-export const COLORS_TAG = {
+const COLORS_TAG = {
   RED: '--color-tag-red',
   PINK: '--color-tag-pink',
   PURPLE: '--color-tag-purple',
@@ -70,16 +70,16 @@ export const COLORS_TAG = {
   TAG_TYPE_CARD_COLOR: '--tag-type-card-color',
 };
 
-export const COLORS_GENERAL = {
+const COLORS_GENERAL = {
   BACKGROUND: '--color-default-background',
   TEXT: '--color-default-text',
 };
 
-export const COLORS_TYPOGRAPHY = {
+const COLORS_TYPOGRAPHY = {
   LINK: '--color-typography-link',
 };
 
-export const COLORS_BUTTON = {
+const COLORS_BUTTON = {
   FOCUS_SHADOW: '--button-focus-shadow',
 
   FILLED_COLOR: '--button-filled-color',
@@ -147,19 +147,19 @@ export const COLORS_BUTTON = {
   DISABLED_BG: '--button-disabled-bg',
 };
 
-export const COLORS_ICON = {
+const COLORS_ICON = {
   FILL: '--icon-fill',
   HOVER_FILL: '--icon-hover-fill',
   ACTIVE_FILL: '--icon-active-fill',
 };
 
-export const COLORS_DIVIDER = {
+const COLORS_DIVIDER = {
   COLOR_LIGHT: '--divider-color-light',
   COLOR_MIDDLE: '--divider-color-middle',
   COLOR_DARK: '--divider-color-dark',
 };
 
-export const COLORS_SPIN = {
+const COLORS_SPIN = {
   BORDER: '--spin-border',
   BORDER_TOP: '--spin-border-top',
   TEXT_COLOR: '--spin-text-color',
@@ -168,7 +168,7 @@ export const COLORS_SPIN = {
   TEXT_REV_COLOR: '--spin-text-rev-color',
 };
 
-export const COLORS_MODAL = {
+const COLORS_MODAL = {
   BG: '--modal-bg',
   TITLE_COLOR: '--modal-title-color',
   DESCRIPTION_COLOR: '--modal-description-color',
@@ -177,7 +177,7 @@ export const COLORS_MODAL = {
   PREVIEW_CLOSE_ICON_HOVER_COLOR: '--modal-preview-close-icon-hover-color',
 };
 
-export const COLORS_TOOLTIP = {
+const COLORS_TOOLTIP = {
   CONTAINER_COLOR: '--tooltip-container-color',
   CONTAINER_BG: '--tooltip-container-bg',
   MENU_BG: '--tooltip-menu-bg',
@@ -186,7 +186,7 @@ export const COLORS_TOOLTIP = {
   ICON_HOVER_FILL: '--tooltip-icon-hover-fill',
 };
 
-export const COLORS_INPUT = {
+const COLORS_INPUT = {
   INPUT_BG: '--input-bg',
   INPUT_BORDER: '--input-border',
   INPUT_PLACEHOLDER_COLOR: '--input-placeholder',
@@ -209,7 +209,7 @@ export const COLORS_INPUT = {
   COPY_INPUT_ICON_BACKGROUND_COLOR: '--input-copy-icon-background-color',
 };
 
-export const COLORS_RADIO = {
+const COLORS_RADIO = {
   COLOR: '--radio-color',
   SECONDARY_COLOR: '--radio-secondary-color',
   DISABLED_COLOR: '--radio-disabled-color',
@@ -224,7 +224,7 @@ export const COLORS_RADIO = {
   CHECKED_ICON_DISABLED_COLOR: '--radio-checked-icon-disabled-color',
 };
 
-export const COLORS_SELECT = {
+const COLORS_SELECT = {
   TEXT_COLOR: '--select-text-color',
   GROUP_HEADING_TEXT_COLOR: '--select-group-heading-text-color',
   PLACEHOLDER_TEXT_COLOR: '--select-placeholder-text-color',
@@ -245,20 +245,20 @@ export const COLORS_SELECT = {
   DROPDOWN_ICON_HOVER_COLOR: '--select-dropdown-icon-hover-color',
 };
 
-export const COLORS_BADGE = {
+const COLORS_BADGE = {
   DEFAULT_BACKGROUND: '--badge-default-background',
   BORDER_COLOR: '--badge-border-color',
   TEXT_COLOR: '--badge-text-color',
 };
 
-export const COLORS_TOOLBAR = {
+const COLORS_TOOLBAR = {
   BACKGROUND: '--toolbar-background',
   INPUT_BORDER: '--toolbar-border-color',
   ACTIVE_BUTTON: '--toolbar-active-button',
   PLACEHOLDER_COLOR: '--toolbar-placeholder-color',
 };
 
-export const COLORS_CHECKBOX = {
+const COLORS_CHECKBOX = {
   CHECKBOX_COLOR: '--checkbox-color',
   CHECKBOX_HOVER_COLOR: '--checkbox-hover-color',
   CHECKBOX_DISABLED_COLOR: '--checkbox-disabled-color',
@@ -266,9 +266,10 @@ export const COLORS_CHECKBOX = {
   CHECKBOX_FILLED_HOVER_COLOR: '--checkbox-filled-hover-color',
   CHECKBOX_FILLED_DISABLED_COLOR: '--checkbox-filled-disabled-color',
   CHECKBOX_PART_CHECKED_RECT_COLOR: '--checkbox-part-checked-rect-color',
+  CHECKBOX_DISABLED_TEXT_COLOR: '--checkbox-disabled-text-color',
 };
 
-export const COLORS_CARD = {
+const COLORS_CARD = {
   CARD_BACKGROUND: '--card-background',
   CARD_HOVER_BACKGROUND: '--card-hover-background',
   CARD_SELECTED_BACKGROUND: '--card-selected-background',
@@ -278,13 +279,13 @@ export const COLORS_CARD = {
   CARD_FAVOURITE_ICON_FILLED_COLOR: '--card-favourite-icon-filled-color',
 };
 
-export const COLORS_PAGINATE = {
+const COLORS_PAGINATE = {
   PAGINATE_ACTIVE_COLOR: '--paginate-active-color',
   PAGINATE_DISABLED_COLOR: '--paginate-disabled-color',
   PAGINATE_WHITE_COLOR: '--paginate-white-color',
 };
 
-export const COLORS_COLLAPSE_PANEL = {
+const COLORS_COLLAPSE_PANEL = {
   COLLAPSE_PANEL_BACKGROUND: '--collapse-panel-background',
   COLLAPSE_PANEL_FAVOURITE_ICON_COLOR: '--collapse-panel-favourite-icon-color',
   COLLAPSE_PANEL_FAVOURITE_ICON_HOVER_COLOR:
@@ -294,14 +295,14 @@ export const COLORS_COLLAPSE_PANEL = {
   COLLAPSE_PANEL_BACKGROUND_HOVER: '--collapse-panel-background-hover',
 };
 
-export const COLORS_TABS = {
+const COLORS_TABS = {
   TAB_BORDER_COLOR: '--tab-border-color',
   TAB_GRAY_BORDER_COLOR: '--tab-gray-border-color',
   TAB_ACTIVE_COLOR: '--tab-active-color',
   TAB_TEXT_COLOR: '--tab-text-color',
 };
 
-export const COLORS_STATUS = {
+const COLORS_STATUS = {
   COLOR: '--status-color',
   FAILED_BG: '--status-failed-bg',
   SUCCESS_BG: '--status-success-bg',
@@ -309,7 +310,7 @@ export const COLORS_STATUS = {
   UNACTIVE_BG: '--status-unactive-bg',
 };
 
-export const COLORS_SWITCH = {
+const COLORS_SWITCH = {
   UNACTIVE_BG: '--switch-unactive-bg',
   UNACTIVE_HOVER_BG: '--switch-unactive-hover-bg',
   UNACTIVE_DISABLED_BG: '--switch-unactive-disabled-bg',
@@ -318,28 +319,28 @@ export const COLORS_SWITCH = {
   ACTIVE_DISABLED_BG: '--switch-active-disabled-bg',
 };
 
-export const COLORS_BREADCRUMBS = {
+const COLORS_BREADCRUMBS = {
   ACTIVE_COLOR: '--breadcrumbs-active-color',
   INACTIVE_COLOR: '--breadcrumbs-inactive-color',
 };
 
-export const COLORS_FORM_GROUP = {
+const COLORS_FORM_GROUP = {
   NUMBER_COLOR: '--form-group-number-color',
   NUMBER_BG: '--form-group-number-bg',
   HINT_COLOR: '--form-group-hint-color',
 };
 
-export const COLORS_FORM_FIELD = {
+const COLORS_FORM_FIELD = {
   HINT_COLOR: '--form-group-hint-color',
   ERROR_COLOR: '--form-group-error-color',
 };
 
-export const COLORS_DRAWER = {
+const COLORS_DRAWER = {
   BACKGROUND: '--drawer-background',
   BORDER_COLOR: '--drawer-border',
 };
 
-export const COLORS_TOAST = {
+const COLORS_TOAST = {
   INFO_COLOR: '--toast-info-color',
   INFO_BG: '--toast-info-bg',
   INFO_SECONDARY_COLOR: '--toast-info-secondary-color',
@@ -354,19 +355,19 @@ export const COLORS_TOAST = {
   ERROR_ACTION_HOVER_COLOR: '--toast-error-action-hover-color',
 };
 
-export const COLORS_AVATAR = {
+const COLORS_AVATAR = {
   COLOR: '--avatar-color',
   BG: '--avatar-bg',
 };
 
-export const COLORS_SLIDER = {
+const COLORS_SLIDER = {
   BG: '--slider-bg',
   BG_HOVER: '--slider-bg-hover',
   BG_ACTIVE: '--slider-bg-active',
   INACTIVE_BG: '--slider-inactive-bg',
 };
 
-export const COLORS_ICON_BUTTON = {
+const COLORS_ICON_BUTTON = {
   BLUE_COLOR: '--icon-button-blue-color',
   BLUE_BORDER_COLOR: '--icon-button-blue-border-color',
   BLUE_COLOR_HOVER: '--icon-button-blue-color-hover',
@@ -402,11 +403,11 @@ export const COLORS_ICON_BUTTON = {
   SIDEBAR_COLOR_HOVER: '--icon-button-sidebar-color-hover',
 };
 
-export const COLORS_LOGS_VIEW = {
+const COLORS_LOGS_VIEW = {
   BG: '--logs-view-bg',
 };
 
-export const COLORS_TABLE = {
+const COLORS_TABLE = {
   TABLE_ROW_BACKGROUND: '--table-row-background',
   TABLE_ROW_COLOR: '--table-row-color',
   TABLE_ROW_ODD_BACKGROUND: '--table-row-odd-background',
@@ -425,7 +426,7 @@ export const COLORS_TABLE = {
   TABLE_HELP_ICON_HOVER_COLOR: '--table-help-icon-hover-color',
 };
 
-export const TABLE_BUTTON_COLORS = {
+const TABLE_BUTTON_COLORS = {
   TEXT_ICON_CONTENT: '--table-button-text-icon-content',
   TEXT_ICON_CONTENT_DISABLED: '--table-button-text-icon-content-disabled',
   TEXT_ICON_BACKGROUND: '--table-button-text-icon-background',
@@ -444,4 +445,78 @@ export const TABLE_BUTTON_COLORS = {
   ICON_BACKGROUND_FOCUS: '--table-button-icon-background-focus',
   ICON_BACKGROUND_ACTIVE: '--table-button-icon-background-active',
   ICON_BACKGROUND_IN_PROGRESS: '--table-button-icon-background-in-progress',
+};
+
+export {
+  COLORS,
+  COLORS_BRAND,
+  COLORS_TAG,
+  COLORS_GENERAL,
+  COLORS_TYPOGRAPHY,
+  COLORS_BUTTON,
+  COLORS_ICON,
+  COLORS_DIVIDER,
+  COLORS_SPIN,
+  COLORS_MODAL,
+  COLORS_TOOLTIP,
+  COLORS_INPUT,
+  COLORS_RADIO,
+  COLORS_SELECT,
+  COLORS_BADGE,
+  COLORS_TOOLBAR,
+  COLORS_CHECKBOX,
+  COLORS_CARD,
+  COLORS_PAGINATE,
+  COLORS_COLLAPSE_PANEL,
+  COLORS_TABS,
+  COLORS_STATUS,
+  COLORS_SWITCH,
+  COLORS_BREADCRUMBS,
+  COLORS_FORM_GROUP,
+  COLORS_FORM_FIELD,
+  COLORS_DRAWER,
+  COLORS_TOAST,
+  COLORS_AVATAR,
+  COLORS_SLIDER,
+  COLORS_ICON_BUTTON,
+  COLORS_LOGS_VIEW,
+  COLORS_TABLE,
+  TABLE_BUTTON_COLORS,
+};
+
+export default {
+  COLORS,
+  COLORS_BRAND,
+  COLORS_TAG,
+  COLORS_GENERAL,
+  COLORS_TYPOGRAPHY,
+  COLORS_BUTTON,
+  COLORS_ICON,
+  COLORS_DIVIDER,
+  COLORS_SPIN,
+  COLORS_MODAL,
+  COLORS_TOOLTIP,
+  COLORS_INPUT,
+  COLORS_RADIO,
+  COLORS_SELECT,
+  COLORS_BADGE,
+  COLORS_TOOLBAR,
+  COLORS_CHECKBOX,
+  COLORS_CARD,
+  COLORS_PAGINATE,
+  COLORS_COLLAPSE_PANEL,
+  COLORS_TABS,
+  COLORS_STATUS,
+  COLORS_SWITCH,
+  COLORS_BREADCRUMBS,
+  COLORS_FORM_GROUP,
+  COLORS_FORM_FIELD,
+  COLORS_DRAWER,
+  COLORS_TOAST,
+  COLORS_AVATAR,
+  COLORS_SLIDER,
+  COLORS_ICON_BUTTON,
+  COLORS_LOGS_VIEW,
+  COLORS_TABLE,
+  TABLE_BUTTON_COLORS,
 };

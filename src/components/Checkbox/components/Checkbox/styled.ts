@@ -19,8 +19,13 @@ export const CheckboxLabelStyled = styled.label`
   cursor: pointer;
 
   &[data-disabled] {
+    color: var(${COLORS_CHECKBOX.CHECKBOX_DISABLED_TEXT_COLOR});
     cursor: not-allowed;
   }
+`;
+
+export const CheckboxChildrenStyled = styled.div`
+  margin-left: 4px;
 `;
 
 export const svgClassName = css`
