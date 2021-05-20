@@ -63,9 +63,10 @@ const StyledWrap = styled.div`
   align-items: center;
 `;
 
-const StyledInputWrapper = styled.div`
+const StyledInputWrapper = styled.div<{ labelMinWidth?: string }>`
   position: relative;
-  width: 100%;
+  width: ${props =>
+    props.labelMinWidth ? `calc(100% - ${props.labelMinWidth})` : '100%'};
 `;
 
 const StyledIconWrapper = styled.div`
