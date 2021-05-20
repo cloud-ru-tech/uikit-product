@@ -110,26 +110,31 @@ export const styles = (typeStyles?: Styles): Styles => ({
   ): CSSProperties & {
     '&:hover': CSSProperties;
     '&:active': CSSProperties;
-  } => ({
-    ...styles,
-    ...(state?.selectProps?.optionNoWrap ? { whiteSpace: 'nowrap' } : {}),
-    ...(state?.selectProps?.collapsedGroup ? { paddingLeft: 40 } : {}),
-    color: `var(${COLORS_SELECT.TEXT_COLOR})`,
-    outline: 'none',
-    backgroundColor: state.isSelected
-      ? `var(${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND})`
-      : `var(${COLORS_SELECT.BACKGROUND})`,
-    fontSize: '14px',
-    lineHeight: '20px',
-    '&:hover': {
-      cursor: 'pointer',
-      borderColor: 'transparent',
-      backgroundColor: `var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND})`,
-    },
-    '&:active': {
-      backgroundColor: `var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND})`,
-    },
-  }),
+  } => {
+    console.log(state);
+    return {
+      ...styles,
+      ...(state?.selectProps?.optionNoWrap ? { whiteSpace: 'nowrap' } : {}),
+      ...(state?.selectProps?.collapsedGroup ? { paddingLeft: 40 } : {}),
+      color: state.isDisabled
+        ? `var(${COLORS_SELECT.TEXT_OPTION_DISABLED_COLOR})`
+        : `var(${COLORS_SELECT.TEXT_COLOR})`,
+      outline: 'none',
+      backgroundColor: state.isSelected
+        ? `var(${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND})`
+        : `var(${COLORS_SELECT.BACKGROUND})`,
+      fontSize: '14px',
+      lineHeight: '20px',
+      '&:hover': {
+        cursor: 'pointer',
+        borderColor: 'transparent',
+        backgroundColor: `var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND})`,
+      },
+      '&:active': {
+        backgroundColor: `var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND})`,
+      },
+    };
+  },
   multiValue: (styles: CSSProperties): CSSProperties => ({
     ...styles,
     backgroundColor: `var(${COLORS_SELECT.TEXT_COLOR})`,

@@ -150,6 +150,7 @@ export const services = [
   {
     value: 'AmazonS3',
     label: 'Amazon S3',
+    isDisabled: true,
     labelText: 'Amazon S3',
     logo: <GroupStub0SVG size={20} />,
   },
