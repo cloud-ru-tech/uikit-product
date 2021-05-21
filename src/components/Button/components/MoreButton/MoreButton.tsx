@@ -24,17 +24,17 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({
   actions,
   className,
 }) => (
-  <Button variant={Button.variants.tableMenu} className={className}>
-    <TooltipStateContainer>
-      {({
-        on,
-        hide,
-        toggle,
-      }: {
-        on: boolean;
-        hide(): void;
-        toggle(): void;
-      }): React.ReactNode => (
+  <TooltipStateContainer>
+    {({
+      on,
+      hide,
+      toggle,
+    }: {
+      on: boolean;
+      hide(): void;
+      toggle(): void;
+    }): React.ReactNode => (
+      <div onClick={e => e?.stopPropagation()}>
         <Tooltip
           clickOutside
           closeOnReferenceHidden
@@ -65,9 +65,15 @@ export const MoreButton: React.FC<IMoreButtonProps> = ({
             </TooltipMenu>
           }
         >
-          <MoreSVG id='more-button' className={iconStyle} />
+          <Button
+            id='more-button'
+            variant={Button.variants.tableMenu}
+            className={className}
+          >
+            <MoreSVG id='more-button' className={iconStyle} />
+          </Button>
         </Tooltip>
-      )}
-    </TooltipStateContainer>
-  </Button>
+      </div>
+    )}
+  </TooltipStateContainer>
 );
