@@ -11,7 +11,12 @@ export const StatusCell: FC<
 > = ({ value, type, tooltip }) => {
   if (tooltip) {
     return (
-      <BasicTooltip tooltip={tooltip}>
+      <BasicTooltip
+        tooltip={tooltip}
+        delayHide={0}
+        delayShow={0}
+        placement={BasicTooltip.placements.Top}
+      >
         <Status type={type}>{value}</Status>
       </BasicTooltip>
     );

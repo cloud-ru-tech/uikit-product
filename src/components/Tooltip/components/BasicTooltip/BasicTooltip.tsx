@@ -1,7 +1,7 @@
-import { FC } from 'react';
 import { cx } from '@linaria/core';
 import TooltipTrigger, { TooltipTriggerProps } from 'react-popper-tooltip';
 
+import { Placements } from 'components/Tooltip/components/BasicTooltip/types';
 import {
   containerStyle,
   containerWithIconStyle,
@@ -32,7 +32,7 @@ const DEFAULT_MODIFIERS = [
   },
 ];
 
-export const BasicTooltip: FC<IBasicTooltipProps> = ({
+export function BasicTooltip({
   children,
   tooltip,
   hideArrow = true,
@@ -42,12 +42,12 @@ export const BasicTooltip: FC<IBasicTooltipProps> = ({
   modifiers = DEFAULT_MODIFIERS,
   delayShow = 300,
   delayHide = 300,
-  placement = 'top-start',
+  placement = Placements.TopStart,
   trigger = 'hover',
   icon,
   iconAction,
   ...props
-}) => {
+}: IBasicTooltipProps) {
   if (!tooltip) {
     return <>{children}</>;
   }
@@ -109,4 +109,6 @@ export const BasicTooltip: FC<IBasicTooltipProps> = ({
       )}
     </TooltipTrigger>
   );
-};
+}
+
+BasicTooltip.placements = Placements;

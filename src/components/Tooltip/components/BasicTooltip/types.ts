@@ -1,0 +1,17 @@
+export enum Placements {
+  Auto = 'auto',
+  AutoStart = 'auto-start',
+  AutoEnd = 'auto-end',
+  Top = 'top',
+  Bottom = 'bottom',
+  Right = 'right',
+  Left = 'left',
+  TopStart = 'top-start',
+  TopEnd = 'top-end',
+  BottomStart = 'bottom-start',
+  BottomEnd = 'bottom-end',
+  RightStart = 'right-start',
+  RightEnd = 'right-end',
+  LeftStart = 'left-start',
+  LeftEnd = 'left-end',
+}
