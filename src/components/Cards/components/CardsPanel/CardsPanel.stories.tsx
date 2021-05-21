@@ -174,7 +174,6 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
             }}
           >
             <TagsWrapStyled>
-              ``
               {additionalHover ? (
                 <TagWrapStyled>
                   <Tag color='purple'>AdditionalHover</Tag>

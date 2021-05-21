@@ -25,7 +25,6 @@ export const Button = ({
   onClick,
   disabled,
   children,
-  id,
   className,
   rounded = false,
   iconPosition = 'after',
@@ -33,7 +32,6 @@ export const Button = ({
 }: IButtonProps) => (
   <ButtonComponent
     data-size={size}
-    id={id}
     data-variant={variant}
     disabled={disabled}
     data-round={rounded}

@@ -30,14 +30,7 @@ export const Card: FC<ICardProps> = ({
   const handlerCardClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ): void => {
-    const target = e.target as HTMLButtonElement;
-    if (
-      target?.id !== 'more-button' &&
-      target?.parentElement?.id !== 'more-button' &&
-      onClick
-    ) {
-      onClick(e);
-    }
+    if (onClick) onClick(e);
   };
 
   return (
