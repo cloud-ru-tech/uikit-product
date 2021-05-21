@@ -169,11 +169,12 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
                 checkedCards.filter(cardIndex => cardIndex !== index),
               );
             }}
-            onClick={() => {
-              console.log('dfd');
+            onClick={e => {
+              console.log(e);
             }}
           >
             <TagsWrapStyled>
+              ``
               {additionalHover ? (
                 <TagWrapStyled>
                   <Tag color='purple'>AdditionalHover</Tag>
