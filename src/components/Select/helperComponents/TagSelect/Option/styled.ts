@@ -14,7 +14,7 @@ export const StyledTagOption = styled.div`
 `;
 
 export const optionClass = css`
-  &[data-is-edit='true']: {
+  &[data-is-edit='true'] {
     background-color: ${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND} !important;
   }
 

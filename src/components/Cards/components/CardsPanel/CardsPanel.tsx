@@ -33,7 +33,7 @@ export const CardsPanel: FC<ICardsPanelProps> = ({
   if (paginateProps) {
     return (
       <S.CardsPanel>
-        {paginateProps.position === 'top' && pagesAmount !== 0 ? (
+        {paginateProps.position === 'top' && pagesAmount > 1 ? (
           <S.PageWrapper>
             <Paginate
               {...paginateProps}
@@ -58,7 +58,7 @@ export const CardsPanel: FC<ICardsPanelProps> = ({
         </S.Container>
         {(paginateProps.position === 'bottom' ||
           paginateProps.position === undefined) &&
-        pagesAmount !== 0 ? (
+        pagesAmount > 1 ? (
           <S.PageWrapper>
             <Paginate
               placement='left'
