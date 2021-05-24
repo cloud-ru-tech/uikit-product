@@ -114,7 +114,9 @@ export const styles = (typeStyles?: Styles): Styles => ({
     ...styles,
     ...(state?.selectProps?.optionNoWrap ? { whiteSpace: 'nowrap' } : {}),
     ...(state?.selectProps?.collapsedGroup ? { paddingLeft: 40 } : {}),
-    color: `var(${COLORS_SELECT.TEXT_COLOR})`,
+    color: state.isDisabled
+      ? `var(${COLORS_SELECT.TEXT_OPTION_DISABLED_COLOR})`
+      : `var(${COLORS_SELECT.TEXT_COLOR})`,
     outline: 'none',
     backgroundColor: state.isSelected
       ? `var(${COLORS_SELECT.DROPDOWN_FOCUS_BACKGROUND})`

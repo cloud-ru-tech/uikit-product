@@ -226,6 +226,7 @@ const COLORS_RADIO = {
 
 const COLORS_SELECT = {
   TEXT_COLOR: '--select-text-color',
+  TEXT_OPTION_DISABLED_COLOR: '--select-option-disabled-text-color',
   GROUP_HEADING_TEXT_COLOR: '--select-group-heading-text-color',
   PLACEHOLDER_TEXT_COLOR: '--select-placeholder-text-color',
   BACKGROUND: '--select-bg-color',

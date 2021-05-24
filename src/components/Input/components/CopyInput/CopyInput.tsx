@@ -47,7 +47,7 @@ export const CopyInput: React.FC<ICopyInputProps> = ({
   return (
     <StyledWrap className={wrapperClassName}>
       {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
-      <StyledInputWrapper>
+      <StyledInputWrapper labelMinWidth={labelMinWidth}>
         <StyledInput onClick={handleInputClick}>{value}</StyledInput>
         <StyledIconWrapper>
           <CopyButton
