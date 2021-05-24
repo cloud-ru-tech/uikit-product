@@ -6,7 +6,7 @@ import { setValue } from 'components/Tabs/helpers/reducer';
 import { ListItemStyled } from './styled';
 
 export interface ITabProps {
-  label: string;
+  label: React.ReactNode;
   identKey: number;
   onClick?(identKey: ITabProps['identKey']): void;
 }
