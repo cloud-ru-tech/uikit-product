@@ -1,6 +1,6 @@
 import { FC, useCallback } from 'react';
 
-import { FavSVG, FavFilledSVG } from '@sbercloud/icons';
+import { FavFilledSVG } from '@sbercloud/icons';
 
 import { TableBasicTypes } from 'components/Table/helpers/types';
 
@@ -15,11 +15,10 @@ export const Favorites: FC<TableBasicTypes.ICellRendererParams> = ({
   }, [setValue, value]);
   return (
     <S.Container>
-      {value ? (
-        <FavFilledSVG className={S.favClassName} onClick={handleClick} />
-      ) : (
-        <FavSVG className={S.favFilledClassName} onClick={handleClick} />
-      )}
+      <FavFilledSVG
+        className={value ? S.favFilledClassName : S.favClassName}
+        onClick={handleClick}
+      />
     </S.Container>
   );
 };

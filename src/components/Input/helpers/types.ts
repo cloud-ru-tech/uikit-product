@@ -19,4 +19,5 @@ export type IInputProps = {
   labelMinWidth?: string;
   wrapperRef?: RefObject<HTMLDivElement>;
   onScroll?: (event: React.UIEvent<HTMLInputElement>) => void | boolean;
+  error?: boolean;
 };

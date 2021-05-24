@@ -1,6 +1,8 @@
 import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Table, ITableProps } from './Table';
+import { Table, ITableProps, FrameworkComponents } from 'components/Table';
+
+const { Favorites } = FrameworkComponents;
 
 export default {
   title: 'Components/Table',
@@ -23,6 +25,7 @@ table.args = {
       size: 1000,
       type: 'file',
       disabled: true,
+      favorite: true,
     },
     {
       name: 'Test2',
@@ -34,9 +37,20 @@ table.args = {
       size: 1000,
       type: 'file',
       disabled: true,
+      favorite: false,
     },
   ],
   columnDefs: [
+    {
+      width: 44,
+      minWidth: 44,
+      maxWidth: 44,
+      headerName: '',
+      field: 'favorite',
+      colId: 'favorite',
+      sortable: false,
+      cellRenderer: 'Favorites',
+    },
     {
       headerName: 'Последнее обновление',
       field: 'lastModified',
@@ -59,6 +73,9 @@ table.args = {
       resizable: false,
     },
   ],
+  frameworkComponents: {
+    Favorites,
+  },
 };
 
 table.argTypes = {};

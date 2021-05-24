@@ -51,7 +51,7 @@ export const StyledInput = styled.input<{ allowCopy?: boolean }>`
 
   &:focus {
     background-color: var(${COLORS_INPUT.INPUT_FOCUS_BACKGROUND});
-    border: 1px solid var(${COLORS_INPUT.INPUT_FOCUS_BORDER}) !important;
+    border: 1px solid var(${COLORS_INPUT.INPUT_FOCUS_BORDER});
   }
 
   &[data-disabled='true'] {
@@ -69,6 +69,15 @@ export const StyledInput = styled.input<{ allowCopy?: boolean }>`
   &[data-type='embed'] {
     border: 0 !important;
     border-radius: 0;
+  }
+
+  &[data-error] {
+    border: 1px solid var(${COLORS_INPUT.INPUT_ERROR_BORDER});
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(${COLORS_INPUT.INPUT_ERROR_BORDER});
+    }
   }
 `;
 
