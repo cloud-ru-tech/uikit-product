@@ -8,7 +8,7 @@ export const WithPrefixCell: FC<
   TableBasicTypes.ICellRendererParams & { prefix: React.ReactNode }
 > = ({ value, prefix }) => (
   <S.Container>
-    <div>{prefix}</div>
+    <S.Prefix>{prefix}</S.Prefix>
     <S.ValueContainer>{value}</S.ValueContainer>
   </S.Container>
 );

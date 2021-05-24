@@ -189,6 +189,7 @@ const COLORS_TOOLTIP = {
 const COLORS_INPUT = {
   INPUT_BG: '--input-bg',
   INPUT_BORDER: '--input-border',
+  INPUT_ERROR_BORDER: '--input-error-border',
   INPUT_PLACEHOLDER_COLOR: '--input-placeholder',
   INPUT_TEXT_COLOR: '--input-text',
   INPUT_FOCUS_BORDER: '--input-focus-border',
@@ -448,6 +449,17 @@ const TABLE_BUTTON_COLORS = {
   ICON_BACKGROUND_IN_PROGRESS: '--table-button-icon-background-in-progress',
 };
 
+const COLORS_FILTER = {
+  FILTER_BACKGROUND: '--filter-background',
+  FILTER_ACTION_BUTTON_COLOR: '--filter-action-button-color',
+  FILTER_ACTION_BUTTON_FILLED: '--filter-action-button-filled',
+  FILTER_ACTION_BUTTON_HOVER_COLOR: '--filter-action-button-hover-color',
+  FILTER_ACTION_BUTTON_HOVER_FILLED: '--filter-action-button-hover-filled',
+  FILTER_ACTION_BUTTON_DISABLED_COLOR: '--filter-action-button-disabledr-color',
+  FILTER_ACTION_BUTTON_DISABLED_FILLED:
+    '--filter-action-button-disabled-filled',
+};
+
 export {
   COLORS,
   COLORS_BRAND,
@@ -483,6 +495,7 @@ export {
   COLORS_LOGS_VIEW,
   COLORS_TABLE,
   TABLE_BUTTON_COLORS,
+  COLORS_FILTER,
 };
 
 export default {
@@ -520,4 +533,5 @@ export default {
   COLORS_LOGS_VIEW,
   COLORS_TABLE,
   TABLE_BUTTON_COLORS,
+  COLORS_FILTER,
 };

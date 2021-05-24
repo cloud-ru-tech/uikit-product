@@ -27,3 +27,4 @@ export * from './Toast';
 export * from './Tooltip';
 export * from './TruncateString';
 export * from './Table';
+export * from './Filter';

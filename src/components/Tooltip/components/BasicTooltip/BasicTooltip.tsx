@@ -20,6 +20,7 @@ export interface IBasicTooltipProps
   className?: string;
   classNameTrigger?: string;
   classNameArrow?: string;
+  classNameWrapper?: string;
 }
 
 const DEFAULT_MODIFIERS = [
@@ -39,6 +40,7 @@ export function BasicTooltip({
   className,
   classNameTrigger,
   classNameArrow,
+  classNameWrapper,
   modifiers = DEFAULT_MODIFIERS,
   delayShow = 300,
   delayHide = 300,
@@ -86,7 +88,9 @@ export function BasicTooltip({
               })}
             />
           )}
-          <TooltipWrapper>{tooltip}</TooltipWrapper>
+          <TooltipWrapper className={classNameWrapper}>
+            {tooltip}
+          </TooltipWrapper>
           {icon && (
             <IconWrapper onClick={iconAction} data-action={Boolean(iconAction)}>
               {icon}

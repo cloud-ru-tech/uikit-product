@@ -2,7 +2,6 @@ import { useMemo, useState, useEffect } from 'react';
 import { cx } from '@linaria/core';
 
 import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
-import { ModuleRegistry } from '@ag-grid-community/core';
 import { AllModules } from '@ag-grid-enterprise/all-modules';
 import debounce from 'lodash.debounce';
 
@@ -16,8 +15,6 @@ import { tableClass } from 'components/Table/styles/tableClass';
 
 import 'ag-grid-enterprise/dist/styles/ag-grid.min.css';
 import 'ag-grid-enterprise/dist/styles/ag-theme-alpine.min.css';
-
-ModuleRegistry.registerModules(AllModules);
 
 export interface ITableProps extends AgGridReactProps {
   classNameContainer?: string;
@@ -60,6 +57,7 @@ export const Table: React.FC<ITableProps> = ({
   return (
     <div className={cx('ag-theme-alpine', tableClass, classNameContainer)}>
       <AgGridReact
+        modules={AllModules}
         gridOptions={{
           suppressCellSelection: true,
           headerHeight: tableHeaderHeight,
@@ -67,11 +65,16 @@ export const Table: React.FC<ITableProps> = ({
           rowSelection: 'multiple',
           suppressRowClickSelection: true,
           suppressContextMenu: true,
+          enableCellTextSelection: true,
           defaultColDef: {
             resizable: true,
             sortable: true,
             unSortIcon: true,
             suppressMenu: true,
+            cellStyle: {
+              textOverflow: 'ellipsis',
+              display: 'block',
+            },
           },
           ...gridOptions,
         }}
@@ -79,7 +82,6 @@ export const Table: React.FC<ITableProps> = ({
         onGridReady={handleGridReady}
         rowData={rowData}
         columnDefs={colDefs}
-        // onFirstDataRendered={onFirstDataRendered}
         loadingOverlayComponent='LoadingOverlay'
         {...tableProps}
       />

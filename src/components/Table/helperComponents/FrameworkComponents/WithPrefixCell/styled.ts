@@ -11,3 +11,7 @@ export const ValueContainer = styled.div`
   text-overflow: ellipsis;
   overflow: hidden;
 `;
+
+export const Prefix = styled.div`
+  display: inline-flex;
+`;
