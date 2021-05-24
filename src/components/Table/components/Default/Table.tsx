@@ -9,7 +9,7 @@ import debounce from 'lodash.debounce';
 import {
   tableHeaderHeight,
   tableRowHeight,
-  TableCheckboxColumnDefine,
+  TableCheckboxColumnDefinition,
 } from 'components/Table/helpers/constants';
 import { TableBasicTypes } from 'components/Table/helpers/types';
 import { tableClass } from 'components/Table/styles/tableClass';
@@ -51,7 +51,7 @@ export const Table: React.FC<ITableProps> = ({
 
   const colDefs = useMemo(() => {
     if (checkboxSelection) {
-      return [{ ...TableCheckboxColumnDefine }, ...columnDefs];
+      return [{ ...TableCheckboxColumnDefinition }, ...columnDefs];
     }
 
     return [...columnDefs];

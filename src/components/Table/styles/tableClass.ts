@@ -17,9 +17,10 @@ export const tableClass = css`
         background-color: var(${COLORS_TABLE.TABLE_ROW_BACKGROUND});
         color: var(${COLORS_TABLE.TABLE_ROW_COLOR});
 
-        &-odd {
+        &:nth-of-type(2n) {
           background-color: var(${COLORS_TABLE.TABLE_ROW_ODD_BACKGROUND});
         }
+
         &-hover {
           box-shadow: inset 4px 0px 0px
               var(${COLORS_TABLE.TABLE_ROW_HOVER_SHADOW_LEFT}),
@@ -27,10 +28,11 @@ export const tableClass = css`
             inset 0px 1px 0px
               var(${COLORS_TABLE.TABLE_ROW_HOVER_SHADOW_TOP_BOTTOM});
         }
-        &-selected {
+        &-selected:nth-of-type(n) {
           background-color: var(${COLORS_TABLE.TABLE_ROW_SELECTED_BACKGROUND});
         }
       }
+
       &-cell {
         padding: 8px 12px;
         font-style: normal;

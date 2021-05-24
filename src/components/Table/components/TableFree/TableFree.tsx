@@ -5,7 +5,7 @@ import { cx } from '@linaria/core';
 import {
   tableHeaderHeight,
   tableRowHeight,
-  TableCheckboxColumnDefine,
+  TableCheckboxColumnDefinition,
 } from 'components/Table/helpers/constants';
 import { tableClass } from 'components/Table/styles/tableClass';
 
@@ -32,7 +32,7 @@ export const TableFree: React.FC<ITableFreeProps> = ({
 
   const colDefs = useMemo(() => {
     if (checkboxSelection) {
-      return [{ ...TableCheckboxColumnDefine }, ...columnDefs];
+      return [{ ...TableCheckboxColumnDefinition }, ...columnDefs];
     }
 
     return [...columnDefs];

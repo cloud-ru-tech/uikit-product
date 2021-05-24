@@ -1,4 +1,3 @@
-const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
@@ -12,6 +11,14 @@ module.exports = {
       },
     },
     'storybook-addon-themes',
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        loaderOptions: {
+          injectStoryParameters: false,
+        },
+      },
+    },
   ],
   typescript: {
     check: true,
