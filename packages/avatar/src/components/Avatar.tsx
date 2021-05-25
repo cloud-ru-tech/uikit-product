@@ -1,35 +1,22 @@
 import { useMemo } from 'react';
 
-import {
-  getCustomBg,
-  getCustomRadius,
-  getCustomStyles,
-} from 'components/Avatar/helpers/styleHelpers';
-import { getAbbreviation } from 'components/Avatar/helpers/getAbbreviation';
-
+import { getAbbreviation } from '../helpers/getAbbreviation';
+import { getCustomBg, getCustomRadius, getCustomStyles } from '../helpers/styleHelpers';
 import { StyledAvatar } from './styled';
+import { Shapes } from './types';
 
-export interface IAvatarProps {
-  shape?: 'circle' | 'square';
+export type AvatarProps = {
+  shape?: Shapes;
+  username?: string;
   size?: number | 'm' | 'l';
   src?: string;
   icon?: React.ReactNode;
   letterSize?: number;
   className?: string;
   radius?: number;
-}
+};
 
-export const Avatar: React.FC<IAvatarProps> = props => {
-  const {
-    children,
-    src,
-    icon,
-    size,
-    letterSize,
-    shape,
-    className,
-    radius,
-  } = props;
+export function Avatar({ src, icon, size, letterSize, shape, className, radius, username }: AvatarProps) {
   const isCustomSize = typeof size === 'number';
   const isCustomRadius = typeof radius === 'number';
 
@@ -42,12 +29,12 @@ export const Avatar: React.FC<IAvatarProps> = props => {
       return icon;
     }
 
-    if (children && typeof children === 'string') {
-      return getAbbreviation(children);
+    if (username) {
+      return getAbbreviation(username);
     }
 
     return null;
-  }, [children, src, icon]);
+  }, [username, src, icon]);
 
   const customStyles = useMemo(
     () => ({
@@ -59,18 +46,15 @@ export const Avatar: React.FC<IAvatarProps> = props => {
   );
 
   return (
-    <StyledAvatar
-      style={customStyles}
-      data-shape={shape}
-      data-size={size}
-      className={className}
-    >
+    <StyledAvatar style={customStyles} data-shape={shape} data-size={size} className={className}>
       {content}
     </StyledAvatar>
   );
-};
+}
+
+Avatar.shapes = Shapes;
 
 Avatar.defaultProps = {
-  shape: 'circle',
+  shape: Shapes.Circle,
   size: 'm',
 };

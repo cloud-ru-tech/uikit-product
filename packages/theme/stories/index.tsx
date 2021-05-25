@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { COLORS } from '../src';
+import { EXPORT_VARS } from '../src';
 
 export default {
   title: 'Variables/Colors',
@@ -26,9 +26,9 @@ const Color = styled.div<{ background: string }>`
   background: ${p => `var(${p.background})`};
 `;
 
-const Template: Story<typeof COLORS> = () => (
+const Template: Story<typeof EXPORT_VARS.COLORS> = () => (
   <Wrapper>
-    {Object.entries(COLORS).map(([key, color]) => (
+    {Object.entries(EXPORT_VARS.COLORS).map(([key, color]) => (
       <Item key={key}>
         <Color background={color} />
 

@@ -1,8 +1,9 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
-import { HelpSVG } from '@sbercloud/icons';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Avatar, IAvatarProps } from './Avatar';
+import { HelpSVG } from '@sbercloud/icons';
+
+import { Avatar, AvatarProps } from '../src';
 
 export default {
   title: 'Components/Avatar',
@@ -20,20 +21,18 @@ const Wrapper = styled.div`
   }
 `;
 
-const Template: Story<IAvatarProps> = ({ ...args }) => (
+const Template: Story<AvatarProps> = ({ ...args }) => (
   <Wrapper>
-    <Avatar {...args}>Test Name</Avatar>
-    <Avatar {...args} src={avatarSrc}>
-      Test Name
-    </Avatar>
-    <Avatar {...args} icon={<HelpSVG size={14} />}>
-      Test Name
-    </Avatar>
+    <Avatar {...args} />
+    <Avatar {...args} src={avatarSrc} />
+    <Avatar {...args} icon={<HelpSVG size={14} />} />
   </Wrapper>
 );
 
 export const avatar = Template.bind({});
-avatar.args = {};
+avatar.args = {
+  username: 'Test Name',
+};
 avatar.parameters = {};
 avatar.argTypes = {
   size: {

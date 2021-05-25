@@ -1,9 +1,9 @@
-import { IAvatarProps } from 'components/Avatar/components/Default';
+import { AvatarProps } from '../components';
 
 export const getCustomStyles = (
   isCustomSize: boolean,
-  size: IAvatarProps['size'],
-  letterSize: IAvatarProps['letterSize'],
+  size: AvatarProps['size'],
+  letterSize: AvatarProps['letterSize'],
 ): React.CSSProperties => {
   if (!isCustomSize) {
     return {};
@@ -16,7 +16,7 @@ export const getCustomStyles = (
   };
 };
 
-export const getCustomBg = (src: IAvatarProps['src']): React.CSSProperties => {
+export const getCustomBg = (src: AvatarProps['src']): React.CSSProperties => {
   if (!src) {
     return {};
   }
@@ -24,8 +24,5 @@ export const getCustomBg = (src: IAvatarProps['src']): React.CSSProperties => {
   return { backgroundImage: `url(${src})`, backgroundSize: 'cover' };
 };
 
-export const getCustomRadius = (
-  isCustomRadius: boolean,
-  radius: IAvatarProps['radius'],
-): React.CSSProperties =>
+export const getCustomRadius = (isCustomRadius: boolean, radius: AvatarProps['radius']): React.CSSProperties =>
   isCustomRadius ? { borderRadius: `${radius}px` } : {};

@@ -1,6 +1,8 @@
 import { styled } from '@linaria/react';
 
-import { COLORS_AVATAR } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_AVATAR } = EXPORT_VARS;
 
 export const StyledAvatar = styled.div`
   display: flex;
