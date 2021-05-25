@@ -115,3 +115,5 @@ rules: [
 ## Запуск Storybook
 
 1. Выполнить команду `yarn storybook`
+
+# Packages

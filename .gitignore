@@ -1,10 +1,9 @@
 # General
-/node_modules/*
+node_modules
 build
 dist
 vscode
 build.bat
-.npmrc
 package-lock.json
 
 # Logs
@@ -57,6 +56,3 @@ typings/
 *.sw?
 .DS_Store
 .linaria-cache
-
-
-.npmrc

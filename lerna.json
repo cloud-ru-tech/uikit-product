@@ -1,0 +1,23 @@
+{
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "command": {
+    "publish": {
+      "ignoreChanges": ["ignored-file", "*.md"],
+      "message": "Version bump",
+      "registry": "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/"
+    },
+    "version": {
+      "ignoreChanges": [
+        "**/*.md",
+        "**/*.MD",
+        "**/*.mdx",
+        "**/*.MDX",
+        "./scripts/**/*",
+        "packages/*/stories/**/**.*"
+      ]
+    }
+  }
+}

@@ -1,29 +1,8 @@
 {
+  "extends": "@aicloud/config-tsconfig",
   "compilerOptions": {
-    "target": "es6",
-    "lib": ["es2017", "dom", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "jsx": "react-jsx",
-    "strict": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "skipLibCheck": true,
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./",
-    "paths": {
-      "vars/*": ["src/vars/*"],
-      "components": ["src/components"],
-      "components/*": ["src/components/*"],
-      "typography": ["src/typography"],
-      "typography/*": ["src/typography/*"],
-      "theme/*": ["src/theme/*"],
-      "utils": ["src/utils"],
-      "utils/*": ["src/utils/*"]
-    }
+    "baseUrl": "./"
   },
-  "include": ["src", "types"],
-  "exclude": ["node_modules"]
+  "include": ["types", "packages"],
+  "exclude": ["node_modules", "scripts"]
 }
