@@ -11,14 +11,7 @@ module.exports = {
       },
     },
     'storybook-addon-themes',
-    {
-      name: '@storybook/addon-storysource',
-      options: {
-        loaderOptions: {
-          injectStoryParameters: false,
-        },
-      },
-    },
+    '@storybook/addon-storysource',
   ],
   typescript: {
     check: true,

@@ -44,18 +44,27 @@ inquirer
     {
       type: 'confirm',
       name: 'isComponent',
-      message: 'Is It React Component Package?',
+      message: 'Is it React Component Package?',
+    },
+    {
+      type: 'confirm',
+      name: 'isPackagePrivate',
+      message: 'Is it Private Package?',
     },
     {
       type: 'input',
       name: 'packageTitle',
       message: 'Package Title',
       filter: (input, answers) => {
-        const { isComponent } = answers;
+        const { isComponent, isPackagePrivate } = answers;
         let capitalized = generatePackageTitle(input);
 
         if (isComponent) {
           capitalized = `React ${capitalized}`;
+        }
+
+        if (isPackagePrivate) {
+          capitalized = `${capitalized} Private`;
         }
 
         return capitalized;
@@ -98,7 +107,7 @@ inquirer
       packageDescription: answers.packageDescription,
     });
 
-    fileUtils.updateGlobalReadme({ packageRootFolderName, packageTitle });
+    //fileUtils.updateGlobalReadme({ packageRootFolderName, packageTitle });
 
     logDebug('Finished generating files!');
     logInfo('Bootstrapping new package...This will take a few moments...');

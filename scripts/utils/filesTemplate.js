@@ -18,7 +18,7 @@ const createFolderStructure = ({ packageRootFolderName }) => {
 
 const packageJson = ({ user, email, packageTitle, packageName, packageDescription, packageRootFolderName }) => {
   const config = {
-    name: `@sbercloud/${packageName}`,
+    name: `@sbercloud/uikit-${packageName}`,
     title: `${packageTitle}`,
     version: '0.0.0',
     description: `${packageDescription}`,

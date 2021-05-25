@@ -1,0 +1,31 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
+
+import { TableText } from '../src';
+
+export default {
+  title: 'Typography/Table',
+  component: TableText,
+} as Meta;
+
+const Template: Story<{ color: string; children: string }> = ({ children, color, ...restArgs }) => (
+  <div style={{ color }}>
+    <TableText {...restArgs}>{children} (TableText)</TableText>
+  </div>
+);
+
+export const table = Template.bind({});
+table.args = {
+  children: 'Пример',
+};
+table.argTypes = {
+  color: {
+    control: {
+      type: 'color',
+    },
+  },
+  children: {
+    control: {
+      type: 'text',
+    },
+  },
+};

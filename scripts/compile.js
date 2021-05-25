@@ -8,12 +8,14 @@ const pkg = argv.pkg ? argv.pkg : '*';
 
 const writeJs = require('./compile/write-js');
 const transformJs = require('./compile/transform-js');
+const simpleCopy = require('./compile/simple-copy');
 const { emitDeclarations, createTSProgram } = require('./compile/emit-declarations');
 
 (async function () {
   let jsTiming = 0;
   let tsTiming = 0;
   let emitTiming = 0;
+  let simpleCopyTiming = 0;
 
   console.log(`Compiling...`);
 
@@ -43,6 +45,12 @@ const { emitDeclarations, createTSProgram } = require('./compile/emit-declaratio
     jsFiles.forEach(jsPipe(transformJs()));
 
     jsTiming += moment().diff(jsStart, 'ms');
+
+    const copyStart = moment();
+    const filesToCopy = glob.sync(`${src}/**/*.{woff,woff2}`);
+    filesToCopy.forEach(simpleCopy({ src, distCJS, distESM }));
+    simpleCopyTiming += moment().diff(copyStart, 'ms');
+
     const emitStart = moment();
 
     emitDeclarations({
@@ -55,9 +63,10 @@ const { emitDeclarations, createTSProgram } = require('./compile/emit-declaratio
     emitTiming += moment().diff(emitStart, 'ms');
   }
 
-  const totalTiming = tsTiming + jsTiming + emitTiming;
+  const totalTiming = tsTiming + jsTiming + emitTiming + simpleCopyTiming;
   logInfo(`TS build has taken ${tsTiming}ms.`);
   logInfo(`JS build has taken ${jsTiming}ms.`);
+  logInfo(`Copying files has taken ${simpleCopyTiming}ms.`);
   logInfo(`Types emitting has taken ${emitTiming}ms.`);
   logHelp(`Total ${totalTiming}ms.`);
 })();
