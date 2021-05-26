@@ -1,6 +1,8 @@
 import { css } from '@linaria/core';
 
-import { COLORS_PAGINATE } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_PAGINATE } = EXPORT_VARS;
 
 export const paginationClassName = css`
   list-style-type: none;

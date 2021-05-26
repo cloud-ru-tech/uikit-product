@@ -1,7 +1,6 @@
 export * from './Cards';
 export * from './CollapsePanel';
 export * from './Form';
-export * from './Paginate';
 export * from './Select';
 export * from './Tabs';
 export * from './Toast';

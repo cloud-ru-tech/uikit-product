@@ -35,7 +35,6 @@
     "lodash.lte": "3.9.2",
     "nanoid": "^3.1.22",
     "rc-tree": "^4.1.2",
-    "react-paginate": "^7.1.0",
     "react-select": "3.1.0",
     "react-toastify": "^7.0.3"
   },
@@ -79,7 +78,6 @@
     "@types/lodash.lt": "3.9.6",
     "@types/lodash.lte": "3.9.6",
     "@types/react-dom": "17.0.5",
-    "@types/react-paginate": "6.2.2",
     "@types/react-select": "3.1.2",
     "@types/shelljs": "0.8.8",
     "babel-loader": "8.2.2",

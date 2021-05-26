@@ -1,18 +1,18 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Paginate, IPaginateProps } from './Paginate';
+import { Paginator, PaginatorProps } from '../src';
 
 export default {
-  title: 'Components/Paginate',
-  component: Paginate,
+  title: 'Components/Paginator',
+  component: Paginator,
 } as Meta;
 
-const Template: Story<IPaginateProps> = ({ ...args }) => <Paginate {...args} />;
+const Template: Story<PaginatorProps> = ({ ...args }) => <Paginator {...args} />;
 
-export const paginate = Template.bind({});
-paginate.args = {};
-paginate.parameters = {};
-paginate.argTypes = {
+export const paginator = Template.bind({});
+paginator.args = {};
+paginator.parameters = {};
+paginator.argTypes = {
   pageCount: {
     control: {
       type: 'number',
