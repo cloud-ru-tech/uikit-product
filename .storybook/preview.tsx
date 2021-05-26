@@ -19,9 +19,11 @@ addDecorator(Story => {
   if (root && !root.getAttribute('data-theme')) {
     root.setAttribute('data-theme', 'purple');
   }
+
   return (
     // Add global styles and theme variables
     <div className={globals} id='story-root'>
+      {/* @ts-ignore*/}
       <Story />
     </div>
   );

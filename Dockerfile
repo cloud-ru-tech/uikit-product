@@ -2,12 +2,12 @@
 FROM node:12-alpine AS builder
 COPY . .
 
-RUN npm config set @sbercloud:registry https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/
+## NPMRC в хомяка тут :)
 
 RUN mkdir storybook-static
-RUN yarn
-RUN yarn build-storybook
-
+RUN npm i
+RUN npm run build
+RUN npm run build:storybook
 
 ## create image
 FROM nginx:alpine
