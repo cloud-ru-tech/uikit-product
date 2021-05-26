@@ -1,11 +1,14 @@
-import { styled } from '@linaria/react';
-import { COLORS_SPIN } from 'theme/color/vars';
 import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
+
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 type ISpinnerProps = {
   size: number;
   borderSize: number;
 };
+
+const { COLORS_SPIN } = EXPORT_VARS;
 
 export const Spinner = styled.div<ISpinnerProps>`
   width: ${props => props.size}px;

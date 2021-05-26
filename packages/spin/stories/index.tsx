@@ -1,15 +1,14 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { SIZES } from 'components/Spin/helpers/constants';
-
-import { Spin, ISpinDefaultProps } from './Spin';
+import { Spin, SpinDefaultProps } from '../src';
+import { Sizes } from '../src/helpers/constants';
 
 export default {
   title: 'Components/Spin',
   component: Spin,
 } as Meta;
 
-const Template: Story<ISpinDefaultProps> = args => <Spin {...args} />;
+const Template: Story<SpinDefaultProps> = args => <Spin {...args} />;
 
 export const spin = Template.bind({});
 spin.args = {
@@ -19,7 +18,7 @@ spin.argTypes = {
   size: {
     control: {
       type: 'radio',
-      options: Object.values(SIZES),
+      options: Object.values(Sizes),
     },
   },
   borderSize: {
