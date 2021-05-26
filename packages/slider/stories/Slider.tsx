@@ -1,6 +1,7 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
-import { Slider } from './Slider';
+
+import { Slider } from '../src';
 
 export default {
   title: 'Components/Slider',
