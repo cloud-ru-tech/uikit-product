@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import { styled } from '@linaria/react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
-import { Range } from './Range';
+import { IRangeProps, Range } from '../src';
 
 export default {
   title: 'Components/Range',
@@ -10,10 +10,10 @@ export default {
 } as Meta;
 
 const RangeWrap = styled.div`
-  padding: 0px 20px;
+  padding: 0 20px;
 `;
 
-const Template: Story = () => {
+const Template: Story<IRangeProps> = () => {
   const [value, setValue] = useState<Array<number>>([0, 5]);
 
   return (

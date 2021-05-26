@@ -1,14 +1,14 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { Slider } from '../src';
+import { ISliderProps, Slider } from '../src';
 
 export default {
   title: 'Components/Slider',
   component: Slider,
 } as Meta;
 
-const Template: Story = () => {
+const Template: Story<ISliderProps> = () => {
   const [value, setValue] = useState<number>();
 
   return (
