@@ -1,11 +1,10 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { Filter, IFilterProps, TFilterValueType } from 'components/Filter';
+import { ListToolBar } from 'components/Toolbar';
 import { useState } from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 
 import { FilterSVG } from '@sbercloud/icons';
-
-import { ListToolBar } from 'components/ListToolBar';
-import { Filter, IFilterProps, TFilterValueType } from 'components/Filter';
 
 import mockData, { groupedServices } from '../../helpers/mockData';
 
@@ -55,9 +54,7 @@ const defValue: TFilterValueType[] = [
 
 const Template: Story<IFilterProps> = () => {
   const [value, setValue] = useState<string | undefined>();
-  const [filterValue, setFilterValue] = useState<TFilterValueType[] | string>(
-    defValue,
-  );
+  const [filterValue, setFilterValue] = useState<TFilterValueType[] | string>(defValue);
 
   return (
     <div style={{ padding: 10 }}>

@@ -1,26 +1,15 @@
-import { createRef, FC, useEffect, useState } from 'react';
+import { FC, createRef, useEffect, useState } from 'react';
 
-import { SearchSVG, CrossSVG } from '@sbercloud/icons';
+import { CrossSVG, SearchSVG } from '@sbercloud/icons';
+import { IInputProps, Input } from '@sbercloud/uikit-react-input';
 
-import { Input, IInputProps } from 'components/Input';
+import { InputWrapStyled, crossIconClassName, inputClassName, searchIconClassname } from './styled';
 
-import {
-  InputWrapStyled,
-  inputClassName,
-  crossIconClassName,
-  searchIconClassname,
-} from './styled';
-
-export interface IToolBarInputProps extends Omit<IInputProps, 'onChange'> {
+export interface ToolbarInputProps extends Omit<IInputProps, 'onChange'> {
   onChange: (value: string) => void;
 }
 
-export const ToolBarInput: FC<IToolBarInputProps> = ({
-  value,
-  onChange,
-  wrapperClassName,
-  ...inputProps
-}) => {
+export const ToolbarInput: FC<ToolbarInputProps> = ({ value, onChange, wrapperClassName, ...inputProps }) => {
   const inputWrapperRef = createRef<HTMLDivElement>();
   const [hasPrevSibling, setPrevSibling] = useState<undefined | boolean>();
   const [hasNextSibling, setNextSibling] = useState<undefined | boolean>();

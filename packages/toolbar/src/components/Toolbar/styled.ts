@@ -1,6 +1,8 @@
 import { styled } from '@linaria/react';
 
-import { COLORS_TOOLBAR } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_TOOLBAR } = EXPORT_VARS;
 
 export const ListToolBarStyled = styled.div`
   background-color: var(${COLORS_TOOLBAR.BACKGROUND});
