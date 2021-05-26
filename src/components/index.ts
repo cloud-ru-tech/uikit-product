@@ -2,7 +2,6 @@ export * from './Cards';
 export * from './Checkbox';
 export * from './CollapsePanel';
 export * from './ContentHider';
-export * from './Drawer';
 export * from './Form';
 export * from './ListToolBar';
 export * from './Paginate';

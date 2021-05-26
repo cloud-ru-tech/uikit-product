@@ -34,7 +34,6 @@
     "lodash.lt": "3.9.2",
     "lodash.lte": "3.9.2",
     "nanoid": "^3.1.22",
-    "rc-drawer": "^4.3.1",
     "rc-tree": "^4.1.2",
     "react-paginate": "^7.1.0",
     "react-select": "3.1.0",

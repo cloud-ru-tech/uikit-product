@@ -1,23 +1,22 @@
-import RcDrawer from 'rc-drawer';
-import { cx } from '@linaria/core';
-
-import { CrossSVG, BackSVG } from '@sbercloud/icons';
-
-import { Header } from 'components/Drawer/helperComponents/Header';
-
-import {
-  HeaderBoxStyled,
-  FooterBoxStyled,
-  drawerClassName,
-  ContentBoxStyled,
-  LeftIconBoxStyled,
-  HeaderTextBoxStyled,
-  drawerWrapperClassName,
-  drawerPaddingModeClassName,
-  CloseButtonStyled,
-} from './styled';
-
 import 'rc-drawer/assets/index.css';
+
+import { cx } from '@linaria/core';
+import RcDrawer from 'rc-drawer';
+
+import { BackSVG, CrossSVG } from '@sbercloud/icons';
+
+import { Header } from '../Header';
+import {
+  CloseButtonStyled,
+  ContentBoxStyled,
+  FooterBoxStyled,
+  HeaderBoxStyled,
+  HeaderTextBoxStyled,
+  LeftIconBoxStyled,
+  drawerClassName,
+  drawerPaddingModeClassName,
+  drawerWrapperClassName,
+} from './styled';
 
 export interface IDrawerProps {
   open: boolean;
@@ -52,11 +51,7 @@ export const Drawer: React.FC<IDrawerProps> = ({
     level={null}
     width={width}
     height={height}
-    className={cx(
-      className,
-      drawerClassName,
-      hasPaddingMode && drawerPaddingModeClassName,
-    )}
+    className={cx(className, drawerClassName, hasPaddingMode && drawerPaddingModeClassName)}
     wrapperClassName={drawerWrapperClassName}
     handler={false}
     open={openFromProps}
@@ -78,13 +73,7 @@ export const Drawer: React.FC<IDrawerProps> = ({
         <CrossSVG />
       </CloseButtonStyled>
     </HeaderBoxStyled>
-    <ContentBoxStyled footerPadding={footer ? 80 : 0}>
-      {children}
-    </ContentBoxStyled>
-    {footer && (
-      <FooterBoxStyled width={typeof width === 'number' ? `${width}px` : width}>
-        {footer}
-      </FooterBoxStyled>
-    )}
+    <ContentBoxStyled footerPadding={footer ? 80 : 0}>{children}</ContentBoxStyled>
+    {footer && <FooterBoxStyled width={typeof width === 'number' ? `${width}px` : width}>{footer}</FooterBoxStyled>}
   </RcDrawer>
 );

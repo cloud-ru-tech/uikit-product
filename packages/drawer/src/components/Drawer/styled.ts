@@ -1,7 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { COLORS_DRAWER, COLORS_GENERAL } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_DRAWER, COLORS_GENERAL } = EXPORT_VARS;
 
 export const CloseButtonStyled = styled.div`
   cursor: pointer;
