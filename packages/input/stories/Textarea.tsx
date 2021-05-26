@@ -1,6 +1,6 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Textarea, ITextareaProps } from './Textarea';
+import { ITextareaProps, Textarea } from '../src';
 
 export default {
   title: 'Components/Input',

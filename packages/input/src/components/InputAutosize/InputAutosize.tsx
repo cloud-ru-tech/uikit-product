@@ -3,7 +3,7 @@ import RCAutosizeInput, { AutosizeInputProps } from 'react-input-autosize';
 
 import { inputClassname } from './styled';
 
-export interface IAutosizeInputProps extends Omit<AutosizeInputProps, 'ref'> {}
+export type IAutosizeInputProps = Omit<AutosizeInputProps, 'ref'>;
 
 export const InputAutosize: FC<IAutosizeInputProps> = props => (
   <RCAutosizeInput inputClassName={inputClassname} {...props} />

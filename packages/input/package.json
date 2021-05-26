@@ -1,11 +1,11 @@
 {
-  "name": "@sbercloud/uikit-react-tooltip",
-  "title": "React Tooltip",
+  "name": "@sbercloud/uikit-react-input",
+  "title": "React Input",
   "version": "0.0.0",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/packages/react-tooltip/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/packages/react-input/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
@@ -21,12 +21,15 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "react-popper-tooltip": "3.1.1",
-    "@sbercloud/uikit-theme": "0.0.0"
+    "copy-to-clipboard": "3.3.1",
+    "@sbercloud/uikit-react-button": "0.0.0",
+    "@sbercloud/uikit-theme": "0.0.0",
+    "@sbercloud/icons": "1.0.15-14c9f91b",
+    "react-input-autosize": "3.0.0",
+    "react-textarea-autosize": "8.3.2"
   },
   "devDependencies": {
-    "@sbercloud/uikit-typography": "0.0.0",
-    "copy-to-clipboard": "3.3.1"
+    "@types/react-input-autosize": "2.2.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

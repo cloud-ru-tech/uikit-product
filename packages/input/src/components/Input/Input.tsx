@@ -1,20 +1,19 @@
-import { forwardRef, useCallback, useState, useEffect } from 'react';
 import copyText from 'copy-to-clipboard';
+import { forwardRef, useCallback, useEffect, useState } from 'react';
 
-import { CrossSVG, EyeSVG, EyeClosedSVG } from '@sbercloud/icons';
+import { CrossSVG, EyeClosedSVG, EyeSVG } from '@sbercloud/icons';
+import { CopyButton } from '@sbercloud/uikit-react-button';
 
-import { CopyButton } from 'components/Button';
-import { IInputProps } from 'components/Input/helpers/types';
-import { getInputType } from 'components/Input/helpers/getInputType';
-
+import { getInputType } from '../../helpers/getInputType';
+import { IInputProps } from '../../helpers/types';
 import {
   Label,
-  StyledWrap,
-  StyledInput,
   StyledClearButton,
   StyledIconWrapper,
+  StyledInput,
   StyledInputWrapper,
   StyledSecurityButton,
+  StyledWrap,
 } from './styled';
 
 export type { IInputProps };
@@ -49,10 +48,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
 
     const handleChange = useCallback(
       e => {
-        if (
-          (numberMin !== undefined || numberMax !== undefined) &&
-          type === 'number'
-        ) {
+        if ((numberMin !== undefined || numberMax !== undefined) && type === 'number') {
           if (e.target.value === '') {
             setCorrectValue('');
             onChange?.(e);
@@ -98,9 +94,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       handleChange(e);
     };
 
-    const handleCopyButtonClick = (
-      e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    ): void => {
+    const handleCopyButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
       e.stopPropagation();
     };
 
@@ -123,7 +117,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
       <StyledWrap className={wrapperClassName} ref={wrapperRef}>
         {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
         <StyledInputWrapper>
-          <div onClick={handleInputClick}>
+          <div role='presentation' onClick={handleInputClick}>
             <StyledInput
               ref={ref}
               allowCopy={allowCopy}
@@ -150,9 +144,7 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
             )}
             {postfix}
             {type === 'security' ? (
-              <StyledSecurityButton
-                onClick={(): void => setViewMode(!isViewMode)}
-              >
+              <StyledSecurityButton onClick={(): void => setViewMode(!isViewMode)}>
                 {isViewMode ? <EyeSVG /> : <EyeClosedSVG />}
               </StyledSecurityButton>
             ) : null}

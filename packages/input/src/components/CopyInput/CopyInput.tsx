@@ -1,35 +1,21 @@
-import { useState } from 'react';
 import copyText from 'copy-to-clipboard';
+import { useState } from 'react';
 
-import { CopyButton } from 'components/Button';
+import { CopyButton } from '@sbercloud/uikit-react-button';
 
-import {
-  Label,
-  StyledWrap,
-  StyledInput,
-  StyledIconWrapper,
-  StyledInputWrapper,
-  copyButtonClassName,
-} from './styled';
+import { Label, StyledIconWrapper, StyledInput, StyledInputWrapper, StyledWrap, copyButtonClassName } from './styled';
 
-export interface ICopyInputProps {
+export type CopyInputProps = {
   value: string;
   label?: string;
   labelMinWidth?: string;
   wrapperClassName?: string;
-}
+};
 
-export const CopyInput: React.FC<ICopyInputProps> = ({
-  value,
-  label,
-  labelMinWidth,
-  wrapperClassName,
-}) => {
+export const CopyInput: React.FC<CopyInputProps> = ({ value, label, labelMinWidth, wrapperClassName }) => {
   const [isCopyCompleted, setIsCopyCompleted] = useState(false);
 
-  const handleCopyButtonClick = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-  ): void => {
+  const handleCopyButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.stopPropagation();
   };
 

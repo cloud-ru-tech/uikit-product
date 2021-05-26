@@ -1,9 +1,7 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { IInputProps } from 'components/Input/helpers/types';
-
-import { Input } from './Input';
+import { IInputProps, Input } from '../src';
 
 export default {
   title: 'Components/Input/Input',

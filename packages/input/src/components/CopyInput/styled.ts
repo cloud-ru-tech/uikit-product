@@ -1,7 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { COLORS_INPUT } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_INPUT } = EXPORT_VARS;
 
 const copyButtonClassName = css`
   margin-right: -8px;
@@ -65,13 +67,12 @@ const StyledWrap = styled.div`
 
 const StyledInputWrapper = styled.div<{ labelMinWidth?: string }>`
   position: relative;
-  width: ${props =>
-    props.labelMinWidth ? `calc(100% - ${props.labelMinWidth})` : '100%'};
+  width: ${props => (props.labelMinWidth ? `calc(100% - ${props.labelMinWidth})` : '100%')};
 `;
 
 const StyledIconWrapper = styled.div`
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 12px;
   display: flex;
   flex-direction: row;
@@ -79,11 +80,4 @@ const StyledIconWrapper = styled.div`
   height: 100%;
 `;
 
-export {
-  Label,
-  StyledWrap,
-  StyledInput,
-  StyledIconWrapper,
-  StyledInputWrapper,
-  copyButtonClassName,
-};
+export { Label, StyledWrap, StyledInput, StyledIconWrapper, StyledInputWrapper, copyButtonClassName };

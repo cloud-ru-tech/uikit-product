@@ -115,7 +115,7 @@ const packageEntry = ({ packageRootFolderName }) => {
 const storyEntry = ({ componentName, packageRootFolderName }) => {
   const filePath = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/${Folders.stories}/index.tsx`);
   const fileContent = `import { Story, Meta } from '@storybook/react/types-6-0';
-import { ${componentName}, ${componentName}Props } from '../src/components';
+import { ${componentName}, ${componentName}Props } from '../src';
 
 export default {
   title: 'Components/${componentName}',

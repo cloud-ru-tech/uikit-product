@@ -1,6 +1,8 @@
 import { styled } from '@linaria/react';
 
-import { COLORS_INPUT } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_INPUT } = EXPORT_VARS;
 
 export const StyledInput = styled.input<{ allowCopy?: boolean }>`
   flex-grow: 1;
@@ -37,8 +39,7 @@ export const StyledInput = styled.input<{ allowCopy?: boolean }>`
 
   &[data-type='embed'] {
     height: 40px;
-    padding: ${({ allowCopy }) =>
-      allowCopy ? '10px 40px 10px 12px' : '10px 12px'};
+    padding: ${({ allowCopy }) => (allowCopy ? '10px 40px 10px 12px' : '10px 12px')};
   }
 
   &:not([data-disabled='true']):hover {
@@ -126,7 +127,7 @@ export const StyledInputWrapper = styled.div`
 
 export const StyledIconWrapper = styled.div`
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 12px;
   display: flex;
   flex-direction: row;

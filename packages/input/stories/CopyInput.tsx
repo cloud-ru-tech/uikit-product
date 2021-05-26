@@ -1,15 +1,13 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { CopyInput, ICopyInputProps } from './CopyInput';
+import { CopyInput, CopyInputProps } from '../src';
 
 export default {
   title: 'Components/Input/Copy Input',
   component: CopyInput,
 } as Meta;
 
-const Template: Story<ICopyInputProps> = ({ ...args }) => (
-  <CopyInput {...args} />
-);
+const Template: Story<CopyInputProps> = ({ ...args }) => <CopyInput {...args} />;
 
 export const copyInput = Template.bind({});
 copyInput.args = {};
