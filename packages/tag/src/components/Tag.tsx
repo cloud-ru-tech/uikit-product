@@ -1,19 +1,21 @@
+import { PRESET_COLORS, PresetColorType } from 'packages/tag/src/helpers/colors';
 import { useCallback } from 'react';
 
-import { COLORS_TAG } from 'theme/color/vars';
-import { PRESET_COLORS, PresetColorType } from 'components/Tag/helpers/colors';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-import { StyledTag, StyledInputAutosize } from './styled';
+import { StyledInputAutosize, StyledTag } from './styled';
 
-const TAG_TYPES = {
-  CARD: 'card',
-  SPAN: 'span',
-  INPUT: 'input',
-};
+const { COLORS_TAG } = EXPORT_VARS;
 
-export type TTagType = 'span' | 'input' | 'card';
+enum Types {
+  Card = 'card',
+  Span = 'span',
+  Input = 'input',
+}
 
-export interface ITagProps {
+export type TTagType = Types;
+
+export type TagProps = {
   value?: string;
   type?: TTagType;
   className?: string;
@@ -23,11 +25,9 @@ export interface ITagProps {
   color?: PresetColorType | string;
   inputRef?: (instance: HTMLInputElement | null) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
+};
 
-const PresetColorRegex = new RegExp(
-  `^(${PRESET_COLORS.join('|')})(-inverse)?$`,
-);
+const PresetColorRegex = new RegExp(`^(${PRESET_COLORS.join('|')})(-inverse)?$`);
 
 const presetColors = {
   [PRESET_COLORS[0]]: COLORS_TAG.TAG_BG_GREEN,
@@ -54,7 +54,7 @@ const getTagStyles = ({
   color?: string;
 }) => {
   if (isPresetBackground) {
-    if (type === TAG_TYPES.INPUT && color) {
+    if (type === Types.Input && color) {
       return { ...style, backgroundColor: `var(${presetColors[color]})` };
     }
 
@@ -71,10 +71,10 @@ const Tag = ({
   children,
   inputRef,
   value = '',
-  type = 'span',
+  type = Types.Span,
   className = '',
   inputClassNames,
-}: ITagProps) => {
+}: TagProps) => {
   const isPresetColor = useCallback((): boolean => {
     if (!color) {
       return false;
@@ -86,14 +86,12 @@ const Tag = ({
   const tagStyles = getTagStyles({ isPresetBackground, type, style, color });
 
   const tagProps = {
-    ...(isPresetBackground && type !== 'card'
-      ? { 'data-tag-color': color }
-      : {}),
+    ...(isPresetBackground && type !== 'card' ? { 'data-tag-color': color } : {}),
     style: tagStyles,
     className,
   };
 
-  if (type === TAG_TYPES.INPUT) {
+  if (type === Types.Input) {
     return (
       <StyledInputAutosize
         {...tagProps}
@@ -112,6 +110,6 @@ const Tag = ({
   );
 };
 
-Tag.TAG_TYPES = TAG_TYPES;
+Tag.types = Types;
 
 export { Tag };

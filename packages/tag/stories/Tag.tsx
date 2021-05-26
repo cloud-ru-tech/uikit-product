@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
-import { H4 } from 'typography/Headers';
-import { PRESET_COLORS } from 'components/Tag/helpers/colors';
+import { H4 } from '@sbercloud/uikit-typography';
 
-import { Tag, ITagProps } from './Tag';
+import { Tag, TagProps } from '../src';
+import { PRESET_COLORS } from '../src/helpers/colors';
 
 export default {
   title: 'Components/Tag',
@@ -31,7 +31,7 @@ const Title = styled(H4)`
   margin-bottom: 20px;
 `;
 
-const Template: Story<ITagProps> = ({ ...args }) => {
+const Template: Story<TagProps> = ({ ...args }) => {
   const [tagText, setTagText] = useState('TagText');
 
   return (
@@ -51,7 +51,7 @@ const Template: Story<ITagProps> = ({ ...args }) => {
         <Tag
           {...args}
           value={tagText}
-          type='input'
+          type={Tag.types.Input}
           onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
             setTagText(e.target.value);
           }}
