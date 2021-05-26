@@ -18,18 +18,13 @@ export const truncateString = ({
   leftPercentage = 50,
 }: TruncateStringArgs): string => {
   if (measurements.text > measurements.component) {
-    const size = (percentage: number): number =>
-      (measurements.component - measurements.ellipsis) * (percentage / 100);
+    const size = (percentage: number): number => (measurements.component - measurements.ellipsis) * (percentage / 100);
 
-    const portion = (size: number): number =>
-      Math.floor((text.length * size) / measurements.text);
+    const portion = (size: number): number => Math.floor((text.length * size) / measurements.text);
 
     const left = text.slice(0, Math.max(0, portion(size(leftPercentage))));
 
-    const right = text.slice(
-      text.length - portion(size(100 - leftPercentage)),
-      text.length,
-    );
+    const right = text.slice(text.length - portion(size(100 - leftPercentage)), text.length);
 
     return `${left}${ellipsisString}${right}`;
   }

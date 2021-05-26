@@ -1,11 +1,11 @@
 {
-  "name": "@sbercloud/uikit-react-slider",
-  "title": "React Slider",
+  "name": "@sbercloud/uikit-react-truncate-string",
+  "title": "React Truncate String",
   "version": "0.0.0",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-slider/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-truncate-string/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
@@ -21,10 +21,12 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.0.0",
-    "rc-slider": "9.7.2"
+    "lodash.debounce": "4.0.8"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@sbercloud/uikit-react-slider": "0.0.0",
+    "@types/lodash.debounce": "4.0.6"
+  },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
     "@linaria/react": "^3.0.0-beta.3",

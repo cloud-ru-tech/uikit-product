@@ -13,8 +13,6 @@ gitUtils.checkIfBehindMaster();
 
 const generatePackageName = title => title.trim().replace(/\s+/g, '-').toLowerCase();
 
-const generateComponentName = title => generatePackageTitle(title).replace(/\s+/g, '');
-
 const generatePackageTitle = input =>
   input
     .toLowerCase()
@@ -22,6 +20,8 @@ const generatePackageTitle = input =>
     .replace('React', '')
     .replace(/\s+/g, ' ')
     .trim();
+
+const generateComponentName = title => generatePackageTitle(title).replace(/\s+/g, '');
 
 const printInfoMessages = () => {
   logInfo(`Package Title format (the script will throw a validation error if you dont follow these rules):

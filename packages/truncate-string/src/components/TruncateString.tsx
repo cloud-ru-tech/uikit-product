@@ -1,9 +1,8 @@
-import { FC, useRef, useEffect, useState } from 'react';
 import debounce from 'lodash.debounce';
+import { FC, useEffect, useRef, useState } from 'react';
 
-import { truncateString } from 'components/TruncateString/helpers/truncateString';
-
-import { Wrapper, Display, FullText } from './styled';
+import { truncateString } from '../helpers/truncateString';
+import { Display, FullText, Wrapper } from './styled';
 
 export interface ITruncateStringProps {
   ellipsisString?: string;

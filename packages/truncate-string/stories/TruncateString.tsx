@@ -1,10 +1,10 @@
-import { useState } from 'react';
 import { styled } from '@linaria/react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
-import { Slider } from 'components/Slider';
+import { Slider } from '@sbercloud/uikit-react-slider';
 
-import { TruncateString, ITruncateStringProps } from './TruncateString';
+import { ITruncateStringProps, TruncateString } from '../src';
 
 export default {
   title: 'Components/Truncate String',
@@ -33,7 +33,6 @@ truncateString.args = {};
 truncateString.parameters = {};
 truncateString.argTypes = {
   text: {
-    defaultValue:
-      'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-qgoiku6b',
+    defaultValue: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-qgoiku6b',
   },
 };

@@ -24,7 +24,7 @@ const packageJson = ({ user, email, packageTitle, packageName, packageDescriptio
     description: `${packageDescription}`,
     main: './dist/esm/index.js',
     module: './dist/esm/index.js',
-    homepage: `https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/${PackagesRootFolder}/${packageName}/README.md`,
+    homepage: `https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/${PackagesRootFolder}/${packageName}/README.md`,
     repository: {
       type: 'git',
       url: 'ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git',
@@ -34,7 +34,9 @@ const packageJson = ({ user, email, packageTitle, packageName, packageDescriptio
     files: ['dist', 'src'],
     license: 'UNLICENSED',
     scripts: {},
-    dependencies: {},
+    dependencies: {
+      '@sbercloud/uikit-theme': '0.0.0',
+    },
     devDependencies: {},
     peerDependencies: {
       '@linaria/core': '^3.0.0-beta.3',
