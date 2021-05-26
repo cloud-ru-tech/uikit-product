@@ -1,7 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { COLORS_BREADCRUMBS } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_BREADCRUMBS } = EXPORT_VARS;
 
 export const ContainerStyled = styled.div`
   width: 100%;
@@ -23,8 +25,7 @@ export const ItemStyled = styled.div<{ isFixedWidth: boolean }>`
   line-height: 26px;
 
   &:first-child:last-child {
-    max-width: ${({ isFixedWidth }) =>
-      isFixedWidth ? 'calc(100% - 20px)' : 'auto'};
+    max-width: ${({ isFixedWidth }) => (isFixedWidth ? 'calc(100% - 20px)' : 'auto')};
   }
 `;
 
@@ -34,9 +35,7 @@ export const ItemTextStyled = styled.p<{ isActive?: boolean }>`
   font-size: inherit;
   line-height: inherit;
   color: ${({ isActive }) =>
-    isActive
-      ? `var(${COLORS_BREADCRUMBS.ACTIVE_COLOR})`
-      : `var(${COLORS_BREADCRUMBS.INACTIVE_COLOR})`};
+    isActive ? `var(${COLORS_BREADCRUMBS.ACTIVE_COLOR})` : `var(${COLORS_BREADCRUMBS.INACTIVE_COLOR})`};
   margin: 0;
   white-space: nowrap;
 

@@ -1,46 +1,38 @@
-import { useEffect, useRef, useState, useMemo } from 'react';
 import debounce from 'lodash.debounce';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { ArrowRightSVG } from '@sbercloud/icons';
-
-import { BasicTooltip } from 'components/Tooltip';
-import {
-  StateItem,
-  BreadcrumbItem,
-} from 'components/Breadcrumbs/helpers/types';
+import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
 
 import {
+  getDiffWidth,
+  getSubstr,
+  getUniqueKey,
   getWidth,
   isEllipsisActive,
-  getSubstr,
-  getDiffWidth,
-  setUniqueKey,
-  getUniqueKey,
   measureText,
-} from 'components/Breadcrumbs/helpers/calc';
-
+  setUniqueKey,
+} from '../helpers/calc';
+import { BreadcrumbItem, StateItem } from '../helpers/types';
 import {
-  ContainerStyled,
   ChildrenContainerStyled,
+  Collapsed,
+  ContainerStyled,
   ItemStyled,
   ItemTextStyled,
   chevronClassName,
   cutTextClassName,
-  Collapsed,
 } from './styled';
 
-export interface IBreadcrumbProps {
+export type BreadcrumbsProps = {
   items: BreadcrumbItem[];
-  onClick?(
-    e: React.MouseEvent<HTMLParagraphElement, MouseEvent>,
-    link?: unknown,
-  ): void;
+  onClick?(e: React.MouseEvent<HTMLParagraphElement, MouseEvent>, link?: unknown): void;
   className?: string;
   itemClassName?: string;
   children?: React.ReactNode;
   isFixedWidth?: boolean;
   renderItem?: (item: StateItem, index: number) => React.ReactNode;
-}
+};
 
 export const Breadcrumbs = ({
   items,
@@ -50,7 +42,7 @@ export const Breadcrumbs = ({
   itemClassName,
   isFixedWidth,
   renderItem,
-}: IBreadcrumbProps): JSX.Element => {
+}: BreadcrumbsProps): JSX.Element => {
   const [isVisible, setVisible] = useState(false);
   const [isTextCut, setTextCut] = useState(false);
   const [visibleElementsCount, setVisibleElementsCount] = useState(1);
@@ -101,16 +93,13 @@ export const Breadcrumbs = ({
 
       const maxWidth = getWidth(el);
 
-      const childsEl: HTMLDivElement[] = Array.from(
-        el?.children || [],
-      ) as HTMLDivElement[];
+      const childsEl: HTMLDivElement[] = Array.from(el?.children || []) as HTMLDivElement[];
 
       const extensionWidth = childsEl.reduce((acc, curr) => {
         let next = acc;
         if (curr.dataset.extension && getWidth(curr)) {
           const style = window?.getComputedStyle(curr);
-          const margin =
-            parseFloat(style.marginLeft) + parseFloat(style.marginRight);
+          const margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight);
           next += getWidth(curr) + (margin || 0);
         }
         return next;
@@ -135,9 +124,7 @@ export const Breadcrumbs = ({
         const defaultWidth = getWidth(child);
         const textWidth = measureText(child, stateItems[index].text).width;
 
-        const width = isFirst
-          ? getDiffWidth(child, collapsedBlock)
-          : defaultWidth;
+        const width = isFirst ? getDiffWidth(child, collapsedBlock) : defaultWidth;
 
         nextItems[index] = {
           ...nextItems[index],
@@ -153,8 +140,7 @@ export const Breadcrumbs = ({
       setVisibleElementsCount(visibleCount);
 
       const res = {
-        maxWidth:
-          maxWidth - visibleWidth - extensionWidth + collapsedBlockWidth,
+        maxWidth: maxWidth - visibleWidth - extensionWidth + collapsedBlockWidth,
         maxVisibleWidth: maxWidth - extensionWidth,
       };
 
@@ -168,20 +154,15 @@ export const Breadcrumbs = ({
         const child = childs[currIndex];
 
         const nextWidth = res.maxWidth - getWidth(child);
-        const textWidth =
-          measureText(child, stateItems[currIndex].text).width +
-          chevronBlockWidth;
+        const textWidth = measureText(child, stateItems[currIndex].text).width + chevronBlockWidth;
 
         const lastElWidth = textWidth > res.maxWidth ? res.maxWidth : textWidth;
 
-        const elWidth =
-          nextWidth > 0 && childs.length > 2 ? getWidth(child) : lastElWidth;
+        const elWidth = nextWidth > 0 && childs.length > 2 ? getWidth(child) : lastElWidth;
 
         if (nextWidth < 0 && !isLast) {
           const child = childs[lastIndex];
-          const textWidth =
-            measureText(child, stateItems[lastIndex].text).width +
-            chevronBlockWidth;
+          const textWidth = measureText(child, stateItems[lastIndex].text).width + chevronBlockWidth;
           const restWidth = (nextItems[lastIndex]?.width || 0) + elWidth;
           const nextWidth = textWidth > restWidth ? restWidth : textWidth;
 
@@ -224,9 +205,7 @@ export const Breadcrumbs = ({
       }
 
       if (!isEqual) {
-        const lastForceIndex = onlyVisible.findIndex(
-          el => el.isLastForceVisible,
-        );
+        const lastForceIndex = onlyVisible.findIndex(el => el.isLastForceVisible);
         onlyVisible[lastForceIndex] = {
           ...onlyVisible[lastForceIndex],
           tooltip: true,
@@ -241,11 +220,7 @@ export const Breadcrumbs = ({
 
   const visibleItems = isVisible ? metaItems : stateItems;
 
-  const textWrapper = (
-    tooltip: boolean,
-    text: string,
-    el: React.ReactNode,
-  ): React.ReactNode => {
+  const textWrapper = (tooltip: boolean, text: string, el: React.ReactNode): React.ReactNode => {
     if (tooltip) {
       return (
         <BasicTooltip tooltip={text} classNameTrigger={cutTextClassName}>
@@ -265,30 +240,20 @@ export const Breadcrumbs = ({
         style={{ visibility: isVisible ? 'visible' : 'hidden' }}
       >
         {stateItems.map(renderItem)}
-        {children && (
-          <ChildrenContainerStyled data-extension>
-            {children}
-          </ChildrenContainerStyled>
-        )}
+        {children && <ChildrenContainerStyled data-extension>{children}</ChildrenContainerStyled>}
       </ContainerStyled>
     );
   }
 
   return (
-    <ContainerStyled
-      className={className}
-      ref={breadcrumbsEl}
-      style={{ visibility: isVisible ? 'visible' : 'hidden' }}
-    >
+    <ContainerStyled className={className} ref={breadcrumbsEl} style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
       {visibleItems?.map((item, index) => (
         <ItemStyled
           key={item.key || item.link || item.text}
           isFixedWidth={!!isFixedWidth}
           style={{ width: item.width }}
         >
-          {index !== 0 && (
-            <ArrowRightSVG className={chevronClassName} data-chevron />
-          )}
+          {index !== 0 && <ArrowRightSVG className={chevronClassName} data-chevron />}
           {textWrapper(
             item.tooltip,
             item.text,
@@ -309,11 +274,7 @@ export const Breadcrumbs = ({
           )}
         </ItemStyled>
       ))}
-      {children && (
-        <ChildrenContainerStyled data-extension>
-          {children}
-        </ChildrenContainerStyled>
-      )}
+      {children && <ChildrenContainerStyled data-extension>{children}</ChildrenContainerStyled>}
     </ContainerStyled>
   );
 };

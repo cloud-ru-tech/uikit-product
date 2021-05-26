@@ -3,7 +3,7 @@ import React from 'react';
 
 import { globals, green, greenDark, purple, purpleDark } from '../packages/theme';
 
-const changeTheme = theme => {
+const changeTheme = (theme: { name: string }) => {
   const root = (document.querySelector(
     '#storybook-preview-iframe',
   ) as HTMLIFrameElement)?.contentDocument?.querySelector('body');
@@ -31,7 +31,7 @@ addParameters({
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
-      order: ['Components', ['Button', ['Default']], 'Typography', 'Variables'],
+      order: ['Components', 'Typography', 'Variables'],
     },
   },
   themes: {

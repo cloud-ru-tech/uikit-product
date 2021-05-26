@@ -13,9 +13,7 @@ const updateGlobalReadme = ({ packageRootFolderName, packageTitle }) => {
   );
 };
 
-const ExistingPackageNames = (() => {
-  return fs.readdirSync('./packages/');
-})();
+const ExistingPackageNames = (() => fs.readdirSync('./packages/'))();
 
 const bootstrapFiles = ({
   packageRootFolderName,
@@ -53,7 +51,6 @@ const bootstrapFiles = ({
   logInfo('Created package.json');
 
   fileTemplates.packageEntry({
-    componentName,
     packageRootFolderName,
   });
   logInfo('Created package entry');

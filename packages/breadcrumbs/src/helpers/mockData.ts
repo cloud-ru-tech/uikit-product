@@ -51,8 +51,7 @@ export const docker = [
   { text: 'Docker registry', link: 'url_first' },
   { text: 'alpine', link: 'url_second' },
   {
-    text:
-      'sha256:e83c5993870954be9986451775e258dc723d6cca77cb0313c061d67958b91bb2',
+    text: 'sha256:e83c5993870954be9986451775e258dc723d6cca77cb0313c061d67958b91bb2',
     link: 'url_last',
     isActive: true,
   },

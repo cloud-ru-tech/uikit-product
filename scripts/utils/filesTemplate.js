@@ -103,10 +103,10 @@ export function ${componentName}(props: ${componentName}Props) {
   fs.writeFileSync(componentFilePath, componentFileContent);
 };
 
-const packageEntry = ({ componentName, packageRootFolderName }) => {
+const packageEntry = ({ packageRootFolderName }) => {
   const filePath = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/${Folders.src}/index.ts`);
 
-  const fileContent = `export { ${componentName} } from './components';
+  const fileContent = `export * from './components';
 `;
 
   fs.writeFileSync(filePath, fileContent);

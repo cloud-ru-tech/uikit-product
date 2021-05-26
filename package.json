@@ -7,13 +7,14 @@
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "add-package": "node scripts/npm-init",
+    "clean": "npm run clean:dist && npm run clean:modules",
     "clean:dist": "rimraf \"./packages/**/dist/\"",
     "clean:modules": "rimraf \"./packages/**/node_modules/\"",
     "changelog": "node scripts/changelog.js",
     "compile": "lerna run compile && node scripts/compile",
     "release:first-stable": "node scripts/release.js -c --v1",
     "release:conventional": "node scripts/release.js -c",
-    "build": "npm run clean:dist && lerna bootstrap --hoist && npm run compile"
+    "build": "npm run clean && lerna bootstrap --hoist && npm run compile"
   },
   "dependencies": {
     "@ag-grid-community/core": "25.2.0",
