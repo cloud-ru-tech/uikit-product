@@ -1,12 +1,13 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { LogsView, ILogsViewProps } from 'components/LogsView';
+
+import { LogsView, LogsViewProps } from '../src';
 
 export default {
   title: 'Components',
   component: LogsView,
 } as Meta;
 
-const Template: Story<ILogsViewProps> = ({ ...args }) => <LogsView {...args} />;
+const Template: Story<LogsViewProps> = ({ ...args }) => <LogsView {...args} />;
 
 export const logsView = Template.bind({});
 logsView.args = {

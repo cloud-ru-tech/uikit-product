@@ -1,5 +1,8 @@
 import { styled } from '@linaria/react';
-import { COLORS_LOGS_VIEW } from 'theme/color/vars';
+
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_LOGS_VIEW } = EXPORT_VARS;
 
 export const Main = styled.div`
   padding: 8px 8px 8px 12px;
@@ -30,7 +33,7 @@ export const ContentLineText = styled.span`
 
 export const ButtonBox = styled.div`
   display: flex;
-  position: absolute !important;
+  position: absolute;
   top: 0;
   right: 0;
   margin: 8px;
