@@ -1,7 +1,7 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Status } from './Status';
+import { Status } from '../src';
 
 export default {
   title: 'Components/Status',
@@ -15,10 +15,10 @@ const Wrapper = styled.div`
 
 const Template: Story = ({ ...args }) => (
   <Wrapper>
-    <Status type='failed'>Failed</Status>
-    <Status type='success'>Success</Status>
-    <Status type='warning'>Warning</Status>
-    <Status type='unactive'>Unactive</Status>
+    <Status type={Status.types.Failed}>Failed</Status>
+    <Status type={Status.types.Success}>Success</Status>
+    <Status type={Status.types.Warning}>Warning</Status>
+    <Status type={Status.types.Unactive}>Unactive</Status>
     <Status {...args}>Custom Dot Color</Status>
   </Wrapper>
 );

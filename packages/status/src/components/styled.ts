@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
 
-import { COLORS_STATUS } from 'theme/color/vars';
-import { TableText } from 'typography/Table';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { TableText } from '@sbercloud/uikit-typography';
 
-import { TYPE } from './Status';
+const { COLORS_STATUS } = EXPORT_VARS;
 
 export const Wrapper = styled.span`
   display: inline-flex;
@@ -18,19 +18,19 @@ export const Dot = styled.span`
   margin-right: 8px;
   background-color: ${props => props.color || COLORS_STATUS.SUCCESS_BG};
 
-  &[data-type='${TYPE.FAILED}'] {
+  &[data-type='failed'] {
     background-color: var(${COLORS_STATUS.FAILED_BG});
   }
 
-  &[data-type='${TYPE.SUCCESS}'] {
+  &[data-type='success'] {
     background-color: var(${COLORS_STATUS.SUCCESS_BG});
   }
 
-  &[data-type='${TYPE.WARNING}'] {
+  &[data-type='warning'] {
     background-color: var(${COLORS_STATUS.WARNING_BG});
   }
 
-  &[data-type='${TYPE.UNACTIVE}'] {
+  &[data-type='unactive'] {
     background-color: var(${COLORS_STATUS.UNACTIVE_BG});
   }
 `;
