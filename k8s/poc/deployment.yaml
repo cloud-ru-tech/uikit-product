@@ -18,5 +18,5 @@ spec:
     spec:
       containers:
         - name: uikit20
-          image: registry.ai.4cloud.cf/uikit:0.1.5
+          image: registry.ai.sbercloud.dev/uikit:0.1.5
           imagePullPolicy: "Always"
