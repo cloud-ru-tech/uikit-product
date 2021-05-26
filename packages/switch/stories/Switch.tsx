@@ -1,7 +1,7 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Switch as SwitchComponent } from './Switch';
+import { Switch as SwitchComponent } from '../src';
 
 export default {
   title: 'Components/Switch',

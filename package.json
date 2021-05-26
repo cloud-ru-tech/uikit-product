@@ -14,7 +14,8 @@
     "compile": "lerna run compile && node scripts/compile",
     "release:first-stable": "node scripts/release.js -c --v1",
     "release:conventional": "node scripts/release.js -c",
-    "build": "npm run clean && lerna bootstrap --hoist && npm run compile"
+    "build": "npm run clean && lerna bootstrap --hoist && npm run compile",
+    "node_modules:cleaninstall": "rm -rf node_modules && npm cache clean -f && npm i && npm run build"
   },
   "dependencies": {
     "@ag-grid-community/core": "25.2.0",
@@ -40,7 +41,6 @@
     "react-modal": "^3.12.1",
     "react-paginate": "^7.1.0",
     "react-select": "3.1.0",
-    "react-switch": "^6.0.0",
     "react-toastify": "^7.0.3"
   },
   "devDependencies": {

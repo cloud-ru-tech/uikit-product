@@ -1,11 +1,7 @@
-import ReactSwitch, { ReactSwitchProps } from 'react-switch';
 import { cx } from '@linaria/core';
+import ReactSwitch, { ReactSwitchProps } from 'react-switch';
 
-import {
-  switchClassName,
-  switchClassNameChecked,
-  switchClassNameDisabled,
-} from './styled';
+import { switchClassName, switchClassNameChecked, switchClassNameDisabled } from './styled';
 
 export const Switch: React.FC<ReactSwitchProps> = ({ className, ...rest }) => (
   <ReactSwitch

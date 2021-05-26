@@ -1,6 +1,8 @@
 import { css } from '@linaria/core';
 
-import { COLORS_SWITCH } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_SWITCH } = EXPORT_VARS;
 
 export const switchClassNameDisabled = css`
   cursor: not-allowed;
