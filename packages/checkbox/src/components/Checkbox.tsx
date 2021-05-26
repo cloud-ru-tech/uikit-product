@@ -1,20 +1,12 @@
 import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
-import { SelectedSVG, UnSelectedSVG, SelectedPartSVG } from '@sbercloud/icons';
+import { SelectedPartSVG, SelectedSVG, UnSelectedSVG } from '@sbercloud/icons';
 
-import { useElementId } from 'utils/useElementId';
+import { CheckboxChildrenStyled, CheckboxLabelStyled, CheckboxStyled, svgClassName } from './styled';
+import { useElementId } from './utils';
 
-import {
-  CheckboxStyled,
-  CheckboxLabelStyled,
-  svgClassName,
-  CheckboxChildrenStyled,
-} from './styled';
-
-export interface ICheckboxProps
-  extends Partial<
-    DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
-  > {
+export interface CheckboxProps
+  extends Partial<DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>> {
   checked: boolean;
   id?: string;
   partChecked?: boolean;
@@ -22,13 +14,10 @@ export interface ICheckboxProps
   wrapClassName?: string;
   labelClassName?: string;
   inputClassName?: string;
-  handleChange(
-    checked: boolean,
-    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
-  ): void;
+  handleChange(checked: boolean, e: React.MouseEvent<HTMLLabelElement, MouseEvent>): void;
 }
 
-export const Checkbox: React.FC<ICheckboxProps> = ({
+export const Checkbox: React.FC<CheckboxProps> = ({
   id,
   checked,
   disabled,
@@ -41,9 +30,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
   ...restProps
 }) => {
   const checkboxId = useElementId(id);
-  const handleClick = (
-    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
-  ): void => {
+  const handleClick = (e: React.MouseEvent<HTMLLabelElement, MouseEvent>): void => {
     if (disabled) {
       return;
     }
@@ -109,9 +96,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
         data-disabled={disabled || undefined}
       >
         <Icon />
-        {children && (
-          <CheckboxChildrenStyled>{children}</CheckboxChildrenStyled>
-        )}
+        {children && <CheckboxChildrenStyled>{children}</CheckboxChildrenStyled>}
       </CheckboxLabelStyled>
     </div>
   );

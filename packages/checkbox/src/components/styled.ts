@@ -1,13 +1,15 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { COLORS_CHECKBOX } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_CHECKBOX } = EXPORT_VARS;
 
 export const CheckboxStyled = styled.input`
   position: absolute;
-  width: 0px;
-  height: 0px;
-  padding: 0px;
+  width: 0;
+  height: 0;
+  padding: 0;
   border-style: none;
 `;
 

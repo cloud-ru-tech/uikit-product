@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Checkbox, ICheckboxProps } from './Checkbox';
+import { Checkbox, CheckboxProps } from '../src';
 
 export default {
   title: 'Components/Checkbox',
@@ -16,15 +16,13 @@ const StyledContainer = styled.div`
 
 const StyledCheckboxWrap = styled.div<{ showBackground?: boolean }>`
   padding: 10px;
-  background: ${({ showBackground }) =>
-    showBackground ? '#fff' : 'transparent'};
-  /* max-width: 40px; */
+  background: ${({ showBackground }) => (showBackground ? '#fff' : 'transparent')};
   display: flex;
   flex-direction: row;
   align-items: center;
 `;
 
-const Template: Story<ICheckboxProps> = ({ ...args }) => (
+const Template: Story<CheckboxProps> = ({ ...args }) => (
   <StyledContainer>
     <StyledCheckboxWrap showBackground>
       <Checkbox {...args} />
