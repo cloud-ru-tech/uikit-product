@@ -1,22 +1,18 @@
 import { FC, useState } from 'react';
 
-import { Button } from 'components/Button';
+import { Button } from '@sbercloud/uikit-react-button';
 
-import {
-  ContentHiderStyled,
-  ContentWrapperStyled,
-  ContentWrapperGradientStyled,
-} from './styled';
+import { ContentHiderStyled, ContentWrapperGradientStyled, ContentWrapperStyled } from './styled';
 
-export interface IContentHiderProps {
+export type ContentHiderProps = {
   hideContentText: string;
   showContentText: string;
   displayedHeight: number;
   backgroundColor?: string;
   gradientClassName?: string;
-}
+};
 
-export const ContentHider: FC<IContentHiderProps> = ({
+export const ContentHider: FC<ContentHiderProps> = ({
   children,
   backgroundColor,
   gradientClassName,
@@ -28,10 +24,7 @@ export const ContentHider: FC<IContentHiderProps> = ({
 
   return (
     <div>
-      <ContentHiderStyled
-        showContent={showContent}
-        displayedHeight={displayedHeight}
-      >
+      <ContentHiderStyled showContent={showContent} displayedHeight={displayedHeight}>
         <ContentWrapperStyled>{children}</ContentWrapperStyled>
         <ContentWrapperGradientStyled
           showContent={showContent}
@@ -40,8 +33,8 @@ export const ContentHider: FC<IContentHiderProps> = ({
         />
       </ContentHiderStyled>
       <Button
-        size='m'
-        variant='outlined'
+        size={Button.sizes.m}
+        variant={Button.variants.Outlined}
         onClick={() => setShowContent(showContent => !showContent)}
       >
         {showContent ? hideContentText : showContentText}

@@ -1,6 +1,6 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { ContentHider, IContentHiderProps } from './ContentHider';
+import { ContentHider, ContentHiderProps } from '../src';
 
 export default {
   title: 'Components/Content Hider',
@@ -10,9 +10,7 @@ export default {
 const contentString = 'lorem ipsum dolor sit amet ';
 const content = [...new Array(300)].map(() => contentString).join('');
 
-const Template: Story<IContentHiderProps> = ({ ...args }) => (
-  <ContentHider {...args}>{content}</ContentHider>
-);
+const Template: Story<ContentHiderProps> = ({ ...args }) => <ContentHider {...args}>{content}</ContentHider>;
 
 export const contentHider = Template.bind({});
 contentHider.args = {};

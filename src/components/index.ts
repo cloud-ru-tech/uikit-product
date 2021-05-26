@@ -1,6 +1,5 @@
 export * from './Cards';
 export * from './CollapsePanel';
-export * from './ContentHider';
 export * from './Form';
 export * from './ListToolBar';
 export * from './Paginate';
