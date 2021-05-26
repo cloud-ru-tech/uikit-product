@@ -1,6 +1,6 @@
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-export const H_1 = `
+const H_1 = `
   font-style: normal;
   font-weight: 400;
   font-size: 44px;
@@ -8,7 +8,7 @@ export const H_1 = `
   letter-spacing: -0.01em;
 `;
 
-export const H_2 = `
+const H_2 = `
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
@@ -16,63 +16,63 @@ export const H_2 = `
   letter-spacing: -0.01em;
 `;
 
-export const H_3 = `
+const H_3 = `
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
 `;
 
-export const H_3_SEMIBOLD = `
+const H_3_SEMIBOLD = `
   font-style: normal;
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
 `;
 
-export const H_4 = `
+const H_4 = `
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 `;
 
-export const H_5 = `
+const H_5 = `
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
 `;
 
-export const NOTIFY_TEXT = `
+const NOTIFY_TEXT = `
   font-style: normal;
   font-weight: 400;
   font-size: 11px;
   line-height: 12px;
 `;
 
-export const TABLE_TEXT = `
+const TABLE_TEXT = `
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 `;
 
-export const TEXT_1 = `
+const TEXT_1 = `
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 `;
 
-export const TEXT_2 = `
+const TEXT_2 = `
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 `;
 
-export const TEXT_2_LINK = `
+const TEXT_2_LINK = `
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -81,16 +81,34 @@ export const TEXT_2_LINK = `
   text-decoration: underline;
 `;
 
-export const TEXT_3 = `
+const TEXT_3 = `
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
 `;
 
-export const TEXT_4 = `
+const TEXT_4 = `
   font-style: normal;
   font-weight: 400;
   font-size: 10px;
   line-height: 15px;
 `;
+
+export { H_1, H_2, H_3, H_3_SEMIBOLD, H_4, H_5, NOTIFY_TEXT, TABLE_TEXT, TEXT_1, TEXT_2, TEXT_2_LINK, TEXT_3, TEXT_4 };
+
+export default {
+  H_1,
+  H_2,
+  H_3,
+  H_3_SEMIBOLD,
+  H_4,
+  H_5,
+  NOTIFY_TEXT,
+  TABLE_TEXT,
+  TEXT_1,
+  TEXT_2,
+  TEXT_2_LINK,
+  TEXT_3,
+  TEXT_4,
+};

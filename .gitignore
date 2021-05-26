@@ -4,6 +4,7 @@ dist
 build.bat
 package-lock.json
 .linaria-cache
+storybook-static
 
 # Logs
 logs

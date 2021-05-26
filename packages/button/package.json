@@ -1,11 +1,11 @@
 {
-  "name": "@sbercloud/uikit-theme",
-  "title": "Theme",
+  "name": "@sbercloud/uikit-react-button",
+  "title": "React Button",
   "version": "0.0.0",
-  "description": "Colors library",
-  "main": "./dist/cjs/index.js",
+  "description": "",
+  "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/packages/theme/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/packages/react-button/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
@@ -20,7 +20,13 @@
   ],
   "license": "UNLICENSED",
   "scripts": {},
-  "dependencies": {},
+  "dependencies": {
+    "@sbercloud/icons": "1.0.15-14c9f91b",
+    "@sbercloud/uikit-theme": "0.0.0",
+    "@sbercloud/uikit-typography": "0.0.0",
+    "@sbercloud/uikit-react-tooltip": "0.0.0",
+    "copy-to-clipboard": "3.3.1"
+  },
   "devDependencies": {},
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

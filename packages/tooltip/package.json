@@ -1,11 +1,11 @@
 {
-  "name": "@sbercloud/uikit-theme",
-  "title": "Theme",
+  "name": "@sbercloud/uikit-react-tooltip",
+  "title": "React Tooltip",
   "version": "0.0.0",
-  "description": "Colors library",
-  "main": "./dist/cjs/index.js",
+  "description": "",
+  "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/packages/theme/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/packages/react-tooltip/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
@@ -20,8 +20,13 @@
   ],
   "license": "UNLICENSED",
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "react-popper-tooltip": "3.1.1",
+    "@sbercloud/uikit-theme": "0.0.0"
+  },
+  "devDependencies": {
+    "@sbercloud/uikit-typography": "0.0.0"
+  },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
     "@linaria/react": "^3.0.0-beta.3",
