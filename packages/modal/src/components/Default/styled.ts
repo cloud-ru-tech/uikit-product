@@ -1,8 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import Z_INDEX from 'vars/zIndex';
-import { COLORS_MODAL } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_MODAL } = EXPORT_VARS;
 
 export const closeButtonStyle = css`
   position: absolute;
@@ -41,16 +42,16 @@ export const contentClassname = css`
   padding: 32px;
   border: 0;
   outline: none;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   background-color: var(${COLORS_MODAL.BG});
 `;
 
 export const overlayClassname = css`
-  z-index: ${Z_INDEX.MODAL};
+  z-index: 99999;
   background-color: rgba(52, 63, 72, 0.2);
   min-width: 100vw;
   min-height: 100vh;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
 `;

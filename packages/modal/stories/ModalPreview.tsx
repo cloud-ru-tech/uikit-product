@@ -1,16 +1,16 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Button } from 'components/Button';
+import { Button } from '@sbercloud/uikit-react-button';
 
-import { ModalPreview, IModalPreviewProps } from './ModalPreview';
+import { ModalPreview, ModalPreviewProps } from '../src';
 
 export default {
   title: 'Components/Modal',
   component: ModalPreview,
 } as Meta;
 
-const Template: Story<IModalPreviewProps> = ({ ...args }) => {
+const Template: Story<ModalPreviewProps> = ({ ...args }) => {
   const [modalIsOpen, setIsOpen] = useState(false);
   const openModal = (): void => setIsOpen(true);
   const closeModal = (): void => setIsOpen(false);

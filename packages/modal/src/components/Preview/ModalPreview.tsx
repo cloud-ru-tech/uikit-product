@@ -1,17 +1,10 @@
 import RCModal from 'react-modal';
 
 import { CrossSVG } from '@sbercloud/icons';
+import { Button } from '@sbercloud/uikit-react-button';
+import { Divider } from '@sbercloud/uikit-react-divider';
 
-import { Button } from 'components/Button';
-import { Divider } from 'components/Divider';
-
-import {
-  Title,
-  Content,
-  previewCloseBtn,
-  contentClassname,
-  overlayClassname,
-} from './styled';
+import { Content, Title, contentClassname, overlayClassname, previewCloseBtn } from './styled';
 
 interface IReactModalProps extends ReactModal.Props {
   isOpen: boolean;
@@ -38,37 +31,23 @@ interface IReactModalProps extends ReactModal.Props {
   id?: string;
 }
 
-export interface IModalPreviewProps extends IReactModalProps {
+export interface ModalPreviewProps extends IReactModalProps {
   isOpen: boolean;
   title?: string;
   content?: React.ReactNode;
   contentClassName?: string;
 }
 
-export const ModalPreview: React.FC<IModalPreviewProps> = props => {
-  const {
-    onRequestClose,
-    title,
-    appElement,
-    content,
-    contentClassName,
-  } = props;
+export const ModalPreview: React.FC<ModalPreviewProps> = props => {
+  const { onRequestClose, title, appElement, content, contentClassName } = props;
 
   if (appElement) {
     RCModal.setAppElement(appElement as HTMLElement);
   }
 
   return (
-    <RCModal
-      {...props}
-      overlayClassName={overlayClassname}
-      className={`${contentClassname} ${contentClassName}`}
-    >
-      <Button
-        variant='transparent'
-        onClick={onRequestClose}
-        className={previewCloseBtn}
-      >
+    <RCModal {...props} overlayClassName={overlayClassname} className={`${contentClassname} ${contentClassName}`}>
+      <Button variant={Button.variants.Transparent} onClick={onRequestClose} className={previewCloseBtn}>
         <CrossSVG />
       </Button>
       {title && (

@@ -1,22 +1,20 @@
 import RCModal from 'react-modal';
 
 import { CrossSVG } from '@sbercloud/icons';
-
-import Z_INDEX from 'vars/zIndex';
-import { Button } from 'components/Button';
-import { BasicTooltip } from 'components/Tooltip';
+import { Button } from '@sbercloud/uikit-react-button';
+import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
 
 import {
-  closeButtonStyle,
-  Title,
-  Description,
   ButtonWrapper,
+  Description,
+  Title,
   buttonCSS,
-  overlayClassname,
+  closeButtonStyle,
   contentClassname,
+  overlayClassname,
 } from './styled';
 
-interface IReactModalProps extends ReactModal.Props {
+interface ReactModalProps extends ReactModal.Props {
   isOpen: boolean;
   portalClassName?: string;
   bodyOpenClassName?: string | null;
@@ -25,10 +23,7 @@ interface IReactModalProps extends ReactModal.Props {
   onAfterClose?(): void;
   overlayClassName?: string;
   appElement?: HTMLElement;
-  onRequestClose?(
-    event: React.MouseEvent | React.KeyboardEvent,
-    type?: ModalCloseType,
-  ): void;
+  onRequestClose?(event: React.MouseEvent | React.KeyboardEvent, type?: ModalCloseType): void;
   closeTimeoutMS?: number;
   ariaHideApp?: boolean;
   shouldFocusAfterRender?: boolean;
@@ -52,7 +47,7 @@ export type ModalOffsetType = {
   right?: React.ReactText;
 };
 
-export interface IModalProps extends IReactModalProps {
+export interface ModalProps extends ReactModalProps {
   isOpen: boolean;
   title?: string;
   description?: React.ReactNode;
@@ -75,7 +70,7 @@ export const MODAL_CLOSE_TYPE = {
 } as const;
 export type ModalCloseType = typeof MODAL_CLOSE_TYPE[keyof typeof MODAL_CLOSE_TYPE];
 
-export const Modal: React.FC<IModalProps> = props => {
+export const Modal: React.FC<ModalProps> = props => {
   const {
     onRequestClose,
     title,
@@ -90,7 +85,7 @@ export const Modal: React.FC<IModalProps> = props => {
     hideCross,
     overlayOffset,
     contentStyles,
-    zIndex = Z_INDEX.MODAL,
+    zIndex = 99999,
     parentId,
     parentSelector,
   } = props;
@@ -112,16 +107,11 @@ export const Modal: React.FC<IModalProps> = props => {
       }}
       overlayClassName={overlayClassname}
       className={contentClassname}
-      parentSelector={
-        parentId
-          ? (): HTMLElement =>
-              document.getElementById(parentId) || document.body
-          : parentSelector
-      }
+      parentSelector={parentId ? (): HTMLElement => document.getElementById(parentId) || document.body : parentSelector}
     >
       {hideCross ? null : (
         <Button
-          variant='transparent'
+          variant={Button.variants.Transparent}
           onClick={(e): void => {
             onRequestClose?.(e, MODAL_CLOSE_TYPE.CROSS);
           }}
@@ -163,7 +153,7 @@ export const Modal: React.FC<IModalProps> = props => {
           {cancel && (
             <Button
               className={buttonCSS}
-              variant='outlined'
+              variant={Button.variants.Outlined}
               onClick={(e): void => {
                 cancel(e);
                 onRequestClose?.(e, MODAL_CLOSE_TYPE.CANCEL);

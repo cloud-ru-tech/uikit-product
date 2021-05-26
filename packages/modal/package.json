@@ -1,0 +1,40 @@
+{
+  "name": "@sbercloud/uikit-react-modal",
+  "title": "React Modal",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-modal/README.md",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
+  },
+  "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
+  "contributors": [
+    "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-theme": "0.0.0",
+    "@sbercloud/uikit-react-divider": "0.0.0",
+    "@sbercloud/uikit-react-button": "0.0.0",
+    "@sbercloud/uikit-react-tooltip": "0.0.0",
+    "@sbercloud/icons": "1.0.15-14c9f91b",
+    "react-modal": "3.13.1"
+  },
+  "devDependencies": {
+    "@types/react-modal": "3.12.0"
+  },
+  "peerDependencies": {
+    "@linaria/core": "^3.0.0-beta.3",
+    "@linaria/react": "^3.0.0-beta.3",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}

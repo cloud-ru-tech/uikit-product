@@ -1,11 +1,13 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { COLORS_MODAL } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_MODAL } = EXPORT_VARS;
 
 export const previewCloseBtn = css`
   position: absolute;
-  right: 0px;
+  right: 0;
   margin-top: 16px;
   margin-right: 28px;
   fill: var(${COLORS_MODAL.PREVIEW_CLOSE_ICON_COLOR}) !important;
@@ -46,7 +48,7 @@ export const overlayClassname = css`
   top: 44px;
   min-width: 100vw;
   min-height: 100vh;
-  left: 0px;
+  left: 0;
   position: fixed;
 `;
 
@@ -56,10 +58,10 @@ export const contentClassname = css`
   left: 26px;
   right: 26px;
   bottom: 24px;
-  padding: 0px;
-  border: 0px;
+  padding: 0;
+  border: 0;
   outline: none;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   display: flex;
   flex-direction: column;

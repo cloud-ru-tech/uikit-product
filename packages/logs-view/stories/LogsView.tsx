@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { LogsView, LogsViewProps } from '../src';
 
 export default {
-  title: 'Components',
+  title: 'Components/Logs View',
   component: LogsView,
 } as Meta;
 
