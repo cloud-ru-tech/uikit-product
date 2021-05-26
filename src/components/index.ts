@@ -6,7 +6,6 @@ export * from './Drawer';
 export * from './Form';
 export * from './ListToolBar';
 export * from './Paginate';
-export * from './Radio';
 export * from './Select';
 export * from './Tabs';
 export * from './Toast';

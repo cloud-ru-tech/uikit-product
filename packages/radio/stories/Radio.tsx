@@ -1,9 +1,11 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { COLORS_DRAWER } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-import { Radio, IRadioProps } from './Radio';
+import { IRadioProps, Radio } from '../src';
+
+const { COLORS_DRAWER } = EXPORT_VARS;
 
 export default {
   title: 'Components/Radio',

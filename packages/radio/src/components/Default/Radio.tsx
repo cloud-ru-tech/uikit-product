@@ -1,17 +1,9 @@
 import { FC, useContext } from 'react';
 
-import { RadioUncheckedSVG, RadioCheckedSVG } from '@sbercloud/icons';
+import { RadioCheckedSVG, RadioUncheckedSVG } from '@sbercloud/icons';
 
-import { RadioGroupContext } from 'components/Radio/components/RadioGroup/context';
-
-import {
-  HiddenRadio,
-  TextContainer,
-  IconContainer,
-  Label,
-  Description,
-  Wrapper,
-} from './styled';
+import { RadioGroupContext } from '../RadioGroup/context';
+import { Description, HiddenRadio, IconContainer, Label, TextContainer, Wrapper } from './styled';
 
 export interface IRadioIcon {
   checked?: boolean;
@@ -33,25 +25,13 @@ export interface IRadioProps {
   wrapperClassName?: string;
 }
 
-export const Radio: FC<IRadioProps> = ({
-  value,
-  label,
-  description,
-  disabled,
-  checked,
-  wrapperClassName,
-}) => {
+export const Radio: FC<IRadioProps> = ({ value, label, description, disabled, checked, wrapperClassName }) => {
   const RadioGroup = useContext(RadioGroupContext);
 
-  const isRadioChecked =
-    typeof checked === 'boolean' ? checked : RadioGroup?.value === value;
+  const isRadioChecked = typeof checked === 'boolean' ? checked : RadioGroup?.value === value;
 
   return (
-    <Wrapper
-      className={wrapperClassName}
-      data-disabled={disabled}
-      data-checked={isRadioChecked}
-    >
+    <Wrapper className={wrapperClassName} data-disabled={disabled} data-checked={isRadioChecked}>
       <HiddenRadio
         type='radio'
         value={value}

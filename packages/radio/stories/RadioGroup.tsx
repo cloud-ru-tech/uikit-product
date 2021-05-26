@@ -1,11 +1,12 @@
-import { useState } from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
-import { COLORS_DRAWER } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-import { RadioGroup } from './RadioGroup';
-import { Radio, IRadioProps } from '../Default';
+import { IRadioProps, Radio, RadioGroup } from '../src';
+
+const { COLORS_DRAWER } = EXPORT_VARS;
 
 export default {
   title: 'Components/Radio',
@@ -25,9 +26,7 @@ const Template: Story<IRadioProps> = ({ ...args }) => {
       <RadioGroup
         name='stories'
         value={value}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setValue(e.target.value)
-        }
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
       >
         {[...new Array(3)].map((_value, index) => (
           <Radio

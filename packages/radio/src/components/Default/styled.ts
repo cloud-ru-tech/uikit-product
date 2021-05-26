@@ -1,7 +1,9 @@
 import { styled } from '@linaria/react';
 
-import { TableText, Text4 } from 'typography';
-import { COLORS_RADIO } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { TableText, Text4 } from '@sbercloud/uikit-typography';
+
+const { COLORS_RADIO } = EXPORT_VARS;
 
 export const HiddenRadio = styled.input`
   display: none;
