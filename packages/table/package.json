@@ -1,0 +1,55 @@
+{
+  "name": "@sbercloud/uikit-react-table",
+  "title": "React Table",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-table/README.md",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
+  },
+  "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
+  "contributors": [
+    "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/icons": "1.0.15-14c9f91b",
+    "@sbercloud/uikit-theme": "0.0.0",
+    "@sbercloud/uikit-typography": "0.0.0",
+    "@sbercloud/uikit-react-checkbox": "0.0.0",
+    "@sbercloud/uikit-react-toolbar": "0.0.0",
+    "@sbercloud/uikit-react-status": "0.0.0",
+    "@sbercloud/uikit-react-button": "0.0.0",
+    "@sbercloud/uikit-react-modal": "0.0.0",
+    "@sbercloud/uikit-react-tooltip": "0.0.0",
+    "@sbercloud/uikit-react-spin": "0.0.0",
+    "@sbercloud/uikit-react-paginator-private": "0.0.0",
+    "@ag-grid-community/core": "25.3.0",
+    "@ag-grid-community/react": "25.3.0",
+    "@ag-grid-enterprise/all-modules": "25.3.0",
+    "ag-grid-community": "25.3.0",
+    "ag-grid-enterprise": "25.3.0",
+    "ag-grid-react": "25.3.0",
+    "date-fns": "2.21.3",
+    "lodash.debounce": "4.0.8"
+  },
+  "devDependencies": {
+    "@sbercloud/uikit-react-input": "0.0.0",
+    "@sbercloud/uikit-react-form": "0.0.0",
+    "@types/lodash.debounce": "4.0.6"
+  },
+  "peerDependencies": {
+    "@linaria/core": "^3.0.0-beta.3",
+    "@linaria/react": "^3.0.0-beta.3",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}
