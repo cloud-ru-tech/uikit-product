@@ -1,8 +1,7 @@
 import { FC, useContext, useMemo } from 'react';
 
-import { TabsContext, ITabsContext } from 'components/Tabs/helpers/context';
-import { setValue } from 'components/Tabs/helpers/reducer';
-
+import { ITabsContext, TabsContext } from '../../helpers/context';
+import { setValue } from '../../helpers/reducer';
 import { ListItemStyled } from './styled';
 
 export interface ITabProps {

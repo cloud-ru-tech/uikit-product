@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
-import { TState } from './types';
 import { TAction } from './reducer';
+import { TState } from './types';
 
 export interface ITabsContext {
   state: TState;

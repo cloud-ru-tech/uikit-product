@@ -1,0 +1,36 @@
+{
+  "name": "@sbercloud/uikit-react-tabs",
+  "title": "React Tabs",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-tabs/README.md",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
+  },
+  "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
+  "contributors": [
+    "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-theme": "0.0.0"
+  },
+  "devDependencies": {
+    "@sbercloud/uikit-react-avatar": "0.0.0",
+    "@sbercloud/uikit-react-collapse-panel": "0.0.0"
+  },
+  "peerDependencies": {
+    "@linaria/core": "^3.0.0-beta.3",
+    "@linaria/react": "^3.0.0-beta.3",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}

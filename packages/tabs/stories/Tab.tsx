@@ -1,9 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { TabsContext } from 'components/Tabs/helpers/context';
-
-import { Tab, ITabProps } from './Tab';
+import { ITabProps, Tab } from '../src';
+import { TabsContext } from '../src/helpers/context';
 
 export default {
   title: 'Components/Tabs',

@@ -1,6 +1,8 @@
 import { styled } from '@linaria/react';
 
-import { COLORS_TABS } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_TABS } = EXPORT_VARS;
 
 export const ListItemStyled = styled.li`
   padding: 16px 12px;

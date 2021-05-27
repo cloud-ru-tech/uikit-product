@@ -1,7 +1,7 @@
-import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
+import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
 import { HelpSVG } from '@sbercloud/icons';

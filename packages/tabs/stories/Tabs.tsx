@@ -1,11 +1,10 @@
 /* eslint-disable no-console */
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Tab } from 'components/Tabs';
-import { Avatar } from 'components/Avatar';
-import { CollapsePanel, CollapsePanelItem } from 'components/CollapsePanel';
+import { Avatar } from '@sbercloud/uikit-react-avatar';
+import { CollapsePanel, CollapsePanelItem } from '@sbercloud/uikit-react-collapse-panel';
 
-import { Tabs, TabsTheme, ITabsProps } from './Tabs';
+import { ITabsProps, Tab, Tabs, TabsTheme } from '../src';
 
 export default {
   title: 'Components/Tabs',
@@ -13,30 +12,16 @@ export default {
 } as Meta;
 
 const Template: Story<ITabsProps> = ({ ...args }) => (
-  <Tabs
-    theme={args.theme === 'gray' ? TabsTheme.gray : TabsTheme.default}
-    {...args}
-  >
+  <Tabs theme={args.theme === 'gray' ? TabsTheme.gray : TabsTheme.default} {...args}>
     <Tab label='Группы в управлении 2' identKey={0} onClick={() => {}}>
       <CollapsePanel isShowFavourites>
-        <CollapsePanelItem
-          index={0}
-          header={
-            <Avatar shape='square' size={72}>
-              G O
-            </Avatar>
-          }
-        >
+        <CollapsePanelItem index={0} header={<Avatar shape={Avatar.shapes.Square} size={72} username={'G O'} />}>
           Content1
         </CollapsePanelItem>
         <CollapsePanelItem
           index={1}
           isFavourite
-          header={
-            <Avatar shape='square' size={72}>
-              G O
-            </Avatar>
-          }
+          header={<Avatar shape={Avatar.shapes.Square} size={72} username={'G O'} />}
         >
           Content2
         </CollapsePanelItem>
