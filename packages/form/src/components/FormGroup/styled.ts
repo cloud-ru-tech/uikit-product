@@ -1,10 +1,12 @@
-import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 
-import { COLORS_DIVIDER, COLORS_FORM_GROUP } from 'theme/color/vars';
-import { H3, TableText } from 'typography';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { H3, TableText } from '@sbercloud/uikit-typography';
 
 import { VARIANT } from './FormGroup';
+
+const { COLORS_DIVIDER, COLORS_FORM_GROUP } = EXPORT_VARS;
 
 export const hintClassName = css`
   fill: var(${COLORS_FORM_GROUP.HINT_COLOR});

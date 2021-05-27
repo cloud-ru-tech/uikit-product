@@ -1,12 +1,13 @@
-import { useState } from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
-import { Input } from 'components';
+import { Input } from '@sbercloud/uikit-react-input';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-import { COLORS_DRAWER } from 'theme/color/vars';
+import { FormField } from '../src';
 
-import { FormField } from './FormField';
+const { COLORS_DRAWER } = EXPORT_VARS;
 
 export default {
   title: 'Components/Form',
@@ -24,11 +25,7 @@ const Template: Story = ({ label, hint, error }) => {
   return (
     <Wrapper>
       <FormField label={label} hint={hint} error={error}>
-        <Input
-          type='number'
-          value={value}
-          onChange={e => setValue(Number(e.target.value))}
-        />
+        <Input type='number' value={value} onChange={e => setValue(Number(e.target.value))} />
       </FormField>
     </Wrapper>
   );

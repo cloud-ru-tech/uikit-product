@@ -1,16 +1,7 @@
 import { HelpSVG } from '@sbercloud/icons';
+import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
 
-import { BasicTooltip } from 'components';
-
-import {
-  Wrapper,
-  Header,
-  Number,
-  Title,
-  Content,
-  hintClassName,
-  tooltipTriggerClassName,
-} from './styled';
+import { Content, Header, Number, Title, Wrapper, hintClassName, tooltipTriggerClassName } from './styled';
 
 export const VARIANT = {
   POPUP: 'popup',
@@ -23,13 +14,7 @@ export interface FormGroupProps {
   variant?: typeof VARIANT[keyof typeof VARIANT] | null;
 }
 
-export const FormGroup: React.FC<FormGroupProps> = ({
-  number,
-  title,
-  hint,
-  variant = VARIANT.POPUP,
-  children,
-}) => (
+export const FormGroup: React.FC<FormGroupProps> = ({ number, title, hint, variant = VARIANT.POPUP, children }) => (
   <Wrapper data-variant={variant}>
     <Header>
       <Number>{number}</Number>

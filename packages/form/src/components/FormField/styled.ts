@@ -1,8 +1,10 @@
-import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 
-import { H4, Text3 } from 'typography';
-import { COLORS_FORM_FIELD } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { H4, Text3 } from '@sbercloud/uikit-typography';
+
+const { COLORS_FORM_FIELD } = EXPORT_VARS;
 
 export const hintClassName = css`
   fill: var(${COLORS_FORM_FIELD.HINT_COLOR});
