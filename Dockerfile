@@ -5,7 +5,7 @@ COPY . .
 ## NPMRC в хомяка тут :)
 
 RUN mkdir storybook-static
-RUN npm run node_modules:cleaninstall
+RUN npm run all:cleaninstall
 RUN npm run build:storybook
 
 ## create image
