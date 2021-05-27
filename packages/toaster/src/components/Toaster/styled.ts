@@ -1,11 +1,10 @@
-import { styled } from '@linaria/react';
 import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 
-import { ResettedButton } from 'components';
-import { H5, Text3 } from 'typography';
-import { COLORS_TOAST } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { H5, Text3 } from '@sbercloud/uikit-typography';
 
-import { VARIANT } from '../../helpers/constants';
+const { COLORS_TOAST } = EXPORT_VARS;
 
 export const progressClassName = css`
   animation: spin 0.7s infinite steps(8);
@@ -17,7 +16,17 @@ export const progressClassName = css`
   }
 `;
 
-export const Close = styled(ResettedButton)`
+const ResetButton = styled.button`
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+`;
+
+export const Close = styled(ResetButton)`
   position: absolute;
   top: 12px;
   right: 12px;
@@ -57,7 +66,7 @@ export const Actions = styled.div`
 
 export const ActionText = styled(Text3)``;
 
-export const Action = styled(ResettedButton)``;
+export const Action = styled(ResetButton)``;
 
 export const Wrapper = styled.div`
   display: flex;
@@ -66,7 +75,7 @@ export const Wrapper = styled.div`
   cursor: default;
   padding: 16px 28px 16px 16px;
 
-  &[data-variant='${VARIANT.INFO}'] {
+  &[data-variant='info'] {
     background-color: var(${COLORS_TOAST.INFO_BG});
     color: var(${COLORS_TOAST.INFO_COLOR});
     fill: var(${COLORS_TOAST.INFO_COLOR});
@@ -96,7 +105,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  &[data-variant='${VARIANT.ERROR}'] {
+  &[data-variant='error'] {
     background-color: var(${COLORS_TOAST.ERROR_BG});
     color: var(${COLORS_TOAST.ERROR_COLOR});
     fill: var(${COLORS_TOAST.ERROR_COLOR});

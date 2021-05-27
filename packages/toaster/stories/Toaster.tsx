@@ -1,30 +1,27 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Button } from 'components';
+import { Button } from '@sbercloud/uikit-react-button';
 
-import { toast, ToastContainer, ToastOptions } from './ToastContainer';
-
-import { ToastProps } from '../../helperComponents/Toast';
+import { Toaster as CToaster, ToasterOptions, ToasterProps, toaster } from '../src';
 
 export default {
-  title: 'Components/Toast',
+  title: 'Components/Toaster',
 } as Meta;
 
 const PREDEFINED_ITEMS: {
   title: string;
-  props: ToastProps;
-  options?: ToastOptions;
+  props: ToasterProps;
+  options?: ToasterOptions;
 }[] = [
   {
     title: 'INFO',
     props: {
-      variant: 'info',
+      variant: CToaster.variants.Info,
       title: 'Перенос данных завершен',
       subtitle: 'Проект с очень длинным названием',
       closeButton: true,
-      text:
-        'Привет! После запуска задачи на расчет новой модели посмотри, пожалуйста, что-нибудь еще',
+      text: 'Привет! После запуска задачи на расчет новой модели посмотри, пожалуйста, что-нибудь еще',
       actions: [
         {
           title: 'Пауза',
@@ -40,7 +37,7 @@ const PREDEFINED_ITEMS: {
   {
     title: 'ERROR',
     props: {
-      variant: 'error',
+      variant: CToaster.variants.Error,
       title: 'Проблемы с соединением. Данные не перенесены. ',
       subtitle: 'CORS error',
       text:
@@ -62,7 +59,7 @@ const PREDEFINED_ITEMS: {
   {
     title: 'IN PROGRESS',
     props: {
-      variant: 'info',
+      variant: CToaster.variants.Info,
       progress: true,
       title: 'Создание workspace',
       text: 'Процесс может занять несколько минут',
@@ -74,7 +71,8 @@ const PREDEFINED_ITEMS: {
         },
         {
           title: 'Закрыть',
-          onClick: (_, closeToast) => closeToast && closeToast(),
+          onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>, closeToast?: () => void) =>
+            closeToast && closeToast(),
         },
       ],
     },
@@ -87,13 +85,15 @@ const Wrapper = styled.div`
   grid-auto-columns: max-content;
 `;
 
-const Template: Story<
-  ToastProps & { showActions: boolean; autoClose: boolean }
-> = ({ showActions, autoClose, ...args }) => (
+const Template: Story<ToasterProps & { showActions: boolean; autoClose: boolean }> = ({
+  showActions,
+  autoClose,
+  ...args
+}) => (
   <Wrapper>
     <Button
       onClick={() =>
-        toast(
+        toaster(
           {
             ...args,
             actions: showActions
@@ -117,18 +117,18 @@ const Template: Story<
     </Button>
 
     {PREDEFINED_ITEMS.map(({ title, props, options }) => (
-      <Button key={title} onClick={() => toast(props, options)}>
+      <Button key={title} onClick={() => toaster(props, options)}>
         {title}
       </Button>
     ))}
 
-    <ToastContainer />
+    <CToaster />
   </Wrapper>
 );
 
-export const Toast = Template.bind({});
-Toast.args = {
-  variant: 'info',
+export const Toaster = Template.bind({});
+Toaster.args = {
+  variant: CToaster.variants.Info,
   title: 'Lorem ipsum dolor sit amet',
   subtitle: 'consectetur adipiscing elit',
   text: 'Suspendisse ac lectus mattis, ultrices mauris eget, volutpat tellus',
@@ -136,7 +136,7 @@ Toast.args = {
   closeButton: true,
   autoClose: true,
 };
-Toast.argTypes = {
+Toaster.argTypes = {
   variant: {
     control: {
       type: 'radio',
