@@ -33,9 +33,7 @@
     "lodash.isequal": "^4.5.0",
     "lodash.lt": "3.9.2",
     "lodash.lte": "3.9.2",
-    "nanoid": "^3.1.22",
-    "rc-tree": "^4.1.2",
-    "react-select": "3.1.0"
+    "nanoid": "^3.1.22"
   },
   "devDependencies": {
     "@aicloud/config-eslint": "1.0.0",
@@ -75,7 +73,6 @@
     "@types/lodash.lt": "3.9.6",
     "@types/lodash.lte": "3.9.6",
     "@types/react-dom": "17.0.5",
-    "@types/react-select": "3.1.2",
     "@types/shelljs": "0.8.8",
     "babel-loader": "8.2.2",
     "babel-plugin-inline-react-svg": "1.1.2",
