@@ -1,12 +1,12 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { Filter, IFilterProps, TFilterValueType } from 'components/Filter';
-import { ListToolBar } from 'components/Toolbar';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 
 import { FilterSVG } from '@sbercloud/icons';
+import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
-import mockData, { groupedServices } from '../../helpers/mockData';
+import { Filter, IFilterProps, TFilterValueType } from '../src';
+import mockData, { groupedServices } from '../src/helpers/mockData';
 
 export default {
   title: 'Components/Filter',
@@ -58,10 +58,10 @@ const Template: Story<IFilterProps> = () => {
 
   return (
     <div style={{ padding: 10 }}>
-      <ListToolBar.Wrapper>
-        <ListToolBar.Input
+      <Toolbar.Wrapper>
+        <Toolbar.Input
           value={value}
-          onChange={(value): void => {
+          onChange={(value: any): void => {
             setValue(value);
           }}
         />
@@ -73,12 +73,12 @@ const Template: Story<IFilterProps> = () => {
           }}
         >
           {({ badgeText, open }): JSX.Element => (
-            <ListToolBar.Button badgeText={badgeText} isActive={open}>
+            <Toolbar.Button badgeText={badgeText} isActive={open}>
               <FilterSVG />
-            </ListToolBar.Button>
+            </Toolbar.Button>
           )}
         </Filter>
-      </ListToolBar.Wrapper>
+      </Toolbar.Wrapper>
     </div>
   );
 };

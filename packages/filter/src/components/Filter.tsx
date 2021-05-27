@@ -1,27 +1,22 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { CrossSVG, AddSVG } from '@sbercloud/icons';
+import { AddSVG, CrossSVG } from '@sbercloud/icons';
+import { Divider } from '@sbercloud/uikit-react-divider';
+import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 
-import { Divider } from 'components/Divider';
-import { OptionTypeBase } from 'components/Select';
-
-import { Container } from '../../helperComponents/Container';
-import { FilterRow } from '../../helperComponents/FilterRow';
-import { ActionButton } from '../../helperComponents/ActionButton';
-import { logicOptions } from '../../helpers/logicOptions';
-import { TFilterValueType, IFilterProps } from '../../helpers/types';
-import { parseQuery } from '../../helpers/parseQuery';
-import * as errors from '../../helpers/errors';
-import { getFirstValueFromSelect } from '../../helpers/getValue';
+import { ActionButton } from '../helperComponents/ActionButton';
+import { Container } from '../helperComponents/Container';
+import { FilterRow } from '../helperComponents/FilterRow';
+import * as errors from '../helpers/errors';
+import { getFirstValueFromSelect } from '../helpers/getValue';
+import { logicOptions } from '../helpers/logicOptions';
+import { parseQuery } from '../helpers/parseQuery';
+import { IFilterProps, TFilterValueType } from '../helpers/types';
 import * as S from './styled';
 
-export const Filter: React.FC<IFilterProps> = ({
-  filterOptions = [],
-  value = [],
-  onChange,
-  children,
-  className,
-}) => {
+export type { TFilterValueType, IFilterProps };
+
+export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [], onChange, children, className }) => {
   const [isMoreFilter, setIsMoreFilter] = useState<boolean>();
   const [noFilteredProps, setNoFilteredProps] = useState<OptionTypeBase[]>();
   const [parsedValue, setParsedValue] = useState<TFilterValueType[]>([]);
@@ -57,9 +52,7 @@ export const Filter: React.FC<IFilterProps> = ({
 
   useEffect(() => {
     const filteredProps = parsedValue.map(filterSettings => filterSettings.id);
-    const noInFilter = filterOptions.filter(
-      fOptions => filteredProps.indexOf(fOptions.value) === -1,
-    );
+    const noInFilter = filterOptions.filter(fOptions => filteredProps.indexOf(fOptions.value) === -1);
     setNoFilteredProps(noInFilter);
     setIsMoreFilter(Boolean(noInFilter.length));
   }, [filterOptions, parsedValue]);
@@ -75,15 +68,10 @@ export const Filter: React.FC<IFilterProps> = ({
   const addNewValue = useCallback(
     e => {
       e.stopPropagation();
-      const { value: id, sourceData, includeConditions } =
-        noFilteredProps?.[0] || {};
+      const { value: id, sourceData, includeConditions } = noFilteredProps?.[0] || {};
 
-      const nextValue = sourceData
-        ? [getFirstValueFromSelect(sourceData)]
-        : [''];
-      const condition = includeConditions
-        ? includeConditions[0]
-        : logicOptions[0];
+      const nextValue = sourceData ? [getFirstValueFromSelect(sourceData)] : [''];
+      const condition = includeConditions ? includeConditions[0] : logicOptions[0];
       if (!id) return;
 
       const newValue: TFilterValueType = {

@@ -1,7 +1,7 @@
-import { useMemo, useRef, useCallback, useEffect, useState } from 'react';
 import { cx } from '@linaria/core';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { BasicTooltip } from 'components/Tooltip';
+import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
 
 import { isVisible } from '../../helpers/isVisible';
 import * as S from './styled';
@@ -11,11 +11,7 @@ interface IContainerProps {
   className?: string;
 }
 
-export const Container: React.FC<IContainerProps> = ({
-  getTrigger,
-  children,
-  className,
-}) => {
+export const Container: React.FC<IContainerProps> = ({ getTrigger, children, className }) => {
   const triggerEl = useRef<HTMLDivElement>(null);
   const [show, setShow] = useState(false);
   const [tooltipRef, setTooltipRef] = useState<HTMLElement | null>();

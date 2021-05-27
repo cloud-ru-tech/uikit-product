@@ -1,18 +1,14 @@
-import { useMemo, useCallback } from 'react';
 import cloneDeep from 'lodash.clonedeep';
+import { useCallback, useMemo } from 'react';
 
-import { Input } from 'components/Input';
-import { Select, OptionTypeBase } from 'components/Select';
 import { CrossSVG } from '@sbercloud/icons';
+import { Input } from '@sbercloud/uikit-react-input';
+import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
 
-import { ActionButton } from '../ActionButton';
-import {
-  logicOptions,
-  LogicConditionType,
-  logicOptionByValue,
-} from '../../helpers/logicOptions';
 import { findSelectValue } from '../../helpers/getValue';
+import { LogicConditionType, logicOptionByValue, logicOptions } from '../../helpers/logicOptions';
 import { IFilterRowProps, TFilterValueType } from '../../helpers/types';
+import { ActionButton } from '../ActionButton';
 import * as S from './styled';
 
 export const FilterRow: React.FC<IFilterRowProps> = ({
@@ -34,33 +30,23 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
     [value],
   );
 
-  const filterOption = useMemo(
-    () => filterOptions?.find(fOpt => fOpt.value === propValue.id),
-    [filterOptions],
-  );
+  const filterOption = useMemo(() => filterOptions?.find(fOpt => fOpt.value === propValue.id), [filterOptions]);
 
   // console.log('filterOptions: ', filterOptions);
   // console.log('propValue: ', propValue);
 
-  const initValuOption = useMemo(() => {
+  const initValueOption = useMemo(() => {
     const { value } = propValue;
-    const filterVal = filterOptions?.find(
-      option => option.value === propValue.id,
-    );
+    const filterVal = filterOptions?.find(option => option.value === propValue.id);
     // console.log('filterVal: ', filterVal);
-    return filterVal?.sourceData
-      ? findSelectValue(filterVal?.sourceData, value as string[])
-      : propValue?.value?.[0];
+    return filterVal?.sourceData ? findSelectValue(filterVal?.sourceData, value as string[]) : propValue?.value?.[0];
   }, [propValue, filterOptions]);
 
   const includedLogicOptions = useMemo(
     () =>
       filterOption?.includeConditions
         ? logicOptions.filter(
-            lOption =>
-              filterOption?.includeConditions.indexOf(
-                lOption.value as LogicConditionType,
-              ) !== -1,
+            lOption => filterOption?.includeConditions.indexOf(lOption.value as LogicConditionType) !== -1,
           )
         : logicOptions,
     [filterOption],
@@ -76,15 +62,11 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
           onChange={(option: OptionTypeBase): void => {
             if (option.value === propValue.id) return;
             const newId = option.value;
-            const filterProp = noFilteredProps.filter(
-              filterProp => filterProp.value === newId,
-            )?.[0];
+            const filterProp = noFilteredProps.filter(filterProp => filterProp.value === newId)?.[0];
             const { sourceData, includeConditions } = filterProp;
 
             const nextSourceValue = sourceData ? [sourceData[0].value] : [''];
-            const condition = includeConditions
-              ? includeConditions[0]
-              : logicOptions[0];
+            const condition = includeConditions ? includeConditions[0] : logicOptions[0];
             if (!newId) return;
 
             const newValue: TFilterValueType = {
@@ -102,9 +84,7 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
       </S.FilterColumn>
       <S.FilterColumn>
         <Select
-          defaultValue={
-            propValue?.condition && logicOptionByValue[propValue.condition]
-          }
+          defaultValue={propValue?.condition && logicOptionByValue[propValue.condition]}
           options={includedLogicOptions}
           type='medium'
           onChange={(option: OptionTypeBase): void => {
@@ -117,7 +97,7 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
         {filterOption?.sourceData ? (
           <Select
             optionNoWrap
-            defaultValue={initValuOption}
+            defaultValue={initValueOption}
             options={filterOption?.sourceData}
             type='medium'
             onChange={(option: OptionTypeBase): void => {
@@ -126,7 +106,7 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
           />
         ) : (
           <Input
-            value={initValuOption as string}
+            value={initValueOption as string}
             onChange={(e): void => {
               handleChange('value', [e.target.value]);
             }}

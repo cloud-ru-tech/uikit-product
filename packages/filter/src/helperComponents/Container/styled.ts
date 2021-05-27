@@ -1,11 +1,12 @@
 import { css } from '@linaria/core';
 
-import Z_INDEX from 'vars/zIndex';
-import { COLORS_FILTER } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_FILTER } = EXPORT_VARS;
 
 export const tooltipClassName = css`
   background: var(${COLORS_FILTER.FILTER_BACKGROUND});
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 
   max-height: inherit;
   max-width: 640px;
@@ -13,7 +14,7 @@ export const tooltipClassName = css`
   padding: 0 24px;
   color: inherit;
 
-  z-index: ${Z_INDEX.FILTER};
+  z-index: 99999;
   overflow: inherit;
 `;
 

@@ -1,7 +1,10 @@
 import { styled } from '@linaria/react';
 
-import { TEXT_2 } from 'typography/vars';
-import { COLORS_FILTER } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+
+const { COLORS_FILTER } = EXPORT_VARS;
+const { TEXT_2 } = TYPOGRAPHY_VARIABLES;
 
 export const Button = styled.button`
   position: relative;

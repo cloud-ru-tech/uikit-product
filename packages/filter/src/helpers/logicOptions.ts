@@ -1,10 +1,10 @@
-import { OptionTypeBase } from 'components/Select';
-
 import eq from 'lodash.eq';
 import gt from 'lodash.gt';
 import gte from 'lodash.gte';
 import lt from 'lodash.lt';
 import lte from 'lodash.lte';
+
+import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 
 type neqType = Parameters<typeof eq>;
 
@@ -70,12 +70,4 @@ export const logicOptionByValue = logicOptions.reduce((acc, curr) => {
   return acc;
 }, {} as { [key: string]: OptionTypeBase });
 
-export type LogicConditionType =
-  | 'eq'
-  | 'neq'
-  | 'lt'
-  | 'lte'
-  | 'gt'
-  | 'gte'
-  | 'include'
-  | 'noinclude';
+export type LogicConditionType = 'eq' | 'neq' | 'lt' | 'lte' | 'gt' | 'gte' | 'include' | 'noinclude';

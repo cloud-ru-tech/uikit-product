@@ -1,6 +1,6 @@
-import { OptionTypeBase } from 'components/Select';
+import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 
-import { LogicConditionType } from '../helpers/logicOptions';
+import { LogicConditionType } from './logicOptions';
 
 export type TFilterValueType = {
   id: string;
@@ -16,10 +16,7 @@ export interface IFilterProps {
 
   value: TFilterValueType[] | string;
   onChange?: (value: TFilterValueType[], queryString: string) => void;
-  children?: (props: {
-    badgeText: string;
-    open?: boolean;
-  }) => JSX.Element | JSX.Element;
+  children?: (props: { badgeText: string; open?: boolean }) => JSX.Element;
 }
 
 export interface IFilterRowProps extends Partial<IFilterProps> {
