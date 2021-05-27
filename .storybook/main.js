@@ -1,4 +1,6 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const glob = require('glob');
+const path = require('path');
 
 module.exports = {
   stories: ['../packages/*/stories/*.@(ts|tsx)'],
@@ -11,7 +13,15 @@ module.exports = {
       },
     },
     'storybook-addon-themes',
-    '@storybook/addon-storysource',
+    {
+      name: '@storybook/addon-storysource',
+      options: {
+        rule: {
+          test: [/\.tsx?$/],
+          include: glob.sync('packages/*/stories/*.{ts,tsx}').map(x => path.resolve(__dirname, `../${x}`)),
+        },
+      },
+    },
   ],
   typescript: {
     check: true,
