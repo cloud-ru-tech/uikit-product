@@ -1,4 +1,3 @@
-export * from './Cards';
 export * from './Select';
 export * from './Tabs';
 export * from './Table';

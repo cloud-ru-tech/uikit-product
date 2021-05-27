@@ -6,7 +6,7 @@ export const Container = styled.div<{
 }>`
   display: grid;
   grid-gap: 1rem;
-  width: '100%';
+  width: 100%;
   grid-template-columns: repeat(
     ${({ cardsPerRow, autoFill }) => (autoFill ? 'auto-fill' : cardsPerRow)},
     minmax(min(300px, 100%), 1fr)

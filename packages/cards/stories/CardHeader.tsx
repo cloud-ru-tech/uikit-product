@@ -1,11 +1,10 @@
-import { useState } from 'react';
 import { styled } from '@linaria/react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
-import { Card } from 'components/Cards';
-import { H3 } from 'typography/Headers';
+import { H3 } from '@sbercloud/uikit-typography';
 
-import { CardHeader, ICardHeaderProps } from './CardHeader';
+import { Card, CardHeader, CardHeaderProps } from '../src';
 
 export default {
   title: 'Components/Card',
@@ -32,7 +31,7 @@ const CardContentStyled = styled.div`
   justify-content: center;
 `;
 
-const Template: Story<ICardHeaderProps> = ({ ...args }) => {
+const Template: Story<CardHeaderProps> = ({ ...args }) => {
   const [checked, setChecked] = useState(false);
 
   return (

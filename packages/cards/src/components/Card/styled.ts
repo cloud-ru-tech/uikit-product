@@ -1,8 +1,10 @@
 import { styled } from '@linaria/react';
 
-import { COLORS_CARD } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import cardBackground from '../../assets/card_background.png';
+
+const { COLORS_CARD } = EXPORT_VARS;
 
 export const ContainerStyled = styled.button<{
   selected?: boolean;
@@ -12,9 +14,7 @@ export const ContainerStyled = styled.button<{
   padding: 20px;
   border-radius: 4px;
   background-color: ${({ selected }) =>
-    selected
-      ? `var(${COLORS_CARD.CARD_SELECTED_BACKGROUND})`
-      : `var(${COLORS_CARD.CARD_BACKGROUND})`};
+    selected ? `var(${COLORS_CARD.CARD_SELECTED_BACKGROUND})` : `var(${COLORS_CARD.CARD_BACKGROUND})`};
   cursor: pointer;
   border: none;
   width: 100%;
@@ -23,14 +23,12 @@ export const ContainerStyled = styled.button<{
 
   &:hover {
     background-color: ${({ selected }) =>
-      selected
-        ? `var(${COLORS_CARD.CARD_SELECTED_BACKGROUND})`
-        : `var(${COLORS_CARD.CARD_HOVER_BACKGROUND})`};
-    box-shadow: 0px 10px 12px var(${COLORS_CARD.CARD_HOVER_SHADOW});
+      selected ? `var(${COLORS_CARD.CARD_SELECTED_BACKGROUND})` : `var(${COLORS_CARD.CARD_HOVER_BACKGROUND})`};
+    box-shadow: 0 10px 12px var(${COLORS_CARD.CARD_HOVER_SHADOW});
 
     & > [data-additional-hover] {
-      top: 0px;
-      left: 0px;
+      top: 0;
+      left: 0;
     }
   }
 `;
@@ -52,8 +50,7 @@ export const AdditionalHoverStyled = styled.div<{ isVertical: boolean }>`
   width: ${({ isVertical }) => (isVertical ? '100%' : '64px')};
   border-top-right-radius: ${({ isVertical }) => (isVertical ? '0px' : '18px')};
   border-bottom-right-radius: 18px;
-  border-bottom-left-radius: ${({ isVertical }) =>
-    isVertical ? '18px' : '0px'};
+  border-bottom-left-radius: ${({ isVertical }) => (isVertical ? '18px' : '0px')};
   z-index: 0;
   transition: ${({ isVertical }) => (isVertical ? 'top' : 'left')} 0.2s ease;
   overflow: hidden;
@@ -67,7 +64,5 @@ export const AdditionalHoverImageStyled = styled.div<{
   width: 100%;
   background-size: cover;
   background-image: ${({ additionalHoverImage }) =>
-    additionalHoverImage
-      ? `url(${additionalHoverImage})`
-      : `url(${cardBackground})`};
+    additionalHoverImage ? `url(${additionalHoverImage})` : `url(${cardBackground})`};
 `;

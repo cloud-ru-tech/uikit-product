@@ -1,7 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { COLORS_CARD } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_CARD } = EXPORT_VARS;
 
 export const ButtonGroupStyled = styled.div`
   display: flex;

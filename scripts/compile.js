@@ -47,7 +47,7 @@ const { emitDeclarations, createTSProgram } = require('./compile/emit-declaratio
     jsTiming += moment().diff(jsStart, 'ms');
 
     const copyStart = moment();
-    const filesToCopy = glob.sync(`${src}/**/*.{woff,woff2}`);
+    const filesToCopy = glob.sync(`${src}/**/*.{woff,woff2,png}`);
     filesToCopy.forEach(simpleCopy({ src, distCJS, distESM }));
     simpleCopyTiming += moment().diff(copyStart, 'ms');
 

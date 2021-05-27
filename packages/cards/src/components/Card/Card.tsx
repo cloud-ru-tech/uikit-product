@@ -1,13 +1,8 @@
 import { FC } from 'react';
 
-import {
-  ContainerStyled,
-  AdditionalHoverStyled,
-  CardContentWrapStyled,
-  AdditionalHoverImageStyled,
-} from './styled';
+import { AdditionalHoverImageStyled, AdditionalHoverStyled, CardContentWrapStyled, ContainerStyled } from './styled';
 
-export interface ICardProps {
+export type CardProps = {
   className?: string;
   isVertical: boolean;
   selected?: boolean;
@@ -15,9 +10,9 @@ export interface ICardProps {
   additionalHover?: boolean;
   additionalHoverImage?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
-}
+};
 
-export const Card: FC<ICardProps> = ({
+export const Card: FC<CardProps> = ({
   children,
   onClick,
   selected,
@@ -35,14 +30,8 @@ export const Card: FC<ICardProps> = ({
     additionalHover={additionalHover}
   >
     {additionalHover ? (
-      <AdditionalHoverStyled
-        data-additional-hover
-        isVertical={isVertical}
-        className={hoverClassName}
-      >
-        <AdditionalHoverImageStyled
-          additionalHoverImage={additionalHoverImage}
-        />
+      <AdditionalHoverStyled data-additional-hover isVertical={isVertical} className={hoverClassName}>
+        <AdditionalHoverImageStyled additionalHoverImage={additionalHoverImage} />
       </AdditionalHoverStyled>
     ) : null}
     <CardContentWrapStyled>{children}</CardContentWrapStyled>

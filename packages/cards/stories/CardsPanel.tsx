@@ -1,12 +1,11 @@
-import { useState, FC } from 'react';
 import { styled } from '@linaria/react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { FC, useState } from 'react';
 
-import { Tag } from 'components/Tag';
-import { CopyInput } from 'components/Input';
-import { Card, CardHeader } from 'components/Cards';
+import { CopyInput } from '@sbercloud/uikit-react-input';
+import { Tag } from '@sbercloud/uikit-react-tag';
 
-import { CardsPanel, ICardsPanelProps } from './CardsPanel';
+import { Card, CardHeader, CardsPanel, CardsPanelProps } from '../src';
 
 export default {
   title: 'Components/Card',
@@ -27,7 +26,7 @@ const DateStyled = styled.span`
 `;
 
 const InputWrapStyled = styled.div`
-  margin: 10px 0px;
+  margin: 10px 0;
 `;
 
 const TagWrapStyled = styled.div`
@@ -83,9 +82,7 @@ const CardsPanelItem: FC<ICardsPanelItemProps> = props => {
     isVertical,
   } = props;
 
-  const handlerCardClick = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-  ): void => {
+  const handlerCardClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     const target = e.target as HTMLButtonElement;
     if (target?.id !== 'more-button' && onClick) {
       onClick(e);
@@ -125,7 +122,7 @@ const data = [
   { selected: true },
 ];
 
-interface IStoryProps extends ICardsPanelProps {
+interface IStoryProps extends CardsPanelProps {
   usePagination?: boolean;
 }
 
@@ -165,11 +162,10 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
                 return;
               }
 
-              setCheckedCards(
-                checkedCards.filter(cardIndex => cardIndex !== index),
-              );
+              setCheckedCards(checkedCards.filter(cardIndex => cardIndex !== index));
             }}
             onClick={e => {
+              // eslint-disable-next-line no-console
               console.log(e);
             }}
           >
@@ -182,22 +178,12 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
               {selected ? <Tag color='red'>Selected</Tag> : null}
             </TagsWrapStyled>
             <TitleStyled>{`Сontainer-registry-${index}`}</TitleStyled>
-            <DateStyled>
-              {new Date('2020-10-26T00:09:27.249000').toLocaleDateString()}
-            </DateStyled>
+            <DateStyled>{new Date('2020-10-26T00:09:27.249000').toLocaleDateString()}</DateStyled>
             <InputWrapStyled>
-              <CopyInput
-                label='Image'
-                labelMinWidth='80px'
-                value='qwewerwerwerwer'
-              />
+              <CopyInput label='Image' labelMinWidth='80px' value='qwewerwerwerwer' />
             </InputWrapStyled>
             <InputWrapStyled>
-              <CopyInput
-                label='URL'
-                labelMinWidth='80px'
-                value='sdmncv,mshfwld'
-              />
+              <CopyInput label='URL' labelMinWidth='80px' value='sdmncv,mshfwld' />
             </InputWrapStyled>
           </CardsPanelItem>
         ))}

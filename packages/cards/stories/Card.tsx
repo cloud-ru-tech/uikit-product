@@ -1,12 +1,14 @@
-import { useState } from 'react';
 import { styled } from '@linaria/react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
-import { COLORS } from 'theme/color/vars';
-import { H4 } from 'typography/Headers';
-import { Checkbox } from 'components/Checkbox';
+import { Checkbox } from '@sbercloud/uikit-react-checkbox';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { H4 } from '@sbercloud/uikit-typography';
 
-import { Card, ICardProps } from './Card';
+import { Card, CardProps } from '../src';
+
+const { COLORS } = EXPORT_VARS;
 
 export default {
   title: 'Components/Card',
@@ -19,12 +21,11 @@ const StyledContainer = styled.div`
 `;
 
 const StyledCardWrap = styled.div<{ showBackground?: boolean }>`
-  background: ${({ showBackground }) =>
-    showBackground ? `var(${COLORS.BLUE_1})` : 'transparent'};
+  background: ${({ showBackground }) => (showBackground ? `var(${COLORS.BLUE_1})` : 'transparent')};
   padding: 30px;
 `;
 
-const Template: Story<ICardProps> = ({ ...args }) => {
+const Template: Story<CardProps> = ({ ...args }) => {
   const [checked, setChecked] = useState(false);
 
   return (

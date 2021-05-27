@@ -1,34 +1,30 @@
 import { FC, useState } from 'react';
 
 import { FavSVG } from '@sbercloud/icons';
-
-import { Checkbox } from 'components/Checkbox';
-import { MoreButton } from 'components/Button';
+import { MoreButton } from '@sbercloud/uikit-react-button';
+import { Checkbox } from '@sbercloud/uikit-react-checkbox';
 
 import {
-  HeaderStyled,
   ButtonGroupStyled,
   FavouriteWrapStyled,
-  moreButtonClassName,
+  HeaderStyled,
   favouriteButtonClassName,
+  moreButtonClassName,
 } from './styled';
 
-export interface ICardHeaderProps {
+export type CardHeaderProps = {
   checked?: boolean;
   className?: string;
   defaultFavourite?: boolean;
-  onCheckboxClick?: (
-    check: boolean,
-    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
-  ) => void;
+  onCheckboxClick?: (check: boolean, e: React.MouseEvent<HTMLLabelElement, MouseEvent>) => void;
   onFavouriteChange?: (isFavourite: boolean) => void;
   moreActions?: {
     name: string;
     onClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
   }[];
-}
+};
 
-export const CardHeader: FC<ICardHeaderProps> = props => {
+export const CardHeader: FC<CardHeaderProps> = props => {
   const {
     checked,
     className,
@@ -41,9 +37,7 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
 
   const [isFavourite, setIsFavourite] = useState(defaultFavourite);
 
-  const handleFavouriteClick = (
-    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
-  ): void => {
+  const handleFavouriteClick = (e: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
     e.stopPropagation();
     const newFavouriteValue = !isFavourite;
     setIsFavourite(newFavouriteValue);
@@ -53,10 +47,7 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
     }
   };
 
-  const handleCheckedClick = (
-    check: boolean,
-    e: React.MouseEvent<HTMLLabelElement, MouseEvent>,
-  ): void => {
+  const handleCheckedClick = (check: boolean, e: React.MouseEvent<HTMLLabelElement, MouseEvent>): void => {
     e.stopPropagation();
 
     if (onCheckboxClick) {
@@ -67,24 +58,16 @@ export const CardHeader: FC<ICardHeaderProps> = props => {
   return (
     <HeaderStyled className={className}>
       {onCheckboxClick && typeof checked === 'boolean' && (
-        <Checkbox
-          checked={checked || false}
-          handleChange={handleCheckedClick}
-        />
+        <Checkbox checked={checked || false} handleChange={handleCheckedClick} />
       )}
       {children}
       <ButtonGroupStyled>
         {onFavouriteChange && (
           <FavouriteWrapStyled onClick={handleFavouriteClick}>
-            <FavSVG
-              className={favouriteButtonClassName}
-              data-filled={isFavourite}
-            />
+            <FavSVG className={favouriteButtonClassName} data-filled={isFavourite} />
           </FavouriteWrapStyled>
         )}
-        {moreActions && (
-          <MoreButton actions={moreActions} className={moreButtonClassName} />
-        )}
+        {moreActions && <MoreButton actions={moreActions} className={moreButtonClassName} />}
       </ButtonGroupStyled>
     </HeaderStyled>
   );
