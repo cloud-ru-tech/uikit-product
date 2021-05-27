@@ -1,7 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { COLORS_COLLAPSE_PANEL } from 'theme/color/vars';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+
+const { COLORS_COLLAPSE_PANEL } = EXPORT_VARS;
 
 export const ContainerStyled = styled.div<{ showHover?: boolean }>`
   display: flex;
@@ -90,13 +92,9 @@ export const favouriteButtonClassName = css`
 
   transition: all 0.2s ease-in-out;
   &:hover {
-    fill: var(
-      ${COLORS_COLLAPSE_PANEL.COLLAPSE_PANEL_FAVOURITE_ICON_HOVER_COLOR}
-    );
+    fill: var(${COLORS_COLLAPSE_PANEL.COLLAPSE_PANEL_FAVOURITE_ICON_HOVER_COLOR});
   }
   &[data-filled] {
-    fill: var(
-      ${COLORS_COLLAPSE_PANEL.COLLAPSE_PANEL_FAVOURITE_ICON_FILLED_COLOR}
-    );
+    fill: var(${COLORS_COLLAPSE_PANEL.COLLAPSE_PANEL_FAVOURITE_ICON_FILLED_COLOR});
   }
 `;

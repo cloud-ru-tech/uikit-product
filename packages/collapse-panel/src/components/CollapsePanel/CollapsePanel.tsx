@@ -1,7 +1,6 @@
-import { useState, FC, isValidElement } from 'react';
+import { FC, isValidElement, useState } from 'react';
 
 import { CollapsePanelItem } from '../CollapsePanelItem';
-
 import { ContainerStyled } from './styled';
 
 export interface ICollapsePanelProps {

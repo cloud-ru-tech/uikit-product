@@ -1,30 +1,22 @@
-import { useState } from 'react';
 import { styled } from '@linaria/react';
-import { Story, Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
-import { Avatar } from 'components/Avatar';
-import { Select } from 'components/Select';
+import { Avatar } from '@sbercloud/uikit-react-avatar';
+import { Input } from '@sbercloud/uikit-react-input';
 
-import {
-  CollapsePanelItem,
-  ICollapsePanelItemProps,
-} from './CollapsePanelItem';
+import { CollapsePanelItem, CollapsePanelItemProps } from '../src';
 
 export default {
   title: 'Components/CollapsePanel',
   component: CollapsePanelItem,
 } as Meta;
 
-const storage = [
-  { value: 'S3', label: 'S3' },
-  { value: 'NFS', label: 'NFS' },
-];
-
 const ContentStyled = styled.div`
   margin-top: 20px;
 `;
 
-const Template: Story<ICollapsePanelItemProps> = ({ ...args }) => {
+const Template: Story<CollapsePanelItemProps> = ({ ...args }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
@@ -33,14 +25,10 @@ const Template: Story<ICollapsePanelItemProps> = ({ ...args }) => {
       isCollapsed={isCollapsed}
       handleClick={() => setIsCollapsed(isCollapsed => !isCollapsed)}
       index={0}
-      header={
-        <Avatar shape='square' size={72}>
-          G O
-        </Avatar>
-      }
+      header={<Avatar shape={Avatar.shapes.Circle} size={72} username='G O' />}
     >
       <ContentStyled>Content</ContentStyled>
-      <Select defaultValue={storage[0]} options={storage} type='medium' />
+      <Input value={'Some text'} />
     </CollapsePanelItem>
   );
 };

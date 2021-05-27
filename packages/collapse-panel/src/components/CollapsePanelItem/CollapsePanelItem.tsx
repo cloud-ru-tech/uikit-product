@@ -1,22 +1,21 @@
 import { FC, useState } from 'react';
 
-import { FavSVG, ArrowUpSVG } from '@sbercloud/icons';
-
-import { Divider } from 'components/Divider';
+import { ArrowUpSVG, FavSVG } from '@sbercloud/icons';
+import { Divider } from '@sbercloud/uikit-react-divider';
 
 import {
-  HeaderStyled,
-  ContentStyled,
-  ContainerStyled,
-  ContentWrapStyled,
   ButtonGroupStyled,
-  HeaderGroupStyled,
   CollapseButtonStyled,
+  ContainerStyled,
+  ContentStyled,
+  ContentWrapStyled,
+  HeaderGroupStyled,
+  HeaderStyled,
   collapseIconClassName,
   favouriteButtonClassName,
 } from './styled';
 
-export interface ICollapsePanelItemProps {
+export interface CollapsePanelItemProps {
   isCollapsed?: boolean;
   handleClick?: () => void;
   index: number;
@@ -29,7 +28,7 @@ export interface ICollapsePanelItemProps {
   lineColor?: string;
 }
 
-export const CollapsePanelItem: FC<ICollapsePanelItemProps> = ({
+export const CollapsePanelItem: FC<CollapsePanelItemProps> = ({
   isCollapsed,
   handleClick,
   header,
@@ -59,10 +58,7 @@ export const CollapsePanelItem: FC<ICollapsePanelItemProps> = ({
             />
           )}
           {isShowCollapse && (
-            <CollapseButtonStyled
-              onClick={handleClick}
-              data-rotate={isCollapsed || undefined}
-            >
+            <CollapseButtonStyled onClick={handleClick} data-rotate={isCollapsed || undefined}>
               <ArrowUpSVG className={collapseIconClassName} />
             </CollapseButtonStyled>
           )}
@@ -71,9 +67,7 @@ export const CollapsePanelItem: FC<ICollapsePanelItemProps> = ({
       <ContentWrapStyled
         data-expanded={!isCollapsed || undefined}
         data-collapsed={isCollapsed || undefined}
-        data-expanded-animation={
-          (hasExpandedAnimation && !isCollapsed) || undefined
-        }
+        data-expanded-animation={(hasExpandedAnimation && !isCollapsed) || undefined}
         aria-expanded={isCollapsed}
       >
         <ContentStyled>
