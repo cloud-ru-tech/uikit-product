@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { Story, Meta } from '@storybook/react/types-6-0';
 import { styled } from '@linaria/react';
-import * as Icons from '@sbercloud/icons/build/icons';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
-import { Button } from 'components/Button';
-import { Input } from 'components/Input';
-import { Text2 } from 'typography/Text/index';
+import { CrossSVG, SearchSVG } from '@sbercloud/icons';
+import * as Icons from '@sbercloud/icons/build/icons-color';
+import { Input } from '@sbercloud/uikit-react-input';
+import { Text2 } from '@sbercloud/uikit-typography';
 
 const Group = styled.div`
   margin-top: 24px;
@@ -16,12 +16,14 @@ const Group = styled.div`
   overflow: auto;
 `;
 
-const Item = styled.div<{ stroke: boolean }>`
+const Item = styled.div`
   margin: 0.5rem;
   padding: 0.5rem;
-  text-align: center;
-  width: 150px;
-  stroke: ${({ stroke }) => (stroke ? '#000' : 'inherit')};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
 `;
 
 const Template: Story = () => {
@@ -35,13 +37,13 @@ const Template: Story = () => {
         }}
         postfix={
           search ? (
-            <Icons.CrossSVG
+            <CrossSVG
               onClick={(): void => {
                 setSearch('');
               }}
             />
           ) : (
-            <Icons.SearchSVG />
+            <SearchSVG />
           )
         }
         placeholder='Поиск'
@@ -50,10 +52,8 @@ const Template: Story = () => {
         {Object.entries(Icons)
           .filter(([key]) => key.toLowerCase().includes(search))
           .map(([key, Icon]) => (
-            <Item key={key} stroke={key === 'UploadSVG'}>
-              <Button variant='transparent'>
-                <Icon />
-              </Button>
+            <Item key={key}>
+              <Icon />
               <div>
                 <Text2>{key}</Text2>
               </div>
@@ -64,13 +64,13 @@ const Template: Story = () => {
   );
 };
 
-export const inheritColor = Template.bind({});
+export const color = Template.bind({});
 
-inheritColor.args = {};
+color.args = {};
 
-inheritColor.argTypes = {};
+color.argTypes = {};
 
 export default {
-  title: 'Components/Icons/Inherit Color',
+  title: 'Components/Icons/Color',
   component: Group,
 } as Meta;
