@@ -22,6 +22,7 @@ module.exports = {
         },
       },
     },
+    'storybook-addon-designs',
   ],
   typescript: {
     check: true,

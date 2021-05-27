@@ -84,3 +84,10 @@ const Template: Story<IFilterProps> = () => {
 };
 
 export const filter = Template.bind({});
+filter.parameters = {
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};
