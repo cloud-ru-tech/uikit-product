@@ -3,7 +3,7 @@
   "title": "Theme",
   "version": "0.0.0",
   "description": "Colors library",
-  "main": "./dist/cjs/index.js",
+  "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
   "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/theme/README.md",
   "repository": {

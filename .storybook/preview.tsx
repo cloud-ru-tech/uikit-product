@@ -1,7 +1,7 @@
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 
-import { globals, green, greenDark, purple, purpleDark } from '../packages/theme';
+import { globals, green, greenDark, purple, purpleDark } from '../packages/theme/src';
 
 const changeTheme = (theme: { name: string }) => {
   const root = (document.querySelector(
