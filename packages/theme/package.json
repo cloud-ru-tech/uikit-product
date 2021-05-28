@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-theme",
   "title": "Theme",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Colors library",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -20,8 +20,6 @@
   ],
   "license": "UNLICENSED",
   "scripts": {},
-  "dependencies": {},
-  "devDependencies": {},
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
     "@linaria/react": "^3.0.0-beta.3",
