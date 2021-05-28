@@ -116,21 +116,53 @@ const packageEntry = ({ packageRootFolderName }) => {
 
 const storyEntry = ({ componentName, packageRootFolderName }) => {
   const filePath = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/${Folders.stories}/index.tsx`);
-  const fileContent = `import { Story, Meta } from '@storybook/react/types-6-0';
-import { ${componentName}, ${componentName}Props } from '../src';
+  const fileContent =
+    "import { Story, Meta } from '@storybook/react/types-6-0';\n\
+import { withDesign } from 'storybook-addon-designs';\n\
+import { addReadme } from 'storybook-readme';\n\
+import { " +
+    `${componentName}, ${componentName}Props` +
+    " } from '../src';\n\
+\n\
+import componentReadme from '../README.md';\n\
+import componentChangelog from '../CHANGELOG.md';\n\
+import componentPackage from '../package.json';\n\
+\n\
+export default {\n\
+  title: 'Components/" +
+    `${componentName}` +
+    "',\n\
+  component: " +
+    `${componentName}` +
+    ',\n\
+  decorators: [addReadme, withDesign],\n\
+} as Meta;\n\
+\n' +
+    `const Template: Story<${componentName}Props> = ({ ...args }) => <${componentName} {...args} />;
 
-export default {
-  title: 'Components/${componentName}',
-  component: ${componentName},
-} as Meta;
-
-const Template: Story<${componentName}Props> = ({ ...args }) => <${componentName} {...args} />;
-
-export const ${componentName.toLowerCase()} = Template.bind({});
-${componentName.toLowerCase()}.args = {};
-${componentName.toLowerCase()}.argTypes = {};
-${componentName.toLowerCase()}.parameters = {};
-`;
+` +
+    'export const ' +
+    `${componentName.toLowerCase()}` +
+    ' = Template.bind({});\n\
+' +
+    `${componentName.toLowerCase()}` +
+    '.args = {};\n\
+' +
+    `${componentName.toLowerCase()}` +
+    '.argTypes = {};\n\
+' +
+    `${componentName.toLowerCase()}` +
+    ".parameters = {\n\
+  readme: {\n\
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],\n\
+  },\n\
+  design: {\n\
+    type: 'figma',\n\
+    //TODO\n\
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',\n\
+  },\n\
+};\n\
+";
 
   fs.writeFileSync(filePath, fileContent);
 };

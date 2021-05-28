@@ -1,9 +1,14 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { IRadioProps, Radio, RadioGroup } from '../src';
 
 const { COLORS_DRAWER } = EXPORT_VARS;
@@ -11,6 +16,7 @@ const { COLORS_DRAWER } = EXPORT_VARS;
 export default {
   title: 'Components/Radio',
   component: Radio,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Wrapper = styled.div`
@@ -44,4 +50,13 @@ const Template: Story<IRadioProps> = ({ ...args }) => {
 
 export const radioGroup = Template.bind({});
 radioGroup.args = {};
-radioGroup.parameters = {};
+radioGroup.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};

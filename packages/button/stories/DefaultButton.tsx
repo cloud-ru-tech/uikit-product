@@ -1,15 +1,21 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { CopySVG } from '@sbercloud/icons';
 import { H4 } from '@sbercloud/uikit-typography';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { Button, ButtonProps } from '../src';
 import { ButtonVariant } from '../src/helpers/constants';
 
 export default {
   title: 'Components/Button/Default',
   component: Button,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Group = styled.div`
@@ -64,7 +70,16 @@ Default.args = {
   children: 'Button',
   iconPosition: 'after',
 };
-
+Default.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};
 Default.argTypes = {
   showIcon: {
     control: {

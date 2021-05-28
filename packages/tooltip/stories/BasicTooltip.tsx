@@ -1,15 +1,21 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import copyText from 'copy-to-clipboard';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { CopySVG, HelpSVG } from '@sbercloud/icons';
 import { H4 } from '@sbercloud/uikit-typography';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { BasicTooltip, IBasicTooltipProps } from '../src';
 
 export default {
   title: 'Components/Tooltip',
   component: BasicTooltip,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const TooltipWrapper = styled.div`
@@ -51,4 +57,13 @@ const Template: Story<IBasicTooltipProps> = ({ ...args }) => (
 
 export const basicTooltip = Template.bind({});
 basicTooltip.args = {};
-basicTooltip.parameters = {};
+basicTooltip.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};

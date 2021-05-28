@@ -8,5 +8,7 @@ export interface ITextareaProps extends TextareaAutosizeProps {
 }
 
 export const Textarea: FC<ITextareaProps> = ({ className, ...props }) => (
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   <StyledTextareaAutosize minRows={2} className={className} {...props} />
 );

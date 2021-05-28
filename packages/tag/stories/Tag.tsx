@@ -1,15 +1,21 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { H4 } from '@sbercloud/uikit-typography';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { Tag, TagProps } from '../src';
 import { PRESET_COLORS } from '../src/helpers/colors';
 
 export default {
   title: 'Components/Tag',
   component: Tag,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Row = styled.div`
@@ -63,4 +69,13 @@ const Template: Story<TagProps> = ({ ...args }) => {
 
 export const tag = Template.bind({});
 tag.args = { color: 'aqua' };
-tag.parameters = {};
+tag.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};

@@ -1,14 +1,20 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { Avatar } from '@sbercloud/uikit-react-avatar';
 import { Input } from '@sbercloud/uikit-react-input';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { CollapsePanel, CollapsePanelItem, ICollapsePanelProps } from '../src';
 
 export default {
   title: 'Components/CollapsePanel',
   component: CollapsePanel,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const avatarSrc =
@@ -38,4 +44,13 @@ const Template: Story<ICollapsePanelProps> = ({ ...args }) => (
 
 export const collapsePanel = Template.bind({});
 collapsePanel.args = {};
-collapsePanel.parameters = {};
+collapsePanel.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};

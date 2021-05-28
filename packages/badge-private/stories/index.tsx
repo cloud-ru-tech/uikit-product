@@ -1,12 +1,18 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { Button } from '@sbercloud/uikit-react-button';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { Badge, BadgeProps } from '../src';
 
 export default {
   title: 'Components/Badge',
   component: Badge,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<BadgeProps> = ({ ...args }) => (
@@ -18,6 +24,16 @@ const Template: Story<BadgeProps> = ({ ...args }) => (
 export const badge = Template.bind({});
 badge.args = {
   text: '5',
+};
+badge.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
 };
 badge.argTypes = {
   color: {

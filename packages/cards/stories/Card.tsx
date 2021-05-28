@@ -1,11 +1,16 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { Checkbox } from '@sbercloud/uikit-react-checkbox';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H4 } from '@sbercloud/uikit-typography';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { Card, CardProps } from '../src';
 
 const { COLORS } = EXPORT_VARS;
@@ -13,6 +18,7 @@ const { COLORS } = EXPORT_VARS;
 export default {
   title: 'Components/Card',
   component: Card,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const StyledContainer = styled.div`
@@ -60,4 +66,13 @@ const Template: Story<CardProps> = ({ ...args }) => {
 
 export const card = Template.bind({});
 card.args = {};
-card.parameters = {};
+card.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};

@@ -1,11 +1,17 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import * as Icons from '@sbercloud/icons/build/icons';
 import { Button } from '@sbercloud/uikit-react-button';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Text2 } from '@sbercloud/uikit-typography';
+
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 
 const Group = styled.div`
   margin-top: 24px;
@@ -67,10 +73,20 @@ const Template: Story = () => {
 export const inheritColor = Template.bind({});
 
 inheritColor.args = {};
-
+inheritColor.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};
 inheritColor.argTypes = {};
 
 export default {
   title: 'Components/Icons/Inherit Color',
   component: Group,
+  decorators: [addReadme, withDesign],
 } as Meta;

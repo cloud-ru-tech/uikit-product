@@ -5,14 +5,8 @@ const path = require('path');
 module.exports = {
   stories: ['../packages/*/stories/*.@(ts|tsx)'],
   addons: [
-    '@storybook/addon-links',
-    {
-      name: '@storybook/addon-essentials',
-      options: {
-        backgrounds: false,
-      },
-    },
-    'storybook-addon-themes',
+    'storybook-readme',
+    'storybook-addon-designs',
     {
       name: '@storybook/addon-storysource',
       options: {
@@ -22,7 +16,14 @@ module.exports = {
         },
       },
     },
-    'storybook-addon-designs',
+    '@storybook/addon-links',
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        backgrounds: false,
+      },
+    },
+    'storybook-addon-themes',
   ],
   typescript: {
     check: true,

@@ -1,9 +1,14 @@
 import { styled } from '@linaria/react';
-import { Meta } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { Button } from '@sbercloud/uikit-react-button';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { CheckedType, UsersByGroupSelect } from '../src';
 import { IOptionType } from '../src/helperComponents/InlineTreeSelect';
 import { treeOptions } from '../src/helpers/mockData';
@@ -11,13 +16,14 @@ import { treeOptions } from '../src/helpers/mockData';
 export default {
   title: 'Components/Select',
   component: UsersByGroupSelect,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const StyledButton = styled(Button)`
   margin: 10px 10px 0px 0px;
 `;
 
-const Template = (): JSX.Element => {
+const Template: Story = (): JSX.Element => {
   const defautVal = { checked: ['b'] };
   const [tree, setTree] = useState<IOptionType[]>(treeOptions as IOptionType[]);
   const [checked, setChecked] = useState<CheckedType | undefined>(defautVal);
@@ -68,3 +74,13 @@ const Template = (): JSX.Element => {
 };
 
 export const inlineTreeSelect = Template.bind({});
+inlineTreeSelect.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};

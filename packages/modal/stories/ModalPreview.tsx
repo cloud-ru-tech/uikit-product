@@ -1,13 +1,19 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { Button } from '@sbercloud/uikit-react-button';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { ModalPreview, ModalPreviewProps } from '../src';
 
 export default {
   title: 'Components/Modal',
   component: ModalPreview,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<ModalPreviewProps> = ({ ...args }) => {
@@ -38,3 +44,13 @@ const Template: Story<ModalPreviewProps> = ({ ...args }) => {
 export const modalPreview = Template.bind({});
 modalPreview.args = {};
 modalPreview.argTypes = {};
+modalPreview.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};

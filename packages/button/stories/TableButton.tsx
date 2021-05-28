@@ -1,14 +1,20 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { PauseCircleSVG } from '@sbercloud/icons';
 import { H4 } from '@sbercloud/uikit-typography';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { TableButton as CTableButton, TableButtonProps } from '../src';
 
 export default {
   title: 'Components/Button',
   component: CTableButton,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Group = styled.div`
@@ -71,4 +77,14 @@ export const TableButton = Template.bind({});
 
 TableButton.args = {
   text: 'Button',
+};
+TableButton.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
 };

@@ -1,17 +1,21 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { FilterSVG } from '@sbercloud/icons';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { Filter, IFilterProps, TFilterValueType } from '../src';
 import mockData, { groupedServices } from '../src/helpers/mockData';
 
 export default {
   title: 'Components/Filter',
   component: Filter,
-  decorators: [withDesign],
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const defOpt = [
@@ -85,6 +89,9 @@ const Template: Story<IFilterProps> = () => {
 
 export const filter = Template.bind({});
 filter.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
   design: {
     type: 'figma',
     //TODO

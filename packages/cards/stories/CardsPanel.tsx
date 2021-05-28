@@ -1,15 +1,21 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { FC, useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { CopyInput } from '@sbercloud/uikit-react-input';
 import { Tag } from '@sbercloud/uikit-react-tag';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { Card, CardHeader, CardsPanel, CardsPanelProps } from '../src';
 
 export default {
   title: 'Components/Card',
   component: CardsPanel,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const TitleStyled = styled.h3`
@@ -194,7 +200,16 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
 
 export const cardsPanel = Template.bind({});
 cardsPanel.args = {};
-cardsPanel.parameters = {};
+cardsPanel.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};
 cardsPanel.argTypes = {
   pageCount: {
     control: {

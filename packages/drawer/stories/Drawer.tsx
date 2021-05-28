@@ -2,17 +2,23 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { Button } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { Drawer, IDrawerProps } from '../src';
 
 export default {
   title: 'Components/Drawer',
   component: Drawer,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const buttonStyle = css`
@@ -138,4 +144,13 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
 
 export const drawer = Template.bind({});
 drawer.args = {};
-drawer.parameters = {};
+drawer.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};

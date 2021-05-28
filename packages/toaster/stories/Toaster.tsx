@@ -1,12 +1,18 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { Button } from '@sbercloud/uikit-react-button';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { Toaster as CToaster, ToasterOptions, ToasterProps, toaster } from '../src';
 
 export default {
   title: 'Components/Toaster',
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const PREDEFINED_ITEMS: {
@@ -172,5 +178,15 @@ Toaster.argTypes = {
     control: {
       type: 'boolean',
     },
+  },
+};
+Toaster.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
   },
 };

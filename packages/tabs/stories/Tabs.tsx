@@ -1,14 +1,20 @@
 /* eslint-disable no-console */
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { Avatar } from '@sbercloud/uikit-react-avatar';
 import { CollapsePanel, CollapsePanelItem } from '@sbercloud/uikit-react-collapse-panel';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { ITabsProps, Tab, Tabs, TabsTheme } from '../src';
 
 export default {
   title: 'Components/Tabs',
   component: Tabs,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<ITabsProps> = ({ ...args }) => (
@@ -38,7 +44,16 @@ const Template: Story<ITabsProps> = ({ ...args }) => (
 
 export const tabs = Template.bind({});
 tabs.args = {};
-tabs.parameters = {};
+tabs.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};
 tabs.argTypes = {
   theme: {
     defaultValue: 'gray',

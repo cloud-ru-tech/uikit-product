@@ -1,10 +1,16 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import { Text1, Text2, Text2Link, Text3, Text4 } from '../src';
 
 export default {
   title: 'Typography/Text',
   component: Text1,
+  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<{ color: string; children: string }> = ({ children, color, ...restArgs }) => (
@@ -33,5 +39,15 @@ text.argTypes = {
     control: {
       type: 'text',
     },
+  },
+};
+text.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    type: 'figma',
+    //TODO
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
   },
 };
