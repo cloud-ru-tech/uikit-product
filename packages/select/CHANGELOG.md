@@ -7,12 +7,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
 
-
-
-
-
-## CHANGELOG
-
-### v0.0.1
+## v0.0.1
 
 - Initial version

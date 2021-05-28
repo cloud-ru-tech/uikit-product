@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const themeVersion = require('../../packages/theme/package.json').version;
 
 const PackagesRootFolder = 'packages';
 
@@ -35,7 +36,7 @@ const packageJson = ({ user, email, packageTitle, packageName, packageDescriptio
     license: 'UNLICENSED',
     scripts: {},
     dependencies: {
-      '@sbercloud/uikit-theme': '0.0.0',
+      '@sbercloud/uikit-theme': themeVersion,
     },
     devDependencies: {},
     peerDependencies: {

@@ -10,12 +10,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 * import path was not remade for getting rid of aliases ([d85d3c8](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/d85d3c8a68c5bc06e1fb15bb9f77256bd351654a))
 
-
-
-
-
-## CHANGELOG
-
-### v0.0.1
+## v0.0.1
 
 - Initial version
