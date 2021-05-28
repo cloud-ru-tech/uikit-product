@@ -1,8 +1,8 @@
-import { PRESET_COLORS, PresetColorType } from 'packages/tag/src/helpers/colors';
 import { useCallback } from 'react';
 
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
+import { PRESET_COLORS, PresetColorType } from '../helpers/colors';
 import { StyledInputAutosize, StyledTag } from './styled';
 
 const { COLORS_TAG } = EXPORT_VARS;

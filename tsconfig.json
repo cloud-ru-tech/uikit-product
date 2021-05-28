@@ -1,7 +1,12 @@
 {
   "extends": "@aicloud/config-tsconfig",
   "compilerOptions": {
-    "baseUrl": "./"
+    "baseUrl": "./",
+    "paths": {
+      "@sbercloud/uikit-*": [
+        "./packages/*/src"
+      ]
+    }
   },
   "include": ["packages", "types"],
   "exclude": ["node_modules", "scripts"]
