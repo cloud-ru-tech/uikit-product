@@ -1,1 +1,3 @@
-module.exports = require('@aicloud/config-lint-staged').defaultLintStagedConfig;
+module.exports = {
+  '*.{ts,js,tsx,jsx}': ['eslint --fix', 'prettier --write', 'import-sort --write'],
+};

@@ -1,1 +1,13 @@
-module.exports = require('@aicloud/config-prettier').defaultPrettierConfig;
+module.exports = {
+  tabWidth: 2,
+  printWidth: 120,
+  useTabs: false,
+  semi: true,
+  singleQuote: true,
+  quoteProps: 'as-needed',
+  jsxSingleQuote: true,
+  trailingComma: 'all',
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
+  arrowParens: 'avoid',
+};

@@ -1,1 +1,6 @@
-module.exports = require('@aicloud/config-import-sort').importSortConfig;
+module.exports = {
+  '.js, .jsx, .ts, .tsx': {
+    style: 'module',
+    parser: 'typescript',
+  },
+};
