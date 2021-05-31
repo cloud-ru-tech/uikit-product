@@ -1,13 +1,12 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
-
 import { MoreButton } from '@sbercloud/uikit-react-button';
 import { FormField } from '@sbercloud/uikit-react-form';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -15,7 +14,7 @@ import componentReadme from '../README.md';
 import { FrameworkComponents, ITableWithRowDetailProps, TableBasicTypes, TableWithRowDetail } from '../src';
 
 export default {
-  title: 'Components/Table',
+  title: 'Components/Table/With Row Detail',
   component: TableWithRowDetail,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -85,10 +85,15 @@ export function ClientModelTableController<T>({
   const [currentPage, setCurrentPage] = useState(0);
 
   useEffect(() => {
-    if (data?.length && pageSize) {
-      setPageCount(Math.ceil(data.length / pageSize));
+    if (!gridApi) {
+      if (data?.length && pageSize) {
+        setPageCount(Math.ceil(data.length / pageSize));
+      }
+    } else {
+      const totalPages = gridApi.paginationGetTotalPages();
+      setPageCount(totalPages);
     }
-  }, [data, pageSize]);
+  }, [data, pageSize, gridApi]);
 
   const [selectedRows, setSelectedRows] = useState<ClientModelTableControllerProps<T>['data']>([]);
 

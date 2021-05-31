@@ -1,13 +1,12 @@
 import { styled } from '@linaria/react';
+import { PauseCircleSVG, PlayCircleSVG, StopCircleSVG } from '@sbercloud/icons';
+import { TableButton } from '@sbercloud/uikit-react-button';
+import { Status } from '@sbercloud/uikit-react-status';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import debounce from 'lodash.debounce';
 import { useEffect, useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { PauseCircleSVG, PlayCircleSVG, StopCircleSVG } from '@sbercloud/icons';
-import { TableButton } from '@sbercloud/uikit-react-button';
-import { Status } from '@sbercloud/uikit-react-status';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -18,7 +17,7 @@ const { sizeFormatter } = TableFormatters;
 const { StatusCell } = FrameworkComponents;
 
 export default {
-  title: 'Components/Table',
+  title: 'Components/Table/Client Model Table',
   component: CMTable,
   decorators: [addReadme, withDesign],
 } as Meta;

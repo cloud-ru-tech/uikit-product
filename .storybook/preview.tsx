@@ -4,9 +4,9 @@ import React from 'react';
 import { globals, green, greenDark, purple, purpleDark } from '../packages/theme/src';
 
 const changeTheme = (theme: { name: string }) => {
-  const root = (document.querySelector(
-    '#storybook-preview-iframe',
-  ) as HTMLIFrameElement)?.contentDocument?.querySelector('body');
+  const root = (
+    document.querySelector('#storybook-preview-iframe') as HTMLIFrameElement
+  )?.contentDocument?.querySelector('body');
 
   if (!root) {
     return;
@@ -30,6 +30,7 @@ addDecorator(Story => {
 });
 
 addParameters({
+  panelPosition: 'right',
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
