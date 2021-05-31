@@ -1,15 +1,20 @@
-# Getting started
+# Sbercloud uikit monorepo [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
+Ведется автоматическое версионирование на уровне пакетов (semantic).
 
-## Установка на локальный проект
+## [Storybook.](https://uikit.test.devops.sbercloud.dev/?path=/story/components--logs-view)
+
+## [Contribution Guide.](CONTRIBUTION.md)
+
+## [TODO current version is outdated] Установка на локальный проект
 
 1. Получить доступ к @sbercloud/uikit2.0
 2. Создать `.npmrc` в корневой директории
    содержание `.npmrc`:
    `@sbercloud:registry=https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/`
    `_auth={token}`
-3. Установить пакет. `yarn add @sbercloud/uikit2.0`
+3. Установить необходимый пакет, например `npm i @sbercloud/uikit-react-button`.
 4. Установить linaria
-   `yarn add -D @linaria/babel-preset @linaria/core @linaria/react @linaria/shaker @linaria/webpack-loader`
+   `npm i --save-dev @linaria/babel-preset @linaria/core @linaria/react @linaria/shaker @linaria/webpack-loader`
 5. Скопировать linaria.config.js в корневую директорию
 6. Добавить в **webpack.config.js**:
 
@@ -59,41 +64,9 @@ rules: [
 ];
 ```
 
-## Запуск через yarn link
-
-1. Создать глобальный symlink на пакет `yarn link`
-2. Создать вспомогательные директории `yarn prepack`
-3. Запустить сборку в watch режиме `yarn build:watch`
-4. Из директории проекта залинковать пакет `yarn link @sbercloud/uikit2.0`
-   **Для отвязки**:
-5. Из директории проекта разлинковать пакет `yarn unlink @sbercloud/uikit2.0`
-6. Удалить вспомогательные директории `yarn clean`
-
----
-
-# Import
-
-## Import components
-
-`import { ... } from "@sbercloud/uikit2.0/components"`
-
-## Import theme
-
-`import { ... } from "@sbercloud/uikit2.0/theme"`
-
-## Import typography
-
-`import { ... } from "@sbercloud/uikit2.0/typography"`
-
-## Import utils
-
-`import { ... } from "@sbercloud/uikit2.0/utils"`
-
----
-
 # Styling:
 
-## Import Style:
+## [TODO] Import Style:
 
 1. Ипортируем необходимые темы:
    `import { globals, purple, purpleDark, ... } from "@sbercloud/uikit2.0/theme";`
@@ -107,13 +80,4 @@ rules: [
 1. Актуальная тема определена в `data-theme`, для смены темы меняем значения атрибута.
    Например(с помощью js):
    `htmlElement.setAttribute("data-theme", "purpleDark");`
-
----
-
-# Storybook
-
-## Запуск Storybook
-
-1. Выполнить команду `yarn storybook`
-
-# Packages
+   
