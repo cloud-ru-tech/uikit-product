@@ -1,6 +1,8 @@
 # CONTRIBUTION GUIDE
 
 ## Общие положения
+* **ВСЕ НЕОБХОДИМЫЕ КОМАНДЫ ИМЕЮТСЯ В NPM SCRIPTS**.
+* Если вы все делаете правильно, поднятие и обновление зависимостей пакетов/пакетами происходит в автоматическом режиме, ровно как и changelog.
 * Мы исходим из того, что любые изменения в данном репозитории вносятся согласно [Conventional Commits](https://conventionalcommits.org).
 ```text
 The commit contains the following structural elements, to communicate intent to the consumers of your library:
@@ -33,6 +35,15 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 *    `all:cleaninstall` - установка ВСЕХ (пакетных и глобальный) зависимостей и билд всех пакетов
 
 ## Сценарии
+### Установка зависимостей
+1. `npm run all:cleaninstall` для получения всех уже объявленных зависимостей
+2. `npm i --save-dev some` - для добавления глобальной зависимости
+3. Для добавления зависимости внутри пакета пропишите ее в соответствующий `package.json` после чего запустите `npm run build`.
+
+### Запуск локального storybook
+1. `npm run all:cleaninstall`
+2. `npm run storybook`
+
 ### Создание нового пакета
 1. Создайте feature ветку от последнего master
 2. Запустите команду `npm run all:cleaninstall`

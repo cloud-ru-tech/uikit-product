@@ -3,7 +3,7 @@
 
 ## [Storybook.](https://uikit.test.devops.sbercloud.dev/?path=/story/components--logs-view)
 
-## [Contribution Guide.](CONTRIBUTION.md)
+## Обязательно к изучению до начала работы: [Contribution Guide.](CONTRIBUTION.md). Если после этого остались вопросы напишите в слак [канал](https://ai-sbercloud.slack.com/archives/C0114075H1B).
 
 ## [TODO current version is outdated] Установка на локальный проект
 
