@@ -4,7 +4,7 @@ const moment = require('moment');
 
 const { logInfo, logHelp } = require('./utils/console');
 const argv = require('minimist')(process.argv.slice(2));
-const pkg = argv.pkg ? argv.pkg : '*';
+const pkg = argv.pkg || '*';
 
 const writeJs = require('./compile/write-js');
 const transformJs = require('./compile/transform-js');

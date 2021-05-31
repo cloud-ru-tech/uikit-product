@@ -1,10 +1,9 @@
+import { Button, CopyButton } from '@sbercloud/uikit-react-button';
+import { Divider } from '@sbercloud/uikit-react-divider';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { Button, CopyButton } from '@sbercloud/uikit-react-button';
-import { Divider } from '@sbercloud/uikit-react-divider';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

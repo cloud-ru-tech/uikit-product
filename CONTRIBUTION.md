@@ -34,6 +34,25 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 *    `build` - пересборка пакетов вместе с установкой пакетных зависимостей, глобальные должны быть при этом установлены
 *    `all:cleaninstall` - установка ВСЕХ (пакетных и глобальный) зависимостей и билд всех пакетов
 
+## Структура проекта
+1. все компоненты и утилиты лежат в папке `./packages`.
+2. Структура папок пакетов:
+```text
+packages
+  some-package
+    src
+      components
+        index.ts
+        Some.tsx
+        styled.ts
+      index.ts
+    stories   
+      Some.tsx
+    package.json
+    README.md
+    CHANGELOG.md     
+```
+
 ## Сценарии
 ### Установка зависимостей
 1. `npm run all:cleaninstall` для получения всех уже объявленных зависимостей

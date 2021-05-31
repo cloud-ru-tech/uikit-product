@@ -1,9 +1,8 @@
 import { styled } from '@linaria/react';
+import { HelpSVG } from '@sbercloud/icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { HelpSVG } from '@sbercloud/icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

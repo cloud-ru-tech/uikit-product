@@ -1,8 +1,7 @@
+import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { Button } from '@sbercloud/uikit-react-button';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
