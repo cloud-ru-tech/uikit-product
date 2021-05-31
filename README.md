@@ -3,9 +3,9 @@
 
 ## [Storybook.](https://uikit.test.devops.sbercloud.dev/?path=/story/components--logs-view)
 
-## Обязательно к изучению до начала работы: [Contribution Guide.](CONTRIBUTION.md). Если после этого остались вопросы напишите в слак [канал](https://ai-sbercloud.slack.com/archives/C0114075H1B).
+## Обязательно к изучению до начала работы: [Contribution Guide](CONTRIBUTION.md). Если после этого остались вопросы напишите в слак [канал](https://ai-sbercloud.slack.com/archives/C0114075H1B).
 
-## [TODO current version is outdated] Установка на локальный проект
+## Установка на локальный проект
 
 1. Получить доступ к @sbercloud/uikit2.0
 2. Создать `.npmrc` в корневой директории
@@ -23,7 +23,7 @@ module: {
   rules: [
     {
       test: /\.js$/,
-      include: /node_modules\/@sbercloud\/uikit2.0/,
+      include: /@sbercloud\/uikit.+dist/,
       use: [
         {
           loader: 'babel-loader',
@@ -58,7 +58,8 @@ rules: [
     action: require('@linaria/shaker').default,
   },
   {
-    test: /node_modules[\/\\](?!@sbercloud\/uikit2.0)/,
+     test: (filePath: string): boolean =>
+        !Boolean(/@sbercloud\/uikit.+dist/.test(filePath)) && /node_modules/.test(filePath),
     action: 'ignore',
   },
 ];
@@ -66,10 +67,10 @@ rules: [
 
 # Styling:
 
-## [TODO] Import Style:
+## Import Style:
 
 1. Ипортируем необходимые темы:
-   `import { globals, purple, purpleDark, ... } from "@sbercloud/uikit2.0/theme";`
+   `import { globals, purple, purpleDark, ... } from "@sbercloud/uikit-theme";`
 2. Подключаем к проекту:
    `<body className={`${globals} ${purple} ${purpleDark}`} />...</body>`
 3. Выбираем тему по умолчанию:
