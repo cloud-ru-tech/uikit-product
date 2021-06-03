@@ -24,7 +24,6 @@ export const ContentBoxStyled = styled.div<{ footerPadding: number }>`
   min-height: 100%;
   z-index: -1;
   position: relative;
-  padding-top: 74px;
   padding-bottom: ${props => props.footerPadding}px;
   box-sizing: border-box;
 `;
@@ -36,9 +35,10 @@ export const HeaderTextBoxStyled = styled.div`
 `;
 
 export const HeaderBoxStyled = styled.div<{ width: string }>`
+  top: 0px;
   z-index: 2;
-  position: fixed;
   display: flex;
+  position: sticky;
   justify-content: space-between;
   width: ${props => props.width};
   background: inherit;

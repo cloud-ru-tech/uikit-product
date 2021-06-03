@@ -9,6 +9,7 @@ import { Button } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
+import { Select } from '@sbercloud/uikit-select';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -33,124 +34,175 @@ const dividerClassName = css`
   margin: 24px -12px;
 `;
 
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: -1rem;
+`;
+
+const DrawerWrap = styled.div`
+  height: calc(100vh - 44px);
+  position: relative;
+  overflow: hidden;
+`;
+
+const ButtonWrap = styled.div`
+  margin: 1rem;
+`;
+
+const selectOptions = [
+  {
+    value: '2d2b998d-43f6-4213-9ba7-93875a3e4ebc',
+    label: 'bucket-ws-ed1fbb37-3355-4d15-8eaa-50929db2e536-id-jajmetf9',
+    labelText: 'bucket-ws-ed1fbb37-3355-4d15-8eaa-50929db2e536-id-jajmetf9',
+    logo: 'http://192.168.67.113/api/data_catalog/static/s3mlspace.svg',
+  },
+  {
+    value: '5c6cdcdd-7a80-4251-bedd-ed86598006ad',
+    label: 'bucket-ws-2d1f3532-cb35-4c80-8dfb-60eede2dc2d4-id-i62x0req',
+    labelText: 'bucket-ws-2d1f3532-cb35-4c80-8dfb-60eede2dc2d4-id-i62x0req',
+    logo: 'http://192.168.67.113/api/data_catalog/static/s3mlspace.svg',
+  },
+];
+
 const Template: Story<IDrawerProps> = ({ ...args }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState('');
 
   return (
-    <>
-      <Button onClick={() => setOpen(true)}>Open</Button>
-      <Drawer
-        {...args}
-        open={open}
-        onClose={() => setOpen(false)}
-        onBackClick={() => {}}
-        headerText='Header'
-        footer={
-          <>
-            <Button>Создать деплой</Button>
-            <Button className={buttonStyle} variant={Button.variants.Outlined}>
-              Отмена
-            </Button>
-          </>
-        }
-      >
-        <DrawerContent>
-          <Input
-            label='Label'
-            value={value}
-            onChange={e => setValue(e.target.value)}
-            placeholder='Пример: Project1-bucket106'
-          />
-          <Divider color='middle' className={dividerClassName} />
-          <RadioGroup
-            name='stories'
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
-            value={value}
-          >
-            <Radio disabled={false} value='story1' label='story1' description='description1' />
-            <Radio disabled={false} value='story2' label='story2' description='description2' />
-            <Radio disabled={false} value='story3' label='story3' description='description3' />
-          </RadioGroup>
-          <Input
-            label='Label'
-            value={value}
-            onChange={e => setValue(e.target.value)}
-            placeholder='Пример: Project1-bucket106'
-          />
-          <Divider color='middle' className={dividerClassName} />
-          <RadioGroup
-            name='stories'
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
-            value={value}
-          >
-            <Radio disabled={false} value='story1' label='story1' description='description1' />
-            <Radio disabled={false} value='story2' label='story2' description='description2' />
-            <Radio disabled={false} value='story3' label='story3' description='description3' />
-          </RadioGroup>
-          <Input
-            label='Label'
-            value={value}
-            onChange={e => setValue(e.target.value)}
-            placeholder='Пример: Project1-bucket106'
-          />
-          <Divider color='middle' className={dividerClassName} />
-          <RadioGroup
-            name='stories'
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
-            value={value}
-          >
-            <Radio disabled={false} value='story1' label='story1' description='description1' />
-            <Radio disabled={false} value='story2' label='story2' description='description2' />
-            <Radio disabled={false} value='story3' label='story3' description='description3' />
-          </RadioGroup>
-          <Input
-            label='Label'
-            value={value}
-            onChange={e => setValue(e.target.value)}
-            placeholder='Пример: Project1-bucket106'
-          />
-          <Divider color='middle' className={dividerClassName} />
-          <RadioGroup
-            name='stories'
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
-            value={value}
-          >
-            <Radio disabled={false} value='story1' label='story1' description='description1' />
-            <Radio disabled={false} value='story2' label='story2' description='description2' />
-            <Radio disabled={false} value='story3' label='story3' description='description3' />
-          </RadioGroup>
-          <Input
-            label='Label'
-            value={value}
-            onChange={e => setValue(e.target.value)}
-            placeholder='Пример: Project1-bucket106'
-          />
-          <Divider color='middle' className={dividerClassName} />
-          <RadioGroup
-            name='stories'
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
-            value={value}
-          >
-            <Radio disabled={false} value='story1' label='story1' description='description1' />
-            <Radio disabled={false} value='story2' label='story2' description='description2' />
-            <Radio disabled={false} value='story3' label='story3' description='description3' />
-          </RadioGroup>
-        </DrawerContent>
-      </Drawer>
-    </>
+    <Wrap>
+      <ButtonWrap>
+        <Button
+          onClick={e => {
+            e.stopPropagation();
+            setOpen(true);
+          }}
+        >
+          Open
+        </Button>
+      </ButtonWrap>
+      <DrawerWrap id='drawer-wrap'>
+        <Drawer
+          {...args}
+          open={open}
+          onClose={() => setOpen(false)}
+          onBackClick={() => {}}
+          headerText='Header'
+          container={args.container ? '#drawer-wrap' : undefined}
+          footer={
+            <>
+              <Button>Создать деплой</Button>
+              <Button className={buttonStyle} variant={Button.variants.Outlined}>
+                Отмена
+              </Button>
+            </>
+          }
+        >
+          <DrawerContent>
+            <Input
+              label='Label'
+              value={value}
+              onChange={e => setValue(e.target.value)}
+              placeholder='Пример: Project1-bucket106'
+            />
+            <Select options={selectOptions} />
+            <Divider color='middle' className={dividerClassName} />
+            <RadioGroup
+              name='stories'
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
+              value={value}
+            >
+              <Radio disabled={false} value='story1' label='story1' description='description1' />
+              <Radio disabled={false} value='story2' label='story2' description='description2' />
+              <Radio disabled={false} value='story3' label='story3' description='description3' />
+            </RadioGroup>
+            <Input
+              label='Label'
+              value={value}
+              onChange={e => setValue(e.target.value)}
+              placeholder='Пример: Project1-bucket106'
+            />
+            <Divider color='middle' className={dividerClassName} />
+            <RadioGroup
+              name='stories'
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
+              value={value}
+            >
+              <Radio disabled={false} value='story1' label='story1' description='description1' />
+              <Radio disabled={false} value='story2' label='story2' description='description2' />
+              <Radio disabled={false} value='story3' label='story3' description='description3' />
+            </RadioGroup>
+            <Input
+              label='Label'
+              value={value}
+              onChange={e => setValue(e.target.value)}
+              placeholder='Пример: Project1-bucket106'
+            />
+            <Divider color='middle' className={dividerClassName} />
+            <RadioGroup
+              name='stories'
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
+              value={value}
+            >
+              <Radio disabled={false} value='story1' label='story1' description='description1' />
+              <Radio disabled={false} value='story2' label='story2' description='description2' />
+              <Radio disabled={false} value='story3' label='story3' description='description3' />
+            </RadioGroup>
+            <Input
+              label='Label'
+              value={value}
+              onChange={e => setValue(e.target.value)}
+              placeholder='Пример: Project1-bucket106'
+            />
+            <Divider color='middle' className={dividerClassName} />
+            <RadioGroup
+              name='stories'
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
+              value={value}
+            >
+              <Radio disabled={false} value='story1' label='story1' description='description1' />
+              <Radio disabled={false} value='story2' label='story2' description='description2' />
+              <Radio disabled={false} value='story3' label='story3' description='description3' />
+            </RadioGroup>
+            <Input
+              label='Label'
+              value={value}
+              onChange={e => setValue(e.target.value)}
+              placeholder='Пример: Project1-bucket106'
+            />
+            <Divider color='middle' className={dividerClassName} />
+            <RadioGroup
+              name='stories'
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
+              value={value}
+            >
+              <Radio disabled={false} value='story1' label='story1' description='description1' />
+              <Radio disabled={false} value='story2' label='story2' description='description2' />
+              <Radio disabled={false} value='story3' label='story3' description='description3' />
+            </RadioGroup>
+          </DrawerContent>
+        </Drawer>
+      </DrawerWrap>
+    </Wrap>
   );
 };
 
 export const drawer = Template.bind({});
 drawer.args = {};
+drawer.argTypes = {
+  container: {
+    control: {
+      type: 'boolean',
+    },
+  },
+};
 drawer.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/file/9UAhwzTGUnOFaczS5Q5v5c/SberCloud-%E2%86%92-Design_System?node-id=2726%3A88020',
   },
 };
