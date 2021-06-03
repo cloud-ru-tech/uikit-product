@@ -9,7 +9,6 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Bug Fixes
 
 * client model table story file was renamed ([6a7c216](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/6a7c216162f7c16dd567ac8b2e8b8d30985e93e1))
-* init script contains latest version of theme package, readmes were updated ([50bf916](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/50bf9165beddd3b376bf092d515321942b14f8e5))
 * pagination state on not empty search and refreshed state ([d1d2df8](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/d1d2df8263bcbe8ce8ec872063f68506433e1129))
 
 

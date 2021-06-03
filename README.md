@@ -1,7 +1,8 @@
 # Sbercloud uikit monorepo [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/)
 Ведется автоматическое версионирование на уровне пакетов (semantic).
 
-## [Storybook.](https://uikit.test.devops.sbercloud.dev/?path=/story/components--logs-view)
+## [Storybook [Latest master].](https://uikit.test.devops.sbercloud.dev/)
+## [Storybook [Poc stand].](http://192.168.67.22:32333/)
 
 ## Обязательно к изучению до начала работы: [Contribution Guide](CONTRIBUTION.md). Если после этого остались вопросы напишите в слак [канал](https://ai-sbercloud.slack.com/archives/C0114075H1B).
 

@@ -57,7 +57,11 @@ function generateRows(count: number): DataModel[] {
   return res;
 }
 
-const Template: Story<ClientModelTableProps<DataModel> & { rowsAmount: number }> = ({ rowsAmount, ...args }) => {
+const Template: Story<ClientModelTableProps<DataModel> & { rowsAmount: number; showDelete: boolean }> = ({
+  rowsAmount,
+  showDelete,
+  ...args
+}) => {
   const [data, setData] = useState<DataModel[]>(generateRows(rowsAmount));
 
   useEffect(() => {
@@ -67,13 +71,25 @@ const Template: Story<ClientModelTableProps<DataModel> & { rowsAmount: number }>
     }, 1000);
   }, [rowsAmount]);
 
+  const bulkActions: ClientModelTableProps<DataModel>['bulkActions'] = {
+    delete: {
+      onDelete(ids: string[]): void {
+        setData(data.filter(({ name }) => !ids.includes(name)));
+      },
+      title: 'Delete Title',
+      description: 'Delete description',
+      approveText: 'approve',
+      cancelText: 'cancel',
+    },
+  };
+
   return (
     <CMTable
       fieldId={args.fieldId}
       language={args.language}
       data={data}
       columnDefinitions={args.columnDefinitions}
-      bulkActions={args.bulkActions}
+      bulkActions={showDelete ? bulkActions : undefined}
       pageSize={args.pageSize}
       onRefreshCallback={() => setData(generateRows(rowsAmount))}
     />
@@ -92,18 +108,6 @@ const ButtonGroup = styled.div`
 export const clientModelTable = Template.bind({});
 clientModelTable.args = {
   fieldId: 'name',
-  bulkActions: {
-    delete: {
-      onDelete(ids: string[]): void | Promise<void> {
-        // eslint-disable-next-line no-console
-        console.log(ids);
-      },
-      title: 'Delete Title',
-      description: 'Delete description',
-      approveText: 'approve',
-      cancelText: 'cancel',
-    },
-  },
   columnDefinitions: [
     {
       headerName: 'Name',
@@ -185,6 +189,14 @@ clientModelTable.argTypes = {
       step: 1,
     },
   },
+  showDelete: {
+    defaultValue: true,
+    name: '[Stories]: show or hide delete button from toolbar',
+    description: 'demonstration purposes only, this parameter does not exist in component',
+    control: {
+      type: 'boolean',
+    },
+  },
 };
 clientModelTable.parameters = {
   readme: {
@@ -192,7 +204,6 @@ clientModelTable.parameters = {
   },
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/file/9UAhwzTGUnOFaczS5Q5v5c/SberCloud-%E2%86%92-Design_System?node-id=7%3A8441',
   },
 };
