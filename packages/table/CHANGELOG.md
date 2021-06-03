@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.3](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.0.2...@sbercloud/uikit-react-table@0.0.3) (2021-06-03)
+
+
+### Bug Fixes
+
+* fix pagination state after delete, fix unnecessary rerenders, story of ClientModelTable was updated ([7e1c82d](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/7e1c82dd53abd8e1bdb6dc43cdaa4fb15d5af1d0))
+
+
+
+
+
 ## [0.0.2](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.0.1...@sbercloud/uikit-react-table@0.0.2) (2021-06-01)
 
 
