@@ -1,5 +1,4 @@
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
@@ -144,6 +143,8 @@ export const ButtonComponent = styled.button`
   }
 
   &[data-variant='table-menu'] {
+    padding: 10px 12px;
+
     fill: var(${COLORS_BUTTON.TABLE_MENU_BUTTON_COLOR});
     background-color: transparent;
     &:hover {
