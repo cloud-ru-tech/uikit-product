@@ -1,3 +1,4 @@
+import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
@@ -13,11 +14,32 @@ export default {
   decorators: [addReadme, withDesign],
 } as Meta;
 
-const Template: Story<MoreButtonProps> = ({ ...args }) => <MoreButton {...args} />;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin: auto;
+`;
+
+const Template: Story<MoreButtonProps> = ({ ...args }) => (
+  <Wrapper>
+    {Object.values(MoreButton.placements).map(placement => (
+      <>
+        <span>{`placement "${placement}": `}</span>
+        <MoreButton {...args} placement={placement} />
+      </>
+    ))}
+  </Wrapper>
+);
 
 export const moreButton = Template.bind({});
 moreButton.args = {
-  actions: [{ name: 'Удалить', onClick: () => {} }],
+  actions: [
+    { name: 'Удалить', onClick: () => {} },
+    { name: 'Edit', onClick: () => {} },
+    { name: 'A little bit longer string', onClick: () => {} },
+  ],
 };
 moreButton.parameters = {
   readme: {
