@@ -6,12 +6,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ## [0.0.2](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/compare/@sbercloud/uikit-react-drawer@0.0.1...@sbercloud/uikit-react-drawer@0.0.2) (2021-06-04)
 
 
+### BREAKING CHANGES
+
+- Changed props: removed height, hasPaddingMode. Changed container prop type.
+
 ### Bug Fixes
 
-* init script contains latest version of theme package, readmes were updated ([50bf916](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/50bf9165beddd3b376bf092d515321942b14f8e5))
-
-
-
+- Added click listener to close drawer
 
 
 ## v0.0.1
