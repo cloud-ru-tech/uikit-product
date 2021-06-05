@@ -1,26 +1,27 @@
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { CSSProperties } from 'react';
 import { Props, Styles, Theme } from 'react-select';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-
 const { COLORS_GENERAL, COLORS_SELECT } = EXPORT_VARS;
 
-export const theme = (typeTheme?: Partial<Theme>) => (theme: Theme): Theme => ({
-  ...theme,
-  borderRadius: 4,
-  ...(typeTheme || {}),
-  spacing: {
-    ...theme.spacing,
-    baseUnit: 4,
-    controlHeight: 36,
-    menuGutter: 4,
-    ...(typeTheme?.spacing || {}),
-  },
-  colors: {
-    ...theme.colors,
-    ...(typeTheme?.colors || {}),
-  },
-});
+export const theme =
+  (typeTheme?: Partial<Theme>) =>
+  (theme: Theme): Theme => ({
+    ...theme,
+    borderRadius: 4,
+    ...(typeTheme || {}),
+    spacing: {
+      ...theme.spacing,
+      baseUnit: 4,
+      controlHeight: 36,
+      menuGutter: 4,
+      ...(typeTheme?.spacing || {}),
+    },
+    colors: {
+      ...theme.colors,
+      ...(typeTheme?.colors || {}),
+    },
+  });
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 export const styles = (typeStyles?: Styles): Styles => ({

@@ -1,7 +1,6 @@
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { CSSProperties } from 'react';
 import { Theme } from 'react-select';
-
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { styles as commonStyles, theme as commonTheme } from './common';
 
@@ -20,10 +19,13 @@ export const styles = commonStyles({
       ...styles,
       cursor: isDisabled ? 'not-allowed' : 'pointer',
       border: 0,
+      boxShadow: 'none',
       ...(isDisabled ? { color: `var(${COLORS_SELECT.DISABLED_BORDER_COLOR})` } : {}),
       backgroundColor: `var(${COLORS_SELECT.BACKGROUND_WITH_LOGO})`,
       '&:hover': {
         backgroundColor: `var(${COLORS_SELECT.BACKGROUND_WITH_LOGO_HOVER})`,
+        border: 0,
+        boxShadow: 'none',
       },
     };
   },
