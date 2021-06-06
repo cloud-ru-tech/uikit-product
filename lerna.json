@@ -10,6 +10,7 @@
       "registry": "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/"
     },
     "version": {
+      "changelogPreset": "conventional-changelog-sbercloud",
       "ignoreChanges": [
         "**/*.md",
         "**/*.MD",
