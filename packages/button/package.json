@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-button",
   "title": "React Button",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,7 +22,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/icons": "1.0.15-14c9f91b",
-    "@sbercloud/uikit-react-tooltip": "0.0.1",
+    "@sbercloud/uikit-react-tooltip": "0.0.2",
     "@sbercloud/uikit-theme": "0.0.1",
     "@sbercloud/uikit-typography": "0.0.1",
     "copy-to-clipboard": "3.3.1"

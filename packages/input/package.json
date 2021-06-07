@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-input",
   "title": "React Input",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,7 +22,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/icons": "1.0.15-14c9f91b",
-    "@sbercloud/uikit-react-button": "0.1.0",
+    "@sbercloud/uikit-react-button": "0.1.1",
     "@sbercloud/uikit-theme": "0.0.1",
     "copy-to-clipboard": "3.3.1",
     "react-input-autosize": "3.0.0",
