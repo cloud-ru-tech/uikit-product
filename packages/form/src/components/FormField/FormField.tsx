@@ -1,27 +1,31 @@
 import { HelpSVG } from '@sbercloud/icons';
 import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
 
-import { Error, Label, Wrapper, hintClassName, tooltipTriggerClassName } from './styled';
+import * as S from './styled';
 
 export type FormFieldProps = {
   label?: string;
   hint?: string;
+  description?: string;
+  required?: boolean;
   error?: string;
 };
 
-export const FormField: React.FC<FormFieldProps> = ({ label, hint, error, children }) => (
-  <Wrapper>
+export const FormField: React.FC<FormFieldProps> = ({ label, hint, description, required, error, children }) => (
+  <S.Wrapper>
     {label && (
-      <Label>
+      <S.Label>
         {label}
         {hint && (
-          <BasicTooltip tooltip={hint} classNameTrigger={tooltipTriggerClassName}>
-            <HelpSVG size={20} className={hintClassName} />
+          <BasicTooltip tooltip={hint} classNameTrigger={S.tooltipTriggerClassName}>
+            <HelpSVG size={20} className={S.hintClassName} />
           </BasicTooltip>
         )}
-      </Label>
+      </S.Label>
     )}
     {children}
-    {error && <Error>{error}</Error>}
-  </Wrapper>
+    {required && !error && <S.Required>Обязательно для заполнения</S.Required>}
+    {error && <S.Error>{error}</S.Error>}
+    {description && <S.Description>{description}</S.Description>}
+  </S.Wrapper>
 );

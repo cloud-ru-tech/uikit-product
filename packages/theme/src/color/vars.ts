@@ -331,8 +331,10 @@ const COLORS_FORM_GROUP = {
 };
 
 const COLORS_FORM_FIELD = {
-  HINT_COLOR: '--form-group-hint-color',
-  ERROR_COLOR: '--form-group-error-color',
+  HINT_COLOR: '--form-field-hint-color',
+  ERROR_COLOR: '--form-field-error-color',
+  REQUIRED_COLOR: '--form-field-required-color',
+  DESCRIPTION_COLOR: '--form-field-description-color',
 };
 
 const COLORS_DRAWER = {
