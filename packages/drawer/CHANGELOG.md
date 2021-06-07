@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/compare/@sbercloud/uikit-react-drawer@0.0.4...@sbercloud/uikit-react-drawer@0.0.5) (2021-06-07)
+
+
+### Bug Fixes
+
+* header - semibold | AICDC-2448 ([7f6e0f8](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/7f6e0f86b570b47aa916c1540ac3601cbfcab783))
+
+
+
+
+
 ## [0.0.4](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/compare/@sbercloud/uikit-react-drawer@0.0.2...@sbercloud/uikit-react-drawer@0.0.4) (2021-06-04)
 
 
