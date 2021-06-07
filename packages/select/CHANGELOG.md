@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.5](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/compare/@sbercloud/uikit-react-select@0.0.4...@sbercloud/uikit-react-select@0.0.5) (2021-06-07)
+
+
+### Bug Fixes
+
+* with-logo color | AICDC-2448 ([d1bb8f7](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/d1bb8f78420652fd8e0e8b074cab452d3cb5a3a7))
+
+
+
+
+
 ## [0.0.4](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/compare/@sbercloud/uikit-react-select@0.0.2...@sbercloud/uikit-react-select@0.0.4) (2021-06-04)
 
 
