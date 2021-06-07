@@ -9,4 +9,5 @@ export const tooltipStyle = css`
 
 export const triggerStyle = css`
   height: 100%;
+  cursor: pointer;
 `;
