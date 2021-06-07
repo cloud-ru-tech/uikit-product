@@ -1,8 +1,7 @@
+import { CloseSVG, EyeCloseSVG, EyeSVG } from '@sbercloud/icons';
+import { CopyButton } from '@sbercloud/uikit-react-button';
 import copyText from 'copy-to-clipboard';
 import { forwardRef, useCallback, useEffect, useState } from 'react';
-
-import { CrossSVG, EyeClosedSVG, EyeSVG } from '@sbercloud/icons';
-import { CopyButton } from '@sbercloud/uikit-react-button';
 
 import { getInputType } from '../../helpers/getInputType';
 import { IInputProps } from '../../helpers/types';
@@ -139,13 +138,13 @@ export const Input = forwardRef<HTMLInputElement, IInputProps>(
           <StyledIconWrapper>
             {!disabled && allowClear && correctValue && correctValue !== '' && (
               <StyledClearButton onClick={handleClickClear}>
-                <CrossSVG />
+                <CloseSVG />
               </StyledClearButton>
             )}
             {postfix}
             {type === 'security' ? (
               <StyledSecurityButton onClick={(): void => setViewMode(!isViewMode)}>
-                {isViewMode ? <EyeSVG /> : <EyeClosedSVG />}
+                {isViewMode ? <EyeCloseSVG /> : <EyeSVG />}
               </StyledSecurityButton>
             ) : null}
             {allowCopy && (

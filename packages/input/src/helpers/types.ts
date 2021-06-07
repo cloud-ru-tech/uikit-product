@@ -20,4 +20,6 @@ export type IInputProps = {
   wrapperRef?: RefObject<HTMLDivElement>;
   onScroll?: (event: React.UIEvent<HTMLInputElement>) => void | boolean;
   error?: boolean;
+  name?: string;
+  autocomplete?: string;
 };
