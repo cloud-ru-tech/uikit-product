@@ -1,4 +1,3 @@
-import { addons } from '@storybook/addons';
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 
@@ -28,13 +27,6 @@ addDecorator(Story => {
       <Story />
     </div>
   );
-});
-
-addons.setConfig({
-  panelPosition: 'right',
-  sidebar: {
-    showRoots: true,
-  },
 });
 
 addParameters({
