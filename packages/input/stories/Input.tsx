@@ -6,7 +6,7 @@ import { addReadme } from 'storybook-readme';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { IInputProps, Input } from '../src';
+import { Input, InputProps } from '../src';
 
 export default {
   title: 'Components/Input/Input',
@@ -14,7 +14,7 @@ export default {
   decorators: [addReadme, withDesign],
 } as Meta;
 
-const Template: Story<IInputProps> = ({ ...args }) => {
+const Template: Story<InputProps> = ({ ...args }) => {
   const [value, setValue] = useState<string | undefined>();
 
   return (

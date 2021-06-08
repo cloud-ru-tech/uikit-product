@@ -1,13 +1,12 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
-
 import { Input } from '@sbercloud/uikit-react-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
 import { Slider } from '@sbercloud/uikit-react-slider';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -36,7 +35,7 @@ const Template: Story = () => {
     <Wrapper>
       <FormGroup number={1} title='Общая информация' hint={'Подсказка'}>
         <FormField label='Произвольное число'>
-          <Input type='number' value={value} onChange={(e: any) => setValue(Number(e.target.value))} />
+          <Input type={Input.types.number} value={value} onChange={(e: any) => setValue(Number(e.target.value))} />
         </FormField>
 
         <FormField>
@@ -54,7 +53,7 @@ const Template: Story = () => {
 
       <FormGroup number={2} title='Общая информация' hint={'Подсказка'}>
         <FormField label='Произвольное число'>
-          <Input type='number' value={value} onChange={(e: any) => setValue(Number(e.target.value))} />
+          <Input type={Input.types.number} value={value} onChange={(e: any) => setValue(Number(e.target.value))} />
         </FormField>
 
         <FormField>

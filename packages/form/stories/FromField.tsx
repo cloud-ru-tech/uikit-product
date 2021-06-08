@@ -30,7 +30,12 @@ const Template: Story<FormFieldProps> = ({ label, hint, error, required, descrip
   return (
     <Wrapper>
       <FormField label={label} hint={hint} error={error} required={required} description={description}>
-        <Input type='number' value={value} onChange={e => setValue(Number(e.target.value))} error={Boolean(error)} />
+        <Input
+          type={Input.types.number}
+          value={value}
+          onChange={e => setValue(Number(e.target.value))}
+          error={Boolean(error)}
+        />
       </FormField>
     </Wrapper>
   );

@@ -1,10 +1,10 @@
 import { CloseSVG, SearchSVG } from '@sbercloud/icons';
-import { IInputProps, Input } from '@sbercloud/uikit-react-input';
+import { Input, InputProps } from '@sbercloud/uikit-react-input';
 import { FC, createRef, useEffect, useState } from 'react';
 
 import { InputWrapStyled, crossIconClassName, inputClassName, searchIconClassname } from './styled';
 
-export interface ToolbarInputProps extends Omit<IInputProps, 'onChange'> {
+export interface ToolbarInputProps extends Omit<InputProps, 'onChange'> {
   onChange: (value: string) => void;
 }
 
@@ -38,7 +38,7 @@ export const ToolbarInput: FC<ToolbarInputProps> = ({ value, onChange, wrapperCl
         }}
         className={inputClassName}
         wrapperClassName={wrapperClassName}
-        type='embed'
+        type={Input.types.embed}
         postfix={
           value ? (
             <CloseSVG
