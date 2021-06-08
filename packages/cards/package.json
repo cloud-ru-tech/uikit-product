@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-cards",
   "title": "React Cards",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -28,8 +28,8 @@
     "@sbercloud/uikit-theme": "0.0.1"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-input": "0.0.4",
-    "@sbercloud/uikit-react-tag": "0.0.5",
+    "@sbercloud/uikit-react-input": "0.0.5",
+    "@sbercloud/uikit-react-tag": "0.0.6",
     "@sbercloud/uikit-typography": "0.0.1"
   },
   "peerDependencies": {
