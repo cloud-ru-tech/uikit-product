@@ -1,5 +1,4 @@
 import { styled } from '@linaria/react';
-
 import { InputAutosize } from '@sbercloud/uikit-react-input';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
@@ -72,6 +71,14 @@ export const StyledTag = styled.div<{ type: TTagType }>`
 
   &[data-tag-color='${PRESET_COLORS[9]}'] {
     background-color: var(${COLORS_TAG.TAG_BG_YELLOW});
+  }
+
+  &[data-tag-color='${PRESET_COLORS[10]}'] {
+    background-color: var(${COLORS_TAG.TAG_BG_YELLOW_GREEN});
+  }
+
+  &[data-tag-color='${PRESET_COLORS[11]}'] {
+    background-color: var(${COLORS_TAG.TAG_BG_BLUE_GREEN});
   }
 `;
 

@@ -1,6 +1,5 @@
-import { useCallback } from 'react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { useCallback } from 'react';
 
 import { PRESET_COLORS, PresetColorType } from '../helpers/colors';
 import { StyledInputAutosize, StyledTag } from './styled';
@@ -40,6 +39,8 @@ const presetColors = {
   [PRESET_COLORS[7]]: COLORS_TAG.TAG_BG_BROWN,
   [PRESET_COLORS[8]]: COLORS_TAG.TAG_BG_ORANGE,
   [PRESET_COLORS[9]]: COLORS_TAG.TAG_BG_YELLOW,
+  [PRESET_COLORS[10]]: COLORS_TAG.TAG_BG_YELLOW_GREEN,
+  [PRESET_COLORS[11]]: COLORS_TAG.TAG_BG_BLUE_GREEN,
 };
 
 const getTagStyles = ({

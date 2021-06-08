@@ -171,6 +171,8 @@ export const purple = css`
       ${COLORS_TAG.TAG_BG_BROWN}: #e6d6d0;
       ${COLORS_TAG.TAG_BG_ORANGE}: #fae1d5;
       ${COLORS_TAG.TAG_BG_YELLOW}: #f9eed8;
+      ${COLORS_TAG.TAG_BG_YELLOW_GREEN}: #ecedcd;
+      ${COLORS_TAG.TAG_BG_BLUE_GREEN}: #e0f4f4;
       ${COLORS_TAG.TAG_TYPE_CARD_COLOR}: var(${COLORS.GRAY_6});
       ${COLORS_TAG.TAG_TYPE_CARD_BACKGROUND}: var(${COLORS.GRAY_1});
 

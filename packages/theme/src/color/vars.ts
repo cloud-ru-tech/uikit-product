@@ -66,6 +66,8 @@ const COLORS_TAG = {
   TAG_BG_BROWN: '--tag-bg-brown',
   TAG_BG_ORANGE: '--tag-bg-orange',
   TAG_BG_YELLOW: '--tag-bg-yellow',
+  TAG_BG_YELLOW_GREEN: '--tag-bg-yellow-green',
+  TAG_BG_BLUE_GREEN: '--tag-bg-blue-green',
   TAG_TYPE_CARD_BACKGROUND: '--tag-type-card-background',
   TAG_TYPE_CARD_COLOR: '--tag-type-card-color',
 };

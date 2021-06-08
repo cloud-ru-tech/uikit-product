@@ -9,6 +9,8 @@ export const PRESET_COLORS = [
   'brown',
   'orange',
   'yellow',
+  'yellow-green',
+  'blue-green',
 ] as const;
 
 export type PresetColorType = typeof PRESET_COLORS[number];
