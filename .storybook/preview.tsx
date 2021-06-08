@@ -1,3 +1,4 @@
+import { addons } from '@storybook/addons';
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 
@@ -29,8 +30,14 @@ addDecorator(Story => {
   );
 });
 
-addParameters({
+addons.setConfig({
   panelPosition: 'right',
+  sidebar: {
+    showRoots: true,
+  },
+});
+
+addParameters({
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
