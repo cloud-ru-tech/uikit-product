@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-modal",
   "title": "React Modal",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,10 +22,10 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/icons": "1.0.15-14c9f91b",
-    "@sbercloud/uikit-react-button": "0.1.1",
-    "@sbercloud/uikit-react-divider": "0.0.1",
-    "@sbercloud/uikit-react-tooltip": "0.0.2",
-    "@sbercloud/uikit-theme": "0.0.1",
+    "@sbercloud/uikit-react-button": "0.1.2",
+    "@sbercloud/uikit-react-divider": "0.0.2",
+    "@sbercloud/uikit-react-tooltip": "0.0.3",
+    "@sbercloud/uikit-theme": "0.1.0",
     "react-modal": "3.13.1"
   },
   "devDependencies": {
