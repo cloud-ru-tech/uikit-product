@@ -21,7 +21,7 @@ export const LeftIconBoxStyled = styled.div`
 `;
 
 export const ContentBoxStyled = styled.div<{ footerPadding: number }>`
-  min-height: 100%;
+  height: 100%;
   z-index: -1;
   position: relative;
   padding-bottom: ${props => props.footerPadding}px;
@@ -73,5 +73,7 @@ export const drawerWrapperClassName = css`
   .drawer-content {
     width: 100%;
     background: inherit;
+    display: flex;
+    flex-direction: column;
   }
 `;
