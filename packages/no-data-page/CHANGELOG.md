@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 0.1.0 (2021-06-09)
+
+
+### Features
+
+* add NoDataPage | [AICDC-2295](https://jira.sbercloud.tech/browse/AICDC-2295) ([6342d23](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/6342d237258c9c3771c3f04d78d98d9d14748808))
+
+
+
+
+
 ## CHANGELOG
 
 ### v0.0.1
