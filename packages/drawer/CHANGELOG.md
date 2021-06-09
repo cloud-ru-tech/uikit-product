@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.9](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.0.8&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.0.9) (2021-06-09)
+
+
+### Bug Fixes
+
+* [AICDC-2489](https://jira.sbercloud.tech/browse/AICDC-2489): fixed drawer height ([81ba1ca](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/81ba1ca649ded798bc0d28c2a87d11a3812a10f4))
+
+
+
+
+
 ## [0.0.8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.0.7&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.0.8) (2021-06-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drawer
