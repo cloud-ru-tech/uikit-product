@@ -458,6 +458,12 @@ const COLORS_FILTER = {
   FILTER_ACTION_BUTTON_DISABLED_FILLED: '--filter-action-button-disabled-filled',
 };
 
+const COLORS_NO_DATA_PAGE = {
+  ICON_FILL: '--nodatapage-icon-fill',
+  TITLE_COLOR: '--nodatapage-title-color',
+  CONTENT_COLOR: '--nodatapage-content-color',
+};
+
 export {
   COLORS,
   COLORS_BRAND,
@@ -494,6 +500,7 @@ export {
   COLORS_TABLE,
   TABLE_BUTTON_COLORS,
   COLORS_FILTER,
+  COLORS_NO_DATA_PAGE,
 };
 
 export default {
@@ -532,4 +539,5 @@ export default {
   COLORS_TABLE,
   TABLE_BUTTON_COLORS,
   COLORS_FILTER,
+  COLORS_NO_DATA_PAGE,
 };
