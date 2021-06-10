@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-form",
   "title": "React Form",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -27,7 +27,7 @@
     "@sbercloud/uikit-typography": "0.0.3"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-input": "0.0.7",
+    "@sbercloud/uikit-react-input": "0.1.0",
     "@sbercloud/uikit-react-radio": "0.0.3",
     "@sbercloud/uikit-react-slider": "0.0.3"
   },

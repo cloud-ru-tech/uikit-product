@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.0.8&sourceBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.1.0) (2021-06-10)
+
+
+### Features
+
+* add property getInstance instead ref; call onChange on clear | [AICDC-2448](https://jira.sbercloud.tech/browse/AICDC-2448) ([342eb73](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/342eb73f61f13b6f4aa333ad2aad8d0774169ff3))
+
+
+
+
+
 ## [0.0.8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.0.7&sourceBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.0.8) (2021-06-10)
 
 

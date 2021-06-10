@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tabs@0.0.7&sourceBranch=refs/tags/@sbercloud/uikit-react-tabs@0.0.8) (2021-06-10)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-tabs
+
+
+
+
+
 ## [0.0.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tabs@0.0.6&sourceBranch=refs/tags/@sbercloud/uikit-react-tabs@0.0.7) (2021-06-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tabs
