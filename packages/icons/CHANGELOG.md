@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@0.1.0&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@0.2.0) (2021-06-10)
+
+
+### Features
+
+* add data-test-id to each icon ([218fcb3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/218fcb3ceaf841cbfcb9e11dbb93bcaf53de287a))
+
+
+
+
+
 # [0.1.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@0.0.9&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@0.1.0) (2021-06-10)
 
 
