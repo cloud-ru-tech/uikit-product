@@ -1,7 +1,6 @@
-import { FC, createRef, useEffect, useState } from 'react';
-
-import { CrossSVG, SearchSVG } from '@sbercloud/icons';
+import { CloseSVG, SearchSVG } from '@sbercloud/icons';
 import { IInputProps, Input } from '@sbercloud/uikit-react-input';
+import { FC, createRef, useEffect, useState } from 'react';
 
 import { InputWrapStyled, crossIconClassName, inputClassName, searchIconClassname } from './styled';
 
@@ -42,7 +41,7 @@ export const ToolbarInput: FC<ToolbarInputProps> = ({ value, onChange, wrapperCl
         type='embed'
         postfix={
           value ? (
-            <CrossSVG
+            <CloseSVG
               className={crossIconClassName}
               onClick={(): void => {
                 onChange('');

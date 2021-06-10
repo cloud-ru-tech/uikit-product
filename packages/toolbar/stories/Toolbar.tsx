@@ -1,9 +1,8 @@
+import { DeleteSVG, FilterSVG, RefreshSVG, RowExpandedSVG, TableSettingsSVG } from '@sbercloud/icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { ExcludeSVG, FilterSVG, RefreshSVG, RowExpandedSVG, TrashSVG } from '@sbercloud/icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -24,7 +23,7 @@ const Template: Story<ToolbarWrapperProps> = ({ ...args }) => {
         <RefreshSVG />
       </Toolbar.Button>
       <Toolbar.Button disabled>
-        <TrashSVG />
+        <DeleteSVG />
       </Toolbar.Button>
       <Toolbar.Input
         value={value}
@@ -39,7 +38,7 @@ const Template: Story<ToolbarWrapperProps> = ({ ...args }) => {
         <RowExpandedSVG />
       </Toolbar.Button>
       <Toolbar.Button isActive>
-        <ExcludeSVG />
+        <TableSettingsSVG />
       </Toolbar.Button>
     </Toolbar.Wrapper>
   );
