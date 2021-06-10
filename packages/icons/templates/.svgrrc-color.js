@@ -6,5 +6,8 @@ module.exports = {
   svgoConfig: {
     plugins: { removeViewBox: false },
   },
+  svgProps: {
+    'data-test-id': '{testId}',
+  },
   typescript: true,
 };

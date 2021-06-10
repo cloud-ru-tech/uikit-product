@@ -6,6 +6,9 @@ const template =
 
     opts.expandProps = [];
 
+    const cnt = `${componentName.name}`.replace('Svg', '').replace(/[A-Z]/g, x => '-' + x.toLowerCase());
+    const testId = 'icon' + cnt;
+
     const componentProp = Boolean(size)
       ? `{ size = ${size}, ...props }: ISvgIconProps`
       : `{ size, ...props }: ISvgIconProps`;
@@ -30,7 +33,9 @@ const template =
     const ${componentName} = (${componentProp}): React.ReactElement | null => {
       props.width = undefined;
       props.height = undefined;
-
+      
+      const testId = "${testId}";
+      
       const style: React.CSSProperties = {};
       const isCustomSize = typeof size === "number"
       if(isCustomSize) {
