@@ -78,8 +78,7 @@ inheritColor.parameters = {
   },
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/TEMP-DESIGN-SYSTEM?node-id=422%3A10028',
   },
 };
 inheritColor.argTypes = {};

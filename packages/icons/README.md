@@ -1,5 +1,6 @@
 # React Icons
+`@sbercloud/icons` is no longer needed (**deprecated**). 
 
-[Changelog](./CHANGELOG.md)
+## Installation
 
-
+`npm i @sbercloud/uikit-react-icons`
