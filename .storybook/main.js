@@ -24,6 +24,9 @@ module.exports = {
     },
     'storybook-addon-themes',
   ],
+  core: {
+    builder: 'webpack5',
+  },
   typescript: {
     check: true,
     reactDocgen: 'react-docgen-typescript',
