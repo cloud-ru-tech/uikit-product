@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.1.0&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.2.0) (2021-06-10)
+
+
+### Features
+
+* add props name, autoComplete | [AICDC-2448](https://jira.sbercloud.tech/browse/AICDC-2448) ([7edd8c5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/7edd8c5cb704fb2e2332a3f360658998fb9127d4))
+
+
+
+
+
 # [0.1.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.0.7&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.1.0) (2021-06-10)
 
 

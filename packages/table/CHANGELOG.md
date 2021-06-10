@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.13](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.0.12&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.0.13) (2021-06-10)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-table
+
+
+
+
+
 ## [0.0.12](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.0.11&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.0.12) (2021-06-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
