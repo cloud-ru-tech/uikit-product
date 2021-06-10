@@ -10,7 +10,8 @@ import { addReadme } from 'storybook-readme';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import * as Icons from '../src/components/icons';
+import { CloseSVG, SearchSVG } from '../src/components/icons';
+import * as Icons from '../src/components/icons-services';
 
 const Group = styled.div`
   margin-top: 24px;
@@ -40,13 +41,13 @@ const Template: Story = () => {
         }}
         postfix={
           search ? (
-            <Icons.CloseSVG
+            <CloseSVG
               onClick={(): void => {
                 setSearch('');
               }}
             />
           ) : (
-            <Icons.SearchSVG />
+            <SearchSVG />
           )
         }
         placeholder='Поиск'
@@ -69,10 +70,10 @@ const Template: Story = () => {
   );
 };
 
-export const inheritColor = Template.bind({});
+export const services = Template.bind({});
 
-inheritColor.args = {};
-inheritColor.parameters = {
+services.args = {};
+services.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
@@ -82,10 +83,10 @@ inheritColor.parameters = {
     url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
   },
 };
-inheritColor.argTypes = {};
+services.argTypes = {};
 
 export default {
-  title: 'Not stable/Icons/Inherit Color',
+  title: 'Not stable/Icons/Services',
   component: Group,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -1,6 +1,4 @@
 import { styled } from '@linaria/react';
-import { CrossSVG, SearchSVG } from '@sbercloud/icons';
-import * as Icons from '@sbercloud/icons/build/icons-color';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Text2 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
@@ -11,6 +9,8 @@ import { addReadme } from 'storybook-readme';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
+import { CloseSVG, SearchSVG } from '../src/components/icons';
+import * as Icons from '../src/components/icons-color';
 
 const Group = styled.div`
   margin-top: 24px;
@@ -42,7 +42,7 @@ const Template: Story = () => {
         }}
         postfix={
           search ? (
-            <CrossSVG
+            <CloseSVG
               onClick={(): void => {
                 setSearch('');
               }}
