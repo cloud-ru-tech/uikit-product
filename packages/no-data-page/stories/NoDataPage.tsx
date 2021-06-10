@@ -11,7 +11,7 @@ import { NoDataPage, NoDataPageProps } from '../src';
 import { NoDataPageVariants } from '../src/helpers/types';
 
 export default {
-  title: 'Components/No Data Page',
+  title: 'Not stable/No Data Page',
   component: NoDataPage,
   decorators: [addReadme, withDesign],
 } as Meta;
