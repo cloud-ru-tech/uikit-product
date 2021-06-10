@@ -78,7 +78,7 @@ inheritColor.parameters = {
   },
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/TEMP-DESIGN-SYSTEM?node-id=422%3A10028',
+    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/TEMP-DESIGN-SYSTEM?node-id=212%3A350',
   },
 };
 inheritColor.argTypes = {};
