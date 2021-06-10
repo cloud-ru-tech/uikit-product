@@ -64,10 +64,10 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
   const [inputValue, setInputSearch] = useState<string>();
   const [isOpen, setIsOpen] = useState(false);
   const [customStyles, setCustomStyles] = useState(getSelectorStyles(type));
-  const closeMenu = (): void => {
+  const closeMenu = useCallback((): void => {
     setIsOpen(false);
     onMenuClose?.();
-  };
+  }, [onMenuClose]);
 
   useEffect(() => {
     setCustomStyles(getSelectorStyles(type));
@@ -108,7 +108,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
     }
     const nextOptions = filterOptions(options, inputValue);
     setOptions(nextOptions);
-  }, [options, inputValue, isSearchable]);
+  }, [options, inputValue, isSearchable, filterOptions]);
 
   const clickOutside = useCallback(
     event => {
@@ -130,7 +130,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
     return (): void => {
       document.removeEventListener('click', clickOutside);
     };
-  }, [isOpen]);
+  }, [clickOutside, isOpen]);
 
   const memoizeCustomComponents = useMemo(
     () =>
@@ -141,13 +141,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
         prefixMultiValueContainer,
         collapsedGroup,
       }),
-    [
-      prefixControl?.toString(),
-      prefixOption?.toString(),
-      postfixOption?.toString(),
-      prefixMultiValueContainer?.toString(),
-      collapsedGroup,
-    ],
+    [prefixControl, prefixOption, postfixOption, prefixMultiValueContainer, collapsedGroup],
   );
 
   const componentsState = useMemo(
