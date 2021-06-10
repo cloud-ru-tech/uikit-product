@@ -1,7 +1,6 @@
+import { CheckFilledSVG, CrossSVG, LoadingSVG, SmileSadSVG } from '@sbercloud/icons';
 import { ReactNode } from 'react';
 import { ToastContentProps } from 'react-toastify';
-
-import { CheckFilledSVG, CrossSVG, LoadingSVG, SmileSadSVG } from '@sbercloud/icons';
 
 import {
   Action,
@@ -21,7 +20,6 @@ export enum Variants {
   Info = 'info',
   Error = 'error',
 }
-
 
 export interface ToastAction {
   title: string;

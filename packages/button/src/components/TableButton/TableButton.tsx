@@ -9,9 +9,9 @@ export type TableButtonProps = {
 export function TableButton({ variant, ...rest }: TableButtonProps) {
   switch (variant) {
     case Variants.TextIcon:
-      return <TextIconButton {...((rest as unknown) as TextIconButtonProps)} />;
+      return <TextIconButton {...(rest as unknown as TextIconButtonProps)} />;
     case Variants.Icon:
-      return <IconButton {...((rest as unknown) as IconButtonProps)} />;
+      return <IconButton {...(rest as unknown as IconButtonProps)} />;
     case Variants.Menu:
       throw new Error('Not implemented');
     default:

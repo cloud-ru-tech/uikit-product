@@ -8,8 +8,10 @@ const declOfNumSubFunction = (titles: string[], number: number): string => {
   ];
 };
 
-const declination = (rest: (number: number) => string[]) => (number: number): string =>
-  declOfNumSubFunction(typeof rest === 'function' ? rest(number) : rest, number);
+const declination =
+  (rest: (number: number) => string[]) =>
+  (number: number): string =>
+    declOfNumSubFunction(typeof rest === 'function' ? rest(number) : rest, number);
 
 export default declination;
 

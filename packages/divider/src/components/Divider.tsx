@@ -4,7 +4,6 @@ import { StyledDivider } from './styled';
 
 const { COLORS_DIVIDER } = EXPORT_VARS;
 
-
 export type DividerProps = {
   color?: 'light' | 'middle' | 'dark' | string;
   style?: React.CSSProperties;
