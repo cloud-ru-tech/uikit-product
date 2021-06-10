@@ -4,7 +4,7 @@ import { Button } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
-import { Select } from '@sbercloud/uikit-select';
+import { Select } from '@sbercloud/uikit-react-select';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
