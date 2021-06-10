@@ -1,4 +1,4 @@
-import { ArtboardColorSVG } from '@sbercloud/icons';
+import { ColorArtboardSVG } from '@sbercloud/icons';
 import { H5 } from '@sbercloud/uikit-typography';
 
 import { Languages, Texts, textProvider } from '../../../helpers/texts-provider';
@@ -19,7 +19,7 @@ function getText(reason: NoDataReasons, language: Languages) {
 export function NoRowsOverlay({ reason, language }: { reason: NoDataReasons; language: Languages }) {
   return (
     <S.NoRowsMessageWrapper>
-      <ArtboardColorSVG size={65} />
+      <ColorArtboardSVG size={65} />
       <H5>{getText(reason, language)}</H5>
     </S.NoRowsMessageWrapper>
   );
