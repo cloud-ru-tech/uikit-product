@@ -36,6 +36,8 @@ export const Input = ({
   error,
   className,
   getInstance,
+  name,
+  autoComplete,
 }: InputProps) => {
   const inputEl = useRef<InputElementType>(null);
   const [correctValue, setCorrectValue] = useState(value);
@@ -132,6 +134,8 @@ export const Input = ({
             step={1}
             disabled={disabled}
             data-error={error || undefined}
+            name={name}
+            autoComplete={autoComplete}
           />
         </div>
         <StyledIconWrapper>

@@ -27,4 +27,6 @@ export interface InputProps {
   min?: number;
   className?: string;
   getInstance?: (instance: RefObject<HTMLInputElement>) => void;
+  name?: string;
+  autoComplete?: string;
 }
