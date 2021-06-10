@@ -1,5 +1,7 @@
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import { globals, green, greenDark, purple, purpleDark } from '../packages/theme/src';
 
@@ -14,6 +16,8 @@ const changeTheme = (theme: { name: string }) => {
   root.setAttribute('data-theme', theme?.name);
 };
 
+addDecorator(addReadme);
+addDecorator(withDesign);
 addDecorator(Story => {
   const root = document.querySelector('body');
   if (root && !root.getAttribute('data-theme')) {

@@ -119,8 +119,6 @@ const storyEntry = ({ componentName, packageRootFolderName }) => {
   const filePath = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/${Folders.stories}/index.tsx`);
   const fileContent =
     "import { Story, Meta } from '@storybook/react/types-6-0';\n\
-import { withDesign } from 'storybook-addon-designs';\n\
-import { addReadme } from 'storybook-readme';\n\
 import { " +
     `${componentName}, ${componentName}Props` +
     " } from '../src';\n\
@@ -136,7 +134,6 @@ export default {\n\
   component: " +
     `${componentName}` +
     ',\n\
-  decorators: [addReadme, withDesign],\n\
 } as Meta;\n\
 \n' +
     `const Template: Story<${componentName}Props> = ({ ...args }) => <${componentName} {...args} />;
