@@ -2,8 +2,6 @@
 FROM node:12-alpine AS builder
 COPY . .
 
-## NPMRC в хомяка тут :)
-
 RUN mkdir storybook-static
 RUN npm run all:cleaninstall
 RUN npm run build:storybook

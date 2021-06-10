@@ -1,14 +1,15 @@
 module.exports = buildType => ({
   sourceType: 'unambiguous',
   presets: [
-    !buildType && '@babel/preset-env',
+    !buildType && ['@babel/preset-env', { loose: false }],
     [
       '@babel/preset-react',
       {
         runtime: 'automatic',
+        loose: false,
       },
     ],
-    '@babel/preset-typescript',
+    ['@babel/preset-typescript', { loose: false }],
     !buildType && '@linaria',
   ].filter(Boolean),
   plugins: [
@@ -16,18 +17,5 @@ module.exports = buildType => ({
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-nullish-coalescing-operator',
-    [
-      'inline-react-svg',
-      {
-        ignorePattern: /assets\.svg$/,
-        svgo: {
-          plugins: [
-            {
-              cleanupIDs: true,
-            },
-          ],
-        },
-      },
-    ],
   ].filter(Boolean),
 });
