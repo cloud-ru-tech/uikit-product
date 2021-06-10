@@ -470,6 +470,48 @@ const COLORS_NO_DATA_PAGE = {
   CONTENT_COLOR: '--nodatapage-content-color',
 };
 
+const COLORS_DATEPICKER = {
+  BACKGROUND_COLOR: '--datepicker-background-color',
+  DATE_COLOR: '--datepicker-date-color',
+  DATE_HOVER_BACKGROUND_COLOR: '--datepicker-date-hover-background-color-color',
+  TODAY_COLOR: '--datepicker-today-color',
+  TODAY_BORDER_COLOR: '--datepicker-today-border-color',
+  DAY_NAME_COLOR: '--datepicker-day-name-color',
+  BORDER_COLOR: '--datepicker-border-color',
+  HIGHLITED_COLOR: '--datepicker-highlighted-color',
+  MUTED_COLOR: '--datepicker-muted-color',
+  SELECTED_COLOR: '--datepicker-selected-color',
+  SELECTED_BACKGROUND_COLOR: '--datepicker-selected-background-color',
+  SELECTED_BACKGROUND_HOVER_COLOR: '--datepicker-selected-background-hover-color',
+  TEXT_COLOR: '--datepicker-text-color',
+  HEADER_COLOR: '--datepicker-header-color',
+  NAVIGATION_COLOR: '--datepicker-navigation-color',
+  NAVIGATION_DISABLED_COLOR: '--datepicker-navigation-disabled-color',
+  INPUT_BACKGROUND_COLOR: '--datepicker-input-background-color',
+  INPUT_BORDER_COLOR: '--datepicker-input-border-color',
+  INPUT_FOCUS_BORDER: '--datepicker-input-focus-border',
+  INPUT_FOCUS_BACKGROUND: '--datepicker-input-focus-bg',
+  INPUT_HOVER_BORDER: '--datepicker-input-hover-border',
+  INPUT_HOVER_PLACEHOLDER_COLOR: '--datepicker-input-hover-placeholder-color',
+  INPUT_HOVER_BACKGROUND: '--datepicker-input-hover-bg',
+  INPUT_ERROR: '--datepicker-input-error',
+  INPUT_ERROR_BORDER: '--datepicker-input-error-border',
+  SELECT_TEXT: '--datepicker-select-text-color',
+  SELECT_HOVER_TEXT: '--datepicker-select-hover-text-color',
+  SELECT_SELECTED_TEXT: '--datepicker-select-selected-text-color',
+  SELECT_DISABLED_TEXT: '--datepicker-select-disabled-text-color',
+  SELECT_BACKGROUND: '--datepicker-select-background-color',
+  SELECT_HOVER_BACKGROUND: '--datepicker-select-hover-background-color',
+  SELECT_SELECTED_BACKGROUND: '--datepicker-select-selected-background-color',
+  DATE_INPUT_ICON_FILL: '--datepicker-date-input-icon-fill-color',
+  TIME_INPUT_ICON_FILL: '--datepicker-time-input-icon-fill-color',
+  TIME_INPUT_DISABLED_ICON_FILL: '--datepicker-time-input-disabled-icon-fill-color',
+  TIME_INPUT_DISABLED_COLOR: '--datepicker-time-input-disabled-color',
+  TIME_INPUT_DISABLED_BACKGROUND_COLOR: '--datepicker-time-input-disabled-background-color',
+  INPUT_EDITABLE_TEXT: '--datepicker-input-editable-color',
+  INPUT_EDITABLE_BACKGROUND: '--datepicker-input-editable-background-color',
+};
+
 export {
   COLORS,
   COLORS_BRAND,
@@ -507,6 +549,7 @@ export {
   TABLE_BUTTON_COLORS,
   COLORS_FILTER,
   COLORS_NO_DATA_PAGE,
+  COLORS_DATEPICKER,
 };
 
 export default {
@@ -546,4 +589,5 @@ export default {
   TABLE_BUTTON_COLORS,
   COLORS_FILTER,
   COLORS_NO_DATA_PAGE,
+  COLORS_DATEPICKER,
 };
