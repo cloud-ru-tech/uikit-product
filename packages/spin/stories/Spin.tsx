@@ -9,7 +9,7 @@ import { Spin, SpinDefaultProps } from '../src';
 import { Sizes } from '../src/helpers/constants';
 
 export default {
-  title: 'Components/Spin',
+  title: 'Not stable/Spin',
   component: Spin,
   decorators: [addReadme, withDesign],
 } as Meta;

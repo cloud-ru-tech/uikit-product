@@ -10,7 +10,7 @@ import componentReadme from '../README.md';
 import { Toolbar, ToolbarWrapperProps } from '../src';
 
 export default {
-  title: 'Components/Toolbar',
+  title: 'Not stable/Toolbar',
   decorators: [addReadme, withDesign],
 } as Meta;
 

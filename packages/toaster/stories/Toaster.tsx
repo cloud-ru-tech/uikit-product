@@ -1,9 +1,8 @@
 import { styled } from '@linaria/react';
+import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { Button } from '@sbercloud/uikit-react-button';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -11,7 +10,7 @@ import componentReadme from '../README.md';
 import { Toaster as CToaster, ToasterOptions, ToasterProps, toaster } from '../src';
 
 export default {
-  title: 'Components/Toaster',
+  title: 'Not stable/Toaster',
   decorators: [addReadme, withDesign],
 } as Meta;
 
@@ -46,8 +45,7 @@ const PREDEFINED_ITEMS: {
       variant: CToaster.variants.Error,
       title: 'Проблемы с соединением. Данные не перенесены. ',
       subtitle: 'CORS error',
-      text:
-        "Access to XMLHttpRequest at 'https://console.sbercloud.ru' (redirected from 'https://api.sbercloud.ru') from origin 'https://console.ru' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      text: "Access to XMLHttpRequest at 'https://console.sbercloud.ru' (redirected from 'https://api.sbercloud.ru') from origin 'https://console.ru' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
       closeButton: true,
       actions: [
         {

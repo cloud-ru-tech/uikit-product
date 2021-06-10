@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { CopyButton, CopyButtonProps } from '../src';
 
 export default {
-  title: 'Components/Button/Copy Button',
+  title: 'Not stable/Button/Copy Button',
   component: CopyButton,
   decorators: [addReadme, withDesign],
 } as Meta;

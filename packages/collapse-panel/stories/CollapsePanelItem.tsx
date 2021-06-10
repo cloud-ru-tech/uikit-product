@@ -1,11 +1,10 @@
 import { styled } from '@linaria/react';
+import { Avatar } from '@sbercloud/uikit-react-avatar';
+import { Input } from '@sbercloud/uikit-react-input';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { Avatar } from '@sbercloud/uikit-react-avatar';
-import { Input } from '@sbercloud/uikit-react-input';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,7 +12,7 @@ import componentReadme from '../README.md';
 import { CollapsePanelItem, CollapsePanelItemProps } from '../src';
 
 export default {
-  title: 'Components/CollapsePanel',
+  title: 'Not stable/CollapsePanel',
   component: CollapsePanelItem,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -10,7 +10,7 @@ import componentReadme from '../README.md';
 import { CurrencyFormatter, DateFormatter, LanguageProvider, NumberFormatter, useLanguage } from '../src';
 
 export default {
-  title: 'Components/Localization',
+  title: 'Not stable/Localization',
   component: LanguageProvider,
   decorators: [addReadme, withDesign],
 } as Meta;

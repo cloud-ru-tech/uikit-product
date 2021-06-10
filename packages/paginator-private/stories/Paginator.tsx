@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { Paginator, PaginatorProps } from '../src';
 
 export default {
-  title: 'Components/Paginator',
+  title: 'Not stable/Paginator',
   component: Paginator,
   decorators: [addReadme, withDesign],
 } as Meta;

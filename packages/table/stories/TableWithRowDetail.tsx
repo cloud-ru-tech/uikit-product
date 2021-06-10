@@ -14,7 +14,7 @@ import componentReadme from '../README.md';
 import { FrameworkComponents, ITableWithRowDetailProps, TableBasicTypes, TableWithRowDetail } from '../src';
 
 export default {
-  title: 'Components/Table/With Row Detail',
+  title: 'Not stable/Table/With Row Detail',
   component: TableWithRowDetail,
   decorators: [addReadme, withDesign],
 } as Meta;

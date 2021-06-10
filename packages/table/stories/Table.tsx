@@ -10,7 +10,7 @@ import { FrameworkComponents, ITableProps, Table } from '../src';
 const { Favorites } = FrameworkComponents;
 
 export default {
-  title: 'Components/Table',
+  title: 'Not stable/Table',
   component: Table,
   decorators: [addReadme, withDesign],
 } as Meta;

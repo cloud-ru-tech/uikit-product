@@ -1,9 +1,8 @@
 import { styled } from '@linaria/react';
+import { EditSVG, FavFilledSVG, ListSVG, MenuSVG, SearchSVG } from '@sbercloud/icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { EditSVG, FavFilledSVG, ListSVG, MenuSVG, SearchSVG } from '@sbercloud/icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -11,7 +10,7 @@ import componentReadme from '../README.md';
 import { IconButton, IconButtonVariant } from '../src';
 
 export default {
-  title: 'Components/Button',
+  title: 'Not stable/Button/Icon Button',
   component: IconButton,
   decorators: [addReadme, withDesign],
 } as Meta;

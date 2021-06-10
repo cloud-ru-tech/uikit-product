@@ -10,7 +10,7 @@ import componentReadme from '../README.md';
 import { IRangeProps, Range } from '../src';
 
 export default {
-  title: 'Components/Range',
+  title: 'Not stable/Range',
   component: Range,
   decorators: [addReadme, withDesign],
 } as Meta;

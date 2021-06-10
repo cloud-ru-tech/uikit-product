@@ -1,10 +1,9 @@
 import { styled } from '@linaria/react';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -14,7 +13,7 @@ import { IRadioProps, Radio, RadioGroup } from '../src';
 const { COLORS_DRAWER } = EXPORT_VARS;
 
 export default {
-  title: 'Components/Radio',
+  title: 'Not stable/Radio',
   component: Radio,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { ITextareaProps, Textarea } from '../src';
 
 export default {
-  title: 'Components/Input',
+  title: 'Not stable/Input',
   component: Textarea,
   decorators: [addReadme, withDesign],
 } as Meta;

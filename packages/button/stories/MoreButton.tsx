@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { MoreButton, MoreButtonProps } from '../src';
 
 export default {
-  title: 'Components/Button/More Button',
+  title: 'Not stable/Button/More Button',
   component: MoreButton,
   decorators: [addReadme, withDesign],
 } as Meta;

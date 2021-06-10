@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { Badge, BadgeProps } from '../src';
 
 export default {
-  title: 'Components/Badge',
+  title: 'Not stable/Badge',
   component: Badge,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -1,14 +1,13 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import { styled } from '@linaria/react';
+import { HelpSVG } from '@sbercloud/icons';
+import { Avatar } from '@sbercloud/uikit-react-avatar';
+import { RadioIcon } from '@sbercloud/uikit-react-radio';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { HelpSVG } from '@sbercloud/icons';
-import { Avatar } from '@sbercloud/uikit-react-avatar';
-import { RadioIcon } from '@sbercloud/uikit-react-radio';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -24,7 +23,7 @@ import {
 import { groupedServices, services } from '../src/helpers/mockData';
 
 export default {
-  title: 'Components/Select',
+  title: 'Not stable/Select',
   component: Select,
   decorators: [addReadme, withDesign],
 } as Meta;
@@ -174,15 +173,13 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
       prefixControl={(props: ControlPrefixProps): JSX.Element[] => {
         const val = props.getValue();
 
-        return (val || []).map(
-          ({ value, logo }: OptionTypeBase): JSX.Element => {
-            if (isMulti) {
-              return <></>;
-            }
+        return (val || []).map(({ value, logo }: OptionTypeBase): JSX.Element => {
+          if (isMulti) {
+            return <></>;
+          }
 
-            return <StyledLogoWrap key={value}>{logo}</StyledLogoWrap>;
-          },
-        );
+          return <StyledLogoWrap key={value}>{logo}</StyledLogoWrap>;
+        });
       }}
       footer={showFooter ? <Footer>Footer</Footer> : null}
       type={showLogo || showOption ? 'with-logo' : type}

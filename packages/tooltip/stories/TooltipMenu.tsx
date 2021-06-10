@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { Tooltip, TooltipMenu, TooltipMenuItem, TooltipStateContainer } from '../src';
 
 export default {
-  title: 'Components/Tooltip/Tooltip Menu',
+  title: 'Not stable/Tooltip/Tooltip Menu',
   component: Tooltip,
   decorators: [addReadme, withDesign],
 } as Meta;

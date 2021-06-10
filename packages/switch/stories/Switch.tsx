@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { Switch as SwitchComponent } from '../src';
 
 export default {
-  title: 'Components/Switch',
+  title: 'Not stable/Switch',
   component: SwitchComponent,
   decorators: [addReadme, withDesign],
 } as Meta;

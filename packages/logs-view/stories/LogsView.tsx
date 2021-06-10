@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { LogsView, LogsViewProps } from '../src';
 
 export default {
-  title: 'Components/Logs View',
+  title: 'Not stable/Logs View',
   component: LogsView,
   decorators: [addReadme, withDesign],
 } as Meta;

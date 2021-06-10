@@ -1,11 +1,10 @@
 import { styled } from '@linaria/react';
+import { CopyInput } from '@sbercloud/uikit-react-input';
+import { Tag } from '@sbercloud/uikit-react-tag';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { FC, useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { CopyInput } from '@sbercloud/uikit-react-input';
-import { Tag } from '@sbercloud/uikit-react-tag';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,7 +12,7 @@ import componentReadme from '../README.md';
 import { Card, CardHeader, CardsPanel, CardsPanelProps } from '../src';
 
 export default {
-  title: 'Components/Card',
+  title: 'Not stable/Card',
   component: CardsPanel,
   decorators: [addReadme, withDesign],
 } as Meta;

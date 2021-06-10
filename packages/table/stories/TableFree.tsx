@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { ITableFreeProps, TableFree } from '../src';
 
 export default {
-  title: 'Components/Table/Free',
+  title: 'Not stable/Table/Free',
   component: TableFree,
   decorators: [addReadme, withDesign],
 } as Meta;

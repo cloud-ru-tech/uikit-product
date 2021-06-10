@@ -17,7 +17,7 @@ const { sizeFormatter } = TableFormatters;
 const { StatusCell } = FrameworkComponents;
 
 export default {
-  title: 'Components/Table/Client Model Table',
+  title: 'Not stable/Table/Client Model Table',
   component: CMTable,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -1,13 +1,12 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
-
 import * as Icons from '@sbercloud/icons/build/icons';
 import { Button } from '@sbercloud/uikit-react-button';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Text2 } from '@sbercloud/uikit-typography';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -86,7 +85,7 @@ inheritColor.parameters = {
 inheritColor.argTypes = {};
 
 export default {
-  title: 'Components/Icons/Inherit Color',
+  title: 'Not stable/Icons/Inherit Color',
   component: Group,
   decorators: [addReadme, withDesign],
 } as Meta;

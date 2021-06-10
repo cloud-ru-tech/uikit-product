@@ -1,12 +1,11 @@
 import { styled } from '@linaria/react';
+import { Checkbox } from '@sbercloud/uikit-react-checkbox';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { Checkbox } from '@sbercloud/uikit-react-checkbox';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H4 } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -16,7 +15,7 @@ import { Card, CardProps } from '../src';
 const { COLORS } = EXPORT_VARS;
 
 export default {
-  title: 'Components/Card',
+  title: 'Not stable/Card',
   component: Card,
   decorators: [addReadme, withDesign],
 } as Meta;

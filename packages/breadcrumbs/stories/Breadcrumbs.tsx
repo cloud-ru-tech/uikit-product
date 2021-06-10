@@ -13,7 +13,7 @@ import { docker, fm, items, longItems, longSingle, longTwice } from '../src/help
 import { BreadcrumbItem } from '../src/helpers/types';
 
 export default {
-  title: 'Components/Breadcrumbs',
+  title: 'Not stable/Breadcrumbs',
   component: Breadcrumbs,
   decorators: [addReadme, withDesign],
 } as Meta;

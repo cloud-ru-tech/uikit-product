@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { IAutosizeInputProps, InputAutosize } from '../src';
 
 export default {
-  title: 'Components/Input',
+  title: 'Not stable/Input',
   component: InputAutosize,
   decorators: [addReadme, withDesign],
 } as Meta;

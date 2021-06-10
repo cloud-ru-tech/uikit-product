@@ -10,7 +10,7 @@ import componentReadme from '../README.md';
 import { Avatar, AvatarProps } from '../src';
 
 export default {
-  title: 'Components/Avatar',
+  title: 'Not stable/Avatar',
   component: Avatar,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { Input, InputProps } from '../src';
 
 export default {
-  title: 'Components/Input/Input',
+  title: 'Not stable/Input/Input',
   component: Input,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -1,11 +1,10 @@
 import { styled } from '@linaria/react';
+import { CopySVG, HelpSVG } from '@sbercloud/icons';
+import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import copyText from 'copy-to-clipboard';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { CopySVG, HelpSVG } from '@sbercloud/icons';
-import { H4 } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,7 +12,7 @@ import componentReadme from '../README.md';
 import { BasicTooltip, IBasicTooltipProps } from '../src';
 
 export default {
-  title: 'Components/Tooltip',
+  title: 'Not stable/Tooltip',
   component: BasicTooltip,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { RefreshButton, RefreshButtonProps } from '../src';
 
 export default {
-  title: 'Components/Button/Refresh Button',
+  title: 'Not stable/Button/Refresh Button',
   component: RefreshButton,
   decorators: [addReadme, withDesign],
 } as Meta;

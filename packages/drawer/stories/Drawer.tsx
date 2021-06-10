@@ -1,15 +1,14 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
-
 import { Button } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
 import { Select } from '@sbercloud/uikit-select';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -17,7 +16,7 @@ import componentReadme from '../README.md';
 import { Drawer, IDrawerProps } from '../src';
 
 export default {
-  title: 'Components/Drawer',
+  title: 'Not stable/Drawer',
   component: Drawer,
   decorators: [addReadme, withDesign],
 } as Meta;

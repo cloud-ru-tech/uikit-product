@@ -1,10 +1,9 @@
 import { styled } from '@linaria/react';
+import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { Button } from '@sbercloud/uikit-react-button';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -14,7 +13,7 @@ import { IOptionType } from '../src/helperComponents/InlineTreeSelect';
 import { treeOptions } from '../src/helpers/mockData';
 
 export default {
-  title: 'Components/Select',
+  title: 'Not stable/Select',
   component: UsersByGroupSelect,
   decorators: [addReadme, withDesign],
 } as Meta;

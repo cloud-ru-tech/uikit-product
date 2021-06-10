@@ -1,10 +1,9 @@
 import { styled } from '@linaria/react';
+import { Slider } from '@sbercloud/uikit-react-slider';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { Slider } from '@sbercloud/uikit-react-slider';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -12,7 +11,7 @@ import componentReadme from '../README.md';
 import { ITruncateStringProps, TruncateString } from '../src';
 
 export default {
-  title: 'Components/Truncate String',
+  title: 'Not stable/Truncate String',
   component: TruncateString,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -1,10 +1,9 @@
 import { styled } from '@linaria/react';
+import { PauseCircleSVG } from '@sbercloud/icons';
+import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { PauseCircleSVG } from '@sbercloud/icons';
-import { H4 } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -12,7 +11,7 @@ import componentReadme from '../README.md';
 import { TableButton as CTableButton, TableButtonProps } from '../src';
 
 export default {
-  title: 'Components/Button',
+  title: 'Not stable/Button/Table Button',
   component: CTableButton,
   decorators: [addReadme, withDesign],
 } as Meta;

@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { CopyInput, CopyInputProps } from '../src';
 
 export default {
-  title: 'Components/Input/Copy Input',
+  title: 'Not stable/Input/Copy Input',
   component: CopyInput,
   decorators: [addReadme, withDesign],
 } as Meta;

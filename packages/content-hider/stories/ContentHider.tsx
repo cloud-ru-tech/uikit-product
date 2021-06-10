@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { ContentHider, ContentHiderProps } from '../src';
 
 export default {
-  title: 'Components/Content Hider',
+  title: 'Not stable/Content Hider',
   component: ContentHider,
   decorators: [addReadme, withDesign],
 } as Meta;

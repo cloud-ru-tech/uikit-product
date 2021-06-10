@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { ColorPicker } from '../src';
 
 export default {
-  title: 'Components/Select',
+  title: 'Not stable/Select',
   component: ColorPicker,
   decorators: [addReadme, withDesign],
 } as Meta;

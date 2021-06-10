@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { Checkbox, CheckboxProps } from '../src';
 
 export default {
-  title: 'Components/Checkbox',
+  title: 'Not stable/Checkbox',
   component: Checkbox,
   decorators: [addReadme, withDesign],
 } as Meta;

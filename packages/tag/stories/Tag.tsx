@@ -1,10 +1,9 @@
 import { styled } from '@linaria/react';
+import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { H4 } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,7 +12,7 @@ import { Tag, TagProps } from '../src';
 import { PRESET_COLORS } from '../src/helpers/colors';
 
 export default {
-  title: 'Components/Tag',
+  title: 'Not stable/Tag',
   component: Tag,
   decorators: [addReadme, withDesign],
 } as Meta;

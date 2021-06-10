@@ -14,7 +14,7 @@ import { FormField, FormFieldProps } from '../src';
 const { COLORS_DRAWER } = EXPORT_VARS;
 
 export default {
-  title: 'Components/Form',
+  title: 'Not stable/Form',
   component: FormField,
   decorators: [addReadme, withDesign],
 } as Meta;

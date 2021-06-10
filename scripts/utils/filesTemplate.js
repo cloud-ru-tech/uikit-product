@@ -130,7 +130,7 @@ import componentChangelog from '../CHANGELOG.md';\n\
 import componentPackage from '../package.json';\n\
 \n\
 export default {\n\
-  title: 'Components/" +
+  title: 'Not stable/" +
     `${componentName}` +
     "',\n\
   component: " +

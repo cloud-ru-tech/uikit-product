@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { Divider, DividerProps } from '../src';
 
 export default {
-  title: 'Components/Divider',
+  title: 'Not stable/Divider',
   component: Divider,
   decorators: [addReadme, withDesign],
 } as Meta;

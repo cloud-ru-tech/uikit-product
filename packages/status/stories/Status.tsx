@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { Status } from '../src';
 
 export default {
-  title: 'Components/Status',
+  title: 'Not stable/Status',
   component: Status,
   decorators: [addReadme, withDesign],
 } as Meta;

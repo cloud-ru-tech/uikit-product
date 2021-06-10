@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { ISliderProps, Slider } from '../src';
 
 export default {
-  title: 'Components/Slider',
+  title: 'Not stable/Slider',
   component: Slider,
   decorators: [addReadme, withDesign],
 } as Meta;

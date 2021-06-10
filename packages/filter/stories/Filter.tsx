@@ -1,10 +1,9 @@
+import { FilterSVG } from '@sbercloud/icons';
+import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
-
-import { FilterSVG } from '@sbercloud/icons';
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,7 +12,7 @@ import { Filter, IFilterProps, TFilterValueType } from '../src';
 import mockData, { groupedServices } from '../src/helpers/mockData';
 
 export default {
-  title: 'Components/Filter',
+  title: 'Not stable/Filter',
   component: Filter,
   decorators: [addReadme, withDesign],
 } as Meta;
