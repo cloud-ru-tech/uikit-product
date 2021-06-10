@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@0.0.9&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@0.1.0) (2021-06-10)
+
+
+### Features
+
+* change storybook label ([63d16e3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/63d16e3a786ce6196740e9933b88a29a2c4797c7))
+* icons package in, @sbercloud/icons is no longer needed ([67f1c7f](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/67f1c7fd680392aa7534767518bc6ce8442cf676))
+
+
+
+
+
 ## [0.0.9](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@0.0.8&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@0.0.9) (2021-06-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-icons
