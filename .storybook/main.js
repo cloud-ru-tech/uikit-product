@@ -33,6 +33,10 @@ module.exports = {
     checkOptions: {},
   },
   webpackFinal: async config => {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      stream: require.resolve('stream-browserify'),
+    };
     config.module.rules[0].use.push({
       loader: '@linaria/webpack-loader',
       options: {
