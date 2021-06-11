@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.0.13&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.1.0) (2021-06-11)
+
+
+### Features
+
+* change storybook label ([63d16e3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/63d16e3a786ce6196740e9933b88a29a2c4797c7))
+
+
+
+
+
 ## [0.0.13](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.0.12&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.0.13) (2021-06-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table

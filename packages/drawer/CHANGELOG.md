@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.0.12&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.1.0) (2021-06-11)
+
+
+### Bug Fixes
+
+* fix dependencies ([7c3c3fc](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/7c3c3fcde3d27c35286695a499a5f47854bda57d))
+
+
+### Features
+
+* change storybook label ([63d16e3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/63d16e3a786ce6196740e9933b88a29a2c4797c7))
+
+
+
+
+
 ## [0.0.12](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.0.11&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.0.12) (2021-06-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drawer

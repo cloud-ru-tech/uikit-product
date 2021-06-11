@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.1.1&sourceBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.2.0) (2021-06-11)
+
+
+### Features
+
+* change storybook label ([63d16e3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/63d16e3a786ce6196740e9933b88a29a2c4797c7))
+
+
+
+
+
 ## [0.1.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.1.0&sourceBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.1.1) (2021-06-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toolbar
