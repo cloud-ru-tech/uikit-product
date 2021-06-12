@@ -34,6 +34,7 @@ const bootstrapFiles = ({
     packageRootFolderName,
     packageTitle,
     packageDescription,
+    packageName
   });
   logInfo('Created readme');
 

@@ -66,9 +66,12 @@ const changelog = ({ packageRootFolderName }) => {
   fs.writeFileSync(file, changelogContent);
 };
 
-const readme = ({ packageRootFolderName, packageTitle, packageDescription }) => {
+const readme = ({ packageRootFolderName, packageTitle, packageDescription, packageName }) => {
   // Whitespace in this const is intentional, since it defines how the markdown is shown
   const readmeContent = `# ${packageTitle}
+
+## Installation
+\`npm i @sbercloud/uikit-${packageName}\`
 
 [Changelog](./CHANGELOG.md)
 
