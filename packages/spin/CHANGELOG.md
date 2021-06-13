@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-spin@0.0.3&sourceBranch=refs/tags/@sbercloud/uikit-react-spin@0.1.0) (2021-06-13)
+
+
+### Features
+
+* add installation guide for readme.md ([c95ac21](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/c95ac2145d75b8579562c244d0de3786ea881ffd))
+* change storybook label ([63d16e3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/63d16e3a786ce6196740e9933b88a29a2c4797c7))
+
+
+
+
+
 ## [0.0.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-spin@0.0.2&sourceBranch=refs/tags/@sbercloud/uikit-react-spin@0.0.3) (2021-06-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-spin

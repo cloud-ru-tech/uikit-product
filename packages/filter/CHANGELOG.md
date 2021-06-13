@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-filter@0.2.0&sourceBranch=refs/tags/@sbercloud/uikit-react-filter@0.3.0) (2021-06-13)
+
+
+### Features
+
+* add installation guide for readme.md ([c95ac21](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/c95ac2145d75b8579562c244d0de3786ea881ffd))
+
+
+
+
+
 # [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-filter@0.1.11&sourceBranch=refs/tags/@sbercloud/uikit-react-filter@0.2.0) (2021-06-11)
 
 
