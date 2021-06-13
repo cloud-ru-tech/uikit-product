@@ -65,6 +65,7 @@ export const globals = css`
     input {
       font-family: SB Sans Interface, Helvetica, Arial, sans-serif;
       color: var(${COLORS_GENERAL.TEXT});
+      fill: var(${COLORS_GENERAL.TEXT});
     }
 
     a {
