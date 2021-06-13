@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.3.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.4.0) (2021-06-13)
+
+
+### Features
+
+* paginator green colors ([49d43db](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/49d43db12197087ce4faa3f03b0da167db13b996))
+
+
+
+
+
 # [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.2.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.3.0) (2021-06-13)
 
 
