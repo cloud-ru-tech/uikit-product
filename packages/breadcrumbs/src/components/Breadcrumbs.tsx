@@ -259,7 +259,7 @@ export const Breadcrumbs = ({
             item.text,
             <ItemTextStyled
               className={itemClassName}
-              isActive={item.isActive || items.length === 1}
+              data-active={item.isActive || items.length === 1 || undefined}
               data-link={item.link || undefined}
               onClick={onClick ? (e): void => onClick(e, item.link) : undefined}
             >

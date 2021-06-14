@@ -29,18 +29,23 @@ export const ItemStyled = styled.div<{ isFixedWidth: boolean }>`
   }
 `;
 
-export const ItemTextStyled = styled.p<{ isActive?: boolean }>`
+export const ItemTextStyled = styled.p`
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: inherit;
   line-height: inherit;
-  color: ${({ isActive }) =>
-    isActive ? `var(${COLORS_BREADCRUMBS.ACTIVE_COLOR})` : `var(${COLORS_BREADCRUMBS.INACTIVE_COLOR})`};
+  color: var(${COLORS_BREADCRUMBS.INACTIVE_COLOR});
+  fill: var(${COLORS_BREADCRUMBS.INACTIVE_COLOR});
   margin: 0;
   white-space: nowrap;
 
   &[data-link] {
     cursor: pointer;
+  }
+
+  &[data-active] {
+    color: var(${COLORS_BREADCRUMBS.ACTIVE_COLOR});
+    fill: var(${COLORS_BREADCRUMBS.ACTIVE_COLOR});
   }
 `;
 
