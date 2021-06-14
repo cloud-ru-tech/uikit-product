@@ -1,5 +1,5 @@
 export type BreadcrumbItem = {
-  text: string;
+  text: string | React.ReactNode;
   link?: unknown;
   key?: string;
   isActive?: boolean;
