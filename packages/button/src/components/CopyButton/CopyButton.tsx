@@ -1,7 +1,6 @@
+import { CopiedSVG, CopySVG } from '@sbercloud/icons';
 import copyText from 'copy-to-clipboard';
 import { useCallback, useRef, useState } from 'react';
-
-import { CopyCompletedSVG, CopySVG } from '@sbercloud/icons';
 
 import { ButtonVariant } from '../../helpers/constants';
 import { Button } from '../Default';
@@ -61,11 +60,7 @@ export const CopyButton = ({
       disabled={disabled}
       onClick={handleClickCopy}
     >
-      {showCopyCompleted || isCopyCompleted ? (
-        <CopyCompletedSVG className={iconStyle} />
-      ) : (
-        <CopySVG className={iconStyle} />
-      )}
+      {showCopyCompleted || isCopyCompleted ? <CopiedSVG className={iconStyle} /> : <CopySVG className={iconStyle} />}
     </Button>
   );
 };

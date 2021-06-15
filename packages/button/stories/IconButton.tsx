@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { EditSVG, FavFilledSVG, ListSVG, MenuSVG, SearchSVG } from '@sbercloud/icons';
+import { CloseSVG, EditSVG, FavFilledSVG, ListSVG, MainMenuSVG, SearchSVG } from '@sbercloud/icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
@@ -44,7 +44,7 @@ const ITEMS: {
   },
   {
     variant: IconButton.variants.White,
-    icon: <MenuSVG />,
+    icon: <MainMenuSVG />,
     dark: true,
   },
   {
@@ -58,6 +58,10 @@ const ITEMS: {
   {
     variant: IconButton.variants.Sidebar,
     icon: <EditSVG />,
+  },
+  {
+    variant: IconButton.variants.Popup,
+    icon: <CloseSVG />,
   },
 ];
 

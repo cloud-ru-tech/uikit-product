@@ -1,5 +1,4 @@
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { ResetButton } from '../ResetButton';
@@ -115,6 +114,16 @@ export const Wrapper = styled(ResetButton)`
     &:hover {
       fill: var(${COLORS_ICON_BUTTON.SIDEBAR_COLOR_HOVER});
       color: var(${COLORS_ICON_BUTTON.SIDEBAR_COLOR_HOVER});
+    }
+  }
+
+  &[data-variant='popup'] {
+    fill: var(${COLORS_ICON_BUTTON.POPUP_COLOR});
+    color: var(${COLORS_ICON_BUTTON.POPUP_COLOR});
+
+    &:hover {
+      fill: var(${COLORS_ICON_BUTTON.POPUP_COLOR_HOVER});
+      color: var(${COLORS_ICON_BUTTON.POPUP_COLOR_HOVER});
     }
   }
 `;

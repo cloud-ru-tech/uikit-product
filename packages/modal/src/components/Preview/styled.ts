@@ -1,29 +1,19 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_MODAL } = EXPORT_VARS;
 
 export const previewCloseBtn = css`
   position: absolute;
-  right: 0;
-  margin-top: 16px;
-  margin-right: 28px;
-  fill: var(${COLORS_MODAL.PREVIEW_CLOSE_ICON_COLOR}) !important;
-  color: var(${COLORS_MODAL.PREVIEW_CLOSE_ICON_COLOR}) !important;
-  &:focus,
-  &:hover {
-    fill: var(${COLORS_MODAL.PREVIEW_CLOSE_ICON_HOVER_COLOR}) !important;
-    color: var(${COLORS_MODAL.PREVIEW_CLOSE_ICON_HOVER_COLOR}) !important;
-    background: transparent !important;
-  }
+  top: 24px;
+  right: 24px;
 `;
 
 export const Title = styled.div`
   font-size: 20px;
   line-height: 26px;
-  margin: 24px;
+  margin: 24px 48px 24px 24px;
 `;
 
 export const Content = styled.div`

@@ -6,6 +6,7 @@ export enum IconButtonVariant {
   Header = 'header',
   HeaderMenu = 'header-menu',
   Sidebar = 'sidebar',
+  Popup = 'popup',
 }
 
 interface OnlyIconButtonProps {

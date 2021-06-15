@@ -1,14 +1,11 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_DRAWER, COLORS_GENERAL } = EXPORT_VARS;
 
 export const CloseButtonStyled = styled.div`
-  cursor: pointer;
   margin: 12px 12px 0 0;
-  fill: var(${COLORS_GENERAL.TEXT});
 `;
 
 export const LeftIconBoxStyled = styled.div`

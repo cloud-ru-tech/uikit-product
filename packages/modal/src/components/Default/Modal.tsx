@@ -1,8 +1,7 @@
-import RCModal from 'react-modal';
-
 import { CrossSVG } from '@sbercloud/icons';
-import { Button } from '@sbercloud/uikit-react-button';
+import { Button, IconButton } from '@sbercloud/uikit-react-button';
 import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
+import RCModal from 'react-modal';
 
 import {
   ButtonWrapper,
@@ -23,7 +22,7 @@ interface ReactModalProps extends ReactModal.Props {
   onAfterClose?(): void;
   overlayClassName?: string;
   appElement?: HTMLElement;
-  onRequestClose?(event: React.MouseEvent | React.KeyboardEvent, type?: ModalCloseType): void;
+  onRequestClose?(event: React.MouseEvent<HTMLButtonElement, MouseEvent>, type?: ModalCloseType): void;
   closeTimeoutMS?: number;
   ariaHideApp?: boolean;
   shouldFocusAfterRender?: boolean;
@@ -110,15 +109,15 @@ export const Modal: React.FC<ModalProps> = props => {
       parentSelector={parentId ? (): HTMLElement => document.getElementById(parentId) || document.body : parentSelector}
     >
       {hideCross ? null : (
-        <Button
-          variant={Button.variants.Transparent}
-          onClick={(e): void => {
+        <IconButton
+          variant={IconButton.variants.Popup}
+          onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
             onRequestClose?.(e, MODAL_CLOSE_TYPE.CROSS);
           }}
           className={closeButtonStyle}
         >
           <CrossSVG />
-        </Button>
+        </IconButton>
       )}
       {title && <Title>{title}</Title>}
       {description && <Description>{description}</Description>}
@@ -130,7 +129,7 @@ export const Modal: React.FC<ModalProps> = props => {
                 <Button
                   className={buttonCSS}
                   disabled={disableApprove}
-                  onClick={(e): void => {
+                  onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                     approve(e);
                     onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
                   }}
@@ -142,7 +141,7 @@ export const Modal: React.FC<ModalProps> = props => {
               <Button
                 className={buttonCSS}
                 disabled={disableApprove}
-                onClick={(e): void => {
+                onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                   approve(e);
                   onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
                 }}

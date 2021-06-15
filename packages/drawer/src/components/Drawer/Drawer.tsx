@@ -1,10 +1,10 @@
 import 'rc-drawer/assets/index.css';
 
-import { useEffect } from 'react';
 import { cx } from '@linaria/core';
-import RcDrawer from 'rc-drawer';
-
 import { BackSVG, CrossSVG } from '@sbercloud/icons';
+import { IconButton } from '@sbercloud/uikit-react-button';
+import RcDrawer from 'rc-drawer';
+import { useEffect } from 'react';
 
 import { Header } from '../Header';
 import {
@@ -108,8 +108,10 @@ export const Drawer: React.FC<IDrawerProps> = ({
           )}
           {headerText && <Header text={headerText} />}
         </HeaderTextBoxStyled>
-        <CloseButtonStyled onClick={onClose}>
-          <CrossSVG />
+        <CloseButtonStyled>
+          <IconButton variant={IconButton.variants.Popup} onClick={onClose}>
+            <CrossSVG />
+          </IconButton>
         </CloseButtonStyled>
       </HeaderBoxStyled>
       <ContentBoxStyled footerPadding={footer ? 80 : 0}>{children}</ContentBoxStyled>

@@ -403,6 +403,9 @@ const COLORS_ICON_BUTTON = {
 
   SIDEBAR_COLOR: '--icon-button-sidebar-color',
   SIDEBAR_COLOR_HOVER: '--icon-button-sidebar-color-hover',
+
+  POPUP_COLOR: '--icon-button-popup-color',
+  POPUP_COLOR_HOVER: '--icon-button-popup-color-hover',
 };
 
 const COLORS_LOGS_VIEW = {

@@ -1,8 +1,7 @@
-import RCModal from 'react-modal';
-
 import { CrossSVG } from '@sbercloud/icons';
-import { Button } from '@sbercloud/uikit-react-button';
+import { Button, IconButton } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
+import RCModal from 'react-modal';
 
 import { Content, Title, contentClassname, overlayClassname, previewCloseBtn } from './styled';
 
@@ -47,9 +46,9 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
 
   return (
     <RCModal {...props} overlayClassName={overlayClassname} className={`${contentClassname} ${contentClassName}`}>
-      <Button variant={Button.variants.Transparent} onClick={onRequestClose} className={previewCloseBtn}>
+      <IconButton variant={IconButton.variants.Popup} onClick={onRequestClose} className={previewCloseBtn}>
         <CrossSVG />
-      </Button>
+      </IconButton>
       {title && (
         <>
           <Title>{title}</Title>

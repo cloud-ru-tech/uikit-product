@@ -1,6 +1,5 @@
+import { InProgressSVG } from '@sbercloud/icons';
 import { memo, useMemo } from 'react';
-
-import { LoadingSVG } from '@sbercloud/icons';
 
 import { IconWrap, RotateAnimation, TableTextButtonComponent } from './styled';
 
@@ -19,7 +18,7 @@ function TextIconButton({ onClick, inProgress, disabled, text, icon }: TextIconB
       {text}
       {inProgress ? (
         <IconWrap>
-          <LoadingSVG className={RotateAnimation} />
+          <InProgressSVG className={RotateAnimation} />
         </IconWrap>
       ) : (
         <IconWrap>{icon}</IconWrap>

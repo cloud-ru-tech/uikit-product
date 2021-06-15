@@ -1,8 +1,6 @@
 import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -12,7 +10,6 @@ import { Modal, ModalProps } from '../src';
 export default {
   title: 'Not stable/Modal',
   component: Modal,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<ModalProps> = ({ ...args }) => {
@@ -44,7 +41,10 @@ modal.argTypes = {
     defaultValue: 'Tooltip',
   },
   title: { defaultValue: 'Удаление тега' },
-  description: { defaultValue: 'Вы действительно хотите удалить тег «ёлочек»?' },
+  description: {
+    defaultValue:
+      'Вы действительно хотите удалить тег «ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7»?',
+  },
   approveText: { defaultValue: 'Approve' },
   shouldCloseOnOverlayClick: { defaultValue: false },
   shouldCloseOnEsc: { defaultValue: false },
@@ -55,7 +55,6 @@ modal.parameters = {
   },
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/file/Eo7qqu8rH4Eg2RGYUrmjra/SberCloud-%E2%86%92-Design_System-iter-2-violet?node-id=1785%3A44522',
   },
 };

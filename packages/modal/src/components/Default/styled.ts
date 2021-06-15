@@ -1,6 +1,5 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_MODAL } = EXPORT_VARS;
@@ -16,10 +15,12 @@ export const Title = styled.div`
   font-size: 20px;
   line-height: 26px;
   margin-bottom: 16px;
+  word-wrap: break-word;
 `;
 
 export const Description = styled.div`
   color: var(${COLORS_MODAL.DESCRIPTION_COLOR});
+  word-wrap: break-word;
 `;
 
 export const ButtonWrapper = styled.div`
