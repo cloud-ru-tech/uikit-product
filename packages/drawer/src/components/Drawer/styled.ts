@@ -17,11 +17,10 @@ export const LeftIconBoxStyled = styled.div`
   fill: var(${COLORS_GENERAL.TEXT});
 `;
 
-export const ContentBoxStyled = styled.div<{ footerPadding: number }>`
-  height: 100%;
+export const ContentBoxStyled = styled.div`
+  flex-grow: 1;
   z-index: -1;
   position: relative;
-  padding-bottom: ${props => props.footerPadding}px;
   box-sizing: border-box;
 `;
 
@@ -47,7 +46,7 @@ export const FooterBoxStyled = styled.div<{ width: string }>`
   background: inherit;
   padding: 16px 24px;
   border-top: solid 1px var(${COLORS_DRAWER.BORDER_COLOR});
-  position: fixed;
+  position: sticky;
   width: ${props => props.width};
   bottom: 0;
 `;
@@ -72,5 +71,8 @@ export const drawerWrapperClassName = css`
     background: inherit;
     display: flex;
     flex-direction: column;
+
+    margin-right: -20px;
+    padding-right: 20px;
   }
 `;
