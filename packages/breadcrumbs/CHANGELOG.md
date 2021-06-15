@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-breadcrumbs@0.2.1&sourceBranch=refs/tags/@sbercloud/uikit-react-breadcrumbs@0.2.2) (2021-06-15)
+
+
+### Bug Fixes
+
+* styling fill for breadcrumbs item ([0bab1fa](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/0bab1fa0f9722b1ca680ee22725762b932291739))
+* text type may bee react node ([14788aa](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/14788aa5e3978fca7375e28e3746efb302825daf))
+
+
+
+
+
 ## [0.2.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-breadcrumbs@0.2.0&sourceBranch=refs/tags/@sbercloud/uikit-react-breadcrumbs@0.2.1) (2021-06-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-breadcrumbs
