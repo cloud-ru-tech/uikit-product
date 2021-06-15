@@ -153,7 +153,7 @@ export const Modal: React.FC<ModalProps> = props => {
             <Button
               className={buttonCSS}
               variant={Button.variants.Outlined}
-              onClick={(e): void => {
+              onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
                 cancel(e);
                 onRequestClose?.(e, MODAL_CLOSE_TYPE.CANCEL);
               }}
