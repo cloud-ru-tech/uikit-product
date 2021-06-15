@@ -12,6 +12,7 @@ export const ButtonComponent = styled.button`
   outline: 0;
   cursor: pointer;
   display: inline-flex;
+  white-space: nowrap;
 
   align-items: center;
   justify-content: center;
