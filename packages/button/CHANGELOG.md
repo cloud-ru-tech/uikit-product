@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.3) (2021-06-15)
+
+
+### Bug Fixes
+
+* add nowrap for Button ([2ae0fb2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/2ae0fb2711f264a81367b08e8ceab1ea27215fa0))
+
+
+
+
+
 ## [0.2.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.2) (2021-06-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button

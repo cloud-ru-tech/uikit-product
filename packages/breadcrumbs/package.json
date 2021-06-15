@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-breadcrumbs",
   "title": "React Breadcrumbs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -28,7 +28,7 @@
     "nanoid": "3.1.23"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-button": "0.2.2",
+    "@sbercloud/uikit-react-button": "0.2.3",
     "@sbercloud/uikit-react-divider": "0.2.1",
     "@types/lodash.debounce": "4.0.6"
   },
