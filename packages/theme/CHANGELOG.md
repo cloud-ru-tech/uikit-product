@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.4.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.5.0) (2021-06-15)
+
+
+### Features
+
+* global fill for icons ([b5f67a2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b5f67a235adbe1cfe3ecffe4da2b0d005d91d589))
+
+
+
+
+
 # [0.4.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.3.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.4.0) (2021-06-13)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tooltip",
   "title": "React Tooltip",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -21,11 +21,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.4.0",
+    "@sbercloud/uikit-theme": "0.5.0",
     "react-popper-tooltip": "3.1.1"
   },
   "devDependencies": {
-    "@sbercloud/uikit-typography": "0.1.1",
+    "@sbercloud/uikit-typography": "0.1.2",
     "copy-to-clipboard": "3.3.1"
   },
   "peerDependencies": {
