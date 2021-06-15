@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-filter@0.3.3&sourceBranch=refs/tags/@sbercloud/uikit-react-filter@0.3.4) (2021-06-15)
+
+
+### Bug Fixes
+
+* delete path aliases, replace them to types in package.json file ([8adb5a0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8adb5a028a5765f04ffea063569c76a6d264b46a))
+
+
+
+
+
 ## [0.3.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-filter@0.3.2&sourceBranch=refs/tags/@sbercloud/uikit-react-filter@0.3.3) (2021-06-15)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-filter

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-logs-view",
   "title": "React Logs View",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,8 +22,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "0.2.4",
-    "@sbercloud/uikit-theme": "0.5.0"
+    "@sbercloud/uikit-react-button": "0.2.5",
+    "@sbercloud/uikit-theme": "0.5.1"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
