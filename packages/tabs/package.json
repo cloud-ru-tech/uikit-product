@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tabs",
   "title": "React Tabs",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -21,11 +21,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.6.0"
+    "@sbercloud/uikit-theme": "0.6.1"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-avatar": "0.1.4",
-    "@sbercloud/uikit-react-collapse-panel": "0.2.5"
+    "@sbercloud/uikit-react-avatar": "0.1.5",
+    "@sbercloud/uikit-react-collapse-panel": "0.2.6"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.4&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.5) (2021-06-16)
+
+
+### Reverts
+
+* delete types property in package.json ([cf8a566](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/cf8a56610249235846b5b3b6317798bbfa2b7e1a))
+
+
+
+
+
 ## [0.3.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.3&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.4) (2021-06-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-localization
