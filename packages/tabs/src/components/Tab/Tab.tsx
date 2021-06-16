@@ -2,12 +2,13 @@ import { FC, useContext, useMemo } from 'react';
 
 import { ITabsContext, TabsContext } from '../../helpers/context';
 import { setValue } from '../../helpers/reducer';
+import { IdentKey } from '../../helpers/types';
 import { ListItemStyled } from './styled';
 
 export interface ITabProps {
   label: React.ReactNode;
-  identKey: number;
-  onClick?(identKey: ITabProps['identKey']): void;
+  identKey: IdentKey;
+  onClick?(identKey: IdentKey): void;
 }
 
 export const Tab: FC<ITabProps> = ({ identKey, label, onClick }) => {
