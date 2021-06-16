@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.3.0&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.3.1) (2021-06-16)
+
+
+### Bug Fixes
+
+* fully scroll content | [AICDC-2747](https://jira.sbercloud.tech/browse/AICDC-2747) ([129161c](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/129161c2a23a5c994da0fc07c61f0f93c196e9dc))
+
+
+
+
+
 # [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.2.8&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.3.0) (2021-06-16)
 
 
