@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.8.0) (2021-06-16)
+
+
+### Features
+
+* add tag colors | [AICDC-2295](https://jira.sbercloud.tech/browse/AICDC-2295) ([2657748](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/2657748897467efc5469206ef5b33134d109345a))
+
+
+
+
+
 # [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.6.1&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.7.0) (2021-06-16)
 
 

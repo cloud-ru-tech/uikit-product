@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-no-data-page",
   "title": "React NoDataPage",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -21,8 +21,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.7.0",
-    "@sbercloud/uikit-typography": "0.1.6"
+    "@sbercloud/uikit-theme": "0.8.0",
+    "@sbercloud/uikit-typography": "0.1.7"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
@@ -32,6 +32,6 @@
   },
   "devDependencies": {
     "@sbercloud/icons": "3.1.0",
-    "@sbercloud/uikit-react-button": "0.3.0"
+    "@sbercloud/uikit-react-button": "0.3.1"
   }
 }

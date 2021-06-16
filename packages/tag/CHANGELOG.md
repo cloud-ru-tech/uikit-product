@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tag@0.2.9&sourceBranch=refs/tags/@sbercloud/uikit-react-tag@0.3.0) (2021-06-16)
+
+
+### Features
+
+* add tag colors | [AICDC-2295](https://jira.sbercloud.tech/browse/AICDC-2295) ([2657748](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/2657748897467efc5469206ef5b33134d109345a))
+
+
+
+
+
 ## [0.2.9](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tag@0.2.8&sourceBranch=refs/tags/@sbercloud/uikit-react-tag@0.2.9) (2021-06-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tag
