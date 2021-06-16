@@ -21,11 +21,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/icons": "1.0.15-14c9f91b",
     "@sbercloud/uikit-react-button": "0.2.7",
     "@sbercloud/uikit-react-checkbox": "0.1.5",
     "@sbercloud/uikit-react-paginator-private": "0.1.5",
-    "@sbercloud/uikit-theme": "0.6.1"
+    "@sbercloud/uikit-theme": "0.6.1",
+    "@sbercloud/uikit-react-icons": "0.2.7"
   },
   "devDependencies": {
     "@sbercloud/uikit-react-input": "0.4.6",

@@ -23,6 +23,7 @@ export const HeaderStyled = styled.div`
   flex-direction: row;
   align-items: center;
   width: 100%;
+  height: 20px;
   justify-content: space-between;
 `;
 
@@ -46,5 +47,5 @@ export const moreButtonClassName = css`
     align-items: center;
   }
 
-  margin: -12px -16px;
+  margin: 0px -16px;
 `;
