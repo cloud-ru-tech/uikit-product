@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-cards@0.2.6&sourceBranch=refs/tags/@sbercloud/uikit-react-cards@0.2.7) (2021-06-16)
+
+
+### Bug Fixes
+
+* [AICDC-2216](https://jira.sbercloud.tech/browse/AICDC-2216): fixed icon, fixed more button margin ([4aabd4f](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/4aabd4fbd7aba5f996d95d7b4e1205006548081f))
+
+
+
+
+
 ## [0.2.6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-cards@0.2.5&sourceBranch=refs/tags/@sbercloud/uikit-react-cards@0.2.6) (2021-06-16)
 
 
