@@ -25,7 +25,6 @@ const packageJson = ({ user, email, packageTitle, packageName, packageDescriptio
     description: `${packageDescription}`,
     main: './dist/esm/index.js',
     module: './dist/esm/index.js',
-    types: './src',
     homepage: `https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/${PackagesRootFolder}/${packageRootFolderName}/README.md`,
     repository: {
       type: 'git',

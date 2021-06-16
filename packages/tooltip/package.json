@@ -5,7 +5,6 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "types": "./src",
   "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-tooltip/README.md",
   "repository": {
     "type": "git",
