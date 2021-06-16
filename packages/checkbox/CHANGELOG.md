@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.1.5&sourceBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.1.6) (2021-06-16)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-checkbox
+
+
+
+
+
 ## [0.1.5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.1.4&sourceBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.1.5) (2021-06-16)
 
 

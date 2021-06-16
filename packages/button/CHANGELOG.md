@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.7&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.0) (2021-06-16)
+
+
+### Features
+
+* add IconButton popup variant | [AICDC-2747](https://jira.sbercloud.tech/browse/AICDC-2747) ([aecccf3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/aecccf30ebefcf9d7069d9d4fbfa98deb57a6bb3))
+
+
+
+
+
 ## [0.2.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.6&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.7) (2021-06-16)
 
 
