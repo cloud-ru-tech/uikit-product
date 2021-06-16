@@ -9,7 +9,7 @@ const copyButtonClassName = css`
   margin-right: -8px;
 
   &[data-size='xs'] {
-    padding: 7px;
+    padding: 4px;
   }
 
   &[data-variant='transparent'] {
@@ -33,8 +33,8 @@ const StyledInput = styled.div`
   font-size: 14px;
   line-height: 20px;
   outline: 0;
-  height: 40px;
-  padding: 10px 40px 10px 12px;
+  height: 36px;
+  padding: 8px 36px 8px 12px;
   background-color: var(${COLORS_INPUT.COPY_INPUT_BACKGROUND});
   border: 0;
   border-radius: 2px;
