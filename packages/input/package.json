@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-input",
   "title": "React Input",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
