@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.5.1&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.6.0) (2021-06-16)
+
+
+### Features
+
+* copy input green colors ([76465c4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/76465c467010be078c7c0964ea10315009e07986))
+
+
+
+
+
 ## [0.5.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.5.1) (2021-06-15)
 
 
