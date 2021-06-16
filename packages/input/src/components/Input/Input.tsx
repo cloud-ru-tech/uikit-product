@@ -21,6 +21,7 @@ export const Input = ({
   type = InputTypes.default,
   onChange,
   value = '',
+  defaultValue,
   placeholder,
   wrapperClassName,
   copyButtonClassName,
@@ -132,6 +133,7 @@ export const Input = ({
             min={min}
             max={max}
             step={1}
+            defaultValue={defaultValue}
             disabled={disabled}
             data-error={error || undefined}
             name={name}

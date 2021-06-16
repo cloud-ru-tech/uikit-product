@@ -12,6 +12,7 @@ export interface InputProps {
   type?: InputTypes;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   value?: string | number;
+  defaultValue?: InputProps['value'];
   wrapperClassName?: string;
   copyButtonClassName?: string;
   postfix?: React.ReactNode;
