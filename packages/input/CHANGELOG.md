@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.4.7&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.4.8) (2021-06-16)
+
+
+### Bug Fixes
+
+* add native defaultValue ([809bd53](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/809bd53861bf06bed7f34d63a2239682269ff2ba))
+
+
+
+
+
 ## [0.4.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.4.6&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.4.7) (2021-06-16)
 
 

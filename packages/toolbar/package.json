@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-toolbar",
   "title": "React Toolbar",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -24,7 +24,7 @@
     "@sbercloud/icons": "3.1.0",
     "@sbercloud/uikit-react-badge-private": "0.2.6",
     "@sbercloud/uikit-react-button": "0.2.7",
-    "@sbercloud/uikit-react-input": "0.4.7",
+    "@sbercloud/uikit-react-input": "0.4.8",
     "@sbercloud/uikit-theme": "0.6.1"
   },
   "peerDependencies": {
