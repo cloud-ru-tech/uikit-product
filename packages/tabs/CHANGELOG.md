@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tabs@0.2.5&sourceBranch=refs/tags/@sbercloud/uikit-react-tabs@0.2.6) (2021-06-16)
+
+
+### Bug Fixes
+
+* add string type for  identKey ([466f7bb](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/466f7bbc0fa7e8e0c18b91a0e453fb99b0e3edef))
+* excess margin ([b569bc9](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b569bc9ef87e996d3beb28a1973599d500862912))
+
+
+
+
+
 ## [0.2.5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tabs@0.2.4&sourceBranch=refs/tags/@sbercloud/uikit-react-tabs@0.2.5) (2021-06-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tabs
