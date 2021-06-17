@@ -5,6 +5,7 @@ import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 const { COLORS_TABS } = EXPORT_VARS;
 
 export const GroupStyled = styled.ul`
+  margin: 0;
   display: flex;
   list-style-type: none;
   flex-direction: row;
