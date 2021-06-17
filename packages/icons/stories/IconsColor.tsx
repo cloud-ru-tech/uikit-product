@@ -3,14 +3,12 @@ import { Input } from '@sbercloud/uikit-react-input';
 import { Text2 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { CloseSVG, SearchSVG } from '../src/components/icons';
 import * as Icons from '../src/components/icons-color';
+import { CloseInterfaceSVG, SearchInterfaceSVG } from '../src/components/icons-interface';
 
 const Group = styled.div`
   margin-top: 24px;
@@ -42,13 +40,13 @@ const Template: Story = () => {
         }}
         postfix={
           search ? (
-            <CloseSVG
+            <CloseInterfaceSVG
               onClick={(): void => {
                 setSearch('');
               }}
             />
           ) : (
-            <SearchSVG />
+            <SearchInterfaceSVG />
           )
         }
         placeholder='Поиск'
@@ -86,5 +84,4 @@ color.argTypes = {};
 export default {
   title: 'Not stable/Icons/Color',
   component: Group,
-  decorators: [addReadme, withDesign],
 } as Meta;

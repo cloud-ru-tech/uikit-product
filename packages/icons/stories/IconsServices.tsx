@@ -8,7 +8,7 @@ import { useState } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { CloseSVG, SearchSVG } from '../src/components/icons';
+import { CloseInterfaceSVG, SearchInterfaceSVG } from '../src/components/icons-interface';
 import * as Icons from '../src/components/icons-services';
 
 const Group = styled.div`
@@ -39,13 +39,13 @@ const Template: Story = () => {
         }}
         postfix={
           search ? (
-            <CloseSVG
+            <CloseInterfaceSVG
               onClick={(): void => {
                 setSearch('');
               }}
             />
           ) : (
-            <SearchSVG />
+            <SearchInterfaceSVG />
           )
         }
         placeholder='Поиск'

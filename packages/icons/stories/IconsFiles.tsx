@@ -8,8 +8,8 @@ import { useState } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { CloseSVG, SearchSVG } from '../src/components/icons';
 import * as Icons from '../src/components/icons-files';
+import { CloseInterfaceSVG, SearchInterfaceSVG } from '../src/components/icons-interface';
 
 const Group = styled.div`
   margin-top: 24px;
@@ -39,13 +39,13 @@ const Template: Story = () => {
         }}
         postfix={
           search ? (
-            <CloseSVG
+            <CloseInterfaceSVG
               onClick={(): void => {
                 setSearch('');
               }}
             />
           ) : (
-            <SearchSVG />
+            <SearchInterfaceSVG />
           )
         }
         placeholder='Поиск'
