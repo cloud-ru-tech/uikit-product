@@ -9,7 +9,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CloseSVG, SearchSVG } from '../src/components/icons';
-import * as Icons from '../src/components/icons-services';
+import * as Icons from '../src/components/icons-files';
 
 const Group = styled.div`
   margin-top: 24px;
@@ -68,10 +68,10 @@ const Template: Story = () => {
   );
 };
 
-export const services = Template.bind({});
+export const files = Template.bind({});
 
-services.args = {};
-services.parameters = {
+files.args = {};
+files.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
@@ -80,9 +80,9 @@ services.parameters = {
     url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/TEMP-DESIGN-SYSTEM?node-id=212%3A350',
   },
 };
-services.argTypes = {};
+files.argTypes = {};
 
 export default {
-  title: 'Not stable/Icons/Services',
+  title: 'Not stable/Icons/Files',
   component: Group,
 } as Meta;

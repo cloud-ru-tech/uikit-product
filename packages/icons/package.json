@@ -21,7 +21,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "build:icons": "rm -rf src/components/icons && svgr -d src/components/icons svg --config-file templates/.svgrrc.js",
-    "build:services-icons": "rm -rf src/components/icons-services && svgr -d src/components/icons-services svg-services --config-file templates/.svgrrc.js",
+    "build:services-icons": "rm -rf src/components/icons-services && svgr -d src/components/icons-services svgs/services --config-file templates/.svgrrc.js",
+    "build:file-icons": "rm -rf src/components/icons-files && svgr -d src/components/icons-files svgs/files --config-file templates/.svgrrc.js",
     "build:icons-color": "rm -rf src/components/icons-color && svgr --config-file templates/.svgrrc-color.js -d src/components/icons-color svg-color",
     "compile": "npm run build:icons && npm run build:services-icons && npm run build:icons-color"
   },
