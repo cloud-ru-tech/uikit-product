@@ -22,7 +22,7 @@ const template =
     ${imports}
     ${interfaces}
 
-    interfaces ISvgIconProps extends React.SVGProps<SVGSVGElement> {
+    interface ISvgIconProps extends React.SVGProps<SVGSVGElement> {
       className?: string;
       wrapperSize?: string | number;
       size?: string | number;

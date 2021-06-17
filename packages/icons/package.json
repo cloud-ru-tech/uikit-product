@@ -20,15 +20,15 @@
   ],
   "license": "UNLICENSED",
   "scripts": {
-    "build:services-icons": "rm -rf src/components/icons-services && svgr -d src/components/icons-services svgs/inherit/services --config-file templates/.svgrrc.js",
-    "build:file-icons": "rm -rf src/components/icons-files && svgr -d src/components/icons-files svgs/inherit/files --config-file templates/.svgrrc.js",
-    "build:display-icons": "rm -rf src/components/icons-display && svgr -d src/components/icons-display svgs/inherit/display --config-file templates/.svgrrc.js",
-    "build:interface-icons": "rm -rf src/components/icons-interface && svgr -d src/components/icons-interface svgs/inherit/interface --config-file templates/.svgrrc.js",
+    "build:services-icons": "rm -rf src/components/services-icons && svgr -d src/components/services-icons svgs/inherit/services --config-file templates/.svgrrc.js",
+    "build:file-icons": "rm -rf src/components/files-icons && svgr -d src/components/files-icons svgs/inherit/files --config-file templates/.svgrrc.js",
+    "build:display-icons": "rm -rf src/components/display-icons && svgr -d src/components/display-icons svgs/inherit/display --config-file templates/.svgrrc.js",
+    "build:interface-icons": "rm -rf src/components/interface-icons && svgr -d src/components/interface-icons svgs/inherit/interface --config-file templates/.svgrrc.js",
 
-    "build:logo-icons": "rm -rf src/components/icons-logo && svgr --config-file templates/.svgrrc-color.js -d src/components/icons-logo svgs/color/logos",
-    "build:icons-color": "rm -rf src/components/icons-color && svgr --config-file templates/.svgrrc-color.js -d src/components/icons-color svgs/color/other",
+    "build:logo-icons": "rm -rf src/components/logo-icons && svgr --config-file templates/.svgrrc-color.js -d src/components/logo-icons svgs/color/logos",
+    "build:color-icons": "rm -rf src/components/color-icons && svgr --config-file templates/.svgrrc-color.js -d src/components/color-icons svgs/color/other",
 
-    "build:svgs-color": "npm run build:icons-color && npm run build:logo-icons",
+    "build:svgs-color": "npm run build:color-icons && npm run build:logo-icons",
     "build:svgs-inherit": "npm run build:file-icons && npm run build:services-icons && npm run build:display-icons && npm run build:interface-icons",
 
     "compile": "npm run build:svgs-inherit && npm run build:svgs-color"

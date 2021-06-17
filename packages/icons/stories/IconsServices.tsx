@@ -8,8 +8,8 @@ import { useState } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { CloseInterfaceSVG, SearchInterfaceSVG } from '../src/components/icons-interface';
-import * as Icons from '../src/components/icons-services';
+import { CloseInterfaceSVG, SearchInterfaceSVG } from '../src/components/interface-icons';
+import * as Icons from '../src/components/services-icons';
 
 const Group = styled.div`
   margin-top: 24px;
