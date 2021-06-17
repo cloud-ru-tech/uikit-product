@@ -49,6 +49,7 @@ export const FooterBoxStyled = styled.div<{ width: string }>`
   position: sticky;
   width: ${props => props.width};
   bottom: 0;
+  box-sizing: border-box;
 `;
 
 export const drawerPaddingModeClassName = css`
