@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.12](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tabs@0.2.11&sourceBranch=refs/tags/@sbercloud/uikit-react-tabs@0.2.12) (2021-06-17)
+
+
+### Bug Fixes
+
+* margin 0 for tabs ([50bb4c2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/50bb4c2a18a5d84f8d86a01b610b09ccb1637c11))
+
+
+
+
+
 ## [0.2.11](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tabs@0.2.10&sourceBranch=refs/tags/@sbercloud/uikit-react-tabs@0.2.11) (2021-06-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tabs
