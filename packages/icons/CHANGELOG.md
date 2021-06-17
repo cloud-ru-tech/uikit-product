@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@0.2.12&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@0.3.0) (2021-06-17)
+
+
+### Bug Fixes
+
+* delete duplicates in file icons ([51125bd](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/51125bd26d85df5eda49bd144fcb92646405f59d))
+* move icons to suffix instead of prefix in ignored file names ([d7d8e3f](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d7d8e3f6d36db5e1f75c7ddb51d204a3a64e3142))
+
+
+### Features
+
+* all icons were added from the newest ds ([f43b24e](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/f43b24e47ba6c8e1f135d70d38fa9028eaf05cd4))
+* services and files icons satisfy ds ([211b48c](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/211b48cef203dcc90b90aeab96581ba6aa6fb011))
+
+
+### BREAKING CHANGES
+
+* all icons were added from the newest ds
+
+
+
+
+
 ## [0.2.12](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@0.2.11&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@0.2.12) (2021-06-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-icons

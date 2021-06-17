@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-cards",
   "title": "React Cards",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -21,9 +21,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/icons": "1.0.15-14c9f91b",
     "@sbercloud/uikit-react-button": "0.3.1",
     "@sbercloud/uikit-react-checkbox": "0.1.7",
-    "@sbercloud/icons": "1.0.15-14c9f91b",
     "@sbercloud/uikit-react-paginator-private": "0.1.7",
     "@sbercloud/uikit-theme": "0.8.0"
   },
