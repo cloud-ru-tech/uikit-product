@@ -340,6 +340,7 @@ const COLORS_FORM_FIELD = {
 };
 
 const COLORS_DRAWER = {
+  HEADER_TEXT_COLOR: '--drawer-text-color',
   BACKGROUND: '--drawer-background',
   BORDER_COLOR: '--drawer-border',
 };
