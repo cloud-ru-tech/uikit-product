@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-filter",
   "title": "React Filter",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -23,11 +23,11 @@
   "dependencies": {
     "@sbercloud/icons": "1.0.15-14c9f91b",
     "@sbercloud/uikit-react-divider": "0.2.7",
-    "@sbercloud/uikit-react-input": "0.4.10",
-    "@sbercloud/uikit-react-select": "0.4.0",
-    "@sbercloud/uikit-react-tooltip": "0.1.7",
+    "@sbercloud/uikit-react-input": "0.4.11",
+    "@sbercloud/uikit-react-select": "0.4.1",
+    "@sbercloud/uikit-react-tooltip": "0.1.8",
     "@sbercloud/uikit-theme": "0.8.0",
-    "@sbercloud/uikit-typography": "0.1.7",
+    "@sbercloud/uikit-typography": "0.1.8",
     "lodash.clonedeep": "4.5.0",
     "lodash.eq": "4.0.0",
     "lodash.gt": "3.9.2",
@@ -36,7 +36,7 @@
     "lodash.lte": "3.9.2"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-toolbar": "0.3.10",
+    "@sbercloud/uikit-react-toolbar": "0.3.11",
     "@types/lodash.clonedeep": "4.5.6",
     "@types/lodash.eq": "4.0.6",
     "@types/lodash.gt": "3.9.6",

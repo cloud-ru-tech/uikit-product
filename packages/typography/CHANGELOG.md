@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-typography@0.1.7&sourceBranch=refs/tags/@sbercloud/uikit-typography@0.1.8) (2021-06-18)
+
+
+### Bug Fixes
+
+* [AICDC-2216](https://jira.sbercloud.tech/browse/AICDC-2216): removed link underline, updated figma links ([d26e368](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d26e368544433e19ffd3dd62793fb5b8774fdcf3))
+
+
+
+
+
 ## [0.1.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-typography@0.1.6&sourceBranch=refs/tags/@sbercloud/uikit-typography@0.1.7) (2021-06-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-typography

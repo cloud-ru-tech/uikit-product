@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-icons",
   "title": "React Icons",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -31,9 +31,9 @@
     "compile": "npm run build:svgs-inherit && npm run build:svgs-color"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-input": "0.4.10",
-    "@sbercloud/uikit-react-modal": "0.3.1",
-    "@sbercloud/uikit-typography": "0.1.7",
+    "@sbercloud/uikit-react-input": "0.4.11",
+    "@sbercloud/uikit-react-modal": "0.3.2",
+    "@sbercloud/uikit-typography": "0.1.8",
     "@svgr/cli": "5.5.0"
   },
   "peerDependencies": {
