@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.8.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.8.1) (2021-06-18)
+
+
+### Bug Fixes
+
+* drawer header text color | [AICDC-2375](https://jira.sbercloud.tech/browse/AICDC-2375) ([c96d802](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/c96d802c9470d21077d940128b385e6dcd99932c))
+
+
+
+
+
 # [0.8.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.8.0) (2021-06-16)
 
 

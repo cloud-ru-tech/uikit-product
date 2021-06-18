@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-select",
   "title": "React Select",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,20 +22,20 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/icons": "1.0.15-14c9f91b",
-    "@sbercloud/uikit-react-avatar": "0.1.7",
-    "@sbercloud/uikit-react-button": "0.3.2",
-    "@sbercloud/uikit-react-divider": "0.2.7",
-    "@sbercloud/uikit-react-input": "0.4.11",
-    "@sbercloud/uikit-react-modal": "0.3.2",
-    "@sbercloud/uikit-react-tag": "0.3.1",
-    "@sbercloud/uikit-theme": "0.8.0",
+    "@sbercloud/uikit-react-avatar": "0.1.8",
+    "@sbercloud/uikit-react-button": "0.3.3",
+    "@sbercloud/uikit-react-divider": "0.2.8",
+    "@sbercloud/uikit-react-input": "0.4.12",
+    "@sbercloud/uikit-react-modal": "0.3.3",
+    "@sbercloud/uikit-react-tag": "0.3.2",
+    "@sbercloud/uikit-theme": "0.8.1",
     "lodash.isequal": "4.5.0",
     "rc-tree": "4.1.5",
     "react-select": "3.2.0"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-radio": "0.1.8",
-    "@sbercloud/uikit-react-truncate-string": "0.1.7",
+    "@sbercloud/uikit-react-radio": "0.1.9",
+    "@sbercloud/uikit-react-truncate-string": "0.1.8",
     "@types/lodash.isequal": "4.5.5",
     "@types/react-select": "3.1.2"
   },
