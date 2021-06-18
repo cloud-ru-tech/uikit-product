@@ -1,3 +1,5 @@
+const generateDataTestId = require('./generateDataTestId');
+
 const template =
   ({ size }) =>
   ({ template }, opts, { imports, interfaces, componentName, props, jsx, exports }) => {
@@ -6,8 +8,7 @@ const template =
 
     opts.expandProps = [];
 
-    const cnt = `${componentName.name}`.replace('Svg', '').replace(/[A-Z]/g, x => '-' + x.toLowerCase());
-    const testId = 'icon' + cnt;
+    const testId = 'icon' + generateDataTestId(componentName.name);
 
     const componentProp = Boolean(size)
       ? `{ size = ${size}, ...props }: ISvgIconProps`

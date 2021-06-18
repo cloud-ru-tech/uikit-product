@@ -36,6 +36,10 @@ const IconOverview = styled.div`
   align-items: center;
 `;
 
+function generateDataTestId(componentName: string) {
+  return 'icon' + componentName.replaceAll(/svg/gi, '').replace(/[A-Z]/g, x => '-' + x.toLowerCase());
+}
+
 export function getTemplate(
   Icons: Record<string, React.FunctionComponent<{ size?: number | string; fill?: string }>>,
 ): Story {
@@ -74,15 +78,13 @@ export function getTemplate(
             .map(([key, Icon]) => (
               <Item
                 key={key}
-                onClick={() => {
-                  const dataTestId = Icon.toString().match(/var testId = .*';/g) || [''];
-
+                onClick={() =>
                   setSelectedIcon({
                     iconName: key,
                     Icon: Icon,
-                    dataAttribute: dataTestId[0].replace('var testId = ', '').replaceAll("'", '').replace(';', ''),
-                  });
-                }}
+                    dataAttribute: generateDataTestId(key),
+                  })
+                }
               >
                 <Icon size={size} fill={fill} />
                 <div>
