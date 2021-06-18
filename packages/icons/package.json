@@ -31,9 +31,8 @@
     "compile": "npm run build:svgs-inherit && npm run build:svgs-color"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-button": "0.3.1",
     "@sbercloud/uikit-react-input": "0.4.10",
-    "@sbercloud/uikit-theme": "0.8.0",
+    "@sbercloud/uikit-react-modal": "0.3.1",
     "@sbercloud/uikit-typography": "0.1.7",
     "@svgr/cli": "5.5.0"
   },
