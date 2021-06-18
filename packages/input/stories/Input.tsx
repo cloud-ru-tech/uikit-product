@@ -26,7 +26,10 @@ const Template: Story<InputProps> = ({ ...args }) => {
 };
 
 export const input = Template.bind({});
-input.args = {};
+input.args = {
+  allowCopy: false,
+  type: Input.types.security,
+};
 input.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

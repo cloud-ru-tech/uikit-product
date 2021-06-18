@@ -1,4 +1,4 @@
-import { CloseSVG, EyeCloseSVG, EyeSVG } from '@sbercloud/icons';
+import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { CopyButton } from '@sbercloud/uikit-react-button';
 import copyText from 'copy-to-clipboard';
 import { useCallback, useEffect, useRef, useState } from 'react';
@@ -143,13 +143,13 @@ export const Input = ({
         <StyledIconWrapper>
           {!disabled && allowClear && correctValue && correctValue !== '' && (
             <StyledClearButton onClick={handleClickClear}>
-              <CloseSVG />
+              <CloseInterfaceSVG />
             </StyledClearButton>
           )}
           {postfix}
           {type === 'security' ? (
             <StyledSecurityButton onClick={(): void => setViewMode(!isViewMode)}>
-              {isViewMode ? <EyeCloseSVG /> : <EyeSVG />}
+              {isViewMode ? <EyeClosedInterfaceSVG /> : <EyeOpenedInterfaceSVG />}
             </StyledSecurityButton>
           ) : null}
           {allowCopy && (

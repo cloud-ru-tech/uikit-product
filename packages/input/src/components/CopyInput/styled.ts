@@ -23,7 +23,7 @@ const copyButtonClassName = css`
   }
 `;
 
-const StyledInput = styled.div`
+const StyledInput = styled.div<{ hasSecurityIcon: boolean }>`
   flex-grow: 1;
   box-sizing: border-box;
   width: 100%;
@@ -34,7 +34,7 @@ const StyledInput = styled.div`
   line-height: 20px;
   outline: 0;
   height: 36px;
-  padding: 8px 36px 8px 12px;
+  padding: ${({ security }) => (security ? '8px 64px 8px 12px' : '8px 36px 8px 12px')};
   background-color: var(${COLORS_INPUT.COPY_INPUT_BACKGROUND});
   border: 0;
   border-radius: 2px;
@@ -70,14 +70,36 @@ const StyledInputWrapper = styled.div<{ labelMinWidth?: string }>`
   width: ${props => (props.labelMinWidth ? `calc(100% - ${props.labelMinWidth})` : '100%')};
 `;
 
-const StyledIconWrapper = styled.div`
+const StyledIconWrapper = styled.div<{ right: number }>`
   position: absolute;
   top: 0;
-  right: 12px;
+  right: ${({ right }) => `${right}px`};
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 100%;
 `;
 
-export { Label, StyledWrap, StyledInput, StyledIconWrapper, StyledInputWrapper, copyButtonClassName };
+const securityButtonClassName = css`
+  &[data-variant='table-menu'] {
+    padding: 4px;
+
+    fill: var(${COLORS_INPUT.COPY_INPUT_ICON_COLOR});
+    background: var(${COLORS_INPUT.COPY_INPUT_ICON_BACKGROUND_COLOR});
+
+    &:hover {
+      fill: var(${COLORS_INPUT.COPY_INPUT_ICON_HOVER_COLOR});
+      background: var(${COLORS_INPUT.COPY_INPUT_ICON_BACKGROUND_COLOR});
+    }
+  }
+`;
+
+export {
+  Label,
+  StyledWrap,
+  StyledInput,
+  StyledIconWrapper,
+  StyledInputWrapper,
+  copyButtonClassName,
+  securityButtonClassName,
+};

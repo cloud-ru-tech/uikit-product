@@ -1,41 +1,85 @@
 import copyText from 'copy-to-clipboard';
-import { useState } from 'react';
+import { useCallback, useState, useMemo } from 'react';
 
-import { CopyButton } from '@sbercloud/uikit-react-button';
+import { Button, CopyButton } from '@sbercloud/uikit-react-button';
+import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-import { Label, StyledIconWrapper, StyledInput, StyledInputWrapper, StyledWrap, copyButtonClassName } from './styled';
+import {
+  Label,
+  StyledIconWrapper,
+  StyledInput,
+  StyledInputWrapper,
+  StyledWrap,
+  copyButtonClassName,
+  securityButtonClassName,
+} from './styled';
 
 export type CopyInputProps = {
   value: string;
   label?: string;
+  security?: boolean;
   labelMinWidth?: string;
   wrapperClassName?: string;
 };
 
-export const CopyInput: React.FC<CopyInputProps> = ({ value, label, labelMinWidth, wrapperClassName }) => {
+export const CopyInput: React.FC<CopyInputProps> = ({ value, label, labelMinWidth, wrapperClassName, security }) => {
   const [isCopyCompleted, setIsCopyCompleted] = useState(false);
+  const [showContent, setShowContent] = useState(!security);
 
-  const handleCopyButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+  const handleCopyButtonClick = useCallback((e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.stopPropagation();
-  };
+  }, []);
 
-  const handleInputClick = (e: React.MouseEvent<HTMLInputElement>) => {
-    e.stopPropagation();
+  const handleInputClick = useCallback(
+    (e: React.MouseEvent<HTMLInputElement>) => {
+      e.stopPropagation();
 
-    setIsCopyCompleted(true);
-    copyText(value);
+      setIsCopyCompleted(true);
+      copyText(value);
 
-    setTimeout(() => {
-      setIsCopyCompleted(false);
-    }, 3000);
-  };
+      setTimeout(() => {
+        setIsCopyCompleted(false);
+      }, 3000);
+    },
+    [value],
+  );
+
+  const handleSecurityButtonClick = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement>) => {
+      e.stopPropagation();
+
+      setShowContent(!showContent);
+    },
+    [showContent],
+  );
+
+  const valueToShow = useMemo(() => {
+    if (showContent) {
+      return value;
+    }
+
+    return value.replaceAll(/./gi, '•');
+  }, [showContent, value]);
 
   return (
     <StyledWrap className={wrapperClassName}>
       {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
       <StyledInputWrapper labelMinWidth={labelMinWidth}>
-        <StyledInput onClick={handleInputClick}>{value}</StyledInput>
-        <StyledIconWrapper>
+        <StyledInput hasSecurityIcon={!!security} onClick={handleInputClick}>
+          {valueToShow}
+        </StyledInput>
+        {security ? (
+          <StyledIconWrapper right={36}>
+            <Button
+              onClick={handleSecurityButtonClick}
+              className={securityButtonClassName}
+              variant={Button.variants.TableMenu}
+            >
+              {showContent ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
+            </Button>
+          </StyledIconWrapper>
+        ) : null}
+        <StyledIconWrapper right={12}>
           <CopyButton
             text={value.toString()}
             onClick={handleCopyButtonClick}

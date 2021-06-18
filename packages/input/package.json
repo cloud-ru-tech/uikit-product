@@ -21,7 +21,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/icons": "2.3.0",
+    "@sbercloud/uikit-react-icons": "1.0.3",
     "@sbercloud/uikit-react-button": "0.3.3",
     "@sbercloud/uikit-theme": "0.8.1",
     "copy-to-clipboard": "3.3.1",

@@ -13,19 +13,18 @@ export default {
 const Template: Story<CopyInputProps> = ({ ...args }) => <CopyInput {...args} />;
 
 export const copyInput = Template.bind({});
-copyInput.args = {};
+copyInput.args = {
+  label: '',
+  security: false,
+  labelMinWidth: '0px',
+  value: 'Пример: Project1-bucket106',
+};
 copyInput.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
-  },
-};
-copyInput.argTypes = {
-  value: {
-    defaultValue: 'Пример: Project1-bucket106',
+    url: 'https://www.figma.com/file/9UAhwzTGUnOFaczS5Q5v5c/SberCloud-%E2%86%92-Design_System?node-id=4876%3A635',
   },
 };
