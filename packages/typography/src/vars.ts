@@ -78,7 +78,7 @@ const TEXT_2_LINK = `
   font-size: 14px;
   line-height: 20px;
   color: var(${EXPORT_VARS.COLORS_TYPOGRAPHY.LINK});
-  text-decoration: underline;
+  text-decoration: none;
 `;
 
 const TEXT_3 = `
