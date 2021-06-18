@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.3.5&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.3.6) (2021-06-18)
+
+
+### Bug Fixes
+
+* button component to dependencies | [AICDC-2375](https://jira.sbercloud.tech/browse/AICDC-2375) ([b4313b1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b4313b1b7bb29de147ce1e09b52e8ebd376caeac))
+* button component to dependencies v2 | [AICDC-2375](https://jira.sbercloud.tech/browse/AICDC-2375) ([36aa323](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/36aa323d5ee2233b85b11b7f836f85948b23ee55))
+
+
+
+
+
 ## [0.3.5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.3.4&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.3.5) (2021-06-18)
 
 
