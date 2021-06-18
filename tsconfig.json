@@ -2,6 +2,14 @@
   "extends": "ts-config-single-spa",
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@sbercloud/uikit-*": [
+        "./packages/*/src"
+      ],
+      "@sbercloud/uikit-react-*": [
+        "./packages/*/src"
+      ]
+    },
     "target": "es6",
     "lib": ["es2017", "dom", "esnext"],
     "module": "esnext",
