@@ -9,8 +9,12 @@ import { CloseInterfaceSVG, SearchInterfaceSVG } from '../src';
 
 const Group = styled.div`
   margin-top: 24px;
-  display: flex;
-  flex-wrap: wrap;
+  padding-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-rows: 100px 100px;
+  grid-column-gap: 20px;
+  grid-row-gap: 12px;
   overflow: auto;
 `;
 
@@ -36,7 +40,12 @@ const IconOverview = styled.div`
   align-items: center;
 `;
 
+const CopyInputWrapper = styled.div`
+  width: 100%;
+`;
+
 function generateDataTestId(componentName: string) {
+  if (componentName === 'SvgFileSVG') return 'icon-svg-file';
   return 'icon' + componentName.replaceAll(/svg/gi, '').replace(/[A-Z]/g, x => '-' + x.toLowerCase());
 }
 
@@ -112,8 +121,11 @@ export function getTemplate(
                 <CopyInput
                   value={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-react-icons';`}
                   label={'Import:'}
+                  labelMinWidth={'100px'}
                 />
-                <CopyInput value={selectedIcon.dataAttribute} label={'data-test-id:'} labelMinWidth={'100px'} />
+                <CopyInputWrapper>
+                  <CopyInput value={selectedIcon.dataAttribute} label={'data-test-id:'} labelMinWidth={'100px'} />
+                </CopyInputWrapper>
               </IconOverview>
             }
           />
