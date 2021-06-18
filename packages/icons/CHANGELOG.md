@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.0.2&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.0.3) (2021-06-18)
+
+
+### Bug Fixes
+
+* compress too heavy logo icons ([65c9615](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/65c961544cc10442c95f3f838cbcb9dde6e32768))
+* fix potential circular dependencies ([4dc9606](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/4dc96068d229d8b43a1089d1bbd7e15ec622850a))
+
+
+
+
+
 ## [1.0.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.0.1&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.0.2) (2021-06-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-icons
