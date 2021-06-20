@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { Modal, ModalProps } from '../src';
 
 export default {
-  title: 'Not stable/Modal',
+  title: 'Not stable/Modal/Modal',
   component: Modal,
 } as Meta;
 

@@ -2,8 +2,6 @@ import { styled } from '@linaria/react';
 import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -14,7 +12,6 @@ import { PRESET_COLORS } from '../src/helpers/colors';
 export default {
   title: 'Not stable/Tag',
   component: Tag,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Row = styled.div`

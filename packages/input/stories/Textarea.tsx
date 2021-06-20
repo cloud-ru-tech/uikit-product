@@ -1,6 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -8,9 +6,8 @@ import componentReadme from '../README.md';
 import { ITextareaProps, Textarea } from '../src';
 
 export default {
-  title: 'Not stable/Input',
+  title: 'Not stable/Input/Textarea',
   component: Textarea,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<ITextareaProps> = ({ ...args }) => <Textarea {...args} />;

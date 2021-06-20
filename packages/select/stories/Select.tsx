@@ -6,8 +6,6 @@ import { Avatar } from '@sbercloud/uikit-react-avatar';
 import { RadioIcon } from '@sbercloud/uikit-react-radio';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -23,9 +21,8 @@ import {
 import { groupedServices, services } from '../src/helpers/mockData';
 
 export default {
-  title: 'Not stable/Select',
+  title: 'Not stable/Select/Select',
   component: Select,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const StyledLogoWrap = styled.div`

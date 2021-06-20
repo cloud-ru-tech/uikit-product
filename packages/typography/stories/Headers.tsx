@@ -1,6 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -10,7 +8,6 @@ import { H1, H2, H3, H3Semibold, H4, H5 } from '../src';
 export default {
   title: 'Typography/Headers',
   component: H1,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<{ color: string; children: string }> = ({ children, color, ...restArgs }) => (

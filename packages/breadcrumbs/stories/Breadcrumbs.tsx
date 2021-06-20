@@ -2,8 +2,6 @@ import { Button, CopyButton } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -15,7 +13,6 @@ import { BreadcrumbItem } from '../src/helpers/types';
 export default {
   title: 'Not stable/Breadcrumbs',
   component: Breadcrumbs,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<BreadcrumbsProps> = ({ ...args }) => {

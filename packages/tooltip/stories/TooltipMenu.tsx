@@ -1,7 +1,5 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -11,7 +9,6 @@ import { Tooltip, TooltipMenu, TooltipMenuItem, TooltipStateContainer } from '..
 export default {
   title: 'Not stable/Tooltip/Tooltip Menu',
   component: Tooltip,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const TooltipWrapper = styled.div`

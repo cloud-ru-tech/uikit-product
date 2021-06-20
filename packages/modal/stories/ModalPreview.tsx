@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { ModalPreview, ModalPreviewProps } from '../src';
 
 export default {
-  title: 'Not stable/Modal',
+  title: 'Not stable/Modal/Modal Preview',
   component: ModalPreview,
 } as Meta;
 

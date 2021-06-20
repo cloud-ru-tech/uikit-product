@@ -2,8 +2,6 @@ import { styled } from '@linaria/react';
 import { H3 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -11,9 +9,8 @@ import componentReadme from '../README.md';
 import { Card, CardHeader, CardHeaderProps } from '../src';
 
 export default {
-  title: 'Not stable/Card',
+  title: 'Not stable/Card/Card Header',
   component: CardHeader,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const CardContentWrapStyled = styled.div`

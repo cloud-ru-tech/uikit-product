@@ -1,8 +1,6 @@
 import { styled } from '@linaria/react';
 import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -11,7 +9,6 @@ import { Toaster as CToaster, ToasterOptions, ToasterProps, toaster } from '../s
 
 export default {
   title: 'Not stable/Toaster',
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const PREDEFINED_ITEMS: {

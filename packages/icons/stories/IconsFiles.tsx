@@ -4,7 +4,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import * as Icons from '../src/components/files-icons';
-import { getTemplate } from '../storyHelpers/StoryTemplate';
+import { getTemplate } from './helpers/StoryTemplate';
 
 export default {
   title: 'Components/Icons/Files',

@@ -1,6 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -10,7 +8,6 @@ import { CopyInput, CopyInputProps } from '../src';
 export default {
   title: 'Not stable/Input/Copy Input',
   component: CopyInput,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<CopyInputProps> = ({ ...args }) => <CopyInput {...args} />;

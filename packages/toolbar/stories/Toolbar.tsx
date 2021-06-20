@@ -1,8 +1,6 @@
 import { DeleteSVG, FilterSVG, RefreshSVG, RowExpandedSVG, TableSettingsSVG } from '@sbercloud/icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -11,7 +9,6 @@ import { Toolbar, ToolbarWrapperProps } from '../src';
 
 export default {
   title: 'Not stable/Toolbar',
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<ToolbarWrapperProps> = ({ ...args }) => {

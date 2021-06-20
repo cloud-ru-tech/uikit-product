@@ -1,21 +1,22 @@
 import { styled } from '@linaria/react';
 import { CopyInput, Input } from '@sbercloud/uikit-react-input';
 import { Modal } from '@sbercloud/uikit-react-modal';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H2, Text2 } from '@sbercloud/uikit-typography';
 import { Story } from '@storybook/react/types-6-0';
 import React, { useCallback, useState } from 'react';
 
-import { CloseInterfaceSVG, SearchInterfaceSVG } from '../src';
+import { CloseInterfaceSVG, SearchInterfaceSVG } from '../../src';
+
+const { COLORS_BUTTON } = EXPORT_VARS;
 
 const Group = styled.div`
   margin-top: 24px;
   padding-bottom: 24px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  grid-template-rows: 100px 100px;
+  grid-template-columns: repeat(auto-fill, 250px);
   grid-column-gap: 20px;
   grid-row-gap: 12px;
-  overflow: auto;
 `;
 
 const Item = styled.div`
@@ -27,6 +28,11 @@ const Item = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  :hover {
+    color: ${() => `var(${COLORS_BUTTON.TRANSPARENT_HOVER_COLOR})`};
+    background-color: ${() => `var(${COLORS_BUTTON.TRANSPARENT_HOVER_BG})`};
+  }
 `;
 
 const IconOverview = styled.div`
@@ -42,6 +48,10 @@ const IconOverview = styled.div`
 
 const CopyInputWrapper = styled.div`
   width: 100%;
+`;
+
+const TextWrapper = styled.div`
+  margin-top: 12px;
 `;
 
 function generateDataTestId(componentName: string) {
@@ -96,9 +106,9 @@ export function getTemplate(
                 }
               >
                 <Icon size={size} fill={fill} />
-                <div>
+                <TextWrapper>
                   <Text2>{key}</Text2>
-                </div>
+                </TextWrapper>
               </Item>
             ))}
         </Group>

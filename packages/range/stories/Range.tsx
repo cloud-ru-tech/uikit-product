@@ -1,8 +1,6 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -12,7 +10,6 @@ import { IRangeProps, Range } from '../src';
 export default {
   title: 'Not stable/Range',
   component: Range,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const RangeWrap = styled.div`

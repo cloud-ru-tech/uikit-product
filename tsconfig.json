@@ -1,27 +1,23 @@
 {
   "extends": "ts-config-single-spa",
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "packages",
     "paths": {
       "@sbercloud/uikit-*": [
-        "./packages/*/src"
+        "./*/src"
       ],
       "@sbercloud/uikit-react-*": [
-        "./packages/*/src"
+        "./*/src"
       ]
     },
     "target": "es6",
     "lib": ["es2017", "dom", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
     "jsx": "react-jsx",
     "strict": true,
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true
   },
   "include": ["packages", "types"],
   "exclude": ["node_modules", "scripts"]

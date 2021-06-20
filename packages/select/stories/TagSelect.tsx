@@ -2,8 +2,6 @@ import { styled } from '@linaria/react';
 import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,9 +11,8 @@ import { PRESET_COLORS } from '../src/constants';
 import getRandomInt from '../src/helpers/getRandomInt';
 
 export default {
-  title: 'Not stable/Select',
+  title: 'Not stable/Select/Tag Select',
   component: TagSelect,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const tags = [...new Array(100)].map(() => ({

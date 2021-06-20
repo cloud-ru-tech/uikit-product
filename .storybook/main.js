@@ -1,4 +1,4 @@
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 const glob = require('glob');
 const path = require('path');
 
@@ -48,7 +48,8 @@ module.exports = {
     config.resolve.plugins.push(
       new TsconfigPathsPlugin({
         configFile: './tsconfig.json',
-        logLevel: 'info',
+        logLevel: 'INFO',
+        extensions: ['.ts', '.tsx', '.json', '.svg', '.png'],
       }),
     );
 

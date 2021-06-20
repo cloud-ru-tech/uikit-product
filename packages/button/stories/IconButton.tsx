@@ -1,8 +1,6 @@
 import { styled } from '@linaria/react';
 import { CloseSVG, EditSVG, FavFilledSVG, ListSVG, MainMenuSVG, SearchSVG } from '@sbercloud/icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -12,7 +10,6 @@ import { IconButton, IconButtonVariant } from '../src';
 export default {
   title: 'Not stable/Button/Icon Button',
   component: IconButton,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Wrapper = styled.div`

@@ -5,8 +5,6 @@ import { Slider } from '@sbercloud/uikit-react-slider';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -16,9 +14,8 @@ import { FormField, FormGroup } from '../src';
 const { COLORS_DRAWER } = EXPORT_VARS;
 
 export default {
-  title: 'Not stable/Form',
+  title: 'Not stable/Form/Form Group',
   component: FormGroup,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Wrapper = styled.div`

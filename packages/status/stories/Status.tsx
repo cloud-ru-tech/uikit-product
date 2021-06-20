@@ -1,7 +1,5 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -11,7 +9,6 @@ import { Status } from '../src';
 export default {
   title: 'Not stable/Status',
   component: Status,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Wrapper = styled.div`

@@ -1,6 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -12,7 +10,6 @@ const { Favorites } = FrameworkComponents;
 export default {
   title: 'Not stable/Table',
   component: Table,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<ITableProps> = args => <Table {...args} />;

@@ -7,8 +7,6 @@ import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
 import { Select } from '@sbercloud/uikit-react-select';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -18,7 +16,6 @@ import { Drawer, IDrawerProps } from '../src';
 export default {
   title: 'Not stable/Drawer',
   component: Drawer,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const buttonStyle = css`

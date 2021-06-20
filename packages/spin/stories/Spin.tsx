@@ -1,6 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -11,7 +9,6 @@ import { Sizes } from '../src/helpers/constants';
 export default {
   title: 'Not stable/Spin',
   component: Spin,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<SpinDefaultProps> = args => <Spin {...args} />;

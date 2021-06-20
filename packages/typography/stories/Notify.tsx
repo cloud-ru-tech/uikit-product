@@ -1,6 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -10,7 +8,6 @@ import { NotifyText } from '../src';
 export default {
   title: 'Typography/Notify',
   component: NotifyText,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<{ color: string; children: string }> = ({ children, color, ...restArgs }) => (

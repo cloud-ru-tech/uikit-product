@@ -1,6 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -10,7 +8,6 @@ import { CopyButton, CopyButtonProps } from '../src';
 export default {
   title: 'Not stable/Button/Copy Button',
   component: CopyButton,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<CopyButtonProps> = ({ ...args }) => <CopyButton {...args} />;

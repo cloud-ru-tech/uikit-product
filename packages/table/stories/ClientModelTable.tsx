@@ -5,8 +5,6 @@ import { Status } from '@sbercloud/uikit-react-status';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import debounce from 'lodash.debounce';
 import { useEffect, useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -19,7 +17,6 @@ const { StatusCell } = FrameworkComponents;
 export default {
   title: 'Not stable/Table/Client Model Table',
   component: CMTable,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 type DataModel = {

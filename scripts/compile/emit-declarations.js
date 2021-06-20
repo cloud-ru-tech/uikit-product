@@ -11,7 +11,6 @@ function createTSProgram({ fileNames }) {
     allowJs: false,
     declaration: true,
     emitDeclarationOnly: true,
-    sourceMap: true,
   };
 
   const host = ts.createCompilerHost(options);

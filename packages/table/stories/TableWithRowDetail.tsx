@@ -5,8 +5,6 @@ import { Input } from '@sbercloud/uikit-react-input';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -16,7 +14,6 @@ import { FrameworkComponents, ITableWithRowDetailProps, TableBasicTypes, TableWi
 export default {
   title: 'Not stable/Table/With Row Detail',
   component: TableWithRowDetail,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const { StatusCell } = FrameworkComponents;

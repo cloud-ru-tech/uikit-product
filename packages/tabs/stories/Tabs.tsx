@@ -2,8 +2,6 @@
 import { Avatar } from '@sbercloud/uikit-react-avatar';
 import { CollapsePanel, CollapsePanelItem } from '@sbercloud/uikit-react-collapse-panel';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,7 +11,6 @@ import { ITabsProps, Tab, Tabs, TabsTheme } from '../src';
 export default {
   title: 'Not stable/Tabs',
   component: Tabs,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<ITabsProps> = ({ ...args }) => (

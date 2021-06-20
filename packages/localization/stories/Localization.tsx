@@ -1,8 +1,6 @@
 import { styled } from '@linaria/react';
 import { Text1 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -12,7 +10,6 @@ import { CurrencyFormatter, DateFormatter, LanguageProvider, NumberFormatter, us
 export default {
   title: 'Not stable/Localization',
   component: LanguageProvider,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Wrapper = styled.div`

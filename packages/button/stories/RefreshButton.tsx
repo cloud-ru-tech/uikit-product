@@ -1,6 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -10,7 +8,6 @@ import { RefreshButton, RefreshButtonProps } from '../src';
 export default {
   title: 'Not stable/Button/Refresh Button',
   component: RefreshButton,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Template: Story<RefreshButtonProps> = ({ ...args }) => <RefreshButton {...args} />;
