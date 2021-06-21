@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.4.12&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.5.0) (2021-06-21)
+
+
+### Features
+
+* [AICDC-2216](https://jira.sbercloud.tech/browse/AICDC-2216): added security to CopyInput ([a45b424](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/a45b424c183b42c3a3ed9d06e19d0386a2763e30))
+
+
+
+
+
 ## [0.4.12](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.4.11&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.4.12) (2021-06-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input

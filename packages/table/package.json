@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-table",
   "title": "React Table",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -31,7 +31,7 @@
     "@sbercloud/uikit-react-paginator-private": "0.1.8",
     "@sbercloud/uikit-react-spin": "0.1.9",
     "@sbercloud/uikit-react-status": "0.1.9",
-    "@sbercloud/uikit-react-toolbar": "0.3.12",
+    "@sbercloud/uikit-react-toolbar": "0.3.13",
     "@sbercloud/uikit-react-tooltip": "0.1.9",
     "@sbercloud/uikit-theme": "0.8.1",
     "@sbercloud/uikit-typography": "0.1.9",
@@ -42,8 +42,8 @@
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-form": "0.4.12",
-    "@sbercloud/uikit-react-input": "0.4.12",
+    "@sbercloud/uikit-react-form": "0.4.13",
+    "@sbercloud/uikit-react-input": "0.5.0",
     "@types/lodash.debounce": "4.0.6"
   },
   "peerDependencies": {
