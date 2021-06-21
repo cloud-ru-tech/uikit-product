@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.10](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-range@0.1.9&sourceBranch=refs/tags/@sbercloud/uikit-react-range@0.1.10) (2021-06-21)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-range
+
+
+
+
+
 ## [0.1.9](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-range@0.1.8&sourceBranch=refs/tags/@sbercloud/uikit-react-range@0.1.9) (2021-06-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-range

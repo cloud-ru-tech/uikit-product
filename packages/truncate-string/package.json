@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-truncate-string",
   "title": "React Truncate String",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -24,7 +24,7 @@
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-slider": "0.1.9",
+    "@sbercloud/uikit-react-slider": "0.1.10",
     "@types/lodash.debounce": "4.0.6"
   },
   "peerDependencies": {

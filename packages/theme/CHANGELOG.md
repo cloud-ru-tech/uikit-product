@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.9.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.10.0) (2021-06-21)
+
+
+### Features
+
+* add green theme colors for TagSelect ([f9dd5ec](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/f9dd5ec56a2f10584fbdc24e5dcb2a6a32b31c1e))
+
+
+
+
+
 # [0.9.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.8.1&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.9.0) (2021-06-21)
 
 
