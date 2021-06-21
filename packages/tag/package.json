@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tag",
   "title": "React Tag",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -21,11 +21,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-input": "0.5.0",
-    "@sbercloud/uikit-theme": "0.8.1"
+    "@sbercloud/uikit-react-input": "0.5.1",
+    "@sbercloud/uikit-theme": "0.9.0"
   },
   "devDependencies": {
-    "@sbercloud/uikit-typography": "0.1.9"
+    "@sbercloud/uikit-typography": "0.1.10"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
