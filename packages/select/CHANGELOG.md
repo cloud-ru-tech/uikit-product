@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.4.6&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.5.0) (2021-06-22)
+
+
+### Features
+
+* [AICDC-2564](https://jira.sbercloud.tech/browse/AICDC-2564): changed avatar props, added default placeholders, fixed avatar styles ([ca99b08](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/ca99b08ddf773d5f84055e56ebc7353cdccec034))
+
+
+
+
+
 ## [0.4.6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.4.5&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.4.6) (2021-06-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select

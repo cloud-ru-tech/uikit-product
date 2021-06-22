@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-theme",
   "title": "Theme",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Colors library",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

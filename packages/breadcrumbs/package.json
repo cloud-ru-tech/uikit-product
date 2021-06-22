@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-breadcrumbs",
   "title": "React Breadcrumbs",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,14 +22,14 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/icons": "1.0.15-14c9f91b",
-    "@sbercloud/uikit-react-tooltip": "0.1.11",
-    "@sbercloud/uikit-theme": "0.10.0",
+    "@sbercloud/uikit-react-tooltip": "0.1.12",
+    "@sbercloud/uikit-theme": "0.11.0",
     "lodash.debounce": "4.0.8",
     "nanoid": "3.1.23"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-button": "0.3.5",
-    "@sbercloud/uikit-react-divider": "0.2.10",
+    "@sbercloud/uikit-react-button": "0.3.6",
+    "@sbercloud/uikit-react-divider": "0.2.11",
     "@types/lodash.debounce": "4.0.6"
   },
   "peerDependencies": {
