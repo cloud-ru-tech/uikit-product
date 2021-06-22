@@ -37,6 +37,21 @@ const COLORS = {
   YELLOW: '--color-default-yellow',
 };
 
+const COLORS_PRESET = {
+  GREEN: '--color-preset-green',
+  BLUE: '--color-preset-blue',
+  PURPLE: '--color-preset-purple',
+  PINK: '--color-preset-pink',
+  RED: '--color-preset-red',
+  GRAY_DEFAULT: '--color-preset-gray-default',
+  GRAY: '--color-preset-gray',
+  BROWN: '--color-preset-brown',
+  ORANGE: '--color-preset-orange',
+  YELLOW: '--color-preset-yellow',
+  YELLOW_GREEN: '--color-preset-yellow-green',
+  BLUE_GREEN: '--color-preset-blue-green',
+};
+
 const COLORS_BRAND = {
   GREEN: '--color-brand-green',
   GREEN_GRADIENT: '--color-brand-green-gradient',
@@ -363,6 +378,19 @@ const COLORS_TOAST = {
 const COLORS_AVATAR = {
   COLOR: '--avatar-color',
   BG: '--avatar-bg',
+  TEXT_COLOR: '--avatar-text-color',
+  BG_GREEN: '--avatar-bg-green-color',
+  BG_BLUE: '--avatar-bg-blue-color',
+  BG_PURPLE: '--avatar-bg-purple-color',
+  BG_PINK: '--avatar-bg-pink-color',
+  BG_RED: '--avatar-bg-red-color',
+  BG_GRAY_DEFAULT: '--avatar-bg-gray-default-color',
+  BG_GRAY: '--avatar-bg-gray-color',
+  BG_BROWN: '--avatar-bg-brown-color',
+  BG_ORANGE: '--avatar-bg-orange-color',
+  BG_YELLOW: '--avatar-bg-yellow-color',
+  BG_YELLOW_GREEN: '--avatar-bg-yellow-green-color',
+  BG_BLUE_GREEN: '--avatar-bg-blue-green-color',
 };
 
 const COLORS_SLIDER = {
@@ -550,6 +578,7 @@ export {
   COLORS_FILTER,
   COLORS_NO_DATA_PAGE,
   COLORS_DATEPICKER,
+  COLORS_PRESET,
 };
 
 export default {
@@ -590,4 +619,5 @@ export default {
   COLORS_FILTER,
   COLORS_NO_DATA_PAGE,
   COLORS_DATEPICKER,
+  COLORS_PRESET,
 };

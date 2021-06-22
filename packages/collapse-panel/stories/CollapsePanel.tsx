@@ -22,7 +22,7 @@ const ContentStyled = styled.div`
 
 const Template: Story<ICollapsePanelProps> = ({ ...args }) => (
   <CollapsePanel {...args}>
-    <CollapsePanelItem index={0} header={<Avatar shape={Avatar.shapes.Circle} size={72} src={avatarSrc} />}>
+    <CollapsePanelItem index={0} header={<Avatar shape={Avatar.shapes.Circle} size={Avatar.sizes.M} src={avatarSrc} />}>
       <ContentStyled>Content</ContentStyled>
       <Input value={'Some text'} />
     </CollapsePanelItem>
@@ -32,7 +32,11 @@ const Template: Story<ICollapsePanelProps> = ({ ...args }) => (
     <CollapsePanelItem index={2} header={<div>Horizontal Scrolling</div>} isFavourite>
       <ContentStyled>{'Content'.repeat(100)}</ContentStyled>
     </CollapsePanelItem>
-    <CollapsePanelItem index={3} header={<Avatar shape={Avatar.shapes.Square} size={72} src={avatarSrc} />} isFavourite>
+    <CollapsePanelItem
+      index={3}
+      header={<Avatar shape={Avatar.shapes.Square} size={Avatar.sizes.M} src={avatarSrc} />}
+      isFavourite
+    >
       <ContentStyled>{'Content'}</ContentStyled>
     </CollapsePanelItem>
   </CollapsePanel>

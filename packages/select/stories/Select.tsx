@@ -164,7 +164,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
       isMulti={isMulti}
       prefixMultiValueContainer={({ data: { logo } }: MultiValueContainerPrefixProps) => (
         <div style={{ padding: '0 0 0 8px', lineHeight: '28px' }}>
-          <Avatar icon={logo} />
+          <Avatar icon={logo} size={Avatar.sizes.XS}/>
         </div>
       )}
       prefixControl={(props: ControlPrefixProps): JSX.Element[] => {

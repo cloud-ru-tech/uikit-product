@@ -1,60 +1,47 @@
 import { useMemo } from 'react';
 
+import * as S from './styled';
+import { PLACHOLDER_ICONS } from '../helpers/constants';
 import { getAbbreviation } from '../helpers/getAbbreviation';
-import { getCustomBg, getCustomRadius, getCustomStyles } from '../helpers/styleHelpers';
-import { StyledAvatar } from './styled';
-import { Shapes } from './types';
+import { Shapes, Sizes, PresetColors, PlaceholderIcons } from '../helpers/types';
 
-export type AvatarProps = {
+export interface AvatarProps {
+  size?: Sizes;
+  src?: string;
   shape?: Shapes;
   username?: string;
-  size?: number | 'm' | 'l';
-  src?: string;
-  icon?: React.ReactNode;
-  letterSize?: number;
-  className?: string;
-  radius?: number;
-};
+  color?: PresetColors;
+  placeholderIcon?: PlaceholderIcons;
+}
 
-export function Avatar({ src, icon, size, letterSize, shape, className, radius, username }: AvatarProps) {
-  const isCustomSize = typeof size === 'number';
-  const isCustomRadius = typeof radius === 'number';
-
+export function Avatar({
+  src,
+  username,
+  size = Sizes.M,
+  shape = Shapes.Circle,
+  color = PresetColors.DefaultGray,
+  placeholderIcon = PlaceholderIcons.User,
+}: AvatarProps) {
   const content = useMemo(() => {
     if (src) {
       return null;
-    }
-
-    if (icon) {
-      return icon;
     }
 
     if (username) {
       return getAbbreviation(username);
     }
 
-    return null;
-  }, [username, src, icon]);
-
-  const customStyles = useMemo(
-    () => ({
-      ...getCustomStyles(isCustomSize, size, letterSize),
-      ...getCustomBg(src),
-      ...getCustomRadius(isCustomRadius, radius),
-    }),
-    [isCustomSize, size, letterSize, src, isCustomRadius, radius],
-  );
+    return PLACHOLDER_ICONS[placeholderIcon];
+  }, [src, username, placeholderIcon]);
 
   return (
-    <StyledAvatar style={customStyles} data-shape={shape} data-size={size} className={className}>
+    <S.Avatar data-shape={shape} data-size={size} backgroundImage={src} data-color={color}>
       {content}
-    </StyledAvatar>
+    </S.Avatar>
   );
 }
 
 Avatar.shapes = Shapes;
-
-Avatar.defaultProps = {
-  shape: Shapes.Circle,
-  size: 'm',
-};
+Avatar.sizes = Sizes;
+Avatar.colors = PresetColors;
+Avatar.placeholderIcons = PlaceholderIcons;

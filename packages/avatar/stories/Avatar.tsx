@@ -1,5 +1,4 @@
 import { styled } from '@linaria/react';
-import { HelpSVG } from '@sbercloud/icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -27,7 +26,7 @@ const Template: Story<AvatarProps> = ({ ...args }) => (
   <Wrapper>
     <Avatar {...args} />
     <Avatar {...args} src={avatarSrc} />
-    <Avatar {...args} icon={<HelpSVG size={14} />} />
+    <Avatar {...args} username='' />
   </Wrapper>
 );
 
@@ -41,15 +40,50 @@ avatar.parameters = {
   },
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%5BLIB%5D-Temp-Design-System?node-id=727%3A46',
   },
 };
 avatar.argTypes = {
   size: {
     control: {
       type: 'radio',
-      options: ['m', 'l', 30, 40, 50],
+      options: [Avatar.sizes.XS, Avatar.sizes.S, Avatar.sizes.M, Avatar.sizes.L, Avatar.sizes.XL],
+    },
+  },
+  shape: {
+    control: {
+      type: 'radio',
+      options: [Avatar.shapes.Square, Avatar.shapes.Circle],
+    },
+  },
+  placeholder: {
+    control: {
+      type: 'radio',
+      options: [Avatar.placeholderIcons.Company, Avatar.placeholderIcons.User],
+    },
+  },
+  color: {
+    control: {
+      type: 'radio',
+      options: [
+        Avatar.colors.Green,
+        Avatar.colors.Blue,
+        Avatar.colors.Purple,
+        Avatar.colors.Pink,
+        Avatar.colors.Red,
+        Avatar.colors.DefaultGray,
+        Avatar.colors.Gray,
+        Avatar.colors.Brown,
+        Avatar.colors.Orange,
+        Avatar.colors.Yellow,
+        Avatar.colors.YellowGreen,
+        Avatar.colors.BlueGreen,
+      ],
+    },
+  },
+  username: {
+    control: {
+      type: 'text',
     },
   },
 };

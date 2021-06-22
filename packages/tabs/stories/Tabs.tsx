@@ -17,13 +17,16 @@ const Template: Story<ITabsProps> = ({ ...args }) => (
   <Tabs theme={args.theme === 'gray' ? TabsTheme.gray : TabsTheme.default} {...args}>
     <Tab label='Группы в управлении 2' identKey={0} onClick={() => {}}>
       <CollapsePanel isShowFavourites>
-        <CollapsePanelItem index={0} header={<Avatar shape={Avatar.shapes.Square} size={72} username={'G O'} />}>
+        <CollapsePanelItem
+          index={0}
+          header={<Avatar shape={Avatar.shapes.Square} size={Avatar.sizes.M} username={'G O'} />}
+        >
           Content1
         </CollapsePanelItem>
         <CollapsePanelItem
           index={1}
           isFavourite
-          header={<Avatar shape={Avatar.shapes.Square} size={72} username={'G O'} />}
+          header={<Avatar shape={Avatar.shapes.Square} size={Avatar.sizes.M} username={'G O'} />}
         >
           Content2
         </CollapsePanelItem>

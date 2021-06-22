@@ -2,7 +2,6 @@ import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
 import { FC, useEffect, useMemo, useState } from 'react';
 
-import { GroupStub1ColorSVG, UserColorSVG } from '@sbercloud/icons';
 import { Avatar, AvatarProps } from '@sbercloud/uikit-react-avatar';
 
 import { StyledContainer, selectClassname } from './styled';
@@ -20,10 +19,10 @@ const Icon = ({ data }: { data: IOptionType }): React.ReactNode => {
 
   return (
     <Avatar
-      size='m'
+      size={Avatar.sizes.XS}
       src={data?.src}
       shape={data?.avatarShape}
-      icon={hasChildren ? <GroupStub1ColorSVG /> : <UserColorSVG />}
+      placeholderIcon={hasChildren ? Avatar.placeholderIcons.Company : Avatar.placeholderIcons.User}
     />
   );
 };

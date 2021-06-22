@@ -25,10 +25,7 @@
     "@sbercloud/uikit-react-divider": "0.2.10",
     "@sbercloud/uikit-theme": "0.10.0"
   },
-  "devDependencies": {
-    "@sbercloud/uikit-react-avatar": "0.1.10",
-    "@sbercloud/uikit-react-input": "0.5.3"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
     "@linaria/react": "^3.0.0-beta.3",

@@ -27,7 +27,7 @@ const Template: Story<CollapsePanelItemProps> = ({ ...args }) => {
       isCollapsed={isCollapsed}
       handleClick={() => setIsCollapsed(isCollapsed => !isCollapsed)}
       index={0}
-      header={<Avatar shape={Avatar.shapes.Circle} size={72} username='G O' />}
+      header={<Avatar shape={Avatar.shapes.Circle} size={Avatar.sizes.M} username='G O' />}
     >
       <ContentStyled>Content</ContentStyled>
       <Input value={'Some text'} />

@@ -1,4 +1,6 @@
-export const getAbbreviation = (str = '', size = 2): string => {
+import { ABBREVIATION_LENGTH } from './constants';
+
+const getAbbreviation = (str = ''): string => {
   const SPACE = ' ';
   const trimStr = str.trim();
 
@@ -6,14 +8,16 @@ export const getAbbreviation = (str = '', size = 2): string => {
     return '';
   }
 
-  if (str && str.length > size) {
+  if (str && str.length > ABBREVIATION_LENGTH) {
     return trimStr
       .replace(/(\s{2,})/g, SPACE)
       .split(SPACE)
-      .slice(0, size)
+      .slice(0, ABBREVIATION_LENGTH)
       .map(el => el?.charAt(0)?.toUpperCase())
       .join('');
   }
 
   return trimStr;
 };
+
+export { getAbbreviation };
