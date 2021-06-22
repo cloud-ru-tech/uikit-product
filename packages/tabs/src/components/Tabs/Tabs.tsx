@@ -32,7 +32,7 @@ export const Tabs: FC<ITabsProps> = ({ children, theme, className, defaultKey })
 
       dispatch(setValue(typeof firstChildValue !== 'undefined' ? firstChildValue : ''));
     }
-  }, []);
+  }, [defaultKey]);
 
   return (
     <TabsContext.Provider value={{ state, dispatch }}>
