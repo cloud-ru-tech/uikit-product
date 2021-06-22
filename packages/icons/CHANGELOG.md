@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.0.3&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.0.4) (2021-06-22)
+
+
+### Bug Fixes
+
+* 1. renaming: EnvironmentDisplay -> DefaultEnvironmentDisplay 2. CPU and GPU interface icons were changed in order to highlight difference between them ([2ecd84c](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/2ecd84c319f7285449cda143f3903453d4ad8cfa))
+
+
+
+
+
 ## [1.0.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.0.2&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.0.3) (2021-06-18)
 
 
