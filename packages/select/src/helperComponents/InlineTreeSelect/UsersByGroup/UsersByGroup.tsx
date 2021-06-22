@@ -8,7 +8,9 @@ import { StyledContainer, selectClassname } from './styled';
 
 export interface IOptionType extends DataNode {
   src?: string;
-  avatarShape: AvatarProps['shape'];
+  title?: string;
+  children?: IOptionType[];
+  avatarShape?: AvatarProps['shape'];
 }
 export interface ICustomEventDataNode extends EventDataNode {
   initKey?: string;
@@ -21,6 +23,7 @@ const Icon = ({ data }: { data: IOptionType }): React.ReactNode => {
     <Avatar
       size={Avatar.sizes.XS}
       src={data?.src}
+      username={data?.title}
       shape={data?.avatarShape}
       placeholderIcon={hasChildren ? Avatar.placeholderIcons.Company : Avatar.placeholderIcons.User}
     />
