@@ -31,6 +31,7 @@ export interface ISelectProps<CustomOptionType> extends Omit<RCProps, 'component
   prefixOption?: (props: OptionPrefixProps) => JSX.Element;
   postfixOption?: (props: OptionPrefixProps) => JSX.Element;
   className?: string;
+  error?: boolean;
   components?: SelectComponentsConfig<CustomOptionType, any>;
   optionNoWrap?: boolean;
   menuRelative?: boolean;
@@ -58,6 +59,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
     postfixOption,
     prefixMultiValueContainer,
     collapsedGroup,
+    error,
   } = props;
 
   const [stateOptions, setOptions] = useState<CustomOptionType[]>();

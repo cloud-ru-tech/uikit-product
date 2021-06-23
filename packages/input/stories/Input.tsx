@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
@@ -11,7 +12,7 @@ export default {
   component: Input,
 } as Meta;
 
-const Template: Story<InputProps> = ({ ...args }) => {
+const Template: Story<InputProps & { showOpenDialog: boolean }> = ({ ...args }) => {
   const [value, setValue] = useState<string | undefined>();
 
   return (
@@ -21,6 +22,7 @@ const Template: Story<InputProps> = ({ ...args }) => {
       onChange={(e): void => {
         setValue(e.target.value);
       }}
+      onOpenDialog={args.showOpenDialog ? () => console.log('click onOpenDialog') : undefined}
     />
   );
 };
@@ -28,7 +30,8 @@ const Template: Story<InputProps> = ({ ...args }) => {
 export const input = Template.bind({});
 input.args = {
   allowCopy: false,
-  type: Input.types.security,
+  allowClear: false,
+  error: false,
 };
 input.parameters = {
   readme: {
@@ -41,7 +44,16 @@ input.parameters = {
   },
 };
 input.argTypes = {
+  showOpenDialog: {
+    control: {
+      type: 'boolean',
+    },
+    defaultValue: false,
+  },
   placeholder: {
+    control: {
+      type: 'text',
+    },
     defaultValue: 'Пример: Project1-bucket106',
   },
 };

@@ -173,7 +173,7 @@ export const Input = ({
             data-error={error || undefined}
             name={name}
             autoComplete={autoComplete}
-          ></StyledInput>
+          />
         </div>
         <StyledIconWrapper>
           <BasicButtonWrapper>

@@ -254,6 +254,7 @@ const COLORS_SELECT = {
   BORDER_COLOR: '--select-border-color',
   BORDER_HOVER_COLOR: '--select-border-hover-color',
   BORDER_FOCUS_COLOR: '--select-border-focus-color',
+  BORDER_ERROR_COLOR: '--select-border-error-color',
   DISABLED_TEXT_COLOR: '--select-disabled-text-color',
   DISABLED_BORDER_COLOR: '--select-disabled-border-color',
   DISABLED_BACKGROUND: '--select-disabled-background',

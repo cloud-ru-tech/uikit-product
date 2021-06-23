@@ -31,7 +31,10 @@ export const styles = (typeStyles?: Styles): Styles => ({
   }),
   control: (
     styles: CSSProperties,
-    { isDisabled, selectProps: { menuIsOpen } }: { isDisabled: boolean; selectProps: { menuIsOpen: boolean } },
+    {
+      isDisabled,
+      selectProps: { menuIsOpen, error },
+    }: { isDisabled: boolean; selectProps: { menuIsOpen: boolean; error: boolean } },
   ): CSSProperties & {
     '&:hover': CSSProperties;
     '&:focus': CSSProperties;
@@ -45,6 +48,11 @@ export const styles = (typeStyles?: Styles): Styles => ({
           borderColor: `var(${COLORS_SELECT.DISABLED_BORDER_COLOR})`,
           color: `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`,
           background: `var(${COLORS_SELECT.DISABLED_BACKGROUND})`,
+        }
+      : {}),
+    ...(error
+      ? {
+          border: `1px solid var(${COLORS_SELECT.BORDER_ERROR_COLOR})`,
         }
       : {}),
     background: `var(${COLORS_SELECT.BACKGROUND})`,
