@@ -6,7 +6,7 @@ import * as S from './styled';
 export type FormFieldProps = {
   label?: string;
   hint?: string;
-  description?: string;
+  description?: React.ReactNode;
   required?: boolean;
   error?: string;
 };
