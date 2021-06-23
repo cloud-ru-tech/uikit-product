@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.6.0&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.6.1) (2021-06-23)
+
+
+### Bug Fixes
+
+* [AICDC-2564](https://jira.sbercloud.tech/browse/AICDC-2564): fixed avatars in UsersByGroupSelect ([634b12f](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/634b12fb15a9b04bad930dc0e3b61dd7bdc8c097))
+
+
+
+
+
 # [0.6.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.6.0) (2021-06-23)
 
 
