@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tabs@0.3.0&sourceBranch=refs/tags/@sbercloud/uikit-react-tabs@0.3.1) (2021-06-23)
+
+
+### Bug Fixes
+
+* defaultKey props ([4a7f47f](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/4a7f47f882e446acd9900590224b14d33dcda491))
+
+
+
+
+
 # [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tabs@0.2.18&sourceBranch=refs/tags/@sbercloud/uikit-react-tabs@0.3.0) (2021-06-22)
 
 

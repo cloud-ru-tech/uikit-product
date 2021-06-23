@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-avatar",
   "title": "React Avatar",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "React component for drawing avatar component or placeholder",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,7 +22,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.11.0"
+    "@sbercloud/uikit-theme": "0.12.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

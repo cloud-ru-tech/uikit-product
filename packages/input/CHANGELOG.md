@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.5.4&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.6.0) (2021-06-23)
+
+
+### Features
+
+* add error props ([b9c119e](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b9c119ea07aeab3467236ed9cacd842ceb3a1fe6))
+* add onOpenDialog props ([8ae2cd7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8ae2cd76b4daaf505ef13652136ea0b0280b89a7))
+
+
+
+
+
 ## [0.5.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.5.3&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.5.4) (2021-06-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input
