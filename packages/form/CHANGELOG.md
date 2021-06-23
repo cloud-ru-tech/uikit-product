@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.19](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.18&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.19) (2021-06-23)
+
+
+### Bug Fixes
+
+* [AICDC-2564](https://jira.sbercloud.tech/browse/AICDC-2564): changed type for description ([52b245f](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/52b245f9b1912fc81ff94028dcb2968bda2c1c14))
+
+
+
+
+
 ## [0.4.18](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.17&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.18) (2021-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-form
