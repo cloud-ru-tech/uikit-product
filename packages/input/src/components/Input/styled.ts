@@ -1,10 +1,11 @@
 import { styled } from '@linaria/react';
+import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_INPUT } = EXPORT_VARS;
+const { COLORS_INPUT, COLORS_BUTTON } = EXPORT_VARS;
 
-export const StyledInput = styled.input<{ allowCopy?: boolean }>`
+export const StyledInput = styled.input<{ allowCopy?: boolean; paddingRight?: number }>`
   flex-grow: 1;
   box-sizing: border-box;
   width: 100%;
@@ -19,7 +20,7 @@ export const StyledInput = styled.input<{ allowCopy?: boolean }>`
   border: 1px solid var(${COLORS_INPUT.INPUT_BORDER});
   border-radius: 4px;
   height: 44px;
-  padding: ${({ allowCopy }) => (allowCopy ? '12px 40px 12px 12px' : '12px')};
+  padding: ${({ paddingRight }) => (paddingRight ? `12px ${paddingRight}px 12px 12px` : '12px')};
 
   &::placeholder {
     color: var(${COLORS_INPUT.INPUT_PLACEHOLDER_COLOR});
@@ -39,7 +40,7 @@ export const StyledInput = styled.input<{ allowCopy?: boolean }>`
 
   &[data-type='embed'] {
     height: 40px;
-    padding: ${({ allowCopy }) => (allowCopy ? '10px 40px 10px 12px' : '10px 12px')};
+    padding: ${({ paddingRight }) => (paddingRight ? `10px ${paddingRight}px 10px 12px` : '10px 12px')};
   }
 
   &:not([data-disabled='true']):hover {
@@ -80,6 +81,29 @@ export const StyledInput = styled.input<{ allowCopy?: boolean }>`
       border: 1px solid var(${COLORS_INPUT.INPUT_ERROR_BORDER});
     }
   }
+`;
+
+export const OpenDialogButtonWrapper = styled.div`
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-left: 1px solid var(${COLORS_INPUT.INPUT_BORDER});
+  fill: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
+  &:hover {
+    color: var(${COLORS_BUTTON.TRANSPARENT_HOVER_COLOR});
+    background-color: var(${COLORS_BUTTON.TRANSPARENT_HOVER_BG});
+  }
+`;
+
+export const OpenDialogButton = styled(MoreInterfaceSVG)`
+  margin: 0 12px;
+  transform: rotate(90deg);
+`;
+
+export const BasicButtonWrapper = styled.div`
+  display: flex;
+  margin-right: 12px;
 `;
 
 export const StyledClearButton = styled.div`
@@ -128,7 +152,7 @@ export const StyledInputWrapper = styled.div`
 export const StyledIconWrapper = styled.div`
   position: absolute;
   top: 0;
-  right: 12px;
+  right: 0px;
   display: flex;
   flex-direction: row;
   align-items: center;

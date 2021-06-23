@@ -1,7 +1,7 @@
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { CopyButton } from '@sbercloud/uikit-react-button';
 import copyText from 'copy-to-clipboard';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
 
 import { getInputType } from '../../helpers/getInputType';
 import { InputElementType, InputProps, InputTypes } from '../../helpers/types';
@@ -13,6 +13,9 @@ import {
   StyledInputWrapper,
   StyledSecurityButton,
   StyledWrap,
+  OpenDialogButton,
+  OpenDialogButtonWrapper,
+  BasicButtonWrapper,
 } from './styled';
 
 export type { InputProps };
@@ -39,6 +42,7 @@ export const Input = ({
   getInstance,
   name,
   autoComplete,
+  onOpenDialog,
 }: InputProps) => {
   const inputEl = useRef<InputElementType>(null);
   const [correctValue, setCorrectValue] = useState(value);
@@ -115,6 +119,36 @@ export const Input = ({
     }, 3000);
   };
 
+  const paddingRight = useMemo(() => {
+    let result = 0;
+    const paddingConfig = [
+      {
+        enabled: allowCopy,
+        padding: 40,
+      },
+      {
+        enabled: allowClear,
+        padding: 40,
+      },
+      {
+        enabled: !!postfix,
+        padding: 40,
+      },
+      {
+        enabled: !!onOpenDialog,
+        padding: 44,
+      },
+    ];
+
+    paddingConfig.forEach(paddingItem => {
+      if (paddingItem.enabled) {
+        result = result + paddingItem.padding;
+      }
+    });
+
+    return result;
+  }, [allowCopy, allowClear, postfix, onOpenDialog]);
+
   return (
     <StyledWrap className={wrapperClassName} ref={wrapperRef}>
       {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
@@ -122,6 +156,7 @@ export const Input = ({
         <div role='presentation' onClick={handleInputClick}>
           <StyledInput
             ref={inputEl}
+            paddingRight={paddingRight}
             allowCopy={allowCopy}
             type={getInputType({ type, isViewMode })}
             onChange={handleChange}
@@ -138,27 +173,34 @@ export const Input = ({
             data-error={error || undefined}
             name={name}
             autoComplete={autoComplete}
-          />
+          ></StyledInput>
         </div>
         <StyledIconWrapper>
-          {!disabled && allowClear && correctValue && correctValue !== '' && (
-            <StyledClearButton onClick={handleClickClear}>
-              <CloseInterfaceSVG />
-            </StyledClearButton>
-          )}
-          {postfix}
-          {type === 'security' ? (
-            <StyledSecurityButton onClick={(): void => setViewMode(!isViewMode)}>
-              {isViewMode ? <EyeClosedInterfaceSVG /> : <EyeOpenedInterfaceSVG />}
-            </StyledSecurityButton>
-          ) : null}
-          {allowCopy && (
-            <CopyButton
-              text={value.toString()}
-              onClick={handleCopyButtonClick}
-              className={copyButtonClassName}
-              showCopyCompleted={isCopyCompleted}
-            />
+          <BasicButtonWrapper>
+            {!disabled && allowClear && correctValue && correctValue !== '' && (
+              <StyledClearButton onClick={handleClickClear}>
+                <CloseInterfaceSVG />
+              </StyledClearButton>
+            )}
+            {postfix}
+            {type === 'security' ? (
+              <StyledSecurityButton onClick={(): void => setViewMode(!isViewMode)}>
+                {isViewMode ? <EyeClosedInterfaceSVG /> : <EyeOpenedInterfaceSVG />}
+              </StyledSecurityButton>
+            ) : null}
+            {allowCopy && (
+              <CopyButton
+                text={value.toString()}
+                onClick={handleCopyButtonClick}
+                className={copyButtonClassName}
+                showCopyCompleted={isCopyCompleted}
+              />
+            )}
+          </BasicButtonWrapper>
+          {onOpenDialog && (
+            <OpenDialogButtonWrapper>
+              <OpenDialogButton onClick={onOpenDialog} />
+            </OpenDialogButtonWrapper>
           )}
         </StyledIconWrapper>
       </StyledInputWrapper>

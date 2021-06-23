@@ -30,4 +30,5 @@ export interface InputProps {
   getInstance?: (instance: RefObject<HTMLInputElement>) => void;
   name?: string;
   autoComplete?: string;
+  onOpenDialog?(): void;
 }
