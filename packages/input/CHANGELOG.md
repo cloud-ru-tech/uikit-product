@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.6.0&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.6.1) (2021-06-24)
+
+
+### Bug Fixes
+
+* padding and click ([74308b0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/74308b0dd3385425937d9c939156f0d4c0ad39c7))
+
+
+
+
+
 # [0.6.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.5.4&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.6.0) (2021-06-23)
 
 

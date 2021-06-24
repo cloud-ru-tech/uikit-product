@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.6.1&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.7.0) (2021-06-24)
+
+
+### Features
+
+* add disabled props for tab ([a7b844d](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/a7b844d2a0439eed2ea885f689ff4284bbdac259))
+
+
+
+
+
 ## [0.6.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.6.0&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.6.1) (2021-06-23)
 
 

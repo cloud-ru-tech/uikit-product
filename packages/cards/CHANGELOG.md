@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.21](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-cards@0.2.20&sourceBranch=refs/tags/@sbercloud/uikit-react-cards@0.2.21) (2021-06-24)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-cards
+
+
+
+
+
 ## [0.2.20](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-cards@0.2.19&sourceBranch=refs/tags/@sbercloud/uikit-react-cards@0.2.20) (2021-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-cards
