@@ -16,4 +16,8 @@ export const ListItemStyled = styled.li`
     margin-bottom: -1px;
     border-bottom: 2px solid var(${COLORS_TABS.TAB_ACTIVE_COLOR});
   }
+  &[data-disabled] {
+    color: ${() => `var(${COLORS_TABS.TAB_DISABLED_TEXT_COLOR})`};
+    cursor: not-allowed;
+  }
 `;

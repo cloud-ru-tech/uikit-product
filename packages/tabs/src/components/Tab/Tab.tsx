@@ -8,10 +8,11 @@ import { ListItemStyled } from './styled';
 export interface ITabProps {
   label: React.ReactNode;
   identKey: IdentKey;
+  isDisabled?: boolean;
   onClick?(identKey: IdentKey): void;
 }
 
-export const Tab: FC<ITabProps> = ({ identKey, label, onClick }) => {
+export const Tab: FC<ITabProps> = ({ identKey, label, onClick, isDisabled }) => {
   const context = useContext<ITabsContext | null>(TabsContext);
 
   const handleClick = (): void => {
@@ -27,7 +28,11 @@ export const Tab: FC<ITabProps> = ({ identKey, label, onClick }) => {
   const isActive = useMemo(() => identKey === stateValue, [stateValue]);
 
   return (
-    <ListItemStyled onClick={handleClick} data-blue={isActive || undefined}>
+    <ListItemStyled
+      onClick={isDisabled ? undefined : handleClick}
+      data-blue={isActive || undefined}
+      data-disabled={isDisabled || undefined}
+    >
       {label}
     </ListItemStyled>
   );

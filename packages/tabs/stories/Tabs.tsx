@@ -35,7 +35,7 @@ const Template: Story<ITabsProps> = ({ ...args }) => (
     <Tab label='Мои группы 3' identKey={1}>
       Мои группы
     </Tab>
-    <Tab label='Избранное' identKey={2}>
+    <Tab label='Избранное' identKey={2} isDisabled>
       Избранное
     </Tab>
   </Tabs>

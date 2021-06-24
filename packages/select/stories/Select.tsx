@@ -162,7 +162,6 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
       options={isGrouped ? groupedServices : services}
       defaultValue={isGrouped ? groupedServices[0].options[0] : value}
       isMulti={isMulti}
-      error
       prefixMultiValueContainer={({ data: { logo } }: MultiValueContainerPrefixProps) => (
         <div style={{ padding: '0 0 0 8px', lineHeight: '28px' }}>
           <Avatar icon={logo} size={Avatar.sizes.XS} />
@@ -208,6 +207,12 @@ select.argTypes = {
     control: {
       type: 'boolean',
     },
+  },
+  error: {
+    control: {
+      type: 'boolean',
+    },
+    defaultValue: false,
   },
   isMulti: {
     control: {

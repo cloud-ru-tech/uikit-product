@@ -318,6 +318,7 @@ const COLORS_TABS = {
   TAB_GRAY_BORDER_COLOR: '--tab-gray-border-color',
   TAB_ACTIVE_COLOR: '--tab-active-color',
   TAB_TEXT_COLOR: '--tab-text-color',
+  TAB_DISABLED_TEXT_COLOR: '--tab-disabled-text-color',
 };
 
 const COLORS_STATUS = {
