@@ -1,22 +1,20 @@
 import { cx } from '@linaria/core';
+import { CircleCheckSVG, DeleteSVG, EditSVG } from '@sbercloud/icons';
+import { Button } from '@sbercloud/uikit-react-button';
+import { Tag } from '@sbercloud/uikit-react-tag';
 import isEqual from 'lodash.isequal';
 import { useEffect, useRef, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { CircleCheckSVG, DeleteSVG, EditSVG } from '@sbercloud/icons';
-import { Button } from '@sbercloud/uikit-react-button';
-import { Tag } from '@sbercloud/uikit-react-tag';
-
 import { ColorPicker, OptionTypeColor } from '../../../components';
+import { TagName } from '../TagName';
 import {
-  StyledTag,
   StyledTagButton,
   StyledTagButtonWrapper,
   StyledTagOption,
   StyledTagOptionLabel,
   colorPickerClassName,
   optionClass,
-  tagInputClassName,
 } from './styled';
 
 export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.Option>): JSX.Element => {
@@ -24,7 +22,14 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
     data,
     innerRef,
     className,
-    selectProps: { onTagChange, approveDeleting, isSelected, colorDropdownPlacement, setMenuListBlockScroll },
+    selectProps: {
+      onTagChange,
+      approveDeleting,
+      isSelected,
+      colorDropdownPlacement,
+      setMenuListBlockScroll,
+      editableTagName,
+    },
   } = props;
 
   const [isEdit, setEdit] = useState(false);
@@ -71,15 +76,10 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
       <StyledTagOption data-is-edit={isEdit} ref={innerRef} onBlur={handleBlur}>
         {isEdit ? (
           <>
-            <StyledTag
-              inputRef={(ref): void => {
-                ref?.focus();
-              }}
-              color={tag.color}
-              value={tag.label}
-              type={Tag.types.Input}
-              inputClassNames={tagInputClassName}
-              onChange={(e: { target: { value: any } }): void => {
+            <TagName
+              tag={tag}
+              editableTagName={editableTagName}
+              onChange={(e: { target: { value: string } }) => {
                 setTag({ ...tag, label: e.target.value });
               }}
             />

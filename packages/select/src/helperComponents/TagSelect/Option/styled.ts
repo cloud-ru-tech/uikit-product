@@ -1,6 +1,5 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-
 import { Button } from '@sbercloud/uikit-react-button';
 import { Tag } from '@sbercloud/uikit-react-tag';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
@@ -23,14 +22,6 @@ export const optionClass = css`
   &:hover {
     cursor: pointer;
   }
-`;
-
-export const StyledTag = styled(Tag)`
-  padding: 0 8px;
-  margin: 0;
-  flex-grow: 1;
-  display: block;
-  text-overflow: clip;
 `;
 
 export const StyledTagButtonWrapper = styled.div`
@@ -56,11 +47,6 @@ export const StyledTagButton = styled(Button)`
 
 export const StyledTagOptionLabel = styled(Tag)`
   margin-right: 12px;
-`;
-
-export const tagInputClassName = css`
-  line-height: 20px;
-  font-size: 14px;
 `;
 
 export const colorPickerClassName = css`

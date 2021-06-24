@@ -1,5 +1,7 @@
+import { useCallback, useMemo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
+import { AddTag } from '../AddTag';
 import { StyledSearchInput, searchInputWrapClassname } from './styled';
 
 export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Menu>): JSX.Element => {
@@ -11,7 +13,14 @@ export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Me
     selectProps: { inputValue: search, onSearch, dropdownPlacement },
   } = props;
 
-  const dropdownStyles = dropdownPlacement === 'right' ? { right: 0 } : { left: 0 };
+  const dropdownStyles = useMemo(
+    () => (dropdownPlacement === 'right' ? { right: 0 } : { left: 0 }),
+    [dropdownPlacement],
+  );
+
+  const getInstance = useCallback(instance => {
+    instance?.current?.focus();
+  }, []);
 
   return (
     <div
@@ -24,11 +33,13 @@ export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Me
       className={cx({ menu: true }, className)}
     >
       <StyledSearchInput
+        getInstance={getInstance}
         value={search}
-        onChange={(val: any): void => onSearch(val)}
+        onChange={onSearch}
         wrapperClassName={searchInputWrapClassname}
       />
       {children}
+      <AddTag {...props} />
     </div>
   );
 };

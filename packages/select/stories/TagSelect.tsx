@@ -30,9 +30,16 @@ const Wrap = styled.div`
   justify-content: space-around;
 `;
 
-const Template: Story = (): JSX.Element => {
+const Template: Story = (args): JSX.Element => {
   const [isHover, setHover] = useState(false);
-  const [stateTags, setTags] = useState(tags);
+  const [stateTags, setTags] = useState([
+    {
+      value: Math.random().toString(),
+      label: 'test-tag',
+      color: PRESET_COLORS[getRandomInt(0, PRESET_COLORS.length - 1)],
+    },
+    ...tags,
+  ]);
 
   return (
     // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
@@ -53,6 +60,7 @@ const Template: Story = (): JSX.Element => {
             setTags(tags);
           }}
           onChange={() => {}}
+          {...args}
         />
         <TagSelect
           customControl={({ toggleMenu }): JSX.Element => (
@@ -63,6 +71,7 @@ const Template: Story = (): JSX.Element => {
           onTagChange={(changedTags): void => {
             setTags(changedTags);
           }}
+          {...args}
         />
       </Wrap>
     </div>
@@ -70,6 +79,16 @@ const Template: Story = (): JSX.Element => {
 };
 
 export const tagSelect = Template.bind({});
+tagSelect.args = {
+  editableTagName: false,
+};
+tagSelect.argTypes = {
+  editableTagName: {
+    control: {
+      type: 'boolean',
+    },
+  },
+};
 tagSelect.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
