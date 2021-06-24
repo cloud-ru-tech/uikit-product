@@ -127,8 +127,8 @@ export const Input = ({
         padding: 40,
       },
       {
-        enabled: allowClear,
-        padding: 40,
+        enabled: allowClear && correctValue && correctValue !== '',
+        padding: 44,
       },
       {
         enabled: !!postfix,
@@ -147,7 +147,7 @@ export const Input = ({
     });
 
     return result;
-  }, [allowCopy, allowClear, postfix, onOpenDialog]);
+  }, [allowCopy, allowClear, postfix, onOpenDialog, correctValue]);
 
   return (
     <StyledWrap className={wrapperClassName} ref={wrapperRef}>
@@ -198,8 +198,8 @@ export const Input = ({
             )}
           </BasicButtonWrapper>
           {onOpenDialog && (
-            <OpenDialogButtonWrapper>
-              <OpenDialogButton onClick={onOpenDialog} />
+            <OpenDialogButtonWrapper onClick={onOpenDialog}>
+              <OpenDialogButton />
             </OpenDialogButtonWrapper>
           )}
         </StyledIconWrapper>
