@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   margin: 1rem;
 `;
 
-const Template: Story = ({ languageCode }) => {
+const Template: Story = ({ languageCode, showOnlyDate }) => {
   const hookCode = useLanguage();
   return (
     <LanguageProvider languageCode={languageCode}>
@@ -33,7 +33,7 @@ const Template: Story = ({ languageCode }) => {
         <strong>NumberFormatter:</strong> <NumberFormatter value={1000e10} />
       </Wrapper>
       <Wrapper>
-        <strong>DateFormatter:</strong> <DateFormatter value={new Date()} />
+        <strong>DateFormatter:</strong> <DateFormatter showTime={showOnlyDate} value={new Date()} />
       </Wrapper>
     </LanguageProvider>
   );
@@ -41,7 +41,11 @@ const Template: Story = ({ languageCode }) => {
 
 export const localization = Template.bind({});
 localization.args = {};
-localization.argTypes = {};
+localization.argTypes = {
+  showOnlyDate: {
+    type: 'boolean',
+  },
+};
 localization.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
