@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-react-collapse-panel",
   "title": "React Collapse Panel",
   "version": "0.3.2",
+  "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

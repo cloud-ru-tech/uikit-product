@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-react-tabs",
   "title": "React Tabs",
   "version": "0.4.0",
+  "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

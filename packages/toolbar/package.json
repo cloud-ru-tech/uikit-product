@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-react-toolbar",
   "title": "React Toolbar",
   "version": "0.3.19",
+  "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

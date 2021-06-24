@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-react-status",
   "title": "React Status",
   "version": "0.1.14",
+  "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

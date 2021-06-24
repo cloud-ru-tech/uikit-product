@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-react-cards",
   "title": "React Cards",
   "version": "0.2.21",
+  "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

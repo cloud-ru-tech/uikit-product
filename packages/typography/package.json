@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-typography",
   "title": "Typography",
   "version": "0.1.14",
+  "sideEffects": false,
   "description": "Styled wrappers for text elements",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

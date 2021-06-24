@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-react-content-hider",
   "title": "React Content Hider",
   "version": "0.2.15",
+  "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

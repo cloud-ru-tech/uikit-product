@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-react-logs-view",
   "title": "React Logs View",
   "version": "0.2.15",
+  "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

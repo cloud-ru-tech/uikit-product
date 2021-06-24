@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-react-avatar",
   "title": "React Avatar",
   "version": "0.2.2",
+  "sideEffects": false,
   "description": "React component for drawing avatar component or placeholder",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",

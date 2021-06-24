@@ -2,6 +2,7 @@
   "name": "@sbercloud/uikit-react-input",
   "title": "React Input",
   "version": "0.6.1",
+  "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
