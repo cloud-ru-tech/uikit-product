@@ -30,6 +30,8 @@ export interface ITagSelect extends Omit<RCProps, 'components'> {
   dropdownPlacement?: 'left' | 'right';
   colorDropdownPlacement?: 'left' | 'right';
   editableTagName?: boolean;
+  validator?: (tagName: string) => boolean;
+  validateMessage?: string;
 }
 
 type ApproveDeleteType = { tag: OptionTypeTag; callbackDelete: () => void };
@@ -46,6 +48,8 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
     dropdownPlacement = 'left',
     colorDropdownPlacement = 'left',
     editableTagName = true,
+    validator,
+    validateMessage,
   } = props;
   const containerRef = useRef<HTMLDivElement>();
   const [inputValue, setInputSearch] = useState('');
@@ -110,6 +114,8 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
         }}
         modalInstance={modalInstance}
         editableTagName={editableTagName}
+        validator={validator}
+        validateMessage={validateMessage}
       />
       <Modal
         isOpen={Boolean(approveDelete?.tag)}

@@ -263,6 +263,8 @@ const COLORS_SELECT = {
   DROPDOWN_FOCUS_BACKGROUND: '--select-dropdown-focus-background',
   DROPDOWN_ICON_COLOR: '--select-dropdown-icon-color',
   DROPDOWN_ICON_HOVER_COLOR: '--select-dropdown-icon-hover-color',
+  TAG_NAME_NOT_VALID_MESSAGE: '--select-tag-name-validate-message-error-color',
+  TAG_NAME_DISABLED_BUTTON_FILL: '--select-tag-name-disabled-button-fill',
 };
 
 const COLORS_BADGE = {

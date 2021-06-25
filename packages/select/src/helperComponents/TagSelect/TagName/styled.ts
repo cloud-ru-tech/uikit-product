@@ -5,7 +5,6 @@ import { Tag } from '@sbercloud/uikit-react-tag';
 export const StyledTag = styled(Tag)`
   padding: 0 8px;
   margin: 0;
-  flex-grow: 1;
   display: block;
   text-overflow: clip;
 `;

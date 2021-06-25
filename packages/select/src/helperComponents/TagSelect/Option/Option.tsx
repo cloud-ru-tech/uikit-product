@@ -1,14 +1,14 @@
 import { cx } from '@linaria/core';
 import { CircleCheckSVG, DeleteSVG, EditSVG } from '@sbercloud/icons';
 import { Button } from '@sbercloud/uikit-react-button';
-import { Tag } from '@sbercloud/uikit-react-tag';
 import isEqual from 'lodash.isequal';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { ColorPicker, OptionTypeColor } from '../../../components';
 import { TagName } from '../TagName';
 import {
+  NotValidMessage,
   StyledTagButton,
   StyledTagButtonWrapper,
   StyledTagOption,
@@ -29,12 +29,19 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
       colorDropdownPlacement,
       setMenuListBlockScroll,
       editableTagName,
+      validator,
+      validateMessage,
     },
   } = props;
 
   const [isEdit, setEdit] = useState(false);
   const [tag, setTag] = useState(data);
   const [colorVal, setColorVal] = useState({ value: tag.color });
+
+  const notValid = useMemo(
+    () => editableTagName && validator && !validator(tag.label),
+    [validator, tag, editableTagName],
+  );
 
   if (isEdit) {
     props.innerProps.onClick = (e): void => {
@@ -127,7 +134,9 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
               <StyledTagButton
                 size={Button.sizes.xs}
                 variant={Button.variants.Transparent}
+                data-disabled={notValid || undefined}
                 onClick={(): void => {
+                  if (notValid) return;
                   setEdit(false);
                   if (!isEqual(data, tag) && tag.label) {
                     const dataIndex = props.options.indexOf(data);
@@ -163,6 +172,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
           </>
         )}
       </StyledTagOption>
+      {notValid && isEdit && <NotValidMessage>{validateMessage}</NotValidMessage>}
     </ReactSelectComponents.Option>
   );
 };
