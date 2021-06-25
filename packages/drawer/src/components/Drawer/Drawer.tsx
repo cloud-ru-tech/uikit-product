@@ -114,7 +114,7 @@ export const Drawer: React.FC<IDrawerProps> = ({
           </IconButton>
         </CloseButtonStyled>
       </HeaderBoxStyled>
-      <ContentBoxStyled>{children}</ContentBoxStyled>
+      <ContentBoxStyled data-hasfooter={!!footer || undefined}>{children}</ContentBoxStyled>
       {footer && <FooterBoxStyled width={typeof width === 'number' ? `${width}px` : width}>{footer}</FooterBoxStyled>}
     </RcDrawer>
   );

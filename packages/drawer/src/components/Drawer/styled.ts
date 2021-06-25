@@ -22,6 +22,10 @@ export const ContentBoxStyled = styled.div`
   z-index: -1;
   position: relative;
   box-sizing: border-box;
+  &[data-hasfooter] {
+    height: calc(100% - 160px);
+    overflow: auto;
+  }
 `;
 
 export const HeaderTextBoxStyled = styled.div`
