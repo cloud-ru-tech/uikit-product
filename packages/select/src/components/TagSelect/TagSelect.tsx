@@ -1,7 +1,6 @@
+import { Modal } from '@sbercloud/uikit-react-modal';
 import { useRef, useState } from 'react';
 import RCSelect, { ValueType } from 'react-select';
-
-import { Modal } from '@sbercloud/uikit-react-modal';
 
 import { PresetColorType } from '../../constants';
 import * as TagComponents from '../../helperComponents/TagSelect';
@@ -30,6 +29,9 @@ export interface ITagSelect extends Omit<RCProps, 'components'> {
   isSelected?: boolean;
   dropdownPlacement?: 'left' | 'right';
   colorDropdownPlacement?: 'left' | 'right';
+  editableTagName?: boolean;
+  validator?: (tagName: string) => boolean;
+  validateMessage?: string;
 }
 
 type ApproveDeleteType = { tag: OptionTypeTag; callbackDelete: () => void };
@@ -45,6 +47,9 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
     isSelected = true,
     dropdownPlacement = 'left',
     colorDropdownPlacement = 'left',
+    editableTagName = true,
+    validator,
+    validateMessage,
   } = props;
   const containerRef = useRef<HTMLDivElement>();
   const [inputValue, setInputSearch] = useState('');
@@ -108,6 +113,9 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
           setApproveDelete({ tag, callbackDelete });
         }}
         modalInstance={modalInstance}
+        editableTagName={editableTagName}
+        validator={validator}
+        validateMessage={validateMessage}
       />
       <Modal
         isOpen={Boolean(approveDelete?.tag)}

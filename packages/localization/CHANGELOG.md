@@ -3,6 +3,36 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.4.1&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.4.2) (2021-06-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-localization
+
+
+
+
+
+## [0.4.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.4.0&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.4.1) (2021-06-25)
+
+
+### Bug Fixes
+
+* sideEffects flag in package.json was set for correct tree shaking ([8d72148](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8d721482e140bb8ea41d62d7bc90769c642b7f0f))
+
+
+
+
+
+# [0.4.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.14&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.4.0) (2021-06-25)
+
+
+### Features
+
+* [AICDC-2545](https://jira.sbercloud.tech/browse/AICDC-2545): added showTime prop to DateFormatter ([d422d81](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d422d819700fa8eba0f84a1c72e9348f046a0cc1))
+
+
+
+
+
 ## [0.3.14](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.13&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.14) (2021-06-24)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-localization

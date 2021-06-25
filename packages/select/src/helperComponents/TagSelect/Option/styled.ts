@@ -1,10 +1,11 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-
 import { Button } from '@sbercloud/uikit-react-button';
 import { Tag } from '@sbercloud/uikit-react-tag';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
+const { TEXT_4 } = TYPOGRAPHY_VARIABLES;
 const { COLORS_SELECT } = EXPORT_VARS;
 
 export const StyledTagOption = styled.div`
@@ -25,14 +26,6 @@ export const optionClass = css`
   }
 `;
 
-export const StyledTag = styled(Tag)`
-  padding: 0 8px;
-  margin: 0;
-  flex-grow: 1;
-  display: block;
-  text-overflow: clip;
-`;
-
 export const StyledTagButtonWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -49,8 +42,17 @@ export const StyledTagButton = styled(Button)`
   &:focus,
   &:hover {
     fill: var(${COLORS_SELECT.DROPDOWN_ICON_HOVER_COLOR}) !important;
-    fill: var(${COLORS_SELECT.DROPDOWN_ICON_HOVER_COLOR}) !important;
     background: transparent !important;
+  }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    fill: var(${COLORS_SELECT.TAG_NAME_DISABLED_BUTTON_FILL}) !important;
+
+    &:focus,
+    &:hover {
+      fill: var(${COLORS_SELECT.TAG_NAME_DISABLED_BUTTON_FILL}) !important;
+    }
   }
 `;
 
@@ -58,11 +60,12 @@ export const StyledTagOptionLabel = styled(Tag)`
   margin-right: 12px;
 `;
 
-export const tagInputClassName = css`
-  line-height: 20px;
-  font-size: 14px;
-`;
-
 export const colorPickerClassName = css`
   padding: 0 2px;
+`;
+
+export const NotValidMessage = styled.div`
+  ${TEXT_4}
+  padding-top: 8px;
+  color: var(${COLORS_SELECT.TAG_NAME_NOT_VALID_MESSAGE});
 `;

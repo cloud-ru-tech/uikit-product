@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.7.1&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.8.0) (2021-06-25)
+
+
+### Bug Fixes
+
+* add tags on incomlete name match | [AICDC-2224](https://jira.sbercloud.tech/browse/AICDC-2224) ([8c8dd13](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8c8dd1310255a710f63901c31c8fb454d60dbbfa))
+
+
+### Features
+
+* add validator, validateMessage props to tag select | [AICDC-2284](https://jira.sbercloud.tech/browse/AICDC-2284) ([4b2182b](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/4b2182bc9ad1f1590c7eac0c3aa6b1559eb18c85))
+
+
+
+
+
+## [0.7.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.7.1) (2021-06-25)
+
+
+### Bug Fixes
+
+* sideEffects flag in package.json was set for correct tree shaking ([8d72148](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8d721482e140bb8ea41d62d7bc90769c642b7f0f))
+
+
+
+
+
 # [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.6.1&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.7.0) (2021-06-24)
 
 

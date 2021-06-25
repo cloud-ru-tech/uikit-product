@@ -1,7 +1,8 @@
 {
   "name": "@sbercloud/uikit-react-icons",
   "title": "React Icons",
-  "version": "1.0.4",
+  "version": "1.0.5",
+  "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
