@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-cards",
   "title": "React Cards",
-  "version": "0.2.22",
+  "version": "0.2.23",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -23,15 +23,15 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/icons": "1.0.15-14c9f91b",
-    "@sbercloud/uikit-react-button": "0.3.9",
-    "@sbercloud/uikit-react-checkbox": "0.1.14",
-    "@sbercloud/uikit-react-paginator-private": "0.1.14",
-    "@sbercloud/uikit-theme": "0.13.1"
+    "@sbercloud/uikit-react-button": "0.3.10",
+    "@sbercloud/uikit-react-checkbox": "0.1.15",
+    "@sbercloud/uikit-react-paginator-private": "0.1.15",
+    "@sbercloud/uikit-theme": "0.14.0"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-input": "0.6.2",
-    "@sbercloud/uikit-react-tag": "0.3.10",
-    "@sbercloud/uikit-typography": "0.1.15"
+    "@sbercloud/uikit-react-input": "0.6.3",
+    "@sbercloud/uikit-react-tag": "0.3.11",
+    "@sbercloud/uikit-typography": "0.1.16"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.13.1&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.14.0) (2021-06-25)
+
+
+### Features
+
+* add validator, validateMessage props to tag select | [AICDC-2284](https://jira.sbercloud.tech/browse/AICDC-2284) ([4b2182b](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/4b2182bc9ad1f1590c7eac0c3aa6b1559eb18c85))
+
+
+
+
+
 ## [0.13.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.13.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.13.1) (2021-06-25)
 
 

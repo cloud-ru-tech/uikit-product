@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-checkbox",
   "title": "React Checkbox",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -23,7 +23,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/icons": "1.0.15-14c9f91b",
-    "@sbercloud/uikit-theme": "0.13.1",
+    "@sbercloud/uikit-theme": "0.14.0",
     "nanoid": "3.1.23"
   },
   "peerDependencies": {
