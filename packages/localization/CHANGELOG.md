@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.14&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.4.0) (2021-06-25)
+
+
+### Features
+
+* [AICDC-2545](https://jira.sbercloud.tech/browse/AICDC-2545): added showTime prop to DateFormatter ([d422d81](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d422d819700fa8eba0f84a1c72e9348f046a0cc1))
+
+
+
+
+
 ## [0.3.14](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.13&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.3.14) (2021-06-24)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-localization
