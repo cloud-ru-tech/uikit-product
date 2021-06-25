@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-input",
   "title": "React Input",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -22,9 +22,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "0.3.8",
-    "@sbercloud/uikit-react-icons": "1.0.4",
-    "@sbercloud/uikit-theme": "0.13.0",
+    "@sbercloud/uikit-react-button": "0.3.9",
+    "@sbercloud/uikit-react-icons": "1.0.5",
+    "@sbercloud/uikit-theme": "0.13.1",
     "copy-to-clipboard": "3.3.1",
     "react-input-autosize": "3.0.0",
     "react-textarea-autosize": "8.3.2"
