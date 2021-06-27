@@ -27,7 +27,7 @@
     "@sbercloud/uikit-react-divider": "0.2.15",
     "@sbercloud/uikit-react-tooltip": "0.1.16",
     "@sbercloud/uikit-theme": "0.14.0",
-    "react-modal": "3.13.1"
+    "react-modal": "3.14.3"
   },
   "devDependencies": {
     "@types/react-modal": "3.12.0"

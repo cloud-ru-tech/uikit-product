@@ -34,12 +34,16 @@ export const Content = styled.div`
 
 export const overlayClassname = css`
   z-index: 99999;
-  background-color: rgba(52, 63, 72, 0.2);
-  top: 44px;
-  min-width: 100vw;
-  min-height: 100vh;
-  left: 0;
   position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(52, 63, 72, 0.2);
+`;
+
+export const overlayParentClassname = css`
+  position: absolute;
 `;
 
 export const contentClassname = css`
