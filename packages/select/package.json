@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-select",
   "title": "React Select",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -27,7 +27,7 @@
     "@sbercloud/uikit-react-button": "0.3.10",
     "@sbercloud/uikit-react-divider": "0.2.15",
     "@sbercloud/uikit-react-input": "0.6.3",
-    "@sbercloud/uikit-react-modal": "0.3.10",
+    "@sbercloud/uikit-react-modal": "0.3.11",
     "@sbercloud/uikit-react-tag": "0.3.11",
     "@sbercloud/uikit-theme": "0.14.0",
     "@sbercloud/uikit-typography": "0.1.16",

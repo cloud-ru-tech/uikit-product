@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.11](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.10&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.11) (2021-06-28)
+
+
+### Bug Fixes
+
+* modal-preview styled | [AICDC-2823](https://jira.sbercloud.tech/browse/AICDC-2823) ([74eb1d1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/74eb1d1ae430028c52b9cff337072071f9ab0a02))
+
+
+
+
+
 ## [0.3.10](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.9&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.10) (2021-06-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-modal

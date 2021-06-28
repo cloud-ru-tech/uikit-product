@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-filter",
   "title": "React Filter",
-  "version": "0.3.22",
+  "version": "0.3.23",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -25,7 +25,7 @@
     "@sbercloud/icons": "1.0.15-14c9f91b",
     "@sbercloud/uikit-react-divider": "0.2.15",
     "@sbercloud/uikit-react-input": "0.6.3",
-    "@sbercloud/uikit-react-select": "0.8.0",
+    "@sbercloud/uikit-react-select": "0.8.1",
     "@sbercloud/uikit-react-tooltip": "0.1.16",
     "@sbercloud/uikit-theme": "0.14.0",
     "@sbercloud/uikit-typography": "0.1.16",

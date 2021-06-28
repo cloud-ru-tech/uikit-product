@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-table",
   "title": "React Table",
-  "version": "0.2.22",
+  "version": "0.2.23",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -28,7 +28,7 @@
     "@sbercloud/icons": "3.2.0",
     "@sbercloud/uikit-react-button": "0.3.10",
     "@sbercloud/uikit-react-checkbox": "0.1.15",
-    "@sbercloud/uikit-react-modal": "0.3.10",
+    "@sbercloud/uikit-react-modal": "0.3.11",
     "@sbercloud/uikit-react-paginator-private": "0.1.15",
     "@sbercloud/uikit-react-spin": "0.1.16",
     "@sbercloud/uikit-react-status": "0.1.16",
