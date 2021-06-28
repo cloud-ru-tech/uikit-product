@@ -1,19 +1,25 @@
-import format from 'date-fns/format';
+import memoize from 'memoizee';
 
 import { INPUT_PLACEHOLDER } from './constants';
+import { AmPmFormat, Languages } from './texts-provider';
 import { TSplitDateType } from './types';
 
-export const getSplitDate = (date?: Date | null, isPickTime?: boolean): TSplitDateType => {
-  if (!date) return INPUT_PLACEHOLDER;
+const getFormatter = (language: Languages, options?: Intl.DateTimeFormatOptions) =>
+  new Intl.DateTimeFormat(language, options);
+
+const mGetFormatter = memoize(getFormatter);
+
+export const getSplitDate = (language: Languages, date?: Date | null): TSplitDateType => {
+  const inputPlaceholder = INPUT_PLACEHOLDER(language);
+  if (!date) return inputPlaceholder;
   const dateObj = new Date(date);
   const isDate = !isNaN(dateObj.getTime());
-  if (!isDate) return INPUT_PLACEHOLDER;
+  if (!isDate) return inputPlaceholder;
 
   return {
-    day: format(dateObj, 'dd'),
-    month: format(dateObj, 'MM'),
-    year: format(dateObj, 'yyyy'),
-    time: format(dateObj, 'HH:mm'),
-    full: format(dateObj, isPickTime ? 'dd.MM.yyyy, HH:mm' : 'dd.MM.yyyy'),
+    day: mGetFormatter(language, { day: 'numeric' }).format(dateObj),
+    month: mGetFormatter(language, { month: '2-digit' }).format(dateObj),
+    year: mGetFormatter(language, { year: 'numeric' }).format(dateObj),
+    time: mGetFormatter(language, { hour12: AmPmFormat[language], hour: 'numeric', minute: 'numeric' }).format(dateObj),
   };
 };

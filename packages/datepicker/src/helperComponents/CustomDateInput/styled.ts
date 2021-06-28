@@ -54,7 +54,7 @@ export const InputContainer = styled.span`
   }
 `;
 
-export const Dot = styled.div`
+export const Separator = styled.div`
   height: 21px;
   padding-right: 1px;
 `;

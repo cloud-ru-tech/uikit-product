@@ -1,3 +1,4 @@
+import enGB from 'date-fns/locale/en-GB';
 import ru from 'date-fns/locale/ru';
 import { useCallback, useMemo, useState } from 'react';
 import RDatePicker, { registerLocale } from 'react-datepicker';
@@ -5,19 +6,22 @@ import RDatePicker, { registerLocale } from 'react-datepicker';
 import { CustomContainer } from '../../helperComponents/CustomContainer';
 import { CustomDateInput } from '../../helperComponents/CustomDateInput';
 import { CustomHeader } from '../../helperComponents/CustomHeader';
+import { Languages } from '../../helpers/texts-provider';
 import { SettingType } from '../../helpers/types';
 import * as S from './styled';
 
-registerLocale('ru', ru);
+registerLocale(Languages.Ru, ru);
+registerLocale(Languages.En, enGB);
 
 export interface DatePickerProps {
   pickTime: SettingType;
   onChange?: (date: Date | null) => void;
   value?: Date | null;
   minDate?: Date;
+  language?: Languages;
 }
 
-export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerProps) => {
+export const DatePicker = ({ value, pickTime, onChange, minDate, language = Languages.Ru }: DatePickerProps) => {
   const [isDatePickerOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
   const open = useCallback(() => setOpen(true), []);
@@ -53,8 +57,16 @@ export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerPro
       pickSettings,
       handleChange,
       minDate,
+      language,
     }),
-    [date, setDate, pickSettings, minDate],
+    [date, setDate, pickSettings, minDate, language],
+  );
+
+  const memoizedCustomHeader = useCallback(
+    CustomHeader.bind(null, {
+      language,
+    }),
+    [language],
   );
 
   return (
@@ -68,9 +80,17 @@ export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerPro
         selectsRange={false}
         shouldCloseOnSelect
         showPopperArrow={false}
-        locale='ru'
-        customInput={<CustomDateInput date={date} pickSettings={pickSettings} setDate={setDate} minDate={minDate} />}
-        renderCustomHeader={CustomHeader}
+        locale={language}
+        customInput={
+          <CustomDateInput
+            date={date}
+            pickSettings={pickSettings}
+            setDate={setDate}
+            minDate={minDate}
+            language={language}
+          />
+        }
+        renderCustomHeader={memoizedCustomHeader}
         calendarContainer={memoizedCustomContainer}
         onCalendarClose={close}
         onCalendarOpen={open}

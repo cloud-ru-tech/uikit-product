@@ -1,11 +1,12 @@
 import { InputAutosize } from '@sbercloud/uikit-react-input';
 import isEqual from 'lodash.isequal';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRifm } from 'rifm';
 
 import { INPUT_PLACEHOLDER } from '../../helpers/constants';
 import { parseDigits } from '../../helpers/parseDigits';
 import { splitDateFormatter } from '../../helpers/splitDateFormatter';
+import { Languages } from '../../helpers/texts-provider';
 import { TSplitDateType, TimeInputProps } from '../../helpers/types';
 import * as S from './styled';
 
@@ -15,11 +16,14 @@ interface IHiddenInputProps {
   propName?: string;
   minWidth?: number;
   onChange: (date: TSplitDateType) => void;
+  language: Languages;
 }
 
-export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onChange }) => {
+export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onChange, language }) => {
   const [value, setValue] = useState(date[valueProp]);
   const [ref, setRef] = useState<HTMLInputElement | null>();
+
+  const inputPlaceholder = useMemo(() => INPUT_PLACEHOLDER(language), [language]);
 
   useEffect(() => {
     if (value === date[valueProp]) return;
@@ -43,11 +47,11 @@ export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onCh
     onChange: setValue,
     format: str => {
       const int = parseDigits(str);
-      const isPlaceholder = value === INPUT_PLACEHOLDER[valueProp];
+      const isPlaceholder = value === inputPlaceholder[valueProp];
       const isDeleted = int.length < value.length;
       const deletedVal = isDeleted ? '' : int;
       const replaceVal = isPlaceholder ? int : deletedVal;
-      const toLength = splitDateFormatter(valueProp, replaceVal);
+      const toLength = splitDateFormatter(valueProp, replaceVal, inputPlaceholder);
       return toLength;
     },
     mask: true,

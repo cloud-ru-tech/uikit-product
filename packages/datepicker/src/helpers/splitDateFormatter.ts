@@ -13,5 +13,8 @@ const mapValuePropLength = {
   year: 4,
 };
 
-export const splitDateFormatter = (valueProp: TimeInputProps, str: string): string =>
-  addSymbols(str, mapValuePropLength[valueProp], INPUT_PLACEHOLDER[valueProp]);
+export const splitDateFormatter = (
+  valueProp: TimeInputProps,
+  str: string,
+  inputPlaceholder: ReturnType<typeof INPUT_PLACEHOLDER>,
+): string => addSymbols(str, mapValuePropLength[valueProp], inputPlaceholder[valueProp]);

@@ -3,13 +3,22 @@ import { useCallback, useMemo, useState } from 'react';
 import RDatePicker, { ReactDatePickerProps } from 'react-datepicker';
 
 import { CustomTimeInput } from '../../helperComponents/CustomTimeInput';
+import { Languages, TimeFormat } from '../../helpers/texts-provider';
 import * as S from './styled';
 
 export interface TimePickerProps extends ReactDatePickerProps {
   date?: Date | null;
+  language?: Languages;
 }
 
-export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime, maxTime, disabled }) => {
+export const TimePicker: React.FC<TimePickerProps> = ({
+  date,
+  onChange,
+  minTime,
+  maxTime,
+  disabled,
+  language = Languages.Ru,
+}) => {
   const [isOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
   const open = useCallback(() => setOpen(true), []);
@@ -31,6 +40,8 @@ export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime,
     [],
   );
 
+  const timeFormat = useMemo(() => TimeFormat[language], [language]);
+
   return (
     <S.Container>
       <RDatePicker
@@ -41,8 +52,8 @@ export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime,
         showTimeSelectOnly
         timeIntervals={15}
         timeCaption=''
-        timeFormat='HH:mm'
-        customInput={<CustomTimeInput date={date} open={isOpen} />}
+        timeFormat={timeFormat}
+        customInput={<CustomTimeInput date={date} open={isOpen} language={language} />}
         onCalendarClose={close}
         onCalendarOpen={open}
         minTime={minTime}

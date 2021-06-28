@@ -3,7 +3,6 @@ export type TSplitDateType = {
   month: string;
   year: string;
   time: string;
-  full?: string;
 };
 
 export enum SettingType {

@@ -6,6 +6,7 @@ import { ReactDatePickerProps } from 'react-datepicker';
 
 import { DatePickerProps, TimePicker } from '../../components';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';
+import { Languages, Texts, textProvider } from '../../helpers/texts-provider';
 import { PickSettingProps } from '../../helpers/types';
 import * as S from './styled';
 
@@ -15,6 +16,7 @@ export interface ICustomContainerProps extends Partial<ReactDatePickerProps> {
   pickTime?: DatePickerProps['pickTime'];
   pickSettings: PickSettingProps;
   handleChange?: (date: Date | null) => void;
+  language: Languages;
 }
 
 export interface ICustomContainer {
@@ -24,7 +26,7 @@ export interface ICustomContainer {
 
 export const CustomContainer = (customProps: ICustomContainerProps, props: ICustomContainer): React.ReactNode => {
   const { children, className } = props;
-  const { date, pickSettings, handleChange, minDate } = customProps;
+  const { date, pickSettings, handleChange, minDate, language } = customProps;
   const { pickTimeCheck, setPickTime, isPickTimeOptional, isPickTime } = pickSettings;
 
   const changeStartTime = useCallback((date: Date | null) => {
@@ -39,8 +41,8 @@ export const CustomContainer = (customProps: ICustomContainerProps, props: ICust
       maxTime: new Date(new Date().setHours(23, 59, 59, 999)),
     };
   }, [date]);
-  const handleLabelClick = useCallback(() => setPickTime?.(!pickTimeCheck), [pickTimeCheck]);
-  const handleSwitchChange = useCallback(checked => setPickTime?.(checked), []);
+  const handleLabelClick = useCallback(() => setPickTime?.(!pickTimeCheck), [pickTimeCheck, setPickTime]);
+  const handleSwitchChange = useCallback(checked => setPickTime?.(checked), [setPickTime]);
 
   const disabled = useMemo(() => (minDate && date && !isAfterMinDate(minDate, date)) || false, [minDate, date]);
 
@@ -49,7 +51,7 @@ export const CustomContainer = (customProps: ICustomContainerProps, props: ICust
       {isPickTime && (
         <>
           <S.Control>
-            <TimePicker disabled={disabled} date={date} onChange={changeStartTime} {...timeScope} />
+            <TimePicker disabled={disabled} date={date} onChange={changeStartTime} language={language} {...timeScope} />
           </S.Control>
           <Divider />
         </>
@@ -59,7 +61,7 @@ export const CustomContainer = (customProps: ICustomContainerProps, props: ICust
         <>
           <Divider />
           <S.Additional onClick={handleLabelClick}>
-            Указать время
+            {textProvider(language, Texts.specifyTime)}
             <Switch checked={Boolean(pickTimeCheck)} onChange={handleSwitchChange} />
           </S.Additional>
         </>
