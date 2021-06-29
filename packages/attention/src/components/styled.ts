@@ -16,10 +16,12 @@ export const Highlighter = styled.div`
 
   &[data-importance-level='normal'] {
     border-color: var(${COLORS_ATTENTION.NORMAL_IMPORTANCE_LEVEL_LINE});
+    background-color: var(${COLORS_ATTENTION.NORMAL_IMPORTANCE_LEVEL_LINE});
   }
 
   &[data-importance-level='high'] {
     border-color: var(${COLORS_ATTENTION.HIGH_IMPORTANCE_LEVEL_LINE});
+    background-color: var(${COLORS_ATTENTION.HIGH_IMPORTANCE_LEVEL_LINE});
   }
 `;
 
