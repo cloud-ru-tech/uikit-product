@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-attention",
   "title": "React Attention",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
