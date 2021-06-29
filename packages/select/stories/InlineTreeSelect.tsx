@@ -40,6 +40,13 @@ const Template: Story = (): JSX.Element => {
       />
       <StyledButton
         onClick={(): void => {
+          setTree(tree => (tree.length ? [] : (treeOptions as IOptionType[])));
+        }}
+      >
+        Trigger empty
+      </StyledButton>
+      <StyledButton
+        onClick={(): void => {
           setChecked(defautVal);
         }}
       >

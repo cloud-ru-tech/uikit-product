@@ -1,8 +1,7 @@
+import { Avatar, AvatarProps } from '@sbercloud/uikit-react-avatar';
 import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
 import { FC, useEffect, useMemo, useState } from 'react';
-
-import { Avatar, AvatarProps } from '@sbercloud/uikit-react-avatar';
 
 import { StyledContainer, selectClassname } from './styled';
 
@@ -34,6 +33,7 @@ export interface IUsersByGroupProps extends Partial<TreeProps> {
   options?: IOptionType[];
   filter?: (treeNode: EventDataNode) => boolean;
   onChange?: (checked: { checked: React.ReactText[] | CheckedType; halfChecked?: React.ReactText[] }) => void;
+  isFiltered: boolean;
 }
 
 export type CheckedType = {
@@ -43,7 +43,14 @@ export type CheckedType = {
 
 const DELIMETR = ':';
 
-export const UsersByGroup: FC<IUsersByGroupProps> = ({ options, filter, onChange, checkedKeys, ...treeProps }) => {
+export const UsersByGroup: FC<IUsersByGroupProps> = ({
+  options,
+  filter,
+  onChange,
+  checkedKeys,
+  isFiltered,
+  ...treeProps
+}) => {
   const [stateOptions, setStateOptions] = useState<IOptionType[]>();
   const [checked, setChecked] = useState<CheckedType>();
 
@@ -114,7 +121,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({ options, filter, onChange
   }
 
   return (
-    <StyledContainer className={selectClassname}>
+    <StyledContainer className={selectClassname} data-filtered={isFiltered || undefined} data-empty='Нет данных'>
       <RcTree
         {...treeProps}
         checkedKeys={checked}

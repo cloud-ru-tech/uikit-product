@@ -1,8 +1,7 @@
 import { styled } from '@linaria/react';
+import { Divider } from '@sbercloud/uikit-react-divider';
 import isEqual from 'lodash.isequal';
 import { FC, useCallback, useEffect, useState } from 'react';
-
-import { Divider } from '@sbercloud/uikit-react-divider';
 
 import { IOptionType, IUsersByGroupProps, UsersByGroup, ValueContainer } from '../../helperComponents/InlineTreeSelect';
 import { InputSearch } from '../../helperComponents/Shared/InputSearch';
@@ -150,6 +149,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
     >
       {({ search, handleChange, keys }: ChildrenProps): React.ReactNode => (
         <UsersByGroup
+          isFiltered={Boolean(search)}
           options={options}
           checkedKeys={keys}
           onChange={(checked): void => {

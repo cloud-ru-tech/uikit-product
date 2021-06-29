@@ -32,7 +32,7 @@
     "@sbercloud/uikit-theme": "0.15.0",
     "@sbercloud/uikit-typography": "0.1.17",
     "lodash.isequal": "4.5.0",
-    "rc-tree": "4.1.5",
+    "rc-tree": "4.2.1",
     "react-select": "3.2.0"
   },
   "devDependencies": {
