@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.24](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.23&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.24) (2021-06-29)
+
+
+### Bug Fixes
+
+* [AICDC-2903](https://jira.sbercloud.tech/browse/AICDC-2903): added required field translation for FormField, fixed help icon ([28b40cd](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/28b40cddc9cd3f619da8368f0319749f000ea039))
+
+
+
+
+
 ## [0.4.23](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.22&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.23) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-form
