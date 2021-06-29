@@ -544,6 +544,11 @@ const COLORS_DATEPICKER = {
   INPUT_EDITABLE_BACKGROUND: '--datepicker-input-editable-background-color',
 };
 
+const COLORS_ATTENTION = {
+  NORMAL_IMPORTANCE_LEVEL_LINE: '--attention-normal-importance-level-line',
+  HIGH_IMPORTANCE_LEVEL_LINE: '--attention-high-importance-level-line',
+};
+
 export {
   COLORS,
   COLORS_BRAND,
@@ -583,6 +588,7 @@ export {
   COLORS_NO_DATA_PAGE,
   COLORS_DATEPICKER,
   COLORS_PRESET,
+  COLORS_ATTENTION,
 };
 
 export default {
@@ -624,4 +630,5 @@ export default {
   COLORS_NO_DATA_PAGE,
   COLORS_DATEPICKER,
   COLORS_PRESET,
+  COLORS_ATTENTION,
 };
