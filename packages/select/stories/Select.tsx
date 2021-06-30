@@ -19,6 +19,7 @@ import {
   Select,
 } from '../src';
 import { groupedServices, services } from '../src/helpers/mockData';
+import { Languages } from '../src/helpers/texts-provider';
 
 export default {
   title: 'Not stable/Select/Select',
@@ -197,6 +198,11 @@ select.parameters = {
   },
 };
 select.argTypes = {
+  language: {
+    defaultValue: Languages.Ru,
+    options: [Languages.Ru, Languages.En],
+    control: { type: 'radio' },
+  },
   type: {
     control: {
       type: 'radio',

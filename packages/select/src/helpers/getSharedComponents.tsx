@@ -1,13 +1,14 @@
 import { css } from '@linaria/core';
-import { components as ReactSelectComponents, SelectComponentsConfig } from 'react-select';
-
 import { ArrowDownSVG, CrossSVG } from '@sbercloud/icons';
+import { useMemo } from 'react';
+import { components as ReactSelectComponents, SelectComponentsConfig } from 'react-select';
 
 import { ISelectProps } from '../components';
 import { CustomControl, CustomMenu, MultiValueContainer } from '../helperComponents/Shared';
 import { CustomGroup } from '../helperComponents/Shared/CustomGroup';
 import { CustomGroupHeading } from '../helperComponents/Shared/CustomGroupHeading';
 import { CustomOption } from '../helperComponents/Shared/CustomOption';
+import { Texts, textProvider } from './texts-provider';
 
 const crossSVGClassName = css`
   fill: inherit;
@@ -27,9 +28,13 @@ const MultiValueRemove = (props: React.ComponentProps<typeof ReactSelectComponen
   </ReactSelectComponents.MultiValueRemove>
 );
 
-const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponents.NoOptionsMessage>): JSX.Element => (
-  <ReactSelectComponents.NoOptionsMessage {...props}>Нет данных</ReactSelectComponents.NoOptionsMessage>
-);
+const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponents.NoOptionsMessage>): JSX.Element => {
+  const {
+    selectProps: { language },
+  } = props;
+  const noDataText = useMemo(() => textProvider<string>(language, Texts.noData), [language]);
+  return <ReactSelectComponents.NoOptionsMessage {...props}>{noDataText}</ReactSelectComponents.NoOptionsMessage>;
+};
 
 const IndicatorSeparator = () => null;
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -6,11 +6,20 @@ import { components as ReactSelectComponents } from 'react-select';
 import { ColorPicker, OptionTypeColor } from '../../../components';
 import { PRESET_COLORS } from '../../../constants';
 import getRandomInt from '../../../helpers/getRandomInt';
+import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { Container, NotValidMessage, StyledButton, StyledTagWrapper, colorPickerClassName } from './styled';
 
 export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.Menu>> = props => {
   const { options, setValue, selectProps } = props;
-  const { inputValue: search, colorDropdownPlacement, onTagChange, onSearch, validator, validateMessage } = selectProps;
+  const {
+    inputValue: search,
+    colorDropdownPlacement,
+    onTagChange,
+    onSearch,
+    validator,
+    validateMessage,
+    language,
+  } = selectProps;
   const [color, setColor] = useState(PRESET_COLORS[getRandomInt(0, PRESET_COLORS.length - 1)]);
 
   const hasSearched = useMemo(() => options.some(option => option.label === search), [options, search]);
@@ -26,6 +35,8 @@ export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.
 
   const notValid = useMemo(() => validator && !validator(search), [validator, search]);
 
+  const addText = useMemo(() => textProvider<string>(language, Texts.add), [language]);
+
   if (!search || hasSearched) return null;
 
   return (
@@ -37,7 +48,7 @@ export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.
           size={Button.sizes.xs}
           onClick={onClick}
         >
-          Добавить
+          {addText}
         </StyledButton>
         <StyledTagWrapper>
           <Tag color={color}>{search}</Tag>

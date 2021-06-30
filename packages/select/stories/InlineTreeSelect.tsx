@@ -9,6 +9,7 @@ import componentReadme from '../README.md';
 import { CheckedType, UsersByGroupSelect } from '../src';
 import { IOptionType } from '../src/helperComponents/InlineTreeSelect';
 import { treeOptions } from '../src/helpers/mockData';
+import { Languages } from '../src/helpers/texts-provider';
 
 export default {
   title: 'Not stable/Select/Inline Tree Select',
@@ -19,7 +20,7 @@ const StyledButton = styled(Button)`
   margin: 10px 10px 0px 0px;
 `;
 
-const Template: Story = (): JSX.Element => {
+const Template: Story = (args): JSX.Element => {
   const defautVal = { checked: ['b'] };
   const [tree, setTree] = useState<IOptionType[]>(treeOptions as IOptionType[]);
   const [checked, setChecked] = useState<CheckedType | undefined>(defautVal);
@@ -28,6 +29,7 @@ const Template: Story = (): JSX.Element => {
   return (
     <>
       <UsersByGroupSelect
+        {...args}
         disabled={isDisabled}
         options={tree}
         // value={checked}
@@ -77,6 +79,13 @@ const Template: Story = (): JSX.Element => {
 };
 
 export const inlineTreeSelect = Template.bind({});
+inlineTreeSelect.argTypes = {
+  language: {
+    defaultValue: Languages.Ru,
+    options: [Languages.Ru, Languages.En],
+    control: { type: 'radio' },
+  },
+};
 inlineTreeSelect.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

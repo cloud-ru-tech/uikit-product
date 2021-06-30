@@ -1,7 +1,7 @@
+import { ArrowDownSVG } from '@sbercloud/icons';
 import { FC, useCallback } from 'react';
 
-import { ArrowDownSVG } from '@sbercloud/icons';
-
+import { DictionaryPropertyAsFn, Languages, Texts, textProvider } from '../../../helpers/texts-provider';
 import { StyledContainer, iconClass } from './styled';
 
 export interface IValueContainerProps {
@@ -11,23 +11,27 @@ export interface IValueContainerProps {
   disabled?: boolean;
   open: boolean;
   setOpen: (open: boolean) => void;
+  language: Languages;
 }
 
 export const ValueContainer: FC<IValueContainerProps> = ({
   open,
   setOpen,
   value,
-  placeholder = 'Выберите значение',
+  placeholder,
   valueFormatter,
   disabled = false,
+  language,
 }) => {
   const getVal = useCallback(() => {
     if (!value || !value.length) {
-      return placeholder;
+      return placeholder || textProvider<string>(language, Texts.selectValue);
     }
 
-    return valueFormatter?.(value) || `Выбрано: ${value.length}`;
-  }, [value]);
+    return (
+      valueFormatter?.(value) || textProvider<DictionaryPropertyAsFn>(language, Texts.selected)({ count: value.length })
+    );
+  }, [value, language]);
 
   return (
     <StyledContainer

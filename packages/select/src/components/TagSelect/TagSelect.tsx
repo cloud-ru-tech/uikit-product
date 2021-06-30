@@ -5,6 +5,7 @@ import RCSelect, { ValueType } from 'react-select';
 import { PresetColorType } from '../../constants';
 import * as TagComponents from '../../helperComponents/TagSelect';
 import getSelectorStyles from '../../helpers/getSelectStyles';
+import { DictionaryPropertyAsFn, Languages, Texts, textProvider } from '../../helpers/texts-provider';
 
 export type OptionTypeTag = {
   value: string;
@@ -32,6 +33,7 @@ export interface ITagSelect extends Omit<RCProps, 'components'> {
   editableTagName?: boolean;
   validator?: (tagName: string) => boolean;
   validateMessage?: string;
+  language?: Languages;
 }
 
 type ApproveDeleteType = { tag: OptionTypeTag; callbackDelete: () => void };
@@ -50,6 +52,7 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
     editableTagName = true,
     validator,
     validateMessage,
+    language = Languages.Ru,
   } = props;
   const containerRef = useRef<HTMLDivElement>();
   const [inputValue, setInputSearch] = useState('');
@@ -123,8 +126,11 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
           setApproveDelete(null);
         }}
         appElement={document.body}
-        title='Удаление тега'
-        description={`Вы действительно хотите удалить тег «${approveDelete?.tag?.label}»?`}
+        title={textProvider<string>(language, Texts.modalDeleteTagTitle)}
+        description={textProvider<DictionaryPropertyAsFn>(
+          language,
+          Texts.modalDeleteTagDesc,
+        )({ label: approveDelete?.tag?.label || '' })}
         approve={(): void => {
           approveDelete?.callbackDelete();
         }}

@@ -9,6 +9,7 @@ import componentReadme from '../README.md';
 import { TagSelect } from '../src';
 import { PRESET_COLORS } from '../src/constants';
 import getRandomInt from '../src/helpers/getRandomInt';
+import { Languages } from '../src/helpers/texts-provider';
 
 export default {
   title: 'Not stable/Select/Tag Select',
@@ -86,6 +87,11 @@ tagSelect.args = {
     'Можно использовать строчные буквы латинского алфавита (a-z); цифры (0-9); символ тире (-). Начинаться обязательно должно с буквы, заканчиваться может буквой или цифрой, максимум 16 символов. Например: test-1',
 };
 tagSelect.argTypes = {
+  language: {
+    defaultValue: Languages.Ru,
+    options: [Languages.Ru, Languages.En],
+    control: { type: 'radio' },
+  },
   editableTagName: {
     control: {
       type: 'boolean',

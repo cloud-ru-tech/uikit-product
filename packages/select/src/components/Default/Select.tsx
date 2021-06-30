@@ -8,6 +8,7 @@ import RCSelect, {
 
 import getSelectorStyles from '../../helpers/getSelectStyles';
 import getCustomComponents from '../../helpers/getSharedComponents';
+import { Languages, Texts, textProvider } from '../../helpers/texts-provider';
 import { SelectType } from '../../helpers/types';
 
 export { default as RCSelect } from 'react-select';
@@ -40,13 +41,14 @@ export interface ISelectProps<CustomOptionType> extends Omit<RCProps, 'component
   footer?: React.ReactNode;
   customRef?: (instance: RCSelect<CustomOptionType> | null) => void;
   collapsedGroup?: boolean;
+  language?: Languages;
 }
 
 export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectProps<CustomOptionType>): JSX.Element => {
   const selectRef = useRef<HTMLDivElement>(null);
   const {
     options,
-    type,
+    type = 'medium',
     closeMenuOnSelect = true,
     isSearchable = false,
     searchableProps = ['value'],
@@ -59,7 +61,8 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
     postfixOption,
     prefixMultiValueContainer,
     collapsedGroup,
-    error,
+    placeholder,
+    language = Languages.Ru,
   } = props;
 
   const [stateOptions, setOptions] = useState<CustomOptionType[]>();
@@ -167,6 +170,8 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
     <div className={className} ref={selectRef}>
       <RCSelect<CustomOptionType>
         {...props}
+        language={language}
+        placeholder={placeholder || textProvider<string>(language, Texts.selectPlaceholder)}
         onMenuClose={onMenuClose}
         ref={(instance): void => {
           customRef?.(instance as RCSelect<CustomOptionType>);
@@ -197,10 +202,4 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
       />
     </div>
   );
-};
-
-Select.defaultProps = {
-  type: 'medium',
-  className: '',
-  placeholder: 'Выберите',
 };
