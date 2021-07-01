@@ -26,7 +26,7 @@
     "@sbercloud/uikit-react-divider": "0.2.16",
     "@sbercloud/uikit-react-icons": "1.0.5",
     "@sbercloud/uikit-react-input": "0.4.12",
-    "@sbercloud/uikit-react-localization": "^0.4.3",
+    "@sbercloud/uikit-react-localization": "0.4.3",
     "@sbercloud/uikit-react-switch": "0.1.16",
     "@sbercloud/uikit-theme": "0.15.0",
     "date-fns": "2.22.1",

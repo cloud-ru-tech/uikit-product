@@ -3,6 +3,7 @@ import React from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
 
+import { LanguageCodeType, LanguageProvider } from '../packages/localization';
 import { globals, green, greenDark, purple, purpleDark } from '../packages/theme/src';
 
 const changeTheme = (theme: { name: string }) => {
@@ -18,7 +19,7 @@ const changeTheme = (theme: { name: string }) => {
 
 addDecorator(addReadme);
 addDecorator(withDesign);
-addDecorator(Story => {
+addDecorator((Story, { globals: { locale } }) => {
   const root = document.querySelector('body');
   if (root && !root.getAttribute('data-theme')) {
     root.setAttribute('data-theme', 'purple');
@@ -27,8 +28,10 @@ addDecorator(Story => {
   return (
     // Add global styles and theme variables
     <div className={globals} id='story-root'>
-      {/* @ts-ignore*/}
-      <Story />
+      <LanguageProvider languageCode={locale || LanguageCodeType.ruRU}>
+        {/* @ts-ignore*/}
+        <Story />
+      </LanguageProvider>
     </div>
   );
 });
@@ -50,3 +53,18 @@ addParameters({
     onChange: changeTheme,
   },
 });
+
+export const globalTypes = {
+  locale: {
+    name: 'Locale',
+    description: 'Internationalization locale',
+    defaultValue: LanguageCodeType.ruRU,
+    toolbar: {
+      icon: 'globe',
+      items: [
+        { value: LanguageCodeType.ruRU, right: '🇷🇺', title: 'Русский' },
+        { value: LanguageCodeType.enGB, right: '🇺🇸', title: 'English' },
+      ],
+    },
+  },
+};
