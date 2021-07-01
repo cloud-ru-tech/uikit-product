@@ -28,12 +28,31 @@ export const LanguageProvider: React.FC<LanguageProvider> = ({ languageCode, chi
   return <>{children}</>;
 };
 
-export const useLanguage = () => {
+interface useLanguageProps {
+  onlyEnabledLanguage?: boolean;
+}
+
+export const useLanguage = ({ onlyEnabledLanguage }: useLanguageProps) => {
   const [code, setCode] = useState(customWindow.sbercloudUIKit?.languageCode || DEFAULT_LANGUAGE);
 
   useEffect(() => {
     const newCode = customWindow.sbercloudUIKit?.languageCode;
     if (newCode !== code) setCode(newCode || DEFAULT_LANGUAGE);
   }, [customWindow.sbercloudUIKit?.languageCode]);
+
+  useEffect(() => {
+    if (onlyEnabledLanguage) {
+      if (code.split('-')[0] === 'en') {
+        setCode('en-GB');
+        return;
+      }
+      if (['ru', 'by'].includes(code.split('-')[0])) {
+        setCode('ru-RU');
+        return;
+      }
+      setCode('ru-RU');
+    }
+  }, [code, onlyEnabledLanguage]);
+
   return code;
 };
