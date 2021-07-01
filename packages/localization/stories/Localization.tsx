@@ -16,10 +16,10 @@ const Wrapper = styled.div`
   margin: 1rem;
 `;
 
-const Template: Story = ({ languageCode, showOnlyDate }) => {
+const Template: Story = ({ showOnlyDate }) => {
   const hookCode = useLanguage();
   return (
-    <LanguageProvider languageCode={languageCode}>
+    <>
       <Wrapper>
         <Text1>
           <strong>HooksCode:</strong> {hookCode}
@@ -35,7 +35,7 @@ const Template: Story = ({ languageCode, showOnlyDate }) => {
       <Wrapper>
         <strong>DateFormatter:</strong> <DateFormatter showTime={showOnlyDate} value={new Date()} />
       </Wrapper>
-    </LanguageProvider>
+    </>
   );
 };
 

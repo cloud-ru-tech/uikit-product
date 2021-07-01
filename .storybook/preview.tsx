@@ -1,9 +1,10 @@
+/* @ts-ignore*/
+import { LanguageCodeType, LanguageProvider } from '@sbercloud/uikit-react-localization';
 import { addDecorator, addParameters } from '@storybook/react';
 import React from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
 
-import { LanguageCodeType, LanguageProvider } from '../packages/localization';
 import { globals, green, greenDark, purple, purpleDark } from '../packages/theme/src';
 
 const changeTheme = (theme: { name: string }) => {

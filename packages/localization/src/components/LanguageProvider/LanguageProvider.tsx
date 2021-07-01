@@ -38,16 +38,20 @@ export const useLanguage = (props?: useLanguageProps) => {
 
   useEffect(() => {
     const newCode = customWindow.sbercloudUIKit?.languageCode;
-    if (newCode !== code) setCode(newCode || DEFAULT_LANGUAGE);
+    if (newCode !== code) {
+      setCode(newCode || DEFAULT_LANGUAGE);
+    }
   }, [customWindow.sbercloudUIKit?.languageCode]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (onlyEnabledLanguage) {
-      if (code.split('-')[0] === 'en') {
+      const enGroup = code.split('-')[0] === 'en';
+      const ruGroup = ['ru', 'be'].includes(code.split('-')[0]);
+      if (enGroup) {
         setCode(LanguageCodeType.enGB);
         return;
       }
-      if (['ru', 'be'].includes(code.split('-')[0])) {
+      if (ruGroup) {
         setCode(LanguageCodeType.ruRU);
         return;
       }
