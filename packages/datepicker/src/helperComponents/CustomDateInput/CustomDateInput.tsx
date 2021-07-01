@@ -1,11 +1,12 @@
 import { CalendarInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { forwardRef, useCallback, useEffect, useMemo, useState } from 'react';
 import RDatePicker from 'react-datepicker';
 
 import { HiddenInput } from '../../helperComponents/HiddenInput';
 import { getSplitDate } from '../../helpers/getSplitDate';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';
-import { DateFormat, Languages, Texts, textProvider } from '../../helpers/texts-provider';
+import { DateFormat, Texts, textProvider } from '../../helpers/texts-provider';
 import { PickSettingProps, TSplitDateType, TimeInputProps } from '../../helpers/types';
 import * as S from './styled';
 
@@ -16,11 +17,11 @@ export interface ICustomDateInputProps {
   onClick?: ((event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void) | undefined;
   calendarRef?: React.RefObject<RDatePicker>;
   pickSettings: PickSettingProps;
-  language: Languages;
 }
 
 export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps>((props, ref) => {
-  const { date, setDate, onClick, pickSettings, minDate, language } = props;
+  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { date, setDate, onClick, pickSettings, minDate } = props;
   const [isError, setError] = useState(false);
   const [splitDate, setSplitDate] = useState<TSplitDateType>(getSplitDate(language, date));
 
@@ -65,33 +66,11 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps
 
   const dateForFormatter = useMemo(
     () => ({
-      day: (
-        <HiddenInput
-          language={language}
-          valueProp={TimeInputProps.day}
-          date={splitDate}
-          onChange={handleChangeDate}
-          minWidth={17}
-        />
-      ),
+      day: <HiddenInput valueProp={TimeInputProps.day} date={splitDate} onChange={handleChangeDate} minWidth={17} />,
       month: (
-        <HiddenInput
-          language={language}
-          valueProp={TimeInputProps.month}
-          date={splitDate}
-          onChange={handleChangeDate}
-          minWidth={17}
-        />
+        <HiddenInput valueProp={TimeInputProps.month} date={splitDate} onChange={handleChangeDate} minWidth={17} />
       ),
-      year: (
-        <HiddenInput
-          language={language}
-          valueProp={TimeInputProps.year}
-          date={splitDate}
-          onChange={handleChangeDate}
-          minWidth={34}
-        />
-      ),
+      year: <HiddenInput valueProp={TimeInputProps.year} date={splitDate} onChange={handleChangeDate} minWidth={34} />,
       time: pickSettings?.isPickTime ? splitDate.time : undefined,
     }),
     [splitDate, handleChangeDate, pickSettings, language],

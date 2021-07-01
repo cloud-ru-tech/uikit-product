@@ -1,7 +1,8 @@
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-react-localization';
 import { forwardRef, useEffect, useMemo, useState } from 'react';
 
-import { AmPmFormat, Languages, Texts, textProvider } from '../../helpers/texts-provider';
+import { AmPmFormat, Texts, textProvider } from '../../helpers/texts-provider';
 import * as S from './styled';
 
 export interface ICustomTimeInputProps {
@@ -10,11 +11,12 @@ export interface ICustomTimeInputProps {
   onClick?: ((event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void) | undefined;
   onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void) | undefined;
   disabled?: boolean;
-  language: Languages;
+  language: LanguageCodeType;
 }
 
 export const CustomTimeInput = forwardRef<HTMLInputElement, ICustomTimeInputProps>((props, ref) => {
-  const { date, onClick, onChange, open, disabled, language } = props;
+  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { date, onClick, onChange, open, disabled } = props;
   const [value, setValue] = useState<string>('');
 
   const timeFormatter = useMemo(

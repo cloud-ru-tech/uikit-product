@@ -4,7 +4,6 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TimePicker, TimePickerProps } from '../src';
-import { Languages } from '../src/helpers/texts-provider';
 
 export default {
   title: 'Not stable/DatePicker/Time Picker',
@@ -31,11 +30,6 @@ timePicker.argTypes = {
     control: {
       type: 'boolean',
     },
-  },
-  language: {
-    defaultValue: Languages.Ru,
-    options: [Languages.Ru, Languages.En],
-    control: { type: 'radio' },
   },
 };
 timePicker.parameters = {

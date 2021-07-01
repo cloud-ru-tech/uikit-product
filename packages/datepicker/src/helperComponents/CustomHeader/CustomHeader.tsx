@@ -1,13 +1,12 @@
 import { Button } from '@sbercloud/uikit-react-button';
 import { ChevronLeftInterfaceSVG, ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-react-localization';
 
-import { Languages } from '../../helpers/texts-provider';
 import * as S from './styled';
 
 interface HeaderCustomProps {
-  language: Languages;
+  language: LanguageCodeType;
 }
-
 interface HeaderProps {
   date: Date;
   decreaseMonth(): void;

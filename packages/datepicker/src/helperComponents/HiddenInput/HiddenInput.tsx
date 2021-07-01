@@ -1,4 +1,5 @@
 import { InputAutosize } from '@sbercloud/uikit-react-input';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import isEqual from 'lodash.isequal';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRifm } from 'rifm';
@@ -6,7 +7,6 @@ import { useRifm } from 'rifm';
 import { INPUT_PLACEHOLDER } from '../../helpers/constants';
 import { parseDigits } from '../../helpers/parseDigits';
 import { splitDateFormatter } from '../../helpers/splitDateFormatter';
-import { Languages } from '../../helpers/texts-provider';
 import { TSplitDateType, TimeInputProps } from '../../helpers/types';
 import * as S from './styled';
 
@@ -16,10 +16,10 @@ interface IHiddenInputProps {
   propName?: string;
   minWidth?: number;
   onChange: (date: TSplitDateType) => void;
-  language: Languages;
 }
 
-export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onChange, language }) => {
+export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onChange }) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const [value, setValue] = useState(date[valueProp]);
   const [ref, setRef] = useState<HTMLInputElement | null>();
 

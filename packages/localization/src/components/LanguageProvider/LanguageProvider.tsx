@@ -47,7 +47,7 @@ export const useLanguage = (props?: useLanguageProps) => {
         setCode(LanguageCodeType.enGB);
         return;
       }
-      if (['ru', 'by'].includes(code.split('-')[0])) {
+      if (['ru', 'be'].includes(code.split('-')[0])) {
         setCode(LanguageCodeType.ruRU);
         return;
       }

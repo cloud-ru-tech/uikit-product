@@ -1,15 +1,16 @@
+import { LanguageCodeType } from '@sbercloud/uikit-react-localization';
 import memoize from 'memoizee';
 
 import { INPUT_PLACEHOLDER } from './constants';
-import { AmPmFormat, Languages } from './texts-provider';
+import { AmPmFormat } from './texts-provider';
 import { TSplitDateType } from './types';
 
-const getFormatter = (language: Languages, options?: Intl.DateTimeFormatOptions) =>
+const getFormatter = (language: LanguageCodeType, options?: Intl.DateTimeFormatOptions) =>
   new Intl.DateTimeFormat(language, options);
 
 const mGetFormatter = memoize(getFormatter);
 
-export const getSplitDate = (language: Languages, date?: Date | null): TSplitDateType => {
+export const getSplitDate = (language: LanguageCodeType, date?: Date | null): TSplitDateType => {
   const inputPlaceholder = INPUT_PLACEHOLDER(language);
   if (!date) return inputPlaceholder;
   const dateObj = new Date(date);
@@ -17,9 +18,9 @@ export const getSplitDate = (language: Languages, date?: Date | null): TSplitDat
   if (!isDate) return inputPlaceholder;
 
   return {
-    day: mGetFormatter(language, { day: 'numeric' }).format(dateObj),
+    day: mGetFormatter(language, { day: '2-digit' }).format(dateObj),
     month: mGetFormatter(language, { month: '2-digit' }).format(dateObj),
     year: mGetFormatter(language, { year: 'numeric' }).format(dateObj),
-    time: mGetFormatter(language, { hour12: AmPmFormat[language], hour: 'numeric', minute: 'numeric' }).format(dateObj),
+    time: mGetFormatter(language, { hour12: AmPmFormat[language], hour: '2-digit', minute: '2-digit' }).format(dateObj),
   };
 };

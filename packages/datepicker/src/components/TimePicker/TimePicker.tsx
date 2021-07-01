@@ -1,24 +1,18 @@
 import { ModifierArguments, Obj } from '@popperjs/core';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { useCallback, useMemo, useState } from 'react';
 import RDatePicker, { ReactDatePickerProps } from 'react-datepicker';
 
 import { CustomTimeInput } from '../../helperComponents/CustomTimeInput';
-import { Languages, TimeFormat } from '../../helpers/texts-provider';
+import { TimeFormat } from '../../helpers/texts-provider';
 import * as S from './styled';
 
 export interface TimePickerProps extends ReactDatePickerProps {
   date?: Date | null;
-  language?: Languages;
 }
 
-export const TimePicker: React.FC<TimePickerProps> = ({
-  date,
-  onChange,
-  minTime,
-  maxTime,
-  disabled,
-  language = Languages.Ru,
-}) => {
+export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime, maxTime, disabled }) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const [isOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
   const open = useCallback(() => setOpen(true), []);

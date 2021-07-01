@@ -1,24 +1,21 @@
-export enum Languages {
-  En = 'en-GB',
-  Ru = 'ru-RU',
-}
+import { LanguageCodeType } from '@sbercloud/uikit-react-localization';
 
 export const TimeFormat = {
-  [Languages.En]: 'p',
-  [Languages.Ru]: 'HH:mm',
+  [LanguageCodeType.enGB]: 'p',
+  [LanguageCodeType.ruRU]: 'HH:mm',
 };
 
 export const AmPmFormat = {
-  [Languages.En]: true,
-  [Languages.Ru]: false,
+  [LanguageCodeType.enGB]: true,
+  [LanguageCodeType.ruRU]: false,
 };
 
 export const Separators = {
-  [Languages.Ru]: {
+  [LanguageCodeType.ruRU]: {
     daySeparator: '.',
     timeSeparator: ', ',
   },
-  [Languages.En]: {
+  [LanguageCodeType.enGB]: {
     daySeparator: '/',
     timeSeparator: <>&nbsp;</>,
   },
@@ -32,25 +29,25 @@ interface DateForFormat {
 }
 
 export const DateFormat = {
-  [Languages.Ru]: (date: DateForFormat) => (
+  [LanguageCodeType.ruRU]: (date: DateForFormat) => (
     <>
       {date.day}
-      {Separators[Languages.Ru].daySeparator}
+      {Separators[LanguageCodeType.ruRU].daySeparator}
       {date.month}
-      {Separators[Languages.Ru].daySeparator}
+      {Separators[LanguageCodeType.ruRU].daySeparator}
       {date.year}
-      {(date.time && Separators[Languages.Ru].timeSeparator) || ''}
+      {(date.time && Separators[LanguageCodeType.ruRU].timeSeparator) || ''}
       {date.time || ''}
     </>
   ),
-  [Languages.En]: (date: DateForFormat) => (
+  [LanguageCodeType.enGB]: (date: DateForFormat) => (
     <>
       {date.month}
-      {Separators[Languages.En].daySeparator}
+      {Separators[LanguageCodeType.enGB].daySeparator}
       {date.day}
-      {Separators[Languages.En].daySeparator}
+      {Separators[LanguageCodeType.enGB].daySeparator}
       {date.year}
-      {(date.time && Separators[Languages.En].timeSeparator) || ''}
+      {(date.time && Separators[LanguageCodeType.enGB].timeSeparator) || ''}
       {date.time || ''}
     </>
   ),
@@ -65,8 +62,8 @@ export enum Texts {
   time = 'time',
 }
 
-const Dictionary: Record<Languages, Record<Texts, string>> = {
-  [Languages.Ru]: {
+const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
+  [LanguageCodeType.ruRU]: {
     specifyTime: 'Указать время',
     incorrectDateEntered: 'Введена некорректная дата',
     day: 'дд',
@@ -74,7 +71,7 @@ const Dictionary: Record<Languages, Record<Texts, string>> = {
     year: 'гггг',
     time: 'Время',
   },
-  [Languages.En]: {
+  [LanguageCodeType.enGB]: {
     specifyTime: 'Specify the time',
     incorrectDateEntered: 'Incorrect date entered',
     day: 'dd',
@@ -84,6 +81,6 @@ const Dictionary: Record<Languages, Record<Texts, string>> = {
   },
 };
 
-export function textProvider(language: Languages, entity: Texts): string {
-  return Dictionary[language][entity];
+export function textProvider(language: LanguageCodeType, entity: Texts): string {
+  return Dictionary?.[language]?.[entity] || '';
 }

@@ -4,7 +4,6 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { DatePicker, DatePickerProps } from '../src';
-import { Languages } from '../src/helpers/texts-provider';
 
 export default {
   title: 'Not stable/DatePicker/Date Picker',
@@ -25,11 +24,6 @@ datePicker.argTypes = {
   pickTime: {
     defaultValue: DatePicker.time.None,
     options: [DatePicker.time.None, DatePicker.time.Requier, DatePicker.time.Optional],
-    control: { type: 'radio' },
-  },
-  language: {
-    defaultValue: Languages.Ru,
-    options: [Languages.Ru, Languages.En],
     control: { type: 'radio' },
   },
   value: {

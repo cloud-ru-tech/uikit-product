@@ -1,3 +1,4 @@
+import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-react-localization';
 import enGB from 'date-fns/locale/en-GB';
 import ru from 'date-fns/locale/ru';
 import { useCallback, useMemo, useState } from 'react';
@@ -6,22 +7,21 @@ import RDatePicker, { registerLocale } from 'react-datepicker';
 import { CustomContainer } from '../../helperComponents/CustomContainer';
 import { CustomDateInput } from '../../helperComponents/CustomDateInput';
 import { CustomHeader } from '../../helperComponents/CustomHeader';
-import { Languages } from '../../helpers/texts-provider';
 import { SettingType } from '../../helpers/types';
 import * as S from './styled';
 
-registerLocale(Languages.Ru, ru);
-registerLocale(Languages.En, enGB);
+registerLocale(LanguageCodeType.ruRU, ru);
+registerLocale(LanguageCodeType.enGB, enGB);
 
 export interface DatePickerProps {
   pickTime: SettingType;
   onChange?: (date: Date | null) => void;
   value?: Date | null;
   minDate?: Date;
-  language?: Languages;
 }
 
-export const DatePicker = ({ value, pickTime, onChange, minDate, language = Languages.Ru }: DatePickerProps) => {
+export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerProps) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const [isDatePickerOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
   const open = useCallback(() => setOpen(true), []);
@@ -57,17 +57,11 @@ export const DatePicker = ({ value, pickTime, onChange, minDate, language = Lang
       pickSettings,
       handleChange,
       minDate,
-      language,
     }),
-    [date, setDate, pickSettings, minDate, language],
+    [date, setDate, pickSettings, minDate],
   );
 
-  const memoizedCustomHeader = useCallback(
-    CustomHeader.bind(null, {
-      language,
-    }),
-    [language],
-  );
+  const memoizedCustomHeader = useCallback(CustomHeader.bind(null, { language }), [language]);
 
   return (
     <S.Container>
@@ -81,15 +75,7 @@ export const DatePicker = ({ value, pickTime, onChange, minDate, language = Lang
         shouldCloseOnSelect
         showPopperArrow={false}
         locale={language}
-        customInput={
-          <CustomDateInput
-            date={date}
-            pickSettings={pickSettings}
-            setDate={setDate}
-            minDate={minDate}
-            language={language}
-          />
-        }
+        customInput={<CustomDateInput date={date} pickSettings={pickSettings} setDate={setDate} minDate={minDate} />}
         renderCustomHeader={memoizedCustomHeader}
         calendarContainer={memoizedCustomContainer}
         onCalendarClose={close}

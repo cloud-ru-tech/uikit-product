@@ -1,4 +1,5 @@
 import { Divider } from '@sbercloud/uikit-react-divider';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { Switch } from '@sbercloud/uikit-react-switch';
 import isToday from 'date-fns/isToday';
 import { useCallback, useMemo } from 'react';
@@ -6,7 +7,7 @@ import { ReactDatePickerProps } from 'react-datepicker';
 
 import { DatePickerProps, TimePicker } from '../../components';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';
-import { Languages, Texts, textProvider } from '../../helpers/texts-provider';
+import { Texts, textProvider } from '../../helpers/texts-provider';
 import { PickSettingProps } from '../../helpers/types';
 import * as S from './styled';
 
@@ -16,7 +17,6 @@ export interface ICustomContainerProps extends Partial<ReactDatePickerProps> {
   pickTime?: DatePickerProps['pickTime'];
   pickSettings: PickSettingProps;
   handleChange?: (date: Date | null) => void;
-  language: Languages;
 }
 
 export interface ICustomContainer {
@@ -25,8 +25,9 @@ export interface ICustomContainer {
 }
 
 export const CustomContainer = (customProps: ICustomContainerProps, props: ICustomContainer): React.ReactNode => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const { children, className } = props;
-  const { date, pickSettings, handleChange, minDate, language } = customProps;
+  const { date, pickSettings, handleChange, minDate } = customProps;
   const { pickTimeCheck, setPickTime, isPickTimeOptional, isPickTime } = pickSettings;
 
   const changeStartTime = useCallback((date: Date | null) => {
@@ -51,7 +52,7 @@ export const CustomContainer = (customProps: ICustomContainerProps, props: ICust
       {isPickTime && (
         <>
           <S.Control>
-            <TimePicker disabled={disabled} date={date} onChange={changeStartTime} language={language} {...timeScope} />
+            <TimePicker disabled={disabled} date={date} onChange={changeStartTime} {...timeScope} />
           </S.Control>
           <Divider />
         </>
