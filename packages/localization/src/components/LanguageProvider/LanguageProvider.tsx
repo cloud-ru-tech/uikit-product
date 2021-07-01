@@ -32,8 +32,9 @@ interface useLanguageProps {
   onlyEnabledLanguage?: boolean;
 }
 
-export const useLanguage = ({ onlyEnabledLanguage }: useLanguageProps) => {
+export const useLanguage = (props?: useLanguageProps) => {
   const [code, setCode] = useState(customWindow.sbercloudUIKit?.languageCode || DEFAULT_LANGUAGE);
+  const onlyEnabledLanguage = props?.onlyEnabledLanguage;
 
   useEffect(() => {
     const newCode = customWindow.sbercloudUIKit?.languageCode;
