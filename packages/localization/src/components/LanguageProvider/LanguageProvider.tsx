@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 
 import { LanguageCodeType } from '../../types/general';
 
@@ -6,12 +6,12 @@ interface LanguageProvider {
   languageCode?: LanguageCodeType;
 }
 
-const DEFAULT_LANGUAGE = window.navigator.language;
+const DEFAULT_LANGUAGE = window.navigator.language as LanguageCodeType;
 
 const customWindow: {
-  sbercloudUIKit?: { languageCode?: string };
+  sbercloudUIKit?: { languageCode?: LanguageCodeType };
 } = window as {
-  sbercloudUIKit?: { languageCode?: string };
+  sbercloudUIKit?: { languageCode?: LanguageCodeType };
 };
 
 if (!customWindow.sbercloudUIKit) {
@@ -33,7 +33,7 @@ interface useLanguageProps {
 }
 
 export const useLanguage = (props?: useLanguageProps) => {
-  const [code, setCode] = useState(customWindow.sbercloudUIKit?.languageCode || DEFAULT_LANGUAGE);
+  const [code, setCode] = useState<LanguageCodeType>(customWindow.sbercloudUIKit?.languageCode || DEFAULT_LANGUAGE);
   const onlyEnabledLanguage = props?.onlyEnabledLanguage;
 
   useEffect(() => {
@@ -44,14 +44,14 @@ export const useLanguage = (props?: useLanguageProps) => {
   useEffect(() => {
     if (onlyEnabledLanguage) {
       if (code.split('-')[0] === 'en') {
-        setCode('en-GB');
+        setCode(LanguageCodeType.enGB);
         return;
       }
       if (['ru', 'by'].includes(code.split('-')[0])) {
-        setCode('ru-RU');
+        setCode(LanguageCodeType.ruRU);
         return;
       }
-      setCode('ru-RU');
+      setCode(LanguageCodeType.ruRU);
     }
   }, [code, onlyEnabledLanguage]);
 

@@ -1,225 +1,226 @@
-export type LanguageCodeType =
-  | 'ar-SA'
-  | 'bg-BG'
-  | 'ca-ES'
-  | 'zh-TW'
-  | 'cs-CZ'
-  | 'da-DK'
-  | 'de-DE'
-  | 'el-GR'
-  | 'en-US'
-  | 'es'
-  | 'fi-FI'
-  | 'fr-FR'
-  | 'he-IL'
-  | 'hu-HU'
-  | 'is-IS'
-  | 'it-IT'
-  | 'ja-JP'
-  | 'ko-KR'
-  | 'nl-NL'
-  | 'nb-NO'
-  | 'pl-PL'
-  | 'pt-BR'
-  | 'rm-CH'
-  | 'ro-RO'
-  | 'ru-RU'
-  | 'hr-HR'
-  | 'sk-SK'
-  | 'sq-AL'
-  | 'sv-SE'
-  | 'th-TH'
-  | 'tr-TR'
-  | 'ur-PK'
-  | 'id-ID'
-  | 'uk-UA'
-  | 'be-BY'
-  | 'sl-SI'
-  | 'et-EE'
-  | 'lv-LV'
-  | 'lt-LT'
-  | 'tg-Cyrl-TJ'
-  | 'fa-IR'
-  | 'vi-VN'
-  | 'hy-AM'
-  | 'az-Latn-AZ'
-  | 'eu-ES'
-  | 'hsb-DE'
-  | 'mk-MK'
-  | 'tn-ZA'
-  | 'xh-ZA'
-  | 'zu-ZA'
-  | 'af-ZA'
-  | 'ka-GE'
-  | 'fo-FO'
-  | 'hi-IN'
-  | 'mt-MT'
-  | 'se-NO'
-  | 'ms-MY'
-  | 'kk-KZ'
-  | 'ky-KG'
-  | 'sw-KE'
-  | 'tk-TM'
-  | 'uz-Latn-UZ'
-  | 'tt-RU'
-  | 'bn-IN'
-  | 'pa-IN'
-  | 'gu-IN'
-  | 'or-IN'
-  | 'ta-IN	'
-  | 'te-IN'
-  | 'kn-IN'
-  | 'ml-IN'
-  | 'as-IN'
-  | 'mr-IN'
-  | 'sa-IN'
-  | 'mn-MN'
-  | 'bo-CN'
-  | 'cy-GB'
-  | 'km-KH'
-  | 'lo-LA'
-  | 'chr-Cher-US'
-  | 'iu-Cans-CA'
-  | 'gl-ES'
-  | 'kok-IN'
-  | 'syr-SY'
-  | 'si-LK'
-  | 'am-ET'
-  | 'ne-NP'
-  | 'fy-NL'
-  | 'ps-AF'
-  | 'fil-PH'
-  | 'dv-MV'
-  | 'ha-Latn-NG'
-  | 'yo-NG'
-  | 'quz-BO'
-  | 'nso-ZA'
-  | 'ba-RU'
-  | 'lb-LU'
-  | 'kl-GL'
-  | 'ig-NG'
-  | 'ti-ET'
-  | 'haw-US'
-  | 'ii-CN'
-  | 'arn-CL'
-  | 'moh-CA'
-  | 'br-FR'
-  | 'ug-CN'
-  | 'mi-NZ'
-  | 'oc-FR'
-  | 'co-FR'
-  | 'gsw-FR'
-  | 'sah-RU'
-  | 'qut-GT'
-  | 'rw-RW'
-  | 'wo-SN'
-  | 'prs-AF'
-  | 'gd-GB'
-  | 'ku-Arab-IQ'
-  | 'ar-IQ'
-  | 'ca-ES-valencia'
-  | 'zh-CN'
-  | 'de-CH'
-  | 'en-GB'
-  | 'es-MX'
-  | 'fr-BE'
-  | 'it-CH'
-  | 'nl-BE'
-  | 'nn-NO'
-  | 'pt-PT'
-  | 'ru-MO'
-  | 'sr-Latn-CS'
-  | 'sv-FI'
-  | 'az-Cyrl-AZ'
-  | 'dsb-DE'
-  | 'tn-BW'
-  | 'se-SE'
-  | 'ga-IE'
-  | 'ms-BN'
-  | 'uz-Cyrl-UZ'
-  | 'bn-BD'
-  | 'pa-Arab-PK'
-  | 'ta-LK'
-  | 'mn-Mong-CN'
-  | 'sd-Arab-PK'
-  | 'iu-Latn-CA'
-  | 'tzm-Latn-DZ'
-  | 'ff-Latn-SN'
-  | 'quz-EC'
-  | 'ti-ER'
-  | 'ar-EG'
-  | 'zh-HK'
-  | 'de-AT'
-  | 'en-AU'
-  | 'es-ES'
-  | 'fr-CA'
-  | 'sr-Cyrl-CS'
-  | 'se-FI'
-  | 'quz-PE'
-  | 'ar-LY'
-  | 'zh-SG'
-  | 'de-LU'
-  | 'en-CA'
-  | 'es-GT'
-  | 'fr-CH'
-  | 'hr-BA'
-  | 'smj-NO'
-  | 'tzm-Tfng-MA'
-  | 'ar-DZ'
-  | 'zh-MO'
-  | 'de-LI'
-  | 'en-NZ'
-  | 'es-CR'
-  | 'fr-LU'
-  | 'bs-Latn-BA'
-  | 'smj-SE'
-  | 'ar-MA'
-  | 'en-IE'
-  | 'es-PA'
-  | 'fr-MC'
-  | 'sr-SP-Cyrl'
-  | 'sma-NO'
-  | 'ar-TN'
-  | 'en-ZA'
-  | 'es-DO'
-  | 'sr-Cyrl-BA'
-  | 'sma-SE'
-  | 'ar-OM'
-  | 'en-JM'
-  | 'es-VE'
-  | 'bs-Cyrl-BA'
-  | 'sms-FI'
-  | 'ar-YE'
-  | 'en-029'
-  | 'es-CO'
-  | 'sr-Latn-RS'
-  | 'smn-FI'
-  | 'ar-SY'
-  | 'en-BZ'
-  | 'es-PE'
-  | 'sr-Cyrl-RS'
-  | 'ar-JO'
-  | 'en-TT'
-  | 'es-AR'
-  | 'sr-Latn-ME'
-  | 'ar-LB'
-  | 'en-ZW'
-  | 'es-EC'
-  | 'sr-Cyrl-ME'
-  | 'ar-KW'
-  | 'en-PH'
-  | 'es-CL'
-  | 'ar-AE'
-  | 'es-UY'
-  | 'ar-BH'
-  | 'es-PY'
-  | 'ar-QA'
-  | 'en-IN'
-  | 'es-BO'
-  | 'en-MY'
-  | 'es-SV'
-  | 'en-SG'
-  | 'es-HN'
-  | 'es-NI'
-  | 'es-PR'
-  | 'es-US';
+export enum LanguageCodeType {
+  arSA = 'ar-SA',
+  bgBG = 'bg-BG',
+  caES = 'ca-ES',
+  zhTW = 'zh-TW',
+  csCZ = 'cs-CZ',
+  daDK = 'da-DK',
+  deDE = 'de-DE',
+  elGR = 'el-GR',
+  enUS = 'en-US',
+  es = 'es',
+  fiFI = 'fi-FI',
+  frFR = 'fr-FR',
+  heIL = 'he-IL',
+  huHU = 'hu-HU',
+  isIS = 'is-IS',
+  itIT = 'it-IT',
+  jaJP = 'ja-JP',
+  koKR = 'ko-KR',
+  nlNL = 'nl-NL',
+  nbNO = 'nb-NO',
+  plPL = 'pl-PL',
+  ptBR = 'pt-BR',
+  rmCH = 'rm-CH',
+  roRO = 'ro-RO',
+  ruRU = 'ru-RU',
+  hrHR = 'hr-HR',
+  skSK = 'sk-SK',
+  sqAL = 'sq-AL',
+  svSE = 'sv-SE',
+  thTH = 'th-TH',
+  trTR = 'tr-TR',
+  urPK = 'ur-PK',
+  idID = 'id-ID',
+  ukUA = 'uk-UA',
+  beBY = 'be-BY',
+  slSI = 'sl-SI',
+  etEE = 'et-EE',
+  lvLV = 'lv-LV',
+  ltLT = 'lt-LT',
+  tgCyrlTJ = 'tg-Cyrl-TJ',
+  faIR = 'fa-IR',
+  viVN = 'vi-VN',
+  hyAM = 'hy-AM',
+  azLatnAZ = 'az-Latn-AZ',
+  euES = 'eu-ES',
+  hsbDE = 'hsb-DE',
+  mkMK = 'mk-MK',
+  tnZA = 'tn-ZA',
+  xhZA = 'xh-ZA',
+  zuZA = 'zu-ZA',
+  afZA = 'af-ZA',
+  kaGE = 'ka-GE',
+  foFO = 'fo-FO',
+  hiIN = 'hi-IN',
+  mtMT = 'mt-MT',
+  seNO = 'se-NO',
+  msMY = 'ms-MY',
+  kkKZ = 'kk-KZ',
+  kyKG = 'ky-KG',
+  swKE = 'sw-KE',
+  tkTM = 'tk-TM',
+  uzLatnUZ = 'uz-Latn-UZ',
+  ttRU = 'tt-RU',
+  bnIN = 'bn-IN',
+  paIN = 'pa-IN',
+  guIN = 'gu-IN',
+  orIN = 'or-IN',
+  taIN = 'ta-IN',
+  teIN = 'te-IN',
+  knIN = 'kn-IN',
+  mlIN = 'ml-IN',
+  asIN = 'as-IN',
+  mrIN = 'mr-IN',
+  saIN = 'sa-IN',
+  mnMN = 'mn-MN',
+  boCN = 'bo-CN',
+  cyGB = 'cy-GB',
+  kmKH = 'km-KH',
+  loLA = 'lo-LA',
+  chrCherUS = 'chr-Cher-US',
+  iuCansCA = 'iu-Cans-CA',
+  glES = 'gl-ES',
+  kokIN = 'kok-IN',
+  syrSY = 'syr-SY',
+  siLK = 'si-LK',
+  amET = 'am-ET',
+  neNP = 'ne-NP',
+  fyNL = 'fy-NL',
+  psAF = 'ps-AF',
+  filPH = 'fil-PH',
+  dvMV = 'dv-MV',
+  haLatnNG = 'ha-Latn-NG',
+  yoNG = 'yo-NG',
+  quzBO = 'quz-BO',
+  nsoZA = 'nso-ZA',
+  baRU = 'ba-RU',
+  lbLU = 'lb-LU',
+  klGL = 'kl-GL',
+  igNG = 'ig-NG',
+  tiET = 'ti-ET',
+  hawUS = 'haw-US',
+  iiCN = 'ii-CN',
+  arnCL = 'arn-CL',
+  mohCA = 'moh-CA',
+  brFR = 'br-FR',
+  ugCN = 'ug-CN',
+  miNZ = 'mi-NZ',
+  ocFR = 'oc-FR',
+  coFR = 'co-FR',
+  gswFR = 'gsw-FR',
+  sahRU = 'sah-RU',
+  qutGT = 'qut-GT',
+  rwRW = 'rw-RW',
+  woSN = 'wo-SN',
+  prsAF = 'prs-AF',
+  gdGB = 'gd-GB',
+  kuArabIQ = 'ku-Arab-IQ',
+  arIQ = 'ar-IQ',
+  caESvalencia = 'ca-ES-valencia',
+  zhCN = 'zh-CN',
+  deCH = 'de-CH',
+  enGB = 'en-GB',
+  esMX = 'es-MX',
+  frBE = 'fr-BE',
+  itCH = 'it-CH',
+  nlBE = 'nl-BE',
+  nnNO = 'nn-NO',
+  ptPT = 'pt-PT',
+  ruMO = 'ru-MO',
+  srLatnCS = 'sr-Latn-CS',
+  svFI = 'sv-FI',
+  azCyrlAZ = 'az-Cyrl-AZ',
+  dsbDE = 'dsb-DE',
+  tnBW = 'tn-BW',
+  seSE = 'se-SE',
+  gaIE = 'ga-IE',
+  msBN = 'ms-BN',
+  uzCyrlUZ = 'uz-Cyrl-UZ',
+  bnBD = 'bn-BD',
+  paArabPK = 'pa-Arab-PK',
+  taLK = 'ta-LK',
+  mnMongCN = 'mn-Mong-CN',
+  sdArabPK = 'sd-Arab-PK',
+  iuLatnCA = 'iu-Latn-CA',
+  tzmLatnDZ = 'tzm-Latn-DZ',
+  ffLatnSN = 'ff-Latn-SN',
+  quzEC = 'quz-EC',
+  tiER = 'ti-ER',
+  arEG = 'ar-EG',
+  zhHK = 'zh-HK',
+  deAT = 'de-AT',
+  enAU = 'en-AU',
+  esES = 'es-ES',
+  frCA = 'fr-CA',
+  srCyrlCS = 'sr-Cyrl-CS',
+  seFI = 'se-FI',
+  quzPE = 'quz-PE',
+  arLY = 'ar-LY',
+  zhSG = 'zh-SG',
+  deLU = 'de-LU',
+  enCA = 'en-CA',
+  esGT = 'es-GT',
+  frCH = 'fr-CH',
+  hrBA = 'hr-BA',
+  smjNO = 'smj-NO',
+  tzmTfngMA = 'tzm-Tfng-MA',
+  arDZ = 'ar-DZ',
+  zhMO = 'zh-MO',
+  deLI = 'de-LI',
+  enNZ = 'en-NZ',
+  esCR = 'es-CR',
+  frLU = 'fr-LU',
+  bsLatnBA = 'bs-Latn-BA',
+  smjSE = 'smj-SE',
+  arMA = 'ar-MA',
+  enIE = 'en-IE',
+  esPA = 'es-PA',
+  frMC = 'fr-MC',
+  srSPCyrl = 'sr-SP-Cyrl',
+  smaNO = 'sma-NO',
+  arTN = 'ar-TN',
+  enZA = 'en-ZA',
+  esDO = 'es-DO',
+  srCyrlBA = 'sr-Cyrl-BA',
+  smaSE = 'sma-SE',
+  arOM = 'ar-OM',
+  enJM = 'en-JM',
+  esVE = 'es-VE',
+  bsCyrlBA = 'bs-Cyrl-BA',
+  smsFI = 'sms-FI',
+  arYE = 'ar-YE',
+  en029 = 'en-029',
+  esCO = 'es-CO',
+  srLatnRS = 'sr-Latn-RS',
+  smnFI = 'smn-FI',
+  arSY = 'ar-SY',
+  enBZ = 'en-BZ',
+  esPE = 'es-PE',
+  srCyrlRS = 'sr-Cyrl-RS',
+  arJO = 'ar-JO',
+  enTT = 'en-TT',
+  esAR = 'es-AR',
+  srLatnME = 'sr-Latn-ME',
+  arLB = 'ar-LB',
+  enZW = 'en-ZW',
+  esEC = 'es-EC',
+  srCyrlME = 'sr-Cyrl-ME',
+  arKW = 'ar-KW',
+  enPH = 'en-PH',
+  esCL = 'es-CL',
+  arAE = 'ar-AE',
+  esUY = 'es-UY',
+  arBH = 'ar-BH',
+  esPY = 'es-PY',
+  arQA = 'ar-QA',
+  enIN = 'en-IN',
+  esBO = 'es-BO',
+  enMY = 'en-MY',
+  esSV = 'es-SV',
+  enSG = 'en-SG',
+  esHN = 'es-HN',
+  esNI = 'es-NI',
+  esPR = 'es-PR',
+  esUS = 'es-US',
+}
