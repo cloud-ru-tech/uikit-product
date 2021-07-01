@@ -1,7 +1,8 @@
 import { ArrowDownSVG } from '@sbercloud/icons';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { FC, useCallback } from 'react';
 
-import { DictionaryPropertyAsFn, Languages, Texts, textProvider } from '../../../helpers/texts-provider';
+import { DictionaryPropertyAsFn, Texts, textProvider } from '../../../helpers/texts-provider';
 import { StyledContainer, iconClass } from './styled';
 
 export interface IValueContainerProps {
@@ -11,7 +12,6 @@ export interface IValueContainerProps {
   disabled?: boolean;
   open: boolean;
   setOpen: (open: boolean) => void;
-  language: Languages;
 }
 
 export const ValueContainer: FC<IValueContainerProps> = ({
@@ -21,8 +21,8 @@ export const ValueContainer: FC<IValueContainerProps> = ({
   placeholder,
   valueFormatter,
   disabled = false,
-  language,
 }) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const getVal = useCallback(() => {
     if (!value || !value.length) {
       return placeholder || textProvider<string>(language, Texts.selectValue);

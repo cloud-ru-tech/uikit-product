@@ -1,9 +1,10 @@
 import { Avatar, AvatarProps } from '@sbercloud/uikit-react-avatar';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
 import { FC, useEffect, useMemo, useState } from 'react';
 
-import { Languages, Texts, textProvider } from '../../../helpers/texts-provider';
+import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { StyledContainer, selectClassname } from './styled';
 
 export interface IOptionType extends DataNode {
@@ -35,7 +36,6 @@ export interface IUsersByGroupProps extends Partial<TreeProps> {
   filter?: (treeNode: EventDataNode) => boolean;
   onChange?: (checked: { checked: React.ReactText[] | CheckedType; halfChecked?: React.ReactText[] }) => void;
   isFiltered: boolean;
-  language: Languages;
 }
 
 export type CheckedType = {
@@ -51,9 +51,9 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
   onChange,
   checkedKeys,
   isFiltered,
-  language,
   ...treeProps
 }) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const [stateOptions, setStateOptions] = useState<IOptionType[]>();
   const [checked, setChecked] = useState<CheckedType>();
 

@@ -9,10 +9,9 @@ import componentReadme from '../README.md';
 import { CheckedType, UsersByGroupSelect } from '../src';
 import { IOptionType } from '../src/helperComponents/InlineTreeSelect';
 import { treeOptions } from '../src/helpers/mockData';
-import { Languages } from '../src/helpers/texts-provider';
 
 export default {
-  title: 'Not stable/Select/Inline Tree Select',
+  title: 'Not stable/Select/Users By Group Select',
   component: UsersByGroupSelect,
 } as Meta;
 
@@ -78,15 +77,9 @@ const Template: Story = (args): JSX.Element => {
   );
 };
 
-export const inlineTreeSelect = Template.bind({});
-inlineTreeSelect.argTypes = {
-  language: {
-    defaultValue: Languages.Ru,
-    options: [Languages.Ru, Languages.En],
-    control: { type: 'radio' },
-  },
-};
-inlineTreeSelect.parameters = {
+export const usersByGroupSelect = Template.bind({});
+usersByGroupSelect.argTypes = {};
+usersByGroupSelect.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

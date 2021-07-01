@@ -1,11 +1,12 @@
 import { styled } from '@linaria/react';
 import { Divider } from '@sbercloud/uikit-react-divider';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import isEqual from 'lodash.isequal';
 import { FC, useCallback, useEffect, useState } from 'react';
 
 import { IOptionType, IUsersByGroupProps, UsersByGroup, ValueContainer } from '../../helperComponents/InlineTreeSelect';
 import { InputSearch } from '../../helperComponents/Shared/InputSearch';
-import { DictionaryPropertyAsFn, Languages, Texts, textProvider } from '../../helpers/texts-provider';
+import { DictionaryPropertyAsFn, Texts, textProvider } from '../../helpers/texts-provider';
 
 const Content = styled.div`
   background: #ffffff;
@@ -27,7 +28,6 @@ export interface IInlineTreeSelectProps {
   onChange?: (checked: CheckedType | undefined) => void;
   valueFormatter?: (value?: React.ReactText[]) => string | React.ReactNode;
   disabled: boolean;
-  language: Languages;
 }
 
 export type ChildrenProps = {
@@ -43,7 +43,6 @@ export const InlineTreeSelect: FC<IInlineTreeSelectProps> = ({
   onChange,
   valueFormatter,
   disabled,
-  language,
 }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [stateValue, setStateValue] = useState<CheckedType | undefined>();
@@ -72,7 +71,6 @@ export const InlineTreeSelect: FC<IInlineTreeSelectProps> = ({
   return (
     <>
       <ValueContainer
-        language={language}
         value={stateValue?.checked as React.ReactText[]}
         valueFormatter={valueFormatter}
         open={open}
@@ -81,7 +79,7 @@ export const InlineTreeSelect: FC<IInlineTreeSelectProps> = ({
       />
       {open && (
         <Content>
-          <InputSearch language={language} value={search} onChange={setSearch} />
+          <InputSearch value={search} onChange={setSearch} />
           <Divider style={{ margin: 0 }} />
           {typeof children === 'function'
             ? children({
@@ -106,7 +104,6 @@ export interface IUsersByGroupSelectProps {
   searchProps?: React.ReactText[];
   onChange?: (checked: CheckedType | undefined) => void;
   disabled?: boolean;
-  language?: Languages;
 }
 
 const lCase = (str: string): string => str.toLowerCase();
@@ -118,8 +115,8 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
   onChange,
   searchProps = ['title'],
   disabled = false,
-  language = Languages.Ru,
 }) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const [groupKeys, setGroupsKeys] = useState<React.ReactText[]>();
   useEffect(() => {
     const keys = options.map(option => option.key);
@@ -145,7 +142,6 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
 
   return (
     <InlineTreeSelect
-      language={language}
       value={value}
       defaultValue={defaultValue}
       options={options}
@@ -157,7 +153,6 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
     >
       {({ search, handleChange, keys }: ChildrenProps): React.ReactNode => (
         <UsersByGroup
-          language={language}
           isFiltered={Boolean(search)}
           options={options}
           checkedKeys={keys}

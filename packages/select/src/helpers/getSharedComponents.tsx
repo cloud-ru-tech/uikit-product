@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 import { ArrowDownSVG, CrossSVG } from '@sbercloud/icons';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { useMemo } from 'react';
 import { components as ReactSelectComponents, SelectComponentsConfig } from 'react-select';
 
@@ -29,9 +30,7 @@ const MultiValueRemove = (props: React.ComponentProps<typeof ReactSelectComponen
 );
 
 const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponents.NoOptionsMessage>): JSX.Element => {
-  const {
-    selectProps: { language },
-  } = props;
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const noDataText = useMemo(() => textProvider<string>(language, Texts.noData), [language]);
   return <ReactSelectComponents.NoOptionsMessage {...props}>{noDataText}</ReactSelectComponents.NoOptionsMessage>;
 };

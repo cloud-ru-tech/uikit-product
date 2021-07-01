@@ -1,3 +1,4 @@
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { useRef, useState } from 'react';
 import RCSelect, { ValueType } from 'react-select';
@@ -5,7 +6,7 @@ import RCSelect, { ValueType } from 'react-select';
 import { PresetColorType } from '../../constants';
 import * as TagComponents from '../../helperComponents/TagSelect';
 import getSelectorStyles from '../../helpers/getSelectStyles';
-import { DictionaryPropertyAsFn, Languages, Texts, textProvider } from '../../helpers/texts-provider';
+import { DictionaryPropertyAsFn, Texts, textProvider } from '../../helpers/texts-provider';
 
 export type OptionTypeTag = {
   value: string;
@@ -33,7 +34,6 @@ export interface ITagSelect extends Omit<RCProps, 'components'> {
   editableTagName?: boolean;
   validator?: (tagName: string) => boolean;
   validateMessage?: string;
-  language?: Languages;
 }
 
 type ApproveDeleteType = { tag: OptionTypeTag; callbackDelete: () => void };
@@ -52,8 +52,8 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
     editableTagName = true,
     validator,
     validateMessage,
-    language = Languages.Ru,
   } = props;
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const containerRef = useRef<HTMLDivElement>();
   const [inputValue, setInputSearch] = useState('');
   const [isOpen, setIsOpen] = useState(false);

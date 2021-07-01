@@ -1,3 +1,4 @@
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import RCSelect, {
   OptionTypeBase as RCOptionTypeBase,
@@ -8,7 +9,7 @@ import RCSelect, {
 
 import getSelectorStyles from '../../helpers/getSelectStyles';
 import getCustomComponents from '../../helpers/getSharedComponents';
-import { Languages, Texts, textProvider } from '../../helpers/texts-provider';
+import { Texts, textProvider } from '../../helpers/texts-provider';
 import { SelectType } from '../../helpers/types';
 
 export { default as RCSelect } from 'react-select';
@@ -41,7 +42,6 @@ export interface ISelectProps<CustomOptionType> extends Omit<RCProps, 'component
   footer?: React.ReactNode;
   customRef?: (instance: RCSelect<CustomOptionType> | null) => void;
   collapsedGroup?: boolean;
-  language?: Languages;
 }
 
 export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectProps<CustomOptionType>): JSX.Element => {
@@ -62,9 +62,9 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
     prefixMultiValueContainer,
     collapsedGroup,
     placeholder,
-    language = Languages.Ru,
   } = props;
 
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const [stateOptions, setOptions] = useState<CustomOptionType[]>();
   const [inputValue, setInputSearch] = useState<string>();
   const [isOpen, setIsOpen] = useState(false);
@@ -170,7 +170,6 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
     <div className={className} ref={selectRef}>
       <RCSelect<CustomOptionType>
         {...props}
-        language={language}
         placeholder={placeholder || textProvider<string>(language, Texts.selectPlaceholder)}
         onMenuClose={onMenuClose}
         ref={(instance): void => {

@@ -1,9 +1,6 @@
-import declination from './declination';
+import { LanguageCodeType } from '@sbercloud/uikit-react-localization';
 
-export enum Languages {
-  En = 'en-GB',
-  Ru = 'ru-RU',
-}
+import declination from './declination';
 
 export enum Texts {
   noData = 'noData',
@@ -21,8 +18,8 @@ export enum Texts {
 export type DictionaryPropertyAsFn = (params: Record<string, string | number>) => string;
 type DictionaryProperty = DictionaryPropertyAsFn | string;
 
-const Dictionary: Record<Languages, Record<Texts, DictionaryProperty>> = {
-  [Languages.Ru]: {
+const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryProperty>>> = {
+  [LanguageCodeType.ruRU]: {
     noData: 'Нет данных',
     searchPlaceholder: 'Поиск',
     selectPlaceholder: 'Выберите',
@@ -38,7 +35,7 @@ const Dictionary: Record<Languages, Record<Texts, DictionaryProperty>> = {
     ]),
     search: 'Поиск',
   },
-  [Languages.En]: {
+  [LanguageCodeType.enGB]: {
     noData: 'No data',
     searchPlaceholder: 'Search',
     selectPlaceholder: 'Select',
@@ -56,6 +53,6 @@ const Dictionary: Record<Languages, Record<Texts, DictionaryProperty>> = {
   },
 };
 
-export function textProvider<T extends DictionaryProperty>(language: Languages, entity: Texts): T {
-  return Dictionary[language][entity] as T;
+export function textProvider<T extends DictionaryProperty>(language: LanguageCodeType, entity: Texts): T {
+  return (Dictionary?.[language]?.[entity] || '') as T;
 }

@@ -22,7 +22,7 @@ export const CustomMenu = (props: React.ComponentProps<typeof ReactSelectCompone
     className,
     cx,
     getStyles,
-    selectProps: { isSearchableCustom, searchValue, onSearch, footer, language },
+    selectProps: { isSearchableCustom, searchValue, onSearch, footer },
   } = props;
 
   useEffect(() => {
@@ -36,7 +36,6 @@ export const CustomMenu = (props: React.ComponentProps<typeof ReactSelectCompone
     <div style={{ ...getStyles('menu', props), overflow: 'hidden' }} className={cx({ menu: true }, className)}>
       {isSearchableCustom && (
         <StyledInputSearch
-          language={language}
           getInstance={setInputRef}
           value={searchValue}
           onChange={onSearch}

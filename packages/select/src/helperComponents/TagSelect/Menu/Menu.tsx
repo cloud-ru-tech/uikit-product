@@ -10,7 +10,7 @@ export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Me
     className,
     cx,
     getStyles,
-    selectProps: { inputValue: search, onSearch, dropdownPlacement, language },
+    selectProps: { inputValue: search, onSearch, dropdownPlacement },
   } = props;
 
   const dropdownStyles = useMemo(
@@ -33,7 +33,6 @@ export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Me
       className={cx({ menu: true }, className)}
     >
       <StyledSearchInput
-        language={language}
         getInstance={getInstance}
         value={search}
         onChange={onSearch}

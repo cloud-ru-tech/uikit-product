@@ -1,17 +1,18 @@
 import { CrossSVG, SearchSVG } from '@sbercloud/icons';
 import { Input, InputProps } from '@sbercloud/uikit-react-input';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { useEffect, useState } from 'react';
 
-import { Languages, Texts, textProvider } from '../../../helpers/texts-provider';
+import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { crossIconClassName, searchIconClassname } from './styled';
 
 export interface IInputSearchProps extends Omit<InputProps, 'onChange'> {
   value?: string;
   onChange?: (search?: string) => void;
-  language: Languages;
 }
 
-export const InputSearch: React.FC<IInputSearchProps> = ({ onChange, value, getInstance, language, ...inputProps }) => {
+export const InputSearch: React.FC<IInputSearchProps> = ({ onChange, value, getInstance, ...inputProps }) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const [search, setSearch] = useState<string | undefined>(value);
   useEffect(() => {
     if (search === value) return;
