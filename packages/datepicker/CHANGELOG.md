@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.1.8&sourceBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.2.0) (2021-07-01)
+
+
+### Bug Fixes
+
+* use useLanguage ([5b8a3f4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/5b8a3f42dc982dafc3eb289f00e4e1ae19fbd47c))
+
+
+### Features
+
+* add l10n & i18n | [AICDC-2860](https://jira.sbercloud.tech/browse/AICDC-2860) ([a3c3721](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/a3c372174ccb7917265cacb880de853933e2d603))
+* add lacale to storybook preview ([db6b3c8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/db6b3c8e4ddadfb5368da13007d7ff40dd94f548))
+
+
+
+
+
 ## [0.1.8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.1.7&sourceBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.1.8) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-datepicker

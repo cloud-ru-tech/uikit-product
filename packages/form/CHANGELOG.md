@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.25](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.24&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.25) (2021-07-01)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-form
+
+
+
+
+
 ## [0.4.24](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.23&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.24) (2021-06-29)
 
 

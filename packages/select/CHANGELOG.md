@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.8.2&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.9.0) (2021-07-01)
+
+
+### Bug Fixes
+
+* filtered users ([19d1380](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/19d13808c3c80f6dc058b5f04d3c12c0010db597))
+* use useLanguage ([7d82247](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/7d8224763a2cca763b2c675037740f13abd0bc84))
+* use useLanguage ([5b8a3f4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/5b8a3f42dc982dafc3eb289f00e4e1ae19fbd47c))
+
+
+### Features
+
+* add lacale to storybook preview ([db6b3c8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/db6b3c8e4ddadfb5368da13007d7ff40dd94f548))
+* add language prop | [AICDC-2860](https://jira.sbercloud.tech/browse/AICDC-2860) ([a18abdd](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/a18abdd6c18f931e053c36b55641502c39ab348e))
+
+
+
+
+
 ## [0.8.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.8.1&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.8.2) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
