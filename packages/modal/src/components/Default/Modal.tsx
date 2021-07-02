@@ -1,8 +1,11 @@
 import { CrossSVG } from '@sbercloud/icons';
 import { Button, IconButton } from '@sbercloud/uikit-react-button';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
+import { useMemo } from 'react';
 import RCModal from 'react-modal';
 
+import { Texts, textProvider } from '../../helpers/texts-provider';
 import {
   ButtonWrapper,
   Description,
@@ -89,6 +92,11 @@ export const Modal: React.FC<ModalProps> = props => {
     parentSelector,
   } = props;
 
+  const language = useLanguage({ onlyEnabledLanguage: true });
+
+  const approveBtnText = useMemo(() => approveText || textProvider(language, Texts.approve), [approveText, language]);
+  const cancelBtnText = useMemo(() => cancelText || textProvider(language, Texts.cancel), [cancelText, language]);
+
   if (appElement) {
     RCModal.setAppElement(appElement as HTMLElement);
   }
@@ -134,7 +142,7 @@ export const Modal: React.FC<ModalProps> = props => {
                     onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
                   }}
                 >
-                  {approveText || 'Подтвердить'}
+                  {approveBtnText}
                 </Button>
               </BasicTooltip>
             ) : (
@@ -146,7 +154,7 @@ export const Modal: React.FC<ModalProps> = props => {
                   onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
                 }}
               >
-                {approveText || 'Подтвердить'}
+                {approveBtnText}
               </Button>
             ))}
           {cancel && (
@@ -158,7 +166,7 @@ export const Modal: React.FC<ModalProps> = props => {
                 onRequestClose?.(e, MODAL_CLOSE_TYPE.CANCEL);
               }}
             >
-              {cancelText || 'Отмена'}
+              {cancelBtnText}
             </Button>
           )}
         </ButtonWrapper>

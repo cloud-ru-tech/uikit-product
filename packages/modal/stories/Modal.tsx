@@ -45,9 +45,11 @@ modal.argTypes = {
     defaultValue:
       'Вы действительно хотите удалить тег «ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7»?',
   },
-  approveText: { defaultValue: 'Approve' },
   shouldCloseOnOverlayClick: { defaultValue: false },
   shouldCloseOnEsc: { defaultValue: false },
+  cancel: {
+    defaultValue: () => {},
+  },
 };
 modal.parameters = {
   readme: {
