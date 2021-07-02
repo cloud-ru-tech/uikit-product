@@ -1,7 +1,8 @@
-import { FC, useState } from 'react';
-
 import { Button } from '@sbercloud/uikit-react-button';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useMemo, useState } from 'react';
 
+import { Texts, textProvider } from '../helpers/texts-provider';
 import { ContentHiderStyled, ContentWrapperGradientStyled, ContentWrapperStyled } from './styled';
 
 export type ContentHiderProps = {
@@ -12,15 +13,19 @@ export type ContentHiderProps = {
   gradientClassName?: string;
 };
 
-export const ContentHider: FC<ContentHiderProps> = ({
+export const ContentHider: React.FC<ContentHiderProps> = ({
   children,
   backgroundColor,
   gradientClassName,
   displayedHeight = 500,
-  hideContentText = 'Свернуть',
-  showContentText = 'Читать полностью',
+  hideContentText,
+  showContentText,
 }) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const [showContent, setShowContent] = useState(false);
+
+  const hideText = useMemo(() => hideContentText || textProvider(language, Texts.hide), [language, hideContentText]);
+  const showText = useMemo(() => showContentText || textProvider(language, Texts.show), [language, showContentText]);
 
   return (
     <div>
@@ -37,7 +42,7 @@ export const ContentHider: FC<ContentHiderProps> = ({
         variant={Button.variants.Outlined}
         onClick={() => setShowContent(showContent => !showContent)}
       >
-        {showContent ? hideContentText : showContentText}
+        {showContent ? hideText : showText}
       </Button>
     </div>
   );
