@@ -25,6 +25,7 @@
     "@sbercloud/icons": "1.0.15-14c9f91b",
     "@sbercloud/uikit-react-divider": "0.2.16",
     "@sbercloud/uikit-react-input": "0.6.4",
+    "@sbercloud/uikit-react-localization": "0.5.0",
     "@sbercloud/uikit-react-select": "0.9.0",
     "@sbercloud/uikit-react-tooltip": "0.1.17",
     "@sbercloud/uikit-theme": "0.15.0",
@@ -37,7 +38,6 @@
     "lodash.lte": "3.9.2"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-toolbar": "0.3.22",
     "@types/lodash.clonedeep": "4.5.6",
     "@types/lodash.eq": "4.0.6",
     "@types/lodash.gt": "3.9.6",

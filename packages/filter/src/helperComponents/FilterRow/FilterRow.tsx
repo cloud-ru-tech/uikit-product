@@ -1,12 +1,12 @@
+import { CrossSVG } from '@sbercloud/icons';
+import { Input } from '@sbercloud/uikit-react-input';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
 import cloneDeep from 'lodash.clonedeep';
 import { useCallback, useMemo } from 'react';
 
-import { CrossSVG } from '@sbercloud/icons';
-import { Input } from '@sbercloud/uikit-react-input';
-import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
-
 import { findSelectValue } from '../../helpers/getValue';
-import { LogicConditionType, logicOptionByValue, logicOptions } from '../../helpers/logicOptions';
+import { LogicConditionType, getLogicOptionByValue, logicOptions } from '../../helpers/logicOptions';
 import { IFilterRowProps, TFilterValueType } from '../../helpers/types';
 import { ActionButton } from '../ActionButton';
 import * as S from './styled';
@@ -19,6 +19,7 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
   noFilteredProps = [],
   onChange,
 }) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const handleChange = useCallback(
     (propName: string, val: unknown) => {
       const nextValue = cloneDeep(value);
@@ -29,27 +30,25 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
     },
     [value],
   );
+  const logicOptionsList = useMemo(() => logicOptions(language), [language]);
+  const logicOptionByValue = useMemo(() => getLogicOptionByValue(language), [language]);
 
   const filterOption = useMemo(() => filterOptions?.find(fOpt => fOpt.value === propValue.id), [filterOptions]);
-
-  // console.log('filterOptions: ', filterOptions);
-  // console.log('propValue: ', propValue);
 
   const initValueOption = useMemo(() => {
     const { value } = propValue;
     const filterVal = filterOptions?.find(option => option.value === propValue.id);
-    // console.log('filterVal: ', filterVal);
     return filterVal?.sourceData ? findSelectValue(filterVal?.sourceData, value as string[]) : propValue?.value?.[0];
   }, [propValue, filterOptions]);
 
   const includedLogicOptions = useMemo(
     () =>
       filterOption?.includeConditions
-        ? logicOptions.filter(
+        ? logicOptionsList.filter(
             lOption => filterOption?.includeConditions.indexOf(lOption.value as LogicConditionType) !== -1,
           )
-        : logicOptions,
-    [filterOption],
+        : logicOptionsList,
+    [filterOption, logicOptionsList],
   );
 
   return (
@@ -66,7 +65,7 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
             const { sourceData, includeConditions } = filterProp;
 
             const nextSourceValue = sourceData ? [sourceData[0].value] : [''];
-            const condition = includeConditions ? includeConditions[0] : logicOptions[0];
+            const condition = includeConditions ? includeConditions[0] : logicOptionsList[0];
             if (!newId) return;
 
             const newValue: TFilterValueType = {

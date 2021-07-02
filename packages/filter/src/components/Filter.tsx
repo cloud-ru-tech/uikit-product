@@ -1,8 +1,8 @@
-import { useCallback, useEffect, useState } from 'react';
-
 import { AddSVG, CrossSVG } from '@sbercloud/icons';
 import { Divider } from '@sbercloud/uikit-react-divider';
+import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { OptionTypeBase } from '@sbercloud/uikit-react-select';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { ActionButton } from '../helperComponents/ActionButton';
 import { Container } from '../helperComponents/Container';
@@ -11,15 +11,18 @@ import * as errors from '../helpers/errors';
 import { getFirstValueFromSelect } from '../helpers/getValue';
 import { logicOptions } from '../helpers/logicOptions';
 import { parseQuery } from '../helpers/parseQuery';
+import { Texts, textProvider } from '../helpers/texts-provider';
 import { IFilterProps, TFilterValueType } from '../helpers/types';
 import * as S from './styled';
 
 export type { TFilterValueType, IFilterProps };
 
 export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [], onChange, children, className }) => {
+  const language = useLanguage({ onlyEnabledLanguage: true });
   const [isMoreFilter, setIsMoreFilter] = useState<boolean>();
   const [noFilteredProps, setNoFilteredProps] = useState<OptionTypeBase[]>();
   const [parsedValue, setParsedValue] = useState<TFilterValueType[]>([]);
+  const logicOptionsList = useMemo(() => logicOptions(language), [language]);
 
   useEffect(() => {
     if (!value) return;
@@ -71,7 +74,7 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
       const { value: id, sourceData, includeConditions } = noFilteredProps?.[0] || {};
 
       const nextValue = sourceData ? [getFirstValueFromSelect(sourceData)] : [''];
-      const condition = includeConditions ? includeConditions[0] : logicOptions[0];
+      const condition = includeConditions ? includeConditions[0] : logicOptionsList[0];
       if (!id) return;
 
       const newValue: TFilterValueType = {
@@ -82,7 +85,7 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
 
       handleChange?.([...parsedValue, newValue]);
     },
-    [noFilteredProps, parsedValue, handleChange],
+    [noFilteredProps, parsedValue, handleChange, logicOptionsList],
   );
 
   const getTrigger = useCallback(
@@ -118,7 +121,7 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
             <S.Actions>
               {isMoreFilter && (
                 <ActionButton onClick={addNewValue}>
-                  <AddSVG /> Добавить фильтр
+                  <AddSVG /> {textProvider(language, Texts.addFilter)}
                 </ActionButton>
               )}
               <ActionButton
@@ -128,14 +131,14 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
                 }}
               >
                 <CrossSVG />
-                Сбросить
+                {textProvider(language, Texts.reset)}
               </ActionButton>
             </S.Actions>
           </>
         ) : (
           <S.Empty>
             <ActionButton onClick={addNewValue}>
-              <AddSVG /> Добавить фильтр
+              <AddSVG /> {textProvider(language, Texts.addFilter)}
             </ActionButton>
           </S.Empty>
         )}

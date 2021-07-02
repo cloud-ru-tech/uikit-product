@@ -1,10 +1,12 @@
+import { LanguageCodeType } from '@sbercloud/uikit-react-localization';
+import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 import eq from 'lodash.eq';
 import gt from 'lodash.gt';
 import gte from 'lodash.gte';
 import lt from 'lodash.lt';
 import lte from 'lodash.lte';
 
-import { OptionTypeBase } from '@sbercloud/uikit-react-select';
+import { Texts, textProvider } from '../helpers/texts-provider';
 
 type neqType = Parameters<typeof eq>;
 
@@ -30,44 +32,45 @@ export const logicOperations: IOperationsType = {
   noinclude: (value, other) => !value.includes(other),
 };
 
-export const logicOptions = [
+export const logicOptions = (language: LanguageCodeType) => [
   {
     value: 'include',
-    label: 'Содержит',
+    label: textProvider(language, Texts.include),
   },
   {
     value: 'noinclude',
-    label: 'Не содержит',
+    label: textProvider(language, Texts.noInclude),
   },
   {
     value: 'eq',
-    label: 'Равно',
+    label: textProvider(language, Texts.eq),
   },
   {
     value: 'neq',
-    label: 'Не равно',
+    label: textProvider(language, Texts.neq),
   },
   {
     value: 'lt',
-    label: 'Меньше чем',
+    label: textProvider(language, Texts.lt),
   },
   {
     value: 'lte',
-    label: 'Меньше чем или равно',
+    label: textProvider(language, Texts.lte),
   },
   {
     value: 'gt',
-    label: 'Больше чем',
+    label: textProvider(language, Texts.gt),
   },
   {
     value: 'gte',
-    label: 'Больше чем или равно',
+    label: textProvider(language, Texts.gte),
   },
 ];
 
-export const logicOptionByValue = logicOptions.reduce((acc, curr) => {
-  acc[curr.value] = curr;
-  return acc;
-}, {} as { [key: string]: OptionTypeBase });
+export const getLogicOptionByValue = (language: LanguageCodeType) =>
+  logicOptions(language).reduce((acc, curr) => {
+    acc[curr.value] = curr;
+    return acc;
+  }, {} as { [key: string]: OptionTypeBase });
 
 export type LogicConditionType = 'eq' | 'neq' | 'lt' | 'lte' | 'gt' | 'gte' | 'include' | 'noinclude';
