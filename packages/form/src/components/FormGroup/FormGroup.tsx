@@ -9,8 +9,8 @@ export const VARIANT = {
 
 export interface FormGroupProps {
   number: number;
-  title: string;
-  hint?: string;
+  title: React.ReactNode;
+  hint?: React.ReactNode;
   variant?: typeof VARIANT[keyof typeof VARIANT] | null;
 }
 

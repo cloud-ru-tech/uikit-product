@@ -1,14 +1,14 @@
 import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
-import { FORM_FIELD_TRANSLATIONS } from '../../helpers/formFieldTranslations';
+import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
 
+import { FORM_FIELD_TRANSLATIONS } from '../../helpers/formFieldTranslations';
 import * as S from './styled';
 
 export type FormFieldProps = {
-  hint?: string;
-  label?: string;
-  error?: string;
+  hint?: React.ReactNode;
+  label?: React.ReactNode;
+  error?: React.ReactNode;
   required?: boolean;
   description?: React.ReactNode;
 };
