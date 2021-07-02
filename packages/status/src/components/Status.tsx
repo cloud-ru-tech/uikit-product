@@ -11,7 +11,7 @@ export type StatusProps = {
   type?: Types;
   dotColor?: string;
   className?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 export function Status({ type = Types.Success, className, dotColor, children }: StatusProps) {
