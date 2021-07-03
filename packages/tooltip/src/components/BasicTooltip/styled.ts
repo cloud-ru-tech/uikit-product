@@ -30,6 +30,7 @@ export const TooltipWrapper = styled.div`
   text-overflow: ellipsis;
   overflow: hidden;
   word-break: break-word;
+  white-space: pre-wrap;
 `;
 
 export const IconWrapper = styled.span`
