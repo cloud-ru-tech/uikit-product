@@ -2,7 +2,7 @@ import * as React from 'react';
 
 type Context = {
   name: string;
-  value?: string;
+  value?: string | number;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 

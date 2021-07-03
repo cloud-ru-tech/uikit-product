@@ -4,7 +4,7 @@ import { RadioGroupContext } from './context';
 import { StyledRadioGroup } from './styled';
 
 export type TRadioGroupProps = {
-  value: string;
+  value: string | number;
   name: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };

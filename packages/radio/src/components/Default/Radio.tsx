@@ -17,7 +17,7 @@ export const RadioIcon: FC<IRadioIcon> = ({ checked, disabled }) => (
 );
 
 export interface IRadioProps {
-  value: string;
+  value: string | number;
   label: string;
   checked?: boolean;
   disabled?: boolean;
