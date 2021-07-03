@@ -11,12 +11,13 @@ export type StatusProps = {
   type?: Types;
   dotColor?: string;
   className?: string;
+  title?: string;
   children?: React.ReactNode;
 };
 
-export function Status({ type = Types.Success, className, dotColor, children }: StatusProps) {
+export function Status({ type = Types.Success, className, title, dotColor, children }: StatusProps) {
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} title={title}>
       <Dot data-type={dotColor ? undefined : type} color={dotColor} />
       {children && <Content>{children}</Content>}
     </Wrapper>
