@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-form",
   "title": "React Form",
-  "version": "0.4.26",
+  "version": "0.4.27",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -25,7 +25,7 @@
   "dependencies": {
     "@sbercloud/uikit-react-icons": "1.0.5",
     "@sbercloud/uikit-react-localization": "0.5.0",
-    "@sbercloud/uikit-react-tooltip": "0.1.17",
+    "@sbercloud/uikit-react-tooltip": "0.1.18",
     "@sbercloud/uikit-theme": "0.15.0",
     "@sbercloud/uikit-typography": "0.1.17"
   },

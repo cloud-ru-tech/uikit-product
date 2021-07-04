@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.18](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-radio@0.1.17&sourceBranch=refs/tags/@sbercloud/uikit-react-radio@0.1.18) (2021-07-04)
+
+
+### Bug Fixes
+
+* number value ([612d9f8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/612d9f8a039d3aaf2fed74a01ac52fa7c2386bdc))
+
+
+
+
+
 ## [0.1.17](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-radio@0.1.16&sourceBranch=refs/tags/@sbercloud/uikit-react-radio@0.1.17) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-radio

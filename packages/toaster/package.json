@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-toaster",
   "title": "React Toaster",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -28,7 +28,7 @@
     "react-toastify": "7.0.4"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-button": "0.3.11"
+    "@sbercloud/uikit-react-button": "0.3.12"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

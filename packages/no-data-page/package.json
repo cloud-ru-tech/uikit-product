@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-no-data-page",
   "title": "React NoDataPage",
-  "version": "0.2.18",
+  "version": "0.2.19",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -33,6 +33,6 @@
   },
   "devDependencies": {
     "@sbercloud/icons": "3.1.0",
-    "@sbercloud/uikit-react-button": "0.3.11"
+    "@sbercloud/uikit-react-button": "0.3.12"
   }
 }

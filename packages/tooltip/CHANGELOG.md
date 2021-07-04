@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.18](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tooltip@0.1.17&sourceBranch=refs/tags/@sbercloud/uikit-react-tooltip@0.1.18) (2021-07-04)
+
+
+### Bug Fixes
+
+* white-space pre-wrap ([35e2216](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/35e22167f6de80de40cf11510c10e370624d2358))
+
+
+
+
+
 ## [0.1.17](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tooltip@0.1.16&sourceBranch=refs/tags/@sbercloud/uikit-react-tooltip@0.1.17) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tooltip

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-status@0.1.17&sourceBranch=refs/tags/@sbercloud/uikit-react-status@0.2.0) (2021-07-04)
+
+
+### Bug Fixes
+
+* optional children ([5ff9f58](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/5ff9f584f7c0c7fe67f3197545dced5c03032786))
+
+
+### Features
+
+* props extended with wrapper span props ([2cf7c54](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/2cf7c5438fe851574a4702903c0df8774d5c23be))
+
+
+
+
+
 ## [0.1.17](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-status@0.1.16&sourceBranch=refs/tags/@sbercloud/uikit-react-status@0.1.17) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-status
