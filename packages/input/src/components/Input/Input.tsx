@@ -1,21 +1,21 @@
-import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { CopyButton } from '@sbercloud/uikit-react-button';
+import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import copyText from 'copy-to-clipboard';
-import { useCallback, useEffect, useRef, useState, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { getInputType } from '../../helpers/getInputType';
 import { InputElementType, InputProps, InputTypes } from '../../helpers/types';
 import {
+  BasicButtonWrapper,
   Label,
+  OpenDialogButton,
+  OpenDialogButtonWrapper,
   StyledClearButton,
   StyledIconWrapper,
   StyledInput,
   StyledInputWrapper,
   StyledSecurityButton,
   StyledWrap,
-  OpenDialogButton,
-  OpenDialogButtonWrapper,
-  BasicButtonWrapper,
 } from './styled';
 
 export type { InputProps };
@@ -43,6 +43,8 @@ export const Input = ({
   name,
   autoComplete,
   onOpenDialog,
+  onBlur,
+  onFocus,
 }: InputProps) => {
   const inputEl = useRef<InputElementType>(null);
   const [correctValue, setCorrectValue] = useState(value);
@@ -173,6 +175,8 @@ export const Input = ({
             data-error={error || undefined}
             name={name}
             autoComplete={autoComplete}
+            onBlur={onBlur}
+            onFocus={onFocus}
           />
         </div>
         <StyledIconWrapper>

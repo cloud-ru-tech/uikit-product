@@ -31,4 +31,6 @@ export interface InputProps {
   name?: string;
   autoComplete?: string;
   onOpenDialog?(): void;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
 }
