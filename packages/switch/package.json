@@ -22,9 +22,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.15.0"
-  },
-  "devDependencies": {
+    "@sbercloud/uikit-theme": "0.15.0",
     "react-switch": "6.0.0"
   },
   "peerDependencies": {
