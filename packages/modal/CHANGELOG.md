@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.13](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.12&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.13) (2021-07-04)
+
+
+### Bug Fixes
+
+* add i18n to Moadal ([6a742af](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/6a742af3e92f09153b931b49ae349d8e48f8ecbb))
+
+
+
+
+
 ## [0.3.12](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.11&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.12) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-modal

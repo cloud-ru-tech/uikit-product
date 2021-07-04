@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.17](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-switch@0.1.16&sourceBranch=refs/tags/@sbercloud/uikit-react-switch@0.1.17) (2021-07-04)
+
+
+### Bug Fixes
+
+* Switch - react-switch from dev to dependencies ([4acf576](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/4acf576f831bf1b7eda63b09d7bbc81e05cd05e4))
+
+
+
+
+
 ## [0.1.16](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-switch@0.1.15&sourceBranch=refs/tags/@sbercloud/uikit-react-switch@0.1.16) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-switch

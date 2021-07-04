@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-datepicker",
   "title": "React Datepicker",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -27,7 +27,7 @@
     "@sbercloud/uikit-react-icons": "1.0.5",
     "@sbercloud/uikit-react-input": "0.4.12",
     "@sbercloud/uikit-react-localization": "0.5.0",
-    "@sbercloud/uikit-react-switch": "0.1.16",
+    "@sbercloud/uikit-react-switch": "0.1.17",
     "@sbercloud/uikit-theme": "0.15.0",
     "date-fns": "2.22.1",
     "lodash.isequal": "4.5.0",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.26](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.25&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.26) (2021-07-04)
+
+
+### Bug Fixes
+
+* extend Form props - string -> React.ReactNode ([902637b](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/902637b1b328556bc4e24e4ea895a2c8ba570dc4))
+
+
+
+
+
 ## [0.4.25](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.24&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.25) (2021-07-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-form

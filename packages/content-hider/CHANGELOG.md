@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.19](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-content-hider@0.2.18&sourceBranch=refs/tags/@sbercloud/uikit-react-content-hider@0.2.19) (2021-07-04)
+
+
+### Bug Fixes
+
+* add i18n to ContentHider ([25d30ba](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/25d30ba3ddfd858908d0d6d76808274bb0ea36b7))
+
+
+
+
+
 ## [0.2.18](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-content-hider@0.2.17&sourceBranch=refs/tags/@sbercloud/uikit-react-content-hider@0.2.18) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-content-hider
