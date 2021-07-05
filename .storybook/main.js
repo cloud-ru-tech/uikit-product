@@ -45,6 +45,9 @@ module.exports = {
       },
     });
 
+    if (!config.resolve.plugins) {
+      config.resolve.plugins = [];
+    }
     config.resolve.plugins.push(
       new TsconfigPathsPlugin({
         configFile: './tsconfig.json',
