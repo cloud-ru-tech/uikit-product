@@ -1,6 +1,5 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H3, TableText } from '@sbercloud/uikit-typography';
 
@@ -54,7 +53,9 @@ export const Title = styled(H3)`
 `;
 
 export const Content = styled.div`
-  display: grid;
-  grid-row-gap: 24px;
-  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin-top: 24px;
+  }
 `;
