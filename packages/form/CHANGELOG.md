@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.28](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.27&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.28) (2021-07-06)
+
+
+### Bug Fixes
+
+* FormGroup - use @sbercloud/uikit-react-icons ([6910938](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/69109383baa3346a9f24589c47d50431a0234d09))
+
+
+
+
+
 ## [0.4.27](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.26&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.4.27) (2021-07-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-form
