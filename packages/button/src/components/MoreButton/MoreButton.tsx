@@ -1,5 +1,5 @@
 import { css } from '@linaria/core';
-import { MoreSVG } from '@sbercloud/icons';
+import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import {
   BasicTooltip,
   IBasicTooltipProps,
@@ -59,7 +59,7 @@ export function MoreButton({ actions, className, placement = Placements.BottomEn
             }
           >
             <Button id='more-button' variant={Button.variants.TableMenu} className={className}>
-              <MoreSVG id='more-button' className={iconStyle} />
+              <MoreInterfaceSVG id='more-button' className={iconStyle} />
             </Button>
           </Tooltip>
         </div>

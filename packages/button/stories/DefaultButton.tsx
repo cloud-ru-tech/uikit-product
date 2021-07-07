@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { CopySVG } from '@sbercloud/icons';
+import { CopyInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
@@ -52,7 +52,7 @@ const Template: Story<ButtonProps & { showIcon: boolean }> = ({ children, showIc
         <Title>
           <H4 style={{ color: background ? '#fff' : undefined }}>{name}</H4>
         </Title>
-        <Button {...args} variant={variant} icon={showIcon || variant === 'table-menu' ? <CopySVG /> : null}>
+        <Button {...args} variant={variant} icon={showIcon || variant === 'table-menu' ? <CopyInterfaceSVG /> : null}>
           {variant !== 'table-menu' && children}
         </Button>
       </Item>

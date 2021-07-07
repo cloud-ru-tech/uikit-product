@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { PauseCircleSVG } from '@sbercloud/icons';
+import { PauseInterfaceSVG, PlayInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
@@ -46,10 +46,13 @@ const Template: Story<TableButtonProps> = ({ ...args }) => (
       </Title>
       <ButtonGroup>
         <span>
-          <CTableButton {...args} variant={CTableButton.variants.TextIcon} icon={<PauseCircleSVG />} />
+          <CTableButton {...args} variant={CTableButton.variants.TextIcon} icon={<PlayInterfaceSVG size={16} />} />
         </span>
         <span>
-          <CTableButton {...args} variant={CTableButton.variants.TextIcon} inProgress icon={<PauseCircleSVG />} />
+          <CTableButton {...args} variant={CTableButton.variants.TextIcon} icon={<PauseInterfaceSVG size={16} />} />
+        </span>
+        <span>
+          <CTableButton {...args} variant={CTableButton.variants.TextIcon} inProgress icon={<PauseInterfaceSVG />} />
         </span>
       </ButtonGroup>
     </Item>
@@ -59,10 +62,13 @@ const Template: Story<TableButtonProps> = ({ ...args }) => (
       </Title>
       <ButtonGroup>
         <span>
-          <CTableButton {...args} variant={CTableButton.variants.Icon} icon={<PauseCircleSVG size={16} />} />
+          <CTableButton {...args} variant={CTableButton.variants.Icon} icon={<PlayInterfaceSVG size={16} />} />
         </span>
         <span>
-          <CTableButton {...args} variant={CTableButton.variants.Icon} inProgress icon={<PauseCircleSVG />} />
+          <CTableButton {...args} variant={CTableButton.variants.Icon} icon={<PauseInterfaceSVG size={16} />} />
+        </span>
+        <span>
+          <CTableButton {...args} variant={CTableButton.variants.Icon} inProgress icon={<PauseInterfaceSVG />} />
         </span>
       </ButtonGroup>
     </Item>

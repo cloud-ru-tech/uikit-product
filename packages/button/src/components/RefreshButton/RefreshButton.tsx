@@ -1,6 +1,5 @@
+import { RefreshInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useCallback, useMemo } from 'react';
-
-import { RefreshSVG } from '@sbercloud/icons';
 
 import { ButtonVariant } from '../../helpers/constants';
 import { Button } from '../Default';
@@ -30,7 +29,7 @@ export const RefreshButton = ({
       disabled={disabled}
       onClick={onRefreshCallback}
     >
-      <RefreshSVG className={animationDecorator} />
+      <RefreshInterfaceSVG className={animationDecorator} />
     </Button>
   ) : null;
 };

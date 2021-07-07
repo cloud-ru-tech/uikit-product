@@ -1,4 +1,4 @@
-import { InProgressSVG } from '@sbercloud/icons';
+import { LoadingWheelInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { memo, useMemo } from 'react';
 
 import { IconButtonWrapper, RotateAnimation } from './styled';
@@ -15,7 +15,7 @@ function IconButton({ onClick, inProgress, disabled, icon }: IconButtonProps) {
 
   return (
     <IconButtonWrapper disabled={disabled} onClick={onClickHandler} data-inprogress={inProgress}>
-      {inProgress ? <InProgressSVG className={RotateAnimation} /> : icon}
+      {inProgress ? <LoadingWheelInterfaceSVG className={RotateAnimation} /> : icon}
     </IconButtonWrapper>
   );
 }

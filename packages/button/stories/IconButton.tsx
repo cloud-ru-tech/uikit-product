@@ -1,5 +1,12 @@
 import { styled } from '@linaria/react';
-import { CloseSVG, EditSVG, FavFilledSVG, ListSVG, MainMenuSVG, SearchSVG } from '@sbercloud/icons';
+import {
+  CloseInterfaceSVG,
+  EditInterfaceSVG,
+  FavouriteInterfaceSVG,
+  ListInterfaceSVG,
+  MainMenuInterfaceSVG,
+  SearchInterfaceSVG,
+} from '@sbercloud/uikit-react-icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -37,28 +44,28 @@ const ITEMS: {
 }[] = [
   {
     variant: IconButton.variants.Blue,
-    icon: <FavFilledSVG />,
+    icon: <FavouriteInterfaceSVG />,
   },
   {
     variant: IconButton.variants.White,
-    icon: <MainMenuSVG />,
+    icon: <MainMenuInterfaceSVG />,
     dark: true,
   },
   {
     variant: IconButton.variants.HeaderMenu,
-    icon: <ListSVG />,
+    icon: <ListInterfaceSVG />,
   },
   {
     variant: IconButton.variants.Header,
-    icon: <SearchSVG />,
+    icon: <SearchInterfaceSVG />,
   },
   {
     variant: IconButton.variants.Sidebar,
-    icon: <EditSVG />,
+    icon: <EditInterfaceSVG />,
   },
   {
     variant: IconButton.variants.Popup,
-    icon: <CloseSVG />,
+    icon: <CloseInterfaceSVG />,
   },
 ];
 
