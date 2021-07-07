@@ -4,7 +4,6 @@ import declination from './declination';
 
 export enum Texts {
   noData = 'noData',
-  searchPlaceholder = 'searchPlaceholder',
   selectPlaceholder = 'selectPlaceholder',
   modalDeleteTagTitle = 'modalDeleteTagTitle',
   modalDeleteTagDesc = 'modalDeleteTagDesc',
@@ -21,7 +20,6 @@ type DictionaryProperty = DictionaryPropertyAsFn | string;
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryProperty>>> = {
   [LanguageCodeType.ruRU]: {
     noData: 'Нет данных',
-    searchPlaceholder: 'Поиск',
     selectPlaceholder: 'Выберите',
     modalDeleteTagTitle: 'Удаление тега',
     modalDeleteTagDesc: ({ label }) => `Вы действительно хотите удалить тег «${label}»?`,
@@ -37,12 +35,11 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
   },
   [LanguageCodeType.enGB]: {
     noData: 'No data',
-    searchPlaceholder: 'Search',
     selectPlaceholder: 'Select',
-    modalDeleteTagTitle: 'Deleting a tag',
-    modalDeleteTagDesc: ({ label }) => `Do you really want to delete «${label}»?`,
+    modalDeleteTagTitle: 'Delete tag',
+    modalDeleteTagDesc: ({ label }) => `Do you really want to delete the tag ${label}?`,
     selectValue: 'Select a value',
-    selected: ({ count }) => `${count} selected`,
+    selected: ({ count }) => `Selected: ${count}`,
     add: 'Add',
     usersSelected: declination((number: number) => [
       `${number} user selected`,
