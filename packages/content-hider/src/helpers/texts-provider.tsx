@@ -11,8 +11,8 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     show: 'Читать полностью',
   },
   [LanguageCodeType.enGB]: {
-    hide: 'Hide',
-    show: 'Read',
+    hide: 'Collapse',
+    show: 'Read more',
   },
 };
 
