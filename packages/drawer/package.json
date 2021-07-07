@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-drawer",
   "title": "React Drawer",
-  "version": "0.3.24",
+  "version": "0.3.25",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -30,9 +30,9 @@
   },
   "devDependencies": {
     "@sbercloud/uikit-react-divider": "0.2.17",
-    "@sbercloud/uikit-react-input": "0.7.3",
+    "@sbercloud/uikit-react-input": "0.8.0",
     "@sbercloud/uikit-react-radio": "0.1.19",
-    "@sbercloud/uikit-react-select": "0.9.4"
+    "@sbercloud/uikit-react-select": "0.9.5"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

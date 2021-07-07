@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.7.3&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.8.0) (2021-07-07)
+
+
+### Features
+
+* [AICDC-2909](https://jira.sbercloud.tech/browse/AICDC-2909): added onCopy callback to CopyInput ([55d2995](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/55d29954d6232cb6db8fa9b4404bc1a6186bbf3e))
+
+
+
+
+
 ## [0.7.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.7.2&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.7.3) (2021-07-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input
