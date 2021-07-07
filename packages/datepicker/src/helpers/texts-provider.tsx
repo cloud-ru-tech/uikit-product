@@ -72,8 +72,8 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     time: 'Время',
   },
   [LanguageCodeType.enGB]: {
-    specifyTime: 'Specify the time',
-    incorrectDateEntered: 'Incorrect date entered',
+    specifyTime: 'Specify time',
+    incorrectDateEntered: 'Incorrect date',
     day: 'dd',
     month: 'mm',
     year: 'yyyy',
