@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-table",
   "title": "React Table",
-  "version": "0.2.29",
+  "version": "0.2.30",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -43,7 +43,7 @@
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-form": "0.4.28",
+    "@sbercloud/uikit-react-form": "0.4.29",
     "@sbercloud/uikit-react-input": "0.7.2",
     "@types/lodash.debounce": "4.0.6"
   },
