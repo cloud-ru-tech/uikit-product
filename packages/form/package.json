@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-form",
   "title": "React Form",
-  "version": "0.4.29",
+  "version": "0.4.30",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
