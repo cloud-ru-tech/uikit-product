@@ -38,13 +38,10 @@ export const Number = styled(TableText)`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   color: var(${COLORS_FORM_GROUP.NUMBER_COLOR});
   background-color: var(${COLORS_FORM_GROUP.NUMBER_BG});
-
   width: 32px;
   height: 32px;
-
   border-radius: 50%;
 `;
 

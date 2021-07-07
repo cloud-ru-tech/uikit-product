@@ -43,8 +43,6 @@
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-form": "0.4.29",
-    "@sbercloud/uikit-react-input": "0.7.2",
     "@types/lodash.debounce": "4.0.6"
   },
   "peerDependencies": {
