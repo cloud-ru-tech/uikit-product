@@ -11,7 +11,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     cancel: 'Отмена',
   },
   [LanguageCodeType.enGB]: {
-    approve: 'Approve',
+    approve: 'Confirm',
     cancel: 'Cancel',
   },
 };
