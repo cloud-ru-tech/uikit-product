@@ -27,16 +27,16 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     gte: 'Больше чем или равно',
   },
   [LanguageCodeType.enGB]: {
-    addFilter: 'Add a filter',
+    addFilter: 'Add filter',
     reset: 'Reset',
-    include: 'Contain',
+    include: 'Contains',
     noInclude: 'Does not contain',
-    eq: 'equal',
+    eq: 'Equal to',
     neq: 'Not equal to',
     lt: 'Less than',
     lte: 'Less than or equal to',
-    gt: 'Greater than',
-    gte: 'Greater than or equal to',
+    gt: 'More than',
+    gte: 'More than or equal to',
   },
 };
 
