@@ -59,7 +59,7 @@ const Template: Story<TableButtonProps> = ({ ...args }) => (
       </Title>
       <ButtonGroup>
         <span>
-          <CTableButton {...args} variant={CTableButton.variants.Icon} icon={<PauseCircleSVG />} />
+          <CTableButton {...args} variant={CTableButton.variants.Icon} icon={<PauseCircleSVG size={16} />} />
         </span>
         <span>
           <CTableButton {...args} variant={CTableButton.variants.Icon} inProgress icon={<PauseCircleSVG />} />

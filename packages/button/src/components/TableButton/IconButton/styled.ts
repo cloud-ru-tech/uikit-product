@@ -1,6 +1,5 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
@@ -9,8 +8,10 @@ const { TABLE_TEXT } = TYPOGRAPHY_VARIABLES;
 
 export const IconButtonWrapper = styled.button`
   position: relative;
+  width: 28px;
+  height: 28px;
   border-radius: 50px;
-  padding: 4px;
+  padding: 0;
 
   border: 0;
   outline: 0;
@@ -18,7 +19,7 @@ export const IconButtonWrapper = styled.button`
   display: inline-flex;
 
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   box-sizing: border-box;
 
