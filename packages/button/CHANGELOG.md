@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.13](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.12&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.13) (2021-07-07)
+
+
+### Bug Fixes
+
+* Button - update icon package ([f01f637](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/f01f637b2ecee87be855dd526c3ff8d8685e02b2))
+* TableButton - refactoring styles | [AICDC-2835](https://jira.sbercloud.tech/browse/AICDC-2835) ([9c6e45c](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/9c6e45cfd3980fced58dfe032364af1471a56559))
+
+
+
+
+
 ## [0.3.12](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.11&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.12) (2021-07-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.1.0&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.1.1) (2021-07-07)
+
+
+### Bug Fixes
+
+* replacing rm -rf with rimraf within npm scripts ([122c81b](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/122c81b987f02d04511e4333684d875b4f27d06e))
+
+
+
+
+
 # [1.1.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.0.5&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.1.0) (2021-07-06)
 
 

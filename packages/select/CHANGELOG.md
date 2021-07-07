@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.9.3&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.9.4) (2021-07-07)
+
+
+### Bug Fixes
+
+* Select - add relevant translation ([fda875f](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/fda875f4011464e61fdd0510fdafb360cad19eff))
+
+
+
+
+
 ## [0.9.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.9.2&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.9.3) (2021-07-06)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select

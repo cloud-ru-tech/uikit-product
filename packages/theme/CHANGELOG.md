@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.15.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.15.1) (2021-07-07)
+
+
+### Bug Fixes
+
+* add green themes for toolbar component ([5d3a887](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/5d3a887c7ca703807cea16291facfcfa1dc62a33))
+
+
+
+
+
 # [0.15.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.14.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.15.0) (2021-06-29)
 
 

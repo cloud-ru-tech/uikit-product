@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.29](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-filter@0.3.28&sourceBranch=refs/tags/@sbercloud/uikit-react-filter@0.3.29) (2021-07-07)
+
+
+### Bug Fixes
+
+* Filter - add relevant translation ([3f15819](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/3f158195f7540631ae0128d092185191e0eb14ee))
+
+
+
+
+
 ## [0.3.28](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-filter@0.3.27&sourceBranch=refs/tags/@sbercloud/uikit-react-filter@0.3.28) (2021-07-06)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-filter

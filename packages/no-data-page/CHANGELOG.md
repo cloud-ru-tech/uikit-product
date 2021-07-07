@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.20](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-no-data-page@0.2.19&sourceBranch=refs/tags/@sbercloud/uikit-react-no-data-page@0.2.20) (2021-07-07)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-no-data-page
+
+
+
+
+
 ## [0.2.19](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-no-data-page@0.2.18&sourceBranch=refs/tags/@sbercloud/uikit-react-no-data-page@0.2.19) (2021-07-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-no-data-page

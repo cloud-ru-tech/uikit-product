@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.18](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-typography@0.1.17&sourceBranch=refs/tags/@sbercloud/uikit-typography@0.1.18) (2021-07-07)
+
+**Note:** Version bump only for package @sbercloud/uikit-typography
+
+
+
+
+
 ## [0.1.17](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-typography@0.1.16&sourceBranch=refs/tags/@sbercloud/uikit-typography@0.1.17) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-typography
