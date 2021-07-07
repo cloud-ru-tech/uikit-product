@@ -20,14 +20,23 @@ export type CopyInputProps = {
   security?: boolean;
   labelMinWidth?: string;
   wrapperClassName?: string;
+  onCopy?: () => void;
 };
 
-export const CopyInput: React.FC<CopyInputProps> = ({ value, label, labelMinWidth, wrapperClassName, security }) => {
+export const CopyInput: React.FC<CopyInputProps> = ({
+  value,
+  label,
+  onCopy,
+  security,
+  labelMinWidth,
+  wrapperClassName,
+}) => {
   const [isCopyCompleted, setIsCopyCompleted] = useState(false);
   const [showContent, setShowContent] = useState(!security);
 
   const handleCopyButtonClick = useCallback((e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
     e.stopPropagation();
+    onCopy?.();
   }, []);
 
   const handleInputClick = useCallback(
@@ -36,6 +45,7 @@ export const CopyInput: React.FC<CopyInputProps> = ({ value, label, labelMinWidt
 
       setIsCopyCompleted(true);
       copyText(value);
+      onCopy?.();
 
       setTimeout(() => {
         setIsCopyCompleted(false);
