@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-form",
   "title": "React Form",
-  "version": "0.4.31",
+  "version": "0.4.32",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -24,10 +24,10 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-icons": "1.1.1",
-    "@sbercloud/uikit-react-localization": "0.5.1",
-    "@sbercloud/uikit-react-tooltip": "0.1.19",
-    "@sbercloud/uikit-theme": "0.15.1",
-    "@sbercloud/uikit-typography": "0.1.18"
+    "@sbercloud/uikit-react-localization": "0.5.2",
+    "@sbercloud/uikit-react-tooltip": "0.1.20",
+    "@sbercloud/uikit-theme": "0.16.0",
+    "@sbercloud/uikit-typography": "0.1.19"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

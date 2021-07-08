@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.16](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.15&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.16) (2021-07-08)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-modal
+
+
+
+
+
 ## [0.3.15](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.14&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.15) (2021-07-07)
 
 

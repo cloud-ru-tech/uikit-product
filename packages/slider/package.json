@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-slider",
   "title": "React Slider",
-  "version": "0.1.17",
+  "version": "0.1.18",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -22,7 +22,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.15.1",
+    "@sbercloud/uikit-theme": "0.16.0",
     "rc-slider": "9.7.2"
   },
   "peerDependencies": {
