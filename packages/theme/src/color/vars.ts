@@ -199,6 +199,7 @@ const COLORS_TOOLTIP = {
   CONTAINER_BG: '--tooltip-container-bg',
   MENU_BG: '--tooltip-menu-bg',
   MENU_ITEM_HOVER_BG: '--tooltip-menu-item-hover-bg',
+  MENU_ITEM_ICON_FILL: '--tooltip-menu-item-icon-fill',
   ICON_FILL: '--tooltip-icon-fill',
   ICON_HOVER_FILL: '--tooltip-icon-hover-fill',
 };
