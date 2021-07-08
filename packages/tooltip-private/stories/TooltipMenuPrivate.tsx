@@ -4,11 +4,17 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Tooltip, TooltipMenu, TooltipMenuItem, TooltipStateContainer } from '../src';
+import {
+  Placements,
+  TooltipMenuItemPrivate,
+  TooltipMenuPrivate,
+  TooltipPrivate,
+  TooltipStateContainerPrivate,
+} from '../src';
 
 export default {
-  title: 'Not stable/Tooltip/Tooltip Menu',
-  component: Tooltip,
+  title: 'Not stable/TooltipPrivate/Tooltip Menu Private',
+  component: TooltipMenuPrivate,
 } as Meta;
 
 const TooltipWrapper = styled.div`
@@ -30,36 +36,35 @@ const menuItems = [
 
 const Template: Story = ({ ...args }) => (
   <TooltipWrapper>
-    <TooltipStateContainer>
-      {/* TODO: maybe context/hooks */}
+    <TooltipStateContainerPrivate>
       {({ on, set }: { on: boolean; set: () => void; hide: () => void }) => (
-        <Tooltip
+        <TooltipPrivate
           {...args}
           clickOutside
           closeOnReferenceHidden
           hideArrow
-          placement='bottom-start'
+          placement={Placements.BottomStart}
           trigger='click'
           tooltipShown={on}
           onVisibilityChange={set}
           tooltip={
-            <TooltipMenu>
+            <TooltipMenuPrivate>
               {menuItems.map(menuItem => (
-                <TooltipMenuItem key={menuItem}>{menuItem}</TooltipMenuItem>
+                <TooltipMenuItemPrivate key={menuItem}>{menuItem}</TooltipMenuItemPrivate>
               ))}
-            </TooltipMenu>
+            </TooltipMenuPrivate>
           }
         >
           <span>Menu</span>
-        </Tooltip>
+        </TooltipPrivate>
       )}
-    </TooltipStateContainer>
+    </TooltipStateContainerPrivate>
   </TooltipWrapper>
 );
 
-export const tooltipMenu = Template.bind({});
-tooltipMenu.args = {};
-tooltipMenu.parameters = {
+export const tooltipMenuPrivate = Template.bind({});
+tooltipMenuPrivate.args = {};
+tooltipMenuPrivate.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

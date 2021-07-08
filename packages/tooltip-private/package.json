@@ -1,19 +1,19 @@
 {
-  "name": "@sbercloud/uikit-react-tooltip",
-  "title": "React Tooltip",
-  "version": "0.1.20",
+  "name": "@sbercloud/uikit-react-tooltip-private",
+  "title": "React Tooltip Private",
+  "version": "0.0.0",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-tooltip/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/tooltip-private/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
   },
-  "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
+  "author": "Shirochenkov Aleksei <aashirochenkov@sbercloud.ru>",
   "contributors": [
-    "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
+    "Shirochenkov Aleksei <aashirochenkov@sbercloud.ru>"
   ],
   "files": [
     "dist",
@@ -22,12 +22,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-tooltip-private": "0.0.0",
-    "@sbercloud/uikit-theme": "0.16.0"
+    "@sbercloud/uikit-theme": "0.16.0",
+    "react-popper-tooltip": "3.1.1"
   },
-  "devDependencies": {
-    "copy-to-clipboard": "3.3.1"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
     "@linaria/react": "^3.0.0-beta.3",

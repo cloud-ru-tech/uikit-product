@@ -1,7 +1,7 @@
 import { CrossSVG } from '@sbercloud/icons';
 import { Button, IconButton } from '@sbercloud/uikit-react-button';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
-import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
+import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 import { useMemo } from 'react';
 import RCModal from 'react-modal';
 
@@ -133,7 +133,7 @@ export const Modal: React.FC<ModalProps> = props => {
         <ButtonWrapper>
           {approve &&
             (disableApprove && disableApproveTooltip ? (
-              <BasicTooltip tooltip={disableApproveTooltip}>
+              <Tooltip tooltip={disableApproveTooltip}>
                 <Button
                   className={buttonCSS}
                   disabled={disableApprove}
@@ -144,7 +144,7 @@ export const Modal: React.FC<ModalProps> = props => {
                 >
                   {approveBtnText}
                 </Button>
-              </BasicTooltip>
+              </Tooltip>
             ) : (
               <Button
                 className={buttonCSS}

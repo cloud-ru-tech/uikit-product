@@ -1,5 +1,5 @@
 import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
+import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 
 import { Content, Header, Number, Title, Wrapper, hintClassName, tooltipTriggerClassName } from './styled';
 
@@ -22,9 +22,9 @@ export const FormGroup: React.FC<FormGroupProps> = ({ number, title, hint, varia
       <Title>{title}</Title>
 
       {hint && (
-        <BasicTooltip tooltip={hint} classNameTrigger={tooltipTriggerClassName}>
+        <Tooltip tooltip={hint} classNameTrigger={tooltipTriggerClassName}>
           <QuestionInterfaceSVG size={20} className={hintClassName} />
-        </BasicTooltip>
+        </Tooltip>
       )}
     </Header>
 

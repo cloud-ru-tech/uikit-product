@@ -1,22 +1,21 @@
 import { css } from '@linaria/core';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import {
-  BasicTooltip,
-  IBasicTooltipProps,
-  Tooltip,
-  TooltipMenu,
-  TooltipMenuItem,
-  TooltipStateContainer,
-} from '@sbercloud/uikit-react-tooltip';
+  TooltipMenuItemPrivate,
+  TooltipMenuPrivate,
+  TooltipPrivate,
+  TooltipPrivateProps,
+  TooltipStateContainerPrivate,
+} from '@sbercloud/uikit-react-tooltip-private';
 import React from 'react';
 
 import { Button } from '../Default';
 
-const Placements = BasicTooltip.placements;
+const Placements = TooltipPrivate.placements;
 
 export type MoreButtonProps = {
   className?: string;
-  placement?: IBasicTooltipProps['placement'];
+  placement?: TooltipPrivateProps['placement'];
   actions: {
     name: React.ReactNode;
     onClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
@@ -30,10 +29,10 @@ const iconStyle = css`
 
 export function MoreButton({ actions, className, placement = Placements.BottomEnd }: MoreButtonProps) {
   return (
-    <TooltipStateContainer>
+    <TooltipStateContainerPrivate>
       {({ on, hide, toggle }: { on: boolean; hide(): void; toggle(): void }): React.ReactNode => (
         <div role='presentation' onClick={e => e?.stopPropagation()}>
-          <Tooltip
+          <TooltipPrivate
             clickOutside
             closeOnReferenceHidden
             hideArrow
@@ -42,7 +41,7 @@ export function MoreButton({ actions, className, placement = Placements.BottomEn
             tooltipShown={on}
             onVisibilityChange={toggle}
             tooltip={
-              <TooltipMenu>
+              <TooltipMenuPrivate>
                 {actions.map(menuItem => {
                   const handlerOnClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
                     event?.stopPropagation();
@@ -50,21 +49,21 @@ export function MoreButton({ actions, className, placement = Placements.BottomEn
                     hide();
                   };
                   return (
-                    <TooltipMenuItem key={`menu-item-${menuItem.name}`} onClick={handlerOnClick}>
+                    <TooltipMenuItemPrivate key={`menu-item-${menuItem.name}`} onClick={handlerOnClick}>
                       {menuItem.name}
-                    </TooltipMenuItem>
+                    </TooltipMenuItemPrivate>
                   );
                 })}
-              </TooltipMenu>
+              </TooltipMenuPrivate>
             }
           >
             <Button id='more-button' variant={Button.variants.TableMenu} className={className}>
               <MoreInterfaceSVG id='more-button' className={iconStyle} />
             </Button>
-          </Tooltip>
+          </TooltipPrivate>
         </div>
       )}
-    </TooltipStateContainer>
+    </TooltipStateContainerPrivate>
   );
 }
 

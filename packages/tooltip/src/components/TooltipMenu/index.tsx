@@ -1,1 +1,0 @@
-export { TooltipMenu } from './TooltipMenu';

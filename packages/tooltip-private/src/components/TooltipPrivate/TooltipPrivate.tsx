@@ -1,17 +1,23 @@
-import { FC } from 'react';
 import TooltipTrigger from 'react-popper-tooltip';
 
-import { ITooltipProps } from '../../helpers/types';
-import { tooltipStyle, triggerStyle } from './styled';
+import { Placements, TooltipPrivateProps } from '../../helpers/types';
+import { tooltipClassName, triggerClassName } from './styled';
 
-// FIXME: может стоит переименовать, так как будет еще другой тултип с подсказкой
-export const Tooltip: FC<ITooltipProps> = ({ children, tooltip, hideArrow, ...props }) => (
+export const TooltipPrivate = ({
+  children,
+  tooltip,
+  hideArrow,
+  classNameContainer,
+  classNameArrow,
+  classNameTrigger,
+  ...props
+}: TooltipPrivateProps) => (
   <TooltipTrigger
     {...props}
     tooltip={({ arrowRef, tooltipRef, getArrowProps, getTooltipProps, placement }): React.ReactNode => {
       const tooltipProps = getTooltipProps({
         ref: tooltipRef,
-        className: tooltipStyle,
+        className: classNameContainer || tooltipClassName,
       });
       return (
         <div {...tooltipProps}>
@@ -19,7 +25,7 @@ export const Tooltip: FC<ITooltipProps> = ({ children, tooltip, hideArrow, ...pr
             <div
               {...getArrowProps({
                 ref: arrowRef,
-                className: 'tooltip-arrow',
+                className: classNameArrow ? [classNameArrow] : 'tooltip-arrow',
                 'data-placement': placement,
               })}
             />
@@ -33,7 +39,7 @@ export const Tooltip: FC<ITooltipProps> = ({ children, tooltip, hideArrow, ...pr
       <span
         {...getTriggerProps({
           ref: triggerRef,
-          className: triggerStyle,
+          className: classNameTrigger || triggerClassName,
         })}
       >
         {children}
@@ -41,3 +47,5 @@ export const Tooltip: FC<ITooltipProps> = ({ children, tooltip, hideArrow, ...pr
     )}
   </TooltipTrigger>
 );
+
+TooltipPrivate.placements = Placements;

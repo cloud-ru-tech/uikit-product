@@ -1,3 +1,1 @@
-export * from './BasicTooltip';
-export * from './Default';
-export * from './TooltipMenu';
+export * from './Tooltip';

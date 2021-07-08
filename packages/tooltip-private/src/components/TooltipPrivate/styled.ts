@@ -1,13 +1,13 @@
 import { css } from '@linaria/core';
 
-export const tooltipStyle = css`
+export const tooltipClassName = css`
   border: none;
   border-radius: 4px;
   background-color: #ffffff;
   z-index: 99999;
 `;
 
-export const triggerStyle = css`
+export const triggerClassName = css`
   height: 100%;
   cursor: pointer;
 `;

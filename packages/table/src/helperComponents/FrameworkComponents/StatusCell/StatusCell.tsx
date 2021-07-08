@@ -1,20 +1,19 @@
-import { FC } from 'react';
-
 import { Status, StatusProps } from '@sbercloud/uikit-react-status';
-import { BasicTooltip, IBasicTooltipProps } from '@sbercloud/uikit-react-tooltip';
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-react-tooltip';
+import { FC } from 'react';
 
 import { TableBasicTypes } from '../../../helpers/types';
 
-export const StatusCell: FC<TableBasicTypes.ICellRendererParams & StatusProps & Partial<IBasicTooltipProps>> = ({
+export const StatusCell: FC<TableBasicTypes.ICellRendererParams & StatusProps & Partial<TooltipProps>> = ({
   value,
   type,
   tooltip,
 }) => {
   if (tooltip) {
     return (
-      <BasicTooltip tooltip={tooltip} delayHide={0} delayShow={0} placement={BasicTooltip.placements.Top}>
+      <Tooltip tooltip={tooltip} delayHide={0} delayShow={0} placement={Tooltip.placements.Top}>
         <Status type={type}>{value}</Status>
-      </BasicTooltip>
+      </Tooltip>
     );
   }
 

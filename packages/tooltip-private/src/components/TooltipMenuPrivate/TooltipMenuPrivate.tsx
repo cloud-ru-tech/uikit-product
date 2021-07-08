@@ -1,14 +1,14 @@
-import { FC, memo } from 'react';
+import { memo } from 'react';
 import { Ref } from 'react-popper-tooltip';
 
 import { Container, ContainerItem } from './styled';
 
-export interface ITooltipMenuProps {
+export interface TooltipMenuPrivateProps {
   tooltipRef?: Ref;
   className?: string;
 }
 
-export const TooltipMenu: FC<ITooltipMenuProps> = memo(function TooltipMenu(props) {
+export const TooltipMenuPrivate: React.FC<TooltipMenuPrivateProps> = memo(function TooltipMenu(props) {
   const { children, className, ...otherProps } = props;
 
   return (

@@ -1,6 +1,6 @@
 import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
-import { BasicTooltip } from '@sbercloud/uikit-react-tooltip';
+import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 
 import { FORM_FIELD_TRANSLATIONS } from '../../helpers/formFieldTranslations';
 import * as S from './styled';
@@ -23,9 +23,9 @@ export const FormField: React.FC<FormFieldProps> = ({ label, hint, description, 
         <S.Label>
           {label}
           {hint && (
-            <BasicTooltip tooltip={hint} classNameTrigger={S.tooltipTriggerClassName}>
+            <Tooltip tooltip={hint} classNameTrigger={S.tooltipTriggerClassName}>
               <QuestionInterfaceSVG size={20} className={S.hintClassName} />
-            </BasicTooltip>
+            </Tooltip>
           )}
         </S.Label>
       )}

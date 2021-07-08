@@ -4,7 +4,7 @@ import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_TOOLTIP } = EXPORT_VARS;
 
-export const containerStyle = css`
+export const containerClassName = css`
   z-index: 99999;
   max-width: 265px;
   max-height: 220px;
@@ -22,7 +22,7 @@ export const containerStyle = css`
   line-height: 20px;
 `;
 
-export const containerWithIconStyle = css`
+export const containerWithIconClassName = css`
   padding-right: 44px;
 `;
 
@@ -49,7 +49,7 @@ export const IconWrapper = styled.span`
   }
 `;
 
-export const triggerStyle = css`
+export const triggerClassName = css`
   display: inline-block;
   cursor: pointer;
 `;

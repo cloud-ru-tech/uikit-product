@@ -1,5 +1,4 @@
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_TOOLTIP } = EXPORT_VARS;
