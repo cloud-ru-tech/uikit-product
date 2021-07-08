@@ -22,28 +22,25 @@ const Group = styled.div`
   display: flex;
 `;
 
-const tooltipText = 'Здесь будут показаны примененные фильтры.\nЗадать фильтры можно в меню столбца.';
-
 const Template: Story<TooltipProps> = ({ ...args }) => (
   <Group>
     <TooltipWrapper>
-      <Tooltip tooltip={tooltipText} {...args}>
+      <Tooltip {...args}>
         <H4>Basic</H4>
       </Tooltip>
     </TooltipWrapper>
     <TooltipWrapper>
-      <Tooltip tooltip={tooltipText} icon={<HelpSVG />} {...args}>
+      <Tooltip {...args} icon={<HelpSVG />}>
         <H4>Basic + Icon</H4>
       </Tooltip>
     </TooltipWrapper>
     <TooltipWrapper>
       <Tooltip
-        tooltip={tooltipText}
+        {...args}
         icon={<CopySVG />}
         iconAction={(): void => {
-          copyText(tooltipText);
+          copyText(args.tooltip as string);
         }}
-        {...args}
       >
         <H4>Basic + Action</H4>
       </Tooltip>
@@ -52,7 +49,9 @@ const Template: Story<TooltipProps> = ({ ...args }) => (
 );
 
 export const tooltip = Template.bind({});
-tooltip.args = {};
+tooltip.args = {
+  tooltip: 'Здесь будут показаны примененные фильтры.\nЗадать фильтры можно в меню столбца.',
+};
 tooltip.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

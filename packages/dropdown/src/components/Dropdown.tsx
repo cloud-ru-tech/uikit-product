@@ -11,8 +11,8 @@ export type TDropdownMenuActionType = {
 
 export type TDropdownMenuActionProps = {
   on: boolean;
-  set: (on: boolean) => void;
-  hide: () => void;
+  set(on: boolean): void;
+  hide(): void;
 };
 export type TDropdownMenuCustomActions = (props: TDropdownMenuActionProps) => React.ReactNode;
 

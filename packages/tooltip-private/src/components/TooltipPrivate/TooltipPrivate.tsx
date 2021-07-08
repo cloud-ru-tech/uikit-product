@@ -1,3 +1,4 @@
+import { cx } from '@linaria/core';
 import TooltipTrigger from 'react-popper-tooltip';
 
 import { Placements, TooltipPrivateProps } from '../../helpers/types';
@@ -17,7 +18,7 @@ export const TooltipPrivate = ({
     tooltip={({ arrowRef, tooltipRef, getArrowProps, getTooltipProps, placement }): React.ReactNode => {
       const tooltipProps = getTooltipProps({
         ref: tooltipRef,
-        className: classNameContainer || tooltipClassName,
+        className: cx(tooltipClassName, classNameContainer),
       });
       return (
         <div {...tooltipProps}>
@@ -25,7 +26,7 @@ export const TooltipPrivate = ({
             <div
               {...getArrowProps({
                 ref: arrowRef,
-                className: classNameArrow ? [classNameArrow] : 'tooltip-arrow',
+                className: cx('tooltip-arrow', classNameArrow),
                 'data-placement': placement,
               })}
             />
@@ -39,7 +40,7 @@ export const TooltipPrivate = ({
       <span
         {...getTriggerProps({
           ref: triggerRef,
-          className: classNameTrigger || triggerClassName,
+          className: cx(triggerClassName, classNameTrigger),
         })}
       >
         {children}
