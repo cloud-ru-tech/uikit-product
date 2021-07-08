@@ -549,6 +549,20 @@ const COLORS_ATTENTION = {
   HIGH_IMPORTANCE_LEVEL_LINE: '--attention-high-importance-level-line',
 };
 
+const COLORS_HIERARCHY_MENU = {
+  MENU_BACKGROUND: '--hierarchy-menu-menu-background',
+
+  ACCORDION_NODE_ICON: '--hierarchy-menu-accordion-node-icon',
+  ACCORDION_NODE_TEXT: '--hierarchy-menu-accordion-node-text',
+  ACCORDION_NODE_HOVER_TEXT: '--hierarchy-menu-accordion-node-hover-text',
+  ACCORDION_NODE_ACTIVE_TEXT: '--hierarchy-menu-accordion-node-active-text',
+
+  LEAF_NODE_TEXT: '--hierarchy-menu-leaf-node-text',
+  LEAF_NODE_ICON: '--hierarchy-menu-leaf-node-icon',
+  LEAF_NODE_HOVER: '--hierarchy-menu-leaf-node-hover',
+  LEAF_NODE_ACTIVE: '--hierarchy-menu-leaf-node-active',
+};
+
 export {
   COLORS,
   COLORS_BRAND,
@@ -589,6 +603,7 @@ export {
   COLORS_DATEPICKER,
   COLORS_PRESET,
   COLORS_ATTENTION,
+  COLORS_HIERARCHY_MENU,
 };
 
 export default {
@@ -631,4 +646,5 @@ export default {
   COLORS_DATEPICKER,
   COLORS_PRESET,
   COLORS_ATTENTION,
+  COLORS_HIERARCHY_MENU,
 };
