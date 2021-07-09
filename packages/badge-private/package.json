@@ -1,8 +1,12 @@
 {
   "name": "@sbercloud/uikit-react-badge-private",
   "title": "React Badge Private",
-  "version": "0.2.22",
-  "sideEffects": false,
+  "version": "0.3.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,10 +26,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.17.0"
+    "@sbercloud/uikit-theme": "0.18.0"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-button": "0.4.0"
+    "@sbercloud/uikit-react-button": "0.5.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

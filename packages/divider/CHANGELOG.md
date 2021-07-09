@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-divider@0.2.19&sourceBranch=refs/tags/@sbercloud/uikit-react-divider@0.3.0) (2021-07-12)
+
+
+### Features
+
+* Extract styles at build time ([064a959](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/064a959b3c4aa59431767200c28a24b74dbf41cb))
+
+
+
+
+
 ## [0.2.19](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-divider@0.2.18&sourceBranch=refs/tags/@sbercloud/uikit-react-divider@0.2.19) (2021-07-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-divider

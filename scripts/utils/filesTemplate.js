@@ -22,7 +22,7 @@ const packageJson = ({ user, email, packageTitle, packageName, packageDescriptio
     name: `@sbercloud/uikit-${packageName}`,
     title: `${packageTitle}`,
     version: '0.0.0',
-    sideEffects: false,
+    sideEffects: ['*.css', '*.woff', '*.woff2'],
     description: `${packageDescription}`,
     main: './dist/esm/index.js',
     module: './dist/esm/index.js',

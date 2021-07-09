@@ -1,8 +1,12 @@
 {
   "name": "@sbercloud/uikit-react-hierarchy-menu",
   "title": "React Hierarchy Menu",
-  "version": "0.1.1",
-  "sideEffects": false,
+  "version": "0.2.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,9 +26,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-divider": "0.2.19",
-    "@sbercloud/uikit-react-icons": "1.1.1",
-    "@sbercloud/uikit-theme": "0.17.0"
+    "@sbercloud/uikit-react-divider": "0.3.0",
+    "@sbercloud/uikit-react-icons": "1.2.0",
+    "@sbercloud/uikit-theme": "0.18.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
