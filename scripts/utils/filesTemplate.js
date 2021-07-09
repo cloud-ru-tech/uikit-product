@@ -57,7 +57,7 @@ const changelog = ({ packageRootFolderName }) => {
   // Whitespace in this const is intentional, since it defines how the markdown is shown
   const changelogContent = `## CHANGELOG
 
-### v0.0.1
+### v0.0.0
 
 - Initial version
 `;
