@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.16&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.4.0) (2021-07-09)
+
+
+### Features
+
+* Tooltip Private component alpha version ([57675f7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/57675f7583d1553e16f5276c5d1abea999805179))
+
+
+
+
+
 ## [0.3.16](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.15&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.3.16) (2021-07-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-modal

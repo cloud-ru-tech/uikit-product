@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-switch",
   "title": "React Switch",
-  "version": "0.1.19",
+  "version": "0.1.20",
   "sideEffects": false,
   "description": "",
   "main": "./dist/esm/index.js",
@@ -22,7 +22,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.16.0",
+    "@sbercloud/uikit-theme": "0.17.0",
     "react-switch": "6.0.0"
   },
   "peerDependencies": {

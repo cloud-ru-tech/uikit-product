@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.16.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.17.0) (2021-07-09)
+
+
+### Features
+
+* Dropdown component alpha version ([21702e5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/21702e5616dc9aba3f3e231026c66f194fcba4de))
+
+
+
+
+
 # [0.16.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.15.1&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.16.0) (2021-07-08)
 
 

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tooltip@0.1.20&sourceBranch=refs/tags/@sbercloud/uikit-react-tooltip@0.2.0) (2021-07-09)
+
+
+### Bug Fixes
+
+* Tooltip Private delete stories ([ddca59a](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/ddca59aa6427dcd2c269258391b25b45c7b77f51))
+
+
+### Features
+
+* Dropdown component alpha version ([21702e5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/21702e5616dc9aba3f3e231026c66f194fcba4de))
+* Tooltip Private component alpha version ([57675f7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/57675f7583d1553e16f5276c5d1abea999805179))
+
+
+
+
+
 ## [0.1.20](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tooltip@0.1.19&sourceBranch=refs/tags/@sbercloud/uikit-react-tooltip@0.1.20) (2021-07-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tooltip

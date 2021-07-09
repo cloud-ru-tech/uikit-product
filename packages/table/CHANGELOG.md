@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.2.34&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.3.0) (2021-07-09)
+
+
+### Features
+
+* Tooltip Private component alpha version ([57675f7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/57675f7583d1553e16f5276c5d1abea999805179))
+
+
+
+
+
 ## [0.2.34](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.2.33&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.2.34) (2021-07-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-collapse-panel@0.3.7&sourceBranch=refs/tags/@sbercloud/uikit-react-collapse-panel@0.3.8) (2021-07-09)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-collapse-panel
+
+
+
+
+
 ## [0.3.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-collapse-panel@0.3.6&sourceBranch=refs/tags/@sbercloud/uikit-react-collapse-panel@0.3.7) (2021-07-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-collapse-panel
