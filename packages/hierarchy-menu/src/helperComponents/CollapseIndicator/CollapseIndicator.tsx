@@ -1,11 +1,14 @@
-import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
-
+import { FC } from 'react';
 import * as S from './styled';
 
-export function CollapseIndicator({ onClick, collapsed }: { onClick(e: React.MouseEvent): void; collapsed: boolean }) {
-  return collapsed ? (
-    <DropdownDownInterfaceSVG onClick={onClick} className={S.RotatedView} />
-  ) : (
-    <DropdownDownInterfaceSVG onClick={onClick} />
-  );
+interface CollapseIndicatorProps {
+  onClick(e: React.MouseEvent): void;
+  collapsed: boolean;
+  isLeaf: boolean;
 }
+export const CollapseIndicator: FC<CollapseIndicatorProps> = ({ onClick, collapsed, isLeaf }) => {
+  if (isLeaf) {
+    return null;
+  }
+  return <S.CollapsedIcon onClick={onClick} data-collapsed={collapsed || undefined} />;
+};

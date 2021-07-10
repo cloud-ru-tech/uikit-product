@@ -6,18 +6,27 @@ import * as S from './styled';
 
 export type HierarchyMenuProps = {
   nodes: TreeNodeProps[];
-  width?: string | number;
-  height?: string | number;
+  className?: string;
+  onItemClick?(id: string): void;
   activeNode?: string;
+  ['data-test-id']?: string;
 };
 
-export function HierarchyMenu({ nodes = [], width, height, activeNode }: HierarchyMenuProps) {
+export function HierarchyMenu(props: HierarchyMenuProps) {
+  const { nodes = [], className, activeNode, onItemClick } = props;
   const [activeKey, setActiveKey] = useState(activeNode || '');
   useEffect(() => setActiveKey(activeNode || ''), [activeNode]);
+
   return (
-    <S.Wrapper width={width} height={height}>
+    <S.Wrapper className={className} data-test-id={props['data-test-id']}>
       {nodes.map(nodeDefinition => (
-        <TreeMenu {...nodeDefinition} key={nodeDefinition.id} activeKey={activeKey} setActiveKey={setActiveKey} />
+        <TreeMenu
+          {...nodeDefinition}
+          key={nodeDefinition.id}
+          activeKey={activeKey}
+          setActiveKey={setActiveKey}
+          onItemClick={onItemClick}
+        />
       ))}
     </S.Wrapper>
   );

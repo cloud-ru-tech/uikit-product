@@ -1,5 +1,8 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
+import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-export const RotatedView = css`
-  transform: rotate(-90deg);
+export const CollapsedIcon = styled(DropdownDownInterfaceSVG)`
+  &[data-collapsed] {
+    transform: rotate(-90deg);
+  }
 `;
