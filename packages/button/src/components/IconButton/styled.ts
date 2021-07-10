@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { ResetButton } from '../ResetButton';
 
-const { COLORS_ICON_BUTTON } = EXPORT_VARS;
+const { COLORS_ICON_BUTTON } = DEPRECATED_EXPORT_VARS;
 
 export const Wrapper = styled(ResetButton)`
   display: inline-flex;

@@ -1,10 +1,10 @@
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { useCallback } from 'react';
 
 import { PRESET_COLORS, PresetColorType } from '../helpers/colors';
 import { StyledInputAutosize, StyledTag } from './styled';
 
-const { COLORS_TAG } = EXPORT_VARS;
+const { COLORS_TAG } = DEPRECATED_EXPORT_VARS;
 
 enum Types {
   Card = 'card',

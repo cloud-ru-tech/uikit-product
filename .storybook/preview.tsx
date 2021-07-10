@@ -5,7 +5,7 @@ import React from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
 
-import { globals, green, greenDark, purple, purpleDark } from '../packages/theme/src';
+import { globals, green, greenDark, purple, purpleDark, defaultColor } from '../packages/theme/src';
 
 const changeTheme = (theme: { name: string }) => {
   const root = (
@@ -28,7 +28,7 @@ addDecorator((Story, { globals: { locale } }) => {
 
   return (
     // Add global styles and theme variables
-    <div className={globals} id='story-root'>
+    <div className={`${globals} ${defaultColor}`} id='story-root'>
       <LanguageProvider languageCode={locale || LanguageCodeType.ruRU}>
         {/* @ts-ignore*/}
         <Story />
@@ -41,7 +41,7 @@ addParameters({
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
-      order: ['Components', 'Not stable', 'Typography', 'Variables'],
+      order: ['Theme', 'Atoms', 'Not stable', 'Typography', ],
     },
   },
   themes: {

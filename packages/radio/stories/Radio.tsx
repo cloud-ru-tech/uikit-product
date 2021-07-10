@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -7,7 +7,7 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { IRadioProps, Radio } from '../src';
 
-const { COLORS_DRAWER } = EXPORT_VARS;
+const { COLORS_DRAWER } = DEPRECATED_EXPORT_VARS;
 
 export default {
   title: 'Not stable/Radio/Radio',

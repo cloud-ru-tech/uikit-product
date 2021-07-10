@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
 import TextareaAutosize from 'react-textarea-autosize';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_INPUT } = EXPORT_VARS;
+const { COLORS_INPUT } = DEPRECATED_EXPORT_VARS;
 
 export const StyledTextareaAutosize = styled(TextareaAutosize)`
   width: 100%;

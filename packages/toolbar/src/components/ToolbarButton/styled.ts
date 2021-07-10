@@ -1,8 +1,8 @@
 import { css } from '@linaria/core';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_TOOLBAR } = EXPORT_VARS;
+const { COLORS_TOOLBAR } = DEPRECATED_EXPORT_VARS;
 
 const activeToolbarButtonClassName = css`
   color: var(${COLORS_TOOLBAR.ACTIVE_BUTTON}) !important;

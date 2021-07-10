@@ -1,4 +1,4 @@
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const H_1 = `
   font-style: normal;
@@ -77,7 +77,7 @@ const TEXT_2_LINK = `
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: var(${EXPORT_VARS.COLORS_TYPOGRAPHY.LINK});
+  color: var(${DEPRECATED_EXPORT_VARS.COLORS_TYPOGRAPHY.LINK});
   text-decoration: none;
 `;
 

@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_HIERARCHY_MENU } = EXPORT_VARS;
+const { COLORS_HIERARCHY_MENU } = DEPRECATED_EXPORT_VARS;
 
 export const NodeWrapper = styled.div<{ depth: number }>`
   cursor: pointer;

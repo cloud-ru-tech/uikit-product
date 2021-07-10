@@ -1,9 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_INPUT } = EXPORT_VARS;
+const { COLORS_INPUT } = DEPRECATED_EXPORT_VARS;
 
 const copyButtonClassName = css`
   margin-right: -8px;

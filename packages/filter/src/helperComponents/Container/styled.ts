@@ -1,8 +1,8 @@
 import { css } from '@linaria/core';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_FILTER } = EXPORT_VARS;
+const { COLORS_FILTER } = DEPRECATED_EXPORT_VARS;
 
 export const tooltipClassName = css`
   background: var(${COLORS_FILTER.FILTER_BACKGROUND});

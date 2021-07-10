@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_TABS } = EXPORT_VARS;
+const { COLORS_TABS } = DEPRECATED_EXPORT_VARS;
 
 export const GroupStyled = styled.ul`
   margin: 0;

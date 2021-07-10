@@ -1,8 +1,8 @@
 import { css } from '@linaria/core';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_SLIDER } = EXPORT_VARS;
+const { COLORS_SLIDER } = DEPRECATED_EXPORT_VARS;
 
 export const rangeStyles = css`
   .rc-slider-handle-click-focused {

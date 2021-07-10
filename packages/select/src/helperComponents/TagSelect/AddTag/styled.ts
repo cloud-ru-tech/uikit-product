@@ -1,11 +1,11 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Button } from '@sbercloud/uikit-react-button';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
 const { TEXT_4 } = TYPOGRAPHY_VARIABLES;
-const { COLORS_SELECT } = EXPORT_VARS;
+const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
 export const Container = styled.div`
   width: 100%;

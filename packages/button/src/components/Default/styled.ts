@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
 const { H_4, TEXT_2 } = TYPOGRAPHY_VARIABLES;
-const { COLORS_BUTTON } = EXPORT_VARS;
+const { COLORS_BUTTON } = DEPRECATED_EXPORT_VARS;
 
 export const ButtonComponent = styled.button`
   position: relative;

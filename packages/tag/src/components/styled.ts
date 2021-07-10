@@ -1,11 +1,11 @@
 import { styled } from '@linaria/react';
 import { InputAutosize } from '@sbercloud/uikit-react-input';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { PRESET_COLORS } from '../helpers/colors';
 import { TTagType } from './Tag';
 
-const { COLORS_TAG } = EXPORT_VARS;
+const { COLORS_TAG } = DEPRECATED_EXPORT_VARS;
 export const StyledTag = styled.div<{ type: TTagType }>`
   max-width: 100%;
   min-width: 30px;

@@ -1,7 +1,13 @@
 export * from './globals';
+export * from './color/default';
 export * from './color/purple';
-export * from './color/purple-dark';
+export * from './color/purpleDark';
 export * from './color/green';
-export * from './color/green-dark';
+export * from './color/greenDark';
+export * from './color/DEPRECATED/purple';
+export * from './color/DEPRECATED/purple-dark';
+export * from './color/DEPRECATED/green';
+export * from './color/DEPRECATED/green-dark';
 
 export { default as EXPORT_VARS } from './color/vars';
+export { default as DEPRECATED_EXPORT_VARS } from './color/DEPRECATED/vars';

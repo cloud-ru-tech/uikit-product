@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { Button } from '@sbercloud/uikit-react-button';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useMemo, useRef, useState } from 'react';
 
@@ -14,7 +14,7 @@ export default {
   component: ModalPreview,
 } as Meta;
 
-const { COLORS } = EXPORT_VARS;
+const { COLORS } = DEPRECATED_EXPORT_VARS;
 
 const Container = styled.div`
   position: relative;

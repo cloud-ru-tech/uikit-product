@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_DATEPICKER } = EXPORT_VARS;
+const { COLORS_DATEPICKER } = DEPRECATED_EXPORT_VARS;
 
 export const hiddenInputClassName = css`
   border: 0;

@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_AVATAR } = EXPORT_VARS;
+const { COLORS_AVATAR } = DEPRECATED_EXPORT_VARS;
 
 export const Avatar = styled.div<{ backgroundImage?: string }>`
   display: flex;

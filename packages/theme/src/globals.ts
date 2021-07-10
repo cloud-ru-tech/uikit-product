@@ -1,6 +1,7 @@
 import { css } from '@linaria/core';
 
-import { COLORS_GENERAL } from './color/vars';
+import { DEPRECATED_EXPORT_VARS } from './';
+const { COLORS_GENERAL } = DEPRECATED_EXPORT_VARS;
 
 export const globals = css`
   :global() {

@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TableText, Text4 } from '@sbercloud/uikit-typography';
 
-const { COLORS_RADIO } = EXPORT_VARS;
+const { COLORS_RADIO } = DEPRECATED_EXPORT_VARS;
 
 export const HiddenRadio = styled.input`
   display: none;

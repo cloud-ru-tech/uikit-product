@@ -1,8 +1,8 @@
 import { css } from '@linaria/core';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_INPUT } = EXPORT_VARS;
+const { COLORS_INPUT } = DEPRECATED_EXPORT_VARS;
 
 export const inputClassname = css`
   flex-grow: 1;

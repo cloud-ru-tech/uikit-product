@@ -1,11 +1,11 @@
 import { CSSProperties } from 'react';
 import { Theme } from 'react-select';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { styles as commonStyles, theme as commonTheme } from './common';
 
-const { COLORS_SELECT, COLORS } = EXPORT_VARS;
+const { COLORS_SELECT, COLORS } = DEPRECATED_EXPORT_VARS;
 
 export const theme = commonTheme({
   borderRadius: 12,

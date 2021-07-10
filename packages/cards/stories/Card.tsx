@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { Checkbox } from '@sbercloud/uikit-react-checkbox';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
@@ -10,7 +10,7 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Card, CardProps } from '../src';
 
-const { COLORS } = EXPORT_VARS;
+const { COLORS } = DEPRECATED_EXPORT_VARS;
 
 export default {
   title: 'Not stable/Card/Card',

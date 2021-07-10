@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_ATTENTION } = EXPORT_VARS;
+const { COLORS_ATTENTION } = DEPRECATED_EXPORT_VARS;
 
 export const Container = styled.div`
   display: flex;

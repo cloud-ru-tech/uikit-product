@@ -1,8 +1,8 @@
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { CSSProperties } from 'react';
 import { Props, Styles, Theme } from 'react-select';
 
-const { COLORS_GENERAL, COLORS_SELECT } = EXPORT_VARS;
+const { COLORS_GENERAL, COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
 export const theme =
   (typeTheme?: Partial<Theme>) =>

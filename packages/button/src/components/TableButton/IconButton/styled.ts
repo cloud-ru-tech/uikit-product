@@ -1,9 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
-const { TABLE_BUTTON_COLORS } = EXPORT_VARS;
+const { TABLE_BUTTON_COLORS } = DEPRECATED_EXPORT_VARS;
 const { TABLE_TEXT } = TYPOGRAPHY_VARIABLES;
 
 export const IconButtonWrapper = styled.button`

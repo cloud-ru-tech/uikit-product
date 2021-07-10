@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_BADGE } = EXPORT_VARS;
+const { COLORS_BADGE } = DEPRECATED_EXPORT_VARS;
 export const BadgeStyled = styled.span`
   display: inline-flex;
   position: relative;

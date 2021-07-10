@@ -1,11 +1,11 @@
 import { css } from '@linaria/core';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { useEffect, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { StyledInputSearch } from './styled';
 
-const { COLORS_SELECT } = EXPORT_VARS;
+const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
 const inputWrapperClassName = css`
   border-top-left-radius: 4px;

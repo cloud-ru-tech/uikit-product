@@ -1,9 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_INPUT, COLORS_TOOLBAR } = EXPORT_VARS;
+const { COLORS_INPUT, COLORS_TOOLBAR } = DEPRECATED_EXPORT_VARS;
 
 export const searchIconClassname = css`
   fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});

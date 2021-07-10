@@ -7,7 +7,7 @@ import * as Icons from '../src/components/color-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 export default {
-  title: 'Components/Icons/Color',
+  title: 'Atoms/Icons/Color',
 } as Meta;
 
 const Template = getTemplate(Icons);

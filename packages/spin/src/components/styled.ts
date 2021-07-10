@@ -1,14 +1,14 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 type ISpinnerProps = {
   size: number;
   borderSize: number;
 };
 
-const { COLORS_SPIN } = EXPORT_VARS;
+const { COLORS_SPIN } = DEPRECATED_EXPORT_VARS;
 
 export const Spinner = styled.div<ISpinnerProps>`
   width: ${props => props.size}px;

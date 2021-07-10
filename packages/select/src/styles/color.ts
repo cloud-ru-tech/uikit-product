@@ -1,10 +1,10 @@
 import { CSSProperties } from 'react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { styles as commonStyles, theme as commonTheme } from './common';
 
-const { COLORS_SELECT } = EXPORT_VARS;
+const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
 export const theme = commonTheme();
 

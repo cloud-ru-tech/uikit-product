@@ -1,8 +1,8 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_COLLAPSE_PANEL } = EXPORT_VARS;
+const { COLORS_COLLAPSE_PANEL } = DEPRECATED_EXPORT_VARS;
 
 export const ContainerStyled = styled.div<{ showHover?: boolean }>`
   display: flex;

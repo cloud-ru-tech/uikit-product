@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_INPUT, COLORS_BUTTON } = EXPORT_VARS;
+const { COLORS_INPUT, COLORS_BUTTON } = DEPRECATED_EXPORT_VARS;
 
 export const StyledInput = styled.input<{ allowCopy?: boolean; paddingRight?: number }>`
   flex-grow: 1;

@@ -7,7 +7,7 @@ import * as Icons from '../src/components/logo-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 export default {
-  title: 'Components/Icons/Logo',
+  title: 'Atoms/Icons/Logo',
 } as Meta;
 
 const Template = getTemplate(Icons);

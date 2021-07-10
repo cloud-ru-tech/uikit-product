@@ -1,8 +1,8 @@
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { StyledDivider } from './styled';
 
-const { COLORS_DIVIDER } = EXPORT_VARS;
+const { COLORS_DIVIDER } = DEPRECATED_EXPORT_VARS;
 
 export type DividerProps = {
   color?: 'light' | 'middle' | 'dark' | string;

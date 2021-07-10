@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_GENERAL } = EXPORT_VARS;
+const { COLORS_GENERAL } = DEPRECATED_EXPORT_VARS;
 
 export const containerClassName = css`
   color: var(${COLORS_GENERAL.TEXT});

@@ -4,7 +4,7 @@ import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
 import { Select } from '@sbercloud/uikit-react-select';
 import { Slider } from '@sbercloud/uikit-react-slider';
 import { TruncateString } from '@sbercloud/uikit-react-truncate-string';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
@@ -13,7 +13,7 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { FormField, FormGroup } from '../src';
 
-const { COLORS_DRAWER } = EXPORT_VARS;
+const { COLORS_DRAWER } = DEPRECATED_EXPORT_VARS;
 
 export default {
   title: 'Not stable/Form/Form Group',

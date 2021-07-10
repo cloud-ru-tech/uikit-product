@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
-const { COLORS_FILTER } = EXPORT_VARS;
+const { COLORS_FILTER } = DEPRECATED_EXPORT_VARS;
 const { TEXT_2 } = TYPOGRAPHY_VARIABLES;
 
 export const Button = styled.button`

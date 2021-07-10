@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TableText } from '@sbercloud/uikit-typography';
 
-const { COLORS_STATUS } = EXPORT_VARS;
+const { COLORS_STATUS } = DEPRECATED_EXPORT_VARS;
 
 export const Wrapper = styled.span`
   display: inline-flex;

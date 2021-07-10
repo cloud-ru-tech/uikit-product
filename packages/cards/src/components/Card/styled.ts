@@ -1,10 +1,10 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import cardBackground from '../../assets/card_background.png';
 
-const { COLORS_CARD } = EXPORT_VARS;
+const { COLORS_CARD } = DEPRECATED_EXPORT_VARS;
 
 export const ContainerStyled = styled.button<{
   selected?: boolean;

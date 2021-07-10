@@ -1,10 +1,10 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H5, Text3 } from '@sbercloud/uikit-typography';
 
-const { COLORS_TOAST } = EXPORT_VARS;
+const { COLORS_TOAST } = DEPRECATED_EXPORT_VARS;
 
 export const progressClassName = css`
   animation: spin 0.7s infinite steps(8);

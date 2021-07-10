@@ -1,9 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H3 } from '@sbercloud/uikit-typography';
 
-const { COLORS_NO_DATA_PAGE } = EXPORT_VARS;
+const { COLORS_NO_DATA_PAGE } = DEPRECATED_EXPORT_VARS;
 
 export const Container = styled.div`
   width: 100%;
