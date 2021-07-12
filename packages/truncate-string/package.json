@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-truncate-string",
   "title": "React Truncate String",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-slider": "0.2.0",
+    "@sbercloud/uikit-react-slider": "0.3.0",
     "@types/lodash.debounce": "4.0.6"
   },
   "peerDependencies": {
