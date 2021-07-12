@@ -15,7 +15,24 @@
    содержание `.npmrc`:
    `@sbercloud:registry=https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/`
    `_auth={token}`
-3. Установить необходимый пакет, например `npm i @sbercloud/uikit-react-button`.
+3. При использовании `linaria` Добавить в `linaria.config.js` секцию:
+
+```
+rules: [
+  {
+    action: require('@linaria/shaker').default,
+  },
+  {
+    test: filePath =>
+    !new RegExp(
+      `@sbercloud\\${path.sep}uikit-(theme|typography)\\${path.sep}dist\\${path.sep}esm`,
+    ).test(filePath) && /node_modules/.test(filePath),
+    action: 'ignore',
+  },
+]
+```
+
+4. Установить необходимый пакет, например `npm i @sbercloud/uikit-react-button`.
 
 # Styling:
 

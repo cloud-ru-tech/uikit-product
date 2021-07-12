@@ -1,4 +1,6 @@
-module.exports = buildType => ({
+const getClassNameSlug = require('./scripts/utils/getClassNameSlug');
+
+module.exports = (buildType, version) => ({
   sourceType: 'unambiguous',
   presets: [
     ['@babel/preset-env', { loose: false, modules: buildType === 'cjs' ? 'cjs' : false }],
@@ -10,7 +12,12 @@ module.exports = buildType => ({
       },
     ],
     ['@babel/preset-typescript', { loose: false }],
-    '@linaria',
+    [
+      '@linaria',
+      version && {
+        classNameSlug: getClassNameSlug(version),
+      },
+    ],
   ].filter(Boolean),
   plugins: [
     '@babel/plugin-proposal-export-namespace-from',

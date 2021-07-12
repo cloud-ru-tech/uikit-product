@@ -49,7 +49,7 @@ const { emitDeclarations, createTSProgram } = require('./compile/emit-declaratio
 
     const jsFiles = glob.sync(`${src}/**/*.{ts,tsx,js,jsx}`);
     const jsPipe = writeJs({ src, distCJS, distESM });
-    jsFiles.forEach(jsPipe(transformJs()));
+    jsFiles.forEach(jsPipe(transformJs(package.version)));
 
     jsTiming += moment().diff(jsStart, 'ms');
 

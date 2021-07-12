@@ -1,1 +1,1 @@
-module.exports = require('./base.babel.config')('esm');
+module.exports = version => require('./base.babel.config')('esm', version);
