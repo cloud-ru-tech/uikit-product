@@ -1,6 +1,6 @@
 import {
   DeleteInterfaceSVG,
-  FileInterfaceSVG,
+  FilterInterfaceSVG,
   RefreshInterfaceSVG,
   RowExpandedInterfaceSVG,
   TableSettingsInterfaceSVG,
@@ -35,7 +35,7 @@ const Template: Story<ToolbarWrapperProps> = ({ ...args }) => {
         }}
       />
       <Toolbar.Button badgeText='3'>
-        <FileInterfaceSVG />
+        <FilterInterfaceSVG />
       </Toolbar.Button>
       <Toolbar.Button>
         <RowExpandedInterfaceSVG />

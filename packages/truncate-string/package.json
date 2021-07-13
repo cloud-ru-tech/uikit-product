@@ -10,7 +10,7 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-truncate-string/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/truncate-string/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
@@ -29,7 +29,6 @@
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {
-    "@sbercloud/uikit-react-slider": "0.3.0",
     "@types/lodash.debounce": "4.0.6"
   },
   "peerDependencies": {

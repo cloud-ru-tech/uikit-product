@@ -10,7 +10,7 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-table/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/table/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
@@ -43,7 +43,7 @@
     "ag-grid-community": "25.3.0",
     "ag-grid-enterprise": "25.3.0",
     "ag-grid-react": "25.3.0",
-    "date-fns": "2.21.3",
+    "date-fns": "2.22.1",
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {

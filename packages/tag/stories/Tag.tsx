@@ -1,5 +1,4 @@
 import { styled } from '@linaria/react';
-import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
@@ -29,7 +28,7 @@ const TagWrap = styled.div`
   padding: 10px;
 `;
 
-const Title = styled(H4)`
+const Title = styled.div`
   margin-bottom: 20px;
 `;
 

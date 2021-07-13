@@ -1,6 +1,5 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_COLLAPSE_PANEL } = EXPORT_VARS;
@@ -62,7 +61,6 @@ export const CollapseButtonStyled = styled.button`
 
 export const collapseIconClassName = css`
   fill: black;
-  stroke: black;
 `;
 
 export const ContentWrapStyled = styled.div`

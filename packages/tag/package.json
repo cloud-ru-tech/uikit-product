@@ -10,7 +10,7 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-tag/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/tag/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
@@ -28,9 +28,6 @@
   "dependencies": {
     "@sbercloud/uikit-react-input": "0.10.0",
     "@sbercloud/uikit-theme": "0.19.0"
-  },
-  "devDependencies": {
-    "@sbercloud/uikit-typography": "0.3.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

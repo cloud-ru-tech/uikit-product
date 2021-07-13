@@ -1,5 +1,4 @@
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TableText, Text4 } from '@sbercloud/uikit-typography';
 
@@ -12,29 +11,27 @@ export const HiddenRadio = styled.input`
 export const IconContainer = styled.div`
   display: flex;
 
-  stroke: var(${COLORS_RADIO.ICON_COLOR});
-  fill: var(${COLORS_RADIO.ICON_BG});
+  fill: var(${COLORS_RADIO.ICON_COLOR});
 
   &:not([data-disabled='true']) {
     &:hover {
-      stroke: var(${COLORS_RADIO.ICON_HOVER_COLOR});
+      fill: var(${COLORS_RADIO.ICON_HOVER_COLOR});
     }
   }
 
   &[data-disabled='true'] {
-    stroke: var(${COLORS_RADIO.ICON_DISABLED_COLOR});
-    fill: none;
+    fill: var(${COLORS_RADIO.ICON_DISABLED_COLOR});
   }
 
   &[data-checked='true'] {
-    stroke: var(${COLORS_RADIO.CHECKED_ICON_COLOR});
+    fill: var(${COLORS_RADIO.CHECKED_ICON_COLOR});
 
     &:hover {
-      stroke: var(${COLORS_RADIO.CHECKED_ICON_HOVER_COLOR});
+      fill: var(${COLORS_RADIO.CHECKED_ICON_HOVER_COLOR});
     }
 
     &[data-disabled='true'] {
-      stroke: var(${COLORS_RADIO.CHECKED_ICON_DISABLED_COLOR});
+      fill: var(${COLORS_RADIO.CHECKED_ICON_DISABLED_COLOR});
     }
   }
 `;
