@@ -1,4 +1,4 @@
-import { ArrowRightSVG } from '@sbercloud/icons';
+import { ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -252,7 +252,7 @@ export const Breadcrumbs = ({
           isFixedWidth={!!isFixedWidth}
           style={{ width: item.width }}
         >
-          {index !== 0 && <ArrowRightSVG className={chevronClassName} data-chevron />}
+          {index !== 0 && <ChevronRightInterfaceSVG className={chevronClassName} data-chevron />}
           {textWrapper(
             item.tooltip,
             item.text,
@@ -267,7 +267,7 @@ export const Breadcrumbs = ({
           )}
           {index === visibleElementsCount - 1 && hasHideElements && (
             <Collapsed data-collapsed>
-              <ArrowRightSVG className={chevronClassName} />
+              <ChevronRightInterfaceSVG className={chevronClassName} />
               <ItemTextStyled>...</ItemTextStyled>
             </Collapsed>
           )}

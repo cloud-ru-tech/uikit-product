@@ -1,4 +1,4 @@
-import { DeleteSVG } from '@sbercloud/icons';
+import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { RefreshButton } from '@sbercloud/uikit-react-button';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
@@ -50,7 +50,7 @@ export function ClientModelTableView<T>({
         )}
         {deleteProps && (
           <Toolbar.Button disabled={!deleteProps.isDeleteEnabled} onClick={deleteProps.openDeleteDialog}>
-            <DeleteSVG />
+            <DeleteInterfaceSVG />
           </Toolbar.Button>
         )}
         <Toolbar.Input

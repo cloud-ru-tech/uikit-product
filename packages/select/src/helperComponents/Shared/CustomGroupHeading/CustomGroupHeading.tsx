@@ -1,6 +1,6 @@
 import { components as ReactSelectComponents } from 'react-select';
 
-import { ArrowDownSVG } from '@sbercloud/icons';
+import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { ISelectProps } from '../../../components';
 import { arrowClass } from './styled';
@@ -34,7 +34,7 @@ export const CustomGroupHeading = <CustomOptionType,>(
         }
         onClick={() => setOpen?.(!open)}
       >
-        <ArrowDownSVG className={arrowClass} data-open={open || undefined} />
+        <DropdownDownInterfaceSVG className={arrowClass} data-open={open || undefined} />
         {children}
       </ReactSelectComponents.GroupHeading>
     );

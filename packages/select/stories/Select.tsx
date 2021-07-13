@@ -1,8 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import { styled } from '@linaria/react';
-import { HelpSVG } from '@sbercloud/icons';
 import { Avatar } from '@sbercloud/uikit-react-avatar';
+import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { RadioIcon } from '@sbercloud/uikit-react-radio';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
@@ -113,7 +113,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
       };
     }
 
-    return () => <HelpSVG size={20} />;
+    return () => <QuestionInterfaceSVG size={20} />;
   };
 
   const getOptionProp = () => {

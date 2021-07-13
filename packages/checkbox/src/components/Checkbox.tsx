@@ -1,6 +1,10 @@
 import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
-import { SelectedPartSVG, SelectedSVG, UnSelectedSVG } from '@sbercloud/icons';
+import {
+  CheckboxPartSectedInterfaceSVG,
+  CheckboxSelectedInterfaceSVG,
+  CheckboxUselectedInterfaceSVG,
+} from '@sbercloud/uikit-react-icons';
 
 import { CheckboxChildrenStyled, CheckboxLabelStyled, CheckboxStyled, svgClassName } from './styled';
 import { useElementId } from './utils';
@@ -46,21 +50,21 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   const Icon = () => {
     const iconData = {
       default: (
-        <UnSelectedSVG
+        <CheckboxUselectedInterfaceSVG
           className={svgClassName}
           data-selected={partChecked || checked || undefined}
           data-disabled={disabled || undefined}
         />
       ),
       partChecked: (
-        <SelectedPartSVG
+        <CheckboxPartSectedInterfaceSVG
           className={svgClassName}
           data-selected={partChecked || checked || undefined}
           data-disabled={disabled || undefined}
         />
       ),
       checked: (
-        <SelectedSVG
+        <CheckboxSelectedInterfaceSVG
           className={svgClassName}
           data-selected={partChecked || checked || undefined}
           data-disabled={disabled || undefined}

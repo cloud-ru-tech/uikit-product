@@ -1,5 +1,5 @@
 import { css } from '@linaria/core';
-import { ArrowDownSVG, CrossSVG } from '@sbercloud/icons';
+import { DropdownDownInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { useMemo } from 'react';
 import { components as ReactSelectComponents, SelectComponentsConfig } from 'react-select';
@@ -19,13 +19,13 @@ export const DropdownIndicator = (
   props: React.ComponentProps<typeof ReactSelectComponents.DropdownIndicator>,
 ): JSX.Element => (
   <ReactSelectComponents.DropdownIndicator {...props}>
-    <ArrowDownSVG />
+    <DropdownDownInterfaceSVG />
   </ReactSelectComponents.DropdownIndicator>
 );
 
 const MultiValueRemove = (props: React.ComponentProps<typeof ReactSelectComponents.MultiValueRemove>): JSX.Element => (
   <ReactSelectComponents.MultiValueRemove {...props}>
-    <CrossSVG className={crossSVGClassName} />
+    <CloseInterfaceSVG className={crossSVGClassName} />
   </ReactSelectComponents.MultiValueRemove>
 );
 

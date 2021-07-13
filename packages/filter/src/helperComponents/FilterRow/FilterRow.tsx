@@ -1,4 +1,4 @@
-import { CrossSVG } from '@sbercloud/icons';
+import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input } from '@sbercloud/uikit-react-input';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
@@ -123,7 +123,7 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
             onChange?.(nextValue);
           }}
         >
-          <CrossSVG />
+          <CloseInterfaceSVG />
         </ActionButton>
       </S.FilterColumn>
     </S.FilterRow>

@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import { ArrowUpSVG, FavSVG } from '@sbercloud/icons';
+import { DropdownUpInterfaceSVG, FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Divider } from '@sbercloud/uikit-react-divider';
 
 import {
@@ -51,7 +51,7 @@ export const CollapsePanelItem: FC<CollapsePanelItemProps> = ({
         <HeaderStyled>{header}</HeaderStyled>
         <ButtonGroupStyled>
           {isShowFavourites && (
-            <FavSVG
+            <FavouriteInterfaceSVG
               className={favouriteButtonClassName}
               data-filled={isFavouriteState || undefined}
               onClick={() => setIsFavourite(isFavourite => !isFavourite)}
@@ -59,7 +59,7 @@ export const CollapsePanelItem: FC<CollapsePanelItemProps> = ({
           )}
           {isShowCollapse && (
             <CollapseButtonStyled onClick={handleClick} data-rotate={isCollapsed || undefined}>
-              <ArrowUpSVG className={collapseIconClassName} />
+              <DropdownUpInterfaceSVG className={collapseIconClassName} />
             </CollapseButtonStyled>
           )}
         </ButtonGroupStyled>

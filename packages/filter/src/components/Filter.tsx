@@ -1,4 +1,4 @@
-import { AddSVG, CrossSVG } from '@sbercloud/icons';
+import { PlusInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { OptionTypeBase } from '@sbercloud/uikit-react-select';
@@ -121,7 +121,7 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
             <S.Actions>
               {isMoreFilter && (
                 <ActionButton onClick={addNewValue}>
-                  <AddSVG /> {textProvider(language, Texts.addFilter)}
+                  <PlusInterfaceSVG /> {textProvider(language, Texts.addFilter)}
                 </ActionButton>
               )}
               <ActionButton
@@ -130,7 +130,7 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
                   handleChange([]);
                 }}
               >
-                <CrossSVG />
+                <CloseInterfaceSVG />
                 {textProvider(language, Texts.reset)}
               </ActionButton>
             </S.Actions>
@@ -138,7 +138,7 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
         ) : (
           <S.Empty>
             <ActionButton onClick={addNewValue}>
-              <AddSVG /> {textProvider(language, Texts.addFilter)}
+              <PlusInterfaceSVG /> {textProvider(language, Texts.addFilter)}
             </ActionButton>
           </S.Empty>
         )}

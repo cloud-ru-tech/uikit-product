@@ -1,7 +1,7 @@
 import { cx } from '@linaria/core';
 import ReactPaginate, { ReactPaginateProps } from 'react-paginate';
 
-import { BackSVG, ForwardSVG } from '@sbercloud/icons';
+import { ArrowBoldLeftInterfaceSVG, FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import {
   iconLinkClassName,
@@ -26,8 +26,8 @@ export type PaginatorProps = Partial<ReactPaginateProps> & {
 export function Paginator({ pageCount = 1, placement = Placements.Left, ...props }: PaginatorProps) {
   return (
     <ReactPaginate
-      previousLabel={<BackSVG />}
-      nextLabel={<ForwardSVG />}
+      previousLabel={<ArrowBoldLeftInterfaceSVG />}
+      nextLabel={<FavouriteInterfaceSVG />}
       breakLabel='...'
       breakClassName={pageClassName}
       breakLinkClassName={cx(pageLinkClassName, pageLinkActiveClassName)}

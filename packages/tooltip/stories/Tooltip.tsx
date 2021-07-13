@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { CopySVG, HelpSVG } from '@sbercloud/icons';
+import { CopyInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { H4 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import copyText from 'copy-to-clipboard';
@@ -30,14 +30,14 @@ const Template: Story<TooltipProps> = ({ ...args }) => (
       </Tooltip>
     </TooltipWrapper>
     <TooltipWrapper>
-      <Tooltip {...args} icon={<HelpSVG />}>
+      <Tooltip {...args} icon={<QuestionInterfaceSVG />}>
         <H4>Basic + Icon</H4>
       </Tooltip>
     </TooltipWrapper>
     <TooltipWrapper>
       <Tooltip
         {...args}
-        icon={<CopySVG />}
+        icon={<CopyInterfaceSVG />}
         iconAction={(): void => {
           copyText(args.tooltip as string);
         }}

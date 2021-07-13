@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { RadioCheckedSVG } from '@sbercloud/icons';
+import { RadioCheckedInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { TableBasicTypes } from '../../../helpers/types';
 import * as S from './styled';
@@ -14,7 +14,7 @@ export const GroupDisabledCell: FC<TableBasicTypes.ICellRendererParams> = ({ val
 
   return (
     <S.CellBox>
-      <RadioCheckedSVG className={S.radioCheckedClassName} />
+      <RadioCheckedInterfaceSVG className={S.radioCheckedClassName} />
       {value}
     </S.CellBox>
   );

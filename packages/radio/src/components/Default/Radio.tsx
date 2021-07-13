@@ -1,6 +1,6 @@
 import { FC, useContext } from 'react';
 
-import { RadioCheckedSVG, RadioUncheckedSVG } from '@sbercloud/icons';
+import { RadioCheckedInterfaceSVG, RadioUncheckedInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { RadioGroupContext } from '../RadioGroup/context';
 import { Description, HiddenRadio, IconContainer, Label, TextContainer, Wrapper } from './styled';
@@ -12,7 +12,7 @@ export interface IRadioIcon {
 
 export const RadioIcon: FC<IRadioIcon> = ({ checked, disabled }) => (
   <IconContainer data-checked={checked} data-disabled={disabled}>
-    {checked ? <RadioCheckedSVG size={20} /> : <RadioUncheckedSVG size={20} />}
+    {checked ? <RadioCheckedInterfaceSVG size={20} /> : <RadioUncheckedInterfaceSVG size={20} />}
   </IconContainer>
 );
 
