@@ -1,6 +1,5 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_CHECKBOX } = EXPORT_VARS;
@@ -39,10 +38,6 @@ export const svgClassName = css`
     color: var(${COLORS_CHECKBOX.CHECKBOX_HOVER_COLOR});
   }
 
-  & rect {
-    fill: var(${COLORS_CHECKBOX.CHECKBOX_PART_CHECKED_RECT_COLOR}) !important;
-  }
-
   &[data-disabled] {
     fill: var(${COLORS_CHECKBOX.CHECKBOX_DISABLED_COLOR});
     color: var(${COLORS_CHECKBOX.CHECKBOX_DISABLED_COLOR});
@@ -55,21 +50,11 @@ export const svgClassName = css`
     &:hover {
       fill: var(${COLORS_CHECKBOX.CHECKBOX_FILLED_HOVER_COLOR});
       color: var(${COLORS_CHECKBOX.CHECKBOX_FILLED_HOVER_COLOR});
-
-      & > path {
-        fill: var(${COLORS_CHECKBOX.CHECKBOX_FILLED_HOVER_COLOR});
-        color: var(${COLORS_CHECKBOX.CHECKBOX_FILLED_HOVER_COLOR});
-      }
     }
 
     &[data-disabled] {
       fill: var(${COLORS_CHECKBOX.CHECKBOX_FILLED_DISABLED_COLOR});
       color: var(${COLORS_CHECKBOX.CHECKBOX_FILLED_DISABLED_COLOR});
-
-      & > path {
-        fill: var(${COLORS_CHECKBOX.CHECKBOX_FILLED_DISABLED_COLOR});
-        color: var(${COLORS_CHECKBOX.CHECKBOX_FILLED_DISABLED_COLOR});
-      }
     }
   }
 `;
