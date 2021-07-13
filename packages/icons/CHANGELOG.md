@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.3.0&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.3.1) (2021-07-13)
+
+
+### Bug Fixes
+
+* Style extraction class names fix & cjs auto import ([b3cc2ef](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b3cc2effbe8d872ba6139c7616a706888aea112a))
+
+
+
+
+
 # [1.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.1.1&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.3.0) (2021-07-12)
 
 

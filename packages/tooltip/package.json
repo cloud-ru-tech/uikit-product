@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tooltip",
   "title": "React Tooltip",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,8 +26,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-tooltip-private": "0.3.0",
-    "@sbercloud/uikit-theme": "0.19.0"
+    "@sbercloud/uikit-react-tooltip-private": "0.3.1",
+    "@sbercloud/uikit-theme": "0.19.1"
   },
   "devDependencies": {
     "copy-to-clipboard": "3.3.1"
