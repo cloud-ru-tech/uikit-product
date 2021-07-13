@@ -64,7 +64,7 @@
     "import-sort-style-module": "6.0.0",
     "inquirer": "8.1.1",
     "lerna": "4.0.0",
-    "lint-staged": "11.0.1",
+    "lint-staged": "11.0.0",
     "minimist": "1.2.5",
     "mkdirp": "1.0.4",
     "moment": "2.29.1",
