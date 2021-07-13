@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.5.1&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.5.2) (2021-07-13)
+
+
+### Bug Fixes
+
+* correct icon for empty table or empty search result ([fa7ea3d](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/fa7ea3d3151e6f22d8b763afb05e5278f148cc38))
+
+
+
+
+
 ## [0.5.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.5.1) (2021-07-13)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.3.1&sourceBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.3.2) (2021-07-13)
+
+
+### Bug Fixes
+
+* correct checkbox icons behavior ([1938651](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/1938651ead97568392d1a6f5a3097931758061cd))
+
+
+
+
+
 ## [0.3.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.3.0&sourceBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.3.1) (2021-07-13)
 
 
