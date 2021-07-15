@@ -18,6 +18,7 @@ type ClientModelTableViewProps<T> = {
   columnDefinitions: ITableProps['columnDefs'];
   pageSize?: number;
   onGridReady: ITableProps['onGridReady'];
+  getRowHeight: ITableProps['getRowHeight'];
   useRowSelection: boolean;
   deleteProps?: DeleteProps;
   paginationProps?: PaginationProps;
@@ -39,6 +40,7 @@ export function ClientModelTableView<T>({
   searchValue,
   paginationProps,
   language,
+  getRowHeight,
 }: ClientModelTableViewProps<T>) {
   return (
     <>
@@ -69,6 +71,7 @@ export function ClientModelTableView<T>({
           reason: data.length === 0 ? NoDataReasons.InitialEmpty : NoDataReasons.Search,
           language,
         }}
+        getRowHeight={getRowHeight}
         gridOptions={{
           defaultColDef: {
             suppressMenu: true,
