@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.5.2&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.6.0) (2021-07-15)
+
+
+### Features
+
+* add getRowHieght props for ClientModelTable ([daa03da](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/daa03da7ad97d687d60026e6fe25d5917f3b5c8b))
+
+
+
+
+
 ## [0.5.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-table@0.5.1&sourceBranch=refs/tags/@sbercloud/uikit-react-table@0.5.2) (2021-07-13)
 
 
