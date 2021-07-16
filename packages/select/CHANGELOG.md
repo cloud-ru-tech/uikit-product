@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.11.1&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.11.2) (2021-07-16)
+
+
+### Bug Fixes
+
+* [AICDC-2941](https://jira.sbercloud.tech/browse/AICDC-2941): fixed users by group select min height ([d1dfaeb](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d1dfaeb8f2c503592b02c6645d3797f476bffa2b))
+
+
+
+
+
 ## [0.11.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.11.0&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.11.1) (2021-07-13)
 
 
