@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.19.1&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.20.0) (2021-07-16)
+
+
+### Features
+
+* interactive charts ([f8d0251](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/f8d0251fd97d8ad6c88456e028640e55c43f1616))
+
+
+
+
+
 ## [0.19.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.19.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.19.1) (2021-07-13)
 
 

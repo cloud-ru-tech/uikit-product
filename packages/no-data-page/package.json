@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-no-data-page",
   "title": "React NoDataPage",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,8 +26,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.19.1",
-    "@sbercloud/uikit-typography": "0.3.1"
+    "@sbercloud/uikit-theme": "0.20.0",
+    "@sbercloud/uikit-typography": "0.3.2"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
