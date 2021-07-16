@@ -1,0 +1,66 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+/* eslint-disable */
+
+import uPlot from 'uplot';
+
+export function columnHighlightPlugin({ className = '', style = { backgroundColor: 'rgba(128,128,128,0.1)' } } = {}) {
+  let underEl, overEl, highlightEl: HTMLDivElement, currIdx: number;
+
+  function init(u: uPlot) {
+    underEl = u.under;
+    overEl = u.over;
+
+    highlightEl = document.createElement('div');
+
+    className && highlightEl.classList.add(className);
+
+    uPlot.assign(highlightEl.style, {
+      pointerEvents: 'none',
+      display: 'none',
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      height: '100%',
+      ...style,
+    });
+
+    underEl.appendChild(highlightEl);
+
+    // show/hide highlight on enter/exit
+    overEl.addEventListener('mouseenter', () => {
+      highlightEl.style.display = null;
+    });
+    overEl.addEventListener('mouseleave', () => {
+      highlightEl.style.display = 'none';
+    });
+  }
+
+  function update(u) {
+    if (currIdx !== u.cursor.idx) {
+      currIdx = u.cursor.idx;
+
+      const dx = u.scales.x.max - u.scales.x.min;
+      const width = u.bbox.width / dx / devicePixelRatio;
+      const left = u.valToPos(currIdx, 'x') - width / 2;
+
+      highlightEl.style.transform = 'translateX(' + Math.round(left) + 'px)';
+      highlightEl.style.width = Math.round(width) + 'px';
+    }
+  }
+
+  return {
+    opts: (u, opts) => {
+      uPlot.assign(opts, {
+        cursor: {
+          x: false,
+          y: false,
+        },
+      });
+    },
+    hooks: {
+      init: init,
+      setCursor: update,
+    },
+  };
+}

@@ -15,7 +15,8 @@
     "release:first-stable": "node scripts/release.js -c --v1",
     "release:conventional": "node scripts/release.js -c",
     "build": "npm run clean && lerna bootstrap --hoist && npm run compile",
-    "all:cleaninstall": "node scripts/remove-modules.js && npm cache clean -f && npm i && npm run build"
+    "all:cleaninstall": "node scripts/remove-modules.js && npm cache clean -f && npm i && npm run build",
+    "prepare": "node_modules/.bin/husky install"
   },
   "dependencies": {},
   "devDependencies": {
@@ -58,7 +59,7 @@
     "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react": "7.24.0",
     "glob": "7.1.7",
-    "husky": "6.0.0",
+    "husky": "7.0.1",
     "import-sort-cli": "6.0.0",
     "import-sort-parser-typescript": "6.0.0",
     "import-sort-style-module": "6.0.0",

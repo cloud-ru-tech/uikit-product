@@ -144,7 +144,7 @@ export default {\n\
 
 ` +
     'export const ' +
-    `${componentName.toLowerCase()}` +
+    `${componentName.replace(/[A-Z]/, x => x.toLowerCase())}` +
     ' = Template.bind({});\n\
 ' +
     `${componentName.toLowerCase()}` +
