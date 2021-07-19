@@ -1,6 +1,6 @@
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Button, IconButton } from '@sbercloud/uikit-react-button';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 import { useMemo } from 'react';
 import RCModal from 'react-modal';
@@ -92,7 +92,7 @@ export const Modal: React.FC<ModalProps> = props => {
     parentSelector,
   } = props;
 
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
 
   const approveBtnText = useMemo(() => approveText || textProvider(language, Texts.approve), [approveText, language]);
   const cancelBtnText = useMemo(() => cancelText || textProvider(language, Texts.cancel), [cancelText, language]);

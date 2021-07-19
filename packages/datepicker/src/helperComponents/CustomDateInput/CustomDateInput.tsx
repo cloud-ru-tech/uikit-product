@@ -1,5 +1,5 @@
 import { CalendarInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { forwardRef, useCallback, useEffect, useMemo, useState } from 'react';
 import RDatePicker from 'react-datepicker';
 
@@ -20,7 +20,7 @@ export interface ICustomDateInputProps {
 }
 
 export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps>((props, ref) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const { date, setDate, onClick, pickSettings, minDate } = props;
   const [isError, setError] = useState(false);
   const [splitDate, setSplitDate] = useState<TSplitDateType>(getSplitDate(language, date));

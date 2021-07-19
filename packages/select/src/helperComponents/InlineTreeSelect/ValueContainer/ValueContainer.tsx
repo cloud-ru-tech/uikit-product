@@ -1,5 +1,5 @@
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { FC, useCallback } from 'react';
 
 import { DictionaryPropertyAsFn, Texts, textProvider } from '../../../helpers/texts-provider';
@@ -22,7 +22,7 @@ export const ValueContainer: FC<IValueContainerProps> = ({
   valueFormatter,
   disabled = false,
 }) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const getVal = useCallback(() => {
     if (!value || !value.length) {
       return placeholder || textProvider<string>(language, Texts.selectValue);

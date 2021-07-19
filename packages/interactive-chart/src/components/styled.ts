@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_INTERACTIVE_CHART } = EXPORT_VARS;
+const { COLORS_INTERACTIVE_CHART } = DEPRECATED_EXPORT_VARS;
 export const Wrapper = styled.div`
   & .uplot {
     font-family: inherit;

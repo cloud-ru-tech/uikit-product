@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { useLanguage } from '../LanguageProvider';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 interface DateFormatterProps {
   value: Date;
@@ -8,7 +8,7 @@ interface DateFormatterProps {
 }
 
 export const DateFormatter: FC<DateFormatterProps> = ({ value, showTime = true }) => {
-  const langCode = useLanguage();
+  const { code: langCode } = useLanguage();
 
   if (!showTime) {
     return (

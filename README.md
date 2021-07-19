@@ -38,18 +38,22 @@ rules: [
 
 ## Import Style:
 
-1. Ипортируем необходимые темы:
-   `import { globals, purple, purpleDark, ... } from "@sbercloud/uikit-theme";`
-2. Подключаем к проекту:
-   `<body className={`${globals} ${purple} ${purpleDark}`} />...</body>`
-3. Выбираем тему по умолчанию:
-   `<html data-theme="purple">...</html>`
+1. Ипортируем ConfigProvider:
+   `import { ConfigProvider } from "@sbercloud/uikit-utils";`
+2. Оборачиваем проект, theme передаем тему по умолчанию:
+   `<ConfigProvider theme={ConfigProvider.themes.Purple}>...</ConfigProvider>`
+
 
 ## Смена темы
 
-1. Актуальная тема определена в `data-theme`, для смены темы меняем значения атрибута.
-   Например(с помощью js):
-   `htmlElement.setAttribute("data-theme", "purpleDark");`
+1. Импортируем hook useTheme:
+`import { useTheme } from "@sbercloud/uikit-utils";`
+
+2. Используем callback для смены темы:
+```
+ const {changeTheme, Themes} = useTheme();
+   changeTheme(Themes.Purple)
+```
 
 ```
 

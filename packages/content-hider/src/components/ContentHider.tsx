@@ -1,5 +1,5 @@
 import { Button } from '@sbercloud/uikit-react-button';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { useMemo, useState } from 'react';
 
 import { Texts, textProvider } from '../helpers/texts-provider';
@@ -21,7 +21,7 @@ export const ContentHider: React.FC<ContentHiderProps> = ({
   hideContentText,
   showContentText,
 }) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const [showContent, setShowContent] = useState(false);
 
   const hideText = useMemo(() => hideContentText || textProvider(language, Texts.hide), [language, hideContentText]);

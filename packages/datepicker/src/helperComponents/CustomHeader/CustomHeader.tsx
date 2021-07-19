@@ -1,6 +1,6 @@
 import { Button } from '@sbercloud/uikit-react-button';
 import { ChevronLeftInterfaceSVG, ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { LanguageCodeType } from '@sbercloud/uikit-react-localization';
+import { LanguageCodeType } from '@sbercloud/uikit-utils';
 
 import * as S from './styled';
 

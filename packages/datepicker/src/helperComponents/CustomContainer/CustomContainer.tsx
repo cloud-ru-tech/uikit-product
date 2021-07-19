@@ -1,5 +1,5 @@
 import { Divider } from '@sbercloud/uikit-react-divider';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { Switch } from '@sbercloud/uikit-react-switch';
 import isToday from 'date-fns/isToday';
 import { useCallback, useMemo } from 'react';
@@ -25,7 +25,7 @@ export interface ICustomContainer {
 }
 
 export const CustomContainer = (customProps: ICustomContainerProps, props: ICustomContainer): React.ReactNode => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const { children, className } = props;
   const { date, pickSettings, handleChange, minDate } = customProps;
   const { pickTimeCheck, setPickTime, isPickTimeOptional, isPickTime } = pickSettings;

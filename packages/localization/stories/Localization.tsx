@@ -5,11 +5,12 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { CurrencyFormatter, DateFormatter, LanguageProvider, NumberFormatter, useLanguage } from '../src';
+import { CurrencyFormatter, DateFormatter, NumberFormatter } from '../src';
+import { useLanguage, ConfigProvider } from '@sbercloud/uikit-utils';
 
 export default {
   title: 'Not stable/Localization',
-  component: LanguageProvider,
+  component: ConfigProvider,
 } as Meta;
 
 const Wrapper = styled.div`
@@ -17,12 +18,12 @@ const Wrapper = styled.div`
 `;
 
 const Template: Story = ({ showOnlyDate }) => {
-  const hookCode = useLanguage();
+  const { code: langCode } = useLanguage();
   return (
     <>
       <Wrapper>
         <Text1>
-          <strong>HooksCode:</strong> {hookCode}
+          <strong>HooksCode:</strong> {langCode}
         </Text1>
       </Wrapper>
       <Wrapper>

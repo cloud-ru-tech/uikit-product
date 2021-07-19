@@ -1,6 +1,6 @@
 import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input, InputProps } from '@sbercloud/uikit-react-input';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { useEffect, useState } from 'react';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
@@ -12,7 +12,7 @@ export interface IInputSearchProps extends Omit<InputProps, 'onChange'> {
 }
 
 export const InputSearch: React.FC<IInputSearchProps> = ({ onChange, value, getInstance, ...inputProps }) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const [search, setSearch] = useState<string | undefined>(value);
   useEffect(() => {
     if (search === value) return;

@@ -1,5 +1,5 @@
 import { ModifierArguments, Obj } from '@popperjs/core';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { useCallback, useMemo, useState } from 'react';
 import RDatePicker, { ReactDatePickerProps } from 'react-datepicker';
 
@@ -12,7 +12,7 @@ export interface TimePickerProps extends ReactDatePickerProps {
 }
 
 export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime, maxTime, disabled }) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const [isOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
   const open = useCallback(() => setOpen(true), []);

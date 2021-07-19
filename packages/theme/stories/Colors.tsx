@@ -6,7 +6,7 @@ import { H2, Text3 } from '@sbercloud/uikit-typography';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { COLOR_DEFAULT_MAP, EXPORT_VARS } from '../src';
+import { COLORS_DEFAULT_MAP, EXPORT_VARS } from '../src';
 import { css } from '@linaria/core';
 
 export default {
@@ -76,14 +76,14 @@ const COLOR_VARIANT_LIST = [
   { name: 'Blue grey', value: EXPORT_VARS.BLUE_GREY, color: '#fff', background: '#212830' },
   {
     name: 'Color',
-    value: EXPORT_VARS.COLOR,
+    value: EXPORT_VARS.PRESET,
     color: '#fff',
     background: 'linear-gradient(90deg, #FEAC5E 0%, #C779D0 50%, #4BC0C8 100%)',
   },
 ];
 
 const color_hex = JSON.parse(`{
-  ${COLOR_DEFAULT_MAP.replaceAll('\n', '')
+  ${COLORS_DEFAULT_MAP.replaceAll('\n', '')
     .replaceAll(' ', '')
     .replaceAll('--', '"--')
     .replaceAll(':', '":"')
@@ -91,7 +91,7 @@ const color_hex = JSON.parse(`{
     .replace(/.$/, '')}
 }`);
 
-const Template: Story<typeof EXPORT_VARS.COLOR> = () => (
+const Template: Story<typeof EXPORT_VARS.PRESET> = () => (
   <Wrapper>
     {COLOR_VARIANT_LIST.map(colorVariant => (
       <Group key={colorVariant.name}>
@@ -112,9 +112,9 @@ const Template: Story<typeof EXPORT_VARS.COLOR> = () => (
   </Wrapper>
 );
 
-export const Default = Template.bind({});
+export const Colors = Template.bind({});
 
-Default.parameters = {
+Colors.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

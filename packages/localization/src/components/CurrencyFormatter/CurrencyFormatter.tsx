@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
-import { useLanguage } from '../LanguageProvider';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 interface CurrencyFormatterProps {
   value: number;
 }
 
 export const CurrencyFormatter: FC<CurrencyFormatterProps> = ({ value }) => {
-  const langCode = useLanguage();
+  const { code: langCode } = useLanguage();
 
   return (
     <>

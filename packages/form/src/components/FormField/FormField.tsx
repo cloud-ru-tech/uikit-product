@@ -1,5 +1,5 @@
 import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 
 import { FORM_FIELD_TRANSLATIONS } from '../../helpers/formFieldTranslations';
@@ -14,7 +14,7 @@ export type FormFieldProps = {
 };
 
 export const FormField: React.FC<FormFieldProps> = ({ label, hint, description, required, error, children }) => {
-  const langCode = useLanguage();
+  const { code: langCode } = useLanguage();
   const requiredFieldTranslation = FORM_FIELD_TRANSLATIONS.REQUIRED_FIELD[langCode];
 
   return (

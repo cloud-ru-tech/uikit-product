@@ -1,6 +1,6 @@
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input } from '@sbercloud/uikit-react-input';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
 import cloneDeep from 'lodash.clonedeep';
 import { useCallback, useMemo } from 'react';
@@ -19,7 +19,7 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
   noFilteredProps = [],
   onChange,
 }) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const handleChange = useCallback(
     (propName: string, val: unknown) => {
       const nextValue = cloneDeep(value);

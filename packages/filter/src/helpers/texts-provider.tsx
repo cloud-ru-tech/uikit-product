@@ -1,4 +1,4 @@
-import { LanguageCodeType } from '@sbercloud/uikit-react-localization';
+import { LanguageCodeType } from '@sbercloud/uikit-utils';
 
 export enum Texts {
   addFilter = 'addFilter',

@@ -1,4 +1,4 @@
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import RCSelect, {
   OptionTypeBase as RCOptionTypeBase,
@@ -64,7 +64,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
     placeholder,
   } = props;
 
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const [stateOptions, setOptions] = useState<CustomOptionType[]>();
   const [inputValue, setInputSearch] = useState<string>();
   const [isOpen, setIsOpen] = useState(false);

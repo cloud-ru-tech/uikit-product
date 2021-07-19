@@ -65,7 +65,7 @@ const BLUE_GREY = {
   100: '--color-blue-grey-100',
 };
 
-const COLOR = {
+const PRESET = {
   GREEN_LIGHT: '--color-green-light',
   GREEN_DARK: '--color-green-dark',
   YELLOW_LIGHT: '--color-yellow-light',
@@ -133,7 +133,7 @@ const COLOR = {
   GRADIENT_4: '--color-gradient-4',
 };
 
-export { GREY, PURPLE, GREEN, BLACK_ALFA, WHITE_ALFA, BLUE_GREY, COLOR };
+export { GREY, PURPLE, GREEN, BLACK_ALFA, WHITE_ALFA, BLUE_GREY, PRESET };
 
 export default {
   GREY,
@@ -142,5 +142,5 @@ export default {
   BLACK_ALFA,
   WHITE_ALFA,
   BLUE_GREY,
-  COLOR,
+  PRESET,
 };

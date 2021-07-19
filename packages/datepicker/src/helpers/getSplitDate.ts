@@ -1,4 +1,4 @@
-import { LanguageCodeType } from '@sbercloud/uikit-react-localization';
+import { LanguageCodeType } from '@sbercloud/uikit-utils';
 import memoize from 'memoizee';
 
 import { INPUT_PLACEHOLDER } from './constants';

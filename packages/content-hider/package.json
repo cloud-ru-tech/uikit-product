@@ -27,7 +27,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-button": "0.6.2",
-    "@sbercloud/uikit-react-localization": "0.7.1",
+    "@sbercloud/uikit-utils": "0.0.0",
     "@sbercloud/uikit-theme": "0.20.0"
   },
   "peerDependencies": {

@@ -1,38 +1,49 @@
-/* @ts-ignore*/
-import { LanguageCodeType, LanguageProvider } from '@sbercloud/uikit-react-localization';
 import { addDecorator, addParameters } from '@storybook/react';
-import React from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
 
-import { globals, green, greenDark, purple, purpleDark, defaultColor } from '../packages/theme/src';
+import { ConfigProvider, Themes } from '../packages/utils';
 
-const changeTheme = (theme: { name: string }) => {
-  const root = (
-    document.querySelector('#storybook-preview-iframe') as HTMLIFrameElement
-  )?.contentDocument?.querySelector('body');
+const LanguageCodeType = ConfigProvider.languages;
 
-  if (!root) {
-    return;
-  }
-  root.setAttribute('data-theme', theme?.name);
+const COLOR_MAP = {
+  [Themes.Purple]: '#aaabfd',
+  [Themes.PurpleDark]: '#5558fa',
+  [Themes.Green]: '#07E897',
+  [Themes.GreenDark]: '#157552',
 };
 
 addDecorator(addReadme);
 addDecorator(withDesign);
-addDecorator((Story, { globals: { locale } }) => {
-  const root = document.querySelector('body');
-  if (root && !root.getAttribute('data-theme')) {
-    root.setAttribute('data-theme', 'purple');
-  }
+addDecorator((Story, { globals: { locale, theme } }) => {
+  const colorizeThemeButton = () => {
+    const themeIcon = window.parent.document
+      .querySelector('button[title="Changing themes"]')
+      ?.querySelector('svg');
+    if (!themeIcon) {
+      setTimeout(() => colorizeThemeButton(), 200);
+      return;
+    }
 
+    themeIcon.style.background = COLOR_MAP[theme];
+    themeIcon.style['border-radius'] = '100%';
+    themeIcon.style.color = 'rgb(0 0 0 / 10%)';
+  };
+  useLayoutEffect(() => {
+    colorizeThemeButton();
+  }, [theme]);
+  
+  useEffect(() => {
+    colorizeThemeButton();
+  }, []);
   return (
     // Add global styles and theme variables
-    <div className={`${globals} ${defaultColor}`} id='story-root'>
-      <LanguageProvider languageCode={locale || LanguageCodeType.ruRU}>
-        {/* @ts-ignore*/}
+    <div id='story-root'>
+      <ConfigProvider theme={theme || ConfigProvider.themes.Purple} languageCode={locale || LanguageCodeType.ruRU}>
+        {/* @ts-ignore */}
         <Story />
-      </LanguageProvider>
+      </ConfigProvider>
     </div>
   );
 });
@@ -41,21 +52,34 @@ addParameters({
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
-      order: ['Theme', 'Atoms', 'Not stable', 'Typography', ],
+      order: ['Theme', 'Components', 'Utils', 'Not stable', 'Typography'],
     },
-  },
-  themes: {
-    list: [
-      { name: 'purple', class: purple, color: '#f3f3fe', default: true },
-      { name: 'purpleDark', class: purpleDark, color: '#bcbced' },
-      { name: 'green', class: green, color: '#07E897' },
-      { name: 'greenDark', class: greenDark, color: '#157552' },
-    ],
-    onChange: changeTheme,
   },
 });
 
+const getStyle = theme => ({
+  background: COLOR_MAP[theme],
+  width: '1rem',
+  height: '1rem',
+  borderRadius: '1rem',
+  boxShadow: 'rgb(0 0 0 / 10%) 0px 0px 0px 1px inset',
+});
+
 export const globalTypes = {
+  theme: {
+    name: 'Theme',
+    description: 'Changing themes',
+    defaultValue: Themes.Purple,
+    toolbar: {
+      icon: 'circlehollow',
+      items: [
+        { value: Themes.Purple, right: <div style={getStyle(Themes.Purple)} />, title: 'Purple' },
+        { value: Themes.PurpleDark, right: <div style={getStyle(Themes.PurpleDark)} />, title: 'PurpleDark' },
+        { value: Themes.Green, right: <div style={getStyle(Themes.Green)} />, title: 'Green' },
+        { value: Themes.GreenDark, right: <div style={getStyle(Themes.GreenDark)} />, title: 'GreenDark' },
+      ],
+    },
+  },
   locale: {
     name: 'Locale',
     description: 'Internationalization locale',

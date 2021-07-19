@@ -1,4 +1,4 @@
-import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-react-localization';
+import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
 import enGB from 'date-fns/locale/en-GB';
 import ru from 'date-fns/locale/ru';
 import { useCallback, useMemo, useState } from 'react';
@@ -21,7 +21,7 @@ export interface DatePickerProps {
 }
 
 export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerProps) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const [isDatePickerOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
   const open = useCallback(() => setOpen(true), []);

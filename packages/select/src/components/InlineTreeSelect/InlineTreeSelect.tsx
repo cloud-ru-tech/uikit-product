@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { Divider } from '@sbercloud/uikit-react-divider';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import isEqual from 'lodash.isequal';
 import { FC, useCallback, useEffect, useState } from 'react';
 
@@ -116,7 +116,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
   searchProps = ['title'],
   disabled = false,
 }) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const [groupKeys, setGroupsKeys] = useState<React.ReactText[]>();
   useEffect(() => {
     const keys = options.map(option => option.key);

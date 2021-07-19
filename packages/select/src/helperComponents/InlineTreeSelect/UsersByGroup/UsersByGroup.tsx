@@ -1,5 +1,5 @@
 import { Avatar, AvatarProps } from '@sbercloud/uikit-react-avatar';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
 import { FC, useEffect, useMemo, useState } from 'react';
@@ -53,7 +53,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
   isFiltered,
   ...treeProps
 }) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const [stateOptions, setStateOptions] = useState<IOptionType[]>();
   const [checked, setChecked] = useState<CheckedType>();
 

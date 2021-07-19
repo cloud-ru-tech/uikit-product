@@ -23,7 +23,6 @@ module.exports = {
         backgrounds: false,
       },
     },
-    'storybook-addon-themes',
   ],
   core: {
     builder: 'webpack5',

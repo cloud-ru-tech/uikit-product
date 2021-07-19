@@ -1,4 +1,4 @@
-export * from './globals';
+export * from './globals/globals';
 export * from './color/default';
 export * from './color/purple';
 export * from './color/purpleDark';
@@ -10,4 +10,6 @@ export * from './color/DEPRECATED/green';
 export * from './color/DEPRECATED/green-dark';
 
 export { default as EXPORT_VARS } from './color/vars';
+export { default as Themes } from './types/theme';
+export { default as EXPORT_GENERAL_VARS } from './globals/theme';
 export { default as DEPRECATED_EXPORT_VARS } from './color/DEPRECATED/vars';

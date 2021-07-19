@@ -1,14 +1,13 @@
 import { css } from '@linaria/core';
-
-import { DEPRECATED_EXPORT_VARS } from './';
-const { COLORS_GENERAL } = DEPRECATED_EXPORT_VARS;
+import GENERAL_COLOR, { generalTheme } from './theme';
 
 export const globals = css`
   :global() {
+    ${generalTheme}
     @font-face {
       font-family: 'SB Sans Interface';
-      src: url('./fonts/SBSansInterface-Semibold.woff2') format('woff2'),
-        url('./fonts/SBSansInterface-Semibold.woff') format('woff');
+      src: url('../fonts/SBSansInterface-Semibold.woff2') format('woff2'),
+        url('../fonts/SBSansInterface-Semibold.woff') format('woff');
       font-weight: 600;
       font-style: normal;
       font-display: swap;
@@ -16,8 +15,8 @@ export const globals = css`
 
     @font-face {
       font-family: 'SB Sans Interface';
-      src: url('./fonts/SBSansInterface-Light.woff2') format('woff2'),
-        url('./fonts/SBSansInterface-Light.woff') format('woff');
+      src: url('../fonts/SBSansInterface-Light.woff2') format('woff2'),
+        url('../fonts/SBSansInterface-Light.woff') format('woff');
       font-weight: 300;
       font-style: normal;
       font-display: swap;
@@ -25,8 +24,8 @@ export const globals = css`
 
     @font-face {
       font-family: 'SB Sans Interface';
-      src: url('./fonts/SBSansInterface-Bold.woff2') format('woff2'),
-        url('./fonts/SBSansInterface-Bold.woff') format('woff');
+      src: url('../fonts/SBSansInterface-Bold.woff2') format('woff2'),
+        url('../fonts/SBSansInterface-Bold.woff') format('woff');
       font-weight: bold;
       font-style: normal;
       font-display: swap;
@@ -34,8 +33,8 @@ export const globals = css`
 
     @font-face {
       font-family: 'SB Sans Interface Caps';
-      src: url('./fonts/SBSansInterface-Caps.woff2') format('woff2'),
-        url('./fonts/SBSansInterface-Caps.woff') format('woff');
+      src: url('../fonts/SBSansInterface-Caps.woff2') format('woff2'),
+        url('../fonts/SBSansInterface-Caps.woff') format('woff');
       font-weight: normal;
       font-style: normal;
       font-display: swap;
@@ -43,8 +42,8 @@ export const globals = css`
 
     @font-face {
       font-family: 'SB Sans Interface';
-      src: url('./fonts/SBSansInterface-Regular.woff2') format('woff2'),
-        url('./fonts/SBSansInterface-Regular.woff') format('woff');
+      src: url('../fonts/SBSansInterface-Regular.woff2') format('woff2'),
+        url('../fonts/SBSansInterface-Regular.woff') format('woff');
       font-weight: normal;
       font-style: normal;
       font-display: swap;
@@ -56,7 +55,7 @@ export const globals = css`
 
     body {
       height: 100%;
-      background: var(${COLORS_GENERAL.BACKGROUND});
+      background: var(${GENERAL_COLOR.BACKGROUND});
 
       transition: all 0.4s ease-in-out;
     }
@@ -65,8 +64,8 @@ export const globals = css`
     button,
     input {
       font-family: SB Sans Interface, Helvetica, Arial, sans-serif;
-      color: var(${COLORS_GENERAL.TEXT});
-      fill: var(${COLORS_GENERAL.TEXT});
+      color: var(${GENERAL_COLOR.TEXT});
+      fill: var(${GENERAL_COLOR.TEXT});
     }
 
     a {

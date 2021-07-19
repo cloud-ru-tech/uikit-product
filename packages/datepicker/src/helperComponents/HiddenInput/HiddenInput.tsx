@@ -1,5 +1,5 @@
 import { InputAutosize } from '@sbercloud/uikit-react-input';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import isEqual from 'lodash.isequal';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRifm } from 'rifm';
@@ -19,7 +19,7 @@ interface IHiddenInputProps {
 }
 
 export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onChange }) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const [value, setValue] = useState(date[valueProp]);
   const [ref, setRef] = useState<HTMLInputElement | null>();
 

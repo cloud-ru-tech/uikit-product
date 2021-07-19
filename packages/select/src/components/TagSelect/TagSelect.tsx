@@ -1,4 +1,4 @@
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { useRef, useState } from 'react';
 import RCSelect, { ValueType } from 'react-select';
@@ -53,7 +53,7 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
     validator,
     validateMessage,
   } = props;
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const containerRef = useRef<HTMLDivElement>();
   const [inputValue, setInputSearch] = useState('');
   const [isOpen, setIsOpen] = useState(false);

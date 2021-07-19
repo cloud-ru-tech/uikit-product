@@ -1,6 +1,6 @@
 import { PlusInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Divider } from '@sbercloud/uikit-react-divider';
-import { useLanguage } from '@sbercloud/uikit-react-localization';
+import { useLanguage } from '@sbercloud/uikit-utils';
 import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
@@ -18,7 +18,7 @@ import * as S from './styled';
 export type { TFilterValueType, IFilterProps };
 
 export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [], onChange, children, className }) => {
-  const language = useLanguage({ onlyEnabledLanguage: true });
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   const [isMoreFilter, setIsMoreFilter] = useState<boolean>();
   const [noFilteredProps, setNoFilteredProps] = useState<OptionTypeBase[]>();
   const [parsedValue, setParsedValue] = useState<TFilterValueType[]>([]);

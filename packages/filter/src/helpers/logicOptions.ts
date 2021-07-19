@@ -1,4 +1,4 @@
-import { LanguageCodeType } from '@sbercloud/uikit-react-localization';
+import { LanguageCodeType } from '@sbercloud/uikit-utils';
 import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 import eq from 'lodash.eq';
 import gt from 'lodash.gt';
