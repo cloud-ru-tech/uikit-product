@@ -68,8 +68,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-<<<<<<< HEAD
 * Extract styles at build time ([064a959](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/064a959b3c4aa59431767200c28a24b74dbf41cb))
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 * Extract styles at build time ([064a959](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/064a959b3c4aa59431767200c28a24b74dbf41cb))
@@ -77,6 +77,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 * added onItemClick(), added data-test-id, added className ([2b1dea6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/2b1dea621f59ec22344728035f3b5c116a41066b))
 >>>>>>> b1dcc21 (Version bump)
 >>>>>>> 44e2ac1 (Version bump)
+=======
+>>>>>>> 8053df8 (Version bump)
 
 
 
