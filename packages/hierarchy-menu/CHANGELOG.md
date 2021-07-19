@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.1.1&sourceBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.2.0) (2021-07-19)
+
+
+### Features
+
+* added onItemClick(), added data-test-id, added className ([2b1dea6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/2b1dea621f59ec22344728035f3b5c116a41066b))
+
+
+
+
+
 ## [0.1.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.1.0&sourceBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.1.1) (2021-07-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-hierarchy-menu
