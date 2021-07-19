@@ -43,6 +43,7 @@ const buttons: Array<{
   { name: 'TRANSPARENT', variant: ButtonVariant.Transparent },
   { name: 'TABLE-MENU', variant: ButtonVariant.TableMenu },
   { name: 'WHITE', variant: ButtonVariant.White, background: '#5558FA' },
+  { name: 'ALARM', variant: ButtonVariant.Alarm },
 ];
 
 const Template: Story<ButtonProps & { showIcon: boolean }> = ({ children, showIcon, ...args }) => (

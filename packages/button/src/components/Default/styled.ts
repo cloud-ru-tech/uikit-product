@@ -222,6 +222,26 @@ export const ButtonComponent = styled.button`
     }
   }
 
+  &[data-variant='alarm'] {
+    color: var(${COLORS_BUTTON.ALARM_COLOR});
+    fill: var(${COLORS_BUTTON.ALARM_ICON_COLOR});
+    background-color: var(${COLORS_BUTTON.ALARM_BG});
+    &:hover {
+      background-color: var(${COLORS_BUTTON.ALARM_HOVER_BG});
+    }
+    &:active {
+      background-color: var(${COLORS_BUTTON.ALARM_ACTIVE_BG});
+    }
+    &:disabled {
+      color: var(${COLORS_BUTTON.ALARM_DISABLED_COLOR});
+      fill: var(${COLORS_BUTTON.ALARM_DISABLED_COLOR});
+      background-color: var(${COLORS_BUTTON.ALARM_DISABLED_BG});
+    }
+    &:focus-visible {
+      background-color: var(${COLORS_BUTTON.ALARM_FOCUS_BG});
+    }
+  }
+
   &[data-round='true'] {
     border-radius: 50px;
     padding: 4px 12px;

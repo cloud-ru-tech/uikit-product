@@ -1,5 +1,5 @@
-import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Button, IconButton } from '@sbercloud/uikit-react-button';
+import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 import { useMemo } from 'react';
@@ -63,6 +63,7 @@ export interface ModalProps extends ReactModalProps {
   contentStyles?: React.CSSProperties;
   zIndex?: number;
   parentId?: string;
+  alarmApproveButton?: boolean;
 }
 
 export const MODAL_CLOSE_TYPE = {
@@ -90,6 +91,7 @@ export const Modal: React.FC<ModalProps> = props => {
     zIndex = 99999,
     parentId,
     parentSelector,
+    alarmApproveButton,
   } = props;
 
   const language = useLanguage({ onlyEnabledLanguage: true });
@@ -137,6 +139,7 @@ export const Modal: React.FC<ModalProps> = props => {
                 <Button
                   className={buttonCSS}
                   disabled={disableApprove}
+                  variant={alarmApproveButton ? Button.variants.Alarm : Button.variants.Filled}
                   onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                     approve(e);
                     onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
@@ -147,6 +150,7 @@ export const Modal: React.FC<ModalProps> = props => {
               </Tooltip>
             ) : (
               <Button
+                variant={alarmApproveButton ? Button.variants.Alarm : Button.variants.Filled}
                 className={buttonCSS}
                 disabled={disableApprove}
                 onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

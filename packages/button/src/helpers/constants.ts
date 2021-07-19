@@ -5,6 +5,7 @@ export enum ButtonVariant {
   White = 'white',
   FilledBrand = 'filled-brand',
   TableMenu = 'table-menu',
+  Alarm = 'alarm',
 }
 
 export enum ButtonSize {
