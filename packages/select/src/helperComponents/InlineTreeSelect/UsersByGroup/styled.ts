@@ -6,7 +6,7 @@ const { COLORS_SELECT } = EXPORT_VARS;
 
 export const StyledContainer = styled.div`
   position: relative;
-  min-height: 64px;
+  min-height: 56px;
 
   &:before {
     content: attr(data-empty);

@@ -3,6 +3,48 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.7.1&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.7.2) (2021-07-16)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-form
+
+
+
+
+
+## [0.7.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.7.1) (2021-07-13)
+
+
+### Bug Fixes
+
+* cleanup package json ([cff8b75](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/cff8b754fa7bd8ee4b41eca61711f125b1767817))
+* Style extraction class names fix & cjs auto import ([b3cc2ef](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b3cc2effbe8d872ba6139c7616a706888aea112a))
+
+
+
+
+
+# [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.7.0) (2021-07-12)
+
+
+### Features
+
+* Extract styles at build time ([6a0ef3d](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/6a0ef3dad916c46347ca4d5adbd1fa97563e5911))
+
+
+
+
+
+# [0.6.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.6.0) (2021-07-12)
+
+
+### Features
+
+* Extract styles at build time ([064a959](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/064a959b3c4aa59431767200c28a24b74dbf41cb))
+
+
+
+
+
 # [0.5.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-form@0.4.32&sourceBranch=refs/tags/@sbercloud/uikit-react-form@0.5.0) (2021-07-09)
 
 

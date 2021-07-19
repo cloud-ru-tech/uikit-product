@@ -564,6 +564,12 @@ const COLORS_HIERARCHY_MENU = {
   LEAF_NODE_ACTIVE: '--hierarchy-menu-leaf-node-active',
 };
 
+const COLORS_INTERACTIVE_CHART = {
+  BACKGROUND: '--interactive-chart-background',
+  CURSOR_AIM: '--interactive-chart-cursor-aim',
+  SELECTED_AREA: '--interactive-chart-selected-area',
+};
+
 export {
   COLORS,
   COLORS_BRAND,
@@ -605,6 +611,7 @@ export {
   COLORS_PRESET,
   COLORS_ATTENTION,
   COLORS_HIERARCHY_MENU,
+  COLORS_INTERACTIVE_CHART,
 };
 
 export default {
@@ -648,4 +655,5 @@ export default {
   COLORS_PRESET,
   COLORS_ATTENTION,
   COLORS_HIERARCHY_MENU,
+  COLORS_INTERACTIVE_CHART,
 };

@@ -1,6 +1,10 @@
-import { AddSVG, DocUploadOutlineSVG, FileUploadOutlineSVG } from '@sbercloud/icons';
 import { Button } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
+import {
+  CircleAddInterfaceSVG,
+  FileUploadFilledInterfaceSVG,
+  FolderUploadFilledInterfaceSVG,
+} from '@sbercloud/uikit-react-icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
@@ -21,22 +25,22 @@ const Template: Story<DropdownMenuProps> = () => (
     actions={
       <>
         <DropdownItem onClick={(): void => {}}>
-          <FileUploadOutlineSVG />
+          <FileUploadFilledInterfaceSVG />
           Загрузить файл
         </DropdownItem>
         <Divider />
         <DropdownItem onClick={(): void => {}}>
-          <DocUploadOutlineSVG />
+          <FolderUploadFilledInterfaceSVG />
           Загрузить документ
         </DropdownItem>
         <DropdownItem onClick={(): void => {}}>
-          <FileUploadOutlineSVG />
+          <FileUploadFilledInterfaceSVG />
           Загрузить файл
         </DropdownItem>
       </>
     }
   >
-    <Button rounded size={Button.sizes.s} icon={<AddSVG />}>
+    <Button rounded size={Button.sizes.s} icon={<CircleAddInterfaceSVG />}>
       Создать
     </Button>
   </DropdownMenu>

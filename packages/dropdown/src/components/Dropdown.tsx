@@ -1,4 +1,4 @@
-import { MoreSVG } from '@sbercloud/icons';
+import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { TooltipMenuItemPrivate, TooltipMenuPrivate, TooltipPrivate } from '@sbercloud/uikit-react-tooltip-private';
 import { useCallback, useState } from 'react';
 
@@ -69,7 +69,7 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({ actions, children })
         </TooltipMenuPrivate>
       }
     >
-      {children || <MoreSVG id='more-button' />}
+      {children || <MoreInterfaceSVG id='more-button' />}
     </TooltipPrivate>
   );
 };

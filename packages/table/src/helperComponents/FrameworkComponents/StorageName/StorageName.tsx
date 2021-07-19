@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { BucketSVG, FileSVG, FolderSVG } from '@sbercloud/icons';
+import { BucketInterfaceSVG, FileInterfaceSVG, FolderInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { TableBasicTypes } from '../../../helpers/types';
 import * as S from './styled';
@@ -12,10 +12,10 @@ const containerTypes = {
 };
 
 const components = {
-  [containerTypes.file]: <FileSVG />,
-  [containerTypes.directory]: <FolderSVG />,
-  [containerTypes.bucket]: <BucketSVG />,
-  default: <FileSVG />,
+  [containerTypes.file]: <FileInterfaceSVG />,
+  [containerTypes.directory]: <FolderInterfaceSVG />,
+  [containerTypes.bucket]: <BucketInterfaceSVG />,
+  default: <FileInterfaceSVG />,
 };
 
 export const StorageName: FC<TableBasicTypes.ICellRendererParams> = ({ value, data }) => (

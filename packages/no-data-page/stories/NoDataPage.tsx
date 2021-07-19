@@ -1,4 +1,4 @@
-import { BucketSVG, ServiceDataTransferServiceSVG } from '@sbercloud/icons';
+import { BucketInterfaceSVG, DataTransferServiceSVG } from '@sbercloud/uikit-react-icons';
 import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
@@ -14,8 +14,8 @@ export default {
 } as Meta;
 
 const icons = {
-  BucketSVG: <BucketSVG />,
-  ServiceDataTransferServiceSVG: <ServiceDataTransferServiceSVG />,
+  BucketSVG: <BucketInterfaceSVG />,
+  ServiceDataTransferServiceSVG: <DataTransferServiceSVG />,
 };
 
 const Template: Story<{ icon: string | React.ReactElement } & Omit<NoDataPageProps, 'icon'>> = ({ icon, ...rest }) => (

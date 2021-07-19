@@ -1,8 +1,12 @@
 {
   "name": "@sbercloud/uikit-typography",
   "title": "Typography",
-  "version": "0.1.20",
-  "sideEffects": false,
+  "version": "0.3.2",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
   "description": "Styled wrappers for text elements",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
@@ -22,7 +26,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.17.0"
+    "@sbercloud/uikit-theme": "0.20.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

@@ -22,6 +22,9 @@ export type ClientModelTableControllerProps<T> = {
       cancelText: string;
     };
   };
+  advancedProps?: {
+    getRowHeight?: ITableProps['getRowHeight'];
+  };
   language?: Languages;
 };
 
@@ -33,6 +36,7 @@ export function ClientModelTableController<T>({
   pageSize,
   onRefreshCallback,
   columnDefinitions,
+  advancedProps,
 }: ClientModelTableControllerProps<T>) {
   const [gridApi, setGridApi] = useState<GridApi | null>(null);
   const [searchValue, setSearchValue] = useState('');
@@ -204,6 +208,7 @@ export function ClientModelTableController<T>({
       data={data}
       columnDefinitions={columnDefinitions}
       pageSize={pageSize}
+      getRowHeight={advancedProps?.getRowHeight}
       onGridReady={onGridReady}
       onRefreshCallback={onRefreshCallback}
       useRowSelection={useRowSelection}

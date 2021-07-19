@@ -1,4 +1,4 @@
-import { CrossSVG, SearchSVG } from '@sbercloud/icons';
+import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input, InputProps } from '@sbercloud/uikit-react-input';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { useEffect, useState } from 'react';
@@ -34,14 +34,14 @@ export const InputSearch: React.FC<IInputSearchProps> = ({ onChange, value, getI
       }}
       postfix={
         search ? (
-          <CrossSVG
+          <CloseInterfaceSVG
             className={crossIconClassName}
             onClick={(): void => {
               setSearch('');
             }}
           />
         ) : (
-          <SearchSVG className={searchIconClassname} />
+          <SearchInterfaceSVG className={searchIconClassname} />
         )
       }
       placeholder={textProvider<string>(language, Texts.search)}

@@ -1,7 +1,9 @@
-module.exports = buildType => ({
+const getClassNameSlug = require('./scripts/utils/getClassNameSlug');
+
+module.exports = (buildType, version) => ({
   sourceType: 'unambiguous',
   presets: [
-    !buildType && ['@babel/preset-env', { loose: false }],
+    ['@babel/preset-env', { loose: false, modules: buildType === 'cjs' ? 'cjs' : false }],
     [
       '@babel/preset-react',
       {
@@ -10,10 +12,14 @@ module.exports = buildType => ({
       },
     ],
     ['@babel/preset-typescript', { loose: false }],
-    !buildType && '@linaria',
+    [
+      '@linaria',
+      version && {
+        classNameSlug: getClassNameSlug(version),
+      },
+    ],
   ].filter(Boolean),
   plugins: [
-    buildType === 'cjs' && '@babel/plugin-transform-modules-commonjs',
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-nullish-coalescing-operator',

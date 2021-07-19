@@ -1,6 +1,6 @@
 import { components as ReactSelectComponents } from 'react-select';
 
-import { ArrowDownSVG } from '@sbercloud/icons';
+import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { StyledDropdown, StyledTag, arrowDownClassName } from './styled';
 
@@ -14,7 +14,7 @@ export const DropdownIndicator = (
   return (
     <StyledDropdown {...props}>
       <StyledTag color={value}>
-        <ArrowDownSVG className={arrowDownClassName} />
+        <DropdownDownInterfaceSVG className={arrowDownClassName} />
       </StyledTag>
     </StyledDropdown>
   );

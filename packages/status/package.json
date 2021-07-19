@@ -1,12 +1,16 @@
 {
   "name": "@sbercloud/uikit-react-status",
   "title": "React Status",
-  "version": "0.2.3",
-  "sideEffects": false,
+  "version": "0.4.2",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-status/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/status/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
@@ -22,8 +26,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-theme": "0.17.0",
-    "@sbercloud/uikit-typography": "0.1.20"
+    "@sbercloud/uikit-theme": "0.20.0",
+    "@sbercloud/uikit-typography": "0.3.2"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

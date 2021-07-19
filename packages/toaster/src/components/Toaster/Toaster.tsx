@@ -1,4 +1,9 @@
-import { CheckFilledSVG, CrossSVG, LoadingSVG, SmileSadSVG } from '@sbercloud/icons';
+import {
+  CircleCheckFilledInterfaceSVG,
+  CloseInterfaceSVG,
+  LoadingWheelInterfaceSVG,
+  Smile2InterfaceSVG,
+} from '@sbercloud/uikit-react-icons';
 import { ReactNode } from 'react';
 import { ToastContentProps } from 'react-toastify';
 
@@ -54,14 +59,14 @@ export function Toaster({
     <Wrapper className={className} data-variant={variant}>
       {closeButton && (
         <Close onClick={closeToast}>
-          <CrossSVG size={16} />
+          <CloseInterfaceSVG size={16} />
         </Close>
       )}
 
       <StyledIcon>
-        {variant === Variants.Info && !progress && <CheckFilledSVG size={24} />}
-        {variant === Variants.Info && progress && <LoadingSVG className={progressClassName} size={24} />}
-        {variant === Variants.Error && <SmileSadSVG size={24} />}
+        {variant === Variants.Info && !progress && <CircleCheckFilledInterfaceSVG size={24} />}
+        {variant === Variants.Info && progress && <LoadingWheelInterfaceSVG className={progressClassName} size={24} />}
+        {variant === Variants.Error && <Smile2InterfaceSVG size={24} />}
         {Icon ?? null}
       </StyledIcon>
 

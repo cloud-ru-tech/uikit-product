@@ -1,7 +1,7 @@
 import 'rc-drawer/assets/index.css';
 
 import { cx } from '@linaria/core';
-import { BackSVG, CrossSVG } from '@sbercloud/icons';
+import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { IconButton } from '@sbercloud/uikit-react-button';
 import RcDrawer from 'rc-drawer';
 import { useEffect } from 'react';
@@ -103,14 +103,14 @@ export const Drawer: React.FC<IDrawerProps> = ({
         <HeaderTextBoxStyled>
           {onBackClick && (
             <LeftIconBoxStyled>
-              <BackSVG size={20} onClick={onBackClick} />
+              <ArrowBoldLeftInterfaceSVG size={20} onClick={onBackClick} />
             </LeftIconBoxStyled>
           )}
           {headerText && <Header text={headerText} />}
         </HeaderTextBoxStyled>
         <CloseButtonStyled>
           <IconButton variant={IconButton.variants.Popup} onClick={onClose}>
-            <CrossSVG />
+            <CloseInterfaceSVG />
           </IconButton>
         </CloseButtonStyled>
       </HeaderBoxStyled>

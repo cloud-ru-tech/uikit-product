@@ -1,4 +1,10 @@
-import { DeleteSVG, FilterSVG, RefreshSVG, RowExpandedSVG, TableSettingsSVG } from '@sbercloud/icons';
+import {
+  DeleteInterfaceSVG,
+  FilterInterfaceSVG,
+  RefreshInterfaceSVG,
+  RowExpandedInterfaceSVG,
+  TableSettingsInterfaceSVG,
+} from '@sbercloud/uikit-react-icons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
@@ -17,10 +23,10 @@ const Template: Story<ToolbarWrapperProps> = ({ ...args }) => {
   return (
     <Toolbar.Wrapper {...args}>
       <Toolbar.Button>
-        <RefreshSVG />
+        <RefreshInterfaceSVG />
       </Toolbar.Button>
       <Toolbar.Button disabled>
-        <DeleteSVG />
+        <DeleteInterfaceSVG />
       </Toolbar.Button>
       <Toolbar.Input
         value={value}
@@ -29,13 +35,13 @@ const Template: Story<ToolbarWrapperProps> = ({ ...args }) => {
         }}
       />
       <Toolbar.Button badgeText='3'>
-        <FilterSVG />
+        <FilterInterfaceSVG />
       </Toolbar.Button>
       <Toolbar.Button>
-        <RowExpandedSVG />
+        <RowExpandedInterfaceSVG />
       </Toolbar.Button>
       <Toolbar.Button isActive>
-        <TableSettingsSVG />
+        <TableSettingsInterfaceSVG />
       </Toolbar.Button>
     </Toolbar.Wrapper>
   );

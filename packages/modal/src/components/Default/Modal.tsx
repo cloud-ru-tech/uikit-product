@@ -1,4 +1,4 @@
-import { CrossSVG } from '@sbercloud/icons';
+import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Button, IconButton } from '@sbercloud/uikit-react-button';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
@@ -124,7 +124,7 @@ export const Modal: React.FC<ModalProps> = props => {
           }}
           className={closeButtonStyle}
         >
-          <CrossSVG />
+          <CloseInterfaceSVG />
         </IconButton>
       )}
       {title && <Title>{title}</Title>}

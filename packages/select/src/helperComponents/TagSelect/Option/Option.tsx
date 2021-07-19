@@ -1,5 +1,5 @@
 import { cx } from '@linaria/core';
-import { CircleCheckSVG, DeleteSVG, EditSVG } from '@sbercloud/icons';
+import { CircleCheckOutlineInterfaceSVG, DeleteInterfaceSVG, EditInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Button } from '@sbercloud/uikit-react-button';
 import isEqual from 'lodash.isequal';
 import { useEffect, useMemo, useRef, useState } from 'react';
@@ -129,7 +129,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                   });
                 }}
               >
-                <DeleteSVG />
+                <DeleteInterfaceSVG />
               </StyledTagButton>
               <StyledTagButton
                 size={Button.sizes.xs}
@@ -152,7 +152,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                   }
                 }}
               >
-                <CircleCheckSVG />
+                <CircleCheckOutlineInterfaceSVG />
               </StyledTagButton>
             </StyledTagButtonWrapper>
           </>
@@ -167,7 +167,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                 setEdit(true);
               }}
             >
-              <EditSVG />
+              <EditInterfaceSVG />
             </StyledTagButton>
           </>
         )}

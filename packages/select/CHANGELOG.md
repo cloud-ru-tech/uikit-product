@@ -3,6 +3,60 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.11.2&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.11.3) (2021-07-16)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-select
+
+
+
+
+
+## [0.11.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.11.1&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.11.2) (2021-07-16)
+
+
+### Bug Fixes
+
+* [AICDC-2941](https://jira.sbercloud.tech/browse/AICDC-2941): fixed users by group select min height ([d1dfaeb](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d1dfaeb8f2c503592b02c6645d3797f476bffa2b))
+
+
+
+
+
+## [0.11.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.11.0&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.11.1) (2021-07-13)
+
+
+### Bug Fixes
+
+* change icon deps ([0ed6d17](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/0ed6d1758a7355f05cb3f3e1eb9db01336b1a7e7))
+* cleanup package json ([cff8b75](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/cff8b754fa7bd8ee4b41eca61711f125b1767817))
+* Style extraction class names fix & cjs auto import ([b3cc2ef](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b3cc2effbe8d872ba6139c7616a706888aea112a))
+
+
+
+
+
+# [0.11.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.9.7&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.11.0) (2021-07-12)
+
+
+### Features
+
+* Extract styles at build time ([6a0ef3d](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/6a0ef3dad916c46347ca4d5adbd1fa97563e5911))
+
+
+
+
+
+# [0.10.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.9.7&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.10.0) (2021-07-12)
+
+
+### Features
+
+* Extract styles at build time ([064a959](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/064a959b3c4aa59431767200c28a24b74dbf41cb))
+
+
+
+
+
 ## [0.9.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.9.6&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.9.7) (2021-07-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select

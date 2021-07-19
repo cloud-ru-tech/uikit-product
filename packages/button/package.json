@@ -1,12 +1,16 @@
 {
   "name": "@sbercloud/uikit-react-button",
   "title": "React Button",
-  "version": "0.4.0",
-  "sideEffects": false,
+  "version": "0.6.2",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/react-button/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/button/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
@@ -22,10 +26,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-icons": "1.1.1",
-    "@sbercloud/uikit-react-tooltip": "0.2.0",
-    "@sbercloud/uikit-theme": "0.17.0",
-    "@sbercloud/uikit-typography": "0.1.20",
+    "@sbercloud/uikit-react-icons": "1.3.1",
+    "@sbercloud/uikit-react-tooltip": "0.4.2",
+    "@sbercloud/uikit-theme": "0.20.0",
+    "@sbercloud/uikit-typography": "0.3.2",
     "copy-to-clipboard": "3.3.1"
   },
   "peerDependencies": {

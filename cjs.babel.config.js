@@ -1,1 +1,1 @@
-module.exports = require('./base.babel.config')('cjs');
+module.exports = version => require('./base.babel.config')('cjs', version);

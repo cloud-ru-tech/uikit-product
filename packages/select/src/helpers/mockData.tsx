@@ -1,4 +1,4 @@
-import { GroupStub0SVG } from '@sbercloud/icons';
+import { UserInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { TruncateString } from '@sbercloud/uikit-react-truncate-string';
 
 export const connectors = [
@@ -151,49 +151,49 @@ export const services = [
     label: 'Amazon S3',
     isDisabled: true,
     labelText: 'Amazon S3',
-    logo: <GroupStub0SVG size={20} />,
+    logo: <UserInterfaceSVG size={20} />,
   },
   {
     value: 'BigQuery',
     label: 'BigQuery',
     labelText: 'BigQuery',
-    logo: <GroupStub0SVG size={20} />,
+    logo: <UserInterfaceSVG size={20} />,
   },
   {
     value: 'Ds',
     label: 'AICloud',
     labelText: 'AICloud',
-    logo: <GroupStub0SVG size={20} />,
+    logo: <UserInterfaceSVG size={20} />,
   },
   {
     value: 'GoogleCloudstorage',
     label: <TruncateString text='Google Cloud storage' style={{ width: 'calc(100% - 10px)' }} />,
     labelText: 'Google Cloud storage',
-    logo: <GroupStub0SVG size={20} />,
+    logo: <UserInterfaceSVG size={20} />,
   },
   {
     value: 'ApacheSpark',
     label: 'Apache Spark',
     labelText: 'Apache Spark',
-    logo: <GroupStub0SVG size={20} />,
+    logo: <UserInterfaceSVG size={20} />,
   },
   {
     value: 'MicrosoftSqlServer',
     label: 'Microsoft SQL Server',
     labelText: 'Microsoft SQL Server',
-    logo: <GroupStub0SVG size={20} />,
+    logo: <UserInterfaceSVG size={20} />,
   },
   {
     value: 'MySql',
     label: 'MySql',
     labelText: 'MySql',
-    logo: <GroupStub0SVG size={20} />,
+    logo: <UserInterfaceSVG size={20} />,
   },
   {
     value: 'Postgre',
     label: 'PostgreSQL',
     labelText: 'PostgreSQL',
-    logo: <GroupStub0SVG size={20} />,
+    logo: <UserInterfaceSVG size={20} />,
   },
 ];
 
@@ -205,13 +205,13 @@ export const groupedServices = [
       {
         value: 'AmazonS3',
         label: 'Amazon S3',
-        logo: <GroupStub0SVG size={20} />,
+        logo: <UserInterfaceSVG size={20} />,
       },
-      { value: 'Ds', label: 'AICloud', logo: <GroupStub0SVG size={20} /> },
+      { value: 'Ds', label: 'AICloud', logo: <UserInterfaceSVG size={20} /> },
       {
         value: 'GoogleCloudstorage',
         label: 'Google Cloud storage',
-        logo: <GroupStub0SVG size={20} />,
+        logo: <UserInterfaceSVG size={20} />,
       },
     ],
   },

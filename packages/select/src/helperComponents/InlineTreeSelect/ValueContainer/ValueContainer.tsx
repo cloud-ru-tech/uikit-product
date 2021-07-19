@@ -1,4 +1,4 @@
-import { ArrowDownSVG } from '@sbercloud/icons';
+import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useLanguage } from '@sbercloud/uikit-react-localization';
 import { FC, useCallback } from 'react';
 
@@ -47,7 +47,7 @@ export const ValueContainer: FC<IValueContainerProps> = ({
       }
     >
       {getVal()}
-      <ArrowDownSVG className={iconClass} data-open={open} data-disabled={disabled} />
+      <DropdownDownInterfaceSVG className={iconClass} data-open={open} data-disabled={disabled} />
     </StyledContainer>
   );
 };

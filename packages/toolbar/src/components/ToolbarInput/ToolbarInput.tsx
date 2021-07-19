@@ -1,4 +1,4 @@
-import { CloseSVG, SearchSVG } from '@sbercloud/icons';
+import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input, InputProps } from '@sbercloud/uikit-react-input';
 import { FC, createRef, useEffect, useState } from 'react';
 
@@ -41,14 +41,14 @@ export const ToolbarInput: FC<ToolbarInputProps> = ({ value, onChange, wrapperCl
         type={Input.types.embed}
         postfix={
           value ? (
-            <CloseSVG
+            <CloseInterfaceSVG
               className={crossIconClassName}
               onClick={(): void => {
                 onChange('');
               }}
             />
           ) : (
-            <SearchSVG className={searchIconClassname} />
+            <SearchInterfaceSVG className={searchIconClassname} />
           )
         }
       />

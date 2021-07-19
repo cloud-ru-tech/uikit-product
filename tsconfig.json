@@ -3,8 +3,11 @@
   "compilerOptions": {
     "baseUrl": "packages",
     "paths": {
-      "@sbercloud/uikit-*": [
-        "./*/src"
+      "@sbercloud/uikit-typography": [
+        "./typography/src"
+      ],
+      "@sbercloud/uikit-theme": [
+        "./theme/src"
       ],
       "@sbercloud/uikit-react-*": [
         "./*/src"

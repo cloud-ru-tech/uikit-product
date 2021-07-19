@@ -1,4 +1,4 @@
-import { DeleteSVG } from '@sbercloud/icons';
+import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { RefreshButton } from '@sbercloud/uikit-react-button';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
@@ -18,6 +18,7 @@ type ClientModelTableViewProps<T> = {
   columnDefinitions: ITableProps['columnDefs'];
   pageSize?: number;
   onGridReady: ITableProps['onGridReady'];
+  getRowHeight: ITableProps['getRowHeight'];
   useRowSelection: boolean;
   deleteProps?: DeleteProps;
   paginationProps?: PaginationProps;
@@ -39,6 +40,7 @@ export function ClientModelTableView<T>({
   searchValue,
   paginationProps,
   language,
+  getRowHeight,
 }: ClientModelTableViewProps<T>) {
   return (
     <>
@@ -50,7 +52,7 @@ export function ClientModelTableView<T>({
         )}
         {deleteProps && (
           <Toolbar.Button disabled={!deleteProps.isDeleteEnabled} onClick={deleteProps.openDeleteDialog}>
-            <DeleteSVG />
+            <DeleteInterfaceSVG />
           </Toolbar.Button>
         )}
         <Toolbar.Input
@@ -69,6 +71,7 @@ export function ClientModelTableView<T>({
           reason: data.length === 0 ? NoDataReasons.InitialEmpty : NoDataReasons.Search,
           language,
         }}
+        getRowHeight={getRowHeight}
         gridOptions={{
           defaultColDef: {
             suppressMenu: true,

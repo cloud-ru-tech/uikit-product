@@ -1,6 +1,10 @@
 import { styled } from '@linaria/react';
-import { PauseCircleSVG, PlayCircleSVG, StopCircleSVG } from '@sbercloud/icons';
 import { TableButton } from '@sbercloud/uikit-react-button';
+import {
+  CirclePauseInterfaceSVG,
+  CirclePlayFilledInterfaceSVG,
+  CircleStopInterfaceSVG,
+} from '@sbercloud/uikit-react-icons';
 import { Status } from '@sbercloud/uikit-react-status';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import debounce from 'lodash.debounce';
@@ -149,7 +153,7 @@ clientModelTable.args = {
           <ButtonGroup>
             <TableButton
               variant={TableButton.variants.TextIcon}
-              icon={<PlayCircleSVG />}
+              icon={<CirclePlayFilledInterfaceSVG />}
               disabled={isDisabled}
               inProgress={isInProgress}
               text={'AGrigorii'}
@@ -159,13 +163,13 @@ clientModelTable.args = {
               variant={TableButton.variants.Icon}
               disabled={isDisabled}
               inProgress={isInProgress}
-              icon={<StopCircleSVG />}
+              icon={<CircleStopInterfaceSVG />}
             />
             <TableButton
               variant={TableButton.variants.Icon}
               disabled={isDisabled}
               inProgress={isInProgress}
-              icon={<PauseCircleSVG />}
+              icon={<CirclePauseInterfaceSVG />}
             />
           </ButtonGroup>
         );
