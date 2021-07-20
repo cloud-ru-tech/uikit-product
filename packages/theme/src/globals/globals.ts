@@ -5,6 +5,7 @@ import GLOBAL_CSS_COLOR, { globalCSSTheme } from './theme';
 export const globals = css`
   :global() {
     ${globalCSSTheme}
+
     @font-face {
       font-family: 'SB Sans Interface';
       src: url('../fonts/SBSansInterface-Semibold.woff2') format('woff2'),

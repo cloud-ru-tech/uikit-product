@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ButtonSize, ButtonVariant } from '../../helpers/constants';
+import { ButtonSize, ButtonVariant } from '../../../helpers/constants';
 import { ButtonComponent, IconWrap } from './styled';
 
 interface IButtonCustomProps {

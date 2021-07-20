@@ -1,2 +1,1 @@
-export * from './DEPRECATED';
 export * from './ButtonIcon';

@@ -2,7 +2,7 @@ import { CopiedInterfaceSVG, CopyInterfaceSVG } from '@sbercloud/uikit-react-ico
 import copyText from 'copy-to-clipboard';
 import { useCallback, useRef, useState } from 'react';
 
-import { ButtonVariant } from '../../helpers/constants';
+import { ButtonVariant } from '../../../helpers/constants';
 import { Button } from '../Default';
 import { iconStyle } from './styled';
 

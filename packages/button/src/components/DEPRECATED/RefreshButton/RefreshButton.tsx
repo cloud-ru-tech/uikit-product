@@ -1,7 +1,7 @@
 import { RefreshInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useCallback, useMemo } from 'react';
 
-import { ButtonVariant } from '../../helpers/constants';
+import { ButtonVariant } from '../../../helpers/constants';
 import { Button } from '../Default';
 import { refreshAnimation } from './styled';
 

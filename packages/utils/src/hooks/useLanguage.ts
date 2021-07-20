@@ -23,19 +23,21 @@ export const useLanguage = (props?: useLanguageProps) => {
   }, []);
 
   useLayoutEffect(() => {
-    if (onlyEnabledLanguage) {
-      const enGroup = code.split('-')[0] === 'en';
-      const ruGroup = ['ru', 'be'].includes(code.split('-')[0]);
-      if (enGroup) {
-        setCode(LanguageCodeType.enGB);
-        return;
-      }
-      if (ruGroup) {
-        setCode(LanguageCodeType.ruRU);
-        return;
-      }
-      setCode(LanguageCodeType.ruRU);
+    if (!onlyEnabledLanguage) {
+      return;
     }
+    const miniCode = code.split('-')[0];
+    const enGroup = miniCode === 'en';
+    const ruGroup = ['ru', 'be'].includes(miniCode);
+    if (enGroup) {
+      setCode(LanguageCodeType.enGB);
+      return;
+    }
+    if (ruGroup) {
+      setCode(LanguageCodeType.ruRU);
+      return;
+    }
+    setCode(LanguageCodeType.ruRU);
   }, [code, onlyEnabledLanguage]);
 
   const changeLanguage = useCallback((languageCode: LanguageCodeType) => {
