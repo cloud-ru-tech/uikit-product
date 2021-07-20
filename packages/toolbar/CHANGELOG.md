@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.5.2&sourceBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.5.3) (2021-07-20)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-toolbar
+
+
+
+
+
 ## [0.5.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.5.1&sourceBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.5.2) (2021-07-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toolbar

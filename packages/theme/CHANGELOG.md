@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.20.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.21.0) (2021-07-20)
+
+
+### Features
+
+* green tabs ([54d6c07](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/54d6c07f8f27a9389026acb81b635b8e75a3debc))
+
+
+
+
+
 # [0.20.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.19.1&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.20.0) (2021-07-16)
 
 
