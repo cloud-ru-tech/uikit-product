@@ -12,7 +12,7 @@ import { ButtonIcon } from '../src/components/ButtonIcon';
 import { Variant } from '../src/components/ButtonIcon/constants';
 
 export default {
-  title: 'Components/Button',
+  title: 'Components/Button/Button Icon',
   component: ButtonIcon,
 } as Meta;
 
