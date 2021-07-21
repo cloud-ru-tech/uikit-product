@@ -1,9 +1,10 @@
 import { css } from '@linaria/core';
-import GENERAL_COLOR, { generalTheme } from './theme';
+
+import GLOBAL_CSS_COLOR, { globalCSSTheme } from './theme';
 
 export const globals = css`
   :global() {
-    ${generalTheme}
+    ${globalCSSTheme}
     @font-face {
       font-family: 'SB Sans Interface';
       src: url('../fonts/SBSansInterface-Semibold.woff2') format('woff2'),
@@ -55,7 +56,7 @@ export const globals = css`
 
     body {
       height: 100%;
-      background: var(${GENERAL_COLOR.BACKGROUND});
+      background: var(${GLOBAL_CSS_COLOR.BACKGROUND});
 
       transition: all 0.4s ease-in-out;
     }
@@ -64,8 +65,8 @@ export const globals = css`
     button,
     input {
       font-family: SB Sans Interface, Helvetica, Arial, sans-serif;
-      color: var(${GENERAL_COLOR.TEXT});
-      fill: var(${GENERAL_COLOR.TEXT});
+      color: var(${GLOBAL_CSS_COLOR.TEXT});
+      fill: var(${GLOBAL_CSS_COLOR.TEXT});
     }
 
     a {
