@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.5.1&sourceBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.5.2) (2021-07-21)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-hierarchy-menu
+
+
+
+
+
+## [0.5.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.5.1) (2021-07-20)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-hierarchy-menu
+
+
+
+
+
+# [0.5.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.2.0&sourceBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.5.0) (2021-07-19)
+
+
+### Bug Fixes
+
+* Style extraction class names fix & cjs auto import ([b3cc2ef](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b3cc2effbe8d872ba6139c7616a706888aea112a))
+
+
+### Features
+
+* Extract styles at build time ([6a0ef3d](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/6a0ef3dad916c46347ca4d5adbd1fa97563e5911))
+
+
+
+
+
+# [0.4.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.1.1&sourceBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.2.0) (2021-07-19)
+
+### Features
+* added onItemClick(), added data-test-id, added className ([2b1dea6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/
+
+
 ## [0.3.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.3.1&sourceBranch=refs/tags/@sbercloud/uikit-react-hierarchy-menu@0.3.2) (2021-07-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-hierarchy-menu
@@ -39,6 +77,16 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 ### Features
 
 * Extract styles at build time ([064a959](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/064a959b3c4aa59431767200c28a24b74dbf41cb))
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+* Extract styles at build time ([064a959](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/064a959b3c4aa59431767200c28a24b74dbf41cb))
+=======
+* added onItemClick(), added data-test-id, added className ([2b1dea6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/2b1dea621f59ec22344728035f3b5c116a41066b))
+>>>>>>> b1dcc21 (Version bump)
+>>>>>>> 44e2ac1 (Version bump)
+=======
+>>>>>>> 8053df8 (Version bump)
 
 
 

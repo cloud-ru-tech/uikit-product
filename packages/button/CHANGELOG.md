@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.3&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.7.0) (2021-07-21)
+
+
+### Features
+
+* [AICDC-2176](https://jira.sbercloud.tech/browse/AICDC-2176): added alarm button variant, use alarm button in modal ([fb7aa16](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/fb7aa163e827d001fe7b2d8161ba3f9878337f61))
+
+
+
+
+
+## [0.6.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.3) (2021-07-20)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
 ## [0.6.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.2) (2021-07-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button

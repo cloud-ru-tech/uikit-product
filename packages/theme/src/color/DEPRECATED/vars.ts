@@ -155,6 +155,15 @@ const COLORS_BUTTON = {
   WHITE_FOCUS_OUTLINE: '--button-white-focus-outline',
   WHITE_FOCUS_BORDER: '--button-white-focus-border',
 
+  ALARM_COLOR: '--button-alarm-color',
+  ALARM_ICON_COLOR: '--button-alarm-icon-color',
+  ALARM_BG: '--button-alarm-background',
+  ALARM_HOVER_BG: '--button-alarm-hover-background',
+  ALARM_ACTIVE_BG: '--button-alarm-active-background',
+  ALARM_DISABLED_COLOR: '--button-alarm-disabled-color',
+  ALARM_DISABLED_BG: '--button-alarm-disabled-background',
+  ALARM_FOCUS_BG: '--button-alarm-disabled-focus-background',
+
   ROUNDED_COLOR: '--button-rounded-color',
   ROUNDED_BG: '--button-rounded-bg',
   ROUNDED_HOVER_BG: '--button-rounded-hover-bg',
