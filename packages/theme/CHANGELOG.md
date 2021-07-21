@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.22.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.21.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.22.0) (2021-07-21)
+
+
+### Features
+
+* [AICDC-2176](https://jira.sbercloud.tech/browse/AICDC-2176): added alarm button variant, use alarm button in modal ([fb7aa16](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/fb7aa163e827d001fe7b2d8161ba3f9878337f61))
+
+
+
+
+
 # [0.21.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.20.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.21.0) (2021-07-20)
 
 
