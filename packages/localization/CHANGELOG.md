@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.5.3&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.8.0) (2021-07-22)
+
+
+### Bug Fixes
+
+* cleanup package json ([cff8b75](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/cff8b754fa7bd8ee4b41eca61711f125b1767817))
+* Style extraction class names fix & cjs auto import ([b3cc2ef](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b3cc2effbe8d872ba6139c7616a706888aea112a))
+
+
+### Features
+
+* create ConfigProvider ([24c5cef](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/24c5cef7fb415a1e306c96d5c29f336259088634))
+* Extract styles at build time ([6a0ef3d](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/6a0ef3dad916c46347ca4d5adbd1fa97563e5911))
+
+
+
+
+
 ## [0.7.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.7.1) (2021-07-13)
 
 
