@@ -1,8 +1,8 @@
 import 'rc-drawer/assets/index.css';
 
 import { cx } from '@linaria/core';
-import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { IconButton } from '@sbercloud/uikit-react-button';
+import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import RcDrawer from 'rc-drawer';
 import { useEffect } from 'react';
 
@@ -22,6 +22,7 @@ import {
 export interface IDrawerProps {
   open: boolean;
   className?: string;
+  hideHeader?: boolean;
   width?: string | number;
   footer?: React.ReactNode;
   placement?: 'left' | 'right';
@@ -41,6 +42,7 @@ export const Drawer: React.FC<IDrawerProps> = ({
   container,
   className,
   headerText,
+  hideHeader,
   onBackClick,
   ...restProps
 }) => {
@@ -99,21 +101,23 @@ export const Drawer: React.FC<IDrawerProps> = ({
       getContainer={container}
       {...restProps}
     >
-      <HeaderBoxStyled width={typeof width === 'number' ? `${width}px` : width}>
-        <HeaderTextBoxStyled>
-          {onBackClick && (
-            <LeftIconBoxStyled>
-              <ArrowBoldLeftInterfaceSVG size={20} onClick={onBackClick} />
-            </LeftIconBoxStyled>
-          )}
-          {headerText && <Header text={headerText} />}
-        </HeaderTextBoxStyled>
-        <CloseButtonStyled>
-          <IconButton variant={IconButton.variants.Popup} onClick={onClose}>
-            <CloseInterfaceSVG />
-          </IconButton>
-        </CloseButtonStyled>
-      </HeaderBoxStyled>
+      {hideHeader ? null : (
+        <HeaderBoxStyled width={typeof width === 'number' ? `${width}px` : width}>
+          <HeaderTextBoxStyled>
+            {onBackClick && (
+              <LeftIconBoxStyled>
+                <ArrowBoldLeftInterfaceSVG size={20} onClick={onBackClick} />
+              </LeftIconBoxStyled>
+            )}
+            {headerText && <Header text={headerText} />}
+          </HeaderTextBoxStyled>
+          <CloseButtonStyled>
+            <IconButton variant={IconButton.variants.Popup} onClick={onClose}>
+              <CloseInterfaceSVG />
+            </IconButton>
+          </CloseButtonStyled>
+        </HeaderBoxStyled>
+      )}
       <ContentBoxStyled data-hasfooter={!!footer || undefined}>{children}</ContentBoxStyled>
       {footer && <FooterBoxStyled width={typeof width === 'number' ? `${width}px` : width}>{footer}</FooterBoxStyled>}
     </RcDrawer>

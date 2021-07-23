@@ -76,8 +76,5 @@ export const drawerWrapperClassName = css`
     background: inherit;
     display: flex;
     flex-direction: column;
-
-    margin-right: -20px;
-    padding-right: 20px;
   }
 `;
