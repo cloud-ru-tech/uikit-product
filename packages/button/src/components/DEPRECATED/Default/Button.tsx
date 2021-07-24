@@ -3,7 +3,7 @@ import React from 'react';
 import { ButtonSize, ButtonVariant } from '../../../helpers/constants';
 import { ButtonComponent, IconWrap } from './styled';
 
-interface IButtonCustomProps {
+type IButtonCustomProps = {
   rounded?: boolean;
   className?: string;
   disabled?: boolean;
@@ -13,7 +13,7 @@ interface IButtonCustomProps {
   children?: React.ReactNode;
   iconPosition?: 'before' | 'after';
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-}
+};
 
 export type ButtonProps = IButtonCustomProps & React.ComponentProps<typeof ButtonComponent>;
 

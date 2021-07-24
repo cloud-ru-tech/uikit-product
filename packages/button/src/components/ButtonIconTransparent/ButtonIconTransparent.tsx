@@ -1,19 +1,22 @@
-import { PropsWithChildren, forwardRef } from 'react';
+import { ComponentProps, PropsWithChildren, forwardRef } from 'react';
+
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Variant } from './constants';
 import * as S from './styled';
 
-export type ButtonIconTransparentProps = PropsWithChildren<
-  Pick<React.ComponentProps<typeof S.Button>, 'className' | 'type' | 'disabled' | 'onClick' | 'title'> & {
-    variant?: Variant;
-    rounded?: boolean;
-    dataTestId?: string;
-  }
+export type ButtonIconTransparentProps = WithSupportProps<
+  PropsWithChildren<
+    Pick<ComponentProps<typeof S.Button>, 'className' | 'type' | 'disabled' | 'onClick' | 'title'> & {
+      variant?: Variant;
+      rounded?: boolean;
+    }
+  >
 >;
 
 const ButtonIconTransparentBase = forwardRef<HTMLButtonElement, ButtonIconTransparentProps>(
   (
-    { children, className, type = 'button', disabled, onClick, title, variant = Variant.Default, rounded, dataTestId },
+    { children, className, type = 'button', disabled, onClick, title, variant = Variant.Default, rounded, ...rest },
     ref,
   ) => (
     <S.Button
@@ -24,8 +27,8 @@ const ButtonIconTransparentBase = forwardRef<HTMLButtonElement, ButtonIconTransp
       title={title}
       data-variant={variant}
       data-rounded={rounded || undefined}
-      data-test-id={dataTestId}
       ref={ref}
+      {...extractSupportProps(rest)}
     >
       {children}
     </S.Button>

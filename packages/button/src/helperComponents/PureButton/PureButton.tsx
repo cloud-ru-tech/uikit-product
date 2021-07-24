@@ -9,6 +9,7 @@ export const PureButton = styled.button`
   background-color: transparent;
   cursor: pointer;
   outline: none;
+  transition: all 0.2s ease-in-out;
 
   :disabled {
     cursor: not-allowed;

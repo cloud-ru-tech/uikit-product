@@ -1,52 +1,37 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react';
 import { ComponentProps } from 'react';
 
 import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { EXPORT_GLOBAL_CSS_VARS, EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ButtonIconTransparent } from '../src';
-import { Variant } from '../src/components/ButtonIconTransparent/constants';
+import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 
 export default {
-  title: 'Components/Button/Button Icon Transparent',
+  title: 'Not stable/Button/Button Icon Transparent',
   component: ButtonIconTransparent,
 } as Meta;
 
-const Wrapper = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  background-color: var(${EXPORT_VARS.GREY[0]});
-`;
-
-const Column = styled.div`
-  display: grid;
-  justify-content: center;
-  grid-gap: 16px;
-  padding: 16px;
-
-  &[data-variant='${Variant.Accent}'] {
-    color: var(${EXPORT_VARS.GREY[0]});
-    background-color: var(${EXPORT_GLOBAL_CSS_VARS.ACCENT_BACKGROUND});
-  }
-`;
-
 const Template: Story<Pick<ComponentProps<typeof ButtonIconTransparent>, 'rounded' | 'disabled'>> = ({ ...args }) => (
-  <Wrapper>
+  <TableWrapper>
     {Object.entries(ButtonIconTransparent.variants).map(([key, value]) => (
-      <Column key={key} data-variant={value}>
-        <span>{key}</span>
+      <TableColumn
+        key={key}
+        data-variant={value === ButtonIconTransparent.variants.Accent ? TableColumn.variants.accent : undefined}
+      >
+        <TableCell>{key}</TableCell>
 
-        <ButtonIconTransparent variant={value} title='Play' {...args}>
-          <CirclePlayFilledInterfaceSVG />
-        </ButtonIconTransparent>
-      </Column>
+        <TableCell>
+          <ButtonIconTransparent variant={value} title='Play' {...args}>
+            <CirclePlayFilledInterfaceSVG />
+          </ButtonIconTransparent>
+        </TableCell>
+      </TableColumn>
     ))}
-  </Wrapper>
+  </TableWrapper>
 );
 
 export const buttonIconTransparent = Template.bind({});

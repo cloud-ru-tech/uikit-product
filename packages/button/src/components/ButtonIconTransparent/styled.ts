@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { PureButton } from '../../helperComponents/PureButton';
+import { PureButton } from '../../helperComponents';
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 

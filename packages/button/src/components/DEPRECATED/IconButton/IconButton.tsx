@@ -9,9 +9,9 @@ export enum IconButtonVariant {
   Popup = 'popup',
 }
 
-interface OnlyIconButtonProps {
+type OnlyIconButtonProps = {
   variant?: IconButtonVariant;
-}
+};
 
 export type IconButtonProps = OnlyIconButtonProps & React.ComponentProps<typeof Wrapper>;
 

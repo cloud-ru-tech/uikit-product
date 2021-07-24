@@ -8,11 +8,11 @@
 The commit contains the following structural elements, to communicate intent to the consumers of your library:
 
 fix: a commit of the type fix patches a bug in your codebase (this correlates with PATCH in Semantic Versioning).
-feat: a commit of the type feat introduces a new feature to the codebase 
+feat: a commit of the type feat introduces a new feature to the codebase
 (this correlates with MINOR in Semantic Versioning).
-BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking 
+BREAKING CHANGE: a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking
 API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
-types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the the Angular 
+types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the the Angular
 convention) recommends build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, and others.
 footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to git trailer format.
 ```
@@ -25,12 +25,12 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 *    `build:storybook` - сборка исходников сторибука для CI/CD
 *    `add-package` - создание нового пакета в рамках монорепозитория
 *    `clean` - запуск одновременно двух команд ниже
-*    `clean:dist` - вычищает папки собранных пакетов 
+*    `clean:dist` - вычищает папки собранных пакетов
 *    `clean:modules` - удаляет симлинки в пакетах
 *    `changelog` - генерация changelog в измененных пакетах
-*    `compile` - компиляция всех пакетов 
+*    `compile` - компиляция всех пакетов
 *    `release:first-stable` - выпуск ПЕРВОЙ И ТОЛЬКО ПЕРВОЙ стабильной версии пакета
-*    `release:conventional` - создание conventional changelog вместе с пушем 
+*    `release:conventional` - создание conventional changelog вместе с пушем
 *    `build` - пересборка пакетов вместе с установкой пакетных зависимостей, глобальные должны быть при этом установлены
 *    `all:cleaninstall` - установка ВСЕХ (пакетных и глобальный) зависимостей и билд всех пакетов
 
@@ -42,15 +42,18 @@ packages
   some-package
     src
       components
+        Some
+          index.ts
+          Some.tsx
+          styled.ts
+          themes.ts
+          constants.ts (опционально)
         index.ts
-        Some.tsx
-        styled.ts
-      index.ts
-    stories   
+    stories
       Some.tsx
     package.json
     README.md
-    CHANGELOG.md     
+    CHANGELOG.md
 ```
 
 ## Сценарии
@@ -76,7 +79,7 @@ packages
 ### Внесение изменений в существующий пакет
 1. Создайте feature или bugfix ветку от последнего master
 2. Запустите команду `npm run all:cleaninstall`
-3. Внесите необходимые изменения согласно Conventional commit approach 
+3. Внесите необходимые изменения согласно Conventional commit approach
 4. Создайте pull request
 5. После аппрува запустите команду `npm run release:conventional`
 6. Как можно быстрее смержите через интерфейс Bitbucket ваш pr

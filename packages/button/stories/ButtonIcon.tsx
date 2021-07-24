@@ -1,60 +1,49 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react';
 import { ComponentProps } from 'react';
 
 import { CloseInterfaceSVG, DeleteInterfaceSVG, MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { EXPORT_GLOBAL_CSS_VARS, EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ButtonIcon } from '../src/components/ButtonIcon';
-import { Variant } from '../src/components/ButtonIcon/constants';
+import { ButtonIcon } from '../src';
+import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 
 export default {
-  title: 'Components/Button/Button Icon',
+  title: 'Not stable/Button/Button Icon',
   component: ButtonIcon,
 } as Meta;
 
-const Wrapper = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  background-color: var(${EXPORT_VARS.GREY[0]});
-`;
-
-const Column = styled.div`
-  display: grid;
-  justify-content: center;
-  grid-gap: 16px;
-  padding: 16px;
-
-  &[data-variant='${Variant.OnAccent}'] {
-    color: var(${EXPORT_VARS.GREY[0]});
-    background-color: var(${EXPORT_GLOBAL_CSS_VARS.ACCENT_BACKGROUND});
-  }
-`;
-
 const Template: Story<Pick<ComponentProps<typeof ButtonIcon>, 'disabled'>> = ({ ...args }) => (
-  <Wrapper>
+  <TableWrapper>
     {Object.entries(ButtonIcon.variants).map(([key, value]) => (
-      <Column key={key} data-variant={value}>
-        <span>{key}</span>
+      <TableColumn
+        key={key}
+        data-variant={value === ButtonIcon.variants.OnAccent ? TableColumn.variants.accent : undefined}
+      >
+        <TableCell>{key}</TableCell>
 
-        <ButtonIcon variant={value} title='Close' {...args}>
-          <CloseInterfaceSVG />
-        </ButtonIcon>
+        <TableCell>
+          <ButtonIcon variant={value} title='Close' {...args}>
+            <CloseInterfaceSVG />
+          </ButtonIcon>
+        </TableCell>
 
-        <ButtonIcon variant={value} title='More' {...args}>
-          <MoreInterfaceSVG />
-        </ButtonIcon>
+        <TableCell>
+          <ButtonIcon variant={value} title='More' {...args}>
+            <MoreInterfaceSVG />
+          </ButtonIcon>
+        </TableCell>
 
-        <ButtonIcon variant={value} title='Delete' {...args}>
-          <DeleteInterfaceSVG />
-        </ButtonIcon>
-      </Column>
+        <TableCell>
+          <ButtonIcon variant={value} title='Delete' {...args}>
+            <DeleteInterfaceSVG />
+          </ButtonIcon>
+        </TableCell>
+      </TableColumn>
     ))}
-  </Wrapper>
+  </TableWrapper>
 );
 export const buttonIcon = Template.bind({});
 

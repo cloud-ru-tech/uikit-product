@@ -4,23 +4,23 @@ import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 const { GREY, BLUE_GREY, PURPLE, WHITE_ALFA, GREEN } = EXPORT_VARS;
 
 export const COLORS = {
-  DEFAULT_FILL: '--color-button-icon-default-fill',
-  DEFAULT_BG: '--color-button-icon-default-bg',
-  DEFAULT_FILL_HOVER: '--color-button-icon-default-fill-hover',
-  DEFAULT_BG_HOVER: '--color-button-icon-default-bg-hover',
-  DEFAULT_FILL_ACTIVE: '--color-button-icon-default-fill-active',
-  DEFAULT_BG_ACTIVE: '--color-button-icon-default-bg-active',
-  DEFAULT_FILL_DISABLED: '--color-button-icon-default-fill-disabled',
-  DEFAULT_BG_DISABLED: '--color-button-icon-default-bg-disabled',
+  DEFAULT_FILL: '--color-button-icon-transparent-default-fill',
+  DEFAULT_BG: '--color-button-icon-transparent-default-bg',
+  DEFAULT_FILL_HOVER: '--color-button-icon-transparent-default-fill-hover',
+  DEFAULT_BG_HOVER: '--color-button-icon-transparent-default-bg-hover',
+  DEFAULT_FILL_ACTIVE: '--color-button-icon-transparent-default-fill-active',
+  DEFAULT_BG_ACTIVE: '--color-button-icon-transparent-default-bg-active',
+  DEFAULT_FILL_DISABLED: '--color-button-icon-transparent-default-fill-disabled',
+  DEFAULT_BG_DISABLED: '--color-button-icon-transparent-default-bg-disabled',
 
-  ACCENT_FILL: '--color-button-icon-accent-fill',
-  ACCENT_BG: '--color-button-icon-accent-bg',
-  ACCENT_FILL_HOVER: '--color-button-icon-accent-fill-hover',
-  ACCENT_BG_HOVER: '--color-button-icon-accent-bg-hover',
-  ACCENT_FILL_ACTIVE: '--color-button-icon-accent-fill-active',
-  ACCENT_BG_ACTIVE: '--color-button-icon-accent-bg-active',
-  ACCENT_FILL_DISABLED: '--color-button-icon-accent-fill-disabled',
-  ACCENT_BG_DISABLED: '--color-button-icon-accent-bg-disabled',
+  ACCENT_FILL: '--color-button-icon-transparent-accent-fill',
+  ACCENT_BG: '--color-button-icon-transparent-accent-bg',
+  ACCENT_FILL_HOVER: '--color-button-icon-transparent-accent-fill-hover',
+  ACCENT_BG_HOVER: '--color-button-icon-transparent-accent-bg-hover',
+  ACCENT_FILL_ACTIVE: '--color-button-icon-transparent-accent-fill-active',
+  ACCENT_BG_ACTIVE: '--color-button-icon-transparent-accent-bg-active',
+  ACCENT_FILL_DISABLED: '--color-button-icon-transparent-accent-fill-disabled',
+  ACCENT_BG_DISABLED: '--color-button-icon-transparent-accent-bg-disabled',
 };
 
 /* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.Purple}'] */
