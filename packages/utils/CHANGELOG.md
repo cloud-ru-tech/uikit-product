@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-utils@0.2.0&sourceBranch=refs/tags/@sbercloud/uikit-utils@0.2.1) (2021-07-26)
+
+
+### Bug Fixes
+
+* fix console errors on JSON.parse failures ([dc9ff96](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/dc9ff9688fc339521c9283eee3573489933a7068))
+
+
+
+
+
 # 0.2.0 (2021-07-26)
 
 

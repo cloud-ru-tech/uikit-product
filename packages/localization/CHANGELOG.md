@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.9.0&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.9.1) (2021-07-26)
+
+
+### Bug Fixes
+
+* delete redundant code, package no longer provides languages enum ([fb65513](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/fb65513a639d290de100c45e4878869ab8fca5b2))
+
+
+
+
+
 # [0.9.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-localization@0.7.1&sourceBranch=refs/tags/@sbercloud/uikit-react-localization@0.9.0) (2021-07-26)
 
 
