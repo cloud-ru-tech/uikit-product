@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.8.0) (2021-07-26)
+
+
+### Features
+
+* [AICDC-3133](https://jira.sbercloud.tech/browse/AICDC-3133): added hideHeader prop to drawer, removed margin-right and padding-right from drawer ([daab459](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/daab4594e4ac636a0afb064045cffd0275e8fe22))
+
+
+
+
+
 # [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.5.4&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.7.0) (2021-07-26)
 
 
