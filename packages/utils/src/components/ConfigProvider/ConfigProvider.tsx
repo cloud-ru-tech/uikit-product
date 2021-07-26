@@ -1,9 +1,9 @@
-import { FC, useLayoutEffect, useState, useEffect } from 'react';
-
 import { color, globals } from '@sbercloud/uikit-theme';
+import { FC, useEffect, useLayoutEffect, useState } from 'react';
 
 import { DEFAULT, DEPRECATED_COLOR, POSTMASSAGE_KEY } from '../../constants';
 import { store } from '../../helpers/store';
+import { tryParseJson } from '../../helpers/tryParseJson';
 import { LanguageCodeType, Themes } from '../../types';
 
 export interface ConfigProviderProps {
@@ -26,8 +26,8 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
     --- THEME --- 
     -----------*/
 
-    const receiveChangeThemeMessage = (event: MessageEvent<string>) => {
-      const eventData = JSON.parse(event.data);
+    const receiveChangeThemeMessage = (event: MessageEvent) => {
+      const eventData = tryParseJson(event.data);
       if (eventData.key !== POSTMASSAGE_KEY.changeTheme) return;
 
       setConfigTheme(eventData.value);
@@ -40,8 +40,8 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
     --- LANGUAGE --- 
     --------------*/
 
-    const receiveChangeLanguageMessage = (event: MessageEvent<string>) => {
-      const eventData = JSON.parse(event.data);
+    const receiveChangeLanguageMessage = (event: MessageEvent) => {
+      const eventData = tryParseJson(event.data);
       if (eventData.key !== POSTMASSAGE_KEY.changeLanguage) return;
       setConfigLanguageCodeTheme(eventData.value);
     };

@@ -1,14 +1,16 @@
-import { Themes } from '../types/theme';
-import { store } from '../helpers/store';
-import { useState, useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+
 import { DEFAULT, POSTMASSAGE_KEY } from '../constants';
+import { store } from '../helpers/store';
+import { tryParseJson } from '../helpers/tryParseJson';
+import { Themes } from '../types/theme';
 
 export const useTheme = () => {
   const [theme, setTheme] = useState(store.theme || DEFAULT.THEME);
 
   useEffect(() => {
-    const receiveChangeThemeDoneMessage = (event: MessageEvent<string>) => {
-      const eventData = JSON.parse(event.data);
+    const receiveChangeThemeDoneMessage = (event: MessageEvent) => {
+      const eventData = tryParseJson(event.data);
       if (eventData.key !== POSTMASSAGE_KEY.changeThemeDone) return;
       setTheme(eventData.value);
     };

@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
+
 import { DEFAULT, POSTMASSAGE_KEY } from '../constants';
 import { store } from '../helpers/store';
+import { tryParseJson } from '../helpers/tryParseJson';
 import { LanguageCodeType } from '../types';
 
 interface useLanguageProps {
@@ -12,8 +14,8 @@ export const useLanguage = (props?: useLanguageProps) => {
   const onlyEnabledLanguage = props?.onlyEnabledLanguage;
 
   useEffect(() => {
-    const receiveChangeLanguageDoneMessage = (event: MessageEvent<string>) => {
-      const eventData = JSON.parse(event.data);
+    const receiveChangeLanguageDoneMessage = (event: MessageEvent) => {
+      const eventData = tryParseJson(event.data);
       if (eventData.key !== POSTMASSAGE_KEY.changeLanguageDone) return;
       setCode(eventData.value);
     };

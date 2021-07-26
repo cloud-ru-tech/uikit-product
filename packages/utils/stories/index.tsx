@@ -1,18 +1,18 @@
-import { Story, Meta } from '@storybook/react/types-6-0';
-import { ConfigProvider, ConfigProviderProps } from '../src/components/ConfigProvider';
+import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
+import { Button } from '@sbercloud/uikit-react-button';
+import { Divider } from '@sbercloud/uikit-react-divider';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { H1, H3, Text2 } from '@sbercloud/uikit-typography';
+import { Meta, Story } from '@storybook/react/types-6-0';
 
-import componentReadme from '../README.md';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
-import { Button } from '@sbercloud/uikit-react-button';
-import { useTheme } from '../src/hooks/useTheme';
-import { styled } from '@linaria/react';
-import { H1, H3, Text2 } from '@sbercloud/uikit-typography';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { css } from '@linaria/core';
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { LanguageCodeType, Themes } from '../src/types';
+import componentReadme from '../README.md';
+import { ConfigProvider, ConfigProviderProps } from '../src/components/ConfigProvider';
 import { useLanguage } from '../src/hooks/useLanguage';
+import { useTheme } from '../src/hooks/useTheme';
+import { LanguageCodeType, Themes } from '../src/types';
 
 const { GREY } = EXPORT_VARS;
 
@@ -88,11 +88,11 @@ const Template: Story<ConfigProviderProps> = ({ ...args }) => {
         <Divider className={dividerCSS} />
         <Title>
           <H3>
-            Активная темма: <ThemeWrapper theme={theme}>{theme}</ThemeWrapper>
+            Активная тема: <ThemeWrapper theme={theme}>{theme}</ThemeWrapper>
           </H3>
         </Title>
         <Title>
-          <H3>Cмена темы через changeTheme</H3>
+          <H3>Смена темы через changeTheme</H3>
           <Text2>(нажми на кнопку)</Text2>
         </Title>
         <ConfigBody>
@@ -111,7 +111,7 @@ const Template: Story<ConfigProviderProps> = ({ ...args }) => {
           </H3>
         </Title>
         <Title>
-          <H3>Cмена языка через changeLanguage</H3>
+          <H3>Смена языка через changeLanguage</H3>
           <Text2>(нажми на кнопку)</Text2>
         </Title>
         <ConfigBody>
