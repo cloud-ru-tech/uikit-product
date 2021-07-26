@@ -1,12 +1,12 @@
 import { styled } from '@linaria/react';
 import { Text1 } from '@sbercloud/uikit-typography';
+import { ConfigProvider, useLanguage } from '@sbercloud/uikit-utils';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CurrencyFormatter, DateFormatter, NumberFormatter } from '../src';
-import { useLanguage, ConfigProvider } from '@sbercloud/uikit-utils';
 
 export default {
   title: 'Not stable/Localization',
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   margin: 1rem;
 `;
 
-const Template: Story = ({ showOnlyDate }) => {
+const Template: Story = ({ showTime }) => {
   const { code: langCode } = useLanguage();
   return (
     <>
@@ -34,7 +34,7 @@ const Template: Story = ({ showOnlyDate }) => {
         <strong>NumberFormatter:</strong> <NumberFormatter value={1000e10} />
       </Wrapper>
       <Wrapper>
-        <strong>DateFormatter:</strong> <DateFormatter showTime={showOnlyDate} value={new Date()} />
+        <strong>DateFormatter:</strong> <DateFormatter showTime={showTime} value={new Date()} />
       </Wrapper>
     </>
   );
@@ -43,7 +43,7 @@ const Template: Story = ({ showOnlyDate }) => {
 export const localization = Template.bind({});
 localization.args = {};
 localization.argTypes = {
-  showOnlyDate: {
+  showTime: {
     type: 'boolean',
   },
 };

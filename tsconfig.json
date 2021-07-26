@@ -9,6 +9,9 @@
       "@sbercloud/uikit-theme": [
         "./theme/src"
       ],
+      "@sbercloud/uikit-utils": [
+        "./utils/src"
+      ],
       "@sbercloud/uikit-react-*": [
         "./*/src"
       ]
