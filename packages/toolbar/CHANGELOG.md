@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.7.1) (2021-07-29)
+
+
+### Bug Fixes
+
+* add wrapper border ([afdd3b5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/afdd3b562f996d7aca6af65a3e9875f609b1508b))
+
+
+
+
+
 # [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.5.4&sourceBranch=refs/tags/@sbercloud/uikit-react-toolbar@0.7.0) (2021-07-26)
 
 
