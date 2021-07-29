@@ -1,11 +1,19 @@
 import { cx } from '@linaria/core';
-import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { IconButton } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
+import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useEffect } from 'react';
 import RCModal from 'react-modal';
 
-import { Content, Title, contentClassname, overlayClassname, overlayParentClassname, previewCloseBtn } from './styled';
+import {
+  Content,
+  Title,
+  TitleRow,
+  modalClassName,
+  overlayClassName,
+  overlayParentClassname,
+  previewCloseButton,
+} from './styled';
 
 interface IReactModalProps extends ReactModal.Props {
   isOpen: boolean;
@@ -37,10 +45,21 @@ export interface ModalPreviewProps extends IReactModalProps {
   title?: string;
   content?: React.ReactNode;
   contentClassName?: string;
+  additionalActions?: React.ReactNode;
 }
 
 export const ModalPreview: React.FC<ModalPreviewProps> = props => {
-  const { onRequestClose, title, appElement, content, contentClassName, parentSelector } = props;
+  const {
+    title,
+    content,
+    appElement,
+    parentSelector,
+    onRequestClose,
+    additionalActions,
+    className: propsClassName,
+    overlayClassName: propsOverlayClassName,
+    contentClassName: propsContentClassName,
+  } = props;
 
   useEffect(() => {
     RCModal.setAppElement(appElement as HTMLElement);
@@ -49,19 +68,22 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
   return (
     <RCModal
       {...props}
-      overlayClassName={cx(overlayClassname, Boolean(parentSelector) && overlayParentClassname)}
-      className={contentClassname}
+      overlayClassName={cx(overlayClassName, Boolean(parentSelector) && overlayParentClassname, propsOverlayClassName)}
+      className={cx(modalClassName, propsClassName)}
     >
-      <IconButton variant={IconButton.variants.Popup} onClick={onRequestClose} className={previewCloseBtn}>
+      <IconButton variant={IconButton.variants.Popup} onClick={onRequestClose} className={previewCloseButton}>
         <CloseInterfaceSVG />
       </IconButton>
       {title && (
         <>
-          <Title>{title}</Title>
+          <TitleRow>
+            {typeof title === 'string' ? <Title>{title}</Title> : title}
+            {additionalActions}
+          </TitleRow>
           <Divider color='middle' />
         </>
       )}
-      {content && <Content className={contentClassName}>{content}</Content>}
+      {content && <Content className={propsContentClassName}>{content}</Content>}
     </RCModal>
   );
 };

@@ -1,3 +1,4 @@
+import { cx } from '@linaria/core';
 import { Button, IconButton } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
@@ -92,6 +93,8 @@ export const Modal: React.FC<ModalProps> = props => {
     parentId,
     parentSelector,
     alarmApproveButton,
+    className: propsClassName,
+    overlayClassName: propsOverlayClassName,
   } = props;
 
   const { code: language } = useLanguage({ onlyEnabledLanguage: true });
@@ -114,8 +117,8 @@ export const Modal: React.FC<ModalProps> = props => {
         },
         content: contentStyles || {},
       }}
-      overlayClassName={overlayClassname}
-      className={contentClassname}
+      className={cx(contentClassname, propsClassName)}
+      overlayClassName={cx(overlayClassname, propsOverlayClassName)}
       parentSelector={parentId ? (): HTMLElement => document.getElementById(parentId) || document.body : parentSelector}
     >
       {hideCross ? null : (

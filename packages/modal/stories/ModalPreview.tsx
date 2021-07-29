@@ -45,6 +45,11 @@ const Template: Story<ModalPreviewProps & { withParentNode: boolean }> = ({ with
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
       title='Screenshot 2020-10-30 at 15.22.41.png'
+      additionalActions={
+        <Button rounded size={Button.sizes.s} variant={Button.variants.Outlined}>
+          Импорт
+        </Button>
+      }
       content={
         <img
           src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/440px-Wikipedia-logo-v2-en.svg.png'

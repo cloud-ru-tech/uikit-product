@@ -4,16 +4,23 @@ import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_MODAL } = DEPRECATED_EXPORT_VARS;
 
-export const previewCloseBtn = css`
+export const previewCloseButton = css`
   position: absolute;
-  top: 24px;
+  top: 27px;
   right: 24px;
 `;
 
 export const Title = styled.div`
   font-size: 20px;
   line-height: 26px;
-  margin: 24px 48px 24px 24px;
+`;
+
+export const TitleRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 56px 24px 24px;
 `;
 
 export const Content = styled.div`
@@ -32,7 +39,7 @@ export const Content = styled.div`
   }
 `;
 
-export const overlayClassname = css`
+export const overlayClassName = css`
   z-index: 99999;
   position: fixed;
   top: 0;
@@ -46,7 +53,7 @@ export const overlayParentClassname = css`
   position: absolute;
 `;
 
-export const contentClassname = css`
+export const modalClassName = css`
   position: absolute;
   top: 24px;
   left: 26px;
