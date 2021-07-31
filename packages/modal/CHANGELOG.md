@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.10.0&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.10.1) (2021-07-31)
+
+
+### Bug Fixes
+
+* [AICDC-3169](https://jira.sbercloud.tech/browse/AICDC-3169): fixed title type for ModalPreview ([8e6894e](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8e6894ea789a29ab6ef173361b8b9a90bd9dc181))
+
+
+
+
+
 # [0.10.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-modal@0.9.1&sourceBranch=refs/tags/@sbercloud/uikit-react-modal@0.10.0) (2021-07-29)
 
 
