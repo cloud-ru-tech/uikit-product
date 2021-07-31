@@ -42,7 +42,7 @@ interface IReactModalProps extends ReactModal.Props {
 
 export interface ModalPreviewProps extends IReactModalProps {
   isOpen: boolean;
-  title?: string;
+  title?: React.ReactNode;
   content?: React.ReactNode;
   contentClassName?: string;
   additionalActions?: React.ReactNode;
