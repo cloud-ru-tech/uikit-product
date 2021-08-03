@@ -25,7 +25,9 @@ const Template: Story<AttentionProps> = () => (
   <Wrapper>
     <Wrapper>
       <H3>{`1. Importance level: ${Attention.importanceLevels.Normal}`}</H3>
-      <Attention importanceLevel={Attention.importanceLevels.Normal}>{`content `.repeat(25)}</Attention>
+      <Attention importanceLevel={Attention.importanceLevels.Normal} data-test-id={'test-purpose'}>
+        {`content `.repeat(25)}
+      </Attention>
     </Wrapper>
     <Wrapper>
       <H3>{`2. Importance level: ${Attention.importanceLevels.High}`}</H3>
