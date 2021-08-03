@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-utils@0.2.1&sourceBranch=refs/tags/@sbercloud/uikit-utils@0.3.0) (2021-08-03)
+
+
+### Features
+
+* data-test-* props extractor ([3f53737](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/3f53737060a94fb9ca65d0c2e684ce28ab378b2c))
+
+
+
+
+
 ## [0.2.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-utils@0.2.0&sourceBranch=refs/tags/@sbercloud/uikit-utils@0.2.1) (2021-07-26)
 
 

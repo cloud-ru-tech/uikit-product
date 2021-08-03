@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-attention@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-react-attention@0.5.1) (2021-08-03)
+
+
+### Bug Fixes
+
+* data-test props extractor was integrated ([51accd5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/51accd529765973bf2ab9d193d123c7d6b5b2246))
+
+
+
+
+
 # [0.5.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-attention@0.3.4&sourceBranch=refs/tags/@sbercloud/uikit-react-attention@0.5.0) (2021-07-26)
 
 
