@@ -1,3 +1,5 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
@@ -7,7 +9,6 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { COLORS_DEFAULT_MAP, EXPORT_VARS } from '../src';
-import { css } from '@linaria/core';
 
 export default {
   title: 'Theme/Colors',
@@ -122,4 +123,5 @@ Colors.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=1015%3A1',
   },
+  badges: [BADGE.NEEDS_REVISION, BADGE.BETA],
 };

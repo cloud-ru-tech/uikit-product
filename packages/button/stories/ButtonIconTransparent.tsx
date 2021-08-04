@@ -1,14 +1,15 @@
-import { ComponentProps } from 'react';
-import { Meta, Story } from '@storybook/react';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react';
+import { ComponentProps } from 'react';
+
 import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { EXPORT_VARS, EXPORT_GLOBAL_CSS_VARS } from '@sbercloud/uikit-theme';
+import { EXPORT_GLOBAL_CSS_VARS, EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-
-import { ButtonIconTransparent } from '../src/components/ButtonIconTransparent';
+import { ButtonIconTransparent } from '../src';
 import { Variant } from '../src/components/ButtonIconTransparent/constants';
 
 export default {
@@ -59,6 +60,7 @@ buttonIconTransparent.parameters = {
     url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=1492%3A41816',
   },
   controls: { include: ['rounded', 'disabled'] },
+  badges: [BADGE.NEEDS_REVISION, BADGE.BETA],
 };
 buttonIconTransparent.args = {
   rounded: false,

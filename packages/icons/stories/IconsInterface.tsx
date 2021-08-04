@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta } from '@storybook/react/types-6-0';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -23,6 +24,7 @@ interfaces.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/TEMP-DESIGN-SYSTEM?node-id=212%3A350',
   },
+  badges: [BADGE.STABLE],
 };
 interfaces.argTypes = {
   size: {

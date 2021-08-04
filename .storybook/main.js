@@ -23,6 +23,7 @@ module.exports = {
         backgrounds: false,
       },
     },
+    '@geometricpanda/storybook-addon-badges',
   ],
   core: {
     builder: 'webpack5',
