@@ -1,5 +1,6 @@
 const GREY = {
   0: '--color-grey-0',
+  25: '--color-grey-25',
   50: '--color-grey-50',
   100: '--color-grey-100',
   150: '--color-grey-150',
@@ -22,9 +23,11 @@ const GREY = {
 };
 
 const PURPLE = {
+  5: '--color-purple-5',
   10: '--color-purple-10',
   25: '--color-purple-25',
   50: '--color-purple-50',
+  75: '--color-purple-75',
   100: '--color-purple-100',
   115: '--color-purple-115',
   125: '--color-purple-125',
@@ -32,9 +35,11 @@ const PURPLE = {
 };
 
 const GREEN = {
+  5: '--color-green-5',
   10: '--color-green-10',
   25: '--color-green-25',
   50: '--color-green-50',
+  75: '--color-green-75',
   100: '--color-green-100',
   115: '--color-green-115',
   125: '--color-green-125',
@@ -42,6 +47,7 @@ const GREEN = {
 };
 
 const BLACK_ALFA = {
+  4: '--color-black-alfa-4',
   8: '--color-black-alfa-8',
   16: '--color-black-alfa-16',
   24: '--color-black-alfa-24',
@@ -49,6 +55,7 @@ const BLACK_ALFA = {
 };
 
 const WHITE_ALFA = {
+  4: '--color-white-alfa-4',
   8: '--color-white-alfa-8',
   16: '--color-white-alfa-16',
   24: '--color-white-alfa-24',

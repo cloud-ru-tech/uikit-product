@@ -3,6 +3,7 @@ import { BLACK_ALFA, BLUE_GREY, PRESET, GREEN, GREY, PURPLE, WHITE_ALFA } from '
 
 export const COLORS_DEFAULT_MAP = `
  ${GREY[0]}: #ffffff;
+ ${GREY[25]}: #f8f8f8;
  ${GREY[50]}: #f2f2f2;
  ${GREY[100]}: #e6e6e6;
  ${GREY[150]}: #d9d9d9;
@@ -23,17 +24,21 @@ export const COLORS_DEFAULT_MAP = `
  ${GREY[900]}: #1a1a1a;
  ${GREY[1000]}: #000000;
 
+ ${PURPLE[5]}: #f6f6f6;
  ${PURPLE[10]}: #eeeeff;
  ${PURPLE[25]}: #d5d5d5;
  ${PURPLE[50]}: #aaabfd;
+ ${PURPLE[75]}: #8082fb;
  ${PURPLE[100]}: #5558fa;
  ${PURPLE[115]}: #484bd5;
  ${PURPLE[125]}: #4042bc;
  ${PURPLE[150]}: #282c7d;
 
+ ${GREEN[5]}: #f2fefa;
  ${GREEN[10]}: #e6fdf5;
  ${GREEN[25]}: #c1f9e5;
  ${GREEN[50]}: #83f4cb;
+ ${GREEN[75]}: #45eeb1;
  ${GREEN[100]}: #07e897;
  ${GREEN[115]}: #06d58b;
  ${GREEN[125]}: #06c37f;
@@ -43,11 +48,13 @@ export const COLORS_DEFAULT_MAP = `
  ${BLACK_ALFA[24]}: rgba(0, 0, 0, 0.24);
  ${BLACK_ALFA[16]}: rgba(0, 0, 0, 0.16);
  ${BLACK_ALFA[8]}: rgba(0, 0, 0, 0.08);
+ ${BLACK_ALFA[4]}: rgba(0, 0, 0, 0.04);
 
  ${WHITE_ALFA[48]}: rgba(255, 255, 255, 0.48);
  ${WHITE_ALFA[24]}: rgba(255, 255, 255, 0.24);
  ${WHITE_ALFA[16]}: rgba(255, 255, 255, 0.16);
  ${WHITE_ALFA[8]}: rgba(255, 255, 255, 0.08);
+ ${WHITE_ALFA[4]}: rgba(255, 255, 255, 0.04);
 
  ${BLUE_GREY[40]}: #a6a9ac;
  ${BLUE_GREY[50]}: #909497;
