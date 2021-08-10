@@ -2,7 +2,9 @@ import { GridApi } from 'ag-grid-community';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { Languages } from '../../helpers/texts-provider';
+import { useLanguage } from '@sbercloud/uikit-utils';
+
+import { EnabledLanguages } from '../../helpers/texts-provider';
 import { ITableProps } from '../Default';
 import { ClientModelTableView } from './ClientModelTableView';
 import { DeleteProps, PaginationProps } from './types';
@@ -25,11 +27,9 @@ export type ClientModelTableControllerProps<T> = {
   advancedProps?: {
     getRowHeight?: ITableProps['getRowHeight'];
   };
-  language?: Languages;
 };
 
 export function ClientModelTableController<T>({
-  language = Languages.Ru,
   fieldId,
   data,
   bulkActions,
@@ -38,6 +38,8 @@ export function ClientModelTableController<T>({
   columnDefinitions,
   advancedProps,
 }: ClientModelTableControllerProps<T>) {
+  const { code: langCode } = useLanguage({ onlyEnabledLanguage: true });
+
   const [gridApi, setGridApi] = useState<GridApi | null>(null);
   const [searchValue, setSearchValue] = useState('');
   const onGridReady = useCallback(gridEv => {
@@ -89,7 +91,6 @@ export function ClientModelTableController<T>({
   const onDataChangedHandler = useCallback(
     debounce(() => {
       if (!gridApi) return;
-      gridApi.sizeColumnsToFit();
 
       const totalPages = gridApi.paginationGetTotalPages();
 
@@ -151,7 +152,7 @@ export function ClientModelTableController<T>({
       gridApi?.deselectAll();
       setSelectedRows([]);
     }
-  }, [deleteDialogOpened, selectedRows, gridApi]);
+  }, [bulkActions?.delete, selectedRows, fieldId, gridApi]);
 
   const deleteProps: DeleteProps | undefined = bulkActions?.delete
     ? {
@@ -203,7 +204,7 @@ export function ClientModelTableController<T>({
 
   return (
     <ClientModelTableView
-      language={language}
+      language={langCode as EnabledLanguages}
       fieldId={fieldId}
       data={data}
       columnDefinitions={columnDefinitions}

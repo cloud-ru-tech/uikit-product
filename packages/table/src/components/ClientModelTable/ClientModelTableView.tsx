@@ -1,18 +1,18 @@
-import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { RefreshButton } from '@sbercloud/uikit-react-button';
+import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
 import { NoRowsOverlay } from '../../helperComponents/FrameworkComponents';
 import { NoDataReasons } from '../../helperComponents/FrameworkComponents/NoRowsOverlay/types';
-import { Languages, Texts, textProvider } from '../../helpers/texts-provider';
+import { EnabledLanguages, Texts, textProvider } from '../../helpers/texts-provider';
 import { ITableProps, Table } from '../Default';
 import * as S from './styled';
 import { DeleteProps, PaginationProps } from './types';
 
 type ClientModelTableViewProps<T> = {
-  language: Languages;
+  language: EnabledLanguages;
   fieldId: string;
   data: T[];
   columnDefinitions: ITableProps['columnDefs'];

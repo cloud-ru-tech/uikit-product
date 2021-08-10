@@ -1,11 +1,11 @@
 import { BrandCatDisplaySVG } from '@sbercloud/uikit-react-icons';
 import { H5 } from '@sbercloud/uikit-typography';
 
-import { Languages, Texts, textProvider } from '../../../helpers/texts-provider';
+import { EnabledLanguages, Texts, textProvider } from '../../../helpers/texts-provider';
 import * as S from './styled';
 import { NoDataReasons } from './types';
 
-function getText(reason: NoDataReasons, language: Languages) {
+function getText(reason: NoDataReasons, language: EnabledLanguages) {
   switch (reason) {
     case NoDataReasons.Search:
     case NoDataReasons.Filtering:
@@ -16,7 +16,7 @@ function getText(reason: NoDataReasons, language: Languages) {
   }
 }
 
-export function NoRowsOverlay({ reason, language }: { reason: NoDataReasons; language: Languages }) {
+export function NoRowsOverlay({ reason, language }: { reason: NoDataReasons; language: EnabledLanguages }) {
   return (
     <S.NoRowsMessageWrapper>
       <BrandCatDisplaySVG size={65} />

@@ -1,4 +1,8 @@
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import debounce from 'lodash.debounce';
+import { useEffect, useState } from 'react';
+
 import { TableButton } from '@sbercloud/uikit-react-button';
 import {
   CirclePauseInterfaceSVG,
@@ -6,9 +10,6 @@ import {
   CircleStopInterfaceSVG,
 } from '@sbercloud/uikit-react-icons';
 import { Status } from '@sbercloud/uikit-react-status';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import debounce from 'lodash.debounce';
-import { useEffect, useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -87,7 +88,6 @@ const Template: Story<ClientModelTableProps<DataModel> & { rowsAmount: number; s
   return (
     <CMTable
       fieldId={args.fieldId}
-      language={args.language}
       data={data}
       columnDefinitions={args.columnDefinitions}
       bulkActions={showDelete ? bulkActions : undefined}
