@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-interactive-chart@0.3.0&sourceBranch=refs/tags/@sbercloud/uikit-react-interactive-chart@0.3.1) (2021-08-10)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-interactive-chart
+
+
+
+
+
 # [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-interactive-chart@0.1.2&sourceBranch=refs/tags/@sbercloud/uikit-react-interactive-chart@0.3.0) (2021-07-26)
 
 

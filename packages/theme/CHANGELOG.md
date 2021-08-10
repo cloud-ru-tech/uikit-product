@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.25.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.24.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.25.0) (2021-08-10)
+
+
+### Bug Fixes
+
+* added missing green, purple, grey, alfa colors ([00b7c18](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/00b7c18d0cf2b659e86a2809debbf22560647135))
+
+
+### Features
+
+* some new button variants with new DS ([eec9edb](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/eec9edb7b2dd9b19cd3b4f4e903e1aa877e43b11))
+* storybook story badges ([d975c74](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d975c7452603527e37ddcbc5d793c40c0fa18cd5))
+
+
+
+
+
 # [0.24.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-theme@0.22.0&sourceBranch=refs/tags/@sbercloud/uikit-theme@0.24.0) (2021-07-26)
 
 

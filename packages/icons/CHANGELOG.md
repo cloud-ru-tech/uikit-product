@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.3.1&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.4.0) (2021-08-10)
+
+
+### Bug Fixes
+
+* play, pause, stop icons by new DS ([f63137b](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/f63137b79b27d80437ca03842278dcfc35549d29))
+
+
+### Features
+
+* create ConfigProvider ([24c5cef](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/24c5cef7fb415a1e306c96d5c29f336259088634))
+* pre release version ([7c26847](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/7c268470dc03346c42c68e711bda2e42064d1896))
+* storybook story badges ([d975c74](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d975c7452603527e37ddcbc5d793c40c0fa18cd5))
+
+
+
+
+
 ## [1.3.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-icons@1.3.0&sourceBranch=refs/tags/@sbercloud/uikit-react-icons@1.3.1) (2021-07-13)
 
 

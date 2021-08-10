@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-attention@0.5.1&sourceBranch=refs/tags/@sbercloud/uikit-react-attention@0.6.0) (2021-08-10)
+
+
+### Features
+
+* custom import sort rule ([d34b473](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d34b4732d9d853af6e5540db3b37a789a5332758))
+
+
+
+
+
 ## [0.5.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-attention@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-react-attention@0.5.1) (2021-08-03)
 
 
