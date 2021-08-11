@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.5.1&sourceBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.5.2) (2021-08-11)
+
+
+### Bug Fixes
+
+* hide default checkbox on safari | [AICDC-3207](https://jira.sbercloud.tech/browse/AICDC-3207) ([b22c10b](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b22c10bf4a8bc64ed8672e7d87b82bb81df7bbd4))
+
+
+
+
+
 ## [0.5.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-react-checkbox@0.5.1) (2021-08-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-checkbox
