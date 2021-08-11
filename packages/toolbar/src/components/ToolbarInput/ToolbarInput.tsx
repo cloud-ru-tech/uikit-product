@@ -1,14 +1,21 @@
+import { FC, createRef, useEffect, useState } from 'react';
+
 import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input, InputProps } from '@sbercloud/uikit-react-input';
-import { FC, createRef, useEffect, useState } from 'react';
+import { WithSupportProps } from '@sbercloud/uikit-utils';
 
 import { InputWrapStyled, crossIconClassName, inputClassName, searchIconClassname } from './styled';
 
 export interface ToolbarInputProps extends Omit<InputProps, 'onChange'> {
-  onChange: (value: string) => void;
+  onChange(value: string): void;
 }
 
-export const ToolbarInput: FC<ToolbarInputProps> = ({ value, onChange, wrapperClassName, ...inputProps }) => {
+export const ToolbarInput: FC<WithSupportProps<ToolbarInputProps>> = ({
+  value,
+  onChange,
+  wrapperClassName,
+  ...inputAndSupportProps
+}) => {
   const inputWrapperRef = createRef<HTMLDivElement>();
   const [hasPrevSibling, setPrevSibling] = useState<undefined | boolean>();
   const [hasNextSibling, setNextSibling] = useState<undefined | boolean>();
@@ -29,9 +36,10 @@ export const ToolbarInput: FC<ToolbarInputProps> = ({ value, onChange, wrapperCl
       ref={inputWrapperRef}
       data-has-prev-sibling={hasPrevSibling || undefined}
       data-has-next-sibling={hasNextSibling || undefined}
+      data-test-id='toolbar__input'
     >
       <Input
-        {...inputProps}
+        {...inputAndSupportProps}
         value={value}
         onChange={event => {
           onChange(event.target.value);
@@ -43,6 +51,7 @@ export const ToolbarInput: FC<ToolbarInputProps> = ({ value, onChange, wrapperCl
           value ? (
             <CloseInterfaceSVG
               className={crossIconClassName}
+              data-test-action-id='toolbar__input-clear-btn'
               onClick={(): void => {
                 onChange('');
               }}

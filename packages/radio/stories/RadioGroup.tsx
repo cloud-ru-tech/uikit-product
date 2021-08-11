@@ -1,18 +1,19 @@
 import { styled } from '@linaria/react';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { IRadioProps, Radio, RadioGroup } from '../src';
+import { Radio, RadioGroup, RadioGroupProps, RadioProps } from '../src';
 
 const { COLORS_DRAWER } = DEPRECATED_EXPORT_VARS;
 
 export default {
   title: 'Not stable/Radio/Radio Group',
-  component: Radio,
+  component: RadioGroup,
 } as Meta;
 
 const Wrapper = styled.div`
@@ -20,12 +21,13 @@ const Wrapper = styled.div`
   padding: 10px;
 `;
 
-const Template: Story<IRadioProps> = ({ ...args }) => {
+const Template: Story<RadioProps & RadioGroupProps> = ({ ...args }) => {
   const [value, setValue] = useState('story2');
 
   return (
     <Wrapper>
       <RadioGroup
+        {...args}
         name='stories'
         value={value}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}

@@ -1,6 +1,8 @@
-import { CopiedInterfaceSVG, CopyInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import copyText from 'copy-to-clipboard';
 import { useCallback, useRef, useState } from 'react';
+
+import { CopiedInterfaceSVG, CopyInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { ButtonVariant } from '../../../helpers/constants';
 import { Button } from '../Default';
@@ -24,7 +26,8 @@ export const CopyButton = ({
   showCopyCompleted,
   variant = Button.variants.Transparent,
   onClick: propOnClick,
-}: CopyButtonProps) => {
+  ...rest
+}: WithSupportProps<CopyButtonProps>) => {
   const [isCopyCompleted, setIsCopyCompleted] = useState(false);
   const oldOverrideClick = useRef<number>();
 
@@ -59,6 +62,7 @@ export const CopyButton = ({
       size={Button.sizes.xs}
       disabled={disabled}
       onClick={handleClickCopy}
+      {...extractSupportProps(rest)}
     >
       {showCopyCompleted || isCopyCompleted ? (
         <CopiedInterfaceSVG className={iconStyle} />

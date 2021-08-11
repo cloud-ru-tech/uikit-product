@@ -1,7 +1,9 @@
+import copyText from 'copy-to-clipboard';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+
 import { CopyButton } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import copyText from 'copy-to-clipboard';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { getInputType } from '../../helpers/getInputType';
 import { InputElementType, InputProps, InputTypes } from '../../helpers/types';
@@ -45,7 +47,8 @@ export const Input = ({
   onOpenDialog,
   onBlur,
   onFocus,
-}: InputProps) => {
+  ...rest
+}: WithSupportProps<InputProps>) => {
   const inputEl = useRef<InputElementType>(null);
   const [correctValue, setCorrectValue] = useState(value);
   const [isCopyCompleted, setIsCopyCompleted] = useState(false);
@@ -53,7 +56,7 @@ export const Input = ({
 
   useEffect(() => {
     getInstance?.(inputEl as React.RefObject<HTMLInputElement>);
-  }, [inputEl]);
+  }, [getInstance, inputEl]);
 
   const handleChange = useCallback(
     e => {
@@ -86,7 +89,7 @@ export const Input = ({
         onChange(e);
       }
     },
-    [onChange],
+    [max, min, onChange, type],
   );
 
   useEffect(() => {
@@ -152,7 +155,7 @@ export const Input = ({
   }, [allowCopy, allowClear, postfix, onOpenDialog, correctValue]);
 
   return (
-    <StyledWrap className={wrapperClassName} ref={wrapperRef}>
+    <StyledWrap className={wrapperClassName} ref={wrapperRef} {...extractSupportProps(rest)}>
       {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
       <StyledInputWrapper>
         <div role='presentation' onClick={handleInputClick}>
@@ -177,18 +180,19 @@ export const Input = ({
             autoComplete={autoComplete}
             onBlur={onBlur}
             onFocus={onFocus}
+            data-test-id='input__value'
           />
         </div>
         <StyledIconWrapper>
           <BasicButtonWrapper>
             {!disabled && allowClear && correctValue && correctValue !== '' && (
-              <StyledClearButton onClick={handleClickClear}>
+              <StyledClearButton onClick={handleClickClear} data-test-id='input__clear-btn'>
                 <CloseInterfaceSVG />
               </StyledClearButton>
             )}
             {postfix}
             {type === 'security' ? (
-              <StyledSecurityButton onClick={(): void => setViewMode(!isViewMode)}>
+              <StyledSecurityButton onClick={(): void => setViewMode(!isViewMode)} data-test-id='input__security-btn'>
                 {isViewMode ? <EyeClosedInterfaceSVG /> : <EyeOpenedInterfaceSVG />}
               </StyledSecurityButton>
             ) : null}
@@ -198,11 +202,12 @@ export const Input = ({
                 onClick={handleCopyButtonClick}
                 className={copyButtonClassName}
                 showCopyCompleted={isCopyCompleted}
+                data-test-id='input__copy-btn'
               />
             )}
           </BasicButtonWrapper>
           {onOpenDialog && (
-            <OpenDialogButtonWrapper onClick={onOpenDialog}>
+            <OpenDialogButtonWrapper onClick={onOpenDialog} data-test-id='input__open-dialog-btn'>
               <OpenDialogButton />
             </OpenDialogButtonWrapper>
           )}

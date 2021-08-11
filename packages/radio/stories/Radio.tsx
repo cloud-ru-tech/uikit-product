@@ -1,11 +1,12 @@
 import { styled } from '@linaria/react';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { Meta, Story } from '@storybook/react/types-6-0';
+
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { IRadioProps, Radio } from '../src';
+import { Radio, RadioProps } from '../src';
 
 const { COLORS_DRAWER } = DEPRECATED_EXPORT_VARS;
 
@@ -19,7 +20,7 @@ const Wrapper = styled.div`
   padding: 10px;
 `;
 
-const Template: Story<IRadioProps> = ({ ...args }) => (
+const Template: Story<RadioProps> = ({ ...args }) => (
   <Wrapper>
     <Radio {...args} />
   </Wrapper>

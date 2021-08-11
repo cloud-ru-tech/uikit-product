@@ -1,11 +1,7 @@
-import { useLanguage } from '@sbercloud/uikit-utils';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import RCSelect, {
-  OptionTypeBase as RCOptionTypeBase,
-  ValueType as RCValueType,
-  SelectComponentsConfig,
-  components,
-} from 'react-select';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import RCSelect, { OptionTypeBase as RCOptionTypeBase, SelectComponentsConfig, components } from 'react-select';
+
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
 import getSelectorStyles from '../../helpers/getSelectStyles';
 import getCustomComponents from '../../helpers/getSharedComponents';
@@ -18,9 +14,6 @@ export type OptionPrefixProps = React.ComponentProps<typeof components.Option>;
 export type ControlPrefixProps = React.ComponentProps<typeof components.Control>;
 export type MultiValueContainerPrefixProps = React.ComponentProps<typeof components.MultiValueContainer>;
 export type OptionTypeBase = RCOptionTypeBase;
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export type ValueType<OptionType extends OptionTypeBase> = RCValueType<OptionType>;
 
 type RCProps = React.ComponentProps<typeof RCSelect>;
 
@@ -44,7 +37,9 @@ export interface ISelectProps<CustomOptionType> extends Omit<RCProps, 'component
   collapsedGroup?: boolean;
 }
 
-export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectProps<CustomOptionType>): JSX.Element => {
+export const Select = <CustomOptionType extends OptionTypeBase>(
+  props: WithSupportProps<ISelectProps<CustomOptionType>>,
+): JSX.Element => {
   const selectRef = useRef<HTMLDivElement>(null);
   const {
     options,
@@ -166,8 +161,15 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
     setIsOpen(!isOpen);
   };
 
+  const formatGroupLabel = useCallback(group => <div data-test-group-id={`${group.label}`}>{group.label}</div>, []);
+
+  const formatOptionLabel = useCallback(
+    option => <div data-test-option-id={`${option.value}`}>{option.label}</div>,
+    [],
+  );
+
   return (
-    <div className={className} ref={selectRef}>
+    <div className={className} ref={selectRef} {...extractSupportProps(props)}>
       <RCSelect<CustomOptionType>
         {...props}
         placeholder={placeholder || textProvider<string>(language, Texts.selectPlaceholder)}
@@ -182,6 +184,8 @@ export const Select = <CustomOptionType extends OptionTypeBase>(props: ISelectPr
           }
         }}
         options={stateOptions}
+        formatGroupLabel={formatGroupLabel}
+        formatOptionLabel={formatOptionLabel}
         menuIsOpen={isOpen}
         components={componentsState}
         styles={customStyles.styles}

@@ -1,8 +1,8 @@
-import { RefreshButton } from '@sbercloud/uikit-react-button';
-import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { DeleteInterfaceSVG, RefreshInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { NoRowsOverlay } from '../../helperComponents/FrameworkComponents';
 import { NoDataReasons } from '../../helperComponents/FrameworkComponents/NoRowsOverlay/types';
@@ -41,17 +41,22 @@ export function ClientModelTableView<T>({
   paginationProps,
   language,
   getRowHeight,
-}: ClientModelTableViewProps<T>) {
+  ...rest
+}: WithSupportProps<ClientModelTableViewProps<T>>) {
   return (
-    <>
-      <Toolbar.Wrapper className={S.SearchPanelView}>
+    <div {...extractSupportProps(rest)}>
+      <Toolbar.Wrapper className={S.SearchPanelView} data-test-id='client-table__toolbar'>
         {onRefreshCallback && (
-          <Toolbar.Button>
-            <RefreshButton onRefresh={onRefreshCallback} />
+          <Toolbar.Button onClick={onRefreshCallback} data-test-id='client-table__toolbar-refresh-btn'>
+            <RefreshInterfaceSVG className={S.refreshAnimation} />
           </Toolbar.Button>
         )}
         {deleteProps && (
-          <Toolbar.Button disabled={!deleteProps.isDeleteEnabled} onClick={deleteProps.openDeleteDialog}>
+          <Toolbar.Button
+            disabled={!deleteProps.isDeleteEnabled}
+            onClick={deleteProps.openDeleteDialog}
+            data-test-id='client-table__toolbar-delete-btn'
+          >
             <DeleteInterfaceSVG />
           </Toolbar.Button>
         )}
@@ -59,6 +64,7 @@ export function ClientModelTableView<T>({
           onChange={onSearchCallback}
           value={searchValue}
           placeholder={textProvider(language, Texts.searchPlaceholder)}
+          data-test-id='client-table__toolbar-input'
         />
       </Toolbar.Wrapper>
       <Table
@@ -108,6 +114,7 @@ export function ClientModelTableView<T>({
       )}
       {deleteProps && (
         <Modal
+          data-test-id='client-table__delete-modal'
           isOpen={deleteProps.deleteDialogOpened}
           title={deleteProps.title}
           appElement={document.body}
@@ -119,6 +126,6 @@ export function ClientModelTableView<T>({
           onRequestClose={deleteProps.onCancelDelete}
         />
       )}
-    </>
+    </div>
   );
 }

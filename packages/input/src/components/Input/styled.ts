@@ -9,7 +9,7 @@ export const StyledInput = styled.input<{ allowCopy?: boolean; paddingRight?: nu
   flex-grow: 1;
   box-sizing: border-box;
   width: 100%;
-  font-family: SB Sans Interface;
+  font-family: SB Sans Interface, serif;
   color: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
   font-style: normal;
   font-weight: normal;
@@ -164,7 +164,7 @@ export const StyledInputWrapper = styled.div`
 export const StyledIconWrapper = styled.div`
   position: absolute;
   top: 0;
-  right: 0px;
+  right: 0;
   display: flex;
   flex-direction: row;
   align-items: center;

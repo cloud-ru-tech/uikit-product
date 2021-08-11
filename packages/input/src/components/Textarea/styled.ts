@@ -11,7 +11,7 @@ export const StyledTextareaAutosize = styled(TextareaAutosize)`
 
   padding: 12px;
 
-  font-family: SB Sans Interface;
+  font-family: SB Sans Interface, serif;
   color: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
   font-style: normal;
   font-weight: normal;

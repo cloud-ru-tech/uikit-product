@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { WithSupportProps } from '@sbercloud/uikit-utils';
+
 import { ButtonSize, ButtonVariant } from '../../../helpers/constants';
 import { ButtonComponent, IconWrap } from './styled';
 
@@ -28,7 +30,7 @@ export const Button = ({
   rounded = false,
   iconPosition = 'after',
   ...props
-}: ButtonProps) => (
+}: WithSupportProps<ButtonProps>) => (
   <ButtonComponent
     data-size={size}
     data-variant={variant}

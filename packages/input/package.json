@@ -29,12 +29,13 @@
     "@sbercloud/uikit-react-button": "0.10.0",
     "@sbercloud/uikit-react-icons": "1.4.0",
     "@sbercloud/uikit-theme": "0.25.0",
+    "@sbercloud/uikit-utils": "0.3.1",
     "copy-to-clipboard": "3.3.1",
     "react-input-autosize": "3.0.0",
-    "react-textarea-autosize": "8.3.2"
+    "react-textarea-autosize": "8.3.3"
   },
   "devDependencies": {
-    "@types/react-input-autosize": "2.2.0"
+    "@types/react-input-autosize": "2.2.1"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

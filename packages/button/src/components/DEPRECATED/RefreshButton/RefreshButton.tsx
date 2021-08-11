@@ -1,5 +1,7 @@
-import { RefreshInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useCallback, useMemo } from 'react';
+
+import { RefreshInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { ButtonVariant } from '../../../helpers/constants';
 import { Button } from '../Default';
@@ -17,7 +19,8 @@ export const RefreshButton = ({
   disabled = false,
   variant = Button.variants.TableMenu,
   className = '',
-}: RefreshButtonProps) => {
+  ...rest
+}: WithSupportProps<RefreshButtonProps>) => {
   const onRefreshCallback = useCallback(() => onRefresh?.(), [onRefresh]);
   const animationDecorator = useMemo(() => (!disabled ? refreshAnimation : undefined), [disabled]);
 
@@ -28,6 +31,7 @@ export const RefreshButton = ({
       size={Button.sizes.xs}
       disabled={disabled}
       onClick={onRefreshCallback}
+      {...extractSupportProps(rest)}
     >
       <RefreshInterfaceSVG className={animationDecorator} />
     </Button>

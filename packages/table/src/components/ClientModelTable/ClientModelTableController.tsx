@@ -2,7 +2,7 @@ import { GridApi } from 'ag-grid-community';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
 import { EnabledLanguages } from '../../helpers/texts-provider';
 import { ITableProps } from '../Default';
@@ -37,7 +37,8 @@ export function ClientModelTableController<T>({
   onRefreshCallback,
   columnDefinitions,
   advancedProps,
-}: ClientModelTableControllerProps<T>) {
+  ...rest
+}: WithSupportProps<ClientModelTableControllerProps<T>>) {
   const { code: langCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const [gridApi, setGridApi] = useState<GridApi | null>(null);
@@ -217,6 +218,7 @@ export function ClientModelTableController<T>({
       paginationProps={paginationProps}
       onSearchCallback={onSearchCallback}
       searchValue={searchValue}
+      {...extractSupportProps(rest)}
     />
   );
 }

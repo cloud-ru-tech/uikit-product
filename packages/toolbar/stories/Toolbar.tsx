@@ -1,3 +1,6 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
+import React, { useState } from 'react';
+
 import {
   DeleteInterfaceSVG,
   FilterInterfaceSVG,
@@ -5,8 +8,7 @@ import {
   RowExpandedInterfaceSVG,
   TableSettingsInterfaceSVG,
 } from '@sbercloud/uikit-react-icons';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import React, { useState } from 'react';
+import { WithSupportProps } from '@sbercloud/uikit-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -15,9 +17,10 @@ import { Toolbar, ToolbarWrapperProps } from '../src';
 
 export default {
   title: 'Not stable/Toolbar',
+  component: Toolbar.Wrapper,
 } as Meta;
 
-const Template: Story<ToolbarWrapperProps> = ({ ...args }) => {
+const Template: Story<WithSupportProps<ToolbarWrapperProps>> = ({ ...args }) => {
   const [value, setValue] = useState<string>('');
 
   return (
@@ -49,7 +52,13 @@ const Template: Story<ToolbarWrapperProps> = ({ ...args }) => {
 
 export const toolbar = Template.bind({});
 toolbar.args = {};
-toolbar.argTypes = {};
+toolbar.argTypes = {
+  'data-test-id': {
+    control: {
+      type: 'text',
+    },
+  },
+};
 toolbar.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

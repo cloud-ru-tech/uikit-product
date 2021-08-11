@@ -1,8 +1,9 @@
 import copyText from 'copy-to-clipboard';
-import { useCallback, useState, useMemo } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 import { Button, CopyButton } from '@sbercloud/uikit-react-button';
 import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import {
   Label,
@@ -23,21 +24,25 @@ export type CopyInputProps = {
   onCopy?: () => void;
 };
 
-export const CopyInput: React.FC<CopyInputProps> = ({
+export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
   value,
   label,
   onCopy,
   security,
   labelMinWidth,
   wrapperClassName,
+  ...rest
 }) => {
   const [isCopyCompleted, setIsCopyCompleted] = useState(false);
   const [showContent, setShowContent] = useState(!security);
 
-  const handleCopyButtonClick = useCallback((e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    e.stopPropagation();
-    onCopy?.();
-  }, []);
+  const handleCopyButtonClick = useCallback(
+    (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+      e.stopPropagation();
+      onCopy?.();
+    },
+    [onCopy],
+  );
 
   const handleInputClick = useCallback(
     (e: React.MouseEvent<HTMLInputElement>) => {
@@ -51,7 +56,7 @@ export const CopyInput: React.FC<CopyInputProps> = ({
         setIsCopyCompleted(false);
       }, 3000);
     },
-    [value],
+    [onCopy, value],
   );
 
   const handleSecurityButtonClick = useCallback(
@@ -72,10 +77,14 @@ export const CopyInput: React.FC<CopyInputProps> = ({
   }, [showContent, value]);
 
   return (
-    <StyledWrap className={wrapperClassName}>
-      {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
+    <StyledWrap className={wrapperClassName} {...extractSupportProps(rest)}>
+      {label && (
+        <Label minWidth={labelMinWidth || 'none'} data-test-id='copy-input__label'>
+          {label}
+        </Label>
+      )}
       <StyledInputWrapper labelMinWidth={labelMinWidth}>
-        <StyledInput hasSecurityIcon={!!security} onClick={handleInputClick}>
+        <StyledInput hasSecurityIcon={!!security} onClick={handleInputClick} data-test-id='copy-input__value'>
           {valueToShow}
         </StyledInput>
         {security ? (
@@ -84,6 +93,7 @@ export const CopyInput: React.FC<CopyInputProps> = ({
               onClick={handleSecurityButtonClick}
               className={securityButtonClassName}
               variant={Button.variants.TableMenu}
+              data-test-id='copy-input__security-btn'
             >
               {showContent ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
             </Button>
@@ -95,6 +105,7 @@ export const CopyInput: React.FC<CopyInputProps> = ({
             onClick={handleCopyButtonClick}
             className={copyButtonClassName}
             showCopyCompleted={isCopyCompleted}
+            data-test-id='copy-input__copy-btn'
           />
         </StyledIconWrapper>
       </StyledInputWrapper>

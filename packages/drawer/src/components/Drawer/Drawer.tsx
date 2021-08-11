@@ -1,10 +1,12 @@
 import 'rc-drawer/assets/index.css';
 
 import { cx } from '@linaria/core';
+import RcDrawer from 'rc-drawer';
+import React, { useCallback, useEffect } from 'react';
+
 import { IconButton } from '@sbercloud/uikit-react-button';
 import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import RcDrawer from 'rc-drawer';
-import { useEffect } from 'react';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Header } from '../Header';
 import {
@@ -32,7 +34,7 @@ export interface IDrawerProps {
   onBackClick?(): void;
 }
 
-export const Drawer: React.FC<IDrawerProps> = ({
+export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
   open = false,
   width = '500px',
   placement = 'right',
@@ -46,37 +48,40 @@ export const Drawer: React.FC<IDrawerProps> = ({
   onBackClick,
   ...restProps
 }) => {
-  const handleClick = (e: Event) => {
-    e.stopPropagation();
+  const handleClick = useCallback(
+    (e: Event) => {
+      e.stopPropagation();
 
-    // Если Drawer закрыт, то нет смысла вызывать onClose
-    if (!open) {
-      return;
-    }
+      // Если Drawer закрыт, то нет смысла вызывать onClose
+      if (!open) {
+        return;
+      }
 
-    // Если Drawer находится вне контейнера, тогда нам нет смысла добавлять наш обработчик
-    if (!container) {
-      return;
-    }
+      // Если Drawer находится вне контейнера, тогда нам нет смысла добавлять наш обработчик
+      if (!container) {
+        return;
+      }
 
-    // Если e.target уже нет в DOM дереве, то обрабатывать нет смысла. Такое может быть, например, при клике на option Select.
-    if (!e.target || !document.body.contains(e.target as HTMLElement)) {
-      return;
-    }
+      // Если e.target уже нет в DOM дереве, то обрабатывать нет смысла. Такое может быть, например, при клике на option Select.
+      if (!e.target || !document.body.contains(e.target as HTMLElement)) {
+        return;
+      }
 
-    // Далее идут проверки на то, что e.target находится внутри drawer.
-    // Если container был передан как строка, тогда мы пытаемся его выбрать
-    if (typeof container === 'string' && document.querySelector(container)?.contains(e.target as HTMLElement)) {
-      return;
-    }
+      // Далее идут проверки на то, что e.target находится внутри drawer.
+      // Если container был передан как строка, тогда мы пытаемся его выбрать
+      if (typeof container === 'string' && document.querySelector(container)?.contains(e.target as HTMLElement)) {
+        return;
+      }
 
-    // Если container - Element
-    if (typeof container !== 'string' && container.contains(e.target as HTMLElement)) {
-      return;
-    }
+      // Если container - Element
+      if (typeof container !== 'string' && container.contains(e.target as HTMLElement)) {
+        return;
+      }
 
-    onClose();
-  };
+      onClose();
+    },
+    [container, onClose, open],
+  );
 
   useEffect(() => {
     if (open) {
@@ -86,7 +91,7 @@ export const Drawer: React.FC<IDrawerProps> = ({
     return () => {
       window.removeEventListener('click', handleClick);
     };
-  }, [open]);
+  }, [handleClick, open]);
 
   return (
     <RcDrawer
@@ -99,20 +104,28 @@ export const Drawer: React.FC<IDrawerProps> = ({
       wrapperClassName={drawerWrapperClassName}
       className={cx(className, drawerClassName, container && drawerPaddingModeClassName)}
       getContainer={container}
-      {...restProps}
+      {...extractSupportProps(restProps)}
     >
       {hideHeader ? null : (
         <HeaderBoxStyled width={typeof width === 'number' ? `${width}px` : width}>
           <HeaderTextBoxStyled>
             {onBackClick && (
               <LeftIconBoxStyled>
-                <ArrowBoldLeftInterfaceSVG size={20} onClick={onBackClick} />
+                <ArrowBoldLeftInterfaceSVG
+                  size={20}
+                  onClick={onBackClick}
+                  data-test-action-id='drawer__header-back-btn'
+                />
               </LeftIconBoxStyled>
             )}
             {headerText && <Header text={headerText} />}
           </HeaderTextBoxStyled>
           <CloseButtonStyled>
-            <IconButton variant={IconButton.variants.Popup} onClick={onClose}>
+            <IconButton
+              variant={IconButton.variants.Popup}
+              onClick={onClose}
+              data-test-action-id='drawer__header-close-btn'
+            >
               <CloseInterfaceSVG />
             </IconButton>
           </CloseButtonStyled>

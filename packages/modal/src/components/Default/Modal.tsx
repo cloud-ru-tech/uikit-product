@@ -1,10 +1,11 @@
 import { cx } from '@linaria/core';
+import React, { useMemo } from 'react';
+import RCModal from 'react-modal';
+
 import { Button, IconButton } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
-import { useLanguage } from '@sbercloud/uikit-utils';
-import { useMemo } from 'react';
-import RCModal from 'react-modal';
+import { WithSupportProps, extractDataTestProps, useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import {
@@ -17,7 +18,7 @@ import {
   overlayClassname,
 } from './styled';
 
-interface ReactModalProps extends ReactModal.Props {
+interface ReactModalProps extends RCModal.Props {
   isOpen: boolean;
   portalClassName?: string;
   bodyOpenClassName?: string | null;
@@ -74,7 +75,7 @@ export const MODAL_CLOSE_TYPE = {
 } as const;
 export type ModalCloseType = typeof MODAL_CLOSE_TYPE[keyof typeof MODAL_CLOSE_TYPE];
 
-export const Modal: React.FC<ModalProps> = props => {
+export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
   const {
     onRequestClose,
     title,
@@ -106,9 +107,19 @@ export const Modal: React.FC<ModalProps> = props => {
     RCModal.setAppElement(appElement as HTMLElement);
   }
 
+  const dataTestAttributes = useMemo(() => {
+    const dataTestProps = extractDataTestProps(props);
+    return Object.keys(dataTestProps).reduce((acc, key) => {
+      const newKey = key.replace('data-', '');
+      acc[newKey] = dataTestProps[key];
+      return acc;
+    }, {});
+  }, [props]);
+
   return (
     <RCModal
       {...props}
+      data={dataTestAttributes}
       style={{
         overlay: {
           ...(overlayOffset || {}),
@@ -128,12 +139,13 @@ export const Modal: React.FC<ModalProps> = props => {
             onRequestClose?.(e, MODAL_CLOSE_TYPE.CROSS);
           }}
           className={closeButtonStyle}
+          data-test-id='modal__close-btn'
         >
           <CloseInterfaceSVG />
         </IconButton>
       )}
-      {title && <Title>{title}</Title>}
-      {description && <Description>{description}</Description>}
+      {title && <Title data-test-id='modal__title'>{title}</Title>}
+      {description && <Description data-test-id='modal__description'>{description}</Description>}
       {(approve || cancel) && (
         <ButtonWrapper>
           {approve &&
@@ -147,6 +159,7 @@ export const Modal: React.FC<ModalProps> = props => {
                     approve(e);
                     onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
                   }}
+                  data-test-id='modal__approve-btn'
                 >
                   {approveBtnText}
                 </Button>
@@ -160,6 +173,7 @@ export const Modal: React.FC<ModalProps> = props => {
                   approve(e);
                   onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
                 }}
+                data-test-id='modal__approve-btn'
               >
                 {approveBtnText}
               </Button>
@@ -172,6 +186,7 @@ export const Modal: React.FC<ModalProps> = props => {
                 cancel(e);
                 onRequestClose?.(e, MODAL_CLOSE_TYPE.CANCEL);
               }}
+              data-test-id='modal__cancel-btn'
             >
               {cancelBtnText}
             </Button>

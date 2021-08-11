@@ -16,7 +16,7 @@ export const RadioIcon: FC<IRadioIcon> = ({ checked, disabled }) => (
   </IconContainer>
 );
 
-export interface IRadioProps {
+export type RadioProps = {
   value?: string | number;
   name?: string;
   label: string;
@@ -24,15 +24,20 @@ export interface IRadioProps {
   disabled?: boolean;
   description?: string;
   wrapperClassName?: string;
-}
+};
 
-export const Radio: FC<IRadioProps> = ({ value, name, label, description, disabled, checked, wrapperClassName }) => {
+export const Radio: FC<RadioProps> = ({ value, name, label, description, disabled, checked, wrapperClassName }) => {
   const RadioGroup = useContext(RadioGroupContext);
 
   const isRadioChecked = typeof checked === 'boolean' ? checked : RadioGroup?.value === value;
 
   return (
-    <Wrapper className={wrapperClassName} data-disabled={disabled} data-checked={isRadioChecked}>
+    <Wrapper
+      className={wrapperClassName}
+      data-disabled={disabled}
+      data-checked={isRadioChecked}
+      data-test-option-id={value}
+    >
       <HiddenRadio
         type='radio'
         name={name || RadioGroup?.name}

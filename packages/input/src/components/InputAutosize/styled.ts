@@ -8,7 +8,7 @@ export const inputClassname = css`
   flex-grow: 1;
   box-sizing: border-box;
   width: 100%;
-  font-family: SB Sans Interface;
+  font-family: SB Sans Interface, serif;
   color: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
   font-style: normal;
   font-weight: normal;

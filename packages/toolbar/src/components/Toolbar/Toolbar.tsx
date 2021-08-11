@@ -1,18 +1,19 @@
 import { FC } from 'react';
 
-import { ToolbarButton, ToolbarButtonProps } from '../ToolbarButton';
-import { ToolbarInput, ToolbarInputProps } from '../ToolbarInput';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+
+import { ToolbarButton } from '../ToolbarButton';
+import { ToolbarInput } from '../ToolbarInput';
 import { ListToolBarStyled } from './styled';
 
 export type ToolbarWrapperProps = {
   className?: string;
 };
 
-export type IListToolBarInputProps = ToolbarInputProps;
-export type IListToolBarButtonProps = ToolbarButtonProps;
-
-const ListToolBarWrapper: FC<ToolbarWrapperProps> = ({ className, children }) => (
-  <ListToolBarStyled className={className}>{children}</ListToolBarStyled>
+const ListToolBarWrapper: FC<WithSupportProps<ToolbarWrapperProps>> = ({ className, children, ...rest }) => (
+  <ListToolBarStyled className={className} {...extractSupportProps(rest)}>
+    {children}
+  </ListToolBarStyled>
 );
 
 export const Toolbar = {
