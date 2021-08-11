@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-toolbar",
   "title": "React Toolbar",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
     "@sbercloud/uikit-react-badge-private": "0.6.1",
     "@sbercloud/uikit-react-button": "0.10.0",
     "@sbercloud/uikit-react-icons": "1.4.0",
-    "@sbercloud/uikit-react-input": "0.12.1",
+    "@sbercloud/uikit-react-input": "0.12.2",
     "@sbercloud/uikit-theme": "0.25.0"
   },
   "peerDependencies": {

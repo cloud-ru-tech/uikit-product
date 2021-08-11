@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.12.1&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.12.2) (2021-08-11)
+
+
+### Bug Fixes
+
+* hide autofill safari icon | [AICDC-3207](https://jira.sbercloud.tech/browse/AICDC-3207) ([4340412](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/4340412fad2542c6481d54a818b527b8b8a72c9d))
+
+
+
+
+
 ## [0.12.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-input@0.12.0&sourceBranch=refs/tags/@sbercloud/uikit-react-input@0.12.1) (2021-08-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input
