@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
-import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
+import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_INPUT, COLORS_BUTTON } = DEPRECATED_EXPORT_VARS;
@@ -79,6 +79,18 @@ export const StyledInput = styled.input<{ allowCopy?: boolean; paddingRight?: nu
     &:hover,
     &:focus {
       border: 1px solid var(${COLORS_INPUT.INPUT_ERROR_BORDER});
+    }
+  }
+
+  &[data-type='security'] {
+    &::-webkit-contacts-auto-fill-button,
+    &::-webkit-credentials-auto-fill-button {
+      visibility: hidden;
+      display: none;
+      pointer-events: none;
+      height: 0;
+      width: 0;
+      margin: 0;
     }
   }
 `;
