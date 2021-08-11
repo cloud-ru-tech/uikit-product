@@ -1,8 +1,9 @@
 import { styled } from '@linaria/react';
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { useLanguage } from '@sbercloud/uikit-utils';
 import isEqual from 'lodash.isequal';
 import { FC, useCallback, useEffect, useState } from 'react';
+
+import { Divider } from '@sbercloud/uikit-react-divider';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { IOptionType, IUsersByGroupProps, UsersByGroup, ValueContainer } from '../../helperComponents/InlineTreeSelect';
 import { InputSearch } from '../../helperComponents/Shared/InputSearch';
@@ -80,7 +81,7 @@ export const InlineTreeSelect: FC<IInlineTreeSelectProps> = ({
       {open && (
         <Content>
           <InputSearch value={search} onChange={setSearch} />
-          <Divider style={{ margin: 0 }} />
+          <Divider />
           {typeof children === 'function'
             ? children({
                 search,

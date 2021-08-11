@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
-import { DropdownUpInterfaceSVG, FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Divider } from '@sbercloud/uikit-react-divider';
+import { DropdownUpInterfaceSVG, FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import {
   ButtonGroupStyled,
@@ -25,7 +25,6 @@ export interface CollapsePanelItemProps {
   isShowCollapse?: boolean;
   hasHeaderClickCollapsed?: boolean;
   hasExpandedAnimation?: boolean;
-  lineColor?: string;
 }
 
 export const CollapsePanelItem: FC<CollapsePanelItemProps> = ({
@@ -38,7 +37,6 @@ export const CollapsePanelItem: FC<CollapsePanelItemProps> = ({
   isShowCollapse,
   hasHeaderClickCollapsed,
   hasExpandedAnimation = true,
-  lineColor,
 }) => {
   const [isFavouriteState, setIsFavourite] = useState(isFavourite);
 
@@ -71,7 +69,7 @@ export const CollapsePanelItem: FC<CollapsePanelItemProps> = ({
         aria-expanded={isCollapsed}
       >
         <ContentStyled>
-          <Divider color={lineColor} />
+          <Divider />
           {children}
         </ContentStyled>
       </ContentWrapStyled>

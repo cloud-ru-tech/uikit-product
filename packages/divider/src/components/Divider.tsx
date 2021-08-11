@@ -1,21 +1,22 @@
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { extractSupportProps } from '@sbercloud/uikit-utils';
 
+import { Orientation, Variant } from './constants';
 import { StyledDivider } from './styled';
 
-const { COLORS_DIVIDER } = DEPRECATED_EXPORT_VARS;
-
 export type DividerProps = {
-  color?: 'light' | 'middle' | 'dark' | string;
-  style?: React.CSSProperties;
   className?: string;
+  variant?: Variant;
+  orientation?: Orientation;
 };
 
-const DEFAULT_COLOR: { [key: string]: string } = {
-  light: `var(${COLORS_DIVIDER.COLOR_LIGHT})`,
-  middle: `var(${COLORS_DIVIDER.COLOR_MIDDLE})`,
-  dark: `var(${COLORS_DIVIDER.COLOR_DARK})`,
-};
-
-export const Divider: React.FC<DividerProps> = ({ color = 'light', style, className }) => (
-  <StyledDivider color={DEFAULT_COLOR[color] || color} style={style} className={className} />
+export const Divider = ({
+  className,
+  variant = Variant.Primary,
+  orientation = Orientation.Horizontal,
+  ...rest
+}: DividerProps) => (
+  <StyledDivider className={className} variant={variant} orientation={orientation} {...extractSupportProps(rest)} />
 );
+
+Divider.variants = Variant;
+Divider.orientations = Orientation;

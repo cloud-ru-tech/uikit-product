@@ -1,12 +1,13 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
+
 import { Button } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
 import { Select } from '@sbercloud/uikit-react-select';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -103,7 +104,7 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
               placeholder='Пример: Project1-bucket106'
             />
             <Select options={selectOptions} />
-            <Divider color='middle' className={dividerClassName} />
+            <Divider className={dividerClassName} />
             <RadioGroup
               name='stories'
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
@@ -119,7 +120,7 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
               onChange={e => setValue(e.target.value)}
               placeholder='Пример: Project1-bucket106'
             />
-            <Divider color='middle' className={dividerClassName} />
+            <Divider className={dividerClassName} />
             <RadioGroup
               name='stories'
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
@@ -135,7 +136,7 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
               onChange={e => setValue(e.target.value)}
               placeholder='Пример: Project1-bucket106'
             />
-            <Divider color='middle' className={dividerClassName} />
+            <Divider className={dividerClassName} />
             <RadioGroup
               name='stories'
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
@@ -151,7 +152,7 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
               onChange={e => setValue(e.target.value)}
               placeholder='Пример: Project1-bucket106'
             />
-            <Divider color='middle' className={dividerClassName} />
+            <Divider className={dividerClassName} />
             <RadioGroup
               name='stories'
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
@@ -167,7 +168,7 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
               onChange={e => setValue(e.target.value)}
               placeholder='Пример: Project1-bucket106'
             />
-            <Divider color='middle' className={dividerClassName} />
+            <Divider className={dividerClassName} />
             <RadioGroup
               name='stories'
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}

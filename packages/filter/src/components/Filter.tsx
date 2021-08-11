@@ -1,8 +1,9 @@
-import { PlusInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { useLanguage } from '@sbercloud/uikit-utils';
-import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+
+import { Divider } from '@sbercloud/uikit-react-divider';
+import { CloseInterfaceSVG, PlusInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { OptionTypeBase } from '@sbercloud/uikit-react-select';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { ActionButton } from '../helperComponents/ActionButton';
 import { Container } from '../helperComponents/Container';
@@ -117,7 +118,7 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
                 />
               ))}
             </S.Filters>
-            <Divider style={{ margin: 0 }} />
+            <Divider />
             <S.Actions>
               {isMoreFilter && (
                 <ActionButton onClick={addNewValue}>

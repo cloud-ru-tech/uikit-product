@@ -1,7 +1,8 @@
-import { Button, CopyButton } from '@sbercloud/uikit-react-button';
-import { Divider } from '@sbercloud/uikit-react-divider';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+
+import { Button, CopyButton } from '@sbercloud/uikit-react-button';
+import { Divider } from '@sbercloud/uikit-react-divider';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -31,7 +32,7 @@ const Template: Story<BreadcrumbsProps> = ({ ...args }) => {
       </Breadcrumbs>
       <Divider />
       <Breadcrumbs {...args} items={docker} />
-      <Divider color='dark' />
+      <Divider variant={Divider.variants.Extra} />
       <Breadcrumbs {...args} items={data}>
         <CopyButton />
       </Breadcrumbs>

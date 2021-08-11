@@ -1,9 +1,10 @@
 import { cx } from '@linaria/core';
+import { useEffect } from 'react';
+import RCModal from 'react-modal';
+
 import { IconButton } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useEffect } from 'react';
-import RCModal from 'react-modal';
 
 import {
   Content,
@@ -80,7 +81,7 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
             {typeof title === 'string' ? <Title>{title}</Title> : title}
             {additionalActions}
           </TitleRow>
-          <Divider color='middle' />
+          <Divider />
         </>
       )}
       {content && <Content className={propsContentClassName}>{content}</Content>}
