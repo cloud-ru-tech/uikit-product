@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_CHECKBOX } = DEPRECATED_EXPORT_VARS;
@@ -10,6 +11,8 @@ export const CheckboxStyled = styled.input`
   height: 0;
   padding: 0;
   border-style: none;
+  z-index: -1;
+  opacity: 0;
 `;
 
 export const CheckboxLabelStyled = styled.label`
