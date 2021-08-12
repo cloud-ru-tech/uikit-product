@@ -1,7 +1,8 @@
-import { LanguageCodeType, Themes } from './types';
-import { purple, purpleDark, green, greenDark } from '@sbercloud/uikit-theme';
+import { green, greenDark, purple, purpleDark } from '@sbercloud/uikit-theme';
 
-export const DEFAULT = { LANGUAGE: window.navigator.language as LanguageCodeType, THEME: Themes.Purple };
+import { LanguageCodeType, Themes } from './types';
+
+export const DEFAULT = { LANGUAGE: LanguageCodeType.ruRU, THEME: Themes.Purple };
 
 export const DEPRECATED_COLOR = {
   [Themes.Purple]: purple,
