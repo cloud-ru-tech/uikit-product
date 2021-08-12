@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-attention",
   "title": "React Attention",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-theme": "0.25.0",
-    "@sbercloud/uikit-utils": "0.3.1"
+    "@sbercloud/uikit-utils": "0.4.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

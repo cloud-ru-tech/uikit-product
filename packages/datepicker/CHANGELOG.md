@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.6.4&sourceBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.6.5) (2021-08-12)
+
+
+### Bug Fixes
+
+* update dependencies ([6fb8ee1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/6fb8ee15bf009b1239e0fccccf8b6db4f3abc78f))
+
+
+
+
+
 ## [0.6.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.6.3&sourceBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.6.4) (2021-08-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-datepicker
