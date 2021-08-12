@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.14.1&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.15.0) (2021-08-12)
+
+
+### Features
+
+* modified divider according to design system ([CP-1717](https://jira.sbercloud.tech/browse/CP-1717)) ([8e48d1a](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8e48d1a3086021fa43f9d2583607d2b7c78131e9))
+
+
+### BREAKING CHANGES
+
+* modified divider according to design system (CP-1717)
+
+
+
+
+
 ## [0.14.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-select@0.14.0&sourceBranch=refs/tags/@sbercloud/uikit-react-select@0.14.1) (2021-08-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
