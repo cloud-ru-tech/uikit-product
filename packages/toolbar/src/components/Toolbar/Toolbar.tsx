@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { ToolbarButton } from '../ToolbarButton';
+import { ToolbarFilter } from '../ToolbarFilter';
 import { ToolbarInput } from '../ToolbarInput';
 import { ListToolBarStyled } from './styled';
 
@@ -20,4 +21,5 @@ export const Toolbar = {
   Wrapper: ListToolBarWrapper,
   Input: ToolbarInput,
   Button: ToolbarButton,
+  Filter: ToolbarFilter,
 };
