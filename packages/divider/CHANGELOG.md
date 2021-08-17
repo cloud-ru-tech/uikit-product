@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-divider@1.0.0&sourceBranch=refs/tags/@sbercloud/uikit-react-divider@1.0.1) (2021-08-17)
+
+
+### Bug Fixes
+
+* styles in portal fixed ([46d7e0b](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/46d7e0bf21bba2da5d5f42f2daa627a7fecaf55c))
+
+
+
+
+
 # [1.0.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-divider@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-divider@0.8.0) (2021-08-13)
 
 
