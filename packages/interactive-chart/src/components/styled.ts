@@ -1,11 +1,16 @@
 import { styled } from '@linaria/react';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_INTERACTIVE_CHART } = DEPRECATED_EXPORT_VARS;
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
+
 export const Wrapper = styled.div`
   & .uplot {
     font-family: inherit;
-    background-color: var(${COLORS_INTERACTIVE_CHART.BACKGROUND});
+    background-color: var(${COLORS.BACKGROUND});
     padding: 16px 0;
     border-radius: 8px;
   }
@@ -21,12 +26,12 @@ export const Wrapper = styled.div`
   & .u-vt .u-cursor-y,
   & .u-hz .u-cursor-y,
   & .u-vt .u-cursor-x {
-    border-color: var(${COLORS_INTERACTIVE_CHART.CURSOR_AIM});
+    border-color: var(${COLORS.CURSOR});
   }
 
   /* Selected area */
   & .u-select {
-    background-color: var(${COLORS_INTERACTIVE_CHART.SELECTED_AREA});
+    background-color: var(${COLORS.SELECTED_AREA});
   }
 
   & table .u-series .u-marker {

@@ -27,8 +27,9 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-theme": "0.25.0",
+    "@sbercloud/uikit-utils": "0.4.1",
     "lodash.merge": "4.6.2",
-    "uplot": "1.6.13",
+    "uplot": "1.6.15",
     "uplot-react": "1.1.0"
   },
   "devDependencies": {

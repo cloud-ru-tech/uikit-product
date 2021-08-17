@@ -5,6 +5,8 @@ import { useMemo } from 'react';
 import uPlot from 'uplot';
 import UPlotReact from 'uplot-react';
 
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+
 import { boxPlotOptions, defaultPlotOptions } from '../configurations';
 import { PlotTypes } from '../constants/plotTypes';
 import * as S from './styled';
@@ -25,11 +27,16 @@ function chooseBaseOptions(type: PlotTypes): uPlot.Options {
   }
 }
 
-export function InteractiveChart({ data, options, type = PlotTypes.Default }: InteractiveChartProps) {
+export function InteractiveChart({
+  data,
+  options,
+  type = PlotTypes.Default,
+  ...rest
+}: WithSupportProps<InteractiveChartProps>) {
   const resultOptions = useMemo(() => merge({}, chooseBaseOptions(type), options), [options, type]);
 
   return (
-    <S.Wrapper>
+    <S.Wrapper {...extractSupportProps(rest)}>
       <UPlotReact options={resultOptions} data={data} />
     </S.Wrapper>
   );
