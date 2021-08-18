@@ -1,13 +1,13 @@
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Orientation, Variant } from './constants';
 import { StyledDivider } from './styled';
 
-export type DividerProps = {
+export type DividerProps = WithSupportProps<{
   className?: string;
   variant?: Variant;
   orientation?: Orientation;
-};
+}>;
 
 export const Divider = ({
   className,

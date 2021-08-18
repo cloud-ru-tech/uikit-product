@@ -32,6 +32,10 @@ const Template: Story<DividerProps> = ({ ...args }) => (
 
 export const divider = Template.bind({});
 
+divider.args = {
+  'data-test-id': 'testId',
+};
+
 divider.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
