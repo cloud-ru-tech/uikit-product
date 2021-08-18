@@ -7,7 +7,7 @@ import componentReadme from '../README.md';
 import { InteractiveChart, InteractiveChartProps } from '../src';
 
 export default {
-  title: 'Not stable/Interactive Chart/Box Plot',
+  title: 'Not stable/Charts/Box Plot',
   component: InteractiveChart,
 } as Meta;
 

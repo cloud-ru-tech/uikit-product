@@ -1,3 +1,8 @@
+export enum PlotTypes {
+  BoxPlot = 'boxPlot',
+  Default = 'default',
+}
+
 export enum LineInterpolations {
   Linear = 'linear',
   StepAfter = 'stepAfter',

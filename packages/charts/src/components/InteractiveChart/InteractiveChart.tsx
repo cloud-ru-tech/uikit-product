@@ -7,8 +7,8 @@ import UPlotReact from 'uplot-react';
 
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { boxPlotOptions, defaultPlotOptions } from '../configurations';
-import { PlotTypes } from '../constants/plotTypes';
+import { boxPlotOptions, defaultPlotOptions } from './configurations';
+import { PlotTypes } from './constants';
 import * as S from './styled';
 
 export type InteractiveChartProps = {

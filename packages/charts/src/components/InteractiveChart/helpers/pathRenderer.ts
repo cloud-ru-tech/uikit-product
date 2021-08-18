@@ -4,7 +4,8 @@
 
 import uPlot from 'uplot';
 
-import { DrawStyles, LineInterpolations } from '../constants/layerStyles';
+import { DrawStyles, LineInterpolations } from '../constants';
+
 const { linear, stepped, bars, spline } = uPlot.paths;
 
 const _bars60_100 = bars({ size: [0.6, 100] });

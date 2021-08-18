@@ -7,11 +7,11 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InteractiveChart, InteractiveChartProps, createLayer } from '../src';
+import { DrawStyles, LineInterpolations } from '../src/components/InteractiveChart/constants';
 import { Colors } from '../src/constants/colors';
-import { DrawStyles, LineInterpolations } from '../src/constants/layerStyles';
 
 export default {
-  title: 'Not stable/Interactive Chart/Base',
+  title: 'Not stable/Charts/Base',
   component: InteractiveChart,
 } as Meta;
 

@@ -1,7 +1,7 @@
 import { Series } from 'uplot';
 
-import { CHART_COLORS, Colors } from '../constants/colors';
-import { DrawStyles, LineInterpolations } from '../constants/layerStyles';
+import { CHART_COLORS, Colors } from '../../../constants/colors';
+import { DrawStyles, LineInterpolations } from '../constants';
 import { getPathRenderer } from '../helpers/pathRenderer';
 
 type Layer = Partial<Series>;

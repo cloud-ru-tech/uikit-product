@@ -3,7 +3,7 @@
 /* eslint-disable */
 import uPlot from 'uplot';
 
-import { CHART_COLORS, Colors } from '../constants/colors';
+import { CHART_COLORS, Colors } from '../../../constants/colors';
 
 export function boxPlotPlugin({ gap = 5, shadowColor = '#63696E', bodyMaxWidth = 60, shadowWidth = 2 } = {}) {
   function roundRect(ctx, x, y, width, height, radius) {

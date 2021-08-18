@@ -1,8 +1,8 @@
 import uPlot from 'uplot';
 
-import { boxPlotPlugin } from '../helpers/boxPlotPlugin';
-import { columnHighlightPlugin } from '../helpers/columnHighlightPlugin';
-import { legendAsTooltipPlugin } from '../helpers/legendAsTooltipPlugin';
+import { boxPlotPlugin } from '../plugins/boxPlotPlugin';
+import { columnHighlightPlugin } from '../plugins/columnHighlightPlugin';
+import { legendAsTooltipPlugin } from '../plugins/legendAsTooltipPlugin';
 
 export const boxPlotOptions: uPlot.Options = {
   title: 'Distribution of object predictions by bin',

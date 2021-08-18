@@ -1,4 +1,4 @@
-import { wheelZoomPlugin } from '../helpers/wheelZoomPlugin';
+import { wheelZoomPlugin } from '../plugins/wheelZoomPlugin';
 
 export const defaultPlotOptions: uPlot.Options = {
   title: 'Title',

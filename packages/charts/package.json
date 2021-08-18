@@ -1,6 +1,6 @@
 {
-  "name": "@sbercloud/uikit-react-interactive-chart",
-  "title": "React Interactive Chart",
+  "name": "@sbercloud/uikit-react-charts",
+  "title": "React Charts",
   "version": "0.3.1",
   "sideEffects": [
     "*.css",
@@ -10,7 +10,7 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/interactive-chart/README.md",
+  "homepage": "https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/packages/charts/README.md",
   "repository": {
     "type": "git",
     "url": "ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git"
