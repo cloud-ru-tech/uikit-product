@@ -1,11 +1,12 @@
 import { styled } from '@linaria/react';
-import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
+
+import { Button } from '@sbercloud/uikit-react-button';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Toaster as CToaster, ToasterOptions, ToasterProps, toaster } from '../src';
+import { Toaster as CToaster, ToasterOptions, ToasterProps, dismissToast, toaster, updateToast } from '../src';
 
 export default {
   title: 'Not stable/Toaster',
@@ -35,6 +36,7 @@ const PREDEFINED_ITEMS: {
         },
       ],
     },
+    options: { toastId: 'infoCustomId' },
   },
   {
     title: 'ERROR',
@@ -42,7 +44,7 @@ const PREDEFINED_ITEMS: {
       variant: CToaster.variants.Error,
       title: 'Проблемы с соединением. Данные не перенесены. ',
       subtitle: 'CORS error',
-      text: "Access to XMLHttpRequest at 'https://console.sbercloud.ru' (redirected from 'https://api.sbercloud.ru') from origin 'https://console.ru' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.",
+      text: "User=email@sbercloud.ru can't create oneapi jupyter notebook: ['CUSTOMER_ONE_API_NOTEBOOK_LIMIT_REACHED_1_ONLY'] sku_id=None, service_instance_id=None",
       closeButton: true,
       actions: [
         {
@@ -55,7 +57,7 @@ const PREDEFINED_ITEMS: {
         },
       ],
     },
-    options: { autoClose: false },
+    options: { autoClose: false, toastId: 'errorCustomId' },
   },
   {
     title: 'IN PROGRESS',
@@ -77,6 +79,7 @@ const PREDEFINED_ITEMS: {
         },
       ],
     },
+    options: { toastId: 'inProgressCustomId' },
   },
 ];
 
@@ -86,41 +89,68 @@ const Wrapper = styled.div`
   grid-auto-columns: max-content;
 `;
 
+const LineWrapper = styled.div`
+  display: flex;
+
+  > * {
+    margin-right: 12px;
+  }
+`;
+
 const Template: Story<ToasterProps & { showActions: boolean; autoClose: boolean }> = ({
   showActions,
   autoClose,
   ...args
 }) => (
   <Wrapper>
-    <Button
-      onClick={() =>
-        toaster(
-          {
-            ...args,
-            actions: showActions
-              ? [
-                  {
-                    title: 'Пауза',
-                    onClick: () => {},
-                  },
-                  {
-                    title: 'Отменить',
-                    onClick: () => {},
-                  },
-                ]
-              : undefined,
-          },
-          { autoClose: autoClose ? undefined : false },
-        )
-      }
-    >
-      CUSTOMIZED
-    </Button>
+    <LineWrapper>
+      <Button
+        onClick={() =>
+          toaster(
+            {
+              ...args,
+              actions: showActions
+                ? [
+                    {
+                      title: 'Пауза',
+                      onClick: () => {},
+                    },
+                    {
+                      title: 'Отменить',
+                      onClick: () => {},
+                    },
+                  ]
+                : undefined,
+            },
+            { autoClose: autoClose ? undefined : false, toastId: 'customizedCustomId' },
+          )
+        }
+      >
+        CUSTOMIZED
+      </Button>
+      <Button variant={Button.variants.Outlined} onClick={() => dismissToast('customizedCustomId')}>
+        Close CUSTOMIZED
+      </Button>
+    </LineWrapper>
 
     {PREDEFINED_ITEMS.map(({ title, props, options }) => (
-      <Button key={title} onClick={() => toaster(props, options)}>
-        {title}
-      </Button>
+      <LineWrapper key={title}>
+        <Button
+          onClick={() => {
+            toaster(props, options);
+          }}
+        >
+          {title}
+        </Button>
+        <Button
+          variant={Button.variants.Outlined}
+          onClick={() => {
+            dismissToast(options?.toastId);
+          }}
+        >
+          Close {title}
+        </Button>
+      </LineWrapper>
     ))}
 
     <CToaster />

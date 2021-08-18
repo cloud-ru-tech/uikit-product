@@ -30,6 +30,9 @@ export function ToasterContainer(props: ToastContainerProps) {
 
 ToasterContainer.variants = Variants;
 
-export const toaster = (toastProps: ToasterProps, options: ToastOptions = {}): void => {
+export const dismissToast = rcToast.dismiss;
+export const updateToast = rcToast.update;
+export const isActiveToast = rcToast.isActive;
+
+export const toaster = (toastProps: ToasterProps, options: ToastOptions = {}) =>
   rcToast(<Toaster {...toastProps} />, options);
-};
