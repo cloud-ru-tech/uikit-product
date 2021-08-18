@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-modal",
   "title": "React Modal",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-button": "0.11.1",
-    "@sbercloud/uikit-react-divider": "1.0.1",
+    "@sbercloud/uikit-react-divider": "1.0.2",
     "@sbercloud/uikit-react-icons": "1.4.0",
     "@sbercloud/uikit-react-tooltip": "0.6.1",
     "@sbercloud/uikit-theme": "0.25.0",
