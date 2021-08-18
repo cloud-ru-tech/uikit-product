@@ -38,6 +38,7 @@ link.args = {
   text: 'Click me!',
   href: 'https://developer.mozilla.org/ru/docs/Web/HTML/Element/A',
   showIcon: true,
+  'data-test-id': 'textId',
 };
 link.argTypes = {};
 link.parameters = {

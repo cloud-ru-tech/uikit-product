@@ -1,11 +1,11 @@
 import { AnchorHTMLAttributes, MouseEventHandler } from 'react';
 
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Variant } from './constants';
 import { StyledArrowLinkInterfaceSVG, StyledLink } from './styled';
 
-export type LinkProps = {
+export type LinkProps = WithSupportProps<{
   className?: string;
   variant?: Variant;
   text?: string;
@@ -14,7 +14,7 @@ export type LinkProps = {
   target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
   href?: string;
   disabled?: boolean;
-};
+}>;
 
 export const Link = ({
   className,
