@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toaster@0.6.1&sourceBranch=refs/tags/@sbercloud/uikit-react-toaster@0.7.0) (2021-08-18)
+
+
+### Features
+
+* close toast | [AICDC-2900](https://jira.sbercloud.tech/browse/AICDC-2900) ([493a6de](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/493a6de5cbbf6ccd3f0f31f290b661bbaa2b4878))
+
+
+
+
+
 ## [0.6.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toaster@0.6.0&sourceBranch=refs/tags/@sbercloud/uikit-react-toaster@0.6.1) (2021-08-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toaster
