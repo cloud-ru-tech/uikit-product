@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2021-08-19)
+
+
+### Features
+
+* package has been renamed to @sbercloud/uikit-react-charts ([686647f](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/686647f3c810de536753519a6a2525dff3d4185f))
+* Pie Chart added ([AICD-1689](https://jira.sbercloud.tech/browse/AICD-1689)) ([7b02a6b](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/7b02a6b61a466242058c4b17d046924ca82121b3))
+
+
+
+
+
 ## [0.3.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-interactive-chart@0.3.0&sourceBranch=refs/tags/@sbercloud/uikit-react-interactive-chart@0.3.1) (2021-08-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-interactive-chart

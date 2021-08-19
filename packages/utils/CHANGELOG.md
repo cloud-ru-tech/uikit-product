@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-utils@0.4.1&sourceBranch=refs/tags/@sbercloud/uikit-utils@0.5.0) (2021-08-19)
+
+
+### Features
+
+* truncate string tool ([75112c2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/75112c2fdbab4ea92ba3288050376f7caae6fa12))
+
+
+
+
+
 ## [0.4.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-utils@0.4.0&sourceBranch=refs/tags/@sbercloud/uikit-utils@0.4.1) (2021-08-12)
 
 
