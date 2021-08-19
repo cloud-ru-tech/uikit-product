@@ -28,6 +28,8 @@
   "dependencies": {
     "@sbercloud/uikit-theme": "0.25.0",
     "@sbercloud/uikit-utils": "0.4.1",
+    "@sbercloud/uikit-react-divider": "1.0.2",
+    "react-minimal-pie-chart": "8.2.0",
     "lodash.merge": "4.6.2",
     "uplot": "1.6.15",
     "uplot-react": "1.1.0"
