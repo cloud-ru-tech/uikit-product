@@ -4,7 +4,6 @@ import debounce from 'lodash.debounce';
 import { useEffect, useState } from 'react';
 
 import { ButtonTable, ButtonTableIcon } from '@sbercloud/uikit-react-button';
-import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Status } from '@sbercloud/uikit-react-status';
 
 import componentChangelog from '../CHANGELOG.md';

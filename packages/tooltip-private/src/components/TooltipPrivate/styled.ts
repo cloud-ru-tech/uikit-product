@@ -8,6 +8,6 @@ export const tooltipClassName = css`
 `;
 
 export const triggerClassName = css`
-  display: inline-flex;
+  display: flex;
   cursor: pointer;
 `;

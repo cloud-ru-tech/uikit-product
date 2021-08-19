@@ -61,7 +61,7 @@ const Template: Story<DropdownMenuProps> = () => (
         { name: 'Загрузить документ', onClick: () => {} },
       ]}
     >
-      <ButtonIcon icon={<SettingsInterfaceSVG />} title='Настройки' />
+      <ButtonIcon icon={<SettingsInterfaceSVG />} tooltip='Настройки' />
     </DropdownMenu>
 
     <DropdownMenu

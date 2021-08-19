@@ -24,7 +24,7 @@ const Template: Story<WithSupportProps<ToolbarWrapperProps>> = ({ ...args }) => 
   return (
     <Toolbar.Wrapper {...args}>
       <RefreshButton as={ButtonToolbar} />
-      <Toolbar.Button disabled>
+      <Toolbar.Button disabled tooltip='Удалить'>
         <DeleteInterfaceSVG />
       </Toolbar.Button>
       <Toolbar.Input
@@ -33,10 +33,10 @@ const Template: Story<WithSupportProps<ToolbarWrapperProps>> = ({ ...args }) => 
           setValue(value);
         }}
       />
-      <Toolbar.Button>
+      <Toolbar.Button tooltip='Раскрыть'>
         <RowExpandedInterfaceSVG />
       </Toolbar.Button>
-      <Toolbar.Button isActive>
+      <Toolbar.Button isActive tooltip='Настройки'>
         <TableSettingsInterfaceSVG />
       </Toolbar.Button>
       <Toolbar.Filter

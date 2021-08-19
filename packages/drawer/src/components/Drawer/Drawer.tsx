@@ -2,12 +2,13 @@ import 'rc-drawer/assets/index.css';
 
 import { cx } from '@linaria/core';
 import RcDrawer from 'rc-drawer';
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
+import { Texts, textProvider } from '../../helpers/texts-provider';
 import { Header } from '../Header';
 import {
   CloseButtonStyled,
@@ -48,6 +49,10 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
   onBackClick,
   ...restProps
 }) => {
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+
+  const closeBtnText = useMemo(() => textProvider(language, Texts.close), [language]);
+
   const handleClick = useCallback(
     (e: Event) => {
       e.stopPropagation();
@@ -121,7 +126,12 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
             {headerText && <Header text={headerText} />}
           </HeaderTextBoxStyled>
           <CloseButtonStyled>
-            <ButtonIcon icon={<CloseInterfaceSVG />} onClick={onClose} data-test-action-id='drawer__header-close-btn' />
+            <ButtonIcon
+              icon={<CloseInterfaceSVG />}
+              tooltip={closeBtnText}
+              onClick={onClose}
+              data-test-action-id='drawer__header-close-btn'
+            />
           </CloseButtonStyled>
         </HeaderBoxStyled>
       )}

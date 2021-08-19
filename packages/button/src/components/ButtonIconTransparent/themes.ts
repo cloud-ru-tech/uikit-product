@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
 const { GREY, BLUE_GREY, PURPLE, WHITE_ALFA, BLACK_ALFA, GREEN } = EXPORT_VARS;
 
@@ -24,10 +24,9 @@ export const COLORS = {
   ACCENT_BG_DISABLED: '--color-button-icon-transparent-accent-bg-disabled',
 };
 
-/* TODO: использовать [data-theme='${Themes.Purple}'] */
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme='purple'] {
+    [data-theme='${Themes.Purple}'] {
       ${COLORS.DEFAULT_FILL}: var(${GREY[300]});
       ${COLORS.DEFAULT_BG}: var(${BLACK_ALFA[4]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${BLUE_GREY[60]});
@@ -49,10 +48,9 @@ export const PURPLE_THEME = css`
   }
 `;
 
-/* TODO: использовать [data-theme='${Themes.PurpleDark}'] */
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme='purpleDark'] {
+    [data-theme='${Themes.PurpleDark}'] {
       ${COLORS.DEFAULT_FILL}: var(${GREY[450]});
       ${COLORS.DEFAULT_BG}: var(${WHITE_ALFA[8]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${GREY[200]});
@@ -74,10 +72,9 @@ export const PURPLE_DARK_THEME = css`
   }
 `;
 
-/* TODO: использовать [data-theme='${Themes.Green}'] */
 export const GREEN_THEME = css`
   :global() {
-    [data-theme='green'] {
+    [data-theme='${Themes.Green}'] {
       ${COLORS.DEFAULT_FILL}: var(${GREY[300]});
       ${COLORS.DEFAULT_BG}: var(${BLACK_ALFA[4]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${BLUE_GREY[60]});
@@ -99,10 +96,9 @@ export const GREEN_THEME = css`
   }
 `;
 
-/* TODO: использовать [data-theme='${Themes.GreenDark}'] */
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme='greenDark'] {
+    [data-theme='${Themes.GreenDark}'] {
       ${COLORS.DEFAULT_FILL}: var(${GREY[450]});
       ${COLORS.DEFAULT_BG}: var(${WHITE_ALFA[8]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${GREY[200]});

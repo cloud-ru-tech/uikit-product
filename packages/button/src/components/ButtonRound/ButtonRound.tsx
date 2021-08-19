@@ -1,6 +1,7 @@
 import { ReactElement, ReactText, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
+import { withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
 import { Variant } from './constants';
 import * as S from './styled';
@@ -20,7 +21,9 @@ const ButtonRoundBase = forwardRef<HTMLButtonElement, ButtonRoundProps>(
   ),
 );
 
-export const ButtonRound = ButtonRoundBase as typeof ButtonRoundBase & {
+const ButtonRoundWithTooltip = withTooltip(ButtonRoundBase);
+
+export const ButtonRound = ButtonRoundWithTooltip as typeof ButtonRoundWithTooltip & {
   variants: typeof Variant;
 };
 

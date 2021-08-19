@@ -11,7 +11,13 @@ export default {
 } as Meta;
 
 const Template: Story<ButtonToolbarProps> = ({ ...args }) => (
-  <ButtonToolbar {...args} title='Add' icon={<CircleAddInterfaceSVG />} />
+  <ButtonToolbar
+    {...args}
+    tooltip='Add'
+    disabledTooltip='Unavailable'
+    tooltipPlacement={ButtonToolbar.placements.Bottom}
+    icon={<CircleAddInterfaceSVG />}
+  />
 );
 
 export const buttonToolbar = Template.bind({});

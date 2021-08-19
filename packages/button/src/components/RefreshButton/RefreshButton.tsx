@@ -2,11 +2,13 @@ import { ElementType } from 'react';
 import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 
 import { RefreshInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
-import { extractCommonButtonProps, rotateOnClickClassName } from '../../helpers';
+import { Texts, extractCommonButtonProps, rotateOnClickClassName, textProvider } from '../../helpers';
+import { WithTooltipProps } from '../../hocs';
 import { ButtonIconTransparent } from '../';
 
-export type RefreshButtonOwnProps = { icon?: never };
+export type RefreshButtonOwnProps = { icon?: never } & Pick<WithTooltipProps, 'tooltip'>;
 
 export const RefreshButtonDefaultElement = ButtonIconTransparent;
 
@@ -21,6 +23,8 @@ export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaul
   as,
   ...rest
 }: RefreshButtonProps<T>) {
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+
   const Element: ElementType = as || RefreshButtonDefaultElement;
 
   const extractedProps: ReturnType<typeof extractCommonButtonProps> & { variant?: unknown } =
@@ -30,5 +34,5 @@ export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaul
     extractedProps.variant = rest.variant;
   }
 
-  return <Element icon={<AnimatedRefreshIcon />} {...extractedProps} />;
+  return <Element icon={<AnimatedRefreshIcon />} tooltip={textProvider(language, Texts.refresh)} {...extractedProps} />;
 }

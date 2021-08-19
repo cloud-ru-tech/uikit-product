@@ -1,15 +1,18 @@
 import { ReactElement, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
-import { CommonButtonProps } from '../../types';
+import { withTooltip } from '../../hocs';
+import { CommonButtonPropsWithRequiredTooltip } from '../../types';
 import * as S from './styled';
 
-export type ButtonOverlayProps = CommonButtonProps & {
+export type ButtonOverlayProps = CommonButtonPropsWithRequiredTooltip & {
   icon: ReactElement;
 };
 
-export const ButtonOverlay = forwardRef<HTMLButtonElement, ButtonOverlayProps>(({ icon, ...rest }, ref) => (
+const ButtonOverlayBase = forwardRef<HTMLButtonElement, ButtonOverlayProps>(({ icon, ...rest }, ref) => (
   <S.Button ref={ref} {...extractCommonButtonProps(rest)}>
     {icon}
   </S.Button>
 ));
+
+export const ButtonOverlay = withTooltip(ButtonOverlayBase);

@@ -1,22 +1,21 @@
 import copyText from 'copy-to-clipboard';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { CopyButton } from '@sbercloud/uikit-react-button';
+import { ButtonIcon, ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
 import { getInputType } from '../../helpers/getInputType';
+import { Texts, textProvider } from '../../helpers/texts-provider';
 import { InputElementType, InputProps, InputTypes } from '../../helpers/types';
 import {
   BasicButtonWrapper,
   Label,
   OpenDialogButton,
   OpenDialogButtonWrapper,
-  StyledClearButton,
   StyledIconWrapper,
   StyledInput,
   StyledInputWrapper,
-  StyledSecurityButton,
   StyledWrap,
 } from './styled';
 
@@ -52,6 +51,8 @@ export const Input = ({
   const inputEl = useRef<InputElementType>(null);
   const [correctValue, setCorrectValue] = useState(value);
   const [isViewMode, setViewMode] = useState(type !== 'security');
+
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
 
   useEffect(() => {
     getInstance?.(inputEl as React.RefObject<HTMLInputElement>);
@@ -176,15 +177,21 @@ export const Input = ({
         <StyledIconWrapper>
           <BasicButtonWrapper>
             {!disabled && allowClear && correctValue && correctValue !== '' && (
-              <StyledClearButton onClick={handleClickClear} data-test-id='input__clear-btn'>
-                <CloseInterfaceSVG />
-              </StyledClearButton>
+              <ButtonIcon
+                onClick={handleClickClear}
+                icon={<CloseInterfaceSVG />}
+                tooltip={textProvider(language, Texts.clear)}
+                data-test-id='input__clear-btn'
+              />
             )}
             {postfix}
             {type === 'security' ? (
-              <StyledSecurityButton onClick={(): void => setViewMode(!isViewMode)} data-test-id='input__security-btn'>
-                {isViewMode ? <EyeClosedInterfaceSVG /> : <EyeOpenedInterfaceSVG />}
-              </StyledSecurityButton>
+              <ButtonIconTransparent
+                onClick={(): void => setViewMode(!isViewMode)}
+                tooltip={isViewMode ? textProvider(language, Texts.hide) : textProvider(language, Texts.show)}
+                icon={isViewMode ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
+                data-test-id='input__security-btn'
+              />
             ) : null}
             {allowCopy && (
               <CopyButton text={value.toString()} className={copyButtonClassName} data-test-id='input__copy-btn' />

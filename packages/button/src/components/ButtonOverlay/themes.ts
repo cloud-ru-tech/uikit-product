@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
 const { GREY, BLUE_GREY, PURPLE, GREEN } = EXPORT_VARS;
 
@@ -15,10 +15,9 @@ export const COLORS = {
   BG_DISABLED: '--color-button-overlay-bg-disabled',
 };
 
-/* TODO: использовать [data-theme='${Themes.Purple}'] */
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme='purple'] {
+    [data-theme='${Themes.Purple}'] {
       ${COLORS.FILL}: var(${GREY[300]});
       ${COLORS.BG}: var(${GREY[50]});
       ${COLORS.FILL_HOVER}: var(${PURPLE[100]});
@@ -31,10 +30,9 @@ export const PURPLE_THEME = css`
   }
 `;
 
-/* TODO: использовать [data-theme='${Themes.PurpleDark}'] */
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme='purpleDark'] {
+    [data-theme='${Themes.PurpleDark}'] {
       ${COLORS.FILL}: var(${GREY[350]});
       ${COLORS.BG}: var(${GREY[700]});
       ${COLORS.FILL_HOVER}: var(${PURPLE[25]});
@@ -47,10 +45,9 @@ export const PURPLE_DARK_THEME = css`
   }
 `;
 
-/* TODO: использовать [data-theme='${Themes.Green}'] */
 export const GREEN_THEME = css`
   :global() {
-    [data-theme='green'] {
+    [data-theme='${Themes.Green}'] {
       ${COLORS.FILL}: var(${GREY[300]});
       ${COLORS.BG}: var(${GREY[50]});
       ${COLORS.FILL_HOVER}: var(${BLUE_GREY[80]});
@@ -63,10 +60,9 @@ export const GREEN_THEME = css`
   }
 `;
 
-/* TODO: использовать [data-theme='${Themes.GreenDark}'] */
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme='greenDark'] {
+    [data-theme='${Themes.GreenDark}'] {
       ${COLORS.FILL}: var(${GREY[350]});
       ${COLORS.BG}: var(${GREY[700]});
       ${COLORS.FILL_HOVER}: var(${GREEN[50]});

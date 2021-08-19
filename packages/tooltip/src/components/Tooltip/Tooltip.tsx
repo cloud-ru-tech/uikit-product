@@ -1,13 +1,8 @@
 import { cx } from '@linaria/core';
+
 import { Placements, TooltipPrivate, TooltipPrivateProps } from '@sbercloud/uikit-react-tooltip-private';
 
-import {
-  IconWrapper,
-  TooltipWrapper,
-  containerClassName,
-  containerWithIconClassName,
-  triggerClassName,
-} from './styled';
+import { IconWrapper, TooltipWrapper, containerClassName, containerWithIconClassName } from './styled';
 
 const DEFAULT_MODIFIERS = [
   {
@@ -63,7 +58,7 @@ export const Tooltip = ({
     hideArrow={hideArrow}
     classNameContainer={cx(containerClassName, Boolean(icon) && containerWithIconClassName, className)}
     classNameArrow={classNameArrow}
-    classNameTrigger={cx(triggerClassName, classNameTrigger)}
+    classNameTrigger={classNameTrigger}
     tooltip={
       <>
         <TooltipWrapper className={classNameWrapper}>{tooltip}</TooltipWrapper>

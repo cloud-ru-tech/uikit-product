@@ -22,11 +22,22 @@ const Template: Story<ButtonTableIconProps> = ({ ...args }) => (
         <TableCell>{key}</TableCell>
 
         <TableCell>
-          <ButtonTableIcon variant={value} title={key} {...args} />
+          <ButtonTableIcon
+            variant={value}
+            disabledTooltip='Unavailable'
+            tooltipPlacement={ButtonTableIcon.placements.Left}
+            {...args}
+          />
         </TableCell>
 
         <TableCell>
-          <ButtonTableIconManagedLoading variant={value} title={key} onClick={onClick} {...args} />
+          <ButtonTableIconManagedLoading
+            variant={value}
+            onClick={onClick}
+            disabledTooltip='Unavailable'
+            tooltipPlacement={ButtonTableIcon.placements.Right}
+            {...args}
+          />
         </TableCell>
       </TableColumn>
     ))}

@@ -21,7 +21,14 @@ const Template: Story<ButtonIconTransparentProps> = ({ ...args }) => (
         <TableCell>{key}</TableCell>
 
         <TableCell>
-          <ButtonIconTransparent {...args} variant={value} title='Play' icon={<CirclePlayFilledInterfaceSVG />} />
+          <ButtonIconTransparent
+            {...args}
+            variant={value}
+            tooltip='Play'
+            disabledTooltip='Unavailable'
+            tooltipPlacement={ButtonIconTransparent.placements.Top}
+            icon={<CirclePlayFilledInterfaceSVG />}
+          />
         </TableCell>
       </TableColumn>
     ))}

@@ -14,14 +14,14 @@ const Template: Story<CopyButtonProps> = ({ ...args }) => (
     <TableColumn>
       <TableCell>Button Icon Transparent / Default</TableCell>
       <TableCell>
-        <CopyButton title='Copy' {...args} />
+        <CopyButton {...args} />
       </TableCell>
     </TableColumn>
 
     <TableColumn>
       <TableCell>Button Icon / Color</TableCell>
       <TableCell>
-        <CopyButton title='Copy' as={ButtonIcon} variant={ButtonIcon.variants.Color} {...args} />
+        <CopyButton as={ButtonIcon} variant={ButtonIcon.variants.Color} {...args} />
       </TableCell>
     </TableColumn>
   </TableWrapper>

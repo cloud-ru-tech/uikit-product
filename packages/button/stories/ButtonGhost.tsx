@@ -20,7 +20,9 @@ const Template: Story<ButtonGhostProps> = ({ ...args }) => (
         <TableCell>
           <ButtonGhost
             variant={value}
-            title={key}
+            tooltip={key}
+            disabledTooltip='Unavailable'
+            tooltipPlacement={ButtonGhost.placements.Left}
             icon={<CopyInterfaceSVG />}
             iconPosition={ButtonGhost.iconPosition.Before}
             {...args}
@@ -30,7 +32,7 @@ const Template: Story<ButtonGhostProps> = ({ ...args }) => (
         <TableCell>
           <ButtonGhost
             variant={value}
-            title={key}
+            tooltip={key}
             icon={<CopyInterfaceSVG />}
             iconPosition={ButtonGhost.iconPosition.After}
             {...args}
@@ -38,7 +40,7 @@ const Template: Story<ButtonGhostProps> = ({ ...args }) => (
         </TableCell>
 
         <TableCell>
-          <ButtonGhost variant={value} title={key} {...args} />
+          <ButtonGhost variant={value} tooltip={key} {...args} />
         </TableCell>
       </TableColumn>
     ))}

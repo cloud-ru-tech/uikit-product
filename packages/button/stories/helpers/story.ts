@@ -20,7 +20,7 @@ export function getDefaultParameters({
           type: 'figma',
           url: figmaUrl,
         }
-      : {},
+      : undefined,
     badges: [BADGE.NEEDS_REVISION, BADGE.BETA],
     controls: { include: ['disabled'].concat(extraControlsInclude) },
   };

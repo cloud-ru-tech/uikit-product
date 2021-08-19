@@ -2,8 +2,8 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { ButtonIconTransparent } from '@sbercloud/uikit-react-button';
-import { InfoInterfaceSVG, RefreshInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { ButtonIconTransparent, RefreshButton } from '@sbercloud/uikit-react-button';
+import { InfoInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_GLOBAL_CSS_VARS, EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -38,8 +38,8 @@ textField.args = {
   text: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.\nLorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.',
   extraIcons: (
     <>
-      <ButtonIconTransparent icon={<InfoInterfaceSVG />} />
-      <ButtonIconTransparent icon={<RefreshInterfaceSVG />} />
+      <ButtonIconTransparent icon={<InfoInterfaceSVG />} tooltip='Инфо' />
+      <RefreshButton />
     </>
   ),
   'data-test-id': 'testId',

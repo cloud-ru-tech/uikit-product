@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
 const { GREY, BLUE_GREY, PURPLE, GREEN, WHITE_ALFA, BLACK_ALFA, PRESET } = EXPORT_VARS;
 
@@ -84,10 +84,9 @@ export const COLORS = {
   ALARM_COLOR_DISABLED: '--color-button-alarm-color-disabled',
 };
 
-/* TODO: использовать [data-theme='${Themes.Purple}'] */
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme='purple'] {
+    [data-theme='${Themes.Purple}'] {
       ${COLORS.FILLED_FILL}: var(${GREY[0]});
       ${COLORS.FILLED_BG}: var(${PURPLE[100]});
       ${COLORS.FILLED_COLOR}: var(${GREY[0]});
@@ -169,10 +168,9 @@ export const PURPLE_THEME = css`
   }
 `;
 
-/* TODO: использовать [data-theme='${Themes.PurpleDark}'] */
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme='purpleDark'] {
+    [data-theme='${Themes.PurpleDark}'] {
       ${COLORS.FILLED_FILL}: var(${GREY[0]});
       ${COLORS.FILLED_BG}: var(${PURPLE[100]});
       ${COLORS.FILLED_COLOR}: var(${GREY[0]});
@@ -254,10 +252,9 @@ export const PURPLE_DARK_THEME = css`
   }
 `;
 
-/* TODO: использовать [data-theme='${Themes.Green}'] */
 export const GREEN_THEME = css`
   :global() {
-    [data-theme='green'] {
+    [data-theme='${Themes.Green}'] {
       ${COLORS.FILLED_FILL}: var(${GREEN[100]});
       ${COLORS.FILLED_BG}: var(${BLUE_GREY[80]});
       ${COLORS.FILLED_COLOR}: var(${GREY[0]});
@@ -339,10 +336,9 @@ export const GREEN_THEME = css`
   }
 `;
 
-/* TODO: использовать [data-theme='${Themes.GreenDark}'] */
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme='greenDark'] {
+    [data-theme='${Themes.GreenDark}'] {
       ${COLORS.FILLED_FILL}: var(${BLUE_GREY[80]});
       ${COLORS.FILLED_BG}: var(${GREEN[100]});
       ${COLORS.FILLED_COLOR}: var(${BLUE_GREY[80]});

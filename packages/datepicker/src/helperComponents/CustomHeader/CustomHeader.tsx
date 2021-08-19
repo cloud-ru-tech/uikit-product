@@ -2,6 +2,7 @@ import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { ChevronLeftInterfaceSVG, ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { LanguageCodeType } from '@sbercloud/uikit-utils';
 
+import { CustomHeaderActions } from '../../helpers/texts-provider';
 import * as S from './styled';
 
 interface HeaderCustomProps {
@@ -28,9 +29,19 @@ export const CustomHeader = (customProps: HeaderCustomProps, props: HeaderProps)
     <S.Container>
       <S.Title>{title}</S.Title>
 
-      <ButtonIcon onClick={decreaseMonth} disabled={prevMonthButtonDisabled} icon={<ChevronLeftInterfaceSVG />} />
+      <ButtonIcon
+        onClick={decreaseMonth}
+        disabled={prevMonthButtonDisabled}
+        tooltip={CustomHeaderActions[language].prev}
+        icon={<ChevronLeftInterfaceSVG />}
+      />
 
-      <ButtonIcon onClick={increaseMonth} disabled={nextMonthButtonDisabled} icon={<ChevronRightInterfaceSVG />} />
+      <ButtonIcon
+        onClick={increaseMonth}
+        disabled={nextMonthButtonDisabled}
+        tooltip={CustomHeaderActions[language].next}
+        icon={<ChevronRightInterfaceSVG />}
+      />
     </S.Container>
   );
 };

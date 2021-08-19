@@ -102,6 +102,7 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
 
   const approveBtnText = useMemo(() => approveText || textProvider(language, Texts.approve), [approveText, language]);
   const cancelBtnText = useMemo(() => cancelText || textProvider(language, Texts.cancel), [cancelText, language]);
+  const closeBtnText = useMemo(() => textProvider(language, Texts.close), [language]);
 
   if (appElement) {
     RCModal.setAppElement(appElement as HTMLElement);
@@ -138,6 +139,7 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
           onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
             onRequestClose?.(e, MODAL_CLOSE_TYPE.CROSS);
           }}
+          tooltip={closeBtnText}
           className={closeButtonStyle}
           data-test-id='modal__close-btn'
         />

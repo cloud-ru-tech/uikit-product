@@ -5,6 +5,17 @@ export const TimeFormat = {
   [LanguageCodeType.ruRU]: 'HH:mm',
 };
 
+export const CustomHeaderActions = {
+  [LanguageCodeType.enGB]: {
+    next: 'Next',
+    prev: 'Previous',
+  },
+  [LanguageCodeType.ruRU]: {
+    next: 'Следующий',
+    prev: 'Предыдущий',
+  },
+};
+
 export const AmPmFormat = {
   [LanguageCodeType.enGB]: true,
   [LanguageCodeType.ruRU]: false,

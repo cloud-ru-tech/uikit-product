@@ -1,11 +1,12 @@
 import { ReactElement, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
-import { CommonButtonProps } from '../../types';
+import { withTooltip } from '../../hocs';
+import { CommonButtonPropsWithRequiredTooltip } from '../../types';
 import { Variant } from './constants';
 import * as S from './styled';
 
-export type ButtonSquareIconProps = CommonButtonProps & {
+export type ButtonSquareIconProps = CommonButtonPropsWithRequiredTooltip & {
   icon: ReactElement;
   variant?: Variant;
   rounded?: boolean;
@@ -19,7 +20,9 @@ const ButtonSquareIconBase = forwardRef<HTMLButtonElement, ButtonSquareIconProps
   ),
 );
 
-export const ButtonSquareIcon = ButtonSquareIconBase as typeof ButtonSquareIconBase & {
+const ButtonSquareIconWithTooltip = withTooltip(ButtonSquareIconBase);
+
+export const ButtonSquareIcon = ButtonSquareIconWithTooltip as typeof ButtonSquareIconWithTooltip & {
   variants: typeof Variant;
 };
 

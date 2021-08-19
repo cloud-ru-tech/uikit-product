@@ -115,32 +115,11 @@ export const OpenDialogButton = styled(MoreInterfaceSVG)`
 
 export const BasicButtonWrapper = styled.div`
   display: flex;
+  align-items: center;
   margin-right: 12px;
-`;
 
-export const StyledClearButton = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  margin-right: 8px;
-  fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
-  :hover {
-    fill: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
-  }
-`;
-
-export const StyledSecurityButton = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  cursor: pointer;
-  margin: 0 8px 0 0;
-  color: var(${COLORS_INPUT.INPUT_ICON_COLOR});
-  fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
-  :hover {
-    color: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
-    fill: var(${COLORS_INPUT.INPUT_HOVER_BORDER});
+  > * {
+    margin-left: 4px;
   }
 `;
 

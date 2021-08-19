@@ -1,7 +1,8 @@
-import { FilterInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+
+import { FilterInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -73,7 +74,7 @@ const Template: Story<IFilterProps> = () => {
           }}
         >
           {({ badgeText, open }): JSX.Element => (
-            <Toolbar.Button badgeText={badgeText} isActive={open}>
+            <Toolbar.Button badgeText={badgeText} isActive={open} tooltip='Фильтр'>
               <FilterInterfaceSVG />
             </Toolbar.Button>
           )}

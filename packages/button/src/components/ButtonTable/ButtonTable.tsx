@@ -4,7 +4,7 @@ import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { LoadingIcon, PieIndicator } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
-import { withManagedLoading } from '../../hocs';
+import { withManagedLoading, withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
 import { Variant } from './constants';
 import * as S from './styled';
@@ -47,7 +47,9 @@ const ButtonTableBase = forwardRef<HTMLButtonElement, ButtonTableProps>(
   },
 );
 
-export const ButtonTable = ButtonTableBase as typeof ButtonTableBase & {
+const ButtonTableWithTooltip = withTooltip(ButtonTableBase);
+
+export const ButtonTable = ButtonTableWithTooltip as typeof ButtonTableWithTooltip & {
   variants: typeof Variant;
 };
 

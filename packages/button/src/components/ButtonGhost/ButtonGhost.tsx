@@ -1,6 +1,7 @@
 import { ReactElement, ReactText, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
+import { withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
 import { IconPosition, Variant } from './constants';
 import * as S from './styled';
@@ -26,7 +27,9 @@ const ButtonGhostBase = forwardRef<HTMLButtonElement, ButtonGhostProps>(
   ),
 );
 
-export const ButtonGhost = ButtonGhostBase as typeof ButtonGhostBase & {
+const ButtonGhostWithTooltip = withTooltip(ButtonGhostBase);
+
+export const ButtonGhost = ButtonGhostWithTooltip as typeof ButtonGhostWithTooltip & {
   variants: typeof Variant;
   iconPosition: typeof IconPosition;
 };

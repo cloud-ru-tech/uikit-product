@@ -3,12 +3,14 @@ import { ElementType, MouseEvent as ReactMouseEvent, useCallback, useState } fro
 import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 
 import { CopiedInterfaceSVG, CopyInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
-import { extractCommonButtonProps } from '../../helpers';
+import { Texts, extractCommonButtonProps, textProvider } from '../../helpers';
+import { WithTooltipProps } from '../../hocs';
 import { useIsMounted } from '../../hooks';
 import { ButtonIconTransparent } from '../';
 
-export type CopyButtonOwnProps = { text: string; icon?: never };
+export type CopyButtonOwnProps = { text: string; icon?: never } & Pick<WithTooltipProps, 'tooltip'>;
 
 export const CopyButtonDefaultElement = ButtonIconTransparent;
 
@@ -27,6 +29,8 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
 
   const [completed, setCompleted] = useState(false);
   const isMounted = useIsMounted();
+
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
 
   const copy = useCallback(() => {
     copyText(text);
@@ -58,6 +62,7 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
     <Element
       icon={completed ? <CopiedInterfaceSVG /> : <CopyInterfaceSVG />}
       onClick={wrappedOnClick}
+      tooltip={textProvider(language, Texts.copy)}
       {...extractedProps}
     />
   );

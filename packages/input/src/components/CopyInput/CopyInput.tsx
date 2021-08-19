@@ -2,8 +2,9 @@ import { useCallback, useMemo, useState } from 'react';
 
 import { ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
 import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
+import { Texts, textProvider } from '../../helpers/texts-provider';
 import {
   Label,
   StyledIconWrapper,
@@ -32,6 +33,8 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
   wrapperClassName,
   ...rest
 }) => {
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+
   const [showContent, setShowContent] = useState(!security);
 
   const handleInputClick = useCallback(
@@ -77,6 +80,7 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
               onClick={handleSecurityButtonClick}
               className={securityButtonClassName}
               data-test-id='copy-input__security-btn'
+              tooltip={showContent ? textProvider(language, Texts.hide) : textProvider(language, Texts.show)}
               icon={showContent ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
             />
           </StyledIconWrapper>

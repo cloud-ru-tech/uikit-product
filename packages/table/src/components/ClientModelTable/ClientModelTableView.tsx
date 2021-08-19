@@ -59,6 +59,7 @@ export function ClientModelTableView<T>({
             disabled={!deleteProps.isDeleteEnabled}
             onClick={deleteProps.openDeleteDialog}
             data-test-id='client-table__toolbar-delete-btn'
+            tooltip={textProvider(language, Texts.delete)}
           >
             <DeleteInterfaceSVG />
           </Toolbar.Button>

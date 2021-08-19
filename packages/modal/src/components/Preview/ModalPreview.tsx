@@ -1,11 +1,13 @@
 import { cx } from '@linaria/core';
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import RCModal from 'react-modal';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
+import { Texts, textProvider } from '../../helpers/texts-provider';
 import {
   Content,
   Title,
@@ -66,13 +68,22 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
     RCModal.setAppElement(appElement as HTMLElement);
   }, [appElement]);
 
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+
+  const closeBtnText = useMemo(() => textProvider(language, Texts.close), [language]);
+
   return (
     <RCModal
       {...props}
       overlayClassName={cx(overlayClassName, Boolean(parentSelector) && overlayParentClassname, propsOverlayClassName)}
       className={cx(modalClassName, propsClassName)}
     >
-      <ButtonIcon icon={<CloseInterfaceSVG />} onClick={onRequestClose} className={previewCloseButton} />
+      <ButtonIcon
+        icon={<CloseInterfaceSVG />}
+        tooltip={closeBtnText}
+        onClick={onRequestClose}
+        className={previewCloseButton}
+      />
       {title && (
         <>
           <TitleRow>

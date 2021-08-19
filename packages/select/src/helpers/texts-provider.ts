@@ -12,6 +12,9 @@ export enum Texts {
   add = 'add',
   usersSelected = 'usersSelected',
   search = 'search',
+  edit = 'edit',
+  select = 'select',
+  delete = 'delete',
 }
 
 export type DictionaryPropertyAsFn = (params: Record<string, string | number>) => string;
@@ -32,6 +35,9 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
       `Выбрано ${number} пользователей`,
     ]),
     search: 'Поиск',
+    edit: 'Редактировать',
+    select: 'Выбрать',
+    delete: 'Удалить',
   },
   [LanguageCodeType.enGB]: {
     noData: 'No data',
@@ -47,6 +53,9 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
       `${number} users selected`,
     ]),
     search: 'Search',
+    edit: 'Edit',
+    select: 'Select',
+    delete: 'Delete',
   },
 };
 

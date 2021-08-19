@@ -3,10 +3,11 @@ import isEqual from 'lodash.isequal';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { Button } from '@sbercloud/uikit-react-button';
 import { CircleCheckOutlineInterfaceSVG, DeleteInterfaceSVG, EditInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { ColorPicker, OptionTypeColor } from '../../../components';
+import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { TagName } from '../TagName';
 import {
   NotValidMessage,
@@ -43,6 +44,8 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
     () => editableTagName && validator && !validator(tag.label),
     [validator, tag, editableTagName],
   );
+
+  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
 
   if (isEdit) {
     props.innerProps.onClick = (e): void => {
@@ -128,6 +131,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                   });
                 }}
                 icon={<DeleteInterfaceSVG />}
+                tooltip={textProvider(language, Texts.delete)}
               />
 
               <StyledTagButton
@@ -149,6 +153,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                   }
                 }}
                 icon={<CircleCheckOutlineInterfaceSVG />}
+                tooltip={textProvider(language, Texts.select)}
               />
             </StyledTagButtonWrapper>
           </>
@@ -161,6 +166,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                 setEdit(true);
               }}
               icon={<EditInterfaceSVG />}
+              tooltip={textProvider(language, Texts.edit)}
             />
           </>
         )}

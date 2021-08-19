@@ -1,21 +1,21 @@
 import { LanguageCodeType } from '@sbercloud/uikit-utils';
 
 export enum Texts {
-  approve = 'approve',
-  cancel = 'cancel',
-  close = 'close',
+  show = 'show',
+  hide = 'hide',
+  clear = 'clear',
 }
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
-    approve: 'Подтвердить',
-    cancel: 'Отмена',
-    close: 'Закрыть',
+    show: 'Показать',
+    hide: 'Скрыть',
+    clear: 'Очистить',
   },
   [LanguageCodeType.enGB]: {
-    approve: 'Confirm',
-    cancel: 'Cancel',
-    close: 'Close',
+    show: 'Show',
+    hide: 'Hide',
+    clear: 'Clear',
   },
 };
 

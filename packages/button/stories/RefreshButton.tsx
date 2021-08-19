@@ -14,14 +14,14 @@ const Template: Story<RefreshButtonProps> = ({ ...args }) => (
     <TableColumn>
       <TableCell>Button Icon Transparent / Default</TableCell>
       <TableCell>
-        <RefreshButton title='Refresh' {...args} />
+        <RefreshButton {...args} />
       </TableCell>
     </TableColumn>
 
     <TableColumn>
       <TableCell>Button Toolbar</TableCell>
       <TableCell>
-        <RefreshButton title='Refresh' as={ButtonToolbar} {...args} />
+        <RefreshButton as={ButtonToolbar} {...args} />
       </TableCell>
     </TableColumn>
   </TableWrapper>

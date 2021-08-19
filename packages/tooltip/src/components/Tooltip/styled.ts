@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_TOOLTIP } = DEPRECATED_EXPORT_VARS;
@@ -47,9 +48,4 @@ export const IconWrapper = styled.span`
       fill: var(${COLORS_TOOLTIP.ICON_HOVER_FILL});
     }
   }
-`;
-
-export const triggerClassName = css`
-  display: inline-block;
-  cursor: pointer;
 `;
