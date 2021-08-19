@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.11.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@1.0.0) (2021-08-19)
+
+
+### Features
+
+* First stable version ([1383a53](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/1383a53e463723fde1148ffeb41e8b9669d71bad))
+
+
+### BREAKING CHANGES
+
+* button has been implemented according to design system
+
+
+
+
+
 ## [0.11.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.11.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.11.2) (2021-08-19)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button

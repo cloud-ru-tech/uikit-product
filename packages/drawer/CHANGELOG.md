@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.10.0&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.11.0) (2021-08-19)
+
+
+### Features
+
+* button has been implemented according to design system ([1383a53](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/1383a53e463723fde1148ffeb41e8b9669d71bad))
+
+
+
 # [0.10.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-drawer@0.9.1&sourceBranch=refs/tags/@sbercloud/uikit-react-drawer@0.10.0) (2021-08-19)
 
 
