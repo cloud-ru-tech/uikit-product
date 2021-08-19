@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-logs-view",
   "title": "React Logs View",
-  "version": "0.6.4",
+  "version": "0.7.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,7 +26,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "0.11.2",
+    "@sbercloud/uikit-react-button": "1.0.0",
     "@sbercloud/uikit-theme": "0.25.0"
   },
   "peerDependencies": {
