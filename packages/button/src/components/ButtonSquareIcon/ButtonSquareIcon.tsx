@@ -1,4 +1,4 @@
-import { ComponentType, forwardRef } from 'react';
+import { ReactElement, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
 import { CommonButtonProps } from '../../types';
@@ -6,15 +6,15 @@ import { Variant } from './constants';
 import * as S from './styled';
 
 export type ButtonSquareIconProps = CommonButtonProps & {
-  icon: ComponentType;
+  icon: ReactElement;
   variant?: Variant;
   rounded?: boolean;
 };
 
 const ButtonSquareIconBase = forwardRef<HTMLButtonElement, ButtonSquareIconProps>(
-  ({ icon: Icon, variant = Variant.Default, ...rest }, ref) => (
+  ({ icon, variant = Variant.Default, ...rest }, ref) => (
     <S.Button data-variant={variant} ref={ref} {...extractCommonButtonProps(rest)}>
-      <Icon />
+      {icon}
     </S.Button>
   ),
 );

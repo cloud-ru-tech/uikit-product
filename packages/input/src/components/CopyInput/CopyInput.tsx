@@ -77,7 +77,7 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
               onClick={handleSecurityButtonClick}
               className={securityButtonClassName}
               data-test-id='copy-input__security-btn'
-              icon={showContent ? EyeOpenedInterfaceSVG : EyeClosedInterfaceSVG}
+              icon={showContent ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
             />
           </StyledIconWrapper>
         ) : null}

@@ -21,7 +21,7 @@ const Template: Story<ButtonSquareIconProps> = ({ ...args }) => (
         <TableCell>{key}</TableCell>
 
         <TableCell>
-          <ButtonSquareIcon {...args} variant={value} title='Copy' icon={CopyInterfaceSVG} />
+          <ButtonSquareIcon {...args} variant={value} title='Copy' icon={<CopyInterfaceSVG />} />
         </TableCell>
       </TableColumn>
     ))}

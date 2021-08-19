@@ -15,6 +15,6 @@ export const ToolbarButton: FC<ToolbarButtonProps> = ({ children, className, bad
   <ButtonToolbar
     {...buttonProps}
     className={cx(className, isActive ? activeToolbarButtonClassName : null)}
-    icon={badgeText ? () => <Badge text={badgeText}>{children}</Badge> : () => <>{children}</>}
+    icon={badgeText ? <Badge text={badgeText}>{children}</Badge> : <>{children}</>}
   />
 );

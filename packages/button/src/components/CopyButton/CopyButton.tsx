@@ -55,6 +55,10 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
   }
 
   return (
-    <Element icon={completed ? CopiedInterfaceSVG : CopyInterfaceSVG} onClick={wrappedOnClick} {...extractedProps} />
+    <Element
+      icon={completed ? <CopiedInterfaceSVG /> : <CopyInterfaceSVG />}
+      onClick={wrappedOnClick}
+      {...extractedProps}
+    />
   );
 }

@@ -1,15 +1,15 @@
-import { ComponentType, forwardRef } from 'react';
+import { ReactElement, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
 import { CommonButtonProps } from '../../types';
 import * as S from './styled';
 
 export type ButtonOverlayProps = CommonButtonProps & {
-  icon: ComponentType;
+  icon: ReactElement;
 };
 
-export const ButtonOverlay = forwardRef<HTMLButtonElement, ButtonOverlayProps>(({ icon: Icon, ...rest }, ref) => (
+export const ButtonOverlay = forwardRef<HTMLButtonElement, ButtonOverlayProps>(({ icon, ...rest }, ref) => (
   <S.Button ref={ref} {...extractCommonButtonProps(rest)}>
-    <Icon />
+    {icon}
   </S.Button>
 ));

@@ -21,7 +21,7 @@ const Template: Story<ButtonIconTransparentProps> = ({ ...args }) => (
         <TableCell>{key}</TableCell>
 
         <TableCell>
-          <ButtonIconTransparent {...args} variant={value} title='Play' icon={CirclePlayFilledInterfaceSVG} />
+          <ButtonIconTransparent {...args} variant={value} title='Play' icon={<CirclePlayFilledInterfaceSVG />} />
         </TableCell>
       </TableColumn>
     ))}

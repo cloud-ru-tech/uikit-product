@@ -28,9 +28,9 @@ export const CustomHeader = (customProps: HeaderCustomProps, props: HeaderProps)
     <S.Container>
       <S.Title>{title}</S.Title>
 
-      <ButtonIcon onClick={decreaseMonth} disabled={prevMonthButtonDisabled} icon={ChevronLeftInterfaceSVG} />
+      <ButtonIcon onClick={decreaseMonth} disabled={prevMonthButtonDisabled} icon={<ChevronLeftInterfaceSVG />} />
 
-      <ButtonIcon onClick={increaseMonth} disabled={nextMonthButtonDisabled} icon={ChevronRightInterfaceSVG} />
+      <ButtonIcon onClick={increaseMonth} disabled={nextMonthButtonDisabled} icon={<ChevronRightInterfaceSVG />} />
     </S.Container>
   );
 };

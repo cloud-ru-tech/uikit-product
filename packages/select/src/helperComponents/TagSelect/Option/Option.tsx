@@ -127,7 +127,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                     }
                   });
                 }}
-                icon={DeleteInterfaceSVG}
+                icon={<DeleteInterfaceSVG />}
               />
 
               <StyledTagButton
@@ -148,7 +148,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                     }
                   }
                 }}
-                icon={CircleCheckOutlineInterfaceSVG}
+                icon={<CircleCheckOutlineInterfaceSVG />}
               />
             </StyledTagButtonWrapper>
           </>
@@ -160,7 +160,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                 e.stopPropagation();
                 setEdit(true);
               }}
-              icon={EditInterfaceSVG}
+              icon={<EditInterfaceSVG />}
             />
           </>
         )}

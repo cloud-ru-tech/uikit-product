@@ -1,4 +1,4 @@
-import { ComponentType, ReactText, forwardRef } from 'react';
+import { ReactElement, ReactText, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
 import { CommonButtonProps } from '../../types';
@@ -8,18 +8,14 @@ import * as S from './styled';
 export type ButtonRoundProps = CommonButtonProps & {
   text?: ReactText;
   variant?: Variant;
-  icon?: ComponentType;
+  icon?: ReactElement;
 };
 
 const ButtonRoundBase = forwardRef<HTMLButtonElement, ButtonRoundProps>(
-  ({ text, variant = Variant.Filled, icon: Icon, ...rest }, ref) => (
+  ({ text, variant = Variant.Filled, icon, ...rest }, ref) => (
     <S.Button data-variant={variant} ref={ref} {...extractCommonButtonProps(rest)}>
-      {text && <S.TextWrapper data-with-icon={Boolean(Icon) || undefined}>{text}</S.TextWrapper>}
-      {Icon && (
-        <S.IconWrapper>
-          <Icon />
-        </S.IconWrapper>
-      )}
+      {text && <S.TextWrapper data-with-icon={Boolean(icon) || undefined}>{text}</S.TextWrapper>}
+      {icon && <S.IconWrapper>{icon}</S.IconWrapper>}
     </S.Button>
   ),
 );

@@ -13,7 +13,7 @@ export default {
 
 const Template: Story<ButtonOverlayProps> = ({ ...args }) => (
   <SingleWrapper>
-    <ButtonOverlay {...args} title='Edit' icon={EditInterfaceSVG} />
+    <ButtonOverlay {...args} title='Edit' icon={<EditInterfaceSVG />} />
   </SingleWrapper>
 );
 

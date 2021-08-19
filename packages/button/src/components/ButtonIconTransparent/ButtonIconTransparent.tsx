@@ -1,4 +1,4 @@
-import { ComponentType, forwardRef } from 'react';
+import { ReactElement, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
 import { CommonButtonProps } from '../../types';
@@ -6,15 +6,15 @@ import { Variant } from './constants';
 import * as S from './styled';
 
 export type ButtonIconTransparentProps = CommonButtonProps & {
-  icon: ComponentType;
+  icon: ReactElement;
   variant?: Variant;
   rounded?: boolean;
 };
 
 const ButtonIconTransparentBase = forwardRef<HTMLButtonElement, ButtonIconTransparentProps>(
-  ({ icon: Icon, variant = Variant.Default, rounded, ...rest }, ref) => (
+  ({ icon, variant = Variant.Default, rounded, ...rest }, ref) => (
     <S.Button data-variant={variant} data-rounded={rounded || undefined} ref={ref} {...extractCommonButtonProps(rest)}>
-      <Icon />
+      {icon}
     </S.Button>
   ),
 );

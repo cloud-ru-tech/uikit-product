@@ -134,7 +134,7 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
     >
       {hideCross ? null : (
         <ButtonIcon
-          icon={CloseInterfaceSVG}
+          icon={<CloseInterfaceSVG />}
           onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
             onRequestClose?.(e, MODAL_CLOSE_TYPE.CROSS);
           }}

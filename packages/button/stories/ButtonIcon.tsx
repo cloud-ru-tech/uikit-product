@@ -21,15 +21,15 @@ const Template: Story<ButtonIconProps> = ({ ...args }) => (
         <TableCell>{key}</TableCell>
 
         <TableCell>
-          <ButtonIcon {...args} variant={value} title='Close' icon={CloseInterfaceSVG} />
+          <ButtonIcon {...args} variant={value} title='Close' icon={<CloseInterfaceSVG />} />
         </TableCell>
 
         <TableCell>
-          <ButtonIcon {...args} variant={value} title='More' icon={MoreInterfaceSVG} />
+          <ButtonIcon {...args} variant={value} title='More' icon={<MoreInterfaceSVG />} />
         </TableCell>
 
         <TableCell>
-          <ButtonIcon {...args} variant={value} title='Delete' icon={DeleteInterfaceSVG} />
+          <ButtonIcon {...args} variant={value} title='Delete' icon={<DeleteInterfaceSVG />} />
         </TableCell>
       </TableColumn>
     ))}

@@ -72,7 +72,7 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
       overlayClassName={cx(overlayClassName, Boolean(parentSelector) && overlayParentClassname, propsOverlayClassName)}
       className={cx(modalClassName, propsClassName)}
     >
-      <ButtonIcon icon={CloseInterfaceSVG} onClick={onRequestClose} className={previewCloseButton} />
+      <ButtonIcon icon={<CloseInterfaceSVG />} onClick={onRequestClose} className={previewCloseButton} />
       {title && (
         <>
           <TitleRow>

@@ -21,7 +21,7 @@ const Template: Story<ButtonGhostProps> = ({ ...args }) => (
           <ButtonGhost
             variant={value}
             title={key}
-            icon={CopyInterfaceSVG}
+            icon={<CopyInterfaceSVG />}
             iconPosition={ButtonGhost.iconPosition.Before}
             {...args}
           />
@@ -31,7 +31,7 @@ const Template: Story<ButtonGhostProps> = ({ ...args }) => (
           <ButtonGhost
             variant={value}
             title={key}
-            icon={CopyInterfaceSVG}
+            icon={<CopyInterfaceSVG />}
             iconPosition={ButtonGhost.iconPosition.After}
             {...args}
           />

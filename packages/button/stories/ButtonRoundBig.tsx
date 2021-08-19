@@ -13,7 +13,7 @@ export default {
 
 const Template: Story<ButtonRoundBigProps> = ({ ...args }) => (
   <SingleWrapper>
-    <ButtonRoundBig {...args} title='Play' icon={CirclePlayFilledInterfaceSVG} />
+    <ButtonRoundBig {...args} title='Play' icon={<CirclePlayFilledInterfaceSVG />} />
   </SingleWrapper>
 );
 

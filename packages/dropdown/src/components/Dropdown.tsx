@@ -71,7 +71,7 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({ actions, children })
         </TooltipMenuPrivate>
       }
     >
-      {children || <ButtonIcon icon={MoreInterfaceSVG} title='Меню' />}
+      {children || <ButtonIcon icon={<MoreInterfaceSVG />} title='Меню' />}
     </TooltipPrivate>
   );
 };

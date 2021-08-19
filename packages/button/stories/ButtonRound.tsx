@@ -18,7 +18,7 @@ const Template: Story<ButtonRoundProps> = ({ ...args }) => (
         <TableCell>{key}</TableCell>
 
         <TableCell>
-          <ButtonRound variant={value} title={key} icon={CirclePlayFilledInterfaceSVG} {...args} text={undefined} />
+          <ButtonRound variant={value} title={key} icon={<CirclePlayFilledInterfaceSVG />} {...args} text={undefined} />
         </TableCell>
 
         <TableCell>
@@ -26,7 +26,7 @@ const Template: Story<ButtonRoundProps> = ({ ...args }) => (
         </TableCell>
 
         <TableCell>
-          <ButtonRound variant={value} title={key} icon={CirclePlayFilledInterfaceSVG} {...args} />
+          <ButtonRound variant={value} title={key} icon={<CirclePlayFilledInterfaceSVG />} {...args} />
         </TableCell>
       </TableColumn>
     ))}

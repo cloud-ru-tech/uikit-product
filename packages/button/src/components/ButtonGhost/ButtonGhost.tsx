@@ -1,4 +1,4 @@
-import { ComponentType, ReactText, forwardRef } from 'react';
+import { ReactElement, ReactText, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
 import { CommonButtonProps } from '../../types';
@@ -8,23 +8,19 @@ import * as S from './styled';
 export type ButtonGhostProps = CommonButtonProps & {
   text: ReactText;
   variant?: Variant;
-  icon?: ComponentType;
+  icon?: ReactElement;
   iconPosition?: IconPosition;
 };
 
 const ButtonGhostBase = forwardRef<HTMLButtonElement, ButtonGhostProps>(
-  ({ text, variant = Variant.Accent, icon: Icon, iconPosition = IconPosition.After, ...rest }, ref) => (
+  ({ text, variant = Variant.Accent, icon, iconPosition = IconPosition.After, ...rest }, ref) => (
     <S.Button data-variant={variant} ref={ref} {...extractCommonButtonProps(rest)}>
-      {Icon && iconPosition === IconPosition.Before && (
-        <S.IconWrapper data-position={iconPosition}>
-          <Icon />
-        </S.IconWrapper>
+      {icon && iconPosition === IconPosition.Before && (
+        <S.IconWrapper data-position={iconPosition}>{icon}</S.IconWrapper>
       )}
       {text}
-      {Icon && iconPosition === IconPosition.After && (
-        <S.IconWrapper data-position={iconPosition}>
-          <Icon />
-        </S.IconWrapper>
+      {icon && iconPosition === IconPosition.After && (
+        <S.IconWrapper data-position={iconPosition}>{icon}</S.IconWrapper>
       )}
     </S.Button>
   ),

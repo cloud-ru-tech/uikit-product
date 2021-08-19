@@ -30,5 +30,5 @@ export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaul
     extractedProps.variant = rest.variant;
   }
 
-  return <Element icon={AnimatedRefreshIcon} {...extractedProps} />;
+  return <Element icon={<AnimatedRefreshIcon />} {...extractedProps} />;
 }

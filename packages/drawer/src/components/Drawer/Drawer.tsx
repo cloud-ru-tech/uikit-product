@@ -121,7 +121,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
             {headerText && <Header text={headerText} />}
           </HeaderTextBoxStyled>
           <CloseButtonStyled>
-            <ButtonIcon icon={CloseInterfaceSVG} onClick={onClose} data-test-action-id='drawer__header-close-btn' />
+            <ButtonIcon icon={<CloseInterfaceSVG />} onClick={onClose} data-test-action-id='drawer__header-close-btn' />
           </CloseButtonStyled>
         </HeaderBoxStyled>
       )}

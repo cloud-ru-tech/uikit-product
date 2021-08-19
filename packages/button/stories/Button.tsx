@@ -25,7 +25,7 @@ const Template: Story<ButtonProps> = ({ ...args }) => (
         </TableCell>
 
         <TableCell>
-          <Button variant={value} title={key} icon={CopyInterfaceSVG} {...args} />
+          <Button variant={value} title={key} icon={<CopyInterfaceSVG />} {...args} />
         </TableCell>
       </TableColumn>
     ))}

@@ -52,7 +52,7 @@ const Template: Story<DropdownMenuProps> = () => (
         </>
       }
     >
-      <ButtonRound icon={CircleAddInterfaceSVG} text='Создать' />
+      <ButtonRound icon={<CircleAddInterfaceSVG />} text='Создать' />
     </DropdownMenu>
 
     <DropdownMenu
@@ -61,7 +61,7 @@ const Template: Story<DropdownMenuProps> = () => (
         { name: 'Загрузить документ', onClick: () => {} },
       ]}
     >
-      <ButtonIcon icon={SettingsInterfaceSVG} title='Настройки' />
+      <ButtonIcon icon={<SettingsInterfaceSVG />} title='Настройки' />
     </DropdownMenu>
 
     <DropdownMenu
