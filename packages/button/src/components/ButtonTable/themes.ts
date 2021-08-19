@@ -1,4 +1,5 @@
 import { css } from '@linaria/core';
+
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { GREY, BLUE_GREY, PURPLE, GREEN, WHITE_ALFA } = EXPORT_VARS;
@@ -13,9 +14,9 @@ export const COLORS = {
   FILL_FILL_ACTIVE: '--color-button-table-fill-fill-active',
   FILL_BG_ACTIVE: '--color-button-table-fill-bg-active',
   FILL_COLOR_ACTIVE: '--color-button-table-fill-color-active',
-  FILL_FILL_CONNECTING: '--color-button-table-fill-fill-connecting',
-  FILL_BG_CONNECTING: '--color-button-table-fill-bg-connecting',
-  FILL_COLOR_CONNECTING: '--color-button-table-fill-color-connecting',
+  FILL_FILL_LOADING: '--color-button-table-fill-fill-loading',
+  FILL_BG_LOADING: '--color-button-table-fill-bg-loading',
+  FILL_COLOR_LOADING: '--color-button-table-fill-color-loading',
   FILL_FILL_DISABLED: '--color-button-table-fill-fill-disabled',
   FILL_BG_DISABLED: '--color-button-table-fill-bg-disabled',
   FILL_COLOR_DISABLED: '--color-button-table-fill-color-disabled',
@@ -29,9 +30,9 @@ export const COLORS = {
   ON_ACCENT_FILL_ACTIVE: '--color-button-table-on-accent-fill-active',
   ON_ACCENT_BG_ACTIVE: '--color-button-table-on-accent-bg-active',
   ON_ACCENT_COLOR_ACTIVE: '--color-button-table-on-accent-color-active',
-  ON_ACCENT_FILL_CONNECTING: '--color-button-table-on-accent-fill-connecting',
-  ON_ACCENT_BG_CONNECTING: '--color-button-table-on-accent-bg-connecting',
-  ON_ACCENT_COLOR_CONNECTING: '--color-button-table-on-accent-color-connecting',
+  ON_ACCENT_FILL_LOADING: '--color-button-table-on-accent-fill-loading',
+  ON_ACCENT_BG_LOADING: '--color-button-table-on-accent-bg-loading',
+  ON_ACCENT_COLOR_LOADING: '--color-button-table-on-accent-color-loading',
   ON_ACCENT_FILL_DISABLED: '--color-button-table-on-accent-fill-disabled',
   ON_ACCENT_BG_DISABLED: '--color-button-table-on-accent-bg-disabled',
   ON_ACCENT_COLOR_DISABLED: '--color-button-table-on-accent-color-disabled',
@@ -45,18 +46,18 @@ export const COLORS = {
   OUTLINE_FILL_ACTIVE: '--color-button-table-outline-fill-active',
   OUTLINE_BORDER_ACTIVE: '--color-button-table-outline-border-active',
   OUTLINE_COLOR_ACTIVE: '--color-button-table-outline-color-active',
-  OUTLINE_FILL_CONNECTING: '--color-button-table-outline-fill-connecting',
-  OUTLINE_BG_CONNECTING: '--color-button-table-outline-bg-connecting',
-  OUTLINE_COLOR_CONNECTING: '--color-button-table-outline-color-connecting',
+  OUTLINE_FILL_LOADING: '--color-button-table-outline-fill-loading',
+  OUTLINE_BG_LOADING: '--color-button-table-outline-bg-loading',
+  OUTLINE_COLOR_LOADING: '--color-button-table-outline-color-loading',
   OUTLINE_FILL_DISABLED: '--color-button-table-outline-fill-disabled',
   OUTLINE_BORDER_DISABLED: '--color-button-table-outline-border-disabled',
   OUTLINE_COLOR_DISABLED: '--color-button-table-outline-color-disabled',
 };
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.Purple}'] */
+/* TODO: использовать [data-theme='${Themes.Purple}'] */
 export const PURPLE_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='purple'] {
+    [data-theme='purple'] {
       ${COLORS.FILL_FILL}: var(${GREY[0]});
       ${COLORS.FILL_BG}: var(${PURPLE[100]});
       ${COLORS.FILL_COLOR}: var(${GREY[0]});
@@ -66,9 +67,9 @@ export const PURPLE_THEME = css`
       ${COLORS.FILL_FILL_ACTIVE}: var(${GREY[0]});
       ${COLORS.FILL_BG_ACTIVE}: var(${PURPLE[125]});
       ${COLORS.FILL_COLOR_ACTIVE}: var(${GREY[0]});
-      ${COLORS.FILL_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.FILL_BG_CONNECTING}: var(${BLUE_GREY[90]});
-      ${COLORS.FILL_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.FILL_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.FILL_BG_LOADING}: var(${BLUE_GREY[90]});
+      ${COLORS.FILL_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.FILL_FILL_DISABLED}: var(${GREY[0]});
       ${COLORS.FILL_BG_DISABLED}: var(${PURPLE[50]});
       ${COLORS.FILL_COLOR_DISABLED}: var(${GREY[0]});
@@ -82,9 +83,9 @@ export const PURPLE_THEME = css`
       ${COLORS.ON_ACCENT_FILL_ACTIVE}: var(${PURPLE[125]});
       ${COLORS.ON_ACCENT_BG_ACTIVE}: var(${PURPLE[25]});
       ${COLORS.ON_ACCENT_COLOR_ACTIVE}: var(${PURPLE[125]});
-      ${COLORS.ON_ACCENT_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.ON_ACCENT_BG_CONNECTING}: var(${BLUE_GREY[90]});
-      ${COLORS.ON_ACCENT_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.ON_ACCENT_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.ON_ACCENT_BG_LOADING}: var(${BLUE_GREY[90]});
+      ${COLORS.ON_ACCENT_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.ON_ACCENT_FILL_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.ON_ACCENT_BG_DISABLED}: var(${WHITE_ALFA[16]});
       ${COLORS.ON_ACCENT_COLOR_DISABLED}: var(${WHITE_ALFA[24]});
@@ -98,9 +99,9 @@ export const PURPLE_THEME = css`
       ${COLORS.OUTLINE_FILL_ACTIVE}: var(${PURPLE[125]});
       ${COLORS.OUTLINE_BORDER_ACTIVE}: var(${PURPLE[125]});
       ${COLORS.OUTLINE_COLOR_ACTIVE}: var(${PURPLE[125]});
-      ${COLORS.OUTLINE_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.OUTLINE_BG_CONNECTING}: var(${BLUE_GREY[90]});
-      ${COLORS.OUTLINE_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.OUTLINE_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.OUTLINE_BG_LOADING}: var(${BLUE_GREY[90]});
+      ${COLORS.OUTLINE_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.OUTLINE_FILL_DISABLED}: var(${PURPLE[50]});
       ${COLORS.OUTLINE_BORDER_DISABLED}: var(${PURPLE[50]});
       ${COLORS.OUTLINE_COLOR_DISABLED}: var(${PURPLE[50]});
@@ -108,10 +109,10 @@ export const PURPLE_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.PurpleDark}'] */
+/* TODO: использовать [data-theme='${Themes.PurpleDark}'] */
 export const PURPLE_DARK_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='purpleDark'] {
+    [data-theme='purpleDark'] {
       ${COLORS.FILL_FILL}: var(${GREY[0]});
       ${COLORS.FILL_BG}: var(${PURPLE[100]});
       ${COLORS.FILL_COLOR}: var(${GREY[0]});
@@ -121,9 +122,9 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.FILL_FILL_ACTIVE}: var(${GREY[0]});
       ${COLORS.FILL_BG_ACTIVE}: var(${PURPLE[125]});
       ${COLORS.FILL_COLOR_ACTIVE}: var(${GREY[0]});
-      ${COLORS.FILL_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.FILL_BG_CONNECTING}: var(${BLUE_GREY[60]});
-      ${COLORS.FILL_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.FILL_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.FILL_BG_LOADING}: var(${BLUE_GREY[60]});
+      ${COLORS.FILL_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.FILL_FILL_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.FILL_BG_DISABLED}: var(${PURPLE[50]});
       ${COLORS.FILL_COLOR_DISABLED}: var(${WHITE_ALFA[24]});
@@ -137,9 +138,9 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.ON_ACCENT_FILL_ACTIVE}: var(${PURPLE[125]});
       ${COLORS.ON_ACCENT_BG_ACTIVE}: var(${PURPLE[25]});
       ${COLORS.ON_ACCENT_COLOR_ACTIVE}: var(${PURPLE[125]});
-      ${COLORS.ON_ACCENT_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.ON_ACCENT_BG_CONNECTING}: var(${BLUE_GREY[60]});
-      ${COLORS.ON_ACCENT_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.ON_ACCENT_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.ON_ACCENT_BG_LOADING}: var(${BLUE_GREY[60]});
+      ${COLORS.ON_ACCENT_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.ON_ACCENT_FILL_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.ON_ACCENT_BG_DISABLED}: var(${WHITE_ALFA[16]});
       ${COLORS.ON_ACCENT_COLOR_DISABLED}: var(${WHITE_ALFA[24]});
@@ -153,9 +154,9 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.OUTLINE_FILL_ACTIVE}: var(${PURPLE[50]});
       ${COLORS.OUTLINE_BORDER_ACTIVE}: var(${PURPLE[50]});
       ${COLORS.OUTLINE_COLOR_ACTIVE}: var(${PURPLE[50]});
-      ${COLORS.OUTLINE_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.OUTLINE_BG_CONNECTING}: var(${BLUE_GREY[60]});
-      ${COLORS.OUTLINE_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.OUTLINE_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.OUTLINE_BG_LOADING}: var(${BLUE_GREY[60]});
+      ${COLORS.OUTLINE_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.OUTLINE_FILL_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.OUTLINE_BORDER_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.OUTLINE_COLOR_DISABLED}: var(${WHITE_ALFA[24]});
@@ -163,10 +164,10 @@ export const PURPLE_DARK_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.Green}'] */
+/* TODO: использовать [data-theme='${Themes.Green}'] */
 export const GREEN_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='green'] {
+    [data-theme='green'] {
       ${COLORS.FILL_FILL}: var(${GREEN[100]});
       ${COLORS.FILL_BG}: var(${BLUE_GREY[80]});
       ${COLORS.FILL_COLOR}: var(${GREY[0]});
@@ -176,9 +177,9 @@ export const GREEN_THEME = css`
       ${COLORS.FILL_FILL_ACTIVE}: var(${GREEN[125]});
       ${COLORS.FILL_BG_ACTIVE}: var(${BLUE_GREY[100]});
       ${COLORS.FILL_COLOR_ACTIVE}: var(${GREY[0]});
-      ${COLORS.FILL_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.FILL_BG_CONNECTING}: var(${BLUE_GREY[90]});
-      ${COLORS.FILL_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.FILL_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.FILL_BG_LOADING}: var(${BLUE_GREY[90]});
+      ${COLORS.FILL_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.FILL_FILL_DISABLED}: var(${GREY[300]});
       ${COLORS.FILL_BG_DISABLED}: var(${GREY[100]});
       ${COLORS.FILL_COLOR_DISABLED}: var(${GREY[300]});
@@ -192,9 +193,9 @@ export const GREEN_THEME = css`
       ${COLORS.ON_ACCENT_FILL_ACTIVE}: var(${BLUE_GREY[100]});
       ${COLORS.ON_ACCENT_BG_ACTIVE}: var(${GREEN[125]});
       ${COLORS.ON_ACCENT_COLOR_ACTIVE}: var(${BLUE_GREY[100]});
-      ${COLORS.ON_ACCENT_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.ON_ACCENT_BG_CONNECTING}: var(${WHITE_ALFA[8]});
-      ${COLORS.ON_ACCENT_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.ON_ACCENT_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.ON_ACCENT_BG_LOADING}: var(${WHITE_ALFA[8]});
+      ${COLORS.ON_ACCENT_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.ON_ACCENT_FILL_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.ON_ACCENT_BG_DISABLED}: var(${WHITE_ALFA[16]});
       ${COLORS.ON_ACCENT_COLOR_DISABLED}: var(${WHITE_ALFA[24]});
@@ -208,9 +209,9 @@ export const GREEN_THEME = css`
       ${COLORS.OUTLINE_FILL_ACTIVE}: var(${GREEN[125]});
       ${COLORS.OUTLINE_BORDER_ACTIVE}: var(${GREEN[125]});
       ${COLORS.OUTLINE_COLOR_ACTIVE}: var(${GREEN[125]});
-      ${COLORS.OUTLINE_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.OUTLINE_BG_CONNECTING}: var(${BLUE_GREY[90]});
-      ${COLORS.OUTLINE_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.OUTLINE_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.OUTLINE_BG_LOADING}: var(${BLUE_GREY[90]});
+      ${COLORS.OUTLINE_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.OUTLINE_FILL_DISABLED}: var(${GREY[200]});
       ${COLORS.OUTLINE_BORDER_DISABLED}: var(${GREY[200]});
       ${COLORS.OUTLINE_COLOR_DISABLED}: var(${GREY[200]});
@@ -218,10 +219,10 @@ export const GREEN_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.GreenDark}'] */
+/* TODO: использовать [data-theme='${Themes.GreenDark}'] */
 export const GREEN_DARK_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='greenDark'] {
+    [data-theme='greenDark'] {
       ${COLORS.FILL_FILL}: var(${BLUE_GREY[80]});
       ${COLORS.FILL_BG}: var(${GREEN[100]});
       ${COLORS.FILL_COLOR}: var(${BLUE_GREY[80]});
@@ -231,9 +232,9 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.FILL_FILL_ACTIVE}: var(${BLUE_GREY[100]});
       ${COLORS.FILL_BG_ACTIVE}: var(${GREEN[125]});
       ${COLORS.FILL_COLOR_ACTIVE}: var(${BLUE_GREY[100]});
-      ${COLORS.FILL_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.FILL_BG_CONNECTING}: var(${BLUE_GREY[60]});
-      ${COLORS.FILL_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.FILL_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.FILL_BG_LOADING}: var(${BLUE_GREY[60]});
+      ${COLORS.FILL_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.FILL_FILL_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.FILL_BG_DISABLED}: var(${WHITE_ALFA[16]});
       ${COLORS.FILL_COLOR_DISABLED}: var(${WHITE_ALFA[24]});
@@ -247,9 +248,9 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.ON_ACCENT_FILL_ACTIVE}: var(${GREEN[125]});
       ${COLORS.ON_ACCENT_BG_ACTIVE}: var(${GREY[0]});
       ${COLORS.ON_ACCENT_COLOR_ACTIVE}: var(${GREEN[125]});
-      ${COLORS.ON_ACCENT_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.ON_ACCENT_BG_CONNECTING}: var(${BLUE_GREY[60]});
-      ${COLORS.ON_ACCENT_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.ON_ACCENT_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.ON_ACCENT_BG_LOADING}: var(${BLUE_GREY[60]});
+      ${COLORS.ON_ACCENT_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.ON_ACCENT_FILL_DISABLED}: var(${WHITE_ALFA[16]});
       ${COLORS.ON_ACCENT_BG_DISABLED}: var(${WHITE_ALFA[48]});
       ${COLORS.ON_ACCENT_COLOR_DISABLED}: var(${WHITE_ALFA[16]});
@@ -263,9 +264,9 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.OUTLINE_FILL_ACTIVE}: var(${GREEN[125]});
       ${COLORS.OUTLINE_BORDER_ACTIVE}: var(${GREEN[125]});
       ${COLORS.OUTLINE_COLOR_ACTIVE}: var(${GREEN[125]});
-      ${COLORS.OUTLINE_FILL_CONNECTING}: var(${GREY[0]});
-      ${COLORS.OUTLINE_BG_CONNECTING}: var(${BLUE_GREY[60]});
-      ${COLORS.OUTLINE_COLOR_CONNECTING}: var(${GREY[0]});
+      ${COLORS.OUTLINE_FILL_LOADING}: var(${GREY[0]});
+      ${COLORS.OUTLINE_BG_LOADING}: var(${BLUE_GREY[60]});
+      ${COLORS.OUTLINE_COLOR_LOADING}: var(${GREY[0]});
       ${COLORS.OUTLINE_FILL_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.OUTLINE_BORDER_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.OUTLINE_COLOR_DISABLED}: var(${WHITE_ALFA[24]});

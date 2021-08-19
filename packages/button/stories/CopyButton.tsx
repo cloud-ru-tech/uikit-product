@@ -1,28 +1,45 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import componentChangelog from '../CHANGELOG.md';
-import componentPackage from '../package.json';
-import componentReadme from '../README.md';
-import { CopyButton, CopyButtonProps } from '../src';
+import { ButtonIcon, CopyButton, CopyButtonProps } from '../src';
+import { TableCell, TableColumn, TableWrapper } from './helperComponents';
+import { getDefaultArgs, getDefaultParameters } from './helpers';
 
 export default {
-  title: 'Not stable/Button/Copy Button',
+  title: 'Components/Button/Copy Button',
   component: CopyButton,
 } as Meta;
 
-const Template: Story<CopyButtonProps> = ({ ...args }) => <CopyButton {...args} />;
+const Template: Story<CopyButtonProps> = ({ ...args }) => (
+  <TableWrapper>
+    <TableColumn>
+      <TableCell>Button Icon Transparent / Default</TableCell>
+      <TableCell>
+        <CopyButton title='Copy' {...args} />
+      </TableCell>
+    </TableColumn>
+
+    <TableColumn>
+      <TableCell>Button Icon / Color</TableCell>
+      <TableCell>
+        <CopyButton title='Copy' as={ButtonIcon} variant={ButtonIcon.variants.Color} {...args} />
+      </TableCell>
+    </TableColumn>
+  </TableWrapper>
+);
 
 export const copyButton = Template.bind({});
-copyButton.args = {
-  text: 'Copy text',
-};
-copyButton.parameters = {
-  readme: {
-    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
-  },
-  design: {
-    type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+
+copyButton.parameters = getDefaultParameters({
+  extraControlsInclude: ['text'],
+});
+
+copyButton.args = getDefaultArgs({ text: 'Text for copy' });
+
+copyButton.argTypes = {
+  text: {
+    control: {
+      required: true,
+      type: 'text',
+    },
   },
 };

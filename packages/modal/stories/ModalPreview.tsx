@@ -1,8 +1,9 @@
 import { styled } from '@linaria/react';
-import { Button } from '@sbercloud/uikit-react-button';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useMemo, useRef, useState } from 'react';
+
+import { Button, ButtonRound } from '@sbercloud/uikit-react-button';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -45,11 +46,7 @@ const Template: Story<ModalPreviewProps & { withParentNode: boolean }> = ({ with
       isOpen={modalIsOpen}
       onRequestClose={closeModal}
       title='Screenshot 2020-10-30 at 15.22.41.png'
-      additionalActions={
-        <Button rounded size={Button.sizes.s} variant={Button.variants.Outlined}>
-          Импорт
-        </Button>
-      }
+      additionalActions={<ButtonRound variant={ButtonRound.variants.OutlineAccent} text='Импорт' />}
       content={
         <img
           src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Wikipedia-logo-v2-en.svg/440px-Wikipedia-logo-v2-en.svg.png'
@@ -61,7 +58,7 @@ const Template: Story<ModalPreviewProps & { withParentNode: boolean }> = ({ with
 
   return (
     <>
-      <Button onClick={openModal}>Open Modal</Button>
+      <Button onClick={openModal} text='Open Modal' />
       {withParentNode ? <Container ref={wrapperEl}>{modal}</Container> : modal}
     </>
   );

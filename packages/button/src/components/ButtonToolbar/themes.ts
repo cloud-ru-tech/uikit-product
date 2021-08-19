@@ -1,4 +1,5 @@
 import { css } from '@linaria/core';
+
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { GREY, BLUE_GREY, PURPLE } = EXPORT_VARS;
@@ -11,10 +12,10 @@ export const COLORS = {
   FILL_DISABLED: '--color-button-toolbar-fill-disabled',
 };
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.Purple}'] */
+/* TODO: использовать [data-theme='${Themes.Purple}'] */
 export const PURPLE_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='purple'] {
+    [data-theme='purple'] {
       ${COLORS.BG}: var(${GREY[0]});
       ${COLORS.FILL}: var(${GREY[200]});
       ${COLORS.FILL_HOVER}: var(${PURPLE[100]});
@@ -24,10 +25,10 @@ export const PURPLE_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.PurpleDark}'] */
+/* TODO: использовать [data-theme='${Themes.PurpleDark}'] */
 export const PURPLE_DARK_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='purpleDark'] {
+    [data-theme='purpleDark'] {
       ${COLORS.BG}: var(${GREY[850]});
       ${COLORS.FILL}: var(${GREY[450]});
       ${COLORS.FILL_HOVER}: var(${GREY[0]});
@@ -37,10 +38,10 @@ export const PURPLE_DARK_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.Green}'] */
+/* TODO: использовать [data-theme='${Themes.Green}'] */
 export const GREEN_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='green'] {
+    [data-theme='green'] {
       ${COLORS.BG}: var(${GREY[0]});
       ${COLORS.FILL}: var(${GREY[200]});
       ${COLORS.FILL_HOVER}: var(${BLUE_GREY[50]});
@@ -50,10 +51,10 @@ export const GREEN_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.GreenDark}'] */
+/* TODO: использовать [data-theme='${Themes.GreenDark}'] */
 export const GREEN_DARK_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='greenDark'] {
+    [data-theme='greenDark'] {
       ${COLORS.BG}: var(${GREY[850]});
       ${COLORS.FILL}: var(${GREY[450]});
       ${COLORS.FILL_HOVER}: var(${GREY[0]});

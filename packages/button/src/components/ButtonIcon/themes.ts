@@ -1,4 +1,5 @@
 import { css } from '@linaria/core';
+
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { GREY, BLUE_GREY, BLACK_ALFA, PURPLE, WHITE_ALFA, GREEN } = EXPORT_VARS;
@@ -30,10 +31,10 @@ export const COLORS = {
   ON_ACCENT_FILL_DISABLED: '--color-button-icon-on-accent-fill-disabled',
 };
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.Purple}'] */
+/* TODO: использовать [data-theme='${Themes.Purple}'] */
 export const PURPLE_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='purple'] {
+    [data-theme='purple'] {
       ${COLORS.WEAK_FILL}: var(${GREY[200]});
       ${COLORS.WEAK_FILL_HOVER}: var(${BLUE_GREY[60]});
       ${COLORS.WEAK_FILL_ACTIVE}: var(${BLUE_GREY[100]});
@@ -62,10 +63,10 @@ export const PURPLE_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.PurpleDark}'] */
+/* TODO: использовать [data-theme='${Themes.PurpleDark}'] */
 export const PURPLE_DARK_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='purpleDark'] {
+    [data-theme='purpleDark'] {
       ${COLORS.WEAK_FILL}: var(${GREY[450]});
       ${COLORS.WEAK_FILL_HOVER}: var(${GREY[200]});
       ${COLORS.WEAK_FILL_ACTIVE}: var(${GREY[0]});
@@ -94,10 +95,10 @@ export const PURPLE_DARK_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.Green}'] */
+/* TODO: использовать [data-theme='${Themes.Green}'] */
 export const GREEN_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='green'] {
+    [data-theme='green'] {
       ${COLORS.WEAK_FILL}: var(${GREY[200]});
       ${COLORS.WEAK_FILL_HOVER}: var(${BLUE_GREY[60]});
       ${COLORS.WEAK_FILL_ACTIVE}: var(${BLUE_GREY[100]});
@@ -126,10 +127,10 @@ export const GREEN_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.GreenDark}'] */
+/* TODO: использовать [data-theme='${Themes.GreenDark}'] */
 export const GREEN_DARK_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='greenDark'] {
+    [data-theme='greenDark'] {
       ${COLORS.WEAK_FILL}: var(${GREY[450]});
       ${COLORS.WEAK_FILL_HOVER}: var(${GREY[200]});
       ${COLORS.WEAK_FILL_ACTIVE}: var(${GREY[0]});

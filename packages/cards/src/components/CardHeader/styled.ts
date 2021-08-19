@@ -39,13 +39,3 @@ export const favouriteButtonClassName = css`
     fill: var(${COLORS_CARD.CARD_FAVOURITE_ICON_FILLED_COLOR});
   }
 `;
-
-export const moreButtonClassName = css`
-  & > span {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  margin: 0px -16px;
-`;

@@ -1,4 +1,5 @@
-import { DeleteInterfaceSVG, RefreshInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { ButtonToolbar, RefreshButton } from '@sbercloud/uikit-react-button';
+import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
@@ -47,9 +48,11 @@ export function ClientModelTableView<T>({
     <div {...extractSupportProps(rest)}>
       <Toolbar.Wrapper className={S.SearchPanelView} data-test-id='client-table__toolbar'>
         {onRefreshCallback && (
-          <Toolbar.Button onClick={onRefreshCallback} data-test-id='client-table__toolbar-refresh-btn'>
-            <RefreshInterfaceSVG className={S.refreshAnimation} />
-          </Toolbar.Button>
+          <RefreshButton
+            as={ButtonToolbar}
+            onClick={onRefreshCallback}
+            data-test-id='client-table__toolbar-refresh-btn'
+          />
         )}
         {deleteProps && (
           <Toolbar.Button

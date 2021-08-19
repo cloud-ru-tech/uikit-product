@@ -75,9 +75,8 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
             e.stopPropagation();
             setOpen(true);
           }}
-        >
-          Open
-        </Button>
+          text='Open'
+        />
       </ButtonWrap>
       <DrawerWrap id='drawer-wrap'>
         <Drawer
@@ -89,10 +88,8 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
           container={args.container ? '#drawer-wrap' : undefined}
           footer={
             <>
-              <Button>Создать деплой</Button>
-              <Button className={buttonStyle} variant={Button.variants.Outlined}>
-                Отмена
-              </Button>
+              <Button text='Создать деплой' />
+              <Button className={buttonStyle} variant={Button.variants.Outline} text='Отмена' />
             </>
           }
         >

@@ -1,7 +1,6 @@
-import copyText from 'copy-to-clipboard';
-import React, { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
-import { Button, CopyButton } from '@sbercloud/uikit-react-button';
+import { ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
 import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
@@ -33,30 +32,15 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
   wrapperClassName,
   ...rest
 }) => {
-  const [isCopyCompleted, setIsCopyCompleted] = useState(false);
   const [showContent, setShowContent] = useState(!security);
-
-  const handleCopyButtonClick = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-      e.stopPropagation();
-      onCopy?.();
-    },
-    [onCopy],
-  );
 
   const handleInputClick = useCallback(
     (e: React.MouseEvent<HTMLInputElement>) => {
       e.stopPropagation();
 
-      setIsCopyCompleted(true);
-      copyText(value);
       onCopy?.();
-
-      setTimeout(() => {
-        setIsCopyCompleted(false);
-      }, 3000);
     },
-    [onCopy, value],
+    [onCopy],
   );
 
   const handleSecurityButtonClick = useCallback(
@@ -89,22 +73,19 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
         </StyledInput>
         {security ? (
           <StyledIconWrapper right={36}>
-            <Button
+            <ButtonIconTransparent
               onClick={handleSecurityButtonClick}
               className={securityButtonClassName}
-              variant={Button.variants.TableMenu}
               data-test-id='copy-input__security-btn'
-            >
-              {showContent ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
-            </Button>
+              icon={showContent ? EyeOpenedInterfaceSVG : EyeClosedInterfaceSVG}
+            />
           </StyledIconWrapper>
         ) : null}
         <StyledIconWrapper right={12}>
           <CopyButton
             text={value.toString()}
-            onClick={handleCopyButtonClick}
+            onClick={onCopy}
             className={copyButtonClassName}
-            showCopyCompleted={isCopyCompleted}
             data-test-id='copy-input__copy-btn'
           />
         </StyledIconWrapper>

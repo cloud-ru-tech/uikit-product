@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { Button, CopyButton } from '@sbercloud/uikit-react-button';
+import { Button, ButtonIcon, CopyButton } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -22,21 +22,21 @@ const Template: Story<BreadcrumbsProps> = ({ ...args }) => {
     <>
       <Breadcrumbs {...args} items={items} />
       <Breadcrumbs {...args} items={longItems}>
-        <CopyButton />
+        <CopyButton text='test' as={ButtonIcon} variant={ButtonIcon.variants.Color} />
       </Breadcrumbs>
       <Divider />
       <Breadcrumbs {...args} items={longSingle} />
       <Divider />
       <Breadcrumbs items={longTwice}>
-        <CopyButton text='link' />
+        <CopyButton text='link' as={ButtonIcon} variant={ButtonIcon.variants.Color} />
       </Breadcrumbs>
       <Divider />
       <Breadcrumbs {...args} items={docker} />
       <Divider variant={Divider.variants.Extra} />
       <Breadcrumbs {...args} items={data}>
-        <CopyButton />
+        <CopyButton text='test' as={ButtonIcon} variant={ButtonIcon.variants.Color} />
       </Breadcrumbs>
-      <Button onClick={() => setData(fm)}>Set data</Button>
+      <Button onClick={() => setData(fm)} text='Set data' />
     </>
   );
 };

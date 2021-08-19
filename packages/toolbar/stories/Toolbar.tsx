@@ -1,13 +1,9 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
+import { ButtonToolbar, RefreshButton } from '@sbercloud/uikit-react-button';
 import { TFilterValueType } from '@sbercloud/uikit-react-filter';
-import {
-  DeleteInterfaceSVG,
-  RefreshInterfaceSVG,
-  RowExpandedInterfaceSVG,
-  TableSettingsInterfaceSVG,
-} from '@sbercloud/uikit-react-icons';
+import { DeleteInterfaceSVG, RowExpandedInterfaceSVG, TableSettingsInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { WithSupportProps } from '@sbercloud/uikit-utils';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -27,9 +23,7 @@ const Template: Story<WithSupportProps<ToolbarWrapperProps>> = ({ ...args }) => 
 
   return (
     <Toolbar.Wrapper {...args}>
-      <Toolbar.Button>
-        <RefreshInterfaceSVG />
-      </Toolbar.Button>
+      <RefreshButton as={ButtonToolbar} />
       <Toolbar.Button disabled>
         <DeleteInterfaceSVG />
       </Toolbar.Button>

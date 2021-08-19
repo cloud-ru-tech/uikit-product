@@ -1,6 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { Button } from '@sbercloud/uikit-react-button';
+
+import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { Tag } from '@sbercloud/uikit-react-tag';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
@@ -35,7 +36,7 @@ export const StyledTagButtonWrapper = styled.div`
   flex-shrink: 0;
 `;
 
-export const StyledTagButton = styled(Button)`
+export const StyledTagButton = styled(ButtonIcon)`
   fill: var(${COLORS_SELECT.DROPDOWN_ICON_COLOR}) !important;
   color: var(${COLORS_SELECT.DROPDOWN_ICON_COLOR}) !important;
   background: transparent !important;

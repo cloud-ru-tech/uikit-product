@@ -1,1 +1,1 @@
-export * from './withManagedConnecting';
+export * from './withManagedLoading';

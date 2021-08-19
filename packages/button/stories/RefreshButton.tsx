@@ -1,26 +1,34 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import componentChangelog from '../CHANGELOG.md';
-import componentPackage from '../package.json';
-import componentReadme from '../README.md';
-import { RefreshButton, RefreshButtonProps } from '../src';
+import { ButtonToolbar, RefreshButton, RefreshButtonProps } from '../src';
+import { TableCell, TableColumn, TableWrapper } from './helperComponents';
+import { getDefaultArgs, getDefaultParameters } from './helpers';
 
 export default {
-  title: 'Not stable/Button/Refresh Button',
+  title: 'Components/Button/Refresh Button',
   component: RefreshButton,
 } as Meta;
 
-const Template: Story<RefreshButtonProps> = ({ ...args }) => <RefreshButton {...args} />;
+const Template: Story<RefreshButtonProps> = ({ ...args }) => (
+  <TableWrapper>
+    <TableColumn>
+      <TableCell>Button Icon Transparent / Default</TableCell>
+      <TableCell>
+        <RefreshButton title='Refresh' {...args} />
+      </TableCell>
+    </TableColumn>
+
+    <TableColumn>
+      <TableCell>Button Toolbar</TableCell>
+      <TableCell>
+        <RefreshButton title='Refresh' as={ButtonToolbar} {...args} />
+      </TableCell>
+    </TableColumn>
+  </TableWrapper>
+);
 
 export const refreshButton = Template.bind({});
-refreshButton.args = {};
-refreshButton.parameters = {
-  readme: {
-    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
-  },
-  design: {
-    type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
-  },
-};
+
+refreshButton.parameters = getDefaultParameters();
+
+refreshButton.args = getDefaultArgs();

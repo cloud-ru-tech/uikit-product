@@ -1,8 +1,9 @@
-import { Button } from '@sbercloud/uikit-react-button';
-import { useLanguage } from '@sbercloud/uikit-utils';
-import { Tag } from '@sbercloud/uikit-react-tag';
 import { useCallback, useMemo, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
+
+import { Button } from '@sbercloud/uikit-react-button';
+import { Tag } from '@sbercloud/uikit-react-tag';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { ColorPicker, OptionTypeColor } from '../../../components';
 import { PRESET_COLORS } from '../../../constants';
@@ -36,14 +37,7 @@ export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.
   return (
     <>
       <Container>
-        <StyledButton
-          disabled={notValid}
-          variant={Button.variants.Transparent}
-          size={Button.sizes.xs}
-          onClick={onClick}
-        >
-          {addText}
-        </StyledButton>
+        <StyledButton disabled={notValid} variant={Button.variants.Transparent} onClick={onClick} text={addText} />
         <StyledTagWrapper>
           <Tag color={color}>{search}</Tag>
         </StyledTagWrapper>

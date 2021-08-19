@@ -1,38 +1,23 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta, Story } from '@storybook/react';
-import { ComponentProps } from 'react';
 
 import { CircleAddInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-import componentChangelog from '../CHANGELOG.md';
-import componentPackage from '../package.json';
-import componentReadme from '../README.md';
-import { ButtonToolbar } from '../src';
+import { ButtonToolbar, ButtonToolbarProps } from '../src';
+import { getDefaultArgs, getDefaultParameters } from './helpers';
 
 export default {
-  title: 'Not stable/Button/Button Toolbar',
+  title: 'Components/Button/Button Toolbar',
   component: ButtonToolbar,
 } as Meta;
 
-const Template: Story<Pick<ComponentProps<typeof ButtonToolbar>, 'disabled'>> = ({ ...args }) => (
-  <ButtonToolbar title='Add' {...args}>
-    <CircleAddInterfaceSVG />
-  </ButtonToolbar>
+const Template: Story<ButtonToolbarProps> = ({ ...args }) => (
+  <ButtonToolbar {...args} title='Add' icon={CircleAddInterfaceSVG} />
 );
 
 export const buttonToolbar = Template.bind({});
 
-buttonToolbar.parameters = {
-  readme: {
-    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
-  },
-  design: {
-    type: 'figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=1098%3A22594',
-  },
-  controls: { include: ['disabled'] },
-  badges: [BADGE.NEEDS_REVISION, BADGE.BETA],
-};
-buttonToolbar.args = {
-  disabled: false,
-};
+buttonToolbar.parameters = getDefaultParameters({
+  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=1098%3A22594',
+});
+
+buttonToolbar.args = getDefaultArgs();

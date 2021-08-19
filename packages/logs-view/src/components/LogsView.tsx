@@ -31,8 +31,8 @@ export const LogsView: FC<LogsViewProps> = ({ data, onUpdateLogs }) => {
         ))}
       </Content>
       <ButtonBox>
-        <RefreshButton onRefresh={onRefreshCallback} variant={RefreshButton.variants.TableMenu} />
-        <CopyButton text={JSON.stringify(data)} variant={CopyButton.variants.TableMenu} />
+        <RefreshButton onClick={onRefreshCallback} />
+        <CopyButton text={JSON.stringify(data)} />
       </ButtonBox>
     </Main>
   );

@@ -1,4 +1,4 @@
-import { ComponentProps, forwardRef } from 'react';
+import { forwardRef } from 'react';
 
 import {
   EyeOpenedInterfaceSVG,
@@ -6,37 +6,27 @@ import {
   PlayInterfaceSVG,
   StopInterfaceSVG,
 } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { LoadingIcon } from '../../helperComponents';
-import { withManagedConnecting } from '../../hocs';
+import { extractCommonButtonProps } from '../../helpers';
+import { withManagedLoading } from '../../hocs';
+import { CommonButtonProps } from '../../types';
 import { Variant } from './constants';
 import * as S from './styled';
 
-export type ButtonTableIconProps = WithSupportProps<
-  Pick<ComponentProps<typeof S.Button>, 'className' | 'type' | 'disabled' | 'onClick' | 'title'> & {
-    variant?: Variant;
-    connecting?: boolean;
-  }
->;
+export type ButtonTableIconProps = CommonButtonProps & {
+  variant?: Variant;
+  loading?: boolean;
+};
 
 const ButtonTableIconBase = forwardRef<HTMLButtonElement, ButtonTableIconProps>(
-  ({ className, type = 'button', disabled, onClick, title, variant = Variant.Play, connecting, ...rest }, ref) => (
-    <S.Button
-      className={className}
-      type={type}
-      disabled={disabled || connecting}
-      onClick={onClick}
-      title={title}
-      data-connecting={connecting || undefined}
-      ref={ref}
-      {...extractSupportProps(rest)}
-    >
-      {connecting && <LoadingIcon />}
-      {!connecting && variant === Variant.Pause && <PauseInterfaceSVG />}
-      {!connecting && variant === Variant.Stop && <StopInterfaceSVG />}
-      {!connecting && variant === Variant.Play && <PlayInterfaceSVG />}
-      {!connecting && variant === Variant.View && <EyeOpenedInterfaceSVG />}
+  ({ variant = Variant.Play, loading, ...rest }, ref) => (
+    <S.Button data-loading={loading || undefined} ref={ref} {...extractCommonButtonProps(rest)}>
+      {loading && <LoadingIcon />}
+      {!loading && variant === Variant.Pause && <PauseInterfaceSVG />}
+      {!loading && variant === Variant.Stop && <StopInterfaceSVG />}
+      {!loading && variant === Variant.Play && <PlayInterfaceSVG />}
+      {!loading && variant === Variant.View && <EyeOpenedInterfaceSVG />}
     </S.Button>
   ),
 );
@@ -47,4 +37,4 @@ export const ButtonTableIcon = ButtonTableIconBase as typeof ButtonTableIconBase
 
 ButtonTableIcon.variants = Variant;
 
-export const ButtonTableIconManagedConnecting = withManagedConnecting(ButtonTableIcon);
+export const ButtonTableIconManagedLoading = withManagedLoading(ButtonTableIcon);

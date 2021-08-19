@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
-import { PureButton } from '../../helperComponents';
+import { BaseButton } from '../../helperComponents';
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -11,12 +11,8 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Button = styled(PureButton)`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+export const Button = styled(BaseButton)`
   height: 28px;
-  width: max-content;
   padding: 4px 4px 4px 8px;
   border-radius: 18px;
 
@@ -39,13 +35,13 @@ export const Button = styled(PureButton)`
       color: var(${COLORS.FILL_COLOR_ACTIVE});
     }
 
-    &[data-connecting] {
-      fill: var(${COLORS.FILL_FILL_CONNECTING});
-      background-color: var(${COLORS.FILL_BG_CONNECTING});
-      color: var(${COLORS.FILL_COLOR_CONNECTING});
+    &[data-loading] {
+      fill: var(${COLORS.FILL_FILL_LOADING});
+      background-color: var(${COLORS.FILL_BG_LOADING});
+      color: var(${COLORS.FILL_COLOR_LOADING});
     }
 
-    :not(&[data-connecting]):disabled {
+    :not(&[data-loading]):disabled {
       fill: var(${COLORS.FILL_FILL_DISABLED});
       background-color: var(${COLORS.FILL_BG_DISABLED});
       color: var(${COLORS.FILL_COLOR_DISABLED});
@@ -69,13 +65,13 @@ export const Button = styled(PureButton)`
       color: var(${COLORS.ON_ACCENT_COLOR_ACTIVE});
     }
 
-    &[data-connecting] {
-      fill: var(${COLORS.ON_ACCENT_FILL_CONNECTING});
-      background-color: var(${COLORS.ON_ACCENT_BG_CONNECTING});
-      color: var(${COLORS.ON_ACCENT_COLOR_CONNECTING});
+    &[data-loading] {
+      fill: var(${COLORS.ON_ACCENT_FILL_LOADING});
+      background-color: var(${COLORS.ON_ACCENT_BG_LOADING});
+      color: var(${COLORS.ON_ACCENT_COLOR_LOADING});
     }
 
-    :not(&[data-connecting]):disabled {
+    :not(&[data-loading]):disabled {
       fill: var(${COLORS.ON_ACCENT_FILL_DISABLED});
       background-color: var(${COLORS.ON_ACCENT_BG_DISABLED});
       color: var(${COLORS.ON_ACCENT_COLOR_DISABLED});
@@ -99,15 +95,15 @@ export const Button = styled(PureButton)`
       color: var(${COLORS.OUTLINE_COLOR_ACTIVE});
     }
 
-    &[data-connecting] {
-      fill: var(${COLORS.OUTLINE_FILL_CONNECTING});
+    &[data-loading] {
+      fill: var(${COLORS.OUTLINE_FILL_LOADING});
       /* при border: none будет "движение" кнопки, поэтому так */
       border: 1px solid transparent;
-      background-color: var(${COLORS.OUTLINE_BG_CONNECTING});
-      color: var(${COLORS.OUTLINE_COLOR_CONNECTING});
+      background-color: var(${COLORS.OUTLINE_BG_LOADING});
+      color: var(${COLORS.OUTLINE_COLOR_LOADING});
     }
 
-    :not(&[data-connecting]):disabled {
+    :not(&[data-loading]):disabled {
       fill: var(${COLORS.OUTLINE_FILL_DISABLED});
       border: 1px solid var(${COLORS.OUTLINE_BORDER_DISABLED});
       color: var(${COLORS.OUTLINE_COLOR_DISABLED});
@@ -117,9 +113,4 @@ export const Button = styled(PureButton)`
 
 export const IconWrapper = styled.div`
   margin-left: 8px;
-
-  /* чтобы к иконке применился align-items */
-  svg {
-    display: block;
-  }
 `;

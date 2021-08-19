@@ -1,10 +1,11 @@
 import { styled } from '@linaria/react';
-import { MoreButton } from '@sbercloud/uikit-react-button';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
+
+import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
 import { FormField } from '@sbercloud/uikit-react-form';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -296,7 +297,7 @@ withRowDetail.args = {
           },
         ];
 
-        return <MoreButton actions={actions} />;
+        return <DropdownMenu actions={actions} />;
       },
     },
   ],

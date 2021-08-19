@@ -51,7 +51,6 @@ export const Input = ({
 }: WithSupportProps<InputProps>) => {
   const inputEl = useRef<InputElementType>(null);
   const [correctValue, setCorrectValue] = useState(value);
-  const [isCopyCompleted, setIsCopyCompleted] = useState(false);
   const [isViewMode, setViewMode] = useState(type !== 'security');
 
   useEffect(() => {
@@ -105,10 +104,6 @@ export const Input = ({
     inputEl.current.dispatchEvent(event);
   };
 
-  const handleCopyButtonClick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-    e.stopPropagation();
-  };
-
   const handleInputClick = (e: React.MouseEvent<HTMLInputElement>) => {
     e.stopPropagation();
 
@@ -116,12 +111,7 @@ export const Input = ({
       return;
     }
 
-    setIsCopyCompleted(true);
     copyText(correctValue.toString());
-
-    setTimeout(() => {
-      setIsCopyCompleted(false);
-    }, 3000);
   };
 
   const paddingRight = useMemo(() => {
@@ -197,13 +187,7 @@ export const Input = ({
               </StyledSecurityButton>
             ) : null}
             {allowCopy && (
-              <CopyButton
-                text={value.toString()}
-                onClick={handleCopyButtonClick}
-                className={copyButtonClassName}
-                showCopyCompleted={isCopyCompleted}
-                data-test-id='input__copy-btn'
-              />
+              <CopyButton text={value.toString()} className={copyButtonClassName} data-test-id='input__copy-btn' />
             )}
           </BasicButtonWrapper>
           {onOpenDialog && (

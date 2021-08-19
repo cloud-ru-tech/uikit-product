@@ -1,13 +1,16 @@
-import { Button } from '@sbercloud/uikit-react-button';
+import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { withDesign } from 'storybook-addon-designs';
+import { addReadme } from 'storybook-readme';
+
+import { ButtonIcon, ButtonRound } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import {
   CircleAddInterfaceSVG,
   FileUploadFilledInterfaceSVG,
   FolderUploadFilledInterfaceSVG,
+  SettingsInterfaceSVG,
 } from '@sbercloud/uikit-react-icons';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -20,30 +23,54 @@ export default {
   decorators: [addReadme, withDesign],
 } as Meta;
 
+const Wrapper = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  grid-gap: 16px;
+`;
+
 const Template: Story<DropdownMenuProps> = () => (
-  <DropdownMenu
-    actions={
-      <>
-        <DropdownItem onClick={(): void => {}}>
-          <FileUploadFilledInterfaceSVG />
-          Загрузить файл
-        </DropdownItem>
-        <Divider />
-        <DropdownItem onClick={(): void => {}}>
-          <FolderUploadFilledInterfaceSVG />
-          Загрузить документ
-        </DropdownItem>
-        <DropdownItem onClick={(): void => {}}>
-          <FileUploadFilledInterfaceSVG />
-          Загрузить файл
-        </DropdownItem>
-      </>
-    }
-  >
-    <Button rounded size={Button.sizes.s} icon={<CircleAddInterfaceSVG />}>
-      Создать
-    </Button>
-  </DropdownMenu>
+  <Wrapper>
+    <DropdownMenu
+      actions={
+        <>
+          <DropdownItem onClick={(): void => {}}>
+            <FileUploadFilledInterfaceSVG />
+            Загрузить файл
+          </DropdownItem>
+          <Divider />
+          <DropdownItem onClick={(): void => {}}>
+            <FolderUploadFilledInterfaceSVG />
+            Загрузить документ
+          </DropdownItem>
+          <DropdownItem onClick={(): void => {}}>
+            <FileUploadFilledInterfaceSVG />
+            Загрузить файл
+          </DropdownItem>
+        </>
+      }
+    >
+      <ButtonRound icon={CircleAddInterfaceSVG} text='Создать' />
+    </DropdownMenu>
+
+    <DropdownMenu
+      actions={[
+        { name: 'Загрузить файл', onClick: () => {} },
+        { name: 'Загрузить документ', onClick: () => {} },
+      ]}
+    >
+      <ButtonIcon icon={SettingsInterfaceSVG} title='Настройки' />
+    </DropdownMenu>
+
+    <DropdownMenu
+      actions={[
+        { name: 'Загрузить файл', onClick: () => {} },
+        { name: 'Загрузить документ', onClick: () => {} },
+      ]}
+    />
+  </Wrapper>
 );
 
 export const dropdown = Template.bind({});

@@ -3,12 +3,8 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import debounce from 'lodash.debounce';
 import { useEffect, useState } from 'react';
 
-import { TableButton } from '@sbercloud/uikit-react-button';
-import {
-  CirclePauseInterfaceSVG,
-  CirclePlayFilledInterfaceSVG,
-  CircleStopInterfaceSVG,
-} from '@sbercloud/uikit-react-icons';
+import { ButtonTable, ButtonTableIcon } from '@sbercloud/uikit-react-button';
+import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Status } from '@sbercloud/uikit-react-status';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -151,26 +147,9 @@ clientModelTable.args = {
         const isDisabled = status === Status.types.Failed;
         return (
           <ButtonGroup>
-            <TableButton
-              variant={TableButton.variants.TextIcon}
-              icon={<CirclePlayFilledInterfaceSVG />}
-              disabled={isDisabled}
-              inProgress={isInProgress}
-              text={'AGrigorii'}
-              onClick={() => {}}
-            />
-            <TableButton
-              variant={TableButton.variants.Icon}
-              disabled={isDisabled}
-              inProgress={isInProgress}
-              icon={<CircleStopInterfaceSVG />}
-            />
-            <TableButton
-              variant={TableButton.variants.Icon}
-              disabled={isDisabled}
-              inProgress={isInProgress}
-              icon={<CirclePauseInterfaceSVG />}
-            />
+            <ButtonTable disabled={isDisabled} loading={isInProgress} text='AGrigorii' onClick={() => {}} />
+            <ButtonTableIcon variant={ButtonTableIcon.variants.Stop} disabled={isDisabled} loading={isInProgress} />
+            <ButtonTableIcon variant={ButtonTableIcon.variants.Pause} disabled={isDisabled} loading={isInProgress} />
           </ButtonGroup>
         );
       },

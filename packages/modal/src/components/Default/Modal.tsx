@@ -2,7 +2,7 @@ import { cx } from '@linaria/core';
 import React, { useMemo } from 'react';
 import RCModal from 'react-modal';
 
-import { Button, IconButton } from '@sbercloud/uikit-react-button';
+import { Button, ButtonIcon } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 import { WithSupportProps, extractDataTestProps, useLanguage } from '@sbercloud/uikit-utils';
@@ -133,16 +133,14 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
       parentSelector={parentId ? (): HTMLElement => document.getElementById(parentId) || document.body : parentSelector}
     >
       {hideCross ? null : (
-        <IconButton
-          variant={IconButton.variants.Popup}
+        <ButtonIcon
+          icon={CloseInterfaceSVG}
           onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
             onRequestClose?.(e, MODAL_CLOSE_TYPE.CROSS);
           }}
           className={closeButtonStyle}
           data-test-id='modal__close-btn'
-        >
-          <CloseInterfaceSVG />
-        </IconButton>
+        />
       )}
       {title && <Title data-test-id='modal__title'>{title}</Title>}
       {description && <Description data-test-id='modal__description'>{description}</Description>}
@@ -160,9 +158,8 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
                     onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
                   }}
                   data-test-id='modal__approve-btn'
-                >
-                  {approveBtnText}
-                </Button>
+                  text={approveBtnText}
+                />
               </Tooltip>
             ) : (
               <Button
@@ -174,22 +171,20 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
                   onRequestClose?.(e, MODAL_CLOSE_TYPE.APPROVE);
                 }}
                 data-test-id='modal__approve-btn'
-              >
-                {approveBtnText}
-              </Button>
+                text={approveBtnText}
+              />
             ))}
           {cancel && (
             <Button
               className={buttonCSS}
-              variant={Button.variants.Outlined}
+              variant={Button.variants.Outline}
               onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
                 cancel(e);
                 onRequestClose?.(e, MODAL_CLOSE_TYPE.CANCEL);
               }}
               data-test-id='modal__cancel-btn'
-            >
-              {cancelBtnText}
-            </Button>
+              text={cancelBtnText}
+            />
           )}
         </ButtonWrapper>
       )}

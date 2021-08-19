@@ -7,22 +7,7 @@ const { COLORS_INPUT } = DEPRECATED_EXPORT_VARS;
 
 const copyButtonClassName = css`
   margin-right: -8px;
-
-  &[data-size='xs'] {
-    padding: 4px;
-  }
-
-  &[data-variant='transparent'] {
-    fill: var(${COLORS_INPUT.COPY_INPUT_ICON_COLOR});
-    background: var(${COLORS_INPUT.COPY_INPUT_ICON_BACKGROUND_COLOR});
-
-    &:hover {
-      fill: var(${COLORS_INPUT.COPY_INPUT_ICON_HOVER_COLOR});
-      background: var(${COLORS_INPUT.COPY_INPUT_ICON_BACKGROUND_COLOR});
-    }
-  }
 `;
-
 const StyledInput = styled.div<{ hasSecurityIcon: boolean }>`
   flex-grow: 1;
   box-sizing: border-box;

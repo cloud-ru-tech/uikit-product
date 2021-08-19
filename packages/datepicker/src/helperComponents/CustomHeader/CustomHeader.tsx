@@ -1,4 +1,4 @@
-import { Button } from '@sbercloud/uikit-react-button';
+import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { ChevronLeftInterfaceSVG, ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { LanguageCodeType } from '@sbercloud/uikit-utils';
 
@@ -28,23 +28,9 @@ export const CustomHeader = (customProps: HeaderCustomProps, props: HeaderProps)
     <S.Container>
       <S.Title>{title}</S.Title>
 
-      <Button
-        size={Button.sizes.s}
-        variant={Button.variants.Transparent}
-        onClick={decreaseMonth}
-        disabled={prevMonthButtonDisabled}
-      >
-        <ChevronLeftInterfaceSVG data-disabled={prevMonthButtonDisabled || undefined} className={S.iconNavClassName} />
-      </Button>
+      <ButtonIcon onClick={decreaseMonth} disabled={prevMonthButtonDisabled} icon={ChevronLeftInterfaceSVG} />
 
-      <Button
-        size={Button.sizes.s}
-        variant={Button.variants.Transparent}
-        onClick={increaseMonth}
-        disabled={nextMonthButtonDisabled}
-      >
-        <ChevronRightInterfaceSVG data-disabled={nextMonthButtonDisabled || undefined} className={S.iconNavClassName} />
-      </Button>
+      <ButtonIcon onClick={increaseMonth} disabled={nextMonthButtonDisabled} icon={ChevronRightInterfaceSVG} />
     </S.Container>
   );
 };

@@ -1,6 +1,7 @@
-import { BucketInterfaceSVG, DataTransferServiceSVG } from '@sbercloud/uikit-react-icons';
-import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
+
+import { Button } from '@sbercloud/uikit-react-button';
+import { BucketInterfaceSVG, DataTransferServiceSVG } from '@sbercloud/uikit-react-icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -28,7 +29,7 @@ const Template: Story<{ icon: string | React.ReactElement } & Omit<NoDataPagePro
       </p>
       <p>Чтобы сохранить ваши данные в хранилище ML Space, создайте бакет и загрузите в него файлы.</p>
       <p>Подробнее о сервисе читайте в документации</p>
-      <Button>Создать бакет</Button>
+      <Button text='Создать бакет' />
     </NoDataPage>
   </div>
 );

@@ -1,7 +1,8 @@
 import { styled } from '@linaria/react';
-import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+
+import { Button } from '@sbercloud/uikit-react-button';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -43,23 +44,23 @@ const Template: Story = (args): JSX.Element => {
         onClick={(): void => {
           setTree(tree => (tree.length ? [] : (treeOptions as IOptionType[])));
         }}
-      >
-        Trigger empty
-      </StyledButton>
+        text='Trigger empty'
+      />
+
       <StyledButton
         onClick={(): void => {
           setChecked(defautVal);
         }}
-      >
-        Set default
-      </StyledButton>
+        text='Set default'
+      />
+
       <StyledButton
         onClick={(): void => {
           setDisabled(!isDisabled);
         }}
-      >
-        Trigger disabled
-      </StyledButton>
+        text='Trigger disabled'
+      />
+
       <StyledButton
         onClick={(): void => {
           const nextTree = [...tree];
@@ -70,9 +71,8 @@ const Template: Story = (args): JSX.Element => {
 
           setTree(nextTree);
         }}
-      >
-        Sort
-      </StyledButton>
+        text='Sort'
+      />
     </>
   );
 };

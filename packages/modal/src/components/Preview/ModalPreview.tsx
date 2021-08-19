@@ -2,7 +2,7 @@ import { cx } from '@linaria/core';
 import { useEffect } from 'react';
 import RCModal from 'react-modal';
 
-import { IconButton } from '@sbercloud/uikit-react-button';
+import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
@@ -72,9 +72,7 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
       overlayClassName={cx(overlayClassName, Boolean(parentSelector) && overlayParentClassname, propsOverlayClassName)}
       className={cx(modalClassName, propsClassName)}
     >
-      <IconButton variant={IconButton.variants.Popup} onClick={onRequestClose} className={previewCloseButton}>
-        <CloseInterfaceSVG />
-      </IconButton>
+      <ButtonIcon icon={CloseInterfaceSVG} onClick={onRequestClose} className={previewCloseButton} />
       {title && (
         <>
           <TitleRow>

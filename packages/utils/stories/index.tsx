@@ -1,10 +1,11 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+
 import { Button } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H1, H3, Text2 } from '@sbercloud/uikit-typography';
-import { Meta, Story } from '@storybook/react/types-6-0';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -96,10 +97,10 @@ const Template: Story<ConfigProviderProps> = ({ ...args }) => {
           <Text2>(нажми на кнопку)</Text2>
         </Title>
         <ConfigBody>
-          <Button onClick={() => changeTheme(Themes.Purple)}>Purple Theme</Button>
-          <Button onClick={() => changeTheme(Themes.PurpleDark)}>Purple Dark Theme</Button>
-          <Button onClick={() => changeTheme(Themes.Green)}>Green Theme</Button>
-          <Button onClick={() => changeTheme(Themes.GreenDark)}>Green Dark Theme</Button>
+          <Button onClick={() => changeTheme(Themes.Purple)} text='Purple Theme' />
+          <Button onClick={() => changeTheme(Themes.PurpleDark)} text='Purple Dark Theme' />
+          <Button onClick={() => changeTheme(Themes.Green)} text='Green Theme' />
+          <Button onClick={() => changeTheme(Themes.GreenDark)} text='Green Dark Theme' />
         </ConfigBody>
       </Wrapper>
       <Wrapper>
@@ -115,8 +116,8 @@ const Template: Story<ConfigProviderProps> = ({ ...args }) => {
           <Text2>(нажми на кнопку)</Text2>
         </Title>
         <ConfigBody>
-          <Button onClick={() => changeLanguage(LanguageCodeType.ruRU)}>ruRU</Button>
-          <Button onClick={() => changeLanguage(LanguageCodeType.enUS)}>enUS</Button>
+          <Button onClick={() => changeLanguage(LanguageCodeType.ruRU)} text='ruRU' />
+          <Button onClick={() => changeLanguage(LanguageCodeType.enUS)} text='enUS' />
         </ConfigBody>
       </Wrapper>
     </ConfigProvider>

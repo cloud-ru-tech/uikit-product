@@ -6,7 +6,7 @@ import { Button } from '@sbercloud/uikit-react-button';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Toaster as CToaster, ToasterOptions, ToasterProps, dismissToast, toaster, updateToast } from '../src';
+import { Toaster as CToaster, ToasterOptions, ToasterProps, dismissToast, toaster } from '../src';
 
 export default {
   title: 'Not stable/Toaster',
@@ -125,12 +125,13 @@ const Template: Story<ToasterProps & { showActions: boolean; autoClose: boolean 
             { autoClose: autoClose ? undefined : false, toastId: 'customizedCustomId' },
           )
         }
-      >
-        CUSTOMIZED
-      </Button>
-      <Button variant={Button.variants.Outlined} onClick={() => dismissToast('customizedCustomId')}>
-        Close CUSTOMIZED
-      </Button>
+        text='CUSTOMIZED'
+      />
+      <Button
+        variant={Button.variants.Outline}
+        onClick={() => dismissToast('customizedCustomId')}
+        text='Close CUSTOMIZED'
+      />
     </LineWrapper>
 
     {PREDEFINED_ITEMS.map(({ title, props, options }) => (
@@ -139,17 +140,15 @@ const Template: Story<ToasterProps & { showActions: boolean; autoClose: boolean 
           onClick={() => {
             toaster(props, options);
           }}
-        >
-          {title}
-        </Button>
+          text={title}
+        />
         <Button
-          variant={Button.variants.Outlined}
+          variant={Button.variants.Outline}
           onClick={() => {
             dismissToast(options?.toastId);
           }}
-        >
-          Close {title}
-        </Button>
+          text={`Close ${title}`}
+        />
       </LineWrapper>
     ))}
 

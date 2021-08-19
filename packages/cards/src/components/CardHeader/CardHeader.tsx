@@ -1,16 +1,10 @@
 import { FC, useState } from 'react';
 
-import { FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { MoreButton } from '@sbercloud/uikit-react-button';
 import { Checkbox } from '@sbercloud/uikit-react-checkbox';
+import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
+import { FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-import {
-  ButtonGroupStyled,
-  FavouriteWrapStyled,
-  HeaderStyled,
-  favouriteButtonClassName,
-  moreButtonClassName,
-} from './styled';
+import { ButtonGroupStyled, FavouriteWrapStyled, HeaderStyled, favouriteButtonClassName } from './styled';
 
 export type CardHeaderProps = {
   checked?: boolean;
@@ -67,7 +61,7 @@ export const CardHeader: FC<CardHeaderProps> = props => {
             <FavouriteInterfaceSVG className={favouriteButtonClassName} data-filled={isFavourite} />
           </FavouriteWrapStyled>
         )}
-        {moreActions && <MoreButton actions={moreActions} className={moreButtonClassName} />}
+        {moreActions && <DropdownMenu actions={moreActions} />}
       </ButtonGroupStyled>
     </HeaderStyled>
   );

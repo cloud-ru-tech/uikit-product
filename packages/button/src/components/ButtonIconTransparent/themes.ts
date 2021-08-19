@@ -1,7 +1,8 @@
 import { css } from '@linaria/core';
+
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { GREY, BLUE_GREY, PURPLE, WHITE_ALFA, GREEN } = EXPORT_VARS;
+const { GREY, BLUE_GREY, PURPLE, WHITE_ALFA, BLACK_ALFA, GREEN } = EXPORT_VARS;
 
 export const COLORS = {
   DEFAULT_FILL: '--color-button-icon-transparent-default-fill',
@@ -23,12 +24,12 @@ export const COLORS = {
   ACCENT_BG_DISABLED: '--color-button-icon-transparent-accent-bg-disabled',
 };
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.Purple}'] */
+/* TODO: использовать [data-theme='${Themes.Purple}'] */
 export const PURPLE_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='purple'] {
+    [data-theme='purple'] {
       ${COLORS.DEFAULT_FILL}: var(${GREY[300]});
-      ${COLORS.DEFAULT_BG}: var(${WHITE_ALFA[48]});
+      ${COLORS.DEFAULT_BG}: var(${BLACK_ALFA[4]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${BLUE_GREY[60]});
       ${COLORS.DEFAULT_BG_HOVER}: var(${GREY[100]});
       ${COLORS.DEFAULT_FILL_ACTIVE}: var(${BLUE_GREY[100]});
@@ -48,10 +49,10 @@ export const PURPLE_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.PurpleDark}'] */
+/* TODO: использовать [data-theme='${Themes.PurpleDark}'] */
 export const PURPLE_DARK_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='purpleDark'] {
+    [data-theme='purpleDark'] {
       ${COLORS.DEFAULT_FILL}: var(${GREY[450]});
       ${COLORS.DEFAULT_BG}: var(${WHITE_ALFA[8]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${GREY[200]});
@@ -73,12 +74,12 @@ export const PURPLE_DARK_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.Green}'] */
+/* TODO: использовать [data-theme='${Themes.Green}'] */
 export const GREEN_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='green'] {
+    [data-theme='green'] {
       ${COLORS.DEFAULT_FILL}: var(${GREY[300]});
-      ${COLORS.DEFAULT_BG}: var(${WHITE_ALFA[48]});
+      ${COLORS.DEFAULT_BG}: var(${BLACK_ALFA[4]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${BLUE_GREY[60]});
       ${COLORS.DEFAULT_BG_HOVER}: var(${GREY[100]});
       ${COLORS.DEFAULT_FILL_ACTIVE}: var(${BLUE_GREY[100]});
@@ -98,10 +99,10 @@ export const GREEN_THEME = css`
   }
 `;
 
-/* TODO: использовать #sbercloud-theme-wrapper[data-theme='${Themes.GreenDark}'] */
+/* TODO: использовать [data-theme='${Themes.GreenDark}'] */
 export const GREEN_DARK_THEME = css`
   :global() {
-    #sbercloud-theme-wrapper[data-theme='greenDark'] {
+    [data-theme='greenDark'] {
       ${COLORS.DEFAULT_FILL}: var(${GREY[450]});
       ${COLORS.DEFAULT_BG}: var(${WHITE_ALFA[8]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${GREY[200]});

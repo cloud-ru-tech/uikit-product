@@ -1,21 +1,17 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta, Story } from '@storybook/react';
-import { ComponentProps } from 'react';
 
 import { CloseInterfaceSVG, DeleteInterfaceSVG, MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-import componentChangelog from '../CHANGELOG.md';
-import componentPackage from '../package.json';
-import componentReadme from '../README.md';
-import { ButtonIcon } from '../src';
+import { ButtonIcon, ButtonIconProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
+import { getDefaultArgs, getDefaultParameters } from './helpers';
 
 export default {
-  title: 'Not stable/Button/Button Icon',
+  title: 'Components/Button/Button Icon',
   component: ButtonIcon,
 } as Meta;
 
-const Template: Story<Pick<ComponentProps<typeof ButtonIcon>, 'disabled'>> = ({ ...args }) => (
+const Template: Story<ButtonIconProps> = ({ ...args }) => (
   <TableWrapper>
     {Object.entries(ButtonIcon.variants).map(([key, value]) => (
       <TableColumn
@@ -25,21 +21,15 @@ const Template: Story<Pick<ComponentProps<typeof ButtonIcon>, 'disabled'>> = ({ 
         <TableCell>{key}</TableCell>
 
         <TableCell>
-          <ButtonIcon variant={value} title='Close' {...args}>
-            <CloseInterfaceSVG />
-          </ButtonIcon>
+          <ButtonIcon {...args} variant={value} title='Close' icon={CloseInterfaceSVG} />
         </TableCell>
 
         <TableCell>
-          <ButtonIcon variant={value} title='More' {...args}>
-            <MoreInterfaceSVG />
-          </ButtonIcon>
+          <ButtonIcon {...args} variant={value} title='More' icon={MoreInterfaceSVG} />
         </TableCell>
 
         <TableCell>
-          <ButtonIcon variant={value} title='Delete' {...args}>
-            <DeleteInterfaceSVG />
-          </ButtonIcon>
+          <ButtonIcon {...args} variant={value} title='Delete' icon={DeleteInterfaceSVG} />
         </TableCell>
       </TableColumn>
     ))}
@@ -47,17 +37,8 @@ const Template: Story<Pick<ComponentProps<typeof ButtonIcon>, 'disabled'>> = ({ 
 );
 export const buttonIcon = Template.bind({});
 
-buttonIcon.parameters = {
-  readme: {
-    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
-  },
-  design: {
-    type: 'figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=1492%3A42272',
-  },
-  controls: { include: ['disabled'] },
-  badges: [BADGE.NEEDS_REVISION, BADGE.BETA],
-};
-buttonIcon.args = {
-  disabled: false,
-};
+buttonIcon.parameters = getDefaultParameters({
+  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=1492%3A42272',
+});
+
+buttonIcon.args = getDefaultArgs();

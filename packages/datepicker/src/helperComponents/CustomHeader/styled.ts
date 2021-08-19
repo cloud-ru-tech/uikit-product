@@ -1,8 +1,4 @@
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-
-const { COLORS_DATEPICKER } = DEPRECATED_EXPORT_VARS;
 
 export const Container = styled.div`
   display: flex;
@@ -19,13 +15,5 @@ export const Title = styled.div`
 
   &::first-letter {
     text-transform: uppercase;
-  }
-`;
-
-export const iconNavClassName = css`
-  fill: var(${COLORS_DATEPICKER.NAVIGATION_COLOR});
-
-  &[data-disabled] {
-    fill: var(${COLORS_DATEPICKER.NAVIGATION_DISABLED_COLOR});
   }
 `;

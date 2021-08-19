@@ -1,7 +1,8 @@
 import { styled } from '@linaria/react';
-import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+
+import { Button } from '@sbercloud/uikit-react-button';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -64,7 +65,7 @@ const Template: Story = (args): JSX.Element => {
         />
         <TagSelect
           customControl={({ toggleMenu }): JSX.Element => (
-            <Button onClick={(): void => toggleMenu()}>Добавить тег</Button>
+            <Button onClick={(): void => toggleMenu()} text='Добавить тег' />
           )}
           isSelected={false}
           options={stateTags}

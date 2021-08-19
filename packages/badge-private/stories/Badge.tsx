@@ -1,5 +1,6 @@
-import { Button } from '@sbercloud/uikit-react-button';
 import { Meta, Story } from '@storybook/react/types-6-0';
+
+import { Button } from '@sbercloud/uikit-react-button';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,7 +14,7 @@ export default {
 
 const Template: Story<BadgeProps> = ({ ...args }) => (
   <Badge {...args}>
-    <Button variant={Button.variants.Outlined}>Button</Button>
+    <Button variant={Button.variants.Outline} text='Button' />
   </Badge>
 );
 

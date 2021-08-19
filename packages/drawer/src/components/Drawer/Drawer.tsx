@@ -4,7 +4,7 @@ import { cx } from '@linaria/core';
 import RcDrawer from 'rc-drawer';
 import React, { useCallback, useEffect } from 'react';
 
-import { IconButton } from '@sbercloud/uikit-react-button';
+import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
@@ -121,13 +121,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
             {headerText && <Header text={headerText} />}
           </HeaderTextBoxStyled>
           <CloseButtonStyled>
-            <IconButton
-              variant={IconButton.variants.Popup}
-              onClick={onClose}
-              data-test-action-id='drawer__header-close-btn'
-            >
-              <CloseInterfaceSVG />
-            </IconButton>
+            <ButtonIcon icon={CloseInterfaceSVG} onClick={onClose} data-test-action-id='drawer__header-close-btn' />
           </CloseButtonStyled>
         </HeaderBoxStyled>
       )}

@@ -1,6 +1,7 @@
+import { useMemo, useState } from 'react';
+
 import { Button } from '@sbercloud/uikit-react-button';
 import { useLanguage } from '@sbercloud/uikit-utils';
-import { useMemo, useState } from 'react';
 
 import { Texts, textProvider } from '../helpers/texts-provider';
 import { ContentHiderStyled, ContentWrapperGradientStyled, ContentWrapperStyled } from './styled';
@@ -38,12 +39,10 @@ export const ContentHider: React.FC<ContentHiderProps> = ({
         />
       </ContentHiderStyled>
       <Button
-        size={Button.sizes.m}
-        variant={Button.variants.Outlined}
+        variant={Button.variants.Outline}
         onClick={() => setShowContent(showContent => !showContent)}
-      >
-        {showContent ? hideText : showText}
-      </Button>
+        text={showContent ? hideText : showText}
+      />
     </div>
   );
 };

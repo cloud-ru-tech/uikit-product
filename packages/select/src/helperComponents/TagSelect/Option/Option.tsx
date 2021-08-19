@@ -1,9 +1,10 @@
 import { cx } from '@linaria/core';
-import { CircleCheckOutlineInterfaceSVG, DeleteInterfaceSVG, EditInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Button } from '@sbercloud/uikit-react-button';
 import isEqual from 'lodash.isequal';
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
+
+import { Button } from '@sbercloud/uikit-react-button';
+import { CircleCheckOutlineInterfaceSVG, DeleteInterfaceSVG, EditInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { ColorPicker, OptionTypeColor } from '../../../components';
 import { TagName } from '../TagName';
@@ -108,8 +109,6 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                 className={colorPickerClassName}
               />
               <StyledTagButton
-                variant={Button.variants.Transparent}
-                size={Button.sizes.xs}
                 onClick={(): void => {
                   const dataIndex = props.options.indexOf(data);
                   if (dataIndex < 0) return;
@@ -128,12 +127,10 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                     }
                   });
                 }}
-              >
-                <DeleteInterfaceSVG />
-              </StyledTagButton>
+                icon={DeleteInterfaceSVG}
+              />
+
               <StyledTagButton
-                size={Button.sizes.xs}
-                variant={Button.variants.Transparent}
                 data-disabled={notValid || undefined}
                 onClick={(): void => {
                   if (notValid) return;
@@ -151,24 +148,20 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                     }
                   }
                 }}
-              >
-                <CircleCheckOutlineInterfaceSVG />
-              </StyledTagButton>
+                icon={CircleCheckOutlineInterfaceSVG}
+              />
             </StyledTagButtonWrapper>
           </>
         ) : (
           <>
             <StyledTagOptionLabel color={data.color}>{data.label}</StyledTagOptionLabel>
             <StyledTagButton
-              variant={Button.variants.Transparent}
-              size={Button.sizes.xs}
               onClick={(e: { stopPropagation: () => void }): void => {
                 e.stopPropagation();
                 setEdit(true);
               }}
-            >
-              <EditInterfaceSVG />
-            </StyledTagButton>
+              icon={EditInterfaceSVG}
+            />
           </>
         )}
       </StyledTagOption>

@@ -1,36 +1,20 @@
-import { ComponentProps, PropsWithChildren, forwardRef } from 'react';
+import { ComponentType, forwardRef } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
-
+import { extractCommonButtonProps } from '../../helpers';
+import { CommonButtonProps } from '../../types';
 import { Variant } from './constants';
 import * as S from './styled';
 
-export type ButtonIconTransparentProps = WithSupportProps<
-  PropsWithChildren<
-    Pick<ComponentProps<typeof S.Button>, 'className' | 'type' | 'disabled' | 'onClick' | 'title'> & {
-      variant?: Variant;
-      rounded?: boolean;
-    }
-  >
->;
+export type ButtonIconTransparentProps = CommonButtonProps & {
+  icon: ComponentType;
+  variant?: Variant;
+  rounded?: boolean;
+};
 
 const ButtonIconTransparentBase = forwardRef<HTMLButtonElement, ButtonIconTransparentProps>(
-  (
-    { children, className, type = 'button', disabled, onClick, title, variant = Variant.Default, rounded, ...rest },
-    ref,
-  ) => (
-    <S.Button
-      className={className}
-      type={type}
-      disabled={disabled}
-      onClick={onClick}
-      title={title}
-      data-variant={variant}
-      data-rounded={rounded || undefined}
-      ref={ref}
-      {...extractSupportProps(rest)}
-    >
-      {children}
+  ({ icon: Icon, variant = Variant.Default, rounded, ...rest }, ref) => (
+    <S.Button data-variant={variant} data-rounded={rounded || undefined} ref={ref} {...extractCommonButtonProps(rest)}>
+      <Icon />
     </S.Button>
   ),
 );

@@ -1,25 +1,15 @@
-import { ComponentProps, PropsWithChildren, forwardRef } from 'react';
+import { ComponentType, forwardRef } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
-
+import { extractCommonButtonProps } from '../../helpers';
+import { CommonButtonProps } from '../../types';
 import * as S from './styled';
 
-export type ButtonOverlayProps = WithSupportProps<
-  PropsWithChildren<Pick<ComponentProps<typeof S.Button>, 'className' | 'type' | 'disabled' | 'onClick' | 'title'>>
->;
+export type ButtonOverlayProps = CommonButtonProps & {
+  icon: ComponentType;
+};
 
-export const ButtonOverlay = forwardRef<HTMLButtonElement, ButtonOverlayProps>(
-  ({ children, className, type = 'button', disabled, onClick, title, ...rest }, ref) => (
-    <S.Button
-      className={className}
-      type={type}
-      disabled={disabled}
-      onClick={onClick}
-      title={title}
-      ref={ref}
-      {...extractSupportProps(rest)}
-    >
-      {children}
-    </S.Button>
-  ),
-);
+export const ButtonOverlay = forwardRef<HTMLButtonElement, ButtonOverlayProps>(({ icon: Icon, ...rest }, ref) => (
+  <S.Button ref={ref} {...extractCommonButtonProps(rest)}>
+    <Icon />
+  </S.Button>
+));
