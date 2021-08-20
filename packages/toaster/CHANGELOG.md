@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toaster@0.7.0...@sbercloud/uikit-react-toaster@0.8.0) (2021-08-20)
+
+
+### Bug Fixes
+
+* correct links to changed repository ([b1e05f0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1e05f081150fb34fff897ebde16c265c953e2b4))
+
+
+### Features
+
+* button has been implemented according to design system ([1383a53](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1383a53e463723fde1148ffeb41e8b9669d71bad))
+
+
+### BREAKING CHANGES
+
+* button has been implemented according to design system
+
+
+
+
+
 # [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-toaster@0.6.1&sourceBranch=refs/tags/@sbercloud/uikit-react-toaster@0.7.0) (2021-08-18)
 
 

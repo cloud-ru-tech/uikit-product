@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-breadcrumbs",
   "title": "React Breadcrumbs",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,9 +26,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-icons": "1.4.0",
-    "@sbercloud/uikit-react-tooltip": "0.6.2",
-    "@sbercloud/uikit-theme": "0.25.0",
+    "@sbercloud/uikit-react-icons": "1.4.1",
+    "@sbercloud/uikit-react-tooltip": "0.6.3",
+    "@sbercloud/uikit-theme": "0.25.1",
     "lodash.debounce": "4.0.8",
     "nanoid": "3.1.23"
   },

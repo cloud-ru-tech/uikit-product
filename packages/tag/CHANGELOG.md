@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.7.7...@sbercloud/uikit-react-tag@0.7.8) (2021-08-20)
+
+
+### Bug Fixes
+
+* correct links to changed repository ([b1e05f0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1e05f081150fb34fff897ebde16c265c953e2b4))
+
+
+
+
+
 ## [0.7.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-tag@0.7.6&sourceBranch=refs/tags/@sbercloud/uikit-react-tag@0.7.7) (2021-08-20)
 
 

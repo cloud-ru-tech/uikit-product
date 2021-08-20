@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-spin@0.5.1...@sbercloud/uikit-react-spin@0.5.2) (2021-08-20)
+
+
+### Bug Fixes
+
+* correct links to changed repository ([b1e05f0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1e05f081150fb34fff897ebde16c265c953e2b4))
+
+
+
+
+
 ## [0.5.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-spin@0.5.0&sourceBranch=refs/tags/@sbercloud/uikit-react-spin@0.5.1) (2021-08-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-spin

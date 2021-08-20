@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-no-data-page@0.6.1...@sbercloud/uikit-react-no-data-page@0.7.0) (2021-08-20)
+
+
+### Bug Fixes
+
+* correct links to changed repository ([b1e05f0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1e05f081150fb34fff897ebde16c265c953e2b4))
+
+
+### Features
+
+* button has been implemented according to design system ([1383a53](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1383a53e463723fde1148ffeb41e8b9669d71bad))
+
+
+### BREAKING CHANGES
+
+* button has been implemented according to design system
+
+
+
+
+
 ## [0.6.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-no-data-page@0.6.0&sourceBranch=refs/tags/@sbercloud/uikit-react-no-data-page@0.6.1) (2021-08-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-no-data-page
