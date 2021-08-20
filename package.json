@@ -12,8 +12,6 @@
     "clean:modules": "rimraf \"./packages/**/node_modules/\"",
     "changelog": "node scripts/changelog.js",
     "compile": "lerna run compile && node scripts/compile",
-    "release:first-stable": "node scripts/release.js -c --v1",
-    "release:conventional": "node scripts/release.js -c",
     "build": "npm run clean && lerna bootstrap --hoist && npm run compile",
     "all:cleaninstall": "node scripts/remove-modules.js && npm cache clean -f && npm i && npm run build",
     "prepare": "node_modules/.bin/husky install"

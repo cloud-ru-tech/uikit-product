@@ -55,6 +55,3 @@ rules: [
    changeTheme(Themes.Purple)
 ```
 
-```
-
-```
