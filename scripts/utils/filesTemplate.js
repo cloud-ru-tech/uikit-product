@@ -26,10 +26,10 @@ const packageJson = ({ user, email, packageTitle, packageName, packageDescriptio
     description: `${packageDescription}`,
     main: './dist/esm/index.js',
     module: './dist/esm/index.js',
-    homepage: `https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/browse/${PackagesRootFolder}/${packageRootFolderName}/README.md`,
+    homepage: `https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/${packageRootFolderName}`,
     repository: {
       type: 'git',
-      url: 'ssh://git@bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0.git',
+      url: 'https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git',
     },
     author: `${user} <${email}>`,
     contributors: [`${user} <${email}>`],
