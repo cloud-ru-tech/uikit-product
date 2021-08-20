@@ -1,6 +1,6 @@
 ---
 
 include:
-  - project: templates/pipelines
-    ref: aic
-    file: /.gitlab-ci-uikit.yml
+  - project: products/aicloud/cicd
+    ref: master
+    file: /gitlab-ci-uikit.yml
