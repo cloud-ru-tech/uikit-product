@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-cards",
   "title": "React Cards",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-checkbox": "0.5.2",
-    "@sbercloud/uikit-react-dropdown": "0.6.0",
+    "@sbercloud/uikit-react-dropdown": "0.6.1",
     "@sbercloud/uikit-react-icons": "1.4.0",
     "@sbercloud/uikit-react-paginator-private": "0.5.1",
     "@sbercloud/uikit-theme": "0.25.0"
