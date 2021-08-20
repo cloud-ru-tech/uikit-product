@@ -3,17 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.7.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.7.1) (2021-08-20)
-
-
-### Bug Fixes
-
-* change button icon type ([AICE-2780](https://jira.sbercloud.tech/browse/AICE-2780)) ([941865e](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/941865e0d952518c65b71f4b8b1bdb15ce31052d))
-
-
-
-
-
 # [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.6.11&sourceBranch=refs/tags/@sbercloud/uikit-react-datepicker@0.7.0) (2021-08-19)
 
 

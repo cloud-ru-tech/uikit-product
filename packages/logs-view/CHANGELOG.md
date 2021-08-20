@@ -3,14 +3,6 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.7.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-logs-view@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-logs-view@0.7.1) (2021-08-20)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-logs-view
-
-
-
-
-
 # [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-logs-view@0.6.4&sourceBranch=refs/tags/@sbercloud/uikit-react-logs-view@0.7.0) (2021-08-19)
 
 
