@@ -14,7 +14,8 @@
     "compile": "lerna run compile && node scripts/compile",
     "build": "npm run clean && lerna bootstrap --hoist && npm run compile",
     "all:cleaninstall": "node scripts/remove-modules.js && npm cache clean -f && npm i && npm run build",
-    "prepare": "node_modules/.bin/husky install"
+    "prepare": "node_modules/.bin/husky install",
+    "check-deps": "node scripts/check-dependencies.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -49,6 +50,7 @@
     "babel-loader": "8.2.2",
     "colors": "1.4.0",
     "conventional-changelog-sbercloud": "file:conventional-changelog-sbercloud",
+    "depcheck": "1.4.2",
     "dependency-graph": "0.11.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
