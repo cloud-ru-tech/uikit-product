@@ -26,6 +26,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/uikit-react-button": "1.0.2",
+    "@sbercloud/uikit-react-icons": "1.4.1",
     "@sbercloud/uikit-react-tooltip-private": "0.6.1",
     "@sbercloud/uikit-theme": "0.25.1"
   },

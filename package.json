@@ -14,8 +14,7 @@
     "compile": "lerna run compile && node scripts/compile",
     "build": "npm run clean && lerna bootstrap --hoist && npm run compile",
     "all:cleaninstall": "node scripts/remove-modules.js && npm cache clean -f && npm i && npm run build",
-    "prepare": "node_modules/.bin/husky install",
-    "check-deps": "node scripts/check-dependencies.js"
+    "prepare": "node_modules/.bin/husky install"
   },
   "dependencies": {},
   "devDependencies": {

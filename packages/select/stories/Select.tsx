@@ -1,11 +1,12 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
+
 import { Avatar } from '@sbercloud/uikit-react-avatar';
 import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { RadioIcon } from '@sbercloud/uikit-react-radio';
-import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -18,7 +19,7 @@ import {
   OptionTypeBase,
   Select,
 } from '../src';
-import { groupedServices, services } from '../src/helpers/mockData';
+import { groupedServices, services } from './helpers/mockData';
 
 export default {
   title: 'Not stable/Select/Select',

@@ -9,7 +9,7 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CheckedType, UsersByGroupSelect } from '../src';
 import { IOptionType } from '../src/helperComponents/InlineTreeSelect';
-import { treeOptions } from '../src/helpers/mockData';
+import { treeOptions } from './helpers/mockData';
 
 export default {
   title: 'Not stable/Select/Users By Group Select',
