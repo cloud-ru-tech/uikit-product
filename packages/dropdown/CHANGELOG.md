@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.6.2...@sbercloud/uikit-react-dropdown@0.6.3) (2021-08-22)
+
+
+### Bug Fixes
+
+* wrong dependency flow has been fixed ([717b9d0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/717b9d021ad04d9df8c52db0fdfeeec0ac654ba9))
+
+
+
+
+
 ## [0.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.6.1...@sbercloud/uikit-react-dropdown@0.6.2) (2021-08-20)
 
 
