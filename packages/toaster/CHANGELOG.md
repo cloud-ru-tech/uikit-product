@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toaster@0.8.0...@sbercloud/uikit-react-toaster@0.9.0) (2021-08-23)
+
+
+### Features
+
+* create custom toast | [AICDC-3368](https://jira.sbercloud.tech/browse/AICDC-3368) ([c94b282](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/c94b282720dab2558fcb815c2e0eb986a3dc9626))
+
+
+
+
+
 # [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toaster@0.7.0...@sbercloud/uikit-react-toaster@0.8.0) (2021-08-20)
 
 
