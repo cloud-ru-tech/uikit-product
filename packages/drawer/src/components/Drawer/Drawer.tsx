@@ -2,7 +2,7 @@ import 'rc-drawer/assets/index.css';
 
 import { cx } from '@linaria/core';
 import RcDrawer from 'rc-drawer';
-import React, { useCallback, useEffect, useMemo } from 'react';
+import { useCallback, useEffect, useState, useMemo } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -52,6 +52,8 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
   const { code: language } = useLanguage({ onlyEnabledLanguage: true });
 
   const closeBtnText = useMemo(() => textProvider(language, Texts.close), [language]);
+  const [shouldRenderDrawer, setShouldRenderDrawer] = useState(false);
+  const [internalIsDrawerOpen, setInternalIsDrawerOpen] = useState(false);
 
   const handleClick = useCallback(
     (e: Event) => {
@@ -90,7 +92,22 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
 
   useEffect(() => {
     if (open) {
+      // Эта вся история нужна для того, чтобы не рендерить drawer в моменте, когда он закрыт. Сафари
+      // обрабатывает drawer-mask таким образом, что он остается поверх, хоть и не видим => блочит любые действия
+      // При открытии модалки:
+      // Сначала мы должны отрендерить компоненту с состоянием open = false
+      // Затем мы выставляем open = true, чтобы произошла анимация открытия
+      setShouldRenderDrawer(true);
+      setTimeout(() => setInternalIsDrawerOpen(true), 0);
       window.addEventListener('click', handleClick);
+    } else {
+      // Здесь мы сначала устанавливаем open = false,
+      // И после закрытия Drawer удаляем его из DOM
+      setInternalIsDrawerOpen(false);
+      setTimeout(() => {
+        setShouldRenderDrawer(false);
+        window.removeEventListener('click', handleClick);
+      }, 500);
     }
 
     return () => {
@@ -98,9 +115,13 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
     };
   }, [handleClick, open]);
 
+  if (!shouldRenderDrawer) {
+    return null;
+  }
+
   return (
     <RcDrawer
-      open={open}
+      open={internalIsDrawerOpen}
       level={null}
       width={width}
       handler={false}
