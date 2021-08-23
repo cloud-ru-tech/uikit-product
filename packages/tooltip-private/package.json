@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tooltip-private",
   "title": "React Tooltip Private",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "sideEffects": [
     "*.css",
     "*.woff",
