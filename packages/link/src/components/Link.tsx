@@ -21,7 +21,7 @@ export const Link = ({
   variant = Variant.OnPrimary,
   text,
   onClick,
-  showIcon,
+  showIcon = false,
   target = '_blank',
   href = '#',
   disabled = false,
@@ -34,11 +34,12 @@ export const Link = ({
     className={className}
     href={href}
     data-disabled={disabled}
+    showIcon={showIcon}
     rel={target === '_blank' ? 'noopener noreferrer' : undefined}
     {...extractSupportProps(rest)}
   >
     {text}
-    {showIcon && <StyledArrowLinkInterfaceSVG fill='currentColor' />}
+    {showIcon && <StyledArrowLinkInterfaceSVG />}
   </StyledLink>
 );
 

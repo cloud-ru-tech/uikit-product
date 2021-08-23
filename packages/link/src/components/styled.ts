@@ -15,10 +15,11 @@ export const StyledArrowLinkInterfaceSVG = styled(ArrowLinkInterfaceSVG)`
   margin-left: 4px;
 `;
 
-export const StyledLink = styled.a`
+export const StyledLink = styled.a<{ showIcon: boolean }>`
   display: flex;
   align-items: center;
   cursor: pointer;
+  fill: currentColor;
 
   &[data-disabled='true'] {
     pointer-events: none;
@@ -28,7 +29,8 @@ export const StyledLink = styled.a`
   ${TYPOGRAPHY_VARIABLES.TEXT_2}
 
   &[data-variant='${Variant.OnPrimary}'] {
-    color: var(${COLORS.PRIMARY_FILL});
+    color: ${({ showIcon }) => (showIcon ? `var(${COLORS.PRIMARY_COLOR})` : `var(${COLORS.PRIMARY_FILL})`)};
+    fill: ${({ showIcon }) => (showIcon ? `var(${COLORS.PRIMARY_FILL})` : 'currentColor')};
 
     :hover {
       color: var(${COLORS.PRIMARY_FILL_HOVER});
