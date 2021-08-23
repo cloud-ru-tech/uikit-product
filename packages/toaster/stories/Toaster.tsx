@@ -2,11 +2,12 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { Button } from '@sbercloud/uikit-react-button';
+import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Toaster as CToaster, ToasterOptions, ToasterProps, dismissToast, toaster } from '../src';
+import { Toaster as CToaster, ToasterOptions, ToasterProps, customToast, dismissToast, toaster } from '../src';
 
 export default {
   title: 'Not stable/Toaster',
@@ -97,6 +98,16 @@ const LineWrapper = styled.div`
   }
 `;
 
+const CustomNode = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  background-color: var(${EXPORT_VARS.PRESET.GRACE_5});
+`;
+
 const Template: Story<ToasterProps & { showActions: boolean; autoClose: boolean }> = ({
   showActions,
   autoClose,
@@ -132,6 +143,13 @@ const Template: Story<ToasterProps & { showActions: boolean; autoClose: boolean 
         onClick={() => dismissToast('customizedCustomId')}
         text='Close CUSTOMIZED'
       />
+    </LineWrapper>
+    <LineWrapper>
+      <Button
+        onClick={() => customToast(<CustomNode>custom</CustomNode>, { toastId: 'customNodeId' })}
+        text='CUSTOM NODE'
+      />
+      <Button variant={Button.variants.Outline} onClick={() => dismissToast('customNodeId')} text='Close CUSTOM NODE' />
     </LineWrapper>
 
     {PREDEFINED_ITEMS.map(({ title, props, options }) => (

@@ -15,6 +15,7 @@ export const toastClassName = css`
 export const toastBodyClassName = css`
   .${toastContainerClassName} & {
     padding: 0;
+    margin: 0;
     width: 100%;
   }
 `;
