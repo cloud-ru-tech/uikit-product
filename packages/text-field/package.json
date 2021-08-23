@@ -1,7 +1,7 @@
 {
-  "name": "@sbercloud/uikit-react-logs-view",
-  "title": "React Logs View",
-  "version": "0.7.2",
+  "name": "@sbercloud/uikit-react-text-field",
+  "title": "React Text Field",
+  "version": "0.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -10,14 +10,14 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/logs-view",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/text-field",
   "repository": {
     "type": "git",
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git"
   },
-  "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
+  "author": "Egor Bibin <evbibin@sbercloud.ru>",
   "contributors": [
-    "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
+    "Egor Bibin <evbibin@sbercloud.ru>"
   ],
   "files": [
     "dist",
@@ -26,9 +26,12 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/uikit-theme": "0.25.1",
+    "@sbercloud/uikit-typography": "0.5.2",
     "@sbercloud/uikit-react-button": "1.0.2",
-    "@sbercloud/uikit-theme": "0.25.1"
+    "@sbercloud/uikit-utils": "0.6.0"
   },
+  "devDependencies": {},
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",
     "@linaria/react": "^3.0.0-beta.3",
