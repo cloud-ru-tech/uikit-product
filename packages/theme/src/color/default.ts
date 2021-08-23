@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
-import { BLACK_ALFA, BLUE_GREY, PRESET, GREEN, GREY, PURPLE, WHITE_ALFA } from './vars';
+
+import { BLACK_ALFA, BLUE_GREY, GREEN, GREY, PRESET, PURPLE, WHITE_ALFA } from './vars';
 
 export const COLORS_DEFAULT_MAP = `
  ${GREY[0]}: #ffffff;
@@ -26,7 +27,7 @@ export const COLORS_DEFAULT_MAP = `
 
  ${PURPLE[5]}: #f6f6f6;
  ${PURPLE[10]}: #eeeeff;
- ${PURPLE[25]}: #d5d5d5;
+ ${PURPLE[25]}: #d5d5fe;
  ${PURPLE[50]}: #aaabfd;
  ${PURPLE[75]}: #8082fb;
  ${PURPLE[100]}: #5558fa;
