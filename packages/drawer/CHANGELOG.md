@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-drawer@0.11.3...@sbercloud/uikit-react-drawer@0.12.0) (2021-08-24)
+
+
+### Features
+
+* added drawer remove from dom on close ([AICDC-3189](https://jira.sbercloud.tech/browse/AICDC-3189)) ([e4f9037](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/e4f90370e2cde072db0a2d9ebe354b79f4579a09))
+
+
+### BREAKING CHANGES
+
+* added drawer remove from dom on close (AICDC-3189)
+
+
+
+
+
 ## [0.11.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-drawer@0.11.2...@sbercloud/uikit-react-drawer@0.11.3) (2021-08-23)
 
 
