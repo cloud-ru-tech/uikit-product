@@ -159,6 +159,7 @@ export default {\n\
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],\n\
   },\n\
   design: {\n\
+    name: 'Figma',\n\
     type: 'figma',\n\
     //TODO\n\
     url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',\n\
