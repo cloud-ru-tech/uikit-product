@@ -1,22 +1,45 @@
 import { cx } from '@linaria/core';
-import ReactSwitch, { ReactSwitchProps } from 'react-switch';
+import { useMemo } from 'react';
+import ReactSwitch from 'react-switch';
 
-import { switchClassName, switchClassNameChecked, switchClassNameDisabled } from './styled';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-export const Switch: React.FC<ReactSwitchProps> = ({ className, ...rest }) => (
-  <ReactSwitch
-    handleDiameter={10}
-    height={14}
-    width={24}
-    uncheckedIcon={false}
-    checkedIcon={false}
-    activeBoxShadow=''
-    className={cx(
-      switchClassName,
-      rest.checked && switchClassNameChecked,
-      rest.disabled && switchClassNameDisabled,
-      className,
-    )}
-    {...rest}
-  />
-);
+import { Size, SizePropsMap } from './constants';
+import { Wrapper, switchClassName, switchClassNameChecked, switchClassNameDisabled } from './styled';
+
+export type SwitchProps = {
+  checked: boolean;
+  onChange(checked: boolean): void;
+  className?: string;
+  disabled?: boolean;
+  size?: Size;
+};
+
+export function Switch({
+  checked,
+  onChange,
+  className,
+  disabled = false,
+  size = Size.Small,
+  ...rest
+}: WithSupportProps<SwitchProps>) {
+  const { height, width, handleDiameter } = useMemo(() => SizePropsMap[size], [size]);
+  return (
+    <Wrapper data-disabled={disabled || undefined} className={className} {...extractSupportProps(rest)}>
+      <ReactSwitch
+        handleDiameter={handleDiameter}
+        height={height}
+        width={width}
+        uncheckedIcon={false}
+        checkedIcon={false}
+        activeBoxShadow=''
+        className={cx(switchClassName, checked && switchClassNameChecked, disabled && switchClassNameDisabled)}
+        checked={checked}
+        onChange={onChange}
+        disabled={disabled}
+      />
+    </Wrapper>
+  );
+}
+
+Switch.sizes = Size;

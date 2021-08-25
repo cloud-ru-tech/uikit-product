@@ -27,6 +27,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-theme": "0.25.1",
+    "@sbercloud/uikit-utils": "0.6.0",
     "react-switch": "6.0.0"
   },
   "peerDependencies": {

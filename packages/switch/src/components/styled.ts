@@ -1,39 +1,62 @@
 import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
-const { COLORS_SWITCH } = DEPRECATED_EXPORT_VARS;
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
 
-export const switchClassNameDisabled = css`
-  cursor: not-allowed;
+export const Wrapper = styled.div`
+  cursor: pointer;
+  &[data-disabled] {
+    cursor: not-allowed;
+  }
 `;
 
-export const switchClassName = css`
-  .react-switch-bg {
-    background-color: transparent !important;
-  }
+export const switchClassNameDisabled = css``;
 
-  background-color: var(${COLORS_SWITCH.UNACTIVE_BG});
+export const switchClassName = css`
+  opacity: 1 !important;
+
+  .react-switch-bg {
+    background: unset !important;
+    cursor: unset !important;
+  }
+  
+  .react-switch-handle {
+    cursor: unset !important;
+    background-color: var(${COLORS.HANDLE}) !important;
+  }
+  
+  &.${switchClassNameDisabled} {
+    .react-switch-handle {
+      background-color: var(${COLORS.HANDLE_DISABLED}) !important;
+    }
+  }
+  
+  
+  background-color: var(${COLORS.BACKGROUND_INACTIVE});
 
   &:not(.${switchClassNameDisabled}):hover {
-      background-color: var(${COLORS_SWITCH.UNACTIVE_HOVER_BG});
+      background-color: var(${COLORS.BACKGROUND_INACTIVE_HOVERED});
     }
   }
 
   &.${switchClassNameDisabled} {
-    background-color: var(${COLORS_SWITCH.UNACTIVE_DISABLED_BG});
+    background-color: var(${COLORS.BACKGROUND_INACTIVE_DISABLED});
   }
 `;
 
 export const switchClassNameChecked = css`
-  background-color: var(${COLORS_SWITCH.ACTIVE_BG});
+  background-color: var(${COLORS.BACKGROUND_ACTIVE});
 
   &:not(.${switchClassNameDisabled}):hover {
-    background-color: var(${COLORS_SWITCH.ACTIVE_HOVER_BG});
+    background-color: var(${COLORS.BACKGROUND_ACTIVE_HOVERED});
   }
 
   &.${switchClassNameDisabled} {
-    opacity: 0.4 !important;
-    background-color: var(${COLORS_SWITCH.ACTIVE_DISABLED_BG});
+    background-color: var(${COLORS.BACKGROUND_ACTIVE_DISABLED});
   }
 }`;
