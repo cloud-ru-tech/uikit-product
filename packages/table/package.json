@@ -34,7 +34,7 @@
     "@sbercloud/uikit-react-icons": "1.4.1",
     "@sbercloud/uikit-react-modal": "0.13.3",
     "@sbercloud/uikit-react-paginator-private": "0.5.2",
-    "@sbercloud/uikit-react-spin": "0.5.2",
+    "@sbercloud/uikit-react-spinner": "0.5.2",
     "@sbercloud/uikit-react-status": "0.6.2",
     "@sbercloud/uikit-react-toolbar": "0.10.4",
     "@sbercloud/uikit-react-tooltip": "0.6.4",

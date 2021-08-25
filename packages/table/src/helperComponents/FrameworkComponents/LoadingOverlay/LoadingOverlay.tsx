@@ -1,3 +1,3 @@
-import { Spin } from '@sbercloud/uikit-react-spin';
+import { Spinner } from '@sbercloud/uikit-react-spinner';
 
-export const LoadingOverlay = Spin;
+export const LoadingOverlay = Spinner;
