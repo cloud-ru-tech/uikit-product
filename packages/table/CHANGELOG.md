@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.11.4...@sbercloud/uikit-react-table@0.12.0) (2021-08-25)
+
+
+### Features
+
+* Spin renamed to Spinner ([AICE-3012](https://jira.sbercloud.tech/browse/AICE-3012)) ([e9a51b8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/e9a51b8cfe23b3b8565c4c72834540d403ee35f4))
+
+
+
+
 ## [0.11.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.11.3...@sbercloud/uikit-react-table@0.11.4) (2021-08-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table

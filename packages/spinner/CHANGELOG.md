@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.0.0 (2021-08-25)
+
+
+### Features
+
+* First stable version ([AICE-3012](https://jira.sbercloud.tech/browse/AICE-3012)) ([e9a51b8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/e9a51b8cfe23b3b8565c4c72834540d403ee35f4))
+
+
+### BREAKING CHANGES
+
+* Spin renamed to Spinner.
+* Props set has been changed. Some props were deleted.
+
+
+
+
+
 ## [0.5.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-spin@0.5.1...@sbercloud/uikit-react-spin@0.5.2) (2021-08-20)
 
 
