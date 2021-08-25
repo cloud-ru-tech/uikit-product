@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.25.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.25.1...@sbercloud/uikit-theme@0.25.2) (2021-08-25)
+
+
+### Bug Fixes
+
+* fix purple 25 color ([34ce18c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/34ce18c682938d99e85ce79a5cc3942a2c23585c))
+
+
+
+
+
 ## [0.25.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.25.0...@sbercloud/uikit-theme@0.25.1) (2021-08-20)
 
 

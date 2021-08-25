@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-switch@0.5.2...@sbercloud/uikit-react-switch@1.0.0) (2021-08-25)
+
+
+### Features
+
+* First stable version ([AICE-3011](https://jira.sbercloud.tech/browse/AICE-3011)) ([a658d2c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/a658d2c0e15ac79baea798373065142f3010a688))
+
+
+
+
+
 ## [0.5.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-switch@0.5.1...@sbercloud/uikit-react-switch@0.5.2) (2021-08-20)
 
 
