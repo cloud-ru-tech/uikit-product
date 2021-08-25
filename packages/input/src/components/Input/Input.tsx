@@ -124,7 +124,7 @@ export const Input = ({
       },
       {
         enabled: allowClear && correctValue && correctValue !== '',
-        padding: 44,
+        padding: isViewMode ? 44 : 74,
       },
       {
         enabled: !!postfix,
@@ -143,7 +143,7 @@ export const Input = ({
     });
 
     return result;
-  }, [allowCopy, allowClear, postfix, onOpenDialog, correctValue]);
+  }, [allowCopy, allowClear, postfix, onOpenDialog, correctValue, isViewMode]);
 
   return (
     <StyledWrap className={wrapperClassName} ref={wrapperRef} {...extractSupportProps(rest)}>
