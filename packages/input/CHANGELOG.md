@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@0.14.3...@sbercloud/uikit-react-input@0.14.4) (2021-08-25)
+
+
+### Bug Fixes
+
+* changed the padding-right of the input, which contains the close icon and the security icon ([335a9cc](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/335a9cc86f72f2d86daa0ee4066cb60852e3d908))
+
+
+
+
+
 ## [0.14.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@0.14.2...@sbercloud/uikit-react-input@0.14.3) (2021-08-23)
 
 
