@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-link@1.0.3...@sbercloud/uikit-react-link@1.0.4) (2021-08-25)
+
+
+### Bug Fixes
+
+* change text color on green theme ([CP-1984](https://jira.sbercloud.tech/browse/CP-1984)) ([7c15173](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/7c15173576b958a8006bc9ef22de25e8716224e8))
+
+
+
+
+
 ## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-link@1.0.2...@sbercloud/uikit-react-link@1.0.3) (2021-08-20)
 
 

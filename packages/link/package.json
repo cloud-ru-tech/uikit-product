@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-link",
   "title": "React Link",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "sideEffects": [
     "*.css",
     "*.woff",
