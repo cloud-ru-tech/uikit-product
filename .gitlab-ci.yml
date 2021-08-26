@@ -1,6 +1,6 @@
 ---
 
 include:
-  - project: products/aicloud/cicd
+  - project: sbercloud-ui/cicd
     ref: master
     file: /gitlab-ci-uikit.yml
