@@ -21,7 +21,7 @@ export function getDefaultParameters({
           url: figmaUrl,
         }
       : undefined,
-    badges: [BADGE.NEEDS_REVISION, BADGE.BETA],
+    badges: [BADGE.STABLE],
     controls: { include: ['disabled'].concat(extraControlsInclude) },
   };
 }

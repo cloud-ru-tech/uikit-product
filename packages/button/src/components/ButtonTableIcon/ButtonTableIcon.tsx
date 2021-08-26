@@ -4,6 +4,7 @@ import {
   EyeOpenedInterfaceSVG,
   PauseInterfaceSVG,
   PlayInterfaceSVG,
+  RefreshInterfaceSVG,
   StopInterfaceSVG,
 } from '@sbercloud/uikit-react-icons';
 import { useLanguage } from '@sbercloud/uikit-utils';
@@ -20,14 +21,19 @@ export type ButtonTableIconProps = CommonButtonProps & {
   loading?: boolean;
 };
 
+const Icons = {
+  [Variant.Pause]: <PauseInterfaceSVG />,
+  [Variant.Stop]: <StopInterfaceSVG />,
+  [Variant.Refresh]: <RefreshInterfaceSVG />,
+  [Variant.Play]: <PlayInterfaceSVG />,
+  [Variant.View]: <EyeOpenedInterfaceSVG />,
+};
+
 const ButtonTableIconBase = forwardRef<HTMLButtonElement, ButtonTableIconProps>(
   ({ variant = Variant.Play, loading, ...rest }, ref) => (
     <S.Button data-loading={loading || undefined} ref={ref} {...extractCommonButtonProps(rest)}>
       {loading && <LoadingIcon />}
-      {!loading && variant === Variant.Pause && <PauseInterfaceSVG />}
-      {!loading && variant === Variant.Stop && <StopInterfaceSVG />}
-      {!loading && variant === Variant.Play && <PlayInterfaceSVG />}
-      {!loading && variant === Variant.View && <EyeOpenedInterfaceSVG />}
+      {!loading && Icons[variant]}
     </S.Button>
   ),
 );
