@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.0.4...@sbercloud/uikit-react-button@1.1.0) (2021-08-27)
+
+
+### Features
+
+* refresh icon was added to the ButtonTableIcon ([64c7073](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/64c7073b5c97b4f9f53298a21d33381636a37c17))
+
+
+
+
+
 ## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.0.3...@sbercloud/uikit-react-button@1.0.4) (2021-08-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
