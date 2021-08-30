@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { MouseEventHandler, useCallback, useMemo, useState } from 'react';
 
 import { ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
 import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -21,7 +21,7 @@ export type CopyInputProps = {
   security?: boolean;
   labelMinWidth?: string;
   wrapperClassName?: string;
-  onCopy?: () => void;
+  onCopy?: MouseEventHandler<HTMLButtonElement | HTMLInputElement> | undefined;
 };
 
 export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
@@ -41,7 +41,7 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
     (e: React.MouseEvent<HTMLInputElement>) => {
       e.stopPropagation();
 
-      onCopy?.();
+      onCopy?.(e);
     },
     [onCopy],
   );
