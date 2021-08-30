@@ -1,3 +1,5 @@
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+
 import { Content, Dot, Wrapper } from './styled';
 
 export enum Types {
@@ -15,9 +17,16 @@ export type StatusProps = {
   children?: React.ReactNode;
 };
 
-export function Status({ type = Types.Success, className, title, dotColor, children }: StatusProps) {
+export function Status({
+  type = Types.Success,
+  className,
+  title,
+  dotColor,
+  children,
+  ...rest
+}: WithSupportProps<StatusProps>) {
   return (
-    <Wrapper className={className} title={title}>
+    <Wrapper className={className} title={title} {...extractSupportProps(rest)}>
       <Dot data-type={dotColor ? undefined : type} color={dotColor} />
       {children && <Content>{children}</Content>}
     </Wrapper>

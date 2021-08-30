@@ -1,7 +1,8 @@
 import { styled } from '@linaria/react';
-import { H3 } from '@sbercloud/uikit-typography';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+
+import { H3 } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -48,7 +49,7 @@ const Template: Story<CardHeaderProps> = ({ ...args }) => {
               setChecked(isChecked);
             }}
             onFavouriteChange={() => {}}
-            moreActions={[{ name: 'Удалить', onClick: () => {} }]}
+            moreActions={[{ name: 'Удалить', id: 'card__delete_atction', onClick: () => {} }]}
           />
           <CardContentStyled>
             <H3>Example card</H3>

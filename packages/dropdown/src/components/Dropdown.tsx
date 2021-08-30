@@ -3,11 +3,13 @@ import { useCallback, useState } from 'react';
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { TooltipMenuItemPrivate, TooltipMenuPrivate, TooltipPrivate } from '@sbercloud/uikit-react-tooltip-private';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import * as S from './styled';
 
 export type TDropdownMenuActionType = {
   name: () => React.ReactNode | string;
+  id?: string;
   onClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
 };
 
@@ -20,11 +22,12 @@ export type TDropdownMenuCustomActions = (props: TDropdownMenuActionProps) => Re
 
 export interface DropdownMenuProps {
   actions: TDropdownMenuCustomActions | TDropdownMenuActionType[] | React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const DropdownItem = TooltipMenuItemPrivate;
 
-export const DropdownMenu: React.FC<DropdownMenuProps> = ({ actions, children }) => {
+export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<DropdownMenuProps>) => {
   const [on, setOn] = useState(false);
   const set = useCallback(on => setOn(on), []);
   const hide = useCallback(() => setOn(false), []);
@@ -50,10 +53,10 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({ actions, children })
       delayShow={0}
       delayHide={0}
       tooltip={
-        <TooltipMenuPrivate>
+        <TooltipMenuPrivate data-test-id='dropdown__tooltip-menu'>
           {isActionsArray &&
-            (actions as TDropdownMenuActionType[]).map(menuItem => {
-              const { name } = menuItem;
+            (actions as TDropdownMenuActionType[]).map((menuItem, index) => {
+              const { name, id } = menuItem;
               const isNameFn = typeof name === 'function';
               const handlerOnClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
                 event?.stopPropagation();
@@ -61,7 +64,12 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({ actions, children })
                 hide();
               };
               return (
-                <TooltipMenuItemPrivate key={`menu-item-${menuItem.name}`} onClick={handlerOnClick}>
+                <TooltipMenuItemPrivate
+                  data-test-option-index={index}
+                  key={`menu-item-${menuItem.name}`}
+                  onClick={handlerOnClick}
+                  {...(id ? { 'data-test-option-id': id } : {})}
+                >
                   {isNameFn ? name() : name}
                 </TooltipMenuItemPrivate>
               );
@@ -72,7 +80,12 @@ export const DropdownMenu: React.FC<DropdownMenuProps> = ({ actions, children })
       }
     >
       {children || (
-        <ButtonIcon icon={<MoreInterfaceSVG />} tooltip='Меню' tooltipPlacement={ButtonIcon.placements.Right} />
+        <ButtonIcon
+          icon={<MoreInterfaceSVG />}
+          tooltip='Меню'
+          tooltipPlacement={ButtonIcon.placements.Right}
+          {...extractSupportProps(rest)}
+        />
       )}
     </TooltipPrivate>
   );

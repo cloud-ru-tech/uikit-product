@@ -1,8 +1,9 @@
-import { FC } from 'react';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { AdditionalHoverImageStyled, AdditionalHoverStyled, CardContentWrapStyled, ContainerStyled } from './styled';
 
 export type CardProps = {
+  children: React.ReactNode;
   className?: string;
   isVertical: boolean;
   selected?: boolean;
@@ -12,7 +13,7 @@ export type CardProps = {
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
-export const Card: FC<CardProps> = ({
+export const Card = ({
   children,
   onClick,
   selected,
@@ -21,13 +22,15 @@ export const Card: FC<CardProps> = ({
   hoverClassName,
   additionalHover,
   additionalHoverImage,
-}) => (
+  ...rest
+}: WithSupportProps<CardProps>) => (
   <ContainerStyled
     className={className}
     type='button'
     onClick={onClick}
     selected={selected}
     additionalHover={additionalHover}
+    {...extractSupportProps(rest)}
   >
     {additionalHover ? (
       <AdditionalHoverStyled data-additional-hover isVertical={isVertical} className={hoverClassName}>

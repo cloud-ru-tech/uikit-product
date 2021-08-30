@@ -27,7 +27,8 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-theme": "0.25.2",
-    "@sbercloud/uikit-typography": "0.5.3"
+    "@sbercloud/uikit-typography": "0.5.3",
+    "@sbercloud/uikit-utils": "0.6.1"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.3",

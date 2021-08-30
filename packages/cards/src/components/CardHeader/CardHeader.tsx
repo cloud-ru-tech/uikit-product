@@ -14,6 +14,7 @@ export type CardHeaderProps = {
   onFavouriteChange?: (isFavourite: boolean) => void;
   moreActions?: {
     name: string;
+    id?: string;
     onClick(e: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
   }[];
 };
@@ -52,16 +53,16 @@ export const CardHeader: FC<CardHeaderProps> = props => {
   return (
     <HeaderStyled className={className}>
       {onCheckboxClick && typeof checked === 'boolean' && (
-        <Checkbox checked={checked || false} handleChange={handleCheckedClick} />
+        <Checkbox data-test-id='card-header__checkbox' checked={checked || false} handleChange={handleCheckedClick} />
       )}
       {children}
       <ButtonGroupStyled>
         {onFavouriteChange && (
-          <FavouriteWrapStyled onClick={handleFavouriteClick}>
+          <FavouriteWrapStyled onClick={handleFavouriteClick} data-test-id='card-header__favorite-button'>
             <FavouriteInterfaceSVG className={favouriteButtonClassName} data-filled={isFavourite} />
           </FavouriteWrapStyled>
         )}
-        {moreActions && <DropdownMenu actions={moreActions} />}
+        {moreActions && <DropdownMenu data-test-id='card-header__dropdown-menu' actions={moreActions} />}
       </ButtonGroupStyled>
     </HeaderStyled>
   );

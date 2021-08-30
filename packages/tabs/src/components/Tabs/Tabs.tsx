@@ -1,4 +1,6 @@
-import { Children, Component, FC, ReactElement, ReactNode, useEffect, useReducer } from 'react';
+import { Children, Component, ReactElement, ReactNode, useEffect, useReducer } from 'react';
+
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { TabsContext } from '../../helpers/context';
 import { reducer, setValue } from '../../helpers/reducer';
@@ -16,9 +18,10 @@ export interface ITabsProps {
   theme?: TabsTheme;
   className?: string;
   defaultKey?: IdentKey;
+  children?: React.ReactNode;
 }
 
-export const Tabs: FC<ITabsProps> = ({ children, theme, className, defaultKey }) => {
+export const Tabs = ({ children, theme, className, defaultKey, ...rest }: WithSupportProps<ITabsProps>) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
@@ -36,7 +39,11 @@ export const Tabs: FC<ITabsProps> = ({ children, theme, className, defaultKey })
 
   return (
     <TabsContext.Provider value={{ state, dispatch }}>
-      <GroupStyled data-gray={theme === TabsTheme.gray || undefined} className={className}>
+      <GroupStyled
+        data-gray={theme === TabsTheme.gray || undefined}
+        className={className}
+        {...extractSupportProps(rest)}
+      >
         {children}
       </GroupStyled>
       <>

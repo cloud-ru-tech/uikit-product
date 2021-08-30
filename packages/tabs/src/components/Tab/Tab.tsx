@@ -32,6 +32,7 @@ export const Tab: FC<ITabProps> = ({ identKey, label, onClick, isDisabled }) => 
       onClick={isDisabled ? undefined : handleClick}
       data-blue={isActive || undefined}
       data-disabled={isDisabled || undefined}
+      data-test-id={`tab__${identKey}`}
     >
       {label}
     </ListItemStyled>
