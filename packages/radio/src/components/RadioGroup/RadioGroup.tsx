@@ -1,18 +1,17 @@
-import { FC } from 'react';
-
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { RadioGroupContext } from './context';
-import { StyledRadioGroup } from './styled';
 
 export type RadioGroupProps = {
-  value?: string | number;
-  name?: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: React.ReactText;
+  onChange: (value: React.ReactText) => void;
+  children: React.ReactNode;
 };
 
-export const RadioGroup: FC<WithSupportProps<RadioGroupProps>> = ({ children, onChange, value, name, ...rest }) => (
-  <RadioGroupContext.Provider value={{ name, onChange, value }}>
-    <StyledRadioGroup {...extractSupportProps(rest)}>{children}</StyledRadioGroup>
-  </RadioGroupContext.Provider>
-);
+export function RadioGroup({ children, onChange, value, ...rest }: WithSupportProps<RadioGroupProps>) {
+  return (
+    <RadioGroupContext.Provider value={{ onChange, value }}>
+      <div {...extractSupportProps(rest)}>{children}</div>
+    </RadioGroupContext.Provider>
+  );
+}
