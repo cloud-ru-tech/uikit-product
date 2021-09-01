@@ -1,0 +1,102 @@
+import { styled } from '@linaria/react';
+
+import { Text2 } from '@sbercloud/uikit-typography';
+
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
+
+export const HiddenRadio = styled.input`
+  display: none;
+`;
+
+export const IconContainer = styled.div`
+  display: flex;
+
+  fill: var(${COLORS.RADIO.ICON});
+
+  &:not([data-disabled='true']) {
+    &:hover {
+      fill: var(${COLORS.RADIO.HOVER.ICON});
+    }
+  }
+
+  &[data-disabled='true'] {
+    fill: var(${COLORS.RADIO.DISABLED.ICON});
+  }
+
+  &[data-checked='true'] {
+    fill: var(${COLORS.RADIO_SELECTED.ICON});
+
+    &:hover {
+      fill: var(${COLORS.RADIO_SELECTED.HOVER.ICON});
+    }
+
+    &[data-disabled='true'] {
+      fill: var(${COLORS.RADIO_SELECTED.DISABLED.ICON});
+    }
+  }
+`;
+
+export const Label = styled(Text2)`
+  display: inline-block;
+  padding-left: 8px;
+  color: var(${COLORS.RADIO.LABEL});
+`;
+
+export const Wrapper = styled.label`
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+
+    ${Label} {
+      color: var(${COLORS.RADIO.HOVER.LABEL});
+    }
+    ${IconContainer} {
+      fill: var(${COLORS.RADIO.HOVER.ICON});
+    }
+  }
+
+  &[data-disabled='true'] {
+    cursor: not-allowed;
+
+    ${Label} {
+      color: var(${COLORS.RADIO.DISABLED.LABEL});
+    }
+    ${IconContainer} {
+      fill: var(${COLORS.RADIO.DISABLED.ICON});
+    }
+  }
+
+  &[data-checked='true'] {
+    ${Label} {
+      color: var(${COLORS.RADIO_SELECTED.LABEL});
+    }
+    ${IconContainer} {
+      fill: var(${COLORS.RADIO_SELECTED.ICON});
+    }
+
+    &:hover {
+      ${Label} {
+        color: var(${COLORS.RADIO_SELECTED.HOVER.LABEL});
+      }
+      ${IconContainer} {
+        fill: var(${COLORS.RADIO_SELECTED.HOVER.ICON});
+      }
+    }
+
+    &[data-disabled='true'] {
+      ${Label} {
+        color: var(${COLORS.RADIO_SELECTED.DISABLED.LABEL});
+      }
+      ${IconContainer} {
+        fill: var(${COLORS.RADIO_SELECTED.DISABLED.ICON});
+      }
+    }
+  }
+`;

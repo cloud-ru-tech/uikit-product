@@ -1,48 +1,66 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import React from 'react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-import componentChangelog from '../CHANGELOG.md';
-import componentPackage from '../package.json';
-import componentReadme from '../README.md';
-import { Radio, RadioProps } from '../src';
-
-const { COLORS_DRAWER } = DEPRECATED_EXPORT_VARS;
+import { Radio, RadioGroup, RadioProps } from '../src';
+import { getDefaultArgs, getDefaultParameters } from './helpers';
 
 export default {
-  title: 'Not stable/Radio/Radio',
+  title: 'Components/Radio/Radio',
   component: Radio,
 } as Meta;
 
-const Wrapper = styled.div`
-  background-color: var(${COLORS_DRAWER.BACKGROUND});
-  padding: 10px;
+const Container = styled.div<{ theme: Themes }>`
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border-radius: 10%;
+  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  padding: 12px;
 `;
 
-const Template: Story<RadioProps> = ({ ...args }) => (
-  <Wrapper>
-    <Radio {...args} />
-  </Wrapper>
+const Template: Story<RadioProps> = ({ ...args }, { globals: { theme } }) => (
+  <Container theme={theme}>
+    <RadioGroup value='story1' onChange={(value: React.ReactText) => {}}>
+      <Radio {...args} />
+    </RadioGroup>
+  </Container>
 );
 
 export const radio = Template.bind({});
-radio.args = {
+
+radio.parameters = getDefaultParameters({
+  figmaUrl:
+    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0?node-id=3457%3A46340',
+  extraControlsInclude: ['disabled', 'label', 'value'],
+});
+
+radio.args = getDefaultArgs({
+  disabled: false,
   value: 'story1',
-  label: 'story1',
-};
-radio.parameters = {
+  label: 'Название',
+});
+
+radio.argTypes = {
   disabled: {
     control: {
       type: 'boolean',
     },
   },
-  readme: {
-    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  label: {
+    control: {
+      type: 'text',
+    },
   },
-  design: {
-    type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  value: {
+    control: {
+      required: true,
+      type: 'text',
+    },
   },
 };

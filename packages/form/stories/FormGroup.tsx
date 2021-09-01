@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
@@ -25,6 +26,10 @@ const Wrapper = styled.div`
   padding: 24px;
   position: relative;
   background-color: var(${COLORS_DRAWER.BACKGROUND});
+`;
+
+const RadioClassName = css`
+  margin: 12px 0;
 `;
 
 const Template: Story = () => {
@@ -59,10 +64,10 @@ const Template: Story = () => {
         </FormField>
 
         <FormField label='Ограничение тарифа' hint={{ content: 'Подробнее об ограничениях читайте на сайте' }}>
-          <RadioGroup value={limit} name='limit' onChange={(e: any) => setLimit(e.target.value)}>
-            <Radio value='unlimited' label='Неограниченно' />
-            <Radio value='daily' label='Дневной' description='С 00:00 по 23:59' />
-            <Radio value='monthly' label='Месячный' description='Со дня подключения' disabled />
+          <RadioGroup value={limit} onChange={(e: any) => setLimit(e.target.value)}>
+            <Radio value='unlimited' label='Неограничено' className={RadioClassName} />
+            <Radio value='daily' label='Дневной' className={RadioClassName} />
+            <Radio value='monthly' label='Месячный' disabled className={RadioClassName} />
           </RadioGroup>
         </FormField>
       </FormGroup>
@@ -77,10 +82,10 @@ const Template: Story = () => {
         </FormField>
 
         <FormField label='Ограничение тарифа' hint={{ content: 'Подробнее об ограничениях читайте на сайте' }}>
-          <RadioGroup value={limit} name='limit' onChange={(e: any) => setLimit(e.target.value)}>
-            <Radio value='unlimited' label='Неограниченно' />
-            <Radio value='daily' label='Дневной' description='С 00:00 по 23:59' />
-            <Radio value='monthly' label='Месячный' description='Со дня подключения' disabled />
+          <RadioGroup value={limit} onChange={(e: any) => setLimit(e.target.value)}>
+            <Radio value='unlimited' label='Неограничено' className={RadioClassName} />
+            <Radio value='daily' label='Дневной' className={RadioClassName} />
+            <Radio value='monthly' label='Месячный' disabled className={RadioClassName} />
           </RadioGroup>
         </FormField>
       </FormGroup>
