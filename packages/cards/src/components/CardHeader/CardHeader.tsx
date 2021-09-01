@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useCallback, useState } from 'react';
 
 import { Checkbox } from '@sbercloud/uikit-react-checkbox';
 import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
@@ -50,6 +50,8 @@ export const CardHeader: FC<CardHeaderProps> = props => {
     }
   };
 
+  const handleDropdownWrapperClick = useCallback(e => e.stopPropagation(), []);
+
   return (
     <HeaderStyled className={className}>
       {onCheckboxClick && typeof checked === 'boolean' && (
@@ -62,7 +64,11 @@ export const CardHeader: FC<CardHeaderProps> = props => {
             <FavouriteInterfaceSVG className={favouriteButtonClassName} data-filled={isFavourite} />
           </FavouriteWrapStyled>
         )}
-        {moreActions && <DropdownMenu data-test-id='card-header__dropdown-menu' actions={moreActions} />}
+        {moreActions && (
+          <div role='presentation' onClick={handleDropdownWrapperClick}>
+            <DropdownMenu data-test-id='card-header__dropdown-menu' actions={moreActions} />
+          </div>
+        )}
       </ButtonGroupStyled>
     </HeaderStyled>
   );
