@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@0.6.3...@sbercloud/uikit-react-status@0.7.0) (2021-09-01)
+
+
+### Features
+
+* add data-test-id ([8498639](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/84986398c647a2a9d76f82b4e11abad86607f161))
+
+
+
+
+
 ## [0.6.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@0.6.2...@sbercloud/uikit-react-status@0.6.3) (2021-08-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-status
