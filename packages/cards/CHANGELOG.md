@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-cards@0.8.0...@sbercloud/uikit-react-cards@0.8.1) (2021-09-02)
+
+
+### Bug Fixes
+
+* The click on the button does not work ([bd7fe2d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/bd7fe2d1526dfbd6aaca1cfd3e203900cd87a4a5))
+
+
+
+
+
 # [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-cards@0.7.6...@sbercloud/uikit-react-cards@0.8.0) (2021-09-01)
 
 
