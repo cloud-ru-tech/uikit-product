@@ -10,10 +10,7 @@ import { H1, H3, Text2 } from '@sbercloud/uikit-typography';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ConfigProvider, ConfigProviderProps } from '../src/components/ConfigProvider';
-import { useLanguage } from '../src/hooks/useLanguage';
-import { useTheme } from '../src/hooks/useTheme';
-import { LanguageCodeType, Themes } from '../src/types';
+import { ConfigProvider, ConfigProviderProps, LanguageCodeType, Themes, useLanguage, useTheme } from '../src/';
 
 const { GREY } = EXPORT_VARS;
 
