@@ -1,0 +1,30 @@
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+
+import { Types, Variant } from '../../helpers';
+import { StatusBadge } from '../StatusBadge/StatusBadge';
+import { Content, Wrapper, statusBadgeClassName } from './styled';
+
+export type StatusTagProps = {
+  type?: Types;
+  variant?: Variant;
+  className?: string;
+  text: string;
+};
+
+export function StatusTag({
+  type = Types.Success,
+  variant = Variant.Transparent,
+  text,
+  className,
+  ...rest
+}: WithSupportProps<StatusTagProps>) {
+  return (
+    <Wrapper className={className} data-variant={variant} {...extractSupportProps(rest)}>
+      <StatusBadge type={type} className={statusBadgeClassName} />
+      {text && <Content>{text}</Content>}
+    </Wrapper>
+  );
+}
+
+StatusTag.types = Types;
+StatusTag.variants = Variant;

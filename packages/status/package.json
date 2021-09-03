@@ -17,7 +17,8 @@
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
   "contributors": [
-    "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
+    "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
+    "Sevelova Kristina <kmsevelova@sbercloud.ru>"
   ],
   "files": [
     "dist",

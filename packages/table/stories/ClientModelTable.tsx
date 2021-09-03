@@ -4,7 +4,7 @@ import debounce from 'lodash.debounce';
 import { useEffect, useState } from 'react';
 
 import { ButtonTable, ButtonTableIcon } from '@sbercloud/uikit-react-button';
-import { Status } from '@sbercloud/uikit-react-status';
+import { StatusBadge } from '@sbercloud/uikit-react-status';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -48,7 +48,7 @@ function generateRows(count: number): DataModel[] {
         hour: 'numeric',
         minute: 'numeric',
       }),
-      status: Object.values(Status.types)[Math.floor(Math.random() * 10) % 4],
+      status: Object.values(StatusBadge.types)[Math.floor(Math.random() * 10) % 4],
     });
   }
   return res;
@@ -142,8 +142,8 @@ clientModelTable.args = {
       maxWidth: 200,
       valueGetter: ({ data }: { data: DataModel }) => data.status,
       cellRendererFramework: ({ data: { status } }: { data: DataModel }) => {
-        const isInProgress = status === Status.types.Unactive;
-        const isDisabled = status === Status.types.Failed;
+        const isInProgress = status === StatusBadge.types.Unactive;
+        const isDisabled = status === StatusBadge.types.Failed;
         return (
           <ButtonGroup>
             <ButtonTable disabled={isDisabled} loading={isInProgress} text='AGrigorii' onClick={() => {}} />

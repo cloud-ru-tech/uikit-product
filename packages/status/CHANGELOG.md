@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@0.7.1...@sbercloud/uikit-react-status@1.0.0) (2021-09-03)
+
+
+### Features
+
+* Status first stable version ([AICDC-3505](https://jira.sbercloud.tech/browse/AICDC-3505)) ([f71551b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/f71551b3b3b97a40724b75799a7e6484b8331fcb))
+
+
+
 ## [0.7.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@0.7.0...@sbercloud/uikit-react-status@0.7.1) (2021-09-03)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-status

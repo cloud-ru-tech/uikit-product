@@ -1,6 +1,7 @@
-import { Status, StatusProps } from '@sbercloud/uikit-react-status';
-import { Tooltip, TooltipProps } from '@sbercloud/uikit-react-tooltip';
 import { FC } from 'react';
+
+import { StatusProps, StatusTag } from '@sbercloud/uikit-react-status';
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-react-tooltip';
 
 import { TableBasicTypes } from '../../../helpers/types';
 
@@ -12,10 +13,10 @@ export const StatusCell: FC<TableBasicTypes.ICellRendererParams & StatusProps & 
   if (tooltip) {
     return (
       <Tooltip tooltip={tooltip} delayHide={0} delayShow={0} placement={Tooltip.placements.Top}>
-        <Status type={type}>{value}</Status>
+        <StatusTag type={type} text={value} />
       </Tooltip>
     );
   }
 
-  return <Status type={type}>{value}</Status>;
+  return <StatusTag type={type} text={value} />;
 };
