@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@0.6.1...@sbercloud/uikit-utils@0.7.0) (2021-09-03)
+
+
+### Features
+
+* downloadFile util function ([6c543dc](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/6c543dc3e17267e6e0c1c80071d39e2403d8f0f5))
+
+
+
+
+
 ## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@0.6.0...@sbercloud/uikit-utils@0.6.1) (2021-08-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-utils
