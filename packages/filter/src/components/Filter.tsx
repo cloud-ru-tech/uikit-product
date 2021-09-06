@@ -93,7 +93,7 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
     (show: boolean) =>
       typeof children === 'function'
         ? children({
-            badgeText: parsedValue.length > 0 ? `${parsedValue.length}` : '',
+            badgeNumber: parsedValue.length > 0 ? parsedValue.length : undefined,
             open: show,
           })
         : children,

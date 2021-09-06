@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.11.0...@sbercloud/uikit-react-toolbar@0.12.0) (2021-09-06)
+
+
+### Features
+
+* Badge first stable version ([AICDC-3303](https://jira.sbercloud.tech/browse/AICDC-3303)) ([9b4715b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9b4715b89d51d55db19bf42237ab205b70892e5e))
+
+
+
+
+
 # [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.10.8...@sbercloud/uikit-react-toolbar@0.11.0) (2021-09-06)
 
 

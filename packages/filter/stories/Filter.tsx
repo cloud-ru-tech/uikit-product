@@ -73,8 +73,8 @@ const Template: Story<IFilterProps> = () => {
             setFilterValue(queryString);
           }}
         >
-          {({ badgeText, open }): JSX.Element => (
-            <Toolbar.Button badgeText={badgeText} isActive={open} tooltip={{ content: 'Фильтр' }}>
+          {({ badgeNumber, open }): JSX.Element => (
+            <Toolbar.Button badgeProps={{ number: badgeNumber }} isActive={open} tooltip={{ content: 'Фильтр' }}>
               <FilterInterfaceSVG />
             </Toolbar.Button>
           )}

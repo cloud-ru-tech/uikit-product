@@ -1,26 +1,60 @@
 import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
-const { COLORS_BADGE } = DEPRECATED_EXPORT_VARS;
-export const BadgeStyled = styled.span`
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
+
+export const BadgeItemWrap = styled.span`
   display: inline-flex;
   position: relative;
 `;
 
-export const BadgeItemStyled = styled.span<{ color?: string }>`
-  display: inline-block;
+export const Dot = styled.div`
+  background: var(${COLORS.DOT_DEFAULT_COLOR});
+  height: 3px;
+  width: 3px;
+  border-radius: 100%;
+  transform: translate(-12.5%, -12.5%);
+
+  &[data-alert] {
+    background: var(${COLORS.DOT_ALERT_COLOR});
+  }
+`;
+
+export const Badge = styled.span`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(50%, -50%);
-  transform-origin: 100% 0;
+  top: -5px;
+  left: 12px;
+  width: fit-content;
+  min-width: 16px;
+  height: 16px;
+  padding: 2px 4px;
   box-sizing: border-box;
   border-radius: 20px;
-  padding: 1px 4px;
   font-size: 11px;
   line-height: 12px;
-  color: var(${COLORS_BADGE.TEXT_COLOR});
-  background-color: ${({ color }) => color || `var(${COLORS_BADGE.DEFAULT_BACKGROUND})`};
-  border: 1px solid var(${COLORS_BADGE.BORDER_COLOR});
+  color: var(${COLORS.DEFAULT_TEXT_COLOR});
+  background-color: var(${COLORS.DEFAULT_BACKGROUND});
+  border: 1px solid var(${COLORS.BORDER});
+
+  &[data-alert] {
+    color: var(${COLORS.ALERT_TEXT_COLOR});
+    background: var(${COLORS.ALERT_BACKGROUND});
+  }
+
+  &[data-disabled] {
+    color: var(${COLORS.DISABLED_TEXT_COLOR});
+    background: var(${COLORS.DISABLED_DEFAULT_BACKGROUND});
+  }
+
+  &[data-alert][data-disabled] {
+    background: var(${COLORS.DISABLED_ALERT_BACKGROUND});
+  }
 `;

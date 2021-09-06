@@ -1,22 +1,53 @@
-import { FC } from 'react';
+import { ReactNode, useMemo } from 'react';
 
-import { BadgeItemStyled, BadgeStyled } from './styled';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+
+import { Types } from './constants';
+import { BadgeItemWrap, Dot, Badge as StyledBadge } from './styled';
 
 export type BadgeProps = {
-  text?: string;
-  color?: string;
+  type?: Types;
+  number?: number;
+  disabled?: boolean;
   className?: string;
+  isGroupMessage?: boolean;
+  children: ReactNode;
 };
 
-export const Badge: FC<BadgeProps> = ({ text, color, children, className }) => {
-  if (!text) {
-    return <>{children}</>;
-  }
+export const Badge = ({
+  number,
+  children,
+  disabled,
+  className,
+  isGroupMessage,
+  type = Types.Info,
+  ...rest
+}: WithSupportProps<BadgeProps>) => {
+  const badgeContent = useMemo(() => {
+    if (isGroupMessage || !number) {
+      return <Dot data-alert={type === Types.Alert || undefined} />;
+    }
+
+    if (number > 99) {
+      return `99+`;
+    }
+
+    return number;
+  }, [number, isGroupMessage, type]);
 
   return (
-    <BadgeStyled className={className}>
+    <BadgeItemWrap {...extractSupportProps(rest)}>
       {children}
-      <BadgeItemStyled color={color}>{text}</BadgeItemStyled>
-    </BadgeStyled>
+      <StyledBadge
+        className={className}
+        data-disabled={disabled || undefined}
+        data-alert={type === Types.Alert || undefined}
+        data-test-id={'badge__indicator'}
+      >
+        {badgeContent}
+      </StyledBadge>
+    </BadgeItemWrap>
   );
 };
+
+Badge.types = Types;

@@ -1,20 +1,26 @@
 import { cx } from '@linaria/core';
 import { FC } from 'react';
 
-import { Badge } from '@sbercloud/uikit-react-badge-private';
+import { Badge, BadgeProps } from '@sbercloud/uikit-react-badge-private';
 import { ButtonToolbar, ButtonToolbarProps } from '@sbercloud/uikit-react-button';
 
 import { activeToolbarButtonClassName } from './styled';
 
 export interface ToolbarButtonProps extends Omit<ButtonToolbarProps, 'icon'> {
   isActive?: boolean;
-  badgeText?: string;
+  badgeProps?: Omit<BadgeProps, 'children'>;
 }
 
-export const ToolbarButton: FC<ToolbarButtonProps> = ({ children, className, badgeText, isActive, ...buttonProps }) => (
+export const ToolbarButton: FC<ToolbarButtonProps> = ({
+  children,
+  className,
+  badgeProps,
+  isActive,
+  ...buttonProps
+}) => (
   <ButtonToolbar
     {...buttonProps}
     className={cx(className, isActive ? activeToolbarButtonClassName : null)}
-    icon={badgeText ? <Badge text={badgeText}>{children}</Badge> : <>{children}</>}
+    icon={badgeProps ? <Badge {...badgeProps}>{children}</Badge> : <>{children}</>}
   />
 );

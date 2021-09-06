@@ -1,6 +1,7 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Button } from '@sbercloud/uikit-react-button';
+import { NotifyInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -8,19 +9,22 @@ import componentReadme from '../README.md';
 import { Badge, BadgeProps } from '../src';
 
 export default {
-  title: 'Not stable/Badge',
+  title: 'Components/Badge',
   component: Badge,
 } as Meta;
 
 const Template: Story<BadgeProps> = ({ ...args }) => (
   <Badge {...args}>
-    <Button variant={Button.variants.Outline} text='Button' />
+    <NotifyInterfaceSVG />
   </Badge>
 );
 
 export const badge = Template.bind({});
 badge.args = {
-  text: '5',
+  number: 10,
+  disabled: false,
+  isGroupMessage: false,
+  type: Badge.types.Info,
 };
 badge.parameters = {
   readme: {
@@ -28,14 +32,9 @@ badge.parameters = {
   },
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    name: 'Figma',
+    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=520%3A10653',
   },
+  badges: [BADGE.STABLE],
 };
-badge.argTypes = {
-  color: {
-    control: {
-      type: 'color',
-    },
-  },
-};
+badge.argTypes = {};

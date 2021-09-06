@@ -10,9 +10,9 @@ export const ToolbarFilter = ({ filterOptions, value, onChange }: WithSupportPro
   return (
     <div data-test-id='toolbar__filter'>
       <Filter filterOptions={filterOptions} value={value} onChange={onChange}>
-        {({ badgeText }): JSX.Element => (
+        {({ badgeNumber }): JSX.Element => (
           <ToolbarButton
-            badgeText={badgeText}
+            badgeProps={{ number: badgeNumber }}
             data-test-id='toolbar__filter-btn'
             tooltip={{ content: textProvider(language, Texts.filter) }}
           >
