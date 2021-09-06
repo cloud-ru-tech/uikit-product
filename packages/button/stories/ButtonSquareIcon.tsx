@@ -24,10 +24,9 @@ const Template: Story<ButtonSquareIconProps> = ({ ...args }) => (
           <ButtonSquareIcon
             {...args}
             variant={value}
-            tooltip='Copy'
+            tooltip={{ content: 'Copy', placement: ButtonSquareIcon.placements.Top }}
+            disabledTooltip={{ content: 'Unavailable', placement: ButtonSquareIcon.placements.Top }}
             icon={<CopyInterfaceSVG />}
-            disabledTooltip='Unavailable'
-            tooltipPlacement={ButtonSquareIcon.placements.Top}
           />
         </TableCell>
       </TableColumn>

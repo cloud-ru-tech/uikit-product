@@ -1,6 +1,7 @@
 import { cx } from '@linaria/core';
-import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+
+import { TooltipPrivate } from '@sbercloud/uikit-react-tooltip-private';
 
 import { isVisible } from '../../helpers/isVisible';
 import * as S from './styled';
@@ -49,18 +50,17 @@ export const Container: React.FC<IContainerProps> = ({ getTrigger, children, cla
   const trigger = useMemo(() => getTrigger(show), [getTrigger, show]);
 
   return (
-    <Tooltip
+    <TooltipPrivate
       delayShow={0}
       delayHide={0}
-      placement={Tooltip.placements.BottomEnd}
-      trigger='click'
-      tooltipShown={show}
+      placement={TooltipPrivate.placements.BottomEnd}
+      trigger={TooltipPrivate.triggerTypes.Click}
+      visible={show}
       getTooltipRef={setTooltipRef}
-      className={cx(S.tooltipClassName, className)}
-      classNameWrapper={S.tooltipWrapperClassName}
+      classNameContainer={cx(S.tooltipClassName, className)}
       tooltip={children}
     >
       <div ref={triggerEl}>{trigger}</div>
-    </Tooltip>
+    </TooltipPrivate>
   );
 };

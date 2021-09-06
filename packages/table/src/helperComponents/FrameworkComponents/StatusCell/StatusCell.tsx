@@ -8,11 +8,11 @@ import { TableBasicTypes } from '../../../helpers/types';
 export const StatusCell: FC<TableBasicTypes.ICellRendererParams & StatusProps & Partial<TooltipProps>> = ({
   value,
   type,
-  tooltip,
+  content,
 }) => {
-  if (tooltip) {
+  if (content) {
     return (
-      <Tooltip tooltip={tooltip} delayHide={0} delayShow={0} placement={Tooltip.placements.Top}>
+      <Tooltip content={content}>
         <StatusTag type={type} text={value} />
       </Tooltip>
     );

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { TooltipTriggerProps } from 'react-popper-tooltip';
+import { Config, PopperOptions } from 'react-popper-tooltip';
 
 export enum Placements {
   Auto = 'auto',
@@ -19,7 +19,15 @@ export enum Placements {
   LeftEnd = 'left-end',
 }
 
-export interface TooltipPrivateProps extends Partial<Omit<TooltipTriggerProps, 'tooltip' | 'children'>> {
+export enum TriggerTypes {
+  Click = 'click',
+  RightClick = 'right-click',
+  Hover = 'hover',
+  Focus = 'focus',
+}
+
+export interface TooltipPrivateProps extends Omit<Config, 'trigger'> {
+  popperOptions?: PopperOptions;
   children?: React.ReactNode;
   hideArrow?: boolean;
   tooltip: ReactNode | Element;
@@ -28,4 +36,6 @@ export interface TooltipPrivateProps extends Partial<Omit<TooltipTriggerProps, '
   classNameContainer?: string;
   classNameArrow?: string;
   classNameTrigger?: string;
+  getTooltipRef?: (ref: HTMLElement | null) => void;
+  trigger?: TriggerTypes | TriggerTypes[] | null;
 }

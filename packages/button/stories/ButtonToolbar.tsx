@@ -13,9 +13,8 @@ export default {
 const Template: Story<ButtonToolbarProps> = ({ ...args }) => (
   <ButtonToolbar
     {...args}
-    tooltip='Add'
-    disabledTooltip='Unavailable'
-    tooltipPlacement={ButtonToolbar.placements.Bottom}
+    tooltip={{ content: 'Add', placement: ButtonToolbar.placements.Bottom }}
+    disabledTooltip={{ content: 'Unavailable', placement: ButtonToolbar.placements.Bottom }}
     icon={<CircleAddInterfaceSVG />}
   />
 );

@@ -2,12 +2,11 @@ import { css } from '@linaria/core';
 
 export const tooltipClassName = css`
   border: none;
-  border-radius: 4px;
-  background-color: #ffffff;
+  border-radius: 8px;
   z-index: 99999;
 `;
 
 export const triggerClassName = css`
-  display: flex;
+  display: inline-flex;
   cursor: pointer;
 `;

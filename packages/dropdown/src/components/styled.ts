@@ -1,9 +1,23 @@
 import { css } from '@linaria/core';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { COLORS_GENERAL } = DEPRECATED_EXPORT_VARS;
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
 
 export const containerClassName = css`
-  color: var(${COLORS_GENERAL.TEXT});
+  color: var(${COLORS.TEXT_COLOR});
   padding: 0;
+`;
+
+export const menuClassName = css`
+  background-color: var(${COLORS.MENU_BACKGROUND_COLOR});
+`;
+
+export const menuItemClassName = css`
+  &:hover {
+    background-color: var(${COLORS.MENU_ITEM_HOVER_BACKGROUND_COLOR});
+  }
 `;

@@ -21,6 +21,7 @@ display.parameters = {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
   design: {
+    name: 'Figma',
     type: 'figma',
     url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/TEMP-DESIGN-SYSTEM?node-id=212%3A350',
   },

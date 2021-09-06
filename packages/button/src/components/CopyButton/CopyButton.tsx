@@ -62,7 +62,7 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
     <Element
       icon={completed ? <CopiedInterfaceSVG /> : <CopyInterfaceSVG />}
       onClick={wrappedOnClick}
-      tooltip={textProvider(language, Texts.copy)}
+      tooltip={{ content: textProvider(language, Texts.copy) }}
       {...extractedProps}
     />
   );

@@ -38,7 +38,7 @@ textField.args = {
   text: 'Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.\nLorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах и, в более недавнее время, программы электронной вёрстки типа Aldus PageMaker, в шаблонах которых используется Lorem Ipsum.',
   extraIcons: (
     <>
-      <ButtonIconTransparent icon={<InfoInterfaceSVG />} tooltip='Инфо' />
+      <ButtonIconTransparent icon={<InfoInterfaceSVG />} tooltip={{ content: 'Инфо' }} />
       <RefreshButton />
     </>
   ),
@@ -49,8 +49,9 @@ textField.parameters = {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
   design: {
+    name: 'Figma',
     type: 'figma',
     url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=2860%3A41940',
-    badges: [BADGE.STABLE],
   },
+  badges: [BADGE.STABLE],
 };

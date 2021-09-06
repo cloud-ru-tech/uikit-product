@@ -6,9 +6,16 @@ import { CommonButtonProps } from '../types';
 
 export type WithTooltipProps = {
   className?: CommonButtonProps['className'];
-  tooltip?: TooltipProps['tooltip'];
-  disabledTooltip?: TooltipProps['tooltip'];
-  tooltipPlacement?: TooltipProps['placement'];
+  tooltip?: {
+    title?: TooltipProps['title'];
+    content?: TooltipProps['content'];
+    placement?: TooltipProps['placement'];
+  };
+  disabledTooltip?: {
+    title?: TooltipProps['title'];
+    content?: TooltipProps['content'];
+    placement?: TooltipProps['placement'];
+  };
 };
 
 // https://react-typescript-cheatsheet.netlify.app/docs/hoc/full_example/#using-forwardref
@@ -26,7 +33,6 @@ export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProp
     forwardRef,
     tooltip,
     disabledTooltip,
-    tooltipPlacement = Tooltip.placements.BottomStart,
     // т.к. основное назначение className это позиционирование,
     // а в случае с Tooltip над ComposedComponent есть обертка trigger,
     // то className проставляем в classNameTrigger
@@ -37,9 +43,8 @@ export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProp
   }) =>
     tooltip ? (
       <Tooltip
-        tooltip={rest.disabled ? disabledTooltip || tooltip : tooltip}
-        delayShow={1500}
-        placement={tooltipPlacement}
+        {...(rest.disabled ? disabledTooltip || tooltip || {} : tooltip || {})}
+        type={Tooltip.types.Info}
         classNameTrigger={className}
       >
         <ComposedComponent {...(rest as ComposedComponentProps)} ref={forwardRef} />

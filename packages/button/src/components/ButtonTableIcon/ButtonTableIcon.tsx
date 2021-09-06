@@ -44,11 +44,11 @@ const ButtonTableIconWithTooltipPredefined = (props: ComponentProps<typeof Butto
   const { code: language } = useLanguage({ onlyEnabledLanguage: true });
   return (
     <ButtonTableIconWithTooltip
-      tooltip={
-        props.loading
+      tooltip={{
+        content: props.loading
           ? textProvider(language, Texts.loading)
-          : textProvider(language, TEXTS_BY_VARIANT[props.variant || Variant.Play])
-      }
+          : textProvider(language, TEXTS_BY_VARIANT[props.variant || Variant.Play]),
+      }}
       {...props}
     />
   );

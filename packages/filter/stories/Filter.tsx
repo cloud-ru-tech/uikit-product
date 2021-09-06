@@ -74,7 +74,7 @@ const Template: Story<IFilterProps> = () => {
           }}
         >
           {({ badgeText, open }): JSX.Element => (
-            <Toolbar.Button badgeText={badgeText} isActive={open} tooltip='Фильтр'>
+            <Toolbar.Button badgeText={badgeText} isActive={open} tooltip={{ content: 'Фильтр' }}>
               <FilterInterfaceSVG />
             </Toolbar.Button>
           )}

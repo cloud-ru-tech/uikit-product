@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-modal@0.13.6...@sbercloud/uikit-react-modal@0.14.0) (2021-09-06)
+
+
+### Features
+
+* tooltip first stable ([589643d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/589643d01335a76bce127098e1f945230f0d9f01))
+
+
+
+
+
 ## [0.13.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-modal@0.13.5...@sbercloud/uikit-react-modal@0.13.6) (2021-09-03)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-modal

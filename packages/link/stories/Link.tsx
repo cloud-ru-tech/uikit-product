@@ -46,6 +46,7 @@ link.parameters = {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
   design: {
+    name: 'Figma',
     type: 'figma',
     url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=1492%3A41864',
   },

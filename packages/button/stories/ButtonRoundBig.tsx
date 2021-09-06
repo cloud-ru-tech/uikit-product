@@ -15,9 +15,8 @@ const Template: Story<ButtonRoundBigProps> = ({ ...args }) => (
   <SingleWrapper>
     <ButtonRoundBig
       {...args}
-      tooltip='Play'
-      disabledTooltip='Unavailable'
-      tooltipPlacement={ButtonRoundBig.placements.Top}
+      tooltip={{ content: 'Play', placement: ButtonRoundBig.placements.Top }}
+      disabledTooltip={{ content: 'Unavailable', placement: ButtonRoundBig.placements.Top }}
       icon={<CirclePlayFilledInterfaceSVG />}
     />
   </SingleWrapper>

@@ -24,24 +24,22 @@ const Template: Story<ButtonIconProps> = ({ ...args }) => (
           <ButtonIcon
             {...args}
             variant={value}
-            tooltip='Close'
-            disabledTooltip='Unavailable'
-            tooltipPlacement={ButtonIcon.placements.Bottom}
+            tooltip={{ content: 'Close', placement: ButtonIcon.placements.Bottom }}
+            disabledTooltip={{ content: 'Unavailable', placement: ButtonIcon.placements.Bottom }}
             icon={<CloseInterfaceSVG />}
           />
         </TableCell>
 
         <TableCell>
-          <ButtonIcon {...args} variant={value} tooltip='More' icon={<MoreInterfaceSVG />} />
+          <ButtonIcon {...args} variant={value} tooltip={{ content: 'More' }} icon={<MoreInterfaceSVG />} />
         </TableCell>
 
         <TableCell>
           <ButtonIcon
             {...args}
             variant={value}
-            tooltip='Delete'
-            disabledTooltip='Unavailable'
-            tooltipPlacement={ButtonIcon.placements.Right}
+            tooltip={{ content: 'Delete', placement: ButtonIcon.placements.Right }}
+            disabledTooltip={{ content: 'Unavailable', placement: ButtonIcon.placements.Right }}
             icon={<DeleteInterfaceSVG />}
           />
         </TableCell>

@@ -22,7 +22,7 @@ export const FormGroup: React.FC<FormGroupProps> = ({ number, title, hint, varia
       <Title>{title}</Title>
 
       {hint && (
-        <Tooltip tooltip={hint} classNameTrigger={tooltipTriggerClassName}>
+        <Tooltip content={hint} classNameTrigger={tooltipTriggerClassName}>
           <QuestionInterfaceSVG size={20} className={hintClassName} />
         </Tooltip>
       )}

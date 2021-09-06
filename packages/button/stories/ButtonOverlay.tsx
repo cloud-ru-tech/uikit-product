@@ -15,9 +15,8 @@ const Template: Story<ButtonOverlayProps> = ({ ...args }) => (
   <SingleWrapper>
     <ButtonOverlay
       {...args}
-      tooltip='Edit'
-      disabledTooltip='Unavailable'
-      tooltipPlacement={ButtonOverlay.placements.Bottom}
+      tooltip={{ content: 'Edit', placement: ButtonOverlay.placements.Bottom }}
+      disabledTooltip={{ content: 'Unavailable', placement: ButtonOverlay.placements.Bottom }}
       icon={<EditInterfaceSVG />}
     />
   </SingleWrapper>

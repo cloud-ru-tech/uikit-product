@@ -24,8 +24,7 @@ const Template: Story<ButtonTableIconProps> = ({ ...args }) => (
         <TableCell>
           <ButtonTableIcon
             variant={value}
-            disabledTooltip='Unavailable'
-            tooltipPlacement={ButtonTableIcon.placements.Left}
+            disabledTooltip={{ content: 'Unavailable', placement: ButtonTableIcon.placements.Left }}
             {...args}
           />
         </TableCell>
@@ -34,8 +33,7 @@ const Template: Story<ButtonTableIconProps> = ({ ...args }) => (
           <ButtonTableIconManagedLoading
             variant={value}
             onClick={onClick}
-            disabledTooltip='Unavailable'
-            tooltipPlacement={ButtonTableIcon.placements.Right}
+            disabledTooltip={{ content: 'Unavailable', placement: ButtonTableIcon.placements.Right }}
             {...args}
           />
         </TableCell>

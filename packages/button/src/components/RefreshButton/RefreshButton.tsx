@@ -34,5 +34,11 @@ export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaul
     extractedProps.variant = rest.variant;
   }
 
-  return <Element icon={<AnimatedRefreshIcon />} tooltip={textProvider(language, Texts.refresh)} {...extractedProps} />;
+  return (
+    <Element
+      icon={<AnimatedRefreshIcon />}
+      tooltip={{ content: textProvider(language, Texts.refresh) }}
+      {...extractedProps}
+    />
+  );
 }

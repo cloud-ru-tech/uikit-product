@@ -40,16 +40,15 @@ const Template: Story<StoryProps> = ({ getProgressText, ...args }: StoryProps) =
           <TableCell>
             <ButtonTable
               variant={value}
-              tooltip='Connect'
-              disabledTooltip='Unavailable'
-              tooltipPlacement={ButtonTable.placements.Bottom}
+              tooltip={{ content: 'Connect', placement: ButtonTable.placements.Bottom }}
+              disabledTooltip={{ content: 'Unavailable', placement: ButtonTable.placements.Bottom }}
               getProgressText={getProgressTextEvaluated}
               {...args}
             />
           </TableCell>
 
           <TableCell>
-            <ButtonTableManagedLoading variant={value} tooltip='Connect' onClick={onClick} {...args} />
+            <ButtonTableManagedLoading variant={value} tooltip={{ content: 'Connect' }} onClick={onClick} {...args} />
           </TableCell>
         </TableColumn>
       ))}

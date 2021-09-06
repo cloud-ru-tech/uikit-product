@@ -1,7 +1,8 @@
-import { ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef, useState } from 'react';
+
+import { ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 
 import {
   getDiffWidth,
@@ -222,7 +223,7 @@ export const Breadcrumbs = ({
   const textWrapper = (tooltip: boolean, text: string, el: React.ReactNode): React.ReactNode => {
     if (tooltip) {
       return (
-        <Tooltip tooltip={text} classNameTrigger={cutTextClassName}>
+        <Tooltip content={text} classNameTrigger={cutTextClassName}>
           {el}
         </Tooltip>
       );

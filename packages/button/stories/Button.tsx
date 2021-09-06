@@ -21,15 +21,14 @@ const Template: Story<ButtonProps> = ({ ...args }) => (
         <TableCell>{key}</TableCell>
 
         <TableCell>
-          <Button variant={value} tooltip={key} {...args} />
+          <Button variant={value} tooltip={{ content: key }} {...args} />
         </TableCell>
 
         <TableCell>
           <Button
             variant={value}
-            tooltip={key}
-            disabledTooltip='Unavailable'
-            tooltipPlacement={Button.placements.Left}
+            tooltip={{ content: key, placement: Button.placements.Left }}
+            disabledTooltip={{ content: 'Unavailable', placement: Button.placements.Left }}
             icon={<CopyInterfaceSVG />}
             {...args}
           />

@@ -1,14 +1,10 @@
-import { memo } from 'react';
-import { Ref } from 'react-popper-tooltip';
-
 import { Container, ContainerItem } from './styled';
 
 export interface TooltipMenuPrivateProps {
-  tooltipRef?: Ref;
   className?: string;
 }
 
-export const TooltipMenuPrivate: React.FC<TooltipMenuPrivateProps> = memo(function TooltipMenu(props) {
+export const TooltipMenuPrivate: React.FC<TooltipMenuPrivateProps> = props => {
   const { children, className, ...otherProps } = props;
 
   return (
@@ -16,4 +12,4 @@ export const TooltipMenuPrivate: React.FC<TooltipMenuPrivateProps> = memo(functi
       <ContainerItem>{children}</ContainerItem>
     </Container>
   );
-});
+};

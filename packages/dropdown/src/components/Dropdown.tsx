@@ -2,7 +2,12 @@ import { useCallback, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { TooltipMenuItemPrivate, TooltipMenuPrivate, TooltipPrivate } from '@sbercloud/uikit-react-tooltip-private';
+import {
+  TooltipMenuItemPrivate,
+  TooltipMenuItemPrivateProps,
+  TooltipMenuPrivate,
+  TooltipPrivate,
+} from '@sbercloud/uikit-react-tooltip-private';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import * as S from './styled';
@@ -25,7 +30,9 @@ export interface DropdownMenuProps {
   children?: React.ReactNode;
 }
 
-export const DropdownItem = TooltipMenuItemPrivate;
+export const DropdownItem: React.FC<TooltipMenuItemPrivateProps> = props => (
+  <TooltipMenuItemPrivate className={S.menuItemClassName} {...props} />
+);
 
 export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<DropdownMenuProps>) => {
   const [on, setOn] = useState(false);
@@ -34,26 +41,19 @@ export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<Dr
 
   const isActionsArray = Array.isArray(actions);
   const isActionsFn = !isActionsArray && typeof actions === 'function';
+
   return (
     <TooltipPrivate
       placement={TooltipPrivate.placements.BottomEnd}
-      trigger='click'
-      tooltipShown={on}
-      onVisibilityChange={set}
+      trigger={TooltipPrivate.triggerTypes.Click}
+      visible={on}
+      onVisibleChange={set}
       classNameContainer={S.containerClassName}
-      modifiers={[
-        {
-          name: 'offset',
-          enabled: true,
-          options: {
-            offset: [0, 12],
-          },
-        },
-      ]}
+      offset={[0, 12]}
       delayShow={0}
       delayHide={0}
       tooltip={
-        <TooltipMenuPrivate data-test-id='dropdown__tooltip-menu'>
+        <TooltipMenuPrivate data-test-id='dropdown__tooltip-menu' className={S.menuClassName}>
           {isActionsArray &&
             (actions as TDropdownMenuActionType[]).map((menuItem, index) => {
               const { name, id } = menuItem;
@@ -63,11 +63,13 @@ export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<Dr
                 menuItem.onClick(event);
                 hide();
               };
+
               return (
                 <TooltipMenuItemPrivate
                   data-test-option-index={index}
                   key={`menu-item-${menuItem.name}`}
                   onClick={handlerOnClick}
+                  className={S.menuItemClassName}
                   {...(id ? { 'data-test-option-id': id } : {})}
                 >
                   {isNameFn ? name() : name}
@@ -82,8 +84,10 @@ export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<Dr
       {children || (
         <ButtonIcon
           icon={<MoreInterfaceSVG />}
-          tooltip='Меню'
-          tooltipPlacement={ButtonIcon.placements.Right}
+          tooltip={{
+            content: 'Меню',
+            placement: ButtonIcon.placements.Right,
+          }}
           {...extractSupportProps(rest)}
         />
       )}

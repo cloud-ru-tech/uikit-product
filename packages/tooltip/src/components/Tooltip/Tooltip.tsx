@@ -1,69 +1,70 @@
 import { cx } from '@linaria/core';
 
-import { Placements, TooltipPrivate, TooltipPrivateProps } from '@sbercloud/uikit-react-tooltip-private';
+import { Link, LinkProps } from '@sbercloud/uikit-react-link';
+import { Placements, TooltipPrivate, TooltipPrivateProps, TriggerTypes } from '@sbercloud/uikit-react-tooltip-private';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { IconWrapper, TooltipWrapper, containerClassName, containerWithIconClassName } from './styled';
+import { DELAY, OFFSET } from '../../constants';
+import { TooltipType } from '../../helpers/types';
+import {
+  IconWrapper,
+  Text,
+  Title,
+  TooltipWrapper,
+  classNameArrow,
+  containerClassName,
+  containerWithIconClassName,
+} from './styled';
 
-const DEFAULT_MODIFIERS = [
-  {
-    name: 'offset',
-    enabled: true,
-    options: {
-      offset: [0, 8],
-    },
-  },
-];
-
-export interface TooltipProps {
-  tooltip?: TooltipPrivateProps['tooltip'];
+export type TooltipProps = {
   children: TooltipPrivateProps['children'];
-  icon?: React.ReactNode | JSX.Element;
-  iconAction?: () => void;
-  hideArrow?: boolean;
-  className?: string;
+  title?: string;
+  content?: string | React.ReactNode;
+  icon?: React.ReactElement;
+  iconAction?(): void;
   classNameTrigger?: string;
-  classNameArrow?: string;
-  classNameWrapper?: string;
-  modifiers?: TooltipPrivateProps['modifiers'];
-  delayShow?: TooltipPrivateProps['delayShow'];
-  delayHide?: TooltipPrivateProps['delayHide'];
   placement?: TooltipPrivateProps['placement'];
+  type?: TooltipType;
+  link?: LinkProps;
   trigger?: TooltipPrivateProps['trigger'];
-  tooltipShown?: TooltipPrivateProps['tooltipShown'];
-  getTooltipRef?: TooltipPrivateProps['getTooltipRef'];
-}
+};
 
 export const Tooltip = ({
+  title,
+  content,
+  link,
   children,
-  tooltip,
-  hideArrow = true,
-  className,
   classNameTrigger,
-  classNameArrow,
-  classNameWrapper,
-  modifiers = DEFAULT_MODIFIERS,
-  delayShow = 300,
-  delayHide = 300,
-  placement = Placements.TopStart,
-  trigger = 'hover',
+  placement = Placements.Top,
   icon,
   iconAction,
-}: TooltipProps) => (
+  type = TooltipType.Main,
+  trigger = TriggerTypes.Hover,
+  ...rest
+}: WithSupportProps<TooltipProps>) => (
   <TooltipPrivate
+    {...extractSupportProps(rest)}
     trigger={trigger}
     placement={placement}
-    modifiers={modifiers}
-    delayShow={delayShow}
-    delayHide={delayHide}
-    hideArrow={hideArrow}
-    classNameContainer={cx(containerClassName, Boolean(icon) && containerWithIconClassName, className)}
+    offset={OFFSET}
+    delayShow={DELAY[type]}
+    delayHide={100}
+    classNameContainer={cx(containerClassName, Boolean(icon) && containerWithIconClassName)}
     classNameArrow={classNameArrow}
     classNameTrigger={classNameTrigger}
     tooltip={
       <>
-        <TooltipWrapper className={classNameWrapper}>{tooltip}</TooltipWrapper>
+        <TooltipWrapper>
+          {title && <Title>{title}</Title>}
+          {content && <Text>{content}</Text>}
+          {link?.text && <Link showIcon variant={Link.variants.OnDark} {...link} />}
+        </TooltipWrapper>
         {icon && (
-          <IconWrapper onClick={iconAction} data-action={Boolean(iconAction)}>
+          <IconWrapper
+            onClick={iconAction}
+            data-action={Boolean(iconAction)}
+            data-test-action-id='tooltip__action_element'
+          >
             {icon}
           </IconWrapper>
         )}
@@ -74,4 +75,6 @@ export const Tooltip = ({
   </TooltipPrivate>
 );
 
+Tooltip.types = TooltipType;
+Tooltip.triggers = TriggerTypes;
 Tooltip.placements = Placements;

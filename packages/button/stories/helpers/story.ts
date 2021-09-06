@@ -17,6 +17,7 @@ export function getDefaultParameters({
     },
     design: figmaUrl
       ? {
+          name: 'Figma',
           type: 'figma',
           url: figmaUrl,
         }

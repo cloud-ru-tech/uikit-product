@@ -14,7 +14,7 @@ export const ToolbarFilter = ({ filterOptions, value, onChange }: WithSupportPro
           <ToolbarButton
             badgeText={badgeText}
             data-test-id='toolbar__filter-btn'
-            tooltip={textProvider(language, Texts.filter)}
+            tooltip={{ content: textProvider(language, Texts.filter) }}
           >
             <FilterInterfaceSVG />
           </ToolbarButton>

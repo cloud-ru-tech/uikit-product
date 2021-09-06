@@ -1,52 +1,60 @@
 import { cx } from '@linaria/core';
-import TooltipTrigger from 'react-popper-tooltip';
+import { useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { usePopperTooltip } from 'react-popper-tooltip';
 
-import { Placements, TooltipPrivateProps } from '../../helpers/types';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+
+import { Placements, TooltipPrivateProps, TriggerTypes } from '../../helpers/types';
 import { tooltipClassName, triggerClassName } from './styled';
 
 export const TooltipPrivate = ({
+  popperOptions,
   children,
   tooltip,
-  hideArrow,
   classNameContainer,
   classNameArrow,
   classNameTrigger,
+  getTooltipRef,
   ...props
-}: TooltipPrivateProps) => (
-  <TooltipTrigger
-    {...props}
-    tooltip={({ arrowRef, tooltipRef, getArrowProps, getTooltipProps, placement }): React.ReactNode => {
-      const tooltipProps = getTooltipProps({
-        ref: tooltipRef,
-        className: cx(tooltipClassName, classNameContainer),
-      });
-      return (
-        <div {...tooltipProps}>
-          {!hideArrow && (
-            <div
-              {...getArrowProps({
-                ref: arrowRef,
-                className: cx('tooltip-arrow', classNameArrow),
-                'data-placement': placement,
-              })}
-            />
-          )}
-          {tooltip}
-        </div>
-      );
-    }}
-  >
-    {({ getTriggerProps, triggerRef }): React.ReactNode => (
+}: WithSupportProps<TooltipPrivateProps>) => {
+  const { getArrowProps, getTooltipProps, setTooltipRef, setTriggerRef, visible, tooltipRef } = usePopperTooltip(
+    {
+      interactive: true,
+      ...props,
+    },
+    popperOptions,
+  );
+
+  useEffect(() => {
+    getTooltipRef?.(tooltipRef);
+  }, [tooltipRef]);
+
+  return (
+    <>
       <span
-        {...getTriggerProps({
-          ref: triggerRef,
-          className: cx(triggerClassName, classNameTrigger),
-        })}
+        ref={setTriggerRef}
+        className={cx(triggerClassName, classNameTrigger)}
+        data-test-trigger-id='tooltip__trigger-element'
       >
         {children}
       </span>
-    )}
-  </TooltipTrigger>
-);
+      {visible &&
+        ReactDOM.createPortal(
+          <div
+            {...getTooltipProps()}
+            ref={setTooltipRef}
+            className={cx(tooltipClassName, classNameContainer)}
+            {...extractSupportProps(props)}
+          >
+            {tooltip}
+            <div {...getArrowProps()} className={classNameArrow} />
+          </div>,
+          document.body,
+        )}
+    </>
+  );
+};
 
+TooltipPrivate.triggerTypes = TriggerTypes;
 TooltipPrivate.placements = Placements;

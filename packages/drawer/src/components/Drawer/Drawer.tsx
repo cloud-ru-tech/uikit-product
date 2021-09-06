@@ -2,7 +2,7 @@ import 'rc-drawer/assets/index.css';
 
 import { cx } from '@linaria/core';
 import RcDrawer from 'rc-drawer';
-import { useCallback, useEffect, useState, useMemo } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -149,7 +149,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
           <CloseButtonStyled>
             <ButtonIcon
               icon={<CloseInterfaceSVG />}
-              tooltip={closeBtnText}
+              tooltip={{ content: closeBtnText }}
               onClick={onClose}
               data-test-action-id='drawer__header-close-btn'
             />

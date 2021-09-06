@@ -139,7 +139,7 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
           onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
             onRequestClose?.(e, MODAL_CLOSE_TYPE.CROSS);
           }}
-          tooltip={closeBtnText}
+          tooltip={{ content: closeBtnText }}
           className={closeButtonStyle}
           data-test-id='modal__close-btn'
         />
@@ -150,7 +150,7 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
         <ButtonWrapper>
           {approve &&
             (disableApprove && disableApproveTooltip ? (
-              <Tooltip tooltip={disableApproveTooltip}>
+              <Tooltip content={disableApproveTooltip}>
                 <Button
                   className={buttonCSS}
                   disabled={disableApprove}

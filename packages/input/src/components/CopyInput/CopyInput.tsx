@@ -80,7 +80,9 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
               onClick={handleSecurityButtonClick}
               className={securityButtonClassName}
               data-test-id='copy-input__security-btn'
-              tooltip={showContent ? textProvider(language, Texts.hide) : textProvider(language, Texts.show)}
+              tooltip={{
+                content: showContent ? textProvider(language, Texts.hide) : textProvider(language, Texts.show),
+              }}
               icon={showContent ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
             />
           </StyledIconWrapper>

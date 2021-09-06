@@ -32,14 +32,14 @@ export const CustomHeader = (customProps: HeaderCustomProps, props: HeaderProps)
       <ButtonIcon
         onClick={decreaseMonth}
         disabled={prevMonthButtonDisabled}
-        tooltip={CustomHeaderActions[language].prev}
+        tooltip={{ content: CustomHeaderActions[language].prev }}
         icon={<ChevronLeftInterfaceSVG />}
       />
 
       <ButtonIcon
         onClick={increaseMonth}
         disabled={nextMonthButtonDisabled}
-        tooltip={CustomHeaderActions[language].next}
+        tooltip={{ content: CustomHeaderActions[language].next }}
         icon={<ChevronRightInterfaceSVG />}
       />
     </S.Container>

@@ -80,7 +80,7 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
     >
       <ButtonIcon
         icon={<CloseInterfaceSVG />}
-        tooltip={closeBtnText}
+        tooltip={{ content: closeBtnText }}
         onClick={onRequestClose}
         className={previewCloseButton}
       />

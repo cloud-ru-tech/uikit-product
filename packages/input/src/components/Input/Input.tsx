@@ -180,7 +180,7 @@ export const Input = ({
               <ButtonIcon
                 onClick={handleClickClear}
                 icon={<CloseInterfaceSVG />}
-                tooltip={textProvider(language, Texts.clear)}
+                tooltip={{ content: textProvider(language, Texts.clear) }}
                 data-test-id='input__clear-btn'
               />
             )}
@@ -188,7 +188,9 @@ export const Input = ({
             {type === 'security' ? (
               <ButtonIconTransparent
                 onClick={(): void => setViewMode(!isViewMode)}
-                tooltip={isViewMode ? textProvider(language, Texts.hide) : textProvider(language, Texts.show)}
+                tooltip={{
+                  content: isViewMode ? textProvider(language, Texts.hide) : textProvider(language, Texts.show),
+                }}
                 icon={isViewMode ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
                 data-test-id='input__security-btn'
               />

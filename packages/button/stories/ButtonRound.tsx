@@ -20,10 +20,9 @@ const Template: Story<ButtonRoundProps> = ({ ...args }) => (
         <TableCell>
           <ButtonRound
             variant={value}
-            tooltip={key}
+            tooltip={{ content: key, placement: ButtonRound.placements.Bottom }}
+            disabledTooltip={{ content: 'Unavailable', placement: ButtonRound.placements.Bottom }}
             icon={<CirclePlayFilledInterfaceSVG />}
-            disabledTooltip='Unavailable'
-            tooltipPlacement={ButtonRound.placements.Bottom}
             {...args}
             text={undefined}
           />
@@ -32,15 +31,14 @@ const Template: Story<ButtonRoundProps> = ({ ...args }) => (
         <TableCell>
           <ButtonRound
             variant={value}
-            tooltip={key}
-            disabledTooltip='Unavailable'
-            tooltipPlacement={ButtonRound.placements.Top}
+            tooltip={{ content: key, placement: ButtonRound.placements.Top }}
+            disabledTooltip={{ content: 'Unavailable', placement: ButtonRound.placements.Top }}
             {...args}
           />
         </TableCell>
 
         <TableCell>
-          <ButtonRound variant={value} tooltip={key} icon={<CirclePlayFilledInterfaceSVG />} {...args} />
+          <ButtonRound variant={value} tooltip={{ content: key }} icon={<CirclePlayFilledInterfaceSVG />} {...args} />
         </TableCell>
       </TableColumn>
     ))}
