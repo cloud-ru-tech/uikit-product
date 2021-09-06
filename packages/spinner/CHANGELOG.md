@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-spinner@1.0.2...@sbercloud/uikit-react-spinner@1.0.3) (2021-09-06)
+
+
+### Bug Fixes
+
+* text prop should be of optional string type ([c7d65ba](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/c7d65ba23290fe8146e9d6ea54cdcc2c89866b98))
+
+
+
+
+
 ## [1.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-spinner@1.0.1...@sbercloud/uikit-react-spinner@1.0.2) (2021-09-03)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-spinner

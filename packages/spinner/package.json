@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-spinner",
   "title": "React Spinner",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "sideEffects": [
     "*.css",
     "*.woff",
