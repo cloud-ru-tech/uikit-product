@@ -29,16 +29,8 @@ const Template: Story<SpinnerProps> = ({ ...args }, { globals: { theme } }) => (
 );
 
 export const spinner = Template.bind({});
-spinner.args = {
-  text: 'Text',
-};
-spinner.argTypes = {
-  text: {
-    control: {
-      type: 'text',
-    },
-  },
-};
+spinner.args = {};
+spinner.argTypes = {};
 spinner.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

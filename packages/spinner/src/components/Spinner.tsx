@@ -1,4 +1,4 @@
-import { ReactNode, useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
@@ -7,7 +7,7 @@ import { Spin, Text, Wrapper } from './styled';
 
 export type SpinnerProps = {
   size?: Sizes;
-  text?: ReactNode;
+  text?: string;
   className?: string;
 };
 
