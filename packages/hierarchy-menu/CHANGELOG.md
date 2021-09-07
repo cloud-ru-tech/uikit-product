@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-hierarchy-menu@0.7.9...@sbercloud/uikit-react-hierarchy-menu@0.8.0) (2021-09-07)
+
+
+### Features
+
+* First stable version ([AICDC-3303](https://jira.sbercloud.tech/browse/AICDC-3303)) ([981a9c6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/981a9c648aadd0dfb70e21e8c7a53a9a98713414))
+
+
+
+
+
 ## [0.7.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-hierarchy-menu@0.7.8...@sbercloud/uikit-react-hierarchy-menu@0.7.9) (2021-09-03)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-hierarchy-menu

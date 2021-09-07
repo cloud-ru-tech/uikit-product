@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@0.15.0...@sbercloud/uikit-react-input@0.15.1) (2021-09-07)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-input
+
+
+
+
+
 # [0.15.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@0.14.8...@sbercloud/uikit-react-input@0.15.0) (2021-09-06)
 
 

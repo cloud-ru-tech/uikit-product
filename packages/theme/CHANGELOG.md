@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.26.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.25.2...@sbercloud/uikit-theme@0.26.0) (2021-09-07)
+
+
+### Features
+
+* PURPLE_ALFA and GREEN_ALPHA were added, BLUE_GREY was updated ([b4e16a6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b4e16a6c469368828f58bab8400b2bcbe0d8e718))
+
+
+
+
+
 ## [0.25.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.25.1...@sbercloud/uikit-theme@0.25.2) (2021-08-25)
 
 

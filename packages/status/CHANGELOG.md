@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@1.0.0...@sbercloud/uikit-react-status@1.1.0) (2021-09-07)
+
+
+### Features
+
+* tooltip first stable ([c79fe3b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/c79fe3b8227b911e71c1d60c3ffdcbc769af6da5))
+
+
+
+
+
 # [1.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@0.7.1...@sbercloud/uikit-react-status@1.0.0) (2021-09-03)
 
 
