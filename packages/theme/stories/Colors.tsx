@@ -70,11 +70,13 @@ const Group = styled.div`
 
 const COLOR_VARIANT_LIST = [
   { name: 'Grey', value: EXPORT_VARS.GREY, color: '#fff', background: '#5b5b5b' },
-  { name: 'Purple', value: EXPORT_VARS.PURPLE, color: '#fff', background: '#5558FA' },
-  { name: 'Green', value: EXPORT_VARS.GREEN, color: '#343f48', background: '#07E897' },
+  { name: 'Blue grey', value: EXPORT_VARS.BLUE_GREY, color: '#fff', background: '#212830' },
+  { name: 'Purple', value: EXPORT_VARS.PURPLE, color: '#fff', background: '#5558fa' },
+  { name: 'Purple Alpha', value: EXPORT_VARS.PURPLE_ALFA, color: '#fff', background: '#5558fa' },
+  { name: 'Green', value: EXPORT_VARS.GREEN, color: '#343f48', background: '#07e897' },
+  { name: 'Green Alpha', value: EXPORT_VARS.GREEN_ALFA, color: '#343f48', background: '#07e897' },
   { name: 'Black Alpha', value: EXPORT_VARS.BLACK_ALFA, color: '#fff', background: '#000000' },
   { name: 'White Alpha', value: EXPORT_VARS.WHITE_ALFA, color: '#343f48', background: '#fff' },
-  { name: 'Blue grey', value: EXPORT_VARS.BLUE_GREY, color: '#fff', background: '#212830' },
   {
     name: 'Color',
     value: EXPORT_VARS.PRESET,

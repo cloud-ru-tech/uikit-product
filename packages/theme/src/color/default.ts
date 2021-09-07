@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 
-import { BLACK_ALFA, BLUE_GREY, GREEN, GREY, PRESET, PURPLE, WHITE_ALFA } from './vars';
+import { BLACK_ALFA, BLUE_GREY, GREEN, GREEN_ALFA, GREY, PRESET, PURPLE, PURPLE_ALFA, WHITE_ALFA } from './vars';
 
 export const COLORS_DEFAULT_MAP = `
  ${GREY[0]}: #ffffff;
@@ -57,6 +57,22 @@ export const COLORS_DEFAULT_MAP = `
  ${WHITE_ALFA[8]}: rgba(255, 255, 255, 0.08);
  ${WHITE_ALFA[4]}: rgba(255, 255, 255, 0.04);
 
+ ${PURPLE_ALFA[48]}: rgba(85, 88, 250, 0.48);
+ ${PURPLE_ALFA[24]}: rgba(85, 88, 250, 0.24);
+ ${PURPLE_ALFA[16]}: rgba(85, 88, 250, 0.16);
+ ${PURPLE_ALFA[8]}: rgba(85, 88, 250, 0.08);
+ ${PURPLE_ALFA[4]}: rgba(85, 88, 250, 0.04);
+
+ ${GREEN_ALFA[48]}: rgba(7, 232, 151, 0.48);
+ ${GREEN_ALFA[24]}: rgba(7, 232, 151, 0.24);
+ ${GREEN_ALFA[16]}: rgba(7, 232, 151, 0.16);
+ ${GREEN_ALFA[8]}: rgba(7, 232, 151, 0.08);
+ ${GREEN_ALFA[4]}: rgba(7, 232, 151, 0.04);
+
+ ${BLUE_GREY[5]}: #f4f4f5;
+ ${BLUE_GREY[10]}: #e9e9ea;
+ ${BLUE_GREY[20]}: #d3d4d6;
+ ${BLUE_GREY[30]}: #bcbfc1;
  ${BLUE_GREY[40]}: #a6a9ac;
  ${BLUE_GREY[50]}: #909497;
  ${BLUE_GREY[60]}: #7a7e83;

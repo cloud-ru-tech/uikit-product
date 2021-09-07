@@ -62,7 +62,27 @@ const WHITE_ALFA = {
   48: '--color-white-alfa-48',
 };
 
+const PURPLE_ALFA = {
+  4: '--color-purple-alfa-4',
+  8: '--color-purple-alfa-8',
+  16: '--color-purple-alfa-16',
+  24: '--color-purple-alfa-24',
+  48: '--color-purple-alfa-48',
+};
+
+const GREEN_ALFA = {
+  4: '--color-green-alfa-4',
+  8: '--color-green-alfa-8',
+  16: '--color-green-alfa-16',
+  24: '--color-green-alfa-24',
+  48: '--color-green-alfa-48',
+};
+
 const BLUE_GREY = {
+  5: '--color-blue-grey-5',
+  10: '--color-blue-grey-10',
+  20: '--color-blue-grey-20',
+  30: '--color-blue-grey-30',
   40: '--color-blue-grey-40',
   50: '--color-blue-grey-50',
   60: '--color-blue-grey-60',
@@ -140,7 +160,7 @@ const PRESET = {
   GRADIENT_4: '--color-gradient-4',
 };
 
-export { GREY, PURPLE, GREEN, BLACK_ALFA, WHITE_ALFA, BLUE_GREY, PRESET };
+export { GREY, PURPLE, GREEN, BLACK_ALFA, WHITE_ALFA, PURPLE_ALFA, GREEN_ALFA, BLUE_GREY, PRESET };
 
 export default {
   GREY,
@@ -148,6 +168,8 @@ export default {
   GREEN,
   BLACK_ALFA,
   WHITE_ALFA,
+  PURPLE_ALFA,
+  GREEN_ALFA,
   BLUE_GREY,
   PRESET,
 };
