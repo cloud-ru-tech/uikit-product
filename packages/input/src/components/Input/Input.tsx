@@ -105,15 +105,15 @@ export const Input = ({
   };
 
   const paddingRight = useMemo(() => {
-    let result = 0;
+    let result = 12;
     const paddingConfig = [
       {
         enabled: allowCopy,
-        padding: 40,
+        padding: 32,
       },
       {
         enabled: allowClear && correctValue && correctValue !== '',
-        padding: isViewMode ? 44 : 74,
+        padding: 24,
       },
       {
         enabled: !!postfix,
@@ -122,6 +122,10 @@ export const Input = ({
       {
         enabled: !!onOpenDialog,
         padding: 44,
+      },
+      {
+        enabled: type === 'security',
+        padding: 32,
       },
     ];
 
@@ -132,7 +136,7 @@ export const Input = ({
     });
 
     return result;
-  }, [allowCopy, allowClear, postfix, onOpenDialog, correctValue, isViewMode]);
+  }, [allowCopy, allowClear, postfix, onOpenDialog, correctValue, type]);
 
   return (
     <StyledWrap className={wrapperClassName} ref={wrapperRef} {...extractSupportProps(rest)}>
