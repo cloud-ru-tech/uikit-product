@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@0.7.1...@sbercloud/uikit-utils@0.8.0) (2021-09-08)
+
+
+### Features
+
+* extracting copy-to-clipboard functionality into utils ([3a9b50f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3a9b50f8384279beb0cc27c79441e346f697bee1))
+
+
+
+
+
 ## [0.7.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@0.7.0...@sbercloud/uikit-utils@0.7.1) (2021-09-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-utils

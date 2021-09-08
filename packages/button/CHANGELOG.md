@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.2.1...@sbercloud/uikit-react-button@1.3.0) (2021-09-08)
+
+
+### Features
+
+* extracting copy-to-clipboard functionality into utils ([3a9b50f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3a9b50f8384279beb0cc27c79441e346f697bee1))
+
+
+
+
+
 ## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.2.0...@sbercloud/uikit-react-button@1.2.1) (2021-09-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
