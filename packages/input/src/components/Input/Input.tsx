@@ -1,4 +1,3 @@
-import copyText from 'copy-to-clipboard';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { ButtonIcon, ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
@@ -105,16 +104,6 @@ export const Input = ({
     inputEl.current.dispatchEvent(event);
   };
 
-  const handleInputClick = (e: React.MouseEvent<HTMLInputElement>) => {
-    e.stopPropagation();
-
-    if (!allowCopy || !correctValue) {
-      return;
-    }
-
-    copyText(correctValue.toString());
-  };
-
   const paddingRight = useMemo(() => {
     let result = 0;
     const paddingConfig = [
@@ -149,31 +138,29 @@ export const Input = ({
     <StyledWrap className={wrapperClassName} ref={wrapperRef} {...extractSupportProps(rest)}>
       {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
       <StyledInputWrapper>
-        <div role='presentation' onClick={handleInputClick}>
-          <StyledInput
-            ref={inputEl}
-            paddingRight={paddingRight}
-            allowCopy={allowCopy}
-            type={getInputType({ type, isViewMode })}
-            onChange={handleChange}
-            value={correctValue}
-            data-type={type}
-            data-disabled={disabled}
-            className={className}
-            placeholder={placeholder}
-            min={min}
-            max={max}
-            step={1}
-            defaultValue={defaultValue}
-            disabled={disabled}
-            data-error={error || undefined}
-            name={name}
-            autoComplete={autoComplete}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            data-test-id='input__value'
-          />
-        </div>
+        <StyledInput
+          ref={inputEl}
+          paddingRight={paddingRight}
+          allowCopy={allowCopy}
+          type={getInputType({ type, isViewMode })}
+          onChange={handleChange}
+          value={correctValue}
+          data-type={type}
+          data-disabled={disabled}
+          className={className}
+          placeholder={placeholder}
+          min={min}
+          max={max}
+          step={1}
+          defaultValue={defaultValue}
+          disabled={disabled}
+          data-error={error || undefined}
+          name={name}
+          autoComplete={autoComplete}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          data-test-id='input__value'
+        />
         <StyledIconWrapper>
           <BasicButtonWrapper>
             {!disabled && allowClear && correctValue && correctValue !== '' && (

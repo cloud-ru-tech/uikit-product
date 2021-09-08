@@ -1,9 +1,8 @@
-import copyText from 'copy-to-clipboard';
 import { ElementType, MouseEvent as ReactMouseEvent, useCallback, useState } from 'react';
 import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 
 import { CopiedInterfaceSVG, CopyInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { copyToClipboard, useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, extractCommonButtonProps, textProvider } from '../../helpers';
 import { WithTooltipProps } from '../../hocs';
@@ -33,7 +32,7 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
   const { code: language } = useLanguage({ onlyEnabledLanguage: true });
 
   const copy = useCallback(() => {
-    copyText(text);
+    copyToClipboard(text);
     setCompleted(true);
 
     setTimeout(() => {
