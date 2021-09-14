@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.27.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.26.0...@sbercloud/uikit-theme@0.27.0) (2021-09-14)
+
+
+### Features
+
+* green tabs ([CP-2222](https://jira.sbercloud.tech/browse/CP-2222)) ([4a16a64](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/4a16a64fd9edc84813f9a89e12015fdf6cd0e423))
+
+
+
+
+
 # [0.26.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.25.2...@sbercloud/uikit-theme@0.26.0) (2021-09-07)
 
 
