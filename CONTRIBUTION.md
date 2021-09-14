@@ -71,7 +71,9 @@ packages
 ### Запуск локального storybook
 
 1. `npm run all:cleaninstall`
-2. `npm run storybook`
+2. Для запуска storybook
+   - со всеми пакетами `npm run storybook`
+   - с определенным пакетом `STORYBOOK_STORY_NAME=%STORY_NAME% npm run storybook`
 
 ### Создание нового пакета
 

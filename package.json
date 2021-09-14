@@ -4,7 +4,7 @@
   "description": "Sbercloud UI-Kit",
   "license": "UNLICENSED",
   "scripts": {
-    "storybook": "start-storybook -p 6006",
+    "storybook": "STORYBOOK_STORY_NAME=$STORYBOOK_STORY_NAME start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "add-package": "node scripts/npm-init",
     "clean": "npm run clean:dist && npm run clean:modules",

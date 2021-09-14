@@ -3,7 +3,7 @@ const glob = require('glob');
 const path = require('path');
 
 module.exports = {
-  stories: ['../packages/*/stories/*.@(ts|tsx)'],
+  stories: [`../packages/${process.env.STORYBOOK_STORY_NAME || '*'}/stories/*.@(ts|tsx)`],
   addons: [
     'storybook-readme',
     'storybook-addon-designs',
