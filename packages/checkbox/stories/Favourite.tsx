@@ -1,26 +1,32 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { Variants } from 'checkbox/src/components/Favourite/constants';
 import { useEffect, useState } from 'react';
+
+import { EXPORT_GLOBAL_CSS_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Checkbox, CheckboxProps } from '../src';
+import { Favourite, FavouriteProps } from '../src';
 
 export default {
-  title: 'Components/Checkbox/Checkbox',
-  component: Checkbox,
+  title: 'Components/Checkbox/Favourite',
+  component: Favourite,
 } as Meta;
 
-const CheckboxWrap = styled.div`
+const FavouriteWrap = styled.div<{ isOnAccent: boolean }>`
   padding: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  max-width: fit-content;
+  background-color: ${({ isOnAccent }) =>
+    isOnAccent ? `var(${EXPORT_GLOBAL_CSS_VARS.BACKGROUND_ACCENT})` : 'transparent'};
 `;
 
-const Template: Story<CheckboxProps> = ({ checked, ...args }) => {
+const Template: Story<FavouriteProps> = ({ checked, ...args }) => {
   const [isChecked, setIsChecked] = useState(checked || false);
 
   useEffect(() => {
@@ -28,25 +34,15 @@ const Template: Story<CheckboxProps> = ({ checked, ...args }) => {
   }, [checked]);
 
   return (
-    <CheckboxWrap>
-      <Checkbox {...args} checked={isChecked} handleChange={isChecked => setIsChecked(isChecked)} />
-    </CheckboxWrap>
+    <FavouriteWrap isOnAccent={args.variant === Variants.OnAccent}>
+      <Favourite {...args} checked={isChecked} handleChange={isChecked => setIsChecked(isChecked)} />
+    </FavouriteWrap>
   );
 };
 
-export const checkbox = Template.bind({});
-checkbox.args = {
-  checked: false,
-  partChecked: false,
-  disabled: false,
-  label: '',
-};
-checkbox.argTypes = {
-  label: {
-    control: 'text',
-  },
-};
-checkbox.parameters = {
+export const favourite = Template.bind({});
+favourite.args = {};
+favourite.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

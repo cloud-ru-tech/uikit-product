@@ -10,7 +10,7 @@ export type CardHeaderProps = {
   checked?: boolean;
   className?: string;
   defaultFavourite?: boolean;
-  onCheckboxClick?: (check: boolean, e: React.MouseEvent<HTMLLabelElement, MouseEvent>) => void;
+  onCheckboxClick?: (check: boolean, e: React.ChangeEvent<HTMLInputElement>) => void;
   onFavouriteChange?: (isFavourite: boolean) => void;
   moreActions?: {
     name: string;
@@ -42,7 +42,7 @@ export const CardHeader: FC<CardHeaderProps> = props => {
     }
   };
 
-  const handleCheckedClick = (check: boolean, e: React.MouseEvent<HTMLLabelElement, MouseEvent>): void => {
+  const handleCheckedClick = (check: boolean, e: React.ChangeEvent<HTMLInputElement>): void => {
     e.stopPropagation();
 
     if (onCheckboxClick) {
