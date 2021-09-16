@@ -1,7 +1,8 @@
+import { cx } from '@linaria/core';
 import { FC } from 'react';
-import { TextareaAutosizeProps } from 'react-textarea-autosize';
+import TextareaAutosize, { TextareaAutosizeProps } from 'react-textarea-autosize';
 
-import { StyledTextareaAutosize } from './styled';
+import { textareaAutosizeClassName } from './styled';
 
 export interface ITextareaProps extends TextareaAutosizeProps {
   className?: string;
@@ -10,5 +11,5 @@ export interface ITextareaProps extends TextareaAutosizeProps {
 export const Textarea: FC<ITextareaProps> = ({ className, ...props }) => (
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  <StyledTextareaAutosize minRows={2} className={className} {...props} />
+  <TextareaAutosize minRows={2} className={cx(textareaAutosizeClassName, className)} {...props} />
 );
