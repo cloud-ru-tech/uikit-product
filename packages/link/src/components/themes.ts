@@ -55,7 +55,7 @@ export const GREEN_THEME = css`
   :global() {
     [data-theme=${Themes.Green}] {
       ${COLORS.PRIMARY_FILL}: var(${GREEN[100]});
-      ${COLORS.PRIMARY_COLOR}: var(${GREY[800]});
+      ${COLORS.PRIMARY_COLOR}: var(${GREY[600]});
       ${COLORS.PRIMARY_FILL_HOVER}: var(${GREEN[115]});
       ${COLORS.PRIMARY_FILL_ACTIVE}: var(${GREEN[125]});
       ${COLORS.PRIMARY_FILL_DISABLED}: var(${BLACK_ALFA[16]});
