@@ -17,61 +17,61 @@ export const Button = styled(BaseButton)`
   ${TYPOGRAPHY_VARIABLES.TEXT_2}
 
   &[data-variant='${Variant.Accent}'] {
-    fill: var(${COLORS.ACCENT_COLOR});
+    fill: var(${COLORS.ACCENT_ICON_COLOR});
     color: var(${COLORS.ACCENT_COLOR});
 
     :hover {
-      fill: var(${COLORS.ACCENT_COLOR_HOVER});
+      fill: var(${COLORS.ACCENT_ICON_COLOR_HOVER});
       color: var(${COLORS.ACCENT_COLOR_HOVER});
     }
 
     :active {
-      fill: var(${COLORS.ACCENT_COLOR_ACTIVE});
+      fill: var(${COLORS.ACCENT_ICON_COLOR_ACTIVE});
       color: var(${COLORS.ACCENT_COLOR_ACTIVE});
     }
 
     :disabled {
-      fill: var(${COLORS.ACCENT_COLOR_DISABLED});
+      fill: var(${COLORS.ACCENT_ICON_COLOR_DISABLED});
       color: var(${COLORS.ACCENT_COLOR_DISABLED});
     }
   }
 
   &[data-variant='${Variant.Primary}'] {
-    fill: var(${COLORS.PRIMARY_COLOR});
+    fill: var(${COLORS.PRIMARY_ICON_COLOR});
     color: var(${COLORS.PRIMARY_COLOR});
 
     :hover {
-      fill: var(${COLORS.PRIMARY_COLOR_HOVER});
+      fill: var(${COLORS.PRIMARY_ICON_COLOR_HOVER});
       color: var(${COLORS.PRIMARY_COLOR_HOVER});
     }
 
     :active {
-      fill: var(${COLORS.PRIMARY_COLOR_ACTIVE});
+      fill: var(${COLORS.PRIMARY_ICON_COLOR_ACTIVE});
       color: var(${COLORS.PRIMARY_COLOR_ACTIVE});
     }
 
     :disabled {
-      fill: var(${COLORS.PRIMARY_COLOR_DISABLED});
+      fill: var(${COLORS.PRIMARY_ICON_COLOR_DISABLED});
       color: var(${COLORS.PRIMARY_COLOR_DISABLED});
     }
   }
 
   &[data-variant='${Variant.Secondary}'] {
-    fill: var(${COLORS.SECONDARY_COLOR});
+    fill: var(${COLORS.SECONDARY_ICON_COLOR});
     color: var(${COLORS.SECONDARY_COLOR});
 
     :hover {
-      fill: var(${COLORS.SECONDARY_COLOR_HOVER});
+      fill: var(${COLORS.SECONDARY_ICON_COLOR_HOVER});
       color: var(${COLORS.SECONDARY_COLOR_HOVER});
     }
 
     :active {
-      fill: var(${COLORS.SECONDARY_COLOR_ACTIVE});
+      fill: var(${COLORS.SECONDARY_ICON_COLOR_ACTIVE});
       color: var(${COLORS.SECONDARY_COLOR_ACTIVE});
     }
 
     :disabled {
-      fill: var(${COLORS.SECONDARY_COLOR_DISABLED});
+      fill: var(${COLORS.SECONDARY_ICON_COLOR_DISABLED});
       color: var(${COLORS.SECONDARY_COLOR_DISABLED});
     }
   }
