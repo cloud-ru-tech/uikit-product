@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@1.1.2...@sbercloud/uikit-react-status@1.2.0) (2021-09-17)
+
+
+### Features
+
+* [AICD-2074](https://jira.sbercloud.tech/browse/AICD-2074) - change StatusTag bg color on dark themes ([1bc0277](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1bc027703872a35968d5b24d1653f9e1c30d0706))
+
+
+
+
+
 ## [1.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@1.1.1...@sbercloud/uikit-react-status@1.1.2) (2021-09-14)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-status

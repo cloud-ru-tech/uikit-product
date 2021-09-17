@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-status",
   "title": "React Status",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
