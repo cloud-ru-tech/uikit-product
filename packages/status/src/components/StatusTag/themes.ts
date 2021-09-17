@@ -28,8 +28,8 @@ export const PURPLE_DARK_THEME = css`
   :global() {
     [data-theme='${Themes.PurpleDark}'] {
       ${COLORS.TRANSPARENT_BG}: transparent;
-      ${COLORS.LIGHT_BG}: var(${WHITE_ALFA[16]});
-      ${COLORS.DARK_BG}: var(${BLACK_ALFA[48]});
+      ${COLORS.LIGHT_BG}: var(${WHITE_ALFA[8]});
+      ${COLORS.DARK_BG}: var(${BLACK_ALFA[16]});
 
       ${COLORS.TEXT_COLOR}: var(${GREY[100]});
     }
@@ -52,8 +52,8 @@ export const GREEN_DARK_THEME = css`
   :global() {
     [data-theme='${Themes.GreenDark}'] {
       ${COLORS.TRANSPARENT_BG}: transparent;
-      ${COLORS.LIGHT_BG}: var(${WHITE_ALFA[16]});
-      ${COLORS.DARK_BG}: var(${BLACK_ALFA[48]});
+      ${COLORS.LIGHT_BG}: var(${WHITE_ALFA[8]});
+      ${COLORS.DARK_BG}: var(${BLACK_ALFA[16]});
 
       ${COLORS.TEXT_COLOR}: var(${GREY[100]});
     }
