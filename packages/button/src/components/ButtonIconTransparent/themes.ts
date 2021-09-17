@@ -51,7 +51,7 @@ export const PURPLE_THEME = css`
 export const PURPLE_DARK_THEME = css`
   :global() {
     [data-theme='${Themes.PurpleDark}'] {
-      ${COLORS.DEFAULT_FILL}: var(${GREY[450]});
+      ${COLORS.DEFAULT_FILL}: var(${WHITE_ALFA[48]});
       ${COLORS.DEFAULT_BG}: var(${WHITE_ALFA[8]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${GREY[200]});
       ${COLORS.DEFAULT_BG_HOVER}: var(${WHITE_ALFA[16]});
@@ -99,7 +99,7 @@ export const GREEN_THEME = css`
 export const GREEN_DARK_THEME = css`
   :global() {
     [data-theme='${Themes.GreenDark}'] {
-      ${COLORS.DEFAULT_FILL}: var(${GREY[450]});
+      ${COLORS.DEFAULT_FILL}: var(${WHITE_ALFA[48]});
       ${COLORS.DEFAULT_BG}: var(${WHITE_ALFA[8]});
       ${COLORS.DEFAULT_FILL_HOVER}: var(${GREY[200]});
       ${COLORS.DEFAULT_BG_HOVER}: var(${WHITE_ALFA[16]});
