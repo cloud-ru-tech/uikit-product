@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@0.5.6...@sbercloud/uikit-react-checkbox@0.6.0) (2021-09-17)
+
+
+### Features
+
+* Added stable favourite, added stable checkbox ([AICDC-3304](https://jira.sbercloud.tech/browse/AICDC-3304)) ([2743565](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/274356512fc954be832dd37c70242b9c227c8374))
+
+
+### BREAKING CHANGES
+
+* Added stable favourite, added stable checkbox (AICDC-3304)
+
+
+
+
+
 ## [0.5.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@0.5.5...@sbercloud/uikit-react-checkbox@0.5.6) (2021-09-14)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-checkbox

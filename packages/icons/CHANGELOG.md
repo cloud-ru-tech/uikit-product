@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2021-09-17)
+
+
+### Features
+
+* add text field component ([CP-1701](https://jira.sbercloud.tech/browse/CP-1701)) ([6fdfd3c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/6fdfd3cf1731e52fac4fe396578a5a3f09936373))
+* tooltip first stable ([c79fe3b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/c79fe3b8227b911e71c1d60c3ffdcbc769af6da5))
+* updated icons for Checkbox component ([AICDC-3304](https://jira.sbercloud.tech/browse/AICDC-3304)) ([4543668](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/4543668440721afb9cc1fc371560563675935f10))
+
+
+### BREAKING CHANGES
+
+* updated icons for Checkbox component (AICDC-3304)
+
+
+
+
+
 ## [1.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@1.4.0...@sbercloud/uikit-react-icons@1.4.1) (2021-08-20)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@0.16.2...@sbercloud/uikit-react-input@0.16.3) (2021-09-17)
+
+
+### Bug Fixes
+
+* fixed textarea usage in node environment on build ([AICDC-3304](https://jira.sbercloud.tech/browse/AICDC-3304)) ([e73aca4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/e73aca4e72daadffa3185ed7f61f837effda58c1))
+
+
+
+
+
 ## [0.16.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@0.16.1...@sbercloud/uikit-react-input@0.16.2) (2021-09-16)
 
 
