@@ -1,8 +1,9 @@
 import { styled } from '@linaria/react';
-import { Input } from '@sbercloud/uikit-react-input';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+
+import { Input } from '@sbercloud/uikit-react-input';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -45,11 +46,6 @@ formField.argTypes = {
       type: 'text',
     },
   },
-  hint: {
-    control: {
-      type: 'text',
-    },
-  },
   description: {
     control: {
       type: 'text',
@@ -68,7 +64,13 @@ formField.argTypes = {
 };
 formField.args = {
   label: 'Произвольное число',
-  hint: 'Подсказка',
+  hint: {
+    content: 'Подсказка',
+    link: {
+      text: 'link',
+      href: 'https://yandex.com',
+    },
+  },
   description:
     'Можно использовать строчные буквы латинского алфавита (a-z); цифры (0-9); символ тире (-). Начинаться обязательно должно с буквы, заканчиваться может буквой или цифрой, максимум 16 символов. Например: test-1',
   error: 'Некорректный формат',

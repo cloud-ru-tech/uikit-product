@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H3, TableText } from '@sbercloud/uikit-typography';
 
@@ -9,12 +10,11 @@ const { COLORS_DIVIDER, COLORS_FORM_GROUP } = DEPRECATED_EXPORT_VARS;
 
 export const hintClassName = css`
   fill: var(${COLORS_FORM_GROUP.HINT_COLOR});
-
-  margin-left: 8px;
 `;
 
 export const tooltipTriggerClassName = css`
   display: inline-flex;
+  margin-left: 8px;
 `;
 
 export const Wrapper = styled.div`

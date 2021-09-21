@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
 import { FormField } from '@sbercloud/uikit-react-form';
@@ -51,21 +51,30 @@ const Template: Story<ITableWithRowDetailProps> = ({ rowData, columnDefs }) => {
         <EmbeddedComponent>
           <FormField
             label='Не обязательное поле'
-            hint='Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.'
+            hint={{
+              content:
+                'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
+            }}
           >
             <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
           </FormField>
 
           <FormField
             label='Обязательное поле'
-            hint='Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.'
+            hint={{
+              content:
+                'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
+            }}
           >
             <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
           </FormField>
 
           <FormField
             label='Обязательное поле'
-            hint='Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.'
+            hint={{
+              content:
+                'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
+            }}
           >
             <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
           </FormField>
