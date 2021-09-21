@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-link@1.2.0...@sbercloud/uikit-react-link@1.2.1) (2021-09-21)
+
+
+### Bug Fixes
+
+* wrapper's display is inline-flex ([ffa516d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ffa516d7f3253924fd1f40f1b02875ef3cfea213))
+
+
+
+
+
 # [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-link@1.1.3...@sbercloud/uikit-react-link@1.2.0) (2021-09-17)
 
 
