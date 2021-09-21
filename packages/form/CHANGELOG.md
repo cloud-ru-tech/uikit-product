@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-form@0.10.6...@sbercloud/uikit-react-form@0.11.0) (2021-09-21)
+
+
+### Features
+
+* hint props should be of tooltip prop type ([96fdf27](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/96fdf27c044882895e6460044eaef1f2c41995fe))
+
+
+### BREAKING CHANGES
+
+* hint props should be of tooltip prop type
+
+
+
+
+
 ## [0.10.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-form@0.10.5...@sbercloud/uikit-react-form@0.10.6) (2021-09-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-form
