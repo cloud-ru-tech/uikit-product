@@ -16,7 +16,7 @@ export const StyledArrowLinkInterfaceSVG = styled(ArrowLinkInterfaceSVG)`
 `;
 
 export const StyledLink = styled.a<{ showIcon: boolean }>`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
   fill: currentColor;
