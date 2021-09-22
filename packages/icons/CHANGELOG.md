@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.0.0...@sbercloud/uikit-react-icons@2.1.0) (2021-09-22)
+
+
+### Features
+
+* gitlab service icon ([db93165](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/db93165d40047d401fbc1472a89a2b5e11247852))
+
+
+
+
+
 # 2.0.0 (2021-09-17)
 
 
