@@ -26,7 +26,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "1.4.2",
+    "@sbercloud/uikit-react-button": "2.0.0",
     "@sbercloud/uikit-theme": "0.27.0",
     "@sbercloud/uikit-react-file-upload": "0.0.0"
   },
