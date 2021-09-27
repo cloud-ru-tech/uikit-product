@@ -1,6 +1,7 @@
+import { forwardRef, useEffect, useMemo, useState } from 'react';
+
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
-import { forwardRef, useEffect, useMemo, useState } from 'react';
 
 import { AmPmFormat, Texts, textProvider } from '../../helpers/texts-provider';
 import * as S from './styled';
@@ -22,7 +23,7 @@ export const CustomTimeInput = forwardRef<HTMLInputElement, ICustomTimeInputProp
   const timeFormatter = useMemo(
     () =>
       new Intl.DateTimeFormat(language, {
-        hour12: AmPmFormat[language],
+        hourCycle: AmPmFormat[language] ? 'h12' : 'h23',
         hour: 'numeric',
         minute: 'numeric',
       }),

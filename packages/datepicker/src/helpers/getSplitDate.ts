@@ -1,5 +1,6 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
 import memoize from 'memoizee';
+
+import { LanguageCodeType } from '@sbercloud/uikit-utils';
 
 import { INPUT_PLACEHOLDER } from './constants';
 import { AmPmFormat } from './texts-provider';
@@ -21,6 +22,10 @@ export const getSplitDate = (language: LanguageCodeType, date?: Date | null): TS
     day: mGetFormatter(language, { day: '2-digit' }).format(dateObj),
     month: mGetFormatter(language, { month: '2-digit' }).format(dateObj),
     year: mGetFormatter(language, { year: 'numeric' }).format(dateObj),
-    time: mGetFormatter(language, { hour12: AmPmFormat[language], hour: '2-digit', minute: '2-digit' }).format(dateObj),
+    time: mGetFormatter(language, {
+      hourCycle: AmPmFormat[language] ? 'h12' : 'h23',
+      hour: '2-digit',
+      minute: '2-digit',
+    }).format(dateObj),
   };
 };

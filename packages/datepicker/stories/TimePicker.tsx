@@ -12,7 +12,11 @@ export default {
 
 const Template: Story<TimePickerProps> = args => (
   <div style={{ width: 350 }}>
-    <TimePicker {...args} />
+    <TimePicker
+      {...args}
+      minTime={args.minTime ? new Date() : undefined}
+      maxTime={args.minTime ? new Date(new Date().setHours(23, 59, 59, 999)) : undefined}
+    />
   </div>
 );
 
@@ -31,7 +35,15 @@ timePicker.argTypes = {
       type: 'boolean',
     },
   },
+  minTime: {
+    defaultValue: true,
+    name: 'minTime',
+    control: {
+      type: 'boolean',
+    },
+  },
 };
+
 timePicker.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
