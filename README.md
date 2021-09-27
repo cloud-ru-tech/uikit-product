@@ -6,7 +6,7 @@
 
 ## [Storybook [Poc stand].](http://192.168.67.22:32333/)
 
-## Обязательно к изучению до начала работы: [Contribution Guide](CONTRIBUTION.md). Если после этого остались вопросы напишите в слак [канал](https://ai-sbercloud.slack.com/archives/C0114075H1B).
+## Обязательно к изучению до начала работы: [Contribution Guide](CONTRIBUTING.md). Если после этого остались вопросы напишите в слак [канал](https://ai-sbercloud.slack.com/archives/C0114075H1B).
 
 ## Установка на локальный проект
 
@@ -54,4 +54,3 @@ rules: [
  const {changeTheme, Themes} = useTheme();
    changeTheme(Themes.Purple)
 ```
-

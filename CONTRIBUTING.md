@@ -25,6 +25,7 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 
 ## NPM Scripts
 
+- `partial-storybook` - запуск локальной версии сторибука с определенными пакетами
 - `storybook` - запуск локальной версии сторибука
 - `build:storybook` - сборка исходников сторибука для CI/CD
 - `add-package` - создание нового пакета в рамках монорепозитория
@@ -73,7 +74,7 @@ packages
 1. `npm run all:cleaninstall`
 2. Для запуска storybook
    - со всеми пакетами `npm run storybook`
-   - с определенным пакетом `STORYBOOK_PACKAGE_NAME=%PACKAGE_NAME% npm run storybook`
+   - с определенными пакетами `npm run partial-storybook`
 
 ### Создание нового пакета
 
