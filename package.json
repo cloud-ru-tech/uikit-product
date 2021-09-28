@@ -7,7 +7,7 @@
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "add-package": "node scripts/npm-init",
-    "clean": "npm run clean:dist && npm run clean:modules",
+    "clean": "git clean -df && npm run clean:dist && npm run clean:modules",
     "clean:dist": "rimraf \"./packages/**/dist/\"",
     "clean:modules": "rimraf \"./packages/**/node_modules/\"",
     "changelog": "node scripts/changelog.js",
