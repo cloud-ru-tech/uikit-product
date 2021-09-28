@@ -2,8 +2,12 @@ const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 const glob = require('glob');
 const path = require('path');
 
+const STORIES = glob
+  .sync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/stories/*.{ts,tsx}`)
+  .map(x => path.resolve(__dirname, `../${x}`));
+
 module.exports = {
-  stories: [`../packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/stories/*.@(ts|tsx)`],
+  stories: STORIES,
   addons: [
     'storybook-readme',
     'storybook-addon-designs',
@@ -12,7 +16,7 @@ module.exports = {
       options: {
         rule: {
           test: [/\.tsx?$/],
-          include: glob.sync('packages/*/stories/*.{ts,tsx}').map(x => path.resolve(__dirname, `../${x}`)),
+          include: STORIES,
         },
       },
     },

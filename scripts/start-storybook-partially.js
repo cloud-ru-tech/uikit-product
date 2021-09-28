@@ -18,5 +18,5 @@ inquirer
     },
   ])
   .then(({ packagesToRun }) =>
-    shell.exec(`STORYBOOK_PACKAGE_NAME="(${packagesToRun.trim().split(/\s+/).join('|')})" start-storybook -p 6006`),
+    shell.exec(`STORYBOOK_PACKAGE_NAME="?(${packagesToRun.trim().split(/\s+/).join('|')})" start-storybook -p 6006`),
   );
