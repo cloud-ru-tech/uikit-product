@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-datepicker@0.8.8...@sbercloud/uikit-react-datepicker@0.8.9) (2021-09-29)
+
+
+### Bug Fixes
+
+* time format in English changed from 00 to 12 ([c31a517](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/c31a51789e67b6e9792afc7dbe2d91772a0b671f))
+
+
+
+
+
 ## [0.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-datepicker@0.8.7...@sbercloud/uikit-react-datepicker@0.8.8) (2021-09-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-datepicker
