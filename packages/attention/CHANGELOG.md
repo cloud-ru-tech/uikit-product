@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-attention@0.6.9...@sbercloud/uikit-react-attention@0.6.10) (2021-09-29)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-attention
+
+
+
+
+
 ## [0.6.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-attention@0.6.8...@sbercloud/uikit-react-attention@0.6.9) (2021-09-14)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-attention

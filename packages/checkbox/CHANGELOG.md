@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@0.6.1...@sbercloud/uikit-react-checkbox@1.0.0) (2021-09-29)
+
+
+### Features
+* Checkbox first stable version released
+* utils first stable version ([AICD-1813](https://jira.sbercloud.tech/browse/AICD-1813)) ([ed13c42](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ed13c421ac564f6a5b155780ce473c78eb94aacc))
+
+### BREAKING CHANGE
+
+* Themes selectors were changed, that's why your app require ConfigProvider from `@sbercloud/uikit-utils@^1.0.0` (or extend body tag by `data-theme` attribute).
+
+
+
 ## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@0.6.0...@sbercloud/uikit-react-checkbox@0.6.1) (2021-09-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-checkbox

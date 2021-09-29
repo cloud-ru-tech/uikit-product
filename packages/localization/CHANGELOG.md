@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-localization@0.9.12...@sbercloud/uikit-react-localization@0.10.0) (2021-09-29)
+
+
+### Features
+
+* utils first stable version ([AICD-1813](https://jira.sbercloud.tech/browse/AICD-1813)) ([ed13c42](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ed13c421ac564f6a5b155780ce473c78eb94aacc))
+
+
+
+
+
 ## [0.9.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-localization@0.9.11...@sbercloud/uikit-react-localization@0.9.12) (2021-09-14)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-localization
