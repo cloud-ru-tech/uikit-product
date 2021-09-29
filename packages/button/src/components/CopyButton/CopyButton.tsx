@@ -29,7 +29,7 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
   const [completed, setCompleted] = useState(false);
   const isMounted = useIsMounted();
 
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const copy = useCallback(() => {
     copyToClipboard(text);
@@ -61,7 +61,7 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
     <Element
       icon={completed ? <CopiedInterfaceSVG /> : <CopyInterfaceSVG />}
       onClick={wrappedOnClick}
-      tooltip={{ content: textProvider(language, Texts.copy) }}
+      tooltip={{ content: textProvider(languageCode, Texts.copy) }}
       {...extractedProps}
     />
   );

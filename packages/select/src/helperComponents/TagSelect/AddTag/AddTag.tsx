@@ -14,7 +14,7 @@ import { Container, NotValidMessage, StyledButton, StyledTagWrapper, colorPicker
 export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.Menu>> = props => {
   const { options, setValue, selectProps } = props;
   const { inputValue: search, colorDropdownPlacement, onTagChange, onSearch, validator, validateMessage } = selectProps;
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [color, setColor] = useState(PRESET_COLORS[getRandomInt(0, PRESET_COLORS.length - 1)]);
 
   const hasSearched = useMemo(() => options.some(option => option.label === search), [options, search]);
@@ -30,7 +30,7 @@ export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.
 
   const notValid = useMemo(() => validator && !validator(search), [validator, search]);
 
-  const addText = useMemo(() => textProvider<string>(language, Texts.add), [language]);
+  const addText = useMemo(() => textProvider<string>(languageCode, Texts.add), [languageCode]);
 
   if (!search || hasSearched) return null;
 

@@ -12,7 +12,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme=${Themes.Purple}] {
+    body[data-theme=${Themes.Purple}] {
       ${COLORS.BACKGROUND}: var(${GREY[0]});
       ${COLORS.LEGEND_TITLE}: var(${GREY[350]});
       ${COLORS.LEGEND_ITEM}: var(${GREY[900]});
@@ -22,7 +22,7 @@ export const PURPLE_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme=${Themes.Green}] {
+    body[data-theme=${Themes.Green}] {
       ${COLORS.BACKGROUND}: var(${GREY[0]});
       ${COLORS.LEGEND_TITLE}: var(${GREY[350]});
       ${COLORS.LEGEND_ITEM}: var(${GREY[900]});
@@ -32,7 +32,7 @@ export const GREEN_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.PurpleDark}] {
+    body[data-theme=${Themes.PurpleDark}] {
       ${COLORS.BACKGROUND}: var(${GREY[800]});
       ${COLORS.LEGEND_TITLE}: var(${GREY[500]});
       ${COLORS.LEGEND_ITEM}: var(${GREY[0]});
@@ -42,7 +42,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.GreenDark}] {
+    body[data-theme=${Themes.GreenDark}] {
       ${COLORS.BACKGROUND}: var(${GREY[800]});
       ${COLORS.LEGEND_TITLE}: var(${GREY[500]});
       ${COLORS.LEGEND_ITEM}: var(${GREY[0]});

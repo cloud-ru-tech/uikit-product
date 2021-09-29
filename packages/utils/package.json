@@ -17,7 +17,8 @@
   },
   "author": "Трифонов Михаил Сергеевич <mstrifonov@sbercloud.ru>",
   "contributors": [
-    "Трифонов Михаил Сергеевич <mstrifonov@sbercloud.ru>"
+    "Трифонов Михаил Сергеевич <mstrifonov@sbercloud.ru>",
+    "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
   ],
   "files": [
     "dist",

@@ -51,7 +51,7 @@ export const Input = ({
   const [correctValue, setCorrectValue] = useState(value);
   const [isViewMode, setViewMode] = useState(type !== 'security');
 
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   useEffect(() => {
     getInstance?.(inputEl as React.RefObject<HTMLInputElement>);
@@ -171,7 +171,7 @@ export const Input = ({
               <ButtonIcon
                 onClick={handleClickClear}
                 icon={<CloseInterfaceSVG />}
-                tooltip={{ content: textProvider(language, Texts.clear) }}
+                tooltip={{ content: textProvider(languageCode, Texts.clear) }}
                 data-test-id='input__clear-btn'
               />
             )}
@@ -180,7 +180,7 @@ export const Input = ({
               <ButtonIconTransparent
                 onClick={(): void => setViewMode(!isViewMode)}
                 tooltip={{
-                  content: isViewMode ? textProvider(language, Texts.hide) : textProvider(language, Texts.show),
+                  content: isViewMode ? textProvider(languageCode, Texts.hide) : textProvider(languageCode, Texts.show),
                 }}
                 icon={isViewMode ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
                 data-test-id='input__security-btn'

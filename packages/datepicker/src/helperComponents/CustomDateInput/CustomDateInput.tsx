@@ -1,13 +1,14 @@
-import { CalendarInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
 import { forwardRef, useCallback, useEffect, useMemo, useState } from 'react';
 import RDatePicker from 'react-datepicker';
 
-import { HiddenInput } from '../../helperComponents/HiddenInput';
+import { CalendarInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { useLanguage } from '@sbercloud/uikit-utils';
+
 import { getSplitDate } from '../../helpers/getSplitDate';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';
 import { DateFormat, Texts, textProvider } from '../../helpers/texts-provider';
 import { PickSettingProps, TSplitDateType, TimeInputProps } from '../../helpers/types';
+import { HiddenInput } from '../HiddenInput';
 import * as S from './styled';
 
 export interface ICustomDateInputProps {
@@ -20,15 +21,15 @@ export interface ICustomDateInputProps {
 }
 
 export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps>((props, ref) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { date, setDate, onClick, pickSettings, minDate } = props;
   const [isError, setError] = useState(false);
-  const [splitDate, setSplitDate] = useState<TSplitDateType>(getSplitDate(language, date));
+  const [splitDate, setSplitDate] = useState<TSplitDateType>(getSplitDate(languageCode, date));
 
   useEffect(() => {
-    const splitDate = getSplitDate(language, date);
+    const splitDate = getSplitDate(languageCode, date);
     setSplitDate(splitDate);
-  }, [date, language]);
+  }, [date, languageCode]);
 
   const handleChangeDate = useCallback(
     (splitDate: TSplitDateType) => {
@@ -73,10 +74,10 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps
       year: <HiddenInput valueProp={TimeInputProps.year} date={splitDate} onChange={handleChangeDate} minWidth={34} />,
       time: pickSettings?.isPickTime ? splitDate.time : undefined,
     }),
-    [splitDate, handleChangeDate, pickSettings, language],
+    [splitDate, handleChangeDate, pickSettings],
   );
 
-  const dateStr = useMemo(() => DateFormat[language](dateForFormatter), [language, dateForFormatter]);
+  const dateStr = useMemo(() => DateFormat[languageCode](dateForFormatter), [languageCode, dateForFormatter]);
 
   return (
     <>
@@ -90,7 +91,7 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps
         <CalendarInterfaceSVG className={S.calendarIconClassName} />
       </S.InputContainer>
       {isError && !pickSettings?.isDatePickerOpen && (
-        <S.Error>{textProvider(language, Texts.incorrectDateEntered)}</S.Error>
+        <S.Error>{textProvider(languageCode, Texts.incorrectDateEntered)}</S.Error>
       )}
     </>
   );

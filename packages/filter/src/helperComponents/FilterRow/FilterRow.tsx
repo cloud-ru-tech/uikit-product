@@ -1,9 +1,10 @@
-import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Input } from '@sbercloud/uikit-react-input';
-import { useLanguage } from '@sbercloud/uikit-utils';
-import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
 import cloneDeep from 'lodash.clonedeep';
 import { useCallback, useMemo } from 'react';
+
+import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { Input } from '@sbercloud/uikit-react-input';
+import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { findSelectValue } from '../../helpers/getValue';
 import { LogicConditionType, getLogicOptionByValue, logicOptions } from '../../helpers/logicOptions';
@@ -19,7 +20,7 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
   noFilteredProps = [],
   onChange,
 }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const handleChange = useCallback(
     (propName: string, val: unknown) => {
       const nextValue = cloneDeep(value);
@@ -28,12 +29,15 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
       nextValue[index][propName] = val;
       onChange?.(nextValue);
     },
-    [value],
+    [index, onChange, value],
   );
-  const logicOptionsList = useMemo(() => logicOptions(language), [language]);
-  const logicOptionByValue = useMemo(() => getLogicOptionByValue(language), [language]);
+  const logicOptionsList = useMemo(() => logicOptions(languageCode), [languageCode]);
+  const logicOptionByValue = useMemo(() => getLogicOptionByValue(languageCode), [languageCode]);
 
-  const filterOption = useMemo(() => filterOptions?.find(fOpt => fOpt.value === propValue.id), [filterOptions]);
+  const filterOption = useMemo(
+    () => filterOptions?.find(fOpt => fOpt.value === propValue.id),
+    [filterOptions, propValue.id],
+  );
 
   const initValueOption = useMemo(() => {
     const { value } = propValue;

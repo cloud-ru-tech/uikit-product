@@ -59,7 +59,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     placeholder,
   } = props;
 
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [stateOptions, setOptions] = useState<CustomOptionType[]>();
   const [inputValue, setInputSearch] = useState<string>();
   const [isOpen, setIsOpen] = useState(false);
@@ -172,7 +172,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     <div className={className} ref={selectRef} {...extractSupportProps(props)}>
       <RCSelect<CustomOptionType>
         {...props}
-        placeholder={placeholder || textProvider<string>(language, Texts.selectPlaceholder)}
+        placeholder={placeholder || textProvider<string>(languageCode, Texts.selectPlaceholder)}
         onMenuClose={onMenuClose}
         ref={(instance): void => {
           customRef?.(instance as RCSelect<CustomOptionType>);

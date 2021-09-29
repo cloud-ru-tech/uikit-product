@@ -19,7 +19,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme=${Themes.Purple}] {
+    body[data-theme=${Themes.Purple}] {
       ${COLORS.DEFAULT_BACKGROUND}: var(${PURPLE[100]});
       ${COLORS.ALERT_BACKGROUND}: var(${PRESET.BERRY_RED_1});
       ${COLORS.DEFAULT_TEXT_COLOR}: var(${GREY[0]});
@@ -36,7 +36,7 @@ export const PURPLE_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.PurpleDark}] {
+    body[data-theme=${Themes.PurpleDark}] {
       ${COLORS.DEFAULT_BACKGROUND}: var(${PURPLE[100]});
       ${COLORS.ALERT_BACKGROUND}: var(${PRESET.BERRY_RED_1});
       ${COLORS.DEFAULT_TEXT_COLOR}: var(${GREY[0]});
@@ -53,7 +53,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme=${Themes.Green}] {
+    body[data-theme=${Themes.Green}] {
       ${COLORS.DEFAULT_BACKGROUND}: var(${GREEN[100]});
       ${COLORS.ALERT_BACKGROUND}: var(${PRESET.BERRY_RED_1});
       ${COLORS.DEFAULT_TEXT_COLOR}: var(${BLUE_GREY[100]});
@@ -70,7 +70,7 @@ export const GREEN_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.GreenDark}] {
+    body[data-theme=${Themes.GreenDark}] {
       ${COLORS.DEFAULT_BACKGROUND}: var(${GREEN[100]});
       ${COLORS.ALERT_BACKGROUND}: var(${PRESET.BERRY_RED_1});
       ${COLORS.DEFAULT_TEXT_COLOR}: var(${BLUE_GREY[100]});

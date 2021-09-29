@@ -1,7 +1,8 @@
 import { ModifierArguments, Obj } from '@popperjs/core';
-import { useLanguage } from '@sbercloud/uikit-utils';
 import { useCallback, useMemo, useState } from 'react';
 import RDatePicker, { ReactDatePickerProps } from 'react-datepicker';
+
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { CustomTimeInput } from '../../helperComponents/CustomTimeInput';
 import { TimeFormat } from '../../helpers/texts-provider';
@@ -12,7 +13,7 @@ export interface TimePickerProps extends ReactDatePickerProps {
 }
 
 export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime, maxTime, disabled }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
   const open = useCallback(() => setOpen(true), []);
@@ -34,7 +35,7 @@ export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime,
     [],
   );
 
-  const timeFormat = useMemo(() => TimeFormat[language], [language]);
+  const timeFormat = useMemo(() => TimeFormat[languageCode], [languageCode]);
 
   return (
     <S.Container>
@@ -47,7 +48,7 @@ export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime,
         timeIntervals={15}
         timeCaption=''
         timeFormat={timeFormat}
-        customInput={<CustomTimeInput date={date} open={isOpen} language={language} />}
+        customInput={<CustomTimeInput date={date} open={isOpen} language={languageCode} />}
         onCalendarClose={close}
         onCalendarOpen={open}
         minTime={minTime}

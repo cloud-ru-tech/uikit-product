@@ -39,7 +39,7 @@ export function ClientModelTableController<T>({
   advancedProps,
   ...rest
 }: WithSupportProps<ClientModelTableControllerProps<T>>) {
-  const { code: langCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const [gridApi, setGridApi] = useState<GridApi | null>(null);
   const [searchValue, setSearchValue] = useState('');
@@ -205,7 +205,7 @@ export function ClientModelTableController<T>({
 
   return (
     <ClientModelTableView
-      language={langCode as EnabledLanguages}
+      language={languageCode as EnabledLanguages}
       fieldId={fieldId}
       data={data}
       columnDefinitions={columnDefinitions}

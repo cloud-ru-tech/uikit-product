@@ -14,7 +14,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme='${Themes.Purple}'] {
+    body[data-theme='${Themes.Purple}'] {
       ${COLORS.TRANSPARENT_BG}: transparent;
       ${COLORS.LIGHT_BG}: var(${GREY[0]});
       ${COLORS.DARK_BG}: var(${BLACK_ALFA[4]});
@@ -26,7 +26,7 @@ export const PURPLE_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.PurpleDark}'] {
+    body[data-theme='${Themes.PurpleDark}'] {
       ${COLORS.TRANSPARENT_BG}: transparent;
       ${COLORS.LIGHT_BG}: var(${WHITE_ALFA[8]});
       ${COLORS.DARK_BG}: var(${BLACK_ALFA[16]});
@@ -38,7 +38,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme='${Themes.Green}'] {
+    body[data-theme='${Themes.Green}'] {
       ${COLORS.TRANSPARENT_BG}: transparent;
       ${COLORS.LIGHT_BG}: var(${GREY[0]});
       ${COLORS.DARK_BG}: var(${BLACK_ALFA[4]});
@@ -50,7 +50,7 @@ export const GREEN_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.GreenDark}'] {
+    body[data-theme='${Themes.GreenDark}'] {
       ${COLORS.TRANSPARENT_BG}: transparent;
       ${COLORS.LIGHT_BG}: var(${WHITE_ALFA[8]});
       ${COLORS.DARK_BG}: var(${BLACK_ALFA[16]});

@@ -1,7 +1,8 @@
-import { color, globals } from '@sbercloud/uikit-theme';
 import { FC, useEffect, useLayoutEffect, useState } from 'react';
 
-import { DEFAULT, DEPRECATED_COLOR, POSTMASSAGE_KEY } from '../../constants';
+import { color, globals } from '@sbercloud/uikit-theme';
+
+import { DEFAULT, DEPRECATED_COLOR, POST_MESSAGE_KEY } from '../../constants';
 import { store } from '../../helpers/store';
 import { tryParseJson } from '../../helpers/tryParseJson';
 import { LanguageCodeType, Themes } from '../../types';
@@ -21,20 +22,20 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
   const [configLanguageCode, setConfigLanguageCodeTheme] = useState(DEFAULT.LANGUAGE);
 
   useEffect(() => {
-    const html = document.getElementsByTagName('html')[0];
+    const body = document.getElementsByTagName('body')[0];
     /*-----------
     --- THEME --- 
     -----------*/
 
     const receiveChangeThemeMessage = (event: MessageEvent) => {
       const eventData = tryParseJson(event.data);
-      if (eventData.key !== POSTMASSAGE_KEY.changeTheme) return;
+      if (eventData.key !== POST_MESSAGE_KEY.changeTheme) return;
 
       setConfigTheme(eventData.value);
     };
     window.addEventListener('message', receiveChangeThemeMessage, false);
 
-    html.classList.add(globals, color);
+    body.classList.add(globals, color);
 
     /*--------------
     --- LANGUAGE --- 
@@ -42,7 +43,7 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
 
     const receiveChangeLanguageMessage = (event: MessageEvent) => {
       const eventData = tryParseJson(event.data);
-      if (eventData.key !== POSTMASSAGE_KEY.changeLanguage) return;
+      if (eventData.key !== POST_MESSAGE_KEY.changeLanguage) return;
       setConfigLanguageCodeTheme(eventData.value);
     };
     window.addEventListener('message', receiveChangeLanguageMessage, false);
@@ -64,9 +65,13 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
 
   useEffect(() => {
     const html = document.getElementsByTagName('html')[0];
-    html.classList.add(DEPRECATED_COLOR[configTheme]);
     html.setAttribute('data-theme', configTheme);
-    window.postMessage(JSON.stringify({ key: POSTMASSAGE_KEY.changeThemeDone, value: configTheme }), location.origin);
+
+    const body = document.getElementsByTagName('body')[0];
+    body.setAttribute('data-theme', configTheme);
+    body.classList.add(DEPRECATED_COLOR[configTheme]);
+
+    window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeThemeDone, value: configTheme }), location.origin);
   }, [configTheme]);
 
   /*--------------
@@ -80,16 +85,12 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
 
   useEffect(() => {
     window.postMessage(
-      JSON.stringify({ key: POSTMASSAGE_KEY.changeLanguageDone, value: configLanguageCode }),
+      JSON.stringify({ key: POST_MESSAGE_KEY.changeLanguageDone, value: configLanguageCode }),
       location.origin,
     );
   }, [configLanguageCode]);
 
-  return (
-    <div id='sbercloud-theme-wrapper' data-theme={configTheme}>
-      {children}
-    </div>
-  );
+  return <>{children}</>;
 };
 
 ConfigProvider.themes = Themes;

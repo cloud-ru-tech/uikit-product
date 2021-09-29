@@ -22,7 +22,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme=${Themes.Purple}] {
+    body[data-theme=${Themes.Purple}] {
       ${COLORS.UNCHECKED.BORDER}: var(${BLACK_ALFA[24]});
       ${COLORS.UNCHECKED.HOVER_BORDER}: var(${BLACK_ALFA[48]});
       ${COLORS.UNCHECKED.DISABLED_BORDER}: var(${BLACK_ALFA[8]});
@@ -38,7 +38,7 @@ export const PURPLE_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.PurpleDark}] {
+    body[data-theme=${Themes.PurpleDark}] {
       ${COLORS.UNCHECKED.BORDER}: var(${WHITE_ALFA[24]});
       ${COLORS.UNCHECKED.HOVER_BORDER}: var(${WHITE_ALFA[48]});
       ${COLORS.UNCHECKED.DISABLED_BORDER}: var(${WHITE_ALFA[8]});
@@ -54,7 +54,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme=${Themes.Green}] {
+    body[data-theme=${Themes.Green}] {
       ${COLORS.UNCHECKED.BORDER}: var(${BLACK_ALFA[24]});
       ${COLORS.UNCHECKED.HOVER_BORDER}: var(${BLACK_ALFA[48]});
       ${COLORS.UNCHECKED.DISABLED_BORDER}: var(${BLACK_ALFA[8]});
@@ -70,7 +70,7 @@ export const GREEN_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.GreenDark}] {
+    body[data-theme=${Themes.GreenDark}] {
       ${COLORS.UNCHECKED.BORDER}: var(${WHITE_ALFA[24]});
       ${COLORS.UNCHECKED.HOVER_BORDER}: var(${WHITE_ALFA[48]});
       ${COLORS.UNCHECKED.DISABLED_BORDER}: var(${WHITE_ALFA[8]});

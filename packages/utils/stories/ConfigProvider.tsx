@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
@@ -10,7 +11,7 @@ import { H1, H3, Text2 } from '@sbercloud/uikit-typography';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ConfigProvider, ConfigProviderProps, LanguageCodeType, Themes, useLanguage, useTheme } from '../src/';
+import { ConfigProvider, ConfigProviderProps, LanguageCodeType, Themes, useLanguage, useTheme } from '../src';
 
 const { GREY } = EXPORT_VARS;
 
@@ -36,19 +37,18 @@ const dividerCSS = css`
 
 const BACKGROUND_COLOR = '--story-config-provider-background-color';
 
-/* TODO: использовать [data-theme='${Themes.Purple}'] */
 const configProviderTheme = `
   :global() {
-    #sbercloud-theme-wrapper[data-theme='purple'] {
+    body[data-theme='${Themes.Purple}'] {
       ${BACKGROUND_COLOR}: var(${GREY[0]});
     }
-    #sbercloud-theme-wrapper[data-theme='purpleDark'] {
+    body[data-theme='${Themes.PurpleDark}'] {
       ${BACKGROUND_COLOR}: var(${GREY[850]});
     }
-    #sbercloud-theme-wrapper[data-theme='green'] {
+    body[data-theme='${Themes.Green}'] {
       ${BACKGROUND_COLOR}: var(${GREY[0]});
     }
-    #sbercloud-theme-wrapper[data-theme='greenDark'] {
+    body[data-theme='${Themes.GreenDark}'] {
       ${BACKGROUND_COLOR}: var(${GREY[850]});
     }
   }
@@ -77,12 +77,12 @@ const ThemeWrapper = styled.span<{ theme: Themes }>`
 `;
 
 const Template: Story<ConfigProviderProps> = ({ ...args }) => {
-  const { changeTheme, theme, Themes } = useTheme();
-  const { code, changeLanguage } = useLanguage();
+  const { changeTheme, theme } = useTheme();
+  const { languageCode, changeLanguage } = useLanguage();
   return (
     <ConfigProvider {...args}>
       <Wrapper>
-        <H1>Theme Settings</H1>
+        <H1>Theme Setting</H1>
         <Divider className={dividerCSS} />
         <Title>
           <H3>
@@ -105,7 +105,7 @@ const Template: Story<ConfigProviderProps> = ({ ...args }) => {
         <Divider className={dividerCSS} />
         <Title>
           <H3>
-            Активный код языка: <ThemeWrapper theme={theme}>{code}</ThemeWrapper>
+            Активный код языка: <ThemeWrapper theme={theme}>{languageCode}</ThemeWrapper>
           </H3>
         </Title>
         <Title>
@@ -128,4 +128,5 @@ configProvider.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  badges: [BADGE.STABLE],
 };

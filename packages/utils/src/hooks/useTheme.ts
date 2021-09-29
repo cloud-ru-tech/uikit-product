@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { DEFAULT, POSTMASSAGE_KEY } from '../constants';
+import { DEFAULT, POST_MESSAGE_KEY } from '../constants';
 import { store } from '../helpers/store';
 import { tryParseJson } from '../helpers/tryParseJson';
 import { Themes } from '../types/theme';
@@ -11,7 +11,7 @@ export const useTheme = () => {
   useEffect(() => {
     const receiveChangeThemeDoneMessage = (event: MessageEvent) => {
       const eventData = tryParseJson(event.data);
-      if (eventData.key !== POSTMASSAGE_KEY.changeThemeDone) return;
+      if (eventData.key !== POST_MESSAGE_KEY.changeThemeDone) return;
       setTheme(eventData.value);
     };
     window.addEventListener('message', receiveChangeThemeDoneMessage, false);
@@ -20,8 +20,8 @@ export const useTheme = () => {
   }, []);
 
   const changeTheme = useCallback((theme: Themes) => {
-    window.postMessage(JSON.stringify({ key: POSTMASSAGE_KEY.changeTheme, value: theme }), location.origin);
+    window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeTheme, value: theme }), location.origin);
   }, []);
 
-  return { theme, changeTheme, Themes };
+  return { theme, changeTheme };
 };

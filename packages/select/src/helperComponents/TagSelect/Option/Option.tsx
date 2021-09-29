@@ -1,6 +1,6 @@
 import { cx } from '@linaria/core';
 import isEqual from 'lodash.isequal';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { CircleCheckOutlineInterfaceSVG, DeleteInterfaceSVG, EditInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -45,7 +45,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
     [validator, tag, editableTagName],
   );
 
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   if (isEdit) {
     props.innerProps.onClick = (e): void => {
@@ -66,7 +66,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
     }
     setTag(data);
     setColorVal({ value: data.color });
-  }, [data.value]);
+  }, [data, data.value, props.isSelected]);
 
   const handleBlur = (event: React.FocusEvent<HTMLDivElement>): void => {
     const isOption = event.currentTarget.contains(event.relatedTarget as Node);
@@ -131,7 +131,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                   });
                 }}
                 icon={<DeleteInterfaceSVG />}
-                tooltip={{ content: textProvider(language, Texts.delete) }}
+                tooltip={{ content: textProvider(languageCode, Texts.delete) }}
               />
 
               <StyledTagButton
@@ -153,7 +153,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                   }
                 }}
                 icon={<CircleCheckOutlineInterfaceSVG />}
-                tooltip={{ content: textProvider(language, Texts.select) }}
+                tooltip={{ content: textProvider(languageCode, Texts.select) }}
               />
             </StyledTagButtonWrapper>
           </>
@@ -166,7 +166,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                 setEdit(true);
               }}
               icon={<EditInterfaceSVG />}
-              tooltip={{ content: textProvider(language, Texts.edit) }}
+              tooltip={{ content: textProvider(languageCode, Texts.edit) }}
             />
           </>
         )}

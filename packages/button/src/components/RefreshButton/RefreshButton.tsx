@@ -23,7 +23,7 @@ export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaul
   as,
   ...rest
 }: RefreshButtonProps<T>) {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const Element: ElementType = as || RefreshButtonDefaultElement;
 
@@ -37,7 +37,7 @@ export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaul
   return (
     <Element
       icon={<AnimatedRefreshIcon />}
-      tooltip={{ content: textProvider(language, Texts.refresh) }}
+      tooltip={{ content: textProvider(languageCode, Texts.refresh) }}
       {...extractedProps}
     />
   );

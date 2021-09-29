@@ -1,5 +1,5 @@
 import { cx } from '@linaria/core';
-import { useEffect, useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import RCModal from 'react-modal';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
@@ -68,9 +68,9 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
     RCModal.setAppElement(appElement as HTMLElement);
   }, [appElement]);
 
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const closeBtnText = useMemo(() => textProvider(language, Texts.close), [language]);
+  const closeBtnText = useMemo(() => textProvider(languageCode, Texts.close), [languageCode]);
 
   return (
     <RCModal

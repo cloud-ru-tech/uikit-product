@@ -12,7 +12,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme=${Themes.Purple}] {
+    body[data-theme=${Themes.Purple}] {
       ${COLORS.PRIMARY}: var(${BLACK_ALFA[24]});
       ${COLORS.SECONDARY}: var(${BLACK_ALFA[8]});
       ${COLORS.TEXT}: var(${BLACK_ALFA[48]});
@@ -22,7 +22,7 @@ export const PURPLE_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.PurpleDark}] {
+    body[data-theme=${Themes.PurpleDark}] {
       ${COLORS.PRIMARY}: var(${WHITE_ALFA[24]});
       ${COLORS.SECONDARY}: var(${WHITE_ALFA[8]});
       ${COLORS.TEXT}: var(${WHITE_ALFA[48]});
@@ -32,7 +32,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme=${Themes.Green}] {
+    body[data-theme=${Themes.Green}] {
       ${COLORS.PRIMARY}: var(${BLACK_ALFA[24]});
       ${COLORS.SECONDARY}: var(${BLACK_ALFA[8]});
       ${COLORS.TEXT}: var(${BLACK_ALFA[48]});
@@ -42,7 +42,7 @@ export const GREEN_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.GreenDark}] {
+    body[data-theme=${Themes.GreenDark}] {
       ${COLORS.PRIMARY}: var(${WHITE_ALFA[24]});
       ${COLORS.SECONDARY}: var(${WHITE_ALFA[8]});
       ${COLORS.TEXT}: var(${WHITE_ALFA[48]});

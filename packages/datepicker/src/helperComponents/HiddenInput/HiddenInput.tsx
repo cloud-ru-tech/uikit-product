@@ -1,8 +1,9 @@
-import { InputAutosize } from '@sbercloud/uikit-react-input';
-import { useLanguage } from '@sbercloud/uikit-utils';
 import isEqual from 'lodash.isequal';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRifm } from 'rifm';
+
+import { InputAutosize } from '@sbercloud/uikit-react-input';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { INPUT_PLACEHOLDER } from '../../helpers/constants';
 import { parseDigits } from '../../helpers/parseDigits';
@@ -19,20 +20,20 @@ interface IHiddenInputProps {
 }
 
 export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onChange }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [value, setValue] = useState(date[valueProp]);
   const [ref, setRef] = useState<HTMLInputElement | null>();
 
-  const inputPlaceholder = useMemo(() => INPUT_PLACEHOLDER(language), [language]);
+  const inputPlaceholder = useMemo(() => INPUT_PLACEHOLDER(languageCode), [languageCode]);
 
   useEffect(() => {
     if (value === date[valueProp]) return;
     setValue(date[valueProp]);
-  }, [date[valueProp]]);
+  }, [date, value, valueProp]);
 
   const setToTheEnd = useCallback(() => {
     ref?.setSelectionRange(value.length, value.length);
-  }, [value]);
+  }, [value.length]);
 
   useEffect(() => {
     const nextSplitDate = { ...date, [valueProp]: value };
@@ -51,8 +52,7 @@ export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onCh
       const isDeleted = int.length < value.length;
       const deletedVal = isDeleted ? '' : int;
       const replaceVal = isPlaceholder ? int : deletedVal;
-      const toLength = splitDateFormatter(valueProp, replaceVal, inputPlaceholder);
-      return toLength;
+      return splitDateFormatter(valueProp, replaceVal, inputPlaceholder);
     },
     mask: true,
   });

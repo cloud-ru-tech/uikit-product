@@ -17,7 +17,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme='${Themes.Purple}'] {
+    body[data-theme='${Themes.Purple}'] {
       ${COLORS.CONTAINER_COLOR}: var(${GREY[0]});
       ${COLORS.CONTAINER_BACKGROUND_COLOR}: var(${BLUE_GREY[90]});
       ${COLORS.CONTAINER_BORDER_COLOR}: transparent;
@@ -31,7 +31,7 @@ export const PURPLE_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.PurpleDark}'] {
+    body[data-theme='${Themes.PurpleDark}'] {
       ${COLORS.CONTAINER_COLOR}: var(${GREY[0]});
       ${COLORS.CONTAINER_BACKGROUND_COLOR}: var(${BLUE_GREY[80]});
       ${COLORS.CONTAINER_BORDER_COLOR}: var(${BLUE_GREY[70]});
@@ -45,7 +45,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme='${Themes.Green}'] {
+    body[data-theme='${Themes.Green}'] {
       ${COLORS.CONTAINER_COLOR}: var(${GREY[0]});
       ${COLORS.CONTAINER_BACKGROUND_COLOR}: var(${BLUE_GREY[90]});
       ${COLORS.CONTAINER_BORDER_COLOR}: transparent;
@@ -59,7 +59,7 @@ export const GREEN_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.GreenDark}'] {
+    body[data-theme='${Themes.GreenDark}'] {
       ${COLORS.CONTAINER_COLOR}: var(${GREY[0]});
       ${COLORS.CONTAINER_BACKGROUND_COLOR}: var(${BLUE_GREY[80]});
       ${COLORS.CONTAINER_BORDER_COLOR}: var(${BLUE_GREY[70]});

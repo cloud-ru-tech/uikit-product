@@ -1,7 +1,8 @@
-import { useLanguage } from '@sbercloud/uikit-utils';
-import { Modal } from '@sbercloud/uikit-react-modal';
-import { useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import RCSelect, { ValueType } from 'react-select';
+
+import { Modal } from '@sbercloud/uikit-react-modal';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { PresetColorType } from '../../constants';
 import * as TagComponents from '../../helperComponents/TagSelect';
@@ -53,7 +54,7 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
     validator,
     validateMessage,
   } = props;
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const containerRef = useRef<HTMLDivElement>();
   const [inputValue, setInputSearch] = useState('');
   const [isOpen, setIsOpen] = useState(false);
@@ -73,7 +74,7 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
       setIsOpen(!isOpen);
     }
 
-    if (isMenuOpen === false || !isOpen === false) {
+    if (isMenuOpen === false || isOpen) {
       setMenuListBlockScroll(false);
     }
   };
@@ -126,9 +127,9 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
           setApproveDelete(null);
         }}
         appElement={document.body}
-        title={textProvider<string>(language, Texts.modalDeleteTagTitle)}
+        title={textProvider<string>(languageCode, Texts.modalDeleteTagTitle)}
         description={textProvider<DictionaryPropertyAsFn>(
-          language,
+          languageCode,
           Texts.modalDeleteTagDesc,
         )({ label: approveDelete?.tag?.label || '' })}
         approve={(): void => {

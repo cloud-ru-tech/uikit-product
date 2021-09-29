@@ -16,18 +16,18 @@ export interface ICustomTimeInputProps {
 }
 
 export const CustomTimeInput = forwardRef<HTMLInputElement, ICustomTimeInputProps>((props, ref) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { date, onClick, onChange, open, disabled } = props;
   const [value, setValue] = useState<string>('');
 
   const timeFormatter = useMemo(
     () =>
-      new Intl.DateTimeFormat(language, {
-        hourCycle: AmPmFormat[language] ? 'h12' : 'h23',
+      new Intl.DateTimeFormat(languageCode, {
+        hourCycle: AmPmFormat[languageCode] ? 'h12' : 'h23',
         hour: 'numeric',
         minute: 'numeric',
       }),
-    [language],
+    [languageCode],
   );
 
   useEffect(() => {
@@ -40,7 +40,7 @@ export const CustomTimeInput = forwardRef<HTMLInputElement, ICustomTimeInputProp
       <S.Input
         data-open={open || undefined}
         data-disabled={disabled || undefined}
-        placeholder={textProvider(language, Texts.time)}
+        placeholder={textProvider(languageCode, Texts.time)}
         onChange={onChange}
         value={value}
         readOnly

@@ -19,11 +19,11 @@ import * as S from './styled';
 export type { TFilterValueType, IFilterProps };
 
 export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [], onChange, children, className }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isMoreFilter, setIsMoreFilter] = useState<boolean>();
   const [noFilteredProps, setNoFilteredProps] = useState<OptionTypeBase[]>();
   const [parsedValue, setParsedValue] = useState<TFilterValueType[]>([]);
-  const logicOptionsList = useMemo(() => logicOptions(language), [language]);
+  const logicOptionsList = useMemo(() => logicOptions(languageCode), [languageCode]);
 
   useEffect(() => {
     if (!value) return;
@@ -122,7 +122,7 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
             <S.Actions>
               {isMoreFilter && (
                 <ActionButton onClick={addNewValue}>
-                  <PlusInterfaceSVG /> {textProvider(language, Texts.addFilter)}
+                  <PlusInterfaceSVG /> {textProvider(languageCode, Texts.addFilter)}
                 </ActionButton>
               )}
               <ActionButton
@@ -132,14 +132,14 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
                 }}
               >
                 <CloseInterfaceSVG />
-                {textProvider(language, Texts.reset)}
+                {textProvider(languageCode, Texts.reset)}
               </ActionButton>
             </S.Actions>
           </>
         ) : (
           <S.Empty>
             <ActionButton onClick={addNewValue}>
-              <PlusInterfaceSVG /> {textProvider(language, Texts.addFilter)}
+              <PlusInterfaceSVG /> {textProvider(languageCode, Texts.addFilter)}
             </ActionButton>
           </S.Empty>
         )}

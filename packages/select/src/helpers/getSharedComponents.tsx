@@ -1,8 +1,9 @@
 import { css } from '@linaria/core';
-import { DropdownDownInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
 import { useMemo } from 'react';
 import { components as ReactSelectComponents, SelectComponentsConfig } from 'react-select';
+
+import { CloseInterfaceSVG, DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { ISelectProps } from '../components';
 import { CustomControl, CustomMenu, MultiValueContainer } from '../helperComponents/Shared';
@@ -12,7 +13,7 @@ import { CustomOption } from '../helperComponents/Shared/CustomOption';
 import { Texts, textProvider } from './texts-provider';
 
 const crossSVGClassName = css`
-  fill: inherit;
+  fill: currentColor;
 `;
 
 export const DropdownIndicator = (
@@ -30,8 +31,8 @@ const MultiValueRemove = (props: React.ComponentProps<typeof ReactSelectComponen
 );
 
 const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponents.NoOptionsMessage>): JSX.Element => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
-  const noDataText = useMemo(() => textProvider<string>(language, Texts.noData), [language]);
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const noDataText = useMemo(() => textProvider<string>(languageCode, Texts.noData), [languageCode]);
   return <ReactSelectComponents.NoOptionsMessage {...props}>{noDataText}</ReactSelectComponents.NoOptionsMessage>;
 };
 

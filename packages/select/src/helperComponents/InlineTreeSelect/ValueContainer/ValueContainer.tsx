@@ -1,6 +1,7 @@
+import React, { FC, useCallback } from 'react';
+
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useLanguage } from '@sbercloud/uikit-utils';
-import { FC, useCallback } from 'react';
 
 import { DictionaryPropertyAsFn, Texts, textProvider } from '../../../helpers/texts-provider';
 import { StyledContainer, iconClass } from './styled';
@@ -22,16 +23,17 @@ export const ValueContainer: FC<IValueContainerProps> = ({
   valueFormatter,
   disabled = false,
 }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const getVal = useCallback(() => {
     if (!value || !value.length) {
-      return placeholder || textProvider<string>(language, Texts.selectValue);
+      return placeholder || textProvider<string>(languageCode, Texts.selectValue);
     }
 
     return (
-      valueFormatter?.(value) || textProvider<DictionaryPropertyAsFn>(language, Texts.selected)({ count: value.length })
+      valueFormatter?.(value) ||
+      textProvider<DictionaryPropertyAsFn>(languageCode, Texts.selected)({ count: value.length })
     );
-  }, [value, language]);
+  }, [value, languageCode]);
 
   return (
     <StyledContainer

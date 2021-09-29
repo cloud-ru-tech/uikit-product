@@ -8,12 +8,12 @@ interface DateFormatterProps {
 }
 
 export const DateFormatter: FC<DateFormatterProps> = ({ value, showTime = true }) => {
-  const { code: langCode } = useLanguage();
+  const { languageCode } = useLanguage();
 
   if (!showTime) {
     return (
       <>
-        {new Intl.DateTimeFormat(langCode, {
+        {new Intl.DateTimeFormat(languageCode, {
           year: 'numeric',
           month: 'short',
           day: 'numeric',
@@ -24,7 +24,7 @@ export const DateFormatter: FC<DateFormatterProps> = ({ value, showTime = true }
 
   return (
     <>
-      {new Intl.DateTimeFormat(langCode, {
+      {new Intl.DateTimeFormat(languageCode, {
         year: 'numeric',
         month: 'short',
         day: 'numeric',

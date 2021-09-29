@@ -21,7 +21,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme='${Themes.Purple}'] {
+    body[data-theme='${Themes.Purple}'] {
       ${COLORS.FILL}: var(${PURPLE[100]});
       ${COLORS.BG}: var(${PURPLE[5]});
       ${COLORS.COLOR}: var(${PURPLE[100]});
@@ -40,7 +40,7 @@ export const PURPLE_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.PurpleDark}'] {
+    body[data-theme='${Themes.PurpleDark}'] {
       ${COLORS.FILL}: var(${PURPLE[50]});
       ${COLORS.BG}: var(${WHITE_ALFA[8]});
       ${COLORS.COLOR}: var(${PURPLE[50]});
@@ -59,7 +59,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme='${Themes.Green}'] {
+    body[data-theme='${Themes.Green}'] {
       ${COLORS.FILL}: var(${BLUE_GREY[80]});
       ${COLORS.BG}: var(${GREY[25]});
       ${COLORS.COLOR}: var(${BLUE_GREY[80]});
@@ -78,7 +78,7 @@ export const GREEN_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.GreenDark}'] {
+    body[data-theme='${Themes.GreenDark}'] {
       ${COLORS.FILL}: var(${GREEN[100]});
       ${COLORS.BG}: var(${WHITE_ALFA[8]});
       ${COLORS.COLOR}: var(${GREEN[100]});

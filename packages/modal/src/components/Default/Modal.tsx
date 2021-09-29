@@ -98,11 +98,17 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
     overlayClassName: propsOverlayClassName,
   } = props;
 
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const approveBtnText = useMemo(() => approveText || textProvider(language, Texts.approve), [approveText, language]);
-  const cancelBtnText = useMemo(() => cancelText || textProvider(language, Texts.cancel), [cancelText, language]);
-  const closeBtnText = useMemo(() => textProvider(language, Texts.close), [language]);
+  const approveBtnText = useMemo(
+    () => approveText || textProvider(languageCode, Texts.approve),
+    [approveText, languageCode],
+  );
+  const cancelBtnText = useMemo(
+    () => cancelText || textProvider(languageCode, Texts.cancel),
+    [cancelText, languageCode],
+  );
+  const closeBtnText = useMemo(() => textProvider(languageCode, Texts.close), [languageCode]);
 
   if (appElement) {
     RCModal.setAppElement(appElement as HTMLElement);

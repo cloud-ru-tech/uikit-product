@@ -14,8 +14,8 @@ export type FormFieldProps = {
 };
 
 export const FormField: React.FC<FormFieldProps> = ({ label, hint, description, required, error, children }) => {
-  const { code: langCode } = useLanguage();
-  const requiredFieldTranslation = FORM_FIELD_TRANSLATIONS.REQUIRED_FIELD[langCode];
+  const { languageCode } = useLanguage();
+  const requiredFieldTranslation = FORM_FIELD_TRANSLATIONS.REQUIRED_FIELD[languageCode];
 
   return (
     <S.Wrapper>

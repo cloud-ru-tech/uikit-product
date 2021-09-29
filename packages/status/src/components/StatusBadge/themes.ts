@@ -17,7 +17,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme='${Themes.Purple}'] {
+    body[data-theme='${Themes.Purple}'] {
       ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
       ${COLORS.FAILED_BG}: var(${PRESET.BERRY_RED_1});
       ${COLORS.WARNING_BG}: var(${PRESET.SUNNY_YELLOW});
@@ -32,7 +32,7 @@ export const PURPLE_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.PurpleDark}'] {
+    body[data-theme='${Themes.PurpleDark}'] {
       ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
       ${COLORS.FAILED_BG}: var(${PRESET.BERRY_RED_1});
       ${COLORS.WARNING_BG}: var(${PRESET.SUNNY_YELLOW});
@@ -47,7 +47,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme='${Themes.Green}'] {
+    body[data-theme='${Themes.Green}'] {
       ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
       ${COLORS.FAILED_BG}: var(${PRESET.BERRY_RED_1});
       ${COLORS.WARNING_BG}: var(${PRESET.SUNNY_YELLOW});
@@ -62,7 +62,7 @@ export const GREEN_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.GreenDark}'] {
+    body[data-theme='${Themes.GreenDark}'] {
       ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
       ${COLORS.FAILED_BG}: var(${PRESET.BERRY_RED_1});
       ${COLORS.WARNING_BG}: var(${PRESET.SUNNY_YELLOW});

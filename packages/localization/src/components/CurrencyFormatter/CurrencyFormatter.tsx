@@ -7,11 +7,11 @@ interface CurrencyFormatterProps {
 }
 
 export const CurrencyFormatter: FC<CurrencyFormatterProps> = ({ value }) => {
-  const { code: langCode } = useLanguage();
+  const { languageCode } = useLanguage();
 
   return (
     <>
-      {new Intl.NumberFormat(langCode, {
+      {new Intl.NumberFormat(languageCode, {
         style: 'currency',
         currency: 'RUB',
       }).format(value)}

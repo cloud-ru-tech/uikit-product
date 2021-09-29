@@ -27,7 +27,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme=${Themes.Purple}] {
+    body[data-theme=${Themes.Purple}] {
       ${COLORS.WEAK.INACTIVE}: var(${GREY[200]});
       ${COLORS.WEAK.HOVER}: var(${BLUE_GREY[60]});
       ${COLORS.WEAK.ACTIVE}: var(${PRESET.SUNNY_YELLOW});
@@ -46,7 +46,7 @@ export const PURPLE_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.PurpleDark}] {
+    body[data-theme=${Themes.PurpleDark}] {
       ${COLORS.WEAK.INACTIVE}: var(${GREY[450]});
       ${COLORS.WEAK.HOVER}: var(${GREY[200]});
       ${COLORS.WEAK.ACTIVE}: var(${PRESET.SUNNY_YELLOW});
@@ -65,7 +65,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme=${Themes.Green}] {
+    body[data-theme=${Themes.Green}] {
       ${COLORS.WEAK.INACTIVE}: var(${GREY[200]});
       ${COLORS.WEAK.HOVER}: var(${BLUE_GREY[60]});
       ${COLORS.WEAK.ACTIVE}: var(${PRESET.SUNNY_YELLOW});
@@ -84,7 +84,7 @@ export const GREEN_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme=${Themes.GreenDark}] {
+    body[data-theme=${Themes.GreenDark}] {
       ${COLORS.WEAK.INACTIVE}: var(${GREY[450]});
       ${COLORS.WEAK.HOVER}: var(${GREY[200]});
       ${COLORS.WEAK.ACTIVE}: var(${PRESET.SUNNY_YELLOW});

@@ -6,7 +6,7 @@ import { Texts, textProvider } from '../../helpers/texts-provider';
 import { ToolbarButton } from '../ToolbarButton';
 
 export const ToolbarFilter = ({ filterOptions, value, onChange }: WithSupportProps<IFilterProps>) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   return (
     <div data-test-id='toolbar__filter'>
       <Filter filterOptions={filterOptions} value={value} onChange={onChange}>
@@ -14,7 +14,7 @@ export const ToolbarFilter = ({ filterOptions, value, onChange }: WithSupportPro
           <ToolbarButton
             badgeProps={{ number: badgeNumber }}
             data-test-id='toolbar__filter-btn'
-            tooltip={{ content: textProvider(language, Texts.filter) }}
+            tooltip={{ content: textProvider(languageCode, Texts.filter) }}
           >
             <FilterInterfaceSVG />
           </ToolbarButton>

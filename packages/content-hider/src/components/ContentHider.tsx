@@ -22,11 +22,17 @@ export const ContentHider: React.FC<ContentHiderProps> = ({
   hideContentText,
   showContentText,
 }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [showContent, setShowContent] = useState(false);
 
-  const hideText = useMemo(() => hideContentText || textProvider(language, Texts.hide), [language, hideContentText]);
-  const showText = useMemo(() => showContentText || textProvider(language, Texts.show), [language, showContentText]);
+  const hideText = useMemo(
+    () => hideContentText || textProvider(languageCode, Texts.hide),
+    [languageCode, hideContentText],
+  );
+  const showText = useMemo(
+    () => showContentText || textProvider(languageCode, Texts.show),
+    [languageCode, showContentText],
+  );
 
   return (
     <div>

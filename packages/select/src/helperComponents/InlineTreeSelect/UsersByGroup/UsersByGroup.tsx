@@ -1,8 +1,9 @@
-import { Avatar, AvatarProps } from '@sbercloud/uikit-react-avatar';
-import { useLanguage } from '@sbercloud/uikit-utils';
 import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
-import { FC, useEffect, useMemo, useState } from 'react';
+import React, { FC, useEffect, useMemo, useState } from 'react';
+
+import { Avatar, AvatarProps } from '@sbercloud/uikit-react-avatar';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { StyledContainer, selectClassname } from './styled';
@@ -53,7 +54,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
   isFiltered,
   ...treeProps
 }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [stateOptions, setStateOptions] = useState<IOptionType[]>();
   const [checked, setChecked] = useState<CheckedType>();
 
@@ -127,7 +128,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
     <StyledContainer
       className={selectClassname}
       data-filtered={isFiltered || undefined}
-      data-empty={textProvider<string>(language, Texts.noData)}
+      data-empty={textProvider<string>(languageCode, Texts.noData)}
     >
       <RcTree
         {...treeProps}

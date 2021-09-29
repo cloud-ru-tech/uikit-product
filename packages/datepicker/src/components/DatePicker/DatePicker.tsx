@@ -1,8 +1,9 @@
-import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
 import enGB from 'date-fns/locale/en-GB';
 import ru from 'date-fns/locale/ru';
 import { useCallback, useMemo, useState } from 'react';
 import RDatePicker, { registerLocale } from 'react-datepicker';
+
+import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
 
 import { CustomContainer } from '../../helperComponents/CustomContainer';
 import { CustomDateInput } from '../../helperComponents/CustomDateInput';
@@ -21,7 +22,7 @@ export interface DatePickerProps {
 }
 
 export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerProps) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isDatePickerOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
   const open = useCallback(() => setOpen(true), []);
@@ -61,7 +62,7 @@ export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerPro
     [date, setDate, pickSettings, minDate],
   );
 
-  const memoizedCustomHeader = useCallback(CustomHeader.bind(null, { language }), [language]);
+  const memoizedCustomHeader = useCallback(CustomHeader.bind(null, { languageCode }), [languageCode]);
 
   return (
     <S.Container>
@@ -74,7 +75,7 @@ export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerPro
         selectsRange={false}
         shouldCloseOnSelect
         showPopperArrow={false}
-        locale={language}
+        locale={languageCode}
         customInput={<CustomDateInput date={date} pickSettings={pickSettings} setDate={setDate} minDate={minDate} />}
         renderCustomHeader={memoizedCustomHeader}
         calendarContainer={memoizedCustomContainer}

@@ -6,7 +6,7 @@ import { CustomHeaderActions } from '../../helpers/texts-provider';
 import * as S from './styled';
 
 interface HeaderCustomProps {
-  language: LanguageCodeType;
+  languageCode: LanguageCodeType;
 }
 interface HeaderProps {
   date: Date;
@@ -17,10 +17,10 @@ interface HeaderProps {
 }
 
 export const CustomHeader = (customProps: HeaderCustomProps, props: HeaderProps) => {
-  const { language } = customProps;
+  const { languageCode } = customProps;
   const { date, decreaseMonth, increaseMonth, prevMonthButtonDisabled, nextMonthButtonDisabled } = props;
 
-  const monthFormatter = new Intl.DateTimeFormat(language, {
+  const monthFormatter = new Intl.DateTimeFormat(languageCode, {
     month: 'long',
   });
   const title = `${monthFormatter.format(date)} ${date.getFullYear()}`;
@@ -32,14 +32,14 @@ export const CustomHeader = (customProps: HeaderCustomProps, props: HeaderProps)
       <ButtonIcon
         onClick={decreaseMonth}
         disabled={prevMonthButtonDisabled}
-        tooltip={{ content: CustomHeaderActions[language].prev }}
+        tooltip={{ content: CustomHeaderActions[languageCode].prev }}
         icon={<ChevronLeftInterfaceSVG />}
       />
 
       <ButtonIcon
         onClick={increaseMonth}
         disabled={nextMonthButtonDisabled}
-        tooltip={{ content: CustomHeaderActions[language].next }}
+        tooltip={{ content: CustomHeaderActions[languageCode].next }}
         icon={<ChevronRightInterfaceSVG />}
       />
     </S.Container>

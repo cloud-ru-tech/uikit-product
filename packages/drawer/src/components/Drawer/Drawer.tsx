@@ -49,9 +49,9 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
   onBackClick,
   ...restProps
 }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const closeBtnText = useMemo(() => textProvider(language, Texts.close), [language]);
+  const closeBtnText = useMemo(() => textProvider(languageCode, Texts.close), [languageCode]);
   const [shouldRenderDrawer, setShouldRenderDrawer] = useState(false);
   const [internalIsDrawerOpen, setInternalIsDrawerOpen] = useState(false);
 

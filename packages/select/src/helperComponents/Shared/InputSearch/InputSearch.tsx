@@ -1,7 +1,8 @@
+import React, { useEffect, useState } from 'react';
+
 import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input, InputProps } from '@sbercloud/uikit-react-input';
 import { useLanguage } from '@sbercloud/uikit-utils';
-import { useEffect, useState } from 'react';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { crossIconClassName, searchIconClassname } from './styled';
@@ -12,7 +13,7 @@ export interface IInputSearchProps extends Omit<InputProps, 'onChange'> {
 }
 
 export const InputSearch: React.FC<IInputSearchProps> = ({ onChange, value, getInstance, ...inputProps }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [search, setSearch] = useState<string | undefined>(value);
   useEffect(() => {
     if (search === value) return;
@@ -44,7 +45,7 @@ export const InputSearch: React.FC<IInputSearchProps> = ({ onChange, value, getI
           <SearchInterfaceSVG className={searchIconClassname} />
         )
       }
-      placeholder={textProvider<string>(language, Texts.search)}
+      placeholder={textProvider<string>(languageCode, Texts.search)}
     />
   );
 };

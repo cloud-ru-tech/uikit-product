@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import isEqual from 'lodash.isequal';
-import { FC, useCallback, useEffect, useState } from 'react';
+import React, { FC, useCallback, useEffect, useState } from 'react';
 
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { useLanguage } from '@sbercloud/uikit-utils';
@@ -117,7 +117,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
   searchProps = ['title'],
   disabled = false,
 }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [groupKeys, setGroupsKeys] = useState<React.ReactText[]>();
   useEffect(() => {
     const keys = options.map(option => option.key);
@@ -147,7 +147,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
       defaultValue={defaultValue}
       options={options}
       valueFormatter={(val): string =>
-        textProvider<DictionaryPropertyAsFn>(language, Texts.usersSelected)({ count: val?.length || 0 })
+        textProvider<DictionaryPropertyAsFn>(languageCode, Texts.usersSelected)({ count: val?.length || 0 })
       }
       onChange={onChange}
       disabled={disabled}

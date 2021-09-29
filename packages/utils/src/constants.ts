@@ -11,7 +11,7 @@ export const DEPRECATED_COLOR = {
   [Themes.GreenDark]: greenDark,
 };
 
-export enum POSTMASSAGE_KEY {
+export enum POST_MESSAGE_KEY {
   changeTheme = 'changeTheme',
   changeThemeDone = 'changeThemeDone',
   changeLanguage = 'changeLanguage',

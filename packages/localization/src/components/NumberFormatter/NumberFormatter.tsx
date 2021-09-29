@@ -7,7 +7,7 @@ interface NumberFormatterProps {
 }
 
 export const NumberFormatter: FC<NumberFormatterProps> = ({ value }) => {
-  const { code: langCode } = useLanguage();
+  const { languageCode } = useLanguage();
 
-  return <>{new Intl.NumberFormat(langCode).format(value)}</>;
+  return <>{new Intl.NumberFormat(languageCode).format(value)}</>;
 };

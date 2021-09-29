@@ -33,7 +33,7 @@ export const COLORS = {
 
 export const PURPLE_THEME = css`
   :global() {
-    [data-theme='${Themes.Purple}'] {
+    body[data-theme='${Themes.Purple}'] {
       ${COLORS.WEAK_FILL}: var(${GREY[200]});
       ${COLORS.WEAK_FILL_HOVER}: var(${BLUE_GREY[60]});
       ${COLORS.WEAK_FILL_ACTIVE}: var(${BLUE_GREY[100]});
@@ -64,7 +64,7 @@ export const PURPLE_THEME = css`
 
 export const PURPLE_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.PurpleDark}'] {
+    body[data-theme='${Themes.PurpleDark}'] {
       ${COLORS.WEAK_FILL}: var(${GREY[450]});
       ${COLORS.WEAK_FILL_HOVER}: var(${GREY[200]});
       ${COLORS.WEAK_FILL_ACTIVE}: var(${GREY[0]});
@@ -95,7 +95,7 @@ export const PURPLE_DARK_THEME = css`
 
 export const GREEN_THEME = css`
   :global() {
-    [data-theme='${Themes.Green}'] {
+    body[data-theme='${Themes.Green}'] {
       ${COLORS.WEAK_FILL}: var(${GREY[200]});
       ${COLORS.WEAK_FILL_HOVER}: var(${BLUE_GREY[60]});
       ${COLORS.WEAK_FILL_ACTIVE}: var(${BLUE_GREY[100]});
@@ -126,7 +126,7 @@ export const GREEN_THEME = css`
 
 export const GREEN_DARK_THEME = css`
   :global() {
-    [data-theme='${Themes.GreenDark}'] {
+    body[data-theme='${Themes.GreenDark}'] {
       ${COLORS.WEAK_FILL}: var(${GREY[450]});
       ${COLORS.WEAK_FILL_HOVER}: var(${GREY[200]});
       ${COLORS.WEAK_FILL_ACTIVE}: var(${GREY[0]});

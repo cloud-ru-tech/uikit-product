@@ -26,7 +26,6 @@ export const TableWrapper = styled.div`
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   border-radius: 8px;
-  overflow: hidden;
   background-color: var(${EXPORT_GLOBAL_CSS_VARS.BACKGROUND_SECONDARY});
   border: 1px solid var(${EXPORT_VARS.GREY[100]});
   overflow: auto;

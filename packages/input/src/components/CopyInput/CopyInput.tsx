@@ -1,4 +1,4 @@
-import { MouseEventHandler, useCallback, useMemo, useState } from 'react';
+import { MouseEvent, MouseEventHandler, useCallback, useMemo, useState } from 'react';
 
 import { ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
 import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -33,12 +33,12 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
   wrapperClassName,
   ...rest
 }) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const [showContent, setShowContent] = useState(!security);
 
   const handleInputClick = useCallback(
-    (e: React.MouseEvent<HTMLInputElement>) => {
+    (e: MouseEvent<HTMLInputElement>) => {
       e.stopPropagation();
 
       onCopy?.(e);
@@ -47,7 +47,7 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
   );
 
   const handleSecurityButtonClick = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
+    (e: MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
 
       setShowContent(!showContent);
@@ -81,7 +81,7 @@ export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
               className={securityButtonClassName}
               data-test-id='copy-input__security-btn'
               tooltip={{
-                content: showContent ? textProvider(language, Texts.hide) : textProvider(language, Texts.show),
+                content: showContent ? textProvider(languageCode, Texts.hide) : textProvider(languageCode, Texts.show),
               }}
               icon={showContent ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
             />

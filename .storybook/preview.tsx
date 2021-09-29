@@ -18,9 +18,7 @@ addDecorator(addReadme);
 addDecorator(withDesign);
 addDecorator((Story, { globals: { locale, theme } }) => {
   const colorizeThemeButton = () => {
-    const themeIcon = window.parent.document
-      .querySelector('button[title="Changing themes"]')
-      ?.querySelector('svg');
+    const themeIcon = window.parent.document.querySelector('button[title="Changing themes"]')?.querySelector('svg');
     if (!themeIcon) {
       setTimeout(() => colorizeThemeButton(), 200);
       return;
@@ -33,7 +31,7 @@ addDecorator((Story, { globals: { locale, theme } }) => {
   useLayoutEffect(() => {
     colorizeThemeButton();
   }, [theme]);
-  
+
   useEffect(() => {
     colorizeThemeButton();
   }, []);
@@ -57,7 +55,7 @@ addParameters({
   },
 });
 
-const getStyle = theme => ({
+const getStyle = (theme: Themes) => ({
   background: COLOR_MAP[theme],
   width: '1rem',
   height: '1rem',

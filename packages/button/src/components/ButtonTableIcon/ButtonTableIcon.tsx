@@ -41,13 +41,13 @@ const ButtonTableIconBase = forwardRef<HTMLButtonElement, ButtonTableIconProps>(
 const ButtonTableIconWithTooltip = withTooltip(ButtonTableIconBase);
 
 const ButtonTableIconWithTooltipPredefined = (props: ComponentProps<typeof ButtonTableIconWithTooltip>) => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   return (
     <ButtonTableIconWithTooltip
       tooltip={{
         content: props.loading
-          ? textProvider(language, Texts.loading)
-          : textProvider(language, TEXTS_BY_VARIANT[props.variant || Variant.Play]),
+          ? textProvider(languageCode, Texts.loading)
+          : textProvider(languageCode, TEXTS_BY_VARIANT[props.variant || Variant.Play]),
       }}
       {...props}
     />

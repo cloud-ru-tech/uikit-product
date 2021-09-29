@@ -1,9 +1,10 @@
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { useLanguage } from '@sbercloud/uikit-utils';
-import { Switch } from '@sbercloud/uikit-react-switch';
 import isToday from 'date-fns/isToday';
 import { useCallback, useMemo } from 'react';
 import { ReactDatePickerProps } from 'react-datepicker';
+
+import { Divider } from '@sbercloud/uikit-react-divider';
+import { Switch } from '@sbercloud/uikit-react-switch';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { DatePickerProps, TimePicker } from '../../components';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';
@@ -25,7 +26,7 @@ export interface ICustomContainer {
 }
 
 export const CustomContainer = (customProps: ICustomContainerProps, props: ICustomContainer): React.ReactNode => {
-  const { code: language } = useLanguage({ onlyEnabledLanguage: true });
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { children, className } = props;
   const { date, pickSettings, handleChange, minDate } = customProps;
   const { pickTimeCheck, setPickTime, isPickTimeOptional, isPickTime } = pickSettings;
@@ -62,7 +63,7 @@ export const CustomContainer = (customProps: ICustomContainerProps, props: ICust
         <>
           <Divider />
           <S.Additional onClick={handleLabelClick}>
-            {textProvider(language, Texts.specifyTime)}
+            {textProvider(languageCode, Texts.specifyTime)}
             <Switch checked={Boolean(pickTimeCheck)} onChange={handleSwitchChange} />
           </S.Additional>
         </>
