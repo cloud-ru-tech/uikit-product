@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-badge-private@2.0.0...@sbercloud/uikit-react-badge-private@2.0.1) (2021-09-30)
+
+
+### Bug Fixes
+
+* improved type declarations, linaria core/react peerDeps version is ^3.0.0-beta.13 ([942799a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/942799aa59ae420fb90d00b0d379f30af3d01394))
+
+
+
+
+
 # [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-badge-private@1.0.3...@sbercloud/uikit-react-badge-private@2.0.0) (2021-09-29)
 
 

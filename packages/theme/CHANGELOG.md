@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.27.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.27.0...@sbercloud/uikit-theme@0.27.1) (2021-09-30)
+
+
+### Bug Fixes
+
+* improved type declarations, linaria core/react peerDeps version is ^3.0.0-beta.13 ([942799a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/942799aa59ae420fb90d00b0d379f30af3d01394))
+
+
+
+
+
 # [0.27.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.26.0...@sbercloud/uikit-theme@0.27.0) (2021-09-14)
 
 
