@@ -1,8 +1,7 @@
 import { ChangeEvent, ReactElement, useEffect, useState } from 'react';
 
-import { FileUpload } from '@sbercloud/uikit-react-file-upload';
-
 import { getFileExtension, removeExtFromFileName } from '../../utils';
+import { FileUpload } from '../FileUpload';
 import {
   FileExt,
   FileName,

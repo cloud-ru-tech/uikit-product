@@ -27,7 +27,6 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-button": "2.0.0",
-    "@sbercloud/uikit-react-file-upload": "0.1.0",
     "@sbercloud/uikit-theme": "0.27.0"
   },
   "peerDependencies": {
