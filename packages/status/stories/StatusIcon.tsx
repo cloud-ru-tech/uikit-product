@@ -25,7 +25,7 @@ const Container = styled.div<{ theme: Themes }>`
 
 const Template: Story<StatusProps> = ({ ...args }, { globals: { theme } }) => (
   <Container theme={theme}>
-    <StatusIcon icon={<UserInterfaceSVG />} {...args} />
+    <StatusIcon {...args} icon={<UserInterfaceSVG />} />
   </Container>
 );
 

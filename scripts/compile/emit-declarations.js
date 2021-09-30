@@ -8,9 +8,16 @@ const createdFiles = {};
 
 function createTSProgram({ fileNames }) {
   const options = {
-    allowJs: false,
     declaration: true,
     emitDeclarationOnly: true,
+    esModuleInterop: true,
+    jsx: 'react-jsx',
+    paths: {
+      '@sbercloud/uikit-typography': ['packages/typography/src'],
+      '@sbercloud/uikit-theme': ['packages/theme/src'],
+      '@sbercloud/uikit-utils': ['packages/utils/src'],
+      '@sbercloud/uikit-react-*': ['packages/*/src'],
+    },
   };
 
   const host = ts.createCompilerHost(options);

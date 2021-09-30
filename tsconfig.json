@@ -23,7 +23,7 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
+    "suppressImplicitAnyIndexErrors": true
   },
   "include": ["packages", "types"],
   "exclude": ["node_modules", "scripts"]

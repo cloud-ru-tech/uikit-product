@@ -41,8 +41,8 @@ const packageJson = ({ user, email, packageTitle, packageName, packageDescriptio
     },
     devDependencies: {},
     peerDependencies: {
-      '@linaria/core': '^3.0.0-beta.3',
-      '@linaria/react': '^3.0.0-beta.3',
+      '@linaria/core': '^3.0.0-beta.13',
+      '@linaria/react': '^3.0.0-beta.13',
       react: '^17.0.0',
       'react-dom': '^17.0.0',
     },
