@@ -2,7 +2,7 @@ import 'rc-drawer/assets/index.css';
 
 import { cx } from '@linaria/core';
 import RcDrawer from 'rc-drawer';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -54,6 +54,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
   const closeBtnText = useMemo(() => textProvider(languageCode, Texts.close), [languageCode]);
   const [shouldRenderDrawer, setShouldRenderDrawer] = useState(false);
   const [internalIsDrawerOpen, setInternalIsDrawerOpen] = useState(false);
+  const timerRef = useRef<number>(0);
 
   const handleClick = useCallback(
     (e: Event) => {
@@ -97,6 +98,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
       // При открытии модалки:
       // Сначала мы должны отрендерить компоненту с состоянием open = false
       // Затем мы выставляем open = true, чтобы произошла анимация открытия
+      clearTimeout(timerRef.current);
       setShouldRenderDrawer(true);
       setTimeout(() => setInternalIsDrawerOpen(true), 0);
       window.addEventListener('click', handleClick);
@@ -104,7 +106,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
       // Здесь мы сначала устанавливаем open = false,
       // И после закрытия Drawer удаляем его из DOM
       setInternalIsDrawerOpen(false);
-      setTimeout(() => {
+      timerRef.current = window.setTimeout(() => {
         setShouldRenderDrawer(false);
         window.removeEventListener('click', handleClick);
       }, 500);
