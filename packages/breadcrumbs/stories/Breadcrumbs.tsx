@@ -8,8 +8,8 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Breadcrumbs, BreadcrumbsProps } from '../src';
-import { docker, fm, items, longItems, longSingle, longTwice } from '../src/helpers/mockData';
 import { BreadcrumbItem } from '../src/helpers/types';
+import { docker, fm, items, longItems, longSingle, longTwice } from './helpers/mockData';
 
 export default {
   title: 'Not stable/Breadcrumbs',

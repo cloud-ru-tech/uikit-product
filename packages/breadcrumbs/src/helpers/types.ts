@@ -1,5 +1,5 @@
 export type BreadcrumbItem = {
-  text: string | React.ReactNode;
+  text: string | React.ReactElement;
   link?: unknown;
   key?: string;
   isActive?: boolean;
@@ -8,7 +8,7 @@ export type BreadcrumbItem = {
 };
 
 export type StateItem = {
-  text: string;
+  text: string | React.ReactElement;
   link?: string;
   key?: string;
   isActive?: boolean;

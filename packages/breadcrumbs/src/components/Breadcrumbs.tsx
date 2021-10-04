@@ -1,5 +1,5 @@
 import debounce from 'lodash.debounce';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 
 import { ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
@@ -123,14 +123,14 @@ export const Breadcrumbs = ({
         const isLastVisible = !stateItems[index + 1]?.fullVisible;
         const defaultWidth = getWidth(child);
         const textWidth = measureText(child, stateItems[index].text).width;
-
         const width = isFirst ? getDiffWidth(child, collapsedBlock) : defaultWidth;
+        const hasCustomWidth = !hasHideElements && !isFirst;
 
         nextItems[index] = {
           ...nextItems[index],
           visible: true,
           tooltip: textWidth > width,
-          width,
+          width: hasCustomWidth ? width : undefined,
           isLastForceVisible: isLastVisible,
         };
         visibleWidth += getWidth(childs[index]);
@@ -220,8 +220,8 @@ export const Breadcrumbs = ({
 
   const visibleItems = isVisible ? metaItems : stateItems;
 
-  const textWrapper = (tooltip: boolean, text: string, el: React.ReactNode): React.ReactNode => {
-    if (tooltip) {
+  const textWrapper = (tooltip: boolean, text: string | ReactNode, el: ReactNode): ReactNode => {
+    if (tooltip && typeof text === 'string') {
       return (
         <Tooltip content={text} classNameTrigger={cutTextClassName}>
           {el}
@@ -248,11 +248,7 @@ export const Breadcrumbs = ({
   return (
     <ContainerStyled className={className} ref={breadcrumbsEl} style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
       {visibleItems?.map((item, index) => (
-        <ItemStyled
-          key={item.key || item.link || item.text}
-          isFixedWidth={!!isFixedWidth}
-          style={{ width: item.width }}
-        >
+        <ItemStyled key={item.key || item.link || index} isFixedWidth={!!isFixedWidth} style={{ width: item.width }}>
           {index !== 0 && <ChevronRightInterfaceSVG className={chevronClassName} data-chevron />}
           {textWrapper(
             item.tooltip,
@@ -263,7 +259,7 @@ export const Breadcrumbs = ({
               data-link={item.link || undefined}
               onClick={onClick ? (e): void => onClick(e, item.link) : undefined}
             >
-              {isTextCut && !isVisible ? getSubstr(item.text) : item.text}
+              {isTextCut && !isVisible && typeof item.text === 'string' ? getSubstr(item.text) : item.text}
             </ItemTextStyled>,
           )}
           {index === visibleElementsCount - 1 && hasHideElements && (

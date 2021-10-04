@@ -1,4 +1,6 @@
 import { nanoid } from 'nanoid';
+import { ReactElement } from 'react';
+import ReactDOM from 'react-dom';
 
 import { CRUMB_MAX_LENGTH } from './constants';
 import { BreadcrumbItem, StateItem } from './types';
@@ -26,7 +28,7 @@ export const getUniqueKey = (items: (BreadcrumbItem | StateItem)[]): string => {
   return items.reduce((acc, item) => item.key + acc, `.${windowWidth}`);
 };
 
-export const measureText = (child: HTMLDivElement, text: string): { width: number; height: number } => {
+export const measureText = (child: HTMLDivElement, text: string | ReactElement): { width: number; height: number } => {
   const style = window?.getComputedStyle(child);
   const gap = parseFloat(style.gap);
 
@@ -39,7 +41,11 @@ export const measureText = (child: HTMLDivElement, text: string): { width: numbe
   div.style.left = '-1000px';
   div.style.top = '-1000px';
 
-  div.innerHTML = text;
+  if (typeof text === 'string') {
+    div.innerHTML = text;
+  } else {
+    ReactDOM.render(text, div);
+  }
 
   const lResult = {
     width: getWidth(div) + gap,

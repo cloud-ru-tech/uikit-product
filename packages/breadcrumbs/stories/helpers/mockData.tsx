@@ -1,3 +1,6 @@
+import { RocketInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { Tooltip } from '@sbercloud/uikit-react-tooltip';
+
 export const items = [
   { text: 'Профиль', link: 'url' },
   { text: 'Организации', link: 'url1', isActive: true },
@@ -59,6 +62,17 @@ export const docker = [
 
 export const fm = [
   {
+    text: (
+      <Tooltip content={'virgin page'} placement={Tooltip.placements.BottomStart}>
+        <RocketInterfaceSVG />
+      </Tooltip>
+    ),
+    key: 'VIRGIN_PAGE',
+    link: {},
+    isActive: false,
+    fullVisible: true,
+  },
+  {
     text: 'Обзор хранилища',
     key: '/file-manager/',
     link: {},
@@ -71,7 +85,6 @@ export const fm = [
       bucket: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-ntm0w79t',
     },
     isActive: false,
-    fullVisible: true,
   },
   {
     text: 'aicloud',
