@@ -1,6 +1,7 @@
 import { css } from '@linaria/core';
 
 export const toastContainerClassName = css`
+  margin-top: 40px;
   width: 304px !important;
 `;
 
