@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-breadcrumbs@0.9.9...@sbercloud/uikit-react-breadcrumbs@0.9.10) (2021-10-04)
+
+
+### Bug Fixes
+
+* breadcrumbs svg crumb support fixed ([AICDC-3749](https://jira.sbercloud.tech/browse/AICDC-3749)) ([676ae8c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/676ae8c3b1473b6a47b72d4a7b42bf9d8afaf34a))
+
+
+
+
+
 ## [0.9.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-breadcrumbs@0.9.8...@sbercloud/uikit-react-breadcrumbs@0.9.9) (2021-09-30)
 
 
