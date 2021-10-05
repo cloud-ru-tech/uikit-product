@@ -1,16 +1,14 @@
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { AdditionalHoverImageStyled, AdditionalHoverStyled, CardContentWrapStyled, ContainerStyled } from './styled';
+import { CardVariant } from './constants';
+import { CardContentWrapStyled, ContainerStyled } from './styled';
 
 export type CardProps = {
   children: React.ReactNode;
+  variant?: CardVariant;
   className?: string;
-  isVertical: boolean;
   selected?: boolean;
-  hoverClassName?: string;
-  additionalHover?: boolean;
-  additionalHoverImage?: string;
-  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
 
 export const Card = ({
@@ -18,25 +16,16 @@ export const Card = ({
   onClick,
   selected,
   className,
-  isVertical,
-  hoverClassName,
-  additionalHover,
-  additionalHoverImage,
+  variant = CardVariant.Default,
   ...rest
 }: WithSupportProps<CardProps>) => (
   <ContainerStyled
     className={className}
-    type='button'
     onClick={onClick}
     selected={selected}
-    additionalHover={additionalHover}
+    data-variant={variant}
     {...extractSupportProps(rest)}
   >
-    {additionalHover ? (
-      <AdditionalHoverStyled data-additional-hover isVertical={isVertical} className={hoverClassName}>
-        <AdditionalHoverImageStyled additionalHoverImage={additionalHoverImage} />
-      </AdditionalHoverStyled>
-    ) : null}
     <CardContentWrapStyled>{children}</CardContentWrapStyled>
   </ContainerStyled>
 );

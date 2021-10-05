@@ -1,64 +1,32 @@
-import { styled } from '@linaria/react';
-import { Checkbox } from '@sbercloud/uikit-react-checkbox';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H4 } from '@sbercloud/uikit-typography';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
+
+import { H4, Text2 } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Card, CardProps } from '../src';
 
-const { COLORS } = DEPRECATED_EXPORT_VARS;
-
 export default {
   title: 'Not stable/Card/Card',
   component: Card,
 } as Meta;
 
-const StyledContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledCardWrap = styled.div<{ showBackground?: boolean }>`
-  background: ${({ showBackground }) => (showBackground ? `var(${COLORS.BLUE_1})` : 'transparent')};
-  padding: 30px;
-`;
-
-const Template: Story<CardProps> = ({ ...args }) => {
-  const [checked, setChecked] = useState(false);
-
-  return (
-    <StyledContainer>
-      <StyledCardWrap showBackground>
-        <Card {...args}>
-          <Checkbox
-            checked={checked}
-            handleChange={(checked, e) => {
-              e.stopPropagation();
-              setChecked(checked);
-            }}
-          />
-          <H4>Вступить группу</H4>
-        </Card>
-      </StyledCardWrap>
-      <StyledCardWrap>
-        <Card {...args}>
-          <Checkbox
-            checked={checked}
-            handleChange={(checked, e) => {
-              e.stopPropagation();
-              setChecked(checked);
-            }}
-          />
-          <H4>Вступить группу</H4>
-        </Card>
-      </StyledCardWrap>
-    </StyledContainer>
-  );
+const handleClick = (e: React.MouseEvent<HTMLElement>) => {
+  e.stopPropagation();
+  alert('Card alert');
 };
+
+const Template: Story<CardProps> = ({ ...args }) => (
+  <Card {...args} onClick={handleClick}>
+    <H4>Вступить группу</H4>
+    <Text2>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nihil magni mollitia repellat quaerat inventore
+      officia saepe similique temporibus corporis.
+    </Text2>
+  </Card>
+);
 
 export const card = Template.bind({});
 card.args = {};
@@ -66,6 +34,7 @@ card.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  badges: [BADGE.BETA],
   design: {
     type: 'figma',
     //TODO

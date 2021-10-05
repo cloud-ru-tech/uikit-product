@@ -3,7 +3,7 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Card, CardHeader } from '@sbercloud/uikit-react-cards';
+import { Card } from '@sbercloud/uikit-react-cards';
 import { H3 } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -44,40 +44,22 @@ const cardClassname = css`
 
 const cardsMock = [
   <CardsWrap key={1}>
-    <Card className={cardClassname} isVertical>
+    <Card className={cardClassname}>
       <CardContentWrapStyled>
-        <CardHeader
-          checked={false}
-          onCheckboxClick={() => {}}
-          onFavouriteChange={() => {}}
-          moreActions={[{ name: 'Удалить', onClick: () => {} }]}
-        />
         <CardContentStyled>
           <H3>Example 1</H3>
         </CardContentStyled>
       </CardContentWrapStyled>
     </Card>
-    <Card className={cardClassname} isVertical>
+    <Card className={cardClassname}>
       <CardContentWrapStyled>
-        <CardHeader
-          checked={false}
-          onCheckboxClick={() => {}}
-          onFavouriteChange={() => {}}
-          moreActions={[{ name: 'Удалить', onClick: () => {} }]}
-        />
         <CardContentStyled>
           <H3>Example 2</H3>
         </CardContentStyled>
       </CardContentWrapStyled>
     </Card>
-    <Card className={cardClassname} isVertical>
+    <Card className={cardClassname}>
       <CardContentWrapStyled>
-        <CardHeader
-          checked={false}
-          onCheckboxClick={() => {}}
-          onFavouriteChange={() => {}}
-          moreActions={[{ name: 'Удалить', onClick: () => {} }]}
-        />
         <CardContentStyled>
           <H3>Example 3</H3>
         </CardContentStyled>
@@ -85,27 +67,15 @@ const cardsMock = [
     </Card>
   </CardsWrap>,
   <CardsWrap key={2}>
-    <Card className={cardClassname} isVertical>
+    <Card className={cardClassname}>
       <CardContentWrapStyled>
-        <CardHeader
-          checked={false}
-          onCheckboxClick={() => {}}
-          onFavouriteChange={() => {}}
-          moreActions={[{ name: 'Удалить', onClick: () => {} }]}
-        />
         <CardContentStyled>
           <H3>Example 4</H3>
         </CardContentStyled>
       </CardContentWrapStyled>
     </Card>
-    <Card className={cardClassname} isVertical>
+    <Card className={cardClassname}>
       <CardContentWrapStyled>
-        <CardHeader
-          checked={false}
-          onCheckboxClick={() => {}}
-          onFavouriteChange={() => {}}
-          moreActions={[{ name: 'Удалить', onClick: () => {} }]}
-        />
         <CardContentStyled>
           <H3>Example 5</H3>
         </CardContentStyled>
@@ -113,14 +83,8 @@ const cardsMock = [
     </Card>
   </CardsWrap>,
   <CardsWrap key={3}>
-    <Card className={cardClassname} isVertical>
+    <Card className={cardClassname}>
       <CardContentWrapStyled>
-        <CardHeader
-          checked={false}
-          onCheckboxClick={() => {}}
-          onFavouriteChange={() => {}}
-          moreActions={[{ name: 'Удалить', onClick: () => {} }]}
-        />
         <CardContentStyled>
           <H3>Example 7</H3>
         </CardContentStyled>
