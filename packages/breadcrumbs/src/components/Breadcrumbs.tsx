@@ -13,6 +13,7 @@ import {
   measureText,
   setUniqueKey,
 } from '../helpers/calc';
+import { CRUMB_MAX_LENGTH } from '../helpers/constants';
 import { BreadcrumbItem, StateItem } from '../helpers/types';
 import {
   ChildrenContainerStyled,
@@ -32,6 +33,7 @@ export type BreadcrumbsProps = {
   children?: React.ReactNode;
   isFixedWidth?: boolean;
   renderItem?: (item: StateItem, index: number) => React.ReactNode;
+  crumbMaxLength?: number;
 };
 
 export const Breadcrumbs = ({
@@ -42,6 +44,7 @@ export const Breadcrumbs = ({
   itemClassName,
   isFixedWidth,
   renderItem,
+  crumbMaxLength = CRUMB_MAX_LENGTH,
 }: BreadcrumbsProps): JSX.Element => {
   const [isVisible, setVisible] = useState(false);
   const [isTextCut, setTextCut] = useState(false);
@@ -234,11 +237,7 @@ export const Breadcrumbs = ({
 
   if (renderItem) {
     return (
-      <ContainerStyled
-        className={className}
-        ref={breadcrumbsEl}
-        style={{ visibility: isVisible ? 'visible' : 'hidden' }}
-      >
+      <ContainerStyled className={className} ref={breadcrumbsEl} data-visible={isVisible || undefined}>
         {stateItems.map(renderItem)}
         {children && <ChildrenContainerStyled data-extension>{children}</ChildrenContainerStyled>}
       </ContainerStyled>
@@ -246,9 +245,13 @@ export const Breadcrumbs = ({
   }
 
   return (
-    <ContainerStyled className={className} ref={breadcrumbsEl} style={{ visibility: isVisible ? 'visible' : 'hidden' }}>
+    <ContainerStyled className={className} ref={breadcrumbsEl} data-visible={isVisible || undefined}>
       {visibleItems?.map((item, index) => (
-        <ItemStyled key={item.key || item.link || index} isFixedWidth={!!isFixedWidth} style={{ width: item.width }}>
+        <ItemStyled
+          key={item.key || item.link || index}
+          data-fixed-width={!!isFixedWidth || undefined}
+          width={item.width}
+        >
           {index !== 0 && <ChevronRightInterfaceSVG className={chevronClassName} data-chevron />}
           {textWrapper(
             item.tooltip,
@@ -259,7 +262,9 @@ export const Breadcrumbs = ({
               data-link={item.link || undefined}
               onClick={onClick ? (e): void => onClick(e, item.link) : undefined}
             >
-              {isTextCut && !isVisible && typeof item.text === 'string' ? getSubstr(item.text) : item.text}
+              {isTextCut && !isVisible && typeof item.text === 'string'
+                ? getSubstr(item.text, crumbMaxLength)
+                : item.text}
             </ItemTextStyled>,
           )}
           {index === visibleElementsCount - 1 && hasHideElements && (

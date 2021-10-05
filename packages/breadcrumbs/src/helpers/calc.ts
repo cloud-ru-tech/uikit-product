@@ -2,7 +2,6 @@ import { nanoid } from 'nanoid';
 import { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 
-import { CRUMB_MAX_LENGTH } from './constants';
 import { BreadcrumbItem, StateItem } from './types';
 
 export const getWidth = (el?: Element | null): number =>
@@ -16,8 +15,8 @@ export const getDiffWidth = (elFrom?: Element | null, elOut?: Element | null): n
 
 export const isEllipsisActive = (element: HTMLElement): boolean => getWidth(element) < element.scrollWidth;
 
-export const getSubstr = (str: string): string =>
-  str.length > CRUMB_MAX_LENGTH + 3 ? `${str.substring(0, CRUMB_MAX_LENGTH)}...` : str;
+export const getSubstr = (str: string, maxlength: number): string =>
+  str.length > maxlength + 3 ? `${str.substring(0, maxlength)}...` : str;
 
 export const setUniqueKey = (items: BreadcrumbItem[]): StateItem[] =>
   items.map(item => ({ ...item, visible: true, key: item.key || nanoid() } as StateItem));

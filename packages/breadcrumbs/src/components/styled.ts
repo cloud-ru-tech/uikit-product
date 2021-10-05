@@ -12,20 +12,31 @@ export const ContainerStyled = styled.div`
   flex-direction: row;
   align-items: center;
   overflow: hidden;
+  visibility: hidden;
+
+  &[data-visible] {
+    visibility: visible;
+  }
 `;
 
-export const ItemStyled = styled.div<{ isFixedWidth: boolean }>`
+export const ItemStyled = styled.div<{ width?: number }>`
   flex-shrink: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  max-width: ${({ isFixedWidth }) => (isFixedWidth ? '200px' : 'auto')};
+  width: ${({ width }) => (width ? `${width}px` : 'auto')};
   font-size: 20px;
   line-height: 26px;
 
+  &[data-fixed-width] {
+    max-width: 200px;
+  }
+
   &:first-child:last-child {
-    max-width: ${({ isFixedWidth }) => (isFixedWidth ? 'calc(100% - 20px)' : 'auto')};
+    &[data-fixed-width] {
+      max-width: calc(100% - 20px);
+    }
   }
 `;
 
