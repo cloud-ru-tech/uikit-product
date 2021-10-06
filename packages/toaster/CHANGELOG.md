@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toaster@0.9.6...@sbercloud/uikit-react-toaster@0.9.7) (2021-10-06)
+
+
+### Bug Fixes
+
+* added toast-container top margin ([922bf1a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/922bf1a7748fe3d42abd62da0d025aed3376cf8f))
+
+
+
+
+
 ## [0.9.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toaster@0.9.5...@sbercloud/uikit-react-toaster@0.9.6) (2021-09-30)
 
 
