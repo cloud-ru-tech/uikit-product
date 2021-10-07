@@ -1,17 +1,18 @@
-const path = require('path');
-const fs = require('fs');
-const ts = require('typescript');
+import fs from 'fs';
+import path from 'path';
 
-const ensureDirectory = require('../utils/ensureDirectory');
+import { JsxEmit, createCompilerHost, createProgram } from 'typescript';
+
+import { ensureDirectory } from '../utils/ensureDirectory';
 
 const createdFiles = {};
 
-function createTSProgram({ fileNames }) {
+export function createTSProgram({ fileNames }: { fileNames: string[] }) {
   const options = {
     declaration: true,
     emitDeclarationOnly: true,
     esModuleInterop: true,
-    jsx: 'react-jsx',
+    jsx: JsxEmit.ReactJSX,
     paths: {
       '@sbercloud/uikit-typography': ['packages/typography/src'],
       '@sbercloud/uikit-theme': ['packages/theme/src'],
@@ -20,14 +21,24 @@ function createTSProgram({ fileNames }) {
     },
   };
 
-  const host = ts.createCompilerHost(options);
-  host.writeFile = (fileName, contents) => (createdFiles[fileName] = contents);
+  const host = createCompilerHost(options);
+  host.writeFile = (fileName: string, contents: string) => (createdFiles[fileName] = contents);
 
-  const program = ts.createProgram(fileNames, options, host);
+  const program = createProgram(fileNames, options, host);
   program.emit();
 }
 
-function emitDeclarations({ src, distCJS, distESM, fileNames }) {
+export function emitDeclarations({
+  src,
+  distCJS,
+  distESM,
+  fileNames,
+}: {
+  src: string;
+  distCJS: string;
+  distESM: string;
+  fileNames: string[];
+}) {
   fileNames.forEach(file => {
     const relativePathToSrcFile = path.relative(src, file);
     const dirname = path.dirname(relativePathToSrcFile);
@@ -48,8 +59,3 @@ function emitDeclarations({ src, distCJS, distESM, fileNames }) {
     fs.writeFileSync(esmOutFile, dtsContent);
   });
 }
-
-module.exports = {
-  emitDeclarations,
-  createTSProgram,
-};

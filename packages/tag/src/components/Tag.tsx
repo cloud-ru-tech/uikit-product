@@ -1,5 +1,6 @@
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { useCallback } from 'react';
+
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { PRESET_COLORS, PresetColorType } from '../helpers/colors';
 import { StyledInputAutosize, StyledTag } from './styled';
@@ -65,7 +66,7 @@ const getTagStyles = ({
   return { ...style, backgroundColor: color };
 };
 
-const Tag = ({
+export function Tag({
   color,
   style,
   onChange,
@@ -75,7 +76,7 @@ const Tag = ({
   type = Types.Span,
   className = '',
   inputClassNames,
-}: TagProps) => {
+}: TagProps) {
   const isPresetColor = useCallback((): boolean => {
     if (!color) {
       return false;
@@ -109,8 +110,6 @@ const Tag = ({
       {children || value}
     </StyledTag>
   );
-};
+}
 
 Tag.types = Types;
-
-export { Tag };

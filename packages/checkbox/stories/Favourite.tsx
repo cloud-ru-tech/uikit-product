@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { Variants } from 'checkbox/src/components/Favourite/constants';
 import { useEffect, useState } from 'react';
 
-import { EXPORT_GLOBAL_CSS_VARS } from '@sbercloud/uikit-theme';
+import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -22,8 +22,7 @@ const FavouriteWrap = styled.div<{ isOnAccent: boolean }>`
   flex-direction: row;
   align-items: center;
   max-width: fit-content;
-  background-color: ${({ isOnAccent }) =>
-    isOnAccent ? `var(${EXPORT_GLOBAL_CSS_VARS.BACKGROUND_ACCENT})` : 'transparent'};
+  background-color: ${({ isOnAccent }) => (isOnAccent ? `var(${GLOBAL_CSS_COLOR.BACKGROUND_ACCENT})` : 'transparent')};
 `;
 
 const Template: Story<FavouriteProps> = ({ checked, ...args }) => {

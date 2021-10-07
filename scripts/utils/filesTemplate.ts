@@ -1,6 +1,7 @@
-const fs = require('fs');
-const path = require('path');
-const themeVersion = require('../../packages/theme/package.json').version;
+import fs from 'fs';
+import path from 'path';
+
+import { version as themeVersion } from '../../packages/theme/package.json';
 
 const PackagesRootFolder = 'packages';
 
@@ -11,13 +12,27 @@ const Folders = {
   srcComponents: '/src/components',
 };
 
-const createFolderStructure = ({ packageRootFolderName }) => {
+export const createFolderStructure = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
   for (const folder in Folders) {
     fs.mkdirSync(`./${PackagesRootFolder}/${packageRootFolderName}/${Folders[folder]}`);
   }
 };
 
-const packageJson = ({ user, email, packageTitle, packageName, packageDescription, packageRootFolderName }) => {
+export const packageJson = ({
+  user,
+  email,
+  packageTitle,
+  packageName,
+  packageDescription,
+  packageRootFolderName,
+}: {
+  user: string;
+  email: string;
+  packageTitle: string;
+  packageName: string;
+  packageDescription: string;
+  packageRootFolderName: string;
+}) => {
   const config = {
     name: `@sbercloud/uikit-${packageName}`,
     title: `${packageTitle}`,
@@ -53,7 +68,7 @@ const packageJson = ({ user, email, packageTitle, packageName, packageDescriptio
   fs.writeFileSync(packageJsonFile, JSON.stringify(config, null, 2));
 };
 
-const changelog = ({ packageRootFolderName }) => {
+export const changelog = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
   // Whitespace in this const is intentional, since it defines how the markdown is shown
   const changelogContent = `## CHANGELOG
 
@@ -67,7 +82,17 @@ const changelog = ({ packageRootFolderName }) => {
   fs.writeFileSync(file, changelogContent);
 };
 
-const readme = ({ packageRootFolderName, packageTitle, packageDescription, packageName }) => {
+export const readme = ({
+  packageRootFolderName,
+  packageTitle,
+  packageDescription,
+  packageName,
+}: {
+  packageRootFolderName: string;
+  packageTitle: string;
+  packageDescription: string;
+  packageName: string;
+}) => {
   // Whitespace in this const is intentional, since it defines how the markdown is shown
   const readmeContent = `# ${packageTitle}
 
@@ -84,14 +109,20 @@ ${packageDescription}
   fs.writeFileSync(readmeFile, readmeContent);
 };
 
-const npmrc = ({ packageRootFolderName }) => {
+export const npmrc = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
   const fileContent = `package-lock=false
 save-exact=true
 `;
   fs.writeFileSync(path.join(`./${PackagesRootFolder}/${packageRootFolderName}/.npmrc`), fileContent);
 };
 
-const componentEntry = ({ componentName, packageRootFolderName }) => {
+export const componentEntry = ({
+  componentName,
+  packageRootFolderName,
+}: {
+  componentName: string;
+  packageRootFolderName: string;
+}) => {
   const indexFilePath = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/${Folders.srcComponents}/index.ts`);
 
   const indexFileContent = `export * from './${componentName}';
@@ -110,7 +141,7 @@ export function ${componentName}(props: ${componentName}Props) {
   fs.writeFileSync(componentFilePath, componentFileContent);
 };
 
-const packageEntry = ({ packageRootFolderName }) => {
+export const packageEntry = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
   const filePath = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/${Folders.src}/index.ts`);
 
   const fileContent = `export * from './components';
@@ -119,7 +150,13 @@ const packageEntry = ({ packageRootFolderName }) => {
   fs.writeFileSync(filePath, fileContent);
 };
 
-const storyEntry = ({ componentName, packageRootFolderName }) => {
+export const storyEntry = ({
+  componentName,
+  packageRootFolderName,
+}: {
+  componentName: string;
+  packageRootFolderName: string;
+}) => {
   const filePath = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/${Folders.stories}/index.tsx`);
   const fileContent =
     "import { Story, Meta } from '@storybook/react/types-6-0';\n\
@@ -168,15 +205,4 @@ export default {\n\
 ";
 
   fs.writeFileSync(filePath, fileContent);
-};
-
-module.exports = {
-  createFolderStructure,
-  packageJson,
-  changelog,
-  readme,
-  npmrc,
-  packageEntry,
-  componentEntry,
-  storyEntry,
 };

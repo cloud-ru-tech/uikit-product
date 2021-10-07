@@ -1,22 +1,22 @@
-const fs = require('fs');
-const path = require('path');
-const mkdirp = require('mkdirp');
-const normalize = require('normalize-path');
-const { transform } = require('@linaria/babel-preset');
-const getClassNameSlug = require('../utils/getClassNameSlug');
+import fs from 'fs';
+import path from 'path';
 
-const resolveRequireInsertionFileName = filename => {
-  return filename.replace(/\.tsx?/, '.js');
-};
+import { transform } from '@linaria/babel-preset';
+import mkdirp from 'mkdirp';
+import normalize from 'normalize-path';
 
-const resolveOutputFileName = (filename, outDir, sourceRoot) => {
+import { getClassNameSlug } from '../utils/getClassNameSlug';
+
+const resolveRequireInsertionFileName = (filename: string) => filename.replace(/\.tsx?/, '.js');
+
+const resolveOutputFileName = (filename: string, outDir: string, sourceRoot: string) => {
   const outputFolder = path.relative(sourceRoot, path.dirname(filename));
   const outputBasename = path.basename(filename).replace(path.extname(filename), '.css');
 
   return path.join(outDir, outputFolder, outputBasename);
 };
 
-const createCssWithAutoImport = ({ cssText, inputFileName, outputFileName }) => {
+const createCssWithAutoImport = ({ cssText, inputFileName, outputFileName }: Record<string, string>) => {
   const normalizedInputFileName = resolveRequireInsertionFileName(inputFileName);
   const relativePath = normalize(path.relative(path.dirname(inputFileName), outputFileName));
 
@@ -35,9 +35,21 @@ const createCssWithAutoImport = ({ cssText, inputFileName, outputFileName }) => 
   }
 };
 
-function extractStyles(options) {
-  const { files, configFile, src, version, distESM, distCJS } = options;
-
+export function extractStyles({
+  files,
+  configFile,
+  src,
+  version,
+  distESM,
+  distCJS,
+}: {
+  files: string[];
+  configFile: string;
+  src: string;
+  version: string;
+  distESM: string;
+  distCJS: string;
+}) {
   files.forEach(filename => {
     const { cssText } = transform(fs.readFileSync(filename).toString(), {
       filename,
@@ -67,5 +79,3 @@ function extractStyles(options) {
     }
   });
 }
-
-module.exports = extractStyles;

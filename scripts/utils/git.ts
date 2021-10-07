@@ -1,7 +1,8 @@
-const shell = require('shelljs');
-const { logError } = require('./console');
+import shell from 'shelljs';
 
-const getGitUserName = () => {
+import { logError } from './console';
+
+export const getGitUserName = () => {
   const user = shell.exec('git config user.name', { silent: true }).stdout.trim();
   if (!user) {
     logError('No username set - please set it in git with \'git config --global user.name "Firstname Lastname"\'');
@@ -10,7 +11,7 @@ const getGitUserName = () => {
   return user;
 };
 
-const getGitEmail = () => {
+export const getGitEmail = () => {
   const email = shell.exec('git config user.email', { silent: true }).stdout.trim();
   if (!email) {
     logError('No email set - please set it in git with \'git config --global user.email "yoursemail@sbrecloud.ru"\'');
@@ -19,11 +20,9 @@ const getGitEmail = () => {
   return email;
 };
 
-const gitFetch = () => {
-  return shell.exec('git fetch', { silent: true });
-};
+export const gitFetch = () => shell.exec('git fetch', { silent: true });
 
-const checkIfBehindMaster = () => {
+export const checkIfBehindMaster = () => {
   const behindMaster = shell.exec('git log @..origin/master', { silent: true }).stdout.trim();
 
   if (behindMaster) {
@@ -32,17 +31,4 @@ const checkIfBehindMaster = () => {
     );
     process.exit(1);
   }
-};
-
-const gitCommit = packageName => {
-  shell.exec(`git add ./packages/${packageName}`);
-  shell.exec(`git commit -m "initial commit for new package: ${packageName}" --no-verify`);
-};
-
-module.exports = {
-  getGitEmail,
-  getGitUserName,
-  gitFetch,
-  checkIfBehindMaster,
-  gitCommit,
 };

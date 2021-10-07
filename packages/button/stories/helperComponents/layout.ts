@@ -1,16 +1,16 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_GLOBAL_CSS_VARS, EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-theme';
 
 export const SingleWrapper = styled.div`
   padding: 20px;
   border-radius: 8px;
-  background-color: var(${EXPORT_GLOBAL_CSS_VARS.BACKGROUND_SECONDARY});
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
 `;
 
 export const CenteredWrapper = styled.div`
   margin: 1rem;
-  background-color: var(${EXPORT_GLOBAL_CSS_VARS.BACKGROUND_SECONDARY});
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
   position: absolute;
   top: 0;
   bottom: 0;
@@ -26,7 +26,7 @@ export const TableWrapper = styled.div`
   grid-auto-flow: column;
   grid-auto-columns: 1fr;
   border-radius: 8px;
-  background-color: var(${EXPORT_GLOBAL_CSS_VARS.BACKGROUND_SECONDARY});
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
   border: 1px solid var(${EXPORT_VARS.GREY[100]});
   overflow: auto;
 `;
@@ -47,7 +47,7 @@ const TableColumnBase = styled.div`
 
   &[data-variant='${COLUMN_ACCENT}'] {
     color: var(${EXPORT_VARS.GREY[0]});
-    background-color: var(${EXPORT_GLOBAL_CSS_VARS.BACKGROUND_ACCENT});
+    background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_ACCENT});
   }
 `;
 

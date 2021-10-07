@@ -1,21 +1,11 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
 
-const { logInfo } = require('./console');
-const fileTemplates = require('./filesTemplate');
+import { logInfo } from './console';
+import * as fileTemplates from './filesTemplate';
 
-const updateGlobalReadme = ({ packageRootFolderName, packageTitle }) => {
-  const readme = path.resolve(process.cwd(), 'README.md');
-  fs.appendFileSync(
-    readme,
-    `* [${packageTitle}](./packages/${packageRootFolderName}/README.md) [(Changelog)](./packages/${packageRootFolderName}/CHANGELOG.md)
-`,
-  );
-};
+export const ExistingPackageNames = (() => fs.readdirSync('./packages/'))();
 
-const ExistingPackageNames = (() => fs.readdirSync('./packages/'))();
-
-const bootstrapFiles = ({
+export const bootstrapFiles = ({
   packageRootFolderName,
   packageName,
   packageTitle,
@@ -23,6 +13,14 @@ const bootstrapFiles = ({
   user,
   email,
   componentName,
+}: {
+  packageRootFolderName: string;
+  packageName: string;
+  packageTitle: string;
+  packageDescription: string;
+  user: string;
+  email: string;
+  componentName: string;
 }) => {
   fileTemplates.createFolderStructure({ packageRootFolderName });
   logInfo('Created folder structure');
@@ -34,7 +32,7 @@ const bootstrapFiles = ({
     packageRootFolderName,
     packageTitle,
     packageDescription,
-    packageName
+    packageName,
   });
   logInfo('Created readme');
 
@@ -67,10 +65,4 @@ const bootstrapFiles = ({
     packageRootFolderName,
   });
   logInfo('Created story entry');
-};
-
-module.exports = {
-  bootstrapFiles,
-  ExistingPackageNames,
-  updateGlobalReadme,
 };

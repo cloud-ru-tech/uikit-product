@@ -1,11 +1,10 @@
-const path = require('path');
-const fs = require('fs');
+import fs from 'fs';
+import path from 'path';
 
-const ensureDirectory = require('../utils/ensureDirectory');
+import { ensureDirectory } from '../utils/ensureDirectory';
 
-module.exports =
-  ({ src, distCJS, distESM }) =>
-  file => {
+export function simpleCopy({ src, distCJS, distESM }: { src: string; distCJS: string; distESM: string }) {
+  return (file: string) => {
     const relativePathToSrcFile = path.relative(src, file);
     const dirname = path.dirname(relativePathToSrcFile);
     const extension = path.extname(relativePathToSrcFile);
@@ -23,3 +22,4 @@ module.exports =
     fs.writeFileSync(cjsOutFile, content);
     fs.writeFileSync(esmOutFile, content);
   };
+}

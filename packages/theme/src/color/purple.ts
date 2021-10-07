@@ -1,11 +1,12 @@
 import { css } from '@linaria/core';
+
+import { Themes } from '../types/theme';
 import { purpleDeprecated } from './DEPRECATED/purple';
 
-/* TODO: использовать [data-theme='${Themes.Purple}'] */
 export const purple = css`
   :global() {
-    [data-theme='purple'] {
-      ${purpleDeprecated}
+    [data-theme='${Themes.Purple}'] {
+      ${purpleDeprecated};
     }
   }
 `;

@@ -1,16 +1,14 @@
-const { execFileSync } = require('child_process');
+import { execFileSync } from 'child_process';
 
-const getLernaParameters = () => {
-  return [
-    'version',
-    '--conventional-commits',
-    '--include-merged-tags',
-    '--exact',
-    '--no-push',
-    '--no-git-tag-version',
-    '--yes',
-  ];
-};
+const getLernaParameters = () => [
+  'version',
+  '--conventional-commits',
+  '--include-merged-tags',
+  '--exact',
+  '--no-push',
+  '--no-git-tag-version',
+  '--yes',
+];
 
 const lernaParameters = getLernaParameters();
 

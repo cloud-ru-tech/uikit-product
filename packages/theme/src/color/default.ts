@@ -154,7 +154,7 @@ export const COLORS_DEFAULT_MAP = `
 export const color = css`
   :global() {
     :root {
-      ${COLORS_DEFAULT_MAP}
+      ${COLORS_DEFAULT_MAP};
     }
   }
 `;

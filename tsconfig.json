@@ -1,5 +1,10 @@
 {
   "extends": "ts-config-single-spa",
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
   "compilerOptions": {
     "baseUrl": "packages",
     "paths": {

@@ -1,6 +1,7 @@
-const inquirer = require('inquirer');
-const shell = require('shelljs');
-const { logInfo, logHelp } = require('./utils/console');
+import inquirer from 'inquirer';
+import shell from 'shelljs';
+
+import { logHelp, logInfo } from './utils/console';
 
 const printInfoMessages = () => {
   logInfo('You are able to specify several packages via space separator');
@@ -17,6 +18,6 @@ inquirer
       message: 'Package(s) to run in storybook',
     },
   ])
-  .then(({ packagesToRun }) =>
+  .then(({ packagesToRun }: { packagesToRun: string }) =>
     shell.exec(`STORYBOOK_PACKAGE_NAME="?(${packagesToRun.trim().split(/\s+/).join('|')})" start-storybook -p 6006`),
   );

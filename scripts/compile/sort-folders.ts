@@ -1,6 +1,6 @@
-const { DepGraph } = require('dependency-graph');
+import { DepGraph } from 'dependency-graph';
 
-function sortFolders(folders) {
+export function sortFolders(folders: string[]) {
   const graph = new DepGraph();
 
   const foldersByPackageName = {};
@@ -31,10 +31,6 @@ function sortFolders(folders) {
 
   return graph
     .overallOrder()
-    .map(packageName => {
-      return foldersByPackageName[packageName];
-    })
+    .map(packageName => foldersByPackageName[packageName])
     .filter(Boolean);
 }
-
-module.exports = sortFolders;

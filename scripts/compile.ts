@@ -1,19 +1,21 @@
-const path = require('path');
-const glob = require('glob');
-const moment = require('moment');
+import path from 'path';
 
-const { logInfo, logHelp } = require('./utils/console');
-const argv = require('minimist')(process.argv.slice(2));
+import glob from 'glob';
+import minimist from 'minimist';
+import moment from 'moment';
+
+import { createTSProgram, emitDeclarations } from './compile/emit-declarations';
+import { extractStyles } from './compile/extract-styles';
+import { simpleCopy } from './compile/simple-copy';
+import { sortFolders } from './compile/sort-folders';
+import { transformJs } from './compile/transform-js';
+import { writeJs } from './compile/write-js';
+import { logHelp, logInfo } from './utils/console';
+
+const argv = minimist(process.argv.slice(2));
 const pkg = argv.pkg || '*';
 
-const writeJs = require('./compile/write-js');
-const transformJs = require('./compile/transform-js');
-const sortFolders = require('./compile/sort-folders');
-const simpleCopy = require('./compile/simple-copy');
-const extractStyles = require('./compile/extract-styles');
-const { emitDeclarations, createTSProgram } = require('./compile/emit-declarations');
-
-(async function () {
+(function () {
   let jsTiming = 0;
   let tsTiming = 0;
   let emitTiming = 0;
@@ -32,14 +34,14 @@ const { emitDeclarations, createTSProgram } = require('./compile/emit-declaratio
   const tsStart = moment();
   const tsFiles = glob.sync(path.resolve(__dirname, `../packages/*/src/**/*.{ts,tsx}`));
 
-  await createTSProgram({ fileNames: tsFiles });
+  createTSProgram({ fileNames: tsFiles });
 
   tsTiming += moment().diff(tsStart, 'ms');
 
   const sortedFolders = sortFolders(folders);
 
   for (const folder of sortedFolders) {
-    const package = require(`${folder}/package.json`);
+    const packageJson = require(`${folder}/package.json`);
     const src = `${folder}/${srcPart}`;
     const dist = `${folder}/${distPart}`;
     const distESM = `${dist}/esm`;
@@ -49,14 +51,14 @@ const { emitDeclarations, createTSProgram } = require('./compile/emit-declaratio
 
     const jsFiles = glob.sync(`${src}/**/*.{ts,tsx,js,jsx}`);
     const jsPipe = writeJs({ src, distCJS, distESM });
-    jsFiles.forEach(jsPipe(transformJs(package.version)));
+    jsFiles.forEach(jsPipe(transformJs(packageJson.version)));
 
     jsTiming += moment().diff(jsStart, 'ms');
 
     const copyStart = moment();
     const filesToCopy = glob.sync(`${src}/**/*.{woff,woff2,png}`);
 
-    filesToCopy.forEach(simpleCopy({ src, dist, distCJS, distESM }));
+    filesToCopy.forEach(simpleCopy({ src, distCJS, distESM }));
     simpleCopyTiming += moment().diff(copyStart, 'ms');
 
     const emitStart = moment();
@@ -75,7 +77,7 @@ const { emitDeclarations, createTSProgram } = require('./compile/emit-declaratio
     extractStyles({
       files: jsFiles,
       configFile: linariaConfig,
-      version: package.version,
+      version: packageJson.version,
       distESM,
       distCJS,
       src,

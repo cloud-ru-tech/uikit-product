@@ -1,7 +1,9 @@
-const depCheck = require('depcheck');
-const path = require('path');
-const glob = require('glob');
-const { logError, logInfo, logDebug } = require('./utils/console');
+import path from 'path';
+
+import depCheck from 'depcheck';
+import glob from 'glob';
+
+import { logDebug, logError, logInfo } from './utils/console';
 
 const options = {
   ignoreBinPackage: false,
@@ -20,10 +22,10 @@ for (const folder of folders) {
   InternalPackages[pkg.name] = pkg.version;
 }
 
-const WrongVersions = [];
-const InternalAsDev = [];
-const UnusedDeps = [];
-const Missing = [];
+const WrongVersions: string[] = [];
+const InternalAsDev: string[] = [];
+const UnusedDeps: string[] = [];
+const Missing: Record<string, string[]>[] = [];
 
 for (const folder of folders) {
   const pkg = require(path.resolve(folder, 'package.json'));

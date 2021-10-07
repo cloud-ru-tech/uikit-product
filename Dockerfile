@@ -1,8 +1,7 @@
 ## build sources
-FROM node:12-alpine AS builder
+FROM node:16-alpine AS builder
 COPY . .
 
-RUN mkdir storybook-static
 RUN npm run all:cleaninstall
 RUN npm run build:storybook
 

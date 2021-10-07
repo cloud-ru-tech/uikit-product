@@ -10,6 +10,6 @@ export * from './color/DEPRECATED/green';
 export * from './color/DEPRECATED/green-dark';
 
 export { default as EXPORT_VARS } from './color/vars';
-export { default as Themes } from './types/theme';
-export { default as EXPORT_GLOBAL_CSS_VARS } from './globals/theme';
+export * from './types/theme';
+export * from './globals/theme';
 export { default as DEPRECATED_EXPORT_VARS } from './color/DEPRECATED/vars';

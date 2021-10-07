@@ -103,7 +103,7 @@ const Template: Story<typeof EXPORT_VARS.PRESET> = () => (
         </Title>
         {Object.entries(colorVariant.value).map(([key, color]) => (
           <Item key={key} border={colorVariant.background}>
-            <Color data-color={color} background={color} key={key}></Color>
+            <Color data-color={color} background={color} key={key} />
             <Text>
               <Text3 className={textCSS}>{key}</Text3>
               <Text3 className={textCSS}>{color_hex[color]}</Text3>

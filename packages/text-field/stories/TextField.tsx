@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { ButtonIconTransparent, RefreshButton } from '@sbercloud/uikit-react-button';
 import { InfoInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { EXPORT_GLOBAL_CSS_VARS, EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -19,7 +19,7 @@ const Container = styled.div`
   margin: 20px;
   border: 1px solid var(${EXPORT_VARS.GREY[100]});
   border-radius: 10px;
-  background-color: var(${EXPORT_GLOBAL_CSS_VARS.BACKGROUND_SECONDARY});
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
 `;
 
 export default {

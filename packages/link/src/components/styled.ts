@@ -26,7 +26,7 @@ export const StyledLink = styled.a<{ showIcon: boolean }>`
     cursor: none;
   }
 
-  ${TYPOGRAPHY_VARIABLES.TEXT_2}
+  ${TYPOGRAPHY_VARIABLES.TEXT_2};
 
   &[data-variant='${Variant.OnPrimary}'] {
     color: ${({ showIcon }) => (showIcon ? `var(${COLORS.PRIMARY_COLOR})` : `var(${COLORS.PRIMARY_FILL})`)};

@@ -29,12 +29,19 @@ module.exports = {
     },
     '@geometricpanda/storybook-addon-badges',
   ],
+  core: {
+    builder: 'webpack5',
+  },
   typescript: {
     check: true,
     reactDocgen: 'react-docgen-typescript',
     checkOptions: {},
   },
   webpackFinal: async config => {
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      stream: require.resolve('stream-browserify'),
+    };
     config.module.rules[0].use.push({
       loader: '@linaria/webpack-loader',
       options: {

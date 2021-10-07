@@ -1,9 +1,9 @@
-const inquirer = require('inquirer');
-const shell = require('shelljs');
+import inquirer from 'inquirer';
+import shell from 'shelljs';
 
-const fileUtils = require('./utils/files');
-const gitUtils = require('./utils/git');
-const { logInfo, logHelp, logError, logSilly, logDebug } = require('./utils/console');
+import { logDebug, logError, logHelp, logInfo, logSilly } from './utils/console';
+import { ExistingPackageNames, bootstrapFiles } from './utils/files';
+import * as gitUtils from './utils/git';
 
 const user = gitUtils.getGitUserName();
 const email = gitUtils.getGitEmail();
@@ -11,9 +11,9 @@ const email = gitUtils.getGitEmail();
 gitUtils.gitFetch();
 gitUtils.checkIfBehindMaster();
 
-const generatePackageName = title => title.trim().replace(/\s+/g, '-').toLowerCase();
+const generatePackageName = (title: string) => title.trim().replace(/\s+/g, '-').toLowerCase();
 
-const generatePackageTitle = input =>
+const generatePackageTitle = (input: string) =>
   input
     .toLowerCase()
     .replace(/(^| )(\w)/g, x => x.toUpperCase())
@@ -21,7 +21,7 @@ const generatePackageTitle = input =>
     .replace(/\s+/g, ' ')
     .trim();
 
-const generateComponentName = title => generatePackageTitle(title).replace(/\s+/g, '');
+const generateComponentName = (title: string) => generatePackageTitle(title).replace(/\s+/g, '');
 
 const printInfoMessages = () => {
   logInfo(`Package Title format (the script will throw a validation error if you dont follow these rules):
@@ -73,7 +73,7 @@ inquirer
         if (!input.match(/^([0-9a-zA-Z]+ ?)*$/)) {
           return 'Package title can only contain letters a-z, A-Z, numbers 0-9 and spaces';
         }
-        if (fileUtils.ExistingPackageNames.includes(generatePackageName(input))) {
+        if (ExistingPackageNames.includes(generatePackageName(input))) {
           return `A package with the name ${input} already exists - please see if it fits your use-case, or choose a different name`;
         }
         return true;
@@ -97,7 +97,7 @@ inquirer
     const componentName = generateComponentName(packageTitle);
     const packageRootFolderName = packageName.toLowerCase().replace('react-', '');
 
-    fileUtils.bootstrapFiles({
+    bootstrapFiles({
       packageRootFolderName,
       user,
       email,

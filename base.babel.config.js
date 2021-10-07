@@ -1,5 +1,3 @@
-const getClassNameSlug = require('./scripts/utils/getClassNameSlug');
-
 module.exports = (buildType, version) => ({
   sourceType: 'unambiguous',
   presets: [
@@ -15,7 +13,7 @@ module.exports = (buildType, version) => ({
     [
       '@linaria',
       version && {
-        classNameSlug: getClassNameSlug(version),
+        classNameSlug: (hash, title) => `uikit-${title}-${version}-${hash}`,
       },
     ],
   ].filter(Boolean),
