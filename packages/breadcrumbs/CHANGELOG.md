@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-breadcrumbs@0.9.10...@sbercloud/uikit-react-breadcrumbs@0.10.0) (2021-10-07)
+
+
+### Features
+
+* crumb max length prop added ([4fc6729](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/4fc672913600ca5b76e6ecabf6fe3058ff9864ed))
+
+
+
+
+
 ## [0.9.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-breadcrumbs@0.9.9...@sbercloud/uikit-react-breadcrumbs@0.9.10) (2021-10-04)
 
 
