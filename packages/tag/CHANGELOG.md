@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.26](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.7.25...@sbercloud/uikit-react-tag@0.7.26) (2021-10-07)
+
+
+### Bug Fixes
+
+* adaptation for node 16 ([8f15e60](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8f15e60270884bd517cfea8079fb424b8d31fe92))
+
+
+
+
+
 ## [0.7.25](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.7.24...@sbercloud/uikit-react-tag@0.7.25) (2021-09-30)
 
 

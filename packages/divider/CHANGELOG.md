@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-divider@2.0.1...@sbercloud/uikit-react-divider@2.0.2) (2021-10-07)
+
+
+### Bug Fixes
+
+* adaptation for node 16 ([8f15e60](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8f15e60270884bd517cfea8079fb424b8d31fe92))
+
+
+
+
+
 ## [2.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-divider@2.0.0...@sbercloud/uikit-react-divider@2.0.1) (2021-09-30)
 
 

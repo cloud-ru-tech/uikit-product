@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.27.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.27.1...@sbercloud/uikit-theme@0.27.2) (2021-10-07)
+
+
+### Bug Fixes
+
+* adaptation for node 16 ([8f15e60](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8f15e60270884bd517cfea8079fb424b8d31fe92))
+
+
+
+
+
 ## [0.27.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.27.0...@sbercloud/uikit-theme@0.27.1) (2021-09-30)
 
 

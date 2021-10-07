@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-charts",
   "title": "React Charts",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,9 +26,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-divider": "2.0.1",
-    "@sbercloud/uikit-theme": "0.27.1",
-    "@sbercloud/uikit-utils": "1.0.1",
+    "@sbercloud/uikit-react-divider": "2.0.2",
+    "@sbercloud/uikit-theme": "0.27.2",
+    "@sbercloud/uikit-utils": "1.0.2",
     "lodash.merge": "4.6.2",
     "react-minimal-pie-chart": "8.2.0",
     "uplot": "1.6.15",
