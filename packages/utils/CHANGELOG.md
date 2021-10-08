@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@1.0.2...@sbercloud/uikit-utils@1.0.3) (2021-10-08)
+
+
+### Bug Fixes
+
+* window custom store decorated via react hook ([8ac326d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8ac326dccdbd8a0cf02a4cea49c1c36a904a47fa))
+
+
+
+
+
 ## [1.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@1.0.1...@sbercloud/uikit-utils@1.0.2) (2021-10-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-utils

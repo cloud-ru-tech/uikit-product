@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-radio",
   "title": "React Radio",
-  "version": "0.6.13",
+  "version": "0.6.14",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
     "@sbercloud/uikit-react-icons": "2.1.2",
     "@sbercloud/uikit-theme": "0.27.2",
     "@sbercloud/uikit-typography": "0.5.7",
-    "@sbercloud/uikit-utils": "1.0.2"
+    "@sbercloud/uikit-utils": "1.0.3"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

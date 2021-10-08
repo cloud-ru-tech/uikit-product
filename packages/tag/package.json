@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tag",
   "title": "React Tag",
-  "version": "0.7.26",
+  "version": "0.7.27",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,7 +26,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-input": "0.17.2",
+    "@sbercloud/uikit-react-input": "0.17.3",
     "@sbercloud/uikit-theme": "0.27.2"
   },
   "peerDependencies": {
