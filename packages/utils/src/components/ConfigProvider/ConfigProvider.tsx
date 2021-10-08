@@ -3,8 +3,8 @@ import { FC, useEffect, useLayoutEffect, useState } from 'react';
 import { color, globals } from '@sbercloud/uikit-theme';
 
 import { DEFAULT, DEPRECATED_COLOR, POST_MESSAGE_KEY } from '../../constants';
-import { store } from '../../helpers/store';
 import { tryParseJson } from '../../helpers/tryParseJson';
+import { useCustomStore } from '../../hooks/private/useCustomStore';
 import { LanguageCodeType, Themes } from '../../types';
 
 export interface ConfigProviderProps {
@@ -18,6 +18,7 @@ interface ConfigProviderType extends FC<ConfigProviderProps> {
 }
 
 export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, children }) => {
+  const store = useCustomStore();
   const [configTheme, setConfigTheme] = useState(DEFAULT.THEME);
   const [configLanguageCode, setConfigLanguageCodeTheme] = useState(DEFAULT.LANGUAGE);
 
@@ -61,7 +62,7 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
   useLayoutEffect(() => {
     store.theme = theme || DEFAULT.THEME;
     setConfigTheme(store.theme);
-  }, [theme]);
+  }, [store, theme]);
 
   useEffect(() => {
     const html = document.getElementsByTagName('html')[0];
@@ -81,7 +82,7 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
   useLayoutEffect(() => {
     store.languageCode = languageCode || DEFAULT.LANGUAGE;
     setConfigLanguageCodeTheme(store.languageCode);
-  }, [languageCode]);
+  }, [languageCode, store]);
 
   useEffect(() => {
     window.postMessage(
