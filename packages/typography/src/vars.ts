@@ -37,6 +37,13 @@ const H_4 = `
   line-height: 24px;
 `;
 
+const H_4_SEMIBOLD = `
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+`;
+
 const H_5 = `
   font-style: normal;
   font-weight: 600;
@@ -95,7 +102,22 @@ const TEXT_4 = `
   line-height: 15px;
 `;
 
-export { H_1, H_2, H_3, H_3_SEMIBOLD, H_4, H_5, NOTIFY_TEXT, TABLE_TEXT, TEXT_1, TEXT_2, TEXT_2_LINK, TEXT_3, TEXT_4 };
+export {
+  H_1,
+  H_2,
+  H_3,
+  H_3_SEMIBOLD,
+  H_4,
+  H_4_SEMIBOLD,
+  H_5,
+  NOTIFY_TEXT,
+  TABLE_TEXT,
+  TEXT_1,
+  TEXT_2,
+  TEXT_2_LINK,
+  TEXT_3,
+  TEXT_4,
+};
 
 export default {
   H_1,
@@ -103,6 +125,7 @@ export default {
   H_3,
   H_3_SEMIBOLD,
   H_4,
+  H_4_SEMIBOLD,
   H_5,
   NOTIFY_TEXT,
   TABLE_TEXT,

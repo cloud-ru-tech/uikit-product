@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { H1, H2, H3, H3Semibold, H4, H5 } from '../src';
+import { H1, H2, H3, H3Semibold, H4, H4Semibold, H5 } from '../src';
 
 export default {
   title: 'Typography/Headers',
@@ -17,6 +17,7 @@ const Template: Story<{ color: string; children: string }> = ({ children, color,
     <H3 {...restArgs}>{children} (H3)</H3>
     <H3Semibold {...restArgs}>{children} (H3Semibold)</H3Semibold>
     <H4 {...restArgs}>{children} (H4)</H4>
+    <H4Semibold {...restArgs}>{children} (H4Semibold)</H4Semibold>
     <H5 {...restArgs}>{children} (H5)</H5>
   </div>
 );
