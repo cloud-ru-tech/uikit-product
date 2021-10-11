@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-paginator-private@0.5.9...@sbercloud/uikit-react-paginator-private@0.5.10) (2021-10-11)
+
+
+### Bug Fixes
+
+* republish all packages ([b7ce3da](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b7ce3da1966f2f099d5d47aa13d62058cfa6fc98))
+
+
+
+
+
 ## [0.5.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-paginator-private@0.5.8...@sbercloud/uikit-react-paginator-private@0.5.9) (2021-10-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-paginator-private

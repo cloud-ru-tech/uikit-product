@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-truncate-string",
   "title": "React Truncate String",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -38,5 +38,3 @@
     "react-dom": "^17.0.0"
   }
 }
-
-

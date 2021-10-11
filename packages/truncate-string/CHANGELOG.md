@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-truncate-string@0.4.1...@sbercloud/uikit-react-truncate-string@0.4.2) (2021-10-11)
+
+
+### Bug Fixes
+
+* republish all packages ([b7ce3da](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b7ce3da1966f2f099d5d47aa13d62058cfa6fc98))
+
+
+
+
+
 ## 0.4.1 (2021-09-30)
 
 
