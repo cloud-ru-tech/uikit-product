@@ -37,3 +37,5 @@ export const isActiveToast = rcToast.isActive;
 export const customToast = (node: React.ReactNode, options: ToastOptions = {}) => rcToast(node, options);
 export const toaster = (toastProps: ToasterProps, options: ToastOptions = {}) =>
   rcToast(<Toaster {...toastProps} />, options);
+
+toaster.variants = Variants;

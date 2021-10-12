@@ -21,7 +21,7 @@ const PREDEFINED_ITEMS: {
   {
     title: 'INFO',
     props: {
-      variant: CToaster.variants.Info,
+      variant: toaster.variants.Info,
       title: 'Перенос данных завершен',
       subtitle: 'Проект с очень длинным названием',
       closeButton: true,
@@ -42,7 +42,7 @@ const PREDEFINED_ITEMS: {
   {
     title: 'ERROR',
     props: {
-      variant: CToaster.variants.Error,
+      variant: toaster.variants.Error,
       title: 'Проблемы с соединением. Данные не перенесены. ',
       subtitle: 'CORS error',
       text: "User=email@sbercloud.ru can't create oneapi jupyter notebook: ['CUSTOMER_ONE_API_NOTEBOOK_LIMIT_REACHED_1_ONLY'] sku_id=None, service_instance_id=None",
@@ -63,7 +63,7 @@ const PREDEFINED_ITEMS: {
   {
     title: 'IN PROGRESS',
     props: {
-      variant: CToaster.variants.Info,
+      variant: toaster.variants.Info,
       progress: true,
       title: 'Создание workspace',
       text: 'Процесс может занять несколько минут',
@@ -176,7 +176,7 @@ const Template: Story<ToasterProps & { showActions: boolean; autoClose: boolean 
 
 export const Toaster = Template.bind({});
 Toaster.args = {
-  variant: CToaster.variants.Info,
+  variant: toaster.variants.Info,
   title: 'Lorem ipsum dolor sit amet',
   subtitle: 'consectetur adipiscing elit',
   text: 'Suspendisse ac lectus mattis, ultrices mauris eget, volutpat tellus',

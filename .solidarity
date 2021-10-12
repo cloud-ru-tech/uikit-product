@@ -5,7 +5,7 @@
       {
         "rule": "cli",
         "binary": "npm",
-        "semver": "^7.24.0",
+        "semver": "^7.24.0 || ^8.0.0",
         "version": "--version",
         "error": "You have npm@{{installedVersion}}, and need npm@{{wantedVersion}}. Fix with `npm install -g npm@{{wantedVersion}}`"
       }
