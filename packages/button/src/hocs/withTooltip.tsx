@@ -41,7 +41,7 @@ export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProp
     title, // чтобы не пробрасывался нативный вариант
     ...rest
   }) =>
-    tooltip ? (
+    tooltip || disabledTooltip ? (
       <Tooltip
         {...(rest.disabled ? disabledTooltip || tooltip || {} : tooltip || {})}
         type={Tooltip.types.Info}
