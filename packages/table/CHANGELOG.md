@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.16.4...@sbercloud/uikit-react-table@0.16.5) (2021-10-13)
+
+
+### Bug Fixes
+
+* add StatusCell className prop ([dc410e8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/dc410e85c2f8de12675e733afd0af2be9f43f1b8))
+
+
+
+
+
 ## [0.16.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.16.3...@sbercloud/uikit-react-table@0.16.4) (2021-10-11)
 
 
