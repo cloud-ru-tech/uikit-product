@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toaster@0.10.1...@sbercloud/uikit-react-toaster@0.10.2) (2021-10-13)
+
+
+### Bug Fixes
+
+* changed props title type ([AICDC-3012](https://jira.sbercloud.tech/browse/AICDC-3012)) ([a747560](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/a747560e6060ea6ee7b183a045130cbbc1b4e822))
+
+
+
+
+
 ## [0.10.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toaster@0.10.0...@sbercloud/uikit-react-toaster@0.10.1) (2021-10-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toaster
