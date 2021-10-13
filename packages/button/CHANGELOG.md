@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.5...@sbercloud/uikit-react-button@2.1.0) (2021-10-13)
+
+
+### Features
+
+* forwarding data-any-attr ([AICDC-4028](https://jira.sbercloud.tech/browse/AICDC-4028)) ([eba8656](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/eba865600f55eabf5719c273dd8d9f5e3a656758))
+
+
+
+
+
 ## [2.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.4...@sbercloud/uikit-react-button@2.0.5) (2021-10-13)
 
 

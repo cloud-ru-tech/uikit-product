@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-filter",
   "title": "React Filter",
-  "version": "0.12.5",
+  "version": "0.12.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,14 +26,14 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-divider": "2.0.4",
+    "@sbercloud/uikit-react-divider": "2.0.5",
     "@sbercloud/uikit-react-icons": "2.2.0",
-    "@sbercloud/uikit-react-input": "0.17.5",
-    "@sbercloud/uikit-react-select": "0.18.5",
-    "@sbercloud/uikit-react-tooltip-private": "1.0.8",
+    "@sbercloud/uikit-react-input": "0.17.6",
+    "@sbercloud/uikit-react-select": "0.18.6",
+    "@sbercloud/uikit-react-tooltip-private": "1.0.9",
     "@sbercloud/uikit-theme": "0.27.3",
     "@sbercloud/uikit-typography": "0.6.0",
-    "@sbercloud/uikit-utils": "1.0.4",
+    "@sbercloud/uikit-utils": "1.1.0",
     "lodash.clonedeep": "4.5.0",
     "lodash.eq": "4.0.0",
     "lodash.gt": "3.9.2",

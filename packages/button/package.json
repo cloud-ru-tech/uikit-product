@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-button",
   "title": "React Button",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,10 +27,10 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-icons": "2.2.0",
-    "@sbercloud/uikit-react-tooltip": "2.0.5",
+    "@sbercloud/uikit-react-tooltip": "2.0.6",
     "@sbercloud/uikit-theme": "0.27.3",
     "@sbercloud/uikit-typography": "0.6.0",
-    "@sbercloud/uikit-utils": "1.0.4",
+    "@sbercloud/uikit-utils": "1.1.0",
     "lodash.pick": "4.4.0",
     "react-polymorphic-types": "2.0.0"
   },

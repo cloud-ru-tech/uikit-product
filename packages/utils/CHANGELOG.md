@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@1.0.4...@sbercloud/uikit-utils@1.1.0) (2021-10-13)
+
+
+### Features
+
+* added extractDataProps function ([AICDC-4028](https://jira.sbercloud.tech/browse/AICDC-4028)) ([917d1bb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/917d1bb05304db1d7a7f4ba7f32e5523a9a6e655))
+
+
+
+
+
 ## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@1.0.3...@sbercloud/uikit-utils@1.0.4) (2021-10-11)
 
 
