@@ -1,11 +1,12 @@
+import { ReactNode } from 'react';
+import { ToastContentProps } from 'react-toastify';
+
 import {
   CircleCheckFilledInterfaceSVG,
   CloseInterfaceSVG,
   LoadingWheelInterfaceSVG,
   Smile2InterfaceSVG,
 } from '@sbercloud/uikit-react-icons';
-import { ReactNode } from 'react';
-import { ToastContentProps } from 'react-toastify';
 
 import {
   Action,
@@ -34,7 +35,7 @@ export interface ToastAction {
 export interface ToasterProps extends Partial<ToastContentProps> {
   className?: string;
   icon?: ReactNode;
-  title: string;
+  title: ReactNode;
   subtitle?: string;
   text?: string;
   variant?: Variants;
