@@ -9,14 +9,15 @@ export const StatusCell: FC<TableBasicTypes.ICellRendererParams & StatusProps & 
   value,
   type,
   content,
+  className,
 }) => {
   if (content) {
     return (
       <Tooltip content={content}>
-        <StatusTag type={type} text={value} />
+        <StatusTag className={className} type={type} text={value} />
       </Tooltip>
     );
   }
 
-  return <StatusTag type={type} text={value} />;
+  return <StatusTag className={className} type={type} text={value} />;
 };
