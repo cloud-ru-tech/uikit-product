@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-toaster",
   "title": "React Toaster",
-  "version": "0.9.9",
+  "version": "0.10.0",
   "sideEffects": [
     "*.css",
     "*.woff",
