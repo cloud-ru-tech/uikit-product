@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.16.6...@sbercloud/uikit-react-table@0.17.0) (2021-10-13)
+
+
+### Features
+
+* added pagination in table free ([AICDC-3758](https://jira.sbercloud.tech/browse/AICDC-3758)) ([b5e7bb8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b5e7bb8283741733c44af0285dc3ed3c54501d69))
+
+
+
+
+
 ## [0.16.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.16.5...@sbercloud/uikit-react-table@0.16.6) (2021-10-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
