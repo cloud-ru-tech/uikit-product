@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-typography@0.5.8...@sbercloud/uikit-typography@0.6.0) (2021-10-13)
+
+
+### Features
+
+* added H4Semibold ([90dfa7a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/90dfa7a770dd9cfc4a8cb0aa2bb15bd9c69b98d1))
+
+
+
+
+
 ## [0.5.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-typography@0.5.7...@sbercloud/uikit-typography@0.5.8) (2021-10-11)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.1.3...@sbercloud/uikit-react-icons@2.2.0) (2021-10-13)
+
+
+### Features
+
+* model interface icon ([df28324](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/df283240170d6e61204147e5640d12833c1fd250))
+
+
+
+
+
 ## [2.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.1.2...@sbercloud/uikit-react-icons@2.1.3) (2021-10-11)
 
 

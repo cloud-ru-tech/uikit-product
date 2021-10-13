@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.4...@sbercloud/uikit-react-button@2.0.5) (2021-10-13)
+
+
+### Bug Fixes
+
+* possibility to use tooltip only in disabled state ([9afc6cb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9afc6cb8a1a1a4483928d8af93e5c834f1ed994b))
+
+
+
+
+
 ## [2.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.3...@sbercloud/uikit-react-button@2.0.4) (2021-10-11)
 
 
