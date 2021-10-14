@@ -12,7 +12,7 @@ export const tableClass = css`
     .ag-center-cols-clipper,
     .ag-center-cols-container {
       /* https://stackoverflow.com/questions/61068419/ag-grid-min-height-for-autoheight */
-      min-height: 50px !important;
+      min-height: 150px !important;
     }
 
     .ag-root-wrapper {
