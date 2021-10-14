@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.17.1...@sbercloud/uikit-react-table@0.17.2) (2021-10-14)
+
+
+### Bug Fixes
+
+* table min-height is 150px ([9f78870](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9f788708faf7ac61a2a33f59dbf67aca927b7e44))
+
+
+
+
+
 ## [0.17.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.17.0...@sbercloud/uikit-react-table@0.17.1) (2021-10-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
