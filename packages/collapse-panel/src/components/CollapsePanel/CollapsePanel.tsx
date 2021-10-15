@@ -1,4 +1,4 @@
-import { FC, isValidElement, useState } from 'react';
+import { FC, ReactChildren, isValidElement, useState } from 'react';
 
 import { CollapsePanelItem } from '../CollapsePanelItem';
 import { ContainerStyled } from './styled';
@@ -34,7 +34,9 @@ export const CollapsePanel: FC<ICollapsePanelProps> = ({
     }
   };
 
-  const items = Array.isArray(children) ? children : [children];
+  const items: { props: { index: number; children: ReactChildren } }[] = Array.isArray(children)
+    ? children
+    : [children];
 
   return (
     <ContainerStyled>

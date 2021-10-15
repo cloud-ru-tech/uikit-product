@@ -21,7 +21,7 @@ export interface CollapsePanelItemProps {
   index: number;
   isShowFavourites?: boolean;
   isFavourite?: boolean;
-  header: React.ReactNode;
+  header?: React.ReactNode;
   isShowCollapse?: boolean;
   hasHeaderClickCollapsed?: boolean;
   hasExpandedAnimation?: boolean;

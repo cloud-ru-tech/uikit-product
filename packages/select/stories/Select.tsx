@@ -1,12 +1,13 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
 import { Avatar } from '@sbercloud/uikit-react-avatar';
-import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { RadioIcon } from '@sbercloud/uikit-react-radio';
+import {
+  QuestionInterfaceSVG,
+  RadioCheckedInterfaceSVG,
+  RadioUncheckedInterfaceSVG,
+} from '@sbercloud/uikit-react-icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -70,18 +71,18 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
           return (
             <>
               <StyledRadioWrap position={optionPosition === 'prefix' ? 'left' : 'right'}>
-                <RadioIcon checked={isChecked} />
+                {isChecked ? <RadioCheckedInterfaceSVG /> : <RadioUncheckedInterfaceSVG />}
               </StyledRadioWrap>
-              <Avatar icon={data.logo} />
+              <Avatar src={data.logo} />
             </>
           );
         }
 
         return (
           <>
-            <Avatar icon={data.logo} />
+            <Avatar src={data.logo} />
             <StyledRadioWrap position={optionPosition === 'prefix' ? 'left' : 'right'}>
-              <RadioIcon checked={isChecked} />
+              {isChecked ? <RadioCheckedInterfaceSVG /> : <RadioUncheckedInterfaceSVG />}
             </StyledRadioWrap>
           </>
         );
@@ -96,7 +97,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
           return (
             <>
               <StyledRadioWrap position={optionPosition && optionPosition.includes('prefix') ? 'left' : 'right'}>
-                <RadioIcon checked={isChecked} />
+                {isChecked ? <RadioCheckedInterfaceSVG /> : <RadioUncheckedInterfaceSVG />}
               </StyledRadioWrap>
               {logo}
             </>
@@ -107,7 +108,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
           <>
             {logo}
             <StyledRadioWrap position={optionPosition && optionPosition.includes('prefix') ? 'left' : 'right'}>
-              <RadioIcon checked={isChecked} />
+              {isChecked ? <RadioCheckedInterfaceSVG /> : <RadioUncheckedInterfaceSVG />}
             </StyledRadioWrap>
           </>
         );
@@ -165,19 +166,19 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
       isMulti={isMulti}
       prefixMultiValueContainer={({ data: { logo } }: MultiValueContainerPrefixProps) => (
         <div style={{ padding: '0 0 0 8px', lineHeight: '28px' }}>
-          <Avatar icon={logo} size={Avatar.sizes.XS} />
+          <Avatar src={logo} size={Avatar.sizes.XS} />
         </div>
       )}
-      prefixControl={(props: ControlPrefixProps): JSX.Element[] => {
+      prefixControl={(props: ControlPrefixProps) => {
         const val = props.getValue();
-
-        return (val || []).map(({ value, logo }: OptionTypeBase): JSX.Element => {
+        const collection = (val || []).map(({ value, logo }: OptionTypeBase): JSX.Element => {
           if (isMulti) {
             return <></>;
           }
 
           return <StyledLogoWrap key={value}>{logo}</StyledLogoWrap>;
         });
+        return <>{collection}</>;
       }}
       footer={showFooter ? <Footer>Footer</Footer> : null}
       type={showLogo || showOption ? 'with-logo' : type}
