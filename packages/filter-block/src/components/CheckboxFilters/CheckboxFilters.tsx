@@ -1,0 +1,49 @@
+import { useState } from 'react';
+
+import { ButtonGhost } from '@sbercloud/uikit-react-button';
+import { Checkbox } from '@sbercloud/uikit-react-checkbox';
+import { useLanguage } from '@sbercloud/uikit-utils';
+
+import { FilterTypes } from '../../constants';
+import { Texts, textProvider } from '../../helpers/textProviders';
+import { FilterItem } from '../../types';
+import * as S from './styled';
+
+export type CheckboxFiltersProps = {
+  filter: {
+    title: string;
+    type: FilterTypes;
+    items: FilterItem[];
+  };
+  activeItems: string[];
+  onChange(title: string, field: string, type: FilterTypes): void;
+  maxFiltersAmount: number;
+};
+
+export function CheckboxFilters({ filter, maxFiltersAmount, onChange, activeItems }: CheckboxFiltersProps) {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const [isShown, toggle] = useState(true);
+  const sliceTo = isShown ? maxFiltersAmount : undefined;
+  const withButton = filter.items.length > maxFiltersAmount;
+  const buttonName = isShown ? textProvider(languageCode, Texts.ShowAll) : textProvider(languageCode, Texts.Collapse);
+
+  const handleClick = () => {
+    toggle(!isShown);
+  };
+
+  return (
+    <>
+      {filter.items.slice(0, sliceTo).map(item => (
+        <S.CheckboxWrap key={item.id}>
+          <Checkbox
+            label={item.name}
+            checked={activeItems.includes(item.name)}
+            handleChange={() => onChange(filter.title, item.name, filter.type)}
+          />
+          <S.Amount>{item.amount}</S.Amount>
+        </S.CheckboxWrap>
+      ))}
+      {withButton && <ButtonGhost onClick={handleClick} className={S.buttonClassName} text={buttonName} />}
+    </>
+  );
+}
