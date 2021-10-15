@@ -1,4 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
+import React, { useState } from 'react';
+
+import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -10,113 +13,75 @@ export default {
   component: TableFree,
 } as Meta;
 
-const Template: Story<ITableFreeProps> = args => <TableFree {...args} />;
+const Template: Story<ITableFreeProps> = ({ rowData = [], ...args }) => {
+  const [searchValue, setSearchValue] = useState<string | undefined>();
+
+  const searchedData = searchValue
+    ? rowData.filter(({ firstName, lastName }) =>
+        `${firstName} ${lastName}`.toLowerCase().includes(searchValue.toLowerCase()),
+      )
+    : rowData;
+
+  return (
+    <>
+      <Toolbar.Wrapper>
+        <Toolbar.Input
+          placeholder='Поиск по ФИО'
+          value={searchValue}
+          onChange={(value: string): void => {
+            setSearchValue(value);
+          }}
+        />
+      </Toolbar.Wrapper>
+      <TableFree {...args} rowData={searchedData} />
+    </>
+  );
+};
 
 export const free = Template.bind({});
 free.args = {
   checkboxSelection: true,
   pageSize: undefined,
   rowData: [
-    {
-      name: 'Test 1',
-      lastModified: 1,
-      createDate: 1599838943,
-      dataType: 'dataset',
-      status: 'success',
-      access: 'Ограниченный',
-      size: 1000,
-      type: 'file',
-      disabled: true,
-    },
-    {
-      name: 'Test 2',
-      lastModified: 2,
-      createDate: 1599838943,
-      dataType: 'dataset',
-      status: 'success',
-      access: 'Ограниченный',
-      size: 1000,
-      type: 'file',
-      disabled: true,
-    },
-    {
-      name: 'Test 3',
-      lastModified: 3,
-      createDate: 1599838943,
-      dataType: 'dataset',
-      status: 'success',
-      access: 'Ограниченный',
-      size: 1000,
-      type: 'file',
-      disabled: true,
-    },
-    {
-      name: 'Test 4',
-      lastModified: 4,
-      createDate: 1599838943,
-      dataType: 'dataset',
-      status: 'success',
-      access: 'Ограниченный',
-      size: 1000,
-      type: 'file',
-      disabled: true,
-    },
-    {
-      name: 'Test 5',
-      lastModified: 5,
-      createDate: 1599838943,
-      dataType: 'dataset',
-      status: 'success',
-      access: 'Ограниченный',
-      size: 1000,
-      type: 'file',
-      disabled: true,
-    },
-    {
-      name: 'Test 6',
-      lastModified: 6,
-      createDate: 1599838943,
-      dataType: 'dataset',
-      status: 'success',
-      access: 'Ограниченный',
-      size: 1000,
-      type: 'file',
-      disabled: true,
-    },
+    { lastName: 'Ермолаев', firstName: 'Матвей', access: 'granted' },
+    { lastName: 'Львова', firstName: 'София', access: 'granted' },
+    { lastName: 'Колосов', firstName: 'Матвей', access: 'granted' },
+    { lastName: 'Наумова', firstName: 'Варвара', access: 'granted' },
+    { lastName: 'Миронов', firstName: 'Максим', access: 'granted' },
+    { lastName: 'Мешкова', firstName: 'Татьяна', access: 'granted' },
+    { lastName: 'Мухин', firstName: 'Михаил', access: 'granted' },
+    { lastName: 'Павлов', firstName: 'Марк', access: 'granted' },
+    { lastName: 'Михайлов', firstName: 'Александр', access: 'granted' },
+    { lastName: 'Николаева', firstName: 'Ксения', access: 'granted' },
+    { lastName: 'Рябинин', firstName: 'Алексей', access: 'granted' },
+    { lastName: 'Попова', firstName: 'Екатерина', access: 'granted' },
+    { lastName: 'Смирнов', firstName: 'Максим', access: 'granted' },
+    { lastName: 'Васильев', firstName: 'Мирослав', access: 'granted' },
+    { lastName: 'Позднякова', firstName: 'Ольга', access: 'granted' },
+    { lastName: 'Крюков', firstName: 'Дмитрий', access: 'granted' },
+    { lastName: 'Николаева', firstName: 'Ева', access: 'granted' },
+    { lastName: 'Белов', firstName: 'Мирон', access: 'granted' },
+    { lastName: 'Горячева', firstName: 'Мия', access: 'granted' },
+    { lastName: 'Баранова', firstName: 'Софья', access: 'granted' },
   ],
   columnDefs: [
     {
-      headerName: 'Последнее обновление',
-      field: 'lastModified',
+      headerName: 'Фамилия',
+      field: 'lastName',
     },
     {
-      headerName: '',
-      field: 'status',
-      sortable: false,
+      headerName: 'Имя',
+      field: 'firstName',
     },
     {
       headerName: 'Доступ',
       field: 'access',
       colId: 'access',
     },
-    {
-      headerName: '',
-      minWidth: 44,
-      width: 44,
-      sortable: false,
-      resizable: false,
-    },
   ],
 };
 
-free.argTypes = {
-  pageSize: {
-    name: 'pageSize (does not enable dynamically, only by default after reload page)',
-    control: {
-      type: 'number',
-    },
-  },
-};
+free.argTypes = {};
 free.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

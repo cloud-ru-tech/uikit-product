@@ -3,7 +3,7 @@ import 'ag-grid-community/dist/styles/ag-theme-alpine.min.css';
 
 import { cx } from '@linaria/core';
 import { AgGridReact, AgGridReactProps } from 'ag-grid-react';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
 
@@ -27,12 +27,21 @@ export const TableFree: React.FC<ITableFreeProps> = ({
   pageSize = undefined,
   ...tableProps
 }) => {
-  const pagination = !!pageSize;
   const [gridApi, setGridApi] = useState<ITableFreeProps['api']>();
+  const [totalPages, setTotalPages] = useState(0);
+
+  useEffect(() => {
+    gridApi?.paginationSetPageSize(pageSize);
+  }, [pageSize]);
 
   const handleGridReady: ITableFreeProps['onGridReady'] = params => {
     setGridApi(params.api);
     onGridReady?.(params);
+  };
+
+  const handleComponentStateChanged: ITableFreeProps['onComponentStateChanged'] = params => {
+    setGridApi(params.api);
+    setTotalPages(params.api.paginationGetTotalPages());
   };
 
   const onFirstDataRendered = useCallback(params => {
@@ -49,7 +58,7 @@ export const TableFree: React.FC<ITableFreeProps> = ({
 
   return (
     <>
-      <div className={cx('ag-theme-alpine', tableClass, classNameContainer, pagination && paginationClass)}>
+      <div className={cx('ag-theme-alpine', tableClass, classNameContainer, !!pageSize && paginationClass)}>
         <AgGridReact
           gridOptions={{
             suppressCellSelection: true,
@@ -72,10 +81,11 @@ export const TableFree: React.FC<ITableFreeProps> = ({
           localeText={{ noRowsToShow: 'Нет данных' }}
           onFirstDataRendered={onFirstDataRendered}
           onGridReady={handleGridReady}
+          onComponentStateChanged={handleComponentStateChanged}
           onGridSizeChanged={params => {
             params.api.sizeColumnsToFit();
           }}
-          pagination={pagination}
+          pagination // проп всегда включен, поскольку невозможно включить динамически
           paginationPageSize={pageSize}
           rowData={rowData}
           sortingOrder={['desc', 'asc', null]}
@@ -83,9 +93,9 @@ export const TableFree: React.FC<ITableFreeProps> = ({
           {...tableProps}
         />
       </div>
-      {pagination && Number(gridApi?.paginationGetTotalPages()) > 1 && (
+      {!!pageSize && totalPages > 1 && (
         <Paginator
-          pageCount={gridApi?.paginationGetTotalPages()}
+          pageCount={totalPages}
           onPageChange={({ selected }: { selected: number }) => {
             gridApi?.paginationGoToPage(selected);
           }}
