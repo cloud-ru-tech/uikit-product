@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.17.2...@sbercloud/uikit-react-table@0.18.0) (2021-10-15)
+
+
+### Features
+
+* improved calculation of pagination total pages ([AICDC-3758](https://jira.sbercloud.tech/browse/AICDC-3758)) ([457324f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/457324f2853cc64f79a8d2592f1102ba543ed08a))
+
+
+
+
+
 ## [0.17.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.17.1...@sbercloud/uikit-react-table@0.17.2) (2021-10-14)
 
 
