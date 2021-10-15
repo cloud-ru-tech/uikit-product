@@ -2,8 +2,10 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
+import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
 import { FormField } from '@sbercloud/uikit-react-form';
+import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
 
@@ -306,7 +308,17 @@ withRowDetail.args = {
           },
         ];
 
-        return <DropdownMenu actions={actions} />;
+        return (
+          <DropdownMenu actions={actions}>
+            <ButtonIcon
+              icon={<MoreInterfaceSVG />}
+              tooltip={{
+                content: 'Меню',
+                placement: ButtonIcon.placements.Right,
+              }}
+            />
+          </DropdownMenu>
+        );
       },
     },
   ],

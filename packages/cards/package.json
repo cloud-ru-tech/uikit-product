@@ -26,6 +26,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/uikit-react-button": "2.1.0",
     "@sbercloud/uikit-react-checkbox": "1.0.6",
     "@sbercloud/uikit-react-dropdown": "0.9.6",
     "@sbercloud/uikit-react-icons": "2.2.0",

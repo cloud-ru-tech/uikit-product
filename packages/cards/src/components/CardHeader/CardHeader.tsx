@@ -1,8 +1,9 @@
 import { FC, useCallback, useState } from 'react';
 
+import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { Checkbox } from '@sbercloud/uikit-react-checkbox';
 import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
-import { FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { FavouriteInterfaceSVG, MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { ButtonGroupStyled, FavouriteWrapStyled, HeaderStyled, favouriteButtonClassName } from './styled';
 
@@ -66,7 +67,15 @@ export const CardHeader: FC<CardHeaderProps> = props => {
         )}
         {moreActions && (
           <div role='presentation' onClick={handleDropdownWrapperClick}>
-            <DropdownMenu data-test-id='card-header__dropdown-menu' actions={moreActions} />
+            <DropdownMenu data-test-id='card-header__dropdown-menu' actions={moreActions}>
+              <ButtonIcon
+                icon={<MoreInterfaceSVG />}
+                tooltip={{
+                  content: 'Меню',
+                  placement: ButtonIcon.placements.Right,
+                }}
+              />
+            </DropdownMenu>
           </div>
         )}
       </ButtonGroupStyled>

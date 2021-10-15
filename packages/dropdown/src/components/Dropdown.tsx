@@ -1,7 +1,5 @@
 import { useCallback, useState } from 'react';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import {
   TooltipMenuItemPrivate,
   TooltipMenuItemPrivateProps,
@@ -27,7 +25,7 @@ export type TDropdownMenuCustomActions = (props: TDropdownMenuActionProps) => Re
 
 export interface DropdownMenuProps {
   actions: TDropdownMenuCustomActions | TDropdownMenuActionType[] | React.ReactNode;
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export const DropdownItem: React.FC<TooltipMenuItemPrivateProps> = props => (
@@ -81,16 +79,7 @@ export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<Dr
         </TooltipMenuPrivate>
       }
     >
-      {children || (
-        <ButtonIcon
-          icon={<MoreInterfaceSVG />}
-          tooltip={{
-            content: 'Меню',
-            placement: ButtonIcon.placements.Right,
-          }}
-          {...extractSupportProps(rest)}
-        />
-      )}
+      <span {...extractSupportProps(rest)}>{children}</span>
     </TooltipPrivate>
   );
 };
