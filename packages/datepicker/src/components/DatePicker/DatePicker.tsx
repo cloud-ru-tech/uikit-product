@@ -14,14 +14,21 @@ import * as S from './styled';
 registerLocale(LanguageCodeType.ruRU, ru);
 registerLocale(LanguageCodeType.enGB, enGB);
 
+export enum DatePickerSize {
+  s = 28,
+  m = 36,
+  l = 44,
+}
+
 export interface DatePickerProps {
   pickTime: SettingType;
   onChange?: (date: Date | null) => void;
   value?: Date | null;
   minDate?: Date;
+  size?: DatePickerSize;
 }
 
-export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerProps) => {
+export const DatePicker = ({ value, pickTime, onChange, minDate, size = DatePickerSize.l }: DatePickerProps) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isDatePickerOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
@@ -76,7 +83,9 @@ export const DatePicker = ({ value, pickTime, onChange, minDate }: DatePickerPro
         shouldCloseOnSelect
         showPopperArrow={false}
         locale={languageCode}
-        customInput={<CustomDateInput date={date} pickSettings={pickSettings} setDate={setDate} minDate={minDate} />}
+        customInput={
+          <CustomDateInput size={size} date={date} pickSettings={pickSettings} setDate={setDate} minDate={minDate} />
+        }
         renderCustomHeader={memoizedCustomHeader}
         calendarContainer={memoizedCustomContainer}
         onCalendarClose={close}

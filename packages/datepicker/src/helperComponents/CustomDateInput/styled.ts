@@ -1,21 +1,22 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_DATEPICKER } = DEPRECATED_EXPORT_VARS;
 
-export const InputContainer = styled.span`
+export const InputContainer = styled.span<{ size: number }>`
   position: relative;
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
-  align-items: baseline;
+  align-items: center;
 
   width: 100%;
 
   font-size: 14px;
   line-height: 20px;
-  padding: 12px 32px 12px 12px;
+  padding: 0 32px 0 12px;
 
   background-color: var(${COLORS_DATEPICKER.INPUT_BACKGROUND_COLOR});
   border: 1px solid var(${COLORS_DATEPICKER.INPUT_BORDER_COLOR});
@@ -23,8 +24,7 @@ export const InputContainer = styled.span`
   box-sizing: border-box;
   border-radius: 4px;
 
-  box-sizing: border-box;
-  height: 44px;
+  height: ${props => `${props.size}px`};
 
   &:not([data-disabled='true']):hover {
     background-color: var(${COLORS_DATEPICKER.INPUT_HOVER_BACKGROUND});
@@ -62,7 +62,8 @@ export const Separator = styled.div`
 export const calendarIconClassName = css`
   position: absolute;
   right: 8px;
-  top: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 
   fill: var(${COLORS_DATEPICKER.DATE_INPUT_ICON_FILL});
 `;

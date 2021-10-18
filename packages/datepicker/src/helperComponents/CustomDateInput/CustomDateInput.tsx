@@ -18,11 +18,12 @@ export interface ICustomDateInputProps {
   onClick?: ((event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void) | undefined;
   calendarRef?: React.RefObject<RDatePicker>;
   pickSettings: PickSettingProps;
+  size: number;
 }
 
 export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps>((props, ref) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const { date, setDate, onClick, pickSettings, minDate } = props;
+  const { date, setDate, onClick, pickSettings, minDate, size } = props;
   const [isError, setError] = useState(false);
   const [splitDate, setSplitDate] = useState<TSplitDateType>(getSplitDate(languageCode, date));
 
@@ -86,6 +87,7 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps
         onClick={handleContainerClick}
         data-open={pickSettings?.isDatePickerOpen || undefined}
         data-error={isError || undefined}
+        size={size}
       >
         {dateStr}
         <CalendarInterfaceSVG className={S.calendarIconClassName} />
