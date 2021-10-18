@@ -296,6 +296,7 @@ withRowDetail.args = {
       width: 44,
       sortable: false,
       resizable: false,
+      onCellClicked: e => e.event?.stopPropagation(),
       cellRendererFramework: () => {
         const actions = [
           {

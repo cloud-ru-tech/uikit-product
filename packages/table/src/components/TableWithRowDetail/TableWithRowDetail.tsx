@@ -32,14 +32,11 @@ export const TableWithRowDetail: FC<ITableWithRowDetailProps> = props => {
     onSelectionChanged?.(selectedRows);
   };
 
-  const handlerRowClicked = (event: AgGridTypes.RowClickedEvent): void => {
-    const target = event?.event?.target as HTMLDivElement;
-    if (target?.id === 'more-button' || event.data.disabled) {
+  const handlerCellClicked = (event: AgGridTypes.CellClickedEvent): void => {
+    if (event.data.disabled || event.node.detail || event.column.getUserProvidedColDef()?.onCellClicked) {
       return;
     }
-    if (event.node.detail) {
-      return;
-    }
+
     if (!event.node.expanded) {
       gridApi?.forEachNode(node => {
         if (node.expanded) {
@@ -83,7 +80,7 @@ export const TableWithRowDetail: FC<ITableWithRowDetailProps> = props => {
       columnDefs={colDefs}
       className={radioStyle}
       onGridReady={handlerGridReady}
-      onRowClicked={handlerRowClicked}
+      onCellClicked={handlerCellClicked}
       gridOptions={{
         defaultColDef: {
           suppressMenu: true,
