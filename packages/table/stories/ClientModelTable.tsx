@@ -9,10 +9,9 @@ import { StatusBadge } from '@sbercloud/uikit-react-status';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ClientModelTable as CMTable, ClientModelTableProps, FrameworkComponents, TableFormatters } from '../src';
-
-const { sizeFormatter } = TableFormatters;
-const { StatusCell } = FrameworkComponents;
+import { ClientModelTable as CMTable, ClientModelTableProps } from '../src';
+import { sizeFormatter } from './helpers/sizeFormatter';
+import { StatusCell } from './helpers/StatusCellRenderer';
 
 export default {
   title: 'Not stable/Table/Client Model Table',

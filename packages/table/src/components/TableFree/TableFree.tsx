@@ -1,38 +1,32 @@
-import 'ag-grid-community/dist/styles/ag-grid.min.css';
-import 'ag-grid-community/dist/styles/ag-theme-alpine.min.css';
-
-import { cx } from '@linaria/core';
-import { AgGridReact, AgGridReactProps } from 'ag-grid-react';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
+import { TableFreePrivate, TableFreePrivateProps } from '@sbercloud/uikit-react-table-private';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
-import { tableClass } from '../../styles/tableClass';
-import { paginationClass } from './styled';
+import * as S from './styled';
 
-export interface ITableFreeProps extends AgGridReactProps {
+export interface ITableFreeProps extends TableFreePrivateProps {
   classNameContainer?: string;
   checkboxSelection?: boolean;
   pageSize?: number;
 }
 
-export const TableFree: React.FC<ITableFreeProps> = ({
+export function TableFree({
   rowData = [],
   columnDefs = [],
-  gridOptions = {},
   onGridReady,
   checkboxSelection = false,
-  classNameContainer,
-  pageSize = undefined,
-  ...tableProps
-}) => {
+  className,
+  pageSize,
+  ...rest
+}: WithSupportProps<ITableFreeProps>) {
   const [gridApi, setGridApi] = useState<ITableFreeProps['api']>();
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
     gridApi?.paginationSetPageSize(pageSize);
-  }, [pageSize]);
+  }, [gridApi, pageSize]);
 
   const handleGridReady: ITableFreeProps['onGridReady'] = params => {
     setGridApi(params.api);
@@ -44,64 +38,26 @@ export const TableFree: React.FC<ITableFreeProps> = ({
     setTotalPages(params.api.paginationGetTotalPages());
   };
 
-  const onFirstDataRendered = useCallback(params => {
-    params.api.sizeColumnsToFit();
-  }, []);
-
-  const colDefs = useMemo(() => {
-    if (checkboxSelection) {
-      return [{ ...TableCheckboxColumnDefinition }, ...columnDefs];
-    }
-
-    return [...columnDefs];
-  }, [checkboxSelection, columnDefs]);
-
   return (
-    <>
-      <div className={cx('ag-theme-alpine', tableClass, classNameContainer, !!pageSize && paginationClass)}>
-        <AgGridReact
-          gridOptions={{
-            suppressCellSelection: true,
-            headerHeight: tableHeaderHeight,
-            rowHeight: tableRowHeight,
-            rowSelection: 'multiple',
-            suppressRowClickSelection: true,
-            defaultColDef: {
-              flex: 1,
-              resizable: true,
-              sortable: true,
-              unSortIcon: true,
-            },
-            ...gridOptions,
-          }}
-          columnDefs={colDefs}
-          domLayout='autoHeight'
-          enableCellTextSelection
-          loadingOverlayComponent='LoadingOverlay'
-          localeText={{ noRowsToShow: 'Нет данных' }}
-          onFirstDataRendered={onFirstDataRendered}
-          onGridReady={handleGridReady}
-          onComponentStateChanged={handleComponentStateChanged}
-          onGridSizeChanged={params => {
-            params.api.sizeColumnsToFit();
-          }}
-          pagination // проп всегда включен, поскольку невозможно включить динамически
-          paginationPageSize={pageSize}
-          rowData={rowData}
-          sortingOrder={['desc', 'asc', null]}
-          suppressPaginationPanel
-          {...tableProps}
-        />
-      </div>
+    <div className={className} {...extractSupportProps(rest)}>
+      <TableFreePrivate
+        rowData={rowData}
+        columnDefs={columnDefs}
+        checkboxSelection={checkboxSelection}
+        onGridReady={handleGridReady}
+        onComponentStateChanged={handleComponentStateChanged}
+      />
       {!!pageSize && totalPages > 1 && (
-        <Paginator
-          pageCount={totalPages}
-          onPageChange={({ selected }: { selected: number }) => {
-            gridApi?.paginationGoToPage(selected);
-          }}
-          placement={Paginator.placements.Left}
-        />
+        <S.PaginationWrapper>
+          <Paginator
+            pageCount={totalPages}
+            onPageChange={({ selected }: { selected: number }) => {
+              gridApi?.paginationGoToPage(selected);
+            }}
+            placement={Paginator.placements.Left}
+          />
+        </S.PaginationWrapper>
       )}
-    </>
+    </div>
   );
-};
+}

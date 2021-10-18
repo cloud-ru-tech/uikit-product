@@ -3,18 +3,18 @@ import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
 export type EnabledLanguages = LanguageCodeType.ruRU | LanguageCodeType.enGB;
 
 export enum Texts {
-  searchPlaceholder = 'searchPlaceholder',
-  delete = 'delete',
+  noRowsInitially = 'noRowsInitially',
+  noRowsAfterSearch = 'noRowsAfterSearch',
 }
 
 const Dictionary: Record<EnabledLanguages, Record<Texts, string>> = {
   [LanguageCodeType.ruRU]: {
-    searchPlaceholder: 'Поиск',
-    delete: 'Удалить',
+    noRowsInitially: 'Нет данных',
+    noRowsAfterSearch: 'Ничего не найдено :(',
   },
   [LanguageCodeType.enGB]: {
-    searchPlaceholder: 'Search',
-    delete: 'Delete',
+    noRowsInitially: 'No data',
+    noRowsAfterSearch: 'Nothing found :(',
   },
 };
 

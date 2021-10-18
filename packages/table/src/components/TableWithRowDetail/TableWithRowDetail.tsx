@@ -1,28 +1,28 @@
 import { FC, useMemo, useState } from 'react';
 
-import { GroupDisabledCell } from '../../helperComponents/FrameworkComponents';
-import { TableBasicTypes } from '../../helpers/types';
-import { radioStyle } from '../../styles/tableWithRowDetail';
-import { Table } from '../Default';
+import { AgGridTypes, TablePrivate, TablePrivateProps } from '@sbercloud/uikit-react-table-private';
 
-const TableRadioColumnDefine: TableBasicTypes.ColDef = {
+import { GroupDisabledCell } from '../../helperComponents/GroupDisabledCell';
+import { radioStyle } from '../../styles/tableWithRowDetail';
+
+const TableRadioColumnDefine = {
   cellRenderer: 'agGroupCellRenderer',
   cellRendererParams: { innerRenderer: 'GroupDisabledCell' },
 };
 
 export interface ITableWithRowDetailProps {
-  rowData: TableBasicTypes.GridOptions['rowData'];
-  columnDefs: TableBasicTypes.GridOptions['columnDefs'];
-  onGridReady?: TableBasicTypes.GridOptions['onGridReady'];
-  frameworkComponents?: TableBasicTypes.GridOptions['frameworkComponents'];
-  onSelectionChanged?(selectedRows?: TableBasicTypes.GridOptions['rowData']): void;
+  rowData: TablePrivateProps['rowData'];
+  columnDefs: TablePrivateProps['columnDefs'];
+  onGridReady?: TablePrivateProps['onGridReady'];
+  frameworkComponents?: TablePrivateProps['frameworkComponents'];
+  onSelectionChanged?(selectedRows?: TablePrivateProps['rowData']): void;
 }
 
 export const TableWithRowDetail: FC<ITableWithRowDetailProps> = props => {
   const { rowData, columnDefs, onSelectionChanged, onGridReady, frameworkComponents } = props;
-  const [gridApi, setGridApi] = useState<TableBasicTypes.GridApi>();
+  const [gridApi, setGridApi] = useState<AgGridTypes.GridApi>();
 
-  const handlerGridReady = (params: TableBasicTypes.GridReadyEvent): void => {
+  const handlerGridReady = (params: AgGridTypes.GridReadyEvent): void => {
     setGridApi(params.api);
     onGridReady?.(params);
   };
@@ -32,7 +32,7 @@ export const TableWithRowDetail: FC<ITableWithRowDetailProps> = props => {
     onSelectionChanged?.(selectedRows);
   };
 
-  const handlerRowClicked = (event: TableBasicTypes.RowClickedEvent): void => {
+  const handlerRowClicked = (event: AgGridTypes.RowClickedEvent): void => {
     const target = event?.event?.target as HTMLDivElement;
     if (target?.id === 'more-button' || event.data.disabled) {
       return;
@@ -53,7 +53,7 @@ export const TableWithRowDetail: FC<ITableWithRowDetailProps> = props => {
     event.node.setSelected(nextOpenState);
   };
 
-  const handlerGroupOpened = (event: TableBasicTypes.RowGroupOpenedEvent): void => {
+  const handlerGroupOpened = (event: AgGridTypes.RowGroupOpenedEvent): void => {
     if (event.node.expanded) {
       gridApi?.forEachNode(node => {
         if (node.expanded && node.id !== event.node.id) {
@@ -78,10 +78,10 @@ export const TableWithRowDetail: FC<ITableWithRowDetailProps> = props => {
   }, [columnDefs]);
 
   return (
-    <Table
+    <TablePrivate
       rowData={rowData}
       columnDefs={colDefs}
-      classNameContainer={radioStyle}
+      className={radioStyle}
       onGridReady={handlerGridReady}
       onRowClicked={handlerRowClicked}
       gridOptions={{
@@ -106,7 +106,7 @@ export const TableWithRowDetail: FC<ITableWithRowDetailProps> = props => {
         groupContracted: '<i class="custom-radio-checked"/>',
       }}
       onRowGroupOpened={handlerGroupOpened}
-      getRowClass={({ data: { disabled } }: TableBasicTypes.RowClassParams) => (disabled ? 'ag-row-disabled' : '')}
+      getRowClass={({ data: { disabled } }) => (disabled ? 'ag-row-disabled' : '')}
       detailCellRendererFramework={() => props.children}
     />
   );

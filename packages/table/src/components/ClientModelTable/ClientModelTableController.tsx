@@ -1,18 +1,16 @@
-import { GridApi } from 'ag-grid-community';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { AgGridTypes, TablePrivateProps } from '@sbercloud/uikit-react-table-private';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { EnabledLanguages } from '../../helpers/texts-provider';
-import { ITableProps } from '../Default';
 import { ClientModelTableView } from './ClientModelTableView';
 import { DeleteProps, PaginationProps } from './types';
 
 export type ClientModelTableControllerProps<T> = {
   fieldId: string;
   data: T[];
-  columnDefinitions: ITableProps['columnDefs'];
+  columnDefinitions: TablePrivateProps['columnDefs'];
   pageSize?: number;
   onRefreshCallback?(): void | Promise<void>;
   bulkActions?: {
@@ -25,7 +23,7 @@ export type ClientModelTableControllerProps<T> = {
     };
   };
   advancedProps?: {
-    getRowHeight?: ITableProps['getRowHeight'];
+    getRowHeight?: TablePrivateProps['getRowHeight'];
   };
 };
 
@@ -39,9 +37,7 @@ export function ClientModelTableController<T>({
   advancedProps,
   ...rest
 }: WithSupportProps<ClientModelTableControllerProps<T>>) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-
-  const [gridApi, setGridApi] = useState<GridApi | null>(null);
+  const [gridApi, setGridApi] = useState<AgGridTypes.GridApi | null>(null);
   const [searchValue, setSearchValue] = useState('');
   const onGridReady = useCallback(gridEv => {
     setGridApi(gridEv.api);
@@ -178,6 +174,7 @@ export function ClientModelTableController<T>({
   );
 
   const paginationProps: PaginationProps | undefined = useMemo(() => {
+    gridApi?.paginationSetPageSize(pageSize);
     const showPagination = Boolean(pageSize && data?.length > pageSize);
     return pageSize
       ? {
@@ -187,7 +184,7 @@ export function ClientModelTableController<T>({
           showPagination,
         }
       : undefined;
-  }, [pageCount, currentPage, pageChangeHandler, data?.length, pageSize]);
+  }, [gridApi, pageSize, data?.length, pageCount, currentPage, pageChangeHandler]);
 
   const useRowSelection = Boolean(deleteProps);
 
@@ -205,11 +202,9 @@ export function ClientModelTableController<T>({
 
   return (
     <ClientModelTableView
-      language={languageCode as EnabledLanguages}
       fieldId={fieldId}
       data={data}
       columnDefinitions={columnDefinitions}
-      pageSize={pageSize}
       getRowHeight={advancedProps?.getRowHeight}
       onGridReady={onGridReady}
       onRefreshCallback={onRefreshCallback}

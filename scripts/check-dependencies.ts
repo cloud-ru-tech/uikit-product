@@ -9,7 +9,6 @@ const options = {
   ignoreBinPackage: false,
   skipMissing: false,
   ignorePatterns: ['stories', 'dist'],
-  ignoreMatches: ['@ag-grid-enterprise/core'],
 };
 
 const packages = `../packages/*`;

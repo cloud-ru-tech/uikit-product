@@ -8,18 +8,18 @@ import { FormField } from '@sbercloud/uikit-react-form';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input } from '@sbercloud/uikit-react-input';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
+import { AgGridTypes } from '@sbercloud/uikit-react-table-private';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { FrameworkComponents, ITableWithRowDetailProps, TableBasicTypes, TableWithRowDetail } from '../src';
+import { ITableWithRowDetailProps, TableWithRowDetail } from '../src';
+import { StatusCell } from './helpers/StatusCellRenderer';
 
 export default {
   title: 'Not stable/Table/With Row Detail',
   component: TableWithRowDetail,
 } as Meta;
-
-const { StatusCell } = FrameworkComponents;
 
 const EmbeddedComponent = styled.div`
   padding: 16px 32px;
@@ -30,13 +30,13 @@ const PaginateBox = styled.div`
 `;
 
 const Template: Story<ITableWithRowDetailProps> = ({ rowData, columnDefs }) => {
-  const [gridApi, setGridApi] = useState<TableBasicTypes.GridApi>();
+  const [gridApi, setGridApi] = useState<AgGridTypes.GridApi>();
 
   const handlerSearchChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     gridApi?.setQuickFilter(e.target.value);
   };
 
-  const handlerGridReady = (params: TableBasicTypes.GridReadyEvent): void => {
+  const handlerGridReady = (params: AgGridTypes.GridReadyEvent): void => {
     setGridApi(params.api);
   };
 

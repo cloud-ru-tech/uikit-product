@@ -2,24 +2,20 @@ import { ButtonToolbar, RefreshButton } from '@sbercloud/uikit-react-button';
 import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
+import { TablePrivate, TablePrivateProps } from '@sbercloud/uikit-react-table-private';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { NoRowsOverlay } from '../../helperComponents/FrameworkComponents';
-import { NoDataReasons } from '../../helperComponents/FrameworkComponents/NoRowsOverlay/types';
-import { EnabledLanguages, Texts, textProvider } from '../../helpers/texts-provider';
-import { ITableProps, Table } from '../Default';
+import { TextProvider, Texts } from '../../helpers/texts-provider';
 import * as S from './styled';
 import { DeleteProps, PaginationProps } from './types';
 
 type ClientModelTableViewProps<T> = {
-  language: EnabledLanguages;
   fieldId: string;
   data: T[];
-  columnDefinitions: ITableProps['columnDefs'];
-  pageSize?: number;
-  onGridReady: ITableProps['onGridReady'];
-  getRowHeight: ITableProps['getRowHeight'];
+  columnDefinitions: TablePrivateProps['columnDefs'];
+  onGridReady: TablePrivateProps['onGridReady'];
+  getRowHeight: TablePrivateProps['getRowHeight'];
   useRowSelection: boolean;
   deleteProps?: DeleteProps;
   paginationProps?: PaginationProps;
@@ -32,7 +28,6 @@ export function ClientModelTableView<T>({
   fieldId,
   data,
   columnDefinitions,
-  pageSize,
   onGridReady,
   useRowSelection,
   onRefreshCallback,
@@ -40,7 +35,6 @@ export function ClientModelTableView<T>({
   onSearchCallback,
   searchValue,
   paginationProps,
-  language,
   getRowHeight,
   ...rest
 }: WithSupportProps<ClientModelTableViewProps<T>>) {
@@ -59,7 +53,7 @@ export function ClientModelTableView<T>({
             disabled={!deleteProps.isDeleteEnabled}
             onClick={deleteProps.openDeleteDialog}
             data-test-id='client-table__toolbar-delete-btn'
-            tooltip={{ content: textProvider(language, Texts.delete) }}
+            tooltip={{ content: TextProvider(Texts.delete) }}
           >
             <DeleteInterfaceSVG />
           </Toolbar.Button>
@@ -67,20 +61,15 @@ export function ClientModelTableView<T>({
         <Toolbar.Input
           onChange={onSearchCallback}
           value={searchValue}
-          placeholder={textProvider(language, Texts.searchPlaceholder)}
+          placeholder={TextProvider(Texts.searchPlaceholder)}
           data-test-id='client-table__toolbar-input'
         />
       </Toolbar.Wrapper>
-      <Table
+      <TablePrivate
         checkboxSelection={useRowSelection}
         rowData={data}
         columnDefs={columnDefinitions}
         onGridReady={onGridReady}
-        noRowsOverlayComponentFramework={NoRowsOverlay}
-        noRowsOverlayComponentParams={{
-          reason: data.length === 0 ? NoDataReasons.InitialEmpty : NoDataReasons.Search,
-          language,
-        }}
         getRowHeight={getRowHeight}
         gridOptions={{
           defaultColDef: {
@@ -99,7 +88,6 @@ export function ClientModelTableView<T>({
             return data[fieldId];
           },
           ensureDomOrder: true,
-          paginationPageSize: pageSize,
           suppressPaginationPanel: true,
           enableCellTextSelection: true,
           rowSelection: 'multiple',

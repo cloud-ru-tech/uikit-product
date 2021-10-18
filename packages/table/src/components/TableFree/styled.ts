@@ -1,5 +1,5 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 
-export const paginationClass = css`
-  margin-bottom: 20px;
+export const PaginationWrapper = styled.div`
+  padding-top: 20px;
 `;
