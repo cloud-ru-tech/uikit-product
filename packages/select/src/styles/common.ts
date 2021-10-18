@@ -1,6 +1,7 @@
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { CSSProperties } from 'react';
 import { Props, Styles, Theme } from 'react-select';
+
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_GENERAL, COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
@@ -103,6 +104,7 @@ export const styles = (typeStyles?: Styles): Styles => ({
     ...(state?.selectProps?.optionNoWrap ? { right: 0, width: 'auto' } : {}),
     borderRadius: '4px',
     boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+    minWidth: '100%',
     ...(state?.selectProps?.menuRelative ? { position: 'relative' } : {}),
   }),
   option: (
