@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-toolbar",
   "title": "React Toolbar",
-  "version": "0.13.6",
+  "version": "0.13.7",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,10 +27,10 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-badge-private": "2.0.5",
-    "@sbercloud/uikit-react-button": "2.1.0",
-    "@sbercloud/uikit-react-filter": "0.12.6",
-    "@sbercloud/uikit-react-icons": "2.2.0",
-    "@sbercloud/uikit-react-input": "0.17.6",
+    "@sbercloud/uikit-react-button": "2.1.1",
+    "@sbercloud/uikit-react-filter": "0.12.7",
+    "@sbercloud/uikit-react-icons": "2.3.0",
+    "@sbercloud/uikit-react-input": "0.17.7",
     "@sbercloud/uikit-theme": "0.27.3",
     "@sbercloud/uikit-utils": "1.1.0"
   },

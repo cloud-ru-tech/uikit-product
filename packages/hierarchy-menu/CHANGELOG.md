@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-hierarchy-menu@0.8.11...@sbercloud/uikit-react-hierarchy-menu@0.8.12) (2021-10-18)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-hierarchy-menu
+
+
+
+
+
 ## [0.8.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-hierarchy-menu@0.8.10...@sbercloud/uikit-react-hierarchy-menu@0.8.11) (2021-10-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-hierarchy-menu

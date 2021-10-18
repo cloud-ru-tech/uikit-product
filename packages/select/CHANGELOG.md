@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.18.6...@sbercloud/uikit-react-select@0.18.7) (2021-10-18)
+
+
+### Bug Fixes
+
+* fix ts&eslint errors ([a62f727](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/a62f7271446488ce4e2137341b1cc71ab6676388))
+
+
+
+
+
 ## [0.18.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.18.5...@sbercloud/uikit-react-select@0.18.6) (2021-10-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select

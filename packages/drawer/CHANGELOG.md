@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-drawer@0.14.7...@sbercloud/uikit-react-drawer@0.15.0) (2021-10-18)
+
+
+### Features
+
+* Radio first stable version ([7b6f24c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/7b6f24ca43014333f05aae2b8f3ab6e7af6bca5d))
+
+
+### BREAKING CHANGES
+
+* Radio first stable version
+
+
+
+
+
 ## [0.14.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-drawer@0.14.6...@sbercloud/uikit-react-drawer@0.14.7) (2021-10-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drawer

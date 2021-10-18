@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.18.0...@sbercloud/uikit-react-table@0.19.0) (2021-10-18)
+
+
+### Features
+
+* property "children" is required ([8bfa1f1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8bfa1f1d74ef7989bf1c8249a0589460fec89063))
+
+
+### BREAKING CHANGES
+
+* property "children" is required
+
+
+
+
+
 # [0.18.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.17.2...@sbercloud/uikit-react-table@0.18.0) (2021-10-15)
 
 

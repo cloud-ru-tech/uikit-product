@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.2.0...@sbercloud/uikit-react-icons@2.3.0) (2021-10-18)
+
+
+### Features
+
+* advanced icon added ([d254875](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d2548754f8c3e6f46df345c46e6b83639cd8be86))
+
+
+
+
+
 # [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.1.3...@sbercloud/uikit-react-icons@2.2.0) (2021-10-13)
 
 

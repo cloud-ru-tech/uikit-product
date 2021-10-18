@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-carousel",
   "title": "React Carousel",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,8 +26,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "2.1.0",
-    "@sbercloud/uikit-react-icons": "2.2.0",
+    "@sbercloud/uikit-react-button": "2.1.1",
+    "@sbercloud/uikit-react-icons": "2.3.0",
     "@sbercloud/uikit-theme": "0.27.3",
     "@sbercloud/uikit-utils": "1.1.0"
   },

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-radio@2.0.0...@sbercloud/uikit-react-radio@2.0.1) (2021-10-18)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-radio
+
+
+
+
+
 # [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-radio@0.6.17...@sbercloud/uikit-react-radio@2.0.0) (2021-10-15)
 
 
