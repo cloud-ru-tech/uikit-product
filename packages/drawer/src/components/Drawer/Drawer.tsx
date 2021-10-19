@@ -92,13 +92,13 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
   );
 
   useEffect(() => {
+    clearTimeout(timerRef.current);
     if (open) {
       // Эта вся история нужна для того, чтобы не рендерить drawer в моменте, когда он закрыт. Сафари
       // обрабатывает drawer-mask таким образом, что он остается поверх, хоть и не видим => блочит любые действия
       // При открытии модалки:
       // Сначала мы должны отрендерить компоненту с состоянием open = false
       // Затем мы выставляем open = true, чтобы произошла анимация открытия
-      clearTimeout(timerRef.current);
       setShouldRenderDrawer(true);
       setTimeout(() => setInternalIsDrawerOpen(true), 0);
       window.addEventListener('click', handleClick);
