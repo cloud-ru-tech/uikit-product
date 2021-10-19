@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-toolbar",
   "title": "React Toolbar",
-  "version": "0.13.8",
+  "version": "0.13.9",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "dependencies": {
     "@sbercloud/uikit-react-badge-private": "2.0.5",
     "@sbercloud/uikit-react-button": "2.1.1",
-    "@sbercloud/uikit-react-filter": "0.12.8",
+    "@sbercloud/uikit-react-filter": "0.13.0",
     "@sbercloud/uikit-react-icons": "2.3.0",
     "@sbercloud/uikit-react-input": "0.17.7",
     "@sbercloud/uikit-theme": "0.27.3",

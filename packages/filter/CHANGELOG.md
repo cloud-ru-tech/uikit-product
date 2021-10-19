@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter@0.12.8...@sbercloud/uikit-react-filter@0.13.0) (2021-10-19)
+
+
+### Features
+
+* add datepicker in filter ([AICD-1715](https://jira.sbercloud.tech/browse/AICD-1715)) ([627a704](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/627a704f210ce38821654e507c31714367692bac))
+
+
+
+
+
 ## [0.12.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter@0.12.7...@sbercloud/uikit-react-filter@0.12.8) (2021-10-19)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-filter
