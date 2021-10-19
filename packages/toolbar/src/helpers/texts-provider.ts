@@ -13,6 +13,6 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   },
 };
 
-export function textProvider(language: LanguageCodeType, entity: Texts): string {
-  return Dictionary?.[language]?.[entity] || '';
+export function textProvider(languageCode: LanguageCodeType, entity: Texts): string {
+  return Dictionary?.[languageCode]?.[entity] || '';
 }
