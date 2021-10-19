@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-datepicker@0.9.7...@sbercloud/uikit-react-datepicker@0.10.0) (2021-10-19)
+
+
+### Features
+
+* add DatePicker size prop ([3be6b14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3be6b141325488b46fc9ce055538bc518a308311))
+
+
+
+
+
 ## [0.9.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-datepicker@0.9.6...@sbercloud/uikit-react-datepicker@0.9.7) (2021-10-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-datepicker

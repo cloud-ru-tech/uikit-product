@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.18.7...@sbercloud/uikit-react-select@0.18.8) (2021-10-19)
+
+
+### Bug Fixes
+
+* select menu min-width ([AICD-1716](https://jira.sbercloud.tech/browse/AICD-1716)) ([60cd21a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/60cd21a39aed6e2ab6285517e1b07fa7f1bbc315))
+
+
+
+
+
 ## [0.18.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.18.6...@sbercloud/uikit-react-select@0.18.7) (2021-10-18)
 
 
