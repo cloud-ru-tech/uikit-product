@@ -4,11 +4,11 @@ import { Modal } from '@sbercloud/uikit-react-modal';
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
 import { TablePrivate, TablePrivateProps } from '@sbercloud/uikit-react-table-private';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
-import { TextProvider, Texts } from '../../helpers/texts-provider';
+import { Texts, textProvider } from '../../helpers/texts-provider';
 import * as S from './styled';
-import { DeleteProps, PaginationProps } from './types';
+import { DeleteProps, FilterProps, PaginationProps } from './types';
 
 type ClientModelTableViewProps<T> = {
   fieldId: string;
@@ -18,6 +18,10 @@ type ClientModelTableViewProps<T> = {
   getRowHeight: TablePrivateProps['getRowHeight'];
   useRowSelection: boolean;
   deleteProps?: DeleteProps;
+  filterProps?: {
+    doesRowPassFilter: FilterProps<T>['doesRowPassFilter'];
+    toolbarFilter: Omit<FilterProps<T>, 'doesRowPassFilter'>;
+  };
   paginationProps?: PaginationProps;
   onRefreshCallback?(): void | Promise<void>;
   onSearchCallback(value: string): void;
@@ -32,12 +36,14 @@ export function ClientModelTableView<T>({
   useRowSelection,
   onRefreshCallback,
   deleteProps,
+  filterProps,
   onSearchCallback,
   searchValue,
   paginationProps,
   getRowHeight,
   ...rest
 }: WithSupportProps<ClientModelTableViewProps<T>>) {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   return (
     <div {...extractSupportProps(rest)}>
       <Toolbar.Wrapper className={S.SearchPanelView} data-test-id='client-table__toolbar'>
@@ -53,7 +59,7 @@ export function ClientModelTableView<T>({
             disabled={!deleteProps.isDeleteEnabled}
             onClick={deleteProps.openDeleteDialog}
             data-test-id='client-table__toolbar-delete-btn'
-            tooltip={{ content: TextProvider(Texts.delete) }}
+            tooltip={{ content: textProvider(languageCode, Texts.Delete) }}
           >
             <DeleteInterfaceSVG />
           </Toolbar.Button>
@@ -61,9 +67,10 @@ export function ClientModelTableView<T>({
         <Toolbar.Input
           onChange={onSearchCallback}
           value={searchValue}
-          placeholder={TextProvider(Texts.searchPlaceholder)}
+          placeholder={textProvider(languageCode, Texts.SearchPlaceholder)}
           data-test-id='client-table__toolbar-input'
         />
+        {filterProps && <Toolbar.Filter {...filterProps.toolbarFilter} />}
       </Toolbar.Wrapper>
       <TablePrivate
         checkboxSelection={useRowSelection}
@@ -71,6 +78,7 @@ export function ClientModelTableView<T>({
         columnDefs={columnDefinitions}
         onGridReady={onGridReady}
         getRowHeight={getRowHeight}
+        doesRowPassFilter={filterProps?.doesRowPassFilter}
         gridOptions={{
           defaultColDef: {
             suppressMenu: true,
@@ -87,7 +95,6 @@ export function ClientModelTableView<T>({
           getRowNodeId(data) {
             return data[fieldId];
           },
-          ensureDomOrder: true,
           suppressPaginationPanel: true,
           enableCellTextSelection: true,
           rowSelection: 'multiple',

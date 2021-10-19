@@ -1,24 +1,23 @@
-import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
+import { LanguageCodeType } from '@sbercloud/uikit-utils';
 
 export type EnabledLanguages = LanguageCodeType.ruRU | LanguageCodeType.enGB;
 
 export enum Texts {
-  searchPlaceholder = 'searchPlaceholder',
-  delete = 'delete',
+  SearchPlaceholder = 'SearchPlaceholder',
+  Delete = 'Delete',
 }
 
 const Dictionary: Record<EnabledLanguages, Record<Texts, string>> = {
   [LanguageCodeType.ruRU]: {
-    searchPlaceholder: 'Поиск',
-    delete: 'Удалить',
+    SearchPlaceholder: 'Поиск',
+    Delete: 'Удалить',
   },
   [LanguageCodeType.enGB]: {
-    searchPlaceholder: 'Search',
-    delete: 'Delete',
+    SearchPlaceholder: 'Search',
+    Delete: 'Delete',
   },
 };
 
-export function TextProvider(entity: Texts): string {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+export function textProvider(languageCode: LanguageCodeType, entity: Texts): string {
   return Dictionary[languageCode][entity];
 }

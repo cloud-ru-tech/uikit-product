@@ -5,7 +5,7 @@ import { AgGridTypes, TablePrivateProps } from '@sbercloud/uikit-react-table-pri
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { ClientModelTableView } from './ClientModelTableView';
-import { DeleteProps, PaginationProps } from './types';
+import { DeleteProps, FilterProps, PaginationProps } from './types';
 
 export type ClientModelTableControllerProps<T> = {
   fieldId: string;
@@ -21,6 +21,7 @@ export type ClientModelTableControllerProps<T> = {
       approveText: string;
       cancelText: string;
     };
+    filter?: FilterProps<T>;
   };
   advancedProps?: {
     getRowHeight?: TablePrivateProps['getRowHeight'];
@@ -94,8 +95,9 @@ export function ClientModelTableController<T>({
       if (totalPages !== pageCount) {
         setPageCount(totalPages);
       }
-      if (currentPage >= pageCount) {
-        setCurrentPage(Math.max(0, pageCount - 1));
+      const newPageCount = Math.min(pageCount, totalPages);
+      if (currentPage >= newPageCount) {
+        setCurrentPage(Math.max(0, newPageCount - 1));
       }
 
       if (totalPages === 0) {
@@ -200,6 +202,30 @@ export function ClientModelTableController<T>({
     [gridApi],
   );
 
+  useEffect(() => {
+    setTimeout(() => {
+      if (!gridApi || !bulkActions?.filter) return;
+      gridApi.onFilterChanged();
+
+      const totalPages = gridApi.paginationGetTotalPages();
+      if (currentPage >= totalPages) {
+        const newCurrentPage = Math.max(0, totalPages - 1);
+        setCurrentPage(newCurrentPage);
+        gridApi.paginationGoToPage(newCurrentPage);
+      }
+      setPageCount(totalPages);
+    });
+  }, [bulkActions?.filter, currentPage, gridApi]);
+
+  const newFilterProps = bulkActions?.filter && {
+    doesRowPassFilter: bulkActions?.filter.doesRowPassFilter,
+    toolbarFilter: {
+      onChange: bulkActions?.filter?.onChange,
+      value: bulkActions?.filter.value,
+      filterOptions: bulkActions?.filter.filterOptions,
+    },
+  };
+
   return (
     <ClientModelTableView
       fieldId={fieldId}
@@ -210,6 +236,7 @@ export function ClientModelTableController<T>({
       onRefreshCallback={onRefreshCallback}
       useRowSelection={useRowSelection}
       deleteProps={deleteProps}
+      filterProps={newFilterProps}
       paginationProps={paginationProps}
       onSearchCallback={onSearchCallback}
       searchValue={searchValue}

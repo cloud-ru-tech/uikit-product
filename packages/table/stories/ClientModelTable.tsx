@@ -1,9 +1,10 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import debounce from 'lodash.debounce';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { ButtonTable, ButtonTableIcon } from '@sbercloud/uikit-react-button';
+import { TFilterValueType } from '@sbercloud/uikit-react-filter';
 import { StatusBadge } from '@sbercloud/uikit-react-status';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -53,38 +54,66 @@ function generateRows(count: number): DataModel[] {
   return res;
 }
 
-const Template: Story<ClientModelTableProps<DataModel> & { rowsAmount: number; showDelete: boolean }> = ({
-  rowsAmount,
-  showDelete,
-  ...args
-}) => {
+const Template: Story<
+  ClientModelTableProps<DataModel> & { rowsAmount: number; showDelete: boolean; showFilter: boolean }
+> = ({ rowsAmount, showDelete, showFilter, ...args }) => {
   const [data, setData] = useState<DataModel[]>(generateRows(rowsAmount));
 
-  useEffect(() => {
-    debounce(() => {
-      const newData = generateRows(rowsAmount);
-      setData(newData);
-    }, 1000);
-  }, [rowsAmount]);
-
-  const bulkActions: ClientModelTableProps<DataModel>['bulkActions'] = {
-    delete: {
-      onDelete(ids: string[]): void {
-        setData(data.filter(({ name }) => !ids.includes(name)));
-      },
-      title: 'Delete Title',
-      description: 'Delete description',
-      approveText: 'approve',
-      cancelText: 'cancel',
+  const debSetData = useMemo(() => debounce(setData, 500), []);
+  const [filterValue, setFilterValue] = useState<TFilterValueType[]>([]);
+  const rowPassFilter = useCallback(
+    (data: DataModel) => {
+      if (!filterValue?.length) return true;
+      return filterValue[0].condition === 'eq'
+        ? data[filterValue[0].id] === filterValue[0].value[0]
+        : data[filterValue[0].id] !== filterValue[0].value[0];
     },
-  };
+    [filterValue],
+  );
+
+  useEffect(() => {
+    const newData = generateRows(rowsAmount);
+    debSetData(newData);
+  }, [debSetData, rowsAmount]);
+
+  const bulkActions: ClientModelTableProps<DataModel>['bulkActions'] = useMemo(
+    () => ({
+      delete: showDelete
+        ? {
+            onDelete(ids: string[]): void {
+              setData(data.filter(({ name }) => !ids.includes(name)));
+            },
+            title: 'Delete Title',
+            description: 'Delete description',
+            approveText: 'approve',
+            cancelText: 'cancel',
+          }
+        : undefined,
+      filter: showFilter
+        ? {
+            value: filterValue,
+            doesRowPassFilter: rowPassFilter,
+            onChange: val => setFilterValue(val),
+            filterOptions: [
+              {
+                value: 'status',
+                label: 'Status',
+                includeConditions: ['eq', 'neq'],
+                sourceData: Object.values(StatusBadge.types).map(x => ({ value: x, label: x })),
+              },
+            ],
+          }
+        : undefined,
+    }),
+    [data, filterValue, rowPassFilter, showDelete, showFilter],
+  );
 
   return (
     <CMTable
       fieldId={args.fieldId}
       data={data}
       columnDefinitions={args.columnDefinitions}
-      bulkActions={showDelete ? bulkActions : undefined}
+      bulkActions={bulkActions}
       pageSize={args.pageSize}
       onRefreshCallback={() => setData(generateRows(rowsAmount))}
     />
@@ -120,6 +149,7 @@ clientModelTable.args = {
       headerName: 'Status',
       field: 'status',
       sortable: false,
+      filter: true,
       minWidth: 100,
       cellRendererFramework: StatusCell,
       cellRendererParams: ({ value }: { value: string }) => ({
@@ -170,6 +200,14 @@ clientModelTable.argTypes = {
   showDelete: {
     defaultValue: true,
     name: '[Stories]: show or hide delete button from toolbar',
+    description: 'demonstration purposes only, this parameter does not exist in component',
+    control: {
+      type: 'boolean',
+    },
+  },
+  showFilter: {
+    defaultValue: true,
+    name: '[Stories]: show or hide filter button from toolbar',
     description: 'demonstration purposes only, this parameter does not exist in component',
     control: {
       type: 'boolean',

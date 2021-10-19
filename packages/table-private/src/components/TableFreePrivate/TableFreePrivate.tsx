@@ -51,6 +51,7 @@ export function TableFreePrivate({
             rowSelection: 'multiple',
             suppressRowClickSelection: true,
             pagination: true,
+            ensureDomOrder: true,
             defaultColDef: {
               flex: 1,
               resizable: true,

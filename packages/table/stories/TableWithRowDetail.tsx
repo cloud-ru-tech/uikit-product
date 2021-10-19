@@ -44,12 +44,7 @@ const Template: Story<ITableWithRowDetailProps> = ({ rowData, columnDefs }) => {
     <div>
       <Input onChange={handlerSearchChange} />
       <br />
-      <TableWithRowDetail
-        rowData={rowData}
-        onGridReady={handlerGridReady}
-        columnDefs={columnDefs}
-        frameworkComponents={{ StatusCell }}
-      >
+      <TableWithRowDetail rowData={rowData} onGridReady={handlerGridReady} columnDefs={columnDefs}>
         <EmbeddedComponent>
           <FormField
             label='Не обязательное поле'
@@ -105,7 +100,7 @@ withRowDetail.args = {
       lastModified: 1599838941,
       createDate: 1599838943,
       dataType: 'dataset',
-      status: 'success',
+      status: 'failed',
       access: 'Ограниченный',
       size: 1000,
       type: 'file',
@@ -117,6 +112,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -126,6 +122,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -135,6 +132,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -144,6 +142,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -153,6 +152,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -162,6 +162,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -171,6 +172,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -180,6 +182,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -189,6 +192,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -198,6 +202,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -207,6 +212,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'progress',
       size: 1000,
       type: 'file',
     },
@@ -216,6 +222,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -225,6 +232,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -234,6 +242,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -243,6 +252,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -252,6 +262,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -261,6 +272,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -270,6 +282,7 @@ withRowDetail.args = {
       createDate: 1599838943,
       dataType: 'dataset',
       access: 'Ограниченный',
+      status: 'success',
       size: 1000,
       type: 'file',
     },
@@ -282,7 +295,12 @@ withRowDetail.args = {
     {
       headerName: '',
       field: 'status',
-      cellRenderer: 'StatusCell',
+      cellRendererFramework: StatusCell,
+      cellRendererParams: ({ value }: { value: string }) => ({
+        tooltip: value,
+        type: value,
+        value,
+      }),
       sortable: false,
     },
     {

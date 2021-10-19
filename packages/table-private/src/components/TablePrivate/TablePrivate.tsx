@@ -16,6 +16,7 @@ import { NoDataReasons } from '../overlays/NoRows/types';
 export interface TablePrivateProps extends AgGridReactProps {
   className?: string;
   checkboxSelection?: boolean;
+  doesRowPassFilter?(data: any): boolean;
 }
 
 export function TablePrivate({
@@ -23,6 +24,7 @@ export function TablePrivate({
   columnDefs = [],
   gridOptions = {},
   checkboxSelection = false,
+  doesRowPassFilter,
   className,
   onGridReady,
   ...tableProps
@@ -63,6 +65,7 @@ export function TablePrivate({
           suppressRowClickSelection: true,
           suppressContextMenu: true,
           enableCellTextSelection: true,
+          ensureDomOrder: true,
           defaultColDef: {
             resizable: true,
             sortable: true,
@@ -79,6 +82,8 @@ export function TablePrivate({
         onGridReady={handleGridReady}
         rowData={rowData}
         columnDefs={colDefs}
+        isExternalFilterPresent={() => Boolean(doesRowPassFilter)}
+        doesExternalFilterPass={node => doesRowPassFilter?.(node.data) || false}
         noRowsOverlayComponentFramework={NoRows}
         noRowsOverlayComponentParams={{
           reason: rowData.length === 0 ? NoDataReasons.InitialEmpty : NoDataReasons.Search,
