@@ -96,3 +96,4 @@ export const DatePicker = ({ value, pickTime, onChange, minDate, size = DatePick
 };
 
 DatePicker.time = SettingType;
+DatePicker.size = DatePickerSize;
