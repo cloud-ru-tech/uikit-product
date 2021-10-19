@@ -1,6 +1,7 @@
 import cloneDeep from 'lodash.clonedeep';
-import { useCallback, useMemo } from 'react';
+import { FC, useCallback, useMemo } from 'react';
 
+import { DatePicker } from '@sbercloud/uikit-react-datepicker';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input } from '@sbercloud/uikit-react-input';
 import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
@@ -12,7 +13,7 @@ import { IFilterRowProps, TFilterValueType } from '../../helpers/types';
 import { ActionButton } from '../ActionButton';
 import * as S from './styled';
 
-export const FilterRow: React.FC<IFilterRowProps> = ({
+export const FilterRow: FC<IFilterRowProps> = ({
   value = [],
   index,
   propValue = {},
@@ -54,6 +55,8 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
         : logicOptionsList,
     [filterOption, logicOptionsList],
   );
+
+  const shouldRenderValueInput = !filterOption?.sourceData && !filterOption?.datepicker;
 
   return (
     <S.FilterRow>
@@ -97,7 +100,7 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
       </S.FilterColumn>
 
       <S.FilterColumn>
-        {filterOption?.sourceData ? (
+        {filterOption?.sourceData && (
           <Select
             optionNoWrap
             defaultValue={initValueOption}
@@ -107,7 +110,18 @@ export const FilterRow: React.FC<IFilterRowProps> = ({
               handleChange('value', [option.value]);
             }}
           />
-        ) : (
+        )}
+
+        {filterOption?.datepicker && (
+          <DatePicker
+            value={propValue?.value?.length ? new Date(propValue.value[0]) : undefined}
+            size={DatePicker.size.m}
+            pickTime={filterOption.datepicker}
+            onChange={date => handleChange('value', date)}
+          />
+        )}
+
+        {shouldRenderValueInput && (
           <Input
             value={initValueOption as string}
             onChange={(e): void => {

@@ -1,6 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
+import { DatePicker } from '@sbercloud/uikit-react-datepicker';
 import { FilterInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
@@ -33,6 +34,18 @@ const defOpt = [
     label: 'Произвольный текст',
     includeConditions: ['include', 'noinclude'],
   },
+  {
+    value: 'date',
+    label: 'Дата',
+    datepicker: DatePicker.time.None,
+    includeConditions: ['eq', 'neq', 'lt', 'lte', 'gt', 'gte'],
+  },
+  {
+    value: 'date_time',
+    label: 'Дата',
+    datepicker: DatePicker.time.Requier,
+    includeConditions: ['eq', 'neq', 'lt', 'lte', 'gt', 'gte'],
+  },
 ];
 
 const defValue: TFilterValueType[] = [
@@ -50,6 +63,16 @@ const defValue: TFilterValueType[] = [
     id: 'some_prop',
     value: ['---/---'],
     condition: 'noinclude',
+  },
+  {
+    id: 'date',
+    value: [new Date().toString()],
+    condition: 'eq',
+  },
+  {
+    id: 'date_time',
+    value: [new Date().toString()],
+    condition: 'eq',
   },
 ];
 
