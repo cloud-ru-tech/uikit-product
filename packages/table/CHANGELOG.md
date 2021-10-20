@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.19.2...@sbercloud/uikit-react-table@0.20.0) (2021-10-20)
+
+
+### Bug Fixes
+
+* prevent unecessary row expanding after click to column with custom onCellClicked handler ([45da3d5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/45da3d58b30a98d561b9ce6ab76f846edbec3651))
+
+
+### Features
+
+* table private package was extracted ([2f4d460](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2f4d460dd9399159febb0428032db97a0738b573))
+* toolbar filter integrated with client model table ([9e02967](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9e02967e4f8c6e38a207b739892cbce7811b111d))
+
+
+### BREAKING CHANGES
+
+* table private package was extracted
+
+
+
+
+
 ## [0.19.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.19.1...@sbercloud/uikit-react-table@0.19.2) (2021-10-19)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table

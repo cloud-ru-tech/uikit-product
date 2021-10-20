@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.13.9...@sbercloud/uikit-react-toolbar@0.13.10) (2021-10-20)
+
+
+### Bug Fixes
+
+* reexport subcomonent prop types ([a7b7815](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/a7b78153d353ba208d3daa6a6d885dfbba66ffe4))
+
+
+
+
+
 ## [0.13.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.13.8...@sbercloud/uikit-react-toolbar@0.13.9) (2021-10-19)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toolbar
