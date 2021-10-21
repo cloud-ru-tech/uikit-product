@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-stepper",
   "title": "React Stepper",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,12 +26,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/uikit-react-icons": "2.3.0",
     "@sbercloud/uikit-theme": "0.27.3",
-    "@sbercloud/uikit-utils": "1.1.0",
     "@sbercloud/uikit-typography": "0.6.0",
-    "@sbercloud/uikit-react-icons": "2.3.0"
+    "@sbercloud/uikit-utils": "1.1.0"
   },
-  "devDependencies": {},
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",
     "@linaria/react": "^3.0.0-beta.13",
