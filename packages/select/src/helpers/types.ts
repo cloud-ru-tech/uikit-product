@@ -1,3 +1,5 @@
+import { ReactText } from 'react';
+
 export const SELECT_TYPES = {
   ROUND_LIGHT: 'round-light',
   ROUND_GRAY: 'round-gray',
@@ -7,6 +9,8 @@ export const SELECT_TYPES = {
   TAG: 'tag',
   COLOR: 'color',
 } as const;
+
+export type MultiselectOptionType = { label: ReactText; value: ReactText; amount: number };
 
 export type TypeKeys = keyof typeof SELECT_TYPES;
 export type SelectType = typeof SELECT_TYPES[TypeKeys];

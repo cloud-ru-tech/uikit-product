@@ -13,4 +13,12 @@ export const PRESET_COLORS = [
   'blue-green',
 ] as const;
 
+export enum SelectActionTypes {
+  RemoveValue = 'remove-value',
+  SelectOption = 'select-option',
+  PopValue = 'pop-value',
+}
+
+export const KEYS_TO_BREAK = [',', 'Enter'];
+
 export type PresetColorType = typeof PRESET_COLORS[number];
