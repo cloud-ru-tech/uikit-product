@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-table",
   "title": "React Table",
-  "version": "0.21.0",
+  "version": "0.21.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -31,7 +31,7 @@
     "@sbercloud/uikit-react-modal": "0.15.7",
     "@sbercloud/uikit-react-paginator-private": "0.5.12",
     "@sbercloud/uikit-react-table-private": "0.1.0",
-    "@sbercloud/uikit-react-toolbar": "0.13.10",
+    "@sbercloud/uikit-react-toolbar": "0.13.11",
     "@sbercloud/uikit-theme": "0.27.3",
     "@sbercloud/uikit-utils": "1.1.0",
     "lodash.debounce": "4.0.8"
