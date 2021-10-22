@@ -71,7 +71,7 @@ const defValue: TFilterValueType[] = [
   },
   {
     id: 'date_time',
-    value: [new Date().toString()],
+    value: [''],
     condition: 'eq',
   },
 ];
