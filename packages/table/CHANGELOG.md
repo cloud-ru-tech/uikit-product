@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.20.0...@sbercloud/uikit-react-table@0.21.0) (2021-10-22)
+
+
+### Features
+
+* first stable version ([bf88a02](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/bf88a024cf2317ffc4699c964c4e5a2df2917de9))
+* toolbar search and pagination integrated with TableWithRowDetail, extracted private table props ([9a5d7a8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9a5d7a875f51c6f6619c75a373383823676bcd0e))
+
+
+### BREAKING CHANGES
+
+* toolbar search and pagination integrated with TableWithRowDetail, extracted private table props
+* first stable version
+
+
+
+
+
 # [0.20.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.19.2...@sbercloud/uikit-react-table@0.20.0) (2021-10-20)
 
 
