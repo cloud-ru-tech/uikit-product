@@ -1,4 +1,5 @@
 import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 
 export const radioStyle = css`
   &.ag-theme-alpine .ag-row-group-leaf-indent {
@@ -29,4 +30,12 @@ export const radioStyle = css`
       cursor: pointer !important;
     }
   }
+`;
+
+export const SearchPanelView = css`
+  margin-bottom: 12px;
+`;
+
+export const PaginationWrapper = styled.div`
+  padding-top: 12px;
 `;

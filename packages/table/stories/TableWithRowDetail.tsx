@@ -1,19 +1,16 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import React, { useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
 import { FormField } from '@sbercloud/uikit-react-form';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Input } from '@sbercloud/uikit-react-input';
-import { Paginator } from '@sbercloud/uikit-react-paginator-private';
-import { AgGridTypes } from '@sbercloud/uikit-react-table-private';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ITableWithRowDetailProps, TableWithRowDetail } from '../src';
+import { TableWithRowDetail, TableWithRowDetailProps } from '../src';
 import { StatusCell } from './helpers/StatusCellRenderer';
 
 export default {
@@ -25,76 +22,57 @@ const EmbeddedComponent = styled.div`
   padding: 16px 32px;
 `;
 
-const PaginateBox = styled.div`
-  padding: 12px 0;
-`;
-
-const Template: Story<ITableWithRowDetailProps> = ({ rowData, columnDefs }) => {
-  const [gridApi, setGridApi] = useState<AgGridTypes.GridApi>();
-
-  const handlerSearchChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    gridApi?.setQuickFilter(e.target.value);
-  };
-
-  const handlerGridReady = (params: AgGridTypes.GridReadyEvent): void => {
-    setGridApi(params.api);
-  };
-
-  return (
-    <div>
-      <Input onChange={handlerSearchChange} />
-      <br />
-      <TableWithRowDetail rowData={rowData} onGridReady={handlerGridReady} columnDefs={columnDefs}>
-        <EmbeddedComponent>
-          <FormField
-            label='Не обязательное поле'
-            hint={{
-              content:
-                'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
-            }}
-          >
-            <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
-          </FormField>
-
-          <FormField
-            label='Обязательное поле'
-            hint={{
-              content:
-                'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
-            }}
-          >
-            <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
-          </FormField>
-
-          <FormField
-            label='Обязательное поле'
-            hint={{
-              content:
-                'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
-            }}
-          >
-            <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
-          </FormField>
-        </EmbeddedComponent>
-      </TableWithRowDetail>
-      {gridApi?.paginationGetTotalPages() ? (
-        <PaginateBox>
-          <Paginator
-            pageCount={gridApi?.paginationGetTotalPages()}
-            onPageChange={({ selected }: { selected: number }): void => {
-              gridApi?.paginationGoToPage(selected);
-            }}
-            placement={Paginator.placements.Right}
-          />
-        </PaginateBox>
-      ) : null}
-    </div>
-  );
+type DataModel = {
+  name: string;
+  lastModified: number;
+  createDate: number;
+  dataType: string;
+  status: string;
+  access: string;
+  size: number;
+  type: string;
+  disabled?: boolean;
 };
+
+const Template: Story<TableWithRowDetailProps<DataModel>> = args => (
+  <TableWithRowDetail {...args}>
+    <EmbeddedComponent>
+      <FormField
+        label='Не обязательное поле'
+        hint={{
+          content:
+            'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
+        }}
+      >
+        <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
+      </FormField>
+
+      <FormField
+        label='Обязательное поле'
+        hint={{
+          content:
+            'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
+        }}
+      >
+        <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
+      </FormField>
+
+      <FormField
+        label='Обязательное поле'
+        hint={{
+          content:
+            'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
+        }}
+      >
+        <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
+      </FormField>
+    </EmbeddedComponent>
+  </TableWithRowDetail>
+);
 
 export const withRowDetail = Template.bind({});
 withRowDetail.args = {
-  rowData: [
+  data: [
     {
       name: 'Test',
       lastModified: 1599838941,
@@ -287,13 +265,14 @@ withRowDetail.args = {
       type: 'file',
     },
   ],
-  columnDefs: [
+  columnDefinitions: [
     {
       headerName: 'Последнее обновление',
       field: 'lastModified',
+      sortable: true,
     },
     {
-      headerName: '',
+      headerName: 'Статус',
       field: 'status',
       cellRendererFramework: StatusCell,
       cellRendererParams: ({ value }: { value: string }) => ({
@@ -301,7 +280,7 @@ withRowDetail.args = {
         type: value,
         value,
       }),
-      sortable: false,
+      sortable: true,
     },
     {
       headerName: 'Доступ',
