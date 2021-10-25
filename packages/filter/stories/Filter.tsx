@@ -1,14 +1,13 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { DatePicker } from '@sbercloud/uikit-react-datepicker';
 import { FilterInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Filter, IFilterProps, TFilterValueType } from '../src';
+import { DatepickerType, Filter, IFilterProps, LogicConditionType, TFilterOptionType, TFilterValueType } from '../src';
 import mockData, { groupedServices } from '../src/helpers/mockData';
 
 export default {
@@ -18,33 +17,57 @@ export default {
 
 const defOpt = [
   {
+    type: TFilterOptionType.Select,
     value: 'connector_type_group',
     label: 'Коннектор',
     sourceData: groupedServices,
-    includeConditions: ['eq', 'neq'],
+    includeConditions: [LogicConditionType.Eq, LogicConditionType.Neq],
   },
   {
+    type: TFilterOptionType.Select,
     value: 'connector_type',
     label: 'Коннектор',
     sourceData: mockData,
-    includeConditions: ['eq', 'neq'],
+    includeConditions: [LogicConditionType.Eq, LogicConditionType.Neq],
   },
   {
+    type: TFilterOptionType.Input,
     value: 'some_prop',
     label: 'Произвольный текст',
-    includeConditions: ['include', 'noinclude'],
+    includeConditions: [LogicConditionType.Include, LogicConditionType.Noinclude],
   },
   {
+    type: TFilterOptionType.Datepicker,
     value: 'date',
     label: 'Дата',
-    datepicker: DatePicker.time.None,
-    includeConditions: ['eq', 'neq', 'lt', 'lte', 'gt', 'gte'],
+    datepickerType: DatepickerType.None,
+    includeConditions: [
+      LogicConditionType.Eq,
+      LogicConditionType.Neq,
+      LogicConditionType.Lt,
+      LogicConditionType.Lte,
+      LogicConditionType.Gt,
+      LogicConditionType.Gte,
+    ],
   },
   {
+    type: TFilterOptionType.Datepicker,
     value: 'date_time',
     label: 'Дата',
-    datepicker: DatePicker.time.Requier,
-    includeConditions: ['eq', 'neq', 'lt', 'lte', 'gt', 'gte'],
+    datepickerType: DatepickerType.Requier,
+    sourceData: [
+      {
+        value: new Date(2020, 1, 1),
+      },
+    ],
+    includeConditions: [
+      LogicConditionType.Eq,
+      LogicConditionType.Neq,
+      LogicConditionType.Lt,
+      LogicConditionType.Lte,
+      LogicConditionType.Gt,
+      LogicConditionType.Gte,
+    ],
   },
 ];
 
@@ -52,27 +75,27 @@ const defValue: TFilterValueType[] = [
   {
     id: 'connector_type_group',
     value: ['Ds'],
-    condition: 'eq',
+    condition: LogicConditionType.Eq,
   },
   {
     id: 'connector_type',
     value: ['hdfs'],
-    condition: 'eq',
+    condition: LogicConditionType.Eq,
   },
   {
     id: 'some_prop',
     value: ['---/---'],
-    condition: 'noinclude',
+    condition: LogicConditionType.Noinclude,
   },
   {
     id: 'date',
-    value: [new Date().toString()],
-    condition: 'eq',
+    value: [new Date()],
+    condition: LogicConditionType.Eq,
   },
   {
     id: 'date_time',
-    value: [''],
-    condition: 'eq',
+    value: [],
+    condition: LogicConditionType.Eq,
   },
 ];
 

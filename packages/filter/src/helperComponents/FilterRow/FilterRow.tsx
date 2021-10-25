@@ -9,7 +9,7 @@ import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { findSelectValue } from '../../helpers/getValue';
 import { LogicConditionType, getLogicOptionByValue, logicOptions } from '../../helpers/logicOptions';
-import { IFilterRowProps, TFilterValueType } from '../../helpers/types';
+import { IFilterRowProps, TFilterOptionType, TFilterValueType } from '../../helpers/types';
 import { ActionButton } from '../ActionButton';
 import * as S from './styled';
 
@@ -32,6 +32,7 @@ export const FilterRow: FC<IFilterRowProps> = ({
     },
     [index, onChange, value],
   );
+
   const logicOptionsList = useMemo(() => logicOptions(languageCode), [languageCode]);
   const logicOptionByValue = useMemo(() => getLogicOptionByValue(languageCode), [languageCode]);
 
@@ -42,9 +43,25 @@ export const FilterRow: FC<IFilterRowProps> = ({
 
   const initValueOption = useMemo(() => {
     const { value } = propValue;
-    const filterVal = filterOptions?.find(option => option.value === propValue.id);
-    return filterVal?.sourceData ? findSelectValue(filterVal?.sourceData, value as string[]) : propValue?.value?.[0];
-  }, [propValue, filterOptions]);
+
+    let initValue;
+
+    if (filterOption?.type === TFilterOptionType.Select && filterOption.sourceData) {
+      initValue = findSelectValue(filterOption?.sourceData, value as string[]);
+    }
+
+    if (filterOption?.type === TFilterOptionType.Datepicker) {
+      initValue = propValue.value?.[0] ? new Date(propValue.value[0]) : undefined;
+
+      if (!initValue && filterOption.sourceData?.[0].value) {
+        initValue = filterOption.sourceData[0].value;
+      }
+
+      return initValue;
+    }
+
+    return initValue || value?.[0];
+  }, [propValue, filterOption]);
 
   const includedLogicOptions = useMemo(
     () =>
@@ -56,7 +73,29 @@ export const FilterRow: FC<IFilterRowProps> = ({
     [filterOption, logicOptionsList],
   );
 
-  const shouldRenderValueInput = !filterOption?.sourceData && !filterOption?.datepicker;
+  const handleChangeFilterType = (option: OptionTypeBase): void => {
+    if (option.value === propValue.id) return;
+
+    const newId = option.value;
+    const filterProp = noFilteredProps.filter(filterProp => filterProp.value === newId)?.[0];
+    const { sourceData, includeConditions } = filterProp;
+
+    const nextSourceValue = sourceData ? [sourceData[0].value] : [''];
+    const condition = includeConditions ? includeConditions[0] : logicOptionsList[0];
+
+    if (!newId) return;
+
+    const newValue: TFilterValueType = {
+      id: newId,
+      value: nextSourceValue,
+      condition,
+    };
+
+    const nextValue = cloneDeep(value);
+    if (typeof index === 'number') nextValue.splice(index, 1);
+
+    onChange?.([...nextValue, newValue]);
+  };
 
   return (
     <S.FilterRow>
@@ -65,32 +104,12 @@ export const FilterRow: FC<IFilterRowProps> = ({
           defaultValue={filterOption}
           options={[filterOption, ...noFilteredProps]}
           type='medium'
-          onChange={(option: OptionTypeBase): void => {
-            if (option.value === propValue.id) return;
-            const newId = option.value;
-            const filterProp = noFilteredProps.filter(filterProp => filterProp.value === newId)?.[0];
-            const { sourceData, includeConditions } = filterProp;
-
-            const nextSourceValue = sourceData ? [sourceData[0].value] : [''];
-            const condition = includeConditions ? includeConditions[0] : logicOptionsList[0];
-            if (!newId) return;
-
-            const newValue: TFilterValueType = {
-              id: newId,
-              value: nextSourceValue,
-              condition,
-            };
-
-            const nextValue = cloneDeep(value);
-            if (typeof index === 'number') nextValue.splice(index, 1);
-
-            onChange?.([...nextValue, newValue]);
-          }}
+          onChange={handleChangeFilterType}
         />
       </S.FilterColumn>
       <S.FilterColumn>
         <Select
-          defaultValue={propValue?.condition && logicOptionByValue[propValue.condition]}
+          defaultValue={propValue?.condition && logicOptionByValue[propValue.condition as string]}
           options={includedLogicOptions}
           type='medium'
           onChange={(option: OptionTypeBase): void => {
@@ -100,7 +119,7 @@ export const FilterRow: FC<IFilterRowProps> = ({
       </S.FilterColumn>
 
       <S.FilterColumn>
-        {filterOption?.sourceData && (
+        {filterOption?.type === TFilterOptionType.Select && (
           <Select
             optionNoWrap
             defaultValue={initValueOption}
@@ -112,16 +131,16 @@ export const FilterRow: FC<IFilterRowProps> = ({
           />
         )}
 
-        {filterOption?.datepicker && (
+        {filterOption?.type === TFilterOptionType.Datepicker && (
           <DatePicker
-            value={propValue?.value?.[0] ? new Date(propValue.value[0]) : undefined}
+            value={initValueOption}
             size={DatePicker.size.m}
-            pickTime={filterOption.datepicker}
-            onChange={date => handleChange('value', date)}
+            pickTime={filterOption.datepickerType || DatePicker.time.None}
+            onChange={date => handleChange('value', [date])}
           />
         )}
 
-        {shouldRenderValueInput && (
+        {filterOption?.type === TFilterOptionType.Input && (
           <Input
             value={initValueOption as string}
             onChange={(e): void => {

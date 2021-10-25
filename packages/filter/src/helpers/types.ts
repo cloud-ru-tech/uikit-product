@@ -1,17 +1,36 @@
+import { SettingType } from '@sbercloud/uikit-react-datepicker';
 import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 
-import { LogicConditionType } from './logicOptions';
+import { LogicConditionType, LogicOptionType } from './logicOptions';
+
+export type FilterValue = string | Date;
 
 export type TFilterValueType = {
   id: string;
-  value: string[];
-  condition: LogicConditionType;
+  value: FilterValue[];
+  condition: LogicConditionType | LogicOptionType;
   includeConditions?: LogicConditionType[];
 };
 
+export enum TFilterOptionType {
+  Select = 'select',
+  Input = 'input',
+  Datepicker = 'datepicker',
+}
+
+export { SettingType as DatepickerType };
+
+export type TFilterOption = {
+  type: TFilterOptionType;
+  value: string;
+  sourceData?: OptionTypeBase[];
+  includeConditions: LogicConditionType[];
+  datepickerType?: SettingType;
+};
+
 export interface IFilterProps {
-  filterOptions?: OptionTypeBase[];
-  filterPropOptions?: Record<string, OptionTypeBase[]>;
+  filterOptions?: TFilterOption[];
+  filterPropOptions?: Record<string, TFilterOption[]>;
   className?: string;
 
   value: TFilterValueType[] | string;
@@ -21,7 +40,7 @@ export interface IFilterProps {
 
 export interface IFilterRowProps extends Partial<IFilterProps> {
   index?: number;
-  noFilteredProps?: OptionTypeBase[];
+  noFilteredProps?: TFilterOption[];
   propValue?: TFilterValueType;
   value: TFilterValueType[];
   onChange?: (value: TFilterValueType[]) => void;

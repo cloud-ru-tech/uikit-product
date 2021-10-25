@@ -1,12 +1,13 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
-import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 import eq from 'lodash.eq';
 import gt from 'lodash.gt';
 import gte from 'lodash.gte';
 import lt from 'lodash.lt';
 import lte from 'lodash.lte';
 
-import { Texts, textProvider } from '../helpers/texts-provider';
+import { OptionTypeBase } from '@sbercloud/uikit-react-select';
+import { LanguageCodeType } from '@sbercloud/uikit-utils';
+
+import { Texts, textProvider } from './texts-provider';
 
 type neqType = Parameters<typeof eq>;
 
@@ -21,6 +22,17 @@ export interface IOperationsType {
   noinclude: (value: unknown[], other: unknown) => boolean;
 }
 
+export enum LogicConditionType {
+  Eq = 'eq',
+  Neq = 'neq',
+  Lt = 'lt',
+  Lte = 'lte',
+  Gt = 'gt',
+  Gte = 'gte',
+  Include = 'include',
+  Noinclude = 'noinclude',
+}
+
 export const logicOperations: IOperationsType = {
   eq,
   neq: (...rest: neqType): boolean => !eq(...rest),
@@ -32,37 +44,42 @@ export const logicOperations: IOperationsType = {
   noinclude: (value, other) => !value.includes(other),
 };
 
-export const logicOptions = (language: LanguageCodeType) => [
+export type LogicOptionType = {
+  value: LogicConditionType;
+  label: string;
+};
+
+export const logicOptions = (language: LanguageCodeType): LogicOptionType[] => [
   {
-    value: 'include',
+    value: LogicConditionType.Include,
     label: textProvider(language, Texts.include),
   },
   {
-    value: 'noinclude',
+    value: LogicConditionType.Noinclude,
     label: textProvider(language, Texts.noInclude),
   },
   {
-    value: 'eq',
+    value: LogicConditionType.Eq,
     label: textProvider(language, Texts.eq),
   },
   {
-    value: 'neq',
+    value: LogicConditionType.Neq,
     label: textProvider(language, Texts.neq),
   },
   {
-    value: 'lt',
+    value: LogicConditionType.Lt,
     label: textProvider(language, Texts.lt),
   },
   {
-    value: 'lte',
+    value: LogicConditionType.Lte,
     label: textProvider(language, Texts.lte),
   },
   {
-    value: 'gt',
+    value: LogicConditionType.Gt,
     label: textProvider(language, Texts.gt),
   },
   {
-    value: 'gte',
+    value: LogicConditionType.Gte,
     label: textProvider(language, Texts.gte),
   },
 ];
@@ -72,5 +89,3 @@ export const getLogicOptionByValue = (language: LanguageCodeType) =>
     acc[curr.value] = curr;
     return acc;
   }, {} as { [key: string]: OptionTypeBase });
-
-export type LogicConditionType = 'eq' | 'neq' | 'lt' | 'lte' | 'gt' | 'gte' | 'include' | 'noinclude';

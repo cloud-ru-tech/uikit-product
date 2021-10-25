@@ -1,27 +1,27 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { CloseInterfaceSVG, PlusInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { OptionTypeBase } from '@sbercloud/uikit-react-select';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { ActionButton } from '../helperComponents/ActionButton';
 import { Container } from '../helperComponents/Container';
 import { FilterRow } from '../helperComponents/FilterRow';
 import * as errors from '../helpers/errors';
-import { getFirstValueFromSelect } from '../helpers/getValue';
+import { getDefaultValue } from '../helpers/getValue';
 import { logicOptions } from '../helpers/logicOptions';
 import { parseQuery } from '../helpers/parseQuery';
 import { Texts, textProvider } from '../helpers/texts-provider';
-import { IFilterProps, TFilterValueType } from '../helpers/types';
+import { DatepickerType, IFilterProps, TFilterOption, TFilterOptionType, TFilterValueType } from '../helpers/types';
 import * as S from './styled';
 
 export type { TFilterValueType, IFilterProps };
+export { TFilterOptionType, DatepickerType };
 
-export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [], onChange, children, className }) => {
+export const Filter: FC<IFilterProps> = ({ filterOptions = [], value = [], onChange, children, className }) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isMoreFilter, setIsMoreFilter] = useState<boolean>();
-  const [noFilteredProps, setNoFilteredProps] = useState<OptionTypeBase[]>();
+  const [noFilteredProps, setNoFilteredProps] = useState<TFilterOption[]>();
   const [parsedValue, setParsedValue] = useState<TFilterValueType[]>([]);
   const logicOptionsList = useMemo(() => logicOptions(languageCode), [languageCode]);
 
@@ -72,11 +72,12 @@ export const Filter: React.FC<IFilterProps> = ({ filterOptions = [], value = [],
   const addNewValue = useCallback(
     e => {
       e.stopPropagation();
-      const { value: id, sourceData, includeConditions } = noFilteredProps?.[0] || {};
+      const { value: id, type, sourceData, includeConditions } = noFilteredProps?.[0] || {};
 
-      const nextValue = sourceData ? [getFirstValueFromSelect(sourceData)] : [''];
+      if (!id || !type) return;
+
+      const nextValue = [getDefaultValue(sourceData, type)];
       const condition = includeConditions ? includeConditions[0] : logicOptionsList[0];
-      if (!id) return;
 
       const newValue: TFilterValueType = {
         id,
