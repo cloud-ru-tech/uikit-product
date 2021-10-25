@@ -20,6 +20,8 @@ export enum DatePickerSize {
   l = 44,
 }
 
+export { SettingType };
+
 export interface DatePickerProps {
   pickTime: SettingType;
   onChange?: (date: Date | null) => void;
