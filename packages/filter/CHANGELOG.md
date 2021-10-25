@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter@0.13.1...@sbercloud/uikit-react-filter@0.14.0) (2021-10-25)
+
+
+### Features
+
+* add field types and datepicker field ([fefecb6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/fefecb66c2cfa57449b0a4a0f09f384601a1a292))
+
+
+### BREAKING CHANGES
+
+* add field types and datepicker field
+
+
+
+
+
 ## [0.13.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter@0.13.0...@sbercloud/uikit-react-filter@0.13.1) (2021-10-22)
 
 

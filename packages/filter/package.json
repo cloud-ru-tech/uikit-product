@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-filter",
   "title": "React Filter",
-  "version": "0.13.1",
+  "version": "0.14.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -26,7 +26,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-datepicker": "0.10.1",
+    "@sbercloud/uikit-react-datepicker": "0.10.2",
     "@sbercloud/uikit-react-divider": "2.0.5",
     "@sbercloud/uikit-react-icons": "2.3.0",
     "@sbercloud/uikit-react-input": "0.17.7",

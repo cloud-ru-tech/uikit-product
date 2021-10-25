@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-datepicker@0.10.1...@sbercloud/uikit-react-datepicker@0.10.2) (2021-10-25)
+
+
+### Bug Fixes
+
+* exported datepicker SettingType enum, hiddenInput size ([f38825e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/f38825ea55eadbfb9c0ddfe57a839c4185830c10))
+
+
+
+
+
 ## [0.10.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-datepicker@0.10.0...@sbercloud/uikit-react-datepicker@0.10.1) (2021-10-19)
 
 
