@@ -4,7 +4,7 @@ import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { ButtonTable, ButtonTableIcon } from '@sbercloud/uikit-react-button';
-import { TFilterValueType } from '@sbercloud/uikit-react-filter';
+import { LogicConditionType, TFilterOptionType, TFilterValueType } from '@sbercloud/uikit-react-filter';
 import { StatusBadge } from '@sbercloud/uikit-react-status';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -96,9 +96,10 @@ const Template: Story<
             onChange: val => setFilterValue(val),
             filterOptions: [
               {
+                type: TFilterOptionType.Select,
                 value: 'status',
                 label: 'Status',
-                includeConditions: ['eq', 'neq'],
+                includeConditions: [LogicConditionType.Eq, LogicConditionType.Neq],
                 sourceData: Object.values(StatusBadge.types).map(x => ({ value: x, label: x })),
               },
             ],
