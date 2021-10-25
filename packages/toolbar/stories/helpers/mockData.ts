@@ -1,4 +1,4 @@
-import { TFilterValueType } from '@sbercloud/uikit-react-filter';
+import { LogicConditionType, TFilterOptionType, TFilterValueType } from '@sbercloud/uikit-react-filter';
 
 const groupedServices = [
   {
@@ -35,10 +35,11 @@ const groupedServices = [
 
 export const defOpt = [
   {
+    type: TFilterOptionType.Select,
     value: 'connector_type_group',
     label: 'Коннектор',
     sourceData: groupedServices,
-    includeConditions: ['eq', 'neq'],
+    includeConditions: [LogicConditionType.Eq, LogicConditionType.Neq],
   },
 ];
 
@@ -46,6 +47,6 @@ export const defValue: TFilterValueType[] = [
   {
     id: 'connector_type_group',
     value: ['Ds'],
-    condition: 'eq',
+    condition: LogicConditionType.Eq,
   },
 ];
