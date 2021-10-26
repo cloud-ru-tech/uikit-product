@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.0...@sbercloud/uikit-react-table-private@0.1.1) (2021-10-26)
+
+
+### Bug Fixes
+
+* table scrollbar artifact has been deleted ([d2bcb10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d2bcb1008e41107a3d8cf6cb52ff04f2e61bbfb0))
+
+
+
+
+
 # 0.1.0 (2021-10-20)
 
 
