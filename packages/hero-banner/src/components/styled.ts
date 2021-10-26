@@ -12,7 +12,7 @@ export const Banner = styled.div`
 export const ContentWrap = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 560px;
 `;
 
 export const Text = styled(Text1)`
