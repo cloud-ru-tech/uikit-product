@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-carousel@0.1.6...@sbercloud/uikit-react-carousel@0.2.0) (2021-10-27)
+
+
+### Features
+
+* Added BannerCard, CategoryCard. Removed CardHeader ([AICDC-3515](https://jira.sbercloud.tech/browse/AICDC-3515)) ([32e0df7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/32e0df7b92c3988e3f795e8a09e398615ae90c86))
+
+
+### BREAKING CHANGES
+
+* Added BannerCard, CategoryCard. Removed CardHeader (AICDC-3515)
+
+
+
+
+
 ## [0.1.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-carousel@0.1.5...@sbercloud/uikit-react-carousel@0.1.6) (2021-10-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-carousel

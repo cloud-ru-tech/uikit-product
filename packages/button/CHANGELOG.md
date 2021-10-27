@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.1.1...@sbercloud/uikit-react-button@2.1.2) (2021-10-27)
+
+
+### Bug Fixes
+
+* button min width has been set to max-content ([3862d54](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3862d54fee86c6e02fe4dfd5598691856ea1f850))
+
+
+
+
+
 ## [2.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.1.0...@sbercloud/uikit-react-button@2.1.1) (2021-10-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
