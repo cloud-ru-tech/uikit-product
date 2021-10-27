@@ -5,6 +5,7 @@ export const BaseButton = styled.button`
   align-items: center;
   justify-content: center;
   width: max-content;
+  min-width: max-content;
   padding: 0;
   border: none;
   font: inherit;
