@@ -1,8 +1,9 @@
 import { styled } from '@linaria/react';
+
 import { InputAutosize } from '@sbercloud/uikit-react-input';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-import { PRESET_COLORS } from '../helpers/colors';
+import { PRESET_COLORS } from './constants';
 import { TTagType } from './Tag';
 
 const { COLORS_TAG } = DEPRECATED_EXPORT_VARS;

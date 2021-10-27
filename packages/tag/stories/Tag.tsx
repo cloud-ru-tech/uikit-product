@@ -5,11 +5,10 @@ import { useState } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Tag, TagProps } from '../src';
-import { PRESET_COLORS } from '../src/helpers/colors';
+import { PRESET_COLORS, Tag, TagProps } from '../src';
 
 export default {
-  title: 'Not stable/Tag',
+  title: 'Not stable/Tag/Tag',
   component: Tag,
 } as Meta;
 

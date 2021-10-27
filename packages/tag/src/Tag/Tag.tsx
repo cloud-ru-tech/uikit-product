@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-import { PRESET_COLORS, PresetColorType } from '../helpers/colors';
+import { PRESET_COLORS, PresetColorType } from './constants';
 import { StyledInputAutosize, StyledTag } from './styled';
 
 const { COLORS_TAG } = DEPRECATED_EXPORT_VARS;
@@ -111,5 +111,7 @@ export function Tag({
     </StyledTag>
   );
 }
+
+export { PRESET_COLORS };
 
 Tag.types = Types;
