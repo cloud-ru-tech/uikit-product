@@ -26,16 +26,26 @@ export type TDropdownMenuCustomActions = (props: TDropdownMenuActionProps) => Re
 export interface DropdownMenuProps {
   actions: TDropdownMenuCustomActions | TDropdownMenuActionType[] | React.ReactNode;
   children: React.ReactNode;
+  onToggle?: (isOpen: boolean) => void;
 }
 
 export const DropdownItem: React.FC<TooltipMenuItemPrivateProps> = props => (
   <TooltipMenuItemPrivate className={S.menuItemClassName} {...props} />
 );
 
-export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<DropdownMenuProps>) => {
+export const DropdownMenu = ({ actions, children, onToggle, ...rest }: WithSupportProps<DropdownMenuProps>) => {
   const [on, setOn] = useState(false);
-  const set = useCallback(on => setOn(on), []);
-  const hide = useCallback(() => setOn(false), []);
+  const toggleDropdown = useCallback(
+    on => {
+      setOn(on);
+      if (onToggle) onToggle(on);
+    },
+    [onToggle],
+  );
+  const closeDropdown = useCallback(() => {
+    setOn(false);
+    if (onToggle) onToggle(false);
+  }, [onToggle]);
 
   const isActionsArray = Array.isArray(actions);
   const isActionsFn = !isActionsArray && typeof actions === 'function';
@@ -45,7 +55,7 @@ export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<Dr
       placement={TooltipPrivate.placements.BottomEnd}
       trigger={TooltipPrivate.triggerTypes.Click}
       visible={on}
-      onVisibleChange={set}
+      onVisibleChange={toggleDropdown}
       classNameContainer={S.containerClassName}
       offset={[0, 12]}
       delayShow={0}
@@ -59,7 +69,7 @@ export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<Dr
               const handlerOnClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
                 event?.stopPropagation();
                 menuItem.onClick(event);
-                hide();
+                closeDropdown();
               };
 
               return (
@@ -74,7 +84,7 @@ export const DropdownMenu = ({ actions, children, ...rest }: WithSupportProps<Dr
                 </TooltipMenuItemPrivate>
               );
             })}
-          {isActionsFn && (actions as TDropdownMenuCustomActions)({ on, set, hide })}
+          {isActionsFn && (actions as TDropdownMenuCustomActions)({ on, set: toggleDropdown, hide: closeDropdown })}
           {!isActionsArray && !isActionsFn && actions}
         </TooltipMenuPrivate>
       }

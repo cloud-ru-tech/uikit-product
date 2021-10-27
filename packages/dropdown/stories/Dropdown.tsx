@@ -1,11 +1,13 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { useCallback, useState } from 'react';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
 
-import { ButtonIcon, ButtonRound } from '@sbercloud/uikit-react-button';
+import { Button, ButtonIcon, ButtonRound } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import {
+  ChevronLeftInterfaceSVG,
   CircleAddInterfaceSVG,
   FileUploadFilledInterfaceSVG,
   FolderUploadFilledInterfaceSVG,
@@ -31,40 +33,77 @@ const Wrapper = styled.div`
   grid-gap: 16px;
 `;
 
-const Template: Story<DropdownMenuProps> = () => (
-  <Wrapper>
-    <DropdownMenu
-      actions={
-        <>
-          <DropdownItem onClick={(): void => {}}>
-            <FileUploadFilledInterfaceSVG />
-            Загрузить файл
-          </DropdownItem>
-          <Divider />
-          <DropdownItem onClick={(): void => {}}>
-            <FolderUploadFilledInterfaceSVG />
-            Загрузить документ
-          </DropdownItem>
-          <DropdownItem onClick={(): void => {}}>
-            <FileUploadFilledInterfaceSVG />
-            Загрузить файл
-          </DropdownItem>
-        </>
-      }
-    >
-      <ButtonRound icon={<CircleAddInterfaceSVG />} text='Создать' />
-    </DropdownMenu>
+const IconWrapper = styled.div`
+  margin-left: 8px;
 
-    <DropdownMenu
-      actions={[
-        { name: 'Загрузить файл', onClick: () => {} },
-        { name: 'Загрузить документ', onClick: () => {} },
-      ]}
-    >
-      <ButtonIcon icon={<SettingsInterfaceSVG />} tooltip={{ content: 'Настройки' }} />
-    </DropdownMenu>
-  </Wrapper>
-);
+  svg {
+    transform: rotate(-90deg);
+    transition: all 0.2s ease-in-out;
+  }
+
+  &[data-rotate='true'] {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+`;
+
+const Template: Story<DropdownMenuProps> = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const onToggle = useCallback((value: boolean) => setIsOpen(value), []);
+
+  return (
+    <Wrapper>
+      <DropdownMenu
+        actions={
+          <>
+            <DropdownItem onClick={(): void => {}}>
+              <FileUploadFilledInterfaceSVG />
+              Загрузить файл
+            </DropdownItem>
+            <Divider />
+            <DropdownItem onClick={(): void => {}}>
+              <FolderUploadFilledInterfaceSVG />
+              Загрузить документ
+            </DropdownItem>
+            <DropdownItem onClick={(): void => {}}>
+              <FileUploadFilledInterfaceSVG />
+              Загрузить файл
+            </DropdownItem>
+          </>
+        }
+      >
+        <ButtonRound icon={<CircleAddInterfaceSVG />} text='Создать' />
+      </DropdownMenu>
+
+      <DropdownMenu
+        actions={[
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+        ]}
+      >
+        <ButtonIcon icon={<SettingsInterfaceSVG />} tooltip={{ content: 'Настройки' }} />
+      </DropdownMenu>
+
+      <DropdownMenu
+        actions={[
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+        ]}
+        onToggle={onToggle}
+      >
+        <Button
+          text='Button text'
+          icon={
+            <IconWrapper data-rotate={isOpen}>
+              <ChevronLeftInterfaceSVG size={20} />
+            </IconWrapper>
+          }
+        />
+      </DropdownMenu>
+    </Wrapper>
+  );
+};
 
 export const dropdown = Template.bind({});
 dropdown.args = {};
