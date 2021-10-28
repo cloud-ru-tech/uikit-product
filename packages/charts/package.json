@@ -31,8 +31,8 @@
     "@sbercloud/uikit-utils": "1.1.0",
     "lodash.merge": "4.6.2",
     "react-minimal-pie-chart": "8.2.0",
-    "uplot": "1.6.15",
-    "uplot-react": "1.1.0"
+    "uplot": "1.6.16",
+    "uplot-react": "1.1.1"
   },
   "devDependencies": {
     "@types/lodash.merge": "4.6.6"
