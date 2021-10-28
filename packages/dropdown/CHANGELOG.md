@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.10.0...@sbercloud/uikit-react-dropdown@0.11.0) (2021-10-28)
+
+
+### Features
+
+* added onToggle function ([2b87c99](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2b87c990f109c9e714da71236d18e3eec58cc487))
+
+
+
+
+
 # [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.9.6...@sbercloud/uikit-react-dropdown@0.10.0) (2021-10-15)
 
 
