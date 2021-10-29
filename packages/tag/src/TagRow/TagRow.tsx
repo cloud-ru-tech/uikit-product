@@ -16,7 +16,7 @@ export function TagRow({ tags, className, ...rest }: WithSupportProps<TagRowProp
   const containerRef = useRef<HTMLDivElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [L, setL] = useState(0);
-  const [R, setR] = useState(tags.length);
+  const [R, setR] = useState(tags.length + 1);
   const [tagsFitAmount, setTagsFitAmount] = useState(tags.length);
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export function TagRow({ tags, className, ...rest }: WithSupportProps<TagRowProp
   useEffect(() => {
     const resize = debounce(() => {
       setL(0);
-      setR(tags.length);
+      setR(tags.length + 1);
       setTagsFitAmount(tags.length);
     }, 300);
     window.addEventListener('resize', resize);
