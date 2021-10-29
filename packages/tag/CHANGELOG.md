@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.7.33...@sbercloud/uikit-react-tag@0.8.0) (2021-10-29)
+
+
+### Features
+
+* unstable tagRow component added ([d7e2582](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d7e258216f2ccf8894fa24b710feca6c72e1b3ee))
+
+
+
+
+
 ## [0.7.33](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.7.32...@sbercloud/uikit-react-tag@0.7.33) (2021-10-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tag

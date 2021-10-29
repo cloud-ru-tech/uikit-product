@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tag",
   "title": "React Tag",
-  "version": "0.7.33",
+  "version": "0.8.0",
   "sideEffects": [
     "*.css",
     "*.woff",
