@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-select",
   "title": "React Select",
-  "version": "0.18.11",
+  "version": "0.18.12",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
     "@sbercloud/uikit-react-icons": "2.3.0",
     "@sbercloud/uikit-react-input": "0.17.9",
     "@sbercloud/uikit-react-modal": "0.15.9",
-    "@sbercloud/uikit-react-tag": "0.8.0",
+    "@sbercloud/uikit-react-tag": "0.8.1",
     "@sbercloud/uikit-theme": "0.27.3",
     "@sbercloud/uikit-typography": "0.6.0",
     "@sbercloud/uikit-utils": "1.1.0",

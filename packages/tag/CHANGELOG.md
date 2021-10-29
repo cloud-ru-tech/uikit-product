@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.8.0...@sbercloud/uikit-react-tag@0.8.1) (2021-10-29)
+
+
+### Bug Fixes
+
+* tag row maximum call stack size exceeded fixed ([5c1eb66](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/5c1eb662665f84addac96a773bc5b8505a3da9e6))
+
+
+
+
+
 # [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.7.33...@sbercloud/uikit-react-tag@0.8.0) (2021-10-29)
 
 
