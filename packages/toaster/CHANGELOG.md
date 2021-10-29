@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toaster@0.10.3...@sbercloud/uikit-react-toaster@0.11.0) (2021-10-29)
+
+
+### Features
+
+* first stable version ([bf88a02](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/bf88a024cf2317ffc4699c964c4e5a2df2917de9))
+
+
+### BREAKING CHANGES
+
+* first stable version
+
+
+
+
+
 ## [0.10.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toaster@0.10.2...@sbercloud/uikit-react-toaster@0.10.3) (2021-10-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toaster

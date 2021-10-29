@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.3.0...@sbercloud/uikit-react-icons@2.4.0) (2021-10-29)
+
+
+### Features
+
+* two christofari icons added ([9231ef5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9231ef5c5287bce0ec8e1020b9f8c5b90c112943))
+
+
+
+
+
 # [2.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.2.0...@sbercloud/uikit-react-icons@2.3.0) (2021-10-18)
 
 
