@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.10 (2021-10-29)
+
+
+### Bug Fixes
+
+* not major deps update ([0d82e8b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/0d82e8b783994f96fded6b5c4147c2351c70c07a))
+
+
+
+
+
 ## [1.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tooltip-private@1.0.8...@sbercloud/uikit-react-tooltip-private@1.0.9) (2021-10-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tooltip-private

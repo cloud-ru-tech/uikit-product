@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-slider",
   "title": "React Slider",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "sideEffects": [
     "*.css",
     "*.woff",
