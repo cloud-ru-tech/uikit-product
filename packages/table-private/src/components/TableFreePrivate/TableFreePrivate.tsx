@@ -1,8 +1,8 @@
-import 'ag-grid-community/dist/styles/ag-grid.min.css';
-import 'ag-grid-community/dist/styles/ag-theme-alpine.min.css';
+import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
+import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
+import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
 import { cx } from '@linaria/core';
-import { AgGridReact, AgGridReactProps } from 'ag-grid-react';
 import { useCallback, useMemo } from 'react';
 
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';

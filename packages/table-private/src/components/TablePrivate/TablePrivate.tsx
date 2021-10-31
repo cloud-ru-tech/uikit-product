@@ -1,5 +1,5 @@
-import 'ag-grid-enterprise/dist/styles/ag-grid.min.css';
-import 'ag-grid-enterprise/dist/styles/ag-theme-alpine.min.css';
+import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
+import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
 import { GridApi, GridReadyEvent } from '@ag-grid-community/core';
 import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
