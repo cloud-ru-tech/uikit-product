@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2021-11-02)
+
+
+### Features
+
+* added useComponentSize hook ([2bf57bf](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2bf57bfc8797ab775c5196a83254ffd09ecdef04))
+
+
+
+
+
 # [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@1.0.4...@sbercloud/uikit-utils@1.1.0) (2021-10-13)
 
 

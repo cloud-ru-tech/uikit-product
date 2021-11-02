@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.7 (2021-11-02)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-spinner
+
+
+
+
+
 ## [2.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-spinner@2.0.5...@sbercloud/uikit-react-spinner@2.0.6) (2021-10-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-spinner

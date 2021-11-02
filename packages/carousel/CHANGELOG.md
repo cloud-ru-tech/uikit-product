@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-carousel@0.2.2...@sbercloud/uikit-react-carousel@0.2.3) (2021-11-02)
+
+
+### Bug Fixes
+
+* fixed wrong height calculation ([eeee938](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/eeee938bc660b8da154ddee672087575f87af655))
+
+
+
+
+
 ## [0.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-carousel@0.2.1...@sbercloud/uikit-react-carousel@0.2.2) (2021-10-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-carousel
