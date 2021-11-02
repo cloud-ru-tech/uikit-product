@@ -1,8 +1,7 @@
-import { ReactElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { ReactElement, useCallback, useMemo, useRef, useState } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useComponentSize } from '@sbercloud/uikit-utils';
 
-import { useContainerWidth } from '../../hooks/useContainerWidth';
 import { ArrowsNavigation, DotsNavigation } from '../Navigation';
 import { CarouselItem, CarouselWrap, HeaderWrap, InnerContainer, WrapperContainer } from './styled';
 
@@ -30,19 +29,14 @@ export function Carousel({
   ...restProps
 }: WithSupportProps<CarouselProps>) {
   const [idx, setIdx] = useState(0);
-  const [cardHeight, setCardHeight] = useState(0);
 
   const heightRef = useRef<null | HTMLDivElement>(null);
   const containerRef = useRef<null | HTMLDivElement>(null);
 
   const withHeader = withArrows || carouselTitle;
-  const width = useContainerWidth(containerRef);
 
-  useEffect(() => {
-    if (heightRef.current) {
-      setCardHeight(heightRef.current?.offsetHeight);
-    }
-  }, []);
+  const { height } = useComponentSize(heightRef);
+  const { width } = useComponentSize(containerRef);
 
   const handleDotClick = useCallback((value: number) => {
     setIdx(value);
@@ -75,7 +69,7 @@ export function Carousel({
           )}
         </HeaderWrap>
       )}
-      <WrapperContainer height={cardHeight}>
+      <WrapperContainer height={height}>
         <InnerContainer
           data-test-id='carousel__container'
           ref={heightRef}

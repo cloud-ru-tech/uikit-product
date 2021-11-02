@@ -8,6 +8,7 @@ export type DotsProps = {
 
 export function DotsNavigation({ dotsAmount, onDotClick, currentIdx }: DotsProps) {
   const dots = new Array(dotsAmount).fill('dot');
+  if (dots.length < 2) return <></>;
   return (
     <DotsWrap data-test-id='carousel__dots-container'>
       {dots.map((dot, idx) => (
