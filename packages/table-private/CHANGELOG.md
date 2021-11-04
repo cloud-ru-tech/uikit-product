@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.5...@sbercloud/uikit-react-table-private@0.2.0) (2021-11-04)
+
+
+### Features
+
+* ag-grid version is the 26th ([634b66e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/634b66e5dd2113fd53195a2963db3f370f7bd37b))
+
+
+
+
+
 ## [0.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.4...@sbercloud/uikit-react-table-private@0.1.5) (2021-11-03)
 
 
