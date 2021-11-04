@@ -78,10 +78,6 @@ export function TableWithRowDetailController<T>({
   );
 
   const columnDefs = useMemo(() => {
-    if (!columnDefinitions) {
-      return undefined;
-    }
-
     const newColDef = [...columnDefinitions];
     newColDef[0] = { ...newColDef[0], ...TableRadioColumnDefine };
 
@@ -110,7 +106,7 @@ export function TableWithRowDetailController<T>({
     } else {
       gridApi.hideOverlay();
     }
-  }, [gridApi, pageCount, pageSize, data.length]);
+  }, [gridApi, pageCount, pageSize, data.length, currentPage]);
 
   const pageChangeHandler = useCallback(
     ({ selected }: { selected: number }) => {

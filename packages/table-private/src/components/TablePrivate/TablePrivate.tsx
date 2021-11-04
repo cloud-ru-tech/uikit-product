@@ -19,6 +19,8 @@ export interface TablePrivateProps extends AgGridReactProps {
   className?: string;
   checkboxSelection?: boolean;
   doesRowPassFilter?(data: any): boolean;
+  columnDefs: NonNullable<AgGridReactProps['columnDefs']>;
+  rowData: NonNullable<AgGridReactProps['rowData']>;
 }
 
 const AgGridModules = [ClientSideRowModelModule, RangeSelectionModule, MasterDetailModule];

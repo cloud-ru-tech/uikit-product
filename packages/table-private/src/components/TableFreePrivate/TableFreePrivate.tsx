@@ -13,6 +13,8 @@ import { NoDataReasons } from '../overlays/NoRows/types';
 export interface TableFreePrivateProps extends AgGridReactProps {
   className?: string;
   checkboxSelection?: boolean;
+  columnDefs: NonNullable<AgGridReactProps['columnDefs']>;
+  rowData: NonNullable<AgGridReactProps['rowData']>;
 }
 
 export function TableFreePrivate({
