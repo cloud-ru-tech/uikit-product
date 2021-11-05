@@ -30,7 +30,7 @@ module.exports = {
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/react-in-jsx-scope': 'off',
     'react/no-unused-prop-types': 'off',
-    'react/jsx-fragments': [2, 'syntax'],
+    'react/jsx-fragments': ['error', 'syntax'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
     eqeqeq: ['error', 'allow-null'],
