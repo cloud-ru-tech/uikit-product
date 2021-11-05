@@ -1,10 +1,11 @@
 import { styled } from '@linaria/react';
+import { Story } from '@storybook/react/types-6-0';
+import React, { useCallback, useState } from 'react';
+
 import { CopyInput, Input } from '@sbercloud/uikit-react-input';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H2, Text2 } from '@sbercloud/uikit-typography';
-import { Story } from '@storybook/react/types-6-0';
-import React, { useCallback, useState } from 'react';
 
 import { CloseInterfaceSVG, SearchInterfaceSVG } from '../../src';
 

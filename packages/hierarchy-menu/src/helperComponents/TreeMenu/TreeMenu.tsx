@@ -1,5 +1,6 @@
-import { Divider } from '@sbercloud/uikit-react-divider';
 import { FC } from 'react';
+
+import { Divider } from '@sbercloud/uikit-react-divider';
 
 import { TreeNode, TreeNodeProps } from '../TreeNode';
 import * as S from './styled';

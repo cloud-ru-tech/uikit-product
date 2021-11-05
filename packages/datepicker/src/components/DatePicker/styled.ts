@@ -1,4 +1,5 @@
 import { styled } from '@linaria/react';
+
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_DATEPICKER } = DEPRECATED_EXPORT_VARS;

@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
 import { Tag } from '@sbercloud/uikit-react-tag';
 
 export const StyledTag = styled(Tag)`

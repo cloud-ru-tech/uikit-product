@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_MODAL } = DEPRECATED_EXPORT_VARS;

@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
 import { Button } from '@sbercloud/uikit-react-button';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';

@@ -1,7 +1,8 @@
 import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react/types-6-0';
+
 import { Avatar } from '@sbercloud/uikit-react-avatar';
 import { Input } from '@sbercloud/uikit-react-input';
-import { Meta, Story } from '@storybook/react/types-6-0';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

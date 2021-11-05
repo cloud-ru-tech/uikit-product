@@ -1,5 +1,6 @@
-import { DetalisationInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { useCallback, useEffect, useMemo, useState } from 'react';
+
+import { DetalisationInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { doesSubtreeContainActiveKey } from '../../utils/treeUtils';
 import { CollapseIndicator } from '../CollapseIndicator';

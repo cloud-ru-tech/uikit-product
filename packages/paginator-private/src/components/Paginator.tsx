@@ -1,6 +1,7 @@
 import { cx } from '@linaria/core';
-import { ArrowBoldLeftInterfaceSVG, ArrowBoldRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import ReactPaginate, { ReactPaginateProps } from 'react-paginate';
+
+import { ArrowBoldLeftInterfaceSVG, ArrowBoldRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import {
   iconLinkClassName,

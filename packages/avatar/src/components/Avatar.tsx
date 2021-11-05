@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 
-import * as S from './styled';
 import { PLACHOLDER_ICONS } from '../helpers/constants';
 import { getAbbreviation } from '../helpers/getAbbreviation';
-import { Shapes, Sizes, PresetColors, PlaceholderIcons } from '../helpers/types';
+import { PlaceholderIcons, PresetColors, Shapes, Sizes } from '../helpers/types';
+import * as S from './styled';
 
 export interface AvatarProps {
   size?: Sizes;

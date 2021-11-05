@@ -1,7 +1,8 @@
 import { css } from '@linaria/core';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { useEffect, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
+
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { StyledInputSearch } from './styled';
 

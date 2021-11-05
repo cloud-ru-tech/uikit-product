@@ -1,6 +1,6 @@
-import { PlaceholderIcons } from './types';
 import CompanyPlaceholder from '../helperComponents/CompanyPlaceholder';
 import UserPlaceholder from '../helperComponents/UserPlaceholder';
+import { PlaceholderIcons } from './types';
 
 const PLACHOLDER_ICONS = {
   [PlaceholderIcons.Company]: <CompanyPlaceholder />,
