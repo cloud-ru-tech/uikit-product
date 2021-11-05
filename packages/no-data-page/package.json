@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-no-data-page",
   "title": "React NoDataPage",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "sideEffects": [
     "*.css",
     "*.woff",
