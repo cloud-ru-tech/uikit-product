@@ -28,9 +28,11 @@
   "dependencies": {
     "@sbercloud/uikit-react-badge-private": "2.0.6",
     "@sbercloud/uikit-react-button": "2.1.5",
+    "@sbercloud/uikit-react-dropdown": "0.11.2",
     "@sbercloud/uikit-react-filter": "0.14.7",
     "@sbercloud/uikit-react-icons": "2.4.0",
     "@sbercloud/uikit-react-input": "0.17.11",
+    "@sbercloud/uikit-react-divider": "2.0.6",
     "@sbercloud/uikit-theme": "0.27.3",
     "@sbercloud/uikit-utils": "1.2.0"
   },

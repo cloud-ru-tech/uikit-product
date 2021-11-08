@@ -46,6 +46,11 @@ const Template: Story<WithSupportProps<ToolbarWrapperProps>> = ({ ...args }) => 
           setFilterValue(queryString);
         }}
       />
+      <Toolbar.Divider />
+      <Toolbar.MoreActions
+        actions={[{ name: 'Экспортировать в csv', onClick: () => {} }]}
+        tooltip={{ content: 'Export' }}
+      />
     </Toolbar.Wrapper>
   );
 };
