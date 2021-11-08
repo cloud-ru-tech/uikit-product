@@ -2,9 +2,8 @@ import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
 import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
-import { GridApi, GridReadyEvent } from '@ag-grid-community/core';
+import { GridApi, GridReadyEvent, Module } from '@ag-grid-community/core';
 import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
-import { MasterDetailModule } from '@ag-grid-enterprise/master-detail';
 import { RangeSelectionModule } from '@ag-grid-enterprise/range-selection';
 import { cx } from '@linaria/core';
 import debounce from 'lodash.debounce';
@@ -19,11 +18,12 @@ export interface TablePrivateProps extends AgGridReactProps {
   className?: string;
   checkboxSelection?: boolean;
   doesRowPassFilter?(data: any): boolean;
+  additionModules?: Module[];
   columnDefs: NonNullable<AgGridReactProps['columnDefs']>;
   rowData: NonNullable<AgGridReactProps['rowData']>;
 }
 
-const AgGridModules = [ClientSideRowModelModule, RangeSelectionModule, MasterDetailModule];
+const AgGridModules = [ClientSideRowModelModule, RangeSelectionModule];
 
 export function TablePrivate({
   rowData = [],
@@ -33,6 +33,7 @@ export function TablePrivate({
   doesRowPassFilter,
   className,
   onGridReady,
+  additionModules = [],
   ...tableProps
 }: TablePrivateProps) {
   const [gridApi, setGridApi] = useState<GridApi>();
@@ -62,7 +63,7 @@ export function TablePrivate({
   return (
     <div className={cx('ag-theme-alpine', tableClass, className)}>
       <AgGridReact
-        modules={AgGridModules}
+        modules={[...AgGridModules, ...additionModules]}
         gridOptions={{
           suppressCellSelection: true,
           headerHeight: tableHeaderHeight,

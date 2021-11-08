@@ -2,8 +2,9 @@ import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { AgGridTypes, TablePrivateProps } from '@sbercloud/uikit-react-table-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
+import { Texts, textProvider } from '../../helpers/texts-provider';
 import { ClientModelTableView } from './ClientModelTableView';
 import { DeleteProps, FilterProps, PaginationProps } from './types';
 
@@ -22,6 +23,7 @@ export type ClientModelTableControllerProps<T> = {
       cancelText: string;
     };
     filter?: FilterProps<T>;
+    hasExport?: boolean;
   };
   advancedProps?: {
     getRowHeight?: TablePrivateProps['getRowHeight'];
@@ -38,6 +40,8 @@ export function ClientModelTableController<T>({
   advancedProps,
   ...rest
 }: WithSupportProps<ClientModelTableControllerProps<T>>) {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+
   const [gridApi, setGridApi] = useState<AgGridTypes.GridApi | null>(null);
   const [searchValue, setSearchValue] = useState('');
   const onGridReady = useCallback(gridEv => {
@@ -201,6 +205,21 @@ export function ClientModelTableController<T>({
     },
     [gridApi],
   );
+  const moreActions = useMemo(() => {
+    if (!gridApi || !bulkActions?.hasExport) return undefined;
+    return [
+      {
+        id: 'client-table__toolbar-more-action-export-csv',
+        name: textProvider(languageCode, Texts.ExportCSV),
+        onClick: () => gridApi.exportDataAsCsv(),
+      },
+      {
+        id: 'client-table__toolbar-more-action-export-xls',
+        name: textProvider(languageCode, Texts.ExportExcel),
+        onClick: () => gridApi.exportDataAsExcel(),
+      },
+    ];
+  }, [gridApi, bulkActions?.hasExport]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -239,6 +258,7 @@ export function ClientModelTableController<T>({
       filterProps={newFilterProps}
       paginationProps={paginationProps}
       onSearchCallback={onSearchCallback}
+      moreActions={moreActions}
       searchValue={searchValue}
       {...extractSupportProps(rest)}
     />

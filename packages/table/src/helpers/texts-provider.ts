@@ -5,16 +5,25 @@ export type EnabledLanguages = LanguageCodeType.ruRU | LanguageCodeType.enGB;
 export enum Texts {
   SearchPlaceholder = 'SearchPlaceholder',
   Delete = 'Delete',
+  Export = 'Export',
+  ExportCSV = 'ExportCSV',
+  ExportExcel = 'ExportExcel',
 }
 
 const Dictionary: Record<EnabledLanguages, Record<Texts, string>> = {
   [LanguageCodeType.ruRU]: {
-    SearchPlaceholder: 'Поиск',
-    Delete: 'Удалить',
+    [Texts.SearchPlaceholder]: 'Поиск',
+    [Texts.Delete]: 'Удалить',
+    [Texts.Export]: 'Экспорт',
+    [Texts.ExportCSV]: 'Экспорт таблицы в .csv',
+    [Texts.ExportExcel]: 'Экспорт таблицы в .xls',
   },
   [LanguageCodeType.enGB]: {
-    SearchPlaceholder: 'Search',
-    Delete: 'Delete',
+    [Texts.SearchPlaceholder]: 'Search',
+    [Texts.Delete]: 'Delete',
+    [Texts.Export]: 'Export',
+    [Texts.ExportCSV]: 'Exporting a table to .csv',
+    [Texts.ExportExcel]: 'Exporting a table to .xls',
   },
 };
 

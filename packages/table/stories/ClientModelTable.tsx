@@ -55,8 +55,13 @@ function generateRows(count: number): DataModel[] {
 }
 
 const Template: Story<
-  ClientModelTableProps<DataModel> & { rowsAmount: number; showDelete: boolean; showFilter: boolean }
-> = ({ rowsAmount, showDelete, showFilter, ...args }) => {
+  ClientModelTableProps<DataModel> & {
+    rowsAmount: number;
+    showDelete: boolean;
+    showFilter: boolean;
+    showExport: boolean;
+  }
+> = ({ rowsAmount, showDelete, showFilter, showExport, ...args }) => {
   const [data, setData] = useState<DataModel[]>(generateRows(rowsAmount));
 
   const debSetData = useMemo(() => debounce(setData, 500), []);
@@ -105,8 +110,9 @@ const Template: Story<
             ],
           }
         : undefined,
+      hasExport: showExport,
     }),
-    [data, filterValue, rowPassFilter, showDelete, showFilter],
+    [data, filterValue, rowPassFilter, showDelete, showFilter, showExport],
   );
 
   return (
@@ -210,6 +216,13 @@ clientModelTable.argTypes = {
     defaultValue: true,
     name: '[Stories]: show or hide filter button from toolbar',
     description: 'demonstration purposes only, this parameter does not exist in component',
+    control: {
+      type: 'boolean',
+    },
+  },
+  showExport: {
+    defaultValue: true,
+    name: '[Stories]: show or hide export table',
     control: {
       type: 'boolean',
     },

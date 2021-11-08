@@ -1,3 +1,4 @@
+import { MasterDetailModule } from '@ag-grid-enterprise/master-detail';
 import { ReactNode } from 'react';
 
 import { Paginator } from '@sbercloud/uikit-react-paginator-private';
@@ -22,6 +23,8 @@ type TableWithRowDetailViewProps<T> = {
   onSearchCallback: Types.OnSearchCallback;
   paginationProps?: Types.PaginationProps;
 };
+
+const additionModules = [MasterDetailModule];
 
 export function TableWithRowDetailView<T>({
   data,
@@ -51,6 +54,7 @@ export function TableWithRowDetailView<T>({
 
       <TablePrivate
         rowData={data}
+        additionModules={additionModules}
         columnDefs={columnDefinitions}
         className={S.radioStyle}
         onGridReady={onGridReady}

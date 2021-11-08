@@ -34,7 +34,10 @@
     "@sbercloud/uikit-react-toolbar": "0.13.19",
     "@sbercloud/uikit-theme": "0.27.3",
     "@sbercloud/uikit-utils": "1.2.0",
-    "lodash.debounce": "4.0.8"
+    "lodash.debounce": "4.0.8",
+    "@ag-grid-community/csv-export": "26.1.0",
+    "@ag-grid-enterprise/master-detail": "26.1.0",
+    "@ag-grid-enterprise/excel-export": "26.1.0"
   },
   "devDependencies": {
     "@types/lodash.debounce": "4.0.6"
