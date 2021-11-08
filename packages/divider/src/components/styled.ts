@@ -19,9 +19,13 @@ const ROTATE = {
 };
 
 export const StyledDivider = styled.hr<IStyleProps>`
-  width: 100%;
   margin: 0;
-  border: none;
-  transform: ${({ orientation }) => ROTATE[orientation]};
-  border-bottom: ${({ variant }) => `1px solid var(${COLORS[variant]})`};
+  flex-shrink: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: ${({ variant }) => `var(${COLORS[variant]})`};
+  border-right-width: ${({ orientation }) => (orientation === Orientation.Vertical ? 'thin' : 0)};
+  border-bottom-width: ${({ orientation }) => (orientation === Orientation.Horizontal ? 'thin' : 0)};
+  width: ${({ orientation }) => (orientation === Orientation.Horizontal ? '100%' : 'auto')};
+  height: ${({ orientation }) => (orientation === Orientation.Vertical ? '100%' : 'auto')};
 `;

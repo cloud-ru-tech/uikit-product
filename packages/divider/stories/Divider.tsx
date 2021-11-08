@@ -14,6 +14,7 @@ const Container = styled.div`
   height: 100px;
   display: flex;
   align-items: center;
+  justify-content: center;
   border: 1px solid var(${EXPORT_VARS.GREY[100]});
   border-radius: 10%;
   background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
