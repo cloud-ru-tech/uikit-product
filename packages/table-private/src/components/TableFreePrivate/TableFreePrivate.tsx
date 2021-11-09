@@ -1,6 +1,7 @@
 import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
 import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
+import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
 import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
 import { cx } from '@linaria/core';
 import { useCallback, useMemo } from 'react';
@@ -9,6 +10,8 @@ import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from
 import { tableClass } from '../../helpers/tableClass';
 import { NoRows } from '../overlays';
 import { NoDataReasons } from '../overlays/NoRows/types';
+
+const AgGridModules = [ClientSideRowModelModule];
 
 export interface TableFreePrivateProps extends AgGridReactProps {
   className?: string;
@@ -46,6 +49,7 @@ export function TableFreePrivate({
     <>
       <div className={cx('ag-theme-alpine', tableClass, className)}>
         <AgGridReact
+          modules={AgGridModules}
           gridOptions={{
             suppressCellSelection: true,
             headerHeight: tableHeaderHeight,
