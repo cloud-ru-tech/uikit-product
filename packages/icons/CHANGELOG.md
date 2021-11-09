@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.4.0...@sbercloud/uikit-react-icons@2.5.0) (2021-11-09)
+
+
+### Bug Fixes
+
+* applied import-sort ([d9a5c28](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d9a5c2872ee9f78c33330ff30fc6788cb9c05fb7))
+
+
+### Features
+
+* added AIMarketplace, AIServices, Catalogue, Featured, MyPurchases icons ([58fcb79](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/58fcb79ee6cb49ef8257784672a79bd44446c0fe))
+
+
+
+
+
 # [2.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.3.0...@sbercloud/uikit-react-icons@2.4.0) (2021-10-29)
 
 
