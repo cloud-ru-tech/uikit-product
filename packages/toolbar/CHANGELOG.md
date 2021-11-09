@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.13.19...@sbercloud/uikit-react-toolbar@0.14.0) (2021-11-09)
+
+
+### Features
+
+* add ToolbarDivider & ToolbarMoreActions ([0fe2fe6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/0fe2fe642ec5cb3447ceb975d4e31b8ed1aea220))
+
+
+
+
+
 ## [0.13.19](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.13.18...@sbercloud/uikit-react-toolbar@0.13.19) (2021-11-05)
 
 

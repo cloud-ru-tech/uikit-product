@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.23.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.22.1...@sbercloud/uikit-react-table@0.23.0) (2021-11-09)
+
+
+### Features
+
+* add export .csv and .xls for ClientModelTable ([224c853](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/224c8536e97121c263924834f59b87cb0063b81f))
+
+
+
+
+
 ## [0.22.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.22.0...@sbercloud/uikit-react-table@0.22.1) (2021-11-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table

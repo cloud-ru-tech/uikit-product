@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.2.0...@sbercloud/uikit-react-table-private@0.3.0) (2021-11-09)
+
+
+### Bug Fixes
+
+* add module ClientSideRowModelModule in TableFree ([b72fc91](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b72fc91ee2b51063eb15198f33e0a3c44d0f8b6c))
+
+
+### Features
+
+* add export .csv and .xls for ClientModelTable ([224c853](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/224c8536e97121c263924834f59b87cb0063b81f))
+
+
+
+
+
 # [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.5...@sbercloud/uikit-react-table-private@0.2.0) (2021-11-04)
 
 
