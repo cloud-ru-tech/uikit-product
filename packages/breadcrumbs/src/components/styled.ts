@@ -24,7 +24,6 @@ export const ItemStyled = styled.div<{ width?: number }>`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
   width: ${({ width }) => (width ? `${width}px` : 'auto')};
   font-size: 20px;
   line-height: 26px;

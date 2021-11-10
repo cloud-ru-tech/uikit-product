@@ -78,7 +78,7 @@ export const Breadcrumbs = ({
   }, [debounceResetBreadcrumbs]);
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       const el = breadcrumbsEl.current;
 
       if (el && !isEllipsisActive(el) && !isTextCut) {
@@ -219,6 +219,9 @@ export const Breadcrumbs = ({
 
       setVisible(true);
     }, 0);
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [metaKey, isTextCut]);
 
   const visibleItems = isVisible ? metaItems : stateItems;
