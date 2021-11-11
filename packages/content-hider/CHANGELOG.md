@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-content-hider@0.8.12...@sbercloud/uikit-react-content-hider@0.8.13) (2021-11-11)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-content-hider
+
+
+
+
+
 ## [0.8.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-content-hider@0.8.11...@sbercloud/uikit-react-content-hider@0.8.12) (2021-11-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-content-hider
