@@ -1,5 +1,5 @@
 import { cx } from '@linaria/core';
-import { useEffect } from 'react';
+import { MouseEvent, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { usePopperTooltip } from 'react-popper-tooltip';
 
@@ -30,6 +30,10 @@ export const TooltipPrivate = ({
     getTooltipRef?.(tooltipRef);
   }, [tooltipRef]);
 
+  const handleClick = (e: MouseEvent<HTMLDivElement>) => {
+    e.stopPropagation();
+  };
+
   return (
     <>
       <span
@@ -41,10 +45,13 @@ export const TooltipPrivate = ({
       </span>
       {visible &&
         ReactDOM.createPortal(
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions
           <div
+            role='tooltip'
             {...getTooltipProps()}
             ref={setTooltipRef}
             className={cx(tooltipClassName, classNameContainer)}
+            onClick={handleClick}
             {...extractSupportProps(props)}
           >
             {tooltip}
