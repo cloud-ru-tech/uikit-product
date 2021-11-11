@@ -39,7 +39,8 @@ const Wrap = styled.div`
 `;
 
 const DrawerWrap = styled.div`
-  height: calc(100vh - 44px);
+  height: calc(100vh - 84px);
+  width: 100%;
   position: relative;
   overflow: hidden;
 `;
