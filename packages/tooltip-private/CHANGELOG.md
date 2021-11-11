@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tooltip-private@1.0.12...@sbercloud/uikit-react-tooltip-private@1.1.0) (2021-11-11)
+
+
+### Features
+
+* stop event propagation on tooltip click ([579a73a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/579a73aadcb3d8cf0309e2ef95f624fb1d3d851f))
+
+
+
+
+
 ## [1.0.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tooltip-private@1.0.11...@sbercloud/uikit-react-tooltip-private@1.0.12) (2021-11-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tooltip-private

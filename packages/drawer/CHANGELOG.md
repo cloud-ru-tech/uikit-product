@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-drawer@0.15.9...@sbercloud/uikit-react-drawer@0.15.10) (2021-11-11)
+
+
+### Bug Fixes
+
+* drawer story container prop control ([1a4330a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1a4330a0c32772d51c8436f6e8c9a2f0017cb9f4))
+
+
+
+
+
 ## [0.15.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-drawer@0.15.8...@sbercloud/uikit-react-drawer@0.15.9) (2021-11-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drawer
