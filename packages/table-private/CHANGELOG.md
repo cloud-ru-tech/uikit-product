@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.3.2...@sbercloud/uikit-react-table-private@0.3.3) (2021-11-11)
+
+
+### Bug Fixes
+
+* min-height is 50px and noRowsOverlay is simple text for table free ([ed3b25e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ed3b25eec9499f9205a067340c09ca77b4a80f96))
+
+
+
+
+
 ## [0.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.3.1...@sbercloud/uikit-react-table-private@0.3.2) (2021-11-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
