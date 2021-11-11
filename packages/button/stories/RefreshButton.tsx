@@ -29,6 +29,8 @@ const Template: Story<RefreshButtonProps> = ({ ...args }) => (
 
 export const refreshButton = Template.bind({});
 
-refreshButton.parameters = getDefaultParameters();
+refreshButton.parameters = getDefaultParameters({
+  extraControlsInclude: ['tooltip'],
+});
 
 refreshButton.args = getDefaultArgs();
