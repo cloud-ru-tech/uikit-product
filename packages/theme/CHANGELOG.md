@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.28.0 (2021-11-11)
+
+
+### Bug Fixes
+
+* datepicker value check in filter ([64e26ce](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/64e26ceec653cbe34c39efded3c94c7f7c67cd88))
+
+
+### Features
+
+* actualized the colors, added new colors ([CP-2726](https://jira.sbercloud.tech/browse/CP-2726)) ([5794cea](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/5794cea86255ee1d9b5ea8a38ccb34bf94136fe6))
+
+
+
+
+
 ## [0.27.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.27.2...@sbercloud/uikit-theme@0.27.3) (2021-10-11)
 
 

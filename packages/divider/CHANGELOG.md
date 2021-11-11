@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-divider@2.0.7...@sbercloud/uikit-react-divider@2.0.8) (2021-11-11)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-divider
+
+
+
+
+
 ## [2.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-divider@2.0.6...@sbercloud/uikit-react-divider@2.0.7) (2021-11-09)
 
 
