@@ -10,7 +10,7 @@ import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useState } from 'react';
 
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
-import { tableClass } from '../../helpers/tableClass';
+import { paidTableMinHeight, tableClass } from '../../helpers/tableClass';
 import { NoRows } from '../overlays';
 import { NoDataReasons } from '../overlays/NoRows/types';
 
@@ -61,7 +61,7 @@ export function TablePrivate({
   }, [checkboxSelection, columnDefs]);
 
   return (
-    <div className={cx('ag-theme-alpine', tableClass, className)}>
+    <div className={cx('ag-theme-alpine', tableClass, paidTableMinHeight, className)}>
       <AgGridReact
         modules={[...AgGridModules, ...additionModules]}
         gridOptions={{

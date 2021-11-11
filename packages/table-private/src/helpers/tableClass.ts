@@ -4,6 +4,24 @@ import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_TABLE } = DEPRECATED_EXPORT_VARS;
 
+export const freeTableMinHeight = css`
+  &.ag-theme-alpine {
+    .ag-center-cols-clipper,
+    .ag-center-cols-container {
+      min-height: 50px;
+    }
+  }
+`;
+
+export const paidTableMinHeight = css`
+  &.ag-theme-alpine {
+    .ag-center-cols-clipper,
+    .ag-center-cols-container {
+      min-height: 150px;
+    }
+  }
+`;
+
 export const tableClass = css`
   &.ag-theme-alpine {
     width: 100%;
@@ -11,12 +29,6 @@ export const tableClass = css`
 
     .ag-horizontal-right-spacer:not(.ag-scroller-corner) {
       border-left: unset;
-    }
-
-    .ag-center-cols-clipper,
-    .ag-center-cols-container {
-      /* https://stackoverflow.com/questions/61068419/ag-grid-min-height-for-autoheight */
-      min-height: 150px !important;
     }
 
     .ag-root-wrapper {

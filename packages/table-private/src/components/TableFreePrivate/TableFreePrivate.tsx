@@ -6,10 +6,11 @@ import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
 import { cx } from '@linaria/core';
 import { useCallback, useMemo } from 'react';
 
+import { useLanguage } from '@sbercloud/uikit-utils';
+
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
-import { tableClass } from '../../helpers/tableClass';
-import { NoRows } from '../overlays';
-import { NoDataReasons } from '../overlays/NoRows/types';
+import { freeTableMinHeight, tableClass } from '../../helpers/tableClass';
+import { Texts, textProvider } from '../../helpers/texts-provider';
 
 const AgGridModules = [ClientSideRowModelModule];
 
@@ -29,6 +30,7 @@ export function TableFreePrivate({
   className,
   ...tableProps
 }: TableFreePrivateProps) {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const handleGridReady: TableFreePrivateProps['onGridReady'] = params => {
     onGridReady?.(params);
   };
@@ -47,7 +49,7 @@ export function TableFreePrivate({
 
   return (
     <>
-      <div className={cx('ag-theme-alpine', tableClass, className)}>
+      <div className={cx('ag-theme-alpine', tableClass, freeTableMinHeight, className)}>
         <AgGridReact
           modules={AgGridModules}
           gridOptions={{
@@ -69,10 +71,7 @@ export function TableFreePrivate({
           columnDefs={colDefs}
           domLayout='autoHeight'
           enableCellTextSelection
-          noRowsOverlayComponentFramework={NoRows}
-          noRowsOverlayComponentParams={{
-            reason: rowData.length === 0 ? NoDataReasons.InitialEmpty : NoDataReasons.Search,
-          }}
+          overlayNoRowsTemplate={textProvider(languageCode, Texts.NoRowsInitially)}
           onFirstDataRendered={onFirstDataRendered}
           onGridReady={handleGridReady}
           onGridSizeChanged={params => {
