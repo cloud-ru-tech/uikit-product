@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-breadcrumbs@0.10.12...@sbercloud/uikit-react-breadcrumbs@0.10.13) (2021-11-12)
+
+
+### Bug Fixes
+
+* added clearTimeout and fixed styles in Breadcrumbs ([CP-2725](https://jira.sbercloud.tech/browse/CP-2725)) ([fabbefa](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/fabbefa589f3698e4c416760be4db530de8bad4f))
+
+
+
+
+
 ## [0.10.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-breadcrumbs@0.10.11...@sbercloud/uikit-react-breadcrumbs@0.10.12) (2021-11-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-breadcrumbs
