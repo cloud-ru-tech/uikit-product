@@ -2,10 +2,10 @@ import { ReactElement, forwardRef } from 'react';
 
 import { extractCommonButtonProps } from '../../helpers';
 import { withTooltip } from '../../hocs';
-import { CommonButtonPropsWithRequiredTooltip } from '../../types';
+import { CommonButtonProps } from '../../types';
 import * as S from './styled';
 
-export type ButtonOverlayProps = CommonButtonPropsWithRequiredTooltip & {
+export type ButtonOverlayProps = CommonButtonProps & {
   icon: ReactElement;
 };
 
