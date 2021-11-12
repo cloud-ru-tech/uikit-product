@@ -95,7 +95,12 @@ const cardsMock = [
 
 const Template: Story<CarouselProps> = ({ ...args }) => (
   <StoryWrap>
-    <Carousel {...args} items={cardsMock} tooltipContent={'toggle'} disabledTooltipContent={'disabled'} />
+    <Carousel
+      {...args}
+      items={cardsMock}
+      nextButtonTooltips={{ tooltipContent: 'next', disabledTooltipContent: 'disabled' }}
+      prevButtonTooltips={{ tooltipContent: 'prev', disabledTooltipContent: 'disabled' }}
+    />
   </StoryWrap>
 );
 

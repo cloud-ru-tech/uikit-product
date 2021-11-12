@@ -1,7 +1,8 @@
-import React, { ReactElement, useCallback, useMemo, useRef, useState } from 'react';
+import { ReactElement, useCallback, useMemo, useRef, useState } from 'react';
 
 import { WithSupportProps, extractSupportProps, useComponentSize } from '@sbercloud/uikit-utils';
 
+import { TooltipsSettings } from '../../types';
 import { ArrowsNavigation, DotsNavigation } from '../Navigation';
 import { CarouselItem, CarouselWrap, HeaderWrap, InnerContainer, WrapperContainer } from './styled';
 
@@ -10,8 +11,8 @@ export type CarouselProps = {
   withArrows?: boolean;
   carouselTitle?: ReactElement | string;
   className?: string;
-  tooltipContent?: string;
-  disabledTooltipContent?: string;
+  prevButtonTooltips?: TooltipsSettings;
+  nextButtonTooltips?: TooltipsSettings;
 };
 
 export enum ActionTypes {
@@ -24,8 +25,8 @@ export function Carousel({
   carouselTitle,
   withArrows = true,
   className,
-  tooltipContent,
-  disabledTooltipContent,
+  prevButtonTooltips,
+  nextButtonTooltips,
   ...restProps
 }: WithSupportProps<CarouselProps>) {
   const [idx, setIdx] = useState(0);
@@ -60,8 +61,8 @@ export function Carousel({
           <div>{carouselTitle}</div>
           {withArrows && (
             <ArrowsNavigation
-              tooltipContent={tooltipContent}
-              disabledTooltipContent={disabledTooltipContent}
+              prevButtonTooltips={prevButtonTooltips}
+              nextButtonTooltips={nextButtonTooltips}
               idx={idx}
               itemsAmount={items.length}
               onArrowClick={handleArrowClick}
