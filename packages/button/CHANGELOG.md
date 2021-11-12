@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.2...@sbercloud/uikit-react-button@2.2.3) (2021-11-12)
+
+
+### Bug Fixes
+
+* ButtonOverlay does not require tooltip prop to be passed ([cc8c822](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/cc8c8229708ad2bec74e44083e7060169254d5f6))
+
+
+
+
+
 ## [2.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.1...@sbercloud/uikit-react-button@2.2.2) (2021-11-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
