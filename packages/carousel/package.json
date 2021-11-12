@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-carousel",
   "title": "React Carousel",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "sideEffects": [
     "*.css",
     "*.woff",

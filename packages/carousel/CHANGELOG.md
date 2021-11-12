@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-carousel@0.2.8...@sbercloud/uikit-react-carousel@0.3.0) (2021-11-12)
+
+
+### Features
+
+* separate tooltips for back and forward buttons ([3afffdc](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3afffdc3f2eebc39a0b2296d61cefe6ae872a54a))
+
+
+### BREAKING CHANGES
+
+* separate tooltips for back and forward buttons
+
+
+
+
+
 ## [0.2.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-carousel@0.2.7...@sbercloud/uikit-react-carousel@0.2.8) (2021-11-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-carousel
