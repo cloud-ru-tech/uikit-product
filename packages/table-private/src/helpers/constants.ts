@@ -1,7 +1,9 @@
+import { ColumnDefinition } from './types';
+
 export const tableHeaderHeight = 28;
 export const tableRowHeight = 44;
 
-export const TableCheckboxColumnDefinition = {
+export const TableCheckboxColumnDefinition: ColumnDefinition = {
   width: 44,
   minWidth: 44,
   maxWidth: 44,
@@ -13,4 +15,7 @@ export const TableCheckboxColumnDefinition = {
   unSortIcon: false,
   headerClass: 'ag-header-checkbox-selection-cell',
   colId: 'checked',
+  customMeta: {
+    skipOnExport: true,
+  },
 };

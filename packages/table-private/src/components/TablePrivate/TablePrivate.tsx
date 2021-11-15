@@ -11,17 +11,18 @@ import { useEffect, useMemo, useState } from 'react';
 
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
 import { paidTableMinHeight, tableClass } from '../../helpers/tableClass';
+import { ColumnDefinition } from '../../helpers/types';
 import { NoRows } from '../overlays';
 import { NoDataReasons } from '../overlays/NoRows/types';
 
-export interface TablePrivateProps extends AgGridReactProps {
+export type TablePrivateProps = AgGridReactProps & {
   className?: string;
   checkboxSelection?: boolean;
   doesRowPassFilter?(data: any): boolean;
   additionModules?: Module[];
-  columnDefs: NonNullable<AgGridReactProps['columnDefs']>;
+  columnDefs: ColumnDefinition[];
   rowData: NonNullable<AgGridReactProps['rowData']>;
-}
+};
 
 const AgGridModules = [ClientSideRowModelModule, RangeSelectionModule];
 
