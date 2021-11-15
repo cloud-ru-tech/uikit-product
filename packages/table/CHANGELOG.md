@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.24.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.23.6...@sbercloud/uikit-react-table@0.24.0) (2021-11-15)
+
+
+### Features
+
+* has export prop is deleted, exportFileName prop is introduced. Possibility to skip column on export to file is enabled ([fdfeaee](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/fdfeaee228b8fcaec7fa299a41f22b97d8bf80c3))
+
+
+### BREAKING CHANGES
+
+* has export prop is deleted, exportFileName prop is introduced. Possibility to skip column on export to file is enabled
+
+
+
+
+
 ## [0.23.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.23.5...@sbercloud/uikit-react-table@0.23.6) (2021-11-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table

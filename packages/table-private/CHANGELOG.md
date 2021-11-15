@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.3.3...@sbercloud/uikit-react-table-private@0.4.0) (2021-11-15)
+
+
+### Features
+
+* introduce customMeta prop within columnDefintion ([3c7a503](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3c7a5036cf3a27bb179361dfcb2aa82a57e3d8cd))
+
+
+
+
+
 ## [0.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.3.2...@sbercloud/uikit-react-table-private@0.3.3) (2021-11-11)
 
 
