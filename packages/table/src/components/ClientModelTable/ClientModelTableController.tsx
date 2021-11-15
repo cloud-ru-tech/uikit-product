@@ -23,7 +23,7 @@ export type ClientModelTableControllerProps<T> = {
       cancelText: string;
     };
     filter?: FilterProps<T>;
-    hasExport?: boolean;
+    exportFileName?: string;
   };
   advancedProps?: {
     getRowHeight?: TablePrivateProps['getRowHeight'];
@@ -206,20 +206,36 @@ export function ClientModelTableController<T>({
     [gridApi],
   );
   const moreActions = useMemo(() => {
-    if (!gridApi || !bulkActions?.hasExport) return undefined;
+    if (!gridApi || !bulkActions?.exportFileName) return undefined;
+
+    const columnKeys = [
+      ...gridApi
+        .getColumnDefs()
+        .filter((x: ClientModelTableControllerProps<T>['columnDefinitions'][number]) => !x.customMeta?.skipOnExport)
+        .map(x => x['colId'] || x['field']),
+    ];
+
     return [
       {
         id: 'client-table__toolbar-more-action-export-csv',
         name: textProvider(languageCode, Texts.ExportCSV),
-        onClick: () => gridApi.exportDataAsCsv(),
+        onClick: () =>
+          gridApi.exportDataAsCsv({
+            fileName: bulkActions.exportFileName,
+            columnKeys,
+          }),
       },
       {
         id: 'client-table__toolbar-more-action-export-xls',
         name: textProvider(languageCode, Texts.ExportExcel),
-        onClick: () => gridApi.exportDataAsExcel(),
+        onClick: () =>
+          gridApi.exportDataAsExcel({
+            fileName: bulkActions.exportFileName,
+            columnKeys,
+          }),
       },
     ];
-  }, [gridApi, bulkActions?.hasExport]);
+  }, [gridApi, bulkActions?.exportFileName, languageCode]);
 
   useEffect(() => {
     setTimeout(() => {

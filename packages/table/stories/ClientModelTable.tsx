@@ -110,7 +110,7 @@ const Template: Story<
             ],
           }
         : undefined,
-      hasExport: showExport,
+      exportFileName: showExport ? 'customExportFileName' : undefined,
     }),
     [data, filterValue, rowPassFilter, showDelete, showFilter, showExport],
   );
@@ -174,6 +174,7 @@ clientModelTable.args = {
     {
       headerName: 'Connect',
       pinned: 'right',
+      colId: 'Connect',
       minWidth: 200,
       maxWidth: 200,
       valueGetter: ({ data }: { data: DataModel }) => data.status,
@@ -187,6 +188,9 @@ clientModelTable.args = {
             <ButtonTableIcon variant={ButtonTableIcon.variants.Pause} disabled={isDisabled} loading={isInProgress} />
           </ButtonGroup>
         );
+      },
+      customMeta: {
+        skipOnExport: true,
       },
     },
   ],
