@@ -1,6 +1,1 @@
-module.exports = {
-  '.js, .jsx, .ts, .tsx': {
-    style: 'sbercloud',
-    parser: 'babylon',
-  },
-};
+module.exports = require('@sbercloud/ft-all-linters-pack').defaultImportSortConfig;

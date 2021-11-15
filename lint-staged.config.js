@@ -1,3 +1,1 @@
-module.exports = {
-  '*.{ts,js,tsx,jsx}': ['eslint --fix', 'import-sort --write', 'prettier --write'],
-};
+module.exports = require('@sbercloud/ft-all-linters-pack').defaultLintStagedConfig;
