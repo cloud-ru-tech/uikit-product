@@ -45,6 +45,7 @@ export const packageJson = ({
     repository: {
       type: 'git',
       url: 'https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git',
+      directory: `packages/${packageRootFolderName}`,
     },
     author: `${user} <${email}>`,
     contributors: [`${user} <${email}>`],

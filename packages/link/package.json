@@ -13,7 +13,8 @@
   "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/link",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git"
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "directory": "packages/link"
   },
   "author": "Egor Bibin <evbibin@sbercloud.com>",
   "contributors": [

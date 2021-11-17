@@ -13,7 +13,8 @@
   "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/datepicker",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git"
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "directory": "packages/datepicker"
   },
   "author": "Shirochenkov Aleksei <aashirochenkov@sbercloud.ru>",
   "contributors": [

@@ -13,7 +13,8 @@
   "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/tooltip",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git"
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "directory": "packages/tooltip"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
   "contributors": [

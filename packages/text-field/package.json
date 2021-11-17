@@ -13,7 +13,8 @@
   "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/text-field",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git"
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "directory": "packages/text-field"
   },
   "author": "Egor Bibin <evbibin@sbercloud.ru>",
   "contributors": [
