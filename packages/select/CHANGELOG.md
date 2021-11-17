@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.18.21...@sbercloud/uikit-react-select@0.19.0) (2021-11-17)
+
+
+### Features
+
+* multiselect option added ([4575a01](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/4575a0181fab508193b876db6fed6755e8e0d46c))
+
+
+
+
+
 ## [0.18.21](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.18.20...@sbercloud/uikit-react-select@0.18.21) (2021-11-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
