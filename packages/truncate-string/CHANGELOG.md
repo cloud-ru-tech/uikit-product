@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.3 (2021-11-17)
+
+
+### Bug Fixes
+
+* applied import-sort ([d9a5c28](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d9a5c2872ee9f78c33330ff30fc6788cb9c05fb7))
+* repository.directory field has been added ([82e2345](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e2345880c4011971b193ebd87eedbb1c804ea6))
+
+
+
+
+
 ## [0.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-truncate-string@0.4.1...@sbercloud/uikit-react-truncate-string@0.4.2) (2021-10-11)
 
 

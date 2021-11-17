@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.18](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-file-upload@0.1.17...@sbercloud/uikit-react-file-upload@0.1.18) (2021-11-17)
+
+
+### Bug Fixes
+
+* repository.directory field has been added ([82e2345](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e2345880c4011971b193ebd87eedbb1c804ea6))
+
+
+
+
+
 ## [0.1.17](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-file-upload@0.1.16...@sbercloud/uikit-react-file-upload@0.1.17) (2021-11-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-file-upload

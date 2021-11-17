@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-no-data-page@0.7.9...@sbercloud/uikit-react-no-data-page@0.7.10) (2021-11-17)
+
+
+### Bug Fixes
+
+* repository.directory field has been added ([82e2345](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e2345880c4011971b193ebd87eedbb1c804ea6))
+
+
+
+
+
 ## [0.7.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-no-data-page@0.7.8...@sbercloud/uikit-react-no-data-page@0.7.9) (2021-11-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-no-data-page
