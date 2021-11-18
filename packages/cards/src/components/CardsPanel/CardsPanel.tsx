@@ -28,7 +28,9 @@ export const CardsPanel = ({
   const [page, setPage] = useState(paginateProps?.page || 0);
   const isArrayChildren = Array.isArray(children);
   const pagesAmount =
-    isArrayChildren && paginateProps ? (children as Array<React.ReactNode>).length / (paginateProps.pageSize || 1) : 0;
+    isArrayChildren && paginateProps
+      ? Math.ceil((children as Array<React.ReactNode>).length / (paginateProps.pageSize || 1))
+      : 0;
 
   if (paginateProps) {
     return (
