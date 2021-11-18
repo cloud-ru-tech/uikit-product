@@ -102,11 +102,12 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
   );
 
   useEffect(() => {
+    const opts = Array.isArray(options) ? options : [];
     if (!inputValue || !isSearchable) {
-      setOptions(options);
+      setOptions(opts);
       return;
     }
-    const nextOptions = filterOptions(options, inputValue);
+    const nextOptions = filterOptions(opts, inputValue);
     setOptions(nextOptions);
   }, [options, inputValue, isSearchable, filterOptions]);
 
