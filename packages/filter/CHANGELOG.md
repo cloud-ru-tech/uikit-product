@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.16](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter@0.14.15...@sbercloud/uikit-react-filter@0.14.16) (2021-11-18)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-filter
+
+
+
+
+
 ## [0.14.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter@0.14.14...@sbercloud/uikit-react-filter@0.14.15) (2021-11-17)
 
 

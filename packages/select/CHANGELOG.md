@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.19.1...@sbercloud/uikit-react-select@0.19.2) (2021-11-18)
+
+
+### Bug Fixes
+
+* adds check for options prop in select ([42eb59b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/42eb59b1125704e25d03e64ab6f7c56263481973))
+
+
+
+
+
 ## [0.19.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.19.0...@sbercloud/uikit-react-select@0.19.1) (2021-11-17)
 
 
