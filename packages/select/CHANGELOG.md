@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.19.2...@sbercloud/uikit-react-select@0.20.0) (2021-11-19)
+
+
+### Features
+
+* add postfix for Control ([eacb3c9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/eacb3c990617747a47e5208f6b56f0f57bfd4f4d))
+
+
+
+
+
 ## [0.19.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.19.1...@sbercloud/uikit-react-select@0.19.2) (2021-11-18)
 
 
