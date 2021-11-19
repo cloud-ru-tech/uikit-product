@@ -22,6 +22,7 @@ const toLow = (str?: string): string => (str ? `${str}`.toLowerCase() : '');
 export interface ISelectProps<CustomOptionType> extends Omit<RCProps, 'components'> {
   type?: SelectType;
   prefixControl?: (props: ControlPrefixProps) => JSX.Element;
+  postfixControl?: (props: ControlPrefixProps) => JSX.Element;
   prefixMultiValueContainer?: (props: MultiValueContainerPrefixProps) => JSX.Element;
   prefixOption?: (props: OptionPrefixProps) => JSX.Element;
   postfixOption?: (props: OptionPrefixProps) => JSX.Element;
@@ -52,6 +53,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     onMenuClose,
     components,
     prefixControl,
+    postfixControl,
     prefixOption,
     postfixOption,
     prefixMultiValueContainer,
@@ -137,12 +139,13 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     () =>
       getCustomComponents<CustomOptionType>({
         prefixControl,
+        postfixControl,
         prefixOption,
         postfixOption,
         prefixMultiValueContainer,
         collapsedGroup,
       }),
-    [prefixControl, prefixOption, postfixOption, prefixMultiValueContainer, collapsedGroup],
+    [prefixControl, postfixControl, prefixOption, postfixOption, prefixMultiValueContainer, collapsedGroup],
   );
 
   const componentsState = useMemo(

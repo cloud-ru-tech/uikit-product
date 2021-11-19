@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import { Avatar } from '@sbercloud/uikit-react-avatar';
 import {
+  FavouriteInterfaceSVG,
   QuestionInterfaceSVG,
   RadioCheckedInterfaceSVG,
   RadioUncheckedInterfaceSVG,
@@ -55,6 +56,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
   showLogo,
   isGrouped,
   showOption,
+  showPostfixControl,
   showFooter,
   optionPosition,
   isSearchableCustom,
@@ -180,6 +182,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
         });
         return <>{collection}</>;
       }}
+      postfixControl={showPostfixControl ? () => <FavouriteInterfaceSVG /> : undefined}
       footer={showFooter ? <Footer>Footer</Footer> : null}
       type={showLogo || showOption ? 'with-logo' : type}
     />
@@ -227,6 +230,11 @@ select.argTypes = {
     },
   },
   showOption: {
+    control: {
+      type: 'boolean',
+    },
+  },
+  showPostfixControl: {
     control: {
       type: 'boolean',
     },

@@ -9,6 +9,7 @@ import { ISelectProps } from '../components';
 import { CustomControl, CustomMenu, MultiValueContainer } from '../helperComponents/Shared';
 import { CustomGroup } from '../helperComponents/Shared/CustomGroup';
 import { CustomGroupHeading } from '../helperComponents/Shared/CustomGroupHeading';
+import { CustomIndicator } from '../helperComponents/Shared/CustomIndicator/CustomIndicator';
 import { CustomOption } from '../helperComponents/Shared/CustomOption';
 import { Texts, textProvider } from './texts-provider';
 
@@ -36,12 +37,12 @@ const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponen
   return <ReactSelectComponents.NoOptionsMessage {...props}>{noDataText}</ReactSelectComponents.NoOptionsMessage>;
 };
 
-const IndicatorSeparator = () => null;
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 /* @ts-ignore */
 export default <CustomOptionType,>(props: ISelectProps<CustomOptionType>): SelectComponentsConfig<CustomOptionType> => {
   const customControl = CustomControl<CustomOptionType>(props);
   const customOption = CustomOption<CustomOptionType>(props);
+  const customIndicator = CustomIndicator<CustomOptionType>(props);
   const multiValueContainer = MultiValueContainer<CustomOptionType>(props);
   const group = CustomGroup<CustomOptionType>(props);
   const groupHeading = CustomGroupHeading<CustomOptionType>(props);
@@ -49,7 +50,7 @@ export default <CustomOptionType,>(props: ISelectProps<CustomOptionType>): Selec
   return {
     MultiValueRemove,
     DropdownIndicator,
-    IndicatorSeparator,
+    IndicatorSeparator: customIndicator,
     NoOptionsMessage,
     Option: customOption,
     Control: customControl,
