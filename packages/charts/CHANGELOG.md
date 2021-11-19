@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-charts@0.5.10...@sbercloud/uikit-react-charts@0.6.0) (2021-11-19)
+
+
+### Features
+
+* add heatmap chart ([43dbd9a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/43dbd9a6d5cc3e05272899f8a2f6f0d4e621bc67))
+
+
+
+
+
 ## [0.5.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-charts@0.5.9...@sbercloud/uikit-react-charts@0.5.10) (2021-11-17)
 
 
