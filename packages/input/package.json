@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-input",
   "title": "React Input",
-  "version": "0.17.17",
+  "version": "0.18.0",
   "sideEffects": [
     "*.css",
     "*.woff",

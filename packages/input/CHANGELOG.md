@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@0.17.17...@sbercloud/uikit-react-input@0.18.0) (2021-11-22)
+
+
+### Features
+
+* add forwardRef ([8f14c36](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8f14c3614466a6c987a7ea9b4360fe302675cb0d))
+
+
+
+
+
 ## [0.17.17](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@0.17.16...@sbercloud/uikit-react-input@0.17.17) (2021-11-17)
 
 
