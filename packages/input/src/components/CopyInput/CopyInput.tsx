@@ -1,4 +1,4 @@
-import { MouseEvent, MouseEventHandler, useCallback, useMemo, useState } from 'react';
+import { MouseEvent, MouseEventHandler, forwardRef, useCallback, useMemo, useState } from 'react';
 
 import { ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
 import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -24,78 +24,79 @@ export type CopyInputProps = {
   onCopy?: MouseEventHandler<HTMLButtonElement | HTMLInputElement> | undefined;
 };
 
-export const CopyInput: React.FC<WithSupportProps<CopyInputProps>> = ({
-  value,
-  label,
-  onCopy,
-  security,
-  labelMinWidth,
-  wrapperClassName,
-  ...rest
-}) => {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+export const CopyInput = forwardRef<HTMLInputElement, WithSupportProps<CopyInputProps>>(
+  ({ value, label, onCopy, security, labelMinWidth, wrapperClassName, ...rest }, ref) => {
+    const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const [showContent, setShowContent] = useState(!security);
+    const [showContent, setShowContent] = useState(!security);
 
-  const handleInputClick = useCallback(
-    (e: MouseEvent<HTMLInputElement>) => {
-      e.stopPropagation();
+    const handleInputClick = useCallback(
+      (e: MouseEvent<HTMLInputElement>) => {
+        e.stopPropagation();
 
-      onCopy?.(e);
-    },
-    [onCopy],
-  );
+        onCopy?.(e);
+      },
+      [onCopy],
+    );
 
-  const handleSecurityButtonClick = useCallback(
-    (e: MouseEvent<HTMLButtonElement>) => {
-      e.stopPropagation();
+    const handleSecurityButtonClick = useCallback(
+      (e: MouseEvent<HTMLButtonElement>) => {
+        e.stopPropagation();
 
-      setShowContent(!showContent);
-    },
-    [showContent],
-  );
+        setShowContent(!showContent);
+      },
+      [showContent],
+    );
 
-  const valueToShow = useMemo(() => {
-    if (showContent) {
-      return value;
-    }
+    const valueToShow = useMemo(() => {
+      if (showContent) {
+        return value;
+      }
 
-    return value.replaceAll(/./gi, '•');
-  }, [showContent, value]);
+      return value.replaceAll(/./gi, '•');
+    }, [showContent, value]);
 
-  return (
-    <StyledWrap className={wrapperClassName} {...extractSupportProps(rest)}>
-      {label && (
-        <Label minWidth={labelMinWidth || 'none'} data-test-id='copy-input__label'>
-          {label}
-        </Label>
-      )}
-      <StyledInputWrapper labelMinWidth={labelMinWidth}>
-        <StyledInput hasSecurityIcon={!!security} onClick={handleInputClick} data-test-id='copy-input__value'>
-          {valueToShow}
-        </StyledInput>
-        {security ? (
-          <StyledIconWrapper right={36}>
-            <ButtonIconTransparent
-              onClick={handleSecurityButtonClick}
-              className={securityButtonClassName}
-              data-test-id='copy-input__security-btn'
-              tooltip={{
-                content: showContent ? textProvider(languageCode, Texts.hide) : textProvider(languageCode, Texts.show),
-              }}
-              icon={showContent ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
+    return (
+      <StyledWrap className={wrapperClassName} {...extractSupportProps(rest)}>
+        {label && (
+          <Label minWidth={labelMinWidth || 'none'} data-test-id='copy-input__label'>
+            {label}
+          </Label>
+        )}
+        <StyledInputWrapper labelMinWidth={labelMinWidth}>
+          <StyledInput
+            ref={ref}
+            hasSecurityIcon={!!security}
+            onClick={handleInputClick}
+            data-test-id='copy-input__value'
+          >
+            {valueToShow}
+          </StyledInput>
+          {security ? (
+            <StyledIconWrapper right={36}>
+              <ButtonIconTransparent
+                onClick={handleSecurityButtonClick}
+                className={securityButtonClassName}
+                data-test-id='copy-input__security-btn'
+                tooltip={{
+                  content: showContent
+                    ? textProvider(languageCode, Texts.hide)
+                    : textProvider(languageCode, Texts.show),
+                }}
+                icon={showContent ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
+              />
+            </StyledIconWrapper>
+          ) : null}
+          <StyledIconWrapper right={12}>
+            <CopyButton
+              text={value.toString()}
+              onClick={onCopy}
+              className={copyButtonClassName}
+              data-test-id='copy-input__copy-btn'
             />
           </StyledIconWrapper>
-        ) : null}
-        <StyledIconWrapper right={12}>
-          <CopyButton
-            text={value.toString()}
-            onClick={onCopy}
-            className={copyButtonClassName}
-            data-test-id='copy-input__copy-btn'
-          />
-        </StyledIconWrapper>
-      </StyledInputWrapper>
-    </StyledWrap>
-  );
-};
+        </StyledInputWrapper>
+      </StyledWrap>
+    );
+  },
+);

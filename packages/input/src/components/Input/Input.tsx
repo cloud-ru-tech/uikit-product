@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 
 import { ButtonIcon, ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -20,185 +20,199 @@ import {
 
 export type { InputProps };
 
-export const Input = ({
-  type = InputTypes.default,
-  onChange,
-  value = '',
-  defaultValue,
-  placeholder,
-  wrapperClassName,
-  copyButtonClassName,
-  postfix,
-  allowClear,
-  allowCopy,
-  max,
-  min,
-  label,
-  labelMinWidth,
-  disabled = false,
-  wrapperRef,
-  error,
-  className,
-  getInstance,
-  name,
-  autoComplete,
-  onOpenDialog,
-  onBlur,
-  onFocus,
-  ...rest
-}: WithSupportProps<InputProps>) => {
-  const inputEl = useRef<InputElementType>(null);
-  const [correctValue, setCorrectValue] = useState(value);
-  const [isViewMode, setViewMode] = useState(type !== 'security');
+export interface CompoundedInput
+  extends React.ForwardRefExoticComponent<WithSupportProps<InputProps> & React.RefAttributes<HTMLInputElement>> {
+  types: typeof InputTypes;
+}
 
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-
-  useEffect(() => {
-    getInstance?.(inputEl as React.RefObject<HTMLInputElement>);
-  }, [getInstance, inputEl]);
-
-  const handleChange = useCallback(
-    e => {
-      if ((min !== undefined || max !== undefined) && type === 'number') {
-        if (e.target.value === '') {
-          setCorrectValue('');
-          onChange?.(e);
-          return;
-        }
-
-        if (!/^[0-9]+$/.test(e.target.value) && e.target.value !== '') {
-          e.preventDefault();
-          return;
-        }
-
-        let val = e.target.value;
-
-        if (min && val < min) {
-          val = min;
-        }
-
-        if (max && val > max) {
-          val = max;
-        }
-        e.target.value = val;
-      }
-      setCorrectValue(e.target.value);
-
-      if (onChange) {
-        onChange(e);
-      }
+export const Input = React.forwardRef<HTMLInputElement | null, WithSupportProps<InputProps>>(
+  (
+    {
+      type = InputTypes.default,
+      onChange,
+      value = '',
+      defaultValue,
+      placeholder,
+      wrapperClassName,
+      copyButtonClassName,
+      postfix,
+      allowClear,
+      allowCopy,
+      max,
+      min,
+      label,
+      labelMinWidth,
+      disabled = false,
+      wrapperRef,
+      error,
+      className,
+      getInstance,
+      name,
+      autoComplete,
+      onOpenDialog,
+      onBlur,
+      onFocus,
+      ...rest
     },
-    [max, min, onChange, type],
-  );
+    ref,
+  ) => {
+    const inputEl = useRef<HTMLInputElement>(null);
+    const [correctValue, setCorrectValue] = useState(value);
+    const [isViewMode, setViewMode] = useState(type !== 'security');
 
-  useEffect(() => {
-    setCorrectValue(value);
-  }, [value]);
+    const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const handleClickClear = () => {
-    if (!inputEl.current) return;
-    const lastValue = inputEl.current?.value;
-    const event = new Event('change', { bubbles: true });
-    inputEl.current.value = '';
-    inputEl.current._valueTracker.setValue(lastValue);
-    inputEl.current.dispatchEvent(event);
-  };
+    useImperativeHandle(ref, () => inputEl.current as HTMLInputElement);
 
-  const paddingRight = useMemo(() => {
-    let result = 12;
-    const paddingConfig = [
-      {
-        enabled: allowCopy,
-        padding: 32,
+    useEffect(() => {
+      getInstance?.(inputEl as React.RefObject<HTMLInputElement>);
+    }, [getInstance, inputEl]);
+
+    const handleChange = useCallback(
+      e => {
+        if ((min !== undefined || max !== undefined) && type === 'number') {
+          if (e.target.value === '') {
+            setCorrectValue('');
+            onChange?.(e);
+            return;
+          }
+
+          if (!/^[0-9]+$/.test(e.target.value) && e.target.value !== '') {
+            e.preventDefault();
+            return;
+          }
+
+          let val = e.target.value;
+
+          if (min && val < min) {
+            val = min;
+          }
+
+          if (max && val > max) {
+            val = max;
+          }
+          e.target.value = val;
+        }
+        setCorrectValue(e.target.value);
+
+        if (onChange) {
+          onChange(e);
+        }
       },
-      {
-        enabled: allowClear && correctValue && correctValue !== '',
-        padding: 24,
-      },
-      {
-        enabled: !!postfix,
-        padding: 40,
-      },
-      {
-        enabled: !!onOpenDialog,
-        padding: 44,
-      },
-      {
-        enabled: type === 'security',
-        padding: 32,
-      },
-    ];
+      [max, min, onChange, type],
+    );
 
-    paddingConfig.forEach(paddingItem => {
-      if (paddingItem.enabled) {
-        result = result + paddingItem.padding;
-      }
-    });
+    useEffect(() => {
+      setCorrectValue(value);
+    }, [value]);
 
-    return result;
-  }, [allowCopy, allowClear, postfix, onOpenDialog, correctValue, type]);
+    const handleClickClear = () => {
+      if (!inputEl.current) return;
+      const lastValue = inputEl.current?.value;
+      const event = new Event('change', { bubbles: true });
+      inputEl.current.value = '';
+      (inputEl.current as InputElementType)._valueTracker.setValue(lastValue);
+      inputEl.current.dispatchEvent(event);
+    };
 
-  return (
-    <StyledWrap className={wrapperClassName} ref={wrapperRef} {...extractSupportProps(rest)}>
-      {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
-      <StyledInputWrapper>
-        <StyledInput
-          ref={inputEl}
-          paddingRight={paddingRight}
-          allowCopy={allowCopy}
-          type={getInputType({ type, isViewMode })}
-          onChange={handleChange}
-          value={correctValue}
-          data-type={type}
-          data-disabled={disabled}
-          className={className}
-          placeholder={placeholder}
-          min={min}
-          max={max}
-          step={1}
-          defaultValue={defaultValue}
-          disabled={disabled}
-          data-error={error || undefined}
-          name={name}
-          autoComplete={autoComplete}
-          onBlur={onBlur}
-          onFocus={onFocus}
-          data-test-id='input__value'
-        />
-        <StyledIconWrapper>
-          <BasicButtonWrapper>
-            {!disabled && allowClear && correctValue && correctValue !== '' && (
-              <ButtonIcon
-                onClick={handleClickClear}
-                icon={<CloseInterfaceSVG />}
-                tooltip={{ content: textProvider(languageCode, Texts.clear) }}
-                data-test-id='input__clear-btn'
-              />
+    const paddingRight = useMemo(() => {
+      let result = 12;
+      const paddingConfig = [
+        {
+          enabled: allowCopy,
+          padding: 32,
+        },
+        {
+          enabled: allowClear && correctValue && correctValue !== '',
+          padding: 24,
+        },
+        {
+          enabled: !!postfix,
+          padding: 40,
+        },
+        {
+          enabled: !!onOpenDialog,
+          padding: 44,
+        },
+        {
+          enabled: type === 'security',
+          padding: 32,
+        },
+      ];
+
+      paddingConfig.forEach(paddingItem => {
+        if (paddingItem.enabled) {
+          result = result + paddingItem.padding;
+        }
+      });
+
+      return result;
+    }, [allowCopy, allowClear, postfix, onOpenDialog, correctValue, type]);
+
+    return (
+      <StyledWrap className={wrapperClassName} ref={wrapperRef} {...extractSupportProps(rest)}>
+        {label && <Label minWidth={labelMinWidth || 'none'}>{label}</Label>}
+        <StyledInputWrapper>
+          <StyledInput
+            ref={inputEl}
+            paddingRight={paddingRight}
+            allowCopy={allowCopy}
+            type={getInputType({ type, isViewMode })}
+            onChange={handleChange}
+            value={correctValue}
+            data-type={type}
+            data-disabled={disabled}
+            className={className}
+            placeholder={placeholder}
+            min={min}
+            max={max}
+            step={1}
+            defaultValue={defaultValue}
+            disabled={disabled}
+            data-error={error || undefined}
+            name={name}
+            autoComplete={autoComplete}
+            onBlur={onBlur}
+            onFocus={onFocus}
+            data-test-id='input__value'
+          />
+          <StyledIconWrapper>
+            <BasicButtonWrapper>
+              {!disabled && allowClear && correctValue && correctValue !== '' && (
+                <ButtonIcon
+                  onClick={handleClickClear}
+                  icon={<CloseInterfaceSVG />}
+                  tooltip={{ content: textProvider(languageCode, Texts.clear) }}
+                  data-test-id='input__clear-btn'
+                />
+              )}
+              {postfix}
+              {type === 'security' ? (
+                <ButtonIconTransparent
+                  onClick={(): void => setViewMode(!isViewMode)}
+                  tooltip={{
+                    content: isViewMode
+                      ? textProvider(languageCode, Texts.hide)
+                      : textProvider(languageCode, Texts.show),
+                  }}
+                  icon={isViewMode ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
+                  data-test-id='input__security-btn'
+                />
+              ) : null}
+              {allowCopy && (
+                <CopyButton text={value.toString()} className={copyButtonClassName} data-test-id='input__copy-btn' />
+              )}
+            </BasicButtonWrapper>
+            {onOpenDialog && (
+              <OpenDialogButtonWrapper onClick={onOpenDialog} data-test-id='input__open-dialog-btn'>
+                <OpenDialogButton />
+              </OpenDialogButtonWrapper>
             )}
-            {postfix}
-            {type === 'security' ? (
-              <ButtonIconTransparent
-                onClick={(): void => setViewMode(!isViewMode)}
-                tooltip={{
-                  content: isViewMode ? textProvider(languageCode, Texts.hide) : textProvider(languageCode, Texts.show),
-                }}
-                icon={isViewMode ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
-                data-test-id='input__security-btn'
-              />
-            ) : null}
-            {allowCopy && (
-              <CopyButton text={value.toString()} className={copyButtonClassName} data-test-id='input__copy-btn' />
-            )}
-          </BasicButtonWrapper>
-          {onOpenDialog && (
-            <OpenDialogButtonWrapper onClick={onOpenDialog} data-test-id='input__open-dialog-btn'>
-              <OpenDialogButton />
-            </OpenDialogButtonWrapper>
-          )}
-        </StyledIconWrapper>
-      </StyledInputWrapper>
-    </StyledWrap>
-  );
-};
+          </StyledIconWrapper>
+        </StyledInputWrapper>
+      </StyledWrap>
+    );
+  },
+) as CompoundedInput;
 
 Input.types = InputTypes;
