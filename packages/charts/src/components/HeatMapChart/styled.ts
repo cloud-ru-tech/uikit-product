@@ -2,7 +2,8 @@ import { styled } from '@linaria/react';
 
 import { H3, H5, Text4 } from '@sbercloud/uikit-typography';
 
-import { LEGEND_HEIGHT, TITLE_HEIGHT, X_AXIS_LABEL_HEIGHT } from './helpers/constants';
+import { XAxisPosition } from './constants';
+import { LEGEND_HEIGHT, TICKS_SIZE, TITLE_HEIGHT, X_AXIS_LABEL_HEIGHT } from './helpers/constants';
 import { COLOR_VARS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -68,6 +69,7 @@ export const XAxisLabel = styled.div`
   font-size: 12px;
   font-weight: 600;
   height: ${X_AXIS_LABEL_HEIGHT - 8}px;
+  margin-left: 65px;
 `;
 
 export const YAxisLabel = styled.div`
@@ -79,4 +81,10 @@ export const YAxisLabel = styled.div`
   font-size: 12px;
   font-weight: 600;
   color: var(${COLOR_VARS.LABEL});
+  &[data-x-axis-position='${XAxisPosition.Top}'] {
+    margin-top: ${TICKS_SIZE}px;
+  }
+  &[data-x-axis-position='${XAxisPosition.Bottom}'] {
+    margin-bottom: ${TICKS_SIZE}px;
+  }
 `;

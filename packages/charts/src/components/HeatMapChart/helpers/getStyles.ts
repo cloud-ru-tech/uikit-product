@@ -2,7 +2,7 @@ import { ScaleLinear } from 'd3-scale';
 
 import { COLOR_VARS } from '../themes';
 import { HeatMapChartStyles } from '../types';
-import { X_LABELS_HEIGHT } from './constants';
+import { TICKS_SIZE } from './constants';
 
 export const getStyles = (colorScale: ScaleLinear<string, string>, data: number[][]): HeatMapChartStyles => ({
   cellStyle: (x: number, y: number) => ({
@@ -21,11 +21,13 @@ export const getStyles = (colorScale: ScaleLinear<string, string>, data: number[
     marginTop: '12px',
     color: `var(${COLOR_VARS.LABEL})`,
     padding: 0,
-    height: `${X_LABELS_HEIGHT - 12}px`,
+    height: `${TICKS_SIZE - 12}px`,
   }),
   yLabelsStyle: () => ({
+    width: `${TICKS_SIZE - 8}px`,
     fontSize: '12px',
-    marginRight: '16px',
+    marginRight: '8px',
+    padding: '0',
     color: `var(${COLOR_VARS.LABEL})`,
   }),
 });

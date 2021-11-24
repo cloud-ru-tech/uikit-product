@@ -1,10 +1,18 @@
+import { ReactNode } from 'react';
+
+import { XAxisPosition } from './constants';
+
 export type HeatMapChartAxisOptions = {
   label?: string;
   ticks?: string[];
 };
 
+export type HeatMapChartLegendOptions = {
+  show?: boolean;
+};
+
 export type HeatMapChartAxesOptions = {
-  xAxis?: HeatMapChartAxisOptions;
+  xAxis?: HeatMapChartAxisOptions & { position?: XAxisPosition };
   yAxis?: HeatMapChartAxisOptions;
 };
 
@@ -14,6 +22,9 @@ export type HeatMapChartOptions = {
   formatter?: (value: number) => string;
   axes?: HeatMapChartAxesOptions;
   domain: [number, number];
+  cellRender?: (x: number, y: number, value: number) => ReactNode;
+  legend?: HeatMapChartLegendOptions;
+  styles?: Partial<HeatMapChartStyles>;
 };
 
 export type HeatMapChartProps = {

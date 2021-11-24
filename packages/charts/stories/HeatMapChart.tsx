@@ -5,13 +5,38 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { HeatMapChart, HeatMapChartProps } from '../src';
+import { XAxisPosition } from '../src/components/HeatMapChart/constants';
 
 export default {
   title: 'Not stable/Charts/Heat Map Chart',
   component: HeatMapChart,
 } as Meta;
 
-const Template: Story<HeatMapChartProps> = ({ ...args }) => <HeatMapChart {...args} />;
+const Template: Story<HeatMapChartProps & { xAxisPosition: XAxisPosition; showLegend: boolean }> = ({
+  xAxisPosition,
+  showLegend,
+  ...args
+}) => {
+  const props = {
+    ...args,
+    options: {
+      ...args.options,
+      legend: {
+        ...args.options.legend,
+        show: showLegend,
+      },
+      axes: {
+        ...args.options.axes,
+        xAxis: {
+          ...args.options.axes?.xAxis,
+          position: xAxisPosition,
+        },
+      },
+    },
+  };
+
+  return <HeatMapChart {...props} />;
+};
 
 const data = [
   [0.8793309438470729, 0.1003584229390681, 0, 0.015531660692951015, 0.0023894862604540022, 0.0023894862604540022],
@@ -50,7 +75,23 @@ heatMapChart.args = {
     formatter: (val: number) => val.toPrecision(2),
   },
 };
-heatMapChart.argTypes = {};
+heatMapChart.argTypes = {
+  xAxisPosition: {
+    defaultValue: XAxisPosition.Bottom,
+    name: '[Stories]: xAxis position',
+    control: {
+      type: 'radio',
+      options: [XAxisPosition.Bottom, XAxisPosition.Top],
+    },
+  },
+  showLegend: {
+    defaultValue: true,
+    name: '[Stories]: show or hide legend',
+    control: {
+      type: 'boolean',
+    },
+  },
+};
 heatMapChart.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

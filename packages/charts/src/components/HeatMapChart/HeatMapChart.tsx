@@ -3,23 +3,26 @@ import { useCallback, useMemo } from 'react';
 import { HeatMapGrid } from 'react-grid-heatmap';
 
 import { Divider } from '@sbercloud/uikit-react-divider';
-import { Themes, useTheme } from '@sbercloud/uikit-utils';
+import { Themes, WithSupportProps, extractSupportProps, useTheme } from '@sbercloud/uikit-utils';
 
+import { XAxisPosition } from './constants';
 import { getContrastColor, getStyles, getTickValues } from './helpers';
 import {
   DEFAULT_CHART_HEIGHT,
   LEGEND_HEIGHT,
+  TICKS_SIZE,
   TITLE_HEIGHT,
   X_AXIS_LABEL_HEIGHT,
-  X_LABELS_HEIGHT,
 } from './helpers/constants';
 import * as S from './styled';
 import { COLORS } from './themes';
 import { HeatMapChartProps } from './types';
 
-export function HeatMapChart({ data, options }: HeatMapChartProps) {
-  const { title, height = DEFAULT_CHART_HEIGHT, axes = {}, formatter, domain } = options;
+export function HeatMapChart({ data, options, ...rest }: WithSupportProps<HeatMapChartProps>) {
+  const { title, height = DEFAULT_CHART_HEIGHT, axes = {}, formatter, legend, domain, cellRender, styles } = options;
   const { xAxis, yAxis } = axes;
+  const xAxisPosition = xAxis?.position || XAxisPosition.Bottom;
+  const isLegendEnabled = legend?.show ?? true;
 
   const { theme } = useTheme();
 
@@ -44,12 +47,13 @@ export function HeatMapChart({ data, options }: HeatMapChartProps) {
 
   const cellHeight = useMemo(() => {
     const titleHeight = title ? TITLE_HEIGHT : 0;
-    const xLabelsHeight = xAxis?.ticks?.length ? X_LABELS_HEIGHT : 0;
+    const xLabelsHeight = xAxis?.ticks?.length ? TICKS_SIZE : 0;
     const xAxisLabelHeight = yAxis?.ticks ? X_AXIS_LABEL_HEIGHT : 0;
-    const chartHeight = height - 48 - titleHeight - xLabelsHeight - xAxisLabelHeight - LEGEND_HEIGHT;
+    const legendHeight = isLegendEnabled ? LEGEND_HEIGHT : 0;
+    const chartHeight = height - 48 - titleHeight - xLabelsHeight - xAxisLabelHeight - legendHeight;
 
     return `${chartHeight / data.length}px`;
-  }, [data, height, title, xAxis, yAxis]);
+  }, [data, height, title, xAxis, yAxis, isLegendEnabled]);
 
   const gradient = useMemo(() => {
     const parts = colorRange.map((color, i) => `${color} ${i * (100 / (colorRange.length - 1))}%`);
@@ -62,37 +66,45 @@ export function HeatMapChart({ data, options }: HeatMapChartProps) {
   );
 
   return (
-    <S.Wrapper>
+    <S.Wrapper {...extractSupportProps(rest)}>
       {title && <S.Title>{title}</S.Title>}
+      {xAxis?.label && xAxisPosition === XAxisPosition.Top && <S.XAxisLabel>{xAxis.label}</S.XAxisLabel>}
       <S.GridWrapper displayAsGrid={!!yAxis?.label}>
-        {yAxis?.label && <S.YAxisLabel>{yAxis.label}</S.YAxisLabel>}
+        {yAxis?.label && <S.YAxisLabel data-x-axis-position={xAxisPosition}>{yAxis.label}</S.YAxisLabel>}
         <HeatMapGrid
           data={data}
           xLabels={xAxis?.ticks}
           yLabels={yAxis?.ticks}
-          xLabelsPos='bottom'
+          xLabelsPos={xAxisPosition}
           yLabelsPos='left'
-          cellRender={(x: number, y: number, value: number) => (
-            <S.Cell title={String(value)} color={getContrastColor(colorScale(value))}>
-              {formatValue(value)}
-            </S.Cell>
-          )}
-          xLabelsStyle={commonStyles.xLabelsStyle}
-          yLabelsStyle={commonStyles.yLabelsStyle}
-          cellStyle={commonStyles.cellStyle}
+          cellRender={
+            (cellRender as any) ||
+            ((x: number, y: number, value: number) => (
+              <S.Cell title={String(value)} color={getContrastColor(colorScale(value))}>
+                {formatValue(value)}
+              </S.Cell>
+            ))
+          }
+          xLabelsStyle={styles?.xLabelsStyle || commonStyles.xLabelsStyle}
+          yLabelsStyle={styles?.yLabelsStyle || commonStyles.yLabelsStyle}
+          cellStyle={styles?.cellStyle || commonStyles.cellStyle}
           cellHeight={cellHeight}
         />
       </S.GridWrapper>
-      {xAxis?.label && <S.XAxisLabel>{xAxis.label}</S.XAxisLabel>}
-      <S.Legend>
-        <Divider />
-        <S.Gradient gradient={gradient} />
-        <S.LegendTicksWrapper>
-          {legendTicks.map((tick: string) => (
-            <S.Tick key={tick}>{tick}</S.Tick>
-          ))}
-        </S.LegendTicksWrapper>
-      </S.Legend>
+      {xAxis?.label && xAxisPosition === XAxisPosition.Bottom && <S.XAxisLabel>{xAxis.label}</S.XAxisLabel>}
+      {isLegendEnabled && (
+        <S.Legend>
+          <Divider />
+          <S.Gradient gradient={gradient} />
+          <S.LegendTicksWrapper>
+            {legendTicks.map((tick: string) => (
+              <S.Tick key={tick}>{tick}</S.Tick>
+            ))}
+          </S.LegendTicksWrapper>
+        </S.Legend>
+      )}
     </S.Wrapper>
   );
 }
+
+HeatMapChart.xAxisPositions = XAxisPosition;
