@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-cards@0.11.12...@sbercloud/uikit-react-cards@0.11.13) (2021-11-25)
+
+
+### Bug Fixes
+
+* card panel pagination ([9466207](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9466207a3539a080d1849414341ef23b7aa291f7))
+
+
+
+
+
 ## [0.11.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-cards@0.11.11...@sbercloud/uikit-react-cards@0.11.12) (2021-11-18)
 
 
