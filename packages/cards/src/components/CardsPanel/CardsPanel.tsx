@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Paginator, PaginatorProps } from '@sbercloud/uikit-react-paginator-private';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
@@ -32,6 +32,12 @@ export const CardsPanel = ({
       ? Math.ceil((children as Array<React.ReactNode>).length / (paginateProps.pageSize || 1))
       : 0;
 
+  useEffect(() => {
+    if (pagesAmount > 0 && page > pagesAmount - 1) {
+      setPage(pagesAmount - 1);
+    }
+  }, [pagesAmount, page]);
+
   if (paginateProps) {
     return (
       <S.CardsPanel {...extractSupportProps(rest)}>
@@ -40,7 +46,7 @@ export const CardsPanel = ({
             <Paginator
               {...paginateProps}
               pageCount={pagesAmount}
-              initialPage={page}
+              forcePage={page}
               onPageChange={({ selected }) => setPage(selected)}
             />
           </S.PageWrapper>
@@ -58,7 +64,7 @@ export const CardsPanel = ({
               placement={Paginator.placements.Left}
               {...paginateProps}
               pageCount={pagesAmount}
-              initialPage={page}
+              forcePage={page}
               onPageChange={({ selected }) => setPage(selected)}
             />
           </S.PageWrapper>
