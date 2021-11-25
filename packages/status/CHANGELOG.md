@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@2.0.9...@sbercloud/uikit-react-status@3.0.0) (2021-11-25)
+
+
+### Bug Fixes
+
+* deleting paddings for transparent statusTag ([1ef6732](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1ef6732740ceccdd8e9e8f4648d44d1e45738e19))
+
+
+### BREAKING CHANGES
+
+* deleting paddings for transparent statusTag
+
+
+
+
+
 ## [2.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@2.0.8...@sbercloud/uikit-react-status@2.0.9) (2021-11-17)
 
 
