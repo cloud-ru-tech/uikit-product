@@ -19,6 +19,7 @@ export const Wrapper = styled.span`
 
   &[data-variant='${Variant.Transparent}'] {
     background-color: var(${COLORS.TRANSPARENT_BG});
+    padding: 0;
   }
 
   &[data-variant='${Variant.Light}'] {
