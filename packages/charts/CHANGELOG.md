@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-charts@0.6.0...@sbercloud/uikit-react-charts@0.7.0) (2021-11-26)
+
+
+### Features
+
+* adds custom props to override styles and cellRender ([da71f07](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/da71f077c76dad160f0651d3af88023f053c150c))
+
+
+
+
+
 # [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-charts@0.5.10...@sbercloud/uikit-react-charts@0.6.0) (2021-11-19)
 
 
