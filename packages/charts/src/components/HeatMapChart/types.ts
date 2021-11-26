@@ -30,6 +30,7 @@ export type HeatMapChartOptions = {
 export type HeatMapChartProps = {
   data: number[][];
   options: HeatMapChartOptions;
+  className?: string;
 };
 
 export type HeatMapChartStyles = {

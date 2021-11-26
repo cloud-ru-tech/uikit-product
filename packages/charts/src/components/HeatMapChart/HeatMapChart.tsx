@@ -18,7 +18,7 @@ import * as S from './styled';
 import { COLORS } from './themes';
 import { HeatMapChartProps } from './types';
 
-export function HeatMapChart({ data, options, ...rest }: WithSupportProps<HeatMapChartProps>) {
+export function HeatMapChart({ data, options, className, ...rest }: WithSupportProps<HeatMapChartProps>) {
   const { title, height = DEFAULT_CHART_HEIGHT, axes = {}, formatter, legend, domain, cellRender, styles } = options;
   const { xAxis, yAxis } = axes;
   const xAxisPosition = xAxis?.position || XAxisPosition.Bottom;
@@ -66,7 +66,7 @@ export function HeatMapChart({ data, options, ...rest }: WithSupportProps<HeatMa
   );
 
   return (
-    <S.Wrapper {...extractSupportProps(rest)}>
+    <S.Wrapper className={className} {...extractSupportProps(rest)}>
       {title && <S.Title>{title}</S.Title>}
       {xAxis?.label && xAxisPosition === XAxisPosition.Top && <S.XAxisLabel>{xAxis.label}</S.XAxisLabel>}
       <S.GridWrapper displayAsGrid={!!yAxis?.label}>

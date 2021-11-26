@@ -12,15 +12,18 @@ export default {
   component: HeatMapChart,
 } as Meta;
 
-const Template: Story<HeatMapChartProps & { xAxisPosition: XAxisPosition; showLegend: boolean }> = ({
-  xAxisPosition,
-  showLegend,
-  ...args
-}) => {
+type StoryProps = HeatMapChartProps & {
+  xAxisPosition: XAxisPosition;
+  showLegend: boolean;
+  height?: number;
+};
+
+const Template: Story<StoryProps> = ({ xAxisPosition, showLegend, height, ...args }) => {
   const props = {
     ...args,
     options: {
       ...args.options,
+      height,
       legend: {
         ...args.options.legend,
         show: showLegend,
@@ -89,6 +92,13 @@ heatMapChart.argTypes = {
     name: '[Stories]: show or hide legend',
     control: {
       type: 'boolean',
+    },
+  },
+  height: {
+    defaultValue: 700,
+    name: '[Stories]: Height',
+    control: {
+      type: 'number',
     },
   },
 };

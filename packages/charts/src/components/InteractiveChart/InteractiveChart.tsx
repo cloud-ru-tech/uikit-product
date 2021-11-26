@@ -15,6 +15,7 @@ export type InteractiveChartProps = {
   data: uPlot.AlignedData;
   options?: Partial<uPlot.Options>;
   type?: PlotTypes;
+  className?: string;
 };
 
 function chooseBaseOptions(type: PlotTypes): uPlot.Options {
@@ -31,12 +32,13 @@ export function InteractiveChart({
   data,
   options,
   type = PlotTypes.Default,
+  className,
   ...rest
 }: WithSupportProps<InteractiveChartProps>) {
   const resultOptions = useMemo(() => merge({}, chooseBaseOptions(type), options), [options, type]);
 
   return (
-    <S.Wrapper {...extractSupportProps(rest)}>
+    <S.Wrapper className={className} {...extractSupportProps(rest)}>
       <UPlotReact options={resultOptions} data={data} />
     </S.Wrapper>
   );
