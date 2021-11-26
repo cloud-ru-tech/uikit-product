@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter-block@0.1.8...@sbercloud/uikit-react-filter-block@0.2.0) (2021-11-26)
+
+
+### Features
+
+* green theme ([d9343ea](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d9343ea7bdab773834d797c88d43f57832d73d30))
+
+
+
+
+
 ## [0.1.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter-block@0.1.7...@sbercloud/uikit-react-filter-block@0.1.8) (2021-11-17)
 
 
