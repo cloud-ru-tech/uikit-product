@@ -1,6 +1,7 @@
 import { css } from '@linaria/core';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
 const { COLORS_TABLE } = DEPRECATED_EXPORT_VARS;
 
@@ -26,6 +27,7 @@ export const tableClass = css`
   &.ag-theme-alpine {
     width: 100%;
     height: 100%;
+    font-family: inherit;
 
     .ag-horizontal-right-spacer:not(.ag-scroller-corner) {
       border-left: unset;
@@ -56,10 +58,8 @@ export const tableClass = css`
       }
 
       &-cell {
-        padding: 8px 12px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
+        ${TYPOGRAPHY_VARIABLES.TABLE_TEXT};
+        padding: 12px 8px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -68,9 +68,8 @@ export const tableClass = css`
         background-color: var(${COLORS_TABLE.TABLE_HEADER_BACKGROUND});
         border: none;
         &-cell {
+          ${TYPOGRAPHY_VARIABLES.TABLE_TEXT};
           color: var(${COLORS_TABLE.TABLE_HEADER_COLOR});
-          font-style: normal;
-          font-weight: normal;
           padding: 4px 8px;
           &-label {
             display: flex;
