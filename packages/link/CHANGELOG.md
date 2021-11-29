@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-link@2.0.12...@sbercloud/uikit-react-link@2.0.13) (2021-11-29)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-link
+
+
+
+
+
 ## [2.0.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-link@2.0.11...@sbercloud/uikit-react-link@2.0.12) (2021-11-17)
 
 

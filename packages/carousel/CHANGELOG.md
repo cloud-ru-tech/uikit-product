@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-carousel@0.3.1...@sbercloud/uikit-react-carousel@0.3.2) (2021-11-29)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-carousel
+
+
+
+
+
 ## [0.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-carousel@0.3.0...@sbercloud/uikit-react-carousel@0.3.1) (2021-11-17)
 
 

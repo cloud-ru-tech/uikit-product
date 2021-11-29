@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.13...@sbercloud/uikit-react-checkbox@1.0.14) (2021-11-29)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-checkbox
+
+
+
+
+
 ## [1.0.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.12...@sbercloud/uikit-react-checkbox@1.0.13) (2021-11-17)
 
 

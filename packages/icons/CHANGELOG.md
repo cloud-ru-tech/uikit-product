@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.5.1...@sbercloud/uikit-react-icons@2.6.0) (2021-11-29)
+
+
+### Features
+
+* added LogsInterface icon ([AICDC-4384](https://jira.sbercloud.tech/browse/AICDC-4384)) ([836ff31](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/836ff31eba029ed333224232982c975e23ce330d))
+
+
+
+
+
 ## [2.5.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.5.0...@sbercloud/uikit-react-icons@2.5.1) (2021-11-17)
 
 
