@@ -2,7 +2,7 @@ import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
 import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
-import { GridApi, GridReadyEvent, Module } from '@ag-grid-community/core';
+import { ColumnResizedEvent, GridApi, GridReadyEvent, Module } from '@ag-grid-community/core';
 import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
 import { RangeSelectionModule } from '@ag-grid-enterprise/range-selection';
 import { cx } from '@linaria/core';
@@ -39,9 +39,9 @@ export function TablePrivate({
   ...tableProps
 }: TablePrivateProps) {
   const [gridApi, setGridApi] = useState<GridApi>();
+  const [resizedColumns, setResizedColumns] = useState<{ [key: string]: string }>({});
 
   const handleGridReady = (params: GridReadyEvent) => {
-    params.api.sizeColumnsToFit();
     setGridApi(params.api);
     onGridReady?.(params);
   };
@@ -54,13 +54,53 @@ export function TablePrivate({
     return () => window.removeEventListener('resize', resize);
   }, [gridApi]);
 
+  useEffect(() => {
+    if (!gridApi) return;
+
+    const onColumnResizedHandler = debounce((ev: ColumnResizedEvent) => {
+      const colId = ev.column?.getId();
+      colId && setResizedColumns(cols => ({ ...cols, [colId]: colId }));
+    }, 200);
+
+    gridApi.addEventListener('columnResized', onColumnResizedHandler);
+
+    return () => gridApi.removeEventListener('columnResized', onColumnResizedHandler);
+  }, [gridApi, resizedColumns]);
+
   const colDefs = useMemo(() => {
-    if (checkboxSelection) {
-      return [{ ...TableCheckboxColumnDefinition }, ...columnDefs];
+    let colDefs: ColumnDefinition[] = columnDefs;
+
+    if (Object.keys(resizedColumns).length) {
+      colDefs = colDefs.map(col => {
+        const colId = col['colId'] || col['field'];
+
+        return {
+          ...col,
+          suppressSizeToFit: Boolean(colId && resizedColumns[colId]),
+        };
+      });
     }
 
-    return [...columnDefs];
-  }, [checkboxSelection, columnDefs]);
+    if (checkboxSelection) {
+      return [{ ...TableCheckboxColumnDefinition }, ...colDefs];
+    }
+
+    return [...colDefs];
+  }, [checkboxSelection, columnDefs, resizedColumns]);
+
+  useEffect(() => {
+    if (!gridApi) return;
+
+    const timeout = setTimeout(() => {
+      gridApi.sizeColumnsToFit();
+    }, 50);
+
+    return () => {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+    };
+  }, [gridApi, resizedColumns]);
 
   return (
     <div className={cx('ag-theme-alpine', tableClass, paidTableMinHeight, className)}>

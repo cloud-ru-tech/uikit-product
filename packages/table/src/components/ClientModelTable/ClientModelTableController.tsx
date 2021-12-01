@@ -51,7 +51,7 @@ export function ClientModelTableController<T>({
   const onColumnChangedHandler = useCallback(
     debounce(() => {
       if (!gridApi) return;
-      gridApi.sizeColumnsToFit();
+
       const totalPages = gridApi.paginationGetTotalPages();
       if (totalPages === 0) {
         gridApi.showNoRowsOverlay();
@@ -208,12 +208,8 @@ export function ClientModelTableController<T>({
   const moreActions = useMemo(() => {
     if (!gridApi || !bulkActions?.exportFileName) return undefined;
 
-    const columnKeys = [
-      ...gridApi
-        .getColumnDefs()
-        .filter((x: ClientModelTableControllerProps<T>['columnDefinitions'][number]) => !x.customMeta?.skipOnExport)
-        .map(x => x['colId'] || x['field']),
-    ];
+    const columnDefs = gridApi.getColumnDefs() as ClientModelTableControllerProps<T>['columnDefinitions'];
+    const columnKeys = columnDefs.filter(x => !x['customMeta']?.skipOnExport).map(x => x['colId'] || x['field']);
 
     return [
       {

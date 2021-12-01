@@ -285,9 +285,9 @@ withRowDetail.args = {
     {
       headerName: 'Доступ',
       field: 'access',
-      colId: 'access',
     },
     {
+      colId: 'menu',
       headerName: '',
       minWidth: 44,
       width: 44,
