@@ -63,6 +63,9 @@ export const tableClass = css`
         display: flex;
         flex-direction: row;
         align-items: center;
+        .ag-selection-checkbox {
+          padding-left: 3px;
+        }
       }
       &-header {
         background-color: var(${COLORS_TABLE.TABLE_HEADER_BACKGROUND});
