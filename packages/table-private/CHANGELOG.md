@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.4.3...@sbercloud/uikit-react-table-private@0.4.4) (2021-12-01)
+
+
+### Bug Fixes
+
+* checkbox cell padding ([1e09194](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1e091944c5f266eb5a9f0f4bcad01fa5de1e27d8))
+
+
+
+
+
 ## [0.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.4.2...@sbercloud/uikit-react-table-private@0.4.3) (2021-11-29)
 
 
