@@ -1,8 +1,9 @@
 import { ElementType, MouseEvent as ReactMouseEvent, useCallback, useState } from 'react';
 import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 
+import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
 import { CopiedInterfaceSVG, CopyInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { copyToClipboard, useLanguage } from '@sbercloud/uikit-utils';
+import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, extractCommonButtonProps, textProvider } from '../../helpers';
 import { WithTooltipProps } from '../../hocs';
