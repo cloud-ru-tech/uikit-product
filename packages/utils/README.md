@@ -75,32 +75,6 @@ excludeSupportProps(sampleProps) =>
     }   
 ```
 
-#### TruncateString
-
-```typescript jsx
-import { truncateString } from '@sbercloud/uikit-utils';
-
-truncateString('123'.repeat(100), 9) => '123123...'
-```
-
-### Function utils
-
-#### CopyToClipBoard
-
-```typescript jsx
-import { copyToClipboard } from '@sbercloud/uikit-utils';
-
-<button onClick={() => copyToClipboard("Text to copy")} />
-```
-
-#### DownloadFile
-
-```typescript jsx
-import { downloadFile } from '@sbercloud/uikit-utils';
-
-<button onClick={() => downloadFile("Content to be put into downloadable file", "downloadable.txt")} />
-```
-
 ### Hooks
 
 #### useLanguage
