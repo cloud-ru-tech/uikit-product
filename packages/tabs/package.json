@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tabs",
   "title": "React Tabs",
-  "version": "0.9.13",
+  "version": "0.9.14",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-theme": "0.28.1",
-    "@sbercloud/uikit-utils": "1.2.2"
+    "@sbercloud/uikit-utils": "2.0.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

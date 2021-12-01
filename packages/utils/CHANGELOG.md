@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@1.2.2...@sbercloud/uikit-utils@2.0.0) (2021-12-01)
+
+
+### Features
+
+* packages moved to https://git.sbercloud.tech/sbercloud-ui/frontend-tools ([6930cbe](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/6930cbe2ac9e201d1f4d374b359bd916111de2b9))
+
+
+### BREAKING CHANGES
+
+* packages moved to https://git.sbercloud.tech/sbercloud-ui/frontend-tools
+
+
+
+
+
 ## [1.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@1.2.1...@sbercloud/uikit-utils@1.2.2) (2021-11-17)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-form",
   "title": "React Form",
-  "version": "0.13.8",
+  "version": "0.13.9",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,10 +29,10 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-icons": "2.6.0",
-    "@sbercloud/uikit-react-tooltip": "2.0.15",
+    "@sbercloud/uikit-react-tooltip": "2.0.16",
     "@sbercloud/uikit-theme": "0.28.1",
     "@sbercloud/uikit-typography": "0.6.2",
-    "@sbercloud/uikit-utils": "1.2.2"
+    "@sbercloud/uikit-utils": "2.0.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

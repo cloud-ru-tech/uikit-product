@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.14.12...@sbercloud/uikit-react-toolbar@0.14.13) (2021-12-01)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-toolbar
+
+
+
+
+
 ## [0.14.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.14.11...@sbercloud/uikit-react-toolbar@0.14.12) (2021-11-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toolbar

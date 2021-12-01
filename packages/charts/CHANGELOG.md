@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-charts@0.7.0...@sbercloud/uikit-react-charts@0.7.1) (2021-12-01)
+
+
+### Bug Fixes
+
+* updated truncateString usage ([9d1eeb2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9d1eeb203cb66dec84275e38fb84537fead3b423))
+
+
+
+
+
 # [0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-charts@0.6.0...@sbercloud/uikit-react-charts@0.7.0) (2021-11-26)
 
 

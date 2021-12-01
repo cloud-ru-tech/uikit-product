@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-marker@1.0.3...@sbercloud/uikit-react-marker@1.0.4) (2021-12-01)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-marker
+
+
+
+
+
 ## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-marker@1.0.2...@sbercloud/uikit-react-marker@1.0.3) (2021-11-17)
 
 
