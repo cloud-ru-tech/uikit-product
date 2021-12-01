@@ -9,8 +9,9 @@ import { useCallback, useMemo } from 'react';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
-import { freeTableMinHeight, tableClass } from '../../helpers/tableClass';
+import { tableClass } from '../../helpers/tableClass';
 import { Texts, textProvider } from '../../helpers/texts-provider';
+import { freeTableFullWidthCell, freeTableMinHeight } from './styled';
 
 const AgGridModules = [ClientSideRowModelModule];
 
@@ -19,6 +20,7 @@ export interface TableFreePrivateProps extends AgGridReactProps {
   checkboxSelection?: boolean;
   columnDefs: NonNullable<AgGridReactProps['columnDefs']>;
   rowData: NonNullable<AgGridReactProps['rowData']>;
+  noRowsText?: string;
 }
 
 export function TableFreePrivate({
@@ -28,6 +30,7 @@ export function TableFreePrivate({
   onGridReady,
   checkboxSelection = false,
   className,
+  noRowsText,
   ...tableProps
 }: TableFreePrivateProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -49,7 +52,7 @@ export function TableFreePrivate({
 
   return (
     <>
-      <div className={cx('ag-theme-alpine', tableClass, freeTableMinHeight, className)}>
+      <div className={cx('ag-theme-alpine', tableClass, freeTableMinHeight, freeTableFullWidthCell, className)}>
         <AgGridReact
           modules={AgGridModules}
           gridOptions={{
@@ -71,7 +74,7 @@ export function TableFreePrivate({
           columnDefs={colDefs}
           domLayout='autoHeight'
           enableCellTextSelection
-          overlayNoRowsTemplate={textProvider(languageCode, Texts.NoRowsInitially)}
+          localeText={{ noRowsToShow: noRowsText || textProvider(languageCode, Texts.NoRowsInitially) }}
           onFirstDataRendered={onFirstDataRendered}
           onGridReady={handleGridReady}
           onGridSizeChanged={params => {

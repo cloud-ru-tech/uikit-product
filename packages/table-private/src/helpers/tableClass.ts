@@ -5,24 +5,6 @@ import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
 const { COLORS_TABLE } = DEPRECATED_EXPORT_VARS;
 
-export const freeTableMinHeight = css`
-  &.ag-theme-alpine {
-    .ag-center-cols-clipper,
-    .ag-center-cols-container {
-      min-height: 50px;
-    }
-  }
-`;
-
-export const paidTableMinHeight = css`
-  &.ag-theme-alpine {
-    .ag-center-cols-clipper,
-    .ag-center-cols-container {
-      min-height: 150px;
-    }
-  }
-`;
-
 export const tableClass = css`
   &.ag-theme-alpine {
     width: 100%;

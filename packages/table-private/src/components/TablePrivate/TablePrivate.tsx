@@ -10,10 +10,11 @@ import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useState } from 'react';
 
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
-import { paidTableMinHeight, tableClass } from '../../helpers/tableClass';
+import { tableClass } from '../../helpers/tableClass';
 import { ColumnDefinition } from '../../helpers/types';
 import { NoRows } from '../overlays';
 import { NoDataReasons } from '../overlays/NoRows/types';
+import { paidTableMinHeight } from './styled';
 
 export type TablePrivateProps = AgGridReactProps & {
   className?: string;

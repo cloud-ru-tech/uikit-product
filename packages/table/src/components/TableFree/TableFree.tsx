@@ -19,6 +19,7 @@ export function TableFree({
   checkboxSelection = false,
   className,
   pageSize,
+  noRowsText,
   ...rest
 }: WithSupportProps<ITableFreeProps>) {
   const [gridApi, setGridApi] = useState<ITableFreeProps['api']>();
@@ -46,6 +47,7 @@ export function TableFree({
         checkboxSelection={checkboxSelection}
         onGridReady={handleGridReady}
         onComponentStateChanged={handleComponentStateChanged}
+        noRowsText={noRowsText}
       />
       {!!pageSize && totalPages > 1 && (
         <S.PaginationWrapper>

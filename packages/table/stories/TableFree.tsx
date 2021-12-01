@@ -1,6 +1,9 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
+import { ButtonIcon } from '@sbercloud/uikit-react-button';
+import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
+import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -42,6 +45,7 @@ export const free = Template.bind({});
 free.args = {
   checkboxSelection: true,
   pageSize: undefined,
+  noRowsText: 'Совсем нет данных',
   rowData: [
     { lastName: 'Ермолаев', firstName: 'Матвей', access: 'granted' },
     { lastName: 'Львова', firstName: 'София', access: 'granted' },
@@ -77,6 +81,28 @@ free.args = {
       headerName: 'Доступ',
       field: 'access',
       colId: 'access',
+    },
+    {
+      maxWidth: 40,
+      sortable: false,
+      cellRendererFramework: () => {
+        const actions = [
+          {
+            name: 'Изменить права',
+            onClick: () => alert('Права изменены'),
+          },
+          {
+            name: 'Отозвать права',
+            onClick: () => alert('Права отозваны'),
+          },
+        ];
+
+        return (
+          <DropdownMenu actions={actions}>
+            <ButtonIcon icon={<MoreInterfaceSVG />} tooltip={{ content: 'Действия' }} />
+          </DropdownMenu>
+        );
+      },
     },
   ],
 };
