@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.29.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.28.1...@sbercloud/uikit-theme@0.29.0) (2021-12-02)
+
+
+### Features
+
+* TableFree border ([a635f4b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/a635f4bbd793010096d5c56e08f32d1c41ecc251))
+
+
+
+
+
 ## [0.28.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.28.0...@sbercloud/uikit-theme@0.28.1) (2021-11-17)
 
 

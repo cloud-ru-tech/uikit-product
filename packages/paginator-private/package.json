@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-paginator-private",
   "title": "React Paginator Private",
-  "version": "0.5.19",
+  "version": "0.5.20",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-icons": "2.6.0",
-    "@sbercloud/uikit-theme": "0.28.1",
+    "@sbercloud/uikit-theme": "0.29.0",
     "react-paginate": "7.1.5"
   },
   "devDependencies": {

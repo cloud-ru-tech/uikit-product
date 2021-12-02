@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-no-data-page@0.7.10...@sbercloud/uikit-react-no-data-page@0.7.11) (2021-12-02)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-no-data-page
+
+
+
+
+
 ## [0.7.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-no-data-page@0.7.9...@sbercloud/uikit-react-no-data-page@0.7.10) (2021-11-17)
 
 

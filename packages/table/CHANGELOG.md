@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.25.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.24.10...@sbercloud/uikit-react-table@0.25.0) (2021-12-02)
+
+
+### Features
+
+* free table no rows text ([062704c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/062704cae439cfb22f516381d5df7c3e154bd4dd))
+
+
+
+
+
 ## [0.24.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.24.9...@sbercloud/uikit-react-table@0.24.10) (2021-12-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
