@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-charts@0.7.1...@sbercloud/uikit-react-charts@0.8.0) (2021-12-02)
+
+
+### Features
+
+* adds className prop to charts ([7c50f43](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/7c50f43a9ef1933a658bc308f1439fd27f3520b9))
+
+
+
+
+
 ## [0.7.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-charts@0.7.0...@sbercloud/uikit-react-charts@0.7.1) (2021-12-01)
 
 
