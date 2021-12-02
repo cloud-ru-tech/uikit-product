@@ -458,6 +458,7 @@ const COLORS_LOGS_VIEW = {
 };
 
 const COLORS_TABLE = {
+  TABLE_BORDER: '--table-border',
   TABLE_ROW_BACKGROUND: '--table-row-background',
   TABLE_ROW_COLOR: '--table-row-color',
   TABLE_ROW_ODD_BACKGROUND: '--table-row-odd-background',

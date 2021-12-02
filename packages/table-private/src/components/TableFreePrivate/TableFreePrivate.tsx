@@ -11,7 +11,7 @@ import { useLanguage } from '@sbercloud/uikit-utils';
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
 import { tableClass } from '../../helpers/tableClass';
 import { Texts, textProvider } from '../../helpers/texts-provider';
-import { freeTableFullWidthCell, freeTableMinHeight } from './styled';
+import { freeTableBorder, freeTableFullWidthCell, freeTableMinHeight } from './styled';
 
 const AgGridModules = [ClientSideRowModelModule];
 
@@ -52,7 +52,16 @@ export function TableFreePrivate({
 
   return (
     <>
-      <div className={cx('ag-theme-alpine', tableClass, freeTableMinHeight, freeTableFullWidthCell, className)}>
+      <div
+        className={cx(
+          'ag-theme-alpine',
+          tableClass,
+          freeTableMinHeight,
+          freeTableFullWidthCell,
+          freeTableBorder,
+          className,
+        )}
+      >
         <AgGridReact
           modules={AgGridModules}
           gridOptions={{
