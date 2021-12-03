@@ -41,13 +41,14 @@ export const contentClassname = css`
   bottom: auto;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  width: 316px;
+  width: 380px;
   padding: 32px;
   border: 0;
   outline: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   background-color: var(${COLORS_MODAL.BG});
+  box-sizing: border-box;
 `;
 
 export const overlayClassname = css`

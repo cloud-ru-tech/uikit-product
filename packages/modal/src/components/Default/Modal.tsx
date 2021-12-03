@@ -75,7 +75,7 @@ export const MODAL_CLOSE_TYPE = {
 } as const;
 export type ModalCloseType = typeof MODAL_CLOSE_TYPE[keyof typeof MODAL_CLOSE_TYPE];
 
-export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
+export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal, 'setAppElement'> = props => {
   const {
     onRequestClose,
     title,
@@ -199,3 +199,5 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> = props => {
     </RCModal>
   );
 };
+
+Modal.setAppElement = RCModal.setAppElement;
