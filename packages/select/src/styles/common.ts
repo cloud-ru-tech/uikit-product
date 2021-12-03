@@ -144,10 +144,10 @@ export const styles = (typeStyles?: Styles): Styles => ({
     lineHeight: '16px',
     color: `var(${COLORS_SELECT.BACKGROUND})`,
   }),
-  group: (styles: CSSProperties): CSSProperties & { '&:not(:first-child)': CSSProperties } => ({
+  group: (styles: CSSProperties): CSSProperties & { '&:not(:first-of-type)': CSSProperties } => ({
     ...styles,
     padding: 0,
-    '&:not(:first-child)': {
+    '&:not(:first-of-type)': {
       borderTop: '1px solid #e4e4e4',
     },
   }),
