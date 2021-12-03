@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.5.0...@sbercloud/uikit-react-table-private@0.6.0) (2021-12-03)
+
+
+### Features
+
+* one of colId or field prop is required in ColumnDefinition | manually resized columns won't change on window resize ([cb276fb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/cb276fb555d126d9577c1e57d5a63cda1f2967ad))
+
+
+### BREAKING CHANGES
+
+* one of colId or field prop is required in ColumnDefinition | manually resized columns won't change on window resize
+
+
+
+
+
 # [0.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.4.5...@sbercloud/uikit-react-table-private@0.5.0) (2021-12-02)
 
 
