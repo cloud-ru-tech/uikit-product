@@ -11,7 +11,7 @@ import { useLanguage } from '@sbercloud/uikit-utils';
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
 import { tableClass } from '../../helpers/tableClass';
 import { Texts, textProvider } from '../../helpers/texts-provider';
-import { freeTableBorder, freeTableFullWidthCell, freeTableMinHeight } from './styled';
+import { freeTableBorder, freeTableCenteredCell, freeTableFullWidthCell, freeTableMinHeight } from './styled';
 
 const AgGridModules = [ClientSideRowModelModule];
 
@@ -59,6 +59,7 @@ export function TableFreePrivate({
           freeTableMinHeight,
           freeTableFullWidthCell,
           freeTableBorder,
+          freeTableCenteredCell,
           className,
         )}
       >

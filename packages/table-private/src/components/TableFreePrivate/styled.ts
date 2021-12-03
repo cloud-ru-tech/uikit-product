@@ -32,3 +32,10 @@ export const freeTableBorder = css`
     border-radius: 4px;
   }
 `;
+
+export const freeTableCenteredCell = css`
+  &.ag-theme-alpine .ag-cell-value .ag-react-container {
+    display: flex;
+    align-items: center;
+  }
+`;

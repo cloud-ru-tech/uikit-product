@@ -89,7 +89,7 @@ export const DropdownMenu = ({ actions, children, onToggle, ...rest }: WithSuppo
         </TooltipMenuPrivate>
       }
     >
-      <span {...extractSupportProps(rest)}>{children}</span>
+      <S.Wrapper {...extractSupportProps(rest)}>{children}</S.Wrapper>
     </TooltipPrivate>
   );
 };
