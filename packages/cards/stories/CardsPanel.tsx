@@ -146,18 +146,13 @@ cardsPanel.parameters = {
   },
 };
 cardsPanel.argTypes = {
-  pageCount: {
-    control: {
-      type: 'number',
-    },
-  },
   usePagination: {
     control: {
       type: 'boolean',
     },
   },
   useSearch: {
-    name: '[Stories]: Enable Seach Toolbar',
+    name: '[Stories]: Enable Search Toolbar',
     control: {
       type: 'boolean',
     },

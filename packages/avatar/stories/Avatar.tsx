@@ -56,12 +56,6 @@ avatar.argTypes = {
       options: [Avatar.shapes.Square, Avatar.shapes.Circle],
     },
   },
-  placeholder: {
-    control: {
-      type: 'radio',
-      options: [Avatar.placeholderIcons.Company, Avatar.placeholderIcons.User],
-    },
-  },
   color: {
     control: {
       type: 'radio',

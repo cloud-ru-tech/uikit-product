@@ -107,7 +107,7 @@ const Template: Story<CarouselProps> = ({ ...args }) => (
 export const carousel = Template.bind({});
 carousel.args = {};
 carousel.argTypes = {
-  title: {
+  carouselTitle: {
     control: {
       type: 'text',
     },
