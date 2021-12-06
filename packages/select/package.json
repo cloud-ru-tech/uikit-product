@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-select",
   "title": "React Select",
-  "version": "0.20.5",
+  "version": "0.20.6",
   "sideEffects": [
     "*.css",
     "*.woff",

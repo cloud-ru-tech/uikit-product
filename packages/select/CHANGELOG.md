@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.20.5...@sbercloud/uikit-react-select@0.20.6) (2021-12-06)
+
+
+### Bug Fixes
+
+* group styles console error ([2f4adb8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2f4adb88c72527378d64e9928d64c5ccd835f39d))
+
+
+
+
+
 ## [0.20.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.20.4...@sbercloud/uikit-react-select@0.20.5) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
