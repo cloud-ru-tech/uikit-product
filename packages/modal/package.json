@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-modal",
   "title": "React Modal",
-  "version": "0.15.22",
+  "version": "0.15.23",
   "sideEffects": [
     "*.css",
     "*.woff",

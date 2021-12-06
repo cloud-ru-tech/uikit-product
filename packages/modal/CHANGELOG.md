@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.23](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-modal@0.15.22...@sbercloud/uikit-react-modal@0.15.23) (2021-12-06)
+
+
+### Bug Fixes
+
+* static setAppElement and box-sizing style ([5c82f26](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/5c82f2688007e4f0c5ea7af1111970c097bd8248))
+
+
+
+
+
 ## [0.15.22](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-modal@0.15.21...@sbercloud/uikit-react-modal@0.15.22) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-modal
