@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.21](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@2.0.20...@sbercloud/uikit-react-text-field@2.0.21) (2021-12-06)
+
+
+### Bug Fixes
+
+* multiline mode has been fixed for 'without wrapper' case ([867a145](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/867a145f25901cd5f3f84591f1cb0bcdbe164dda))
+
+
+
+
+
 ## [2.0.20](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@2.0.19...@sbercloud/uikit-react-text-field@2.0.20) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-text-field
