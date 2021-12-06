@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { css } from '@linaria/core';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
@@ -7,9 +8,14 @@ import componentReadme from '../README.md';
 import { Document, DocumentProps } from '../src';
 
 export default {
-  title: 'Not stable/Document',
+  title: 'Components/Document',
   component: Document,
 } as Meta;
+
+const documentSmallClassName = css`
+  margin-bottom: 20px;
+  max-width: 356px;
+`;
 
 const documentClassName = css`
   margin-bottom: 20px;
@@ -39,14 +45,27 @@ const DOCUMENTS: DocumentProps[] = [
   {
     file: {
       name: 'test.csv',
-      displayName: 'super-duper very long custom document title',
+      displayName: 'super-duper very long custom document title with max-width',
       size: 764456,
       MIMEType: 'text/csv',
     },
+    removeButton: {
+      onClick() {},
+      tooltip: {
+        content: 'Удалить',
+      },
+    },
+    className: documentSmallClassName,
   },
   {
     file: {
       name: 'test.jpg',
+    },
+    removeButton: {
+      onClick() {},
+      tooltip: {
+        content: 'Удалить',
+      },
     },
     disabled: true,
   },
@@ -55,7 +74,12 @@ const DOCUMENTS: DocumentProps[] = [
 const Template: Story<DocumentProps> = ({ disabled }) => (
   <>
     {DOCUMENTS.map(doc => (
-      <Document key={doc.file.name} {...doc} disabled={doc.disabled || disabled} className={documentClassName} />
+      <Document
+        key={doc.file.name}
+        {...doc}
+        disabled={doc.disabled || disabled}
+        className={doc.className || documentClassName}
+      />
     ))}
   </>
 );
@@ -74,6 +98,7 @@ document.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  badges: [BADGE.STABLE],
   design: {
     name: 'Figma',
     type: 'figma',

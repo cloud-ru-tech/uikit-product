@@ -12,12 +12,10 @@ GREEN_DARK_THEME;
 
 export const wrapClassName = css`
   display: block;
-  height: 71px;
-  width: 356px;
 `;
 
 export const Document = styled.div`
-  padding: 16px 16px;
+  padding: 15px 16px 15px 12px;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -31,7 +29,7 @@ export const Document = styled.div`
 
   &:hover {
     background-color: var(${COLORS.BG_HOVER});
-    border-color: var(${COLORS.BORDER_ACTIVE});
+    border-color: var(${COLORS.BORDER_HOVER});
     color: var(${COLORS.PRIMARY_COLOR_HOVER});
   }
 
@@ -41,7 +39,7 @@ export const Document = styled.div`
     color: var(${COLORS.PRIMARY_COLOR_ACTIVE});
   }
 
-  &[data-disabled='true'] {
+  &[data-disabled] {
     border-color: var(${COLORS.PRIMARY_COLOR_DISABLED});
     color: var(${COLORS.PRIMARY_COLOR_DISABLED});
     background-color: var(${COLORS.BG});
@@ -59,8 +57,12 @@ export const iconClassName = css`
   flex-shrink: 0;
 `;
 
-export const Content = styled.span`
+export const Content = styled.div`
   width: calc(100% - 44px);
+
+  &[data-has-remove] {
+    width: calc(100% - 76px);
+  }
 `;
 
 export const Name = styled(Text2)`
@@ -82,4 +84,8 @@ export const Info = styled(Text4)`
       }
     }
   }
+`;
+
+export const removeButtonClassName = css`
+  margin-left: 12px;
 `;
