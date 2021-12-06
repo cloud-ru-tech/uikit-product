@@ -9,37 +9,49 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Container = styled.div<{
-  multiline: boolean;
-}>`
+export const Container = styled.div`
   width: 100%;
   border-radius: 4px;
   padding: 8px 8px 8px 12px;
   box-sizing: border-box;
   background-color: var(${COLORS.BACKGROUND_COLOR});
-  display: ${({ multiline }) => (multiline ? 'initial' : 'flex')};
-  flex-direction: ${({ multiline }) => (multiline ? 'initial' : 'row-reverse')};
-  justify-content: ${({ multiline }) => (multiline ? 'initial' : 'space-between')};
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 
   ${TYPOGRAPHY_VARIABLES.TEXT_2}
 `;
 
-export const StyledText = styled.span<{
-  multiline: boolean;
-}>`
+export const StyledText = styled.span`
   margin: 4px 8px 0 0;
   overflow: hidden;
   text-overflow: ellipsis;
   overflow-wrap: break-word;
   color: var(${COLORS.COLOR});
-  white-space: ${({ multiline }) => (multiline ? 'pre-wrap' : 'nowrap')};
+  white-space: nowrap;
+
+  &[data-multiline] {
+    white-space: pre-wrap;
+  }
 `;
 
 export const IconsContainer = styled.div`
   display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
   float: right;
 
   > * {
+    margin-bottom: 0;
     margin-left: 4px;
+  }
+
+  &[data-multiline] {
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    > * {
+      margin-bottom: 4px;
+      margin-left: 0;
+    }
   }
 `;

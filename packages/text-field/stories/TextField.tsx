@@ -12,11 +12,8 @@ import componentReadme from '../README.md';
 import { TextField, TextFieldProps } from '../src';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  margin: 20px;
+  box-sizing: border-box;
+  padding: 16px;
   border: 1px solid var(${EXPORT_VARS.GREY[100]});
   border-radius: 10px;
   background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});

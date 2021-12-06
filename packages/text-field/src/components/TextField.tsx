@@ -14,12 +14,12 @@ export type TextFieldProps = WithSupportProps<{
 
 export function TextField({ className, multiline = false, text, extraIcons, ...rest }: TextFieldProps) {
   return (
-    <Container className={className} multiline={multiline} {...extractSupportProps(rest)}>
-      <IconsContainer>
+    <Container className={className} {...extractSupportProps(rest)}>
+      <IconsContainer data-multiline={multiline || undefined}>
         {extraIcons}
         <CopyButton text={text} />
       </IconsContainer>
-      <StyledText multiline={multiline}>{text}</StyledText>
+      <StyledText data-multiline={multiline || undefined}>{text}</StyledText>
     </Container>
   );
 }
