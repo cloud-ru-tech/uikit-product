@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.11.7...@sbercloud/uikit-react-dropdown@0.11.8) (2021-12-07)
+
+
+### Bug Fixes
+
+* centered dropdown content ([CP-3533](https://jira.sbercloud.tech/browse/CP-3533)) ([2f8c694](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2f8c694f4eeec4c10d32776f58f9e61b98495c62))
+
+
+
+
+
 ## [0.11.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.11.6...@sbercloud/uikit-react-dropdown@0.11.7) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-dropdown
