@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.11.8...@sbercloud/uikit-react-dropdown@0.12.0) (2021-12-08)
+
+
+### Features
+
+* add scroll to and classname to dropdown menu ([CP-3581](https://jira.sbercloud.tech/browse/CP-3581)) ([70fbf05](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/70fbf0581c1b6271fa2e2caaf2265a46685ab1b9))
+
+
+
+
+
 ## [0.11.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.11.7...@sbercloud/uikit-react-dropdown@0.11.8) (2021-12-07)
 
 
