@@ -1,3 +1,4 @@
+import { cx } from '@linaria/core';
 import { useCallback, useState } from 'react';
 
 import {
@@ -26,6 +27,7 @@ export type TDropdownMenuCustomActions = (props: TDropdownMenuActionProps) => Re
 export interface DropdownMenuProps {
   actions: TDropdownMenuCustomActions | TDropdownMenuActionType[] | React.ReactNode;
   children: React.ReactNode;
+  dropdownMenuClassName?: string;
   onToggle?: (isOpen: boolean) => void;
 }
 
@@ -33,7 +35,13 @@ export const DropdownItem: React.FC<TooltipMenuItemPrivateProps> = props => (
   <TooltipMenuItemPrivate className={S.menuItemClassName} {...props} />
 );
 
-export const DropdownMenu = ({ actions, children, onToggle, ...rest }: WithSupportProps<DropdownMenuProps>) => {
+export const DropdownMenu = ({
+  actions,
+  children,
+  onToggle,
+  dropdownMenuClassName,
+  ...rest
+}: WithSupportProps<DropdownMenuProps>) => {
   const [on, setOn] = useState(false);
   const toggleDropdown = useCallback(
     on => {
@@ -61,7 +69,10 @@ export const DropdownMenu = ({ actions, children, onToggle, ...rest }: WithSuppo
       delayShow={0}
       delayHide={0}
       tooltip={
-        <TooltipMenuPrivate data-test-id='dropdown__tooltip-menu' className={S.menuClassName}>
+        <TooltipMenuPrivate
+          data-test-id='dropdown__tooltip-menu'
+          className={cx(S.menuClassName, dropdownMenuClassName)}
+        >
           {isActionsArray &&
             (actions as TDropdownMenuActionType[]).map((menuItem, index) => {
               const { name, id } = menuItem;

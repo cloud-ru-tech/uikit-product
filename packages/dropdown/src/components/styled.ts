@@ -15,6 +15,9 @@ export const containerClassName = css`
 
 export const menuClassName = css`
   background-color: var(${COLORS.MENU_BACKGROUND_COLOR});
+  // 5 elements
+  max-height: 188px;
+  overflow-y: auto;
 `;
 
 export const menuItemClassName = css`

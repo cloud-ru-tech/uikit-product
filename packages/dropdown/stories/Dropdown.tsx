@@ -89,6 +89,24 @@ const Template: Story<DropdownMenuProps> = () => {
         actions={[
           { name: 'Загрузить файл', onClick: () => {} },
           { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить файл', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {} },
         ]}
         onToggle={onToggle}
       >
