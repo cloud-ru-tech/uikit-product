@@ -88,7 +88,7 @@ const Template: Story<DropdownMenuProps> = () => {
       <DropdownMenu
         actions={[
           { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
+          { name: 'Загрузить документ', onClick: () => {}, disabled: true },
           { name: 'Загрузить файл', onClick: () => {} },
           { name: 'Загрузить документ', onClick: () => {} },
           { name: 'Загрузить файл', onClick: () => {} },

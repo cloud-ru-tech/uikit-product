@@ -9,12 +9,12 @@ GREEN_THEME;
 GREEN_DARK_THEME;
 
 export const containerClassName = css`
-  color: var(${COLORS.TEXT_COLOR});
+  color: var(${COLORS.TEXT});
   padding: 0;
 `;
 
 export const menuClassName = css`
-  background-color: var(${COLORS.MENU_BACKGROUND_COLOR});
+  background-color: var(${COLORS.MENU_BACKGROUND});
   // 5 elements
   max-height: 188px;
   overflow-y: auto;
@@ -22,7 +22,17 @@ export const menuClassName = css`
 
 export const menuItemClassName = css`
   &:hover {
-    background-color: var(${COLORS.MENU_ITEM_HOVER_BACKGROUND_COLOR});
+    background-color: var(${COLORS.MENU_ITEM_HOVER_BACKGROUND});
+  }
+
+  &[data-disabled],
+  &[data-disabled]:hover {
+    background-color: unset;
+    color: var(${COLORS.TEXT_DISABLED});
+  }
+
+  &[data-disabled]:hover {
+    cursor: not-allowed;
   }
 `;
 
