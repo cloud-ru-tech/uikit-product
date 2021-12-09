@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-document",
   "title": "React Document",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "sideEffects": [
     "*.css",
     "*.woff",
