@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.12.0...@sbercloud/uikit-react-dropdown@0.13.0) (2021-12-09)
+
+
+### Features
+
+* possibility to disable menu item ([52ae429](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/52ae429c1c199b7667931bf6269d5fe710bbac3b))
+
+
+
+
+
 # [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.11.8...@sbercloud/uikit-react-dropdown@0.12.0) (2021-12-08)
 
 
