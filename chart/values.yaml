@@ -1,9 +1,9 @@
 replicaCount: 1
 
 image:
-  repository: registry.ai.4cloud.cf/uikit
+  repository: cr.msk.sbercloud.ru/aicloud-services/uikit2.0
   pullPolicy: Always
-  tag: "0.1.5"
+  tag: "a635f4bb"
 
 service:
   type: ClusterIP
@@ -12,6 +12,6 @@ service:
 ingress:
   enabled: false
   annotations: {}
-  host: uikit.test.devops.sbercloud.dev
+  host: uikit.sbercloud.tech
 
 
