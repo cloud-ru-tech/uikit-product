@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-chip",
   "title": "React Chip",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",

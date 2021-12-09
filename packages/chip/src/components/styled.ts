@@ -48,13 +48,12 @@ export const ChipWrapper = styled.label`
   &[data-variant='${Variant.Transparent}'] {
     background-color: transparent;
 
-    &:hover {
+    &:hover:not([data-disabled]) {
       background-color: var(${COLORS.DEFAULT_BG});
     }
 
     &[data-disabled] {
       color: var(${COLORS.DISABLED_LABEL});
-      background-color: var(${COLORS.DEFAULT_BG});
     }
 
     &[data-checked] {

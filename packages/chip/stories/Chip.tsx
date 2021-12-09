@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { useEffect } from '@storybook/addons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
@@ -8,16 +9,16 @@ import componentReadme from '../README.md';
 import { Chip, ChipProps } from '../src';
 
 export default {
-  title: 'Not stable/Chip',
+  title: 'Components/Chip',
   component: Chip,
 } as Meta;
 
-const Template: Story<ChipProps> = ({ checked, handleChange, ...args }) => {
-  const [isChecked, setIsChecked] = useState(!!checked);
+const Template: Story<ChipProps> = ({ checked, ...args }) => {
+  const [isChecked, setIsChecked] = useState(checked);
 
   useEffect(() => setIsChecked(checked), [checked]);
 
-  return <Chip handleChange={checked => setIsChecked(checked)} checked={isChecked} {...args} />;
+  return <Chip {...args} handleChange={checked => setIsChecked(checked)} checked={isChecked} />;
 };
 
 export const chip = Template.bind({});
@@ -31,6 +32,7 @@ chip.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  badges: [BADGE.STABLE],
   design: {
     name: 'Figma',
     type: 'figma',

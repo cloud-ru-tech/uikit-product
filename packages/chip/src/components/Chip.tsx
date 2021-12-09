@@ -8,7 +8,7 @@ import * as S from './styled';
 export type ChipProps = {
   label: string;
   checked: boolean;
-  handleChange(checked: boolean, e: ChangeEvent<HTMLInputElement>): void;
+  handleChange(checked: boolean, e?: ChangeEvent<HTMLInputElement>): void;
   variant?: Variant;
   disabled?: boolean;
   size?: Size;
@@ -21,7 +21,7 @@ export function Chip({
   handleChange,
   variant = Variant.Primary,
   size = Size.Medium,
-  className = '',
+  className,
   disabled = false,
   ...rest
 }: WithSupportProps<ChipProps>) {
