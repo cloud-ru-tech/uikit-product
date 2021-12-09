@@ -2,11 +2,11 @@
 
 Ведется автоматическое версионирование на уровне пакетов (semantic).
 
-## [Storybook [Latest master].](https://uikit.test.devops.sbercloud.dev/)
+## [Storybook [Latest master].](https://uikit.sbercloud.tech/)
 
 ## [Storybook [Poc stand].](http://192.168.67.22:32333/)
 
-## Обязательно к изучению до начала работы: [Contribution Guide](CONTRIBUTING.md). Если после этого остались вопросы напишите в слак [канал](https://ai-sbercloud.slack.com/archives/C0114075H1B).
+## Обязательно к изучению до начала работы: [Contribution Guide](CONTRIBUTING.md). Если после этого остались вопросы напишите в slack [канал](https://ai-sbercloud.slack.com/archives/C0114075H1B).
 
 ## Установка на локальный проект
 
