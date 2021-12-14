@@ -2,13 +2,13 @@ import isEqual from 'lodash.isequal';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRifm } from 'rifm';
 
-import { InputAutosize } from '@sbercloud/uikit-react-input';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { INPUT_PLACEHOLDER } from '../../helpers/constants';
 import { parseDigits } from '../../helpers/parseDigits';
 import { splitDateFormatter } from '../../helpers/splitDateFormatter';
 import { TSplitDateType, TimeInputProps } from '../../helpers/types';
+import { InputAutosize } from '../InputAutosize';
 import * as S from './styled';
 
 interface IHiddenInputProps {
