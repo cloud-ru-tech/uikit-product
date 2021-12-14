@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-datepicker@0.10.18...@sbercloud/uikit-react-datepicker@0.11.0) (2021-12-14)
+
+
+### Bug Fixes
+
+* delete input autosize component ([e4cbd8a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/e4cbd8abd25812470fdf05bd34fa934f8aac7d65))
+
+
+### BREAKING CHANGES
+
+* delete input autosize component
+
+
+
+
+
 ## [0.10.18](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-datepicker@0.10.17...@sbercloud/uikit-react-datepicker@0.10.18) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-datepicker

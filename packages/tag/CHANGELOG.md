@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.8.13...@sbercloud/uikit-react-tag@0.9.0) (2021-12-14)
+
+
+### Bug Fixes
+
+* input tag component has been deleted ([138a6ba](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/138a6badeb89555774cfd1fe76837b895bfcd43b))
+
+
+### BREAKING CHANGES
+
+* input tag component has been deleted
+
+
+
+
+
 ## [0.8.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.8.12...@sbercloud/uikit-react-tag@0.8.13) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tag

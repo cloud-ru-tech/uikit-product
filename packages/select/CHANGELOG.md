@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.20.7...@sbercloud/uikit-react-select@0.21.0) (2021-12-14)
+
+
+### Bug Fixes
+
+* input tag component has been deleted ([138a6ba](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/138a6badeb89555774cfd1fe76837b895bfcd43b))
+
+
+### BREAKING CHANGES
+
+* input tag component has been deleted
+
+
+
+
+
 ## [0.20.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.20.6...@sbercloud/uikit-react-select@0.20.7) (2021-12-06)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
