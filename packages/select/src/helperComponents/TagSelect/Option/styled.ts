@@ -66,7 +66,7 @@ export const colorPickerClassName = css`
 `;
 
 export const NotValidMessage = styled.div`
-  ${TEXT_4}
+  ${TEXT_4};
   padding-top: 8px;
   color: var(${COLORS_SELECT.TAG_NAME_NOT_VALID_MESSAGE});
 `;

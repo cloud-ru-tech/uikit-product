@@ -87,13 +87,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
       <StyledTagOption data-is-edit={isEdit} ref={innerRef} onBlur={handleBlur}>
         {isEdit ? (
           <>
-            <TagName
-              tag={tag}
-              editableTagName={editableTagName}
-              onChange={(e: { target: { value: string } }) => {
-                setTag({ ...tag, label: e.target.value });
-              }}
-            />
+            <TagName tag={tag} />
             <StyledTagButtonWrapper>
               <ColorPicker
                 dropdownPlacement={colorDropdownPlacement}

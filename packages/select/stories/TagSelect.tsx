@@ -81,18 +81,11 @@ const Template: Story = (args): JSX.Element => {
 
 export const tagSelect = Template.bind({});
 tagSelect.args = {
-  editableTagName: false,
-  validator: (tagName: string) => tagName.length <= 16 && /^[A-Za-z0-9_\.-]+$/.test(tagName),
+  validator: (tagName: string) => tagName.length <= 16 && /^[A-Za-z0-9_.-]+$/.test(tagName),
   validateMessage:
     'Можно использовать строчные буквы латинского алфавита (a-z); цифры (0-9); символ тире (-). Начинаться обязательно должно с буквы, заканчиваться может буквой или цифрой, максимум 16 символов. Например: test-1',
 };
-tagSelect.argTypes = {
-  editableTagName: {
-    control: {
-      type: 'boolean',
-    },
-  },
-};
+tagSelect.argTypes = {};
 tagSelect.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

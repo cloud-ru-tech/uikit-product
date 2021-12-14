@@ -9,7 +9,7 @@ import { ISelectProps } from '../components';
 import { CustomControl, CustomMenu, MultiValueContainer } from '../helperComponents/Shared';
 import { CustomGroup } from '../helperComponents/Shared/CustomGroup';
 import { CustomGroupHeading } from '../helperComponents/Shared/CustomGroupHeading';
-import { CustomIndicator } from '../helperComponents/Shared/CustomIndicator/CustomIndicator';
+import { CustomIndicator } from '../helperComponents/Shared/CustomIndicator';
 import { CustomOption } from '../helperComponents/Shared/CustomOption';
 import { Texts, textProvider } from './texts-provider';
 

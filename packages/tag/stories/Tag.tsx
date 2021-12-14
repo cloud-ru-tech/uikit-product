@@ -1,6 +1,5 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -31,35 +30,20 @@ const Title = styled.div`
   margin-bottom: 20px;
 `;
 
-const Template: Story<TagProps> = ({ ...args }) => {
-  const [tagText, setTagText] = useState('TagText');
-
-  return (
-    <Row>
-      <Column>
-        <Title>Default tags (preset color)</Title>
-        {PRESET_COLORS.map(color => (
-          <TagWrap key={color}>
-            <Tag {...args} color={color}>
-              {color}
-            </Tag>
-          </TagWrap>
-        ))}
-      </Column>
-      <Column>
-        <Title>Input tag with custom color</Title>
-        <Tag
-          {...args}
-          value={tagText}
-          type={Tag.types.Input}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
-            setTagText(e.target.value);
-          }}
-        />
-      </Column>
-    </Row>
-  );
-};
+const Template: Story<TagProps> = ({ ...args }) => (
+  <Row>
+    <Column>
+      <Title>Default tags (preset color)</Title>
+      {PRESET_COLORS.map(color => (
+        <TagWrap key={color}>
+          <Tag {...args} color={color}>
+            {color}
+          </Tag>
+        </TagWrap>
+      ))}
+    </Column>
+  </Row>
+);
 
 export const tag = Template.bind({});
 tag.args = { color: 'aqua' };
