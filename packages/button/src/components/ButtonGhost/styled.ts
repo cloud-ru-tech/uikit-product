@@ -1,8 +1,8 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
-import { BaseButton } from '../../helperComponents';
 import { IconPosition, Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -11,7 +11,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Button = styled(BaseButton)`
+export const buttonGhostClassName = css`
   height: 20px;
 
   ${TYPOGRAPHY_VARIABLES.TEXT_2}
@@ -30,7 +30,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.ACCENT_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.ACCENT_ICON_COLOR_DISABLED});
       color: var(${COLORS.ACCENT_COLOR_DISABLED});
     }
@@ -50,7 +51,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.PRIMARY_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.PRIMARY_ICON_COLOR_DISABLED});
       color: var(${COLORS.PRIMARY_COLOR_DISABLED});
     }
@@ -70,7 +72,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.SECONDARY_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.SECONDARY_ICON_COLOR_DISABLED});
       color: var(${COLORS.SECONDARY_COLOR_DISABLED});
     }

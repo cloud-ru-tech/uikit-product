@@ -1,4 +1,4 @@
-import { ComponentType, FC, Ref, forwardRef } from 'react';
+import { ComponentType } from 'react';
 
 import { Tooltip, TooltipProps } from '@sbercloud/uikit-react-tooltip';
 
@@ -22,15 +22,9 @@ export type WithTooltipProps = {
 export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProps, 'disabled'> & { title?: unknown }>(
   ComposedComponent: ComponentType<ComposedComponentProps>,
 ) => {
-  type ComposedComponentType = typeof ComposedComponent;
-
   type WrapperComponentProps = ComposedComponentProps & WithTooltipProps;
-  type WrapperComponentPropsWithForwardedRef = WrapperComponentProps & {
-    forwardRef: Ref<ComposedComponentType>;
-  };
 
-  const WrappedComponent: FC<WrapperComponentPropsWithForwardedRef> = ({
-    forwardRef,
+  const WrappedComponent = ({
     tooltip,
     disabledTooltip,
     // т.к. основное назначение className это позиционирование,
@@ -40,28 +34,19 @@ export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProp
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     title, // чтобы не пробрасывался нативный вариант
     ...rest
-  }) =>
+  }: WrapperComponentProps) =>
     tooltip || disabledTooltip ? (
       <Tooltip
         {...(rest.disabled ? disabledTooltip || tooltip || {} : tooltip || {})}
         type={Tooltip.types.Info}
         classNameTrigger={className}
       >
-        <ComposedComponent {...(rest as ComposedComponentProps)} ref={forwardRef} />
+        <ComposedComponent {...(rest as ComposedComponentProps)} />
       </Tooltip>
     ) : (
-      <ComposedComponent {...(rest as ComposedComponentProps)} className={className} ref={forwardRef} />
+      <ComposedComponent {...(rest as ComposedComponentProps)} className={className} />
     );
 
-  const ForwardedComponent = forwardRef<ComposedComponentType, WrapperComponentProps>((props, ref) => (
-    <WrappedComponent forwardRef={ref} {...props} />
-  ));
-
-  const ForwardedComponentWithStatic = ForwardedComponent as typeof ForwardedComponent & {
-    placements: typeof Tooltip.placements;
-  };
-
-  ForwardedComponentWithStatic.placements = Tooltip.placements;
-
-  return ForwardedComponentWithStatic;
+  WrappedComponent.placements = Tooltip.placements;
+  return WrappedComponent;
 };

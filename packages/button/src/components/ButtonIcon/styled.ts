@@ -1,6 +1,5 @@
-import { styled } from '@linaria/react';
+import { css } from '@linaria/core';
 
-import { BaseButton } from '../../helperComponents';
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -9,7 +8,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Button = styled(BaseButton)`
+export const buttonIconClassName = css`
   width: 20px;
   height: 20px;
 
@@ -24,7 +23,8 @@ export const Button = styled(BaseButton)`
       fill: var(${COLORS.WEAK_FILL_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.WEAK_FILL_DISABLED});
     }
   }
@@ -40,7 +40,8 @@ export const Button = styled(BaseButton)`
       fill: var(${COLORS.STRONG_FILL_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.STRONG_FILL_DISABLED});
     }
   }
@@ -56,7 +57,8 @@ export const Button = styled(BaseButton)`
       fill: var(${COLORS.COLOR_FILL_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.COLOR_FILL_DISABLED});
     }
   }
@@ -72,7 +74,8 @@ export const Button = styled(BaseButton)`
       fill: var(${COLORS.ACCENT_FILL_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.ACCENT_FILL_DISABLED});
     }
   }
@@ -88,7 +91,8 @@ export const Button = styled(BaseButton)`
       fill: var(${COLORS.ON_ACCENT_FILL_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.ON_ACCENT_FILL_DISABLED});
     }
   }

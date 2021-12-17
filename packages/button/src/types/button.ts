@@ -1,14 +1,23 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import { MouseEventHandler } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-utils';
 
 import { WithTooltipProps } from '../hocs';
 
-export type CommonButtonProps = WithSupportProps<
-  Pick<
-    DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>,
-    'id' | 'className' | 'type' | 'disabled' | 'onClick'
-  >
->;
+export type ButtonProps = {
+  type?: 'button' | 'submit' | 'reset';
+};
+
+export type AnchorProps = {
+  href: string;
+  target?: string;
+};
+
+export type CommonButtonProps = WithSupportProps<ButtonProps | AnchorProps> & {
+  className?: string;
+  disabled?: boolean;
+  id?: string;
+  onClick?: MouseEventHandler<HTMLElement>;
+};
 
 export type CommonButtonPropsWithRequiredTooltip = CommonButtonProps & Required<Pick<WithTooltipProps, 'tooltip'>>;

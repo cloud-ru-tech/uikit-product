@@ -1,5 +1,7 @@
-import { ReactElement, forwardRef } from 'react';
+import { cx } from '@linaria/core';
+import { ReactElement } from 'react';
 
+import { BaseButton } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withTooltip } from '../../hocs';
 import { CommonButtonPropsWithRequiredTooltip } from '../../types';
@@ -9,15 +11,16 @@ import * as S from './styled';
 export type ButtonSquareIconProps = CommonButtonPropsWithRequiredTooltip & {
   icon: ReactElement;
   variant?: Variant;
-  rounded?: boolean;
 };
 
-const ButtonSquareIconBase = forwardRef<HTMLButtonElement, ButtonSquareIconProps>(
-  ({ icon, variant = Variant.Default, ...rest }, ref) => (
-    <S.Button data-variant={variant} ref={ref} {...extractCommonButtonProps(rest)}>
-      {icon}
-    </S.Button>
-  ),
+const ButtonSquareIconBase = ({ icon, variant = Variant.Default, className, ...rest }: ButtonSquareIconProps) => (
+  <BaseButton
+    className={cx(S.buttonSquareIconClassName, className)}
+    data-variant={variant}
+    {...extractCommonButtonProps(rest)}
+  >
+    {icon}
+  </BaseButton>
 );
 
 const ButtonSquareIconWithTooltip = withTooltip(ButtonSquareIconBase);

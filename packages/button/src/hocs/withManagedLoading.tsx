@@ -1,30 +1,13 @@
-import {
-  ComponentType,
-  FC,
-  MouseEventHandler,
-  MouseEvent as ReactMouseEvent,
-  Ref,
-  forwardRef,
-  useCallback,
-  useState,
-} from 'react';
+import { ComponentType, MouseEventHandler, MouseEvent as ReactMouseEvent, useCallback, useState } from 'react';
 
 type WithManagedLoadingProps = {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   loading?: boolean;
 };
 
-// https://react-typescript-cheatsheet.netlify.app/docs/hoc/full_example/#using-forwardref
-export const withManagedLoading = <ComposedComponentProps extends WithManagedLoadingProps>(
-  ComposedComponent: ComponentType<ComposedComponentProps>,
-) => {
-  type ComposedComponentType = typeof ComposedComponent;
-
-  type WrappedComponentProps = ComposedComponentProps & {
-    forwardRef: Ref<ComposedComponentType>;
-  };
-
-  const WrappedComponent: FC<WrappedComponentProps> = ({ forwardRef, onClick, ...rest }) => {
+export const withManagedLoading =
+  <ComposedComponentProps extends WithManagedLoadingProps>(ComposedComponent: ComponentType<ComposedComponentProps>) =>
+  ({ onClick, ...rest }: ComposedComponentProps) => {
     const [loading, setLoading] = useState(false);
 
     const wrappedOnClick = useCallback(
@@ -44,15 +27,9 @@ export const withManagedLoading = <ComposedComponentProps extends WithManagedLoa
     return (
       <ComposedComponent
         {...(rest as ComposedComponentProps)}
-        ref={forwardRef}
         loading={loading}
         progress={undefined}
         onClick={wrappedOnClick}
       />
     );
   };
-
-  return forwardRef<ComposedComponentType, ComposedComponentProps>((props, ref) => (
-    <WrappedComponent forwardRef={ref} {...props} />
-  ));
-};

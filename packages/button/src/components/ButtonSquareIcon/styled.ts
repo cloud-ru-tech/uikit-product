@@ -1,6 +1,5 @@
-import { styled } from '@linaria/react';
+import { css } from '@linaria/core';
 
-import { BaseButton } from '../../helperComponents';
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -9,7 +8,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Button = styled(BaseButton)`
+export const buttonSquareIconClassName = css`
   width: 44px;
   height: 44px;
   padding: 12px;
@@ -32,7 +31,8 @@ export const Button = styled(BaseButton)`
       border-color: var(${COLORS.DEFAULT_BORDER_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.DEFAULT_FILL_DISABLED});
       border-color: var(${COLORS.DEFAULT_BORDER_DISABLED});
     }
@@ -54,7 +54,8 @@ export const Button = styled(BaseButton)`
       border-color: var(${COLORS.ACCENT_BORDER_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.ACCENT_FILL_DISABLED});
       border-color: var(${COLORS.ACCENT_BORDER_DISABLED});
     }

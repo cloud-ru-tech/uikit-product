@@ -1,6 +1,5 @@
-import { styled } from '@linaria/react';
+import { css } from '@linaria/core';
 
-import { BaseButton } from '../../helperComponents';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -8,7 +7,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Button = styled(BaseButton)`
+export const buttonOverlayClassName = css`
   width: 32px;
   height: 32px;
   border-radius: 20px;
@@ -26,7 +25,8 @@ export const Button = styled(BaseButton)`
     background-color: var(${COLORS.BG_ACTIVE});
   }
 
-  :disabled {
+  :disabled,
+  &[disabled] {
     fill: var(${COLORS.FILL_DISABLED});
     background-color: var(${COLORS.BG_DISABLED});
   }

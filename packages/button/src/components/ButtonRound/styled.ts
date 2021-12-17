@@ -1,8 +1,8 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
-import { BaseButton } from '../../helperComponents';
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -11,7 +11,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Button = styled(BaseButton)`
+export const buttonRoundClassName = css`
   height: 28px;
   border-radius: 18px;
 
@@ -34,7 +34,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.FILLED_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.FILLED_FILL_DISABLED});
       background-color: var(${COLORS.FILLED_BG_DISABLED});
       color: var(${COLORS.FILLED_COLOR_DISABLED});
@@ -58,7 +59,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.OUTLINE_ACCENT_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.OUTLINE_ACCENT_FILL_DISABLED});
       border-color: var(${COLORS.OUTLINE_ACCENT_BORDER_DISABLED});
       color: var(${COLORS.OUTLINE_ACCENT_COLOR_DISABLED});
@@ -82,7 +84,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.OUTLINE_GREY_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.OUTLINE_GREY_FILL_DISABLED});
       background-color: var(${COLORS.OUTLINE_GREY_BG_DISABLED});
       border-color: var(${COLORS.OUTLINE_GREY_BORDER_DISABLED});
@@ -106,7 +109,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.TRANSPARENT_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.TRANSPARENT_FILL_DISABLED});
       color: var(${COLORS.TRANSPARENT_COLOR_DISABLED});
     }
@@ -123,4 +127,9 @@ export const TextWrapper = styled.div`
 
 export const IconWrapper = styled.div`
   margin: 4px;
+
+  &[data-variant='${Variant.OutlineAccent}'],
+  &[data-variant='${Variant.OutlineGrey}'] {
+    margin: 3px;
+  }
 `;

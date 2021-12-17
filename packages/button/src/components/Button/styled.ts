@@ -1,8 +1,8 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
-import { BaseButton } from '../../helperComponents';
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -11,7 +11,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Button = styled(BaseButton)`
+export const buttonClassName = css`
   height: 44px;
   padding: 12px 16px;
   border-radius: 4px;
@@ -35,7 +35,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.FILLED_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.FILLED_FILL_DISABLED});
       background-color: var(${COLORS.FILLED_BG_DISABLED});
       color: var(${COLORS.FILLED_COLOR_DISABLED});
@@ -43,6 +44,7 @@ export const Button = styled(BaseButton)`
   }
 
   &[data-variant='${Variant.Outline}'] {
+    padding: 11px 15px;
     fill: var(${COLORS.OUTLINE_FILL});
     border: 1px solid var(${COLORS.OUTLINE_BORDER});
     color: var(${COLORS.OUTLINE_COLOR});
@@ -59,7 +61,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.OUTLINE_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.OUTLINE_FILL_DISABLED});
       border: 1px solid var(${COLORS.OUTLINE_BORDER_DISABLED});
       color: var(${COLORS.OUTLINE_COLOR_DISABLED});
@@ -83,7 +86,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.TRANSPARENT_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.TRANSPARENT_FILL_DISABLED});
       background-color: var(${COLORS.TRANSPARENT_BG_DISABLED});
       color: var(${COLORS.TRANSPARENT_COLOR_DISABLED});
@@ -107,7 +111,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.ON_ACCENT_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.ON_ACCENT_FILL_DISABLED});
       background-color: var(${COLORS.ON_ACCENT_BG_DISABLED});
       color: var(${COLORS.ON_ACCENT_COLOR_DISABLED});
@@ -131,7 +136,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.EXTRA_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.EXTRA_FILL_DISABLED});
       background-color: var(${COLORS.EXTRA_BG_DISABLED});
       color: var(${COLORS.EXTRA_COLOR_DISABLED});
@@ -155,7 +161,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.ALARM_COLOR_ACTIVE});
     }
 
-    :disabled {
+    :disabled,
+    &[disabled] {
       fill: var(${COLORS.ALARM_FILL_DISABLED});
       background-color: var(${COLORS.ALARM_BG_DISABLED});
       color: var(${COLORS.ALARM_COLOR_DISABLED});

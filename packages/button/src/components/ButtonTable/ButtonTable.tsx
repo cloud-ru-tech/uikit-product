@@ -1,8 +1,9 @@
-import { ReactText, forwardRef } from 'react';
+import { cx } from '@linaria/core';
+import { ReactText } from 'react';
 
 import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-import { LoadingIcon, PieIndicator } from '../../helperComponents';
+import { BaseButton, LoadingIcon, PieIndicator } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withManagedLoading, withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
@@ -18,34 +19,42 @@ export type ButtonTableProps = CommonButtonProps & {
   getProgressText?: (progress: number) => string;
 };
 
-const ButtonTableBase = forwardRef<HTMLButtonElement, ButtonTableProps>(
-  ({ text, variant = Variant.Fill, loading, loadingText, progress, getProgressText, disabled, ...rest }, ref) => {
-    const isProgress = typeof progress === 'number';
-    const hasGetProgressText = typeof getProgressText === 'function';
-    return (
-      <S.Button
-        data-variant={variant}
-        data-loading={loading || (loading && isProgress) || undefined}
-        disabled={disabled || loading}
-        ref={ref}
-        {...extractCommonButtonProps(rest)}
-      >
-        {loading && (!isProgress || !hasGetProgressText) && (loadingText || text)}
-        {loading &&
-          typeof progress === 'number' &&
-          typeof getProgressText === 'function' &&
-          (getProgressText(progress) || loadingText || text)}
-        {!loading && text}
+const ButtonTableBase = ({
+  text,
+  variant = Variant.Fill,
+  loading,
+  loadingText,
+  progress,
+  getProgressText,
+  disabled,
+  className,
+  ...rest
+}: ButtonTableProps) => {
+  const isProgress = typeof progress === 'number';
+  const hasGetProgressText = typeof getProgressText === 'function';
+  return (
+    <BaseButton
+      className={cx(S.buttonTableClassName, className)}
+      data-variant={variant}
+      data-loading={loading || (loading && isProgress) || undefined}
+      disabled={disabled || loading}
+      {...extractCommonButtonProps(rest)}
+    >
+      {loading && (!isProgress || !hasGetProgressText) && (loadingText || text)}
+      {loading &&
+        typeof progress === 'number' &&
+        typeof getProgressText === 'function' &&
+        (getProgressText(progress) || loadingText || text)}
+      {!loading && text}
 
-        <S.IconWrapper>
-          {loading && !isProgress && <LoadingIcon />}
-          {loading && typeof progress === 'number' && <PieIndicator completed={progress} />}
-          {!loading && <CirclePlayFilledInterfaceSVG />}
-        </S.IconWrapper>
-      </S.Button>
-    );
-  },
-);
+      <S.IconWrapper>
+        {loading && !isProgress && <LoadingIcon />}
+        {loading && typeof progress === 'number' && <PieIndicator completed={progress} />}
+        {!loading && <CirclePlayFilledInterfaceSVG />}
+      </S.IconWrapper>
+    </BaseButton>
+  );
+};
 
 const ButtonTableWithTooltip = withTooltip(ButtonTableBase);
 

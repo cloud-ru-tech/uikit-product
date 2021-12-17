@@ -1,4 +1,5 @@
-import { ComponentProps, forwardRef } from 'react';
+import { cx } from '@linaria/core';
+import { ComponentProps } from 'react';
 
 import {
   EyeOpenedInterfaceSVG,
@@ -9,7 +10,7 @@ import {
 } from '@sbercloud/uikit-react-icons';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
-import { LoadingIcon } from '../../helperComponents';
+import { BaseButton, LoadingIcon } from '../../helperComponents';
 import { Texts, extractCommonButtonProps, textProvider } from '../../helpers';
 import { withManagedLoading, withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
@@ -29,13 +30,15 @@ const Icons = {
   [Variant.View]: <EyeOpenedInterfaceSVG />,
 };
 
-const ButtonTableIconBase = forwardRef<HTMLButtonElement, ButtonTableIconProps>(
-  ({ variant = Variant.Play, loading, ...rest }, ref) => (
-    <S.Button data-loading={loading || undefined} ref={ref} {...extractCommonButtonProps(rest)}>
-      {loading && <LoadingIcon />}
-      {!loading && Icons[variant]}
-    </S.Button>
-  ),
+const ButtonTableIconBase = ({ variant = Variant.Play, loading, className, ...rest }: ButtonTableIconProps) => (
+  <BaseButton
+    className={cx(S.buttonTableIconClassName, className)}
+    data-loading={loading || undefined}
+    {...extractCommonButtonProps(rest)}
+  >
+    {loading && <LoadingIcon />}
+    {!loading && Icons[variant]}
+  </BaseButton>
 );
 
 const ButtonTableIconWithTooltip = withTooltip(ButtonTableIconBase);

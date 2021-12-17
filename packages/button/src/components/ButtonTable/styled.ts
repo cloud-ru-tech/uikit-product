@@ -1,8 +1,8 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
-import { BaseButton } from '../../helperComponents';
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -11,7 +11,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Button = styled(BaseButton)`
+export const buttonTableClassName = css`
   height: 28px;
   padding: 4px 4px 4px 8px;
   border-radius: 18px;
@@ -41,7 +41,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.FILL_COLOR_LOADING});
     }
 
-    :not(&[data-loading]):disabled {
+    :not(&[data-loading]):disabled,
+    :not(&[data-loading])&[disabled] {
       fill: var(${COLORS.FILL_FILL_DISABLED});
       background-color: var(${COLORS.FILL_BG_DISABLED});
       color: var(${COLORS.FILL_COLOR_DISABLED});
@@ -71,7 +72,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.ON_ACCENT_COLOR_LOADING});
     }
 
-    :not(&[data-loading]):disabled {
+    :not(&[data-loading]):disabled,
+    :not(&[data-loading])&[disabled] {
       fill: var(${COLORS.ON_ACCENT_FILL_DISABLED});
       background-color: var(${COLORS.ON_ACCENT_BG_DISABLED});
       color: var(${COLORS.ON_ACCENT_COLOR_DISABLED});
@@ -103,7 +105,8 @@ export const Button = styled(BaseButton)`
       color: var(${COLORS.OUTLINE_COLOR_LOADING});
     }
 
-    :not(&[data-loading]):disabled {
+    :not(&[data-loading]):disabled,
+    :not(&[data-loading])&[disabled] {
       fill: var(${COLORS.OUTLINE_FILL_DISABLED});
       border: 1px solid var(${COLORS.OUTLINE_BORDER_DISABLED});
       color: var(${COLORS.OUTLINE_COLOR_DISABLED});

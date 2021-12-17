@@ -1,5 +1,7 @@
-import { ReactElement, forwardRef } from 'react';
+import { cx } from '@linaria/core';
+import { ReactElement } from 'react';
 
+import { BaseButton } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withTooltip } from '../../hocs';
 import { CommonButtonPropsWithRequiredTooltip } from '../../types';
@@ -12,12 +14,21 @@ export type ButtonIconTransparentProps = CommonButtonPropsWithRequiredTooltip & 
   rounded?: boolean;
 };
 
-const ButtonIconTransparentBase = forwardRef<HTMLButtonElement, ButtonIconTransparentProps>(
-  ({ icon, variant = Variant.Default, rounded, ...rest }, ref) => (
-    <S.Button data-variant={variant} data-rounded={rounded || undefined} ref={ref} {...extractCommonButtonProps(rest)}>
-      {icon}
-    </S.Button>
-  ),
+const ButtonIconTransparentBase = ({
+  icon,
+  variant = Variant.Default,
+  rounded,
+  className,
+  ...rest
+}: ButtonIconTransparentProps) => (
+  <BaseButton
+    className={cx(S.buttonIconTransparentClassName, className)}
+    data-variant={variant}
+    data-rounded={rounded || undefined}
+    {...extractCommonButtonProps(rest)}
+  >
+    {icon}
+  </BaseButton>
 );
 
 const ButtonIconTransparentWithTooltip = withTooltip(ButtonIconTransparentBase);
