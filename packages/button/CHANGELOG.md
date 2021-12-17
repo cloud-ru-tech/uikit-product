@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.7...@sbercloud/uikit-react-button@3.0.0) (2021-12-17)
+
+
+### Features
+
+* button as link behavior, ref prop is no longer valid ([CP-2434](https://jira.sbercloud.tech/browse/CP-2434)) ([e09128b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/e09128b1e8cf0f50d7e7f70b721f34d7cead6af8))
+
+
+### BREAKING CHANGES
+
+* button as link behavior, ref prop is no longer valid (CP-2434)
+
+
+
+
+
 ## [2.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.6...@sbercloud/uikit-react-button@2.2.7) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
