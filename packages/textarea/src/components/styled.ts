@@ -12,6 +12,8 @@ PURPLE_THEME;
 PURPLE_DARK_THEME;
 
 export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row;
   width: 100%;
   max-width: 100%;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
@@ -56,7 +58,7 @@ export const TextArea = styled(TextareaAutosize)`
   background-color: transparent;
 
   padding-top: 12px;
-  padding-right: 32px;
+  padding-right: 12px;
 
   outline: 0;
 
@@ -80,8 +82,5 @@ export const TextArea = styled(TextareaAutosize)`
 `;
 
 export const ClearButton = styled(ButtonIcon)`
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  transform: translate(-100%, 100%);
+  margin-top: 12px;
 `;
