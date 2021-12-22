@@ -29,7 +29,7 @@ export const COLORS = {
 export const PURPLE_THEME = css`
   :global() {
     body[data-theme=${Themes.Purple}] {
-      ${COLORS.border.default}: var(${GREY[0]});
+      ${COLORS.border.default}: var(${BLACK_ALFA[16]});
       ${COLORS.border.disabled}: var(${BLACK_ALFA[16]});
       ${COLORS.border.hover}: var(${PURPLE[50]});
       ${COLORS.border.active}: var(${PURPLE[100]});
@@ -50,7 +50,7 @@ export const PURPLE_THEME = css`
 export const GREEN_THEME = css`
   :global() {
     body[data-theme=${Themes.Green}] {
-      ${COLORS.border.default}: var(${GREY[0]});
+      ${COLORS.border.default}: var(${BLACK_ALFA[16]});
       ${COLORS.border.disabled}: var(${BLACK_ALFA[16]});
       ${COLORS.border.hover}: var(${GREEN[50]});
       ${COLORS.border.active}: var(${GREEN[100]});
