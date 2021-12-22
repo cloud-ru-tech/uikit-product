@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.6.0...@sbercloud/uikit-react-icons@2.7.0) (2021-12-22)
+
+
+### Features
+
+* added circle cancel icon ([614bcec](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/614bcecb87a6bd6f1ab70b367a9fc0bf9f1d8c4f))
+
+
+
+
+
 # [2.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.5.1...@sbercloud/uikit-react-icons@2.6.0) (2021-11-29)
 
 

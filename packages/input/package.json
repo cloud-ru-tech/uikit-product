@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-input",
   "title": "React Input",
-  "version": "0.19.1",
+  "version": "0.19.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "3.0.0",
-    "@sbercloud/uikit-react-icons": "2.6.0",
+    "@sbercloud/uikit-react-button": "3.0.1",
+    "@sbercloud/uikit-react-icons": "2.7.0",
     "@sbercloud/uikit-theme": "0.29.0",
     "@sbercloud/uikit-utils": "2.0.1",
     "react-textarea-autosize": "8.3.3"

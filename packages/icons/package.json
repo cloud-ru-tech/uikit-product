@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-icons",
   "title": "React Icons",
-  "version": "2.6.0",
+  "version": "2.7.0",
   "sideEffects": [
     "*.css",
     "*.woff",
