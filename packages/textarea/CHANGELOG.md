@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@1.0.2...@sbercloud/uikit-react-textarea@1.0.3) (2021-12-22)
+
+
+### Bug Fixes
+
+* default border in light themes ([6a0c2d7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/6a0c2d7001f8666fdcf0327eb8f4222f152c6814))
+
+
+
+
+
 ## [1.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@1.0.1...@sbercloud/uikit-react-textarea@1.0.2) (2021-12-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-textarea
