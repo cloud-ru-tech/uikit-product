@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@1.0.3...@sbercloud/uikit-react-textarea@1.0.4) (2021-12-23)
+
+
+### Bug Fixes
+
+* wrapper has flex behavior instead of old with absolute positioned clear button ([b24341b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b24341ba7a513bf18fcb2ac9f21cba5413abcab4))
+
+
+
+
+
 ## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@1.0.2...@sbercloud/uikit-react-textarea@1.0.3) (2021-12-22)
 
 
