@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@1.0.4...@sbercloud/uikit-react-textarea@1.0.5) (2021-12-23)
+
+
+### Bug Fixes
+
+* clear tooltip position ([73c7c74](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/73c7c7476c9fa8fa9d28e6e51e0f295914a011b3))
+
+
+
+
+
 ## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@1.0.3...@sbercloud/uikit-react-textarea@1.0.4) (2021-12-23)
 
 
