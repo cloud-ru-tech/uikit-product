@@ -82,5 +82,6 @@ export const TextArea = styled(TextareaAutosize)`
 `;
 
 export const ClearButton = styled(ButtonIcon)`
+  align-self: flex-start;
   margin-top: 12px;
 `;
