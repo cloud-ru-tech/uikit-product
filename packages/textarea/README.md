@@ -6,15 +6,19 @@
 ## Props
 ```typescript
 export type TextareaProps = {
-  value: string;
-  onChange(value: string): void;
-  placeholder?: string;
-  disabled?: boolean;
-  error?: boolean;
-  className?: string;
-  maxRows?: number; // 3 is the minimal
-  maxLength?: number;
-  ref?: HTMLTextAreaElement;
+    value: string;
+    onChange(value: string): void;
+    placeholder?: string;
+    disabled?: boolean;
+    error?: string;
+    className?: string;
+    maxRows?: number;
+    maxLength?: number;
+    ref?: HTMLTextAreaElement;
+    label?: string;
+    labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
+    optional?: boolean;
+    hint?: string;
 };
 ```
 

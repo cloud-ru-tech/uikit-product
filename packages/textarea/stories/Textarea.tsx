@@ -3,8 +3,8 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useEffect, useRef, useState } from 'react';
 
-import { Attention } from '@sbercloud/uikit-react-attention';
 import { Button } from '@sbercloud/uikit-react-button';
+import { Divider } from '@sbercloud/uikit-react-divider';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -20,8 +20,8 @@ const FocusBtn = styled(Button)`
   margin-top: 16px;
 `;
 
-const Note = styled.div`
-  margin-top: 16px;
+const Separator = styled(Divider)`
+  margin-top: 50px;
 `;
 
 const Template: Story<TextareaProps> = ({ ...args }) => {
@@ -33,10 +33,14 @@ const Template: Story<TextareaProps> = ({ ...args }) => {
 
   return (
     <>
-      <Textarea {...args} value={value} onChange={setValue} ref={ref} error={value === 'error' || args.error} />
-      <Note>
-        <Attention>Введите &quot;error&quot;, чтобы спровоцировать ошибку</Attention>
-      </Note>
+      <Textarea
+        {...args}
+        value={value}
+        onChange={setValue}
+        ref={ref}
+        error={(value === 'error' && 'You have triggered error') || args.error}
+      />
+      <Separator />
       <FocusBtn text={'Focus'} onClick={() => ref.current?.focus()} />
     </>
   );
@@ -45,6 +49,13 @@ const Template: Story<TextareaProps> = ({ ...args }) => {
 export const textarea = Template.bind({});
 textarea.args = {
   placeholder: 'placeholder',
+  label: 'Label',
+  optional: true,
+  maxLength: 120,
+  hint: 'Введите "error", чтобы спровоцировать ошибку',
+  labelTooltip: {
+    content: 'Подсказка',
+  },
 };
 textarea.argTypes = {};
 textarea.parameters = {
