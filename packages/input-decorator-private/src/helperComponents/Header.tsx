@@ -1,0 +1,38 @@
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-react-tooltip';
+import { useLanguage } from '@sbercloud/uikit-utils';
+
+import { Texts, textProvider } from '../helpers/texts-provider';
+import * as S from './styled';
+
+type HeaderProps = {
+  optional?: boolean;
+  label?: string;
+  labelTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
+};
+
+export function Header({ optional, label, labelTooltip }: HeaderProps) {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  return (
+    <S.FlexWrapper data-reverse={(optional && !label) || undefined}>
+      {label && (
+        <div>
+          {label && <S.Label data-test-id={'input-wrapper__label'}>{label}</S.Label>}
+          {labelTooltip && (
+            <Tooltip
+              classNameTrigger={S.LabelIconTriggerView}
+              data-test-id={'input-wrapper__help-icon'}
+              {...labelTooltip}
+            >
+              <S.LabelIcon />
+            </Tooltip>
+          )}
+        </div>
+      )}
+      {optional && (
+        <S.OptionalMark data-test-id={'input-wrapper__optional-mark'}>
+          {textProvider(languageCode, Texts.Optional)}
+        </S.OptionalMark>
+      )}
+    </S.FlexWrapper>
+  );
+}
