@@ -11,7 +11,6 @@ const baseClassName = css`
   padding: 0;
   border: none;
   border-width: 0;
-  font: inherit;
   color: inherit;
   background-color: transparent;
   cursor: pointer;
