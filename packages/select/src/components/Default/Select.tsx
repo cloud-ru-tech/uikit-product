@@ -59,6 +59,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     prefixMultiValueContainer,
     collapsedGroup,
     placeholder,
+    formatOptionLabel,
   } = props;
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -167,8 +168,10 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
 
   const formatGroupLabel = useCallback(group => <div data-test-group-id={`${group.label}`}>{group.label}</div>, []);
 
-  const formatOptionLabel = useCallback(
-    option => <div data-test-option-id={`${option.value}`}>{option.label}</div>,
+  const formatOptionLabelInner = useCallback(
+    option => (
+      <div data-test-option-id={`${option.value}`}>{formatOptionLabel ? formatOptionLabel(option) : option.label}</div>
+    ),
     [],
   );
 
@@ -189,7 +192,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
         }}
         options={stateOptions}
         formatGroupLabel={formatGroupLabel}
-        formatOptionLabel={formatOptionLabel}
+        formatOptionLabel={formatOptionLabelInner}
         menuIsOpen={isOpen}
         components={componentsState}
         styles={customStyles.styles}
