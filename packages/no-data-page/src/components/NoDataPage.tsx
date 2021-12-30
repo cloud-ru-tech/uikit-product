@@ -7,6 +7,7 @@ export interface NoDataPageProps {
   type?: NoDataPageVariants;
   icon?: React.ReactElement;
   title?: string;
+  className?: string;
   children?: React.ReactNode;
 }
 
@@ -15,7 +16,7 @@ const iconSize = {
   [NoDataPageVariants.Small]: 100,
 };
 
-export const NoDataPage = ({ type = NoDataPageVariants.Large, icon, title, children }: NoDataPageProps) => {
+export const NoDataPage = ({ type = NoDataPageVariants.Large, icon, title, className, children }: NoDataPageProps) => {
   const customIcon = useMemo(
     () =>
       icon
@@ -28,7 +29,7 @@ export const NoDataPage = ({ type = NoDataPageVariants.Large, icon, title, child
   );
 
   return (
-    <S.Container>
+    <S.Container className={className}>
       <S.IconContainer>{customIcon}</S.IconContainer>
       <S.DescContainer>
         <S.Title>{title}</S.Title>
