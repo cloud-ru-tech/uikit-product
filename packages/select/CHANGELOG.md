@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.22.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.21.2...@sbercloud/uikit-react-select@0.22.0) (2021-12-30)
+
+
+### Features
+
+* add formatOptionLabel prop ([CP-3900](https://jira.sbercloud.tech/browse/CP-3900)) ([ba44183](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ba441831251aca8728400bbb12d930d3b7204d7b))
+
+
+
+
+
 ## [0.21.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.21.1...@sbercloud/uikit-react-select@0.21.2) (2021-12-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
