@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.1...@sbercloud/uikit-react-button@3.0.2) (2021-12-30)
+
+
+### Bug Fixes
+
+* not inherit css font property ([CP-3664](https://jira.sbercloud.tech/browse/CP-3664)) ([409b855](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/409b85572f704b27f9e30cdd5fb6e7aefed6d99d))
+
+
+
+
+
 ## [3.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.0...@sbercloud/uikit-react-button@3.0.1) (2021-12-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
