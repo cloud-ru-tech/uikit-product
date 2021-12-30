@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-no-data-page@0.7.11...@sbercloud/uikit-react-no-data-page@0.8.0) (2021-12-30)
+
+
+### Bug Fixes
+
+* removed margin-top ([ce2fcff](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ce2fcff9cfb74f346b4f7df12e37b1c2e3e8357c))
+
+
+### Features
+
+* added className prop ([5923ca1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/5923ca1eb055d5205931ba56fe395e92b744511f))
+
+
+### BREAKING CHANGES
+
+* removed margin-top
+
+
+
+
+
 ## [0.7.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-no-data-page@0.7.10...@sbercloud/uikit-react-no-data-page@0.7.11) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-no-data-page

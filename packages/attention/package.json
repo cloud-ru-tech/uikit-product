@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-attention",
   "title": "React Attention",
-  "version": "0.6.21",
+  "version": "0.7.0",
   "sideEffects": [
     "*.css",
     "*.woff",
