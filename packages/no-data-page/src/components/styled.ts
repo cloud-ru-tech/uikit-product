@@ -16,8 +16,6 @@ export const Container = styled.div`
 
   align-items: flex-start;
   justify-content: center;
-
-  margin-top: 80px;
 `;
 
 export const IconContainer = styled.div`
