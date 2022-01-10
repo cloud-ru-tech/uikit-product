@@ -8,7 +8,6 @@ import { InputSearch } from '../../Shared/InputSearch';
 const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
 export const StyledSearchInput = styled(InputSearch)`
-  max-height: 28px;
   padding: 4px 12px;
 `;
 
@@ -16,6 +15,6 @@ export const searchInputWrapClassname = css`
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom: 1px solid #cccccc;
-  padding: 4px 0;
+  padding: 8px;
   background: var(${COLORS_SELECT.BACKGROUND});
 `;

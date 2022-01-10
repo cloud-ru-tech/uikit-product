@@ -100,18 +100,13 @@ const defValue: TFilterValueType[] = [
 ];
 
 const Template: Story<IFilterProps> = () => {
-  const [value, setValue] = useState<string | undefined>();
+  const [value, setValue] = useState('');
   const [filterValue, setFilterValue] = useState<TFilterValueType[] | string>(defValue);
 
   return (
     <div style={{ padding: 10 }}>
       <Toolbar.Wrapper>
-        <Toolbar.Input
-          value={value}
-          onChange={(value: any): void => {
-            setValue(value);
-          }}
-        />
+        <Toolbar.Input value={value} onChange={setValue} />
         <Filter
           filterOptions={defOpt}
           value={filterValue}

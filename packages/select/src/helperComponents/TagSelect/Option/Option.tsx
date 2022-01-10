@@ -125,7 +125,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                   });
                 }}
                 icon={<DeleteInterfaceSVG />}
-                tooltip={{ content: textProvider(languageCode, Texts.delete) }}
+                tooltip={{ content: textProvider(languageCode, Texts.Delete) }}
               />
 
               <StyledTagButton
@@ -147,7 +147,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                   }
                 }}
                 icon={<CircleCheckOutlineInterfaceSVG />}
-                tooltip={{ content: textProvider(languageCode, Texts.select) }}
+                tooltip={{ content: textProvider(languageCode, Texts.Select) }}
               />
             </StyledTagButtonWrapper>
           </>
@@ -160,7 +160,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
                 setEdit(true);
               }}
               icon={<EditInterfaceSVG />}
-              tooltip={{ content: textProvider(languageCode, Texts.edit) }}
+              tooltip={{ content: textProvider(languageCode, Texts.Edit) }}
             />
           </>
         )}

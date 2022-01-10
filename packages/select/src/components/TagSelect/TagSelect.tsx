@@ -124,10 +124,10 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
           setApproveDelete(null);
         }}
         appElement={document.body}
-        title={textProvider<string>(languageCode, Texts.modalDeleteTagTitle)}
+        title={textProvider<string>(languageCode, Texts.ModalDeleteTagTitle)}
         description={textProvider<DictionaryPropertyAsFn>(
           languageCode,
-          Texts.modalDeleteTagDesc,
+          Texts.ModalDeleteTagDesc,
         )({ label: approveDelete?.tag?.label || '' })}
         approve={(): void => {
           approveDelete?.callbackDelete();

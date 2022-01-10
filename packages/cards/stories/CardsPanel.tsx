@@ -3,8 +3,8 @@ import { styled } from '@linaria/react';
 import { useEffect, useState } from '@storybook/addons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { CopyInput } from '@sbercloud/uikit-react-input';
 import { Tag } from '@sbercloud/uikit-react-tag';
+import { TextField } from '@sbercloud/uikit-react-text-field';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -32,6 +32,17 @@ const DateStyled = styled.span`
 
 const InputWrapStyled = styled.div`
   margin: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: fit-content;
+  align-items: center;
+`;
+
+const Label = styled.span`
+  min-width: 40px;
+  margin-right: 12px;
 `;
 
 const TagsWrapStyled = styled.div`
@@ -120,10 +131,12 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
             <TitleStyled>{name}</TitleStyled>
             <DateStyled>{date}</DateStyled>
             <InputWrapStyled>
-              <CopyInput label='Image' labelMinWidth='80px' value={image} />
+              <Label>Image</Label>
+              <TextField text={image} />
             </InputWrapStyled>
             <InputWrapStyled>
-              <CopyInput label='URL' labelMinWidth='80px' value={url} />
+              <Label>Url</Label>
+              <TextField text={url} />
             </InputWrapStyled>
           </CardsPanelItem>
         ))}

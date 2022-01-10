@@ -1,51 +1,44 @@
 import React, { useEffect, useState } from 'react';
 
 import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Input, InputProps } from '@sbercloud/uikit-react-input';
+import { InputPrivate, InputPrivateProps } from '@sbercloud/uikit-react-input-private';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
-import { crossIconClassName, searchIconClassname } from './styled';
+import { InputWrapper, crossIconClassName, searchIconClassname } from './styled';
 
-export interface IInputSearchProps extends Omit<InputProps, 'onChange'> {
-  value?: string;
-  onChange?: (search?: string) => void;
-}
+export type InputSearchProps = Pick<InputPrivateProps, 'value' | 'onChange' | 'className' | 'ref'>;
 
-export const InputSearch: React.FC<IInputSearchProps> = ({ onChange, value, getInstance, ...inputProps }) => {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const [search, setSearch] = useState<string | undefined>(value);
-  useEffect(() => {
-    if (search === value) return;
-    onChange?.(search);
-  }, [search]);
+export const InputSearch = React.forwardRef<HTMLInputElement, InputSearchProps>(
+  ({ onChange, value, className }, ref) => {
+    const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+    const [search, setSearch] = useState(value);
+    useEffect(() => {
+      if (search === value) return;
+      onChange(search);
+    }, [onChange, search, value]);
 
-  useEffect(() => {
-    setSearch(value);
-  }, [value]);
+    useEffect(() => {
+      setSearch(value);
+    }, [value]);
 
-  return (
-    <Input
-      {...inputProps}
-      getInstance={getInstance}
-      type={Input.types.embed}
-      value={search}
-      onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
-        setSearch(e.target.value);
-      }}
-      postfix={
-        search ? (
-          <CloseInterfaceSVG
-            className={crossIconClassName}
-            onClick={(): void => {
-              setSearch('');
-            }}
-          />
-        ) : (
-          <SearchInterfaceSVG className={searchIconClassname} />
-        )
-      }
-      placeholder={textProvider<string>(languageCode, Texts.search)}
-    />
-  );
-};
+    return (
+      <InputWrapper className={className}>
+        <InputPrivate
+          ref={ref}
+          type={InputPrivate.types.Text}
+          value={search}
+          onChange={setSearch}
+          postfix={
+            search ? (
+              <CloseInterfaceSVG className={crossIconClassName} onClick={() => setSearch('')} />
+            ) : (
+              <SearchInterfaceSVG className={searchIconClassname} />
+            )
+          }
+          placeholder={textProvider<string>(languageCode, Texts.Search)}
+        />
+      </InputWrapper>
+    );
+  },
+);

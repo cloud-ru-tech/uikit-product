@@ -70,7 +70,8 @@ const selectOptions = [
 
 const Template: Story<IDrawerProps> = ({ ...args }) => {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState<React.ReactText>('');
+  const [value, setValue] = useState<string>('');
+  const [radioValue, setRadioValue] = useState<React.ReactText>('');
 
   return (
     <Wrap>
@@ -99,63 +100,38 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
           }
         >
           <DrawerContent>
-            <Input
-              label='Label'
-              value={value}
-              onChange={e => setValue(e.target.value)}
-              placeholder='Пример: Project1-bucket106'
-            />
+            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Select options={selectOptions} />
             <Divider className={dividerClassName} />
-            <RadioGroup onChange={(value: React.ReactText) => setValue(value)} value={value}>
+            <RadioGroup onChange={setRadioValue} value={radioValue}>
               <Radio disabled={false} value='story1' label='story1' className={radioClassName} />
               <Radio disabled={false} value='story2' label='story2' className={radioClassName} />
               <Radio disabled={false} value='story3' label='story3' className={radioClassName} />
             </RadioGroup>
-            <Input
-              label='Label'
-              value={value}
-              onChange={e => setValue(e.target.value)}
-              placeholder='Пример: Project1-bucket106'
-            />
+            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Divider className={dividerClassName} />
-            <RadioGroup onChange={(value: React.ReactText) => setValue(value)} value={value}>
+            <RadioGroup onChange={setRadioValue} value={radioValue}>
               <Radio disabled={false} value='story1' label='story1' className={radioClassName} />
               <Radio disabled={false} value='story2' label='story2' className={radioClassName} />
               <Radio disabled={false} value='story3' label='story3' className={radioClassName} />
             </RadioGroup>
-            <Input
-              label='Label'
-              value={value}
-              onChange={e => setValue(e.target.value)}
-              placeholder='Пример: Project1-bucket106'
-            />
+            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Divider className={dividerClassName} />
-            <RadioGroup onChange={(value: React.ReactText) => setValue(value)} value={value}>
+            <RadioGroup onChange={setRadioValue} value={radioValue}>
               <Radio disabled={false} value='story1' label='story1' className={radioClassName} />
               <Radio disabled={false} value='story2' label='story2' className={radioClassName} />
               <Radio disabled={false} value='story3' label='story3' className={radioClassName} />
             </RadioGroup>
-            <Input
-              label='Label'
-              value={value}
-              onChange={e => setValue(e.target.value)}
-              placeholder='Пример: Project1-bucket106'
-            />
+            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Divider className={dividerClassName} />
-            <RadioGroup onChange={(value: React.ReactText) => setValue(value)} value={value}>
+            <RadioGroup onChange={setRadioValue} value={radioValue}>
               <Radio disabled={false} value='story1' label='story1' className={radioClassName} />
               <Radio disabled={false} value='story2' label='story2' className={radioClassName} />
               <Radio disabled={false} value='story3' label='story3' className={radioClassName} />
             </RadioGroup>
-            <Input
-              label='Label'
-              value={value}
-              onChange={e => setValue(e.target.value)}
-              placeholder='Пример: Project1-bucket106'
-            />
+            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Divider className={dividerClassName} />
-            <RadioGroup onChange={(value: React.ReactText) => setValue(value)} value={value}>
+            <RadioGroup onChange={setRadioValue} value={radioValue}>
               <Radio disabled={false} value='story1' label='story1' className={radioClassName} />
               <Radio disabled={false} value='story2' label='story2' className={radioClassName} />
               <Radio disabled={false} value='story3' label='story3' className={radioClassName} />

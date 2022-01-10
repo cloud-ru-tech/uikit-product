@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { Input } from '@sbercloud/uikit-react-input';
+import { SimpleInput } from '@sbercloud/uikit-react-input-private';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -28,12 +28,7 @@ const Template: Story<FormFieldProps> = ({ label, hint, error, required, descrip
   return (
     <Wrapper>
       <FormField label={label} hint={hint} error={error} required={required} description={description}>
-        <Input
-          type={Input.types.number}
-          value={value}
-          onChange={e => setValue(Number(e.target.value))}
-          error={Boolean(error)}
-        />
+        <SimpleInput value={value.toString()} onChange={x => setValue(Number(x))} error={Boolean(error)} />
       </FormField>
     </Wrapper>
   );

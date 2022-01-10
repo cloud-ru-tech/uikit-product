@@ -17,7 +17,7 @@ export default {
 } as Meta;
 
 const Template: Story<ITableFreeProps> = ({ rowData = [], ...args }) => {
-  const [searchValue, setSearchValue] = useState<string | undefined>();
+  const [searchValue, setSearchValue] = useState<string>('');
 
   const searchedData = searchValue
     ? rowData.filter(({ firstName, lastName }) =>

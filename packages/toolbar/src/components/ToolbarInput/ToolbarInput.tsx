@@ -1,22 +1,19 @@
 import { FC, createRef, useEffect, useState } from 'react';
 
+import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Input, InputProps } from '@sbercloud/uikit-react-input';
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { InputPrivate, InputPrivateProps } from '@sbercloud/uikit-react-input-private';
+import { WithSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
-import { InputWrapStyled, crossIconClassName, inputClassName, searchIconClassname } from './styled';
+import { Texts, textProvider } from '../../helpers/texts-provider';
+import { InputWrapStyled, searchIconClassname } from './styled';
 
-export interface ToolbarInputProps extends Omit<InputProps, 'onChange'> {
-  onChange(value: string): void;
-}
+export type ToolbarInputProps = Pick<InputPrivateProps, 'value' | 'onChange' | 'disabled' | 'placeholder'>;
 
-export const ToolbarInput: FC<WithSupportProps<ToolbarInputProps>> = ({
-  value,
-  onChange,
-  wrapperClassName,
-  ...inputAndSupportProps
-}) => {
+export const ToolbarInput: FC<WithSupportProps<ToolbarInputProps>> = ({ value, onChange, ...inputAndSupportProps }) => {
+  const { languageCode } = useLanguage();
   const inputWrapperRef = createRef<HTMLDivElement>();
+  const inputRef = createRef<HTMLInputElement>();
   const [hasPrevSibling, setPrevSibling] = useState<undefined | boolean>();
   const [hasNextSibling, setNextSibling] = useState<undefined | boolean>();
 
@@ -38,23 +35,22 @@ export const ToolbarInput: FC<WithSupportProps<ToolbarInputProps>> = ({
       data-has-next-sibling={hasNextSibling || undefined}
       data-test-id='toolbar__input'
     >
-      <Input
+      <InputPrivate
         {...inputAndSupportProps}
+        ref={inputRef}
         value={value}
-        onChange={event => {
-          onChange(event.target.value);
-        }}
-        className={inputClassName}
-        wrapperClassName={wrapperClassName}
-        type={Input.types.embed}
+        onChange={onChange}
+        type={InputPrivate.types.Text}
         postfix={
           value ? (
-            <CloseInterfaceSVG
-              className={crossIconClassName}
-              data-test-action-id='toolbar__input-clear-btn'
+            <ButtonIcon
+              icon={<CloseInterfaceSVG />}
               onClick={(): void => {
                 onChange('');
+                inputRef.current?.focus();
               }}
+              tooltip={{ content: textProvider(languageCode, Texts.Clear) }}
+              data-test-action-id='toolbar__input-clear-btn'
             />
           ) : (
             <SearchInterfaceSVG className={searchIconClassname} />

@@ -1,5 +1,5 @@
 import { css } from '@linaria/core';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
@@ -12,12 +12,12 @@ const inputWrapperClassName = css`
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom: 1px solid #cccccc;
-  padding: 4px 0;
+  padding: 8px;
   background: var(${COLORS_SELECT.BACKGROUND});
 `;
 
 export const CustomMenu = (props: React.ComponentProps<typeof ReactSelectComponents.Menu>): JSX.Element => {
-  const [inputRef, setInputRef] = useState<React.RefObject<HTMLInputElement>>();
+  const inputRef = useRef<HTMLInputElement>(null);
   const {
     children,
     className,
@@ -29,19 +29,14 @@ export const CustomMenu = (props: React.ComponentProps<typeof ReactSelectCompone
   useEffect(() => {
     inputRef?.current?.focus();
     return () => {
-      onSearch(undefined);
+      onSearch('');
     };
   }, [inputRef, onSearch]);
 
   return (
     <div style={{ ...getStyles('menu', props), overflow: 'hidden' }} className={cx({ menu: true }, className)}>
       {isSearchableCustom && (
-        <StyledInputSearch
-          getInstance={setInputRef}
-          value={searchValue}
-          onChange={onSearch}
-          wrapperClassName={inputWrapperClassName}
-        />
+        <StyledInputSearch ref={inputRef} value={searchValue} onChange={onSearch} className={inputWrapperClassName} />
       )}
       {children}
       {footer}

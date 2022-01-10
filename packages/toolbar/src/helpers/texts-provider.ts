@@ -1,15 +1,18 @@
 import { LanguageCodeType } from '@sbercloud/uikit-utils';
 
 export enum Texts {
-  filter = 'filter',
+  Filter = 'Filter',
+  Clear = 'Clear',
 }
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
-    filter: 'Фильтр',
+    [Texts.Filter]: 'Фильтр',
+    [Texts.Clear]: 'Очистить',
   },
   [LanguageCodeType.enGB]: {
-    filter: 'Filter',
+    [Texts.Filter]: 'Filter',
+    [Texts.Clear]: 'Clear',
   },
 };
 

@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
+import { ReactText, useState } from 'react';
 
 import { Input } from '@sbercloud/uikit-react-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
@@ -34,13 +34,13 @@ const RadioClassName = css`
 
 const Template: Story = () => {
   const [value, setValue] = useState(8);
-  const [limit, setLimit] = useState('unlimited');
+  const [limit, setLimit] = useState<ReactText>('unlimited');
 
   return (
     <Wrapper>
       <FormGroup number={1} title='Общая информация' hint={{ content: 'Подсказка' }}>
         <FormField label='Произвольное число'>
-          <Input type={Input.types.number} value={value} onChange={(e: any) => setValue(Number(e.target.value))} />
+          <Input value={value.toString()} onChange={x => setValue(Number(x))} />
         </FormField>
 
         <FormField label='Выбрать'>
@@ -64,8 +64,8 @@ const Template: Story = () => {
         </FormField>
 
         <FormField label='Ограничение тарифа' hint={{ content: 'Подробнее об ограничениях читайте на сайте' }}>
-          <RadioGroup value={limit} onChange={(e: any) => setLimit(e.target.value)}>
-            <Radio value='unlimited' label='Неограничено' className={RadioClassName} />
+          <RadioGroup value={limit} onChange={setLimit}>
+            <Radio value='unlimited' label='Неограниченно' className={RadioClassName} />
             <Radio value='daily' label='Дневной' className={RadioClassName} />
             <Radio value='monthly' label='Месячный' disabled className={RadioClassName} />
           </RadioGroup>
@@ -74,7 +74,7 @@ const Template: Story = () => {
 
       <FormGroup number={2} title='Общая информация' hint={{ content: 'Подсказка' }}>
         <FormField label='Произвольное число'>
-          <Input type={Input.types.number} value={value} onChange={(e: any) => setValue(Number(e.target.value))} />
+          <Input value={value.toString()} onChange={x => setValue(Number(x))} />
         </FormField>
 
         <FormField>
@@ -82,8 +82,8 @@ const Template: Story = () => {
         </FormField>
 
         <FormField label='Ограничение тарифа' hint={{ content: 'Подробнее об ограничениях читайте на сайте' }}>
-          <RadioGroup value={limit} onChange={(e: any) => setLimit(e.target.value)}>
-            <Radio value='unlimited' label='Неограничено' className={RadioClassName} />
+          <RadioGroup value={limit} onChange={setLimit}>
+            <Radio value='unlimited' label='Неограниченно' className={RadioClassName} />
             <Radio value='daily' label='Дневной' className={RadioClassName} />
             <Radio value='monthly' label='Месячный' disabled className={RadioClassName} />
           </RadioGroup>

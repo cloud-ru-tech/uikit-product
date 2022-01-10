@@ -128,7 +128,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
     <StyledContainer
       className={selectClassname}
       data-filtered={isFiltered || undefined}
-      data-empty={textProvider<string>(languageCode, Texts.noData)}
+      data-empty={textProvider<string>(languageCode, Texts.NoData)}
     >
       <RcTree
         {...treeProps}

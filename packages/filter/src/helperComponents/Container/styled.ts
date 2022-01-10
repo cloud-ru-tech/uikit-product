@@ -17,7 +17,3 @@ export const tooltipClassName = css`
   z-index: 99999;
   overflow: inherit;
 `;
-
-export const tooltipWrapperClassName = css`
-  overflow: inherit;
-`;

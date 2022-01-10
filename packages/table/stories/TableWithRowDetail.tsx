@@ -44,7 +44,7 @@ const Template: Story<TableWithRowDetailProps<DataModel>> = args => (
             'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
         }}
       >
-        <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
+        <Input value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
       </FormField>
 
       <FormField
@@ -54,7 +54,7 @@ const Template: Story<TableWithRowDetailProps<DataModel>> = args => (
             'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
         }}
       >
-        <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
+        <Input value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
       </FormField>
 
       <FormField
@@ -64,7 +64,7 @@ const Template: Story<TableWithRowDetailProps<DataModel>> = args => (
             'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
         }}
       >
-        <Input value='test' placeholder='Пример: Project1-bucket106' allowClear />
+        <Input value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
       </FormField>
     </EmbeddedComponent>
   </TableWithRowDetail>

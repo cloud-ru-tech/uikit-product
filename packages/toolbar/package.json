@@ -33,7 +33,7 @@
     "@sbercloud/uikit-react-dropdown": "0.13.0",
     "@sbercloud/uikit-react-filter": "0.14.29",
     "@sbercloud/uikit-react-icons": "2.7.0",
-    "@sbercloud/uikit-react-input": "0.19.3",
+    "@sbercloud/uikit-react-input-private": "1.0.0",
     "@sbercloud/uikit-theme": "0.29.0",
     "@sbercloud/uikit-utils": "2.0.1"
   },

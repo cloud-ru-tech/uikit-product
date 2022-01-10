@@ -47,7 +47,7 @@ export const InlineTreeSelect: FC<IInlineTreeSelectProps> = ({
 }) => {
   const [open, setOpen] = useState<boolean>(false);
   const [stateValue, setStateValue] = useState<CheckedType | undefined>();
-  const [search, setSearch] = useState<string>();
+  const [search, setSearch] = useState('');
 
   useEffect(() => {
     if (isEqual(stateValue, value)) {
@@ -147,7 +147,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
       defaultValue={defaultValue}
       options={options}
       valueFormatter={(val): string =>
-        textProvider<DictionaryPropertyAsFn>(languageCode, Texts.usersSelected)({ count: val?.length || 0 })
+        textProvider<DictionaryPropertyAsFn>(languageCode, Texts.UsersSelected)({ count: val?.length || 0 })
       }
       onChange={onChange}
       disabled={disabled}

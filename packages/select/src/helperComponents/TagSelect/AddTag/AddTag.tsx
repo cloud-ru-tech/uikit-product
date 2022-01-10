@@ -30,7 +30,7 @@ export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.
 
   const notValid = useMemo(() => validator && !validator(search), [validator, search]);
 
-  const addText = useMemo(() => textProvider<string>(languageCode, Texts.add), [languageCode]);
+  const addText = useMemo(() => textProvider<string>(languageCode, Texts.Add), [languageCode]);
 
   if (!search || hasSearched) return null;
 

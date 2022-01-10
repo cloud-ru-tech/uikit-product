@@ -3,7 +3,7 @@ import { FC, useCallback, useMemo } from 'react';
 
 import { DatePicker } from '@sbercloud/uikit-react-datepicker';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Input } from '@sbercloud/uikit-react-input';
+import { SimpleInput } from '@sbercloud/uikit-react-input-private';
 import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
@@ -141,10 +141,10 @@ export const FilterRow: FC<IFilterRowProps> = ({
         )}
 
         {filterOption?.type === TFilterOptionType.Input && (
-          <Input
+          <SimpleInput
             value={initValueOption as string}
-            onChange={(e): void => {
-              handleChange('value', [e.target.value]);
+            onChange={(value): void => {
+              handleChange('value', [value]);
             }}
             className={S.filterInputClassName}
           />

@@ -25,7 +25,7 @@ const Template: Story<ICollapsePanelProps> = ({ ...args }) => (
   <CollapsePanel {...args}>
     <CollapsePanelItem index={0} header={<Avatar shape={Avatar.shapes.Circle} size={Avatar.sizes.M} src={avatarSrc} />}>
       <ContentStyled>Content</ContentStyled>
-      <Input value={'Some text'} />
+      <Input value={'Some text'} onChange={() => {}} />
     </CollapsePanelItem>
     <CollapsePanelItem index={1} header={<div>Vertical Scrolling</div>} isFavourite>
       <ContentStyled>{'Content '.repeat(500)}</ContentStyled>

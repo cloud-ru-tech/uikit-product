@@ -31,7 +31,7 @@ const Template: Story<CollapsePanelItemProps> = ({ ...args }) => {
       header={<Avatar shape={Avatar.shapes.Circle} size={Avatar.sizes.M} username='G O' />}
     >
       <ContentStyled>Content</ContentStyled>
-      <Input value={'Some text'} />
+      <Input value={'Some text'} onChange={() => {}} />
     </CollapsePanelItem>
   );
 };

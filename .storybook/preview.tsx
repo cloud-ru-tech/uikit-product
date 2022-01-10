@@ -1,5 +1,6 @@
 import { addDecorator, addParameters } from '@storybook/react';
-import React, { useEffect, useLayoutEffect } from 'react';
+import { useEffect, useLayoutEffect } from 'react';
+import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
 
@@ -35,13 +36,21 @@ addDecorator((Story, { globals: { locale, theme } }) => {
   useEffect(() => {
     colorizeThemeButton();
   }, []);
+  const methods = useForm({
+    mode: 'onSubmit',
+    reValidateMode: 'onSubmit',
+    shouldFocusError: true,
+    shouldUnregister: true,
+  });
   return (
     // Add global styles and theme variables
     <div id='story-root'>
-      <ConfigProvider theme={theme || ConfigProvider.themes.Purple} languageCode={locale || LanguageCodeType.ruRU}>
-        {/* @ts-ignore */}
-        <Story />
-      </ConfigProvider>
+      <FormProvider {...methods}>
+        <ConfigProvider theme={theme || ConfigProvider.themes.Purple} languageCode={locale || LanguageCodeType.ruRU}>
+          {/* @ts-ignore */}
+          <Story />
+        </ConfigProvider>
+      </FormProvider>
     </div>
   );
 });

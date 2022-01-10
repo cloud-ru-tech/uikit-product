@@ -26,12 +26,12 @@ export const ValueContainer: FC<IValueContainerProps> = ({
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const getVal = useCallback(() => {
     if (!value || !value.length) {
-      return placeholder || textProvider<string>(languageCode, Texts.selectValue);
+      return placeholder || textProvider<string>(languageCode, Texts.SelectValue);
     }
 
     return (
       valueFormatter?.(value) ||
-      textProvider<DictionaryPropertyAsFn>(languageCode, Texts.selected)({ count: value.length })
+      textProvider<DictionaryPropertyAsFn>(languageCode, Texts.Selected)({ count: value.length })
     );
   }, [value, languageCode]);
 

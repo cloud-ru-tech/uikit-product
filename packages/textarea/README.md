@@ -14,7 +14,7 @@ export type TextareaProps = {
     className?: string;
     maxRows?: number;
     maxLength?: number;
-    ref?: HTMLTextAreaElement;
+    ref?: RefObject<HTMLTextAreaElement>;
     label?: string;
     labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
     optional?: boolean;

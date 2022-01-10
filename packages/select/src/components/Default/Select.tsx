@@ -179,7 +179,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     <div className={className} ref={selectRef} {...extractSupportProps(props)}>
       <RCSelect<CustomOptionType>
         {...props}
-        placeholder={placeholder || textProvider<string>(languageCode, Texts.selectPlaceholder)}
+        placeholder={placeholder || textProvider<string>(languageCode, Texts.SelectPlaceholder)}
         onMenuClose={onMenuClose}
         ref={(instance): void => {
           customRef?.(instance as RCSelect<CustomOptionType>);

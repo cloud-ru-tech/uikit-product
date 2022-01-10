@@ -2,12 +2,11 @@ import { styled } from '@linaria/react';
 import { Story } from '@storybook/react/types-6-0';
 import React, { useCallback, useState } from 'react';
 
-import { CopyInput, Input } from '@sbercloud/uikit-react-input';
 import { Modal } from '@sbercloud/uikit-react-modal';
+import { TextField } from '@sbercloud/uikit-react-text-field';
+import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H2, Text2 } from '@sbercloud/uikit-typography';
-
-import { CloseInterfaceSVG, SearchInterfaceSVG } from '../../src';
+import { H3, Text2 } from '@sbercloud/uikit-typography';
 
 const { COLORS_BUTTON } = DEPRECATED_EXPORT_VARS;
 
@@ -49,6 +48,16 @@ const IconOverview = styled.div`
 
 const CopyInputWrapper = styled.div`
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: fit-content;
+  align-items: center;
+`;
+
+const Label = styled.span`
+  min-width: 96px;
+  margin-right: 12px;
 `;
 
 const TextWrapper = styled.div`
@@ -73,25 +82,16 @@ export function getTemplate(
     const onCloseHandler = useCallback(() => setSelectedIcon(null), []);
     return (
       <>
-        <H2>Кликните на иконку для отображения дополнительной информации</H2>
-        <Input
-          value={search}
-          onChange={event => {
-            setSearch(event.target.value.toLowerCase());
-          }}
-          postfix={
-            search ? (
-              <CloseInterfaceSVG
-                onClick={(): void => {
-                  setSearch('');
-                }}
-              />
-            ) : (
-              <SearchInterfaceSVG />
-            )
-          }
-          placeholder='Поиск'
-        />
+        <H3>Кликните на иконку для отображения дополнительной информации</H3>
+        <Toolbar.Wrapper>
+          <Toolbar.Input
+            value={search}
+            onChange={value => {
+              setSearch(value.toLowerCase());
+            }}
+            placeholder='Поиск'
+          />
+        </Toolbar.Wrapper>
         <Group>
           {Object.entries(Icons)
             .filter(([key]) => key.toLowerCase().includes(search))
@@ -129,13 +129,13 @@ export function getTemplate(
             description={
               <IconOverview>
                 {selectedIcon.Icon({ size: 44 })}
-                <CopyInput
-                  value={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-react-icons';`}
-                  label={'Import:'}
-                  labelMinWidth={'100px'}
-                />
                 <CopyInputWrapper>
-                  <CopyInput value={selectedIcon.dataAttribute} label={'data-test-id:'} labelMinWidth={'100px'} />
+                  <Label>import:</Label>
+                  <TextField text={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-react-icons';`} />
+                </CopyInputWrapper>
+                <CopyInputWrapper>
+                  <Label>data-test-id:</Label>
+                  <TextField text={selectedIcon.dataAttribute} />
                 </CopyInputWrapper>
               </IconOverview>
             }

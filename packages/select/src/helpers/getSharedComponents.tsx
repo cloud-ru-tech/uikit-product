@@ -33,7 +33,7 @@ const MultiValueRemove = (props: React.ComponentProps<typeof ReactSelectComponen
 
 const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponents.NoOptionsMessage>): JSX.Element => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const noDataText = useMemo(() => textProvider<string>(languageCode, Texts.noData), [languageCode]);
+  const noDataText = useMemo(() => textProvider<string>(languageCode, Texts.NoData), [languageCode]);
   return <ReactSelectComponents.NoOptionsMessage {...props}>{noDataText}</ReactSelectComponents.NoOptionsMessage>;
 };
 

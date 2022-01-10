@@ -28,6 +28,5 @@ export const FilterColumn = styled.div`
 `;
 
 export const filterInputClassName = css`
-  height: 34px;
-  padding: 8px 12px;
+  height: 36px;
 `;

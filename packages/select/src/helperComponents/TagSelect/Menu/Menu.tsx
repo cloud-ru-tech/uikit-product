@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { AddTag } from '../AddTag';
@@ -17,10 +17,8 @@ export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Me
     () => (dropdownPlacement === 'right' ? { right: 0 } : { left: 0 }),
     [dropdownPlacement],
   );
-
-  const getInstance = useCallback(instance => {
-    instance?.current?.focus();
-  }, []);
+  const inputRef = useRef<HTMLInputElement>(null);
+  useEffect(() => inputRef?.current?.focus(), [inputRef.current]);
 
   return (
     <div
@@ -32,12 +30,7 @@ export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Me
       }}
       className={cx({ menu: true }, className)}
     >
-      <StyledSearchInput
-        getInstance={getInstance}
-        value={search}
-        onChange={onSearch}
-        wrapperClassName={searchInputWrapClassname}
-      />
+      <StyledSearchInput ref={inputRef} value={search || ''} onChange={onSearch} className={searchInputWrapClassname} />
       {children}
       <AddTag {...props} />
     </div>
