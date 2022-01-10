@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.30](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter@0.14.29...@sbercloud/uikit-react-filter@0.14.30) (2022-01-10)
+
+
+### Bug Fixes
+
+* First stable version of Input ([b1c3452](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1c34525d82c191801d13525f3cfa8a5461d3c5d))
+
+
+
+
+
 ## [0.14.29](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter@0.14.28...@sbercloud/uikit-react-filter@0.14.29) (2021-12-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-filter

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.26.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.26.10...@sbercloud/uikit-react-table@0.26.11) (2022-01-10)
+
+
+### Bug Fixes
+
+* First stable version of Input ([b1c3452](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1c34525d82c191801d13525f3cfa8a5461d3c5d))
+
+
+
+
+
 ## [0.26.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.26.9...@sbercloud/uikit-react-table@0.26.10) (2021-12-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table

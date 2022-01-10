@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@1.0.6...@sbercloud/uikit-react-textarea@2.0.0) (2022-01-10)
+
+
+### Bug Fixes
+
+* First stable version of Input ([b1c3452](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1c34525d82c191801d13525f3cfa8a5461d3c5d))
+
+
+### Features
+
+* Textarea has been wrapped by InputDecorator, props api has been changed ([2e10203](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2e102036a5f842db71e5d28f13b00346885a5282))
+
+
+### BREAKING CHANGES
+
+* Textarea has been wrapped by InputDecorator, props api has been changed
+
+
+
+
+
 ## [1.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@1.0.5...@sbercloud/uikit-react-textarea@1.0.6) (2021-12-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-textarea
