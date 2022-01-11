@@ -4,11 +4,11 @@ import { ReactElement } from 'react';
 import { BaseButton } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withTooltip } from '../../hocs';
-import { CommonButtonPropsWithRequiredTooltip } from '../../types';
+import { CommonButtonPropsWithOptionalTooltip } from '../../types';
 import { Variant } from './constants';
 import * as S from './styled';
 
-export type ButtonIconProps = CommonButtonPropsWithRequiredTooltip & {
+export type ButtonIconProps = CommonButtonPropsWithOptionalTooltip & {
   icon: ReactElement;
   variant?: Variant;
 };

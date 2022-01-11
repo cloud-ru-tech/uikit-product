@@ -20,4 +20,4 @@ export type CommonButtonProps = WithSupportProps<ButtonProps | AnchorProps> & {
   onClick?: MouseEventHandler<HTMLElement>;
 };
 
-export type CommonButtonPropsWithRequiredTooltip = CommonButtonProps & Required<Pick<WithTooltipProps, 'tooltip'>>;
+export type CommonButtonPropsWithOptionalTooltip = CommonButtonProps & Pick<WithTooltipProps, 'tooltip'>;
