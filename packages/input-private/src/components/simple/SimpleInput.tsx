@@ -23,7 +23,7 @@ export type SimpleInputProps = {
   autoComplete?: boolean;
   moreButton?: {
     onClick(): void;
-    tooltipText: string;
+    tooltipText?: string;
   };
   maxLength?: number;
   ref?: RefObject<HTMLInputElement>;
@@ -149,9 +149,13 @@ const ForwardedInput = forwardRef<HTMLInputElement, WithSupportProps<SimpleInput
               icon={<S.MoreIcon />}
               disabled={disabled}
               onClick={moreButton?.onClick}
-              tooltip={{
-                content: moreButton?.tooltipText,
-              }}
+              tooltip={
+                moreButton?.tooltipText
+                  ? {
+                      content: moreButton?.tooltipText,
+                    }
+                  : undefined
+              }
               data-test-id={'input__more-button'}
             />
           </S.MoreButtonWrapper>
