@@ -55,15 +55,18 @@ export const InputWrapper = styled.div`
   }
 
   &[data-size=${Sizes.Small}] {
-    padding: 4px 8px;
+    height: 28px;
+    padding: 3px 7px;
   }
 
   &[data-size=${Sizes.Medium}] {
-    padding: 8px;
+    height: 36px;
+    padding: 7px;
   }
 
   &[data-size=${Sizes.Large}] {
-    padding: 12px;
+    height: 44px;
+    padding: 11px;
   }
 `;
 
@@ -113,14 +116,14 @@ export const MoreButtonWrapper = styled.div`
   }
 
   &[data-size=${Sizes.Small}] {
-    padding: 4px;
+    padding: 3px;
   }
 
   &[data-size=${Sizes.Medium}] {
-    padding: 8px;
+    padding: 7px;
   }
 
   &[data-size=${Sizes.Large}] {
-    padding: 12px;
+    padding: 11px;
   }
 `;

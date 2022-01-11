@@ -20,6 +20,8 @@ export const StyledInput = styled.input`
   color: var(${COLORS.text.default});
   background-color: transparent;
 
+  padding: 0;
+
   &[disabled] {
     background-color: transparent;
     color: var(${COLORS.text.disabled});
