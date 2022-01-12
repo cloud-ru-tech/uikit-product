@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-private@1.0.1...@sbercloud/uikit-react-input-private@1.0.2) (2022-01-12)
+
+
+### Bug Fixes
+
+* correct height sizes in all variants ([d20e42e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d20e42e28e829e2b35c8093ca231b31d6a57a851))
+
+
+
+
+
 ## 1.0.1 (2022-01-10)
 
 
