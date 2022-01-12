@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.20](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-cards@0.11.19...@sbercloud/uikit-react-cards@0.11.20) (2022-01-12)
+
+
+### Bug Fixes
+
+* First stable version of Input ([b1c3452](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1c34525d82c191801d13525f3cfa8a5461d3c5d))
+
+
+
+
+
 ## [0.11.19](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-cards@0.11.18...@sbercloud/uikit-react-cards@0.11.19) (2021-12-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-cards

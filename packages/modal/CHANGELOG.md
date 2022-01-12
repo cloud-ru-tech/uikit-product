@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.27](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-modal@0.15.26...@sbercloud/uikit-react-modal@0.15.27) (2022-01-12)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-modal
+
+
+
+
+
 ## [0.15.26](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-modal@0.15.25...@sbercloud/uikit-react-modal@0.15.26) (2021-12-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-modal
