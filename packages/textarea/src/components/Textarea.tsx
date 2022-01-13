@@ -5,9 +5,7 @@ import { SimpleTextarea, SimpleTextareaProps } from '@sbercloud/uikit-react-text
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 export type TextareaProps = Omit<InputDecoratorPrivateProps, 'children'> &
-  Omit<SimpleTextareaProps, 'error' | 'autosize'> & {
-    error?: string;
-  };
+  Omit<SimpleTextareaProps, 'error' | 'autosize'>;
 
 export const Textarea = forwardRef<HTMLTextAreaElement, WithSupportProps<TextareaProps>>(
   (
