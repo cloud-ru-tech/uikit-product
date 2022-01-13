@@ -42,6 +42,7 @@ export function TextField({
       disabled
       data-test-id='text-field__value'
       data-has-action-buttons={hasActionButtons || undefined}
+      minRows={1}
     />
   );
 

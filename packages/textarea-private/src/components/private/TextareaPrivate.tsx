@@ -2,7 +2,7 @@ import { cx } from '@linaria/core';
 import { ChangeEvent, RefObject, forwardRef, useCallback, useMemo } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import * as S from './styled';
 
@@ -59,6 +59,7 @@ export const TextareaPrivate = forwardRef<HTMLTextAreaElement, WithSupportProps<
       onChange: onChangeHandler,
       onBlur,
       onFocus,
+      ...extractDataProps(excludeSupportProps(rest)),
       ...extractSupportProps(rest),
     };
 

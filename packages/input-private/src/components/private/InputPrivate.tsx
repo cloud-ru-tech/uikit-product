@@ -8,7 +8,7 @@ import {
   forwardRef,
 } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Types } from './constants';
 import { StyledInput } from './styled';
@@ -67,6 +67,7 @@ const ForwardedPrivateInput = forwardRef<HTMLInputElement, WithSupportProps<Inpu
           disabled={disabled}
           onFocus={onFocus}
           onBlur={onBlur}
+          {...extractDataProps(excludeSupportProps(rest))}
           {...extractSupportProps(rest)}
         />
         {postfix}
