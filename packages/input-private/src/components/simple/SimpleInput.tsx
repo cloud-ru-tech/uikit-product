@@ -1,5 +1,5 @@
 import mergeRefs from 'merge-refs';
-import { ChangeEvent, RefObject, forwardRef, useEffect, useRef, useState } from 'react';
+import { ChangeEvent, RefObject, forwardRef, useRef, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -78,14 +78,13 @@ const ForwardedInput = forwardRef<HTMLInputElement, WithSupportProps<SimpleInput
       } else {
         setInnerType(Types.Text);
       }
-      onFocusWrapper();
-    };
 
-    useEffect(() => {
       setTimeout(() =>
         innerRef.current?.setSelectionRange(innerRef.current.value.length, innerRef.current.value.length),
       );
-    }, [innerType]);
+
+      onFocusWrapper();
+    };
 
     return (
       <S.Wrapper className={className} {...extractSupportProps(rest)}>
