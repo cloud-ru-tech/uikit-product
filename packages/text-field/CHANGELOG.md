@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@2.0.25...@sbercloud/uikit-react-text-field@3.0.0) (2022-01-13)
+
+
+### Features
+
+* possibility to disable copy button, multiline prop has been deprecated, use type prop instead ([34cb0d8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/34cb0d88d63dc35e3acb8801ed82f6d341c0324d))
+
+
+### BREAKING CHANGES
+
+* possibility to disable copy button, multiline prop has been deprecated, use type prop instead
+
+
+
+
+
 ## [2.0.25](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@2.0.24...@sbercloud/uikit-react-text-field@2.0.25) (2022-01-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-text-field

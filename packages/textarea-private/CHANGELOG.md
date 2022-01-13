@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea-private@1.1.0...@sbercloud/uikit-react-textarea-private@1.1.1) (2022-01-13)
+
+
+### Bug Fixes
+
+* rewrite native textarea padding styles ([8921371](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/892137112fdf4b3a8a93ca78017d68c7c2e43751))
+
+
+
+
+
 # 1.1.0 (2022-01-13)
 
 
