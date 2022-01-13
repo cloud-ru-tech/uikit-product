@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea-private@1.1.1...@sbercloud/uikit-react-textarea-private@1.1.2) (2022-01-13)
+
+
+### Bug Fixes
+
+* private components also accept all data attributes ([e98c7dc](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/e98c7dc2939305e3ccf607ea9ac75c9d764980b8))
+
+
+
+
+
 ## [1.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea-private@1.1.0...@sbercloud/uikit-react-textarea-private@1.1.1) (2022-01-13)
 
 
