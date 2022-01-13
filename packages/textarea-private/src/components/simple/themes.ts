@@ -16,14 +16,6 @@ export const COLORS = {
     default: '--color-textarea__background__default',
     disabled: '--color-textarea__background__disabled',
   },
-  placeholder: {
-    default: '--color-textarea__placeholder__default',
-    disabled: '--color-textarea__placeholder__disabled',
-  },
-  text: {
-    default: '--color-textarea__text__default',
-    disabled: '--color-textarea__text__disabled',
-  },
 };
 
 export const PURPLE_THEME = css`
@@ -34,12 +26,6 @@ export const PURPLE_THEME = css`
       ${COLORS.border.hover}: var(${PURPLE[50]});
       ${COLORS.border.active}: var(${PURPLE[100]});
       ${COLORS.border.error}: var(${PRESET.BERRY_RED_1});
-
-      ${COLORS.text.default}: var(${GREY[800]});
-      ${COLORS.text.disabled}: var(${BLACK_ALFA[48]});
-
-      ${COLORS.placeholder.default}: var(${BLACK_ALFA[48]});
-      ${COLORS.placeholder.disabled}: var(${BLACK_ALFA[24]});
 
       ${COLORS.background.default}: var(${GREY[0]});
       ${COLORS.background.disabled}: var(${BLACK_ALFA[4]});
@@ -56,12 +42,6 @@ export const GREEN_THEME = css`
       ${COLORS.border.active}: var(${GREEN[100]});
       ${COLORS.border.error}: var(${PRESET.BERRY_RED_1});
 
-      ${COLORS.text.default}: var(${GREY[800]});
-      ${COLORS.text.disabled}: var(${BLACK_ALFA[48]});
-
-      ${COLORS.placeholder.default}: var(${BLACK_ALFA[48]});
-      ${COLORS.placeholder.disabled}: var(${BLACK_ALFA[24]});
-
       ${COLORS.background.default}: var(${GREY[0]});
       ${COLORS.background.disabled}: var(${BLACK_ALFA[4]});
     }
@@ -77,12 +57,6 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.border.active}: var(${PURPLE[50]});
       ${COLORS.border.error}: var(${PRESET.BERRY_RED_1});
 
-      ${COLORS.text.default}: var(${GREY[100]});
-      ${COLORS.text.disabled}: var(${WHITE_ALFA[24]});
-
-      ${COLORS.placeholder.default}: var(${WHITE_ALFA[48]});
-      ${COLORS.placeholder.disabled}: var(${WHITE_ALFA[16]});
-
       ${COLORS.background.default}: var(${GREY[800]});
       ${COLORS.background.disabled}: var(${WHITE_ALFA[4]});
     }
@@ -97,12 +71,6 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.border.hover}: var(${GREEN[25]});
       ${COLORS.border.active}: var(${GREEN[50]});
       ${COLORS.border.error}: var(${PRESET.BERRY_RED_1});
-
-      ${COLORS.text.default}: var(${GREY[100]});
-      ${COLORS.text.disabled}: var(${WHITE_ALFA[24]});
-
-      ${COLORS.placeholder.default}: var(${WHITE_ALFA[48]});
-      ${COLORS.placeholder.disabled}: var(${WHITE_ALFA[16]});
 
       ${COLORS.background.default}: var(${GREY[800]});
       ${COLORS.background.disabled}: var(${WHITE_ALFA[4]});

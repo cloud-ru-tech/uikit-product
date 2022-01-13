@@ -50,6 +50,7 @@ export const textarea = Template.bind({});
 textarea.args = {
   placeholder: 'placeholder',
   label: 'Label',
+  value: '',
   optional: true,
   maxLength: 120,
   hint: 'Введите "error", чтобы спровоцировать ошибку',

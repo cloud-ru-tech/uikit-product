@@ -1,8 +1,6 @@
 import { styled } from '@linaria/react';
-import TextareaAutosize from 'react-textarea-autosize';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -41,43 +39,10 @@ export const Wrapper = styled.div`
     border-color: var(${COLORS.border.disabled});
     background-color: var(${COLORS.background.disabled});
   }
-`;
 
-export const TextArea = styled(TextareaAutosize)`
-  resize: none;
-  width: 100%;
-  max-width: 100%;
-  border-width: 0;
-
-  font-family: SB Sans Interface, serif;
-  color: var(${COLORS.text.default});
-  ${TYPOGRAPHY_VARIABLES.TEXT_2};
-
-  box-sizing: border-box;
-
-  background-color: transparent;
-
-  padding-top: 12px;
-  padding-right: 12px;
-
-  outline: 0;
-
-  &[disabled] {
-    background-color: transparent;
-    color: var(${COLORS.text.disabled});
-  }
-
-  &::placeholder {
-    color: var(${COLORS.placeholder.default});
-  }
-
-  &[disabled]::placeholder {
-    color: var(${COLORS.placeholder.disabled});
-  }
-
-  &::-webkit-scrollbar {
-    width: 0;
-    max-width: 0;
+  &:not(&[data-autosize]) {
+    height: 100%;
+    overflow: hidden;
   }
 `;
 

@@ -7,11 +7,12 @@
 ```typescript
 export type TextareaProps = {
     value: string;
-    onChange(value: string): void;
+    onChange(value: string, e?: ChangeEvent<HTMLTextAreaElement>): void;
     placeholder?: string;
     disabled?: boolean;
     error?: string;
     className?: string;
+    minRows?: number;
     maxRows?: number;
     maxLength?: number;
     ref?: RefObject<HTMLTextAreaElement>;
