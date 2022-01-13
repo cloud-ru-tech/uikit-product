@@ -1,25 +1,59 @@
 import { ReactNode } from 'react';
 
 import { CopyButton } from '@sbercloud/uikit-react-button';
+import { InputPrivate } from '@sbercloud/uikit-react-input-private';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { Container, IconsContainer, StyledText } from './styled';
+import { Types } from './constants';
+import { Container, IconsContainer, StyledInputPrivate, StyledTextareaPrivate } from './styled';
 
 export type TextFieldProps = WithSupportProps<{
   className?: string;
-  multiline?: boolean;
+  type?: Types;
   text: string;
   extraIcons?: ReactNode;
+  allowCopy?: boolean;
 }>;
 
-export function TextField({ className, multiline = false, text, extraIcons, ...rest }: TextFieldProps) {
+export function TextField({
+  className,
+  type = Types.OneLine,
+  text,
+  extraIcons,
+  allowCopy = true,
+  ...rest
+}: TextFieldProps) {
+  const isOneLine = type === Types.OneLine;
+  const isMultiLine = type === Types.MultiLine;
+
+  const hasActionButtons = allowCopy || Boolean(extraIcons);
+
+  const content = isOneLine ? (
+    <StyledInputPrivate
+      value={text}
+      disabled
+      type={InputPrivate.types.Text}
+      data-test-id='text-field__value'
+      data-has-action-buttons={hasActionButtons || undefined}
+    />
+  ) : (
+    <StyledTextareaPrivate
+      value={text}
+      disabled
+      data-test-id='text-field__value'
+      data-has-action-buttons={hasActionButtons || undefined}
+    />
+  );
+
   return (
     <Container className={className} {...extractSupportProps(rest)}>
-      <IconsContainer data-multiline={multiline || undefined}>
+      <IconsContainer data-multiline={isMultiLine || undefined}>
         {extraIcons}
-        <CopyButton text={text} />
+        {allowCopy && <CopyButton text={text} data-test-id='text-field__copy-button' />}
       </IconsContainer>
-      <StyledText data-multiline={multiline || undefined}>{text}</StyledText>
+      {content}
     </Container>
   );
 }
+
+TextField.types = Types;

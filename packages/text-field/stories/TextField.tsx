@@ -40,6 +40,7 @@ textField.args = {
     </>
   ),
   'data-test-id': 'testId',
+  allowCopy: true,
 };
 textField.parameters = {
   readme: {
