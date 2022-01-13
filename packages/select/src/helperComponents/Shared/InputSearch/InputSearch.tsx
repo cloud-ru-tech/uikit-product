@@ -7,7 +7,8 @@ import { useLanguage } from '@sbercloud/uikit-utils';
 import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { InputWrapper, crossIconClassName, searchIconClassname } from './styled';
 
-export type InputSearchProps = Pick<InputPrivateProps, 'value' | 'onChange' | 'className' | 'ref'>;
+export type InputSearchProps = Pick<InputPrivateProps, 'className' | 'ref'> &
+  Required<Pick<InputPrivateProps, 'value' | 'onChange'>>;
 
 export const InputSearch = React.forwardRef<HTMLInputElement, InputSearchProps>(
   ({ onChange, value, className }, ref) => {

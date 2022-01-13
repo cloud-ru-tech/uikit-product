@@ -28,6 +28,7 @@ const Template: Story<WithSupportProps<ToolbarWrapperProps>> = ({ ...args }) => 
         <DeleteInterfaceSVG />
       </Toolbar.Button>
       <Toolbar.Input
+        placeholder={'Поиск'}
         value={value}
         onChange={(value): void => {
           setValue(value);

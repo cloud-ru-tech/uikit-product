@@ -15,7 +15,7 @@ import { StyledInput } from './styled';
 
 export type InputPrivateProps = {
   value: string;
-  onChange(value: string, e?: ChangeEvent<HTMLInputElement>): void;
+  onChange?(value: string, e?: ChangeEvent<HTMLInputElement>): void;
   className?: string;
   placeholder?: string;
   type?: Types;
@@ -48,7 +48,7 @@ const ForwardedPrivateInput = forwardRef<HTMLInputElement, WithSupportProps<Inpu
     },
     ref,
   ) => {
-    const onChangeHandler: ChangeEventHandler<HTMLInputElement> = e => onChange(e.target.value, e);
+    const onChangeHandler: ChangeEventHandler<HTMLInputElement> = e => onChange?.(e.target.value, e);
     const stopPropagation: MouseEventHandler<HTMLInputElement> = e => e.stopPropagation();
 
     return (

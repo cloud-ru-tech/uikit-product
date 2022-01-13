@@ -106,7 +106,7 @@ const Template: Story<IFilterProps> = () => {
   return (
     <div style={{ padding: 10 }}>
       <Toolbar.Wrapper>
-        <Toolbar.Input value={value} onChange={setValue} />
+        <Toolbar.Input value={value} onChange={setValue} placeholder={'Поиск'} />
         <Filter
           filterOptions={defOpt}
           value={filterValue}

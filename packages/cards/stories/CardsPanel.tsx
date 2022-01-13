@@ -110,7 +110,7 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
     <>
       {args.useSearch && (
         <Toolbar.Wrapper>
-          <Toolbar.Input value={searchValue} onChange={setSearchValue} />
+          <Toolbar.Input value={searchValue} onChange={setSearchValue} placeholder={'Поиск'} />
         </Toolbar.Wrapper>
       )}
       <CardsPanel

@@ -8,7 +8,8 @@ import { WithSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import { InputWrapStyled, searchIconClassname } from './styled';
 
-export type ToolbarInputProps = Pick<InputPrivateProps, 'value' | 'onChange' | 'disabled' | 'placeholder'>;
+export type ToolbarInputProps = Required<Pick<InputPrivateProps, 'value' | 'onChange' | 'placeholder'>> &
+  Pick<InputPrivateProps, 'disabled'>;
 
 export const ToolbarInput: FC<WithSupportProps<ToolbarInputProps>> = ({ value, onChange, ...inputAndSupportProps }) => {
   const { languageCode } = useLanguage();
