@@ -2,6 +2,7 @@ import { styled } from '@linaria/react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 
+import { TextareaPrivate } from '../private';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 GREEN_DARK_THEME;
@@ -49,4 +50,9 @@ export const Wrapper = styled.div`
 export const ClearButton = styled(ButtonIcon)`
   align-self: flex-start;
   margin-top: 12px;
+`;
+
+export const StyledPrivateTextarea = styled(TextareaPrivate)`
+  padding-top: 12px;
+  padding-right: 12px;
 `;

@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-const { WHITE_ALFA, BLACK_ALFA, GREY, PURPLE, GREEN, PRESET } = EXPORT_VARS;
+const { WHITE_ALFA, BLACK_ALFA, GREY } = EXPORT_VARS;
 
 export const COLORS = {
   placeholder: {

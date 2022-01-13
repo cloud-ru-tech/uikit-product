@@ -24,10 +24,9 @@ export const textareaClassName = css`
 
   background-color: transparent;
 
-  padding-top: 12px;
-  padding-right: 12px;
-
   outline: 0;
+  padding: 0;
+  margin: 0;
 
   &[disabled] {
     background-color: transparent;

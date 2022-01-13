@@ -5,8 +5,8 @@ import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
-import { TextareaPrivate } from '../private';
 import * as S from './styled';
+import { StyledPrivateTextarea } from './styled';
 
 export type SimpleTextareaProps = {
   value: string;
@@ -59,7 +59,7 @@ export const SimpleTextarea = forwardRef<HTMLTextAreaElement, WithSupportProps<S
         className={className}
         {...extractSupportProps(rest)}
       >
-        <TextareaPrivate
+        <StyledPrivateTextarea
           ref={textareaRef}
           value={value}
           onChange={onChange}
