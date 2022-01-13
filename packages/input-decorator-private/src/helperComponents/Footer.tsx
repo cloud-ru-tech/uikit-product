@@ -11,8 +11,11 @@ type FooterProps = {
 
 export function Footer({ error, length, hint }: FooterProps) {
   const isReverseContainer = (error ? !error : !hint) && length;
+
+  if (!error && !hint && !length) return null;
+
   return (
-    <S.FlexWrapper data-reverse={isReverseContainer || undefined}>
+    <S.FlexWrapper data-reverse={isReverseContainer || undefined} data-footer>
       {error && (
         <S.ErrorWrapper>
           <S.ErrorIcon size={16} />

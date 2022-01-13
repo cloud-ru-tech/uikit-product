@@ -12,8 +12,11 @@ type HeaderProps = {
 
 export function Header({ optional, label, labelTooltip }: HeaderProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+
+  if (!optional && !label) return null;
+
   return (
-    <S.FlexWrapper data-reverse={(optional && !label) || undefined}>
+    <S.FlexWrapper data-reverse={(optional && !label) || undefined} data-header>
       {label && (
         <div>
           {label && <S.Label data-test-id={'input-wrapper__label'}>{label}</S.Label>}

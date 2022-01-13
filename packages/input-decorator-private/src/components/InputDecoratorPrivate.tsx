@@ -5,7 +5,6 @@ import { WithSupportProps } from '@sbercloud/uikit-utils';
 
 import { Footer } from '../helperComponents/Footer';
 import { Header } from '../helperComponents/Header';
-import * as S from './styled';
 
 export type InputDecoratorPrivateProps = {
   children: ReactNode;
@@ -35,12 +34,7 @@ export function InputDecoratorPrivate({
   return (
     <div className={className} {...rest}>
       <Header labelTooltip={labelTooltip} label={label} optional={optional} />
-      <S.FromWrapper
-        data-has-header={label || optional || undefined}
-        data-has-footer={error || hint || length || undefined}
-      >
-        {children}
-      </S.FromWrapper>
+      {children}
       <Footer hint={hint} length={length} error={error} />
     </div>
   );

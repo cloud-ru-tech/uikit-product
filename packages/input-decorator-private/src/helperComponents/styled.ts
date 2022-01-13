@@ -21,6 +21,14 @@ export const FlexWrapper = styled.div`
   word-break: break-word;
   white-space: break-spaces;
 
+  &[data-header] {
+    padding-bottom: 8px;
+  }
+
+  &[data-footer] {
+    padding-top: 8px;
+  }
+
   &[data-reverse] {
     justify-content: flex-end;
   }
