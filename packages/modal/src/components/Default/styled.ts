@@ -26,7 +26,7 @@ export const Description = styled.div`
 
 export const ButtonWrapper = styled.div`
   margin-top: 40px;
-  flex-wrap: nowrap;
+  display: flex;
 `;
 
 export const buttonCSS = css`
