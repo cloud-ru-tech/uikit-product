@@ -1,9 +1,11 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 
-import { CopyButton } from '@sbercloud/uikit-react-button';
+import { ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
+import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { InputPrivate } from '@sbercloud/uikit-react-input-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
+import { Texts, textProvider } from './../helpers/texts-provider';
 import { Types } from './constants';
 import { Container, IconsContainer, StyledInputPrivate, StyledTextareaPrivate } from './styled';
 
@@ -23,16 +25,20 @@ export function TextField({
   allowCopy = true,
   ...rest
 }: TextFieldProps) {
-  const isOneLine = type === Types.OneLine;
+  const isPassword = type === Types.Password;
+  const isOneLine = type === Types.OneLine || isPassword;
   const isMultiLine = type === Types.MultiLine;
+  const [isSecured, setIsSecured] = useState(isPassword);
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const hasActionButtons = allowCopy || Boolean(extraIcons);
 
+  const inputType = isSecured ? InputPrivate.types.Password : InputPrivate.types.Text;
   const content = isOneLine ? (
     <StyledInputPrivate
       value={text}
       disabled
-      type={InputPrivate.types.Text}
+      type={inputType}
       data-test-id='text-field__value'
       data-has-action-buttons={hasActionButtons || undefined}
     />
@@ -46,10 +52,24 @@ export function TextField({
     />
   );
 
+  const securedIcon = (
+    <ButtonIconTransparent
+      data-test-id='text-field__show-hide-button'
+      variant={ButtonIconTransparent.variants.Default}
+      onClick={() => setIsSecured(!isSecured)}
+      icon={isSecured ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
+      tooltip={{
+        content: textProvider(languageCode, isSecured ? Texts.show : Texts.hide),
+        placement: ButtonIconTransparent.placements.Top,
+      }}
+    />
+  );
+
   return (
     <Container className={className} {...extractSupportProps(rest)}>
       <IconsContainer data-multiline={isMultiLine || undefined}>
         {extraIcons}
+        {isPassword && securedIcon}
         {allowCopy && <CopyButton text={text} data-test-id='text-field__copy-button' />}
       </IconsContainer>
       {content}

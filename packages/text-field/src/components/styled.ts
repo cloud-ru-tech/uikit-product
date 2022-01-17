@@ -24,12 +24,14 @@ export const Container = styled.div`
 export const StyledInputPrivate = styled(InputPrivate)`
   overflow: hidden;
   text-overflow: ellipsis;
-
   &[data-has-action-buttons] {
     padding-right: 12px;
   }
   &[disabled] {
     color: var(${COLORS.text});
+  }
+  &[type='password'] {
+    text-overflow: initial;
   }
 `;
 
