@@ -21,6 +21,7 @@ export const StyledInput = styled.input`
   background-color: transparent;
 
   padding: 0;
+  margin: 0;
 
   &[disabled] {
     background-color: transparent;
