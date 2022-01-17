@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@3.0.1...@sbercloud/uikit-react-text-field@3.1.0) (2022-01-17)
+
+
+### Features
+
+* Password (Security) type has been introduced ([CP-3833](https://jira.sbercloud.tech/browse/CP-3833)) ([aab5add](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/aab5addcd045c739b6234fe94155590a066f5aa8))
+
+
+
+
+
 ## [3.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@3.0.0...@sbercloud/uikit-react-text-field@3.0.1) (2022-01-13)
 
 
