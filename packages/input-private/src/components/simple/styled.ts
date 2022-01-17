@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
 
+import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { Sizes } from './constants';
@@ -9,6 +10,12 @@ PURPLE_THEME;
 PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
+
+enum SizeInPx {
+  Small = '28px',
+  Medium = '36px',
+  Large = '44px',
+}
 
 export const Wrapper = styled.div`
   display: flex;
@@ -55,17 +62,17 @@ export const InputWrapper = styled.div`
   }
 
   &[data-size=${Sizes.Small}] {
-    height: 28px;
+    height: ${SizeInPx[Sizes.Small]};
     padding: 3px 7px;
   }
 
   &[data-size=${Sizes.Medium}] {
-    height: 36px;
+    height: ${SizeInPx[Sizes.Medium]};
     padding: 7px;
   }
 
   &[data-size=${Sizes.Large}] {
-    height: 44px;
+    height: ${SizeInPx[Sizes.Large]};
     padding: 11px;
   }
 `;
@@ -94,6 +101,7 @@ export const MoreButtonWrapper = styled.div`
   border-radius: 0 4px 4px 0;
 
   background-color: var(${COLORS.background.default});
+  height: auto;
 
   &:hover {
     border-color: var(${COLORS.border.hover});
@@ -116,14 +124,27 @@ export const MoreButtonWrapper = styled.div`
   }
 
   &[data-size=${Sizes.Small}] {
-    padding: 3px;
+    min-width: ${SizeInPx[Sizes.Small]};
+    max-width: ${SizeInPx[Sizes.Small]};
   }
 
   &[data-size=${Sizes.Medium}] {
-    padding: 7px;
+    min-width: ${SizeInPx[Sizes.Medium]};
+    max-width: ${SizeInPx[Sizes.Medium]};
   }
 
   &[data-size=${Sizes.Large}] {
-    padding: 11px;
+    min-width: ${SizeInPx[Sizes.Large]};
+    max-width: ${SizeInPx[Sizes.Large]};
+  }
+`;
+
+export const MoreButton = styled(ButtonIcon)`
+  height: 100%;
+  width: 100%;
+
+  > button {
+    height: 100%;
+    width: 100%;
   }
 `;

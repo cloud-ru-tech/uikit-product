@@ -144,7 +144,7 @@ const ForwardedInput = forwardRef<HTMLInputElement, WithSupportProps<SimpleInput
             data-disabled={disabled || undefined}
             data-focused={isFocused || undefined}
           >
-            <ButtonIcon
+            <S.MoreButton
               icon={<S.MoreIcon />}
               disabled={disabled}
               onClick={moreButton?.onClick}
