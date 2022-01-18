@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.27.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.26.17...@sbercloud/uikit-react-table@0.27.0) (2022-01-18)
+
+
+### Features
+
+* table context ([CP-3664](https://jira.sbercloud.tech/browse/CP-3664)) ([cc73294](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/cc73294aadcf34e0a954fcfdaacf896cb593d883))
+
+
+
+
+
 ## [0.26.17](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.26.16...@sbercloud/uikit-react-table@0.26.17) (2022-01-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
