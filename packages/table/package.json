@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@ag-grid-community/csv-export": "26.1.0",
-    "@ag-grid-enterprise/excel-export": "26.1.0",
-    "@ag-grid-enterprise/master-detail": "26.1.0",
+    "@ag-grid-community/csv-export": "26.2.0",
+    "@ag-grid-enterprise/excel-export": "26.2.0",
+    "@ag-grid-enterprise/master-detail": "26.2.0",
     "@sbercloud/uikit-react-button": "3.0.3",
     "@sbercloud/uikit-react-icons": "2.7.0",
     "@sbercloud/uikit-react-modal": "0.15.28",

@@ -31,7 +31,7 @@
     "@sbercloud/uikit-theme": "0.29.0",
     "@sbercloud/uikit-typography": "0.6.3",
     "@sbercloud/uikit-utils": "2.0.1",
-    "nanoid": "3.1.30"
+    "nanoid": "3.2.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

@@ -37,7 +37,7 @@
     "lodash.range": "3.2.0",
     "react-grid-heatmap": "1.1.0",
     "react-minimal-pie-chart": "8.2.0",
-    "uplot": "1.6.16",
+    "uplot": "1.6.18",
     "uplot-react": "1.1.1"
   },
   "devDependencies": {
