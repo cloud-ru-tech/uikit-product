@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-table",
   "title": "React Table",
-  "version": "0.27.0",
+  "version": "0.27.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,10 +32,10 @@
     "@ag-grid-enterprise/master-detail": "26.2.0",
     "@sbercloud/uikit-react-button": "3.0.3",
     "@sbercloud/uikit-react-icons": "2.7.0",
-    "@sbercloud/uikit-react-modal": "0.15.28",
+    "@sbercloud/uikit-react-modal": "0.15.29",
     "@sbercloud/uikit-react-paginator-private": "0.5.21",
-    "@sbercloud/uikit-react-table-private": "0.6.2",
-    "@sbercloud/uikit-react-toolbar": "0.14.31",
+    "@sbercloud/uikit-react-table-private": "0.6.3",
+    "@sbercloud/uikit-react-toolbar": "0.14.32",
     "@sbercloud/uikit-theme": "0.29.0",
     "@sbercloud/uikit-utils": "2.0.1",
     "lodash.debounce": "4.0.8"

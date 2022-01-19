@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-breadcrumbs",
   "title": "React Breadcrumbs",
-  "version": "0.10.18",
+  "version": "0.10.19",
   "sideEffects": [
     "*.css",
     "*.woff",

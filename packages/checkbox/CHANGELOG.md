@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.18](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.17...@sbercloud/uikit-react-checkbox@1.0.18) (2022-01-19)
+
+
+### Bug Fixes
+
+* event parameter in callback is optional ([340291c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/340291cd0af74b170de13911144c538488502b5a))
+* minor/patch third-party dependency actualization ([3648504](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/364850414e3a9967417d2dabff30547cfccc5d87))
+
+
+
+
+
 ## [1.0.17](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.16...@sbercloud/uikit-react-checkbox@1.0.17) (2021-12-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-checkbox

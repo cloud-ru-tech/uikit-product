@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.11 (2022-01-19)
+
+
+### Bug Fixes
+
+* event parameter in callback is optional ([340291c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/340291cd0af74b170de13911144c538488502b5a))
+
+
+
+
+
 ## [2.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-switch@2.0.9...@sbercloud/uikit-react-switch@2.0.10) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-switch
