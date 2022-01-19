@@ -1,5 +1,6 @@
 import { cx } from '@linaria/core';
 import { useMemo } from 'react';
+import * as React from 'react';
 import ReactSwitch from 'react-switch';
 
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
@@ -9,7 +10,7 @@ import { Wrapper, switchClassName, switchClassNameChecked, switchClassNameDisabl
 
 export type SwitchProps = {
   checked: boolean;
-  onChange(checked: boolean): void;
+  onChange(checked: boolean, e?: React.SyntheticEvent<MouseEvent | KeyboardEvent> | MouseEvent): void;
   className?: string;
   disabled?: boolean;
   size?: Size;

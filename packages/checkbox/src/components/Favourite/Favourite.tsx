@@ -11,7 +11,7 @@ export type FavouriteProps = {
   disabled?: boolean;
   className?: string;
   variant?: Variants;
-  handleChange(checked: boolean, e: React.ChangeEvent<HTMLInputElement>): void;
+  handleChange(checked: boolean, e?: React.ChangeEvent<HTMLInputElement>): void;
 };
 
 export const Favourite = ({

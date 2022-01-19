@@ -19,7 +19,7 @@ export type CheckboxProps = {
   className?: string;
   partChecked?: boolean;
   label?: React.ReactNode;
-  handleChange(checked: boolean, e: React.ChangeEvent<HTMLInputElement>): void;
+  handleChange(checked: boolean, e?: React.ChangeEvent<HTMLInputElement>): void;
 };
 
 export const Checkbox = ({

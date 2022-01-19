@@ -1,7 +1,5 @@
-enum Variants {
+export enum Variants {
   Weak = 'weak',
   Strong = 'strong',
   OnAccent = 'onAccent',
 }
-
-export { Variants };

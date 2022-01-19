@@ -11,7 +11,7 @@ type CheckboxProps = {
   className?: string;
   partChecked?: boolean;
   label?: React.ReactNode;
-  handleChange(checked: boolean, e: React.ChangeEvent<HTMLInputElement>): void;
+  handleChange(checked: boolean, e?: React.ChangeEvent<HTMLInputElement>): void;
 };
 
 type FavouriteProps = {
@@ -19,7 +19,7 @@ type FavouriteProps = {
   disabled?: boolean;
   className?: string;
   variant?: Variants;
-  handleChange(checked: boolean, e: React.ChangeEvent<HTMLInputElement>): void;
+  handleChange(checked: boolean, e?: React.ChangeEvent<HTMLInputElement>): void;
 };
 
 enum Variants {
