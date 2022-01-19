@@ -17,18 +17,17 @@ return props matched to `/^(data-test|aria)-/` regexp
 import { extractSupportProps } from '@sbercloud/uikit-utils';
 
 const sampleProps = {
-    ['data-test-id']: '1',
-    ['aria-disabled']: true,
-    ['data-disabled']: false,
-    onClick: () => {},
-    value: '123'
+  ['data-test-id']: '1',
+  ['aria-disabled']: true, 
+  ['data-disabled']: false,
+  onClick: () => {},
+  value: '123'
 }
 
-extractSupportProps(sampleProps) => 
-    {
-        ['data-test-id']: '1', 
-        ['aria-disabled']: true
-    }   
+extractSupportProps(sampleProps) => {
+  ['data-test-id']: '1', 
+  ['aria-disabled']: true
+}   
 ```
 
 #### ExtractDataTestProps
@@ -39,17 +38,16 @@ return props matched to `/^data-test-/` regexp
 import { extractDataTestProps } from '@sbercloud/uikit-utils';
 
 const sampleProps = {
-    ['data-test-id']: '1',
-    ['aria-disabled']: true,
-    ['data-disabled']: false,
-    onClick: () => {},
-    value: '123'
+  ['data-test-id']: '1',
+  ['aria-disabled']: true,
+  ['data-disabled']: false,
+  onClick: () => {},
+  value: '123'
 }
 
-extractDataTestProps(sampleProps) => 
-    {
-        ['data-test-id']: '1'
-    }   
+extractDataTestProps(sampleProps) => {
+  ['data-test-id']: '1'
+}   
 ```
 
 #### ExcludeSupportProps
@@ -60,19 +58,18 @@ return props not matched to `/^(data-test|aria)-/` regexp
 import { excludeSupportProps } from '@sbercloud/uikit-utils';
 
 const sampleProps = {
-    ['data-test-id']: '1',
-    ['aria-disabled']: true,
-    ['data-disabled']: false,
-    onClick: () => {},
-    value: '123'
+  ['data-test-id']: '1',
+  ['aria-disabled']: true, 
+  ['data-disabled']: false,
+  onClick: () => {},
+  value: '123'
 }
 
-excludeSupportProps(sampleProps) => 
-    {
-        ['data-disabled']: false,
-        onClick: () => {},
-        value: '123'
-    }   
+excludeSupportProps(sampleProps) => {
+  ['data-disabled']: false,
+  onClick: () => {},
+  value: '123'
+}   
 ```
 
 ### Hooks
@@ -85,7 +82,7 @@ Require Config Provider to be mounted
 import { useLanguage } from '@sbercloud/uikit-utils';
 
 function Component() {
-    const { languageCode, changeLanguage } = useLanguage();
+  const { languageCode, changeLanguage } = useLanguage();
 }
 ```
 
@@ -97,6 +94,6 @@ Require Config Provider to be mounted
 import { useTheme } from '@sbercloud/uikit-utils';
 
 function Component() {
-    const { theme, changeTheme } = useTheme();
+  const { theme, changeTheme } = useTheme();
 }
 ```

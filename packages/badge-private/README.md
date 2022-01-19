@@ -5,18 +5,18 @@
 
 ## Components interface
 ```typescript
-export enum Types {
-    Info = 'info',
-    Alert = 'alert',
+enum Types {
+  Info = 'info',
+  Alert = 'alert',
 }
 
-export type BadgeProps = {
-    type?: Types;
-    number?: number;
-    disabled?: boolean;
-    className?: string;
-    isGroupMessage?: boolean;
-    children: React.ReactNode;
+type BadgeProps = {
+  type?: Types;
+  number?: number;
+  disabled?: boolean;
+  className?: string;
+  isGroupMessage?: boolean;
+  children: React.ReactNode;
 };
 ```
 

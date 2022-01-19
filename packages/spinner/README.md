@@ -5,16 +5,16 @@
 
 ## Components interface
 ```typescript
-export enum Sizes {
-    Small = 'small',
-    Medium = 'medium',
-    Large = 'large',
+enum Sizes {
+  Small = 'small',
+  Medium = 'medium',
+  Large = 'large',
 }
 
-export type SpinnerProps = {
-    size?: Sizes;
-    text?: string;
-    className?: string;
+type SpinnerProps = {
+  size?: Sizes;
+  text?: string;
+  className?: string;
 };
 ```
 

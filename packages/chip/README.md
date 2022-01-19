@@ -5,7 +5,7 @@
 
 ## Props
 ```typescript
-export type ChipProps = {
+type ChipProps = {
   label: string;
   checked: boolean;
   handleChange(checked: boolean, e?: ChangeEvent<HTMLInputElement>): void;
@@ -15,12 +15,12 @@ export type ChipProps = {
   className?: string;
 };
 
-export enum Variant {
+enum Variant {
   Primary = 'Primary',
   Transparent = 'Transparent',
 }
 
-export enum Size {
+enum Size {
   Small = 'Small',
   Medium = 'Medium',
   Large = 'Large',

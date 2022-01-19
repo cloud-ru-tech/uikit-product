@@ -3,17 +3,20 @@
 ## Installation
 `npm i @sbercloud/uikit-react-input`
 
+## [Private Input Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/input-private/CHANGELOG.md)
+## [Private Input Decorator Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/input-decorator-private/CHANGELOG.md)
+
 ## Props
 ```typescript
 enum Sizes {
-    Small = 'Small',
-    Medium = 'Medium',
-    Large = 'Large',
+  Small = 'Small',
+  Medium = 'Medium',
+  Large = 'Large',
 }
 
-export enum Types {
-    Text = InputPrivate.types.Text,
-    Password = InputPrivate.types.Password,
+enum Types {
+  Text = InputPrivate.types.Text,
+  Password = InputPrivate.types.Password,
 }
 
 

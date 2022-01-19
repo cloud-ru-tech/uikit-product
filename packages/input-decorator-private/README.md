@@ -5,7 +5,7 @@
 
 ## Props
 ```typescript
-export type InputDecoratorPrivateProps = {
+type InputDecoratorPrivateProps = {
   children: ReactNode;
   error?: string;
   optional?: boolean;
