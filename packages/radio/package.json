@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-radio",
   "title": "React Radio",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-icons": "2.7.0",
+    "@sbercloud/uikit-react-icons": "2.8.0",
     "@sbercloud/uikit-theme": "0.29.0",
     "@sbercloud/uikit-typography": "0.6.3",
     "@sbercloud/uikit-utils": "2.0.1"

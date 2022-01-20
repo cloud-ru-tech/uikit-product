@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.33](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-collapse-panel@0.8.32...@sbercloud/uikit-react-collapse-panel@0.8.33) (2022-01-20)
+
+
+### Bug Fixes
+
+* First stable version of Input ([b1c3452](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1c34525d82c191801d13525f3cfa8a5461d3c5d))
+
+
+
+
+
 ## [0.8.32](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-collapse-panel@0.8.31...@sbercloud/uikit-react-collapse-panel@0.8.32) (2021-12-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-collapse-panel

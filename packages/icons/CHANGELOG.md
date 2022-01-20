@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.7.0...@sbercloud/uikit-react-icons@2.8.0) (2022-01-20)
+
+
+### Bug Fixes
+
+* First stable version of Input ([b1c3452](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1c34525d82c191801d13525f3cfa8a5461d3c5d))
+
+
+### Features
+
+* added data registry icon ([5b2d048](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/5b2d048a22e05d6673c6974c71e879e49aacf7db))
+
+
+
+
+
 # [2.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.6.0...@sbercloud/uikit-react-icons@2.7.0) (2021-12-22)
 
 

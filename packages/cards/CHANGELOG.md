@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.21](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-cards@0.11.20...@sbercloud/uikit-react-cards@0.11.21) (2022-01-20)
+
+
+### Bug Fixes
+
+* onChange is optional in private input ([2076a69](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2076a6921f7f3fc6f0ac95df119860b68de93dfd))
+
+
+
+
+
 ## [0.11.20](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-cards@0.11.19...@sbercloud/uikit-react-cards@0.11.20) (2022-01-12)
 
 
