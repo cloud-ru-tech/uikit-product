@@ -223,4 +223,5 @@ export enum LanguageCodeType {
   esNI = 'es-NI',
   esPR = 'es-PR',
   esUS = 'es-US',
+  cimode = 'cimode',
 }

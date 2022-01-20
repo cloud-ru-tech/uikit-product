@@ -40,6 +40,10 @@ export const useLanguage = (props?: useLanguageProps) => {
       setLanguageCode(LanguageCodeType.ruRU);
       return;
     }
+    if (languageCode === LanguageCodeType.cimode) {
+      setLanguageCode(LanguageCodeType.cimode);
+      return;
+    }
     setLanguageCode(LanguageCodeType.ruRU);
   }, [languageCode, onlyEnabledLanguage]);
 

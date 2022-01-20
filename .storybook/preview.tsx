@@ -96,6 +96,7 @@ export const globalTypes = {
       items: [
         { value: LanguageCodeType.ruRU, right: '🇷🇺', title: 'Русский' },
         { value: LanguageCodeType.enGB, right: '🇺🇸', title: 'English' },
+        { value: LanguageCodeType.cimode, right: '🗝', title: 'CI Mode' },
       ],
     },
   },

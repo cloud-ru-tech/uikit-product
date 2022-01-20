@@ -9,6 +9,29 @@ If component is mounted, then it extends html tag by current lang and current th
 
 ### Dev utils
 
+#### CreateTextProvider
+creates text provider
+
+```typescript jsx
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+import pkg from '../../package.json';
+
+enum Texts = {
+  Hide = 'Hide',
+}
+
+const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
+  [LanguageCodeType.ruRU]: {
+    [Texts.Hide]: 'Скрыть',
+  },
+  [LanguageCodeType.enGB]: {
+    [Texts.Hide]: 'Hide',
+  },
+};
+
+export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);
+```
+
 #### ExtractSupportProps
 
 return props matched to `/^(data-test|aria)-/` regexp
