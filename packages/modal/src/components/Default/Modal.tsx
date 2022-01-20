@@ -101,14 +101,14 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const approveBtnText = useMemo(
-    () => approveText || textProvider(languageCode, Texts.approve),
+    () => approveText || textProvider(languageCode, Texts.Approve),
     [approveText, languageCode],
   );
   const cancelBtnText = useMemo(
-    () => cancelText || textProvider(languageCode, Texts.cancel),
+    () => cancelText || textProvider(languageCode, Texts.Cancel),
     [cancelText, languageCode],
   );
-  const closeBtnText = useMemo(() => textProvider(languageCode, Texts.close), [languageCode]);
+  const closeBtnText = useMemo(() => textProvider(languageCode, Texts.Close), [languageCode]);
 
   if (appElement) {
     RCModal.setAppElement(appElement as HTMLElement);

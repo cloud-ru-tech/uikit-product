@@ -9,9 +9,9 @@ export enum Variant {
 }
 
 export const TEXTS_BY_VARIANT = {
-  [Variant.Pause]: Texts.pause,
-  [Variant.Stop]: Texts.stop,
-  [Variant.Refresh]: Texts.refresh,
-  [Variant.Play]: Texts.play,
-  [Variant.View]: Texts.view,
+  [Variant.Pause]: Texts.Pause,
+  [Variant.Stop]: Texts.Stop,
+  [Variant.Refresh]: Texts.Refresh,
+  [Variant.Play]: Texts.Play,
+  [Variant.View]: Texts.View,
 };

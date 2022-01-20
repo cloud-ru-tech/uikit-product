@@ -1,45 +1,45 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+
+import pkg from '../../package.json';
 
 export enum Texts {
-  addFilter = 'addFilter',
-  reset = 'reset',
-  include = 'include',
-  noInclude = 'noInclude',
-  eq = 'eq',
-  neq = 'neq',
-  lt = 'lt',
-  lte = 'lte',
-  gt = 'gt',
-  gte = 'gte',
+  AddFilter = 'addFilter',
+  Reset = 'reset',
+  Include = 'include',
+  NoInclude = 'noInclude',
+  Eq = 'eq',
+  Neq = 'neq',
+  Lt = 'lt',
+  Lte = 'lte',
+  Gt = 'gt',
+  Gte = 'gte',
 }
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
-    addFilter: 'Добавить фильтр',
-    reset: 'Сбросить',
-    include: 'Содержит',
-    noInclude: 'Не содержит',
-    eq: 'Равно',
-    neq: 'Не равно',
-    lt: 'Меньше чем',
-    lte: 'Меньше чем или равно',
-    gt: 'Больше чем',
-    gte: 'Больше чем или равно',
+    [Texts.AddFilter]: 'Добавить фильтр',
+    [Texts.Reset]: 'Сбросить',
+    [Texts.Include]: 'Содержит',
+    [Texts.NoInclude]: 'Не содержит',
+    [Texts.Eq]: 'Равно',
+    [Texts.Neq]: 'Не равно',
+    [Texts.Lt]: 'Меньше чем',
+    [Texts.Lte]: 'Меньше чем или равно',
+    [Texts.Gt]: 'Больше чем',
+    [Texts.Gte]: 'Больше чем или равно',
   },
   [LanguageCodeType.enGB]: {
-    addFilter: 'Add filter',
-    reset: 'Reset',
-    include: 'Contains',
-    noInclude: 'Does not contain',
-    eq: 'Equal to',
-    neq: 'Not equal to',
-    lt: 'Less than',
-    lte: 'Less than or equal to',
-    gt: 'More than',
-    gte: 'More than or equal to',
+    [Texts.AddFilter]: 'Add filter',
+    [Texts.Reset]: 'Reset',
+    [Texts.Include]: 'Contains',
+    [Texts.NoInclude]: 'Does not contain',
+    [Texts.Eq]: 'Equal to',
+    [Texts.Neq]: 'Not equal to',
+    [Texts.Lt]: 'Less than',
+    [Texts.Lte]: 'Less than or equal to',
+    [Texts.Gt]: 'More than',
+    [Texts.Gte]: 'More than or equal to',
   },
 };
 
-export function textProvider(language: LanguageCodeType, entity: Texts): string {
-  return Dictionary?.[language]?.[entity] || '';
-}
+export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);

@@ -6,7 +6,7 @@ import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { getSplitDate } from '../../helpers/getSplitDate';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';
-import { DateFormat, Texts, textProvider } from '../../helpers/texts-provider';
+import { DictionaryPropertyAsFn, Texts, textProvider } from '../../helpers/texts-provider';
 import { PickSettingProps, TSplitDateType, TimeInputProps } from '../../helpers/types';
 import { HiddenInput } from '../HiddenInput';
 import * as S from './styled';
@@ -78,7 +78,10 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps
     [splitDate, handleChangeDate, pickSettings],
   );
 
-  const dateStr = useMemo(() => DateFormat[languageCode](dateForFormatter), [languageCode, dateForFormatter]);
+  const dateStr = useMemo(
+    () => textProvider<DictionaryPropertyAsFn>(languageCode, Texts.DateFormat)(dateForFormatter),
+    [languageCode, dateForFormatter],
+  );
 
   return (
     <>
@@ -93,7 +96,7 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps
         <CalendarInterfaceSVG className={S.calendarIconClassName} />
       </S.InputContainer>
       {isError && !pickSettings?.isDatePickerOpen && (
-        <S.Error>{textProvider(languageCode, Texts.incorrectDateEntered)}</S.Error>
+        <S.Error>{textProvider(languageCode, Texts.IncorrectDateEntered)}</S.Error>
       )}
     </>
   );

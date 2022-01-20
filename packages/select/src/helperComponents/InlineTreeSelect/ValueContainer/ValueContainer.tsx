@@ -33,7 +33,7 @@ export const ValueContainer: FC<IValueContainerProps> = ({
       valueFormatter?.(value) ||
       textProvider<DictionaryPropertyAsFn>(languageCode, Texts.Selected)({ count: value.length })
     );
-  }, [value, languageCode]);
+  }, [value, languageCode, valueFormatter, placeholder]);
 
   return (
     <StyledContainer

@@ -40,7 +40,7 @@ export const CustomTimeInput = forwardRef<HTMLInputElement, ICustomTimeInputProp
       <S.Input
         data-open={open || undefined}
         data-disabled={disabled || undefined}
-        placeholder={textProvider(languageCode, Texts.time)}
+        placeholder={textProvider<string>(languageCode, Texts.Time)}
         onChange={onChange}
         value={value}
         readOnly

@@ -51,7 +51,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
 }) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const closeBtnText = useMemo(() => textProvider(languageCode, Texts.close), [languageCode]);
+  const closeBtnText = useMemo(() => textProvider(languageCode, Texts.Close), [languageCode]);
   const [shouldRenderDrawer, setShouldRenderDrawer] = useState(false);
   const [internalIsDrawerOpen, setInternalIsDrawerOpen] = useState(false);
   const timerRef = useRef<number>(0);

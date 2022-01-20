@@ -1,4 +1,6 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+
+import pkg from '../../package.json';
 
 export enum Texts {
   Optional = 'Optional',
@@ -13,6 +15,4 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   },
 };
 
-export function textProvider(languageCode: LanguageCodeType, entity: Texts): string {
-  return Dictionary?.[languageCode]?.[entity] || '';
-}
+export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);

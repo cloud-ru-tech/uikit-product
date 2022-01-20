@@ -1,19 +1,12 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { ReactNode } from 'react';
+
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+
+import pkg from '../../package.json';
 
 export const TimeFormat = {
   [LanguageCodeType.enGB]: 'p',
   [LanguageCodeType.ruRU]: 'HH:mm',
-};
-
-export const CustomHeaderActions = {
-  [LanguageCodeType.enGB]: {
-    next: 'Next',
-    prev: 'Previous',
-  },
-  [LanguageCodeType.ruRU]: {
-    next: 'Следующий',
-    prev: 'Предыдущий',
-  },
 };
 
 export const AmPmFormat = {
@@ -39,59 +32,64 @@ interface DateForFormat {
   time?: React.ReactNode;
 }
 
-export const DateFormat = {
-  [LanguageCodeType.ruRU]: (date: DateForFormat) => (
-    <>
-      {date.day}
-      {Separators[LanguageCodeType.ruRU].daySeparator}
-      {date.month}
-      {Separators[LanguageCodeType.ruRU].daySeparator}
-      {date.year}
-      {(date.time && Separators[LanguageCodeType.ruRU].timeSeparator) || ''}
-      {date.time || ''}
-    </>
-  ),
-  [LanguageCodeType.enGB]: (date: DateForFormat) => (
-    <>
-      {date.month}
-      {Separators[LanguageCodeType.enGB].daySeparator}
-      {date.day}
-      {Separators[LanguageCodeType.enGB].daySeparator}
-      {date.year}
-      {(date.time && Separators[LanguageCodeType.enGB].timeSeparator) || ''}
-      {date.time || ''}
-    </>
-  ),
-};
-
 export enum Texts {
-  specifyTime = 'specifyTime',
-  incorrectDateEntered = 'incorrectDateEntered',
-  day = 'day',
-  month = 'month',
-  year = 'year',
-  time = 'time',
+  SpecifyTime = 'specifyTime',
+  IncorrectDateEntered = 'incorrectDateEntered',
+  Day = 'day',
+  Month = 'month',
+  Year = 'year',
+  Time = 'time',
+  Prev = 'prev',
+  Next = 'next',
+  DateFormat = 'dateFormat',
 }
 
-const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
+export type DictionaryPropertyAsFn = (date: DateForFormat) => ReactNode;
+type DictionaryProperty = string | DictionaryPropertyAsFn;
+
+const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryProperty>>> = {
   [LanguageCodeType.ruRU]: {
-    specifyTime: 'Указать время',
-    incorrectDateEntered: 'Введена некорректная дата',
-    day: 'дд',
-    month: 'мм',
-    year: 'гггг',
-    time: 'Время',
+    [Texts.SpecifyTime]: 'Указать время',
+    [Texts.IncorrectDateEntered]: 'Введена некорректная дата',
+    [Texts.Day]: 'дд',
+    [Texts.Month]: 'мм',
+    [Texts.Year]: 'гггг',
+    [Texts.Time]: 'Время',
+    [Texts.Prev]: 'Предыдущий',
+    [Texts.Next]: 'Следующий',
+    [Texts.DateFormat]: (date: DateForFormat) => (
+      <>
+        {date.day}
+        {Separators[LanguageCodeType.ruRU].daySeparator}
+        {date.month}
+        {Separators[LanguageCodeType.ruRU].daySeparator}
+        {date.year}
+        {(date.time && Separators[LanguageCodeType.ruRU].timeSeparator) || ''}
+        {date.time || ''}
+      </>
+    ),
   },
   [LanguageCodeType.enGB]: {
-    specifyTime: 'Specify time',
-    incorrectDateEntered: 'Incorrect date',
-    day: 'dd',
-    month: 'mm',
-    year: 'yyyy',
-    time: 'Time',
+    [Texts.SpecifyTime]: 'Specify time',
+    [Texts.IncorrectDateEntered]: 'Incorrect date',
+    [Texts.Day]: 'dd',
+    [Texts.Month]: 'mm',
+    [Texts.Year]: 'yyyy',
+    [Texts.Time]: 'Time',
+    [Texts.Prev]: 'Previous',
+    [Texts.Next]: 'Next',
+    [Texts.DateFormat]: (date: DateForFormat) => (
+      <>
+        {date.month}
+        {Separators[LanguageCodeType.enGB].daySeparator}
+        {date.day}
+        {Separators[LanguageCodeType.enGB].daySeparator}
+        {date.year}
+        {(date.time && Separators[LanguageCodeType.enGB].timeSeparator) || ''}
+        {date.time || ''}
+      </>
+    ),
   },
 };
 
-export function textProvider(language: LanguageCodeType, entity: Texts): string {
-  return Dictionary?.[language]?.[entity] || '';
-}
+export const textProvider = createTextProvider<Texts, DictionaryProperty>(Dictionary, pkg.name);

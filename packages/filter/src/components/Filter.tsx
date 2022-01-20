@@ -123,7 +123,7 @@ export const Filter: FC<IFilterProps> = ({ filterOptions = [], value = [], onCha
             <S.Actions>
               {isMoreFilter && (
                 <ActionButton onClick={addNewValue}>
-                  <PlusInterfaceSVG /> {textProvider(languageCode, Texts.addFilter)}
+                  <PlusInterfaceSVG /> {textProvider(languageCode, Texts.AddFilter)}
                 </ActionButton>
               )}
               <ActionButton
@@ -133,14 +133,14 @@ export const Filter: FC<IFilterProps> = ({ filterOptions = [], value = [], onCha
                 }}
               >
                 <CloseInterfaceSVG />
-                {textProvider(languageCode, Texts.reset)}
+                {textProvider(languageCode, Texts.Reset)}
               </ActionButton>
             </S.Actions>
           </>
         ) : (
           <S.Empty>
             <ActionButton onClick={addNewValue}>
-              <PlusInterfaceSVG /> {textProvider(languageCode, Texts.addFilter)}
+              <PlusInterfaceSVG /> {textProvider(languageCode, Texts.AddFilter)}
             </ActionButton>
           </S.Empty>
         )}

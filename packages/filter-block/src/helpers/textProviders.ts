@@ -1,4 +1,6 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+
+import pkg from '../../package.json';
 
 export enum Texts {
   ShowAll = 'showAll',
@@ -6,31 +8,17 @@ export enum Texts {
   ClearFilters = 'clearFilters',
 }
 
-enum TextsRU {
-  ShowAll = 'Показать все',
-  Collapse = 'Свернуть',
-  ClearFilters = 'Сбросить все фильтры',
-}
-
-enum TextsEN {
-  ShowAll = 'Show all',
-  Collapse = 'Collapse',
-  ClearFilters = 'Clear all filters',
-}
-
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
-    showAll: TextsRU.ShowAll,
-    collapse: TextsRU.Collapse,
-    clearFilters: TextsRU.ClearFilters,
+    [Texts.ShowAll]: 'Показать все',
+    [Texts.Collapse]: 'Свернуть',
+    [Texts.ClearFilters]: 'Сбросить все фильтры',
   },
   [LanguageCodeType.enGB]: {
-    showAll: TextsEN.ShowAll,
-    collapse: TextsEN.Collapse,
-    clearFilters: TextsEN.ClearFilters,
+    [Texts.ShowAll]: 'Show all',
+    [Texts.Collapse]: 'Collapse',
+    [Texts.ClearFilters]: 'Clear all filters',
   },
 };
 
-export function textProvider(language: LanguageCodeType, entity: Texts): string {
-  return Dictionary?.[language]?.[entity] || '';
-}
+export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);

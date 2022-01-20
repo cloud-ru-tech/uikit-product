@@ -1,21 +1,21 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+
+import pkg from '../../package.json';
 
 export enum Texts {
-  hide = 'hide',
-  show = 'show',
+  Hide = 'hide',
+  Show = 'show',
 }
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
-    hide: 'Свернуть',
-    show: 'Читать полностью',
+    [Texts.Hide]: 'Свернуть',
+    [Texts.Show]: 'Читать полностью',
   },
   [LanguageCodeType.enGB]: {
-    hide: 'Collapse',
-    show: 'Read more',
+    [Texts.Hide]: 'Collapse',
+    [Texts.Show]: 'Read more',
   },
 };
 
-export function textProvider(language: LanguageCodeType, entity: Texts): string {
-  return Dictionary?.[language]?.[entity] || '';
-}
+export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);

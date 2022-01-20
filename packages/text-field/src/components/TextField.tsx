@@ -59,7 +59,7 @@ export function TextField({
       onClick={() => setIsSecured(!isSecured)}
       icon={isSecured ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
       tooltip={{
-        content: textProvider(languageCode, isSecured ? Texts.show : Texts.hide),
+        content: textProvider(languageCode, isSecured ? Texts.Show : Texts.Hide),
         placement: ButtonIconTransparent.placements.Top,
       }}
     />

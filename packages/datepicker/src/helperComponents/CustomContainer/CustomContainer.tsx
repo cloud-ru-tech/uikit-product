@@ -63,7 +63,7 @@ export const CustomContainer = (customProps: ICustomContainerProps, props: ICust
         <>
           <Divider />
           <S.Additional onClick={handleLabelClick}>
-            {textProvider(languageCode, Texts.specifyTime)}
+            {textProvider(languageCode, Texts.SpecifyTime)}
             <Switch checked={Boolean(pickTimeCheck)} onChange={handleSwitchChange} />
           </S.Additional>
         </>

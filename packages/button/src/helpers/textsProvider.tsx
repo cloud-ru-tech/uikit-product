@@ -1,36 +1,36 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+
+import pkg from '../../package.json';
 
 export enum Texts {
-  copy = 'copy',
-  refresh = 'refresh',
-  play = 'play',
-  stop = 'stop',
-  pause = 'pause',
-  view = 'view',
-  loading = 'loading',
+  Copy = 'copy',
+  Refresh = 'refresh',
+  Play = 'play',
+  Stop = 'stop',
+  Pause = 'pause',
+  View = 'view',
+  Loading = 'loading',
 }
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
-    copy: 'Копировать',
-    refresh: 'Обновить',
-    play: 'Запустить',
-    stop: 'Остановить',
-    pause: 'Пауза',
-    view: 'Посмотреть',
-    loading: 'Загрузка',
+    [Texts.Copy]: 'Копировать',
+    [Texts.Refresh]: 'Обновить',
+    [Texts.Play]: 'Запустить',
+    [Texts.Stop]: 'Остановить',
+    [Texts.Pause]: 'Пауза',
+    [Texts.View]: 'Посмотреть',
+    [Texts.Loading]: 'Загрузка',
   },
   [LanguageCodeType.enGB]: {
-    copy: 'Copy',
-    refresh: 'Refresh',
-    play: 'Play',
-    stop: 'Stop',
-    pause: 'Pause',
-    view: 'View',
-    loading: 'Loading',
+    [Texts.Copy]: 'Copy',
+    [Texts.Refresh]: 'Refresh',
+    [Texts.Play]: 'Play',
+    [Texts.Stop]: 'Stop',
+    [Texts.Pause]: 'Pause',
+    [Texts.View]: 'View',
+    [Texts.Loading]: 'Loading',
   },
 };
 
-export function textProvider(language: LanguageCodeType, entity: Texts): string {
-  return Dictionary?.[language]?.[entity] || '';
-}
+export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);

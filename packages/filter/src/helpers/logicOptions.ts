@@ -52,35 +52,35 @@ export type LogicOptionType = {
 export const logicOptions = (language: LanguageCodeType): LogicOptionType[] => [
   {
     value: LogicConditionType.Include,
-    label: textProvider(language, Texts.include),
+    label: textProvider(language, Texts.Include),
   },
   {
     value: LogicConditionType.Noinclude,
-    label: textProvider(language, Texts.noInclude),
+    label: textProvider(language, Texts.NoInclude),
   },
   {
     value: LogicConditionType.Eq,
-    label: textProvider(language, Texts.eq),
+    label: textProvider(language, Texts.Eq),
   },
   {
     value: LogicConditionType.Neq,
-    label: textProvider(language, Texts.neq),
+    label: textProvider(language, Texts.Neq),
   },
   {
     value: LogicConditionType.Lt,
-    label: textProvider(language, Texts.lt),
+    label: textProvider(language, Texts.Lt),
   },
   {
     value: LogicConditionType.Lte,
-    label: textProvider(language, Texts.lte),
+    label: textProvider(language, Texts.Lte),
   },
   {
     value: LogicConditionType.Gt,
-    label: textProvider(language, Texts.gt),
+    label: textProvider(language, Texts.Gt),
   },
   {
     value: LogicConditionType.Gte,
-    label: textProvider(language, Texts.gte),
+    label: textProvider(language, Texts.Gte),
   },
 ];
 

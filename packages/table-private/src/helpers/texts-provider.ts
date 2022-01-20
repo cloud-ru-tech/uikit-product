@@ -1,4 +1,6 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+
+import pkg from '../../package.json';
 
 export type EnabledLanguages = LanguageCodeType.ruRU | LanguageCodeType.enGB;
 
@@ -9,15 +11,13 @@ export enum Texts {
 
 const Dictionary: Record<EnabledLanguages, Record<Texts, string>> = {
   [LanguageCodeType.ruRU]: {
-    NoRowsInitially: 'Нет данных',
-    NoRowsAfterSearch: 'Ничего не найдено :(',
+    [Texts.NoRowsInitially]: 'Нет данных',
+    [Texts.NoRowsAfterSearch]: 'Ничего не найдено :(',
   },
   [LanguageCodeType.enGB]: {
-    NoRowsInitially: 'No data',
-    NoRowsAfterSearch: 'Nothing found :(',
+    [Texts.NoRowsInitially]: 'No data',
+    [Texts.NoRowsAfterSearch]: 'Nothing found :(',
   },
 };
 
-export function textProvider(languageCode: LanguageCodeType, entity: Texts): string {
-  return Dictionary[languageCode][entity];
-}
+export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);

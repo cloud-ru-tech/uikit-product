@@ -37,7 +37,7 @@ export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaul
   return (
     <Element
       icon={<AnimatedRefreshIcon />}
-      tooltip={rest.tooltip || { content: textProvider(languageCode, Texts.refresh) }}
+      tooltip={rest.tooltip || { content: textProvider(languageCode, Texts.Refresh) }}
       {...extractedProps}
     />
   );

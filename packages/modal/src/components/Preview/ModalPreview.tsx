@@ -70,7 +70,7 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const closeBtnText = useMemo(() => textProvider(languageCode, Texts.close), [languageCode]);
+  const closeBtnText = useMemo(() => textProvider(languageCode, Texts.Close), [languageCode]);
 
   return (
     <RCModal
