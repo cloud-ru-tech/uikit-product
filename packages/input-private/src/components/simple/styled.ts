@@ -31,6 +31,7 @@ export const InputWrapper = styled.div`
   max-width: 100%;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   box-sizing: border-box;
+  padding: 0 7px;
 
   border: 1px solid var(${COLORS.border.default});
   border-radius: 4px;
@@ -62,18 +63,19 @@ export const InputWrapper = styled.div`
   }
 
   &[data-size=${Sizes.Small}] {
-    height: ${SizeInPx[Sizes.Small]};
-    padding: 3px 7px;
+    min-height: ${SizeInPx[Sizes.Small]};
+    max-height: ${SizeInPx[Sizes.Small]};
   }
 
   &[data-size=${Sizes.Medium}] {
-    height: ${SizeInPx[Sizes.Medium]};
-    padding: 7px;
+    min-height: ${SizeInPx[Sizes.Medium]};
+    max-height: ${SizeInPx[Sizes.Medium]};
   }
 
   &[data-size=${Sizes.Large}] {
-    height: ${SizeInPx[Sizes.Large]};
-    padding: 11px;
+    min-height: ${SizeInPx[Sizes.Large]};
+    max-height: ${SizeInPx[Sizes.Large]};
+    padding: 0 11px;
   }
 `;
 
@@ -101,7 +103,6 @@ export const MoreButtonWrapper = styled.div`
   border-radius: 0 4px 4px 0;
 
   background-color: var(${COLORS.background.default});
-  height: auto;
 
   &:hover {
     border-color: var(${COLORS.border.hover});
@@ -126,16 +127,22 @@ export const MoreButtonWrapper = styled.div`
   &[data-size=${Sizes.Small}] {
     min-width: ${SizeInPx[Sizes.Small]};
     max-width: ${SizeInPx[Sizes.Small]};
+    min-height: ${SizeInPx[Sizes.Small]};
+    max-height: ${SizeInPx[Sizes.Small]};
   }
 
   &[data-size=${Sizes.Medium}] {
     min-width: ${SizeInPx[Sizes.Medium]};
     max-width: ${SizeInPx[Sizes.Medium]};
+    min-height: ${SizeInPx[Sizes.Medium]};
+    max-height: ${SizeInPx[Sizes.Medium]};
   }
 
   &[data-size=${Sizes.Large}] {
     min-width: ${SizeInPx[Sizes.Large]};
     max-width: ${SizeInPx[Sizes.Large]};
+    min-height: ${SizeInPx[Sizes.Large]};
+    max-height: ${SizeInPx[Sizes.Large]};
   }
 `;
 
