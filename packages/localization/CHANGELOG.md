@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-localization@0.10.11...@sbercloud/uikit-react-localization@0.10.12) (2022-01-21)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-localization
+
+
+
+
+
 ## 0.10.11 (2022-01-21)
 
 

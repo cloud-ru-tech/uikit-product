@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@2.1.0...@sbercloud/uikit-utils@2.1.1) (2022-01-21)
+
+
+### Bug Fixes
+
+* adds uikit prefix to package name in createTextProvider function ([f59eeb9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/f59eeb9dbe63be95b826981bd0c417e58ccf7dae))
+
+
+
+
+
 # 2.1.0 (2022-01-21)
 
 

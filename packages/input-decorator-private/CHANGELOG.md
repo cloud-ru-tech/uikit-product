@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-decorator-private@1.0.4...@sbercloud/uikit-react-input-decorator-private@1.0.5) (2022-01-21)
+
+
+### Bug Fixes
+
+* updates textProvider creation to explicitly pass package name ([2a6dc7f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2a6dc7fd7e08379e14c52ae3396c945f49998d5e))
+
+
+
+
+
 ## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-decorator-private@1.0.3...@sbercloud/uikit-react-input-decorator-private@1.0.4) (2022-01-21)
 
 

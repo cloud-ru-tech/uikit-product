@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-toolbar",
   "title": "React Toolbar",
-  "version": "0.14.34",
+  "version": "0.14.35",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,15 +27,15 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-badge-private": "2.0.11",
-    "@sbercloud/uikit-react-button": "3.0.5",
-    "@sbercloud/uikit-react-divider": "2.0.12",
-    "@sbercloud/uikit-react-dropdown": "0.13.1",
-    "@sbercloud/uikit-react-filter": "0.14.39",
+    "@sbercloud/uikit-react-badge-private": "2.0.12",
+    "@sbercloud/uikit-react-button": "3.0.6",
+    "@sbercloud/uikit-react-divider": "2.0.13",
+    "@sbercloud/uikit-react-dropdown": "0.13.2",
+    "@sbercloud/uikit-react-filter": "0.14.40",
     "@sbercloud/uikit-react-icons": "2.8.0",
-    "@sbercloud/uikit-react-input-private": "1.0.8",
+    "@sbercloud/uikit-react-input-private": "1.0.9",
     "@sbercloud/uikit-theme": "0.29.0",
-    "@sbercloud/uikit-utils": "2.1.0"
+    "@sbercloud/uikit-utils": "2.1.1"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

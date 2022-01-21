@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter-block@0.2.10...@sbercloud/uikit-react-filter-block@0.2.11) (2022-01-21)
+
+
+### Bug Fixes
+
+* updates textProvider creation to explicitly pass package name ([2a6dc7f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2a6dc7fd7e08379e14c52ae3396c945f49998d5e))
+
+
+
+
+
 ## [0.2.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-filter-block@0.2.9...@sbercloud/uikit-react-filter-block@0.2.10) (2022-01-21)
 
 

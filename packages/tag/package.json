@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tag",
   "title": "React Tag",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-tooltip-private": "1.1.4",
+    "@sbercloud/uikit-react-tooltip-private": "1.1.5",
     "@sbercloud/uikit-theme": "0.29.0",
-    "@sbercloud/uikit-utils": "2.1.0",
+    "@sbercloud/uikit-utils": "2.1.1",
     "lodash.debounce": "4.0.8"
   },
   "peerDependencies": {
