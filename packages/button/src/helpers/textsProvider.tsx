@@ -1,7 +1,5 @@
 import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
 
-import pkg from '../../package.json';
-
 export enum Texts {
   Copy = 'copy',
   Refresh = 'refresh',
@@ -33,4 +31,4 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   },
 };
 
-export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);
+export const textProvider = createTextProvider<Texts>(Dictionary, 'button');

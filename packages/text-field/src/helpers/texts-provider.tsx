@@ -1,7 +1,5 @@
 import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
 
-import pkg from '../../package.json';
-
 export enum Texts {
   Hide = 'hide',
   Show = 'show',
@@ -18,4 +16,4 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   },
 };
 
-export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);
+export const textProvider = createTextProvider<Texts>(Dictionary, 'text-field');

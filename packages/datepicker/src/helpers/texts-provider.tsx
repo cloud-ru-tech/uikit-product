@@ -2,8 +2,6 @@ import { ReactNode } from 'react';
 
 import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
 
-import pkg from '../../package.json';
-
 export const TimeFormat = {
   [LanguageCodeType.enGB]: 'p',
   [LanguageCodeType.ruRU]: 'HH:mm',
@@ -92,4 +90,4 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
   },
 };
 
-export const textProvider = createTextProvider<Texts, DictionaryProperty>(Dictionary, pkg.name);
+export const textProvider = createTextProvider<Texts, DictionaryProperty>(Dictionary, 'datepicker');

@@ -1,6 +1,5 @@
 import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
 
-import pkg from '../../package.json';
 import declination from './declination';
 
 export enum Texts {
@@ -60,4 +59,4 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
   },
 };
 
-export const textProvider = createTextProvider<Texts, DictionaryProperty>(Dictionary, pkg.name);
+export const textProvider = createTextProvider<Texts, DictionaryProperty>(Dictionary, 'select');

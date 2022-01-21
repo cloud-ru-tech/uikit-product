@@ -1,7 +1,5 @@
 import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
 
-import pkg from '../../package.json';
-
 export type EnabledLanguages = LanguageCodeType.ruRU | LanguageCodeType.enGB;
 
 export enum Texts {
@@ -20,4 +18,4 @@ const Dictionary: Record<EnabledLanguages, Record<Texts, string>> = {
   },
 };
 
-export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);
+export const textProvider = createTextProvider<Texts>(Dictionary, 'table-private');

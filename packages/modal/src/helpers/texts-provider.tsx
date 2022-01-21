@@ -1,7 +1,5 @@
 import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
 
-import pkg from '../../package.json';
-
 export enum Texts {
   Approve = 'approve',
   Cancel = 'cancel',
@@ -21,4 +19,4 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   },
 };
 
-export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);
+export const textProvider = createTextProvider<Texts>(Dictionary, 'modal');
