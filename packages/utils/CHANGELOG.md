@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2022-01-21)
+
+
+### Bug Fixes
+
+* wrapper has flex behavior instead of old with absolute positioned clear button ([b24341b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b24341ba7a513bf18fcb2ac9f21cba5413abcab4))
+
+
+### Features
+
+* adds createTextProvider utility ([1595d05](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1595d054b975e1196259b23329daae89d838db66))
+
+
+
+
+
 ## [2.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@2.0.0...@sbercloud/uikit-utils@2.0.1) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-utils

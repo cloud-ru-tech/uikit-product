@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.1 (2022-01-21)
+
+
+### Bug Fixes
+
+* wrapper has flex behavior instead of old with absolute positioned clear button ([b24341b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b24341ba7a513bf18fcb2ac9f21cba5413abcab4))
+
+
+
+
+
 # [0.13.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-dropdown@0.12.0...@sbercloud/uikit-react-dropdown@0.13.0) (2021-12-09)
 
 

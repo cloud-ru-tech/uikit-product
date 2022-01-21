@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.26](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-content-hider@0.8.25...@sbercloud/uikit-react-content-hider@0.8.26) (2022-01-21)
+
+
+### Bug Fixes
+
+* changes textProvider creation ([82e44cb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e44cbb6b9e202f7414679e7888b4c8a10db594))
+
+
+
+
+
 ## [0.8.25](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-content-hider@0.8.24...@sbercloud/uikit-react-content-hider@0.8.25) (2022-01-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-content-hider

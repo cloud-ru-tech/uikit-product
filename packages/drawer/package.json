@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-drawer",
   "title": "React Drawer",
-  "version": "0.15.21",
+  "version": "0.15.22",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,11 +27,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "3.0.4",
+    "@sbercloud/uikit-react-button": "3.0.5",
     "@sbercloud/uikit-react-icons": "2.8.0",
     "@sbercloud/uikit-theme": "0.29.0",
     "@sbercloud/uikit-typography": "0.6.3",
-    "@sbercloud/uikit-utils": "2.0.1",
+    "@sbercloud/uikit-utils": "2.1.0",
     "rc-drawer": "4.4.3"
   },
   "peerDependencies": {

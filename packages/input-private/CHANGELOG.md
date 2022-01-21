@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-private@1.0.7...@sbercloud/uikit-react-input-private@1.0.8) (2022-01-21)
+
+
+### Bug Fixes
+
+* changes textProvider creation ([82e44cb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e44cbb6b9e202f7414679e7888b4c8a10db594))
+
+
+
+
+
 ## [1.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-private@1.0.6...@sbercloud/uikit-react-input-private@1.0.7) (2022-01-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input-private

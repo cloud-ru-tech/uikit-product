@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.10...@sbercloud/uikit-react-select@0.22.11) (2022-01-21)
+
+
+### Bug Fixes
+
+* changes textProvider creation ([82e44cb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e44cbb6b9e202f7414679e7888b4c8a10db594))
+
+
+
+
+
 ## [0.22.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.9...@sbercloud/uikit-react-select@0.22.10) (2022-01-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-switch",
   "title": "React Switch",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-theme": "0.29.0",
-    "@sbercloud/uikit-utils": "2.0.1",
+    "@sbercloud/uikit-utils": "2.1.0",
     "react-switch": "6.0.0"
   },
   "peerDependencies": {

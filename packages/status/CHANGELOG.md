@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.3 (2022-01-21)
+
+
+### Bug Fixes
+
+* wrapper has flex behavior instead of old with absolute positioned clear button ([b24341b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b24341ba7a513bf18fcb2ac9f21cba5413abcab4))
+
+
+
+
+
 ## [3.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@3.0.1...@sbercloud/uikit-react-status@3.0.2) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-status
