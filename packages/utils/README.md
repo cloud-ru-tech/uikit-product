@@ -14,7 +14,6 @@ creates text provider
 
 ```typescript jsx
 import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
-import pkg from '../../package.json';
 
 enum Texts = {
   Hide = 'Hide',
@@ -29,7 +28,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   },
 };
 
-export const textProvider = createTextProvider<Texts>(Dictionary, pkg.name);
+export const textProvider = createTextProvider<Texts>(Dictionary, 'package-name');
 ```
 
 #### ExtractSupportProps

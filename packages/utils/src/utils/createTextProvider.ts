@@ -9,7 +9,7 @@ export function createTextProvider<T extends string = string, V = string>(
     const value = dictionary?.[langKey]?.[entity] || '';
 
     if (language === LanguageCodeType.cimode) {
-      const key = `${packageName.split('/')[1]}.${entity}`;
+      const key = `uikit-${packageName}.${entity}`;
       return (value instanceof Function ? () => key : key) as unknown as R;
     }
 
