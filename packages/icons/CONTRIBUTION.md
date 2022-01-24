@@ -8,7 +8,7 @@ svgs
         other
     inherit
         display
-        files
+        extension
         interface
         services
 ```

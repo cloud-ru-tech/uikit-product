@@ -4,19 +4,19 @@ import { Meta } from '@storybook/react/types-6-0';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import * as Icons from '../src/components/files-icons';
+import * as Icons from '../src/components/extension-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 export default {
-  title: 'Components/Icons/Files',
+  title: 'Components/Icons/Extension',
 } as Meta;
 
 const Template = getTemplate(Icons);
 
-export const files = Template.bind({});
+export const extension = Template.bind({});
 
-files.args = {};
-files.parameters = {
+extension.args = {};
+extension.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
@@ -27,7 +27,7 @@ files.parameters = {
   },
   badges: [BADGE.STABLE],
 };
-files.argTypes = {
+extension.argTypes = {
   size: {
     defaultValue: 20,
     name: '[Stories]: Size of icons',

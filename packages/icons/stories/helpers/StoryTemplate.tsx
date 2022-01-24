@@ -65,7 +65,7 @@ const TextWrapper = styled.div`
 `;
 
 function generateDataTestId(componentName: string) {
-  if (componentName === 'SvgFileSVG') return 'icon-svg-file';
+  if (componentName === 'SvgExtensionSVG') return 'icon-svg-extension';
   return 'icon' + componentName.replaceAll(/svg/gi, '').replace(/[A-Z]/g, x => '-' + x.toLowerCase());
 }
 
