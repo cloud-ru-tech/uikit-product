@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.37](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.14.36...@sbercloud/uikit-react-toolbar@0.14.37) (2022-01-24)
+
+
+### Bug Fixes
+
+* correct wrapper width ([16a5d80](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/16a5d806d6d30f3537b8fe322d602a81bba29ecf))
+
+
+
+
+
 ## [0.14.36](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-toolbar@0.14.35...@sbercloud/uikit-react-toolbar@0.14.36) (2022-01-24)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toolbar

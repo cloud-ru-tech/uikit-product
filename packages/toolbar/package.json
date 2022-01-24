@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-toolbar",
   "title": "React Toolbar",
-  "version": "0.14.36",
+  "version": "0.14.37",
   "sideEffects": [
     "*.css",
     "*.woff",
