@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.6...@sbercloud/uikit-react-button@3.0.7) (2022-01-25)
+
+
+### Bug Fixes
+
+* replaced `CopiedInterfaceSVG` with `CheckInterfaceSVG` in `CopyButton` ([739b8a7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/739b8a7265f39dbe1df82a55a701e2c49769232b))
+
+
+
+
+
 ## [3.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.5...@sbercloud/uikit-react-button@3.0.6) (2022-01-21)
 
 

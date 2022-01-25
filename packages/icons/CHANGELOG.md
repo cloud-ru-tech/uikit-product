@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.8.0...@sbercloud/uikit-react-icons@3.0.0) (2022-01-25)
+
+
+### Features
+
+* added new icons `BigArrowTopInterfaceSVG`, `BigArrowDownInterfaceSVG`, `CollapseInterfaceSVG`, `ChevronUpInterfaceSVG`, `ChevronDownInterfaceSVG`, `CloseSmallInterfaceSVG`, `DatasetInterfaceSVG`, `DockerInterfaceSVG`, `FileAddFilledInterfaceSVG`, `FileAddOutlineInterfaceSVG`, `QuestionBigInterfaceSVG`, `QuestionSmallOutlineInterfaceSVG`, `ZapFlashInterfaceSVG`, `FunctionServiceSVG`, `GitHubDarkLogoSVG`, `GitHubWhiteLogoSVG`, `GoogleChromeLogoSVG`, `HuggingfaceLogoSVG`, `KaggleLogoSVG`, `SafariBrowserLogoSVG`, `YandexBrowserLogoSVG`, `NoPhoneInterfaceSVG`, `AsynchronousInferenceServiceSVG`, `MyRequestServiceSVG`, `QCloudServiceSVG` ([eb6426c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/eb6426cde4733c3ab72741497a9b6330a4e0df35))
+* deleted `CopiedInterfaceSVG` icon ([a4fa456](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/a4fa4562150cdc9018698d5053b6e716bc5ad03d))
+* renamed `Files` icon category to `Extension` ([93a073c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/93a073cbd4b9b79379541ae3a2dd4349f06f805c))
+* updated icons appearance `StopInterfaceSVG`, `TimeInterfaceSVG`, `AiServiceSVG`, `CatalogServiceSVG`, `RequestServiceSVG` ([0b26580](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/0b26580fc87f07ab6774df48586c6720413aee1e))
+
+
+### BREAKING CHANGES
+
+* deleted `CopiedInterfaceSVG` icon
+* renamed `Files` icon category to `Extension`
+
+
+
+
+
 # [2.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.7.0...@sbercloud/uikit-react-icons@2.8.0) (2022-01-20)
 
 

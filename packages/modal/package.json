@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-modal",
   "title": "React Modal",
-  "version": "0.15.32",
+  "version": "0.15.33",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,10 +27,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "3.0.6",
+    "@sbercloud/uikit-react-button": "3.0.7",
     "@sbercloud/uikit-react-divider": "2.0.13",
-    "@sbercloud/uikit-react-icons": "2.8.0",
-    "@sbercloud/uikit-react-tooltip": "2.0.21",
+    "@sbercloud/uikit-react-icons": "3.0.0",
+    "@sbercloud/uikit-react-tooltip": "2.0.22",
     "@sbercloud/uikit-theme": "0.29.0",
     "@sbercloud/uikit-utils": "2.1.1",
     "react-modal": "3.14.4"
