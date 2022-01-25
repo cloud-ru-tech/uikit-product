@@ -81,7 +81,6 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
     <>
       <RCSelect<OptionTypeTag>
         {...props}
-        menuIsOpen={isOpen}
         value={currentTag}
         options={options}
         components={TagComponents}

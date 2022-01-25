@@ -37,9 +37,12 @@ const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponen
   return <ReactSelectComponents.NoOptionsMessage {...props}>{noDataText}</ReactSelectComponents.NoOptionsMessage>;
 };
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-/* @ts-ignore */
-export default <CustomOptionType,>(props: ISelectProps<CustomOptionType>): SelectComponentsConfig<CustomOptionType> => {
+export default <CustomOptionType,>(
+  props: ISelectProps<CustomOptionType>,
+  isMobile?: boolean,
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  /* @ts-ignore */
+): SelectComponentsConfig<CustomOptionType> => {
   const customControl = CustomControl<CustomOptionType>(props);
   const customOption = CustomOption<CustomOptionType>(props);
   const customIndicator = CustomIndicator<CustomOptionType>(props);
@@ -47,7 +50,7 @@ export default <CustomOptionType,>(props: ISelectProps<CustomOptionType>): Selec
   const group = CustomGroup<CustomOptionType>(props);
   const groupHeading = CustomGroupHeading<CustomOptionType>(props);
 
-  return {
+  const mobile = {
     MultiValueRemove,
     DropdownIndicator,
     IndicatorSeparator: customIndicator,
@@ -55,8 +58,12 @@ export default <CustomOptionType,>(props: ISelectProps<CustomOptionType>): Selec
     Option: customOption,
     Control: customControl,
     MultiValueContainer: multiValueContainer,
-    Menu: CustomMenu,
     Group: group,
     GroupHeading: groupHeading,
+  };
+
+  return {
+    ...mobile,
+    ...(!isMobile ? { Menu: CustomMenu } : {}),
   };
 };

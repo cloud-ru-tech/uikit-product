@@ -38,6 +38,12 @@ export interface ISelectProps<CustomOptionType> extends Omit<RCProps, 'component
   collapsedGroup?: boolean;
 }
 
+function checkMobile() {
+  const toMatch = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];
+
+  return toMatch.some(toMatchItem => navigator.userAgent.match(toMatchItem));
+}
+
 export const Select = <CustomOptionType extends OptionTypeBase>(
   props: WithSupportProps<ISelectProps<CustomOptionType>>,
 ): JSX.Element => {
@@ -138,14 +144,17 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
 
   const memoizeCustomComponents = useMemo(
     () =>
-      getCustomComponents<CustomOptionType>({
-        prefixControl,
-        postfixControl,
-        prefixOption,
-        postfixOption,
-        prefixMultiValueContainer,
-        collapsedGroup,
-      }),
+      getCustomComponents<CustomOptionType>(
+        {
+          prefixControl,
+          postfixControl,
+          prefixOption,
+          postfixOption,
+          prefixMultiValueContainer,
+          collapsedGroup,
+        },
+        checkMobile(),
+      ),
     [prefixControl, postfixControl, prefixOption, postfixOption, prefixMultiValueContainer, collapsedGroup],
   );
 
@@ -157,7 +166,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     [memoizeCustomComponents, components],
   );
 
-  const toggleMenu = (isMenuOpen: boolean): void => {
+  const toggleMenu = (isMenuOpen?: boolean): void => {
     if (typeof isMenuOpen === 'boolean') {
       setIsOpen(isMenuOpen);
       return;
@@ -193,11 +202,11 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
         options={stateOptions}
         formatGroupLabel={formatGroupLabel}
         formatOptionLabel={formatOptionLabelInner}
-        menuIsOpen={isOpen}
         components={componentsState}
         styles={customStyles.styles}
         theme={customStyles.theme}
         isSearchable={false}
+        blurInputOnSelect={checkMobile()}
         isSearchableCustom={isSearchable}
         backspaceRemovesValue={false}
         hideSelectedOptions={false}
