@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.14...@sbercloud/uikit-react-select@0.22.15) (2022-01-26)
+
+
+### Bug Fixes
+
+* partial mobile support ([AICE-4130](https://jira.sbercloud.tech/browse/AICE-4130)) ([06aef88](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/06aef880cc28a392543103ea6f6ac3ca3b50ffe8))
+
+
+
+
+
 ## [0.22.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.13...@sbercloud/uikit-react-select@0.22.14) (2022-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
