@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.16](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.15...@sbercloud/uikit-react-select@0.22.16) (2022-01-26)
+
+
+### Bug Fixes
+
+* if user device does not match mobile regexp, then behaviour is exactly the same with version 0.22.14 ([681377a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/681377a3d8f854d8baae9df5fd7c8806b9cf4e86))
+
+
+
+
+
 ## [0.22.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.14...@sbercloud/uikit-react-select@0.22.15) (2022-01-26)
 
 
