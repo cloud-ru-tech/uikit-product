@@ -3,6 +3,7 @@ import RCSelect, { OptionTypeBase as RCOptionTypeBase, SelectComponentsConfig, c
 
 import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
+import { checkMobileDevice } from '../../helpers/checkMobileDevice';
 import getSelectorStyles from '../../helpers/getSelectStyles';
 import getCustomComponents from '../../helpers/getSharedComponents';
 import { Texts, textProvider } from '../../helpers/texts-provider';
@@ -153,7 +154,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
           prefixMultiValueContainer,
           collapsedGroup,
         },
-        checkMobile(),
+        checkMobileDevice(),
       ),
     [prefixControl, postfixControl, prefixOption, postfixOption, prefixMultiValueContainer, collapsedGroup],
   );
@@ -206,7 +207,8 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
         styles={customStyles.styles}
         theme={customStyles.theme}
         isSearchable={false}
-        blurInputOnSelect={checkMobile()}
+        menuIsOpen={checkMobileDevice() ? undefined : isOpen}
+        blurInputOnSelect={checkMobileDevice() || undefined}
         isSearchableCustom={isSearchable}
         backspaceRemovesValue={false}
         hideSelectedOptions={false}

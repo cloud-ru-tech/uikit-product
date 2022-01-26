@@ -6,6 +6,7 @@ import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { PresetColorType } from '../../constants';
 import * as TagComponents from '../../helperComponents/TagSelect';
+import { checkMobileDevice } from '../../helpers/checkMobileDevice';
 import getSelectorStyles from '../../helpers/getSelectStyles';
 import { DictionaryPropertyAsFn, Texts, textProvider } from '../../helpers/texts-provider';
 
@@ -81,6 +82,7 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
     <>
       <RCSelect<OptionTypeTag>
         {...props}
+        menuIsOpen={checkMobileDevice() ? undefined : isOpen}
         value={currentTag}
         options={options}
         components={TagComponents}
