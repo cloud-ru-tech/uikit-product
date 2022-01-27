@@ -1,33 +1,38 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
+import { Button, ButtonRound } from '@sbercloud/uikit-react-button';
+import { FileUploadFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { FileUpload, FileUploadProps } from '../src';
+import { Container } from './helperComponents';
 
 export default {
   title: 'Not stable/FileUpload/File Upload',
   component: FileUpload,
 } as Meta;
 
-const Template: Story<FileUploadProps> = ({ ...args }) => <FileUpload {...args} />;
+const Template: Story<FileUploadProps> = ({ ...args }) => (
+  <Container>
+    <FileUpload {...args}>
+      <ButtonRound text='Загрузить' variant={ButtonRound.variants.OutlineAccent} />
+    </FileUpload>
+    <FileUpload {...args}>
+      <Button text='Загрузить' variant={Button.variants.Transparent} icon={<FileUploadFilledInterfaceSVG />} />
+    </FileUpload>
+  </Container>
+);
 
 export const fileUpload = Template.bind({});
 fileUpload.args = {
-  name: 'Загрузить',
   isMultiple: true,
   onFileSelected: e => console.warn('file \n\n', e.target.files),
 };
 
-fileUpload.argTypes = {
-  name: {
-    control: {
-      required: true,
-      type: 'text',
-    },
-  },
-};
+fileUpload.argTypes = {};
 
 fileUpload.parameters = {
   readme: {

@@ -1,18 +1,15 @@
-import { ChangeEvent, useRef } from 'react';
-
-import { ButtonRound } from '@sbercloud/uikit-react-button';
+import { ChangeEvent, ReactElement, cloneElement, useRef } from 'react';
 
 import { HiddenInput } from './styled';
 
 export type FileUploadProps = {
-  name: string;
+  children: ReactElement;
   onFileSelected(e: ChangeEvent<HTMLInputElement>): void;
   isMultiple?: boolean;
-  isDisabled?: boolean;
   accept?: string;
 };
 
-export function FileUpload({ name, isDisabled, isMultiple, onFileSelected, accept }: FileUploadProps) {
+export function FileUpload({ isMultiple, onFileSelected, accept, children }: FileUploadProps) {
   const hiddenFileInput = useRef<HTMLInputElement>(null);
 
   const handleButtonClick = () => {
@@ -23,12 +20,7 @@ export function FileUpload({ name, isDisabled, isMultiple, onFileSelected, accep
 
   return (
     <>
-      <ButtonRound
-        text={name}
-        disabled={isDisabled}
-        onClick={handleButtonClick}
-        variant={ButtonRound.variants.OutlineAccent}
-      />
+      {cloneElement(children, { onClick: handleButtonClick })}
       <HiddenInput onChange={onFileSelected} multiple={isMultiple} ref={hiddenFileInput} type='file' accept={accept} />
     </>
   );

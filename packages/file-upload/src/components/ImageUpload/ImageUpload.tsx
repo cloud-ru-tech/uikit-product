@@ -1,5 +1,7 @@
 import { ChangeEvent, ReactElement, useEffect, useState } from 'react';
 
+import { ButtonRound } from '@sbercloud/uikit-react-button';
+
 import { getFileExtension, removeExtFromFileName } from '../../utils';
 import { FileUpload } from '../FileUpload';
 import {
@@ -48,7 +50,9 @@ export function ImageUpload({ maxFileSize, className, infoText, uploadButtonName
       <ImagePreview url={image && URL.createObjectURL(image)} />
       <InfoWrapper>
         <FileUploadWrap>
-          <FileUpload accept='image/*' name={uploadButtonName} onFileSelected={handleFileSelect} />
+          <FileUpload accept='image/*' onFileSelected={handleFileSelect}>
+            <ButtonRound text={uploadButtonName} variant={ButtonRound.variants.OutlineAccent} />
+          </FileUpload>
           {image && (
             <FileNameWrap>
               <FileName>{removeExtFromFileName(image.name)}.</FileName>
