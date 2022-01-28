@@ -39,12 +39,6 @@ export interface ISelectProps<CustomOptionType> extends Omit<RCProps, 'component
   collapsedGroup?: boolean;
 }
 
-function checkMobile() {
-  const toMatch = [/Android/i, /webOS/i, /iPhone/i, /iPad/i, /iPod/i, /BlackBerry/i, /Windows Phone/i];
-
-  return toMatch.some(toMatchItem => navigator.userAgent.match(toMatchItem));
-}
-
 export const Select = <CustomOptionType extends OptionTypeBase>(
   props: WithSupportProps<ISelectProps<CustomOptionType>>,
 ): JSX.Element => {
@@ -133,13 +127,11 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
 
   useEffect(() => {
     if (isOpen) {
-      document.addEventListener('click', clickOutside);
-    } else {
-      document.removeEventListener('click', clickOutside);
+      document.body.addEventListener('click', clickOutside);
     }
 
     return (): void => {
-      document.removeEventListener('click', clickOutside);
+      document.body.removeEventListener('click', clickOutside);
     };
   }, [clickOutside, isOpen]);
 
