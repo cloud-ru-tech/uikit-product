@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-file-upload@0.1.29...@sbercloud/uikit-react-file-upload@0.2.0) (2022-01-31)
+
+
+### Features
+
+* add file upload any appearance by children prop ([CP-4304](https://jira.sbercloud.tech/browse/CP-4304)) ([8100dc8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8100dc8774aaedbb3fd714cdfd16919f590b7d1d))
+
+
+
+
+
 ## [0.1.29](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-file-upload@0.1.28...@sbercloud/uikit-react-file-upload@0.1.29) (2022-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-file-upload
