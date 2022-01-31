@@ -1,18 +1,10 @@
 import debounce from 'lodash.debounce';
-import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
+import { ReactNode, useEffect, useRef, useState } from 'react';
 
 import { ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Tooltip } from '@sbercloud/uikit-react-tooltip';
 
-import {
-  getDiffWidth,
-  getSubstr,
-  getUniqueKey,
-  getWidth,
-  isEllipsisActive,
-  measureText,
-  setUniqueKey,
-} from '../helpers/calc';
+import { getDiffWidth, getSubstr, getWidth, isEllipsisActive, measureText, toStateItems } from '../helpers/calc';
 import { CRUMB_MAX_LENGTH } from '../helpers/constants';
 import { BreadcrumbItem, StateItem } from '../helpers/types';
 import {
@@ -50,24 +42,22 @@ export const Breadcrumbs = ({
   const [isTextCut, setTextCut] = useState(false);
   const [visibleElementsCount, setVisibleElementsCount] = useState(1);
   const [hasHideElements, setHasHideElements] = useState(true);
-  const [stateItems, setItems] = useState<StateItem[]>(setUniqueKey(items));
+  const [stateItems, setItems] = useState<StateItem[]>(toStateItems(items));
   const [metaItems, setMetaItems] = useState<StateItem[]>();
   const breadcrumbsEl = useRef<HTMLDivElement>(null);
-
-  const stateKey = useMemo(() => getUniqueKey(setUniqueKey(items)), [items]);
-  const metaKey = useMemo(() => getUniqueKey(stateItems), [stateItems]);
+  const windowInnerWidth = window.innerWidth;
 
   const resetBreadcrumbs = () => {
     setVisible(false);
     setTextCut(false);
     setHasHideElements(true);
     setVisibleElementsCount(1);
-    const nextItems = setUniqueKey(items);
+    const nextItems = toStateItems(items);
     setItems(nextItems);
   };
   const debounceResetBreadcrumbs = debounce(resetBreadcrumbs, 300);
 
-  useEffect(resetBreadcrumbs, [stateKey]);
+  useEffect(resetBreadcrumbs, [items, windowInnerWidth]);
 
   useEffect(() => {
     window.addEventListener('resize', debounceResetBreadcrumbs);
@@ -222,7 +212,7 @@ export const Breadcrumbs = ({
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [metaKey, isTextCut]);
+  }, [stateItems, windowInnerWidth, isTextCut]);
 
   const visibleItems = isVisible ? metaItems : stateItems;
 

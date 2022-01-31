@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import { ReactElement } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -18,14 +17,8 @@ export const isEllipsisActive = (element: HTMLElement): boolean => getWidth(elem
 export const getSubstr = (str: string, maxlength: number): string =>
   str.length > maxlength + 3 ? `${str.substring(0, maxlength)}...` : str;
 
-export const setUniqueKey = (items: BreadcrumbItem[]): StateItem[] =>
-  items.map(item => ({ ...item, visible: true, key: item.key || nanoid() } as StateItem));
-
-export const getUniqueKey = (items: (BreadcrumbItem | StateItem)[]): string => {
-  const windowWidth = window.innerWidth;
-  if (!items || !items.length) return `${nanoid()}.${windowWidth}`;
-  return items.reduce((acc, item) => item.key + acc, `.${windowWidth}`);
-};
+export const toStateItems = (items: BreadcrumbItem[]): StateItem[] =>
+  items.map((item, index) => ({ ...item, visible: true, key: item.key || index.toString() } as StateItem));
 
 export const measureText = (child: HTMLDivElement, text: string | ReactElement): { width: number; height: number } => {
   const style = window?.getComputedStyle(child);
