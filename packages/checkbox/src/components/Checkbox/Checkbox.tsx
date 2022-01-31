@@ -1,4 +1,3 @@
-import { nanoid } from 'nanoid';
 import { useCallback, useMemo } from 'react';
 
 import { CheckboxCheckedSVG, CheckboxPartialCheckedSVG } from '@sbercloud/uikit-react-icons';
@@ -31,8 +30,6 @@ export const Checkbox = ({
   handleChange,
   ...rest
 }: WithSupportProps<CheckboxProps>) => {
-  const id = useMemo(() => nanoid(), []);
-
   const onChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>): void => {
       e.stopPropagation();
@@ -65,16 +62,16 @@ export const Checkbox = ({
 
   return (
     <CheckboxWrap className={className} data-disabled={disabled || undefined} {...extractSupportProps(rest)}>
+      <HiddenCheckbox type='checkbox' checked={checked} disabled={disabled} onChange={onChange} />
       <CheckboxIconWrap
         data-test-id='checkbox__icon'
         data-checked={checked || partChecked || undefined}
         data-disabled={disabled || undefined}
       >
-        <HiddenCheckbox id={id} type='checkbox' checked={checked} disabled={disabled} onChange={onChange} />
         {Icon}
       </CheckboxIconWrap>
       {label ? (
-        <CheckboxTextWrap data-disabled={disabled || undefined} htmlFor={id}>
+        <CheckboxTextWrap data-disabled={disabled || undefined}>
           <CheckboxText data-disabled={disabled || undefined} data-test-id='checkbox__label-text'>
             {label}
           </CheckboxText>

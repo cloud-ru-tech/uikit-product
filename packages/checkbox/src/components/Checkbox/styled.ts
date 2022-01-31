@@ -25,7 +25,7 @@ export const iconClassName = css`
   margin: -3px;
 `;
 
-export const CheckboxIconWrap = styled.label`
+export const CheckboxIconWrap = styled.span`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -82,14 +82,14 @@ export const CheckboxText = styled(Text2)`
   }
 `;
 
-export const CheckboxWrap = styled.div`
+export const CheckboxWrap = styled.label`
   display: flex;
   flex-direction: row;
   align-items: center;
   max-width: fit-content;
 `;
 
-export const CheckboxTextWrap = styled.label`
+export const CheckboxTextWrap = styled.span`
   &:hover {
     cursor: pointer;
 
