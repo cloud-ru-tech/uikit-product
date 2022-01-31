@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.22.17](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.16...@sbercloud/uikit-react-select@0.22.17) (2022-01-31)
+
+
+### Bug Fixes
+
+* close menu on click outside handler for react 17 ([66beab1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/66beab1ea8758c6ceb6658639b1e37889c4aa380))
+
+
+
+
+
 ## [0.22.16](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.15...@sbercloud/uikit-react-select@0.22.16) (2022-01-26)
 
 
