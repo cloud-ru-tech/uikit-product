@@ -51,6 +51,24 @@ export const globals = css`
       font-display: swap;
     }
 
+    @font-face {
+      font-family: 'SB Sans Text Mono';
+      src: url('../fonts/SBSansTextMono-Bold.woff2') format('woff2'),
+        url('../fonts/SBSansTextMono-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'SB Sans Text Mono';
+      src: url('../fonts/SBSansTextMono-Regular.woff2') format('woff2'),
+        url('../fonts/SBSansTextMono-Regular.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
     html {
       height: 100%;
     }
