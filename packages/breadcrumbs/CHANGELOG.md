@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.24](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-breadcrumbs@0.10.23...@sbercloud/uikit-react-breadcrumbs@0.10.24) (2022-02-02)
+
+
+### Bug Fixes
+
+* made compatible with linaria's `styled` function ([ae449d4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ae449d4c49c09b6f3291340970af48073b36e233))
+
+
+
+
+
 ## [0.10.23](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-breadcrumbs@0.10.22...@sbercloud/uikit-react-breadcrumbs@0.10.23) (2022-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-breadcrumbs

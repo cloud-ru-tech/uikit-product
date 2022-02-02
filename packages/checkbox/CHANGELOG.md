@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.22...@sbercloud/uikit-react-checkbox@1.0.23) (2022-02-02)
+
+
+### Bug Fixes
+
+* made `Checkbox` compatible with linaria's `styled` function ([ed53fa3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ed53fa3a62c7250de671133e82f45fd98b08e65b))
+
+
+
+
+
 ## [1.0.22](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.21...@sbercloud/uikit-react-checkbox@1.0.22) (2022-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-checkbox
