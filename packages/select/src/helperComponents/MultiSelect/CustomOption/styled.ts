@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { Text3 } from '@sbercloud/uikit-typography';
+import { TEXT_3_STYLES } from '@sbercloud/uikit-typography';
 
 export const CustomOption = styled.div`
   display: flex;
@@ -15,7 +15,8 @@ export const CustomOption = styled.div`
   }
 `;
 
-export const Amount = styled(Text3)`
+export const Amount = styled.span`
+  ${TEXT_3_STYLES};
   display: inline-block;
   color: var(${EXPORT_VARS.GREY[600]});
 `;

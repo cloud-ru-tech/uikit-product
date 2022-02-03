@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H5, Text3 } from '@sbercloud/uikit-typography';
+import { H5_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
 
 const { COLORS_TOAST } = DEPRECATED_EXPORT_VARS;
 
@@ -44,14 +44,18 @@ export const StyledIcon = styled.div`
   border-radius: 8px;
 `;
 
-export const Title = styled(H5)``;
+export const Title = styled.h5`
+  ${H5_STYLES};
+`;
 
-export const Subtitle = styled(Text3)`
+export const Subtitle = styled.span`
+  ${TEXT_3_STYLES};
   display: block;
   margin-top: 4px;
 `;
 
-export const Text = styled(Text3)`
+export const Text = styled.span`
+  ${TEXT_3_STYLES};
   display: block;
   margin-top: 4px;
 `;
@@ -64,7 +68,9 @@ export const Actions = styled.div`
   margin-top: 8px;
 `;
 
-export const ActionText = styled(Text3)``;
+export const ActionText = styled.span`
+  ${TEXT_3_STYLES};
+`;
 
 export const Action = styled(ResetButton)``;
 

@@ -6,7 +6,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { Button } from '@sbercloud/uikit-react-button';
 import { DataHubDisplaySVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H3 } from '@sbercloud/uikit-typography';
+import { H3_STYLES } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -39,7 +39,8 @@ const ProductWrap = styled.div`
   background: var(${EXPORT_VARS.WHITE_ALFA[16]});
 `;
 
-const ProductText = styled(H3)`
+const ProductText = styled.h3`
+  ${H3_STYLES};
   margin-left: 12px;
 `;
 

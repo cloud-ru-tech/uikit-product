@@ -2,11 +2,9 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { InfoInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
-
-const { TEXT_2, TEXT_3 } = TYPOGRAPHY_VARIABLES;
 
 PURPLE_THEME;
 GREEN_THEME;
@@ -44,13 +42,13 @@ export const FlexWrapper = styled.div`
 
 export const OptionalMark = styled.span`
   display: contents;
-  ${TEXT_3};
+  ${TEXT_3_STYLES};
   color: var(${COLORS.optional});
 `;
 
 export const Label = styled.span`
   display: contents;
-  ${TEXT_2};
+  ${TEXT_2_STYLES};
   color: var(${COLORS.label});
 `;
 
@@ -71,17 +69,17 @@ export const ErrorIcon = styled(InfoInterfaceSVG)`
 `;
 
 export const ErrorText = styled.span`
-  ${TEXT_3};
+  ${TEXT_3_STYLES};
   color: var(${COLORS.error});
 `;
 
 export const HintText = styled.span`
-  ${TEXT_3};
+  ${TEXT_3_STYLES};
   color: var(${COLORS.hint});
 `;
 
 export const LengthCounter = styled.span`
-  ${TEXT_3};
+  ${TEXT_3_STYLES};
   color: var(${COLORS.hint});
   margin-left: 16px;
   min-width: fit-content;

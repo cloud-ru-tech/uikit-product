@@ -1,7 +1,5 @@
 import { ReactElement } from 'react';
 
-import { H1 } from '@sbercloud/uikit-typography';
-
 import * as S from './styled';
 
 export type HeroBannerProps = {
@@ -17,7 +15,7 @@ export function HeroBanner({ title, text, productBadge, button, className }: Her
     <S.Banner className={className}>
       {productBadge}
       <S.ContentWrap>
-        <H1>{title}</H1>
+        <S.Header>{title}</S.Header>
         <S.Text>{text}</S.Text>
         {button}
       </S.ContentWrap>

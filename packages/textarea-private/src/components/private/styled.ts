@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -18,7 +18,7 @@ export const textareaClassName = css`
   scrollbar-width: none;
   font-family: SB Sans Interface, serif;
   color: var(${COLORS.text.default});
-  ${TYPOGRAPHY_VARIABLES.TEXT_2};
+  ${TEXT_2_STYLES};
 
   box-sizing: border-box;
 

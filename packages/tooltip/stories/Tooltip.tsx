@@ -6,7 +6,7 @@ import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { CopyInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
-import { H2, H4 } from '@sbercloud/uikit-typography';
+import { H2_STYLES, H4_STYLES } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -53,19 +53,27 @@ const Group = styled.div`
   gap: 48px;
 `;
 
+const Title = styled.h2`
+  ${H2_STYLES};
+`;
+
+const Target = styled.h4`
+  ${H4_STYLES};
+`;
+
 const Template: Story<TooltipProps> = ({ ...args }, { globals: { theme } }) => (
   <Group>
     <Container theme={theme}>
-      <H2>Via controls</H2>
+      <Title>Via controls</Title>
       <Divider />
       <TooltipWrapper>
         <Tooltip {...args} iconAction={() => copyToClipboard(args.title || 'empty title')}>
-          <H4>Element</H4>
+          <Target>Element</Target>
         </Tooltip>
       </TooltipWrapper>
     </Container>
     <Container theme={theme}>
-      <H2>Placements</H2>
+      <Title>Placements</Title>
       <Divider />
       {Object.values(Tooltip.placements).map(placement => (
         <Tooltip content={'content'} placement={placement} key={placement}>
@@ -74,7 +82,7 @@ const Template: Story<TooltipProps> = ({ ...args }, { globals: { theme } }) => (
       ))}
     </Container>
     <Container theme={theme}>
-      <H2>Triggers</H2>
+      <Title>Triggers</Title>
       <Divider />
       {Object.values(Tooltip.triggers).map(trigger => (
         <Tooltip content={'content'} trigger={trigger} key={trigger}>

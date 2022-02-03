@@ -4,7 +4,7 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { Card } from '@sbercloud/uikit-react-cards';
-import { H3 } from '@sbercloud/uikit-typography';
+import { H3_STYLES } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -38,6 +38,10 @@ const CardContentStyled = styled.div`
   justify-content: center;
 `;
 
+const CardText = styled.h3`
+  ${H3_STYLES};
+`;
+
 const cardClassname = css`
   margin: 0 6px 18px 6px;
 `;
@@ -47,21 +51,21 @@ const cardsMock = [
     <Card className={cardClassname}>
       <CardContentWrapStyled>
         <CardContentStyled>
-          <H3>Example 1</H3>
+          <CardText>Example 1</CardText>
         </CardContentStyled>
       </CardContentWrapStyled>
     </Card>
     <Card className={cardClassname}>
       <CardContentWrapStyled>
         <CardContentStyled>
-          <H3>Example 2</H3>
+          <CardText>Example 2</CardText>
         </CardContentStyled>
       </CardContentWrapStyled>
     </Card>
     <Card className={cardClassname}>
       <CardContentWrapStyled>
         <CardContentStyled>
-          <H3>Example 3</H3>
+          <CardText>Example 3</CardText>
         </CardContentStyled>
       </CardContentWrapStyled>
     </Card>
@@ -70,14 +74,14 @@ const cardsMock = [
     <Card className={cardClassname}>
       <CardContentWrapStyled>
         <CardContentStyled>
-          <H3>Example 4</H3>
+          <CardText>Example 4</CardText>
         </CardContentStyled>
       </CardContentWrapStyled>
     </Card>
     <Card className={cardClassname}>
       <CardContentWrapStyled>
         <CardContentStyled>
-          <H3>Example 5</H3>
+          <CardText>Example 5</CardText>
         </CardContentStyled>
       </CardContentWrapStyled>
     </Card>
@@ -86,7 +90,7 @@ const cardsMock = [
     <Card className={cardClassname}>
       <CardContentWrapStyled>
         <CardContentStyled>
-          <H3>Example 7</H3>
+          <CardText>Example 7</CardText>
         </CardContentStyled>
       </CardContentWrapStyled>
     </Card>

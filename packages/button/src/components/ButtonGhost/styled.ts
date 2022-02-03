@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { IconPosition, Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -14,7 +14,7 @@ GREEN_DARK_THEME;
 export const buttonGhostClassName = css`
   height: 20px;
 
-  ${TYPOGRAPHY_VARIABLES.TEXT_2}
+  ${TEXT_2_STYLES};
 
   &[data-variant='${Variant.Accent}'] {
     fill: var(${COLORS.ACCENT_ICON_COLOR});

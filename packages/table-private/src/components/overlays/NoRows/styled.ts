@@ -1,6 +1,7 @@
 import { styled } from '@linaria/react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { H5_STYLES } from '@sbercloud/uikit-typography';
 
 const { COLORS_GENERAL } = DEPRECATED_EXPORT_VARS;
 
@@ -13,4 +14,8 @@ export const NoRowsMessageWrapper = styled.div`
   min-height: 105px;
   color: var(${COLORS_GENERAL.TEXT});
   fill: #5558fa;
+`;
+
+export const NoRowsText = styled.h5`
+  ${H5_STYLES};
 `;

@@ -1,10 +1,9 @@
 import { styled } from '@linaria/react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 const { COLORS_FILTER } = DEPRECATED_EXPORT_VARS;
-const { TEXT_2 } = TYPOGRAPHY_VARIABLES;
 
 export const Button = styled.button`
   position: relative;
@@ -26,7 +25,7 @@ export const Button = styled.button`
 
   background: transparent;
 
-  ${TEXT_2}
+  ${TEXT_2_STYLES};
 
   &:hover,
   &:focus {

@@ -4,9 +4,8 @@ import { styled } from '@linaria/react';
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { Tag } from '@sbercloud/uikit-react-tag';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+import { TEXT_4_STYLES } from '@sbercloud/uikit-typography';
 
-const { TEXT_4 } = TYPOGRAPHY_VARIABLES;
 const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
 export const StyledTagOption = styled.div`
@@ -66,7 +65,7 @@ export const colorPickerClassName = css`
 `;
 
 export const NotValidMessage = styled.div`
-  ${TEXT_4};
+  ${TEXT_4_STYLES};
   padding-top: 8px;
   color: var(${COLORS_SELECT.TAG_NAME_NOT_VALID_MESSAGE});
 `;

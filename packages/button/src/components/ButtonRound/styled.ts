@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -15,7 +15,7 @@ export const buttonRoundClassName = css`
   height: 28px;
   border-radius: 18px;
 
-  ${TYPOGRAPHY_VARIABLES.TEXT_2}
+  ${TEXT_2_STYLES};
 
   &[data-variant='${Variant.Filled}'] {
     fill: var(${COLORS.FILLED_FILL});

@@ -1,7 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { H4, Text2 } from '@sbercloud/uikit-typography';
+import { H4_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,6 +14,14 @@ export default {
   component: Card,
 } as Meta;
 
+const Title = styled.h4`
+  ${H4_STYLES};
+`;
+
+const Paragraph = styled.span`
+  ${TEXT_2_STYLES};
+`;
+
 const handleClick = (e: React.MouseEvent<HTMLElement>) => {
   e.stopPropagation();
   alert('Card alert');
@@ -20,11 +29,11 @@ const handleClick = (e: React.MouseEvent<HTMLElement>) => {
 
 const Template: Story<CardProps> = ({ ...args }) => (
   <Card {...args} onClick={handleClick}>
-    <H4>Вступить группу</H4>
-    <Text2>
+    <Title>Вступить группу</Title>
+    <Paragraph>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores nihil magni mollitia repellat quaerat inventore
       officia saepe similique temporibus corporis.
-    </Text2>
+    </Paragraph>
   </Card>
 );
 

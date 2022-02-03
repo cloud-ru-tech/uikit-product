@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { Text2 } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -74,7 +74,8 @@ export const CheckboxIconWrap = styled.span`
   }
 `;
 
-export const CheckboxText = styled(Text2)`
+export const CheckboxText = styled.span`
+  ${TEXT_2_STYLES};
   margin-left: 8px;
 
   &[data-disabled] {

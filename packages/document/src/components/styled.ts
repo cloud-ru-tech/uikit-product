@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { Text2, Text4 } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES, TEXT_4_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -65,14 +65,16 @@ export const Content = styled.div`
   }
 `;
 
-export const Name = styled(Text2)`
+export const Name = styled.span`
+  ${TEXT_2_STYLES};
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: block;
 `;
 
-export const Info = styled(Text4)`
+export const Info = styled.span`
+  ${TEXT_4_STYLES};
   margin-top: 4px;
   color: var(${COLORS.SECONDARY_COLOR});
   display: block;

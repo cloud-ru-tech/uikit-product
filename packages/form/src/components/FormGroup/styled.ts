@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H3, TableText } from '@sbercloud/uikit-typography';
+import { H3_STYLES, TABLE_TEXT_STYLES } from '@sbercloud/uikit-typography';
 
 import { VARIANT } from './FormGroup';
 
@@ -34,7 +34,8 @@ export const Header = styled.div`
   align-items: center;
 `;
 
-export const Number = styled(TableText)`
+export const Number = styled.span`
+  ${TABLE_TEXT_STYLES};
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -45,7 +46,8 @@ export const Number = styled(TableText)`
   border-radius: 50%;
 `;
 
-export const Title = styled(H3)`
+export const Title = styled.h3`
+  ${H3_STYLES};
   margin-left: 16px;
 `;
 

@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H3 } from '@sbercloud/uikit-typography';
+import { H3_STYLES } from '@sbercloud/uikit-typography';
 
 const { COLORS_NO_DATA_PAGE } = DEPRECATED_EXPORT_VARS;
 
@@ -26,7 +26,8 @@ export const iconClassName = css`
   fill: var(${COLORS_NO_DATA_PAGE.ICON_FILL});
 `;
 
-export const Title = styled(H3)`
+export const Title = styled.h3`
+  ${H3_STYLES};
   color: var(${COLORS_NO_DATA_PAGE.TITLE_COLOR});
 `;
 

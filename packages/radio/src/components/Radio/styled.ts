@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { Text2 } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -41,7 +41,8 @@ export const IconContainer = styled.div`
   }
 `;
 
-export const Label = styled(Text2)`
+export const Label = styled.span`
+  ${TEXT_2_STYLES};
   display: inline-block;
   padding-left: 8px;
   color: var(${COLORS.RADIO.LABEL});

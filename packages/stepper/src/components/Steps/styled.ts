@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { Text2 } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { Sizes } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -108,7 +108,8 @@ export const StepCircle = styled.div`
   }
 `;
 
-export const StepName = styled(Text2)`
+export const StepName = styled.span`
+  ${TEXT_2_STYLES};
   line-height: 22px;
   color: var(${COLORS.INACTIVE_TEXT});
 

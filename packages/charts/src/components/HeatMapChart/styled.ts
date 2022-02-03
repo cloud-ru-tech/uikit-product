@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H3, H5, Text4 } from '@sbercloud/uikit-typography';
+import { H3_STYLES, H5_STYLES, TEXT_4_STYLES } from '@sbercloud/uikit-typography';
 
 import { XAxisPosition } from './constants';
 import { LEGEND_HEIGHT, TICKS_SIZE, TITLE_HEIGHT, X_AXIS_LABEL_HEIGHT } from './helpers/constants';
@@ -24,7 +24,8 @@ export const GridWrapper = styled.div<{ displayAsGrid: boolean }>`
   grid-template-columns: auto 1fr;
 `;
 
-export const Title = styled(H3)`
+export const Title = styled.h3`
+  ${H3_STYLES};
   margin-bottom: 24px;
   font-size: 20px;
   font-weight: bold;
@@ -50,12 +51,14 @@ export const LegendTicksWrapper = styled.div`
   justify-content: space-between;
 `;
 
-export const Tick = styled(Text4)`
+export const Tick = styled.span`
+  ${TEXT_4_STYLES};
   color: var(${COLOR_VARS.LABEL});
   font-size: 12px;
 `;
 
-export const Cell = styled(H5)<{ color: string }>`
+export const Cell = styled.h5<{ color: string }>`
+  ${H5_STYLES};
   color: ${props => props.color};
   text-overflow: ellipsis;
   overflow: hidden;

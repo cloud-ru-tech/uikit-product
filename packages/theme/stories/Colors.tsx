@@ -1,9 +1,8 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { H2, Text3 } from '@sbercloud/uikit-typography';
+import { H2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -39,7 +38,12 @@ const Text = styled.div`
   grid-template-columns: 1fr 1fr;
 `;
 
-const textCSS = css`
+const Name = styled.h2`
+  ${H2_STYLES};
+`;
+
+const Caption = styled.span`
+  ${TEXT_3_STYLES};
   padding-left: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -99,14 +103,14 @@ const Template: Story<typeof EXPORT_VARS.PRESET> = () => (
     {COLOR_VARIANT_LIST.map(colorVariant => (
       <Group key={colorVariant.name}>
         <Title background={colorVariant.background} color={colorVariant.color}>
-          <H2>{colorVariant.name}</H2>
+          <Name>{colorVariant.name}</Name>
         </Title>
         {Object.entries(colorVariant.value).map(([key, color]) => (
           <Item key={key} border={colorVariant.background}>
             <Color data-color={color} background={color} key={key} />
             <Text>
-              <Text3 className={textCSS}>{key}</Text3>
-              <Text3 className={textCSS}>{color_hex[color]}</Text3>
+              <Caption>{key}</Caption>
+              <Caption>{color_hex[color]}</Caption>
             </Text>
           </Item>
         ))}

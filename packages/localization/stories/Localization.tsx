@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Text1 } from '@sbercloud/uikit-typography';
+import { TEXT_1_STYLES } from '@sbercloud/uikit-typography';
 import { ConfigProvider, useLanguage } from '@sbercloud/uikit-utils';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -18,14 +18,18 @@ const Wrapper = styled.div`
   margin: 1rem;
 `;
 
+const HooksCodeWrapper = styled.span`
+  ${TEXT_1_STYLES};
+`;
+
 const Template: Story = ({ showTime }) => {
   const { languageCode } = useLanguage();
   return (
     <>
       <Wrapper>
-        <Text1>
+        <HooksCodeWrapper>
           <strong>HooksCode:</strong> {languageCode}
-        </Text1>
+        </HooksCodeWrapper>
       </Wrapper>
       <Wrapper>
         <strong>CurrencyFormatter:</strong> <CurrencyFormatter value={1000e10} />

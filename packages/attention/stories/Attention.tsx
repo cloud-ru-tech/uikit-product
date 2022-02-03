@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { H3 } from '@sbercloud/uikit-typography';
+import { H3_STYLES } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -22,20 +22,24 @@ const Wrapper = styled.div`
   }
 `;
 
+const Title = styled.h3`
+  ${H3_STYLES};
+`;
+
 const Template: Story<AttentionProps> = ({ ...args }) => (
   <Wrapper>
     <Wrapper>
-      <H3>{`1. Importance level: ${Attention.importanceLevels.Normal}`}</H3>
+      <Title>{`1. Importance level: ${Attention.importanceLevels.Normal}`}</Title>
       <Attention importanceLevel={Attention.importanceLevels.Normal} data-test-id={'test-purpose'}>
         {`content `.repeat(25)}
       </Attention>
     </Wrapper>
     <Wrapper>
-      <H3>{`2. Importance level: ${Attention.importanceLevels.High}`}</H3>
+      <Title>{`2. Importance level: ${Attention.importanceLevels.High}`}</Title>
       <Attention importanceLevel={Attention.importanceLevels.High}>{`content `.repeat(100)}</Attention>
     </Wrapper>
     <Wrapper>
-      <H3>{`3. Importance level: from controls`}</H3>
+      <Title>{`3. Importance level: from controls`}</Title>
       <Attention {...args}>{`content `.repeat(88)}</Attention>
     </Wrapper>
   </Wrapper>

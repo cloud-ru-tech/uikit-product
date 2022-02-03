@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { H5, Text2 } from '@sbercloud/uikit-typography';
+import { H5_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -158,13 +158,17 @@ export const IconWrapper = styled.span`
   }
 `;
 
-export const Title = styled(H5)`
+export const Title = styled.h5`
+  ${H5_STYLES};
+
   &:not(:last-child) {
     margin-bottom: 8px;
   }
 `;
 
-export const Text = styled(Text2)`
+export const Text = styled.span`
+  ${TEXT_2_STYLES};
+
   &:not(:last-child) {
     margin-bottom: 12px;
     display: block;

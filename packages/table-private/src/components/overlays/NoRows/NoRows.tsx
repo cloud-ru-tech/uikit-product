@@ -1,5 +1,4 @@
 import { BrandCatDisplaySVG } from '@sbercloud/uikit-react-icons';
-import { H5 } from '@sbercloud/uikit-typography';
 import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
@@ -22,7 +21,7 @@ export function NoRows({ reason }: { reason: NoDataReasons }) {
   return (
     <S.NoRowsMessageWrapper>
       <BrandCatDisplaySVG size={65} />
-      <H5>{getText(languageCode, reason)}</H5>
+      <S.NoRowsText>{getText(languageCode, reason)}</S.NoRowsText>
     </S.NoRowsMessageWrapper>
   );
 }

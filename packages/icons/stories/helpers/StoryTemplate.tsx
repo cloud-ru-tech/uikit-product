@@ -6,7 +6,7 @@ import { Modal } from '@sbercloud/uikit-react-modal';
 import { TextField } from '@sbercloud/uikit-react-text-field';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H3, Text2 } from '@sbercloud/uikit-typography';
+import { H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 const { COLORS_BUTTON } = DEPRECATED_EXPORT_VARS;
 
@@ -64,6 +64,14 @@ const TextWrapper = styled.div`
   margin-top: 12px;
 `;
 
+const Title = styled.h3`
+  ${H3_STYLES};
+`;
+
+const Text = styled.span`
+  ${TEXT_2_STYLES};
+`;
+
 function generateDataTestId(componentName: string) {
   if (componentName === 'SvgExtensionSVG') return 'icon-svg-extension';
   return 'icon' + componentName.replaceAll(/svg/gi, '').replace(/[A-Z]/g, x => '-' + x.toLowerCase());
@@ -82,7 +90,7 @@ export function getTemplate(
     const onCloseHandler = useCallback(() => setSelectedIcon(null), []);
     return (
       <>
-        <H3>Кликните на иконку для отображения дополнительной информации</H3>
+        <Title>Кликните на иконку для отображения дополнительной информации</Title>
         <Toolbar.Wrapper>
           <Toolbar.Input
             value={search}
@@ -108,7 +116,7 @@ export function getTemplate(
               >
                 <Icon size={size} fill={fill} />
                 <TextWrapper>
-                  <Text2>{key}</Text2>
+                  <Text>{key}</Text>
                 </TextWrapper>
               </Item>
             ))}

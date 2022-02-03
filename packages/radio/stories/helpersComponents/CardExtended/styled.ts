@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H4Semibold, Text2, Text3 } from '@sbercloud/uikit-typography';
+import { H4_SEMIBOLD_STYLES, TEXT_2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -9,7 +9,8 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Title = styled(Text2)`
+export const Title = styled.span`
+  ${TEXT_2_STYLES};
   display: block;
   color: var(${COLORS.RADIO_CARD.LABEL});
 
@@ -18,7 +19,8 @@ export const Title = styled(Text2)`
   }
 `;
 
-export const Label = styled(H4Semibold)`
+export const Label = styled.h4`
+  ${H4_SEMIBOLD_STYLES};
   display: block;
   color: var(${COLORS.RADIO_CARD.LABEL});
 
@@ -27,7 +29,8 @@ export const Label = styled(H4Semibold)`
   }
 `;
 
-export const Description = styled(Text3)`
+export const Description = styled.span`
+  ${TEXT_3_STYLES};
   display: block;
   color: var(${COLORS.RADIO_CARD.DESCRIPTION});
 `;

@@ -6,7 +6,7 @@ import { useFormContext } from 'react-hook-form';
 
 import { Button } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
-import { H3 } from '@sbercloud/uikit-typography';
+import { H3_STYLES } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -27,6 +27,10 @@ const Block = styled.div`
 
 const Separator = styled(Divider)`
   margin: 50px 0;
+`;
+
+const Title = styled.h3`
+  ${H3_STYLES};
 `;
 
 const Template: Story<InputProps & { showMoreButton: boolean }> = ({ showMoreButton, ...args }) => {
@@ -57,7 +61,7 @@ const Template: Story<InputProps & { showMoreButton: boolean }> = ({ showMoreBut
       </Block>
       <Separator />
       <Block>
-        <H3>Password input</H3>
+        <Title>Password input</Title>
         <Input
           {...register('password', {
             required: 'Should not be empty',
@@ -85,7 +89,7 @@ const Template: Story<InputProps & { showMoreButton: boolean }> = ({ showMoreBut
       </Block>
       <Separator />
       <Block>
-        <H3>Number input [text type]</H3>
+        <Title>Number input [text type]</Title>
         <Input
           {...register('number', {
             required: 'Should not be empty',

@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-typography';
 
 const { COLORS_TABLE } = DEPRECATED_EXPORT_VARS;
 
@@ -40,7 +40,7 @@ export const tableClass = css`
       }
 
       &-cell {
-        ${TYPOGRAPHY_VARIABLES.TABLE_TEXT};
+        ${TABLE_TEXT_STYLES};
         padding: 12px 8px;
         display: flex;
         flex-direction: row;
@@ -53,7 +53,7 @@ export const tableClass = css`
         background-color: var(${COLORS_TABLE.TABLE_HEADER_BACKGROUND});
         border: none;
         &-cell {
-          ${TYPOGRAPHY_VARIABLES.TABLE_TEXT};
+          ${TABLE_TEXT_STYLES};
           color: var(${COLORS_TABLE.TABLE_HEADER_COLOR});
           padding: 4px 8px;
           &-label {

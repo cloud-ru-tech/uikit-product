@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H5, Text3 } from '@sbercloud/uikit-typography';
+import { H5_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -9,7 +9,8 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Label = styled(H5)`
+export const Label = styled.h5`
+  ${H5_STYLES};
   display: block;
   color: var(${COLORS.RADIO_CARD.LABEL});
 
@@ -18,7 +19,8 @@ export const Label = styled(H5)`
   }
 `;
 
-export const Description = styled(Text3)`
+export const Description = styled.span`
+  ${TEXT_3_STYLES};
   display: block;
   color: var(${COLORS.RADIO_CARD.DESCRIPTION});
 `;

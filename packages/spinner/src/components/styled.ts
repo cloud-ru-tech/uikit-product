@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { TableText } from '@sbercloud/uikit-typography';
+import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -71,7 +71,8 @@ export const Wrapper = styled.div<{ side: number }>`
   top: calc(50% - ${props => props.side / 2}px);
 `;
 
-export const Text = styled(TableText)<{ padding: number }>`
+export const Text = styled.span<{ padding: number }>`
+  ${TABLE_TEXT_STYLES};
   color: var(${COLORS.TEXT});
   padding-top: ${props => props.padding}px;
 `;

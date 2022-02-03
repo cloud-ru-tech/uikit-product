@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 
 import { Button } from '@sbercloud/uikit-react-button';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { Text1 } from '@sbercloud/uikit-typography';
+import { TEXT_1_STYLES } from '@sbercloud/uikit-typography';
 
 export const FilterWrap = styled.div`
   width: 240px;
@@ -17,7 +17,8 @@ export const FiltersBlock = styled.div`
   }
 `;
 
-export const Title = styled(Text1)`
+export const Title = styled.span`
+  ${TEXT_1_STYLES};
   display: inline-block;
   font-weight: 600;
   margin-bottom: 16px;

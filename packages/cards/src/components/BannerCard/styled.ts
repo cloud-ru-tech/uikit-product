@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H3Semibold, Text2 } from '@sbercloud/uikit-typography';
+import { H3_SEMIBOLD_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -33,11 +33,13 @@ export const CardContent = styled.div`
   justify-content: space-between;
 `;
 
-export const CardTitle = styled(H3Semibold)`
+export const CardTitle = styled.h3`
+  ${H3_SEMIBOLD_STYLES};
   margin-bottom: 12px;
 `;
 
-export const CardText = styled(Text2)`
+export const CardText = styled.span`
+  ${TEXT_2_STYLES};
   display: block;
   margin-bottom: 24px;
   color: var(${COLORS.TEXT});

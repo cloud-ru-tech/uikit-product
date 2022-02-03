@@ -6,7 +6,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { Button } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H1, H3, Text2 } from '@sbercloud/uikit-typography';
+import { H1_STYLES, H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -27,8 +27,20 @@ const ConfigBody = styled.div`
   grid-row-gap: 12px;
 `;
 
-const Title = styled.div`
+const Header = styled.h1`
+  ${H1_STYLES};
+`;
+
+const TitleWrapper = styled.div`
   margin: 24px 0;
+`;
+
+const Title = styled.h3`
+  ${H3_STYLES};
+`;
+
+const Caption = styled.span`
+  ${TEXT_2_STYLES};
 `;
 
 const dividerCSS = css`
@@ -82,17 +94,17 @@ const Template: Story<ConfigProviderProps> = ({ ...args }) => {
   return (
     <ConfigProvider {...args}>
       <Wrapper>
-        <H1>Theme Setting</H1>
+        <Header>Theme Setting</Header>
         <Divider className={dividerCSS} />
-        <Title>
-          <H3>
+        <TitleWrapper>
+          <Title>
             Активная тема: <ThemeWrapper theme={theme}>{theme}</ThemeWrapper>
-          </H3>
-        </Title>
-        <Title>
-          <H3>Смена темы через changeTheme</H3>
-          <Text2>(нажми на кнопку)</Text2>
-        </Title>
+          </Title>
+        </TitleWrapper>
+        <TitleWrapper>
+          <Title>Смена темы через changeTheme</Title>
+          <Caption>(нажми на кнопку)</Caption>
+        </TitleWrapper>
         <ConfigBody>
           <Button onClick={() => changeTheme(Themes.Purple)} text='Purple Theme' />
           <Button onClick={() => changeTheme(Themes.PurpleDark)} text='Purple Dark Theme' />
@@ -101,17 +113,17 @@ const Template: Story<ConfigProviderProps> = ({ ...args }) => {
         </ConfigBody>
       </Wrapper>
       <Wrapper>
-        <H1>Language Settings</H1>
+        <Header>Language Settings</Header>
         <Divider className={dividerCSS} />
-        <Title>
-          <H3>
+        <TitleWrapper>
+          <Title>
             Активный код языка: <ThemeWrapper theme={theme}>{languageCode}</ThemeWrapper>
-          </H3>
-        </Title>
-        <Title>
-          <H3>Смена языка через changeLanguage</H3>
-          <Text2>(нажми на кнопку)</Text2>
-        </Title>
+          </Title>
+        </TitleWrapper>
+        <TitleWrapper>
+          <Title>Смена языка через changeLanguage</Title>
+          <Caption>(нажми на кнопку)</Caption>
+        </TitleWrapper>
         <ConfigBody>
           <Button onClick={() => changeLanguage(LanguageCodeType.ruRU)} text='ruRU' />
           <Button onClick={() => changeLanguage(LanguageCodeType.enUS)} text='enUS' />

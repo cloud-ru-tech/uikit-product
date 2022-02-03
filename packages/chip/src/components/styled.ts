@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+import { TEXT_1_STYLES, TEXT_2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
 
 import { Size, Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -78,22 +78,22 @@ export const ChipWrapper = styled.label`
   &[data-size='${Size.Small}'] {
     border-radius: 16px;
     padding: 4px 12px;
-    ${TYPOGRAPHY_VARIABLES.TEXT_3};
+    ${TEXT_3_STYLES};
   }
   &[data-size='${Size.Medium}'] {
     border-radius: 24px;
     padding: 8px 16px;
-    ${TYPOGRAPHY_VARIABLES.TEXT_2};
+    ${TEXT_2_STYLES};
   }
   &[data-size='${Size.Large}'] {
     border-radius: 24px;
     padding: 12px 20px;
-    ${TYPOGRAPHY_VARIABLES.TEXT_2};
+    ${TEXT_2_STYLES};
   }
   &[data-size='${Size.ExtraLarge}'] {
     border-radius: 32px;
     padding: 14px 24px;
-    ${TYPOGRAPHY_VARIABLES.TEXT_1};
+    ${TEXT_1_STYLES};
   }
 `;
 

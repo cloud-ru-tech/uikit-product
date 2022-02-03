@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { TableText } from '@sbercloud/uikit-typography';
+import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-typography';
 
 import { Variant } from '../../helpers';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -31,7 +31,8 @@ export const Wrapper = styled.span`
   }
 `;
 
-export const Content = styled(TableText)`
+export const Content = styled.span`
+  ${TABLE_TEXT_STYLES};
   color: var(${COLORS.TEXT_COLOR});
 `;
 

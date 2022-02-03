@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { TYPOGRAPHY_VARIABLES } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -12,7 +12,7 @@ GREEN_DARK_THEME;
 export const StyledInput = styled.input`
   width: 100%;
   max-width: 100%;
-  ${TYPOGRAPHY_VARIABLES.TEXT_2};
+  ${TEXT_2_STYLES};
   border-width: 0;
   outline: none;
 
