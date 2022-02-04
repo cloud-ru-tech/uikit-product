@@ -23,6 +23,7 @@
     },
     "target": "es6",
     "lib": ["es2017", "dom", "esnext"],
+    "types": ["cypress", "node"],
     "jsx": "react-jsx",
     "strict": true,
     "isolatedModules": true,
@@ -30,6 +31,6 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
   },
-  "include": ["packages", "types"],
+  "include": ["packages", "types", "cypress/support"],
   "exclude": ["node_modules", "scripts"]
 }

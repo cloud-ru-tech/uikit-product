@@ -17,7 +17,8 @@
         "**/*.mdx",
         "**/*.MDX",
         "./scripts/**/*",
-        "packages/*/stories/**/**.*"
+        "packages/*/stories/**/*.*",
+        "packages/*/__tests__/**/*.*"
       ]
     }
   }

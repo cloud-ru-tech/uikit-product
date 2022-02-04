@@ -8,7 +8,7 @@ import { logDebug, logError, logInfo } from './utils/console';
 const options = {
   ignoreBinPackage: false,
   skipMissing: false,
-  ignorePatterns: ['stories', 'dist'],
+  ignorePatterns: ['stories', 'dist', '__tests__'],
 };
 
 const packages = `../packages/*`;
