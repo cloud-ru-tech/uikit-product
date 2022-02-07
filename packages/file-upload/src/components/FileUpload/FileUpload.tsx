@@ -21,7 +21,17 @@ export function FileUpload({ isMultiple, onFileSelected, accept, children }: Fil
   return (
     <>
       {cloneElement(children, { onClick: handleButtonClick })}
-      <HiddenInput onChange={onFileSelected} multiple={isMultiple} ref={hiddenFileInput} type='file' accept={accept} />
+      <HiddenInput
+        onChange={onFileSelected}
+        multiple={isMultiple}
+        ref={hiddenFileInput}
+        type='file'
+        accept={accept}
+        // to trigger onChange event when the same files were attached
+        onClick={event => {
+          (event.target as HTMLInputElement).value = '';
+        }}
+      />
     </>
   );
 }
