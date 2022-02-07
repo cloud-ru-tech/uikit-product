@@ -171,10 +171,12 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
   const formatGroupLabel = useCallback(group => <div data-test-group-id={`${group.label}`}>{group.label}</div>, []);
 
   const formatOptionLabelInner = useCallback(
-    option => (
-      <div data-test-option-id={`${option.value}`}>{formatOptionLabel ? formatOptionLabel(option) : option.label}</div>
+    (option, labelMeta) => (
+      <div data-test-option-id={`${option.value}`}>
+        {formatOptionLabel ? formatOptionLabel(option, labelMeta) : option.label}
+      </div>
     ),
-    [],
+    [formatOptionLabel],
   );
 
   return (
