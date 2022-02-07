@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-stepper@0.1.13...@sbercloud/uikit-react-stepper@0.1.14) (2022-02-07)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-stepper
+
+
+
+
+
 ## [0.1.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-stepper@0.1.12...@sbercloud/uikit-react-stepper@0.1.13) (2022-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-stepper

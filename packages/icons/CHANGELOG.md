@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@3.0.0...@sbercloud/uikit-react-icons@3.1.0) (2022-02-07)
+
+
+### Features
+
+* add MLSpaceLogoFull ([8314c3f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8314c3fd311513093c21f637b40a5131a50c7a47))
+
+
+
+
+
 # [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@2.8.0...@sbercloud/uikit-react-icons@3.0.0) (2022-01-25)
 
 
