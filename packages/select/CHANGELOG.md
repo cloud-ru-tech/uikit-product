@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.23.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.18...@sbercloud/uikit-react-select@0.23.0) (2022-02-08)
+
+
+### Features
+
+* formatOptionLabel labelMeta argument ([CP-4077](https://jira.sbercloud.tech/browse/CP-4077)) ([7d8fcf1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/7d8fcf126a6062a93674cf34ccc93a88e30f0136))
+
+
+
+
+
 ## [0.22.18](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-select@0.22.17...@sbercloud/uikit-react-select@0.22.18) (2022-02-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
