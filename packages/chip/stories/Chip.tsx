@@ -1,7 +1,10 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import { styled } from '@linaria/react';
 import { useEffect } from '@storybook/addons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
+
+import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,12 +16,22 @@ export default {
   component: Chip,
 } as Meta;
 
+const Wrapper = styled.div`
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
+`;
+
 const Template: Story<ChipProps> = ({ checked, ...args }) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   useEffect(() => setIsChecked(checked), [checked]);
 
-  return <Chip {...args} handleChange={checked => setIsChecked(checked)} checked={isChecked} />;
+  return (
+    <Wrapper>
+      <Chip {...args} handleChange={checked => setIsChecked(checked)} checked={isChecked} />
+    </Wrapper>
+  );
 };
 
 export const chip = Template.bind({});

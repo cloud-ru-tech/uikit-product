@@ -11,6 +11,7 @@ export const COLORS = {
   ACTIVE_BG: '--color-chip-active-background',
   ACTIVE_HOVERED_BG: '--color-chip-active-hovered-background',
   DISABLED_BG: '--color-chip-disabled-background',
+  DEFAULT_BORDER: '--color-chip-border',
 };
 
 export const PURPLE_THEME = css`
@@ -24,6 +25,7 @@ export const PURPLE_THEME = css`
       ${COLORS.ACTIVE_BG}: var(${EXPORT_VARS.BLUE_GREY[70]});
       ${COLORS.ACTIVE_HOVERED_BG}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.DISABLED_BG}: var(${EXPORT_VARS.BLACK_ALFA[8]});
+      ${COLORS.DEFAULT_BORDER}: var(${EXPORT_VARS.BLACK_ALFA[8]});
     }
   }
 `;
@@ -39,6 +41,7 @@ export const GREEN_THEME = css`
       ${COLORS.ACTIVE_BG}: var(${EXPORT_VARS.BLUE_GREY[70]});
       ${COLORS.ACTIVE_HOVERED_BG}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.DISABLED_BG}: var(${EXPORT_VARS.BLACK_ALFA[8]});
+      ${COLORS.DEFAULT_BORDER}: var(${EXPORT_VARS.BLACK_ALFA[8]});
     }
   }
 `;
@@ -54,6 +57,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.ACTIVE_BG}: var(${EXPORT_VARS.BLUE_GREY[70]});
       ${COLORS.ACTIVE_HOVERED_BG}: var(${EXPORT_VARS.BLUE_GREY[60]});
       ${COLORS.DISABLED_BG}: var(${EXPORT_VARS.WHITE_ALFA[8]});
+      ${COLORS.DEFAULT_BORDER}: var(${EXPORT_VARS.WHITE_ALFA[8]});
     }
   }
 `;
@@ -69,6 +73,7 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.ACTIVE_BG}: var(${EXPORT_VARS.BLUE_GREY[70]});
       ${COLORS.ACTIVE_HOVERED_BG}: var(${EXPORT_VARS.BLUE_GREY[60]});
       ${COLORS.DISABLED_BG}: var(${EXPORT_VARS.WHITE_ALFA[8]});
+      ${COLORS.DEFAULT_BORDER}: var(${EXPORT_VARS.WHITE_ALFA[8]});
     }
   }
 `;
