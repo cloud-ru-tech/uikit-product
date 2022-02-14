@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@1.0.3...@sbercloud/uikit-react-chip@2.0.0) (2022-02-14)
+
+
+### Features
+
+* transparent with border and remove margin ([CP-4582](https://jira.sbercloud.tech/browse/CP-4582)) ([17539a5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/17539a546b2673465fdd7f54b4abceb0f414e064))
+
+
+### BREAKING CHANGES
+
+* transparent with border and remove margin (CP-4582)
+
+
+
+
+
 ## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@1.0.2...@sbercloud/uikit-react-chip@1.0.3) (2022-01-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
