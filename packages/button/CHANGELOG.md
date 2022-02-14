@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.8...@sbercloud/uikit-react-button@3.0.9) (2022-02-14)
+
+
+### Bug Fixes
+
+* ButtonRound css vars names ([CP-4585](https://jira.sbercloud.tech/browse/CP-4585)) ([88a0dde](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/88a0dded5c535e8926c790c622da4a0a07965035))
+
+
+
+
+
 ## [3.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.7...@sbercloud/uikit-react-button@3.0.8) (2022-02-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
