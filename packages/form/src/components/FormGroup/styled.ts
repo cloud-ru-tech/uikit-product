@@ -4,8 +4,6 @@ import { styled } from '@linaria/react';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H3_STYLES, TABLE_TEXT_STYLES } from '@sbercloud/uikit-typography';
 
-import { VARIANT } from './FormGroup';
-
 const { COLORS_DIVIDER, COLORS_FORM_GROUP } = DEPRECATED_EXPORT_VARS;
 
 export const hintClassName = css`
@@ -19,14 +17,6 @@ export const tooltipTriggerClassName = css`
 
 export const Wrapper = styled.div`
   padding: 24px 0;
-
-  &[data-variant='${VARIANT.POPUP}'] {
-    padding: 24px;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid var(${COLORS_DIVIDER.COLOR_MIDDLE});
-    }
-  }
 `;
 
 export const Header = styled.div`
