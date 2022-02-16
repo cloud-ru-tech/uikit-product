@@ -30,7 +30,7 @@
     "@sbercloud/uikit-react-button": "3.0.9",
     "@sbercloud/uikit-react-paginator-private": "0.5.24",
     "@sbercloud/uikit-theme": "0.29.0",
-    "@sbercloud/uikit-typography": "0.6.3",
+    "@sbercloud/uikit-typography": "1.0.0",
     "@sbercloud/uikit-utils": "2.1.1"
   },
   "peerDependencies": {

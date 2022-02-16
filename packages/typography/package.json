@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-typography",
   "title": "Typography",
-  "version": "0.6.3",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
