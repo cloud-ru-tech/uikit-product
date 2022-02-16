@@ -21,6 +21,8 @@ export function TableFree({
   pageSize,
   noRowsText,
   context,
+  columnTypes,
+  frameworkComponents,
   ...rest
 }: WithSupportProps<ITableFreeProps>) {
   const [gridApi, setGridApi] = useState<ITableFreeProps['api']>();
@@ -50,6 +52,8 @@ export function TableFree({
         onComponentStateChanged={handleComponentStateChanged}
         noRowsText={noRowsText}
         context={context}
+        columnTypes={columnTypes}
+        frameworkComponents={frameworkComponents}
       />
       {!!pageSize && totalPages > 1 && (
         <S.PaginationWrapper>
