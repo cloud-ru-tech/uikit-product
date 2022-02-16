@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-hero-banner",
   "title": "React Hero Banner",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-typography": "1.0.0"
+    "@sbercloud/uikit-typography": "1.1.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-localization@0.10.12...@sbercloud/uikit-react-localization@0.10.13) (2022-02-16)
+
+
+### Bug Fixes
+
+* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
+
+
+
+
+
 ## [0.10.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-localization@0.10.11...@sbercloud/uikit-react-localization@0.10.12) (2022-01-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-localization

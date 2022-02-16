@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-link",
   "title": "React Link",
-  "version": "2.0.21",
+  "version": "2.0.22",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,9 +28,9 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-icons": "3.1.0",
-    "@sbercloud/uikit-theme": "0.29.0",
-    "@sbercloud/uikit-typography": "1.0.0",
-    "@sbercloud/uikit-utils": "2.1.1"
+    "@sbercloud/uikit-theme": "0.30.0",
+    "@sbercloud/uikit-typography": "1.1.0",
+    "@sbercloud/uikit-utils": "2.1.2"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

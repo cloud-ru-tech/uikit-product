@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.30.0 (2022-02-16)
+
+
+### Bug Fixes
+
+* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
+* minor/patch third-party dependency actualization ([3648504](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/364850414e3a9967417d2dabff30547cfccc5d87))
+
+
+### Features
+
+* added `SB Sans Text Mono` font family ([ee79752](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ee79752d9801b6b88d7e96c28cfe4892e1ae5bf5))
+
+
+
+
+
 # [0.29.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.28.1...@sbercloud/uikit-theme@0.29.0) (2021-12-02)
 
 

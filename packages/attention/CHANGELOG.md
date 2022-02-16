@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-attention@0.7.2...@sbercloud/uikit-react-attention@0.7.3) (2022-02-16)
+
+
+### Bug Fixes
+
+* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
+
+
+
+
+
 ## [0.7.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-attention@0.7.1...@sbercloud/uikit-react-attention@0.7.2) (2022-01-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-attention

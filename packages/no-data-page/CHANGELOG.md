@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.1 (2022-02-16)
+
+
+### Bug Fixes
+
+* first stable version of typography ([9fce874](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9fce8747d03be516626d638ddd34a59a4ce9433a))
+* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
+* minor/patch third-party dependency actualization ([3648504](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/364850414e3a9967417d2dabff30547cfccc5d87))
+
+
+
+
+
 # [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-no-data-page@0.7.11...@sbercloud/uikit-react-no-data-page@0.8.0) (2021-12-30)
 
 

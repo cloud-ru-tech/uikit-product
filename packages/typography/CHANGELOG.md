@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2022-02-16)
+
+
+### Bug Fixes
+
+* first stable version of typography ([9fce874](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9fce8747d03be516626d638ddd34a59a4ce9433a))
+* minor/patch third-party dependency actualization ([3648504](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/364850414e3a9967417d2dabff30547cfccc5d87))
+
+
+### Features
+
+* got rid of the deprecated exports ([1a66a2f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1a66a2fdc99d3d152f091ffb0bd48a51d4b7efb3))
+* now only typography styles are exported ([910ff86](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/910ff869e4fa9b839ec90d67a9249baedd4743e3))
+
+
+
+
+
 ## [0.6.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-typography@0.6.2...@sbercloud/uikit-typography@0.6.3) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-typography

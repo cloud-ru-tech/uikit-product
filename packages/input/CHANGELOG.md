@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@1.0.14...@sbercloud/uikit-react-input@1.0.15) (2022-02-16)
+
+
+### Bug Fixes
+
+* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
+
+
+
+
+
 ## [1.0.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input@1.0.13...@sbercloud/uikit-react-input@1.0.14) (2022-02-14)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input

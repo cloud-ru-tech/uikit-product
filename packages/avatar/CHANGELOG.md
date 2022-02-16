@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.13 (2022-02-16)
+
+
+### Bug Fixes
+
+* minor/patch third-party dependency actualization ([3648504](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/364850414e3a9967417d2dabff30547cfccc5d87))
+
+
+
+
+
 ## [0.6.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-avatar@0.6.11...@sbercloud/uikit-react-avatar@0.6.12) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-avatar
