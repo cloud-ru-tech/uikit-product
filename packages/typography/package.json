@@ -7,7 +7,7 @@
     "*.woff",
     "*.woff2"
   ],
-  "description": "Styled wrappers for text elements",
+  "description": "Typography styles",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
   "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/typography",
@@ -26,9 +26,6 @@
   ],
   "license": "UNLICENSED",
   "scripts": {},
-  "dependencies": {
-    "@sbercloud/uikit-theme": "0.29.0"
-  },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",
     "@linaria/react": "^3.0.0-beta.13",

@@ -1,49 +1,50 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Text1, Text2, Text2Link, Text3, Text4 } from '../src';
+import { TEXT_1_STYLES, TEXT_2_STYLES, TEXT_3_STYLES, TEXT_4_STYLES } from '../src';
 
 export default {
   title: 'Typography/Text',
-  component: Text1,
 } as Meta;
 
-const Template: Story<{ color: string; children: string }> = ({ children, color, ...restArgs }) => (
-  <div style={{ color, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-    <Text1 {...restArgs}>{children} (Text1)</Text1>
-    <Text2 {...restArgs}>{children} (Text2)</Text2>
-    <Text2Link {...restArgs} href='https://sbercloud.ru' target='_blank'>
-      {children} (Text2Link)
-    </Text2Link>
-    <Text3 {...restArgs}>{children} (Text3)</Text3>
-    <Text4 {...restArgs}>{children} (Text4)</Text4>
-  </div>
+const Text1 = styled.div`
+  ${TEXT_1_STYLES};
+`;
+
+const Text2 = styled.div`
+  ${TEXT_2_STYLES};
+`;
+
+const Text3 = styled.div`
+  ${TEXT_3_STYLES};
+`;
+
+const Text4 = styled.div`
+  ${TEXT_4_STYLES};
+`;
+
+const Template: Story = () => (
+  <>
+    <Text1>Пример (Text1)</Text1>
+    <Text2>Пример (Text2)</Text2>
+    <Text3>Пример (Text3)</Text3>
+    <Text4>Пример (Text4)</Text4>
+  </>
 );
 
 export const text = Template.bind({});
-text.args = {
-  children: 'Пример',
-};
-text.argTypes = {
-  color: {
-    control: {
-      type: 'color',
-    },
-  },
-  children: {
-    control: {
-      type: 'text',
-    },
-  },
-};
 text.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  badges: [BADGE.STABLE],
   design: {
+    name: 'Figma',
     type: 'figma',
-    url: 'https://www.figma.com/file/9UAhwzTGUnOFaczS5Q5v5c/SberCloud-%E2%86%92-Design_System?node-id=2%3A2540',
+    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=1133%3A25062',
   },
 };

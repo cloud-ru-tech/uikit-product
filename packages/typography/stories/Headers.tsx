@@ -1,49 +1,65 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import { styled } from '@linaria/react';
+import { Meta, Story } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { H1, H2, H3, H3Semibold, H4, H4Semibold, H5 } from '../src';
+import { H1_STYLES, H2_STYLES, H3_SEMIBOLD_STYLES, H3_STYLES, H4_SEMIBOLD_STYLES, H4_STYLES, H5_STYLES } from '../src';
 
 export default {
   title: 'Typography/Headers',
-  component: H1,
 } as Meta;
 
-const Template: Story<{ color: string; children: string }> = ({ children, color, ...restArgs }) => (
-  <div style={{ color }}>
-    <H1 {...restArgs}>{children} (H1)</H1>
-    <H2 {...restArgs}>{children} (H2)</H2>
-    <H3 {...restArgs}>{children} (H3)</H3>
-    <H3Semibold {...restArgs}>{children} (H3Semibold)</H3Semibold>
-    <H4 {...restArgs}>{children} (H4)</H4>
-    <H4Semibold {...restArgs}>{children} (H4Semibold)</H4Semibold>
-    <H5 {...restArgs}>{children} (H5)</H5>
-  </div>
+const H1 = styled.h1`
+  ${H1_STYLES};
+`;
+
+const H2 = styled.h2`
+  ${H2_STYLES};
+`;
+
+const H3 = styled.h3`
+  ${H3_STYLES};
+`;
+
+const H3Semibold = styled.h3`
+  ${H3_SEMIBOLD_STYLES};
+`;
+
+const H4 = styled.h4`
+  ${H4_STYLES};
+`;
+
+const H4Semibold = styled.h4`
+  ${H4_SEMIBOLD_STYLES};
+`;
+
+const H5 = styled.h5`
+  ${H5_STYLES};
+`;
+
+const Template: Story = () => (
+  <>
+    <H1>Пример (H1)</H1>
+    <H2>Пример (H2)</H2>
+    <H3>Пример (H3)</H3>
+    <H3Semibold>Пример (H3Semibold)</H3Semibold>
+    <H4>Пример (H4)</H4>
+    <H4Semibold>Пример (H4Semibold)</H4Semibold>
+    <H5>Пример (H5)</H5>
+  </>
 );
 
 export const headers = Template.bind({});
-headers.args = {
-  children: 'Пример',
-};
-headers.argTypes = {
-  color: {
-    control: {
-      type: 'color',
-    },
-  },
-  children: {
-    control: {
-      type: 'text',
-    },
-  },
-};
 headers.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  badges: [BADGE.STABLE],
   design: {
+    name: 'Figma',
     type: 'figma',
-    url: 'https://www.figma.com/file/Eo7qqu8rH4Eg2RGYUrmjra/SberCloud-%E2%86%92-Design_System-iter-2-(violet)?node-id=2%3A2540',
+    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=1133%3A25062',
   },
 };

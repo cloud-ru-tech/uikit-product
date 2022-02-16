@@ -5,4 +5,4 @@
 
 [Changelog](./CHANGELOG.md)
 
-Styled wrappers for text elements
+Typography styles
