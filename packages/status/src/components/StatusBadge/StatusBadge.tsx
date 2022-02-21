@@ -1,15 +1,19 @@
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Types } from '../../helpers';
-import { Dot } from './styled';
+import { styledStatusBadge } from './styled';
+import { StatusBadgeProps } from './types';
 
-export type StatusBadgeProps = {
-  type: Types;
-  className?: string;
-};
-
-export function StatusBadge({ type, className, ...rest }: WithSupportProps<StatusBadgeProps>) {
-  return <Dot data-type={type} className={className} {...extractSupportProps(rest)} />;
+function StylelessStatusBadge({ type, className, ...rest }: StatusBadgeProps) {
+  return <span data-type={type} className={className} {...extractSupportProps(rest)} />;
 }
+
+const StyledStatusBadge = styledStatusBadge(StylelessStatusBadge);
+
+export type { StatusBadgeProps };
+
+export const StatusBadge = StyledStatusBadge as typeof StyledStatusBadge & {
+  types: typeof Types;
+};
 
 StatusBadge.types = Types;

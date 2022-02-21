@@ -1,8 +1,7 @@
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Types } from '../../helpers';
-import { StatusBadge } from '../StatusBadge/StatusBadge';
-import { Wrapper, statusBadgeClassName } from './styled';
+import { StyledStatusBadge, Wrapper } from './styled';
 
 export type StatusProps = {
   type?: Types;
@@ -14,7 +13,7 @@ export function StatusIcon({ type = Types.Success, className, icon, ...rest }: W
   return (
     <Wrapper className={className} {...extractSupportProps(rest)}>
       {icon}
-      <StatusBadge type={type} className={statusBadgeClassName} />
+      <StyledStatusBadge type={type} />
     </Wrapper>
   );
 }

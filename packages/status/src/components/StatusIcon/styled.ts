@@ -1,5 +1,6 @@
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
+
+import { StatusBadge } from '../StatusBadge';
 
 export const Wrapper = styled.span`
   display: inline-flex;
@@ -7,7 +8,7 @@ export const Wrapper = styled.span`
   position: relative;
 `;
 
-export const statusBadgeClassName = css`
+export const StyledStatusBadge = styled(StatusBadge)`
   position: absolute;
   right: -1px;
   bottom: -1px;

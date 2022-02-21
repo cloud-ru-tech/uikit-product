@@ -1,14 +1,16 @@
 import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
 import { Types } from '../../helpers';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+import { StatusBadgeProps } from './types';
 
 PURPLE_THEME;
 PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const Dot = styled.span`
+export const styledStatusBadge = (StatusBadge: VFC<StatusBadgeProps>): VFC<StatusBadgeProps> => styled(StatusBadge)`
   min-width: 8px;
   max-width: 8px;
   width: 8px;
