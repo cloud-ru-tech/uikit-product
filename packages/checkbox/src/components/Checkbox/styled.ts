@@ -28,6 +28,7 @@ export const iconClassName = css`
 export const CheckboxIconWrap = styled.span`
   display: flex;
   flex-direction: row;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
@@ -76,7 +77,6 @@ export const CheckboxIconWrap = styled.span`
 
 export const CheckboxText = styled.span`
   ${TEXT_2_STYLES};
-  margin-left: 8px;
 
   &[data-disabled] {
     color: var(${COLORS.DISABLED_TEXT});
@@ -91,6 +91,8 @@ export const CheckboxWrap = styled.label`
 `;
 
 export const CheckboxTextWrap = styled.span`
+  margin-left: 8px;
+
   &:hover {
     cursor: pointer;
 
