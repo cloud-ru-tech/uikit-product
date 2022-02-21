@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-form",
   "title": "React Form",
-  "version": "0.13.17",
+  "version": "0.14.0",
   "sideEffects": [
     "*.css",
     "*.woff",
