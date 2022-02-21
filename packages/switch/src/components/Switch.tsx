@@ -34,7 +34,7 @@ export function Switch({
         uncheckedIcon={false}
         checkedIcon={false}
         activeBoxShadow=''
-        className={cx(switchClassName, checked && switchClassNameChecked, disabled && switchClassNameDisabled)}
+        className={cx(switchClassName, disabled && switchClassNameDisabled, checked && switchClassNameChecked)}
         checked={checked}
         onChange={onChange}
         disabled={disabled}

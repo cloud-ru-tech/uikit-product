@@ -19,6 +19,7 @@ export const switchClassNameDisabled = css``;
 
 export const switchClassName = css`
   opacity: 1 !important;
+  background-color: var(${COLORS.BACKGROUND_INACTIVE});
 
   .react-switch-bg {
     background: unset !important;
@@ -27,17 +28,14 @@ export const switchClassName = css`
   
   .react-switch-handle {
     cursor: unset !important;
-    background-color: var(${COLORS.HANDLE}) !important;
+    background-color: var(${COLORS.HANDLE_INACTIVE}) !important;
   }
   
   &.${switchClassNameDisabled} {
     .react-switch-handle {
-      background-color: var(${COLORS.HANDLE_DISABLED}) !important;
+      background-color: var(${COLORS.HANDLE_INACTIVE_DISABLED}) !important;
     }
   }
-  
-  
-  background-color: var(${COLORS.BACKGROUND_INACTIVE});
 
   &:not(.${switchClassNameDisabled}):hover {
       background-color: var(${COLORS.BACKGROUND_INACTIVE_HOVERED});
@@ -55,8 +53,16 @@ export const switchClassNameChecked = css`
   &:not(.${switchClassNameDisabled}):hover {
     background-color: var(${COLORS.BACKGROUND_ACTIVE_HOVERED});
   }
+  
+  .react-switch-handle {
+    background-color: var(${COLORS.HANDLE_ACTIVE}) !important;
+  }
 
   &.${switchClassNameDisabled} {
     background-color: var(${COLORS.BACKGROUND_ACTIVE_DISABLED});
+
+    .react-switch-handle {
+      background-color: var(${COLORS.HANDLE_ACTIVE_DISABLED}) !important;
+    }
   }
 }`;
