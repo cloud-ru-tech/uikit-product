@@ -13,7 +13,7 @@ GREEN_DARK_THEME;
 export const Container = styled.div`
   width: 100%;
   border-radius: 4px;
-  padding: 8px 8px 8px 12px;
+  padding: 4px 4px 4px 12px;
   box-sizing: border-box;
   background-color: var(${COLORS.background});
   display: flex;

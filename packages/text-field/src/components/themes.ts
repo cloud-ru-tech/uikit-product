@@ -12,7 +12,7 @@ export const COLORS = {
 export const PURPLE_THEME = css`
   :global() {
     body[data-theme=${Themes.Purple}] {
-      ${COLORS.background}: var(${GREY[50]});
+      ${COLORS.background}: var(${WHITE_ALFA[4]});
       ${COLORS.text}: var(${GREY[600]});
     }
   }
@@ -22,7 +22,7 @@ export const PURPLE_DARK_THEME = css`
   :global() {
     body[data-theme=${Themes.PurpleDark}] {
       ${COLORS.background}: var(${WHITE_ALFA[8]});
-      ${COLORS.text}: var(${GREY[250]});
+      ${COLORS.text}: var(${GREY[300]});
     }
   }
 `;
@@ -30,7 +30,7 @@ export const PURPLE_DARK_THEME = css`
 export const GREEN_THEME = css`
   :global() {
     body[data-theme=${Themes.Green}] {
-      ${COLORS.background}: var(${GREY[50]});
+      ${COLORS.background}: var(${WHITE_ALFA[4]});
       ${COLORS.text}: var(${GREY[600]});
     }
   }
@@ -40,7 +40,7 @@ export const GREEN_DARK_THEME = css`
   :global() {
     body[data-theme=${Themes.GreenDark}] {
       ${COLORS.background}: var(${WHITE_ALFA[8]});
-      ${COLORS.text}: var(${GREY[250]});
+      ${COLORS.text}: var(${GREY[300]});
     }
   }
 `;
