@@ -8,11 +8,10 @@ GREEN_THEME;
 GREEN_DARK_THEME;
 
 export const buttonToolbarClassName = css`
-  width: 44px;
-  height: 40px;
+  padding: 12px;
 
   fill: var(${COLORS.FILL});
-  background-color: var(${COLORS.BG});
+  background-color: transparent;
 
   :hover {
     fill: var(${COLORS.FILL_HOVER});
