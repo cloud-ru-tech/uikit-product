@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.27](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.26...@sbercloud/uikit-react-checkbox@1.0.27) (2022-02-22)
+
+
+### Bug Fixes
+
+* changed bg icon color on green themes ([69aa6ef](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/69aa6efff84e7effc0c4eaea51308fd9d6ecf503))
+
+
+
+
+
 ## [1.0.26](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.25...@sbercloud/uikit-react-checkbox@1.0.26) (2022-02-22)
 
 
