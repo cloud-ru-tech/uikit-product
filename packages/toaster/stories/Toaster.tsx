@@ -105,7 +105,7 @@ const CustomNode = styled.div`
   color: #fff;
   justify-content: center;
   align-items: center;
-  background-color: var(${EXPORT_VARS.PRESET.GRACE_5});
+  background-color: var(${EXPORT_VARS.GRACE[5]});
 `;
 
 const Template: Story<ToasterProps & { showActions: boolean; autoClose: boolean }> = ({

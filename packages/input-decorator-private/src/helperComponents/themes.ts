@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-const { WHITE_ALFA, BLACK_ALFA, GREY, PRESET } = EXPORT_VARS;
+const { WHITE_ALFA, BLACK_ALFA, GREY, BERRY_RED } = EXPORT_VARS;
 
 export const COLORS = {
   label: '--color-input-decorator__label',
@@ -19,7 +19,7 @@ export const PURPLE_THEME = css`
       ${COLORS.labelIcon}: var(${GREY[200]});
       ${COLORS.optional}: var(${BLACK_ALFA[24]});
       ${COLORS.hint}: var(${BLACK_ALFA[48]});
-      ${COLORS.error}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.error}: var(${BERRY_RED[100]});
     }
   }
 `;
@@ -31,7 +31,7 @@ export const GREEN_THEME = css`
       ${COLORS.labelIcon}: var(${GREY[200]});
       ${COLORS.optional}: var(${BLACK_ALFA[24]});
       ${COLORS.hint}: var(${BLACK_ALFA[48]});
-      ${COLORS.error}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.error}: var(${BERRY_RED[100]});
     }
   }
 `;
@@ -43,7 +43,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.labelIcon}: var(${GREY[450]});
       ${COLORS.optional}: var(${WHITE_ALFA[24]});
       ${COLORS.hint}: var(${WHITE_ALFA[48]});
-      ${COLORS.error}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.error}: var(${BERRY_RED[100]});
     }
   }
 `;
@@ -55,7 +55,7 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.labelIcon}: var(${GREY[450]});
       ${COLORS.optional}: var(${WHITE_ALFA[24]});
       ${COLORS.hint}: var(${WHITE_ALFA[48]});
-      ${COLORS.error}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.error}: var(${BERRY_RED[100]});
     }
   }
 `;

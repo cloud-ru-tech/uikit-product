@@ -3,7 +3,7 @@ import { styled } from '@linaria/react';
 import { FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-const { GREY, BLACK_ALFA, PRESET } = EXPORT_VARS;
+const { GREY, BLACK_ALFA, SUNNY_YELLOW } = EXPORT_VARS;
 
 export const MarkContainer = styled.div`
   display: flex;
@@ -32,6 +32,6 @@ export const FavouriteInterfaceSVGStyled = styled(FavouriteInterfaceSVG)`
   fill: var(${BLACK_ALFA[16]});
 
   &[data-selected] {
-    fill: var(${PRESET.SUNNY_YELLOW});
+    fill: var(${SUNNY_YELLOW[100]});
   }
 `;

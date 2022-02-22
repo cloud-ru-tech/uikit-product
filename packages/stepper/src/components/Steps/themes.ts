@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-const { GREY, PRESET, BLACK_ALFA, PURPLE } = EXPORT_VARS;
+const { GREY, BLACK_ALFA, PURPLE, BERRY_RED } = EXPORT_VARS;
 
 export const COLORS = {
   STEP_INACTIVE: '--color-stepper-step-inactive',
@@ -20,7 +20,7 @@ export const PURPLE_THEME = css`
       ${COLORS.STEP_INACTIVE}: var(${GREY[350]});
       ${COLORS.INACTIVE_TEXT}: var(${GREY[600]});
       ${COLORS.STEP_ACTIVE}: var(${PURPLE[100]});
-      ${COLORS.STEP_ERROR}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.STEP_ERROR}: var(${BERRY_RED[100]});
       ${COLORS.STEP_CONTENT}: var(${GREY[0]});
       ${COLORS.BACKGROUND_ROW_EMPTY}: var(${BLACK_ALFA[8]});
       ${COLORS.BACKGROUND_ROW_FILLED}: var(${PURPLE[50]});
@@ -34,7 +34,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.STEP_INACTIVE}: var(${GREY[350]});
       ${COLORS.INACTIVE_TEXT}: var(${GREY[600]});
       ${COLORS.STEP_ACTIVE}: var(${PURPLE[100]});
-      ${COLORS.STEP_ERROR}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.STEP_ERROR}: var(${BERRY_RED[100]});
       ${COLORS.STEP_CONTENT}: var(${GREY[0]});
       ${COLORS.BACKGROUND_ROW_EMPTY}: var(${BLACK_ALFA[8]});
       ${COLORS.BACKGROUND_ROW_FILLED}: var(${PURPLE[50]});
@@ -48,7 +48,7 @@ export const GREEN_THEME = css`
       ${COLORS.STEP_INACTIVE}: var(${GREY[350]});
       ${COLORS.INACTIVE_TEXT}: var(${GREY[600]});
       ${COLORS.STEP_ACTIVE}: var(${PURPLE[100]});
-      ${COLORS.STEP_ERROR}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.STEP_ERROR}: var(${BERRY_RED[100]});
       ${COLORS.STEP_CONTENT}: var(${GREY[0]});
       ${COLORS.BACKGROUND_ROW_EMPTY}: var(${BLACK_ALFA[8]});
       ${COLORS.BACKGROUND_ROW_FILLED}: var(${PURPLE[50]});
@@ -62,7 +62,7 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.STEP_INACTIVE}: var(${GREY[350]});
       ${COLORS.INACTIVE_TEXT}: var(${GREY[600]});
       ${COLORS.STEP_ACTIVE}: var(${PURPLE[100]});
-      ${COLORS.STEP_ERROR}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.STEP_ERROR}: var(${BERRY_RED[100]});
       ${COLORS.STEP_CONTENT}: var(${GREY[0]});
       ${COLORS.BACKGROUND_ROW_EMPTY}: var(${BLACK_ALFA[8]});
       ${COLORS.BACKGROUND_ROW_FILLED}: var(${PURPLE[50]});

@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-const { GREY, BLUE_GREY, PRESET } = EXPORT_VARS;
+const { GREY, BLUE_GREY, BERRY_RED, GRACE, SUNNY_YELLOW, PRESET } = EXPORT_VARS;
 
 export const COLORS = {
   SUCCESS_BG: '--status-badge-success-bg',
@@ -19,10 +19,10 @@ export const PURPLE_THEME = css`
   :global() {
     body[data-theme='${Themes.Purple}'] {
       ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
-      ${COLORS.FAILED_BG}: var(${PRESET.BERRY_RED_1});
-      ${COLORS.WARNING_BG}: var(${PRESET.SUNNY_YELLOW});
+      ${COLORS.FAILED_BG}: var(${BERRY_RED[100]});
+      ${COLORS.WARNING_BG}: var(${SUNNY_YELLOW[100]});
       ${COLORS.UNACTIVE_BG}: var(${GREY[300]});
-      ${COLORS.PROGRESS_BG}: var(${PRESET.GRACE_6});
+      ${COLORS.PROGRESS_BG}: var(${GRACE[6]});
       ${COLORS.NEUTRAL_BG}: var(${BLUE_GREY[80]});
 
       ${COLORS.STATUS_BADGE_BORDER_COLOR}: var(${GREY[25]});
@@ -34,10 +34,10 @@ export const PURPLE_DARK_THEME = css`
   :global() {
     body[data-theme='${Themes.PurpleDark}'] {
       ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
-      ${COLORS.FAILED_BG}: var(${PRESET.BERRY_RED_1});
-      ${COLORS.WARNING_BG}: var(${PRESET.SUNNY_YELLOW});
+      ${COLORS.FAILED_BG}: var(${BERRY_RED[100]});
+      ${COLORS.WARNING_BG}: var(${SUNNY_YELLOW[100]});
       ${COLORS.UNACTIVE_BG}: var(${GREY[550]});
-      ${COLORS.PROGRESS_BG}: var(${PRESET.GRACE_6});
+      ${COLORS.PROGRESS_BG}: var(${GRACE[6]});
       ${COLORS.NEUTRAL_BG}: var(${GREY[200]});
 
       ${COLORS.STATUS_BADGE_BORDER_COLOR}: var(${GREY[800]});
@@ -49,10 +49,10 @@ export const GREEN_THEME = css`
   :global() {
     body[data-theme='${Themes.Green}'] {
       ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
-      ${COLORS.FAILED_BG}: var(${PRESET.BERRY_RED_1});
-      ${COLORS.WARNING_BG}: var(${PRESET.SUNNY_YELLOW});
+      ${COLORS.FAILED_BG}: var(${BERRY_RED[100]});
+      ${COLORS.WARNING_BG}: var(${SUNNY_YELLOW[100]});
       ${COLORS.UNACTIVE_BG}: var(${GREY[300]});
-      ${COLORS.PROGRESS_BG}: var(${PRESET.GRACE_6});
+      ${COLORS.PROGRESS_BG}: var(${GRACE[6]});
       ${COLORS.NEUTRAL_BG}: var(${BLUE_GREY[80]});
 
       ${COLORS.STATUS_BADGE_BORDER_COLOR}: var(${GREY[25]});
@@ -64,10 +64,10 @@ export const GREEN_DARK_THEME = css`
   :global() {
     body[data-theme='${Themes.GreenDark}'] {
       ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
-      ${COLORS.FAILED_BG}: var(${PRESET.BERRY_RED_1});
-      ${COLORS.WARNING_BG}: var(${PRESET.SUNNY_YELLOW});
+      ${COLORS.FAILED_BG}: var(${BERRY_RED[100]});
+      ${COLORS.WARNING_BG}: var(${SUNNY_YELLOW[100]});
       ${COLORS.UNACTIVE_BG}: var(${GREY[550]});
-      ${COLORS.PROGRESS_BG}: var(${PRESET.GRACE_6});
+      ${COLORS.PROGRESS_BG}: var(${GRACE[6]});
       ${COLORS.NEUTRAL_BG}: var(${GREY[200]});
 
       ${COLORS.STATUS_BADGE_BORDER_COLOR}: var(${GREY[800]});

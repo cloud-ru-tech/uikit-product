@@ -81,6 +81,13 @@ const COLOR_VARIANT_LIST = [
   { name: 'Green Alpha', value: EXPORT_VARS.GREEN_ALFA, color: '#343f48', background: '#07e897' },
   { name: 'Black Alpha', value: EXPORT_VARS.BLACK_ALFA, color: '#fff', background: '#000000' },
   { name: 'White Alpha', value: EXPORT_VARS.WHITE_ALFA, color: '#343f48', background: '#fff' },
+  { name: 'Berry Red', value: EXPORT_VARS.BERRY_RED, color: '#fff', background: '#e84e58' },
+  { name: 'Berry Red Alpha', value: EXPORT_VARS.BERRY_RED_ALPHA, color: '#343f48', background: '#fff' },
+  { name: 'Grace', value: EXPORT_VARS.GRACE, color: '#343f48', background: '#fff' },
+  { name: 'Grace Alpha', value: EXPORT_VARS.GRACE_ALPHA, color: '#343f48', background: '#fff' },
+  { name: 'Gradient', value: EXPORT_VARS.GRADIENT, color: '#343f48', background: '#fff' },
+  { name: 'Sunny Yellow', value: EXPORT_VARS.SUNNY_YELLOW, color: '#343f48', background: '#fff' },
+  { name: 'Sunny Yellow Alpha', value: EXPORT_VARS.SUNNY_YELLOW_ALPHA, color: '#343f48', background: '#fff' },
   {
     name: 'Color',
     value: EXPORT_VARS.PRESET,

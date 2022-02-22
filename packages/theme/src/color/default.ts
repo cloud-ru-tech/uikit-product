@@ -1,6 +1,23 @@
 import { css } from '@linaria/core';
 
-import { BLACK_ALFA, BLUE_GREY, GREEN, GREEN_ALFA, GREY, PRESET, PURPLE, PURPLE_ALFA, WHITE_ALFA } from './vars';
+import {
+  BERRY_RED,
+  BERRY_RED_ALPHA,
+  BLACK_ALFA,
+  BLUE_GREY,
+  GRACE,
+  GRACE_ALPHA,
+  GRADIENT,
+  GREEN,
+  GREEN_ALFA,
+  GREY,
+  PRESET,
+  PURPLE,
+  PURPLE_ALFA,
+  SUNNY_YELLOW,
+  SUNNY_YELLOW_ALPHA,
+  WHITE_ALFA,
+} from './vars';
 
 export const COLORS_DEFAULT_MAP = `
  ${GREY[0]}: #ffffff;
@@ -81,6 +98,63 @@ export const COLORS_DEFAULT_MAP = `
  ${BLUE_GREY[90]}: #373e45;
  ${BLUE_GREY[100]}: #212830;
 
+ ${BERRY_RED[25]}: #f9d3d5;
+ ${BERRY_RED[50]}: #f4a7ab;
+ ${BERRY_RED[75]}: #ee7a82;
+ ${BERRY_RED[100]}: #e84e58;
+ ${BERRY_RED[115]}: #c5424b;
+ ${BERRY_RED[125]}: #ae3b42;
+ ${BERRY_RED[150]}: #74272c;
+ 
+ ${BERRY_RED_ALPHA[15]}: rgba(232, 78, 88, 0.15);
+ ${BERRY_RED_ALPHA[25]}: rgba(232, 78, 88, 0.25);
+
+ ${SUNNY_YELLOW[75]}: #f2db72;
+ ${SUNNY_YELLOW[100]}: #f0d559;
+ ${SUNNY_YELLOW[115]}: #ccb54c;
+
+ ${SUNNY_YELLOW_ALPHA[15]}: rgba(240, 213, 89, 0.15);
+ ${SUNNY_YELLOW_ALPHA[50]}: rgba(240, 213, 89, 0.5);
+
+ ${GRACE[1]}: #02e497;
+ ${GRACE[2]}: #0dc8a2;
+ ${GRACE[3]}: #19abac;
+ ${GRACE[4]}: #229485;
+ ${GRACE[5]}: #2883bb;
+ ${GRACE[6]}: #316cc4;
+ ${GRACE[7]}: #3a56cc;
+ ${GRACE[8]}: #5c00ec;
+ ${GRACE[9]}: #7818cf;
+ ${GRACE[10]}: #8828bb;
+ ${GRACE[11]}: #9933ad;
+ ${GRACE[12]}: #a53da0;
+ ${GRACE[13]}: #ae4597;
+ ${GRACE[14]}: #bc5191;
+ ${GRACE[15]}: #cc5693;
+ ${GRACE[16]}: #e05a9f;
+
+ ${GRACE_ALPHA[1]}: rgba(2, 228, 151, 0.1);
+ ${GRACE_ALPHA[2]}: rgba(13, 200, 162, 0.1);
+ ${GRACE_ALPHA[3]}: rgba(25, 171, 172, 0.1);
+ ${GRACE_ALPHA[4]}: rgba(34, 148, 181, 0.1);
+ ${GRACE_ALPHA[5]}: rgba(40, 131, 187, 0.1);
+ ${GRACE_ALPHA[6]}: rgba(49, 108, 196, 0.1);
+ ${GRACE_ALPHA[7]}: rgba(58, 86, 204, 0.1);
+ ${GRACE_ALPHA[8]}: rgba(92, 0, 236, 0.1);
+ ${GRACE_ALPHA[9]}: rgba(120, 24, 207, 0.1);
+ ${GRACE_ALPHA[10]}: rgba(139, 40, 187, 0.1);
+ ${GRACE_ALPHA[11]}: rgba(153, 51, 173, 0.1);
+ ${GRACE_ALPHA[12]}: rgba(165, 61, 160, 0.1);
+ ${GRACE_ALPHA[13]}: rgba(174, 69, 151, 0.1);
+ ${GRACE_ALPHA[14]}: rgba(188, 81, 145, 0.1);
+ ${GRACE_ALPHA[15]}: rgba(204, 86, 147, 0.1);
+ ${GRACE_ALPHA[16]}: rgba(224, 90, 159, 0.1);
+
+ ${GRADIENT[1]}: linear-gradient(90deg, #BC5188 0%, #496DEB 29.17%, #0AE59A 100%);
+ ${GRADIENT[2]}: linear-gradient(90deg, #0AE59A 0%, #316CC4 100%);
+ ${GRADIENT[3]}: linear-gradient(180deg, rgba(85, 88, 250, 0.3) 0%, rgba(85, 88, 250, 0) 100%);
+ ${GRADIENT[4]}: linear-gradient(180deg, rgba(2, 228, 151, 0.3) 0%, rgba(2, 228, 151, 0) 100%);
+
  ${PRESET.GREEN_LIGHT}: #d7e7e2;
  ${PRESET.GREEN_DARK}: #527771;
  ${PRESET.YELLOW_LIGHT}: #f9eed8;
@@ -105,69 +179,13 @@ export const COLORS_DEFAULT_MAP = `
  ${PRESET.GRASS_DARK}: #6d784e;
  ${PRESET.SEAMOUNT_LIGHT}: #e0f4f4;
  ${PRESET.SEAMOUNT_DARK}: #146c6c;
-
- ${PRESET.BERRY_RED_1}: #e84e58;
- ${PRESET.BERRY_RED_2}: #ea6069;
- ${PRESET.BERRY_RED_3}: #d1464f;
-
- ${PRESET.SUNNY_YELLOW_75}: #f2db72;
- ${PRESET.SUNNY_YELLOW_100}: #f0d559;
- ${PRESET.SUNNY_YELLOW_115}: #ccb54c;
- ${PRESET.SUNNY_YELLOW_ALPHA_15}: rgba(240, 213, 89, 0.15);
- ${PRESET.SUNNY_YELLOW_ALPHA_50}: rgba(240, 213, 89, 0.5);
  ${PRESET.EMERALD_GREEN}: #05ae71;
  ${PRESET.EMERALD_GREEN_ALPHA}: rgba(5, 174, 113, 0.15);
- ${PRESET.BERRY_RED_25}: #f9d3d5;
- ${PRESET.BERRY_RED_50}: #f4a7ab;
- ${PRESET.BERRY_RED_100}: #e84e58;
- ${PRESET.BERRY_RED_115}: #c5424b;
- ${PRESET.BERRY_RED_125}: #ae3b42;
- ${PRESET.BERRY_RED_150}: #74272c;
- ${PRESET.BERRY_RED_ALPHA_15}: rgba(232, 78, 88, 0.15);
- ${PRESET.BERRY_RED_ALPHA_25}: rgba(232, 78, 88, 0.25);
-
  ${PRESET.FINDED_WHITE}: #fdffaa;
  ${PRESET.FINDED_BLACK}: #675d00;
  ${PRESET.FOCUSED_WHITE}: #ffd3aa;
  ${PRESET.FOCUSED_BLACK}: #964f0d;
-
- ${PRESET.GRACE_1}: #02e497;
- ${PRESET.GRACE_1_ALPHA}: rgba(2, 228, 151, 0.1);
- ${PRESET.GRACE_2}: #0dc8a2;
- ${PRESET.GRACE_2_ALPHA}: rgba(13, 200, 162, 0.1);
- ${PRESET.GRACE_3}: #19abac;
- ${PRESET.GRACE_3_ALPHA}: rgba(25, 171, 172, 0.1);
- ${PRESET.GRACE_4}: #229485;
- ${PRESET.GRACE_4_ALPHA}: rgba(34, 148, 181, 0.1);
- ${PRESET.GRACE_5}: #2883bb;
- ${PRESET.GRACE_5_ALPHA}: rgba(40, 131, 187, 0.1);
- ${PRESET.GRACE_6}: #316cc4;
- ${PRESET.GRACE_6_ALPHA}: rgba(49, 108, 196, 0.1);
- ${PRESET.GRACE_7}: #3a56cc;
- ${PRESET.GRACE_7_ALPHA}: rgba(58, 86, 204, 0.1);
- ${PRESET.GRACE_8}: #5c00ec;
- ${PRESET.GRACE_8_ALPHA}: rgba(92, 0, 236, 0.1);
- ${PRESET.GRACE_9}: #7818cf;
- ${PRESET.GRACE_9_ALPHA}: rgba(120, 24, 207, 0.1);
- ${PRESET.GRACE_10}: #8828bb;
- ${PRESET.GRACE_10_ALPHA}: rgba(139, 40, 187, 0.1);
- ${PRESET.GRACE_11}: #9933ad;
- ${PRESET.GRACE_11_ALPHA}: rgba(153, 51, 173, 0.1);
- ${PRESET.GRACE_12}: #a53da0;
- ${PRESET.GRACE_12_ALPHA}: rgba(165, 61, 160, 0.1);
- ${PRESET.GRACE_13}: #ae4597;
- ${PRESET.GRACE_13_ALPHA}: rgba(174, 69, 151, 0.1);
- ${PRESET.GRACE_14}: #bc5191;
- ${PRESET.GRACE_14_ALPHA}: rgba(188, 81, 145, 0.1);
- ${PRESET.GRACE_15}: #cc5693;
- ${PRESET.GRACE_15_ALPHA}: rgba(204, 86, 147, 0.1);
- ${PRESET.GRACE_16}: #e05a9f;
- ${PRESET.GRACE_16_ALPHA}: rgba(224, 90, 159, 0.1);
-
- ${PRESET.GRADIENT_1}: linear-gradient(90deg, #BC5188 0%, #496DEB 29.17%, #0AE59A 100%);
- ${PRESET.GRADIENT_2}: linear-gradient(90deg, #0AE59A 0%, #316CC4 100%);
- ${PRESET.GRADIENT_3}: linear-gradient(180deg, rgba(85, 88, 250, 0.3) 0%, rgba(85, 88, 250, 0) 100%);
- ${PRESET.GRADIENT_4}: linear-gradient(180deg, rgba(2, 228, 151, 0.3) 0%, rgba(2, 228, 151, 0) 100%);
+ 
 `;
 
 export const color = css`

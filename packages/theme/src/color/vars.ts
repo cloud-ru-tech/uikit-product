@@ -92,6 +92,77 @@ const BLUE_GREY = {
   100: '--color-blue-grey-100',
 };
 
+const SUNNY_YELLOW = {
+  75: '--color-sunny-yellow-75',
+  100: '--color-sunny-yellow-100',
+  115: '--color-sunny-yellow-115',
+};
+
+const SUNNY_YELLOW_ALPHA = {
+  15: '--color-sunny-yellow-alpha-15',
+  50: '--color-sunny-yellow-alpha-50',
+};
+
+const BERRY_RED = {
+  25: '--color-berry-red-25',
+  50: '--color-berry-red-50',
+  75: '--color-berry-red-75',
+  100: '--color-berry-red-100',
+  115: '--color-berry-red-115',
+  125: '--color-berry-red-125',
+  150: '--color-berry-red-150',
+};
+
+const BERRY_RED_ALPHA = {
+  15: '--color-berry-red-alpha-15',
+  25: '--color-berry-red-alpha-25',
+};
+
+const GRACE = {
+  1: '--color-grace-1',
+  2: '--color-grace-2',
+  3: '--color-grace-3',
+  4: '--color-grace-4',
+  5: '--color-grace-5',
+  6: '--color-grace-6',
+  7: '--color-grace-7',
+  8: '--color-grace-8',
+  9: '--color-grace-9',
+  10: '--color-grace-10',
+  11: '--color-grace-11',
+  12: '--color-grace-12',
+  13: '--color-grace-13',
+  14: '--color-grace-14',
+  15: '--color-grace-15',
+  16: '--color-grace-16',
+};
+
+const GRACE_ALPHA = {
+  1: '--color-grace-alpha-1',
+  2: '--color-grace-alpha-2',
+  3: '--color-grace-alpha-3',
+  4: '--color-grace-alpha-4',
+  5: '--color-grace-alpha-5',
+  6: '--color-grace-alpha-6',
+  7: '--color-grace-alpha-7',
+  8: '--color-grace-alpha-8',
+  9: '--color-grace-alpha-9',
+  10: '--color-grace-alpha-10',
+  11: '--color-grace-alpha-11',
+  12: '--color-grace-alpha-12',
+  13: '--color-grace-alpha-13',
+  14: '--color-grace-alpha-14',
+  15: '--color-grace-alpha-15',
+  16: '--color-grace-alpha-16',
+};
+
+const GRADIENT = {
+  1: '--color-gradient-1',
+  2: '--color-gradient-2',
+  3: '--color-gradient-3',
+  4: '--color-gradient-4',
+};
+
 const PRESET = {
   GREEN_LIGHT: '--color-green-light',
   GREEN_DARK: '--color-green-dark',
@@ -117,67 +188,32 @@ const PRESET = {
   GRASS_DARK: '--color-grass-dark',
   SEAMOUNT_LIGHT: '--color-seamount-light',
   SEAMOUNT_DARK: '--color-seamount-dark',
-  SUNNY_YELLOW_75: '--color-sunny-yellow-75',
-  SUNNY_YELLOW_100: '--color-sunny-yellow-100',
-  SUNNY_YELLOW_115: '--color-sunny-yellow-115',
-  SUNNY_YELLOW_ALPHA_15: '--color-sunny-yellow-alpha-15',
-  SUNNY_YELLOW_ALPHA_50: '--color-sunny-yellow-alpha-50',
   EMERALD_GREEN: '--color-emerald-green',
   EMERALD_GREEN_ALPHA: '--color-emerald-green-alpha',
-  BERRY_RED_1: '--color-berry-red-1',
-  BERRY_RED_2: '--color-berry-red-2',
-  BERRY_RED_3: '--color-berry-red-3',
-  BERRY_RED_25: '--color-berry-red-25',
-  BERRY_RED_50: '--color-berry-red-50',
-  BERRY_RED_100: '--color-berry-red-100',
-  BERRY_RED_115: '--color-berry-red-115',
-  BERRY_RED_125: '--color-berry-red-125',
-  BERRY_RED_150: '--color-berry-red-150',
-  BERRY_RED_ALPHA_15: '--color-berry-red-alpha-15',
-  BERRY_RED_ALPHA_25: '--color-berry-red-alpha-25',
   FINDED_WHITE: '--color-finded-white',
   FINDED_BLACK: '--color-finded-black',
   FOCUSED_WHITE: '--color-focused-white',
   FOCUSED_BLACK: '--color-focused-black',
-  GRACE_1: '--color-grace-1',
-  GRACE_1_ALPHA: '--color-grace-alpha-1',
-  GRACE_2: '--color-grace-2',
-  GRACE_2_ALPHA: '--color-grace-alpha-2',
-  GRACE_3: '--color-grace-3',
-  GRACE_3_ALPHA: '--color-grace-alpha-3',
-  GRACE_4: '--color-grace-4',
-  GRACE_4_ALPHA: '--color-grace-alpha-4',
-  GRACE_5: '--color-grace-5',
-  GRACE_5_ALPHA: '--color-grace-alpha-5',
-  GRACE_6: '--color-grace-6',
-  GRACE_6_ALPHA: '--color-grace-alpha-6',
-  GRACE_7: '--color-grace-7',
-  GRACE_7_ALPHA: '--color-grace-alpha-7',
-  GRACE_8: '--color-grace-8',
-  GRACE_8_ALPHA: '--color-grace-alpha-8',
-  GRACE_9: '--color-grace-9',
-  GRACE_9_ALPHA: '--color-grace-alpha-9',
-  GRACE_10: '--color-grace-10',
-  GRACE_10_ALPHA: '--color-grace-alpha-10',
-  GRACE_11: '--color-grace-11',
-  GRACE_11_ALPHA: '--color-grace-alpha-11',
-  GRACE_12: '--color-grace-12',
-  GRACE_12_ALPHA: '--color-grace-alpha-12',
-  GRACE_13: '--color-grace-13',
-  GRACE_13_ALPHA: '--color-grace-alpha-13',
-  GRACE_14: '--color-grace-14',
-  GRACE_14_ALPHA: '--color-grace-alpha-14',
-  GRACE_15: '--color-grace-15',
-  GRACE_15_ALPHA: '--color-grace-alpha-15',
-  GRACE_16: '--color-grace-16',
-  GRACE_16_ALPHA: '--color-grace-alpha-16',
-  GRADIENT_1: '--color-gradient-1',
-  GRADIENT_2: '--color-gradient-2',
-  GRADIENT_3: '--color-gradient-3',
-  GRADIENT_4: '--color-gradient-4',
 };
 
-export { GREY, PURPLE, GREEN, BLACK_ALFA, WHITE_ALFA, PURPLE_ALFA, GREEN_ALFA, BLUE_GREY, PRESET };
+export {
+  GREY,
+  PURPLE,
+  GREEN,
+  BLACK_ALFA,
+  WHITE_ALFA,
+  PURPLE_ALFA,
+  GREEN_ALFA,
+  BLUE_GREY,
+  SUNNY_YELLOW,
+  SUNNY_YELLOW_ALPHA,
+  BERRY_RED,
+  BERRY_RED_ALPHA,
+  GRACE,
+  GRACE_ALPHA,
+  GRADIENT,
+  PRESET,
+};
 
 export default {
   GREY,
@@ -188,5 +224,12 @@ export default {
   PURPLE_ALFA,
   GREEN_ALFA,
   BLUE_GREY,
+  SUNNY_YELLOW,
+  SUNNY_YELLOW_ALPHA,
+  BERRY_RED,
+  BERRY_RED_ALPHA,
+  GRACE,
+  GRACE_ALPHA,
+  GRADIENT,
   PRESET,
 };

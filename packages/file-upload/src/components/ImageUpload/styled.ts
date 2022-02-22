@@ -36,7 +36,7 @@ export const Info = styled.div`
   color: var(${EXPORT_VARS.GREY[350]});
 
   &[data-error] {
-    color: var(${EXPORT_VARS.PRESET.BERRY_RED_1});
+    color: var(${EXPORT_VARS.BERRY_RED[100]});
   }
 `;
 

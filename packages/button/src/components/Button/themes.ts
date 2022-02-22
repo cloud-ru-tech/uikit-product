@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-const { GREY, BLUE_GREY, PURPLE, GREEN, WHITE_ALFA, BLACK_ALFA, PRESET } = EXPORT_VARS;
+const { GREY, BLUE_GREY, PURPLE, GREEN, WHITE_ALFA, BLACK_ALFA, BERRY_RED } = EXPORT_VARS;
 
 export const COLORS = {
   FILLED_FILL: '--color-button-filled-fill',
@@ -153,13 +153,13 @@ export const PURPLE_THEME = css`
       ${COLORS.EXTRA_COLOR_DISABLED}: var(${GREY[200]});
 
       ${COLORS.ALARM_FILL}: var(${GREY[0]});
-      ${COLORS.ALARM_BG}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.ALARM_BG}: var(${BERRY_RED[100]});
       ${COLORS.ALARM_COLOR}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_HOVER}: var(${GREY[0]});
-      ${COLORS.ALARM_BG_HOVER}: var(${PRESET.BERRY_RED_2});
+      ${COLORS.ALARM_BG_HOVER}: var(${BERRY_RED[115]});
       ${COLORS.ALARM_COLOR_HOVER}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_ACTIVE}: var(${GREY[0]});
-      ${COLORS.ALARM_BG_ACTIVE}: var(${PRESET.BERRY_RED_3});
+      ${COLORS.ALARM_BG_ACTIVE}: var(${BERRY_RED[125]});
       ${COLORS.ALARM_COLOR_ACTIVE}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_DISABLED}: var(${GREY[200]});
       ${COLORS.ALARM_BG_DISABLED}: var(${GREY[100]});
@@ -237,13 +237,13 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.EXTRA_COLOR_DISABLED}: var(${WHITE_ALFA[24]});
 
       ${COLORS.ALARM_FILL}: var(${GREY[0]});
-      ${COLORS.ALARM_BG}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.ALARM_BG}: var(${BERRY_RED[100]});
       ${COLORS.ALARM_COLOR}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_HOVER}: var(${GREY[0]});
-      ${COLORS.ALARM_BG_HOVER}: var(${PRESET.BERRY_RED_2});
+      ${COLORS.ALARM_BG_HOVER}: var(${BERRY_RED[115]});
       ${COLORS.ALARM_COLOR_HOVER}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_ACTIVE}: var(${GREY[0]});
-      ${COLORS.ALARM_BG_ACTIVE}: var(${PRESET.BERRY_RED_3});
+      ${COLORS.ALARM_BG_ACTIVE}: var(${BERRY_RED[125]});
       ${COLORS.ALARM_COLOR_ACTIVE}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.ALARM_BG_DISABLED}: var(${WHITE_ALFA[16]});
@@ -321,13 +321,13 @@ export const GREEN_THEME = css`
       ${COLORS.EXTRA_COLOR_DISABLED}: var(${GREY[300]});
 
       ${COLORS.ALARM_FILL}: var(${GREY[0]});
-      ${COLORS.ALARM_BG}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.ALARM_BG}: var(${BERRY_RED[100]});
       ${COLORS.ALARM_COLOR}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_HOVER}: var(${GREY[0]});
-      ${COLORS.ALARM_BG_HOVER}: var(${PRESET.BERRY_RED_2});
+      ${COLORS.ALARM_BG_HOVER}: var(${BERRY_RED[115]});
       ${COLORS.ALARM_COLOR_HOVER}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_ACTIVE}: var(${GREY[0]});
-      ${COLORS.ALARM_BG_ACTIVE}: var(${PRESET.BERRY_RED_3});
+      ${COLORS.ALARM_BG_ACTIVE}: var(${BERRY_RED[125]});
       ${COLORS.ALARM_COLOR_ACTIVE}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_DISABLED}: var(${GREY[200]});
       ${COLORS.ALARM_BG_DISABLED}: var(${GREY[100]});
@@ -405,13 +405,13 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.EXTRA_COLOR_DISABLED}: var(${WHITE_ALFA[24]});
 
       ${COLORS.ALARM_FILL}: var(${GREY[0]});
-      ${COLORS.ALARM_BG}: var(${PRESET.BERRY_RED_1});
+      ${COLORS.ALARM_BG}: var(${BERRY_RED[100]});
       ${COLORS.ALARM_COLOR}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_HOVER}: var(${GREY[0]});
-      ${COLORS.ALARM_BG_HOVER}: var(${PRESET.BERRY_RED_2});
+      ${COLORS.ALARM_BG_HOVER}: var(${BERRY_RED[115]});
       ${COLORS.ALARM_COLOR_HOVER}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_ACTIVE}: var(${GREY[0]});
-      ${COLORS.ALARM_BG_ACTIVE}: var(${PRESET.BERRY_RED_3});
+      ${COLORS.ALARM_BG_ACTIVE}: var(${BERRY_RED[125]});
       ${COLORS.ALARM_COLOR_ACTIVE}: var(${GREY[0]});
       ${COLORS.ALARM_FILL_DISABLED}: var(${WHITE_ALFA[24]});
       ${COLORS.ALARM_BG_DISABLED}: var(${WHITE_ALFA[16]});
