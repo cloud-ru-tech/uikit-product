@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-textarea",
   "title": "React Textarea",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-input-decorator-private": "1.0.8",
-    "@sbercloud/uikit-react-textarea-private": "1.1.9",
+    "@sbercloud/uikit-react-textarea-private": "1.1.10",
     "@sbercloud/uikit-utils": "2.1.2"
   },
   "peerDependencies": {

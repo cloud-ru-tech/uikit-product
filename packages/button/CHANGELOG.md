@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.10...@sbercloud/uikit-react-button@3.0.11) (2022-02-22)
+
+
+### Bug Fixes
+
+* changed bg color, added padding ([936640e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/936640e3020b37b739991a0713bd47dfb6c159d7))
+
+
+
+
+
 ## [3.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.9...@sbercloud/uikit-react-button@3.0.10) (2022-02-16)
 
 
