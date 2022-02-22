@@ -44,7 +44,7 @@ export const InputWrapper = styled.div`
 
   &:hover {
     border-color: var(${COLORS.border.hover});
-    transform: scaleZ(1.0001);
+    z-index: 1;
   }
 
   &:focus,
