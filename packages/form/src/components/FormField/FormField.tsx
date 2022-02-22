@@ -11,14 +11,23 @@ export type FormFieldProps = {
   error?: React.ReactNode;
   required?: boolean;
   description?: React.ReactNode;
+  className?: string;
 };
 
-export const FormField: React.FC<FormFieldProps> = ({ label, hint, description, required, error, children }) => {
+export const FormField: React.FC<FormFieldProps> = ({
+  label,
+  hint,
+  description,
+  required,
+  error,
+  className,
+  children,
+}) => {
   const { languageCode } = useLanguage();
   const requiredFieldTranslation = FORM_FIELD_TRANSLATIONS.REQUIRED_FIELD[languageCode];
 
   return (
-    <S.Wrapper>
+    <S.Wrapper className={className}>
       {label && (
         <S.Label>
           {label}
