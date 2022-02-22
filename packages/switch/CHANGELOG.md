@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-switch@2.0.14...@sbercloud/uikit-react-switch@2.0.15) (2022-02-22)
+
+
+### Bug Fixes
+
+* changed handle and background colors ([39943de](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/39943de1588c6ff3a8eb03c1c584392469d63c84))
+
+
+
+
+
 ## [2.0.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-switch@2.0.13...@sbercloud/uikit-react-switch@2.0.14) (2022-02-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-switch
