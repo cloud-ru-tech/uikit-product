@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-form@0.14.0...@sbercloud/uikit-react-form@0.15.0) (2022-02-22)
+
+
+### Features
+
+* className prop ([8e46c38](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8e46c380fe1494ddf4475c86bb6351a4df11d25b))
+
+
+
+
+
 # [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-form@0.13.17...@sbercloud/uikit-react-form@0.14.0) (2022-02-21)
 
 
