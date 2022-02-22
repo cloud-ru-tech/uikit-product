@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.26](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.25...@sbercloud/uikit-react-checkbox@1.0.26) (2022-02-22)
+
+
+### Bug Fixes
+
+* added multiline text support ([f771143](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/f771143e04856e7aa49dab623542ac89f612955e))
+
+
+
+
+
 ## [1.0.25](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.24...@sbercloud/uikit-react-checkbox@1.0.25) (2022-02-16)
 
 
