@@ -1,6 +1,5 @@
 import { styled } from '@linaria/react';
 
-import { Variants } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -32,76 +31,26 @@ export const Label = styled.label`
   width: 20px;
   min-width: 20px;
   background: transparent;
+  fill: var(${COLORS.UNCHECKED.DEFAULT_FILL});
+  transition: fill 0.2s ease-in-out;
 
-  &[data-variant='${Variants.Weak}'] {
-    fill: var(${COLORS.WEAK.INACTIVE});
-
-    &:hover {
-      fill: var(${COLORS.WEAK.HOVER});
-    }
-
-    &[data-checked] {
-      fill: var(${COLORS.WEAK.ACTIVE});
-
-      &:hover {
-        fill: var(${COLORS.WEAK.HOVER});
-      }
-    }
-
-    &[data-disabled] {
-      fill: var(${COLORS.WEAK.DISABLED});
-
-      &:hover {
-        fill: var(${COLORS.WEAK.DISABLED});
-      }
-    }
+  &:hover {
+    fill: var(${COLORS.UNCHECKED.HOVER_FILL});
   }
 
-  &[data-variant='${Variants.Strong}'] {
-    fill: var(${COLORS.STRONG.INACTIVE});
-
-    &:hover {
-      fill: var(${COLORS.STRONG.HOVER});
-    }
-
-    &[data-checked] {
-      fill: var(${COLORS.STRONG.ACTIVE});
-
-      &:hover {
-        fill: var(${COLORS.STRONG.HOVER});
-      }
-    }
-
-    &[data-disabled] {
-      fill: var(${COLORS.STRONG.DISABLED});
-
-      &:hover {
-        fill: var(${COLORS.STRONG.DISABLED});
-      }
-    }
+  &[data-disabled] {
+    fill: var(${COLORS.UNCHECKED.DISABLED_FILL});
   }
 
-  &[data-variant='${Variants.OnAccent}'] {
-    fill: var(${COLORS.ON_ACCENT.INACTIVE});
+  &[data-checked] {
+    fill: var(${COLORS.CHECKED.DEFAULT_FILL});
 
     &:hover {
-      fill: var(${COLORS.ON_ACCENT.HOVER});
-    }
-
-    &[data-checked] {
-      fill: var(${COLORS.ON_ACCENT.ACTIVE});
-
-      &:hover {
-        fill: var(${COLORS.ON_ACCENT.HOVER});
-      }
+      fill: var(${COLORS.CHECKED.HOVER_FILL});
     }
 
     &[data-disabled] {
-      fill: var(${COLORS.ON_ACCENT.DISABLED});
-
-      &:hover {
-        fill: var(${COLORS.ON_ACCENT.DISABLED});
-      }
+      fill: var(${COLORS.CHECKED.DISABLED_FILL});
     }
   }
 `;

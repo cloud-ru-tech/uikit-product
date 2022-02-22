@@ -3,25 +3,16 @@ import { useCallback } from 'react';
 import { FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { Variants } from './constants';
 import { HiddenCheckbox, Label } from './styled';
 
 export type FavouriteProps = {
   checked: boolean;
   disabled?: boolean;
   className?: string;
-  variant?: Variants;
   handleChange(checked: boolean, e?: React.ChangeEvent<HTMLInputElement>): void;
 };
 
-export const Favourite = ({
-  checked,
-  disabled,
-  className,
-  handleChange,
-  variant = Variants.Weak,
-  ...rest
-}: WithSupportProps<FavouriteProps>) => {
+export function Favourite({ checked, disabled, className, handleChange, ...rest }: WithSupportProps<FavouriteProps>) {
   const onChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>): void => {
       e.stopPropagation();
@@ -38,7 +29,6 @@ export const Favourite = ({
   return (
     <Label
       className={className}
-      data-variant={variant}
       data-checked={checked || undefined}
       data-disabled={disabled || undefined}
       {...extractSupportProps(rest)}
@@ -47,6 +37,4 @@ export const Favourite = ({
       <FavouriteInterfaceSVG />
     </Label>
   );
-};
-
-Favourite.variants = Variants;
+}

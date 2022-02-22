@@ -1,10 +1,7 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { Variants } from 'checkbox/src/components/Favourite/constants';
 import { useEffect, useState } from 'react';
-
-import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -16,31 +13,30 @@ export default {
   component: Favourite,
 } as Meta;
 
-const FavouriteWrap = styled.div<{ isOnAccent: boolean }>`
+const FavouriteWrap = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   max-width: fit-content;
-  background-color: ${({ isOnAccent }) => (isOnAccent ? `var(${GLOBAL_CSS_COLOR.BACKGROUND_ACCENT})` : 'transparent')};
 `;
 
 const Template: Story<FavouriteProps> = ({ checked, ...args }) => {
-  const [isChecked, setIsChecked] = useState(checked || false);
+  const [isChecked, setIsChecked] = useState(checked);
 
   useEffect(() => {
     setIsChecked(checked);
   }, [checked]);
 
   return (
-    <FavouriteWrap isOnAccent={args.variant === Variants.OnAccent}>
+    <FavouriteWrap>
       <Favourite {...args} checked={isChecked} handleChange={isChecked => setIsChecked(isChecked)} />
     </FavouriteWrap>
   );
 };
 
 export const favourite = Template.bind({});
-favourite.args = {};
+favourite.args = { checked: false };
 favourite.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

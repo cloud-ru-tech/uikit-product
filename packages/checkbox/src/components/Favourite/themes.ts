@@ -2,44 +2,30 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-const { GREY, WHITE_ALFA, BLACK_ALFA, BLUE_GREY, GREEN, SUNNY_YELLOW } = EXPORT_VARS;
+const { WHITE_ALFA, BLACK_ALFA, SUNNY_YELLOW, SUNNY_YELLOW_ALPHA } = EXPORT_VARS;
 
 export const COLORS = {
-  WEAK: {
-    INACTIVE: '--color-weak-inactive',
-    HOVER: '--color-weak-hover',
-    ACTIVE: '--color-weak-active',
-    DISABLED: '--color-weak-disabled',
+  UNCHECKED: {
+    DEFAULT_FILL: '--color-favourite-unchecked-default-fill',
+    HOVER_FILL: '--color-favourite-unchecked-hover-fill',
+    DISABLED_FILL: '--color-favourite-unchecked-disabled-fill',
   },
-  STRONG: {
-    INACTIVE: '--color-strong-inactive',
-    HOVER: '--color-strong-hover',
-    ACTIVE: '--color-strong-active',
-    DISABLED: '--color-strong-disabled',
-  },
-  ON_ACCENT: {
-    INACTIVE: '--color-on-accent-inactive',
-    HOVER: '--color-on-accent-hover',
-    ACTIVE: '--color-on-accent-active',
-    DISABLED: '--color-on-accent-disabled',
+  CHECKED: {
+    DEFAULT_FILL: '--color-favourite-checked-default-fill',
+    HOVER_FILL: '--color-favourite-checked-hover-fill',
+    DISABLED_FILL: '--color-favourite-checked-disabled-fill',
   },
 };
 
 export const PURPLE_THEME = css`
   :global() {
     body[data-theme=${Themes.Purple}] {
-      ${COLORS.WEAK.INACTIVE}: var(${GREY[200]});
-      ${COLORS.WEAK.HOVER}: var(${BLUE_GREY[60]});
-      ${COLORS.WEAK.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.WEAK.DISABLED}: var(${BLACK_ALFA[8]});
-      ${COLORS.STRONG.INACTIVE}: var(${GREY[400]});
-      ${COLORS.STRONG.HOVER}: var(${BLUE_GREY[80]});
-      ${COLORS.STRONG.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.STRONG.DISABLED}: var(${BLACK_ALFA[8]});
-      ${COLORS.ON_ACCENT.INACTIVE}: var(${WHITE_ALFA[48]});
-      ${COLORS.ON_ACCENT.HOVER}: var(${GREY[0]});
-      ${COLORS.ON_ACCENT.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.ON_ACCENT.DISABLED}: var(${WHITE_ALFA[16]});
+      ${COLORS.UNCHECKED.DEFAULT_FILL}: var(${BLACK_ALFA[16]});
+      ${COLORS.UNCHECKED.HOVER_FILL}: var(${BLACK_ALFA[48]});
+      ${COLORS.UNCHECKED.DISABLED_FILL}: var(${BLACK_ALFA[8]});
+      ${COLORS.CHECKED.DEFAULT_FILL}: var(${SUNNY_YELLOW[100]});
+      ${COLORS.CHECKED.HOVER_FILL}: var(${SUNNY_YELLOW[115]});
+      ${COLORS.CHECKED.DISABLED_FILL}: var(${SUNNY_YELLOW_ALPHA[50]});
     }
   }
 `;
@@ -47,18 +33,12 @@ export const PURPLE_THEME = css`
 export const PURPLE_DARK_THEME = css`
   :global() {
     body[data-theme=${Themes.PurpleDark}] {
-      ${COLORS.WEAK.INACTIVE}: var(${GREY[450]});
-      ${COLORS.WEAK.HOVER}: var(${GREY[200]});
-      ${COLORS.WEAK.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.WEAK.DISABLED}: var(${WHITE_ALFA[16]});
-      ${COLORS.STRONG.INACTIVE}: var(${GREY[200]});
-      ${COLORS.STRONG.HOVER}: var(${GREY[0]});
-      ${COLORS.STRONG.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.STRONG.DISABLED}: var(${WHITE_ALFA[16]});
-      ${COLORS.ON_ACCENT.INACTIVE}: var(${WHITE_ALFA[48]});
-      ${COLORS.ON_ACCENT.HOVER}: var(${GREY[0]});
-      ${COLORS.ON_ACCENT.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.ON_ACCENT.DISABLED}: var(${WHITE_ALFA[16]});
+      ${COLORS.UNCHECKED.DEFAULT_FILL}: var(${WHITE_ALFA[24]});
+      ${COLORS.UNCHECKED.HOVER_FILL}: var(${WHITE_ALFA[48]});
+      ${COLORS.UNCHECKED.DISABLED_FILL}: var(${WHITE_ALFA[16]});
+      ${COLORS.CHECKED.DEFAULT_FILL}: var(${SUNNY_YELLOW[100]});
+      ${COLORS.CHECKED.HOVER_FILL}: var(${SUNNY_YELLOW[75]});
+      ${COLORS.CHECKED.DISABLED_FILL}: var(${SUNNY_YELLOW_ALPHA[50]});
     }
   }
 `;
@@ -66,18 +46,12 @@ export const PURPLE_DARK_THEME = css`
 export const GREEN_THEME = css`
   :global() {
     body[data-theme=${Themes.Green}] {
-      ${COLORS.WEAK.INACTIVE}: var(${GREY[200]});
-      ${COLORS.WEAK.HOVER}: var(${BLUE_GREY[60]});
-      ${COLORS.WEAK.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.WEAK.DISABLED}: var(${BLACK_ALFA[8]});
-      ${COLORS.STRONG.INACTIVE}: var(${GREY[400]});
-      ${COLORS.STRONG.HOVER}: var(${BLUE_GREY[80]});
-      ${COLORS.STRONG.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.STRONG.DISABLED}: var(${BLACK_ALFA[8]});
-      ${COLORS.ON_ACCENT.INACTIVE}: var(${WHITE_ALFA[48]});
-      ${COLORS.ON_ACCENT.HOVER}: var(${GREY[0]});
-      ${COLORS.ON_ACCENT.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.ON_ACCENT.DISABLED}: var(${WHITE_ALFA[16]});
+      ${COLORS.UNCHECKED.DEFAULT_FILL}: var(${BLACK_ALFA[16]});
+      ${COLORS.UNCHECKED.HOVER_FILL}: var(${BLACK_ALFA[48]});
+      ${COLORS.UNCHECKED.DISABLED_FILL}: var(${BLACK_ALFA[8]});
+      ${COLORS.CHECKED.DEFAULT_FILL}: var(${SUNNY_YELLOW[100]});
+      ${COLORS.CHECKED.HOVER_FILL}: var(${SUNNY_YELLOW[115]});
+      ${COLORS.CHECKED.DISABLED_FILL}: var(${SUNNY_YELLOW_ALPHA[50]});
     }
   }
 `;
@@ -85,18 +59,12 @@ export const GREEN_THEME = css`
 export const GREEN_DARK_THEME = css`
   :global() {
     body[data-theme=${Themes.GreenDark}] {
-      ${COLORS.WEAK.INACTIVE}: var(${GREY[450]});
-      ${COLORS.WEAK.HOVER}: var(${GREY[200]});
-      ${COLORS.WEAK.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.WEAK.DISABLED}: var(${WHITE_ALFA[16]});
-      ${COLORS.STRONG.INACTIVE}: var(${GREY[200]});
-      ${COLORS.STRONG.HOVER}: var(${GREY[0]});
-      ${COLORS.STRONG.ACTIVE}: var(${SUNNY_YELLOW[100]});
-      ${COLORS.STRONG.DISABLED}: var(${WHITE_ALFA[16]});
-      ${COLORS.ON_ACCENT.INACTIVE}: var(${GREEN[25]});
-      ${COLORS.ON_ACCENT.HOVER}: var(${GREEN[10]});
-      ${COLORS.ON_ACCENT.ACTIVE}: var(${GREY[0]});
-      ${COLORS.ON_ACCENT.DISABLED}: var(${WHITE_ALFA[48]});
+      ${COLORS.UNCHECKED.DEFAULT_FILL}: var(${WHITE_ALFA[24]});
+      ${COLORS.UNCHECKED.HOVER_FILL}: var(${WHITE_ALFA[48]});
+      ${COLORS.UNCHECKED.DISABLED_FILL}: var(${WHITE_ALFA[16]});
+      ${COLORS.CHECKED.DEFAULT_FILL}: var(${SUNNY_YELLOW[100]});
+      ${COLORS.CHECKED.HOVER_FILL}: var(${SUNNY_YELLOW[75]});
+      ${COLORS.CHECKED.DISABLED_FILL}: var(${SUNNY_YELLOW_ALPHA[50]});
     }
   }
 `;
