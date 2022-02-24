@@ -1,4 +1,3 @@
-import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { TooltipPrivate } from '@sbercloud/uikit-react-tooltip-private';
@@ -7,73 +6,75 @@ import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 import { Tag } from '../Tag';
 import * as S from './styled';
 
+function renderTag(tag: string) {
+  return <Tag key={tag} value={tag} className={S.tagClassName} type={Tag.types.Card} />;
+}
+
 export type TagRowProps = {
   tags: string[];
   className?: string;
 };
 
 export function TagRow({ tags, className, ...rest }: WithSupportProps<TagRowProps>) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const [L, setL] = useState(0);
-  const [R, setR] = useState(tags.length + 1);
-  const [tagsFitAmount, setTagsFitAmount] = useState(tags.length);
+  const [visibilityByTag, setVisibilityByTag] = useState(() => new Map<string, boolean>());
+  const hiddenTagsWrapElementRef = useRef<HTMLDivElement>(null);
+  const uniqueTags = useMemo(() => [...new Set(tags)], [tags]);
+  const visibilityByTagEntries = [...visibilityByTag.entries()];
+  const visibleTags = visibilityByTagEntries.filter(([, isVisible]) => isVisible).map(([tag]) => tag);
+  const invisibleTags = visibilityByTagEntries.filter(([, isVisible]) => !isVisible).map(([tag]) => tag);
 
   useEffect(() => {
-    if (!containerRef.current || !wrapperRef.current) return;
-    if (containerRef.current?.offsetWidth > wrapperRef.current.offsetWidth - 48) {
-      setR(tagsFitAmount);
-    } else {
-      setL(tagsFitAmount);
+    setVisibilityByTag(new Map());
+  }, [uniqueTags]);
+
+  useEffect(() => {
+    function handleIntersect(entries: IntersectionObserverEntry[]) {
+      setVisibilityByTag(prevVisibilityByTag => {
+        const nextVisibilityByTag = new Map(prevVisibilityByTag.entries());
+        const entryByTag = new Map(entries.map(entry => [entry.target.textContent, entry]));
+
+        for (const tag of uniqueTags) {
+          if (entryByTag.has(tag)) {
+            const entry = entryByTag.get(tag)!;
+
+            nextVisibilityByTag.set(tag, entry.isIntersecting);
+          }
+        }
+
+        return nextVisibilityByTag;
+      });
     }
-  }, [tagsFitAmount]);
 
-  useEffect(() => {
-    if (L + 1 === R) return;
-    const sum = L + R;
-    const mid = (sum - (sum % 2)) / 2;
-    setTagsFitAmount(mid);
-  });
+    const hiddenTagsWrapElement = hiddenTagsWrapElementRef.current!;
+    const observer = new IntersectionObserver(handleIntersect, {
+      root: hiddenTagsWrapElement,
+      rootMargin: '0px -48px 0px 0px',
+      threshold: 1,
+    });
 
-  useEffect(() => {
-    if (L + 1 === R) setTagsFitAmount(L);
-  });
+    for (const hiddenTagElement of hiddenTagsWrapElement.children) {
+      observer.observe(hiddenTagElement);
+    }
 
-  useEffect(() => {
-    const resize = debounce(() => {
-      setL(0);
-      setR(tags.length + 1);
-      setTagsFitAmount(tags.length);
-    }, 300);
-    window.addEventListener('resize', resize);
-    return () => window.removeEventListener('resize', resize);
-  }, [tags.length]);
-
-  const dataHidden = useMemo(() => !(L + 1 === R && tagsFitAmount === L), [L, R, tagsFitAmount]);
+    return () => {
+      observer.disconnect();
+    };
+  }, [uniqueTags]);
 
   return (
-    <S.Tags className={className} data-hidden={dataHidden} {...extractSupportProps(rest)} ref={wrapperRef}>
-      <S.TagsWrap ref={containerRef}>
-        {tags.slice(0, tagsFitAmount).map(tag => (
-          <Tag key={tag} value={tag} className={S.tagClassName} type={Tag.types.Card} />
-        ))}
-      </S.TagsWrap>
-      {tagsFitAmount !== tags.length && (
+    <S.Tags className={className} {...extractSupportProps(rest)}>
+      <S.HiddenTagsWrap ref={hiddenTagsWrapElementRef}>{uniqueTags.map(renderTag)}</S.HiddenTagsWrap>
+      <S.TagsWrap>{visibleTags.map(renderTag)}</S.TagsWrap>
+      {invisibleTags.length > 0 && (
         <TooltipPrivate
           delayHide={200}
           hideArrow
           placement={TooltipPrivate.placements.Auto}
           classNameContainer={S.tooltipContainerClassName}
           classNameTrigger={S.tooltipTriggerClassName}
-          tooltip={
-            <S.TooltipContent>
-              {tags.slice(tagsFitAmount).map(tag => (
-                <Tag key={tag} value={tag} className={S.tagClassName} type={Tag.types.Card} />
-              ))}
-            </S.TooltipContent>
-          }
+          tooltip={<S.TooltipContent>{invisibleTags.map(renderTag)}</S.TooltipContent>}
         >
-          <Tag value={`+${tags.length - tagsFitAmount}`} className={S.triggerTagClassName} type={Tag.types.Card} />
+          <Tag value={`+${invisibleTags.length}`} className={S.triggerTagClassName} type={Tag.types.Card} />
         </TooltipPrivate>
       )}
     </S.Tags>

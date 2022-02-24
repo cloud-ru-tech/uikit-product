@@ -16,6 +16,14 @@ export const TagsWrap = styled.div`
   height: 28px;
 `;
 
+export const HiddenTagsWrap = styled(TagsWrap)`
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+`;
+
 export const tagClassName = css`
   display: flex;
   font-size: 14px;
@@ -54,10 +62,7 @@ export const Tags = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-
-  &[data-hidden='true'] {
-    visibility: hidden;
-  }
+  position: relative;
 `;
 
 export const tooltipTriggerClassName = css`
