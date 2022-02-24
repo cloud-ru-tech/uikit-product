@@ -22,7 +22,7 @@
       ]
     },
     "target": "es6",
-    "lib": ["es2017", "dom", "esnext"],
+    "lib": ["es2017", "dom", "dom.iterable", "esnext"],
     "types": ["cypress", "node"],
     "jsx": "react-jsx",
     "strict": true,
