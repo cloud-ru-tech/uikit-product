@@ -2,8 +2,8 @@ import { AnchorHTMLAttributes, MouseEventHandler } from 'react';
 
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { Size, Variant } from './constants';
-import { StyledArrowLinkInterfaceSVG, StyledLink } from './styled';
+import { Sizes, Variant } from './constants';
+import { IconWrapper, StyledArrowLinkInterfaceSVG, StyledLink } from './styled';
 
 export type LinkProps = WithSupportProps<{
   className?: string;
@@ -14,7 +14,8 @@ export type LinkProps = WithSupportProps<{
   target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
   href?: string;
   disabled?: boolean;
-  size?: Size;
+  size?: Sizes;
+  additionalIcon?: React.ReactElement;
 }>;
 
 export const Link = ({
@@ -26,7 +27,8 @@ export const Link = ({
   target = '_blank',
   href = '#',
   disabled = false,
-  size = Size.M,
+  size = Sizes.Medium,
+  additionalIcon,
   ...rest
 }: LinkProps) => (
   <StyledLink
@@ -41,10 +43,15 @@ export const Link = ({
     rel={target === '_blank' ? 'noopener noreferrer' : undefined}
     {...extractSupportProps(rest)}
   >
+    {additionalIcon && (
+      <IconWrapper data-size={size} data-variant={variant}>
+        {additionalIcon}
+      </IconWrapper>
+    )}
     {text}
     {showIcon && <StyledArrowLinkInterfaceSVG />}
   </StyledLink>
 );
 
 Link.variants = Variant;
-Link.size = Size;
+Link.sizes = Sizes;

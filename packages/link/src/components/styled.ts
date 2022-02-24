@@ -4,7 +4,7 @@ import { ArrowLinkInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { ANIMATIONS } from '@sbercloud/uikit-utils';
 import { TEXT_1_STYLES, TEXT_2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
 
-import { Size, Variant } from './constants';
+import { Sizes, Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -14,6 +14,43 @@ GREEN_DARK_THEME;
 
 export const StyledArrowLinkInterfaceSVG = styled(ArrowLinkInterfaceSVG)`
   margin-left: 4px;
+`;
+
+export const IconWrapper = styled.span`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+
+  svg {
+    width: auto !important;
+  }
+
+  &[data-size=${Sizes.Small}] {
+    svg {
+      height: 16px !important;
+    }
+  }
+
+  &[data-size=${Sizes.Medium}] {
+    svg {
+      height: 20px !important;
+    }
+  }
+
+  &[data-size=${Sizes.Large}] {
+    svg {
+      height: 24px !important;
+    }
+  }
+
+  &[data-variant='${Variant.OnPrimary}'] {
+    fill: var(${COLORS.PRIMARY_ADDITIONAL_ICON});
+  }
+
+  &[data-variant='${Variant.OnDark}'] {
+    fill: var(${COLORS.DARK_ADDITIONAL_ICON});
+  }
 `;
 
 export const StyledLink = styled.a<{ showIcon: boolean }>`
@@ -29,13 +66,13 @@ export const StyledLink = styled.a<{ showIcon: boolean }>`
     cursor: none;
   }
 
-  &[data-size=${Size.S}] {
+  &[data-size=${Sizes.Small}] {
     ${TEXT_3_STYLES};
   }
-  &[data-size=${Size.M}] {
+  &[data-size=${Sizes.Medium}] {
     ${TEXT_2_STYLES};
   }
-  &[data-size=${Size.L}] {
+  &[data-size=${Sizes.Large}] {
     ${TEXT_1_STYLES};
   }
 

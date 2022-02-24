@@ -10,11 +10,13 @@ export const COLORS = {
   PRIMARY_FILL_HOVER: '--color-button-icon-primary-fill-hover',
   PRIMARY_FILL_ACTIVE: '--color-button-icon-primary-fill-active',
   PRIMARY_FILL_DISABLED: '--color-button-icon-primary-fill-disabled',
+  PRIMARY_ADDITIONAL_ICON: '--color-link-primary-additional-icon',
 
   DARK_FILL: '--color-link-dark-fill',
   DARK_FILL_HOVER: '--color-link-dark-fill-hover',
   DARK_FILL_ACTIVE: '--color-link-dark-fill-active',
   DARK_FILL_DISABLED: '--color-link-dark-fill-disabled',
+  DARK_ADDITIONAL_ICON: '--color-link-dark-additional-icon',
 };
 
 export const PURPLE_THEME = css`
@@ -25,11 +27,13 @@ export const PURPLE_THEME = css`
       ${COLORS.PRIMARY_FILL_HOVER}: var(${PURPLE[115]});
       ${COLORS.PRIMARY_FILL_ACTIVE}: var(${PURPLE[125]});
       ${COLORS.PRIMARY_FILL_DISABLED}: var(${BLACK_ALFA[16]});
+      ${COLORS.PRIMARY_ADDITIONAL_ICON}: var(${GREY[200]});
 
       ${COLORS.DARK_FILL}: var(${PURPLE[50]});
       ${COLORS.DARK_FILL_HOVER}: var(${PURPLE[25]});
       ${COLORS.DARK_FILL_ACTIVE}: var(${PURPLE[10]});
       ${COLORS.DARK_FILL_DISABLED}: var(${WHITE_ALFA[24]});
+      ${COLORS.DARK_ADDITIONAL_ICON}: var(${GREY[450]});
     }
   }
 `;
@@ -42,11 +46,13 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.PRIMARY_FILL_HOVER}: var(${PURPLE[25]});
       ${COLORS.PRIMARY_FILL_ACTIVE}: var(${PURPLE[10]});
       ${COLORS.PRIMARY_FILL_DISABLED}: var(${WHITE_ALFA[24]});
+      ${COLORS.PRIMARY_ADDITIONAL_ICON}: var(${GREY[450]});
 
       ${COLORS.DARK_FILL}: var(${PURPLE[50]});
       ${COLORS.DARK_FILL_HOVER}: var(${PURPLE[25]});
       ${COLORS.DARK_FILL_ACTIVE}: var(${PURPLE[10]});
       ${COLORS.DARK_FILL_DISABLED}: var(${WHITE_ALFA[24]});
+      ${COLORS.DARK_ADDITIONAL_ICON}: var(${GREY[450]});
     }
   }
 `;
@@ -59,11 +65,13 @@ export const GREEN_THEME = css`
       ${COLORS.PRIMARY_FILL_HOVER}: var(${GREEN[115]});
       ${COLORS.PRIMARY_FILL_ACTIVE}: var(${GREEN[125]});
       ${COLORS.PRIMARY_FILL_DISABLED}: var(${BLACK_ALFA[16]});
+      ${COLORS.PRIMARY_ADDITIONAL_ICON}: var(${GREY[200]});
 
       ${COLORS.DARK_FILL}: var(${GREEN[100]});
       ${COLORS.DARK_FILL_HOVER}: var(${GREEN[25]});
       ${COLORS.DARK_FILL_ACTIVE}: var(${GREEN[10]});
       ${COLORS.DARK_FILL_DISABLED}: var(${WHITE_ALFA[24]});
+      ${COLORS.DARK_ADDITIONAL_ICON}: var(${GREY[450]});
     }
   }
 `;
@@ -76,11 +84,13 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.PRIMARY_FILL_HOVER}: var(${GREEN[25]});
       ${COLORS.PRIMARY_FILL_ACTIVE}: var(${GREEN[10]});
       ${COLORS.PRIMARY_FILL_DISABLED}: var(${WHITE_ALFA[24]});
+      ${COLORS.PRIMARY_ADDITIONAL_ICON}: var(${GREY[450]});
 
       ${COLORS.DARK_FILL}: var(${GREEN[100]});
       ${COLORS.DARK_FILL_HOVER}: var(${GREEN[25]});
       ${COLORS.DARK_FILL_ACTIVE}: var(${GREEN[10]});
       ${COLORS.DARK_FILL_DISABLED}: var(${WHITE_ALFA[24]});
+      ${COLORS.DARK_ADDITIONAL_ICON}: var(${GREY[450]});
     }
   }
 `;

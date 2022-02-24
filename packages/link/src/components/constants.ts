@@ -3,8 +3,8 @@ export enum Variant {
   OnDark = 'dark',
 }
 
-export enum Size {
-  S = 's',
-  M = 'm',
-  L = 'l',
+export enum Sizes {
+  Small = 'Small',
+  Medium = 'Medium',
+  Large = 'Large',
 }

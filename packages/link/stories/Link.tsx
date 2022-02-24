@@ -3,6 +3,7 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { Variant } from 'link/src/components/constants';
 
+import { FolderInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -22,6 +23,11 @@ const Container = styled.div<{ variant: Variant; theme: Themes }>`
     variant === Variant.OnPrimary && ['purple', 'green'].includes(theme) ? '#ffffff' : '#333333'};
 `;
 
+const additionalIcons = {
+  none: undefined,
+  FolderInterfaceSVG: <FolderInterfaceSVG />,
+};
+
 export default {
   title: 'Components/Link',
   component: Link,
@@ -40,7 +46,13 @@ link.args = {
   showIcon: true,
   'data-test-id': 'textId',
 };
-link.argTypes = {};
+link.argTypes = {
+  additionalIcon: {
+    options: Object.keys(additionalIcons),
+    mapping: additionalIcons,
+    control: { type: 'radio' },
+  },
+};
 link.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
