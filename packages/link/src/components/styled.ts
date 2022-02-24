@@ -1,10 +1,10 @@
 import { styled } from '@linaria/react';
 
 import { ArrowLinkInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-utils';
+import { TEXT_1_STYLES, TEXT_2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
 
-import { Variant } from './constants';
+import { Size, Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -29,7 +29,15 @@ export const StyledLink = styled.a<{ showIcon: boolean }>`
     cursor: none;
   }
 
-  ${TEXT_2_STYLES};
+  &[data-size=${Size.S}] {
+    ${TEXT_3_STYLES};
+  }
+  &[data-size=${Size.M}] {
+    ${TEXT_2_STYLES};
+  }
+  &[data-size=${Size.L}] {
+    ${TEXT_1_STYLES};
+  }
 
   &[data-variant='${Variant.OnPrimary}'] {
     color: ${({ showIcon }) => (showIcon ? `var(${COLORS.PRIMARY_COLOR})` : `var(${COLORS.PRIMARY_FILL})`)};

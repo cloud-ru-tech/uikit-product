@@ -2,7 +2,7 @@ import { AnchorHTMLAttributes, MouseEventHandler } from 'react';
 
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import { Variant } from './constants';
+import { Size, Variant } from './constants';
 import { StyledArrowLinkInterfaceSVG, StyledLink } from './styled';
 
 export type LinkProps = WithSupportProps<{
@@ -14,6 +14,7 @@ export type LinkProps = WithSupportProps<{
   target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
   href?: string;
   disabled?: boolean;
+  size?: Size;
 }>;
 
 export const Link = ({
@@ -25,6 +26,7 @@ export const Link = ({
   target = '_blank',
   href = '#',
   disabled = false,
+  size = Size.M,
   ...rest
 }: LinkProps) => (
   <StyledLink
@@ -35,6 +37,7 @@ export const Link = ({
     href={href}
     data-disabled={disabled}
     showIcon={showIcon}
+    data-size={size}
     rel={target === '_blank' ? 'noopener noreferrer' : undefined}
     {...extractSupportProps(rest)}
   >
@@ -44,3 +47,4 @@ export const Link = ({
 );
 
 Link.variants = Variant;
+Link.size = Size;
