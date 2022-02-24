@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-const { WHITE_ALFA, GREY } = EXPORT_VARS;
+const { WHITE_ALFA, GREY, BLACK_ALFA } = EXPORT_VARS;
 
 export const COLORS = {
   background: '--color-text-field__background',
@@ -12,7 +12,7 @@ export const COLORS = {
 export const PURPLE_THEME = css`
   :global() {
     body[data-theme=${Themes.Purple}] {
-      ${COLORS.background}: var(${WHITE_ALFA[4]});
+      ${COLORS.background}: var(${BLACK_ALFA[4]});
       ${COLORS.text}: var(${GREY[600]});
     }
   }
@@ -30,7 +30,7 @@ export const PURPLE_DARK_THEME = css`
 export const GREEN_THEME = css`
   :global() {
     body[data-theme=${Themes.Green}] {
-      ${COLORS.background}: var(${WHITE_ALFA[4]});
+      ${COLORS.background}: var(${BLACK_ALFA[4]});
       ${COLORS.text}: var(${GREY[600]});
     }
   }
