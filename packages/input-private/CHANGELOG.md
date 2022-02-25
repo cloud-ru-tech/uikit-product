@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.16](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-private@1.0.15...@sbercloud/uikit-react-input-private@1.0.16) (2022-02-25)
+
+
+### Bug Fixes
+
+* removed tranform scaleZ, added z-index ([a718a72](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/a718a721e4e22082773fdbf33c8782b6df702a61))
+
+
+
+
+
 ## [1.0.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-private@1.0.14...@sbercloud/uikit-react-input-private@1.0.15) (2022-02-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input-private
