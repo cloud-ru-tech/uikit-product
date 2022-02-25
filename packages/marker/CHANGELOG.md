@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-marker@1.0.8...@sbercloud/uikit-react-marker@2.0.0) (2022-02-25)
+
+
+### Bug Fixes
+
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors ([9d7e7e8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9d7e7e88764ad5967433c125e9e896e0952308a4))
+
+
+### BREAKING CHANGES
+
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors
+
+
+
+
+
 ## [1.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-marker@1.0.7...@sbercloud/uikit-react-marker@1.0.8) (2022-02-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-marker

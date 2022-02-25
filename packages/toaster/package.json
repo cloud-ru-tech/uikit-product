@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-toaster",
   "title": "React Toaster",
-  "version": "0.11.10",
+  "version": "0.12.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-icons": "3.1.0",
-    "@sbercloud/uikit-theme": "0.30.0",
+    "@sbercloud/uikit-theme": "0.31.0",
     "@sbercloud/uikit-typography": "1.1.0",
     "react-toastify": "7.0.4"
   },

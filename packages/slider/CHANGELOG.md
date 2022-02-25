@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-slider@0.5.14...@sbercloud/uikit-react-slider@0.5.15) (2022-02-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-slider
+
+
+
+
+
 ## [0.5.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-slider@0.5.13...@sbercloud/uikit-react-slider@0.5.14) (2022-02-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-slider

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-rating@0.1.0...@sbercloud/uikit-react-rating@0.2.0) (2022-02-25)
+
+
+### Bug Fixes
+
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors ([9d7e7e8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9d7e7e88764ad5967433c125e9e896e0952308a4))
+
+
+### BREAKING CHANGES
+
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors
+
+
+
+
+
 # 0.1.0 (2022-02-22)
 
 

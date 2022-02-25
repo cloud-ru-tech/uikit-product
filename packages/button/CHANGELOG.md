@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.11...@sbercloud/uikit-react-button@4.0.0) (2022-02-25)
+
+
+### Bug Fixes
+
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors ([9d7e7e8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9d7e7e88764ad5967433c125e9e896e0952308a4))
+
+
+### BREAKING CHANGES
+
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors
+
+
+
+
+
 ## [3.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.10...@sbercloud/uikit-react-button@3.0.11) (2022-02-22)
 
 

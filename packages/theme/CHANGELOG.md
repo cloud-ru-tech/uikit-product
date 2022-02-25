@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.31.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.30.0...@sbercloud/uikit-theme@0.31.0) (2022-02-25)
+
+
+### Bug Fixes
+
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors ([9d7e7e8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9d7e7e88764ad5967433c125e9e896e0952308a4))
+* removed BERRY_RED_ALPHA, SUNNY_YELLOW_ALPHA, SUNNY_YELLOW colors ([3058228](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3058228ac6e0890b3074146eb825bbbd344d5737))
+
+
+### Features
+
+* added new colors ([af6c25c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/af6c25cb1d4a56d290038d1f3ef9ed5301ce0035))
+
+
+### BREAKING CHANGES
+
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors
+* removed BERRY_RED_ALPHA, SUNNY_YELLOW_ALPHA, SUNNY_YELLOW colors
+
+
+
+
+
 # 0.30.0 (2022-02-16)
 
 
