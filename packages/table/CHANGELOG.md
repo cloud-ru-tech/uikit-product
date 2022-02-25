@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.28.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.27.17...@sbercloud/uikit-react-table@0.28.0) (2022-02-25)
+
+
+### Features
+
+* columnTypes and frameworkComponents for TableFree ([d9373b9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d9373b9f4fb03b742988b31f87ec4b4662402500))
+
+
+
+
+
 ## [0.27.17](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table@0.27.16...@sbercloud/uikit-react-table@0.27.17) (2022-02-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
