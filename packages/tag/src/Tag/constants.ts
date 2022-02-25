@@ -1,3 +1,8 @@
+export enum Types {
+  Card = 'card',
+  Span = 'span',
+}
+
 export const PRESET_COLORS = [
   'green',
   'blue',

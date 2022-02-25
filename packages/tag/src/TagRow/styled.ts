@@ -1,6 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
+import { Tag } from '../Tag';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -24,7 +25,7 @@ export const HiddenTagsWrap = styled(TagsWrap)`
   width: 100%;
 `;
 
-export const tagClassName = css`
+export const ItemTag = styled(Tag)`
   display: flex;
   font-size: 14px;
   line-height: 20px;
@@ -42,7 +43,7 @@ export const tagClassName = css`
   }
 `;
 
-export const triggerTagClassName = css`
+export const TriggerTag = styled(Tag)`
   height: 100%;
   display: flex;
   align-items: center;

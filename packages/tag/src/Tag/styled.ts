@@ -1,12 +1,14 @@
 import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 import { PRESET_COLORS } from './constants';
-import { TTagType } from './Tag';
+import { TagProps } from './types';
 
 const { COLORS_TAG } = DEPRECATED_EXPORT_VARS;
-export const StyledTag = styled.div<{ type: TTagType }>`
+
+export const styledTag = (Tag: VFC<TagProps>): VFC<TagProps> => styled(Tag)`
   max-width: 100%;
   min-width: 30px;
   display: inline-block;

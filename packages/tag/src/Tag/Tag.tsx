@@ -1,23 +1,8 @@
 import { useCallback } from 'react';
 
-import { PRESET_COLORS, PresetColorType } from './constants';
-import { StyledTag } from './styled';
-
-enum Types {
-  Card = 'card',
-  Span = 'span',
-}
-
-export type TTagType = Types;
-
-export type TagProps = {
-  value?: string;
-  type?: TTagType;
-  className?: string;
-  children?: React.ReactNode;
-  style?: React.CSSProperties;
-  color?: PresetColorType | string;
-};
+import { PRESET_COLORS, Types } from './constants';
+import { styledTag } from './styled';
+import { TagProps } from './types';
 
 const PresetColorRegex = new RegExp(`^(${PRESET_COLORS.join('|')})(-inverse)?$`);
 
@@ -37,7 +22,7 @@ const getTagStyles = ({
   return { ...style, backgroundColor: color };
 };
 
-export function Tag({ color, style, children, value = '', type = Types.Span, className = '' }: TagProps) {
+function StylelessTag({ color, style, children, value = '', type, className = '' }: TagProps) {
   const isPresetColor = useCallback((): boolean => {
     if (!color) {
       return false;
@@ -54,13 +39,20 @@ export function Tag({ color, style, children, value = '', type = Types.Span, cla
     className,
   };
 
-  return (
-    <StyledTag {...tagProps} type={type}>
-      {children || value}
-    </StyledTag>
-  );
+  return <div {...tagProps}>{children || value}</div>;
 }
+
+const StyledTag = styledTag(StylelessTag);
 
 export { PRESET_COLORS };
 
+export type TTagType = Types;
+
+export type { TagProps };
+
+export const Tag = StyledTag as typeof StyledTag & {
+  types: typeof Types;
+};
+
 Tag.types = Types;
+Tag.defaultProps = { type: Types.Span };

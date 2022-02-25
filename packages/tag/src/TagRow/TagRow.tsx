@@ -7,7 +7,7 @@ import { Tag } from '../Tag';
 import * as S from './styled';
 
 function renderTag(tag: string) {
-  return <Tag key={tag} value={tag} className={S.tagClassName} type={Tag.types.Card} />;
+  return <S.ItemTag key={tag} value={tag} type={Tag.types.Card} />;
 }
 
 export type TagRowProps = {
@@ -74,7 +74,7 @@ export function TagRow({ tags, className, ...rest }: WithSupportProps<TagRowProp
           classNameTrigger={S.tooltipTriggerClassName}
           tooltip={<S.TooltipContent>{invisibleTags.map(renderTag)}</S.TooltipContent>}
         >
-          <Tag value={`+${invisibleTags.length}`} className={S.triggerTagClassName} type={Tag.types.Card} />
+          <S.TriggerTag value={`+${invisibleTags.length}`} type={Tag.types.Card} />
         </TooltipPrivate>
       )}
     </S.Tags>
