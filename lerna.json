@@ -7,7 +7,7 @@
     "publish": {
       "ignoreChanges": ["ignored-file", "*.md"],
       "message": "[ci skip] Version bump",
-      "registry": "https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/"
+      "registry": "https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm"
     },
     "version": {
       "changelogPreset": "conventional-changelog-sbercloud",
