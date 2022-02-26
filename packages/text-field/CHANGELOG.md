@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@3.1.13...@sbercloud/uikit-react-text-field@3.1.14) (2022-02-26)
+
+
+### Bug Fixes
+
+* background color for white themes ([db63e46](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/db63e46027f95d5f6fba2864ec56cace54293400))
+
+
+
+
+
 ## [3.1.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@3.1.12...@sbercloud/uikit-react-text-field@3.1.13) (2022-02-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-text-field
