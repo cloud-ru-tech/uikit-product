@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-rating@0.2.0...@sbercloud/uikit-react-rating@0.3.0) (2022-02-28)
+
+
+### Features
+
+* add className, types, rename component ([7f76095](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/7f76095de9fe753767674128d98405b99a37deac))
+
+
+
+
+
 # [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-rating@0.1.0...@sbercloud/uikit-react-rating@0.2.0) (2022-02-25)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@3.1.14...@sbercloud/uikit-react-text-field@3.1.15) (2022-02-28)
+
+
+### Bug Fixes
+
+* ([AICE-4823](https://jira.sbercloud.tech/browse/AICE-4823)) text color looks the same now in chrome/safari ([95b2bd1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/95b2bd17b45724b379014506fe87e35f96757e0f))
+
+
+
+
+
 ## [3.1.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-text-field@3.1.13...@sbercloud/uikit-react-text-field@3.1.14) (2022-02-26)
 
 
