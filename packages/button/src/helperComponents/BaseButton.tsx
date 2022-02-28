@@ -1,24 +1,26 @@
 import { css, cx } from '@linaria/core';
 
+import { ANIMATIONS, DEFAULT_STYLES } from '@sbercloud/uikit-utils';
+
 import { CommonButtonProps } from '../types';
 
 const baseClassName = css`
+  ${DEFAULT_STYLES.COMMON};
+  ${DEFAULT_STYLES.BORDERLESS};
+
+  cursor: pointer;
+  text-transform: none;
+  color: inherit;
+  background-color: transparent;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: max-content;
   min-width: max-content;
-  padding: 0;
-  border: none;
-  border-width: 0;
-  color: inherit;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-  transition: all 0.2s ease-in-out;
+  transition: fill ${ANIMATIONS.TRANSITION}, color ${ANIMATIONS.TRANSITION}, border-color ${ANIMATIONS.TRANSITION},
+    background-color ${ANIMATIONS.TRANSITION};
   text-decoration: none;
   font-weight: normal;
-  box-sizing: border-box;
 
   :disabled,
   &[disabled] {

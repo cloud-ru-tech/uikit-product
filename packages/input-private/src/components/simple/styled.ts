@@ -2,6 +2,7 @@ import { styled } from '@linaria/react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { ANIMATIONS } from '@sbercloud/uikit-utils';
 
 import { Sizes } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -29,7 +30,8 @@ export const InputWrapper = styled.div`
   flex-direction: row;
   width: 100%;
   max-width: 100%;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color ${ANIMATIONS.TRANSITION}, background-color ${ANIMATIONS.TRANSITION},
+    border-color ${ANIMATIONS.TRANSITION};
   box-sizing: border-box;
   padding: 0 7px;
 
@@ -95,7 +97,8 @@ export const MoreIcon = styled(MoreInterfaceSVG)`
 export const MoreButtonWrapper = styled.div`
   display: inline-flex;
   align-items: center;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition: color ${ANIMATIONS.TRANSITION}, background-color ${ANIMATIONS.TRANSITION},
+    border-color ${ANIMATIONS.TRANSITION};
   box-sizing: border-box;
   margin-left: -1px;
 

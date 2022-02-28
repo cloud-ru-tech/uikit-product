@@ -20,7 +20,7 @@ export const rotateOnClickClassName = css`
   padding: calc((100% - 20px) / 2);
 
   transform: rotate(360deg);
-  transition-duration: 0.5s;
+  transition: transform 0.5s;
 
   &:active {
     transform: rotate(0deg);

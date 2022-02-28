@@ -2,6 +2,7 @@ import { styled } from '@linaria/react';
 
 import { ArrowLinkInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
+import { ANIMATIONS } from '@sbercloud/uikit-utils';
 
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -16,10 +17,12 @@ export const StyledArrowLinkInterfaceSVG = styled(ArrowLinkInterfaceSVG)`
 `;
 
 export const StyledLink = styled.a<{ showIcon: boolean }>`
+  text-decoration: none;
+  cursor: pointer;
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
   fill: currentColor;
+  transition: color ${ANIMATIONS.TRANSITION}, fill ${ANIMATIONS.TRANSITION};
 
   &[data-disabled='true'] {
     pointer-events: none;
