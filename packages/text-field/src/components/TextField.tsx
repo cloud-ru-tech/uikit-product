@@ -5,7 +5,7 @@ import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-r
 import { InputPrivate } from '@sbercloud/uikit-react-input-private';
 import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
-import { Texts, textProvider } from './../helpers/texts-provider';
+import { Texts, textProvider } from '../helpers/texts-provider';
 import { Types } from './constants';
 import { Container, IconsContainer, StyledInputPrivate, StyledTextareaPrivate } from './styled';
 
@@ -28,10 +28,12 @@ export function TextField({
   const isPassword = type === Types.Password;
   const isOneLine = type === Types.OneLine || isPassword;
   const isMultiLine = type === Types.MultiLine;
-  const [isSecured, setIsSecured] = useState(isPassword);
+  const [isSecured, setIsSecured] = useState<boolean>(isPassword);
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const hasActionButtons = allowCopy || Boolean(extraIcons);
+
+  const toggleSecured = () => setIsSecured(value => !value);
 
   const inputType = isSecured ? InputPrivate.types.Password : InputPrivate.types.Text;
   const content = isOneLine ? (
@@ -56,7 +58,7 @@ export function TextField({
     <ButtonIconTransparent
       data-test-id='text-field__show-hide-button'
       variant={ButtonIconTransparent.variants.Default}
-      onClick={() => setIsSecured(!isSecured)}
+      onClick={toggleSecured}
       icon={isSecured ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
       tooltip={{
         content: textProvider(languageCode, isSecured ? Texts.Show : Texts.Hide),

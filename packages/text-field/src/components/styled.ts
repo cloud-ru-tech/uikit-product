@@ -10,6 +10,21 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
+const commonStyles = `
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &[data-has-action-buttons] {
+    padding-right: 12px;
+  }
+
+  &[disabled] {
+    color: var(${COLORS.text});
+    -webkit-text-fill-color: var(${COLORS.text});
+    opacity: 1;
+  }
+`;
+
 export const Container = styled.div`
   width: 100%;
   border-radius: 4px;
@@ -22,31 +37,19 @@ export const Container = styled.div`
 `;
 
 export const StyledInputPrivate = styled(InputPrivate)`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  &[data-has-action-buttons] {
-    padding-right: 12px;
-  }
-  &[disabled] {
-    color: var(${COLORS.text});
-  }
+  ${commonStyles};
+
   &[type='password'] {
     text-overflow: initial;
   }
 `;
 
 export const StyledTextareaPrivate = styled(TextareaPrivate)`
-  overflow: hidden;
-  text-overflow: ellipsis;
+  ${commonStyles};
+
+  margin: 4px 0;
   overflow-wrap: break-word;
   white-space: pre-wrap;
-
-  &[data-has-action-buttons] {
-    padding-right: 12px;
-  }
-  &[disabled] {
-    color: var(${COLORS.text});
-  }
 `;
 
 export const IconsContainer = styled.div`
