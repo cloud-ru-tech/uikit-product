@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@2.0.0...@sbercloud/uikit-react-checkbox@3.0.0) (2022-02-28)
+
+
+### Features
+
+* got rid of the `variant` prop of `Favourite` component and changed appearance ([f7786b9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/f7786b9141f3d42f5a66151497478d8401901d8e))
+
+
+### BREAKING CHANGES
+
+* got rid of the `variant` prop of `Favourite` component and changed appearance
+
+
+
+
+
 # [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-checkbox@1.0.27...@sbercloud/uikit-react-checkbox@2.0.0) (2022-02-25)
 
 
