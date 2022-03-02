@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@2.1.11...@sbercloud/uikit-react-textarea@2.1.12) (2022-03-02)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-textarea
+
+
+
+
+
 ## [2.1.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea@2.1.10...@sbercloud/uikit-react-textarea@2.1.11) (2022-02-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-textarea

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@2.1.3...@sbercloud/uikit-utils@2.2.0) (2022-03-02)
+
+
+### Features
+
+* ([AICE-4932](https://jira.sbercloud.tech/browse/AICE-4932)) add reset default styles ([f0195ff](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/f0195ffa2e281fc6b47247fc5fd8a39e9c293fb2))
+
+
+
+
+
 ## [2.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-utils@2.1.2...@sbercloud/uikit-utils@2.1.3) (2022-02-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-utils

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-checkbox",
   "title": "React Checkbox",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -30,7 +30,7 @@
     "@sbercloud/uikit-react-icons": "3.1.0",
     "@sbercloud/uikit-theme": "0.31.0",
     "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.1.3"
+    "@sbercloud/uikit-utils": "2.2.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",
