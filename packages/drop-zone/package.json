@@ -1,0 +1,42 @@
+{
+  "name": "@sbercloud/uikit-react-drop-zone",
+  "title": "React Drop Zone",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/drop-zone",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "directory": "packages/drop-zone"
+  },
+  "author": "Egor Bibin <evbibin@sbercloud.ru>",
+  "contributors": [
+    "Egor Bibin <evbibin@sbercloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-react-link": "2.0.23",
+    "@sbercloud/uikit-theme": "0.31.0",
+    "@sbercloud/uikit-typography": "1.1.0",
+    "@sbercloud/uikit-utils": "2.1.3"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@linaria/core": "^3.0.0-beta.13",
+    "@linaria/react": "^3.0.0-beta.13",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}
