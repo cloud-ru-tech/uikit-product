@@ -1,6 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
+import { Link } from '@sbercloud/uikit-react-link';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H4_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
@@ -25,7 +26,7 @@ export const Container = styled.div`
   border-radius: 8px;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 
-  &[data-over='true'] {
+  &[data-over] {
     border-color: var(${COLORS.BORDER_HOVER});
     background-color: var(${COLORS.BACKGROUND_HOVER});
   }
@@ -37,13 +38,13 @@ export const H4Styled = styled.span`
   ${H4_STYLES};
 `;
 
-export const Text2Styled = styled.span`
+export const Description = styled.span`
   ${TEXT_2_STYLES};
 
   color: var(${COLORS.CONTENT});
 `;
 
-export const linkClassName = css`
+export const LinkStyled = styled(Link)`
   ${H4_STYLES};
 `;
 export const HiddenInput = styled.input`

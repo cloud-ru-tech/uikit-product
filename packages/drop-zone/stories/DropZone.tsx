@@ -10,7 +10,7 @@ import componentReadme from '../README.md';
 import { DropZone, DropZoneProps } from '../src';
 
 export default {
-  title: 'Not stable/DropZone',
+  title: 'Not stable/Drop Zone',
   component: DropZone,
 } as Meta;
 

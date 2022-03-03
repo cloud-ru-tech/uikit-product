@@ -1,27 +1,31 @@
 import { ChangeEvent, DragEvent, MouseEvent, ReactNode, useRef, useState } from 'react';
 
-import { Link } from '@sbercloud/uikit-react-link';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
-import { Container, H4Styled, Header, HiddenInput, Text2Styled, linkClassName } from './styled';
+import { Texts, textProvider } from '../../helpers/texts-provider';
+import { Container, Description, H4Styled, Header, HiddenInput, LinkStyled } from './styled';
 
 export type DropZoneProps = WithSupportProps<{
   onFileSelected(files: File[]): void;
   isMultiple?: boolean;
   accept?: string;
   content?: ReactNode;
+  className?: string;
 }>;
 
-export const DropZone = ({
+export function DropZone({
   onFileSelected,
   isMultiple = true,
   accept,
   content,
+  className,
   ...rest
-}: DropZoneProps): JSX.Element => {
+}: DropZoneProps): JSX.Element {
   const [isOver, setIsOver] = useState(false);
 
   const hiddenFileInput = useRef<HTMLInputElement>(null);
+
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const handleAttachFile = (e: MouseEvent) => {
     e.preventDefault();
@@ -58,14 +62,15 @@ export const DropZone = ({
       onDragLeave={handleDragLeave}
       onDragOver={handleDragOver}
       onDrop={handleDrop}
-      data-over={isOver}
+      data-over={isOver || undefined}
+      className={className}
     >
       <Header>
-        <H4Styled>Перетащите файл сюда или&nbsp;</H4Styled>
-        <Link text='загрузите его' onClick={handleAttachFile} className={linkClassName} />
+        <H4Styled>{textProvider(languageCode, Texts.HeaderText)}</H4Styled>
+        <LinkStyled text={textProvider(languageCode, Texts.LinkText)} onClick={handleAttachFile} />
       </Header>
 
-      <Text2Styled>{content}</Text2Styled>
+      <Description>{content}</Description>
 
       <HiddenInput
         onChange={handleFileSelect}
@@ -80,4 +85,4 @@ export const DropZone = ({
       />
     </Container>
   );
-};
+}
