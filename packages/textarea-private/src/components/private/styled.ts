@@ -12,6 +12,7 @@ PURPLE_DARK_THEME;
 
 export const textareaClassName = css`
   ${DEFAULT_STYLES.COMMON};
+  ${DEFAULT_STYLES.BORDERLESS};
   ${TEXT_2_STYLES};
 
   resize: none;
