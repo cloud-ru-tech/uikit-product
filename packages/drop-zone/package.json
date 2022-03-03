@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-drop-zone",
   "title": "React Drop Zone",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
