@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea-private@2.1.0...@sbercloud/uikit-react-textarea-private@2.1.1) (2022-03-03)
+
+
+### Bug Fixes
+
+* remove border ([4b9b062](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/4b9b06213e07f0563e492f73940c928b8e817308))
+
+
+
+
+
 # [2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea-private@2.0.0...@sbercloud/uikit-react-textarea-private@2.1.0) (2022-03-02)
 
 
