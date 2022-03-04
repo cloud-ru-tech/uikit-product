@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-link@2.1.0...@sbercloud/uikit-react-link@3.0.0) (2022-03-04)
+
+
+### Bug Fixes
+
+* renaming from showIcon, additionalIcon to showSuffixIcon, prefixIcon ([16b3e3d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/16b3e3de7771fe57f282e374cf67db56d201d426))
+
+
+### Features
+
+* added additional icon prop ([8a13548](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8a13548cb6dfcbe6ca60432d245ad83d3d6d30dd))
+* added size prop ([3c79a7d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3c79a7d18e90411d189c1cf3ee60dcd652bd0e16))
+
+
+### BREAKING CHANGES
+
+* renaming from showIcon, additionalIcon to showSuffixIcon, prefixIcon
+
+
+
+
+
 # [2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-link@2.0.23...@sbercloud/uikit-react-link@2.1.0) (2022-03-02)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-filter-block",
   "title": "React Filter Block",
-  "version": "0.2.22",
+  "version": "0.2.23",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "4.1.0",
+    "@sbercloud/uikit-react-button": "4.1.1",
     "@sbercloud/uikit-react-checkbox": "3.0.1",
     "@sbercloud/uikit-react-radio": "2.0.19",
     "@sbercloud/uikit-theme": "0.31.0",
