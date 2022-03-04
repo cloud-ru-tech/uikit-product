@@ -21,7 +21,7 @@ export type CheckboxProps = {
   handleChange(checked: boolean, e?: React.ChangeEvent<HTMLInputElement>): void;
 };
 
-export const Checkbox = ({
+export function Checkbox({
   label,
   checked,
   disabled,
@@ -29,7 +29,7 @@ export const Checkbox = ({
   partChecked,
   handleChange,
   ...rest
-}: WithSupportProps<CheckboxProps>) => {
+}: WithSupportProps<CheckboxProps>) {
   const onChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>): void => {
       e.stopPropagation();
@@ -79,4 +79,4 @@ export const Checkbox = ({
       ) : null}
     </CheckboxWrap>
   );
-};
+}

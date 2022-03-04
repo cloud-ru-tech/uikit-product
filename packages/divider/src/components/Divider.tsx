@@ -9,14 +9,16 @@ export type DividerProps = WithSupportProps<{
   orientation?: Orientation;
 }>;
 
-export const Divider = ({
+export function Divider({
   className,
   variant = Variant.Primary,
   orientation = Orientation.Horizontal,
   ...rest
-}: DividerProps) => (
-  <StyledDivider className={className} variant={variant} orientation={orientation} {...extractSupportProps(rest)} />
-);
+}: DividerProps) {
+  return (
+    <StyledDivider className={className} variant={variant} orientation={orientation} {...extractSupportProps(rest)} />
+  );
+}
 
 Divider.variants = Variant;
 Divider.orientations = Orientation;

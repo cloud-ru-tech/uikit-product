@@ -11,11 +11,13 @@ type RadioIcon = {
   disabled?: boolean;
 };
 
-const RadioIcon = ({ checked, disabled }: RadioIcon) => (
-  <IconContainer data-checked={checked} data-disabled={disabled}>
-    {checked ? <RadioCheckedInterfaceSVG size={20} /> : <RadioUncheckedInterfaceSVG size={20} />}
-  </IconContainer>
-);
+function RadioIcon({ checked, disabled }: RadioIcon) {
+  return (
+    <IconContainer data-checked={checked} data-disabled={disabled}>
+      {checked ? <RadioCheckedInterfaceSVG size={20} /> : <RadioUncheckedInterfaceSVG size={20} />}
+    </IconContainer>
+  );
+}
 
 export type RadioProps = {
   value: React.ReactText;

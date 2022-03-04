@@ -29,7 +29,7 @@ export type TooltipProps = {
   trigger?: TooltipPrivateProps['trigger'];
 };
 
-export const Tooltip = ({
+export function Tooltip({
   title,
   content,
   link,
@@ -41,39 +41,41 @@ export const Tooltip = ({
   type = TooltipType.Main,
   trigger = TriggerTypes.Hover,
   ...rest
-}: WithSupportProps<TooltipProps>) => (
-  <TooltipPrivate
-    {...extractSupportProps(rest)}
-    trigger={trigger}
-    placement={placement}
-    offset={OFFSET}
-    delayShow={DELAY[type]}
-    delayHide={100}
-    classNameContainer={cx(containerClassName, Boolean(icon) && containerWithIconClassName)}
-    classNameArrow={classNameArrow}
-    classNameTrigger={classNameTrigger}
-    tooltip={
-      <>
-        <TooltipWrapper>
-          {title && <Title>{title}</Title>}
-          {content && <Text>{content}</Text>}
-          {link?.text && <Link showSuffixIcon variant={Link.variants.OnDark} {...link} />}
-        </TooltipWrapper>
-        {icon && (
-          <IconWrapper
-            onClick={iconAction}
-            data-action={Boolean(iconAction)}
-            data-test-action-id='tooltip__action_element'
-          >
-            {icon}
-          </IconWrapper>
-        )}
-      </>
-    }
-  >
-    {children}
-  </TooltipPrivate>
-);
+}: WithSupportProps<TooltipProps>) {
+  return (
+    <TooltipPrivate
+      {...extractSupportProps(rest)}
+      trigger={trigger}
+      placement={placement}
+      offset={OFFSET}
+      delayShow={DELAY[type]}
+      delayHide={100}
+      classNameContainer={cx(containerClassName, Boolean(icon) && containerWithIconClassName)}
+      classNameArrow={classNameArrow}
+      classNameTrigger={classNameTrigger}
+      tooltip={
+        <>
+          <TooltipWrapper>
+            {title && <Title>{title}</Title>}
+            {content && <Text>{content}</Text>}
+            {link?.text && <Link showSuffixIcon variant={Link.variants.OnDark} {...link} />}
+          </TooltipWrapper>
+          {icon && (
+            <IconWrapper
+              onClick={iconAction}
+              data-action={Boolean(iconAction)}
+              data-test-action-id='tooltip__action_element'
+            >
+              {icon}
+            </IconWrapper>
+          )}
+        </>
+      }
+    >
+      {children}
+    </TooltipPrivate>
+  );
+}
 
 Tooltip.types = TooltipType;
 Tooltip.triggers = TriggerTypes;

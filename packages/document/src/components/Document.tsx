@@ -24,14 +24,14 @@ export type DocumentProps = {
   };
 };
 
-export const Document = ({
+export function Document({
   file,
   disabled,
   onClick,
   removeButton,
   className,
   ...rest
-}: WithSupportProps<DocumentProps>) => {
+}: WithSupportProps<DocumentProps>) {
   const contentRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef<HTMLSpanElement | null>(null);
 
@@ -121,4 +121,4 @@ export const Document = ({
   }
 
   return <div className={cx(S.wrapClassName, className)}>{documentContent}</div>;
-};
+}

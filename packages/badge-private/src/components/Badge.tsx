@@ -14,7 +14,7 @@ export type BadgeProps = {
   children: ReactNode;
 };
 
-export const Badge = ({
+export function Badge({
   number,
   children,
   disabled,
@@ -22,7 +22,7 @@ export const Badge = ({
   isGroupMessage,
   type = Types.Info,
   ...rest
-}: WithSupportProps<BadgeProps>) => {
+}: WithSupportProps<BadgeProps>) {
   const badgeContent = useMemo(() => {
     if (isGroupMessage || !number) {
       return <Dot data-alert={type === Types.Alert || undefined} />;
@@ -48,6 +48,6 @@ export const Badge = ({
       </StyledBadge>
     </BadgeItemWrap>
   );
-};
+}
 
 Badge.types = Types;
