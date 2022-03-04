@@ -57,7 +57,7 @@ export const Tooltip = ({
         <TooltipWrapper>
           {title && <Title>{title}</Title>}
           {content && <Text>{content}</Text>}
-          {link?.text && <Link showIcon variant={Link.variants.OnDark} {...link} />}
+          {link?.text && <Link showSuffixIcon variant={Link.variants.OnDark} {...link} />}
         </TooltipWrapper>
         {icon && (
           <IconWrapper
