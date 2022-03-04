@@ -45,15 +45,15 @@ export const IconWrapper = styled.span`
   }
 
   &[data-variant='${Variant.OnPrimary}'] {
-    fill: var(${COLORS.PRIMARY_ADDITIONAL_ICON});
+    fill: var(${COLORS.PRIMARY_PREFIX_ICON});
   }
 
   &[data-variant='${Variant.OnDark}'] {
-    fill: var(${COLORS.DARK_ADDITIONAL_ICON});
+    fill: var(${COLORS.DARK_PREFIX_ICON});
   }
 `;
 
-export const StyledLink = styled.a<{ showIcon: boolean }>`
+export const StyledLink = styled.a<{ showSuffixIcon: boolean }>`
   text-decoration: none;
   cursor: pointer;
   display: inline-flex;
@@ -77,8 +77,8 @@ export const StyledLink = styled.a<{ showIcon: boolean }>`
   }
 
   &[data-variant='${Variant.OnPrimary}'] {
-    color: ${({ showIcon }) => (showIcon ? `var(${COLORS.PRIMARY_COLOR})` : `var(${COLORS.PRIMARY_FILL})`)};
-    fill: ${({ showIcon }) => (showIcon ? `var(${COLORS.PRIMARY_FILL})` : 'currentColor')};
+    color: ${({ showSuffixIcon }) => (showSuffixIcon ? `var(${COLORS.PRIMARY_COLOR})` : `var(${COLORS.PRIMARY_FILL})`)};
+    fill: ${({ showSuffixIcon }) => (showSuffixIcon ? `var(${COLORS.PRIMARY_FILL})` : 'currentColor')};
 
     :hover {
       color: var(${COLORS.PRIMARY_FILL_HOVER});

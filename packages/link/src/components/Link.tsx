@@ -10,12 +10,12 @@ export type LinkProps = WithSupportProps<{
   variant?: Variant;
   text?: string;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
-  showIcon?: boolean;
+  showSuffixIcon?: boolean;
   target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
   href?: string;
   disabled?: boolean;
   size?: Sizes;
-  additionalIcon?: React.ReactElement;
+  prefixIcon?: React.ReactElement;
 }>;
 
 export const Link = ({
@@ -23,12 +23,12 @@ export const Link = ({
   variant = Variant.OnPrimary,
   text,
   onClick,
-  showIcon = false,
+  showSuffixIcon = false,
   target = '_blank',
   href = '#',
   disabled = false,
   size = Sizes.Medium,
-  additionalIcon,
+  prefixIcon,
   ...rest
 }: LinkProps) => (
   <StyledLink
@@ -38,18 +38,18 @@ export const Link = ({
     className={className}
     href={href}
     data-disabled={disabled}
-    showIcon={showIcon}
+    showSuffixIcon={showSuffixIcon}
     data-size={size}
     rel={target === '_blank' ? 'noopener noreferrer' : undefined}
     {...extractSupportProps(rest)}
   >
-    {additionalIcon && (
+    {prefixIcon && (
       <IconWrapper data-size={size} data-variant={variant}>
-        {additionalIcon}
+        {prefixIcon}
       </IconWrapper>
     )}
     {text}
-    {showIcon && <StyledArrowLinkInterfaceSVG />}
+    {showSuffixIcon && <StyledArrowLinkInterfaceSVG />}
   </StyledLink>
 );
 

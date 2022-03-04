@@ -23,7 +23,7 @@ const Container = styled.div<{ variant: Variant; theme: Themes }>`
     variant === Variant.OnPrimary && ['purple', 'green'].includes(theme) ? '#ffffff' : '#333333'};
 `;
 
-const additionalIcons = {
+const prefixIcons = {
   none: undefined,
   FolderInterfaceSVG: <FolderInterfaceSVG />,
 };
@@ -43,13 +43,13 @@ export const link = Template.bind({});
 link.args = {
   text: 'Click me!',
   href: 'https://developer.mozilla.org/ru/docs/Web/HTML/Element/A',
-  showIcon: true,
+  showSuffixIcon: true,
   'data-test-id': 'textId',
 };
 link.argTypes = {
-  additionalIcon: {
-    options: Object.keys(additionalIcons),
-    mapping: additionalIcons,
+  prefixIcon: {
+    options: Object.keys(prefixIcons),
+    mapping: prefixIcons,
     control: { type: 'radio' },
   },
 };
