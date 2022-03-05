@@ -1,4 +1,5 @@
 import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -6,6 +7,7 @@ import { ANIMATIONS } from '@sbercloud/uikit-utils';
 
 import { Sizes } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+import { SimpleInputProps } from './types';
 
 PURPLE_THEME;
 PURPLE_DARK_THEME;
@@ -18,7 +20,7 @@ enum SizeInPx {
   Large = '44px',
 }
 
-export const Wrapper = styled.div`
+export const styledSimpleInput = (SimpleInput: VFC<SimpleInputProps>): VFC<SimpleInputProps> => styled(SimpleInput)`
   display: flex;
   flex-direction: row;
   width: 100%;

@@ -1,35 +1,12 @@
-import {
-  ChangeEvent,
-  ChangeEventHandler,
-  FocusEventHandler,
-  MouseEventHandler,
-  ReactNode,
-  RefObject,
-  forwardRef,
-} from 'react';
+import { ChangeEventHandler, MouseEventHandler, forwardRef } from 'react';
 
-import { WithSupportProps, excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Types } from './constants';
-import { StyledInput } from './styled';
+import { styledInputPrivate } from './styled';
+import { InputPrivateProps } from './types';
 
-export type InputPrivateProps = {
-  value: string;
-  onChange?(value: string, e?: ChangeEvent<HTMLInputElement>): void;
-  className?: string;
-  placeholder?: string;
-  type?: Types;
-  disabled?: boolean;
-  autoFocus?: boolean;
-  autoComplete?: boolean;
-  maxLength?: number;
-  onFocus?: FocusEventHandler<HTMLInputElement>;
-  onBlur?: FocusEventHandler<HTMLInputElement>;
-  postfix?: ReactNode;
-  ref?: RefObject<HTMLInputElement>;
-};
-
-const ForwardedPrivateInput = forwardRef<HTMLInputElement, WithSupportProps<InputPrivateProps>>(
+const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivateProps>(
   (
     {
       value = '',
@@ -53,7 +30,7 @@ const ForwardedPrivateInput = forwardRef<HTMLInputElement, WithSupportProps<Inpu
 
     return (
       <>
-        <StyledInput
+        <input
           maxLength={maxLength}
           className={className}
           autoFocus={autoFocus}
@@ -76,7 +53,11 @@ const ForwardedPrivateInput = forwardRef<HTMLInputElement, WithSupportProps<Inpu
   },
 );
 
-export const InputPrivate = ForwardedPrivateInput as typeof ForwardedPrivateInput & {
+const StyledForwardedPrivateInput = styledInputPrivate(StylelessForwardedPrivateInput);
+
+export type { InputPrivateProps };
+
+export const InputPrivate = StyledForwardedPrivateInput as typeof StyledForwardedPrivateInput & {
   types: typeof Types;
 };
 

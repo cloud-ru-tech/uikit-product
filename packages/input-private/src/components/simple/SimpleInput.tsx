@@ -1,35 +1,17 @@
 import mergeRefs from 'merge-refs';
-import { ChangeEvent, RefObject, forwardRef, useRef, useState } from 'react';
+import { forwardRef, useRef, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import { InputPrivate, InputPrivateProps } from '../private';
 import { Sizes, Types } from './constants';
 import * as S from './styled';
+import { SimpleInputProps } from './types';
 
-export type SimpleInputProps = {
-  value: string;
-  onChange(value: string, e?: ChangeEvent<HTMLInputElement>): void;
-  className?: string;
-  placeholder?: string;
-  size?: Sizes;
-  type?: Types;
-  disabled?: boolean;
-  error?: boolean;
-  autoFocus?: boolean;
-  autoComplete?: boolean;
-  moreButton?: {
-    onClick(): void;
-    tooltipText?: string;
-  };
-  maxLength?: number;
-  ref?: RefObject<HTMLInputElement>;
-};
-
-const ForwardedInput = forwardRef<HTMLInputElement, WithSupportProps<SimpleInputProps>>(
+const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
   (
     {
       value = '',
@@ -87,7 +69,7 @@ const ForwardedInput = forwardRef<HTMLInputElement, WithSupportProps<SimpleInput
     };
 
     return (
-      <S.Wrapper className={className} {...extractSupportProps(rest)}>
+      <div className={className} {...extractSupportProps(rest)}>
         <S.InputWrapper
           onFocus={onFocusWrapper}
           data-size={size}
@@ -159,12 +141,16 @@ const ForwardedInput = forwardRef<HTMLInputElement, WithSupportProps<SimpleInput
             />
           </S.MoreButtonWrapper>
         )}
-      </S.Wrapper>
+      </div>
     );
   },
 );
 
-export const SimpleInput = ForwardedInput as typeof ForwardedInput & {
+const StyledForwardedInput = S.styledSimpleInput(StylelessForwardedInput);
+
+export type { SimpleInputProps };
+
+export const SimpleInput = StyledForwardedInput as typeof StyledForwardedInput & {
   sizes: typeof Sizes;
   types: typeof Types;
 };
