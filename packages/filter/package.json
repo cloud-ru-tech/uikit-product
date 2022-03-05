@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-filter",
   "title": "React Filter",
-  "version": "0.14.56",
+  "version": "0.14.57",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -31,7 +31,7 @@
     "@sbercloud/uikit-react-divider": "2.0.17",
     "@sbercloud/uikit-react-icons": "3.1.0",
     "@sbercloud/uikit-react-input-private": "2.1.2",
-    "@sbercloud/uikit-react-select": "0.23.8",
+    "@sbercloud/uikit-react-select": "0.23.9",
     "@sbercloud/uikit-react-tooltip-private": "1.1.8",
     "@sbercloud/uikit-theme": "0.31.0",
     "@sbercloud/uikit-typography": "1.1.0",

@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.9.5...@sbercloud/uikit-react-tag@0.10.0) (2022-03-05)
+
+
+### Bug Fixes
+
+* change `Tag` component style order generation ([3d7dd6a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3d7dd6a6737b4c11af04d84cfebda52cddb476f0))
+* update `TagRow` state on props change ([48b2eb9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/48b2eb9c3c0e6d236b79b41db0eead953538ac26))
+
+
+### Features
+
+* replaced `PRESET_COLORS` with `Tag.colors` enum ([c06b426](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/c06b426594ca710258c151211cc6fe35ab05eabf))
+
+
+### BREAKING CHANGES
+
+* replaced `PRESET_COLORS` with `Tag.colors` enum
+
+
+
+
+
 ## [0.9.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.9.4...@sbercloud/uikit-react-tag@0.9.5) (2022-03-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tag
