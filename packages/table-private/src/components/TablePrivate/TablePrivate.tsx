@@ -2,32 +2,24 @@ import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
 import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
-import { ColumnResizedEvent, GridApi, GridReadyEvent, Module } from '@ag-grid-community/core';
-import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
+import { ColumnResizedEvent, GridApi, GridReadyEvent } from '@ag-grid-community/core';
+import { AgGridReact } from '@ag-grid-community/react';
 import { RangeSelectionModule } from '@ag-grid-enterprise/range-selection';
 import { cx } from '@linaria/core';
 import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useState } from 'react';
 
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
-import { tableClass } from '../../helpers/tableClass';
+import { styledTable } from '../../helpers/styled';
 import { ColumnDefinition } from '../../helpers/types';
 import { NoRows } from '../overlays';
 import { NoDataReasons } from '../overlays/NoRows/types';
-import { paidTableMinHeight } from './styled';
-
-export type TablePrivateProps = AgGridReactProps & {
-  className?: string;
-  checkboxSelection?: boolean;
-  doesRowPassFilter?(data: any): boolean;
-  additionModules?: Module[];
-  columnDefs: ColumnDefinition[];
-  rowData: NonNullable<AgGridReactProps['rowData']>;
-};
+import { styledTablePrivate } from './styled';
+import { TablePrivateProps } from './types';
 
 const AgGridModules = [ClientSideRowModelModule, RangeSelectionModule];
 
-export function TablePrivate({
+function StylelessTablePrivate({
   rowData = [],
   columnDefs = [],
   gridOptions = {},
@@ -103,7 +95,7 @@ export function TablePrivate({
   }, [gridApi, resizedColumns]);
 
   return (
-    <div className={cx('ag-theme-alpine', tableClass, paidTableMinHeight, className)}>
+    <div className={cx('ag-theme-alpine', className)}>
       <AgGridReact
         modules={[...AgGridModules, ...additionModules]}
         gridOptions={{
@@ -142,3 +134,7 @@ export function TablePrivate({
     </div>
   );
 }
+
+export type { TablePrivateProps };
+
+export const TablePrivate = styledTablePrivate(styledTable(StylelessTablePrivate));

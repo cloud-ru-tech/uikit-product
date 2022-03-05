@@ -1,11 +1,14 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-typography';
 
 const { COLORS_TABLE } = DEPRECATED_EXPORT_VARS;
 
-export const tableClass = css`
+type TableProps = { className?: string };
+
+export const styledTable = <P extends TableProps>(Table: VFC<P>) => styled(Table as VFC<TableProps>)<P>`
   &.ag-theme-alpine {
     width: 100%;
     height: 100%;

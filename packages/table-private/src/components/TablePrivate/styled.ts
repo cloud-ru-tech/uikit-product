@@ -1,6 +1,11 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
-export const paidTableMinHeight = css`
+import { TablePrivateProps } from './types';
+
+export const styledTablePrivate = (TablePrivate: VFC<TablePrivateProps>): VFC<TablePrivateProps> => styled(
+  TablePrivate,
+)`
   &.ag-theme-alpine {
     .ag-center-cols-clipper,
     .ag-center-cols-container {

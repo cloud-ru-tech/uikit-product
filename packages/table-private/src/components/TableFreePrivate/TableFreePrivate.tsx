@@ -2,28 +2,21 @@ import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
 import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
-import { AgGridReact, AgGridReactProps } from '@ag-grid-community/react';
+import { AgGridReact } from '@ag-grid-community/react';
 import { cx } from '@linaria/core';
 import { useCallback, useMemo } from 'react';
 
 import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
-import { tableClass } from '../../helpers/tableClass';
+import { styledTable } from '../../helpers/styled';
 import { Texts, textProvider } from '../../helpers/texts-provider';
-import { freeTableBorder, freeTableCenteredCell, freeTableFullWidthCell, freeTableMinHeight } from './styled';
+import { styledTableFreePrivate } from './styled';
+import { TableFreePrivateProps } from './types';
 
 const AgGridModules = [ClientSideRowModelModule];
 
-export interface TableFreePrivateProps extends AgGridReactProps {
-  className?: string;
-  checkboxSelection?: boolean;
-  columnDefs: NonNullable<AgGridReactProps['columnDefs']>;
-  rowData: NonNullable<AgGridReactProps['rowData']>;
-  noRowsText?: string;
-}
-
-export function TableFreePrivate({
+function StylelessTableFreePrivate({
   rowData = [],
   columnDefs = [],
   gridOptions = {},
@@ -52,17 +45,7 @@ export function TableFreePrivate({
 
   return (
     <>
-      <div
-        className={cx(
-          'ag-theme-alpine',
-          tableClass,
-          freeTableMinHeight,
-          freeTableFullWidthCell,
-          freeTableBorder,
-          freeTableCenteredCell,
-          className,
-        )}
-      >
+      <div className={cx('ag-theme-alpine', className)}>
         <AgGridReact
           modules={AgGridModules}
           gridOptions={{
@@ -99,3 +82,7 @@ export function TableFreePrivate({
     </>
   );
 }
+
+export type { TableFreePrivateProps };
+
+export const TableFreePrivate = styledTableFreePrivate(styledTable(StylelessTableFreePrivate));

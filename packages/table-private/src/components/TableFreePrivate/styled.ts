@@ -1,10 +1,15 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
+import { TableFreePrivateProps } from './types';
+
 const { COLORS_TABLE } = DEPRECATED_EXPORT_VARS;
 
-export const freeTableMinHeight = css`
+export const styledTableFreePrivate = (
+  TableFreePrivate: VFC<TableFreePrivateProps>,
+): VFC<TableFreePrivateProps> => styled(TableFreePrivate)`
   &.ag-theme-alpine {
     .ag-center-cols-clipper,
     .ag-center-cols-container {
@@ -15,25 +20,19 @@ export const freeTableMinHeight = css`
       padding-top: 30px;
     }
   }
-`;
 
-export const freeTableFullWidthCell = css`
   &.ag-theme-alpine {
     .ag-cell-wrapper,
     .ag-cell-value {
       width: 100%;
     }
   }
-`;
 
-export const freeTableBorder = css`
   &.ag-theme-alpine {
     border: 1px solid var(${COLORS_TABLE.TABLE_BORDER});
     border-radius: 4px;
   }
-`;
 
-export const freeTableCenteredCell = css`
   &.ag-theme-alpine .ag-cell-value .ag-react-container {
     display: flex;
     align-items: center;
