@@ -1,20 +1,12 @@
-import { ReactNode, useMemo } from 'react';
+import { useMemo } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Types } from './constants';
-import { BadgeItemWrap, Dot, Badge as StyledBadge } from './styled';
+import { BadgeItemWrap, Dot, styledBadge } from './styled';
+import { BadgeProps } from './types';
 
-export type BadgeProps = {
-  type?: Types;
-  number?: number;
-  disabled?: boolean;
-  className?: string;
-  isGroupMessage?: boolean;
-  children: ReactNode;
-};
-
-export function Badge({
+function StylelessBadge({
   number,
   children,
   disabled,
@@ -22,7 +14,7 @@ export function Badge({
   isGroupMessage,
   type = Types.Info,
   ...rest
-}: WithSupportProps<BadgeProps>) {
+}: BadgeProps) {
   const badgeContent = useMemo(() => {
     if (isGroupMessage || !number) {
       return <Dot data-alert={type === Types.Alert || undefined} />;
@@ -38,16 +30,24 @@ export function Badge({
   return (
     <BadgeItemWrap {...extractSupportProps(rest)}>
       {children}
-      <StyledBadge
+      <span
         className={className}
         data-disabled={disabled || undefined}
         data-alert={type === Types.Alert || undefined}
         data-test-id={'badge__indicator'}
       >
         {badgeContent}
-      </StyledBadge>
+      </span>
     </BadgeItemWrap>
   );
 }
+
+const StyledBadge = styledBadge(StylelessBadge);
+
+export type { BadgeProps };
+
+export const Badge = StyledBadge as typeof StyledBadge & {
+  types: typeof Types;
+};
 
 Badge.types = Types;

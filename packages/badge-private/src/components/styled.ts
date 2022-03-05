@@ -1,6 +1,8 @@
 import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+import { BadgeProps } from './types';
 
 PURPLE_THEME;
 PURPLE_DARK_THEME;
@@ -24,7 +26,7 @@ export const Dot = styled.div`
   }
 `;
 
-export const Badge = styled.span`
+export const styledBadge = (Badge: VFC<BadgeProps>): VFC<BadgeProps> => styled(Badge)`
   display: flex;
   flex-direction: row;
   align-items: center;
