@@ -1,7 +1,5 @@
-import { cx } from '@linaria/core';
 import { ReactElement, ReactText } from 'react';
 
-import { BaseButton } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
@@ -15,14 +13,10 @@ export type ButtonRoundProps = CommonButtonProps & {
 };
 
 const ButtonRoundBase = ({ text, variant = Variant.Filled, icon, className, ...rest }: ButtonRoundProps) => (
-  <BaseButton
-    className={cx(S.buttonRoundClassName, className)}
-    data-variant={variant}
-    {...extractCommonButtonProps(rest)}
-  >
+  <S.StyledBaseButton className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
     {text && <S.TextWrapper data-with-icon={Boolean(icon) || undefined}>{text}</S.TextWrapper>}
     {icon && <S.IconWrapper data-variant={variant}>{icon}</S.IconWrapper>}
-  </BaseButton>
+  </S.StyledBaseButton>
 );
 
 const ButtonRoundWithTooltip = withTooltip(ButtonRoundBase);

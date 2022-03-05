@@ -1,5 +1,6 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 
+import { BaseButton } from '../../helperComponents';
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -8,7 +9,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const buttonIconTransparentClassName = css`
+export const StyledBaseButton = styled(BaseButton)`
   width: 28px;
   height: 28px;
   border-radius: 4px;

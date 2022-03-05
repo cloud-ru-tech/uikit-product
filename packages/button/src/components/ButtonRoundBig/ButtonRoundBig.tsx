@@ -1,7 +1,5 @@
-import { cx } from '@linaria/core';
 import { ReactElement, ReactText } from 'react';
 
-import { BaseButton } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
@@ -13,10 +11,10 @@ export type ButtonRoundBigProps = CommonButtonProps & {
 };
 
 const ButtonRoundBigBase = ({ text, icon, className, ...rest }: ButtonRoundBigProps) => (
-  <BaseButton className={cx(S.buttonRoundBigClassName, className)} {...extractCommonButtonProps(rest)}>
+  <S.StyledBaseButton className={className} {...extractCommonButtonProps(rest)}>
     <S.IconWrapper>{icon}</S.IconWrapper>
     {text}
-  </BaseButton>
+  </S.StyledBaseButton>
 );
 
 export const ButtonRoundBig = withTooltip(ButtonRoundBigBase);

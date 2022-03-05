@@ -1,4 +1,3 @@
-import { cx } from '@linaria/core';
 import { ComponentProps } from 'react';
 
 import {
@@ -10,7 +9,7 @@ import {
 } from '@sbercloud/uikit-react-icons';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
-import { BaseButton, LoadingIcon } from '../../helperComponents';
+import { LoadingIcon } from '../../helperComponents';
 import { Texts, extractCommonButtonProps, textProvider } from '../../helpers';
 import { withManagedLoading, withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
@@ -31,14 +30,10 @@ const Icons = {
 };
 
 const ButtonTableIconBase = ({ variant = Variant.Play, loading, className, ...rest }: ButtonTableIconProps) => (
-  <BaseButton
-    className={cx(S.buttonTableIconClassName, className)}
-    data-loading={loading || undefined}
-    {...extractCommonButtonProps(rest)}
-  >
+  <S.StyledBaseButton className={className} data-loading={loading || undefined} {...extractCommonButtonProps(rest)}>
     {loading && <LoadingIcon />}
     {!loading && Icons[variant]}
-  </BaseButton>
+  </S.StyledBaseButton>
 );
 
 const ButtonTableIconWithTooltip = withTooltip(ButtonTableIconBase);

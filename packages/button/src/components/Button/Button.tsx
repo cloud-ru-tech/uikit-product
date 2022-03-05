@@ -1,7 +1,5 @@
-import { cx } from '@linaria/core';
 import { ReactElement, ReactText } from 'react';
 
-import { BaseButton } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
@@ -15,10 +13,10 @@ export type ButtonProps = {
 } & CommonButtonProps;
 
 const ButtonCmp = ({ text, variant = Variant.Filled, icon, className, ...rest }: ButtonProps) => (
-  <BaseButton className={cx(S.buttonClassName, className)} data-variant={variant} {...extractCommonButtonProps(rest)}>
+  <S.StyledBaseButton className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
     {text}
     {icon && <S.IconWrapper>{icon}</S.IconWrapper>}
-  </BaseButton>
+  </S.StyledBaseButton>
 );
 
 const ButtonWithTooltip = withTooltip(ButtonCmp);

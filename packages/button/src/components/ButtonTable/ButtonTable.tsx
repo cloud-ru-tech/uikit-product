@@ -1,9 +1,8 @@
-import { cx } from '@linaria/core';
 import { ReactText } from 'react';
 
 import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-import { BaseButton, LoadingIcon, PieIndicator } from '../../helperComponents';
+import { LoadingIcon, PieIndicator } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withManagedLoading, withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
@@ -33,8 +32,8 @@ const ButtonTableBase = ({
   const isProgress = typeof progress === 'number';
   const hasGetProgressText = typeof getProgressText === 'function';
   return (
-    <BaseButton
-      className={cx(S.buttonTableClassName, className)}
+    <S.StyledBaseButton
+      className={className}
       data-variant={variant}
       data-loading={loading || (loading && isProgress) || undefined}
       disabled={disabled || loading}
@@ -52,7 +51,7 @@ const ButtonTableBase = ({
         {loading && typeof progress === 'number' && <PieIndicator completed={progress} />}
         {!loading && <CirclePlayFilledInterfaceSVG />}
       </S.IconWrapper>
-    </BaseButton>
+    </S.StyledBaseButton>
   );
 };
 

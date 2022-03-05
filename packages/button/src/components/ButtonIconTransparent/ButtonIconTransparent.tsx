@@ -1,7 +1,5 @@
-import { cx } from '@linaria/core';
 import { ReactElement } from 'react';
 
-import { BaseButton } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withTooltip } from '../../hocs';
 import { CommonButtonPropsWithOptionalTooltip } from '../../types';
@@ -21,14 +19,14 @@ const ButtonIconTransparentBase = ({
   className,
   ...rest
 }: ButtonIconTransparentProps) => (
-  <BaseButton
-    className={cx(S.buttonIconTransparentClassName, className)}
+  <S.StyledBaseButton
+    className={className}
     data-variant={variant}
     data-rounded={rounded || undefined}
     {...extractCommonButtonProps(rest)}
   >
     {icon}
-  </BaseButton>
+  </S.StyledBaseButton>
 );
 
 const ButtonIconTransparentWithTooltip = withTooltip(ButtonIconTransparentBase);

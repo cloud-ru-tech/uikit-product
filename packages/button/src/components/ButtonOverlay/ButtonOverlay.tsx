@@ -1,7 +1,5 @@
-import { cx } from '@linaria/core';
 import { ReactElement } from 'react';
 
-import { BaseButton } from '../../helperComponents';
 import { extractCommonButtonProps } from '../../helpers';
 import { withTooltip } from '../../hocs';
 import { CommonButtonProps } from '../../types';
@@ -12,9 +10,9 @@ export type ButtonOverlayProps = CommonButtonProps & {
 };
 
 const ButtonOverlayBase = ({ icon, className, ...rest }: ButtonOverlayProps) => (
-  <BaseButton className={cx(S.buttonOverlayClassName, className)} {...extractCommonButtonProps(rest)}>
+  <S.StyledBaseButton className={className} {...extractCommonButtonProps(rest)}>
     {icon}
-  </BaseButton>
+  </S.StyledBaseButton>
 );
 
 export const ButtonOverlay = withTooltip(ButtonOverlayBase);
