@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 
-import { PresetColorType, Types } from './constants';
+import { Colors, Types } from './constants';
 
 export type TagProps = {
   value?: string;
@@ -8,5 +8,5 @@ export type TagProps = {
   className?: string;
   children?: ReactNode;
   style?: CSSProperties;
-  color?: PresetColorType | string;
+  color?: Colors | string;
 };

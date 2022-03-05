@@ -3,7 +3,7 @@ import { VFC } from 'react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
-import { PRESET_COLORS } from './constants';
+import { Colors, Types } from './constants';
 import { TagProps } from './types';
 
 const { COLORS_TAG } = DEPRECATED_EXPORT_VARS;
@@ -18,7 +18,7 @@ export const styledTag = (Tag: VFC<TagProps>): VFC<TagProps> => styled(Tag)`
   font-size: 14px;
   line-height: 20px;
   color: ${({ type }) => {
-    if (type === 'card') {
+    if (type === Types.Card) {
       return `var(${COLORS_TAG.TAG_TYPE_CARD_COLOR})`;
     }
 
@@ -28,58 +28,58 @@ export const styledTag = (Tag: VFC<TagProps>): VFC<TagProps> => styled(Tag)`
   white-space: nowrap;
   text-overflow: ellipsis;
   background-color: ${({ type }) => {
-    if (type === 'card') {
+    if (type === Types.Card) {
       return `var(${COLORS_TAG.TAG_TYPE_CARD_BACKGROUND})`;
     }
 
     return `var(${COLORS_TAG.TAG_BG_GRAY})`;
   }};
 
-  &[data-tag-color='${PRESET_COLORS[0]}'] {
+  &[data-tag-color='${Colors.Green}'] {
     background-color: var(${COLORS_TAG.TAG_BG_GREEN});
   }
 
-  &[data-tag-color='${PRESET_COLORS[1]}'] {
+  &[data-tag-color='${Colors.Blue}'] {
     background-color: var(${COLORS_TAG.TAG_BG_BLUE});
   }
 
-  &[data-tag-color='${PRESET_COLORS[2]}'] {
+  &[data-tag-color='${Colors.Purple}'] {
     background-color: var(${COLORS_TAG.TAG_BG_PURPLE});
   }
 
-  &[data-tag-color='${PRESET_COLORS[3]}'] {
+  &[data-tag-color='${Colors.Pink}'] {
     background-color: var(${COLORS_TAG.TAG_BG_PINK});
   }
 
-  &[data-tag-color='${PRESET_COLORS[4]}'] {
+  &[data-tag-color='${Colors.Red}'] {
     background-color: var(${COLORS_TAG.TAG_BG_RED});
   }
 
-  &[data-tag-color='${PRESET_COLORS[5]}'] {
+  &[data-tag-color='${Colors.DefaultGray}'] {
     background-color: var(${COLORS_TAG.TAG_BG_GRAY_DEFAULT});
   }
 
-  &[data-tag-color='${PRESET_COLORS[6]}'] {
+  &[data-tag-color='${Colors.Gray}'] {
     background-color: var(${COLORS_TAG.TAG_BG_GRAY});
   }
 
-  &[data-tag-color='${PRESET_COLORS[7]}'] {
+  &[data-tag-color='${Colors.Brown}'] {
     background-color: var(${COLORS_TAG.TAG_BG_BROWN});
   }
 
-  &[data-tag-color='${PRESET_COLORS[8]}'] {
+  &[data-tag-color='${Colors.Orange}'] {
     background-color: var(${COLORS_TAG.TAG_BG_ORANGE});
   }
 
-  &[data-tag-color='${PRESET_COLORS[9]}'] {
+  &[data-tag-color='${Colors.Yellow}'] {
     background-color: var(${COLORS_TAG.TAG_BG_YELLOW});
   }
 
-  &[data-tag-color='${PRESET_COLORS[10]}'] {
+  &[data-tag-color='${Colors.YellowGreen}'] {
     background-color: var(${COLORS_TAG.TAG_BG_YELLOW_GREEN});
   }
 
-  &[data-tag-color='${PRESET_COLORS[11]}'] {
+  &[data-tag-color='${Colors.BlueGreen}'] {
     background-color: var(${COLORS_TAG.TAG_BG_BLUE_GREEN});
   }
 `;

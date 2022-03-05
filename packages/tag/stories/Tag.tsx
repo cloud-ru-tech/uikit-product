@@ -4,7 +4,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { PRESET_COLORS, Tag, TagProps } from '../src';
+import { Tag, TagProps } from '../src';
 
 export default {
   title: 'Not stable/Tag/Tag',
@@ -34,9 +34,9 @@ const Template: Story<TagProps> = ({ ...args }) => (
   <Row>
     <Column>
       <Title>Default tags (preset color)</Title>
-      {PRESET_COLORS.map(color => (
+      {Object.values(Tag.colors).map(color => (
         <TagWrap key={color}>
-          <Tag {...args} color={color}>
+          <Tag color={color} {...args}>
             {color}
           </Tag>
         </TagWrap>
@@ -46,7 +46,6 @@ const Template: Story<TagProps> = ({ ...args }) => (
 );
 
 export const tag = Template.bind({});
-tag.args = { color: 'aqua' };
 tag.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
