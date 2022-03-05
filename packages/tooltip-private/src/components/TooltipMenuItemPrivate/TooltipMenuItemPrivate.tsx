@@ -1,12 +1,11 @@
-import { TooltipWrapper } from './styled';
+import { MouseEvent, ReactNode, VFC } from 'react';
 
-export interface TooltipMenuItemPrivateProps {
+import * as S from './styled';
+
+export type TooltipMenuItemPrivateProps = {
   className?: string;
-  onClick?: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-}
-
-export const TooltipMenuItemPrivate: React.FC<TooltipMenuItemPrivateProps> = props => {
-  const { children, ...otherProps } = props;
-
-  return <TooltipWrapper {...otherProps}>{children}</TooltipWrapper>;
+  children?: ReactNode;
+  onClick?: (e: MouseEvent<HTMLDivElement>) => void;
 };
+
+export const TooltipMenuItemPrivate: VFC<TooltipMenuItemPrivateProps> = S.TooltipMenuItemPrivate;

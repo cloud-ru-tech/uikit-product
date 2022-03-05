@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-export const TooltipWrapper = styled.div`
+export const TooltipMenuItemPrivate = styled.div`
   height: 36px;
   display: flex;
   flex-direction: row;

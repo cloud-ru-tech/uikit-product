@@ -1,15 +1,16 @@
-import { Container, ContainerItem } from './styled';
+import { ContainerItem, styledTooltipMenuPrivate } from './styled';
+import { TooltipMenuPrivateProps } from './types';
 
-export interface TooltipMenuPrivateProps {
-  className?: string;
-}
-
-export const TooltipMenuPrivate: React.FC<TooltipMenuPrivateProps> = props => {
+function StylelessTooltipMenuPrivate(props: TooltipMenuPrivateProps) {
   const { children, className, ...otherProps } = props;
 
   return (
-    <Container className={className} {...otherProps}>
+    <nav className={className} {...otherProps}>
       <ContainerItem>{children}</ContainerItem>
-    </Container>
+    </nav>
   );
-};
+}
+
+export type { TooltipMenuPrivateProps };
+
+export const TooltipMenuPrivate = styledTooltipMenuPrivate(StylelessTooltipMenuPrivate);
