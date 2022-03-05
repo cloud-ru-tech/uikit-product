@@ -1,16 +1,20 @@
 import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 
 import { TextareaPrivate } from '../private';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+import { SimpleTextareaProps } from './types';
 
 GREEN_DARK_THEME;
 GREEN_THEME;
 PURPLE_THEME;
 PURPLE_DARK_THEME;
 
-export const Wrapper = styled.div`
+export const styledSimpleTextarea = (SimpleTextarea: VFC<SimpleTextareaProps>): VFC<SimpleTextareaProps> => styled(
+  SimpleTextarea,
+)`
   display: flex;
   flex-direction: row;
   width: 100%;

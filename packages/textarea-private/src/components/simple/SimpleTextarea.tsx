@@ -1,28 +1,15 @@
 import mergeRefs from 'merge-refs';
-import { ChangeEvent, RefObject, forwardRef, useCallback, useRef, useState } from 'react';
+import { forwardRef, useCallback, useRef, useState } from 'react';
 
 import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import * as S from './styled';
 import { StyledPrivateTextarea } from './styled';
+import { SimpleTextareaProps } from './types';
 
-export type SimpleTextareaProps = {
-  value: string;
-  onChange(value: string, e?: ChangeEvent<HTMLTextAreaElement>): void;
-  className?: string;
-  placeholder?: string;
-  minRows?: number;
-  maxRows?: number;
-  disabled?: boolean;
-  maxLength?: number;
-  autosize?: boolean;
-  error?: boolean;
-  ref?: RefObject<HTMLTextAreaElement>;
-};
-
-export const SimpleTextarea = forwardRef<HTMLTextAreaElement, WithSupportProps<SimpleTextareaProps>>(
+const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaProps>(
   (
     {
       value,
@@ -50,7 +37,7 @@ export const SimpleTextarea = forwardRef<HTMLTextAreaElement, WithSupportProps<S
     const hasClearButton = !!value.length && !disabled;
 
     return (
-      <S.Wrapper
+      <div
         onFocus={onWrapperFocusHandler}
         data-disabled={disabled || undefined}
         data-error={error || undefined}
@@ -81,7 +68,11 @@ export const SimpleTextarea = forwardRef<HTMLTextAreaElement, WithSupportProps<S
             data-test-id='textarea__clear-button'
           />
         )}
-      </S.Wrapper>
+      </div>
     );
   },
 );
+
+export type { SimpleTextareaProps };
+
+export const SimpleTextarea = S.styledSimpleTextarea(StylelessSimpleTextarea);

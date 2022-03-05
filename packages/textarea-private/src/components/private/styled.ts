@@ -1,16 +1,20 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
 import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 import { DEFAULT_STYLES } from '@sbercloud/uikit-utils';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+import { TextareaPrivateProps } from './types';
 
 GREEN_DARK_THEME;
 GREEN_THEME;
 PURPLE_THEME;
 PURPLE_DARK_THEME;
 
-export const textareaClassName = css`
+export const styledTextareaPrivate = (TextareaPrivate: VFC<TextareaPrivateProps>): VFC<TextareaPrivateProps> => styled(
+  TextareaPrivate,
+)`
   ${DEFAULT_STYLES.COMMON};
   ${DEFAULT_STYLES.BORDERLESS};
   ${TEXT_2_STYLES};

@@ -1,29 +1,14 @@
-import { cx } from '@linaria/core';
-import { ChangeEvent, RefObject, forwardRef, useCallback, useMemo } from 'react';
+import { ChangeEvent, forwardRef, useCallback, useMemo } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
-import { WithSupportProps, excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-import * as S from './styled';
-
-export type TextareaPrivateProps = {
-  value: string;
-  onChange?: (value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void;
-  placeholder?: string;
-  className?: string;
-  minRows?: number;
-  maxRows?: number;
-  disabled?: boolean;
-  maxLength?: number;
-  autosize?: boolean;
-  onFocus?: () => void;
-  onBlur?: () => void;
-  ref?: RefObject<HTMLTextAreaElement>;
-};
+import { styledTextareaPrivate } from './styled';
+import { TextareaPrivateProps } from './types';
 
 const MIN_ROWS = 3;
 
-export const TextareaPrivate = forwardRef<HTMLTextAreaElement, WithSupportProps<TextareaPrivateProps>>(
+const StylelessTextareaPrivate = forwardRef<HTMLTextAreaElement, TextareaPrivateProps>(
   (
     {
       value = '',
@@ -51,7 +36,7 @@ export const TextareaPrivate = forwardRef<HTMLTextAreaElement, WithSupportProps<
       // Workaround for ref. Outdated @types/react-textarea-autosize package
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ref: ref as any,
-      className: cx(S.textareaClassName, className),
+      className,
       value,
       placeholder,
       disabled,
@@ -70,3 +55,7 @@ export const TextareaPrivate = forwardRef<HTMLTextAreaElement, WithSupportProps<
     return <textarea {...commonProps} />;
   },
 );
+
+export type { TextareaPrivateProps };
+
+export const TextareaPrivate = styledTextareaPrivate(StylelessTextareaPrivate);
