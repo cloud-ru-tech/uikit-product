@@ -14,15 +14,20 @@ export const BadgeItemWrap = styled.span`
   position: relative;
 `;
 
-export const Dot = styled.div`
-  background: var(${COLORS.DOT_DEFAULT_COLOR});
-  height: 3px;
-  width: 3px;
-  border-radius: 100%;
-  transform: translate(-12.5%, -12.5%);
+export const DotContainer = styled.div`
+  display: flex;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+
+  svg circle {
+    fill: var(${COLORS.DOT_DEFAULT_COLOR});
+  }
 
   &[data-alert] {
-    background: var(${COLORS.DOT_ALERT_COLOR});
+    svg circle {
+      fill: var(${COLORS.DOT_ALERT_COLOR});
+    }
   }
 `;
 
