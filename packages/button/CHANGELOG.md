@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@4.1.2...@sbercloud/uikit-react-button@4.1.3) (2022-03-09)
+
+
+### Bug Fixes
+
+* `BaseButton` is wrapped with `styled` ([d6fd468](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d6fd468be614b817f019ff68056ed11335f82b7b))
+
+
+
+
+
 ## [4.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@4.1.1...@sbercloud/uikit-react-button@4.1.2) (2022-03-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button

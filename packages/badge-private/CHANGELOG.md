@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-badge-private@3.0.2...@sbercloud/uikit-react-badge-private@3.1.0) (2022-03-09)
+
+
+### Features
+
+* component is wrapped with `styled` ([1713c46](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1713c46400222706ab96d9dbde634c109076fb1a))
+
+
+
+
+
 ## [3.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-badge-private@3.0.1...@sbercloud/uikit-react-badge-private@3.0.2) (2022-03-04)
 
 

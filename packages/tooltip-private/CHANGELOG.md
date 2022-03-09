@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tooltip-private@1.1.8...@sbercloud/uikit-react-tooltip-private@1.2.0) (2022-03-09)
+
+
+### Features
+
+* `TooltipMenuItemPrivate` and `TooltipMenuPrivate` are wrapped with `styled` ([fbaa253](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/fbaa2533acb32918e787d6f415e90e3df4185d8d))
+
+
+
+
+
 ## [1.1.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tooltip-private@1.1.7...@sbercloud/uikit-react-tooltip-private@1.1.8) (2022-03-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tooltip-private

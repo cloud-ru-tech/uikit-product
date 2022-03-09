@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-private@2.1.2...@sbercloud/uikit-react-input-private@2.2.0) (2022-03-09)
+
+
+### Features
+
+* `InputPrivate` and `SimpleInput` are wrapped with `styled` ([38a889c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/38a889cf98bb3520054dd6a9635e0cdcc066ade6))
+
+
+
+
+
 ## [2.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-private@2.1.1...@sbercloud/uikit-react-input-private@2.1.2) (2022-03-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input-private

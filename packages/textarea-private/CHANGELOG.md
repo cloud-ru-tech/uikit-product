@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea-private@2.1.3...@sbercloud/uikit-react-textarea-private@2.2.0) (2022-03-09)
+
+
+### Features
+
+* `TextareaPrivate` and `SimpleTextarea` are wrapped with `styled` ([bd9d7cc](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/bd9d7cc886127a5b9f7216fb739414fc893918b4))
+
+
+
+
+
 ## [2.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-textarea-private@2.1.2...@sbercloud/uikit-react-textarea-private@2.1.3) (2022-03-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-textarea-private

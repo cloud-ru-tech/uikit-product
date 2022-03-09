@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.11...@sbercloud/uikit-react-table-private@0.7.0) (2022-03-09)
+
+
+### Features
+
+* `TableFreePrivate` and `TablePrivate` are wrapped with `styled` ([43a19b0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/43a19b0c64b58e0d024715865d20c297be0b372f))
+
+
+
+
+
 ## [0.6.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.10...@sbercloud/uikit-react-table-private@0.6.11) (2022-03-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
