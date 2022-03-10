@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-badge-private@3.1.0...@sbercloud/uikit-react-badge-private@3.1.1) (2022-03-10)
+
+
+### Bug Fixes
+
+* corrected dot position ([e97b8b5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/e97b8b597839f61287e21c6e7d2b924f5bc8300d))
+
+
+
+
+
 # [3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-badge-private@3.0.2...@sbercloud/uikit-react-badge-private@3.1.0) (2022-03-09)
 
 
