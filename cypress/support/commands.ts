@@ -4,7 +4,7 @@
 // https://on.cypress.io/custom-commands
 // ***********************************************
 
-Cypress.Commands.add('getByDataTestId', (value: string) => cy.get(`*[data-test-id="${value}"`));
+Cypress.Commands.add('getByDataTestId', (value: string) => cy.get(`*[data-test-id="${value}"]`));
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
