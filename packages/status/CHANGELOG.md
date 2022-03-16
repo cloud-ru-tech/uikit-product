@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-status@4.0.2...@sbercloud/uikit-react-status@4.1.0) (2022-03-16)
+
+
+### Features
+
+* ([AICE-5206](https://jira.sbercloud.tech/browse/AICE-5206)) add optional size prop ([e78b254](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/e78b2540acd962e3cb0259cf67870758b013d585))
+
+
+
+
+
 ## [4.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-status@4.0.1...@sbercloud/uikit-react-status@4.0.2) (2022-03-09)
 
 
