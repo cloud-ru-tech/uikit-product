@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { ButtonTable, ButtonTableIcon } from '@sbercloud/uikit-react-button';
 import { LogicConditionType, TFilterOptionType, TFilterValueType } from '@sbercloud/uikit-react-filter';
-import { StatusBadge } from '@sbercloud/uikit-react-status';
+import { StatusDot } from '@sbercloud/uikit-react-status';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -48,7 +48,7 @@ function generateRows(count: number): DataModel[] {
         hour: 'numeric',
         minute: 'numeric',
       }),
-      status: Object.values(StatusBadge.types)[Math.floor(Math.random() * 10) % 4],
+      status: Object.values(StatusDot.types)[Math.floor(Math.random() * 10) % 4],
     });
   }
   return res;
@@ -105,7 +105,7 @@ const Template: Story<
                 value: 'status',
                 label: 'Status',
                 includeConditions: [LogicConditionType.Eq, LogicConditionType.Neq],
-                sourceData: Object.values(StatusBadge.types).map(x => ({ value: x, label: x })),
+                sourceData: Object.values(StatusDot.types).map(x => ({ value: x, label: x })),
               },
             ],
           }
@@ -179,8 +179,8 @@ clientModelTable.args = {
       maxWidth: 200,
       valueGetter: ({ data }: { data: DataModel }) => data.status,
       cellRendererFramework: ({ data: { status } }: { data: DataModel }) => {
-        const isInProgress = status === StatusBadge.types.Unactive;
-        const isDisabled = status === StatusBadge.types.Failed;
+        const isInProgress = status === StatusDot.types.Unactive;
+        const isDisabled = status === StatusDot.types.Failed;
         return (
           <ButtonGroup>
             <ButtonTable disabled={isDisabled} loading={isInProgress} text='AGrigorii' onClick={() => {}} />

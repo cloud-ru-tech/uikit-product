@@ -1,15 +1,14 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { UserInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-import { StatusIcon, StatusProps } from '../src';
+import { StatusDot, StatusDotProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
 export default {
-  title: 'Components/Status/Status Icon',
-  component: StatusIcon,
+  title: 'Components/Status/Status Dot',
+  component: StatusDot,
 } as Meta;
 
 const Container = styled.div<{ theme: Themes }>`
@@ -20,32 +19,39 @@ const Container = styled.div<{ theme: Themes }>`
   justify-content: center;
   border: 1px solid var(${EXPORT_VARS.GREY[100]});
   border-radius: 10%;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#404040')};
 `;
 
-const Template: Story<StatusProps> = ({ ...args }, { globals: { theme } }) => (
+const Template: Story<StatusDotProps> = ({ ...args }, { globals: { theme } }) => (
   <Container theme={theme}>
-    <StatusIcon {...args} icon={<UserInterfaceSVG />} />
+    <StatusDot {...args} />
   </Container>
 );
 
-export const statusIcon = Template.bind({});
+export const statusDot = Template.bind({});
 
-statusIcon.parameters = getDefaultParameters({
+statusDot.parameters = getDefaultParameters({
   figmaUrl:
     'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=3477%3A46230',
-  extraControlsInclude: ['type'],
+  extraControlsInclude: ['type', 'size'],
 });
 
-statusIcon.args = getDefaultArgs({
-  type: StatusIcon.types.Success,
+statusDot.args = getDefaultArgs({
+  size: StatusDot.sizes.Small,
+  type: StatusDot.types.Success,
 });
 
-statusIcon.argTypes = {
+statusDot.argTypes = {
   type: {
     control: {
       type: 'radio',
     },
-    options: Object.values(StatusIcon.types),
+    options: Object.values(StatusDot.types),
+  },
+  size: {
+    control: {
+      type: 'radio',
+    },
+    options: Object.values(StatusDot.sizes),
   },
 };

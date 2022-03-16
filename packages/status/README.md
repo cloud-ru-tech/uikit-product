@@ -12,15 +12,16 @@ type StatusTagProps = {
   text: string;
 };
 
-type StatusBadgeProps = {
+type StatusDotProps = {
   type: Types;
+  size: Sizes;
   className?: string;
 };
 
-type StatusProps = {
+type StatusBadgeProps = {
   type?: Types;
   className?: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
 };
 
 enum Types {

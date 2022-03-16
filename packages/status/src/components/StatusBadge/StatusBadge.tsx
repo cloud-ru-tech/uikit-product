@@ -1,21 +1,23 @@
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { ReactNode } from 'react';
 
-import { Sizes, Types } from '../../helpers';
-import { styledStatusBadge } from './styled';
-import { StatusBadgeProps } from './types';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
-function StylelessStatusBadge({ type, size = Sizes.Small, className, ...rest }: StatusBadgeProps) {
-  return <span data-type={type} data-size={size} className={className} {...extractSupportProps(rest)} />;
-}
+import { Types } from '../../helpers';
+import { StyledStatusBadge, Wrapper } from './styled';
 
-const StyledStatusBadge = styledStatusBadge(StylelessStatusBadge);
-
-export type { StatusBadgeProps };
-
-export const StatusBadge = StyledStatusBadge as typeof StyledStatusBadge & {
-  sizes: typeof Sizes;
-  types: typeof Types;
+export type StatusBadgeProps = {
+  type?: Types;
+  className?: string;
+  icon: ReactNode;
 };
 
+export function StatusBadge({ type = Types.Success, className, icon, ...rest }: WithSupportProps<StatusBadgeProps>) {
+  return (
+    <Wrapper className={className} {...extractSupportProps(rest)}>
+      {icon}
+      <StyledStatusBadge type={type} />
+    </Wrapper>
+  );
+}
+
 StatusBadge.types = Types;
-StatusBadge.sizes = Sizes;

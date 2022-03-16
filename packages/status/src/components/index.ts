@@ -1,3 +1,3 @@
-export * from './StatusBadge';
+export * from './StatusDot';
 export * from './StatusTag';
-export * from './StatusIcon';
+export * from './StatusBadge';

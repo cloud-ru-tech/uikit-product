@@ -1,6 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
+import { UserInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
 import { StatusBadge, StatusBadgeProps } from '../src';
@@ -24,7 +25,7 @@ const Container = styled.div<{ theme: Themes }>`
 
 const Template: Story<StatusBadgeProps> = ({ ...args }, { globals: { theme } }) => (
   <Container theme={theme}>
-    <StatusBadge {...args} />
+    <StatusBadge {...args} icon={<UserInterfaceSVG />} />
   </Container>
 );
 
@@ -33,11 +34,10 @@ export const statusBadge = Template.bind({});
 statusBadge.parameters = getDefaultParameters({
   figmaUrl:
     'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=3477%3A46230',
-  extraControlsInclude: ['type', 'size'],
+  extraControlsInclude: ['type'],
 });
 
 statusBadge.args = getDefaultArgs({
-  size: StatusBadge.sizes.Small,
   type: StatusBadge.types.Success,
 });
 
@@ -47,11 +47,5 @@ statusBadge.argTypes = {
       type: 'radio',
     },
     options: Object.values(StatusBadge.types),
-  },
-  size: {
-    control: {
-      type: 'radio',
-    },
-    options: Object.values(StatusBadge.sizes),
   },
 };

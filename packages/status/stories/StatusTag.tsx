@@ -19,7 +19,7 @@ const Container = styled.div<{ theme: Themes }>`
   justify-content: center;
   border: 1px solid var(${EXPORT_VARS.GREY[100]});
   border-radius: 10%;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#404040')};
 `;
 
 const Template: Story<StatusTagProps> = ({ ...args }, { globals: { theme } }) => (

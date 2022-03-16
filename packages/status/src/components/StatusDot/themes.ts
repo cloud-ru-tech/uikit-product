@@ -5,14 +5,14 @@ import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 const { GREY, BLUE_GREY, BERRY_RED, GRACE, SUNNY_YELLOW, PRESET } = EXPORT_VARS;
 
 export const COLORS = {
-  SUCCESS_BG: '--status-badge-success-bg',
-  FAILED_BG: '--status-badge-failed-bg',
-  WARNING_BG: '--status-badge-warning-bg',
-  UNACTIVE_BG: '--status-badge-unactive-bg',
-  PROGRESS_BG: '--status-badge-progress-bg',
-  NEUTRAL_BG: '--status-badge-neutral-bg',
+  SUCCESS_BG: '--status-dot-success-bg',
+  FAILED_BG: '--status-dot-failed-bg',
+  WARNING_BG: '--status-dot-warning-bg',
+  UNACTIVE_BG: '--status-dot-unactive-bg',
+  PROGRESS_BG: '--status-dot-progress-bg',
+  NEUTRAL_BG: '--status-dot-neutral-bg',
 
-  STATUS_BADGE_BORDER_COLOR: '--status-badge-border-color',
+  BORDER_COLOR: '--status-dot-border-color',
 };
 
 export const PURPLE_THEME = css`
@@ -25,7 +25,7 @@ export const PURPLE_THEME = css`
       ${COLORS.PROGRESS_BG}: var(${GRACE[6]});
       ${COLORS.NEUTRAL_BG}: var(${BLUE_GREY[80]});
 
-      ${COLORS.STATUS_BADGE_BORDER_COLOR}: var(${GREY[25]});
+      ${COLORS.BORDER_COLOR}: var(${GREY[25]});
     }
   }
 `;
@@ -40,7 +40,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.PROGRESS_BG}: var(${GRACE[6]});
       ${COLORS.NEUTRAL_BG}: var(${GREY[200]});
 
-      ${COLORS.STATUS_BADGE_BORDER_COLOR}: var(${GREY[800]});
+      ${COLORS.BORDER_COLOR}: var(${GREY[800]});
     }
   }
 `;
@@ -55,7 +55,7 @@ export const GREEN_THEME = css`
       ${COLORS.PROGRESS_BG}: var(${GRACE[6]});
       ${COLORS.NEUTRAL_BG}: var(${BLUE_GREY[80]});
 
-      ${COLORS.STATUS_BADGE_BORDER_COLOR}: var(${GREY[25]});
+      ${COLORS.BORDER_COLOR}: var(${GREY[25]});
     }
   }
 `;
@@ -70,7 +70,7 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.PROGRESS_BG}: var(${GRACE[6]});
       ${COLORS.NEUTRAL_BG}: var(${GREY[200]});
 
-      ${COLORS.STATUS_BADGE_BORDER_COLOR}: var(${GREY[800]});
+      ${COLORS.BORDER_COLOR}: var(${GREY[800]});
     }
   }
 `;

@@ -1,7 +1,7 @@
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { Types, Variant } from '../../helpers';
-import { StatusBadge } from '../StatusBadge/StatusBadge';
+import { StatusDot } from '../StatusDot';
 import { Content, Wrapper, statusBadgeClassName } from './styled';
 
 export type StatusTagProps = {
@@ -20,7 +20,7 @@ export function StatusTag({
 }: WithSupportProps<StatusTagProps>) {
   return (
     <Wrapper className={className} data-variant={variant} {...extractSupportProps(rest)}>
-      <StatusBadge type={type} className={statusBadgeClassName} />
+      <StatusDot type={type} className={statusBadgeClassName} />
       {text && <Content>{text}</Content>}
     </Wrapper>
   );
