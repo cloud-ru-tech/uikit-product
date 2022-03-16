@@ -6,37 +6,48 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TEXT_1_STYLES, TEXT_2_STYLES, TEXT_3_STYLES, TEXT_4_STYLES } from '../src';
+import { TypographyStoryConfig, commonTemplate } from './helpers/CommonTemplate';
 
 export default {
   title: 'Typography/Text',
 } as Meta;
 
-const Text1 = styled.div`
-  ${TEXT_1_STYLES};
-`;
+const textConfig: TypographyStoryConfig = [
+  {
+    name: 'Text1',
+    Component: styled.div`
+      ${TEXT_1_STYLES};
+    `,
+    styles: TEXT_1_STYLES.toString(),
+  },
+  {
+    name: 'Text2',
+    Component: styled.div`
+      ${TEXT_2_STYLES};
+    `,
+    styles: TEXT_2_STYLES.toString(),
+  },
+  {
+    name: 'Text3',
+    Component: styled.div`
+      ${TEXT_3_STYLES};
+    `,
+    styles: TEXT_3_STYLES.toString(),
+  },
+  {
+    name: 'Text4',
+    Component: styled.div`
+      ${TEXT_4_STYLES};
+    `,
+    styles: TEXT_4_STYLES.toString(),
+  },
+];
 
-const Text2 = styled.div`
-  ${TEXT_2_STYLES};
-`;
-
-const Text3 = styled.div`
-  ${TEXT_3_STYLES};
-`;
-
-const Text4 = styled.div`
-  ${TEXT_4_STYLES};
-`;
-
-const Template: Story = () => (
-  <>
-    <Text1>Пример (Text1)</Text1>
-    <Text2>Пример (Text2)</Text2>
-    <Text3>Пример (Text3)</Text3>
-    <Text4>Пример (Text4)</Text4>
-  </>
-);
-
+const Template: Story<{ value: string }> = commonTemplate(textConfig);
 export const text = Template.bind({});
+text.args = {
+  value: 'Пример',
+};
 text.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

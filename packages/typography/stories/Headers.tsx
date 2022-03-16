@@ -6,52 +6,70 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { H1_STYLES, H2_STYLES, H3_SEMIBOLD_STYLES, H3_STYLES, H4_SEMIBOLD_STYLES, H4_STYLES, H5_STYLES } from '../src';
+import { TypographyStoryConfig, commonTemplate } from './helpers/CommonTemplate';
 
 export default {
   title: 'Typography/Headers',
 } as Meta;
 
-const H1 = styled.h1`
-  ${H1_STYLES};
-`;
+const headersConfig: TypographyStoryConfig = [
+  {
+    name: 'H1',
+    Component: styled.h1`
+      ${H1_STYLES};
+    `,
+    styles: H1_STYLES.toString(),
+  },
+  {
+    name: 'H2',
+    Component: styled.h2`
+      ${H2_STYLES};
+    `,
+    styles: H2_STYLES.toString(),
+  },
+  {
+    name: 'H3',
+    Component: styled.h3`
+      ${H3_STYLES};
+    `,
+    styles: H3_STYLES.toString(),
+  },
+  {
+    name: 'H3Semibold',
+    Component: styled.h3`
+      ${H3_SEMIBOLD_STYLES};
+    `,
+    styles: H3_SEMIBOLD_STYLES.toString(),
+  },
+  {
+    name: 'H4',
+    Component: styled.h4`
+      ${H4_STYLES};
+    `,
+    styles: H4_STYLES.toString(),
+  },
+  {
+    name: 'H4Semibold',
+    Component: styled.h4`
+      ${H4_SEMIBOLD_STYLES};
+    `,
+    styles: H4_SEMIBOLD_STYLES.toString(),
+  },
+  {
+    name: 'H5',
+    Component: styled.h5`
+      ${H5_STYLES};
+    `,
+    styles: H5_STYLES.toString(),
+  },
+];
 
-const H2 = styled.h2`
-  ${H2_STYLES};
-`;
-
-const H3 = styled.h3`
-  ${H3_STYLES};
-`;
-
-const H3Semibold = styled.h3`
-  ${H3_SEMIBOLD_STYLES};
-`;
-
-const H4 = styled.h4`
-  ${H4_STYLES};
-`;
-
-const H4Semibold = styled.h4`
-  ${H4_SEMIBOLD_STYLES};
-`;
-
-const H5 = styled.h5`
-  ${H5_STYLES};
-`;
-
-const Template: Story = () => (
-  <>
-    <H1>Пример (H1)</H1>
-    <H2>Пример (H2)</H2>
-    <H3>Пример (H3)</H3>
-    <H3Semibold>Пример (H3Semibold)</H3Semibold>
-    <H4>Пример (H4)</H4>
-    <H4Semibold>Пример (H4Semibold)</H4Semibold>
-    <H5>Пример (H5)</H5>
-  </>
-);
+const Template: Story<{ value: string }> = commonTemplate(headersConfig);
 
 export const headers = Template.bind({});
+headers.args = {
+  value: 'Пример',
+};
 headers.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
