@@ -19,7 +19,7 @@ const Container = styled.div<{ theme: Themes }>`
   justify-content: center;
   border: 1px solid var(${EXPORT_VARS.GREY[100]});
   border-radius: 10%;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#404040')};
 `;
 
 const Template: Story<StatusBadgeProps> = ({ ...args }, { globals: { theme } }) => (
@@ -33,10 +33,11 @@ export const statusBadge = Template.bind({});
 statusBadge.parameters = getDefaultParameters({
   figmaUrl:
     'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=3477%3A46230',
-  extraControlsInclude: ['type'],
+  extraControlsInclude: ['type', 'size'],
 });
 
 statusBadge.args = getDefaultArgs({
+  size: StatusBadge.sizes.Small,
   type: StatusBadge.types.Success,
 });
 
@@ -46,5 +47,11 @@ statusBadge.argTypes = {
       type: 'radio',
     },
     options: Object.values(StatusBadge.types),
+  },
+  size: {
+    control: {
+      type: 'radio',
+    },
+    options: Object.values(StatusBadge.sizes),
   },
 };
