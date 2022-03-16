@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { Paginator, PaginatorProps } from '@sbercloud/uikit-react-paginator-private';
+import { Pagination } from '@sbercloud/uikit-react-pagination-private';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import * as S from './styled';
@@ -9,7 +9,7 @@ export type CardsPanelProps = {
   className?: string;
   autoFill?: boolean;
   cardsPerRow?: number;
-  paginateProps?: PaginatorProps & {
+  paginateProps?: {
     page: number;
     pageSize: number;
     position?: 'top' | 'bottom';
@@ -32,6 +32,10 @@ export const CardsPanel = ({
       ? Math.ceil((children as Array<React.ReactNode>).length / (paginateProps.pageSize || 1))
       : 0;
 
+  function handlePageChange(page: number) {
+    setPage(page - 1);
+  }
+
   useEffect(() => {
     if (pagesAmount > 0 && page > pagesAmount - 1) {
       setPage(pagesAmount - 1);
@@ -43,12 +47,7 @@ export const CardsPanel = ({
       <S.CardsPanel {...extractSupportProps(rest)}>
         {paginateProps.position === 'top' && pagesAmount > 1 ? (
           <S.PageWrapper data-test-id='card-panel__paginate'>
-            <Paginator
-              {...paginateProps}
-              pageCount={pagesAmount}
-              forcePage={page}
-              onPageChange={({ selected }) => setPage(selected)}
-            />
+            <Pagination total={pagesAmount} page={page + 1} onChange={handlePageChange} />
           </S.PageWrapper>
         ) : null}
         <S.Container autoFill={autoFill} className={className} cardsPerRow={cardsPerRow}>
@@ -60,13 +59,7 @@ export const CardsPanel = ({
         </S.Container>
         {(paginateProps.position === 'bottom' || paginateProps.position === undefined) && pagesAmount > 1 ? (
           <S.PageWrapper data-test-id='card-panel__paginate'>
-            <Paginator
-              placement={Paginator.placements.Left}
-              {...paginateProps}
-              pageCount={pagesAmount}
-              forcePage={page}
-              onPageChange={({ selected }) => setPage(selected)}
-            />
+            <Pagination total={pagesAmount} page={page + 1} onChange={handlePageChange} />
           </S.PageWrapper>
         ) : null}
       </S.CardsPanel>
