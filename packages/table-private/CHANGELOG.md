@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.7.0...@sbercloud/uikit-react-table-private@0.8.0) (2022-03-16)
+
+
+### Features
+
+* [AICDC-5783](https://jira.sbercloud.tech/browse/AICDC-5783), added onRowDoubleClicked and onRowClicked props ([e5b7194](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/e5b7194ad5d46cc6b95411c229f2b2c99a1b4f12))
+
+
+
+
+
 # [0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.11...@sbercloud/uikit-react-table-private@0.7.0) (2022-03-09)
 
 

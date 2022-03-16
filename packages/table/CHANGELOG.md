@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.29.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.28.7...@sbercloud/uikit-react-table@0.29.0) (2022-03-16)
+
+
+### Features
+
+* [AICDC-5783](https://jira.sbercloud.tech/browse/AICDC-5783), added count to delete modal description and title ([8cb940d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/8cb940d20157c10d6732e2e56f50335f47f2b864))
+* [AICDC-5783](https://jira.sbercloud.tech/browse/AICDC-5783), added onRowDoubleClicked and onRowClicked props ([e5b7194](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/e5b7194ad5d46cc6b95411c229f2b2c99a1b4f12))
+
+
+
+
+
 ## [0.28.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.28.6...@sbercloud/uikit-react-table@0.28.7) (2022-03-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
