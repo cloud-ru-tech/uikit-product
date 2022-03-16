@@ -27,6 +27,8 @@ export type ClientModelTableControllerProps<T> = {
   };
   advancedProps?: {
     getRowHeight?: TablePrivateProps['getRowHeight'];
+    onRowClicked?: TablePrivateProps['onRowClicked'];
+    onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
   };
 };
 
@@ -265,6 +267,8 @@ export function ClientModelTableController<T>({
       getRowHeight={advancedProps?.getRowHeight}
       onGridReady={onGridReady}
       onRefreshCallback={onRefreshCallback}
+      onRowClicked={advancedProps?.onRowClicked}
+      onRowDoubleClicked={advancedProps?.onRowDoubleClicked}
       useRowSelection={useRowSelection}
       deleteProps={deleteProps}
       filterProps={newFilterProps}

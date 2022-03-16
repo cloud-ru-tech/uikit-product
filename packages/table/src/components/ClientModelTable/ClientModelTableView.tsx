@@ -29,6 +29,8 @@ type ClientModelTableViewProps<T> = {
   };
   paginationProps?: PaginationProps;
   onRefreshCallback?(): void | Promise<void>;
+  onRowClicked?: TablePrivateProps['onRowClicked'];
+  onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
   onSearchCallback(value: string): void;
   moreActions: ToolbarMoreActionsProps['actions'];
   searchValue: string;
@@ -48,6 +50,8 @@ export function ClientModelTableView<T>({
   paginationProps,
   getRowHeight,
   moreActions,
+  onRowClicked,
+  onRowDoubleClicked,
   ...rest
 }: WithSupportProps<ClientModelTableViewProps<T>>) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -99,6 +103,8 @@ export function ClientModelTableView<T>({
         columnDefs={columnDefinitions}
         onGridReady={onGridReady}
         getRowHeight={getRowHeight}
+        onRowClicked={onRowClicked}
+        onRowDoubleClicked={onRowDoubleClicked}
         doesRowPassFilter={filterProps?.doesRowPassFilter}
         gridOptions={{
           defaultColDef: {
