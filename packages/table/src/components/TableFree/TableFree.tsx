@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { Paginator } from '@sbercloud/uikit-react-paginator-private';
+import { Pagination } from '@sbercloud/uikit-react-pagination-private';
 import { TableFreePrivate, TableFreePrivateProps } from '@sbercloud/uikit-react-table-private';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
@@ -27,6 +27,7 @@ export function TableFree({
 }: WithSupportProps<ITableFreeProps>) {
   const [gridApi, setGridApi] = useState<ITableFreeProps['api']>();
   const [totalPages, setTotalPages] = useState(0);
+  const [page, setPage] = useState(0);
 
   useEffect(() => {
     gridApi?.paginationSetPageSize(pageSize);
@@ -57,12 +58,15 @@ export function TableFree({
       />
       {!!pageSize && totalPages > 1 && (
         <S.PaginationWrapper>
-          <Paginator
-            pageCount={totalPages}
-            onPageChange={({ selected }: { selected: number }) => {
-              gridApi?.paginationGoToPage(selected);
+          <Pagination
+            total={totalPages}
+            page={page + 1}
+            onChange={page => {
+              const nextPage = page - 1;
+
+              gridApi?.paginationGoToPage(nextPage);
+              setPage(nextPage);
             }}
-            placement={Paginator.placements.Left}
           />
         </S.PaginationWrapper>
       )}

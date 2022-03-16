@@ -17,6 +17,6 @@ export type FilterProps<T> = ToolbarFilterProps & { doesRowPassFilter(data: T): 
 export type PaginationProps = {
   pageCount: number;
   currentPage: number;
-  pageChangeHandler({ selected }: { selected: number }): void;
+  pageChangeHandler(currentPage: number): void;
   showPagination: boolean;
 };

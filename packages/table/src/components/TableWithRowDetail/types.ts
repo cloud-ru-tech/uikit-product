@@ -9,6 +9,6 @@ export type OnSearchCallback = (value: string) => void;
 export type PaginationProps = {
   pageCount: number;
   currentPage: number;
-  pageChangeHandler({ selected }: { selected: number }): void;
+  pageChangeHandler(currentPage: number): void;
   showPagination: boolean;
 };

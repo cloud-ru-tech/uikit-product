@@ -4,7 +4,7 @@ import { ExcelExportModule } from '@ag-grid-enterprise/excel-export';
 import { ButtonToolbar, RefreshButton } from '@sbercloud/uikit-react-button';
 import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Modal } from '@sbercloud/uikit-react-modal';
-import { Paginator } from '@sbercloud/uikit-react-paginator-private';
+import { Pagination } from '@sbercloud/uikit-react-pagination-private';
 import { TablePrivate, TablePrivateProps } from '@sbercloud/uikit-react-table-private';
 import { Toolbar, ToolbarMoreActionsProps } from '@sbercloud/uikit-react-toolbar';
 import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
@@ -129,12 +129,10 @@ export function ClientModelTableView<T>({
       />
       {paginationProps?.showPagination && (
         <S.PaginationWrapper>
-          <Paginator
-            pageCount={paginationProps.pageCount || 1}
-            onPageChange={paginationProps.pageChangeHandler}
-            disableInitialCallback
-            forcePage={paginationProps.currentPage}
-            placement={Paginator.placements.Left}
+          <Pagination
+            total={paginationProps.pageCount || 1}
+            page={paginationProps.currentPage + 1}
+            onChange={paginationProps.pageChangeHandler}
           />
         </S.PaginationWrapper>
       )}

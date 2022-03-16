@@ -1,7 +1,7 @@
 import { MasterDetailModule } from '@ag-grid-enterprise/master-detail';
 import { ReactNode } from 'react';
 
-import { Paginator } from '@sbercloud/uikit-react-paginator-private';
+import { Pagination } from '@sbercloud/uikit-react-pagination-private';
 import { TablePrivate } from '@sbercloud/uikit-react-table-private';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
@@ -85,12 +85,10 @@ export function TableWithRowDetailView<T>({
 
       {paginationProps?.showPagination && (
         <S.PaginationWrapper>
-          <Paginator
-            pageCount={paginationProps.pageCount || 1}
-            onPageChange={paginationProps.pageChangeHandler}
-            disableInitialCallback
-            forcePage={paginationProps.currentPage}
-            placement={Paginator.placements.Left}
+          <Pagination
+            total={paginationProps.pageCount || 1}
+            page={paginationProps.currentPage + 1}
+            onChange={paginationProps.pageChangeHandler}
           />
         </S.PaginationWrapper>
       )}

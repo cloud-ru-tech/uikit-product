@@ -109,9 +109,11 @@ export function TableWithRowDetailController<T>({
   }, [gridApi, pageCount, pageSize, data.length, currentPage]);
 
   const pageChangeHandler = useCallback(
-    ({ selected }: { selected: number }) => {
-      gridApi?.paginationGoToPage(selected);
-      setCurrentPage(selected);
+    (currentPage: number) => {
+      const nextPage = currentPage - 1;
+
+      gridApi?.paginationGoToPage(nextPage);
+      setCurrentPage(nextPage);
     },
     [gridApi],
   );
