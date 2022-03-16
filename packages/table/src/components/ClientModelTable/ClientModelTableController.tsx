@@ -17,8 +17,8 @@ export type ClientModelTableControllerProps<T> = {
   bulkActions?: {
     delete?: {
       onDelete(ids: string[]): void | Promise<void>;
-      title: string;
-      description: string;
+      title: string | ((arg: { count: number }) => string);
+      description: string | ((arg: { count: number }) => string);
       approveText: string;
       cancelText: string;
     };
@@ -165,8 +165,14 @@ export function ClientModelTableController<T>({
         onCancelDelete,
         openDeleteDialog,
         deleteDialogOpened,
-        title: bulkActions.delete.title,
-        description: bulkActions.delete.description,
+        title:
+          typeof bulkActions.delete.title === 'function'
+            ? bulkActions.delete.title({ count: selectedRows.length })
+            : bulkActions.delete.title,
+        description:
+          typeof bulkActions.delete.description === 'function'
+            ? bulkActions.delete.description({ count: selectedRows.length })
+            : bulkActions.delete.description,
         approveText: bulkActions.delete.approveText,
         cancelText: bulkActions.delete.cancelText,
         isDeleteEnabled: Boolean(selectedRows.length),
