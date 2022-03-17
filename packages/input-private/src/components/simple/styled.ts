@@ -152,11 +152,13 @@ export const MoreButtonWrapper = styled.div`
 `;
 
 export const MoreButton = styled(ButtonIcon)`
-  height: 100%;
-  width: 100%;
-
-  && > button {
+  && {
     height: 100%;
     width: 100%;
+
+    > button {
+      height: 100%;
+      width: 100%;
+    }
   }
 `;
