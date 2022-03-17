@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-input-private@2.2.0...@sbercloud/uikit-react-input-private@2.2.1) (2022-03-17)
+
+
+### Bug Fixes
+
+* fixes input more button position ([f4492ff](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/f4492ff5765ef3e0ecee9ca3dfdf62d73e6bc5b8))
+
+
+
+
+
 # [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-input-private@2.1.2...@sbercloud/uikit-react-input-private@2.2.0) (2022-03-09)
 
 
