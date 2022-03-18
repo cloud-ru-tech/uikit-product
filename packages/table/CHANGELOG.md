@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.30.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.29.2...@sbercloud/uikit-react-table@0.30.0) (2022-03-18)
+
+
+### Features
+
+* replace `paginator-private` with `pagination-private` package ([c32d45c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/c32d45cc6249c9a1c1eb60d74ed0741d596fc8c1))
+
+
+
+
+
 ## [0.29.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.29.1...@sbercloud/uikit-react-table@0.29.2) (2022-03-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
