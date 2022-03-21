@@ -16,7 +16,7 @@ const Template: Story<ButtonIconTransparentProps> = ({ ...args }) => (
     {Object.entries(ButtonIconTransparent.variants).map(([key, value]) => (
       <TableColumn
         key={key}
-        data-variant={value === ButtonIconTransparent.variants.Accent ? TableColumn.variants.accent : undefined}
+        data-variant={value === ButtonIconTransparent.variants.Accent ? TableColumn.variants.onAccent : undefined}
       >
         <TableCell>{key}</TableCell>
 
@@ -37,7 +37,8 @@ const Template: Story<ButtonIconTransparentProps> = ({ ...args }) => (
 export const buttonIconTransparent = Template.bind({});
 
 buttonIconTransparent.parameters = getDefaultParameters({
-  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=1492%3A41816',
+  figmaUrl:
+    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=212%3A0',
   extraControlsInclude: ['rounded'],
 });
 

@@ -1,7 +1,19 @@
 export enum Variant {
-  Accent = 'Accent',
   Primary = 'primary',
   Secondary = 'secondary',
+  Tertiary = 'tertiary',
+  OnAccent = 'onAccent',
+  OnDark = 'onDark',
+}
+
+export enum Sizes {
+  Small = 'small',
+  Medium = 'medium',
+}
+
+export enum SizesInPx {
+  small = '16px',
+  medium = '20px',
 }
 
 export enum IconPosition {

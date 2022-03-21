@@ -22,7 +22,8 @@ const Template: Story<ButtonToolbarProps> = ({ ...args }) => (
 export const buttonToolbar = Template.bind({});
 
 buttonToolbar.parameters = getDefaultParameters({
-  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=1098%3A22594',
+  figmaUrl:
+    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=6471%3A89335',
 });
 
 buttonToolbar.args = getDefaultArgs();

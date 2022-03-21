@@ -48,7 +48,8 @@ const Template: Story<ButtonRoundProps> = ({ ...args }) => (
 export const buttonRound = Template.bind({});
 
 buttonRound.parameters = getDefaultParameters({
-  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=1086%3A22431',
+  figmaUrl:
+    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=212%3A0',
   extraControlsInclude: ['text'],
 });
 

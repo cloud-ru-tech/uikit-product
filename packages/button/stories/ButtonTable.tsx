@@ -31,10 +31,7 @@ const Template: Story<StoryProps> = ({ getProgressText, ...args }: StoryProps) =
       </TableColumn>
 
       {Object.entries(ButtonTable.variants).map(([key, value]) => (
-        <TableColumn
-          key={key}
-          data-variant={value === ButtonTable.variants.OnAccent ? TableColumn.variants.accent : undefined}
-        >
+        <TableColumn key={key} data-variant={TableColumn.variants[value]}>
           <TableCell>{key}</TableCell>
 
           <TableCell>
@@ -59,7 +56,8 @@ const Template: Story<StoryProps> = ({ getProgressText, ...args }: StoryProps) =
 export const buttonTable = Template.bind({});
 
 buttonTable.parameters = getDefaultParameters({
-  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=1100%3A22793',
+  figmaUrl:
+    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=212%3A0',
   extraControlsInclude: ['text', 'loading', 'loadingText', 'progress', 'getProgressText'],
 });
 

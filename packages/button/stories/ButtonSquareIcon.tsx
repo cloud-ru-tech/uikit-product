@@ -16,7 +16,7 @@ const Template: Story<ButtonSquareIconProps> = ({ ...args }) => (
     {Object.entries(ButtonSquareIcon.variants).map(([key, value]) => (
       <TableColumn
         key={key}
-        data-variant={value === ButtonSquareIcon.variants.Accent ? TableColumn.variants.accent : undefined}
+        data-variant={value === ButtonSquareIcon.variants.Accent ? TableColumn.variants.onAccent : undefined}
       >
         <TableCell>{key}</TableCell>
 
@@ -37,7 +37,8 @@ const Template: Story<ButtonSquareIconProps> = ({ ...args }) => (
 export const buttonSquareIcon = Template.bind({});
 
 buttonSquareIcon.parameters = getDefaultParameters({
-  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=1089%3A57',
+  figmaUrl:
+    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=212%3A0',
 });
 
 buttonSquareIcon.args = getDefaultArgs();

@@ -14,7 +14,7 @@ export default {
 const Template: Story<ButtonGhostProps> = ({ ...args }) => (
   <TableWrapper>
     {Object.entries(ButtonGhost.variants).map(([key, value]) => (
-      <TableColumn key={key}>
+      <TableColumn key={key} data-variant={TableColumn.variants[value]}>
         <TableCell>{key}</TableCell>
 
         <TableCell>
@@ -49,11 +49,12 @@ const Template: Story<ButtonGhostProps> = ({ ...args }) => (
 export const buttonGhost = Template.bind({});
 
 buttonGhost.parameters = getDefaultParameters({
-  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=3064%3A45804',
-  extraControlsInclude: ['text'],
+  figmaUrl:
+    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=212%3A0',
+  extraControlsInclude: ['text', 'size'],
 });
 
-buttonGhost.args = getDefaultArgs({ text: 'Button text' });
+buttonGhost.args = getDefaultArgs({ text: 'Button text', size: ButtonGhost.sizes.Medium });
 
 buttonGhost.argTypes = {
   text: {
@@ -61,5 +62,11 @@ buttonGhost.argTypes = {
       required: true,
       type: 'text',
     },
+  },
+  size: {
+    control: {
+      type: 'radio',
+    },
+    options: Object.values(ButtonGhost.sizes),
   },
 };

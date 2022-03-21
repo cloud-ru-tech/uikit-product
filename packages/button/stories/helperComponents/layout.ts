@@ -31,7 +31,10 @@ export const TableWrapper = styled.div`
   overflow: auto;
 `;
 
-export const COLUMN_ACCENT = 'accent' as const;
+export const COLUMN_STYLE = {
+  onAccent: 'onAccent',
+  onDark: 'onDark',
+} as const;
 
 const TableColumnBase = styled.div`
   display: grid;
@@ -45,19 +48,22 @@ const TableColumnBase = styled.div`
     border-right: 1px solid var(${EXPORT_VARS.GREY[100]});
   }
 
-  &[data-variant='${COLUMN_ACCENT}'] {
+  &[data-variant='${COLUMN_STYLE.onAccent}'] {
     color: var(${EXPORT_VARS.GREY[0]});
     background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_ACCENT});
+  }
+
+  &[data-variant='${COLUMN_STYLE.onDark}'] {
+    color: var(${EXPORT_VARS.GREY[0]});
+    background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_DARK});
   }
 `;
 
 export const TableColumn = TableColumnBase as typeof TableColumnBase & {
-  variants: {
-    accent: typeof COLUMN_ACCENT;
-  };
+  variants: typeof COLUMN_STYLE;
 };
 
-TableColumn.variants = { accent: COLUMN_ACCENT };
+TableColumn.variants = COLUMN_STYLE;
 
 export const TableCell = styled.div`
   display: flex;

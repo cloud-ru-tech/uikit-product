@@ -14,10 +14,7 @@ export default {
 const Template: Story<ButtonProps> = ({ ...args }) => (
   <TableWrapper>
     {Object.entries(Button.variants).map(([key, value]) => (
-      <TableColumn
-        key={key}
-        data-variant={value === Button.variants.OnAccent ? TableColumn.variants.accent : undefined}
-      >
+      <TableColumn key={key} data-variant={TableColumn.variants[value]}>
         <TableCell>{key}</TableCell>
 
         <TableCell>
@@ -41,7 +38,8 @@ const Template: Story<ButtonProps> = ({ ...args }) => (
 export const button = Template.bind({});
 
 button.parameters = getDefaultParameters({
-  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=1058%3A18914',
+  figmaUrl:
+    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=212%3A0',
   extraControlsInclude: ['text'],
 });
 

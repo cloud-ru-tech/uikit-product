@@ -25,7 +25,8 @@ const Template: Story<ButtonRoundBigProps> = ({ ...args }) => (
 export const buttonRoundBig = Template.bind({});
 
 buttonRoundBig.parameters = getDefaultParameters({
-  figmaUrl: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U?node-id=1084%3A48',
+  figmaUrl:
+    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=212%3A0',
   extraControlsInclude: ['text'],
 });
 
