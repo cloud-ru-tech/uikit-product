@@ -1,3 +1,4 @@
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
@@ -7,52 +8,51 @@ import componentReadme from '../README.md';
 import { Tag, TagProps } from '../src';
 
 export default {
-  title: 'Not stable/Tag/Tag',
+  title: 'Components/Tag/Tag',
   component: Tag,
 } as Meta;
 
-const Row = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-
-const Column = styled.div`
+const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-right: 50px;
+  row-gap: 10px;
 `;
 
-const TagWrap = styled.div`
-  padding: 10px;
+const Row = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
 `;
 
-const Title = styled.div`
-  margin-bottom: 20px;
-`;
+const Name = styled.span``;
 
-const Template: Story<TagProps> = ({ ...args }) => (
-  <Row>
-    <Column>
-      <Title>Default tags (preset color)</Title>
-      {Object.values(Tag.colors).map(color => (
-        <TagWrap key={color}>
-          <Tag color={color} {...args}>
-            {color}
-          </Tag>
-        </TagWrap>
-      ))}
-    </Column>
-  </Row>
+const Template: Story<TagProps & { showRemoveButton: boolean }> = args => (
+  <Wrapper>
+    {Object.entries(Tag.colors).map(([name, color]) => (
+      <Row key={color}>
+        <Name>{name}</Name>
+        <Tag {...args} onRemoveClick={args.showRemoveButton ? args.onRemoveClick : undefined} color={color} />
+      </Row>
+    ))}
+  </Wrapper>
 );
 
 export const tag = Template.bind({});
+tag.args = { value: 'Tag', showRemoveButton: false };
+tag.argTypes = {
+  showRemoveButton: {
+    type: 'boolean',
+    name: '[Stories]: Show or not Remove Button',
+  },
+};
 tag.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  badges: [BADGE.STABLE],
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    name: 'Figma',
+    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=4736%3A66452',
   },
 };

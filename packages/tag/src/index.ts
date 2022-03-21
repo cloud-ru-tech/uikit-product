@@ -1,2 +1,1 @@
-export * from './Tag';
-export * from './TagRow';
+export * from './components';
