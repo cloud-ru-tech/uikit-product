@@ -8,7 +8,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TagSelect } from '../src';
-import { PRESET_COLORS } from '../src/constants';
+import { COLOR_VALUES } from '../src/constants';
 import getRandomInt from '../src/helpers/getRandomInt';
 
 export default {
@@ -19,7 +19,7 @@ export default {
 const tags = [...new Array(100)].map(() => ({
   value: Math.random().toString(),
   label: `предикт_станок_${getRandomInt(0, 1000)}`,
-  color: PRESET_COLORS[getRandomInt(0, PRESET_COLORS.length - 1)],
+  color: COLOR_VALUES[getRandomInt(0, COLOR_VALUES.length - 1)],
 }));
 
 const Wrap = styled.div`
@@ -37,7 +37,7 @@ const Template: Story = (args): JSX.Element => {
     {
       value: Math.random().toString(),
       label: 'test-tag',
-      color: PRESET_COLORS[getRandomInt(0, PRESET_COLORS.length - 1)],
+      color: COLOR_VALUES[getRandomInt(0, COLOR_VALUES.length - 1)],
     },
     ...tags,
   ]);

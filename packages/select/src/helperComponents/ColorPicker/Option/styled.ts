@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { Tag } from '@sbercloud/uikit-react-tag';
+import { ColorBox } from '../ColorBox';
 
 export const optionClass = css`
   flex-basis: 33.33%;
@@ -16,10 +16,8 @@ export const optionClass = css`
   }
 `;
 
-export const StyledTag = styled(Tag)`
-  padding: 0;
+export const StyledColorBox = styled(ColorBox)`
   min-width: 28px;
   width: 28px;
   height: 28px;
-  border: 1px solid transparent;
 `;

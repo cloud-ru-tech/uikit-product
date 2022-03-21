@@ -127,7 +127,7 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
       >
         {filteredData.map(({ name, selected, date, image, url }, index) => (
           <CardsPanelItem selected={selected} key={index} onClick={() => alert('alert')}>
-            <TagsWrapStyled>{selected ? <Tag color='red'>Selected</Tag> : null}</TagsWrapStyled>
+            <TagsWrapStyled>{selected ? <Tag color={Tag.colors.Red} value='Selected' /> : null}</TagsWrapStyled>
             <TitleStyled>{name}</TitleStyled>
             <DateStyled>{date}</DateStyled>
             <InputWrapStyled>

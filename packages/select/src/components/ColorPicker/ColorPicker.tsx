@@ -1,10 +1,10 @@
-import { PRESET_COLORS, PresetColorType } from '../../constants';
+import { COLOR_VALUES, Colors } from '../../constants';
 import * as ColorComponents from '../../helperComponents/ColorPicker';
 import { ISelectProps, OptionTypeBase, Select } from '../Default';
 
-const colors = PRESET_COLORS.map(color => ({ value: color }));
+const colors = COLOR_VALUES.map(color => ({ value: color }));
 
-export type OptionTypeColor = { value: PresetColorType };
+export type OptionTypeColor = { value: Colors };
 
 export interface IColorPicker<OptionTypeColor> extends ISelectProps<OptionTypeColor> {
   defaultValue?: OptionTypeColor;

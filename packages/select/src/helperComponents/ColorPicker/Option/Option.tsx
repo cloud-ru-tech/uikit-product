@@ -1,7 +1,7 @@
 import { cx } from '@linaria/core';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { StyledTag, optionClass } from './styled';
+import { StyledColorBox, optionClass } from './styled';
 
 export const Option = ({
   data,
@@ -10,6 +10,6 @@ export const Option = ({
   ...restProps
 }: React.ComponentProps<typeof ReactSelectComponents.Option>): JSX.Element => (
   <ReactSelectComponents.Option {...restProps} data={data} className={cx(className, optionClass)}>
-    <StyledTag color={value} />
+    <StyledColorBox color={value} />
   </ReactSelectComponents.Option>
 );

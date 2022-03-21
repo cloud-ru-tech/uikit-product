@@ -12,5 +12,5 @@ export const ValueContainer = ({
 
   const data = getValue()[0];
 
-  return <Tag color={data.color}>{data.label}</Tag>;
+  return <Tag color={data.color} value={data.label} />;
 };

@@ -23,15 +23,15 @@ export const StyledButton = styled(Button)`
 `;
 
 export const StyledTagWrapper = styled.div`
-  flex-grow: 1;
   margin: 0 12px;
   line-height: 0;
   text-align: left;
-  width: calc(100% - 64px - 20px - 24px);
+  min-width: 0;
 `;
 
 export const colorPickerClassName = css`
   width: 20px;
+  margin-left: auto;
 `;
 
 export const NotValidMessage = styled.div`

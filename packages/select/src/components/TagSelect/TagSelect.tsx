@@ -4,7 +4,7 @@ import RCSelect, { ValueType } from 'react-select';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
-import { PresetColorType } from '../../constants';
+import { Colors } from '../../constants';
 import * as TagComponents from '../../helperComponents/TagSelect';
 import { checkMobileDevice } from '../../helpers/checkMobileDevice';
 import getSelectorStyles from '../../helpers/getSelectStyles';
@@ -13,7 +13,7 @@ import { DictionaryPropertyAsFn, Texts, textProvider } from '../../helpers/texts
 export type OptionTypeTag = {
   value: string;
   label: string;
-  color: PresetColorType;
+  color: Colors;
 };
 
 type RCProps = React.ComponentProps<typeof RCSelect>;

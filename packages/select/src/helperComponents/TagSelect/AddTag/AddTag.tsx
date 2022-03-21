@@ -6,7 +6,7 @@ import { Tag } from '@sbercloud/uikit-react-tag';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { ColorPicker, OptionTypeColor } from '../../../components';
-import { PRESET_COLORS } from '../../../constants';
+import { COLOR_VALUES } from '../../../constants';
 import getRandomInt from '../../../helpers/getRandomInt';
 import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { Container, NotValidMessage, StyledButton, StyledTagWrapper, colorPickerClassName } from './styled';
@@ -15,7 +15,7 @@ export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.
   const { options, setValue, selectProps } = props;
   const { inputValue: search, colorDropdownPlacement, onTagChange, onSearch, validator, validateMessage } = selectProps;
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const [color, setColor] = useState(PRESET_COLORS[getRandomInt(0, PRESET_COLORS.length - 1)]);
+  const [color, setColor] = useState(COLOR_VALUES[getRandomInt(0, COLOR_VALUES.length - 1)]);
 
   const hasSearched = useMemo(() => options.some(option => option.label === search), [options, search]);
   const onClick = useCallback((): void => {
@@ -39,7 +39,7 @@ export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.
       <Container>
         <StyledButton disabled={notValid} variant={Button.variants.Transparent} onClick={onClick} text={addText} />
         <StyledTagWrapper>
-          <Tag color={color}>{search}</Tag>
+          <Tag color={color} value={search} />
         </StyledTagWrapper>
         <ColorPicker
           className={colorPickerClassName}

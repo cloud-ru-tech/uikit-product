@@ -153,7 +153,7 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
           </>
         ) : (
           <>
-            <StyledTagOptionLabel color={data.color}>{data.label}</StyledTagOptionLabel>
+            <StyledTagOptionLabel color={data.color} value={data.label} />
             <StyledTagButton
               onClick={(e: { stopPropagation: () => void }): void => {
                 e.stopPropagation();

@@ -2,7 +2,7 @@ import { components as ReactSelectComponents } from 'react-select';
 
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-import { StyledDropdown, StyledTag, arrowDownClassName } from './styled';
+import { StyledColorBox, StyledDropdown, arrowDownClassName } from './styled';
 
 export const DropdownIndicator = (
   props: React.ComponentProps<typeof ReactSelectComponents.DropdownIndicator>,
@@ -13,9 +13,9 @@ export const DropdownIndicator = (
 
   return (
     <StyledDropdown {...props}>
-      <StyledTag color={value}>
+      <StyledColorBox color={value}>
         <DropdownDownInterfaceSVG className={arrowDownClassName} />
-      </StyledTag>
+      </StyledColorBox>
     </StyledDropdown>
   );
 };
