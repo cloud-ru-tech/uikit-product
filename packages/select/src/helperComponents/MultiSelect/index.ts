@@ -1,2 +1,2 @@
-export * from './MultiValueRemove';
+export * from './MultiValue';
 export * from './CustomOption';

@@ -2,7 +2,7 @@ import React, { ReactText } from 'react';
 import RCSelect, { ActionMeta, ValueType, createFilter } from 'react-select';
 
 import { SelectActionTypes } from '../../constants';
-import { CustomOption, MultiValueRemove } from '../../helperComponents/MultiSelect';
+import { CustomOption, MultiValue } from '../../helperComponents/MultiSelect';
 import { MultiselectOptionType } from '../../helpers/types';
 import { styles } from '../../styles/multiSelect';
 import * as S from './styled';
@@ -74,7 +74,7 @@ export function MultiSelect({
         components={{
           IndicatorsContainer: () => <></>,
           NoOptionsMessage: () => <></>,
-          MultiValueRemove,
+          MultiValue,
           Option: CustomOption,
         }}
       />
