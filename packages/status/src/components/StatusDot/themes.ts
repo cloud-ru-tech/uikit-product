@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 
-const { GREY, BLUE_GREY, BERRY_RED, GRACE, SUNNY_YELLOW, PRESET } = EXPORT_VARS;
+const { GREY, BLUE_GREY, BERRY_RED, GRACE, SUNNY_YELLOW, EMERALD_GREEN } = EXPORT_VARS;
 
 export const COLORS = {
   SUCCESS_BG: '--status-dot-success-bg',
@@ -18,7 +18,7 @@ export const COLORS = {
 export const PURPLE_THEME = css`
   :global() {
     body[data-theme='${Themes.Purple}'] {
-      ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
+      ${COLORS.SUCCESS_BG}: var(${EMERALD_GREEN[100]});
       ${COLORS.FAILED_BG}: var(${BERRY_RED[100]});
       ${COLORS.WARNING_BG}: var(${SUNNY_YELLOW[100]});
       ${COLORS.UNACTIVE_BG}: var(${GREY[300]});
@@ -33,8 +33,8 @@ export const PURPLE_THEME = css`
 export const PURPLE_DARK_THEME = css`
   :global() {
     body[data-theme='${Themes.PurpleDark}'] {
-      ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
-      ${COLORS.FAILED_BG}: var(${BERRY_RED[100]});
+      ${COLORS.SUCCESS_BG}: var(${EMERALD_GREEN[75]});
+      ${COLORS.FAILED_BG}: var(${BERRY_RED[75]});
       ${COLORS.WARNING_BG}: var(${SUNNY_YELLOW[100]});
       ${COLORS.UNACTIVE_BG}: var(${GREY[550]});
       ${COLORS.PROGRESS_BG}: var(${GRACE[6]});
@@ -48,7 +48,7 @@ export const PURPLE_DARK_THEME = css`
 export const GREEN_THEME = css`
   :global() {
     body[data-theme='${Themes.Green}'] {
-      ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
+      ${COLORS.SUCCESS_BG}: var(${EMERALD_GREEN[100]});
       ${COLORS.FAILED_BG}: var(${BERRY_RED[100]});
       ${COLORS.WARNING_BG}: var(${SUNNY_YELLOW[100]});
       ${COLORS.UNACTIVE_BG}: var(${GREY[300]});
@@ -63,8 +63,8 @@ export const GREEN_THEME = css`
 export const GREEN_DARK_THEME = css`
   :global() {
     body[data-theme='${Themes.GreenDark}'] {
-      ${COLORS.SUCCESS_BG}: var(${PRESET.EMERALD_GREEN});
-      ${COLORS.FAILED_BG}: var(${BERRY_RED[100]});
+      ${COLORS.SUCCESS_BG}: var(${EMERALD_GREEN[75]});
+      ${COLORS.FAILED_BG}: var(${BERRY_RED[75]});
       ${COLORS.WARNING_BG}: var(${SUNNY_YELLOW[100]});
       ${COLORS.UNACTIVE_BG}: var(${GREY[550]});
       ${COLORS.PROGRESS_BG}: var(${GRACE[6]});

@@ -163,6 +163,16 @@ const GRADIENT = {
   4: '--color-gradient-4',
 };
 
+const EMERALD_GREEN = {
+  75: '--color-emerald-green-75',
+  100: '--color-emerald-green-100',
+};
+
+const EMERALD_GREEN_ALPHA = {
+  15: '--color-emerald-green-alpha-15',
+  25: '--color-emerald-green-alpha-25',
+};
+
 const PRESET = {
   GREEN_LIGHT: '--color-green-light',
   GREEN_DARK: '--color-green-dark',
@@ -188,12 +198,20 @@ const PRESET = {
   GRASS_DARK: '--color-grass-dark',
   SEAMOUNT_LIGHT: '--color-seamount-light',
   SEAMOUNT_DARK: '--color-seamount-dark',
-  EMERALD_GREEN: '--color-emerald-green',
-  EMERALD_GREEN_ALPHA: '--color-emerald-green-alpha',
   FINDED_WHITE: '--color-finded-white',
   FINDED_BLACK: '--color-finded-black',
   FOCUSED_WHITE: '--color-focused-white',
   FOCUSED_BLACK: '--color-focused-black',
+
+  /**
+   * @deprecated please change PRESET.EMERALD_GREEN to EMERALD_GREEN[100]
+   */
+  EMERALD_GREEN: '--color-emerald-green',
+
+  /**
+   * @deprecated please change PRESET.EMERALD_GREEN_ALPHA to EMERALD_GREEN_ALPHA[15]
+   */
+  EMERALD_GREEN_ALPHA: '--color-emerald-green-alpha',
 };
 
 export {
@@ -212,6 +230,8 @@ export {
   GRACE,
   GRACE_ALPHA,
   GRADIENT,
+  EMERALD_GREEN,
+  EMERALD_GREEN_ALPHA,
   PRESET,
 };
 
@@ -231,5 +251,7 @@ export default {
   GRACE,
   GRACE_ALPHA,
   GRADIENT,
+  EMERALD_GREEN,
+  EMERALD_GREEN_ALPHA,
   PRESET,
 };

@@ -88,6 +88,13 @@ const COLOR_VARIANT_LIST = [
   { name: 'Gradient', value: EXPORT_VARS.GRADIENT, color: '#343f48', background: '#fff' },
   { name: 'Sunny Yellow', value: EXPORT_VARS.SUNNY_YELLOW, color: '#343f48', background: '#fff' },
   { name: 'Sunny Yellow Alpha', value: EXPORT_VARS.SUNNY_YELLOW_ALPHA, color: '#343f48', background: '#fff' },
+  { name: 'Emerald Green', value: EXPORT_VARS.EMERALD_GREEN, color: '#05ae71', background: '#fff' },
+  {
+    name: 'Emerald Green Alpha',
+    value: EXPORT_VARS.EMERALD_GREEN_ALPHA,
+    color: 'rgba(5, 174, 113, 0.15)',
+    background: '#fff',
+  },
   {
     name: 'Color',
     value: EXPORT_VARS.PRESET,

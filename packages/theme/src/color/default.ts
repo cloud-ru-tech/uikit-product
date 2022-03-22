@@ -5,6 +5,8 @@ import {
   BERRY_RED_ALPHA,
   BLACK_ALFA,
   BLUE_GREY,
+  EMERALD_GREEN,
+  EMERALD_GREEN_ALPHA,
   GRACE,
   GRACE_ALPHA,
   GRADIENT,
@@ -155,6 +157,12 @@ export const COLORS_DEFAULT_MAP = `
  ${GRADIENT[3]}: linear-gradient(180deg, rgba(85, 88, 250, 0.3) 0%, rgba(85, 88, 250, 0) 100%);
  ${GRADIENT[4]}: linear-gradient(180deg, rgba(2, 228, 151, 0.3) 0%, rgba(2, 228, 151, 0) 100%);
 
+ ${EMERALD_GREEN[75]}: #43c294;
+ ${EMERALD_GREEN[100]}: #05ae71;
+
+ ${EMERALD_GREEN_ALPHA[15]}: rgba(5, 174, 113, 0.15);
+ ${EMERALD_GREEN_ALPHA[25]}: rgba(5, 174, 113, 0.25);
+
  ${PRESET.GREEN_LIGHT}: #d7e7e2;
  ${PRESET.GREEN_DARK}: #527771;
  ${PRESET.YELLOW_LIGHT}: #f9eed8;
@@ -179,13 +187,14 @@ export const COLORS_DEFAULT_MAP = `
  ${PRESET.GRASS_DARK}: #6d784e;
  ${PRESET.SEAMOUNT_LIGHT}: #e0f4f4;
  ${PRESET.SEAMOUNT_DARK}: #146c6c;
- ${PRESET.EMERALD_GREEN}: #05ae71;
- ${PRESET.EMERALD_GREEN_ALPHA}: rgba(5, 174, 113, 0.15);
  ${PRESET.FINDED_WHITE}: #fdffaa;
  ${PRESET.FINDED_BLACK}: #675d00;
  ${PRESET.FOCUSED_WHITE}: #ffd3aa;
  ${PRESET.FOCUSED_BLACK}: #964f0d;
- 
+
+ ${PRESET.EMERALD_GREEN}: #05ae71;
+ ${PRESET.EMERALD_GREEN_ALPHA}: rgba(5, 174, 113, 0.15);
+
 `;
 
 export const color = css`
