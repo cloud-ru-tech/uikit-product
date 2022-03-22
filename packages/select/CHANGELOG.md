@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.24.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-select@0.23.12...@sbercloud/uikit-react-select@0.24.0) (2022-03-22)
+
+
+### Bug Fixes
+
+* first stable version of tag ([ddace6c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/ddace6c675b28f98f8445a3cdece2657c8403c47))
+* use `Tag.colors` instead of color string and `value` instead of `children` ([d63b45e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/d63b45e1d25d1b2195225758b3542f12cc85930f))
+
+
+### Features
+
+* use `Tag` component as `MultiValue` of `MultiSelect` ([64e3585](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/64e3585dfa2464c0c11b6d93484433ec5dec50f9))
+
+
+
+
+
 ## [0.23.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-select@0.23.11...@sbercloud/uikit-react-select@0.23.12) (2022-03-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select

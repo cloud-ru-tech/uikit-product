@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-markdown-editor",
   "title": "React Markdown Editor",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-textarea-private": "2.2.0",
-    "@sbercloud/uikit-theme": "0.31.0",
-    "@sbercloud/uikit-utils": "2.2.0",
+    "@sbercloud/uikit-react-textarea-private": "2.2.1",
+    "@sbercloud/uikit-theme": "0.31.1",
+    "@sbercloud/uikit-utils": "2.2.1",
     "react-markdown": "7.1.1",
     "remark-gfm": "3.0.1"
   },

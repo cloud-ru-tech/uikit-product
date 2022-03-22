@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.31.1 (2022-03-22)
+
+
+### Bug Fixes
+
+* `PRESET.BLUE_LIGHT`, `PRESET.BROWN_DARK` and `PRESET.VIOLET_DARK` color values are changed ([b7a6c26](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/b7a6c263f9236b2365d080b77801a5c7a48d6429))
+
+
+
+
+
 # [0.31.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-theme@0.30.0...@sbercloud/uikit-theme@0.31.0) (2022-02-25)
 
 

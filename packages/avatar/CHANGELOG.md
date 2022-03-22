@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.15 (2022-03-22)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-avatar
+
+
+
+
+
 ## [0.6.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-avatar@0.6.13...@sbercloud/uikit-react-avatar@0.6.14) (2022-02-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-avatar

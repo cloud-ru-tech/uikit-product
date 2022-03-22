@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.34](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drawer@0.15.33...@sbercloud/uikit-react-drawer@0.15.34) (2022-03-22)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-drawer
+
+
+
+
+
 ## [0.15.33](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-drawer@0.15.32...@sbercloud/uikit-react-drawer@0.15.33) (2022-03-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drawer

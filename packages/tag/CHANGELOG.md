@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-tag@0.10.1...@sbercloud/uikit-react-tag@1.1.0) (2022-03-22)
+
+
+### Bug Fixes
+
+* first stable version of tag ([ddace6c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/ddace6c675b28f98f8445a3cdece2657c8403c47))
+
+
+### Features
+
+* sync `Tag` and `TagRow` with design system ([d64f74c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/d64f74cbe392063cbfc833e24b14ea496dfb858f))
+
+
+
+
+
 ## [0.10.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-tag@0.10.0...@sbercloud/uikit-react-tag@0.10.1) (2022-03-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tag

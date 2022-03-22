@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-cards@0.12.0...@sbercloud/uikit-react-cards@0.12.1) (2022-03-22)
+
+
+### Bug Fixes
+
+* use `Tag.colors` instead of color string and `value` instead of `children` ([d63b45e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/d63b45e1d25d1b2195225758b3542f12cc85930f))
+
+
+
+
+
 # [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-cards@0.11.33...@sbercloud/uikit-react-cards@0.12.0) (2022-03-18)
 
 
