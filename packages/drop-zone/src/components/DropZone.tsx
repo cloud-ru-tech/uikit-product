@@ -1,9 +1,10 @@
 import { ChangeEvent, DragEvent, MouseEvent, ReactNode, useRef, useState } from 'react';
 
+import { Link } from '@sbercloud/uikit-react-link';
 import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
-import { Texts, textProvider } from '../../helpers/texts-provider';
-import { Container, Description, H4Styled, Header, HiddenInput, LinkStyled } from './styled';
+import { Texts, textProvider } from '../helpers/texts-provider';
+import { Container, Description, H4Styled, Header, HiddenInput } from './styled';
 
 export type DropZoneProps = WithSupportProps<{
   onFileSelected(files: File[]): void;
@@ -67,7 +68,7 @@ export function DropZone({
     >
       <Header>
         <H4Styled>{textProvider(languageCode, Texts.HeaderText)}</H4Styled>
-        <LinkStyled text={textProvider(languageCode, Texts.LinkText)} onClick={handleAttachFile} />
+        <Link text={textProvider(languageCode, Texts.LinkText)} onClick={handleAttachFile} size={Link.sizes.Large} />
       </Header>
 
       <Description>{content}</Description>

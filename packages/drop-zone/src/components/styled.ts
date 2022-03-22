@@ -1,7 +1,5 @@
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { Link } from '@sbercloud/uikit-react-link';
 import { EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H4_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
@@ -44,9 +42,6 @@ export const Description = styled.span`
   color: var(${COLORS.CONTENT});
 `;
 
-export const LinkStyled = styled(Link)`
-  ${H4_STYLES};
-`;
 export const HiddenInput = styled.input`
   display: none;
 `;
