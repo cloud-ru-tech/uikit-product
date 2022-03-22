@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-input-private@2.2.3...@sbercloud/uikit-react-input-private@2.2.4) (2022-03-22)
+
+
+### Bug Fixes
+
+* disabled ts type ref errors ([fef9acc](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/fef9acc2b3a12dc27a893cfd18d64912bd5a460d))
+
+
+
+
+
 ## [2.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-input-private@2.2.2...@sbercloud/uikit-react-input-private@2.2.3) (2022-03-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input-private

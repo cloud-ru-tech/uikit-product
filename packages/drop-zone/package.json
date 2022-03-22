@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-drop-zone",
   "title": "React Drop Zone",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,10 +27,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-link": "3.0.1",
-    "@sbercloud/uikit-theme": "0.31.1",
+    "@sbercloud/uikit-react-link": "3.0.2",
+    "@sbercloud/uikit-theme": "0.32.0",
     "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.2.1"
+    "@sbercloud/uikit-utils": "2.2.2"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",
