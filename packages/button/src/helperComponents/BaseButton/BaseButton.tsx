@@ -29,7 +29,7 @@ function StylelessBaseButton(props: React.PropsWithChildren<CommonButtonProps>) 
       {props.children}
     </a>
   ) : (
-    <button {...props} className={props.className} />
+    <button type='button' {...props} className={props.className} />
   );
 }
 
