@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.0...@sbercloud/uikit-react-button@4.2.1) (2022-03-22)
+
+
+### Bug Fixes
+
+* default button type ([1f1a26b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/1f1a26bb387120d625fc98a476c3ed8aeb7fdad5))
+
+
+
+
+
 # [4.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.1.4...@sbercloud/uikit-react-button@4.2.0) (2022-03-22)
 
 

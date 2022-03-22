@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-cards",
   "title": "React Cards",
-  "version": "0.12.2",
+  "version": "0.12.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "4.2.0",
+    "@sbercloud/uikit-react-button": "4.2.1",
     "@sbercloud/uikit-react-pagination-private": "1.1.2",
     "@sbercloud/uikit-theme": "0.32.0",
     "@sbercloud/uikit-typography": "1.1.0",
