@@ -47,6 +47,8 @@ const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaPr
         {...extractSupportProps(rest)}
       >
         <StyledPrivateTextarea
+          // eslint-disable-next-line
+          // @ts-ignore
           ref={textareaRef}
           value={value}
           onChange={onChange}
