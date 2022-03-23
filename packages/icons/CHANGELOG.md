@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-icons@3.1.1...@sbercloud/uikit-react-icons@3.2.0) (2022-03-23)
+
+
+### Features
+
+* added icon png downloader ([74d8833](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/74d8833e86b1aaf6429954bf8ea6bdc25fe0cd5f))
+
+
+
+
+
 ## 3.1.1 (2022-03-23)
 
 
