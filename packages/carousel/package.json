@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-carousel",
   "title": "React Carousel",
-  "version": "0.3.25",
+  "version": "0.3.26",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,10 +27,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "4.2.2",
+    "@sbercloud/uikit-react-button": "4.2.3",
     "@sbercloud/uikit-react-icons": "3.1.1",
-    "@sbercloud/uikit-theme": "0.32.0",
-    "@sbercloud/uikit-utils": "2.2.2"
+    "@sbercloud/uikit-theme": "0.33.0",
+    "@sbercloud/uikit-utils": "2.2.3"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

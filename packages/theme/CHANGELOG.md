@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.33.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-theme@0.32.0...@sbercloud/uikit-theme@0.33.0) (2022-03-23)
+
+
+### Features
+
+* add BACKGROUND_DARK color ([d19fe75](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/d19fe751ff4151eff3a82b79cf46c983db6cdff2))
+
+
+
+
+
 # [0.32.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-theme@0.31.1...@sbercloud/uikit-theme@0.32.0) (2022-03-22)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-dropdown",
   "title": "React Dropdown",
-  "version": "0.13.8",
+  "version": "0.13.9",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-tooltip-private": "1.2.2",
-    "@sbercloud/uikit-theme": "0.32.0",
-    "@sbercloud/uikit-utils": "2.2.2"
+    "@sbercloud/uikit-react-tooltip-private": "1.2.3",
+    "@sbercloud/uikit-theme": "0.33.0",
+    "@sbercloud/uikit-utils": "2.2.3"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",
