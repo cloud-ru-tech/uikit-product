@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.1 (2022-03-23)
+
+
+### Bug Fixes
+
+* code refactor ([4de7592](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/4de7592a3e6e4d5a8209d7f29b9d1aee389ed97e))
+
+
+
+
+
 # [3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-icons@3.0.0...@sbercloud/uikit-react-icons@3.1.0) (2022-02-07)
 
 
