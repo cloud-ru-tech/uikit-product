@@ -2,11 +2,14 @@ import { styled } from '@linaria/react';
 import { Story } from '@storybook/react/types-6-0';
 import React, { useCallback, useState } from 'react';
 
+import { Button } from '@sbercloud/uikit-react-button';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { TextField } from '@sbercloud/uikit-react-text-field';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
+
+import { svgExport } from './downloader';
 
 const { COLORS_BUTTON } = DEPRECATED_EXPORT_VARS;
 
@@ -78,16 +81,26 @@ function generateDataTestId(componentName: string) {
 }
 
 export function getTemplate(
-  Icons: Record<string, React.FunctionComponent<{ size?: number | string; fill?: string }>>,
+  Icons: Record<string, React.FunctionComponent<{ size?: number | string; fill?: string; id?: string }>>,
 ): Story {
   return ({ size, fill }) => {
     const [search, setSearch] = useState('');
     const [selectedIcon, setSelectedIcon] = useState<{
       iconName: string;
-      Icon: React.FunctionComponent<{ size?: number | string }>;
+      Icon: React.FunctionComponent<{ size?: number | string; fill?: string }>;
       dataAttribute: string;
     } | null>(null);
+
     const onCloseHandler = useCallback(() => setSelectedIcon(null), []);
+
+    const downloadAsPngHandler = () => {
+      const { iconName } = selectedIcon || {};
+
+      if (iconName) {
+        svgExport({ id: iconName, fileName: iconName });
+      }
+    };
+
     return (
       <>
         <Title>Кликните на иконку для отображения дополнительной информации</Title>
@@ -114,7 +127,7 @@ export function getTemplate(
                   })
                 }
               >
-                <Icon size={size} fill={fill} />
+                <Icon size={size} fill={fill} id={key} />
                 <TextWrapper>
                   <Text>{key}</Text>
                 </TextWrapper>
@@ -136,7 +149,7 @@ export function getTemplate(
             }}
             description={
               <IconOverview>
-                {selectedIcon.Icon({ size: 44 })}
+                {selectedIcon.Icon({ size, fill })}
                 <CopyInputWrapper>
                   <Label>import:</Label>
                   <TextField text={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-react-icons';`} />
@@ -144,6 +157,10 @@ export function getTemplate(
                 <CopyInputWrapper>
                   <Label>data-test-id:</Label>
                   <TextField text={selectedIcon.dataAttribute} />
+                </CopyInputWrapper>
+                <CopyInputWrapper>
+                  <Label>png:</Label>
+                  <Button text={'download as png'} onClick={downloadAsPngHandler} />
                 </CopyInputWrapper>
               </IconOverview>
             }
