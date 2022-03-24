@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-toolbar@0.14.63...@sbercloud/uikit-react-toolbar@0.15.0) (2022-03-24)
+
+
+### Bug Fixes
+
+* removed toolbar wrapper margin ([bb8575b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/bb8575b9d8d6f149424a1912b98bcc9f6868e8b4))
+
+
+### BREAKING CHANGES
+
+* removed toolbar wrapper margin
+
+
+
+
+
 ## [0.14.63](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-toolbar@0.14.62...@sbercloud/uikit-react-toolbar@0.14.63) (2022-03-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toolbar

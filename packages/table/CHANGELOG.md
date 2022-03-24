@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.31.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.30.6...@sbercloud/uikit-react-table@0.31.0) (2022-03-24)
+
+
+### Bug Fixes
+
+* added toolbar wrapper margin in stories ([b7da4d4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/b7da4d4341d59bbf1760c0e0aae485a02c377283))
+* removed margin top from ClientModelTable ([d2de67f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/d2de67fc4222eeadffd6815c41452907ad7578f2))
+
+
+### BREAKING CHANGES
+
+* removed margin top from ClientModelTable
+
+
+
+
+
 ## [0.30.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.30.5...@sbercloud/uikit-react-table@0.30.6) (2022-03-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
