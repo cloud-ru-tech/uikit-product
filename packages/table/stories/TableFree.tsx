@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
@@ -10,6 +11,10 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ITableFreeProps, TableFree } from '../src';
+
+const ToolbarWrapperView = css`
+  margin-bottom: 12px;
+`;
 
 export default {
   title: 'Not stable/Table/Free',
@@ -27,7 +32,7 @@ const Template: Story<ITableFreeProps> = ({ rowData = [], ...args }) => {
 
   return (
     <>
-      <Toolbar.Wrapper>
+      <Toolbar.Wrapper className={ToolbarWrapperView}>
         <Toolbar.Input
           placeholder='Поиск по ФИО'
           value={searchValue}

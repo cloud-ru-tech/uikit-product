@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Story } from '@storybook/react/types-6-0';
 import React, { useCallback, useState } from 'react';
@@ -75,6 +76,10 @@ const Text = styled.span`
   ${TEXT_2_STYLES};
 `;
 
+const SearchWrapView = css`
+  margin: 20px 0;
+`;
+
 function generateDataTestId(componentName: string) {
   if (componentName === 'SvgExtensionSVG') return 'icon-svg-extension';
   return 'icon' + componentName.replaceAll(/svg/gi, '').replace(/[A-Z]/g, x => '-' + x.toLowerCase());
@@ -104,7 +109,7 @@ export function getTemplate(
     return (
       <>
         <Title>Кликните на иконку для отображения дополнительной информации</Title>
-        <Toolbar.Wrapper>
+        <Toolbar.Wrapper className={SearchWrapView}>
           <Toolbar.Input
             value={search}
             onChange={value => {

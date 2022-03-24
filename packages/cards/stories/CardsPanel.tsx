@@ -1,4 +1,5 @@
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { useEffect, useState } from '@storybook/addons';
 import { Meta, Story } from '@storybook/react/types-6-0';
@@ -58,6 +59,10 @@ const ContainerStyled = styled.div`
   text-align: left;
 `;
 
+const SearchWrapView = css`
+  margin: 20px 0;
+`;
+
 type CardsPanelItemProps = {
   children: React.ReactNode;
   selected?: boolean;
@@ -109,7 +114,7 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
   return (
     <>
       {args.useSearch && (
-        <Toolbar.Wrapper>
+        <Toolbar.Wrapper className={SearchWrapView}>
           <Toolbar.Input value={searchValue} onChange={setSearchValue} placeholder={'Поиск'} />
         </Toolbar.Wrapper>
       )}
