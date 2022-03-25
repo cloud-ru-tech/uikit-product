@@ -38,6 +38,7 @@ export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProp
     tooltip || disabledTooltip ? (
       <Tooltip
         {...(rest.disabled ? disabledTooltip || tooltip || {} : tooltip || {})}
+        data-test-id={`button-tooltip__${ComposedComponent.displayName}`}
         type={Tooltip.types.Info}
         classNameTrigger={className}
       >
