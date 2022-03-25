@@ -19,14 +19,14 @@ const Template: Story<ITabsProps> = ({ ...args }) => (
       <CollapsePanel isShowFavourites>
         <CollapsePanelItem
           index={0}
-          header={<Avatar shape={Avatar.shapes.Square} size={Avatar.sizes.M} username={'G O'} />}
+          header={<Avatar variant={Avatar.variants.Other} size={Avatar.sizes.Large} name={'G O'} />}
         >
           Content1
         </CollapsePanelItem>
         <CollapsePanelItem
           index={1}
           isFavourite
-          header={<Avatar shape={Avatar.shapes.Square} size={Avatar.sizes.M} username={'G O'} />}
+          header={<Avatar variant={Avatar.variants.Other} size={Avatar.sizes.Large} name={'G O'} />}
         >
           Content2
         </CollapsePanelItem>

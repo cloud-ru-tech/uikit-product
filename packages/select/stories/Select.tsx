@@ -2,7 +2,6 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { Avatar } from '@sbercloud/uikit-react-avatar';
 import {
   FavouriteInterfaceSVG,
   QuestionInterfaceSVG,
@@ -41,6 +40,7 @@ const StyledLogoWrap = styled.div`
 const StyledRadioWrap = styled.div<{ position: string }>`
   margin: ${({ position }) => (position === 'left' ? '0 12px 0px 0px' : '0 0 0 12px')};
   flex-shrink: 0;
+  display: inline-flex;
 `;
 
 const Footer = styled.div`
@@ -75,14 +75,16 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
               <StyledRadioWrap position={optionPosition === 'prefix' ? 'left' : 'right'}>
                 {isChecked ? <RadioCheckedInterfaceSVG /> : <RadioUncheckedInterfaceSVG />}
               </StyledRadioWrap>
-              <Avatar src={data.logo} />
+
+              {data.logo}
             </>
           );
         }
 
         return (
           <>
-            <Avatar src={data.logo} />
+            {data.logo}
+
             <StyledRadioWrap position={optionPosition === 'prefix' ? 'left' : 'right'}>
               {isChecked ? <RadioCheckedInterfaceSVG /> : <RadioUncheckedInterfaceSVG />}
             </StyledRadioWrap>
@@ -167,9 +169,7 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
       defaultValue={isGrouped ? groupedServices[0].options[0] : value}
       isMulti={isMulti}
       prefixMultiValueContainer={({ data: { logo } }: MultiValueContainerPrefixProps) => (
-        <div style={{ padding: '0 0 0 8px', lineHeight: '28px' }}>
-          <Avatar src={logo} size={Avatar.sizes.XS} />
-        </div>
+        <div style={{ padding: '0 0 0 8px', lineHeight: '28px' }}>{logo}</div>
       )}
       prefixControl={(props: ControlPrefixProps) => {
         const val = props.getValue();

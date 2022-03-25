@@ -1,83 +1,106 @@
-import { styled } from '@linaria/react';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta, Story } from '@storybook/react/types-6-0';
+
+import { Divider } from '@sbercloud/uikit-react-divider';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Avatar, AvatarProps } from '../src';
+import { Column, Columns, Title, Wrapper } from './helpers';
 
 export default {
-  title: 'Not stable/Avatar',
+  title: 'Components/Avatar',
   component: Avatar,
 } as Meta;
 
 const avatarSrc =
   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80';
 
-const Wrapper = styled.div`
-  display: flex;
+const AVATARS: Record<string, Omit<AvatarProps, 'variant'>[]> = {
+  user: [
+    {
+      name: 'Дмитрий',
+      status: Avatar.status.Online,
+      onClick() {},
+    },
+    {
+      name: 'Дмитрий Иванов',
+      status: Avatar.status.Offline,
+      onClick() {},
+    },
+  ],
+  company: [
+    {
+      name: 'ГОУ СОШ №12',
+      status: Avatar.status.Online,
+    },
+    {
+      name: 'ГОУ СОШ №12',
+      status: Avatar.status.Offline,
+    },
+  ],
+  other: [
+    {
+      name: '123132',
+      status: Avatar.status.Online,
+    },
+    {
+      name: '"6632523"',
+      status: Avatar.status.Offline,
+    },
+  ],
+};
 
-  & > * {
-    margin-right: 20px;
-  }
-`;
-
-const Template: Story<AvatarProps> = ({ ...args }) => (
+const Template: Story<AvatarProps> = props => (
   <Wrapper>
-    <Avatar {...args} />
-    <Avatar {...args} src={avatarSrc} />
-    <Avatar {...args} username='' />
+    <Title>Controlled:</Title>
+    <Avatar {...props} />
+    <br />
+    <Divider />
+
+    <Columns>
+      <Title>Examples with statuses:</Title>
+
+      <Column title='User' data={AVATARS.user} variant={Avatar.variants.User} size={props.size} />
+
+      <Column title='Company' data={AVATARS.company} variant={Avatar.variants.Company} size={props.size} />
+
+      <Column title='Other' data={AVATARS.other} variant={Avatar.variants.Other} size={props.size} />
+    </Columns>
   </Wrapper>
 );
 
 export const avatar = Template.bind({});
 avatar.args = {
-  username: 'Test Name',
+  name: 'Дмитрий Петрович Дмитриев',
+  variant: Avatar.variants.User,
+  size: Avatar.sizes.Medium,
+  src: avatarSrc,
+  onClick: undefined,
 };
+avatar.argTypes = {
+  status: {
+    control: {
+      type: 'radio',
+      options: Object.values({ ...Avatar.status, undefined: undefined }),
+    },
+  },
+  size: {
+    control: {
+      type: 'radio',
+      options: Object.values(Avatar.sizes),
+    },
+  },
+};
+
 avatar.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%5BLIB%5D-Temp-Design-System?node-id=727%3A46',
+    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=721%3A0',
   },
-};
-avatar.argTypes = {
-  size: {
-    control: {
-      type: 'radio',
-      options: [Avatar.sizes.XS, Avatar.sizes.S, Avatar.sizes.M, Avatar.sizes.L, Avatar.sizes.XL],
-    },
-  },
-  shape: {
-    control: {
-      type: 'radio',
-      options: [Avatar.shapes.Square, Avatar.shapes.Circle],
-    },
-  },
-  color: {
-    control: {
-      type: 'radio',
-      options: [
-        Avatar.colors.Green,
-        Avatar.colors.Blue,
-        Avatar.colors.Purple,
-        Avatar.colors.Pink,
-        Avatar.colors.Red,
-        Avatar.colors.DefaultGray,
-        Avatar.colors.Gray,
-        Avatar.colors.Brown,
-        Avatar.colors.Orange,
-        Avatar.colors.Yellow,
-        Avatar.colors.YellowGreen,
-        Avatar.colors.BlueGreen,
-      ],
-    },
-  },
-  username: {
-    control: {
-      type: 'text',
-    },
-  },
+  badges: [BADGE.STABLE],
 };

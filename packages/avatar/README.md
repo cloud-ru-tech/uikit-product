@@ -3,18 +3,17 @@
 ## Installation
 `npm i @sbercloud/uikit-react-avatar`
 
-[Changelog](./CHANGELOG.md)
-
 React component for drawing avatar component or placeholder
 
 ## Components interface 
 ```typescript
-interface AvatarProps {
+type AvatarProps = {
+  name?: string;
+  variant: Variants;
   size?: Sizes;
   src?: string;
-  shape?: Shapes;
-  username?: string;
-  color?: PresetColors;
-  placeholderIcon?: PlaceholderIcons;
-}
+  status?: Status;
+  onClick?: MouseEventHandler;
+  className?: string;
+};
 ```

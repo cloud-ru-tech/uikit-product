@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-avatar": "0.6.17",
+    "@sbercloud/uikit-react-avatar": "1.0.0",
     "@sbercloud/uikit-react-button": "4.2.4",
     "@sbercloud/uikit-react-divider": "2.0.20",
     "@sbercloud/uikit-react-icons": "3.2.0",

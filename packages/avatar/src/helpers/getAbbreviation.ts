@@ -1,23 +1,37 @@
 import { ABBREVIATION_LENGTH } from './constants';
+import { Variants } from './types';
 
-const getAbbreviation = (str = ''): string => {
-  const SPACE = ' ';
-  const trimStr = str.trim();
+const SPACE = ' ';
+
+export const getAbbreviation = (str = '', variant: Variants): string => {
+  let trimStr = str.trim();
 
   if (!trimStr) {
     return '';
   }
 
-  if (str && str.length > ABBREVIATION_LENGTH) {
-    return trimStr
-      .replace(/(\s{2,})/g, SPACE)
-      .split(SPACE)
-      .slice(0, ABBREVIATION_LENGTH)
-      .map(el => el?.charAt(0)?.toUpperCase())
-      .join('');
+  trimStr = trimStr.replace(/[^a-zа-яё\s]/gi, '').trim();
+
+  if (!trimStr) {
+    trimStr = str.replace(/[^\d]/gi, '');
   }
 
-  return trimStr;
-};
+  if (variant === Variants.Other) {
+    return trimStr.charAt(0).toUpperCase();
+  }
 
-export { getAbbreviation };
+  if (trimStr && trimStr.length >= ABBREVIATION_LENGTH) {
+    const arrayStrings = trimStr.split(SPACE);
+
+    if (arrayStrings.length > 1) {
+      const firstLetter = arrayStrings[0].charAt(0);
+      const secondLetter = arrayStrings.at(-1)?.charAt(0);
+
+      return `${firstLetter}${secondLetter}`.toUpperCase();
+    }
+
+    return trimStr.slice(0, 2).toUpperCase();
+  }
+
+  return trimStr.toUpperCase();
+};

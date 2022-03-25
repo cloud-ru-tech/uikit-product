@@ -1,32 +1,52 @@
+import { MouseEventHandler } from 'react';
+
+import { WithSupportProps } from '@sbercloud/uikit-utils';
+
 export enum Shapes {
-  Circle = 'circle',
-  Square = 'square',
+  Round = 'Round',
+  Square = 'Square',
 }
 
 export enum Sizes {
-  XS = 'xs',
-  S = 's',
-  M = 'm',
-  L = 'l',
-  XL = 'xl',
+  ExtraSmall = 'ExtraSmall',
+  Small = 'Small',
+  Medium = 'Medium',
+  Large = 'Large',
+  ExtraLarge = 'ExtraLarge',
+  ExtraExtraLarge = 'ExtraExtraLarge',
 }
 
-export enum PresetColors {
-  Green = 'green',
-  Blue = 'blue',
-  Purple = 'purple',
-  Pink = 'pink',
-  Red = 'red',
-  DefaultGray = 'default-gray',
-  Gray = 'gray',
-  Brown = 'brown',
-  Orange = 'orange',
-  Yellow = 'yellow',
-  YellowGreen = 'yellow-green',
-  BlueGreen = 'blue-green',
+export enum Colors {
+  Red = 'Red',
+  Pink = 'Pink',
+  Violet = 'Violet',
+  Blue = 'Blue',
+  Green = 'Green',
+  Yellow = 'Yellow',
+  Orange = 'Orange',
+  Brown = 'Brown',
+  SilverGray = 'SilverGray',
+  Grass = 'Grass',
+  Seamount = 'Seamount',
 }
 
-export enum PlaceholderIcons {
-  User = 'user',
-  Company = 'company',
+export enum Variants {
+  User = 'User',
+  Company = 'Company',
+  Other = 'Other',
 }
+
+export enum Status {
+  Online = 'Online',
+  Offline = 'Offline',
+}
+
+export type AvatarProps = WithSupportProps<{
+  name: string;
+  variant: Variants;
+  size?: Sizes;
+  src?: string;
+  status?: Status;
+  onClick?: MouseEventHandler;
+  className?: string;
+}>;

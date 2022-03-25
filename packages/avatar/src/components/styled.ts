@@ -1,114 +1,206 @@
 import { styled } from '@linaria/react';
+import { VFC } from 'react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { ANIMATIONS } from '@sbercloud/uikit-utils';
 
-const { COLORS_AVATAR } = DEPRECATED_EXPORT_VARS;
+import { AvatarProps, Colors, SIZES_IN_PX, Shapes, Sizes } from '../helpers';
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
-export const Avatar = styled.div<{ backgroundImage?: string }>`
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
+
+export const styledAvatar = (Badge: VFC<AvatarProps>): VFC<AvatarProps> => styled(Badge)`
+  box-sizing: border-box;
+  border-radius: 100%;
+  color: var(${COLORS.text});
+  line-height: 1;
+  cursor: default;
+  position: relative;
+
+  &[data-clickable] {
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(${COLORS.hover});
+      opacity: 0;
+      transition: opacity ${ANIMATIONS.TRANSITION};
+      z-index: 3;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &[data-size=${Sizes.ExtraSmall}] {
+    width: ${SIZES_IN_PX[Sizes.ExtraSmall].size};
+    height: ${SIZES_IN_PX[Sizes.ExtraSmall].size};
+    font-size: ${SIZES_IN_PX[Sizes.ExtraSmall].fontSize};
+
+    &[data-shape=${Shapes.Square}] {
+      border-radius: ${SIZES_IN_PX[Sizes.ExtraSmall].borderRadius};
+    }
+  }
+
+  &[data-size=${Sizes.Small}] {
+    width: ${SIZES_IN_PX[Sizes.Small].size};
+    height: ${SIZES_IN_PX[Sizes.Small].size};
+    font-size: ${SIZES_IN_PX[Sizes.Small].fontSize};
+
+    &[data-shape=${Shapes.Square}] {
+      border-radius: ${SIZES_IN_PX[Sizes.Small].borderRadius};
+    }
+  }
+
+  &[data-size=${Sizes.Medium}] {
+    width: ${SIZES_IN_PX[Sizes.Medium].size};
+    height: ${SIZES_IN_PX[Sizes.Medium].size};
+    font-size: ${SIZES_IN_PX[Sizes.Medium].fontSize};
+
+    &[data-shape=${Shapes.Square}] {
+      border-radius: ${SIZES_IN_PX[Sizes.Medium].borderRadius};
+    }
+  }
+
+  &[data-size=${Sizes.Large}] {
+    width: ${SIZES_IN_PX[Sizes.Large].size};
+    height: ${SIZES_IN_PX[Sizes.Large].size};
+    font-size: ${SIZES_IN_PX[Sizes.Large].fontSize};
+
+    &[data-shape=${Shapes.Square}] {
+      border-radius: ${SIZES_IN_PX[Sizes.Large].borderRadius};
+    }
+  }
+
+  &[data-size=${Sizes.ExtraLarge}] {
+    width: ${SIZES_IN_PX[Sizes.ExtraLarge].size};
+    height: ${SIZES_IN_PX[Sizes.ExtraLarge].size};
+    font-size: ${SIZES_IN_PX[Sizes.ExtraLarge].fontSize};
+
+    &[data-shape=${Shapes.Square}] {
+      border-radius: ${SIZES_IN_PX[Sizes.ExtraLarge].borderRadius};
+    }
+  }
+
+  &[data-size=${Sizes.ExtraExtraLarge}] {
+    width: ${SIZES_IN_PX[Sizes.ExtraExtraLarge].size};
+    height: ${SIZES_IN_PX[Sizes.ExtraExtraLarge].size};
+    font-size: ${SIZES_IN_PX[Sizes.ExtraExtraLarge].fontSize};
+
+    &[data-shape=${Shapes.Square}] {
+      border-radius: ${SIZES_IN_PX[Sizes.ExtraExtraLarge].borderRadius};
+    }
+  }
+
+  &[data-color=${Colors.Red}] {
+    background-color: var(${COLORS.background.red});
+  }
+
+  &[data-color=${Colors.Pink}] {
+    background-color: var(${COLORS.background.pink});
+  }
+
+  &[data-color=${Colors.Violet}] {
+    background-color: var(${COLORS.background.violet});
+  }
+
+  &[data-color=${Colors.Blue}] {
+    background-color: var(${COLORS.background.blue});
+  }
+
+  &[data-color=${Colors.Green}] {
+    background-color: var(${COLORS.background.green});
+  }
+
+  &[data-color=${Colors.Yellow}] {
+    background-color: var(${COLORS.background.yellow});
+  }
+
+  &[data-color=${Colors.Orange}] {
+    background-color: var(${COLORS.background.orange});
+  }
+
+  &[data-color=${Colors.Brown}] {
+    background-color: var(${COLORS.background.brown});
+  }
+
+  &[data-color=${Colors.SilverGray}] {
+    background-color: var(${COLORS.background.silver_gray});
+  }
+
+  &[data-color=${Colors.Grass}] {
+    background-color: var(${COLORS.background.grass});
+  }
+
+  &[data-color=${Colors.Seamount}] {
+    background-color: var(${COLORS.background.seamount});
+  }
+`;
+
+export const AvatarImage = styled.div<{ backgroundImage?: string }>`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: inherit;
+  background-size: cover;
+  background-position: center;
+  background-image: ${({ backgroundImage }) => (backgroundImage ? `url(${backgroundImage})` : 'none')};
+`;
+
+export const AvatarInner = styled.div`
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+`;
+
+export const AvatarContent = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 100%;
-  background-size: cover;
-  background-position: center;
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})` || 'none'};
-  color: var(${COLORS_AVATAR.TEXT_COLOR});
 
-  &[data-size='xs'] {
-    width: 20px;
-    height: 20px;
-    font-size: 9px;
+  svg {
+    fill: var(${COLORS.icon});
+    height: 100% !important;
+    width: auto !important;
+  }
+`;
 
-    &[data-shape='square'] {
-      border-radius: 4px;
+export const StatusDotWrap = styled.div`
+  position: absolute;
+  z-index: 4;
+  bottom: 0;
+  right: 0;
+  font-size: 0; // to reduce div height
+
+  &[data-avatar-shape=${Shapes.Round}] {
+    &[data-avatar-size=${Sizes.Medium}],
+    &[data-avatar-size=${Sizes.Large}],
+    &[data-avatar-size=${Sizes.ExtraLarge}] {
+      bottom: 2px;
+      right: 2px;
     }
-  }
 
-  &[data-size='s'] {
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-
-    &[data-shape='square'] {
-      border-radius: 8px;
+    &[data-avatar-size=${Sizes.ExtraExtraLarge}] {
+      bottom: 6px;
+      right: 6px;
     }
-  }
-
-  &[data-size='m'] {
-    width: 60px;
-    height: 60px;
-    font-size: 27px;
-
-    &[data-shape='square'] {
-      border-radius: 12px;
-    }
-  }
-
-  &[data-size='l'] {
-    width: 88px;
-    height: 88px;
-    font-size: 39.6px;
-
-    &[data-shape='square'] {
-      border-radius: 16px;
-    }
-  }
-
-  &[data-size='xl'] {
-    width: 120px;
-    height: 120px;
-    font-size: 54px;
-
-    &[data-shape='square'] {
-      border-radius: 20px;
-    }
-  }
-
-  &[data-color='green'] {
-    background-color: var(${COLORS_AVATAR.BG_GREEN});
-  }
-
-  &[data-color='blue'] {
-    background-color: var(${COLORS_AVATAR.BG_BLUE});
-  }
-
-  &[data-color='purple'] {
-    background-color: var(${COLORS_AVATAR.BG_PURPLE});
-  }
-
-  &[data-color='pink'] {
-    background-color: var(${COLORS_AVATAR.BG_PINK});
-  }
-
-  &[data-color='red'] {
-    background-color: var(${COLORS_AVATAR.BG_RED});
-  }
-
-  &[data-color='default-gray'] {
-    background-color: var(${COLORS_AVATAR.BG_GRAY_DEFAULT});
-  }
-
-  &[data-color='gray'] {
-    background-color: var(${COLORS_AVATAR.BG_GRAY});
-  }
-
-  &[data-color='brown'] {
-    background-color: var(${COLORS_AVATAR.BG_BROWN});
-  }
-
-  &[data-color='orange'] {
-    background-color: var(${COLORS_AVATAR.BG_ORANGE});
-  }
-
-  &[data-color='yellow'] {
-    background-color: var(${COLORS_AVATAR.BG_YELLOW});
-  }
-
-  &[data-color='yellow-green'] {
-    background-color: var(${COLORS_AVATAR.BG_YELLOW_GREEN});
-  }
-
-  &[data-color='blue-green'] {
-    background-color: var(${COLORS_AVATAR.BG_BLUE_GREEN});
   }
 `;

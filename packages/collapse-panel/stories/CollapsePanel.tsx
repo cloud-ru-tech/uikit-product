@@ -23,7 +23,10 @@ const ContentStyled = styled.div`
 
 const Template: Story<ICollapsePanelProps> = ({ ...args }) => (
   <CollapsePanel {...args}>
-    <CollapsePanelItem index={0} header={<Avatar shape={Avatar.shapes.Circle} size={Avatar.sizes.M} src={avatarSrc} />}>
+    <CollapsePanelItem
+      index={0}
+      header={<Avatar variant={Avatar.variants.User} name='' size={Avatar.sizes.Large} src={avatarSrc} />}
+    >
       <ContentStyled>Content</ContentStyled>
       <Input value={'Some text'} onChange={() => {}} />
     </CollapsePanelItem>
@@ -35,7 +38,7 @@ const Template: Story<ICollapsePanelProps> = ({ ...args }) => (
     </CollapsePanelItem>
     <CollapsePanelItem
       index={3}
-      header={<Avatar shape={Avatar.shapes.Square} size={Avatar.sizes.M} src={avatarSrc} />}
+      header={<Avatar variant={Avatar.variants.User} name='' size={Avatar.sizes.Large} src={avatarSrc} />}
       isFavourite
     >
       <ContentStyled>{'Content'}</ContentStyled>

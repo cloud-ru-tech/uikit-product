@@ -2,7 +2,7 @@ import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
 import React, { FC, useEffect, useMemo, useState } from 'react';
 
-import { Avatar, AvatarProps } from '@sbercloud/uikit-react-avatar';
+import { Avatar } from '@sbercloud/uikit-react-avatar';
 import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
@@ -12,8 +12,8 @@ export interface IOptionType extends DataNode {
   src?: string;
   title?: string;
   children?: IOptionType[];
-  avatarShape?: AvatarProps['shape'];
 }
+
 export interface ICustomEventDataNode extends EventDataNode {
   initKey?: string;
 }
@@ -21,14 +21,18 @@ export interface ICustomEventDataNode extends EventDataNode {
 const Icon = ({ data }: { data: IOptionType }): React.ReactNode => {
   const hasChildren = Boolean(data?.children);
 
+  if (hasChildren) {
+    return (
+      <Avatar
+        size={Avatar.sizes.ExtraSmall}
+        src={data?.src}
+        name={data.title || ''}
+        variant={Avatar.variants.Company}
+      />
+    );
+  }
   return (
-    <Avatar
-      size={Avatar.sizes.XS}
-      src={data?.src}
-      username={data?.title}
-      shape={data?.avatarShape}
-      placeholderIcon={hasChildren ? Avatar.placeholderIcons.Company : Avatar.placeholderIcons.User}
-    />
+    <Avatar size={Avatar.sizes.ExtraSmall} src={data?.src} name={data.title || ''} variant={Avatar.variants.User} />
   );
 };
 
