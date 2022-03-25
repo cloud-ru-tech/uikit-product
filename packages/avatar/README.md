@@ -8,7 +8,7 @@ React component for drawing avatar component or placeholder
 ## Components interface 
 ```typescript
 type AvatarProps = {
-  name?: string;
+  name: string;
   variant: Variants;
   size?: Sizes;
   src?: string;
