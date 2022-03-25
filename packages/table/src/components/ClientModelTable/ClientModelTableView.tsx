@@ -21,6 +21,7 @@ type ClientModelTableViewProps<T> = {
   columnDefinitions: TablePrivateProps['columnDefs'];
   onGridReady: TablePrivateProps['onGridReady'];
   getRowHeight: TablePrivateProps['getRowHeight'];
+  getRowNodeId?: TablePrivateProps['getRowNodeId'];
   useRowSelection: boolean;
   deleteProps?: DeleteProps;
   filterProps?: {
@@ -30,6 +31,7 @@ type ClientModelTableViewProps<T> = {
   paginationProps?: PaginationProps;
   onRefreshCallback?(): void | Promise<void>;
   onRowClicked?: TablePrivateProps['onRowClicked'];
+  onRowSelected?: TablePrivateProps['onRowSelected'];
   onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
   onSearchCallback(value: string): void;
   moreActions: ToolbarMoreActionsProps['actions'];
@@ -49,8 +51,10 @@ export function ClientModelTableView<T>({
   searchValue,
   paginationProps,
   getRowHeight,
+  getRowNodeId,
   moreActions,
   onRowClicked,
+  onRowSelected,
   onRowDoubleClicked,
   ...rest
 }: WithSupportProps<ClientModelTableViewProps<T>>) {
@@ -103,7 +107,9 @@ export function ClientModelTableView<T>({
         columnDefs={columnDefinitions}
         onGridReady={onGridReady}
         getRowHeight={getRowHeight}
+        getRowNodeId={getRowNodeId}
         onRowClicked={onRowClicked}
+        onRowSelected={onRowSelected}
         onRowDoubleClicked={onRowDoubleClicked}
         doesRowPassFilter={filterProps?.doesRowPassFilter}
         gridOptions={{

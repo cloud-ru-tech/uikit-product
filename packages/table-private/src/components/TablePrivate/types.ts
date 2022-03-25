@@ -1,4 +1,4 @@
-import { Module, RowClickedEvent, RowDoubleClickedEvent } from '@ag-grid-community/core';
+import { Module, RowClickedEvent, RowDoubleClickedEvent, RowSelectedEvent } from '@ag-grid-community/core';
 import { AgGridReactProps } from '@ag-grid-community/react';
 
 import { ColumnDefinition } from '../../helpers/types';
@@ -9,7 +9,9 @@ export type TablePrivateProps = AgGridReactProps & {
   doesRowPassFilter?(data: any): boolean;
   additionModules?: Module[];
   onRowClicked?(e: RowClickedEvent): void;
+  onRowSelected?(e: RowSelectedEvent): void;
   onRowDoubleClicked?(e: RowDoubleClickedEvent): void;
+  getRowNodeId?(data: any): string | number;
   columnDefs: ColumnDefinition[];
   rowData: NonNullable<AgGridReactProps['rowData']>;
 };
