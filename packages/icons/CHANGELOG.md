@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-icons@3.2.0...@sbercloud/uikit-react-icons@3.2.1) (2022-03-25)
+
+
+### Bug Fixes
+
+* add avatarPlaceholder icons export ([91c7fb5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/91c7fb5df2247202fd1beb0eec6a9cc1310cfb19))
+* added toolbar wrapper margin in stories ([b7da4d4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/b7da4d4341d59bbf1760c0e0aae485a02c377283))
+
+
+
+
+
 # [3.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-icons@3.1.1...@sbercloud/uikit-react-icons@3.2.0) (2022-03-23)
 
 

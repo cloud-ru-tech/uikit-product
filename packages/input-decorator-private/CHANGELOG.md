@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-input-decorator-private@2.0.9...@sbercloud/uikit-react-input-decorator-private@2.0.10) (2022-03-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-input-decorator-private
+
+
+
+
+
 ## [2.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-input-decorator-private@2.0.8...@sbercloud/uikit-react-input-decorator-private@2.0.9) (2022-03-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input-decorator-private

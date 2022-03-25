@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-table-private",
   "title": "React Table Private",
-  "version": "0.8.5",
+  "version": "0.8.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,10 +32,10 @@
     "@ag-grid-community/react": "26.2.0",
     "@ag-grid-enterprise/core": "26.2.0",
     "@ag-grid-enterprise/range-selection": "26.2.0",
-    "@sbercloud/uikit-react-icons": "3.2.0",
-    "@sbercloud/uikit-theme": "0.33.0",
+    "@sbercloud/uikit-react-icons": "3.2.1",
+    "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.2.3",
+    "@sbercloud/uikit-utils": "2.2.4",
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.33.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-theme@0.33.0...@sbercloud/uikit-theme@0.33.1) (2022-03-25)
+
+
+### Bug Fixes
+
+* change colors to match figma design ([84b1b49](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/84b1b49eb93713fade28beda220c00fdac2de040))
+
+
+
+
+
 # [0.33.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-theme@0.32.0...@sbercloud/uikit-theme@0.33.0) (2022-03-23)
 
 
