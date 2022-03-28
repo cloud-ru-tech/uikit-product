@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-table",
   "title": "React Table",
-  "version": "0.31.1",
+  "version": "0.31.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -34,7 +34,7 @@
     "@sbercloud/uikit-react-icons": "3.2.1",
     "@sbercloud/uikit-react-modal": "0.15.49",
     "@sbercloud/uikit-react-pagination-private": "1.1.6",
-    "@sbercloud/uikit-react-table-private": "0.8.6",
+    "@sbercloud/uikit-react-table-private": "0.8.7",
     "@sbercloud/uikit-react-toolbar": "0.15.1",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-utils": "2.2.4",
