@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-select",
   "title": "React Select",
-  "version": "0.24.6",
+  "version": "0.24.7",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,16 +27,16 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-avatar": "1.0.1",
-    "@sbercloud/uikit-react-button": "4.2.5",
-    "@sbercloud/uikit-react-divider": "2.0.21",
-    "@sbercloud/uikit-react-icons": "3.2.1",
-    "@sbercloud/uikit-react-input-private": "2.2.9",
-    "@sbercloud/uikit-react-modal": "0.15.49",
-    "@sbercloud/uikit-react-tag": "1.1.6",
+    "@sbercloud/uikit-react-avatar": "1.0.2",
+    "@sbercloud/uikit-react-button": "4.2.6",
+    "@sbercloud/uikit-react-divider": "2.0.22",
+    "@sbercloud/uikit-react-icons": "3.2.2",
+    "@sbercloud/uikit-react-input-private": "2.2.10",
+    "@sbercloud/uikit-react-modal": "0.15.50",
+    "@sbercloud/uikit-react-tag": "1.1.7",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.2.4",
+    "@sbercloud/uikit-utils": "2.3.0",
     "lodash.isequal": "4.5.0",
     "rc-tree": "4.2.1",
     "react-select": "3.2.0"

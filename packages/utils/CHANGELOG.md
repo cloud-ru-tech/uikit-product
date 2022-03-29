@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-utils@2.2.4...@sbercloud/uikit-utils@2.3.0) (2022-03-29)
+
+
+### Features
+
+* introduce `LOADING_WHEEL` animation ([4931f85](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/4931f85b0df1fc3e450cc03f91597d9e68720f3c))
+
+
+
+
+
 ## [2.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-utils@2.2.3...@sbercloud/uikit-utils@2.2.4) (2022-03-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-utils

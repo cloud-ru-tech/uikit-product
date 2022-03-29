@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.5...@sbercloud/uikit-react-button@4.2.6) (2022-03-29)
+
+
+### Bug Fixes
+
+* use `LOADING_WHEEL` animation instead of infinite rotation ([0e642fe](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/0e642feb32214f90bc27d3a8cbb52de0f45fc6ee))
+
+
+
+
+
 ## [4.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.4...@sbercloud/uikit-react-button@4.2.5) (2022-03-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button

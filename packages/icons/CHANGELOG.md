@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-icons@3.2.1...@sbercloud/uikit-react-icons@3.2.2) (2022-03-29)
+
+
+### Bug Fixes
+
+* change `LoadingWheelInterfaceSVG` paths order ([462d52d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/462d52d99ce69a5f6c9fc6e5de4065ed03905c38))
+
+
+
+
+
 ## [3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-icons@3.2.0...@sbercloud/uikit-react-icons@3.2.1) (2022-03-25)
 
 

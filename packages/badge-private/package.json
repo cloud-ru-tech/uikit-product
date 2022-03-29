@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-badge-private",
   "title": "React Badge Private",
-  "version": "3.1.5",
+  "version": "3.1.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-theme": "0.33.1",
-    "@sbercloud/uikit-utils": "2.2.4"
+    "@sbercloud/uikit-utils": "2.3.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",
