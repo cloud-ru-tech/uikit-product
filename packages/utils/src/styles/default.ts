@@ -1,3 +1,18 @@
+function getLoadingWheelAnimationPerChild(quantity: number, duration: number) {
+  function getLoadingWheelAnimation(child: number) {
+    return `
+      &:nth-child(${child}) {
+        animation-delay: ${(-child / quantity) * duration}ms;
+        animation-duration: ${duration}ms;
+      }
+    `;
+  }
+
+  return Array.from({ length: quantity }, (_, index) => index + 1)
+    .map(getLoadingWheelAnimation)
+    .join('');
+}
+
 export const DEFAULT_STYLES = {
   COMMON: `
     box-sizing: border-box;
@@ -18,4 +33,27 @@ export const DEFAULT_STYLES = {
 
 export const ANIMATIONS = {
   TRANSITION: '0.2s ease-in-out',
+  LOADING_WHEEL: `
+    & > path {
+      @keyframes loading-wheel {
+        0% {
+          opacity: 1;
+        }
+
+        90% {
+          opacity: 0.125;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      animation-iteration-count: infinite;
+      animation-name: loading-wheel;
+      animation-timing-function: linear;
+
+      ${getLoadingWheelAnimationPerChild(8, 1000)};
+    }
+  `,
 };
