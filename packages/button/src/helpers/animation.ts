@@ -1,16 +1,9 @@
 import { css } from '@linaria/core';
 
-export const infiniteRotateClassName = css`
-  animation: rotate 2s linear infinite;
+import { ANIMATIONS } from '@sbercloud/uikit-utils';
 
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+export const loadingWheelClassName = css`
+  ${ANIMATIONS.LOADING_WHEEL};
 `;
 
 export const rotateOnClickClassName = css`

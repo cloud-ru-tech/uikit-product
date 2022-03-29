@@ -1,7 +1,7 @@
 import { LoadingWheelInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
-import { infiniteRotateClassName } from '../helpers';
+import { loadingWheelClassName } from '../helpers';
 
 export const LoadingIcon = (props: unknown) => (
-  <LoadingWheelInterfaceSVG className={infiniteRotateClassName} {...props} />
+  <LoadingWheelInterfaceSVG className={loadingWheelClassName} {...props} />
 );
