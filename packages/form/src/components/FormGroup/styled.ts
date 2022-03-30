@@ -4,7 +4,7 @@ import { styled } from '@linaria/react';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H3_STYLES, TABLE_TEXT_STYLES } from '@sbercloud/uikit-typography';
 
-const { COLORS_DIVIDER, COLORS_FORM_GROUP } = DEPRECATED_EXPORT_VARS;
+const { COLORS_FORM_GROUP } = DEPRECATED_EXPORT_VARS;
 
 export const hintClassName = css`
   fill: var(${COLORS_FORM_GROUP.HINT_COLOR});
@@ -15,13 +15,12 @@ export const tooltipTriggerClassName = css`
   margin-left: 8px;
 `;
 
-export const Wrapper = styled.div`
-  padding: 24px 0;
-`;
+export const Wrapper = styled.div``;
 
 export const Header = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 24px;
 `;
 
 export const Number = styled.span`
@@ -34,17 +33,15 @@ export const Number = styled.span`
   width: 32px;
   height: 32px;
   border-radius: 50%;
+  margin-right: 16px;
 `;
 
 export const Title = styled.h3`
   ${H3_STYLES};
-  margin-left: 16px;
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  > * {
-    margin-top: 24px;
-  }
+  row-gap: 24px;
 `;
