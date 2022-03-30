@@ -13,7 +13,7 @@ import { getFileType } from '../helpers';
 import { FileProps } from '../types';
 import * as S from './styled';
 
-export type DocumentProps = {
+export type DocumentProps = WithSupportProps<{
   file: FileProps;
   onClick?(file: FileProps, e?: MouseEvent): void;
   disabled?: boolean;
@@ -22,16 +22,9 @@ export type DocumentProps = {
     onClick(file: FileProps, e?: MouseEvent): void;
     tooltip: ButtonIconProps['tooltip'];
   };
-};
+}>;
 
-export function Document({
-  file,
-  disabled,
-  onClick,
-  removeButton,
-  className,
-  ...rest
-}: WithSupportProps<DocumentProps>) {
+export function Document({ file, disabled, onClick, removeButton, className, ...rest }: DocumentProps) {
   const contentRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef<HTMLSpanElement | null>(null);
 
@@ -114,7 +107,7 @@ export function Document({
 
   if (needsTooltip) {
     return (
-      <Tooltip content={fileName} classNameTrigger={cx(S.wrapClassName, className)}>
+      <Tooltip data-test-id='document__tooltip' content={fileName} classNameTrigger={cx(S.wrapClassName, className)}>
         {documentContent}
       </Tooltip>
     );
