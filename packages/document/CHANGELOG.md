@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.28](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-document@1.0.27...@sbercloud/uikit-react-document@1.0.28) (2022-03-30)
+
+
+### Bug Fixes
+
+* add tooltip data-test-id and update DocumentProps ([dcb3b81](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/dcb3b81fe9478d358a2671ccce2574c07a25385d))
+
+
+
+
+
 ## [1.0.27](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-document@1.0.26...@sbercloud/uikit-react-document@1.0.27) (2022-03-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-document
