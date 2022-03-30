@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.6...@sbercloud/uikit-react-button@4.2.7) (2022-03-30)
+
+
+### Bug Fixes
+
+* add tooltip data-test-id ([ff0df3c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/ff0df3c0d5e667bd7edd6df470234be34acbb85e))
+
+
+
+
+
 ## [4.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.5...@sbercloud/uikit-react-button@4.2.6) (2022-03-29)
 
 
