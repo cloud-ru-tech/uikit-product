@@ -12,7 +12,7 @@ export default {
 const Template: Story<ButtonTableIconProps> = ({ ...args }) => (
   <TableWrapper>
     <TableColumn>
-      <TableCell></TableCell>
+      <TableCell />
       <TableCell>default</TableCell>
       <TableCell>managed loading</TableCell>
     </TableColumn>
@@ -35,6 +35,7 @@ const Template: Story<ButtonTableIconProps> = ({ ...args }) => (
             onClick={onClick}
             disabledTooltip={{ content: 'Unavailable', placement: ButtonTableIcon.placements.Right }}
             {...args}
+            data-test-id={`${args['data-test-id'] || ''}-managed-loading`}
           />
         </TableCell>
       </TableColumn>

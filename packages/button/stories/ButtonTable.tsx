@@ -25,7 +25,7 @@ const Template: Story<StoryProps> = ({ getProgressText, ...args }: StoryProps) =
   return (
     <TableWrapper>
       <TableColumn>
-        <TableCell></TableCell>
+        <TableCell />
         <TableCell>default</TableCell>
         <TableCell>managed loading</TableCell>
       </TableColumn>
@@ -45,7 +45,13 @@ const Template: Story<StoryProps> = ({ getProgressText, ...args }: StoryProps) =
           </TableCell>
 
           <TableCell>
-            <ButtonTableManagedLoading variant={value} tooltip={{ content: 'Connect' }} onClick={onClick} {...args} />
+            <ButtonTableManagedLoading
+              variant={value}
+              tooltip={{ content: 'Connect' }}
+              onClick={onClick}
+              {...args}
+              data-test-id={`${args['data-test-id'] || ''}-managed-loading`}
+            />
           </TableCell>
         </TableColumn>
       ))}

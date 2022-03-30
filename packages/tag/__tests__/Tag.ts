@@ -1,14 +1,21 @@
-describe('[SMOKE]: Tag/Tag', () => {
-  function visit({ showRemoveButton }: { showRemoveButton: boolean }) {
-    cy.visit(
-      `http://localhost:6006/iframe.html?id=components-tag-tag--tag&args=showRemoveButton:${showRemoveButton};data-test-id:tag&viewMode=story`,
-    );
+describe('[Tag]: Tag', () => {
+  const testId = 'tag-test';
+
+  function visit(props?: { showRemoveButton: boolean }) {
+    cy.visitComponent({
+      group: 'tag',
+      name: 'tag',
+      props: {
+        'data-test-id': testId,
+        ...(props || {}),
+      },
+    });
   }
 
   it('renders correctly without remove button', () => {
     visit({ showRemoveButton: false });
 
-    cy.getByDataTestId('tag').within(() => {
+    cy.getByDataTestId(testId).within(() => {
       cy.getByDataTestId('tag-text').should('exist').getByDataTestId('tag-remove-button').should('not.exist');
     });
   });
@@ -16,7 +23,7 @@ describe('[SMOKE]: Tag/Tag', () => {
   it('renders correctly with remove button', () => {
     visit({ showRemoveButton: true });
 
-    cy.getByDataTestId('tag').within(() => {
+    cy.getByDataTestId(testId).within(() => {
       cy.getByDataTestId('tag-text').should('exist').getByDataTestId('tag-remove-button').should('exist');
     });
   });

@@ -1,8 +1,13 @@
-describe('[SMOKE]: Pagination/Pagination', () => {
+describe('[Pagination]:', () => {
   function visit({ total, page }: { total: number; page: number }) {
-    cy.visit(
-      `http://localhost:6006/iframe.html?id=components-pagination-pagination--pagination&args=total:${total};page:${page}&viewMode=story`,
-    );
+    cy.visitComponent({
+      group: 'pagination',
+      name: 'pagination',
+      props: {
+        total,
+        page,
+      },
+    });
   }
 
   const tests: Array<[{ total: number; page: number }, Array<number | [number, number]>]> = [

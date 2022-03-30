@@ -34,3 +34,12 @@ refreshButton.parameters = getDefaultParameters({
 });
 
 refreshButton.args = getDefaultArgs();
+
+refreshButton.argTypes = {
+  'data-test-id': {
+    control: {
+      required: false,
+      type: 'text',
+    },
+  },
+};

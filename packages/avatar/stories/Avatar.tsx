@@ -36,7 +36,7 @@ const AVATARS: Record<string, Omit<AvatarProps, 'variant'>[]> = {
       status: Avatar.status.Online,
     },
     {
-      name: 'ГОУ СОШ №12',
+      name: 'ГОУ СОШ №13',
       status: Avatar.status.Offline,
     },
   ],

@@ -23,7 +23,7 @@ export function getDefaultParameters({
         }
       : undefined,
     badges: [BADGE.STABLE],
-    controls: { include: ['disabled', 'href', 'target'].concat(extraControlsInclude) },
+    controls: { include: ['disabled', 'href', 'target', 'data-test-id'].concat(extraControlsInclude) },
   };
 }
 

@@ -71,8 +71,17 @@ const DOCUMENTS: DocumentProps[] = [
   },
 ];
 
-const Template: Story<DocumentProps> = ({ disabled }) => (
+const Template: Story<DocumentProps> = ({ disabled, ...props }) => (
   <>
+    <div>Controlled:</div>
+    <br />
+
+    <Document disabled={disabled} className={documentSmallClassName} {...props} />
+
+    <br />
+    <div>Examples:</div>
+    <br />
+
     {DOCUMENTS.map(doc => (
       <Document
         key={doc.file.name}
@@ -85,13 +94,17 @@ const Template: Story<DocumentProps> = ({ disabled }) => (
 );
 
 export const document = Template.bind({});
-document.args = {};
-document.argTypes = {
-  disabled: {
-    control: {
-      type: 'boolean',
+document.args = {
+  file: {
+    name: 'test.zip',
+    size: 374329606,
+    MIMEType: 'application/zip',
+  },
+  removeButton: {
+    tooltip: {
+      content: 'test',
     },
-    defaultValue: false,
+    onClick() {},
   },
 };
 document.parameters = {

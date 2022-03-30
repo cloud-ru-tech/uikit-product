@@ -42,4 +42,10 @@ copyButton.argTypes = {
       type: 'text',
     },
   },
+  'data-test-id': {
+    control: {
+      required: false,
+      type: 'text',
+    },
+  },
 };
