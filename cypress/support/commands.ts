@@ -3,7 +3,7 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-import { buildArgsParam } from '@storybook/router';
+import { buildArgsParam } from './helpers';
 
 Cypress.Commands.add('getByDataTestId', (value: string) => cy.get(`*[data-test-id="${value}"]`));
 
@@ -11,7 +11,7 @@ Cypress.Commands.add('visitComponent', ({ name, group, props }) => {
   let propsString = '';
 
   if (props) {
-    propsString = buildArgsParam({}, props);
+    propsString = buildArgsParam(props);
   }
 
   return cy.visit(
