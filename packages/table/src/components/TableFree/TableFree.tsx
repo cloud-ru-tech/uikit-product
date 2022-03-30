@@ -23,6 +23,7 @@ export function TableFree({
   context,
   columnTypes,
   frameworkComponents,
+  domLayout,
   ...rest
 }: WithSupportProps<ITableFreeProps>) {
   const [gridApi, setGridApi] = useState<ITableFreeProps['api']>();
@@ -56,6 +57,7 @@ export function TableFree({
         columnTypes={columnTypes}
         frameworkComponents={frameworkComponents}
         pageSize={pageSize}
+        domLayout={domLayout}
       />
       {!!pageSize && totalPages > 1 && (
         <S.PaginationWrapper>

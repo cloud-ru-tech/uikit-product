@@ -25,6 +25,7 @@ function StylelessTableFreePrivate({
   className,
   noRowsText,
   pageSize,
+  domLayout = 'autoHeight',
   ...tableProps
 }: TableFreePrivateProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -67,7 +68,7 @@ function StylelessTableFreePrivate({
             ...gridOptions,
           }}
           columnDefs={colDefs}
-          domLayout='autoHeight'
+          domLayout={domLayout}
           enableCellTextSelection
           localeText={{ noRowsToShow: noRowsText || textProvider(languageCode, Texts.NoRowsInitially) }}
           onFirstDataRendered={onFirstDataRendered}
