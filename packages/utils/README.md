@@ -119,3 +119,32 @@ function Component() {
   const { theme, changeTheme } = useTheme();
 }
 ```
+
+#### useForceUpdate
+
+Component will rerender after each `rerender`'s function call.
+
+```typescript jsx
+import { useForceUpdate } from '@sbercloud/uikit-utils';
+
+function Component() {
+  const rerender = useForceUpdate();
+  ...
+  rerender(); // <- will lead to rerender  
+}
+```
+
+#### useForceUpdateOnPageLoadedCompletely
+
+Component will rerender after window's `load` event happened.
+
+Could be helpfull in cases when you need await for css applied.
+
+```typescript jsx
+import { useForceUpdateOnPageLoadedCompletely } from '@sbercloud/uikit-utils';
+
+function Component() {
+    useForceUpdateOnPageLoadedCompletely(); 
+}
+```
+
