@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-input-private@2.2.11...@sbercloud/uikit-react-input-private@2.3.0) (2022-03-30)
+
+
+### Features
+
+* add input mask with phone passport and snils masks ([CP-5317](https://jira.sbercloud.tech/browse/CP-5317)) ([0fd4484](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/0fd448411d87ea9c31e970b3a4a052511a517fcb))
+
+
+
+
+
 ## [2.2.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-input-private@2.2.10...@sbercloud/uikit-react-input-private@2.2.11) (2022-03-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-input-private

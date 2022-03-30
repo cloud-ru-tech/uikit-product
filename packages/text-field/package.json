@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-text-field",
   "title": "React Text Field",
-  "version": "3.1.31",
+  "version": "3.1.32",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@sbercloud/uikit-react-button": "4.2.7",
     "@sbercloud/uikit-react-icons": "3.2.2",
-    "@sbercloud/uikit-react-input-private": "2.2.11",
+    "@sbercloud/uikit-react-input-private": "2.3.0",
     "@sbercloud/uikit-react-textarea-private": "2.2.9",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-utils": "2.3.0"
