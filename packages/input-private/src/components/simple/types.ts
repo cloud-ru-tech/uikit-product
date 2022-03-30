@@ -8,6 +8,8 @@ export type SimpleInputProps = RefAttributes<HTMLInputElement> &
   WithSupportProps<{
     value: string;
     onChange(value: string, e?: ChangeEvent<HTMLInputElement>): void;
+    onFocus?(e: ChangeEvent<HTMLInputElement>): void;
+    onBlur?(e: ChangeEvent<HTMLInputElement>): void;
     className?: string;
     placeholder?: string;
     size?: Sizes;

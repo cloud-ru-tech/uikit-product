@@ -32,7 +32,8 @@
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
     "@sbercloud/uikit-utils": "2.3.0",
-    "merge-refs": "1.0.0"
+    "merge-refs": "1.0.0",
+    "react-imask": "6.4.2"
   },
   "devDependencies": {
     "@types/merge-refs": "1.0.0"

@@ -1,5 +1,5 @@
 import mergeRefs from 'merge-refs';
-import { forwardRef, useRef, useState } from 'react';
+import { ChangeEvent, forwardRef, useRef, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -16,6 +16,8 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
     {
       value = '',
       onChange,
+      onFocus,
+      onBlur,
       placeholder,
       className,
       moreButton,
@@ -42,8 +44,15 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
       setIsFocused(true);
     };
 
-    const onFocusInput = () => setIsFocused(true);
-    const onBlurInput = () => setIsFocused(false);
+    const onFocusInput = (e: ChangeEvent<HTMLInputElement>) => {
+      onFocus?.(e);
+      setIsFocused(true);
+    };
+
+    const onBlurInput = (e: ChangeEvent<HTMLInputElement>) => {
+      onBlur?.(e);
+      setIsFocused(false);
+    };
 
     const onClearHandler = () => {
       onChange('');
