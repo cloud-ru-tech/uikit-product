@@ -24,6 +24,7 @@ function StylelessTableFreePrivate({
   checkboxSelection = false,
   className,
   noRowsText,
+  pageSize,
   ...tableProps
 }: TableFreePrivateProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -54,7 +55,8 @@ function StylelessTableFreePrivate({
             rowHeight: tableRowHeight,
             rowSelection: 'multiple',
             suppressRowClickSelection: true,
-            pagination: true,
+            pagination: !!pageSize,
+            paginationPageSize: pageSize,
             ensureDomOrder: true,
             defaultColDef: {
               flex: 1,

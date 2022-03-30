@@ -6,4 +6,5 @@ export type TableFreePrivateProps = AgGridReactProps & {
   columnDefs: NonNullable<AgGridReactProps['columnDefs']>;
   rowData: NonNullable<AgGridReactProps['rowData']>;
   noRowsText?: string;
+  pageSize?: number;
 };

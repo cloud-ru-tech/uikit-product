@@ -55,6 +55,7 @@ export function TableFree({
         context={context}
         columnTypes={columnTypes}
         frameworkComponents={frameworkComponents}
+        pageSize={pageSize}
       />
       {!!pageSize && totalPages > 1 && (
         <S.PaginationWrapper>
