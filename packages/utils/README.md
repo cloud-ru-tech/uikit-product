@@ -7,6 +7,7 @@
 
 If component is mounted, then it extends html tag by current lang and current themes data-attributes, adds classes with colors to body. Controls for changing are enabled via `useTheme` and `useLanguage` hooks. 
 
+
 ### Dev utils
 
 #### CreateTextProvider
@@ -15,7 +16,7 @@ creates text provider
 ```typescript jsx
 import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
 
-enum Texts = {
+enum Texts {
   Hide = 'Hide',
 }
 
@@ -93,6 +94,24 @@ excludeSupportProps(sampleProps) => {
   value: '123'
 }   
 ```
+
+#### KeyboardSelectHandler
+
+If you need to repeat mouse click behavior via keyboard pressing you may use following approach:
+
+```typescript jsx
+import { keyboardSelectHandler } from '@sbercloud/uikit-utils';
+
+
+<div
+...
+onClick={changeTabHandler}
+onKeyPress={keyboardSelectHandler(changeTabHandler)}
+...
+/>
+```
+
+In that case Space or Enter pressing when component in focus will be equivalent to regular click
 
 ### Hooks
 

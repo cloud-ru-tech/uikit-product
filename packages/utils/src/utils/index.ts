@@ -3,3 +3,4 @@ export * from './extractDataProps';
 export * from './extractSupportProps';
 export * from './excludeSupportProps';
 export * from './createTextProvider';
+export * from './keyboardSelectHandler';
