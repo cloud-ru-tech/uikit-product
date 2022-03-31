@@ -1,4 +1,4 @@
-import { ChangeEvent, RefAttributes } from 'react';
+import { ChangeEvent, FocusEventHandler, RefAttributes } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-utils';
 
@@ -8,8 +8,8 @@ export type SimpleInputProps = RefAttributes<HTMLInputElement> &
   WithSupportProps<{
     value: string;
     onChange(value: string, e?: ChangeEvent<HTMLInputElement>): void;
-    onFocus?(e: ChangeEvent<HTMLInputElement>): void;
-    onBlur?(e: ChangeEvent<HTMLInputElement>): void;
+    onFocus?: FocusEventHandler<HTMLInputElement>;
+    onBlur?: FocusEventHandler<HTMLInputElement>;
     className?: string;
     placeholder?: string;
     size?: Sizes;
