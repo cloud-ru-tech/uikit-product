@@ -1,5 +1,5 @@
 import { cx } from '@linaria/core';
-import { useCallback, useState } from 'react';
+import { ReactNode, useCallback, useState } from 'react';
 
 import {
   TooltipMenuItemPrivate,
@@ -12,7 +12,7 @@ import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 import * as S from './styled';
 
 export type TDropdownMenuActionType = {
-  name: () => React.ReactNode | string;
+  name: () => ReactNode | string;
   onClick(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
   id?: string;
   disabled?: boolean;
@@ -23,26 +23,20 @@ export type TDropdownMenuActionProps = {
   set(on: boolean): void;
   hide(): void;
 };
-export type TDropdownMenuCustomActions = (props: TDropdownMenuActionProps) => React.ReactNode;
+export type TDropdownMenuCustomActions = (props: TDropdownMenuActionProps) => ReactNode;
 
-export interface DropdownMenuProps {
-  actions: TDropdownMenuCustomActions | TDropdownMenuActionType[] | React.ReactNode;
-  children: React.ReactNode;
+export type DropdownMenuProps = WithSupportProps<{
+  actions: TDropdownMenuCustomActions | TDropdownMenuActionType[] | ReactNode;
+  children: ReactNode;
   dropdownMenuClassName?: string;
   onToggle?: (isOpen: boolean) => void;
+}>;
+
+export function DropdownItem(props: TooltipMenuItemPrivateProps) {
+  return <TooltipMenuItemPrivate className={S.menuItemClassName} {...props} />;
 }
 
-export const DropdownItem: React.FC<TooltipMenuItemPrivateProps> = props => (
-  <TooltipMenuItemPrivate className={S.menuItemClassName} {...props} />
-);
-
-export const DropdownMenu = ({
-  actions,
-  children,
-  onToggle,
-  dropdownMenuClassName,
-  ...rest
-}: WithSupportProps<DropdownMenuProps>) => {
+export function DropdownMenu({ actions, children, onToggle, dropdownMenuClassName, ...rest }: DropdownMenuProps) {
   const [on, setOn] = useState(false);
   const toggleDropdown = useCallback(
     on => {
@@ -106,4 +100,4 @@ export const DropdownMenu = ({
       <S.Wrapper {...extractSupportProps(rest)}>{children}</S.Wrapper>
     </TooltipPrivate>
   );
-};
+}

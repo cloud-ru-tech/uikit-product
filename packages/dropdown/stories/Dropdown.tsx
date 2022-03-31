@@ -1,8 +1,6 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useCallback, useState } from 'react';
-import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import { Button, ButtonIcon, ButtonRound } from '@sbercloud/uikit-react-button';
 import { Divider } from '@sbercloud/uikit-react-divider';
@@ -22,7 +20,6 @@ import { DropdownItem, DropdownMenu, DropdownMenuProps } from '../src';
 export default {
   title: 'Not stable/Dropdown',
   component: DropdownMenu,
-  decorators: [addReadme, withDesign],
 } as Meta;
 
 const Wrapper = styled.div`
@@ -48,13 +45,14 @@ const IconWrapper = styled.div`
   }
 `;
 
-const Template: Story<DropdownMenuProps> = () => {
+const Template: Story<DropdownMenuProps> = ({ ...args }) => {
   const [isOpen, setIsOpen] = useState(false);
   const onToggle = useCallback((value: boolean) => setIsOpen(value), []);
 
   return (
     <Wrapper>
       <DropdownMenu
+        data-test-id={args['data-test-id']}
         actions={
           <>
             <DropdownItem onClick={(): void => {}}>
@@ -77,6 +75,7 @@ const Template: Story<DropdownMenuProps> = () => {
       </DropdownMenu>
 
       <DropdownMenu
+        data-test-id={args['data-test-id']}
         actions={[
           { name: 'Загрузить файл', onClick: () => {} },
           { name: 'Загрузить документ', onClick: () => {} },
@@ -86,6 +85,7 @@ const Template: Story<DropdownMenuProps> = () => {
       </DropdownMenu>
 
       <DropdownMenu
+        data-test-id={args['data-test-id']}
         actions={[
           { name: 'Загрузить файл', onClick: () => {} },
           { name: 'Загрузить документ', onClick: () => {}, disabled: true },
