@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-input-private@2.3.0...@sbercloud/uikit-react-input-private@2.3.1) (2022-03-31)
+
+
+### Bug Fixes
+
+* change onFocus and onBlur simple input types ([CP-5317](https://jira.sbercloud.tech/browse/CP-5317)) ([c6e3c48](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/c6e3c4853e980cda7dce996893490c9e99a079b1))
+
+
+
+
+
 # [2.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-input-private@2.2.11...@sbercloud/uikit-react-input-private@2.3.0) (2022-03-30)
 
 
