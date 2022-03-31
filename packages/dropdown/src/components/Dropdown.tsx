@@ -57,6 +57,7 @@ export function DropdownMenu({ actions, children, onToggle, dropdownMenuClassNam
     <TooltipPrivate
       placement={TooltipPrivate.placements.BottomEnd}
       trigger={TooltipPrivate.triggerTypes.Click}
+      interactive={false}
       visible={on}
       onVisibleChange={toggleDropdown}
       classNameContainer={S.containerClassName}
