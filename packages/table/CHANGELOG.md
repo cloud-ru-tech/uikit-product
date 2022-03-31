@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.32.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.31.5...@sbercloud/uikit-react-table@0.32.0) (2022-03-31)
+
+
+### Bug Fixes
+
+* use pageSize for pagination prop value in TableFreePrivate ([7b253f0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/7b253f03387bd37c29051f3b4ac68fcdcc0f8bc6))
+
+
+### Features
+
+* domLayout prop for TableFree ([8c30d61](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/8c30d61e34bbeeeb1c4da1390be5cb05f75e4251))
+
+
+
+
+
 ## [0.31.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.31.4...@sbercloud/uikit-react-table@0.31.5) (2022-03-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
