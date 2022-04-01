@@ -37,4 +37,10 @@ avatarPlaceholder.argTypes = {
       max: 200,
     },
   },
+  fill: {
+    name: '[Stories]: Color of icons',
+    control: {
+      type: 'color',
+    },
+  },
 };

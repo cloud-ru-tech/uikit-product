@@ -1,9 +1,13 @@
 import { downloadFile } from '@sbercloud/ft-download-file';
 
+const DEFAULT_SVG_SIZE = 20;
+
 const download = (canvas: HTMLCanvasElement, fileName: string) => {
   const path = canvas.toDataURL('image/png');
   downloadFile({ path, fileName });
 };
+
+const getSvgSize = (size?: string) => (size ? Number(size.slice(0, -2)) : DEFAULT_SVG_SIZE);
 
 export async function svgExport({ id, fileName }: { id: string; fileName: string }) {
   const svg = document.getElementById(id);
@@ -21,16 +25,11 @@ export async function svgExport({ id, fileName }: { id: string; fileName: string
   const image = new Image();
 
   const svgBlob = new Blob([data], { type: 'image/svg+xml;charset=utf-8' });
-  const url = DOMURL.createObjectURL(svgBlob);
 
-  image.src = url;
-  try {
-    canvas.width = Number(svg.style.width.slice(0, -2)) | 50;
-    canvas.height = Number(svg.style.height.slice(0, -2)) | 50;
-  } catch (error) {
-    canvas.width = 50;
-    canvas.height = 50;
-  }
+  image.src = DOMURL.createObjectURL(svgBlob);
+
+  canvas.width = getSvgSize(svg.style.width);
+  canvas.height = getSvgSize(svg.style.height);
 
   if (image.complete) {
     context?.drawImage(image, 0, 0);
