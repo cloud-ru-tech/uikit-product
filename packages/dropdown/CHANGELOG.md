@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-dropdown@0.13.11...@sbercloud/uikit-react-dropdown@0.13.12) (2022-04-01)
+
+
+### Bug Fixes
+
+* change menu background color on dark themes ([9a65017](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/9a650178ebbbf1cda9c5fc98ab24ef2a6ce62bac))
+* do not close dropdown menu on losing hover ([2d3c218](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/2d3c21894219478a405ec894b72f883a9b52204b))
+
+
+
+
+
 ## [0.13.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-dropdown@0.13.10...@sbercloud/uikit-react-dropdown@0.13.11) (2022-03-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-dropdown

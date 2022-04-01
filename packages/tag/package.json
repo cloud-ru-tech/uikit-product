@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-tag",
   "title": "React Tag",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,12 +27,12 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "4.2.7",
+    "@sbercloud/uikit-react-button": "4.2.8",
     "@sbercloud/uikit-react-icons": "3.2.2",
-    "@sbercloud/uikit-react-tooltip-private": "1.2.5",
+    "@sbercloud/uikit-react-tooltip-private": "1.2.6",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.3.0"
+    "@sbercloud/uikit-utils": "2.4.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

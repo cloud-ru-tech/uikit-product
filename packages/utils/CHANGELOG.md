@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-utils@2.3.0...@sbercloud/uikit-utils@2.4.0) (2022-04-01)
+
+
+### Features
+
+* `keyboardSelectHandler` utility ([7423696](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/742369639c5d24a7ea1ba0a37312a5ed033102e1))
+* `useForceUpdate` and `useForceUpdateOnPageLoadedCompletely` hooks ([5523c0a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/5523c0a4db6e39678659742d6c95ee033392412e))
+
+
+
+
+
 # [2.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-utils@2.2.4...@sbercloud/uikit-utils@2.3.0) (2022-03-29)
 
 
