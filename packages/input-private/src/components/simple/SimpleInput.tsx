@@ -91,8 +91,6 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
             data-test-id={'private-input'}
             autoFocus={autoFocus}
             autoComplete={autoComplete}
-            // eslint-disable-next-line
-            // @ts-ignore
             ref={inputRef}
             maxLength={maxLength}
             value={value}

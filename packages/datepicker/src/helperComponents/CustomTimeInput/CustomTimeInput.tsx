@@ -36,8 +36,6 @@ export const CustomTimeInput = forwardRef<HTMLInputElement, ICustomTimeInputProp
   }, [timeFormatter, date]);
 
   return (
-    // eslint-disable-next-line
-    // @ts-ignore
     <S.Container ref={ref} onClick={onClick}>
       <S.Input
         data-open={open || undefined}
