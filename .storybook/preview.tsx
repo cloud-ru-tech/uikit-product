@@ -2,7 +2,6 @@ import { addDecorator, addParameters } from '@storybook/react';
 import { useEffect, useLayoutEffect } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
-import { addReadme } from 'storybook-readme';
 
 import { ConfigProvider, Themes } from '../packages/utils/src';
 
@@ -15,7 +14,6 @@ const COLOR_MAP = {
   [Themes.GreenDark]: '#157552',
 };
 
-addDecorator(addReadme);
 addDecorator(withDesign);
 addDecorator((Story, { globals: { locale, theme } }) => {
   const colorizeThemeButton = () => {

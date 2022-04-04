@@ -9,7 +9,7 @@ const STORIES = glob
 module.exports = {
   stories: STORIES,
   addons: [
-    'storybook-readme',
+    '@sbercloud/ft-storybook-readme-addon',
     'storybook-addon-designs',
     {
       name: '@storybook/addon-storysource',
