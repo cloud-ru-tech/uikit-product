@@ -1,4 +1,4 @@
-import { ReactChildren, ReactText, useContext } from 'react';
+import { ReactNode, useContext } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-utils';
 
@@ -7,7 +7,7 @@ import { TabId } from '../../helpers/types';
 
 export type ContentProps = WithSupportProps<{
   value: TabId;
-  children: ReactChildren | ReactText;
+  children: ReactNode;
   className?: string;
 }>;
 
