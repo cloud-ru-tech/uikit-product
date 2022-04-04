@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-tabs@1.0.1...@sbercloud/uikit-react-tabs@1.0.2) (2022-04-04)
+
+
+### Bug Fixes
+
+* correct type of children within Tabs.Content ([ba74c65](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/ba74c6519c36b6411d3f6b3a8ae176390731433d))
+
+
+
+
+
 ## [1.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-tabs@0.10.5...@sbercloud/uikit-react-tabs@1.0.1) (2022-04-01)
 
 
