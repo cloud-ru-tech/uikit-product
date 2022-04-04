@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-icons@3.2.2...@sbercloud/uikit-react-icons@3.3.0) (2022-04-04)
+
+
+### Features
+
+* ([AICE-5507](https://jira.sbercloud.tech/browse/AICE-5507)) add HeartFilled and HeartOutline interface icons ([87f8986](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/87f89865c9ad858a70786ebeb6dbd8e2148c600d))
+
+
+
+
+
 ## [3.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-icons@3.2.1...@sbercloud/uikit-react-icons@3.2.2) (2022-03-29)
 
 
