@@ -57,3 +57,9 @@ export const ANIMATIONS = {
     }
   `,
 };
+
+export const SHADOW = {
+  SMALL: '0 2px 12px rgba(0, 0, 0, 0.04)',
+  MEDIUM: '0 4px 20px rgba(0, 0, 0, 0.08)',
+  LARGE: '0 8px 32px rgba(0, 0, 0, 0.08)',
+};
