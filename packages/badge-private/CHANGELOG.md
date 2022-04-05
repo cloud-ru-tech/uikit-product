@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-badge-private@3.1.7...@sbercloud/uikit-react-badge-private@3.1.8) (2022-04-05)
+
+
+### Bug Fixes
+
+* ([AICE-5518](https://jira.sbercloud.tech/browse/AICE-5518)) colors update ([f833836](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/f8338362675ffd50186a23077efd589f15ab561e))
+
+
+
+
+
 ## [3.1.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-badge-private@3.1.6...@sbercloud/uikit-react-badge-private@3.1.7) (2022-04-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-badge-private
