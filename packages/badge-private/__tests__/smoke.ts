@@ -40,7 +40,7 @@ describe('[Badge]:', () => {
     });
 
     cy.getByDataTestId(testId).within(() => {
-      expect(cy.get('svg')).to.exist;
+      expect(cy.getByDataTestId('badge__dot')).to.exist;
     });
   });
 
@@ -50,7 +50,7 @@ describe('[Badge]:', () => {
     });
 
     cy.getByDataTestId(testId).within(() => {
-      expect(cy.get('svg')).to.exist;
+      expect(cy.getByDataTestId('badge__dot')).to.exist;
     });
   });
 });

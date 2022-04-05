@@ -18,7 +18,7 @@ function StylelessBadge({
   const badgeContent = useMemo(() => {
     if (isGroupMessage || !number) {
       return (
-        <DotContainer data-alert={type === Types.Alert || undefined}>
+        <DotContainer data-test-id='badge__dot' data-alert={type === Types.Alert || undefined}>
           <svg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <circle cx='8' cy='8' r='1.5' />
           </svg>

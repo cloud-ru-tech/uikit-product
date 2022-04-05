@@ -21,13 +21,7 @@ export const DotContainer = styled.div`
   width: 16px;
 
   svg circle {
-    fill: var(${COLORS.DOT_DEFAULT_COLOR});
-  }
-
-  &[data-alert] {
-    svg circle {
-      fill: var(${COLORS.DOT_ALERT_COLOR});
-    }
+    fill: currentColor;
   }
 `;
 
@@ -47,21 +41,22 @@ export const styledBadge = (Badge: VFC<BadgeProps>): VFC<BadgeProps> => styled(B
   border-radius: 20px;
   font-size: 11px;
   line-height: 12px;
-  color: var(${COLORS.DEFAULT_TEXT_COLOR});
-  background-color: var(${COLORS.DEFAULT_BACKGROUND});
-  border: 1px solid var(${COLORS.BORDER});
+  color: var(${COLORS.content.info.default});
+  background-color: var(${COLORS.background.info.default});
+  border: 1px solid var(${COLORS.border});
 
   &[data-alert] {
-    color: var(${COLORS.ALERT_TEXT_COLOR});
-    background: var(${COLORS.ALERT_BACKGROUND});
+    color: var(${COLORS.content.alert.default});
+    background: var(${COLORS.background.alert.default});
+
+    &[data-disabled] {
+      color: var(${COLORS.content.alert.disabled});
+      background: var(${COLORS.background.alert.disabled});
+    }
   }
 
   &[data-disabled] {
-    color: var(${COLORS.DISABLED_TEXT_COLOR});
-    background: var(${COLORS.DISABLED_DEFAULT_BACKGROUND});
-  }
-
-  &[data-alert][data-disabled] {
-    background: var(${COLORS.DISABLED_ALERT_BACKGROUND});
+    color: var(${COLORS.content.info.disabled});
+    background: var(${COLORS.background.info.disabled});
   }
 `;
