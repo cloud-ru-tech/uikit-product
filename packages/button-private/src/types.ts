@@ -1,0 +1,41 @@
+import { MouseEventHandler } from 'react';
+
+import { TooltipProps } from '@sbercloud/uikit-react-tooltip';
+import { WithSupportProps } from '@sbercloud/uikit-utils';
+
+export type ButtonProps = {
+  type?: 'button' | 'submit' | 'reset';
+};
+
+export type AnchorProps = {
+  href: string;
+  target?: string;
+};
+
+export type WithManagedLoadingProps = {
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+  loading?: boolean;
+};
+
+export type WithTooltipProps = {
+  className?: CommonButtonProps['className'];
+  tooltip?: {
+    title?: TooltipProps['title'];
+    content?: TooltipProps['content'];
+    placement?: TooltipProps['placement'];
+  };
+  disabledTooltip?: {
+    title?: TooltipProps['title'];
+    content?: TooltipProps['content'];
+    placement?: TooltipProps['placement'];
+  };
+};
+
+export type CommonButtonProps = WithSupportProps<ButtonProps | AnchorProps> & {
+  className?: string;
+  disabled?: boolean;
+  id?: string;
+  onClick?: MouseEventHandler<HTMLElement>;
+};
+
+export type CommonButtonPropsWithOptionalTooltip = CommonButtonProps & Pick<WithTooltipProps, 'tooltip'>;
