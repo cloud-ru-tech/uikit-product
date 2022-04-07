@@ -6,5 +6,6 @@ const STORIES = glob.sync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}
 module.exports = {
   exclude: STORIES.concat(defaultExclude),
   excludeAfterRemap: true,
+  reporter: ['lcov', 'cobertura'],
   ['report-dir']: 'cypress/coverage',
 };
