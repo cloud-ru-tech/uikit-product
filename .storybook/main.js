@@ -37,12 +37,20 @@ module.exports = {
     reactDocgen: 'react-docgen-typescript',
     checkOptions: {},
   },
+  babel: base => {
+    const custom = {
+      env: {
+        test: { plugins: ['istanbul'] },
+      },
+    };
+
+    return { ...base, ...custom };
+  },
   webpackFinal: async config => {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       stream: require.resolve('stream-browserify'),
     };
-    config.module.rules[0].use[0].options.plugins.push('istanbul');
     config.module.rules[0].use.push({
       loader: '@linaria/webpack-loader',
       options: {

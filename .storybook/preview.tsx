@@ -4,7 +4,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
 import { addReadme } from 'storybook-readme';
 
-import { ConfigProvider, Themes } from '../packages/utils';
+import { ConfigProvider, Themes } from '../packages/utils/src';
 
 const LanguageCodeType = ConfigProvider.languages;
 

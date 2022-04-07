@@ -17,7 +17,7 @@
     "all:cleaninstall": "node scripts/remove-modules.js && npm cache clean -f && npm i --legacy-peer-deps && npm run build",
     "prepare": "node_modules/.bin/husky install",
     "test": "cypress run --headless --quiet",
-    "ci": "start-server-and-test storybook:ci http://localhost:6006 test && nyc report --reporter=text-summary"
+    "ci": "cross-env NODE_ENV=test start-server-and-test storybook:ci http://localhost:6006 test && nyc report --reporter=text-summary"
   },
   "devDependencies": {
     "@babel/cli": "7.16.8",
@@ -59,6 +59,7 @@
     "babel-loader": "8.2.3",
     "babel-plugin-istanbul": "6.1.1",
     "colors": "1.4.0",
+    "cross-env": "7.0.3",
     "cypress": "9.5.3",
     "depcheck": "1.4.3",
     "dependency-graph": "0.11.0",
