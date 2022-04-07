@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.33.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.32.4...@sbercloud/uikit-react-table@0.33.0) (2022-04-07)
+
+
+### Features
+
+* Adds ToolbarButton and ToolbarRefresh, renames Toolbar.Wrapper to Toolbar.Container, adds required icon prop to Toolbar.Button ([AICE-5374](https://jira.sbercloud.tech/browse/AICE-5374)) ([5cea01e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/5cea01e05664fc2242962aae71448004271e735c))
+
+
+### BREAKING CHANGES
+
+* Adds ToolbarButton and ToolbarRefresh, renames Toolbar.Wrapper to Toolbar.Container, adds required icon prop to Toolbar.Button (AICE-5374)
+
+
+
+
+
 ## [0.32.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.32.3...@sbercloud/uikit-react-table@0.32.4) (2022-04-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table

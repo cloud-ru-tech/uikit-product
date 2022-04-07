@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-cards@0.12.11...@sbercloud/uikit-react-cards@0.13.0) (2022-04-07)
+
+
+### Features
+
+* Adds ToolbarButton and ToolbarRefresh, renames Toolbar.Wrapper to Toolbar.Container, adds required icon prop to Toolbar.Button ([AICE-5374](https://jira.sbercloud.tech/browse/AICE-5374)) ([5cea01e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/5cea01e05664fc2242962aae71448004271e735c))
+
+
+### BREAKING CHANGES
+
+* Adds ToolbarButton and ToolbarRefresh, renames Toolbar.Wrapper to Toolbar.Container, adds required icon prop to Toolbar.Button (AICE-5374)
+
+
+
+
+
 ## [0.12.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-cards@0.12.10...@sbercloud/uikit-react-cards@0.12.11) (2022-04-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-cards

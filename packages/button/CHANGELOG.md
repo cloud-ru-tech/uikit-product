@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.9...@sbercloud/uikit-react-button@5.0.0) (2022-04-07)
+
+
+### Features
+
+* removes ButtonToolbar ([AICE-5374](https://jira.sbercloud.tech/browse/AICE-5374)) ([e1db60a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/e1db60a1c176077d5734079df3a18e1edc12a48c))
+
+
+### BREAKING CHANGES
+
+* removes ButtonToolbar (AICE-5374)
+
+
+
+
+
 ## [4.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.8...@sbercloud/uikit-react-button@4.2.9) (2022-04-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
