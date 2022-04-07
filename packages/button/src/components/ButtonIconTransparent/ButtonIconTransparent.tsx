@@ -1,8 +1,11 @@
 import { ReactElement } from 'react';
 
-import { extractCommonButtonProps } from '../../helpers';
-import { withTooltip } from '../../hocs';
-import { CommonButtonPropsWithOptionalTooltip } from '../../types';
+import {
+  CommonButtonPropsWithOptionalTooltip,
+  extractCommonButtonProps,
+  withTooltip,
+} from '@sbercloud/uikit-react-button-private';
+
 import { Variant } from './constants';
 import * as S from './styled';
 
@@ -19,14 +22,14 @@ const ButtonIconTransparentBase = ({
   className,
   ...rest
 }: ButtonIconTransparentProps) => (
-  <S.StyledBaseButton
+  <S.StyledButtonPrivate
     className={className}
     data-variant={variant}
     data-rounded={rounded || undefined}
     {...extractCommonButtonProps(rest)}
   >
     {icon}
-  </S.StyledBaseButton>
+  </S.StyledButtonPrivate>
 );
 
 const ButtonIconTransparentWithTooltip = withTooltip(ButtonIconTransparentBase);

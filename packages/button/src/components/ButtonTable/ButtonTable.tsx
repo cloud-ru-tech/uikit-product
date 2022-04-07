@@ -1,11 +1,14 @@
 import { ReactText } from 'react';
 
+import {
+  CommonButtonProps,
+  extractCommonButtonProps,
+  withManagedLoading,
+  withTooltip,
+} from '@sbercloud/uikit-react-button-private';
 import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
 
 import { LoadingIcon, PieIndicator } from '../../helperComponents';
-import { extractCommonButtonProps } from '../../helpers';
-import { withManagedLoading, withTooltip } from '../../hocs';
-import { CommonButtonProps } from '../../types';
 import { Variant } from './constants';
 import * as S from './styled';
 
@@ -32,7 +35,7 @@ const ButtonTableBase = ({
   const isProgress = typeof progress === 'number';
   const hasGetProgressText = typeof getProgressText === 'function';
   return (
-    <S.StyledBaseButton
+    <S.StyledButtonPrivate
       className={className}
       data-variant={variant}
       data-loading={loading || (loading && isProgress) || undefined}
@@ -51,7 +54,7 @@ const ButtonTableBase = ({
         {loading && typeof progress === 'number' && <PieIndicator completed={progress} />}
         {!loading && <CirclePlayFilledInterfaceSVG />}
       </S.IconWrapper>
-    </S.StyledBaseButton>
+    </S.StyledButtonPrivate>
   );
 };
 

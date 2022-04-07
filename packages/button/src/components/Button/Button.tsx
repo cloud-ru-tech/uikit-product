@@ -1,8 +1,7 @@
 import { ReactElement, ReactText } from 'react';
 
-import { extractCommonButtonProps } from '../../helpers';
-import { withTooltip } from '../../hocs';
-import { CommonButtonProps } from '../../types';
+import { CommonButtonProps, extractCommonButtonProps, withTooltip } from '@sbercloud/uikit-react-button-private';
+
 import { Variant } from './constants';
 import * as S from './styled';
 
@@ -13,10 +12,10 @@ export type ButtonProps = {
 } & CommonButtonProps;
 
 const ButtonCmp = ({ text, variant = Variant.Filled, icon, className, ...rest }: ButtonProps) => (
-  <S.StyledBaseButton className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
+  <S.StyledButtonPrivate className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
     {text}
     {icon && <S.IconWrapper>{icon}</S.IconWrapper>}
-  </S.StyledBaseButton>
+  </S.StyledButtonPrivate>
 );
 
 const ButtonWithTooltip = withTooltip(ButtonCmp);

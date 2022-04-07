@@ -1,5 +1,6 @@
+import { CommonButtonPropsWithOptionalTooltip } from '@sbercloud/uikit-react-button-private';
+
 import { ButtonTableProps } from '../src/components/ButtonTable';
-import { CommonButtonPropsWithOptionalTooltip } from '../src/types';
 
 const buttons = [
   {
@@ -37,10 +38,6 @@ const buttons = [
   {
     name: 'button-table-icon',
     componentName: 'ButtonTableIcon',
-  },
-  {
-    name: 'button-toolbar',
-    componentName: 'ButtonToolbar',
   },
   {
     name: 'copy-button',

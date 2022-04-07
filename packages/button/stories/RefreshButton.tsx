@@ -1,6 +1,8 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { ButtonToolbar, RefreshButton, RefreshButtonProps } from '../src';
+import { Toolbar } from '@sbercloud/uikit-react-toolbar';
+
+import { RefreshButton, RefreshButtonProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
@@ -21,7 +23,7 @@ const Template: Story<RefreshButtonProps> = ({ ...args }) => (
     <TableColumn>
       <TableCell>Button Toolbar</TableCell>
       <TableCell>
-        <RefreshButton as={ButtonToolbar} {...args} />
+        <RefreshButton as={Toolbar.Button} {...args} />
       </TableCell>
     </TableColumn>
   </TableWrapper>

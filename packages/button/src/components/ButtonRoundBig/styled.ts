@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 
+import { ButtonPrivate } from '@sbercloud/uikit-react-button-private';
 import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
-import { BaseButton } from '../../helperComponents';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -10,7 +10,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const StyledBaseButton = styled(BaseButton)`
+export const StyledButtonPrivate = styled(ButtonPrivate)`
   height: 36px;
   padding: 8px 16px 8px 8px;
   border-radius: 18px;

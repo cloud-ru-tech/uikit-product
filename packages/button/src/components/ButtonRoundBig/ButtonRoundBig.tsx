@@ -1,8 +1,7 @@
 import { ReactElement, ReactText } from 'react';
 
-import { extractCommonButtonProps } from '../../helpers';
-import { withTooltip } from '../../hocs';
-import { CommonButtonProps } from '../../types';
+import { CommonButtonProps, extractCommonButtonProps, withTooltip } from '@sbercloud/uikit-react-button-private';
+
 import * as S from './styled';
 
 export type ButtonRoundBigProps = CommonButtonProps & {
@@ -11,10 +10,10 @@ export type ButtonRoundBigProps = CommonButtonProps & {
 };
 
 const ButtonRoundBigBase = ({ text, icon, className, ...rest }: ButtonRoundBigProps) => (
-  <S.StyledBaseButton className={className} {...extractCommonButtonProps(rest)}>
+  <S.StyledButtonPrivate className={className} {...extractCommonButtonProps(rest)}>
     <S.IconWrapper>{icon}</S.IconWrapper>
     {text}
-  </S.StyledBaseButton>
+  </S.StyledButtonPrivate>
 );
 
 export const ButtonRoundBig = withTooltip(ButtonRoundBigBase);

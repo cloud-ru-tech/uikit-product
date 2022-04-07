@@ -1,6 +1,7 @@
 import { styled } from '@linaria/react';
 
-import { BaseButton } from '../../helperComponents';
+import { ButtonPrivate } from '@sbercloud/uikit-react-button-private';
+
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -9,7 +10,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-export const StyledBaseButton = styled(BaseButton)`
+export const StyledButtonPrivate = styled(ButtonPrivate)`
   width: 20px;
   height: 20px;
 

@@ -1,8 +1,7 @@
 import { ReactElement, ReactText } from 'react';
 
-import { extractCommonButtonProps } from '../../helpers';
-import { withTooltip } from '../../hocs';
-import { CommonButtonProps } from '../../types';
+import { CommonButtonProps, extractCommonButtonProps, withTooltip } from '@sbercloud/uikit-react-button-private';
+
 import { IconPosition, Sizes, Variant } from './constants';
 import * as S from './styled';
 
@@ -23,7 +22,12 @@ const ButtonGhostBase = ({
   className,
   ...rest
 }: ButtonGhostProps) => (
-  <S.StyledBaseButton className={className} data-variant={variant} data-size={size} {...extractCommonButtonProps(rest)}>
+  <S.StyledButtonPrivate
+    className={className}
+    data-variant={variant}
+    data-size={size}
+    {...extractCommonButtonProps(rest)}
+  >
     {icon && iconPosition === IconPosition.Before && (
       <S.IconWrapper data-size={size} data-position={iconPosition}>
         {icon}
@@ -35,7 +39,7 @@ const ButtonGhostBase = ({
         {icon}
       </S.IconWrapper>
     )}
-  </S.StyledBaseButton>
+  </S.StyledButtonPrivate>
 );
 
 const ButtonGhostWithTooltip = withTooltip(ButtonGhostBase);

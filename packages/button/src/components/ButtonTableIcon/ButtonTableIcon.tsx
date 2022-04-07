@@ -1,6 +1,12 @@
 import { ComponentProps } from 'react';
 
 import {
+  CommonButtonProps,
+  extractCommonButtonProps,
+  withManagedLoading,
+  withTooltip,
+} from '@sbercloud/uikit-react-button-private';
+import {
   EyeOpenedInterfaceSVG,
   PauseInterfaceSVG,
   PlayInterfaceSVG,
@@ -10,9 +16,7 @@ import {
 import { useLanguage } from '@sbercloud/uikit-utils';
 
 import { LoadingIcon } from '../../helperComponents';
-import { Texts, extractCommonButtonProps, textProvider } from '../../helpers';
-import { withManagedLoading, withTooltip } from '../../hocs';
-import { CommonButtonProps } from '../../types';
+import { Texts, textProvider } from '../../helpers';
 import { TEXTS_BY_VARIANT, Variant } from './constants';
 import * as S from './styled';
 
@@ -30,10 +34,10 @@ const Icons = {
 };
 
 const ButtonTableIconBase = ({ variant = Variant.Play, loading, className, ...rest }: ButtonTableIconProps) => (
-  <S.StyledBaseButton className={className} data-loading={loading || undefined} {...extractCommonButtonProps(rest)}>
+  <S.StyledButtonPrivate className={className} data-loading={loading || undefined} {...extractCommonButtonProps(rest)}>
     {loading && <LoadingIcon />}
     {!loading && Icons[variant]}
-  </S.StyledBaseButton>
+  </S.StyledButtonPrivate>
 );
 
 const ButtonTableIconWithTooltip = withTooltip(ButtonTableIconBase);
