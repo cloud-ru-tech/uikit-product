@@ -35,6 +35,7 @@ type ClientModelTableViewProps<T> = {
   onSearchCallback(value: string): void;
   moreActions: Toolbar.MoreActionsProps['actions'];
   searchValue: string;
+  rowSelection?: TablePrivateProps['rowSelection'];
 };
 
 export function ClientModelTableView<T>({
@@ -54,10 +55,12 @@ export function ClientModelTableView<T>({
   moreActions,
   onRowClicked,
   onRowSelected,
+  rowSelection,
   onRowDoubleClicked,
   ...rest
 }: WithSupportProps<ClientModelTableViewProps<T>>) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+
   return (
     <div {...extractSupportProps(rest)}>
       <Toolbar.Container className={S.SearchPanelView} data-test-id='client-table__toolbar'>
@@ -124,7 +127,8 @@ export function ClientModelTableView<T>({
           },
           suppressPaginationPanel: true,
           enableCellTextSelection: true,
-          rowSelection: 'multiple',
+          rowSelection: rowSelection || 'multiple',
+          suppressRowClickSelection: !rowSelection,
         }}
       />
       {paginationProps?.showPagination && (

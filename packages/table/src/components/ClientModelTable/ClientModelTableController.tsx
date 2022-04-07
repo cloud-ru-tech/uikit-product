@@ -29,6 +29,7 @@ export type ClientModelTableControllerProps<T> = {
     getRowHeight?: TablePrivateProps['getRowHeight'];
     getRowNodeId?: TablePrivateProps['getRowNodeId'];
     onRowClicked?: TablePrivateProps['onRowClicked'];
+    rowSelection?: TablePrivateProps['rowSelection'];
     onRowSelected?: TablePrivateProps['onRowSelected'];
     onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
   };
@@ -134,6 +135,7 @@ export function ClientModelTableController<T>({
   const onRowSelectHandler = useCallback(
     debounce(() => {
       if (!gridApi) return;
+
       setSelectedRows(gridApi.getSelectedRows());
     }, 100),
     [gridApi],
@@ -204,7 +206,7 @@ export function ClientModelTableController<T>({
       : undefined;
   }, [gridApi, pageSize, data?.length, pageCount, currentPage, pageChangeHandler]);
 
-  const useRowSelection = Boolean(deleteProps);
+  const useRowSelection = Boolean(advancedProps?.rowSelection || deleteProps);
 
   const onSearchCallback = useCallback(
     value => {
@@ -280,6 +282,7 @@ export function ClientModelTableController<T>({
       onRefreshCallback={onRefreshCallback}
       onRowClicked={advancedProps?.onRowClicked}
       onRowSelected={advancedProps?.onRowSelected}
+      rowSelection={advancedProps?.rowSelection}
       onRowDoubleClicked={advancedProps?.onRowDoubleClicked}
       useRowSelection={useRowSelection}
       deleteProps={deleteProps}
