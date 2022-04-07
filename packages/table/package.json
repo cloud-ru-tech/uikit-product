@@ -30,7 +30,6 @@
     "@ag-grid-community/csv-export": "26.2.0",
     "@ag-grid-enterprise/excel-export": "26.2.0",
     "@ag-grid-enterprise/master-detail": "26.2.0",
-    "@sbercloud/uikit-react-button": "4.2.9",
     "@sbercloud/uikit-react-icons": "3.3.0",
     "@sbercloud/uikit-react-modal": "0.15.53",
     "@sbercloud/uikit-react-pagination-private": "1.1.9",

@@ -1,12 +1,11 @@
 import { CsvExportModule } from '@ag-grid-community/csv-export';
 import { ExcelExportModule } from '@ag-grid-enterprise/excel-export';
 
-import { ButtonToolbar, RefreshButton } from '@sbercloud/uikit-react-button';
 import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { Modal } from '@sbercloud/uikit-react-modal';
 import { Pagination } from '@sbercloud/uikit-react-pagination-private';
 import { TablePrivate, TablePrivateProps } from '@sbercloud/uikit-react-table-private';
-import { Toolbar, ToolbarMoreActionsProps } from '@sbercloud/uikit-react-toolbar';
+import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
@@ -34,7 +33,7 @@ type ClientModelTableViewProps<T> = {
   onRowSelected?: TablePrivateProps['onRowSelected'];
   onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
   onSearchCallback(value: string): void;
-  moreActions: ToolbarMoreActionsProps['actions'];
+  moreActions: Toolbar.MoreActionsProps['actions'];
   searchValue: string;
 };
 
@@ -61,13 +60,9 @@ export function ClientModelTableView<T>({
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   return (
     <div {...extractSupportProps(rest)}>
-      <Toolbar.Wrapper className={S.SearchPanelView} data-test-id='client-table__toolbar'>
+      <Toolbar.Container className={S.SearchPanelView} data-test-id='client-table__toolbar'>
         {onRefreshCallback && (
-          <RefreshButton
-            as={ButtonToolbar}
-            onClick={onRefreshCallback}
-            data-test-id='client-table__toolbar-refresh-btn'
-          />
+          <Toolbar.Refresh onClick={onRefreshCallback} data-test-id='client-table__toolbar-refresh-btn' />
         )}
         {deleteProps && (
           <Toolbar.Button
@@ -75,9 +70,8 @@ export function ClientModelTableView<T>({
             onClick={deleteProps.openDeleteDialog}
             data-test-id='client-table__toolbar-delete-btn'
             tooltip={{ content: textProvider(languageCode, Texts.Delete) }}
-          >
-            <DeleteInterfaceSVG />
-          </Toolbar.Button>
+            icon={<DeleteInterfaceSVG />}
+          />
         )}
         <Toolbar.Input
           onChange={onSearchCallback}
@@ -99,7 +93,7 @@ export function ClientModelTableView<T>({
             data-test-id='client-table__toolbar-more-action-btn'
           />
         )}
-      </Toolbar.Wrapper>
+      </Toolbar.Container>
       <TablePrivate
         checkboxSelection={useRowSelection}
         additionModules={additionModules}

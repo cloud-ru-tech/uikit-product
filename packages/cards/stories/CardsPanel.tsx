@@ -114,9 +114,9 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
   return (
     <>
       {args.useSearch && (
-        <Toolbar.Wrapper className={SearchWrapView}>
+        <Toolbar.Container className={SearchWrapView}>
           <Toolbar.Input value={searchValue} onChange={setSearchValue} placeholder={'Поиск'} />
-        </Toolbar.Wrapper>
+        </Toolbar.Container>
       )}
       <CardsPanel
         {...args}

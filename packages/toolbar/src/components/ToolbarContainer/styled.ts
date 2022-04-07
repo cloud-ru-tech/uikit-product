@@ -4,7 +4,7 @@ import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
 const { COLORS_TOOLBAR } = DEPRECATED_EXPORT_VARS;
 
-export const ListToolBarStyled = styled.div`
+export const ToolbarContainerStyled = styled.div`
   background-color: var(${COLORS_TOOLBAR.BACKGROUND});
   border: 1px solid var(${COLORS_TOOLBAR.INPUT_BORDER});
   border-radius: 4px;

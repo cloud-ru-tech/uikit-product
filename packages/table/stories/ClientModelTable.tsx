@@ -98,7 +98,7 @@ const Template: Story<
         ? {
             value: filterValue,
             doesRowPassFilter: rowPassFilter,
-            onChange: val => setFilterValue(val),
+            onChange: (val: TFilterValueType[]) => setFilterValue(val),
             filterOptions: [
               {
                 type: TFilterOptionType.Select,

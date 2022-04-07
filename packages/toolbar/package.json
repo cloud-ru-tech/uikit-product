@@ -34,6 +34,7 @@
     "@sbercloud/uikit-react-filter": "0.14.73",
     "@sbercloud/uikit-react-icons": "3.3.0",
     "@sbercloud/uikit-react-input-private": "2.3.3",
+    "@sbercloud/uikit-react-button-private": "1.0.0",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-utils": "2.4.0"
   },

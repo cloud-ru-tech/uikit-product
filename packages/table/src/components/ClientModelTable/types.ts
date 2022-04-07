@@ -1,4 +1,4 @@
-import { ToolbarFilterProps } from '@sbercloud/uikit-react-toolbar';
+import { Toolbar } from '@sbercloud/uikit-react-toolbar';
 
 export type DeleteProps = {
   onConfirmDelete(): Promise<void>;
@@ -12,7 +12,7 @@ export type DeleteProps = {
   isDeleteEnabled: boolean;
 };
 
-export type FilterProps<T> = ToolbarFilterProps & { doesRowPassFilter(data: T): boolean };
+export type FilterProps<T> = Toolbar.FilterProps & { doesRowPassFilter(data: T): boolean };
 
 export type PaginationProps = {
   pageCount: number;

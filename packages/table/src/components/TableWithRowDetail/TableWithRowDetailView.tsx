@@ -43,14 +43,14 @@ export function TableWithRowDetailView<T>({
 
   return (
     <div {...extractSupportProps(rest)}>
-      <Toolbar.Wrapper className={S.SearchPanelView} data-test-id='with-row-detail-table__toolbar'>
+      <Toolbar.Container className={S.SearchPanelView} data-test-id='with-row-detail-table__toolbar'>
         <Toolbar.Input
           onChange={onSearchCallback}
           value={searchValue}
           placeholder={textProvider(languageCode, Texts.SearchPlaceholder)}
           data-test-id='with-row-detail-table__toolbar-input'
         />
-      </Toolbar.Wrapper>
+      </Toolbar.Container>
 
       <TablePrivate
         rowData={data}

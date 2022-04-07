@@ -1,12 +1,31 @@
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { ButtonPrivate } from '@sbercloud/uikit-react-button-private';
 
-const { COLORS_TOOLBAR } = DEPRECATED_EXPORT_VARS;
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
-const activeToolbarButtonClassName = css`
-  color: var(${COLORS_TOOLBAR.ACTIVE_BUTTON}) !important;
-  fill: var(${COLORS_TOOLBAR.ACTIVE_BUTTON}) !important;
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
+
+export const StyledButtonPrivate = styled(ButtonPrivate)`
+  padding: 12px;
+
+  fill: var(${COLORS.FILL});
+  background-color: transparent;
+
+  :hover {
+    fill: var(${COLORS.FILL_HOVER});
+  }
+
+  :active,
+  &[data-active] {
+    fill: var(${COLORS.FILL_ACTIVE});
+  }
+
+  :disabled,
+  &[disabled] {
+    fill: var(${COLORS.FILL_DISABLED});
+  }
 `;
-
-export { activeToolbarButtonClassName };

@@ -109,7 +109,7 @@ export function getTemplate(
     return (
       <>
         <Title>Кликните на иконку для отображения дополнительной информации</Title>
-        <Toolbar.Wrapper className={SearchWrapView}>
+        <Toolbar.Container className={SearchWrapView}>
           <Toolbar.Input
             value={search}
             onChange={value => {
@@ -117,7 +117,7 @@ export function getTemplate(
             }}
             placeholder='Поиск'
           />
-        </Toolbar.Wrapper>
+        </Toolbar.Container>
         <Group>
           {Object.entries(Icons)
             .filter(([key]) => key.toLowerCase().includes(search))

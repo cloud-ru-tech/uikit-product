@@ -105,7 +105,7 @@ const Template: Story<IFilterProps> = () => {
 
   return (
     <div style={{ padding: 10 }}>
-      <Toolbar.Wrapper>
+      <Toolbar.Container>
         <Toolbar.Input value={value} onChange={setValue} placeholder={'Поиск'} />
         <Filter
           filterOptions={defOpt}
@@ -115,12 +115,15 @@ const Template: Story<IFilterProps> = () => {
           }}
         >
           {({ badgeNumber, open }): JSX.Element => (
-            <Toolbar.Button badgeProps={{ number: badgeNumber }} isActive={open} tooltip={{ content: 'Фильтр' }}>
-              <FilterInterfaceSVG />
-            </Toolbar.Button>
+            <Toolbar.Button
+              badgeProps={{ number: badgeNumber }}
+              isActive={open}
+              tooltip={{ content: 'Фильтр' }}
+              icon={<FilterInterfaceSVG />}
+            />
           )}
         </Filter>
-      </Toolbar.Wrapper>
+      </Toolbar.Container>
     </div>
   );
 };

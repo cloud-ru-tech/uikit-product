@@ -32,7 +32,7 @@ const Template: Story<ITableFreeProps> = ({ rowData = [], ...args }) => {
 
   return (
     <>
-      <Toolbar.Wrapper className={ToolbarWrapperView}>
+      <Toolbar.Container className={ToolbarWrapperView}>
         <Toolbar.Input
           placeholder='Поиск по ФИО'
           value={searchValue}
@@ -40,7 +40,7 @@ const Template: Story<ITableFreeProps> = ({ rowData = [], ...args }) => {
             setSearchValue(value);
           }}
         />
-      </Toolbar.Wrapper>
+      </Toolbar.Container>
       <TableFree {...args} rowData={searchedData} />
     </>
   );

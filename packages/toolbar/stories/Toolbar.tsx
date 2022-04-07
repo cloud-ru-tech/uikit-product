@@ -1,7 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-import { ButtonToolbar, RefreshButton } from '@sbercloud/uikit-react-button';
 import { TFilterValueType } from '@sbercloud/uikit-react-filter';
 import { DeleteInterfaceSVG, RowExpandedInterfaceSVG, TableSettingsInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { WithSupportProps } from '@sbercloud/uikit-utils';
@@ -9,37 +8,32 @@ import { WithSupportProps } from '@sbercloud/uikit-utils';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Toolbar, ToolbarWrapperProps } from '../src';
+import { Toolbar } from '../src';
 import { defOpt, defValue } from './helpers/mockData';
 
 export default {
   title: 'Not stable/Toolbar',
-  component: Toolbar.Wrapper,
+  component: Toolbar.Container,
 } as Meta;
 
-const Template: Story<WithSupportProps<ToolbarWrapperProps>> = ({ ...args }) => {
+const Template: Story<WithSupportProps<Toolbar.ContainerProps>> = ({ ...args }) => {
   const [value, setValue] = useState<string>('');
   const [filterValue, setFilterValue] = useState<TFilterValueType[] | string>(defValue);
 
   return (
-    <Toolbar.Wrapper {...args}>
-      <RefreshButton as={ButtonToolbar} />
-      <Toolbar.Button disabled tooltip={{ content: 'Удалить' }}>
-        <DeleteInterfaceSVG />
-      </Toolbar.Button>
+    <Toolbar.Container {...args}>
+      <Toolbar.Refresh />
+      <Toolbar.Button disabled tooltip={{ content: 'Удалить' }} icon={<DeleteInterfaceSVG />} />
       <Toolbar.Input
         placeholder={'Поиск'}
         value={value}
-        onChange={(value): void => {
+        onChange={(value: string): void => {
           setValue(value);
         }}
       />
-      <Toolbar.Button tooltip={{ content: 'Раскрыть' }}>
-        <RowExpandedInterfaceSVG />
-      </Toolbar.Button>
-      <Toolbar.Button isActive tooltip={{ content: 'Настройки' }}>
-        <TableSettingsInterfaceSVG />
-      </Toolbar.Button>
+      <Toolbar.Button tooltip={{ content: 'Раскрыть' }} icon={<RowExpandedInterfaceSVG />} />
+
+      <Toolbar.Button isActive tooltip={{ content: 'Настройки' }} icon={<TableSettingsInterfaceSVG />} />
       <Toolbar.Filter
         filterOptions={defOpt}
         value={filterValue}
@@ -52,7 +46,7 @@ const Template: Story<WithSupportProps<ToolbarWrapperProps>> = ({ ...args }) => 
         actions={[{ name: 'Экспортировать в csv', onClick: () => {} }]}
         tooltip={{ content: 'Export' }}
       />
-    </Toolbar.Wrapper>
+    </Toolbar.Container>
   );
 };
 

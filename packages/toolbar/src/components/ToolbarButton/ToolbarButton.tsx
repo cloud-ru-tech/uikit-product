@@ -1,26 +1,28 @@
-import { cx } from '@linaria/core';
-import { FC } from 'react';
+import { ReactElement } from 'react';
 
 import { Badge, BadgeProps } from '@sbercloud/uikit-react-badge-private';
-import { ButtonToolbar, ButtonToolbarProps } from '@sbercloud/uikit-react-button';
+import {
+  CommonButtonPropsWithOptionalTooltip,
+  extractCommonButtonProps,
+  withTooltip,
+} from '@sbercloud/uikit-react-button-private';
 
-import { activeToolbarButtonClassName } from './styled';
+import * as S from './styled';
 
-export interface ToolbarButtonProps extends Omit<ButtonToolbarProps, 'icon'> {
+export type ToolbarButtonProps = CommonButtonPropsWithOptionalTooltip & {
   isActive?: boolean;
   badgeProps?: Omit<BadgeProps, 'children'>;
-}
+  icon: ReactElement;
+};
 
-export const ToolbarButton: FC<ToolbarButtonProps> = ({
-  children,
-  className,
-  badgeProps,
-  isActive,
-  ...buttonProps
-}) => (
-  <ButtonToolbar
-    {...buttonProps}
-    className={cx(className, isActive ? activeToolbarButtonClassName : null)}
-    icon={badgeProps ? <Badge {...badgeProps}>{children}</Badge> : <>{children}</>}
-  />
+const ToolbarButtonBase = ({ icon, className, badgeProps, isActive, ...buttonProps }: ToolbarButtonProps) => (
+  <S.StyledButtonPrivate
+    data-active={isActive || undefined}
+    className={className}
+    {...extractCommonButtonProps(buttonProps)}
+  >
+    {badgeProps ? <Badge {...badgeProps}>{icon}</Badge> : <>{icon}</>}
+  </S.StyledButtonPrivate>
 );
+
+export const ToolbarButton = withTooltip(ToolbarButtonBase);
