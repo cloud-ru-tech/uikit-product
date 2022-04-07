@@ -1,6 +1,6 @@
 module.exports = {
-  include: ['packages/*/src/**/*.+(ts|tsx)'],
-  excludeAfterRemap: true,
-  reporter: ['lcov', 'cobertura'],
-  'report-dir': 'cypress/coverage',
+  /**
+   * We don't want to report coverage by `@cypress/code-coverage` because we have our own report scripts.
+   */
+  reporter: [],
 };

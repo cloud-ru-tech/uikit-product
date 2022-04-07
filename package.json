@@ -15,9 +15,12 @@
     "compile": "lerna run compile && ts-node scripts/compile.ts",
     "build": "npm run clean && lerna bootstrap --hoist && npm run compile",
     "all:cleaninstall": "node scripts/remove-modules.js && npm cache clean -f && npm i --legacy-peer-deps && npm run build",
+    "test-coverage:all": "ts-node scripts/test-coverage-all-packages.ts",
+    "test-coverage:unstable": "ts-node scripts/test-coverage-unstable-packages.ts",
+    "test-coverage:stable": "ts-node scripts/test-coverage-stable-packages.ts",
     "prepare": "node_modules/.bin/husky install",
     "test": "cypress run --headless --quiet",
-    "ci": "cross-env NODE_ENV=test start-server-and-test storybook:ci http://localhost:6006 test && nyc report --reporter=text-summary"
+    "ci": "cross-env NODE_ENV=test start-server-and-test storybook:ci http://localhost:6006 test"
   },
   "devDependencies": {
     "@babel/cli": "7.16.8",
