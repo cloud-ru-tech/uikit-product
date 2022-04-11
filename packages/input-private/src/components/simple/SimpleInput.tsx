@@ -1,5 +1,5 @@
 import mergeRefs from 'merge-refs';
-import { FocusEvent, FocusEventHandler, forwardRef, useRef, useState } from 'react';
+import { FocusEventHandler, forwardRef, useRef, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
@@ -109,6 +109,7 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
                       onClick={onClearHandler}
                       tooltip={{ content: textProvider(languageCode, Texts.Clear) }}
                       data-test-id={'input__clear-button'}
+                      tabIndex={-1}
                     />
                   </S.PostfixButtonWrapper>
                 )}
@@ -121,6 +122,7 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
                         content: textProvider(languageCode, Texts.Show),
                       }}
                       data-test-id={'input__show-password-button'}
+                      tabIndex={-1}
                     />
                   </S.PostfixButtonWrapper>
                 )}
