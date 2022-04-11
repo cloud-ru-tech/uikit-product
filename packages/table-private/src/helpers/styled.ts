@@ -50,6 +50,7 @@ export const styledTable = <P extends TableProps>(Table: VFC<P>) => styled(Table
         align-items: center;
         .ag-selection-checkbox {
           padding-left: 3px;
+          height: auto;
         }
       }
       &-header {

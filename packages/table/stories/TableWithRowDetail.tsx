@@ -274,7 +274,7 @@ withRowDetail.args = {
     {
       headerName: 'Статус',
       field: 'status',
-      cellRendererFramework: StatusCell,
+      cellRenderer: StatusCell,
       cellRendererParams: ({ value }: { value: string }) => ({
         tooltip: value,
         type: value,
@@ -294,7 +294,7 @@ withRowDetail.args = {
       sortable: false,
       resizable: false,
       onCellClicked: e => e.event?.stopPropagation(),
-      cellRendererFramework: () => {
+      cellRenderer: () => {
         const actions = [
           {
             name: 'Логи сборки',

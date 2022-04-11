@@ -90,7 +90,7 @@ free.args = {
     {
       maxWidth: 40,
       sortable: false,
-      cellRendererFramework: () => {
+      cellRenderer: () => {
         const actions = [
           {
             name: 'Изменить права',

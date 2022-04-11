@@ -158,7 +158,7 @@ clientModelTable.args = {
       sortable: false,
       filter: true,
       minWidth: 100,
-      cellRendererFramework: StatusCell,
+      cellRenderer: StatusCell,
       cellRendererParams: ({ value }: { value: string }) => ({
         tooltip: value,
         type: value,
@@ -178,7 +178,7 @@ clientModelTable.args = {
       minWidth: 200,
       maxWidth: 200,
       valueGetter: ({ data }: { data: DataModel }) => data.status,
-      cellRendererFramework: ({ data: { status } }: { data: DataModel }) => {
+      cellRenderer: ({ data: { status } }: { data: DataModel }) => {
         const isInProgress = status === StatusDot.types.Unactive;
         const isDisabled = status === StatusDot.types.Failed;
         return (

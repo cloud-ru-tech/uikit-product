@@ -146,7 +146,7 @@ export function TableWithRowDetailController<T>({
     [gridApi],
   );
 
-  const detailCellRendererFramework = useCallback(() => children, [children]);
+  const detailCellRenderer = useCallback(() => children, [children]);
 
   return (
     <TableWithRowDetailView
@@ -156,7 +156,7 @@ export function TableWithRowDetailController<T>({
       onCellClicked={onCellClicked}
       onSelectionChanged={handlerSelectionChanged}
       onRowGroupOpened={onRowGroupOpened}
-      detailCellRendererFramework={detailCellRendererFramework}
+      detailCellRenderer={detailCellRenderer}
       searchValue={searchValue}
       onSearchCallback={onSearchCallback}
       paginationProps={paginationProps}

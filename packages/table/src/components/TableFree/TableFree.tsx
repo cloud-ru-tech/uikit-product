@@ -22,7 +22,7 @@ export function TableFree({
   noRowsText,
   context,
   columnTypes,
-  frameworkComponents,
+  components,
   domLayout,
   ...rest
 }: WithSupportProps<ITableFreeProps>) {
@@ -55,7 +55,7 @@ export function TableFree({
         noRowsText={noRowsText}
         context={context}
         columnTypes={columnTypes}
-        frameworkComponents={frameworkComponents}
+        components={components}
         pageSize={pageSize}
         domLayout={domLayout}
       />

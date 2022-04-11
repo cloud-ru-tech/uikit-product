@@ -2,9 +2,10 @@ import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
 import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
+import { GridReadyEvent, GridSizeChangedEvent } from '@ag-grid-community/core';
 import { AgGridReact } from '@ag-grid-community/react';
 import { cx } from '@linaria/core';
-import { useCallback, useMemo } from 'react';
+import { useMemo } from 'react';
 
 import { useLanguage } from '@sbercloud/uikit-utils';
 
@@ -29,13 +30,14 @@ function StylelessTableFreePrivate({
   ...tableProps
 }: TableFreePrivateProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const handleGridReady: TableFreePrivateProps['onGridReady'] = params => {
+  const handleGridReady = (params: GridReadyEvent) => {
     onGridReady?.(params);
+    params.api.sizeColumnsToFit();
   };
 
-  const onFirstDataRendered = useCallback(params => {
+  const handleGridSizeChanged = (params: GridSizeChangedEvent) => {
     params.api.sizeColumnsToFit();
-  }, []);
+  };
 
   const colDefs = useMemo(() => {
     if (checkboxSelection) {
@@ -51,7 +53,7 @@ function StylelessTableFreePrivate({
         <AgGridReact
           modules={AgGridModules}
           gridOptions={{
-            suppressCellSelection: true,
+            suppressCellFocus: true,
             headerHeight: tableHeaderHeight,
             rowHeight: tableRowHeight,
             rowSelection: 'multiple',
@@ -71,11 +73,8 @@ function StylelessTableFreePrivate({
           domLayout={domLayout}
           enableCellTextSelection
           localeText={{ noRowsToShow: noRowsText || textProvider(languageCode, Texts.NoRowsInitially) }}
-          onFirstDataRendered={onFirstDataRendered}
           onGridReady={handleGridReady}
-          onGridSizeChanged={params => {
-            params.api.sizeColumnsToFit();
-          }}
+          onGridSizeChanged={handleGridSizeChanged}
           rowData={rowData}
           sortingOrder={['desc', 'asc', null]}
           suppressPaginationPanel

@@ -2,7 +2,7 @@ import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
 import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
-import { ColumnResizedEvent, GridApi, GridReadyEvent } from '@ag-grid-community/core';
+import { ColumnResizedEvent, GridApi, GridReadyEvent, GridSizeChangedEvent } from '@ag-grid-community/core';
 import { AgGridReact } from '@ag-grid-community/react';
 import { RangeSelectionModule } from '@ag-grid-enterprise/range-selection';
 import { cx } from '@linaria/core';
@@ -36,15 +36,12 @@ function StylelessTablePrivate({
   const handleGridReady = (params: GridReadyEvent) => {
     setGridApi(params.api);
     onGridReady?.(params);
+    params.api.sizeColumnsToFit();
   };
 
-  useEffect(() => {
-    const resize = debounce(() => {
-      gridApi?.sizeColumnsToFit();
-    }, 300);
-    window.addEventListener('resize', resize);
-    return () => window.removeEventListener('resize', resize);
-  }, [gridApi]);
+  const handleGridSizeChanged = (params: GridSizeChangedEvent) => {
+    params.api.sizeColumnsToFit();
+  };
 
   useEffect(() => {
     if (!gridApi) return;
@@ -81,17 +78,9 @@ function StylelessTablePrivate({
   }, [checkboxSelection, columnDefs, resizedColumns]);
 
   useEffect(() => {
-    if (!gridApi) return;
-
-    const timeout = setTimeout(() => {
+    if (gridApi && Object.keys(resizedColumns).length) {
       gridApi.sizeColumnsToFit();
-    }, 50);
-
-    return () => {
-      if (timeout) {
-        clearTimeout(timeout);
-      }
-    };
+    }
   }, [gridApi, resizedColumns]);
 
   return (
@@ -99,7 +88,7 @@ function StylelessTablePrivate({
       <AgGridReact
         modules={[...AgGridModules, ...additionModules]}
         gridOptions={{
-          suppressCellSelection: true,
+          suppressCellFocus: true,
           headerHeight: tableHeaderHeight,
           rowHeight: tableRowHeight,
           rowSelection: 'multiple',
@@ -121,11 +110,12 @@ function StylelessTablePrivate({
         }}
         domLayout='autoHeight'
         onGridReady={handleGridReady}
+        onGridSizeChanged={handleGridSizeChanged}
         rowData={rowData}
         columnDefs={colDefs}
         isExternalFilterPresent={() => Boolean(doesRowPassFilter)}
         doesExternalFilterPass={node => doesRowPassFilter?.(node.data) || false}
-        noRowsOverlayComponentFramework={NoRows}
+        noRowsOverlayComponent={NoRows}
         noRowsOverlayComponentParams={{
           reason: rowData.length === 0 ? NoDataReasons.InitialEmpty : NoDataReasons.Search,
         }}

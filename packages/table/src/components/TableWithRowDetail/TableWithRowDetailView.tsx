@@ -18,7 +18,7 @@ type TableWithRowDetailViewProps<T> = {
   onCellClicked: Types.OnCellClicked;
   onSelectionChanged(): void;
   onRowGroupOpened: Types.OnRowGroupOpened;
-  detailCellRendererFramework(): ReactNode | undefined;
+  detailCellRenderer(): ReactNode | undefined;
   searchValue: string;
   onSearchCallback: Types.OnSearchCallback;
   paginationProps?: Types.PaginationProps;
@@ -33,7 +33,7 @@ export function TableWithRowDetailView<T>({
   onCellClicked,
   onSelectionChanged,
   onRowGroupOpened,
-  detailCellRendererFramework,
+  detailCellRenderer,
   searchValue,
   onSearchCallback,
   paginationProps,
@@ -67,7 +67,7 @@ export function TableWithRowDetailView<T>({
           suppressPaginationPanel: true,
           rowSelection: 'single',
         }}
-        frameworkComponents={{
+        components={{
           GroupDisabledCell,
         }}
         onSelectionChanged={onSelectionChanged}
@@ -80,7 +80,7 @@ export function TableWithRowDetailView<T>({
         }}
         onRowGroupOpened={onRowGroupOpened}
         getRowClass={({ data: { disabled } }) => (disabled ? 'ag-row-disabled' : '')}
-        detailCellRendererFramework={detailCellRendererFramework}
+        detailCellRenderer={detailCellRenderer}
       />
 
       {paginationProps?.showPagination && (
