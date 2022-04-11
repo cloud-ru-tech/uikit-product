@@ -36,6 +36,7 @@ export type CommonButtonProps = WithSupportProps<ButtonProps | AnchorProps> & {
   disabled?: boolean;
   id?: string;
   onClick?: MouseEventHandler<HTMLElement>;
+  tabIndex?: number;
 };
 
 export type CommonButtonPropsWithOptionalTooltip = CommonButtonProps & Pick<WithTooltipProps, 'tooltip'>;

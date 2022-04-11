@@ -24,7 +24,7 @@ function StylelessButtonPrivate(props: React.PropsWithChildren<CommonButtonProps
       href={props.disabled ? '#' : props.href}
       target={props.target || '_blank'}
       className={props.className}
-      tabIndex={props.disabled ? -1 : 0}
+      tabIndex={props.disabled ? -1 : props.tabIndex || 0}
     >
       {props.children}
     </a>
