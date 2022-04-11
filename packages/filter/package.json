@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-filter",
   "title": "React Filter",
-  "version": "0.15.1",
+  "version": "0.15.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,11 +27,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-datepicker": "0.11.32",
+    "@sbercloud/uikit-react-datepicker": "0.11.33",
     "@sbercloud/uikit-react-divider": "2.0.23",
     "@sbercloud/uikit-react-icons": "3.3.0",
-    "@sbercloud/uikit-react-input-private": "2.3.5",
-    "@sbercloud/uikit-react-select": "0.24.14",
+    "@sbercloud/uikit-react-input-private": "2.3.6",
+    "@sbercloud/uikit-react-select": "0.24.15",
     "@sbercloud/uikit-react-tooltip-private": "1.2.6",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",

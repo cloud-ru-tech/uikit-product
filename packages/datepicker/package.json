@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-datepicker",
   "title": "React Datepicker",
-  "version": "0.11.32",
+  "version": "0.11.33",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "5.0.0",
+    "@sbercloud/uikit-react-button": "5.0.1",
     "@sbercloud/uikit-react-divider": "2.0.23",
     "@sbercloud/uikit-react-icons": "3.3.0",
     "@sbercloud/uikit-react-switch": "2.0.23",

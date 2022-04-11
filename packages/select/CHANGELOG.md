@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.24.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-select@0.24.14...@sbercloud/uikit-react-select@0.24.15) (2022-04-11)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-select
+
+
+
+
+
 ## [0.24.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-select@0.24.13...@sbercloud/uikit-react-select@0.24.14) (2022-04-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-select
