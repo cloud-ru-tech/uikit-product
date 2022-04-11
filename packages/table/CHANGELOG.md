@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.34.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.33.1...@sbercloud/uikit-react-table@0.34.0) (2022-04-11)
+
+
+### Features
+
+* [AICDC-6238](https://jira.sbercloud.tech/browse/AICDC-6238): added props to control selection without delete props ([82b27d7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/82b27d77b9e61e5b65e9a648ff64f941dd113c47))
+
+
+
+
+
 ## [0.33.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.33.0...@sbercloud/uikit-react-table@0.33.1) (2022-04-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
