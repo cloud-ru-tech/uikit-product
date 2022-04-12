@@ -16,7 +16,7 @@ const MarkerWrap = styled.div`
 `;
 
 export default {
-  title: 'Not stable/Marker',
+  title: 'Components/Marker',
   component: Marker,
 } as Meta;
 
