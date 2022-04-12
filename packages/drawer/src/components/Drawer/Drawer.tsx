@@ -26,6 +26,7 @@ export interface IDrawerProps {
   open: boolean;
   className?: string;
   hideHeader?: boolean;
+  showCloseButton?: boolean;
   width?: string | number;
   footer?: React.ReactNode;
   placement?: 'left' | 'right';
@@ -39,6 +40,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
   open = false,
   width = '500px',
   placement = 'right',
+  showCloseButton = true,
   footer,
   onClose,
   children,
@@ -148,14 +150,16 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
             )}
             {headerText && <Header text={headerText} />}
           </HeaderTextBoxStyled>
-          <CloseButtonStyled>
-            <ButtonIcon
-              icon={<CloseInterfaceSVG />}
-              tooltip={{ content: closeBtnText }}
-              onClick={onClose}
-              data-test-action-id='drawer__header-close-btn'
-            />
-          </CloseButtonStyled>
+          {showCloseButton && (
+            <CloseButtonStyled>
+              <ButtonIcon
+                icon={<CloseInterfaceSVG />}
+                tooltip={{ content: closeBtnText }}
+                onClick={onClose}
+                data-test-action-id='drawer__header-close-btn'
+              />
+            </CloseButtonStyled>
+          )}
         </HeaderBoxStyled>
       )}
       <ContentBoxStyled data-hasfooter={!!footer || undefined}>{children}</ContentBoxStyled>
