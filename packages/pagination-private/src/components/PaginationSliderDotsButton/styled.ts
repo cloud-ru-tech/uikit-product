@@ -18,7 +18,6 @@ export const Link = styled.a`
   cursor: pointer;
   display: block;
   height: 8px;
-  margin: -2px;
   padding: 2px;
   width: 8px;
 
