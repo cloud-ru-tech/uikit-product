@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { useEffect, useState } from '@storybook/addons';
@@ -7,6 +6,8 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { Tag } from '@sbercloud/uikit-react-tag';
 import { TextField } from '@sbercloud/uikit-react-text-field';
 import { Toolbar } from '@sbercloud/uikit-react-toolbar';
+
+import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

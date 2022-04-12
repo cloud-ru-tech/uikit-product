@@ -4,6 +4,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
 
 import { ConfigProvider, Themes } from '../packages/utils/src';
+import { BADGE } from './constants';
 
 const LanguageCodeType = ConfigProvider.languages;
 
@@ -58,6 +59,19 @@ addParameters({
   options: {
     storySort: {
       order: ['Theme', 'Components', 'Utils', 'Not stable', 'Typography'],
+    },
+  },
+});
+
+addParameters({
+  badgesConfig: {
+    [BADGE.PRIVATE]: {
+      styles: {
+        backgroundColor: '#f2db72',
+        borderColor: '#808080',
+        color: '#333',
+      },
+      title: BADGE.PRIVATE,
     },
   },
 });

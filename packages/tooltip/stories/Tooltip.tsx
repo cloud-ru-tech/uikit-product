@@ -1,4 +1,3 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
@@ -7,6 +6,8 @@ import { Divider } from '@sbercloud/uikit-react-divider';
 import { CopyInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
 import { H2_STYLES, H4_STYLES } from '@sbercloud/uikit-typography';
+
+import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

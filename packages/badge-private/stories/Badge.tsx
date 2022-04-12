@@ -1,7 +1,8 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { NotifyInterfaceSVG } from '@sbercloud/uikit-react-icons';
+
+import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -35,6 +36,6 @@ badge.parameters = {
     name: 'Figma',
     url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=520%3A10653',
   },
-  badges: [BADGE.STABLE],
+  badges: [BADGE.STABLE, BADGE.PRIVATE],
 };
 badge.argTypes = {};

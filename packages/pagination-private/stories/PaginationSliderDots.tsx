@@ -1,6 +1,7 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useEffect, useState } from 'react';
+
+import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -29,7 +30,7 @@ paginationSliderDots.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
-  badges: [BADGE.STABLE],
+  badges: [BADGE.STABLE, BADGE.PRIVATE],
   design: {
     name: 'Figma',
     type: 'figma',

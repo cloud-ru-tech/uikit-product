@@ -1,10 +1,11 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { styled } from '@linaria/react';
 import { useEffect } from '@storybook/addons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
 import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-theme';
+
+import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

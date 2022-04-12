@@ -7,7 +7,7 @@ import { buildArgsParam } from './helpers';
 
 Cypress.Commands.add('getByDataTestId', (value: string) => cy.get(`*[data-test-id="${value}"]`));
 
-Cypress.Commands.add('visitComponent', ({ name, group, props }) => {
+Cypress.Commands.add('visitComponent', ({ name, group, props, category = 'components' }) => {
   let propsString = '';
 
   if (props) {
@@ -15,7 +15,7 @@ Cypress.Commands.add('visitComponent', ({ name, group, props }) => {
   }
 
   return cy.visit(
-    `http://localhost:6006/iframe.html?id=components${group ? `-${group}` : ''}-${name}--${name}&viewMode=story${
+    `http://localhost:6006/iframe.html?id=${category}${group ? `-${group}` : ''}-${name}--${name}&viewMode=story${
       propsString ? `&args=${propsString}` : ''
     }`,
   );
@@ -33,6 +33,7 @@ declare global {
       visitComponent<T>(args: {
         name: string;
         group?: string;
+        category?: string;
         props?: {
           [Property in keyof T]: T[Property];
         };

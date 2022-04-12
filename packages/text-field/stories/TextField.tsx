@@ -1,10 +1,11 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { ButtonIconTransparent, RefreshButton } from '@sbercloud/uikit-react-button';
 import { InfoInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-theme';
+
+import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

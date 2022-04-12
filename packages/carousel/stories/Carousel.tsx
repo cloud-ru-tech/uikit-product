@@ -1,10 +1,11 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { Card } from '@sbercloud/uikit-react-cards';
 import { H3_STYLES } from '@sbercloud/uikit-typography';
+
+import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

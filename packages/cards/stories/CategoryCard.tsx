@@ -1,7 +1,8 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { BrandCatDisplaySVG } from '@sbercloud/uikit-react-icons';
+
+import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

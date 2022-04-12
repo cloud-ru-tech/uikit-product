@@ -1,4 +1,4 @@
-import { BADGE } from '@geometricpanda/storybook-addon-badges';
+import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../../CHANGELOG.md';
 import componentPackage from '../../package.json';
