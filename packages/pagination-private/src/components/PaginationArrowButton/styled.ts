@@ -12,7 +12,6 @@ export const Button = styled(PaginationButton)`
   fill: currentColor;
 
   &[data-disabled] {
-    cursor: none;
     fill: var(${COLORS.fill.disabled});
     pointer-events: none;
   }

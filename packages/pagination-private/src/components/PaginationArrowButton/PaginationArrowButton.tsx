@@ -13,6 +13,10 @@ export function PaginationArrowButton({ variant, disabled, onClick }: Pagination
   const isPrev = variant === Variants.Prev;
 
   function handleClick() {
+    if (disabled) {
+      return;
+    }
+
     onClick(isPrev);
   }
 

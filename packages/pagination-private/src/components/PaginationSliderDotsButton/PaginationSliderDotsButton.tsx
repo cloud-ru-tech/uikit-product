@@ -1,5 +1,7 @@
 import { MouseEvent } from 'react';
 
+import { keyboardSelectHandler } from '@sbercloud/uikit-utils';
+
 import { Dot, Link } from './styled';
 
 export type PaginationSliderDotsButtonProps = {
@@ -14,10 +16,15 @@ export function PaginationSliderDotsButton({ page, selected, onClick }: Paginati
     onClick(page);
   }
 
+  function handleKeydown() {
+    onClick(page);
+  }
+
   return (
     <Link
       role='button'
       onClick={handleClick}
+      onKeyDown={keyboardSelectHandler(handleKeydown)}
       tabIndex={0}
       aria-current={selected ? 'page' : undefined}
       data-selected={selected || undefined}
