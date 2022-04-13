@@ -6,9 +6,10 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-react-button';
 import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { BREAKPOINTS, WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
+import { widthToCssWidth } from '../../helpers/widthToCssWidth';
 import { Header } from '../Header';
 import {
   CloseButtonStyled,
@@ -57,6 +58,8 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
   const [shouldRenderDrawer, setShouldRenderDrawer] = useState(false);
   const [internalIsDrawerOpen, setInternalIsDrawerOpen] = useState(false);
   const timerRef = useRef<number>(0);
+  const screenWidth = window.screen.width;
+  const drawerWidth = screenWidth <= BREAKPOINTS.mobile ? screenWidth : width;
 
   const handleClick = useCallback(
     (e: Event) => {
@@ -127,7 +130,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
     <RcDrawer
       open={internalIsDrawerOpen}
       level={null}
-      width={width}
+      width={drawerWidth}
       handler={false}
       onClose={onClose}
       placement={placement}
@@ -137,7 +140,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
       {...extractSupportProps(restProps)}
     >
       {hideHeader ? null : (
-        <HeaderBoxStyled width={typeof width === 'number' ? `${width}px` : width}>
+        <HeaderBoxStyled width={widthToCssWidth(drawerWidth)}>
           <HeaderTextBoxStyled>
             {onBackClick && (
               <LeftIconBoxStyled>
@@ -163,7 +166,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
         </HeaderBoxStyled>
       )}
       <ContentBoxStyled data-hasfooter={!!footer || undefined}>{children}</ContentBoxStyled>
-      {footer && <FooterBoxStyled width={typeof width === 'number' ? `${width}px` : width}>{footer}</FooterBoxStyled>}
+      {footer && <FooterBoxStyled width={widthToCssWidth(drawerWidth)}>{footer}</FooterBoxStyled>}
     </RcDrawer>
   );
 };
