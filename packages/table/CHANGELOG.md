@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.35.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.34.1...@sbercloud/uikit-react-table@0.35.0) (2022-04-13)
+
+
+### Features
+
+* updates ag-grid version to 27, renames "frameworkComponents" prop to "components" and "detailCellRendererFramework" to "detailCellRenderer", renames "cellRendererFramework" prop to "cellRenderer" in column definitions ([AICE-5489](https://jira.sbercloud.tech/browse/AICE-5489)) ([1b25f0a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/1b25f0a5aa33bfe89e655459b32abac5c9b34725))
+
+
+### BREAKING CHANGES
+
+* updates ag-grid version to 27, renames "frameworkComponents" prop to "components" and "detailCellRendererFramework" to "detailCellRenderer", renames "cellRendererFramework" prop to "cellRenderer" in column definitions (AICE-5489)
+
+
+
+
+
 ## [0.34.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.34.0...@sbercloud/uikit-react-table@0.34.1) (2022-04-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
