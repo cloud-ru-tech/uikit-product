@@ -40,6 +40,7 @@ chip.args = {
   label: 'Chip',
   size: Chip.sizes.Medium,
   variant: Chip.variants.Primary,
+  checked: false,
 };
 chip.argTypes = {};
 chip.parameters = {

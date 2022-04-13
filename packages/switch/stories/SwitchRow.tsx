@@ -45,6 +45,7 @@ SwitchRow.args = {
   tooltip: {
     content: 'test',
   },
+  checked: false,
 };
 SwitchRow.argTypes = {};
 SwitchRow.parameters = {
