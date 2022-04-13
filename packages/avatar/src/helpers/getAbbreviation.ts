@@ -25,7 +25,7 @@ export const getAbbreviation = (str = '', variant: Variants): string => {
 
     if (arrayStrings.length > 1) {
       const firstLetter = arrayStrings[0].charAt(0);
-      const secondLetter = arrayStrings.at(-1)?.charAt(0);
+      const secondLetter = arrayStrings[arrayStrings.length - 1]?.charAt(0);
 
       return `${firstLetter}${secondLetter}`.toUpperCase();
     }
