@@ -4,3 +4,13 @@ include:
   - project: sbercloud-ui/cicd
     ref: master
     file: /gitlab-ci-uikit.yml
+  - template: Security/SAST.gitlab-ci.yml
+
+sast:
+  stage: validation
+
+vulnerability:
+  extends: eslint-sast
+  stage: validation
+  rules:
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
