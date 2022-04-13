@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-avatar@1.0.5...@sbercloud/uikit-react-avatar@1.0.6) (2022-04-13)
+
+
+### Bug Fixes
+
+* safari is not supporting Array.at() feature ([cf59f3a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/cf59f3a180ebba5685a89038c1a8410d59b98305))
+
+
+
+
+
 ## [1.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-avatar@1.0.4...@sbercloud/uikit-react-avatar@1.0.5) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-avatar

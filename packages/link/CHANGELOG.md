@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-link@3.0.10...@sbercloud/uikit-react-link@3.0.11) (2022-04-13)
+
+
+### Bug Fixes
+
+* fixed prefixIcon and suffixIcon colors ([aa6259f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/aa6259f502c50b27b5b582b472a3607cbde0cd56))
+
+
+
+
+
 ## [3.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-link@3.0.9...@sbercloud/uikit-react-link@3.0.10) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-link

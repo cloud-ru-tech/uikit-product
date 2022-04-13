@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.32](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-markdown-editor@0.1.31...@sbercloud/uikit-react-markdown-editor@0.1.32) (2022-04-13)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-markdown-editor
+
+
+
+
+
 ## [0.1.31](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-markdown-editor@0.1.30...@sbercloud/uikit-react-markdown-editor@0.1.31) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-markdown-editor

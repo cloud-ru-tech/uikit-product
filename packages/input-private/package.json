@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-input-private",
   "title": "React Input Private",
-  "version": "2.3.7",
+  "version": "2.3.8",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "5.0.2",
+    "@sbercloud/uikit-react-button": "5.0.3",
     "@sbercloud/uikit-react-icons": "3.3.0",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
