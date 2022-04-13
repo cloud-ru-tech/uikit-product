@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drawer@0.15.46...@sbercloud/uikit-react-drawer@0.16.0) (2022-04-13)
+
+
+### Features
+
+* add showCloseButton prop ([166af61](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/166af61d0570f5ac28e2d86b88551bbfef9aecb0))
+* added support mobile screens display ([a454f85](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/a454f85d4e09c52ce5c810baa64ed0ab1a12b8c7))
+
+
+
+
+
 ## [0.15.46](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drawer@0.15.45...@sbercloud/uikit-react-drawer@0.15.46) (2022-04-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drawer

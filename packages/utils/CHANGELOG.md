@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-utils@2.4.0...@sbercloud/uikit-utils@2.5.0) (2022-04-13)
+
+
+### Features
+
+* add breakpoints constants to utils ([83a90e8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/83a90e8a917e8cdaa11bfd5295410e88f09f93e4))
+
+
+
+
+
 # [2.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-utils@2.3.0...@sbercloud/uikit-utils@2.4.0) (2022-04-01)
 
 

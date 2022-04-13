@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-chip@2.0.9...@sbercloud/uikit-react-chip@2.0.10) (2022-04-13)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-chip
+
+
+
+
+
 ## [2.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-chip@2.0.8...@sbercloud/uikit-react-chip@2.0.9) (2022-04-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
