@@ -25,12 +25,12 @@ export const switchClassName = css`
     background: unset !important;
     cursor: unset !important;
   }
-  
+
   .react-switch-handle {
     cursor: unset !important;
     background-color: var(${COLORS.HANDLE_INACTIVE}) !important;
   }
-  
+
   &.${switchClassNameDisabled} {
     .react-switch-handle {
       background-color: var(${COLORS.HANDLE_INACTIVE_DISABLED}) !important;
@@ -38,8 +38,7 @@ export const switchClassName = css`
   }
 
   &:not(.${switchClassNameDisabled}):hover {
-      background-color: var(${COLORS.BACKGROUND_INACTIVE_HOVERED});
-    }
+    background-color: var(${COLORS.BACKGROUND_INACTIVE_HOVERED});
   }
 
   &.${switchClassNameDisabled} {

@@ -12,7 +12,7 @@ import componentReadme from '../README.md';
 import { Switch as SwitchComponent, SwitchProps } from '../src';
 
 export default {
-  title: 'Components/Switch',
+  title: 'Components/Switch/Switch',
   component: SwitchComponent,
 } as Meta;
 

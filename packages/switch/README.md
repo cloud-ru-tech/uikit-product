@@ -17,6 +17,13 @@ enum Size {
   Small = 'small',
   Big = 'big',
 }
+
+
+type SwitchRowProps = {
+  title: string;
+  description?: string;
+  tooltip?: Pick<TooltipProps, 'title' | 'content' | 'placement'>;
+};
 ```
 
 
