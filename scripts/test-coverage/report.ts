@@ -6,7 +6,15 @@ const coverageDir = path.join(__dirname, '../../cypress/coverage');
 
 export function report({ name, include, reporter }: { name: string; include: string[]; reporter: string[] }) {
   const reportDir = path.join(coverageDir, name);
-  const nyc = new Nyc({ excludeAfterRemap: true, extension: ['.ts', '.tsx'], reporter, include, tempDir, reportDir });
+  const nyc = new Nyc({
+    excludeAfterRemap: true,
+    extension: ['.ts', '.tsx'],
+    exclude: ['**/+(index|styled|themes|types|constants).*', '**/+(types|constants)/*'],
+    reporter,
+    include,
+    tempDir,
+    reportDir,
+  });
 
   nyc.report();
 }
