@@ -16,3 +16,11 @@
 import '@cypress/code-coverage/support';
 
 import './commands';
+
+import failOnConsoleError, { consoleType } from 'cypress-fail-on-console-error';
+
+const config = {
+  includeConsoleTypes: [consoleType.ERROR],
+};
+
+failOnConsoleError(config);
