@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-table",
   "title": "React Table",
-  "version": "0.35.2",
+  "version": "0.35.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
     "@ag-grid-enterprise/master-detail": "27.1.0",
     "@sbercloud/uikit-react-icons": "3.3.0",
     "@sbercloud/uikit-react-modal": "0.15.57",
-    "@sbercloud/uikit-react-pagination-private": "1.1.10",
+    "@sbercloud/uikit-react-pagination-private": "1.2.0",
     "@sbercloud/uikit-react-table-private": "0.10.1",
     "@sbercloud/uikit-react-toolbar": "0.16.4",
     "@sbercloud/uikit-theme": "0.33.1",

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-pagination-private@1.1.10...@sbercloud/uikit-react-pagination-private@1.2.0) (2022-04-14)
+
+
+### Features
+
+* add key down handler for `PaginationButton` and `PaginationSliderDotsButton` ([f461d73](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/f461d73cfa550dc6a4ff570eb78a25b4255d4416))
+* change `column-gap` of `PaginationSliderDots` ([5118f40](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/5118f40f1d240a649f43ae408f57afb878ae7ae7))
+
+
+
+
+
 ## [1.1.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-pagination-private@1.1.9...@sbercloud/uikit-react-pagination-private@1.1.10) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-pagination-private
