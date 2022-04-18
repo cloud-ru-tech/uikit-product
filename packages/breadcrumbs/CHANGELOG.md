@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.43](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-breadcrumbs@0.10.42...@sbercloud/uikit-react-breadcrumbs@0.10.43) (2022-04-18)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-breadcrumbs
+
+
+
+
+
 ## [0.10.42](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-breadcrumbs@0.10.41...@sbercloud/uikit-react-breadcrumbs@0.10.42) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-breadcrumbs

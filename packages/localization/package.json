@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-localization",
   "title": "React Localization",
-  "version": "0.10.22",
+  "version": "0.10.23",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-utils": "2.5.0"
+    "@sbercloud/uikit-utils": "2.6.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

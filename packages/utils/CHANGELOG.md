@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-utils@2.5.0...@sbercloud/uikit-utils@2.6.0) (2022-04-18)
+
+
+### Features
+
+* ([AICE-5510](https://jira.sbercloud.tech/browse/AICE-5510)) add shadow styles ([b3c8d9e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/b3c8d9e356ace8d91cd1976c864ff20abda855c6))
+
+
+
+
+
 # [2.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-utils@2.4.0...@sbercloud/uikit-utils@2.5.0) (2022-04-13)
 
 

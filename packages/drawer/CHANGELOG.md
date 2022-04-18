@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drawer@0.16.1...@sbercloud/uikit-react-drawer@0.16.2) (2022-04-18)
+
+
+### Bug Fixes
+
+* drawer mask background-color ([fb8779c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/fb8779c888653dcb50c81f363da2508ce5a0985b))
+
+
+
+
+
 ## [0.16.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drawer@0.16.0...@sbercloud/uikit-react-drawer@0.16.1) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drawer

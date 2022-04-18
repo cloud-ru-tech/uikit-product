@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-switch@2.1.0...@sbercloud/uikit-react-switch@2.1.1) (2022-04-18)
+
+
+### Bug Fixes
+
+* fix stories parameters regarding console log errors ([0c7c390](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/0c7c3904ae1041cb01f88c2b901ac9693f2f3c0e))
+
+
+
+
+
 # [2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-switch@2.0.24...@sbercloud/uikit-react-switch@2.1.0) (2022-04-13)
 
 
