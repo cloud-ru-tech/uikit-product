@@ -14,21 +14,19 @@ describe('[Pagination]:', () => {
     [{ total: 7, page: 1 }, [1, 2, 3, 4, 5, 6, 7]],
     [{ total: 7, page: 7 }, [1, 2, 3, 4, 5, 6, 7]],
     [{ total: 8, page: 1 }, [1, 2, 3, 4, 5, [6, 7], 8]],
+    [{ total: 8, page: 4 }, [1, 2, 3, 4, 5, [6, 7], 8]],
+    [{ total: 8, page: 5 }, [1, [2, 3], 4, 5, 6, 7, 8]],
     [{ total: 8, page: 8 }, [1, [2, 3], 4, 5, 6, 7, 8]],
-    [{ total: 8, page: 4 }, [1, 2, 3, 4, 5, 6, 7, 8]],
-    [{ total: 8, page: 5 }, [1, 2, 3, 4, 5, 6, 7, 8]],
-    [{ total: 15, page: 1 }, [1, 2, 3, 4, 5, [6, 14], 15]],
-    [{ total: 15, page: 2 }, [1, 2, 3, 4, 5, [6, 14], 15]],
-    [{ total: 15, page: 3 }, [1, 2, 3, 4, 5, [6, 14], 15]],
-    [{ total: 15, page: 4 }, [1, 2, 3, 4, 5, 6, [7, 14], 15]],
-    [{ total: 15, page: 5 }, [1, 2, 3, 4, 5, 6, 7, [8, 14], 15]],
-    [{ total: 15, page: 6 }, [1, [2, 3], 4, 5, 6, 7, 8, [9, 14], 15]],
-    [{ total: 15, page: 10 }, [1, [2, 7], 8, 9, 10, 11, 12, [13, 14], 15]],
-    [{ total: 15, page: 11 }, [1, [2, 8], 9, 10, 11, 12, 13, 14, 15]],
-    [{ total: 15, page: 12 }, [1, [2, 9], 10, 11, 12, 13, 14, 15]],
-    [{ total: 15, page: 13 }, [1, [2, 10], 11, 12, 13, 14, 15]],
-    [{ total: 15, page: 14 }, [1, [2, 10], 11, 12, 13, 14, 15]],
-    [{ total: 15, page: 15 }, [1, [2, 10], 11, 12, 13, 14, 15]],
+    [{ total: 10, page: 1 }, [1, 2, 3, 4, 5, [6, 9], 10]],
+    [{ total: 10, page: 2 }, [1, 2, 3, 4, 5, [6, 9], 10]],
+    [{ total: 10, page: 3 }, [1, 2, 3, 4, 5, [6, 9], 10]],
+    [{ total: 10, page: 4 }, [1, 2, 3, 4, 5, [6, 9], 10]],
+    [{ total: 10, page: 5 }, [1, [2, 3], 4, 5, 6, [7, 9], 10]],
+    [{ total: 10, page: 6 }, [1, [2, 4], 5, 6, 7, [8, 9], 10]],
+    [{ total: 10, page: 7 }, [1, [2, 5], 6, 7, 8, 9, 10]],
+    [{ total: 10, page: 8 }, [1, [2, 5], 6, 7, 8, 9, 10]],
+    [{ total: 10, page: 9 }, [1, [2, 5], 6, 7, 8, 9, 10]],
+    [{ total: 10, page: 10 }, [1, [2, 5], 6, 7, 8, 9, 10]],
   ];
 
   for (const [input, output] of tests) {
@@ -83,9 +81,9 @@ describe('[Pagination]:', () => {
   it('goes to page when click on page number button', () => {
     visit({ total: 15, page: 7 });
 
-    cy.getByDataTestId('pagination-number-button-5')
+    cy.getByDataTestId('pagination-number-button-6')
       .click()
-      .getByDataTestId('pagination-number-button-5') // Because `PaginationNumberButton` remounts on `selected` change.
+      .getByDataTestId('pagination-number-button-6') // Because `PaginationNumberButton` remounts on `selected` change.
       .should('have.attr', 'data-selected');
   });
 

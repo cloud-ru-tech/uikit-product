@@ -8,8 +8,7 @@ import { ArrowItem, EntryItem, ItemList } from './styled';
 
 const FIRST_PAGE = 1;
 const ARROW_STEP = 1;
-const CURRENT_PAGE_SIBLINGS_COUNT = 2;
-const FULLY_DISPLAYED_PAGES_LIMIT = 7;
+const MAX_LENGTH = 7;
 
 export type PaginationProps = WithSupportProps<{
   total: number;
@@ -23,8 +22,7 @@ export function Pagination({ total, page, className, onChange, ...rest }: Pagina
     firstPage: FIRST_PAGE,
     lastPage: total,
     currentPage: page,
-    currentPageSiblingsCount: CURRENT_PAGE_SIBLINGS_COUNT,
-    fullyDisplayedPagesLimit: FULLY_DISPLAYED_PAGES_LIMIT,
+    maxLength: MAX_LENGTH,
   });
 
   function handleArrowButtonClick(isPrev: boolean) {
