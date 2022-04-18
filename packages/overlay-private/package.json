@@ -1,0 +1,39 @@
+{
+  "name": "@sbercloud/uikit-react-overlay-private",
+  "title": "React Overlay Private",
+  "version": "1.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Overlay for modals",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/overlay-private",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "directory": "packages/overlay-private"
+  },
+  "author": "Белов Алексей <anbelov@sbercloud.ru>",
+  "contributors": [
+    "Белов Алексей <anbelov@sbercloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-theme": "0.33.1",
+    "@sbercloud/uikit-utils": "2.5.0"
+  },
+  "peerDependencies": {
+    "@linaria/core": "^3.0.0-beta.13",
+    "@linaria/react": "^3.0.0-beta.13",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}
