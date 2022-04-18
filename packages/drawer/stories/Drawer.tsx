@@ -36,6 +36,7 @@ const Wrap = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin: -1rem;
+  background-color: #fff;
 `;
 
 const DrawerWrap = styled.div`

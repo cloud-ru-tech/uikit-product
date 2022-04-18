@@ -3,7 +3,14 @@ import { styled } from '@linaria/react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+
 const { COLORS_DRAWER, COLORS_GENERAL } = DEPRECATED_EXPORT_VARS;
+
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
 
 export const CloseButtonStyled = styled.div`
   margin: 12px 12px 0 0;
@@ -64,6 +71,16 @@ export const drawerPaddingModeClassName = css`
 export const drawerClassName = css`
   &:focus {
     outline: none;
+  }
+
+  .drawer-mask {
+    background-color: var(${COLORS.mask});
+  }
+
+  &.drawer-open {
+    .drawer-mask {
+      opacity: 1;
+    }
   }
 `;
 
