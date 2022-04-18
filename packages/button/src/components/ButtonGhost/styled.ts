@@ -139,6 +139,14 @@ export const IconWrapper = styled.span`
     svg {
       height: ${SizesInPx[Sizes.Small]} !important;
     }
+
+    &[data-position='${IconPosition.Before}'] {
+      margin-right: 4px;
+    }
+
+    &[data-position='${IconPosition.After}'] {
+      margin-left: 4px;
+    }
   }
 
   &[data-size=${Sizes.Medium}] {
