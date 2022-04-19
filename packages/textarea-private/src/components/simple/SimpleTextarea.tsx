@@ -66,6 +66,7 @@ const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaPr
             onClick={onClearHandler}
             tooltip={{ content: textProvider(languageCode, Texts.Clear) }}
             data-test-id='textarea__clear-button'
+            tabIndex={-1}
           />
         )}
       </div>
