@@ -47,6 +47,10 @@ module.exports = {
     return { ...base, ...custom };
   },
   webpackFinal: async config => {
+    process.env.NODE_ENV === 'test' &&
+      (config.watchOptions = {
+        ignored: /(node_modules|dist)/,
+      });
     config.resolve.fallback = {
       ...config.resolve.fallback,
       stream: require.resolve('stream-browserify'),

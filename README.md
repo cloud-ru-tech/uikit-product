@@ -1,6 +1,6 @@
 # Sbercloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/badges/master/coverage.svg)](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commits/master)
 
-Sbercloud uikit - библиотека компонентов, в которой каждый комопнент это отдельный npm-пакет, со своей версионностью и зависимостями.
+Sbercloud uikit - библиотека компонентов, в которой каждый компонент это отдельный npm-пакет, со своей версионностью и зависимостями.
 
 # Example
 
@@ -13,8 +13,7 @@ Sbercloud uikit - библиотека компонентов, в которой
 1. Получить доступ к @sbercloud/uikit2.0
 2. Создать `.npmrc` в корневой директории
    содержание `.npmrc`:
-   `@sbercloud:registry=https://nexus.devops.sbercloud.dev/repository/sbercloud-ui/`
-   `_auth={token}`
+   `@sbercloud:registry=https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/`
 3. При использовании `linaria` Добавить в `linaria.config.js` секцию:
 
 ```
@@ -107,7 +106,7 @@ Change log разбит по пакетам.
 
 # Team Duty
 
-`Core team` - Трифонов Михаил, Ахременко Григорий, Лукашев Сергей,  
+`Core team` - Трифонов Михаил, Ахременко Григорий, Белов Алексей
 > Несет ответственность за техническую часть проекта.
 >
 > Определять развитие UIKIT
@@ -118,7 +117,7 @@ Change log разбит по пакетам.
 >
 > Задачи Review team
 
-`Review team` - Шеховцов Кирилл, Смородин Кирилл, Авилов Дмитрий, Белов Алексей 
+`Review team` - Шеховцов Кирилл, Бибин Егор, Авилов Дмитрий
 > Определяет визуальную составляющую компоненты
 >
 > Определяет функциональность компоненты

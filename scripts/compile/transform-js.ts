@@ -4,8 +4,6 @@ import { BabelFileResult, Node, transformFileSync, transformFromAstSync } from '
 
 export function transformJs(version: string) {
   return (file: string) => {
-    console.log(`BABEL transforming: ${file}...`);
-
     const esmConfig = require(path.resolve(process.cwd(), 'esm.babel.config.js'))(version);
 
     const { code: esm, ast } = transformFileSync(file, {

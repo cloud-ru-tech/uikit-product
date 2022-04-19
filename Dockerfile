@@ -2,7 +2,8 @@
 FROM node:16-alpine AS builder
 COPY . .
 
-RUN npm run all:cleaninstall
+RUN npm ci
+RUN npm run build:packages
 RUN npm run build:storybook
 
 ## create image

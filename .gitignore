@@ -2,7 +2,6 @@
 node_modules
 dist
 build.bat
-package-lock.json
 .linaria-cache
 storybook-static
 
