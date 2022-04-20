@@ -158,7 +158,11 @@ export const storyEntry = ({
   componentName: string;
   packageRootFolderName: string;
 }) => {
-  const filePath = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/${Folders.stories}/index.tsx`);
+  const filePath = path.join(
+    `./${PackagesRootFolder}/${packageRootFolderName}/${Folders.stories}/${componentName}.tsx`,
+  );
+  const componentStoryName = componentName.replace(/[A-Z]/, x => x.toLowerCase());
+  const componentStoryTitle = componentName.split(/(?=[A-Z])/).join(' ');
   const fileContent =
     "import { Story, Meta } from '@storybook/react/types-6-0';\n\
 import { " +
@@ -171,7 +175,7 @@ import componentPackage from '../package.json';\n\
 \n\
 export default {\n\
   title: 'Not stable/" +
-    `${componentName}` +
+    `${componentStoryTitle}` +
     "',\n\
   component: " +
     `${componentName}` +
@@ -182,16 +186,16 @@ export default {\n\
 
 ` +
     'export const ' +
-    `${componentName.replace(/[A-Z]/, x => x.toLowerCase())}` +
+    `${componentStoryName}` +
     ' = Template.bind({});\n\
 ' +
-    `${componentName.toLowerCase()}` +
+    `${componentStoryName}` +
     '.args = {};\n\
 ' +
-    `${componentName.toLowerCase()}` +
+    `${componentStoryName}` +
     '.argTypes = {};\n\
 ' +
-    `${componentName.toLowerCase()}` +
+    `${componentStoryName}` +
     ".parameters = {\n\
   readme: {\n\
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],\n\

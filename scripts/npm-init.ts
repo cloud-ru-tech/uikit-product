@@ -112,7 +112,7 @@ inquirer
     logDebug('Finished generating files!');
     logInfo('Bootstrapping new package...This will take a few moments...');
 
-    const bootstrapResult = shell.exec('npm run build', { silent: true });
+    const bootstrapResult = shell.exec('npm run deps:all && npm run build:packages', { silent: true });
     if (bootstrapResult.code !== 0) {
       logError(bootstrapResult.stdout);
       logError(bootstrapResult.stderr);
