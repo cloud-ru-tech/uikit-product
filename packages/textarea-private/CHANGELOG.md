@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-textarea-private@2.2.17...@sbercloud/uikit-react-textarea-private@2.3.0) (2022-04-20)
+
+
+### Features
+
+* add tabIndex for helper buttons in textarea ([CP-5824](https://jira.sbercloud.tech/browse/CP-5824)) ([cea45aa](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/cea45aa2feec4e7b740800fd8b8d04c0e87a8069))
+
+
+
+
+
 ## [2.2.17](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-textarea-private@2.2.16...@sbercloud/uikit-react-textarea-private@2.2.17) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-textarea-private
