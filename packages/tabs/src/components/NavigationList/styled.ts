@@ -15,7 +15,6 @@ export const GroupStyled = styled.ul`
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
-  overflow: hidden;
   position: relative;
 
   & > * + * {
@@ -33,5 +32,4 @@ export const GroupStyled = styled.ul`
 
 export const RelContainer = styled.nav`
   position: relative;
-  overflow: hidden;
 `;
