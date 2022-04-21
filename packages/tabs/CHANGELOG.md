@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-tabs@1.0.4...@sbercloud/uikit-react-tabs@1.0.5) (2022-04-21)
+
+
+### Bug Fixes
+
+* fixed outline display of tabs ([f52142a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/f52142a3f08ee761f6b9cc71ebef3eda0ea89939))
+
+
+
+
+
 ## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-tabs@1.0.3...@sbercloud/uikit-react-tabs@1.0.4) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tabs
