@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-pagination-private@1.2.1...@sbercloud/uikit-react-pagination-private@1.2.2) (2022-04-21)
+
+
+### Bug Fixes
+
+* change page grouping strategy ([ef61e36](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/ef61e36cdb1dc03c6c43c0e84472552706999a17))
+
+
+
+
+
 ## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-pagination-private@1.2.0...@sbercloud/uikit-react-pagination-private@1.2.1) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-pagination-private
