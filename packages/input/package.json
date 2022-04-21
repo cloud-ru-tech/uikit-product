@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-input",
   "title": "React Input",
-  "version": "1.0.43",
+  "version": "1.0.44",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-react-input-decorator-private": "2.0.16",
-    "@sbercloud/uikit-react-input-private": "2.3.9",
+    "@sbercloud/uikit-react-input-private": "2.3.10",
     "@sbercloud/uikit-utils": "2.6.0"
   },
   "peerDependencies": {

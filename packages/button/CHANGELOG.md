@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.4...@sbercloud/uikit-react-button@5.0.5) (2022-04-21)
+
+
+### Bug Fixes
+
+* changed indent from text to icon on size S ([ba56c5b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/ba56c5bd299292a165b53af45a2317f4283d113a))
+
+
+
+
+
 ## [5.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.3...@sbercloud/uikit-react-button@5.0.4) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
