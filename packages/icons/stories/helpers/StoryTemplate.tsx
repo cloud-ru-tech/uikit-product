@@ -11,6 +11,7 @@ import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
 import { H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
 
 import { svgExport } from './downloader';
+import { generateDataTestId } from './generateDataTestId';
 
 const { COLORS_BUTTON } = DEPRECATED_EXPORT_VARS;
 
@@ -79,11 +80,6 @@ const Text = styled.span`
 const SearchWrapView = css`
   margin: 20px 0;
 `;
-
-function generateDataTestId(componentName: string) {
-  if (componentName === 'SvgExtensionSVG') return 'icon-svg-extension';
-  return 'icon' + componentName.replaceAll(/svg/gi, '').replace(/[A-Z]/g, x => '-' + x.toLowerCase());
-}
 
 export function getTemplate(
   Icons: Record<string, React.FunctionComponent<{ size?: number | string; fill?: string; id?: string }>>,
