@@ -26,7 +26,7 @@ const Container = styled.div<{ theme: Themes }>`
 
 const Template: Story<RadioProps> = ({ ...args }, { globals: { theme } }) => (
   <Container theme={theme}>
-    <RadioGroup value='story1' onChange={(value: React.ReactText) => {}}>
+    <RadioGroup value={'story1'} onChange={(value: React.ReactText) => {}}>
       <Radio {...args} />
     </RadioGroup>
   </Container>
@@ -37,7 +37,7 @@ export const radio = Template.bind({});
 radio.parameters = getDefaultParameters({
   figmaUrl:
     'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0?node-id=3457%3A46340',
-  extraControlsInclude: ['disabled', 'label', 'value'],
+  extraControlsInclude: ['disabled', 'label', 'value', 'data-test-id'],
 });
 
 radio.args = getDefaultArgs({

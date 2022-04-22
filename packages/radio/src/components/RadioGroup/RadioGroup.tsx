@@ -2,13 +2,13 @@ import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { RadioGroupContext } from './context';
 
-export type RadioGroupProps = {
+export type RadioGroupProps = WithSupportProps<{
   value?: React.ReactText;
   onChange: (value: React.ReactText) => void;
   children: React.ReactNode;
-};
+}>;
 
-export function RadioGroup({ children, onChange, value, ...rest }: WithSupportProps<RadioGroupProps>) {
+export function RadioGroup({ children, onChange, value, ...rest }: RadioGroupProps) {
   return (
     <RadioGroupContext.Provider value={{ onChange, value }}>
       <div {...extractSupportProps(rest)}>{children}</div>

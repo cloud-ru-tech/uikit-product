@@ -25,8 +25,8 @@ const Container = styled.div<{ variant: Variant; theme: Themes }>`
 `;
 
 const prefixIcons = {
-  none: undefined,
   FolderInterfaceSVG: <FolderInterfaceSVG />,
+  none: undefined,
 };
 
 export default {
@@ -44,14 +44,20 @@ export const link = Template.bind({});
 link.args = {
   text: 'Click me!',
   href: 'https://developer.mozilla.org/ru/docs/Web/HTML/Element/A',
+  target: '_self',
+  prefixIcon: <FolderInterfaceSVG />,
   showSuffixIcon: true,
-  'data-test-id': 'textId',
 };
 link.argTypes = {
   prefixIcon: {
     options: Object.keys(prefixIcons),
     mapping: prefixIcons,
     control: { type: 'radio' },
+  },
+  target: {
+    control: {
+      type: 'text',
+    },
   },
 };
 link.parameters = {

@@ -1,32 +1,32 @@
 import { useContext } from 'react';
 
 import { RadioCheckedInterfaceSVG, RadioUncheckedInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractDataTestProps, extractSupportProps } from '@sbercloud/uikit-utils';
 
 import { RadioGroupContext } from '../RadioGroup/context';
 import { HiddenRadio, IconContainer, Label, Wrapper } from './styled';
 
-type RadioIcon = {
+type RadioIcon = WithSupportProps<{
   checked?: boolean;
   disabled?: boolean;
-};
+}>;
 
-function RadioIcon({ checked, disabled }: RadioIcon) {
+function RadioIcon({ checked, disabled, ...rest }: RadioIcon) {
   return (
-    <IconContainer data-checked={checked} data-disabled={disabled}>
+    <IconContainer data-checked={checked} data-disabled={disabled} {...extractDataTestProps(rest)}>
       {checked ? <RadioCheckedInterfaceSVG size={20} /> : <RadioUncheckedInterfaceSVG size={20} />}
     </IconContainer>
   );
 }
 
-export type RadioProps = {
+export type RadioProps = WithSupportProps<{
   value: React.ReactText;
   label?: string;
   disabled?: boolean;
   className?: string;
-};
+}>;
 
-export function Radio({ value, label, disabled, className, ...rest }: WithSupportProps<RadioProps>) {
+export function Radio({ value, label, disabled, className, ...rest }: RadioProps) {
   const RadioGroup = useContext(RadioGroupContext);
 
   const isRadioChecked = RadioGroup?.value === value;

@@ -44,12 +44,12 @@ export const Link = ({
     {...extractSupportProps(rest)}
   >
     {prefixIcon && (
-      <IconWrapper data-size={size} data-variant={variant}>
+      <IconWrapper data-size={size} data-variant={variant} data-test-id={'link__prefix-icon'}>
         {prefixIcon}
       </IconWrapper>
     )}
     {text}
-    {showSuffixIcon && <StyledArrowLinkInterfaceSVG />}
+    {showSuffixIcon && <StyledArrowLinkInterfaceSVG data-test-id={'link__suffix-icon'} />}
   </StyledLink>
 );
 

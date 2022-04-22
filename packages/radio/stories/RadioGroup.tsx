@@ -36,21 +36,39 @@ const Item = css`
   margin: 12px 0;
 `;
 
+const radios = [
+  {
+    value: 'Story0',
+    label: 'Radio 1',
+    disabled: false,
+  },
+  {
+    value: 'Story1',
+    label: 'Radio 2',
+    disabled: false,
+  },
+  {
+    value: 'Story2',
+    label: 'Radio 3',
+    disabled: true,
+  },
+];
+
 const Template: Story<RadioProps & RadioCardProps & RadioGroupProps> = ({ ...args }, { globals: { theme } }) => {
   const [value, setValue] = useState<React.ReactText>('Story1');
 
   return (
     <>
       <Container theme={theme}>
-        <RadioGroup {...args} value={value} onChange={(value: React.ReactText) => setValue(value)}>
-          {[...new Array(2)].map((_value, index) => (
-            <Radio {...args} key={index} value={`Story${index}`} label={`Story${index}`} className={Item} />
+        <RadioGroup {...args} value={value} onChange={setValue}>
+          {radios.map(({ value, label, disabled }) => (
+            <Radio {...args} key={value} value={value} label={label} disabled={disabled} className={Item} />
           ))}
         </RadioGroup>
       </Container>
 
       <Container theme={theme}>
-        <RadioGroup {...args} value={value} onChange={(value: React.ReactText) => setValue(value)}>
+        <RadioGroup {...args} value={value} onChange={setValue}>
           {[...new Array(2)].map((_value, index) => {
             const currValue = `Story${index}`;
             const checked = currValue === value;
@@ -76,7 +94,7 @@ export const radioGroup = Template.bind({});
 radioGroup.parameters = getDefaultParameters({
   figmaUrl:
     'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0?node-id=3457%3A46340',
-  extraControlsInclude: ['value', 'name'],
+  extraControlsInclude: ['value', 'name', 'data-test-id'],
 });
 
 radioGroup.args = getDefaultArgs({
