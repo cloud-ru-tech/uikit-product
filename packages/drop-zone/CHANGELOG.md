@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.14...@sbercloud/uikit-react-drop-zone@0.2.15) (2022-04-22)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
+
+
+
+
+
 ## [0.2.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.13...@sbercloud/uikit-react-drop-zone@0.2.14) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone

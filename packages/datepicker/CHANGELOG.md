@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.38](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-datepicker@0.11.37...@sbercloud/uikit-react-datepicker@0.11.38) (2022-04-22)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-datepicker
+
+
+
+
+
 ## [0.11.37](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-datepicker@0.11.36...@sbercloud/uikit-react-datepicker@0.11.37) (2022-04-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-datepicker

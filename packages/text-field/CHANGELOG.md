@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.44](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-text-field@3.1.43...@sbercloud/uikit-react-text-field@3.1.44) (2022-04-22)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-text-field
+
+
+
+
+
 ## [3.1.43](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-text-field@3.1.42...@sbercloud/uikit-react-text-field@3.1.43) (2022-04-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-text-field

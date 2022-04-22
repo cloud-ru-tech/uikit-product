@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.25](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-spinner@2.0.24...@sbercloud/uikit-react-spinner@2.0.25) (2022-04-22)
+
+
+### Bug Fixes
+
+* add type decorator WithSupportProps, data-test-id ([b1f7105](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/b1f710501465a35aea4de6c03975b48fcd114fba))
+
+
+
+
+
 ## [2.0.24](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-spinner@2.0.23...@sbercloud/uikit-react-spinner@2.0.24) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-spinner
