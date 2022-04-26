@@ -26,6 +26,7 @@ export function getAllPatterns() {
 export function getStablePatterns() {
   return getPackageEntries()
     .filter(entry => isStableVersion(entry.version))
+    .filter(el => !el.pattern.match('icons'))
     .map(entry => entry.pattern);
 }
 
