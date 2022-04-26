@@ -13,14 +13,14 @@
     "deps:all": "npm run deps:global && npm run deps:packages",
     "deps:global": "npm i",
     "deps:packages": "npm i --workspaces",
-    "deps:reinstall": "rm -rf node_modules package-lock.json && npm cache clean -f && npm run deps:all",
+    "deps:reinstall": "rm -rf node_modules package-lock.json && npm cache clean -f && npm run deps:global",
     "storybook:all": "start-storybook -p 6006",
     "storybook:ci": "start-storybook -p 6006 --ci --quiet --loglevel warn",
     "storybook:partial": "ts-node scripts/start-storybook-partially.ts",
     "test:coverage-all": "ts-node scripts/test-coverage-all-packages.ts",
     "test:coverage-unstable": "ts-node scripts/test-coverage-unstable-packages.ts",
     "test:coverage-stable": "ts-node scripts/test-coverage-stable-packages.ts",
-    "test:cypress": "cypress run --headless --quiet",
+    "test:cypress": "ts-node scripts/run-tests.ts",
     "test:ci": "cross-env NODE_ENV=test start-server-and-test storybook:ci http://localhost:6006 test:cypress"
   },
   "devDependencies": {

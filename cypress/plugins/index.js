@@ -18,5 +18,18 @@
 
 module.exports = (on, config) => {
   require('@cypress/code-coverage/task')(on, config);
+  require('./deleteSuccessVideos')(on);
+
+  const browser = config.env.BROWSER;
+
+  if (browser) {
+    config.videosFolder = `${config.videosFolder}/${browser}`;
+    config.screenshotsFolder = `${config.screenshotsFolder}/${browser}`;
+
+    if (browser === 'firefox') {
+      config.video = false;
+    }
+  }
+
   return config;
 };

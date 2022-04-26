@@ -79,7 +79,7 @@ buttons.forEach(button => {
         },
       });
 
-      cy.getByDataTestId(testId).eq(0).trigger('mouseenter');
+      cy.getByDataTestId(testId).first().trigger('mouseenter');
 
       expect(cy.get(`[data-test-id*="button-tooltip__${button.componentName}"]`)).to.exist;
     });
@@ -97,7 +97,7 @@ buttons.forEach(button => {
 });
 
 function getButtonDataAfterClick(testId: string) {
-  const result: Record<string, { svgId: string; innerText: string; el?: JQuery<HTMLElement> }> = {
+  const result: Record<string, { svgId: string; innerText: string; el?: JQuery }> = {
     prev: {
       svgId: '',
       innerText: '',
@@ -110,7 +110,7 @@ function getButtonDataAfterClick(testId: string) {
 
   return cy
     .getByDataTestId(testId)
-    .eq(0)
+    .first()
     .within(el =>
       cy
         .get('svg')
@@ -221,39 +221,29 @@ describe('[Button]: CopyButton:', () => {
   const testId = 'copy-button-test';
 
   function visit(props?: CommonButtonPropsWithOptionalTooltip) {
-    return cy.visitComponent({
-      group: 'button',
-      name: 'copy-button',
-      props: {
-        'data-test-id': testId,
-        text: testId,
-        ...(props || {}),
+    return cy.visitComponent(
+      {
+        group: 'button',
+        name: 'copy-button',
+        props: {
+          'data-test-id': testId,
+          text: testId,
+          ...(props || {}),
+        },
       },
-    });
-  }
-
-  function getCopiedText(el?: JQuery<HTMLElement>) {
-    let copiedText = '';
-
-    if (el && !el.attr('disabled')) {
-      const pasteTarget = document.createElement('input');
-      document.body.appendChild(pasteTarget);
-      pasteTarget.focus();
-      document.execCommand('Paste', false);
-
-      copiedText = pasteTarget.value;
-    }
-
-    return copiedText;
+      {
+        onBeforeLoad(win: Cypress.AUTWindow) {
+          cy.stub(win, 'prompt').as('prompt').returns(testId);
+        },
+      },
+    );
   }
 
   it('Text is copied to clipboard and icon has changed after click', () => {
     visit();
 
     getButtonDataAfterClick(testId).then(({ prev, current }) => {
-      const copiedText = getCopiedText(current.el);
-
-      expect(copiedText).to.eq(testId);
+      cy.get('@prompt').should('have.returned', testId);
 
       expect(current.svgId).to.not.eq(prev.svgId);
     });
@@ -265,9 +255,7 @@ describe('[Button]: CopyButton:', () => {
     });
 
     getButtonDataAfterClick(testId).then(({ prev, current }) => {
-      const copiedText = getCopiedText(current.el);
-
-      expect(copiedText).to.eq('');
+      cy.get('@prompt').should('not.be.called');
 
       expect(current.svgId).to.eq(prev.svgId);
     });

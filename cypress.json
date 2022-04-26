@@ -1,10 +1,11 @@
 {
   "integrationFolder": "./",
   "testFiles": "packages/*/__tests__/**/*.*",
+  "projectId": "uikit",
   "reporter": "junit",
   "reporterOptions": {
     "mochaFile": "cypress/reports/report-[hash].xml",
     "toConsole": false
   },
-  "chromeWebSecurity": false
+  "videoUploadOnPasses": false
 }

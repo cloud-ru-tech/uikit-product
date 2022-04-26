@@ -7,7 +7,7 @@ import { buildArgsParam } from './helpers';
 
 Cypress.Commands.add('getByDataTestId', (value: string) => cy.get(`*[data-test-id="${value}"]`));
 
-Cypress.Commands.add('visitComponent', ({ name, group, props, category = 'components' }) => {
+Cypress.Commands.add('visitComponent', ({ name, group, props, category = 'components' }, options) => {
   let propsString = '';
 
   if (props) {
@@ -18,6 +18,7 @@ Cypress.Commands.add('visitComponent', ({ name, group, props, category = 'compon
     `http://localhost:6006/iframe.html?id=${category}${group ? `-${group}` : ''}-${name}--${name}&viewMode=story${
       propsString ? `&args=${propsString}` : ''
     }`,
+    options,
   );
 });
 
@@ -30,14 +31,17 @@ declare global {
        * @example cy.getByDataTestId('private-input')
        */
       getByDataTestId(value: string): Chainable<JQuery>;
-      visitComponent<T>(args: {
-        name: string;
-        group?: string;
-        category?: string;
-        props?: {
-          [Property in keyof T]: T[Property];
-        };
-      }): Chainable<AUTWindow>;
+      visitComponent<T>(
+        args: {
+          name: string;
+          group?: string;
+          category?: string;
+          props?: {
+            [Property in keyof T]: T[Property];
+          };
+        },
+        options?: Partial<VisitOptions>,
+      ): Chainable<AUTWindow>;
     }
   }
 }

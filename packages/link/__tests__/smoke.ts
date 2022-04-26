@@ -75,14 +75,17 @@ describe('[Link]:', () => {
   });
 
   it('redirect link, should be change url', () => {
-    const mdn = 'https://developer.mozilla.org/ru/docs/Web/HTML/Element/A';
     visit({
       'data-test-id': testId,
       text: 'test redirect',
     });
 
+    cy.getByDataTestId(testId).invoke('attr', 'href').as('linkHref');
     cy.getByDataTestId(testId).click();
-    cy.url().should('eq', mdn);
+
+    cy.get('@linkHref').then(href => {
+      cy.url().should('eq', href);
+    });
   });
 });
 

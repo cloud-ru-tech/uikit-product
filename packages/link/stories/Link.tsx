@@ -1,6 +1,5 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { Variant } from 'link/src/components/constants';
 
 import { FolderInterfaceSVG } from '@sbercloud/uikit-react-icons';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
@@ -11,6 +10,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Link, LinkProps } from '../src';
+import { Variant } from '../src/components/constants';
 
 const Container = styled.div<{ variant: Variant; theme: Themes }>`
   width: 200px;
@@ -43,7 +43,7 @@ const Template: Story<LinkProps> = ({ ...args }, { globals: { theme } }) => (
 export const link = Template.bind({});
 link.args = {
   text: 'Click me!',
-  href: 'https://developer.mozilla.org/ru/docs/Web/HTML/Element/A',
+  href: window.location.href.replace(/&args.*/g, ''),
   target: '_self',
   prefixIcon: <FolderInterfaceSVG />,
   showSuffixIcon: true,
