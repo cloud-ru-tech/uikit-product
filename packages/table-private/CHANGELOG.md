@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.10.2...@sbercloud/uikit-react-table-private@0.10.3) (2022-04-26)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-table-private
+
+
+
+
+
 ## [0.10.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.10.1...@sbercloud/uikit-react-table-private@0.10.2) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private

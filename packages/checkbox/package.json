@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-checkbox",
   "title": "React Checkbox",
-  "version": "3.0.13",
+  "version": "3.0.14",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-icons": "3.3.0",
+    "@sbercloud/uikit-react-icons": "3.4.0",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
     "@sbercloud/uikit-utils": "2.6.0"

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2022-04-26)
+
+
+### Features
+
+* ([AICE-5728](https://jira.sbercloud.tech/browse/AICE-5728)) add Onboarding service icon ([05fb194](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/05fb1940a920b03bbe14f197ab06cec355cd161c))
+
+
+
+
+
 # [3.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-icons@3.2.2...@sbercloud/uikit-react-icons@3.3.0) (2022-04-04)
 
 

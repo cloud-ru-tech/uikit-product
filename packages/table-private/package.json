@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-table-private",
   "title": "React Table Private",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
     "@ag-grid-community/react": "27.1.0",
     "@ag-grid-enterprise/core": "27.1.0",
     "@ag-grid-enterprise/range-selection": "27.1.0",
-    "@sbercloud/uikit-react-icons": "3.3.0",
+    "@sbercloud/uikit-react-icons": "3.4.0",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
     "@sbercloud/uikit-utils": "2.6.0",

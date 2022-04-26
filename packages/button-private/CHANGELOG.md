@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button-private@1.2.4...@sbercloud/uikit-react-button-private@1.2.5) (2022-04-26)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button-private
+
+
+
+
+
 ## [1.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button-private@1.2.3...@sbercloud/uikit-react-button-private@1.2.4) (2022-04-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button-private
