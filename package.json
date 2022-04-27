@@ -13,7 +13,7 @@
     "deps:all": "npm run deps:global && npm run deps:packages",
     "deps:global": "npm i",
     "deps:packages": "npm i --workspaces",
-    "deps:reinstall": "rm -rf node_modules package-lock.json && npm cache clean -f && npm run deps:global",
+    "deps:reinstall": "rm -rf node_modules package-lock.json && npm cache clean -f && npm run deps:all",
     "storybook:all": "start-storybook -p 6006",
     "storybook:ci": "start-storybook -p 6006 --ci --quiet --loglevel warn",
     "storybook:partial": "ts-node scripts/start-storybook-partially.ts",
