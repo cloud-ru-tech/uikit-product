@@ -114,11 +114,6 @@ export function ClientModelTableView<T>({
             suppressMenu: true,
             sortable: true,
             resizable: true,
-            cellStyle: {
-              textOverflow: 'ellipsis',
-              display: 'block',
-              verticalAlign: 'middle',
-            },
           },
           pagination: true,
           immutableData: true,

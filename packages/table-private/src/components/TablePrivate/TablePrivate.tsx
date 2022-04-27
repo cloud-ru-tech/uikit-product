@@ -101,10 +101,6 @@ function StylelessTablePrivate({
             sortable: true,
             unSortIcon: true,
             suppressMenu: true,
-            cellStyle: {
-              textOverflow: 'ellipsis',
-              display: 'block',
-            },
           },
           ...gridOptions,
         }}

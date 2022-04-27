@@ -52,6 +52,10 @@ export const styledTable = <P extends TableProps>(Table: VFC<P>) => styled(Table
           padding-left: 3px;
           height: auto;
         }
+
+        &-wrapper {
+          width: 100%;
+        }
       }
       &-header {
         background-color: var(${COLORS_TABLE.TABLE_HEADER_BACKGROUND});
