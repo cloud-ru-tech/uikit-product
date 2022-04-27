@@ -20,7 +20,7 @@ type ClientModelTableViewProps<T> = {
   columnDefinitions: TablePrivateProps['columnDefs'];
   onGridReady: TablePrivateProps['onGridReady'];
   getRowHeight: TablePrivateProps['getRowHeight'];
-  getRowNodeId?: TablePrivateProps['getRowNodeId'];
+  getRowId?: TablePrivateProps['getRowId'];
   useRowSelection: boolean;
   deleteProps?: DeleteProps;
   filterProps?: {
@@ -51,7 +51,7 @@ export function ClientModelTableView<T>({
   searchValue,
   paginationProps,
   getRowHeight,
-  getRowNodeId,
+  getRowId,
   moreActions,
   onRowClicked,
   onRowSelected,
@@ -104,7 +104,7 @@ export function ClientModelTableView<T>({
         columnDefs={columnDefinitions}
         onGridReady={onGridReady}
         getRowHeight={getRowHeight}
-        getRowNodeId={getRowNodeId}
+        getRowId={getRowId}
         onRowClicked={onRowClicked}
         onRowSelected={onRowSelected}
         onRowDoubleClicked={onRowDoubleClicked}
@@ -116,9 +116,8 @@ export function ClientModelTableView<T>({
             resizable: true,
           },
           pagination: true,
-          immutableData: true,
-          getRowNodeId(data) {
-            return data[fieldId];
+          getRowId(row) {
+            return row.data[fieldId];
           },
           suppressPaginationPanel: true,
           enableCellTextSelection: true,

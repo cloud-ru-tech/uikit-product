@@ -27,7 +27,7 @@ export type ClientModelTableControllerProps<T> = {
   };
   advancedProps?: {
     getRowHeight?: TablePrivateProps['getRowHeight'];
-    getRowNodeId?: TablePrivateProps['getRowNodeId'];
+    getRowId?: TablePrivateProps['getRowId'];
     onRowClicked?: TablePrivateProps['onRowClicked'];
     rowSelection?: TablePrivateProps['rowSelection'];
     onRowSelected?: TablePrivateProps['onRowSelected'];
@@ -277,7 +277,7 @@ export function ClientModelTableController<T>({
       data={data}
       columnDefinitions={columnDefinitions}
       getRowHeight={advancedProps?.getRowHeight}
-      getRowNodeId={advancedProps?.getRowNodeId}
+      getRowId={advancedProps?.getRowId}
       onGridReady={onGridReady}
       onRefreshCallback={onRefreshCallback}
       onRowClicked={advancedProps?.onRowClicked}

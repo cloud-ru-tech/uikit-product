@@ -11,7 +11,7 @@ export type TablePrivateProps = AgGridReactProps & {
   onRowClicked?(e: RowClickedEvent): void;
   onRowSelected?(e: RowSelectedEvent): void;
   onRowDoubleClicked?(e: RowDoubleClickedEvent): void;
-  getRowNodeId?(data: any): string | number;
+  getRowId?: AgGridReactProps['getRowId'];
   columnDefs: ColumnDefinition[];
   rowData: NonNullable<AgGridReactProps['rowData']>;
 };
