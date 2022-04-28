@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.10.3...@sbercloud/uikit-react-table-private@0.11.0) (2022-04-28)
+
+
+### Bug Fixes
+
+* removed row styles that impact height if getRowHeight prop passed ([f3853f9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/f3853f926af5759272ca160cb99c15a82ed66617))
+
+
+### Features
+
+* update ag-grid version, changed deprecated getRowNodeId to getRowId ([291caea](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/291caea36c9ccf7d24ea6cc2e253966c254ea32f))
+
+
+### BREAKING CHANGES
+
+* update ag-grid version, changed deprecated getRowNodeId to getRowId
+
+
+
+
+
 ## [0.10.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.10.2...@sbercloud/uikit-react-table-private@0.10.3) (2022-04-26)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
