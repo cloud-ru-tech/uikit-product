@@ -23,6 +23,12 @@ export const ContainerStyled = styled.div`
     background-color: var(${COLORS.HOVER_BACKGROUND});
     box-shadow: 0px 4px 20px var(${COLORS.HOVER_SHADOW});
   }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+  }
 `;
 
 export const CardContent = styled.div`

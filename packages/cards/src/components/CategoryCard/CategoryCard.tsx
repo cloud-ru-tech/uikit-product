@@ -7,6 +7,7 @@ export type CategoryCardProps = {
   text: string;
   image: React.ReactElement | string;
   className?: string;
+  disabled?: boolean;
   onClick: (e: React.MouseEvent<HTMLDivElement>) => void;
 };
 
@@ -15,10 +16,16 @@ export const CategoryCard = ({
   image,
   title,
   onClick,
+  disabled,
   className,
   ...rest
 }: WithSupportProps<CategoryCardProps>) => (
-  <ContainerStyled className={className} onClick={onClick} {...extractSupportProps(rest)}>
+  <ContainerStyled
+    className={className}
+    onClick={onClick}
+    {...extractSupportProps(rest)}
+    data-disabled={disabled || undefined}
+  >
     <CardImageWrap>{typeof image === 'string' ? <CardImage src={image} /> : image}</CardImageWrap>
     <CardContent>
       <CardTitle>{title}</CardTitle>
