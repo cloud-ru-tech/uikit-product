@@ -31,9 +31,7 @@ export const ContainerStyled = styled.div`
   }
 `;
 
-export const CardContent = styled.div`
-  max-width: 250px;
-`;
+export const CardContent = styled.div``;
 
 export const CardTitle = styled.h3`
   ${H3_SEMIBOLD_STYLES};
