@@ -1,0 +1,41 @@
+{
+  "name": "@sbercloud/uikit-react-predefined-icons-private",
+  "title": "React Predefined Icons Private",
+  "version": "0.0.1",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Predefined colored icons",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/predefined-icons-private",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "directory": "packages/predefined-icons-private"
+  },
+  "author": "Белов Алексей <anbelov@sbercloud.ru>",
+  "contributors": [
+    "Белов Алексей <anbelov@sbercloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-react-icons": "3.5.0",
+    "@sbercloud/uikit-theme": "0.33.1",
+    "@sbercloud/uikit-utils": "2.6.0"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@linaria/core": "^3.0.0-beta.13",
+    "@linaria/react": "^3.0.0-beta.13",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  }
+}
