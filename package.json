@@ -41,7 +41,7 @@
     "@linaria/react": "3.0.0-beta.13",
     "@linaria/shaker": "3.0.0-beta.13",
     "@linaria/webpack-loader": "3.0.0-beta.13",
-    "@sbercloud/ft-all-linters-pack": "1.0.9",
+    "@sbercloud/ft-all-linters-pack": "1.0.13",
     "@sbercloud/ft-conventional-changelog": "1.0.1",
     "@sbercloud/ft-storybook-readme-addon": "1.0.1",
     "@storybook/addon-actions": "6.4.22",
