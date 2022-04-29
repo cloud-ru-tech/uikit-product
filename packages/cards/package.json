@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-cards",
   "title": "React Cards",
-  "version": "0.13.9",
+  "version": "0.14.0",
   "sideEffects": [
     "*.css",
     "*.woff",

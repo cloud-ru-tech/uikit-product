@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-cards@0.13.9...@sbercloud/uikit-react-cards@0.14.0) (2022-04-29)
+
+
+### Features
+
+* **CP-6022:** add disabled prop ([d542c18](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/d542c181969bdc03a4aaf1acd4332c87ae042ace))
+
+
+
+
+
 ## [0.13.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-cards@0.13.8...@sbercloud/uikit-react-cards@0.13.9) (2022-04-26)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-cards
