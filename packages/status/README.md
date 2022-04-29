@@ -52,28 +52,6 @@ enum Sizes {
 }
 ```
 
-### StatusIcon
-
-```ts
-type StatusIconProps = {
-  type: Types;
-  variant?: Variants;
-  className?: string;
-};
-
-enum Variants {
-  Primary = 'primary',
-  OnDark = 'onDark',
-}
-
-enum Types {
-  Success = 'success',
-  Failed = 'failed',
-  Cancel = 'cancel',
-  Loading = 'loading',
-}
-```
-
 ### StatusTag
 
 ```ts
