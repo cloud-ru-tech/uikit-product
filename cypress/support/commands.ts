@@ -5,7 +5,7 @@
 // ***********************************************
 import { buildArgsParam } from './helpers';
 
-Cypress.Commands.add('getByDataTestId', (value: string) => cy.get(`*[data-test-id="${value}"]`));
+Cypress.Commands.add('getByDataTestId', (value, options) => cy.get(`*[data-test-id="${value}"]`, options));
 
 Cypress.Commands.add('visitComponent', ({ name, group, props, category = 'components' }, options) => {
   let propsString = '';
@@ -30,7 +30,10 @@ declare global {
        * Custom command to select DOM element by data-test-id attribute.
        * @example cy.getByDataTestId('private-input')
        */
-      getByDataTestId(value: string): Chainable<JQuery>;
+      getByDataTestId(
+        value: string,
+        options?: Partial<Loggable & Timeoutable & Withinable & Shadow>,
+      ): Chainable<JQuery>;
       visitComponent<T>(
         args: {
           name: string;
