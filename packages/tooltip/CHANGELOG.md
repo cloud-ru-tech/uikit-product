@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.44](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-tooltip@2.0.43...@sbercloud/uikit-react-tooltip@2.0.44) (2022-05-05)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-tooltip
+
+
+
+
+
 ## [2.0.43](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-tooltip@2.0.42...@sbercloud/uikit-react-tooltip@2.0.43) (2022-04-26)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-tooltip

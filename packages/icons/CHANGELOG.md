@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-icons@3.4.0...@sbercloud/uikit-react-icons@3.5.0) (2022-05-05)
+
+
+### Features
+
+* add internet interface icon ([70227c9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/70227c9a70c268ed2965e17cd42346043c8e4955))
+
+
+
+
+
 # 3.4.0 (2022-04-26)
 
 

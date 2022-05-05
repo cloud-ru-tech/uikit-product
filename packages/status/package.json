@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-status",
   "title": "React Status",
-  "version": "4.3.5",
+  "version": "4.3.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-icons": "3.4.0",
+    "@sbercloud/uikit-react-icons": "3.5.0",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
     "@sbercloud/uikit-utils": "2.6.0"

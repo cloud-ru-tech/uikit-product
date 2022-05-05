@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-button-private",
   "title": "React Button Private",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-tooltip": "2.0.43",
+    "@sbercloud/uikit-react-tooltip": "2.0.44",
     "@sbercloud/uikit-utils": "2.6.0",
     "lodash.pick": "4.4.0"
   },
