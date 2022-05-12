@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-toaster@0.12.10...@sbercloud/uikit-react-toaster@1.0.1) (2022-05-12)
+
+
+### Bug Fixes
+
+* **AICE-5892:** first stable version ([25e1307](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/25e1307338ae43f7b3560035575eeeda2fb406e4))
+
+
+
+
+
 ## [0.12.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-toaster@0.12.9...@sbercloud/uikit-react-toaster@0.12.10) (2022-05-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-toaster

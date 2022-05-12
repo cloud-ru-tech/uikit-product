@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-status@4.3.6...@sbercloud/uikit-react-status@5.0.0) (2022-05-12)
+
+
+### Features
+
+* removed StatusIcon component ([81b0133](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/81b01337b0f49ec83fee185422e27c916820c75e))
+
+
+### BREAKING CHANGES
+
+* removed StatusIcon component
+
+
+
+
+
 ## [4.3.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-status@4.3.5...@sbercloud/uikit-react-status@4.3.6) (2022-05-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-status
