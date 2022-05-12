@@ -1,41 +1,40 @@
-import 'react-toastify/dist/ReactToastify.css';
-
+import { cx } from '@linaria/core';
 import {
-  ToastContainer as RCToastContainer,
-  ToastContainerProps,
-  ToastOptions,
-  toast as rcToast,
+  ToastContainer as RtToastContainer,
+  ToastContainerProps as RtToastContainerProps,
+  ToastPosition,
+  toast,
 } from 'react-toastify';
 
-import { Toaster, ToasterProps, Variants } from '../Toaster';
-import { toastBodyClassName, toastClassName, toastContainerClassName } from './styled';
+import * as S from './styled';
 
-export type { ToastOptions, ToasterProps };
+export type ToasterContainerProps = {
+  position?: ToastPosition;
+  limit?: number;
+  containerId?: RtToastContainerProps['containerId'];
+};
 
-export function ToasterContainer(props: ToastContainerProps) {
+export function ToasterContainer({
+  position = toast.POSITION.BOTTOM_RIGHT,
+  limit = 5,
+  containerId,
+}: ToasterContainerProps) {
   return (
-    <RCToastContainer
+    <RtToastContainer
       hideProgressBar
-      closeOnClick
+      closeOnClick={false}
       autoClose={false}
       closeButton={false}
       draggable={false}
-      className={toastContainerClassName}
-      toastClassName={toastClassName}
-      bodyClassName={toastBodyClassName}
-      {...props}
+      className={cx(S.toastContainerClassName, position)}
+      toastClassName={S.toastClassName}
+      bodyClassName={S.toastBodyClassName}
+      position={position}
+      limit={limit}
+      containerId={containerId}
+      enableMultiContainer={Boolean(containerId)}
     />
   );
 }
 
-ToasterContainer.variants = Variants;
-
-export const dismissToast = rcToast.dismiss;
-export const updateToast = rcToast.update;
-export const isActiveToast = rcToast.isActive;
-
-export const customToast = (node: React.ReactNode, options: ToastOptions = {}) => rcToast(node, options);
-export const toaster = (toastProps: ToasterProps, options: ToastOptions = {}) =>
-  rcToast(<Toaster {...toastProps} />, options);
-
-toaster.variants = Variants;
+ToasterContainer.position = toast.POSITION;

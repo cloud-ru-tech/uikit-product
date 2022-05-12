@@ -1,22 +1,41 @@
+import 'react-toastify/dist/ReactToastify.css';
+
 import { css } from '@linaria/core';
 
 export const toastContainerClassName = css`
-  margin-top: 40px;
-  width: 304px !important;
+  && {
+    width: 302px;
+    padding: 0;
+  }
+
+  &.bottom-right {
+    bottom: 8px;
+    right: 8px;
+  }
+
+  &.bottom-center {
+    bottom: 8px;
+  }
+
+  &.top-right {
+    top: 8px;
+    right: 8px;
+  }
 `;
 
 export const toastClassName = css`
-  .${toastContainerClassName} & {
+  && {
     padding: 0;
-    border-radius: 8px;
     background-color: transparent;
+    min-height: 36px;
+    margin-bottom: 4px;
+    box-shadow: none;
   }
 `;
 
 export const toastBodyClassName = css`
-  .${toastContainerClassName} & {
+  && {
     padding: 0;
     margin: 0;
-    width: 100%;
   }
 `;

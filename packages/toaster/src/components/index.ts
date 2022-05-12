@@ -1,9 +1,3 @@
-export {
-  ToasterContainer as Toaster,
-  toaster,
-  customToast,
-  dismissToast,
-  updateToast,
-  isActiveToast,
-} from './ToasterContainer';
-export type { ToastOptions as ToasterOptions, ToasterProps } from './ToasterContainer';
+export type { ToasterContainerProps } from './ToasterContainer';
+export type { ToasterBigProps } from './ToasterBig';
+export type { ToasterSmallProps } from './ToasterSmall';
