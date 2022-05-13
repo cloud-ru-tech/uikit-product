@@ -193,8 +193,11 @@ export function ClientModelTableController<T>({
     [gridApi],
   );
 
-  const paginationProps: PaginationProps | undefined = useMemo(() => {
+  useEffect(() => {
     gridApi?.paginationSetPageSize(pageSize);
+  }, [gridApi, pageSize]);
+
+  const paginationProps: PaginationProps | undefined = useMemo(() => {
     const showPagination = Boolean(pageSize && data?.length > pageSize);
     return pageSize
       ? {
