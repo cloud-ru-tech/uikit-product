@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.36.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.36.2...@sbercloud/uikit-react-table@0.36.3) (2022-05-13)
+
+
+### Bug Fixes
+
+* move paginationSetPageSize into useEffect ([cabeddf](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/cabeddfd109cb5af1321b260512dc8dc3ad3cd62))
+
+
+
+
+
 ## [0.36.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table@0.36.1...@sbercloud/uikit-react-table@0.36.2) (2022-05-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table
