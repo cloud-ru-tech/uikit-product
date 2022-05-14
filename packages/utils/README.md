@@ -113,6 +113,18 @@ onKeyPress={keyboardSelectHandler(changeTabHandler)}
 
 In that case Space or Enter pressing when component in focus will be equivalent to regular click
 
+#### UniqueId
+
+If you need to get a unique string you may use following approach:
+
+```typescript jsx
+import { uniqueId } from '@sbercloud/uikit-product-utils';
+
+uniqueId(); // '1'
+uniqueId(); // '2'
+uniqueId('foo'); // 'foo__1'
+```
+
 ### Hooks
 
 #### useLanguage
