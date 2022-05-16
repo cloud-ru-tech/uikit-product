@@ -1,7 +1,7 @@
 # React Chip
 
 ## Installation
-`npm i @sbercloud/uikit-react-chip`
+`npm i @sbercloud/uikit-product-chip`
 
 ## Props
 ```typescript

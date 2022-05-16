@@ -1,7 +1,7 @@
 import { ChangeEvent, forwardRef, useCallback, useMemo } from 'react';
 import TextareaAutosize from 'react-textarea-autosize';
 
-import { excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { styledTextareaPrivate } from './styled';
 import { TextareaPrivateProps } from './types';

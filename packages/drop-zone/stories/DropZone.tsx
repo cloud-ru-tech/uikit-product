@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 import { BADGE } from '#storybookConstants';
 

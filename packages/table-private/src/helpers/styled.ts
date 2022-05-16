@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 import { VFC } from 'react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-typography';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-product-typography';
 
 const { COLORS_TABLE } = DEPRECATED_EXPORT_VARS;
 

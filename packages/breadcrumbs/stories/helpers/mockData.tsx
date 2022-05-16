@@ -1,5 +1,5 @@
-import { RocketInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Tooltip } from '@sbercloud/uikit-react-tooltip';
+import { RocketInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 
 export const items = [
   { text: 'Профиль', link: 'url' },

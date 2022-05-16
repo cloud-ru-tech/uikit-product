@@ -1,6 +1,6 @@
 import { ChangeEvent, useCallback } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Size, Variant } from './constants';
 import * as S from './styled';

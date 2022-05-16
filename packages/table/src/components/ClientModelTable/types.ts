@@ -1,4 +1,4 @@
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
+import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 
 export type DeleteProps = {
   onConfirmDelete(): Promise<void>;

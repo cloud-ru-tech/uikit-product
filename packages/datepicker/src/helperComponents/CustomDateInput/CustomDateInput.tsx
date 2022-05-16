@@ -1,8 +1,8 @@
 import { forwardRef, useCallback, useEffect, useMemo, useState } from 'react';
 import RDatePicker from 'react-datepicker';
 
-import { CalendarInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { CalendarInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { getSplitDate } from '../../helpers/getSplitDate';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';

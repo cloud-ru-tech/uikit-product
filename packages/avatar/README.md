@@ -1,7 +1,7 @@
 # React Avatar
 
 ## Installation
-`npm i @sbercloud/uikit-react-avatar`
+`npm i @sbercloud/uikit-product-avatar`
 
 React component for drawing avatar component or placeholder
 

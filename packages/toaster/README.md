@@ -1,7 +1,7 @@
 # React Toaster
 
 ## Installation
-`npm i @sbercloud/uikit-react-toaster`
+`npm i @sbercloud/uikit-product-toaster`
 
 [Changelog](./CHANGELOG.md)
 

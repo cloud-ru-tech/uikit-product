@@ -1,4 +1,4 @@
-import { Tag, TagProps } from '@sbercloud/uikit-react-tag';
+import { Tag, TagProps } from '@sbercloud/uikit-product-tag';
 
 interface TagNameProps {
   tag: {

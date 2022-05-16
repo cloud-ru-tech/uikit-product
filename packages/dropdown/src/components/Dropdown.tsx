@@ -6,8 +6,8 @@ import {
   TooltipMenuItemPrivateProps,
   TooltipMenuPrivate,
   TooltipPrivate,
-} from '@sbercloud/uikit-react-tooltip-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+} from '@sbercloud/uikit-product-tooltip-private';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
 

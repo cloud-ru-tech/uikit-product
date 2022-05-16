@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { useStepperContext } from '../Context';
 import { Sizes } from './constants';

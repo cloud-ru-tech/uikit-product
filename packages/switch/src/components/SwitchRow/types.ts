@@ -1,5 +1,5 @@
-import { TooltipProps } from '@sbercloud/uikit-react-tooltip';
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { SwitchProps } from '../Switch';
 

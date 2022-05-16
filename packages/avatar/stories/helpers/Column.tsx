@@ -1,5 +1,5 @@
-import { Avatar, AvatarProps } from '@sbercloud/uikit-react-avatar';
-import { Divider } from '@sbercloud/uikit-react-divider';
+import { Avatar, AvatarProps } from '@sbercloud/uikit-product-avatar';
+import { Divider } from '@sbercloud/uikit-product-divider';
 
 import { Sizes, Variants } from '../../src/helpers';
 import { ItemWrap, StyledColumn, Title } from './styled';

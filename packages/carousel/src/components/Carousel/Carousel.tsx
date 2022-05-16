@@ -1,6 +1,6 @@
 import { ReactElement, useCallback, useMemo, useRef, useState } from 'react';
 
-import { WithSupportProps, extractSupportProps, useComponentSize } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useComponentSize } from '@sbercloud/uikit-product-utils';
 
 import { TooltipsSettings } from '../../types';
 import { ArrowsNavigation, DotsNavigation } from '../Navigation';

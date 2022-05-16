@@ -3,9 +3,9 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { ButtonTable, ButtonTableIcon } from '@sbercloud/uikit-react-button';
-import { LogicConditionType, TFilterOptionType, TFilterValueType } from '@sbercloud/uikit-react-filter';
-import { StatusDot } from '@sbercloud/uikit-react-status';
+import { ButtonTable, ButtonTableIcon } from '@sbercloud/uikit-product-button';
+import { LogicConditionType, TFilterOptionType, TFilterValueType } from '@sbercloud/uikit-product-filter';
+import { StatusDot } from '@sbercloud/uikit-product-status';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

@@ -1,8 +1,8 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H4_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { H4_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
 
 const { COLORS_FORM_FIELD } = DEPRECATED_EXPORT_VARS;
 

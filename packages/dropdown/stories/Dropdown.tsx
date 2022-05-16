@@ -2,15 +2,15 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useCallback, useState } from 'react';
 
-import { Button, ButtonIcon, ButtonRound } from '@sbercloud/uikit-react-button';
-import { Divider } from '@sbercloud/uikit-react-divider';
+import { Button, ButtonIcon, ButtonRound } from '@sbercloud/uikit-product-button';
+import { Divider } from '@sbercloud/uikit-product-divider';
 import {
   ChevronLeftInterfaceSVG,
   CircleAddInterfaceSVG,
   FileUploadFilledInterfaceSVG,
   FolderUploadFilledInterfaceSVG,
   SettingsInterfaceSVG,
-} from '@sbercloud/uikit-react-icons';
+} from '@sbercloud/uikit-product-icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

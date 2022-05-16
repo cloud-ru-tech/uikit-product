@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { ButtonPrivate } from '@sbercloud/uikit-react-button-private';
+import { ButtonPrivate } from '@sbercloud/uikit-product-button-private';
 
 import { Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';

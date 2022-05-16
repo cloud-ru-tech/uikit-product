@@ -1,4 +1,4 @@
-import { CheckboxCheckedSVG } from '@sbercloud/uikit-react-icons';
+import { CheckboxCheckedSVG } from '@sbercloud/uikit-product-icons';
 
 import { Sizes } from './constants';
 import { Dot } from './styled';

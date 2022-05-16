@@ -1,8 +1,8 @@
 import mergeRefs from 'merge-refs';
 import { forwardRef, useCallback, useRef, useState } from 'react';
 
-import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import * as S from './styled';

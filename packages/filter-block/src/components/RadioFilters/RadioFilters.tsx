@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import { ButtonGhost } from '@sbercloud/uikit-react-button';
-import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { ButtonGhost } from '@sbercloud/uikit-product-button';
+import { Radio, RadioGroup } from '@sbercloud/uikit-product-radio';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { FilterTypes } from '../../constants';
 import { Texts, textProvider } from '../../helpers/textProviders';

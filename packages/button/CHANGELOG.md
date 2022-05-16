@@ -3,26 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [5.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.8...@sbercloud/uikit-react-button@5.0.9) (2022-05-16)
+## [5.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.8...@sbercloud/uikit-react-button@5.0.9) (2022-05-16)
 
 
 ### Bug Fixes
 
-* safe dependencies update ([cb66b4c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/cb66b4c7dd7666e4c0d3721a0b9a6953ab4885e7))
+* safe dependencies update ([cb66b4c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cb66b4c7dd7666e4c0d3721a0b9a6953ab4885e7))
 
 
 
 
 
-## [5.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.7...@sbercloud/uikit-react-button@5.0.8) (2022-05-05)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [5.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.6...@sbercloud/uikit-react-button@5.0.7) (2022-04-26)
+## [5.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.7...@sbercloud/uikit-react-button@5.0.8) (2022-05-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -30,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [5.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.5...@sbercloud/uikit-react-button@5.0.6) (2022-04-22)
+## [5.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.6...@sbercloud/uikit-react-button@5.0.7) (2022-04-26)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -38,26 +30,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [5.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.4...@sbercloud/uikit-react-button@5.0.5) (2022-04-21)
+## [5.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.5...@sbercloud/uikit-react-button@5.0.6) (2022-04-22)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+## [5.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.4...@sbercloud/uikit-react-button@5.0.5) (2022-04-21)
 
 
 ### Bug Fixes
 
-* changed indent from text to icon on size S ([ba56c5b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/ba56c5bd299292a165b53af45a2317f4283d113a))
+* changed indent from text to icon on size S ([ba56c5b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ba56c5bd299292a165b53af45a2317f4283d113a))
 
 
 
 
 
-## [5.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.3...@sbercloud/uikit-react-button@5.0.4) (2022-04-18)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [5.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.2...@sbercloud/uikit-react-button@5.0.3) (2022-04-13)
+## [5.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.3...@sbercloud/uikit-react-button@5.0.4) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -65,7 +57,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [5.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.1...@sbercloud/uikit-react-button@5.0.2) (2022-04-13)
+## [5.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.2...@sbercloud/uikit-react-button@5.0.3) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -73,7 +65,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [5.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@5.0.0...@sbercloud/uikit-react-button@5.0.1) (2022-04-11)
+## [5.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.1...@sbercloud/uikit-react-button@5.0.2) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -81,12 +73,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [5.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.9...@sbercloud/uikit-react-button@5.0.0) (2022-04-07)
+## [5.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.0...@sbercloud/uikit-react-button@5.0.1) (2022-04-11)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+# [5.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.9...@sbercloud/uikit-react-button@5.0.0) (2022-04-07)
 
 
 ### Features
 
-* removes ButtonToolbar ([AICE-5374](https://jira.sbercloud.tech/browse/AICE-5374)) ([e1db60a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/e1db60a1c176077d5734079df3a18e1edc12a48c))
+* removes ButtonToolbar ([AICE-5374](https://jira.sbercloud.tech/browse/AICE-5374)) ([e1db60a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e1db60a1c176077d5734079df3a18e1edc12a48c))
 
 
 ### BREAKING CHANGES
@@ -97,7 +97,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [4.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.8...@sbercloud/uikit-react-button@4.2.9) (2022-04-04)
+## [4.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.8...@sbercloud/uikit-react-button@4.2.9) (2022-04-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -105,7 +105,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [4.2.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.7...@sbercloud/uikit-react-button@4.2.8) (2022-04-01)
+## [4.2.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.7...@sbercloud/uikit-react-button@4.2.8) (2022-04-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -113,83 +113,83 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [4.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.6...@sbercloud/uikit-react-button@4.2.7) (2022-03-30)
+## [4.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.6...@sbercloud/uikit-react-button@4.2.7) (2022-03-30)
 
 
 ### Bug Fixes
 
-* add tooltip data-test-id ([ff0df3c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/ff0df3c0d5e667bd7edd6df470234be34acbb85e))
+* add tooltip data-test-id ([ff0df3c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ff0df3c0d5e667bd7edd6df470234be34acbb85e))
 
 
 
 
 
-## [4.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.5...@sbercloud/uikit-react-button@4.2.6) (2022-03-29)
-
-
-### Bug Fixes
-
-* use `LOADING_WHEEL` animation instead of infinite rotation ([0e642fe](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/0e642feb32214f90bc27d3a8cbb52de0f45fc6ee))
-
-
-
-
-
-## [4.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.4...@sbercloud/uikit-react-button@4.2.5) (2022-03-25)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [4.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.3...@sbercloud/uikit-react-button@4.2.4) (2022-03-23)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [4.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.2...@sbercloud/uikit-react-button@4.2.3) (2022-03-23)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [4.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.1...@sbercloud/uikit-react-button@4.2.2) (2022-03-23)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [4.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.2.0...@sbercloud/uikit-react-button@4.2.1) (2022-03-22)
+## [4.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.5...@sbercloud/uikit-react-button@4.2.6) (2022-03-29)
 
 
 ### Bug Fixes
 
-* default button type ([1f1a26b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/1f1a26bb387120d625fc98a476c3ed8aeb7fdad5))
+* use `LOADING_WHEEL` animation instead of infinite rotation ([0e642fe](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0e642feb32214f90bc27d3a8cbb52de0f45fc6ee))
 
 
 
 
 
-# [4.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.1.4...@sbercloud/uikit-react-button@4.2.0) (2022-03-22)
+## [4.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.4...@sbercloud/uikit-react-button@4.2.5) (2022-03-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+## [4.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.3...@sbercloud/uikit-react-button@4.2.4) (2022-03-23)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+## [4.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.2...@sbercloud/uikit-react-button@4.2.3) (2022-03-23)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+## [4.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.1...@sbercloud/uikit-react-button@4.2.2) (2022-03-23)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+## [4.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.2.0...@sbercloud/uikit-react-button@4.2.1) (2022-03-22)
+
+
+### Bug Fixes
+
+* default button type ([1f1a26b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1f1a26bb387120d625fc98a476c3ed8aeb7fdad5))
+
+
+
+
+
+# [4.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.1.4...@sbercloud/uikit-react-button@4.2.0) (2022-03-22)
 
 
 ### Features
 
-* added new EMERALD_GREEN, EMERALD_GREEN_ALPHA colors ([43eabcc](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/43eabcc959ee1444dd353ef22d846d95035e97a4))
+* added new EMERALD_GREEN, EMERALD_GREEN_ALPHA colors ([43eabcc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/43eabcc959ee1444dd353ef22d846d95035e97a4))
 
 
 
 
 
-## [4.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button@4.1.3...@sbercloud/uikit-react-button@4.1.4) (2022-03-22)
+## [4.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@4.1.3...@sbercloud/uikit-react-button@4.1.4) (2022-03-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -197,26 +197,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [4.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@4.1.2...@sbercloud/uikit-react-button@4.1.3) (2022-03-09)
+## [4.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@4.1.2...@sbercloud/uikit-react-button@4.1.3) (2022-03-09)
 
 
 ### Bug Fixes
 
-* `BaseButton` is wrapped with `styled` ([d6fd468](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d6fd468be614b817f019ff68056ed11335f82b7b))
+* `BaseButton` is wrapped with `styled` ([d6fd468](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/d6fd468be614b817f019ff68056ed11335f82b7b))
 
 
 
 
 
-## [4.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@4.1.1...@sbercloud/uikit-react-button@4.1.2) (2022-03-04)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [4.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@4.1.0...@sbercloud/uikit-react-button@4.1.1) (2022-03-04)
+## [4.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@4.1.1...@sbercloud/uikit-react-button@4.1.2) (2022-03-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -224,23 +216,31 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [4.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@4.0.0...@sbercloud/uikit-react-button@4.1.0) (2022-03-02)
+## [4.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@4.1.0...@sbercloud/uikit-react-button@4.1.1) (2022-03-04)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+# [4.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@4.0.0...@sbercloud/uikit-react-button@4.1.0) (2022-03-02)
 
 
 ### Features
 
-* ([AICE-4932](https://jira.sbercloud.tech/browse/AICE-4932)) add reset default styles ([f0195ff](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/f0195ffa2e281fc6b47247fc5fd8a39e9c293fb2))
+* ([AICE-4932](https://jira.sbercloud.tech/browse/AICE-4932)) add reset default styles ([f0195ff](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/f0195ffa2e281fc6b47247fc5fd8a39e9c293fb2))
 
 
 
 
 
-# [4.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.11...@sbercloud/uikit-react-button@4.0.0) (2022-02-25)
+# [4.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.11...@sbercloud/uikit-react-button@4.0.0) (2022-02-25)
 
 
 ### Bug Fixes
 
-* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors ([9d7e7e8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9d7e7e88764ad5967433c125e9e896e0952308a4))
+* refactor SUNNY_YELLOW, BERRY_RED, GRACE, GRADIENT colors ([9d7e7e8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/9d7e7e88764ad5967433c125e9e896e0952308a4))
 
 
 ### BREAKING CHANGES
@@ -251,41 +251,41 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [3.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.10...@sbercloud/uikit-react-button@3.0.11) (2022-02-22)
+## [3.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.10...@sbercloud/uikit-react-button@3.0.11) (2022-02-22)
 
 
 ### Bug Fixes
 
-* changed bg color, added padding ([936640e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/936640e3020b37b739991a0713bd47dfb6c159d7))
+* changed bg color, added padding ([936640e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/936640e3020b37b739991a0713bd47dfb6c159d7))
 
 
 
 
 
-## [3.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.9...@sbercloud/uikit-react-button@3.0.10) (2022-02-16)
-
-
-### Bug Fixes
-
-* first stable version of typography ([9fce874](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9fce8747d03be516626d638ddd34a59a4ce9433a))
-* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
-
-
-
-
-
-## [3.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.8...@sbercloud/uikit-react-button@3.0.9) (2022-02-14)
+## [3.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.9...@sbercloud/uikit-react-button@3.0.10) (2022-02-16)
 
 
 ### Bug Fixes
 
-* ButtonRound css vars names ([CP-4585](https://jira.sbercloud.tech/browse/CP-4585)) ([88a0dde](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/88a0dded5c535e8926c790c622da4a0a07965035))
+* first stable version of typography ([9fce874](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/9fce8747d03be516626d638ddd34a59a4ce9433a))
+* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
 
 
 
 
 
-## [3.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.7...@sbercloud/uikit-react-button@3.0.8) (2022-02-07)
+## [3.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.8...@sbercloud/uikit-react-button@3.0.9) (2022-02-14)
+
+
+### Bug Fixes
+
+* ButtonRound css vars names ([CP-4585](https://jira.sbercloud.tech/browse/CP-4585)) ([88a0dde](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/88a0dded5c535e8926c790c622da4a0a07965035))
+
+
+
+
+
+## [3.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.7...@sbercloud/uikit-react-button@3.0.8) (2022-02-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -293,40 +293,40 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [3.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.6...@sbercloud/uikit-react-button@3.0.7) (2022-01-25)
+## [3.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.6...@sbercloud/uikit-react-button@3.0.7) (2022-01-25)
 
 
 ### Bug Fixes
 
-* replaced `CopiedInterfaceSVG` with `CheckInterfaceSVG` in `CopyButton` ([739b8a7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/739b8a7265f39dbe1df82a55a701e2c49769232b))
+* replaced `CopiedInterfaceSVG` with `CheckInterfaceSVG` in `CopyButton` ([739b8a7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/739b8a7265f39dbe1df82a55a701e2c49769232b))
 
 
 
 
 
-## [3.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.5...@sbercloud/uikit-react-button@3.0.6) (2022-01-21)
-
-
-### Bug Fixes
-
-* updates textProvider creation to explicitly pass package name ([2a6dc7f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2a6dc7fd7e08379e14c52ae3396c945f49998d5e))
-
-
-
-
-
-## [3.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.4...@sbercloud/uikit-react-button@3.0.5) (2022-01-21)
+## [3.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.5...@sbercloud/uikit-react-button@3.0.6) (2022-01-21)
 
 
 ### Bug Fixes
 
-* changes textProvider creation ([82e44cb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e44cbb6b9e202f7414679e7888b4c8a10db594))
+* updates textProvider creation to explicitly pass package name ([2a6dc7f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/2a6dc7fd7e08379e14c52ae3396c945f49998d5e))
 
 
 
 
 
-## [3.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.3...@sbercloud/uikit-react-button@3.0.4) (2022-01-20)
+## [3.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.4...@sbercloud/uikit-react-button@3.0.5) (2022-01-21)
+
+
+### Bug Fixes
+
+* changes textProvider creation ([82e44cb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/82e44cbb6b9e202f7414679e7888b4c8a10db594))
+
+
+
+
+
+## [3.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.3...@sbercloud/uikit-react-button@3.0.4) (2022-01-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -334,29 +334,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [3.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.2...@sbercloud/uikit-react-button@3.0.3) (2022-01-12)
+## [3.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.2...@sbercloud/uikit-react-button@3.0.3) (2022-01-12)
 
 
 ### Bug Fixes
 
-* optional tooltip for buttons ([30beab7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/30beab793d581ec96aefc1290847554f06c2a67c))
+* optional tooltip for buttons ([30beab7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/30beab793d581ec96aefc1290847554f06c2a67c))
 
 
 
 
 
-## [3.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.1...@sbercloud/uikit-react-button@3.0.2) (2021-12-30)
+## [3.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.1...@sbercloud/uikit-react-button@3.0.2) (2021-12-30)
 
 
 ### Bug Fixes
 
-* not inherit css font property ([CP-3664](https://jira.sbercloud.tech/browse/CP-3664)) ([409b855](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/409b85572f704b27f9e30cdd5fb6e7aefed6d99d))
+* not inherit css font property ([CP-3664](https://jira.sbercloud.tech/browse/CP-3664)) ([409b855](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/409b85572f704b27f9e30cdd5fb6e7aefed6d99d))
 
 
 
 
 
-## [3.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@3.0.0...@sbercloud/uikit-react-button@3.0.1) (2021-12-22)
+## [3.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@3.0.0...@sbercloud/uikit-react-button@3.0.1) (2021-12-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -364,12 +364,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.7...@sbercloud/uikit-react-button@3.0.0) (2021-12-17)
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.2.7...@sbercloud/uikit-react-button@3.0.0) (2021-12-17)
 
 
 ### Features
 
-* button as link behavior, ref prop is no longer valid ([CP-2434](https://jira.sbercloud.tech/browse/CP-2434)) ([e09128b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/e09128b1e8cf0f50d7e7f70b721f34d7cead6af8))
+* button as link behavior, ref prop is no longer valid ([CP-2434](https://jira.sbercloud.tech/browse/CP-2434)) ([e09128b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/e09128b1e8cf0f50d7e7f70b721f34d7cead6af8))
 
 
 ### BREAKING CHANGES
@@ -380,7 +380,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.6...@sbercloud/uikit-react-button@2.2.7) (2021-12-02)
+## [2.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.2.6...@sbercloud/uikit-react-button@2.2.7) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -388,18 +388,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.5...@sbercloud/uikit-react-button@2.2.6) (2021-12-01)
+## [2.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.2.5...@sbercloud/uikit-react-button@2.2.6) (2021-12-01)
 
 
 ### Bug Fixes
 
-* updated copy-to-clipboard usage ([b70fdb0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b70fdb0074bf1eff2a4a43936a94579540e0d2b9))
+* updated copy-to-clipboard usage ([b70fdb0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/b70fdb0074bf1eff2a4a43936a94579540e0d2b9))
 
 
 
 
 
-## [2.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.4...@sbercloud/uikit-react-button@2.2.5) (2021-11-29)
+## [2.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.2.4...@sbercloud/uikit-react-button@2.2.5) (2021-11-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -407,37 +407,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.3...@sbercloud/uikit-react-button@2.2.4) (2021-11-17)
+## [2.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.2.3...@sbercloud/uikit-react-button@2.2.4) (2021-11-17)
 
 
 ### Bug Fixes
 
-* repository.directory field has been added ([82e2345](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e2345880c4011971b193ebd87eedbb1c804ea6))
+* repository.directory field has been added ([82e2345](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/82e2345880c4011971b193ebd87eedbb1c804ea6))
 
 
 
 
 
-## [2.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.2...@sbercloud/uikit-react-button@2.2.3) (2021-11-12)
+## [2.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.2.2...@sbercloud/uikit-react-button@2.2.3) (2021-11-12)
 
 
 ### Bug Fixes
 
-* ButtonOverlay does not require tooltip prop to be passed ([cc8c822](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/cc8c8229708ad2bec74e44083e7060169254d5f6))
+* ButtonOverlay does not require tooltip prop to be passed ([cc8c822](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/cc8c8229708ad2bec74e44083e7060169254d5f6))
 
 
 
 
 
-## [2.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.1...@sbercloud/uikit-react-button@2.2.2) (2021-11-11)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [2.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.2.0...@sbercloud/uikit-react-button@2.2.1) (2021-11-11)
+## [2.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.2.1...@sbercloud/uikit-react-button@2.2.2) (2021-11-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -445,26 +437,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.1.6...@sbercloud/uikit-react-button@2.2.0) (2021-11-11)
+## [2.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.2.0...@sbercloud/uikit-react-button@2.2.1) (2021-11-11)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+# [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.1.6...@sbercloud/uikit-react-button@2.2.0) (2021-11-11)
 
 
 ### Features
 
-* RefreshButton optional custom tooltip ([0bb5ada](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/0bb5ada3dfd9b3a8d61165258a5462aa227b578b))
+* RefreshButton optional custom tooltip ([0bb5ada](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/0bb5ada3dfd9b3a8d61165258a5462aa227b578b))
 
 
 
 
 
-## [2.1.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.1.5...@sbercloud/uikit-react-button@2.1.6) (2021-11-09)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [2.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.1.4...@sbercloud/uikit-react-button@2.1.5) (2021-11-02)
+## [2.1.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.1.5...@sbercloud/uikit-react-button@2.1.6) (2021-11-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -472,7 +464,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.1.3...@sbercloud/uikit-react-button@2.1.4) (2021-10-29)
+## [2.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.1.4...@sbercloud/uikit-react-button@2.1.5) (2021-11-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -480,7 +472,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.1.2...@sbercloud/uikit-react-button@2.1.3) (2021-10-29)
+## [2.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.1.3...@sbercloud/uikit-react-button@2.1.4) (2021-10-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -488,18 +480,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.1.1...@sbercloud/uikit-react-button@2.1.2) (2021-10-27)
+## [2.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.1.2...@sbercloud/uikit-react-button@2.1.3) (2021-10-29)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+## [2.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.1.1...@sbercloud/uikit-react-button@2.1.2) (2021-10-27)
 
 
 ### Bug Fixes
 
-* button min width has been set to max-content ([3862d54](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3862d54fee86c6e02fe4dfd5598691856ea1f850))
+* button min width has been set to max-content ([3862d54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/3862d54fee86c6e02fe4dfd5598691856ea1f850))
 
 
 
 
 
-## [2.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.1.0...@sbercloud/uikit-react-button@2.1.1) (2021-10-18)
+## [2.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.1.0...@sbercloud/uikit-react-button@2.1.1) (2021-10-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -507,40 +507,40 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.5...@sbercloud/uikit-react-button@2.1.0) (2021-10-13)
+# [2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.0.5...@sbercloud/uikit-react-button@2.1.0) (2021-10-13)
 
 
 ### Features
 
-* forwarding data-any-attr ([AICDC-4028](https://jira.sbercloud.tech/browse/AICDC-4028)) ([eba8656](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/eba865600f55eabf5719c273dd8d9f5e3a656758))
+* forwarding data-any-attr ([AICDC-4028](https://jira.sbercloud.tech/browse/AICDC-4028)) ([eba8656](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/eba865600f55eabf5719c273dd8d9f5e3a656758))
 
 
 
 
 
-## [2.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.4...@sbercloud/uikit-react-button@2.0.5) (2021-10-13)
-
-
-### Bug Fixes
-
-* possibility to use tooltip only in disabled state ([9afc6cb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9afc6cb8a1a1a4483928d8af93e5c834f1ed994b))
-
-
-
-
-
-## [2.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.3...@sbercloud/uikit-react-button@2.0.4) (2021-10-11)
+## [2.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.0.4...@sbercloud/uikit-react-button@2.0.5) (2021-10-13)
 
 
 ### Bug Fixes
 
-* republish all packages ([b7ce3da](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b7ce3da1966f2f099d5d47aa13d62058cfa6fc98))
+* possibility to use tooltip only in disabled state ([9afc6cb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/9afc6cb8a1a1a4483928d8af93e5c834f1ed994b))
 
 
 
 
 
-## [2.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.2...@sbercloud/uikit-react-button@2.0.3) (2021-10-08)
+## [2.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.0.3...@sbercloud/uikit-react-button@2.0.4) (2021-10-11)
+
+
+### Bug Fixes
+
+* republish all packages ([b7ce3da](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/b7ce3da1966f2f099d5d47aa13d62058cfa6fc98))
+
+
+
+
+
+## [2.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.0.2...@sbercloud/uikit-react-button@2.0.3) (2021-10-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -548,34 +548,34 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.1...@sbercloud/uikit-react-button@2.0.2) (2021-10-07)
+## [2.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.0.1...@sbercloud/uikit-react-button@2.0.2) (2021-10-07)
 
 
 ### Bug Fixes
 
-* adaptation for node 16 ([8f15e60](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8f15e60270884bd517cfea8079fb424b8d31fe92))
+* adaptation for node 16 ([8f15e60](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/8f15e60270884bd517cfea8079fb424b8d31fe92))
 
 
 
 
 
-## [2.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@2.0.0...@sbercloud/uikit-react-button@2.0.1) (2021-09-30)
+## [2.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@2.0.0...@sbercloud/uikit-react-button@2.0.1) (2021-09-30)
 
 
 ### Bug Fixes
 
-* improved type declarations, linaria core/react peerDeps version is ^3.0.0-beta.13 ([942799a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/942799aa59ae420fb90d00b0d379f30af3d01394))
+* improved type declarations, linaria core/react peerDeps version is ^3.0.0-beta.13 ([942799a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/942799aa59ae420fb90d00b0d379f30af3d01394))
 
 
 
 
 
-# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.4.2...@sbercloud/uikit-react-button@2.0.0) (2021-09-29)
+# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.4.2...@sbercloud/uikit-react-button@2.0.0) (2021-09-29)
 
 
 ### Features
 
-* utils first stable version ([AICD-1813](https://jira.sbercloud.tech/browse/AICD-1813)) ([ed13c42](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ed13c421ac564f6a5b155780ce473c78eb94aacc))
+* utils first stable version ([AICD-1813](https://jira.sbercloud.tech/browse/AICD-1813)) ([ed13c42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/ed13c421ac564f6a5b155780ce473c78eb94aacc))
 
 ### BREAKING CHANGE
 
@@ -584,7 +584,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.4.1...@sbercloud/uikit-react-button@1.4.2) (2021-09-22)
+## [1.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.4.1...@sbercloud/uikit-react-button@1.4.2) (2021-09-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -592,7 +592,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.4.0...@sbercloud/uikit-react-button@1.4.1) (2021-09-21)
+## [1.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.4.0...@sbercloud/uikit-react-button@1.4.1) (2021-09-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -600,27 +600,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [1.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.3.2...@sbercloud/uikit-react-button@1.4.0) (2021-09-17)
+# [1.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.3.2...@sbercloud/uikit-react-button@1.4.0) (2021-09-17)
 
 
 ### Features
 
-* [AICD-2072](https://jira.sbercloud.tech/browse/AICD-2072) - change ButtonGhost text color on Green theme ([e825ad9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/e825ad9972e958605e76840fc65b9733a99785e5))
-* [AICD-2072](https://jira.sbercloud.tech/browse/AICD-2072) - change ButtonIconTransparent icon color ([8c21bc2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8c21bc23879df0fefb0d9c86485c2a37f176d635))
+* [AICD-2072](https://jira.sbercloud.tech/browse/AICD-2072) - change ButtonGhost text color on Green theme ([e825ad9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/e825ad9972e958605e76840fc65b9733a99785e5))
+* [AICD-2072](https://jira.sbercloud.tech/browse/AICD-2072) - change ButtonIconTransparent icon color ([8c21bc2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/8c21bc23879df0fefb0d9c86485c2a37f176d635))
 
 
 
 
 
-## [1.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.3.1...@sbercloud/uikit-react-button@1.3.2) (2021-09-17)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [1.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.3.0...@sbercloud/uikit-react-button@1.3.1) (2021-09-14)
+## [1.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.3.1...@sbercloud/uikit-react-button@1.3.2) (2021-09-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -628,18 +620,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.2.1...@sbercloud/uikit-react-button@1.3.0) (2021-09-08)
+## [1.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.3.0...@sbercloud/uikit-react-button@1.3.1) (2021-09-14)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+# [1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.2.1...@sbercloud/uikit-react-button@1.3.0) (2021-09-08)
 
 
 ### Features
 
-* extracting copy-to-clipboard functionality into utils ([3a9b50f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3a9b50f8384279beb0cc27c79441e346f697bee1))
+* extracting copy-to-clipboard functionality into utils ([3a9b50f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/3a9b50f8384279beb0cc27c79441e346f697bee1))
 
 
 
 
 
-## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.2.0...@sbercloud/uikit-react-button@1.2.1) (2021-09-07)
+## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.2.0...@sbercloud/uikit-react-button@1.2.1) (2021-09-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -647,18 +647,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.1.1...@sbercloud/uikit-react-button@1.2.0) (2021-09-06)
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.1.1...@sbercloud/uikit-react-button@1.2.0) (2021-09-06)
 
 
 ### Features
 
-* tooltip first stable ([589643d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/589643d01335a76bce127098e1f945230f0d9f01))
+* tooltip first stable ([589643d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/589643d01335a76bce127098e1f945230f0d9f01))
 
 
 
 
 
-## [1.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.1.0...@sbercloud/uikit-react-button@1.1.1) (2021-09-03)
+## [1.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.1.0...@sbercloud/uikit-react-button@1.1.1) (2021-09-03)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -666,18 +666,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.0.4...@sbercloud/uikit-react-button@1.1.0) (2021-08-27)
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.0.4...@sbercloud/uikit-react-button@1.1.0) (2021-08-27)
 
 
 ### Features
 
-* refresh icon was added to the ButtonTableIcon ([64c7073](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/64c7073b5c97b4f9f53298a21d33381636a37c17))
+* refresh icon was added to the ButtonTableIcon ([64c7073](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/64c7073b5c97b4f9f53298a21d33381636a37c17))
 
 
 
 
 
-## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.0.3...@sbercloud/uikit-react-button@1.0.4) (2021-08-25)
+## [1.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.0.3...@sbercloud/uikit-react-button@1.0.4) (2021-08-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -685,50 +685,50 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.0.2...@sbercloud/uikit-react-button@1.0.3) (2021-08-23)
+## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.0.2...@sbercloud/uikit-react-button@1.0.3) (2021-08-23)
 
 
 ### Bug Fixes
 
-* button with tooltip wrapper ([AICE-2780](https://jira.sbercloud.tech/browse/AICE-2780)) ([dbf0026](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/dbf002674ba491e858dd8bc4acb12078d341e789))
+* button with tooltip wrapper ([AICE-2780](https://jira.sbercloud.tech/browse/AICE-2780)) ([dbf0026](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/dbf002674ba491e858dd8bc4acb12078d341e789))
 
 
 
 
 
-## [1.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-button@1.0.1...@sbercloud/uikit-react-button@1.0.2) (2021-08-20)
-
-
-### Bug Fixes
-
-* correct links to changed repository ([b1e05f0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b1e05f081150fb34fff897ebde16c265c953e2b4))
-
-
-
-
-
-## [1.0.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@1.0.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@1.0.1) (2021-08-20)
+## [1.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-button@1.0.1...@sbercloud/uikit-react-button@1.0.2) (2021-08-20)
 
 
 ### Bug Fixes
 
-* change button icon type ([AICE-2780](https://jira.sbercloud.tech/browse/AICE-2780)) ([941865e](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/941865e0d952518c65b71f4b8b1bdb15ce31052d))
+* correct links to changed repository ([b1e05f0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/b1e05f081150fb34fff897ebde16c265c953e2b4))
+
+
+
+
+
+## [1.0.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@1.0.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@1.0.1) (2021-08-20)
+
+
+### Bug Fixes
+
+* change button icon type ([AICE-2780](https://jira.sbercloud.tech/browse/AICE-2780)) ([941865e](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/941865e0d952518c65b71f4b8b1bdb15ce31052d))
 
 
 ### Reverts
 
-* Revert "Version bump" ([8818963](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8818963a899032e3bf51613430dba33f10947752))
+* Revert "Version bump" ([8818963](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/8818963a899032e3bf51613430dba33f10947752))
 
 
 
 
 
-# [1.0.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.11.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@1.0.0) (2021-08-19)
+# [1.0.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.11.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@1.0.0) (2021-08-19)
 
 
 ### Features
 
-* First stable version ([1383a53](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/1383a53e463723fde1148ffeb41e8b9669d71bad))
+* First stable version ([1383a53](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/1383a53e463723fde1148ffeb41e8b9669d71bad))
 
 
 ### BREAKING CHANGES
@@ -739,7 +739,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.11.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.11.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.11.2) (2021-08-19)
+## [0.11.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.11.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.11.2) (2021-08-19)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -747,7 +747,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.11.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.11.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.11.1) (2021-08-12)
+## [0.11.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.11.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.11.1) (2021-08-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -755,65 +755,65 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.11.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.10.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.11.0) (2021-08-12)
+# [0.11.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.10.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.11.0) (2021-08-12)
 
 
 ### Features
 
-* data-test attributes ([633d125](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/633d1255d4a7c6988ea8b49a1e54a384b1671592))
+* data-test attributes ([633d125](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/633d1255d4a7c6988ea8b49a1e54a384b1671592))
 
 
 
 
 
-# [0.10.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.9.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.10.0) (2021-08-10)
-
-
-### Features
-
-* some new button variants with new DS ([eec9edb](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/eec9edb7b2dd9b19cd3b4f4e903e1aa877e43b11))
-* storybook story badges ([d975c74](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/d975c7452603527e37ddcbc5d793c40c0fa18cd5))
-
-
-
-
-
-# [0.9.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.9.0) (2021-07-26)
+# [0.10.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.9.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.10.0) (2021-08-10)
 
 
 ### Features
 
-* button icon ([22d9559](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/22d9559d586e0f9a04279994d1fd2aa0f872d6ab))
-* button icon transparent ([3a61957](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/3a61957744f47d44b55fa4ae9c9674407df52566))
-* pre release version ([7c26847](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/7c268470dc03346c42c68e711bda2e42064d1896))
+* some new button variants with new DS ([eec9edb](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/eec9edb7b2dd9b19cd3b4f4e903e1aa877e43b11))
+* storybook story badges ([d975c74](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/d975c7452603527e37ddcbc5d793c40c0fa18cd5))
 
 
 
 
 
-# [0.8.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.8.0) (2021-07-22)
-
-
-### Features
-
-* pre release version ([7c26847](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/7c268470dc03346c42c68e711bda2e42064d1896))
-
-
-
-
-
-# [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.3&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.7.0) (2021-07-21)
+# [0.9.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.9.0) (2021-07-26)
 
 
 ### Features
 
-* [AICDC-2176](https://jira.sbercloud.tech/browse/AICDC-2176): added alarm button variant, use alarm button in modal ([fb7aa16](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/fb7aa163e827d001fe7b2d8161ba3f9878337f61))
+* button icon ([22d9559](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/22d9559d586e0f9a04279994d1fd2aa0f872d6ab))
+* button icon transparent ([3a61957](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/3a61957744f47d44b55fa4ae9c9674407df52566))
+* pre release version ([7c26847](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/7c268470dc03346c42c68e711bda2e42064d1896))
 
 
 
 
 
-## [0.6.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.3) (2021-07-20)
+# [0.8.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.7.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.8.0) (2021-07-22)
+
+
+### Features
+
+* pre release version ([7c26847](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/7c268470dc03346c42c68e711bda2e42064d1896))
+
+
+
+
+
+# [0.7.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.3&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.7.0) (2021-07-21)
+
+
+### Features
+
+* [AICDC-2176](https://jira.sbercloud.tech/browse/AICDC-2176): added alarm button variant, use alarm button in modal ([fb7aa16](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/fb7aa163e827d001fe7b2d8161ba3f9878337f61))
+
+
+
+
+
+## [0.6.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.3) (2021-07-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -821,7 +821,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.2) (2021-07-16)
+## [0.6.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.2) (2021-07-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -829,52 +829,52 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.1) (2021-07-13)
+## [0.6.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.6.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.1) (2021-07-13)
 
 
 ### Bug Fixes
 
-* cleanup package json ([cff8b75](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/cff8b754fa7bd8ee4b41eca61711f125b1767817))
-* Style extraction class names fix & cjs auto import ([b3cc2ef](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/b3cc2effbe8d872ba6139c7616a706888aea112a))
+* cleanup package json ([cff8b75](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/cff8b754fa7bd8ee4b41eca61711f125b1767817))
+* Style extraction class names fix & cjs auto import ([b3cc2ef](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/b3cc2effbe8d872ba6139c7616a706888aea112a))
 
 
 
 
 
-# [0.6.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.4.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.0) (2021-07-12)
-
-
-### Features
-
-* Extract styles at build time ([6a0ef3d](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/6a0ef3dad916c46347ca4d5adbd1fa97563e5911))
-
-
-
-
-
-# [0.5.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.4.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.5.0) (2021-07-12)
+# [0.6.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.4.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.6.0) (2021-07-12)
 
 
 ### Features
 
-* Extract styles at build time ([064a959](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/064a959b3c4aa59431767200c28a24b74dbf41cb))
+* Extract styles at build time ([6a0ef3d](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/6a0ef3dad916c46347ca4d5adbd1fa97563e5911))
 
 
 
 
 
-# [0.4.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.14&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.4.0) (2021-07-09)
+# [0.5.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.4.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.5.0) (2021-07-12)
 
 
 ### Features
 
-* Tooltip Private component alpha version ([57675f7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/57675f7583d1553e16f5276c5d1abea999805179))
+* Extract styles at build time ([064a959](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/064a959b3c4aa59431767200c28a24b74dbf41cb))
 
 
 
 
 
-## [0.3.14](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.13&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.14) (2021-07-08)
+# [0.4.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.14&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.4.0) (2021-07-09)
+
+
+### Features
+
+* Tooltip Private component alpha version ([57675f7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/57675f7583d1553e16f5276c5d1abea999805179))
+
+
+
+
+
+## [0.3.14](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.13&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.14) (2021-07-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -882,27 +882,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.13](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.12&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.13) (2021-07-07)
+## [0.3.13](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.12&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.13) (2021-07-07)
 
 
 ### Bug Fixes
 
-* Button - update icon package ([f01f637](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/f01f637b2ecee87be855dd526c3ff8d8685e02b2))
-* TableButton - refactoring styles | [AICDC-2835](https://jira.sbercloud.tech/browse/AICDC-2835) ([9c6e45c](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/9c6e45cfd3980fced58dfe032364af1471a56559))
+* Button - update icon package ([f01f637](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/f01f637b2ecee87be855dd526c3ff8d8685e02b2))
+* TableButton - refactoring styles | [AICDC-2835](https://jira.sbercloud.tech/browse/AICDC-2835) ([9c6e45c](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/9c6e45cfd3980fced58dfe032364af1471a56559))
 
 
 
 
 
-## [0.3.12](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.11&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.12) (2021-07-04)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [0.3.11](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.10&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.11) (2021-06-29)
+## [0.3.12](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.11&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.12) (2021-07-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -910,7 +902,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.10](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.9&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.10) (2021-06-25)
+## [0.3.11](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.10&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.11) (2021-06-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -918,26 +910,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.9](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.8&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.9) (2021-06-25)
+## [0.3.10](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.9&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.10) (2021-06-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+## [0.3.9](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.8&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.9) (2021-06-25)
 
 
 ### Bug Fixes
 
-* sideEffects flag in package.json was set for correct tree shaking ([8d72148](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8d721482e140bb8ea41d62d7bc90769c642b7f0f))
+* sideEffects flag in package.json was set for correct tree shaking ([8d72148](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/8d721482e140bb8ea41d62d7bc90769c642b7f0f))
 
 
 
 
 
-## [0.3.8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.7&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.8) (2021-06-24)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [0.3.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.6&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.7) (2021-06-23)
+## [0.3.8](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.7&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.8) (2021-06-24)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -945,7 +937,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.5&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.6) (2021-06-22)
+## [0.3.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.6&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.7) (2021-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -953,7 +945,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.4&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.5) (2021-06-21)
+## [0.3.6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.5&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.6) (2021-06-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -961,7 +953,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.3&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.4) (2021-06-21)
+## [0.3.5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.4&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.5) (2021-06-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -969,7 +961,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.3) (2021-06-18)
+## [0.3.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.3&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.4) (2021-06-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -977,7 +969,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.2) (2021-06-18)
+## [0.3.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.3) (2021-06-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -985,7 +977,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.1) (2021-06-16)
+## [0.3.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.2) (2021-06-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -993,29 +985,37 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.7&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.0) (2021-06-16)
+## [0.3.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.3.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.1) (2021-06-16)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+# [0.3.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.7&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.3.0) (2021-06-16)
 
 
 ### Features
 
-* add IconButton popup variant | [AICDC-2747](https://jira.sbercloud.tech/browse/AICDC-2747) ([aecccf3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/aecccf30ebefcf9d7069d9d4fbfa98deb57a6bb3))
+* add IconButton popup variant | [AICDC-2747](https://jira.sbercloud.tech/browse/AICDC-2747) ([aecccf3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/aecccf30ebefcf9d7069d9d4fbfa98deb57a6bb3))
 
 
 
 
 
-## [0.2.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.6&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.7) (2021-06-16)
+## [0.2.7](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.6&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.7) (2021-06-16)
 
 
 ### Reverts
 
-* delete types property in package.json ([cf8a566](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/cf8a56610249235846b5b3b6317798bbfa2b7e1a))
+* delete types property in package.json ([cf8a566](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/cf8a56610249235846b5b3b6317798bbfa2b7e1a))
 
 
 
 
 
-## [0.2.6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.5&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.6) (2021-06-16)
+## [0.2.6](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.5&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.6) (2021-06-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -1023,18 +1023,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.4&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.5) (2021-06-15)
+## [0.2.5](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.4&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.5) (2021-06-15)
 
 
 ### Bug Fixes
 
-* delete path aliases, replace them to types in package.json file ([8adb5a0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/8adb5a028a5765f04ffea063569c76a6d264b46a))
+* delete path aliases, replace them to types in package.json file ([8adb5a0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/8adb5a028a5765f04ffea063569c76a6d264b46a))
 
 
 
 
 
-## [0.2.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.3&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.4) (2021-06-15)
+## [0.2.4](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.3&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.4) (2021-06-15)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -1042,26 +1042,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.3) (2021-06-15)
+## [0.2.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.3) (2021-06-15)
 
 
 ### Bug Fixes
 
-* add nowrap for Button ([2ae0fb2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/2ae0fb2711f264a81367b08e8ceab1ea27215fa0))
+* add nowrap for Button ([2ae0fb2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/2ae0fb2711f264a81367b08e8ceab1ea27215fa0))
 
 
 
 
 
-## [0.2.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.2) (2021-06-13)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [0.2.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.1) (2021-06-13)
+## [0.2.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.2) (2021-06-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -1069,26 +1061,26 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.1.3&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.0) (2021-06-11)
+## [0.2.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.2.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.1) (2021-06-13)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+# [0.2.0](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.1.3&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.2.0) (2021-06-11)
 
 
 ### Features
 
-* change storybook label ([63d16e3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/commits/63d16e3a786ce6196740e9933b88a29a2c4797c7))
+* change storybook label ([63d16e3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/commits/63d16e3a786ce6196740e9933b88a29a2c4797c7))
 
 
 
 
 
-## [0.1.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.1.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.1.3) (2021-06-09)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-button
-
-
-
-
-
-## [0.1.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.1.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.1.2) (2021-06-08)
+## [0.1.3](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.1.2&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.1.3) (2021-06-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -1096,7 +1088,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit2.0/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.1.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.1.1) (2021-06-07)
+## [0.1.2](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.1.1&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.1.2) (2021-06-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button
 
@@ -1104,29 +1096,37 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.1.0](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/compare/@sbercloud/uikit-react-button@0.0.1...@sbercloud/uikit-react-button@0.1.0) (2021-06-04)
+## [0.1.1](https://bitbucket.sbercloud.tech/projects/SBERCLOUD_UI/repos/uikit-product/compare/diff?targetBranch=refs/tags/@sbercloud/uikit-react-button@0.1.0&sourceBranch=refs/tags/@sbercloud/uikit-react-button@0.1.1) (2021-06-07)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-button
+
+
+
+
+
+# [0.1.0](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit-product/compare/@sbercloud/uikit-react-button@0.0.1...@sbercloud/uikit-react-button@0.1.0) (2021-06-04)
 
 
 ### Bug Fixes
 
-* init script contains latest version of theme package, readmes were updated ([50bf916](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/50bf9165beddd3b376bf092d515321942b14f8e5))
-* table-menu size | AICDC-2448 ([ce9db09](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/ce9db094f8fb5943a0d71e6aa2f97a8226d9abdd))
+* init script contains latest version of theme package, readmes were updated ([50bf916](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit-product/commits/50bf9165beddd3b376bf092d515321942b14f8e5))
+* table-menu size | AICDC-2448 ([ce9db09](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit-product/commits/ce9db094f8fb5943a0d71e6aa2f97a8226d9abdd))
 
 
 ### Features
 
-* more button has been extended by placement prop ([5744883](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/5744883ef43beb17ea7016084bb4bf8c7cd5141f))
+* more button has been extended by placement prop ([5744883](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit-product/commits/5744883ef43beb17ea7016084bb4bf8c7cd5141f))
 
 
 
 
 
-## [0.0.2](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/compare/@sbercloud/uikit-react-button@0.0.1...@sbercloud/uikit-react-button@0.0.2) (2021-06-04)
+## [0.0.2](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit-product/compare/@sbercloud/uikit-react-button@0.0.1...@sbercloud/uikit-react-button@0.0.2) (2021-06-04)
 
 
 ### Bug Fixes
 
-* table-menu size | AICDC-2448 ([2ab7d3e](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit2.0/commits/2ab7d3e9c2ea608147e491cc679f6238b00c4f21))
+* table-menu size | AICDC-2448 ([2ab7d3e](http://bitbucket.sbercloud.tech:7999/sbercloud_ui/uikit-product/commits/2ab7d3e9c2ea608147e491cc679f6238b00c4f21))
 
 
 

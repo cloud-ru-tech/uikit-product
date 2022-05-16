@@ -1,6 +1,6 @@
 import { components as ReactSelectComponents } from 'react-select';
 
-import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { StyledColorBox, StyledDropdown, arrowDownClassName } from './styled';
 

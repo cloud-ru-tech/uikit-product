@@ -3,7 +3,7 @@ import { useEffect } from '@storybook/addons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-theme';
+import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 
 import { BADGE } from '#storybookConstants';
 

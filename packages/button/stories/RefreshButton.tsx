@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
+import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 
 import { RefreshButton, RefreshButtonProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';

@@ -4,7 +4,7 @@ import {
   CommonButtonPropsWithOptionalTooltip,
   extractCommonButtonProps,
   withTooltip,
-} from '@sbercloud/uikit-react-button-private';
+} from '@sbercloud/uikit-product-button-private';
 
 import { Variant } from './constants';
 import * as S from './styled';

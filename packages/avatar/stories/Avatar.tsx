@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Divider } from '@sbercloud/uikit-react-divider';
+import { Divider } from '@sbercloud/uikit-product-divider';
 
 import { BADGE } from '#storybookConstants';
 

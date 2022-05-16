@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { Pagination } from '@sbercloud/uikit-react-pagination-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { Pagination } from '@sbercloud/uikit-product-pagination-private';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
 

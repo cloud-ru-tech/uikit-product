@@ -1,4 +1,4 @@
-# Sbercloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/badges/master/coverage.svg)](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commits/master)
+# Sbercloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg)](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commits/master)
 
 Sbercloud uikit - библиотека компонентов, в которой каждый компонент это отдельный npm-пакет, со своей версионностью и зависимостями.
 
@@ -10,13 +10,13 @@ Sbercloud uikit - библиотека компонентов, в которой
 
 # Installation
 
-1. Получить доступ к @sbercloud/uikit2.0
+1. Получить доступ к @sbercloud/uikit-product
 2. Создать `.npmrc` в корневой директории
    содержание `.npmrc`:
    `@sbercloud:registry=https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/`
 3. При использовании `linaria` Добавить в `linaria.config.js` секцию:
 
-```
+```js
 import path from 'path';
 
 import shaker from '@linaria/shaker';
@@ -46,14 +46,14 @@ export const defaultLinariaConfig = (uniqueString: string): Record<string, unkno
 
 ```
 
-4. Установить необходимый пакет, например `npm i @sbercloud/uikit-react-button`.
+4. Установить необходимый пакет, например `npm i @sbercloud/uikit-product-button`.
 
 # Styling:
 
 ## Import style:
 
-1. Ипортируем ConfigProvider:
-   `import { ConfigProvider } from "@sbercloud/uikit-utils";`
+1. Импортируем ConfigProvider:
+   `import { ConfigProvider } from "@sbercloud/uikit-product-utils";`
 2. Оборачиваем проект, theme передаем тему по умолчанию:
    `<ConfigProvider theme={ConfigProvider.themes.Purple}>...</ConfigProvider>`
 
@@ -61,12 +61,12 @@ export const defaultLinariaConfig = (uniqueString: string): Record<string, unkno
 ## Change theme
 
 1. Импортируем hook useTheme:
-`import { useTheme } from "@sbercloud/uikit-utils";`
+`import { useTheme } from "@sbercloud/uikit-product-utils";`
 
 2. Используем callback для смены темы:
-```
+```js
  const {changeTheme, Themes} = useTheme();
-   changeTheme(Themes.Purple)
+ changeTheme(Themes.Purple)
 ```
 
 # Contribution
@@ -78,19 +78,19 @@ Change log разбит по пакетам.
 
 # Questions
 Появились вопросы?
-Возможно ответ на ваши вопросы содержиться в [Contribution Guide](CONTRIBUTING.md) или в [Issue](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/boards/15?milestone_title=Idea)
+Возможно ответ на ваши вопросы содержиться в [Contribution Guide](CONTRIBUTING.md) или в [Issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/15?milestone_title=Idea)
 
-В противном случаи можно создать [новый issue](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/issues/new)
+В противном случаи можно создать [новый issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/issues/new)
 
 # Issue board
-[Backlog](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/boards/15?milestone_title=Idea) - Борда поступивших заявок
+[Backlog](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/15?milestone_title=Idea) - Борда поступивших заявок
 
-[Idea board](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/boards/51?milestone_title=None) - Борда для работы с идеями
+[Idea board](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/51?milestone_title=None) - Борда для работы с идеями
 
-[Component status map](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/boards/52?milestone_title=Design) - Актуальный статус компонентов
+[Component status map](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/52?milestone_title=Design) - Актуальный статус компонентов
 
 # Issue Processes
-1. Создан [новый issue](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/issues/new)
+1. Создан [новый issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/issues/new)
 2. Issue рассмотрен на грумминге
 > Участники грумминга: Core team + Review team
 > 
@@ -106,7 +106,7 @@ Change log разбит по пакетам.
 
 # Team Duty
 
-`Core team` - Трифонов Михаил, Ахременко Григорий, Белов Алексей
+`Core team` - Трифонов Михаил, Ахременко Григорий, Белов Алексей, Лозинский Павел
 > Несет ответственность за техническую часть проекта.
 >
 > Определять развитие UIKIT

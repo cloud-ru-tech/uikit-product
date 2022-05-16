@@ -3,6 +3,7 @@ import path from 'path';
 
 import { JsxEmit, createCompilerHost, createProgram } from 'typescript';
 
+import { name } from '../../package.json';
 import { ensureDirectory } from '../utils/ensureDirectory';
 
 const createdFiles = {};
@@ -14,10 +15,7 @@ export function createTSProgram({ fileNames }: { fileNames: string[] }) {
     esModuleInterop: true,
     jsx: JsxEmit.ReactJSX,
     paths: {
-      '@sbercloud/uikit-typography': ['packages/typography/src'],
-      '@sbercloud/uikit-theme': ['packages/theme/src'],
-      '@sbercloud/uikit-utils': ['packages/utils/src'],
-      '@sbercloud/uikit-react-*': ['packages/*/src'],
+      [`@sbercloud/${name}-*`]: ['packages/*/src'],
     },
   };
 

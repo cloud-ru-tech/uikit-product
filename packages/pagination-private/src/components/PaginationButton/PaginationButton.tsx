@@ -1,6 +1,6 @@
 import { MouseEvent } from 'react';
 
-import { keyboardSelectHandler } from '@sbercloud/uikit-utils';
+import { keyboardSelectHandler } from '@sbercloud/uikit-product-utils';
 
 import { styledPaginationButton } from './styled';
 import { PaginationButtonProps } from './types';

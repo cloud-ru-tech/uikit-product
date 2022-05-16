@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.11.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.11.0...@sbercloud/uikit-react-table-private@0.11.1) (2022-05-05)
+## [0.11.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.11.0...@sbercloud/uikit-react-table-private@0.11.1) (2022-05-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -11,17 +11,17 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.10.3...@sbercloud/uikit-react-table-private@0.11.0) (2022-04-28)
+# [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.10.3...@sbercloud/uikit-react-table-private@0.11.0) (2022-04-28)
 
 
 ### Bug Fixes
 
-* removed row styles that impact height if getRowHeight prop passed ([f3853f9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/f3853f926af5759272ca160cb99c15a82ed66617))
+* removed row styles that impact height if getRowHeight prop passed ([f3853f9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3853f926af5759272ca160cb99c15a82ed66617))
 
 
 ### Features
 
-* update ag-grid version, changed deprecated getRowNodeId to getRowId ([291caea](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/291caea36c9ccf7d24ea6cc2e253966c254ea32f))
+* update ag-grid version, changed deprecated getRowNodeId to getRowId ([291caea](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/291caea36c9ccf7d24ea6cc2e253966c254ea32f))
 
 
 ### BREAKING CHANGES
@@ -32,7 +32,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.10.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.10.2...@sbercloud/uikit-react-table-private@0.10.3) (2022-04-26)
+## [0.10.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.10.2...@sbercloud/uikit-react-table-private@0.10.3) (2022-04-26)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -40,7 +40,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.10.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.10.1...@sbercloud/uikit-react-table-private@0.10.2) (2022-04-18)
+## [0.10.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.10.1...@sbercloud/uikit-react-table-private@0.10.2) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -48,7 +48,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.10.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.10.0...@sbercloud/uikit-react-table-private@0.10.1) (2022-04-13)
+## [0.10.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.10.0...@sbercloud/uikit-react-table-private@0.10.1) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -56,12 +56,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.9.2...@sbercloud/uikit-react-table-private@0.10.0) (2022-04-13)
+# [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.9.2...@sbercloud/uikit-react-table-private@0.10.0) (2022-04-13)
 
 
 ### Features
 
-* updates ag-grid version to 27, renames "frameworkComponents" prop to "components" and "detailCellRendererFramework" to "detailCellRenderer", renames "cellRendererFramework" prop to "cellRenderer" in column definitions ([AICE-5489](https://jira.sbercloud.tech/browse/AICE-5489)) ([1b25f0a](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/1b25f0a5aa33bfe89e655459b32abac5c9b34725))
+* updates ag-grid version to 27, renames "frameworkComponents" prop to "components" and "detailCellRendererFramework" to "detailCellRenderer", renames "cellRendererFramework" prop to "cellRenderer" in column definitions ([AICE-5489](https://jira.sbercloud.tech/browse/AICE-5489)) ([1b25f0a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1b25f0a5aa33bfe89e655459b32abac5c9b34725))
 
 
 ### BREAKING CHANGES
@@ -72,7 +72,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.9.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.9.1...@sbercloud/uikit-react-table-private@0.9.2) (2022-04-04)
+## [0.9.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.9.1...@sbercloud/uikit-react-table-private@0.9.2) (2022-04-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -80,7 +80,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.9.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.9.0...@sbercloud/uikit-react-table-private@0.9.1) (2022-04-01)
+## [0.9.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.9.0...@sbercloud/uikit-react-table-private@0.9.1) (2022-04-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -88,31 +88,23 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.8.8...@sbercloud/uikit-react-table-private@0.9.0) (2022-03-31)
+# [0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.8.8...@sbercloud/uikit-react-table-private@0.9.0) (2022-03-31)
 
 
 ### Bug Fixes
 
-* use pageSize for pagination prop value in TableFreePrivate ([7b253f0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/7b253f03387bd37c29051f3b4ac68fcdcc0f8bc6))
+* use pageSize for pagination prop value in TableFreePrivate ([7b253f0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7b253f03387bd37c29051f3b4ac68fcdcc0f8bc6))
 
 
 ### Features
 
-* domLayout prop for TableFree ([8c30d61](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/8c30d61e34bbeeeb1c4da1390be5cb05f75e4251))
+* domLayout prop for TableFree ([8c30d61](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8c30d61e34bbeeeb1c4da1390be5cb05f75e4251))
 
 
 
 
 
-## [0.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.8.7...@sbercloud/uikit-react-table-private@0.8.8) (2022-03-29)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-table-private
-
-
-
-
-
-## [0.8.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.8.6...@sbercloud/uikit-react-table-private@0.8.7) (2022-03-28)
+## [0.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.8.7...@sbercloud/uikit-react-table-private@0.8.8) (2022-03-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -120,7 +112,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.8.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.8.5...@sbercloud/uikit-react-table-private@0.8.6) (2022-03-25)
+## [0.8.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.8.6...@sbercloud/uikit-react-table-private@0.8.7) (2022-03-28)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -128,7 +120,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.8.4...@sbercloud/uikit-react-table-private@0.8.5) (2022-03-23)
+## [0.8.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.8.5...@sbercloud/uikit-react-table-private@0.8.6) (2022-03-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -136,7 +128,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.8.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.8.3...@sbercloud/uikit-react-table-private@0.8.4) (2022-03-23)
+## [0.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.8.4...@sbercloud/uikit-react-table-private@0.8.5) (2022-03-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -144,7 +136,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.8.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.8.2...@sbercloud/uikit-react-table-private@0.8.3) (2022-03-23)
+## [0.8.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.8.3...@sbercloud/uikit-react-table-private@0.8.4) (2022-03-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -152,7 +144,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.8.1...@sbercloud/uikit-react-table-private@0.8.2) (2022-03-22)
+## [0.8.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.8.2...@sbercloud/uikit-react-table-private@0.8.3) (2022-03-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -160,7 +152,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.8.0...@sbercloud/uikit-react-table-private@0.8.1) (2022-03-22)
+## [0.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.8.1...@sbercloud/uikit-react-table-private@0.8.2) (2022-03-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -168,37 +160,37 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-table-private@0.7.0...@sbercloud/uikit-react-table-private@0.8.0) (2022-03-16)
+## [0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.8.0...@sbercloud/uikit-react-table-private@0.8.1) (2022-03-22)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-table-private
+
+
+
+
+
+# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-table-private@0.7.0...@sbercloud/uikit-react-table-private@0.8.0) (2022-03-16)
 
 
 ### Features
 
-* [AICDC-5783](https://jira.sbercloud.tech/browse/AICDC-5783), added onRowDoubleClicked and onRowClicked props ([e5b7194](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/e5b7194ad5d46cc6b95411c229f2b2c99a1b4f12))
+* [AICDC-5783](https://jira.sbercloud.tech/browse/AICDC-5783), added onRowDoubleClicked and onRowClicked props ([e5b7194](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e5b7194ad5d46cc6b95411c229f2b2c99a1b4f12))
 
 
 
 
 
-# [0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.11...@sbercloud/uikit-react-table-private@0.7.0) (2022-03-09)
+# [0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.11...@sbercloud/uikit-react-table-private@0.7.0) (2022-03-09)
 
 
 ### Features
 
-* `TableFreePrivate` and `TablePrivate` are wrapped with `styled` ([43a19b0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/43a19b0c64b58e0d024715865d20c297be0b372f))
+* `TableFreePrivate` and `TablePrivate` are wrapped with `styled` ([43a19b0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/43a19b0c64b58e0d024715865d20c297be0b372f))
 
 
 
 
 
-## [0.6.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.10...@sbercloud/uikit-react-table-private@0.6.11) (2022-03-02)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-table-private
-
-
-
-
-
-## [0.6.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.9...@sbercloud/uikit-react-table-private@0.6.10) (2022-02-25)
+## [0.6.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.10...@sbercloud/uikit-react-table-private@0.6.11) (2022-03-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -206,27 +198,27 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.8...@sbercloud/uikit-react-table-private@0.6.9) (2022-02-16)
+## [0.6.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.9...@sbercloud/uikit-react-table-private@0.6.10) (2022-02-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-table-private
+
+
+
+
+
+## [0.6.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.8...@sbercloud/uikit-react-table-private@0.6.9) (2022-02-16)
 
 
 ### Bug Fixes
 
-* first stable version of typography ([9fce874](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9fce8747d03be516626d638ddd34a59a4ce9433a))
-* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
+* first stable version of typography ([9fce874](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/9fce8747d03be516626d638ddd34a59a4ce9433a))
+* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
 
 
 
 
 
-## [0.6.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.7...@sbercloud/uikit-react-table-private@0.6.8) (2022-02-07)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-table-private
-
-
-
-
-
-## [0.6.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.6...@sbercloud/uikit-react-table-private@0.6.7) (2022-01-25)
+## [0.6.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.7...@sbercloud/uikit-react-table-private@0.6.8) (2022-02-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -234,29 +226,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.5...@sbercloud/uikit-react-table-private@0.6.6) (2022-01-21)
-
-
-### Bug Fixes
-
-* updates textProvider creation to explicitly pass package name ([2a6dc7f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2a6dc7fd7e08379e14c52ae3396c945f49998d5e))
-
-
-
-
-
-## [0.6.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.4...@sbercloud/uikit-react-table-private@0.6.5) (2022-01-21)
-
-
-### Bug Fixes
-
-* changes textProvider creation ([82e44cb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e44cbb6b9e202f7414679e7888b4c8a10db594))
-
-
-
-
-
-## [0.6.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.3...@sbercloud/uikit-react-table-private@0.6.4) (2022-01-20)
+## [0.6.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.6...@sbercloud/uikit-react-table-private@0.6.7) (2022-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -264,18 +234,29 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.2...@sbercloud/uikit-react-table-private@0.6.3) (2022-01-19)
+## [0.6.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.5...@sbercloud/uikit-react-table-private@0.6.6) (2022-01-21)
 
 
 ### Bug Fixes
 
-* minor/patch third-party dependency actualization ([3648504](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/364850414e3a9967417d2dabff30547cfccc5d87))
+* updates textProvider creation to explicitly pass package name ([2a6dc7f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/2a6dc7fd7e08379e14c52ae3396c945f49998d5e))
 
 
 
 
 
-## [0.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.1...@sbercloud/uikit-react-table-private@0.6.2) (2021-12-22)
+## [0.6.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.4...@sbercloud/uikit-react-table-private@0.6.5) (2022-01-21)
+
+
+### Bug Fixes
+
+* changes textProvider creation ([82e44cb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/82e44cbb6b9e202f7414679e7888b4c8a10db594))
+
+
+
+
+
+## [0.6.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.3...@sbercloud/uikit-react-table-private@0.6.4) (2022-01-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -283,23 +264,42 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.6.0...@sbercloud/uikit-react-table-private@0.6.1) (2021-12-07)
+## [0.6.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.2...@sbercloud/uikit-react-table-private@0.6.3) (2022-01-19)
 
 
 ### Bug Fixes
 
-* centered dropdown content ([CP-3533](https://jira.sbercloud.tech/browse/CP-3533)) ([2f8c694](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2f8c694f4eeec4c10d32776f58f9e61b98495c62))
+* minor/patch third-party dependency actualization ([3648504](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/364850414e3a9967417d2dabff30547cfccc5d87))
 
 
 
 
 
-# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.5.0...@sbercloud/uikit-react-table-private@0.6.0) (2021-12-03)
+## [0.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.1...@sbercloud/uikit-react-table-private@0.6.2) (2021-12-22)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-table-private
+
+
+
+
+
+## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.6.0...@sbercloud/uikit-react-table-private@0.6.1) (2021-12-07)
+
+
+### Bug Fixes
+
+* centered dropdown content ([CP-3533](https://jira.sbercloud.tech/browse/CP-3533)) ([2f8c694](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/2f8c694f4eeec4c10d32776f58f9e61b98495c62))
+
+
+
+
+
+# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.5.0...@sbercloud/uikit-react-table-private@0.6.0) (2021-12-03)
 
 
 ### Features
 
-* one of colId or field prop is required in ColumnDefinition | manually resized columns won't change on window resize ([cb276fb](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/cb276fb555d126d9577c1e57d5a63cda1f2967ad))
+* one of colId or field prop is required in ColumnDefinition | manually resized columns won't change on window resize ([cb276fb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/cb276fb555d126d9577c1e57d5a63cda1f2967ad))
 
 
 ### BREAKING CHANGES
@@ -310,49 +310,19 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.4.5...@sbercloud/uikit-react-table-private@0.5.0) (2021-12-02)
+# [0.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.4.5...@sbercloud/uikit-react-table-private@0.5.0) (2021-12-02)
 
 
 ### Features
 
-* free table no rows text ([062704c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/062704cae439cfb22f516381d5df7c3e154bd4dd))
-* TableFree border ([a635f4b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/a635f4bbd793010096d5c56e08f32d1c41ecc251))
+* free table no rows text ([062704c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/062704cae439cfb22f516381d5df7c3e154bd4dd))
+* TableFree border ([a635f4b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/a635f4bbd793010096d5c56e08f32d1c41ecc251))
 
 
 
 
 
-## [0.4.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.4.4...@sbercloud/uikit-react-table-private@0.4.5) (2021-12-01)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-table-private
-
-
-
-
-
-## [0.4.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.4.3...@sbercloud/uikit-react-table-private@0.4.4) (2021-12-01)
-
-
-### Bug Fixes
-
-* checkbox cell padding ([1e09194](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/1e091944c5f266eb5a9f0f4bcad01fa5de1e27d8))
-
-
-
-
-
-## [0.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.4.2...@sbercloud/uikit-react-table-private@0.4.3) (2021-11-29)
-
-
-### Bug Fixes
-
-* table cell styles ([dec00d9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/dec00d9c06d4b03cb8ea4a8b45588b407b55e4f9))
-
-
-
-
-
-## [0.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.4.1...@sbercloud/uikit-react-table-private@0.4.2) (2021-11-29)
+## [0.4.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.4.4...@sbercloud/uikit-react-table-private@0.4.5) (2021-12-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -360,40 +330,70 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.4.0...@sbercloud/uikit-react-table-private@0.4.1) (2021-11-17)
+## [0.4.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.4.3...@sbercloud/uikit-react-table-private@0.4.4) (2021-12-01)
 
 
 ### Bug Fixes
 
-* repository.directory field has been added ([82e2345](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/82e2345880c4011971b193ebd87eedbb1c804ea6))
+* checkbox cell padding ([1e09194](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/1e091944c5f266eb5a9f0f4bcad01fa5de1e27d8))
 
 
 
 
 
-# [0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.3.3...@sbercloud/uikit-react-table-private@0.4.0) (2021-11-15)
+## [0.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.4.2...@sbercloud/uikit-react-table-private@0.4.3) (2021-11-29)
+
+
+### Bug Fixes
+
+* table cell styles ([dec00d9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/dec00d9c06d4b03cb8ea4a8b45588b407b55e4f9))
+
+
+
+
+
+## [0.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.4.1...@sbercloud/uikit-react-table-private@0.4.2) (2021-11-29)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-table-private
+
+
+
+
+
+## [0.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.4.0...@sbercloud/uikit-react-table-private@0.4.1) (2021-11-17)
+
+
+### Bug Fixes
+
+* repository.directory field has been added ([82e2345](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/82e2345880c4011971b193ebd87eedbb1c804ea6))
+
+
+
+
+
+# [0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.3.3...@sbercloud/uikit-react-table-private@0.4.0) (2021-11-15)
 
 
 ### Features
 
-* introduce customMeta prop within columnDefintion ([3c7a503](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/3c7a5036cf3a27bb179361dfcb2aa82a57e3d8cd))
+* introduce customMeta prop within columnDefintion ([3c7a503](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/3c7a5036cf3a27bb179361dfcb2aa82a57e3d8cd))
 
 
 
 
 
-## [0.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.3.2...@sbercloud/uikit-react-table-private@0.3.3) (2021-11-11)
+## [0.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.3.2...@sbercloud/uikit-react-table-private@0.3.3) (2021-11-11)
 
 
 ### Bug Fixes
 
-* min-height is 50px and noRowsOverlay is simple text for table free ([ed3b25e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/ed3b25eec9499f9205a067340c09ca77b4a80f96))
+* min-height is 50px and noRowsOverlay is simple text for table free ([ed3b25e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/ed3b25eec9499f9205a067340c09ca77b4a80f96))
 
 
 
 
 
-## [0.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.3.1...@sbercloud/uikit-react-table-private@0.3.2) (2021-11-11)
+## [0.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.3.1...@sbercloud/uikit-react-table-private@0.3.2) (2021-11-11)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -401,7 +401,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.3.0...@sbercloud/uikit-react-table-private@0.3.1) (2021-11-09)
+## [0.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.3.0...@sbercloud/uikit-react-table-private@0.3.1) (2021-11-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -409,45 +409,45 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.2.0...@sbercloud/uikit-react-table-private@0.3.0) (2021-11-09)
+# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.2.0...@sbercloud/uikit-react-table-private@0.3.0) (2021-11-09)
 
 
 ### Bug Fixes
 
-* add module ClientSideRowModelModule in TableFree ([b72fc91](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b72fc91ee2b51063eb15198f33e0a3c44d0f8b6c))
+* add module ClientSideRowModelModule in TableFree ([b72fc91](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/b72fc91ee2b51063eb15198f33e0a3c44d0f8b6c))
 
 
 ### Features
 
-* add export .csv and .xls for ClientModelTable ([224c853](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/224c8536e97121c263924834f59b87cb0063b81f))
+* add export .csv and .xls for ClientModelTable ([224c853](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/224c8536e97121c263924834f59b87cb0063b81f))
 
 
 
 
 
-# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.5...@sbercloud/uikit-react-table-private@0.2.0) (2021-11-04)
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.1.5...@sbercloud/uikit-react-table-private@0.2.0) (2021-11-04)
 
 
 ### Features
 
-* ag-grid version is the 26th ([634b66e](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/634b66e5dd2113fd53195a2963db3f370f7bd37b))
+* ag-grid version is the 26th ([634b66e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/634b66e5dd2113fd53195a2963db3f370f7bd37b))
 
 
 
 
 
-## [0.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.4...@sbercloud/uikit-react-table-private@0.1.5) (2021-11-03)
+## [0.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.1.4...@sbercloud/uikit-react-table-private@0.1.5) (2021-11-03)
 
 
 ### Bug Fixes
 
-* new license key ([8abd416](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/8abd4168bbc93ccdfe58deac31da3754e1f4f039))
+* new license key ([8abd416](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/8abd4168bbc93ccdfe58deac31da3754e1f4f039))
 
 
 
 
 
-## [0.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.3...@sbercloud/uikit-react-table-private@0.1.4) (2021-11-02)
+## [0.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.1.3...@sbercloud/uikit-react-table-private@0.1.4) (2021-11-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -455,20 +455,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.2...@sbercloud/uikit-react-table-private@0.1.3) (2021-11-01)
+## [0.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.1.2...@sbercloud/uikit-react-table-private@0.1.3) (2021-11-01)
 
 
 ### Bug Fixes
 
-* all ag-grid dependencies are modules ([642f342](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/642f34233d3cee613fd728f5ef824aff4b49d2d5))
-* correct license manager import ([0c296ad](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/0c296add81d2d52365f15da4d62dd8a6141b3482))
-* delete all modules dependency ([4abd1a2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/4abd1a2c968ca7733d06de01aa71023a352a779c))
+* all ag-grid dependencies are modules ([642f342](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/642f34233d3cee613fd728f5ef824aff4b49d2d5))
+* correct license manager import ([0c296ad](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/0c296add81d2d52365f15da4d62dd8a6141b3482))
+* delete all modules dependency ([4abd1a2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/4abd1a2c968ca7733d06de01aa71023a352a779c))
 
 
 
 
 
-## [0.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.1...@sbercloud/uikit-react-table-private@0.1.2) (2021-10-29)
+## [0.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.1.1...@sbercloud/uikit-react-table-private@0.1.2) (2021-10-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-table-private
 
@@ -476,12 +476,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-table-private@0.1.0...@sbercloud/uikit-react-table-private@0.1.1) (2021-10-26)
+## [0.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-table-private@0.1.0...@sbercloud/uikit-react-table-private@0.1.1) (2021-10-26)
 
 
 ### Bug Fixes
 
-* table scrollbar artifact has been deleted ([d2bcb10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/d2bcb1008e41107a3d8cf6cb52ff04f2e61bbfb0))
+* table scrollbar artifact has been deleted ([d2bcb10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/d2bcb1008e41107a3d8cf6cb52ff04f2e61bbfb0))
 
 
 
@@ -492,8 +492,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* table private package was extracted ([2f4d460](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/2f4d460dd9399159febb0428032db97a0738b573))
-* toolbar filter integrated with client model table ([9e02967](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9e02967e4f8c6e38a207b739892cbce7811b111d))
+* table private package was extracted ([2f4d460](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/2f4d460dd9399159febb0428032db97a0738b573))
+* toolbar filter integrated with client model table ([9e02967](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/9e02967e4f8c6e38a207b739892cbce7811b111d))
 
 
 ### BREAKING CHANGES

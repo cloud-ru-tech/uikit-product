@@ -1,7 +1,7 @@
 # React Badge Private
 
 ## Installation
-`npm i @sbercloud/uikit-react-badge-private`
+`npm i @sbercloud/uikit-product-badge-private`
 
 ## Components interface
 ```typescript

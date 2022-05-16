@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
 import { VFC } from 'react';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { ANIMATIONS } from '@sbercloud/uikit-utils';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 import { Sizes } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';

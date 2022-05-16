@@ -1,1 +1,1 @@
-export { Themes } from '@sbercloud/uikit-theme';
+export { Themes } from '@sbercloud/uikit-product-theme';

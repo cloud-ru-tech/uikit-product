@@ -1,7 +1,7 @@
 import { ChangeEvent, DragEvent, MouseEvent, ReactNode, useRef, useState } from 'react';
 
-import { Link } from '@sbercloud/uikit-react-link';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { Link } from '@sbercloud/uikit-product-link';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../helpers/texts-provider';
 import { Container, Description, H4Styled, Header, HiddenInput } from './styled';

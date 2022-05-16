@@ -3,12 +3,12 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { ReactText, useState } from 'react';
 
-import { Input } from '@sbercloud/uikit-react-input';
-import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
-import { Select } from '@sbercloud/uikit-react-select';
-import { Slider } from '@sbercloud/uikit-react-slider';
-import { TruncateString } from '@sbercloud/uikit-react-truncate-string';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { Input } from '@sbercloud/uikit-product-input';
+import { Radio, RadioGroup } from '@sbercloud/uikit-product-radio';
+import { Select } from '@sbercloud/uikit-product-select';
+import { Slider } from '@sbercloud/uikit-product-slider';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

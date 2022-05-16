@@ -1,7 +1,7 @@
 # React Predefined Icons Private
 
 ## Installation
-`npm i @sbercloud/uikit-react-predefined-icons-private`
+`npm i @sbercloud/uikit-product-predefined-icons-private`
 
 [Changelog](./CHANGELOG.md)
 

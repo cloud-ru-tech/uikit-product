@@ -3,9 +3,9 @@ import { styled } from '@linaria/react';
 import { useEffect, useState } from '@storybook/addons';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Tag } from '@sbercloud/uikit-react-tag';
-import { TextField } from '@sbercloud/uikit-react-text-field';
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
+import { Tag } from '@sbercloud/uikit-product-tag';
+import { TextField } from '@sbercloud/uikit-product-text-field';
+import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 
 import { BADGE } from '#storybookConstants';
 

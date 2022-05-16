@@ -2,6 +2,6 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-dropdown`
+`npm i @sbercloud/uikit-product-dropdown`
 
 [Changelog](./CHANGELOG.md)

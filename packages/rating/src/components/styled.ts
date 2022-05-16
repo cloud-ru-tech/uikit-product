@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
-import { FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { FavouriteInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 const { GREY, BLACK_ALFA, SUNNY_YELLOW } = EXPORT_VARS;
 

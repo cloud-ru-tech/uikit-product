@@ -1,5 +1,7 @@
+import { name } from '../../package.json';
+
 export function getClassNameSlug(version: string) {
   return function (hash: string, title: string) {
-    return `uikit-${title}-${version}-${hash}`;
+    return `${name}-${title}-${version}-${hash}`;
   };
 }

@@ -1,10 +1,10 @@
 import { MasterDetailModule } from '@ag-grid-enterprise/master-detail';
 import { ReactNode } from 'react';
 
-import { Pagination } from '@sbercloud/uikit-react-pagination-private';
-import { TablePrivate } from '@sbercloud/uikit-react-table-private';
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { Pagination } from '@sbercloud/uikit-product-pagination-private';
+import { TablePrivate } from '@sbercloud/uikit-product-table-private';
+import { Toolbar } from '@sbercloud/uikit-product-toolbar';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { GroupDisabledCell } from '../../helperComponents/GroupDisabledCell';
 import { Texts, textProvider } from '../../helpers/texts-provider';

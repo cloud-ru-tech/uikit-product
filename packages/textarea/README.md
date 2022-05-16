@@ -1,10 +1,10 @@
 # React Textarea
 
 ## Installation
-`npm i @sbercloud/uikit-react-textarea`
+`npm i @sbercloud/uikit-product-textarea`
 
-## [Private Textarea Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/textarea-private/CHANGELOG.md)
-## [Private Input Decorator Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/input-decorator-private/CHANGELOG.md)
+## [Private Textarea Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/textarea-private/CHANGELOG.md)
+## [Private Input Decorator Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/input-decorator-private/CHANGELOG.md)
 
 ## Props
 ```typescript

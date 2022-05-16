@@ -1,5 +1,5 @@
-import { Button } from '@sbercloud/uikit-react-button';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { Button } from '@sbercloud/uikit-product-button';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { FilterTypes, MAX_FILTER_AMOUNT } from '../../constants';
 import { Texts, textProvider } from '../../helpers/textProviders';

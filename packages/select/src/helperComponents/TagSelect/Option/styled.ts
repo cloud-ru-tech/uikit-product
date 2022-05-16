@@ -1,10 +1,10 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { Tag } from '@sbercloud/uikit-react-tag';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { TEXT_4_STYLES } from '@sbercloud/uikit-typography';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { Tag } from '@sbercloud/uikit-product-tag';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { TEXT_4_STYLES } from '@sbercloud/uikit-product-typography';
 
 const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 

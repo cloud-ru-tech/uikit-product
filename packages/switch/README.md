@@ -1,7 +1,7 @@
 # React Switch
 
 ## Installation
-`npm i @sbercloud/uikit-react-switch`
+`npm i @sbercloud/uikit-product-switch`
 
 ## Props 
 ```typescript

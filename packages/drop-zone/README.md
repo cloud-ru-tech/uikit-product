@@ -2,6 +2,6 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-drop-zone`
+`npm i @sbercloud/uikit-product-drop-zone`
 
 [Changelog](./CHANGELOG.md)

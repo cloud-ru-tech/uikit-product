@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { UserInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
+import { UserInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 import { StatusBadge, StatusBadgeProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';

@@ -3,9 +3,9 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { Button } from '@sbercloud/uikit-react-button';
-import { Modal } from '@sbercloud/uikit-react-modal';
-import { SwitchRow } from '@sbercloud/uikit-react-switch';
+import { Button } from '@sbercloud/uikit-product-button';
+import { Modal } from '@sbercloud/uikit-product-modal';
+import { SwitchRow } from '@sbercloud/uikit-product-switch';
 
 import { BADGE } from '#storybookConstants';
 

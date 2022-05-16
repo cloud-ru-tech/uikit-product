@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { VFC } from 'react';
 
-import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { CounterTypes } from '../../helpers/types';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';

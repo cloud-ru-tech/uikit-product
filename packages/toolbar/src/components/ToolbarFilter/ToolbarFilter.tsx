@@ -1,6 +1,6 @@
-import { Filter, IFilterProps } from '@sbercloud/uikit-react-filter';
-import { FilterInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { Filter, IFilterProps } from '@sbercloud/uikit-product-filter';
+import { FilterInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { WithSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import { ToolbarButton } from '../ToolbarButton';

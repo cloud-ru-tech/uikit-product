@@ -1,7 +1,7 @@
 # React Table Private
 
 ## Installation
-`npm i @sbercloud/uikit-react-table-private`
+`npm i @sbercloud/uikit-product-table-private`
 
 [Changelog](./CHANGELOG.md)
 

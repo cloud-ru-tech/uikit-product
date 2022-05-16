@@ -1,7 +1,7 @@
 # React Radio
 
 ## Installation
-`npm i @sbercloud/uikit-react-radio`
+`npm i @sbercloud/uikit-product-radio`
 
 ## Props 
 ```typescript

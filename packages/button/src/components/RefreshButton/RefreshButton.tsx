@@ -5,9 +5,9 @@ import {
   WithTooltipProps,
   extractCommonButtonProps,
   rotateOnClickClassName,
-} from '@sbercloud/uikit-react-button-private';
-import { RefreshInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
+} from '@sbercloud/uikit-product-button-private';
+import { RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers';
 import { ButtonIconTransparent } from '../';

@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-icons",
+  "name": "@sbercloud/uikit-product-icons",
   "title": "React Icons",
   "version": "3.5.0",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/icons",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/icons",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/icons"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",

@@ -1,8 +1,13 @@
 import { cx } from '@linaria/core';
 
-import { Link, LinkProps } from '@sbercloud/uikit-react-link';
-import { Placements, TooltipPrivate, TooltipPrivateProps, TriggerTypes } from '@sbercloud/uikit-react-tooltip-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { Link, LinkProps } from '@sbercloud/uikit-product-link';
+import {
+  Placements,
+  TooltipPrivate,
+  TooltipPrivateProps,
+  TriggerTypes,
+} from '@sbercloud/uikit-product-tooltip-private';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { DELAY, OFFSET } from '../../constants';
 import { TooltipType } from '../../helpers/types';

@@ -1,9 +1,9 @@
 import { ReactNode, useState } from 'react';
 
-import { ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-react-button';
-import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { InputPrivate } from '@sbercloud/uikit-react-input-private';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-product-button';
+import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { InputPrivate } from '@sbercloud/uikit-product-input-private';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../helpers/texts-provider';
 import { Types } from './constants';

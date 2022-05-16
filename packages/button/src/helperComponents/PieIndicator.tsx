@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 const { GREY, WHITE_ALFA } = EXPORT_VARS;
 

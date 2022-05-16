@@ -1,6 +1,6 @@
 import { ReactElement, useContext, useRef } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { TabContext } from '../../helpers/context';
 import { Highlighter } from '../Highlighter';

@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-link`
+`npm i @sbercloud/uikit-product-link`
 
 ## Props
 

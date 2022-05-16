@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-stepper",
+  "name": "@sbercloud/uikit-product-stepper",
   "title": "React Stepper",
   "version": "0.2.14",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "Stepper",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/stepper",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/stepper",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/stepper"
   },
   "author": "Даниил Хайрутдинов <dihayrutdinov@sbercloud.ru>",
@@ -27,10 +27,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-icons": "3.5.0",
-    "@sbercloud/uikit-theme": "0.33.1",
-    "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.6.0"
+    "@sbercloud/uikit-product-icons": "3.5.0",
+    "@sbercloud/uikit-product-theme": "0.33.1",
+    "@sbercloud/uikit-product-typography": "1.1.0",
+    "@sbercloud/uikit-product-utils": "2.6.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

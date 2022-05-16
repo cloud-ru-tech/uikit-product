@@ -2,8 +2,8 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useMemo, useRef, useState } from 'react';
 
-import { Button, ButtonRound } from '@sbercloud/uikit-react-button';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { Button, ButtonRound } from '@sbercloud/uikit-product-button';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

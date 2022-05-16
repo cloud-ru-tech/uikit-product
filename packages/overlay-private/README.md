@@ -1,7 +1,7 @@
 # React Overlay Private
 
 ## Installation
-`npm i @sbercloud/uikit-react-overlay-private`
+`npm i @sbercloud/uikit-product-overlay-private`
 
 [Changelog](./CHANGELOG.md)
 

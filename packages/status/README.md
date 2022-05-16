@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-status`
+`npm i @sbercloud/uikit-product-status`
 
 ## Props
 

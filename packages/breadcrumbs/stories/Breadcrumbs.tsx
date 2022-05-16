@@ -1,8 +1,8 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { Button, ButtonIcon, CopyButton } from '@sbercloud/uikit-react-button';
-import { Divider } from '@sbercloud/uikit-react-divider';
+import { Button, ButtonIcon, CopyButton } from '@sbercloud/uikit-product-button';
+import { Divider } from '@sbercloud/uikit-product-divider';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

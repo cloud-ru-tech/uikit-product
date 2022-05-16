@@ -4,6 +4,6 @@ Based on [react-datepicker](https://github.com/Hacker0x01/react-datepicker) whic
 
 ## Installation
 
-`@sbercloud/uikit-react-datepicker`.
+`@sbercloud/uikit-product-datepicker`.
 
 [Changelog](./CHANGELOG.md)

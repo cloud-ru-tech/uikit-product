@@ -18,7 +18,7 @@ export function sortFolders(folders: string[]) {
 
     if (packageConfig.dependencies) {
       Object.keys(packageConfig.dependencies).forEach(dependency => {
-        if (/@sbercloud\/(uikit-|icons).*/.test(dependency)) {
+        if (/@sbercloud\/(uikit-).*/.test(dependency)) {
           if (!graph.hasNode(dependency)) {
             graph.addNode(dependency);
           }

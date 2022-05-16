@@ -1,5 +1,5 @@
-import { BrandCatDisplaySVG } from '@sbercloud/uikit-react-icons';
-import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
+import { BrandCatDisplaySVG } from '@sbercloud/uikit-product-icons';
+import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
 import * as S from './styled';

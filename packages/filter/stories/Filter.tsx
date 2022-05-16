@@ -1,8 +1,8 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { FilterInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
+import { FilterInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

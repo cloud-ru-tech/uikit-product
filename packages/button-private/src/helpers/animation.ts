@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 
-import { ANIMATIONS } from '@sbercloud/uikit-utils';
+import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 export const loadingWheelClassName = css`
   ${ANIMATIONS.LOADING_WHEEL};

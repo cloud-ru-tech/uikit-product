@@ -1,4 +1,4 @@
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { PaginationEntry, PaginationEntryKind, getPaginationEntries } from '../../utils';
 import { PaginationArrowButton } from '../PaginationArrowButton';

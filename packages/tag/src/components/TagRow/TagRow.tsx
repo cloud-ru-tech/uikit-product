@@ -1,6 +1,6 @@
 import { ReactText, Ref, useEffect, useMemo, useRef, useState } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Colors, Sizes } from '../../constants';
 import { Tag, TagProps } from '../Tag';

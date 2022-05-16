@@ -2,8 +2,8 @@ import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
 import React, { FC, useEffect, useMemo, useState } from 'react';
 
-import { Avatar } from '@sbercloud/uikit-react-avatar';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { Avatar } from '@sbercloud/uikit-product-avatar';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { StyledContainer, selectClassname } from './styled';

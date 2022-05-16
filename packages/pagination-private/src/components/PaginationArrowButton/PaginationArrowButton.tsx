@@ -1,4 +1,4 @@
-import { ChevronLeftInterfaceSVG, ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { ChevronLeftInterfaceSVG, ChevronRightInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { Variants } from './constants';
 import { Button } from './styled';

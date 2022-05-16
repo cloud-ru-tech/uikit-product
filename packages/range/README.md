@@ -1,7 +1,7 @@
 # React Range
 
 ## Installation
-`npm i @sbercloud/uikit-react-range`
+`npm i @sbercloud/uikit-product-range`
 
 [Changelog](./CHANGELOG.md)
 

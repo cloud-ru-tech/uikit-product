@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 
 export const SingleWrapper = styled.div`
   padding: 20px;

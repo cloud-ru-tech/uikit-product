@@ -1,6 +1,6 @@
 import { Children, ReactNode } from 'react';
 
-import { TooltipPrivate } from '@sbercloud/uikit-react-tooltip-private';
+import { TooltipPrivate } from '@sbercloud/uikit-product-tooltip-private';
 
 import { Item, tooltipContainerClassName } from './styled';
 

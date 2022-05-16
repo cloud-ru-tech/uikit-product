@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 export const MultiSelectWrap = styled.div``;
 

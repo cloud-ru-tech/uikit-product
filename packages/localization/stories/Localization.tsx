@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { TEXT_1_STYLES } from '@sbercloud/uikit-typography';
-import { ConfigProvider, useLanguage } from '@sbercloud/uikit-utils';
+import { TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
+import { ConfigProvider, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

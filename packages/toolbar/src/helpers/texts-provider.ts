@@ -1,4 +1,4 @@
-import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-product-utils';
 
 export enum Texts {
   Filter = 'Filter',

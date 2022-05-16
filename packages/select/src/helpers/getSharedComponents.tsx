@@ -2,8 +2,8 @@ import { css } from '@linaria/core';
 import { useMemo } from 'react';
 import { components as ReactSelectComponents, SelectComponentsConfig } from 'react-select';
 
-import { CloseInterfaceSVG, DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { CloseInterfaceSVG, DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { ISelectProps } from '../components';
 import { CustomControl, CustomMenu, MultiValueContainer } from '../helperComponents/Shared';

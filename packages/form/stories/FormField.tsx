@@ -2,8 +2,8 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { SimpleInput } from '@sbercloud/uikit-react-input-private';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { SimpleInput } from '@sbercloud/uikit-product-input-private';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

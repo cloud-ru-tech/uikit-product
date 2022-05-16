@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-avatar",
+  "name": "@sbercloud/uikit-product-avatar",
   "title": "React Avatar",
   "version": "1.0.10",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "React component for drawing avatar component or placeholder",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/avatar",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/avatar",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/avatar"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
@@ -29,10 +29,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-icons": "3.5.0",
-    "@sbercloud/uikit-react-status": "5.0.0",
-    "@sbercloud/uikit-theme": "0.33.1",
-    "@sbercloud/uikit-utils": "2.6.0"
+    "@sbercloud/uikit-product-icons": "3.5.0",
+    "@sbercloud/uikit-product-status": "5.0.0",
+    "@sbercloud/uikit-product-theme": "0.33.1",
+    "@sbercloud/uikit-product-utils": "2.6.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

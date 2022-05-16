@@ -5,15 +5,15 @@ import {
   extractCommonButtonProps,
   withManagedLoading,
   withTooltip,
-} from '@sbercloud/uikit-react-button-private';
+} from '@sbercloud/uikit-product-button-private';
 import {
   EyeOpenedInterfaceSVG,
   PauseInterfaceSVG,
   PlayInterfaceSVG,
   RefreshInterfaceSVG,
   StopInterfaceSVG,
-} from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
+} from '@sbercloud/uikit-product-icons';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { LoadingIcon } from '../../helperComponents';
 import { Texts, textProvider } from '../../helpers';

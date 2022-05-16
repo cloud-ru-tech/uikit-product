@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-select",
+  "name": "@sbercloud/uikit-product-select",
   "title": "React Select",
   "version": "0.24.24",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/select",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/select",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/select"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
@@ -27,16 +27,16 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-avatar": "1.0.10",
-    "@sbercloud/uikit-react-button": "5.0.9",
-    "@sbercloud/uikit-react-divider": "2.0.25",
-    "@sbercloud/uikit-react-icons": "3.5.0",
-    "@sbercloud/uikit-react-input-private": "2.3.14",
-    "@sbercloud/uikit-react-modal": "0.15.63",
-    "@sbercloud/uikit-react-tag": "1.1.20",
-    "@sbercloud/uikit-theme": "0.33.1",
-    "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.6.0",
+    "@sbercloud/uikit-product-avatar": "1.0.10",
+    "@sbercloud/uikit-product-button": "5.0.9",
+    "@sbercloud/uikit-product-divider": "2.0.25",
+    "@sbercloud/uikit-product-icons": "3.5.0",
+    "@sbercloud/uikit-product-input-private": "2.3.14",
+    "@sbercloud/uikit-product-modal": "0.15.63",
+    "@sbercloud/uikit-product-tag": "1.1.20",
+    "@sbercloud/uikit-product-theme": "0.33.1",
+    "@sbercloud/uikit-product-typography": "1.1.0",
+    "@sbercloud/uikit-product-utils": "2.6.0",
     "lodash.isequal": "4.5.0",
     "rc-tree": "4.2.1",
     "react-select": "3.2.0"

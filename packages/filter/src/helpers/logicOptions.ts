@@ -4,8 +4,8 @@ import gte from 'lodash.gte';
 import lt from 'lodash.lt';
 import lte from 'lodash.lte';
 
-import { OptionTypeBase } from '@sbercloud/uikit-react-select';
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { OptionTypeBase } from '@sbercloud/uikit-product-select';
+import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from './texts-provider';
 

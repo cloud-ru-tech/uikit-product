@@ -8,7 +8,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* first stable version ([2dc5883](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/2dc588303bf82574f10771f214231ce48fda308c))
+* first stable version ([2dc5883](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2dc588303bf82574f10771f214231ce48fda308c))
 
 
 

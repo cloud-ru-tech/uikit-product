@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Button } from '@sbercloud/uikit-react-button';
-import { BucketInterfaceSVG, DataTransferServiceSVG } from '@sbercloud/uikit-react-icons';
+import { Button } from '@sbercloud/uikit-product-button';
+import { BucketInterfaceSVG, DataTransferServiceSVG } from '@sbercloud/uikit-product-icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

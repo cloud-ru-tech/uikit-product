@@ -1,7 +1,7 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 

@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 
-import { CopyInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { CopyInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { Button, ButtonProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';

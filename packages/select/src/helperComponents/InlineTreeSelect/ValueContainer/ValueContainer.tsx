@@ -1,7 +1,7 @@
 import React, { FC, useCallback } from 'react';
 
-import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { DictionaryPropertyAsFn, Texts, textProvider } from '../../../helpers/texts-provider';
 import { StyledContainer, iconClass } from './styled';

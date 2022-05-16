@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { ANIMATIONS } from '@sbercloud/uikit-utils';
+import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 import { Icons, Variants } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';

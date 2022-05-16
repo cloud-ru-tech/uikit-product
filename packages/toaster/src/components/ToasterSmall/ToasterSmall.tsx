@@ -1,6 +1,6 @@
 import { ToastContentProps } from 'react-toastify';
 
-import { PredefinedIconsPrivate } from '@sbercloud/uikit-react-predefined-icons-private';
+import { PredefinedIconsPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 
 import { TOASTER_SMALL_TEST_IDS } from '../../testIds';
 import { ICON_STATUS_TYPE, ToasterSmallStatus } from './constants';

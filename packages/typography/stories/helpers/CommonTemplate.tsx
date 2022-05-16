@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import React, { FC } from 'react';
 
-import { CollapsePanel, CollapsePanelItem } from '@sbercloud/uikit-react-collapse-panel';
+import { CollapsePanel, CollapsePanelItem } from '@sbercloud/uikit-product-collapse-panel';
 
 const Row = styled.div`
   display: flex;

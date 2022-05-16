@@ -1,6 +1,6 @@
 import { ChangeEventHandler, MouseEventHandler, forwardRef } from 'react';
 
-import { excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Types } from './constants';
 import { styledInputPrivate } from './styled';

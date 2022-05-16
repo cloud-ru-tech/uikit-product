@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-input",
+  "name": "@sbercloud/uikit-product-input",
   "title": "React Input",
   "version": "1.0.48",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/input",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/input",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/input"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-input-decorator-private": "2.0.19",
-    "@sbercloud/uikit-react-input-private": "2.3.14",
-    "@sbercloud/uikit-utils": "2.6.0"
+    "@sbercloud/uikit-product-input-decorator-private": "2.0.19",
+    "@sbercloud/uikit-product-input-private": "2.3.14",
+    "@sbercloud/uikit-product-utils": "2.6.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

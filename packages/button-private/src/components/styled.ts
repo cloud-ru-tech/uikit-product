@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { PropsWithChildren, VFC } from 'react';
 
-import { ANIMATIONS, DEFAULT_STYLES } from '@sbercloud/uikit-utils';
+import { ANIMATIONS, DEFAULT_STYLES } from '@sbercloud/uikit-product-utils';
 
 import { CommonButtonProps } from '../types';
 

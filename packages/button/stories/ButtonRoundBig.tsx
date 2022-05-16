@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 
-import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { ButtonRoundBig, ButtonRoundBigProps } from '../src';
 import { SingleWrapper } from './helperComponents';

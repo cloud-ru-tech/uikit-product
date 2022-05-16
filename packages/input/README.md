@@ -1,10 +1,10 @@
 # React Input
 
 ## Installation
-`npm i @sbercloud/uikit-react-input`
+`npm i @sbercloud/uikit-product-input`
 
-## [Private Input Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/input-private/CHANGELOG.md)
-## [Private Input Decorator Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/input-decorator-private/CHANGELOG.md)
+## [Private Input Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/input-private/CHANGELOG.md)
+## [Private Input Decorator Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/input-decorator-private/CHANGELOG.md)
 
 ## Props
 ```typescript

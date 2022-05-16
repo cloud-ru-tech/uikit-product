@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-breadcrumbs",
+  "name": "@sbercloud/uikit-product-breadcrumbs",
   "title": "React Breadcrumbs",
   "version": "0.10.46",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/breadcrumbs",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/breadcrumbs",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/breadcrumbs"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-icons": "3.5.0",
-    "@sbercloud/uikit-react-tooltip": "2.0.44",
-    "@sbercloud/uikit-theme": "0.33.1",
+    "@sbercloud/uikit-product-icons": "3.5.0",
+    "@sbercloud/uikit-product-tooltip": "2.0.44",
+    "@sbercloud/uikit-product-theme": "0.33.1",
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {

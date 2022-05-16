@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-file-upload",
+  "name": "@sbercloud/uikit-product-file-upload",
   "title": "React File Upload",
   "version": "0.3.25",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/file-upload",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/file-upload",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/file-upload"
   },
   "author": "Лукашев Сергей <smlukashev@sbercloud.ru>",
@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "5.0.9",
-    "@sbercloud/uikit-theme": "0.33.1"
+    "@sbercloud/uikit-product-button": "5.0.9",
+    "@sbercloud/uikit-product-theme": "0.33.1"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

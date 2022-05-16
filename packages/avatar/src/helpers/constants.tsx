@@ -1,5 +1,5 @@
-import { OrganizationAvatarPlaceholderSVG, UserAvatarPlaceholderSVG } from '@sbercloud/uikit-react-icons';
-import { StatusDot } from '@sbercloud/uikit-react-status';
+import { OrganizationAvatarPlaceholderSVG, UserAvatarPlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { StatusDot } from '@sbercloud/uikit-product-status';
 
 import { Sizes, Status, Variants } from './types';
 

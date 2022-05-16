@@ -2,10 +2,10 @@ import { css } from '@linaria/core';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
-import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { DropdownMenu } from '@sbercloud/uikit-product-dropdown';
+import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

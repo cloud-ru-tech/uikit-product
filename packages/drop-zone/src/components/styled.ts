@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H4_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
+import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { H4_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 

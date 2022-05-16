@@ -1,7 +1,7 @@
 import { cx } from '@linaria/core';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { TooltipPrivate } from '@sbercloud/uikit-react-tooltip-private';
+import { TooltipPrivate } from '@sbercloud/uikit-product-tooltip-private';
 
 import { isVisible } from '../../helpers/isVisible';
 import * as S from './styled';

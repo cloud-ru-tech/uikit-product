@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React from 'react';
 
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 import { Radio, RadioGroup, RadioProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';

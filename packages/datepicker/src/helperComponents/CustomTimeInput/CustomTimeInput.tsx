@@ -1,7 +1,7 @@
 import { forwardRef, useEffect, useMemo, useState } from 'react';
 
-import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
+import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { AmPmFormat, Texts, textProvider } from '../../helpers/texts-provider';
 import * as S from './styled';

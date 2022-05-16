@@ -1,11 +1,11 @@
 import cloneDeep from 'lodash.clonedeep';
 import { FC, useCallback, useMemo } from 'react';
 
-import { DatePicker } from '@sbercloud/uikit-react-datepicker';
-import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { SimpleInput } from '@sbercloud/uikit-react-input-private';
-import { OptionTypeBase, Select } from '@sbercloud/uikit-react-select';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { DatePicker } from '@sbercloud/uikit-product-datepicker';
+import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { SimpleInput } from '@sbercloud/uikit-product-input-private';
+import { OptionTypeBase, Select } from '@sbercloud/uikit-product-select';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { findSelectValue } from '../../helpers/getValue';
 import { LogicConditionType, getLogicOptionByValue, logicOptions } from '../../helpers/logicOptions';

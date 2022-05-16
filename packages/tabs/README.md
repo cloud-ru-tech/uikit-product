@@ -1,7 +1,7 @@
 # React Tabs
 
 ## Installation
-`npm i @sbercloud/uikit-react-tabs`
+`npm i @sbercloud/uikit-product-tabs`
 
 ## Introduction
 Component supports controlled & uncontrolled approaches of work simultaneously.

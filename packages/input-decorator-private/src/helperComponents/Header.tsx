@@ -1,5 +1,5 @@
-import { Tooltip, TooltipProps } from '@sbercloud/uikit-react-tooltip';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../helpers/texts-provider';
 import * as S from './styled';

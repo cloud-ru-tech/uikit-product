@@ -1,7 +1,7 @@
 # React Hero Banner
 
 ## Installation
-`npm i @sbercloud/uikit-react-hero-banner`
+`npm i @sbercloud/uikit-product-hero-banner`
 
 [Changelog](./CHANGELOG.md)
 

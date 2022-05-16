@@ -3,7 +3,7 @@ import {
   SendInterfaceSVG,
   Smile5InterfaceSVG,
   ViewTileInterfaceSVG,
-} from '@sbercloud/uikit-react-icons';
+} from '@sbercloud/uikit-product-icons';
 
 import { FilterTypes } from '../../src/constants';
 

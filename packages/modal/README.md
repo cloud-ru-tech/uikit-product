@@ -1,7 +1,7 @@
 # React Modal
 
 ## Installation
-`npm i @sbercloud/uikit-react-modal`
+`npm i @sbercloud/uikit-product-modal`
 
 [Changelog](./CHANGELOG.md)
 

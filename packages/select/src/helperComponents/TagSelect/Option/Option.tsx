@@ -3,8 +3,8 @@ import isEqual from 'lodash.isequal';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { CircleCheckOutlineInterfaceSVG, DeleteInterfaceSVG, EditInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { CircleCheckOutlineInterfaceSVG, DeleteInterfaceSVG, EditInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { ColorPicker, OptionTypeColor } from '../../../components';
 import { Texts, textProvider } from '../../../helpers/texts-provider';

@@ -1,4 +1,4 @@
-import { useForceUpdateOnPageLoadedCompletely } from '@sbercloud/uikit-utils';
+import { useForceUpdateOnPageLoadedCompletely } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
 

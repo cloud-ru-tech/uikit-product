@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { DropdownUpInterfaceSVG, FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { Divider } from '@sbercloud/uikit-product-divider';
+import { DropdownUpInterfaceSVG, FavouriteInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import {
   ButtonGroupStyled,

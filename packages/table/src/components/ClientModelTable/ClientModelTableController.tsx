@@ -1,8 +1,8 @@
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { AgGridTypes, TablePrivateProps } from '@sbercloud/uikit-react-table-private';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { AgGridTypes, TablePrivateProps } from '@sbercloud/uikit-product-table-private';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import { ClientModelTableView } from './ClientModelTableView';

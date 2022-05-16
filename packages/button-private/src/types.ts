@@ -1,7 +1,7 @@
 import { MouseEventHandler } from 'react';
 
-import { TooltipProps } from '@sbercloud/uikit-react-tooltip';
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';

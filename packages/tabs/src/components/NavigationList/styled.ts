@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { DEFAULT_STYLES } from '@sbercloud/uikit-utils';
+import { DEFAULT_STYLES } from '@sbercloud/uikit-product-utils';
 
 import { Sizes } from '../../helpers/types';
 

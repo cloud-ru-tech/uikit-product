@@ -2,7 +2,7 @@ import { cx } from '@linaria/core';
 import { SyntheticEvent, useMemo } from 'react';
 import ReactSwitch from 'react-switch';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Size, SizePropsMap } from './constants';
 import { Wrapper, switchClassName, switchClassNameChecked, switchClassNameDisabled } from './styled';

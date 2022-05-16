@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-stepper`
+`npm i @sbercloud/uikit-product-stepper`
 
 [Changelog](./CHANGELOG.md)
 

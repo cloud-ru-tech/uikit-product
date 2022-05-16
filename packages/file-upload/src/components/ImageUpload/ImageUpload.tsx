@@ -1,6 +1,6 @@
 import { ChangeEvent, ReactElement, useEffect, useState } from 'react';
 
-import { ButtonRound } from '@sbercloud/uikit-react-button';
+import { ButtonRound } from '@sbercloud/uikit-product-button';
 
 import { getFileExtension, removeExtFromFileName } from '../../utils';
 import { FileUpload } from '../FileUpload';

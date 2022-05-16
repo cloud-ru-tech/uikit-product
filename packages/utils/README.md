@@ -1,7 +1,7 @@
 # Utils
 
 ## Installation
-`npm i @sbercloud/uikit-utils`
+`npm i @sbercloud/uikit-product-utils`
 
 ### Config provider
 
@@ -14,7 +14,7 @@ If component is mounted, then it extends html tag by current lang and current th
 creates text provider
 
 ```typescript jsx
-import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-utils';
+import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-product-utils';
 
 enum Texts {
   Hide = 'Hide',
@@ -37,7 +37,7 @@ export const textProvider = createTextProvider<Texts>(Dictionary, 'package-name'
 return props matched to `/^(data-test|aria)-/` regexp
 
 ```typescript jsx
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 const sampleProps = {
   ['data-test-id']: '1',
@@ -58,7 +58,7 @@ extractSupportProps(sampleProps) => {
 return props matched to `/^data-test-/` regexp
 
 ```typescript jsx
-import { extractDataTestProps } from '@sbercloud/uikit-utils';
+import { extractDataTestProps } from '@sbercloud/uikit-product-utils';
 
 const sampleProps = {
   ['data-test-id']: '1',
@@ -78,7 +78,7 @@ extractDataTestProps(sampleProps) => {
 return props not matched to `/^(data-test|aria)-/` regexp
 
 ```typescript jsx
-import { excludeSupportProps } from '@sbercloud/uikit-utils';
+import { excludeSupportProps } from '@sbercloud/uikit-product-utils';
 
 const sampleProps = {
   ['data-test-id']: '1',
@@ -100,7 +100,7 @@ excludeSupportProps(sampleProps) => {
 If you need to repeat mouse click behavior via keyboard pressing you may use following approach:
 
 ```typescript jsx
-import { keyboardSelectHandler } from '@sbercloud/uikit-utils';
+import { keyboardSelectHandler } from '@sbercloud/uikit-product-utils';
 
 
 <div
@@ -120,7 +120,7 @@ In that case Space or Enter pressing when component in focus will be equivalent 
 Require Config Provider to be mounted
 
 ```typescript jsx
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 function Component() {
   const { languageCode, changeLanguage } = useLanguage();
@@ -132,7 +132,7 @@ function Component() {
 Require Config Provider to be mounted
 
 ```typescript jsx
-import { useTheme } from '@sbercloud/uikit-utils';
+import { useTheme } from '@sbercloud/uikit-product-utils';
 
 function Component() {
   const { theme, changeTheme } = useTheme();
@@ -144,7 +144,7 @@ function Component() {
 Component will rerender after each `rerender`'s function call.
 
 ```typescript jsx
-import { useForceUpdate } from '@sbercloud/uikit-utils';
+import { useForceUpdate } from '@sbercloud/uikit-product-utils';
 
 function Component() {
   const rerender = useForceUpdate();
@@ -160,7 +160,7 @@ Component will rerender after window's `load` event happened.
 Could be helpfull in cases when you need await for css applied.
 
 ```typescript jsx
-import { useForceUpdateOnPageLoadedCompletely } from '@sbercloud/uikit-utils';
+import { useForceUpdateOnPageLoadedCompletely } from '@sbercloud/uikit-product-utils';
 
 function Component() {
     useForceUpdateOnPageLoadedCompletely(); 

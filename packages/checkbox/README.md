@@ -1,7 +1,7 @@
 # React Checkbox
 
 ## Installation
-`npm i @sbercloud/uikit-react-checkbox`
+`npm i @sbercloud/uikit-product-checkbox`
 
 ## Props
 ```typescript

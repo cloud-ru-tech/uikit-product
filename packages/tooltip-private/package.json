@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-tooltip-private",
+  "name": "@sbercloud/uikit-product-tooltip-private",
   "title": "React Tooltip Private",
   "version": "1.2.8",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/tooltip-private",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/tooltip-private",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/tooltip-private"
   },
   "author": "Shirochenkov Aleksei <aashirochenkov@sbercloud.ru>",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-utils": "2.6.0",
+    "@sbercloud/uikit-product-utils": "2.6.0",
     "react-popper-tooltip": "4.3.1"
   },
   "peerDependencies": {

@@ -1,7 +1,7 @@
 # React Textarea Private
 
 ## Installation
-`npm i @sbercloud/uikit-react-textarea-private`
+`npm i @sbercloud/uikit-product-textarea-private`
 
 [Changelog](./CHANGELOG.md)
 

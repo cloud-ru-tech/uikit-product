@@ -1,9 +1,9 @@
 # React Tooltip
 
 ## Installation
-`npm i @sbercloud/uikit-react-tooltip`
+`npm i @sbercloud/uikit-product-tooltip`
 
-## [Private Tooltip Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/tooltip-private/CHANGELOG.md)
+## [Private Tooltip Changelog](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/tooltip-private/CHANGELOG.md)
 
 ## Usage
 ```typescript jsx

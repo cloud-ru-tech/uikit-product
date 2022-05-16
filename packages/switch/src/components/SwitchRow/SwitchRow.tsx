@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 
-import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Tooltip } from '@sbercloud/uikit-react-tooltip';
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Tooltip } from '@sbercloud/uikit-product-tooltip';
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Switch } from '../Switch';
 import * as S from './styled';

@@ -1,3 +1,5 @@
+const name = require('./package.json').name;
+
 module.exports = (buildType, version) => ({
   sourceType: 'unambiguous',
   presets: [
@@ -13,7 +15,7 @@ module.exports = (buildType, version) => ({
     [
       '@linaria',
       version && {
-        classNameSlug: (hash, title) => `uikit-${title}-${version}-${hash}`,
+        classNameSlug: (hash, title) => `${name}-${title}-${version}-${hash}`,
       },
     ],
   ].filter(Boolean),

@@ -2,10 +2,10 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { CopyInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
-import { H2_STYLES, H4_STYLES } from '@sbercloud/uikit-typography';
+import { Divider } from '@sbercloud/uikit-product-divider';
+import { CopyInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
+import { H2_STYLES, H4_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { BADGE } from '#storybookConstants';
 

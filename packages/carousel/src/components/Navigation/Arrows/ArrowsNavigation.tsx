@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-import { ButtonOverlay } from '@sbercloud/uikit-react-button';
-import { ArrowBoldLeftInterfaceSVG, ArrowBoldRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { ButtonOverlay } from '@sbercloud/uikit-product-button';
+import { ArrowBoldLeftInterfaceSVG, ArrowBoldRightInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { getTooltipsSettings } from '../../../helpers';
 import { TooltipsSettings } from '../../../types';

@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 
-import { Button } from '@sbercloud/uikit-react-button';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { TEXT_1_STYLES } from '@sbercloud/uikit-typography';
+import { Button } from '@sbercloud/uikit-product-button';
+import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
 
 export const FilterWrap = styled.div`
   width: 240px;

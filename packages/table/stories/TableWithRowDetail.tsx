@@ -1,11 +1,11 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { DropdownMenu } from '@sbercloud/uikit-react-dropdown';
-import { FormField } from '@sbercloud/uikit-react-form';
-import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Input } from '@sbercloud/uikit-react-input';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { DropdownMenu } from '@sbercloud/uikit-product-dropdown';
+import { FormField } from '@sbercloud/uikit-product-form';
+import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Input } from '@sbercloud/uikit-product-input';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

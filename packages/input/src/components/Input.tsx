@@ -1,8 +1,8 @@
 import { forwardRef } from 'react';
 
-import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-react-input-decorator-private';
-import { SimpleInput, SimpleInputProps } from '@sbercloud/uikit-react-input-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-product-input-decorator-private';
+import { SimpleInput, SimpleInputProps } from '@sbercloud/uikit-product-input-private';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type InputProps = Omit<InputDecoratorPrivateProps, 'children'> & Omit<SimpleInputProps, 'error'>;
 

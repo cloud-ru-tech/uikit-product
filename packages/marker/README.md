@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-marker`
+`npm i @sbercloud/uikit-product-marker`
 
 ## Props
 

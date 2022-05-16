@@ -1,4 +1,4 @@
-import { LogicConditionType, TFilterOptionType, TFilterValueType } from '@sbercloud/uikit-react-filter';
+import { LogicConditionType, TFilterOptionType, TFilterValueType } from '@sbercloud/uikit-product-filter';
 
 const groupedServices = [
   {

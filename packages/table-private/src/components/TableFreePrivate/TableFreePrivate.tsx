@@ -7,7 +7,7 @@ import { AgGridReact } from '@ag-grid-community/react';
 import { cx } from '@linaria/core';
 import { useMemo } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
 import { styledTable } from '../../helpers/styled';

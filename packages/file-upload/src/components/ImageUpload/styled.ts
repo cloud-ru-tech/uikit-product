@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 export const ImageUploadWrap = styled.div`
   display: flex;

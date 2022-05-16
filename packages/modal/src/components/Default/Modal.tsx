@@ -2,10 +2,10 @@ import { cx } from '@linaria/core';
 import React, { useMemo } from 'react';
 import RCModal from 'react-modal';
 
-import { Button, ButtonIcon } from '@sbercloud/uikit-react-button';
-import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Tooltip } from '@sbercloud/uikit-react-tooltip';
-import { WithSupportProps, extractDataTestProps, useLanguage } from '@sbercloud/uikit-utils';
+import { Button, ButtonIcon } from '@sbercloud/uikit-product-button';
+import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Tooltip } from '@sbercloud/uikit-product-tooltip';
+import { WithSupportProps, extractDataTestProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import {

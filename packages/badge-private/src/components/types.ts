@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Types } from './constants';
 

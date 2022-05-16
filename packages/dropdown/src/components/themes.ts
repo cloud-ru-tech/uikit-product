@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 
-import { DEPRECATED_EXPORT_VARS, EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS, EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 export const COLORS = {
   TEXT: '--dropdown-text-color',

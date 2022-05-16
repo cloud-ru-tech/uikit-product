@@ -1,4 +1,4 @@
-import { RadioCheckedInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { RadioCheckedInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import * as S from './styled';
 

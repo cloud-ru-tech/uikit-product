@@ -3,7 +3,7 @@ import ru from 'date-fns/locale/ru';
 import { useCallback, useMemo, useState } from 'react';
 import RDatePicker, { registerLocale } from 'react-datepicker';
 
-import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-utils';
+import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { CustomContainer } from '../../helperComponents/CustomContainer';
 import { CustomDateInput } from '../../helperComponents/CustomDateInput';

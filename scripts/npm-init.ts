@@ -31,7 +31,7 @@ const printInfoMessages = () => {
 
   logInfo(`The package title will be used for:
   1. Package Title in package.json (obviously :)) (Example package name: "My New Package")
-  2. Folder- and filenames - will be converted to lowercase and hyphen-separated (for example react-my-new-package)
+  2. Folder- and filenames - will be converted to lowercase and hyphen-separated (for example my-new-package)
   3. Componentname - will remove React prefix and any spaces, and get PascalCased (for example MyNewPackage)`);
 
   logHelp('Answer the following questions to get started, or press CTRL+C (or Control+C) to abort...');
@@ -43,11 +43,6 @@ inquirer
   .prompt([
     {
       type: 'confirm',
-      name: 'isComponent',
-      message: 'Is it React Component Package?',
-    },
-    {
-      type: 'confirm',
       name: 'isPackagePrivate',
       message: 'Is it Private Package?',
     },
@@ -56,12 +51,8 @@ inquirer
       name: 'packageTitle',
       message: 'Package Title',
       filter: (input, answers) => {
-        const { isComponent, isPackagePrivate } = answers;
+        const { isPackagePrivate } = answers;
         let capitalized = generatePackageTitle(input);
-
-        if (isComponent) {
-          capitalized = `React ${capitalized}`;
-        }
 
         if (isPackagePrivate) {
           capitalized = `${capitalized} Private`;
@@ -106,8 +97,6 @@ inquirer
       componentName,
       packageDescription: answers.packageDescription,
     });
-
-    //fileUtils.updateGlobalReadme({ packageRootFolderName, packageTitle });
 
     logDebug('Finished generating files!');
     logInfo('Bootstrapping new package...This will take a few moments...');

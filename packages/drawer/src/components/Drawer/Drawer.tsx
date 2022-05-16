@@ -4,9 +4,9 @@ import { cx } from '@linaria/core';
 import RcDrawer from 'rc-drawer';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { BREAKPOINTS, WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { BREAKPOINTS, WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import { widthToCssWidth } from '../../helpers/widthToCssWidth';

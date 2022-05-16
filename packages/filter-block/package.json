@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-filter-block",
+  "name": "@sbercloud/uikit-product-filter-block",
   "title": "React Filter Block",
   "version": "0.2.46",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/filter-block",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/filter-block",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/filter-block"
   },
   "author": "Лукашев Сергей <smlukashev@sbercloud.ru>",
@@ -27,12 +27,12 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "5.0.9",
-    "@sbercloud/uikit-react-checkbox": "3.0.15",
-    "@sbercloud/uikit-react-radio": "2.0.34",
-    "@sbercloud/uikit-theme": "0.33.1",
-    "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.6.0"
+    "@sbercloud/uikit-product-button": "5.0.9",
+    "@sbercloud/uikit-product-checkbox": "3.0.15",
+    "@sbercloud/uikit-product-radio": "2.0.34",
+    "@sbercloud/uikit-product-theme": "0.33.1",
+    "@sbercloud/uikit-product-typography": "1.1.0",
+    "@sbercloud/uikit-product-utils": "2.6.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

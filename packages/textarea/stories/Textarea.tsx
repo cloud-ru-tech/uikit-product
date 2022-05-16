@@ -2,8 +2,8 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useEffect, useRef, useState } from 'react';
 
-import { Button } from '@sbercloud/uikit-react-button';
-import { Divider } from '@sbercloud/uikit-react-divider';
+import { Button } from '@sbercloud/uikit-product-button';
+import { Divider } from '@sbercloud/uikit-product-divider';
 
 import { BADGE } from '#storybookConstants';
 

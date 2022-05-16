@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
+import globConfig from '../../package.json';
 import { version as themeVersion } from '../../packages/theme/package.json';
 
 const PackagesRootFolder = 'packages';
@@ -34,17 +35,17 @@ export const packageJson = ({
   packageRootFolderName: string;
 }) => {
   const config = {
-    name: `@sbercloud/uikit-${packageName}`,
+    name: `@sbercloud/${globConfig.name}-${packageName}`,
     title: `${packageTitle}`,
     version: '0.0.0',
     sideEffects: ['*.css', '*.woff', '*.woff2'],
     description: `${packageDescription}`,
     main: './dist/esm/index.js',
     module: './dist/esm/index.js',
-    homepage: `https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/${packageRootFolderName}`,
+    homepage: `${globConfig.homepage}packages/${packageRootFolderName}`,
     repository: {
       type: 'git',
-      url: 'https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git',
+      url: globConfig.repository.url,
       directory: `packages/${packageRootFolderName}`,
     },
     author: `${user} <${email}>`,
@@ -53,7 +54,7 @@ export const packageJson = ({
     license: 'UNLICENSED',
     scripts: {},
     dependencies: {
-      '@sbercloud/uikit-theme': themeVersion,
+      '@sbercloud/uikit-product-theme': themeVersion,
     },
     devDependencies: {},
     peerDependencies: {
@@ -98,7 +99,7 @@ export const readme = ({
   const readmeContent = `# ${packageTitle}
 
 ## Installation
-\`npm i @sbercloud/uikit-${packageName}\`
+\`npm i @sbercloud/${globConfig.name}-${packageName}\`
 
 [Changelog](./CHANGELOG.md)
 

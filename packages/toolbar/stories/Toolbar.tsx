@@ -1,9 +1,9 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { TFilterValueType } from '@sbercloud/uikit-react-filter';
-import { DeleteInterfaceSVG, RowExpandedInterfaceSVG, TableSettingsInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { TFilterValueType } from '@sbercloud/uikit-product-filter';
+import { DeleteInterfaceSVG, RowExpandedInterfaceSVG, TableSettingsInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

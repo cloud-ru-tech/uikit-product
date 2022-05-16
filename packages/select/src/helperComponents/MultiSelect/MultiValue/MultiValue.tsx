@@ -1,7 +1,7 @@
 import { ReactText } from 'react';
 import { MultiValueProps } from 'react-select';
 
-import { Tag } from '@sbercloud/uikit-react-tag';
+import { Tag } from '@sbercloud/uikit-product-tag';
 
 import { MultiselectOptionType } from '../../../helpers/types';
 import { TagValue } from './styled';

@@ -2,7 +2,7 @@ import { ModifierArguments, Obj } from '@popperjs/core';
 import { useCallback, useMemo, useState } from 'react';
 import RDatePicker, { ReactDatePickerProps } from 'react-datepicker';
 
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { CustomTimeInput } from '../../helperComponents/CustomTimeInput';
 import { TimeFormat } from '../../helpers/texts-provider';

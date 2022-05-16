@@ -1,6 +1,6 @@
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { ChevronLeftInterfaceSVG, ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { ChevronLeftInterfaceSVG, ChevronRightInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import * as S from './styled';

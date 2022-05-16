@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-button",
+  "name": "@sbercloud/uikit-product-button",
   "title": "React Button",
   "version": "5.0.9",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/button",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/button",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/button"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
@@ -28,11 +28,11 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-copy-to-clipboard": "1.1.1",
-    "@sbercloud/uikit-react-button-private": "1.2.6",
-    "@sbercloud/uikit-react-icons": "3.5.0",
-    "@sbercloud/uikit-theme": "0.33.1",
-    "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.6.0",
+    "@sbercloud/uikit-product-button-private": "1.2.6",
+    "@sbercloud/uikit-product-icons": "3.5.0",
+    "@sbercloud/uikit-product-theme": "0.33.1",
+    "@sbercloud/uikit-product-typography": "1.1.0",
+    "@sbercloud/uikit-product-utils": "2.6.0",
     "react-polymorphic-types": "2.0.0"
   },
   "peerDependencies": {

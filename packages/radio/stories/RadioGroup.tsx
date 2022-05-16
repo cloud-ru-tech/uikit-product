@@ -3,8 +3,8 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { IntelOneApiServiceSVG } from '@sbercloud/uikit-react-icons';
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
+import { IntelOneApiServiceSVG } from '@sbercloud/uikit-product-icons';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 import { Radio, RadioCard, RadioCardProps, RadioGroup, RadioGroupProps, RadioProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';

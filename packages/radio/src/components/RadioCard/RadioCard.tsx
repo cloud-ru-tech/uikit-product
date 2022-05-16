@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { RadioGroupContext } from '../RadioGroup/context';
 import { HiddenRadio, Wrapper } from './styled';

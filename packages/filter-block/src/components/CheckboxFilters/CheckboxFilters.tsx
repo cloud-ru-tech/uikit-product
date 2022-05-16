@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import { ButtonGhost } from '@sbercloud/uikit-react-button';
-import { Checkbox } from '@sbercloud/uikit-react-checkbox';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { ButtonGhost } from '@sbercloud/uikit-product-button';
+import { Checkbox } from '@sbercloud/uikit-product-checkbox';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { FilterTypes } from '../../constants';
 import { Texts, textProvider } from '../../helpers/textProviders';

@@ -1,7 +1,7 @@
 # React Attention
 
 ## Installation
-`npm i @sbercloud/uikit-react-attention`
+`npm i @sbercloud/uikit-product-attention`
 
 ## Components interface
 ```typescript

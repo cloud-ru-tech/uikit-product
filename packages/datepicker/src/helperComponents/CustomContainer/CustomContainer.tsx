@@ -2,9 +2,9 @@ import isToday from 'date-fns/isToday';
 import { useCallback, useMemo } from 'react';
 import { ReactDatePickerProps } from 'react-datepicker';
 
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { Switch } from '@sbercloud/uikit-react-switch';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { Divider } from '@sbercloud/uikit-product-divider';
+import { Switch } from '@sbercloud/uikit-product-switch';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { DatePickerProps, TimePicker } from '../../components';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';

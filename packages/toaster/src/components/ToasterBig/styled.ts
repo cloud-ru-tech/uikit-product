@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { H5_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { H5_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from '../themes';
 import { ToasterBigStatus, ToasterBigVariant } from './constants';

@@ -1,8 +1,8 @@
 import debounce from 'lodash.debounce';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 
-import { ChevronRightInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Tooltip } from '@sbercloud/uikit-react-tooltip';
+import { ChevronRightInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 
 import { getDiffWidth, getSubstr, getWidth, isEllipsisActive, measureText, toStateItems } from '../helpers/calc';
 import { CRUMB_MAX_LENGTH } from '../helpers/constants';

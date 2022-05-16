@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-input-private",
+  "name": "@sbercloud/uikit-product-input-private",
   "title": "React Input Private",
   "version": "2.3.14",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/input-private",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/input-private",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/input-private"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
@@ -27,11 +27,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-button": "5.0.9",
-    "@sbercloud/uikit-react-icons": "3.5.0",
-    "@sbercloud/uikit-theme": "0.33.1",
-    "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.6.0",
+    "@sbercloud/uikit-product-button": "5.0.9",
+    "@sbercloud/uikit-product-icons": "3.5.0",
+    "@sbercloud/uikit-product-theme": "0.33.1",
+    "@sbercloud/uikit-product-typography": "1.1.0",
+    "@sbercloud/uikit-product-utils": "2.6.0",
     "merge-refs": "1.0.0",
     "react-imask": "6.4.2"
   },

@@ -1,6 +1,6 @@
-import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Tooltip, TooltipProps } from '@sbercloud/uikit-react-tooltip';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { FORM_FIELD_TRANSLATIONS } from '../../helpers/formFieldTranslations';
 import * as S from './styled';

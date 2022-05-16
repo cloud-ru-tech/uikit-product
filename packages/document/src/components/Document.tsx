@@ -4,10 +4,10 @@ import { MouseEvent, useEffect, useRef, useState } from 'react';
 
 import { downloadFile } from '@sbercloud/ft-download-file';
 import { formatBytes } from '@sbercloud/ft-formatters';
-import { ButtonIcon, ButtonIconProps } from '@sbercloud/uikit-react-button';
-import { CloseInterfaceSVG, FileInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Tooltip } from '@sbercloud/uikit-react-tooltip';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { ButtonIcon, ButtonIconProps } from '@sbercloud/uikit-product-button';
+import { CloseInterfaceSVG, FileInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Tooltip } from '@sbercloud/uikit-product-tooltip';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { getFileType } from '../helpers';
 import { FileProps } from '../types';

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 interface DateFormatterProps {
   value: Date;

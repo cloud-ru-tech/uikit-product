@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-charts",
+  "name": "@sbercloud/uikit-product-charts",
   "title": "React Charts",
   "version": "0.8.17",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/charts",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/charts",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/charts"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
@@ -28,10 +28,10 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-formatters": "1.1.1",
-    "@sbercloud/uikit-react-divider": "2.0.25",
-    "@sbercloud/uikit-theme": "0.33.1",
-    "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.6.0",
+    "@sbercloud/uikit-product-divider": "2.0.25",
+    "@sbercloud/uikit-product-theme": "0.33.1",
+    "@sbercloud/uikit-product-typography": "1.1.0",
+    "@sbercloud/uikit-product-utils": "2.6.0",
     "d3-scale": "4.0.2",
     "lodash.merge": "4.6.2",
     "lodash.range": "3.2.0",

@@ -1,6 +1,6 @@
 import memoize from 'memoizee';
 
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
 import { INPUT_PLACEHOLDER } from './constants';
 import { AmPmFormat } from './texts-provider';

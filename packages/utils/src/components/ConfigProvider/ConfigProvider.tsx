@@ -1,6 +1,6 @@
 import { FC, useEffect, useLayoutEffect, useState } from 'react';
 
-import { color, globals } from '@sbercloud/uikit-theme';
+import { color, globals } from '@sbercloud/uikit-product-theme';
 
 import { DEFAULT, DEPRECATED_COLOR, POST_MESSAGE_KEY } from '../../constants';
 import { tryParseJson } from '../../helpers/tryParseJson';

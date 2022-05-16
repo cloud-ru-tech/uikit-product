@@ -1,5 +1,5 @@
-import { UserInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { TruncateString } from '@sbercloud/uikit-react-truncate-string';
+import { UserInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
 export const connectors = [
   {

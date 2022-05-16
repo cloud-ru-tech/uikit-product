@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H3_STYLES, H5_STYLES, TEXT_4_STYLES } from '@sbercloud/uikit-typography';
+import { H3_STYLES, H5_STYLES, TEXT_4_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { XAxisPosition } from './constants';
 import { LEGEND_HEIGHT, TICKS_SIZE, TITLE_HEIGHT, X_AXIS_LABEL_HEIGHT } from './helpers/constants';

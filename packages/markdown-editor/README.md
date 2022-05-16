@@ -1,7 +1,7 @@
 # React Markdown Editor
 
 ## Installation
-`npm i @sbercloud/uikit-react-markdown-editor`
+`npm i @sbercloud/uikit-product-markdown-editor`
 
 ## Props
 ```typescript

@@ -1,9 +1,9 @@
 import { useCallback, useMemo, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { Button } from '@sbercloud/uikit-react-button';
-import { Tag } from '@sbercloud/uikit-react-tag';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { Button } from '@sbercloud/uikit-product-button';
+import { Tag } from '@sbercloud/uikit-product-tag';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { ColorPicker, OptionTypeColor } from '../../../components';
 import { COLOR_VALUES } from '../../../constants';

@@ -7,7 +7,7 @@ import {
   QuestionInterfaceSVG,
   RadioCheckedInterfaceSVG,
   RadioUncheckedInterfaceSVG,
-} from '@sbercloud/uikit-react-icons';
+} from '@sbercloud/uikit-product-icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

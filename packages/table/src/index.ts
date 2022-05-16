@@ -1,2 +1,2 @@
 export * from './components';
-export { enabledEnterpriseLicenseAgGrid } from '@sbercloud/uikit-react-table-private';
+export { enabledEnterpriseLicenseAgGrid } from '@sbercloud/uikit-product-table-private';

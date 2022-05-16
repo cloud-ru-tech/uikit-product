@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 
-import { ArrowLinkInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { TEXT_1_STYLES, TEXT_2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-typography';
-import { ANIMATIONS } from '@sbercloud/uikit-utils';
+import { ArrowLinkInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { TEXT_1_STYLES, TEXT_2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
+import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 import { Sizes, Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';

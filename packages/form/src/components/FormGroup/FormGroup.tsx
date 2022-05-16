@@ -1,5 +1,5 @@
-import { QuestionInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Tooltip, TooltipProps } from '@sbercloud/uikit-react-tooltip';
+import { QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 
 import { Content, Header, Number, Title, Wrapper, hintClassName, tooltipTriggerClassName } from './styled';
 

@@ -1,6 +1,6 @@
 import { MouseEventHandler } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export enum Variants {
   Fixed = 'Fixed',

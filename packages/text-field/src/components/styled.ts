@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
-import { InputPrivate } from '@sbercloud/uikit-react-input-private';
-import { TextareaPrivate } from '@sbercloud/uikit-react-textarea-private';
+import { InputPrivate } from '@sbercloud/uikit-product-input-private';
+import { TextareaPrivate } from '@sbercloud/uikit-product-textarea-private';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 

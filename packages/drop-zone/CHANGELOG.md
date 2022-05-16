@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [0.2.17](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.16...@sbercloud/uikit-react-drop-zone@0.2.17) (2022-05-05)
+## [0.2.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.16...@sbercloud/uikit-react-drop-zone@0.2.17) (2022-05-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.16](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.15...@sbercloud/uikit-react-drop-zone@0.2.16) (2022-04-26)
+## [0.2.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.15...@sbercloud/uikit-react-drop-zone@0.2.16) (2022-04-26)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.15](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.14...@sbercloud/uikit-react-drop-zone@0.2.15) (2022-04-22)
+## [0.2.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.14...@sbercloud/uikit-react-drop-zone@0.2.15) (2022-04-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -27,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.14](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.13...@sbercloud/uikit-react-drop-zone@0.2.14) (2022-04-18)
+## [0.2.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.13...@sbercloud/uikit-react-drop-zone@0.2.14) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -35,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.13](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.12...@sbercloud/uikit-react-drop-zone@0.2.13) (2022-04-13)
+## [0.2.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.12...@sbercloud/uikit-react-drop-zone@0.2.13) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -43,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.12](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.11...@sbercloud/uikit-react-drop-zone@0.2.12) (2022-04-13)
+## [0.2.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.11...@sbercloud/uikit-react-drop-zone@0.2.12) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -51,7 +51,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.10...@sbercloud/uikit-react-drop-zone@0.2.11) (2022-04-04)
+## [0.2.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.10...@sbercloud/uikit-react-drop-zone@0.2.11) (2022-04-04)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -59,7 +59,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.9...@sbercloud/uikit-react-drop-zone@0.2.10) (2022-04-01)
+## [0.2.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.9...@sbercloud/uikit-react-drop-zone@0.2.10) (2022-04-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -67,7 +67,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.8...@sbercloud/uikit-react-drop-zone@0.2.9) (2022-03-29)
+## [0.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.8...@sbercloud/uikit-react-drop-zone@0.2.9) (2022-03-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -75,7 +75,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.7...@sbercloud/uikit-react-drop-zone@0.2.8) (2022-03-25)
+## [0.2.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.7...@sbercloud/uikit-react-drop-zone@0.2.8) (2022-03-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -83,7 +83,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.6...@sbercloud/uikit-react-drop-zone@0.2.7) (2022-03-23)
+## [0.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.6...@sbercloud/uikit-react-drop-zone@0.2.7) (2022-03-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -91,7 +91,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.5...@sbercloud/uikit-react-drop-zone@0.2.6) (2022-03-23)
+## [0.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.5...@sbercloud/uikit-react-drop-zone@0.2.6) (2022-03-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -99,7 +99,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.4...@sbercloud/uikit-react-drop-zone@0.2.5) (2022-03-23)
+## [0.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.4...@sbercloud/uikit-react-drop-zone@0.2.5) (2022-03-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -107,26 +107,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.3...@sbercloud/uikit-react-drop-zone@0.2.4) (2022-03-22)
+## [0.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.3...@sbercloud/uikit-react-drop-zone@0.2.4) (2022-03-22)
 
 
 ### Bug Fixes
 
-* move helpers to src and change link size ([c78556d](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/c78556d9b9160d98fc0cfe7cb063951a4bcb9552))
+* move helpers to src and change link size ([c78556d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c78556d9b9160d98fc0cfe7cb063951a4bcb9552))
 
 
 
 
 
-## [0.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.2...@sbercloud/uikit-react-drop-zone@0.2.3) (2022-03-22)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
-
-
-
-
-
-## [0.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-drop-zone@0.2.1...@sbercloud/uikit-react-drop-zone@0.2.2) (2022-03-22)
+## [0.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.2...@sbercloud/uikit-react-drop-zone@0.2.3) (2022-03-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -134,7 +126,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-drop-zone@0.2.0...@sbercloud/uikit-react-drop-zone@0.2.1) (2022-03-04)
+## [0.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-drop-zone@0.2.1...@sbercloud/uikit-react-drop-zone@0.2.2) (2022-03-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
 
@@ -142,12 +134,20 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-drop-zone@0.1.0...@sbercloud/uikit-react-drop-zone@0.2.0) (2022-03-03)
+## [0.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-drop-zone@0.2.0...@sbercloud/uikit-react-drop-zone@0.2.1) (2022-03-04)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-drop-zone
+
+
+
+
+
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-drop-zone@0.1.0...@sbercloud/uikit-react-drop-zone@0.2.0) (2022-03-03)
 
 
 ### Features
 
-* add translation and classname ([CP-4854](https://jira.sbercloud.tech/browse/CP-4854)) ([201cdcd](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/201cdcdd858dfb443c9d344e19436aa43c2a29fd))
+* add translation and classname ([CP-4854](https://jira.sbercloud.tech/browse/CP-4854)) ([201cdcd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/201cdcdd858dfb443c9d344e19436aa43c2a29fd))
 
 
 
@@ -158,7 +158,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* add first version ([CP-4854](https://jira.sbercloud.tech/browse/CP-4854)) ([9d1c6e7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9d1c6e72a1e73dee2c9c24b1f4d0eb84dd5921cf))
+* add first version ([CP-4854](https://jira.sbercloud.tech/browse/CP-4854)) ([9d1c6e7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/9d1c6e72a1e73dee2c9c24b1f4d0eb84dd5921cf))
 
 
 

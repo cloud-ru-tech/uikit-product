@@ -3,7 +3,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-icons`
+`npm i @sbercloud/uikit-product-icons`
 
 ## Components interface 
 ```typescript

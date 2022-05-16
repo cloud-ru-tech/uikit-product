@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Button } from '@sbercloud/uikit-react-button';
+import { Button } from '@sbercloud/uikit-product-button';
 
 import { BADGE } from '#storybookConstants';
 

@@ -8,16 +8,7 @@
   "compilerOptions": {
     "baseUrl": "packages",
     "paths": {
-      "@sbercloud/uikit-typography": [
-        "./typography/src"
-      ],
-      "@sbercloud/uikit-theme": [
-        "./theme/src"
-      ],
-      "@sbercloud/uikit-utils": [
-        "./utils/src"
-      ],
-      "@sbercloud/uikit-react-*": [
+      "@sbercloud/uikit-product-*": [
         "./*/src"
       ],
       "#storybookConstants": ["../.storybook/constants"],

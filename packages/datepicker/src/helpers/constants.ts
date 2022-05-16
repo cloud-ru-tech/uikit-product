@@ -1,4 +1,4 @@
-import { LanguageCodeType } from '@sbercloud/uikit-utils';
+import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from './texts-provider';
 

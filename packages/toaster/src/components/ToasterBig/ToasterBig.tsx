@@ -1,8 +1,8 @@
 import { MouseEvent, ReactNode } from 'react';
 import { ToastContentProps } from 'react-toastify';
 
-import { ButtonGhost, ButtonIcon } from '@sbercloud/uikit-react-button';
-import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { ButtonGhost, ButtonIcon } from '@sbercloud/uikit-product-button';
+import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { TOASTER_BIG_TEST_IDS } from '../../testIds';
 import { ICONS_BY_STATUS, ToasterBigStatus, ToasterBigVariant } from './constants';

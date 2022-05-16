@@ -1,5 +1,5 @@
-import { StatusTag, StatusTagProps } from '@sbercloud/uikit-react-status';
-import { Tooltip, TooltipProps } from '@sbercloud/uikit-react-tooltip';
+import { StatusTag, StatusTagProps } from '@sbercloud/uikit-product-status';
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 
 export const StatusCell = ({
   value,

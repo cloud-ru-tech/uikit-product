@@ -3,11 +3,11 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
-import { Button } from '@sbercloud/uikit-react-button';
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { Input } from '@sbercloud/uikit-react-input';
-import { Radio, RadioGroup } from '@sbercloud/uikit-react-radio';
-import { Select } from '@sbercloud/uikit-react-select';
+import { Button } from '@sbercloud/uikit-product-button';
+import { Divider } from '@sbercloud/uikit-product-divider';
+import { Input } from '@sbercloud/uikit-product-input';
+import { Radio, RadioGroup } from '@sbercloud/uikit-product-radio';
+import { Select } from '@sbercloud/uikit-product-select';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

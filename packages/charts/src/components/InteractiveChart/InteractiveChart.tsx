@@ -5,7 +5,7 @@ import { useMemo } from 'react';
 import uPlot from 'uplot';
 import UPlotReact from 'uplot-react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { boxPlotOptions, defaultPlotOptions } from './configurations';
 import { PlotTypes } from './constants';

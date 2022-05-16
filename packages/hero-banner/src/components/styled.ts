@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H1_STYLES, TEXT_1_STYLES } from '@sbercloud/uikit-typography';
+import { H1_STYLES, TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
 
 export const Banner = styled.div`
   min-height: 180px;

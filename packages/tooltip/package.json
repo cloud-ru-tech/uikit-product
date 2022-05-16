@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-tooltip",
+  "name": "@sbercloud/uikit-product-tooltip",
   "title": "React Tooltip",
   "version": "2.0.44",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/tooltip",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/tooltip",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/tooltip"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
@@ -27,11 +27,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-link": "3.0.15",
-    "@sbercloud/uikit-react-tooltip-private": "1.2.8",
-    "@sbercloud/uikit-theme": "0.33.1",
-    "@sbercloud/uikit-typography": "1.1.0",
-    "@sbercloud/uikit-utils": "2.6.0"
+    "@sbercloud/uikit-product-link": "3.0.15",
+    "@sbercloud/uikit-product-tooltip-private": "1.2.8",
+    "@sbercloud/uikit-product-theme": "0.33.1",
+    "@sbercloud/uikit-product-typography": "1.1.0",
+    "@sbercloud/uikit-product-utils": "2.6.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

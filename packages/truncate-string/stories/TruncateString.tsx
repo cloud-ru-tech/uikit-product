@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { Slider } from '@sbercloud/uikit-react-slider';
+import { Slider } from '@sbercloud/uikit-product-slider';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

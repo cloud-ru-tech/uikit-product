@@ -1,7 +1,7 @@
 import { useCallback } from 'react';
 
-import { FavouriteInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { FavouriteInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { HiddenCheckbox, Label } from './styled';
 

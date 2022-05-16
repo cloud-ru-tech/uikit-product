@@ -3,26 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [2.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-chip@2.0.10...@sbercloud/uikit-react-chip@2.0.11) (2022-04-18)
+## [2.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-chip@2.0.10...@sbercloud/uikit-react-chip@2.0.11) (2022-04-18)
 
 
 ### Bug Fixes
 
-* fix stories parameters regarding console log errors ([0c7c390](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/0c7c3904ae1041cb01f88c2b901ac9693f2f3c0e))
+* fix stories parameters regarding console log errors ([0c7c390](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0c7c3904ae1041cb01f88c2b901ac9693f2f3c0e))
 
 
 
 
 
-## [2.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-chip@2.0.9...@sbercloud/uikit-react-chip@2.0.10) (2022-04-13)
-
-**Note:** Version bump only for package @sbercloud/uikit-react-chip
-
-
-
-
-
-## [2.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-chip@2.0.8...@sbercloud/uikit-react-chip@2.0.9) (2022-04-01)
+## [2.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-chip@2.0.9...@sbercloud/uikit-react-chip@2.0.10) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -30,7 +22,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-chip@2.0.7...@sbercloud/uikit-react-chip@2.0.8) (2022-03-29)
+## [2.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-chip@2.0.8...@sbercloud/uikit-react-chip@2.0.9) (2022-04-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -38,7 +30,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-chip@2.0.6...@sbercloud/uikit-react-chip@2.0.7) (2022-03-25)
+## [2.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-chip@2.0.7...@sbercloud/uikit-react-chip@2.0.8) (2022-03-29)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -46,7 +38,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-chip@2.0.5...@sbercloud/uikit-react-chip@2.0.6) (2022-03-23)
+## [2.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-chip@2.0.6...@sbercloud/uikit-react-chip@2.0.7) (2022-03-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -54,7 +46,15 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-chip@2.0.4...@sbercloud/uikit-react-chip@2.0.5) (2022-03-22)
+## [2.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-chip@2.0.5...@sbercloud/uikit-react-chip@2.0.6) (2022-03-23)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-chip
+
+
+
+
+
+## [2.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-chip@2.0.4...@sbercloud/uikit-react-chip@2.0.5) (2022-03-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -70,7 +70,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@2.0.2...@sbercloud/uikit-react-chip@2.0.3) (2022-03-02)
+## [2.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-chip@2.0.2...@sbercloud/uikit-react-chip@2.0.3) (2022-03-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -78,7 +78,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@2.0.1...@sbercloud/uikit-react-chip@2.0.2) (2022-02-25)
+## [2.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-chip@2.0.1...@sbercloud/uikit-react-chip@2.0.2) (2022-02-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -86,24 +86,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [2.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@2.0.0...@sbercloud/uikit-react-chip@2.0.1) (2022-02-16)
+## [2.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-chip@2.0.0...@sbercloud/uikit-react-chip@2.0.1) (2022-02-16)
 
 
 ### Bug Fixes
 
-* first stable version of typography ([9fce874](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/9fce8747d03be516626d638ddd34a59a4ce9433a))
-* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
+* first stable version of typography ([9fce874](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/9fce8747d03be516626d638ddd34a59a4ce9433a))
+* got rid of the typography deprecated usages ([98a9e66](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/98a9e66aafaaf5e9a9663dc9a73d82572b90fb93))
 
 
 
 
 
-# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@1.0.3...@sbercloud/uikit-react-chip@2.0.0) (2022-02-14)
+# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-chip@1.0.3...@sbercloud/uikit-react-chip@2.0.0) (2022-02-14)
 
 
 ### Features
 
-* transparent with border and remove margin ([CP-4582](https://jira.sbercloud.tech/browse/CP-4582)) ([17539a5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/17539a546b2673465fdd7f54b4abceb0f414e064))
+* transparent with border and remove margin ([CP-4582](https://jira.sbercloud.tech/browse/CP-4582)) ([17539a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/17539a546b2673465fdd7f54b4abceb0f414e064))
 
 
 ### BREAKING CHANGES
@@ -114,7 +114,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@1.0.2...@sbercloud/uikit-react-chip@1.0.3) (2022-01-21)
+## [1.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-chip@1.0.2...@sbercloud/uikit-react-chip@1.0.3) (2022-01-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -127,24 +127,24 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Bug Fixes
 
-* wrapper has flex behavior instead of old with absolute positioned clear button ([b24341b](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/b24341ba7a513bf18fcb2ac9f21cba5413abcab4))
+* wrapper has flex behavior instead of old with absolute positioned clear button ([b24341b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/b24341ba7a513bf18fcb2ac9f21cba5413abcab4))
 
 
 
 
 
-## [1.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@0.1.2...@sbercloud/uikit-react-chip@1.0.1) (2021-12-09)
+## [1.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-chip@0.1.2...@sbercloud/uikit-react-chip@1.0.1) (2021-12-09)
 
 
 ### Bug Fixes
 
-* first stable version ([c6f6bd7](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/c6f6bd7b1ee4772aa53942355e21648d95112989))
+* first stable version ([c6f6bd7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/c6f6bd7b1ee4772aa53942355e21648d95112989))
 
 
 
 
 
-## [0.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@0.1.1...@sbercloud/uikit-react-chip@0.1.2) (2021-12-02)
+## [0.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-chip@0.1.1...@sbercloud/uikit-react-chip@0.1.2) (2021-12-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -152,7 +152,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [0.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/compare/@sbercloud/uikit-react-chip@0.1.0...@sbercloud/uikit-react-chip@0.1.1) (2021-12-01)
+## [0.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/compare/@sbercloud/uikit-react-chip@0.1.0...@sbercloud/uikit-react-chip@0.1.1) (2021-12-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-chip
 
@@ -165,7 +165,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* adds not stable Chip ([AICD-2456](https://jira.sbercloud.tech/browse/AICD-2456)) ([5ae461f](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/commit/5ae461f0761039fad142e5127ae07a2da79e13d6))
+* adds not stable Chip ([AICD-2456](https://jira.sbercloud.tech/browse/AICD-2456)) ([5ae461f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commit/5ae461f0761039fad142e5127ae07a2da79e13d6))
 
 
 

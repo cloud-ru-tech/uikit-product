@@ -1,6 +1,6 @@
 import { ChangeEvent, FocusEventHandler, RefAttributes } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Sizes, Types } from './constants';
 

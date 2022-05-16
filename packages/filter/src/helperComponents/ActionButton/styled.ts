@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 const { COLORS_FILTER } = DEPRECATED_EXPORT_VARS;
 

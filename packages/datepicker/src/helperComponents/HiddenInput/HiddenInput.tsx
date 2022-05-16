@@ -2,7 +2,7 @@ import isEqual from 'lodash.isequal';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRifm } from 'rifm';
 
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { INPUT_PLACEHOLDER } from '../../helpers/constants';
 import { parseDigits } from '../../helpers/parseDigits';

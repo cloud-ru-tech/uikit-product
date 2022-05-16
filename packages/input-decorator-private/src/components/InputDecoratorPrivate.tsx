@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
-import { TooltipProps } from '@sbercloud/uikit-react-tooltip';
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Footer } from '../helperComponents/Footer';
 import { Header } from '../helperComponents/Header';

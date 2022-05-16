@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-react-button-private",
+  "name": "@sbercloud/uikit-product-button-private",
   "title": "React Button Private",
   "version": "1.2.6",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/button-private",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/button-private",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/button-private"
   },
   "author": "Белоусов Владислав <vabelousov@sbercloud.ru>",
@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-react-tooltip": "2.0.44",
-    "@sbercloud/uikit-utils": "2.6.0",
+    "@sbercloud/uikit-product-tooltip": "2.0.44",
+    "@sbercloud/uikit-product-utils": "2.6.0",
     "lodash.pick": "4.4.0"
   },
   "peerDependencies": {

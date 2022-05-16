@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-theme';
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 const { WHITE_ALFA, BLACK_ALFA, GREY, PURPLE, GREEN } = EXPORT_VARS;
 

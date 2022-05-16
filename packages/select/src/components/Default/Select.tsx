@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import RCSelect, { OptionTypeBase as RCOptionTypeBase, SelectComponentsConfig, components } from 'react-select';
 
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { checkMobileDevice } from '../../helpers/checkMobileDevice';
 import getSelectorStyles from '../../helpers/getSelectStyles';

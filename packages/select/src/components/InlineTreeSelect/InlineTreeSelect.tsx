@@ -2,8 +2,8 @@ import { styled } from '@linaria/react';
 import isEqual from 'lodash.isequal';
 import React, { FC, useCallback, useEffect, useState } from 'react';
 
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { Divider } from '@sbercloud/uikit-product-divider';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { IOptionType, IUsersByGroupProps, UsersByGroup, ValueContainer } from '../../helperComponents/InlineTreeSelect';
 import { InputSearch } from '../../helperComponents/Shared/InputSearch';

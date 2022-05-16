@@ -1,6 +1,6 @@
 import pick from 'lodash.pick';
 
-import { extractDataProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { extractDataProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { CommonButtonProps } from '../types';
 

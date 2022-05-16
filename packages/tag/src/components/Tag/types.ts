@@ -1,6 +1,6 @@
 import { MouseEventHandler, ReactText } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Colors, Sizes } from '../../constants';
 

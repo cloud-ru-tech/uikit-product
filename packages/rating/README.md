@@ -1,7 +1,7 @@
 # React Rating
 
 ## Installation
-`npm i @sbercloud/uikit-react-rating`
+`npm i @sbercloud/uikit-product-rating`
 
 [Changelog](./CHANGELOG.md)
 

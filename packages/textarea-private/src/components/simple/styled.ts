@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { VFC } from 'react';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
 
 import { TextareaPrivate } from '../private';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';

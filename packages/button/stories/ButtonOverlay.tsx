@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react';
 
-import { EditInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { EditInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { ButtonOverlay, ButtonOverlayProps } from '../src';
 import { SingleWrapper } from './helperComponents';

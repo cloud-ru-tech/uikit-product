@@ -1,7 +1,7 @@
 # React Document
 
 ## Installation
-`npm i @sbercloud/uikit-react-document`
+`npm i @sbercloud/uikit-product-document`
 
 ## Props
 ```typescript jsx

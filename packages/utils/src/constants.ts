@@ -1,4 +1,4 @@
-import { green, greenDark, purple, purpleDark } from '@sbercloud/uikit-theme';
+import { green, greenDark, purple, purpleDark } from '@sbercloud/uikit-product-theme';
 
 import { LanguageCodeType, Themes } from './types';
 

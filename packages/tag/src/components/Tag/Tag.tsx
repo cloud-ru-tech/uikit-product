@@ -1,6 +1,6 @@
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { CloseInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Colors, Sizes } from '../../constants';
 import { RemoveButton, Text, styledTag } from './styled';

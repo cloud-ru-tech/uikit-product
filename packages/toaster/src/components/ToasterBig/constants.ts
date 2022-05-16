@@ -3,7 +3,7 @@ import {
   CircleCancelFilledInterfaceSVG,
   CircleCheckFilledInterfaceSVG,
   InfoInterfaceSVG,
-} from '@sbercloud/uikit-react-icons';
+} from '@sbercloud/uikit-product-icons';
 
 export enum ToasterBigStatus {
   Info = 'Info',

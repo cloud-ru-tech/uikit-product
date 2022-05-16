@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-pagination-private`
+`npm i @sbercloud/uikit-product-pagination-private`
 
 ## Notes
 

@@ -1,4 +1,4 @@
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Sizes, Types } from '../../helpers';
 import { styledStatusDot } from './styled';

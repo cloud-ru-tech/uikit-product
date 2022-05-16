@@ -1,6 +1,6 @@
 import { ReactElement, ReactText } from 'react';
 
-import { CommonButtonProps, extractCommonButtonProps, withTooltip } from '@sbercloud/uikit-react-button-private';
+import { CommonButtonProps, extractCommonButtonProps, withTooltip } from '@sbercloud/uikit-product-button-private';
 
 import * as S from './styled';
 

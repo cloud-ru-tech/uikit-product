@@ -2,6 +2,6 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-tooltip-private`
+`npm i @sbercloud/uikit-product-tooltip-private`
 
 [Changelog](./CHANGELOG.md)

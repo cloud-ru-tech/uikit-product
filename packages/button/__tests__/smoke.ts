@@ -1,4 +1,4 @@
-import { CommonButtonPropsWithOptionalTooltip } from '@sbercloud/uikit-react-button-private';
+import { CommonButtonPropsWithOptionalTooltip } from '@sbercloud/uikit-product-button-private';
 
 import { ButtonTableProps } from '../src/components/ButtonTable';
 

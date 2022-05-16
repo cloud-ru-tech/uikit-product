@@ -1,9 +1,9 @@
 import mergeRefs from 'merge-refs';
 import { FocusEventHandler, forwardRef, useRef, useState } from 'react';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import { InputPrivate, InputPrivateProps } from '../private';

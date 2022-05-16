@@ -4,8 +4,8 @@ import {
   CircleCancelFilledInterfaceSVG,
   CircleCheckFilledInterfaceSVG,
   LoadingWheelInterfaceSVG,
-} from '@sbercloud/uikit-react-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+} from '@sbercloud/uikit-product-icons';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Icons, Variants } from './constants';
 import { Wrapper } from './styled';

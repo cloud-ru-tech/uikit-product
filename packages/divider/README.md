@@ -1,7 +1,7 @@
 # React Divider
 
 ## Installation
-`npm i @sbercloud/uikit-react-divider`
+`npm i @sbercloud/uikit-product-divider`
 
 ## Props 
 ```typescript

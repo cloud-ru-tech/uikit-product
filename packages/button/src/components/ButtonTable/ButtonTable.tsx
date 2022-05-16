@@ -5,8 +5,8 @@ import {
   extractCommonButtonProps,
   withManagedLoading,
   withTooltip,
-} from '@sbercloud/uikit-react-button-private';
-import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-react-icons';
+} from '@sbercloud/uikit-product-button-private';
+import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { LoadingIcon, PieIndicator } from '../../helperComponents';
 import { Variant } from './constants';

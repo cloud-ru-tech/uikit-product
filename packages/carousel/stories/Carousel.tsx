@@ -2,8 +2,8 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Card } from '@sbercloud/uikit-react-cards';
-import { H3_STYLES } from '@sbercloud/uikit-typography';
+import { Card } from '@sbercloud/uikit-product-cards';
+import { H3_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { BADGE } from '#storybookConstants';
 

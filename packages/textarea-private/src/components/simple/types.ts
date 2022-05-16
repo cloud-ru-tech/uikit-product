@@ -1,6 +1,6 @@
 import { ChangeEvent, RefAttributes } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type SimpleTextareaProps = RefAttributes<HTMLTextAreaElement> &
   WithSupportProps<{

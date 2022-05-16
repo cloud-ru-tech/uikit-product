@@ -1,7 +1,7 @@
 # React Breadcrumbs
 
 ## Installation
-`npm i @sbercloud/uikit-react-breadcrumbs`
+`npm i @sbercloud/uikit-product-breadcrumbs`
 
 [Changelog](./CHANGELOG.md)
 

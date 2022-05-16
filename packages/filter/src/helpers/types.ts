@@ -1,5 +1,5 @@
-import { SettingType } from '@sbercloud/uikit-react-datepicker';
-import { OptionTypeBase } from '@sbercloud/uikit-react-select';
+import { SettingType } from '@sbercloud/uikit-product-datepicker';
+import { OptionTypeBase } from '@sbercloud/uikit-product-select';
 
 import { LogicConditionType, LogicOptionType } from './logicOptions';
 

@@ -3,7 +3,7 @@ import { MouseEvent, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { usePopperTooltip } from 'react-popper-tooltip';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Placements, TooltipPrivateProps, TriggerTypes } from '../../helpers/types';
 import { tooltipClassName, triggerClassName } from './styled';

@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
-import { StatusDot } from '@sbercloud/uikit-react-status';
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { StatusDot } from '@sbercloud/uikit-product-status';
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import {
   AvatarProps,

@@ -1,7 +1,7 @@
 import { CSSProperties } from 'react';
 import { Props, Styles, Theme } from 'react-select';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 const { COLORS_GENERAL, COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 

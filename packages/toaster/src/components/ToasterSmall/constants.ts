@@ -1,4 +1,4 @@
-import { PredefinedIconsPrivate } from '@sbercloud/uikit-react-predefined-icons-private';
+import { PredefinedIconsPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 
 export enum ToasterSmallStatus {
   Success = 'Success',

@@ -1,7 +1,7 @@
 # React Spinner
 
 ## Installation
-`npm i @sbercloud/uikit-react-spinner`
+`npm i @sbercloud/uikit-product-spinner`
 
 ## Components interface
 ```typescript

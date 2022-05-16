@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Types } from './constants';
 import { BadgeItemWrap, DotContainer, styledBadge } from './styled';

@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import RCSelect, { ValueType } from 'react-select';
 
-import { Modal } from '@sbercloud/uikit-react-modal';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { Modal } from '@sbercloud/uikit-product-modal';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Colors } from '../../constants';
 import * as TagComponents from '../../helperComponents/TagSelect';

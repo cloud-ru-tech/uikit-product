@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 import { styles as commonStyles, theme as commonTheme } from './common';
 

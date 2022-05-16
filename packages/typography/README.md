@@ -1,7 +1,7 @@
 # Typography
 
 ## Installation
-`npm i @sbercloud/uikit-typography`
+`npm i @sbercloud/uikit-product-typography`
 
 ## Usage
 

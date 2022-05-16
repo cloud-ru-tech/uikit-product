@@ -1,11 +1,11 @@
 import { ReactElement } from 'react';
 
-import { Badge, BadgeProps } from '@sbercloud/uikit-react-badge-private';
+import { Badge, BadgeProps } from '@sbercloud/uikit-product-badge-private';
 import {
   CommonButtonPropsWithOptionalTooltip,
   extractCommonButtonProps,
   withTooltip,
-} from '@sbercloud/uikit-react-button-private';
+} from '@sbercloud/uikit-product-button-private';
 
 import * as S from './styled';
 

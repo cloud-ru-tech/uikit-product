@@ -1,9 +1,9 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { Button } from '@sbercloud/uikit-react-button';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { TEXT_4_STYLES } from '@sbercloud/uikit-typography';
+import { Button } from '@sbercloud/uikit-product-button';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { TEXT_4_STYLES } from '@sbercloud/uikit-product-typography';
 
 const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 

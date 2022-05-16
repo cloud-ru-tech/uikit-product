@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-typography';
+import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 

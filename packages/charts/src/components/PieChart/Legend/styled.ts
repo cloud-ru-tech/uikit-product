@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { Divider } from '@sbercloud/uikit-react-divider';
+import { Divider } from '@sbercloud/uikit-product-divider';
 
 import { COLORS } from '../themes';
 

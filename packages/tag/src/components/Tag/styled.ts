@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 import { VFC } from 'react';
 
-import { ButtonIcon } from '@sbercloud/uikit-react-button';
-import { TEXT_2_STYLES } from '@sbercloud/uikit-typography';
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { Colors, Sizes } from '../../constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';

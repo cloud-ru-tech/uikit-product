@@ -1,6 +1,6 @@
 # React NoDataPage
 
 ## Installation
-`npm i @sbercloud/uikit-react-no-data-page`
+`npm i @sbercloud/uikit-product-no-data-page`
 
 [Changelog](./CHANGELOG.md)

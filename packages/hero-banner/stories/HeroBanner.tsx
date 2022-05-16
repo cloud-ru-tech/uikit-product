@@ -2,10 +2,10 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Button } from '@sbercloud/uikit-react-button';
-import { DataHubDisplaySVG } from '@sbercloud/uikit-react-icons';
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H3_STYLES } from '@sbercloud/uikit-typography';
+import { Button } from '@sbercloud/uikit-product-button';
+import { DataHubDisplaySVG } from '@sbercloud/uikit-product-icons';
+import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { H3_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { BADGE } from '#storybookConstants';
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { InputPrivate, InputPrivateProps } from '@sbercloud/uikit-react-input-private';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { InputPrivate, InputPrivateProps } from '@sbercloud/uikit-product-input-private';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
 import { InputWrapper, crossIconClassName, searchIconClassname } from './styled';

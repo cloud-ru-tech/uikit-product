@@ -2,7 +2,7 @@
 
 ## Installation
 
-`npm i @sbercloud/uikit-react-tag`
+`npm i @sbercloud/uikit-product-tag`
 
 ## Props
 

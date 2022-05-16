@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { TEXT_3_STYLES } from '@sbercloud/uikit-typography';
+import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
 
 export const CustomOption = styled.div`
   display: flex;

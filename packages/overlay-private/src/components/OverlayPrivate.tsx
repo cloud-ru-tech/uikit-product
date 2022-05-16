@@ -1,4 +1,4 @@
-import { extractSupportProps } from '@sbercloud/uikit-utils';
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { styledOverlay } from './styled';
 import { OverlayPrivateProps, Variants } from './types';

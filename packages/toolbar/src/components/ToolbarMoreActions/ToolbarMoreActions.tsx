@@ -1,5 +1,5 @@
-import { DropdownMenu, DropdownMenuProps } from '@sbercloud/uikit-react-dropdown';
-import { MoreInterfaceSVG } from '@sbercloud/uikit-react-icons';
+import { DropdownMenu, DropdownMenuProps } from '@sbercloud/uikit-product-dropdown';
+import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { ToolbarButton, ToolbarButtonProps } from '../ToolbarButton';
 

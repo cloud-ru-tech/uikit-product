@@ -1,6 +1,6 @@
 import { ComponentType } from 'react';
 
-import { Tooltip } from '@sbercloud/uikit-react-tooltip';
+import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 
 import { CommonButtonProps, WithTooltipProps } from '../types';
 

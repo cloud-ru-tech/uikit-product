@@ -1,4 +1,4 @@
-import { ISelectProps, OptionTypeBase } from '@sbercloud/uikit-react-select';
+import { ISelectProps, OptionTypeBase } from '@sbercloud/uikit-product-select';
 
 import { FilterValue, TFilterOption, TFilterOptionType } from './types';
 

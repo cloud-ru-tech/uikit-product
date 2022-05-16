@@ -1,5 +1,5 @@
 {
-  "name": "@sbercloud/uikit-theme",
+  "name": "@sbercloud/uikit-product-theme",
   "title": "Theme",
   "version": "0.33.1",
   "sideEffects": [
@@ -10,10 +10,10 @@
   "description": "Colors library",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0/-/tree/master/packages/theme",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/theme",
   "repository": {
     "type": "git",
-    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit2.0.git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
     "directory": "packages/theme"
   },
   "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",

@@ -1,12 +1,12 @@
 import { CsvExportModule } from '@ag-grid-community/csv-export';
 import { ExcelExportModule } from '@ag-grid-enterprise/excel-export';
 
-import { DeleteInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { Modal } from '@sbercloud/uikit-react-modal';
-import { Pagination } from '@sbercloud/uikit-react-pagination-private';
-import { TablePrivate, TablePrivateProps } from '@sbercloud/uikit-react-table-private';
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-utils';
+import { DeleteInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Modal } from '@sbercloud/uikit-product-modal';
+import { Pagination } from '@sbercloud/uikit-product-pagination-private';
+import { TablePrivate, TablePrivateProps } from '@sbercloud/uikit-product-table-private';
+import { Toolbar } from '@sbercloud/uikit-product-toolbar';
+import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
 import * as S from './styled';

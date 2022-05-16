@@ -1,7 +1,7 @@
 # React Select
 
 ## Installation
-`npm i @sbercloud/uikit-react-select`
+`npm i @sbercloud/uikit-product-select`
 
 [Changelog](./CHANGELOG.md)
 

@@ -3,8 +3,8 @@ import { ChangeEvent } from 'react';
 import ReactMarkdown, { Options as ReactMarkdownOptions } from 'react-markdown';
 import gfm from 'remark-gfm';
 
-import { SimpleTextarea } from '@sbercloud/uikit-react-textarea-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { SimpleTextarea } from '@sbercloud/uikit-product-textarea-private';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { MarkdownEditorMode } from './constants';
 import * as S from './styled';

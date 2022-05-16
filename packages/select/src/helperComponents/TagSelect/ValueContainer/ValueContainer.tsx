@@ -1,6 +1,6 @@
 import { components as ReactSelectComponents } from 'react-select';
 
-import { Tag } from '@sbercloud/uikit-react-tag';
+import { Tag } from '@sbercloud/uikit-product-tag';
 
 export const ValueContainer = ({
   hasValue,

@@ -3,12 +3,12 @@ import { styled } from '@linaria/react';
 import { Story } from '@storybook/react/types-6-0';
 import React, { useCallback, useState } from 'react';
 
-import { Button } from '@sbercloud/uikit-react-button';
-import { Modal } from '@sbercloud/uikit-react-modal';
-import { TextField } from '@sbercloud/uikit-react-text-field';
-import { Toolbar } from '@sbercloud/uikit-react-toolbar';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-theme';
-import { H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-typography';
+import { Button } from '@sbercloud/uikit-product-button';
+import { Modal } from '@sbercloud/uikit-product-modal';
+import { TextField } from '@sbercloud/uikit-product-text-field';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { Toolbar } from '@sbercloud/uikit-product-toolbar';
+import { H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { svgExport } from './downloader';
 import { generateDataTestId } from './generateDataTestId';
@@ -153,7 +153,7 @@ export function getTemplate(
                 {selectedIcon.Icon({ size, fill })}
                 <CopyInputWrapper>
                   <Label>import:</Label>
-                  <TextField text={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-react-icons';`} />
+                  <TextField text={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-product-icons';`} />
                 </CopyInputWrapper>
                 <CopyInputWrapper>
                   <Label>data-test-id:</Label>

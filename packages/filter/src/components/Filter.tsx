@@ -1,8 +1,8 @@
 import { FC, useCallback, useEffect, useMemo, useState } from 'react';
 
-import { Divider } from '@sbercloud/uikit-react-divider';
-import { CloseInterfaceSVG, PlusInterfaceSVG } from '@sbercloud/uikit-react-icons';
-import { useLanguage } from '@sbercloud/uikit-utils';
+import { Divider } from '@sbercloud/uikit-product-divider';
+import { CloseInterfaceSVG, PlusInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { ActionButton } from '../helperComponents/ActionButton';
 import { Container } from '../helperComponents/Container';

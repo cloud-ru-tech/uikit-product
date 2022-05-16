@@ -1,4 +1,4 @@
-import { TablePrivateProps } from '@sbercloud/uikit-react-table-private';
+import { TablePrivateProps } from '@sbercloud/uikit-product-table-private';
 
 export type ColumnDefinitions = TablePrivateProps['columnDefs'];
 export type OnGridReady = TablePrivateProps['onGridReady'];

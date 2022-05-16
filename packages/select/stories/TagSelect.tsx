@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { Button } from '@sbercloud/uikit-react-button';
+import { Button } from '@sbercloud/uikit-product-button';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

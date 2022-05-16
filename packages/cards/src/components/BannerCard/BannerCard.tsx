@@ -1,5 +1,5 @@
-import { Button } from '@sbercloud/uikit-react-button';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-utils';
+import { Button } from '@sbercloud/uikit-product-button';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { CardContent, CardImage, CardImageWrap, CardText, CardTitle, ContainerStyled } from './styled';
 

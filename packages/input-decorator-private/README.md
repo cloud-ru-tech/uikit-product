@@ -1,7 +1,7 @@
 # React Input Decorator Private
 
 ## Installation
-`npm i @sbercloud/uikit-react-input-decorator-private`
+`npm i @sbercloud/uikit-product-input-decorator-private`
 
 ## Props
 ```typescript

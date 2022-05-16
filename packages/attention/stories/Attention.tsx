@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { H3_STYLES } from '@sbercloud/uikit-typography';
+import { H3_STYLES } from '@sbercloud/uikit-product-typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

@@ -1,7 +1,7 @@
 # React Filter
 
 ## Installation
-`npm i @sbercloud/uikit-react-filter`
+`npm i @sbercloud/uikit-product-filter`
 
 [Changelog](./CHANGELOG.md)
 

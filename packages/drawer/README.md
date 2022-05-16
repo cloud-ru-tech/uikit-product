@@ -1,6 +1,6 @@
 # React Drawer
 
 ## Installation
-`npm i  @sbercloud/uikit-react-drawer`
+`npm i  @sbercloud/uikit-product-drawer`
 
 [Changelog](./CHANGELOG.md)

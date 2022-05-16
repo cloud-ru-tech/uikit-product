@@ -1,7 +1,7 @@
 # React Button Private
 
 ## Installation
-`npm i @sbercloud/uikit-react-button-private`
+`npm i @sbercloud/uikit-product-button-private`
 
 [Changelog](./CHANGELOG.md)
 

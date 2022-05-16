@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { BrandCatDisplaySVG } from '@sbercloud/uikit-react-icons';
+import { BrandCatDisplaySVG } from '@sbercloud/uikit-product-icons';
 
 import { BADGE } from '#storybookConstants';
 

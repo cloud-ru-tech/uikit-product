@@ -3,7 +3,7 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button-private@1.2.5...@sbercloud/uikit-react-button-private@1.2.6) (2022-05-05)
+## [1.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button-private@1.2.5...@sbercloud/uikit-react-button-private@1.2.6) (2022-05-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button-private
 
@@ -11,7 +11,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button-private@1.2.4...@sbercloud/uikit-react-button-private@1.2.5) (2022-04-26)
+## [1.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button-private@1.2.4...@sbercloud/uikit-react-button-private@1.2.5) (2022-04-26)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button-private
 
@@ -19,7 +19,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button-private@1.2.3...@sbercloud/uikit-react-button-private@1.2.4) (2022-04-22)
+## [1.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button-private@1.2.3...@sbercloud/uikit-react-button-private@1.2.4) (2022-04-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button-private
 
@@ -27,7 +27,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button-private@1.2.2...@sbercloud/uikit-react-button-private@1.2.3) (2022-04-18)
+## [1.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button-private@1.2.2...@sbercloud/uikit-react-button-private@1.2.3) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button-private
 
@@ -35,7 +35,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button-private@1.2.1...@sbercloud/uikit-react-button-private@1.2.2) (2022-04-13)
+## [1.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button-private@1.2.1...@sbercloud/uikit-react-button-private@1.2.2) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button-private
 
@@ -43,7 +43,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button-private@1.2.0...@sbercloud/uikit-react-button-private@1.2.1) (2022-04-13)
+## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button-private@1.2.0...@sbercloud/uikit-react-button-private@1.2.1) (2022-04-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-button-private
 
@@ -51,12 +51,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 
 
-# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-button-private@1.1.0...@sbercloud/uikit-react-button-private@1.2.0) (2022-04-11)
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button-private@1.1.0...@sbercloud/uikit-react-button-private@1.2.0) (2022-04-11)
 
 
 ### Features
 
-* possibility to overwrite tabindex ([7dfa491](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/7dfa4910cdf325e40832ce2968dd1be3c96d87ec))
+* possibility to overwrite tabindex ([7dfa491](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7dfa4910cdf325e40832ce2968dd1be3c96d87ec))
 
 
 
@@ -67,7 +67,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-* introduces button-private package ([AICE-5374](https://jira.sbercloud.tech/browse/AICE-5374)) ([b05b271](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/b05b2710c24008a88ec1b0264fea5accf6dcc369))
+* introduces button-private package ([AICE-5374](https://jira.sbercloud.tech/browse/AICE-5374)) ([b05b271](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b05b2710c24008a88ec1b0264fea5accf6dcc369))
 
 
 
