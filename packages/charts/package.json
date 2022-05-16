@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/ft-formatters": "1.1.0",
+    "@sbercloud/ft-formatters": "1.1.1",
     "@sbercloud/uikit-react-divider": "2.0.25",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
@@ -36,8 +36,8 @@
     "lodash.merge": "4.6.2",
     "lodash.range": "3.2.0",
     "react-grid-heatmap": "1.1.0",
-    "react-minimal-pie-chart": "8.2.0",
-    "uplot": "1.6.18",
+    "react-minimal-pie-chart": "8.3.0",
+    "uplot": "1.6.20",
     "uplot-react": "1.1.1"
   },
   "devDependencies": {

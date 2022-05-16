@@ -32,7 +32,7 @@
     "@sbercloud/uikit-react-predefined-icons-private": "0.0.2",
     "@sbercloud/uikit-theme": "0.33.1",
     "@sbercloud/uikit-typography": "1.1.0",
-    "react-toastify": "9.0.0"
+    "react-toastify": "9.0.1"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

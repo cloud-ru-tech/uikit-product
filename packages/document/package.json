@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/ft-download-file": "1.1.0",
-    "@sbercloud/ft-formatters": "1.1.0",
+    "@sbercloud/ft-download-file": "1.1.1",
+    "@sbercloud/ft-formatters": "1.1.1",
     "@sbercloud/uikit-react-button": "5.0.8",
     "@sbercloud/uikit-react-icons": "3.5.0",
     "@sbercloud/uikit-react-tooltip": "2.0.44",
@@ -36,7 +36,7 @@
     "@sbercloud/uikit-typography": "1.1.0",
     "@sbercloud/uikit-utils": "2.6.0",
     "lodash.debounce": "4.0.8",
-    "mime-db": "1.51.0"
+    "mime-db": "1.52.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",
