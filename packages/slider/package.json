@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-slider",
   "title": "React Slider",
-  "version": "0.5.19",
+  "version": "0.5.20",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-theme": "0.33.1",
+    "@sbercloud/uikit-product-theme": "0.33.2",
     "rc-slider": "9.7.5"
   },
   "peerDependencies": {

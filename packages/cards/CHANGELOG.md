@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.16.0 (2022-05-16)
+
+
+### Bug Fixes
+
+* change page grouping strategy ([ef61e36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef61e36cdb1dc03c6c43c0e84472552706999a17))
+* renaming packages ([6c4e34d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
+
+
+### Features
+
+* **CP-6022:** add disabled prop ([d542c18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d542c181969bdc03a4aaf1acd4332c87ae042ace))
+* **CP-6022:** delete max width category card content ([d982e30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d982e30c6e7dd879ea048cd8238c77fbed305875))
+
+
+
+
+
 ## [0.15.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-cards@0.15.0...@sbercloud/uikit-react-cards@0.15.1) (2022-05-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-cards

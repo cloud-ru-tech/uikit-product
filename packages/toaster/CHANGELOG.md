@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.3 (2022-05-16)
+
+
+### Bug Fixes
+
+* **AICE-5892:** first stable version ([25e1307](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/25e1307338ae43f7b3560035575eeeda2fb406e4))
+* change page grouping strategy ([ef61e36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef61e36cdb1dc03c6c43c0e84472552706999a17))
+* renaming packages ([6c4e34d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
+* safe dependencies update ([cb66b4c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cb66b4c7dd7666e4c0d3721a0b9a6953ab4885e7))
+
+
+
+
+
 ## [1.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-toaster@1.0.1...@sbercloud/uikit-react-toaster@1.0.2) (2022-05-16)
 
 

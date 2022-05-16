@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-charts",
   "title": "React Charts",
-  "version": "0.8.17",
+  "version": "0.8.18",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,10 +28,10 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-formatters": "1.1.1",
-    "@sbercloud/uikit-product-divider": "2.0.25",
-    "@sbercloud/uikit-product-theme": "0.33.1",
-    "@sbercloud/uikit-product-typography": "1.1.0",
-    "@sbercloud/uikit-product-utils": "2.6.0",
+    "@sbercloud/uikit-product-divider": "2.0.26",
+    "@sbercloud/uikit-product-theme": "0.33.2",
+    "@sbercloud/uikit-product-typography": "1.1.1",
+    "@sbercloud/uikit-product-utils": "2.6.1",
     "d3-scale": "4.0.2",
     "lodash.merge": "4.6.2",
     "lodash.range": "3.2.0",

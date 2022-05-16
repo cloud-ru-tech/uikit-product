@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.0.2 (2022-05-16)
+
+
+### Bug Fixes
+
+* change page grouping strategy ([ef61e36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef61e36cdb1dc03c6c43c0e84472552706999a17))
+* renaming packages ([6c4e34d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
+
+
+
+
+
 ## 1.0.1 (2022-04-18)
 
 

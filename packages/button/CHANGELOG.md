@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.10 (2022-05-16)
+
+
+### Bug Fixes
+
+* change page grouping strategy ([ef61e36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef61e36cdb1dc03c6c43c0e84472552706999a17))
+* changed indent from text to icon on size S ([ba56c5b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ba56c5bd299292a165b53af45a2317f4283d113a))
+* renaming packages ([6c4e34d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
+* safe dependencies update ([cb66b4c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cb66b4c7dd7666e4c0d3721a0b9a6953ab4885e7))
+
+
+
+
+
 ## [5.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-button@5.0.8...@sbercloud/uikit-react-button@5.0.9) (2022-05-16)
 
 

@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.6.0 (2022-05-16)
+
+
+### Bug Fixes
+
+* change page grouping strategy ([ef61e36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef61e36cdb1dc03c6c43c0e84472552706999a17))
+* renaming packages ([6c4e34d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
+
+
+### Features
+
+* ([AICE-5728](https://jira.sbercloud.tech/browse/AICE-5728)) add Onboarding service icon ([05fb194](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/05fb1940a920b03bbe14f197ab06cec355cd161c))
+* add internet interface icon ([70227c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/70227c9a70c268ed2965e17cd42346043c8e4955))
+
+
+
+
+
+
 # [3.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-react-icons@3.4.0...@sbercloud/uikit-react-icons@3.5.0) (2022-05-05)
 
 
