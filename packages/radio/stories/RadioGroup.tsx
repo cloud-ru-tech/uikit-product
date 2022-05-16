@@ -3,12 +3,10 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { IntelOneApiServiceSVG } from '@sbercloud/uikit-product-icons';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
-import { Radio, RadioCard, RadioCardProps, RadioGroup, RadioGroupProps, RadioProps } from '../src';
+import { Radio, RadioGroup, RadioGroupProps, RadioProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
-import { Card } from './helpersComponents';
 
 export default {
   title: 'Components/Radio/Radio Group',
@@ -54,7 +52,7 @@ const radios = [
   },
 ];
 
-const Template: Story<RadioProps & RadioCardProps & RadioGroupProps> = ({ ...args }, { globals: { theme } }) => {
+const Template: Story<RadioProps & RadioGroupProps> = ({ ...args }, { globals: { theme } }) => {
   const [value, setValue] = useState<React.ReactText>('Story1');
 
   return (
@@ -64,25 +62,6 @@ const Template: Story<RadioProps & RadioCardProps & RadioGroupProps> = ({ ...arg
           {radios.map(({ value, label, disabled }) => (
             <Radio {...args} key={value} value={value} label={label} disabled={disabled} className={Item} />
           ))}
-        </RadioGroup>
-      </Container>
-
-      <Container theme={theme}>
-        <RadioGroup {...args} value={value} onChange={setValue}>
-          {[...new Array(2)].map((_value, index) => {
-            const currValue = `Story${index}`;
-            const checked = currValue === value;
-            return (
-              <RadioCard {...args} key={index} value={currValue} className={Item}>
-                <Card
-                  icon={<IntelOneApiServiceSVG size={20} />}
-                  label={`Story${index}`}
-                  description='Description'
-                  checked={checked}
-                />
-              </RadioCard>
-            );
-          })}
         </RadioGroup>
       </Container>
     </>
