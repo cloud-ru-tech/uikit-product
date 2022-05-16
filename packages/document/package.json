@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-react-document",
   "title": "React Document",
-  "version": "1.0.39",
+  "version": "1.0.40",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@sbercloud/ft-download-file": "1.1.1",
     "@sbercloud/ft-formatters": "1.1.1",
-    "@sbercloud/uikit-react-button": "5.0.8",
+    "@sbercloud/uikit-react-button": "5.0.9",
     "@sbercloud/uikit-react-icons": "3.5.0",
     "@sbercloud/uikit-react-tooltip": "2.0.44",
     "@sbercloud/uikit-theme": "0.33.1",

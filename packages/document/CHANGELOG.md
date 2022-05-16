@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.40](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-document@1.0.39...@sbercloud/uikit-react-document@1.0.40) (2022-05-16)
+
+
+### Bug Fixes
+
+* safe dependencies update ([cb66b4c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/cb66b4c7dd7666e4c0d3721a0b9a6953ab4885e7))
+
+
+
+
+
 ## [1.0.39](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-document@1.0.38...@sbercloud/uikit-react-document@1.0.39) (2022-05-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-document

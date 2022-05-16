@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.17 (2022-05-16)
+
+
+### Bug Fixes
+
+* safe dependencies update ([cb66b4c](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/commits/cb66b4c7dd7666e4c0d3721a0b9a6953ab4885e7))
+
+
+
+
+
 ## [0.8.16](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-charts@0.8.15...@sbercloud/uikit-react-charts@0.8.16) (2022-04-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-charts

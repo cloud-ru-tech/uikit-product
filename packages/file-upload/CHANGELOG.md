@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.25](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-file-upload@0.3.24...@sbercloud/uikit-react-file-upload@0.3.25) (2022-05-16)
+
+**Note:** Version bump only for package @sbercloud/uikit-react-file-upload
+
+
+
+
+
 ## [0.3.24](https://git.sbercloud.tech/sbercloud-ui/uikit2.0/compare/@sbercloud/uikit-react-file-upload@0.3.23...@sbercloud/uikit-react-file-upload@0.3.24) (2022-05-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-react-file-upload
