@@ -3,4 +3,4 @@
 include:
   - project: sbercloud-ui/cicd
     ref: master
-    file: /gitlab-ci-uikit-portal.yml
+    file: /gitlab-ci-uikit-product.yml
