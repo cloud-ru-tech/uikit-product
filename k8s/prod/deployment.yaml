@@ -5,7 +5,7 @@ metadata:
   labels:
     name: uikit20
   name: uikit20
-  namespace: uikit20
+  namespace: uikit
 spec:
   replicas: 1
   selector:
