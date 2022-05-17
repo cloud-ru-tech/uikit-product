@@ -6,6 +6,11 @@ import { Colors, Sizes } from '../../constants';
 import { RemoveButton, Text, styledTag } from './styled';
 import { TagProps } from './types';
 
+const ICON_SIZES: Record<Sizes, number> = {
+  [Sizes.Small]: 16,
+  [Sizes.Medium]: 20,
+};
+
 function StylelessTag({ color, value, className, size = Sizes.Small, onRemoveClick, ...rest }: TagProps) {
   const removable = Boolean(onRemoveClick);
 
@@ -20,7 +25,7 @@ function StylelessTag({ color, value, className, size = Sizes.Small, onRemoveCli
       <Text data-test-id='tag-text'>{value}</Text>
       {removable && (
         <RemoveButton
-          icon={<CloseInterfaceSVG />}
+          icon={<CloseInterfaceSVG size={ICON_SIZES[size]} />}
           variant={ButtonIcon.variants.Strong}
           onClick={onRemoveClick}
           data-test-id='tag-remove-button'
