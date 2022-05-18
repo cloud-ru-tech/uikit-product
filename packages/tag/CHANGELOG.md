@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tag@1.1.22...@sbercloud/uikit-product-tag@1.2.0) (2022-05-18)
+
+
+### Features
+
+* **AICE-6013:** added RemoveButton icon size ([25fcb0f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/25fcb0f286f9ead70ecce7992b2fe9cb0cd04c59))
+
+
+
+
+
 ## [1.1.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tag@1.1.21...@sbercloud/uikit-product-tag@1.1.22) (2022-05-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-tag
