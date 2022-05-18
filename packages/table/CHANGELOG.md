@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.38.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.37.0...@sbercloud/uikit-product-table@0.38.0) (2022-05-18)
+
+
+### Features
+
+* **AICDC-6675:** add pinned rows functionality ([81314a9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/81314a9c122548c5733231a0d53f30e793710b05))
+
+
+
+
+
 # 0.37.0 (2022-05-16)
 
 
