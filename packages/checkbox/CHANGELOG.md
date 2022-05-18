@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-checkbox@3.0.16...@sbercloud/uikit-product-checkbox@3.0.17) (2022-05-18)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-checkbox
+
+
+
+
+
 ## 3.0.16 (2022-05-16)
 
 

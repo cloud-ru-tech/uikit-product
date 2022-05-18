@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.65](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.64...@sbercloud/uikit-product-modal@0.15.65) (2022-05-18)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-modal
+
+
+
+
+
 ## 0.15.64 (2022-05-16)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-modal",
   "title": "React Modal",
-  "version": "0.15.64",
+  "version": "0.15.65",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,12 +27,12 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.0.10",
-    "@sbercloud/uikit-product-divider": "2.0.26",
+    "@sbercloud/uikit-product-button": "5.0.11",
+    "@sbercloud/uikit-product-divider": "2.0.27",
     "@sbercloud/uikit-product-icons": "3.6.0",
     "@sbercloud/uikit-product-theme": "0.33.2",
-    "@sbercloud/uikit-product-tooltip": "2.0.45",
-    "@sbercloud/uikit-product-utils": "2.6.1",
+    "@sbercloud/uikit-product-tooltip": "2.0.46",
+    "@sbercloud/uikit-product-utils": "2.7.0",
     "react-modal": "3.15.1"
   },
   "devDependencies": {

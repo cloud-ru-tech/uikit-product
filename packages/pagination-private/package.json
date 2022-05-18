@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-pagination-private",
   "title": "React Pagination Private",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "3.6.0",
     "@sbercloud/uikit-product-theme": "0.33.2",
-    "@sbercloud/uikit-product-utils": "2.6.1"
+    "@sbercloud/uikit-product-utils": "2.7.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.13.15...@sbercloud/uikit-product-dropdown@0.13.16) (2022-05-18)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-dropdown
+
+
+
+
+
 ## 0.13.15 (2022-05-16)
 
 

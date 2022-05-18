@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-radio@2.0.35...@sbercloud/uikit-product-radio@3.0.0) (2022-05-18)
+
+
+### Features
+
+* **AICE-5896:** delete `RadioCard` component ([011119e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/011119e0db457db5ed6a8382a2a6838ff825d19d))
+
+
+### BREAKING CHANGES
+
+* **AICE-5896:** delete `RadioCard` component
+
+
+
+
+
 ## 2.0.35 (2022-05-16)
 
 

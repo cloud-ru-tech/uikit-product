@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@2.6.1...@sbercloud/uikit-product-utils@2.7.0) (2022-05-18)
+
+
+### Features
+
+* **AICE-5896:** introduce `uniqueId` utility ([5f79747](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5f79747a2ff7ad7156111c8ed875cc100464126e))
+
+
+
+
+
 ## 2.6.1 (2022-05-16)
 
 

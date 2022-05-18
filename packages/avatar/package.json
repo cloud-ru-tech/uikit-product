@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-avatar",
   "title": "React Avatar",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -30,9 +30,9 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "3.6.0",
-    "@sbercloud/uikit-product-status": "6.0.0",
+    "@sbercloud/uikit-product-status": "6.0.1",
     "@sbercloud/uikit-product-theme": "0.33.2",
-    "@sbercloud/uikit-product-utils": "2.6.1"
+    "@sbercloud/uikit-product-utils": "2.7.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",
