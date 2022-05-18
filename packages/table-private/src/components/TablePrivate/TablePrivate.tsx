@@ -21,6 +21,7 @@ const AgGridModules = [ClientSideRowModelModule, RangeSelectionModule];
 
 function StylelessTablePrivate({
   rowData = [],
+  pinnedTopRowData,
   columnDefs = [],
   gridOptions = {},
   checkboxSelection = false,
@@ -108,6 +109,7 @@ function StylelessTablePrivate({
         onGridReady={handleGridReady}
         onGridSizeChanged={handleGridSizeChanged}
         rowData={rowData}
+        pinnedTopRowData={pinnedTopRowData}
         columnDefs={colDefs}
         isExternalFilterPresent={() => Boolean(doesRowPassFilter)}
         doesExternalFilterPass={node => doesRowPassFilter?.(node.data) || false}

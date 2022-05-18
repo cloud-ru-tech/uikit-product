@@ -17,6 +17,7 @@ const additionModules = [CsvExportModule, ExcelExportModule];
 type ClientModelTableViewProps<T> = {
   fieldId: string;
   data: T[];
+  pinnedData?: T[];
   columnDefinitions: TablePrivateProps['columnDefs'];
   onGridReady: TablePrivateProps['onGridReady'];
   getRowHeight: TablePrivateProps['getRowHeight'];
@@ -41,6 +42,7 @@ type ClientModelTableViewProps<T> = {
 export function ClientModelTableView<T>({
   fieldId,
   data,
+  pinnedData,
   columnDefinitions,
   onGridReady,
   useRowSelection,
@@ -101,6 +103,7 @@ export function ClientModelTableView<T>({
         checkboxSelection={useRowSelection}
         additionModules={additionModules}
         rowData={data}
+        pinnedTopRowData={pinnedData}
         columnDefs={columnDefinitions}
         onGridReady={onGridReady}
         getRowHeight={getRowHeight}

@@ -14,4 +14,5 @@ export type TablePrivateProps = AgGridReactProps & {
   getRowId?: AgGridReactProps['getRowId'];
   columnDefs: ColumnDefinition[];
   rowData: NonNullable<AgGridReactProps['rowData']>;
+  pinnedTopRowData?: AgGridReactProps['pinnedTopRowData'];
 };

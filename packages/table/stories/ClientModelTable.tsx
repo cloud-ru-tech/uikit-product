@@ -60,8 +60,9 @@ const Template: Story<
     showDelete: boolean;
     showFilter: boolean;
     showExport: boolean;
+    showPinnedRows: boolean;
   }
-> = ({ rowsAmount, showDelete, showFilter, showExport, ...args }) => {
+> = ({ rowsAmount, showDelete, showFilter, showExport, showPinnedRows, ...args }) => {
   const [data, setData] = useState<DataModel[]>(generateRows(rowsAmount));
 
   const debSetData = useMemo(() => debounce(setData, 500), []);
@@ -115,10 +116,13 @@ const Template: Story<
     [data, filterValue, rowPassFilter, showDelete, showFilter, showExport],
   );
 
+  const pinnedRows = showPinnedRows ? [data[0]] : undefined;
+
   return (
     <CMTable
       fieldId={args.fieldId}
       data={data}
+      pinnedData={pinnedRows}
       columnDefinitions={args.columnDefinitions}
       bulkActions={bulkActions}
       pageSize={args.pageSize}
@@ -227,6 +231,13 @@ clientModelTable.argTypes = {
   showExport: {
     defaultValue: true,
     name: '[Stories]: show or hide export table',
+    control: {
+      type: 'boolean',
+    },
+  },
+  showPinnedRows: {
+    defaultValue: true,
+    name: '[Stories]: show or hide pinned rows',
     control: {
       type: 'boolean',
     },

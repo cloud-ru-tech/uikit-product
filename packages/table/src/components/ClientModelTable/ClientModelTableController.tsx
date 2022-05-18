@@ -11,6 +11,7 @@ import { DeleteProps, FilterProps, PaginationProps } from './types';
 export type ClientModelTableControllerProps<T> = {
   fieldId: string;
   data: T[];
+  pinnedData?: T[];
   columnDefinitions: TablePrivateProps['columnDefs'];
   pageSize?: number;
   onRefreshCallback?(): void | Promise<void>;
@@ -38,6 +39,7 @@ export type ClientModelTableControllerProps<T> = {
 export function ClientModelTableController<T>({
   fieldId,
   data,
+  pinnedData,
   bulkActions,
   pageSize,
   onRefreshCallback,
@@ -278,6 +280,7 @@ export function ClientModelTableController<T>({
     <ClientModelTableView
       fieldId={fieldId}
       data={data}
+      pinnedData={pinnedData}
       columnDefinitions={columnDefinitions}
       getRowHeight={advancedProps?.getRowHeight}
       getRowId={advancedProps?.getRowId}
