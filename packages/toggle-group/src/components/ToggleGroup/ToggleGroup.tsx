@@ -1,6 +1,6 @@
-import { ReactNode, useMemo } from 'react';
+import { ReactNode } from 'react';
 
-import { WithSupportProps, extractSupportProps, uniqueId } from '@sbercloud/uikit-product-utils';
+import { WithSupportProps, extractSupportProps, useUniqueId } from '@sbercloud/uikit-product-utils';
 
 import { Mode, Orientation } from '../../constants';
 import {
@@ -34,7 +34,7 @@ export function ToggleGroup<T extends Value = Value>({
   className,
   ...rest
 }: ToggleGroupProps<T>) {
-  const name = useMemo(() => uniqueId('ToggleGroup'), []);
+  const name = useUniqueId('ToggleGroup');
 
   return (
     <ToggleGroupModeProvider value={mode}>
