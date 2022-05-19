@@ -9,6 +9,7 @@ export type InputPrivateProps = RefAttributes<HTMLInputElement> &
     name?: string;
     value: string;
     onChange?(value: string, e?: ChangeEvent<HTMLInputElement>): void;
+    id?: string;
     className?: string;
     placeholder?: string;
     type?: Types;

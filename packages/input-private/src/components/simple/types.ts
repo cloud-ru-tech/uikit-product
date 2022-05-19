@@ -11,6 +11,7 @@ export type SimpleInputProps = RefAttributes<HTMLInputElement> &
     onChange(value: string, e?: ChangeEvent<HTMLInputElement>): void;
     onFocus?: FocusEventHandler<HTMLInputElement>;
     onBlur?: FocusEventHandler<HTMLInputElement>;
+    id?: string;
     className?: string;
     placeholder?: string;
     size?: Sizes;

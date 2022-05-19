@@ -20,6 +20,7 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
       onFocus,
       onBlur,
       placeholder,
+      id,
       className,
       moreButton,
       size = Sizes.Medium,
@@ -91,6 +92,7 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
           <InputPrivate
             name={name}
             data-test-id={'private-input'}
+            id={id}
             autoFocus={autoFocus}
             autoComplete={autoComplete}
             ref={inputRef}
