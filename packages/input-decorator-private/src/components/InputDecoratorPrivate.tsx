@@ -12,6 +12,7 @@ export type InputDecoratorPrivateProps = {
   optional?: boolean;
   label?: string;
   labelTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
+  labelFor?: string;
   length?: {
     max: number;
     current: number;
@@ -26,6 +27,7 @@ export function InputDecoratorPrivate({
   length,
   label,
   labelTooltip,
+  labelFor,
   optional = false,
   error,
   hint,
@@ -33,7 +35,7 @@ export function InputDecoratorPrivate({
 }: WithSupportProps<InputDecoratorPrivateProps>) {
   return (
     <div className={className} {...rest}>
-      <Header labelTooltip={labelTooltip} label={label} optional={optional} />
+      <Header labelTooltip={labelTooltip} labelFor={labelFor} label={label} optional={optional} />
       {children}
       <Footer hint={hint} length={length} error={error} />
     </div>

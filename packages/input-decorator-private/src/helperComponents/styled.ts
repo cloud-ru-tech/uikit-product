@@ -46,7 +46,7 @@ export const OptionalMark = styled.span`
   color: var(${COLORS.optional});
 `;
 
-export const Label = styled.span`
+export const Label = styled.label`
   display: contents;
   ${TEXT_2_STYLES};
   color: var(${COLORS.label});
