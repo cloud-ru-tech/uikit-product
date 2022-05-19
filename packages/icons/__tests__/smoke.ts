@@ -4,6 +4,7 @@ import * as DisplayIcons from '../src/components/display-icons';
 import * as ExtensionsIcons from '../src/components/extension-icons';
 import * as InterfaceIcons from '../src/components/interface-icons';
 import * as LogoIcons from '../src/components/logo-icons';
+import * as PlatformIcons from '../src/components/platform-icons';
 import * as ServicesIcons from '../src/components/services-icons';
 import { generateDataTestId } from '../stories/helpers/generateDataTestId';
 
@@ -66,6 +67,14 @@ describe('[Icons]:', () => {
   it('Rendered Services Icons', () => {
     const name = 'services';
     const iconsArray = Object.keys(ServicesIcons).map(generateDataTestId);
+    visit(name);
+
+    iconsArray.forEach(el => expect(cy.getByDataTestId(el)).to.exist);
+  });
+
+  it('Rendered Platform Icons', () => {
+    const name = 'platform';
+    const iconsArray = Object.keys(PlatformIcons).map(generateDataTestId);
     visit(name);
 
     iconsArray.forEach(el => expect(cy.getByDataTestId(el)).to.exist);

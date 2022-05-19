@@ -5,3 +5,4 @@ export * from './components/logo-icons';
 export * from './components/display-icons';
 export * from './components/interface-icons';
 export * from './components/avatarPlaceholder-icons';
+export * from './components/platform-icons';
