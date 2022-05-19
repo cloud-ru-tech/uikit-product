@@ -11,7 +11,7 @@ import componentReadme from '../README.md';
 import { ToggleCardDisplayLogo, ToggleCardDisplayLogoProps, ToggleGroup } from '../src';
 
 export default {
-  title: 'Components/Toggle Group/Toggle Card Display Logo',
+  title: 'Components/Toggle Group/Toggle Card/Display Logo',
   component: ToggleCardDisplayLogo,
 } as Meta;
 
@@ -25,10 +25,10 @@ const Template: Story<ToggleCardDisplayLogoProps> = args => {
   );
 };
 
-export const toggleCardDisplayLogo = Template.bind({});
-toggleCardDisplayLogo.args = { title: 'Title', caption: 'Caption' };
-toggleCardDisplayLogo.argTypes = {};
-toggleCardDisplayLogo.parameters = {
+export const displayLogo = Template.bind({});
+displayLogo.args = { title: 'Title', caption: 'Caption' };
+displayLogo.argTypes = {};
+displayLogo.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

@@ -11,7 +11,7 @@ import componentReadme from '../README.md';
 import { ToggleCardDisplay, ToggleCardDisplayProps, ToggleGroup } from '../src';
 
 export default {
-  title: 'Components/Toggle Group/Toggle Card Display',
+  title: 'Components/Toggle Group/Toggle Card/Display',
   component: ToggleCardDisplay,
 } as Meta;
 
@@ -25,10 +25,10 @@ const Template: Story<ToggleCardDisplayProps> = args => {
   );
 };
 
-export const toggleCardDisplay = Template.bind({});
-toggleCardDisplay.args = { title: 'Title' };
-toggleCardDisplay.argTypes = {};
-toggleCardDisplay.parameters = {
+export const display = Template.bind({});
+display.args = { title: 'Title' };
+display.argTypes = {};
+display.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

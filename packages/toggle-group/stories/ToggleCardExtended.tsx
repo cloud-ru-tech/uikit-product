@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { ToggleCardExtended, ToggleCardExtendedProps, ToggleGroup } from '../src';
 
 export default {
-  title: 'Components/Toggle Group/Toggle Card Extended',
+  title: 'Components/Toggle Group/Toggle Card/Extended',
   component: ToggleCardExtended,
 } as Meta;
 
@@ -23,15 +23,15 @@ const Template: Story<ToggleCardExtendedProps> = args => {
   );
 };
 
-export const toggleCardExtended = Template.bind({});
-toggleCardExtended.args = {
+export const extended = Template.bind({});
+extended.args = {
   title: 'Title',
   displayedValue: 'Displayed value',
   description: 'Description',
   label: 'Label',
 };
-toggleCardExtended.argTypes = {};
-toggleCardExtended.parameters = {
+extended.argTypes = {};
+extended.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

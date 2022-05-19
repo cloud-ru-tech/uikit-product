@@ -1,8 +1,8 @@
 describe('[Toggle Group]: Toggle Card Display Extra', () => {
   it('renders correctly', () => {
     cy.visitComponent({
-      group: 'toggle-group',
-      name: 'toggle-card-display-extra',
+      group: 'toggle-group-toggle-card',
+      name: 'display-extra',
       props: { 'data-test-id': 'toggle-card-display-extra' },
     });
 

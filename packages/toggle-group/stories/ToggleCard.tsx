@@ -11,7 +11,7 @@ import componentReadme from '../README.md';
 import { ToggleCard, ToggleCardProps, ToggleGroup } from '../src';
 
 export default {
-  title: 'Components/Toggle Group/Toggle Card',
+  title: 'Components/Toggle Group/Toggle Card/Card',
   component: ToggleCard,
 } as Meta;
 
@@ -25,15 +25,15 @@ const Template: Story<ToggleCardProps & { showIcon: boolean }> = ({ showIcon, ..
   );
 };
 
-export const toggleCard = Template.bind({});
-toggleCard.args = { title: 'Title', showIcon: true, description: 'Description' };
-toggleCard.argTypes = {
+export const card = Template.bind({});
+card.args = { title: 'Title', showIcon: true, description: 'Description' };
+card.argTypes = {
   showIcon: {
     type: 'boolean',
     name: '[Stories]: Show or not Icon',
   },
 };
-toggleCard.parameters = {
+card.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
