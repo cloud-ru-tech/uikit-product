@@ -179,3 +179,14 @@ function Component() {
 }
 ```
 
+#### useUniqueId
+
+Returns a unique string.
+
+```typescript jsx
+import { useUniqueId } from '@sbercloud/uikit-product-utils';
+
+function Component() {
+  const id = useUniqueId();
+}
+```
