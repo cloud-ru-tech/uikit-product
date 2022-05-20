@@ -55,7 +55,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.border.disabled}: var(${WHITE_ALFA[16]});
       ${COLORS.border.hover}: var(${PURPLE[25]});
       ${COLORS.border.active}: var(${PURPLE[50]});
-      ${COLORS.border.error}: var(${BERRY_RED[100]});
+      ${COLORS.border.error}: var(${BERRY_RED[75]});
 
       ${COLORS.background.default}: var(${GREY[800]});
       ${COLORS.background.disabled}: var(${WHITE_ALFA[4]});
@@ -70,7 +70,7 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.border.disabled}: var(${WHITE_ALFA[16]});
       ${COLORS.border.hover}: var(${GREEN[25]});
       ${COLORS.border.active}: var(${GREEN[50]});
-      ${COLORS.border.error}: var(${BERRY_RED[100]});
+      ${COLORS.border.error}: var(${BERRY_RED[75]});
 
       ${COLORS.background.default}: var(${GREY[800]});
       ${COLORS.background.disabled}: var(${WHITE_ALFA[4]});

@@ -43,7 +43,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.labelIcon}: var(${GREY[450]});
       ${COLORS.optional}: var(${WHITE_ALFA[24]});
       ${COLORS.hint}: var(${WHITE_ALFA[48]});
-      ${COLORS.error}: var(${BERRY_RED[100]});
+      ${COLORS.error}: var(${BERRY_RED[75]});
     }
   }
 `;
@@ -55,7 +55,7 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.labelIcon}: var(${GREY[450]});
       ${COLORS.optional}: var(${WHITE_ALFA[24]});
       ${COLORS.hint}: var(${WHITE_ALFA[48]});
-      ${COLORS.error}: var(${BERRY_RED[100]});
+      ${COLORS.error}: var(${BERRY_RED[75]});
     }
   }
 `;
