@@ -6,7 +6,7 @@ import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from 
 import { extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../helpers/texts-provider';
-import { InputPrivate, InputPrivateProps } from '../private';
+import { InputPrivateProps } from '../private';
 import { Sizes, Types } from './constants';
 import * as S from './styled';
 import { SimpleInputProps } from './types';
@@ -29,6 +29,7 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
       error = false,
       autoFocus = false,
       autoComplete = false,
+      ellipsis = false,
       maxLength,
       ...rest
     },
@@ -89,9 +90,10 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
           data-focused={isFocused || undefined}
           data-has-more-button={hasMoreButton || undefined}
         >
-          <InputPrivate
-            name={name}
+          <S.Input
+            data-ellipsis={ellipsis || undefined}
             data-test-id={'private-input'}
+            name={name}
             id={id}
             autoFocus={autoFocus}
             autoComplete={autoComplete}

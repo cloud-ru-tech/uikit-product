@@ -5,6 +5,7 @@ import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
+import { InputPrivate } from '../private';
 import { Sizes } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 import { SimpleInputProps } from './types';
@@ -80,6 +81,12 @@ export const InputWrapper = styled.div`
     min-height: ${SizeInPx[Sizes.Large]};
     max-height: ${SizeInPx[Sizes.Large]};
     padding: 0 11px;
+  }
+`;
+
+export const Input = styled(InputPrivate)`
+  &[data-ellipsis]:not(:active) {
+    text-overflow: ellipsis;
   }
 `;
 

@@ -20,6 +20,7 @@ export type SimpleInputProps = RefAttributes<HTMLInputElement> &
     error?: boolean;
     autoFocus?: boolean;
     autoComplete?: boolean;
+    ellipsis?: boolean;
     moreButton?: {
       onClick(): void;
       tooltipText?: string;
