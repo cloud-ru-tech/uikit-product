@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@3.6.0...@sbercloud/uikit-product-icons@4.0.0) (2022-05-20)
+
+
+### Bug Fixes
+
+* **AICE-6009:** remove MLSpaceLogoFull icon from logos ([76331c8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/76331c8fd1c85ffc27fb9c03fdc15c7933940401))
+
+
+### Features
+
+* **AICE-6009:** added HomeInterface icon ([e0f7473](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e0f7473f6d44355aef383d846db38e53d2313309))
+
+
+### BREAKING CHANGES
+
+* **AICE-6009:** remove MLSpaceLogoFull icon from logos
+
+
+
+
+
 # 3.6.0 (2022-05-16)
 
 

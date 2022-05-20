@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.0.4...@sbercloud/uikit-product-predefined-icons-private@0.1.0) (2022-05-20)
+
+
+### Features
+
+* **AICE-6009:** added light and dark theme support in sbercloud and mlspace logo icons ([2ff1ba2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2ff1ba2a6cbaf312d0774181100951c15dff2cf5))
+
+
+
+
+
 ## [0.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.0.3...@sbercloud/uikit-product-predefined-icons-private@0.0.4) (2022-05-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private

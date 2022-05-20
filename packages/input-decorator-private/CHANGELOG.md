@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-decorator-private@2.0.21...@sbercloud/uikit-product-input-decorator-private@2.0.22) (2022-05-20)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-input-decorator-private
+
+
+
+
+
 ## [2.0.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-decorator-private@2.0.20...@sbercloud/uikit-product-input-decorator-private@2.0.21) (2022-05-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-decorator-private
