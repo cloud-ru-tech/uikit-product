@@ -1,5 +1,7 @@
 import { styled } from '@linaria/react';
 
+import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
+
 import { ToggleCardBoxCaption } from '../ToggleCardBoxCaption';
 import { ToggleCardBoxDescription } from '../ToggleCardBoxDescription';
 import { ToggleCardBoxIcon } from '../ToggleCardBoxIcon';
@@ -29,21 +31,27 @@ export const ToggleCardBox = styled.span`
   cursor: pointer;
   height: 100%;
   padding: 12px;
+  transition: ${ANIMATIONS.TRANSITION};
+  transition-property: background-color, border-color;
 
   ${ToggleCardBoxTitle} {
     color: var(${TITLE_COLORS.text.unselected.default});
+    transition: color ${ANIMATIONS.TRANSITION};
   }
 
   ${ToggleCardBoxDescription} {
     color: var(${DESCRIPTION_COLORS.text.unselected.default});
+    transition: color ${ANIMATIONS.TRANSITION};
   }
 
   ${ToggleCardBoxCaption} {
     color: var(${CAPTION_COLORS.text.default});
+    transition: color ${ANIMATIONS.TRANSITION};
   }
 
   ${ToggleCardBoxIcon} {
     fill: var(${ICON_COLORS.fill.unselected.default});
+    transition: fill ${ANIMATIONS.TRANSITION};
   }
 
   &:hover {
