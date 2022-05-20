@@ -8,6 +8,11 @@
 Predefined colored icons
 
 ```ts
+type PredefinedLogoProps = WithSupportProps<{
+  height: number;
+  className?: string;
+}>;
+
 type PredefinedIconsPrivateProps = WithSupportProps<{
   icon: Icons;
   variant?: Variants;

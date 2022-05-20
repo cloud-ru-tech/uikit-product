@@ -1,3 +1,4 @@
+import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { BADGE } from '#storybookConstants';
@@ -5,21 +6,35 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { PredefinedIconsPrivate, PredefinedIconsPrivateProps } from '../src';
+import {
+  PredefinedMLSpaceLogo,
+  PredefinedMLSpaceLogoProps,
+  PredefinedSberCloudLogo,
+  PredefinedSberCloudLogoProps,
+} from '../src';
 
 export default {
-  title: 'Components/Predefined/Predefined Icons Private',
-  component: PredefinedIconsPrivate,
+  title: 'Components/Predefined/Predefined Logos Private',
 } as Meta;
 
-const Template: Story<PredefinedIconsPrivateProps> = ({ ...args }) => <PredefinedIconsPrivate {...args} />;
+const Wrapper = styled.div`
+  display: grid;
+  grid-gap: 20px;
+`;
 
-export const predefinedIconsPrivate = Template.bind({});
-predefinedIconsPrivate.args = {
-  icon: PredefinedIconsPrivate.icons.Success,
+const Template: Story<PredefinedMLSpaceLogoProps & PredefinedSberCloudLogoProps> = ({ ...args }) => (
+  <Wrapper>
+    <PredefinedMLSpaceLogo {...args} />
+    <PredefinedSberCloudLogo {...args} />
+  </Wrapper>
+);
+
+export const predefinedLogosPrivate = Template.bind({});
+predefinedLogosPrivate.args = {
+  height: 30,
 };
-predefinedIconsPrivate.argTypes = {};
-predefinedIconsPrivate.parameters = {
+predefinedLogosPrivate.argTypes = {};
+predefinedLogosPrivate.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
