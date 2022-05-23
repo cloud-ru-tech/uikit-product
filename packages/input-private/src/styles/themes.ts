@@ -6,12 +6,12 @@ const { WHITE_ALFA, BLACK_ALFA, GREY } = EXPORT_VARS;
 
 export const COLORS = {
   placeholder: {
-    default: '--color-private-input__placeholder__default',
-    disabled: '--color-private-input__placeholder__disabled',
+    default: '--color-input-private__placeholder__default',
+    disabled: '--color-input-private__placeholder__disabled',
   },
   text: {
-    default: '--color-input__text__default',
-    disabled: '--color-input__text__disabled',
+    default: '--color-input-private__text__default',
+    disabled: '--color-input-private__text__disabled',
   },
 };
 

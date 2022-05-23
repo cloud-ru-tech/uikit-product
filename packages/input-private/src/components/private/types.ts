@@ -19,5 +19,6 @@ export type InputPrivateProps = RefAttributes<HTMLInputElement> &
     maxLength?: number;
     onFocus?: FocusEventHandler<HTMLInputElement>;
     onBlur?: FocusEventHandler<HTMLInputElement>;
+    prefix?: ReactNode;
     postfix?: ReactNode;
   }>;

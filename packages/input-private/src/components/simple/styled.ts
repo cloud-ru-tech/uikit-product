@@ -5,10 +5,13 @@ import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
+import { DEFAULT_TEXT_STYLES, DISABLED_TEXT_STYLES, themes } from '../../styles';
 import { InputPrivate } from '../private';
 import { Sizes } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 import { SimpleInputProps } from './types';
+
+themes;
 
 PURPLE_THEME;
 PURPLE_DARK_THEME;
@@ -85,6 +88,30 @@ export const Input = styled(InputPrivate)`
 
   &[data-ellipsis]:not(:active) {
     text-overflow: ellipsis;
+  }
+`;
+
+export const Prefix = styled.div`
+  ${DEFAULT_TEXT_STYLES};
+
+  align-items: center;
+  border-right: inherit;
+  display: flex;
+
+  &[data-disabled] {
+    ${DISABLED_TEXT_STYLES};
+  }
+
+  &[data-size=${Sizes.Small}] {
+    padding: 0 ${PaddingInPx[Sizes.Small]};
+  }
+
+  &[data-size=${Sizes.Medium}] {
+    padding: 0 ${PaddingInPx[Sizes.Medium]};
+  }
+
+  &[data-size=${Sizes.Large}] {
+    padding: 0 ${PaddingInPx[Sizes.Large]};
   }
 `;
 

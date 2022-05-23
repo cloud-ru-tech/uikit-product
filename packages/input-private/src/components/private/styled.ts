@@ -4,13 +4,16 @@ import { VFC } from 'react';
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 import { DEFAULT_STYLES } from '@sbercloud/uikit-product-utils';
 
-import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+import {
+  DEFAULT_PLACEHOLDER_STYLES,
+  DEFAULT_TEXT_STYLES,
+  DISABLED_PLACEHOLDER_STYLES,
+  DISABLED_TEXT_STYLES,
+  themes,
+} from '../../styles';
 import { InputPrivateProps } from './types';
 
-PURPLE_THEME;
-PURPLE_DARK_THEME;
-GREEN_THEME;
-GREEN_DARK_THEME;
+themes;
 
 export const styledInputPrivate = (InputPrivate: VFC<InputPrivateProps>): VFC<InputPrivateProps> => styled(
   InputPrivate,
@@ -18,22 +21,24 @@ export const styledInputPrivate = (InputPrivate: VFC<InputPrivateProps>): VFC<In
   ${DEFAULT_STYLES.COMMON};
   ${DEFAULT_STYLES.BORDERLESS};
   ${TEXT_2_STYLES};
+  ${DEFAULT_TEXT_STYLES};
+
   background-color: transparent;
   width: 100%;
   max-width: 100%;
   font-family: SB Sans Interface, serif;
-  color: var(${COLORS.text.default});
 
   &[disabled] {
+    ${DISABLED_TEXT_STYLES};
+
     background-color: transparent;
-    color: var(${COLORS.text.disabled});
   }
 
   &::placeholder {
-    color: var(${COLORS.placeholder.default});
+    ${DEFAULT_PLACEHOLDER_STYLES};
   }
 
   &[disabled]::placeholder {
-    color: var(${COLORS.placeholder.disabled});
+    ${DISABLED_PLACEHOLDER_STYLES};
   }
 `;

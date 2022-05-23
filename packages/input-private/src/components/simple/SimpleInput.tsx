@@ -22,6 +22,7 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
       placeholder,
       id,
       className,
+      prefix,
       moreButton,
       size = Sizes.Medium,
       type = Types.Text,
@@ -88,6 +89,13 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
           disabled={disabled}
           onFocus={onFocus}
           onBlur={onBlur}
+          prefix={
+            prefix && (
+              <S.Prefix data-size={size} data-disabled={disabled || undefined}>
+                {prefix}
+              </S.Prefix>
+            )
+          }
           postfix={
             (hasClearButton || hasShowButton) && (
               <S.Postfix data-size={size}>

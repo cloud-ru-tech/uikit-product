@@ -22,6 +22,7 @@ const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivate
       maxLength,
       onFocus,
       onBlur,
+      prefix,
       postfix,
       ...rest
     },
@@ -32,6 +33,7 @@ const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivate
 
     return (
       <>
+        {prefix}
         <input
           name={name}
           maxLength={maxLength}
