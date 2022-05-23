@@ -9,6 +9,7 @@ import { InputPrivateProps } from './types';
 const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivateProps>(
   (
     {
+      name,
       value = '',
       onChange,
       placeholder,
@@ -31,6 +32,7 @@ const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivate
     return (
       <>
         <input
+          name={name}
           maxLength={maxLength}
           className={className}
           autoFocus={autoFocus}

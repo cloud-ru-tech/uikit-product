@@ -14,6 +14,7 @@ import { SimpleInputProps } from './types';
 const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
   (
     {
+      name,
       value = '',
       onChange,
       onFocus,
@@ -88,6 +89,7 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
           data-has-more-button={hasMoreButton || undefined}
         >
           <InputPrivate
+            name={name}
             data-test-id={'private-input'}
             autoFocus={autoFocus}
             autoComplete={autoComplete}

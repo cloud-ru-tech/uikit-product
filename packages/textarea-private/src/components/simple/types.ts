@@ -4,6 +4,7 @@ import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type SimpleTextareaProps = RefAttributes<HTMLTextAreaElement> &
   WithSupportProps<{
+    name?: string;
     value: string;
     onChange(value: string, e?: ChangeEvent<HTMLTextAreaElement>): void;
     className?: string;

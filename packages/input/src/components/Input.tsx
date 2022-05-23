@@ -9,6 +9,7 @@ export type InputProps = Omit<InputDecoratorPrivateProps, 'children'> & Omit<Sim
 const ForwardedInput = forwardRef<HTMLInputElement, WithSupportProps<InputProps>>(
   (
     {
+      name,
       className,
       label,
       labelTooltip,
@@ -43,6 +44,7 @@ const ForwardedInput = forwardRef<HTMLInputElement, WithSupportProps<InputProps>
         {...extractSupportProps(rest)}
       >
         <SimpleInput
+          name={name}
           value={value}
           onChange={onChange}
           ref={ref}

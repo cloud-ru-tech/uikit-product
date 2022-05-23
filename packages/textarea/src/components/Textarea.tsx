@@ -10,6 +10,7 @@ export type TextareaProps = Omit<InputDecoratorPrivateProps, 'children'> &
 export const Textarea = forwardRef<HTMLTextAreaElement, WithSupportProps<TextareaProps>>(
   (
     {
+      name,
       className,
       label,
       labelTooltip,
@@ -42,6 +43,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, WithSupportProps<Textare
       >
         <SimpleTextarea
           ref={ref}
+          name={name}
           value={value}
           onChange={onChange}
           placeholder={placeholder}

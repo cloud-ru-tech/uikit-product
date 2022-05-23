@@ -6,6 +6,7 @@ import { Types } from './constants';
 
 export type InputPrivateProps = RefAttributes<HTMLInputElement> &
   WithSupportProps<{
+    name?: string;
     value: string;
     onChange?(value: string, e?: ChangeEvent<HTMLInputElement>): void;
     className?: string;

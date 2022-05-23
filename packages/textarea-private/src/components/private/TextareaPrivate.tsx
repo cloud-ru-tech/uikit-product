@@ -11,6 +11,7 @@ const MIN_ROWS = 3;
 const StylelessTextareaPrivate = forwardRef<HTMLTextAreaElement, TextareaPrivateProps>(
   (
     {
+      name,
       value = '',
       onChange,
       onFocus,
@@ -33,10 +34,9 @@ const StylelessTextareaPrivate = forwardRef<HTMLTextAreaElement, TextareaPrivate
     const maxRowsWithDefault = useMemo(() => (maxRows ? Math.max(maxRows, minRows) : undefined), [minRows, maxRows]);
 
     const commonProps = {
-      // Workaround for ref. Outdated @types/react-textarea-autosize package
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      ref: ref as any,
+      ref: ref,
       className,
+      name,
       value,
       placeholder,
       disabled,

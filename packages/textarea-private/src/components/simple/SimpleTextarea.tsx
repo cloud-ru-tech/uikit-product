@@ -12,6 +12,7 @@ import { SimpleTextareaProps } from './types';
 const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaProps>(
   (
     {
+      name,
       value,
       onChange,
       placeholder,
@@ -48,6 +49,7 @@ const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaPr
       >
         <StyledPrivateTextarea
           ref={textareaRef}
+          name={name}
           value={value}
           onChange={onChange}
           placeholder={placeholder}
