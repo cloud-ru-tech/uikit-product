@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toaster@1.0.5...@sbercloud/uikit-product-toaster@1.0.6) (2022-05-23)
+
+
+### Bug Fixes
+
+* exported types ([27adf49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/27adf49a76d0f8e5bb0d54548ad1808cfbc72035))
+
+
+
+
+
 ## [1.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toaster@1.0.4...@sbercloud/uikit-product-toaster@1.0.5) (2022-05-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-toaster
