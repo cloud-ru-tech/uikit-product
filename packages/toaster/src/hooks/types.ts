@@ -3,7 +3,7 @@ import { ToastOptions as RtToastOptions } from 'react-toastify';
 
 import { ToasterBigProps, ToasterContainerProps, ToasterSmallProps } from '../components';
 
-type ToastOptions = {
+export type ToastOptions = {
   id?: RtToastOptions['toastId'];
   autoClose?: RtToastOptions['autoClose'];
   onClose?: RtToastOptions['onClose'];
