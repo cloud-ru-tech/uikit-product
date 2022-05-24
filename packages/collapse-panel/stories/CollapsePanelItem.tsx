@@ -3,7 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
 import { Avatar } from '@sbercloud/uikit-product-avatar';
-import { Input } from '@sbercloud/uikit-product-input';
+import { InputCommon } from '@sbercloud/uikit-product-input';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -31,7 +31,7 @@ const Template: Story<CollapsePanelItemProps> = ({ ...args }) => {
       header={<Avatar variant={Avatar.variants.User} size={Avatar.sizes.Large} name='G O' />}
     >
       <ContentStyled>Content</ContentStyled>
-      <Input value={'Some text'} onChange={() => {}} />
+      <InputCommon value={'Some text'} onChange={() => {}} />
     </CollapsePanelItem>
   );
 };

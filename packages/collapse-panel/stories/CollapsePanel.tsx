@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { Avatar } from '@sbercloud/uikit-product-avatar';
-import { Input } from '@sbercloud/uikit-product-input';
+import { InputCommon } from '@sbercloud/uikit-product-input';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -28,7 +28,7 @@ const Template: Story<ICollapsePanelProps> = ({ ...args }) => (
       header={<Avatar variant={Avatar.variants.User} name='' size={Avatar.sizes.Large} src={avatarSrc} />}
     >
       <ContentStyled>Content</ContentStyled>
-      <Input value={'Some text'} onChange={() => {}} />
+      <InputCommon value={'Some text'} onChange={() => {}} />
     </CollapsePanelItem>
     <CollapsePanelItem index={1} header={<div>Vertical Scrolling</div>} isFavourite>
       <ContentStyled>{'Content '.repeat(500)}</ContentStyled>

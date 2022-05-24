@@ -5,7 +5,7 @@ import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { DropdownMenu } from '@sbercloud/uikit-product-dropdown';
 import { FormField } from '@sbercloud/uikit-product-form';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { Input } from '@sbercloud/uikit-product-input';
+import { InputCommon } from '@sbercloud/uikit-product-input';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -44,7 +44,7 @@ const Template: Story<TableWithRowDetailProps<DataModel>> = args => (
             'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
         }}
       >
-        <Input value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
+        <InputCommon value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
       </FormField>
 
       <FormField
@@ -54,7 +54,7 @@ const Template: Story<TableWithRowDetailProps<DataModel>> = args => (
             'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
         }}
       >
-        <Input value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
+        <InputCommon value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
       </FormField>
 
       <FormField
@@ -64,7 +64,7 @@ const Template: Story<TableWithRowDetailProps<DataModel>> = args => (
             'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
         }}
       >
-        <Input value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
+        <InputCommon value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
       </FormField>
     </EmbeddedComponent>
   </TableWithRowDetail>

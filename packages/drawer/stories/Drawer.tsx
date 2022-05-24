@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
-import { Input } from '@sbercloud/uikit-product-input';
+import { InputCommon } from '@sbercloud/uikit-product-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-product-radio';
 import { Select } from '@sbercloud/uikit-product-select';
 
@@ -101,7 +101,7 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
           }
         >
           <DrawerContent>
-            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
+            <InputCommon value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Select options={selectOptions} />
             <Divider className={dividerClassName} />
             <RadioGroup onChange={setRadioValue} value={radioValue}>
@@ -109,28 +109,28 @@ const Template: Story<IDrawerProps> = ({ ...args }) => {
               <Radio disabled={false} value='story2' label='story2' className={radioClassName} />
               <Radio disabled={false} value='story3' label='story3' className={radioClassName} />
             </RadioGroup>
-            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
+            <InputCommon value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Divider className={dividerClassName} />
             <RadioGroup onChange={setRadioValue} value={radioValue}>
               <Radio disabled={false} value='story1' label='story1' className={radioClassName} />
               <Radio disabled={false} value='story2' label='story2' className={radioClassName} />
               <Radio disabled={false} value='story3' label='story3' className={radioClassName} />
             </RadioGroup>
-            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
+            <InputCommon value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Divider className={dividerClassName} />
             <RadioGroup onChange={setRadioValue} value={radioValue}>
               <Radio disabled={false} value='story1' label='story1' className={radioClassName} />
               <Radio disabled={false} value='story2' label='story2' className={radioClassName} />
               <Radio disabled={false} value='story3' label='story3' className={radioClassName} />
             </RadioGroup>
-            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
+            <InputCommon value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Divider className={dividerClassName} />
             <RadioGroup onChange={setRadioValue} value={radioValue}>
               <Radio disabled={false} value='story1' label='story1' className={radioClassName} />
               <Radio disabled={false} value='story2' label='story2' className={radioClassName} />
               <Radio disabled={false} value='story3' label='story3' className={radioClassName} />
             </RadioGroup>
-            <Input value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
+            <InputCommon value={value} onChange={setValue} placeholder='Пример: Project1-bucket106' />
             <Divider className={dividerClassName} />
             <RadioGroup onChange={setRadioValue} value={radioValue}>
               <Radio disabled={false} value='story1' label='story1' className={radioClassName} />

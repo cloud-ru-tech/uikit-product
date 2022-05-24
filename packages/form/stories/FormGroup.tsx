@@ -3,7 +3,7 @@ import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { ReactText, useState } from 'react';
 
-import { Input } from '@sbercloud/uikit-product-input';
+import { InputCommon } from '@sbercloud/uikit-product-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-product-radio';
 import { Select } from '@sbercloud/uikit-product-select';
 import { Slider } from '@sbercloud/uikit-product-slider';
@@ -40,7 +40,7 @@ const Template: Story = () => {
     <Wrapper>
       <FormGroup number={1} title='Общая информация' hint={{ content: 'Подсказка' }}>
         <FormField label='Произвольное число'>
-          <Input value={value.toString()} onChange={x => setValue(Number(x))} />
+          <InputCommon value={value.toString()} onChange={x => setValue(Number(x))} />
         </FormField>
 
         <FormField label='Выбрать'>
@@ -74,7 +74,7 @@ const Template: Story = () => {
 
       <FormGroup number={2} title='Общая информация' hint={{ content: 'Подсказка' }}>
         <FormField label='Произвольное число'>
-          <Input value={value.toString()} onChange={x => setValue(Number(x))} />
+          <InputCommon value={value.toString()} onChange={x => setValue(Number(x))} />
         </FormField>
 
         <FormField>
