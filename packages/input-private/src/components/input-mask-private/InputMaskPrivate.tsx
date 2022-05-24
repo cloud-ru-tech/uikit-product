@@ -1,63 +1,41 @@
 import mergeRefs from 'merge-refs';
-import { forwardRef, useCallback, useEffect, useRef } from 'react';
-import { useIMask } from 'react-imask';
+import { forwardRef } from 'react';
 
+import { useInputMask } from '../../hooks';
 import { SimpleInput, SimpleInputProps } from '../simple';
 import { MASKS_CONFIG, Masks } from './constants';
 
-export type InputMaskPrivateProps = SimpleInputProps & {
+export type InputMaskPrivateProps = Omit<SimpleInputProps, 'placeholder'> & {
   mask: Masks;
 };
 
-const InputMaskPrivateForwarded = forwardRef<HTMLInputElement, InputMaskPrivateProps>(
-  ({ mask, onChange, ...props }, ref) => {
-    const { ref: imaskRef, value, unmaskedValue, typedValue, maskRef } = useIMask(MASKS_CONFIG[mask]);
-
-    const inputRef = mergeRefs(ref, imaskRef) as React.Ref<HTMLInputElement> | undefined;
-
-    const hasMounted = useRef(false);
-
-    useEffect(() => {
-      if (hasMounted.current) {
-        onChange(unmaskedValue);
-      } else {
-        hasMounted.current = true;
+const InputMaskPrivateForwarded = forwardRef<HTMLInputElement, InputMaskPrivateProps>(({ mask, ...props }, ref) => {
+  const { inputRef, placeholder, value, onFocus, onBlur, onChange } = useInputMask({
+    options: MASKS_CONFIG[mask],
+    value: props.value,
+    onChange: props.onChange,
+    onFocus: props.onFocus,
+    onBlur(event, value) {
+      if (mask === Masks.Phone && value === '7') {
+        onChange('');
       }
-    }, [unmaskedValue]);
 
-    const syncMask = useCallback((newValue: string) => {
-      if (maskRef.current) {
-        maskRef.current.el.value = newValue;
-        maskRef.current.unmaskedValue = newValue;
-        maskRef.current.value = newValue;
-        maskRef.current.updateValue();
-      }
-    }, []);
+      props.onBlur?.(event);
+    },
+  });
 
-    useEffect(() => syncMask(props.value), [props.value]);
-
-    const handleFocus = () => {
-      maskRef.current.updateOptions({ lazy: false });
-    };
-
-    const handleBlur = () => {
-      maskRef.current.updateOptions({ lazy: true });
-
-      if (mask === Masks.Phone && unmaskedValue === '7') syncMask('');
-    };
-
-    return (
-      <SimpleInput
-        {...props}
-        ref={inputRef}
-        value={value}
-        onChange={syncMask}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-      />
-    );
-  },
-);
+  return (
+    <SimpleInput
+      {...props}
+      ref={mergeRefs(ref, inputRef)}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      onFocus={onFocus}
+      onBlur={onBlur}
+    />
+  );
+});
 
 export const InputMaskPrivate = InputMaskPrivateForwarded as typeof InputMaskPrivateForwarded & {
   masks: typeof Masks;

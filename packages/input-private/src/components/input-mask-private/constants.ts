@@ -1,4 +1,4 @@
-import { IMask } from 'react-imask';
+import { InputMaskOptions } from '../../hooks';
 
 export enum Masks {
   Phone = 'Phone',
@@ -6,7 +6,7 @@ export enum Masks {
   Snils = 'Snils',
 }
 
-export const MASKS_CONFIG: { [key in Masks]: IMask.AnyMaskedOptions } = {
+export const MASKS_CONFIG: Record<Masks, InputMaskOptions> = {
   [Masks.Phone]: {
     mask: '+{7} 000 000-00-00',
     placeholderChar: '_',
