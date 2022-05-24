@@ -4,6 +4,7 @@ export enum Masks {
   Phone = 'Phone',
   Passport = 'Passport',
   Snils = 'Snils',
+  ConfirmationCode = 'ConfirmationCode',
 }
 
 export const MASKS_CONFIG: Record<Masks, InputMaskOptions> = {
@@ -17,6 +18,10 @@ export const MASKS_CONFIG: Record<Masks, InputMaskOptions> = {
   },
   [Masks.Snils]: {
     mask: '000000-000 00',
+    placeholderChar: '_',
+  },
+  [Masks.ConfirmationCode]: {
+    mask: '0000',
     placeholderChar: '_',
   },
 };
