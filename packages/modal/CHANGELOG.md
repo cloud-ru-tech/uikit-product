@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.67](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.66...@sbercloud/uikit-product-modal@0.15.67) (2022-05-26)
+
+
+### Bug Fixes
+
+* **CP-5365:** button css className priority ([eda4d9a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eda4d9ae36bdafc15b42ab85f5b6d385afea9bbb))
+* **CP-6136:** up button css className priority ([cf49e0c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf49e0c89bd18bb4210cdea87cede17adedfd289))
+
+
+
+
+
 ## [0.15.66](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.65...@sbercloud/uikit-product-modal@0.15.66) (2022-05-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-modal
