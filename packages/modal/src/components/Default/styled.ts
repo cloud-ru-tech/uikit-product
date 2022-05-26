@@ -30,9 +30,7 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const buttonCSS = css`
-  && {
-    margin-right: 8px;
-  }
+  margin-right: 8px !important;
 `;
 
 export const contentClassname = css`
