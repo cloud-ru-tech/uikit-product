@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toaster@1.0.6...@sbercloud/uikit-product-toaster@2.0.0) (2022-05-27)
+
+
+### Features
+
+* **AICE-6130:** improve type check for openToast, improve updateToast ([480f420](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/480f42040801eb13a8d623ef6e7ae89a368059ee))
+
+
+### BREAKING CHANGES
+
+* **AICE-6130:** improve type check for openToast, improve updateToast
+
+
+
+
+
 ## [1.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toaster@1.0.5...@sbercloud/uikit-product-toaster@1.0.6) (2022-05-23)
 
 
