@@ -12,7 +12,7 @@ GREEN_DARK_THEME;
 
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 `;
 
 export const Container = styled.div`

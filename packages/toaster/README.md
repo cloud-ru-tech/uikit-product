@@ -11,12 +11,52 @@
 ```typescript
 const { openToast, types } = useToast();
 
-const onClick = () => {
+const clickToOpen = () => {
   openToast({
     type: types.Big,
     toastProps: {/* toastProps */ },
     containerProps: {/* containerProps if needed */ },
-    toastOptions: {/* toastOptions if needed */ },
+    toastOptions: {/* toastOptions if needed */},
+  });
+};
+```
+
+### Updating a Toaster
+See an example in [ToasterSmall Story](/packages/toaster/stories/ToasterSmall.tsx) or [ToasterBig Story](/packages/toaster/stories/ToasterBig.tsx)
+
+```typescript
+const { openToast, updateToast, types, statuses } = useToast();
+
+const TOAST_ID = 'testBig';
+
+// you could pass an id manually
+const clickToOpen = () => {
+  openToast({
+    type: types.Big,
+    toastProps: {/* toastProps */ },
+    containerProps: {/* containerProps if needed */ },
+    toastOptions: {
+      id: TOAST_ID,
+      /* other toastOptions if needed */
+    },
+  });
+};
+
+// or await to get automatically generated id
+const clickToOpenAsync = async () => {
+  const toastId = await openToast({
+    type: types.Big,
+    toastProps: {/* toastProps */ },
+    containerProps: {/* containerProps if needed */ },
+    toastOptions: {/* toastOptions if needed */},
+  });
+};
+
+const clickToUpdate = () => {
+  updateToast(TOAST_ID, {
+    type: types.Big,
+    toastProps: {/* props you need to update */},
+    toastOptions: {/* toastOptions if needed */},
   });
 };
 ```
@@ -24,6 +64,7 @@ const onClick = () => {
 ## Props
 
 ### useToast
+
 ```typescript
 type ToastOptions = {
   id?: RtToastOptions['toastId'];
@@ -31,22 +72,46 @@ type ToastOptions = {
   onClose?: RtToastOptions['onClose'];
 };
 
-type ToastProps = ToasterBigProps | ToasterSmallProps;
-
 enum ToastType {
   Big = 'Big',
   Small = 'Small',
 }
 
-type OpenToast = (args: {
-  type: ToastType;
-  toastProps: ToastProps;
+type ToastPropsMap = {
+  [ToastType.Small]: ToasterSmallProps;
+  [ToastType.Big]: ToasterBigProps;
+};
+
+type OpenToast = <T extends keyof ToastPropsMap>({
+  type,
+  toastProps,
+  containerProps,
+  toastOptions,
+}: {
+  type: T;
+  toastProps: ToastPropsMap[T];
   containerProps?: ToasterContainerProps;
   toastOptions?: ToastOptions;
 }) => Promise<ReactText | undefined>;
+
+type UpdateToast = <T extends keyof ToastPropsMap>(
+  id: string | number,
+  {
+    type,
+    toastProps,
+    toastOptions,
+    containerId,
+  }: {
+    type: T;
+    toastProps: ToastPropsMap[T];
+    toastOptions?: ToastOptions;
+    containerId?: ToasterContainerProps['containerId'];
+  },
+) => void;
 ```
 
 ### ToasterContainer
+
 ```typescript
 type ToasterContainerProps = {
   position?: ToastPosition;

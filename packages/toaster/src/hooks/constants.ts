@@ -20,3 +20,5 @@ export const TOAST_CONTAINER_DEFAULT_PROPS: Record<ToastType, ToasterContainerPr
 };
 
 export const DEFAULT_AUTO_CLOSE = 5000;
+
+export const TOAST_ROOT_ID = 'toast-root';

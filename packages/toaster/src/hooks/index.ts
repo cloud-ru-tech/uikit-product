@@ -1,2 +1,2 @@
 export * from './useToast';
-export type { OpenToast, ToastOptions } from './types';
+export type { ToastOptions } from './types';

@@ -69,7 +69,7 @@ export function ToasterBig({
         onClick={handleCloseClick}
       />
 
-      <S.IconContainer data-status={status}>
+      <S.IconContainer data-status={status} data-test-id={TOASTER_BIG_TEST_IDS.icon}>
         <Icon size={20} />
       </S.IconContainer>
 

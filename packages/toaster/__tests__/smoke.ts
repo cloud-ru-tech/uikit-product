@@ -15,8 +15,9 @@ describe('[Toaster]: Small', () => {
     });
   }
 
+  const status = 'Success' as ToasterSmallProps['status'];
+
   it('Opened after click and have icon', () => {
-    const status = 'Success' as ToasterSmallProps['status'];
     visit({
       status,
     });
@@ -28,7 +29,6 @@ describe('[Toaster]: Small', () => {
   });
 
   it(`Should contain text "${text}"`, () => {
-    const status = 'Success' as ToasterSmallProps['status'];
     visit({
       status,
     });
@@ -39,14 +39,39 @@ describe('[Toaster]: Small', () => {
   });
 
   it('Status "Neutral" has no icon', () => {
-    const status = 'Neutral' as ToasterSmallProps['status'];
     visit({
-      status,
+      status: 'Neutral' as ToasterSmallProps['status'],
     });
 
     cy.getByDataTestId('trigger-toaster').click();
 
     cy.getByDataTestId(TOASTER_SMALL_TEST_IDS.icon).should('not.exist');
+  });
+
+  it('Should update after "update button" click', () => {
+    visit({
+      status,
+    });
+
+    cy.getByDataTestId('trigger-toaster').click();
+    cy.getByDataTestId(TOASTER_SMALL_TEST_IDS.text).invoke('text').as('prevText');
+    cy.getByDataTestId(TOASTER_SMALL_TEST_IDS.icon).invoke('html').as('prevIcon');
+
+    cy.getByDataTestId('update-toaster').click();
+    cy.getByDataTestId(TOASTER_SMALL_TEST_IDS.text).invoke('text').as('newText');
+    cy.getByDataTestId(TOASTER_SMALL_TEST_IDS.icon).invoke('html').as('newIcon');
+
+    cy.get('@prevText').then(prevText => {
+      cy.get('@newText').then(newText => {
+        expect(prevText).not.to.eq(newText);
+      });
+    });
+
+    cy.get('@prevIcon').then(prevIcon => {
+      cy.get('@newIcon').then(newIcon => {
+        expect(prevIcon).not.to.eq(newIcon);
+      });
+    });
   });
 });
 
@@ -125,5 +150,37 @@ describe('[Toaster]: Big', () => {
 
     cy.getByDataTestId(`${TOASTER_BIG_TEST_IDS.action}-0`).should('exist');
     cy.getByDataTestId(`${TOASTER_BIG_TEST_IDS.action}-1`).should('exist');
+  });
+
+  it('Should update after "update button" click', () => {
+    visit();
+
+    cy.getByDataTestId('trigger-toaster-two-actions').click();
+    cy.getByDataTestId(TOASTER_BIG_TEST_IDS.title).invoke('text').as('prevTitle');
+    cy.getByDataTestId(TOASTER_BIG_TEST_IDS.description).invoke('text').as('prevDescription');
+    cy.getByDataTestId(TOASTER_BIG_TEST_IDS.icon).invoke('html').as('prevIcon');
+
+    cy.getByDataTestId('update-toaster-two-actions').click();
+    cy.getByDataTestId(TOASTER_BIG_TEST_IDS.title).invoke('text').as('newTitle');
+    cy.getByDataTestId(TOASTER_BIG_TEST_IDS.description).invoke('text').as('newDescription');
+    cy.getByDataTestId(TOASTER_BIG_TEST_IDS.icon).invoke('html').as('newIcon');
+
+    cy.get('@prevTitle').then(prevTitle => {
+      cy.get('@newTitle').then(newTitle => {
+        expect(prevTitle).not.to.eq(newTitle);
+      });
+    });
+
+    cy.get('@prevDescription').then(prevDescription => {
+      cy.get('@newDescription').then(newDescription => {
+        expect(prevDescription).not.to.eq(newDescription);
+      });
+    });
+
+    cy.get('@prevIcon').then(prevIcon => {
+      cy.get('@newIcon').then(newIcon => {
+        expect(prevIcon).not.to.eq(newIcon);
+      });
+    });
   });
 });

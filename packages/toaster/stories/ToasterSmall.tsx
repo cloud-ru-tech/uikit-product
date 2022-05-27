@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { ReactText, useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 
@@ -16,17 +17,47 @@ export default {
 } as Meta;
 
 const Template: Story<ToasterSmallProps> = ({ ...args }) => {
-  const { openToast, types } = useToast();
+  const { openToast, updateToast, types, statuses } = useToast();
 
-  const onClick = () =>
-    openToast({
+  const [currentToasterId, setToasterId] = useState<ReactText>();
+
+  const clickToOpen = async () => {
+    const id = await openToast({
       type: types.Small,
       toastProps: args,
     });
 
+    setToasterId(id);
+  };
+
+  const clickToUpdate = () => {
+    if (!currentToasterId) return;
+
+    updateToast(currentToasterId, {
+      type: types.Small,
+      toastProps: {
+        ...args,
+        text: 'updated text',
+        status: statuses[types.Small].Error,
+      },
+      toastOptions: {
+        onClose: () => setToasterId(undefined),
+      },
+    });
+  };
+
   return (
     <>
-      <Button data-test-id='trigger-toaster' onClick={onClick} text={`Open ${args.status} toaster`} />
+      <Button data-test-id='trigger-toaster' onClick={clickToOpen} text={`Open ${args.status} toaster`} />
+
+      <br />
+      <br />
+
+      <Button
+        data-test-id='update-toaster'
+        onClick={clickToUpdate}
+        text={`Update toaster to ${statuses[types.Small].Error}`}
+      />
     </>
   );
 };

@@ -18,6 +18,10 @@ export default {
 
 const Block = styled.div`
   margin-bottom: 8px;
+
+  > button + button {
+    margin-left: 20px;
+  }
 `;
 
 const actions: ToasterBigProps['actions'] = [
@@ -34,12 +38,28 @@ const actions: ToasterBigProps['actions'] = [
 ];
 
 const Template: Story<ToasterBigProps> = ({ ...args }) => {
-  const { openToast, types } = useToast();
+  const { openToast, updateToast, types, statuses } = useToast();
 
   const toast = (actions?: ToasterBigProps['actions']) => {
     openToast({
       type: types.Big,
       toastProps: { ...args, actions },
+      toastOptions: {
+        id: actions?.length || 'test',
+      },
+    });
+  };
+
+  const updateToastWithTwoActions = (actions: ToasterBigProps['actions']) => {
+    updateToast(actions?.length || 'test', {
+      type: types.Big,
+      toastProps: {
+        ...args,
+        title: 'Обновлен',
+        description: 'Новый текст',
+        actions,
+        status: statuses[types.Big].Success,
+      },
     });
   };
 
@@ -48,6 +68,7 @@ const Template: Story<ToasterBigProps> = ({ ...args }) => {
       <Block>
         <Button data-test-id='trigger-toaster' onClick={() => toast()} text={`Open ${args.status} toaster`} />
       </Block>
+
       <Block>
         <Button
           data-test-id='trigger-toaster-one-action'
@@ -55,11 +76,18 @@ const Template: Story<ToasterBigProps> = ({ ...args }) => {
           text={`Open ${args.status} toaster with one action`}
         />
       </Block>
+
       <Block>
         <Button
           data-test-id='trigger-toaster-two-actions'
           onClick={() => toast(actions)}
           text={`Open ${args.status} toaster with multiple actions`}
+        />
+
+        <Button
+          data-test-id='update-toaster-two-actions'
+          onClick={() => updateToastWithTwoActions(actions)}
+          text={`Update ${args.status} toaster with multiple actions`}
         />
       </Block>
     </>
