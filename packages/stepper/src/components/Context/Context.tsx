@@ -6,6 +6,8 @@ const StepperContext = createContext<StepContext>({
   currentStepIndex: 0,
   moveForward: () => {},
   moveToPrevStep: () => {},
+  setValidator: () => {},
+  validateCurrentStep: () => true,
 });
 
 export type ContextProps = {
@@ -20,6 +22,8 @@ export const useStepperContext = () => {
 
 export function Context({ children }: ContextProps) {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const [validateCurrentStep, setValidateCurrentStep] = useState<(step: number) => boolean>(() => () => true);
+
   const moveToPrevStep = useCallback(
     (stepIndex: number) => {
       if (stepIndex >= currentStepIndex && stepIndex < 0) {
@@ -34,8 +38,14 @@ export function Context({ children }: ContextProps) {
     setCurrentStepIndex(prevStepIndex => prevStepIndex + 1);
   }, []);
 
+  const setValidator = (validator: (step: number) => boolean) => {
+    setValidateCurrentStep(() => validator);
+  };
+
   return (
-    <StepperContext.Provider value={{ moveForward, moveToPrevStep, currentStepIndex }}>
+    <StepperContext.Provider
+      value={{ moveForward, moveToPrevStep, currentStepIndex, setValidator, validateCurrentStep }}
+    >
       {children}
     </StepperContext.Provider>
   );

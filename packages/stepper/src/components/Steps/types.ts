@@ -1,5 +1,5 @@
 type Step = {
-  id: string | number;
+  id: number;
   name: string;
 };
 

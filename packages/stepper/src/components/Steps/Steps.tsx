@@ -12,24 +12,17 @@ export type StepsProps = {
   steps: StepType[];
   size?: Sizes;
   className?: string;
-  validateCurrentStep: (stepId: string | number) => boolean;
 };
 
-export function Steps({
-  steps,
-  className,
-  validateCurrentStep,
-  size = Sizes.Big,
-  ...rest
-}: WithSupportProps<StepsProps>) {
-  const { moveForward, moveToPrevStep, currentStepIndex } = useStepperContext();
+export function Steps({ steps, className, size = Sizes.Big, ...rest }: WithSupportProps<StepsProps>) {
+  const { moveForward, moveToPrevStep, currentStepIndex, validateCurrentStep } = useStepperContext();
   const lastSelectedStepIndex = useRef(0);
   const [innerSteps, setInnerSteps] = useState<InnerStepType[]>(
     steps.map(step => ({ ...step, isFilled: false, hasError: false })),
   );
 
   const handleStepClick = useCallback(
-    (clickedStepIndex: number, clickedStepId: string | number) => () => {
+    (clickedStepIndex: number, clickedStepId: number) => () => {
       const nextStepIndex = currentStepIndex + 1;
 
       // Если пользователь идет назад

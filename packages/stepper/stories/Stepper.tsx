@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { useEffect } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 
@@ -26,11 +27,15 @@ const Row = styled.div`
 `;
 
 const StepsView = (args: StepsProps) => {
-  const { moveForward, moveToPrevStep, currentStepIndex } = useStepperContext();
+  const { moveForward, moveToPrevStep, currentStepIndex, setValidator } = useStepperContext();
+
+  useEffect(() => {
+    setValidator(() => true);
+  }, []);
 
   return (
     <>
-      <Stepper.Steps {...args} validateCurrentStep={() => true} />
+      <Stepper.Steps {...args} />
       <Row>
         <Button text='Предыдущий шаг' onClick={() => moveToPrevStep(currentStepIndex - 1)} />
         <Button text='Следующий шаг' onClick={moveForward} />
