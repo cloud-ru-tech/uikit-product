@@ -10,35 +10,113 @@
 
 ## Props
 
-```typescript
-enum Sizes {
-  Small = 'Small',
-  Medium = 'Medium',
-  Large = 'Large',
-}
+### InputCommon
 
-enum Types {
-  Text = InputPrivate.types.Text,
-  Password = InputPrivate.types.Password,
-}
-
-type InputPros = {
-  value: string;
-  onChange(value: string): void;
-  className?: string;
-  placeholder?: string;
-  name?: string;
-  size?: Sizes; // default: Sizes.Medium
-  type?: Types; // default: Types.Text
-  disabled?: boolean; // default: false
-  error?: string;
-  autoFocus?: boolean; // default: false
-  autoComplete?: boolean; // default: false
-  maxLength?: number;
-  ref?: RefObject<HTMLInputElement>;
+```ts
+type InputCommonProps = WithSupportProps<{
+  onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
   label?: string;
   labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
   optional?: boolean;
+  disabled?: boolean;
   hint?: string;
-};
+  error?: string;
+  maxLength?: number;
+  className?: string;
+  autoFocus?: boolean;
+  autoComplete?: boolean;
+  name?: string;
+  size?: SimpleInputProps['size'];
+  placeholder?: string;
+}>;
+```
+
+### InputMask
+
+```ts
+type InputMaskProps = WithSupportProps<{
+  onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  mask: InputMaskPrivateProps['mask'];;
+  value?: string;
+  label?: string;
+  labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
+  optional?: boolean;
+  disabled?: boolean;
+  hint?: string;
+  error?: string;
+  maxLength?: number;
+  className?: string;
+  autoFocus?: boolean;
+  autoComplete?: boolean;
+  name?: string;
+  size?: SimpleInputProps['size'];
+}>;
+```
+
+### InputPhone
+
+```ts
+type InputPhoneProps = WithSupportProps<{
+  onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  label?: string;
+  labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
+  optional?: boolean;
+  disabled?: boolean;
+  hint?: string;
+  error?: string;
+  maxLength?: number;
+  className?: string;
+  autoFocus?: boolean;
+  autoComplete?: boolean;
+  name?: string;
+  size?: SimpleInputProps['size'];
+}>;
+```
+
+### InputSecurity
+
+```ts
+type InputSecurityProps = WithSupportProps<{
+  onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
+  label?: string;
+  labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
+  optional?: boolean;
+  disabled?: boolean;
+  hint?: string;
+  error?: string;
+  maxLength?: number;
+  className?: string;
+  autoFocus?: boolean;
+  autoComplete?: boolean;
+  name?: string;
+  size?: SimpleInputProps['size'];
+  placeholder?: string;
+}>;
+```
+
+### InputOverview
+
+```ts
+type InputOverviewProps = WithSupportProps<{
+  onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  onMoreButtonClick: () => void;
+  moreButtonTooltipText?: string;
+  value?: string;
+  label?: string;
+  labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
+  optional?: boolean;
+  disabled?: boolean;
+  hint?: string;
+  error?: string;
+  maxLength?: number;
+  className?: string;
+  autoFocus?: boolean;
+  autoComplete?: boolean;
+  name?: string;
+  size?: SimpleInputProps['size'];
+  placeholder?: string;
+}>;
 ```

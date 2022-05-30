@@ -1,0 +1,39 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
+
+import { BADGE } from '#storybookConstants';
+
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
+import { InputPhone, InputPhoneProps } from '../src';
+
+export default {
+  title: 'Components/Input/Phone',
+  component: InputPhone,
+} as Meta;
+
+const Template: Story<InputPhoneProps> = args => {
+  const [value, setValue] = useState<string>();
+
+  return <InputPhone {...args} value={value} onChange={setValue} />;
+};
+
+export const phone = Template.bind({});
+phone.args = {
+  label: 'Label',
+  labelTooltip: { content: 'Label tooltip content' },
+  hint: 'Hint',
+};
+phone.argTypes = {};
+phone.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  badges: [BADGE.STABLE],
+  design: {
+    name: 'Figma',
+    type: 'figma',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=1106%3A23348',
+  },
+};
