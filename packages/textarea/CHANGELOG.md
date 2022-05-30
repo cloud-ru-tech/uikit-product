@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea@2.1.42...@sbercloud/uikit-product-textarea@2.2.0) (2022-05-30)
+
+
+### Features
+
+* **CP-5885:** add name prop ([f1390c1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f1390c12bd955de04c8abf8ef0cd6175fdf903c0))
+
+
+
+
+
 ## [2.1.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea@2.1.41...@sbercloud/uikit-product-textarea@2.1.42) (2022-05-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-textarea
