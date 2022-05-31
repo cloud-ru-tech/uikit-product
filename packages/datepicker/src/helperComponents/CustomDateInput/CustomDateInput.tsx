@@ -16,6 +16,8 @@ export interface ICustomDateInputProps {
   date: Date | null;
   minDate?: Date | null;
   onClick?: ((event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void) | undefined;
+  handleChange: (date: Date | null) => void;
+  handleCalendarClose: () => void;
   calendarRef?: React.RefObject<RDatePicker>;
   pickSettings: PickSettingProps;
   size: number;
@@ -23,7 +25,7 @@ export interface ICustomDateInputProps {
 
 export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps>((props, ref) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const { date, setDate, onClick, pickSettings, minDate, size } = props;
+  const { date, setDate, onClick, pickSettings, minDate, size, handleCalendarClose, handleChange } = props;
   const [isError, setError] = useState(false);
   const [splitDate, setSplitDate] = useState<TSplitDateType>(getSplitDate(languageCode, date));
 
@@ -40,10 +42,12 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps
       const nextDate = new Date(yearInt, monthInt - 1, dayInt);
 
       const isDate = !isNaN(nextDate.getTime());
-      const notValid =
-        !isDate || dayInt > 31 || monthInt > 12 || yearInt < 1900 || !isAfterMinDate(minDate as Date, nextDate);
+      const isDayValid = dayInt && dayInt <= 31;
+      const isMonthValid = monthInt && monthInt <= 12;
+      const isYearValid = yearInt >= 1900;
+      const isValid = isDate && isDayValid && isMonthValid && isYearValid && isAfterMinDate(minDate as Date, nextDate);
 
-      if (notValid) {
+      if (!isValid) {
         setError(true);
         setSplitDate(splitDate);
         return;
@@ -51,8 +55,9 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps
 
       if (isError) setError(false);
       setDate?.(nextDate);
+      handleChange(nextDate);
     },
-    [isError, minDate, setDate],
+    [isError, minDate, setDate, handleChange],
   );
 
   useEffect(() => {
@@ -68,14 +73,36 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps
 
   const dateForFormatter = useMemo(
     () => ({
-      day: <HiddenInput valueProp={TimeInputProps.day} date={splitDate} onChange={handleChangeDate} minWidth={17} />,
-      month: (
-        <HiddenInput valueProp={TimeInputProps.month} date={splitDate} onChange={handleChangeDate} minWidth={17} />
+      day: (
+        <HiddenInput
+          handleCalendarClose={handleCalendarClose}
+          valueProp={TimeInputProps.day}
+          date={splitDate}
+          onChange={handleChangeDate}
+          minWidth={17}
+        />
       ),
-      year: <HiddenInput valueProp={TimeInputProps.year} date={splitDate} onChange={handleChangeDate} minWidth={34} />,
+      month: (
+        <HiddenInput
+          handleCalendarClose={handleCalendarClose}
+          valueProp={TimeInputProps.month}
+          date={splitDate}
+          onChange={handleChangeDate}
+          minWidth={17}
+        />
+      ),
+      year: (
+        <HiddenInput
+          handleCalendarClose={handleCalendarClose}
+          valueProp={TimeInputProps.year}
+          date={splitDate}
+          onChange={handleChangeDate}
+          minWidth={34}
+        />
+      ),
       time: pickSettings?.isPickTime ? splitDate.time : undefined,
     }),
-    [splitDate, handleChangeDate, pickSettings],
+    [splitDate, handleChangeDate, pickSettings, handleCalendarClose],
   );
 
   const dateStr = useMemo(

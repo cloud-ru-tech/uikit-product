@@ -1,11 +1,9 @@
 import isEqual from 'lodash.isequal';
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useRifm } from 'rifm';
+import { ChangeEvent, KeyboardEvent, useEffect, useMemo, useState } from 'react';
 
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { INPUT_PLACEHOLDER } from '../../helpers/constants';
-import { parseDigits } from '../../helpers/parseDigits';
 import { splitDateFormatter } from '../../helpers/splitDateFormatter';
 import { TSplitDateType, TimeInputProps } from '../../helpers/types';
 import { InputAutosize } from '../InputAutosize';
@@ -17,9 +15,10 @@ interface IHiddenInputProps {
   propName?: string;
   minWidth?: number;
   onChange: (date: TSplitDateType) => void;
+  handleCalendarClose(): void;
 }
 
-export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onChange }) => {
+export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onChange, handleCalendarClose }) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [value, setValue] = useState(date[valueProp]);
   const [ref, setRef] = useState<HTMLInputElement | null>();
@@ -27,46 +26,43 @@ export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onCh
   const inputPlaceholder = useMemo(() => INPUT_PLACEHOLDER(languageCode), [languageCode]);
 
   useEffect(() => {
-    if (value === date[valueProp]) return;
     setValue(date[valueProp]);
-  }, [date, value, valueProp]);
-
-  const setToTheEnd = useCallback(() => {
-    ref?.setSelectionRange(value.length, value.length);
-  }, [value.length]);
+  }, [date, valueProp]);
 
   useEffect(() => {
     const nextSplitDate = { ...date, [valueProp]: value };
     if (isEqual(nextSplitDate, date)) return;
 
     onChange(nextSplitDate);
-    setToTheEnd();
+    ref?.setSelectionRange(value.length, value.length);
   }, [value]);
 
-  const rifm = useRifm({
-    value,
-    onChange: setValue,
-    format: str => {
-      const int = parseDigits(str);
-      const isPlaceholder = value === inputPlaceholder[valueProp];
-      const isDeleted = int.length < value.length;
-      const deletedVal = isDeleted ? '' : int;
-      const replaceVal = isPlaceholder ? int : deletedVal;
-      return splitDateFormatter(valueProp, replaceVal, inputPlaceholder);
-    },
-    mask: true,
-  });
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
 
-  const handleClick = useCallback(() => {
-    setToTheEnd();
-  }, [setToTheEnd]);
+    if (Number.isNaN(Number(value))) return;
+
+    const v = splitDateFormatter(valueProp, value, inputPlaceholder);
+    setValue(v);
+  };
+
+  const handleClick = () => {
+    ref?.setSelectionRange(0, value.length);
+  };
+
+  const handleKeyDownClick = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (['Enter', 'Escape'].includes(e.key)) {
+      handleCalendarClose();
+    }
+  };
 
   return (
     <InputAutosize
       onClick={handleClick}
+      onKeyDown={handleKeyDownClick}
       inputClassName={S.hiddenInputClassName}
-      value={rifm.value}
-      onChange={rifm.onChange}
+      value={value}
+      onChange={handleChange}
       inputRef={setRef}
     />
   );

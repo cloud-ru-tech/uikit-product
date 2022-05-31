@@ -1,6 +1,6 @@
 import enGB from 'date-fns/locale/en-GB';
 import ru from 'date-fns/locale/ru';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import RDatePicker, { registerLocale } from 'react-datepicker';
 
 import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
@@ -33,6 +33,8 @@ export interface DatePickerProps {
 export const DatePicker = ({ value, pickTime, onChange, minDate, size = DatePickerSize.l }: DatePickerProps) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isDatePickerOpen, setOpen] = useState(false);
+  const ref = useRef<RDatePicker>(null);
+
   const close = useCallback(() => setOpen(false), []);
   const open = useCallback(() => setOpen(true), []);
 
@@ -71,11 +73,16 @@ export const DatePicker = ({ value, pickTime, onChange, minDate, size = DatePick
     [date, setDate, pickSettings, minDate],
   );
 
+  const handleCalendarClose = useCallback(() => {
+    ref.current?.setOpen(false);
+  }, [ref]);
+
   const memoizedCustomHeader = useCallback(CustomHeader.bind(null, { languageCode }), [languageCode]);
 
   return (
     <S.Container>
       <RDatePicker
+        ref={ref}
         minDate={minDate}
         selected={date}
         openToDate={date || undefined}
@@ -86,7 +93,15 @@ export const DatePicker = ({ value, pickTime, onChange, minDate, size = DatePick
         showPopperArrow={false}
         locale={languageCode}
         customInput={
-          <CustomDateInput size={size} date={date} pickSettings={pickSettings} setDate={setDate} minDate={minDate} />
+          <CustomDateInput
+            handleCalendarClose={handleCalendarClose}
+            size={size}
+            date={date}
+            pickSettings={pickSettings}
+            setDate={setDate}
+            minDate={minDate}
+            handleChange={handleChange}
+          />
         }
         renderCustomHeader={memoizedCustomHeader}
         calendarContainer={memoizedCustomContainer}
