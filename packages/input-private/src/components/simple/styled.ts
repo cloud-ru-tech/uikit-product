@@ -21,40 +21,30 @@ enum SizeInPx {
   Large = '44px',
 }
 
+enum PaddingInPx {
+  Small = '8px',
+  Medium = '8px',
+  Large = '12px',
+}
+
 export const styledSimpleInput = (SimpleInput: VFC<SimpleInputProps>): VFC<SimpleInputProps> => styled(SimpleInput)`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 100%;
-`;
-
-export const InputWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 100%;
-  transition: color ${ANIMATIONS.TRANSITION}, background-color ${ANIMATIONS.TRANSITION},
-    border-color ${ANIMATIONS.TRANSITION};
-  box-sizing: border-box;
-  padding: 0 7px;
-
-  border: 1px solid var(${COLORS.border.default});
-  border-radius: 4px;
-
-  &[data-has-more-button] {
-    border-radius: 4px 0 0 4px;
-  }
-
   background-color: var(${COLORS.background.default});
+  border-radius: 4px;
+  border: 1px solid var(${COLORS.border.default});
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  transition: ${ANIMATIONS.TRANSITION};
+  transition-property: background-color, border-color;
+  width: 100%;
 
   &:hover {
     border-color: var(${COLORS.border.hover});
     z-index: 1;
   }
 
-  &:focus,
-  &:active,
-  &[data-focused] {
+  &:focus-within {
     border-color: var(${COLORS.border.active});
   }
 
@@ -63,109 +53,91 @@ export const InputWrapper = styled.div`
   }
 
   &[data-disabled] {
-    border-color: var(${COLORS.border.disabled});
     background-color: var(${COLORS.background.disabled});
+    border-color: var(${COLORS.border.disabled});
   }
 
   &[data-size=${Sizes.Small}] {
-    min-height: ${SizeInPx[Sizes.Small]};
-    max-height: ${SizeInPx[Sizes.Small]};
+    height: ${SizeInPx[Sizes.Small]};
   }
 
   &[data-size=${Sizes.Medium}] {
-    min-height: ${SizeInPx[Sizes.Medium]};
-    max-height: ${SizeInPx[Sizes.Medium]};
+    height: ${SizeInPx[Sizes.Medium]};
   }
 
   &[data-size=${Sizes.Large}] {
-    min-height: ${SizeInPx[Sizes.Large]};
-    max-height: ${SizeInPx[Sizes.Large]};
-    padding: 0 11px;
+    height: ${SizeInPx[Sizes.Large]};
   }
 `;
 
 export const Input = styled(InputPrivate)`
+  &[data-size=${Sizes.Small}] {
+    padding: 0 ${PaddingInPx[Sizes.Small]};
+  }
+
+  &[data-size=${Sizes.Medium}] {
+    padding: 0 ${PaddingInPx[Sizes.Medium]};
+  }
+
+  &[data-size=${Sizes.Large}] {
+    padding: 0 ${PaddingInPx[Sizes.Large]};
+  }
+
   &[data-ellipsis]:not(:active) {
     text-overflow: ellipsis;
   }
 `;
 
+export const Postfix = styled.div`
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+
+  &[data-size=${Sizes.Small}] {
+    column-gap: 4px;
+    padding-right: ${PaddingInPx[Sizes.Small]};
+  }
+
+  &[data-size=${Sizes.Medium}] {
+    column-gap: 4px;
+    padding-right: ${PaddingInPx[Sizes.Medium]};
+  }
+
+  &[data-size=${Sizes.Large}] {
+    column-gap: 8px;
+    padding-right: ${PaddingInPx[Sizes.Large]};
+  }
+`;
+
 export const PostfixButtonWrapper = styled.div`
-  align-self: center;
-  padding-left: 4px;
-  min-width: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  max-height: 20px;
+  height: 20px;
+  width: 20px;
 `;
 
 export const MoreIcon = styled(MoreInterfaceSVG)`
   transform: rotate(90deg);
 `;
 
-export const MoreButtonWrapper = styled.div`
-  display: inline-flex;
-  align-items: center;
-  transition: color ${ANIMATIONS.TRANSITION}, background-color ${ANIMATIONS.TRANSITION},
-    border-color ${ANIMATIONS.TRANSITION};
-  box-sizing: border-box;
-  margin-left: -1px;
-
-  border: 1px solid var(${COLORS.border.default});
-  border-radius: 0 4px 4px 0;
-
-  background-color: var(${COLORS.background.default});
-
-  &:hover {
-    border-color: var(${COLORS.border.hover});
-  }
-
-  &:focus,
-  &:active,
-  &[data-focused] {
-    border-color: var(${COLORS.border.active});
-  }
-
-  &[data-error] {
-    border-color: var(${COLORS.border.error});
-  }
-
-  &[data-disabled] {
-    border-color: var(${COLORS.border.disabled});
-    background-color: var(${COLORS.background.disabled});
-    border-left-color: transparent;
-  }
-
-  &[data-size=${Sizes.Small}] {
-    min-width: ${SizeInPx[Sizes.Small]};
-    max-width: ${SizeInPx[Sizes.Small]};
-    min-height: ${SizeInPx[Sizes.Small]};
-    max-height: ${SizeInPx[Sizes.Small]};
-  }
-
-  &[data-size=${Sizes.Medium}] {
-    min-width: ${SizeInPx[Sizes.Medium]};
-    max-width: ${SizeInPx[Sizes.Medium]};
-    min-height: ${SizeInPx[Sizes.Medium]};
-    max-height: ${SizeInPx[Sizes.Medium]};
-  }
-
-  &[data-size=${Sizes.Large}] {
-    min-width: ${SizeInPx[Sizes.Large]};
-    max-width: ${SizeInPx[Sizes.Large]};
-    min-height: ${SizeInPx[Sizes.Large]};
-    max-height: ${SizeInPx[Sizes.Large]};
+export const MoreButton = styled(ButtonIcon)`
+  &&,
+  && > button {
+    height: 100%;
   }
 `;
 
-export const MoreButton = styled(ButtonIcon)`
-  && {
-    height: 100%;
-    width: 100%;
+export const MoreButtonWrapper = styled.div`
+  border-left: inherit;
+  height: 100%;
 
-    > button {
-      height: 100%;
-      width: 100%;
-    }
+  &[data-size=${Sizes.Small}] button {
+    padding: 0 4px;
+  }
+
+  &[data-size=${Sizes.Medium}] button {
+    padding: 0 ${PaddingInPx[Sizes.Medium]};
+  }
+
+  &[data-size=${Sizes.Large}] button {
+    padding: 0 ${PaddingInPx[Sizes.Large]};
   }
 `;

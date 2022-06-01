@@ -1,5 +1,5 @@
 import mergeRefs from 'merge-refs';
-import { FocusEventHandler, forwardRef, useRef, useState } from 'react';
+import { forwardRef, useRef, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -36,35 +36,18 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
     ref,
   ) => {
     const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-    const [isFocused, setIsFocused] = useState(false);
     const [innerType, setInnerType] = useState(type);
-
     const innerRef = useRef<HTMLInputElement>(null);
     const inputRef = mergeRefs(ref, innerRef);
-
-    const onFocusWrapper = () => {
-      innerRef.current?.focus();
-      setIsFocused(true);
-    };
-
-    const onFocusInput: FocusEventHandler<HTMLInputElement> = e => {
-      onFocus?.(e);
-      setIsFocused(true);
-    };
-
-    const onBlurInput: FocusEventHandler<HTMLInputElement> = e => {
-      onBlur?.(e);
-      setIsFocused(false);
-    };
-
-    const onClearHandler = () => {
-      onChange('');
-      onFocusWrapper();
-    };
 
     const hasMoreButton = Boolean(moreButton);
     const hasClearButton = Boolean(value) && !disabled;
     const hasShowButton = Boolean(value) && !disabled && type === Types.Password;
+
+    const onClearHandler = () => {
+      onChange('');
+      innerRef.current?.focus();
+    };
 
     const showHidePasswordHandler = () => {
       if (innerType === Types.Text) {
@@ -77,37 +60,37 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
         innerRef.current?.setSelectionRange(innerRef.current.value.length, innerRef.current.value.length),
       );
 
-      onFocusWrapper();
+      innerRef.current?.focus();
     };
 
     return (
-      <div className={className} {...extractSupportProps(rest)}>
-        <S.InputWrapper
-          onFocus={onFocusWrapper}
+      <div
+        className={className}
+        data-size={size}
+        data-error={error || undefined}
+        data-disabled={disabled || undefined}
+        {...extractSupportProps(rest)}
+      >
+        <S.Input
           data-size={size}
-          data-error={error || undefined}
-          data-disabled={disabled || undefined}
-          data-focused={isFocused || undefined}
-          data-has-more-button={hasMoreButton || undefined}
-        >
-          <S.Input
-            data-ellipsis={ellipsis || undefined}
-            data-test-id={'private-input'}
-            name={name}
-            id={id}
-            autoFocus={autoFocus}
-            autoComplete={autoComplete}
-            ref={inputRef}
-            maxLength={maxLength}
-            value={value}
-            onChange={onChange}
-            placeholder={placeholder}
-            type={innerType as unknown as InputPrivateProps['type']}
-            disabled={disabled}
-            onFocus={onFocusInput}
-            onBlur={onBlurInput}
-            postfix={
-              <>
+          data-ellipsis={ellipsis || undefined}
+          data-test-id={'private-input'}
+          name={name}
+          id={id}
+          autoFocus={autoFocus}
+          autoComplete={autoComplete}
+          ref={inputRef}
+          maxLength={maxLength}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          type={innerType as unknown as InputPrivateProps['type']}
+          disabled={disabled}
+          onFocus={onFocus}
+          onBlur={onBlur}
+          postfix={
+            (hasClearButton || hasShowButton) && (
+              <S.Postfix data-size={size}>
                 {hasClearButton && (
                   <S.PostfixButtonWrapper>
                     <ButtonIcon
@@ -132,17 +115,12 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
                     />
                   </S.PostfixButtonWrapper>
                 )}
-              </>
-            }
-          />
-        </S.InputWrapper>
+              </S.Postfix>
+            )
+          }
+        />
         {hasMoreButton && (
-          <S.MoreButtonWrapper
-            data-size={size}
-            data-error={error || undefined}
-            data-disabled={disabled || undefined}
-            data-focused={isFocused || undefined}
-          >
+          <S.MoreButtonWrapper data-size={size}>
             <S.MoreButton
               icon={<S.MoreIcon />}
               disabled={disabled}
