@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-stepper@0.2.17...@sbercloud/uikit-product-stepper@0.3.0) (2022-06-01)
+
+
+### Features
+
+* **AICDC-6772:** update stepper validation step api ([430581f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/430581fb17f7892a691afe3d6d2c2431b50bae4d))
+
+
+### BREAKING CHANGES
+
+* **AICDC-6772:** update stepper validation step api
+
+
+
+
+
 ## [0.2.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-stepper@0.2.16...@sbercloud/uikit-product-stepper@0.2.17) (2022-05-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-stepper
