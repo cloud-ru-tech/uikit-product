@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@2.7.0...@sbercloud/uikit-product-utils@2.8.0) (2022-06-01)
+
+
+### Features
+
+* **AICE-5511:** introduce `useUniqueId` hook ([a0927d5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a0927d5979dd8bca44b4b8226fc1b9c096c3bbd1))
+
+
+
+
+
 # [2.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@2.6.1...@sbercloud/uikit-product-utils@2.7.0) (2022-05-18)
 
 

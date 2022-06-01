@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.4.0...@sbercloud/uikit-product-input-private@2.5.0) (2022-06-01)
+
+
+### Bug Fixes
+
+* **AICE-5511:** change error state dark theme color ([3161623](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/31616231fe2a33965782f6d53a0f30b34c74fd70))
+* **AICE-5511:** show mask placeholder by default ([de1b076](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de1b076fd53cfc5d66da5679277c895a2000be4b))
+
+
+### Features
+
+* **AICE-5511:** add `letter-spacing` to `InputMaskPrivate` ([7e86f4a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7e86f4ae3f8fc17729f7244d81445080b303474a))
+* **AICE-5511:** add ability to pass `id` prop ([2086639](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/208663905e310bf83447cebe8441928ccb42e3c0))
+* **AICE-5511:** add ability to pass `prefix` prop ([70ed792](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/70ed7921a82f4087695ad49a346ab1c88a44874d))
+* **AICE-5511:** introduce `ConfirmationCode` mask ([5ff5682](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5ff568295e0c5d6d1593690b00a94142e9325be9))
+* **AICE-5511:** introduce `InputPhonePrivate` component ([4619fb7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4619fb711e95b61cf1bef0b5d50c00d6d46e4f34))
+* **AICE-5511:** truncate input value when `ellipsis` prop is `true` ([1ab83df](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ab83dff31c332ec520ba9274a41c52896ab772c))
+
+
+
+
+
 # [2.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.3.17...@sbercloud/uikit-product-input-private@2.4.0) (2022-05-30)
 
 

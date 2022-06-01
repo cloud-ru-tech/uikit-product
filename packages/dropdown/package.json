@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-dropdown",
   "title": "React Dropdown",
-  "version": "0.13.16",
+  "version": "0.13.17",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,8 +28,8 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-theme": "0.33.2",
-    "@sbercloud/uikit-product-tooltip-private": "1.2.10",
-    "@sbercloud/uikit-product-utils": "2.7.0"
+    "@sbercloud/uikit-product-tooltip-private": "1.2.11",
+    "@sbercloud/uikit-product-utils": "2.8.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

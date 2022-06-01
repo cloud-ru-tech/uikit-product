@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toggle-group@1.1.1...@sbercloud/uikit-product-toggle-group@1.1.2) (2022-06-01)
+
+
+### Bug Fixes
+
+* **AICE-5511:** use `useUniqueId` hook instead of `uniqueId` utility ([590bb30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/590bb3049ae651c96003bba28730a6b6b73254f3))
+
+
+
+
+
 ## [1.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toggle-group@1.1.0...@sbercloud/uikit-product-toggle-group@1.1.1) (2022-05-20)
 
 

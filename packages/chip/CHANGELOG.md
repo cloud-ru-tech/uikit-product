@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-chip@2.0.13...@sbercloud/uikit-product-chip@2.0.14) (2022-06-01)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-chip
+
+
+
+
+
 ## [2.0.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-chip@2.0.12...@sbercloud/uikit-product-chip@2.0.13) (2022-05-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-chip

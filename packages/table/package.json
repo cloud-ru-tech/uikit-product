@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-table",
   "title": "React Table",
-  "version": "0.38.6",
+  "version": "0.38.7",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -31,12 +31,12 @@
     "@ag-grid-enterprise/excel-export": "27.2.1",
     "@ag-grid-enterprise/master-detail": "27.2.1",
     "@sbercloud/uikit-product-icons": "4.0.0",
-    "@sbercloud/uikit-product-modal": "0.15.67",
-    "@sbercloud/uikit-product-pagination-private": "1.2.7",
-    "@sbercloud/uikit-product-table-private": "0.13.2",
+    "@sbercloud/uikit-product-modal": "0.15.68",
+    "@sbercloud/uikit-product-pagination-private": "1.2.8",
+    "@sbercloud/uikit-product-table-private": "0.13.3",
     "@sbercloud/uikit-product-theme": "0.33.2",
-    "@sbercloud/uikit-product-toolbar": "0.16.18",
-    "@sbercloud/uikit-product-utils": "2.7.0",
+    "@sbercloud/uikit-product-toolbar": "0.16.19",
+    "@sbercloud/uikit-product-utils": "2.8.0",
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {

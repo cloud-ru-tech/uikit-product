@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input@1.1.0...@sbercloud/uikit-product-input@2.0.0) (2022-06-01)
+
+
+### Features
+
+* **AICE-5511:** delete `Input` component ([37dc865](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/37dc865a918ab94486f016624cd74d4d8fe68c30))
+* **AICE-5511:** introduce `InputCommon`, `InputMask`, `InputPhone`, `InputSecurity` and `InputOverview` components ([aaedbd9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aaedbd9bd36317ebf683597a7ba83d6cc15af376))
+
+
+### BREAKING CHANGES
+
+* **AICE-5511:** delete `Input` component
+
+
+
+
+
 # [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input@1.0.51...@sbercloud/uikit-product-input@1.1.0) (2022-05-30)
 
 

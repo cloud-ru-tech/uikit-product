@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-cards",
   "title": "React Cards",
-  "version": "0.16.2",
+  "version": "0.16.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,11 +27,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.0.12",
-    "@sbercloud/uikit-product-pagination-private": "1.2.7",
+    "@sbercloud/uikit-product-button": "5.0.13",
+    "@sbercloud/uikit-product-pagination-private": "1.2.8",
     "@sbercloud/uikit-product-theme": "0.33.2",
     "@sbercloud/uikit-product-typography": "1.1.1",
-    "@sbercloud/uikit-product-utils": "2.7.0"
+    "@sbercloud/uikit-product-utils": "2.8.0"
   },
   "peerDependencies": {
     "@linaria/core": "^3.0.0-beta.13",

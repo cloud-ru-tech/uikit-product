@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-toaster",
   "title": "React Toaster",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.0.12",
+    "@sbercloud/uikit-product-button": "5.0.13",
     "@sbercloud/uikit-product-icons": "4.0.0",
-    "@sbercloud/uikit-product-predefined-icons-private": "0.1.0",
+    "@sbercloud/uikit-product-predefined-icons-private": "0.1.1",
     "@sbercloud/uikit-product-theme": "0.33.2",
     "@sbercloud/uikit-product-typography": "1.1.1",
     "react-toastify": "9.0.1"

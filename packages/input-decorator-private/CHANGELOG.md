@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-decorator-private@2.0.22...@sbercloud/uikit-product-input-decorator-private@2.1.0) (2022-06-01)
+
+
+### Bug Fixes
+
+* **AICE-5511:** change error state dark theme color ([3161623](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/31616231fe2a33965782f6d53a0f30b34c74fd70))
+
+
+### Features
+
+* **AICE-5511:** add ability to pass `labelFor` prop ([0a756a9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0a756a9bfadac2b65ac093ac455ae5f05e841fed))
+
+
+
+
+
 ## [2.0.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-decorator-private@2.0.21...@sbercloud/uikit-product-input-decorator-private@2.0.22) (2022-05-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-decorator-private
