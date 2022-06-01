@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tag@1.2.1...@sbercloud/uikit-product-tag@1.3.0) (2022-06-01)
+
+
+### Features
+
+* **CP-4752:** add onRemoveClick prop ([c04a1a8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c04a1a87a5d330eef06e6ebd03d54725dc4d39ad))
+
+
+
+
+
 ## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tag@1.2.0...@sbercloud/uikit-product-tag@1.2.1) (2022-05-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-tag
