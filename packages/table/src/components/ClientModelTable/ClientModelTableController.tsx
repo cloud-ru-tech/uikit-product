@@ -153,7 +153,10 @@ export function ClientModelTableController<T>({
   const onCancelDelete = useCallback(() => setDeleteDialogOpened(false), []);
   const openDeleteDialog = useCallback(() => setDeleteDialogOpened(true), []);
   const onConfirmDelete = useCallback(async () => {
-    if (!bulkActions?.delete) return;
+    if (!bulkActions?.delete) {
+      return;
+    }
+
     setDeleteDialogOpened(false);
 
     const ids = selectedRows.map(row => row[fieldId]);
