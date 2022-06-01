@@ -2,8 +2,9 @@ import mergeRefs from 'merge-refs';
 import { forwardRef } from 'react';
 
 import { useInputMask } from '../../hooks';
-import { SimpleInput, SimpleInputProps } from '../simple';
+import { SimpleInputProps } from '../simple';
 import { MASKS_CONFIG, Masks } from './constants';
+import { StyledSimpleInput } from './styled';
 
 export type InputMaskPrivateProps = Omit<SimpleInputProps, 'placeholder'> & {
   mask: Masks;
@@ -25,7 +26,7 @@ const InputMaskPrivateForwarded = forwardRef<HTMLInputElement, InputMaskPrivateP
   });
 
   return (
-    <SimpleInput
+    <StyledSimpleInput
       {...props}
       ref={mergeRefs(ref, inputRef)}
       placeholder={placeholder}
