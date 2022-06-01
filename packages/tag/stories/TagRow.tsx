@@ -1,21 +1,28 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { TagRow, TagRowProps } from '../src';
+import { TagRow, TagRowItem, TagRowProps } from '../src';
 
 export default {
   title: 'Components/Tag/Tag Row',
   component: TagRow,
 } as Meta;
 
-const Template: Story<TagRowProps> = args => <TagRow {...args} />;
+const Template: Story<TagRowProps & { showRemoveButtons: boolean }> = ({ items, ...args }) => {
+  const [tags, setTags] = useState(items);
+  const removeTag = (item: TagRowItem['value']) => setTags(x => x.filter(({ value }) => value !== item));
+
+  return <TagRow {...args} items={tags} onItemRemove={args.showRemoveButtons ? removeTag : undefined} />;
+};
 
 export const tagRow = Template.bind({});
 tagRow.args = {
+  showRemoveButtons: false,
   items: [
     {
       value: '0xxxx',
@@ -99,6 +106,12 @@ tagRow.args = {
     },
   ],
 };
+tagRow.argTypes = {
+  showRemoveButtons: {
+    type: 'boolean',
+    name: '[Stories]: show remove buttons',
+  },
+};
 tagRow.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
@@ -107,6 +120,6 @@ tagRow.parameters = {
   design: {
     type: 'figma',
     name: 'Figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Platform-Design-System?node-id=4736%3A66452',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=4736%3A66452',
   },
 };

@@ -1,4 +1,4 @@
-import { ReactText, Ref, useEffect, useMemo, useRef, useState } from 'react';
+import { ReactText, Ref, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -7,10 +7,19 @@ import { Tag, TagProps } from '../Tag';
 import { TagCloud } from '../TagCloud';
 import { HiddenRow, TagCloudTrigger, TagWrapper, VisibleRow, Wrapper } from './styled';
 
-function renderTag(props: Partial<TagProps>, setRef?: (item: TagRowItem) => Ref<HTMLDivElement>) {
+function renderTag(
+  props: Partial<TagProps>,
+  handleRemoveItem?: (item: TagRowItem['value']) => () => void,
+  setRef?: (item: TagRowItem) => Ref<HTMLDivElement>,
+) {
   return (item: TagRowItem) => (
     <TagWrapper key={item.value} ref={setRef?.(item)}>
-      <Tag color={item.color} size={props.size} value={item.value} />
+      <Tag
+        color={item.color}
+        size={props.size}
+        value={item.value}
+        onRemoveClick={handleRemoveItem && handleRemoveItem(item.value)}
+      />
     </TagWrapper>
   );
 }
@@ -24,9 +33,10 @@ export type TagRowProps = WithSupportProps<{
   items: TagRowItem[];
   size?: Sizes;
   className?: string;
+  onItemRemove?(item: TagRowItem['value']): void;
 }>;
 
-export function TagRow({ items, size, className, ...rest }: TagRowProps) {
+export function TagRow({ items, size, className, onItemRemove, ...rest }: TagRowProps) {
   const [visibilityByItem, setVisibilityByItem] = useState(() => new Map<TagRowItem, boolean>());
   const uniqueItems = useMemo(() => [...new Map(items.map(item => [item.value, item])).values()], [items]);
   const tagElementByItem = useMemo(() => new Map<TagRowItem, HTMLElement>(), []);
@@ -45,7 +55,9 @@ export function TagRow({ items, size, className, ...rest }: TagRowProps) {
     };
   }
 
-  useEffect(() => {
+  const handleRemoveItem = onItemRemove ? (item: TagRowItem['value']) => () => onItemRemove(item) : undefined;
+
+  useLayoutEffect(() => {
     function handleIntersect(entries: IntersectionObserverEntry[]) {
       setVisibilityByItem(prevVisibilityByItem => {
         const nextVisibilityByItem = new Map(prevVisibilityByItem.entries());
@@ -82,10 +94,12 @@ export function TagRow({ items, size, className, ...rest }: TagRowProps) {
 
   return (
     <Wrapper className={className} {...extractSupportProps(rest)}>
-      <HiddenRow ref={hiddenRowElementRef}>{uniqueItems.map(renderTag({ size }, setTagElement))}</HiddenRow>
-      <VisibleRow>{visibleItems.map(renderTag({ size }))}</VisibleRow>
+      <HiddenRow ref={hiddenRowElementRef}>
+        {uniqueItems.map(renderTag({ size }, handleRemoveItem, setTagElement))}
+      </HiddenRow>
+      <VisibleRow>{visibleItems.map(renderTag({ size }, handleRemoveItem))}</VisibleRow>
       {cloudedItems.length > 0 && (
-        <TagCloud content={cloudedItems.map(renderTag({ size }))}>
+        <TagCloud content={cloudedItems.map(renderTag({ size }, handleRemoveItem))}>
           <TagCloudTrigger
             color={Tag.colors.Gray}
             size={size}

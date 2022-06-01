@@ -19,6 +19,7 @@ type TagRowProps = {
   items: TagRowItem[];
   size?: Sizes;
   className?: string;
+  onItemRemove?(item: TagRowItem['value']): void;
 };
 
 type TagRowItem = {
