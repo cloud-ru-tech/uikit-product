@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.39.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.38.7...@sbercloud/uikit-product-table@0.39.0) (2022-06-02)
+
+
+### Features
+
+* added babel transform support ([0a6938d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0a6938d6c2050bde01f45bf1fce76153f0dd2840))
+
+
+
+
+
 ## [0.38.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.38.6...@sbercloud/uikit-product-table@0.38.7) (2022-06-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table
