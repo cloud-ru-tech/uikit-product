@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.13.3...@sbercloud/uikit-product-table-private@0.14.0) (2022-06-03)
+
+
+### Features
+
+* **AICE-6261:** noRowsOverlay new ui ([3faa76d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3faa76d830f3142ffcae990cd688671e959cac17))
+
+
+
+
+
 ## [0.13.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.13.2...@sbercloud/uikit-product-table-private@0.13.3) (2022-06-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table-private
