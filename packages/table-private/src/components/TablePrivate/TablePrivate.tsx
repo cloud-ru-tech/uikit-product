@@ -2,7 +2,13 @@ import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
 import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
-import { ColumnResizedEvent, GridApi, GridReadyEvent, GridSizeChangedEvent } from '@ag-grid-community/core';
+import {
+  ColumnResizedEvent,
+  FilterChangedEvent,
+  GridApi,
+  GridReadyEvent,
+  GridSizeChangedEvent,
+} from '@ag-grid-community/core';
 import { AgGridReact } from '@ag-grid-community/react';
 import { RangeSelectionModule } from '@ag-grid-enterprise/range-selection';
 import { cx } from '@linaria/core';
@@ -12,9 +18,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
 import { styledTable } from '../../helpers/styled';
 import { ColumnDefinition } from '../../helpers/types';
-import { NoRows } from '../overlays';
-import { NoDataReasons } from '../overlays/NoRows/types';
-import { styledTablePrivate } from './styled';
+import { NoDataReasons, NoRows } from '../overlays';
+import * as S from './styled';
 import { TablePrivateProps } from './types';
 
 const AgGridModules = [ClientSideRowModelModule, RangeSelectionModule];
@@ -33,6 +38,7 @@ function StylelessTablePrivate({
 }: TablePrivateProps) {
   const [gridApi, setGridApi] = useState<GridApi>();
   const [resizedColumns, setResizedColumns] = useState<{ [key: string]: string }>({});
+  const [hideTable, setHideTable] = useState(!rowData.length);
 
   const handleGridReady = (params: GridReadyEvent) => {
     setGridApi(params.api);
@@ -84,8 +90,14 @@ function StylelessTablePrivate({
     }
   }, [gridApi, resizedColumns]);
 
+  const onFilterChanged = (params: FilterChangedEvent) => {
+    setHideTable(!Boolean(params.api.getDisplayedRowCount()));
+
+    gridOptions?.onFilterChanged?.(params);
+  };
+
   return (
-    <div className={cx('ag-theme-alpine', className)}>
+    <div className={cx('ag-theme-alpine', hideTable && S.hideTableHeaderClassName, className)}>
       <AgGridReact
         modules={[...AgGridModules, ...additionModules]}
         gridOptions={{
@@ -104,12 +116,13 @@ function StylelessTablePrivate({
             suppressMenu: true,
           },
           ...gridOptions,
+          onFilterChanged,
         }}
         domLayout='autoHeight'
         onGridReady={handleGridReady}
         onGridSizeChanged={handleGridSizeChanged}
         rowData={rowData}
-        pinnedTopRowData={pinnedTopRowData}
+        pinnedTopRowData={hideTable ? undefined : pinnedTopRowData}
         columnDefs={colDefs}
         isExternalFilterPresent={() => Boolean(doesRowPassFilter)}
         doesExternalFilterPass={node => doesRowPassFilter?.(node.data) || false}
@@ -125,4 +138,4 @@ function StylelessTablePrivate({
 
 export type { TablePrivateProps };
 
-export const TablePrivate = styledTablePrivate(styledTable(StylelessTablePrivate));
+export const TablePrivate = S.styledTablePrivate(styledTable(StylelessTablePrivate));

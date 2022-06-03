@@ -116,7 +116,7 @@ const Template: Story<
     [data, filterValue, rowPassFilter, showDelete, showFilter, showExport],
   );
 
-  const pinnedRows = showPinnedRows ? [data[0]] : undefined;
+  const pinnedRows = showPinnedRows ? (data?.length && [data[0]]) || undefined : undefined;
 
   return (
     <CMTable
@@ -236,7 +236,7 @@ clientModelTable.argTypes = {
     },
   },
   showPinnedRows: {
-    defaultValue: true,
+    defaultValue: false,
     name: '[Stories]: show or hide pinned rows',
     control: {
       type: 'boolean',
