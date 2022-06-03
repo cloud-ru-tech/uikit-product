@@ -1,10 +1,14 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { H3_STYLES } from '@sbercloud/uikit-product-typography';
 
-const { COLORS_NO_DATA_PAGE } = DEPRECATED_EXPORT_VARS;
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
 
 export const Container = styled.div`
   width: 100%;
@@ -23,15 +27,15 @@ export const IconContainer = styled.div`
 `;
 
 export const iconClassName = css`
-  fill: var(${COLORS_NO_DATA_PAGE.ICON_FILL});
+  fill: var(${COLORS.ICON_FILL});
 `;
 
 export const Title = styled.h3`
   ${H3_STYLES};
-  color: var(${COLORS_NO_DATA_PAGE.TITLE_COLOR});
+  color: var(${COLORS.TITLE_TEXT});
 `;
 
 export const DescContainer = styled.div`
   max-width: 540px;
-  color: var(${COLORS_NO_DATA_PAGE.CONTENT_COLOR});
+  color: var(${COLORS.CONTENT_TEXT});
 `;
