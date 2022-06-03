@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.45...@sbercloud/uikit-product-datepicker@0.11.46) (2022-06-03)
+
+
+### Bug Fixes
+
+* **AICD-3131:** fixes datepicker input ([a263704](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a2637046df57518e628e8bda4e5d8c1c7962bf0e))
+
+
+
+
+
 ## [0.11.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.44...@sbercloud/uikit-product-datepicker@0.11.45) (2022-06-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-datepicker

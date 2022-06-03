@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-filter",
   "title": "React Filter",
-  "version": "0.15.19",
+  "version": "0.15.20",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-datepicker": "0.11.45",
+    "@sbercloud/uikit-product-datepicker": "0.11.46",
     "@sbercloud/uikit-product-divider": "2.0.28",
     "@sbercloud/uikit-product-icons": "4.0.0",
     "@sbercloud/uikit-product-input-private": "2.5.0",
