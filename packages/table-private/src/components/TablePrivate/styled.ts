@@ -10,7 +10,7 @@ export const styledTablePrivate = (TablePrivate: VFC<TablePrivateProps>): VFC<Ta
   &.ag-theme-alpine {
     .ag-center-cols-clipper,
     .ag-center-cols-container {
-      min-height: 308px;
+      min-height: 329px !important;
     }
 
     & .ag-overlay {

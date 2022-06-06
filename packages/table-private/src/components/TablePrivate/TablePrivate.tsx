@@ -96,6 +96,12 @@ function StylelessTablePrivate({
     gridOptions?.onFilterChanged?.(params);
   };
 
+  useEffect(() => {
+    if (gridApi) {
+      setHideTable(!Boolean(gridApi.getDisplayedRowCount()));
+    }
+  }, [rowData, gridApi]);
+
   return (
     <div className={cx('ag-theme-alpine', hideTable && S.hideTableHeaderClassName, className)}>
       <AgGridReact
