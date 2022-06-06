@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2022-06-06)
+
+
+### Bug Fixes
+
+* **AICE-6009:** remove MLSpaceLogoFull icon from logos ([76331c8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/76331c8fd1c85ffc27fb9c03fdc15c7933940401))
+
+
+### Features
+
+* **CP-6279:** moved themes into package ([9e48842](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e48842f99cdd7a53d7939e8264c83b309c22edb))
+
+
+### BREAKING CHANGES
+
+* **AICE-6009:** remove MLSpaceLogoFull icon from logos
+
+
+
+
+
 ## 0.8.7 (2022-05-16)
 
 
