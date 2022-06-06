@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.53](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.1.52...@sbercloud/uikit-product-text-field@3.1.53) (2022-06-06)
+
+
+### Bug Fixes
+
+* oneline textfield is no longer scrollable ([9db65c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9db65c9676d42f99922f057758bacee9562e775b))
+
+
+
+
+
 ## [3.1.52](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.1.51...@sbercloud/uikit-product-text-field@3.1.52) (2022-06-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-text-field
