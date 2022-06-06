@@ -39,8 +39,11 @@ export const Container = styled.div`
 export const StyledInputPrivate = styled(InputPrivate)`
   ${commonStyles};
 
-  &[type='password'] {
+  pointer-events: none;
+
+  &[data-secured='true'] {
     text-overflow: initial;
+    pointer-events: initial;
   }
 `;
 

@@ -42,6 +42,7 @@ export function TextField({
       disabled
       type={inputType}
       data-test-id='text-field__value'
+      data-secured={isPassword}
       data-has-action-buttons={hasActionButtons || undefined}
     />
   ) : (
