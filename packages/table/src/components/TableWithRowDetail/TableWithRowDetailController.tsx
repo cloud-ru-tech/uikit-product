@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useLayoutEffect, useMemo, useState } from 'react';
+import { ReactNode, useCallback, useLayoutEffect, useEffect, useMemo, useState } from 'react';
 
 import { AgGridTypes } from '@sbercloud/uikit-product-table-private';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
@@ -16,6 +16,7 @@ export type TableWithRowDetailControllerProps<T> = {
   columnDefinitions: Types.ColumnDefinitions;
   pageSize?: number;
   onSelectionChanged?(selectedRows?: T[]): void;
+  selectedRowNodeId?: string;
   children?: ReactNode;
 };
 
@@ -24,6 +25,7 @@ export function TableWithRowDetailController<T>({
   columnDefinitions,
   pageSize,
   onSelectionChanged,
+  selectedRowNodeId,
   children,
   ...rest
 }: WithSupportProps<TableWithRowDetailControllerProps<T>>) {
@@ -108,6 +110,18 @@ export function TableWithRowDetailController<T>({
     }
   }, [gridApi, pageCount, pageSize, data.length, currentPage]);
 
+  useEffect(() => {
+    if (!gridApi) return;
+
+    gridApi.addEventListener(AgGridTypes.Events.EVENT_FIRST_DATA_RENDERED, () => {
+      const nodes = gridApi.getRenderedNodes();
+      const selectedNode = nodes.find(node => node.id === selectedRowNodeId);
+      if (!selectedNode) return;
+      selectedNode.setExpanded(true);
+      selectedNode.setSelected(true);
+    });
+  }, [gridApi]);
+
   const pageChangeHandler = useCallback(
     (currentPage: number) => {
       const nextPage = currentPage - 1;
@@ -146,7 +160,10 @@ export function TableWithRowDetailController<T>({
     [gridApi],
   );
 
-  const detailCellRenderer = useCallback(() => children, [children]);
+  const detailCellRenderer = useCallback(() => {
+    if (children) return children;
+    return null;
+  }, [children]);
 
   return (
     <TableWithRowDetailView
