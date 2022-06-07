@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.14.0...@sbercloud/uikit-product-table-private@0.14.1) (2022-06-07)
+
+
+### Bug Fixes
+
+* **AICE-6261:** header visibility change, min-height for overlay visibility ([eb77254](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eb772545793cc36773f8bce2abfd139ac2cf4a92))
+
+
+
+
+
 # [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.13.3...@sbercloud/uikit-product-table-private@0.14.0) (2022-06-03)
 
 
