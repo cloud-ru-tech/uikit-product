@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-checkbox@3.0.19...@sbercloud/uikit-product-checkbox@3.0.20) (2022-06-08)
+
+
+### Bug Fixes
+
+* peer dependencies block has been deleted ([b5786ad](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5786ad13fef6adcbeecf23a52702cbbf0c81535))
+
+
+
+
+
 ## [3.0.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-checkbox@3.0.18...@sbercloud/uikit-product-checkbox@3.0.19) (2022-06-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-checkbox

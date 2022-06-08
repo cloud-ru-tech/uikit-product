@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-hero-banner",
   "title": "React Hero Banner",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "sideEffects": [
     "*.css",
     "*.woff",

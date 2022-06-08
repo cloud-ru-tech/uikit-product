@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.1.53...@sbercloud/uikit-product-text-field@3.1.54) (2022-06-08)
+
+
+### Bug Fixes
+
+* peer dependencies block has been deleted ([b5786ad](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5786ad13fef6adcbeecf23a52702cbbf0c81535))
+
+
+
+
+
 ## [3.1.53](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.1.52...@sbercloud/uikit-product-text-field@3.1.53) (2022-06-06)
 
 

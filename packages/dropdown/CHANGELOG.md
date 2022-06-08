@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.13.17...@sbercloud/uikit-product-dropdown@0.13.18) (2022-06-08)
+
+
+### Bug Fixes
+
+* peer dependencies block has been deleted ([b5786ad](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5786ad13fef6adcbeecf23a52702cbbf0c81535))
+
+
+
+
+
 ## [0.13.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.13.16...@sbercloud/uikit-product-dropdown@0.13.17) (2022-06-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-dropdown

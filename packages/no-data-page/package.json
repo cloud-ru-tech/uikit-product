@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-no-data-page",
   "title": "React NoDataPage",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-theme": "0.33.2",
+    "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-typography": "1.1.1"
   }
 }

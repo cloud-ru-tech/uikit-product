@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.51](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter-block@0.2.50...@sbercloud/uikit-product-filter-block@0.2.51) (2022-06-08)
+
+
+### Bug Fixes
+
+* peer dependencies block has been deleted ([b5786ad](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5786ad13fef6adcbeecf23a52702cbbf0c81535))
+
+
+
+
+
 ## [0.2.50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter-block@0.2.49...@sbercloud/uikit-product-filter-block@0.2.50) (2022-06-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-filter-block

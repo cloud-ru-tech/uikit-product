@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-checkbox",
   "title": "React Checkbox",
-  "version": "3.0.19",
+  "version": "3.0.20",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "4.0.0",
-    "@sbercloud/uikit-product-theme": "0.33.2",
+    "@sbercloud/uikit-product-icons": "4.0.1",
+    "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-typography": "1.1.1",
-    "@sbercloud/uikit-product-utils": "2.8.0"
+    "@sbercloud/uikit-product-utils": "2.8.1"
   }
 }
