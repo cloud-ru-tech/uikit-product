@@ -35,12 +35,6 @@
     "merge-refs": "1.0.0",
     "react-textarea-autosize": "8.3.3"
   },
-  "peerDependencies": {
-    "@linaria/core": "^3.0.0-beta.13",
-    "@linaria/react": "^3.0.0-beta.13",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
-  },
   "devDependencies": {
     "@types/merge-refs": "1.0.0"
   }

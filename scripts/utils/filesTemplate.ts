@@ -57,12 +57,7 @@ export const packageJson = ({
       '@sbercloud/uikit-product-theme': themeVersion,
     },
     devDependencies: {},
-    peerDependencies: {
-      '@linaria/core': '^3.0.0-beta.13',
-      '@linaria/react': '^3.0.0-beta.13',
-      react: '^17.0.0',
-      'react-dom': '^17.0.0',
-    },
+    peerDependencies: {},
   };
 
   const packageJsonFile = path.join(`./${PackagesRootFolder}/${packageRootFolderName}/package.json`);

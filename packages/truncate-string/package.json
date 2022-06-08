@@ -31,11 +31,5 @@
   },
   "devDependencies": {
     "@types/lodash.debounce": "4.0.6"
-  },
-  "peerDependencies": {
-    "@linaria/core": "^3.0.0-beta.13",
-    "@linaria/react": "^3.0.0-beta.13",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
   }
 }

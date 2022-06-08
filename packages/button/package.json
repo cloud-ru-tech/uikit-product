@@ -34,11 +34,5 @@
     "@sbercloud/uikit-product-typography": "1.1.1",
     "@sbercloud/uikit-product-utils": "2.8.0",
     "react-polymorphic-types": "2.0.0"
-  },
-  "peerDependencies": {
-    "@linaria/core": "^3.0.0-beta.13",
-    "@linaria/react": "^3.0.0-beta.13",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
   }
 }

@@ -30,11 +30,5 @@
     "@sbercloud/uikit-product-icons": "4.0.0",
     "@sbercloud/uikit-product-theme": "0.33.2",
     "@sbercloud/uikit-product-utils": "2.8.0"
-  },
-  "peerDependencies": {
-    "@linaria/core": "^3.0.0-beta.13",
-    "@linaria/react": "^3.0.0-beta.13",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
   }
 }
