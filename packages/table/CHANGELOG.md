@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.41.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.40.2...@sbercloud/uikit-product-table@0.41.0) (2022-06-09)
+
+
+### Features
+
+* **AICDC-6974:** add selected row id prop functionality ([d79b3c2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d79b3c2ca11db1382e92d54634e63d553ad4410d))
+
+
+
+
+
 ## [0.40.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.40.1...@sbercloud/uikit-product-table@0.40.2) (2022-06-08)
 
 
