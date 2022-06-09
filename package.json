@@ -98,7 +98,16 @@
   "overrides": {
     "@linaria/cli": {
       "@linaria/babel-preset": "3.0.0-beta.13"
-    }
+    },
+    "@linaria/babel-preset": "3.0.0-beta.13",
+    "@linaria/core": "3.0.0-beta.13",
+    "@linaria/logger": "3.0.0-beta.15",
+    "@linaria/preeval": "3.0.0-beta.13",
+    "@linaria/react": "3.0.0-beta.13",
+    "@linaria/shaker": "3.0.0-beta.13",
+    "@linaria/webpack-loader": "3.0.0-beta.13",
+    "@linaria/webpack4-loader": "3.0.0-beta.13",
+    "@linaria/webpack5-loader": "3.0.0-beta.13"
   },
   "workspaces": [
     "./packages/*"
