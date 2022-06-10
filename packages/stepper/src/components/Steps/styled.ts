@@ -15,7 +15,7 @@ export const StepperWrap = styled.div`
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-  padding: 0px;
+  padding: 0;
   height: 44px;
   overflow: hidden;
 
@@ -28,7 +28,7 @@ export const StepperFilledRow = styled.div<{ fillRowLeftPosition: string }>`
   display: flex;
   position: absolute;
   width: 100%;
-  height: 8px;
+  height: 100%;
   background: var(${COLORS.BACKGROUND_ROW_FILLED});
   left: ${({ fillRowLeftPosition }) => fillRowLeftPosition};
   transition: left 0.5s ease;
@@ -39,10 +39,12 @@ export const StepperBackgroundRow = styled.div`
   display: flex;
   position: absolute;
   height: 8px;
-  left: 0px;
+  left: 0;
   width: 100%;
   background: var(${COLORS.BACKGROUND_ROW_EMPTY});
   z-index: 0;
+  border-radius: 8px;
+  overflow: hidden;
 `;
 
 export const Step = styled.div<{ leftPosition: string }>`
@@ -114,12 +116,12 @@ export const StepName = styled.span`
   color: var(${COLORS.INACTIVE_TEXT});
 
   &[data-filled] {
-    color: var(${COLORS.STEP_ACTIVE});
+    color: var(${COLORS.STEP_ACTIVE_TEXT});
   }
 
   &[data-current] {
     font-weight: bold;
-    color: var(${COLORS.STEP_ACTIVE});
+    color: var(${COLORS.STEP_ACTIVE_TEXT});
   }
 
   &[data-error] {

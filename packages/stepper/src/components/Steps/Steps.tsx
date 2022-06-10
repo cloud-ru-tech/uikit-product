@@ -132,8 +132,9 @@ export function Steps({ steps, className, size = Sizes.Big, ...rest }: WithSuppo
 
   return (
     <StepperWrap className={className} data-size={size} {...extractSupportProps(rest)}>
-      <StepperFilledRow fillRowLeftPosition={fillRowLeftPosition} />
-      <StepperBackgroundRow />
+      <StepperBackgroundRow>
+        <StepperFilledRow fillRowLeftPosition={fillRowLeftPosition} />
+      </StepperBackgroundRow>
       {innerSteps.map(({ name, isFilled, hasError, id }, index) => {
         const isFirstStep = index === 0;
         const isLastStep = index === stepsAmount;

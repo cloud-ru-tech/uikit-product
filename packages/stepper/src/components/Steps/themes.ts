@@ -2,12 +2,13 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
-const { GREY, BLACK_ALFA, PURPLE, BERRY_RED } = EXPORT_VARS;
+const { GREY, BLACK_ALFA, WHITE_ALFA, PURPLE, BERRY_RED, GREEN } = EXPORT_VARS;
 
 export const COLORS = {
   STEP_INACTIVE: '--color-stepper-step-inactive',
   INACTIVE_TEXT: '--color-stepper-inactive-text',
   STEP_ACTIVE: '--color-stepper-step-active',
+  STEP_ACTIVE_TEXT: '--color-stepper-step-active-text',
   STEP_ERROR: '--color-stepper-step-error',
   STEP_CONTENT: '--color-stepper-step-content',
   BACKGROUND_ROW_EMPTY: '--color-stepper-background-row-empty',
@@ -20,6 +21,7 @@ export const PURPLE_THEME = css`
       ${COLORS.STEP_INACTIVE}: var(${GREY[350]});
       ${COLORS.INACTIVE_TEXT}: var(${GREY[600]});
       ${COLORS.STEP_ACTIVE}: var(${PURPLE[100]});
+      ${COLORS.STEP_ACTIVE_TEXT}: var(${PURPLE[100]});
       ${COLORS.STEP_ERROR}: var(${BERRY_RED[100]});
       ${COLORS.STEP_CONTENT}: var(${GREY[0]});
       ${COLORS.BACKGROUND_ROW_EMPTY}: var(${BLACK_ALFA[8]});
@@ -34,6 +36,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.STEP_INACTIVE}: var(${GREY[350]});
       ${COLORS.INACTIVE_TEXT}: var(${GREY[600]});
       ${COLORS.STEP_ACTIVE}: var(${PURPLE[100]});
+      ${COLORS.STEP_ACTIVE_TEXT}: var(${PURPLE[100]});
       ${COLORS.STEP_ERROR}: var(${BERRY_RED[100]});
       ${COLORS.STEP_CONTENT}: var(${GREY[0]});
       ${COLORS.BACKGROUND_ROW_EMPTY}: var(${BLACK_ALFA[8]});
@@ -47,11 +50,12 @@ export const GREEN_THEME = css`
     [data-theme=${Themes.Green}] {
       ${COLORS.STEP_INACTIVE}: var(${GREY[350]});
       ${COLORS.INACTIVE_TEXT}: var(${GREY[600]});
-      ${COLORS.STEP_ACTIVE}: var(${PURPLE[100]});
+      ${COLORS.STEP_ACTIVE}: var(${GREEN[100]});
+      ${COLORS.STEP_ACTIVE_TEXT}: var(${GREEN[125]});
       ${COLORS.STEP_ERROR}: var(${BERRY_RED[100]});
       ${COLORS.STEP_CONTENT}: var(${GREY[0]});
       ${COLORS.BACKGROUND_ROW_EMPTY}: var(${BLACK_ALFA[8]});
-      ${COLORS.BACKGROUND_ROW_FILLED}: var(${PURPLE[50]});
+      ${COLORS.BACKGROUND_ROW_FILLED}: var(${GREEN[100]});
     }
   }
 `;
@@ -59,13 +63,14 @@ export const GREEN_THEME = css`
 export const GREEN_DARK_THEME = css`
   :global() {
     [data-theme=${Themes.GreenDark}] {
-      ${COLORS.STEP_INACTIVE}: var(${GREY[350]});
-      ${COLORS.INACTIVE_TEXT}: var(${GREY[600]});
-      ${COLORS.STEP_ACTIVE}: var(${PURPLE[100]});
-      ${COLORS.STEP_ERROR}: var(${BERRY_RED[100]});
-      ${COLORS.STEP_CONTENT}: var(${GREY[0]});
-      ${COLORS.BACKGROUND_ROW_EMPTY}: var(${BLACK_ALFA[8]});
-      ${COLORS.BACKGROUND_ROW_FILLED}: var(${PURPLE[50]});
+      ${COLORS.STEP_INACTIVE}: var(${GREY[500]});
+      ${COLORS.INACTIVE_TEXT}: var(${GREY[300]});
+      ${COLORS.STEP_ACTIVE}: var(${GREEN[100]});
+      ${COLORS.STEP_ACTIVE_TEXT}: var(${GREEN[100]});
+      ${COLORS.STEP_ERROR}: var(${BERRY_RED[75]});
+      ${COLORS.STEP_CONTENT}: var(${GREY[900]});
+      ${COLORS.BACKGROUND_ROW_EMPTY}: var(${WHITE_ALFA[16]});
+      ${COLORS.BACKGROUND_ROW_FILLED}: var(${GREEN[100]});
     }
   }
 `;
