@@ -6,7 +6,6 @@ import { ReactText, useState } from 'react';
 import { InputCommon } from '@sbercloud/uikit-product-input';
 import { Radio, RadioGroup } from '@sbercloud/uikit-product-radio';
 import { Select } from '@sbercloud/uikit-product-select';
-import { Slider } from '@sbercloud/uikit-product-slider';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
@@ -59,10 +58,6 @@ const Template: Story = () => {
           />
         </FormField>
 
-        <FormField>
-          <Slider value={value} onChange={setValue} />
-        </FormField>
-
         <FormField label='Ограничение тарифа' hint={{ content: 'Подробнее об ограничениях читайте на сайте' }}>
           <RadioGroup value={limit} onChange={setLimit}>
             <Radio value='unlimited' label='Неограниченно' className={RadioClassName} />
@@ -75,10 +70,6 @@ const Template: Story = () => {
       <FormGroup number={2} title='Общая информация' hint={{ content: 'Подсказка' }}>
         <FormField label='Произвольное число'>
           <InputCommon value={value.toString()} onChange={x => setValue(Number(x))} />
-        </FormField>
-
-        <FormField>
-          <Slider value={value} onChange={setValue} />
         </FormField>
 
         <FormField label='Ограничение тарифа' hint={{ content: 'Подробнее об ограничениях читайте на сайте' }}>

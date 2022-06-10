@@ -1,8 +1,5 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
-
-import { Slider } from '@sbercloud/uikit-product-slider';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -20,19 +17,16 @@ const Column = styled.div<{ width: number }>`
   flex-direction: column;
 `;
 
-const Template: Story<ITruncateStringProps> = ({ ...args }) => {
-  const [width, setWidth] = useState<number>(200);
-
-  return (
-    <Column width={width}>
-      <TruncateString {...args} />
-      <Slider value={width} min={100} max={1100} onChange={setWidth} />
-    </Column>
-  );
-};
+const Template: Story<ITruncateStringProps & { columnWidth?: number }> = ({ ...args }) => (
+  <Column width={args?.columnWidth || 200}>
+    <TruncateString {...args} />
+  </Column>
+);
 
 export const truncateString = Template.bind({});
-truncateString.args = {};
+truncateString.args = {
+  columnWidth: 200,
+};
 truncateString.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
