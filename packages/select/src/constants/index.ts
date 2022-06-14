@@ -1,3 +1,5 @@
+import { SelectSizes } from '../helpers/types';
+
 export enum SelectActionTypes {
   RemoveValue = 'remove-value',
   SelectOption = 'select-option',
@@ -18,3 +20,18 @@ export enum Colors {
 }
 
 export const COLOR_VALUES = Object.values(Colors);
+
+export const SIZES_IN_PX = {
+  [SelectSizes.Small]: {
+    minHeight: '28px',
+    padding: '0 4px',
+  },
+  [SelectSizes.Medium]: {
+    minHeight: '36px',
+    padding: '0 4px',
+  },
+  [SelectSizes.Large]: {
+    minHeight: '44px',
+    padding: '0 8px',
+  },
+};

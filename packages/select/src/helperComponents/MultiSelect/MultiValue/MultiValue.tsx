@@ -10,7 +10,7 @@ export function MultiValue({ children, removeProps }: MultiValueProps<Multiselec
   return (
     <TagValue
       color={Tag.colors.Gray}
-      size={Tag.sizes.Medium}
+      size={Tag.sizes.Small}
       value={children as ReactText}
       onRemoveClick={removeProps.onClick}
     />

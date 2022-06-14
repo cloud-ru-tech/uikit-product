@@ -14,3 +14,9 @@ export type MultiselectOptionType = { label: ReactText; value: ReactText; amount
 
 export type TypeKeys = keyof typeof SELECT_TYPES;
 export type SelectType = typeof SELECT_TYPES[TypeKeys];
+
+export enum SelectSizes {
+  Small = 'small',
+  Medium = 'medium',
+  Large = 'large',
+}

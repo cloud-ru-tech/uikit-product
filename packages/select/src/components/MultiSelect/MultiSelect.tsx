@@ -1,19 +1,20 @@
-import React, { ReactText } from 'react';
+import { KeyboardEvent, ReactText, useMemo } from 'react';
 import RCSelect, { ActionMeta, ValueType, createFilter } from 'react-select';
 
 import { SelectActionTypes } from '../../constants';
 import { CustomOption, MultiValue } from '../../helperComponents/MultiSelect';
-import { MultiselectOptionType } from '../../helpers/types';
+import { MultiselectOptionType, SelectSizes } from '../../helpers/types';
 import { styles } from '../../styles/multiSelect';
 import * as S from './styled';
 
 export type MultiSelectProps = {
+  size?: SelectSizes;
   options: MultiselectOptionType[];
   value: MultiselectOptionType[];
   onSelectOption(option?: MultiselectOptionType): void;
   onRemoveOption(option?: MultiselectOptionType): void;
   onBlur?(): void;
-  onKeyDown?(e: React.KeyboardEvent<HTMLElement>): void;
+  onKeyDown?(e: KeyboardEvent<HTMLElement>): void;
   onInputChange?(value: string): void;
   inputValue?: string;
   label?: ReactText;
@@ -22,6 +23,7 @@ export type MultiSelectProps = {
 };
 
 export function MultiSelect({
+  size = SelectSizes.Large,
   options,
   value,
   inputValue,
@@ -48,6 +50,8 @@ export function MultiSelect({
     }
   };
 
+  const selectStyles = useMemo(() => styles(size), [size]);
+
   return (
     <S.MultiSelectWrap className={className}>
       {label && <S.Label>{label}</S.Label>}
@@ -68,7 +72,7 @@ export function MultiSelect({
           trim: true,
           matchFrom: 'start' as const,
         })}
-        styles={styles}
+        styles={selectStyles}
         isClearable={false}
         placeholder={placeholder}
         components={{
@@ -81,3 +85,5 @@ export function MultiSelect({
     </S.MultiSelectWrap>
   );
 }
+
+MultiSelect.size = SelectSizes;
