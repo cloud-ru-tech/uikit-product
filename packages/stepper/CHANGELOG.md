@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-stepper@0.3.2...@sbercloud/uikit-product-stepper@0.4.0) (2022-06-15)
+
+
+### Bug Fixes
+
+* **AICE-6458:** add stepsCount, disable steps move bigger than stepsCount, and less 0 ([0bc2dd9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0bc2dd9b8885c7675648c9e7e923a7d2bcbb2047))
+* **AICE-6458:** proper colors for Green themes, remove gaps on the sides of line ([337b403](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/337b403b404ee017382e2ee4484df9396d12c17b))
+
+
+### BREAKING CHANGES
+
+* **AICE-6458:** add stepsCount, disable steps move bigger than stepsCount, and less 0
+
+
+
+
+
 ## [0.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-stepper@0.3.1...@sbercloud/uikit-product-stepper@0.3.2) (2022-06-08)
 
 
