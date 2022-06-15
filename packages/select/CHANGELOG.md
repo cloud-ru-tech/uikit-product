@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.25.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-select@0.24.33...@sbercloud/uikit-product-select@0.25.0) (2022-06-15)
+
+
+### Features
+
+* **AICE-6459:** add optional size prop to MultiSelect ([f86ada0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f86ada05272f10f60f2d3f50a4cecec209459d0f))
+
+
+### BREAKING CHANGES
+
+* **AICE-6459:** add optional size prop to MultiSelect
+
+
+
+
+
 ## [0.24.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-select@0.24.32...@sbercloud/uikit-product-select@0.24.33) (2022-06-08)
 
 
