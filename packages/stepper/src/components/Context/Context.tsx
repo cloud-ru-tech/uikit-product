@@ -4,6 +4,7 @@ import { StepContext } from './types';
 
 const StepperContext = createContext<StepContext>({
   currentStepIndex: 0,
+  stepsCount: 0,
   moveForward: () => {},
   moveToPrevStep: () => {},
   setValidator: () => {},
@@ -11,6 +12,7 @@ const StepperContext = createContext<StepContext>({
 });
 
 export type ContextProps = {
+  stepsCount: number;
   children: React.ReactNode;
 };
 
@@ -20,13 +22,13 @@ export const useStepperContext = () => {
   return stepperContext;
 };
 
-export function Context({ children }: ContextProps) {
+export function Context({ stepsCount, children }: ContextProps) {
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [validateCurrentStep, setValidateCurrentStep] = useState<(step: number) => boolean>(() => () => true);
 
   const moveToPrevStep = useCallback(
     (stepIndex: number) => {
-      if (stepIndex >= currentStepIndex && stepIndex < 0) {
+      if (stepIndex >= currentStepIndex || stepIndex < 0) {
         return;
       }
 
@@ -34,9 +36,14 @@ export function Context({ children }: ContextProps) {
     },
     [currentStepIndex],
   );
+
   const moveForward = useCallback(() => {
+    if (currentStepIndex === stepsCount - 1) {
+      return;
+    }
+
     setCurrentStepIndex(prevStepIndex => prevStepIndex + 1);
-  }, []);
+  }, [currentStepIndex, stepsCount]);
 
   const setValidator = (validator: (step: number) => boolean) => {
     setValidateCurrentStep(() => validator);
@@ -44,7 +51,7 @@ export function Context({ children }: ContextProps) {
 
   return (
     <StepperContext.Provider
-      value={{ moveForward, moveToPrevStep, currentStepIndex, setValidator, validateCurrentStep }}
+      value={{ stepsCount, moveForward, moveToPrevStep, currentStepIndex, setValidator, validateCurrentStep }}
     >
       {children}
     </StepperContext.Provider>

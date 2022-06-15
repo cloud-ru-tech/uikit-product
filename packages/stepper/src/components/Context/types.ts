@@ -1,4 +1,5 @@
 type StepContext = {
+  stepsCount: number;
   currentStepIndex: number;
   moveForward: () => void;
   moveToPrevStep: (stepIndex: number) => void;

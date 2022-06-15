@@ -45,7 +45,7 @@ const StepsView = (args: StepsProps) => {
 };
 
 const Template: Story<StepsProps> = ({ ...args }) => (
-  <Stepper.Context>
+  <Stepper.Context stepsCount={args.steps.length}>
     <StepsView {...args} />
   </Stepper.Context>
 );
