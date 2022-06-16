@@ -114,6 +114,7 @@ export const StepName = styled.span`
   ${TEXT_2_STYLES};
   line-height: 22px;
   color: var(${COLORS.INACTIVE_TEXT});
+  white-space: nowrap;
 
   &[data-filled] {
     color: var(${COLORS.STEP_ACTIVE_TEXT});
