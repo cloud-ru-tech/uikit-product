@@ -21,8 +21,6 @@ export type RefreshButtonProps<T extends ElementType = typeof RefreshButtonDefau
   T
 >;
 
-const AnimatedRefreshIcon = (props: unknown) => <RefreshInterfaceSVG className={rotateOnClickClassName} {...props} />;
-
 export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaultElement>({
   as,
   ...rest
@@ -40,7 +38,7 @@ export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaul
 
   return (
     <Element
-      icon={<AnimatedRefreshIcon />}
+      icon={<RefreshInterfaceSVG className={rotateOnClickClassName} />}
       tooltip={rest.tooltip || { content: textProvider(languageCode, Texts.Refresh) }}
       {...extractedProps}
     />
