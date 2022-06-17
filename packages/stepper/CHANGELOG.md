@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-stepper@0.4.0...@sbercloud/uikit-product-stepper@0.4.1) (2022-06-17)
+
+
+### Bug Fixes
+
+* **AICE-6458:** disable stepName line-break ([83077c3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/83077c3e4e0b82c1ce90266c3caf4ee1d2e5e769))
+
+
+
+
+
 # [0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-stepper@0.3.2...@sbercloud/uikit-product-stepper@0.4.0) (2022-06-15)
 
 
