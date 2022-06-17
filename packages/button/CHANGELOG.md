@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.0.14...@sbercloud/uikit-product-button@5.0.15) (2022-06-17)
+
+
+### Bug Fixes
+
+* fix tslint errors ([c27eb72](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c27eb721815f78121b44e913a90198dfbf0e669d))
+
+
+
+
+
 ## [5.0.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.0.13...@sbercloud/uikit-product-button@5.0.14) (2022-06-08)
 
 

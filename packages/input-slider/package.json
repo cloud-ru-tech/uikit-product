@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-input-slider",
   "title": "Input Slider",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-input-decorator-private": "2.1.1",
-    "@sbercloud/uikit-product-input-private": "2.5.1",
+    "@sbercloud/uikit-product-input-private": "2.5.2",
     "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-tooltip": "2.0.49",
     "@sbercloud/uikit-product-utils": "2.8.1",

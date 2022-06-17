@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button-private@1.2.11...@sbercloud/uikit-product-button-private@1.3.0) (2022-06-17)
+
+
+### Features
+
+* **CP-6886:** add zero delay on button tooltip when disabled ([e070673](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e070673dc08974f583ab7f654cf8b810864d8627))
+
+
+
+
+
 ## [1.2.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button-private@1.2.10...@sbercloud/uikit-product-button-private@1.2.11) (2022-06-08)
 
 
