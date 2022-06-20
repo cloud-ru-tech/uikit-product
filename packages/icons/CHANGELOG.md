@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@4.0.1...@sbercloud/uikit-product-icons@4.0.2) (2022-06-20)
+
+
+### Bug Fixes
+
+* **AICDC-5059:** fixed AdvancedService icon ([bd6c00f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bd6c00f62a69f6ffbf08c974d7a91aab5c15be9b))
+
+
+
+
+
 ## 4.0.1 (2022-06-08)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-switch",
   "title": "React Switch",
-  "version": "2.1.9",
+  "version": "2.1.10",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "4.0.1",
+    "@sbercloud/uikit-product-icons": "4.0.2",
     "@sbercloud/uikit-product-theme": "0.33.3",
-    "@sbercloud/uikit-product-tooltip": "2.0.49",
+    "@sbercloud/uikit-product-tooltip": "2.0.50",
     "@sbercloud/uikit-product-typography": "1.1.1",
     "@sbercloud/uikit-product-utils": "2.8.1",
     "react-switch": "6.0.0"

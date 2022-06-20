@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.60](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-collapse-panel@0.8.59...@sbercloud/uikit-product-collapse-panel@0.8.60) (2022-06-20)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-collapse-panel
+
+
+
+
+
 ## [0.8.59](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-collapse-panel@0.8.58...@sbercloud/uikit-product-collapse-panel@0.8.59) (2022-06-08)
 
 

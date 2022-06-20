@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button-private@1.3.0...@sbercloud/uikit-product-button-private@1.3.1) (2022-06-20)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-button-private
+
+
+
+
+
 # [1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button-private@1.2.11...@sbercloud/uikit-product-button-private@1.3.0) (2022-06-17)
 
 

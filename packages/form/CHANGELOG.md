@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.16.13...@sbercloud/uikit-product-form@0.16.14) (2022-06-20)
+
+
+### Bug Fixes
+
+* remove slider, range packages ([0c8e8f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0c8e8f1dc3100fa53cab747dd4443ebad204bb26))
+
+
+
+
+
 ## [0.16.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.16.12...@sbercloud/uikit-product-form@0.16.13) (2022-06-08)
 
 
