@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.26.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-select@0.25.2...@sbercloud/uikit-product-select@0.26.0) (2022-06-20)
+
+
+### Bug Fixes
+
+* **AICE-6459:** MultiSelect colors for Green theme ([84d223d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/84d223dfb1148f1369a38576167019ce2e8d6844))
+
+
+### Features
+
+* **AICE-6459:** MultiSelect show label in option instead of value ([f997f66](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f997f66842c2c21a116e124148340730a8c81873))
+* **AICE-6459:** MultiselectOptionType amount prop is optional now ([01b9859](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/01b985951c7762478980dc8857823a629042dd4a))
+
+
+### BREAKING CHANGES
+
+* **AICE-6459:** MultiSelect show label in option instead of value
+
+
+
+
+
 ## [0.25.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-select@0.25.1...@sbercloud/uikit-product-select@0.25.2) (2022-06-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-select
