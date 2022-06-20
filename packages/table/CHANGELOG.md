@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.41.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.41.3...@sbercloud/uikit-product-table@0.41.4) (2022-06-20)
+
+
+### Bug Fixes
+
+* display pagination after table load ([20d6044](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/20d6044bf178fde436948cbe169900e0daa633a3))
+
+
+
+
+
 ## [0.41.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.41.2...@sbercloud/uikit-product-table@0.41.3) (2022-06-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table
