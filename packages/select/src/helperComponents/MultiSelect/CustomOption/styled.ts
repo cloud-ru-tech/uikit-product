@@ -21,6 +21,6 @@ export const Amount = styled.span`
   color: var(${EXPORT_VARS.GREY[600]});
 `;
 
-export const Value = styled.div`
+export const Label = styled.div`
   font-size: 14px;
 `;

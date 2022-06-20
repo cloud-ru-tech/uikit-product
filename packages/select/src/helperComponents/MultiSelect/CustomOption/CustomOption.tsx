@@ -8,7 +8,7 @@ export function CustomOption(props: OptionProps<MultiselectOptionType, true>) {
 
   return (
     <S.CustomOption {...innerProps}>
-      <S.Value>{props.data.value}</S.Value>
+      <S.Label>{props.data.label}</S.Label>
 
       {props.data.amount !== undefined && <S.Amount>{props.data.amount}</S.Amount>}
     </S.CustomOption>
