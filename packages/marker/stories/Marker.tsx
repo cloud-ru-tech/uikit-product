@@ -42,7 +42,7 @@ marker.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0?node-id=5021%3A67033',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=5021%3A67033',
   },
   badges: [BADGE.STABLE],
 };

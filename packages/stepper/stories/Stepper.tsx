@@ -69,7 +69,6 @@ stepper.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    //TODO
-    url: 'https://www.figma.com/file/ymnPlgvfEn4KmoCUs2IzG3/%5BDC%5D-Data-Hub-Refactoring?node-id=225%3A9273',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=54252%3A255653',
   },
 };

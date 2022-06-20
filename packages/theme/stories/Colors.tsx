@@ -142,7 +142,7 @@ Colors.parameters = {
   },
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%5BLIB%5D-Design-System-2.0--%3E-Atoms?node-id=1015%3A1',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=1015%3A1',
   },
   badges: [BADGE.NEEDS_REVISION, BADGE.BETA],
 };

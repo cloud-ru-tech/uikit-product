@@ -159,6 +159,6 @@ drawer.parameters = {
   },
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/9UAhwzTGUnOFaczS5Q5v5c/SberCloud-%E2%86%92-Design_System?node-id=2726%3A88020',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=5583%3A75932',
   },
 };

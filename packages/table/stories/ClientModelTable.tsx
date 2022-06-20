@@ -249,6 +249,6 @@ clientModelTable.parameters = {
   },
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/9UAhwzTGUnOFaczS5Q5v5c/SberCloud-%E2%86%92-Design_System?node-id=7%3A8441',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=535%3A0',
   },
 };

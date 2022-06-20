@@ -111,8 +111,7 @@ multiSelect.parameters = {
   },
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=11428%3A185606',
   },
   badges: [BADGE.BETA, BADGE.NEEDS_REVISION],
 };

@@ -31,7 +31,7 @@ categoryCard.parameters = {
   badges: [BADGE.BETA],
   design: {
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    name: 'Figma',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=632%3A0',
   },
 };

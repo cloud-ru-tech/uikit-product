@@ -26,8 +26,7 @@ predefinedIconsPrivate.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    // TODO: url must be updated as soon as the page for these icons is created
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%92%A0%E2%9C%B3%EF%B8%8F-%5BLIB%5D-Platform-Design-System?node-id=3477%3A46230',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=212%3A350',
   },
   badges: [BADGE.BETA, BADGE.PRIVATE],
 };

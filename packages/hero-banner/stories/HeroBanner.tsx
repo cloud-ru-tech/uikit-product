@@ -73,8 +73,7 @@ heroBanner.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    //TODO
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=9675%3A128136',
   },
   badges: [BADGE.BETA],
 };

@@ -49,6 +49,6 @@ dropZone.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    //TODO
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=4238%3A66023',
   },
 };

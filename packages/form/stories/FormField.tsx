@@ -76,6 +76,6 @@ formField.parameters = {
   },
   design: {
     type: 'figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/TEMP-DESIGN-SYSTEM?node-id=388%3A9820',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=6613%3A125552',
   },
 };

@@ -36,6 +36,6 @@ display.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%92%A0%E2%9B%94%EF%B8%8F-%5BLIB%5D-Platform-Design-System?node-id=12824%3A200633',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=12824%3A200633',
   },
 };

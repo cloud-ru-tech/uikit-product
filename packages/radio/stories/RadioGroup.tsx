@@ -72,7 +72,7 @@ export const radioGroup = Template.bind({});
 
 radioGroup.parameters = getDefaultParameters({
   figmaUrl:
-    'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5%5BLIB%5D-Design-System-2.0?node-id=3457%3A46340',
+    'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=3457%3A46340',
   extraControlsInclude: ['value', 'name', 'data-test-id'],
 });
 

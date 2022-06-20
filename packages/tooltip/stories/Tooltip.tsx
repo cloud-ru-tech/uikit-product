@@ -121,7 +121,7 @@ tooltip.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    url: 'https://www.figma.com/file/VVqNc0dufYULpLuwIBB84U/%F0%9F%94%A5-LIB-Design-System-2.0-Atoms?node-id=3568%3A198995',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=993%3A15815',
   },
   badges: [BADGE.STABLE],
 };
