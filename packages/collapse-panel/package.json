@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-collapse-panel",
   "title": "React Collapse Panel",
-  "version": "0.8.60",
+  "version": "0.8.61",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-divider": "2.0.29",
-    "@sbercloud/uikit-product-icons": "4.0.2",
+    "@sbercloud/uikit-product-icons": "4.1.0",
     "@sbercloud/uikit-product-theme": "0.33.3"
   }
 }

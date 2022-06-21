@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-button",
   "title": "React Button",
-  "version": "5.0.16",
+  "version": "5.0.17",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,8 +28,8 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-copy-to-clipboard": "1.1.1",
-    "@sbercloud/uikit-product-button-private": "1.3.1",
-    "@sbercloud/uikit-product-icons": "4.0.2",
+    "@sbercloud/uikit-product-button-private": "1.3.2",
+    "@sbercloud/uikit-product-icons": "4.1.0",
     "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-typography": "1.1.1",
     "@sbercloud/uikit-product-utils": "2.8.1",

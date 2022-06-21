@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@4.0.2...@sbercloud/uikit-product-icons@4.1.0) (2022-06-21)
+
+
+### Features
+
+* **FF-46:** add new icons ([344fcfd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/344fcfd3ebb8d9d6c960c51f6f6f9dd13d2d40dc))
+
+
+
+
+
 ## [4.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@4.0.1...@sbercloud/uikit-product-icons@4.0.2) (2022-06-20)
 
 

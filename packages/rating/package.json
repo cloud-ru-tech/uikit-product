@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-rating",
   "title": "React Rating",
-  "version": "0.3.20",
+  "version": "0.3.21",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "4.0.2",
+    "@sbercloud/uikit-product-icons": "4.1.0",
     "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-utils": "2.8.1"
   }
