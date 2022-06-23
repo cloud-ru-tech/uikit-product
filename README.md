@@ -8,6 +8,24 @@ Sbercloud uikit - библиотека компонентов, в которой
 
 [Storybook [Poc stand].](http://192.168.67.22:32333/)
 
+# Design
+
+[Figma](https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System)
+
+[Notion](https://scpds.notion.site/aa332f333c3b41a5866c46b5d2bdb0c6)
+
+# Browser support 
+
+![Chrome](./packages/icons/svgs/color/logos/GoogleChromeLogo.svg)
+![Firefox](./packages/icons/svgs/color/logos/FirefoxLogo.svg)
+![Chromium](./packages/icons/svgs/color/logos/ChromiumLogo.svg)
+![Safari](./packages/icons/svgs/color/logos/SafariBrowserLogo.svg)
+
+# Automation testing
+
+![Chrome](./packages/icons/svgs/color/logos/GoogleChromeLogo.svg)
+![Firefox](./packages/icons/svgs/color/logos/FirefoxLogo.svg)
+
 # Installation
 
 1. Получить доступ к @sbercloud/uikit-product
@@ -16,7 +34,7 @@ Sbercloud uikit - библиотека компонентов, в которой
    `@sbercloud:registry=https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/`
 3. При использовании `linaria` Добавить в `linaria.config.js` секцию:
 
-```js
+```ts
 import path from 'path';
 
 import shaker from '@linaria/shaker';

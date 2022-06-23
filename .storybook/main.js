@@ -6,8 +6,11 @@ const STORIES = glob
   .sync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/stories/*.{ts,tsx}`)
   .map(x => path.resolve(__dirname, `../${x}`));
 
+const WELCOME = path.resolve(__dirname, './welcome/stories/Welcome.tsx');
+const STATISTICS = path.resolve(__dirname, './welcome/stories/Statistics.tsx');
+
 module.exports = {
-  stories: STORIES,
+  stories: [WELCOME, STATISTICS, ...STORIES],
   addons: [
     '@sbercloud/ft-storybook-readme-addon',
     'storybook-addon-designs',
@@ -29,6 +32,7 @@ module.exports = {
     },
     '@geometricpanda/storybook-addon-badges',
   ],
+  staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
   core: {
     builder: 'webpack5',
   },

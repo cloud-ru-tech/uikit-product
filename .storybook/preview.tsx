@@ -58,7 +58,7 @@ addParameters({
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
-      order: ['Theme', 'Components', 'Utils', 'Not stable', 'Typography'],
+      order: ['Welcome', 'Theme', 'Typography', 'Utils', 'Components', 'Not stable'],
     },
   },
 });

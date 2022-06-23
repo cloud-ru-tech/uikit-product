@@ -23,6 +23,6 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
   },
-  "include": ["packages", "types", "cypress/support"],
+  "include": ["packages", "types", "cypress/support", ".storybook/welcome/**/*"],
   "exclude": ["node_modules", "scripts"]
 }
