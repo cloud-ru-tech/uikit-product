@@ -9,9 +9,16 @@ interface TreeMenu {
   setActiveKey(x: string): void;
   activeKey: string;
   onItemClick?(id: string): void;
+  addDivider: boolean;
 }
 
-export const TreeMenu: FC<TreeMenu & TreeNodeProps> = ({ activeKey, setActiveKey, onItemClick, ...treeNodeProps }) => (
+export const TreeMenu: FC<TreeMenu & TreeNodeProps> = ({
+  activeKey,
+  setActiveKey,
+  onItemClick,
+  addDivider,
+  ...treeNodeProps
+}) => (
   <>
     <TreeNode
       {...treeNodeProps}
@@ -20,8 +27,11 @@ export const TreeMenu: FC<TreeMenu & TreeNodeProps> = ({ activeKey, setActiveKey
       activeKey={activeKey}
       onItemClick={onItemClick}
     />
-    <S.DividerWrapper>
-      <Divider />
-    </S.DividerWrapper>
+
+    {addDivider && (
+      <S.DividerWrapper>
+        <Divider />
+      </S.DividerWrapper>
+    )}
   </>
 );

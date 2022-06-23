@@ -9,11 +9,12 @@ export type HierarchyMenuProps = {
   className?: string;
   onItemClick?(id: string): void;
   activeNode?: string;
+  addDivider?: boolean;
   ['data-test-id']?: string;
 };
 
 export function HierarchyMenu(props: HierarchyMenuProps) {
-  const { nodes = [], className, activeNode, onItemClick } = props;
+  const { nodes = [], className, activeNode, onItemClick, addDivider = true } = props;
   const [activeKey, setActiveKey] = useState(activeNode || '');
   useEffect(() => setActiveKey(activeNode || ''), [activeNode]);
 
@@ -26,6 +27,7 @@ export function HierarchyMenu(props: HierarchyMenuProps) {
           activeKey={activeKey}
           setActiveKey={setActiveKey}
           onItemClick={onItemClick}
+          addDivider={addDivider}
         />
       ))}
     </S.Wrapper>
