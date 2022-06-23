@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@4.1.0...@sbercloud/uikit-product-icons@4.2.0) (2022-06-23)
+
+
+### Features
+
+* **AICE-5521:** added Chromium, Firefox logo icons ([7e13971](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7e13971445d060840deca15ae9c88faf5f13006c))
+
+
+
+
+
 # [4.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@4.0.2...@sbercloud/uikit-product-icons@4.1.0) (2022-06-21)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-radio",
   "title": "React Radio",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "4.1.0",
+    "@sbercloud/uikit-product-icons": "4.2.0",
     "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-typography": "1.1.1",
     "@sbercloud/uikit-product-utils": "2.8.1"

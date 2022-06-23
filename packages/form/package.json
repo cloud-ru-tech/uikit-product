@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-form",
   "title": "React Form",
-  "version": "0.16.15",
+  "version": "0.16.16",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,9 +28,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "4.1.0",
+    "@sbercloud/uikit-product-icons": "4.2.0",
     "@sbercloud/uikit-product-theme": "0.33.3",
-    "@sbercloud/uikit-product-tooltip": "2.0.51",
+    "@sbercloud/uikit-product-tooltip": "2.0.52",
     "@sbercloud/uikit-product-typography": "1.1.1",
     "@sbercloud/uikit-product-utils": "2.8.1"
   }
