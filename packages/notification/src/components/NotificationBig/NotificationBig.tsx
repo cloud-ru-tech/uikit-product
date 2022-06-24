@@ -3,9 +3,10 @@ import { ToastContentProps as RtToastContentProps } from 'react-toastify';
 
 import { ButtonGhost, ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { PredefinedIconsPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 
 import { NOTIFICATION_BIG_TEST_IDS } from '../../testIds';
-import { ICONS_BY_STATUS, NotificationBigStatus, NotificationBigVariant } from './constants';
+import { ICONS_BY_STATUS, NotificationBigStatus, NotificationBigVariant, VARIANT_BY_STATUS } from './constants';
 import * as S from './styled';
 
 export type NotificationBigAction = {
@@ -50,8 +51,6 @@ export function NotificationBig({
     onClick(e, closeToast);
   };
 
-  const Icon = ICONS_BY_STATUS[status];
-
   const actionButtonVariant = isAlarm ? ButtonGhost.variants.OnAccent : ButtonGhost.variants.OnDark;
 
   return (
@@ -70,7 +69,7 @@ export function NotificationBig({
       />
 
       <S.IconContainer data-status={status} data-test-id={NOTIFICATION_BIG_TEST_IDS.icon}>
-        <Icon size={20} />
+        <PredefinedIconsPrivate icon={ICONS_BY_STATUS[status]} variant={VARIANT_BY_STATUS[status]} />
       </S.IconContainer>
 
       <S.Content>

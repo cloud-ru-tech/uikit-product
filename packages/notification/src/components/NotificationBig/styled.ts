@@ -57,37 +57,30 @@ export const IconContainer = styled.div`
 
   &[data-status='${NotificationBigStatus.Info}'] {
     background-color: var(${COLORS.icon.info.background});
-    fill: var(${COLORS.icon.info.fill});
   }
 
   &[data-status='${NotificationBigStatus.Success}'] {
     background-color: var(${COLORS.icon.success.background});
-    fill: var(${COLORS.icon.success.fill});
   }
 
   &[data-status='${NotificationBigStatus.Warning}'] {
     background-color: var(${COLORS.icon.warning.background});
-    fill: var(${COLORS.icon.warning.fill});
   }
 
   &[data-status='${NotificationBigStatus.WarningCritical}'] {
     background-color: var(${COLORS.icon.warningCritical.background});
-    fill: var(${COLORS.icon.warningCritical.fill});
   }
 
   &[data-status='${NotificationBigStatus.WarningAlarm}'] {
     background-color: var(${COLORS.icon.warningAlarm.background});
-    fill: var(${COLORS.icon.warningAlarm.fill});
   }
 
   &[data-status='${NotificationBigStatus.Error}'] {
     background-color: var(${COLORS.icon.error.background});
-    fill: var(${COLORS.icon.error.fill});
   }
 
   &[data-status='${NotificationBigStatus.ErrorAlarm}'] {
     background-color: var(${COLORS.icon.errorAlarm.background});
-    fill: var(${COLORS.icon.errorAlarm.fill});
   }
 `;
 
