@@ -20,12 +20,12 @@ export const InputWrapper = styled.div`
   flex-direction: row;
   width: 100%;
   max-width: 100%;
-  min-height: 40px;
-  max-height: 40px;
+  min-height: 44px;
+  max-height: 44px;
   transition: ${ANIMATIONS.TRANSITION};
   transition-property: color, background-color, border-color;
   box-sizing: border-box;
-  padding: 0 12px;
+  padding: 0 12px 3px 12px;
   border: 1px solid var(${COLORS.border.default});
   border-bottom: 0;
   border-top-left-radius: 4px;
@@ -79,7 +79,7 @@ export const ShortBaseInput = styled(InputPrivate)`
 `;
 
 const SliderStyle = `
-  margin-top: -8px;
+  margin-top: -9px;
   margin-bottom: 18px;
 
   & .rc-slider-mark span {
@@ -172,6 +172,7 @@ export const InputPostfixTextWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 12px;
+  font-size: 14px;
   color: var(${COLORS.currency.default});
 
   &[data-disabled='true'] {
