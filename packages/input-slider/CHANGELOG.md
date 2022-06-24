@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-slider@1.1.4...@sbercloud/uikit-product-input-slider@1.1.5) (2022-06-24)
+
+
+### Bug Fixes
+
+* fixed font-size, input height styles ([c608067](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c608067624946bbac41da4e9ee3d3e6a01ad065c))
+
+
+
+
+
 ## [1.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-slider@1.1.3...@sbercloud/uikit-product-input-slider@1.1.4) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-slider
