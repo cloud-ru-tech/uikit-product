@@ -14,8 +14,20 @@ export const Wrapper = styled.span`
   display: inline-flex;
 
   &[data-variant=${Variants.Primary}] {
+    &[data-icon=${Icons.Info}] {
+      fill: var(${COLORS.fill.primary.info});
+    }
+
     &[data-icon=${Icons.Success}] {
       fill: var(${COLORS.fill.primary.success});
+    }
+
+    &[data-icon=${Icons.AttentionCritical}] {
+      fill: var(${COLORS.fill.primary.attentionCritical});
+    }
+
+    &[data-icon=${Icons.AttentionWarning}] {
+      fill: var(${COLORS.fill.primary.attentionWarning});
     }
 
     &[data-icon=${Icons.Failed}] {
@@ -32,8 +44,20 @@ export const Wrapper = styled.span`
   }
 
   &[data-variant=${Variants.OnDark}] {
+    &[data-icon=${Icons.Info}] {
+      fill: var(${COLORS.fill.onDark.info});
+    }
+
     &[data-icon=${Icons.Success}] {
       fill: var(${COLORS.fill.onDark.success});
+    }
+
+    &[data-icon=${Icons.AttentionCritical}] {
+      fill: var(${COLORS.fill.onDark.attentionCritical});
+    }
+
+    &[data-icon=${Icons.AttentionWarning}] {
+      fill: var(${COLORS.fill.onDark.attentionWarning});
     }
 
     &[data-icon=${Icons.Failed}] {
@@ -46,6 +70,36 @@ export const Wrapper = styled.span`
 
     &[data-icon=${Icons.Loading}] {
       fill: var(${COLORS.fill.onDark.loading});
+    }
+  }
+
+  &[data-variant=${Variants.OnAccent}] {
+    &[data-icon=${Icons.Info}] {
+      fill: var(${COLORS.fill.onAccent.info});
+    }
+
+    &[data-icon=${Icons.Success}] {
+      fill: var(${COLORS.fill.onAccent.success});
+    }
+
+    &[data-icon=${Icons.AttentionCritical}] {
+      fill: var(${COLORS.fill.onAccent.attentionCritical});
+    }
+
+    &[data-icon=${Icons.AttentionWarning}] {
+      fill: var(${COLORS.fill.onAccent.attentionWarning});
+    }
+
+    &[data-icon=${Icons.Failed}] {
+      fill: var(${COLORS.fill.onAccent.failed});
+    }
+
+    &[data-icon=${Icons.Cancel}] {
+      fill: var(${COLORS.fill.onAccent.cancel});
+    }
+
+    &[data-icon=${Icons.Loading}] {
+      fill: var(${COLORS.fill.onAccent.loading});
     }
   }
 

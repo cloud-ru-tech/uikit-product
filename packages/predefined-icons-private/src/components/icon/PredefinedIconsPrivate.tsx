@@ -1,8 +1,10 @@
 import { ComponentType, SVGProps } from 'react';
 
 import {
+  AttentionInterfaceSVG,
   CircleCancelFilledInterfaceSVG,
   CircleCheckFilledInterfaceSVG,
+  InfoInterfaceSVG,
   LoadingWheelInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
@@ -11,7 +13,10 @@ import { Icons, Variants } from './constants';
 import { Wrapper } from './styled';
 
 const iconByName: Record<Icons, ComponentType<SVGProps<SVGSVGElement>>> = {
+  [Icons.Info]: InfoInterfaceSVG,
   [Icons.Success]: CircleCheckFilledInterfaceSVG,
+  [Icons.AttentionCritical]: AttentionInterfaceSVG,
+  [Icons.AttentionWarning]: AttentionInterfaceSVG,
   [Icons.Failed]: CircleCancelFilledInterfaceSVG,
   [Icons.Cancel]: CircleCancelFilledInterfaceSVG,
   [Icons.Loading]: LoadingWheelInterfaceSVG,
