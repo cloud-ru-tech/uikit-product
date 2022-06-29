@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-hierarchy-menu@0.8.53...@sbercloud/uikit-product-hierarchy-menu@0.9.0) (2022-06-29)
+
+
+### Features
+
+* **CP-7115:** optional addDivider prop ([2089f91](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2089f9155b0931cd6404c5d96803e49a557e8412))
+
+
+
+
+
 ## [0.8.53](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-hierarchy-menu@0.8.52...@sbercloud/uikit-product-hierarchy-menu@0.8.53) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-hierarchy-menu
