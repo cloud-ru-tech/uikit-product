@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.7 (2022-06-29)
+
+
+### Bug Fixes
+
+* **FF-153:** Renamed toaster to notification ([8ea7a57](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8ea7a573aa4af7ac89c6d9fbd8a42edf1ab4553e))
+
+
+
+
+
 ## [2.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toaster@2.0.5...@sbercloud/uikit-product-toaster@2.0.6) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-toaster
