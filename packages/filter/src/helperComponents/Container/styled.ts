@@ -14,6 +14,5 @@ export const tooltipClassName = css`
   padding: 0 24px;
   color: inherit;
 
-  z-index: 99999;
   overflow: inherit;
 `;

@@ -84,6 +84,7 @@ export interface ModalProps extends ReactModalProps {
 
 export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal, 'setAppElement'> = props => {
   const {
+    isOpen,
     onRequestClose,
     title,
     description,
@@ -97,7 +98,6 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
     hideCross,
     overlayOffset,
     contentStyles,
-    zIndex = 99999,
     parentId,
     parentSelector,
     alarmApproveButton,
@@ -130,14 +130,13 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
     }, {});
   }, [props]);
 
-  return (
+  return isOpen ? (
     <RCModal
       {...props}
       data={dataTestAttributes}
       style={{
         overlay: {
           ...(overlayOffset || {}),
-          zIndex,
           position: parentId ? 'absolute' : 'fixed',
         },
         content: contentStyles || {},
@@ -204,7 +203,7 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
         </ButtonWrapper>
       )}
     </RCModal>
-  );
+  ) : null;
 };
 
 Modal.setAppElement = RCModal.setAppElement;

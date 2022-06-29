@@ -37,7 +37,7 @@ export const classNameArrow = css`
 `;
 
 export const containerClassName = css`
-  z-index: 99999;
+  z-index: 1;
   max-width: 376px;
   box-sizing: border-box;
 

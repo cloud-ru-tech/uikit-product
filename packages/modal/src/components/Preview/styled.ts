@@ -41,7 +41,7 @@ export const Content = styled.div`
 `;
 
 export const overlayClassName = css`
-  z-index: 99999;
+  z-index: 1;
   position: fixed;
   top: 0;
   left: 0;

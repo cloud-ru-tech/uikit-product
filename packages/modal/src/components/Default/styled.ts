@@ -52,7 +52,7 @@ export const contentClassname = css`
 `;
 
 export const overlayClassname = css`
-  z-index: 99999;
+  z-index: 1;
   background-color: rgba(52, 63, 72, 0.2);
   min-width: 100vw;
   min-height: 100vh;

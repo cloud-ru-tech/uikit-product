@@ -95,4 +95,8 @@ export const drawerWrapperClassName = css`
     display: flex;
     flex-direction: column;
   }
+
+  .drawer {
+    z-index: 1;
+  }
 `;

@@ -53,6 +53,7 @@ export interface ModalPreviewProps extends IReactModalProps {
 
 export const ModalPreview: React.FC<ModalPreviewProps> = props => {
   const {
+    isOpen,
     title,
     content,
     appElement,
@@ -72,7 +73,7 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
 
   const closeBtnText = useMemo(() => textProvider(languageCode, Texts.Close), [languageCode]);
 
-  return (
+  return isOpen ? (
     <RCModal
       {...props}
       overlayClassName={cx(overlayClassName, Boolean(parentSelector) && overlayParentClassname, propsOverlayClassName)}
@@ -95,5 +96,5 @@ export const ModalPreview: React.FC<ModalPreviewProps> = props => {
       )}
       {content && <Content className={propsContentClassName}>{content}</Content>}
     </RCModal>
-  );
+  ) : null;
 };
