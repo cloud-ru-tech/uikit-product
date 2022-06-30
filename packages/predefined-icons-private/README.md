@@ -13,6 +13,17 @@ type PredefinedLogoProps = WithSupportProps<{
   className?: string;
 }>;
 
+type PredefinedDecorIconPrivateProps = WithSupportProps<{
+  icon: ComponentType<ISvgIconProps>;
+  size?: Sizes;
+  className?: string;
+}>;
+
+enum Sizes {
+  Medium = 'Medium',
+  Large = 'Large',
+}
+
 type PredefinedIconsPrivateProps = WithSupportProps<{
   icon: Icons;
   variant?: Variants;

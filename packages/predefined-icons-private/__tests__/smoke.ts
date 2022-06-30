@@ -1,4 +1,4 @@
-import { PredefinedIconsPrivateProps } from '../src';
+import { PredefinedDecorIconPrivateProps, PredefinedIconsPrivateProps } from '../src';
 import { Icons } from '../src/components/icon/constants';
 
 describe('[Predefined Icon Private]:', () => {
@@ -43,5 +43,26 @@ describe('[Predefined Logos Private]:', () => {
       expect(cy.getByDataTestId('icon-ml-space-full-logo')).to.exist;
       expect(cy.getByDataTestId('icon-sber-cloud-full-logo')).to.exist;
     });
+  });
+});
+
+describe('[Predefined Decor Icon Private]:', () => {
+  const testId = `predefinedDecorIcon-test`;
+
+  function visit(props?: PredefinedDecorIconPrivateProps) {
+    return cy.visitComponent({
+      group: 'icons-predefined',
+      name: 'predefined-decor-icon-private',
+      props: {
+        'data-test-id': testId,
+        ...(props || {}),
+      },
+    });
+  }
+
+  it('Rendered', () => {
+    visit();
+
+    expect(cy.getByDataTestId(testId)).to.exist;
   });
 });
