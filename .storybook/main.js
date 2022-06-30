@@ -3,7 +3,7 @@ const glob = require('glob');
 const path = require('path');
 
 const STORIES = glob
-  .sync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/stories/*.{ts,tsx}`)
+  .sync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/stories/**/*.{ts,tsx}`)
   .map(x => path.resolve(__dirname, `../${x}`));
 
 const WELCOME = path.resolve(__dirname, './welcome/stories/Welcome.tsx');

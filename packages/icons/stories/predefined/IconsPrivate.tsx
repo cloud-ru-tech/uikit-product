@@ -1,0 +1,58 @@
+import { Meta, Story } from '@storybook/react/types-6-0';
+
+import { BADGE } from '#storybookConstants';
+
+import componentChangelog from '../../../predefined-icons-private/CHANGELOG.md';
+import componentPackage from '../../../predefined-icons-private/package.json';
+import componentReadme from '../../../predefined-icons-private/README.md';
+import { PredefinedIconsPrivate, PredefinedIconsPrivateProps } from '../../../predefined-icons-private/src';
+import { Block, TableCell, TableColumn, TableWrapper } from './helperComponents';
+
+export default {
+  title: 'Components/Icons/Predefined/Predefined Icons Private',
+  component: PredefinedIconsPrivate,
+} as Meta;
+
+const Template: Story<PredefinedIconsPrivateProps> = ({ ...args }) => (
+  <div>
+    <Block>
+      <PredefinedIconsPrivate {...args} />
+    </Block>
+    <TableWrapper>
+      <TableColumn key='IconsNames'>
+        <TableCell key='emptyCell' />
+        {Object.keys(PredefinedIconsPrivate.icons).map(iconName => (
+          <TableCell key={iconName}>{iconName}</TableCell>
+        ))}
+      </TableColumn>
+      {Object.entries(PredefinedIconsPrivate.variants).map(([variantKey, variantValue]) => (
+        <TableColumn key={variantKey} data-variant={TableColumn.variants[variantValue]}>
+          <TableCell>{variantKey}</TableCell>
+
+          {Object.entries(PredefinedIconsPrivate.icons).map(([iconKey, iconValue]) => (
+            <TableCell key={iconKey}>
+              <PredefinedIconsPrivate icon={iconValue} variant={variantValue} />
+            </TableCell>
+          ))}
+        </TableColumn>
+      ))}
+    </TableWrapper>
+  </div>
+);
+
+export const predefinedIconsPrivate = Template.bind({});
+predefinedIconsPrivate.args = {
+  icon: PredefinedIconsPrivate.icons.Success,
+};
+predefinedIconsPrivate.argTypes = {};
+predefinedIconsPrivate.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  design: {
+    name: 'Figma',
+    type: 'figma',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=212%3A350',
+  },
+  badges: [BADGE.BETA, BADGE.PRIVATE],
+};
