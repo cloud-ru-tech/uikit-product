@@ -31,15 +31,16 @@ const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaPr
     const [isFocused, setIsFocused] = useState<boolean>(false);
     const innerRef = useRef<HTMLTextAreaElement>(null);
     const textareaRef = mergeRefs(innerRef, ref);
-    const onWrapperFocusHandler = useCallback(() => innerRef.current?.focus(), []);
     const onTextareaFocusHandler = useCallback(() => setIsFocused(true), []);
     const onTextareaBlurHandler = useCallback(() => setIsFocused(false), []);
-    const onClearHandler = useCallback(() => onChange(''), [onChange]);
+    const onClearHandler = useCallback(() => {
+      onChange('');
+      innerRef.current?.focus();
+    }, [onChange, innerRef]);
     const hasClearButton = !!value.length && !disabled;
 
     return (
       <div
-        onFocus={onWrapperFocusHandler}
         data-disabled={disabled || undefined}
         data-error={error || undefined}
         data-focused={isFocused || undefined}
