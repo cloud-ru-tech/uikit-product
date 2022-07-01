@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-markdown-editor@0.1.49...@sbercloud/uikit-product-markdown-editor@0.1.50) (2022-07-01)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-markdown-editor
+
+
+
+
+
 ## [0.1.49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-markdown-editor@0.1.48...@sbercloud/uikit-product-markdown-editor@0.1.49) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-markdown-editor

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-textarea-private",
   "title": "React Textarea Private",
-  "version": "2.4.6",
+  "version": "2.4.7",
   "sideEffects": [
     "*.css",
     "*.woff",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea-private@2.4.6...@sbercloud/uikit-product-textarea-private@2.4.7) (2022-07-01)
+
+
+### Bug Fixes
+
+* removed div onFocus handler for proper clear button click ([ff75941](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ff75941de460fc7bca09cef5dfcecb329cbd1431))
+
+
+
+
+
 ## [2.4.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea-private@2.4.5...@sbercloud/uikit-product-textarea-private@2.4.6) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-textarea-private
