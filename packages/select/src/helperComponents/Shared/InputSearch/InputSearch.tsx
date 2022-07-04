@@ -38,6 +38,7 @@ export const InputSearch = React.forwardRef<HTMLInputElement, InputSearchProps>(
             )
           }
           placeholder={textProvider<string>(languageCode, Texts.Search)}
+          data-test-id='select__input-search'
         />
       </InputWrapper>
     );
