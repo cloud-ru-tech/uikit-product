@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@2.0.7...@sbercloud/uikit-product-notification@2.1.0) (2022-07-05)
+
+
+### Features
+
+* **FF-153:** Replaced notification status icons with UI Kit Predefined Icons ([3a14201](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3a14201a45163363a1944dc4b4b303b6601ce311))
+
+
+
+
+
 ## 2.0.7 (2022-06-29)
 
 

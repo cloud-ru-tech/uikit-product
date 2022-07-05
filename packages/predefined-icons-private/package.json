@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-predefined-icons-private",
   "title": "React Predefined Icons Private",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
