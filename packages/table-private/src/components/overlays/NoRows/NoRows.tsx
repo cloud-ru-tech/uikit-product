@@ -25,7 +25,6 @@ function getText(languageCode: LanguageCodeType, reason: NoDataReasons) {
 
 export function NoRows({ reason }: { reason: NoDataReasons }) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-
   const { title, description } = getText(languageCode, reason);
 
   return (

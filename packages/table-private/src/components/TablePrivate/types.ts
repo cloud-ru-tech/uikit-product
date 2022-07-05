@@ -15,4 +15,5 @@ export type TablePrivateProps = AgGridReactProps & {
   columnDefs: ColumnDefinition[];
   rowData: NonNullable<AgGridReactProps['rowData']>;
   pinnedTopRowData?: AgGridReactProps['pinnedTopRowData'];
+  isSearching?: boolean;
 };

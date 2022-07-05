@@ -53,6 +53,8 @@ export function ClientModelTableController<T>({
 
   const [gridApi, setGridApi] = useState<AgGridTypes.GridApi | null>(null);
   const [searchValue, setSearchValue] = useState('');
+  const [isSearching, setIsSearching] = useState(false);
+
   const onGridReady = useCallback(gridEv => {
     setGridApi(gridEv.api);
   }, []);
@@ -70,6 +72,14 @@ export function ClientModelTableController<T>({
     }, 100),
     [gridApi],
   );
+
+  useEffect(() => {
+    if (searchValue || bulkActions?.filter?.value?.length) {
+      setIsSearching(true);
+      return;
+    }
+    setIsSearching(false);
+  }, [searchValue, bulkActions?.filter?.value]);
 
   useEffect(() => {
     if (!gridApi) return;
@@ -218,6 +228,13 @@ export function ClientModelTableController<T>({
 
   const useRowSelection = Boolean(advancedProps?.rowSelection || deleteProps);
 
+  const searchPinnedData = useMemo(() => {
+    if (!searchValue) return pinnedData;
+    return pinnedData?.filter(item =>
+      Object.values(item).some(cellValue => String(cellValue).includes(String(searchValue))),
+    );
+  }, [searchValue, pinnedData]);
+
   const onSearchCallback = useCallback(
     value => {
       setSearchValue(value);
@@ -285,7 +302,7 @@ export function ClientModelTableController<T>({
     <ClientModelTableView
       fieldId={fieldId}
       data={data}
-      pinnedData={pinnedData}
+      pinnedData={searchPinnedData}
       columnDefinitions={columnDefinitions}
       getRowHeight={advancedProps?.getRowHeight}
       getRowId={advancedProps?.getRowId}
@@ -303,6 +320,7 @@ export function ClientModelTableController<T>({
       moreActions={moreActions}
       searchValue={searchValue}
       suppressToolbar={suppressToolbar}
+      isSearching={isSearching}
       {...extractSupportProps(rest)}
     />
   );

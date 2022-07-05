@@ -57,15 +57,17 @@ function generateRows(count: number): DataModel[] {
 const Template: Story<
   ClientModelTableProps<DataModel> & {
     rowsAmount: number;
+    pinnedRowsAmount: number;
     showDelete: boolean;
     showFilter: boolean;
     showExport: boolean;
-    showPinnedRows: boolean;
   }
-> = ({ rowsAmount, showDelete, showFilter, showExport, showPinnedRows, ...args }) => {
+> = ({ rowsAmount, pinnedRowsAmount, showDelete, showFilter, showExport, ...args }) => {
   const [data, setData] = useState<DataModel[]>(generateRows(rowsAmount));
+  const [pinnedData, setPinnedData] = useState<DataModel[]>(generateRows(pinnedRowsAmount));
 
   const debSetData = useMemo(() => debounce(setData, 500), []);
+  const debSetPinnedData = useMemo(() => debounce(setPinnedData, 500), []);
   const [filterValue, setFilterValue] = useState<TFilterValueType[]>([]);
   const rowPassFilter = useCallback(
     (data: DataModel) => {
@@ -81,6 +83,11 @@ const Template: Story<
     const newData = generateRows(rowsAmount);
     debSetData(newData);
   }, [debSetData, rowsAmount]);
+
+  useEffect(() => {
+    const newData = generateRows(pinnedRowsAmount);
+    debSetPinnedData(newData);
+  }, [debSetPinnedData, pinnedRowsAmount]);
 
   const bulkActions: ClientModelTableProps<DataModel>['bulkActions'] = useMemo(
     () => ({
@@ -116,17 +123,23 @@ const Template: Story<
     [data, filterValue, rowPassFilter, showDelete, showFilter, showExport],
   );
 
-  const pinnedRows = showPinnedRows ? (data?.length && [data[0]]) || undefined : undefined;
+  const filteredPinnedData = useMemo(() => {
+    if (!filterValue) return pinnedData;
+    return pinnedData.filter(pinnedRow => rowPassFilter(pinnedRow));
+  }, [pinnedData, filterValue, rowPassFilter]);
 
   return (
     <CMTable
       fieldId={args.fieldId}
       data={data}
-      pinnedData={pinnedRows}
+      pinnedData={filteredPinnedData}
       columnDefinitions={args.columnDefinitions}
       bulkActions={bulkActions}
       pageSize={args.pageSize}
-      onRefreshCallback={() => setData(generateRows(rowsAmount))}
+      onRefreshCallback={() => {
+        setData(generateRows(rowsAmount));
+        setPinnedData(generateRows(pinnedRowsAmount));
+      }}
     />
   );
 };
@@ -212,6 +225,17 @@ clientModelTable.argTypes = {
       step: 1,
     },
   },
+  pinnedRowsAmount: {
+    defaultValue: 3,
+    name: '[Stories]: Amount of pinned rows within the table',
+    description: 'demonstration purposes only, this parameter does not exist in component',
+    control: {
+      type: 'range',
+      min: 0,
+      max: 100,
+      step: 1,
+    },
+  },
   showDelete: {
     defaultValue: true,
     name: '[Stories]: show or hide delete button from toolbar',
@@ -231,13 +255,6 @@ clientModelTable.argTypes = {
   showExport: {
     defaultValue: true,
     name: '[Stories]: show or hide export table',
-    control: {
-      type: 'boolean',
-    },
-  },
-  showPinnedRows: {
-    defaultValue: false,
-    name: '[Stories]: show or hide pinned rows',
     control: {
       type: 'boolean',
     },

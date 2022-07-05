@@ -33,3 +33,9 @@ export const hideTableHeaderClassName = css`
     }
   }
 `;
+
+export const hideNoRowsOverlayClassName = css`
+  .ag-overlay {
+    display: none;
+  }
+`;

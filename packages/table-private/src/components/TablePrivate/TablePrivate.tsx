@@ -34,11 +34,12 @@ function StylelessTablePrivate({
   className,
   onGridReady,
   additionModules = [],
+  isSearching,
   ...tableProps
 }: TablePrivateProps) {
   const [gridApi, setGridApi] = useState<GridApi>();
   const [resizedColumns, setResizedColumns] = useState<{ [key: string]: string }>({});
-  const [hideTable, setHideTable] = useState(!rowData.length);
+  const [hideTable, setHideTable] = useState(!(rowData.length || pinnedTopRowData?.length));
 
   const handleGridReady = (params: GridReadyEvent) => {
     setGridApi(params.api);
@@ -91,19 +92,26 @@ function StylelessTablePrivate({
   }, [gridApi, resizedColumns]);
 
   const onFilterChanged = (params: FilterChangedEvent) => {
-    setHideTable(!Boolean(params.api.getDisplayedRowCount()));
-
     gridOptions?.onFilterChanged?.(params);
   };
 
   useEffect(() => {
     if (gridApi) {
-      setHideTable(!Boolean(gridApi.getDisplayedRowCount()));
+      setHideTable(!Boolean(gridApi.getDisplayedRowCount() || pinnedTopRowData?.length));
     }
-  }, [rowData, gridApi]);
+  }, [rowData, gridApi, pinnedTopRowData]);
+
+  const hasOnlyPinnedData = Boolean(pinnedTopRowData?.length && rowData?.length === 0);
 
   return (
-    <div className={cx('ag-theme-alpine', hideTable && S.hideTableHeaderClassName, className)}>
+    <div
+      className={cx(
+        'ag-theme-alpine',
+        hideTable && S.hideTableHeaderClassName,
+        hasOnlyPinnedData && S.hideNoRowsOverlayClassName,
+        className,
+      )}
+    >
       <AgGridReact
         modules={[...AgGridModules, ...additionModules]}
         gridOptions={{
@@ -128,13 +136,13 @@ function StylelessTablePrivate({
         onGridReady={handleGridReady}
         onGridSizeChanged={handleGridSizeChanged}
         rowData={rowData}
-        pinnedTopRowData={hideTable ? undefined : pinnedTopRowData}
+        pinnedTopRowData={pinnedTopRowData}
         columnDefs={colDefs}
         isExternalFilterPresent={() => Boolean(doesRowPassFilter)}
         doesExternalFilterPass={node => doesRowPassFilter?.(node.data) || false}
         noRowsOverlayComponent={NoRows}
         noRowsOverlayComponentParams={{
-          reason: rowData.length === 0 ? NoDataReasons.InitialEmpty : NoDataReasons.Search,
+          reason: rowData.length === 0 && !isSearching ? NoDataReasons.InitialEmpty : NoDataReasons.Search,
         }}
         {...tableProps}
       />

@@ -38,6 +38,7 @@ type ClientModelTableViewProps<T> = {
   searchValue: string;
   rowSelection?: TablePrivateProps['rowSelection'];
   suppressToolbar?: boolean;
+  isSearching: boolean;
 };
 
 export function ClientModelTableView<T>({
@@ -61,6 +62,7 @@ export function ClientModelTableView<T>({
   rowSelection,
   onRowDoubleClicked,
   suppressToolbar,
+  isSearching,
   ...rest
 }: WithSupportProps<ClientModelTableViewProps<T>>) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -106,6 +108,7 @@ export function ClientModelTableView<T>({
       <TablePrivate
         checkboxSelection={useRowSelection}
         additionModules={additionModules}
+        isSearching={isSearching}
         rowData={data}
         pinnedTopRowData={pinnedData}
         columnDefs={columnDefinitions}
