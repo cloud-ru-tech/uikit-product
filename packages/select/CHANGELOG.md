@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.26.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-select@0.26.2...@sbercloud/uikit-product-select@0.26.3) (2022-07-05)
+
+
+### Bug Fixes
+
+* **FF-509:** add `data-test-id` to `InputSearch` component ([dc17b21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc17b21e39f175e77d1299a3dbae8b25172dd94e))
+
+
+
+
+
 ## [0.26.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-select@0.26.1...@sbercloud/uikit-product-select@0.26.2) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-select

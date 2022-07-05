@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toolbar@0.16.27...@sbercloud/uikit-product-toolbar@0.16.28) (2022-07-05)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-toolbar
+
+
+
+
+
 ## [0.16.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toolbar@0.16.26...@sbercloud/uikit-product-toolbar@0.16.27) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-toolbar
