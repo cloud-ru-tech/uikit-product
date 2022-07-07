@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-tabs",
   "title": "React Tabs",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,6 +29,6 @@
   "dependencies": {
     "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-typography": "1.1.1",
-    "@sbercloud/uikit-product-utils": "2.8.1"
+    "@sbercloud/uikit-product-utils": "2.9.0"
   }
 }

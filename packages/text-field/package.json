@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-text-field",
   "title": "React Text Field",
-  "version": "3.1.59",
+  "version": "3.1.60",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,11 +27,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.0.18",
+    "@sbercloud/uikit-product-button": "5.0.19",
     "@sbercloud/uikit-product-icons": "4.2.0",
-    "@sbercloud/uikit-product-input-private": "2.5.5",
-    "@sbercloud/uikit-product-textarea-private": "2.4.7",
+    "@sbercloud/uikit-product-input-private": "2.5.6",
+    "@sbercloud/uikit-product-textarea-private": "2.4.8",
     "@sbercloud/uikit-product-theme": "0.33.3",
-    "@sbercloud/uikit-product-utils": "2.8.1"
+    "@sbercloud/uikit-product-utils": "2.9.0"
   }
 }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@2.8.1...@sbercloud/uikit-product-utils@2.9.0) (2022-07-07)
+
+
+### Features
+
+* **FF-149:** alert utility ([1a8be4b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1a8be4b965efc0d177a6f844e74de7b71cd1d9a6))
+
+
+
+
+
 ## [2.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@2.8.0...@sbercloud/uikit-product-utils@2.8.1) (2022-06-08)
 
 

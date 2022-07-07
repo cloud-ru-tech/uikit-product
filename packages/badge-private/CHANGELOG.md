@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-badge-private@3.1.14...@sbercloud/uikit-product-badge-private@3.1.15) (2022-07-07)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-badge-private
+
+
+
+
+
 ## [3.1.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-badge-private@3.1.13...@sbercloud/uikit-product-badge-private@3.1.14) (2022-06-08)
 
 

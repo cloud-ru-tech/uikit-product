@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.55](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-breadcrumbs@0.10.54...@sbercloud/uikit-product-breadcrumbs@0.10.55) (2022-07-07)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-breadcrumbs
+
+
+
+
+
 ## [0.10.54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-breadcrumbs@0.10.53...@sbercloud/uikit-product-breadcrumbs@0.10.54) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-breadcrumbs

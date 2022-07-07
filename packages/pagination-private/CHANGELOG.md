@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-pagination-private@1.2.12...@sbercloud/uikit-product-pagination-private@1.2.13) (2022-07-07)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-pagination-private
+
+
+
+
+
 ## [1.2.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-pagination-private@1.2.11...@sbercloud/uikit-product-pagination-private@1.2.12) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-pagination-private
