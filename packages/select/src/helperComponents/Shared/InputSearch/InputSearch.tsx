@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { InputPrivate, InputPrivateProps } from '@sbercloud/uikit-product-input-private';
@@ -13,26 +13,21 @@ export type InputSearchProps = Pick<InputPrivateProps, 'className' | 'ref'> &
 export const InputSearch = React.forwardRef<HTMLInputElement, InputSearchProps>(
   ({ onChange, value, className }, ref) => {
     const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-    const [search, setSearch] = useState(value);
-    useEffect(() => {
-      if (search === value) return;
-      onChange(search);
-    }, [onChange, search, value]);
 
-    useEffect(() => {
-      setSearch(value);
-    }, [value]);
+    function handleClearClick() {
+      onChange('');
+    }
 
     return (
       <InputWrapper className={className}>
         <InputPrivate
           ref={ref}
           type={InputPrivate.types.Text}
-          value={search}
-          onChange={setSearch}
+          value={value}
+          onChange={onChange}
           postfix={
-            search ? (
-              <CloseInterfaceSVG className={crossIconClassName} onClick={() => setSearch('')} />
+            value ? (
+              <CloseInterfaceSVG className={crossIconClassName} onClick={handleClearClick} />
             ) : (
               <SearchInterfaceSVG className={searchIconClassname} />
             )
