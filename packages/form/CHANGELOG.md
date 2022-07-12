@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.16.17...@sbercloud/uikit-product-form@0.16.18) (2022-07-12)
+
+
+### Bug Fixes
+
+* **FF-543:** fixed display on small screens ([0ecd98d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0ecd98d39399b132e4c8f408d78b76b582cbe23a))
+
+
+
+
+
 ## [0.16.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.16.16...@sbercloud/uikit-product-form@0.16.17) (2022-07-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-form
