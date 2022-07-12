@@ -20,7 +20,7 @@ const icons = {
 };
 
 const Template: Story<{ icon: string | React.ReactElement } & Omit<NoDataPageProps, 'icon'>> = ({ icon, ...rest }) => (
-  <div style={{ width: '100vw', height: '100vh' }}>
+  <div style={{ width: '100%', height: '100vh' }}>
     <NoDataPage {...rest} icon={icon as React.ReactElement}>
       <p>
         Хранилище ML Space - это восхитительный и полезный инструмент. Мы можем подвести итог, что современные
