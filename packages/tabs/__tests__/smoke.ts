@@ -85,6 +85,30 @@ describe('[Tabs]:', () => {
     assertSelected('id2');
     assertNotSelected('id1');
   });
+
+  it('Scroll navigation tabs', () => {
+    const testId = 'tabsTest';
+    const sixId = 'tabs__navigation-list-item:id6__label';
+    const elevenId = 'tabs__navigation-list-item:id11__label';
+    const fifteenId = 'tabs__navigation-list-item:id15__label';
+
+    cy.visitComponent({
+      name: 'tabs',
+      props: {
+        'data-test-id': testId,
+      },
+    });
+
+    cy.getByDataTestId(fifteenId).should('not.be.visible');
+
+    cy.getByDataTestId(elevenId).click('center');
+
+    cy.getByDataTestId(fifteenId).should('be.visible');
+
+    cy.getByDataTestId(sixId).click('center');
+
+    cy.getByDataTestId(fifteenId).should('not.be.visible');
+  });
 });
 
 export {};

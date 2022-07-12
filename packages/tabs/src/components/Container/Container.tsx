@@ -1,7 +1,7 @@
 import { ReactElement, useEffect, useState } from 'react';
 
 import { TabContext } from '../../helpers/context';
-import { CounterTypes, SelectedTabRef, Sizes, TabId } from '../../helpers/types';
+import { CounterTypes, SelectedTabRef, Sizes, TabId, TabsWrapperRef } from '../../helpers/types';
 
 export type ContainerProps = {
   children: ReactElement[];
@@ -19,6 +19,7 @@ export function Container({
   counterType = CounterTypes.Count,
 }: ContainerProps) {
   const [selectedTabRef, setSelectedTabRef] = useState<SelectedTabRef>(null);
+  const [tabsWrapperRef, setTabsWrapperRef] = useState<TabsWrapperRef>(null);
   const [controlledSelectedTab, setControlledSelectedTab] = useState(value);
   const [uncontrolledSelectedTab, setUncontrolledSelectedTab] = useState(value);
 
@@ -40,6 +41,8 @@ export function Container({
         counterType,
         selectedTab: uncontrolledSelectedTab,
         setSelectedTab: onTabChangeHandler,
+        tabsWrapperRef,
+        setTabsWrapperRef,
         selectedTabRef,
         setSelectedTabRef,
         size,

@@ -15,13 +15,25 @@ export type NavigationItemProps = WithSupportProps<{
 }>;
 
 export function NavigationItem({ value, label, counter, disabled }: NavigationItemProps) {
-  const { selectedTab, setSelectedTab, counterType, setSelectedTabRef } = useContext(TabContext);
+  const { selectedTab, setSelectedTab, counterType, setSelectedTabRef, tabsWrapperRef } = useContext(TabContext);
   const customRef: SelectedTabRef = useRef(null);
   const isSelected = value === selectedTab;
 
   const changeTabHandler = () => {
     if (disabled) return;
     setSelectedTab(value);
+
+    // Shift
+    if (customRef.current && tabsWrapperRef?.current) {
+      //Tabs
+      const clientWidth = tabsWrapperRef.current.clientWidth;
+
+      // Tab
+      const offset = customRef.current.offsetLeft;
+      const width = customRef.current.clientWidth;
+
+      tabsWrapperRef.current.scrollTo({ left: offset - clientWidth / 2 + width / 2, behavior: 'smooth' });
+    }
   };
 
   useEffect(() => {

@@ -17,11 +17,8 @@ export const SelectedHighlighter = styled.div<{ left: number; width: number }>`
   border-color: var(${COLORS.highlighter});
   background-color: var(${COLORS.highlighter});
   border-radius: 8px;
-
-  position: absolute;
-  left: ${props => props.left}px;
-  bottom: 0;
+  transform: ${props => `translateX(${props.left}px)`};
 
   transition: ${ANIMATIONS.TRANSITION};
-  transition-property: left, width;
+  transition-property: transform, width;
 `;

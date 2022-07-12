@@ -40,6 +40,7 @@ export const Tab = styled.li`
 export const Label = styled.span`
   ${H4_STYLES};
   transition: color ${ANIMATIONS.TRANSITION};
+  user-select: none;
 `;
 
 export const StyledCounter = styled(Counter)`

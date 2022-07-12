@@ -47,6 +47,21 @@ const Template: Story<Tabs.ContainerProps & { 'data-test-id'?: string; className
         <Tabs.NavigationItem value={'id3'} label={'Third'} disabled />
         <Tabs.NavigationItem value={'id4'} label={'Fourth'} counter={123} />
         <Tabs.NavigationItem value={'id5'} label={'Fifth'} disabled={currentTab !== 'id4'} />
+        <Tabs.NavigationItem value={'id6'} label={'Six'} />
+        <Tabs.NavigationItem value={'id7'} label={'Seven'} counter={1} />
+        <Tabs.NavigationItem value={'id8'} label={'Eight'} />
+        <Tabs.NavigationItem value={'id9'} label={'Nine'} counter={123} />
+        <Tabs.NavigationItem value={'id10'} label={'Ten'} />
+        <Tabs.NavigationItem value={'id11'} label={'Eleven'} />
+        <Tabs.NavigationItem value={'id12'} label={'Twelve'} counter={1} />
+        <Tabs.NavigationItem value={'id13'} label={'Thirteen'} />
+        <Tabs.NavigationItem value={'id14'} label={'Fourteen'} counter={123} />
+        <Tabs.NavigationItem value={'id15'} label={'Fifteen'} />
+        <Tabs.NavigationItem value={'id16'} label={'Sixteen'} />
+        <Tabs.NavigationItem value={'id17'} label={'Seventeen'} counter={1} />
+        <Tabs.NavigationItem value={'id18'} label={'Eighteen'} />
+        <Tabs.NavigationItem value={'id19'} label={'Nineteen'} counter={123} />
+        <Tabs.NavigationItem value={'id20'} label={'Twenty'} />
       </Tabs.Navigation>
       <Divider />
       <Container theme={theme}>
@@ -55,6 +70,21 @@ const Template: Story<Tabs.ContainerProps & { 'data-test-id'?: string; className
         <Tabs.Content value={'id3'}>THIRD</Tabs.Content>
         <Tabs.Content value={'id4'}>FOURTH</Tabs.Content>
         <Tabs.Content value={'id5'}>FIFTH</Tabs.Content>
+        <Tabs.Content value={'id6'}>SIX</Tabs.Content>
+        <Tabs.Content value={'id7'}>SEVEN</Tabs.Content>
+        <Tabs.Content value={'id8'}>EIGHT</Tabs.Content>
+        <Tabs.Content value={'id9'}>NINE</Tabs.Content>
+        <Tabs.Content value={'id10'}>TEN</Tabs.Content>
+        <Tabs.Content value={'id11'}>ELEVEN</Tabs.Content>
+        <Tabs.Content value={'id12'}>TWELVE</Tabs.Content>
+        <Tabs.Content value={'id13'}>THIRTEEN</Tabs.Content>
+        <Tabs.Content value={'id14'}>FOURTEEN</Tabs.Content>
+        <Tabs.Content value={'id15'}>FIFTEEN</Tabs.Content>
+        <Tabs.Content value={'id16'}>SIXTEEN</Tabs.Content>
+        <Tabs.Content value={'id17'}>SEVENTEEN</Tabs.Content>
+        <Tabs.Content value={'id18'}>EIGHTEEN</Tabs.Content>
+        <Tabs.Content value={'id19'}>NINETEEN</Tabs.Content>
+        <Tabs.Content value={'id20'}>TWENTY</Tabs.Content>
       </Container>
     </Tabs.Container>
   );
