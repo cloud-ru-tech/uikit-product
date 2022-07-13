@@ -7,25 +7,78 @@
 ## Usage
 
 ```tsx
-import { HeaderBalanceTooltip } from '@sbercloud/uikit-product-navigation';
+import {
+  DocumentationInterfaceSVG,
+  NotifyInterfaceSVG,
+  QuestionInterfaceSVG,
+  SupportInterfaceSVG,
+} from '@sbercloud/uikit-product-icons';
+import { Badge } from '@sbercloud/uikit-product-badge-private';
+import { PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
+import {
+  Header,
+  HeaderBalanceTooltip,
+  HeaderLogo,
+  HeaderMenu,
+  HeaderToolbar,
+} from '@sbercloud/uikit-product-navigation';
 
 function App() {
   function handleBalanceClick() {}
 
   function handleRechargeClick() {}
 
+  function handleNotifyClick() {}
+
   return (
-    <HeaderBalanceTooltip
-      balance={144_401_810}
-      limit={155_500_000}
-      onBalanceClick={handleBalanceClick}
-      onRechargeClick={handleRechargeClick}
-    />
+    <Header>
+      <HeaderMenu.Root title='Платформы'>
+        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='ML Space' href='/ml-space' />
+        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Enterprise' href='/enterprise' />
+        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='SVP' href='/svp' />
+        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Advanced' href='/advanced' />
+      </HeaderMenu.Root>
+      <HeaderLogo>
+        <PredefinedMLSpaceLogo height={16} />
+      </HeaderLogo>
+      <HeaderBalanceTooltip
+        balance={144_401_810}
+        limit={155_500_000}
+        onBalanceClick={handleBalanceClick}
+        onRechargeClick={handleRechargeClick}
+      />
+      <HeaderToolbar.Root>
+        <HeaderToolbar.Item
+          icon={
+            <Badge number={2} type={Badge.types.Alert}>
+              <NotifyInterfaceSVG />
+            </Badge>
+          }
+          title='Уведомления'
+          onClick={handleNotifyClick}
+        />
+        <HeaderToolbar.Item icon={<DocumentationInterfaceSVG />} title='Документация' href='/documentation' />
+        <HeaderToolbar.Item icon={<SupportInterfaceSVG />} title='Поддержка' href='/support' />
+        <HeaderToolbar.ProfileMenu name='Андрей Иванов'>
+          <HeaderToolbar.ProfileMenuAvatarItem title='Профиль' href='/profile' />
+          <HeaderToolbar.ProfileMenuItem icon={<QuestionInterfaceSVG />} title='Выход' href='/logout' />
+        </HeaderToolbar.ProfileMenu>
+      </HeaderToolbar.Root>
+    </Header>
   );
 }
 ```
 
 ## Props
+
+### Header
+
+```ts
+type HeaderProps = WithSupportProps<{
+  children: ReactNode;
+  className?: string;
+}>;
+```
 
 ### HeaderBalanceTooltip
 
@@ -33,8 +86,84 @@ function App() {
 type HeaderBalanceTooltipProps = WithSupportProps<{
   balance?: number;
   limit?: number;
-  className?: string;
   onBalanceClick?: () => void;
   onRechargeClick?: () => void;
+}>;
+```
+
+### HeaderLogo
+
+```ts
+type HeaderLogoProps = WithSupportProps<{
+  children: ReactNode;
+}>;
+```
+
+### HeaderMenu.Root
+
+```ts
+type HeaderMenuRootProps = WithSupportProps<{
+  title: string;
+  children: ReactNode;
+}>;
+```
+
+### HeaderMenu.Item
+
+```ts
+type HeaderMenuItemProps = WithSupportProps<{
+  icon: ReactElement;
+  title: string;
+  href: string;
+  target?: HTMLAttributeAnchorTarget;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
+}>;
+```
+
+### HeaderToolbar.Root
+
+```ts
+type HeaderToolbarRootProps = WithSupportProps<{
+  children: ReactNode;
+}>;
+```
+
+### HeaderToolbar.Item
+
+```ts
+type HeaderToolbarItemProps = WithSupportProps<{
+  icon: ReactElement;
+  title: string;
+  href?: string;
+  target?: HTMLAttributeAnchorTarget;
+  onClick?: MouseEventHandler<HTMLElement>;
+}>;
+```
+
+### HeaderToolbar.ProfileMenu
+
+```ts
+type HeaderToolbarProfileMenuProps = WithSupportProps<{
+  name: string;
+  children: ReactNode;
+  src?: string;
+}>;
+```
+
+### HeaderToolbar.ProfileMenuAvatarItem
+
+```ts
+type HeaderToolbarProfileMenuAvatarItemProps = Omit<HeaderToolbarProfileMenuItemProps, 'icon'>;
+```
+
+### HeaderToolbar.ProfileMenuItem
+
+```ts
+type HeaderToolbarProfileMenuItemProps = WithSupportProps<{
+  icon: ReactElement;
+  title: string;
+  href: string;
+  target?: HTMLAttributeAnchorTarget;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
 }>;
 ```

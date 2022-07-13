@@ -6,7 +6,7 @@ import componentReadme from '../README.md';
 import { HeaderBalanceTooltip, HeaderBalanceTooltipProps } from '../src';
 
 export default {
-  title: 'Components/Navigation/Header Balance Tooltip',
+  title: 'Not stable/Navigation/Header Balance Tooltip',
   component: HeaderBalanceTooltip,
 } as Meta;
 

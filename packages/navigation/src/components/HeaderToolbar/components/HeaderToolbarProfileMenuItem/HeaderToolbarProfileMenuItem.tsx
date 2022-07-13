@@ -1,0 +1,40 @@
+import { HTMLAttributeAnchorTarget, MouseEvent, MouseEventHandler, ReactElement, useContext } from 'react';
+
+import { DropdownItem } from '@sbercloud/uikit-product-dropdown';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+
+import { DropdownMenuContext } from '../../../../contexts';
+import { Link } from './styled';
+
+export type HeaderToolbarProfileMenuItemProps = WithSupportProps<{
+  icon: ReactElement;
+  title: string;
+  href: string;
+  target?: HTMLAttributeAnchorTarget;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
+}>;
+
+export function HeaderToolbarProfileMenuItem({
+  icon,
+  title,
+  href,
+  target,
+  onClick,
+  ...rest
+}: HeaderToolbarProfileMenuItemProps) {
+  const dropdownMenu = useContext(DropdownMenuContext);
+
+  function handleClick(event: MouseEvent<HTMLAnchorElement>) {
+    dropdownMenu.hide();
+    onClick?.(event);
+  }
+
+  return (
+    <Link href={href} target={target} onClick={handleClick} {...extractSupportProps(rest)}>
+      <DropdownItem>
+        {icon}
+        {title}
+      </DropdownItem>
+    </Link>
+  );
+}

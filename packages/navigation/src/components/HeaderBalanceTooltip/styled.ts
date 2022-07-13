@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
   border-radius: 100px;
   border: 1px solid var(${COLORS.border.default});
   display: flex;
+  grid-area: header-balance-tooltip;
   padding: 4px;
   width: fit-content;
 `;

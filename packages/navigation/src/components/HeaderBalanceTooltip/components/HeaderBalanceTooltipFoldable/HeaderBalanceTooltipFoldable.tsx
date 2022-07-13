@@ -2,7 +2,7 @@ import { ReactNode, useLayoutEffect, useRef, useState } from 'react';
 
 import { Content, Wrapper } from './styled';
 
-type HeaderBalanceTooltipFoldableProps = {
+export type HeaderBalanceTooltipFoldableProps = {
   open: boolean;
   children: ReactNode;
   fallback: ReactNode;

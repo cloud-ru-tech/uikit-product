@@ -2,7 +2,7 @@ import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
 import { GROUPING_START } from './constants';
 
-type HeaderBalanceTooltipCurrencyProps = {
+export type HeaderBalanceTooltipCurrencyProps = {
   value: number;
 };
 

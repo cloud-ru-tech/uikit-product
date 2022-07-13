@@ -5,13 +5,13 @@ import { CircleAddInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
+import { Texts, textProvider } from '../../helpers';
 import {
   HeaderBalanceTooltipCurrency,
   HeaderBalanceTooltipFoldable,
   HeaderBalanceTooltipPie,
   HeaderBalanceTooltipSpinner,
-} from '../../helperComponents';
-import { Texts, textProvider } from '../../helpers';
+} from './components';
 import { Mode } from './constants';
 import { AccentText, Balance, Icon, RechargeButton, RegularText, Wrapper } from './styled';
 import { ModeEntry } from './types';
@@ -19,7 +19,6 @@ import { ModeEntry } from './types';
 export type HeaderBalanceTooltipProps = WithSupportProps<{
   balance?: number;
   limit?: number;
-  className?: string;
   onBalanceClick?: () => void;
   onRechargeClick?: () => void;
 }>;
@@ -27,7 +26,6 @@ export type HeaderBalanceTooltipProps = WithSupportProps<{
 export function HeaderBalanceTooltip({
   balance,
   limit,
-  className,
   onBalanceClick,
   onRechargeClick,
   ...rest
@@ -134,12 +132,7 @@ export function HeaderBalanceTooltip({
   }
 
   return (
-    <Wrapper
-      className={className}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      {...extractSupportProps(rest)}
-    >
+    <Wrapper onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} {...extractSupportProps(rest)}>
       {isRechargeButtonVisible && (
         <RechargeButton>
           <Tooltip

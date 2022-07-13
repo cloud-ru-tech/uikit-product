@@ -9,6 +9,7 @@ describe('[Navigation]: Header Balance Tooltip', () => {
     showRechargeButton?: boolean;
   }) {
     cy.visitComponent({
+      category: 'not-stable',
       group: 'navigation',
       name: 'header-balance-tooltip',
       props: { balance, limit, showRechargeButton, 'data-test-id': 'header-balance-tooltip' },

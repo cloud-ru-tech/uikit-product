@@ -3,7 +3,7 @@ import { error } from '@sbercloud/uikit-product-utils';
 import { LOW_BALANCE_PERCENT } from './constants';
 import { Pie } from './styled';
 
-type HeaderBalanceTooltipPieProps = {
+export type HeaderBalanceTooltipPieProps = {
   balance: number;
   limit: number;
 };
