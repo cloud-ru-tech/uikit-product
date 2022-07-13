@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-no-data-page@0.9.1...@sbercloud/uikit-product-no-data-page@0.10.0) (2022-07-13)
+
+
+### Features
+
+* **FF-544:** added support mobile screens ([6ed50af](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6ed50af81cc8016122ffe9341d7f7d281f914603))
+
+
+
+
+
 ## [0.9.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-no-data-page@0.9.0...@sbercloud/uikit-product-no-data-page@0.9.1) (2022-06-08)
 
 

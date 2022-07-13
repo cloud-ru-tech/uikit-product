@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.4.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea-private@2.4.8...@sbercloud/uikit-product-textarea-private@2.4.9) (2022-07-13)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-textarea-private
+
+
+
+
+
 ## [2.4.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea-private@2.4.7...@sbercloud/uikit-product-textarea-private@2.4.8) (2022-07-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-textarea-private

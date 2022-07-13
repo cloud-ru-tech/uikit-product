@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-toggle-group",
   "title": "React Toggle Group",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-marker": "2.0.15",
+    "@sbercloud/uikit-product-marker": "2.0.16",
     "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-typography": "1.1.1",
-    "@sbercloud/uikit-product-utils": "2.9.0"
+    "@sbercloud/uikit-product-utils": "2.10.0"
   }
 }
