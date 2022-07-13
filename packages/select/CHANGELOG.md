@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.26.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-select@0.26.5...@sbercloud/uikit-product-select@0.26.6) (2022-07-13)
+
+
+### Bug Fixes
+
+* **AICDC-7303:** fixed TagSelect rerender loop ([0946f02](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0946f02ad1ae715910296525f41dc36e8c93c306))
+
+
+
+
+
 ## [0.26.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-select@0.26.4...@sbercloud/uikit-product-select@0.26.5) (2022-07-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-select

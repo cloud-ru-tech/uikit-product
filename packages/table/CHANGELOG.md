@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.41.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.41.10...@sbercloud/uikit-product-table@0.41.11) (2022-07-13)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-table
+
+
+
+
+
 ## [0.41.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.41.9...@sbercloud/uikit-product-table@0.41.10) (2022-07-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table
