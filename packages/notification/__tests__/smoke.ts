@@ -153,34 +153,31 @@ describe('[Notification]: Big', () => {
   });
 
   it('Should update after "update button" click', () => {
+    const infoTitle = 'Перенос данных завершен';
+    const successTitle = 'Обновлен';
+    const notificationInfoId = 'notification-big__Info';
+    const notificationSuccessId = 'notification-big__Success';
     visit();
 
-    cy.getByDataTestId('trigger-notification-two-actions').click();
-    cy.getByDataTestId(NOTIFICATION_BIG_TEST_IDS.title).invoke('text').as('prevTitle');
-    cy.getByDataTestId(NOTIFICATION_BIG_TEST_IDS.description).invoke('text').as('prevDescription');
-    cy.getByDataTestId(NOTIFICATION_BIG_TEST_IDS.icon).invoke('html').as('prevIcon');
+    cy.contains(infoTitle).should('not.exist');
+    cy.contains(successTitle).should('not.exist');
+    cy.getByDataTestId(notificationInfoId).should('not.exist');
+    cy.getByDataTestId(notificationSuccessId).should('not.exist');
 
-    cy.getByDataTestId('update-notification-two-actions').click();
-    cy.getByDataTestId(NOTIFICATION_BIG_TEST_IDS.title).invoke('text').as('newTitle');
-    cy.getByDataTestId(NOTIFICATION_BIG_TEST_IDS.description).invoke('text').as('newDescription');
-    cy.getByDataTestId(NOTIFICATION_BIG_TEST_IDS.icon).invoke('html').as('newIcon');
-
-    cy.get('@prevTitle').then(prevTitle => {
-      cy.get('@newTitle').then(newTitle => {
-        expect(prevTitle).not.to.eq(newTitle);
+    cy.getByDataTestId('trigger-notification-two-actions')
+      .click()
+      .then(() => {
+        cy.getByDataTestId(notificationInfoId).should('exist').contains(infoTitle);
+        cy.contains(successTitle).should('not.exist');
+        cy.getByDataTestId(notificationSuccessId).should('not.exist');
       });
-    });
 
-    cy.get('@prevDescription').then(prevDescription => {
-      cy.get('@newDescription').then(newDescription => {
-        expect(prevDescription).not.to.eq(newDescription);
+    cy.getByDataTestId('update-notification-two-actions')
+      .click()
+      .then(() => {
+        cy.getByDataTestId(notificationSuccessId).should('exist').contains(successTitle);
+        cy.contains(infoTitle).should('not.exist');
+        cy.getByDataTestId(notificationInfoId).should('not.exist');
       });
-    });
-
-    cy.get('@prevIcon').then(prevIcon => {
-      cy.get('@newIcon').then(newIcon => {
-        expect(prevIcon).not.to.eq(newIcon);
-      });
-    });
   });
 });
