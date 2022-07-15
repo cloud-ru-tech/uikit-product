@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.0.11...@sbercloud/uikit-product-tabs@1.1.0) (2022-07-15)
+
+
+### Features
+
+* **FF-70:** added scroll behavior ([28b8b4e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/28b8b4e62cf55400e6d14baef93f33c16636a708))
+
+
+
+
+
 ## [1.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.0.10...@sbercloud/uikit-product-tabs@1.0.11) (2022-07-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-tabs
