@@ -21,17 +21,25 @@ export type NotificationPropsMap = {
   [NotificationType.Big]: NotificationBigProps;
 };
 
-export type OpenNotification = <T extends keyof NotificationPropsMap>({
-  type,
-  notificationProps,
-  containerProps,
-  notificationOptions,
-}: {
+type OpenNotificationProps<T extends keyof NotificationPropsMap> = {
   type: T;
-  notificationProps: NotificationPropsMap[T];
+  notificationProps?: NotificationPropsMap[T];
   containerProps?: NotificationContainerProps;
   notificationOptions?: NotificationOptions;
-}) => Promise<ReactText | undefined>;
+  customNotification?: JSX.Element;
+};
+
+type DefaultOrCustomNotification<T extends keyof NotificationPropsMap> =
+  | {
+      notificationProps: NotificationPropsMap[T];
+    }
+  | {
+      customNotification: JSX.Element;
+    };
+
+export type OpenNotification = <T extends keyof NotificationPropsMap>(
+  props: DefaultOrCustomNotification<T> & OpenNotificationProps<T>,
+) => Promise<ReactText | undefined>;
 
 export type UpdateNotification = <T extends keyof NotificationPropsMap>(
   id: string | number,
@@ -42,8 +50,9 @@ export type UpdateNotification = <T extends keyof NotificationPropsMap>(
     containerId,
   }: {
     type: T;
-    notificationProps: NotificationPropsMap[T];
+    notificationProps?: NotificationPropsMap[T];
     notificationOptions?: NotificationOptions;
     containerId?: NotificationContainerProps['containerId'];
   },
+  customNotification?: JSX.Element,
 ) => void;

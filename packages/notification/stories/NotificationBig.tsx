@@ -24,6 +24,15 @@ const Block = styled.div`
   }
 `;
 
+const CustomNotificationWrap = styled.div`
+  display: flex;
+  border: 1px solid;
+  padding: 11px 27px 11px 11px;
+  border-radius: 8px;
+  position: relative;
+  cursor: default;
+`;
+
 const actions: NotificationBigProps['actions'] = [
   {
     text: 'Принять',
@@ -36,6 +45,8 @@ const actions: NotificationBigProps['actions'] = [
     onClick: () => {},
   },
 ];
+
+const CustomNotification = ({ text }: { text: string }) => <CustomNotificationWrap>{text}</CustomNotificationWrap>;
 
 const Template: Story<NotificationBigProps> = ({ ...args }) => {
   const { openNotification, updateNotification, types, statuses } = useNotification();
@@ -61,6 +72,26 @@ const Template: Story<NotificationBigProps> = ({ ...args }) => {
         status: statuses[types.Big].Success,
       },
     });
+  };
+
+  const customNotification = (actions?: NotificationBigProps['actions']) => {
+    openNotification({
+      type: types.Big,
+      notificationOptions: {
+        id: 'customNotification',
+      },
+      customNotification: <CustomNotification text={'Это кастомное уведомление'} />,
+    });
+  };
+
+  const updateCustomNotification = () => {
+    updateNotification(
+      'customNotification',
+      {
+        type: types.Big,
+      },
+      <CustomNotification text={'Это обновленное кастомное уведомление'} />,
+    );
   };
 
   return (
@@ -92,6 +123,20 @@ const Template: Story<NotificationBigProps> = ({ ...args }) => {
           data-test-id='update-notification-two-actions'
           onClick={() => updateNotificationWithTwoActions(actions)}
           text={`Update ${args.status} notification with multiple actions`}
+        />
+      </Block>
+
+      <Block>
+        <Button
+          data-test-id='trigger-custom-notification'
+          onClick={() => customNotification()}
+          text={`Open custom ${args.status} notification`}
+        />
+
+        <Button
+          data-test-id='update-custom-notification'
+          onClick={() => updateCustomNotification()}
+          text={`Update ${args.status} custom notification`}
         />
       </Block>
     </>

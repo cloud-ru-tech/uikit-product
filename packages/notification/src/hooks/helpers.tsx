@@ -46,26 +46,36 @@ export function getNotificationContainer({
   };
 }
 
+export const getNotificationOptions = <T extends keyof NotificationPropsMap>({
+  type,
+  notificationOptions,
+  containerId,
+  hasActions,
+}: {
+  type: T;
+  notificationOptions?: NotificationOptions;
+  containerId?: NotificationContainerProps['containerId'];
+  hasActions?: boolean;
+}) => {
+  const options: RtToastOptions = {
+    toastId: notificationOptions?.id,
+    onClose: notificationOptions?.onClose,
+    autoClose: hasActions ? false : notificationOptions?.autoClose ?? DEFAULT_AUTO_CLOSE,
+    containerId: containerId || `notification-container__${type}`,
+  };
+
+  return options;
+};
+
 export const getNotificationComponent = <T extends keyof NotificationPropsMap>({
   type,
   notificationProps,
   notificationOptions,
-  containerId: containerIdProp,
 }: {
   type: T;
   notificationProps: NotificationPropsMap[T];
   notificationOptions?: NotificationOptions;
-  containerId?: NotificationContainerProps['containerId'];
 }) => {
-  const containerId = containerIdProp || `notification-container__${type}`;
-
-  const options: RtToastOptions = {
-    toastId: notificationOptions?.id,
-    onClose: notificationOptions?.onClose,
-    autoClose: notificationOptions?.autoClose ?? DEFAULT_AUTO_CLOSE,
-    containerId,
-  };
-
   let notificationComponent =
     type === NotificationType.Small ? (
       <NotificationSmall {...(notificationProps as NotificationSmallProps)} />
@@ -73,12 +83,8 @@ export const getNotificationComponent = <T extends keyof NotificationPropsMap>({
 
   if (type === NotificationType.Big) {
     const notificationBigProps = notificationProps as NotificationBigProps;
-    if (notificationBigProps.actions?.length) {
-      options.autoClose = false;
-    }
-
     notificationComponent = <NotificationBig {...notificationBigProps} />;
   }
 
-  return { notificationComponent, options, containerId };
+  return notificationComponent;
 };

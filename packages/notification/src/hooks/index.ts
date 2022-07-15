@@ -1,2 +1,3 @@
 export * from './useNotification';
-export type { NotificationOptions, NotificationType } from './types';
+export type { NotificationOptions } from './types';
+export { NotificationType } from './types';
