@@ -36,6 +36,8 @@
     "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-typography": "1.1.1",
     "@sbercloud/uikit-product-utils": "2.10.0",
+    "@sbercloud/uikit-product-no-data": "1.0.0",
+    "@sbercloud/uikit-product-predefined-icons-private": "0.2.2",
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {

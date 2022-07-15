@@ -1,4 +1,6 @@
 import { SearchInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { NoData } from '@sbercloud/uikit-product-no-data';
+import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { Texts, textProvider } from '../../../helpers/texts-provider';
@@ -28,13 +30,11 @@ export function NoRows({ reason }: { reason: NoDataReasons }) {
 
   return (
     <S.NoRowsOverlay>
-      <S.NoRowsOverlayIconWrap>
-        <SearchInterfaceSVG size={54} />
-      </S.NoRowsOverlayIconWrap>
-
-      <S.NoRowsOverlayTitle>{title}</S.NoRowsOverlayTitle>
-
-      {description && <S.NoRowsOverlayDescription>{description}</S.NoRowsOverlayDescription>}
+      <NoData
+        image={<PredefinedDecorIconPrivate icon={<SearchInterfaceSVG />} />}
+        title={title}
+        description={description}
+      />
     </S.NoRowsOverlay>
   );
 }
