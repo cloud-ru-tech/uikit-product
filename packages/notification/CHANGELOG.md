@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@2.1.3...@sbercloud/uikit-product-notification@2.2.0) (2022-07-15)
+
+
+### Features
+
+* **AICDC-7630:** added the ability to add custom notifications ([68b71d7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/68b71d71d9b78e30cafe096206dbd1b45d8b7c42))
+
+
+
+
+
 ## [2.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@2.1.2...@sbercloud/uikit-product-notification@2.1.3) (2022-07-14)
 
 
