@@ -8,7 +8,13 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { NotificationBigProps, useNotification } from '../src';
+import {
+  NotificationBigProps,
+  NotificationStatuses,
+  NotificationType,
+  openNotification,
+  updateNotification,
+} from '../src';
 import { NotificationBig } from '../src/components/NotificationBig';
 
 export default {
@@ -49,11 +55,9 @@ const actions: NotificationBigProps['actions'] = [
 const CustomNotification = ({ text }: { text: string }) => <CustomNotificationWrap>{text}</CustomNotificationWrap>;
 
 const Template: Story<NotificationBigProps> = ({ ...args }) => {
-  const { openNotification, updateNotification, types, statuses } = useNotification();
-
   const notification = (actions?: NotificationBigProps['actions']) => {
     openNotification({
-      type: types.Big,
+      type: NotificationType.Big,
       notificationProps: { ...args, actions },
       notificationOptions: {
         id: actions?.length || 'test',
@@ -63,20 +67,20 @@ const Template: Story<NotificationBigProps> = ({ ...args }) => {
 
   const updateNotificationWithTwoActions = (actions: NotificationBigProps['actions']) => {
     updateNotification(actions?.length || 'test', {
-      type: types.Big,
+      type: NotificationType.Big,
       notificationProps: {
         ...args,
         title: 'Обновлен',
         description: 'Новый текст',
         actions,
-        status: statuses[types.Big].Success,
+        status: NotificationStatuses[NotificationType.Big].Success,
       },
     });
   };
 
-  const customNotification = (actions?: NotificationBigProps['actions']) => {
+  const customNotification = () => {
     openNotification({
-      type: types.Big,
+      type: NotificationType.Big,
       notificationOptions: {
         id: 'customNotification',
       },
@@ -85,13 +89,10 @@ const Template: Story<NotificationBigProps> = ({ ...args }) => {
   };
 
   const updateCustomNotification = () => {
-    updateNotification(
-      'customNotification',
-      {
-        type: types.Big,
-      },
-      <CustomNotification text={'Это обновленное кастомное уведомление'} />,
-    );
+    updateNotification('customNotification', {
+      type: NotificationType.Big,
+      customNotification: <CustomNotification text={'Это обновленное кастомное уведомление'} />,
+    });
   };
 
   return (
@@ -129,13 +130,13 @@ const Template: Story<NotificationBigProps> = ({ ...args }) => {
       <Block>
         <Button
           data-test-id='trigger-custom-notification'
-          onClick={() => customNotification()}
+          onClick={customNotification}
           text={`Open custom ${args.status} notification`}
         />
 
         <Button
           data-test-id='update-custom-notification'
-          onClick={() => updateCustomNotification()}
+          onClick={updateCustomNotification}
           text={`Update ${args.status} custom notification`}
         />
       </Block>
@@ -147,8 +148,8 @@ export const notificationBig = Template.bind({});
 notificationBig.args = {};
 notificationBig.argTypes = {
   status: {
-    defaultValue: useNotification.statuses.Big.Info,
-    options: Object.values(useNotification.statuses.Big),
+    defaultValue: NotificationStatuses[NotificationType.Big].Info,
+    options: Object.values(NotificationStatuses[NotificationType.Big]),
     control: {
       type: 'radio',
     },

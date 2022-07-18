@@ -8,7 +8,13 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { NotificationSmallProps, useNotification } from '../src';
+import {
+  NotificationSmallProps,
+  NotificationStatuses,
+  NotificationType,
+  openNotification,
+  updateNotification,
+} from '../src';
 import { NotificationSmall } from '../src/components/NotificationSmall';
 
 export default {
@@ -17,13 +23,11 @@ export default {
 } as Meta;
 
 const Template: Story<NotificationSmallProps> = ({ ...args }) => {
-  const { openNotification, updateNotification, types, statuses } = useNotification();
-
   const [currentNotificationId, setNotificationId] = useState<ReactText>();
 
   const clickToOpen = async () => {
     const id = await openNotification({
-      type: types.Small,
+      type: NotificationType.Small,
       notificationProps: args,
     });
 
@@ -34,11 +38,11 @@ const Template: Story<NotificationSmallProps> = ({ ...args }) => {
     if (!currentNotificationId) return;
 
     updateNotification(currentNotificationId, {
-      type: types.Small,
+      type: NotificationType.Small,
       notificationProps: {
         ...args,
         text: 'updated text',
-        status: statuses[types.Small].Error,
+        status: NotificationStatuses[NotificationType.Small].Error,
       },
       notificationOptions: {
         onClose: () => setNotificationId(undefined),
@@ -56,7 +60,7 @@ const Template: Story<NotificationSmallProps> = ({ ...args }) => {
       <Button
         data-test-id='update-notification'
         onClick={clickToUpdate}
-        text={`Update notification to ${statuses[types.Small].Error}`}
+        text={`Update notification to ${NotificationStatuses[NotificationType.Small].Error}`}
       />
     </>
   );
@@ -66,8 +70,8 @@ export const notificationSmall = Template.bind({});
 notificationSmall.args = {};
 notificationSmall.argTypes = {
   status: {
-    defaultValue: useNotification.statuses.Small.Success,
-    options: Object.values(useNotification.statuses.Small),
+    defaultValue: NotificationStatuses[NotificationType.Small].Success,
+    options: Object.values(NotificationStatuses[NotificationType.Small]),
     control: {
       type: 'radio',
     },

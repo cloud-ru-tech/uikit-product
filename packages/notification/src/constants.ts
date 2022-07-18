@@ -1,6 +1,6 @@
-import { NotificationBig } from '../components/NotificationBig';
-import { NotificationContainer, NotificationContainerProps } from '../components/NotificationContainer';
-import { NotificationSmall } from '../components/NotificationSmall';
+import { NotificationBig } from './components/NotificationBig';
+import { NotificationContainer, NotificationContainerProps } from './components/NotificationContainer';
+import { NotificationSmall } from './components/NotificationSmall';
 import { NotificationType } from './types';
 
 export const NotificationStatuses = {

@@ -9,11 +9,11 @@
 ### You only need a hook to use a notification, see available props in types
 
 ```typescript
-const { openNotification, types } = useNotification();
+import { openNotification, NotificationType } from '@sbercloud/uikit-product-notification';
 
 const clickToOpen = () => {
   openNotification({
-    type: types.Big,
+    type: NotificationType.Big,
     notificationProps: {/* notificationProps */ },
     containerProps: {/* containerProps if needed */ },
     notificationOptions: {/* notificationOptions if needed */},
@@ -25,14 +25,14 @@ const clickToOpen = () => {
 See an example in [NotificationSmall Story](/packages/notification/stories/NotificationSmall.tsx) or [NotificationBig Story](/packages/notification/stories/NotificationBig.tsx)
 
 ```typescript
-const { openNotification, updateNotification, types, statuses } = useNotification();
+import { openNotification, updateNotification, NotificationType } from '@sbercloud/uikit-product-notification';
 
 const NOTIFICATION_ID = 'testBig';
 
 // you could pass an id manually
 const clickToOpen = () => {
   openNotification({
-    type: types.Big,
+    type: NotificationType.Big,
     notificationProps: {/* notificationProps */ },
     containerProps: {/* containerProps if needed */ },
     notificationOptions: {
@@ -45,7 +45,7 @@ const clickToOpen = () => {
 // or await to get automatically generated id
 const clickToOpenAsync = async () => {
   const notificationId = await openNotification({
-    type: types.Big, 
+    type: NotificationType.Big, 
     notificationProps: {/* notificationProps */ },
     containerProps: {/* containerProps if needed */ }, 
     notificationOptions: {/* notificationOptions if needed */},
@@ -54,7 +54,7 @@ const clickToOpenAsync = async () => {
 
 const clickToUpdate = () => {
   updateNotification(NOTIFICATION_ID, {
-    type: types.Big,
+    type: NotificationType.Big,
     notificationProps: {/* props you need to update */},
     notificationOptions: {/* notificationOptions if needed */},
   });
@@ -62,8 +62,6 @@ const clickToUpdate = () => {
 ```
 
 ## Props
-
-### useNotification
 
 ```typescript
 type NotificationOptions = {
@@ -82,30 +80,35 @@ type NotificationPropsMap = {
   [NotificationType.Big]: NotificationBigProps;
 };
 
-type OpenNotification = <T extends keyof NotificationPropsMap>({
-  type,
-  notificationProps,
-  containerProps,
-  notificationOptions,
-}: {
+type OpenNotificationProps<T extends keyof NotificationPropsMap> = {
   type: T;
-  notificationProps: NotificationPropsMap[T];
+  notificationProps?: NotificationPropsMap[T];
   containerProps?: NotificationContainerProps;
   notificationOptions?: NotificationOptions;
-}) => Promise<ReactText | undefined>;
+  customNotification?: JSX.Element;
+  notificationParent?: HTMLDivElement;
+};
+
+type DefaultOrCustomNotification<T extends keyof NotificationPropsMap> =
+  | {
+  notificationProps: NotificationPropsMap[T];
+}
+  | {
+  customNotification: JSX.Element;
+};
+
+type OpenNotification = <T extends keyof NotificationPropsMap>(
+  props: DefaultOrCustomNotification<T> & OpenNotificationProps<T>,
+) => Promise<ReactText | undefined>;
 
 type UpdateNotification = <T extends keyof NotificationPropsMap>(
   id: string | number,
-  {
-    type,
-    notificationProps,
-    notificationOptions,
-    containerId,
-  }: {
+  props: {
     type: T;
-    notificationProps: NotificationPropsMap[T];
+    notificationProps?: NotificationPropsMap[T];
     notificationOptions?: NotificationOptions;
     containerId?: NotificationContainerProps['containerId'];
+    customNotification?: JSX.Element;
   },
 ) => void;
 ```

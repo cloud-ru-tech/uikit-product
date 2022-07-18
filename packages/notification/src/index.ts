@@ -1,2 +1,6 @@
 export * from './components';
-export * from './hooks';
+
+export { openNotification, updateNotification, isNotificationActive, dismissNotification } from './helpers';
+export { NotificationStatuses } from './constants';
+export type { NotificationOptions } from './types';
+export { NotificationType } from './types';

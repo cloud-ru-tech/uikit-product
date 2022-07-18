@@ -1,9 +1,7 @@
 import { ReactText } from 'react';
 import { ToastOptions as RtToastOptions } from 'react-toastify';
 
-import { NotificationBigProps, NotificationContainerProps, NotificationSmallProps } from '../components';
-
-export type NotificationRoot = HTMLDivElement | Element | undefined;
+import { NotificationBigProps, NotificationContainerProps, NotificationSmallProps } from './components';
 
 export type NotificationOptions = {
   id?: RtToastOptions['toastId'];
@@ -27,6 +25,7 @@ type OpenNotificationProps<T extends keyof NotificationPropsMap> = {
   containerProps?: NotificationContainerProps;
   notificationOptions?: NotificationOptions;
   customNotification?: JSX.Element;
+  notificationParent?: HTMLDivElement;
 };
 
 type DefaultOrCustomNotification<T extends keyof NotificationPropsMap> =
@@ -43,16 +42,11 @@ export type OpenNotification = <T extends keyof NotificationPropsMap>(
 
 export type UpdateNotification = <T extends keyof NotificationPropsMap>(
   id: string | number,
-  {
-    type,
-    notificationProps,
-    notificationOptions,
-    containerId,
-  }: {
+  props: {
     type: T;
     notificationProps?: NotificationPropsMap[T];
     notificationOptions?: NotificationOptions;
     containerId?: NotificationContainerProps['containerId'];
+    customNotification?: JSX.Element;
   },
-  customNotification?: JSX.Element,
 ) => void;
