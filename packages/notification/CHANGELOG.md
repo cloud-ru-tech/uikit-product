@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@2.2.0...@sbercloud/uikit-product-notification@3.0.0) (2022-07-18)
+
+
+### Features
+
+* usage without hook ([895589d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/895589dbb7905737c51a2fdedfee1bd9cd464e7a))
+
+
+### BREAKING CHANGES
+
+* usage without hook
+
+
+
+
+
 # [2.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@2.1.3...@sbercloud/uikit-product-notification@2.2.0) (2022-07-15)
 
 
