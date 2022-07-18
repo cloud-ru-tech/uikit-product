@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.14.7...@sbercloud/uikit-product-table-private@0.15.0) (2022-07-18)
+
+
+### Features
+
+* **FF-555:** integrated NoData package for NoDataOverlay ([52bb56c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/52bb56c65ba8b928a1230fdd13117d2fdb106255))
+
+
+
+
+
 ## [0.14.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.14.6...@sbercloud/uikit-product-table-private@0.14.7) (2022-07-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table-private
