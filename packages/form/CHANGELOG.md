@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.16.19...@sbercloud/uikit-product-form@0.17.0) (2022-07-20)
+
+
+### Features
+
+* **FF-598:** form field uses input-decorator-private (api has been changed, styles could be broken) ([9d67c97](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d67c977323f987b136a1b62a238322212c485b7))
+
+
+### BREAKING CHANGES
+
+* **FF-598:** form field uses input-decorator-private (api has been changed, styles could be broken)
+
+
+
+
+
 ## [0.16.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.16.18...@sbercloud/uikit-product-form@0.16.19) (2022-07-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-form
