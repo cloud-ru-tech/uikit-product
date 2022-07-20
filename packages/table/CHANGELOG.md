@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.42.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.41.12...@sbercloud/uikit-product-table@0.42.0) (2022-07-20)
+
+
+### Features
+
+* **FF-601:** make searchBar optional in table component ([38ca901](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/38ca9014ecd6cceced64bba5164c4d7d455b3f98))
+
+
+
+
+
 ## [0.41.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.41.11...@sbercloud/uikit-product-table@0.41.12) (2022-07-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table
