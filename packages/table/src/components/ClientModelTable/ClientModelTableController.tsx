@@ -34,6 +34,7 @@ export type ClientModelTableControllerProps<T> = {
     onRowSelected?: TablePrivateProps['onRowSelected'];
     onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
   };
+  suppressToolbar?: boolean;
 };
 
 export function ClientModelTableController<T>({
@@ -45,6 +46,7 @@ export function ClientModelTableController<T>({
   onRefreshCallback,
   columnDefinitions,
   advancedProps,
+  suppressToolbar = false,
   ...rest
 }: WithSupportProps<ClientModelTableControllerProps<T>>) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -300,6 +302,7 @@ export function ClientModelTableController<T>({
       onSearchCallback={onSearchCallback}
       moreActions={moreActions}
       searchValue={searchValue}
+      suppressToolbar={suppressToolbar}
       {...extractSupportProps(rest)}
     />
   );

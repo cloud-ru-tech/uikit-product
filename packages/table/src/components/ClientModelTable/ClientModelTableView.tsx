@@ -37,6 +37,7 @@ type ClientModelTableViewProps<T> = {
   moreActions: Toolbar.MoreActionsProps['actions'];
   searchValue: string;
   rowSelection?: TablePrivateProps['rowSelection'];
+  suppressToolbar?: boolean;
 };
 
 export function ClientModelTableView<T>({
@@ -59,46 +60,49 @@ export function ClientModelTableView<T>({
   onRowSelected,
   rowSelection,
   onRowDoubleClicked,
+  suppressToolbar,
   ...rest
 }: WithSupportProps<ClientModelTableViewProps<T>>) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   return (
     <div {...extractSupportProps(rest)}>
-      <Toolbar.Container className={S.SearchPanelView} data-test-id='client-table__toolbar'>
-        {onRefreshCallback && (
-          <Toolbar.Refresh onClick={onRefreshCallback} data-test-id='client-table__toolbar-refresh-btn' />
-        )}
-        {deleteProps && (
-          <Toolbar.Button
-            disabled={!deleteProps.isDeleteEnabled}
-            onClick={deleteProps.openDeleteDialog}
-            data-test-id='client-table__toolbar-delete-btn'
-            tooltip={{ content: textProvider(languageCode, Texts.Delete) }}
-            icon={<DeleteInterfaceSVG />}
+      {!suppressToolbar && (
+        <Toolbar.Container className={S.SearchPanelView} data-test-id='client-table__toolbar'>
+          {onRefreshCallback && (
+            <Toolbar.Refresh onClick={onRefreshCallback} data-test-id='client-table__toolbar-refresh-btn' />
+          )}
+          {deleteProps && (
+            <Toolbar.Button
+              disabled={!deleteProps.isDeleteEnabled}
+              onClick={deleteProps.openDeleteDialog}
+              data-test-id='client-table__toolbar-delete-btn'
+              tooltip={{ content: textProvider(languageCode, Texts.Delete) }}
+              icon={<DeleteInterfaceSVG />}
+            />
+          )}
+          <Toolbar.Input
+            onChange={onSearchCallback}
+            value={searchValue}
+            placeholder={textProvider(languageCode, Texts.SearchPlaceholder)}
+            data-test-id='client-table__toolbar-input'
           />
-        )}
-        <Toolbar.Input
-          onChange={onSearchCallback}
-          value={searchValue}
-          placeholder={textProvider(languageCode, Texts.SearchPlaceholder)}
-          data-test-id='client-table__toolbar-input'
-        />
 
-        {filterProps && (
-          <>
-            <Toolbar.Filter {...filterProps.toolbarFilter} />
-            {moreActions && <Toolbar.Divider />}
-          </>
-        )}
-        {moreActions && (
-          <Toolbar.MoreActions
-            actions={moreActions}
-            tooltip={{ content: textProvider(languageCode, Texts.Export) }}
-            data-test-id='client-table__toolbar-more-action-btn'
-          />
-        )}
-      </Toolbar.Container>
+          {filterProps && (
+            <>
+              <Toolbar.Filter {...filterProps.toolbarFilter} />
+              {moreActions && <Toolbar.Divider />}
+            </>
+          )}
+          {moreActions && (
+            <Toolbar.MoreActions
+              actions={moreActions}
+              tooltip={{ content: textProvider(languageCode, Texts.Export) }}
+              data-test-id='client-table__toolbar-more-action-btn'
+            />
+          )}
+        </Toolbar.Container>
+      )}
       <TablePrivate
         checkboxSelection={useRowSelection}
         additionModules={additionModules}
