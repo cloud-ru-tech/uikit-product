@@ -1,47 +1,49 @@
-import { QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { ReactNode } from 'react';
 
-import { FORM_FIELD_TRANSLATIONS } from '../../helpers/formFieldTranslations';
-import * as S from './styled';
+import { InputDecoratorPrivate } from '@sbercloud/uikit-product-input-decorator-private';
+import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
+import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
-export type FormFieldProps = {
+export type FormFieldProps = WithSupportProps<{
   hint?: Omit<TooltipProps, 'children'>;
-  label?: React.ReactNode;
-  error?: React.ReactNode;
+  label?: string;
+  labelFor?: string;
+  error?: string;
   required?: boolean;
-  description?: React.ReactNode;
+  description?: string;
   className?: string;
-};
+  length?: {
+    max: number;
+    current: number;
+  };
+  children: ReactNode;
+}>;
 
-export const FormField: React.FC<FormFieldProps> = ({
+export function FormField({
   label,
   hint,
   description,
-  required,
+  required = true,
   error,
   className,
+  labelFor,
+  length,
   children,
-}) => {
-  const { languageCode } = useLanguage();
-  const requiredFieldTranslation = FORM_FIELD_TRANSLATIONS.REQUIRED_FIELD[languageCode];
-
+  ...rest
+}: FormFieldProps) {
   return (
-    <S.Wrapper className={className}>
-      {label && (
-        <S.Label>
-          {label}
-          {hint && (
-            <Tooltip {...hint} classNameTrigger={S.tooltipTriggerClassName}>
-              <QuestionInterfaceSVG size={20} className={S.hintClassName} />
-            </Tooltip>
-          )}
-        </S.Label>
-      )}
+    <InputDecoratorPrivate
+      className={className}
+      label={label}
+      labelFor={labelFor}
+      error={error}
+      optional={Boolean(!required)}
+      hint={description}
+      labelTooltip={hint}
+      length={length}
+      {...extractSupportProps(rest)}
+    >
       {children}
-      {required && !error && <S.Required>{requiredFieldTranslation}</S.Required>}
-      {error && <S.Error>{error}</S.Error>}
-      {description && <S.Description>{description}</S.Description>}
-    </S.Wrapper>
+    </InputDecoratorPrivate>
   );
-};
+}
