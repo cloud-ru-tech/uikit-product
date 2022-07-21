@@ -28,6 +28,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/ft-debug-mode": "1.0.1",
     "@sbercloud/uikit-product-theme": "0.33.3"
   }
 }
