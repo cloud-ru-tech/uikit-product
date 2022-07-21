@@ -93,6 +93,7 @@ const BLUE_GREY = {
 };
 
 const SUNNY_YELLOW = {
+  15: '--color-sunny-yellow-15',
   75: '--color-sunny-yellow-75',
   100: '--color-sunny-yellow-100',
   115: '--color-sunny-yellow-115',
@@ -104,6 +105,7 @@ const SUNNY_YELLOW_ALPHA = {
 };
 
 const BERRY_RED = {
+  15: '--color-berry-red-15',
   25: '--color-berry-red-25',
   50: '--color-berry-red-50',
   75: '--color-berry-red-75',
@@ -164,6 +166,7 @@ const GRADIENT = {
 };
 
 const EMERALD_GREEN = {
+  15: '--color-emerald-green-15',
   75: '--color-emerald-green-75',
   100: '--color-emerald-green-100',
 };

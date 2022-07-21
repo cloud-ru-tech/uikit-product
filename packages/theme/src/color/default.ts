@@ -100,6 +100,7 @@ export const COLORS_DEFAULT_MAP = `
  ${BLUE_GREY[90]}: #373e45;
  ${BLUE_GREY[100]}: #212830;
 
+ ${BERRY_RED[15]}: #fce4e6;
  ${BERRY_RED[25]}: #f9d3d5;
  ${BERRY_RED[50]}: #f4a7ab;
  ${BERRY_RED[75]}: #ee7a82;
@@ -111,6 +112,7 @@ export const COLORS_DEFAULT_MAP = `
  ${BERRY_RED_ALPHA[15]}: rgba(232, 78, 88, 0.15);
  ${BERRY_RED_ALPHA[25]}: rgba(232, 78, 88, 0.25);
 
+ ${SUNNY_YELLOW[15]}: #fdf9e6;
  ${SUNNY_YELLOW[75]}: #f2db72;
  ${SUNNY_YELLOW[100]}: #f0d559;
  ${SUNNY_YELLOW[115]}: #ccb54c;
@@ -157,6 +159,7 @@ export const COLORS_DEFAULT_MAP = `
  ${GRADIENT[3]}: linear-gradient(180deg, rgba(85, 88, 250, 0.3) 0%, rgba(85, 88, 250, 0) 100%);
  ${GRADIENT[4]}: linear-gradient(180deg, rgba(2, 228, 151, 0.3) 0%, rgba(2, 228, 151, 0) 100%);
 
+ ${EMERALD_GREEN[15]}: #d9f3ea;
  ${EMERALD_GREEN[75]}: #43c294;
  ${EMERALD_GREEN[100]}: #05ae71;
 
