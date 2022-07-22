@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.15.1...@sbercloud/uikit-product-table-private@0.15.2) (2022-07-22)
+
+
+### Bug Fixes
+
+* **AICDC-7097:** display of pinned data when searching and in the absence of basic data ([4f79479](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4f794793705e281682ba5a09e897d824c87cda0d))
+
+
+
+
+
 ## [0.15.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.15.0...@sbercloud/uikit-product-table-private@0.15.1) (2022-07-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table-private
