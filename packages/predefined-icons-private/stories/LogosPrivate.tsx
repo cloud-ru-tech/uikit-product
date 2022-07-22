@@ -3,15 +3,15 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { BADGE } from '#storybookConstants';
 
-import componentChangelog from '../../../predefined-icons-private/CHANGELOG.md';
-import componentPackage from '../../../predefined-icons-private/package.json';
-import componentReadme from '../../../predefined-icons-private/README.md';
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
 import {
   PredefinedMLSpaceLogo,
   PredefinedMLSpaceLogoProps,
   PredefinedSberCloudLogo,
   PredefinedSberCloudLogoProps,
-} from '../../../predefined-icons-private/src';
+} from '../src';
 
 export default {
   title: 'Components/Icons/Predefined/Predefined Logos Private',

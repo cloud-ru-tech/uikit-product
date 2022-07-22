@@ -4,10 +4,10 @@ import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons
 
 import { BADGE } from '#storybookConstants';
 
-import componentChangelog from '../../../predefined-icons-private/CHANGELOG.md';
-import componentPackage from '../../../predefined-icons-private/package.json';
-import componentReadme from '../../../predefined-icons-private/README.md';
-import { PredefinedDecorIconPrivate, PredefinedDecorIconPrivateProps } from '../../../predefined-icons-private/src';
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
+import { PredefinedDecorIconPrivate, PredefinedDecorIconPrivateProps } from '../src';
 
 export default {
   title: 'Components/Icons/Predefined/Predefined Decor Icon Private',

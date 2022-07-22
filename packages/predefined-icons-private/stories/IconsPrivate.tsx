@@ -2,10 +2,10 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 
 import { BADGE } from '#storybookConstants';
 
-import componentChangelog from '../../../predefined-icons-private/CHANGELOG.md';
-import componentPackage from '../../../predefined-icons-private/package.json';
-import componentReadme from '../../../predefined-icons-private/README.md';
-import { PredefinedIconsPrivate, PredefinedIconsPrivateProps } from '../../../predefined-icons-private/src';
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
+import { PredefinedIconsPrivate, PredefinedIconsPrivateProps } from '../src';
 import { Block, TableCell, TableColumn, TableWrapper } from './helperComponents';
 
 export default {
