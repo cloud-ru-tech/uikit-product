@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-radio@3.0.8...@sbercloud/uikit-product-radio@3.0.9) (2022-07-22)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-radio
+
+
+
+
+
 ## [3.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-radio@3.0.7...@sbercloud/uikit-product-radio@3.0.8) (2022-07-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-radio

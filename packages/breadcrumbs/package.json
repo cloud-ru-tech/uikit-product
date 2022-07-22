@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-breadcrumbs",
   "title": "React Breadcrumbs",
-  "version": "0.10.56",
+  "version": "0.10.57",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "4.2.0",
     "@sbercloud/uikit-product-theme": "0.33.3",
-    "@sbercloud/uikit-product-tooltip": "2.0.54",
+    "@sbercloud/uikit-product-tooltip": "2.0.55",
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-checkbox",
   "title": "React Checkbox",
-  "version": "3.0.25",
+  "version": "3.0.26",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -30,6 +30,6 @@
     "@sbercloud/uikit-product-icons": "4.2.0",
     "@sbercloud/uikit-product-theme": "0.33.3",
     "@sbercloud/uikit-product-typography": "1.1.1",
-    "@sbercloud/uikit-product-utils": "2.10.0"
+    "@sbercloud/uikit-product-utils": "3.0.0"
   }
 }

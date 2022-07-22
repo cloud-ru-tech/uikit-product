@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-attention",
   "title": "React Attention",
-  "version": "0.7.19",
+  "version": "0.7.20",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,6 +28,6 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-theme": "0.33.3",
-    "@sbercloud/uikit-product-utils": "2.10.0"
+    "@sbercloud/uikit-product-utils": "3.0.0"
   }
 }

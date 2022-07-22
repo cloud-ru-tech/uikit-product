@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@2.10.0...@sbercloud/uikit-product-utils@3.0.0) (2022-07-22)
+
+
+### Features
+
+* remove logMode handling, now it uses '@sbercloud/ft-debug-mode' ([5b28fe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5b28fe0c91961a0d20f54295daaa699b1f7c4970))
+
+
+### BREAKING CHANGES
+
+* remove logMode handling, now it uses '@sbercloud/ft-debug-mode'
+
+
+
+
+
 # [2.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@2.9.0...@sbercloud/uikit-product-utils@2.10.0) (2022-07-13)
 
 
