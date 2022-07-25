@@ -1,0 +1,36 @@
+{
+  "name": "@sbercloud/uikit-product-alert",
+  "title": "Alert",
+  "version": "1.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/alert",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/alert"
+  },
+  "author": "Akhremenko Grigorii <gaahremenko@sbercloud.ru>",
+  "contributors": [
+    "Akhremenko Grigorii <gaahremenko@sbercloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@sbercloud/uikit-product-theme": "0.33.3",
+    "@sbercloud/uikit-product-utils": "3.0.0",
+    "@sbercloud/uikit-product-predefined-icons-private": "0.2.3",
+    "@sbercloud/uikit-product-button": "5.0.21",
+    "@sbercloud/uikit-product-icons": "4.2.0",
+    "@sbercloud/uikit-product-typography": "1.1.1",
+    "@sbercloud/uikit-product-link": "3.0.26"
+  }
+}
