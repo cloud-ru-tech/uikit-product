@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { ButtonIcon, ButtonRound, ButtonRoundProps } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { PredefinedIconsPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { WithSupportProps, extractSupportProps, warning } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
 
@@ -29,6 +29,8 @@ export type AlertBannerProps = WithSupportProps<{
 }>;
 
 export function AlertBanner({ className, onClose, type, title, description, buttonProps, ...rest }: AlertBannerProps) {
+  warning((title?.length || 0) > 30, 'Title is too long');
+
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)}>
       <PredefinedIconsPrivate icon={PredefinedIconMap[type]} variant={PredefinedIconsPrivate.variants.OnDark} />
