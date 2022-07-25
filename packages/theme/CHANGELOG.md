@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.34.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-theme@0.33.3...@sbercloud/uikit-product-theme@0.34.0) (2022-07-25)
+
+
+### Features
+
+* **FF-574:** (emerland_green, sunny_yellow, berry_red) 15 colors have been added ([9393fa1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9393fa142dfeb0c030c2c4d6fb726434aa75f3db))
+
+
+
+
+
 ## 0.33.3 (2022-06-08)
 
 

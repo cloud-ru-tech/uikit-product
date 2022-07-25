@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-badge-private",
   "title": "React Badge Private",
-  "version": "3.1.17",
+  "version": "3.1.18",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-theme": "0.33.3",
-    "@sbercloud/uikit-product-utils": "3.0.0"
+    "@sbercloud/uikit-product-theme": "0.34.0",
+    "@sbercloud/uikit-product-utils": "3.0.1"
   }
 }

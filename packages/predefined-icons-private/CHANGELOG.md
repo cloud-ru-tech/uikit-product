@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.2.3...@sbercloud/uikit-product-predefined-icons-private@0.2.4) (2022-07-25)
+
+
+### Bug Fixes
+
+* **FF-574:** move predefined icon stories to predefined package ([ca0a7bb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ca0a7bb7c0ad3c01c26967a91f31e4bee33c6a5b))
+
+
+
+
+
 ## [0.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.2.2...@sbercloud/uikit-product-predefined-icons-private@0.2.3) (2022-07-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private

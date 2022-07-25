@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.55](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-carousel@0.3.54...@sbercloud/uikit-product-carousel@0.3.55) (2022-07-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-carousel
+
+
+
+
+
 ## [0.3.54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-carousel@0.3.53...@sbercloud/uikit-product-carousel@0.3.54) (2022-07-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-carousel

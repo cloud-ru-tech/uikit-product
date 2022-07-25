@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@3.0.0...@sbercloud/uikit-product-utils@3.0.1) (2022-07-25)
+
+
+### Bug Fixes
+
+* **FF-574:** alert utilities log when condition true ([e4347db](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e4347dbc1195834736a94a218024ebecaf633a20))
+
+
+
+
+
 # [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@2.10.0...@sbercloud/uikit-product-utils@3.0.0) (2022-07-22)
 
 
