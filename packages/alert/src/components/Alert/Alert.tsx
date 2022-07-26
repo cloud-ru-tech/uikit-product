@@ -7,7 +7,7 @@ import { WithSupportProps, extractSupportProps, warning } from '@sbercloud/uikit
 
 import * as S from './styled';
 
-enum AlertTypes {
+export enum AlertTypes {
   Success = 'Success',
   Warning = 'Warning',
   Error = 'Error',
@@ -15,7 +15,7 @@ enum AlertTypes {
   Loading = 'Loading',
 }
 
-enum AlertVariants {
+export enum AlertVariants {
   Primary = 'Primary',
   Accent = 'Accent',
 }

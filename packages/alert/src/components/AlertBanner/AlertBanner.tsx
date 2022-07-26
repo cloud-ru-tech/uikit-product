@@ -7,7 +7,7 @@ import { WithSupportProps, extractSupportProps, warning } from '@sbercloud/uikit
 
 import * as S from './styled';
 
-enum AlertBannerTypes {
+export enum AlertBannerTypes {
   Alarm = 'Alarm',
   Warning = 'Warning',
   Neutral = 'Neutral',
@@ -36,9 +36,7 @@ export function AlertBanner({ className, onClose, type, title, description, butt
       <PredefinedIconsPrivate icon={PredefinedIconMap[type]} variant={PredefinedIconsPrivate.variants.OnDark} />
       <S.Content data-test-id='alert-banner__content'>
         {Boolean(title) && <S.Title data-test-id='alert-banner__content-title'>{title}</S.Title>}
-        <S.Description data-type={type} data-test-id='alert-banner__content-title'>
-          {description}
-        </S.Description>
+        <S.Description data-test-id='alert-banner__content-description'>{description}</S.Description>
       </S.Content>
       {Boolean(buttonProps) && (
         <ButtonRound

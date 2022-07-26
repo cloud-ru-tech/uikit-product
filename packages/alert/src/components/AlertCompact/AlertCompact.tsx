@@ -5,7 +5,7 @@ import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-
 
 import * as S from './styled';
 
-enum AlertCompactTypes {
+export enum AlertCompactTypes {
   Default = 'Default',
   Attention = 'Attention',
 }
