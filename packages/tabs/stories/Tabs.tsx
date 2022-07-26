@@ -91,7 +91,10 @@ const Template: Story<Tabs.ContainerProps & { 'data-test-id'?: string; className
 };
 
 export const tabs = Template.bind({});
-tabs.args = {};
+tabs.args = {
+  className: 'controlled-classname',
+  'data-test-id': 'tabs__navigation-container',
+};
 tabs.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
@@ -108,12 +111,10 @@ tabs.argTypes = {
     options: ['id1', 'id2', 'id3', 'id4', 'id5'],
     control: { type: 'radio' },
   },
-  'data-test-id': {
-    defaultValue: 'tabs__navigation-container',
+  className: {
     control: { type: 'text' },
   },
-  className: {
-    defaultValue: 'controlled-classname',
+  'data-test-id': {
     control: { type: 'text' },
   },
 };

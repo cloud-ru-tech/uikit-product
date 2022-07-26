@@ -211,11 +211,15 @@ clientModelTable.args = {
       },
     },
   ],
+  rowsAmount: 5,
+  pinnedRowsAmount: 3,
+  showDelete: true,
+  showFilter: true,
+  showExport: true,
 };
 
 clientModelTable.argTypes = {
   rowsAmount: {
-    defaultValue: 5,
     name: '[Stories]: Amount of rows within the table',
     description: 'demonstration purposes only, this parameter does not exist in component',
     control: {
@@ -226,7 +230,6 @@ clientModelTable.argTypes = {
     },
   },
   pinnedRowsAmount: {
-    defaultValue: 3,
     name: '[Stories]: Amount of pinned rows within the table',
     description: 'demonstration purposes only, this parameter does not exist in component',
     control: {
@@ -237,7 +240,6 @@ clientModelTable.argTypes = {
     },
   },
   showDelete: {
-    defaultValue: true,
     name: '[Stories]: show or hide delete button from toolbar',
     description: 'demonstration purposes only, this parameter does not exist in component',
     control: {
@@ -245,7 +247,6 @@ clientModelTable.argTypes = {
     },
   },
   showFilter: {
-    defaultValue: true,
     name: '[Stories]: show or hide filter button from toolbar',
     description: 'demonstration purposes only, this parameter does not exist in component',
     control: {
@@ -253,7 +254,6 @@ clientModelTable.argTypes = {
     },
   },
   showExport: {
-    defaultValue: true,
     name: '[Stories]: show or hide export table',
     control: {
       type: 'boolean',

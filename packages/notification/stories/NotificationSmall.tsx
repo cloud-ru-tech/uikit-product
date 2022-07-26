@@ -67,17 +67,18 @@ const Template: Story<NotificationSmallProps> = ({ ...args }) => {
 };
 
 export const notificationSmall = Template.bind({});
-notificationSmall.args = {};
+notificationSmall.args = {
+  status: NotificationStatuses[NotificationType.Small].Success,
+  text: 'Перенос данных завершен',
+};
 notificationSmall.argTypes = {
   status: {
-    defaultValue: NotificationStatuses[NotificationType.Small].Success,
     options: Object.values(NotificationStatuses[NotificationType.Small]),
     control: {
       type: 'radio',
     },
   },
   text: {
-    defaultValue: 'Перенос данных завершен',
     control: {
       type: 'text',
     },

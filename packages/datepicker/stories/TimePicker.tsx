@@ -11,7 +11,7 @@ export default {
   component: TimePicker,
 } as Meta;
 
-const Template: Story<TimePickerProps> = ({ date, ...args }) => {
+const Template: Story<Omit<TimePickerProps, 'minTime'> & { minTime: boolean }> = ({ date, ...args }) => {
   const [value, setValue] = useState(date);
 
   useEffect(() => {
@@ -34,6 +34,7 @@ const Template: Story<TimePickerProps> = ({ date, ...args }) => {
 export const timePicker = Template.bind({});
 timePicker.args = {
   date: new Date(),
+  minTime: true,
 };
 timePicker.argTypes = {
   date: {
@@ -47,7 +48,6 @@ timePicker.argTypes = {
     },
   },
   minTime: {
-    defaultValue: true,
     name: 'minTime',
     control: {
       type: 'boolean',

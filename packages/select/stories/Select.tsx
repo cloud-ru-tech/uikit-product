@@ -190,7 +190,9 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
 };
 
 export const select = Template.bind({});
-select.args = {};
+select.args = {
+  error: false,
+};
 select.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
@@ -202,9 +204,9 @@ select.parameters = {
 };
 select.argTypes = {
   type: {
+    options: ['medium', 'large', 'round-gray', 'round-light'],
     control: {
       type: 'radio',
-      options: ['medium', 'large', 'round-gray', 'round-light'],
     },
   },
   isGrouped: {
@@ -216,7 +218,6 @@ select.argTypes = {
     control: {
       type: 'boolean',
     },
-    defaultValue: false,
   },
   isMulti: {
     control: {
@@ -239,9 +240,9 @@ select.argTypes = {
     },
   },
   optionPosition: {
+    options: ['prefix', 'postfix'],
     control: {
       type: 'check',
-      options: ['prefix', 'postfix'],
     },
   },
   showLogo: {

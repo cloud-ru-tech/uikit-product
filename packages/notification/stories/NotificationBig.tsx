@@ -145,29 +145,28 @@ const Template: Story<NotificationBigProps> = ({ ...args }) => {
 };
 
 export const notificationBig = Template.bind({});
-notificationBig.args = {};
+notificationBig.args = {
+  status: NotificationStatuses[NotificationType.Big].Info,
+  title: 'Перенос данных завершен',
+  description: 'Привет! После запуска задачи на расчет новой модели посмотри, пожалуйста, что-нибудь еще',
+  onCloseClick: undefined,
+};
 notificationBig.argTypes = {
   status: {
-    defaultValue: NotificationStatuses[NotificationType.Big].Info,
     options: Object.values(NotificationStatuses[NotificationType.Big]),
     control: {
       type: 'radio',
     },
   },
   title: {
-    defaultValue: 'Перенос данных завершен',
     control: {
       type: 'text',
     },
   },
   description: {
-    defaultValue: 'Привет! После запуска задачи на расчет новой модели посмотри, пожалуйста, что-нибудь еще',
     control: {
       type: 'text',
     },
-  },
-  onCloseClick: {
-    defaultValue: null,
   },
 };
 notificationBig.parameters = {

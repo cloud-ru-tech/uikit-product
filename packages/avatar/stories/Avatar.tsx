@@ -82,15 +82,15 @@ avatar.args = {
 };
 avatar.argTypes = {
   status: {
+    options: Object.values({ ...Avatar.status, undefined: undefined }),
     control: {
       type: 'radio',
-      options: Object.values({ ...Avatar.status, undefined: undefined }),
     },
   },
   size: {
+    options: Object.values(Avatar.sizes),
     control: {
       type: 'radio',
-      options: Object.values(Avatar.sizes),
     },
   },
 };

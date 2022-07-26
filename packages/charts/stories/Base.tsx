@@ -33,19 +33,22 @@ base.args = {
     [1, 2, 3, 4, 5, 6],
     [5, 1, 5, 1, 10, 5],
   ],
+  color: Colors.Blue1,
+  drawStyle: DrawStyles.Line,
+  lineInterpolation: LineInterpolations.Linear,
 };
 base.argTypes = {
   color: {
-    defaultValue: Colors.Blue1,
-    control: { type: 'select', options: Object.values(Colors) },
+    options: Object.values(Colors),
+    control: { type: 'select' },
   },
   drawStyle: {
-    defaultValue: DrawStyles.Line,
-    control: { type: 'select', options: Object.values(DrawStyles) },
+    options: Object.values(DrawStyles),
+    control: { type: 'select' },
   },
   lineInterpolation: {
-    defaultValue: LineInterpolations.Linear,
-    control: { type: 'select', options: Object.values(LineInterpolations) },
+    options: Object.values(LineInterpolations),
+    control: { type: 'select' },
   },
 };
 base.parameters = {

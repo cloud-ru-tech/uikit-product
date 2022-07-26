@@ -16,7 +16,9 @@ const Template = getTemplate(Icons);
 
 export const color = Template.bind({});
 
-color.args = {};
+color.args = {
+  size: 50,
+};
 color.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
@@ -30,7 +32,6 @@ color.parameters = {
 };
 color.argTypes = {
   size: {
-    defaultValue: 50,
     name: '[Stories]: Size of icons',
     control: {
       type: 'range',

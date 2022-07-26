@@ -36,22 +36,16 @@ const Template: Story<ModalProps> = ({ ...args }) => {
 };
 
 export const modal = Template.bind({});
-modal.args = {};
-modal.argTypes = {
-  disableApproveTooltip: {
-    defaultValue: 'Tooltip',
-  },
-  title: { defaultValue: 'Удаление тега' },
-  description: {
-    defaultValue:
-      'Вы действительно хотите удалить тег «ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7»?',
-  },
-  shouldCloseOnOverlayClick: { defaultValue: false },
-  shouldCloseOnEsc: { defaultValue: false },
-  cancel: {
-    defaultValue: () => {},
-  },
+modal.args = {
+  disableApproveTooltip: 'Tooltip',
+  title: 'Удаление тега',
+  description:
+    'Вы действительно хотите удалить тег «ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7ce394b6a049f525a1cd7»?',
+  shouldCloseOnOverlayClick: false,
+  shouldCloseOnEsc: false,
+  cancel: () => {},
 };
+modal.argTypes = {};
 modal.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

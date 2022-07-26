@@ -50,7 +50,6 @@ markdownEditor.argTypes = {
   },
   mode: {
     options: Object.values(MarkdownEditor.modes),
-    defaultValue: MarkdownEditor.modes.View,
     control: {
       type: 'radio',
     },

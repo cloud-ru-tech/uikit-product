@@ -16,7 +16,9 @@ const Template = getTemplate(Icons);
 
 export const logo = Template.bind({});
 
-logo.args = {};
+logo.args = {
+  size: 50,
+};
 logo.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
@@ -30,7 +32,6 @@ logo.parameters = {
 };
 logo.argTypes = {
   size: {
-    defaultValue: 50,
     name: '[Stories]: Size of icons',
     control: {
       type: 'range',

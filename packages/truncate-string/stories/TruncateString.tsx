@@ -26,6 +26,7 @@ const Template: Story<ITruncateStringProps & { columnWidth?: number }> = ({ ...a
 export const truncateString = Template.bind({});
 truncateString.args = {
   columnWidth: 200,
+  text: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-qgoiku6b',
 };
 truncateString.parameters = {
   readme: {
@@ -37,8 +38,4 @@ truncateString.parameters = {
     url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
   },
 };
-truncateString.argTypes = {
-  text: {
-    defaultValue: 'bucket-user-19ea8cbb-43e1-4d31-b76f-b2a5e5a9c058-id-qgoiku6b',
-  },
-};
+truncateString.argTypes = {};

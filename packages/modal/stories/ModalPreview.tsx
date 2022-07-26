@@ -65,10 +65,11 @@ const Template: Story<ModalPreviewProps & { withParentNode: boolean }> = ({ with
 };
 
 export const modalPreview = Template.bind({});
-modalPreview.args = {};
+modalPreview.args = {
+  withParentNode: true,
+};
 modalPreview.argTypes = {
   withParentNode: {
-    defaultValue: true,
     name: '[Stories]: show modal in parent node',
     control: {
       type: 'boolean',

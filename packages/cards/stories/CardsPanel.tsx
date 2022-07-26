@@ -152,7 +152,9 @@ const Template: Story<IStoryProps> = ({ ...args }) => {
 };
 
 export const cardsPanel = Template.bind({});
-cardsPanel.args = {};
+cardsPanel.args = {
+  cardsAmount: 10,
+};
 cardsPanel.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
@@ -178,7 +180,6 @@ cardsPanel.argTypes = {
   },
   cardsAmount: {
     name: '[Stories]: Amount of cards',
-    defaultValue: 10,
     control: {
       type: 'range',
       min: 1,

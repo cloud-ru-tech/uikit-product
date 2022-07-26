@@ -16,7 +16,9 @@ const Template = getTemplate(Icons);
 
 export const avatarPlaceholder = Template.bind({});
 
-avatarPlaceholder.args = {};
+avatarPlaceholder.args = {
+  size: 20,
+};
 avatarPlaceholder.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
@@ -30,7 +32,6 @@ avatarPlaceholder.parameters = {
 };
 avatarPlaceholder.argTypes = {
   size: {
-    defaultValue: 20,
     name: '[Stories]: Size of icons',
     control: {
       type: 'range',

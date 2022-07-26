@@ -46,11 +46,13 @@ const Template: Story<HierarchyMenuProps & { latitude: number; depth: number }> 
 };
 
 export const hierarchyMenu = Template.bind({});
-hierarchyMenu.args = {};
+hierarchyMenu.args = {
+  latitude: 3,
+  depth: 3,
+};
 hierarchyMenu.argTypes = {
   latitude: {
     name: '[STORY]: tree latitude',
-    defaultValue: 3,
     control: {
       type: 'range',
       min: 1,
@@ -59,7 +61,6 @@ hierarchyMenu.argTypes = {
   },
   depth: {
     name: '[STORY]: tree depth',
-    defaultValue: 3,
     control: {
       type: 'range',
       min: 1,

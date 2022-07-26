@@ -78,25 +78,25 @@ heatMapChart.args = {
     },
     formatter: (val: number) => val.toPrecision(2),
   },
+  xAxisPosition: XAxisPosition.Bottom,
+  showLegend: true,
+  height: 700,
 };
 heatMapChart.argTypes = {
   xAxisPosition: {
-    defaultValue: XAxisPosition.Bottom,
     name: '[Stories]: xAxis position',
+    options: [XAxisPosition.Bottom, XAxisPosition.Top],
     control: {
       type: 'radio',
-      options: [XAxisPosition.Bottom, XAxisPosition.Top],
     },
   },
   showLegend: {
-    defaultValue: true,
     name: '[Stories]: show or hide legend',
     control: {
       type: 'boolean',
     },
   },
   height: {
-    defaultValue: 700,
     name: '[Stories]: Height',
     control: {
       type: 'number',
