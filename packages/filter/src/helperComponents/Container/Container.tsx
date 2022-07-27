@@ -3,7 +3,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { TooltipPrivate } from '@sbercloud/uikit-product-tooltip-private';
 
-import { isVisible } from '../../helpers/isVisible';
 import * as S from './styled';
 
 interface IContainerProps {
@@ -18,8 +17,7 @@ export const Container: React.FC<IContainerProps> = ({ getTrigger, children, cla
 
   const handleEvent = useCallback(
     event => {
-      const isElVisible = isVisible(event.target);
-      if (!isElVisible) return;
+      if (!show) return;
 
       const isTrigger = triggerEl.current?.contains(event.target);
       if (isTrigger) return;
@@ -29,7 +27,7 @@ export const Container: React.FC<IContainerProps> = ({ getTrigger, children, cla
 
       setShow(false);
     },
-    [tooltipRef],
+    [tooltipRef, show],
   );
 
   useEffect(() => {
