@@ -50,17 +50,15 @@ function getNotificationOptions<T extends keyof NotificationPropsMap>({
   type,
   notificationOptions,
   containerId,
-  hasActions,
 }: {
   type: T;
   notificationOptions?: NotificationOptions;
   containerId?: NotificationContainerProps['containerId'];
-  hasActions?: boolean;
 }): RtToastOptions {
   return {
     toastId: notificationOptions?.id,
     onClose: notificationOptions?.onClose,
-    autoClose: hasActions ? false : notificationOptions?.autoClose ?? DEFAULT_AUTO_CLOSE,
+    autoClose: notificationOptions?.autoClose ?? DEFAULT_AUTO_CLOSE,
     containerId: containerId || `notification-container__${type}`,
   };
 }
@@ -101,15 +99,10 @@ export const openNotification: OpenNotification = ({
 
   let notificationComponent = customNotification;
 
-  const hasActions = Boolean(
-    type === NotificationType.Big && (notificationProps as NotificationBigProps)?.actions?.length,
-  );
-
   const options = getNotificationOptions({
     type,
     notificationOptions,
     containerId: notificationContainerProps.containerId,
-    hasActions,
   });
 
   if (!customNotification && notificationProps) {
@@ -134,11 +127,7 @@ export const updateNotification: UpdateNotification = (
 ) => {
   let notificationComponent = customNotification;
 
-  const hasActions = Boolean(
-    type === NotificationType.Big && (notificationProps as NotificationBigProps)?.actions?.length,
-  );
-
-  const options = getNotificationOptions({ type, notificationOptions, containerId, hasActions });
+  const options = getNotificationOptions({ type, notificationOptions, containerId });
 
   if (!customNotification && notificationProps) {
     notificationComponent = getNotificationComponent({
