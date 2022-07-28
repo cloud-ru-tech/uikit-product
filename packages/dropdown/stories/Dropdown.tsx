@@ -49,6 +49,8 @@ const Template: Story<DropdownMenuProps> = ({ ...args }) => {
   const [isOpen, setIsOpen] = useState(false);
   const onToggle = useCallback((value: boolean) => setIsOpen(value), []);
 
+  const [value, setValue] = useState<string | undefined>(undefined);
+
   return (
     <Wrapper>
       <DropdownMenu
@@ -77,9 +79,11 @@ const Template: Story<DropdownMenuProps> = ({ ...args }) => {
       <DropdownMenu
         data-test-id={args['data-test-id']}
         actions={[
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
+          { label: 'Загрузить файл', value: '1' },
+          { label: 'Загрузить документ', value: '2' },
         ]}
+        value={value}
+        onChange={setValue}
       >
         <ButtonIcon icon={<SettingsInterfaceSVG />} tooltip={{ content: 'Настройки' }} />
       </DropdownMenu>
@@ -87,26 +91,26 @@ const Template: Story<DropdownMenuProps> = ({ ...args }) => {
       <DropdownMenu
         data-test-id={args['data-test-id']}
         actions={[
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {}, disabled: true },
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
-          { name: 'Загрузить файл', onClick: () => {} },
-          { name: 'Загрузить документ', onClick: () => {} },
+          { value: '1', label: 'Загрузить файл', onClick: () => {} },
+          { value: '2', label: 'Загрузить документ', onClick: () => {}, disabled: true },
+          { value: '3', label: 'Загрузить файл', onClick: () => {} },
+          { value: '4', label: 'Загрузить документ', onClick: () => {} },
+          { value: '5', label: 'Загрузить файл', onClick: () => {} },
+          { value: '6', label: 'Загрузить документ', onClick: () => {} },
+          { value: '7', label: 'Загрузить файл', onClick: () => {} },
+          { value: '8', label: 'Загрузить документ', onClick: () => {} },
+          { value: '9', label: 'Загрузить файл', onClick: () => {} },
+          { value: '10', label: 'Загрузить документ', onClick: () => {} },
+          { value: '11', label: 'Загрузить файл', onClick: () => {} },
+          { value: '12', label: 'Загрузить документ', onClick: () => {} },
+          { value: '13', label: 'Загрузить файл', onClick: () => {} },
+          { value: '14', label: 'Загрузить документ', onClick: () => {} },
+          { value: '15', label: 'Загрузить файл', onClick: () => {} },
+          { value: '16', label: 'Загрузить документ', onClick: () => {} },
+          { value: '17', label: 'Загрузить файл', onClick: () => {} },
+          { value: '18', label: 'Загрузить документ', onClick: () => {} },
+          { value: '19', label: 'Загрузить файл', onClick: () => {} },
+          { value: '20', label: 'Загрузить документ', onClick: () => {} },
         ]}
         onToggle={onToggle}
       >

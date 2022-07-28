@@ -12,9 +12,9 @@ import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-
 import * as S from './styled';
 
 export type TDropdownMenuActionType = {
-  name: () => ReactNode | string;
-  onClick(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
-  id?: string;
+  label: () => ReactNode | string;
+  onClick?(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
+  value: string;
   disabled?: boolean;
 };
 
@@ -30,13 +30,23 @@ export type DropdownMenuProps = WithSupportProps<{
   children: ReactNode;
   dropdownMenuClassName?: string;
   onToggle?: (isOpen: boolean) => void;
+  value?: string;
+  onChange?: (value: string) => void;
 }>;
 
 export function DropdownItem(props: TooltipMenuItemPrivateProps) {
   return <TooltipMenuItemPrivate className={S.menuItemClassName} {...props} />;
 }
 
-export function DropdownMenu({ actions, children, onToggle, dropdownMenuClassName, ...rest }: DropdownMenuProps) {
+export function DropdownMenu({
+  actions,
+  children,
+  onToggle,
+  dropdownMenuClassName,
+  value,
+  onChange,
+  ...rest
+}: DropdownMenuProps) {
   const [on, setOn] = useState(false);
   const toggleDropdown = useCallback(
     on => {
@@ -71,25 +81,27 @@ export function DropdownMenu({ actions, children, onToggle, dropdownMenuClassNam
         >
           {isActionsArray &&
             (actions as TDropdownMenuActionType[]).map((menuItem, index) => {
-              const { name, id, disabled } = menuItem;
-              const isNameFn = typeof name === 'function';
+              const { label, disabled } = menuItem;
+              const isNameFn = typeof label === 'function';
               const handlerOnClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
                 if (disabled) return;
                 event?.stopPropagation();
-                menuItem.onClick(event);
+                menuItem.onClick?.(event);
+                onChange?.(menuItem.value);
                 closeDropdown();
               };
 
               return (
                 <TooltipMenuItemPrivate
                   data-test-option-index={index}
-                  key={`menu-item-${menuItem.name}`}
+                  key={`menu-item-${menuItem.value}`}
                   onClick={handlerOnClick}
                   data-disabled={disabled || undefined}
+                  data-selected={menuItem.value === value || undefined}
                   className={S.menuItemClassName}
-                  {...(id ? { 'data-test-option-id': id } : {})}
+                  data-test-option-id={menuItem.value}
                 >
-                  {isNameFn ? name() : name}
+                  {isNameFn ? label() : label}
                 </TooltipMenuItemPrivate>
               );
             })}

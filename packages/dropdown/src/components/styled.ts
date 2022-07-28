@@ -25,6 +25,14 @@ export const menuItemClassName = css`
     background-color: var(${COLORS.MENU_ITEM_HOVER_BACKGROUND});
   }
 
+  &[data-selected] {
+    background-color: var(${COLORS.MENU_ITEM_ACTIVE_BACKGROUND});
+  }
+
+  &:active {
+    background-color: var(${COLORS.MENU_ITEM_PRESSED_BACKGROUND});
+  }
+
   &[data-disabled],
   &[data-disabled]:hover {
     background-color: unset;
