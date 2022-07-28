@@ -229,11 +229,25 @@ export function ClientModelTableController<T>({
   const useRowSelection = Boolean(advancedProps?.rowSelection || deleteProps);
 
   const searchPinnedData = useMemo(() => {
-    if (!searchValue) return pinnedData;
-    return pinnedData?.filter(item =>
-      Object.values(item).some(cellValue => String(cellValue).includes(String(searchValue))),
-    );
-  }, [searchValue, pinnedData]);
+    if (pinnedData) {
+      return pinnedData.filter(item => {
+        let shouldPass = true;
+
+        if (searchValue) {
+          shouldPass = Object.values(item).some(cellValue => String(cellValue).includes(String(searchValue)));
+        }
+
+        if (bulkActions?.filter?.doesRowPassFilter) {
+          shouldPass = bulkActions.filter.doesRowPassFilter(item) && shouldPass;
+        }
+
+        return shouldPass;
+      });
+    }
+
+    return [];
+    // eslint-disable-next-line
+  }, [searchValue, pinnedData, bulkActions?.filter, bulkActions?.filter?.value]);
 
   const onSearchCallback = useCallback(
     value => {

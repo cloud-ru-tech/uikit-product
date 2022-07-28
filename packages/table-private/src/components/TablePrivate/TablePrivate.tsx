@@ -39,7 +39,6 @@ function StylelessTablePrivate({
 }: TablePrivateProps) {
   const [gridApi, setGridApi] = useState<GridApi>();
   const [resizedColumns, setResizedColumns] = useState<{ [key: string]: string }>({});
-  const [hideTable, setHideTable] = useState(!(rowData.length || pinnedTopRowData?.length));
 
   const handleGridReady = (params: GridReadyEvent) => {
     setGridApi(params.api);
@@ -95,19 +94,17 @@ function StylelessTablePrivate({
     gridOptions?.onFilterChanged?.(params);
   };
 
-  useEffect(() => {
-    if (gridApi) {
-      setHideTable(!Boolean(gridApi.getDisplayedRowCount() || pinnedTopRowData?.length));
-    }
-  }, [rowData, gridApi, pinnedTopRowData]);
+  const hasOnlyPinnedData = Boolean(
+    pinnedTopRowData?.length && (rowData?.length === 0 || !gridApi?.getDisplayedRowCount()),
+  );
 
-  const hasOnlyPinnedData = Boolean(pinnedTopRowData?.length && rowData?.length === 0);
+  const showOverlay = !Boolean(gridApi?.getDisplayedRowCount() || pinnedTopRowData?.length);
 
   return (
     <div
       className={cx(
         'ag-theme-alpine',
-        hideTable && S.hideTableHeaderClassName,
+        showOverlay && S.showTableOverlayClassName,
         hasOnlyPinnedData && S.hideNoRowsOverlayClassName,
         className,
       )}

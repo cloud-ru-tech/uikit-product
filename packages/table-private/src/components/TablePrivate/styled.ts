@@ -10,7 +10,7 @@ export const styledTablePrivate = (TablePrivate: VFC<TablePrivateProps>): VFC<Ta
   &.ag-theme-alpine {
     .ag-center-cols-clipper,
     .ag-center-cols-container {
-      min-height: 329px !important;
+      min-height: unset !important;
     }
 
     & .ag-overlay {
@@ -26,16 +26,23 @@ export const styledTablePrivate = (TablePrivate: VFC<TablePrivateProps>): VFC<Ta
   }
 `;
 
-export const hideTableHeaderClassName = css`
-  &.ag-theme-alpine {
-    .ag-header {
-      display: none;
-    }
-  }
-`;
-
 export const hideNoRowsOverlayClassName = css`
   .ag-overlay {
     display: none;
+  }
+`;
+
+export const showTableOverlayClassName = css`
+  &:not(.${hideNoRowsOverlayClassName}) {
+    &.ag-theme-alpine {
+      .ag-header {
+        display: none;
+      }
+
+      .ag-center-cols-clipper,
+      .ag-center-cols-container {
+        min-height: 310px !important;
+      }
+    }
   }
 `;

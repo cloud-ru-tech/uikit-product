@@ -123,16 +123,11 @@ const Template: Story<
     [data, filterValue, rowPassFilter, showDelete, showFilter, showExport],
   );
 
-  const filteredPinnedData = useMemo(() => {
-    if (!filterValue) return pinnedData;
-    return pinnedData.filter(pinnedRow => rowPassFilter(pinnedRow));
-  }, [pinnedData, filterValue, rowPassFilter]);
-
   return (
     <CMTable
       fieldId={args.fieldId}
       data={data}
-      pinnedData={filteredPinnedData}
+      pinnedData={pinnedData}
       columnDefinitions={args.columnDefinitions}
       bulkActions={bulkActions}
       pageSize={args.pageSize}
