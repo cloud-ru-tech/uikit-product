@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.14.0...@sbercloud/uikit-product-dropdown@0.15.0) (2022-07-28)
+
+
+### Features
+
+* **LK-207:** change name and id on value and label, add dropdown active state and selected element ([0ac031c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0ac031c3c3046b5bda9f6e3943a8e7e96c833332))
+
+
+
+
+
 # [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.13.22...@sbercloud/uikit-product-dropdown@0.14.0) (2022-07-26)
 
 
