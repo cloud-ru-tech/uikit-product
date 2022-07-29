@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.15.3...@sbercloud/uikit-product-table-private@0.16.0) (2022-07-29)
+
+
+### Features
+
+* pinnedRows filtering inside table, proper showOverlay ([750a2e6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/750a2e66afdff354f519d75468206147a054e939))
+
+
+
+
+
 ## [0.15.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.15.2...@sbercloud/uikit-product-table-private@0.15.3) (2022-07-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table-private
