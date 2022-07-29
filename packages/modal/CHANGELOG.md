@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.78](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.77...@sbercloud/uikit-product-modal@0.15.78) (2022-07-29)
+
+
+### Bug Fixes
+
+* **LK-283:** change cancel button on Transparent ([3a489a8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3a489a87e0437eb977b5f315debd7f8c46ff5101))
+
+
+
+
+
 ## [0.15.77](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.76...@sbercloud/uikit-product-modal@0.15.77) (2022-07-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-modal
