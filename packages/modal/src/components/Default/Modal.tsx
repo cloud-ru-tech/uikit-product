@@ -185,7 +185,7 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
           {cancel && (
             <Button
               className={buttonCSS}
-              variant={Button.variants.Outline}
+              variant={Button.variants.Transparent}
               onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
                 cancel(e);
                 onRequestClose?.(e, MODAL_CLOSE_TYPE.CANCEL);
