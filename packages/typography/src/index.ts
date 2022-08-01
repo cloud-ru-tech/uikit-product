@@ -16,6 +16,15 @@ export const H2_STYLES = `
   margin: 0;
 `;
 
+export const H2_SEMIBOLD_STYLES = `
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.01em;
+  margin: 0;
+`;
+
 export const H3_STYLES = `
   font-style: normal;
   font-weight: normal;

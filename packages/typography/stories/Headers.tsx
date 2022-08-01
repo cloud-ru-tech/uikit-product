@@ -6,7 +6,16 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { H1_STYLES, H2_STYLES, H3_SEMIBOLD_STYLES, H3_STYLES, H4_SEMIBOLD_STYLES, H4_STYLES, H5_STYLES } from '../src';
+import {
+  H1_STYLES,
+  H2_SEMIBOLD_STYLES,
+  H2_STYLES,
+  H3_SEMIBOLD_STYLES,
+  H3_STYLES,
+  H4_SEMIBOLD_STYLES,
+  H4_STYLES,
+  H5_STYLES,
+} from '../src';
 import { TypographyStoryConfig, commonTemplate } from './helpers/CommonTemplate';
 
 export default {
@@ -27,6 +36,13 @@ const headersConfig: TypographyStoryConfig = [
       ${H2_STYLES};
     `,
     styles: H2_STYLES.toString(),
+  },
+  {
+    name: 'H2Semibold',
+    Component: styled.h2`
+      ${H2_SEMIBOLD_STYLES};
+    `,
+    styles: H2_SEMIBOLD_STYLES.toString(),
   },
   {
     name: 'H3',
