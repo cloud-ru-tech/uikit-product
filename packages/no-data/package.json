@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-no-data",
   "title": "React NoData",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -30,7 +30,7 @@
     "@sbercloud/uikit-product-icons": "4.2.0",
     "@sbercloud/uikit-product-predefined-icons-private": "0.2.4",
     "@sbercloud/uikit-product-theme": "0.34.0",
-    "@sbercloud/uikit-product-typography": "1.1.1",
+    "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.0.1"
   }
 }

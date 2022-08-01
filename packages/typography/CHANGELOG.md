@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-typography@1.1.1...@sbercloud/uikit-product-typography@1.2.0) (2022-08-01)
+
+
+### Features
+
+* **FF-603:** add new style - H2Semibold ([26f8cc7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/26f8cc7a96e8fc051b033d2c5d046d9745a2470e))
+
+
+
+
+
 ## 1.1.1 (2022-05-16)
 
 
