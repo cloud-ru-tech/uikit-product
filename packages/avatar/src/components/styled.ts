@@ -16,7 +16,6 @@ export const styledAvatar = (Badge: VFC<AvatarProps>): VFC<AvatarProps> => style
   border-radius: 100%;
   color: var(${COLORS.text});
   line-height: 1;
-  cursor: default;
   position: relative;
 
   &[data-clickable] {
