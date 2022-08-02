@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.15.0...@sbercloud/uikit-product-dropdown@0.15.1) (2022-08-02)
+
+
+### Bug Fixes
+
+* **FF-687:** `label` action type declaration ([6b0498f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6b0498f23e5fcb82471ca7b2c239d73a067977ab))
+
+
+
+
+
 # [0.15.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.14.0...@sbercloud/uikit-product-dropdown@0.15.0) (2022-07-28)
 
 

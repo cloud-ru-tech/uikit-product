@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.43.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.43.2...@sbercloud/uikit-product-table@0.43.3) (2022-08-02)
+
+
+### Bug Fixes
+
+* **FF-687:** toolbar more actions visibility ([0d1324f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0d1324f0404769e44f6bb0cbd94dd90f2449742f))
+
+
+
+
+
 ## [0.43.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.43.1...@sbercloud/uikit-product-table@0.43.2) (2022-08-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table
