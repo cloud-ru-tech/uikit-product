@@ -12,7 +12,7 @@ import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-
 import * as S from './styled';
 
 export type TDropdownMenuActionType = {
-  label: () => ReactNode | string;
+  label: (() => ReactNode) | string;
   onClick?(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
   value: string;
   disabled?: boolean;
