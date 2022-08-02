@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-select",
   "title": "React Select",
-  "version": "0.26.10",
+  "version": "0.26.11",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-avatar": "1.0.23",
+    "@sbercloud/uikit-product-avatar": "1.1.0",
     "@sbercloud/uikit-product-button": "5.0.23",
     "@sbercloud/uikit-product-divider": "2.0.33",
     "@sbercloud/uikit-product-icons": "4.2.0",

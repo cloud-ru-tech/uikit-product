@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-navigation",
   "title": "Navigation",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-avatar": "1.0.23",
+    "@sbercloud/uikit-product-avatar": "1.1.0",
     "@sbercloud/uikit-product-button": "5.0.23",
-    "@sbercloud/uikit-product-dropdown": "0.15.1",
+    "@sbercloud/uikit-product-dropdown": "0.16.0",
     "@sbercloud/uikit-product-icons": "4.2.0",
     "@sbercloud/uikit-product-theme": "0.34.0",
     "@sbercloud/uikit-product-tooltip": "2.0.57",

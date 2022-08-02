@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-avatar@1.0.23...@sbercloud/uikit-product-avatar@1.1.0) (2022-08-02)
+
+
+### Features
+
+* **FF-554:** get rid of the `cursor: default` style ([bea2299](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bea229997559d2dff0a2707388cd97d5567b1496))
+
+
+
+
+
 ## [1.0.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-avatar@1.0.22...@sbercloud/uikit-product-avatar@1.0.23) (2022-08-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-avatar

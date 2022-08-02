@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.15.1...@sbercloud/uikit-product-dropdown@0.16.0) (2022-08-02)
+
+
+### Features
+
+* **FF-554:** add `cursor: pointer` to trigger wrapper ([c7c9c79](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c7c9c79e42e0a746cbac8ef3856114d47a88cd22))
+
+
+
+
+
 ## [0.15.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.15.0...@sbercloud/uikit-product-dropdown@0.15.1) (2022-08-02)
 
 
