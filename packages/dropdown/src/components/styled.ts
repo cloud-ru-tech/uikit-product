@@ -45,5 +45,6 @@ export const menuItemClassName = css`
 `;
 
 export const Wrapper = styled.span`
+  cursor: pointer;
   display: inline-flex;
 `;
