@@ -34,7 +34,7 @@ type ClientModelTableViewProps<T> = {
   onRowSelected?: TablePrivateProps['onRowSelected'];
   onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
   onSearchCallback(value: string): void;
-  moreActions: Toolbar.MoreActionsProps['actions'];
+  moreActions?: Toolbar.MoreActionsProps['actions'];
   searchValue: string;
   rowSelection?: TablePrivateProps['rowSelection'];
   suppressToolbar?: boolean;
