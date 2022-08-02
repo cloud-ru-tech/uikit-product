@@ -268,8 +268,8 @@ export function ClientModelTableController<T>({
 
     return [
       {
-        id: 'client-table__toolbar-more-action-export-csv',
-        name: textProvider(languageCode, Texts.ExportCSV),
+        value: 'client-table__toolbar-more-action-export-csv',
+        label: textProvider(languageCode, Texts.ExportCSV),
         onClick: () =>
           gridApi.exportDataAsCsv({
             fileName: bulkActions.exportFileName,
@@ -277,8 +277,8 @@ export function ClientModelTableController<T>({
           }),
       },
       {
-        id: 'client-table__toolbar-more-action-export-xls',
-        name: textProvider(languageCode, Texts.ExportExcel),
+        value: 'client-table__toolbar-more-action-export-xls',
+        label: textProvider(languageCode, Texts.ExportExcel),
         onClick: () =>
           gridApi.exportDataAsExcel({
             fileName: bulkActions.exportFileName,
