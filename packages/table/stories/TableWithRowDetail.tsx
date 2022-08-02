@@ -297,12 +297,12 @@ withRowDetail.args = {
       cellRenderer: () => {
         const actions = [
           {
-            name: 'Логи сборки',
-            onClick: () => {},
+            value: 'build-logs',
+            label: 'Логи сборки',
           },
           {
-            name: 'Удалить',
-            onClick: () => {},
+            value: 'delete',
+            label: 'Удалить',
           },
         ];
 

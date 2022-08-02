@@ -93,11 +93,13 @@ free.args = {
       cellRenderer: () => {
         const actions = [
           {
-            name: 'Изменить права',
+            value: 'change-permissions',
+            label: 'Изменить права',
             onClick: () => alert('Права изменены'),
           },
           {
-            name: 'Отозвать права',
+            value: 'revoke-permissions',
+            label: 'Отозвать права',
             onClick: () => alert('Права отозваны'),
           },
         ];

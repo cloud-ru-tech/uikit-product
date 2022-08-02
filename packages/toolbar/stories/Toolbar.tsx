@@ -43,7 +43,7 @@ const Template: Story<WithSupportProps<Toolbar.ContainerProps>> = ({ ...args }) 
       />
       <Toolbar.Divider />
       <Toolbar.MoreActions
-        actions={[{ name: 'Экспортировать в csv', onClick: () => {} }]}
+        actions={[{ value: 'csv-export', label: 'Экспортировать в csv' }]}
         tooltip={{ content: 'Export' }}
       />
     </Toolbar.Container>
