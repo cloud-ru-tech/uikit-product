@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.43.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.43.4...@sbercloud/uikit-product-table@0.43.5) (2022-08-03)
+
+
+### Bug Fixes
+
+* **FF-687:** change `moreActions` type declaration of `ClientModelTableView` ([f592036](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f5920368d45b1889b35e3a0cd9f5826e6c46f986))
+
+
+
+
+
 ## [0.43.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.43.3...@sbercloud/uikit-product-table@0.43.4) (2022-08-02)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table

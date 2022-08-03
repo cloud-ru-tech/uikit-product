@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@3.0.4...@sbercloud/uikit-product-notification@3.0.5) (2022-08-03)
+
+
+### Bug Fixes
+
+* reduce content stretching ([7ebfe7c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7ebfe7cc933cf4a0e15b64fc47129b5f80491e0f))
+
+
+
+
+
 ## [3.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@3.0.3...@sbercloud/uikit-product-notification@3.0.4) (2022-08-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-notification
