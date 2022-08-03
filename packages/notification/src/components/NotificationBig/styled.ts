@@ -18,6 +18,7 @@ export const Container = styled.div`
   border-radius: 8px;
   position: relative;
   cursor: default;
+  box-sizing: border-box;
 
   &[data-has-one-action] {
     cursor: pointer;
@@ -85,8 +86,7 @@ export const IconContainer = styled.div`
 `;
 
 export const Content = styled.div`
-  overflow: hidden;
-  word-wrap: break-word;
+  word-break: break-word;
 `;
 
 export const Title = styled.h5`

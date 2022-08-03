@@ -37,4 +37,5 @@ export const statusIconClassName = css`
 export const Text = styled.span`
   ${TEXT_2_STYLES};
   color: var(${COLORS.description});
+  word-break: break-word;
 `;
