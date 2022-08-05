@@ -23,14 +23,6 @@ export const Wrapper = styled.span<WrapperProps>`
     fill: var(${COLORS.fill.icon.MLSpaceAbbr});
   }
 
-  .${'sbercloud-logo-text'} {
-    fill: var(${COLORS.fill.icon.SberCloudText});
-  }
-
-  .${'sbercloud-logo-prefix-icon'} {
-    fill: var(${COLORS.fill.icon.SberCloudIcon});
-  }
-
   .${'cloud-logo-text'} {
     fill: var(${COLORS.fill.icon.CloudText});
   }

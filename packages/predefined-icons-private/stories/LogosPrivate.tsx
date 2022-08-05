@@ -11,8 +11,6 @@ import {
   PredefinedCloudLogoProps,
   PredefinedMLSpaceLogo,
   PredefinedMLSpaceLogoProps,
-  PredefinedSberCloudLogo,
-  PredefinedSberCloudLogoProps,
 } from '../src';
 
 export default {
@@ -24,12 +22,9 @@ const Wrapper = styled.div`
   grid-gap: 20px;
 `;
 
-const Template: Story<PredefinedMLSpaceLogoProps & PredefinedSberCloudLogoProps & PredefinedCloudLogoProps> = ({
-  ...args
-}) => (
+const Template: Story<PredefinedMLSpaceLogoProps & PredefinedCloudLogoProps> = ({ ...args }) => (
   <Wrapper>
     <PredefinedMLSpaceLogo {...args} />
-    <PredefinedSberCloudLogo {...args} />
     <PredefinedCloudLogo {...args} />
   </Wrapper>
 );

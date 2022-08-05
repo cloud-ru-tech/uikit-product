@@ -41,7 +41,7 @@ describe('[Predefined Logos Private]:', () => {
       visit();
 
       expect(cy.getByDataTestId('icon-ml-space-full-logo')).to.exist;
-      expect(cy.getByDataTestId('icon-sber-cloud-full-logo')).to.exist;
+      expect(cy.getByDataTestId('icon-cloud-full-logo')).to.exist;
     });
   });
 });
