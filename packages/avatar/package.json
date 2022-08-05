@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-avatar",
   "title": "React Avatar",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "4.2.0",
+    "@sbercloud/uikit-product-icons": "5.0.0",
     "@sbercloud/uikit-product-status": "6.0.8",
     "@sbercloud/uikit-product-theme": "0.34.0",
     "@sbercloud/uikit-product-utils": "3.0.1"

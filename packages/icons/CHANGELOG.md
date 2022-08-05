@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@4.2.0...@sbercloud/uikit-product-icons@5.0.0) (2022-08-05)
+
+
+### Bug Fixes
+
+* **FF-547:** remove SbercloudFullLogo, PredefinedSbercloudLogo icons ([f92458b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f92458b440fe6c4aa407ca362fc6c46bd62a3f8e))
+* **FF-574:** move predefined icon stories to predefined package ([ca0a7bb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ca0a7bb7c0ad3c01c26967a91f31e4bee33c6a5b))
+
+
+### Features
+
+* **FF-153:** Decor Icon added to Predefined Icons Private ([dc1702d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc1702daae2e393d25b9c6ee8a7d6fffecde2a35))
+* **FF-547:** add Advanced2Service, CloudFullLogo, ExitInterface, SwitcherSettingsInterface HorizontalMenu icons ([394cc4d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/394cc4dc64888af2e2a3fcc3d4cf6f5babc0c697))
+
+
+### BREAKING CHANGES
+
+* **FF-547:** remove SbercloudFullLogo, PredefinedSbercloudLogo icons
+
+
+
+
+
 # [4.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@4.1.0...@sbercloud/uikit-product-icons@4.2.0) (2022-06-23)
 
 

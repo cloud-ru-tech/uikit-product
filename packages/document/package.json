@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-document",
   "title": "React Document",
-  "version": "1.0.54",
+  "version": "1.0.55",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,10 +29,10 @@
   "dependencies": {
     "@sbercloud/ft-download-file": "1.1.1",
     "@sbercloud/ft-formatters": "1.1.1",
-    "@sbercloud/uikit-product-button": "5.0.23",
-    "@sbercloud/uikit-product-icons": "4.2.0",
+    "@sbercloud/uikit-product-button": "5.0.24",
+    "@sbercloud/uikit-product-icons": "5.0.0",
     "@sbercloud/uikit-product-theme": "0.34.0",
-    "@sbercloud/uikit-product-tooltip": "2.0.57",
+    "@sbercloud/uikit-product-tooltip": "2.0.58",
     "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.0.1",
     "lodash.debounce": "4.0.8",

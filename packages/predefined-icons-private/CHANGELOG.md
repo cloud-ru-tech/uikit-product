@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.2.4...@sbercloud/uikit-product-predefined-icons-private@0.3.0) (2022-08-05)
+
+
+### Bug Fixes
+
+* **FF-547:** change ML abbr dark theme color ([b4306c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b4306c961576a19e2aac4470ad675ac010951dd9))
+* **FF-547:** remove SbercloudFullLogo, PredefinedSbercloudLogo icons ([f92458b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f92458b440fe6c4aa407ca362fc6c46bd62a3f8e))
+
+
+### Features
+
+* **FF-547:** add PredefinedCloudLogo ([c98e133](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c98e1333659dcdc0f2cb08d685ed1b12391e851a))
+
+
+### BREAKING CHANGES
+
+* **FF-547:** remove SbercloudFullLogo, PredefinedSbercloudLogo icons
+
+
+
+
+
 ## [0.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.2.3...@sbercloud/uikit-product-predefined-icons-private@0.2.4) (2022-07-25)
 
 
