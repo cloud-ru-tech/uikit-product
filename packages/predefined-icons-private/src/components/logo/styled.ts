@@ -26,4 +26,12 @@ export const Wrapper = styled.span<WrapperProps>`
   .${'sbercloud-logo-prefix-icon'} {
     fill: var(${COLORS.fill.icon.SberCloudIcon});
   }
+
+  .${'cloud-logo-text'} {
+    fill: var(${COLORS.fill.icon.CloudText});
+  }
+
+  .${'cloud-logo-icon'} {
+    fill: var(${COLORS.fill.icon.CloudIcon});
+  }
 `;

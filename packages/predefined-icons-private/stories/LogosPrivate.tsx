@@ -7,6 +7,8 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import {
+  PredefinedCloudLogo,
+  PredefinedCloudLogoProps,
   PredefinedMLSpaceLogo,
   PredefinedMLSpaceLogoProps,
   PredefinedSberCloudLogo,
@@ -22,10 +24,13 @@ const Wrapper = styled.div`
   grid-gap: 20px;
 `;
 
-const Template: Story<PredefinedMLSpaceLogoProps & PredefinedSberCloudLogoProps> = ({ ...args }) => (
+const Template: Story<PredefinedMLSpaceLogoProps & PredefinedSberCloudLogoProps & PredefinedCloudLogoProps> = ({
+  ...args
+}) => (
   <Wrapper>
     <PredefinedMLSpaceLogo {...args} />
     <PredefinedSberCloudLogo {...args} />
+    <PredefinedCloudLogo {...args} />
   </Wrapper>
 );
 

@@ -8,6 +8,8 @@ export const COLORS = {
       MLSpaceText: '--color-predefined-ml-space-logo-text',
       SberCloudText: '--color-predefined-sbercloud-logo-text',
       SberCloudIcon: '--color-predefined-sbercloud-logo-icon',
+      CloudText: '--color-predefined-cloud-logo-text',
+      CloudIcon: '--color-predefined-cloud-logo-icon',
     },
   },
 };
@@ -18,6 +20,8 @@ export const PURPLE_THEME = css`
       ${COLORS.fill.icon.MLSpaceText}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.fill.icon.SberCloudText}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.fill.icon.SberCloudIcon}: var(${EXPORT_VARS.BLUE_GREY[90]});
+      ${COLORS.fill.icon.CloudText}: var(${EXPORT_VARS.BLUE_GREY[90]});
+      ${COLORS.fill.icon.CloudIcon}: var(${EXPORT_VARS.GREEN[100]});
     }
   }
 `;
@@ -28,6 +32,8 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.fill.icon.MLSpaceText}: var(${EXPORT_VARS.GREY[0]});
       ${COLORS.fill.icon.SberCloudText}: var(${EXPORT_VARS.GREY[0]});
       ${COLORS.fill.icon.SberCloudIcon}: var(${EXPORT_VARS.GREY[0]});
+      ${COLORS.fill.icon.CloudText}: var(${EXPORT_VARS.GREY[0]});
+      ${COLORS.fill.icon.CloudIcon}: var(${EXPORT_VARS.GREEN[100]});
     }
   }
 `;
@@ -38,6 +44,8 @@ export const GREEN_THEME = css`
       ${COLORS.fill.icon.MLSpaceText}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.fill.icon.SberCloudText}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.fill.icon.SberCloudIcon}: var(${EXPORT_VARS.BLUE_GREY[90]});
+      ${COLORS.fill.icon.CloudText}: var(${EXPORT_VARS.BLUE_GREY[90]});
+      ${COLORS.fill.icon.CloudIcon}: var(${EXPORT_VARS.GREEN[100]});
     }
   }
 `;
@@ -48,6 +56,8 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.fill.icon.MLSpaceText}: var(${EXPORT_VARS.GREY[0]});
       ${COLORS.fill.icon.SberCloudText}: var(${EXPORT_VARS.GREY[0]});
       ${COLORS.fill.icon.SberCloudIcon}: var(${EXPORT_VARS.GREY[0]});
+      ${COLORS.fill.icon.CloudText}: var(${EXPORT_VARS.GREY[0]});
+      ${COLORS.fill.icon.CloudIcon}: var(${EXPORT_VARS.GREEN[100]});
     }
   }
 `;
