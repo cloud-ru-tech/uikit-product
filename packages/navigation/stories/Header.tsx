@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react';
+import { useState } from 'react';
 
 import { Badge } from '@sbercloud/uikit-product-badge-private';
 import {
@@ -14,7 +15,15 @@ import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Header, HeaderBalanceTooltip, HeaderLogo, HeaderMenu, HeaderProps, HeaderToolbar } from '../src';
+import {
+  Header,
+  HeaderBalanceTooltip,
+  HeaderLogo,
+  HeaderMenu,
+  HeaderProjectSelector,
+  HeaderProps,
+  HeaderToolbar,
+} from '../src';
 
 export default {
   title: 'Not stable/Navigation/Header',
@@ -33,39 +42,61 @@ const Logo = styled(PredefinedMLSpaceLogo)`
   }
 `;
 
-const Template: Story<HeaderProps> = () => (
-  <Wrapper>
-    <Header>
-      <HeaderMenu.Root title='Платформы'>
-        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='ML Space' href='' />
-        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Enterprise' href='' />
-        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='SVP' href='' />
-        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Advanced' href='' />
-      </HeaderMenu.Root>
-      <HeaderLogo>
-        <Logo height={16} />
-      </HeaderLogo>
-      <HeaderBalanceTooltip balance={144_401_810} limit={155_500_000} />
-      <HeaderToolbar.Root>
-        <HeaderToolbar.Item
-          icon={
-            <Badge number={2} type={Badge.types.Alert}>
-              <NotifyInterfaceSVG />
-            </Badge>
-          }
-          title='Уведомления'
-          onClick={() => {}}
+const Template: Story<HeaderProps> = () => {
+  const [workspace, setWorkspace] = useState('workspace-0');
+
+  return (
+    <Wrapper>
+      <Header>
+        <HeaderMenu.Root title='Платформы'>
+          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='ML Space' href='' />
+          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Enterprise' href='' />
+          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='SVP' href='' />
+          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Advanced' href='' />
+        </HeaderMenu.Root>
+        <HeaderLogo>
+          <Logo height={16} />
+        </HeaderLogo>
+        <HeaderProjectSelector
+          onChange={setWorkspace}
+          onCreate={() => {}}
+          value={workspace}
+          items={[
+            {
+              label: 'Ultrimax',
+              workspaces: [
+                { label: 'Zialactic', value: 'workspace-0' },
+                { label: 'Zaggles', value: 'workspace-1' },
+                { label: 'Isologia', value: 'workspace-2' },
+                { label: 'Undertap', value: 'workspace-3' },
+                { label: 'Gluid', value: 'workspace-4' },
+                { label: 'Insource', value: 'workspace-5' },
+              ],
+            },
+          ]}
         />
-        <HeaderToolbar.Item icon={<DocumentationInterfaceSVG />} title='Документация' href='' />
-        <HeaderToolbar.Item icon={<SupportInterfaceSVG />} title='Поддержка' href='' />
-        <HeaderToolbar.ProfileMenu name='Андрей Иванов'>
-          <HeaderToolbar.ProfileMenuAvatarItem title='Профиль' href='' />
-          <HeaderToolbar.ProfileMenuItem icon={<QuestionInterfaceSVG />} title='Выход' href='' />
-        </HeaderToolbar.ProfileMenu>
-      </HeaderToolbar.Root>
-    </Header>
-  </Wrapper>
-);
+        <HeaderBalanceTooltip balance={144_401_810} limit={155_500_000} />
+        <HeaderToolbar.Root>
+          <HeaderToolbar.Item
+            icon={
+              <Badge number={2} type={Badge.types.Alert}>
+                <NotifyInterfaceSVG />
+              </Badge>
+            }
+            title='Уведомления'
+            onClick={() => {}}
+          />
+          <HeaderToolbar.Item icon={<DocumentationInterfaceSVG />} title='Документация' href='' />
+          <HeaderToolbar.Item icon={<SupportInterfaceSVG />} title='Поддержка' href='' />
+          <HeaderToolbar.ProfileMenu name='Андрей Иванов'>
+            <HeaderToolbar.ProfileMenuAvatarItem title='Профиль' href='' />
+            <HeaderToolbar.ProfileMenuItem icon={<QuestionInterfaceSVG />} title='Выход' href='' />
+          </HeaderToolbar.ProfileMenu>
+        </HeaderToolbar.Root>
+      </Header>
+    </Wrapper>
+  );
+};
 
 export const header = Template.bind({});
 header.args = {};

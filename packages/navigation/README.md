@@ -20,15 +20,24 @@ import {
   HeaderBalanceTooltip,
   HeaderLogo,
   HeaderMenu,
+  HeaderProjectSelector,
   HeaderToolbar,
 } from '@sbercloud/uikit-product-navigation';
 
 function App() {
+  const [workspace, setWorkspace] = useState('workspace-0');
+
   function handleBalanceClick() {}
 
   function handleRechargeClick() {}
 
   function handleNotifyClick() {}
+
+  function handleWorkspaceCreate() {}
+
+  function handleWorkspaceChange(workspace: string) {
+    setWorkspace(workspace);
+  }
 
   return (
     <Header>
@@ -41,6 +50,24 @@ function App() {
       <HeaderLogo>
         <PredefinedMLSpaceLogo height={16} />
       </HeaderLogo>
+      <HeaderProjectSelector
+        onChange={handleWorkspaceChange}
+        onCreate={handleWorkspaceCreate}
+        value={workspace}
+        items={[
+          {
+            label: 'Ultrimax',
+            workspaces: [
+              { label: 'Zialactic', value: 'workspace-0' },
+              { label: 'Zaggles', value: 'workspace-1' },
+              { label: 'Isologia', value: 'workspace-2' },
+              { label: 'Undertap', value: 'workspace-3' },
+              { label: 'Gluid', value: 'workspace-4' },
+              { label: 'Insource', value: 'workspace-5' },
+            ],
+          },
+        ]}
+      />
       <HeaderBalanceTooltip
         balance={144_401_810}
         limit={155_500_000}
@@ -165,5 +192,38 @@ type HeaderToolbarProfileMenuItemProps = WithSupportProps<{
   href: string;
   target?: HTMLAttributeAnchorTarget;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
+}>;
+```
+
+### HeaderProjectSelector
+
+```ts
+type WorkspaceOption = {
+  label: string;
+  value: string;
+};
+
+type ProjectOption = {
+  label: string;
+  value: string;
+};
+
+type ProjectPresentation = {
+  label: string;
+  workspaces: WorkspaceOption[];
+};
+
+type CatalogPresentation = {
+  label: string;
+  projects: ProjectOption[];
+};
+
+type Item = CatalogPresentation | ProjectPresentation | ProjectOption;
+
+type HeaderProjectSelectorProps = WithSupportProps<{
+  value: string;
+  items: Item[];
+  onChange(value: string): void;
+  onCreate?(): void;
 }>;
 ```

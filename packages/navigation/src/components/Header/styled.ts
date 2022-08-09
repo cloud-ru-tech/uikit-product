@@ -10,6 +10,6 @@ GREEN_DARK_THEME;
 export const Wrapper = styled.header`
   background-color: var(${COLORS.background.default});
   display: grid;
-  grid-template-columns: [header-menu] auto [header-logo] auto [header-balance-tooltip] auto [header-toolbar] 1fr;
+  grid-template-columns: [header-menu] auto [header-logo] auto [header-project-selector] auto [header-balance-tooltip] auto [header-toolbar] 1fr;
   padding: 8px 16px;
 `;
