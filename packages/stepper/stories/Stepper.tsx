@@ -1,8 +1,12 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useEffect } from 'react';
+import { Controller, FormProvider, useForm, useFormContext } from 'react-hook-form';
 
 import { Button } from '@sbercloud/uikit-product-button';
+import { InputCommon } from '@sbercloud/uikit-product-input';
+import { NotificationType, openNotification } from '@sbercloud/uikit-product-notification';
+import { NotificationBigStatus } from '@sbercloud/uikit-product-notification/src/components/NotificationBig/constants';
 
 import { BADGE } from '#storybookConstants';
 
@@ -12,7 +16,7 @@ import componentReadme from '../README.md';
 import { Stepper, StepsProps, useStepperContext } from '../src';
 
 export default {
-  title: 'Not stable/Stepper',
+  title: 'Components/Stepper',
   component: Stepper.Steps,
 } as Meta;
 
@@ -26,21 +30,58 @@ const Row = styled.div`
   }
 `;
 
-const StepsView = (args: StepsProps) => {
-  const { moveForward, moveToPrevStep, currentStepIndex, setValidator } = useStepperContext();
+const FIRST_STEP_FIELD_NAME = 'firstStep';
+const SECOND_STEP_FIELD_NAME = 'secondStep';
+const THIRD_STEP_FIELD_NAME = 'thirdStep';
 
-  useEffect(() => {
-    setValidator(() => true);
-  }, []);
+type FormValues = {
+  firstStep: string;
+  secondStep: string;
+  thirdStep: string;
+};
+
+const StepsView = ({ steps, className }: StepsProps) => {
+  const { moveForward, moveToPrevStep, currentStepIndex, clearErrors, raiseCurrentStepError } = useStepperContext();
+  const formMethods = useForm<FormValues>();
+
+  const clearAllErrors = () => {
+    formMethods.clearErrors();
+    clearErrors();
+  };
+
+  const firstStepField = formMethods.watch(FIRST_STEP_FIELD_NAME);
+  const secondStepField = formMethods.watch(SECOND_STEP_FIELD_NAME);
+  const thirdStepField = formMethods.watch(THIRD_STEP_FIELD_NAME);
+
+  const handleSubmit = async () => {
+    if (await formMethods.trigger(THIRD_STEP_FIELD_NAME)) {
+      openNotification({
+        type: NotificationType.Big,
+        notificationProps: {
+          title: 'success',
+          description: `first step field = ${firstStepField}, second step field = ${secondStepField}, third step field = ${thirdStepField}`,
+          status: NotificationBigStatus.Success,
+        },
+      });
+    } else {
+      raiseCurrentStepError();
+    }
+  };
 
   return (
-    <>
-      <Stepper.Steps {...args} />
+    <FormProvider {...formMethods}>
+      <Stepper.Steps steps={steps} className={className} data-test-id={'stepper-wrapper'} />
       <Row>
-        <Button text='Предыдущий шаг' onClick={() => moveToPrevStep(currentStepIndex - 1)} />
-        <Button text='Следующий шаг' onClick={moveForward} />
+        <Button
+          text='Предыдущий шаг'
+          onClick={() => moveToPrevStep(currentStepIndex - 1)}
+          data-test-id={'move-backward'}
+        />
+        <Button text='Следующий шаг' onClick={moveForward} data-test-id={'move-forward'} />
+        <Button text='Очистить ошибки' onClick={clearAllErrors} data-test-id={'clear-errors'} />
+        {currentStepIndex === 2 && <Button text='Отправить' onClick={handleSubmit} data-test-id={'submit'} />}
       </Row>
-    </>
+    </FormProvider>
   );
 };
 
@@ -50,22 +91,155 @@ const Template: Story<StepsProps> = ({ ...args }) => (
   </Stepper.Context>
 );
 
+const FirstStepContent = () => {
+  const { watch, setError, clearErrors: clearFormErrors } = useFormContext();
+  const { setValidator, clearErrors: clearStepperErrors } = useStepperContext();
+  const firstStepField = watch(FIRST_STEP_FIELD_NAME);
+
+  useEffect(() => {
+    setValidator(() => {
+      if (firstStepField === '1') {
+        setError(FIRST_STEP_FIELD_NAME, { type: 'validate', message: 'error' });
+        return false;
+      }
+
+      return true;
+    });
+
+    if (firstStepField !== '1') {
+      clearFormErrors(FIRST_STEP_FIELD_NAME);
+      clearStepperErrors();
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [firstStepField]);
+
+  return (
+    <div>
+      <h1 data-test-id={'step-1-content'}>Step 1 content</h1>
+
+      <Controller
+        render={({ field: { value, onChange }, fieldState: { error } }) => (
+          <InputCommon
+            onChange={onChange}
+            value={value}
+            error={error?.message}
+            label={'type 1 to make step invalid'}
+            data-test-id={'first-step-input'}
+          />
+        )}
+        name={FIRST_STEP_FIELD_NAME}
+        defaultValue={''}
+      ></Controller>
+    </div>
+  );
+};
+
+const SecondStepContent = () => {
+  const { watch, setError, clearErrors: clearFormErrors } = useFormContext();
+  const { setValidator, clearErrors: clearStepperErrors } = useStepperContext();
+  const secondStepField = watch(SECOND_STEP_FIELD_NAME);
+
+  useEffect(() => {
+    setValidator(() => {
+      if (secondStepField === '2') {
+        setError(SECOND_STEP_FIELD_NAME, { type: 'validate', message: 'error' });
+        return false;
+      }
+
+      return true;
+    });
+
+    if (secondStepField !== '2') {
+      clearFormErrors(SECOND_STEP_FIELD_NAME);
+      clearStepperErrors();
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [secondStepField]);
+
+  return (
+    <div>
+      <h1 data-test-id={'step-2-content'}> Step 2 content </h1>
+
+      <Controller
+        render={({ field: { value, onChange }, fieldState: { error } }) => (
+          <InputCommon
+            onChange={onChange}
+            value={value}
+            error={error?.message}
+            label={'type 2 to make step invalid'}
+            data-test-id={'second-step-input'}
+          />
+        )}
+        name={SECOND_STEP_FIELD_NAME}
+        defaultValue={''}
+      ></Controller>
+    </div>
+  );
+};
+
+const ThirdStepContent = () => {
+  const { watch, setError, clearErrors: clearFormErrors } = useFormContext();
+  const { setValidator, clearErrors: clearStepperErrors } = useStepperContext();
+  const thirdStepField = watch(THIRD_STEP_FIELD_NAME);
+
+  useEffect(() => {
+    setValidator(() => {
+      if (thirdStepField === '3') {
+        setError(THIRD_STEP_FIELD_NAME, { type: 'validate', message: 'error' });
+        return false;
+      }
+
+      return true;
+    });
+
+    if (thirdStepField !== '3') {
+      clearFormErrors(THIRD_STEP_FIELD_NAME);
+      clearStepperErrors();
+    }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [thirdStepField]);
+
+  return (
+    <div>
+      <h1 data-test-id={'step-3-content'}> Step 3 content </h1>
+
+      <Controller
+        render={({ field: { value, onChange }, fieldState: { error } }) => (
+          <InputCommon
+            onChange={onChange}
+            value={value}
+            error={error?.message}
+            label={'type 3 to make step invalid'}
+            data-test-id={'third-step-input'}
+          />
+        )}
+        name={THIRD_STEP_FIELD_NAME}
+        defaultValue={''}
+        rules={{ validate: value => value !== '3' || 'error' }}
+      ></Controller>
+    </div>
+  );
+};
+
 export const stepper = Template.bind({});
 stepper.args = {
   steps: [
-    { id: 1, name: 'Step1' },
-    { id: 2, name: 'Step2' },
-    { id: 3, name: 'Step3' },
-    { id: 4, name: 'Step4' },
-    { id: 5, name: 'Step5' },
+    { label: 'Step1', content: <FirstStepContent />, id: '1' },
+    { label: 'Step2', content: <SecondStepContent />, id: '2' },
+    { label: 'Step3', content: <ThirdStepContent />, id: '3' },
   ],
 };
+
 stepper.argTypes = {};
+
 stepper.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
-  badges: [BADGE.BETA],
+  badges: [BADGE.STABLE],
   design: {
     name: 'Figma',
     type: 'figma',

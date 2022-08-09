@@ -1,10 +1,11 @@
-import { Context, ContextProps, useStepperContext } from './Context';
-import { Steps, StepsProps, StepType } from './Steps';
+import { ContextProps, OuterContextProvider, useOuterContextProvider } from '../contexts/OuterContextProvider';
+import { Stepper as StepperView } from './Stepper/Stepper';
+import { Step as StepType, StepperProps as StepsProps } from './types';
 
 const Stepper = {
-  Steps,
-  Context,
+  Steps: StepperView,
+  Context: OuterContextProvider,
 };
 
-export { Stepper, useStepperContext };
+export { Stepper, useOuterContextProvider as useStepperContext };
 export type { ContextProps, StepType, StepsProps };
