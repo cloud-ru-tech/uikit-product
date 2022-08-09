@@ -1,6 +1,6 @@
 {
-  "name": "@sbercloud/uikit-product-marker",
-  "title": "React Marker",
+  "name": "@sbercloud/uikit-product-label",
+  "title": "React Label",
   "version": "2.0.19",
   "sideEffects": [
     "*.css",
@@ -10,11 +10,11 @@
   "description": "",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/marker",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/label",
   "repository": {
     "type": "git",
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
-    "directory": "packages/marker"
+    "directory": "packages/label"
   },
   "author": "Лукашев Сергей <smlukashev@sbercloud.ru>",
   "contributors": [
@@ -28,6 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-theme": "0.34.1",
+    "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.0.2"
   }
 }

@@ -1,8 +1,8 @@
-# React Marker
+# React Label
 
 ## Installation
 
-`npm i @sbercloud/uikit-product-marker`
+`npm i @sbercloud/uikit-product-label`
 
 ## Props
 
@@ -13,7 +13,7 @@ enum Variants {
   Red = 'red',
 }
 
-type MarkerProps = {
+type LabelProps = {
   text: string;
   variant: Variants;
   className?: string;

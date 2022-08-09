@@ -6,9 +6,9 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Marker, MarkerProps } from '../src';
+import { Label, LabelProps } from '../src';
 
-const MarkerWrap = styled.div`
+const LabelWrap = styled.div`
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -16,26 +16,26 @@ const MarkerWrap = styled.div`
 `;
 
 export default {
-  title: 'Components/Marker',
-  component: Marker,
+  title: 'Components/Label',
+  component: Label,
 } as Meta;
 
-const Template: Story<MarkerProps> = ({ ...args }) => (
-  <MarkerWrap>
-    <Marker variant={Marker.variants.Green} text={'Новое'} />
-    <Marker variant={Marker.variants.Blue} text={'Рекомендуемое'} />
-    <Marker variant={Marker.variants.Red} text={'Топ'} />
-    <Marker {...args} />
-  </MarkerWrap>
+const Template: Story<LabelProps> = ({ ...args }) => (
+  <LabelWrap>
+    <Label variant={Label.variants.Green} text={'Новое'} />
+    <Label variant={Label.variants.Blue} text={'Рекомендуемое'} />
+    <Label variant={Label.variants.Red} text={'Топ'} />
+    <Label {...args} />
+  </LabelWrap>
 );
 
-export const marker = Template.bind({});
-marker.args = {
+export const label = Template.bind({});
+label.args = {
   text: 'Controls',
-  variant: Marker.variants.Red,
+  variant: Label.variants.Red,
 };
-marker.argTypes = {};
-marker.parameters = {
+label.argTypes = {};
+label.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

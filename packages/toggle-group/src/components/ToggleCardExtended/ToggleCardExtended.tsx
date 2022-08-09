@@ -1,4 +1,4 @@
-import { Marker } from '@sbercloud/uikit-product-marker';
+import { Label } from '@sbercloud/uikit-product-label';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { ToggleCardBoxControl } from '../../helperComponents';
@@ -34,7 +34,7 @@ export function ToggleCardExtended({
           <Description data-test-id='toggle-card-extended-description'>{description}</Description>
         </Text>
         <span>
-          <Marker variant={Marker.variants.Green} text={label} data-test-id='toggle-card-extended-label' />
+          <Label variant={Label.variants.Green} text={label} data-test-id='toggle-card-extended-label' />
         </span>
       </Box>
     </ToggleCardBoxControl>

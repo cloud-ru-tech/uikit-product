@@ -3,18 +3,18 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import { Variants } from './constants';
 import * as S from './styled';
 
-export type MarkerProps = WithSupportProps<{
+export type LabelProps = WithSupportProps<{
   text: string;
   variant: Variants;
   className?: string;
 }>;
 
-export function Marker({ text, variant, className, ...rest }: MarkerProps) {
+export function Label({ text, variant, className, ...rest }: LabelProps) {
   return (
-    <S.Marker {...extractSupportProps(rest)} className={className} data-variant={variant}>
+    <S.Label {...extractSupportProps(rest)} className={className} data-variant={variant}>
       {text}
-    </S.Marker>
+    </S.Label>
   );
 }
 
-Marker.variants = Variants;
+Label.variants = Variants;

@@ -3,17 +3,17 @@ import { css } from '@linaria/core';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 export const COLORS = {
-  GREEN_BG: '--color-marker-background-green',
-  BLUE_BG: '--color-marker-background-blue',
-  RED_BG: '--color-marker-background-red',
+  GREEN_BG: '--color__label__background__green',
+  BLUE_BG: '--color__label__background__blue',
+  RED_BG: '--color__label__background__red',
 
-  GREEN_COLOR: '--color-marker-color-green',
-  BLUE_COLOR: '--color-marker-color-blue',
-  RED_COLOR: '--color-marker-color-red',
+  GREEN_COLOR: '--color__label__color__green',
+  BLUE_COLOR: '--color__label__color__blue',
+  RED_COLOR: '--color__label__color__red',
 
-  GREEN_BORDER: '--color-marker-border-green',
-  BLUE_BORDER: '--color-marker-border-blue',
-  RED_BORDER: '--color-marker-border-red',
+  GREEN_BORDER: '--color__label__border__green',
+  BLUE_BORDER: '--color__label__border__blue',
+  RED_BORDER: '--color__label__border__red',
 };
 
 export const PURPLE_THEME = css`
