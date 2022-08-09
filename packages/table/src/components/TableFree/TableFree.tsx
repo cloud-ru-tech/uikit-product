@@ -29,6 +29,8 @@ export function TableFree({
   const [gridApi, setGridApi] = useState<ITableFreeProps['api']>();
   const [totalPages, setTotalPages] = useState(0);
   const [page, setPage] = useState(0);
+  const displayedRowCount = gridApi?.getDisplayedRowCount() ?? 0;
+  const showPagination = Boolean(pageSize && displayedRowCount > pageSize);
 
   useEffect(() => {
     gridApi?.paginationSetPageSize(pageSize);
@@ -59,7 +61,7 @@ export function TableFree({
         pageSize={pageSize}
         domLayout={domLayout}
       />
-      {!!pageSize && totalPages > 1 && (
+      {showPagination && (
         <S.PaginationWrapper>
           <Pagination
             total={totalPages}

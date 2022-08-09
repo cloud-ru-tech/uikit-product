@@ -215,7 +215,9 @@ export function ClientModelTableController<T>({
   }, [gridApi, pageSize]);
 
   const paginationProps: PaginationProps | undefined = useMemo(() => {
-    const showPagination = Boolean(gridApi && pageSize && data?.length > pageSize);
+    const displayedRowCount = gridApi?.getDisplayedRowCount() ?? 0;
+    const showPagination = Boolean(pageSize && displayedRowCount > pageSize);
+
     return pageSize
       ? {
           pageCount,

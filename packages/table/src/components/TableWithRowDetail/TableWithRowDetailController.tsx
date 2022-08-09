@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useLayoutEffect, useEffect, useMemo, useState } from 'react';
+import { ReactNode, useCallback, useEffect, useLayoutEffect, useMemo, useState } from 'react';
 
 import { AgGridTypes } from '@sbercloud/uikit-product-table-private';
 import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
@@ -134,7 +134,8 @@ export function TableWithRowDetailController<T>({
 
   const paginationProps: Types.PaginationProps | undefined = useMemo(() => {
     gridApi?.paginationSetPageSize(pageSize);
-    const showPagination = Boolean(pageSize && data?.length > pageSize);
+    const displayedRowCount = gridApi?.getDisplayedRowCount() ?? 0;
+    const showPagination = Boolean(pageSize && displayedRowCount > pageSize);
 
     return pageSize
       ? {
