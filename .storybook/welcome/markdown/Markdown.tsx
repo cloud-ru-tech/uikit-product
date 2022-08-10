@@ -1,5 +1,6 @@
 import './theme/style.css';
 
+import { CSSProperties } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
@@ -12,7 +13,7 @@ type MarkdownProps = {
   md: string;
 };
 
-const CODE_THEME: Record<Themes, typeof light> = {
+const CODE_THEME: Record<Themes, { [key: string]: CSSProperties }> = {
   [Themes.Purple]: light,
   [Themes.Green]: light,
   [Themes.PurpleDark]: dark,
@@ -29,7 +30,9 @@ export const Markdown = (props: MarkdownProps) => {
       components={{
         code({ inline, className, children, ...rest }) {
           const match = /language-(\w+)/.exec(className || '');
+
           return !inline && match ? (
+            // @ts-ignore
             <SyntaxHighlighter style={CODE_THEME[theme]} language={match[1]} PreTag='div' {...rest}>
               {String(children).replace(/\n$/, '')}
             </SyntaxHighlighter>

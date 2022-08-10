@@ -261,7 +261,7 @@ export default {
     fontStyle: 'italic',
   },
   namespace: {
-    Opacity: '0.8',
+    opacity: '0.8',
   },
   'token.tab:not(:empty):before': {
     color: 'hsla(220, 14%, 71%, 0.15)',
@@ -498,4 +498,4 @@ export default {
   '.prism-previewer-easing.prism-previewer-easing line': {
     stroke: 'hsl(220, 14%, 71%)',
   },
-};
+} as const;

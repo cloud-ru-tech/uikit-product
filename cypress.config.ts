@@ -1,19 +1,25 @@
 import { defineConfig } from 'cypress';
 
-export default defineConfig({
+import Plugins from './cypress/plugins';
+
+import PluginEvents = Cypress.PluginEvents;
+import PluginConfigOptions = Cypress.PluginConfigOptions;
+
+export const settings: Cypress.ConfigOptions = {
   projectId: 'uikit',
   reporter: 'junit',
   reporterOptions: {
     mochaFile: 'cypress/reports/report-[hash].xml',
     toConsole: false,
   },
+  retries: 2,
   videoUploadOnPasses: false,
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
-    setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config);
+    setupNodeEvents(on: PluginEvents, config: PluginConfigOptions) {
+      return Plugins(on, config);
     },
-    specPattern: './/packages/*/__tests__/**/*.*',
+    specPattern: './packages/*/__tests__/**/*.*',
   },
-});
+};
+
+export default defineConfig(settings);

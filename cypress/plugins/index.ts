@@ -15,10 +15,18 @@
 /**
  * @type {Cypress.PluginConfig}
  */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import CypressCodeCoverage from '@cypress/code-coverage/task';
 
-module.exports = (on, config) => {
-  require('@cypress/code-coverage/task')(on, config);
-  require('./deleteSuccessVideos')(on);
+import DeleteSuccessVideos from './deleteSuccessVideos';
+
+import PluginEvents = Cypress.PluginEvents;
+import PluginConfigOptions = Cypress.PluginConfigOptions;
+
+export default (on: PluginEvents, config: PluginConfigOptions) => {
+  CypressCodeCoverage(on, config);
+  DeleteSuccessVideos(on);
 
   const browser = config.env.BROWSER;
 
