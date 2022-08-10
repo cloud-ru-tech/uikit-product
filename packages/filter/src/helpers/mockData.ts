@@ -1,4 +1,4 @@
-export default [
+export const mockData = [
   {
     value: 'bucket-user-23236724-ec4e-443d-b66a-9fdd83515a9c-id-3xkie8id',
     label: 'bucket-user-23236724-ec4e-443d-b66a-9fdd83515a9c-id-3xkie8id',

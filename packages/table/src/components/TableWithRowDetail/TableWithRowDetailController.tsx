@@ -1,7 +1,7 @@
 import { ReactNode, useCallback, useEffect, useLayoutEffect, useMemo, useState } from 'react';
 
 import { AgGridTypes } from '@sbercloud/uikit-product-table-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { TableWithRowDetailView } from './TableWithRowDetailView';
 import * as Types from './types';

@@ -1,6 +1,6 @@
-import { ReactElement, WheelEventHandler, useContext, useEffect, useRef } from 'react';
+import { ReactElement, useContext, useEffect, useRef, WheelEventHandler } from 'react';
 
-import { WithSupportProps, useForceUpdate } from '@sbercloud/uikit-product-utils';
+import { useForceUpdate, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { TabContext } from '../../helpers/context';
 import { Highlighter } from '../Highlighter';

@@ -238,7 +238,7 @@ export {
   PRESET,
 };
 
-export default {
+export const EXPORT_VARS = {
   GREY,
   PURPLE,
   GREEN,

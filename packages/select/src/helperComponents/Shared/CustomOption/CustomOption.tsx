@@ -3,7 +3,7 @@ import { memo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { ISelectProps } from '../../../components';
-import { StyledDescWrap, StyledOption, optionClass } from './styled';
+import { optionClass, StyledDescWrap, StyledOption } from './styled';
 
 const Stub = (): JSX.Element => <></>;
 
@@ -35,5 +35,3 @@ export const CustomOption = <CustomOptionType,>(
     </ReactSelectComponents.Option>
   );
 };
-
-export default CustomOption;

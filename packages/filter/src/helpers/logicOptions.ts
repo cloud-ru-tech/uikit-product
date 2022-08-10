@@ -7,7 +7,7 @@ import lte from 'lodash.lte';
 import { OptionTypeBase } from '@sbercloud/uikit-product-select';
 import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from './texts-provider';
+import { textProvider, Texts } from './texts-provider';
 
 type neqType = Parameters<typeof eq>;
 

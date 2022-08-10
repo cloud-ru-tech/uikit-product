@@ -16,6 +16,12 @@ export type HeatMapChartAxesOptions = {
   yAxis?: HeatMapChartAxisOptions;
 };
 
+export type HeatMapChartStyles = {
+  xLabelsStyle: (index: number) => Record<string, string | number>;
+  yLabelsStyle: (index: number) => Record<string, string | number>;
+  cellStyle: (x: number, y: number, ratio: number) => Record<string, string | number>;
+};
+
 export type HeatMapChartOptions = {
   title?: string;
   height?: number;
@@ -31,10 +37,4 @@ export type HeatMapChartProps = {
   data: number[][];
   options: HeatMapChartOptions;
   className?: string;
-};
-
-export type HeatMapChartStyles = {
-  xLabelsStyle: (index: number) => Record<string, string | number>;
-  yLabelsStyle: (index: number) => Record<string, string | number>;
-  cellStyle: (x: number, y: number, ratio: number) => Record<string, string | number>;
 };

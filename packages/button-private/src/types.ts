@@ -12,6 +12,14 @@ export type AnchorProps = {
   target?: string;
 };
 
+export type CommonButtonProps = WithSupportProps<ButtonProps | AnchorProps> & {
+  className?: string;
+  disabled?: boolean;
+  id?: string;
+  onClick?: MouseEventHandler<HTMLElement>;
+  tabIndex?: number;
+};
+
 export type WithManagedLoadingProps = {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   loading?: boolean;
@@ -29,14 +37,6 @@ export type WithTooltipProps = {
     content?: TooltipProps['content'];
     placement?: TooltipProps['placement'];
   };
-};
-
-export type CommonButtonProps = WithSupportProps<ButtonProps | AnchorProps> & {
-  className?: string;
-  disabled?: boolean;
-  id?: string;
-  onClick?: MouseEventHandler<HTMLElement>;
-  tabIndex?: number;
 };
 
 export type CommonButtonPropsWithOptionalTooltip = CommonButtonProps & Pick<WithTooltipProps, 'tooltip'>;

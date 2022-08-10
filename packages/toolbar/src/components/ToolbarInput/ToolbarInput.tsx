@@ -1,11 +1,11 @@
-import { FC, createRef, useEffect, useState } from 'react';
+import { createRef, FC, useEffect, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { InputPrivate, InputPrivateProps } from '@sbercloud/uikit-product-input-private';
-import { WithSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import { InputWrapStyled, searchIconClassname } from './styled';
 
 export type ToolbarInputProps = Required<Pick<InputPrivateProps, 'value' | 'onChange' | 'placeholder'>> &

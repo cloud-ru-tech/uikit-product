@@ -16,7 +16,7 @@ import {
   H4_STYLES,
   H5_STYLES,
 } from '../src';
-import { TypographyStoryConfig, commonTemplate } from './helpers/CommonTemplate';
+import { commonTemplate, TypographyStoryConfig } from './helpers/CommonTemplate';
 
 export default {
   title: 'Typography/Headers',

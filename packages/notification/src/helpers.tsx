@@ -1,5 +1,5 @@
 import { render } from 'react-dom';
-import { ToastOptions as RtToastOptions, toast } from 'react-toastify';
+import { toast, ToastOptions as RtToastOptions } from 'react-toastify';
 
 import { NotificationBig, NotificationBigProps } from './components/NotificationBig';
 import { NotificationContainer, NotificationContainerProps } from './components/NotificationContainer';

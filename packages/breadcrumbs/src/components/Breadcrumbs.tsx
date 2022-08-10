@@ -8,13 +8,13 @@ import { getDiffWidth, getSubstr, getWidth, isEllipsisActive, measureText, toSta
 import { CRUMB_MAX_LENGTH } from '../helpers/constants';
 import { BreadcrumbItem, StateItem } from '../helpers/types';
 import {
+  chevronClassName,
   ChildrenContainerStyled,
   Collapsed,
   ContainerStyled,
+  cutTextClassName,
   ItemStyled,
   ItemTextStyled,
-  chevronClassName,
-  cutTextClassName,
 } from './styled';
 
 export type BreadcrumbsProps = {
@@ -242,7 +242,7 @@ export const Breadcrumbs = ({
       {visibleItems?.map((item, index) => (
         <ItemStyled
           key={item.key || item.link || index}
-          data-fixed-width={!!isFixedWidth || undefined}
+          data-fixed-width={Boolean(isFixedWidth) || undefined}
           width={item.width}
         >
           {index !== 0 && <ChevronRightInterfaceSVG className={chevronClassName} data-chevron />}

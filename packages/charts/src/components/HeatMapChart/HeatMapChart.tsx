@@ -3,7 +3,7 @@ import { useCallback, useMemo } from 'react';
 import { HeatMapGrid } from 'react-grid-heatmap';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
-import { Themes, WithSupportProps, extractSupportProps, useTheme } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, Themes, useTheme, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { XAxisPosition } from './constants';
 import { getContrastColor, getStyles, getTickValues } from './helpers';
@@ -69,7 +69,7 @@ export function HeatMapChart({ data, options, className, ...rest }: WithSupportP
     <S.Wrapper className={className} {...extractSupportProps(rest)}>
       {title && <S.Title>{title}</S.Title>}
       {xAxis?.label && xAxisPosition === XAxisPosition.Top && <S.XAxisLabel>{xAxis.label}</S.XAxisLabel>}
-      <S.GridWrapper displayAsGrid={!!yAxis?.label}>
+      <S.GridWrapper displayAsGrid={Boolean(yAxis?.label)}>
         {yAxis?.label && <S.YAxisLabel data-x-axis-position={xAxisPosition}>{yAxis.label}</S.YAxisLabel>}
         <HeatMapGrid
           data={data}

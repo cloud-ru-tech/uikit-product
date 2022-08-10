@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { InputDecoratorPrivate } from '@sbercloud/uikit-product-input-decorator-private';
 import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type FormFieldProps = WithSupportProps<{
   hint?: Omit<TooltipProps, 'children'>;

@@ -7,18 +7,18 @@ import {
   TooltipPrivateProps,
   TriggerTypes,
 } from '@sbercloud/uikit-product-tooltip-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { DELAY, OFFSET } from '../../constants';
 import { TooltipType } from '../../helpers/types';
 import {
+  classNameArrow,
+  containerClassName,
+  containerWithIconClassName,
   IconWrapper,
   Text,
   Title,
   TooltipWrapper,
-  classNameArrow,
-  containerClassName,
-  containerWithIconClassName,
 } from './styled';
 
 export type TooltipProps = {

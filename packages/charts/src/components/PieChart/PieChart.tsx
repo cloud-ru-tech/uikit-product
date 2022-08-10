@@ -2,7 +2,7 @@ import { ReactText, useCallback, useMemo, useState } from 'react';
 import { PieChart as Pie } from 'react-minimal-pie-chart';
 
 import { truncateString } from '@sbercloud/ft-formatters';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { CHART_COLORS, Colors } from '../../constants/colors';
 import { Legend } from './Legend';

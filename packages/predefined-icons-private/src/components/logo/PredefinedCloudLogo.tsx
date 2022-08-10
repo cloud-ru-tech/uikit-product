@@ -1,5 +1,5 @@
 import { CloudFullLogoSVG } from '@sbercloud/uikit-product-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Wrapper } from './styled';
 

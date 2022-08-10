@@ -4,7 +4,7 @@ import ReactMarkdown, { Options as ReactMarkdownOptions } from 'react-markdown';
 import gfm from 'remark-gfm';
 
 import { SimpleTextarea } from '@sbercloud/uikit-product-textarea-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { MarkdownEditorMode } from './constants';
 import * as S from './styled';

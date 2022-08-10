@@ -1,7 +1,7 @@
 import { HTMLAttributeAnchorTarget, MouseEvent, MouseEventHandler, ReactElement, useContext } from 'react';
 
 import { DropdownItem } from '@sbercloud/uikit-product-dropdown';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { DropdownMenuContext } from '../../../../contexts';
 import { Link } from './styled';

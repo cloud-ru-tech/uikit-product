@@ -1,4 +1,4 @@
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Orientation, Variant } from './constants';
 import { StyledDivider } from './styled';

@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from 'react';
 
 import { CheckboxCheckedSVG, CheckboxPartialCheckedSVG } from '@sbercloud/uikit-product-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import {
   CheckboxIconWrap,

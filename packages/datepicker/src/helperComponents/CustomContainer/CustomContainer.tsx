@@ -8,7 +8,7 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { DatePickerProps, TimePicker } from '../../components';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import { PickSettingProps } from '../../helpers/types';
 import * as S from './styled';
 

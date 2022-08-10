@@ -3,7 +3,7 @@ import { NoData } from '@sbercloud/uikit-product-no-data';
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../../helpers/texts-provider';
+import { textProvider, Texts } from '../../../helpers/texts-provider';
 import * as S from './styled';
 import { NoDataReasons } from './types';
 

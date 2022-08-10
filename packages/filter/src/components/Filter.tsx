@@ -11,7 +11,7 @@ import * as errors from '../helpers/errors';
 import { getDefaultValue } from '../helpers/getValue';
 import { logicOptions } from '../helpers/logicOptions';
 import { parseQuery } from '../helpers/parseQuery';
-import { Texts, textProvider } from '../helpers/texts-provider';
+import { textProvider, Texts } from '../helpers/texts-provider';
 import { DatepickerType, IFilterProps, TFilterOption, TFilterOptionType, TFilterValueType } from '../helpers/types';
 import * as S from './styled';
 

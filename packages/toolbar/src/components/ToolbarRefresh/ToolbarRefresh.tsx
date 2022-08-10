@@ -2,7 +2,7 @@ import { rotateOnClickClassName } from '@sbercloud/uikit-product-button-private'
 import { RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import { ToolbarButton, ToolbarButtonProps } from '../ToolbarButton';
 
 export type ToolbarRefreshProps = Omit<ToolbarButtonProps, 'icon' | 'tooltip'>;

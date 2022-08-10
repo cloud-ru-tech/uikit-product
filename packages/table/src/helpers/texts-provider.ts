@@ -1,4 +1,4 @@
-import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-product-utils';
+import { createTextProvider, LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
 export type EnabledLanguages = LanguageCodeType.ruRU | LanguageCodeType.enGB;
 

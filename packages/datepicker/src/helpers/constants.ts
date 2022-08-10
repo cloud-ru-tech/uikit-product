@@ -1,6 +1,6 @@
 import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from './texts-provider';
+import { textProvider, Texts } from './texts-provider';
 
 export const INPUT_PLACEHOLDER = (language: LanguageCodeType) => ({
   day: textProvider<string>(language, Texts.Day),

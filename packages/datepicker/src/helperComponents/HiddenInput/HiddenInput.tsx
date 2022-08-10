@@ -5,7 +5,7 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { INPUT_PLACEHOLDER } from '../../helpers/constants';
 import { splitDateFormatter } from '../../helpers/splitDateFormatter';
-import { TSplitDateType, TimeInputProps } from '../../helpers/types';
+import { TimeInputProps, TSplitDateType } from '../../helpers/types';
 import { InputAutosize } from '../InputAutosize';
 import * as S from './styled';
 

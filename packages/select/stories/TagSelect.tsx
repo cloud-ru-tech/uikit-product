@@ -9,7 +9,7 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TagSelect } from '../src';
 import { COLOR_VALUES } from '../src/constants';
-import getRandomInt from '../src/helpers/getRandomInt';
+import { getRandomInt } from '../src/helpers/getRandomInt';
 
 export default {
   title: 'Not stable/Select/Tag Select',

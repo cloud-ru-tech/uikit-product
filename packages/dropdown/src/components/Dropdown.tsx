@@ -7,7 +7,7 @@ import {
   TooltipMenuPrivate,
   TooltipPrivate,
 } from '@sbercloud/uikit-product-tooltip-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
 

@@ -4,10 +4,10 @@ import { ReactNode } from 'react';
 import { Pagination } from '@sbercloud/uikit-product-pagination-private';
 import { TablePrivate } from '@sbercloud/uikit-product-table-private';
 import { Toolbar } from '@sbercloud/uikit-product-toolbar';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { GroupDisabledCell } from '../../helperComponents/GroupDisabledCell';
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import * as S from './styled';
 import * as Types from './types';
 

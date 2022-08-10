@@ -7,16 +7,16 @@ import { CircleCheckOutlineInterfaceSVG, DeleteInterfaceSVG, EditInterfaceSVG } 
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { ColorPicker, OptionTypeColor } from '../../../components';
-import { Texts, textProvider } from '../../../helpers/texts-provider';
+import { textProvider, Texts } from '../../../helpers/texts-provider';
 import { TagName } from '../TagName';
 import {
+  colorPickerClassName,
   NotValidMessage,
+  optionClass,
   StyledTagButton,
   StyledTagButtonWrapper,
   StyledTagOption,
   StyledTagOptionLabel,
-  colorPickerClassName,
-  optionClass,
 } from './styled';
 
 export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.Option>): JSX.Element => {

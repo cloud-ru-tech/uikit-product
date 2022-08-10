@@ -9,7 +9,7 @@ export * from './color/DEPRECATED/purple-dark';
 export * from './color/DEPRECATED/green';
 export * from './color/DEPRECATED/green-dark';
 
-export { default as EXPORT_VARS } from './color/vars';
+export { EXPORT_VARS } from './color/vars';
 export * from './types/theme';
 export * from './globals/theme';
-export { default as DEPRECATED_EXPORT_VARS } from './color/DEPRECATED/vars';
+export { DEPRECATED_EXPORT_VARS } from './color/DEPRECATED/vars';

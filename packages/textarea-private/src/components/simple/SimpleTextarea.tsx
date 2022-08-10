@@ -4,7 +4,7 @@ import { forwardRef, useCallback, useRef, useState } from 'react';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import * as S from './styled';
 import { StyledPrivateTextarea } from './styled';
 import { SimpleTextareaProps } from './types';
@@ -37,7 +37,7 @@ const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaPr
       onChange('');
       innerRef.current?.focus();
     }, [onChange, innerRef]);
-    const hasClearButton = !!value.length && !disabled;
+    const hasClearButton = Boolean(value.length) && !disabled;
 
     return (
       <div

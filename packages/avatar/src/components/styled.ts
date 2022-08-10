@@ -3,7 +3,7 @@ import { VFC } from 'react';
 
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
-import { AvatarProps, Colors, SIZES_IN_PX, Shapes, Sizes } from '../helpers';
+import { AvatarProps, Colors, Shapes, Sizes, SIZES_IN_PX } from '../helpers';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;

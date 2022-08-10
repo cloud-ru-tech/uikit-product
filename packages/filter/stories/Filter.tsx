@@ -8,7 +8,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { DatepickerType, Filter, IFilterProps, LogicConditionType, TFilterOptionType, TFilterValueType } from '../src';
-import mockData, { groupedServices } from '../src/helpers/mockData';
+import { groupedServices, mockData } from '../src/helpers/mockData';
 
 export default {
   title: 'Not stable/Filter',

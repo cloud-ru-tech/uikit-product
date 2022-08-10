@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes, MouseEventHandler } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Sizes, Variant } from './constants';
 import { IconWrapper, StyledArrowLinkInterfaceSVG, StyledLink } from './styled';

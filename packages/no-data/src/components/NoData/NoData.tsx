@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
 

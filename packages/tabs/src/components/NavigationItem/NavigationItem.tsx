@@ -1,6 +1,6 @@
 import { ReactText, useContext, useEffect, useRef } from 'react';
 
-import { WithSupportProps, keyboardSelectHandler } from '@sbercloud/uikit-product-utils';
+import { keyboardSelectHandler, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { TabContext } from '../../helpers/context';
 import { SelectedTabRef, TabId } from '../../helpers/types';

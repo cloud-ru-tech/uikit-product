@@ -6,21 +6,21 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { BREAKPOINTS, WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
+import { BREAKPOINTS, extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import { widthToCssWidth } from '../../helpers/widthToCssWidth';
 import { Header } from '../Header';
 import {
   CloseButtonStyled,
   ContentBoxStyled,
+  drawerClassName,
+  drawerPaddingModeClassName,
+  drawerWrapperClassName,
   FooterBoxStyled,
   HeaderBoxStyled,
   HeaderTextBoxStyled,
   LeftIconBoxStyled,
-  drawerClassName,
-  drawerPaddingModeClassName,
-  drawerWrapperClassName,
 } from './styled';
 
 export interface IDrawerProps {
@@ -165,7 +165,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
           )}
         </HeaderBoxStyled>
       )}
-      <ContentBoxStyled data-hasfooter={!!footer || undefined}>{children}</ContentBoxStyled>
+      <ContentBoxStyled data-hasfooter={Boolean(footer) || undefined}>{children}</ContentBoxStyled>
       {footer && <FooterBoxStyled width={widthToCssWidth(drawerWidth)}>{footer}</FooterBoxStyled>}
     </RcDrawer>
   );

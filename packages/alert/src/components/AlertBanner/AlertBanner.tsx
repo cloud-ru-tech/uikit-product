@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { ButtonIcon, ButtonRound, ButtonRoundProps } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { PredefinedIconsPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
-import { WithSupportProps, extractSupportProps, warning } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, warning, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
 

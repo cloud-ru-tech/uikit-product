@@ -1,8 +1,8 @@
 import { Filter, IFilterProps } from '@sbercloud/uikit-product-filter';
 import { FilterInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { WithSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import { ToolbarButton } from '../ToolbarButton';
 
 export type ToolbarFilterProps = Required<Pick<IFilterProps, 'filterOptions' | 'value' | 'onChange'>>;

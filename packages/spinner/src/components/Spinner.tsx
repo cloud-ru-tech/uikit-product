@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { SizePropsMap, Sizes } from './constants';
 import { Spin, Text, Wrapper } from './styled';

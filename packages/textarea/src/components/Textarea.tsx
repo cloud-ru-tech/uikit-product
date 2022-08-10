@@ -2,7 +2,7 @@ import { forwardRef } from 'react';
 
 import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-product-input-decorator-private';
 import { SimpleTextarea, SimpleTextareaProps } from '@sbercloud/uikit-product-textarea-private';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type TextareaProps = Omit<InputDecoratorPrivateProps, 'children'> &
   Omit<SimpleTextareaProps, 'error' | 'autosize'>;

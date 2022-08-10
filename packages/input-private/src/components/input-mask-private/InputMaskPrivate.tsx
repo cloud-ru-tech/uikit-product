@@ -3,7 +3,7 @@ import { forwardRef } from 'react';
 
 import { useInputMask } from '../../hooks';
 import { SimpleInputProps } from '../simple';
-import { MASKS_CONFIG, Masks } from './constants';
+import { Masks, MASKS_CONFIG } from './constants';
 import { StyledSimpleInput } from './styled';
 
 export type InputMaskPrivateProps = Omit<SimpleInputProps, 'placeholder'> & {

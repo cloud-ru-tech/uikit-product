@@ -26,7 +26,7 @@ const Container = styled.div<{ theme: Themes }>`
 
 const Template: Story<RadioProps> = ({ ...args }, { globals: { theme } }) => (
   <Container theme={theme}>
-    <RadioGroup value={'story1'} onChange={(value: React.ReactText) => {}}>
+    <RadioGroup value={'story1'} onChange={() => {}}>
       <Radio {...args} />
     </RadioGroup>
   </Container>

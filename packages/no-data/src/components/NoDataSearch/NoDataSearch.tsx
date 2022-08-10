@@ -1,11 +1,11 @@
 import { SearchInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 import {
-  LanguageCodeType,
-  WithSupportProps,
   createTextProvider,
   extractSupportProps,
+  LanguageCodeType,
   useLanguage,
+  WithSupportProps,
 } from '@sbercloud/uikit-product-utils';
 
 import { NoData } from '../NoData';

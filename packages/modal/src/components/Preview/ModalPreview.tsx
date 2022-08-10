@@ -7,15 +7,15 @@ import { Divider } from '@sbercloud/uikit-product-divider';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import {
   Content,
-  Title,
-  TitleRow,
   modalClassName,
   overlayClassName,
   overlayParentClassname,
   previewCloseButton,
+  Title,
+  TitleRow,
 } from './styled';
 
 interface IReactModalProps extends ReactModal.Props {

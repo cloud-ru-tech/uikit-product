@@ -5,7 +5,7 @@ import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import { InputPrivateProps } from '../private';
 import { Sizes, Types } from './constants';
 import * as S from './styled';

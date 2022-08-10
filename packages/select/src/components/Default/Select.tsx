@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
-import RCSelect, { OptionTypeBase as RCOptionTypeBase, SelectComponentsConfig, components } from 'react-select';
+import RCSelect, { components, OptionTypeBase as RCOptionTypeBase, SelectComponentsConfig } from 'react-select';
 
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { checkMobileDevice } from '../../helpers/checkMobileDevice';
-import getSelectorStyles from '../../helpers/getSelectStyles';
-import getCustomComponents from '../../helpers/getSharedComponents';
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { getSelectStyles } from '../../helpers/getSelectStyles';
+import { getSharedComponents } from '../../helpers/getSharedComponents';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import { SelectType } from '../../helpers/types';
 
 export { default as RCSelect } from 'react-select';
@@ -67,14 +67,14 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
   const [stateOptions, setOptions] = useState<CustomOptionType[]>();
   const [inputValue, setInputSearch] = useState<string>();
   const [isOpen, setIsOpen] = useState(false);
-  const [customStyles, setCustomStyles] = useState(getSelectorStyles(type));
+  const [customStyles, setCustomStyles] = useState(getSelectStyles(type));
   const closeMenu = useCallback((): void => {
     setIsOpen(false);
     onMenuClose?.();
   }, [onMenuClose]);
 
   useEffect(() => {
-    setCustomStyles(getSelectorStyles(type));
+    setCustomStyles(getSelectStyles(type));
   }, [type]);
 
   const filterOptions = useCallback(
@@ -137,7 +137,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
 
   const memoizeCustomComponents = useMemo(
     () =>
-      getCustomComponents<CustomOptionType>(
+      getSharedComponents<CustomOptionType>(
         {
           prefixControl,
           postfixControl,

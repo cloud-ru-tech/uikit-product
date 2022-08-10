@@ -624,7 +624,7 @@ export {
   COLORS_INTERACTIVE_CHART,
 };
 
-export default {
+export const DEPRECATED_EXPORT_VARS = {
   COLORS,
   COLORS_BRAND,
   COLORS_TAG,

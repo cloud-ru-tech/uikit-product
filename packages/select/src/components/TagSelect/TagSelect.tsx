@@ -7,8 +7,8 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Colors } from '../../constants';
 import * as TagComponents from '../../helperComponents/TagSelect';
 import { checkMobileDevice } from '../../helpers/checkMobileDevice';
-import getSelectorStyles from '../../helpers/getSelectStyles';
-import { DictionaryPropertyAsFn, Texts, textProvider } from '../../helpers/texts-provider';
+import { getSelectStyles } from '../../helpers/getSelectStyles';
+import { DictionaryPropertyAsFn, textProvider, Texts } from '../../helpers/texts-provider';
 
 export type OptionTypeTag = {
   value: string;
@@ -61,7 +61,7 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   /* @ts-ignore */
   const [currentTag, setCurrentTag] = useState<ValueType<OptionTypeTag>>(value);
-  const [customStyles] = useState(getSelectorStyles('tag'));
+  const [customStyles] = useState(getSelectStyles('tag'));
 
   const [modalInstance, setModalInstance] = useState<HTMLDivElement | null>(null);
   const [approveDelete, setApproveDelete] = useState<ApproveDeleteType | null>(null);

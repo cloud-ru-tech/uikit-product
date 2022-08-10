@@ -5,7 +5,7 @@ import { Radio, RadioGroup } from '@sbercloud/uikit-product-radio';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { FilterTypes } from '../../constants';
-import { Texts, textProvider } from '../../helpers/textProviders';
+import { textProvider, Texts } from '../../helpers/textProviders';
 import { FilterItem } from '../../types';
 import * as S from './styled';
 

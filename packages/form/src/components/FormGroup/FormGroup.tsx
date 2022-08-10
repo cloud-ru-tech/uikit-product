@@ -1,7 +1,7 @@
 import { QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 
-import { Content, Header, Number, Title, Wrapper, hintClassName, tooltipTriggerClassName } from './styled';
+import { Content, Header, hintClassName, Number, Title, tooltipTriggerClassName, Wrapper } from './styled';
 
 export interface FormGroupProps {
   number?: number;

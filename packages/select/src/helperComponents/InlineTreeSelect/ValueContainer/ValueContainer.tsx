@@ -3,8 +3,8 @@ import React, { FC, useCallback } from 'react';
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { DictionaryPropertyAsFn, Texts, textProvider } from '../../../helpers/texts-provider';
-import { StyledContainer, iconClass } from './styled';
+import { DictionaryPropertyAsFn, textProvider, Texts } from '../../../helpers/texts-provider';
+import { iconClass, StyledContainer } from './styled';
 
 export interface IValueContainerProps {
   value?: React.ReactText[];

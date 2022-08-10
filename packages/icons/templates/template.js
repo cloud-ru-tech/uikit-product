@@ -2,7 +2,7 @@ const generateDataTestId = require('./generateDataTestId');
 
 const template =
   ({ size }) =>
-  ({ template }, opts, { imports, interfaces, componentName, props, jsx, exports }) => {
+  ({ template }, opts, { imports, interfaces, componentName, jsx, exports }) => {
     const plugins = ['jsx', 'typescript'];
     const typeScriptTpl = template.smart({ plugins });
 

@@ -1,7 +1,7 @@
 import { HTMLAttributeAnchorTarget, MouseEventHandler, ReactElement } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type HeaderToolbarItemProps = WithSupportProps<{
   icon: ReactElement;

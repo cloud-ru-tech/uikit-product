@@ -2,7 +2,7 @@ import { ChangeEvent, ReactNode } from 'react';
 
 import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-product-input-decorator-private';
 import { SimpleInput, SimpleInputProps } from '@sbercloud/uikit-product-input-private';
-import { WithSupportProps, extractSupportProps, useUniqueId } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useUniqueId, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type InputMasterProps = WithSupportProps<{
   onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;

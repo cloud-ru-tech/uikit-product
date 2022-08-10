@@ -16,7 +16,7 @@ import {
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { LoadingIcon } from '../../helperComponents';
-import { Texts, textProvider } from '../../helpers';
+import { textProvider, Texts } from '../../helpers';
 import { TEXTS_BY_VARIANT, Variant } from './constants';
 import * as S from './styled';
 

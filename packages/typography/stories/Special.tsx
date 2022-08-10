@@ -7,7 +7,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CHARTS_GRID_STYLES, MONO_14_BOLD_STYLES, MONO_14_STYLES, NOTIFY_STYLES, TABLE_TEXT_STYLES } from '../src';
-import { TypographyStoryConfig, commonTemplate } from './helpers/CommonTemplate';
+import { commonTemplate, TypographyStoryConfig } from './helpers/CommonTemplate';
 
 export default {
   title: 'Typography/Special',

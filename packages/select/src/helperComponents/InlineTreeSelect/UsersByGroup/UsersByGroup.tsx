@@ -5,8 +5,8 @@ import React, { FC, useEffect, useMemo, useState } from 'react';
 import { Avatar } from '@sbercloud/uikit-product-avatar';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../../helpers/texts-provider';
-import { StyledContainer, selectClassname } from './styled';
+import { textProvider, Texts } from '../../../helpers/texts-provider';
+import { selectClassname, StyledContainer } from './styled';
 
 export interface IOptionType extends DataNode {
   src?: string;
@@ -36,17 +36,17 @@ const Icon = ({ data }: { data: IOptionType }): React.ReactNode => {
   );
 };
 
+export type CheckedType = {
+  checked: React.ReactText[];
+  halfChecked: React.ReactText[];
+};
+
 export interface IUsersByGroupProps extends Partial<TreeProps> {
   options?: IOptionType[];
   filter?: (treeNode: EventDataNode) => boolean;
   onChange?: (checked: { checked: React.ReactText[] | CheckedType; halfChecked?: React.ReactText[] }) => void;
   isFiltered: boolean;
 }
-
-export type CheckedType = {
-  checked: React.ReactText[];
-  halfChecked: React.ReactText[];
-};
 
 const DELIMETR = ':';
 

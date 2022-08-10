@@ -11,7 +11,7 @@ import { CustomGroup } from '../helperComponents/Shared/CustomGroup';
 import { CustomGroupHeading } from '../helperComponents/Shared/CustomGroupHeading';
 import { CustomIndicator } from '../helperComponents/Shared/CustomIndicator';
 import { CustomOption } from '../helperComponents/Shared/CustomOption';
-import { Texts, textProvider } from './texts-provider';
+import { textProvider, Texts } from './texts-provider';
 
 const crossSVGClassName = css`
   fill: currentColor;
@@ -37,7 +37,7 @@ const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponen
   return <ReactSelectComponents.NoOptionsMessage {...props}>{noDataText}</ReactSelectComponents.NoOptionsMessage>;
 };
 
-export default <CustomOptionType,>(
+export const getSharedComponents = <CustomOptionType,>(
   props: ISelectProps<CustomOptionType>,
   isMobile?: boolean,
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

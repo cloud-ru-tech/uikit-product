@@ -1,6 +1,6 @@
-import { LanguageCodeType, createTextProvider } from '@sbercloud/uikit-product-utils';
+import { createTextProvider, LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
-import declination from './declination';
+import { declination } from './declination';
 
 export enum Texts {
   NoData = 'NoData',

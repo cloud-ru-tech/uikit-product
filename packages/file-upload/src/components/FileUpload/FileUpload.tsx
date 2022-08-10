@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactElement, cloneElement, useRef } from 'react';
+import { ChangeEvent, cloneElement, ReactElement, useRef } from 'react';
 
 import { HiddenInput } from './styled';
 

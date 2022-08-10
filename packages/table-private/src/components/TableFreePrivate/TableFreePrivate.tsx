@@ -11,7 +11,7 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
 import { styledTable } from '../../helpers/styled';
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import { styledTableFreePrivate } from './styled';
 import { TableFreePrivateProps } from './types';
 
@@ -58,7 +58,7 @@ function StylelessTableFreePrivate({
             rowHeight: tableRowHeight,
             rowSelection: 'multiple',
             suppressRowClickSelection: true,
-            pagination: !!pageSize,
+            pagination: Boolean(pageSize),
             paginationPageSize: pageSize,
             ensureDomOrder: true,
             defaultColDef: {

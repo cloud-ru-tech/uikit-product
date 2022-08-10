@@ -7,7 +7,7 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { InteractiveChart, InteractiveChartProps, createLayer } from '../src';
+import { createLayer, InteractiveChart, InteractiveChartProps } from '../src';
 import { DrawStyles, LineInterpolations } from '../src/components/InteractiveChart/constants';
 import { Colors } from '../src/constants/colors';
 

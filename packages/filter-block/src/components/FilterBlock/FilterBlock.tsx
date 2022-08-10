@@ -2,7 +2,7 @@ import { Button } from '@sbercloud/uikit-product-button';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { FilterTypes, MAX_FILTER_AMOUNT } from '../../constants';
-import { Texts, textProvider } from '../../helpers/textProviders';
+import { textProvider, Texts } from '../../helpers/textProviders';
 import { FastFilters as FastFiltersType, Filters } from '../../types';
 import { CheckboxFilters } from '../CheckboxFilters';
 import { FastFilters } from '../Fastfilters';

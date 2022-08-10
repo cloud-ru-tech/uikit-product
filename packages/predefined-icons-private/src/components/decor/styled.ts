@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { SIZES_IN_PX, Sizes } from './constants';
+import { Sizes, SIZES_IN_PX } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;

@@ -2,14 +2,14 @@ import { ElementType } from 'react';
 import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 
 import {
-  WithTooltipProps,
   extractCommonButtonProps,
   rotateOnClickClassName,
+  WithTooltipProps,
 } from '@sbercloud/uikit-product-button-private';
 import { RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers';
+import { textProvider, Texts } from '../../helpers';
 import { ButtonIconTransparent } from '../';
 
 export type RefreshButtonOwnProps = { icon?: never } & Pick<WithTooltipProps, 'tooltip'>;

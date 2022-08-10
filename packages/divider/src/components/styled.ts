@@ -13,11 +13,6 @@ interface IStyleProps {
   orientation: Orientation;
 }
 
-const ROTATE = {
-  [Orientation.Horizontal]: 'none',
-  [Orientation.Vertical]: 'rotate(90deg)',
-};
-
 export const StyledDivider = styled.hr<IStyleProps>`
   margin: 0;
   flex-shrink: 0;

@@ -6,13 +6,13 @@ import { DropdownUpInterfaceSVG, FavouriteInterfaceSVG } from '@sbercloud/uikit-
 import {
   ButtonGroupStyled,
   CollapseButtonStyled,
+  collapseIconClassName,
   ContainerStyled,
   ContentStyled,
   ContentWrapStyled,
+  favouriteButtonClassName,
   HeaderGroupStyled,
   HeaderStyled,
-  collapseIconClassName,
-  favouriteButtonClassName,
 } from './styled';
 
 export interface CollapsePanelItemProps {

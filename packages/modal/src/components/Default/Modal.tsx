@@ -5,18 +5,26 @@ import RCModal from 'react-modal';
 import { Button, ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
-import { WithSupportProps, extractDataTestProps, useLanguage } from '@sbercloud/uikit-product-utils';
+import { extractDataTestProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers/texts-provider';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import {
-  ButtonWrapper,
-  Description,
-  Title,
   buttonCSS,
+  ButtonWrapper,
   closeButtonStyle,
   contentClassname,
+  Description,
   overlayClassname,
+  Title,
 } from './styled';
+
+export const MODAL_CLOSE_TYPE = {
+  APPROVE: 'approve',
+  CANCEL: 'cancel',
+  CROSS: 'cross',
+} as const;
+
+export type ModalCloseType = typeof MODAL_CLOSE_TYPE[keyof typeof MODAL_CLOSE_TYPE];
 
 interface ReactModalProps extends RCModal.Props {
   isOpen: boolean;
@@ -24,17 +32,23 @@ interface ReactModalProps extends RCModal.Props {
   bodyOpenClassName?: string | null;
   htmlOpenClassName?: string | null;
   className?: string;
+
   onAfterClose?(): void;
+
   overlayClassName?: string;
   appElement?: HTMLElement;
+
   onRequestClose?(event: React.MouseEvent<HTMLButtonElement, MouseEvent>, type?: ModalCloseType): void;
+
   closeTimeoutMS?: number;
   ariaHideApp?: boolean;
   shouldFocusAfterRender?: boolean;
   shouldCloseOnOverlayClick?: boolean;
   shouldCloseOnEsc?: boolean;
   shouldReturnFocusAfterClose?: boolean;
+
   parentSelector?(): HTMLElement;
+
   role?: string | null;
   contentLabel?: string;
   contentRef?: (instance: HTMLDivElement) => void;
@@ -67,13 +81,6 @@ export interface ModalProps extends ReactModalProps {
   parentId?: string;
   alarmApproveButton?: boolean;
 }
-
-export const MODAL_CLOSE_TYPE = {
-  APPROVE: 'approve',
-  CANCEL: 'cancel',
-  CROSS: 'cross',
-} as const;
-export type ModalCloseType = typeof MODAL_CLOSE_TYPE[keyof typeof MODAL_CLOSE_TYPE];
 
 export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal, 'setAppElement'> = props => {
   const {

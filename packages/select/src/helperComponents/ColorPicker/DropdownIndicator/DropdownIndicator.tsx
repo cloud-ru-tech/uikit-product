@@ -2,7 +2,7 @@ import { components as ReactSelectComponents } from 'react-select';
 
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
-import { StyledColorBox, StyledDropdown, arrowDownClassName } from './styled';
+import { arrowDownClassName, StyledColorBox, StyledDropdown } from './styled';
 
 export const DropdownIndicator = (
   props: React.ComponentProps<typeof ReactSelectComponents.DropdownIndicator>,

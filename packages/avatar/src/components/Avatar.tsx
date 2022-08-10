@@ -6,14 +6,14 @@ import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import {
   AvatarProps,
   Colors,
+  getAbbreviation,
+  getColor,
   PLACEHOLDER_ICONS,
-  STATUS_MAP,
   Shapes,
   Sizes,
   Status,
+  STATUS_MAP,
   Variants,
-  getAbbreviation,
-  getColor,
 } from '../helpers';
 import * as S from './styled';
 

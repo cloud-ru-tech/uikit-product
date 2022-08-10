@@ -7,7 +7,7 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { IOptionType, IUsersByGroupProps, UsersByGroup, ValueContainer } from '../../helperComponents/InlineTreeSelect';
 import { InputSearch } from '../../helperComponents/Shared/InputSearch';
-import { DictionaryPropertyAsFn, Texts, textProvider } from '../../helpers/texts-provider';
+import { DictionaryPropertyAsFn, textProvider, Texts } from '../../helpers/texts-provider';
 
 const Content = styled.div`
   background: #ffffff;

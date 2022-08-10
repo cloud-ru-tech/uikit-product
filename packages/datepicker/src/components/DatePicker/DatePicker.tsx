@@ -62,14 +62,15 @@ export const DatePicker = ({ value, pickTime, onChange, minDate, size = DatePick
     onChange?.(date);
   };
 
-  const memoizedCustomContainer = useCallback(
-    CustomContainer.bind(null, {
-      date,
-      setDate,
-      pickSettings,
-      handleChange,
-      minDate,
-    }),
+  const memoizedCustomContainer = useMemo(
+    () =>
+      CustomContainer.bind(null, {
+        date,
+        setDate,
+        pickSettings,
+        handleChange,
+        minDate,
+      }),
     [date, setDate, pickSettings, minDate],
   );
 
@@ -77,7 +78,7 @@ export const DatePicker = ({ value, pickTime, onChange, minDate, size = DatePick
     ref.current?.setOpen(false);
   }, [ref]);
 
-  const memoizedCustomHeader = useCallback(CustomHeader.bind(null, { languageCode }), [languageCode]);
+  const memoizedCustomHeader = useMemo(() => CustomHeader.bind(null, { languageCode }), [languageCode]);
 
   return (
     <S.Container>

@@ -1,5 +1,5 @@
 import { Context, ContextProps, useStepperContext } from './Context';
-import { StepType, Steps, StepsProps } from './Steps';
+import { Steps, StepsProps, StepType } from './Steps';
 
 const Stepper = {
   Steps,

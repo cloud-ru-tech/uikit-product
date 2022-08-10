@@ -1,8 +1,8 @@
-import React, { ReactElement, cloneElement } from 'react';
+import React, { cloneElement, ReactElement } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { SIZES_IN_PX, Sizes } from './constants';
+import { Sizes, SIZES_IN_PX } from './constants';
 import { Wrapper } from './styled';
 
 export type PredefinedDecorIconPrivateProps = WithSupportProps<{

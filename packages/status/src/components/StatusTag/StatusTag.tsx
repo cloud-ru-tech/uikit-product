@@ -1,8 +1,8 @@
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Types, Variant } from '../../helpers';
 import { StatusDot } from '../StatusDot';
-import { Content, Wrapper, statusBadgeClassName } from './styled';
+import { Content, statusBadgeClassName, Wrapper } from './styled';
 
 export type StatusTagProps = {
   type?: Types;

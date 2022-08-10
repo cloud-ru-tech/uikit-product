@@ -1,7 +1,7 @@
 import { cx } from '@linaria/core';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { StyledColorBox, optionClass } from './styled';
+import { optionClass, StyledColorBox } from './styled';
 
 export const Option = ({
   data,

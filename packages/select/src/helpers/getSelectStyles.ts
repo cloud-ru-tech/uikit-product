@@ -17,6 +17,8 @@ const themes = {
   [SELECT_TYPES.WITH_LOGO]: withLogoTheme,
 };
 
+type themeFn = (theme: Theme) => Theme;
+
 const getTheme = (type?: string): themeFn => (type ? themes[type] : mediumTheme);
 
 const styles = {
@@ -32,8 +34,6 @@ const styles = {
 /* @ts-ignore*/
 const getCustomStyles = (type?: string): Styles => (type ? styles[type] : mediumStyles);
 
-type themeFn = (theme: Theme) => Theme;
-
 interface ICustomStyles {
   theme: themeFn;
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -41,7 +41,7 @@ interface ICustomStyles {
   styles: Styles;
 }
 
-export default (type?: string): ICustomStyles => ({
+export const getSelectStyles = (type?: string): ICustomStyles => ({
   theme: getTheme(type),
   styles: getCustomStyles(type),
 });

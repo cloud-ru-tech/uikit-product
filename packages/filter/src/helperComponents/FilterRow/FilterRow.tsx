@@ -8,7 +8,7 @@ import { OptionTypeBase, Select } from '@sbercloud/uikit-product-select';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { findSelectValue } from '../../helpers/getValue';
-import { LogicConditionType, getLogicOptionByValue, logicOptions } from '../../helpers/logicOptions';
+import { getLogicOptionByValue, LogicConditionType, logicOptions } from '../../helpers/logicOptions';
 import { IFilterRowProps, TFilterOptionType, TFilterValueType } from '../../helpers/types';
 import { ActionButton } from '../ActionButton';
 import * as S from './styled';

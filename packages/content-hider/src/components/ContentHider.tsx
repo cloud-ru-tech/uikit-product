@@ -3,7 +3,7 @@ import { useMemo, useState } from 'react';
 import { Button } from '@sbercloud/uikit-product-button';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../helpers/texts-provider';
+import { textProvider, Texts } from '../helpers/texts-provider';
 import { ContentHiderStyled, ContentWrapperGradientStyled, ContentWrapperStyled } from './styled';
 
 export type ContentHiderProps = {

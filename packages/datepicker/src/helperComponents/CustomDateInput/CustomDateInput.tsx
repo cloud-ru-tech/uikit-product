@@ -6,8 +6,8 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { getSplitDate } from '../../helpers/getSplitDate';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';
-import { DictionaryPropertyAsFn, Texts, textProvider } from '../../helpers/texts-provider';
-import { PickSettingProps, TSplitDateType, TimeInputProps } from '../../helpers/types';
+import { DictionaryPropertyAsFn, textProvider, Texts } from '../../helpers/texts-provider';
+import { PickSettingProps, TimeInputProps, TSplitDateType } from '../../helpers/types';
 import { HiddenInput } from '../HiddenInput';
 import * as S from './styled';
 

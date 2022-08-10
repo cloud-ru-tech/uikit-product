@@ -41,9 +41,10 @@ export const Container: React.FC<IContainerProps> = ({ getTrigger, children, cla
 
   const handleTrigger = () => setShow(show => !show);
   useEffect(() => {
-    triggerEl.current?.addEventListener('click', handleTrigger);
+    const element = triggerEl.current;
+    element?.addEventListener('click', handleTrigger);
     return () => {
-      triggerEl.current?.removeEventListener('click', handleTrigger);
+      element?.removeEventListener('click', handleTrigger);
     };
   }, [triggerEl]);
 

@@ -7,7 +7,7 @@ import { formatBytes } from '@sbercloud/ft-formatters';
 import { ButtonIcon, ButtonIconProps } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG, FileInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { getFileType } from '../helpers';
 import { FileProps } from '../types';

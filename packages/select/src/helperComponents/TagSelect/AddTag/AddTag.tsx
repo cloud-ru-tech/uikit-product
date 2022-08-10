@@ -7,9 +7,9 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { ColorPicker, OptionTypeColor } from '../../../components';
 import { COLOR_VALUES } from '../../../constants';
-import getRandomInt from '../../../helpers/getRandomInt';
-import { Texts, textProvider } from '../../../helpers/texts-provider';
-import { Container, NotValidMessage, StyledButton, StyledTagWrapper, colorPickerClassName } from './styled';
+import { getRandomInt } from '../../../helpers/getRandomInt';
+import { textProvider, Texts } from '../../../helpers/texts-provider';
+import { colorPickerClassName, Container, NotValidMessage, StyledButton, StyledTagWrapper } from './styled';
 
 export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.Menu>> = props => {
   const { options, setValue, selectProps } = props;

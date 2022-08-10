@@ -1,6 +1,6 @@
 import { ReactElement, useCallback, useMemo, useRef, useState } from 'react';
 
-import { WithSupportProps, extractSupportProps, useComponentSize } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useComponentSize, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { TooltipsSettings } from '../../types';
 import { ArrowsNavigation, DotsNavigation } from '../Navigation';
@@ -50,6 +50,8 @@ export function Carousel({
         break;
       case ActionTypes.Incr:
         setIdx(idx + 1);
+        break;
+      default:
         break;
     }
   };

@@ -1,4 +1,4 @@
-import { ChangeEventHandler, MouseEventHandler, forwardRef } from 'react';
+import { ChangeEventHandler, forwardRef, MouseEventHandler } from 'react';
 
 import { excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 

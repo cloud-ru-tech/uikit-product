@@ -1,4 +1,4 @@
-import { FC, ReactChildren, isValidElement, useState } from 'react';
+import { FC, isValidElement, ReactChildren, useState } from 'react';
 
 import { CollapsePanelItem } from '../CollapsePanelItem';
 import { ContainerStyled } from './styled';

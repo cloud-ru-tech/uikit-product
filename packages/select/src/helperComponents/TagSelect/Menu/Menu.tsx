@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { AddTag } from '../AddTag';
-import { StyledSearchInput, searchInputWrapClassname } from './styled';
+import { searchInputWrapClassname, StyledSearchInput } from './styled';
 
 export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Menu>): JSX.Element => {
   const {

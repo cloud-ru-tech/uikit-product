@@ -3,9 +3,9 @@ import { useState } from 'react';
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CircleAddInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
-import { WithSupportProps, extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../helpers';
+import { textProvider, Texts } from '../../helpers';
 import {
   HeaderBalanceTooltipCurrency,
   HeaderBalanceTooltipFoldable,

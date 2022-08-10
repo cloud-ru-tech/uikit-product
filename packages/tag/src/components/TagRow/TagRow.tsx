@@ -1,11 +1,16 @@
 import { ReactText, Ref, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Colors, Sizes } from '../../constants';
 import { Tag, TagProps } from '../Tag';
 import { TagCloud } from '../TagCloud';
 import { HiddenRow, TagCloudTrigger, TagWrapper, VisibleRow, Wrapper } from './styled';
+
+export type TagRowItem = {
+  value: ReactText;
+  color: Colors;
+};
 
 function renderTag(
   props: Partial<TagProps>,
@@ -23,11 +28,6 @@ function renderTag(
     </TagWrapper>
   );
 }
-
-export type TagRowItem = {
-  value: ReactText;
-  color: Colors;
-};
 
 export type TagRowProps = WithSupportProps<{
   items: TagRowItem[];

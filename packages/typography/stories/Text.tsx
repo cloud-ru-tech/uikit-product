@@ -7,7 +7,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TEXT_1_STYLES, TEXT_2_STYLES, TEXT_3_STYLES, TEXT_4_STYLES } from '../src';
-import { TypographyStoryConfig, commonTemplate } from './helpers/CommonTemplate';
+import { commonTemplate, TypographyStoryConfig } from './helpers/CommonTemplate';
 
 export default {
   title: 'Typography/Text',

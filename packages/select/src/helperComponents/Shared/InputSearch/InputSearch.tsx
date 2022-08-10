@@ -4,8 +4,8 @@ import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-product-
 import { InputPrivate, InputPrivateProps } from '@sbercloud/uikit-product-input-private';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { Texts, textProvider } from '../../../helpers/texts-provider';
-import { InputWrapper, crossIconClassName, searchIconClassname } from './styled';
+import { textProvider, Texts } from '../../../helpers/texts-provider';
+import { crossIconClassName, InputWrapper, searchIconClassname } from './styled';
 
 export type InputSearchProps = Pick<InputPrivateProps, 'className' | 'ref'> &
   Required<Pick<InputPrivateProps, 'value' | 'onChange'>>;

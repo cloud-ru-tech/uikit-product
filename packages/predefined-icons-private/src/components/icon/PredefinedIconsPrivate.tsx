@@ -7,7 +7,7 @@ import {
   InfoInterfaceSVG,
   LoadingWheelInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Icons, Variants } from './constants';
 import { Wrapper } from './styled';

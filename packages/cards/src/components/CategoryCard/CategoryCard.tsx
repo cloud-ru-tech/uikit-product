@@ -1,4 +1,4 @@
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { CardContent, CardImage, CardImageWrap, CardText, CardTitle, ContainerStyled } from './styled';
 

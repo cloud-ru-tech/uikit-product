@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 
 import { RadioCheckedInterfaceSVG, RadioUncheckedInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { WithSupportProps, extractDataTestProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractDataTestProps, extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { RadioGroupContext } from '../RadioGroup/context';
 import { HiddenRadio, IconContainer, Label, Wrapper } from './styled';

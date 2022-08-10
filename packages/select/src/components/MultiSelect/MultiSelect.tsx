@@ -1,5 +1,5 @@
 import { KeyboardEvent, ReactText, useMemo } from 'react';
-import RCSelect, { ActionMeta, ValueType, createFilter } from 'react-select';
+import RCSelect, { ActionMeta, createFilter, ValueType } from 'react-select';
 
 import { SelectActionTypes } from '../../constants';
 import { CustomOption, MultiValue } from '../../helperComponents/MultiSelect';
@@ -46,6 +46,8 @@ export function MultiSelect({
         break;
       case SelectActionTypes.PopValue:
         onRemoveOption(meta.removedValue);
+        break;
+      default:
         break;
     }
   };

@@ -10,11 +10,9 @@ const declOfNumSubFunction = (titles: string[], number: number): string => {
 
 type DeclinationType = (rest: (count: number) => string[]) => (params: Record<string, string | number>) => string;
 
-const declination: DeclinationType =
+export const declination: DeclinationType =
   rest =>
   ({ count }) => {
     if (!count) return '';
     return declOfNumSubFunction(typeof rest === 'function' ? rest(count as number) : rest, count as number);
   };
-
-export default declination;

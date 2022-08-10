@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { WithSupportProps, extractSupportProps, useUniqueId } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useUniqueId, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Mode, Orientation } from '../../constants';
 import {

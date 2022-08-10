@@ -1,4 +1,4 @@
-import { AlertBannerProps, AlertBannerTypes } from '../src';
+import { AlertBannerProps } from '../src';
 
 function visit(props?: Partial<AlertBannerProps & { hideCloseButton: boolean }>) {
   return cy.visitComponent({

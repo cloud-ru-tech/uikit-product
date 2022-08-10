@@ -1,5 +1,5 @@
 import { Marker } from '@sbercloud/uikit-product-marker';
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { ToggleCardBoxControl } from '../../helperComponents';
 import { Value } from '../../types';

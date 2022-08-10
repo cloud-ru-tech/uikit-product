@@ -1,9 +1,9 @@
 import { cx } from '@linaria/core';
 import {
+  toast,
   ToastContainer as RtToastContainer,
   ToastContainerProps as RtToastContainerProps,
   ToastPosition,
-  toast,
 } from 'react-toastify';
 
 import * as S from './styled';

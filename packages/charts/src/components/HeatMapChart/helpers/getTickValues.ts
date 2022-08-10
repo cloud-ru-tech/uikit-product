@@ -49,7 +49,15 @@ export const getTickValues = (domain: HeatMapChartOptions['domain']): string[] =
   const [tickSpacing, niceMin, niceMax] = calculateTicks(DEFAULT_LEGEND_TICKS_NUM, min, max);
 
   const rangeValues = range(niceMin, niceMax, tickSpacing).filter(v => (v > 1 ? Math.floor(v) > min : v > min));
-  return [...new Set([min, ...rangeValues, max])].map(value =>
-    value === 0 ? '0' : value < 1 ? value.toFixed(1) : String(Math.floor(value)),
-  );
+  return [...new Set([min, ...rangeValues, max])].map(value => {
+    if (value === 0) {
+      return '0';
+    }
+
+    if (value < 1) {
+      return value.toFixed(1);
+    }
+
+    return String(Math.floor(value));
+  });
 };

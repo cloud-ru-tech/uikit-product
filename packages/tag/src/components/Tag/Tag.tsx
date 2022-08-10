@@ -3,7 +3,7 @@ import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Colors, Sizes } from '../../constants';
-import { RemoveButton, Text, styledTag } from './styled';
+import { RemoveButton, styledTag, Text } from './styled';
 import { TagProps } from './types';
 
 const ICON_SIZES: Record<Sizes, number> = {

@@ -1,4 +1,4 @@
-import { WithSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { getRange } from '../../utils';
 import { PaginationSliderDotsButton } from '../PaginationSliderDotsButton';
