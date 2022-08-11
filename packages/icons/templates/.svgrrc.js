@@ -4,7 +4,14 @@ module.exports = {
   ext: 'tsx',
   svgo: true,
   svgoConfig: {
-    plugins: { removeViewBox: false },
+    plugins: [
+      {
+        name: 'preset-default',
+        params: {
+          overrides: { removeViewBox: false },
+        },
+      },
+    ],
   },
   replaceAttrValues: {
     currentColor: 'inherit',

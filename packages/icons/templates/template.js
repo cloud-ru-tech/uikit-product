@@ -2,28 +2,24 @@ const generateDataTestId = require('./generateDataTestId');
 
 const template =
   ({ size }) =>
-  ({ template }, opts, { imports, interfaces, componentName, jsx, exports }) => {
-    const plugins = ['jsx', 'typescript'];
-    const typeScriptTpl = template.smart({ plugins });
-
-    opts.expandProps = [];
-
-    const testId = 'icon' + generateDataTestId(componentName.name);
+  ({ imports, interfaces, componentName, jsx, exports }, { tpl }) => {
+    const testId = 'icon' + generateDataTestId(componentName);
 
     const componentProp = Boolean(size)
       ? `{ size = ${size}, ...props }: ISvgIconProps`
       : `{ size, ...props }: ISvgIconProps`;
 
-    return typeScriptTpl.ast`
+    return tpl`
     ${`
-    // DON NOT EDIT IT MANUALLY
+    // DO NOT EDIT IT MANUALLY
     
     `}
-    
     ${imports}
     ${interfaces}
-
-    export interface ISvgIconProps extends React.SVGProps<SVGSVGElement> {
+    ${`
+    
+    `}
+    export interface ISvgIconProps extends SVGProps<SVGSVGElement> {
       className?: string;
       wrapperSize?: string | number;
       size?: string | number;

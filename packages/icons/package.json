@@ -40,6 +40,6 @@
   },
   "devDependencies": {
     "@sbercloud/ft-download-file": "1.1.1",
-    "@svgr/cli": "5.5.0"
+    "@svgr/cli": "6.3.1"
   }
 }

@@ -4,12 +4,17 @@ module.exports = {
   ext: 'tsx',
   svgo: true,
   svgoConfig: {
-    plugins: {
-      removeViewBox: false,
-      prefixIds: {
-        prefixClassNames: false,
+    plugins: [
+      {
+        name: 'preset-default',
+        params: {
+          overrides: {
+            removeViewBox: false,
+            prefixIds: { prefixClassNames: false },
+          },
+        },
       },
-    },
+    ],
   },
   svgProps: {
     'data-test-id': '{testId}',
