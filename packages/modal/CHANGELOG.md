@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.81](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.80...@sbercloud/uikit-product-modal@0.15.81) (2022-08-11)
+
+
+### Bug Fixes
+
+* **FF-682:** update @sbercloud/ft-all-linters-pack version and fix eslint errors ([8e1bca6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e1bca684734d8b82b87c18cf639050e21ef007e))
+
+
+
+
+
 ## [0.15.80](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.79...@sbercloud/uikit-product-modal@0.15.80) (2022-08-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-modal

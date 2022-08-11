@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-radio@3.0.12...@sbercloud/uikit-product-radio@3.0.13) (2022-08-11)
+
+
+### Bug Fixes
+
+* **FF-682:** update @sbercloud/ft-all-linters-pack version and fix eslint errors ([8e1bca6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e1bca684734d8b82b87c18cf639050e21ef007e))
+
+
+
+
+
 ## [3.0.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-radio@3.0.11...@sbercloud/uikit-product-radio@3.0.12) (2022-08-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-radio

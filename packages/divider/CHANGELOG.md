@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-divider@2.0.33...@sbercloud/uikit-product-divider@2.0.34) (2022-08-11)
+
+
+### Bug Fixes
+
+* **FF-682:** update @sbercloud/ft-all-linters-pack version and fix eslint errors ([8e1bca6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e1bca684734d8b82b87c18cf639050e21ef007e))
+
+
+
+
+
 ## [2.0.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-divider@2.0.32...@sbercloud/uikit-product-divider@2.0.33) (2022-07-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-divider

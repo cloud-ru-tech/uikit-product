@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.8.26...@sbercloud/uikit-product-charts@0.8.27) (2022-08-11)
+
+
+### Bug Fixes
+
+* **FF-682:** update @sbercloud/ft-all-linters-pack version and fix eslint errors ([8e1bca6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e1bca684734d8b82b87c18cf639050e21ef007e))
+
+
+
+
+
 ## [0.8.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.8.25...@sbercloud/uikit-product-charts@0.8.26) (2022-08-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-charts

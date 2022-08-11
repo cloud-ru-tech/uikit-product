@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-file-upload@0.3.40...@sbercloud/uikit-product-file-upload@0.3.41) (2022-08-11)
+
+
+### Bug Fixes
+
+* **FF-682:** update @sbercloud/ft-all-linters-pack version and fix eslint errors ([8e1bca6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e1bca684734d8b82b87c18cf639050e21ef007e))
+
+
+
+
+
 ## [0.3.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-file-upload@0.3.39...@sbercloud/uikit-product-file-upload@0.3.40) (2022-08-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-file-upload
