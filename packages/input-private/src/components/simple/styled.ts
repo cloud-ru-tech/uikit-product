@@ -149,6 +149,7 @@ export const MoreButton = styled(ButtonIcon)`
   &&,
   && > button {
     height: 100%;
+    box-sizing: content-box;
   }
 `;
 
