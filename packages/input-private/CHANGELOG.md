@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.5.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.5.11...@sbercloud/uikit-product-input-private@2.5.12) (2022-08-11)
+
+
+### Bug Fixes
+
+* **AICD-3187:** Input: More button fix for Safari ([df36ed9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df36ed9dd43493196dcd5a110b03cb1bfb5868ef))
+
+
+
+
+
 ## [2.5.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.5.10...@sbercloud/uikit-product-input-private@2.5.11) (2022-08-05)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-private

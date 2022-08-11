@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-select",
   "title": "React Select",
-  "version": "0.26.12",
+  "version": "0.26.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -31,7 +31,7 @@
     "@sbercloud/uikit-product-button": "5.0.24",
     "@sbercloud/uikit-product-divider": "2.0.33",
     "@sbercloud/uikit-product-icons": "5.0.0",
-    "@sbercloud/uikit-product-input-private": "2.5.11",
+    "@sbercloud/uikit-product-input-private": "2.5.12",
     "@sbercloud/uikit-product-modal": "0.15.80",
     "@sbercloud/uikit-product-tag": "1.3.12",
     "@sbercloud/uikit-product-theme": "0.34.0",

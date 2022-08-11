@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-input-private",
   "title": "React Input Private",
-  "version": "2.5.11",
+  "version": "2.5.12",
   "sideEffects": [
     "*.css",
     "*.woff",
