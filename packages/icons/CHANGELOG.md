@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.0.1...@sbercloud/uikit-product-icons@5.0.2) (2022-08-15)
+
+
+### Bug Fixes
+
+* **FF-702:** update @svgr/cli package ([16f2d6b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/16f2d6b7ce9b9401fce869677feecc08a717d11f))
+
+
+
+
+
 ## [5.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.0.0...@sbercloud/uikit-product-icons@5.0.1) (2022-08-11)
 
 

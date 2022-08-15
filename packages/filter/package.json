@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-filter",
   "title": "React Filter",
-  "version": "0.15.39",
+  "version": "0.15.40",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,11 +27,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-datepicker": "0.11.58",
+    "@sbercloud/uikit-product-datepicker": "0.11.59",
     "@sbercloud/uikit-product-divider": "2.0.34",
-    "@sbercloud/uikit-product-icons": "5.0.1",
-    "@sbercloud/uikit-product-input-private": "2.5.13",
-    "@sbercloud/uikit-product-select": "0.26.14",
+    "@sbercloud/uikit-product-icons": "5.0.2",
+    "@sbercloud/uikit-product-input-private": "2.5.14",
+    "@sbercloud/uikit-product-select": "0.26.15",
     "@sbercloud/uikit-product-theme": "0.34.1",
     "@sbercloud/uikit-product-tooltip-private": "1.2.17",
     "@sbercloud/uikit-product-typography": "1.2.0",

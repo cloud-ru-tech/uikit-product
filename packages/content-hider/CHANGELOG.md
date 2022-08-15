@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.75](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-content-hider@0.8.74...@sbercloud/uikit-product-content-hider@0.8.75) (2022-08-15)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-content-hider
+
+
+
+
+
 ## [0.8.74](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-content-hider@0.8.73...@sbercloud/uikit-product-content-hider@0.8.74) (2022-08-11)
 
 
