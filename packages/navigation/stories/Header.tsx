@@ -27,6 +27,12 @@ const Wrapper = styled.div`
   padding: 20px;
 `;
 
+const Logo = styled(PredefinedMLSpaceLogo)`
+  > svg {
+    width: 180px;
+  }
+`;
+
 const Template: Story<HeaderProps> = () => (
   <Wrapper>
     <Header>
@@ -37,7 +43,7 @@ const Template: Story<HeaderProps> = () => (
         <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Advanced' href='' />
       </HeaderMenu.Root>
       <HeaderLogo>
-        <PredefinedMLSpaceLogo height={16} />
+        <Logo height={16} />
       </HeaderLogo>
       <HeaderBalanceTooltip balance={144_401_810} limit={155_500_000} />
       <HeaderToolbar.Root>
