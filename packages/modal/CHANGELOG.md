@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.83](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.82...@sbercloud/uikit-product-modal@0.15.83) (2022-08-16)
+
+
+### Bug Fixes
+
+* **FF-520:** z-index issues fixed ([d946bbc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d946bbcbb9482a6b60ad0720304f046ddc4f2380))
+
+
+
+
+
 ## [0.15.82](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.81...@sbercloud/uikit-product-modal@0.15.82) (2022-08-15)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-modal

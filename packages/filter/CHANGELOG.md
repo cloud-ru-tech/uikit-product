@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter@0.15.40...@sbercloud/uikit-product-filter@0.15.41) (2022-08-16)
+
+
+### Bug Fixes
+
+* **FF-520:** Filter bug fix ([ee85f57](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ee85f572676b06f2861ad72872ee53dfe32570f7))
+* **FF-520:** z-index issues fixed ([d946bbc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d946bbcbb9482a6b60ad0720304f046ddc4f2380))
+
+
+
+
+
 ## [0.15.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter@0.15.39...@sbercloud/uikit-product-filter@0.15.40) (2022-08-15)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-filter
