@@ -63,10 +63,13 @@ export function TagRow({ items, size, className, onItemRemove, ...rest }: TagRow
         const nextVisibilityByItem = new Map(prevVisibilityByItem.entries());
         const entryByTagElement = new Map(entries.map(entry => [entry.target as HTMLElement, entry]));
 
-        for (const [item, tagElement] of tagElementByItem.entries()) {
+        const [[firstItem], ...tagElementByItemEntries] = [...tagElementByItem.entries()];
+
+        nextVisibilityByItem.set(firstItem, true);
+
+        for (const [item, tagElement] of tagElementByItemEntries) {
           if (entryByTagElement.has(tagElement)) {
             const entry = entryByTagElement.get(tagElement)!;
-
             nextVisibilityByItem.set(item, entry.isIntersecting);
           }
         }

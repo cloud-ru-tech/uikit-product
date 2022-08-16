@@ -19,12 +19,15 @@ export const Wrapper = styled.div`
 
 export const TagWrapper = styled.div`
   display: flex;
+  max-width: 100%;
 `;
 
 export const VisibleRow = styled.div`
   column-gap: 4px;
   display: flex;
   flex-wrap: nowrap;
+  max-width: 100%;
+  overflow: hidden;
 `;
 
 export const HiddenRow = styled(VisibleRow)`
