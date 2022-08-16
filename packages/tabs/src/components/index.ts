@@ -1,4 +1,6 @@
-import { CounterTypes, Sizes } from '../helpers/types';
+import { Counter } from '@sbercloud/uikit-product-counter';
+
+import { Sizes } from '../helpers/types';
 import { Container as TabContainer, ContainerProps as TabContainerProps } from './Container';
 import { Content as TabContent, ContentProps as TabContentProps } from './Content';
 import { NavigationItem as TabNavigationItem, NavigationItemProps as TabNavigationItemProps } from './NavigationItem';
@@ -15,5 +17,5 @@ export namespace Tabs {
   export type ContentProps = TabContentProps;
 
   export const sizes = Sizes;
-  export const counterTypes = CounterTypes;
+  export const counterTypes = Counter.types;
 }

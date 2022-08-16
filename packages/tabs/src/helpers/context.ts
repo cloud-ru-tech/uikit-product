@@ -1,9 +1,11 @@
 import { createContext } from 'react';
 
-import { CounterTypes, SelectedTabRef, Sizes, TabId, TabsWrapperRef } from './types';
+import { Counter, CounterType } from '@sbercloud/uikit-product-counter';
+
+import { SelectedTabRef, Sizes, TabId, TabsWrapperRef } from './types';
 
 export const TabContext = createContext<{
-  counterType: CounterTypes;
+  counterType: CounterType;
   selectedTab: TabId;
   setSelectedTab(tab: TabId): void;
   tabsWrapperRef: TabsWrapperRef;
@@ -12,7 +14,7 @@ export const TabContext = createContext<{
   setSelectedTabRef(ref: SelectedTabRef): void;
   size: Sizes;
 }>({
-  counterType: CounterTypes.Count,
+  counterType: Counter.types.Count,
   selectedTab: '',
   setSelectedTab() {},
   tabsWrapperRef: null,

@@ -1,10 +1,10 @@
 import { ReactText, useContext, useEffect, useRef } from 'react';
 
+import { CounterProps } from '@sbercloud/uikit-product-counter';
 import { keyboardSelectHandler, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { TabContext } from '../../helpers/context';
 import { SelectedTabRef, TabId } from '../../helpers/types';
-import { CounterProps } from '../Counter';
 import * as S from './styled';
 
 export type NavigationItemProps = WithSupportProps<{

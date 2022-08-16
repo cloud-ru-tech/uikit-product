@@ -1,12 +1,14 @@
 import { ReactElement, useEffect, useState } from 'react';
 
+import { Counter, CounterType } from '@sbercloud/uikit-product-counter';
+
 import { TabContext } from '../../helpers/context';
-import { CounterTypes, SelectedTabRef, Sizes, TabId, TabsWrapperRef } from '../../helpers/types';
+import { SelectedTabRef, Sizes, TabId, TabsWrapperRef } from '../../helpers/types';
 
 export type ContainerProps = {
   children: ReactElement[];
   size?: Sizes;
-  counterType?: CounterTypes;
+  counterType?: CounterType;
   value: TabId;
   onChange?(tab: TabId): void;
 };
@@ -16,7 +18,7 @@ export function Container({
   value,
   onChange,
   size = Sizes.Medium,
-  counterType = CounterTypes.Count,
+  counterType = Counter.types.Count,
 }: ContainerProps) {
   const [selectedTabRef, setSelectedTabRef] = useState<SelectedTabRef>(null);
   const [tabsWrapperRef, setTabsWrapperRef] = useState<TabsWrapperRef>(null);

@@ -9,8 +9,3 @@ export enum Sizes {
   Medium = 'Medium',
   Large = 'Large',
 }
-
-export enum CounterTypes {
-  Count = 'Count',
-  Notify = 'Notify',
-}

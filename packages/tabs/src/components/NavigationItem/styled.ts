@@ -1,9 +1,9 @@
 import { styled } from '@linaria/react';
 
+import { Counter } from '@sbercloud/uikit-product-counter';
 import { H4_STYLES } from '@sbercloud/uikit-product-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
-import { Counter } from '../Counter';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
