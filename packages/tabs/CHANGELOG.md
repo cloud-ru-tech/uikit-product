@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.1.4...@sbercloud/uikit-product-tabs@1.1.5) (2022-08-17)
+
+
+### Bug Fixes
+
+* **FF-707:** use new Counter component instead of internal one ([2b6f849](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2b6f8497eccc2c656108f38491de4e2cad1301b1))
+
+
+
+
+
 ## [1.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.1.3...@sbercloud/uikit-product-tabs@1.1.4) (2022-08-11)
 
 
