@@ -1,18 +1,23 @@
 import { cx } from '@linaria/core';
-import { ChangeEvent } from 'react';
+import { ChangeEvent, useState } from 'react';
 import ReactMarkdown, { Options as ReactMarkdownOptions } from 'react-markdown';
-import gfm from 'remark-gfm';
+import remarkGfm from 'remark-gfm';
 
+import { Divider } from '@sbercloud/uikit-product-divider';
 import { SimpleTextarea } from '@sbercloud/uikit-product-textarea-private';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
+import { Blockquote } from './Blockquote';
+import { Code } from './Code';
 import { MarkdownEditorMode } from './constants';
+import { Link } from './Link';
 import * as S from './styled';
+import { Table } from './Table';
 
 export type MarkdownEditorProps = {
   value: string;
   mode: MarkdownEditorMode;
-  onChange(value: string, e?: ChangeEvent<HTMLTextAreaElement>): void;
+  onChange?(value: string, e?: ChangeEvent<HTMLTextAreaElement>): void;
   placeholder?: string;
   className?: string;
   remarkPlugins?: ReactMarkdownOptions['remarkPlugins'];
@@ -27,19 +32,27 @@ export function MarkdownEditor({
   onChange,
   placeholder,
   className,
-  remarkPlugins = [gfm],
+  remarkPlugins = [remarkGfm],
   rehypePlugins = [],
   components = {},
   skipHtml = true,
   ...rest
 }: WithSupportProps<MarkdownEditorProps>) {
+  const [text, setText] = useState(value);
+
+  const handleChange = (val: string) => {
+    setText(val);
+    onChange?.(val);
+  };
+
   if (mode === MarkdownEditorMode.Edit) {
     return (
       <SimpleTextarea
-        value={value}
+        value={text}
         className={className}
-        onChange={onChange}
+        onChange={handleChange}
         autosize={false}
+        withClearButton={false}
         placeholder={placeholder}
         {...rest}
       />
@@ -51,13 +64,21 @@ export function MarkdownEditor({
       <ReactMarkdown
         remarkPlugins={remarkPlugins}
         rehypePlugins={rehypePlugins}
-        components={components}
         skipHtml={skipHtml}
         className={cx(S.markdownViewerClassName, className)}
+        components={{
+          code: Code,
+          table: Table,
+          hr: Divider,
+          blockquote: Blockquote,
+          a: Link,
+          ...components,
+        }}
       >
         {value}
       </ReactMarkdown>
     </S.MarkdownViewerWrapper>
   );
 }
+
 MarkdownEditor.modes = MarkdownEditorMode;
