@@ -50,9 +50,10 @@ export function Search({
         postfix={
           hasClearButton && (
             <ButtonIcon
-              icon={<CloseInterfaceSVG size={18} tabIndex={-1} />}
+              icon={<CloseInterfaceSVG size={18} />}
               onClick={handleClearSearch}
               tooltip={{ content: textProvider(languageCode, Texts.Clear) }}
+              tabIndex={-1}
             />
           )
         }
