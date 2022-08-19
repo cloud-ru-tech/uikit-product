@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tag@1.3.15...@sbercloud/uikit-product-tag@1.4.0) (2022-08-19)
+
+
+### Bug Fixes
+
+* **FF-545:** fixed display of a single long tag ([fcc5c3c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fcc5c3c3a4efaea7bbf8a94eb0cd19be2553745a))
+
+
+### Features
+
+* **FF-545:** add animation for TagCloud component ([e3945b7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3945b7f901f5cf8a9174ba56d9925ce313536af))
+* **FF-545:** add tooltip for Tag component ([e681071](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e6810713b6b2183921b5418c6c29c6d00a15460c))
+
+
+
+
+
 ## [1.3.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tag@1.3.14...@sbercloud/uikit-product-tag@1.3.15) (2022-08-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-tag
