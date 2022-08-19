@@ -10,9 +10,15 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
+export const TRANSITION_DURATION = 200;
+
 export const tooltipContainerClassName = css`
-  background-color: var(${COLORS.background.default});
   border-radius: 4px;
+`;
+
+export const Content = styled.div`
+  background-color: var(${COLORS.background.default});
+  border-radius: inherit;
   box-shadow: 0 4px 20px var(${EXPORT_VARS.BLACK_ALFA[8]});
   box-sizing: border-box;
   display: flex;
@@ -23,6 +29,17 @@ export const tooltipContainerClassName = css`
   overflow-x: hidden;
   overflow-y: auto;
   padding: 12px;
+  transition: opacity ${TRANSITION_DURATION}ms ease-out;
+
+  &[data-state='entered'] {
+    opacity: 1;
+  }
+
+  &[data-state='entering'],
+  &[data-state='exiting'],
+  &[data-state='exited'] {
+    opacity: 0;
+  }
 `;
 
 export const Item = styled.div`
