@@ -1,6 +1,5 @@
 import { styled } from '@linaria/react';
 
-import { DropdownDownInterfaceSVG, LockInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
@@ -15,8 +14,6 @@ export const Item = styled.div`
   --sidebar-item__backround-color: transparent;
   --sidebar-item__text-color: var(${COLORS.text.default});
   --sidebar-item__icon-color: var(${COLORS.icon.default});
-  --sidebar-item__lock-color: var(${COLORS.lock.default});
-  --sidebar-item__arrow-color: var(${COLORS.arrow.default});
 
   ${TEXT_2_STYLES};
   padding: 8px 16px;
@@ -42,8 +39,6 @@ export const Item = styled.div`
   &[data-disabled] {
     --sidebar-item__text-color: var(${COLORS.text.disabled});
     --sidebar-item__icon-color: var(${COLORS.icon.disabled});
-    --sidebar-item__lock-color: var(${COLORS.lock.disabled});
-    --sidebar-item__arrow-color: var(${COLORS.arrow.disabled});
 
     cursor: not-allowed;
   }
@@ -51,7 +46,6 @@ export const Item = styled.div`
   &[data-selected] {
     --sidebar-item__text-color: var(${COLORS.text.selected});
     --sidebar-item__icon-color: var(${COLORS.icon.selected});
-    --sidebar-item__arrow-color: var(${COLORS.arrow.selected});
   }
 `;
 
@@ -86,27 +80,4 @@ export const Text = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   transition: color ${ANIMATIONS.TRANSITION};
-`;
-
-export const Elements = styled.div`
-  display: flex;
-  align-items: center;
-  column-gap: 8px;
-  flex-shrink: 0;
-  padding-left: 8px;
-  grid-column: none;
-`;
-
-export const LockIcon = styled(LockInterfaceSVG)`
-  fill: var(--sidebar-item__lock-color);
-  transition: fill ${ANIMATIONS.TRANSITION};
-`;
-
-export const AccordionArrowIcon = styled(DropdownDownInterfaceSVG)`
-  fill: var(--sidebar-item__lock-color);
-  transition: fill ${ANIMATIONS.TRANSITION}, transform ${ANIMATIONS.TRANSITION};
-
-  &[data-selected] {
-    transform: rotate(-180deg);
-  }
 `;

@@ -16,11 +16,9 @@ export const Item = styled.div`
   transition: background-color ${ANIMATIONS.TRANSITION};
   width: 100%;
 
-  &:not([data-disabled]) {
-    &:not([data-no-hover]) {
-      &:hover {
-        background-color: var(${COLORS.background.hover});
-      }
+  &:not([data-no-hover]) {
+    &:hover {
+      background-color: var(${COLORS.background.hover});
     }
   }
 
