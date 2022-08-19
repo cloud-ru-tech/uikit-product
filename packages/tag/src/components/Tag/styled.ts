@@ -23,6 +23,11 @@ export const styledTag = (Tag: VFC<TagProps>): VFC<TagProps> => styled(Tag)`
   max-width: 100%;
   overflow: hidden;
 
+  & span {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
   &[data-size='${Sizes.Small}'] {
     padding: 0 8px;
   }
