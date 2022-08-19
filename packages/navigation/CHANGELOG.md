@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.2.4...@sbercloud/uikit-product-navigation@0.3.0) (2022-08-19)
+
+
+### Features
+
+* **FF-673:** introduce `HeaderProjectSelector` component ([f062265](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f06226554268dd794706abc5f84b50f64d18ad9f))
+
+
+
+
+
 ## [0.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.2.3...@sbercloud/uikit-product-navigation@0.2.4) (2022-08-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-navigation
