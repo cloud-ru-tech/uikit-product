@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-search@0.0.1...@sbercloud/uikit-product-search@0.0.2) (2022-08-19)
+
+
+### Bug Fixes
+
+* **FF-703:** disable selecting clear button when navigating with tab ([f1079ca](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f1079cacc44dc7e45201fb34c60e94a64ada08a9))
+
+
+
+
+
 ## 0.0.1 (2022-08-17)
 
 
