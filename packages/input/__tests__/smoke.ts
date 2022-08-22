@@ -259,6 +259,48 @@ describe('[Input]:', () => {
       });
     });
 
+    describe('IpV4Address:', () => {
+      it('Should allow correct characters and allow clean field', () => {
+        visit({
+          onChange: () => {},
+          mask: 'IpV4Address' as InputMaskProps['mask'],
+        });
+
+        cy.getByDataTestId(testId).within(() => {
+          cy.getByDataTestId('private-input')
+            .should('have.value', '')
+            .type('Test')
+            .should('not.have.value', 'Test')
+            .type('10')
+            .should('have.value', `10._._._`)
+            .type('.10.0.1')
+            .should('have.value', `10.10.0.1`);
+
+          cy.getByDataTestId('input__clear-button').click();
+
+          cy.getByDataTestId('private-input').should('have.value', '_._._._');
+        });
+      });
+
+      it('Should render correct mask, allow correct characters for mask postfix', () => {
+        visit({
+          onChange: () => {},
+          mask: 'IpV4AddressWithMask' as InputMaskProps['mask'],
+        });
+
+        cy.getByDataTestId(testId).within(() => {
+          cy.getByDataTestId('private-input')
+            .should('have.value', '')
+            .type('Test')
+            .should('not.have.value', 'Test')
+            .type('10')
+            .should('have.value', `10._._._/__`)
+            .type('.10.0.1/32')
+            .should('have.value', `10.10.0.1/32`);
+        });
+      });
+    });
+
     runCommonTests(
       props =>
         visit({
