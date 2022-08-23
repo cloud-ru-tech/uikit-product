@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toggle-group@1.1.9...@sbercloud/uikit-product-toggle-group@1.1.10) (2022-08-23)
+
+
+### Bug Fixes
+
+* **FF-701:** 'Marker' renamed to 'Label' ([4078a1c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4078a1ce5c438b2b430b1547d61febd1a7f0dd06))
+
+
+
+
+
 ## [1.1.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toggle-group@1.1.8...@sbercloud/uikit-product-toggle-group@1.1.9) (2022-08-11)
 
 
