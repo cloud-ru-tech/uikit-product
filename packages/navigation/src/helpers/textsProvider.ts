@@ -7,6 +7,11 @@ export enum Texts {
 
   HeaderProjectSelectorCreateProject = 'header-project-selector-create-project',
   HeaderProjectSelectorCreateWorkspace = 'header-project-selector-create-workspace',
+
+  SidebarBackToPlatforms = 'sidebar-back-to-platforms-button',
+  SidebarBackButton = 'sidebar-back-button',
+  SidebarCloseSearch = 'sidebar-close-search',
+  SidebarItemNew = 'sidebar-item-new',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -17,6 +22,11 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     [Texts.HeaderProjectSelectorCreateProject]: 'Создать проект',
     [Texts.HeaderProjectSelectorCreateWorkspace]: 'Создать workspace',
+
+    [Texts.SidebarBackToPlatforms]: 'ко всем платформам',
+    [Texts.SidebarBackButton]: 'назад',
+    [Texts.SidebarCloseSearch]: 'закрыть поиск',
+    [Texts.SidebarItemNew]: 'новый',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderBalanceTooltipBalance]: 'Balance',
@@ -25,6 +35,11 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     [Texts.HeaderProjectSelectorCreateProject]: 'Create project',
     [Texts.HeaderProjectSelectorCreateWorkspace]: 'Create workspace',
+
+    [Texts.SidebarBackToPlatforms]: 'to all platforms',
+    [Texts.SidebarBackButton]: 'to level back',
+    [Texts.SidebarCloseSearch]: 'close search',
+    [Texts.SidebarItemNew]: 'new',
   },
 };
 

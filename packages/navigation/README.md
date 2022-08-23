@@ -227,3 +227,42 @@ type HeaderProjectSelectorProps = WithSupportProps<{
   onCreate?(): void;
 }>;
 ```
+
+### Sidebar
+
+```ts
+type SidebarItemId = string | number;
+
+type SidebarProps = WithSupportProps<{
+  list: SidebarItemsGroup[];
+  selected?: SidebarItemId;
+  footerItems?: SidebarItemProps[];
+  onBackClick?(): void;
+  onItemClick: SidebarItemProps['onClick'];
+  className?: string;
+}>;
+
+enum Mode {
+  Slide = 'slide',
+  Accordion = 'accordion',
+}
+
+type SidebarItemProps = {
+  id: SidebarItemId;
+  text: string;
+  href?: string;
+  icon?: ReactElement;
+  onClick?(e: MouseEvent, id: SidebarItemId, href?: string): void;
+  disabled?: boolean;
+  isNew?: boolean;
+  isLocked?: boolean;
+  count?: number;
+  nestedList?: SidebarItemsGroup[];
+  mode?: Mode;
+};
+
+type SidebarItemsGroup = {
+  heading?: string;
+  items: SidebarItemProps[];
+};
+```
