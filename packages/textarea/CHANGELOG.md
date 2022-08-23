@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.2.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea@2.2.16...@sbercloud/uikit-product-textarea@2.2.17) (2022-08-23)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-textarea
+
+
+
+
+
 ## [2.2.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea@2.2.15...@sbercloud/uikit-product-textarea@2.2.16) (2022-08-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-textarea

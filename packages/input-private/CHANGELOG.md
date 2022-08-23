@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.5.15...@sbercloud/uikit-product-input-private@2.6.0) (2022-08-23)
+
+
+### Features
+
+* **FF-718:** added ip address masks to InputMask component ([f68f588](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f68f588c752c642635ebc06b87f63f96962c247f))
+
+
+
+
+
 ## [2.5.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.5.14...@sbercloud/uikit-product-input-private@2.5.15) (2022-08-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-private

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.0.2...@sbercloud/uikit-product-icons@5.1.0) (2022-08-23)
+
+
+### Features
+
+* **FF-742:** add resize-input-area icon ([b8681ef](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b8681ef150d5bc6b99adbfac9e339c6515f7e5ee))
+
+
+
+
+
 ## [5.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.0.1...@sbercloud/uikit-product-icons@5.0.2) (2022-08-15)
 
 
