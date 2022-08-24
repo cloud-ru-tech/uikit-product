@@ -1,8 +1,44 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import SvgMlSpaceLogo from 'icons/src/components/logo-icons/MlSpaceLogo';
 import { MouseEvent, useEffect, useState } from 'react';
 
-import { ChristofariServiceSVG } from '@sbercloud/uikit-product-icons';
+import {
+  AdvancedServiceSVG,
+  AiMarketplaceServiceSVG,
+  AiServiceSVG,
+  ArtefactServiceSVG,
+  AutoMlServiceSVG,
+  BucketInterfaceSVG,
+  ChristofariServiceSVG,
+  CircleCheckOutlineInterfaceSVG,
+  DataCatalogServiceSVG,
+  DataHubServiceSVG,
+  DatasetServiceSVG,
+  DataTransferServiceSVG,
+  DeploymentServiceSVG,
+  DockerRegistryServiceSVG,
+  EnviromentsServiceSVG,
+  EnvironmentTaskServiceSVG,
+  ExperimentServiceSVG,
+  FavouriteServiceSVG,
+  GitlabServiceSVG,
+  HomeInterfaceSVG,
+  JupiterServerServiceSVG,
+  ModelRegistryServiceSVG,
+  ModelsMonitoringServiceSVG,
+  MonitoringServiceSVG,
+  MyDeploymentsServiceSVG,
+  MyImagesServiceSVG,
+  Pipelines2ServiceSVG,
+  PlusSquareInterfaceSVG,
+  ProjectDisplaySVG,
+  SettingsInterfaceSVG,
+  SupportInterfaceSVG,
+  TimeInterfaceSVG,
+  ViewTableInterfaceSVG,
+  ViewTileInterfaceSVG,
+} from '@sbercloud/uikit-product-icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -15,7 +51,7 @@ export default {
 } as Meta;
 
 const Wrap = styled.div`
-  height: 600px;
+  height: 800px;
 `;
 
 const Template: Story<SidebarProps> = ({ selected, ...args }) => {
@@ -42,285 +78,321 @@ const Template: Story<SidebarProps> = ({ selected, ...args }) => {
 
 export const sidebar = Template.bind({});
 sidebar.args = {
-  selected: 'first level 1-2',
+  selected: 'main-advanced',
   list: [
     {
       items: [
         {
-          id: 'null-level item',
-          text: 'null-level title',
+          id: 'main',
+          text: 'Главная',
           href: '/',
-          icon: <ChristofariServiceSVG />,
-          nestedList: [
-            {
-              items: [
-                {
-                  id: 'null-level nested item 1',
-                  text: 'null-level nested item 1',
-                  href: '/',
-                  icon: <ChristofariServiceSVG />,
-                },
-              ],
-            },
-          ],
+          icon: <HomeInterfaceSVG />,
         },
       ],
     },
     {
-      heading: 'first heading',
+      heading: 'Платформы',
       items: [
         {
-          id: 'first-level 1-1',
-          text: 'with nested items',
+          id: 'main-advanced',
+          text: 'Advanced',
+          href: '/',
+          icon: <AdvancedServiceSVG />,
+        },
+        {
+          id: 'main-enterprise',
+          text: 'Enterprise',
           href: '/',
           icon: <ChristofariServiceSVG />,
+        },
+        {
+          id: 'main-mlspace',
+          text: 'ML Space',
+          href: '/',
+          icon: <SvgMlSpaceLogo />,
           nestedList: [
             {
-              heading: 'second level',
               items: [
                 {
-                  id: 'first-level-nested 1.1',
-                  text: 'second level with nested items',
-                  href: '/',
-                  icon: <ChristofariServiceSVG />,
-                  nestedList: [
-                    {
-                      heading: 'third level',
-                      items: [
-                        {
-                          id: 'first-level-nested 1.1.1',
-                          text: 'third level with nested items',
-                          href: '/',
-                          icon: <ChristofariServiceSVG />,
-                          nestedList: [
-                            {
-                              heading: 'fourth level',
-                              items: [
-                                {
-                                  id: 'first-level-nested 1.1.1.1',
-                                  text: 'fourth level 1',
-                                  href: '/',
-                                  icon: <ChristofariServiceSVG />,
-                                },
-                                {
-                                  id: 'first-level-nested 1.1.1.2',
-                                  text: 'fourth level 2',
-                                  href: '/',
-                                  icon: <ChristofariServiceSVG />,
-                                },
-                                {
-                                  id: 'first-level-nested 1.1.1.3',
-                                  text: 'fourth level 3',
-                                  href: '/',
-                                  icon: <ChristofariServiceSVG />,
-                                  disabled: true,
-                                },
-                              ],
-                            },
-                            {
-                              items: [
-                                {
-                                  id: 'first-level-nested 1.1.2.1',
-                                  text: 'first 4 2',
-                                  href: '/',
-                                  icon: <ChristofariServiceSVG />,
-                                },
-                                {
-                                  id: 'first-level-nested 1.1.2.2',
-                                  text: 'second',
-                                  href: '/',
-                                  icon: <ChristofariServiceSVG />,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          id: 'first-level-nested 1.1.2',
-                          text: 'third level 2',
-                          href: '/',
-                          icon: <ChristofariServiceSVG />,
-                        },
-                        {
-                          id: 'first-level-nested 1.1.3',
-                          text: 'third level 3',
-                          href: '/',
-                          icon: <ChristofariServiceSVG />,
-                        },
-                      ],
-                    },
-                  ],
-                },
-                {
-                  id: 'first-level-nested 1.2',
-                  text: 'accordion',
-                  href: '/',
-                  icon: <ChristofariServiceSVG />,
+                  id: 'main-Data-Catalog',
+                  text: 'Data Catalog',
                   mode: Sidebar.listModes.Accordion,
+                  icon: <DataCatalogServiceSVG />,
                   nestedList: [
                     {
                       items: [
                         {
-                          id: 'accordion 1',
-                          text: 'accordion 1',
+                          id: 'file-manager',
+                          text: 'Хранилище S3',
                           href: '/',
-                          icon: <ChristofariServiceSVG />,
+                          icon: <BucketInterfaceSVG />,
                         },
                         {
-                          id: 'accordion 2',
-                          text: 'accordion 2',
+                          id: 'first-level-nested 1.2',
+                          text: 'Data Transfer Service',
                           href: '/',
-                          icon: <ChristofariServiceSVG />,
+                          icon: <DataTransferServiceSVG />,
                           mode: Sidebar.listModes.Accordion,
-                          nestedList: [
-                            {
-                              items: [
-                                {
-                                  id: 'accordion 2.1',
-                                  text: 'accordion 2.1',
-                                  href: '/',
-                                  icon: <ChristofariServiceSVG />,
-                                },
-                                {
-                                  id: 'accordion 2.2',
-                                  text: 'accordion 2.2',
-                                  href: '/',
-                                  icon: <ChristofariServiceSVG />,
-                                },
-                                {
-                                  id: 'accordion 2.3',
-                                  text: 'accordion 2.3',
-                                  href: '/',
-                                  icon: <ChristofariServiceSVG />,
-                                },
-                              ],
-                            },
-                          ],
-                        },
-                        {
-                          id: 'accordion 3',
-                          text: 'accordion 3',
-                          href: '/',
-                          icon: <ChristofariServiceSVG />,
-                        },
-                        {
-                          id: 'accordion 4',
-                          text: 'accordion 4',
-                          href: '/',
-                          icon: <ChristofariServiceSVG />,
                         },
                       ],
                     },
                   ],
-                },
-                {
-                  id: 'first-level-nested 1.3',
-                  text: 'second level 3',
-                  href: '/',
-                  icon: <ChristofariServiceSVG />,
-                },
-                {
-                  id: 'first-level-nested 1.4',
-                  text: 'second level 4',
-                  href: '/',
-                  icon: <ChristofariServiceSVG />,
-                  disabled: true,
-                },
-                {
-                  id: 'first-level-nested 1.5',
-                  text: 'second level 5',
-                  href: '/',
-                  icon: <ChristofariServiceSVG />,
-                  isLocked: true,
                 },
               ],
             },
             {
-              heading: 'second level heading',
               items: [
                 {
-                  id: 'first-level-nested 2.1',
-                  text: 'first-level-nested 2',
+                  id: 's2-1',
+                  text: 'Environments',
+                  mode: Sidebar.listModes.Accordion,
+                  icon: <EnviromentsServiceSVG />,
+                  nestedList: [
+                    {
+                      items: [
+                        {
+                          id: 's2-1-1',
+                          text: 'Jupiter Servers',
+                          href: '/',
+                          icon: <JupiterServerServiceSVG />,
+                        },
+                        {
+                          id: 's2-1-2',
+                          text: 'Gitlab CI',
+                          href: '/',
+                          icon: <GitlabServiceSVG />,
+                        },
+                        {
+                          id: 's2-1-3',
+                          text: 'Задачи и окружения',
+                          href: '/',
+                          icon: <EnvironmentTaskServiceSVG />,
+                        },
+                        {
+                          id: 's2-1-4',
+                          text: 'Мониторинг',
+                          href: '/',
+                          icon: <MonitoringServiceSVG />,
+                        },
+                        {
+                          id: 's2-1-5',
+                          text: 'Эксперементы',
+                          href: '/',
+                          icon: <ExperimentServiceSVG />,
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              items: [
+                {
+                  id: 's3-1',
+                  text: 'Deployments',
+                  mode: Sidebar.listModes.Accordion,
+                  icon: <DeploymentServiceSVG />,
+                  nestedList: [
+                    {
+                      items: [
+                        {
+                          id: 's3-1-1',
+                          text: 'Деплои',
+                          href: '/',
+                          icon: <MyDeploymentsServiceSVG />,
+                        },
+                        {
+                          id: 's3-1-2',
+                          text: 'Образы',
+                          href: '/',
+                          icon: <MyImagesServiceSVG />,
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              items: [
+                {
+                  id: 's4-1',
+                  text: 'Artifact Registry',
+                  mode: Sidebar.listModes.Accordion,
+                  icon: <ArtefactServiceSVG />,
+                  nestedList: [
+                    {
+                      items: [
+                        {
+                          id: 's4-1-1',
+                          text: 'Обзор',
+                          href: '/',
+                          icon: <ViewTileInterfaceSVG />,
+                        },
+                        {
+                          id: 's4-1-2',
+                          text: 'Docker Registry',
+                          href: '/',
+                          icon: <DockerRegistryServiceSVG />,
+                        },
+                        {
+                          id: 's4-1-3',
+                          text: 'Model Registry',
+                          href: '/',
+                          icon: <ModelRegistryServiceSVG />,
+                        },
+                        {
+                          id: 's4-1-4',
+                          text: 'Dataset Registry',
+                          href: '/',
+                          icon: <DatasetServiceSVG />,
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              items: [
+                {
+                  id: 's5-1',
+                  text: 'AutoML',
                   href: '/',
-                  icon: <ChristofariServiceSVG />,
+                  icon: <AutoMlServiceSVG />,
+                },
+              ],
+            },
+            {
+              items: [
+                {
+                  id: 's6-1',
+                  text: 'Pipelines',
+                  mode: Sidebar.listModes.Accordion,
+                  icon: <Pipelines2ServiceSVG />,
+                  nestedList: [
+                    {
+                      items: [
+                        {
+                          id: 's6-1-1',
+                          text: 'Пайплайны',
+                          href: '/',
+                          icon: <Pipelines2ServiceSVG />,
+                        },
+                        {
+                          id: 's6-1-2',
+                          text: 'История запусков',
+                          href: '/',
+                          icon: <TimeInterfaceSVG />,
+                        },
+                      ],
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              items: [
+                {
+                  id: 's7-1',
+                  text: 'AI Marketplaces',
+                  mode: Sidebar.listModes.Accordion,
+                  icon: <AiMarketplaceServiceSVG />,
+                  nestedList: [
+                    {
+                      items: [
+                        {
+                          id: 's7-1-1',
+                          text: 'Datahub',
+                          href: '/',
+                          icon: <DataHubServiceSVG />,
+                        },
+                        {
+                          id: 's7-1-2',
+                          text: 'AI Services',
+                          href: '/',
+                          icon: <AiServiceSVG />,
+                        },
+                        {
+                          id: 's7-1-3',
+                          text: 'Мой контент',
+                          href: '/',
+                          icon: <ViewTableInterfaceSVG />,
+                        },
+                        {
+                          id: 's7-1-4',
+                          text: 'Кабинет продавца',
+                          href: '/',
+                          icon: <PlusSquareInterfaceSVG />,
+                        },
+                        {
+                          id: 's7-1-5',
+                          text: 'Модерация',
+                          href: '/',
+                          icon: <CircleCheckOutlineInterfaceSVG />,
+                        },
+                      ],
+                    },
+                  ],
                 },
               ],
             },
           ],
         },
         {
-          id: 'first level 1-2',
-          text: 'first level 1-2',
+          id: 'main-standart',
+          text: 'SVP',
           href: '/',
-          icon: <ChristofariServiceSVG />,
-        },
-        {
-          id: 'first level 1-3',
-          text: 'first level 1-3',
-          href: '/',
-          icon: <ChristofariServiceSVG />,
-          disabled: true,
-        },
-        {
-          id: 'first level 1-4',
-          text: 'first level 1-4',
-          href: '/',
-          icon: <ChristofariServiceSVG />,
+          icon: <MyImagesServiceSVG />,
           disabled: true,
         },
       ],
     },
     {
-      heading: 'second heading',
+      heading: 'Другие услуги',
       items: [
         {
           id: 'first-level 2-1',
-          text: 'first-level 2-1',
+          text: 'Общие сервисы платформ',
           href: '/',
-          icon: <ChristofariServiceSVG />,
+          icon: <ModelsMonitoringServiceSVG />,
         },
         {
           id: 'first-level 2-2',
-          text: 'first-level 2-2',
+          text: 'Специально для вас',
           href: '/',
-          icon: <ChristofariServiceSVG />,
+          icon: <FavouriteServiceSVG />,
           isLocked: true,
         },
         {
           id: 'first-level 2-3',
-          text: 'first-level 2-3',
+          text: 'Маркетплейс AI Services',
           href: '/',
-          icon: <ChristofariServiceSVG />,
+          icon: <AiMarketplaceServiceSVG />,
           isNew: true,
-        },
-        {
-          id: 'first-level 2-4',
-          text: 'first-level 2-4',
-          href: '/',
-          icon: <ChristofariServiceSVG />,
-          count: 2,
         },
       ],
     },
   ],
   footerItems: [
     {
-      id: 'footer first',
-      text: 'footer first',
-      href: '/',
-      icon: <ChristofariServiceSVG />,
-    },
-    {
       id: 'footer second',
-      text: 'footer second',
+      text: 'Администрирование',
       href: '/',
-      icon: <ChristofariServiceSVG />,
+      icon: <ProjectDisplaySVG />,
     },
     {
       id: 'footer third',
-      text: 'footer third',
+      text: 'Поддержка',
       href: '/',
-      icon: <ChristofariServiceSVG />,
+      icon: <SupportInterfaceSVG />,
+    },
+    {
+      id: 'footer third',
+      text: 'Настройки',
+      href: '/',
+      icon: <SettingsInterfaceSVG />,
     },
   ],
 };
