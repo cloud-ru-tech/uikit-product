@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea-private@2.4.17...@sbercloud/uikit-product-textarea-private@2.5.0) (2022-08-24)
+
+
+### Features
+
+* **AICDC-7860:** add withClearButton property ([726dbdf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/726dbdf76c1e7626005def31d51127a4a925e638))
+
+
+
+
+
 ## [2.4.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea-private@2.4.16...@sbercloud/uikit-product-textarea-private@2.4.17) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-textarea-private

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-markdown-editor@0.1.60...@sbercloud/uikit-product-markdown-editor@0.2.0) (2022-08-24)
+
+
+### Features
+
+* **AICDC-7860:** update editor styles and components ([3822d92](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3822d92744d503fb40590984ff4b96ba4e30fc2e))
+
+
+
+
+
 ## [0.1.60](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-markdown-editor@0.1.59...@sbercloud/uikit-product-markdown-editor@0.1.60) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-markdown-editor
