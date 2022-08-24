@@ -15,4 +15,5 @@ export type SimpleTextareaProps = RefAttributes<HTMLTextAreaElement> &
     maxLength?: number;
     autosize?: boolean;
     error?: boolean;
+    withClearButton?: boolean;
   }>;

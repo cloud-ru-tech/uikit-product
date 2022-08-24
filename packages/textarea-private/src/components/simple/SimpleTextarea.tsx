@@ -23,6 +23,7 @@ const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaPr
       error = false,
       disabled = false,
       autosize = true,
+      withClearButton = true,
       ...rest
     },
     ref,
@@ -37,7 +38,7 @@ const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaPr
       onChange('');
       innerRef.current?.focus();
     }, [onChange, innerRef]);
-    const hasClearButton = Boolean(value.length) && !disabled;
+    const hasClearButton = Boolean(value.length) && !disabled && withClearButton;
 
     return (
       <div
