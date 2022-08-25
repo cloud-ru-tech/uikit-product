@@ -11,14 +11,18 @@ PrismLight.registerLanguage('bash', bash);
 
 import * as S from './styled';
 
-type CodeProps = { className?: string; children: ReactNode & ReactNode[] };
+type CodeProps = { inline?: boolean; className?: string; children: ReactNode & ReactNode[] };
 
-export function Code({ className, children }: CodeProps) {
+export function Code({ inline, className, children }: CodeProps) {
   const language = /language-(\w+)/.exec(className || '')?.[1];
 
-  return (
-    <PrismLight className={S.prismClassName} style={prism} language={language} PreTag='div'>
-      {String(children).replace(/\n$/, '')}
-    </PrismLight>
-  );
+  if (!inline) {
+    return (
+      <PrismLight className={S.prismClassName} style={prism} language={language} PreTag='div'>
+        {String(children).replace(/\n$/, '')}
+      </PrismLight>
+    );
+  }
+
+  return <code className={S.codeClassName}>{children}</code>;
 }

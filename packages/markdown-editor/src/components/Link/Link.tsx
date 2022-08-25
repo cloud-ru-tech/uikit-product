@@ -9,7 +9,8 @@ type LinkProps =
 
 export function Link(props: LinkProps) {
   if (typeof props === 'object' && 'children' in props) {
-    return <UIKitLink text={String(props.children)} href={props.href || ''} />;
+    // @ts-expect-error в некоторых сценариях в props.children может быть разметка
+    return <UIKitLink text={props.children} href={props.href || ''} />;
   }
   return <div />;
 }

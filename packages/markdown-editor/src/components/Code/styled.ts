@@ -24,3 +24,10 @@ export const prismClassName = css`
     background: none !important;
   }
 `;
+
+export const codeClassName = css`
+  ${TEXT_2_STYLES};
+  text-shadow: none;
+  color: var(${COLORS.COLOR_DEFAULT});
+  background-color: var(${COLORS.CODE.BACKGROUND_COLOR});
+`;
