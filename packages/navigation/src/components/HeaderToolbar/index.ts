@@ -1,6 +1,8 @@
 import {
   HeaderToolbarItem,
   HeaderToolbarItemProps,
+  HeaderToolbarProfileItem,
+  HeaderToolbarProfileItemProps,
   HeaderToolbarProfileMenu,
   HeaderToolbarProfileMenuAvatarItem,
   HeaderToolbarProfileMenuAvatarItemProps,
@@ -17,6 +19,9 @@ export namespace HeaderToolbar {
 
   export const Item = HeaderToolbarItem;
   export type ItemProps = HeaderToolbarItemProps;
+
+  export const ProfileItem = HeaderToolbarProfileItem;
+  export type ProfileItemProps = HeaderToolbarProfileItemProps;
 
   export const ProfileMenu = HeaderToolbarProfileMenu;
   export type ProfileMenuProps = HeaderToolbarProfileMenuProps;

@@ -4,7 +4,7 @@ import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 export const COLORS = {
   background: {
-    default: '--color__navigation__header__background__default',
+    default: '--color__navigation__mobile-header__background__default',
   },
 };
 

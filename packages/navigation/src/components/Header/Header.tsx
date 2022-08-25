@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { Wrapper } from './styled';
+import * as S from './styled';
 
 export type HeaderProps = WithSupportProps<{
   children: ReactNode;
@@ -11,8 +11,8 @@ export type HeaderProps = WithSupportProps<{
 
 export function Header({ children, className, ...rest }: HeaderProps) {
   return (
-    <Wrapper className={className} {...extractSupportProps(rest)}>
+    <S.Wrapper className={className} {...extractSupportProps(rest)}>
       {children}
-    </Wrapper>
+    </S.Wrapper>
   );
 }

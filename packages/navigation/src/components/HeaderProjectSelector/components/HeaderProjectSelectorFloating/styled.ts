@@ -20,5 +20,4 @@ export const Wrapper = styled.div<{ strategy: string; x: number; y: number }>`
   outline: none;
   position: ${props => props.strategy};
   top: ${props => props.y}px;
-  width: 400px;
 `;

@@ -27,22 +27,24 @@ export function HeaderProjectSelectorReference({
       data-test-id='header-project-selector__reference'
       {...getProps()}
     >
-      {selectedProject && (
-        <S.Segment>
-          <HeaderProjectSelectorProjectLabel
-            label={selectedProject}
-            data-test-id='header-project-selector__selected-project'
-          />
-        </S.Segment>
-      )}
-      {selectedWorkspace && (
-        <S.Segment>
-          <HeaderProjectSelectorWorkspaceLabel
-            label={selectedWorkspace}
-            data-test-id='header-project-selector__selected-workspace'
-          />
-        </S.Segment>
-      )}
+      <S.Selection>
+        {selectedProject && (
+          <S.Segment>
+            <HeaderProjectSelectorProjectLabel
+              label={selectedProject}
+              data-test-id='header-project-selector__selected-project'
+            />
+          </S.Segment>
+        )}
+        {selectedWorkspace && (
+          <S.Segment>
+            <HeaderProjectSelectorWorkspaceLabel
+              label={selectedWorkspace}
+              data-test-id='header-project-selector__selected-workspace'
+            />
+          </S.Segment>
+        )}
+      </S.Selection>
       <HeaderProjectSelectorIcon>
         <S.Arrow data-open={isOpen || undefined} />
       </HeaderProjectSelectorIcon>

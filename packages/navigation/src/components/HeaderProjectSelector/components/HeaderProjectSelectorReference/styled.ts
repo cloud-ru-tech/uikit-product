@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
+import { ANIMATIONS, CSS_BREAKPOINTS } from '@sbercloud/uikit-product-utils';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -33,12 +33,29 @@ export const Wrapper = styled.button`
   &[data-open] {
     border-color: var(${COLORS.border.open});
   }
+
+  @media ${CSS_BREAKPOINTS.mobile} {
+    width: 100%;
+    justify-content: space-between;
+  }
+`;
+
+export const Selection = styled.div`
+  column-gap: inherit;
+  display: grid;
+  grid-auto-columns: 150px;
+  grid-auto-flow: column;
+  width: inherit;
+
+  @media ${CSS_BREAKPOINTS.mobile} {
+    grid-auto-columns: 1fr;
+  }
 `;
 
 export const Segment = styled.div`
   column-gap: inherit;
   display: flex;
-  width: 150px;
+  overflow: hidden;
 `;
 
 export const Arrow = styled(DropdownDownInterfaceSVG)`

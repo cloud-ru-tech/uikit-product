@@ -107,6 +107,28 @@ type HeaderProps = WithSupportProps<{
 }>;
 ```
 
+### MobileHeader
+
+```ts
+type MobileHeaderProps = {
+  children: ReactNode;
+  className?: string;
+  onMenuClick?(target: HTMLElement): void;
+}
+```
+
+### MobileMenu
+
+```ts
+type MobileMenuProps = {
+  children: ReactNode;
+};
+
+type MobileMenuReference = {
+  toggleOpen(target: HTMLElement): void;
+};
+```
+
 ### HeaderBalanceTooltip
 
 ```ts

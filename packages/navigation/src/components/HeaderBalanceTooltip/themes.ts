@@ -4,13 +4,13 @@ import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 export const COLORS = {
   background: {
-    default: '--color-navigation__header-balance-tooltip-background__default',
+    default: '--color__navigation__header-balance-tooltip__background__default',
   },
   border: {
-    default: '--color-navigation__header-balance-tooltip-border__default',
+    default: '--color__navigation__header-balance-tooltip__border__default',
   },
   text: {
-    default: '--color-navigation__header-balance-tooltip-text__default',
+    default: '--color__navigation__header-balance-tooltip__text__default',
   },
 };
 
