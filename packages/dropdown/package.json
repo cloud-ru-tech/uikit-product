@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-dropdown",
   "title": "React Dropdown",
-  "version": "0.16.2",
+  "version": "0.16.3",
   "sideEffects": [
     "*.css",
     "*.woff",

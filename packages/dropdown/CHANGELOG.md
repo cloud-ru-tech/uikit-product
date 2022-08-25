@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.16.2...@sbercloud/uikit-product-dropdown@0.16.3) (2022-08-25)
+
+
+### Bug Fixes
+
+* changes dropdown menu background color ([dcc2711](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dcc2711cc265b2ae998b8c154ed690a1383aa27c))
+
+
+
+
+
 ## [0.16.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.16.1...@sbercloud/uikit-product-dropdown@0.16.2) (2022-08-16)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-dropdown
