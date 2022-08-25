@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.84...@sbercloud/uikit-product-modal@0.16.0) (2022-08-25)
+
+
+### Features
+
+* **FF-825:** added custom button to Modal ([7893bfc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7893bfcda191f573ca0a51099324561017187fe4))
+
+
+
+
+
 ## [0.15.84](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.15.83...@sbercloud/uikit-product-modal@0.15.84) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-modal
