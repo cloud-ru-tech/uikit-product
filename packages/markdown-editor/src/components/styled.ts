@@ -23,7 +23,9 @@ export const markdownViewerClassName = css`
   color: var(${COLORS.COLOR_DEFAULT});
 
   & > * {
-    margin: 12px 0 !important;
+    :not(h1, h2, h3, h4, h5, h6) {
+      margin: 12px 0 !important;
+    }
   }
 
   & > *:first-child {
