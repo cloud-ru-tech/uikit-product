@@ -2,6 +2,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
+import { DeleteInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -44,6 +45,8 @@ modal.args = {
   shouldCloseOnOverlayClick: false,
   shouldCloseOnEsc: false,
   cancel: () => {},
+  customButtonText: 'Удалить',
+  customButtonIcon: <DeleteInterfaceSVG />,
 };
 modal.argTypes = {};
 modal.parameters = {

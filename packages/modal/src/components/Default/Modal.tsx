@@ -1,22 +1,14 @@
 import { cx } from '@linaria/core';
-import React, { useMemo } from 'react';
+import React, { ReactElement, useMemo } from 'react';
 import RCModal from 'react-modal';
 
-import { Button, ButtonIcon } from '@sbercloud/uikit-product-button';
+import { Button, ButtonGhost, ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { extractDataTestProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers/texts-provider';
-import {
-  buttonCSS,
-  ButtonWrapper,
-  closeButtonStyle,
-  contentClassname,
-  Description,
-  overlayClassname,
-  Title,
-} from './styled';
+import { ButtonWrapper, closeButtonStyle, contentClassname, Description, overlayClassname, Title } from './styled';
 
 export const MODAL_CLOSE_TYPE = {
   APPROVE: 'approve',
@@ -80,12 +72,17 @@ export interface ModalProps extends ReactModalProps {
   zIndex?: number;
   parentId?: string;
   alarmApproveButton?: boolean;
+  onCustomButtonClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  customButtonText?: string;
+  customButtonIcon?: ReactElement;
+  disableCustomButton?: boolean;
 }
 
 export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal, 'setAppElement'> = props => {
   const {
     isOpen,
     onRequestClose,
+    onCustomButtonClick,
     title,
     description,
     disableApprove,
@@ -94,6 +91,7 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
     cancel,
     approveText,
     cancelText,
+    customButtonText,
     appElement,
     hideCross,
     overlayOffset,
@@ -103,6 +101,8 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
     alarmApproveButton,
     className: propsClassName,
     overlayClassName: propsOverlayClassName,
+    customButtonIcon,
+    disableCustomButton,
   } = props;
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -116,6 +116,9 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
     [cancelText, languageCode],
   );
   const closeBtnText = useMemo(() => textProvider(languageCode, Texts.Close), [languageCode]);
+
+  const showButtonWrapper = approve || cancel || onCustomButtonClick;
+  const showCustomButton = onCustomButtonClick && customButtonText;
 
   if (appElement) {
     RCModal.setAppElement(appElement as HTMLElement);
@@ -158,13 +161,36 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
       )}
       {title && <Title data-test-id='modal__title'>{title}</Title>}
       {description && <Description data-test-id='modal__description'>{description}</Description>}
-      {(approve || cancel) && (
+      {showButtonWrapper && (
         <ButtonWrapper>
+          {showCustomButton && (
+            <ButtonGhost
+              variant={ButtonGhost.variants.Tertiary}
+              onClick={onCustomButtonClick}
+              text={customButtonText}
+              data-test-id='modal__custom-btn'
+              disabled={disableCustomButton}
+              {...(customButtonIcon && {
+                icon: customButtonIcon,
+                iconPosition: ButtonGhost.iconPosition.Before,
+              })}
+            />
+          )}
+          {cancel && (
+            <Button
+              variant={Button.variants.Transparent}
+              onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+                cancel(e);
+                onRequestClose?.(e, MODAL_CLOSE_TYPE.CANCEL);
+              }}
+              data-test-id='modal__cancel-btn'
+              text={cancelBtnText}
+            />
+          )}
           {approve &&
             (disableApprove && disableApproveTooltip ? (
               <Tooltip content={disableApproveTooltip}>
                 <Button
-                  className={buttonCSS}
                   disabled={disableApprove}
                   variant={alarmApproveButton ? Button.variants.Alarm : Button.variants.Filled}
                   onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -178,7 +204,6 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
             ) : (
               <Button
                 variant={alarmApproveButton ? Button.variants.Alarm : Button.variants.Filled}
-                className={buttonCSS}
                 disabled={disableApprove}
                 onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
                   approve(e);
@@ -188,18 +213,6 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
                 text={approveBtnText}
               />
             ))}
-          {cancel && (
-            <Button
-              className={buttonCSS}
-              variant={Button.variants.Transparent}
-              onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
-                cancel(e);
-                onRequestClose?.(e, MODAL_CLOSE_TYPE.CANCEL);
-              }}
-              data-test-id='modal__cancel-btn'
-              text={cancelBtnText}
-            />
-          )}
         </ButtonWrapper>
       )}
     </RCModal>

@@ -27,10 +27,9 @@ export const Description = styled.div`
 export const ButtonWrapper = styled.div`
   margin-top: 40px;
   display: flex;
-`;
-
-export const buttonCSS = css`
-  margin-right: 8px !important;
+  justify-content: flex-end;
+  align-items: center;
+  column-gap: 12px;
 `;
 
 export const contentClassname = css`
