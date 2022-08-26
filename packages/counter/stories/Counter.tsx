@@ -6,21 +6,22 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Counter, CounterProps } from '../src';
+import { ThemeWrapper } from './helperComponents';
 
 export default {
   title: 'Not stable/Counter',
   component: Counter,
 } as Meta;
 
-const Template: Story<CounterProps> = ({ ...args }) => (
-  <>
+const Template: Story<CounterProps> = ({ variant, ...args }) => (
+  <ThemeWrapper variant={variant}>
     <div>
-      Counter <Counter {...args} type={Counter.types.Count} />
+      Counter <Counter {...args} variant={variant} type={Counter.types.Count} />
     </div>
     <div>
-      Counter-Notify <Counter {...args} type={Counter.types.Notify} />
+      Counter-Notify <Counter {...args} variant={variant} type={Counter.types.Notify} />
     </div>
-  </>
+  </ThemeWrapper>
 );
 
 export const counter = Template.bind({});
@@ -35,7 +36,7 @@ counter.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=4824%3A65492',
+    url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-DS%E3%83%BBComponents?node-id=5168%3A69430',
   },
   badges: [BADGE.BETA],
 };

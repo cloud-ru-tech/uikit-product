@@ -3,8 +3,9 @@ import { VFC } from 'react';
 
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
+import { CounterType, Variant } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
-import { CounterProps, CounterType } from './types';
+import { CounterProps } from './types';
 
 PURPLE_THEME;
 PURPLE_DARK_THEME;
@@ -24,12 +25,26 @@ export const styledCounter = (Counter: VFC<CounterProps>): VFC<CounterProps> => 
   border-radius: 100px;
 
   &[data-type='${CounterType.Count}'] {
-    color: var(${COLORS.text.count});
-    background-color: var(${COLORS.background.count});
+    &[data-variant=${Variant.Primary}] {
+      color: var(${COLORS.text.count.primary});
+      background-color: var(${COLORS.background.count.primary});
+    }
+
+    &[data-variant=${Variant.OnDark}] {
+      color: var(${COLORS.text.count.dark});
+      background-color: var(${COLORS.background.count.dark});
+    }
   }
 
   &[data-type='${CounterType.Notify}'] {
-    color: var(${COLORS.text.notify});
-    background-color: var(${COLORS.background.notify});
+    &[data-variant=${Variant.Primary}] {
+      color: var(${COLORS.text.notify.primary});
+      background-color: var(${COLORS.background.notify.primary});
+    }
+
+    &[data-variant=${Variant.OnDark}] {
+      color: var(${COLORS.text.notify.dark});
+      background-color: var(${COLORS.background.notify.dark});
+    }
   }
 `;

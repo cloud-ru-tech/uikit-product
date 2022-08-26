@@ -7,9 +7,21 @@
 
 ## Props
 ```typescript
+
+enum Variant {
+  Primary = 'primary',
+  OnDark = 'onDark',
+}
+
+enum CounterType {
+  Count = 'count',
+  Notify = 'notify',
+}
+
 type CounterProps = {
   value: number;
   type?: CounterType
-  className?: string; 
+  className?: string;
+  variant?: Variant;
 }
 ```
