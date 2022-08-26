@@ -63,7 +63,7 @@ export const docker = [
 export const fm = [
   {
     text: (
-      <Tooltip content={'virgin page'} placement={Tooltip.placements.BottomStart}>
+      <Tooltip content={'virgin page'} placement={Tooltip.placements.BottomStart} type={Tooltip.types.Instant}>
         <RocketInterfaceSVG />
       </Tooltip>
     ),

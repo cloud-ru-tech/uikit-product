@@ -107,7 +107,12 @@ export function Document({ file, disabled, onClick, removeButton, className, ...
 
   if (needsTooltip) {
     return (
-      <Tooltip data-test-id='document__tooltip' content={fileName} classNameTrigger={cx(S.wrapClassName, className)}>
+      <Tooltip
+        data-test-id='document__tooltip'
+        content={fileName}
+        classNameTrigger={cx(S.wrapClassName, className)}
+        type={Tooltip.types.Tip}
+      >
         {documentContent}
       </Tooltip>
     );

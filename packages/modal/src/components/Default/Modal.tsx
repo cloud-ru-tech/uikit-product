@@ -189,7 +189,7 @@ export const Modal: React.FC<WithSupportProps<ModalProps>> & Pick<typeof RCModal
           )}
           {approve &&
             (disableApprove && disableApproveTooltip ? (
-              <Tooltip content={disableApproveTooltip}>
+              <Tooltip content={disableApproveTooltip} type={Tooltip.types.Tip}>
                 <Button
                   disabled={disableApprove}
                   variant={alarmApproveButton ? Button.variants.Alarm : Button.variants.Filled}

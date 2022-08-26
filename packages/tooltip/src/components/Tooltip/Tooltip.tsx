@@ -23,13 +23,13 @@ import {
 
 export type TooltipProps = {
   children: TooltipPrivateProps['children'];
+  type: TooltipType;
   title?: string;
   content?: string | React.ReactNode;
   icon?: React.ReactElement;
   iconAction?(): void;
   classNameTrigger?: string;
   placement?: TooltipPrivateProps['placement'];
-  type?: TooltipType;
   link?: LinkProps;
   trigger?: TooltipPrivateProps['trigger'];
 };
@@ -43,7 +43,7 @@ export function Tooltip({
   placement = Placements.Top,
   icon,
   iconAction,
-  type = TooltipType.Main,
+  type,
   trigger = TriggerTypes.Hover,
   ...rest
 }: WithSupportProps<TooltipProps>) {

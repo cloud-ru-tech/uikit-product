@@ -29,6 +29,7 @@ export function Header({ optional, label, labelTooltip, labelFor }: HeaderProps)
             <Tooltip
               classNameTrigger={S.LabelIconTriggerView}
               data-test-id={'input-wrapper__help-icon'}
+              type={Tooltip.types.Instant}
               {...labelTooltip}
             >
               <S.LabelIcon />

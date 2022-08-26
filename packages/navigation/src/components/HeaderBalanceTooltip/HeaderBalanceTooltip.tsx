@@ -80,7 +80,7 @@ export function HeaderBalanceTooltip({
         <Balance type='button' onClick={onBalanceClick} disabled={!Boolean(onBalanceClick)}>
           <Tooltip
             placement={Tooltip.placements.Bottom}
-            type={Tooltip.types.Info}
+            type={Tooltip.types.Tip}
             content={textProvider(languageCode, Texts.HeaderBalanceTooltipBalance)}
           >
             <RegularText data-test-id='header-balance-tooltip__balance'>
@@ -110,7 +110,7 @@ export function HeaderBalanceTooltip({
             <Balance type='button' onClick={onBalanceClick} disabled={!Boolean(onBalanceClick)}>
               <Tooltip
                 placement={Tooltip.placements.Bottom}
-                type={Tooltip.types.Info}
+                type={Tooltip.types.Tip}
                 content={textProvider(languageCode, Texts.HeaderBalanceTooltipBalance)}
               >
                 <AccentText data-test-id='header-balance-tooltip__balance'>
@@ -120,7 +120,7 @@ export function HeaderBalanceTooltip({
               <RegularText>/</RegularText>
               <Tooltip
                 placement={Tooltip.placements.Bottom}
-                type={Tooltip.types.Info}
+                type={Tooltip.types.Tip}
                 content={textProvider(languageCode, Texts.HeaderBalanceTooltipLimit)}
               >
                 <RegularText data-test-id='header-balance-tooltip__limit'>
@@ -142,7 +142,7 @@ export function HeaderBalanceTooltip({
         <RechargeButton>
           <Tooltip
             placement={Tooltip.placements.Bottom}
-            type={Tooltip.types.Info}
+            type={Tooltip.types.Tip}
             content={textProvider(languageCode, Texts.HeaderBalanceTooltipRecharge)}
           >
             <ButtonIcon

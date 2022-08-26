@@ -1,4 +1,5 @@
 export enum TooltipType {
-  Main = 'main',
-  Info = 'info',
+  Instant = 'instant',
+  Truncated = 'truncated',
+  Tip = 'tip',
 }

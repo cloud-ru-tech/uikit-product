@@ -77,7 +77,7 @@ const Template: Story<TooltipProps> = ({ ...args }, { globals: { theme } }) => (
       <Title>Placements</Title>
       <Divider />
       {Object.values(Tooltip.placements).map(placement => (
-        <Tooltip content={'content'} placement={placement} key={placement}>
+        <Tooltip content={'content'} placement={placement} key={placement} type={Tooltip.types.Instant}>
           {placement}
         </Tooltip>
       ))}
@@ -86,7 +86,7 @@ const Template: Story<TooltipProps> = ({ ...args }, { globals: { theme } }) => (
       <Title>Triggers</Title>
       <Divider />
       {Object.values(Tooltip.triggers).map(trigger => (
-        <Tooltip content={'content'} trigger={trigger} key={trigger}>
+        <Tooltip content={'content'} trigger={trigger} key={trigger} type={Tooltip.types.Instant}>
           {trigger}
         </Tooltip>
       ))}
@@ -105,7 +105,7 @@ tooltip.args = {
       e.preventDefault();
     },
   },
-  type: Tooltip.types.Main,
+  type: Tooltip.types.Instant,
 };
 tooltip.argTypes = {
   icon: {

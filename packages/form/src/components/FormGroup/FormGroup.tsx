@@ -7,7 +7,7 @@ export interface FormGroupProps {
   number?: number;
   className?: string;
   title?: React.ReactNode;
-  hint?: Omit<TooltipProps, 'children'>;
+  hint?: Omit<TooltipProps, 'children' | 'type'>;
 }
 
 export const FormGroup: React.FC<FormGroupProps> = ({ className, number, title, hint, children }) => (
@@ -19,7 +19,7 @@ export const FormGroup: React.FC<FormGroupProps> = ({ className, number, title, 
         <Title>{title}</Title>
 
         {hint && (
-          <Tooltip {...hint} classNameTrigger={tooltipTriggerClassName}>
+          <Tooltip {...hint} classNameTrigger={tooltipTriggerClassName} type={Tooltip.types.Instant}>
             <QuestionInterfaceSVG size={20} className={hintClassName} />
           </Tooltip>
         )}

@@ -32,7 +32,7 @@ function StylelessTag({ color, value, className, size = Sizes.Small, onRemoveCli
       {...extractSupportProps(rest)}
     >
       {isTextOverflown ? (
-        <Tooltip title={String(value)} trigger={Tooltip.triggers.Hover}>
+        <Tooltip title={String(value)} trigger={Tooltip.triggers.Hover} type={Tooltip.types.Truncated}>
           <Text ref={setText} data-test-id='tag-text'>
             {value}
           </Text>

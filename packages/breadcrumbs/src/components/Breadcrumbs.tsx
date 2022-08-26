@@ -219,7 +219,7 @@ export const Breadcrumbs = ({
   const textWrapper = (tooltip: boolean, text: string | ReactNode, el: ReactNode): ReactNode => {
     if (tooltip && typeof text === 'string') {
       return (
-        <Tooltip content={text} classNameTrigger={cutTextClassName}>
+        <Tooltip content={text} classNameTrigger={cutTextClassName} type={Tooltip.types.Truncated}>
           {el}
         </Tooltip>
       );

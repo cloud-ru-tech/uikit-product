@@ -31,6 +31,7 @@ function StylelessSwitchRow({
             title={tooltip?.title}
             content={tooltip?.content}
             classNameTrigger={S.titleTooltipClassName}
+            type={Tooltip.types.Instant}
           >
             <QuestionInterfaceSVG />
           </Tooltip>

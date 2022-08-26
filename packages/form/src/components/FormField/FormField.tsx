@@ -5,7 +5,7 @@ import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type FormFieldProps = WithSupportProps<{
-  hint?: Omit<TooltipProps, 'children'>;
+  hint?: Omit<TooltipProps, 'children' | 'type'>;
   label?: string;
   labelFor?: string;
   error?: string;

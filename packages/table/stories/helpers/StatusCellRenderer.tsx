@@ -9,7 +9,7 @@ export const StatusCell = ({
 }: TooltipProps & StatusTagProps & { value: StatusTagProps['text'] }) => {
   if (content) {
     return (
-      <Tooltip content={content}>
+      <Tooltip content={content} type={Tooltip.types.Instant}>
         <StatusTag className={className} type={type} text={value} />
       </Tooltip>
     );
