@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-markdown-editor",
   "title": "React Markdown Editor",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "sideEffects": [
     "*.css",
     "*.woff",
