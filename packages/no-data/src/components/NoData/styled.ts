@@ -20,6 +20,7 @@ export const Title = styled.h5`
   ${H5_STYLES};
   color: var(${COLORS.TITLE});
   margin-bottom: 8px;
+  text-align: center;
 `;
 
 export const DescContainer = styled.div`
