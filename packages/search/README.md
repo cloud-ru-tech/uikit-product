@@ -13,5 +13,6 @@ type SearchProps = {
   disabled?: boolean;
   size?: Size;
   variant?: Variant;
+  placeholder?: string;
 };
 ```

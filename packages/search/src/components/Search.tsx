@@ -14,6 +14,7 @@ export type SearchProps = WithSupportProps<{
   disabled?: boolean;
   size?: Size;
   variant?: Variant;
+  placeholder?: string;
 }>;
 
 export function Search({
@@ -22,6 +23,7 @@ export function Search({
   disabled,
   size = Size.Medium,
   variant = Variant.Filled,
+  placeholder,
   ...rest
 }: SearchProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -45,7 +47,7 @@ export function Search({
         value={value}
         onChange={onChange}
         disabled={disabled}
-        placeholder={textProvider(languageCode, Texts.Search)}
+        placeholder={placeholder || textProvider(languageCode, Texts.Search)}
         prefix={<S.SearchIcon size={18} data-disabled={disabled || undefined} />}
         postfix={
           hasClearButton && (
