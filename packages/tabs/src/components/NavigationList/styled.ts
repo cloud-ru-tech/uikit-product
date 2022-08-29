@@ -51,6 +51,18 @@ export const GroupStyledContainer = styled.div`
 export const RelContainer = styled.nav`
   position: relative;
   overflow-x: hidden;
+
+  &[data-dragged] {
+    &,
+    &:hover {
+      cursor: grabbing;
+    }
+
+    li,
+    li:hover {
+      cursor: grabbing !important;
+    }
+  }
 `;
 
 const SHADOW_BOX_CSS = `

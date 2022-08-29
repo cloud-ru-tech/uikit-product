@@ -5,6 +5,7 @@ import { useForceUpdate, WithSupportProps } from '@sbercloud/uikit-product-utils
 import { TabContext } from '../../helpers/context';
 import { Highlighter } from '../Highlighter';
 import { NavigationItemProps } from '../NavigationItem';
+import { useDragScroll } from './helpers';
 import * as S from './styled';
 
 export type NavigationListProps = WithSupportProps<{
@@ -23,6 +24,7 @@ export function NavigationList({ children, className, ...rest }: NavigationListP
     Math.ceil(containerRef.current.scrollLeft) !== containerRef.current.scrollWidth - containerRef.current.clientWidth;
   const selectedTabLeft = (selectedTabRef?.current && selectedTabRef.current.offsetLeft) || 0;
   const selectedTabWidth = (selectedTabRef?.current && selectedTabRef.current.getBoundingClientRect().width) || 0;
+  const { isDragActive, handleClickCapture, handlePointerDown } = useDragScroll(containerRef);
 
   useEffect(() => {
     setTabsWrapperRef(containerRef);
@@ -43,8 +45,14 @@ export function NavigationList({ children, className, ...rest }: NavigationListP
   };
 
   return (
-    <S.RelContainer className={className} {...rest}>
-      <S.GroupStyledContainer ref={containerRef} onWheel={wheelHandler} onScroll={scrollHandler}>
+    <S.RelContainer className={className} data-dragged={isDragActive || undefined} {...rest}>
+      <S.GroupStyledContainer
+        ref={containerRef}
+        onWheel={wheelHandler}
+        onScroll={scrollHandler}
+        onPointerDown={handlePointerDown}
+        onClickCapture={handleClickCapture}
+      >
         <S.GroupStyled data-size={size} data-test-id={'tabs__navigation-list'}>
           {children}
         </S.GroupStyled>
