@@ -4,12 +4,14 @@ import { ButtonGhost, ButtonIcon } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
 import { CloseInterfaceSVG, MenuCloseFullInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Search } from '@sbercloud/uikit-product-search';
+import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../../../helpers';
 import { useSidebarContext } from '../../context';
 import { findSelected } from '../../helpers';
 import { SidebarLevel } from '../../types';
+import { SidebarCollapsedItem } from '../SidebarCollapsedItem';
 import { SidebarItem } from '../SidebarItem';
 import * as S from './styled';
 
@@ -20,8 +22,17 @@ type SidebarListHeaderProps = {
 
 export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps) {
   const { languageCode } = useLanguage();
-  const { handleBackClick, selected, currentLevel, search, setSearch, openSearch, closeSearch, isSearchShown } =
-    useSidebarContext();
+  const {
+    handleBackClick,
+    selected,
+    currentLevel,
+    isSearchShown,
+    search,
+    setSearch,
+    openSearch,
+    closeSearch,
+    isCollapsed,
+  } = useSidebarContext();
   const searchRef = useRef<HTMLInputElement>(null);
   const searchWrapRef = useRef<HTMLDivElement>(null);
 
@@ -48,28 +59,23 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
     return false;
   }, [onCurrentLevel, level.title, selected]);
 
-  const backButtonText = levelIndex > 1 ? Texts.SidebarBackButton : Texts.SidebarBackToPlatforms;
+  const backButtonText = textProvider(
+    languageCode,
+    levelIndex > 1 ? Texts.SidebarBackButton : Texts.SidebarBackToPlatforms,
+  );
 
-  return (
-    <div>
-      {isSearchShown ? (
-        <S.BackButton
-          variant={ButtonGhost.variants.Tertiary}
-          iconPosition={ButtonGhost.iconPosition.Before}
-          text={textProvider(languageCode, Texts.SidebarCloseSearch)}
-          icon={<CloseInterfaceSVG />}
-          onClick={closeSearch}
-        />
-      ) : (
-        <S.BackButton
-          variant={ButtonGhost.variants.Tertiary}
-          iconPosition={ButtonGhost.iconPosition.Before}
-          text={textProvider(languageCode, backButtonText)}
-          icon={<MenuCloseFullInterfaceSVG />}
-          onClick={handleBackClick}
-        />
-      )}
+  const renderTitle = () => {
+    if (isCollapsed) {
+      return (
+        level.title && (
+          <Tooltip content={level.title.text} type={Tooltip.types.Tip} placement={Tooltip.placements.Right}>
+            <SidebarCollapsedItem item={level.title} />
+          </Tooltip>
+        )
+      );
+    }
 
+    return (
       <S.Title>
         <S.TitleWrap data-hide={isSearchShown || undefined}>
           {level.title && (
@@ -88,6 +94,45 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
           <Search ref={searchRef} size={Search.sizes.Small} value={search} onChange={setSearch} />
         </S.SearchWrap>
       </S.Title>
+    );
+  };
+
+  return (
+    <div>
+      {isCollapsed && (
+        <Tooltip content={backButtonText} type={Tooltip.types.Tip} placement={Tooltip.placements.Right}>
+          <S.BackButtonWrapper>
+            <ButtonIcon
+              icon={<MenuCloseFullInterfaceSVG />}
+              variant={ButtonIcon.variants.Color}
+              onClick={handleBackClick}
+            />
+          </S.BackButtonWrapper>
+        </Tooltip>
+      )}
+      {!isCollapsed && (
+        <S.BackButtonWrapper>
+          {isSearchShown ? (
+            <ButtonGhost
+              variant={ButtonGhost.variants.Tertiary}
+              iconPosition={ButtonGhost.iconPosition.Before}
+              text={textProvider(languageCode, Texts.SidebarCloseSearch)}
+              icon={<CloseInterfaceSVG />}
+              onClick={closeSearch}
+            />
+          ) : (
+            <ButtonGhost
+              variant={ButtonGhost.variants.Tertiary}
+              iconPosition={ButtonGhost.iconPosition.Before}
+              text={backButtonText}
+              icon={<MenuCloseFullInterfaceSVG />}
+              onClick={handleBackClick}
+            />
+          )}
+        </S.BackButtonWrapper>
+      )}
+
+      {renderTitle()}
 
       <S.DividerWrap data-hide={isSearchShown || undefined}>
         <Divider />

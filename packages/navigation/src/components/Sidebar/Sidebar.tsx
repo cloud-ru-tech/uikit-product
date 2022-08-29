@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { SidebarFooter, SidebarMain } from './components';
@@ -15,9 +17,18 @@ export type SidebarProps = WithSupportProps<{
 }>;
 
 export function Sidebar({ list, selected, footerItems, onItemClick, onBackClick, className, ...rest }: SidebarProps) {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
   return (
-    <S.Sidebar className={className} {...extractSupportProps(rest)}>
-      <SidebarContextProvider onBackClick={onBackClick} selected={selected} list={list} onItemClick={onItemClick}>
+    <S.Sidebar data-collapsed={isCollapsed || undefined} className={className} {...extractSupportProps(rest)}>
+      <SidebarContextProvider
+        onBackClick={onBackClick}
+        selected={selected}
+        list={list}
+        onItemClick={onItemClick}
+        isCollapsed={isCollapsed}
+        setIsCollapsed={setIsCollapsed}
+      >
         <SidebarMain />
 
         <SidebarFooter items={footerItems} />

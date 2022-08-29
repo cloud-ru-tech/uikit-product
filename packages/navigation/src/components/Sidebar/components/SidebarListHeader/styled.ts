@@ -1,13 +1,10 @@
 import { styled } from '@linaria/react';
 
-import { ButtonGhost } from '@sbercloud/uikit-product-button';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
-export const BackButton = styled(ButtonGhost)`
-  & {
-    margin-left: 16px;
-    margin-bottom: 16px;
-  }
+export const BackButtonWrapper = styled.div`
+  display: inline-flex;
+  padding: 8px 16px;
 `;
 
 export const Title = styled.div`

@@ -1,5 +1,10 @@
+import { ButtonGhost, ButtonIcon } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
+import { MenuCloseInterfaceSVG, MenuOpenedInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Tooltip } from '@sbercloud/uikit-product-tooltip';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
+import { textProvider, Texts } from '../../../../helpers';
 import { useSidebarContext } from '../../context';
 import { SidebarProps } from '../../Sidebar';
 import { SidebarList } from '../SidebarList';
@@ -10,7 +15,8 @@ type SidebarFooterProps = {
 };
 
 export function SidebarFooter({ items }: SidebarFooterProps) {
-  const { isSearchShown } = useSidebarContext();
+  const { isSearchShown, isCollapsed, collapse, uncollapse } = useSidebarContext();
+  const { languageCode } = useLanguage();
 
   if (isSearchShown) return null;
 
@@ -22,6 +28,28 @@ export function SidebarFooter({ items }: SidebarFooterProps) {
 
           <SidebarList levelIndex={0} list={[{ items }]} isFooter />
         </>
+      )}
+
+      {isCollapsed ? (
+        <Tooltip
+          content={textProvider(languageCode, Texts.SidebarUncollapseMenu)}
+          type={Tooltip.types.Tip}
+          placement={Tooltip.placements.Right}
+        >
+          <S.ButtonWrapper>
+            <ButtonIcon icon={<MenuOpenedInterfaceSVG />} variant={ButtonIcon.variants.Color} onClick={uncollapse} />
+          </S.ButtonWrapper>
+        </Tooltip>
+      ) : (
+        <S.ButtonWrapper>
+          <ButtonGhost
+            variant={ButtonGhost.variants.Tertiary}
+            iconPosition={ButtonGhost.iconPosition.Before}
+            text={textProvider(languageCode, Texts.SidebarCollapseMenu)}
+            icon={<MenuCloseInterfaceSVG />}
+            onClick={collapse}
+          />
+        </S.ButtonWrapper>
       )}
     </S.Footer>
   );

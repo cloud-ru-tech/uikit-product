@@ -1,4 +1,5 @@
 export * from './SidebarAccordion';
+export * from './SidebarCollapsedItem';
 export * from './SidebarFooter';
 export * from './SidebarItem';
 export * from './SidebarList';

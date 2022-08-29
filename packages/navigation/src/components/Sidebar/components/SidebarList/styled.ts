@@ -70,6 +70,10 @@ export const Scrollable = styled.div`
   &[data-footer] {
     padding-bottom: 0;
   }
+
+  &[data-collapsed] {
+    row-gap: 0;
+  }
 `;
 
 export const ItemsList = styled.div`

@@ -10,6 +10,9 @@ type SidebarContextProps = {
   setSearch(value: string): void;
   isSearchShown: boolean;
   openSearch(): void;
+  isCollapsed: boolean;
+  collapse(): void;
+  uncollapse(): void;
   closeSearch(): void;
   handleBackClick(): void;
   handleItemClick(item: SidebarItemProps): (e: MouseEvent) => void;
@@ -22,6 +25,9 @@ export const SidebarContext = createContext<SidebarContextProps>({
   setSearch() {},
   isSearchShown: false,
   openSearch() {},
+  isCollapsed: false,
+  collapse() {},
+  uncollapse() {},
   closeSearch() {},
   handleBackClick() {},
   handleItemClick() {

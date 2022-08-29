@@ -1,8 +1,8 @@
-import { MouseEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { MouseEvent, useCallback, useEffect, useRef, useState } from 'react';
 
 import { TRANSITION_TIMING } from '../../constants';
 import { useSidebarContext } from '../../context';
-import { findSelected } from '../../helpers';
+import { useNestedSelected } from '../../hooks';
 import { Mode, SidebarItemProps } from '../../types';
 import { SidebarItem } from '../SidebarItem';
 import * as S from './styled';
@@ -14,21 +14,13 @@ type SidebarAccordionProps = {
 };
 
 export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: SidebarAccordionProps) {
-  const { handleItemClick, selected, isSearchShown } = useSidebarContext();
+  const { handleItemClick, isSearchShown } = useSidebarContext();
 
   const [isOpen, setOpen] = useState(false);
   const [maxHeight, setMaxHeight] = useState<number>(0);
   const accordionRef = useRef<HTMLDivElement>(null);
-
   const isAccordion = Boolean(item.mode === Mode.Accordion && item.nestedList?.length);
-
-  const nestedSelected = useMemo(() => {
-    if (isAccordion) {
-      return Boolean(findSelected(item, selected));
-    }
-
-    return false;
-  }, [isAccordion, item, selected]);
+  const nestedSelected = useNestedSelected(item);
 
   const toggleHeight = useCallback(
     (isInner?: boolean) => {

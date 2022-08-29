@@ -15,11 +15,15 @@ export const Sidebar = styled.div`
   justify-content: space-between;
   height: 100%;
   max-width: 238px;
-  padding: 16px 0 24px;
+  padding: 16px 0;
   border-right: 1px solid var(${COLORS.border});
   background-color: var(${COLORS.background});
   box-shadow: transparent;
   transition: box-shadow ${ANIMATIONS.TRANSITION};
+
+  &[data-collapsed] {
+    max-width: 53px;
+  }
 
   &:hover {
     box-shadow: ${SHADOW.LARGE};

@@ -11,6 +11,8 @@ type SidebarContextProviderProps = {
   onItemClick: SidebarItemProps['onClick'];
   onBackClick?(): void;
   children: ReactNode;
+  isCollapsed: boolean;
+  setIsCollapsed(value: boolean): void;
 };
 
 export function SidebarContextProvider({
@@ -19,6 +21,8 @@ export function SidebarContextProvider({
   onItemClick,
   onBackClick,
   children,
+  isCollapsed,
+  setIsCollapsed,
 }: SidebarContextProviderProps) {
   const [currentLevel, setCurrentLevel] = useState(0);
   const [levels, setLevels] = useState<SidebarLevel[]>([]);
@@ -46,6 +50,14 @@ export function SidebarContextProvider({
 
   function openSearch() {
     setSearchShown(true);
+  }
+
+  function collapse() {
+    setIsCollapsed(true);
+  }
+
+  function uncollapse() {
+    setIsCollapsed(false);
   }
 
   function handleBackClick() {
@@ -90,7 +102,7 @@ export function SidebarContextProvider({
         }
       }
 
-      const id = (item.mode === Mode.Accordion ? selected : item.id) as string;
+      const id = (item.mode === Mode.Accordion && item.nestedList?.length ? selected : item.id) as string;
 
       if (item.onClick) {
         return item.onClick?.(e, id, item.href);
@@ -113,6 +125,9 @@ export function SidebarContextProvider({
         closeSearch,
         handleBackClick,
         handleItemClick,
+        isCollapsed,
+        collapse,
+        uncollapse,
       }}
     >
       {children}

@@ -4,6 +4,7 @@ import { TRANSITION_TIMING } from '../../constants';
 import { useSidebarContext } from '../../context';
 import { Mode, SidebarItemProps, SidebarItemsGroup } from '../../types';
 import { SidebarAccordion } from '../SidebarAccordion';
+import { SidebarCollapsedItem } from '../SidebarCollapsedItem';
 import { SidebarItem } from '../SidebarItem';
 import * as S from './styled';
 
@@ -14,7 +15,7 @@ type SidebarListProps = {
 };
 
 export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
-  const { handleItemClick, currentLevel, search } = useSidebarContext();
+  const { handleItemClick, currentLevel, search, isCollapsed } = useSidebarContext();
 
   const scrollableRef = useRef<HTMLDivElement>(null);
   const [showFading, setShowFading] = useState({
@@ -60,6 +61,10 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
   }, [showSearchResults, list, search]);
 
   const renderItems = (item: SidebarItemProps) => {
+    if (isCollapsed) {
+      return <SidebarCollapsedItem key={item.id} item={item} onClick={handleItemClick(item)} />;
+    }
+
     if (item.mode === Mode.Accordion && item.nestedList?.length) {
       return <SidebarAccordion key={item.id} item={item} accordionLevel={0} />;
     }
@@ -87,6 +92,7 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
       data-show-bottom-fading={showFading.bottom || undefined}
     >
       <S.Scrollable
+        data-collapsed={isCollapsed || undefined}
         data-footer={isFooter || undefined}
         onScroll={!isFooter ? updateFadingVisibility : undefined}
         ref={scrollableRef}
@@ -96,7 +102,7 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
         ) : (
           list.map((group, groupIndex) => (
             <div key={group.heading || group.items[0].id}>
-              {group.heading && (
+              {group.heading && !isCollapsed && (
                 <S.Heading data-first-on-inner-level={(levelIndex > 0 && groupIndex === 0) || undefined}>
                   {group.heading}
                 </S.Heading>

@@ -4,6 +4,7 @@ import SvgMlSpaceLogo from 'icons/src/components/logo-icons/MlSpaceLogo';
 import { MouseEvent, useEffect, useState } from 'react';
 
 import {
+  Advanced2ServiceSVG,
   AdvancedServiceSVG,
   AiMarketplaceServiceSVG,
   AiServiceSVG,
@@ -132,6 +133,19 @@ sidebar.args = {
                           text: 'Data Transfer Service',
                           href: '/',
                           icon: <DataTransferServiceSVG />,
+                          mode: Sidebar.listModes.Accordion,
+                          nestedList: [
+                            {
+                              items: [
+                                {
+                                  id: 'first-level-nested 1.2.3',
+                                  text: 'Элемент 3 уровня',
+                                  href: '/',
+                                  icon: <Advanced2ServiceSVG />,
+                                },
+                              ],
+                            },
+                          ],
                         },
                       ],
                     },

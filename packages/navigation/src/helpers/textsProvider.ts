@@ -12,6 +12,8 @@ export enum Texts {
   SidebarBackButton = 'sidebar-back-button',
   SidebarCloseSearch = 'sidebar-close-search',
   SidebarItemNew = 'sidebar-item-new',
+  SidebarCollapseMenu = 'sidebar-collapse-menu',
+  SidebarUncollapseMenu = 'sidebar-uncollapse-menu',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -27,6 +29,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SidebarBackButton]: 'назад',
     [Texts.SidebarCloseSearch]: 'закрыть поиск',
     [Texts.SidebarItemNew]: 'новый',
+    [Texts.SidebarCollapseMenu]: 'Свернуть меню',
+    [Texts.SidebarUncollapseMenu]: 'Развернуть меню',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderBalanceTooltipBalance]: 'Balance',
@@ -40,6 +44,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SidebarBackButton]: 'to level back',
     [Texts.SidebarCloseSearch]: 'close search',
     [Texts.SidebarItemNew]: 'new',
+    [Texts.SidebarCollapseMenu]: 'Hide menu',
+    [Texts.SidebarUncollapseMenu]: 'Show menu',
   },
 };
 
