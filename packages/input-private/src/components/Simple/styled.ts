@@ -6,7 +6,7 @@ import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 import { DEFAULT_TEXT_STYLES, DISABLED_TEXT_STYLES, themes } from '../../styles';
-import { InputPrivate } from '../private';
+import { InputPrivate } from '../Private';
 import { Sizes } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 import { SimpleInputProps } from './types';

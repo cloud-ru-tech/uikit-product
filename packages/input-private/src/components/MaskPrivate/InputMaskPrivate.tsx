@@ -2,7 +2,7 @@ import mergeRefs from 'merge-refs';
 import { forwardRef } from 'react';
 
 import { useInputMask } from '../../hooks';
-import { SimpleInputProps } from '../simple';
+import { SimpleInputProps } from '../Simple';
 import { Masks, MASKS_CONFIG } from './constants';
 import { StyledSimpleInput } from './styled';
 

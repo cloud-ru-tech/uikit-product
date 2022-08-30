@@ -6,7 +6,7 @@ import { CloseInterfaceSVG, EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from 
 import { extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers/texts-provider';
-import { InputPrivateProps } from '../private';
+import { InputPrivateProps } from '../Private';
 import { Sizes, Types } from './constants';
 import * as S from './styled';
 import { SimpleInputProps } from './types';

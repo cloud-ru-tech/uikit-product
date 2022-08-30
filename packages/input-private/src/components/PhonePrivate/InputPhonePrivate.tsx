@@ -2,7 +2,7 @@ import mergeRefs from 'merge-refs';
 import { forwardRef } from 'react';
 
 import { InputMaskOptions, useInputMask } from '../../hooks';
-import { SimpleInput, SimpleInputProps } from '../simple';
+import { SimpleInput, SimpleInputProps } from '../Simple';
 
 const options: InputMaskOptions = {
   mask: '000 000-00-00',

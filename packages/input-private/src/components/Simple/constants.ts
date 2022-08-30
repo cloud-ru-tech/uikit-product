@@ -1,4 +1,4 @@
-import { Types as PrivateTypes } from '../private/constants';
+import { Types as PrivateTypes } from '../Private/constants';
 
 export enum Sizes {
   Small = 'Small',
