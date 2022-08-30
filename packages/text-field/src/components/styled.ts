@@ -34,6 +34,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  min-height: 36px;
 `;
 
 export const StyledInputPrivate = styled(InputPrivate)`
