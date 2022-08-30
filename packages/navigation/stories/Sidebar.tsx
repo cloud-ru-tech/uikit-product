@@ -132,7 +132,6 @@ sidebar.args = {
                           text: 'Data Transfer Service',
                           href: '/',
                           icon: <DataTransferServiceSVG />,
-                          mode: Sidebar.listModes.Accordion,
                         },
                       ],
                     },
@@ -377,13 +376,13 @@ sidebar.args = {
   ],
   footerItems: [
     {
-      id: 'footer second',
+      id: 'footer first',
       text: 'Администрирование',
       href: '/',
       icon: <ProjectDisplaySVG />,
     },
     {
-      id: 'footer third',
+      id: 'footer second',
       text: 'Поддержка',
       href: '/',
       icon: <SupportInterfaceSVG />,
