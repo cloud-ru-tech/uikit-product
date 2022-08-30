@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.4.3...@sbercloud/uikit-product-navigation@0.5.0) (2022-08-30)
+
+
+### Features
+
+* **FF-819:** add mobile header version ([e8bde88](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e8bde88320d23339f6f72520532b49a1442da8e4))
+
+
+
+
+
 ## [0.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.4.2...@sbercloud/uikit-product-navigation@0.4.3) (2022-08-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-navigation
