@@ -1,29 +1,12 @@
-import { ComponentType, SVGProps } from 'react';
-
-import {
-  AttentionInterfaceSVG,
-  CircleCancelFilledInterfaceSVG,
-  CircleCheckFilledInterfaceSVG,
-  InfoInterfaceSVG,
-  LoadingWheelInterfaceSVG,
-} from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { Icons, Variants } from './constants';
+import { Icon } from '../../constants';
+import { PredefinedIcon } from '../../helperComponents';
+import { Variants } from './constants';
 import { Wrapper } from './styled';
 
-const iconByName: Record<Icons, ComponentType<SVGProps<SVGSVGElement>>> = {
-  [Icons.Info]: InfoInterfaceSVG,
-  [Icons.Success]: CircleCheckFilledInterfaceSVG,
-  [Icons.AttentionCritical]: AttentionInterfaceSVG,
-  [Icons.AttentionWarning]: AttentionInterfaceSVG,
-  [Icons.Failed]: CircleCancelFilledInterfaceSVG,
-  [Icons.Cancel]: CircleCancelFilledInterfaceSVG,
-  [Icons.Loading]: LoadingWheelInterfaceSVG,
-};
-
 export type PredefinedIconsPrivateProps = WithSupportProps<{
-  icon: Icons;
+  icon: Icon;
   variant?: Variants;
   className?: string;
 }>;
@@ -34,14 +17,12 @@ export function PredefinedIconsPrivate({
   className,
   ...rest
 }: PredefinedIconsPrivateProps) {
-  const Icon = iconByName[icon];
-
   return (
     <Wrapper className={className} data-icon={icon} data-variant={variant} {...extractSupportProps(rest)}>
-      <Icon />
+      <PredefinedIcon icon={icon} />
     </Wrapper>
   );
 }
 
-PredefinedIconsPrivate.icons = Icons;
+PredefinedIconsPrivate.icons = Icon;
 PredefinedIconsPrivate.variants = Variants;

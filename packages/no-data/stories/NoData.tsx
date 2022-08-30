@@ -19,7 +19,9 @@ const Wrapper = styled.div`
 `;
 
 const icons = {
-  SearchInterfaceSVG: <PredefinedDecorIconPrivate icon={<SearchInterfaceSVG />} />,
+  SearchInterfaceSVG: (
+    <PredefinedDecorIconPrivate type={PredefinedDecorIconPrivate.types.Custom} icon={<SearchInterfaceSVG />} />
+  ),
 };
 const buttons = {
   Default: <Button text={'Button Text'} icon={<CircleAddInterfaceSVG />} variant={Button.variants.Transparent} />,

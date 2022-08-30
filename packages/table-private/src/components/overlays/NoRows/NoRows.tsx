@@ -30,7 +30,9 @@ export function NoRows({ reason }: { reason: NoDataReasons }) {
   return (
     <S.NoRowsOverlay>
       <NoData
-        image={<PredefinedDecorIconPrivate icon={<SearchInterfaceSVG />} />}
+        image={
+          <PredefinedDecorIconPrivate type={PredefinedDecorIconPrivate.types.Custom} icon={<SearchInterfaceSVG />} />
+        }
         title={title}
         description={description}
       />

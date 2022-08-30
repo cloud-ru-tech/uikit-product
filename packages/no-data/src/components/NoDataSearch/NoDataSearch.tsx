@@ -35,7 +35,9 @@ export function NoDataSearch({ ...rest }: WithSupportProps<object>) {
 
   return (
     <NoData
-      image={<PredefinedDecorIconPrivate icon={<SearchInterfaceSVG />} />}
+      image={
+        <PredefinedDecorIconPrivate type={PredefinedDecorIconPrivate.types.Custom} icon={<SearchInterfaceSVG />} />
+      }
       title={title}
       description={description}
       {...extractSupportProps(rest)}

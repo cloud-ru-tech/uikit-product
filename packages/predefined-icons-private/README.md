@@ -13,16 +13,32 @@ type PredefinedLogoProps = WithSupportProps<{
   className?: string;
 }>;
 
-type PredefinedDecorIconPrivateProps = WithSupportProps<{
-  icon: ComponentType<ISvgIconProps>;
-  size?: Sizes;
-  className?: string;
-}>;
+enum PredefinedDecorIconType {
+  Predefined = 'predefined',
+  Custom = 'custom',
+}
 
 enum Sizes {
   Medium = 'Medium',
   Large = 'Large',
 }
+
+type CommonPredefinedDecorIconProps = WithSupportProps<{
+  size?: Sizes;
+  className?: string;
+}>;
+
+type PredefinedDecorIconProps = CommonPredefinedDecorIconProps & {
+  type: PredefinedDecorIconType.Predefined;
+  predefinedIcon: Icon;
+};
+
+type DecorIconProps = CommonPredefinedDecorIconProps & {
+  type: PredefinedDecorIconType.Custom;
+  icon: ReactElement<{ size?: string | number }>;
+};
+
+type PredefinedDecorIconPrivateProps = PredefinedDecorIconProps | DecorIconProps;
 
 type PredefinedIconsPrivateProps = WithSupportProps<{
   icon: Icons;
@@ -36,7 +52,7 @@ enum Variants {
   OnAccent = 'onAccent'
 }
 
-enum Icons {
+enum Icon {
   Info = 'info',
   Success = 'success',
   AttentionCritical = 'attention-critical',

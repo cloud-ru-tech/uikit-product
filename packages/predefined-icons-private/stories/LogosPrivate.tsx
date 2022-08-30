@@ -43,5 +43,5 @@ predefinedLogosPrivate.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=212%3A350',
   },
-  badges: [BADGE.BETA, BADGE.PRIVATE],
+  badges: [BADGE.STABLE],
 };
