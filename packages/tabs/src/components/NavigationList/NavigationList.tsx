@@ -8,7 +8,7 @@ import { NavigationItemProps } from '../NavigationItem';
 import * as S from './styled';
 
 export type NavigationListProps = WithSupportProps<{
-  children: ReactElement<NavigationItemProps>[];
+  children: ReactElement<NavigationItemProps> | ReactElement<NavigationItemProps>[];
   className?: string;
 }>;
 
