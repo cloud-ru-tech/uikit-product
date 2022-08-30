@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-search@0.0.3...@sbercloud/uikit-product-search@0.1.0) (2022-08-30)
+
+
+### Features
+
+* **LK-144:** added placeholder prop ([6d82d7c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6d82d7c9dfacd1ea0067ef33fa8e9aacc3479b6c))
+
+
+
+
+
 ## [0.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-search@0.0.2...@sbercloud/uikit-product-search@0.0.3) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-search
