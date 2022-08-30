@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-text-field",
   "title": "React Text Field",
-  "version": "3.1.71",
+  "version": "3.1.72",
   "sideEffects": [
     "*.css",
     "*.woff",

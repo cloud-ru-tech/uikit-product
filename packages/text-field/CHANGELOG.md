@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.72](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.1.71...@sbercloud/uikit-product-text-field@3.1.72) (2022-08-30)
+
+
+### Bug Fixes
+
+* add min-height for proper displaying without any icons ([0d4fa28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0d4fa28d07308d322f4bc5c1a12242cb0e478307))
+
+
+
+
+
 ## [3.1.71](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.1.70...@sbercloud/uikit-product-text-field@3.1.71) (2022-08-24)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-text-field
