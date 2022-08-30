@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-tabs",
   "title": "React Tabs",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "sideEffects": [
     "*.css",
     "*.woff",

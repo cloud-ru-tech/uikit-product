@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.1.6...@sbercloud/uikit-product-tabs@1.1.7) (2022-08-30)
+
+
+### Bug Fixes
+
+* **FF-884:** allow pass single Tabs.NavigationItem ([2a919c2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2a919c22c960362479d974a71b2b5ecb0f945529))
+
+
+
+
+
 ## [1.1.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.1.5...@sbercloud/uikit-product-tabs@1.1.6) (2022-08-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-tabs
