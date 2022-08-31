@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.17.8...@sbercloud/uikit-product-form@0.18.0) (2022-08-31)
+
+
+### Features
+
+* **FF-709:** New show tooltip delay methodology ([ab4287b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ab4287b7810e5b2507d1affebf131af4358ef362))
+
+
+### BREAKING CHANGES
+
+* **FF-709:** New show tooltip delay methodology
+
+
+
+
+
 ## [0.17.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.17.7...@sbercloud/uikit-product-form@0.17.8) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-form

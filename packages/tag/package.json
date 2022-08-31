@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-tag",
   "title": "React Tag",
-  "version": "1.4.1",
+  "version": "2.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,10 +27,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.0.28",
+    "@sbercloud/uikit-product-button": "5.0.29",
     "@sbercloud/uikit-product-icons": "5.1.0",
     "@sbercloud/uikit-product-theme": "0.34.1",
-    "@sbercloud/uikit-product-tooltip": "2.0.62",
+    "@sbercloud/uikit-product-tooltip": "3.0.0",
     "@sbercloud/uikit-product-tooltip-private": "1.2.18",
     "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.0.2",

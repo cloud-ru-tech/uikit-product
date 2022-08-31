@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-decorator-private@2.1.14...@sbercloud/uikit-product-input-decorator-private@3.0.0) (2022-08-31)
+
+
+### Features
+
+* **FF-709:** New show tooltip delay methodology ([ab4287b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ab4287b7810e5b2507d1affebf131af4358ef362))
+
+
+### BREAKING CHANGES
+
+* **FF-709:** New show tooltip delay methodology
+
+
+
+
+
 ## [2.1.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-decorator-private@2.1.13...@sbercloud/uikit-product-input-decorator-private@2.1.14) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-decorator-private

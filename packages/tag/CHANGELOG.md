@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tag@1.4.1...@sbercloud/uikit-product-tag@2.0.0) (2022-08-31)
+
+
+### Features
+
+* **FF-709:** New show tooltip delay methodology ([ab4287b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ab4287b7810e5b2507d1affebf131af4358ef362))
+
+
+### BREAKING CHANGES
+
+* **FF-709:** New show tooltip delay methodology
+
+
+
+
+
 ## [1.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tag@1.4.0...@sbercloud/uikit-product-tag@1.4.1) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-tag
