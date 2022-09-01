@@ -139,7 +139,7 @@ sidebar.args = {
                               items: [
                                 {
                                   id: 'first-level-nested 1.2.3',
-                                  text: 'Элемент 3 уровня',
+                                  text: 'Элемент 3 уровня с очень длинным названием',
                                   href: '/',
                                   icon: <Advanced2ServiceSVG />,
                                 },

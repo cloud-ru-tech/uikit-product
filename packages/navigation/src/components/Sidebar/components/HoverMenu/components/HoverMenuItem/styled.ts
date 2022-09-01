@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
 
+import { TruncatedTextWithTooltip } from '../../../../helperComponents';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 GREEN_THEME;
@@ -39,9 +40,6 @@ export const Offset = styled.div`
   margin-right: 8px;
 `;
 
-export const MenuItemLabel = styled.div`
+export const MenuItemLabel = styled(TruncatedTextWithTooltip)`
   flex-grow: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 `;

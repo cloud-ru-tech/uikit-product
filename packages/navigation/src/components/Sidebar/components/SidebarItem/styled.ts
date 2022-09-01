@@ -3,6 +3,7 @@ import { styled } from '@linaria/react';
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
+import { TruncatedTextWithTooltip } from '../../helperComponents';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 GREEN_DARK_THEME;
@@ -74,10 +75,7 @@ export const Icon = styled.div`
   }
 `;
 
-export const Text = styled.div`
+export const Text = styled(TruncatedTextWithTooltip)`
   color: var(--sidebar-item__text-color);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   transition: color ${ANIMATIONS.TRANSITION};
 `;
