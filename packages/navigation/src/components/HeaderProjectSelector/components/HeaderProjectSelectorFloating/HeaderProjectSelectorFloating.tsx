@@ -32,6 +32,7 @@ export type HeaderProjectSelectorFloatingProps = {
 export function HeaderProjectSelectorFloating({ children, content }: HeaderProjectSelectorFloatingProps) {
   const { isMobile } = useMatchMedia();
   const listRef = useRef<Array<HTMLElement | null>>([]);
+  const initialFocusRef = useRef<HTMLElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
   const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -55,7 +56,15 @@ export function HeaderProjectSelectorFloating({ children, content }: HeaderProje
     useClick(context),
     useRole(context, { role: 'listbox' }),
     useDismiss(context),
-    useListNavigation(context, { listRef, activeIndex, selectedIndex, onNavigate: setActiveIndex, loop: true }),
+    useListNavigation(context, {
+      listRef,
+      activeIndex,
+      selectedIndex,
+      onNavigate: setActiveIndex,
+      loop: true,
+      focusItemOnOpen: false,
+      focusItemOnHover: false,
+    }),
   ]);
 
   function setItem(item: HTMLElement | null, index: number | null) {
@@ -101,7 +110,7 @@ export function HeaderProjectSelectorFloating({ children, content }: HeaderProje
   }, [isOpen, isKeyboardNavigation, activeIndex]);
 
   return (
-    <FloatingContext.Provider value={{ isOpen, setIsOpen }}>
+    <FloatingContext.Provider value={{ isOpen, setIsOpen, initialFocusRef }}>
       <ReferenceContext.Provider value={{ setElement: reference, getProps: getReferenceProps }}>
         <ItemContext.Provider value={{ getProps: getItemProps, setElement: setItem }}>
           <NavigationContext.Provider value={{ activeIndex, setActiveIndex }}>
@@ -109,7 +118,7 @@ export function HeaderProjectSelectorFloating({ children, content }: HeaderProje
             {isOpen && (
               <FloatingPortal root={document.body}>
                 <FloatingOverlay>
-                  <FloatingFocusManager context={context} preventTabbing>
+                  <FloatingFocusManager context={context} initialFocus={initialFocusRef}>
                     <S.Wrapper
                       strategy={strategy}
                       x={x ?? 0}

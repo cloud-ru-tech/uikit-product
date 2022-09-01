@@ -1,7 +1,8 @@
-import { ReactNode, useEffect } from 'react';
+import { ReactNode, RefObject, useContext, useEffect } from 'react';
 
 import { Search } from '@sbercloud/uikit-product-search';
 
+import { FloatingContext } from '../../contexts/FloatingContext';
 import { HeaderProjectSelectorDivider } from '../HeaderProjectSelectorDivider';
 
 export type HeaderProjectSelectorContentProps = {
@@ -11,16 +12,14 @@ export type HeaderProjectSelectorContentProps = {
 };
 
 export function HeaderProjectSelectorContent({ children, search, onSearchChange }: HeaderProjectSelectorContentProps) {
-  useEffect(
-    () => () => {
-      onSearchChange('');
-    },
-    [onSearchChange],
-  );
+  const { initialFocusRef } = useContext(FloatingContext);
+
+  useEffect(() => () => onSearchChange(''), [onSearchChange]);
 
   return (
     <>
       <Search
+        ref={initialFocusRef as RefObject<HTMLInputElement>}
         value={search}
         onChange={onSearchChange}
         size={Search.sizes.Large}

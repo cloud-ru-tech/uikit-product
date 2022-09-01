@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo, useRef } from 'react';
 
 import { ButtonGhost, ButtonIcon } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
@@ -20,8 +20,21 @@ type SidebarListHeaderProps = {
 
 export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps) {
   const { languageCode } = useLanguage();
-  const { handleBackClick, selected, currentLevel, isSearchShown, search, setSearch, openSearch, closeSearch } =
+  const { handleBackClick, selected, currentLevel, search, setSearch, openSearch, closeSearch, isSearchShown } =
     useSidebarContext();
+  const searchRef = useRef<HTMLInputElement>(null);
+  const searchWrapRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const wrapper = searchWrapRef.current;
+    const search = searchRef.current;
+    if (!search || !wrapper) return;
+
+    const handler = () => isSearchShown && search.focus();
+    const transitionEndEvent = 'transitionend';
+    wrapper.addEventListener(transitionEndEvent, handler);
+    return () => wrapper.removeEventListener(transitionEndEvent, handler);
+  }, [isSearchShown]);
 
   const onCurrentLevel = levelIndex === currentLevel;
 
@@ -71,8 +84,8 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
           <ButtonIcon icon={<SearchInterfaceSVG />} onClick={openSearch} />
         </S.TitleWrap>
 
-        <S.SearchWrap data-show={isSearchShown || undefined}>
-          <Search size={Search.sizes.Small} value={search} onChange={setSearch} />
+        <S.SearchWrap ref={searchWrapRef} data-show={isSearchShown || undefined}>
+          <Search ref={searchRef} size={Search.sizes.Small} value={search} onChange={setSearch} />
         </S.SearchWrap>
       </S.Title>
 
