@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter@0.15.45...@sbercloud/uikit-product-filter@0.15.46) (2022-09-01)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-filter
+
+
+
+
+
 ## [0.15.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter@0.15.44...@sbercloud/uikit-product-filter@0.15.45) (2022-08-31)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-filter

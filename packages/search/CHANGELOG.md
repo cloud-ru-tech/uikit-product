@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-search@0.1.1...@sbercloud/uikit-product-search@0.2.0) (2022-09-01)
+
+
+### Features
+
+* **FF-838:** ref and classname props have been added ([75d2e3a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/75d2e3adf1410f03b3f076e9047c9ab1895c734f))
+
+
+
+
+
 ## [0.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-search@0.1.0...@sbercloud/uikit-product-search@0.1.1) (2022-08-31)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-search

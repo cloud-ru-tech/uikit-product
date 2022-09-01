@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.6.1...@sbercloud/uikit-product-input-private@2.6.2) (2022-09-01)
+
+
+### Bug Fixes
+
+* **FF-838:** correct component folder names ([1ce95c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ce95c919a52519b3c4bef3fcd86e6570230e038))
+
+
+
+
+
 ## [2.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.6.0...@sbercloud/uikit-product-input-private@2.6.1) (2022-08-31)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-private
