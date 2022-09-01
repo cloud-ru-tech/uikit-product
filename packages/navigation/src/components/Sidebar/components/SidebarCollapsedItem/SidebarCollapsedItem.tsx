@@ -20,9 +20,15 @@ export function SidebarCollapsedItem({ item, onClick }: SidebarCollapsedItemProp
   const noHover = !Boolean(onClick) || item.disabled || undefined;
 
   const collapsedItem = (
-    <S.Item onClick={onClick} data-disabled={isDisabled} data-no-hover={noHover} data-test-id='sidebar__collapsed-item'>
+    <S.Item
+      onClick={onClick}
+      data-collapsed={true}
+      data-disabled={isDisabled}
+      data-no-hover={noHover}
+      data-test-id={`sidebar__item-${item.id}`}
+    >
       {item.icon && (
-        <S.Icon data-test-id='sidebar__collapsed-item__icon' data-disabled={isDisabled} data-active={isActive}>
+        <S.Icon data-test-id='sidebar__item__icon' data-disabled={isDisabled} data-active={isActive}>
           {item.icon}
         </S.Icon>
       )}

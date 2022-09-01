@@ -49,7 +49,7 @@ export function SidebarItem({
       data-disabled={disabled || undefined}
       data-active={isActive}
       data-no-hover={!Boolean(onClick) || undefined}
-      data-test-id='sidebar__item'
+      data-test-id={`sidebar__item-${id}`}
     >
       <S.Content>
         <S.IconContainer>

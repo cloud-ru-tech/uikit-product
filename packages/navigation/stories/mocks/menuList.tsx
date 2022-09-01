@@ -64,6 +64,7 @@ export const menuList: SidebarItemsGroup[] = [
         label: 'Enterprise',
         href: '/',
         icon: <ChristofariServiceSVG />,
+        count: 5,
       },
       {
         id: 'main-mlspace',
@@ -74,7 +75,7 @@ export const menuList: SidebarItemsGroup[] = [
           {
             items: [
               {
-                id: 'main-Data-Catalog',
+                id: 'main-data-catalog',
                 label: 'Data Catalog',
                 mode: Sidebar.listModes.Accordion,
                 icon: <DataCatalogServiceSVG />,
@@ -88,7 +89,7 @@ export const menuList: SidebarItemsGroup[] = [
                         icon: <BucketInterfaceSVG />,
                       },
                       {
-                        id: 'first-level-nested 1.2',
+                        id: 'data-transfer-service',
                         label: 'Data Transfer Service',
                         href: '/',
                         icon: <DataTransferServiceSVG />,
@@ -97,7 +98,7 @@ export const menuList: SidebarItemsGroup[] = [
                           {
                             items: [
                               {
-                                id: 'first-level-nested 1.2.3',
+                                id: 'third-level-long-element',
                                 label: 'Элемент 3 уровня с очень длинным названием',
                                 href: '/',
                                 icon: <Advanced2ServiceSVG />,
@@ -111,7 +112,7 @@ export const menuList: SidebarItemsGroup[] = [
                 ],
               },
               {
-                id: 's2-1',
+                id: 'environments',
                 label: 'Environments',
                 mode: Sidebar.listModes.Accordion,
                 icon: <EnviromentsServiceSVG />,
@@ -119,31 +120,31 @@ export const menuList: SidebarItemsGroup[] = [
                   {
                     items: [
                       {
-                        id: 's2-1-1',
+                        id: 'jupiter-servers',
                         label: 'Jupiter Servers',
                         href: '/',
                         icon: <JupiterServerServiceSVG />,
                       },
                       {
-                        id: 's2-1-2',
+                        id: 'gitlab-ci',
                         label: 'Gitlab CI',
                         href: '/',
                         icon: <GitlabServiceSVG />,
                       },
                       {
-                        id: 's2-1-3',
+                        id: 'tasks-and-environments',
                         label: 'Задачи и окружения',
                         href: '/',
                         icon: <EnvironmentTaskServiceSVG />,
                       },
                       {
-                        id: 's2-1-4',
+                        id: 'monitoring',
                         label: 'Мониторинг',
                         href: '/',
                         icon: <MonitoringServiceSVG />,
                       },
                       {
-                        id: 's2-1-5',
+                        id: 'experiments',
                         label: 'Эксперементы',
                         href: '/',
                         icon: <ExperimentServiceSVG />,
@@ -153,7 +154,7 @@ export const menuList: SidebarItemsGroup[] = [
                 ],
               },
               {
-                id: 's3-1',
+                id: 'deployments',
                 label: 'Deployments',
                 mode: Sidebar.listModes.Accordion,
                 icon: <DeploymentServiceSVG />,
@@ -161,13 +162,13 @@ export const menuList: SidebarItemsGroup[] = [
                   {
                     items: [
                       {
-                        id: 's3-1-1',
+                        id: 'deploys',
                         label: 'Деплои',
                         href: '/',
                         icon: <MyDeploymentsServiceSVG />,
                       },
                       {
-                        id: 's3-1-2',
+                        id: 'images',
                         label: 'Образы',
                         href: '/',
                         icon: <MyImagesServiceSVG />,
@@ -177,7 +178,7 @@ export const menuList: SidebarItemsGroup[] = [
                 ],
               },
               {
-                id: 's4-1',
+                id: 'artifact-registry',
                 label: 'Artifact Registry',
                 mode: Sidebar.listModes.Accordion,
                 icon: <ArtefactServiceSVG />,
@@ -185,25 +186,25 @@ export const menuList: SidebarItemsGroup[] = [
                   {
                     items: [
                       {
-                        id: 's4-1-1',
+                        id: 'review',
                         label: 'Обзор',
                         href: '/',
                         icon: <ViewTileInterfaceSVG />,
                       },
                       {
-                        id: 's4-1-2',
+                        id: 'docker-registry',
                         label: 'Docker Registry',
                         href: '/',
                         icon: <DockerRegistryServiceSVG />,
                       },
                       {
-                        id: 's4-1-3',
+                        id: 'model-registry',
                         label: 'Model Registry',
                         href: '/',
                         icon: <ModelRegistryServiceSVG />,
                       },
                       {
-                        id: 's4-1-4',
+                        id: 'dataset-registry',
                         label: 'Dataset Registry',
                         href: '/',
                         icon: <DatasetServiceSVG />,
@@ -213,13 +214,13 @@ export const menuList: SidebarItemsGroup[] = [
                 ],
               },
               {
-                id: 's5-1',
+                id: 'auto-ml',
                 label: 'AutoML',
                 href: '/',
                 icon: <AutoMlServiceSVG />,
               },
               {
-                id: 's6-1',
+                id: 'pipelines',
                 label: 'Pipelines',
                 mode: Sidebar.listModes.Accordion,
                 icon: <Pipelines2ServiceSVG />,
@@ -227,13 +228,13 @@ export const menuList: SidebarItemsGroup[] = [
                   {
                     items: [
                       {
-                        id: 's6-1-1',
+                        id: 'pipelines-inner',
                         label: 'Пайплайны',
                         href: '/',
                         icon: <Pipelines2ServiceSVG />,
                       },
                       {
-                        id: 's6-1-2',
+                        id: 'launch-history',
                         label: 'История запусков',
                         href: '/',
                         icon: <TimeInterfaceSVG />,
@@ -243,7 +244,7 @@ export const menuList: SidebarItemsGroup[] = [
                 ],
               },
               {
-                id: 's7-1',
+                id: 'ai-marketplace',
                 label: 'AI Marketplaces',
                 mode: Sidebar.listModes.Accordion,
                 icon: <AiMarketplaceServiceSVG />,
@@ -251,31 +252,31 @@ export const menuList: SidebarItemsGroup[] = [
                   {
                     items: [
                       {
-                        id: 's7-1-1',
+                        id: 'datahub',
                         label: 'Datahub',
                         href: '/',
                         icon: <DataHubServiceSVG />,
                       },
                       {
-                        id: 's7-1-2',
+                        id: 'ai-services',
                         label: 'AI Services',
                         href: '/',
                         icon: <AiServiceSVG />,
                       },
                       {
-                        id: 's7-1-3',
+                        id: 'my-content',
                         label: 'Мой контент',
                         href: '/',
                         icon: <ViewTableInterfaceSVG />,
                       },
                       {
-                        id: 's7-1-4',
+                        id: 'seller-profile',
                         label: 'Кабинет продавца',
                         href: '/',
                         icon: <PlusSquareInterfaceSVG />,
                       },
                       {
-                        id: 's7-1-5',
+                        id: 'moderation',
                         label: 'Модерация',
                         href: '/',
                         icon: <CircleCheckOutlineInterfaceSVG />,
@@ -284,12 +285,18 @@ export const menuList: SidebarItemsGroup[] = [
                   },
                 ],
               },
+              {
+                id: 'one-more-item',
+                label: 'One more item',
+                href: '/',
+                icon: <ViewTableInterfaceSVG />,
+              },
             ],
           },
         ],
       },
       {
-        id: 'main-standart',
+        id: 'main-svp',
         label: 'SVP',
         href: '/',
         icon: <MyImagesServiceSVG />,
@@ -301,20 +308,21 @@ export const menuList: SidebarItemsGroup[] = [
     heading: 'Другие услуги',
     items: [
       {
-        id: 'first-level 2-1',
+        id: 'common-platform-services',
         label: 'Общие сервисы платформ',
         href: '/',
         icon: <ModelsMonitoringServiceSVG />,
+        count: 3,
       },
       {
-        id: 'first-level 2-2',
+        id: 'special-for-you',
         label: 'Специально для вас',
         href: '/',
         icon: <FavouriteServiceSVG />,
         locked: true,
       },
       {
-        id: 'first-level 2-3',
+        id: 'marketplace-ai-services',
         label: 'Маркетплейс AI Services',
         href: '/',
         icon: <AiMarketplaceServiceSVG />,
@@ -326,19 +334,19 @@ export const menuList: SidebarItemsGroup[] = [
 
 export const footerItems: SidebarItemProps[] = [
   {
-    id: 'footer first',
+    id: 'administration',
     label: 'Администрирование',
     href: '/',
     icon: <ProjectDisplaySVG />,
   },
   {
-    id: 'footer second',
+    id: 'support',
     label: 'Поддержка',
     href: '/',
     icon: <SupportInterfaceSVG />,
   },
   {
-    id: 'footer third',
+    id: 'settings',
     label: 'Настройки',
     href: '/',
     icon: <SettingsInterfaceSVG />,

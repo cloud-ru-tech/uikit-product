@@ -37,7 +37,12 @@ export function SidebarFooter({ items }: SidebarFooterProps) {
           placement={Tooltip.placements.Right}
         >
           <S.ButtonWrapper>
-            <ButtonIcon icon={<MenuOpenedInterfaceSVG />} variant={ButtonIcon.variants.Color} onClick={uncollapse} />
+            <ButtonIcon
+              icon={<MenuOpenedInterfaceSVG />}
+              variant={ButtonIcon.variants.Color}
+              onClick={uncollapse}
+              data-test-id='sidebar__footer__uncollapse-button'
+            />
           </S.ButtonWrapper>
         </Tooltip>
       ) : (
@@ -48,6 +53,7 @@ export function SidebarFooter({ items }: SidebarFooterProps) {
             text={textProvider(languageCode, Texts.SidebarCollapseMenu)}
             icon={<MenuCloseInterfaceSVG />}
             onClick={collapse}
+            data-test-id='sidebar__footer__collapse-button'
           />
         </S.ButtonWrapper>
       )}

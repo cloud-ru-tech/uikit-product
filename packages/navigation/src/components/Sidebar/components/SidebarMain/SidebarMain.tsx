@@ -18,6 +18,7 @@ export function SidebarMain() {
             data-has-title={Boolean(level.title) || undefined}
             data-hide={hide}
             data-show={show}
+            data-test-id='sidebar__level'
           >
             {index > 0 && <SidebarListHeader level={level} levelIndex={index} />}
 

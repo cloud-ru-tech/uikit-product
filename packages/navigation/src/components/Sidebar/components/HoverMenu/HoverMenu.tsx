@@ -55,7 +55,7 @@ export function HoverMenu({ children, item }: HoverMenuProps) {
         <FloatingPortal root={document.body}>
           <S.ContentWrapper strategy={strategy} x={x ?? 0} y={y ?? 0} ref={floating} {...getFloatingProps()}>
             <S.Arrow ref={arrowRef} strategy={strategy} x={arrowX ?? 0} y={arrowY ?? 0} />
-            <S.MenuContent>
+            <S.MenuContent data-test-id='sidebar__hover-menu'>
               <HoverMenuItem {...item} level={0} onClick={handleItemClick(item)} closeMenu={closeMenu} />
             </S.MenuContent>
           </S.ContentWrapper>

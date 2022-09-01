@@ -48,6 +48,7 @@ export function HoverMenuItem({
         data-active={id === active || undefined}
         data-disabled={isItemDisabled}
         onClick={isItemDisabled ? undefined : handleClick}
+        data-test-id={`sidebar__hover-menu-item-${id}`}
       >
         {offsetArray.length > 0 && (
           <S.Offsets>
@@ -57,8 +58,9 @@ export function HoverMenuItem({
           </S.Offsets>
         )}
 
-        <S.MenuItemLabel data-level={level}>{label}</S.MenuItemLabel>
-
+        <S.MenuItemLabel data-test-id='sidebar__hover-menu-item__text' data-level={level}>
+          {label}
+        </S.MenuItemLabel>
         <SidebarItemPostfix count={count} locked={locked} showNewLabel={showNewLabel} disabled={isItemDisabled} />
       </S.MenuItem>
 

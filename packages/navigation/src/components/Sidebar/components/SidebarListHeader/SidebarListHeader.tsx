@@ -43,7 +43,7 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
   );
 
   return (
-    <div>
+    <div data-test-id='sidebar__header'>
       {isCollapsed ? (
         <>
           <Tooltip content={backButtonText} type={Tooltip.types.Tip} placement={Tooltip.placements.Right}>
@@ -52,6 +52,7 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
                 icon={<MenuCloseFullInterfaceSVG />}
                 variant={ButtonIcon.variants.Color}
                 onClick={handleBackClick}
+                data-test-id='sidebar__header__back-button'
               />
             </S.BackButtonWrapper>
           </Tooltip>
@@ -72,6 +73,7 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
                 text={textProvider(languageCode, Texts.SidebarCloseSearch)}
                 icon={<CloseInterfaceSVG />}
                 onClick={closeSearch}
+                data-test-id='sidebar__header__close-search-button'
               />
             ) : (
               <ButtonGhost
@@ -80,6 +82,7 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
                 text={backButtonText}
                 icon={<MenuCloseFullInterfaceSVG />}
                 onClick={handleBackClick}
+                data-test-id='sidebar__header__back-button'
               />
             )}
           </S.BackButtonWrapper>
@@ -96,10 +99,18 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
                 />
               )}
 
-              <ButtonIcon icon={<SearchInterfaceSVG />} onClick={openSearch} />
+              <ButtonIcon
+                icon={<SearchInterfaceSVG />}
+                onClick={openSearch}
+                data-test-id='sidebar__header__open-search-button'
+              />
             </S.TitleWrap>
 
-            <S.SearchWrap ref={searchWrapRef} data-show={isSearchShown || undefined}>
+            <S.SearchWrap
+              ref={searchWrapRef}
+              data-show={isSearchShown || undefined}
+              data-test-id='sidebar__header__search'
+            >
               <Search ref={searchRef} size={Search.sizes.Small} value={search} onChange={setSearch} />
             </S.SearchWrap>
           </S.Title>

@@ -36,7 +36,7 @@ export function SidebarItemPostfix({
         />
       )}
 
-      {count !== undefined && <Counter value={count} />}
+      {count !== undefined && <Counter value={count} data-test-id='sidebar__item__postfix__counter' />}
 
       {locked && <S.LockIcon data-test-id='sidebar__item__postfix__locked-icon' size={20} />}
 
