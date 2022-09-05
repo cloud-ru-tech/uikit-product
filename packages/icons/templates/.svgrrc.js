@@ -11,6 +11,7 @@ module.exports = {
           overrides: { removeViewBox: false },
         },
       },
+      'prefixIds',
     ],
   },
   replaceAttrValues: {

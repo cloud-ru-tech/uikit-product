@@ -8,10 +8,7 @@ module.exports = {
       {
         name: 'preset-default',
         params: {
-          overrides: {
-            removeViewBox: false,
-            prefixIds: { prefixClassNames: false },
-          },
+          overrides: { removeViewBox: false },
         },
       },
     ],
