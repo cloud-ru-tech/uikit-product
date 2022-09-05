@@ -7,6 +7,7 @@ import rimraf from 'rimraf';
 
 import PluginEvents = Cypress.PluginEvents;
 
+// eslint-disable-next-line import/no-default-export
 export default (on: PluginEvents) => {
   const del = promisify(rimraf);
 

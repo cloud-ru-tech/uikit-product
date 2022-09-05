@@ -24,6 +24,7 @@ import DeleteSuccessVideos from './deleteSuccessVideos';
 import PluginEvents = Cypress.PluginEvents;
 import PluginConfigOptions = Cypress.PluginConfigOptions;
 
+// eslint-disable-next-line import/no-default-export
 export default (on: PluginEvents, config: PluginConfigOptions) => {
   CypressCodeCoverage(on, config);
   DeleteSuccessVideos(on);
