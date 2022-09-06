@@ -190,3 +190,23 @@ function Component() {
   const id = useUniqueId();
 }
 ```
+
+#### useEventHandler
+
+A hook to define an event handler with an always-stable function identity.
+
+```tsx
+import { useEventHandler } from '@sbercloud/uikit-product-utils';
+
+function Chat() {
+  const [text, setText] = useState('');
+
+  // always the same function (even if `text` changes)
+  const handleClick = useEventHandler(() => {
+    sendMessage(text);
+  });
+
+  return <SendButton onClick={handleClick} />;
+}
+```
+
