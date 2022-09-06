@@ -11,6 +11,13 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
+export const AvatarInner = styled.div`
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+`;
+
 export const styledAvatar = (Badge: VFC<AvatarProps>): VFC<AvatarProps> => styled(Badge)`
   box-sizing: border-box;
   border-radius: 100%;
@@ -21,7 +28,7 @@ export const styledAvatar = (Badge: VFC<AvatarProps>): VFC<AvatarProps> => style
   &[data-clickable] {
     cursor: pointer;
 
-    &::after {
+    .${AvatarInner.__linaria.className}::after {
       content: '';
       position: absolute;
       top: 0;
@@ -31,13 +38,12 @@ export const styledAvatar = (Badge: VFC<AvatarProps>): VFC<AvatarProps> => style
       background-color: var(${COLORS.hover});
       opacity: 0;
       transition: opacity ${ANIMATIONS.TRANSITION};
-      z-index: 3;
       border-radius: inherit;
       pointer-events: none;
     }
 
     &:hover {
-      &::after {
+      .${AvatarInner.__linaria.className}::after {
         opacity: 1;
       }
     }
@@ -154,18 +160,10 @@ export const AvatarImage = styled.div<{ backgroundImage?: string }>`
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
   border-radius: inherit;
   background-size: cover;
   background-position: center;
   background-image: ${({ backgroundImage }) => (backgroundImage ? `url(${backgroundImage})` : 'none')};
-`;
-
-export const AvatarInner = styled.div`
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  border-radius: inherit;
 `;
 
 export const AvatarContent = styled.div`
@@ -184,7 +182,6 @@ export const AvatarContent = styled.div`
 
 export const StatusDotWrap = styled.div`
   position: absolute;
-  z-index: 4;
   bottom: 0;
   right: 0;
   font-size: 0; // to reduce div height
