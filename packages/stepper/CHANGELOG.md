@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-stepper@0.4.13...@sbercloud/uikit-product-stepper@1.1.0) (2022-09-07)
+
+
+### Features
+
+* **FF-576:** stepper first stable version ([8194bb3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8194bb3536e89cd4b40f25e514d7cab34ded255a))
+
+
+
+
+
 ## [0.4.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-stepper@0.4.12...@sbercloud/uikit-product-stepper@0.4.13) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-stepper
