@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [6.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-status@6.0.9...@sbercloud/uikit-product-status@6.0.10) (2022-09-08)
+
+
+### Bug Fixes
+
+* **FF-902:** z-index fixes ([f9e62aa](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9e62aa4e9bc17ae188eef99d5138819dc0e6e4c))
+
+
+
+
+
 ## [6.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-status@6.0.8...@sbercloud/uikit-product-status@6.0.9) (2022-08-11)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-avatar@1.1.4...@sbercloud/uikit-product-avatar@1.1.5) (2022-09-08)
+
+
+### Bug Fixes
+
+* **FF-902:** z-index fixes ([f9e62aa](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9e62aa4e9bc17ae188eef99d5138819dc0e6e4c))
+
+
+
+
+
 ## [1.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-avatar@1.1.3...@sbercloud/uikit-product-avatar@1.1.4) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-avatar
