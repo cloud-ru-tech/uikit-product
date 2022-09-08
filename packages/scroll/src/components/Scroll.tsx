@@ -2,7 +2,7 @@ import 'overlayscrollbars/css/OverlayScrollbars.css';
 
 import { cx } from '@linaria/core';
 import { OverlayScrollbarsComponent } from 'overlayscrollbars-react';
-import { ReactNode } from 'react';
+import { forwardRef, ReactNode, useImperativeHandle, useRef } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -15,31 +15,48 @@ export type ScrollProps = {
   variant?: Variants;
   flexbox?: boolean;
   onScroll?: (event?: UIEvent) => void;
+  className?: string;
 };
 
-export function Scroll({
-  children,
-  variant = Variants.Primary,
-  size = Sizes.Medium,
-  flexbox = false,
-  onScroll,
-  ...rest
-}: WithSupportProps<ScrollProps>) {
-  return (
-    <OverlayScrollbarsComponent
-      data-variant={variant}
-      data-size={size}
-      className={cx(S.scrollClassName, flexbox && 'os-host-flexbox')}
-      options={{
-        paddingAbsolute: true,
-        callbacks: { onScroll },
-      }}
-      {...extractSupportProps(rest)}
-    >
-      {children}
-    </OverlayScrollbarsComponent>
-  );
-}
+const ScrollComponent = forwardRef<HTMLElement, WithSupportProps<ScrollProps>>(
+  (
+    { children, variant = Variants.Primary, size = Sizes.Medium, flexbox = false, onScroll, className, ...rest },
+    ref,
+  ) => {
+    const overlayScrollbarsRef = useRef<OverlayScrollbarsComponent>(null);
+
+    useImperativeHandle<HTMLElement | null, HTMLElement | null>(
+      ref,
+      () => (overlayScrollbarsRef.current?.osInstance()?.getElements('viewport') ?? null) as HTMLElement | null,
+    );
+
+    return (
+      <OverlayScrollbarsComponent
+        data-variant={variant}
+        data-size={size}
+        className={cx(S.scrollClassName, className, flexbox && 'os-host-flexbox')}
+        options={{
+          callbacks: {
+            onScroll,
+          },
+          scrollbars: {
+            autoHide: 'leave',
+            autoHideDelay: 100,
+          },
+        }}
+        ref={overlayScrollbarsRef}
+        {...extractSupportProps(rest)}
+      >
+        {children}
+      </OverlayScrollbarsComponent>
+    );
+  },
+);
+
+export const Scroll = ScrollComponent as typeof ScrollComponent & {
+  variants: typeof Variants;
+  sizes: typeof Sizes;
+};
 
 Scroll.variants = Variants;
 Scroll.sizes = Sizes;

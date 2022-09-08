@@ -42,14 +42,6 @@ export const scrollClassName = css`
   }
 
   &[data-size=${Sizes.Small}] {
-    &.os-host-overflow-y {
-      padding-right: 12px;
-    }
-
-    &.os-host-overflow-x {
-      padding-bottom: 12px;
-    }
-
     & > .os-scrollbar-corner {
       width: 12px;
       height: 12px;
@@ -67,14 +59,6 @@ export const scrollClassName = css`
   }
 
   &[data-size=${Sizes.Medium}] {
-    &.os-host-overflow-y {
-      padding-right: 14px;
-    }
-
-    &.os-host-overflow-x {
-      padding-bottom: 14px;
-    }
-
     & > .os-scrollbar-corner {
       width: 14px;
       height: 14px;
