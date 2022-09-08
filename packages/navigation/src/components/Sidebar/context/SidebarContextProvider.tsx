@@ -2,14 +2,21 @@ import { MouseEvent, ReactNode, useEffect, useRef, useState } from 'react';
 
 import { TRANSITION_TIMING } from '../constants';
 import { getActiveLevels } from '../helpers';
-import { Mode, SidebarItemId, SidebarItemProps, SidebarItemsGroup, SidebarLevel } from '../types';
+import { shouldBeDefaultClick } from '../helpers/shouldBeDefaultClick';
+import {
+  Mode,
+  SidebarItemId,
+  SidebarItemProps,
+  SidebarItemsGroup,
+  SidebarLevel,
+  SidebarOnActiveChange,
+} from '../types';
 import { SidebarContext } from './SidebarContext';
 
 type SidebarContextProviderProps = {
   list: SidebarItemsGroup[];
-  selected?: SidebarItemId;
-  onItemClick: SidebarItemProps['onClick'];
-  onBackClick?(): void;
+  active?: SidebarItemId;
+  onActiveChange: SidebarOnActiveChange;
   children: ReactNode;
   isCollapsed: boolean;
   setIsCollapsed(value: boolean): void;
@@ -17,9 +24,8 @@ type SidebarContextProviderProps = {
 
 export function SidebarContextProvider({
   list,
-  selected,
-  onItemClick,
-  onBackClick,
+  active,
+  onActiveChange,
   children,
   isCollapsed,
   setIsCollapsed,
@@ -37,11 +43,11 @@ export function SidebarContextProvider({
       return;
     }
 
-    const activeLevels = getActiveLevels(list, selected);
+    const activeLevels = getActiveLevels(list, active);
 
     setLevels(activeLevels);
     setCurrentLevel(activeLevels.length - 1);
-  }, [list, selected]);
+  }, [list, active]);
 
   function closeSearch() {
     setSearchShown(false);
@@ -63,15 +69,18 @@ export function SidebarContextProvider({
   function handleBackClick() {
     closeSearch();
 
+    const prevLevel = currentLevel - 1;
+    const prevLevelItem = levels[prevLevel];
+
     if (currentLevel > 0) {
-      setCurrentLevel(level => level - 1);
+      setCurrentLevel(prevLevel);
 
       setTimeout(() => {
         setLevels(prev => prev.slice(0, -1));
       }, TRANSITION_TIMING.hideLevel + 10); // awaiting transition to end before remove level
     }
 
-    onBackClick?.();
+    onActiveChange({ id: prevLevelItem.title?.id, href: prevLevelItem.title?.href });
 
     manualLevelChange.current = true;
   }
@@ -88,7 +97,13 @@ export function SidebarContextProvider({
   }
 
   function handleItemClick(item: SidebarItemProps) {
-    return (e: MouseEvent) => {
+    return (event: MouseEvent) => {
+      if (shouldBeDefaultClick(event)) {
+        return;
+      }
+
+      event.preventDefault();
+
       if (item.disabled) {
         return;
       }
@@ -102,13 +117,9 @@ export function SidebarContextProvider({
         }
       }
 
-      const id = (item.mode === Mode.Accordion && item.nestedList?.length ? selected : item.id) as string;
+      const id = (item.mode === Mode.Accordion && item.nestedList?.length ? active : item.id) as string;
 
-      if (item.onClick) {
-        return item.onClick?.(e, id, item.href);
-      }
-
-      return onItemClick?.(e, id, item.href);
+      return onActiveChange({ id, href: item.href });
     };
   }
 
@@ -116,7 +127,7 @@ export function SidebarContextProvider({
     <SidebarContext.Provider
       value={{
         levels,
-        selected,
+        active,
         currentLevel,
         search,
         setSearch,

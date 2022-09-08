@@ -1,4 +1,4 @@
-import { MouseEvent, ReactElement } from 'react';
+import { ReactElement } from 'react';
 
 export type SidebarItemId = string | number;
 
@@ -7,20 +7,33 @@ export enum Mode {
   Accordion = 'accordion',
 }
 
-export type SidebarItemProps = {
+type BaseSidebarItem = {
   id: SidebarItemId;
-  text: string;
+  label: string;
   href?: string;
   icon?: ReactElement;
-  onClick?(e: MouseEvent, id: SidebarItemId, href?: string): void;
   disabled?: boolean;
-  isNew?: boolean;
-  isLocked?: boolean;
+  showNewLabel?: boolean;
+  locked?: boolean;
   count?: number;
+  mode?: Mode;
   // eslint-disable-next-line no-use-before-define
   nestedList?: SidebarItemsGroup[];
-  mode?: Mode;
 };
+
+type AccordionSidebarItem = BaseSidebarItem & {
+  mode: Mode.Accordion;
+  // eslint-disable-next-line no-use-before-define
+  nestedList: SidebarItemsGroup[];
+};
+
+type SidebarItemSlide = BaseSidebarItem & {
+  href: string;
+};
+
+export type SidebarItemProps = AccordionSidebarItem | SidebarItemSlide;
+
+export type SidebarOnActiveChange = (item: Partial<Pick<SidebarItemProps, 'id' | 'href'>>) => void;
 
 export type SidebarItemsGroup = {
   heading?: string;

@@ -28,7 +28,11 @@ import {
   MobileHeader,
   MobileMenu,
   MobileMenuReference,
+  SidebarItemId,
+  SidebarMobile,
+  SidebarProps,
 } from '../src';
+import { menuList } from './mocks/menuList';
 
 export default {
   title: 'Not stable/Navigation/Header',
@@ -82,9 +86,18 @@ const ProjectSelector = () => {
   );
 };
 
-const Template: Story<HeaderProps> = () => {
+const Template: Story<HeaderProps & { menuList: SidebarProps['list']; activeMenuItem: SidebarProps['active'] }> = ({
+  menuList,
+  activeMenuItem,
+}) => {
   const { isMobile } = useMatchMedia();
   const mobileMenuRef = useRef<MobileMenuReference>(null);
+
+  const [selectedItem, setSelectedItem] = useState<SidebarItemId | undefined>(activeMenuItem);
+
+  const handleActiveChange: SidebarProps['onActiveChange'] = ({ id }) => {
+    setSelectedItem(id);
+  };
 
   if (isMobile) {
     return (
@@ -104,6 +117,8 @@ const Template: Story<HeaderProps> = () => {
           <Divider />
 
           <ProjectSelector />
+
+          <SidebarMobile list={menuList} onActiveChange={handleActiveChange} active={selectedItem} />
         </MobileMenu>
       </Wrapper>
     );
@@ -148,7 +163,10 @@ const Template: Story<HeaderProps> = () => {
 };
 
 export const header = Template.bind({});
-header.args = {};
+header.args = {
+  activeMenuItem: 'main-advanced',
+  menuList,
+};
 header.argTypes = {};
 header.parameters = {
   readme: {

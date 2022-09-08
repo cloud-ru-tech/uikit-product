@@ -6,30 +6,31 @@ import { SidebarItemPostfix } from '../SidebarItemPostfix';
 import * as S from './styled';
 
 type SidebarItem = SidebarItemProps & {
+  isHeaderItem?: boolean;
   isOpen?: boolean;
   level?: number;
   showArrow?: boolean;
-  selected?: boolean;
   onClick?(e: MouseEvent): void;
 };
 
 export function SidebarItem({
   id,
-  text,
+  label,
+  href,
   icon,
   count,
-  isNew,
-  isLocked,
+  showNewLabel,
+  locked,
   disabled,
   showArrow,
   level,
   onClick,
   isOpen,
-  selected: outerSelected,
+  isHeaderItem,
 }: SidebarItem) {
-  const { selected } = useSidebarContext();
+  const { active } = useSidebarContext();
 
-  const isSelected = id === selected || outerSelected || undefined;
+  const isActive = id === active || undefined;
 
   const offsetIconsArray = useMemo(() => {
     if (level === undefined) {
@@ -39,11 +40,14 @@ export function SidebarItem({
     return Array.from({ length: level }, (_, index) => index + 1);
   }, [level]);
 
+  const link = isHeaderItem ? undefined : href;
+
   return (
     <S.Item
+      href={link}
       onClick={onClick}
       data-disabled={disabled || undefined}
-      data-selected={isSelected}
+      data-active={isActive}
       data-no-hover={!Boolean(onClick) || undefined}
       data-test-id='sidebar__item'
     >
@@ -60,13 +64,13 @@ export function SidebarItem({
           )}
         </S.IconContainer>
 
-        <S.Text data-test-id='sidebar__item__text'>{text}</S.Text>
+        <S.Label data-test-id='sidebar__item__label'>{label}</S.Label>
       </S.Content>
 
       <SidebarItemPostfix
         count={count}
-        isLocked={isLocked}
-        isNew={isNew}
+        locked={locked}
+        showNewLabel={showNewLabel}
         disabled={disabled}
         showArrow={showArrow}
         isOpen={isOpen}

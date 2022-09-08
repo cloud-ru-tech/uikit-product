@@ -1,7 +1,5 @@
 import { styled } from '@linaria/react';
 
-import { ANIMATIONS, SHADOW } from '@sbercloud/uikit-product-utils';
-
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 GREEN_DARK_THEME;
@@ -18,15 +16,9 @@ export const Sidebar = styled.div`
   padding: 16px 0;
   border-right: 1px solid var(${COLORS.border});
   background-color: var(${COLORS.background});
-  box-shadow: transparent;
-  transition: box-shadow ${ANIMATIONS.TRANSITION};
 
   &[data-collapsed] {
     max-width: 53px;
-  }
-
-  &:hover {
-    box-shadow: ${SHADOW.LARGE};
   }
 
   &,

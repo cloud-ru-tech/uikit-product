@@ -7,3 +7,4 @@ export * from './SidebarItemPostfix';
 export * from './SidebarList';
 export * from './SidebarListHeader';
 export * from './SidebarMain';
+export * from './SidebarMobile';

@@ -4,7 +4,7 @@ import { SidebarItemId, SidebarItemProps, SidebarLevel } from '../types';
 
 type SidebarContextProps = {
   levels: SidebarLevel[];
-  selected?: SidebarItemId;
+  active?: SidebarItemId;
   currentLevel: number;
   search: string;
   setSearch(value: string): void;
@@ -18,7 +18,7 @@ type SidebarContextProps = {
   handleItemClick(item: SidebarItemProps): (e: MouseEvent) => void;
 };
 
-export const SidebarContext = createContext<SidebarContextProps>({
+export const SIDEBAR_CONTEXT_STUB: SidebarContextProps = {
   currentLevel: 0,
   levels: [],
   search: '',
@@ -33,6 +33,8 @@ export const SidebarContext = createContext<SidebarContextProps>({
   handleItemClick() {
     return () => {};
   },
-});
+};
+
+export const SidebarContext = createContext<SidebarContextProps>(SIDEBAR_CONTEXT_STUB);
 
 export const useSidebarContext = () => useContext(SidebarContext);

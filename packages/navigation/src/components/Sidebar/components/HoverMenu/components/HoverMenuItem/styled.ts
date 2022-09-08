@@ -15,7 +15,7 @@ export const MenuItem = styled.a`
   color: var(${COLORS.text.default});
   cursor: pointer;
 
-  &[data-selected] {
+  &[data-active] {
     color: var(${COLORS.text.selected});
   }
 

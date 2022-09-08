@@ -5,27 +5,25 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import { SidebarFooter, SidebarMain } from './components';
 import { SidebarContextProvider } from './context';
 import * as S from './styled';
-import { Mode, SidebarItemId, SidebarItemProps, SidebarItemsGroup } from './types';
+import { Mode, SidebarItemId, SidebarItemProps, SidebarItemsGroup, SidebarOnActiveChange } from './types';
 
 export type SidebarProps = WithSupportProps<{
   list: SidebarItemsGroup[];
-  selected?: SidebarItemId;
   footerItems?: SidebarItemProps[];
-  onBackClick?(): void;
-  onItemClick: SidebarItemProps['onClick'];
+  active?: SidebarItemId;
+  onActiveChange: SidebarOnActiveChange;
   className?: string;
 }>;
 
-export function Sidebar({ list, selected, footerItems, onItemClick, onBackClick, className, ...rest }: SidebarProps) {
+export function Sidebar({ list, active, footerItems, onActiveChange, className, ...rest }: SidebarProps) {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
     <S.Sidebar data-collapsed={isCollapsed || undefined} className={className} {...extractSupportProps(rest)}>
       <SidebarContextProvider
-        onBackClick={onBackClick}
-        selected={selected}
+        active={active}
         list={list}
-        onItemClick={onItemClick}
+        onActiveChange={onActiveChange}
         isCollapsed={isCollapsed}
         setIsCollapsed={setIsCollapsed}
       >

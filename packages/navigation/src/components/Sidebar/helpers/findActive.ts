@@ -1,8 +1,8 @@
 import { Mode, SidebarItemId, SidebarItemProps } from '../types';
 
-export function findSelected(
+export function findActive(
   element: SidebarItemProps,
-  selected?: SidebarItemId,
+  active?: SidebarItemId,
   maxNestedLevel?: number,
 ): SidebarItemProps | null {
   const stack = [];
@@ -15,9 +15,9 @@ export function findSelected(
   while (stack.length > 0) {
     node = stack.pop() as SidebarItemProps;
 
-    if (node.id === selected) {
+    if (node.id === active) {
       return node;
-    } else if (node?.nestedList?.length) {
+    } else if (node.nestedList?.length) {
       level += 1;
 
       for (ii = 0; ii < node.nestedList.length; ii += 1) {

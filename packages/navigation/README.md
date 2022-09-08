@@ -257,10 +257,9 @@ type SidebarItemId = string | number;
 
 type SidebarProps = WithSupportProps<{
   list: SidebarItemsGroup[];
-  selected?: SidebarItemId;
   footerItems?: SidebarItemProps[];
-  onBackClick?(): void;
-  onItemClick: SidebarItemProps['onClick'];
+  active?: SidebarItemId;
+  onActiveChange: SidebarOnActiveChange;
   className?: string;
 }>;
 
@@ -271,17 +270,19 @@ enum Mode {
 
 type SidebarItemProps = {
   id: SidebarItemId;
-  text: string;
+  label: string;
   href?: string;
   icon?: ReactElement;
-  onClick?(e: MouseEvent, id: SidebarItemId, href?: string): void;
   disabled?: boolean;
-  isNew?: boolean;
-  isLocked?: boolean;
+  showNewLabel?: boolean;
+  locked?: boolean;
   count?: number;
+  // eslint-disable-next-line no-use-before-define
   nestedList?: SidebarItemsGroup[];
   mode?: Mode;
 };
+
+type SidebarOnActiveChange = (item: Partial<Pick<SidebarItemProps, 'id' | 'href'>>) => void;
 
 type SidebarItemsGroup = {
   heading?: string;

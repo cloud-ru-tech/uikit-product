@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
-import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
+import { ANIMATIONS, CSS_BREAKPOINTS } from '@sbercloud/uikit-product-utils';
 
 import { TruncatedTextWithTooltip } from '../../helperComponents';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -11,7 +11,7 @@ GREEN_THEME;
 PURPLE_THEME;
 PURPLE_DARK_THEME;
 
-export const Item = styled.div`
+export const Item = styled.a`
   --sidebar-item__backround-color: transparent;
   --sidebar-item__text-color: var(${COLORS.text.default});
   --sidebar-item__icon-color: var(${COLORS.icon.default});
@@ -24,6 +24,7 @@ export const Item = styled.div`
   width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
+  user-select: none;
 
   &:not([data-disabled]) {
     &:not([data-no-hover]) {
@@ -44,9 +45,13 @@ export const Item = styled.div`
     cursor: not-allowed;
   }
 
-  &[data-selected] {
-    --sidebar-item__text-color: var(${COLORS.text.selected});
-    --sidebar-item__icon-color: var(${COLORS.icon.selected});
+  &[data-active] {
+    --sidebar-item__text-color: var(${COLORS.text.active});
+    --sidebar-item__icon-color: var(${COLORS.icon.active});
+  }
+
+  @media ${CSS_BREAKPOINTS.mobile} {
+    padding: 4px 16px;
   }
 `;
 
@@ -75,7 +80,7 @@ export const Icon = styled.div`
   }
 `;
 
-export const Text = styled(TruncatedTextWithTooltip)`
+export const Label = styled(TruncatedTextWithTooltip)`
   color: var(--sidebar-item__text-color);
   transition: color ${ANIMATIONS.TRANSITION};
 `;

@@ -1,2 +1,3 @@
 export * from './Sidebar';
-export type { SidebarItemId, SidebarItemProps } from './types';
+export * from './components/SidebarMobile';
+export type { SidebarItemId, SidebarItemProps, SidebarItemsGroup } from './types';

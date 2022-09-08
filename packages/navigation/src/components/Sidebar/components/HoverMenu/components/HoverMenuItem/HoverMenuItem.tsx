@@ -13,19 +13,19 @@ export type HoverMenuItemProps = SidebarItemProps & {
 
 export function HoverMenuItem({
   id,
-  text,
+  label,
   href,
   onClick,
-  isNew,
+  showNewLabel,
   count,
-  isLocked,
+  locked,
   nestedList,
   disabled,
   mode = Mode.Slide,
   level,
   closeMenu,
 }: HoverMenuItemProps) {
-  const { selected, handleItemClick } = useSidebarContext();
+  const { active, handleItemClick } = useSidebarContext();
   const showChildren = nestedList && mode === Mode.Accordion;
   const isItemDisabled = disabled || showChildren || undefined;
   const handleClick = (e: MouseEvent) => {
@@ -45,7 +45,7 @@ export function HoverMenuItem({
     <>
       <S.MenuItem
         href={href}
-        data-selected={id === selected || undefined}
+        data-active={id === active || undefined}
         data-disabled={isItemDisabled}
         onClick={isItemDisabled ? undefined : handleClick}
       >
@@ -57,9 +57,9 @@ export function HoverMenuItem({
           </S.Offsets>
         )}
 
-        <S.MenuItemLabel data-level={level}>{text}</S.MenuItemLabel>
+        <S.MenuItemLabel data-level={level}>{label}</S.MenuItemLabel>
 
-        <SidebarItemPostfix count={count} isLocked={isLocked} isNew={isNew} disabled={isItemDisabled} />
+        <SidebarItemPostfix count={count} locked={locked} showNewLabel={showNewLabel} disabled={isItemDisabled} />
       </S.MenuItem>
 
       {showChildren &&

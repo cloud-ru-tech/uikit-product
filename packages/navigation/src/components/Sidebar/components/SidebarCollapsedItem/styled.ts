@@ -48,7 +48,7 @@ export const Icon = styled.div`
     fill: var(${COLORS.icon.disabled});
   }
 
-  &[data-selected] svg {
+  &[data-active] svg {
     fill: var(${COLORS.icon.selected});
   }
 `;

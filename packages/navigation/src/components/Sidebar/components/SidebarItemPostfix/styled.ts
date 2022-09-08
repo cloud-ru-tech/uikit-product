@@ -21,9 +21,17 @@ export const Elements = styled.div`
   grid-column: none;
   padding-left: 8px;
 
+  > * {
+    cursor: pointer;
+  }
+
   &[data-disabled] {
     --sidebar-item-postfix__lock-color: var(${COLORS.lock.disabled});
     --sidebar-item-postfix__arrow-color: var(${COLORS.arrow.disabled});
+
+    > * {
+      cursor: not-allowed;
+    }
   }
 `;
 
@@ -34,7 +42,8 @@ export const LockIcon = styled(LockInterfaceSVG)`
 
 export const AccordionArrowIcon = styled(DropdownDownInterfaceSVG)`
   fill: var(--sidebar-item-postfix__arrow-color);
-  transition: fill ${ANIMATIONS.TRANSITION}, transform ${ANIMATIONS.TRANSITION};
+  transition: ${ANIMATIONS.TRANSITION};
+  transition-property: fill, transform;
 
   &[data-opened] {
     transform: rotate(-180deg);

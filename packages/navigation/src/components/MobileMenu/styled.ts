@@ -19,6 +19,7 @@ export const Wrapper = styled.div<{ left: number; top: number; strategy: string 
   box-sizing: border-box;
   padding: 12px 0;
   row-gap: 12px;
+  overflow-y: auto;
 
   & * {
     box-sizing: border-box;

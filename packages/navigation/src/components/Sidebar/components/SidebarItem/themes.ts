@@ -8,7 +8,7 @@ export const COLORS = {
   text: {
     default: '--color__navigation__sidebar__item__text__default',
     disabled: '--color__navigation__sidebar__item__text__disabled',
-    selected: '--color__navigation__sidebar__item__text__selected',
+    active: '--color__navigation__sidebar__item__text__active',
   },
   background: {
     hover: '--color__navigation__sidebar__item__background__hover',
@@ -16,22 +16,22 @@ export const COLORS = {
   icon: {
     default: '--color__navigation__sidebar__item__icon__default',
     disabled: '--color__navigation__sidebar__item__icon__disabled',
-    selected: '--color__navigation__sidebar__item__icon__selected',
+    active: '--color__navigation__sidebar__item__icon__active',
   },
 };
 
 export const PURPLE_THEME = css`
   :global() {
     body[data-theme='${Themes.Purple}'] {
-      ${COLORS.text.default}: var(${GREY[600]});
+      ${COLORS.text.default}: var(${GREY[800]});
       ${COLORS.text.disabled}: var(${BLACK_ALFA[24]});
-      ${COLORS.text.selected}: var(${PURPLE[100]});
+      ${COLORS.text.active}: var(${PURPLE[100]});
 
       ${COLORS.background.hover}: var(${PURPLE_ALFA[4]});
 
       ${COLORS.icon.default}: var(${GREY[400]});
       ${COLORS.icon.disabled}: var(${BLACK_ALFA[16]});
-      ${COLORS.icon.selected}: var(${PURPLE[100]});
+      ${COLORS.icon.active}: var(${PURPLE[100]});
     }
   }
 `;
@@ -41,13 +41,13 @@ export const PURPLE_DARK_THEME = css`
     body[data-theme='${Themes.PurpleDark}'] {
       ${COLORS.text.default}: var(${GREY[100]});
       ${COLORS.text.disabled}: var(${WHITE_ALFA[24]});
-      ${COLORS.text.selected}: var(${PURPLE[50]});
+      ${COLORS.text.active}: var(${PURPLE[50]});
 
       ${COLORS.background.hover}: var(${PURPLE_ALFA[4]});
 
       ${COLORS.icon.default}: var(${WHITE_ALFA[24]});
       ${COLORS.icon.disabled}: var(${WHITE_ALFA[16]});
-      ${COLORS.icon.selected}: var(${PURPLE[50]});
+      ${COLORS.icon.active}: var(${PURPLE[50]});
     }
   }
 `;
@@ -55,15 +55,15 @@ export const PURPLE_DARK_THEME = css`
 export const GREEN_THEME = css`
   :global() {
     body[data-theme='${Themes.Green}'] {
-      ${COLORS.text.default}: var(${GREY[600]});
+      ${COLORS.text.default}: var(${GREY[800]});
       ${COLORS.text.disabled}: var(${BLACK_ALFA[24]});
-      ${COLORS.text.selected}: var(${GREEN[100]});
+      ${COLORS.text.active}: var(${GREEN[100]});
 
       ${COLORS.background.hover}: var(${GREEN_ALFA[4]});
 
       ${COLORS.icon.default}: var(${GREY[400]});
       ${COLORS.icon.disabled}: var(${BLACK_ALFA[16]});
-      ${COLORS.icon.selected}: var(${GREEN[100]});
+      ${COLORS.icon.active}: var(${GREEN[100]});
     }
   }
 `;
@@ -73,13 +73,13 @@ export const GREEN_DARK_THEME = css`
     body[data-theme='${Themes.GreenDark}'] {
       ${COLORS.text.default}: var(${GREY[100]});
       ${COLORS.text.disabled}: var(${WHITE_ALFA[24]});
-      ${COLORS.text.selected}: var(${GREEN[50]});
+      ${COLORS.text.active}: var(${GREEN[50]});
 
       ${COLORS.background.hover}: var(${GREEN_ALFA[4]});
 
       ${COLORS.icon.default}: var(${WHITE_ALFA[24]});
       ${COLORS.icon.disabled}: var(${WHITE_ALFA[16]});
-      ${COLORS.icon.selected}: var(${GREEN[50]});
+      ${COLORS.icon.active}: var(${GREEN[50]});
     }
   }
 `;

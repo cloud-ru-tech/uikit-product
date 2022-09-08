@@ -34,6 +34,7 @@ export const ListWrap = styled.div`
     opacity: 0;
     transition: opacity ${ANIMATIONS.TRANSITION};
     pointer-events: none;
+    z-index: 1;
   }
 
   &::before {
@@ -56,18 +57,25 @@ export const ListWrap = styled.div`
       opacity: 1;
     }
   }
+
+  &[data-footer] {
+    margin-top: 8px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 `;
 
-export const Scrollable = styled.div`
-  overflow-y: auto;
-  width: 100%;
-  height: 100%;
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 16px;
   padding-bottom: 26px;
 
   &[data-footer] {
+    height: auto;
     padding-bottom: 0;
   }
 
@@ -79,10 +87,5 @@ export const Scrollable = styled.div`
 export const ItemsList = styled.div`
   display: flex;
   flex-direction: column;
-  column-gap: 4px;
-
-  &[data-footer] {
-    margin-top: 8px;
-    column-gap: 8px;
-  }
+  row-gap: 4px;
 `;

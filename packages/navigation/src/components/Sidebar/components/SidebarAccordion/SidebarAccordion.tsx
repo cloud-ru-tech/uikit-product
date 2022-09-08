@@ -2,8 +2,9 @@ import { MouseEvent, useCallback, useEffect, useRef, useState } from 'react';
 
 import { TRANSITION_TIMING } from '../../constants';
 import { useSidebarContext } from '../../context';
-import { useNestedSelected } from '../../hooks';
-import { Mode, SidebarItemProps } from '../../types';
+import { isItemAccordion } from '../../helpers';
+import { useNestedActive } from '../../hooks';
+import { SidebarItemProps } from '../../types';
 import { SidebarItem } from '../SidebarItem';
 import * as S from './styled';
 
@@ -11,16 +12,18 @@ type SidebarAccordionProps = {
   item: SidebarItemProps;
   onInnerToggle?(isInner?: boolean): void;
   accordionLevel: number;
+  isMobile?: boolean;
 };
 
-export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: SidebarAccordionProps) {
-  const { handleItemClick, isSearchShown } = useSidebarContext();
+export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0, isMobile }: SidebarAccordionProps) {
+  const { handleItemClick, isSearchShown, active } = useSidebarContext();
 
   const [isOpen, setOpen] = useState(false);
   const [maxHeight, setMaxHeight] = useState<number>(0);
   const accordionRef = useRef<HTMLDivElement>(null);
-  const isAccordion = Boolean(item.mode === Mode.Accordion && item.nestedList?.length);
-  const nestedSelected = useNestedSelected(item);
+
+  const isAccordion = isItemAccordion(item, isMobile);
+  const nestedActive = useNestedActive(item, isMobile);
 
   const toggleHeight = useCallback(
     (isInner?: boolean) => {
@@ -35,8 +38,8 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: Si
   );
 
   useEffect(() => {
-    setOpen(nestedSelected && !isSearchShown);
-  }, [isSearchShown, nestedSelected]);
+    setOpen(nestedActive && !isSearchShown);
+  }, [isSearchShown, nestedActive, active]);
 
   useEffect(() => {
     toggleHeight();
@@ -48,7 +51,10 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: Si
 
   function handleClick(e: MouseEvent) {
     if (isAccordion) {
+      e.preventDefault();
+
       setOpen(open => !open);
+      return;
     }
 
     handleItemClick(item)(e);
@@ -63,10 +69,11 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: Si
           {item.nestedList?.map(nested =>
             nested.items.map(nestedItem => (
               <SidebarAccordion
-                key={nestedItem.text}
+                key={nestedItem.label}
                 onInnerToggle={toggleHeight}
                 item={nestedItem}
                 accordionLevel={accordionLevel + 1}
+                isMobile={isMobile}
               />
             )),
           )}

@@ -6,14 +6,21 @@ import { textProvider, Texts } from '../../../../helpers';
 import { SidebarItemProps } from '../../types';
 import * as S from './styled';
 
-type SidebarItemPostfixProps = Pick<SidebarItemProps, 'count' | 'isNew' | 'isLocked' | 'disabled'> & {
+type SidebarItemPostfixProps = Pick<SidebarItemProps, 'count' | 'showNewLabel' | 'locked' | 'disabled'> & {
   showArrow?: boolean;
   isOpen?: boolean;
 };
 
-export function SidebarItemPostfix({ count, isNew, isLocked, disabled, showArrow, isOpen }: SidebarItemPostfixProps) {
+export function SidebarItemPostfix({
+  count,
+  showNewLabel,
+  locked,
+  disabled,
+  showArrow,
+  isOpen,
+}: SidebarItemPostfixProps) {
   const { languageCode } = useLanguage();
-  const showElements = Boolean(isNew || count || isLocked || showArrow);
+  const showElements = Boolean(showNewLabel || count || locked || showArrow);
 
   if (!showElements) {
     return null;
@@ -21,7 +28,7 @@ export function SidebarItemPostfix({ count, isNew, isLocked, disabled, showArrow
 
   return (
     <S.Elements data-disabled={disabled || undefined}>
-      {isNew && (
+      {showNewLabel && (
         <Label
           data-test-id='sidebar__item__postfix__label'
           text={textProvider(languageCode, Texts.SidebarItemNew)}
@@ -31,7 +38,7 @@ export function SidebarItemPostfix({ count, isNew, isLocked, disabled, showArrow
 
       {count !== undefined && <Counter value={count} />}
 
-      {isLocked && <S.LockIcon data-test-id='sidebar__item__postfix__disabled-icon' size={20} />}
+      {locked && <S.LockIcon data-test-id='sidebar__item__postfix__locked-icon' size={20} />}
 
       {showArrow && (
         <S.AccordionArrowIcon
