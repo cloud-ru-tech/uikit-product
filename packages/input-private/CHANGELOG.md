@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.6.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.6.2...@sbercloud/uikit-product-input-private@2.6.3) (2022-09-08)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-input-private
+
+
+
+
+
 ## [2.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.6.1...@sbercloud/uikit-product-input-private@2.6.2) (2022-09-01)
 
 

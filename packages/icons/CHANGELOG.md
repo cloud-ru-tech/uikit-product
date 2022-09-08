@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.1.0...@sbercloud/uikit-product-icons@5.2.0) (2022-09-08)
+
+
+### Bug Fixes
+
+* **FF-679:** align home icon centrally ([2643e51](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2643e5113c45e2359a19b21084a34ec98950978d))
+
+
+### Features
+
+* **FF-815:** add MLSpace icon without color ([2c79224](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2c792241f1ea36be85205d273c7f8475dc80811e))
+
+
+
+
+
 # [5.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.0.2...@sbercloud/uikit-product-icons@5.1.0) (2022-08-23)
 
 

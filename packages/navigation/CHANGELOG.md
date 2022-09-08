@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.7.1...@sbercloud/uikit-product-navigation@0.8.0) (2022-09-08)
+
+
+### Bug Fixes
+
+* **FF-681:** add tests for sidebar ([cb02b9f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cb02b9fc43b531da005638c9f267c5ba591d420d))
+
+
+### Features
+
+* **FF-679:** add hover menu ([a2ecdba](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a2ecdbab67795e0d7648239099c4287d058c3c5d))
+* **FF-679:** add logic for collapsing sidebar ([69f6771](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/69f67711166b6d77b2d2a40568367db37ce49e53))
+* **FF-815:** mobile menu navigation ([5e0bda5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5e0bda5a575a9d7f13f793ee15a1295f8b7c2e92))
+* **FF-836:** add tooltips for items with truncated texts ([87af813](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/87af813f1b8482f6fec9a8b9b27356deb449e279))
+
+
+
+
+
 ## [0.7.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.7.0...@sbercloud/uikit-product-navigation@0.7.1) (2022-09-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-navigation

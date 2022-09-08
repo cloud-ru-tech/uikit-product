@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-scroll@1.1.0...@sbercloud/uikit-product-scroll@1.2.0) (2022-09-08)
+
+
+### Features
+
+* add forwardRef with scrollable div, autoHide on mouseleave ([9bb8760](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9bb8760eedda9cd35964ddaff53a6d00d7bec385))
+
+
+
+
+
 # 1.1.0 (2022-08-24)
 
 
