@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.8.1...@sbercloud/uikit-product-navigation@0.9.0) (2022-09-09)
+
+
+### Features
+
+* **FF-923:** keep user-selected sidebar collapsed state between sessions ([a87ef7d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a87ef7d387fa406eee77488442ff868a10a19768))
+
+
+
+
+
 ## [0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.8.0...@sbercloud/uikit-product-navigation@0.8.1) (2022-09-09)
 
 
