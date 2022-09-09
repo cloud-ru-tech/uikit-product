@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.8.0...@sbercloud/uikit-product-navigation@0.8.1) (2022-09-09)
+
+
+### Bug Fixes
+
+* **FF-940:** update sidebar animation when uncollapsed ([fff137c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fff137cb57c34dc3f9d841f33f43e3b0a67b1382))
+
+
+
+
+
 # [0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.7.1...@sbercloud/uikit-product-navigation@0.8.0) (2022-09-08)
 
 
