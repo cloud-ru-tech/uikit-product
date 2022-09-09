@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.2.0...@sbercloud/uikit-product-icons@5.3.0) (2022-09-09)
+
+
+### Features
+
+* **FF-920:** add vmware service icon ([52e0144](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/52e01449551fe6243d7c0deb8d419f8f383f7b90))
+
+
+
+
+
 # [5.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.1.0...@sbercloud/uikit-product-icons@5.2.0) (2022-09-08)
 
 
