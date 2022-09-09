@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.3.0...@sbercloud/uikit-product-icons@5.3.1) (2022-09-09)
+
+
+### Bug Fixes
+
+* **FF-911:** add prefixIds plugin for generating unique ids in SVG ([71e77b9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/71e77b9d044b57fbb64547ced02bf5b8d42642c4))
+* **FF-941:** update png icons to svg ([fc1307f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fc1307ff54b85d979b42053a9aef224326d417d9))
+
+
+
+
+
 # [5.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.2.0...@sbercloud/uikit-product-icons@5.3.0) (2022-09-09)
 
 

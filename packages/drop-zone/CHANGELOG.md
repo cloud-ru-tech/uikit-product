@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-drop-zone@0.2.36...@sbercloud/uikit-product-drop-zone@0.2.37) (2022-09-09)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-drop-zone
+
+
+
+
+
 ## [0.2.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-drop-zone@0.2.35...@sbercloud/uikit-product-drop-zone@0.2.36) (2022-09-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-drop-zone
