@@ -76,7 +76,7 @@
     "eslint-plugin-cypress": "2.12.1",
     "glob": "8.0.3",
     "inquirer": "8.2.4",
-    "lerna": "5.4.0",
+    "lerna": "5.5.1",
     "minimist": "1.2.6",
     "mkdirp": "1.0.4",
     "normalize-path": "3.0.0",
