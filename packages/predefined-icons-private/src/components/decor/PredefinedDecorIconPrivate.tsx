@@ -51,7 +51,7 @@ const getContent = (props: PredefinedDecorIconPrivateProps) => {
 };
 
 export function PredefinedDecorIconPrivate(props: PredefinedDecorIconPrivateProps) {
-  const { type, size, className, ...rest } = props;
+  const { type, size = Sizes.Medium, className, ...rest } = props;
   const { icon, dataIcon } = getContent(props);
 
   return (
