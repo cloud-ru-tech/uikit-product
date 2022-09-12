@@ -61,6 +61,7 @@ function StylelessTableFreePrivate({
             pagination: Boolean(pageSize),
             paginationPageSize: pageSize,
             ensureDomOrder: true,
+            suppressMovableColumns: true,
             defaultColDef: {
               flex: 1,
               resizable: true,

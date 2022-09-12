@@ -120,6 +120,7 @@ function StylelessTablePrivate({
           suppressContextMenu: true,
           enableCellTextSelection: true,
           ensureDomOrder: true,
+          suppressMovableColumns: true,
           defaultColDef: {
             resizable: true,
             sortable: true,
