@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.45.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.44.6...@sbercloud/uikit-product-table@0.45.0) (2022-09-12)
+
+
+### Features
+
+* supress drag columns, ag-grid 28 ([721f60e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/721f60ef6cf409a8ccd1ae74c7f3ccbf76c2596e))
+
+
+
+
+
 ## [0.44.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.44.5...@sbercloud/uikit-product-table@0.44.6) (2022-09-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table
