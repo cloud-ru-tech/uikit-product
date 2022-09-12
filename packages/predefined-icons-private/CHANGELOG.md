@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.6...@sbercloud/uikit-product-predefined-icons-private@0.4.0) (2022-09-12)
+
+
+### Features
+
+* **FF-727:** Icon Decor Predefined ([930e6c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/930e6c96e60130dfce956ae4debd772b55c709c5))
+
+
+### BREAKING CHANGES
+
+* **FF-727:** Icon Decor Predefined
+
+
+
+
+
 ## [0.3.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.5...@sbercloud/uikit-product-predefined-icons-private@0.3.6) (2022-09-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
