@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.4.0...@sbercloud/uikit-product-predefined-icons-private@0.4.1) (2022-09-12)
+
+
+### Bug Fixes
+
+* **FF-727:** Predefined icon padding fix ([665dffb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/665dffb16dabd71564375cad1a9af37e252fa383))
+
+
+
+
+
 # [0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.6...@sbercloud/uikit-product-predefined-icons-private@0.4.0) (2022-09-12)
 
 

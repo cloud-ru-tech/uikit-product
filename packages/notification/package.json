@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-notification",
   "title": "React Notification",
-  "version": "3.0.15",
+  "version": "3.0.16",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-button": "5.0.32",
     "@sbercloud/uikit-product-icons": "5.3.1",
-    "@sbercloud/uikit-product-predefined-icons-private": "0.4.0",
+    "@sbercloud/uikit-product-predefined-icons-private": "0.4.1",
     "@sbercloud/uikit-product-theme": "0.34.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
     "react-toastify": "9.0.1"
