@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.9.2...@sbercloud/uikit-product-navigation@0.10.0) (2022-09-13)
+
+
+### Features
+
+* **FF-921:** hover menu shadow, header border bottom ([e3d6ed3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3d6ed3659e3bb0be77619b95f534838fca6abf0))
+
+
+
+
+
 ## [0.9.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.9.1...@sbercloud/uikit-product-navigation@0.9.2) (2022-09-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-navigation
