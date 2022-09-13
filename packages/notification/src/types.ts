@@ -5,7 +5,6 @@ import { NotificationBigProps, NotificationContainerProps, NotificationSmallProp
 
 export type NotificationOptions = {
   id?: RtToastOptions['toastId'];
-  autoClose?: RtToastOptions['autoClose'];
   onClose?: RtToastOptions['onClose'];
 };
 

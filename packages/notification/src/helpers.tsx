@@ -46,19 +46,49 @@ function getNotificationContainer({
   };
 }
 
+function getAutoCloseValue<T extends keyof NotificationPropsMap>(
+  notificationProps?: NotificationPropsMap[T],
+): number | false {
+  if (!notificationProps || !notificationProps.status) {
+    return DEFAULT_AUTO_CLOSE;
+  }
+
+  switch (notificationProps.status) {
+    case NotificationSmall.statuses.Success:
+    case NotificationSmall.statuses.Error:
+    case NotificationSmall.statuses.Neutral:
+    case NotificationSmall.statuses.Loading:
+    case NotificationBig.statuses.Info:
+    case NotificationBig.statuses.Success:
+    case NotificationBig.statuses.Warning:
+    case NotificationBig.statuses.WarningCritical:
+    case NotificationBig.statuses.Error:
+      return DEFAULT_AUTO_CLOSE;
+
+    case NotificationBig.statuses.WarningAlarm:
+    case NotificationBig.statuses.ErrorAlarm:
+      return false;
+
+    default:
+      return DEFAULT_AUTO_CLOSE;
+  }
+}
+
 function getNotificationOptions<T extends keyof NotificationPropsMap>({
   type,
+  notificationProps,
   notificationOptions,
   containerId,
 }: {
   type: T;
+  notificationProps?: NotificationPropsMap[T];
   notificationOptions?: NotificationOptions;
   containerId?: NotificationContainerProps['containerId'];
 }): RtToastOptions {
   return {
     toastId: notificationOptions?.id,
     onClose: notificationOptions?.onClose,
-    autoClose: notificationOptions?.autoClose ?? DEFAULT_AUTO_CLOSE,
+    autoClose: getAutoCloseValue(notificationProps),
     containerId: containerId || `notification-container__${type}`,
   };
 }
@@ -101,6 +131,7 @@ export const openNotification: OpenNotification = ({
 
   const options = getNotificationOptions({
     type,
+    notificationProps,
     notificationOptions,
     containerId: notificationContainerProps.containerId,
   });
@@ -127,7 +158,7 @@ export const updateNotification: UpdateNotification = (
 ) => {
   let notificationComponent = customNotification;
 
-  const options = getNotificationOptions({ type, notificationOptions, containerId });
+  const options = getNotificationOptions({ type, notificationProps, notificationOptions, containerId });
 
   if (!customNotification && notificationProps) {
     notificationComponent = getNotificationComponent({
