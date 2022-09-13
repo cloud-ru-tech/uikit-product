@@ -43,11 +43,11 @@ export const sidebar = Template.bind({});
 sidebar.args = {
   list: menuList,
   footerItems,
+  active: 'main-advanced',
 };
 sidebar.argTypes = {
   active: {
     type: 'string',
-    defaultValue: 'main-advanced',
   },
 };
 sidebar.parameters = {

@@ -12,4 +12,5 @@ export const Wrapper = styled.header`
   display: grid;
   grid-template-columns: [header-menu] auto [header-logo] auto [header-project-selector] auto [header-balance-tooltip] auto [header-toolbar] 1fr;
   padding: 8px 16px;
+  border-bottom: 1px solid var(${COLORS.border.default});
 `;

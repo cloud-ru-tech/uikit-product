@@ -1,5 +1,7 @@
 import { styled } from '@linaria/react';
 
+import { SHADOW } from '@sbercloud/uikit-product-utils';
+
 import { COLORS, DARK_THEMES, LIGHT_THEMES } from './themes';
 
 LIGHT_THEMES;
@@ -16,6 +18,7 @@ export const TriggerWrapper = styled.span`
 `;
 
 export const MenuContent = styled.div`
+  box-shadow: ${SHADOW.MEDIUM};
   background: var(${COLORS.background});
   padding: 8px 0;
   border-radius: 8px;
