@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@3.0.16...@sbercloud/uikit-product-notification@4.0.0) (2022-09-14)
+
+
+### Features
+
+* **FF-744:** Notification close behavior updated ([423d267](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/423d26782446874f9c5bfe2f2d782e974f875fad))
+
+
+### BREAKING CHANGES
+
+* **FF-744:** Notification close behavior updated
+
+
+
+
+
 ## [3.0.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@3.0.15...@sbercloud/uikit-product-notification@3.0.16) (2022-09-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-notification
