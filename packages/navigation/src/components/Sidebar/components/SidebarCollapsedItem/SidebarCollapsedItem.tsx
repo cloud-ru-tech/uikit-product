@@ -4,6 +4,7 @@ import { useSidebarContext } from '../../context';
 import { useNestedActive } from '../../hooks';
 import { SidebarItemProps } from '../../types';
 import { HoverMenu } from '../HoverMenu';
+import { SidebarItemIcon } from '../SidebarItemIcon';
 import * as S from './styled';
 
 type SidebarCollapsedItemProps = {
@@ -27,11 +28,7 @@ export function SidebarCollapsedItem({ item, onClick }: SidebarCollapsedItemProp
       data-no-hover={noHover}
       data-test-id={`sidebar__item-${item.id}`}
     >
-      {item.icon && (
-        <S.Icon data-test-id='sidebar__item__icon' data-disabled={isDisabled} data-active={isActive}>
-          {item.icon}
-        </S.Icon>
-      )}
+      {item.icon && <SidebarItemIcon icon={item.icon} active={isActive} disabled={isDisabled} status={item.status} />}
     </S.Item>
   );
 

@@ -13,11 +13,6 @@ export const COLORS = {
   background: {
     hover: '--color__navigation__sidebar__item__background__hover',
   },
-  icon: {
-    default: '--color__navigation__sidebar__item__icon__default',
-    disabled: '--color__navigation__sidebar__item__icon__disabled',
-    active: '--color__navigation__sidebar__item__icon__active',
-  },
 };
 
 export const PURPLE_THEME = css`
@@ -28,10 +23,6 @@ export const PURPLE_THEME = css`
       ${COLORS.text.active}: var(${PURPLE[100]});
 
       ${COLORS.background.hover}: var(${PURPLE_ALFA[4]});
-
-      ${COLORS.icon.default}: var(${GREY[400]});
-      ${COLORS.icon.disabled}: var(${BLACK_ALFA[16]});
-      ${COLORS.icon.active}: var(${PURPLE[100]});
     }
   }
 `;
@@ -44,10 +35,6 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.text.active}: var(${PURPLE[50]});
 
       ${COLORS.background.hover}: var(${PURPLE_ALFA[4]});
-
-      ${COLORS.icon.default}: var(${WHITE_ALFA[24]});
-      ${COLORS.icon.disabled}: var(${WHITE_ALFA[16]});
-      ${COLORS.icon.active}: var(${PURPLE[50]});
     }
   }
 `;
@@ -60,10 +47,6 @@ export const GREEN_THEME = css`
       ${COLORS.text.active}: var(${GREEN[100]});
 
       ${COLORS.background.hover}: var(${GREEN_ALFA[4]});
-
-      ${COLORS.icon.default}: var(${GREY[400]});
-      ${COLORS.icon.disabled}: var(${BLACK_ALFA[16]});
-      ${COLORS.icon.active}: var(${GREEN[100]});
     }
   }
 `;
@@ -76,10 +59,6 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.text.active}: var(${GREEN[50]});
 
       ${COLORS.background.hover}: var(${GREEN_ALFA[4]});
-
-      ${COLORS.icon.default}: var(${WHITE_ALFA[24]});
-      ${COLORS.icon.disabled}: var(${WHITE_ALFA[16]});
-      ${COLORS.icon.active}: var(${GREEN[50]});
     }
   }
 `;

@@ -14,7 +14,6 @@ PURPLE_DARK_THEME;
 export const Item = styled.a`
   --sidebar-item__backround-color: transparent;
   --sidebar-item__text-color: var(${COLORS.text.default});
-  --sidebar-item__icon-color: var(${COLORS.icon.default});
 
   ${TEXT_2_STYLES};
   padding: 8px 16px;
@@ -40,14 +39,12 @@ export const Item = styled.a`
 
   &[data-disabled] {
     --sidebar-item__text-color: var(${COLORS.text.disabled});
-    --sidebar-item__icon-color: var(${COLORS.icon.disabled});
 
     cursor: not-allowed;
   }
 
   &[data-active] {
     --sidebar-item__text-color: var(${COLORS.text.active});
-    --sidebar-item__icon-color: var(${COLORS.icon.active});
   }
 
   @media ${CSS_BREAKPOINTS.mobile} {
@@ -58,6 +55,7 @@ export const Item = styled.a`
 export const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
+  column-gap: 8px;
 `;
 
 export const IconContainer = styled.div`
@@ -65,22 +63,12 @@ export const IconContainer = styled.div`
   align-items: center;
 `;
 
-export const Icon = styled.div`
-  flex-shrink: 0;
-  margin-right: 8px;
-  display: flex;
-  height: 20px;
-  width: 20px;
-
-  svg {
-    fill: var(--sidebar-item__icon-color);
-    transition: fill ${ANIMATIONS.TRANSITION};
-    height: 100%;
-    width: 100%;
-  }
-`;
-
 export const Label = styled(TruncatedTextWithTooltip)`
   color: var(--sidebar-item__text-color);
   transition: color ${ANIMATIONS.TRANSITION};
+`;
+
+export const Padding = styled.div<{ level?: number }>`
+  // 28 = 20 + 8, 20 - icon size, 8 margin-right
+  margin-left: ${({ level = 0 }) => level * 28}px;
 `;

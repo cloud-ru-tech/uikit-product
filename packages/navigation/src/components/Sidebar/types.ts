@@ -7,6 +7,11 @@ export enum Mode {
   Accordion = 'accordion',
 }
 
+export enum Status {
+  Active = 'active',
+  Suspended = 'suspended',
+}
+
 type BaseSidebarItem = {
   id: SidebarItemId;
   label: string;
@@ -17,6 +22,7 @@ type BaseSidebarItem = {
   locked?: boolean;
   count?: number;
   mode?: Mode;
+  status?: Status;
   // eslint-disable-next-line no-use-before-define
   nestedList?: SidebarItemsGroup[];
 };

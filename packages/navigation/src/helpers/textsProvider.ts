@@ -14,6 +14,9 @@ export enum Texts {
   SidebarItemNew = 'sidebar-item-new',
   SidebarCollapseMenu = 'sidebar-collapse-menu',
   SidebarUncollapseMenu = 'sidebar-uncollapse-menu',
+
+  SidebarStatusActive = 'sidebar-status-active',
+  SidebarStatusSuspended = 'sidebar-status-suspended',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -31,6 +34,9 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SidebarItemNew]: 'новый',
     [Texts.SidebarCollapseMenu]: 'Свернуть меню',
     [Texts.SidebarUncollapseMenu]: 'Развернуть меню',
+
+    [Texts.SidebarStatusActive]: 'Активно',
+    [Texts.SidebarStatusSuspended]: 'Приостановлено',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderBalanceTooltipBalance]: 'Balance',
@@ -46,6 +52,9 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SidebarItemNew]: 'new',
     [Texts.SidebarCollapseMenu]: 'Hide menu',
     [Texts.SidebarUncollapseMenu]: 'Show menu',
+
+    [Texts.SidebarStatusActive]: 'Active',
+    [Texts.SidebarStatusSuspended]: 'Suspended',
   },
 };
 

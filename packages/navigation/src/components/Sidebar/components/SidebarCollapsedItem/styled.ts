@@ -30,25 +30,3 @@ export const Item = styled.div`
     cursor: not-allowed;
   }
 `;
-
-export const Icon = styled.div`
-  flex-shrink: 0;
-  display: flex;
-  height: 20px;
-  width: 20px;
-
-  svg {
-    fill: var(${COLORS.icon.default});
-    transition: fill ${ANIMATIONS.TRANSITION};
-    height: 100%;
-    width: 100%;
-  }
-
-  &[data-disabled] svg {
-    fill: var(${COLORS.icon.disabled});
-  }
-
-  &[data-active] svg {
-    fill: var(${COLORS.icon.selected});
-  }
-`;

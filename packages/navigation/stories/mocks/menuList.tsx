@@ -58,12 +58,14 @@ export const menuList: SidebarItemsGroup[] = [
         label: 'Advanced',
         href: '/',
         icon: <AdvancedServiceSVG />,
+        status: Sidebar.itemStatuses.Active,
       },
       {
         id: 'main-enterprise',
         label: 'Enterprise',
         href: '/',
         icon: <ChristofariServiceSVG />,
+        status: Sidebar.itemStatuses.Suspended,
         count: 5,
       },
       {

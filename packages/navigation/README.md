@@ -268,6 +268,11 @@ enum Mode {
   Accordion = 'accordion',
 }
 
+enum Status {
+  Active = 'active',
+  Suspended = 'suspended',
+}
+
 type SidebarItemProps = {
   id: SidebarItemId;
   label: string;
@@ -279,6 +284,7 @@ type SidebarItemProps = {
   count?: number;
   // eslint-disable-next-line no-use-before-define
   nestedList?: SidebarItemsGroup[];
+  status?: Status;
   mode?: Mode;
 };
 

@@ -1,7 +1,8 @@
-import { MouseEvent, useMemo } from 'react';
+import { MouseEvent } from 'react';
 
 import { useSidebarContext } from '../../context';
 import { SidebarItemProps } from '../../types';
+import { SidebarItemIcon } from '../SidebarItemIcon';
 import { SidebarItemPostfix } from '../SidebarItemPostfix';
 import * as S from './styled';
 
@@ -27,18 +28,11 @@ export function SidebarItem({
   onClick,
   isOpen,
   isHeaderItem,
+  status,
 }: SidebarItem) {
   const { active } = useSidebarContext();
 
   const isActive = id === active || undefined;
-
-  const offsetIconsArray = useMemo(() => {
-    if (level === undefined) {
-      return [];
-    }
-
-    return Array.from({ length: level }, (_, index) => index + 1);
-  }, [level]);
 
   const link = isHeaderItem ? undefined : href;
 
@@ -53,15 +47,8 @@ export function SidebarItem({
     >
       <S.Content>
         <S.IconContainer>
-          {icon && (
-            <>
-              {offsetIconsArray.map(value => (
-                <S.Icon key={value} />
-              ))}
-
-              <S.Icon data-test-id='sidebar__item__icon'>{icon}</S.Icon>
-            </>
-          )}
+          <S.Padding level={level} />
+          {icon && <SidebarItemIcon icon={icon} status={status} disabled={disabled} active={isActive} />}
         </S.IconContainer>
 
         <S.Label data-test-id='sidebar__item__label'>{label}</S.Label>

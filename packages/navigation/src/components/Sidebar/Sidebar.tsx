@@ -4,7 +4,7 @@ import { SidebarFooter, SidebarMain } from './components';
 import { SidebarContextProvider } from './context';
 import { useIsCollapsedState } from './hooks';
 import * as S from './styled';
-import { Mode, SidebarItemId, SidebarItemProps, SidebarItemsGroup, SidebarOnActiveChange } from './types';
+import { Mode, SidebarItemId, SidebarItemProps, SidebarItemsGroup, SidebarOnActiveChange, Status } from './types';
 
 export type SidebarProps = WithSupportProps<{
   list: SidebarItemsGroup[];
@@ -35,3 +35,4 @@ export function Sidebar({ list, active, footerItems, onActiveChange, className, 
 }
 
 Sidebar.listModes = Mode;
+Sidebar.itemStatuses = Status;
