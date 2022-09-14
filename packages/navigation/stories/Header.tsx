@@ -56,7 +56,7 @@ const Logo = styled(PredefinedMLSpaceLogo)`
 
 const Tooltip = () => <HeaderBalanceTooltip balance={144_401_810} limit={155_500_000} onRechargeClick={() => {}} />;
 const MLSpaceLogo = () => (
-  <HeaderLogo>
+  <HeaderLogo href={''}>
     <Logo height={16} />
   </HeaderLogo>
 );

@@ -27,6 +27,8 @@ import {
 function App() {
   const [workspace, setWorkspace] = useState('workspace-0');
 
+  function handleLogoClick() {}
+    
   function handleBalanceClick() {}
 
   function handleRechargeClick() {}
@@ -47,7 +49,7 @@ function App() {
         <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='SVP' href='/svp' />
         <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Advanced' href='/advanced' />
       </HeaderMenu.Root>
-      <HeaderLogo>
+      <HeaderLogo href='/' onClick={handleLogoClick}>
         <PredefinedMLSpaceLogo height={16} />
       </HeaderLogo>
       <HeaderProjectSelector
@@ -145,6 +147,8 @@ type HeaderBalanceTooltipProps = WithSupportProps<{
 ```ts
 type HeaderLogoProps = WithSupportProps<{
   children: ReactNode;
+  href: string;
+  onClick?(e?: MouseEvent<HTMLAnchorElement>): void;
 }>;
 ```
 
@@ -282,7 +286,6 @@ type SidebarItemProps = {
   showNewLabel?: boolean;
   locked?: boolean;
   count?: number;
-  // eslint-disable-next-line no-use-before-define
   nestedList?: SidebarItemsGroup[];
   status?: Status;
   mode?: Mode;
