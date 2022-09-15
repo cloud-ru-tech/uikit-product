@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import { CircleAddInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Scroll } from '@sbercloud/uikit-product-scroll';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers';
@@ -46,13 +47,19 @@ export function HeaderProjectSelector({ value, items, onChange, onCreate, ...res
   const selectedIndex = useSelectedIndex(indexByOption, value);
   const content = useContent(items, search, indexByOption, {
     renderOptionList(children) {
-      return <S.List scrollable>{children}</S.List>;
+      return (
+        <Scroll flexbox>
+          <S.List>{children}</S.List>
+        </Scroll>
+      );
     },
 
     renderProjectOptionList(children) {
       return (
         <>
-          <S.List scrollable>{children}</S.List>
+          <Scroll flexbox>
+            <S.List>{children}</S.List>
+          </Scroll>
           {onCreate && (
             <HeaderProjectSelectorAction
               icon={<CircleAddInterfaceSVG />}
@@ -67,7 +74,9 @@ export function HeaderProjectSelector({ value, items, onChange, onCreate, ...res
     renderWorkspaceOptionList(children) {
       return (
         <>
-          <S.List scrollable>{children}</S.List>
+          <Scroll flexbox>
+            <S.List>{children}</S.List>
+          </Scroll>
           {onCreate && (
             <IndentContext.Provider value={1}>
               <HeaderProjectSelectorAction

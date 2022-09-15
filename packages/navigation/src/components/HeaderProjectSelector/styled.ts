@@ -11,8 +11,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const List = styled.ul<{ scrollable?: boolean }>`
+export const List = styled.ul`
   margin: 0;
-  overflow: ${props => (props.scrollable ? 'auto' : 'initial')};
   padding: 0;
 `;
