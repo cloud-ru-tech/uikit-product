@@ -1,11 +1,13 @@
 export type WorkspaceOption = {
   label: string;
   value: string;
+  editable?: boolean;
 };
 
 export type ProjectOption = {
   label: string;
   value: string;
+  editable?: boolean;
 };
 
 export type ProjectPresentation = {

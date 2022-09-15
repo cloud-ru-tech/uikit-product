@@ -32,6 +32,10 @@ describe('[Navigation]: Header Project Selector', () => {
     return cy.getByDataTestId('header-project-selector__option-list-item');
   }
 
+  function getOptionListItemEditButtons() {
+    return cy.getByDataTestId('header-project-selector__option-list-item-edit-button');
+  }
+
   function getOptionListItemByValue(value: string) {
     return getOptionListItems().get(`[data-test-value="${value}"]`);
   }
@@ -95,6 +99,14 @@ describe('[Navigation]: Header Project Selector', () => {
       getFloating().should('not.exist');
     });
 
+    it('closes floating by edit option button click', () => {
+      getReference().click();
+      getOptionListItemByValue('short-1').within(() => {
+        getOptionListItemEditButtons().click({ force: true });
+      });
+      getFloating().should('not.exist');
+    });
+
     it('filters options when searching', () => {
       getReference().click();
       getSearch().focus().type('zo');
@@ -144,6 +156,14 @@ describe('[Navigation]: Header Project Selector', () => {
       getSelectedProject().should('have.text', 'Zaggles');
     });
 
+    it('does not select project by edit project button click', () => {
+      getReference().click();
+      getOptionListItemByValue('short-1').within(() => {
+        getOptionListItemEditButtons().click({ force: true });
+      });
+      getSelectedProject().should('have.text', 'Zialactic');
+    });
+
     it('truncates long selected project label', () => {
       getReference().click();
       getOptionListItemByValue('long-0').click();
@@ -187,6 +207,14 @@ describe('[Navigation]: Header Project Selector', () => {
     it('selects another project by keys', () => {
       getReference().focus().type('{downArrow}{downArrow}{enter}');
       getSelectedProject().should('have.text', 'Zaggles');
+    });
+
+    it('does not select project by edit project button click', () => {
+      getReference().click();
+      getOptionListItemByValue('short-1').within(() => {
+        getOptionListItemEditButtons().click({ force: true });
+      });
+      getSelectedProject().should('have.text', 'Zialactic');
     });
 
     it('truncates long selected project label', () => {
@@ -235,6 +263,15 @@ describe('[Navigation]: Header Project Selector', () => {
       getReference().focus().type('{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{enter}');
       getSelectedProject().should('have.text', 'Chillium');
       getSelectedWorkspace().should('have.text', 'Insource');
+    });
+
+    it('does not select project and workspace by edit workspace button click', () => {
+      getReference().click();
+      getOptionListItemByValue('short-1').within(() => {
+        getOptionListItemEditButtons().click({ force: true });
+      });
+      getSelectedProject().should('have.text', 'Zensus');
+      getSelectedWorkspace().should('have.text', 'Zialactic');
     });
 
     it('truncates long selected workspace label', () => {

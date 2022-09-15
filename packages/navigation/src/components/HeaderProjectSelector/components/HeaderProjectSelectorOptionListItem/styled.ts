@@ -8,6 +8,8 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
+export const Actions = styled.div``;
+
 export const Wrapper = styled(HeaderProjectSelectorBoxListItem)`
   cursor: pointer;
   outline: none;
@@ -15,6 +17,10 @@ export const Wrapper = styled(HeaderProjectSelectorBoxListItem)`
   &[data-active],
   &:hover {
     background-color: var(${COLORS.background.hover});
+  }
+
+  &:not(:hover) ${Actions} {
+    display: none;
   }
 
   &[data-selected] {

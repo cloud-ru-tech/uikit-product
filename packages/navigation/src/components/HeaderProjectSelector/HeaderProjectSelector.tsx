@@ -15,6 +15,7 @@ import { HeaderProjectSelectorOptionListItem } from './components/HeaderProjectS
 import { HeaderProjectSelectorProjectLabel } from './components/HeaderProjectSelectorProjectLabel';
 import { HeaderProjectSelectorReference } from './components/HeaderProjectSelectorReference';
 import { HeaderProjectSelectorWorkspaceLabel } from './components/HeaderProjectSelectorWorkspaceLabel';
+import { DEFAULT_EDITABLE } from './constants';
 import { IndentContext } from './contexts/IndentContext';
 import { SelectionContext } from './contexts/SelectionContext';
 import {
@@ -34,9 +35,17 @@ export type HeaderProjectSelectorProps = WithSupportProps<{
   items: Item[];
   onChange(value: string): void;
   onCreate?(): void;
+  onEdit?(value: string): void;
 }>;
 
-export function HeaderProjectSelector({ value, items, onChange, onCreate, ...rest }: HeaderProjectSelectorProps) {
+export function HeaderProjectSelector({
+  value,
+  items,
+  onChange,
+  onCreate,
+  onEdit,
+  ...rest
+}: HeaderProjectSelectorProps) {
   const [search, setSearch] = useState('');
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const projects = useProjects(items);
@@ -46,7 +55,7 @@ export function HeaderProjectSelector({ value, items, onChange, onCreate, ...res
   const selectedWorkspace = useSelectedWorkspace(workspaces, value);
   const selectedIndex = useSelectedIndex(indexByOption, value);
   const content = useContent(items, search, indexByOption, {
-    renderOptionList(children) {
+    renderOptionList({ children }) {
       return (
         <Scroll flexbox>
           <S.List>{children}</S.List>
@@ -54,7 +63,7 @@ export function HeaderProjectSelector({ value, items, onChange, onCreate, ...res
       );
     },
 
-    renderProjectOptionList(children) {
+    renderProjectOptionList({ children }) {
       return (
         <>
           <Scroll flexbox>
@@ -71,7 +80,7 @@ export function HeaderProjectSelector({ value, items, onChange, onCreate, ...res
       );
     },
 
-    renderWorkspaceOptionList(children) {
+    renderWorkspaceOptionList({ children }) {
       return (
         <>
           <Scroll flexbox>
@@ -90,7 +99,7 @@ export function HeaderProjectSelector({ value, items, onChange, onCreate, ...res
       );
     },
 
-    renderCatalogPresentationListItem(label, children, index) {
+    renderCatalogPresentationListItem({ label, children, index }) {
       return (
         <HeaderProjectSelectorCatalogListItem key={index} label={label}>
           <S.List>{children}</S.List>
@@ -98,7 +107,7 @@ export function HeaderProjectSelector({ value, items, onChange, onCreate, ...res
       );
     },
 
-    renderProjectPresentationListItem(label, children, index) {
+    renderProjectPresentationListItem({ label, children, index }) {
       return (
         <HeaderProjectSelectorListItem key={index} role='presentation'>
           <HeaderProjectSelectorBox>
@@ -114,9 +123,14 @@ export function HeaderProjectSelector({ value, items, onChange, onCreate, ...res
       );
     },
 
-    renderProjectOptionListItem(label, value, index) {
+    renderProjectOptionListItem({ label, value, index, editable = DEFAULT_EDITABLE }) {
       return (
-        <HeaderProjectSelectorOptionListItem key={value} value={value} index={index}>
+        <HeaderProjectSelectorOptionListItem
+          key={value}
+          value={value}
+          index={index}
+          onEdit={editable ? onEdit : undefined}
+        >
           <HeaderProjectSelectorProjectLabel
             label={label}
             data-test-id='header-project-selector__project-option-list-item-label'
@@ -125,9 +139,14 @@ export function HeaderProjectSelector({ value, items, onChange, onCreate, ...res
       );
     },
 
-    renderWorkspaceOptionListItem(label, value, index) {
+    renderWorkspaceOptionListItem({ label, value, index, editable = DEFAULT_EDITABLE }) {
       return (
-        <HeaderProjectSelectorOptionListItem key={value} value={value} index={index}>
+        <HeaderProjectSelectorOptionListItem
+          key={value}
+          value={value}
+          index={index}
+          onEdit={editable ? onEdit : undefined}
+        >
           <HeaderProjectSelectorWorkspaceLabel
             label={label}
             data-test-id='header-project-selector__workspace-option-list-item-label'

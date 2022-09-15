@@ -228,11 +228,13 @@ type HeaderToolbarProfileMenuItemProps = WithSupportProps<{
 type WorkspaceOption = {
   label: string;
   value: string;
+  editable?: boolean;
 };
 
 type ProjectOption = {
   label: string;
   value: string;
+  editable?: boolean;
 };
 
 type ProjectPresentation = {
@@ -252,6 +254,7 @@ type HeaderProjectSelectorProps = WithSupportProps<{
   items: Item[];
   onChange(value: string): void;
   onCreate?(): void;
+  onEdit?(value: string): void;
 }>;
 ```
 

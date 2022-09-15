@@ -7,6 +7,7 @@ export enum Texts {
 
   HeaderProjectSelectorCreateProject = 'header-project-selector-create-project',
   HeaderProjectSelectorCreateWorkspace = 'header-project-selector-create-workspace',
+  HeaderProjectSelectorEditOption = 'header-project-selector-edit-option',
 
   SidebarBackToPlatforms = 'sidebar-back-to-platforms-button',
   SidebarBackButton = 'sidebar-back-button',
@@ -27,6 +28,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     [Texts.HeaderProjectSelectorCreateProject]: 'Создать проект',
     [Texts.HeaderProjectSelectorCreateWorkspace]: 'Создать workspace',
+    [Texts.HeaderProjectSelectorEditOption]: 'Редактировать',
 
     [Texts.SidebarBackToPlatforms]: 'ко всем платформам',
     [Texts.SidebarBackButton]: 'назад',
@@ -45,6 +47,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     [Texts.HeaderProjectSelectorCreateProject]: 'Create project',
     [Texts.HeaderProjectSelectorCreateWorkspace]: 'Create workspace',
+    [Texts.HeaderProjectSelectorEditOption]: 'Edit',
 
     [Texts.SidebarBackToPlatforms]: 'to all platforms',
     [Texts.SidebarBackButton]: 'to level back',
