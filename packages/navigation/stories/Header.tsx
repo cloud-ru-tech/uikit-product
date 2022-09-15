@@ -22,6 +22,7 @@ import {
   HeaderBalanceTooltip,
   HeaderLogo,
   HeaderMenu,
+  HeaderProjectDescription,
   HeaderProjectSelector,
   HeaderProps,
   HeaderToolbar,
@@ -117,6 +118,7 @@ const Template: Story<HeaderProps & { menuList: SidebarProps['list']; activeMenu
           <Divider />
 
           <ProjectSelector />
+          <HeaderProjectDescription label={'ЗАО "Блачные технологии"'} />
 
           <SidebarMobile list={menuList} onActiveChange={handleActiveChange} active={selectedItem} />
         </MobileMenu>
@@ -139,6 +141,8 @@ const Template: Story<HeaderProps & { menuList: SidebarProps['list']; activeMenu
         <ProjectSelector />
 
         <Tooltip />
+
+        <HeaderProjectDescription label={'ЗАО "Блачные технологии"'} />
 
         <HeaderToolbar.Root>
           <HeaderToolbar.Item

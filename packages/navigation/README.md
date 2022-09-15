@@ -76,6 +76,7 @@ function App() {
         onBalanceClick={handleBalanceClick}
         onRechargeClick={handleRechargeClick}
       />
+      <HeaderProjectDescription label={'ЗАО "Блачные технологии"'} />
       <HeaderToolbar.Root>
         <HeaderToolbar.Item
           icon={
@@ -252,6 +253,14 @@ type HeaderProjectSelectorProps = WithSupportProps<{
   onChange(value: string): void;
   onCreate?(): void;
 }>;
+```
+
+### HeaderProjectDescription
+
+```ts
+type HeaderProjectDescriptionProps = {
+  label: string;
+};
 ```
 
 ### Sidebar
