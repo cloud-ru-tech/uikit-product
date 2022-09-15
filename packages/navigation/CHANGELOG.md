@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.11.0...@sbercloud/uikit-product-navigation@0.12.0) (2022-09-15)
+
+
+### Features
+
+* **FF-969:** add `onEdit` prop to `HeaderProjectSelector` ([73213e4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/73213e42dbbdbe65937e41365027959aaeae4795))
+* **FF-969:** use `Scroll` component in `HeaderProjectSelector` ([22e5823](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/22e5823855a48db668426373ad1cf8c9063745b0))
+
+
+
+
+
 # [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.10.0...@sbercloud/uikit-product-navigation@0.11.0) (2022-09-15)
 
 
