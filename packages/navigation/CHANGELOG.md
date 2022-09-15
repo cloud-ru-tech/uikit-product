@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.10.0...@sbercloud/uikit-product-navigation@0.11.0) (2022-09-15)
+
+
+### Features
+
+* **FF-922:** sidebar item status ([87db7fd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/87db7fdbdd0c8f4190ec73beed5f9732320b00a8))
+* **FF-968:** header project description ([9fc6f5d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9fc6f5d45c938e51f87de2725963bd9a390a84f1))
+* **FF-980:** clickable header logo ([1cc83d2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1cc83d23e114ac4ded1e4510ba2c3bb64397c5f9))
+
+
+### BREAKING CHANGES
+
+* **FF-980:** clickable header logo
+
+
+
+
+
 # [0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.9.2...@sbercloud/uikit-product-navigation@0.10.0) (2022-09-13)
 
 
