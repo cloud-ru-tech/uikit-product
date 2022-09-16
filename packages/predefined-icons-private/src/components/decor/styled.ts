@@ -15,6 +15,10 @@ export const Wrapper = styled.span`
   display: inline-flex;
   border-radius: 50%;
 
+  &[data-size=${Sizes.Small}] {
+    padding: ${SIZES_IN_PX[Sizes.Small].padding};
+  }
+
   &[data-size=${Sizes.Medium}] {
     padding: ${SIZES_IN_PX[Sizes.Medium].padding};
   }

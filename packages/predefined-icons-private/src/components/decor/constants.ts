@@ -1,4 +1,5 @@
 export enum Sizes {
+  Small = 'Small',
   Medium = 'Medium',
   Large = 'Large',
 }
@@ -9,6 +10,10 @@ export enum PredefinedDecorIconType {
 }
 
 export const SIZES_IN_PX = {
+  Small: {
+    padding: '8px',
+    iconSize: 24,
+  },
   Medium: {
     padding: '16px',
     iconSize: 48,
