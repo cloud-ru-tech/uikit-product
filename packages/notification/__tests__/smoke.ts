@@ -93,6 +93,22 @@ describe('[Notification]: Small', () => {
         );
       });
   });
+
+  it('Has an action and click on ACTION button executes callback and closes notification', () => {
+    visit({
+      status,
+    });
+
+    cy.getByDataTestId('trigger-notification-with-action').click();
+
+    cy.getByDataTestId(NOTIFICATION_SMALL_TEST_IDS.action).should('exist').trigger('click');
+
+    cy.on('window:alert', text => {
+      expect(text).to.contain('Clicked!');
+    });
+
+    cy.getByDataTestId(NOTIFICATION_SMALL_TEST_IDS.action).should('not.exist');
+  });
 });
 
 describe('[Notification]: Big', () => {

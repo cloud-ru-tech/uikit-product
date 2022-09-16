@@ -39,3 +39,7 @@ export const Text = styled.span`
   color: var(${COLORS.description});
   word-break: break-word;
 `;
+
+export const actionClassName = css`
+  margin-left: 12px;
+`;

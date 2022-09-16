@@ -34,6 +34,24 @@ const Template: Story<NotificationSmallProps> = ({ ...args }) => {
     setNotificationId(id);
   };
 
+  const clickToOpenWithAction = async () => {
+    const id = await openNotification({
+      type: NotificationType.Small,
+      notificationProps: {
+        ...args,
+        action: {
+          text: 'Button text',
+          onClick: (_, close) => {
+            alert('Clicked!');
+            close();
+          },
+        },
+      },
+    });
+
+    setNotificationId(id);
+  };
+
   const clickToUpdate = () => {
     if (!currentNotificationId) return;
 
@@ -53,6 +71,15 @@ const Template: Story<NotificationSmallProps> = ({ ...args }) => {
   return (
     <>
       <Button data-test-id='trigger-notification' onClick={clickToOpen} text={`Open ${args.status} notification`} />
+
+      <br />
+      <br />
+
+      <Button
+        data-test-id='trigger-notification-with-action'
+        onClick={clickToOpenWithAction}
+        text={`Open ${args.status} notification with action`}
+      />
 
       <br />
       <br />

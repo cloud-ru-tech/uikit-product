@@ -158,8 +158,20 @@ enum NotificationSmallStatus {
   Loading = 'Loading',
 }
 
-type NotificationSmallProps = Partial<NotificationContentProps> & {
+type NotificationSmallAction = {
+  text: string;
+  onClick(e: MouseEvent<HTMLButtonElement | HTMLDivElement>, close: () => void): void;
+};
+
+type NotificationSmallCommonProps = Partial<RtToastContentProps> & {
   text: string;
   status?: NotificationSmallStatus;
 };
+
+type NotificationSmallPropsWithAction = NotificationSmallCommonProps & {
+  action: NotificationSmallAction;
+  closeToast: () => void;
+};
+
+type NotificationSmallProps = NotificationSmallCommonProps | NotificationSmallPropsWithAction;
 ```
