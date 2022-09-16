@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.12.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.12.0...@sbercloud/uikit-product-navigation@0.12.1) (2022-09-16)
+
+
+### Bug Fixes
+
+* **FF-969:** `HeaderProjectSelector` create button height ([f303cf9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f303cf911c90f8b0fe51b7518d846a866ac37171))
+* **FF-969:** add divider to `HeaderProjectSelector` create button ([ae29a01](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ae29a019994595537ce277f2defaac440a723c4e))
+* **FF-969:** make `HeaderProjectSelector` create button larger ([7edb889](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7edb88986625bfa23d3620887025a0f24d87ace0))
+
+
+
+
+
 # [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.11.0...@sbercloud/uikit-product-navigation@0.12.0) (2022-09-15)
 
 
