@@ -4,6 +4,7 @@ import { ButtonGhost } from '@sbercloud/uikit-product-button';
 
 import { FloatingContext } from '../../contexts/FloatingContext';
 import { HeaderProjectSelectorBox } from '../HeaderProjectSelectorBox';
+import { HeaderProjectSelectorDivider } from '../HeaderProjectSelectorDivider';
 
 export type HeaderProjectSelectorActionProps = {
   text: ReactText;
@@ -20,15 +21,18 @@ export function HeaderProjectSelectorAction({ text, icon, onClick }: HeaderProje
   }
 
   return (
-    <HeaderProjectSelectorBox>
-      <ButtonGhost
-        icon={icon}
-        iconPosition={ButtonGhost.iconPosition.Before}
-        variant={ButtonGhost.variants.Tertiary}
-        text={text}
-        onClick={handleClick}
-        data-test-id='header-project-selector__action'
-      />
-    </HeaderProjectSelectorBox>
+    <>
+      <HeaderProjectSelectorDivider />
+      <HeaderProjectSelectorBox>
+        <ButtonGhost
+          icon={icon}
+          iconPosition={ButtonGhost.iconPosition.Before}
+          variant={ButtonGhost.variants.Tertiary}
+          text={text}
+          onClick={handleClick}
+          data-test-id='header-project-selector__action'
+        />
+      </HeaderProjectSelectorBox>
+    </>
   );
 }
