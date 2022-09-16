@@ -53,8 +53,13 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   display: flex;
   width: 100%;
-  padding: 0 16px;
   flex-direction: column;
+  padding: 0 0 0 16px;
+
+  &[data-closable] {
+    padding: 0 16px;
+  }
+
   & > * + * {
     padding-top: 4px;
   }

@@ -48,16 +48,18 @@ export function Alert({
 }: AlertProps) {
   warning((title?.length || 0) > 30, 'Title is too long');
 
+  const isClosable = Boolean(onClose);
+
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)} data-type={type} data-variant={variant}>
       <PredefinedIconsPrivate icon={PredefinedIconsMap[type]} />
-      <S.Content data-test-id='alert__content'>
+      <S.Content data-test-id='alert__content' data-closable={isClosable || undefined}>
         {Boolean(title) && <S.Title data-test-id='alert__content-title'>{title}</S.Title>}
         <S.Description data-type={type} data-test-id='alert__content-description'>
           {description}
         </S.Description>
       </S.Content>
-      {Boolean(onClose) && (
+      {isClosable && (
         <ButtonIcon
           variant={ButtonIcon.variants.Strong}
           icon={<CloseInterfaceSVG />}
