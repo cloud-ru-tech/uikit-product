@@ -1,9 +1,7 @@
 import { HTMLAttributeAnchorTarget, MouseEventHandler, ReactElement } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
-import { extractSupportProps, useMatchMedia, WithSupportProps } from '@sbercloud/uikit-product-utils';
-
-import * as S from './styled';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type HeaderToolbarItemProps = WithSupportProps<{
   icon: ReactElement;
@@ -14,17 +12,6 @@ export type HeaderToolbarItemProps = WithSupportProps<{
 }>;
 
 export function HeaderToolbarItem({ icon, title, href, target, onClick, ...rest }: HeaderToolbarItemProps) {
-  const { isMobile } = useMatchMedia();
-
-  if (isMobile) {
-    return (
-      <S.Link href={href} target={target} onClick={onClick}>
-        {icon}
-        {title}
-      </S.Link>
-    );
-  }
-
   return (
     <ButtonIcon
       icon={icon}

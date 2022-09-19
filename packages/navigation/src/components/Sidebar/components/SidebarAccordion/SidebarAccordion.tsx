@@ -12,13 +12,12 @@ type SidebarAccordionProps = {
   item: SidebarItemProps;
   onInnerToggle?(isInner?: boolean): void;
   accordionLevel: number;
-  isMobile?: boolean;
 };
 
-export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0, isMobile }: SidebarAccordionProps) {
+export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: SidebarAccordionProps) {
   const { handleItemClick, isSearchShown, active } = useSidebarContext();
-  const isAccordion = isItemAccordion(item, isMobile);
-  const nestedActive = useNestedActive(item, isMobile);
+  const isAccordion = isItemAccordion(item);
+  const nestedActive = useNestedActive(item);
 
   const shouldBeOpen = nestedActive && !isSearchShown;
   const [isOpen, setOpen] = useState(shouldBeOpen);
@@ -73,7 +72,6 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0, isMo
                 onInnerToggle={toggleHeight}
                 item={nestedItem}
                 accordionLevel={accordionLevel + 1}
-                isMobile={isMobile}
               />
             )),
           )}

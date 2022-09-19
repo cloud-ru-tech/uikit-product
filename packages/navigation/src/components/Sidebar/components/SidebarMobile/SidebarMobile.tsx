@@ -34,7 +34,7 @@ export function SidebarMobile({ list, active, onActiveChange }: SidebarMobilePro
 
   const renderItems = (item: SidebarItemProps) => {
     if (item.nestedList?.length) {
-      return <SidebarAccordion key={item.id} item={item} accordionLevel={0} isMobile />;
+      return <SidebarAccordion key={item.id} item={item} accordionLevel={0} />;
     }
 
     return <SidebarItem key={item.id} {...item} onClick={handleItemClick(item)} />;

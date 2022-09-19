@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CircleAddInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
-import { extractSupportProps, useLanguage, useMatchMedia, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers';
 import {
@@ -35,7 +35,6 @@ export function HeaderBalanceTooltip({
   const isLoading = balance === undefined;
   const handleRechargeButtonClick = isLoading ? undefined : onRechargeClick;
   const isRechargeButtonVisible = Boolean(onRechargeClick);
-  const { isMobile } = useMatchMedia();
 
   function handleMouseEnter() {
     setIsMouseOver(true);
@@ -48,10 +47,6 @@ export function HeaderBalanceTooltip({
   function getModeEntry(): ModeEntry {
     if (isLoading) {
       return [Mode.Loading];
-    }
-
-    if (isMobile) {
-      return [Mode.RegularBalance, { balance }];
     }
 
     if (limit === undefined) {

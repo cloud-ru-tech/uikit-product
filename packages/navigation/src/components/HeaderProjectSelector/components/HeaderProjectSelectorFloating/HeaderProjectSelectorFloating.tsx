@@ -15,8 +15,6 @@ import {
 } from '@floating-ui/react-dom-interactions';
 import { ReactNode, useContext, useLayoutEffect, useRef, useState } from 'react';
 
-import { useMatchMedia } from '@sbercloud/uikit-product-utils';
-
 import { FloatingContext } from '../../contexts/FloatingContext';
 import { ItemContext } from '../../contexts/ItemContext';
 import { NavigationContext } from '../../contexts/NavigationContext';
@@ -30,7 +28,6 @@ export type HeaderProjectSelectorFloatingProps = {
 };
 
 export function HeaderProjectSelectorFloating({ children, content }: HeaderProjectSelectorFloatingProps) {
-  const { isMobile } = useMatchMedia();
   const listRef = useRef<Array<HTMLElement | null>>([]);
   const initialFocusRef = useRef<HTMLElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -46,8 +43,8 @@ export function HeaderProjectSelectorFloating({ children, content }: HeaderProje
       offset(4),
       shift(),
       size({
-        apply({ elements, rects }) {
-          elements.floating.style.width = `${isMobile ? rects.reference.width : 400}px`;
+        apply({ elements }) {
+          elements.floating.style.width = `${400}px`;
         },
       }),
     ],

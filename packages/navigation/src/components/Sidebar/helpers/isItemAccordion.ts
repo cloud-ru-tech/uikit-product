@@ -1,5 +1,5 @@
 import { Mode, SidebarItemProps } from '../types';
 
-export function isItemAccordion(item: SidebarItemProps, isMobile?: boolean) {
-  return Boolean((item.mode === Mode.Accordion || isMobile) && item.nestedList?.length);
+export function isItemAccordion(item: SidebarItemProps) {
+  return Boolean(item.mode === Mode.Accordion && item.nestedList?.length);
 }

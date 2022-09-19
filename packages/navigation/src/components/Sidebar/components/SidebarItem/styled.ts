@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
-import { ANIMATIONS, CSS_BREAKPOINTS } from '@sbercloud/uikit-product-utils';
+import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 import { TruncatedTextWithTooltip } from '../../helperComponents';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -45,10 +45,6 @@ export const Item = styled.a`
 
   &[data-active] {
     --sidebar-item__text-color: var(${COLORS.text.active});
-  }
-
-  @media ${CSS_BREAKPOINTS.mobile} {
-    padding: 4px 16px;
   }
 `;
 

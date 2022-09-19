@@ -1,9 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 
 import { Badge } from '@sbercloud/uikit-product-badge-private';
-import { Divider } from '@sbercloud/uikit-product-divider';
 import {
   DocumentationInterfaceSVG,
   NotifyInterfaceSVG,
@@ -12,7 +11,6 @@ import {
 } from '@sbercloud/uikit-product-icons';
 import { PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
 import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
-import { useMatchMedia } from '@sbercloud/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -26,14 +24,7 @@ import {
   HeaderProjectSelector,
   HeaderProps,
   HeaderToolbar,
-  MobileHeader,
-  MobileMenu,
-  MobileMenuReference,
-  SidebarItemId,
-  SidebarMobile,
-  SidebarProps,
 } from '../src';
-import { menuList } from './mocks/menuList';
 
 export default {
   title: 'Not stable/Navigation/Header',
@@ -87,90 +78,47 @@ const ProjectSelector = () => {
   );
 };
 
-const Template: Story<HeaderProps & { menuList: SidebarProps['list']; activeMenuItem: SidebarProps['active'] }> = ({
-  menuList,
-  activeMenuItem,
-}) => {
-  const { isMobile } = useMatchMedia();
-  const mobileMenuRef = useRef<MobileMenuReference>(null);
+const Template: Story<HeaderProps> = () => (
+  <Wrapper>
+    <Header>
+      <HeaderMenu.Root title='Платформы'>
+        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='ML Space' href='' />
+        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Enterprise' href='' />
+        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='SVP' href='' />
+        <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Advanced' href='' />
+      </HeaderMenu.Root>
 
-  const [selectedItem, setSelectedItem] = useState<SidebarItemId | undefined>(activeMenuItem);
+      <MLSpaceLogo />
 
-  const handleActiveChange: SidebarProps['onActiveChange'] = ({ id }) => {
-    setSelectedItem(id);
-  };
+      <ProjectSelector />
 
-  if (isMobile) {
-    return (
-      <Wrapper>
-        <MobileHeader onMenuClick={target => mobileMenuRef.current?.toggleOpen(target)}>
-          <MLSpaceLogo />
+      <Tooltip />
 
-          <Tooltip />
-        </MobileHeader>
-        <MobileMenu ref={mobileMenuRef}>
-          <HeaderToolbar.Root>
-            <HeaderToolbar.ProfileItem title='Профиль' href='' name='Андрей Иванов' />
-            <HeaderToolbar.Item icon={<DocumentationInterfaceSVG />} title='Документация' href='' />
-            <HeaderToolbar.Item icon={<SupportInterfaceSVG />} title='Поддержка' href='' />
-          </HeaderToolbar.Root>
+      <HeaderProjectDescription label={'ЗАО "Блачные технологии"'} />
 
-          <Divider />
-
-          <ProjectSelector />
-          <HeaderProjectDescription label={'ЗАО "Блачные технологии"'} />
-
-          <SidebarMobile list={menuList} onActiveChange={handleActiveChange} active={selectedItem} />
-        </MobileMenu>
-      </Wrapper>
-    );
-  }
-
-  return (
-    <Wrapper>
-      <Header>
-        <HeaderMenu.Root title='Платформы'>
-          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='ML Space' href='' />
-          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Enterprise' href='' />
-          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='SVP' href='' />
-          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Advanced' href='' />
-        </HeaderMenu.Root>
-
-        <MLSpaceLogo />
-
-        <ProjectSelector />
-
-        <Tooltip />
-
-        <HeaderProjectDescription label={'ЗАО "Блачные технологии"'} />
-
-        <HeaderToolbar.Root>
-          <HeaderToolbar.Item
-            icon={
-              <Badge number={2} type={Badge.types.Alert}>
-                <NotifyInterfaceSVG />
-              </Badge>
-            }
-            title='Уведомления'
-            onClick={() => {}}
-          />
-          <HeaderToolbar.Item icon={<DocumentationInterfaceSVG />} title='Документация' href='' />
-          <HeaderToolbar.Item icon={<SupportInterfaceSVG />} title='Поддержка' href='' />
-          <HeaderToolbar.ProfileMenu name='Андрей Иванов'>
-            <HeaderToolbar.ProfileMenuAvatarItem title='Профиль' href='' />
-            <HeaderToolbar.ProfileMenuItem icon={<QuestionInterfaceSVG />} title='Выход' href='' />
-          </HeaderToolbar.ProfileMenu>
-        </HeaderToolbar.Root>
-      </Header>
-    </Wrapper>
-  );
-};
+      <HeaderToolbar.Root>
+        <HeaderToolbar.Item
+          icon={
+            <Badge number={2} type={Badge.types.Alert}>
+              <NotifyInterfaceSVG />
+            </Badge>
+          }
+          title='Уведомления'
+          onClick={() => {}}
+        />
+        <HeaderToolbar.Item icon={<DocumentationInterfaceSVG />} title='Документация' href='' />
+        <HeaderToolbar.Item icon={<SupportInterfaceSVG />} title='Поддержка' href='' />
+        <HeaderToolbar.ProfileMenu name='Андрей Иванов'>
+          <HeaderToolbar.ProfileMenuAvatarItem title='Профиль' href='' />
+          <HeaderToolbar.ProfileMenuItem icon={<QuestionInterfaceSVG />} title='Выход' href='' />
+        </HeaderToolbar.ProfileMenu>
+      </HeaderToolbar.Root>
+    </Header>
+  </Wrapper>
+);
 
 export const header = Template.bind({});
-header.args = {
-  activeMenuItem: 'main-advanced',
-  menuList,
-};
+header.args = {};
 header.argTypes = {};
 header.parameters = {
   readme: {
