@@ -57,7 +57,6 @@ function getAutoCloseValue<T extends keyof NotificationPropsMap>(
     case NotificationSmall.statuses.Success:
     case NotificationSmall.statuses.Error:
     case NotificationSmall.statuses.Neutral:
-    case NotificationSmall.statuses.Loading:
     case NotificationBig.statuses.Info:
     case NotificationBig.statuses.Success:
     case NotificationBig.statuses.Warning:
@@ -67,6 +66,7 @@ function getAutoCloseValue<T extends keyof NotificationPropsMap>(
 
     case NotificationBig.statuses.WarningAlarm:
     case NotificationBig.statuses.ErrorAlarm:
+    case NotificationSmall.statuses.Loading:
       return false;
 
     default:

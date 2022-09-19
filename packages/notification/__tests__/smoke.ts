@@ -73,6 +73,26 @@ describe('[Notification]: Small', () => {
       });
     });
   });
+
+  it('"Loading" notification does not close automatically -> "Loading" closes after update', () => {
+    const loadingStatus = 'Loading';
+    const errorStatus = 'Error';
+    visit({
+      status: loadingStatus as NotificationSmallProps['status'],
+    });
+
+    cy.getByDataTestId('trigger-notification').click();
+
+    cy.getByDataTestId(`${NOTIFICATION_SMALL_TEST_IDS.main}__${loadingStatus}`, { timeout: 7000 })
+      .should('exist')
+      .then(() => {
+        cy.getByDataTestId('update-notification').click();
+        cy.getByDataTestId(`${NOTIFICATION_SMALL_TEST_IDS.main}__${errorStatus}`).should('exist');
+        cy.getByDataTestId(`${NOTIFICATION_SMALL_TEST_IDS.main}__${errorStatus}`, { timeout: 7000 }).should(
+          'not.exist',
+        );
+      });
+  });
 });
 
 describe('[Notification]: Big', () => {
