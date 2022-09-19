@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.13.0...@sbercloud/uikit-product-navigation@0.14.0) (2022-09-19)
+
+
+### Features
+
+* **FF-921:** header toolbar item recieves className ([7aed304](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7aed3044d8ce6454d2d4e89301dc456e33c9558c))
+
+
+
+
+
 # [0.13.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.12.1...@sbercloud/uikit-product-navigation@0.13.0) (2022-09-19)
 
 
