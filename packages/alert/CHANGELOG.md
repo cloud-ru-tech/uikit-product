@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-alert@1.0.15...@sbercloud/uikit-product-alert@1.0.16) (2022-09-20)
+
+
+### Bug Fixes
+
+* **FF-741:** Alert style fix ([5e77cb6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5e77cb628722669a0696d87c971d29aafc029eac))
+
+
+
+
+
 ## [1.0.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-alert@1.0.14...@sbercloud/uikit-product-alert@1.0.15) (2022-09-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-alert
