@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.35.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-theme@0.34.1...@sbercloud/uikit-product-theme@0.35.0) (2022-09-20)
+
+
+### Features
+
+* **FF-921:** green-135 color ([7674d80](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7674d80f6aaa03730213d9c431ba232a886d2c87))
+
+
+
+
+
 ## [0.34.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-theme@0.34.0...@sbercloud/uikit-product-theme@0.34.1) (2022-08-11)
 
 

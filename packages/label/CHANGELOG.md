@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-label@2.0.20...@sbercloud/uikit-product-label@2.0.21) (2022-09-20)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-label
+
+
+
+
+
 ## 2.0.20 (2022-08-23)
 
 

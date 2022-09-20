@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.14.0...@sbercloud/uikit-product-navigation@0.14.1) (2022-09-20)
+
+
+### Bug Fixes
+
+* **FF-921:** sidebar selected green theme has been changed to use green-135 ([384a66c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/384a66c4f0c41ef6ad8fa7e88ba74b13e5db24b3))
+
+
+
+
+
 # [0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.13.0...@sbercloud/uikit-product-navigation@0.14.0) (2022-09-19)
 
 

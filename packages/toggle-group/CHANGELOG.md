@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toggle-group@1.1.10...@sbercloud/uikit-product-toggle-group@1.1.11) (2022-09-20)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-toggle-group
+
+
+
+
+
 ## [1.1.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-toggle-group@1.1.9...@sbercloud/uikit-product-toggle-group@1.1.10) (2022-08-23)
 
 
