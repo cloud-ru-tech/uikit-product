@@ -43,6 +43,7 @@ const GREEN = {
   100: '--color-green-100',
   115: '--color-green-115',
   125: '--color-green-125',
+  135: '--color-green-135',
   150: '--color-green-150',
 };
 

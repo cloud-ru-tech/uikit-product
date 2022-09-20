@@ -62,6 +62,7 @@ export const COLORS_DEFAULT_MAP = `
  ${GREEN[100]}: #07e897;
  ${GREEN[115]}: #06d58b;
  ${GREEN[125]}: #06c37f;
+ ${GREEN[135]}: #35a574;
  ${GREEN[150]}: #03734b;
 
  ${BLACK_ALFA[48]}: rgba(0, 0, 0, 0.48);
