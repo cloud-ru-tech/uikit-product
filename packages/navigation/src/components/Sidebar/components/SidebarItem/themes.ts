@@ -44,7 +44,7 @@ export const GREEN_THEME = css`
     body[data-theme='${Themes.Green}'] {
       ${COLORS.text.default}: var(${GREY[800]});
       ${COLORS.text.disabled}: var(${BLACK_ALFA[24]});
-      ${COLORS.text.active}: var(${GREEN[100]});
+      ${COLORS.text.active}: var(${GREEN[135]});
 
       ${COLORS.background.hover}: var(${GREEN_ALFA[4]});
     }
