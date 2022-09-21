@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.0.1...@sbercloud/uikit-product-notification@4.1.0) (2022-09-21)
+
+
+### Features
+
+* **AICDC-7936:** notification close behavior updated ([5efd56e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5efd56eaad8ff3ece07e68245a16ed05e7a141b5))
+
+
+
+
+
 ## [4.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.0.0...@sbercloud/uikit-product-notification@4.0.1) (2022-09-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-notification
