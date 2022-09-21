@@ -50,7 +50,7 @@ export const GREEN_THEME = css`
     body[data-theme=${Themes.Green}] {
       ${COLORS.background.hover}: var(${GREEN_ALFA[4]});
       ${COLORS.text.default}: var(${GREY[600]});
-      ${COLORS.text.selected}: var(${GREEN[100]});
+      ${COLORS.text.selected}: var(${GREEN[135]});
       ${COLORS.text.disabled}: var(${BLACK_ALFA[24]});
       ${COLORS.lockIconFill.default}: var(${GREY[400]});
       ${COLORS.lockIconFill.disabled}: var(${BLACK_ALFA[16]});
