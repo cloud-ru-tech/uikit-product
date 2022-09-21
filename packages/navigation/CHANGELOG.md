@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.14.1...@sbercloud/uikit-product-navigation@0.14.2) (2022-09-21)
+
+
+### Bug Fixes
+
+* **FF-921:** platform selector styles ([51ecbe3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/51ecbe3aace7e45e836f9a1a068e5125fea3f606))
+
+
+
+
+
 ## [0.14.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.14.0...@sbercloud/uikit-product-navigation@0.14.1) (2022-09-20)
 
 
