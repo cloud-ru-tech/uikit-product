@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.14.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.14.2...@sbercloud/uikit-product-navigation@0.14.3) (2022-09-21)
+
+
+### Bug Fixes
+
+* **FF-921:** hover menu selected item green theme ([2ef9453](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2ef945392a5d4ce1a26ef472eea94100bbaea9b2))
+
+
+
+
+
 ## [0.14.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.14.1...@sbercloud/uikit-product-navigation@0.14.2) (2022-09-21)
 
 

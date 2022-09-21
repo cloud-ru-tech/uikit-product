@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-navigation",
   "title": "Navigation",
-  "version": "0.14.2",
+  "version": "0.14.3",
   "sideEffects": [
     "*.css",
     "*.woff",
