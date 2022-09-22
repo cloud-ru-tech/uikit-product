@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.1.8...@sbercloud/uikit-product-tabs@1.2.0) (2022-09-22)
+
+
+### Features
+
+* **FF-667:** Tabs horizontal mouse drag scroll support ([ac767e7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ac767e7649bd180d9e5e92a80173b21e5c2bfa26))
+
+
+
+
+
 ## [1.1.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.1.7...@sbercloud/uikit-product-tabs@1.1.8) (2022-09-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-tabs
