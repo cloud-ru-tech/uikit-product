@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.1.0...@sbercloud/uikit-product-notification@4.2.0) (2022-09-22)
+
+
+### Features
+
+* **FF-745:** Action button for NotificationSmall ([eb2a929](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eb2a92913bd9eb44e002ed33e1e99dc54d19fab1))
+
+
+
+
+
 # [4.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.0.1...@sbercloud/uikit-product-notification@4.1.0) (2022-09-21)
 
 
