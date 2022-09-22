@@ -1,6 +1,7 @@
 export const TRANSITION_TIMING = {
-  common: 200,
-  hideLevel: 300,
+  accordionFolding: 200,
+  levelSlideIn: 200,
+  levelSlideOut: 300,
 };
 
 export const SIDEBAR_FULL_WIDTH = '238px';

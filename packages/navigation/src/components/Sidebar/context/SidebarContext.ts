@@ -6,6 +6,7 @@ type SidebarContextProps = {
   levels: SidebarLevel[];
   active?: SidebarItemId;
   currentLevel: number;
+  previousLevel: number;
   search: string;
   setSearch(value: string): void;
   isSearchShown: boolean;
@@ -20,6 +21,7 @@ type SidebarContextProps = {
 
 export const SIDEBAR_CONTEXT_STUB: SidebarContextProps = {
   currentLevel: 0,
+  previousLevel: 0,
   levels: [],
   search: '',
   setSearch() {},

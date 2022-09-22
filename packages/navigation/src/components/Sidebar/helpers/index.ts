@@ -1,4 +1,5 @@
 export * from './filterBySearch';
 export * from './findActive';
-export * from './getActiveLevels';
 export * from './isItemAccordion';
+export * from './getCurrentLevel';
+export * from './getLevels';

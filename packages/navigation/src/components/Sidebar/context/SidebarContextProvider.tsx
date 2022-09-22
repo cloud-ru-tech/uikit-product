@@ -1,16 +1,8 @@
-import { MouseEvent, ReactNode, useEffect, useRef, useState } from 'react';
+import { MouseEvent, ReactNode, useRef, useState } from 'react';
 
-import { TRANSITION_TIMING } from '../constants';
-import { getActiveLevels } from '../helpers';
+import { getCurrentLevel, getLevels } from '../helpers';
 import { shouldBeDefaultClick } from '../helpers/shouldBeDefaultClick';
-import {
-  Mode,
-  SidebarItemId,
-  SidebarItemProps,
-  SidebarItemsGroup,
-  SidebarLevel,
-  SidebarOnActiveChange,
-} from '../types';
+import { Mode, SidebarItemId, SidebarItemProps, SidebarItemsGroup, SidebarOnActiveChange } from '../types';
 import { SidebarContext } from './SidebarContext';
 
 type SidebarContextProviderProps = {
@@ -30,24 +22,11 @@ export function SidebarContextProvider({
   isCollapsed,
   setIsCollapsed,
 }: SidebarContextProviderProps) {
-  const [currentLevel, setCurrentLevel] = useState(0);
-  const [levels, setLevels] = useState<SidebarLevel[]>([]);
-  const manualLevelChange = useRef<boolean>();
-
   const [search, setSearch] = useState('');
   const [isSearchShown, setSearchShown] = useState(false);
-
-  useEffect(() => {
-    if (manualLevelChange.current) {
-      manualLevelChange.current = false;
-      return;
-    }
-
-    const activeLevels = getActiveLevels(list, active);
-
-    setLevels(activeLevels);
-    setCurrentLevel(activeLevels.length - 1);
-  }, [list, active]);
+  const levels = getLevels(list);
+  const currentLevel = getCurrentLevel(levels, active);
+  const previousLevelRef = useRef(currentLevel);
 
   function closeSearch() {
     setSearchShown(false);
@@ -72,28 +51,8 @@ export function SidebarContextProvider({
     const prevLevel = currentLevel - 1;
     const prevLevelItem = levels[prevLevel];
 
-    if (currentLevel > 0) {
-      setCurrentLevel(prevLevel);
-
-      setTimeout(() => {
-        setLevels(prev => prev.slice(0, -1));
-      }, TRANSITION_TIMING.hideLevel + 10); // awaiting transition to end before remove level
-    }
-
     onActiveChange({ id: prevLevelItem.title?.id, href: prevLevelItem.title?.href });
-
-    manualLevelChange.current = true;
-  }
-
-  function goToNextLevel(item: SidebarItemProps) {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    const newLevels = [...levels, { title: item, list: item.nestedList! }];
-    setLevels(newLevels);
-
-    // possible bottleneck after migration to React 18
-    setTimeout(() => {
-      setCurrentLevel(newLevels.length - 1);
-    }, 0);
+    previousLevelRef.current = currentLevel;
   }
 
   function handleItemClick(item: SidebarItemProps) {
@@ -110,16 +69,12 @@ export function SidebarContextProvider({
 
       if (item.mode !== Mode.Accordion) {
         closeSearch();
-
-        if (item.nestedList) {
-          manualLevelChange.current = true;
-          goToNextLevel(item);
-        }
       }
 
       const id = (item.mode === Mode.Accordion && item.nestedList?.length ? active : item.id) as string;
 
-      return onActiveChange({ id, href: item.href });
+      onActiveChange({ id, href: item.href });
+      previousLevelRef.current = currentLevel;
     };
   }
 
@@ -129,6 +84,7 @@ export function SidebarContextProvider({
         levels,
         active,
         currentLevel,
+        previousLevel: previousLevelRef.current,
         search,
         setSearch,
         isSearchShown,

@@ -45,7 +45,7 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: Si
 
     setTimeout(() => {
       onInnerToggle?.(true);
-    }, TRANSITION_TIMING.common); // delay for css-transition
+    }, TRANSITION_TIMING.accordionFolding);
   }, [isOpen, onInnerToggle, toggleHeight]);
 
   function handleClick(e: MouseEvent) {

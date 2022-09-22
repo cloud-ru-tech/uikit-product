@@ -208,10 +208,9 @@ describe('[Navigation]: Sidebar', () => {
     it('navigates between levels', () => {
       getItemById(itemIds.slide).click();
 
-      expectItemToBeActive(itemIds.slide, isCollapsed);
-      getSidebarLevel().should('have.length', 2);
-      getSidebarLevel().eq(0).should('have.attr', 'data-show', 'false');
-      getSidebarLevel().eq(1).should('have.attr', 'data-show', 'true');
+      getSidebarLevel().within(() => {
+        expectItemToBeActive(itemIds.slide, isCollapsed);
+      });
 
       if (isCollapsed) {
         getHoverMenu().should('not.exist');
@@ -221,8 +220,6 @@ describe('[Navigation]: Sidebar', () => {
       }
 
       getBackButton().click();
-
-      getSidebarLevel().should('have.length', 1);
 
       if (isCollapsed) {
         getItems().filter(':visible').should('have.length', firstLevelTexts.length);
@@ -363,9 +360,6 @@ describe('[Navigation]: Sidebar', () => {
 
       getHoverMenu().should('not.exist');
       expectItemToBeActive(itemIds.slide, true);
-      getSidebarLevel().should('have.length', 2);
-      getSidebarLevel().eq(0).should('have.attr', 'data-show', 'false');
-      getSidebarLevel().eq(1).should('have.attr', 'data-show', 'true');
     });
 
     it("doesn't select disabled item", () => {
