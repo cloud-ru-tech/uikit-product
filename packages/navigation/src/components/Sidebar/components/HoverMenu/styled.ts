@@ -29,6 +29,7 @@ export const ContentWrapper = styled.div<PositionProps>`
   position: ${props => props.strategy};
   top: ${props => props.y}px;
   left: ${props => props.x}px;
+  z-index: 1;
 `;
 
 export const Arrow = styled.div<PositionProps>`
