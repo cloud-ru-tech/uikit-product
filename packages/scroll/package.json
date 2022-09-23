@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-scroll",
   "title": "Scroll",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-theme": "0.35.0",
-    "@sbercloud/uikit-product-utils": "3.0.3",
+    "@sbercloud/uikit-product-theme": "0.35.1",
+    "@sbercloud/uikit-product-utils": "3.0.4",
     "overlayscrollbars": "1.13.3",
     "overlayscrollbars-react": "0.3.0"
   },

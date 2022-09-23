@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-spinner",
   "title": "React Spinner",
-  "version": "2.0.36",
+  "version": "2.0.37",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-theme": "0.35.0",
+    "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
-    "@sbercloud/uikit-product-utils": "3.0.3"
+    "@sbercloud/uikit-product-utils": "3.0.4"
   }
 }

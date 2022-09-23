@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-utils",
   "title": "Utils",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,6 +29,6 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-debug-mode": "1.0.3",
-    "@sbercloud/uikit-product-theme": "0.35.0"
+    "@sbercloud/uikit-product-theme": "0.35.1"
   }
 }

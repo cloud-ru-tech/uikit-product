@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-dropdown",
   "title": "React Dropdown",
-  "version": "0.16.4",
+  "version": "0.16.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-theme": "0.35.0",
-    "@sbercloud/uikit-product-tooltip-private": "1.2.19",
-    "@sbercloud/uikit-product-utils": "3.0.3"
+    "@sbercloud/uikit-product-theme": "0.35.1",
+    "@sbercloud/uikit-product-tooltip-private": "1.2.20",
+    "@sbercloud/uikit-product-utils": "3.0.4"
   }
 }

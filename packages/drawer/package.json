@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-drawer",
   "title": "React Drawer",
-  "version": "0.16.31",
+  "version": "0.16.32",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,11 +27,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.0.33",
+    "@sbercloud/uikit-product-button": "5.0.34",
     "@sbercloud/uikit-product-icons": "5.3.1",
-    "@sbercloud/uikit-product-theme": "0.35.0",
+    "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
-    "@sbercloud/uikit-product-utils": "3.0.3",
+    "@sbercloud/uikit-product-utils": "3.0.4",
     "rc-drawer": "4.4.3"
   }
 }

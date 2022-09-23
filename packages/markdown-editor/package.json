@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-markdown-editor",
   "title": "React Markdown Editor",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,12 +27,12 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-divider": "2.0.35",
-    "@sbercloud/uikit-product-link": "3.0.36",
-    "@sbercloud/uikit-product-textarea-private": "2.5.5",
-    "@sbercloud/uikit-product-theme": "0.35.0",
+    "@sbercloud/uikit-product-divider": "2.0.36",
+    "@sbercloud/uikit-product-link": "3.0.37",
+    "@sbercloud/uikit-product-textarea-private": "2.5.6",
+    "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
-    "@sbercloud/uikit-product-utils": "3.0.3",
+    "@sbercloud/uikit-product-utils": "3.0.4",
     "react-markdown": "7.1.1",
     "react-syntax-highlighter": "15.5.0",
     "remark-gfm": "3.0.1"

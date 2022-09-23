@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.2.0...@sbercloud/uikit-product-notification@4.2.1) (2022-09-23)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-notification
+
+
+
+
+
 # [4.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.1.0...@sbercloud/uikit-product-notification@4.2.0) (2022-09-22)
 
 

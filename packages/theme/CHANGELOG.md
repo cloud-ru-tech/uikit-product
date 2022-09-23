@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.35.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-theme@0.35.0...@sbercloud/uikit-product-theme@0.35.1) (2022-09-23)
+
+
+### Bug Fixes
+
+* **FF-871:** add color for the error border in green themes ([5e3360b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5e3360b368e5fe772e9a449c3e5e01b45559daab))
+
+
+
+
+
 # [0.35.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-theme@0.34.1...@sbercloud/uikit-product-theme@0.35.0) (2022-09-20)
 
 
