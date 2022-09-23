@@ -40,12 +40,8 @@ describe('[Navigation]: Header Project Selector', () => {
     return getOptionListItems().get(`[data-test-value="${value}"]`);
   }
 
-  function getCatalogListItemLabel() {
-    return cy.getByDataTestId('header-project-selector__catalog-list-item-label');
-  }
-
-  function getProjectPresentationListItemLabel() {
-    return cy.getByDataTestId('header-project-selector__project-presentation-list-item-label');
+  function getGroupListItemLabel() {
+    return cy.getByDataTestId('header-project-selector__group-list-item-label');
   }
 
   function getProjectOptionListItemLabel() {
@@ -132,6 +128,11 @@ describe('[Navigation]: Header Project Selector', () => {
       getReference().click();
       getOptionListItems().last().should('be.visible');
     });
+
+    it('renders group labels', () => {
+      getReference().click();
+      getGroupListItemLabel().should('exist');
+    });
   }
 
   describe('Projects', () => {
@@ -182,95 +183,33 @@ describe('[Navigation]: Header Project Selector', () => {
     });
   });
 
-  describe('Projects With Catalogs', () => {
+  describe('Workspaces', () => {
     beforeEach(() => {
-      visit('projects-with-catalogs');
+      visit('workspaces');
     });
 
     basics();
 
-    it('renders selected project', () => {
-      getSelectedProject().should('have.text', 'Zialactic');
-    });
-
-    it('renders catalog labels', () => {
-      getReference().click();
-      getCatalogListItemLabel().should('exist');
-    });
-
-    it('selects another project by mouse', () => {
-      getReference().click();
-      getOptionListItemByValue('short-1').click();
-      getSelectedProject().should('have.text', 'Zaggles');
-    });
-
-    it('selects another project by keys', () => {
-      getReference().focus().type('{downArrow}{downArrow}{enter}');
-      getSelectedProject().should('have.text', 'Zaggles');
-    });
-
-    it('does not select project by edit project button click', () => {
-      getReference().click();
-      getOptionListItemByValue('short-1').within(() => {
-        getOptionListItemEditButtons().click({ force: true });
-      });
-      getSelectedProject().should('have.text', 'Zialactic');
-    });
-
-    it('truncates long selected project label', () => {
-      getReference().click();
-      getOptionListItemByValue('long-0').click();
-      getSelectedProject().then(([element]) => {
-        cy.wrap(element.offsetWidth).should('be.lessThan', element.scrollWidth);
-      });
-    });
-
-    it('truncates long project option label', () => {
-      getReference().click();
-      getOptionListItemByValue('long-0').within(() => {
-        getProjectOptionListItemLabel().then(([element]) => {
-          cy.wrap(element.offsetWidth).should('be.lessThan', element.scrollWidth);
-        });
-      });
-    });
-  });
-
-  describe('Projects With Workspaces', () => {
-    beforeEach(() => {
-      visit('projects-with-workspaces');
-    });
-
-    basics();
-
-    it('renders selected project and selected workspace', () => {
-      getSelectedProject().should('have.text', 'Zensus');
+    it('renders selected selected workspace', () => {
       getSelectedWorkspace().should('have.text', 'Zialactic');
     });
 
-    it('renders project presentation labels', () => {
-      getReference().click();
-      getProjectPresentationListItemLabel().should('exist');
-    });
-
-    it('selects another project and workspace by mouse', () => {
+    it('selects another workspace by mouse', () => {
       getReference().click();
       getOptionListItemByValue('short-5').click();
-      getSelectedProject().should('have.text', 'Chillium');
       getSelectedWorkspace().should('have.text', 'Insource');
     });
 
-    it('selects another project and workspace by keys', () => {
+    it('selects another workspace by keys', () => {
       getReference().focus().type('{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{enter}');
-      getSelectedProject().should('have.text', 'Chillium');
       getSelectedWorkspace().should('have.text', 'Insource');
     });
 
-    it('does not select project and workspace by edit workspace button click', () => {
+    it('does not select workspace by edit workspace button click', () => {
       getReference().click();
       getOptionListItemByValue('short-1').within(() => {
         getOptionListItemEditButtons().click({ force: true });
       });
-      getSelectedProject().should('have.text', 'Zensus');
       getSelectedWorkspace().should('have.text', 'Zialactic');
     });
 

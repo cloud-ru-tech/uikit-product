@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { CatalogPresentation, Item, ProjectOption, ProjectPresentation, WorkspaceOption } from './types';
+import { Item, ProjectGroup, ProjectOption, WorkspaceGroup, WorkspaceOption } from './types';
 
 type Option = ProjectOption | WorkspaceOption;
 
@@ -8,7 +8,7 @@ type OptionListParams = {
   children: ReactNode;
 };
 
-type PresentationListItemParams = {
+type GroupListItemParams = {
   label: string;
   children: ReactNode;
   index: number;
@@ -25,25 +25,24 @@ type Renderer = {
   renderOptionList(params: OptionListParams): ReactNode;
   renderProjectOptionList(params: OptionListParams): ReactNode;
   renderWorkspaceOptionList(params: OptionListParams): ReactNode;
-  renderCatalogPresentationListItem(params: PresentationListItemParams): ReactNode;
-  renderProjectPresentationListItem(params: PresentationListItemParams): ReactNode;
+  renderGroupListItem(params: GroupListItemParams): ReactNode;
   renderProjectOptionListItem(params: OptionListItemParams): ReactNode;
   renderWorkspaceOptionListItem(params: OptionListItemParams): ReactNode;
 };
 
-function isCatalogPresentation(item: Item): item is CatalogPresentation {
+function isProjectGroup(item: Item): item is ProjectGroup {
   return 'projects' in item;
 }
 
-function isProjectPresentation(item: Item): item is ProjectPresentation {
+function isWorkspaceGroup(item: Item): item is WorkspaceGroup {
   return 'workspaces' in item;
 }
 
-function isProjectOption(item: Item): item is ProjectOption {
-  return 'value' in item;
-}
-
 function renderRegular(items: Item[], indexByOption: Map<Option, number>, renderer: Renderer) {
+  function isFlat() {
+    return items.length === 1;
+  }
+
   function renderWorkspaceOption(workspace: WorkspaceOption) {
     return renderer.renderWorkspaceOptionListItem({
       label: workspace.label,
@@ -62,35 +61,37 @@ function renderRegular(items: Item[], indexByOption: Map<Option, number>, render
     });
   }
 
-  function renderProjectPresentation(project: ProjectPresentation, index: number) {
-    return renderer.renderProjectPresentationListItem({
-      label: project.label,
-      children: project.workspaces.map(renderWorkspaceOption),
+  function renderWorkspaceGroup(group: WorkspaceGroup, index: number) {
+    return renderer.renderGroupListItem({
+      label: group.label,
+      children: group.workspaces.map(renderWorkspaceOption),
       index,
     });
   }
 
-  function renderCatalogPresentation(catalog: CatalogPresentation, index: number) {
-    return renderer.renderCatalogPresentationListItem({
-      label: catalog.label,
-      children: catalog.projects.map(renderProjectOption),
+  function renderProjectGroup(group: ProjectGroup, index: number) {
+    return renderer.renderGroupListItem({
+      label: group.label,
+      children: group.projects.map(renderProjectOption),
       index,
     });
   }
 
   function render(items: Item[]) {
-    if (items.every(isCatalogPresentation)) {
-      return items.length === 1
-        ? renderer.renderProjectOptionList({ children: items.flatMap(item => item.projects.map(renderProjectOption)) })
-        : renderer.renderProjectOptionList({ children: items.map(renderCatalogPresentation) });
+    if (items.every(isProjectGroup)) {
+      return renderer.renderProjectOptionList(
+        isFlat()
+          ? { children: items.flatMap(item => item.projects.map(renderProjectOption)) }
+          : { children: items.map(renderProjectGroup) },
+      );
     }
 
-    if (items.every(isProjectOption)) {
-      return renderer.renderProjectOptionList({ children: items.map(renderProjectOption) });
-    }
-
-    if (items.every(isProjectPresentation)) {
-      return renderer.renderWorkspaceOptionList({ children: items.map(renderProjectPresentation) });
+    if (items.every(isWorkspaceGroup)) {
+      return renderer.renderWorkspaceOptionList(
+        isFlat()
+          ? { children: items.flatMap(item => item.workspaces.map(renderWorkspaceOption)) }
+          : { children: items.map(renderWorkspaceGroup) },
+      );
     }
 
     return null;
@@ -101,7 +102,7 @@ function renderRegular(items: Item[], indexByOption: Map<Option, number>, render
 
 function renderSearch(items: Item[], indexByOption: Map<Option, number>, renderer: Renderer, query: string) {
   function isVisible(option: Option) {
-    return option.label.toLowerCase().includes(query);
+    return option.label.toLowerCase().includes(query.toLowerCase());
   }
 
   function renderWorkspaceOption(workspace: WorkspaceOption) {
@@ -127,34 +128,30 @@ function renderSearch(items: Item[], indexByOption: Map<Option, number>, rendere
   }
 
   function render(item: Item) {
-    if (isCatalogPresentation(item)) {
+    if (isProjectGroup(item)) {
       return item.projects.map(renderProjectOption);
     }
 
-    if (isProjectPresentation(item)) {
+    if (isWorkspaceGroup(item)) {
       return item.workspaces.map(renderWorkspaceOption);
     }
 
-    return isVisible(item) ? renderProjectOption(item) : null;
+    return null;
   }
 
   return renderer.renderOptionList({ children: items.map(render) });
 }
 
 export function useProjects(items: Item[]) {
-  return items.flatMap(item => (isCatalogPresentation(item) ? item.projects : [item]));
+  return items.flatMap(item => (isProjectGroup(item) ? item.projects : []));
 }
 
 export function useWorkspaces(items: Item[]) {
-  return items.flatMap(item => (isProjectPresentation(item) ? item.workspaces : []));
+  return items.flatMap(item => (isWorkspaceGroup(item) ? item.workspaces : []));
 }
 
-export function useSelectedProject(projects: Array<ProjectPresentation | ProjectOption>, value: string) {
-  return projects.find(project =>
-    isProjectOption(project)
-      ? project.value === value
-      : project.workspaces.some(workspace => workspace.value === value),
-  );
+export function useSelectedProject(projects: ProjectOption[], value: string) {
+  return projects.find(project => project.value === value);
 }
 
 export function useSelectedWorkspace(workspaces: WorkspaceOption[], value: string) {
@@ -171,14 +168,12 @@ export function useSelectedIndex(indexByOption: Map<Option, number>, value: stri
   return null;
 }
 
-export function useIndexByOption(projects: Array<ProjectPresentation | ProjectOption>, workspaces: WorkspaceOption[]) {
-  return new Map<Option, number>(
-    [...projects.filter(isProjectOption), ...workspaces].map((option, index) => [option, index]),
-  );
+export function useIndexByOption(projects: ProjectOption[], workspaces: WorkspaceOption[]) {
+  return new Map<Option, number>([...projects, ...workspaces].map((option, index) => [option, index]));
 }
 
 export function useContent(items: Item[], search: string, indexByOption: Map<Option, number>, renderer: Renderer) {
-  const query = search.trim().toLowerCase();
+  const query = search.trim();
 
   return query === ''
     ? renderRegular(items, indexByOption, renderer)

@@ -4,7 +4,7 @@ import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 export const LABEL_COLORS = {
   text: {
-    default: '--color__navigation__header-project-selector-catalog-list-item-label__text__default',
+    default: '--color__navigation__header-project-selector-group-list-item-label__text__default',
   },
 };
 

@@ -6,17 +6,14 @@ import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/u
 
 import { textProvider, Texts } from '../../helpers';
 import { HeaderProjectSelectorAction } from './components/HeaderProjectSelectorAction';
-import { HeaderProjectSelectorBox } from './components/HeaderProjectSelectorBox';
-import { HeaderProjectSelectorCatalogListItem } from './components/HeaderProjectSelectorCatalogListItem';
 import { HeaderProjectSelectorContent } from './components/HeaderProjectSelectorContent';
 import { HeaderProjectSelectorFloating } from './components/HeaderProjectSelectorFloating';
-import { HeaderProjectSelectorListItem } from './components/HeaderProjectSelectorListItem';
+import { HeaderProjectSelectorGroupListItem } from './components/HeaderProjectSelectorGroupListItem';
 import { HeaderProjectSelectorOptionListItem } from './components/HeaderProjectSelectorOptionListItem';
 import { HeaderProjectSelectorProjectLabel } from './components/HeaderProjectSelectorProjectLabel';
 import { HeaderProjectSelectorReference } from './components/HeaderProjectSelectorReference';
 import { HeaderProjectSelectorWorkspaceLabel } from './components/HeaderProjectSelectorWorkspaceLabel';
 import { DEFAULT_EDITABLE } from './constants';
-import { IndentContext } from './contexts/IndentContext';
 import { SelectionContext } from './contexts/SelectionContext';
 import {
   useContent,
@@ -49,7 +46,7 @@ export function HeaderProjectSelector({
   const [search, setSearch] = useState('');
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const projects = useProjects(items);
-  const workspaces = useWorkspaces(projects);
+  const workspaces = useWorkspaces(items);
   const indexByOption = useIndexByOption(projects, workspaces);
   const selectedProject = useSelectedProject(projects, value);
   const selectedWorkspace = useSelectedWorkspace(workspaces, value);
@@ -87,39 +84,21 @@ export function HeaderProjectSelector({
             <S.List>{children}</S.List>
           </Scroll>
           {onCreate && (
-            <IndentContext.Provider value={1}>
-              <HeaderProjectSelectorAction
-                icon={<CircleAddInterfaceSVG />}
-                text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateWorkspace)}
-                onClick={onCreate}
-              />
-            </IndentContext.Provider>
+            <HeaderProjectSelectorAction
+              icon={<CircleAddInterfaceSVG />}
+              text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateWorkspace)}
+              onClick={onCreate}
+            />
           )}
         </>
       );
     },
 
-    renderCatalogPresentationListItem({ label, children, index }) {
+    renderGroupListItem({ label, children, index }) {
       return (
-        <HeaderProjectSelectorCatalogListItem key={index} label={label}>
+        <HeaderProjectSelectorGroupListItem key={index} label={label}>
           <S.List>{children}</S.List>
-        </HeaderProjectSelectorCatalogListItem>
-      );
-    },
-
-    renderProjectPresentationListItem({ label, children, index }) {
-      return (
-        <HeaderProjectSelectorListItem key={index} role='presentation'>
-          <HeaderProjectSelectorBox>
-            <HeaderProjectSelectorProjectLabel
-              label={label}
-              data-test-id='header-project-selector__project-presentation-list-item-label'
-            />
-          </HeaderProjectSelectorBox>
-          <IndentContext.Provider value={1}>
-            <S.List>{children}</S.List>
-          </IndentContext.Provider>
-        </HeaderProjectSelectorListItem>
+        </HeaderProjectSelectorGroupListItem>
       );
     },
 

@@ -237,17 +237,17 @@ type ProjectOption = {
   editable?: boolean;
 };
 
-type ProjectPresentation = {
-  label: string;
-  workspaces: WorkspaceOption[];
-};
-
-type CatalogPresentation = {
+type ProjectGroup = {
   label: string;
   projects: ProjectOption[];
 };
 
-type Item = CatalogPresentation | ProjectPresentation | ProjectOption;
+type WorkspaceGroup = {
+  label: string;
+  workspaces: WorkspaceOption[];
+};
+
+type Item = ProjectGroup | WorkspaceGroup;
 
 type HeaderProjectSelectorProps = WithSupportProps<{
   value: string;

@@ -10,11 +10,6 @@ export const Wrapper = styled.div`
   padding: 4px 12px;
 `;
 
-export const Indent = styled.span`
-  flex-shrink: 0;
-  width: 20px;
-`;
-
 export const Toolbar = styled.div`
   margin-left: auto;
 `;

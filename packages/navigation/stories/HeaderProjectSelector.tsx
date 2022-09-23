@@ -59,30 +59,6 @@ projects.args = {
   showEditButton: true,
   value: 'short-0',
   items: [
-    { label: 'Zialactic', value: 'short-0', editable: true },
-    { label: 'Zaggles', value: 'short-1', editable: true },
-    { label: 'Isologia', value: 'short-2', editable: true },
-    { label: 'Undertap', value: 'short-3', editable: true },
-    { label: 'Gluid', value: 'short-4', editable: true },
-    { label: 'Insource', value: 'short-5', editable: true },
-    { label: 'Mantrix', value: 'short-6', editable: true },
-    { label: 'Datagen', value: 'short-7', editable: true },
-    { label: 'Isologics', value: 'short-8', editable: true },
-    { label: 'Zork', value: 'short-9', editable: true },
-    { label: 'Paragonia Waretel Ozean Tropolis Isologix Datagen Rooforia Concility', value: 'long-0', editable: true },
-    { label: 'Ovium', value: 'short-11', editable: true },
-    { label: 'Rooforia', value: 'short-12', editable: true },
-    { label: 'Tellifly', value: 'short-13', editable: true },
-    { label: 'Rocklogic', value: 'short-14', editable: true },
-  ],
-};
-
-export const projectsWithCatalogs = Template.bind({});
-projectsWithCatalogs.args = {
-  showCreateButton: true,
-  showEditButton: true,
-  value: 'short-0',
-  items: [
     {
       label: 'Zensus',
       projects: [
@@ -120,8 +96,8 @@ projectsWithCatalogs.args = {
   ],
 };
 
-export const projectsWithWorkspaces = Template.bind({});
-projectsWithWorkspaces.args = {
+export const workspaces = Template.bind({});
+workspaces.args = {
   showCreateButton: true,
   showEditButton: true,
   value: 'short-0',

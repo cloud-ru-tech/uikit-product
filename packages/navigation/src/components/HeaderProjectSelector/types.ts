@@ -10,14 +10,14 @@ export type ProjectOption = {
   editable?: boolean;
 };
 
-export type ProjectPresentation = {
-  label: string;
-  workspaces: WorkspaceOption[];
-};
-
-export type CatalogPresentation = {
+export type ProjectGroup = {
   label: string;
   projects: ProjectOption[];
 };
 
-export type Item = CatalogPresentation | ProjectPresentation | ProjectOption;
+export type WorkspaceGroup = {
+  label: string;
+  workspaces: WorkspaceOption[];
+};
+
+export type Item = ProjectGroup | WorkspaceGroup;
