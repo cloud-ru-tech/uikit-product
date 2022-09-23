@@ -88,7 +88,7 @@ function getNotificationOptions<T extends keyof NotificationPropsMap>({
   return {
     toastId: notificationOptions?.id,
     onClose: notificationOptions?.onClose,
-    autoClose: getAutoCloseValue(notificationProps),
+    autoClose: notificationOptions?.autoClose ?? getAutoCloseValue(notificationProps),
     containerId: containerId || `notification-container__${type}`,
   };
 }
