@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.14.4...@sbercloud/uikit-product-navigation@0.15.0) (2022-09-26)
+
+
+### Bug Fixes
+
+* **FF-1029:** add `z-index: 1` to floating elements ([7c06cc9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7c06cc9c2f80996ce8ede8309152ec809ce12f0f))
+* **FF-1029:** add ability to fall through into active item slide ([68c35f7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/68c35f7ecadb8f8967b83529cca3222d997403e4))
+
+
+### Features
+
+* **FF-1029:** change `HeaderProjectSelector` workspaces view ([8e12420](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e12420c1ce64df42a21c2c9dd69f197fbf9381b))
+
+
+### BREAKING CHANGES
+
+* **FF-1029:** change `HeaderProjectSelector` workspaces view
+
+
+
+
+
 ## [0.14.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.14.3...@sbercloud/uikit-product-navigation@0.14.4) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-navigation
