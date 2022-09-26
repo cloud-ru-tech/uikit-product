@@ -1,6 +1,10 @@
-import { ReactNode, useLayoutEffect, useRef, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
+import useTransition from 'react-transition-state';
 
-import { Content, Wrapper } from './styled';
+import { useForceUpdateOnPageLoadedCompletely } from '@sbercloud/uikit-product-utils';
+
+import { TRANSITION_DURATION } from './constants';
+import * as S from './styled';
 
 export type HeaderBalanceTooltipFoldableProps = {
   open: boolean;
@@ -11,10 +15,8 @@ export type HeaderBalanceTooltipFoldableProps = {
 export function HeaderBalanceTooltipFoldable({ open, children, fallback }: HeaderBalanceTooltipFoldableProps) {
   const [childrenWidth, setChildrenWidth] = useState<string | number>('auto');
   const [fallbackWidth, setFallbackWidth] = useState<string | number>('auto');
-  const [isAnimationInProgress, setIsAnimationInProgress] = useState(false);
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const isMountedRef = useRef(true);
-  const isChildrenContentVisible = open || isAnimationInProgress;
+  const [state, toggle] = useTransition({ initialEntered: open, timeout: TRANSITION_DURATION });
+  const isChildrenVisible = state.isEnter || !state.isResolved;
 
   function getContentWidth(content: HTMLElement) {
     return content.getBoundingClientRect().width;
@@ -32,41 +34,17 @@ export function HeaderBalanceTooltipFoldable({ open, children, fallback }: Heade
     }
   }
 
-  useLayoutEffect(
-    () => () => {
-      isMountedRef.current = false;
-    },
-    [],
-  );
-
-  useLayoutEffect(() => {
-    if (isAnimationInProgress) {
-      return;
-    }
-
-    const wrapper = wrapperRef.current as HTMLElement;
-    const animations = wrapper.getAnimations();
-
-    if (animations.length === 0) {
-      return;
-    }
-
-    setIsAnimationInProgress(true);
-    Promise.allSettled(animations.map(animation => animation.finished)).then(() => {
-      if (isMountedRef.current) {
-        setIsAnimationInProgress(false);
-      }
-    });
-  }, [isAnimationInProgress, open]);
+  useForceUpdateOnPageLoadedCompletely();
+  useEffect(() => toggle(open), [open]);
 
   return (
-    <Wrapper width={open ? childrenWidth : fallbackWidth} ref={wrapperRef}>
-      <Content data-hidden={!isChildrenContentVisible || undefined} ref={setChildrenContent}>
+    <S.Wrapper width={open ? childrenWidth : fallbackWidth}>
+      <S.Content data-hidden={!isChildrenVisible || undefined} ref={setChildrenContent}>
         {children}
-      </Content>
-      <Content data-hidden={isChildrenContentVisible || undefined} ref={setFallbackContent}>
+      </S.Content>
+      <S.Content data-hidden={isChildrenVisible || undefined} ref={setFallbackContent}>
         {fallback}
-      </Content>
-    </Wrapper>
+      </S.Content>
+    </S.Wrapper>
   );
 }

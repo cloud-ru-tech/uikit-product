@@ -1,11 +1,11 @@
 import { styled } from '@linaria/react';
 
-import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
+import { TRANSITION_DURATION } from './constants';
 
 export const Wrapper = styled.div<{ width: string | number }>`
   overflow: hidden;
   position: relative;
-  transition: width ${ANIMATIONS.TRANSITION};
+  transition: width ${TRANSITION_DURATION}ms ease-in-out;
   width: ${props => (typeof props.width === 'number' ? `${props.width}px` : props.width)};
 `;
 
