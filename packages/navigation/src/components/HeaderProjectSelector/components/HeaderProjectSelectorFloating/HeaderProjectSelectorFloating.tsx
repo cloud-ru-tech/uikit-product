@@ -1,7 +1,6 @@
 import {
   autoUpdate,
   FloatingFocusManager,
-  FloatingOverlay,
   FloatingPortal,
   offset,
   shift,
@@ -114,7 +113,7 @@ export function HeaderProjectSelectorFloating({ children, content }: HeaderProje
             {children}
             {isOpen && (
               <FloatingPortal root={document.body}>
-                <FloatingOverlay>
+                <S.Overlay>
                   <FloatingFocusManager context={context} initialFocus={initialFocusRef}>
                     <S.Wrapper
                       strategy={strategy}
@@ -127,7 +126,7 @@ export function HeaderProjectSelectorFloating({ children, content }: HeaderProje
                       {content}
                     </S.Wrapper>
                   </FloatingFocusManager>
-                </FloatingOverlay>
+                </S.Overlay>
               </FloatingPortal>
             )}
           </NavigationContext.Provider>

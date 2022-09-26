@@ -1,3 +1,4 @@
+import { FloatingOverlay } from '@floating-ui/react-dom-interactions';
 import { styled } from '@linaria/react';
 
 import { SHADOW } from '@sbercloud/uikit-product-utils';
@@ -20,5 +21,8 @@ export const Wrapper = styled.div<{ strategy: string; x: number; y: number }>`
   outline: none;
   position: ${props => props.strategy};
   top: ${props => props.y}px;
+`;
+
+export const Overlay = styled(FloatingOverlay)`
   z-index: 1;
 `;
