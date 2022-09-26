@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.2.1...@sbercloud/uikit-product-notification@4.3.0) (2022-09-26)
+
+
+### Features
+
+* **FF-1020:** added 'autoClose' option to notification ([76202f5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/76202f55b8afc9103a74c6363a87e65eafd34e28))
+
+
+
+
+
 ## [4.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.2.0...@sbercloud/uikit-product-notification@4.2.1) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-notification
