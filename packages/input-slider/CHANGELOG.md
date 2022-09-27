@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-slider@1.1.23...@sbercloud/uikit-product-input-slider@1.2.0) (2022-09-27)
+
+
+### Features
+
+* **FF-917:** forward ref to components ([7589343](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/758934380c76f85970cac0420d96272a03335478))
+
+
+
+
+
 ## [1.1.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-slider@1.1.22...@sbercloud/uikit-product-input-slider@1.1.23) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-slider

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.6.7...@sbercloud/uikit-product-input-private@3.0.0) (2022-09-27)
+
+
+### Bug Fixes
+
+* **FF-917:** autofocus prop is no longer valid ([ce666c3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ce666c3c88d64fbd85fe247cbaf91264568bf624))
+
+
+### BREAKING CHANGES
+
+* **FF-917:** autofocus prop is no longer valid
+
+
+
+
+
 ## [2.6.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-private@2.6.6...@sbercloud/uikit-product-input-private@2.6.7) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-private

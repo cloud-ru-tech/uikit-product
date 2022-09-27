@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-search",
   "title": "Search",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-button": "5.0.34",
     "@sbercloud/uikit-product-icons": "5.3.1",
-    "@sbercloud/uikit-product-input-private": "2.6.7",
+    "@sbercloud/uikit-product-input-private": "3.0.0",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-utils": "3.0.4",
     "merge-refs": "1.0.0"
