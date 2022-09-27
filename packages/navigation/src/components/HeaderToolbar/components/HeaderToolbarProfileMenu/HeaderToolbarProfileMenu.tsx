@@ -2,7 +2,7 @@ import { Children, ReactNode } from 'react';
 
 import { Avatar } from '@sbercloud/uikit-product-avatar';
 import { DropdownMenu } from '@sbercloud/uikit-product-dropdown';
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { AvatarContext, DropdownMenuContext } from '../../../../contexts';
 import { Item } from './styled';
@@ -15,7 +15,7 @@ export type HeaderToolbarProfileMenuProps = WithSupportProps<{
   src?: string;
 }>;
 
-export function HeaderToolbarProfileMenu({ name, children, src }: HeaderToolbarProfileMenuProps) {
+export function HeaderToolbarProfileMenu({ name, children, src, ...rest }: HeaderToolbarProfileMenuProps) {
   return (
     <DropdownMenu
       actions={({ hide }) => (
@@ -27,6 +27,7 @@ export function HeaderToolbarProfileMenu({ name, children, src }: HeaderToolbarP
           </DropdownMenuContext.Provider>
         </AvatarContext.Provider>
       )}
+      {...extractSupportProps(rest)}
     >
       <Avatar name={name} src={src} onClick={noop} variant={Avatar.variants.User} size={Avatar.sizes.ExtraSmall} />
     </DropdownMenu>
