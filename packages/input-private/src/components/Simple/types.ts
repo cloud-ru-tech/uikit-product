@@ -18,7 +18,6 @@ export type SimpleInputProps = RefAttributes<HTMLInputElement> &
     type?: Types;
     disabled?: boolean;
     error?: boolean;
-    autoFocus?: boolean;
     autoComplete?: boolean;
     ellipsis?: boolean;
     prefix?: string;

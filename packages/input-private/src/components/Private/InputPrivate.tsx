@@ -17,7 +17,6 @@ const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivate
       className,
       type = Types.Text,
       disabled = false,
-      autoFocus = false,
       autoComplete = false,
       maxLength,
       onFocus,
@@ -39,7 +38,6 @@ const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivate
           maxLength={maxLength}
           id={id}
           className={className}
-          autoFocus={autoFocus}
           autoComplete={autoComplete ? 'on' : 'off'}
           ref={ref}
           value={value}

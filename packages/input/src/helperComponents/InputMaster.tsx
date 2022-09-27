@@ -16,7 +16,6 @@ export type InputMasterProps = WithSupportProps<{
   error?: string;
   maxLength?: number;
   className?: string;
-  autoFocus?: boolean;
   autoComplete?: boolean;
   name?: string;
   size?: SimpleInputProps['size'];
@@ -34,7 +33,6 @@ export function InputMaster({
   error,
   maxLength,
   className,
-  autoFocus,
   autoComplete,
   name,
   size,
@@ -60,7 +58,6 @@ export function InputMaster({
         onChange,
         error: Boolean(error),
         autoComplete,
-        autoFocus,
         name,
         size,
         maxLength,

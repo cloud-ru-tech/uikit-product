@@ -28,7 +28,6 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
       type = Types.Text,
       disabled = false,
       error = false,
-      autoFocus = false,
       autoComplete = false,
       ellipsis = false,
       maxLength,
@@ -78,7 +77,6 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
           data-test-id={'private-input'}
           name={name}
           id={id}
-          autoFocus={autoFocus}
           autoComplete={autoComplete}
           ref={inputRef}
           maxLength={maxLength}

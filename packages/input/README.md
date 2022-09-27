@@ -24,7 +24,6 @@ type InputCommonProps = WithSupportProps<{
   error?: string;
   maxLength?: number;
   className?: string;
-  autoFocus?: boolean;
   autoComplete?: boolean;
   name?: string;
   size?: SimpleInputProps['size'];
@@ -47,7 +46,6 @@ type InputMaskProps = WithSupportProps<{
   error?: string;
   maxLength?: number;
   className?: string;
-  autoFocus?: boolean;
   autoComplete?: boolean;
   name?: string;
   size?: SimpleInputProps['size'];
@@ -68,7 +66,6 @@ type InputPhoneProps = WithSupportProps<{
   error?: string;
   maxLength?: number;
   className?: string;
-  autoFocus?: boolean;
   autoComplete?: boolean;
   name?: string;
   size?: SimpleInputProps['size'];
@@ -89,7 +86,6 @@ type InputSecurityProps = WithSupportProps<{
   error?: string;
   maxLength?: number;
   className?: string;
-  autoFocus?: boolean;
   autoComplete?: boolean;
   name?: string;
   size?: SimpleInputProps['size'];
@@ -113,7 +109,6 @@ type InputOverviewProps = WithSupportProps<{
   error?: string;
   maxLength?: number;
   className?: string;
-  autoFocus?: boolean;
   autoComplete?: boolean;
   name?: string;
   size?: SimpleInputProps['size'];
