@@ -10,13 +10,16 @@ GREEN_THEME;
 GREEN_DARK_THEME;
 
 export const Wrapper = styled.div`
+  grid-area: header-balance-tooltip;
+  width: fit-content;
+`;
+
+export const Frame = styled.div`
   background-color: var(${COLORS.background.default});
   border-radius: 100px;
   border: 1px solid var(${COLORS.border.default});
   display: flex;
-  grid-area: header-balance-tooltip;
   padding: 4px;
-  width: fit-content;
 `;
 
 export const Balance = styled.button`

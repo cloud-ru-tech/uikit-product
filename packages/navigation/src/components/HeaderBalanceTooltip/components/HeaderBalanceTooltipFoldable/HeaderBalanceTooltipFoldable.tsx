@@ -10,12 +10,34 @@ export type HeaderBalanceTooltipFoldableProps = {
   open: boolean;
   children: ReactNode;
   fallback: ReactNode;
+  onOpen(): void;
+  onClose(): void;
 };
 
-export function HeaderBalanceTooltipFoldable({ open, children, fallback }: HeaderBalanceTooltipFoldableProps) {
+export function HeaderBalanceTooltipFoldable({
+  open,
+  children,
+  fallback,
+  onOpen,
+  onClose,
+}: HeaderBalanceTooltipFoldableProps) {
   const [childrenWidth, setChildrenWidth] = useState<string | number>('auto');
   const [fallbackWidth, setFallbackWidth] = useState<string | number>('auto');
-  const [state, toggle] = useTransition({ initialEntered: open, timeout: TRANSITION_DURATION });
+  const [state, toggle] = useTransition({
+    initialEntered: open,
+    timeout: TRANSITION_DURATION,
+    onStateChange(event) {
+      if (event.current.status === 'entering') {
+        onOpen();
+        return;
+      }
+
+      if (event.current.status === 'exited') {
+        onClose();
+        return;
+      }
+    },
+  });
   const isChildrenVisible = state.isEnter || !state.isResolved;
 
   function getContentWidth(content: HTMLElement) {

@@ -8,12 +8,13 @@ import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/u
 import { textProvider, Texts } from '../../helpers';
 import {
   HeaderBalanceTooltipCurrency,
+  HeaderBalanceTooltipFloating,
   HeaderBalanceTooltipFoldable,
   HeaderBalanceTooltipPie,
   HeaderBalanceTooltipSpinner,
 } from './components';
 import { Mode } from './constants';
-import { AccentText, Balance, Icon, RechargeButton, RegularText, Wrapper } from './styled';
+import * as S from './styled';
 import { ModeEntry } from './types';
 
 export type HeaderBalanceTooltipProps = WithSupportProps<{
@@ -32,6 +33,7 @@ export function HeaderBalanceTooltip({
 }: HeaderBalanceTooltipProps) {
   const { languageCode } = useLanguage();
   const [isMouseOver, setIsMouseOver] = useState(false);
+  const [isFoldableOpen, setIsFoldableOpen] = useState(false);
   const isLoading = balance === undefined;
   const handleRechargeButtonClick = isLoading ? undefined : onRechargeClick;
   const isRechargeButtonVisible = Boolean(onRechargeClick);
@@ -42,6 +44,14 @@ export function HeaderBalanceTooltip({
 
   function handleMouseLeave() {
     setIsMouseOver(false);
+  }
+
+  function handleFoldableOpen() {
+    setIsFoldableOpen(true);
+  }
+
+  function handleFoldableClose() {
+    setIsFoldableOpen(false);
   }
 
   function getModeEntry(): ModeEntry {
@@ -60,69 +70,71 @@ export function HeaderBalanceTooltip({
     if (mode === Mode.Loading) {
       return (
         <>
-          <Icon>
+          <S.Icon>
             <HeaderBalanceTooltipSpinner />
-          </Icon>
-          <Balance type='button' disabled>
-            <RegularText>₽</RegularText>
-          </Balance>
+          </S.Icon>
+          <S.Balance type='button' disabled>
+            <S.RegularText>₽</S.RegularText>
+          </S.Balance>
         </>
       );
     }
 
     if (mode === Mode.RegularBalance) {
       return (
-        <Balance type='button' onClick={onBalanceClick} disabled={!Boolean(onBalanceClick)}>
+        <S.Balance type='button' onClick={onBalanceClick} disabled={!Boolean(onBalanceClick)}>
           <Tooltip
             placement={Tooltip.placements.Bottom}
             type={Tooltip.types.Tip}
             content={textProvider(languageCode, Texts.HeaderBalanceTooltipBalance)}
           >
-            <RegularText data-test-id='header-balance-tooltip__balance'>
+            <S.RegularText data-test-id='header-balance-tooltip__balance'>
               <HeaderBalanceTooltipCurrency value={payload.balance} />
-            </RegularText>
+            </S.RegularText>
           </Tooltip>
-        </Balance>
+        </S.Balance>
       );
     }
 
     if (mode === Mode.LimitedBalance) {
       return (
         <>
-          <Icon>
+          <S.Icon>
             <HeaderBalanceTooltipPie balance={payload.balance} limit={payload.limit} />
-          </Icon>
+          </S.Icon>
           <HeaderBalanceTooltipFoldable
             open={isMouseOver}
+            onOpen={handleFoldableOpen}
+            onClose={handleFoldableClose}
             fallback={
               isRechargeButtonVisible && (
-                <Balance type='button' disabled>
-                  <RegularText>₽</RegularText>
-                </Balance>
+                <S.Balance type='button' disabled>
+                  <S.RegularText>₽</S.RegularText>
+                </S.Balance>
               )
             }
           >
-            <Balance type='button' onClick={onBalanceClick} disabled={!Boolean(onBalanceClick)}>
+            <S.Balance type='button' onClick={onBalanceClick} disabled={!Boolean(onBalanceClick)}>
               <Tooltip
                 placement={Tooltip.placements.Bottom}
                 type={Tooltip.types.Tip}
                 content={textProvider(languageCode, Texts.HeaderBalanceTooltipBalance)}
               >
-                <AccentText data-test-id='header-balance-tooltip__balance'>
+                <S.AccentText data-test-id='header-balance-tooltip__balance'>
                   <HeaderBalanceTooltipCurrency value={payload.balance} />
-                </AccentText>
+                </S.AccentText>
               </Tooltip>
-              <RegularText>/</RegularText>
+              <S.RegularText>/</S.RegularText>
               <Tooltip
                 placement={Tooltip.placements.Bottom}
                 type={Tooltip.types.Tip}
                 content={textProvider(languageCode, Texts.HeaderBalanceTooltipLimit)}
               >
-                <RegularText data-test-id='header-balance-tooltip__limit'>
+                <S.RegularText data-test-id='header-balance-tooltip__limit'>
                   <HeaderBalanceTooltipCurrency value={payload.limit} />
-                </RegularText>
+                </S.RegularText>
               </Tooltip>
-            </Balance>
+            </S.Balance>
           </HeaderBalanceTooltipFoldable>
         </>
       );
@@ -132,24 +144,28 @@ export function HeaderBalanceTooltip({
   }
 
   return (
-    <Wrapper onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} {...extractSupportProps(rest)}>
-      {isRechargeButtonVisible && (
-        <RechargeButton>
-          <Tooltip
-            placement={Tooltip.placements.Bottom}
-            type={Tooltip.types.Tip}
-            content={textProvider(languageCode, Texts.HeaderBalanceTooltipRecharge)}
-          >
-            <ButtonIcon
-              variant={ButtonIcon.variants.Color}
-              icon={<CircleAddInterfaceSVG />}
-              onClick={handleRechargeButtonClick}
-              data-test-id='header-balance-tooltip__recharge-button'
-            />
-          </Tooltip>
-        </RechargeButton>
-      )}
-      {renderModeEntry(getModeEntry())}
-    </Wrapper>
+    <S.Wrapper onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} {...extractSupportProps(rest)}>
+      <HeaderBalanceTooltipFloating active={isFoldableOpen}>
+        <S.Frame>
+          {isRechargeButtonVisible && (
+            <S.RechargeButton>
+              <Tooltip
+                placement={Tooltip.placements.Bottom}
+                type={Tooltip.types.Tip}
+                content={textProvider(languageCode, Texts.HeaderBalanceTooltipRecharge)}
+              >
+                <ButtonIcon
+                  variant={ButtonIcon.variants.Color}
+                  icon={<CircleAddInterfaceSVG />}
+                  onClick={handleRechargeButtonClick}
+                  data-test-id='header-balance-tooltip__recharge-button'
+                />
+              </Tooltip>
+            </S.RechargeButton>
+          )}
+          {renderModeEntry(getModeEntry())}
+        </S.Frame>
+      </HeaderBalanceTooltipFloating>
+    </S.Wrapper>
   );
 }
