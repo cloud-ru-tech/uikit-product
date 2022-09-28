@@ -63,11 +63,11 @@ const Template: Story<
     showExport: boolean;
   }
 > = ({ rowsAmount, pinnedRowsAmount, showDelete, showFilter, showExport, ...args }) => {
-  const [data, setData] = useState<DataModel[]>(generateRows(rowsAmount));
-  const [pinnedData, setPinnedData] = useState<DataModel[]>(generateRows(pinnedRowsAmount));
+  const [data, setData] = useState<DataModel[]>([]);
+  const [pinnedData, setPinnedData] = useState<DataModel[]>([]);
 
   const debSetData = useMemo(() => debounce(setData, 500), []);
-  const debSetPinnedData = useMemo(() => debounce(setPinnedData, 500), []);
+  const debSetPinnedData = useMemo(() => debounce(setPinnedData, 450), []);
   const [filterValue, setFilterValue] = useState<TFilterValueType[]>([]);
   const rowPassFilter = useCallback(
     (data: DataModel) => {
