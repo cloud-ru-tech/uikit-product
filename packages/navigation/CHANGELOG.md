@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.16.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.15.1...@sbercloud/uikit-product-navigation@0.16.0) (2022-09-28)
+
+
+### Bug Fixes
+
+* **FF-992:** add `z-index: 1` to `HeaderProjectSelector` overlay ([2a53c9a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2a53c9add11c94650fa167f193bf592eb9982b0a))
+* **FF-992:** provide support props from `HeaderToolbarProfileMenu` to `DropdownMenu` ([03e5fa6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03e5fa64f568b1400424d351df4dc05fd6361fbf))
+
+
+### Features
+
+* **FF-992:** render `HeaderBalanceTooltip` as floating element when foldable is open ([c32ff97](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c32ff97bd04e907f8f85c08515ab71d6da95461d))
+
+
+
+
+
 ## [0.15.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.15.0...@sbercloud/uikit-product-navigation@0.15.1) (2022-09-27)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-navigation
