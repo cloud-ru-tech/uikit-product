@@ -4,6 +4,7 @@ import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
 import {
   ColumnResizedEvent,
+  Events,
   FilterChangedEvent,
   GridApi,
   GridReadyEvent,
@@ -38,6 +39,7 @@ function StylelessTablePrivate({
   ...tableProps
 }: TablePrivateProps) {
   const [gridApi, setGridApi] = useState<GridApi>();
+  const [displayedRowsCount, setDisplayedRowsCount] = useState<number | undefined>();
   const [resizedColumns, setResizedColumns] = useState<{ [key: string]: string }>({});
 
   const handleGridReady = (params: GridReadyEvent) => {
@@ -58,10 +60,20 @@ function StylelessTablePrivate({
       colId && setResizedColumns(cols => ({ ...cols, [colId]: colId }));
     }, 200);
 
-    gridApi.addEventListener('columnResized', onColumnResizedHandler);
+    gridApi.addEventListener(Events.EVENT_COLUMN_RESIZED, onColumnResizedHandler);
 
-    return () => gridApi.removeEventListener('columnResized', onColumnResizedHandler);
+    return () => gridApi.removeEventListener(Events.EVENT_COLUMN_RESIZED, onColumnResizedHandler);
   }, [gridApi, resizedColumns]);
+
+  useEffect(() => {
+    if (!gridApi) return;
+
+    const onModelUpdatedHandler = () => setDisplayedRowsCount(gridApi.getDisplayedRowCount());
+
+    gridApi.addEventListener(Events.EVENT_MODEL_UPDATED, onModelUpdatedHandler);
+
+    return () => gridApi.removeEventListener(Events.EVENT_MODEL_UPDATED, onModelUpdatedHandler);
+  }, [gridApi]);
 
   const colDefs = useMemo(() => {
     let colDefs: ColumnDefinition[] = columnDefs;
@@ -94,11 +106,8 @@ function StylelessTablePrivate({
     gridOptions?.onFilterChanged?.(params);
   };
 
-  const hasOnlyPinnedData = Boolean(
-    pinnedTopRowData?.length && (rowData?.length === 0 || !gridApi?.getDisplayedRowCount()),
-  );
-
-  const showOverlay = !Boolean(gridApi?.getDisplayedRowCount() || pinnedTopRowData?.length);
+  const hasOnlyPinnedData = Boolean(pinnedTopRowData?.length && (rowData?.length === 0 || !displayedRowsCount));
+  const showOverlay = !Boolean(displayedRowsCount || pinnedTopRowData?.length);
 
   return (
     <div
