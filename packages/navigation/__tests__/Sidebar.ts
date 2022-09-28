@@ -143,8 +143,8 @@ describe('[Navigation]: Sidebar', () => {
     getItemById(id).parent().trigger('mousemove');
   }
 
-  function closeHoverMenu(id: string) {
-    getItemById(id).parent().trigger('mouseleave');
+  function closeHoverMenu() {
+    cy.get('body').click();
   }
 
   function expectItemToBeActive(id: string, isCollapsed = false) {
@@ -335,7 +335,7 @@ describe('[Navigation]: Sidebar', () => {
       const verifyItem = (id: string, innerChecker: () => void) => {
         openHoverMenu(id);
         getHoverMenuItemById(id).within(innerChecker);
-        closeHoverMenu(id);
+        closeHoverMenu();
         getHoverMenu().should('not.exist');
       };
 

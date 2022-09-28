@@ -80,7 +80,7 @@ export const Content = styled.div`
   }
 
   &[data-collapsed] {
-    row-gap: 0;
+    row-gap: 4px;
   }
 `;
 

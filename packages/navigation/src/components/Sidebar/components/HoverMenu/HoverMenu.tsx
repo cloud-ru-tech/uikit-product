@@ -42,7 +42,7 @@ export function HoverMenu({ children, item }: HoverMenuProps) {
     middleware: [offset({ mainAxis: 12, alignmentAxis: -8 }), shift(), arrow({ element: arrowRef })],
   });
   const { getReferenceProps, getFloatingProps } = useInteractions([
-    useHover(context, { restMs: 100, handleClose: safePolygon({ buffer: 0 }) }),
+    useHover(context, { restMs: 100, handleClose: safePolygon({ buffer: 1 }) }),
     useDismiss(context, { referencePointerDown: shouldCloseOnReferenceClick }),
   ]);
 
