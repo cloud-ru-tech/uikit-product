@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.8.29...@sbercloud/uikit-product-charts@0.9.0) (2022-09-28)
+
+
+### Features
+
+* **FF-950:** introduce bagel chart component ([1ec8bf9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ec8bf9857b24f662dbb4526f2b77f5ea31f5674))
+
+
+
+
+
 ## [0.8.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.8.28...@sbercloud/uikit-product-charts@0.8.29) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-charts
