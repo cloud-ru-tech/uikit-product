@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.17.0...@sbercloud/uikit-product-navigation@0.17.1) (2022-09-29)
+
+
+### Bug Fixes
+
+* **FF-1050:** hover menu is not closed when moving cursor through scrollbar ([950db2f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/950db2f654dfab01f49b50c575ed897dc5eaf687))
+
+
+
+
+
 # [0.17.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.16.0...@sbercloud/uikit-product-navigation@0.17.0) (2022-09-29)
 
 
