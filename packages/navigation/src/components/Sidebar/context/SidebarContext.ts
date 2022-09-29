@@ -8,6 +8,7 @@ type SidebarContextProps = {
   currentLevel: number;
   previousLevel: number;
   search: string;
+  isSearchDirty: boolean;
   setSearch(value: string): void;
   isSearchShown: boolean;
   openSearch(): void;
@@ -24,6 +25,7 @@ export const SIDEBAR_CONTEXT_STUB: SidebarContextProps = {
   previousLevel: 0,
   levels: [],
   search: '',
+  isSearchDirty: false,
   setSearch() {},
   isSearchShown: false,
   openSearch() {},

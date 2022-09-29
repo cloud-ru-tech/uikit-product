@@ -15,10 +15,10 @@ type SidebarFooterProps = {
 };
 
 export function SidebarFooter({ items }: SidebarFooterProps) {
-  const { isSearchShown, isCollapsed, collapse, uncollapse } = useSidebarContext();
+  const { isSearchDirty, isCollapsed, collapse, uncollapse } = useSidebarContext();
   const { languageCode } = useLanguage();
 
-  if (isSearchShown) return null;
+  if (isSearchDirty) return null;
 
   return (
     <S.Footer>

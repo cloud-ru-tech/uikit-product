@@ -9,6 +9,7 @@ export const COLORS = {
   border: '--color__navigation__sidebar__border',
   heading: '--color__navigation__sidebar__heading',
   listFading: '--color__navigation__sidebar__list-fading',
+  noDataLabel: '--color__navigation__sidebar__no-data__text',
 };
 
 export const PURPLE_THEME = css`
@@ -18,6 +19,7 @@ export const PURPLE_THEME = css`
       ${COLORS.heading}: var(${GREY[200]});
       ${COLORS.border}: var(${BLACK_ALFA[8]});
       ${COLORS.listFading}: linear-gradient(180deg, rgba(244, 244, 245, 0) 0%, var(${BLUE_GREY[5]}) 100%);
+      ${COLORS.noDataLabel}: var(${GREY[350]});
     }
   }
 `;
@@ -29,6 +31,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.heading}: var(${GREY[700]});
       ${COLORS.border}: var(${WHITE_ALFA[16]});
       ${COLORS.listFading}: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, var(${GREY[900]}) 100%);
+      ${COLORS.noDataLabel}: var(${WHITE_ALFA[48]});
     }
   }
 `;
@@ -40,6 +43,7 @@ export const GREEN_THEME = css`
       ${COLORS.heading}: var(${GREY[200]});
       ${COLORS.border}: var(${BLACK_ALFA[8]});
       ${COLORS.listFading}: linear-gradient(180deg, rgba(244, 244, 245, 0) 0%, var(${BLUE_GREY[5]}) 100%);
+      ${COLORS.noDataLabel}: var(${GREY[350]});
     }
   }
 `;
@@ -51,6 +55,7 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.heading}: var(${GREY[700]});
       ${COLORS.border}: var(${WHITE_ALFA[16]});
       ${COLORS.listFading}: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, var(${GREY[900]}) 100%);
+      ${COLORS.noDataLabel}: var(${WHITE_ALFA[48]});
     }
   }
 `;

@@ -86,6 +86,7 @@ export function SidebarContextProvider({
         currentLevel,
         previousLevel: previousLevelRef.current,
         search,
+        isSearchDirty: Boolean(search.length),
         setSearch,
         isSearchShown,
         openSearch,

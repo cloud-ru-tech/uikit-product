@@ -16,11 +16,10 @@ type SidebarAccordionProps = {
 };
 
 export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0, isMobile }: SidebarAccordionProps) {
-  const { handleItemClick, isSearchShown, active } = useSidebarContext();
+  const { handleItemClick, active } = useSidebarContext();
   const isAccordion = isItemAccordion(item, isMobile);
-  const nestedActive = useNestedActive(item, isMobile);
 
-  const shouldBeOpen = nestedActive && !isSearchShown;
+  const shouldBeOpen = useNestedActive(item, isMobile);
   const [isOpen, setOpen] = useState(shouldBeOpen);
   const [maxHeight, setMaxHeight] = useState<number | undefined>(!isOpen ? 0 : undefined);
   const accordionRef = useRef<HTMLDivElement>(null);

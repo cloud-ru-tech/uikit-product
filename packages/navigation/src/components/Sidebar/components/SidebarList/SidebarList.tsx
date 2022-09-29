@@ -2,7 +2,9 @@ import throttle from 'lodash.throttle';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { Scroll } from '@sbercloud/uikit-product-scroll';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
+import { textProvider, Texts } from '../../../../helpers';
 import { useSidebarContext } from '../../context';
 import { filterBySearch, isItemAccordion } from '../../helpers';
 import { SidebarItemProps, SidebarItemsGroup } from '../../types';
@@ -18,7 +20,8 @@ type SidebarListProps = {
 };
 
 export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
-  const { handleItemClick, currentLevel, search, isCollapsed } = useSidebarContext();
+  const { handleItemClick, currentLevel, search, isSearchDirty, isCollapsed } = useSidebarContext();
+  const { languageCode } = useLanguage();
 
   const scrollableRef = useRef<HTMLElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -63,7 +66,7 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
     };
   }, [isFooter, updateFadingVisibility]);
 
-  const showSearchResults = currentLevel === levelIndex && Boolean(search.length);
+  const showSearchResults = currentLevel === levelIndex && isSearchDirty;
   const searchResults = useMemo(() => {
     if (showSearchResults) {
       return filterBySearch(list, search);
@@ -72,7 +75,7 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
     return [];
   }, [showSearchResults, list, search]);
 
-  const renderItems = (item: SidebarItemProps) => {
+  const renderItems = ({ item }: { item: SidebarItemProps }) => {
     if (isCollapsed) {
       return <SidebarCollapsedItem key={item.id} item={item} onClick={handleItemClick(item)} />;
     }
@@ -86,21 +89,25 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
 
   const content = (
     <S.Content data-footer={isFooter || undefined} ref={contentRef} data-collapsed={isCollapsed || undefined}>
-      {showSearchResults ? (
-        <S.ItemsList>{searchResults.map(renderItems)}</S.ItemsList>
-      ) : (
-        list.map((group, groupIndex) => (
-          <div key={group.heading || group.items[0].id}>
-            {group.heading && !isCollapsed && (
-              <S.Heading data-first-on-inner-level={(levelIndex > 0 && groupIndex === 0) || undefined}>
-                {group.heading}
-              </S.Heading>
-            )}
-
-            <S.ItemsList data-footer={isFooter}>{group.items.map(renderItems)}</S.ItemsList>
-          </div>
-        ))
+      {showSearchResults && (
+        <>
+          <S.ItemsList>{searchResults.map(item => renderItems({ item }))}</S.ItemsList>
+          {searchResults.length === 0 && (
+            <S.NoDataLabel>{textProvider(languageCode, Texts.SidebarNoDataFound)}</S.NoDataLabel>
+          )}
+        </>
       )}
+      {list.map((group, groupIndex) => (
+        <S.GroupWrapper key={group.heading || group.items[0].id} data-hidden={showSearchResults || undefined}>
+          {group.heading && !isCollapsed && (
+            <S.Heading data-first-on-inner-level={(levelIndex > 0 && groupIndex === 0) || undefined}>
+              {group.heading}
+            </S.Heading>
+          )}
+
+          <S.ItemsList data-footer={isFooter}>{group.items.map(item => renderItems({ item }))}</S.ItemsList>
+        </S.GroupWrapper>
+      ))}
     </S.Content>
   );
 

@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H5_STYLES } from '@sbercloud/uikit-product-typography';
+import { H5_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 import { COLORS } from '../../themes';
@@ -84,8 +84,21 @@ export const Content = styled.div`
   }
 `;
 
+export const GroupWrapper = styled.div`
+  &[data-hidden] {
+    display: none;
+  }
+`;
+
 export const ItemsList = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 4px;
+`;
+
+export const NoDataLabel = styled.div`
+  ${TEXT_2_STYLES};
+
+  color: var(${COLORS.noDataLabel});
+  text-align: center;
 `;

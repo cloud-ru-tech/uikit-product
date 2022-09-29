@@ -279,7 +279,7 @@ describe('[Navigation]: Sidebar', () => {
 
       getOpenSearchButton().click();
       getSearch().focus().type(searchString);
-      getItemById(itemIds.foundBySearch).click();
+      getItemById(itemIds.foundBySearch).filter(':visible').click();
 
       expectItemToBeActive(itemIds.foundBySearch);
     });
