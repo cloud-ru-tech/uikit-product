@@ -1,11 +1,12 @@
 import { cx } from '@linaria/core';
 import { ReactText, useState } from 'react';
 
-import { Tooltip } from '@sbercloud/uikit-product-tooltip';
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 
 import * as S from './styled';
 
 export type TruncatedTextWithTooltipProps = {
+  placement?: TooltipProps['placement'];
   children: ReactText;
   className?: string;
 };
@@ -18,7 +19,12 @@ const isEllipsisActive = (element: HTMLElement | null) => {
   return element.offsetWidth < element.scrollWidth;
 };
 
-export function TruncatedTextWithTooltip({ children, className, ...rest }: TruncatedTextWithTooltipProps) {
+export function TruncatedTextWithTooltip({
+  placement = Tooltip.placements.Right,
+  children,
+  className,
+  ...rest
+}: TruncatedTextWithTooltipProps) {
   const [showTooltip, setShowTooltip] = useState(false);
 
   function setText(textElement: HTMLElement | null) {
@@ -35,7 +41,7 @@ export function TruncatedTextWithTooltip({ children, className, ...rest }: Trunc
     return (
       <Tooltip
         content={children}
-        placement={Tooltip.placements.Right}
+        placement={placement}
         type={Tooltip.types.Truncated}
         classNameTrigger={cx(S.truncatedClassName, className)}
       >
@@ -46,3 +52,5 @@ export function TruncatedTextWithTooltip({ children, className, ...rest }: Trunc
 
   return spanElement;
 }
+
+TruncatedTextWithTooltip.placements = Tooltip.placements;

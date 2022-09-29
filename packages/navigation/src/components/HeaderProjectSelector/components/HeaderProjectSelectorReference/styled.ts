@@ -33,6 +33,11 @@ export const Wrapper = styled.button`
   &[data-open] {
     border-color: var(${COLORS.border.open});
   }
+
+  &[data-mobile] {
+    width: 100%;
+    justify-content: space-between;
+  }
 `;
 
 export const Selection = styled.div`
@@ -41,6 +46,10 @@ export const Selection = styled.div`
   grid-auto-columns: 150px;
   grid-auto-flow: column;
   width: inherit;
+
+  &[data-mobile] {
+    grid-auto-columns: 1fr;
+  }
 `;
 
 export const Segment = styled.div`

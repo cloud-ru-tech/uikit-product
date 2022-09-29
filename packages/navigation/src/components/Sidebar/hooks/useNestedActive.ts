@@ -4,9 +4,9 @@ import { useSidebarContext } from '../context';
 import { findActive, isItemAccordion } from '../helpers';
 import { SidebarItemProps } from '../types';
 
-export const useNestedActive = (item: SidebarItemProps): boolean => {
+export const useNestedActive = (item: SidebarItemProps, isMobile?: boolean): boolean => {
   const { active } = useSidebarContext();
-  const hasInnerChildren = isItemAccordion(item);
+  const hasInnerChildren = isItemAccordion(item, isMobile);
 
   return useMemo(() => {
     if (hasInnerChildren) {

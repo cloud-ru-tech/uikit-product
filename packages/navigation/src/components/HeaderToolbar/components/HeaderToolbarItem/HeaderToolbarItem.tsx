@@ -3,6 +3,8 @@ import { HTMLAttributeAnchorTarget, MouseEventHandler, ReactElement } from 'reac
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
+import * as S from './styled';
+
 export type HeaderToolbarItemProps = WithSupportProps<{
   className?: string;
   icon: ReactElement;
@@ -10,9 +12,28 @@ export type HeaderToolbarItemProps = WithSupportProps<{
   href?: string;
   target?: HTMLAttributeAnchorTarget;
   onClick?: MouseEventHandler<HTMLElement>;
+  isMobile?: boolean;
 }>;
 
-export function HeaderToolbarItem({ icon, title, href, target, onClick, className, ...rest }: HeaderToolbarItemProps) {
+export function HeaderToolbarItem({
+  icon,
+  title,
+  href,
+  target,
+  onClick,
+  className,
+  isMobile,
+  ...rest
+}: HeaderToolbarItemProps) {
+  if (isMobile) {
+    return (
+      <S.Link href={href} target={target} onClick={onClick}>
+        {icon}
+        {title}
+      </S.Link>
+    );
+  }
+
   return (
     <ButtonIcon
       className={className}

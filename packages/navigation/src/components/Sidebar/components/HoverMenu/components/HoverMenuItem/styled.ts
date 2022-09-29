@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { TruncatedTextWithTooltip } from '../../../../helperComponents';
+import { TruncatedTextWithTooltip } from '../../../../../../helperComponents';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 GREEN_THEME;

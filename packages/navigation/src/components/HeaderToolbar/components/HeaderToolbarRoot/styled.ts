@@ -6,4 +6,11 @@ export const Wrapper = styled.div`
   display: flex;
   grid-area: header-toolbar;
   justify-content: flex-end;
+
+  &[data-mobile] {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 8px;
+    column-gap: unset;
+  }
 `;

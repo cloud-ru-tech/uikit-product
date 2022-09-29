@@ -10,11 +10,13 @@ import * as S from './styled';
 export type HeaderProjectSelectorReferenceProps = {
   selectedProject?: string;
   selectedWorkspace?: string;
+  isMobile?: boolean;
 };
 
 export function HeaderProjectSelectorReference({
   selectedProject,
   selectedWorkspace,
+  isMobile,
 }: HeaderProjectSelectorReferenceProps) {
   const { isOpen } = useContext(FloatingContext);
   const { getProps, setElement } = useContext(ReferenceContext);
@@ -25,9 +27,10 @@ export function HeaderProjectSelectorReference({
       ref={setElement}
       data-open={isOpen || undefined}
       data-test-id='header-project-selector__reference'
+      data-mobile={isMobile || undefined}
       {...getProps()}
     >
-      <S.Selection>
+      <S.Selection data-mobile={isMobile || undefined}>
         {selectedProject && (
           <S.Segment>
             <HeaderProjectSelectorProjectLabel

@@ -12,12 +12,13 @@ type SidebarAccordionProps = {
   item: SidebarItemProps;
   onInnerToggle?(isInner?: boolean): void;
   accordionLevel: number;
+  isMobile?: boolean;
 };
 
-export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: SidebarAccordionProps) {
+export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0, isMobile }: SidebarAccordionProps) {
   const { handleItemClick, isSearchShown, active } = useSidebarContext();
-  const isAccordion = isItemAccordion(item);
-  const nestedActive = useNestedActive(item);
+  const isAccordion = isItemAccordion(item, isMobile);
+  const nestedActive = useNestedActive(item, isMobile);
 
   const shouldBeOpen = nestedActive && !isSearchShown;
   const [isOpen, setOpen] = useState(shouldBeOpen);
@@ -61,10 +62,17 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: Si
 
   return (
     <S.Accordion>
-      <SidebarItem {...item} showArrow={isAccordion} onClick={handleClick} level={accordionLevel} isOpen={isOpen} />
+      <SidebarItem
+        {...item}
+        showArrow={isAccordion}
+        onClick={handleClick}
+        level={accordionLevel}
+        isOpen={isOpen}
+        isMobile={isMobile}
+      />
 
       {item.nestedList?.length && (
-        <S.AccordionFoldable ref={accordionRef} maxHeight={isOpen ? maxHeight : 0}>
+        <S.AccordionFoldable ref={accordionRef} maxHeight={isOpen ? maxHeight : 0} data-mobile={isMobile || undefined}>
           {item.nestedList?.map(nested =>
             nested.items.map(nestedItem => (
               <SidebarAccordion
@@ -72,6 +80,7 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0 }: Si
                 onInnerToggle={toggleHeight}
                 item={nestedItem}
                 accordionLevel={accordionLevel + 1}
+                isMobile={isMobile}
               />
             )),
           )}

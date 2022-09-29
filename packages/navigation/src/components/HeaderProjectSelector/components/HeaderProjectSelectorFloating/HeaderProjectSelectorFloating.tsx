@@ -24,9 +24,10 @@ import * as S from './styled';
 export type HeaderProjectSelectorFloatingProps = {
   children: ReactNode;
   content: ReactNode;
+  isMobile?: boolean;
 };
 
-export function HeaderProjectSelectorFloating({ children, content }: HeaderProjectSelectorFloatingProps) {
+export function HeaderProjectSelectorFloating({ children, content, isMobile }: HeaderProjectSelectorFloatingProps) {
   const listRef = useRef<Array<HTMLElement | null>>([]);
   const initialFocusRef = useRef<HTMLElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -42,8 +43,8 @@ export function HeaderProjectSelectorFloating({ children, content }: HeaderProje
       offset(4),
       shift(),
       size({
-        apply({ elements }) {
-          elements.floating.style.width = `${400}px`;
+        apply({ elements, rects }) {
+          elements.floating.style.width = `${isMobile ? rects.reference.width : 400}px`;
         },
       }),
     ],

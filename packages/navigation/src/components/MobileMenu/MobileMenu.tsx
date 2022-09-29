@@ -17,6 +17,7 @@ export type MobileMenuProps = WithSupportProps<{
 
 export type MobileMenuReference = {
   toggleOpen(target: HTMLElement): void;
+  close(): void;
 };
 
 export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ children, ...rest }, ref) => {
@@ -39,6 +40,9 @@ export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ ch
     toggleOpen: (target: HTMLElement) => {
       reference(target);
       setIsMobileMenuOpen(!isMobileMenuOpen);
+    },
+    close: () => {
+      setIsMobileMenuOpen(false);
     },
   }));
 

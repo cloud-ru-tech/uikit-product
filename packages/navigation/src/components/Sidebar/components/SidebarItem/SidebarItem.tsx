@@ -12,6 +12,7 @@ type SidebarItem = SidebarItemProps & {
   level?: number;
   showArrow?: boolean;
   onClick?(e: MouseEvent): void;
+  isMobile?: boolean;
 };
 
 export function SidebarItem({
@@ -29,6 +30,7 @@ export function SidebarItem({
   isOpen,
   isHeaderItem,
   status,
+  isMobile,
 }: SidebarItem) {
   const { active } = useSidebarContext();
 
@@ -44,6 +46,7 @@ export function SidebarItem({
       data-active={isActive}
       data-no-hover={!Boolean(onClick) || undefined}
       data-test-id={`sidebar__item-${id}`}
+      data-mobile={isMobile || undefined}
     >
       <S.Content>
         <S.IconContainer>

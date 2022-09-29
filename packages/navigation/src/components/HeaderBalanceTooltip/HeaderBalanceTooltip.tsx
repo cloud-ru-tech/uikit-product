@@ -22,6 +22,7 @@ export type HeaderBalanceTooltipProps = WithSupportProps<{
   limit?: number;
   onBalanceClick?: () => void;
   onRechargeClick?: () => void;
+  isMobile?: boolean;
 }>;
 
 export function HeaderBalanceTooltip({
@@ -29,6 +30,7 @@ export function HeaderBalanceTooltip({
   limit,
   onBalanceClick,
   onRechargeClick,
+  isMobile,
   ...rest
 }: HeaderBalanceTooltipProps) {
   const { languageCode } = useLanguage();
@@ -57,6 +59,10 @@ export function HeaderBalanceTooltip({
   function getModeEntry(): ModeEntry {
     if (isLoading) {
       return [Mode.Loading];
+    }
+
+    if (isMobile) {
+      return [Mode.RegularBalance, { balance }];
     }
 
     if (limit === undefined) {

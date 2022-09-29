@@ -33,6 +33,7 @@ export type HeaderProjectSelectorProps = WithSupportProps<{
   onChange(value: string): void;
   onCreate?(): void;
   onEdit?(value: string): void;
+  isMobile?: boolean;
 }>;
 
 export function HeaderProjectSelector({
@@ -41,6 +42,7 @@ export function HeaderProjectSelector({
   onChange,
   onCreate,
   onEdit,
+  isMobile,
   ...rest
 }: HeaderProjectSelectorProps) {
   const [search, setSearch] = useState('');
@@ -136,9 +138,10 @@ export function HeaderProjectSelector({
   });
 
   return (
-    <S.Wrapper {...extractSupportProps(rest)}>
+    <S.Wrapper data-mobile={isMobile || undefined} {...extractSupportProps(rest)}>
       <SelectionContext.Provider value={{ selectedValue: value, selectedIndex, setSelectedValue: onChange }}>
         <HeaderProjectSelectorFloating
+          isMobile={isMobile}
           content={
             <HeaderProjectSelectorContent search={search} onSearchChange={setSearch}>
               {content}
@@ -148,6 +151,7 @@ export function HeaderProjectSelector({
           <HeaderProjectSelectorReference
             selectedProject={selectedProject?.label}
             selectedWorkspace={selectedWorkspace?.label}
+            isMobile={isMobile}
           />
         </HeaderProjectSelectorFloating>
       </SelectionContext.Provider>

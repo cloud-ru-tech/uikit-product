@@ -17,4 +17,12 @@ export const AccordionFoldable = styled.div<{ maxHeight: number | undefined }>`
   > ${Accordion}:first-child {
     margin-top: 4px;
   }
+
+  &[data-mobile] {
+    row-gap: 8px;
+
+    > ${Accordion}:first-child {
+      margin-top: 8px;
+    }
+  }
 `;
