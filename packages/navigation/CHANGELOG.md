@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.17.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.17.1...@sbercloud/uikit-product-navigation@0.17.2) (2022-09-29)
+
+
+### Bug Fixes
+
+* **FF-1052:** search behavior adjustments ([3fe746d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3fe746d4eaf3f29b54a6a9feb91801aff4b3f4c4))
+
+
+
+
+
 ## [0.17.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.17.0...@sbercloud/uikit-product-navigation@0.17.1) (2022-09-29)
 
 
