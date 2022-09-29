@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.18.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.17.2...@sbercloud/uikit-product-navigation@0.18.0) (2022-09-29)
+
+
+### Features
+
+* **FF-1054:** add no data message and create button to project selector search state ([74cee6b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74cee6bfbfe5f2394d50eeb890c8144e3b87d590))
+
+
+
+
+
 ## [0.17.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.17.1...@sbercloud/uikit-product-navigation@0.17.2) (2022-09-29)
 
 
