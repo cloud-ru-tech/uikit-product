@@ -1,8 +1,12 @@
-import { ReactNode } from 'react';
+import { Children, ReactNode } from 'react';
 
 import { Item, ProjectGroup, ProjectOption, WorkspaceGroup, WorkspaceOption } from './types';
 
 type Option = ProjectOption | WorkspaceOption;
+
+type CreateButtonParams = {
+  renderCreateButton: () => ReactNode;
+};
 
 type OptionListParams = {
   children: ReactNode;
@@ -22,12 +26,13 @@ type OptionListItemParams = {
 };
 
 type Renderer = {
-  renderOptionList(params: OptionListParams): ReactNode;
-  renderProjectOptionList(params: OptionListParams): ReactNode;
-  renderWorkspaceOptionList(params: OptionListParams): ReactNode;
+  renderOptionList(params: OptionListParams & CreateButtonParams): ReactNode;
   renderGroupListItem(params: GroupListItemParams): ReactNode;
   renderProjectOptionListItem(params: OptionListItemParams): ReactNode;
   renderWorkspaceOptionListItem(params: OptionListItemParams): ReactNode;
+  renderCreateProjectButton(): ReactNode;
+  renderCreateWorkspaceButton(): ReactNode;
+  renderNoData(params: CreateButtonParams): ReactNode;
 };
 
 function isProjectGroup(item: Item): item is ProjectGroup {
@@ -78,20 +83,26 @@ function renderRegular(items: Item[], indexByOption: Map<Option, number>, render
   }
 
   function render(items: Item[]) {
+    if (items.length === 0) {
+      return renderer.renderNoData({ renderCreateButton: renderer.renderCreateProjectButton });
+    }
+
     if (items.every(isProjectGroup)) {
-      return renderer.renderProjectOptionList(
-        isFlat()
-          ? { children: items.flatMap(item => item.projects.map(renderProjectOption)) }
-          : { children: items.map(renderProjectGroup) },
-      );
+      return renderer.renderOptionList({
+        children: isFlat()
+          ? items.flatMap(item => item.projects.map(renderProjectOption))
+          : items.map(renderProjectGroup),
+        renderCreateButton: renderer.renderCreateProjectButton,
+      });
     }
 
     if (items.every(isWorkspaceGroup)) {
-      return renderer.renderWorkspaceOptionList(
-        isFlat()
-          ? { children: items.flatMap(item => item.workspaces.map(renderWorkspaceOption)) }
-          : { children: items.map(renderWorkspaceGroup) },
-      );
+      return renderer.renderOptionList({
+        children: isFlat()
+          ? items.flatMap(item => item.workspaces.map(renderWorkspaceOption))
+          : items.map(renderWorkspaceGroup),
+        renderCreateButton: renderer.renderCreateWorkspaceButton,
+      });
     }
 
     return null;
@@ -139,7 +150,23 @@ function renderSearch(items: Item[], indexByOption: Map<Option, number>, rendere
     return null;
   }
 
-  return renderer.renderOptionList({ children: items.map(render) });
+  function renderCreateButton() {
+    if (items.every(isProjectGroup)) {
+      return renderer.renderCreateProjectButton();
+    }
+
+    if (items.every(isWorkspaceGroup)) {
+      return renderer.renderCreateWorkspaceButton();
+    }
+
+    return null;
+  }
+
+  const children = items.flatMap(render).filter(item => Boolean(item));
+
+  return Children.count(children) === 0
+    ? renderer.renderNoData({ renderCreateButton })
+    : renderer.renderOptionList({ children, renderCreateButton });
 }
 
 export function useProjects(items: Item[]) {

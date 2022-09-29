@@ -92,9 +92,7 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
       {showSearchResults && (
         <>
           <S.ItemsList>{searchResults.map(item => renderItems({ item }))}</S.ItemsList>
-          {searchResults.length === 0 && (
-            <S.NoDataLabel>{textProvider(languageCode, Texts.SidebarNoDataFound)}</S.NoDataLabel>
-          )}
+          {searchResults.length === 0 && <S.NoDataLabel>{textProvider(languageCode, Texts.NoDataFound)}</S.NoDataLabel>}
         </>
       )}
       {list.map((group, groupIndex) => (

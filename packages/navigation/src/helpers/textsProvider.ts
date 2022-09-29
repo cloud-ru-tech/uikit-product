@@ -12,13 +12,14 @@ export enum Texts {
   SidebarBackToPlatforms = 'sidebar-back-to-platforms-button',
   SidebarBackButton = 'sidebar-back-button',
   SidebarCloseSearch = 'sidebar-close-search',
-  SidebarNoDataFound = 'sidebar-no-data-found',
   SidebarItemNew = 'sidebar-item-new',
   SidebarCollapseMenu = 'sidebar-collapse-menu',
   SidebarUncollapseMenu = 'sidebar-uncollapse-menu',
 
   SidebarStatusActive = 'sidebar-status-active',
   SidebarStatusSuspended = 'sidebar-status-suspended',
+
+  NoDataFound = 'no-data-found',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -34,13 +35,14 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SidebarBackToPlatforms]: 'ко всем платформам',
     [Texts.SidebarBackButton]: 'назад',
     [Texts.SidebarCloseSearch]: 'закрыть поиск',
-    [Texts.SidebarNoDataFound]: 'Ничего не найдено',
     [Texts.SidebarItemNew]: 'новый',
     [Texts.SidebarCollapseMenu]: 'Свернуть меню',
     [Texts.SidebarUncollapseMenu]: 'Развернуть меню',
 
     [Texts.SidebarStatusActive]: 'Активно',
     [Texts.SidebarStatusSuspended]: 'Приостановлено',
+
+    [Texts.NoDataFound]: 'Ничего не найдено',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderBalanceTooltipBalance]: 'Balance',
@@ -54,13 +56,14 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SidebarBackToPlatforms]: 'to all platforms',
     [Texts.SidebarBackButton]: 'to level back',
     [Texts.SidebarCloseSearch]: 'close search',
-    [Texts.SidebarNoDataFound]: 'Nothing was found',
     [Texts.SidebarItemNew]: 'new',
     [Texts.SidebarCollapseMenu]: 'Hide menu',
     [Texts.SidebarUncollapseMenu]: 'Show menu',
 
     [Texts.SidebarStatusActive]: 'Active',
     [Texts.SidebarStatusSuspended]: 'Suspended',
+
+    [Texts.NoDataFound]: 'Nothing found',
   },
 };
 

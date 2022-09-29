@@ -44,11 +44,13 @@ export const Selection = styled.div`
   column-gap: inherit;
   display: grid;
   grid-auto-columns: 150px;
+  min-width: 150px;
   grid-auto-flow: column;
   width: inherit;
 
   &[data-mobile] {
     grid-auto-columns: 1fr;
+    min-width: unset;
   }
 `;
 

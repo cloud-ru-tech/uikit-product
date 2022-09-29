@@ -53,45 +53,36 @@ export function HeaderProjectSelector({
   const selectedProject = useSelectedProject(projects, value);
   const selectedWorkspace = useSelectedWorkspace(workspaces, value);
   const selectedIndex = useSelectedIndex(indexByOption, value);
+
+  const renderCreateProjectButton = () =>
+    onCreate && (
+      <HeaderProjectSelectorAction
+        icon={<CircleAddInterfaceSVG />}
+        text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateProject)}
+        onClick={onCreate}
+      />
+    );
+
+  const renderCreateWorkspaceButton = () =>
+    onCreate && (
+      <HeaderProjectSelectorAction
+        icon={<CircleAddInterfaceSVG />}
+        text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateWorkspace)}
+        onClick={onCreate}
+      />
+    );
+
   const content = useContent(items, search, indexByOption, {
-    renderOptionList({ children }) {
-      return (
-        <Scroll flexbox>
-          <S.List>{children}</S.List>
-        </Scroll>
-      );
-    },
+    renderCreateProjectButton,
+    renderCreateWorkspaceButton,
 
-    renderProjectOptionList({ children }) {
+    renderOptionList({ children, renderCreateButton }) {
       return (
         <>
           <Scroll flexbox>
             <S.List>{children}</S.List>
           </Scroll>
-          {onCreate && (
-            <HeaderProjectSelectorAction
-              icon={<CircleAddInterfaceSVG />}
-              text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateProject)}
-              onClick={onCreate}
-            />
-          )}
-        </>
-      );
-    },
-
-    renderWorkspaceOptionList({ children }) {
-      return (
-        <>
-          <Scroll flexbox>
-            <S.List>{children}</S.List>
-          </Scroll>
-          {onCreate && (
-            <HeaderProjectSelectorAction
-              icon={<CircleAddInterfaceSVG />}
-              text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateWorkspace)}
-              onClick={onCreate}
-            />
-          )}
+          {renderCreateButton()}
         </>
       );
     },
@@ -133,6 +124,18 @@ export function HeaderProjectSelector({
             data-test-id='header-project-selector__workspace-option-list-item-label'
           />
         </HeaderProjectSelectorOptionListItem>
+      );
+    },
+
+    renderNoData({ renderCreateButton }) {
+      return (
+        <>
+          <S.NoDataWrapper data-test-id='header-project-selector__no-data'>
+            <S.SearchIcon />
+            <S.NoDataLabel>{textProvider(languageCode, Texts.NoDataFound)}</S.NoDataLabel>
+          </S.NoDataWrapper>
+          {renderCreateButton()}
+        </>
       );
     },
   });

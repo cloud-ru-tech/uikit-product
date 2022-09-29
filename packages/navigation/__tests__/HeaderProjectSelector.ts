@@ -56,6 +56,10 @@ describe('[Navigation]: Header Project Selector', () => {
     return cy.getByDataTestId('header-project-selector__selected-project');
   }
 
+  function getNoDataWrapper() {
+    return cy.getByDataTestId('header-project-selector__no-data');
+  }
+
   function getSelectedWorkspace() {
     return cy.getByDataTestId('header-project-selector__selected-workspace');
   }
@@ -115,6 +119,13 @@ describe('[Navigation]: Header Project Selector', () => {
       getOutside().click();
       getReference().click();
       getSearch().should('be.empty');
+    });
+
+    it('shows no data state when nothing found', () => {
+      getReference().click();
+      getSearch().focus().type('zooo');
+      getNoDataWrapper().should('be.visible');
+      getAction().should('be.visible');
     });
 
     it('goes to last option when typing up arrow', () => {
