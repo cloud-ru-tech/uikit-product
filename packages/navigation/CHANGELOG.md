@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.17.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.16.0...@sbercloud/uikit-product-navigation@0.17.0) (2022-09-29)
+
+
+### Features
+
+* **FF-989:** mobile adaptive ([04bd8eb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/04bd8eb0210a82f16e695e38678a3b0b50ca9970))
+
+
+
+
+
 # [0.16.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.15.1...@sbercloud/uikit-product-navigation@0.16.0) (2022-09-28)
 
 
