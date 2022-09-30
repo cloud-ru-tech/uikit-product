@@ -102,12 +102,6 @@ export function TableWithRowDetailController<T>({
     if (currentPage >= newPageCount) {
       setCurrentPage(Math.max(0, newPageCount - 1));
     }
-
-    if (totalPages === 0) {
-      gridApi.showNoRowsOverlay();
-    } else {
-      gridApi.hideOverlay();
-    }
   }, [gridApi, pageCount, pageSize, data.length, currentPage]);
 
   useEffect(() => {
@@ -120,7 +114,7 @@ export function TableWithRowDetailController<T>({
       selectedNode.setExpanded(true);
       selectedNode.setSelected(true);
     });
-  }, [gridApi]);
+  }, [gridApi, selectedRowNodeId]);
 
   const pageChangeHandler = useCallback(
     (currentPage: number) => {
@@ -145,7 +139,7 @@ export function TableWithRowDetailController<T>({
           showPagination,
         }
       : undefined;
-  }, [gridApi, pageSize, data?.length, pageCount, currentPage, pageChangeHandler]);
+  }, [gridApi, pageSize, pageCount, currentPage, pageChangeHandler]);
 
   const onSearchCallback: Types.OnSearchCallback = useCallback(
     value => {

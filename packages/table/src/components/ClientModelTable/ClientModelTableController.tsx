@@ -1,4 +1,3 @@
-import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { AgGridTypes, TablePrivateProps } from '@sbercloud/uikit-product-table-private';
@@ -59,20 +58,6 @@ export function ClientModelTableController<T>({
     setGridApi(gridEv.api);
   }, []);
 
-  const onColumnChangedHandler = useCallback(
-    debounce(() => {
-      if (!gridApi) return;
-
-      const totalPages = gridApi.paginationGetTotalPages();
-      if (totalPages === 0) {
-        gridApi.showNoRowsOverlay();
-      } else {
-        gridApi.hideOverlay();
-      }
-    }, 100),
-    [gridApi],
-  );
-
   useEffect(() => {
     if (searchValue || bulkActions?.filter?.value?.length) {
       setIsSearching(true);
@@ -81,61 +66,28 @@ export function ClientModelTableController<T>({
     setIsSearching(false);
   }, [searchValue, bulkActions?.filter?.value]);
 
-  useEffect(() => {
-    if (!gridApi) return;
-    gridApi.addEventListener('columnEverythingChanged', onColumnChangedHandler);
-    return () => gridApi.removeEventListener('columnEverythingChanged', onColumnChangedHandler);
-  }, [onColumnChangedHandler, gridApi]);
-
-  const onFilterChangeHandler = useCallback(
-    debounce(() => {
-      if (!gridApi) return;
-      const totalPages = gridApi.paginationGetTotalPages();
-      if (totalPages === 0) {
-        gridApi.showNoRowsOverlay();
-      } else {
-        gridApi.hideOverlay();
-      }
-    }, 50),
-    [gridApi],
-  );
-
-  useEffect(() => {
-    if (!gridApi) return;
-    gridApi.addEventListener('filterChanged', onFilterChangeHandler);
-    return () => gridApi.removeEventListener('filterChanged', onFilterChangeHandler);
-  }, [gridApi, onFilterChangeHandler]);
-
   const [pageCount, setPageCount] = useState(1);
   const [currentPage, setCurrentPage] = useState(0);
 
-  const onDataChangedHandler = useCallback(
-    debounce(() => {
-      if (!gridApi) return;
+  const onDataChangedHandler = useCallback(() => {
+    if (!gridApi) return;
 
-      const totalPages = gridApi.paginationGetTotalPages();
+    const totalPages = gridApi.paginationGetTotalPages();
 
-      if (totalPages !== pageCount) {
-        setPageCount(totalPages);
-      }
-      const newPageCount = Math.min(pageCount, totalPages);
-      if (currentPage >= newPageCount) {
-        setCurrentPage(Math.max(0, newPageCount - 1));
-      }
-
-      if (totalPages === 0) {
-        gridApi.showNoRowsOverlay();
-      } else {
-        gridApi.hideOverlay();
-      }
-    }, 200),
-    [gridApi, pageCount, currentPage, data.length],
-  );
+    if (totalPages !== pageCount) {
+      setPageCount(totalPages);
+    }
+    const newPageCount = Math.min(pageCount, totalPages);
+    if (currentPage >= newPageCount) {
+      setCurrentPage(Math.max(0, newPageCount - 1));
+    }
+  }, [gridApi, pageCount, currentPage]);
 
   useEffect(() => {
     if (!gridApi) return;
-    gridApi.addEventListener('rowDataUpdated', onDataChangedHandler);
-    return () => gridApi.removeEventListener('rowDataUpdated', onDataChangedHandler);
+
+    gridApi.addEventListener(AgGridTypes.Events.EVENT_ROW_DATA_UPDATED, onDataChangedHandler);
+    return () => gridApi.removeEventListener(AgGridTypes.Events.EVENT_ROW_DATA_UPDATED, onDataChangedHandler);
   }, [gridApi, onDataChangedHandler]);
 
   useEffect(() => {
@@ -146,19 +98,16 @@ export function ClientModelTableController<T>({
 
   const [selectedRows, setSelectedRows] = useState<ClientModelTableControllerProps<T>['data']>([]);
 
-  const onRowSelectHandler = useCallback(
-    debounce(() => {
-      if (!gridApi) return;
+  const onRowSelectHandler = useCallback(() => {
+    if (!gridApi) return;
 
-      setSelectedRows(gridApi.getSelectedRows());
-    }, 100),
-    [gridApi],
-  );
+    setSelectedRows(gridApi.getSelectedRows());
+  }, [gridApi]);
 
   useEffect(() => {
     if (!gridApi) return;
-    gridApi.addEventListener('rowSelected', onRowSelectHandler);
-    return () => gridApi.removeEventListener('rowSelected', onRowSelectHandler);
+    gridApi.addEventListener(AgGridTypes.Events.EVENT_ROW_SELECTED, onRowSelectHandler);
+    return () => gridApi.removeEventListener(AgGridTypes.Events.EVENT_ROW_SELECTED, onRowSelectHandler);
   }, [gridApi, onRowSelectHandler]);
 
   const [deleteDialogOpened, setDeleteDialogOpened] = useState(false);
@@ -226,7 +175,7 @@ export function ClientModelTableController<T>({
           showPagination,
         }
       : undefined;
-  }, [gridApi, pageSize, data?.length, pageCount, currentPage, pageChangeHandler]);
+  }, [gridApi, pageSize, pageCount, currentPage, pageChangeHandler]);
 
   const useRowSelection = Boolean(advancedProps?.rowSelection || deleteProps);
 

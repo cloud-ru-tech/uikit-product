@@ -107,7 +107,15 @@ function StylelessTablePrivate({
   };
 
   const hasOnlyPinnedData = Boolean(pinnedTopRowData?.length && (rowData?.length === 0 || !displayedRowsCount));
-  const showOverlay = !Boolean(displayedRowsCount || pinnedTopRowData?.length);
+  const [showOverlay, setShowOverlay] = useState(!Boolean(displayedRowsCount || pinnedTopRowData?.length));
+
+  useEffect(() => {
+    const newValue = !Boolean(displayedRowsCount || pinnedTopRowData?.length);
+    if (showOverlay !== newValue) {
+      setShowOverlay(newValue);
+      newValue ? gridApi?.showNoRowsOverlay() : gridApi?.hideOverlay();
+    }
+  }, [displayedRowsCount, gridApi, showOverlay, pinnedTopRowData?.length]);
 
   return (
     <div

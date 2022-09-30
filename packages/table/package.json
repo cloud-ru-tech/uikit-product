@@ -36,10 +36,6 @@
     "@sbercloud/uikit-product-table-private": "0.18.4",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-toolbar": "0.16.57",
-    "@sbercloud/uikit-product-utils": "3.0.4",
-    "lodash.debounce": "4.0.8"
-  },
-  "devDependencies": {
-    "@types/lodash.debounce": "4.0.6"
+    "@sbercloud/uikit-product-utils": "3.0.4"
   }
 }
