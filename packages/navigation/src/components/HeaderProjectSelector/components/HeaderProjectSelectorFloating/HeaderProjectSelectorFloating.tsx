@@ -1,5 +1,6 @@
 import {
   autoUpdate,
+  flip,
   FloatingFocusManager,
   FloatingPortal,
   offset,
@@ -42,9 +43,11 @@ export function HeaderProjectSelectorFloating({ children, content, isMobile }: H
     middleware: [
       offset(4),
       shift(),
+      flip(),
       size({
-        apply({ elements, rects }) {
+        apply({ elements, rects, availableHeight }) {
           elements.floating.style.width = `${isMobile ? rects.reference.width : 400}px`;
+          elements.floating.style.maxHeight = `${Math.min(availableHeight, 250)}px`;
         },
       }),
     ],

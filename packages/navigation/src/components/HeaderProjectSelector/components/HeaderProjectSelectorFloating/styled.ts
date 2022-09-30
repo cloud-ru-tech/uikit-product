@@ -17,7 +17,6 @@ export const Wrapper = styled.div<{ strategy: string; x: number; y: number }>`
   display: flex;
   flex-direction: column;
   left: ${props => props.x}px;
-  max-height: 250px;
   outline: none;
   position: ${props => props.strategy};
   top: ${props => props.y}px;
