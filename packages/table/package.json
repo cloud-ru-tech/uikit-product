@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-table",
   "title": "React Table",
-  "version": "0.45.4",
+  "version": "0.45.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,7 +33,7 @@
     "@sbercloud/uikit-product-icons": "5.3.1",
     "@sbercloud/uikit-product-modal": "0.17.5",
     "@sbercloud/uikit-product-pagination-private": "1.2.25",
-    "@sbercloud/uikit-product-table-private": "0.18.3",
+    "@sbercloud/uikit-product-table-private": "0.18.4",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-toolbar": "0.16.57",
     "@sbercloud/uikit-product-utils": "3.0.4",
