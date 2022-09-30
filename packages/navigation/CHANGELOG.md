@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.19.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.18.0...@sbercloud/uikit-product-navigation@0.19.0) (2022-09-30)
+
+
+### Bug Fixes
+
+* **FF-1061:** flip `HeaderProjectSelector` floating when available height at the bottom is less than the top ([0bfd7ff](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0bfd7ffafd4a9065baf8cb47ced83864cbcb2259))
+
+
+### Features
+
+* **FF-989:** mobile sidebar footer items ([1559160](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/15591600f7a87abeb1eaa3ea9080c8ce642555f1))
+
+
+
+
+
 # [0.18.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.17.2...@sbercloud/uikit-product-navigation@0.18.0) (2022-09-29)
 
 
