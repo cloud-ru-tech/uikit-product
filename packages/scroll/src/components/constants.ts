@@ -7,3 +7,8 @@ export enum Sizes {
   Small = 'small',
   Medium = 'medium',
 }
+
+export enum BarHideStrategy {
+  Never = 'never',
+  Leave = 'leave',
+}

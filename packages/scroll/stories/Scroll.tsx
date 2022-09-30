@@ -57,6 +57,7 @@ scroll.args = {
   size: Scroll.sizes.Medium,
   flexbox: false,
   showWrapperPadding: true,
+  barHideStrategy: Scroll.barHideStrategies.Leave,
 };
 scroll.argTypes = {
   showWrapperPadding: {

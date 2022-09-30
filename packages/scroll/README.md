@@ -19,11 +19,18 @@ enum Sizes {
   Medium = 'medium',
 }
 
+export enum BarHideStrategy {
+  Never = 'never',
+  Leave = 'leave',
+}
+
 type ScrollProps = {
   children: ReactNode;
   size?: Sizes;
   variant?: Variants;
   flexbox?: boolean;
   onScroll?: (event?: UIEvent) => void;
+  barHideStrategy?: BarHideStrategy;
+  className?: string;
 };
 ```
