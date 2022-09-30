@@ -33,7 +33,7 @@ import {
   SidebarMobile,
   SidebarProps,
 } from '../src';
-import { menuList } from './mocks/menuList';
+import { footerItems, menuList } from './mocks/menuList';
 
 export default {
   title: 'Not stable/Navigation/Header',
@@ -90,10 +90,13 @@ const ProjectSelector = ({ isMobile }: { isMobile?: boolean }) => {
   );
 };
 
-const Template: Story<HeaderProps & { menuList: SidebarProps['list']; activeMenuItem: SidebarProps['active'] }> = ({
-  menuList,
-  activeMenuItem,
-}) => {
+const Template: Story<
+  HeaderProps & {
+    menuList: SidebarProps['list'];
+    footerItems: SidebarProps['footerItems'];
+    activeMenuItem: SidebarProps['active'];
+  }
+> = ({ menuList, footerItems, activeMenuItem }) => {
   const { isMobile } = useMatchMedia();
   const mobileMenuRef = useRef<MobileMenuReference>(null);
 
@@ -123,7 +126,12 @@ const Template: Story<HeaderProps & { menuList: SidebarProps['list']; activeMenu
 
           <ProjectSelector isMobile />
 
-          <SidebarMobile list={menuList} onActiveChange={handleActiveChange} active={selectedItem} />
+          <SidebarMobile
+            list={menuList}
+            footerItems={footerItems}
+            onActiveChange={handleActiveChange}
+            active={selectedItem}
+          />
         </MobileMenu>
       </Wrapper>
     );
@@ -173,6 +181,7 @@ export const header = Template.bind({});
 header.args = {
   activeMenuItem: 'main-advanced',
   menuList,
+  footerItems,
 };
 header.argTypes = {};
 header.parameters = {

@@ -1,5 +1,7 @@
 import { MouseEvent } from 'react';
 
+import { Divider } from '@sbercloud/uikit-product-divider';
+
 import { SIDEBAR_CONTEXT_STUB, SidebarContext } from '../../context/SidebarContext';
 import { shouldBeDefaultClick } from '../../helpers/shouldBeDefaultClick';
 import { SidebarItemId, SidebarItemProps, SidebarItemsGroup, SidebarOnActiveChange } from '../../types';
@@ -9,11 +11,12 @@ import * as S from './styled';
 
 export type SidebarMobileProps = {
   list: SidebarItemsGroup[];
+  footerItems?: SidebarItemProps[];
   active?: SidebarItemId;
   onActiveChange: SidebarOnActiveChange;
 };
 
-export function SidebarMobile({ list, active, onActiveChange }: SidebarMobileProps) {
+export function SidebarMobile({ list, footerItems, active, onActiveChange }: SidebarMobileProps) {
   function handleItemClick(item: SidebarItemProps) {
     return (event: MouseEvent) => {
       if (shouldBeDefaultClick(event)) {
@@ -43,6 +46,14 @@ export function SidebarMobile({ list, active, onActiveChange }: SidebarMobilePro
   return (
     <SidebarContext.Provider value={{ ...SIDEBAR_CONTEXT_STUB, handleItemClick, active }}>
       <S.SidebarMobile>{list.map(group => group.items.map(renderItems))}</S.SidebarMobile>
+
+      {footerItems?.length && (
+        <>
+          <Divider />
+
+          <S.SidebarMobile>{footerItems.map(renderItems)}</S.SidebarMobile>
+        </>
+      )}
     </SidebarContext.Provider>
   );
 }
