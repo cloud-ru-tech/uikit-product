@@ -79,7 +79,7 @@ export function HeaderProjectSelector({
     renderOptionList({ children, renderCreateButton }) {
       return (
         <>
-          <Scroll flexbox>
+          <Scroll flexbox barHideStrategy={Scroll.barHideStrategies.Never}>
             <S.List>{children}</S.List>
           </Scroll>
           {renderCreateButton()}
