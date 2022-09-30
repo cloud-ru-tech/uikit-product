@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.19.0...@sbercloud/uikit-product-navigation@0.19.1) (2022-09-30)
+
+
+### Bug Fixes
+
+* empty array for footerItems array within mobile menu correctly processed ([f1ed5ce](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f1ed5ced37bfccd5d6c4087fd8f2f84d3307b71b))
+
+
+
+
+
 # [0.19.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.18.0...@sbercloud/uikit-product-navigation@0.19.0) (2022-09-30)
 
 
