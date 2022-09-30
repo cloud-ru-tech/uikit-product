@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.18.4...@sbercloud/uikit-product-table-private@0.18.5) (2022-09-30)
+
+
+### Bug Fixes
+
+* **FF-918:** overlay controller moved to private table ([d8c0866](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d8c086615327fa5ebfe80735430736f89ad34083))
+
+
+
+
+
 ## [0.18.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.18.3...@sbercloud/uikit-product-table-private@0.18.4) (2022-09-30)
 
 
