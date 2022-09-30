@@ -13,7 +13,7 @@ describe('[Navigation]: Sidebar', () => {
     slide: 'main-mlspace',
     accordion1: 'main-data-catalog',
     accordionSecondLevelChild1: 'file-manager',
-    accordionThirdLevelChild1: 'third-level-long-element',
+    accordionThirdLevelChild1: 'transfer-history',
     accordion2: 'environments',
     accordionSecondLevelChild2: 'jupiter-servers',
     withLabel: 'marketplace-ai-services',
@@ -39,16 +39,14 @@ describe('[Navigation]: Sidebar', () => {
     'Data Catalog',
     'Environments',
     'Deployments',
-    'Artifact Registry',
     'AutoML',
     'Pipelines',
     'AI Marketplaces',
-    'One more item',
     'Администрирование',
     'Поддержка',
     'Настройки',
   ];
-  const filteredTexts = ['Data Catalog', 'Data Transfer Service', 'Dataset Registry', 'Datahub'];
+  const filteredTexts = ['Data Catalog', 'Data Transfer Service', 'Datahub', 'Dataset Registry'];
 
   function visit(story: string) {
     return cy.visitComponent({

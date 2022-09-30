@@ -8,7 +8,6 @@ export const Accordion = styled.div`
 
 export const AccordionFoldable = styled.div<{ maxHeight: number | undefined }>`
   overflow: hidden;
-  max-height: ${({ maxHeight }) => (maxHeight === undefined ? 'none' : `${maxHeight}px`)};
   transition: max-height ${TRANSITION_TIMING.accordionFolding}ms ease-in-out;
   will-change: max-height;
   display: grid;
@@ -24,5 +23,15 @@ export const AccordionFoldable = styled.div<{ maxHeight: number | undefined }>`
     > ${Accordion}:first-child {
       margin-top: 8px;
     }
+  }
+
+  &[data-transition-status='entering'],
+  &[data-transition-status='entered'] {
+    max-height: ${({ maxHeight }) => (maxHeight === undefined ? 'none' : `${maxHeight}px`)};
+  }
+
+  &[data-transition-status='exiting'],
+  &[data-transition-status='exited'] {
+    max-height: 0;
   }
 `;

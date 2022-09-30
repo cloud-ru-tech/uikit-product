@@ -1,5 +1,4 @@
 import {
-  Advanced2ServiceSVG,
   AdvancedServiceSVG,
   AiMarketplaceServiceSVG,
   AiServiceSVG,
@@ -8,6 +7,7 @@ import {
   BucketInterfaceSVG,
   ChristofariServiceSVG,
   CircleCheckOutlineInterfaceSVG,
+  ConnectorsServiceSVG,
   DataCatalogServiceSVG,
   DataHubServiceSVG,
   DatasetServiceSVG,
@@ -33,6 +33,8 @@ import {
   SettingsInterfaceSVG,
   SupportInterfaceSVG,
   TimeInterfaceSVG,
+  TransferHistoryServiceSVG,
+  TransferRuleServiceSVG,
   ViewTableInterfaceSVG,
   ViewTileInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
@@ -100,10 +102,58 @@ export const menuList: SidebarItemsGroup[] = [
                           {
                             items: [
                               {
-                                id: 'third-level-long-element',
-                                label: 'Элемент 3 уровня с очень длинным названием',
+                                id: 'connectors',
+                                label: 'Коннекторы',
                                 href: '/',
-                                icon: <Advanced2ServiceSVG />,
+                                icon: <ConnectorsServiceSVG />,
+                              },
+                              {
+                                id: 'transfer-rules',
+                                label: 'Правила переносов',
+                                href: '/',
+                                icon: <TransferRuleServiceSVG />,
+                              },
+                              {
+                                id: 'transfer-history',
+                                label: 'История переносов',
+                                href: '/',
+                                icon: <TransferHistoryServiceSVG />,
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                      {
+                        id: 'artifact-registry',
+                        label: 'Artifact Registry',
+                        mode: Sidebar.listModes.Accordion,
+                        icon: <ArtefactServiceSVG />,
+                        nestedList: [
+                          {
+                            items: [
+                              {
+                                id: 'review',
+                                label: 'Обзор',
+                                href: '/',
+                                icon: <ViewTileInterfaceSVG />,
+                              },
+                              {
+                                id: 'docker-registry',
+                                label: 'Docker Registry',
+                                href: '/',
+                                icon: <DockerRegistryServiceSVG />,
+                              },
+                              {
+                                id: 'model-registry',
+                                label: 'Model Registry',
+                                href: '/',
+                                icon: <ModelRegistryServiceSVG />,
+                              },
+                              {
+                                id: 'dataset-registry',
+                                label: 'Dataset Registry',
+                                href: '/',
+                                icon: <DatasetServiceSVG />,
                               },
                             ],
                           },
@@ -180,42 +230,6 @@ export const menuList: SidebarItemsGroup[] = [
                 ],
               },
               {
-                id: 'artifact-registry',
-                label: 'Artifact Registry',
-                mode: Sidebar.listModes.Accordion,
-                icon: <ArtefactServiceSVG />,
-                nestedList: [
-                  {
-                    items: [
-                      {
-                        id: 'review',
-                        label: 'Обзор',
-                        href: '/',
-                        icon: <ViewTileInterfaceSVG />,
-                      },
-                      {
-                        id: 'docker-registry',
-                        label: 'Docker Registry',
-                        href: '/',
-                        icon: <DockerRegistryServiceSVG />,
-                      },
-                      {
-                        id: 'model-registry',
-                        label: 'Model Registry',
-                        href: '/',
-                        icon: <ModelRegistryServiceSVG />,
-                      },
-                      {
-                        id: 'dataset-registry',
-                        label: 'Dataset Registry',
-                        href: '/',
-                        icon: <DatasetServiceSVG />,
-                      },
-                    ],
-                  },
-                ],
-              },
-              {
                 id: 'auto-ml',
                 label: 'AutoML',
                 href: '/',
@@ -286,12 +300,6 @@ export const menuList: SidebarItemsGroup[] = [
                     ],
                   },
                 ],
-              },
-              {
-                id: 'one-more-item',
-                label: 'One more item',
-                href: '/',
-                icon: <ViewTableInterfaceSVG />,
               },
             ],
           },

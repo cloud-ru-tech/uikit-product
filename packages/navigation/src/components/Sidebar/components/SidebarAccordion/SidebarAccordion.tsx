@@ -1,4 +1,5 @@
 import { MouseEvent, useCallback, useEffect, useRef, useState } from 'react';
+import useTransition from 'react-transition-state';
 
 import { TRANSITION_TIMING } from '../../constants';
 import { useSidebarContext } from '../../context';
@@ -10,7 +11,7 @@ import * as S from './styled';
 
 type SidebarAccordionProps = {
   item: SidebarItemProps;
-  onInnerToggle?(isInner?: boolean): void;
+  onInnerToggle?(childHeight?: number): void;
   accordionLevel: number;
   isMobile?: boolean;
 };
@@ -24,35 +25,37 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0, isMo
   const [maxHeight, setMaxHeight] = useState<number | undefined>(!isOpen ? 0 : undefined);
   const accordionRef = useRef<HTMLDivElement>(null);
 
-  const toggleHeight = useCallback(
-    (isInner?: boolean) => {
-      if (accordionRef.current) {
-        const scrollHeight = accordionRef.current.scrollHeight;
-        const newHeight = isInner ? scrollHeight * 2 : scrollHeight;
+  const [state, toggle] = useTransition({
+    timeout: TRANSITION_TIMING.accordionFolding,
+    initialEntered: isOpen,
+  });
 
-        setMaxHeight(isOpen ? newHeight : 0);
+  const toggleHeight = useCallback(
+    (childHeight = 0) => {
+      if (accordionRef.current) {
+        const currentItemHeight = accordionRef.current.scrollHeight + childHeight;
+        setMaxHeight(isOpen ? currentItemHeight : 0);
+        onInnerToggle?.(isOpen ? currentItemHeight : -currentItemHeight);
       }
     },
-    [isOpen],
+    [isOpen, onInnerToggle],
   );
 
   useEffect(() => {
     setOpen(shouldBeOpen);
+    toggle(shouldBeOpen);
   }, [active, shouldBeOpen]);
 
   useEffect(() => {
     toggleHeight();
-
-    setTimeout(() => {
-      onInnerToggle?.(true);
-    }, TRANSITION_TIMING.accordionFolding);
-  }, [isOpen, onInnerToggle, toggleHeight]);
+  }, [toggleHeight]);
 
   function handleClick(e: MouseEvent) {
     if (isAccordion) {
       e.preventDefault();
 
       setOpen(open => !open);
+      toggle();
       return;
     }
 
@@ -71,7 +74,12 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0, isMo
       />
 
       {item.nestedList?.length && (
-        <S.AccordionFoldable ref={accordionRef} maxHeight={isOpen ? maxHeight : 0} data-mobile={isMobile || undefined}>
+        <S.AccordionFoldable
+          ref={accordionRef}
+          maxHeight={isOpen ? maxHeight : 0}
+          data-mobile={isMobile || undefined}
+          data-transition-status={state.status}
+        >
           {item.nestedList?.map(nested =>
             nested.items.map(nestedItem => (
               <SidebarAccordion
