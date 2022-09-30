@@ -47,11 +47,11 @@ export function SidebarMobile({ list, footerItems, active, onActiveChange }: Sid
     <SidebarContext.Provider value={{ ...SIDEBAR_CONTEXT_STUB, handleItemClick, active }}>
       <S.SidebarMobile>{list.map(group => group.items.map(renderItems))}</S.SidebarMobile>
 
-      {footerItems?.length && (
+      {Boolean(footerItems?.length) && (
         <>
           <Divider />
 
-          <S.SidebarMobile>{footerItems.map(renderItems)}</S.SidebarMobile>
+          <S.SidebarMobile>{footerItems?.map(renderItems)}</S.SidebarMobile>
         </>
       )}
     </SidebarContext.Provider>
