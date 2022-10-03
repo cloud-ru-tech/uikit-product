@@ -23,7 +23,6 @@ export type MobileMenuReference = {
 export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ children, ...rest }, ref) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const {
-    x,
     y,
     strategy,
     context,
@@ -32,7 +31,7 @@ export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ ch
   } = useFloating({
     open: isMobileMenuOpen,
     onOpenChange: setIsMobileMenuOpen,
-    placement: 'bottom-end',
+    placement: 'bottom',
   });
   const { getFloatingProps } = useInteractions([useClick(context), useDismiss(context)]);
 
@@ -51,7 +50,6 @@ export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ ch
   return (
     <FloatingPortal root={document.body}>
       <S.Wrapper
-        left={x ?? 0}
         top={y ?? 0}
         strategy={strategy}
         ref={setFloating}
