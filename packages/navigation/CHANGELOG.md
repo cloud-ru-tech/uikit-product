@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.19.1...@sbercloud/uikit-product-navigation@0.19.2) (2022-10-03)
+
+
+### Bug Fixes
+
+* **FF-613:** always show scrollbar in project selector ([273644c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/273644ce0e627c3f6e22c5f454ecb78053625b8a))
+* **FF-613:** smoothing of accordion animation ([45c8246](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/45c8246cb5d3a282ffaa59e4d593dac6ca4bb223))
+
+
+
+
+
 ## [0.19.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.19.0...@sbercloud/uikit-product-navigation@0.19.1) (2022-09-30)
 
 

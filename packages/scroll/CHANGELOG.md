@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-scroll@1.2.2...@sbercloud/uikit-product-scroll@1.3.0) (2022-10-03)
+
+
+### Features
+
+* **FF-613:** add barHideStrategy property ([ea44198](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ea441985e9b064129d229e9f30e436a4cc1db1eb))
+
+
+
+
+
 ## [1.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-scroll@1.2.1...@sbercloud/uikit-product-scroll@1.2.2) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-scroll
