@@ -1,9 +1,8 @@
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { Card } from '@sbercloud/uikit-product-cards';
-import { H3_STYLES } from '@sbercloud/uikit-product-typography';
+import { CardQuickAction, CardTopic, CardWide } from '@sbercloud/uikit-product-cards';
+import { DockerRegistryDisplaySVG, UserInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { BADGE } from '#storybookConstants';
 
@@ -17,84 +16,69 @@ export default {
   component: Carousel,
 } as Meta;
 
-const CardContentWrapStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 300px;
-  justify-content: space-between;
-`;
-
 const StoryWrap = styled.div``;
+
 const CardsWrap = styled.div`
   display: flex;
-  height: 350px;
+  gap: 20px;
 `;
 
-const CardContentStyled = styled.div`
-  display: flex;
-  flex-direction: column;
+const CardWideWrapper = styled.div`
+  height: 332px;
   width: 100%;
-  height: 300px;
-  justify-content: center;
-`;
-
-const CardText = styled.h3`
-  ${H3_STYLES};
-`;
-
-const cardClassname = css`
-  margin: 0 6px 18px 6px;
 `;
 
 const cardsMock = [
   <CardsWrap key={1}>
-    <Card className={cardClassname}>
-      <CardContentWrapStyled>
-        <CardContentStyled>
-          <CardText>Example 1</CardText>
-        </CardContentStyled>
-      </CardContentWrapStyled>
-    </Card>
-    <Card className={cardClassname}>
-      <CardContentWrapStyled>
-        <CardContentStyled>
-          <CardText>Example 2</CardText>
-        </CardContentStyled>
-      </CardContentWrapStyled>
-    </Card>
-    <Card className={cardClassname}>
-      <CardContentWrapStyled>
-        <CardContentStyled>
-          <CardText>Example 3</CardText>
-        </CardContentStyled>
-      </CardContentWrapStyled>
-    </Card>
+    <CardTopic
+      icon={<DockerRegistryDisplaySVG />}
+      title={'Заголовок'}
+      color={CardTopic.colors.Red}
+      onClick={() => {}}
+    />
+    <CardTopic
+      icon={<DockerRegistryDisplaySVG />}
+      title={'Заголовок'}
+      color={CardTopic.colors.Blue}
+      onClick={() => {}}
+    />
+    <CardTopic
+      icon={<DockerRegistryDisplaySVG />}
+      title={'Заголовок'}
+      color={CardTopic.colors.Green}
+      onClick={() => {}}
+    />
   </CardsWrap>,
   <CardsWrap key={2}>
-    <Card className={cardClassname}>
-      <CardContentWrapStyled>
-        <CardContentStyled>
-          <CardText>Example 4</CardText>
-        </CardContentStyled>
-      </CardContentWrapStyled>
-    </Card>
-    <Card className={cardClassname}>
-      <CardContentWrapStyled>
-        <CardContentStyled>
-          <CardText>Example 5</CardText>
-        </CardContentStyled>
-      </CardContentWrapStyled>
-    </Card>
+    <CardQuickAction
+      icon={<DockerRegistryDisplaySVG />}
+      title={'Заголовок'}
+      description={'Описание в 1 строку'}
+      variant={CardQuickAction.variants.Primary}
+      onClick={() => {}}
+    />
+    <CardQuickAction
+      icon={<UserInterfaceSVG />}
+      title={'Заголовок'}
+      description={'Описание в 1 строку'}
+      variant={CardQuickAction.variants.Accent}
+      onClick={() => {}}
+    />
   </CardsWrap>,
   <CardsWrap key={3}>
-    <Card className={cardClassname}>
-      <CardContentWrapStyled>
-        <CardContentStyled>
-          <CardText>Example 7</CardText>
-        </CardContentStyled>
-      </CardContentWrapStyled>
-    </Card>
+    <CardWideWrapper>
+      <CardWide
+        title={'Заголовок'}
+        titleImageSrc={
+          'https://images.unsplash.com/photo-1655720033654-a4239dd42d10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80'
+        }
+        description={'Описание для карточки'}
+        buttons={[{ text: 'Открыть', onClick: () => {} }]}
+        imageSrc={
+          'https://images.unsplash.com/photo-1655720031554-a929595ffad7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80'
+        }
+      />
+    </CardWideWrapper>
   </CardsWrap>,
 ];
 

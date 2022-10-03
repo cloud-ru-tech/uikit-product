@@ -16,7 +16,7 @@ export type CardsPanelProps = {
   };
   children?: React.ReactNode;
 };
-
+//TODO: Переписать
 export const CardsPanel = ({
   children,
   autoFill,
