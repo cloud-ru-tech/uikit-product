@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.19.2...@sbercloud/uikit-product-navigation@0.19.3) (2022-10-04)
+
+
+### Bug Fixes
+
+* **FF-1058:** `MobileMenu` page zoom issue ([3697b9f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3697b9f6c2507a9f158f4dea3984c15348e99b02))
+
+
+
+
+
 ## [0.19.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.19.1...@sbercloud/uikit-product-navigation@0.19.2) (2022-10-03)
 
 
