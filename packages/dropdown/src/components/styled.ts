@@ -1,6 +1,8 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
+import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
+
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -21,6 +23,8 @@ export const menuClassName = css`
 `;
 
 export const menuItemClassName = css`
+  ${TEXT_2_STYLES};
+
   &:hover {
     background-color: var(${COLORS.MENU_ITEM_HOVER_BACKGROUND});
   }

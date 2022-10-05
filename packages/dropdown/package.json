@@ -29,6 +29,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-tooltip-private": "1.2.20",
+    "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.0.4"
   }
 }
