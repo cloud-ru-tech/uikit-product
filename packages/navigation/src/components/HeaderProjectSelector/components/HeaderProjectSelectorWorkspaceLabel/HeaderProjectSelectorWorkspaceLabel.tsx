@@ -1,4 +1,4 @@
-import { FolderInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { OverviewInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { HeaderProjectSelectorIcon } from '../HeaderProjectSelectorIcon';
 import { HeaderProjectSelectorLabel } from '../HeaderProjectSelectorLabel';
@@ -11,7 +11,7 @@ export function HeaderProjectSelectorWorkspaceLabel({ label, ...rest }: HeaderPr
   return (
     <>
       <HeaderProjectSelectorIcon>
-        <FolderInterfaceSVG />
+        <OverviewInterfaceSVG />
       </HeaderProjectSelectorIcon>
       <HeaderProjectSelectorLabel {...rest}>{label}</HeaderProjectSelectorLabel>
     </>
