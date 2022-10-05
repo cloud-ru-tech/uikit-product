@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.19.3...@sbercloud/uikit-product-navigation@0.20.0) (2022-10-05)
+
+
+### Features
+
+* **FF-1077:** change `HeaderProjectSelector` workspace icon from `FolderInterfaceSVG` to `OverviewInterfaceSVG` ([2b31a83](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2b31a8306672cd533f0a6c99bc08cedcad6da3a1))
+
+
+
+
+
 ## [0.19.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.19.2...@sbercloud/uikit-product-navigation@0.19.3) (2022-10-04)
 
 
