@@ -33,4 +33,5 @@ export const Description = styled.p`
   ${TEXT_2_STYLES};
   color: var(${COLORS.DESCRIPTION});
   margin: 0;
+  text-align: center;
 `;

@@ -43,7 +43,8 @@ const Template: Story<
 export const noData = Template.bind({});
 noData.args = {
   title: 'Нет данных',
-  description: 'Здесь будут отображаться /что-то там/',
+  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam`,
   image: 'SearchInterfaceSVG',
   button: 'Default',
 };
