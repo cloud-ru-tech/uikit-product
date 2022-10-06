@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-no-data@2.0.4...@sbercloud/uikit-product-no-data@2.0.5) (2022-10-06)
+
+
+### Bug Fixes
+
+* **LK-537:** center description ([937aff0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/937aff0395063f0520931f66a8c891d5a816cf30))
+
+
+
+
+
 ## [2.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-no-data@2.0.3...@sbercloud/uikit-product-no-data@2.0.4) (2022-10-03)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-no-data

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-no-data",
   "title": "React NoData",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "sideEffects": [
     "*.css",
     "*.woff",
