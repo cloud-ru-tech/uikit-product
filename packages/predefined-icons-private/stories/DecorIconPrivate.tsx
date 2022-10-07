@@ -7,56 +7,52 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { DecorIconProps, PredefinedDecorIconPrivate, PredefinedDecorIconProps } from '../src';
-import { PredefinedDecorIconType } from '../src/components/decor/constants';
-import { notReachable } from '../src/helpers';
+import { PredefinedDecorIconPrivate, PredefinedDecorIconPrivateProps } from '../src';
+import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 
 export default {
   title: 'Components/Icons/Predefined/Predefined Decor Icon Private',
   component: PredefinedDecorIconPrivate,
 } as Meta;
 
-type StoryProps = Omit<DecorIconProps, 'icon'> | PredefinedDecorIconProps;
+type StoryProps = Exclude<PredefinedDecorIconPrivateProps, 'icon' | 'type'>;
 
-const Template: Story<StoryProps> = props => {
-  switch (props.type) {
-    case PredefinedDecorIconType.Predefined: {
-      const { icon = PredefinedDecorIconPrivate.icons.Info } = props;
-      return (
-        <div>
-          <PredefinedDecorIconPrivate {...props} icon={icon} />
-        </div>
-      );
-    }
-    case PredefinedDecorIconType.Custom: {
-      return (
-        <div>
-          <PredefinedDecorIconPrivate {...props} icon={<QuestionSmallOutlineInterfaceSVG />} />
-        </div>
-      );
-    }
-
-    default:
-      notReachable(props);
-      return <div />;
-  }
-};
+const Template: Story<StoryProps> = props => (
+  <TableWrapper>
+    <TableColumn key='IconsNames'>
+      <TableCell key='custom'>Custom</TableCell>
+      {Object.keys(PredefinedDecorIconPrivate.icons).map(iconName => (
+        <TableCell key={iconName}>{iconName}</TableCell>
+      ))}
+    </TableColumn>
+    <TableColumn key={'IconsViews'}>
+      <TableCell>
+        <PredefinedDecorIconPrivate
+          {...props}
+          type={PredefinedDecorIconPrivate.types.Custom}
+          icon={<QuestionSmallOutlineInterfaceSVG />}
+          data-test-id='predefinedDecorIcon-custom-test'
+        />
+      </TableCell>
+      {Object.entries(PredefinedDecorIconPrivate.icons).map(([name, iconValue]) => (
+        <TableCell key={name}>
+          <PredefinedDecorIconPrivate
+            {...props}
+            type={PredefinedDecorIconPrivate.types.Predefined}
+            icon={iconValue}
+            data-test-id={`predefinedDecorIcon-${name}-test`}
+          />
+        </TableCell>
+      ))}
+    </TableColumn>
+  </TableWrapper>
+);
 
 export const predefinedDecorIconPrivate = Template.bind({});
 predefinedDecorIconPrivate.args = {
-  type: PredefinedDecorIconPrivate.types.Predefined,
-  icon: PredefinedDecorIconPrivate.icons.Info,
   size: PredefinedDecorIconPrivate.sizes.Medium,
 };
-predefinedDecorIconPrivate.argTypes = {
-  icon: {
-    control: {
-      type: 'select',
-    },
-    options: Object.values(PredefinedDecorIconPrivate.icons),
-    defaultValue: PredefinedDecorIconPrivate.icons.Info,
-  },
-};
+predefinedDecorIconPrivate.argTypes = {};
 predefinedDecorIconPrivate.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
