@@ -1,246 +1,265 @@
-describe('[Navigation]: Header Project Selector', () => {
-  function visit(story: string) {
-    return cy.visitComponent({
-      category: 'not-stable',
-      group: 'navigation',
-      name: 'header-project-selector',
-      story,
-    });
-  }
+import { fixture, Selector, test } from 'testcafe';
 
-  function getReference() {
-    return cy.getByDataTestId('header-project-selector__reference');
-  }
+import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
-  function getFloating() {
-    return cy.getByDataTestId('header-project-selector__floating');
-  }
+function getPage(story: string) {
+  return getTestcafeUrl({ category: 'not-stable', group: 'navigation', name: 'header-project-selector', story });
+}
 
-  function getOutside() {
-    return cy.get('body');
-  }
+function getReference() {
+  return Selector(dataTestIdSelector('header-project-selector__reference'));
+}
 
-  function getSearch() {
-    return cy.getByDataTestId('header-project-selector__search').get('input');
-  }
+function getFloating() {
+  return Selector(dataTestIdSelector('header-project-selector__floating'));
+}
 
-  function getAction() {
-    return cy.getByDataTestId('header-project-selector__action');
-  }
+function getOutside() {
+  return Selector('body');
+}
 
-  function getOptionListItems() {
-    return cy.getByDataTestId('header-project-selector__option-list-item');
-  }
+function getActive() {
+  return Selector(() => document.activeElement as HTMLElement);
+}
 
-  function getOptionListItemEditButtons() {
-    return cy.getByDataTestId('header-project-selector__option-list-item-edit-button');
-  }
+function getSearch() {
+  return Selector(dataTestIdSelector('header-project-selector__search')).find('input');
+}
 
-  function getOptionListItemByValue(value: string) {
-    return getOptionListItems().get(`[data-test-value="${value}"]`);
-  }
+function getAction() {
+  return Selector(dataTestIdSelector('header-project-selector__action'));
+}
 
-  function getGroupListItemLabel() {
-    return cy.getByDataTestId('header-project-selector__group-list-item-label');
-  }
+function getOptionListItems() {
+  return Selector(dataTestIdSelector('header-project-selector__option-list-item'));
+}
 
-  function getProjectOptionListItemLabel() {
-    return cy.getByDataTestId('header-project-selector__project-option-list-item-label');
-  }
+function getOptionListItemByValue(value: string) {
+  return getOptionListItems().withAttribute('data-test-value', value);
+}
 
-  function getWorkspaceOptionListItemLabel() {
-    return cy.getByDataTestId('header-project-selector__workspace-option-list-item-label');
-  }
+function getOptionListItemEditButtonByValue(value: string) {
+  return getOptionListItemByValue(value).find(
+    dataTestIdSelector('header-project-selector__option-list-item-edit-button'),
+  );
+}
 
-  function getSelectedProject() {
-    return cy.getByDataTestId('header-project-selector__selected-project');
-  }
+function getGroupListItemLabel() {
+  return Selector(dataTestIdSelector('header-project-selector__group-list-item-label'));
+}
 
-  function getNoDataWrapper() {
-    return cy.getByDataTestId('header-project-selector__no-data');
-  }
+function getProjectOptionListItemLabelByValue(value: string) {
+  return getOptionListItemByValue(value).find(
+    dataTestIdSelector('header-project-selector__project-option-list-item-label'),
+  );
+}
 
-  function getSelectedWorkspace() {
-    return cy.getByDataTestId('header-project-selector__selected-workspace');
-  }
+function getWorkspaceOptionListItemLabelByValue(value: string) {
+  return getOptionListItemByValue(value).find(
+    dataTestIdSelector('header-project-selector__workspace-option-list-item-label'),
+  );
+}
 
-  function basics() {
-    it('opens floating by reference click', () => {
-      getReference().click();
-      getFloating().should('exist');
-    });
+function getSelectedProject() {
+  return Selector(dataTestIdSelector('header-project-selector__selected-project'));
+}
 
-    it('opens floating by down arrow type on reference', () => {
-      getReference().focus().type('{downArrow}');
-      getFloating().should('exist');
-    });
+function getNoData() {
+  return Selector(dataTestIdSelector('header-project-selector__no-data'));
+}
 
-    it('closes floating by click outside', () => {
-      getReference().click();
-      getOutside().click();
-      getFloating().should('not.exist');
-    });
+function getSelectedWorkspace() {
+  return Selector(dataTestIdSelector('header-project-selector__selected-workspace'));
+}
 
-    it('closes floating by option select by mouse', () => {
-      getReference().click();
-      getOptionListItemByValue('short-1').click();
-      getFloating().should('not.exist');
-    });
-
-    it('closes floating by option select by keys', () => {
-      getReference().click();
-      getOptionListItemByValue('short-1').focus().type('{enter}');
-      getFloating().should('not.exist');
-    });
-
-    it('closes floating by action click', () => {
-      getReference().click();
-      getAction().click();
-      getFloating().should('not.exist');
-    });
-
-    it('closes floating by edit option button click', () => {
-      getReference().click();
-      getOptionListItemByValue('short-1').within(() => {
-        getOptionListItemEditButtons().click({ force: true });
-      });
-      getFloating().should('not.exist');
-    });
-
-    it('filters options when searching', () => {
-      getReference().click();
-      getSearch().focus().type('zo');
-      getOptionListItems().should('have.length', 1).first().should('have.text', 'Zork');
-    });
-
-    it('clears search at closing', () => {
-      getReference().click();
-      getSearch().focus().type('zo');
-      getOutside().click();
-      getReference().click();
-      getSearch().should('be.empty');
-    });
-
-    it('shows no data state when nothing found', () => {
-      getReference().click();
-      getSearch().focus().type('zooo');
-      getNoDataWrapper().should('be.visible');
-      getAction().should('be.visible');
-    });
-
-    it('goes to last option when typing up arrow', () => {
-      getReference().focus().type('{upArrow}{upArrow}');
-      getOptionListItems().last().should('be.visible');
-    });
-
-    it('goes to last option when opening and it is selected', () => {
-      getReference().click();
-      getOptionListItems().last().click();
-      getReference().click();
-      getOptionListItems().last().should('be.visible');
-    });
-
-    it('renders group labels', () => {
-      getReference().click();
-      getGroupListItemLabel().should('exist');
-    });
-  }
-
-  describe('Projects', () => {
-    beforeEach(() => {
-      visit('projects');
-    });
-
-    basics();
-
-    it('renders selected project', () => {
-      getSelectedProject().should('have.text', 'Zialactic');
-    });
-
-    it('selects another project by mouse', () => {
-      getReference().click();
-      getOptionListItemByValue('short-1').click();
-      getSelectedProject().should('have.text', 'Zaggles');
-    });
-
-    it('selects another project by keys', () => {
-      getReference().focus().type('{downArrow}{downArrow}{enter}');
-      getSelectedProject().should('have.text', 'Zaggles');
-    });
-
-    it('does not select project by edit project button click', () => {
-      getReference().click();
-      getOptionListItemByValue('short-1').within(() => {
-        getOptionListItemEditButtons().click({ force: true });
-      });
-      getSelectedProject().should('have.text', 'Zialactic');
-    });
-
-    it('truncates long selected project label', () => {
-      getReference().click();
-      getOptionListItemByValue('long-0').click();
-      getSelectedProject().then(([element]) => {
-        cy.wrap(element.offsetWidth).should('be.lessThan', element.scrollWidth);
-      });
-    });
-
-    it('truncates long project option label', () => {
-      getReference().click();
-      getOptionListItemByValue('long-0').within(() => {
-        getProjectOptionListItemLabel().then(([element]) => {
-          cy.wrap(element.offsetWidth).should('be.lessThan', element.scrollWidth);
-        });
-      });
-    });
+function basics() {
+  test('opens floating by reference click', async t => {
+    await t.click(getReference()).expect(getFloating().exists).ok();
   });
 
-  describe('Workspaces', () => {
-    beforeEach(() => {
-      visit('workspaces');
-    });
-
-    basics();
-
-    it('renders selected selected workspace', () => {
-      getSelectedWorkspace().should('have.text', 'Zialactic');
-    });
-
-    it('selects another workspace by mouse', () => {
-      getReference().click();
-      getOptionListItemByValue('short-5').click();
-      getSelectedWorkspace().should('have.text', 'Insource');
-    });
-
-    it('selects another workspace by keys', () => {
-      getReference().focus().type('{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{enter}');
-      getSelectedWorkspace().should('have.text', 'Insource');
-    });
-
-    it('does not select workspace by edit workspace button click', () => {
-      getReference().click();
-      getOptionListItemByValue('short-1').within(() => {
-        getOptionListItemEditButtons().click({ force: true });
-      });
-      getSelectedWorkspace().should('have.text', 'Zialactic');
-    });
-
-    it('truncates long selected workspace label', () => {
-      getReference().click();
-      getOptionListItemByValue('long-0').click();
-      getSelectedWorkspace().then(([element]) => {
-        cy.wrap(element.offsetWidth).should('be.lessThan', element.scrollWidth);
-      });
-    });
-
-    it('truncates long workspace option label', () => {
-      getReference().click();
-      getOptionListItemByValue('long-0').within(() => {
-        getWorkspaceOptionListItemLabel().then(([element]) => {
-          cy.wrap(element.offsetWidth).should('be.lessThan', element.scrollWidth);
-        });
-      });
-    });
+  test('opens floating by down arrow type on reference', async t => {
+    await t.pressKey('tab down').expect(getFloating().exists).ok();
   });
+
+  test('closes floating by click outside', async t => {
+    await t.click(getReference()).click(getOutside()).expect(getFloating().exists).notOk();
+  });
+
+  test('closes floating by option select by mouse', async t => {
+    await t.click(getReference()).click(getOptionListItemByValue('short-1')).expect(getFloating().exists).notOk();
+  });
+
+  test('closes floating by option select by keys', async t => {
+    await t
+      .pressKey('tab down down')
+      .dispatchEvent(getActive(), 'keydown', { code: 'Enter', bubbles: true })
+      .expect(getFloating().exists)
+      .notOk();
+  });
+
+  test('closes floating by action click', async t => {
+    await t.click(getReference()).click(getAction()).expect(getFloating().exists).notOk();
+  });
+
+  test('closes floating by edit option button click', async t => {
+    await t
+      .click(getReference())
+      .hover(getOptionListItemByValue('short-1'))
+      .click(getOptionListItemEditButtonByValue('short-1'))
+      .expect(getFloating().exists)
+      .notOk();
+  });
+
+  test('filters options when searching', async t => {
+    await t
+      .click(getReference())
+      .typeText(getSearch(), 'zo')
+      .expect(getOptionListItems().count)
+      .eql(1)
+      .expect(getOptionListItems().nth(0).textContent)
+      .eql('Zork');
+  });
+
+  test('clears search at closing', async t => {
+    await t
+      .click(getReference())
+      .typeText(getSearch(), 'zo')
+      .click(getOutside())
+      .click(getReference())
+      .expect(getSearch().textContent)
+      .eql('');
+  });
+
+  test('shows no data state when nothing found', async t => {
+    await t.click(getReference()).typeText(getSearch(), 'zooo').expect(getNoData().visible).ok();
+  });
+
+  test('goes to last option when typing up arrow', async t => {
+    await t.pressKey('tab up up').expect(getOptionListItems().nth(-1).visible).ok();
+  });
+
+  test('goes to last option when opening and it is selected', async t => {
+    await t
+      .click(getReference())
+      .click(getOptionListItems().nth(-1))
+      .click(getReference())
+      .expect(getOptionListItems().nth(-1).visible)
+      .ok();
+  });
+
+  test('renders group labels', async t => {
+    await t.click(getReference()).expect(getGroupListItemLabel().exists).ok();
+  });
+}
+
+fixture('HeaderProjectSelector/Projects').page(getPage('projects'));
+
+basics();
+
+test('renders selected project', async t => {
+  await t.expect(getSelectedProject().textContent).eql('Zialactic');
 });
 
-export {};
+test('selects another project by mouse', async t => {
+  await t
+    .click(getReference())
+    .click(getOptionListItemByValue('short-1'))
+    .expect(getSelectedProject().textContent)
+    .eql('Zaggles');
+});
+
+test('selects another project by keys', async t => {
+  await t
+    .pressKey('tab down down')
+    .dispatchEvent(getActive(), 'keydown', { code: 'Enter', bubbles: true })
+    .expect(getSelectedProject().textContent)
+    .eql('Zaggles');
+});
+
+test('does not select project by edit project button click', async t => {
+  await t
+    .click(getReference())
+    .hover(getOptionListItemByValue('short-1'))
+    .click(getOptionListItemEditButtonByValue('short-1'))
+    .expect(getSelectedProject().textContent)
+    .eql('Zialactic');
+});
+
+test('truncates long selected project label', async t => {
+  const selectedProject = getSelectedProject();
+
+  await t.click(getReference()).click(getOptionListItemByValue('long-0'));
+
+  const [offsetWidth, scrollWidth] = await Promise.all([selectedProject.offsetWidth, selectedProject.scrollWidth]);
+
+  await t.expect(offsetWidth).lte(scrollWidth);
+});
+
+test('truncates long project option label', async t => {
+  const projectOptionListItemLabel = getProjectOptionListItemLabelByValue('long-0');
+
+  await t.click(getReference());
+
+  const [offsetWidth, scrollWidth] = await Promise.all([
+    projectOptionListItemLabel.offsetWidth,
+    projectOptionListItemLabel.scrollWidth,
+  ]);
+
+  await t.expect(offsetWidth).lte(scrollWidth);
+});
+
+fixture('HeaderProjectSelector/Workspaces').page(getPage('workspaces'));
+
+basics();
+
+test('renders selected selected workspace', async t => {
+  await t.expect(getSelectedWorkspace().textContent).eql('Zialactic');
+});
+
+test('selects another workspace by mouse', async t => {
+  await t
+    .click(getReference())
+    .click(getOptionListItemByValue('short-1'))
+    .expect(getSelectedWorkspace().textContent)
+    .eql('Zaggles');
+});
+
+test('selects another workspace by keys', async t => {
+  await t
+    .pressKey('tab down down')
+    .dispatchEvent(getActive(), 'keydown', { code: 'Enter', bubbles: true })
+    .expect(getSelectedWorkspace().textContent)
+    .eql('Zaggles');
+});
+
+test('does not select workspace by edit workspace button click', async t => {
+  await t
+    .click(getReference())
+    .hover(getOptionListItemByValue('short-1'))
+    .click(getOptionListItemEditButtonByValue('short-1'))
+    .expect(getSelectedWorkspace().textContent)
+    .eql('Zialactic');
+});
+
+test('truncates long selected workspace label', async t => {
+  const selectedWorkspace = getSelectedWorkspace();
+
+  await t.click(getReference()).click(getOptionListItemByValue('long-0'));
+
+  const [offsetWidth, scrollWidth] = await Promise.all([selectedWorkspace.offsetWidth, selectedWorkspace.scrollWidth]);
+
+  await t.expect(offsetWidth).lte(scrollWidth);
+});
+
+test('truncates long workspace option label', async t => {
+  const workspaceOptionListItemLabel = getWorkspaceOptionListItemLabelByValue('long-0');
+
+  await t.click(getReference());
+
+  const [offsetWidth, scrollWidth] = await Promise.all([
+    workspaceOptionListItemLabel.offsetWidth,
+    workspaceOptionListItemLabel.scrollWidth,
+  ]);
+
+  await t.expect(offsetWidth).lte(scrollWidth);
+});

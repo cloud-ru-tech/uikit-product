@@ -1,9 +1,5 @@
 import { exec, exit } from 'shelljs';
 
-const { CYPRESS_BROWSER } = process.env;
+const { BROWSER } = process.env;
 
-const browserArg = CYPRESS_BROWSER ? `--browser ${CYPRESS_BROWSER}` : '';
-
-// next line is for future parallel tests
-// shell.exec(`cy2 run --headless --parallel --record --key uikit ${browserArg}`, exitCode => shell.exit(exitCode));
-exec(`cypress run --headless --quiet ${browserArg}`, exit);
+exec(`testcafe ${BROWSER ? `${BROWSER}:headless` : 'chrome'} --config-file testcafe.config.js`, exit);

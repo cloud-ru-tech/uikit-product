@@ -52,7 +52,7 @@ export function NavigationItem({ value, label, counter, disabled }: NavigationIt
       tabIndex={0}
       data-test-id={`tabs__navigation-list-item:${value}`}
       onClick={changeTabHandler}
-      onKeyPress={keyboardSelectHandler(changeTabHandler)}
+      onKeyDown={keyboardSelectHandler(changeTabHandler)}
     >
       <S.Label data-test-id={`tabs__navigation-list-item:${value}__label`}>{label}</S.Label>
       {Number.isInteger(counter) && (

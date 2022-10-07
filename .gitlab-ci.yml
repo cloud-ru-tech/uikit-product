@@ -1,6 +1,4 @@
----
-
 include:
   - project: sbercloud-ui/cicd
-    ref: master
+    ref: testcafe
     file: /gitlab-ci-uikit-product.yml

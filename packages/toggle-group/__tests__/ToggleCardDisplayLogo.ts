@@ -1,20 +1,13 @@
-describe('[Toggle Group]: Toggle Card Display Logo', () => {
-  it('renders correctly', () => {
-    cy.visitComponent({
-      group: 'toggle-group-toggle-card',
-      name: 'display-logo',
-      props: { 'data-test-id': 'toggle-card-display-logo' },
-    });
+import { fixture, Selector, test } from 'testcafe';
 
-    cy.getByDataTestId('toggle-card-display-logo').within(() => {
-      cy.getByDataTestId('toggle-card-display-logo-icon')
-        .should('exist')
-        .getByDataTestId('toggle-card-display-logo-title')
-        .should('exist')
-        .getByDataTestId('toggle-card-display-logo-caption')
-        .should('exist');
-    });
-  });
+import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
+
+fixture('ToggleCardDisplayLogo').page(getTestcafeUrl({ group: 'toggle-group-toggle-card', name: 'display-logo' }));
+
+test('renders correctly', async t => {
+  const icon = Selector(dataTestIdSelector('toggle-card-display-logo-icon'));
+  const caption = Selector(dataTestIdSelector('toggle-card-display-logo-caption'));
+  const title = Selector(dataTestIdSelector('toggle-card-display-logo-title'));
+
+  await t.expect(icon.exists).ok().expect(caption.exists).ok().expect(title.exists).ok();
 });
-
-export {};

@@ -1,23 +1,21 @@
-import { OverlayPrivateProps } from '../src';
+import { Selector } from 'testcafe';
 
-describe('[OverlayPrivate]:', () => {
-  const testId = 'overlay-private-test';
+import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
-  function visit(props?: OverlayPrivateProps) {
-    return cy.visitComponent({
-      name: 'overlay-private',
-      props: {
-        'data-test-id': testId,
-        ...(props || {}),
-      },
-    });
-  }
+const testId = 'overlay-private-test';
 
-  it('Rendered', () => {
-    visit();
+fixture('[OverlayPrivate]:').page(
+  getTestcafeUrl({
+    name: 'overlay-private',
+    props: {
+      'data-test-id': testId,
+    },
+  }),
+);
 
-    cy.getByDataTestId('open_overlay').click().getByDataTestId(testId).should('exist');
-  });
+test('Rendered', async t => {
+  await t
+    .click(Selector(dataTestIdSelector('open_overlay')))
+    .expect(Selector(dataTestIdSelector(testId)).visible)
+    .ok();
 });
-
-export {};

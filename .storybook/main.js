@@ -51,9 +51,10 @@ module.exports = {
     return { ...base, ...custom };
   },
   webpackFinal: async config => {
+    process.env.NODE_ENV === 'test' && (config.watch = false);
     process.env.NODE_ENV === 'test' &&
       (config.watchOptions = {
-        ignored: /(node_modules|dist)/,
+        ignored: /.*/,
       });
     config.resolve.fallback = {
       ...config.resolve.fallback,

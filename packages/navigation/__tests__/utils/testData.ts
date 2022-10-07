@@ -1,0 +1,46 @@
+export const sidebarTestId = 'sidebar';
+export const activeColor = 'rgb(85, 88, 250)';
+export const disabledTextColor = 'rgba(0, 0, 0, 0.24)';
+export const disabledIconColor = 'rgba(0, 0, 0, 0.16)';
+export const itemIds = {
+  mainArea: 'main-enterprise',
+  footer: 'administration',
+  defaultActive: 'main-advanced',
+  disabled: 'main-svp',
+  slide: 'main-mlspace',
+  accordion1: 'main-data-catalog',
+  accordionSecondLevelChild1: 'file-manager',
+  accordionThirdLevelChild1: 'transfer-history',
+  accordion2: 'environments',
+  accordionSecondLevelChild2: 'jupiter-servers',
+  withLabel: 'marketplace-ai-services',
+  withLockedIcon: 'special-for-you',
+  withCounter: 'common-platform-services',
+  foundBySearch: 'datahub',
+};
+export const firstLevelTexts = [
+  'Главная',
+  'Advanced',
+  'Enterprise',
+  'ML Space',
+  'SVP',
+  'Общие сервисы платформ',
+  'Специально для вас',
+  'Маркетплейс AI Services',
+  'Администрирование',
+  'Поддержка',
+  'Настройки',
+];
+export const secondLevelTexts = [
+  'ML Space',
+  'Data Catalog',
+  'Environments',
+  'Deployments',
+  'AutoML',
+  'Pipelines',
+  'AI Marketplaces',
+  'Администрирование',
+  'Поддержка',
+  'Настройки',
+];
+export const filteredTexts = ['Data Catalog', 'Data Transfer Service', 'Datahub', 'Dataset Registry'];

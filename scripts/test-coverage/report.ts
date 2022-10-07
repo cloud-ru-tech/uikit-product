@@ -1,8 +1,10 @@
 import path from 'path';
 
-const Nyc = require('nyc');
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import Nyc from 'nyc';
 const tempDir = path.join(__dirname, '../../.nyc_output');
-const coverageDir = path.join(__dirname, '../../cypress/coverage');
+const coverageDir = path.join(__dirname, '../../testcafe/coverage');
 
 export function report({ name, include, reporter }: { name: string; include: string[]; reporter: string[] }) {
   const reportDir = path.join(coverageDir, name);

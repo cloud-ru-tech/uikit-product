@@ -13,12 +13,12 @@ type CommonPredefinedDecorIconProps = WithSupportProps<{
   className?: string;
 }>;
 
-type PredefinedDecorIconProps = CommonPredefinedDecorIconProps & {
+export type PredefinedDecorIconProps = CommonPredefinedDecorIconProps & {
   type: PredefinedDecorIconType.Predefined;
   icon: Icon;
 };
 
-type DecorIconProps = CommonPredefinedDecorIconProps & {
+export type DecorIconProps = CommonPredefinedDecorIconProps & {
   type: PredefinedDecorIconType.Custom;
   icon: ReactElement<{ size?: string | number }>;
 };

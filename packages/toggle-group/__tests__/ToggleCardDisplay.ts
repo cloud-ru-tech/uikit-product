@@ -1,18 +1,12 @@
-describe('[Toggle Group]: Toggle Card Display', () => {
-  it('renders correctly', () => {
-    cy.visitComponent({
-      group: 'toggle-group-toggle-card',
-      name: 'display',
-      props: { 'data-test-id': 'toggle-card-display' },
-    });
+import { fixture, Selector, test } from 'testcafe';
 
-    cy.getByDataTestId('toggle-card-display').within(() => {
-      cy.getByDataTestId('toggle-card-display-icon')
-        .should('exist')
-        .getByDataTestId('toggle-card-display-title')
-        .should('exist');
-    });
-  });
+import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
+
+fixture('ToggleCardDisplay').page(getTestcafeUrl({ group: 'toggle-group-toggle-card', name: 'display' }));
+
+test('renders correctly', async t => {
+  const icon = Selector(dataTestIdSelector('toggle-card-display-icon'));
+  const title = Selector(dataTestIdSelector('toggle-card-display-title'));
+
+  await t.expect(icon.exists).ok().expect(title.exists).ok();
 });
-
-export {};

@@ -1,20 +1,13 @@
-describe('[Toggle Group]: Toggle Card', () => {
-  it('renders correctly', () => {
-    cy.visitComponent({
-      group: 'toggle-group-toggle-card',
-      name: 'card',
-      props: { 'data-test-id': 'toggle-card' },
-    });
+import { fixture, Selector, test } from 'testcafe';
 
-    cy.getByDataTestId('toggle-card').within(() => {
-      cy.getByDataTestId('toggle-card-icon')
-        .should('exist')
-        .getByDataTestId('toggle-card-title')
-        .should('exist')
-        .getByDataTestId('toggle-card-description')
-        .should('exist');
-    });
-  });
+import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
+
+fixture('ToggleCard').page(getTestcafeUrl({ group: 'toggle-group-toggle-card', name: 'card' }));
+
+test('renders correctly', async t => {
+  const icon = Selector(dataTestIdSelector('toggle-card-icon'));
+  const title = Selector(dataTestIdSelector('toggle-card-title'));
+  const description = Selector(dataTestIdSelector('toggle-card-description'));
+
+  await t.expect(icon.exists).ok().expect(title.exists).ok().expect(description.exists).ok();
 });
-
-export {};

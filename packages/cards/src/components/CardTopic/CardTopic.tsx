@@ -57,7 +57,9 @@ export function CardTopic({ title, icon, color, className, onClick, ...rest }: C
       </S.LeftSide>
 
       <S.RightSide>
-        <S.Title tag={TruncatedTextWithTooltip.containerTags.H4}>{title}</S.Title>
+        <S.Title data-test-id='card-topic__title' tag={TruncatedTextWithTooltip.containerTags.H4}>
+          {title}
+        </S.Title>
       </S.RightSide>
     </S.Wrapper>
   );

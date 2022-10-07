@@ -11,7 +11,7 @@ import * as S from '../styled';
 import { InputRangeProps } from '../types';
 import { useFocus } from '../useFocus';
 import { useMarks } from '../useMarks';
-
+export type { InputRangeProps };
 const ForwarderInputRange = forwardRef<HTMLInputElement, InputRangeProps>(
   (
     {

@@ -1,43 +1,41 @@
-describe('[Toggle Group]: Toggle Group', () => {
-  function visit(mode: string) {
-    cy.visitComponent({
-      group: 'toggle-group',
-      name: 'toggle-group',
-      props: { mode, 'data-test-id': 'toggle-group' },
-    });
-  }
+import { fixture, Selector, test } from 'testcafe';
 
-  it('select checkbox cards correctly', () => {
-    visit('checkbox');
+import { ToggleGroupProps } from '@sbercloud/uikit-product-toggle-group';
 
-    cy.getByDataTestId('toggle-group').within(() => {
-      cy.getByDataTestId('basic-images-card-1')
-        .click()
-        .getByDataTestId('models-card-1')
-        .click()
-        .getByDataTestId('containers-card-1')
-        .click()
-        .click()
-        .getByDataTestId('toggle-card-box-input-checked')
-        .should('have.length', 2);
-    });
-  });
+import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
-  it('select radio cards correctly', () => {
-    visit('radio');
+function getPage(props: Partial<ToggleGroupProps>) {
+  return getTestcafeUrl({ group: 'toggle-group', name: 'toggle-group', props });
+}
 
-    cy.getByDataTestId('toggle-group').within(() => {
-      cy.getByDataTestId('basic-images-card-1')
-        .click()
-        .getByDataTestId('models-card-1')
-        .click()
-        .getByDataTestId('containers-card-1')
-        .click()
-        .click()
-        .getByDataTestId('toggle-card-box-input-checked')
-        .should('have.length', 1);
-    });
-  });
+fixture('ToggleGroup');
+
+test.page(getPage({ mode: 'checkbox' as ToggleGroupProps['mode'] }))('select checkbox cards correctly', async t => {
+  const basicImagesCard = Selector(dataTestIdSelector('basic-images-card-1'));
+  const modelsCard = Selector(dataTestIdSelector('models-card-1'));
+  const containersCard = Selector(dataTestIdSelector('containers-card-1'));
+  const checkedInputs = Selector(dataTestIdSelector('toggle-card-box-input-checked'));
+
+  await t
+    .click(basicImagesCard)
+    .click(modelsCard)
+    .click(containersCard)
+    .click(containersCard)
+    .expect(checkedInputs.count)
+    .eql(2);
 });
 
-export {};
+test.page(getPage({ mode: 'radio' as ToggleGroupProps['mode'] }))('select radio cards correctly', async t => {
+  const basicImagesCard = Selector(dataTestIdSelector('basic-images-card-1'));
+  const modelsCard = Selector(dataTestIdSelector('models-card-1'));
+  const containersCard = Selector(dataTestIdSelector('containers-card-1'));
+  const checkedInputs = Selector(dataTestIdSelector('toggle-card-box-input-checked'));
+
+  await t
+    .click(basicImagesCard)
+    .click(modelsCard)
+    .click(containersCard)
+    .click(containersCard)
+    .expect(checkedInputs.count)
+    .eql(1);
+});

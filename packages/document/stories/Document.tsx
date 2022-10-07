@@ -35,6 +35,7 @@ const DOCUMENTS: DocumentProps[] = [
       name: 'testfile.txt',
       size: 764456,
     },
+    'data-test-id': 'no-mime-type',
   },
   {
     file: {
@@ -57,6 +58,7 @@ const DOCUMENTS: DocumentProps[] = [
       },
     },
     className: documentSmallClassName,
+    'data-test-id': 'long-title',
   },
   {
     file: {

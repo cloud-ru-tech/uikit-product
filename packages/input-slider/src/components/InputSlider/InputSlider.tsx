@@ -11,7 +11,7 @@ import * as S from '../styled';
 import { InputSliderProps } from '../types';
 import { useFocus } from '../useFocus';
 import { useMarks } from '../useMarks';
-
+export type { InputSliderProps };
 const ForwarderInputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
   (
     {
@@ -67,7 +67,11 @@ const ForwarderInputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
             onBlur={onBluer}
           />
 
-          {postfix && <S.InputPostfixTextWrapper data-disabled={disabled}>{postfix}</S.InputPostfixTextWrapper>}
+          {postfix && (
+            <S.InputPostfixTextWrapper data-test-id={'input-slider__postfix'} data-disabled={disabled}>
+              {postfix}
+            </S.InputPostfixTextWrapper>
+          )}
         </S.InputWrapper>
 
         <S.InputSlider

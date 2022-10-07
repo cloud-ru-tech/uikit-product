@@ -16,11 +16,15 @@ export function CardBanner({ title, description, src, buttons, className, ...res
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)}>
       <S.LeftSide>
-        <S.Title tag={TruncatedTextWithTooltip.containerTags.H3}>{title}</S.Title>
+        <S.Title data-test-id='card-banner__title' tag={TruncatedTextWithTooltip.containerTags.H3}>
+          {title}
+        </S.Title>
 
-        <S.Description tag={TruncatedTextWithTooltip.containerTags.Span}>{description}</S.Description>
+        <S.Description data-test-id='card-banner__description' tag={TruncatedTextWithTooltip.containerTags.Span}>
+          {description}
+        </S.Description>
 
-        <S.ButtonsWrapper>
+        <S.ButtonsWrapper data-test-id='card-banner__buttons'>
           {buttons.map((button, index) => (
             <Button key={`${index}${button.text}`} {...button} />
           ))}

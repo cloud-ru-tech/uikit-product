@@ -34,9 +34,15 @@ export function CardCategory({
       </S.LeftSide>
 
       <S.RightSide>
-        <S.Title tag={TruncatedTextWithTooltip.containerTags.H3}>{title}</S.Title>
+        <S.Title data-test-id='card-category__title' tag={TruncatedTextWithTooltip.containerTags.H3}>
+          {title}
+        </S.Title>
 
-        {description && <S.Description tag={TruncatedTextWithTooltip.containerTags.Span}>{description}</S.Description>}
+        {description && (
+          <S.Description data-test-id='card-category__description' tag={TruncatedTextWithTooltip.containerTags.Span}>
+            {description}
+          </S.Description>
+        )}
       </S.RightSide>
     </S.Wrapper>
   );

@@ -24,12 +24,16 @@ export function CardWide({ title, titleImageSrc, description, className, buttons
             </S.TitleImageWrapper>
           )}
 
-          <S.Title tag={TruncatedTextWithTooltip.containerTags.H3}>{title}</S.Title>
+          <S.Title data-test-id='card-wide__title' tag={TruncatedTextWithTooltip.containerTags.H3}>
+            {title}
+          </S.Title>
         </S.TitleWrapper>
 
-        <S.Description tag={TruncatedTextWithTooltip.containerTags.Span}>{description}</S.Description>
+        <S.Description data-test-id='card-wide__description' tag={TruncatedTextWithTooltip.containerTags.Span}>
+          {description}
+        </S.Description>
 
-        <S.ButtonsWrapper>
+        <S.ButtonsWrapper data-test-id='card-wide__buttons'>
           {buttons.map((button, index) => (
             <Button key={`${index}${button.text}`} {...button} />
           ))}

@@ -7,7 +7,7 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { PredefinedDecorIconPrivate, PredefinedDecorIconPrivateProps } from '../src';
+import { DecorIconProps, PredefinedDecorIconPrivate, PredefinedDecorIconProps } from '../src';
 import { PredefinedDecorIconType } from '../src/components/decor/constants';
 import { notReachable } from '../src/helpers';
 
@@ -16,7 +16,9 @@ export default {
   component: PredefinedDecorIconPrivate,
 } as Meta;
 
-const Template: Story<PredefinedDecorIconPrivateProps> = props => {
+type StoryProps = Omit<DecorIconProps, 'icon'> | PredefinedDecorIconProps;
+
+const Template: Story<StoryProps> = props => {
   switch (props.type) {
     case PredefinedDecorIconType.Predefined: {
       const { icon = PredefinedDecorIconPrivate.icons.Info } = props;

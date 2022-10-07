@@ -43,12 +43,20 @@ export function CardQuickAction({
       </S.LeftSide>
 
       <S.MiddleSide>
-        <S.Title data-variant={variant || undefined} tag={TruncatedTextWithTooltip.containerTags.H4}>
+        <S.Title
+          data-test-id='card-quick-action__title'
+          data-variant={variant || undefined}
+          tag={TruncatedTextWithTooltip.containerTags.H4}
+        >
           {title}
         </S.Title>
 
         {description && (
-          <S.Description data-variant={variant || undefined} tag={TruncatedTextWithTooltip.containerTags.Span}>
+          <S.Description
+            data-test-id='card-quick-action__description'
+            data-variant={variant || undefined}
+            tag={TruncatedTextWithTooltip.containerTags.Span}
+          >
             {description}
           </S.Description>
         )}
