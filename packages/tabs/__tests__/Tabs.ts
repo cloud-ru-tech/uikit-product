@@ -151,7 +151,7 @@ test('does not select focused tab via letters keydown', async t => {
     .notOk();
 });
 
-test('scroll tabs on selected change', async t => {
+test.skip('scroll tabs on selected change', async t => {
   const navigationListItem2 = getNavigationListItem('id2');
   const navigationListItem11 = getNavigationListItem('id11');
   const navigationListItem16 = getNavigationListItem('id16');
