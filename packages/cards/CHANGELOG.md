@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.1.0...@sbercloud/uikit-product-cards@1.1.1) (2022-10-07)
+
+
+### Bug Fixes
+
+* testcafe tests ([d2868fa](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d2868faaf0b6755ed3c7981ed7a6002e8f0cd9e0))
+
+
+
+
+
 # [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@0.16.24...@sbercloud/uikit-product-cards@1.1.0) (2022-10-03)
 
 

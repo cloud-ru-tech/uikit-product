@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-alert",
   "title": "Alert",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
     "@sbercloud/uikit-product-button": "5.0.34",
     "@sbercloud/uikit-product-icons": "5.3.1",
     "@sbercloud/uikit-product-link": "3.0.37",
-    "@sbercloud/uikit-product-predefined-icons-private": "0.5.0",
+    "@sbercloud/uikit-product-predefined-icons-private": "0.5.1",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.0.4"
