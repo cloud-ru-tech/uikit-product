@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-overlay-private@1.0.12...@sbercloud/uikit-product-overlay-private@1.0.13) (2022-10-10)
+
+
+### Bug Fixes
+
+* testcafe tests ([d2868fa](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d2868faaf0b6755ed3c7981ed7a6002e8f0cd9e0))
+
+
+
+
+
 ## [1.0.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-overlay-private@1.0.11...@sbercloud/uikit-product-overlay-private@1.0.12) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-overlay-private

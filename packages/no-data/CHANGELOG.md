@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-no-data@2.0.6...@sbercloud/uikit-product-no-data@2.0.7) (2022-10-10)
+
+
+### Bug Fixes
+
+* **FF-725:** title text centering ([7a76d52](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7a76d52ad6264caefa21751445bad136d9796ad9))
+
+
+
+
+
 ## [2.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-no-data@2.0.5...@sbercloud/uikit-product-no-data@2.0.6) (2022-10-07)
 
 

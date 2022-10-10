@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-localization@0.10.34...@sbercloud/uikit-product-localization@0.10.35) (2022-10-10)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-localization
+
+
+
+
+
 ## [0.10.34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-localization@0.10.33...@sbercloud/uikit-product-localization@0.10.34) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-localization

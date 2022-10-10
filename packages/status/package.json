@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-status",
   "title": "React Status",
-  "version": "6.0.12",
+  "version": "6.0.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -30,6 +30,6 @@
   "dependencies": {
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
-    "@sbercloud/uikit-product-utils": "3.0.4"
+    "@sbercloud/uikit-product-utils": "3.1.0"
   }
 }

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-hierarchy-menu@0.9.13...@sbercloud/uikit-product-hierarchy-menu@0.9.14) (2022-10-10)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-hierarchy-menu
+
+
+
+
+
 ## [0.9.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-hierarchy-menu@0.9.12...@sbercloud/uikit-product-hierarchy-menu@0.9.13) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-hierarchy-menu

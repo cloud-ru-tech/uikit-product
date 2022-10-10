@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tooltip-private@1.2.20...@sbercloud/uikit-product-tooltip-private@1.2.21) (2022-10-10)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-tooltip-private
+
+
+
+
+
 ## [1.2.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tooltip-private@1.2.19...@sbercloud/uikit-product-tooltip-private@1.2.20) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-tooltip-private

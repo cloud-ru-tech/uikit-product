@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-table-private",
   "title": "React Table Private",
-  "version": "0.18.8",
+  "version": "0.18.9",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,11 +33,11 @@
     "@ag-grid-enterprise/core": "28.1.1",
     "@ag-grid-enterprise/range-selection": "28.1.1",
     "@sbercloud/uikit-product-icons": "5.3.1",
-    "@sbercloud/uikit-product-no-data": "2.0.6",
-    "@sbercloud/uikit-product-predefined-icons-private": "0.5.1",
+    "@sbercloud/uikit-product-no-data": "2.0.7",
+    "@sbercloud/uikit-product-predefined-icons-private": "0.5.2",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
-    "@sbercloud/uikit-product-utils": "3.0.4",
+    "@sbercloud/uikit-product-utils": "3.1.0",
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {

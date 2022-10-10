@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@3.0.4...@sbercloud/uikit-product-utils@3.1.0) (2022-10-10)
+
+
+### Features
+
+* **FF-725:** introduce useEventHandler hook ([eca33bf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eca33bf3f5ba836a610358f03de28bcfa73551cd))
+
+
+
+
+
 ## [3.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@3.0.3...@sbercloud/uikit-product-utils@3.0.4) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-utils
