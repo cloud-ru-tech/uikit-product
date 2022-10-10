@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.16.5...@sbercloud/uikit-product-dropdown@0.16.6) (2022-10-10)
+
+
+### Bug Fixes
+
+* change font-size from default 16px to typography 14px ([dd1e911](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dd1e9110172dd35d3022f28ee11274be944fc1b5))
+
+
+
+
+
 ## [0.16.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.16.4...@sbercloud/uikit-product-dropdown@0.16.5) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-dropdown
