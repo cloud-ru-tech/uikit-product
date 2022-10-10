@@ -4,7 +4,7 @@ import { hooks } from './hooks';
 
 export const Config: Partial<TestCafeConfigurationOptions> & { hooks: any } = {
   src: ['packages/*/__tests__/*.ts'],
-  concurrency: 2,
+  concurrency: 3,
   quarantineMode: {
     successThreshold: 3,
     attemptLimit: 5,
@@ -22,11 +22,6 @@ export const Config: Partial<TestCafeConfigurationOptions> & { hooks: any } = {
     path: resolve(__dirname, 'screenshots'),
     pathPattern: '${FIXTURE}-${TEST}-${USERAGENT}/${RUN_ID}.png',
     takeOnFails: true,
-  },
-  videoPath: resolve(__dirname, 'videos'),
-  videoOptions: {
-    failedOnly: true,
-    pathPattern: '${FIXTURE}-${TEST}-${USERAGENT}/${RUN_ID}.mp4',
   },
   selectorTimeout: 10000,
   assertionTimeout: 10000,
