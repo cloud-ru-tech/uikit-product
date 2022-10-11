@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [4.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.3.3...@sbercloud/uikit-product-notification@4.4.0) (2022-10-11)
+
+
+### Features
+
+* **FF-839:** add short use api ([e683708](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e683708b1f385834b21eeb8882d2fea8dd56a66b))
+
+
+
+
+
 ## [4.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.3.2...@sbercloud/uikit-product-notification@4.3.3) (2022-10-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-notification
