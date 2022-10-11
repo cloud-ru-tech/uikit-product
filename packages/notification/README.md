@@ -5,6 +5,33 @@
 
 [Changelog](./CHANGELOG.md)
 
+## Short Usage
+
+```typescript
+import { notification } from '@sbercloud/uikit-product-notification';
+
+// create small notification
+const smallId = await notification.small.success({ text });
+
+// create big notification
+const bigId = await notification.big.success({ title, description });
+
+// update small notification
+notification.small.update.error(smallId, { text: 'new text' });
+
+// update big notification
+notification.big.update.error(bigId, {
+    title: 'new text',
+    description: 'new description',
+});
+
+// dismiss small notification
+notification.small.dismiss(smallId);
+
+// dismiss big notification
+notification.big.dismiss(bigId);
+```
+
 ## Usage
 ### You only need a hook to use a notification, see available props in types
 

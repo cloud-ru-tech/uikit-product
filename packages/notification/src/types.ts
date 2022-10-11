@@ -1,10 +1,12 @@
-import { ReactText } from 'react';
-import { ToastOptions as RtToastOptions } from 'react-toastify';
+import { Id, ToastOptions as RtToastOptions } from 'react-toastify';
 
 import { NotificationBigProps, NotificationContainerProps, NotificationSmallProps } from './components';
 
+export type NotificationId = Id;
+export type PromisedId = Promise<NotificationId>;
+
 export type NotificationOptions = {
-  id?: RtToastOptions['toastId'];
+  id?: NotificationId;
   autoClose?: RtToastOptions['autoClose'];
   onClose?: RtToastOptions['onClose'];
 };
@@ -38,7 +40,7 @@ type DefaultOrCustomNotification<T extends keyof NotificationPropsMap> =
 
 export type OpenNotification = <T extends keyof NotificationPropsMap>(
   props: DefaultOrCustomNotification<T> & OpenNotificationProps<T>,
-) => Promise<ReactText | undefined>;
+) => PromisedId;
 
 export type UpdateNotification = <T extends keyof NotificationPropsMap>(
   id: string | number,
@@ -50,3 +52,6 @@ export type UpdateNotification = <T extends keyof NotificationPropsMap>(
     customNotification?: JSX.Element;
   },
 ) => void;
+
+export type SmallOptions = Omit<NotificationSmallProps, 'status'>;
+export type BigOptions = Omit<NotificationBigProps, 'status'>;

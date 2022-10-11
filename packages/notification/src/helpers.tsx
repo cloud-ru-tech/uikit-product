@@ -2,14 +2,20 @@ import { render } from 'react-dom';
 import { toast, ToastOptions as RtToastOptions } from 'react-toastify';
 
 import { NotificationBig, NotificationBigProps } from './components/NotificationBig';
+import { NotificationBigStatus } from './components/NotificationBig/constants';
 import { NotificationContainer, NotificationContainerProps } from './components/NotificationContainer';
 import { NotificationSmall, NotificationSmallProps } from './components/NotificationSmall';
+import { NotificationSmallStatus } from './components/NotificationSmall/constants';
 import { DEFAULT_AUTO_CLOSE, NOTIFICATION_CONTAINER_DEFAULT_PROPS, NOTIFICATION_ROOT_ID } from './constants';
 import {
+  BigOptions,
+  NotificationId,
   NotificationOptions,
   NotificationPropsMap,
   NotificationType,
   OpenNotification,
+  PromisedId,
+  SmallOptions,
   UpdateNotification,
 } from './types';
 
@@ -175,3 +181,210 @@ export const updateNotification: UpdateNotification = (
 
 export const dismissNotification = toast.dismiss;
 export const isNotificationActive = toast.isActive;
+
+const small = {
+  success(options: SmallOptions) {
+    return openNotification({ type: NotificationType.Small, notificationProps: options });
+  },
+
+  neutral(options: SmallOptions) {
+    return openNotification({
+      type: NotificationType.Small,
+      notificationProps: { ...options, status: NotificationSmallStatus.Neutral },
+    });
+  },
+
+  loading(options: SmallOptions) {
+    return openNotification({
+      type: NotificationType.Small,
+      notificationProps: { ...options, status: NotificationSmallStatus.Loading },
+    });
+  },
+
+  error(options: SmallOptions) {
+    return openNotification({
+      type: NotificationType.Small,
+      notificationProps: { ...options, status: NotificationSmallStatus.Error },
+    });
+  },
+
+  update: {
+    success(id: NotificationId, options: SmallOptions) {
+      updateNotification(id, {
+        type: NotificationType.Small,
+        notificationProps: { ...options, status: NotificationSmallStatus.Success },
+      });
+    },
+
+    neutral(id: NotificationId, options: SmallOptions) {
+      updateNotification(id, {
+        type: NotificationType.Small,
+        notificationProps: { ...options, status: NotificationSmallStatus.Neutral },
+      });
+    },
+
+    loading(id: NotificationId, options: SmallOptions) {
+      updateNotification(id, {
+        type: NotificationType.Small,
+        notificationProps: { ...options, status: NotificationSmallStatus.Loading },
+      });
+    },
+
+    error(id: NotificationId, options: SmallOptions) {
+      updateNotification(id, {
+        type: NotificationType.Small,
+        notificationProps: { ...options, status: NotificationSmallStatus.Error },
+      });
+    },
+  },
+
+  dismiss(id?: NotificationId) {
+    return toast.dismiss(id);
+  },
+};
+
+const big = {
+  success(options: BigOptions) {
+    return openNotification({
+      type: NotificationType.Big,
+      notificationProps: { ...options, status: NotificationBigStatus.Success },
+    });
+  },
+
+  info(options: BigOptions) {
+    return openNotification({
+      type: NotificationType.Big,
+      notificationProps: { ...options, status: NotificationBigStatus.Info },
+    });
+  },
+
+  warning(options: BigOptions) {
+    return openNotification({
+      type: NotificationType.Big,
+      notificationProps: { ...options, status: NotificationBigStatus.Warning },
+    });
+  },
+
+  warningAlarm(options: BigOptions) {
+    return openNotification({
+      type: NotificationType.Big,
+      notificationProps: { ...options, status: NotificationBigStatus.WarningAlarm },
+    });
+  },
+
+  warningCritical(options: BigOptions) {
+    return openNotification({
+      type: NotificationType.Big,
+      notificationProps: { ...options, status: NotificationBigStatus.WarningCritical },
+    });
+  },
+
+  error(options: BigOptions) {
+    return openNotification({
+      type: NotificationType.Big,
+      notificationProps: { ...options, status: NotificationBigStatus.Error },
+    });
+  },
+
+  errorAlarm(options: BigOptions) {
+    return openNotification({
+      type: NotificationType.Big,
+      notificationProps: { ...options, status: NotificationBigStatus.ErrorAlarm },
+    });
+  },
+
+  update: {
+    success(id: NotificationId, options: BigOptions) {
+      return updateNotification(id, {
+        type: NotificationType.Big,
+        notificationProps: { ...options, status: NotificationBigStatus.Success },
+      });
+    },
+
+    info(id: NotificationId, options: BigOptions) {
+      return updateNotification(id, {
+        type: NotificationType.Big,
+        notificationProps: { ...options, status: NotificationBigStatus.Info },
+      });
+    },
+
+    warning(id: NotificationId, options: BigOptions) {
+      return updateNotification(id, {
+        type: NotificationType.Big,
+        notificationProps: { ...options, status: NotificationBigStatus.Warning },
+      });
+    },
+
+    warningAlarm(id: NotificationId, options: BigOptions) {
+      return updateNotification(id, {
+        type: NotificationType.Big,
+        notificationProps: { ...options, status: NotificationBigStatus.WarningAlarm },
+      });
+    },
+
+    warningCritical(id: NotificationId, options: BigOptions) {
+      return updateNotification(id, {
+        type: NotificationType.Big,
+        notificationProps: { ...options, status: NotificationBigStatus.WarningCritical },
+      });
+    },
+
+    error(id: NotificationId, options: BigOptions) {
+      return updateNotification(id, {
+        type: NotificationType.Big,
+        notificationProps: { ...options, status: NotificationBigStatus.Error },
+      });
+    },
+
+    errorAlarm(id: NotificationId, options: BigOptions) {
+      return updateNotification(id, {
+        type: NotificationType.Big,
+        notificationProps: { ...options, status: NotificationBigStatus.ErrorAlarm },
+      });
+    },
+  },
+
+  dismiss(id?: NotificationId) {
+    return toast.dismiss(id);
+  },
+};
+
+type Notification = {
+  small: {
+    success(options: SmallOptions): PromisedId;
+    neutral(options: SmallOptions): PromisedId;
+    loading(options: SmallOptions): PromisedId;
+    error(options: SmallOptions): PromisedId;
+    update: {
+      success(id: NotificationId, options: SmallOptions): void;
+      neutral(id: NotificationId, options: SmallOptions): void;
+      loading(id: NotificationId, options: SmallOptions): void;
+      error(id: NotificationId, options: SmallOptions): void;
+    };
+    dismiss(id?: NotificationId): void;
+  };
+  big: {
+    success(options: BigOptions): PromisedId;
+    info(options: BigOptions): PromisedId;
+    warning(options: BigOptions): PromisedId;
+    warningAlarm(options: BigOptions): PromisedId;
+    warningCritical(options: BigOptions): PromisedId;
+    error(options: BigOptions): PromisedId;
+    errorAlarm(options: BigOptions): PromisedId;
+    update: {
+      success(id: NotificationId, options: BigOptions): void;
+      info(id: NotificationId, options: BigOptions): void;
+      warning(id: NotificationId, options: BigOptions): void;
+      warningAlarm(id: NotificationId, options: BigOptions): void;
+      warningCritical(id: NotificationId, options: BigOptions): void;
+      error(id: NotificationId, options: BigOptions): void;
+      errorAlarm(id: NotificationId, options: BigOptions): void;
+    };
+    dismiss(id?: NotificationId): void;
+  };
+};
+
+export const notification: Notification = {
+  small,
+  big,
+};
