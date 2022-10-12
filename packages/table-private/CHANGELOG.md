@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.18.9...@sbercloud/uikit-product-table-private@0.18.10) (2022-10-12)
+
+
+### Bug Fixes
+
+* **FF-1082:** change border-radius, border-color all tables ([a59f2f0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a59f2f0e59e351df713ccce7d9c44215376bf119))
+
+
+
+
+
 ## [0.18.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.18.8...@sbercloud/uikit-product-table-private@0.18.9) (2022-10-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table-private
