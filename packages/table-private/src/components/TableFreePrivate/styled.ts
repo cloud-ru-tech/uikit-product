@@ -1,11 +1,7 @@
 import { styled } from '@linaria/react';
 import { VFC } from 'react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
-
 import { TableFreePrivateProps } from './types';
-
-const { COLORS_TABLE } = DEPRECATED_EXPORT_VARS;
 
 export const styledTableFreePrivate = (
   TableFreePrivate: VFC<TableFreePrivateProps>,
@@ -26,11 +22,6 @@ export const styledTableFreePrivate = (
     .ag-cell-value {
       width: 100%;
     }
-  }
-
-  &.ag-theme-alpine {
-    border: 1px solid var(${COLORS_TABLE.TABLE_BORDER});
-    border-radius: 4px;
   }
 
   &.ag-theme-alpine .ag-cell-value .ag-react-container {

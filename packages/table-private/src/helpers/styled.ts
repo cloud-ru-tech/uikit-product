@@ -4,6 +4,13 @@ import { VFC } from 'react';
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-product-typography';
 
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './theme';
+
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
+
 const { COLORS_TABLE } = DEPRECATED_EXPORT_VARS;
 
 type TableProps = { className?: string };
@@ -13,6 +20,9 @@ export const styledTable = <P extends TableProps>(Table: VFC<P>) => styled(Table
     width: 100%;
     height: 100%;
     font-family: inherit;
+    border: 1px solid var(${COLORS.border});
+    border-radius: 8px;
+    overflow: hidden;
 
     .ag-horizontal-right-spacer:not(.ag-scroller-corner) {
       border-left: unset;
