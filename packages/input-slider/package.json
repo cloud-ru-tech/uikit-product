@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-input-slider",
   "title": "Input Slider",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "sideEffects": [
     "*.css",
     "*.woff",
