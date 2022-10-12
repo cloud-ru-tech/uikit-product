@@ -49,18 +49,12 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const Logo = styled(PredefinedMLSpaceLogo)`
-  > svg {
-    width: 180px;
-  }
-`;
-
 const Tooltip = ({ isMobile }: { isMobile?: boolean }) => (
   <HeaderBalanceTooltip isMobile={isMobile} balance={144_401_810} limit={155_500_000} onRechargeClick={() => {}} />
 );
 const MLSpaceLogo = () => (
   <HeaderLogo href={''}>
-    <Logo height={16} />
+    <PredefinedMLSpaceLogo height={16} />
   </HeaderLogo>
 );
 

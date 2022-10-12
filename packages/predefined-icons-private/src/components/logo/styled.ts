@@ -15,6 +15,10 @@ export const Wrapper = styled.span<WrapperProps>`
   display: inline-flex;
   height: ${props => props.height}px;
 
+  svg {
+    height: 100%;
+  }
+
   .${'ml-space-logo-text'} {
     fill: var(${COLORS.fill.icon.MLSpaceText});
   }
