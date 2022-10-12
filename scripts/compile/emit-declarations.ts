@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import { JsxEmit, createCompilerHost, createProgram } from 'typescript';
+import { createCompilerHost, createProgram, JsxEmit } from 'typescript';
 
 import { name } from '../../package.json';
 import { ensureDirectory } from '../utils/ensureDirectory';

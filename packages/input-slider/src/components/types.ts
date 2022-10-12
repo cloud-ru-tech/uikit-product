@@ -1,7 +1,7 @@
 import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-export type InputSliderBaseProps = WithSupportProps<{
+export type InputSliderBaseProps = {
   className?: string;
   disabled?: boolean;
   hint?: string;
@@ -13,14 +13,18 @@ export type InputSliderBaseProps = WithSupportProps<{
   min: number;
   optional?: boolean;
   step?: number;
-}>;
-
-export type InputSliderProps = InputSliderBaseProps & {
-  value: number;
-  onChange: (value: number) => void;
 };
 
-export type InputRangeProps = InputSliderBaseProps & {
-  value: [number, number];
-  onChange: (value: [number, number]) => void;
-};
+export type InputSliderProps = WithSupportProps<
+  InputSliderBaseProps & {
+    value: number;
+    onChange: (value: number) => void;
+  }
+>;
+
+export type InputRangeProps = WithSupportProps<
+  InputSliderBaseProps & {
+    value: [number, number];
+    onChange: (value: [number, number]) => void;
+  }
+>;
