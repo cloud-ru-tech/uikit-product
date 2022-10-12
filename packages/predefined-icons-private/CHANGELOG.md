@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.2...@sbercloud/uikit-product-predefined-icons-private@0.5.3) (2022-10-12)
+
+
+### Bug Fixes
+
+* **FF-1080:** Fixed Predefined Decor Icons Private story ([d11e242](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d11e242b97d48500c87874b4e6a293bb85ba9dc4))
+* **FF-1093:** predefined logo svg height for Safari ([23a82a4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/23a82a486d3f60a285fe9ec396a251156132e9f8))
+
+
+
+
+
 ## [0.5.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.1...@sbercloud/uikit-product-predefined-icons-private@0.5.2) (2022-10-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
