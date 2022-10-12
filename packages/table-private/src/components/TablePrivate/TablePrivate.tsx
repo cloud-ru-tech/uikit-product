@@ -72,6 +72,8 @@ function StylelessTablePrivate({
 
     gridApi.addEventListener(Events.EVENT_MODEL_UPDATED, onModelUpdatedHandler);
 
+    onModelUpdatedHandler();
+
     return () => gridApi.removeEventListener(Events.EVENT_MODEL_UPDATED, onModelUpdatedHandler);
   }, [gridApi]);
 
