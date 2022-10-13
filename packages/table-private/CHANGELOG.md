@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.18.11...@sbercloud/uikit-product-table-private@0.18.12) (2022-10-13)
+
+
+### Bug Fixes
+
+* **FF-986:** add initial displayRowCount update to fix missing header ([27e0bfb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/27e0bfbb821ce9b20ac56e6b8b9c1010f8e36756))
+
+
+
+
+
 ## [0.18.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.18.10...@sbercloud/uikit-product-table-private@0.18.11) (2022-10-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table-private
