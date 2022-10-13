@@ -7,7 +7,6 @@ import { SidebarItemPostfix } from '../SidebarItemPostfix';
 import * as S from './styled';
 
 type SidebarItem = SidebarItemProps & {
-  isHeaderItem?: boolean;
   isOpen?: boolean;
   level?: number;
   showArrow?: boolean;
@@ -28,7 +27,6 @@ export function SidebarItem({
   level,
   onClick,
   isOpen,
-  isHeaderItem,
   status,
   isMobile,
 }: SidebarItem) {
@@ -36,11 +34,9 @@ export function SidebarItem({
 
   const isActive = id === active || undefined;
 
-  const link = isHeaderItem ? undefined : href;
-
   return (
     <S.Item
-      href={link}
+      href={href}
       onClick={onClick}
       data-disabled={disabled || undefined}
       data-active={isActive}

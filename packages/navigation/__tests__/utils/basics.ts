@@ -1,5 +1,5 @@
 import { expectItemToBeActive, expectToHaveItemTexts } from './expects';
-import { getBackButton, getHoverMenu, getItemById, getItems } from './selectors';
+import { getBackButton, getHoverMenu, getHoverMenuItemById, getItemById, getItems } from './selectors';
 import { firstLevelTexts, itemIds, secondLevelTexts } from './testData';
 
 export function basics(isCollapsed: boolean) {
@@ -43,5 +43,24 @@ export function basics(isCollapsed: boolean) {
     } else {
       await expectToHaveItemTexts(t, firstLevelTexts);
     }
+  });
+
+  // eslint-disable-next-line testcafe-community/missing-expect
+  test('navigates to the root when clicking the header item', async t => {
+    await t.click(getItemById(itemIds.slide));
+
+    if (isCollapsed) {
+      await t.hover(getItemById(itemIds.accordion2));
+      await t.click(getHoverMenuItemById(itemIds.accordionSecondLevelChild2));
+      await expectItemToBeActive(t, itemIds.accordion2, true);
+    } else {
+      await t.click(getItemById(itemIds.accordion2));
+      await t.click(getItemById(itemIds.accordionSecondLevelChild2));
+      await expectItemToBeActive(t, itemIds.accordionSecondLevelChild2, isCollapsed);
+    }
+
+    await t.click(getItemById(itemIds.slide));
+
+    await expectItemToBeActive(t, itemIds.slide, isCollapsed);
   });
 }

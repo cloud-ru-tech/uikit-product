@@ -21,7 +21,7 @@ type SidebarListHeaderProps = {
 
 export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps) {
   const { languageCode } = useLanguage();
-  const { handleBackClick, isSearchShown, search, setSearch, openSearch, closeSearch, isCollapsed } =
+  const { handleBackClick, handleItemClick, isSearchShown, search, setSearch, openSearch, closeSearch, isCollapsed } =
     useSidebarContext();
   const searchRef = useRef<HTMLInputElement>(null);
   const searchWrapRef = useRef<HTMLDivElement>(null);
@@ -59,7 +59,7 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
 
           {level.title && (
             <Tooltip content={level.title.label} type={Tooltip.types.Tip} placement={Tooltip.placements.Right}>
-              <SidebarCollapsedItem item={level.title} />
+              <SidebarCollapsedItem item={level.title} onClick={handleItemClick(level.title)} />
             </Tooltip>
           )}
         </>
@@ -94,12 +94,12 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
                   id={level.title.id}
                   label={level.title.label}
                   icon={level.title.icon}
-                  href='#'
-                  isHeaderItem
+                  href={level.title.href ?? '#'}
+                  onClick={handleItemClick(level.title)}
                 />
               )}
 
-              <ButtonIcon
+              <S.SearchButton
                 icon={<SearchInterfaceSVG />}
                 onClick={openSearch}
                 data-test-id='sidebar__header__open-search-button'

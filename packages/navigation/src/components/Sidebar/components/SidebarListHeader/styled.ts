@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
 
+import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 export const BackButtonWrapper = styled.div`
@@ -15,13 +16,18 @@ export const Title = styled.div`
 export const TitleWrap = styled.div`
   display: flex;
   align-items: center;
-  padding-right: 16px;
+  position: relative;
   transition: opacity ${ANIMATIONS.TRANSITION};
 
   &[data-hide] {
     opacity: 0;
     pointer-events: none;
   }
+`;
+
+export const SearchButton = styled(ButtonIcon)`
+  position: absolute;
+  right: 16px;
 `;
 
 export const SearchWrap = styled.div`
