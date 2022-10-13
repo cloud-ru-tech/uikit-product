@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.20.2...@sbercloud/uikit-product-navigation@0.20.3) (2022-10-13)
+
+
+### Bug Fixes
+
+* **FF-1091:** make sidebar header item clickable ([6a252cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6a252cc3dd619d3a6ea861d9894d4bd1e5996934))
+* **FF-1093:** predefined logo svg height for Safari ([23a82a4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/23a82a486d3f60a285fe9ec396a251156132e9f8))
+
+
+
+
+
 ## [0.20.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.20.1...@sbercloud/uikit-product-navigation@0.20.2) (2022-10-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-navigation
