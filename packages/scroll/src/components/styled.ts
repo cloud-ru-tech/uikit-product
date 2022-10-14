@@ -29,15 +29,31 @@ export const scrollClassName = css`
     opacity: 0.5;
   }
 
+  & > .os-scrollbar-corner.os-scrollbar-corner-resize {
+    background-image: none;
+    mask-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.37 15.784a.5.5 0 0 0 .708 0l.707-.707a.5.5 0 0 0-.707-.707l-.707.707a.5.5 0 0 0 0 .707Zm-9.313-.707a.5.5 0 1 0 .707.707l10.02-10.02a.5.5 0 0 0-.707-.707l-10.02 10.02Zm4.657.707a.5.5 0 0 0 .707 0l5.364-5.364a.5.5 0 0 0-.707-.707l-5.364 5.364a.5.5 0 0 0 0 .707Z' /%3E%3C/svg%3E%0A");
+    mask-repeat: no-repeat;
+    mask-position: 100% 100%;
+    pointer-events: auto !important;
+  }
+
   &[data-variant=${Variants.Primary}] {
     & > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
       background-color: var(${SCROLL_COLORS.background.primary});
+    }
+
+    & > .os-scrollbar-corner.os-scrollbar-corner-resize {
+      background-color: var(${SCROLL_COLORS.resize.primary});
     }
   }
 
   &[data-variant=${Variants.OnDark}] {
     & > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
       background-color: var(${SCROLL_COLORS.background.dark});
+    }
+
+    & > .os-scrollbar-corner.os-scrollbar-corner-resize {
+      background-color: var(${SCROLL_COLORS.resize.dark});
     }
   }
 

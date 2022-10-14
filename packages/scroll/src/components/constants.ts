@@ -12,3 +12,10 @@ export enum BarHideStrategy {
   Never = 'never',
   Leave = 'leave',
 }
+
+export enum Resize {
+  None = 'none',
+  Horizontal = 'horizontal',
+  Vertical = 'vertical',
+  Both = 'both',
+}

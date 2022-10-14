@@ -19,9 +19,16 @@ enum Sizes {
   Medium = 'medium',
 }
 
-export enum BarHideStrategy {
+enum BarHideStrategy {
   Never = 'never',
   Leave = 'leave',
+}
+
+enum Resize {
+  None = 'none',
+  Horizontal = 'horizontal',
+  Vertical = 'vertical',
+  Both = 'both',
 }
 
 type ScrollProps = {
@@ -31,6 +38,7 @@ type ScrollProps = {
   flexbox?: boolean;
   onScroll?: (event?: UIEvent) => void;
   barHideStrategy?: BarHideStrategy;
+  resize?: Resize;
   className?: string;
 };
 ```

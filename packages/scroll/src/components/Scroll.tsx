@@ -6,7 +6,7 @@ import { forwardRef, ReactNode, useImperativeHandle, useRef } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { BarHideStrategy, Sizes, Variants } from './constants';
+import { BarHideStrategy, Resize, Sizes, Variants } from './constants';
 import * as S from './styled';
 
 export type ScrollProps = {
@@ -16,6 +16,7 @@ export type ScrollProps = {
   flexbox?: boolean;
   onScroll?: (event?: UIEvent) => void;
   barHideStrategy?: BarHideStrategy;
+  resize?: Resize;
   className?: string;
 };
 
@@ -28,6 +29,7 @@ const ScrollComponent = forwardRef<HTMLElement, WithSupportProps<ScrollProps>>(
       flexbox = false,
       onScroll,
       barHideStrategy = BarHideStrategy.Leave,
+      resize = Resize.None,
       className,
       ...rest
     },
@@ -53,6 +55,7 @@ const ScrollComponent = forwardRef<HTMLElement, WithSupportProps<ScrollProps>>(
             autoHide: barHideStrategy,
             autoHideDelay: 100,
           },
+          resize,
         }}
         ref={overlayScrollbarsRef}
         {...extractSupportProps(rest)}
@@ -67,8 +70,10 @@ export const Scroll = ScrollComponent as typeof ScrollComponent & {
   variants: typeof Variants;
   sizes: typeof Sizes;
   barHideStrategies: typeof BarHideStrategy;
+  resize: typeof Resize;
 };
 
 Scroll.variants = Variants;
 Scroll.sizes = Sizes;
 Scroll.barHideStrategies = BarHideStrategy;
+Scroll.resize = Resize;
