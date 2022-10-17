@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
+import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 
 import { StatusTag, StatusTagProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
@@ -11,20 +11,76 @@ export default {
   component: StatusTag,
 } as Meta;
 
-const Container = styled.div<{ theme: Themes }>`
-  width: 200px;
-  height: 200px;
+const Container = styled.div`
+  dispay: flex;
+`;
+
+const TableWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
+  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  overflow: auto;
+`;
+
+const TableColumn = styled.div`
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+
+  background-color: var(${EXPORT_VARS.GREY[25]});
+
+  &:not(:last-child) {
+    border-right: 1px solid var(${EXPORT_VARS.GREY[100]});
+  }
+`;
+
+const TableCell = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
-  border-radius: 10%;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#404040')};
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(${EXPORT_VARS.GREY[100]});
+  }
 `;
 
-const Template: Story<StatusTagProps> = ({ ...args }, { globals: { theme } }) => (
-  <Container theme={theme}>
-    <StatusTag {...args} />
+const WrapperFContolled = styled.div`
+  display: flex;
+  padding: 30px;
+  column-gap: 30px;
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
+`;
+
+const Title = styled.span`
+  font-weight: bold;
+  font-size: 20px;
+`;
+
+const Template: Story<StatusTagProps> = ({ ...args }) => (
+  <Container>
+    <WrapperFContolled>
+      <Title>Contolled</Title>
+      <StatusTag {...args} />
+    </WrapperFContolled>
+
+    <TableWrapper>
+      {Object.entries(StatusTag.variants).map(([key, value]) => (
+        <TableColumn key={key}>
+          <TableCell>{key}</TableCell>
+          <TableCell>
+            <StatusTag {...args} variant={value} />
+          </TableCell>
+        </TableColumn>
+      ))}
+    </TableWrapper>
   </Container>
 );
 

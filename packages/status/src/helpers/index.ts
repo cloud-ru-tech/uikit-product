@@ -23,23 +23,23 @@ export enum Sizes {
 
 export const SizeInPx = {
   ExtraSmall: {
-    size: '6px',
+    size: '8px',
     border: '1px',
   },
   Small: {
-    size: '8px',
+    size: '12px',
     border: '2px',
   },
   Medium: {
-    size: '12px',
+    size: '18px',
     border: '3px',
   },
   Large: {
-    size: '16px',
+    size: '24px',
     border: '4px',
   },
   ExtraLarge: {
-    size: '20px',
+    size: '28px',
     border: '4px',
   },
 };

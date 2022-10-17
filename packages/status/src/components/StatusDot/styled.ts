@@ -26,6 +26,7 @@ export const styledStatusDot = (StatusDot: VFC<StatusDotProps>): VFC<StatusDotPr
     border-style: solid;
     width: 100%;
     height: 100%;
+    box-sizing: border-box;
   }
 
   &[data-size=${Sizes.ExtraSmall}] {

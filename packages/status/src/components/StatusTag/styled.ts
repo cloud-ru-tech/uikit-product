@@ -1,4 +1,3 @@
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { TABLE_TEXT_STYLES } from '@sbercloud/uikit-product-typography';
@@ -16,6 +15,7 @@ export const Wrapper = styled.span`
   align-items: center;
   padding: 2px 8px;
   border-radius: 4px;
+  column-gap: 6px;
 
   &[data-variant='${Variant.Transparent}'] {
     background-color: var(${COLORS.TRANSPARENT_BG});
@@ -34,8 +34,4 @@ export const Wrapper = styled.span`
 export const Content = styled.span`
   ${TABLE_TEXT_STYLES};
   color: var(${COLORS.TEXT_COLOR});
-`;
-
-export const statusBadgeClassName = css`
-  margin-right: 8px;
 `;

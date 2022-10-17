@@ -17,5 +17,5 @@ export const StatusDot = StyledStatusDot as typeof StyledStatusDot & {
   types: typeof Types;
 };
 
-StatusDot.types = Types;
 StatusDot.sizes = Sizes;
+StatusDot.types = Types;
