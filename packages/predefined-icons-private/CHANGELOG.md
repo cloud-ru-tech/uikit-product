@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.3...@sbercloud/uikit-product-predefined-icons-private@0.6.0) (2022-10-19)
+
+
+### Features
+
+* **FF-1108:** add predefined logo variants ([cf2a115](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf2a1150357bf5b6235747bc300f2f1e48fe5cf3))
+
+
+
+
+
 ## [0.5.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.2...@sbercloud/uikit-product-predefined-icons-private@0.5.3) (2022-10-12)
 
 
