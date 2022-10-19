@@ -1,6 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
+import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
+
 import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -17,13 +19,22 @@ export default {
   title: 'Components/Icons/Predefined/Predefined Logos Private',
 } as Meta;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ theme: Themes }>`
   display: grid;
   grid-gap: 20px;
+  padding: 16px;
+
+  &[data-variant=${PredefinedCloudLogo.variants.OnAccent}] {
+    background-color: ${({ theme }) =>
+      ['purple', 'green'].includes(theme) ? `var(${EXPORT_VARS.GREY[800]})` : `var(${EXPORT_VARS.GREY[0]})`};
+  }
 `;
 
-const Template: Story<PredefinedMLSpaceLogoProps & PredefinedCloudLogoProps> = ({ ...args }) => (
-  <Wrapper>
+const Template: Story<PredefinedMLSpaceLogoProps & PredefinedCloudLogoProps> = (
+  { ...args },
+  { globals: { theme } },
+) => (
+  <Wrapper data-variant={args.variant} theme={theme}>
     <PredefinedMLSpaceLogo {...args} />
     <PredefinedCloudLogo {...args} />
   </Wrapper>
@@ -33,7 +44,15 @@ export const predefinedLogosPrivate = Template.bind({});
 predefinedLogosPrivate.args = {
   height: 30,
 };
-predefinedLogosPrivate.argTypes = {};
+predefinedLogosPrivate.argTypes = {
+  variant: {
+    control: {
+      type: 'radio',
+    },
+    options: Object.values(PredefinedCloudLogo.variants),
+    defaultValue: PredefinedCloudLogo.variants.OnDefault,
+  },
+};
 predefinedLogosPrivate.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

@@ -8,7 +8,19 @@
 Predefined colored icons
 
 ```ts
-type PredefinedLogoProps = WithSupportProps<{
+enum Variant {
+  OnDefault = 'onDefault',
+  OnAccent = 'onAccent',
+}
+
+type PredefinedMLSpaceLogoProps = WithSupportProps<{
+  variant?: Variant;
+  height: number;
+  className?: string;
+}>;
+
+type PredefinedCloudLogoProps = WithSupportProps<{
+  variant?: Variant;
   height: number;
   className?: string;
 }>;
