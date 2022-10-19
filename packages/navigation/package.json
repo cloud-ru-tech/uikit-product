@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-navigation",
   "title": "Navigation",
-  "version": "0.20.3",
+  "version": "0.20.4",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -35,7 +35,7 @@
     "@sbercloud/uikit-product-dropdown": "0.16.7",
     "@sbercloud/uikit-product-icons": "5.3.1",
     "@sbercloud/uikit-product-label": "2.0.23",
-    "@sbercloud/uikit-product-scroll": "1.3.1",
+    "@sbercloud/uikit-product-scroll": "1.4.0",
     "@sbercloud/uikit-product-search": "0.2.7",
     "@sbercloud/uikit-product-status": "6.0.13",
     "@sbercloud/uikit-product-theme": "0.35.1",

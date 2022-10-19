@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-scroll@1.3.1...@sbercloud/uikit-product-scroll@1.4.0) (2022-10-19)
+
+
+### Features
+
+* **FF-1102:** Scroll resize support ([633e12c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/633e12ca1398d5e6d706b28ff448e19bc0e35118))
+
+
+
+
+
 ## [1.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-scroll@1.3.0...@sbercloud/uikit-product-scroll@1.3.1) (2022-10-10)
 
 
