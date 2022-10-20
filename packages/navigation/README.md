@@ -255,6 +255,8 @@ type HeaderProjectSelectorProps = WithSupportProps<{
   onChange(value: string): void;
   onCreate?(): void;
   onEdit?(value: string): void;
+  createDisabledReason?: string;
+  isMobile?: boolean;
 }>;
 ```
 

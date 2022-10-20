@@ -33,6 +33,7 @@ export type HeaderProjectSelectorProps = WithSupportProps<{
   onChange(value: string): void;
   onCreate?(): void;
   onEdit?(value: string): void;
+  createDisabledReason?: string;
   isMobile?: boolean;
 }>;
 
@@ -42,6 +43,7 @@ export function HeaderProjectSelector({
   onChange,
   onCreate,
   onEdit,
+  createDisabledReason,
   isMobile,
   ...rest
 }: HeaderProjectSelectorProps) {
@@ -59,6 +61,7 @@ export function HeaderProjectSelector({
       <HeaderProjectSelectorAction
         icon={<CircleAddInterfaceSVG />}
         text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateProject)}
+        createDisabledReason={createDisabledReason}
         onClick={onCreate}
       />
     );
@@ -67,6 +70,7 @@ export function HeaderProjectSelector({
     onCreate && (
       <HeaderProjectSelectorAction
         icon={<CircleAddInterfaceSVG />}
+        createDisabledReason={createDisabledReason}
         text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateWorkspace)}
         onClick={onCreate}
       />

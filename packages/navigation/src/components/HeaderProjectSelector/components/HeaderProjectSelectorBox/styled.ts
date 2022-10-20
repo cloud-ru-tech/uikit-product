@@ -7,7 +7,14 @@ export const Wrapper = styled.div`
   display: flex;
   flex-shrink: 0;
   height: 36px;
+
+  cursor: pointer;
   padding: 4px 12px;
+
+  &[data-disabled] {
+    padding-right: 0;
+    cursor: not-allowed;
+  }
 `;
 
 export const Toolbar = styled.div`
