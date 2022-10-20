@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.21.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.20.4...@sbercloud/uikit-product-navigation@0.21.0) (2022-10-20)
+
+
+### Features
+
+* **LK-461:** added disapled & tooltip props for HeaderProjectSelector ([97fb589](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/97fb5893ec218b80d6b3fac5375c6dec08a0cff4))
+
+
+
+
+
 ## [0.20.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.20.3...@sbercloud/uikit-product-navigation@0.20.4) (2022-10-19)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-navigation
