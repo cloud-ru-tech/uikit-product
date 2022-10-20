@@ -1,5 +1,5 @@
 import { cx } from '@linaria/core';
-import { ReactNode, useCallback, useState } from 'react';
+import { Children, cloneElement, isValidElement, ReactNode, useCallback, useState } from 'react';
 
 import {
   TooltipMenuItemPrivate,
@@ -105,8 +105,25 @@ export function DropdownMenu({
                 </TooltipMenuItemPrivate>
               );
             })}
-          {isActionsFn && (actions as TDropdownMenuCustomActions)({ on, set: toggleDropdown, hide: closeDropdown })}
-          {!isActionsArray && !isActionsFn && actions}
+          {isActionsFn &&
+            (actions as TDropdownMenuCustomActions)({
+              on,
+              set: toggleDropdown,
+              hide: closeDropdown,
+            })}
+          {!isActionsArray &&
+            !isActionsFn &&
+            isValidElement(actions) &&
+            Children.map<ReactNode, ReactNode>(actions.props.children, child => {
+              if (!isValidElement(child)) return child;
+
+              return cloneElement(child, {
+                onClick: () => {
+                  child.props.onClick?.();
+                  closeDropdown();
+                },
+              });
+            })}
         </TooltipMenuPrivate>
       }
     >
