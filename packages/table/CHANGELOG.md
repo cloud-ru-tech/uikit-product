@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.45.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.45.16...@sbercloud/uikit-product-table@0.45.17) (2022-10-21)
+
+
+### Bug Fixes
+
+* **FF-1114:** fix table styles, addition stories ([1169f69](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1169f69953f8f57071ed8ada191a90d13a01f072))
+
+
+
+
+
 ## [0.45.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.45.15...@sbercloud/uikit-product-table@0.45.16) (2022-10-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table
