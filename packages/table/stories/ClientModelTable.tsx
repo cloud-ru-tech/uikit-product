@@ -6,6 +6,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { ButtonTable, ButtonTableIcon } from '@sbercloud/uikit-product-button';
 import { LogicConditionType, TFilterOptionType, TFilterValueType } from '@sbercloud/uikit-product-filter';
 import { StatusDot } from '@sbercloud/uikit-product-status';
+import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -26,6 +27,13 @@ type DataModel = {
   memory: number;
   status: string;
 };
+
+const Container = styled.div`
+  display: grid;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
+`;
 
 function generateRows(count: number): DataModel[] {
   const res: DataModel[] = [];
@@ -124,18 +132,22 @@ const Template: Story<
   );
 
   return (
-    <CMTable
-      fieldId={args.fieldId}
-      data={data}
-      pinnedData={pinnedData}
-      columnDefinitions={args.columnDefinitions}
-      bulkActions={bulkActions}
-      pageSize={args.pageSize}
-      onRefreshCallback={() => {
-        setData(generateRows(rowsAmount));
-        setPinnedData(generateRows(pinnedRowsAmount));
-      }}
-    />
+    <Container>
+      <h1> Client Model Table</h1>
+      <CMTable
+        fieldId={args.fieldId}
+        data={data}
+        pinnedData={pinnedData}
+        columnDefinitions={args.columnDefinitions}
+        bulkActions={bulkActions}
+        pageSize={args.pageSize}
+        onRefreshCallback={() => {
+          setData(generateRows(rowsAmount));
+          setPinnedData(generateRows(pinnedRowsAmount));
+        }}
+        suppressToolbar={args.suppressToolbar}
+      />
+    </Container>
   );
 };
 

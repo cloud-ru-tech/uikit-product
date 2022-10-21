@@ -18,7 +18,6 @@ type TableProps = { className?: string };
 export const styledTable = <P extends TableProps>(Table: VFC<P>) => styled(Table as VFC<TableProps>)<P>`
   &.ag-theme-alpine {
     width: 100%;
-    height: 100%;
     font-family: inherit;
     border: 1px solid var(${COLORS.border});
     border-radius: 8px;

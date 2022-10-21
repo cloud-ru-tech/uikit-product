@@ -6,6 +6,7 @@ import { DropdownMenu } from '@sbercloud/uikit-product-dropdown';
 import { FormField } from '@sbercloud/uikit-product-form';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { InputCommon } from '@sbercloud/uikit-product-input';
+import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -22,6 +23,13 @@ const EmbeddedComponent = styled.div`
   padding: 16px 32px;
 `;
 
+const Container = styled.div`
+  display: grid;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
+`;
+
 type DataModel = {
   name: string;
   lastModified: number;
@@ -35,39 +43,42 @@ type DataModel = {
 };
 
 const Template: Story<TableWithRowDetailProps<DataModel>> = args => (
-  <TableWithRowDetail {...args}>
-    <EmbeddedComponent>
-      <FormField
-        label='Не обязательное поле'
-        hint={{
-          content:
-            'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
-        }}
-      >
-        <InputCommon value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
-      </FormField>
+  <Container>
+    <h1>Table With Row Detail</h1>
+    <TableWithRowDetail {...args}>
+      <EmbeddedComponent>
+        <FormField
+          label='Не обязательное поле'
+          hint={{
+            content:
+              'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
+          }}
+        >
+          <InputCommon value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
+        </FormField>
 
-      <FormField
-        label='Обязательное поле'
-        hint={{
-          content:
-            'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
-        }}
-      >
-        <InputCommon value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
-      </FormField>
+        <FormField
+          label='Обязательное поле'
+          hint={{
+            content:
+              'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
+          }}
+        >
+          <InputCommon value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
+        </FormField>
 
-      <FormField
-        label='Обязательное поле'
-        hint={{
-          content:
-            'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
-        }}
-      >
-        <InputCommon value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
-      </FormField>
-    </EmbeddedComponent>
-  </TableWithRowDetail>
+        <FormField
+          label='Обязательное поле'
+          hint={{
+            content:
+              'Проверьте корректно ли указаны базовый образ и параметры доступа к S3, а также удалось ли скачать директорию с артефактами или serving-скрипт.',
+          }}
+        >
+          <InputCommon value='test' placeholder='Пример: Project1-bucket106' onChange={() => {}} />
+        </FormField>
+      </EmbeddedComponent>
+    </TableWithRowDetail>
+  </Container>
 );
 
 export const withRowDetail = Template.bind({});

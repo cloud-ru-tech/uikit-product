@@ -1,10 +1,12 @@
 import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import React, { useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { DropdownMenu } from '@sbercloud/uikit-product-dropdown';
 import { MoreInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -14,6 +16,13 @@ import { ITableFreeProps, TableFree } from '../src';
 
 const ToolbarWrapperView = css`
   margin-bottom: 12px;
+`;
+
+const Container = styled.div`
+  display: grid;
+  padding: 24px;
+  border-radius: 8px;
+  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
 `;
 
 export default {
@@ -31,7 +40,8 @@ const Template: Story<ITableFreeProps> = ({ rowData = [], ...args }) => {
     : rowData;
 
   return (
-    <>
+    <Container>
+      <h1>Table Free</h1>
       <Toolbar.Container className={ToolbarWrapperView}>
         <Toolbar.Input
           placeholder='Поиск по ФИО'
@@ -42,7 +52,7 @@ const Template: Story<ITableFreeProps> = ({ rowData = [], ...args }) => {
         />
       </Toolbar.Container>
       <TableFree {...args} rowData={searchedData} />
-    </>
+    </Container>
   );
 };
 
