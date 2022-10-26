@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.16.7...@sbercloud/uikit-product-dropdown@0.16.8) (2022-10-26)
+
+
+### Bug Fixes
+
+* **AICDC-8605:** fix closing tooltip functionality ([a28a70c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a28a70c92c2d012de26a95db4e687af3aafafba7))
+
+
+
+
+
 ## [0.16.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-dropdown@0.16.6...@sbercloud/uikit-product-dropdown@0.16.7) (2022-10-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-dropdown

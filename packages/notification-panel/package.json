@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-notification-panel",
   "title": "Notification Panel",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -31,7 +31,7 @@
     "@sbercloud/uikit-product-avatar": "1.1.12",
     "@sbercloud/uikit-product-button": "5.0.35",
     "@sbercloud/uikit-product-chip": "2.0.24",
-    "@sbercloud/uikit-product-dropdown": "0.16.7",
+    "@sbercloud/uikit-product-dropdown": "0.16.8",
     "@sbercloud/uikit-product-icons": "5.3.1",
     "@sbercloud/uikit-product-no-data": "2.0.9",
     "@sbercloud/uikit-product-predefined-icons-private": "0.6.0",
