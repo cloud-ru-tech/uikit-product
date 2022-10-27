@@ -26,6 +26,7 @@ type DataModel = {
   createDate: string;
   memory: number;
   status: string;
+  disabled: boolean;
 };
 
 const Container = styled.div`
@@ -39,6 +40,7 @@ function generateRows(count: number): DataModel[] {
   const res: DataModel[] = [];
   for (let i = 0; i < count; ++i) {
     const createdTimestamp = Math.floor(Math.random() * 1e13);
+    const status = Object.values(StatusDot.types)[Math.floor(Math.random() * 10) % 6];
     res.push({
       name: `name ${i}`,
       createDate: new Date(createdTimestamp).toLocaleDateString('ru-RU', {
@@ -56,7 +58,8 @@ function generateRows(count: number): DataModel[] {
         hour: 'numeric',
         minute: 'numeric',
       }),
-      status: Object.values(StatusDot.types)[Math.floor(Math.random() * 10) % 4],
+      status: status,
+      disabled: status === StatusDot.types.Progress,
     });
   }
   return res;
@@ -71,6 +74,8 @@ const Template: Story<
     showExport: boolean;
   }
 > = ({ rowsAmount, pinnedRowsAmount, showDelete, showFilter, showExport, ...args }) => {
+  const [key, setKey] = useState(0);
+  useEffect(() => setKey(x => x + 1), [args.selectionMode]);
   const [data, setData] = useState<DataModel[]>([]);
   const [pinnedData, setPinnedData] = useState<DataModel[]>([]);
 
@@ -89,6 +94,7 @@ const Template: Story<
 
   useEffect(() => {
     const newData = generateRows(rowsAmount);
+
     debSetData(newData);
   }, [debSetData, rowsAmount]);
 
@@ -132,9 +138,10 @@ const Template: Story<
   );
 
   return (
-    <Container>
+    <Container key={key}>
       <h1> Client Model Table</h1>
       <CMTable
+        {...args}
         fieldId={args.fieldId}
         data={data}
         pinnedData={pinnedData}
@@ -207,7 +214,13 @@ clientModelTable.args = {
         const isDisabled = status === StatusDot.types.Failed;
         return (
           <ButtonGroup>
-            <ButtonTable disabled={isDisabled} loading={isInProgress} text='AGrigorii' onClick={() => {}} />
+            <ButtonTable
+              variant={ButtonTable.variants.Outline}
+              disabled={isDisabled}
+              loading={isInProgress}
+              text='AGrigorii'
+              onClick={() => {}}
+            />
             <ButtonTableIcon variant={ButtonTableIcon.variants.Stop} disabled={isDisabled} loading={isInProgress} />
             <ButtonTableIcon variant={ButtonTableIcon.variants.Pause} disabled={isDisabled} loading={isInProgress} />
           </ButtonGroup>
@@ -223,6 +236,7 @@ clientModelTable.args = {
   showDelete: true,
   showFilter: true,
   showExport: true,
+  selectionMode: CMTable.selectionModes.Multiple,
 };
 
 clientModelTable.argTypes = {

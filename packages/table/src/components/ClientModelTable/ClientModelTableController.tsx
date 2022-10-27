@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import { AgGridTypes, TablePrivateProps } from '@sbercloud/uikit-product-table-private';
+import { AgGridTypes, SelectionMode, TablePrivateProps } from '@sbercloud/uikit-product-table-private';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers/texts-provider';
@@ -10,6 +10,7 @@ import { DeleteProps, FilterProps, PaginationProps } from './types';
 export type ClientModelTableControllerProps<T> = {
   fieldId: string;
   data: T[];
+  selectionMode?: TablePrivateProps['selectionMode'];
   pinnedData?: T[];
   columnDefinitions: TablePrivateProps['columnDefs'];
   pageSize?: number;
@@ -29,7 +30,6 @@ export type ClientModelTableControllerProps<T> = {
     getRowHeight?: TablePrivateProps['getRowHeight'];
     getRowId?: TablePrivateProps['getRowId'];
     onRowClicked?: TablePrivateProps['onRowClicked'];
-    rowSelection?: TablePrivateProps['rowSelection'];
     onRowSelected?: TablePrivateProps['onRowSelected'];
     onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
   };
@@ -40,6 +40,7 @@ export function ClientModelTableController<T>({
   fieldId,
   data,
   pinnedData,
+  selectionMode = SelectionMode.Multiple,
   bulkActions,
   pageSize,
   onRefreshCallback,
@@ -177,8 +178,6 @@ export function ClientModelTableController<T>({
       : undefined;
   }, [gridApi, pageSize, pageCount, currentPage, pageChangeHandler]);
 
-  const useRowSelection = Boolean(advancedProps?.rowSelection || deleteProps);
-
   const searchPinnedData = useMemo(() => {
     if (pinnedData) {
       return pinnedData.filter(item => {
@@ -275,9 +274,8 @@ export function ClientModelTableController<T>({
       onRefreshCallback={onRefreshCallback}
       onRowClicked={advancedProps?.onRowClicked}
       onRowSelected={advancedProps?.onRowSelected}
-      rowSelection={advancedProps?.rowSelection}
+      selectionMode={selectionMode}
       onRowDoubleClicked={advancedProps?.onRowDoubleClicked}
-      useRowSelection={useRowSelection}
       deleteProps={deleteProps}
       filterProps={newFilterProps}
       paginationProps={paginationProps}
@@ -290,3 +288,5 @@ export function ClientModelTableController<T>({
     />
   );
 }
+
+ClientModelTableController.selectionModes = SelectionMode;

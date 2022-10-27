@@ -14,14 +14,19 @@ import { AgGridReact } from '@ag-grid-community/react';
 import { RangeSelectionModule } from '@ag-grid-enterprise/range-selection';
 import { cx } from '@linaria/core';
 import debounce from 'lodash.debounce';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { TableCheckboxColumnDefinition, tableHeaderHeight, tableRowHeight } from '../../helpers/constants';
+import {
+  TableCheckboxColumnDefinition,
+  tableHeaderHeight,
+  TableRadioColumnDefinition,
+  tableRowHeight,
+} from '../../helpers/constants';
 import { styledTable } from '../../helpers/styled';
 import { ColumnDefinition } from '../../helpers/types';
 import { NoDataReasons, NoRows } from '../overlays';
 import * as S from './styled';
-import { TablePrivateProps } from './types';
+import { SelectionMode, TablePrivateProps } from './types';
 
 const AgGridModules = [ClientSideRowModelModule, RangeSelectionModule];
 
@@ -30,7 +35,7 @@ function StylelessTablePrivate({
   pinnedTopRowData,
   columnDefs = [],
   gridOptions = {},
-  checkboxSelection = false,
+  selectionMode,
   doesRowPassFilter,
   className,
   onGridReady,
@@ -77,7 +82,7 @@ function StylelessTablePrivate({
     return () => gridApi.removeEventListener(Events.EVENT_MODEL_UPDATED, onModelUpdatedHandler);
   }, [gridApi]);
 
-  const colDefs = useMemo(() => {
+  const colDefs = () => {
     let colDefs: ColumnDefinition[] = columnDefs;
 
     if (Object.keys(resizedColumns).length) {
@@ -91,12 +96,14 @@ function StylelessTablePrivate({
       });
     }
 
-    if (checkboxSelection) {
-      return [{ ...TableCheckboxColumnDefinition }, ...colDefs];
+    if (selectionMode !== SelectionMode.None) {
+      if (selectionMode === SelectionMode.Single) return [{ ...TableRadioColumnDefinition }, ...colDefs];
+
+      return [{ ...TableCheckboxColumnDefinition(rowData.length) }, ...colDefs];
     }
 
     return [...colDefs];
-  }, [checkboxSelection, columnDefs, resizedColumns]);
+  };
 
   useEffect(() => {
     if (gridApi && Object.keys(resizedColumns).length) {
@@ -131,11 +138,13 @@ function StylelessTablePrivate({
       <AgGridReact
         modules={[...AgGridModules, ...additionModules]}
         gridOptions={{
+          isRowSelectable: ({ data }: any) => !Boolean(data?.disabled),
           suppressCellFocus: true,
+          rowSelection: selectionMode !== SelectionMode.None ? selectionMode : undefined,
           headerHeight: tableHeaderHeight,
           rowHeight: tableRowHeight,
-          rowSelection: 'multiple',
-          suppressRowClickSelection: true,
+          rowMultiSelectWithClick: selectionMode === SelectionMode.Multiple,
+          suppressRowDeselection: selectionMode === SelectionMode.Single,
           suppressContextMenu: true,
           enableCellTextSelection: true,
           ensureDomOrder: true,
@@ -154,7 +163,7 @@ function StylelessTablePrivate({
         onGridSizeChanged={handleGridSizeChanged}
         rowData={rowData}
         pinnedTopRowData={pinnedTopRowData}
-        columnDefs={colDefs}
+        columnDefs={colDefs()}
         isExternalFilterPresent={() => Boolean(doesRowPassFilter)}
         doesExternalFilterPass={node => doesRowPassFilter?.(node.data) || false}
         noRowsOverlayComponent={NoRows}
@@ -169,4 +178,5 @@ function StylelessTablePrivate({
 
 export type { TablePrivateProps };
 
+export { SelectionMode };
 export const TablePrivate = S.styledTablePrivate(styledTable(StylelessTablePrivate));

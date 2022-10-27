@@ -3,9 +3,15 @@ import { AgGridReactProps } from '@ag-grid-community/react';
 
 import { ColumnDefinition } from '../../helpers/types';
 
+export enum SelectionMode {
+  Multiple = 'multiple',
+  Single = 'single',
+  None = 'none',
+}
+
 export type TablePrivateProps = AgGridReactProps & {
   className?: string;
-  checkboxSelection?: boolean;
+  selectionMode?: SelectionMode;
   doesRowPassFilter?(data: any): boolean;
   additionModules?: Module[];
   onRowClicked?(e: RowClickedEvent): void;

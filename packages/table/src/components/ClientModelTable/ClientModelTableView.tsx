@@ -4,7 +4,7 @@ import { ExcelExportModule } from '@ag-grid-enterprise/excel-export';
 import { DeleteInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Modal } from '@sbercloud/uikit-product-modal';
 import { Pagination } from '@sbercloud/uikit-product-pagination-private';
-import { TablePrivate, TablePrivateProps } from '@sbercloud/uikit-product-table-private';
+import { SelectionMode, TablePrivate, TablePrivateProps } from '@sbercloud/uikit-product-table-private';
 import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -18,11 +18,11 @@ type ClientModelTableViewProps<T> = {
   fieldId: string;
   data: T[];
   pinnedData?: T[];
+  selectionMode: SelectionMode;
   columnDefinitions: TablePrivateProps['columnDefs'];
   onGridReady: TablePrivateProps['onGridReady'];
   getRowHeight: TablePrivateProps['getRowHeight'];
   getRowId?: TablePrivateProps['getRowId'];
-  useRowSelection: boolean;
   deleteProps?: DeleteProps;
   filterProps?: {
     doesRowPassFilter: FilterProps<T>['doesRowPassFilter'];
@@ -36,7 +36,6 @@ type ClientModelTableViewProps<T> = {
   onSearchCallback(value: string): void;
   moreActions?: Toolbar.MoreActionsProps['actions'];
   searchValue: string;
-  rowSelection?: TablePrivateProps['rowSelection'];
   suppressToolbar?: boolean;
   isSearching: boolean;
 };
@@ -47,7 +46,6 @@ export function ClientModelTableView<T>({
   pinnedData,
   columnDefinitions,
   onGridReady,
-  useRowSelection,
   onRefreshCallback,
   deleteProps,
   filterProps,
@@ -59,7 +57,7 @@ export function ClientModelTableView<T>({
   moreActions,
   onRowClicked,
   onRowSelected,
-  rowSelection,
+  selectionMode,
   onRowDoubleClicked,
   suppressToolbar,
   isSearching,
@@ -106,9 +104,9 @@ export function ClientModelTableView<T>({
         </Toolbar.Container>
       )}
       <TablePrivate
-        checkboxSelection={useRowSelection}
         additionModules={additionModules}
         isSearching={isSearching}
+        selectionMode={selectionMode}
         rowData={data}
         pinnedTopRowData={pinnedData}
         columnDefs={columnDefinitions}
@@ -131,8 +129,6 @@ export function ClientModelTableView<T>({
           },
           suppressPaginationPanel: true,
           enableCellTextSelection: true,
-          rowSelection: rowSelection || 'multiple',
-          suppressRowClickSelection: !rowSelection,
         }}
       />
       {paginationProps?.showPagination && (
