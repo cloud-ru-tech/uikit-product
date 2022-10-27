@@ -1,24 +1,17 @@
-import { useCallback, useMemo } from 'react';
+import { ChangeEvent, ReactNode, useCallback } from 'react';
 
-import { CheckboxCheckedSVG, CheckboxPartialCheckedSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import {
-  CheckboxIconWrap,
-  CheckboxText,
-  CheckboxTextWrap,
-  CheckboxWrap,
-  HiddenCheckbox,
-  iconClassName,
-} from './styled';
+import { CheckboxIconPrivate } from '../CheckboxIconPrivate';
+import { CheckboxText, CheckboxTextWrap, CheckboxWrap, HiddenCheckbox } from './styled';
 
 export type CheckboxProps = {
   checked: boolean;
   disabled?: boolean;
   className?: string;
   partChecked?: boolean;
-  label?: React.ReactNode;
-  handleChange(checked: boolean, e?: React.ChangeEvent<HTMLInputElement>): void;
+  label?: ReactNode;
+  handleChange(checked: boolean, e?: ChangeEvent<HTMLInputElement>): void;
 };
 
 export function Checkbox({
@@ -31,7 +24,7 @@ export function Checkbox({
   ...rest
 }: WithSupportProps<CheckboxProps>) {
   const onChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>): void => {
+    (e: ChangeEvent<HTMLInputElement>): void => {
       e.stopPropagation();
 
       if (disabled) {
@@ -48,28 +41,10 @@ export function Checkbox({
     [disabled, checked, partChecked, handleChange],
   );
 
-  const Icon = useMemo(() => {
-    if (partChecked) {
-      return <CheckboxPartialCheckedSVG className={iconClassName} />;
-    }
-
-    if (checked) {
-      return <CheckboxCheckedSVG className={iconClassName} />;
-    }
-
-    return null;
-  }, [partChecked, checked]);
-
   return (
     <CheckboxWrap className={className} data-disabled={disabled || undefined} {...extractSupportProps(rest)}>
       <HiddenCheckbox type='checkbox' checked={checked} disabled={disabled} onChange={onChange} />
-      <CheckboxIconWrap
-        data-test-id='checkbox__icon'
-        data-checked={checked || partChecked || undefined}
-        data-disabled={disabled || undefined}
-      >
-        {Icon}
-      </CheckboxIconWrap>
+      <CheckboxIconPrivate partChecked={partChecked} checked={checked} disabled={disabled} />
       {label ? (
         <CheckboxTextWrap data-disabled={disabled || undefined}>
           <CheckboxText data-disabled={disabled || undefined} data-test-id='checkbox__label-text'>
