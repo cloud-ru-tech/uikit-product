@@ -12,6 +12,7 @@ export enum SelectionMode {
 export type TablePrivateProps = AgGridReactProps & {
   className?: string;
   selectionMode?: SelectionMode;
+  selectedRows?: string[];
   doesRowPassFilter?(data: any): boolean;
   additionModules?: Module[];
   onRowClicked?(e: RowClickedEvent): void;

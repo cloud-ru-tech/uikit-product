@@ -18,6 +18,7 @@ type ClientModelTableViewProps<T> = {
   fieldId: string;
   data: T[];
   pinnedData?: T[];
+  selectedRows: string[];
   selectionMode: SelectionMode;
   columnDefinitions: TablePrivateProps['columnDefs'];
   onGridReady: TablePrivateProps['onGridReady'];
@@ -57,6 +58,7 @@ export function ClientModelTableView<T>({
   moreActions,
   onRowClicked,
   onRowSelected,
+  selectedRows,
   selectionMode,
   onRowDoubleClicked,
   suppressToolbar,
@@ -107,6 +109,7 @@ export function ClientModelTableView<T>({
         additionModules={additionModules}
         isSearching={isSearching}
         selectionMode={selectionMode}
+        selectedRows={selectedRows}
         rowData={data}
         pinnedTopRowData={pinnedData}
         columnDefs={columnDefinitions}

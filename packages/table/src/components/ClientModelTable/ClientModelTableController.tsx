@@ -11,6 +11,7 @@ export type ClientModelTableControllerProps<T> = {
   fieldId: string;
   data: T[];
   selectionMode?: TablePrivateProps['selectionMode'];
+  selectedRows?: string[];
   pinnedData?: T[];
   columnDefinitions: TablePrivateProps['columnDefs'];
   pageSize?: number;
@@ -40,6 +41,7 @@ export function ClientModelTableController<T>({
   fieldId,
   data,
   pinnedData,
+  selectedRows = [],
   selectionMode = SelectionMode.Multiple,
   bulkActions,
   pageSize,
@@ -97,12 +99,14 @@ export function ClientModelTableController<T>({
     }
   }, [data.length, pageSize]);
 
-  const [selectedRows, setSelectedRows] = useState<ClientModelTableControllerProps<T>['data']>([]);
+  const [uncontrolledSelectedRows, setUncontrolledSelectedRows] = useState<ClientModelTableControllerProps<T>['data']>(
+    [],
+  );
 
   const onRowSelectHandler = useCallback(() => {
     if (!gridApi) return;
 
-    setSelectedRows(gridApi.getSelectedRows());
+    setUncontrolledSelectedRows(gridApi.getSelectedRows());
   }, [gridApi]);
 
   useEffect(() => {
@@ -121,14 +125,14 @@ export function ClientModelTableController<T>({
 
     setDeleteDialogOpened(false);
 
-    const ids = selectedRows.map(row => row[fieldId]);
+    const ids = uncontrolledSelectedRows.map(row => row[fieldId]);
     try {
       await bulkActions.delete.onDelete(ids);
     } finally {
       gridApi?.deselectAll();
-      setSelectedRows([]);
+      setUncontrolledSelectedRows([]);
     }
-  }, [bulkActions?.delete, selectedRows, fieldId, gridApi]);
+  }, [bulkActions?.delete, uncontrolledSelectedRows, fieldId, gridApi]);
 
   const deleteProps: DeleteProps | undefined = bulkActions?.delete
     ? {
@@ -138,15 +142,15 @@ export function ClientModelTableController<T>({
         deleteDialogOpened,
         title:
           typeof bulkActions.delete.title === 'function'
-            ? bulkActions.delete.title({ count: selectedRows.length })
+            ? bulkActions.delete.title({ count: uncontrolledSelectedRows.length })
             : bulkActions.delete.title,
         description:
           typeof bulkActions.delete.description === 'function'
-            ? bulkActions.delete.description({ count: selectedRows.length })
+            ? bulkActions.delete.description({ count: uncontrolledSelectedRows.length })
             : bulkActions.delete.description,
         approveText: bulkActions.delete.approveText,
         cancelText: bulkActions.delete.cancelText,
-        isDeleteEnabled: Boolean(selectedRows.length),
+        isDeleteEnabled: Boolean(uncontrolledSelectedRows.length),
       }
     : undefined;
 
@@ -274,6 +278,7 @@ export function ClientModelTableController<T>({
       onRefreshCallback={onRefreshCallback}
       onRowClicked={advancedProps?.onRowClicked}
       onRowSelected={advancedProps?.onRowSelected}
+      selectedRows={selectedRows}
       selectionMode={selectionMode}
       onRowDoubleClicked={advancedProps?.onRowDoubleClicked}
       deleteProps={deleteProps}

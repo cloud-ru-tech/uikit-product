@@ -36,6 +36,7 @@ function StylelessTablePrivate({
   columnDefs = [],
   gridOptions = {},
   selectionMode,
+  selectedRows,
   doesRowPassFilter,
   className,
   onGridReady,
@@ -125,6 +126,17 @@ function StylelessTablePrivate({
       newValue ? gridApi?.showNoRowsOverlay() : gridApi?.hideOverlay();
     }
   }, [displayedRowsCount, gridApi, showOverlay, pinnedTopRowData?.length]);
+
+  useEffect(() => {
+    if (!gridApi || selectionMode === SelectionMode.None) return;
+    setTimeout(() => {
+      const nodes = gridApi.getRenderedNodes();
+
+      const selectedNodes = nodes.filter(node => node.id && selectedRows?.includes(node.id));
+      if (!selectedNodes.length) return;
+      selectedNodes.forEach(node => node.setSelected(true));
+    });
+  }, [gridApi, selectedRows, selectionMode]);
 
   return (
     <div
