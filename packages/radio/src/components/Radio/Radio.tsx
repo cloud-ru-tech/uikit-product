@@ -1,26 +1,13 @@
-import { useContext } from 'react';
+import { ChangeEvent, ReactText, useContext } from 'react';
 
-import { RadioCheckedInterfaceSVG, RadioUncheckedInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { extractDataTestProps, extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { RadioGroupContext } from '../RadioGroup/context';
-import { HiddenRadio, IconContainer, Label, Wrapper } from './styled';
-
-type RadioIcon = WithSupportProps<{
-  checked?: boolean;
-  disabled?: boolean;
-}>;
-
-function RadioIcon({ checked, disabled, ...rest }: RadioIcon) {
-  return (
-    <IconContainer data-checked={checked} data-disabled={disabled} {...extractDataTestProps(rest)}>
-      {checked ? <RadioCheckedInterfaceSVG size={20} /> : <RadioUncheckedInterfaceSVG size={20} />}
-    </IconContainer>
-  );
-}
+import { RadioIconPrivate } from '../RadioIconPrivate';
+import { HiddenRadio, Label, Wrapper } from './styled';
 
 export type RadioProps = WithSupportProps<{
-  value: React.ReactText;
+  value: ReactText;
   label?: string;
   disabled?: boolean;
   className?: string;
@@ -43,9 +30,9 @@ export function Radio({ value, label, disabled, className, ...rest }: RadioProps
         value={value}
         disabled={disabled}
         checked={isRadioChecked}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => RadioGroup?.onChange(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => RadioGroup?.onChange(e.target.value)}
       />
-      <RadioIcon checked={isRadioChecked} disabled={disabled} data-test-option-id={value} />
+      <RadioIconPrivate checked={isRadioChecked} disabled={disabled} data-test-option-id={value} />
       {label && <Label data-test-id={'radio__label'}>{label}</Label>}
     </Wrapper>
   );

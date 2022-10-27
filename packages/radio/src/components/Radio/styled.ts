@@ -2,43 +2,11 @@ import { styled } from '@linaria/react';
 
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
-import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
-
-PURPLE_THEME;
-PURPLE_DARK_THEME;
-GREEN_THEME;
-GREEN_DARK_THEME;
+import { IconContainer } from '../RadioIconPrivate/styled';
+import { COLORS } from '../RadioIconPrivate/themes';
 
 export const HiddenRadio = styled.input`
   display: none;
-`;
-
-export const IconContainer = styled.div`
-  display: flex;
-
-  fill: var(${COLORS.RADIO.ICON});
-
-  &:not([data-disabled='true']) {
-    &:hover {
-      fill: var(${COLORS.RADIO.HOVER.ICON});
-    }
-  }
-
-  &[data-disabled='true'] {
-    fill: var(${COLORS.RADIO.DISABLED.ICON});
-  }
-
-  &[data-checked='true'] {
-    fill: var(${COLORS.RADIO_SELECTED.ICON});
-
-    &:hover {
-      fill: var(${COLORS.RADIO_SELECTED.HOVER.ICON});
-    }
-
-    &[data-disabled='true'] {
-      fill: var(${COLORS.RADIO_SELECTED.DISABLED.ICON});
-    }
-  }
 `;
 
 export const Label = styled.span`
