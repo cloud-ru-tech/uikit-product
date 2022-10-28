@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-checkbox@3.0.38...@sbercloud/uikit-product-checkbox@3.1.0) (2022-10-28)
+
+
+### Features
+
+* **FF-1112:** CheckboxIconPrivate has been extracted ([f0eac77](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f0eac7777e1f8d6a48bb1573f23eb4a85015fffd))
+
+
+
+
+
 ## [3.0.38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-checkbox@3.0.37...@sbercloud/uikit-product-checkbox@3.0.38) (2022-10-10)
 
 

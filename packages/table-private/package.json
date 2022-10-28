@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-table-private",
   "title": "React Table Private",
-  "version": "0.18.14",
+  "version": "0.19.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,16 +27,16 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-radio": "3.0.21",
-    "@sbercloud/uikit-product-checkbox": "3.0.38",
     "@ag-grid-community/client-side-row-model": "28.2.0",
     "@ag-grid-community/core": "28.2.0",
     "@ag-grid-community/react": "28.2.0",
     "@ag-grid-enterprise/core": "28.2.0",
     "@ag-grid-enterprise/range-selection": "28.2.0",
+    "@sbercloud/uikit-product-checkbox": "3.1.0",
     "@sbercloud/uikit-product-icons": "5.3.1",
     "@sbercloud/uikit-product-no-data": "2.0.9",
     "@sbercloud/uikit-product-predefined-icons-private": "0.6.0",
+    "@sbercloud/uikit-product-radio": "3.1.0",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.1.0",

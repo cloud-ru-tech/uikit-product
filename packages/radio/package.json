@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-radio",
   "title": "React Radio",
-  "version": "3.0.21",
+  "version": "3.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",

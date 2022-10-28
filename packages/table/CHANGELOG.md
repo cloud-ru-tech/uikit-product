@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.46.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.45.18...@sbercloud/uikit-product-table@0.46.0) (2022-10-28)
+
+
+### Features
+
+* **FF-1112:** preSelected rows functionality ([35704de](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/35704de56b5228140ee555b2289337cb07d4b984))
+* **FF-1112:** selection mode, TableWithRowDetail has been deleted ([b241ea6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b241ea60826b4d3545dbf55865c734dfdf1c6f52))
+
+
+### BREAKING CHANGES
+
+* **FF-1112:** selection mode, TableWithRowDetail has been deleted
+
+
+
+
+
 ## [0.45.18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.45.17...@sbercloud/uikit-product-table@0.45.18) (2022-10-26)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table

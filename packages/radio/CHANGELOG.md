@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-radio@3.0.21...@sbercloud/uikit-product-radio@3.1.0) (2022-10-28)
+
+
+### Features
+
+* **FF-1112:** RadioIconPrivate has been extracted ([ba62a8c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ba62a8ccec46e69b3a80270c7ed44a3073a9bba9))
+
+
+
+
+
 ## [3.0.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-radio@3.0.20...@sbercloud/uikit-product-radio@3.0.21) (2022-10-10)
 
 
