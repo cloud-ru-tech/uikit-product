@@ -17,9 +17,12 @@ const Wrapper = styled.div`
   height: 1000px;
 `;
 
-const Template: Story<ErrorPageProps> = ({ ...args }) => (
+const Template: Story<ErrorPageProps & { showSupportCenterButton: boolean }> = ({
+  showSupportCenterButton,
+  ...args
+}) => (
   <Wrapper>
-    <ErrorPage {...args} />
+    <ErrorPage {...args} onSupportCenterClick={showSupportCenterButton ? args.onSupportCenterClick : undefined} />
   </Wrapper>
 );
 
@@ -28,8 +31,14 @@ errorPages.args = {
   mainPageUrl: '/',
   errorType: ErrorPage.errorTypes.FrontendError,
   logoVariant: ErrorPage.logoVariants.Cloud,
+  showSupportCenterButton: true,
 };
-errorPages.argTypes = {};
+errorPages.argTypes = {
+  showSupportCenterButton: {
+    name: '[STORIES]: showSupportCenterButton',
+    type: 'boolean',
+  },
+};
 errorPages.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

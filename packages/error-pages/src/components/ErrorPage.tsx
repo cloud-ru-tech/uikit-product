@@ -21,16 +21,16 @@ enum ErrorType {
 }
 
 export type ErrorPageProps = WithSupportProps<{
-  className: string;
-  mainPageUrl: string;
-  onSupportCenterClick(): void;
+  className?: string;
+  mainPageUrl?: string;
+  onSupportCenterClick?(): void;
   logoVariant?: LogoVariant;
   errorType?: ErrorType;
 }>;
 
 export function ErrorPage({
   className,
-  mainPageUrl,
+  mainPageUrl = '/',
   onSupportCenterClick,
   logoVariant = LogoVariant.Cloud,
   errorType = ErrorType.FrontendError,
@@ -67,12 +67,14 @@ export function ErrorPage({
             onClick={() => window.location.reload()}
             icon={<RefreshInterfaceSVG />}
           />
-          <Button
-            variant={Button.variants.Filled}
-            text={textProvider(languageCode, Texts.SupportCenterButton)}
-            onClick={onSupportCenterClick}
-            icon={<MailInterfaceSVG />}
-          />
+          {onSupportCenterClick && (
+            <Button
+              variant={Button.variants.Filled}
+              text={textProvider(languageCode, Texts.SupportCenterButton)}
+              onClick={onSupportCenterClick}
+              icon={<MailInterfaceSVG />}
+            />
+          )}
         </S.ButtonContainer>
       </S.LeftSide>
       <S.RightSide>
