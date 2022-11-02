@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.1.0...@sbercloud/uikit-product-error-pages@0.1.1) (2022-11-02)
+
+### Bug Fixes
+
+- **FF-1142:** all props are optional, mainPageUrl has default ([df3126c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df3126c062092b68271ccde312663d8e59925704))
+
 # 0.1.0 (2022-11-02)
 
 ### Features
