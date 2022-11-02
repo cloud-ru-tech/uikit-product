@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-error-pages",
   "title": "Error Pages",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,15 +27,13 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "3.1.0",
-    "@sbercloud/uikit-product-theme": "0.35.1",
-    "@sbercloud/uikit-product-predefined-icons-private": "0.6.0",
-    "@sbercloud/uikit-product-typography": "1.2.0",
-    "@sbercloud/uikit-product-link": "3.0.38",
     "@sbercloud/uikit-product-button": "5.0.35",
     "@sbercloud/uikit-product-icons": "5.3.1",
-    "@sbercloud/uikit-product-tag": "2.0.6"
-  },
-  "devDependencies": {},
-  "peerDependencies": {}
+    "@sbercloud/uikit-product-link": "3.0.38",
+    "@sbercloud/uikit-product-predefined-icons-private": "0.6.0",
+    "@sbercloud/uikit-product-tag": "2.0.6",
+    "@sbercloud/uikit-product-theme": "0.35.1",
+    "@sbercloud/uikit-product-typography": "1.2.0",
+    "@sbercloud/uikit-product-utils": "3.1.0"
+  }
 }
