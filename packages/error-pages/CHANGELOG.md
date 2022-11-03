@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.1.1...@sbercloud/uikit-product-error-pages@0.2.0) (2022-11-03)
+
+### Features
+
+- new title and back link for FrontendError type ([f6c07da](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f6c07da6b15ae47ec9c43f57a5275a67f8bd816c))
+
 ## [0.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.1.0...@sbercloud/uikit-product-error-pages@0.1.1) (2022-11-02)
 
 ### Bug Fixes
