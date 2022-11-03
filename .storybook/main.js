@@ -8,7 +8,7 @@ const STORIES = glob
 
 const WELCOME = path.resolve(__dirname, './welcome/stories/Welcome.tsx');
 const STATISTICS = path.resolve(__dirname, './welcome/stories/Statistics.tsx');
-
+const isTestServer = Boolean(process.env.TEST_SERVER);
 module.exports = {
   stories: [WELCOME, STATISTICS, ...STORIES],
   addons: [
@@ -42,20 +42,16 @@ module.exports = {
     checkOptions: {},
   },
   babel: base => {
-    const custom = {
-      env: {
-        test: { plugins: ['istanbul'] },
-      },
-    };
-
-    return { ...base, ...custom };
+    return { ...base, plugins: [...(base.plugins || []), ...(isTestServer ? ['istanbul'] : [])] };
   },
   webpackFinal: async config => {
-    process.env.NODE_ENV === 'test' && (config.watch = false);
-    process.env.NODE_ENV === 'test' &&
+    isTestServer && (config.watch = false);
+    isTestServer &&
       (config.watchOptions = {
         ignored: /.*/,
       });
+    isTestServer && (config.mode = 'production');
+    isTestServer && (config.devtool = false);
     config.resolve.fallback = {
       ...config.resolve.fallback,
       stream: require.resolve('stream-browserify'),
@@ -63,7 +59,7 @@ module.exports = {
     config.module.rules[0].use.push({
       loader: '@linaria/webpack-loader',
       options: {
-        sourceMap: true,
+        sourceMap: config.mode !== 'production',
       },
     });
 
