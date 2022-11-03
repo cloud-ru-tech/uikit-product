@@ -43,10 +43,9 @@ export function ErrorPage({
         {logoVariant === LogoVariant.Cloud && <S.CloudLogo height={24} />}
         {logoVariant === LogoVariant.MLSpace && <S.MlSpaceLogo height={24} />}
         <S.Title>
-          {textProvider(
-            languageCode,
-            errorType === ErrorType.PageNotFound ? Texts.PageNotFoundTitle : Texts.PageUnavailableTitle,
-          )}
+          {errorType === ErrorType.PageNotFound && textProvider(languageCode, Texts.PageNotFoundTitle)}
+          {errorType === ErrorType.PageUnavailable && textProvider(languageCode, Texts.PageUnavailableTitle)}
+          {errorType === ErrorType.FrontendError && textProvider(languageCode, Texts.FrontendErrorTitle)}
           {errorType === ErrorType.PageNotFound && (
             <S.StatusCode color={Tag.colors.Gray} size={Tag.sizes.Medium} value={404} />
           )}
@@ -58,6 +57,13 @@ export function ErrorPage({
           <S.ActionTitle>{textProvider(languageCode, Texts.ActionRedirectTitle)}</S.ActionTitle>
           <S.ActionLinks>
             <Link href={mainPageUrl} target={'_self'} text={textProvider(languageCode, Texts.MainPageLink)} />
+            {errorType === ErrorType.FrontendError && (
+              <Link
+                onClick={() => window.history.back()}
+                target={'_self'}
+                text={textProvider(languageCode, Texts.BackLink)}
+              />
+            )}
           </S.ActionLinks>
         </S.ActionWrapper>
         <S.ButtonContainer>
