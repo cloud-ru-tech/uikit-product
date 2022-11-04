@@ -6,9 +6,7 @@ import { CheckboxIconPrivate } from '@sbercloud/uikit-product-checkbox';
 import * as S from './styled';
 
 export function HeaderCheckboxRenderer({ api, itemCount }: { api: GridApi; itemCount: number }) {
-  const [allSelected, setIsAllSelected] = useState(
-    api.getSelectedRows().length === itemCount && api.getSelectedRows().length !== 0,
-  );
+  const [allSelected, setIsAllSelected] = useState(api.getSelectedRows().length === itemCount);
   const [isEmpty, setIsEmpty] = useState(api.getSelectedRows().length === 0);
 
   useEffect(() => {
@@ -38,7 +36,11 @@ export function HeaderCheckboxRenderer({ api, itemCount }: { api: GridApi; itemC
         }
       }}
     >
-      <CheckboxIconPrivate checked={allSelected} partChecked={!isEmpty && !allSelected} />
+      <CheckboxIconPrivate
+        disabled={itemCount === 0}
+        checked={!isEmpty && allSelected}
+        partChecked={!isEmpty && !allSelected}
+      />
     </S.RadioCell>
   );
 }
