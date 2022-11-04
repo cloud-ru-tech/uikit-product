@@ -34,11 +34,11 @@ export const LeftSide = styled.div`
 `;
 
 export const CloudLogo = styled(PredefinedCloudLogo)`
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 `;
 
 export const MlSpaceLogo = styled(PredefinedMLSpaceLogo)`
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 `;
 
 export const Title = styled.h1`
