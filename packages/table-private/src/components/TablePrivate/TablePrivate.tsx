@@ -151,6 +151,7 @@ function StylelessTablePrivate({
         modules={[...AgGridModules, ...additionModules]}
         gridOptions={{
           isRowSelectable: ({ data }: any) => !Boolean(data?.disabled),
+          suppressRowClickSelection: selectionMode !== SelectionMode.Single,
           suppressCellFocus: true,
           rowSelection: selectionMode !== SelectionMode.None ? selectionMode : undefined,
           headerHeight: tableHeaderHeight,

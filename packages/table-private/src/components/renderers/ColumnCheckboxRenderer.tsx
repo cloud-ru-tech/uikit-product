@@ -1,7 +1,7 @@
 import { Events, GridApi, RowNode } from '@ag-grid-community/core';
 import { useEffect, useState } from 'react';
 
-import { CheckboxIconPrivate } from '@sbercloud/uikit-product-checkbox';
+import { Checkbox } from '@sbercloud/uikit-product-checkbox';
 
 import * as S from './styled';
 
@@ -29,7 +29,11 @@ export function ColumnCheckboxRenderer({ api, node, data }: CellRendererProps) {
 
   return (
     <S.RadioCell>
-      <CheckboxIconPrivate checked={Boolean(isSelected)} disabled={Boolean(data?.disabled)} />
+      <Checkbox
+        handleChange={() => node.setSelected(!node.isSelected())}
+        checked={Boolean(isSelected)}
+        disabled={Boolean(data?.disabled)}
+      />
     </S.RadioCell>
   );
 }
