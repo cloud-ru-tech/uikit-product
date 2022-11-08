@@ -131,7 +131,6 @@ export function ClientModelTableView<T>({
             return row.data[fieldId];
           },
           suppressPaginationPanel: true,
-          enableCellTextSelection: true,
         }}
       />
       {paginationProps?.showPagination && (

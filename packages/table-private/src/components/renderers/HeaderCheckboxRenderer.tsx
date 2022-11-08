@@ -1,7 +1,7 @@
 import { Events, GridApi } from '@ag-grid-community/core';
 import { useEffect, useState } from 'react';
 
-import { CheckboxIconPrivate } from '@sbercloud/uikit-product-checkbox';
+import { Checkbox } from '@sbercloud/uikit-product-checkbox';
 
 import * as S from './styled';
 
@@ -27,19 +27,18 @@ export function HeaderCheckboxRenderer({ api, itemCount }: { api: GridApi; itemC
   }, [api, itemCount]);
 
   return (
-    <S.RadioCell
-      onClick={() => {
-        if (allSelected) {
-          api.deselectAllFiltered();
-        } else {
-          api.selectAllFiltered();
-        }
-      }}
-    >
-      <CheckboxIconPrivate
+    <S.RadioCell>
+      <Checkbox
         disabled={itemCount === 0}
         checked={!isEmpty && allSelected}
         partChecked={!isEmpty && !allSelected}
+        handleChange={() => {
+          if (allSelected) {
+            api.deselectAllFiltered();
+          } else {
+            api.selectAllFiltered();
+          }
+        }}
       />
     </S.RadioCell>
   );
