@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { PieChart } from 'react-minimal-pie-chart';
+import { PieChart, pieChartDefaultProps } from 'react-minimal-pie-chart';
 
 import { H3_STYLES } from '@sbercloud/uikit-product-typography';
 import { Themes, useTheme } from '@sbercloud/uikit-product-utils';
@@ -23,7 +23,7 @@ export const GroupChart = (props: DefaultChartProps) => {
       <Title>{props.title}</Title>
       <PieChart
         data={props?.data}
-        radius={PieChart.defaultProps.radius - 14}
+        radius={pieChartDefaultProps.radius - 14}
         lineWidth={60}
         segmentsStyle={{ transition: 'stroke .3s', cursor: 'pointer' }}
         segmentsShift={1}
