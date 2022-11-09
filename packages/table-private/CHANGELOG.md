@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.20.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.19.1...@sbercloud/uikit-product-table-private@0.20.0) (2022-11-09)
+
+### Bug Fixes
+
+- disable row selection for multi select mode ([1fcf0f2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1fcf0f2d0ba5793d6509a4cf65ea384a005bce19))
+
+### Features
+
+- update deps ([c7a761d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c7a761db73dc4add1428d32ceff7679b8600f987))
+
 ## [0.19.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.19.0...@sbercloud/uikit-product-table-private@0.19.1) (2022-11-04)
 
 ### Bug Fixes

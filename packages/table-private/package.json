@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-table-private",
   "title": "React Table Private",
-  "version": "0.19.1",
+  "version": "0.20.0",
   "sideEffects": [
     "*.css",
     "*.woff",
