@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.20.0...@sbercloud/uikit-product-table-private@0.20.1) (2022-11-10)
+
+### Bug Fixes
+
+- header cell is no longer cut ([be1b88c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/be1b88c649d6536a6e2446af0d9333fea1d6d8b2))
+
 # [0.20.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.19.1...@sbercloud/uikit-product-table-private@0.20.0) (2022-11-09)
 
 ### Bug Fixes
