@@ -58,6 +58,9 @@ export const styledTable = <P extends TableProps>(Table: VFC<P>) => styled(Table
       }
 
       &-cell {
+        &-label-container {
+          padding: unset;
+        }
         ${TABLE_TEXT_STYLES};
         padding: 12px 8px;
         display: flex;
