@@ -12,6 +12,9 @@ export interface ITableFreeProps extends TableFreePrivateProps {
   pageSize?: number;
 }
 
+/**
+ * @deprecated please, migrate to ClientModelTable usage
+ */
 export function TableFree({
   rowData = [],
   columnDefs = [],
