@@ -7,6 +7,15 @@
 
 ## Short Usage
 
+Краткий формат нотификаций вызывает кастомный эвент, соответственно в вашем приложении должен быть реализован слушатель.
+Решение со эвентами является временным. 
+
+Для Single-Spa приложений правильным способом является использования `@sbercloud/spa-store` 
+для вызова нотификации. 
+
+Краткое API напрямую из пакета `@sbercloud/uikit-product-notification` могут использовать только 
+`MF` приложения, которые в момент миграции на Single-Spa должны перейти на использование `@sbercloud/spa-store`.
+
 ```typescript
 import { notification } from '@sbercloud/uikit-product-notification';
 

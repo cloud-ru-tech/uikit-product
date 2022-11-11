@@ -3,7 +3,7 @@ import { Id, ToastOptions as RtToastOptions } from 'react-toastify';
 import { NotificationBigProps, NotificationContainerProps, NotificationSmallProps } from './components';
 
 export type NotificationId = Id;
-export type PromisedId = Promise<NotificationId>;
+type PromisedId = Promise<NotificationId>;
 
 export type NotificationOptions = {
   id?: NotificationId;
@@ -53,5 +53,5 @@ export type UpdateNotification = <T extends keyof NotificationPropsMap>(
   },
 ) => void;
 
-export type SmallOptions = Omit<NotificationSmallProps, 'status'>;
-export type BigOptions = Omit<NotificationBigProps, 'status'>;
+export type SmallOptions = Omit<NotificationSmallProps, 'status'> & Pick<NotificationOptions, 'id'>;
+export type BigOptions = Omit<NotificationBigProps, 'status'> & Pick<NotificationOptions, 'id'>;
