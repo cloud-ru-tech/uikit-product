@@ -10,6 +10,7 @@ import { DEFAULT_AUTO_CLOSE, NOTIFICATION_CONTAINER_DEFAULT_PROPS, NOTIFICATION_
 import { dispatchCustomEvent, NotifyCustomEventKey } from './customEvents';
 import {
   BigOptions,
+  NotificationEventTrigger,
   NotificationId,
   NotificationOptions,
   NotificationPropsMap,
@@ -374,42 +375,7 @@ const big = {
   },
 };
 
-type Notification = {
-  small: {
-    success(options: SmallOptions): void;
-    neutral(options: SmallOptions): void;
-    loading(options: SmallOptions): void;
-    error(options: SmallOptions): void;
-    update: {
-      success(id: NotificationId, options: SmallOptions): void;
-      neutral(id: NotificationId, options: SmallOptions): void;
-      loading(id: NotificationId, options: SmallOptions): void;
-      error(id: NotificationId, options: SmallOptions): void;
-    };
-    dismiss(id?: NotificationId): void;
-  };
-  big: {
-    success(options: BigOptions): void;
-    info(options: BigOptions): void;
-    warning(options: BigOptions): void;
-    warningAlarm(options: BigOptions): void;
-    warningCritical(options: BigOptions): void;
-    error(options: BigOptions): void;
-    errorAlarm(options: BigOptions): void;
-    update: {
-      success(id: NotificationId, options: BigOptions): void;
-      info(id: NotificationId, options: BigOptions): void;
-      warning(id: NotificationId, options: BigOptions): void;
-      warningAlarm(id: NotificationId, options: BigOptions): void;
-      warningCritical(id: NotificationId, options: BigOptions): void;
-      error(id: NotificationId, options: BigOptions): void;
-      errorAlarm(id: NotificationId, options: BigOptions): void;
-    };
-    dismiss(id?: NotificationId): void;
-  };
-};
-
-export const notification: Notification = {
+export const notification: NotificationEventTrigger = {
   small,
   big,
 };

@@ -9,5 +9,5 @@ export {
 } from './helpers';
 export { NotifyCustomEventKey } from './customEvents';
 export { NotificationStatuses } from './constants';
-export type { NotificationOptions, NotificationId } from './types';
+export type { NotificationOptions, NotificationId, NotificationEventTrigger } from './types';
 export { NotificationType } from './types';
