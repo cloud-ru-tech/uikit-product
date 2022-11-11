@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.47.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.47.2...@sbercloud/uikit-product-table@0.47.3) (2022-11-11)
+
+### Bug Fixes
+
+- deprecate TableFree ([980932f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/980932f3a5a313a309362bf217b1903e0461aa95))
+
 ## [0.47.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.47.1...@sbercloud/uikit-product-table@0.47.2) (2022-11-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table

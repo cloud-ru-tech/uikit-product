@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.4.3...@sbercloud/uikit-product-notification@5.0.0) (2022-11-11)
+
+### Dependencies
+
+- react-toastify v9.1.1 ([ba1400e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ba1400ead12e3e921ebad1f857e0012f13e01ef2))
+
+### Features
+
+- notification api fires custom events ([6b1e04f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6b1e04fcc9fc21dd86206a76caf7d2014cab7a28))
+
+### BREAKING CHANGES
+
+- notification api fires custom events
+
 ## [4.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.4.2...@sbercloud/uikit-product-notification@4.4.3) (2022-11-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-notification
