@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@5.0.0...@sbercloud/uikit-product-notification@5.0.1) (2022-11-11)
+
+### Bug Fixes
+
+- correct types for notification short api (events firing) ([9951957](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/99519572a4ec54d210d40d427fc150463bed1e53))
+
 # [5.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@4.4.3...@sbercloud/uikit-product-notification@5.0.0) (2022-11-11)
 
 ### Dependencies
