@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.0.36...@sbercloud/uikit-product-button@5.1.0) (2022-11-14)
+
+### Features
+
+- **LK-978:** add onClickBeforeCopy prop to copy button for requesting data before copy ([e6ffb99](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e6ffb99a4ba1654455030c637c76b9be7a6ec2d6))
+
 ## [5.0.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.0.35...@sbercloud/uikit-product-button@5.0.36) (2022-11-09)
 
 ### Dependencies

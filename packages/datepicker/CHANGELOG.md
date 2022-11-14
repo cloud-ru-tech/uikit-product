@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.70](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.69...@sbercloud/uikit-product-datepicker@0.11.70) (2022-11-14)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-datepicker
+
 ## [0.11.69](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.68...@sbercloud/uikit-product-datepicker@0.11.69) (2022-11-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-datepicker
