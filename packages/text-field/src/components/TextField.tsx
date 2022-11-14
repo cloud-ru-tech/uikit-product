@@ -1,11 +1,10 @@
 import { ReactNode, useState } from 'react';
 
-import { ButtonIconTransparent, CopyButton } from '@sbercloud/uikit-product-button';
-import { EyeClosedInterfaceSVG, EyeOpenedInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { CopyButton } from '@sbercloud/uikit-product-button';
 import { InputPrivate } from '@sbercloud/uikit-product-input-private';
-import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { textProvider, Texts } from '../helpers/texts-provider';
+import { SecuredIcon } from './components';
 import { Types } from './constants';
 import { Container, IconsContainer, StyledInputPrivate, StyledTextareaPrivate } from './styled';
 
@@ -15,6 +14,7 @@ export type TextFieldProps = WithSupportProps<{
   text: string;
   extraIcons?: ReactNode;
   allowCopy?: boolean;
+  onRequestSecuredField?: () => Promise<{ text?: string; preventAction?: boolean } | undefined>;
 }>;
 
 export function TextField({
@@ -23,17 +23,54 @@ export function TextField({
   text,
   extraIcons,
   allowCopy = true,
+  onRequestSecuredField,
   ...rest
 }: TextFieldProps) {
   const isPassword = type === Types.Password;
   const isOneLine = type === Types.OneLine || isPassword;
   const isMultiLine = type === Types.MultiLine;
+
+  const [secureIconLoading, setSecureIconLoading] = useState<boolean>(false);
+  const [copyButtonLoading, setCopyButtonLoading] = useState<boolean>(false);
   const [isSecured, setIsSecured] = useState<boolean>(isPassword);
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const [isSecuredFieldRequested, setIsIsSecuredFieldRequested] = useState<boolean>(false);
 
   const hasActionButtons = allowCopy || Boolean(extraIcons);
 
-  const toggleSecured = () => setIsSecured(value => !value);
+  const onShowSecuredIconClick = async () => {
+    if (!onRequestSecuredField || isSecuredFieldRequested) {
+      setIsSecured(false);
+      return;
+    }
+
+    setSecureIconLoading(true);
+
+    const response = await onRequestSecuredField();
+
+    if (!response?.preventAction) {
+      setIsSecured(false);
+      setIsIsSecuredFieldRequested(true);
+    }
+
+    setSecureIconLoading(false);
+  };
+
+  const onCopyButtonClick = async () => {
+    if (!onRequestSecuredField || isSecuredFieldRequested) {
+      return;
+    }
+
+    setCopyButtonLoading(true);
+
+    const response = await onRequestSecuredField();
+
+    setCopyButtonLoading(false);
+    !response?.preventAction && setIsIsSecuredFieldRequested(true);
+
+    return response?.preventAction ? { preventCopy: true } : { textToCopy: response?.text };
+  };
+
+  const hideSecuredText = () => setIsSecured(true);
 
   const inputType = isSecured ? InputPrivate.types.Password : InputPrivate.types.Text;
   const content = isOneLine ? (
@@ -55,25 +92,29 @@ export function TextField({
     />
   );
 
-  const securedIcon = (
-    <ButtonIconTransparent
-      data-test-id='text-field__show-hide-button'
-      variant={ButtonIconTransparent.variants.Default}
-      onClick={toggleSecured}
-      icon={isSecured ? <EyeOpenedInterfaceSVG /> : <EyeClosedInterfaceSVG />}
-      tooltip={{
-        content: textProvider(languageCode, isSecured ? Texts.Show : Texts.Hide),
-        placement: ButtonIconTransparent.placements.Top,
-      }}
-    />
-  );
+  const isDisabled = secureIconLoading || copyButtonLoading;
 
   return (
     <Container className={className} {...extractSupportProps(rest)}>
       <IconsContainer data-multiline={isMultiLine || undefined}>
         {extraIcons}
-        {isPassword && securedIcon}
-        {allowCopy && <CopyButton text={text} data-test-id='text-field__copy-button' />}
+        {isPassword && (
+          <SecuredIcon
+            loading={secureIconLoading}
+            isSecured={isSecured}
+            disabled={isDisabled}
+            onShowSecuredIconClick={onShowSecuredIconClick}
+            hideSecuredText={hideSecuredText}
+          />
+        )}
+        {allowCopy && (
+          <CopyButton
+            text={text}
+            disabled={isDisabled}
+            data-test-id='text-field__copy-button'
+            onClickBeforeCopy={onCopyButtonClick}
+          />
+        )}
       </IconsContainer>
       {content}
     </Container>
