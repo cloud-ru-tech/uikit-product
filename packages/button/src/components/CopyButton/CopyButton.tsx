@@ -4,6 +4,7 @@ import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
 import { extractCommonButtonProps, WithTooltipProps } from '@sbercloud/uikit-product-button-private';
 import { CopyInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { PredefinedIconsPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers';
@@ -11,7 +12,13 @@ import { useIsMounted } from '../../hooks';
 import { ButtonIconTransparent } from '../';
 import { StyledCheckInterfaceSVG } from './styled';
 
-export type CopyButtonOwnProps = { text: string; icon?: never } & Pick<WithTooltipProps, 'tooltip'>;
+export type CopyButtonOwnProps = {
+  text: string;
+  icon?: never;
+  onClickBeforeCopy?: (
+    event: ReactMouseEvent<HTMLButtonElement, MouseEvent>,
+  ) => Promise<{ preventCopy?: boolean; textToCopy?: string } | undefined>;
+} & Pick<WithTooltipProps, 'tooltip'>;
 
 export const CopyButtonDefaultElement = ButtonIconTransparent;
 
@@ -24,32 +31,52 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
   as,
   text,
   onClick,
+  onClickBeforeCopy,
   ...rest
 }: CopyButtonProps<T>) {
   const Element: ElementType = as || CopyButtonDefaultElement;
 
-  const [completed, setCompleted] = useState(false);
+  const [isCompleted, setIsCompleted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const isMounted = useIsMounted();
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const copy = useCallback(() => {
-    copyToClipboard(text);
-    setCompleted(true);
+  const copy = useCallback(
+    (newText?: string) => {
+      copyToClipboard(newText || text);
+      setIsCompleted(true);
 
-    setTimeout(() => {
-      if (isMounted.current) {
-        setCompleted(false);
-      }
-    }, 800);
-  }, [text, isMounted]);
+      setTimeout(() => {
+        if (isMounted.current) {
+          setIsCompleted(false);
+        }
+      }, 800);
+    },
+    [text, isMounted],
+  );
 
   const wrappedOnClick = useCallback(
-    (event: ReactMouseEvent<HTMLButtonElement, MouseEvent>) => {
-      copy();
-      onClick?.(event);
+    async (event: ReactMouseEvent<HTMLButtonElement, MouseEvent>) => {
+      if (!onClickBeforeCopy) {
+        copy();
+        onClick?.(event);
+
+        return;
+      }
+
+      setIsLoading(true);
+
+      const response = await onClickBeforeCopy(event);
+
+      if (!response?.preventCopy) {
+        copy(response?.textToCopy);
+        onClick?.(event);
+      }
+
+      setIsLoading(false);
     },
-    [copy, onClick],
+    [copy, onClick, onClickBeforeCopy],
   );
 
   const extractedProps: ReturnType<typeof extractCommonButtonProps> & { variant?: unknown } =
@@ -61,7 +88,13 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
 
   return (
     <Element
-      icon={completed ? <StyledCheckInterfaceSVG /> : <CopyInterfaceSVG />}
+      icon={
+        <>
+          {isLoading && <PredefinedIconsPrivate icon={PredefinedIconsPrivate.icons.Loading} />}
+          {!isLoading && isCompleted && <StyledCheckInterfaceSVG />}
+          {!isLoading && !isCompleted && <CopyInterfaceSVG />}
+        </>
+      }
       onClick={wrappedOnClick}
       tooltip={{ content: textProvider(languageCode, Texts.Copy) }}
       {...extractedProps}
