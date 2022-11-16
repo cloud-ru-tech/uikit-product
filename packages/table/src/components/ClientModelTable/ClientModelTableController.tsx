@@ -5,6 +5,7 @@ import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/u
 
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import { ClientModelTableView } from './ClientModelTableView';
+import { ExportActions } from './constants';
 import { DeleteProps, FilterProps, PaginationProps } from './types';
 
 export type ClientModelTableControllerProps<T> = {
@@ -25,7 +26,10 @@ export type ClientModelTableControllerProps<T> = {
       cancelText: string;
     };
     filter?: FilterProps<T>;
-    exportFileName?: string;
+    export?: {
+      fileName: string;
+      onExport?(exportType: string): void;
+    };
   };
   advancedProps?: {
     getRowHeight?: TablePrivateProps['getRowHeight'];
@@ -215,32 +219,46 @@ export function ClientModelTableController<T>({
     [gridApi],
   );
   const moreActions = useMemo(() => {
-    if (!gridApi || !bulkActions?.exportFileName) return undefined;
+    if (!gridApi || !bulkActions) {
+      return undefined;
+    }
+
+    const { export: exportProps } = bulkActions;
+
+    if (!exportProps) {
+      return undefined;
+    }
 
     const columnDefs = gridApi.getColumnDefs() as ClientModelTableControllerProps<T>['columnDefinitions'];
     const columnKeys = columnDefs.filter(x => !x['customMeta']?.skipOnExport).map(x => x['colId'] || x['field']);
 
     return [
       {
-        value: 'client-table__toolbar-more-action-export-csv',
+        value: ExportActions.Csv,
         label: textProvider(languageCode, Texts.ExportCSV),
-        onClick: () =>
+        onClick: () => {
+          exportProps.onExport?.(ExportActions.Csv);
+
           gridApi.exportDataAsCsv({
-            fileName: bulkActions.exportFileName,
+            fileName: exportProps.fileName,
             columnKeys,
-          }),
+          });
+        },
       },
       {
-        value: 'client-table__toolbar-more-action-export-xls',
+        value: ExportActions.Xls,
         label: textProvider(languageCode, Texts.ExportExcel),
-        onClick: () =>
+        onClick: () => {
+          exportProps.onExport?.(ExportActions.Xls);
+
           gridApi.exportDataAsExcel({
-            fileName: bulkActions.exportFileName,
+            fileName: exportProps.fileName,
             columnKeys,
-          }),
+          });
+        },
       },
     ];
-  }, [gridApi, bulkActions?.exportFileName, languageCode]);
+  }, [gridApi, bulkActions?.export, languageCode]);
 
   useEffect(() => {
     setTimeout(() => {
