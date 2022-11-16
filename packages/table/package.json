@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-table",
   "title": "React Table",
-  "version": "0.47.4",
+  "version": "0.48.0",
   "sideEffects": [
     "*.css",
     "*.woff",

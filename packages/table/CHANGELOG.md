@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.48.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.47.4...@sbercloud/uikit-product-table@0.48.0) (2022-11-16)
+
+### Features
+
+- **AICDC-9457:** changed table export prop, added additional onExport handler ([a8759fb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a8759fb2ff36107ddac506a7ff40e5347e9939ed))
+
+### BREAKING CHANGES
+
+- **AICDC-9457:** changed table export prop, added additional onExport handler
+
 ## [0.47.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.47.3...@sbercloud/uikit-product-table@0.47.4) (2022-11-14)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table
