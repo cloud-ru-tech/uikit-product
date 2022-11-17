@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-tooltip",
   "title": "React Tooltip",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-link": "3.0.38",
+    "@sbercloud/uikit-product-link": "3.0.39",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-tooltip-private": "1.2.21",
     "@sbercloud/uikit-product-typography": "1.2.0",

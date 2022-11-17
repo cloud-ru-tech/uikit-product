@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-alert",
   "title": "Alert",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -25,10 +25,10 @@
   ],
   "license": "UNLICENSED",
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.1.0",
-    "@sbercloud/uikit-product-icons": "5.3.1",
-    "@sbercloud/uikit-product-link": "3.0.38",
-    "@sbercloud/uikit-product-predefined-icons-private": "0.6.0",
+    "@sbercloud/uikit-product-button": "5.1.1",
+    "@sbercloud/uikit-product-icons": "5.4.0",
+    "@sbercloud/uikit-product-link": "3.0.39",
+    "@sbercloud/uikit-product-predefined-icons-private": "0.6.1",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.1.0"

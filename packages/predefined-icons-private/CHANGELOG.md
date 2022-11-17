@@ -3,306 +3,173 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.3...@sbercloud/uikit-product-predefined-icons-private@0.6.0) (2022-10-19)
+## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.6.0...@sbercloud/uikit-product-predefined-icons-private@0.6.1) (2022-11-17)
 
+**Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
+
+# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.3...@sbercloud/uikit-product-predefined-icons-private@0.6.0) (2022-10-19)
 
 ### Features
 
-* **FF-1108:** add predefined logo variants ([cf2a115](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf2a1150357bf5b6235747bc300f2f1e48fe5cf3))
-
-
-
-
+- **FF-1108:** add predefined logo variants ([cf2a115](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf2a1150357bf5b6235747bc300f2f1e48fe5cf3))
 
 ## [0.5.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.2...@sbercloud/uikit-product-predefined-icons-private@0.5.3) (2022-10-12)
 
-
 ### Bug Fixes
 
-* **FF-1080:** Fixed Predefined Decor Icons Private story ([d11e242](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d11e242b97d48500c87874b4e6a293bb85ba9dc4))
-* **FF-1093:** predefined logo svg height for Safari ([23a82a4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/23a82a486d3f60a285fe9ec396a251156132e9f8))
-
-
-
-
+- **FF-1080:** Fixed Predefined Decor Icons Private story ([d11e242](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d11e242b97d48500c87874b4e6a293bb85ba9dc4))
+- **FF-1093:** predefined logo svg height for Safari ([23a82a4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/23a82a486d3f60a285fe9ec396a251156132e9f8))
 
 ## [0.5.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.1...@sbercloud/uikit-product-predefined-icons-private@0.5.2) (2022-10-10)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## [0.5.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.0...@sbercloud/uikit-product-predefined-icons-private@0.5.1) (2022-10-07)
-
 
 ### Bug Fixes
 
-* testcafe tests ([d2868fa](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d2868faaf0b6755ed3c7981ed7a6002e8f0cd9e0))
-
-
-
-
+- testcafe tests ([d2868fa](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d2868faaf0b6755ed3c7981ed7a6002e8f0cd9e0))
 
 # [0.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.4.3...@sbercloud/uikit-product-predefined-icons-private@0.5.0) (2022-10-03)
 
-
 ### Features
 
-* **FF-725:** add Small size ([f8db333](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f8db333009d0079793e987fce78d087c9b9d4520))
-
-
-
-
+- **FF-725:** add Small size ([f8db333](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f8db333009d0079793e987fce78d087c9b9d4520))
 
 ## [0.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.4.2...@sbercloud/uikit-product-predefined-icons-private@0.4.3) (2022-09-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## [0.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.4.1...@sbercloud/uikit-product-predefined-icons-private@0.4.2) (2022-09-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## [0.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.4.0...@sbercloud/uikit-product-predefined-icons-private@0.4.1) (2022-09-12)
-
 
 ### Bug Fixes
 
-* **FF-727:** Predefined icon padding fix ([665dffb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/665dffb16dabd71564375cad1a9af37e252fa383))
-
-
-
-
+- **FF-727:** Predefined icon padding fix ([665dffb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/665dffb16dabd71564375cad1a9af37e252fa383))
 
 # [0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.6...@sbercloud/uikit-product-predefined-icons-private@0.4.0) (2022-09-12)
 
-
 ### Features
 
-* **FF-727:** Icon Decor Predefined ([930e6c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/930e6c96e60130dfce956ae4debd772b55c709c5))
-
+- **FF-727:** Icon Decor Predefined ([930e6c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/930e6c96e60130dfce956ae4debd772b55c709c5))
 
 ### BREAKING CHANGES
 
-* **FF-727:** Icon Decor Predefined
-
-
-
-
+- **FF-727:** Icon Decor Predefined
 
 ## [0.3.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.5...@sbercloud/uikit-product-predefined-icons-private@0.3.6) (2022-09-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## [0.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.4...@sbercloud/uikit-product-predefined-icons-private@0.3.5) (2022-09-09)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
-
-
-
-
 
 ## [0.3.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.3...@sbercloud/uikit-product-predefined-icons-private@0.3.4) (2022-09-08)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## [0.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.2...@sbercloud/uikit-product-predefined-icons-private@0.3.3) (2022-08-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
-
-
-
-
 
 ## [0.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.1...@sbercloud/uikit-product-predefined-icons-private@0.3.2) (2022-08-15)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## [0.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.0...@sbercloud/uikit-product-predefined-icons-private@0.3.1) (2022-08-11)
-
 
 ### Bug Fixes
 
-* **FF-682:** update @sbercloud/ft-all-linters-pack version and fix eslint errors ([8e1bca6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e1bca684734d8b82b87c18cf639050e21ef007e))
-
-
-
-
+- **FF-682:** update @sbercloud/ft-all-linters-pack version and fix eslint errors ([8e1bca6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e1bca684734d8b82b87c18cf639050e21ef007e))
 
 # [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.2.4...@sbercloud/uikit-product-predefined-icons-private@0.3.0) (2022-08-05)
 
-
 ### Bug Fixes
 
-* **FF-547:** change ML abbr dark theme color ([b4306c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b4306c961576a19e2aac4470ad675ac010951dd9))
-* **FF-547:** remove SbercloudFullLogo, PredefinedSbercloudLogo icons ([f92458b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f92458b440fe6c4aa407ca362fc6c46bd62a3f8e))
-
+- **FF-547:** change ML abbr dark theme color ([b4306c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b4306c961576a19e2aac4470ad675ac010951dd9))
+- **FF-547:** remove SbercloudFullLogo, PredefinedSbercloudLogo icons ([f92458b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f92458b440fe6c4aa407ca362fc6c46bd62a3f8e))
 
 ### Features
 
-* **FF-547:** add PredefinedCloudLogo ([c98e133](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c98e1333659dcdc0f2cb08d685ed1b12391e851a))
-
+- **FF-547:** add PredefinedCloudLogo ([c98e133](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c98e1333659dcdc0f2cb08d685ed1b12391e851a))
 
 ### BREAKING CHANGES
 
-* **FF-547:** remove SbercloudFullLogo, PredefinedSbercloudLogo icons
-
-
-
-
+- **FF-547:** remove SbercloudFullLogo, PredefinedSbercloudLogo icons
 
 ## [0.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.2.3...@sbercloud/uikit-product-predefined-icons-private@0.2.4) (2022-07-25)
 
-
 ### Bug Fixes
 
-* **FF-574:** move predefined icon stories to predefined package ([ca0a7bb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ca0a7bb7c0ad3c01c26967a91f31e4bee33c6a5b))
-
-
-
-
+- **FF-574:** move predefined icon stories to predefined package ([ca0a7bb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ca0a7bb7c0ad3c01c26967a91f31e4bee33c6a5b))
 
 ## [0.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.2.2...@sbercloud/uikit-product-predefined-icons-private@0.2.3) (2022-07-22)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## [0.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.2.1...@sbercloud/uikit-product-predefined-icons-private@0.2.2) (2022-07-13)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
-
-
-
-
 
 ## [0.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.2.0...@sbercloud/uikit-product-predefined-icons-private@0.2.1) (2022-07-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 # [0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.1.5...@sbercloud/uikit-product-predefined-icons-private@0.2.0) (2022-07-05)
-
 
 ### Features
 
-* **FF-153:** Added new icons (info, attention critical, attention warning) and new variant (on accent) to predefined icons ([8c1adf7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8c1adf7f03d095c4725f466986815c87ce0b970c))
-* **FF-153:** Decor Icon added to Predefined Icons Private ([dc1702d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc1702daae2e393d25b9c6ee8a7d6fffecde2a35))
-
-
-
-
+- **FF-153:** Added new icons (info, attention critical, attention warning) and new variant (on accent) to predefined icons ([8c1adf7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8c1adf7f03d095c4725f466986815c87ce0b970c))
+- **FF-153:** Decor Icon added to Predefined Icons Private ([dc1702d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc1702daae2e393d25b9c6ee8a7d6fffecde2a35))
 
 ## [0.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.1.4...@sbercloud/uikit-product-predefined-icons-private@0.1.5) (2022-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## [0.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.1.3...@sbercloud/uikit-product-predefined-icons-private@0.1.4) (2022-06-21)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
-
-
-
-
 
 ## [0.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.1.2...@sbercloud/uikit-product-predefined-icons-private@0.1.3) (2022-06-20)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## [0.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.1.1...@sbercloud/uikit-product-predefined-icons-private@0.1.2) (2022-06-08)
-
 
 ### Bug Fixes
 
-* peer dependencies block has been deleted ([b5786ad](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5786ad13fef6adcbeecf23a52702cbbf0c81535))
-
-
-
-
+- peer dependencies block has been deleted ([b5786ad](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5786ad13fef6adcbeecf23a52702cbbf0c81535))
 
 ## [0.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.1.0...@sbercloud/uikit-product-predefined-icons-private@0.1.1) (2022-06-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 # [0.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.0.4...@sbercloud/uikit-product-predefined-icons-private@0.1.0) (2022-05-20)
-
 
 ### Features
 
-* **AICE-6009:** added light and dark theme support in sbercloud and mlspace logo icons ([2ff1ba2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2ff1ba2a6cbaf312d0774181100951c15dff2cf5))
-
-
-
-
+- **AICE-6009:** added light and dark theme support in sbercloud and mlspace logo icons ([2ff1ba2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2ff1ba2a6cbaf312d0774181100951c15dff2cf5))
 
 ## [0.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.0.3...@sbercloud/uikit-product-predefined-icons-private@0.0.4) (2022-05-18)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
 
-
-
-
-
 ## 0.0.3 (2022-05-16)
-
 
 ### Bug Fixes
 
-* predefinedIconsPrivate introduced instead of StatusIcon ([c89b2be](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c89b2be92d740ec267e05c7663d6dad83cdeea87))
-* renaming packages ([6c4e34d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
-
-
-
-
+- predefinedIconsPrivate introduced instead of StatusIcon ([c89b2be](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c89b2be92d740ec267e05c7663d6dad83cdeea87))
+- renaming packages ([6c4e34d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6c4e34d4b5b8aa4a3386187b996f4856e642d0b5))
 
 ## 0.0.2 (2022-05-12)
 
-
 ### Bug Fixes
 
-* predefinedIconsPrivate introduced instead of StatusIcon ([c89b2be](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c89b2be92d740ec267e05c7663d6dad83cdeea87))
-
-
-
-
+- predefinedIconsPrivate introduced instead of StatusIcon ([c89b2be](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c89b2be92d740ec267e05c7663d6dad83cdeea87))
 
 ## CHANGELOG
 

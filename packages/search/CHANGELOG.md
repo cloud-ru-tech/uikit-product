@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-search@0.2.9...@sbercloud/uikit-product-search@0.2.10) (2022-11-17)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-search
+
 ## [0.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-search@0.2.8...@sbercloud/uikit-product-search@0.2.9) (2022-11-14)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-search
