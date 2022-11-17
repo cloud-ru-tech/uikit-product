@@ -17,7 +17,7 @@ export type CopyButtonOwnProps = {
   icon?: never;
   onClickBeforeCopy?: (
     event: ReactMouseEvent<HTMLButtonElement, MouseEvent>,
-  ) => Promise<{ preventCopy?: boolean; textToCopy?: string } | undefined>;
+  ) => Promise<{ preventCopy?: boolean; textToCopy?: string } | void>;
 } & Pick<WithTooltipProps, 'tooltip'>;
 
 export const CopyButtonDefaultElement = ButtonIconTransparent;
