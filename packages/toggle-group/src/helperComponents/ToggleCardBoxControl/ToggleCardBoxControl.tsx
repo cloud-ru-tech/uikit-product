@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { useToggleState } from '../../hooks';
 import { Value } from '../../types';
 import { ToggleCardBoxInput } from '../ToggleCardBoxInput';
+import * as S from './styled';
 
 type ToggleCardBoxControlProps = {
   value: Value;
@@ -15,7 +16,7 @@ export function ToggleCardBoxControl({ value, children, disabled, className, ...
   const { type, checked, name, onChange } = useToggleState(value);
 
   return (
-    <label className={className} {...rest}>
+    <S.Label className={className} {...rest}>
       <ToggleCardBoxInput
         type={type}
         checked={checked}
@@ -26,6 +27,6 @@ export function ToggleCardBoxControl({ value, children, disabled, className, ...
         data-test-option-id={value}
       />
       {children}
-    </label>
+    </S.Label>
   );
 }
