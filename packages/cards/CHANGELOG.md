@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.1.7...@sbercloud/uikit-product-cards@1.1.8) (2022-11-17)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-cards
+
 ## [1.1.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.1.6...@sbercloud/uikit-product-cards@1.1.7) (2022-11-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-cards

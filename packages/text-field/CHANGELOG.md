@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.2.1...@sbercloud/uikit-product-text-field@3.2.2) (2022-11-17)
+
+### Bug Fixes
+
+- **LK-938:** change onRequestSecuredField prop type from undefined to void ([7313891](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/73138912f5f05a12fcdde2092330df6e8cb6ada5))
+
 ## [3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.2.0...@sbercloud/uikit-product-text-field@3.2.1) (2022-11-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-text-field

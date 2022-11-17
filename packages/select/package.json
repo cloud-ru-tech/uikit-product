@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-select",
   "title": "React Select",
-  "version": "0.26.33",
+  "version": "0.26.34",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,12 +28,12 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-avatar": "1.1.13",
-    "@sbercloud/uikit-product-button": "5.1.1",
+    "@sbercloud/uikit-product-button": "5.1.2",
     "@sbercloud/uikit-product-divider": "2.0.37",
     "@sbercloud/uikit-product-icons": "5.4.0",
-    "@sbercloud/uikit-product-input-private": "3.0.4",
-    "@sbercloud/uikit-product-modal": "0.17.9",
-    "@sbercloud/uikit-product-tag": "2.0.9",
+    "@sbercloud/uikit-product-input-private": "3.0.5",
+    "@sbercloud/uikit-product-modal": "0.17.10",
+    "@sbercloud/uikit-product-tag": "2.0.10",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.1.0",
