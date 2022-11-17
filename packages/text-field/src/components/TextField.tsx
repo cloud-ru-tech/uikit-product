@@ -14,7 +14,7 @@ export type TextFieldProps = WithSupportProps<{
   text: string;
   extraIcons?: ReactNode;
   allowCopy?: boolean;
-  onRequestSecuredField?: () => Promise<{ text?: string; preventAction?: boolean } | undefined>;
+  onRequestSecuredField?: () => Promise<{ text?: string; preventAction?: boolean } | void>;
 }>;
 
 export function TextField({
