@@ -59,7 +59,7 @@ export function SidebarListHeader({ level, levelIndex }: SidebarListHeaderProps)
 
           {level.title && (
             <Tooltip content={level.title.label} type={Tooltip.types.Tip} placement={Tooltip.placements.Right}>
-              <SidebarCollapsedItem item={level.title} onClick={handleItemClick(level.title)} />
+              <SidebarCollapsedItem item={level.title} />
             </Tooltip>
           )}
         </>

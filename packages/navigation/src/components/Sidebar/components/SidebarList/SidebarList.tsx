@@ -77,7 +77,7 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
 
   const renderItems = ({ item }: { item: SidebarItemProps }) => {
     if (isCollapsed) {
-      return <SidebarCollapsedItem key={item.id} item={item} onClick={handleItemClick(item)} />;
+      return <SidebarCollapsedItem key={item.id} item={item} />;
     }
 
     if (isItemAccordion(item)) {

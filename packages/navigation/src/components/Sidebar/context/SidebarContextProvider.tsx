@@ -1,6 +1,6 @@
 import { MouseEvent, ReactNode, useRef, useState } from 'react';
 
-import { getCurrentLevel, getLevels } from '../helpers';
+import { getCurrentLevel, getLevels, isItemAccordion } from '../helpers';
 import { shouldBeDefaultClick } from '../helpers/shouldBeDefaultClick';
 import { Mode, SidebarItemId, SidebarItemProps, SidebarItemsGroup, SidebarOnActiveChange } from '../types';
 import { SidebarContext } from './SidebarContext';
@@ -71,7 +71,7 @@ export function SidebarContextProvider({
         closeSearch();
       }
 
-      const id = (item.mode === Mode.Accordion && item.nestedList?.length ? active : item.id) as string;
+      const id = (isItemAccordion(item) ? active : item.id) as string;
 
       onActiveChange({ id, href: item.href });
       previousLevelRef.current = currentLevel;

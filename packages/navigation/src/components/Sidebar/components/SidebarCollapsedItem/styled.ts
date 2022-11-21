@@ -16,14 +16,10 @@ export const Item = styled.div`
   transition: background-color ${ANIMATIONS.TRANSITION};
   width: 100%;
 
-  &:not([data-no-hover]) {
+  &:not([data-disabled]) {
     &:hover {
       background-color: var(${COLORS.background.hover});
     }
-  }
-
-  &[data-no-hover] {
-    cursor: default;
   }
 
   &[data-disabled] {

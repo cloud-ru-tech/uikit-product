@@ -1,6 +1,5 @@
-import { MouseEvent } from 'react';
-
 import { useSidebarContext } from '../../context';
+import { isItemAccordion } from '../../helpers';
 import { useNestedActive } from '../../hooks';
 import { SidebarItemProps } from '../../types';
 import { HoverMenu } from '../HoverMenu';
@@ -9,30 +8,28 @@ import * as S from './styled';
 
 type SidebarCollapsedItemProps = {
   item: SidebarItemProps;
-  onClick?(e: MouseEvent): void;
 };
 
-export function SidebarCollapsedItem({ item, onClick }: SidebarCollapsedItemProps) {
-  const { active } = useSidebarContext();
+export function SidebarCollapsedItem({ item }: SidebarCollapsedItemProps) {
+  const { active, handleItemClick } = useSidebarContext();
   const nestedSelected = useNestedActive(item);
+  const onClick = handleItemClick(item);
 
   const isActive = item.id === active || nestedSelected || undefined;
   const isDisabled = item.disabled || undefined;
-  const noHover = !Boolean(onClick) || item.disabled || undefined;
 
   const collapsedItem = (
     <S.Item
-      onClick={onClick}
+      onClick={isItemAccordion(item) ? undefined : onClick}
       data-collapsed={true}
       data-disabled={isDisabled}
-      data-no-hover={noHover}
       data-test-id={`sidebar__item-${item.id}`}
     >
       {item.icon && <SidebarItemIcon icon={item.icon} active={isActive} disabled={isDisabled} status={item.status} />}
     </S.Item>
   );
 
-  if (noHover) {
+  if (isDisabled) {
     return collapsedItem;
   }
 
