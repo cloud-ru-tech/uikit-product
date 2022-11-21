@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.15.60](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter@0.15.59...@sbercloud/uikit-product-filter@0.15.60) (2022-11-21)
+
+### Bug Fixes
+
+- **AICE-8124:** unset overflow for filter tooltip ([402b32e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/402b32e4a031619af764429ded4c91fcfd72d4d7))
+
 ## [0.15.59](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter@0.15.58...@sbercloud/uikit-product-filter@0.15.59) (2022-11-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-filter

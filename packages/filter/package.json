@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-filter",
   "title": "React Filter",
-  "version": "0.15.59",
+  "version": "0.15.60",
   "sideEffects": [
     "*.css",
     "*.woff",
