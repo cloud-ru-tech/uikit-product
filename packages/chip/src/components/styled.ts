@@ -16,6 +16,7 @@ export const ChipWrapper = styled.label`
   transition: background-color ease-out 200ms;
   user-select: none;
   color: var(${COLORS.DEFAULT_LABEL});
+  position: relative;
 
   &[data-disabled] {
     cursor: not-allowed;
