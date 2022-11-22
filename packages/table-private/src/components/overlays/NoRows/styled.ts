@@ -9,10 +9,9 @@ GREEN_DARK_THEME;
 
 export const NoRowsOverlay = styled.div`
   background-color: var(${COLORS.background});
-  border-radius: 12px;
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 0;
 `;

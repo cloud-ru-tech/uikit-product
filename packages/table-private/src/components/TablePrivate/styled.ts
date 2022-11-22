@@ -20,6 +20,7 @@ export const styledTablePrivate = (TablePrivate: VFC<TablePrivateProps>): VFC<Ta
 
         .ag-react-container {
           width: 100%;
+          height: 100%;
         }
       }
     }
