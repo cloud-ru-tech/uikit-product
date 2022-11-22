@@ -35,20 +35,24 @@ export function SidebarAccordion({ item, onInnerToggle, accordionLevel = 0, isMo
       if (accordionRef.current) {
         const currentItemHeight = accordionRef.current.scrollHeight + childHeight;
         setMaxHeight(isOpen ? currentItemHeight : 0);
-        onInnerToggle?.(isOpen ? currentItemHeight : -currentItemHeight);
       }
     },
-    [isOpen, onInnerToggle],
+    [isOpen],
   );
 
   useEffect(() => {
     setOpen(shouldBeOpen);
     toggle(shouldBeOpen);
-  }, [active, shouldBeOpen]);
+  }, [shouldBeOpen, active]);
 
   useEffect(() => {
     toggleHeight();
   }, [toggleHeight]);
+
+  useEffect(() => {
+    if (!accordionRef.current) return;
+    onInnerToggle?.(maxHeight === 0 ? -accordionRef.current.scrollHeight : accordionRef.current.scrollHeight);
+  }, [maxHeight, onInnerToggle]);
 
   function handleClick(e: MouseEvent) {
     if (isAccordion) {
