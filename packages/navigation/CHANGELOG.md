@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.21.5...@sbercloud/uikit-product-navigation@0.21.6) (2022-11-22)
+
+### Bug Fixes
+
+- **[FF-1255](https://jira.sbercloud.tech/browse/FF-1255):** remove click handler for collapsed accordion item ([9938f6e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9938f6e9fbb87a1860a11795fcef3f8a33f59534))
+
 ## [0.21.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.21.4...@sbercloud/uikit-product-navigation@0.21.5) (2022-11-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-navigation

@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.20.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.20.2...@sbercloud/uikit-product-table-private@0.20.3) (2022-11-22)
+
+### Bug Fixes
+
+- no rows overlay no longer disappeared on refresh data ([8435d54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8435d54f3c7475c7b635759099ce7856e8217c60))
+- no-data overlay correct styles ([85b0506](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/85b0506c75710b007cae9fe856b29f8f44f22cde))
+
 ## [0.20.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.20.1...@sbercloud/uikit-product-table-private@0.20.2) (2022-11-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-table-private
