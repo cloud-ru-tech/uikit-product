@@ -123,9 +123,18 @@ function StylelessTablePrivate({
     const newValue = !Boolean(displayedRowsCount || pinnedTopRowData?.length);
     if (showOverlay !== newValue) {
       setShowOverlay(newValue);
-      newValue ? gridApi?.showNoRowsOverlay() : gridApi?.hideOverlay();
     }
   }, [displayedRowsCount, gridApi, showOverlay, pinnedTopRowData?.length]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (showOverlay) {
+        gridApi?.showNoRowsOverlay();
+      } else {
+        gridApi?.hideOverlay();
+      }
+    });
+  }, [gridApi, rowData, showOverlay]);
 
   useEffect(() => {
     if (!gridApi || selectionMode === SelectionMode.None) return;
