@@ -103,7 +103,7 @@ const Template: Story<
     debSetPinnedData(newData);
   }, [debSetPinnedData, pinnedRowsAmount]);
 
-  const bulkActions: ClientModelTableProps<DataModel>['bulkActions'] = useMemo(
+  const bulkActions = useMemo<ClientModelTableProps<DataModel>['bulkActions']>(
     () => ({
       delete: showDelete
         ? {
@@ -132,7 +132,7 @@ const Template: Story<
             ],
           }
         : undefined,
-      exportFileName: showExport ? 'customExportFileName' : undefined,
+      export: showExport ? { fileName: 'customExportFileName' } : undefined,
     }),
     [data, filterValue, rowPassFilter, showDelete, showFilter, showExport],
   );
@@ -261,21 +261,21 @@ clientModelTable.argTypes = {
     },
   },
   showDelete: {
-    name: '[Stories]: show or hide delete button from toolbar',
+    name: '[Stories]: show (true) or hide delete button from toolbar',
     description: 'demonstration purposes only, this parameter does not exist in component',
     control: {
       type: 'boolean',
     },
   },
   showFilter: {
-    name: '[Stories]: show or hide filter button from toolbar',
+    name: '[Stories]: show (true) or hide filter button from toolbar',
     description: 'demonstration purposes only, this parameter does not exist in component',
     control: {
       type: 'boolean',
     },
   },
   showExport: {
-    name: '[Stories]: show or hide export table',
+    name: '[Stories]: show (true) or hide export table',
     control: {
       type: 'boolean',
     },
