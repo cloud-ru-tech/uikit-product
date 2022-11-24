@@ -60,7 +60,7 @@ export const Title = styled.div`
 export const titleTooltipClassName = css`
   margin-left: 4px;
   vertical-align: bottom;
-  z-index: 3;
+  z-index: 1;
   position: relative;
   fill: var(${SWITCH_ROW__CSS_VARS.icon});
 `;
