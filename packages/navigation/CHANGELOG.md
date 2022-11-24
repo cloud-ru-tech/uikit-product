@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.21.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.21.7...@sbercloud/uikit-product-navigation@0.21.8) (2022-11-24)
+
+### Bug Fixes
+
+- yet another sidebar animation fix ([ab9ddd0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ab9ddd02952b85f11b68163230d20d7aa455508d))
+
 ## [0.21.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-navigation@0.21.6...@sbercloud/uikit-product-navigation@0.21.7) (2022-11-22)
 
 ### Bug Fixes
