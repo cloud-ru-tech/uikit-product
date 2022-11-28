@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-switch@3.0.9...@sbercloud/uikit-product-switch@3.0.10) (2022-11-28)
+
+### Bug Fixes
+
+- **[DPS-981](https://jira.sbercloud.tech/browse/DPS-981):** decrease zIndex of tooltip trigger ([c326923](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c326923118340e1c4716c9563801c1caec89f7c1))
+
 ## [3.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-switch@3.0.8...@sbercloud/uikit-product-switch@3.0.9) (2022-11-28)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-switch
