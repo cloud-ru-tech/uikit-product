@@ -1,24 +1,13 @@
 import { Button } from '@sbercloud/uikit-product-button';
-import { MailInterfaceSVG, RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { HomeOutlineInterfaceSVG, MailInterfaceSVG, RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
 import { Tag } from '@sbercloud/uikit-product-tag';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../helpers/texts-provider';
+import { ErrorType, getLogoByVariant, getTitleByErrorType, LogoVariant } from './constants';
 import * as S from './styled';
 import { COLORS } from './themes';
-
-enum LogoVariant {
-  MLSpace = 'MLSpace',
-  Cloud = 'Cloud',
-  None = 'None',
-}
-
-enum ErrorType {
-  FrontendError = 'FrontendError',
-  PageUnavailable = 'PageUnavailable',
-  PageNotFound = 'PageNotFound',
-}
 
 export type ErrorPageProps = WithSupportProps<{
   className?: string;
@@ -37,26 +26,29 @@ export function ErrorPage({
   ...rest
 }: ErrorPageProps) {
   const { languageCode } = useLanguage();
+
+  const titleProps = getTitleByErrorType(errorType);
+
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)}>
       <S.LeftSide>
-        {logoVariant === LogoVariant.Cloud && <S.CloudLogo height={24} />}
-        {logoVariant === LogoVariant.MLSpace && <S.MlSpaceLogo height={24} />}
+        {getLogoByVariant(logoVariant)}
+
         <S.Title>
-          {errorType === ErrorType.PageNotFound && textProvider(languageCode, Texts.PageNotFoundTitle)}
-          {errorType === ErrorType.PageUnavailable && textProvider(languageCode, Texts.PageUnavailableTitle)}
-          {errorType === ErrorType.FrontendError && textProvider(languageCode, Texts.FrontendErrorTitle)}
-          {errorType === ErrorType.PageNotFound && (
-            <S.StatusCode color={Tag.colors.Gray} size={Tag.sizes.Medium} value={404} />
-          )}
-          {errorType === ErrorType.PageUnavailable && (
-            <S.StatusCode color={Tag.colors.Gray} size={Tag.sizes.Medium} value={403} />
+          {textProvider(languageCode, titleProps.text)}
+
+          {titleProps.statusCode && (
+            <S.StatusCode color={Tag.colors.Gray} size={Tag.sizes.Medium} value={titleProps.statusCode} />
           )}
         </S.Title>
+
         <S.ActionWrapper>
           <S.ActionTitle>{textProvider(languageCode, Texts.ActionRedirectTitle)}</S.ActionTitle>
+
           <S.ActionLinks>
-            <Link href={mainPageUrl} target={'_self'} text={textProvider(languageCode, Texts.MainPageLink)} />
+            {errorType !== ErrorType.PageNotFound && (
+              <Link href={mainPageUrl} target={'_self'} text={textProvider(languageCode, Texts.MainPageLink)} />
+            )}
             {errorType === ErrorType.FrontendError && (
               <Link
                 onClick={() => window.history.back()}
@@ -66,19 +58,31 @@ export function ErrorPage({
             )}
           </S.ActionLinks>
         </S.ActionWrapper>
+
         <S.ButtonContainer>
-          <Button
-            variant={Button.variants.Outline}
-            text={textProvider(languageCode, Texts.RefreshButton)}
-            onClick={() => window.location.reload()}
-            icon={<RefreshInterfaceSVG />}
-          />
           {onSupportCenterClick && (
             <Button
-              variant={Button.variants.Filled}
+              variant={Button.variants.Outline}
               text={textProvider(languageCode, Texts.SupportCenterButton)}
               onClick={onSupportCenterClick}
               icon={<MailInterfaceSVG />}
+            />
+          )}
+
+          {errorType === ErrorType.PageNotFound ? (
+            <Button
+              variant={Button.variants.Filled}
+              text={textProvider(languageCode, Texts.MainPageLink)}
+              href={mainPageUrl}
+              target='_self'
+              icon={<HomeOutlineInterfaceSVG />}
+            />
+          ) : (
+            <Button
+              variant={Button.variants.Filled}
+              text={textProvider(languageCode, Texts.RefreshButton)}
+              onClick={() => window.location.reload()}
+              icon={<RefreshInterfaceSVG />}
             />
           )}
         </S.ButtonContainer>
