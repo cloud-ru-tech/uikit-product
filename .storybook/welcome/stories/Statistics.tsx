@@ -1,14 +1,14 @@
 import { styled } from '@linaria/react';
-import { getStorybook } from '@storybook/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { useMemo } from 'react';
 
 import { H2_STYLES } from '@sbercloud/uikit-product-typography';
+import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+
+const { BERRY_RED, EMERALD_GREEN, PURPLE } = EXPORT_VARS;
 
 import { GroupChart } from '../src/chart/GroupChart';
 import { SingleChart } from '../src/chart/SingleChart';
-import { getRandomColor, getStatisticsData } from '../src/helper';
-import { ChartData, PackageNames } from '../src/types';
+import { PackagesStatistics } from '../src/types';
 
 export default {
   title: 'Welcome/Statistics',
@@ -17,7 +17,7 @@ export default {
 const ChartsWrapper = styled.div`
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, 500px);
+  grid-template-columns: repeat(auto-fill, 400px);
   grid-auto-rows: 400px;
 `;
 
@@ -27,74 +27,53 @@ const Title = styled.h1`
 `;
 
 const Template: Story = () => {
-  const storybook = getStorybook();
-  const { stories, packages } = getStatisticsData(storybook);
-
-  const storiesData = useMemo(() => {
-    const data: ChartData[] = [];
-    const allStories: string[] = [];
-
-    Object.entries(stories)
-      .filter(([key]) => key !== PackageNames.Welcome)
-      .map(([key, value]) => {
-        data.push({
-          title: key,
-          value: Object.keys(value).length,
-          color: getRandomColor(),
-        });
-
-        allStories.push(...Object.values(value));
-      });
-
-    return { data, count: allStories.length };
-  }, [stories]);
-
-  const packagesData = useMemo(() => {
-    const data: ChartData[] = [];
-    const packagesWithStories: Record<string, string[]> = {};
-
-    Object.entries(packages)
-      .filter(([key]) => key !== PackageNames.Welcome)
-      .map(([key, value]) => {
-        data.push({
-          title: key,
-          value: Object.keys(value).length,
-          color: getRandomColor(),
-        });
-
-        Object.entries(value).map(([key, value]) => {
-          packagesWithStories[key] = packagesWithStories[key] ? [...packagesWithStories[key], ...value] : [...value];
-        });
-      });
-
-    const storiesByPackage = Object.entries(packagesWithStories).map(([key, value]) => ({
-      title: key,
-      value: value.length,
-      color: getRandomColor(),
-    }));
-
-    return { data, count: storiesByPackage.length };
-  }, [packages]);
+  const count: PackagesStatistics | undefined = process.env.PACKAGES_STATISTICS as unknown as PackagesStatistics;
 
   return (
     <div>
       <Title>Статистика</Title>
-      <ChartsWrapper>
-        <GroupChart height={80} data={packagesData.data} title={'Количество пакетов по секциям'} />
-        <SingleChart
-          height={70}
-          value={packagesData.count}
-          total={packagesData.count}
-          title={'Общее количество пакетов'}
-        />
-        <GroupChart height={80} data={storiesData.data} title={'Количество stories по секциям'} />
-        <SingleChart
-          height={70}
-          value={storiesData.count}
-          total={storiesData.count}
-          title={'Общее количество stories'}
-        />
-      </ChartsWrapper>
+
+      {!count ? (
+        <>Не удалось получить данные {'=('}</>
+      ) : (
+        <ChartsWrapper>
+          <SingleChart height={70} value={count.all} total={count.all} title={'Общее количество пакетов'} />
+
+          <GroupChart
+            height={80}
+            data={[
+              {
+                title: 'Стабильные',
+                value: count.stable,
+                color: `var(${EMERALD_GREEN[100]})`,
+              },
+              {
+                title: 'Нестабильные',
+                value: count.nonStable,
+                color: `var(${BERRY_RED[100]})`,
+              },
+            ]}
+            title={'Количество пакетов по секциям'}
+          />
+
+          <GroupChart
+            height={80}
+            data={[
+              {
+                title: 'Публичные',
+                value: count.public,
+                color: `var(${PURPLE[100]})`,
+              },
+              {
+                title: 'Приватные',
+                value: count.private,
+                color: `var(${PURPLE[75]})`,
+              },
+            ]}
+            title={'Количество пакетов по типу'}
+          />
+        </ChartsWrapper>
+      )}
     </div>
   );
 };

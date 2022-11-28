@@ -26,3 +26,11 @@ export type SingleChartProps = BaseChartProps & {
   value: number;
   total: number;
 };
+
+export type PackagesStatistics = {
+  all: number;
+  stable: number;
+  nonStable: number;
+  public: number;
+  private: number;
+};

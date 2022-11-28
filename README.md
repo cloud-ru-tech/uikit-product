@@ -1,4 +1,4 @@
-# Sbercloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg)](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/commits/master)
+# Sbercloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100/coverage.svg)](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100)
 
 Sbercloud uikit - библиотека компонентов, в которой каждый компонент это отдельный npm-пакет, со своей версионностью и зависимостями.
 
@@ -14,7 +14,7 @@ Sbercloud uikit - библиотека компонентов, в которой
 
 [Notion](https://scpds.notion.site/aa332f333c3b41a5866c46b5d2bdb0c6)
 
-# Browser support 
+# Browser support
 
 ![Chrome](./packages/icons/svgs/color/logos/GoogleChromeLogo.svg)
 ![Firefox](./packages/icons/svgs/color/logos/FirefoxLogo.svg)
@@ -61,7 +61,6 @@ export const defaultLinariaConfig = (uniqueString: string): Record<string, unkno
     },
   ],
 });
-
 ```
 
 4. Установить необходимый пакет, например `npm i @sbercloud/uikit-product-button`.
@@ -75,32 +74,36 @@ export const defaultLinariaConfig = (uniqueString: string): Record<string, unkno
 2. Оборачиваем проект, theme передаем тему по умолчанию:
    `<ConfigProvider theme={ConfigProvider.themes.Purple}>...</ConfigProvider>`
 
-
 ## Change theme
 
 1. Импортируем hook useTheme:
-`import { useTheme } from "@sbercloud/uikit-product-utils";`
+   `import { useTheme } from "@sbercloud/uikit-product-utils";`
 
 2. Используем callback для смены темы:
+
 ```js
- const {changeTheme, Themes} = useTheme();
- changeTheme(Themes.Purple)
+const { changeTheme, Themes } = useTheme();
+changeTheme(Themes.Purple);
 ```
 
 # Contribution
+
 [Contribution Guide](CONTRIBUTING.md)
 
 # Changelog
-Change log разбит по пакетам. 
+
+Change log разбит по пакетам.
 Вы можете посмотреть changelog либо в [Storybook](https://uikit.sbercloud.tech/) или в `package` необходимого пакета
 
 # Questions
+
 Появились вопросы?
 Возможно ответ на ваши вопросы содержиться в [Contribution Guide](CONTRIBUTING.md) или в [Issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/15?milestone_title=Idea)
 
 В противном случаи можно создать [новый issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/issues/new)
 
 # Issue board
+
 [Backlog](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/15?milestone_title=Idea) - Борда поступивших заявок
 
 [Idea board](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/51?milestone_title=None) - Борда для работы с идеями
@@ -108,15 +111,16 @@ Change log разбит по пакетам.
 [Component status map](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/52?milestone_title=Design) - Актуальный статус компонентов
 
 # Issue Processes
+
 1. Создан [новый issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/issues/new)
 2. Issue рассмотрен на грумминге
-> Участники грумминга: Core team + Review team
-> 
-> Частота грумминга: каждый вторник в 14:00. 
->
-> Если необходимо записаться на грумминг напишите любому члену Core Team 
+   > Участники грумминга: Core team + Review team
+   >
+   > Частота грумминга: каждый вторник в 14:00.
+   >
+   > Если необходимо записаться на грумминг напишите любому члену Core Team
 
-``` 
+```
 Если есть необходимость, всегда можно организовать внеочередной грумминг
 ```
 
@@ -125,6 +129,7 @@ Change log разбит по пакетам.
 # Team Duty
 
 `Core team` - Трифонов Михаил, Ахременко Григорий, Белов Алексей, Лозинский Павел
+
 > Несет ответственность за техническую часть проекта.
 >
 > Определять развитие UIKIT
@@ -136,11 +141,15 @@ Change log разбит по пакетам.
 > Задачи Review team
 
 `Review team` - Шеховцов Кирилл, Бибин Егор, Авилов Дмитрий
+
 > Определяет визуальную составляющую компоненты
 >
 > Определяет функциональность компоненты
-------
+
+---
+
 `Team lead` - Трифонов Михаил
+
 > Выстраивает процессы разработки.
 >
 > Занимается внешним развитием проекта.
@@ -148,10 +157,7 @@ Change log разбит по пакетам.
 > Занимается внутренним развитием проекта.
 
 `Design lead` - Ларионова Юлия
+
 > Определяет визуальную составляющую компонентов
 >
 > Лидит Design System
-
-
-
-
