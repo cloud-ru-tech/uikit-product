@@ -14,11 +14,12 @@ export const NOTIFICATION_CONTAINER_DEFAULT_PROPS: Record<NotificationType, Noti
     position: NotificationContainer.position.BOTTOM_RIGHT,
   },
   [NotificationType.Small]: {
-    limit: 1,
+    limit: 2,
     position: NotificationContainer.position.BOTTOM_CENTER,
   },
 };
 
 export const DEFAULT_AUTO_CLOSE = 5000;
+export const TWO_SEC_AUTO_CLOSE = 2000;
 
 export const NOTIFICATION_ROOT_ID = 'notification-root';

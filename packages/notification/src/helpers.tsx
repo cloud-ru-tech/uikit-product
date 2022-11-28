@@ -6,7 +6,12 @@ import { NotificationBigStatus } from './components/NotificationBig/constants';
 import { NotificationContainer, NotificationContainerProps } from './components/NotificationContainer';
 import { NotificationSmall, NotificationSmallProps } from './components/NotificationSmall';
 import { NotificationSmallStatus } from './components/NotificationSmall/constants';
-import { DEFAULT_AUTO_CLOSE, NOTIFICATION_CONTAINER_DEFAULT_PROPS, NOTIFICATION_ROOT_ID } from './constants';
+import {
+  DEFAULT_AUTO_CLOSE,
+  NOTIFICATION_CONTAINER_DEFAULT_PROPS,
+  NOTIFICATION_ROOT_ID,
+  TWO_SEC_AUTO_CLOSE,
+} from './constants';
 import { dispatchCustomEvent, NotifyCustomEventKey } from './customEvents';
 import {
   BigOptions,
@@ -64,6 +69,7 @@ function getAutoCloseValue<T extends keyof NotificationPropsMap>(
     case NotificationSmall.statuses.Success:
     case NotificationSmall.statuses.Error:
     case NotificationSmall.statuses.Neutral:
+      return 'action' in notificationProps ? DEFAULT_AUTO_CLOSE : TWO_SEC_AUTO_CLOSE;
     case NotificationBig.statuses.Info:
     case NotificationBig.statuses.Success:
     case NotificationBig.statuses.Warning:
