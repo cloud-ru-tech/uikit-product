@@ -42,7 +42,7 @@
     "@babel/preset-typescript": "7.18.6",
     "@geometricpanda/storybook-addon-badges": "0.2.2",
     "@linaria/cli": "3.0.0-beta.13",
-    "@sbercloud/ft-all-linters-pack": "1.0.19",
+    "@sbercloud/ft-all-linters-pack": "2.0.0",
     "@sbercloud/ft-config-linaria": "1.0.3",
     "@sbercloud/ft-conventional-changelog": "1.2.0",
     "@sbercloud/ft-storybook-readme-addon": "1.0.3",
