@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@5.0.5...@sbercloud/uikit-product-notification@5.1.0) (2022-11-28)
+
+### Features
+
+- **[LK-994](https://jira.sbercloud.tech/browse/LK-994):** decrease autoclose time and increase stack limit for small notifications ([b520726](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b520726dc367894f0c23154c8d3256ebeb049528))
+
 ## [5.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@5.0.4...@sbercloud/uikit-product-notification@5.0.5) (2022-11-28)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-notification
