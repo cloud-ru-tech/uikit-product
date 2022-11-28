@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.4.0...@sbercloud/uikit-product-icons@5.5.0) (2022-11-28)
+
+### Features
+
+- add HomeOutlineInterface && PlatformService icons ([dc0d6aa](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc0d6aa087fda69e122a469e8ed76757a08cb5af))
+
 # [5.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.3.1...@sbercloud/uikit-product-icons@5.4.0) (2022-11-17)
 
 ### Bug Fixes

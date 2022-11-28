@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.2.5...@sbercloud/uikit-product-error-pages@0.3.0) (2022-11-28)
+
+### Features
+
+- hide mainPage button on PageNotFound type, change buttons layout ([4c391dc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4c391dcb057bacde9b59131dd28981286b748b52))
+
 ## [0.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.2.4...@sbercloud/uikit-product-error-pages@0.2.5) (2022-11-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-error-pages

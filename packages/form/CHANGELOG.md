@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.18.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.18.8...@sbercloud/uikit-product-form@0.18.9) (2022-11-28)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-form
+
 ## [0.18.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.18.7...@sbercloud/uikit-product-form@0.18.8) (2022-11-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-form

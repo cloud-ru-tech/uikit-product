@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-avatar@1.1.13...@sbercloud/uikit-product-avatar@1.1.14) (2022-11-28)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-avatar
+
 ## [1.1.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-avatar@1.1.12...@sbercloud/uikit-product-avatar@1.1.13) (2022-11-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-avatar

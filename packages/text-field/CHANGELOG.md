@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.2.2...@sbercloud/uikit-product-text-field@3.2.3) (2022-11-28)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-text-field
+
 ## [3.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-text-field@3.2.1...@sbercloud/uikit-product-text-field@3.2.2) (2022-11-17)
 
 ### Bug Fixes
