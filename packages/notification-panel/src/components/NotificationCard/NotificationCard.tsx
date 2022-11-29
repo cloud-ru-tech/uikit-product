@@ -142,7 +142,7 @@ export function NotificationCard({
         </S.ContentRightSide>
       </S.ContentWrapper>
 
-      {showNewBadge && <S.Badge />}
+      {showNewBadge && <S.Badge data-test-id='notification-card__badge' />}
     </S.Wrapper>
   );
 }

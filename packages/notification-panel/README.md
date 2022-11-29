@@ -19,7 +19,7 @@ type ButtonProps = {
   onClick?: MouseEventHandler<HTMLElement>;
 };
 
-export type Card = {
+type Card = {
   id: string;
   type: CardType;
   showNewBadge: boolean;

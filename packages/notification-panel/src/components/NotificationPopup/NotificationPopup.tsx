@@ -5,7 +5,7 @@ import {
   useFloating,
   useInteractions,
 } from '@floating-ui/react-dom-interactions';
-import { ReactNode, useMemo, useState } from 'react';
+import { ReactNode, useEffect, useMemo, useState } from 'react';
 
 import { ButtonGhost, ButtonIcon, ButtonIconTransparent } from '@sbercloud/uikit-product-button';
 import { Chip } from '@sbercloud/uikit-product-chip';
@@ -54,7 +54,7 @@ export function NotificationPopup({
 
   const hasCardsDataOnTab = selectedTabCards.length > 0;
   const showControlPanel = cards.length > 0;
-  const showFooter = hasCardsDataOnTab ? true : cards.length > 0 && onSeeAllButtonClick;
+  const showFooter = hasCardsDataOnTab && onSeeAllButtonClick && cards.length > 0;
 
   const handleCardVisible = (id: string) => {
     if (!visibleCardIds.includes(id)) {
@@ -62,22 +62,24 @@ export function NotificationPopup({
     }
   };
 
-  const handleClosePopup = () => {
+  const handleReadVisibleCards = () => {
     visibleCardIds.forEach(id => onCardRead(id));
     setVisibleCardIds([]);
+  };
+
+  const handleClosePopup = () => {
     onToggle(false);
   };
 
-  const onOpenChange = (isOpen: boolean) => {
-    if (isOpen) {
-      onToggle(true);
-    } else {
-      handleClosePopup();
-    }
-  };
-
-  const { context, reference, floating, strategy } = useFloating({ open, onOpenChange });
+  const { context, reference, floating, strategy } = useFloating({ open, onOpenChange: onToggle });
   const { getReferenceProps, getFloatingProps } = useInteractions([useClick(context), useDismiss(context)]);
+
+  useEffect(() => {
+    if (!open) {
+      setActiveTab(Tab.All);
+      handleReadVisibleCards();
+    }
+  }, [open]);
 
   return (
     <>
@@ -97,7 +99,12 @@ export function NotificationPopup({
                   </Tooltip>
                 )}
               </S.Title>
-              <ButtonIconTransparent icon={<CloseInterfaceSVG />} rounded={true} onClick={handleClosePopup} />
+              <ButtonIconTransparent
+                data-test-id='notification-panel__close-button'
+                icon={<CloseInterfaceSVG />}
+                rounded
+                onClick={handleClosePopup}
+              />
             </S.HeaderWrapper>
 
             {showControlPanel && (
@@ -105,6 +112,7 @@ export function NotificationPopup({
                 <S.ChipsWrapper>
                   {[Tab.All, Tab.New].map(value => (
                     <Chip
+                      data-test-id={`notification-panel__chip-${value}`}
                       key={value}
                       label={textProvider(languageCode, value === Tab.All ? Texts.All : Texts.New)}
                       checked={activeTab === value}
@@ -117,6 +125,7 @@ export function NotificationPopup({
 
                 {onReadAllButtonClick && (
                   <ButtonGhost
+                    data-test-id='notification-panel__read-all-button'
                     variant={ButtonGhost.variants.Secondary}
                     text={textProvider(languageCode, Texts.MarkAllAsRead)}
                     onClick={onReadAllButtonClick}
@@ -126,7 +135,7 @@ export function NotificationPopup({
             )}
 
             {hasCardsDataOnTab ? (
-              <S.CardsWrapper>
+              <S.CardsWrapper data-test-id='notification-panel__cards-wrapper'>
                 {selectedTabCards.map(card => (
                   <S.CardWrapper key={card.id}>
                     <NotificationCard

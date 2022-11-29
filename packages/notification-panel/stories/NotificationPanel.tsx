@@ -15,12 +15,14 @@ import componentReadme from '../README.md';
 import { Card, NotificationPopup, NotificationPopupProps } from '../src';
 
 export default {
-  title: 'Not stable/Notification Panel',
+  title: 'Components/Notification Panel',
   component: NotificationPopup,
 } as Meta;
 
 const avatarSrc =
   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80';
+
+const redCardsIndex = [1, 5];
 
 const ContentDescriptionBold = styled.span`
   font-weight: 600;
@@ -33,7 +35,7 @@ const ContentDescription = () => (
   </>
 );
 
-const cardData: Card = {
+const defaultCard: Card = {
   id: '',
   type: NotificationPopup.cardTypes.Default,
   showNewBadge: true,
@@ -58,7 +60,7 @@ const cardData: Card = {
 const Template: Story<NotificationPopupProps & { cardsCount: number }> = ({ ...args }) => {
   const { cardsCount, onReadAllButtonClick, open } = args;
   const [cards, setCards] = useState<Card[]>([]);
-  const [isOpen, setIsOpen] = useState(open);
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleReadAll = () => setCards(cards.map(card => ({ ...card, showNewBadge: false })));
 
@@ -72,7 +74,7 @@ const Template: Story<NotificationPopupProps & { cardsCount: number }> = ({ ...a
 
   useEffect(() => {
     setCards(
-      new Array(cardsCount).fill(cardData).map((el, index) => ({
+      new Array(cardsCount).fill(args.cards[0]).map((el, index) => ({
         ...el,
         content: {
           ...el.content,
@@ -82,9 +84,14 @@ const Template: Story<NotificationPopupProps & { cardsCount: number }> = ({ ...a
           ...el.header,
         },
         id: 'Event type ' + index,
+        type: redCardsIndex.includes(index) ? NotificationPopup.cardTypes.Alarm : NotificationPopup.cardTypes.Default,
       })),
     );
   }, [cardsCount]);
+
+  useEffect(() => {
+    setIsOpen(open);
+  }, [open]);
 
   return (
     <>
@@ -98,7 +105,7 @@ const Template: Story<NotificationPopupProps & { cardsCount: number }> = ({ ...a
         onCardDelete={handleCardDelete}
       >
         <Badge type={Badge.types.Info} number={cards.filter(card => card.showNewBadge).length}>
-          <NotifyInterfaceSVG fill={isOpen ? 'blue' : 'grey'} />
+          <NotifyInterfaceSVG data-test-id='open-notification-panel-button' fill={isOpen ? 'blue' : 'grey'} />
         </Badge>
       </NotificationPopup>
     </>
@@ -110,9 +117,20 @@ notificationPanel.args = {
   headerTooltip: 'Уведомления',
   onReadAllButtonClick() {},
   onSeeAllButtonClick() {},
-  cards: [],
-  cardsCount: 11,
+  cards: [defaultCard],
   open: true,
+};
+
+notificationPanel.argTypes = {
+  cardsCount: {
+    name: '[Stories]: Cards count',
+    defaultValue: 11,
+    control: {
+      type: 'range',
+      min: 0,
+      max: 100,
+    },
+  },
 };
 
 notificationPanel.parameters = {

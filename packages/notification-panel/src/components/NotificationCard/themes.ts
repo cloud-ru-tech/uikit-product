@@ -56,7 +56,7 @@ export const PURPLE_DARK_THEME = css`
     body[data-theme=${Themes.PurpleDark}] {
       ${COLORS.background.default}: var(${WHITE_ALFA[8]});
       ${COLORS.background.alarm}: var(${BERRY_RED_ALPHA[15]});
-      ${COLORS.background.hover.default}: var(${BLACK_ALFA[16]});
+      ${COLORS.background.hover.default}: var(${WHITE_ALFA[16]});
       ${COLORS.background.hover.alarm}: var(${BERRY_RED_ALPHA[25]});
 
       ${COLORS.badge}: var(${PURPLE[50]});
@@ -100,7 +100,7 @@ export const GREEN_DARK_THEME = css`
     body[data-theme=${Themes.GreenDark}] {
       ${COLORS.background.default}: var(${WHITE_ALFA[8]});
       ${COLORS.background.alarm}: var(${BERRY_RED_ALPHA[15]});
-      ${COLORS.background.hover.default}: var(${BLACK_ALFA[16]});
+      ${COLORS.background.hover.default}: var(${WHITE_ALFA[16]});
       ${COLORS.background.hover.alarm}: var(${BERRY_RED_ALPHA[25]});
 
       ${COLORS.badge}: var(${GREEN[100]});
