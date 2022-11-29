@@ -2,7 +2,7 @@ import inquirer from 'inquirer';
 import shell from 'shelljs';
 
 import { logDebug, logError, logHelp, logInfo, logSilly } from './utils/console';
-import { ExistingPackageNames, bootstrapFiles } from './utils/files';
+import { bootstrapFiles, ExistingPackageNames } from './utils/files';
 import * as gitUtils from './utils/git';
 
 const user = gitUtils.getGitUserName();

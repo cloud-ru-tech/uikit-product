@@ -6,8 +6,8 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 import { Themes, useTheme } from '@sbercloud/uikit-product-utils';
 
-import dark from './theme/code/dark';
-import light from './theme/code/light';
+import { dark } from './theme/code/dark';
+import { light } from './theme/code/light';
 
 type MarkdownProps = {
   md: string;

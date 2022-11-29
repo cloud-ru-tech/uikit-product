@@ -1,4 +1,6 @@
-export default {
+import { CSSProperties } from 'react';
+
+export const dark: { [key: string]: CSSProperties } = {
   'code[class*="language-"]': {
     background: 'hsl(220, 13%, 18%)',
     color: 'hsl(220, 14%, 71%)',
@@ -498,4 +500,4 @@ export default {
   '.prism-previewer-easing.prism-previewer-easing line': {
     stroke: 'hsl(220, 14%, 71%)',
   },
-} as const;
+};

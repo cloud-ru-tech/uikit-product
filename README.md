@@ -98,7 +98,7 @@ Change log разбит по пакетам.
 # Questions
 
 Появились вопросы?
-Возможно ответ на ваши вопросы содержиться в [Contribution Guide](CONTRIBUTING.md) или в [Issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/15?milestone_title=Idea)
+Возможно ответ на ваши вопросы содержится в [Contribution Guide](CONTRIBUTING.md) или в [Issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/15?milestone_title=Idea)
 
 В противном случаи можно создать [новый issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/issues/new)
 
@@ -128,7 +128,7 @@ Change log разбит по пакетам.
 
 # Team Duty
 
-`Core team` - Трифонов Михаил, Ахременко Григорий, Белов Алексей, Лозинский Павел
+`Core team` - Трифонов Михаил, Ахременко Григорий, Белов Алексей, Козлова Анна
 
 > Несет ответственность за техническую часть проекта.
 >

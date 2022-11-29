@@ -27,7 +27,7 @@ const Title = styled.h1`
 `;
 
 const Template: Story = () => {
-  const count: PackagesStatistics | undefined = process.env.PACKAGES_STATISTICS as unknown as PackagesStatistics;
+  const count = process.env.PACKAGES_STATISTICS as unknown as PackagesStatistics;
 
   return (
     <div>
