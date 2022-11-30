@@ -9,6 +9,8 @@ export enum Texts {
   SupportCenterButton = 'SupportCenterButton',
   MainPageLink = 'MainPageLink',
   BackLink = 'BackLink',
+  Offline = 'Offline',
+  OfflineTitle = 'OfflineTitle',
 }
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -21,6 +23,8 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SupportCenterButton]: 'Служба поддержки',
     [Texts.MainPageLink]: 'На главную',
     [Texts.BackLink]: 'Назад',
+    [Texts.Offline]: 'Нет подключения к Интернету',
+    [Texts.OfflineTitle]: 'Проверьте соединение с интернетом и попробуйте обновить страницу',
   },
   [LanguageCodeType.enGB]: {
     [Texts.FrontendErrorTitle]: 'Unexpected error',
@@ -31,6 +35,8 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SupportCenterButton]: 'Support Service',
     [Texts.MainPageLink]: 'Go to the main page',
     [Texts.BackLink]: 'Go back',
+    [Texts.Offline]: 'No Internet Connection',
+    [Texts.OfflineTitle]: 'Check your internet connection and try refreshing the page',
   },
 };
 

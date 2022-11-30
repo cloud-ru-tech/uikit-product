@@ -28,6 +28,8 @@ export function ErrorPage({
   const { languageCode } = useLanguage();
 
   const titleProps = getTitleByErrorType(errorType);
+  const hasMainPageLink = ![ErrorType.PageNotFound, ErrorType.Offline].includes(errorType);
+  const hasBackLink = [ErrorType.FrontendError].includes(errorType);
 
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)}>
@@ -43,13 +45,19 @@ export function ErrorPage({
         </S.Title>
 
         <S.ActionWrapper>
-          <S.ActionTitle>{textProvider(languageCode, Texts.ActionRedirectTitle)}</S.ActionTitle>
+          {errorType === ErrorType.Offline && (
+            <S.ActionTitle>{textProvider(languageCode, Texts.OfflineTitle)}</S.ActionTitle>
+          )}
+
+          {(hasMainPageLink || hasBackLink) && (
+            <S.ActionTitle>{textProvider(languageCode, Texts.ActionRedirectTitle)}</S.ActionTitle>
+          )}
 
           <S.ActionLinks>
-            {errorType !== ErrorType.PageNotFound && (
+            {hasMainPageLink && (
               <Link href={mainPageUrl} target={'_self'} text={textProvider(languageCode, Texts.MainPageLink)} />
             )}
-            {errorType === ErrorType.FrontendError && (
+            {hasBackLink && (
               <Link
                 onClick={() => window.history.back()}
                 target={'_self'}

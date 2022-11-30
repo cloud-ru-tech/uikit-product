@@ -11,6 +11,7 @@ export enum ErrorType {
   FrontendError = 'FrontendError',
   PageUnavailable = 'PageUnavailable',
   PageNotFound = 'PageNotFound',
+  Offline = 'Offline',
 }
 
 export function getLogoByVariant(logoVariant: LogoVariant) {
@@ -34,6 +35,10 @@ export const getTitleByErrorType = (errorType: ErrorType) => {
       return {
         text: Texts.PageNotFoundTitle,
         statusCode: 404,
+      };
+    case ErrorType.Offline:
+      return {
+        text: Texts.Offline,
       };
     case ErrorType.FrontendError:
     default:
