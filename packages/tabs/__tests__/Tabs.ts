@@ -166,3 +166,31 @@ test.skip('scroll tabs on selected change', async t => {
     .expect(isInViewport(navigationListItem16))
     .notOk();
 });
+
+test('move tabs on mouse scroll', async t => {
+  const navigationListItem1 = getNavigationListItem('id1');
+  const navigationListItem8 = getNavigationListItem('id8');
+  const navigationListItem18 = getNavigationListItem('id18');
+
+  await t.expect(isInViewport(navigationListItem1)).ok();
+  await t.expect(isInViewport(navigationListItem18)).notOk();
+
+  await t.hover(navigationListItem8).scroll(getWrapper().find('div'), 700, 0);
+
+  await t.expect(isInViewport(navigationListItem1)).notOk();
+  await t.expect(isInViewport(navigationListItem18)).ok();
+});
+
+test('move tabs on drag', async t => {
+  const navigationListItem1 = getNavigationListItem('id1');
+  const navigationListItem8 = getNavigationListItem('id8');
+  const navigationListItem18 = getNavigationListItem('id18');
+
+  await t.expect(isInViewport(navigationListItem1)).ok();
+  await t.expect(isInViewport(navigationListItem18)).notOk();
+
+  await t.click(navigationListItem8).drag(navigationListItem8, -700, 0);
+
+  await t.expect(isInViewport(navigationListItem1)).notOk();
+  await t.expect(isInViewport(navigationListItem18)).ok();
+});

@@ -1,5 +1,6 @@
 import { css } from '@linaria/core';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -7,6 +8,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Document, DocumentProps } from '../src';
+import { getRemoveButtonProps } from './helpers/getRemoveButtonProps';
 
 export default {
   title: 'Components/Document',
@@ -74,27 +76,40 @@ const DOCUMENTS: DocumentProps[] = [
   },
 ];
 
-const Template: Story<DocumentProps> = ({ disabled, ...props }) => (
-  <>
-    <div>Controlled:</div>
-    <br />
+const Template: Story<DocumentProps> = ({ disabled, ...props }) => {
+  const [hasDownloadButtonBeenClicked, setHasDownloadButtonBeenClicked] = useState<boolean>(false);
+  const [hasRemoveButtonBeenClicked, setHasRemoveButtonBeenClicked] = useState<boolean>(false);
 
-    <Document disabled={disabled} className={documentSmallClassName} {...props} />
+  return (
+    <>
+      <div>Controlled:</div>
+      <br />
 
-    <br />
-    <div>Examples:</div>
-    <br />
-
-    {DOCUMENTS.map(doc => (
       <Document
-        key={doc.file.name}
-        {...doc}
-        disabled={doc.disabled || disabled}
-        className={doc.className || documentClassName}
+        disabled={disabled}
+        className={documentSmallClassName}
+        {...props}
+        onClick={() => setHasDownloadButtonBeenClicked(true)}
+        removeButton={getRemoveButtonProps(props, () => setHasRemoveButtonBeenClicked(true))}
+        {...(hasDownloadButtonBeenClicked ? { 'data-test-download-clicked': true } : {})}
+        {...(hasRemoveButtonBeenClicked ? { 'data-test-remove-clicked': true } : {})}
       />
-    ))}
-  </>
-);
+
+      <br />
+      <div>Examples:</div>
+      <br />
+
+      {DOCUMENTS.map(doc => (
+        <Document
+          key={doc.file.name}
+          {...doc}
+          disabled={doc.disabled || disabled}
+          className={doc.className || documentClassName}
+        />
+      ))}
+    </>
+  );
+};
 
 export const document = Template.bind({});
 document.args = {

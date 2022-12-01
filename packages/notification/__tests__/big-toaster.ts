@@ -35,9 +35,12 @@ for (const status of Object.values(Status)) {
     await t
       .expect(Selector(dataTestIdSelector(NOTIFICATION_BIG_TEST_IDS.description)).textContent)
       .eql('Test Description');
+
+    await t.click(Selector(dataTestIdSelector(NOTIFICATION_BIG_TEST_IDS.closeButton)));
+    await t.expect(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.main}__${status}`)).exists).notOk();
   });
 
-  test.page(getPage({ status, description: 'Test Description' }))(`Without one action status ${status}`, async t => {
+  test.page(getPage({ status, description: 'Test Description' }))(`With one action status ${status}`, async t => {
     await t.click(Selector(dataTestIdSelector('trigger-notification-one-action')));
     await t.hover(Selector(dataTestIdSelector(NOTIFICATION_BIG_TEST_IDS.closeButton)));
 
@@ -50,9 +53,20 @@ for (const status of Object.values(Status)) {
     await t
       .expect(Selector(dataTestIdSelector(NOTIFICATION_BIG_TEST_IDS.description)).textContent)
       .eql('Test Description');
+
+    await t.click(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.action}-${0}`)));
+    await t.expect(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.action}-${0}`)).exists).notOk();
+
+    await t.click(Selector(dataTestIdSelector('trigger-notification-one-action')));
+    await t.expect(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.main}__${status}`)).exists).ok();
+
+    await t.click(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.main}__${status}`)));
+    await t.expect(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.main}__${status}`)).exists).notOk();
   });
 
-  test.page(getPage({ status, description: 'Test Description' }))(`Without two actions status ${status}`, async t => {
+  test.page(getPage({ status, description: 'Test Description' }))(`With two actions status ${status}`, async t => {
+    await t.setNativeDialogHandler(() => '');
+
     await t.click(Selector(dataTestIdSelector('trigger-notification-two-actions')));
     await t.hover(Selector(dataTestIdSelector(NOTIFICATION_BIG_TEST_IDS.closeButton)));
 
@@ -65,5 +79,13 @@ for (const status of Object.values(Status)) {
     await t
       .expect(Selector(dataTestIdSelector(NOTIFICATION_BIG_TEST_IDS.description)).textContent)
       .eql('Test Description');
+
+    await t.click(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.main}__${status}`)));
+    await t.expect(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.main}__${status}`)).exists).ok();
+
+    await t.click(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.action}-${1}`)));
+    const dialogHistory = await t.getNativeDialogHistory();
+    await t.expect(dialogHistory[0].text).contains('Cancelled!');
+    await t.expect(Selector(dataTestIdSelector(`${NOTIFICATION_BIG_TEST_IDS.main}__${status}`)).exists).notOk();
   });
 }

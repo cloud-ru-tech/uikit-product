@@ -48,6 +48,10 @@ test.page(getPage({ file, removeButton: { onClick() {}, tooltip: { content: test
     const removeButton = await Selector(dataTestIdSelector(testId)).find(dataTestIdSelector('document__remove'));
 
     await t.expect(removeButton.exists).ok();
+    await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-test-remove-clicked')).notOk();
+
+    await t.click(removeButton);
+    await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-test-remove-clicked')).ok();
 
     await t.hover(removeButton);
 
@@ -59,4 +63,20 @@ test.page(getPage({ file, removeButton: undefined }))('Renders without remove bu
   const removeButton = await Selector(dataTestIdSelector(testId)).find(dataTestIdSelector('document__remove'));
 
   await t.expect(removeButton.exists).notOk();
+});
+
+test.page(getPage({ file }))('onClick handler should fire once the file is clicked', async t => {
+  await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-test-download-clicked')).notOk();
+
+  await t.click(Selector(dataTestIdSelector(testId)).find(dataTestIdSelector('document__name')));
+
+  await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-test-download-clicked')).ok();
+});
+
+test.page(getPage({ file, disabled: true }))('Nothing should happen once disabled document is clicked', async t => {
+  await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-test-download-clicked')).notOk();
+
+  await t.click(Selector(dataTestIdSelector(testId)).find(dataTestIdSelector('document__name')));
+
+  await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-test-download-clicked')).notOk();
 });

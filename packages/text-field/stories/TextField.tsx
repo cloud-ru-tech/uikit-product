@@ -77,7 +77,12 @@ const Template: Story<TextFieldProps> = ({ ...args }) => {
       <TextField {...args} />
 
       <div>Текстовое поле с подгрузкой значения поля при нажатии на глазик и копировать</div>
-      <TextField {...SECURED_ARGS} text={text} onRequestSecuredField={onRequestSecuredField} />
+      <TextField
+        {...SECURED_ARGS}
+        text={text}
+        onRequestSecuredField={onRequestSecuredField}
+        data-test-id='secured-content-preloading'
+      />
 
       <div>Текстовое поле с ошибкой при подгрузке значения поля при нажатии на глазик и копировать</div>
       <TextField {...SECURED_ARGS} onRequestSecuredField={onRequestSecuredFieldWithError} />

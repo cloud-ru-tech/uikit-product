@@ -48,7 +48,10 @@ const actions: NotificationBigProps['actions'] = [
   },
   {
     text: 'Отменить',
-    onClick: () => {},
+    onClick: (_, close) => {
+      alert('Cancelled!');
+      close?.();
+    },
   },
 ];
 

@@ -21,16 +21,45 @@ const CheckboxWrap = styled.div`
   align-items: center;
 `;
 
-const Template: Story<CheckboxProps> = ({ checked, ...args }) => {
-  const [isChecked, setIsChecked] = useState(checked || false);
+type State =
+  | { type: 'unchecked' }
+  | { type: 'partChecked' }
+  | {
+      type: 'checked';
+    };
+
+const Template: Story<CheckboxProps> = ({ checked, partChecked, ...args }) => {
+  const [checkedState, setCheckedState] = useState<State>({ type: 'unchecked' });
 
   useEffect(() => {
-    setIsChecked(checked);
-  }, [checked]);
+    if (partChecked) {
+      setCheckedState({ type: 'partChecked' });
+      return;
+    }
+
+    if (checked) {
+      setCheckedState({ type: 'checked' });
+      return;
+    }
+
+    setCheckedState({ type: 'unchecked' });
+  }, [checked, partChecked]);
 
   return (
     <CheckboxWrap>
-      <Checkbox {...args} checked={isChecked} handleChange={isChecked => setIsChecked(isChecked)} />
+      <Checkbox
+        {...args}
+        checked={checkedState.type === 'checked'}
+        partChecked={checkedState.type === 'partChecked'}
+        handleChange={isChecked => {
+          if (isChecked) {
+            setCheckedState({ type: 'checked' });
+            return;
+          }
+
+          setCheckedState({ type: 'unchecked' });
+        }}
+      />
     </CheckboxWrap>
   );
 };

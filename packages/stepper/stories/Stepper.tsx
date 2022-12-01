@@ -130,7 +130,7 @@ const FirstStepContent = () => {
         )}
         name={FIRST_STEP_FIELD_NAME}
         defaultValue={''}
-      ></Controller>
+      />
     </div>
   );
 };
@@ -174,7 +174,7 @@ const SecondStepContent = () => {
         )}
         name={SECOND_STEP_FIELD_NAME}
         defaultValue={''}
-      ></Controller>
+      />
     </div>
   );
 };
@@ -219,7 +219,7 @@ const ThirdStepContent = () => {
         name={THIRD_STEP_FIELD_NAME}
         defaultValue={''}
         rules={{ validate: value => value !== '3' || 'error' }}
-      ></Controller>
+      />
     </div>
   );
 };

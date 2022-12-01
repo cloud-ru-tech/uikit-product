@@ -82,6 +82,7 @@ function getAutoCloseValue<T extends keyof NotificationPropsMap>(
     case NotificationSmall.statuses.Loading:
       return false;
 
+    /* istanbul ignore next */
     default:
       return DEFAULT_AUTO_CLOSE;
   }

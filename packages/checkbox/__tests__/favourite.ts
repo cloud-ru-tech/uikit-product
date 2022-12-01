@@ -1,24 +1,22 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { CheckboxProps } from '@sbercloud/uikit-product-checkbox';
+import { FavouriteProps } from '@sbercloud/uikit-product-checkbox';
 
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
-const testId = 'checkbox__test';
-const checkedSvgIcon = 'icon-checkbox-checked';
-const partlyCheckedSvgIcon = 'icon-checkbox-partial-checked';
+const testId = 'favorite__test';
 
-const visit = (props?: CheckboxProps) =>
+const visit = (props?: FavouriteProps) =>
   getTestcafeUrl({
     group: 'checkbox',
-    name: 'checkbox',
+    name: 'favourite',
     props: {
       'data-test-id': testId,
       ...(props || {}),
     },
   });
 
-fixture('Checkbox');
+fixture('Favourite');
 
 test.page(visit())('Rendered', async t => {
   await t.expect(Selector(dataTestIdSelector(testId)).exists).ok();
@@ -26,27 +24,13 @@ test.page(visit())('Rendered', async t => {
 
 test.page(visit())('Checked after click and unchecked after another click', async t => {
   const input = Selector(dataTestIdSelector(testId)).find('input');
-
   await t.expect(input.checked).notOk();
 
   await t.click(Selector(dataTestIdSelector(testId)));
   await t.expect(input.checked).ok();
-  await t.expect(Selector(dataTestIdSelector(checkedSvgIcon)).exists).ok();
 
   await t.click(Selector(dataTestIdSelector(testId)));
   await t.expect(input.checked).notOk();
-  await t.expect(Selector(dataTestIdSelector(checkedSvgIcon)).exists).notOk();
-});
-
-test.page(visit({ partChecked: true, checked: false, handleChange: () => {} }))('Partly checked rendered', async t => {
-  const input = Selector(dataTestIdSelector(testId)).find('input');
-
-  await t.expect(input.checked).notOk();
-  await t.expect(Selector(dataTestIdSelector(partlyCheckedSvgIcon)).exists).ok();
-
-  await t.click(Selector(dataTestIdSelector(testId)));
-  await t.expect(input.checked).notOk();
-  await t.expect(Selector(dataTestIdSelector(partlyCheckedSvgIcon)).exists).notOk();
 });
 
 test.page(visit({ disabled: true, checked: false, handleChange: () => {} }))(
@@ -55,10 +39,9 @@ test.page(visit({ disabled: true, checked: false, handleChange: () => {} }))(
     const input = Selector(dataTestIdSelector(testId)).find('input');
 
     await t.expect(input.checked).notOk();
-    await t.expect(Selector(dataTestIdSelector(checkedSvgIcon)).exists).notOk();
+    await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-disabled')).ok();
 
     await t.click(Selector(dataTestIdSelector(testId)));
     await t.expect(input.checked).notOk();
-    await t.expect(Selector(dataTestIdSelector(checkedSvgIcon)).exists).notOk();
   },
 );
