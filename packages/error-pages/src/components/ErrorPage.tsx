@@ -1,11 +1,17 @@
 import { Button } from '@sbercloud/uikit-product-button';
-import { HomeOutlineInterfaceSVG, MailInterfaceSVG, RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { MailInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
 import { Tag } from '@sbercloud/uikit-product-tag';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../helpers/texts-provider';
-import { ErrorType, getLogoByVariant, getTitleByErrorType, LogoVariant } from './constants';
+import {
+  ErrorType,
+  getButtonPropsByErrorType,
+  getContentByErrorType,
+  getLogoByVariant,
+  LogoVariant,
+} from './constants';
 import * as S from './styled';
 import { COLORS } from './themes';
 
@@ -27,8 +33,10 @@ export function ErrorPage({
 }: ErrorPageProps) {
   const { languageCode } = useLanguage();
 
-  const titleProps = getTitleByErrorType(errorType);
-  const hasMainPageLink = ![ErrorType.PageNotFound, ErrorType.Offline].includes(errorType);
+  const content = getContentByErrorType(errorType);
+  const button = getButtonPropsByErrorType(errorType, mainPageUrl);
+
+  const hasMainPageLink = [ErrorType.FrontendError, ErrorType.PageUnavailable].includes(errorType);
   const hasBackLink = [ErrorType.FrontendError].includes(errorType);
 
   return (
@@ -37,21 +45,15 @@ export function ErrorPage({
         {getLogoByVariant(logoVariant)}
 
         <S.Title>
-          {textProvider(languageCode, titleProps.text)}
+          {textProvider(languageCode, content.title)}
 
-          {titleProps.statusCode && (
-            <S.StatusCode color={Tag.colors.Gray} size={Tag.sizes.Medium} value={titleProps.statusCode} />
+          {content.statusCode && (
+            <S.StatusCode color={Tag.colors.Gray} size={Tag.sizes.Medium} value={content.statusCode} />
           )}
         </S.Title>
 
         <S.ActionWrapper>
-          {errorType === ErrorType.Offline && (
-            <S.ActionTitle>{textProvider(languageCode, Texts.OfflineTitle)}</S.ActionTitle>
-          )}
-
-          {(hasMainPageLink || hasBackLink) && (
-            <S.ActionTitle>{textProvider(languageCode, Texts.ActionRedirectTitle)}</S.ActionTitle>
-          )}
+          <S.ActionTitle>{textProvider(languageCode, content.text)}</S.ActionTitle>
 
           <S.ActionLinks>
             {hasMainPageLink && (
@@ -77,22 +79,14 @@ export function ErrorPage({
             />
           )}
 
-          {errorType === ErrorType.PageNotFound ? (
-            <Button
-              variant={Button.variants.Filled}
-              text={textProvider(languageCode, Texts.MainPageLink)}
-              href={mainPageUrl}
-              target='_self'
-              icon={<HomeOutlineInterfaceSVG />}
-            />
-          ) : (
-            <Button
-              variant={Button.variants.Filled}
-              text={textProvider(languageCode, Texts.RefreshButton)}
-              onClick={() => window.location.reload()}
-              icon={<RefreshInterfaceSVG />}
-            />
-          )}
+          <Button
+            variant={Button.variants.Filled}
+            text={textProvider(languageCode, button.text)}
+            href={button.href}
+            target={button.href && '_self'}
+            onClick={button.onClick}
+            icon={button.icon}
+          />
         </S.ButtonContainer>
       </S.LeftSide>
       <S.RightSide>

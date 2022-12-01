@@ -9,8 +9,11 @@ export enum Texts {
   SupportCenterButton = 'SupportCenterButton',
   MainPageLink = 'MainPageLink',
   BackLink = 'BackLink',
-  Offline = 'Offline',
   OfflineTitle = 'OfflineTitle',
+  OfflineText = 'OfflineText',
+  RedirectTitle = 'RedirectTitle',
+  RedirectText = 'RedirectText',
+  RedirectButton = 'RedirectButton',
 }
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -23,8 +26,11 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SupportCenterButton]: 'Служба поддержки',
     [Texts.MainPageLink]: 'На главную',
     [Texts.BackLink]: 'Назад',
-    [Texts.Offline]: 'Нет подключения к Интернету',
-    [Texts.OfflineTitle]: 'Проверьте соединение с интернетом и попробуйте обновить страницу',
+    [Texts.OfflineTitle]: 'Нет подключения к Интернету',
+    [Texts.OfflineText]: 'Проверьте соединение с интернетом и попробуйте обновить страницу',
+    [Texts.RedirectTitle]: 'Ссылка будет удалена',
+    [Texts.RedirectText]: 'Эта ссылка устарела и скоро будет удалена. Перейдите по новой ссылке.',
+    [Texts.RedirectButton]: 'Перейти',
   },
   [LanguageCodeType.enGB]: {
     [Texts.FrontendErrorTitle]: 'Unexpected error',
@@ -35,8 +41,11 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.SupportCenterButton]: 'Support Service',
     [Texts.MainPageLink]: 'Go to the main page',
     [Texts.BackLink]: 'Go back',
-    [Texts.Offline]: 'No Internet Connection',
-    [Texts.OfflineTitle]: 'Check your internet connection and try refreshing the page',
+    [Texts.OfflineTitle]: 'No Internet Connection',
+    [Texts.OfflineText]: 'Check your internet connection and try refreshing the page',
+    [Texts.RedirectTitle]: 'The link will be removed',
+    [Texts.RedirectText]: 'The link is obsolete and will be removed soon. Go to the new link',
+    [Texts.RedirectButton]: 'Go to',
   },
 };
 
