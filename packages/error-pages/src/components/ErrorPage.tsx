@@ -27,7 +27,7 @@ export function ErrorPage({
   className,
   mainPageUrl = '/',
   onSupportCenterClick,
-  logoVariant = LogoVariant.Cloud,
+  logoVariant = LogoVariant.None,
   errorType = ErrorType.FrontendError,
   ...rest
 }: ErrorPageProps) {
