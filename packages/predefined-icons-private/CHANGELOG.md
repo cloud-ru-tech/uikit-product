@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.6.2...@sbercloud/uikit-product-predefined-icons-private@1.1.0) (2022-12-01)
+
+### Features
+
+- **[FF-1380](https://jira.sbercloud.tech/browse/FF-1380):** first stable version ([d936479](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d936479031eaef90d44a231cddcc57399f7d37ac))
+
 ## [0.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.6.1...@sbercloud/uikit-product-predefined-icons-private@0.6.2) (2022-11-28)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
