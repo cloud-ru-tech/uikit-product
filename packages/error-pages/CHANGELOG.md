@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.3.0...@sbercloud/uikit-product-error-pages@0.4.0) (2022-12-01)
+
+### Features
+
+- **[FF-1305](https://jira.sbercloud.tech/browse/FF-1305):** add offline fallback page ([7383fbf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7383fbf77c89a445a0ac64bf51bd51e0ac08b3aa))
+
 # [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.2.5...@sbercloud/uikit-product-error-pages@0.3.0) (2022-11-28)
 
 ### Features
