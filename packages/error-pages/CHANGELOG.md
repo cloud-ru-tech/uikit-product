@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.4.1...@sbercloud/uikit-product-error-pages@0.5.0) (2022-12-01)
+
+### Features
+
+- **[FF-1358](https://jira.sbercloud.tech/browse/FF-1358):** add errorType Redirect ([1a4f4a6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1a4f4a63df227b850e86444f9a08369ccbcdcdfc))
+
 ## [0.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.4.0...@sbercloud/uikit-product-error-pages@0.4.1) (2022-12-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-error-pages
