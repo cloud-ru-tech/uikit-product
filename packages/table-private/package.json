@@ -35,7 +35,7 @@
     "@sbercloud/uikit-product-checkbox": "3.1.2",
     "@sbercloud/uikit-product-icons": "5.5.0",
     "@sbercloud/uikit-product-no-data": "2.0.11",
-    "@sbercloud/uikit-product-predefined-icons-private": "0.6.2",
+    "@sbercloud/uikit-product-predefined-icons-private": "1.0.0",
     "@sbercloud/uikit-product-radio": "3.1.2",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",
