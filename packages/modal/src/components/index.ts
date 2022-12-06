@@ -1,2 +1,1 @@
-export * from './Default';
-export * from './Preview';
+export * from './Modal';

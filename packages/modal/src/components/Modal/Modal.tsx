@@ -1,0 +1,77 @@
+import { ReactNode } from 'react';
+
+import { FooterProps, ModalPrivate, Size, Variant } from '@sbercloud/uikit-product-modal-private';
+import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
+import { extractDataTestProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+
+import { Align } from './constants';
+import * as S from './styled';
+import { getAlignProps } from './utils';
+
+export type ModalProps = WithSupportProps<{
+  onClose(): void;
+  isOpen: boolean;
+  isLoading?: boolean;
+  className?: string;
+  content: ReactNode;
+  approveButton?: FooterProps['approveButton'];
+  cancelButton?: FooterProps['cancelButton'];
+  additionalButton?: FooterProps['additionalButton'];
+  size?: Size;
+  variant?: Variant;
+  align?: Align;
+  title: string;
+  subtitle?: string;
+  titleTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
+}>;
+
+export function Modal({
+  onClose,
+  isOpen,
+  isLoading,
+  className,
+  content,
+  title,
+  subtitle,
+  titleTooltip,
+  approveButton,
+  additionalButton,
+  cancelButton,
+  size,
+  variant,
+  align = Align.Sided,
+  ...rest
+}: ModalProps) {
+  const { headerAlign, footerAlign } = getAlignProps(align);
+
+  return (
+    <ModalPrivate.Container
+      isOpen={isOpen}
+      className={className}
+      size={size}
+      onClose={onClose}
+      variant={variant}
+      {...extractDataTestProps(rest)}
+    >
+      <ModalPrivate.Header title={title} subtitle={subtitle} titleTooltip={titleTooltip} align={headerAlign} />
+
+      {isLoading ? (
+        <ModalPrivate.Content content={<S.StyledSpinner data-test-id='modal__spinner' />} />
+      ) : (
+        <>
+          <ModalPrivate.Content content={content} />
+          <ModalPrivate.Footer
+            approveButton={approveButton}
+            cancelButton={cancelButton}
+            additionalButton={additionalButton}
+            align={footerAlign}
+          />
+        </>
+      )}
+    </ModalPrivate.Container>
+  );
+}
+
+Modal.sizes = Size;
+Modal.aligns = Align;
+Modal.variants = Variant;
