@@ -147,13 +147,10 @@ export function ClientModelTableView<T>({
           data-test-id='client-table__delete-modal'
           isOpen={deleteProps.deleteDialogOpened}
           title={deleteProps.title}
-          appElement={document.body}
-          description={deleteProps.description}
-          approveText={deleteProps.approveText}
-          cancelText={deleteProps.cancelText}
-          approve={deleteProps.onConfirmDelete}
-          cancel={deleteProps.onCancelDelete}
-          onRequestClose={deleteProps.onCancelDelete}
+          onClose={deleteProps.onCancelDelete}
+          content={deleteProps.description}
+          approveButton={{ onClick: deleteProps.onConfirmDelete, text: deleteProps.approveText, alarm: true }}
+          cancelButton={{ onClick: deleteProps.onCancelDelete, text: deleteProps.cancelText }}
         />
       )}
     </div>

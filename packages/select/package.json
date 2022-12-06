@@ -32,7 +32,7 @@
     "@sbercloud/uikit-product-divider": "2.0.38",
     "@sbercloud/uikit-product-icons": "5.5.0",
     "@sbercloud/uikit-product-input-private": "3.0.8",
-    "@sbercloud/uikit-product-modal": "0.17.13",
+    "@sbercloud/uikit-product-modal": "1.0.0",
     "@sbercloud/uikit-product-tag": "2.0.13",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-typography": "1.2.0",

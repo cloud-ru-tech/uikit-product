@@ -18,6 +18,7 @@ export type OptionTypeTag = {
 
 type RCProps = React.ComponentProps<typeof RCSelect>;
 
+// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 export interface ITagSelect extends Omit<RCProps, 'components'> {
   defaultValue?: OptionTypeTag;
   value?: OptionTypeTag;
@@ -63,7 +64,6 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
   const [currentTag, setCurrentTag] = useState<ValueType<OptionTypeTag>>(value);
   const [customStyles] = useState(getSelectStyles('tag'));
 
-  const [modalInstance, setModalInstance] = useState<HTMLDivElement | null>(null);
   const [approveDelete, setApproveDelete] = useState<ApproveDeleteType | null>(null);
 
   const toggleMenu = (isMenuOpen?: boolean): void => {
@@ -115,29 +115,31 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
         approveDeleting={(tag: OptionTypeTag, callbackDelete: () => void): void => {
           setApproveDelete({ tag, callbackDelete });
         }}
-        modalInstance={modalInstance}
         validator={validator}
         validateMessage={validateMessage}
       />
+
       <Modal
         isOpen={Boolean(approveDelete?.tag)}
-        onRequestClose={(): void => {
+        onClose={() => {
           setApproveDelete(null);
         }}
-        appElement={document.body}
         title={textProvider<string>(languageCode, Texts.ModalDeleteTagTitle)}
-        description={textProvider<DictionaryPropertyAsFn>(
+        content={textProvider<DictionaryPropertyAsFn>(
           languageCode,
           Texts.ModalDeleteTagDesc,
         )({ label: approveDelete?.tag?.label || '' })}
-        approve={(): void => {
-          approveDelete?.callbackDelete();
+        approveButton={{
+          onClick() {
+            approveDelete?.callbackDelete();
+            setApproveDelete(null);
+          },
+          alarm: true,
         }}
-        cancel={(): void => {
-          setApproveDelete(null);
-        }}
-        overlayRef={(instance: HTMLDivElement): void => {
-          setModalInstance(instance);
+        cancelButton={{
+          onClick() {
+            setApproveDelete(null);
+          },
         }}
       />
     </>
