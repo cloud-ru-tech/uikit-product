@@ -1,10 +1,7 @@
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { useState } from 'react';
 
-import { Button } from '@sbercloud/uikit-product-button';
-import { Modal } from '@sbercloud/uikit-product-modal';
 import { SwitchRow } from '@sbercloud/uikit-product-switch';
 
 import { BADGE } from '#storybookConstants';
@@ -20,7 +17,7 @@ export default {
 } as Meta;
 
 const Container = styled.div`
-  width: 100%;
+  width: 400px;
   height: 100%;
   background-color: #fff;
   position: absolute;
@@ -29,27 +26,14 @@ const Container = styled.div`
   padding: 1rem;
 `;
 
-const modalOverlayClassName = css`
-  background-color: transparent;
-`;
-
 const Template: Story<OverlayPrivateProps> = ({ ...args }) => {
-  const [isOpen, setOpen] = useState(false);
-  const [isEnabled, setEnabled] = useState(true);
+  const [isEnabled, setEnabled] = useState(false);
 
   return (
     <Container>
-      <Button data-test-id='open_overlay' text='Show overlay' onClick={() => setOpen(true)} />
+      {isEnabled && <OverlayPrivate {...args} />}
 
-      {isOpen && isEnabled && <OverlayPrivate {...args} />}
-
-      <Modal
-        appElement={document.body}
-        description={<SwitchRow title='toggle overlay' checked={isEnabled} onChange={setEnabled} />}
-        isOpen={isOpen}
-        onRequestClose={() => setOpen(false)}
-        overlayClassName={modalOverlayClassName}
-      />
+      <SwitchRow data-test-id='toggle_overlay' title='toggle overlay' checked={isEnabled} onChange={setEnabled} />
     </Container>
   );
 };

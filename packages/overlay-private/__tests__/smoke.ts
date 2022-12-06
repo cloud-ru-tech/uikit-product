@@ -15,7 +15,7 @@ fixture('[OverlayPrivate]:').page(
 
 test('Rendered', async t => {
   await t
-    .click(Selector(dataTestIdSelector('open_overlay')))
+    .click(Selector(dataTestIdSelector('toggle_overlay')))
     .expect(Selector(dataTestIdSelector(testId)).visible)
     .ok();
 });

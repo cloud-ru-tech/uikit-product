@@ -138,17 +138,9 @@ export function getTemplate(
         {selectedIcon !== null && (
           <Modal
             isOpen={true}
-            appElement={document.body}
             title={selectedIcon.iconName}
-            onRequestClose={onCloseHandler}
-            contentStyles={{
-              width: 'fit-content',
-              height: 'fit-content',
-              margin: 'auto',
-              boxSizing: 'border-box',
-              padding: '24px',
-            }}
-            description={
+            onClose={onCloseHandler}
+            content={
               <IconOverview>
                 {selectedIcon.Icon({ size, fill })}
                 <CopyInputWrapper>
