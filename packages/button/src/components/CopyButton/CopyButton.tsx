@@ -30,6 +30,7 @@ export type CopyButtonProps<T extends ElementType = typeof CopyButtonDefaultElem
 export function CopyButton<T extends ElementType = typeof CopyButtonDefaultElement>({
   as,
   text,
+  tooltip,
   onClick,
   onClickBeforeCopy,
   ...rest
@@ -96,7 +97,7 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
         </>
       }
       onClick={wrappedOnClick}
-      tooltip={{ content: textProvider(languageCode, Texts.Copy) }}
+      tooltip={{ content: tooltip?.content ?? textProvider(languageCode, Texts.Copy) }}
       {...extractedProps}
     />
   );

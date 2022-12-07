@@ -30,10 +30,15 @@ const Template: Story<CopyButtonProps> = ({ ...args }) => (
 export const copyButton = Template.bind({});
 
 copyButton.parameters = getDefaultParameters({
-  extraControlsInclude: ['text'],
+  extraControlsInclude: ['text', 'tooltip'],
 });
 
-copyButton.args = getDefaultArgs({ text: 'Text for copy' });
+copyButton.args = getDefaultArgs({
+  text: 'Text for copy',
+  tooltip: {
+    content: 'Копировать',
+  },
+});
 
 copyButton.argTypes = {
   text: {
