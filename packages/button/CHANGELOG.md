@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.1.4...@sbercloud/uikit-product-button@5.2.0) (2022-12-07)
+
+### Features
+
+- **[DPS-997](https://jira.sbercloud.tech/browse/DPS-997):** extend tooltip prop ([5208240](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/52082403c718e923f854306f6a05fc737e74d12e))
+
 ## [5.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.1.3...@sbercloud/uikit-product-button@5.1.4) (2022-12-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-button
