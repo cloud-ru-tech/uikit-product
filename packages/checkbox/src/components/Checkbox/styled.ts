@@ -29,6 +29,7 @@ export const CheckboxText = styled.span`
 `;
 
 export const CheckboxWrap = styled.label`
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;

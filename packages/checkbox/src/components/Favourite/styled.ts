@@ -19,6 +19,7 @@ export const HiddenCheckbox = styled.input`
 `;
 
 export const Label = styled.label`
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
