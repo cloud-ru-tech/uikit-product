@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-checkbox@3.1.2...@sbercloud/uikit-product-checkbox@3.1.3) (2022-12-09)
+
+### Bug Fixes
+
+- **[FF-1371](https://jira.sbercloud.tech/browse/FF-1371):** Added position relative to checkbox and favourite ([47b9a8c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/47b9a8c91c265e76548ba7de790c368b4fdc2282))
+
 ## [3.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-checkbox@3.1.1...@sbercloud/uikit-product-checkbox@3.1.2) (2022-11-28)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-checkbox
