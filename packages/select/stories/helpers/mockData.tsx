@@ -167,7 +167,7 @@ export const services = [
   },
   {
     value: 'GoogleCloudstorage',
-    label: <TruncateString text='Google Cloud storage' style={{ width: 'calc(100% - 10px)' }} />,
+    label: <TruncateString text='Google Cloud storage' />,
     labelText: 'Google Cloud storage',
     logo: <UserInterfaceSVG size={20} />,
   },
