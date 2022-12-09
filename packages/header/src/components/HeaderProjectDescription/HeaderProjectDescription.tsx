@@ -1,4 +1,5 @@
-import { TruncatedTextWithTooltip } from '../../helperComponents';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
+
 import * as S from './styled';
 
 export type HeaderProjectDescriptionProps = {
@@ -8,7 +9,7 @@ export type HeaderProjectDescriptionProps = {
 export function HeaderProjectDescription({ label }: HeaderProjectDescriptionProps) {
   return (
     <S.Description data-test-id='header-project-description'>
-      <S.Text placement={TruncatedTextWithTooltip.placements.Bottom}>{label}</S.Text>
+      <TruncateString placement={TruncateString.placements.Bottom} text={label} />
     </S.Description>
   );
 }

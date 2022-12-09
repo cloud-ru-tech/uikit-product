@@ -7,7 +7,7 @@ import componentReadme from '../README.md';
 import { HeaderProjectSelector, HeaderProjectSelectorProps } from '../src';
 
 export default {
-  title: 'Not stable/Navigation/Header Project Selector',
+  title: 'Components/Header/Header Project Selector',
   component: HeaderProjectSelector,
   argTypes: {
     showCreateButton: {

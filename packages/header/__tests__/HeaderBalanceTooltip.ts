@@ -1,13 +1,13 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { HeaderBalanceTooltipProps } from '@sbercloud/uikit-product-navigation';
+import { HeaderBalanceTooltipProps } from '@sbercloud/uikit-product-header';
 
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 function getPage(props: Partial<HeaderBalanceTooltipProps & { showRechargeButton: boolean }>) {
   return getTestcafeUrl({
-    category: 'not-stable',
-    group: 'navigation',
+    category: 'components',
+    group: 'header',
     name: 'header-balance-tooltip',
     props: { ...props, 'data-test-id': 'header-balance-tooltip' },
   });

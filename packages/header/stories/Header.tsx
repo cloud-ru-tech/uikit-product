@@ -15,6 +15,7 @@ import { SidebarItemId, SidebarMobile, SidebarProps } from '@sbercloud/uikit-pro
 import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 import { useMatchMedia } from '@sbercloud/uikit-product-utils';
 
+import { footerItems, menuList } from '../../sidebar/stories/mocks/menuList';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
@@ -31,10 +32,9 @@ import {
   MobileMenu,
   MobileMenuReference,
 } from '../src';
-import { footerItems, menuList } from './mocks/menuList';
 
 export default {
-  title: 'Not stable/Navigation/Header',
+  title: 'Components/Header',
   component: Header,
 } as Meta;
 

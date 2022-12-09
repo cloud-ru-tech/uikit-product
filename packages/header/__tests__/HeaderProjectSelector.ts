@@ -3,7 +3,7 @@ import { fixture, Selector, test } from 'testcafe';
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 function getPage(story: string) {
-  return getTestcafeUrl({ category: 'not-stable', group: 'navigation', name: 'header-project-selector', story });
+  return getTestcafeUrl({ category: 'components', group: 'header', name: 'header-project-selector', story });
 }
 
 function getReference() {

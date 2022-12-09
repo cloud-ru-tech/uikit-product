@@ -1,24 +1,25 @@
 {
-  "name": "@sbercloud/uikit-product-navigation",
-  "title": "Navigation",
-  "version": "0.21.11",
+  "name": "@sbercloud/uikit-product-header",
+  "title": "Header",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
     "*.woff2"
   ],
-  "description": "",
+  "description": "Common header",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/navigation",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/header",
   "repository": {
     "type": "git",
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
-    "directory": "packages/navigation"
+    "directory": "packages/header"
   },
-  "author": "Lozinskiy Pavel <pvlozinskiy@sbercloud.ru>",
+  "author": "Kozlova Anna <apkozlova@sbercloud.ru>",
   "contributors": [
-    "Lozinskiy Pavel <pvlozinskiy@sbercloud.ru>"
+    "Belov Aleksei <anbelov@sbercloud.ru>",
+    "Kozlova Anna <apkozlova@sbercloud.ru>"
   ],
   "files": [
     "dist",
@@ -38,6 +39,7 @@
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-tooltip": "3.0.9",
     "@sbercloud/uikit-product-tooltip-private": "1.2.22",
+    "@sbercloud/uikit-product-truncate-string": "0.6.0",
     "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.1.1",
     "react-transition-state": "2.0.2"
