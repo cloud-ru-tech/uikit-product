@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification-panel@0.0.13...@sbercloud/uikit-product-notification-panel@1.0.1) (2022-12-09)
+
+### Bug Fixes
+
+- **[FF-1363](https://jira.sbercloud.tech/browse/FF-1363):** first stable version ([78d56f4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/78d56f402c5f495c96ddc20dacf912edd0cffb1e))
+
 ## [0.0.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification-panel@0.0.12...@sbercloud/uikit-product-notification-panel@0.0.13) (2022-12-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-notification-panel
