@@ -1,24 +1,25 @@
 {
-  "name": "@sbercloud/uikit-product-navigation",
-  "title": "Navigation",
-  "version": "0.21.11",
+  "name": "@sbercloud/uikit-product-sidebar",
+  "title": "Sidebar",
+  "version": "1.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
     "*.woff2"
   ],
-  "description": "",
+  "description": "Common sidebar",
   "main": "./dist/esm/index.js",
   "module": "./dist/esm/index.js",
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/navigation",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/sidebar",
   "repository": {
     "type": "git",
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
-    "directory": "packages/navigation"
+    "directory": "packages/sidebar"
   },
-  "author": "Lozinskiy Pavel <pvlozinskiy@sbercloud.ru>",
+  "author": "Kozlova Anna <apkozlova@sbercloud.ru>",
   "contributors": [
-    "Lozinskiy Pavel <pvlozinskiy@sbercloud.ru>"
+    "Belov Aleksei <anbelov@sbercloud.ru>",
+    "Kozlova Anna <apkozlova@sbercloud.ru>"
   ],
   "files": [
     "dist",
@@ -28,18 +29,23 @@
   "scripts": {},
   "dependencies": {
     "@floating-ui/react-dom-interactions": "0.9.2",
-    "@sbercloud/uikit-product-avatar": "1.1.14",
     "@sbercloud/uikit-product-button": "5.2.0",
+    "@sbercloud/uikit-product-counter": "0.1.4",
     "@sbercloud/uikit-product-divider": "2.0.38",
-    "@sbercloud/uikit-product-dropdown": "0.16.9",
     "@sbercloud/uikit-product-icons": "5.5.0",
+    "@sbercloud/uikit-product-label": "2.0.24",
     "@sbercloud/uikit-product-scroll": "1.4.1",
     "@sbercloud/uikit-product-search": "0.2.14",
+    "@sbercloud/uikit-product-status": "6.0.15",
     "@sbercloud/uikit-product-theme": "0.35.1",
     "@sbercloud/uikit-product-tooltip": "3.0.9",
-    "@sbercloud/uikit-product-tooltip-private": "1.2.22",
+    "@sbercloud/uikit-product-truncate-string": "0.6.0",
     "@sbercloud/uikit-product-typography": "1.2.0",
     "@sbercloud/uikit-product-utils": "3.1.1",
+    "lodash.throttle": "4.1.1",
     "react-transition-state": "2.0.2"
+  },
+  "devDependencies": {
+    "@types/lodash.throttle": "4.1.7"
   }
 }

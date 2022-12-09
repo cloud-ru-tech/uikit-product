@@ -38,7 +38,8 @@ import {
   ViewTableInterfaceSVG,
   ViewTileInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
-import { Sidebar, SidebarItemProps, SidebarItemsGroup } from '@sbercloud/uikit-product-sidebar';
+
+import { Sidebar, SidebarItemProps, SidebarItemsGroup } from '../../src';
 
 export const menuList: SidebarItemsGroup[] = [
   {

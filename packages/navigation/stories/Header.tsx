@@ -11,6 +11,7 @@ import {
   SupportInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
 import { PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
+import { SidebarItemId, SidebarMobile, SidebarProps } from '@sbercloud/uikit-product-sidebar';
 import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 import { useMatchMedia } from '@sbercloud/uikit-product-utils';
 
@@ -29,9 +30,6 @@ import {
   MobileHeader,
   MobileMenu,
   MobileMenuReference,
-  SidebarItemId,
-  SidebarMobile,
-  SidebarProps,
 } from '../src';
 import { footerItems, menuList } from './mocks/menuList';
 
