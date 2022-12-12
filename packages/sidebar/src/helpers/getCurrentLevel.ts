@@ -1,7 +1,5 @@
 import { Mode, SidebarItemId, SidebarItemsGroup, SidebarLevel } from '../components/Sidebar/types';
 
-const DEFAULT_LEVEL = 0;
-
 function hasActiveItem(active: SidebarItemId, list: SidebarItemsGroup[]): boolean {
   for (const group of list) {
     for (const item of group.items) {
@@ -22,11 +20,22 @@ function hasActiveItem(active: SidebarItemId, list: SidebarItemsGroup[]): boolea
   return false;
 }
 
-export function getCurrentLevel(levels: SidebarLevel[], active?: SidebarItemId) {
-  return active
-    ? Math.max(
-        levels.findIndex(level => level.title?.id === active || hasActiveItem(active, level.list)),
-        DEFAULT_LEVEL,
-      )
-    : DEFAULT_LEVEL;
+function getCurrentLevelInner(root: SidebarLevel, active: SidebarItemId): SidebarLevel | undefined {
+  if (root.title?.id === active || hasActiveItem(active, root.list)) {
+    return root;
+  }
+
+  for (const child of root.children) {
+    const level = getCurrentLevelInner(child, active);
+
+    if (level) return level;
+  }
+
+  return undefined;
+}
+
+export function getCurrentLevel(root: SidebarLevel, active?: SidebarItemId): SidebarLevel {
+  if (!active) return root;
+
+  return getCurrentLevelInner(root, active) ?? root;
 }

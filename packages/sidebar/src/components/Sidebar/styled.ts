@@ -27,3 +27,11 @@ export const Sidebar = styled.div`
     box-sizing: border-box;
   }
 `;
+
+export const MainContentWrapper = styled.div`
+  display: flex;
+  overflow: hidden;
+
+  position: relative;
+  flex: 1 0 auto;
+`;

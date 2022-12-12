@@ -4,14 +4,14 @@ import {
   Mode,
   SidebarItemId,
   SidebarItemProps,
-  SidebarItemsGroup,
+  SidebarLevel,
   SidebarOnActiveChange,
 } from '../components/Sidebar/types';
-import { getCurrentLevel, getLevels, isItemAccordion, shouldBeDefaultClick } from '../helpers';
+import { getCurrentLevel, isItemAccordion, shouldBeDefaultClick } from '../helpers';
 import { SidebarContext } from './SidebarContext';
 
 type SidebarContextProviderProps = {
-  list: SidebarItemsGroup[];
+  levels: SidebarLevel;
   active?: SidebarItemId;
   onActiveChange: SidebarOnActiveChange;
   children: ReactNode;
@@ -20,7 +20,7 @@ type SidebarContextProviderProps = {
 };
 
 export function SidebarContextProvider({
-  list,
+  levels,
   active,
   onActiveChange,
   children,
@@ -29,7 +29,6 @@ export function SidebarContextProvider({
 }: SidebarContextProviderProps) {
   const [search, setSearch] = useState('');
   const [isSearchShown, setSearchShown] = useState(false);
-  const levels = getLevels(list);
   const currentLevel = getCurrentLevel(levels, active);
   const previousLevelRef = useRef(currentLevel);
 
@@ -53,10 +52,9 @@ export function SidebarContextProvider({
   function handleBackClick() {
     closeSearch();
 
-    const prevLevel = currentLevel - 1;
-    const prevLevelItem = levels[prevLevel];
+    const prevLevelItem = currentLevel.parent;
 
-    onActiveChange({ id: prevLevelItem.title?.id, href: prevLevelItem.title?.href });
+    onActiveChange({ id: prevLevelItem?.title?.id, href: prevLevelItem?.title?.href });
     previousLevelRef.current = currentLevel;
   }
 
@@ -86,7 +84,6 @@ export function SidebarContextProvider({
   return (
     <SidebarContext.Provider
       value={{
-        levels,
         active,
         currentLevel,
         previousLevel: previousLevelRef.current,

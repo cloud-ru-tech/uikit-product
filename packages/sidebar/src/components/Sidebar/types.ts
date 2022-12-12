@@ -47,6 +47,9 @@ export type SidebarItemsGroup = {
 };
 
 export type SidebarLevel = {
-  title?: SidebarItemProps;
   list: SidebarItemsGroup[];
+  title?: SidebarItemProps;
+  children: SidebarLevel[];
+  parent?: SidebarLevel;
+  depth: number;
 };

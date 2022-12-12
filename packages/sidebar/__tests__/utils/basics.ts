@@ -1,6 +1,6 @@
 import { expectItemToBeActive, expectToHaveItemTexts } from './expects';
 import { getBackButton, getHoverMenu, getHoverMenuItemById, getItemById, getItems } from './selectors';
-import { firstLevelTexts, itemIds, secondLevelTexts } from './testData';
+import { firstLevelTexts, itemIds, secondLevelTexts, secondSlideInnerItemsTexts } from './testData';
 
 export function basics(isCollapsed: boolean) {
   // eslint-disable-next-line testcafe-community/missing-expect
@@ -34,6 +34,27 @@ export function basics(isCollapsed: boolean) {
       await t.expect(getItems().count).eql(secondLevelTexts.length);
     } else {
       await expectToHaveItemTexts(t, secondLevelTexts);
+    }
+
+    await t.click(getBackButton());
+
+    if (isCollapsed) {
+      await t.expect(getItems().count).eql(firstLevelTexts.length);
+    } else {
+      await expectToHaveItemTexts(t, firstLevelTexts);
+    }
+  });
+
+  test('navigates into the second slide item', async t => {
+    await t.click(getItemById(itemIds.slide2));
+
+    await expectItemToBeActive(t, itemIds.slide2, isCollapsed);
+
+    if (isCollapsed) {
+      await t.expect(getHoverMenu().visible).notOk();
+      await t.expect(getItems().count).eql(secondSlideInnerItemsTexts.length);
+    } else {
+      await expectToHaveItemTexts(t, secondSlideInnerItemsTexts);
     }
 
     await t.click(getBackButton());

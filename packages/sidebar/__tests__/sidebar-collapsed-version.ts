@@ -2,6 +2,7 @@ import {
   basics,
   expectItemToBeActive,
   expectItemToBeDisabled,
+  firstLevelTexts,
   getCollapseButton,
   getItemById,
   getItemPostfixCounterSelectorString,
@@ -19,7 +20,7 @@ fixture('[Navigation]: Sidebar - collapsed version')
   .beforeEach(t => t.click(getCollapseButton()));
 
 test('renders', async t => {
-  await t.expect(getItems().count).eql(11);
+  await t.expect(getItems().count).eql(firstLevelTexts.length);
 
   await expectItemToBeActive(t, itemIds.defaultActive, true);
   await expectItemToBeDisabled(t, itemIds.disabled, true);

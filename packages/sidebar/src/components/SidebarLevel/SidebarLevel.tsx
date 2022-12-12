@@ -7,14 +7,13 @@ import { TransitionDirection } from './constants';
 import * as S from './styled';
 
 type SidebarLevelProps = {
-  index: number;
   children: ReactNode;
   hasTitle: boolean;
+  isVisible: boolean;
 };
 
-export function SidebarLevel({ index, children, hasTitle }: SidebarLevelProps) {
+export function SidebarLevel({ children, hasTitle, isVisible }: SidebarLevelProps) {
   const { currentLevel, previousLevel } = useSidebarContext();
-  const isVisible = index === currentLevel;
   const [state, toggle] = useTransition({
     mountOnEnter: true,
     unmountOnExit: true,
@@ -35,7 +34,9 @@ export function SidebarLevel({ index, children, hasTitle }: SidebarLevelProps) {
     <S.Wrapper
       data-transition-status={state.status}
       data-transition-direction={
-        previousLevel > currentLevel ? TransitionDirection.Forward : TransitionDirection.Backward
+        (previousLevel?.depth ?? 0) > (currentLevel?.depth ?? 0)
+          ? TransitionDirection.Forward
+          : TransitionDirection.Backward
       }
       data-has-title={hasTitle || undefined}
       data-test-id={isVisible ? 'sidebar__level' : undefined}

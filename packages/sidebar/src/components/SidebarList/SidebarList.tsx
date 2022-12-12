@@ -6,19 +6,18 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { useSidebarContext } from '../../contexts';
 import { filterBySearch, isItemAccordion, textProvider, Texts } from '../../helpers';
-import { SidebarItemProps, SidebarItemsGroup } from '../Sidebar/types';
+import { SidebarItemProps, SidebarLevel } from '../Sidebar/types';
 import { SidebarAccordion } from '../SidebarAccordion';
 import { SidebarCollapsedItem } from '../SidebarCollapsedItem';
 import { SidebarItem } from '../SidebarItem';
 import * as S from './styled';
 
 type SidebarListProps = {
-  list: SidebarItemsGroup[];
-  levelIndex: number;
+  level: SidebarLevel;
   isFooter?: boolean;
 };
 
-export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
+export function SidebarList({ isFooter, level }: SidebarListProps) {
   const { handleItemClick, currentLevel, search, isSearchDirty, isCollapsed } = useSidebarContext();
   const { languageCode } = useLanguage();
 
@@ -65,14 +64,14 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
     };
   }, [isFooter, updateFadingVisibility]);
 
-  const showSearchResults = currentLevel === levelIndex && isSearchDirty;
+  const showSearchResults = level === currentLevel && isSearchDirty;
   const searchResults = useMemo(() => {
     if (showSearchResults) {
-      return filterBySearch(list, search);
+      return filterBySearch(level.list, search);
     }
 
     return [];
-  }, [showSearchResults, list, search]);
+  }, [showSearchResults, level.list, search]);
 
   const renderItems = ({ item }: { item: SidebarItemProps }) => {
     if (isCollapsed) {
@@ -94,10 +93,10 @@ export function SidebarList({ list, isFooter, levelIndex }: SidebarListProps) {
           {searchResults.length === 0 && <S.NoDataLabel>{textProvider(languageCode, Texts.NoDataFound)}</S.NoDataLabel>}
         </>
       )}
-      {list.map((group, groupIndex) => (
+      {level.list.map((group, groupIndex) => (
         <S.GroupWrapper key={group.heading || group.items[0].id} data-hidden={showSearchResults || undefined}>
           {group.heading && !isCollapsed && (
-            <S.Heading data-first-on-inner-level={(levelIndex > 0 && groupIndex === 0) || undefined}>
+            <S.Heading data-first-on-inner-level={(level.depth > 0 && groupIndex === 0) || undefined}>
               {group.heading}
             </S.Heading>
           )}

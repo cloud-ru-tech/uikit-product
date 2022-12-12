@@ -1,6 +1,7 @@
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { SidebarContextProvider } from '../../contexts';
+import { getLevelsTree } from '../../helpers';
 import { useIsCollapsedState } from '../../hooks';
 import { SidebarFooter } from '../SidebarFooter';
 import { SidebarMain } from '../SidebarMain';
@@ -17,18 +18,20 @@ export type SidebarProps = WithSupportProps<{
 
 export function Sidebar({ list, active, footerItems, onActiveChange, className, ...rest }: SidebarProps) {
   const [isCollapsed, setIsCollapsed] = useIsCollapsedState();
+  const rootLevel = getLevelsTree(list);
 
   return (
     <S.Sidebar data-collapsed={isCollapsed || undefined} className={className} {...extractSupportProps(rest)}>
       <SidebarContextProvider
         active={active}
-        list={list}
         onActiveChange={onActiveChange}
         isCollapsed={isCollapsed}
         setIsCollapsed={setIsCollapsed}
+        levels={rootLevel}
       >
-        <SidebarMain />
-
+        <S.MainContentWrapper>
+          <SidebarMain level={rootLevel} />
+        </S.MainContentWrapper>
         <SidebarFooter items={footerItems} />
       </SidebarContextProvider>
     </S.Sidebar>

@@ -3,10 +3,9 @@ import { createContext, MouseEvent, useContext } from 'react';
 import { SidebarItemId, SidebarItemProps, SidebarLevel } from '../components/Sidebar/types';
 
 type SidebarContextProps = {
-  levels: SidebarLevel[];
+  currentLevel?: SidebarLevel;
+  previousLevel?: SidebarLevel;
   active?: SidebarItemId;
-  currentLevel: number;
-  previousLevel: number;
   search: string;
   isSearchDirty: boolean;
   setSearch(value: string): void;
@@ -21,9 +20,6 @@ type SidebarContextProps = {
 };
 
 export const SIDEBAR_CONTEXT_STUB: SidebarContextProps = {
-  currentLevel: 0,
-  previousLevel: 0,
-  levels: [],
   search: '',
   isSearchDirty: false,
   setSearch() {},

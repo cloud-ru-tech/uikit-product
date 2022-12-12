@@ -26,7 +26,7 @@ export function SidebarFooter({ items }: SidebarFooterProps) {
         <>
           <Divider />
 
-          <SidebarList levelIndex={0} list={[{ items }]} isFooter />
+          <SidebarList level={{ list: [{ items }], depth: 0, children: [] }} isFooter />
         </>
       )}
 

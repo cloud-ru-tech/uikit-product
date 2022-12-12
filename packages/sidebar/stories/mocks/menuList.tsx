@@ -306,6 +306,48 @@ export const menuList: SidebarItemsGroup[] = [
         ],
       },
       {
+        id: 'main-slide',
+        label: 'Other Slide Item',
+        href: '/',
+        icon: <ChristofariServiceSVG />,
+        nestedList: [
+          {
+            items: [
+              {
+                id: 'main-slide-child-1',
+                label: 'Slide Item 1',
+                href: '/',
+                icon: <ChristofariServiceSVG />,
+              },
+              {
+                id: 'main-slide-child-2',
+                label: 'Slide Item 2',
+                mode: Sidebar.listModes.Accordion,
+                icon: <ChristofariServiceSVG />,
+                nestedList: [
+                  {
+                    items: [
+                      {
+                        id: 'main-slide-child-3',
+                        label: 'Slide Item 3',
+                        href: '/',
+                        icon: <ChristofariServiceSVG />,
+                      },
+                      {
+                        id: 'main-slide-child-4',
+                        label: 'Slide Item 4',
+                        href: '/',
+                        icon: <ChristofariServiceSVG />,
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: 'main-svp',
         label: 'SVP',
         href: '/',

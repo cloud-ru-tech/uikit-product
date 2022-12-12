@@ -25,7 +25,9 @@ import {
   secondLevelTexts,
 } from './utils';
 
-fixture('[Navigation]: Sidebar - full version').page(getPage());
+fixture('[Navigation]: Sidebar - full version')
+  .skipJsErrors(args => Boolean(args?.message.includes('ResizeObserver loop')))
+  .page(getPage());
 
 test('renders', async t => {
   await expectToHaveItemTexts(t, firstLevelTexts);
