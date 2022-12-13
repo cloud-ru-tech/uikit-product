@@ -5,7 +5,7 @@ import { DropdownMenu } from '@sbercloud/uikit-product-dropdown';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { AvatarContext, DropdownMenuContext } from '../../../../contexts';
-import { Item } from './styled';
+import * as S from './styled';
 
 function noop() {}
 
@@ -22,7 +22,7 @@ export function HeaderToolbarProfileMenu({ name, children, src, ...rest }: Heade
         <AvatarContext.Provider value={{ name, src }}>
           <DropdownMenuContext.Provider value={{ hide }}>
             {Children.map(children, child => (
-              <Item>{child}</Item>
+              <S.Item>{child}</S.Item>
             ))}
           </DropdownMenuContext.Provider>
         </AvatarContext.Provider>

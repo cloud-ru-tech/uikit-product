@@ -1,7 +1,9 @@
 import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
+
 const { BLACK_ALFA, BLUE_GREY, GREY, WHITE_ALFA } = EXPORT_VARS;
+
 export const COLORS = {
   background: {
     default: '--color__navigation__header__background__default',

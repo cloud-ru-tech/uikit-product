@@ -1,7 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H5_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
-
+import { RechargeButton as RechargeButtonInner } from './components';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -22,23 +21,7 @@ export const Frame = styled.div`
   padding: 4px;
 `;
 
-export const Balance = styled.button`
-  background: none;
-  border: none;
-  color: var(${COLORS.text.default});
-  column-gap: 4px;
-  cursor: pointer;
-  display: flex;
-  margin: 0 4px;
-  padding: 0;
-
-  &:disabled {
-    cursor: default;
-  }
-`;
-
-export const RechargeButton = styled.div`
-  display: flex;
+export const RechargeButton = styled(RechargeButtonInner)`
   margin-right: 4px;
 `;
 
@@ -46,12 +29,4 @@ export const Icon = styled.div`
   ${RechargeButton} + & {
     margin-left: 4px;
   }
-`;
-
-export const RegularText = styled.span`
-  ${TEXT_2_STYLES};
-`;
-
-export const AccentText = styled.span`
-  ${H5_STYLES};
 `;

@@ -1,0 +1,137 @@
+import {
+  autoUpdate,
+  flip,
+  FloatingFocusManager,
+  FloatingPortal,
+  offset,
+  shift,
+  size,
+  useClick,
+  useDismiss,
+  useFloating,
+  useInteractions,
+  useListNavigation,
+  useRole,
+} from '@floating-ui/react-dom-interactions';
+import { ReactNode, useContext, useLayoutEffect, useRef, useState } from 'react';
+
+import { FloatingContext, ItemContext, NavigationContext, ReferenceContext, SelectionContext } from '../../contexts';
+import * as S from './styled';
+
+export type FloatingProps = {
+  children: ReactNode;
+  content: ReactNode;
+  isMobile?: boolean;
+};
+
+export function Floating({ children, content, isMobile }: FloatingProps) {
+  const listRef = useRef<Array<HTMLElement | null>>([]);
+  const initialFocusRef = useRef<HTMLElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isKeyboardNavigation, setIsKeyboardNavigation] = useState(false);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const { selectedIndex } = useContext(SelectionContext);
+  const { x, y, strategy, context, reference, floating } = useFloating({
+    open: isOpen,
+    onOpenChange: setIsOpen,
+    whileElementsMounted: autoUpdate,
+    placement: 'bottom-start',
+    middleware: [
+      offset(4),
+      shift(),
+      flip(),
+      size({
+        apply({ elements, rects, availableHeight }) {
+          elements.floating.style.width = `${isMobile ? rects.reference.width : 400}px`;
+          elements.floating.style.maxHeight = `${Math.min(availableHeight, 250)}px`;
+        },
+      }),
+    ],
+  });
+  const { getReferenceProps, getFloatingProps, getItemProps } = useInteractions([
+    useClick(context),
+    useRole(context, { role: 'listbox' }),
+    useDismiss(context),
+    useListNavigation(context, {
+      listRef,
+      activeIndex,
+      selectedIndex,
+      onNavigate: setActiveIndex,
+      loop: true,
+      focusItemOnOpen: false,
+      focusItemOnHover: false,
+    }),
+  ]);
+
+  function setItem(item: HTMLElement | null, index: number | null) {
+    if (index !== null) {
+      listRef.current[index] = item;
+    }
+  }
+
+  function handlePointerMove() {
+    setIsKeyboardNavigation(false);
+  }
+
+  function handleKeyDown() {
+    setIsKeyboardNavigation(true);
+  }
+
+  useLayoutEffect(() => {
+    if (!isOpen || selectedIndex === null) {
+      return;
+    }
+
+    const handle = requestAnimationFrame(() => {
+      listRef.current[selectedIndex]?.scrollIntoView({ block: 'center' });
+    });
+
+    return () => {
+      cancelAnimationFrame(handle);
+    };
+  }, [isOpen, selectedIndex]);
+
+  useLayoutEffect(() => {
+    if (!isOpen || !isKeyboardNavigation || activeIndex === null) {
+      return;
+    }
+
+    const handle = requestAnimationFrame(() => {
+      listRef.current[activeIndex]?.scrollIntoView({ block: 'nearest' });
+    });
+
+    return () => {
+      cancelAnimationFrame(handle);
+    };
+  }, [isOpen, isKeyboardNavigation, activeIndex]);
+
+  return (
+    <FloatingContext.Provider value={{ isOpen, setIsOpen, initialFocusRef }}>
+      <ReferenceContext.Provider value={{ setElement: reference, getProps: getReferenceProps }}>
+        <ItemContext.Provider value={{ getProps: getItemProps, setElement: setItem }}>
+          <NavigationContext.Provider value={{ activeIndex, setActiveIndex }}>
+            {children}
+            {isOpen && (
+              <FloatingPortal root={document.body}>
+                <S.Overlay>
+                  <FloatingFocusManager context={context} initialFocus={initialFocusRef}>
+                    <S.Wrapper
+                      strategy={strategy}
+                      x={x ?? 0}
+                      y={y ?? 0}
+                      ref={floating}
+                      data-test-id='header-project-selector__floating'
+                      {...getFloatingProps({ onPointerMove: handlePointerMove, onKeyDown: handleKeyDown })}
+                    >
+                      {content}
+                    </S.Wrapper>
+                  </FloatingFocusManager>
+                </S.Overlay>
+              </FloatingPortal>
+            )}
+          </NavigationContext.Provider>
+        </ItemContext.Provider>
+      </ReferenceContext.Provider>
+    </FloatingContext.Provider>
+  );
+}

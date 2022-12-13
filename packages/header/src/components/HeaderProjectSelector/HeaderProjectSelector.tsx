@@ -5,16 +5,18 @@ import { Scroll } from '@sbercloud/uikit-product-scroll';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers';
-import { HeaderProjectSelectorAction } from './components/HeaderProjectSelectorAction';
-import { HeaderProjectSelectorContent } from './components/HeaderProjectSelectorContent';
-import { HeaderProjectSelectorFloating } from './components/HeaderProjectSelectorFloating';
-import { HeaderProjectSelectorGroupListItem } from './components/HeaderProjectSelectorGroupListItem';
-import { HeaderProjectSelectorOptionListItem } from './components/HeaderProjectSelectorOptionListItem';
-import { HeaderProjectSelectorProjectLabel } from './components/HeaderProjectSelectorProjectLabel';
-import { HeaderProjectSelectorReference } from './components/HeaderProjectSelectorReference';
-import { HeaderProjectSelectorWorkspaceLabel } from './components/HeaderProjectSelectorWorkspaceLabel';
+import {
+  Action,
+  Content,
+  Floating,
+  GroupListItem,
+  OptionListItem,
+  ProjectLabel,
+  Reference,
+  WorkspaceLabel,
+} from './components';
 import { DEFAULT_EDITABLE } from './constants';
-import { SelectionContext } from './contexts/SelectionContext';
+import { SelectionContext } from './contexts';
 import {
   useContent,
   useIndexByOption,
@@ -58,7 +60,7 @@ export function HeaderProjectSelector({
 
   const renderCreateProjectButton = () =>
     onCreate && (
-      <HeaderProjectSelectorAction
+      <Action
         icon={<CircleAddInterfaceSVG />}
         text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateProject)}
         createDisabledReason={createDisabledReason}
@@ -68,7 +70,7 @@ export function HeaderProjectSelector({
 
   const renderCreateWorkspaceButton = () =>
     onCreate && (
-      <HeaderProjectSelectorAction
+      <Action
         icon={<CircleAddInterfaceSVG />}
         createDisabledReason={createDisabledReason}
         text={textProvider(languageCode, Texts.HeaderProjectSelectorCreateWorkspace)}
@@ -93,41 +95,25 @@ export function HeaderProjectSelector({
 
     renderGroupListItem({ label, children, index }) {
       return (
-        <HeaderProjectSelectorGroupListItem key={index} label={label}>
+        <GroupListItem key={index} label={label}>
           <S.List>{children}</S.List>
-        </HeaderProjectSelectorGroupListItem>
+        </GroupListItem>
       );
     },
 
     renderProjectOptionListItem({ label, value, index, editable = DEFAULT_EDITABLE }) {
       return (
-        <HeaderProjectSelectorOptionListItem
-          key={value}
-          value={value}
-          index={index}
-          onEdit={editable ? onEdit : undefined}
-        >
-          <HeaderProjectSelectorProjectLabel
-            label={label}
-            data-test-id='header-project-selector__project-option-list-item-label'
-          />
-        </HeaderProjectSelectorOptionListItem>
+        <OptionListItem key={value} value={value} index={index} onEdit={editable ? onEdit : undefined}>
+          <ProjectLabel label={label} data-test-id='header-project-selector__project-option-list-item-label' />
+        </OptionListItem>
       );
     },
 
     renderWorkspaceOptionListItem({ label, value, index, editable = DEFAULT_EDITABLE }) {
       return (
-        <HeaderProjectSelectorOptionListItem
-          key={value}
-          value={value}
-          index={index}
-          onEdit={editable ? onEdit : undefined}
-        >
-          <HeaderProjectSelectorWorkspaceLabel
-            label={label}
-            data-test-id='header-project-selector__workspace-option-list-item-label'
-          />
-        </HeaderProjectSelectorOptionListItem>
+        <OptionListItem key={value} value={value} index={index} onEdit={editable ? onEdit : undefined}>
+          <WorkspaceLabel label={label} data-test-id='header-project-selector__workspace-option-list-item-label' />
+        </OptionListItem>
       );
     },
 
@@ -147,20 +133,20 @@ export function HeaderProjectSelector({
   return (
     <S.Wrapper data-mobile={isMobile || undefined} {...extractSupportProps(rest)}>
       <SelectionContext.Provider value={{ selectedValue: value, selectedIndex, setSelectedValue: onChange }}>
-        <HeaderProjectSelectorFloating
+        <Floating
           isMobile={isMobile}
           content={
-            <HeaderProjectSelectorContent search={search} onSearchChange={setSearch}>
+            <Content search={search} onSearchChange={setSearch}>
               {content}
-            </HeaderProjectSelectorContent>
+            </Content>
           }
         >
-          <HeaderProjectSelectorReference
+          <Reference
             selectedProject={selectedProject?.label}
             selectedWorkspace={selectedWorkspace?.label}
             isMobile={isMobile}
           />
-        </HeaderProjectSelectorFloating>
+        </Floating>
       </SelectionContext.Provider>
     </S.Wrapper>
   );

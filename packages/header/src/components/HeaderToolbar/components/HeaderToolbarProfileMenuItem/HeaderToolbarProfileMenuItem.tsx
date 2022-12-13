@@ -4,7 +4,7 @@ import { DropdownItem } from '@sbercloud/uikit-product-dropdown';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { DropdownMenuContext } from '../../../../contexts';
-import { Link } from './styled';
+import * as S from './styled';
 
 export type HeaderToolbarProfileMenuItemProps = WithSupportProps<{
   icon: ReactElement;
@@ -30,11 +30,11 @@ export function HeaderToolbarProfileMenuItem({
   }
 
   return (
-    <Link href={href} target={target} onClick={handleClick} {...extractSupportProps(rest)}>
+    <S.Link href={href} target={target} onClick={handleClick} {...extractSupportProps(rest)}>
       <DropdownItem>
         {icon}
         {title}
       </DropdownItem>
-    </Link>
+    </S.Link>
   );
 }

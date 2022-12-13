@@ -2,7 +2,7 @@ import { MouseEvent, ReactNode } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { Wrapper } from './styled';
+import * as S from './styled';
 
 export type HeaderLogoProps = WithSupportProps<{
   children: ReactNode;
@@ -12,8 +12,8 @@ export type HeaderLogoProps = WithSupportProps<{
 
 export function HeaderLogo({ children, onClick, href, ...rest }: HeaderLogoProps) {
   return (
-    <Wrapper onClick={onClick} href={href} target={'_self'} {...extractSupportProps(rest)}>
+    <S.Wrapper onClick={onClick} href={href} target='_self' {...extractSupportProps(rest)}>
       {children}
-    </Wrapper>
+    </S.Wrapper>
   );
 }

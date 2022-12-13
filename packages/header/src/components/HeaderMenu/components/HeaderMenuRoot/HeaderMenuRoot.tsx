@@ -6,7 +6,7 @@ import { ViewTileInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { DropdownMenuContext } from '../../../../contexts';
-import { Item, Title, Wrapper } from './styled';
+import * as S from './styled';
 
 export type HeaderMenuRootProps = WithSupportProps<{
   title: string;
@@ -15,21 +15,21 @@ export type HeaderMenuRootProps = WithSupportProps<{
 
 export function HeaderMenuRoot({ title, children, ...rest }: HeaderMenuRootProps) {
   return (
-    <Wrapper {...extractSupportProps(rest)}>
+    <S.Wrapper {...extractSupportProps(rest)}>
       <DropdownMenu
         actions={({ hide }) => (
           <DropdownMenuContext.Provider value={{ hide }}>
-            <Item>
-              <Title>{title}</Title>
-            </Item>
+            <S.Item>
+              <S.Title>{title}</S.Title>
+            </S.Item>
             {Children.map(children, child => (
-              <Item>{child}</Item>
+              <S.Item>{child}</S.Item>
             ))}
           </DropdownMenuContext.Provider>
         )}
       >
         <ButtonIcon variant={ButtonIcon.variants.Color} icon={<ViewTileInterfaceSVG />} />
       </DropdownMenu>
-    </Wrapper>
+    </S.Wrapper>
   );
 }

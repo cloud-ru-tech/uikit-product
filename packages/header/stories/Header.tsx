@@ -10,10 +10,10 @@ import {
   QuestionInterfaceSVG,
   SupportInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
-import { PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
+import { PredefinedCloudLogo, PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
 import { SidebarItemId, SidebarMobile, SidebarProps } from '@sbercloud/uikit-product-sidebar';
-import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
-import { useMatchMedia } from '@sbercloud/uikit-product-utils';
+import { GLOBAL_CSS_COLOR, Themes } from '@sbercloud/uikit-product-theme';
+import { useMatchMedia, useTheme } from '@sbercloud/uikit-product-utils';
 
 import { footerItems, menuList } from '../../sidebar/stories/mocks/menuList';
 import componentChangelog from '../CHANGELOG.md';
@@ -50,11 +50,20 @@ const Wrapper = styled.div`
 const Tooltip = ({ isMobile }: { isMobile?: boolean }) => (
   <HeaderBalanceTooltip isMobile={isMobile} balance={144_401_810} limit={155_500_000} onRechargeClick={() => {}} />
 );
-const MLSpaceLogo = () => (
-  <HeaderLogo href={''}>
-    <PredefinedMLSpaceLogo height={16} />
-  </HeaderLogo>
-);
+
+const Logo = () => {
+  const { theme } = useTheme();
+
+  return (
+    <HeaderLogo href={''}>
+      {theme === Themes.Green || theme === Themes.GreenDark ? (
+        <PredefinedCloudLogo height={16} />
+      ) : (
+        <PredefinedMLSpaceLogo height={16} />
+      )}
+    </HeaderLogo>
+  );
+};
 
 const ProjectSelector = ({ isMobile }: { isMobile?: boolean }) => {
   const [workspace, setWorkspace] = useState('workspace-0');
@@ -103,7 +112,7 @@ const Template: Story<
     return (
       <Wrapper>
         <MobileHeader onMenuClick={target => mobileMenuRef.current?.toggleOpen(target)}>
-          <MLSpaceLogo />
+          <Logo />
 
           <Tooltip isMobile />
         </MobileHeader>
@@ -139,7 +148,7 @@ const Template: Story<
           <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Advanced' href='' />
         </HeaderMenu.Root>
 
-        <MLSpaceLogo />
+        <Logo />
 
         <ProjectSelector />
 
