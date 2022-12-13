@@ -4,7 +4,7 @@ const UIKIT_IS_SIDEBAR_COLLAPSED = 'UIKIT_IS_SIDEBAR_COLLAPSED';
 
 const getIsCollapsed = () => {
   const isCollapsed = window.localStorage.getItem(UIKIT_IS_SIDEBAR_COLLAPSED);
-  return isCollapsed ? isCollapsed === 'true' : false;
+  return isCollapsed === 'true';
 };
 
 type UseIsCollapsedStateReturnType = [boolean, (value: boolean) => void];

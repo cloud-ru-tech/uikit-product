@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
 
-import { SidebarItemProps } from '../components/Sidebar/types';
 import { useSidebarContext } from '../contexts';
 import { findActive, isItemAccordion } from '../helpers';
+import { SidebarItem } from '../types';
 
-export const useNestedActive = (item: SidebarItemProps, isMobile?: boolean): boolean => {
+export const useNestedActive = (item: SidebarItem, isMobile?: boolean): boolean => {
   const { active } = useSidebarContext();
   const hasInnerChildren = isItemAccordion(item, isMobile);
 

@@ -3,11 +3,11 @@ import { MouseEvent, useMemo } from 'react';
 import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
 import { useSidebarContext } from '../../../../contexts';
-import { Mode, SidebarItemProps } from '../../../Sidebar/types';
-import { SidebarItemPostfix } from '../../../SidebarItemPostfix';
+import { Mode, SidebarItem } from '../../../../types';
+import { ItemPostfix } from '../../../ItemPostfix';
 import * as S from './styled';
 
-export type HoverMenuItemProps = SidebarItemProps & {
+export type HoverMenuItemProps = SidebarItem & {
   level: number;
   onClick(e: MouseEvent): void;
   closeMenu(): void;
@@ -67,7 +67,7 @@ export function HoverMenuItem({
           placement={TruncateString.placements.Right}
           maxLines={1}
         />
-        <SidebarItemPostfix count={count} locked={locked} showNewLabel={showNewLabel} disabled={isItemDisabled} />
+        <ItemPostfix count={count} locked={locked} showNewLabel={showNewLabel} disabled={isItemDisabled} />
       </S.MenuItem>
 
       {showChildren &&

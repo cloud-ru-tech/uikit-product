@@ -39,7 +39,7 @@ import {
   ViewTileInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
 
-import { Sidebar, SidebarItemProps, SidebarItemsGroup } from '../../src';
+import { Sidebar, SidebarItem, SidebarItemsGroup } from '../../src';
 
 export const menuList: SidebarItemsGroup[] = [
   {
@@ -384,7 +384,7 @@ export const menuList: SidebarItemsGroup[] = [
   },
 ];
 
-export const footerItems: SidebarItemProps[] = [
+export const footerItems: SidebarItem[] = [
   {
     id: 'administration',
     label: 'Администрирование',

@@ -1,23 +1,24 @@
 import { MouseEvent } from 'react';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { SIDEBAR_CONTEXT_STUB, SidebarContext } from '../../contexts/SidebarContext';
 import { shouldBeDefaultClick } from '../../helpers';
-import { SidebarItemId, SidebarItemProps, SidebarItemsGroup, SidebarOnActiveChange } from '../Sidebar/types';
-import { SidebarAccordion } from '../SidebarAccordion';
-import { SidebarItem } from '../SidebarItem';
+import { SidebarItem, SidebarItemId, SidebarItemsGroup, SidebarOnActiveChange } from '../../types';
+import { Accordion } from '../Accordion';
+import { ListItem } from '../ListItem';
 import * as S from './styled';
 
-export type SidebarMobileProps = {
+export type SidebarMobileProps = WithSupportProps<{
   list: SidebarItemsGroup[];
-  footerItems?: SidebarItemProps[];
+  footerItems?: SidebarItem[];
   active?: SidebarItemId;
   onActiveChange: SidebarOnActiveChange;
-};
+}>;
 
-export function SidebarMobile({ list, footerItems, active, onActiveChange }: SidebarMobileProps) {
-  function handleItemClick(item: SidebarItemProps) {
+export function SidebarMobile({ list, footerItems, active, onActiveChange, ...rest }: SidebarMobileProps) {
+  function handleItemClick(item: SidebarItem) {
     return (event: MouseEvent) => {
       if (shouldBeDefaultClick(event)) {
         return;
@@ -35,25 +36,27 @@ export function SidebarMobile({ list, footerItems, active, onActiveChange }: Sid
     };
   }
 
-  const renderItems = (item: SidebarItemProps) => {
+  const renderItems = (item: SidebarItem) => {
     if (item.nestedList?.length) {
-      return <SidebarAccordion key={item.id} item={item} accordionLevel={0} isMobile />;
+      return <Accordion key={item.id} item={item} accordionLevel={0} isMobile />;
     }
 
-    return <SidebarItem key={item.id} {...item} onClick={handleItemClick(item)} isMobile />;
+    return <ListItem key={item.id} {...item} onClick={handleItemClick(item)} isMobile />;
   };
 
   return (
     <SidebarContext.Provider value={{ ...SIDEBAR_CONTEXT_STUB, handleItemClick, active }}>
-      <S.SidebarMobile>{list.map(group => group.items.map(renderItems))}</S.SidebarMobile>
+      <S.Wrapper {...extractSupportProps(rest)}>
+        <S.SidebarMobile>{list.map(group => group.items.map(renderItems))}</S.SidebarMobile>
 
-      {Boolean(footerItems?.length) && (
-        <>
-          <Divider />
+        {Boolean(footerItems?.length) && (
+          <>
+            <Divider />
 
-          <S.SidebarMobile>{footerItems?.map(renderItems)}</S.SidebarMobile>
-        </>
-      )}
+            <S.SidebarMobile>{footerItems?.map(renderItems)}</S.SidebarMobile>
+          </>
+        )}
+      </S.Wrapper>
     </SidebarContext.Provider>
   );
 }

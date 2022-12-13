@@ -1,32 +1,17 @@
-import { Mode, SidebarItemId, SidebarItemProps } from '../components/Sidebar/types';
+import { SidebarItem, SidebarItemId } from '../types';
 
-export function findActive(
-  element: SidebarItemProps,
-  active?: SidebarItemId,
-  maxNestedLevel?: number,
-): SidebarItemProps | null {
+export function findActive(element: SidebarItem, active?: SidebarItemId): SidebarItem | null {
   const stack = [];
-  let node: SidebarItemProps | undefined;
-  let ii;
-  let level = 0;
-
+  let node: SidebarItem | undefined;
   stack.push(element);
 
-  while (stack.length > 0) {
-    node = stack.pop() as SidebarItemProps;
-
+  while ((node = stack.pop())) {
     if (node.id === active) {
       return node;
-    } else if (node.nestedList?.length) {
-      level += 1;
+    }
 
-      for (ii = 0; ii < node.nestedList.length; ii += 1) {
-        if (maxNestedLevel && node.mode !== Mode.Accordion && level > maxNestedLevel) {
-          continue;
-        }
-
-        stack.push(...node.nestedList[ii].items);
-      }
+    if (node.nestedList?.length) {
+      stack.push(...node.nestedList.flatMap(l => l.items));
     }
   }
 

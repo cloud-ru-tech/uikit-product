@@ -1,17 +1,29 @@
-import { Mode, SidebarItemProps, SidebarItemsGroup, SidebarLevel } from '../components/Sidebar/types';
+import { Mode, SidebarItem, SidebarItemsGroup, SidebarLevel } from '../types';
 
-function getLevelsTreeInner(
-  list: SidebarItemsGroup[],
+function getLevelsTreeInner({
+  list,
+  title,
+  parent,
   depth = 0,
-  title?: SidebarItemProps,
-  parent?: SidebarLevel,
-): SidebarLevel {
+}: {
+  list: SidebarItemsGroup[];
+  title?: SidebarItem;
+  parent?: SidebarLevel;
+  depth?: number;
+}): SidebarLevel {
   const node: SidebarLevel = { list, title, parent, children: [], depth };
 
   for (const group of list) {
     for (const item of group.items) {
       if (Array.isArray(item.nestedList) && item.mode !== Mode.Accordion) {
-        node.children.push(getLevelsTreeInner(item.nestedList, depth + 1, item, node));
+        node.children.push(
+          getLevelsTreeInner({
+            list: item.nestedList,
+            title: item,
+            parent: node,
+            depth: depth + 1,
+          }),
+        );
       }
     }
   }
@@ -20,5 +32,5 @@ function getLevelsTreeInner(
 }
 
 export function getLevelsTree(list: SidebarItemsGroup[]): SidebarLevel {
-  return getLevelsTreeInner(list);
+  return getLevelsTreeInner({ list });
 }

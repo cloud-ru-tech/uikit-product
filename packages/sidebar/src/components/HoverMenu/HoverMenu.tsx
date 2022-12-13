@@ -12,13 +12,13 @@ import {
 import { ReactNode, useRef, useState } from 'react';
 
 import { useSidebarContext } from '../../contexts';
-import { Mode, SidebarItemProps } from '../Sidebar/types';
+import { Mode, SidebarItem } from '../../types';
 import { HoverMenuItem } from './components';
 import * as S from './styled';
 
 export type HoverMenuProps = {
   children: ReactNode;
-  item: SidebarItemProps;
+  item: SidebarItem;
 };
 
 export function HoverMenu({ children, item }: HoverMenuProps) {

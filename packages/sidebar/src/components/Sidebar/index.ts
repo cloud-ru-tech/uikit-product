@@ -1,3 +1,3 @@
 export * from './Sidebar';
 export * from '../SidebarMobile';
-export type { SidebarItemId, SidebarItemProps, SidebarItemsGroup } from './types';
+export type { SidebarItemId, SidebarItem, SidebarItemsGroup } from '../../types';

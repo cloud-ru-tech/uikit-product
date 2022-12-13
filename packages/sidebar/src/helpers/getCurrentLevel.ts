@@ -1,4 +1,4 @@
-import { Mode, SidebarItemId, SidebarItemsGroup, SidebarLevel } from '../components/Sidebar/types';
+import { Mode, SidebarItemId, SidebarItemsGroup, SidebarLevel } from '../types';
 
 function hasActiveItem(active: SidebarItemId, list: SidebarItemsGroup[]): boolean {
   for (const group of list) {
@@ -28,7 +28,9 @@ function getCurrentLevelInner(root: SidebarLevel, active: SidebarItemId): Sideba
   for (const child of root.children) {
     const level = getCurrentLevelInner(child, active);
 
-    if (level) return level;
+    if (level) {
+      return level;
+    }
   }
 
   return undefined;

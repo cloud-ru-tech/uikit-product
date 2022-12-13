@@ -3,14 +3,14 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import { SidebarContextProvider } from '../../contexts';
 import { getLevelsTree } from '../../helpers';
 import { useIsCollapsedState } from '../../hooks';
-import { SidebarFooter } from '../SidebarFooter';
-import { SidebarMain } from '../SidebarMain';
+import { Mode, SidebarItem, SidebarItemId, SidebarItemsGroup, SidebarOnActiveChange, Status } from '../../types';
+import { Content } from '../Content';
+import { Footer } from '../Footer';
 import * as S from './styled';
-import { Mode, SidebarItemId, SidebarItemProps, SidebarItemsGroup, SidebarOnActiveChange, Status } from './types';
 
 export type SidebarProps = WithSupportProps<{
   list: SidebarItemsGroup[];
-  footerItems?: SidebarItemProps[];
+  footerItems?: SidebarItem[];
   active?: SidebarItemId;
   onActiveChange: SidebarOnActiveChange;
   className?: string;
@@ -29,10 +29,10 @@ export function Sidebar({ list, active, footerItems, onActiveChange, className, 
         setIsCollapsed={setIsCollapsed}
         levels={rootLevel}
       >
-        <S.MainContentWrapper>
-          <SidebarMain level={rootLevel} />
-        </S.MainContentWrapper>
-        <SidebarFooter items={footerItems} />
+        <S.ContentWrapper>
+          <Content level={rootLevel} />
+        </S.ContentWrapper>
+        <Footer items={footerItems} />
       </SidebarContextProvider>
     </S.Sidebar>
   );

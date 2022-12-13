@@ -1,6 +1,6 @@
 import { createContext, MouseEvent, useContext } from 'react';
 
-import { SidebarItemId, SidebarItemProps, SidebarLevel } from '../components/Sidebar/types';
+import { SidebarItem, SidebarItemId, SidebarLevel } from '../types';
 
 type SidebarContextProps = {
   currentLevel?: SidebarLevel;
@@ -16,7 +16,7 @@ type SidebarContextProps = {
   uncollapse(): void;
   closeSearch(): void;
   handleBackClick(): void;
-  handleItemClick(item: SidebarItemProps): (e: MouseEvent) => void;
+  handleItemClick(item: SidebarItem): (e: MouseEvent) => void;
 };
 
 export const SIDEBAR_CONTEXT_STUB: SidebarContextProps = {

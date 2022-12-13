@@ -1,13 +1,7 @@
 import { MouseEvent, ReactNode, useRef, useState } from 'react';
 
-import {
-  Mode,
-  SidebarItemId,
-  SidebarItemProps,
-  SidebarLevel,
-  SidebarOnActiveChange,
-} from '../components/Sidebar/types';
 import { getCurrentLevel, isItemAccordion, shouldBeDefaultClick } from '../helpers';
+import { Mode, SidebarItem, SidebarItemId, SidebarLevel, SidebarOnActiveChange } from '../types';
 import { SidebarContext } from './SidebarContext';
 
 type SidebarContextProviderProps = {
@@ -58,7 +52,7 @@ export function SidebarContextProvider({
     previousLevelRef.current = currentLevel;
   }
 
-  function handleItemClick(item: SidebarItemProps) {
+  function handleItemClick(item: SidebarItem) {
     return (event: MouseEvent) => {
       if (shouldBeDefaultClick(event)) {
         return;
@@ -74,10 +68,11 @@ export function SidebarContextProvider({
         closeSearch();
       }
 
-      const id = (isItemAccordion(item) ? active : item.id) as string;
-
-      onActiveChange({ id, href: item.href });
       previousLevelRef.current = currentLevel;
+      onActiveChange({
+        id: isItemAccordion(item) ? active : item.id,
+        href: item.href,
+      });
     };
   }
 

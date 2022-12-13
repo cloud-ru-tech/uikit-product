@@ -85,7 +85,7 @@ test('collapse/uncollapse sidebar', async t => {
   await t.click(getCollapseButton());
 
   await t.expect(getSidebar().hasAttribute('data-collapsed')).ok();
-  await t.expect(getSidebar().getStyleProperty('max-width')).eql(SIDEBAR_COLLAPSED_WIDTH);
+  await t.expect(getSidebar().getStyleProperty('width')).eql(SIDEBAR_COLLAPSED_WIDTH);
   await t.expect(getItems().hasAttribute('data-collapsed')).ok();
   await t.expect(getItems().count).eql(firstLevelTexts.length);
   await t.expect(getItemText().exists).notOk();
@@ -93,7 +93,7 @@ test('collapse/uncollapse sidebar', async t => {
   await t.click(getUncollapseButton());
 
   await t.expect(getSidebar().hasAttribute('data-collapsed')).notOk();
-  await t.expect(getSidebar().getStyleProperty('max-width')).eql(SIDEBAR_FULL_WIDTH);
+  await t.expect(getSidebar().getStyleProperty('width')).eql(SIDEBAR_FULL_WIDTH);
   await t.expect(getItems().hasAttribute('data-collapsed')).notOk();
   await expectToHaveItemTexts(t, firstLevelTexts);
 });

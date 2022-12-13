@@ -4,5 +4,5 @@ export const TRANSITION_TIMING = {
   levelSlideOut: 300,
 };
 
-export const SIDEBAR_FULL_WIDTH = '238px';
+export const SIDEBAR_FULL_WIDTH = '255px';
 export const SIDEBAR_COLLAPSED_WIDTH = '53px';

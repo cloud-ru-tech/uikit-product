@@ -1,29 +1,20 @@
-import { Mode, SidebarItemProps, SidebarItemsGroup } from '../components/Sidebar/types';
+import { SidebarItem, SidebarItemsGroup } from '../types';
+import { isItemAccordion } from './isItemAccordion';
 
 export function filterBySearch(list: SidebarItemsGroup[], search: string) {
   const flatList = list.flatMap(l => l.items);
-  const result: SidebarItemProps[] = [];
-
   const stack = [...flatList];
-  let currentItem: SidebarItemProps;
-
   const searchString = search.toLowerCase();
+  const result: SidebarItem[] = [];
+  let currentItem: SidebarItem | undefined;
 
-  while (stack.length > 0) {
-    currentItem = stack.shift() as SidebarItemProps;
-
+  while ((currentItem = stack.shift())) {
     if (currentItem.label.toLowerCase().includes(searchString)) {
       result.push(currentItem);
     }
 
-    if (currentItem.nestedList?.length) {
-      for (let ii = 0; ii < currentItem.nestedList.length; ii += 1) {
-        if (currentItem.mode !== Mode.Accordion) {
-          continue;
-        }
-
-        stack.push(...currentItem.nestedList[ii].items);
-      }
+    if (isItemAccordion(currentItem)) {
+      stack.push(...currentItem.nestedList.flatMap(l => l.items));
     }
   }
 
