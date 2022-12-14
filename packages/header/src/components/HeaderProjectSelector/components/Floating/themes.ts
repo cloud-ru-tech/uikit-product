@@ -19,7 +19,7 @@ export const PURPLE_THEME = css`
 export const PURPLE_DARK_THEME = css`
   :global() {
     body[data-theme=${Themes.PurpleDark}] {
-      ${COLORS.background.default}: #323438;
+      ${COLORS.background.default}: var(${EXPORT_VARS.GREY[750]});
     }
   }
 `;
@@ -35,7 +35,7 @@ export const GREEN_THEME = css`
 export const GREEN_DARK_THEME = css`
   :global() {
     body[data-theme=${Themes.GreenDark}] {
-      ${COLORS.background.default}: #323438;
+      ${COLORS.background.default}: var(${EXPORT_VARS.GREY[750]});
     }
   }
 `;
