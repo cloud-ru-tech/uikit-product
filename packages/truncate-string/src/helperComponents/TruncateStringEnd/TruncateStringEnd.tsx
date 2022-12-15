@@ -9,19 +9,21 @@ import { isEllipsisActive } from '../../helpers';
 import * as S from './styled';
 
 export type TruncateStringEndProps = WithSupportProps<{
-  tag?: Tag;
   className?: string;
-  maxLines?: number;
-  text: string;
-  placement?: TooltipProps['placement'];
   hideTooltip?: boolean;
+  maxLines?: number;
+  placement?: TooltipProps['placement'];
+  tag: Tag;
+  text: string;
+  textClassName: string;
 }>;
 
 export function TruncateStringEnd({
   text,
   className,
   hideTooltip,
-  tag = Tag.Span,
+  textClassName,
+  tag,
   maxLines = 1,
   placement = Tooltip.placements.Auto,
   ...rest
@@ -41,10 +43,10 @@ export function TruncateStringEnd({
     return () => {
       observer.disconnect();
     };
-  }, [showTooltip, tag, hideTooltip]);
+  }, [showTooltip, hideTooltip, tag]);
 
   const textElement = (
-    <S.Text as={tag} ref={textElementRef} maxLines={maxLines} {...extractSupportProps(rest)}>
+    <S.Text as={tag} ref={textElementRef} maxLines={maxLines} className={textClassName} {...extractSupportProps(rest)}>
       {text}
     </S.Text>
   );
@@ -59,13 +61,5 @@ export function TruncateStringEnd({
     );
   }
 
-  if (hideTooltip) {
-    return <S.Wrapper className={className}>{textElement}</S.Wrapper>;
-  }
-
-  return (
-    <S.Text as={tag} ref={textElementRef} maxLines={maxLines} className={className} {...extractSupportProps(rest)}>
-      {text}
-    </S.Text>
-  );
+  return <S.Wrapper className={className}>{textElement}</S.Wrapper>;
 }

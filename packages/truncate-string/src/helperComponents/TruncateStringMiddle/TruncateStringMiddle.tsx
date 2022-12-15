@@ -9,18 +9,20 @@ import { isEllipsisActive, truncateStringMiddle } from '../../helpers';
 import * as S from './styled';
 
 export type TruncateStringMiddleProps = WithSupportProps<{
-  text: string;
   className?: string;
   hideTooltip?: boolean;
-  tag?: Tag;
   placement?: TooltipProps['placement'];
+  tag: Tag;
+  text: string;
+  textClassName: string;
 }>;
 
 export function TruncateStringMiddle({
   text,
   className,
   hideTooltip,
-  tag = Tag.Span,
+  tag,
+  textClassName,
   placement = Tooltip.placements.Auto,
   ...rest
 }: TruncateStringMiddleProps) {
@@ -47,8 +49,10 @@ export function TruncateStringMiddle({
 
   const textElement = (
     <S.Container {...extractSupportProps(rest)}>
-      <S.Display as={tag}>{truncatedString}</S.Display>
-      <S.FullText as={tag} ref={textElementRef}>
+      <S.Display as={tag} className={textClassName}>
+        {truncatedString}
+      </S.Display>
+      <S.FullText as={tag} ref={textElementRef} className={textClassName}>
         {text}
       </S.FullText>
     </S.Container>
@@ -62,18 +66,5 @@ export function TruncateStringMiddle({
     );
   }
 
-  if (hideTooltip) {
-    return <S.Wrapper className={className}>{textElement}</S.Wrapper>;
-  }
-
-  return (
-    <S.Container {...extractSupportProps(rest)}>
-      <S.Display as={tag} className={className}>
-        {truncatedString}
-      </S.Display>
-      <S.FullText as={tag} ref={textElementRef} className={className}>
-        {text}
-      </S.FullText>
-    </S.Container>
-  );
+  return <S.Wrapper className={className}>{textElement}</S.Wrapper>;
 }

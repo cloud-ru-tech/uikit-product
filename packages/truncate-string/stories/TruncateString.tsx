@@ -29,7 +29,7 @@ export const truncateString = Template.bind({});
 truncateString.args = {
   maxLines: 2,
   text: 'какой-то длинный текст который обрезается на самом интересном',
-  tag: TruncateString.tags.Span,
+  textEntity: TruncateString.textEntities.Text2,
   placement: TruncateString.placements.Auto,
   hideTooltip: false,
   variant: TruncateString.variants.End,

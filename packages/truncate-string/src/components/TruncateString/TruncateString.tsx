@@ -1,7 +1,7 @@
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { extractDataProps } from '@sbercloud/uikit-product-utils';
 
-import { Tag } from '../../constants';
+import { TextEntity } from '../../constants';
 import {
   TruncateStringEnd,
   TruncateStringEndProps,
@@ -9,21 +9,32 @@ import {
   TruncateStringMiddleProps,
 } from '../../helperComponents';
 import { Variant } from './constants';
+import * as Typography from './styled';
+import { getTag } from './utils';
 
-export type TruncateStringProps =
-  | ({ variant?: Variant.End } & TruncateStringEndProps)
-  | ({ variant: Variant.Middle } & TruncateStringMiddleProps);
+export type TruncateStringProps = { textEntity?: TextEntity } & (
+  | ({ variant?: Variant.End } & Omit<TruncateStringEndProps, 'tag' | 'textClassName'>)
+  | ({ variant: Variant.Middle } & Omit<TruncateStringMiddleProps, 'tag' | 'textClassName'>)
+);
 
-export function TruncateString({ variant = Variant.End, ...props }: TruncateStringProps) {
+export function TruncateString({
+  variant = Variant.End,
+  textEntity = TextEntity.Text2,
+  ...props
+}: TruncateStringProps) {
+  const tag = getTag(textEntity);
+  const textClassName = Typography[textEntity];
+
   switch (variant) {
     case Variant.Middle: {
-      const { text, className, placement, tag, hideTooltip, ...rest } = props;
+      const { text, className, placement, hideTooltip, ...rest } = props;
       return (
         <TruncateStringMiddle
           text={text}
           className={className}
           placement={placement}
           tag={tag}
+          textClassName={textClassName}
           hideTooltip={hideTooltip}
           {...extractDataProps(rest)}
         />
@@ -38,7 +49,6 @@ export function TruncateString({ variant = Variant.End, ...props }: TruncateStri
         placement,
         maxLines = 1,
         hideTooltip,
-        tag,
         ...rest
       } = props as unknown as TruncateStringEndProps;
       return (
@@ -47,6 +57,7 @@ export function TruncateString({ variant = Variant.End, ...props }: TruncateStri
           className={className}
           placement={placement}
           tag={tag}
+          textClassName={textClassName}
           maxLines={maxLines}
           hideTooltip={hideTooltip}
           {...extractDataProps(rest)}
@@ -56,6 +67,6 @@ export function TruncateString({ variant = Variant.End, ...props }: TruncateStri
   }
 }
 
-TruncateString.tags = Tag;
+TruncateString.textEntities = TextEntity;
 TruncateString.placements = Tooltip.placements;
 TruncateString.variants = Variant;
