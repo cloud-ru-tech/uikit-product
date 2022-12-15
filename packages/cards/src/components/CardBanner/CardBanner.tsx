@@ -1,7 +1,7 @@
 import { Button, ButtonProps } from '@sbercloud/uikit-product-button';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import * as S from './styled';
 
 export type CardBannerProps = WithSupportProps<{
@@ -16,13 +16,13 @@ export function CardBanner({ title, description, src, buttons, className, ...res
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)}>
       <S.LeftSide>
-        <S.Title data-test-id='card-banner__title' tag={TruncatedTextWithTooltip.containerTags.H3}>
-          {title}
-        </S.Title>
-
-        <S.Description data-test-id='card-banner__description' tag={TruncatedTextWithTooltip.containerTags.Span}>
-          {description}
-        </S.Description>
+        <S.Title
+          data-test-id='card-banner__title'
+          maxLines={2}
+          text={title}
+          textEntity={TruncateString.textEntities.H3Semibold}
+        />
+        <S.Description data-test-id='card-banner__description' maxLines={2} text={description} />
 
         <S.ButtonsWrapper data-test-id='card-banner__buttons'>
           {buttons.map((button, index) => (

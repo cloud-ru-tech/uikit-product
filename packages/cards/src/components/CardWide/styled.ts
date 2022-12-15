@@ -1,8 +1,7 @@
 import { styled } from '@linaria/react';
 
-import { H3_STYLES, TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './theme';
 
 PURPLE_THEME;
@@ -45,10 +44,7 @@ export const TitleWrapper = styled.div`
   align-items: center;
 `;
 
-export const Title = styled(TruncatedTextWithTooltip)`
-  ${H3_STYLES};
-  -webkit-line-clamp: 2;
-`;
+export const Title = styled(TruncateString)``;
 
 export const TitleImageWrapper = styled.div`
   width: 60px;
@@ -92,10 +88,8 @@ export const Image = styled.div<{ backgroundImage?: string }>`
   background-image: ${({ backgroundImage }) => (backgroundImage ? `url(${backgroundImage})` : 'none')};
 `;
 
-export const Description = styled(TruncatedTextWithTooltip)`
-  ${TEXT_1_STYLES};
+export const Description = styled(TruncateString)`
   color: var(${COLORS.description});
-  -webkit-line-clamp: 4;
 `;
 
 export const ButtonsWrapper = styled.div`

@@ -3,7 +3,6 @@ import { LinariaClassName } from '@linaria/core';
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import * as S from './styled';
 
 enum Color {
@@ -57,9 +56,7 @@ export function CardTopic({ title, icon, color, className, onClick, ...rest }: C
       </S.LeftSide>
 
       <S.RightSide>
-        <S.Title data-test-id='card-topic__title' tag={TruncatedTextWithTooltip.containerTags.H4}>
-          {title}
-        </S.Title>
+        <S.Title data-test-id='card-topic__title' text={title} maxLines={2} />
       </S.RightSide>
     </S.Wrapper>
   );

@@ -1,10 +1,8 @@
 import { styled } from '@linaria/react';
 
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
-import { H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
-import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import { CardCategory } from './CardCategory';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './theme';
 
@@ -24,7 +22,7 @@ export const Wrapper = styled.div`
   overflow: hidden;
   padding: 24px;
   cursor: pointer;
-  transition: ${ANIMATIONS.TRANSITION} ease-out;
+  transition: 0.2s ease-out;
   transition-property: background-color, box-shadow, border;
 
   &:hover {
@@ -67,14 +65,8 @@ export const Icon = styled(PredefinedDecorIconPrivate)`
   }
 `;
 
-export const Title = styled(TruncatedTextWithTooltip)`
-  ${H3_STYLES};
-  -webkit-line-clamp: 2;
-`;
+export const Title = styled(TruncateString)``;
 
-export const Description = styled(TruncatedTextWithTooltip)`
-  ${TEXT_2_STYLES};
-  -webkit-line-clamp: 2;
-  flex-grow: 1;
+export const Description = styled(TruncateString)`
   color: var(${COLORS.description});
 `;

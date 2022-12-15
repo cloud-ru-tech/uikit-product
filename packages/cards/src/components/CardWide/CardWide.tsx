@@ -1,7 +1,7 @@
 import { Button, ButtonProps } from '@sbercloud/uikit-product-button';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import * as S from './styled';
 
 export type CardWideProps = WithSupportProps<{
@@ -24,14 +24,20 @@ export function CardWide({ title, titleImageSrc, description, className, buttons
             </S.TitleImageWrapper>
           )}
 
-          <S.Title data-test-id='card-wide__title' tag={TruncatedTextWithTooltip.containerTags.H3}>
-            {title}
-          </S.Title>
+          <S.Title
+            data-test-id='card-wide__title'
+            textEntity={TruncateString.textEntities.H3Semibold}
+            text={title}
+            maxLines={2}
+          />
         </S.TitleWrapper>
 
-        <S.Description data-test-id='card-wide__description' tag={TruncatedTextWithTooltip.containerTags.Span}>
-          {description}
-        </S.Description>
+        <S.Description
+          data-test-id='card-wide__description'
+          textEntity={TruncateString.textEntities.Text1}
+          text={description}
+          maxLines={4}
+        />
 
         <S.ButtonsWrapper data-test-id='card-wide__buttons'>
           {buttons.map((button, index) => (

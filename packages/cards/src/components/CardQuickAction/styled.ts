@@ -2,10 +2,8 @@ import { styled } from '@linaria/react';
 
 import { PlusInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
-import { H4_SEMIBOLD_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
-import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import { CardQuickAction } from './CardQuickAction';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './theme';
 
@@ -49,17 +47,14 @@ export const PlusIcon = styled(PlusInterfaceSVG)`
   fill: var(${COLORS.plus.primary.default});
 `;
 
-export const Title = styled(TruncatedTextWithTooltip)`
-  ${H4_SEMIBOLD_STYLES};
-  -webkit-line-clamp: 2;
+export const Title = styled(TruncateString)`
   flex-shrink: 0;
+  transition: 0.2s ease-out;
   color: var(${COLORS.title.primary.default});
 `;
 
-export const Description = styled(TruncatedTextWithTooltip)`
-  ${TEXT_2_STYLES};
+export const Description = styled(TruncateString)`
   flex-shrink: 0;
-  -webkit-line-clamp: 2;
   color: var(${COLORS.description.primary});
 `;
 
@@ -73,7 +68,7 @@ export const Wrapper = styled.div`
   display: flex;
   padding: 16px;
   cursor: pointer;
-  transition: ${ANIMATIONS.TRANSITION} ease-out;
+  transition: 0.2s ease-out;
   transition-property: background-color, box-shadow, border;
 
   &:hover {

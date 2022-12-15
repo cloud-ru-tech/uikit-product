@@ -1,6 +1,6 @@
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import * as S from './styled';
 
 enum Variant {
@@ -18,12 +18,9 @@ export type CardResultProps = WithSupportProps<{
 export function CardResult({ title, description, className, onClick, ...rest }: CardResultProps) {
   return (
     <S.Wrapper className={className} onClick={onClick} {...extractSupportProps(rest)}>
-      <S.Title data-test-id='card-result__title' tag={TruncatedTextWithTooltip.containerTags.H5}>
-        {title}
-      </S.Title>
-      <S.Description data-test-id='card-result__description' tag={TruncatedTextWithTooltip.containerTags.Span}>
-        {description}
-      </S.Description>
+      <S.Title data-test-id='card-result__title' textEntity={TruncateString.textEntities.H5} text={title} />
+
+      <S.Description data-test-id='card-result__description' text={description} maxLines={3} />
     </S.Wrapper>
   );
 }

@@ -2,10 +2,8 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
-import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
-import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './theme';
 
 PURPLE_THEME;
@@ -25,7 +23,7 @@ export const Wrapper = styled.div`
   overflow: hidden;
   padding: 12px;
   cursor: pointer;
-  transition: ${ANIMATIONS.TRANSITION} ease-out;
+  transition: 0.2s ease-out;
   transition-property: background-color, box-shadow;
 
   &:hover {
@@ -45,10 +43,8 @@ export const RightSide = styled.div`
   flex-direction: column;
 `;
 
-export const Title = styled(TruncatedTextWithTooltip)`
-  ${TEXT_2_STYLES};
+export const Title = styled(TruncateString)`
   margin: 0 0 4px 0;
-  -webkit-line-clamp: 2;
   color: var(${COLORS.title});
 `;
 

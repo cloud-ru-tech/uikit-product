@@ -1,6 +1,6 @@
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import * as S from './styled';
 
 export type CardImageProps = WithSupportProps<{
@@ -19,15 +19,14 @@ export function CardImage({ title, description, signature, src, className, onCli
         <S.Image backgroundImage={src} />
       </S.ImageWrapper>
 
-      <S.Title data-test-id='card-image__title' tag={TruncatedTextWithTooltip.containerTags.H3}>
-        {title}
-      </S.Title>
+      <S.Title
+        data-test-id='card-image__title'
+        textEntity={TruncateString.textEntities.H3Semibold}
+        text={title}
+        maxLines={2}
+      />
 
-      {description && (
-        <S.Description data-test-id='card-image__description' tag={TruncatedTextWithTooltip.containerTags.Span}>
-          {description}
-        </S.Description>
-      )}
+      {description && <S.Description data-test-id='card-image__description' text={description} maxLines={2} />}
 
       {signature && <S.Signature data-test-id='card-image__signature'>{signature}</S.Signature>}
     </S.Wrapper>

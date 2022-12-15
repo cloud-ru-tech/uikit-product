@@ -1,7 +1,7 @@
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import * as S from './styled';
 
 enum Variant {
@@ -46,19 +46,16 @@ export function CardQuickAction({
         <S.Title
           data-test-id='card-quick-action__title'
           data-variant={variant || undefined}
-          tag={TruncatedTextWithTooltip.containerTags.H4}
-        >
-          {title}
-        </S.Title>
+          textEntity={TruncateString.textEntities.H4Semibold}
+          text={title}
+        />
 
         {description && (
           <S.Description
             data-test-id='card-quick-action__description'
             data-variant={variant || undefined}
-            tag={TruncatedTextWithTooltip.containerTags.Span}
-          >
-            {description}
-          </S.Description>
+            text={description}
+          />
         )}
       </S.MiddleSide>
 

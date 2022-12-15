@@ -1,7 +1,7 @@
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { TruncatedTextWithTooltip } from '../../helperComponents/TruncatedTextWithTooltip';
 import * as S from './styled';
 
 enum Variant {
@@ -34,15 +34,14 @@ export function CardCategory({
       </S.LeftSide>
 
       <S.RightSide>
-        <S.Title data-test-id='card-category__title' tag={TruncatedTextWithTooltip.containerTags.H3}>
-          {title}
-        </S.Title>
+        <S.Title
+          data-test-id='card-category__title'
+          textEntity={TruncateString.textEntities.H3Semibold}
+          maxLines={2}
+          text={title}
+        />
 
-        {description && (
-          <S.Description data-test-id='card-category__description' tag={TruncatedTextWithTooltip.containerTags.Span}>
-            {description}
-          </S.Description>
-        )}
+        {description && <S.Description data-test-id='card-category__description' maxLines={2} text={description} />}
       </S.RightSide>
     </S.Wrapper>
   );
