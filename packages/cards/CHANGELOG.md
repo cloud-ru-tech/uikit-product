@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.1.11...@sbercloud/uikit-product-cards@1.2.0) (2022-12-16)
+
+### Features
+
+- **[FF-1426](https://jira.sbercloud.tech/browse/FF-1426):** card panel return ([71ef10d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/71ef10de29a8e6c6c8d551ffc15ecec8d6cdd443))
+
 ## [1.1.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.1.10...@sbercloud/uikit-product-cards@1.1.11) (2022-12-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-cards

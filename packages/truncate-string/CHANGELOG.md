@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-truncate-string@0.5.0...@sbercloud/uikit-product-truncate-string@0.6.0) (2022-12-16)
+
+### Bug Fixes
+
+- **[FF-1426](https://jira.sbercloud.tech/browse/FF-1426):** replacing tags by textEntinies as typography elements with predefined styles ([0247ca8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0247ca88d0b6e75fe70ece9943891a6ad605787d))
+
+### BREAKING CHANGES
+
+- **[FF-1426](https://jira.sbercloud.tech/browse/FF-1426):** replacing tags by textEntinies as typography elements with predefined styles
+
 # [0.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-truncate-string@0.4.5...@sbercloud/uikit-product-truncate-string@0.5.0) (2022-12-14)
 
 ### Bug Fixes
