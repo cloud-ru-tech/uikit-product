@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.17.13...@sbercloud/uikit-product-modal@1.1.0) (2022-12-19)
+
+### Features
+
+- **[FF-1381](https://jira.sbercloud.tech/browse/FF-1381):** first stable version ([2df7200](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2df72007f6b8db0c244a5a570dceef5e99e24385))
+
 ## [0.17.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@0.17.12...@sbercloud/uikit-product-modal@0.17.13) (2022-12-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-modal
