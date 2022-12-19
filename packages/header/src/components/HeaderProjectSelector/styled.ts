@@ -10,6 +10,7 @@ DARK_THEMES;
 
 export const Wrapper = styled.div`
   grid-area: header-project-selector;
+
   margin-right: 8px;
 
   &[data-mobile] {
@@ -25,9 +26,10 @@ export const List = styled.ul`
 export const NoDataWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 12px 16px;
   gap: 4px;
+  align-items: center;
+
+  padding: 12px 16px;
 `;
 
 export const NoDataLabel = styled.div`
@@ -38,5 +40,6 @@ export const NoDataLabel = styled.div`
 
 export const SearchIcon = styled(SearchInterfaceSVG)`
   flex-shrink: 0;
+
   fill: var(${COLORS.searchIconFill});
 `;

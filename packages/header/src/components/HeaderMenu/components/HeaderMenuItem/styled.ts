@@ -7,6 +7,8 @@ export const Link = styled.a`
   && svg {
     fill: var(${EXPORT_VARS.GREY[200]});
   }
+
   ${TEXT_2_STYLES};
+
   color: unset;
 `;

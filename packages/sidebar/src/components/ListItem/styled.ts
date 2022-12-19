@@ -16,14 +16,19 @@ export const Item = styled.a`
   --sidebar-item__text-color: var(${COLORS.text.default});
 
   ${TEXT_2_STYLES};
-  padding: 8px 16px;
-  background-color: var(--sidebar-item__backround-color);
+
   cursor: pointer;
-  transition: background-color ${ANIMATIONS.TRANSITION};
-  width: 100%;
+  user-select: none;
+
   display: grid;
   grid-template-columns: auto 1fr;
-  user-select: none;
+
+  width: 100%;
+  padding: 8px 16px;
+
+  background-color: var(--sidebar-item__backround-color);
+
+  transition: background-color ${ANIMATIONS.TRANSITION};
 
   &:not([data-disabled]) {
     &:not([data-no-hover]) {
@@ -65,10 +70,11 @@ export const IconContainer = styled.div`
 
 export const Label = styled(TruncateString)`
   color: var(--sidebar-item__text-color);
+
   transition: color ${ANIMATIONS.TRANSITION};
 `;
 
+// 28 = 20 + 8, 20 - icon size, 8 margin-right
 export const Padding = styled.div<{ level?: number }>`
-  // 28 = 20 + 8, 20 - icon size, 8 margin-right
   margin-left: ${({ level = 0 }) => level * 28}px;
 `;

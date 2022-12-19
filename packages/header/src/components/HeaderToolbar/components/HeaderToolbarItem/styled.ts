@@ -13,15 +13,20 @@ GREEN_DARK_THEME;
 export const Link = styled.a`
   ${H4_STYLES};
 
-  color: unset;
+  cursor: pointer;
+
   display: flex;
+  gap: 12px;
   align-items: center;
+
   width: 100%;
   padding: 2px 16px;
-  gap: 12px;
-  cursor: pointer;
-  transition: background-color ${ANIMATIONS.TRANSITION};
+
+  color: unset;
+
   fill: var(${COLORS.icon});
+
+  transition: background-color ${ANIMATIONS.TRANSITION};
 
   &:hover {
     background-color: var(${COLORS.background.hover});

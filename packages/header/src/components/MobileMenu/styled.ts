@@ -9,18 +9,21 @@ GREEN_DARK_THEME;
 
 export const Wrapper = styled.div<{ top: number; strategy: string }>`
   position: ${props => props.strategy};
+  z-index: 1;
   top: ${props => props.top}px;
   left: 0;
-  height: calc(100% - ${props => props.top}px);
-  width: 100%;
-  background-color: var(${COLORS.background.default});
+
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  padding: 12px 0;
   row-gap: 12px;
-  overflow-y: auto;
-  z-index: 1;
+
+  box-sizing: border-box;
+  width: 100%;
+  height: calc(100% - ${props => props.top}px);
+  padding: 12px 0;
+
+  background-color: var(${COLORS.background.default});
 
   & * {
     box-sizing: border-box;

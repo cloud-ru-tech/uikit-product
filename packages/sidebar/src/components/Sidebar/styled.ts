@@ -12,11 +12,13 @@ export const Sidebar = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+
   width: ${SIDEBAR_FULL_WIDTH};
+  height: 100%;
   padding: 16px 0;
-  border-right: 1px solid var(${COLORS.border});
+
   background-color: var(${COLORS.background});
+  border-right: 1px solid var(${COLORS.border});
 
   &[data-collapsed] {
     width: ${SIDEBAR_COLLAPSED_WIDTH};
@@ -29,9 +31,9 @@ export const Sidebar = styled.div`
 `;
 
 export const ContentWrapper = styled.div`
-  display: flex;
-  overflow: hidden;
-
   position: relative;
+
+  overflow: hidden;
+  display: flex;
   flex: 1 0 auto;
 `;

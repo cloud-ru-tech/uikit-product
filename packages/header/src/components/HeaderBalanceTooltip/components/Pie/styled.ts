@@ -10,24 +10,30 @@ GREEN_THEME;
 GREEN_DARK_THEME;
 
 export const Pie = styled.div<{ percent: number }>`
-  border-radius: 50%;
-  height: 20px;
   position: relative;
+
   width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
 
   &::before,
   &::after {
-    border-radius: inherit;
     content: '';
-    height: inherit;
-    left: 0;
+
     position: absolute;
     top: 0;
+    left: 0;
+
     width: inherit;
+    height: inherit;
+
+    border-radius: inherit;
   }
 
   &::before {
     background: var(${EXPORT_VARS.GRADIENT[2]});
+
     mask-image: conic-gradient(#000 ${props => props.percent}%, transparent ${props => props.percent}%);
   }
 

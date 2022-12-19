@@ -22,6 +22,7 @@ export const Wrapper = styled(ListItem)`
 export const Label = styled.div`
   ${TEXT_3_STYLES};
 
-  color: var(${LABEL_COLORS.text.default});
   padding: 8px 16px 4px;
+
+  color: var(${LABEL_COLORS.text.default});
 `;

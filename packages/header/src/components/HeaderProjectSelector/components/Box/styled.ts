@@ -1,19 +1,21 @@
 import { styled } from '@linaria/react';
 
 export const Wrapper = styled.div`
-  align-items: center;
-  box-sizing: border-box;
-  column-gap: 8px;
+  cursor: pointer;
+
   display: flex;
   flex-shrink: 0;
-  height: 36px;
+  column-gap: 8px;
+  align-items: center;
 
-  cursor: pointer;
+  box-sizing: border-box;
+  height: 36px;
   padding: 4px 12px;
 
   &[data-disabled] {
-    padding-right: 0;
     cursor: not-allowed;
+
+    padding-right: 0;
   }
 `;
 

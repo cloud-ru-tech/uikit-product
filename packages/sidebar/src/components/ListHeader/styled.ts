@@ -5,18 +5,22 @@ import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 export const Title = styled.div`
   position: relative;
+
   overflow: hidden;
 `;
 
 export const TitleWrap = styled.div`
+  position: relative;
+
   display: flex;
   align-items: center;
-  position: relative;
+
   transition: opacity ${ANIMATIONS.TRANSITION};
 
   &[data-hide] {
-    opacity: 0;
     pointer-events: none;
+
+    opacity: 0;
   }
 `;
 
@@ -26,24 +30,29 @@ export const SearchButton = styled(ButtonIcon)`
 `;
 
 export const SearchWrap = styled.div`
-  padding: 0 16px;
+  pointer-events: none;
+  will-change: transform;
+
   position: absolute;
   top: 50%;
   left: 100%;
-  width: 100%;
-  pointer-events: none;
-  transition: transform ${ANIMATIONS.TRANSITION};
-  will-change: transform;
   transform: translateY(-50%);
+
+  width: 100%;
+  padding: 0 16px;
+
+  transition: transform ${ANIMATIONS.TRANSITION};
 
   &[data-show] {
     pointer-events: auto;
+
     transform: translate(-100%, -50%);
   }
 `;
 
 export const DividerWrap = styled.div`
   margin: 4px 0;
+
   transition: opacity ${ANIMATIONS.TRANSITION};
 
   &[data-hide] {

@@ -13,11 +13,14 @@ PURPLE_DARK_THEME;
 export const MenuItem = styled.a`
   ${TEXT_2_STYLES};
 
+  cursor: pointer;
+
   display: flex;
   justify-content: space-between;
+
   padding: 8px 16px;
+
   color: var(${COLORS.text.default});
-  cursor: pointer;
 
   &[data-active] {
     color: var(${COLORS.text.selected});
@@ -25,6 +28,7 @@ export const MenuItem = styled.a`
 
   &[data-disabled] {
     cursor: default;
+
     color: var(${COLORS.text.disabled});
   }
 

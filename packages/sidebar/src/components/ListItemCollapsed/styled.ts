@@ -10,11 +10,14 @@ PURPLE_THEME;
 PURPLE_DARK_THEME;
 
 export const Item = styled.div`
-  padding: 8px 16px;
-  background-color: transparent;
   cursor: pointer;
-  transition: background-color ${ANIMATIONS.TRANSITION};
+
   width: 100%;
+  padding: 8px 16px;
+
+  background-color: transparent;
+
+  transition: background-color ${ANIMATIONS.TRANSITION};
 
   &:not([data-disabled]) {
     &:hover {

@@ -14,5 +14,6 @@ export const Spinner = styled(LoadingWheelInterfaceSVG)`
   ${ANIMATIONS.LOADING_WHEEL};
 
   display: block;
+
   fill: var(${COLORS.fill.default});
 `;

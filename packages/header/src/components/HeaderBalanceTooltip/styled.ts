@@ -10,15 +10,18 @@ GREEN_DARK_THEME;
 
 export const Wrapper = styled.div`
   grid-area: header-balance-tooltip;
+
   width: fit-content;
 `;
 
 export const Frame = styled.div`
-  background-color: var(${COLORS.background.default});
-  border-radius: 100px;
-  border: 1px solid var(${COLORS.border.default});
   display: flex;
+
   padding: 4px;
+
+  background-color: var(${COLORS.background.default});
+  border: 1px solid var(${COLORS.border.default});
+  border-radius: 100px;
 `;
 
 export const RechargeButton = styled(RechargeButtonInner)`

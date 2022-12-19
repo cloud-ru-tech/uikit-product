@@ -6,10 +6,10 @@ export const Wrapper = styled.div`
 
 export const Content = styled.div`
   &[data-active] {
-    left: 0;
     position: absolute;
-    top: 0;
     z-index: 1;
+    top: 0;
+    left: 0;
   }
 `;
 

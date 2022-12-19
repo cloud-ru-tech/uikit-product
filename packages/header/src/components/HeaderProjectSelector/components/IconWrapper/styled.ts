@@ -9,6 +9,7 @@ GREEN_DARK_THEME;
 
 export const IconWrapper = styled.span`
   display: contents;
+
   fill: var(${COLORS.fill.default});
 
   > svg {

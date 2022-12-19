@@ -7,11 +7,13 @@ export const Accordion = styled.div`
 `;
 
 export const AccordionFoldable = styled.div<{ maxHeight: number | undefined }>`
-  overflow: hidden;
-  transition: max-height ${TRANSITION_TIMING.accordionFolding}ms ease-in-out;
   will-change: max-height;
+
+  overflow: hidden;
   display: grid;
   row-gap: 4px;
+
+  transition: max-height ${TRANSITION_TIMING.accordionFolding}ms ease-in-out;
 
   > ${Accordion}:first-child {
     margin-top: 4px;

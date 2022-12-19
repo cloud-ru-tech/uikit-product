@@ -4,14 +4,17 @@ import { TRANSITION_TIMING } from '../Sidebar/constants';
 import { TransitionDirection } from './constants';
 
 export const Wrapper = styled.div`
-  transition-property: transform;
-  transition-timing-function: ease-in-out;
   will-change: transform;
+
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+
   width: 100%;
+  height: 100%;
+
+  transition-timing-function: ease-in-out;
+  transition-property: transform;
 
   &[data-has-title] {
     display: grid;

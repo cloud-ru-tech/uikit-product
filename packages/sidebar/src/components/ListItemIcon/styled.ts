@@ -10,16 +10,19 @@ PURPLE_THEME;
 PURPLE_DARK_THEME;
 
 export const Icon = styled.div`
-  flex-shrink: 0;
   display: flex;
-  height: 20px;
+  flex-shrink: 0;
+
   width: 20px;
+  height: 20px;
 
   svg {
-    fill: var(${COLORS.icon.default});
-    transition: fill ${ANIMATIONS.TRANSITION};
-    height: 100%;
     width: 100%;
+    height: 100%;
+
+    fill: var(${COLORS.icon.default});
+
+    transition: fill ${ANIMATIONS.TRANSITION};
   }
 
   &[data-disabled] svg {

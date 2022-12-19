@@ -15,10 +15,11 @@ export const Elements = styled.div`
   --sidebar-item-postfix__arrow-color: var(${COLORS.arrow.default});
 
   display: flex;
-  align-items: center;
-  column-gap: 8px;
-  flex-shrink: 0;
   grid-column: none;
+  flex-shrink: 0;
+  column-gap: 8px;
+  align-items: center;
+
   padding-left: 8px;
 
   > * {
@@ -37,11 +38,13 @@ export const Elements = styled.div`
 
 export const LockIcon = styled(LockInterfaceSVG)`
   fill: var(--sidebar-item-postfix__lock-color);
+
   transition: fill ${ANIMATIONS.TRANSITION};
 `;
 
 export const AccordionArrowIcon = styled(DropdownDownInterfaceSVG)`
   fill: var(--sidebar-item-postfix__arrow-color);
+
   transition: ${ANIMATIONS.TRANSITION};
   transition-property: fill, transform;
 

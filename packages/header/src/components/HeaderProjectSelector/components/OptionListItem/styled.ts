@@ -12,6 +12,7 @@ export const Actions = styled.div``;
 
 export const Wrapper = styled(BoxListItem)`
   cursor: pointer;
+
   outline: none;
 
   &:not(:hover) ${Actions} {

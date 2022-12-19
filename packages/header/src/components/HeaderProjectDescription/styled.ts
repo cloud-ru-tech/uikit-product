@@ -9,11 +9,13 @@ DARK_THEMES;
 
 export const Description = styled.div`
   ${TEXT_2_STYLES};
-  color: var(${COLORS.text});
 
   display: flex;
-  align-items: center;
   grid-area: header-project-description;
-  margin-left: 16px;
+  align-items: center;
+
   margin-right: 8px;
+  margin-left: 16px;
+
+  color: var(${COLORS.text});
 `;

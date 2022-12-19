@@ -12,11 +12,13 @@ GREEN_DARK_THEME;
 export const MobileWrapper = styled.header`
   display: grid;
   grid-template-columns: [header-logo] 1fr [header-balance-tooltip] auto [header-mobile-menu-trigger] auto;
-  align-items: center;
   column-gap: 8px;
-  padding: 8px 16px;
-  background-color: var(${COLORS.background.default});
+  align-items: center;
+
   box-sizing: border-box;
+  padding: 8px 16px;
+
+  background-color: var(${COLORS.background.default});
 
   & * {
     box-sizing: border-box;

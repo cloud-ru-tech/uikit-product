@@ -11,15 +11,17 @@ GREEN_THEME;
 GREEN_DARK_THEME;
 
 export const Wrapper = styled.div<{ strategy: string; x: number; y: number }>`
-  background-color: var(${COLORS.background.default});
-  border-radius: 8px;
-  box-shadow: ${SHADOW.SMALL};
-  display: flex;
-  flex-direction: column;
-  left: ${props => props.x}px;
-  outline: none;
   position: ${props => props.strategy};
   top: ${props => props.y}px;
+  left: ${props => props.x}px;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(${COLORS.background.default});
+  border-radius: 8px;
+  outline: none;
+  box-shadow: ${SHADOW.SMALL};
 `;
 
 export const Overlay = styled(FloatingOverlay)`
