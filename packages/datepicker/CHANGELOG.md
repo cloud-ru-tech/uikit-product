@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.76...@sbercloud/uikit-product-datepicker@0.12.0) (2022-12-23)
+
+### Features
+
+- get rid of es5-ext ([8d2a32d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8d2a32d10f1d78806b7edf9a58772b33c7c61f5d))
+
+### BREAKING CHANGES
+
+- get rid of es5-ext
+
 ## [0.11.76](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.75...@sbercloud/uikit-product-datepicker@0.11.76) (2022-12-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-datepicker
