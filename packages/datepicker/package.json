@@ -35,7 +35,6 @@
     "@sbercloud/uikit-product-utils": "3.1.1",
     "date-fns": "2.28.0",
     "lodash.isequal": "4.5.0",
-    "memoizee": "0.4.15",
     "react-datepicker": "4.7.0",
     "react-input-autosize": "3.0.0"
   },

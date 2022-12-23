@@ -1,4 +1,4 @@
-import { forwardRef, useCallback, useEffect, useMemo, useState } from 'react';
+import { forwardRef, MouseEvent, RefObject, useCallback, useEffect, useMemo, useState } from 'react';
 import RDatePicker from 'react-datepicker';
 
 import { CalendarInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -11,19 +11,19 @@ import { PickSettingProps, TimeInputProps, TSplitDateType } from '../../helpers/
 import { HiddenInput } from '../HiddenInput';
 import * as S from './styled';
 
-export interface ICustomDateInputProps {
+export type CustomDateInputProps = {
   setDate: (date: null | Date) => void;
   date: Date | null;
   minDate?: Date | null;
-  onClick?: ((event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void) | undefined;
+  onClick?: ((event: MouseEvent<HTMLInputElement, MouseEvent>) => void) | undefined;
   handleChange: (date: Date | null) => void;
   handleCalendarClose: () => void;
-  calendarRef?: React.RefObject<RDatePicker>;
+  calendarRef?: RefObject<RDatePicker>;
   pickSettings: PickSettingProps;
   size: number;
-}
+};
 
-export const CustomDateInput = forwardRef<HTMLSpanElement, ICustomDateInputProps>((props, ref) => {
+export const CustomDateInput = forwardRef<HTMLSpanElement, CustomDateInputProps>((props, ref) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { date, setDate, onClick, pickSettings, minDate, size, handleCalendarClose, handleChange } = props;
   const [isError, setError] = useState(false);

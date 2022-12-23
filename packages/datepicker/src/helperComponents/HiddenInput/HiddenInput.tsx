@@ -9,16 +9,16 @@ import { TimeInputProps, TSplitDateType } from '../../helpers/types';
 import { InputAutosize } from '../InputAutosize';
 import * as S from './styled';
 
-interface IHiddenInputProps {
+type HiddenInputProps = {
   valueProp: TimeInputProps;
   date: TSplitDateType;
   propName?: string;
   minWidth?: number;
   onChange: (date: TSplitDateType) => void;
   handleCalendarClose(): void;
-}
+};
 
-export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onChange, handleCalendarClose }) => {
+export function HiddenInput({ valueProp, date, onChange, handleCalendarClose }: HiddenInputProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [value, setValue] = useState(date[valueProp]);
   const [ref, setRef] = useState<HTMLInputElement | null>();
@@ -66,4 +66,4 @@ export const HiddenInput: React.FC<IHiddenInputProps> = ({ valueProp, date, onCh
       inputRef={setRef}
     />
   );
-};
+}

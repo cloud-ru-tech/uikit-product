@@ -1,5 +1,5 @@
 import isToday from 'date-fns/isToday';
-import { useCallback, useMemo } from 'react';
+import { Dispatch, ReactNode, SetStateAction, useCallback, useMemo } from 'react';
 import { ReactDatePickerProps } from 'react-datepicker';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
@@ -12,20 +12,20 @@ import { textProvider, Texts } from '../../helpers/texts-provider';
 import { PickSettingProps } from '../../helpers/types';
 import * as S from './styled';
 
-export interface ICustomContainerProps extends Partial<ReactDatePickerProps> {
+export type CustomContainerCustomProps = {
   date: Date | null;
-  setDate: React.Dispatch<React.SetStateAction<null | Date>>;
+  setDate: Dispatch<SetStateAction<null | Date>>;
   pickTime?: DatePickerProps['pickTime'];
   pickSettings: PickSettingProps;
   handleChange?: (date: Date | null) => void;
-}
+} & Partial<ReactDatePickerProps>;
 
-export interface ICustomContainer {
+export type CustomContainerProps = {
   className?: string;
-  children: React.ReactNode[];
-}
+  children: ReactNode[];
+};
 
-export const CustomContainer = (customProps: ICustomContainerProps, props: ICustomContainer): React.ReactNode => {
+export function CustomContainer(customProps: CustomContainerCustomProps, props: CustomContainerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { children, className } = props;
   const { date, pickSettings, handleChange, minDate } = customProps;
@@ -70,4 +70,4 @@ export const CustomContainer = (customProps: ICustomContainerProps, props: ICust
       )}
     </div>
   );
-};
+}

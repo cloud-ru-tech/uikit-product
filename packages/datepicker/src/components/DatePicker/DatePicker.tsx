@@ -22,15 +22,15 @@ export enum DatePickerSize {
 
 export { SettingType };
 
-export interface DatePickerProps {
+export type DatePickerProps = {
   pickTime: SettingType;
   onChange?: (date: Date | null) => void;
   value?: Date | null;
   minDate?: Date;
   size?: DatePickerSize;
-}
+};
 
-export const DatePicker = ({ value, pickTime, onChange, minDate, size = DatePickerSize.l }: DatePickerProps) => {
+export function DatePicker({ value, pickTime, onChange, minDate, size = DatePickerSize.l }: DatePickerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isDatePickerOpen, setOpen] = useState(false);
   const ref = useRef<RDatePicker>(null);
@@ -111,7 +111,7 @@ export const DatePicker = ({ value, pickTime, onChange, minDate, size = DatePick
       />
     </S.Container>
   );
-};
+}
 
 DatePicker.time = SettingType;
 DatePicker.size = DatePickerSize;

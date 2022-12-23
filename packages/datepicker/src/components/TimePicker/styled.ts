@@ -27,8 +27,8 @@ export const Container = styled.div`
           margin: 0;
           height: calc(195px + 18px);
           overflow-y: scroll;
-          padding-right: 0px;
-          padding-left: 0px;
+          padding-right: 0;
+          padding-left: 0;
           width: 100%;
           box-sizing: content-box;
 

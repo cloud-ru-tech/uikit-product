@@ -13,7 +13,6 @@ export const Input = styled.input`
   width: 100%;
   padding: 12px 32px 12px 12px;
   outline: 0;
-  background: transparent;
   cursor: pointer;
 
   background-color: var(${COLORS_DATEPICKER.INPUT_BACKGROUND_COLOR});
@@ -22,7 +21,6 @@ export const Input = styled.input`
   box-sizing: border-box;
   border-radius: 4px;
 
-  box-sizing: border-box;
   height: 44px;
 
   &:not([data-disabled]):hover {

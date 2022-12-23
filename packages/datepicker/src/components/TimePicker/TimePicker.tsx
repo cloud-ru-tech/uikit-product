@@ -8,11 +8,11 @@ import { CustomTimeInput } from '../../helperComponents/CustomTimeInput';
 import { TimeFormat } from '../../helpers/texts-provider';
 import * as S from './styled';
 
-export interface TimePickerProps extends ReactDatePickerProps {
+export type TimePickerProps = {
   date?: Date | null;
-}
+} & ReactDatePickerProps;
 
-export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime, maxTime, disabled }) => {
+export function TimePicker({ date, onChange, minTime, maxTime, disabled }: TimePickerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isOpen, setOpen] = useState(false);
   const close = useCallback(() => setOpen(false), []);
@@ -57,4 +57,4 @@ export const TimePicker: React.FC<TimePickerProps> = ({ date, onChange, minTime,
       />
     </S.Container>
   );
-};
+}

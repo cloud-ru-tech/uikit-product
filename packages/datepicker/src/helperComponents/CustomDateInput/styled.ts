@@ -54,11 +54,6 @@ export const InputContainer = styled.span<{ size: number }>`
   }
 `;
 
-export const Separator = styled.div`
-  height: 21px;
-  padding-right: 1px;
-`;
-
 export const calendarIconClassName = css`
   position: absolute;
   right: 8px;

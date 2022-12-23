@@ -6,16 +6,16 @@ import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
 import { AmPmFormat, textProvider, Texts } from '../../helpers/texts-provider';
 import * as S from './styled';
 
-export interface ICustomTimeInputProps {
+export type CustomTimeInputProps = {
   date?: Date | null;
   open: boolean;
   onClick?: ((event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void) | undefined;
   onChange?: ((event: React.ChangeEvent<HTMLInputElement>) => void) | undefined;
   disabled?: boolean;
   language: LanguageCodeType;
-}
+};
 
-export const CustomTimeInput = forwardRef<HTMLInputElement, ICustomTimeInputProps>((props, ref) => {
+export const CustomTimeInput = forwardRef<HTMLInputElement, CustomTimeInputProps>((props, ref) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { date, onClick, onChange, open, disabled } = props;
   const [value, setValue] = useState<string>('');

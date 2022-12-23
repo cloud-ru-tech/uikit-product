@@ -61,7 +61,7 @@ export const inputClassname = css`
   &[data-disabled='true'] {
     background-color: var(${COLORS_INPUT.INPUT_DISABLED_BACKGROUND});
     border: 1px solid var(${COLORS_INPUT.INPUT_DISABLED_BORDER});
-    color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR})
+    color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
     &::placeholder {
       color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
     }

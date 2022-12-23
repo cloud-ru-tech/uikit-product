@@ -5,18 +5,19 @@ import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import * as S from './styled';
 
-interface HeaderCustomProps {
+type HeaderCustomProps = {
   languageCode: LanguageCodeType;
-}
-interface HeaderProps {
+};
+
+type HeaderProps = {
   date: Date;
   decreaseMonth(): void;
   increaseMonth(): void;
   prevMonthButtonDisabled: boolean;
   nextMonthButtonDisabled: boolean;
-}
+};
 
-export const CustomHeader = (customProps: HeaderCustomProps, props: HeaderProps) => {
+export function CustomHeader(customProps: HeaderCustomProps, props: HeaderProps) {
   const { languageCode } = customProps;
   const { date, decreaseMonth, increaseMonth, prevMonthButtonDisabled, nextMonthButtonDisabled } = props;
 
@@ -44,4 +45,4 @@ export const CustomHeader = (customProps: HeaderCustomProps, props: HeaderProps)
       />
     </S.Container>
   );
-};
+}

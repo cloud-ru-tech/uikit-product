@@ -18,7 +18,7 @@ export const Container = styled.div`
     position: relative;
     background-color: var(${COLORS_DATEPICKER.BACKGROUND_COLOR});
 
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 
     line-height: 24px;
   }
