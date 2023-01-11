@@ -134,8 +134,8 @@ export const FilterRow: FC<IFilterRowProps> = ({
         {filterOption?.type === TFilterOptionType.Datepicker && (
           <DatePicker
             value={initValueOption}
-            size={DatePicker.size.m}
-            pickTime={filterOption.datepickerType || DatePicker.time.None}
+            size={DatePicker.sizes.Medium}
+            pickTime={filterOption.datepickerType || DatePicker.timePicker.None}
             onChange={date => handleChange('value', [date])}
           />
         )}
