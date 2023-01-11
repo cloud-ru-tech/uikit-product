@@ -10,21 +10,26 @@ export default {
   component: DatePicker,
 } as Meta;
 
-const Template: Story<Omit<DatePickerProps, 'minDate'> & { minDate: boolean }> = args => (
+const Template: Story<DatePickerProps> = args => (
   <div style={{ width: 350 }}>
-    <DatePicker {...args} minDate={args.minDate ? new Date() : undefined} />
+    <DatePicker {...args} />
   </div>
 );
 
 export const datePicker = Template.bind({});
 datePicker.args = {
   value: new Date(),
-  pickTime: DatePicker.time.None,
-  minDate: true,
+  pickTime: DatePicker.timePicker.None,
+  size: DatePicker.sizes.Medium,
 };
+
 datePicker.argTypes = {
+  size: {
+    options: Object.values(DatePicker.sizes),
+    control: { type: 'radio' },
+  },
   pickTime: {
-    options: [DatePicker.time.None, DatePicker.time.Requier, DatePicker.time.Optional],
+    options: Object.values(DatePicker.timePicker),
     control: { type: 'radio' },
   },
   value: {
@@ -33,10 +38,13 @@ datePicker.argTypes = {
     },
   },
   minDate: {
-    name: '[Stories]: show or hide minimum possible date',
-    description: 'demonstration exist of date - you can set any date to property of component',
     control: {
-      type: 'boolean',
+      type: 'date',
+    },
+  },
+  maxDate: {
+    control: {
+      type: 'date',
     },
   },
 };

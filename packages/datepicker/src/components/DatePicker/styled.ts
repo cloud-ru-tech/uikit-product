@@ -1,8 +1,13 @@
 import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { SHADOW } from '@sbercloud/uikit-product-utils';
 
-const { COLORS_DATEPICKER } = DEPRECATED_EXPORT_VARS;
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
 
 export const Container = styled.div`
   .react-datepicker-wrapper {
@@ -16,16 +21,16 @@ export const Container = styled.div`
     border-radius: 4px;
     display: inline-block;
     position: relative;
-    background-color: var(${COLORS_DATEPICKER.BACKGROUND_COLOR});
+    background-color: var(${COLORS.BACKGROUND});
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: ${SHADOW.MEDIUM};
 
     line-height: 24px;
   }
 
   .react-datepicker__day--today:not(.react-datepicker__day--selected) {
-    color: var(${COLORS_DATEPICKER.TODAY_COLOR});
-    border: 1px solid var(${COLORS_DATEPICKER.TODAY_BORDER_COLOR});
+    color: var(${COLORS.TODAY});
+    border: 1px solid var(${COLORS.TODAY_BORDER});
     border-radius: 4px;
   }
 
@@ -102,7 +107,7 @@ export const Container = styled.div`
   .react-datepicker__day-name,
   .react-datepicker__day,
   .react-datepicker__time-name {
-    color: var(${COLORS_DATEPICKER.DATE_COLOR});
+    color: var(${COLORS.DATE});
     display: inline-block;
     width: 36px;
     line-height: 36px;
@@ -117,7 +122,7 @@ export const Container = styled.div`
   }
 
   .react-datepicker__day-name {
-    color: var(${COLORS_DATEPICKER.DAY_NAME_COLOR});
+    color: var(${COLORS.DAY_NAME});
     font-size: 14px;
     line-height: 20px;
   }
@@ -130,31 +135,31 @@ export const Container = styled.div`
 
     &:hover {
       border-radius: 4px;
-      background-color: var(${COLORS_DATEPICKER.DATE_HOVER_BACKGROUND_COLOR});
+      background-color: var(${COLORS.DATE_BACKGROUND_HOVER});
     }
 
     &--selected,
     &--in-selecting-range,
     &--in-range {
       border-radius: 4px;
-      background-color: var(${COLORS_DATEPICKER.SELECTED_BACKGROUND_COLOR});
-      color: var(${COLORS_DATEPICKER.SELECTED_COLOR});
+      background-color: var(${COLORS.SELECTED_BACKGROUND});
+      color: var(${COLORS.SELECTED});
 
       &:hover {
-        background-color: var(${COLORS_DATEPICKER.SELECTED_BACKGROUND_HOVER_COLOR});
+        background-color: var(${COLORS.SELECTED_BACKGROUND_HOVER});
       }
     }
 
     &--in-range:not(&--in-selecting-range) {
       .react-datepicker__month--selecting-range & {
-        background-color: var(${COLORS_DATEPICKER.BACKGROUND_COLOR});
-        color: var(${COLORS_DATEPICKER.TEXT_COLOR});
+        background-color: var(${COLORS.BACKGROUND});
+        color: var(${COLORS.TEXT});
       }
     }
 
     &--disabled:not(&--selected) {
       cursor: default;
-      color: var(${COLORS_DATEPICKER.MUTED_COLOR});
+      color: var(${COLORS.MUTED});
 
       &:hover {
         background-color: transparent;

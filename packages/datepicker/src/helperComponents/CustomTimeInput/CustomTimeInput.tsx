@@ -4,6 +4,7 @@ import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { AmPmFormat, textProvider, Texts } from '../../helpers/texts-provider';
+import { commonInputClassName } from '../../styled';
 import * as S from './styled';
 
 export type CustomTimeInputProps = {
@@ -42,6 +43,7 @@ export const CustomTimeInput = forwardRef<HTMLInputElement, CustomTimeInputProps
         data-disabled={disabled || undefined}
         placeholder={textProvider<string>(languageCode, Texts.Time)}
         onChange={onChange}
+        className={commonInputClassName}
         value={value}
         readOnly
       />

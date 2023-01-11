@@ -1,9 +1,12 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
-const { COLORS_DATEPICKER } = DEPRECATED_EXPORT_VARS;
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
 
 export const InputContainer = styled.span<{ size: number }>`
   position: relative;
@@ -12,44 +15,18 @@ export const InputContainer = styled.span<{ size: number }>`
   flex-wrap: nowrap;
   align-items: center;
 
-  width: 100%;
-
   font-size: 14px;
   line-height: 20px;
   padding: 0 32px 0 12px;
 
-  background-color: var(${COLORS_DATEPICKER.INPUT_BACKGROUND_COLOR});
-  border: 1px solid var(${COLORS_DATEPICKER.INPUT_BORDER_COLOR});
-
-  box-sizing: border-box;
-  border-radius: 4px;
-
   height: ${props => `${props.size}px`};
 
-  &:not([data-disabled='true']):hover {
-    background-color: var(${COLORS_DATEPICKER.INPUT_HOVER_BACKGROUND});
-    border: 1px solid var(${COLORS_DATEPICKER.INPUT_HOVER_BORDER});
-    &::placeholder {
-      color: var(${COLORS_DATEPICKER.INPUT_HOVER_PLACEHOLDER_COLOR});
-    }
-  }
-
-  &:focus {
-    background-color: var(${COLORS_DATEPICKER.INPUT_FOCUS_BACKGROUND});
-    border: 1px solid var(${COLORS_DATEPICKER.INPUT_FOCUS_BORDER});
-  }
-
-  &[data-open] {
-    background-color: var(${COLORS_DATEPICKER.INPUT_FOCUS_BACKGROUND});
-    border: 1px solid var(${COLORS_DATEPICKER.INPUT_FOCUS_BORDER});
-  }
-
   &[data-error] {
-    border: 1px solid var(${COLORS_DATEPICKER.INPUT_ERROR_BORDER});
+    border: 1px solid var(${COLORS.INPUT_ERROR_BORDER});
 
     &:hover,
     &:focus {
-      border: 1px solid var(${COLORS_DATEPICKER.INPUT_ERROR_BORDER});
+      border: 1px solid var(${COLORS.INPUT_ERROR_BORDER});
     }
   }
 `;
@@ -60,11 +37,11 @@ export const calendarIconClassName = css`
   top: 50%;
   transform: translateY(-50%);
 
-  fill: var(${COLORS_DATEPICKER.DATE_INPUT_ICON_FILL});
+  fill: var(${COLORS.DATE_INPUT_ICON_FILL});
 `;
 
 export const Error = styled.span`
-  color: var(${COLORS_DATEPICKER.INPUT_ERROR});
+  color: var(${COLORS.INPUT_ERROR});
   font-size: 12px;
   line-height: 16px;
 `;

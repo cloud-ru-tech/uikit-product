@@ -1,8 +1,13 @@
 import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { SHADOW } from '@sbercloud/uikit-product-utils';
 
-const { COLORS_DATEPICKER } = DEPRECATED_EXPORT_VARS;
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+
+GREEN_THEME;
+GREEN_DARK_THEME;
+PURPLE_THEME;
+PURPLE_DARK_THEME;
 
 export const Container = styled.div`
   .react-datepicker-popper {
@@ -12,6 +17,7 @@ export const Container = styled.div`
   .react-datepicker__time-container {
     float: right;
     width: 100%;
+    box-shadow: ${SHADOW.MEDIUM};
 
     .react-datepicker__time {
       position: relative;
@@ -37,29 +43,29 @@ export const Container = styled.div`
             padding: 12px;
             white-space: nowrap;
             box-sizing: border-box;
-            color: var(${COLORS_DATEPICKER.SELECT_TEXT});
-            background-color: var(${COLORS_DATEPICKER.SELECT_BACKGROUND});
+            color: var(${COLORS.SELECT_TEXT});
+            background-color: var(${COLORS.SELECT_BACKGROUND});
 
             &:hover {
               cursor: pointer;
 
-              color: var(${COLORS_DATEPICKER.SELECT_HOVER_TEXT});
-              background-color: var(${COLORS_DATEPICKER.SELECT_HOVER_BACKGROUND});
+              color: var(${COLORS.SELECT_TEXT_HOVER});
+              background-color: var(${COLORS.SELECT_BACKGROUND_HOVER});
             }
             &--selected {
-              color: var(${COLORS_DATEPICKER.SELECT_SELECTED_TEXT});
-              background-color: var(${COLORS_DATEPICKER.SELECT_SELECTED_BACKGROUND});
+              color: var(${COLORS.SELECT_TEXT_SELECTED});
+              background-color: var(${COLORS.SELECT_BACKGROUND_SELECTED});
 
               &:hover {
-                background-color: var(${COLORS_DATEPICKER.SELECT_HOVER_BACKGROUND});
+                background-color: var(${COLORS.SELECT_BACKGROUND_HOVER});
               }
             }
             &--disabled {
-              color: var(${COLORS_DATEPICKER.SELECT_DISABLED_TEXT});
+              color: var(${COLORS.SELECT_TEXT_DISABLED});
 
               &:hover {
                 cursor: default;
-                color: var(${COLORS_DATEPICKER.SELECT_DISABLED_TEXT});
+                color: var(${COLORS.SELECT_TEXT_DISABLED});
                 background-color: transparent;
               }
             }

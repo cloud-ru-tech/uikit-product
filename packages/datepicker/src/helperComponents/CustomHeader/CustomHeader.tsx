@@ -24,7 +24,8 @@ export function CustomHeader(customProps: HeaderCustomProps, props: HeaderProps)
   const monthFormatter = new Intl.DateTimeFormat(languageCode, {
     month: 'long',
   });
-  const title = `${monthFormatter.format(date)} ${date.getFullYear()}`;
+
+  const title = `${monthFormatter.format(date)} ${new Date(date).getFullYear()}`;
 
   return (
     <S.Container>

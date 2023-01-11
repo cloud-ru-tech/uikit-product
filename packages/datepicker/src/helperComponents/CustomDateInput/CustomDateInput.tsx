@@ -8,6 +8,7 @@ import { getSplitDate } from '../../helpers/getSplitDate';
 import { isAfterMinDate } from '../../helpers/isAfterMinDate';
 import { DictionaryPropertyAsFn, textProvider, Texts } from '../../helpers/texts-provider';
 import { PickSettingProps, TimeInputProps, TSplitDateType } from '../../helpers/types';
+import { commonInputClassName } from '../../styled';
 import { HiddenInput } from '../HiddenInput';
 import * as S from './styled';
 
@@ -118,6 +119,7 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, CustomDateInputProps>
         data-open={pickSettings?.isDatePickerOpen || undefined}
         data-error={isError || undefined}
         size={size}
+        className={commonInputClassName}
       >
         {dateStr}
         <CalendarInterfaceSVG className={S.calendarIconClassName} />

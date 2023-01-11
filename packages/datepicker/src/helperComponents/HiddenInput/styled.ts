@@ -1,8 +1,11 @@
 import { css } from '@linaria/core';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
-const { COLORS_DATEPICKER } = DEPRECATED_EXPORT_VARS;
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
 
 export const hiddenInputClassName = css`
   border: 0;
@@ -12,8 +15,8 @@ export const hiddenInputClassName = css`
   height: 20px;
 
   &:focus {
-    color: var(${COLORS_DATEPICKER.INPUT_EDITABLE_TEXT});
-    background-color: var(${COLORS_DATEPICKER.INPUT_EDITABLE_BACKGROUND});
+    color: var(${COLORS.INPUT_EDITABLE_TEXT});
+    background-color: var(${COLORS.INPUT_EDITABLE_BACKGROUND});
     caret-color: transparent;
   }
 

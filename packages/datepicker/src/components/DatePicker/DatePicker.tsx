@@ -1,6 +1,7 @@
+import { isAfter, isBefore } from 'date-fns';
 import enGB from 'date-fns/locale/en-GB';
 import ru from 'date-fns/locale/ru';
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import RDatePicker, { registerLocale } from 'react-datepicker';
 
 import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
@@ -14,23 +15,37 @@ import * as S from './styled';
 registerLocale(LanguageCodeType.ruRU, ru);
 registerLocale(LanguageCodeType.enGB, enGB);
 
-export enum DatePickerSize {
-  s = 28,
-  m = 36,
-  l = 44,
+export enum Size {
+  Small = 'Small',
+  Medium = 'Medium',
+  Large = 'Large',
+}
+
+export enum SizeInPx {
+  Small = 28,
+  Medium = 36,
+  Large = 44,
 }
 
 export { SettingType };
 
 export type DatePickerProps = {
-  pickTime: SettingType;
+  pickTime?: SettingType;
   onChange?: (date: Date | null) => void;
   value?: Date | null;
   minDate?: Date;
-  size?: DatePickerSize;
+  maxDate?: Date;
+  size?: Size;
 };
 
-export function DatePicker({ value, pickTime, onChange, minDate, size = DatePickerSize.l }: DatePickerProps) {
+export function DatePicker({
+  value,
+  pickTime = SettingType.None,
+  onChange,
+  minDate,
+  maxDate,
+  size = Size.Large,
+}: DatePickerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isDatePickerOpen, setOpen] = useState(false);
   const ref = useRef<RDatePicker>(null);
@@ -40,6 +55,9 @@ export function DatePicker({ value, pickTime, onChange, minDate, size = DatePick
 
   const [date, setDate] = useState<null | Date>(value || new Date());
   const [pickTimeCheck, setPickTime] = useState(false);
+
+  const dateRange =
+    minDate && maxDate && minDate > maxDate ? { max: minDate, min: maxDate } : { max: maxDate, min: minDate };
 
   const pickSettings = useMemo(() => {
     const isPickTimeRequire = pickTime === SettingType.Requier;
@@ -57,10 +75,23 @@ export function DatePicker({ value, pickTime, onChange, minDate, size = DatePick
     };
   }, [pickTime, isDatePickerOpen, pickTimeCheck]);
 
-  const handleChange = (date: Date | null): void => {
-    setDate(date);
-    onChange?.(date);
-  };
+  const handleChange = useCallback(
+    (date: Date | null): void => {
+      setDate(date);
+      onChange?.(date);
+    },
+    [onChange],
+  );
+
+  useEffect(() => {
+    if (date && dateRange.min && isBefore(date, dateRange.min)) {
+      handleChange(dateRange.min);
+    } else {
+      if (date && dateRange.max && isAfter(date, dateRange.max)) {
+        handleChange(dateRange.max);
+      }
+    }
+  }, [minDate, maxDate, date, handleChange, dateRange.min, dateRange.max]);
 
   const memoizedCustomContainer = useMemo(
     () =>
@@ -69,13 +100,14 @@ export function DatePicker({ value, pickTime, onChange, minDate, size = DatePick
         setDate,
         pickSettings,
         handleChange,
-        minDate,
+        minDate: dateRange.min,
+        maxDate: dateRange.max,
       }),
-    [date, setDate, pickSettings, minDate],
+    [date, pickSettings, handleChange, dateRange.min, dateRange.max],
   );
 
   const handleCalendarClose = useCallback(() => {
-    ref.current?.setOpen(false);
+    ref?.current?.setOpen(false);
   }, [ref]);
 
   const memoizedCustomHeader = useMemo(() => CustomHeader.bind(null, { languageCode }), [languageCode]);
@@ -84,7 +116,8 @@ export function DatePicker({ value, pickTime, onChange, minDate, size = DatePick
     <S.Container>
       <RDatePicker
         ref={ref}
-        minDate={minDate}
+        minDate={dateRange.min}
+        maxDate={dateRange.max}
         selected={date}
         openToDate={date || undefined}
         onChange={handleChange}
@@ -96,11 +129,11 @@ export function DatePicker({ value, pickTime, onChange, minDate, size = DatePick
         customInput={
           <CustomDateInput
             handleCalendarClose={handleCalendarClose}
-            size={size}
+            size={SizeInPx[size]}
             date={date}
             pickSettings={pickSettings}
             setDate={setDate}
-            minDate={minDate}
+            minDate={dateRange.min}
             handleChange={handleChange}
           />
         }
@@ -113,5 +146,5 @@ export function DatePicker({ value, pickTime, onChange, minDate, size = DatePick
   );
 }
 
-DatePicker.time = SettingType;
-DatePicker.size = DatePickerSize;
+DatePicker.timePicker = SettingType;
+DatePicker.sizes = Size;

@@ -1,4 +1,4 @@
-import isToday from 'date-fns/isToday';
+import isEqual from 'date-fns/isEqual';
 import { Dispatch, ReactNode, SetStateAction, useCallback, useMemo } from 'react';
 import { ReactDatePickerProps } from 'react-datepicker';
 
@@ -7,7 +7,6 @@ import { Switch } from '@sbercloud/uikit-product-switch';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { DatePickerProps, TimePicker } from '../../components';
-import { isAfterMinDate } from '../../helpers/isAfterMinDate';
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import { PickSettingProps } from '../../helpers/types';
 import * as S from './styled';
@@ -28,25 +27,59 @@ export type CustomContainerProps = {
 export function CustomContainer(customProps: CustomContainerCustomProps, props: CustomContainerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { children, className } = props;
-  const { date, pickSettings, handleChange, minDate } = customProps;
+  const { date, pickSettings, handleChange, minDate, maxDate } = customProps;
   const { pickTimeCheck, setPickTime, isPickTimeOptional, isPickTime } = pickSettings;
 
-  const changeStartTime = useCallback((date: Date | null) => {
-    handleChange?.(date);
-  }, []);
+  const changeStartTime = useCallback(
+    (date: Date | null) => {
+      handleChange?.(date);
+    },
+    [handleChange],
+  );
 
   const timeScope = useMemo(() => {
-    const isStartToday = date && isToday(date);
-    if (!isStartToday) return {};
+    const isMinDate =
+      date && minDate && isEqual(new Date(date).setHours(0, 0, 0, 0), new Date(minDate).setHours(0, 0, 0, 0));
+
+    const isMaxDate =
+      date && maxDate && isEqual(new Date(date).setHours(0, 0, 0, 0), new Date(maxDate).setHours(0, 0, 0, 0));
+
+    if (!isMinDate && !isMaxDate) return {};
+
+    if (isMinDate && isMaxDate) {
+      return {
+        minTime: minDate,
+        maxTime: maxDate,
+      };
+    }
+
+    if (isMinDate) {
+      return {
+        minTime: minDate,
+        maxTime: new Date(new Date().setHours(23, 59, 59, 999)),
+      };
+    }
+
+    if (isMaxDate) {
+      return {
+        minTime: new Date(new Date().setHours(0, 0, 0, 0)),
+        maxTime: maxDate,
+      };
+    }
+
     return {
-      minTime: new Date(),
+      minTime: new Date(new Date().setHours(0, 0, 0, 0)),
       maxTime: new Date(new Date().setHours(23, 59, 59, 999)),
     };
-  }, [date]);
+  }, [date, maxDate, minDate]);
+
   const handleLabelClick = useCallback(() => setPickTime?.(!pickTimeCheck), [pickTimeCheck, setPickTime]);
   const handleSwitchChange = useCallback(checked => setPickTime?.(checked), [setPickTime]);
 
-  const disabled = useMemo(() => (minDate && date && !isAfterMinDate(minDate, date)) || false, [minDate, date]);
+  const disabled = useMemo(
+    () => (minDate && date && minDate > date && maxDate && date > maxDate) || false,
+    [minDate, date, maxDate],
+  );
 
   return (
     <div className={className}>
