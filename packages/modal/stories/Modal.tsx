@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { Button } from '@sbercloud/uikit-product-button';
 import { InfoInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
+import { Select } from '@sbercloud/uikit-product-select';
 import { ToggleCard, ToggleGroup } from '@sbercloud/uikit-product-toggle-group';
 import { TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
 
@@ -37,6 +38,7 @@ const Template: Story<ModalProps> = ({ ...args }) => {
   const [isEx1ModalOpen, setEx1ModalOpen] = useState(false);
   const [isEx2ModalOpen, setEx2ModalOpen] = useState(false);
   const [isEx3ModalOpen, setEx3ModalOpen] = useState(false);
+  const [isEx4ModalOpen, setEx4ModalOpen] = useState(false);
 
   const [value, setValue] = useState<number[]>();
 
@@ -48,6 +50,7 @@ const Template: Story<ModalProps> = ({ ...args }) => {
       setEx1ModalOpen(false);
       setEx2ModalOpen(false);
       setEx3ModalOpen(false);
+      setEx4ModalOpen(false);
     }
   };
 
@@ -65,6 +68,7 @@ const Template: Story<ModalProps> = ({ ...args }) => {
       <Button onClick={() => setEx1ModalOpen(true)} text='Open Example 1' />
       <Button onClick={() => setEx2ModalOpen(true)} text='Open Example 2' data-test-id='modal-ex2-button' />
       <Button onClick={() => setEx3ModalOpen(true)} text='Open Example 3' data-test-id='modal-ex3-button' />
+      <Button onClick={() => setEx4ModalOpen(true)} text='Open Example 4' data-test-id='modal-ex3-button' />
 
       <Modal {...args} isOpen={isControlledModalOpen} onClose={closeModal} />
 
@@ -144,6 +148,34 @@ const Template: Story<ModalProps> = ({ ...args }) => {
         }
         align={Modal.aligns.Center}
       />
+
+      <Modal
+        data-test-id='modal-test-ex4'
+        isOpen={isEx4ModalOpen}
+        title='Выберите workspace'
+        subtitle='Для начала работы с ML Space необходимо выбрать workspace'
+        titleTooltip={{
+          content:
+            'Workspace - это среда совместного управления данными и артефактами машинного обучения. Создать новый workspace можно в Профиле.',
+        }}
+        approveButton={{
+          onClick: closeModal,
+          text: 'Выбрать',
+        }}
+        cancelButton={{ onClick: closeModal, text: 'На главную' }}
+        onClose={closeModal}
+        content={
+          <Select
+            options={[
+              { label: 'test', value: 'test' },
+              { label: 'test1', value: 'test1' },
+            ]}
+            type={'large'}
+          />
+        }
+        variant={Modal.variants.Aggressive}
+        disableScroll
+      />
     </Container>
   );
 };
@@ -168,6 +200,11 @@ modal.argTypes = {
       type: 'radio',
     },
     options: Object.values(Modal.variants),
+  },
+  disableScroll: {
+    name: 'disableScroll',
+    description:
+      'Use only if available in a Modal with Dropdown, Select, Datepicker, Timepicker. It may be dangerous...',
   },
 };
 
@@ -200,6 +237,7 @@ modal.args = {
     },
     icon: <InfoInterfaceSVG />,
   },
+  disableScroll: false,
   size: Modal.sizes.Small,
   align: Modal.aligns.Sided,
   variant: Modal.variants.Regular,
@@ -216,5 +254,5 @@ modal.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-DS%E3%83%BBComponents?node-id=5583%3A75932&t=Ga5W1WhnFvUkVcAS-0',
   },
-  badges: [BADGE.BETA],
+  badges: [BADGE.STABLE],
 };

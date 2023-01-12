@@ -23,6 +23,9 @@ export type ModalProps = WithSupportProps<{
   title: string;
   subtitle?: string;
   titleTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
+  /** @warning Use only if available in a Modal with Dropdown, Select, Datepicker, Timepicker. It may be dangerous...
+   */
+  disableScroll?: boolean;
 }>;
 
 export function Modal({
@@ -31,6 +34,7 @@ export function Modal({
   isLoading,
   className,
   content,
+  disableScroll,
   title,
   subtitle,
   titleTooltip,
@@ -59,7 +63,7 @@ export function Modal({
         <ModalPrivate.Content content={<S.StyledSpinner data-test-id='modal__spinner' />} />
       ) : (
         <>
-          <ModalPrivate.Content content={content} />
+          <ModalPrivate.Content content={content} disableScroll={disableScroll} />
           <ModalPrivate.Footer
             approveButton={approveButton}
             cancelButton={cancelButton}

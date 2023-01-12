@@ -46,6 +46,16 @@ test.page(getPage({ isOpen: true }))('Should scroll long content', async t => {
   await t.expect(content.scrollTop).notEql(0);
 });
 
+test.page(getPage({ isOpen: true, disableScroll: true } as Partial<ModalProps>))(
+  `Shouldn't scroll content when disableScroll is true`,
+  async t => {
+    const content = Selector(dataTestIdSelector('modal-private__content'));
+
+    await t.scroll(content, 'bottom');
+    await t.expect(content.scrollTop).eql(0);
+  },
+);
+
 test.page(getPage({ isOpen: false }))(`Shouldn't scroll when content fits the modal`, async t => {
   await t.click(Selector(dataTestIdSelector('modal-ex3-button')));
 

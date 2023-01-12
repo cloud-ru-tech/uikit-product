@@ -10,3 +10,10 @@ export const StyledScroll = styled(Scroll)`
   min-height: 20px;
   padding: 0 24px 0 32px;
 `;
+
+export const Content = styled.div`
+  flex: 1 1 auto;
+
+  min-height: 20px;
+  padding: 0 24px 0 32px;
+`;
