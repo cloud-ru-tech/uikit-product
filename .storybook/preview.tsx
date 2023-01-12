@@ -15,6 +15,10 @@ const COLOR_MAP = {
   [Themes.GreenDark]: '#157552',
 };
 
+export const parameters = {
+  controls: { expanded: true },
+};
+
 addDecorator(withDesign);
 addDecorator((Story, { globals: { locale, theme } }) => {
   const colorizeThemeButton = () => {
