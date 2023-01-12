@@ -5,8 +5,11 @@ import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 export const CheckboxWrap = styled.div`
-  margin-bottom: 12px;
   display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
 `;
 
 export const Amount = styled.span`

@@ -10,7 +10,10 @@ export const buttonClassName = css`
 
 export const RadioWrap = styled.div`
   display: flex;
-  margin-bottom: 12px;
+
+  &:not(:last-child) {
+    margin-bottom: 12px;
+  }
 `;
 
 export const Amount = styled.span`
