@@ -5,17 +5,17 @@ import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
 
 export const FilterWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  grid-gap: 24px;
+
   width: 240px;
   border-radius: 8px;
   padding: 16px;
   background-color: var(${EXPORT_VARS.GREY[0]});
 `;
 
-export const FiltersBlock = styled.div`
-  &:not(:last-child) {
-    margin-bottom: 24px;
-  }
-`;
+export const FiltersBlock = styled.div``;
 
 export const Title = styled.span`
   ${TEXT_1_STYLES};

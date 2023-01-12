@@ -11,7 +11,6 @@ export const FastFilter = styled.div`
   display: flex;
   align-items: center;
   border-radius: 4px;
-  margin-bottom: 8px;
   padding: 8px 12px;
   cursor: pointer;
   fill: var(${COLORS.FILL});
@@ -33,5 +32,7 @@ export const IconWrap = styled.div`
 `;
 
 export const FiltersBlock = styled.div`
-  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  grid-gap: 8px;
 `;
