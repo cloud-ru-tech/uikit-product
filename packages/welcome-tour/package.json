@@ -1,0 +1,39 @@
+{
+  "name": "@sbercloud/uikit-product-welcome-tour",
+  "title": "Welcome Tour",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Package for client unboarding tour on Welcome page",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/welcome-tour",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/welcome-tour"
+  },
+  "author": "Данил Панов <dapanov@sbercloud.ru>",
+  "contributors": [
+    "Данил Панов <dapanov@sbercloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "react-joyride": "2.5.3",
+    "@sbercloud/uikit-product-button": "5.2.6",
+    "@sbercloud/uikit-product-icons": "5.7.0",
+    "@sbercloud/uikit-product-typography": "1.3.0",
+    "@sbercloud/uikit-product-theme": "0.35.2",
+    "@sbercloud/uikit-product-pagination-private": "1.2.31"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
