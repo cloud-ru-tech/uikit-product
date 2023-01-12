@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.13.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.12.0...@sbercloud/uikit-product-datepicker@0.13.0) (2023-01-12)
+
+### Features
+
+- **[FF-1423](https://jira.sbercloud.tech/browse/FF-1423):** added green theme, added maxDate prop, renamed enums ([5eb0d57](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5eb0d57d73c16848f3518a9655c4a3cff40d179f))
+
+### BREAKING CHANGES
+
+- **[FF-1423](https://jira.sbercloud.tech/browse/FF-1423):** added green theme, added maxDate prop, renamed enums
+
 # [0.12.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.76...@sbercloud/uikit-product-datepicker@0.12.0) (2022-12-23)
 
 ### Features
