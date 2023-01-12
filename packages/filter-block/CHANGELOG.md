@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter-block@0.2.82...@sbercloud/uikit-product-filter-block@0.3.0) (2023-01-12)
+
+### Features
+
+- **[LK-1156](https://jira.sbercloud.tech/browse/LK-1156):** add prop for hiding reset filters btn and change margins ([c28bc9a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c28bc9a0f211bc8bba0f5a2552d00a0c04ca7797))
+
 ## [0.2.82](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter-block@0.2.81...@sbercloud/uikit-product-filter-block@0.2.82) (2023-01-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-filter-block
