@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-textarea-private",
   "title": "React Textarea Private",
-  "version": "2.5.14",
+  "version": "2.5.15",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,10 +27,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.2.0",
+    "@sbercloud/uikit-product-button": "5.2.1",
     "@sbercloud/uikit-product-icons": "5.5.0",
     "@sbercloud/uikit-product-theme": "0.35.1",
-    "@sbercloud/uikit-product-typography": "1.2.0",
+    "@sbercloud/uikit-product-typography": "1.3.0",
     "@sbercloud/uikit-product-utils": "3.1.1",
     "merge-refs": "1.0.0",
     "react-textarea-autosize": "8.3.3"

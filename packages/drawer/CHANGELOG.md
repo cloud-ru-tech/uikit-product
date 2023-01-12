@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.16.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-drawer@0.16.40...@sbercloud/uikit-product-drawer@0.16.41) (2023-01-12)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-drawer
+
 ## [0.16.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-drawer@0.16.39...@sbercloud/uikit-product-drawer@0.16.40) (2022-12-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-drawer

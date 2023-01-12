@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-slider@1.2.10...@sbercloud/uikit-product-input-slider@1.2.11) (2023-01-12)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-input-slider
+
 ## [1.2.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-slider@1.2.9...@sbercloud/uikit-product-input-slider@1.2.10) (2022-12-07)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input-slider

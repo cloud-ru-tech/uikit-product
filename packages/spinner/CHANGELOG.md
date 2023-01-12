@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-spinner@2.0.39...@sbercloud/uikit-product-spinner@2.0.40) (2023-01-12)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-spinner
+
 ## [2.0.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-spinner@2.0.38...@sbercloud/uikit-product-spinner@2.0.39) (2022-11-28)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-spinner
