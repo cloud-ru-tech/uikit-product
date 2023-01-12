@@ -10,8 +10,8 @@ export const H1_STYLES = `
 export const H2_STYLES = `
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 32px;
   letter-spacing: -0.01em;
   margin: 0;
 `;
@@ -19,8 +19,8 @@ export const H2_STYLES = `
 export const H2_SEMIBOLD_STYLES = `
   font-style: normal;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 28px;
+  line-height: 32px;
   letter-spacing: -0.01em;
   margin: 0;
 `;
