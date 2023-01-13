@@ -20,10 +20,9 @@ export type FilterBlockProps = {
     activeItems: { [key: string]: string[] | string };
     onFilterChange(title: string, field: string, type: FilterTypes): void;
   };
-  onResetButtonClick(): void;
+  onResetButtonClick?(): void;
   maxFiltersAmount?: number;
   className?: string;
-  hideResetButton?: boolean;
 };
 
 export function FilterBlock({
@@ -32,12 +31,11 @@ export function FilterBlock({
   onResetButtonClick,
   maxFiltersAmount = MAX_FILTER_AMOUNT,
   className,
-  hideResetButton,
 }: FilterBlockProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { onFilterChange } = filters;
   const hasResetButton = Boolean(
-    (Object.entries(filters.activeItems).length || fastFilters?.activeItems.length) && !hideResetButton,
+    (Object.entries(filters.activeItems).length || fastFilters?.activeItems.length) && onResetButtonClick,
   );
 
   return (
