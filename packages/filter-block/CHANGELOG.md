@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter-block@0.3.0...@sbercloud/uikit-product-filter-block@0.3.1) (2023-01-13)
+
+### Bug Fixes
+
+- **[LK-1156](https://jira.sbercloud.tech/browse/LK-1156):** change margins between elements ([0c398ef](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0c398ef86a18bdf6cc35b5cc28cb9beb1bd86179))
+
 # [0.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter-block@0.2.82...@sbercloud/uikit-product-filter-block@0.3.0) (2023-01-12)
 
 ### Features
