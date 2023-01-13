@@ -44,7 +44,7 @@
     "@linaria/cli": "3.0.0-beta.13",
     "@sbercloud/ft-all-linters-pack": "2.1.0",
     "@sbercloud/ft-config-linaria": "1.1.0",
-    "@sbercloud/ft-conventional-changelog": "1.2.1",
+    "@sbercloud/ft-conventional-changelog": "1.2.2",
     "@sbercloud/ft-storybook-readme-addon": "1.1.0",
     "@storybook/addon-actions": "6.5.13",
     "@storybook/addon-essentials": "6.5.13",
