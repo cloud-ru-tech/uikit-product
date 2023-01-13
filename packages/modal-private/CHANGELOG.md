@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal-private@1.1.1...@sbercloud/uikit-product-modal-private@1.2.0) (2023-01-13)
+
+### Features
+
+- **[FF-1502](https://jira.sbercloud.tech/browse/FF-1502):** added disableScroll in Modal props ([a4e07d3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a4e07d3bd196513bcffd1a9f2e3bebc1bddfadcf))
+
 ## [1.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal-private@1.1.0...@sbercloud/uikit-product-modal-private@1.1.1) (2023-01-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-modal-private
