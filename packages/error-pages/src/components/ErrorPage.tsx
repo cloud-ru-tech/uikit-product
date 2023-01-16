@@ -36,8 +36,8 @@ export function ErrorPage({
   const content = getContentByErrorType(errorType);
   const button = getButtonPropsByErrorType(errorType, mainPageUrl);
 
-  const hasMainPageLink = [ErrorType.FrontendError, ErrorType.PageUnavailable].includes(errorType);
-  const hasBackLink = [ErrorType.FrontendError].includes(errorType);
+  const hasMainPageLink = [ErrorType.FrontendError].includes(errorType);
+  const hasBackLink = [ErrorType.FrontendError, ErrorType.PageUnavailable].includes(errorType);
 
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)}>
@@ -59,6 +59,7 @@ export function ErrorPage({
             {hasMainPageLink && (
               <Link href={mainPageUrl} target={'_self'} text={textProvider(languageCode, Texts.MainPageLink)} />
             )}
+
             {hasBackLink && (
               <Link
                 onClick={() => window.history.back()}

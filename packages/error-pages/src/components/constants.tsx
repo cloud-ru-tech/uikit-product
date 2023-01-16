@@ -65,6 +65,7 @@ export function getContentByErrorType(errorType: ErrorType) {
 export function getButtonPropsByErrorType(errorType: ErrorType, mainPageUrl?: string) {
   switch (errorType) {
     case ErrorType.PageNotFound:
+    case ErrorType.PageUnavailable:
       return {
         text: Texts.MainPageLink,
         icon: <HomeOutlineInterfaceSVG />,
