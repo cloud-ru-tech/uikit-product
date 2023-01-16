@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.3 (2023-01-16)
+
+### Bug Fixes
+
+- PageUnavailable replace reload button with mainPage button ([5b8d5b0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5b8d5b060deb34749b16c6fca763162ccedd7972))
+
 ## [0.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.6.1...@sbercloud/uikit-product-error-pages@0.6.2) (2023-01-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-error-pages
