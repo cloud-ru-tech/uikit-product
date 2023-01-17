@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactNode } from 'react';
+import { ChangeEvent, FocusEvent, ReactNode } from 'react';
 
 import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-product-input-decorator-private';
 import { SimpleInput, SimpleInputProps } from '@sbercloud/uikit-product-input-private';
@@ -6,6 +6,7 @@ import { extractSupportProps, useUniqueId, WithSupportProps } from '@sbercloud/u
 
 export type InputMasterProps = WithSupportProps<{
   onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event?: FocusEvent<HTMLInputElement>) => void;
   children: (props: SimpleInputProps) => ReactNode;
   value?: string;
   label?: string;
@@ -23,6 +24,7 @@ export type InputMasterProps = WithSupportProps<{
 
 export function InputMaster({
   onChange,
+  onBlur,
   children,
   value = '',
   label,
@@ -56,6 +58,7 @@ export function InputMaster({
         id,
         value,
         onChange,
+        onBlur,
         error: Boolean(error),
         autoComplete,
         name,

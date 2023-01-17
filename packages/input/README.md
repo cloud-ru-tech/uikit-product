@@ -15,6 +15,7 @@
 ```ts
 type InputCommonProps = WithSupportProps<{
   onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event?: FocusEvent<HTMLInputElement>) => void;
   value?: string;
   label?: string;
   labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
@@ -36,6 +37,7 @@ type InputCommonProps = WithSupportProps<{
 ```ts
 type InputMaskProps = WithSupportProps<{
   onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event?: FocusEvent<HTMLInputElement>) => void;
   mask: InputMaskPrivateProps['mask'];;
   value?: string;
   label?: string;
@@ -57,6 +59,7 @@ type InputMaskProps = WithSupportProps<{
 ```ts
 type InputPhoneProps = WithSupportProps<{
   onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event?: FocusEvent<HTMLInputElement>) => void;
   value?: string;
   label?: string;
   labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
@@ -77,6 +80,7 @@ type InputPhoneProps = WithSupportProps<{
 ```ts
 type InputSecurityProps = WithSupportProps<{
   onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event?: FocusEvent<HTMLInputElement>) => void;
   value?: string;
   label?: string;
   labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
@@ -98,6 +102,7 @@ type InputSecurityProps = WithSupportProps<{
 ```ts
 type InputOverviewProps = WithSupportProps<{
   onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event?: FocusEvent<HTMLInputElement>) => void;
   onMoreButtonClick: () => void;
   moreButtonTooltipText?: string;
   value?: string;
