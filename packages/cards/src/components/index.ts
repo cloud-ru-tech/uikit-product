@@ -4,5 +4,6 @@ export * from './CardImage';
 export * from './CardQuickAction';
 export * from './CardResult';
 export * from './CardsPanel';
+export * from './CardProduct';
 export * from './CardTopic';
 export * from './CardWide';

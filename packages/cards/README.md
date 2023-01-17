@@ -99,6 +99,25 @@ type CardWideProps = WithSupportProps<{
     buttons: ButtonProps[];
     imageSrc: string;
 }>;
+
+type CardProductProps = WithSupportProps<{
+  icon: JSX.Element;
+  title: string;
+  description: string;
+  className?: string;
+  actions?: ReactNode;
+  tag?:
+    | {
+        view: CardTag.Status;
+        text: string;
+        type: Types;
+      }
+    | {
+        view: CardTag.Colored;
+        text: string;
+        color: Colors;
+      };
+}>;
 ```
 
 [Changelog](./CHANGELOG.md)
