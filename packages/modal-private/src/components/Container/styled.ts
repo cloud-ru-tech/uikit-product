@@ -27,7 +27,6 @@ export const contentClassname = css`
 
   box-sizing: border-box;
   max-width: calc(100vw - 48px);
-  min-height: 280px;
   max-height: calc(100vh - 48px);
   padding: 32px 0;
 
