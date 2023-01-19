@@ -22,19 +22,23 @@ export function NavigationItem({ value, label, counter, disabled }: NavigationIt
   const changeTabHandler = () => {
     if (disabled) return;
     setSelectedTab(value);
-
-    // Shift
-    if (customRef.current && tabsWrapperRef?.current) {
-      //Tabs
-      const clientWidth = tabsWrapperRef.current.clientWidth;
-
-      // Tab
-      const offset = customRef.current.offsetLeft;
-      const width = customRef.current.clientWidth;
-
-      tabsWrapperRef.current.scrollTo({ left: offset - clientWidth / 2 + width / 2, behavior: 'smooth' });
-    }
   };
+
+  useEffect(() => {
+    if (selectedTab !== value) return;
+    if (selectedTab === value) {
+      if (customRef.current && tabsWrapperRef?.current) {
+        //Tabs
+        const clientWidth = tabsWrapperRef.current.clientWidth;
+
+        // Tab
+        const offset = customRef.current.offsetLeft;
+        const width = customRef.current.clientWidth;
+
+        tabsWrapperRef.current.scrollTo({ left: offset - clientWidth / 2 + width / 2, behavior: 'smooth' });
+      }
+    }
+  }, [selectedTab]);
 
   useEffect(() => {
     if (isSelected) {

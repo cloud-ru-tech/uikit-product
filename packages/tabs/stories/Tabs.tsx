@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
+import { useArgs } from '@storybook/client-api';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
@@ -38,15 +38,17 @@ const Template: Story<Tabs.ContainerProps & { 'data-test-id'?: string; className
   { ...args },
   { globals: { theme } },
 ) => {
-  const [currentTab, setCurrentTab] = useState(args.value || 'id2');
+  const [{ value }, updateArgs] = useArgs();
+  const handleClick = (tab: string) => updateArgs({ value: tab });
+
   return (
-    <Tabs.Container {...args} value={args.value || currentTab} onChange={setCurrentTab}>
+    <Tabs.Container {...args} value={args.value || 'id2'} onChange={handleClick}>
       <Tabs.Navigation data-test-id={args['data-test-id']} className={args.className}>
         <Tabs.NavigationItem value={'id1'} label={'First'} />
         <Tabs.NavigationItem value={'id2'} label={'Second'} counter={1} />
         <Tabs.NavigationItem value={'id3'} label={'Third'} disabled />
         <Tabs.NavigationItem value={'id4'} label={'Fourth'} counter={123} />
-        <Tabs.NavigationItem value={'id5'} label={'Fifth'} disabled={currentTab !== 'id4'} />
+        <Tabs.NavigationItem value={'id5'} label={'Fifth'} disabled={value !== 'id4'} />
         <Tabs.NavigationItem value={'id6'} label={'Six'} />
         <Tabs.NavigationItem value={'id7'} label={'Seven'} counter={1} />
         <Tabs.NavigationItem value={'id8'} label={'Eight'} />
@@ -108,8 +110,29 @@ tabs.parameters = {
 };
 tabs.argTypes = {
   value: {
-    options: ['id1', 'id2', 'id3', 'id4', 'id5'],
-    control: { type: 'radio' },
+    options: [
+      'id1',
+      'id2',
+      'id3',
+      'id4',
+      'id5',
+      'id6',
+      'id7',
+      'id8',
+      'id9',
+      'id10',
+      'id11',
+      'id12',
+      'id13',
+      'id14',
+      'id15',
+      'id16',
+      'id17',
+      'id18',
+      'id19',
+      'id20',
+    ],
+    control: { type: 'select' },
   },
   className: {
     control: { type: 'text' },

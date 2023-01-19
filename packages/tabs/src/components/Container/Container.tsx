@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useState } from 'react';
+import { ReactElement, useState } from 'react';
 
 import { Counter, CounterType } from '@sbercloud/uikit-product-counter';
 
@@ -22,26 +22,17 @@ export function Container({
 }: ContainerProps) {
   const [selectedTabRef, setSelectedTabRef] = useState<SelectedTabRef>(null);
   const [tabsWrapperRef, setTabsWrapperRef] = useState<TabsWrapperRef>(null);
-  const [controlledSelectedTab, setControlledSelectedTab] = useState(value);
   const [uncontrolledSelectedTab, setUncontrolledSelectedTab] = useState(value);
 
-  useEffect(() => {
-    if (value !== controlledSelectedTab) {
-      setUncontrolledSelectedTab(value);
-      setControlledSelectedTab(value);
-    }
-  }, [controlledSelectedTab, value]);
+  const selectedTab = onChange ? value : uncontrolledSelectedTab;
 
-  const onTabChangeHandler = (tab: TabId) => {
-    setUncontrolledSelectedTab(tab);
-    onChange?.(tab);
-  };
+  const onTabChangeHandler = (tab: TabId) => (onChange ? onChange(tab) : setUncontrolledSelectedTab(tab));
 
   return (
     <TabContext.Provider
       value={{
         counterType,
-        selectedTab: uncontrolledSelectedTab,
+        selectedTab,
         setSelectedTab: onTabChangeHandler,
         tabsWrapperRef,
         setTabsWrapperRef,
