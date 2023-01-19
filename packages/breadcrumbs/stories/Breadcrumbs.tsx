@@ -1,5 +1,5 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { useState } from 'react';
+import { PropsWithChildren, useState } from 'react';
 
 import { Button, ButtonIcon, CopyButton } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
@@ -16,26 +16,52 @@ export default {
   component: Breadcrumbs,
 } as Meta;
 
+function CaseWrapper({ children, title }: PropsWithChildren<{ title: string }>) {
+  return (
+    <div style={{ marginBottom: 50 }}>
+      <h5>{title}</h5>
+      {children}
+    </div>
+  );
+}
+
 const Template: Story<BreadcrumbsProps> = ({ ...args }) => {
   const [data, setData] = useState<BreadcrumbItem[]>([]);
   return (
     <>
-      <Breadcrumbs {...args} items={items} />
-      <Breadcrumbs {...args} items={longItems}>
-        <CopyButton text='test' as={ButtonIcon} variant={ButtonIcon.variants.Color} />
-      </Breadcrumbs>
-      <Divider />
-      <Breadcrumbs {...args} items={longSingle} />
-      <Divider />
-      <Breadcrumbs items={longTwice}>
-        <CopyButton text='link' as={ButtonIcon} variant={ButtonIcon.variants.Color} />
-      </Breadcrumbs>
-      <Divider />
-      <Breadcrumbs {...args} items={docker} />
-      <Divider variant={Divider.variants.Extra} />
-      <Breadcrumbs {...args} items={data}>
-        <CopyButton text='test' as={ButtonIcon} variant={ButtonIcon.variants.Color} />
-      </Breadcrumbs>
+      <CaseWrapper title='простой'>
+        <Breadcrumbs {...args} items={items} />
+      </CaseWrapper>
+
+      <CaseWrapper title='длинные айтемы + copy кнопка'>
+        <Breadcrumbs {...args} items={longItems}>
+          <CopyButton text='test' as={ButtonIcon} variant={ButtonIcon.variants.Color} />
+        </Breadcrumbs>
+        <Divider />
+      </CaseWrapper>
+
+      <CaseWrapper title='один длинный айтем'>
+        <Breadcrumbs {...args} items={longSingle} />
+        <Divider />
+      </CaseWrapper>
+
+      <CaseWrapper title='два длинных айтема'>
+        <Breadcrumbs {...args} items={longTwice}>
+          <CopyButton text='link' as={ButtonIcon} variant={ButtonIcon.variants.Color} />
+        </Breadcrumbs>
+        <Divider />
+      </CaseWrapper>
+
+      <CaseWrapper title='docker'>
+        <Breadcrumbs {...args} items={docker} />
+        <Divider variant={Divider.variants.Extra} />
+      </CaseWrapper>
+
+      <CaseWrapper title={data.length ? 'Данные установлены' : 'Пустой массив, нажмите "Set data" для заполнения'}>
+        <Breadcrumbs {...args} items={data}>
+          <CopyButton text='test' as={ButtonIcon} variant={ButtonIcon.variants.Color} />
+        </Breadcrumbs>
+      </CaseWrapper>
       <Button onClick={() => setData(fm)} text='Set data' />
     </>
   );

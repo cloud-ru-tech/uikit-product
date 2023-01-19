@@ -3,6 +3,8 @@ import { styled } from '@linaria/react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
+import { Size } from '../helpers/types';
+
 const { COLORS_BREADCRUMBS } = DEPRECATED_EXPORT_VARS;
 
 export const ContainerStyled = styled.div`
@@ -25,8 +27,16 @@ export const ItemStyled = styled.div<{ width?: number }>`
   flex-direction: row;
   align-items: center;
   width: ${({ width }) => (width ? `${width}px` : 'auto')};
-  font-size: 20px;
-  line-height: 26px;
+
+  &[data-size=${Size.Big}] {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  &[data-size=${Size.Small}] {
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   &[data-fixed-width] {
     max-width: 200px;

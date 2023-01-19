@@ -6,7 +6,7 @@ import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 
 import { getDiffWidth, getSubstr, getWidth, isEllipsisActive, measureText, toStateItems } from '../helpers/calc';
 import { CRUMB_MAX_LENGTH } from '../helpers/constants';
-import { BreadcrumbItem, StateItem } from '../helpers/types';
+import { BreadcrumbItem, Size, StateItem } from '../helpers/types';
 import {
   chevronClassName,
   ChildrenContainerStyled,
@@ -26,6 +26,7 @@ export type BreadcrumbsProps = {
   isFixedWidth?: boolean;
   renderItem?: (item: StateItem, index: number) => React.ReactNode;
   crumbMaxLength?: number;
+  size?: Size;
 };
 
 export const Breadcrumbs = ({
@@ -37,6 +38,7 @@ export const Breadcrumbs = ({
   isFixedWidth,
   renderItem,
   crumbMaxLength = CRUMB_MAX_LENGTH,
+  size = Size.Big,
 }: BreadcrumbsProps): JSX.Element => {
   const [isVisible, setVisible] = useState(false);
   const [isTextCut, setTextCut] = useState(false);
@@ -243,6 +245,7 @@ export const Breadcrumbs = ({
         <ItemStyled
           key={item.key || item.link || index}
           data-fixed-width={Boolean(isFixedWidth) || undefined}
+          data-size={size}
           width={item.width}
         >
           {index !== 0 && <ChevronRightInterfaceSVG className={chevronClassName} data-chevron />}
@@ -272,3 +275,5 @@ export const Breadcrumbs = ({
     </ContainerStyled>
   );
 };
+
+Breadcrumbs.size = Size;

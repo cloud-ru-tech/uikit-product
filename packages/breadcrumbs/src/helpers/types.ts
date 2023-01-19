@@ -1,3 +1,8 @@
+export enum Size {
+  Big = 'big',
+  Small = 'small',
+}
+
 export type BreadcrumbItem = {
   text: string | React.ReactElement;
   link?: unknown;
