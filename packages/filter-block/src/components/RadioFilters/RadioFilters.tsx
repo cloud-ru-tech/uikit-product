@@ -40,7 +40,7 @@ export function RadioFilters({ filter, maxFiltersAmount, onChange, activeRadio }
       <RadioGroup value={activeRadio} onChange={handleChange}>
         {filter.items.slice(0, sliceTo).map(item => (
           <S.RadioWrap key={item.id}>
-            <Radio label={item.name} value={item.name} />
+            <Radio label={item.name} value={item.id} />
             <S.Amount>{item.amount}</S.Amount>
           </S.RadioWrap>
         ))}

@@ -17,9 +17,9 @@ export function FastFilters({ fastFilters }: FastFiltersProps) {
     <S.FiltersBlock>
       {items.map(item => (
         <S.FastFilter
-          onClick={() => onFilterChange(item.name)}
-          data-active={activeItems.includes(item.name) || undefined}
-          key={item.name}
+          onClick={() => onFilterChange(item.id)}
+          data-active={activeItems.includes(item.id) || undefined}
+          key={item.id}
         >
           <S.IconWrap>{item.icon}</S.IconWrap>
           {item.name}

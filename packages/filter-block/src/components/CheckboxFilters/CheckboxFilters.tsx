@@ -37,8 +37,8 @@ export function CheckboxFilters({ filter, maxFiltersAmount, onChange, activeItem
         <S.CheckboxWrap key={item.id}>
           <Checkbox
             label={item.name}
-            checked={activeItems.includes(item.name)}
-            handleChange={() => onChange(filter.title, item.name, filter.type)}
+            checked={activeItems.includes(item.id)}
+            handleChange={() => onChange(filter.title, item.id, filter.type)}
           />
           <S.Amount>{item.amount}</S.Amount>
         </S.CheckboxWrap>

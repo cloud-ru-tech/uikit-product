@@ -5,13 +5,13 @@ import { FilterTypes } from './constants';
 export type FilterItem = {
   name: string;
   amount?: number;
-  id: ReactText;
+  id: string;
 };
 
 export type FastFilters = {
   icon: ReactElement;
   name: string;
-  id: ReactText;
+  id: string;
 }[];
 
 export type Filters = {
