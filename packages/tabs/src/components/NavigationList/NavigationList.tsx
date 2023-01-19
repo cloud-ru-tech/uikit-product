@@ -16,7 +16,7 @@ export type NavigationListProps = WithSupportProps<{
 export function NavigationList({ children, className, ...rest }: NavigationListProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
-  const { selectedTabRef, size, setTabsWrapperRef } = useContext(TabContext);
+  const { selectedTabRef, setTabsWrapperRef } = useContext(TabContext);
   const forceUpdate = useForceUpdate();
   const isLeftShadow = containerRef?.current?.scrollLeft !== 0;
   const isRightShadow =
@@ -53,9 +53,7 @@ export function NavigationList({ children, className, ...rest }: NavigationListP
         onPointerDown={handlePointerDown}
         onClickCapture={handleClickCapture}
       >
-        <S.GroupStyled data-size={size} data-test-id={'tabs__navigation-list'}>
-          {children}
-        </S.GroupStyled>
+        <S.GroupStyled data-test-id={'tabs__navigation-list'}>{children}</S.GroupStyled>
         {containerRef?.current && selectedTabRef?.current && (
           <Highlighter left={selectedTabLeft} width={selectedTabWidth} />
         )}

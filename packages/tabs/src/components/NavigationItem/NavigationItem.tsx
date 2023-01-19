@@ -15,7 +15,7 @@ export type NavigationItemProps = WithSupportProps<{
 }>;
 
 export function NavigationItem({ value, label, counter, disabled }: NavigationItemProps) {
-  const { selectedTab, setSelectedTab, counterType, setSelectedTabRef, tabsWrapperRef } = useContext(TabContext);
+  const { selectedTab, setSelectedTab, counterType, setSelectedTabRef, tabsWrapperRef, size } = useContext(TabContext);
   const customRef: SelectedTabRef = useRef(null);
   const isSelected = value === selectedTab;
 
@@ -47,6 +47,7 @@ export function NavigationItem({ value, label, counter, disabled }: NavigationIt
       ref={customRef}
       data-selected={isSelected}
       data-disabled={disabled ? 'true' : undefined}
+      data-size={size}
       key={`tabs__navigation-list-item:${value}`}
       role='tab'
       tabIndex={0}

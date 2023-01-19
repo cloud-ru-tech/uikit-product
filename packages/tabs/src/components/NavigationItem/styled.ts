@@ -4,6 +4,7 @@ import { Counter } from '@sbercloud/uikit-product-counter';
 import { H4_STYLES } from '@sbercloud/uikit-product-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
+import { Sizes } from '../../helpers/types';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -34,6 +35,24 @@ export const Tab = styled.li`
       cursor: pointer;
       color: var(${COLORS.text.unselected.hover});
     }
+  }
+
+  padding: 0 12px;
+
+  :first-child {
+    padding-left: 0;
+  }
+
+  :last-child {
+    parring-right: 0;
+  }
+
+  &[data-size='${Sizes.Medium}'] {
+    padding-bottom: 8px;
+  }
+
+  &[data-size='${Sizes.Large}'] {
+    padding-bottom: 16px;
   }
 `;
 

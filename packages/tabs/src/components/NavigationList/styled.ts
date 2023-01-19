@@ -2,7 +2,6 @@ import { styled } from '@linaria/react';
 
 import { ANIMATIONS, DEFAULT_STYLES } from '@sbercloud/uikit-product-utils';
 
-import { Sizes } from '../../helpers/types';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -22,18 +21,6 @@ export const GroupStyled = styled.ul`
   width: 100%;
   max-width: 100%;
   user-select: none;
-
-  & > * + * {
-    margin-left: 24px;
-  }
-
-  &[data-size='${Sizes.Medium}'] {
-    padding-bottom: 8px;
-  }
-
-  &[data-size='${Sizes.Large}'] {
-    padding-bottom: 16px;
-  }
 `;
 
 export const GroupStyledContainer = styled.div`
