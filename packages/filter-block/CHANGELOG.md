@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2023-01-20)
+
+### BREAKING CHANGES
+
+- **[LK-1156](https://jira.sbercloud.tech/browse/LK-1156):** change filter identificator from name to id and change id type ([9d710ed](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d710edae436a0a4defc8e12ab72ad7dcf6e165e))
+
 ## [0.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-filter-block@0.3.1...@sbercloud/uikit-product-filter-block@0.3.2) (2023-01-13)
 
 ### Bug Fixes
