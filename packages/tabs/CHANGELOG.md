@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2023-01-20)
+
+### BREAKING CHANGES
+
+- **[SRVL-410](https://jira.sbercloud.tech/browse/SRVL-410):** controlled mode and uncontrolled are independent, fix scroll on value change any kind ([77b2496](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/77b2496fa2a787dd3b3c7b4f2ed9242debdf7ca5))
+
 ## 1.2.6 (2023-01-19)
 
 ### Bug Fixes
