@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2023-01-20)
+
+### Features
+
+- **[FF-1509](https://jira.sbercloud.tech/browse/FF-1509):** add small size support to breadcrumbs ([a64b341](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a64b34184e7916c4d2a7c66516a0dacc819897a1))
+
 ## [0.11.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-breadcrumbs@0.11.9...@sbercloud/uikit-product-breadcrumbs@0.11.10) (2023-01-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-breadcrumbs
