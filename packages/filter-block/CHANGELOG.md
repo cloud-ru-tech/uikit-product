@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2023-01-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-filter-block
+
 # 0.4.0 (2023-01-20)
 
 ### BREAKING CHANGES

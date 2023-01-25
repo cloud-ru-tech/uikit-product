@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.26.42 (2023-01-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-select
+
 ## 0.26.41 (2023-01-19)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-select

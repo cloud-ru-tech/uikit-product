@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.10 (2023-01-25)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-input
+
 ## [3.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input@3.0.8...@sbercloud/uikit-product-input@3.0.9) (2023-01-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.1 (2023-01-25)
+
+### Bug Fixes
+
+- **[FF-1532](https://jira.sbercloud.tech/browse/FF-1532):** fix custom type colors in GreenTheme ([ece14f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ece14f1037e44cc3dba82e5318ba6a417aa4e7c4))
+
 # [1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.6.2...@sbercloud/uikit-product-predefined-icons-private@1.1.0) (2022-12-01)
 
 ### Features
