@@ -1,3 +1,5 @@
+import { cx } from '@linaria/core';
+
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { extractDataProps } from '@sbercloud/uikit-product-utils';
 
@@ -34,7 +36,7 @@ export function TruncateString({
           className={className}
           placement={placement}
           tag={tag}
-          textClassName={textClassName}
+          textClassName={cx(textClassName, Typography.textClassName)}
           hideTooltip={hideTooltip}
           {...extractDataProps(rest)}
         />
@@ -57,7 +59,7 @@ export function TruncateString({
           className={className}
           placement={placement}
           tag={tag}
-          textClassName={textClassName}
+          textClassName={cx(textClassName, Typography.textClassName)}
           maxLines={maxLines}
           hideTooltip={hideTooltip}
           {...extractDataProps(rest)}

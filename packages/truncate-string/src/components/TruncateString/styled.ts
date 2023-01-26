@@ -69,3 +69,7 @@ export const text3 = css`
 export const text4 = css`
   ${Typography.TEXT_4_STYLES};
 `;
+
+export const textClassName = css`
+  cursor: default;
+`;
