@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2023-01-26)
+
+### Features
+
+- **[LK-804](https://jira.sbercloud.tech/browse/LK-804):** added onBlur to InputCommon ([a7b9b84](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a7b9b849391b737e923263cc81a9df6976e7d418))
+
 ## 3.0.10 (2023-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-input
