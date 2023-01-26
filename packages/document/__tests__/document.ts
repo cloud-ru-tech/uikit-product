@@ -29,7 +29,7 @@ test('Renders correctly without MIMEType prop', async t => {
   const control = await Selector(dataTestIdSelector(noMimeTypeTestId));
 
   await t.expect(control.find(dataTestIdSelector('document__type')).textContent).eql('TXT');
-  await t.expect(control.find(dataTestIdSelector('document__size')).textContent).eql('764.46 Kb');
+  await t.expect(control.find(dataTestIdSelector('document__size')).textContent).eql('764.46 КБ');
 });
 
 test('Shows tooltip on hover for long display name', async t => {

@@ -3,11 +3,11 @@ import debounce from 'lodash.debounce';
 import { MouseEvent, useEffect, useRef, useState } from 'react';
 
 import { downloadFile } from '@sbercloud/ft-download-file';
-import { formatBytes } from '@sbercloud/ft-formatters';
+import { formatBytes, Lang } from '@sbercloud/ft-formatters';
 import { ButtonIcon, ButtonIconProps } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG, FileInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { getFileType } from '../helpers';
 import { FileProps } from '../types';
@@ -25,6 +25,8 @@ export type DocumentProps = WithSupportProps<{
 }>;
 
 export function Document({ file, disabled, onClick, removeButton, className, ...rest }: DocumentProps) {
+  const { languageCode } = useLanguage();
+
   const contentRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef<HTMLSpanElement | null>(null);
 
@@ -66,7 +68,7 @@ export function Document({ file, disabled, onClick, removeButton, className, ...
   };
 
   const fileName = file.displayName || file.name;
-  const fileSize = file.size && formatBytes(file.size);
+  const fileSize = file.size && formatBytes(file.size, languageCode as string as Lang);
   const fileType = getFileType(file);
 
   const handleRemoveClick = (e: MouseEvent) => {

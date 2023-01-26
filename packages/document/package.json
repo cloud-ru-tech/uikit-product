@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-download-file": "1.1.1",
-    "@sbercloud/ft-formatters": "1.1.1",
+    "@sbercloud/ft-formatters": "1.5.2",
     "@sbercloud/uikit-product-button": "5.2.2",
     "@sbercloud/uikit-product-icons": "5.5.0",
     "@sbercloud/uikit-product-theme": "0.35.1",
