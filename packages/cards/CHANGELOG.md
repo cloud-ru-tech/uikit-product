@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2023-01-26)
+
+### Features
+
+- **[FF-1424](https://jira.sbercloud.tech/browse/FF-1424):** add-card-product ([4c728ba](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4c728ba2daa97053c7de28e9f17bc73b1d9fea71))
+
 ## 1.2.2 (2023-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-cards
