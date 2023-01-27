@@ -37,7 +37,7 @@ test.page(visit({ open: true, cardsCount: 2 }))(`Render items`, async t => {
   await t.expect(Selector(dataTestIdSelector(testId)).textContent).contains('Event type 0');
   await t.expect(Selector(dataTestIdSelector(testId)).textContent).contains('Event type 1');
 
-  await t.expect(Selector(dataTestIdSelector(cardsWrapperId)).childNodeCount).eql(2);
+  await t.expect(Selector(dataTestIdSelector(cardsWrapperId)).child(0).child(0).childNodeCount).eql(2);
 });
 
 test.page(visit({ open: true }))(`Click close button`, async t => {
@@ -57,6 +57,7 @@ test.page(visit({ open: false, cardsCount: 11 }))(`Hide card notification `, asy
   const openButton = Selector(dataTestIdSelector(openNotificationPanelButtonId));
   const closeButton = Selector(dataTestIdSelector(closeButtonId));
   const wrapper = Selector(dataTestIdSelector(cardsWrapperId));
+  const infiniteScrollWrapper = wrapper.child(0).child(0);
 
   await t.resizeWindow(1000, 900);
 
@@ -66,12 +67,24 @@ test.page(visit({ open: false, cardsCount: 11 }))(`Hide card notification `, asy
   await t.click(openButton);
 
   for (const x of [0, 1, 2, 3, 4, 5, 6, 7]) {
-    await t.expect(wrapper.child(x).find(dataTestIdSelector(notificationCardBadgeId)).exists).notOk();
+    await t.expect(infiniteScrollWrapper.child(x).find(dataTestIdSelector(notificationCardBadgeId)).exists).notOk();
   }
 
   await t.scroll(wrapper, 0, 1000).wait(200);
 
   for (const x of [8, 9, 10]) {
-    await t.expect(wrapper.child(x).find(dataTestIdSelector(notificationCardBadgeId)).exists).ok();
+    await t.expect(infiniteScrollWrapper.child(x).find(dataTestIdSelector(notificationCardBadgeId)).exists).ok();
   }
+});
+
+test.page(visit({ open: false, cardsCount: 5 }))(`Loading new notifications `, async t => {
+  const openButton = Selector(dataTestIdSelector(openNotificationPanelButtonId));
+  const wrapper = Selector(dataTestIdSelector(cardsWrapperId));
+  const infiniteScrollWrapper = wrapper.child(0).child(0);
+
+  await t.click(openButton);
+
+  await t.expect(infiniteScrollWrapper.childNodeCount).eql(5);
+  await t.scroll(wrapper, 0, 1000).wait(500);
+  await t.expect(infiniteScrollWrapper.childNodeCount).eql(10);
 });

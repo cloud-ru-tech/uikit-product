@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { Avatar } from '@sbercloud/uikit-product-avatar';
 import { Badge } from '@sbercloud/uikit-product-badge-private';
@@ -57,8 +57,9 @@ const defaultCard: Card = {
   },
 };
 
-const Template: Story<NotificationPopupProps & { cardsCount: number }> = ({ ...args }) => {
-  const { cardsCount, onReadAllButtonClick, open } = args;
+const Template: Story<NotificationPopupProps & { cardsCount: number; totalCardsCount: number }> = ({ ...args }) => {
+  const { cardsCount, totalCardsCount, onReadAllButtonClick, open } = args;
+  const [hasMore, setHasMore] = useState(true);
   const [cards, setCards] = useState<Card[]>([]);
   const [isOpen, setIsOpen] = useState(true);
 
@@ -71,6 +72,34 @@ const Template: Story<NotificationPopupProps & { cardsCount: number }> = ({ ...a
   const handleCardDelete = (id: string) => {
     setCards(cards => cards.filter(card => card.id !== id));
   };
+
+  const fetchMore = useCallback(() => {
+    if (cards.length >= totalCardsCount) {
+      setHasMore(false);
+      return;
+    }
+
+    setTimeout(() => {
+      setCards(
+        cards.concat(
+          new Array(cardsCount).fill(args.cards[0]).map((el, index) => ({
+            ...el,
+            content: {
+              ...el.content,
+              title: 'Loaded card. Event type ' + index,
+            },
+            header: {
+              ...el.header,
+            },
+            id: 'Loaded card. Event type ' + index,
+            type: redCardsIndex.includes(index)
+              ? NotificationPopup.cardTypes.Alarm
+              : NotificationPopup.cardTypes.Default,
+          })),
+        ),
+      );
+    }, 500);
+  }, [cards, cardsCount, totalCardsCount]);
 
   useEffect(() => {
     setCards(
@@ -100,6 +129,10 @@ const Template: Story<NotificationPopupProps & { cardsCount: number }> = ({ ...a
         open={isOpen}
         onToggle={setIsOpen}
         cards={cards}
+        loadCards={{
+          fetchMore,
+          hasMore,
+        }}
         onReadAllButtonClick={onReadAllButtonClick ? handleReadAll : undefined}
         onCardRead={handleCardRead}
         onCardDelete={handleCardDelete}
@@ -122,8 +155,17 @@ notificationPanel.args = {
 };
 
 notificationPanel.argTypes = {
+  totalCardsCount: {
+    name: '[Stories]: Total cards count',
+    defaultValue: 50,
+    control: {
+      type: 'range',
+      min: 0,
+      max: 100,
+    },
+  },
   cardsCount: {
-    name: '[Stories]: Cards count',
+    name: '[Stories]: Cards to load count',
     defaultValue: 11,
     control: {
       type: 'range',

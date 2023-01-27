@@ -6,6 +6,7 @@ import {
   useInteractions,
 } from '@floating-ui/react-dom-interactions';
 import { ReactNode, useEffect, useMemo, useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 import { ButtonGhost, ButtonIcon, ButtonIconTransparent } from '@sbercloud/uikit-product-button';
 import { Chip } from '@sbercloud/uikit-product-chip';
@@ -17,8 +18,9 @@ import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/u
 
 import { textProvider, Texts } from '../../helpers';
 import { Card, CardType } from '../../types';
+import { Loading } from '../Loading';
 import { NotificationCard } from '../NotificationCard';
-import { Tab } from './constants';
+import { ID_WRAPPER, Tab } from './constants';
 import * as S from './styled';
 
 export type NotificationPopupProps = WithSupportProps<{
@@ -26,6 +28,10 @@ export type NotificationPopupProps = WithSupportProps<{
   cards: Card[];
   headerTooltip?: string;
   open: boolean;
+  loadCards?: {
+    fetchMore(): void;
+    hasMore: boolean;
+  };
   onToggle(value: boolean): void;
   onCardRead(id: string): void;
   onCardDelete(id: string): void;
@@ -37,6 +43,7 @@ export function NotificationPopup({
   headerTooltip,
   open,
   cards,
+  loadCards,
   onReadAllButtonClick,
   onSeeAllButtonClick,
   onToggle,
@@ -135,16 +142,25 @@ export function NotificationPopup({
             )}
 
             {hasCardsDataOnTab ? (
-              <S.CardsWrapper data-test-id='notification-panel__cards-wrapper'>
-                {selectedTabCards.map(card => (
-                  <S.CardWrapper key={card.id}>
-                    <NotificationCard
-                      card={card}
-                      onVisible={() => handleCardVisible(card.id)}
-                      onDelete={() => onCardDelete(card.id)}
-                    />
-                  </S.CardWrapper>
-                ))}
+              <S.CardsWrapper data-test-id='notification-panel__cards-wrapper' id={ID_WRAPPER}>
+                <InfiniteScroll
+                  dataLength={cards.length}
+                  next={loadCards ? loadCards.fetchMore : () => {}}
+                  hasMore={Boolean(loadCards?.hasMore)}
+                  loader={<Loading />}
+                  scrollableTarget={ID_WRAPPER}
+                >
+                  {selectedTabCards.map(card => (
+                    <S.CardWrapper key={card.id}>
+                      <NotificationCard
+                        card={card}
+                        onVisible={() => handleCardVisible(card.id)}
+                        onDelete={() => onCardDelete(card.id)}
+                      />
+                    </S.CardWrapper>
+                  ))}
+                </InfiniteScroll>
+                <S.FakeChild />
               </S.CardsWrapper>
             ) : (
               <S.NoDataWrapper>

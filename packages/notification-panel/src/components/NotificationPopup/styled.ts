@@ -61,12 +61,25 @@ export const ChipsWrapper = styled.div`
 
 export const CardsWrapper = styled.div`
   padding-left: 8px;
+  position: relative;
   overflow-y: auto;
+`;
+
+export const FakeChild = styled.div`
+  position: absolute;
+  bottom: -20px;
+  display: block;
+  height: 10px;
+  width: 10px;
 `;
 
 export const CardWrapper = styled.div`
   padding: 0;
   margin: 0 8px 8px 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 export const NoDataWrapper = styled.div`
