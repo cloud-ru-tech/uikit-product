@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.17 (2023-01-27)
+
+### Bug Fixes
+
+- **[FF-1632](https://jira.sbercloud.tech/browse/FF-1632):** update ft-formatters version in Document ([926fbed](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/926fbed0dd3a8156736a19e59545a8bae125204e))
+
 ## 2.0.16 (2023-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-document
