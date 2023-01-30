@@ -13,7 +13,7 @@ export type ModalProps = WithSupportProps<{
   isOpen: boolean;
   isLoading?: boolean;
   className?: string;
-  content: ReactNode;
+  content?: ReactNode;
   approveButton?: FooterProps['approveButton'];
   cancelButton?: FooterProps['cancelButton'];
   additionalButton?: FooterProps['additionalButton'];
@@ -63,7 +63,8 @@ export function Modal({
         <ModalPrivate.Content content={<S.StyledSpinner data-test-id='modal__spinner' />} />
       ) : (
         <>
-          <ModalPrivate.Content content={content} disableScroll={disableScroll} />
+          {content && <ModalPrivate.Content content={content} disableScroll={disableScroll} />}
+
           <ModalPrivate.Footer
             approveButton={approveButton}
             cancelButton={cancelButton}

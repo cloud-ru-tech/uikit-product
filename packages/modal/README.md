@@ -51,7 +51,7 @@ export type ModalProps = WithSupportProps<{
   isOpen: boolean;
   isLoading?: boolean;
   className?: string;
-  content: ReactNode;
+  content?: ReactNode;
   approveButton?: ApproveButtonProps;
   cancelButton?: CancelButtonProps;
   additionalButton?: AdditionalButtonProps;
