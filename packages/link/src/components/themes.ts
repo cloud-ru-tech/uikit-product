@@ -66,10 +66,10 @@ export const PURPLE_DARK_THEME = css`
 export const GREEN_THEME = css`
   :global() {
     body[data-theme=${Themes.Green}] {
-      ${COLORS.PRIMARY_FILL}: var(${GREEN[100]});
+      ${COLORS.PRIMARY_FILL}: var(${GREEN[125]});
       ${COLORS.PRIMARY_COLOR}: var(${GREY[600]});
-      ${COLORS.PRIMARY_FILL_HOVER}: var(${GREEN[115]});
-      ${COLORS.PRIMARY_FILL_ACTIVE}: var(${GREEN[125]});
+      ${COLORS.PRIMARY_FILL_HOVER}: var(${GREEN[135]});
+      ${COLORS.PRIMARY_FILL_ACTIVE}: var(${GREEN[150]});
       ${COLORS.PRIMARY_FILL_DISABLED}: var(${BLACK_ALFA[16]});
       ${COLORS.PRIMARY_PREFIX_ICON}: var(${GREY[200]});
       ${COLORS.PRIMARY_PREFIX_ICON_DISABLED}: var(${BLACK_ALFA[8]});
