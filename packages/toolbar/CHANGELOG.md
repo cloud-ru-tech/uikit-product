@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.16.80 (2023-02-01)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-toolbar
+
 ## 0.16.79 (2023-01-30)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-toolbar

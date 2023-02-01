@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2023-02-01)
+
+### Features
+
+- **[FF-1669](https://jira.sbercloud.tech/browse/FF-1669):** updated primary fill color for link component ([991aa2d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/991aa2d0ba456c68be96e277067c8496fad77a29))
+
 ## [3.0.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-link@3.0.40...@sbercloud/uikit-product-link@3.0.41) (2023-01-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-link

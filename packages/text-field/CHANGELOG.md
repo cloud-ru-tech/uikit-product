@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.8 (2023-02-01)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-text-field
+
 ## 3.2.7 (2023-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-text-field

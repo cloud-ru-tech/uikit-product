@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.94 (2023-02-01)
+
+**Note:** Version bump only for package @sbercloud/uikit-product-content-hider
+
 ## 0.8.93 (2023-01-25)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-content-hider
