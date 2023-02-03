@@ -43,7 +43,7 @@ export function NotificationPopup({
   headerTooltip,
   open,
   cards,
-  loadCards,
+  loadCards = { hasMore: false, fetchMore: () => {} },
   onReadAllButtonClick,
   onSeeAllButtonClick,
   onToggle,
@@ -145,8 +145,8 @@ export function NotificationPopup({
               <S.CardsWrapper data-test-id='notification-panel__cards-wrapper' id={ID_WRAPPER}>
                 <InfiniteScroll
                   dataLength={cards.length}
-                  next={loadCards ? loadCards.fetchMore : () => {}}
-                  hasMore={Boolean(loadCards?.hasMore)}
+                  next={loadCards.fetchMore}
+                  hasMore={loadCards.hasMore}
                   loader={<Loading />}
                   scrollableTarget={ID_WRAPPER}
                 >
@@ -160,7 +160,7 @@ export function NotificationPopup({
                     </S.CardWrapper>
                   ))}
                 </InfiniteScroll>
-                <S.FakeChild />
+                {loadCards.hasMore && <S.FakeChild />}
               </S.CardsWrapper>
             ) : (
               <S.NoDataWrapper>

@@ -59,7 +59,7 @@ const defaultCard: Card = {
 
 const Template: Story<NotificationPopupProps & { cardsCount: number; totalCardsCount: number }> = ({ ...args }) => {
   const { cardsCount, totalCardsCount, onReadAllButtonClick, open } = args;
-  const [hasMore, setHasMore] = useState(true);
+  const [hasMore, setHasMore] = useState(cardsCount < totalCardsCount);
   const [cards, setCards] = useState<Card[]>([]);
   const [isOpen, setIsOpen] = useState(true);
 
@@ -79,10 +79,13 @@ const Template: Story<NotificationPopupProps & { cardsCount: number; totalCardsC
       return;
     }
 
+    const nextPortionAmount = cards.length + cardsCount;
+    const newAmount = cardsCount - Math.max(nextPortionAmount - totalCardsCount, 0);
+
     setTimeout(() => {
       setCards(
         cards.concat(
-          new Array(cardsCount).fill(args.cards[0]).map((el, index) => ({
+          new Array(newAmount).fill(args.cards[0]).map((el, index) => ({
             ...el,
             content: {
               ...el.content,
@@ -102,8 +105,10 @@ const Template: Story<NotificationPopupProps & { cardsCount: number; totalCardsC
   }, [cards, cardsCount, totalCardsCount]);
 
   useEffect(() => {
+    const newAmount = cardsCount < totalCardsCount ? cardsCount : totalCardsCount;
+
     setCards(
-      new Array(cardsCount).fill(args.cards[0]).map((el, index) => ({
+      new Array(newAmount).fill(args.cards[0]).map((el, index) => ({
         ...el,
         content: {
           ...el.content,
@@ -116,7 +121,8 @@ const Template: Story<NotificationPopupProps & { cardsCount: number; totalCardsC
         type: redCardsIndex.includes(index) ? NotificationPopup.cardTypes.Alarm : NotificationPopup.cardTypes.Default,
       })),
     );
-  }, [cardsCount]);
+    setHasMore(cardsCount < totalCardsCount);
+  }, [cardsCount, totalCardsCount]);
 
   useEffect(() => {
     setIsOpen(open);
