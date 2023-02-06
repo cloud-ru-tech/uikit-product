@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2023-02-06)
+
+
+### Features
+
+* **[FF-1506](https://jira.sbercloud.tech/browse/FF-1506):** Notification panel. Added infinite scroll ([5bdd313](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5bdd313c5fbd9403c8005334f68ab23f88a37587))
+
+
+
+
+
 ## 1.0.4 (2023-02-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-notification-panel
