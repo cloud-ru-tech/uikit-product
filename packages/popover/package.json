@@ -1,0 +1,36 @@
+{
+  "name": "@sbercloud/uikit-product-popover",
+  "title": "Popover",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "React Popover",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/popover",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/popover"
+  },
+  "author": "Egor Bibin <evbibin@sbercloud.ru>",
+  "contributors": [
+    "Egor Bibin <evbibin@sbercloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-theme": "0.35.1",
+    "@sbercloud/uikit-product-tooltip-private": "1.2.22",
+    "@sbercloud/uikit-product-utils": "3.1.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
