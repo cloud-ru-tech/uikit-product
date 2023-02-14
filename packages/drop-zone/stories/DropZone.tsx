@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
+import { useState } from 'react';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
@@ -24,20 +25,37 @@ const Container = styled.div<{ theme: Themes }>`
   background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
 `;
 
-const Template: Story<DropZoneProps> = ({ ...args }, { globals: { theme } }) => (
-  <div>
-    <Container theme={theme}>
-      <DropZone {...args} />
-    </Container>
-  </div>
-);
+const Template: Story<DropZoneProps> = ({ ...args }, { globals: { theme } }) => {
+  const [files, setFiles] = useState<File[]>([]);
+
+  return (
+    <div>
+      <Container theme={theme}>
+        <DropZone
+          {...args}
+          onFileSelected={(files: File[]) => {
+            setFiles(files);
+          }}
+        />
+      </Container>
+      <pre>
+        {JSON.stringify(
+          files.map(({ lastModified, name, size, type }) => ({
+            name,
+            type,
+            size,
+            lastModified,
+          })),
+          null,
+          2,
+        )}
+      </pre>
+    </div>
+  );
+};
 
 export const dropZone = Template.bind({});
 dropZone.args = {
-  onFileSelected: (files: File[]) => {
-    // eslint-disable-next-line no-console
-    console.log(files);
-  },
   content: 'Фото, видео и документы до 30 МБ',
 };
 dropZone.argTypes = {};

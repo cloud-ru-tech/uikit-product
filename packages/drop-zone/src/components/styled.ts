@@ -23,6 +23,11 @@ export const Container = styled.div`
   border: 2px dashed var(${EXPORT_VARS.GREY[200]});
   border-radius: 8px;
   transition: border-color 0.2s ease, background-color 0.2s ease;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(${COLORS.BORDER_HOVER});
+  }
 
   &[data-over] {
     border-color: var(${COLORS.BORDER_HOVER});
@@ -30,7 +35,9 @@ export const Container = styled.div`
   }
 `;
 
-export const Header = styled.div``;
+export const Header = styled.div`
+  text-align: center;
+`;
 
 export const H4Styled = styled.span`
   ${H4_STYLES};

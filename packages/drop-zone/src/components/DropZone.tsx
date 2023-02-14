@@ -1,6 +1,5 @@
-import { ChangeEvent, DragEvent, MouseEvent, ReactNode, useRef, useState } from 'react';
+import { ChangeEvent, DragEvent, ReactNode, useRef, useState } from 'react';
 
-import { Link } from '@sbercloud/uikit-product-link';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../helpers/texts-provider';
@@ -8,17 +7,19 @@ import { Container, Description, H4Styled, Header, HiddenInput } from './styled'
 
 export type DropZoneProps = WithSupportProps<{
   onFileSelected(files: File[]): void;
+  title?: string;
+  content?: ReactNode;
   isMultiple?: boolean;
   accept?: string;
-  content?: ReactNode;
   className?: string;
 }>;
 
 export function DropZone({
   onFileSelected,
+  title,
+  content,
   isMultiple = true,
   accept,
-  content,
   className,
   ...rest
 }: DropZoneProps): JSX.Element {
@@ -28,9 +29,7 @@ export function DropZone({
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const handleAttachFile = (e: MouseEvent) => {
-    e.preventDefault();
-
+  const handleAttachFile = () => {
     hiddenFileInput.current?.click();
   };
 
@@ -65,10 +64,10 @@ export function DropZone({
       onDrop={handleDrop}
       data-over={isOver || undefined}
       className={className}
+      onClick={handleAttachFile}
     >
       <Header>
-        <H4Styled>{textProvider(languageCode, Texts.HeaderText)}</H4Styled>
-        <Link text={textProvider(languageCode, Texts.LinkText)} onClick={handleAttachFile} size={Link.sizes.Large} />
+        <H4Styled>{title || textProvider(languageCode, Texts.HeaderText)}</H4Styled>
       </Header>
 
       <Description>{content}</Description>
