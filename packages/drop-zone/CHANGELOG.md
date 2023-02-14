@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2023-02-14)
+
+
+### BREAKING CHANGES
+
+
+* **[LK-612](https://jira.sbercloud.tech/browse/LK-612):** UI has been changed, link component has been deleted, component has hover state, title prop has been added ([523bb9c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/523bb9c4fd8142e9d036f87adf0b31cd73bc7204))
+
+
+
+
 ## 0.2.44 (2023-02-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-drop-zone
