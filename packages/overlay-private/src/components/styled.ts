@@ -24,4 +24,8 @@ export const styledOverlay = (Overlay: VFC<OverlayPrivateProps>): VFC<OverlayPri
   &[data-variant=${Variants.Absolute}] {
     position: absolute;
   }
+
+  &[data-has-blur] {
+    backdrop-filter: blur(8px);
+  }
 `;

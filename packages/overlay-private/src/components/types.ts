@@ -11,6 +11,7 @@ type OverlayPrivateOwnProps = {
   variant?: Variants;
   onClick: MouseEventHandler;
   className?: string;
+  hasBlur?: boolean;
 };
 
 export type OverlayPrivateProps = WithSupportProps<OverlayPrivateOwnProps>;

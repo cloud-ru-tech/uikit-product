@@ -5,9 +5,17 @@ import { OverlayPrivateProps, Variants } from './types';
 
 export type { OverlayPrivateProps };
 
-function StylelessOverlay({ variant = Variants.Fixed, onClick, className, ...rest }: OverlayPrivateProps) {
-  // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-  return <div onClick={onClick} data-variant={variant} className={className} {...extractSupportProps(rest)} />;
+function StylelessOverlay({ variant = Variants.Fixed, onClick, hasBlur, className, ...rest }: OverlayPrivateProps) {
+  return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+    <div
+      onClick={onClick}
+      data-variant={variant}
+      data-has-blur={hasBlur || undefined}
+      className={className}
+      {...extractSupportProps(rest)}
+    />
+  );
 }
 
 const StyledOverlay = styledOverlay(StylelessOverlay);
