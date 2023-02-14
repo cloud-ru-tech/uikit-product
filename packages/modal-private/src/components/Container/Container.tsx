@@ -47,7 +47,9 @@ export function Container({
       className={cx(S.contentClassname, propsClassName)}
       onRequestClose={onClose}
       appElement={document.body}
-      overlayElement={(_, content) => <OverlayElement content={content} onClose={handleOnClose} />}
+      overlayElement={(_, content) => (
+        <OverlayElement hasBlur={variant === Variant.Aggressive} content={content} onClose={handleOnClose} />
+      )}
     >
       {children}
 

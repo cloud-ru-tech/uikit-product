@@ -5,9 +5,10 @@ import * as S from './styled';
 export type OverlayElementProps = {
   onClose(): void;
   content: ReactElement;
+  hasBlur: boolean;
 };
 
-export function OverlayElement({ onClose, content }: OverlayElementProps) {
+export function OverlayElement({ onClose, content, hasBlur }: OverlayElementProps) {
   const handleClick: MouseEventHandler = e => {
     e.stopPropagation();
     onClose();
@@ -15,7 +16,7 @@ export function OverlayElement({ onClose, content }: OverlayElementProps) {
 
   return (
     <>
-      <S.StyledOverlayPrivate onClick={handleClick} data-test-id='modal-private__overlay' />
+      <S.StyledOverlayPrivate hasBlur={hasBlur} onClick={handleClick} data-test-id='modal-private__overlay' />
       {content}
     </>
   );
