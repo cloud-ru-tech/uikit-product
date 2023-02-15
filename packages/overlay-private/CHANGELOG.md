@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2023-02-15)
+
+
+### Features
+
+* **[FF-1728](https://jira.sbercloud.tech/browse/FF-1728):** adds hasBlur prop ([9b6fab2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9b6fab2551f86a515d56bc974a6c29c5fe1a45bf))
+
+
+
+
+
 ## [1.0.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-overlay-private@1.0.13...@sbercloud/uikit-product-overlay-private@1.0.14) (2022-11-28)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-overlay-private

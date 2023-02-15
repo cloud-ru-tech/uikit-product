@@ -3,9 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2023-02-15)
+
+
+### Features
+
+* **[FF-1728](https://jira.sbercloud.tech/browse/FF-1728):** adds blur for aggressive variant ([cfeb8f9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cfeb8f9c81113892ccc34876a8a3696894847ff1))
+
+
+
+
+
 ## 1.2.4 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-modal-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-overlay-private@1.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/overlay-private/CHANGELOG.md)
 
 ## 1.2.3 (2023-01-26)
 
