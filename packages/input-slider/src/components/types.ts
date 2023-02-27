@@ -1,5 +1,17 @@
+import React, { FocusEvent } from 'react';
+
 import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+
+export type MarkDetail = {
+  style?: React.CSSProperties;
+  label?: React.ReactNode;
+};
+
+export enum MarksPlacement {
+  Default = 'default',
+  LinearOnlyMarks = 'linearOnlyMarks',
+}
 
 export type InputSliderBaseProps = {
   className?: string;
@@ -8,7 +20,7 @@ export type InputSliderBaseProps = {
   postfix?: string;
   label?: string;
   labelTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
-  marks?: number[];
+  marks?: number[] | Record<string, MarkDetail>;
   max: number;
   min: number;
   optional?: boolean;
@@ -17,6 +29,10 @@ export type InputSliderBaseProps = {
 
 export type InputSliderProps = WithSupportProps<
   InputSliderBaseProps & {
+    selectOnlyMarks?: boolean;
+    onFocus?: (event: FocusEvent<HTMLInputElement>) => void;
+    onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
+    marksPlacementType?: MarksPlacement;
     value: number;
     onChange: (value: number) => void;
   }

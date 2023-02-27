@@ -7,7 +7,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InputSlider } from '../src';
-import { InputSliderProps } from '../src/components/types';
+import { InputSliderProps, MarksPlacement } from '../src/components/types';
 
 export default {
   title: 'Components/Input Slider/Input Slider',
@@ -32,6 +32,7 @@ inputSlider.args = {
   min: 0,
   max: 100,
   marks: [20, 40, 60, 80],
+  marksPlacementType: MarksPlacement.Default,
   optional: true,
   hint: 'Текст подсказки',
 };

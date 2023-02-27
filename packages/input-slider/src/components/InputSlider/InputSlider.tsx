@@ -1,6 +1,7 @@
 import 'rc-slider/assets/index.css';
 
-import { forwardRef } from 'react';
+import debounce from 'lodash.debounce';
+import { forwardRef, useEffect, useMemo, useState } from 'react';
 
 import { InputDecoratorPrivate } from '@sbercloud/uikit-product-input-decorator-private';
 import { InputPrivate } from '@sbercloud/uikit-product-input-private';
@@ -8,10 +9,12 @@ import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { getValueInRange } from '../helpers';
 import * as S from '../styled';
-import { InputSliderProps } from '../types';
+import { InputSliderProps, MarkDetail, MarksPlacement } from '../types';
 import { useFocus } from '../useFocus';
 import { useMarks } from '../useMarks';
 export type { InputSliderProps };
+export type { MarkDetail };
+
 const ForwarderInputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
   (
     {
@@ -20,10 +23,14 @@ const ForwarderInputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
       postfix,
       label,
       labelTooltip,
+      onFocus,
+      onBlur,
       max,
       min,
       marks,
+      marksPlacementType,
       optional,
+      selectOnlyMarks,
       step,
       value,
       onChange,
@@ -32,20 +39,62 @@ const ForwarderInputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
     },
     ref,
   ) => {
-    const { isFocus, onFocus, onBluer } = useFocus();
-    const { privateMarks } = useMarks(min, max, marks);
+    const onlyMarks = marksPlacementType === MarksPlacement.LinearOnlyMarks || selectOnlyMarks;
+    const { privateMarks, privateMarksList, privateMarksValuesList } = useMarks(min, max, marks, marksPlacementType);
 
-    const sliderHandler = (v: number | number[]) => {
-      if (typeof v === 'number') {
-        return onChange(v);
+    const [tempInputValue, setTempInputValue] = useState(
+      String(getValueInRange({ value, min, max, marks: privateMarks, marksPlacementType })),
+    );
+    useEffect(() => setTempInputValue(String(value)), [value]);
+    const sliderValue = useMemo(() => {
+      if (marksPlacementType !== MarksPlacement.LinearOnlyMarks) {
+        return value;
       }
 
-      onChange(v[0]);
+      return Number(
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        Object.entries(privateMarks).find(([_valueForSlider, { label: realValue }]) => realValue === value)?.[0],
+      );
+    }, [marksPlacementType, privateMarks, value]);
+
+    const sliderHandler = (v: number | number[]) => {
+      let newValue = typeof v === 'number' ? v : v[0];
+      newValue = getValueInRange({ value: newValue, min, max, marks: privateMarks, marksPlacementType });
+
+      onChange(newValue);
     };
 
+    const inputHandlerToClosestStepDebounced = useMemo(
+      () =>
+        debounce((v: string, onChange: InputSliderProps['onChange']) => {
+          if (!privateMarksValuesList.length) {
+            return;
+          }
+
+          let newValue = getValueInRange({ value: Number(v), min, max, marks: privateMarks, marksPlacementType });
+          // find closest to newValue mark
+          newValue = privateMarksValuesList.reduce((prev, curr) =>
+            Math.abs(curr - newValue) < Math.abs(prev - newValue) ? curr : prev,
+          );
+
+          setTempInputValue(String(newValue));
+          onChange(newValue);
+        }, 500),
+      [marksPlacementType, max, min, privateMarks, privateMarksValuesList],
+    );
+
     const inputHandler = (v: string) => {
-      onChange(getValueInRange(Number(v), min, max));
+      if (onlyMarks) {
+        setTempInputValue(v);
+        inputHandlerToClosestStepDebounced(v, onChange);
+      } else {
+        const formattedValue = getValueInRange({ value: Number(v), min, max, marks: privateMarks, marksPlacementType });
+        setTempInputValue(`${formattedValue}`);
+        onChange(formattedValue);
+      }
     };
+
+    const { isFocus, handleFocus, handleBlur } = useFocus({ onFocus, onBlur });
 
     return (
       <InputDecoratorPrivate
@@ -60,11 +109,11 @@ const ForwarderInputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
             ref={ref}
             data-test-id={'input-slider__input'}
             type={InputPrivate.types.Number}
-            value={String(getValueInRange(value, min, max))}
+            value={tempInputValue}
             onChange={inputHandler}
             disabled={disabled}
-            onFocus={onFocus}
-            onBlur={onBluer}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
           />
 
           {postfix && (
@@ -79,12 +128,12 @@ const ForwarderInputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
           dotStyle={S.dotStyle}
           handleStyle={S.handleStyle(disabled)}
           marks={privateMarks}
-          max={max}
-          min={min}
+          min={privateMarksList[0]}
+          max={privateMarksList[privateMarksList.length - 1]}
           railStyle={S.railStyle(disabled)}
-          step={step}
+          step={onlyMarks ? null : step}
           trackStyle={S.trackStyle(disabled)}
-          value={Number(value)}
+          value={sliderValue}
           onChange={sliderHandler}
         />
       </InputDecoratorPrivate>
@@ -92,4 +141,8 @@ const ForwarderInputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
   },
 );
 
-export const InputSlider = ForwarderInputSlider;
+export const InputSlider = ForwarderInputSlider as typeof ForwarderInputSlider & {
+  marksPlacementType: typeof MarksPlacement;
+};
+
+InputSlider.marksPlacementType = MarksPlacement;

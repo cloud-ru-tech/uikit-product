@@ -32,7 +32,7 @@ const ForwarderInputRange = forwardRef<HTMLInputElement, InputRangeProps>(
     },
     ref,
   ) => {
-    const { isFocus, onFocus, onBluer } = useFocus();
+    const { isFocus, handleFocus, handleBlur } = useFocus();
     const { privateMarks } = useMarks(min, max, marks);
 
     const changeHandler = (v: number | number[]) => {
@@ -82,10 +82,10 @@ const ForwarderInputRange = forwardRef<HTMLInputElement, InputRangeProps>(
               data-test-id='input-slider__input-min'
               type={InputPrivate.types.Number}
               disabled={disabled}
-              value={String(getValueInRange(value[0], min, max))}
+              value={String(getValueInRange({ value: value[0], min, max, marks: privateMarks }))}
               onChange={firstInputHandler}
-              onFocus={onFocus}
-              onBlur={onBluer}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
             />
           </S.ShortBaseInputWrapper>
 
@@ -93,11 +93,11 @@ const ForwarderInputRange = forwardRef<HTMLInputElement, InputRangeProps>(
 
           <S.BaseInput
             data-test-id={'input-slider__input-max'}
-            value={String(getValueInRange(value[1], min, max))}
+            value={String(getValueInRange({ value: value[1], min, max, marks: privateMarks }))}
             onChange={secondInputHandler}
             disabled={disabled}
-            onFocus={onFocus}
-            onBlur={onBluer}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
           />
 
           {postfix && <S.InputPostfixTextWrapper data-disabled={disabled}>{postfix}</S.InputPostfixTextWrapper>}

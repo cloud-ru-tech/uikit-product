@@ -32,6 +32,7 @@
     "@sbercloud/uikit-product-theme": "0.35.2",
     "@sbercloud/uikit-product-tooltip": "3.0.12",
     "@sbercloud/uikit-product-utils": "3.1.2",
-    "rc-slider": "10.0.0"
+    "rc-slider": "10.0.0",
+    "lodash.debounce": "4.0.8"
   }
 }
