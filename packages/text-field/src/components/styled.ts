@@ -3,6 +3,7 @@ import { styled } from '@linaria/react';
 import { InputPrivate } from '@sbercloud/uikit-product-input-private';
 import { TextareaPrivate } from '@sbercloud/uikit-product-textarea-private';
 
+import { Size } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -35,6 +36,10 @@ export const Container = styled.div`
   flex-direction: row-reverse;
   justify-content: space-between;
   min-height: 36px;
+
+  &[data-size=${Size.Large}] {
+    padding: 8px 4px 8px 12px;
+  }
 `;
 
 export const StyledInputPrivate = styled(InputPrivate)`

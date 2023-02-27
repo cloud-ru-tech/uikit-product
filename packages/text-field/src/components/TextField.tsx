@@ -5,7 +5,7 @@ import { InputPrivate } from '@sbercloud/uikit-product-input-private';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { SecuredIcon } from './components';
-import { Types } from './constants';
+import { Size, Types } from './constants';
 import { Container, IconsContainer, StyledInputPrivate, StyledTextareaPrivate } from './styled';
 
 export type TextFieldProps = WithSupportProps<{
@@ -14,6 +14,7 @@ export type TextFieldProps = WithSupportProps<{
   text: string;
   extraIcons?: ReactNode;
   allowCopy?: boolean;
+  size?: Size;
   onRequestSecuredField?: () => Promise<{ text?: string; preventAction?: boolean } | void>;
 }>;
 
@@ -23,6 +24,7 @@ export function TextField({
   text,
   extraIcons,
   allowCopy = true,
+  size = Size.Medium,
   onRequestSecuredField,
   ...rest
 }: TextFieldProps) {
@@ -93,9 +95,10 @@ export function TextField({
   );
 
   const isDisabled = secureIconLoading || copyButtonLoading;
+  const containerSize = isOneLine ? size : Size.Medium;
 
   return (
-    <Container className={className} {...extractSupportProps(rest)}>
+    <Container data-size={containerSize} className={className} {...extractSupportProps(rest)}>
       <IconsContainer data-multiline={isMultiLine || undefined}>
         {extraIcons}
         {isPassword && (
@@ -122,3 +125,4 @@ export function TextField({
 }
 
 TextField.types = Types;
+TextField.sizes = Size;

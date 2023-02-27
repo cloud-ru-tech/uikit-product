@@ -13,6 +13,7 @@ type TextFieldProps = {
   text: string;
   extraIcons?: ReactNode;
   allowCopy?: boolean;
+  size?: Size;
   /** Необходимо для тех случаев, когда скрытое поле хранится на бэке и
    *  нужно делать запрос для получения его значения.
    *  возвращаем preventAction если произошла ошибка и не хотим триггерить копирование или просмотр
@@ -25,5 +26,10 @@ enum Types {
   OneLine = 'OneLine',
   MultiLine = 'MultiLine',
   Password = 'Password',
+}
+
+enum Size {
+  Medium = 'Medium',
+  Large = 'Large',
 }
 ```
