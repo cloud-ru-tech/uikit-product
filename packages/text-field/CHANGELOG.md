@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.3.0 (2023-02-28)
+
+
+### Features
+
+* **[FF-1656](https://jira.sbercloud.tech/browse/FF-1656):** add size prop ([f87d99a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f87d99a4dba277c36cbaa0a045ba1d15ea02bf82))
+
+
+
+
+
 ## 3.2.8 (2023-02-01)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-text-field
