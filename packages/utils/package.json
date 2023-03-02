@@ -30,5 +30,9 @@
   "dependencies": {
     "@sbercloud/ft-debug-mode": "1.1.0",
     "@sbercloud/uikit-product-theme": "0.35.2"
+  },
+  "peerDependencies": {
+    "@sbercloud/figma-tokens-cloud-platform": "*",
+    "@sbercloud/figma-tokens-mlspace": "*"
   }
 }

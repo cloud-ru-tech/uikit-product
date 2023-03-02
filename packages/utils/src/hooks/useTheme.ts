@@ -3,10 +3,10 @@ import { useCallback, useEffect, useState } from 'react';
 import { DEFAULT, POST_MESSAGE_KEY } from '../constants';
 import { tryParseJson } from '../helpers/tryParseJson';
 import { Themes } from '../types/theme';
-import { useCustomStore } from './private/useCustomStore';
+import { getCustomStore } from './private/getCustomStore';
 
 export const useTheme = () => {
-  const store = useCustomStore();
+  const store = getCustomStore();
   const [theme, setTheme] = useState(store.theme || DEFAULT.THEME);
 
   useEffect(() => {

@@ -3,14 +3,14 @@ import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
 import { DEFAULT, POST_MESSAGE_KEY } from '../constants';
 import { tryParseJson } from '../helpers/tryParseJson';
 import { LanguageCodeType } from '../types';
-import { useCustomStore } from './private/useCustomStore';
+import { getCustomStore } from './private/getCustomStore';
 
-interface useLanguageProps {
+type useLanguageProps = {
   onlyEnabledLanguage?: boolean;
-}
+};
 
 export const useLanguage = (props?: useLanguageProps) => {
-  const store = useCustomStore();
+  const store = getCustomStore();
   const [languageCode, setLanguageCode] = useState<LanguageCodeType>(store.languageCode || DEFAULT.LANGUAGE);
   const onlyEnabledLanguage = props?.onlyEnabledLanguage;
 

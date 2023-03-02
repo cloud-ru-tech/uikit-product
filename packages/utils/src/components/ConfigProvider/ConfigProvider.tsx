@@ -1,26 +1,35 @@
 import { FC, useEffect, useLayoutEffect, useState } from 'react';
 
+import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
+import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
 import { color, globals } from '@sbercloud/uikit-product-theme';
 
-import { DEFAULT, DEPRECATED_COLOR, POST_MESSAGE_KEY } from '../../constants';
+import { DEPRECATED_COLOR, POST_MESSAGE_KEY } from '../../constants';
 import { tryParseJson } from '../../helpers/tryParseJson';
-import { useCustomStore } from '../../hooks/private/useCustomStore';
+import { getCustomStore } from '../../hooks/private/getCustomStore';
 import { LanguageCodeType, Themes } from '../../types';
 
-export interface ConfigProviderProps {
+export type ConfigProviderProps = {
   languageCode?: LanguageCodeType;
   theme?: Themes;
-}
+};
 
-interface ConfigProviderType extends FC<ConfigProviderProps> {
+type ConfigProviderType = {
   themes: typeof Themes;
   languages: typeof LanguageCodeType;
-}
+} & FC<ConfigProviderProps>;
+
+const themeMap = {
+  [Themes.Green]: CloudBrandThemes.light,
+  [Themes.GreenDark]: CloudBrandThemes.dark,
+  [Themes.Purple]: MLSpaceBrandThemes.light,
+  [Themes.PurpleDark]: MLSpaceBrandThemes.dark,
+};
 
 export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, children }) => {
-  const store = useCustomStore();
-  const [configTheme, setConfigTheme] = useState(DEFAULT.THEME);
-  const [configLanguageCode, setConfigLanguageCodeTheme] = useState(DEFAULT.LANGUAGE);
+  const store = getCustomStore({ theme, languageCode });
+  const [configTheme, setConfigTheme] = useState(store.theme);
+  const [configLanguageCode, setConfigLanguageCodeTheme] = useState(store.languageCode);
 
   useEffect(() => {
     const body = document.getElementsByTagName('body')[0];
@@ -60,8 +69,10 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
   -------------*/
 
   useLayoutEffect(() => {
-    store.theme = theme || DEFAULT.THEME;
-    setConfigTheme(store.theme);
+    if (theme) {
+      store.theme = theme;
+      setConfigTheme(store.theme);
+    }
   }, [store, theme]);
 
   useEffect(() => {
@@ -70,9 +81,16 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
 
     const body = document.getElementsByTagName('body')[0];
     body.setAttribute('data-theme', configTheme);
-    body.classList.add(DEPRECATED_COLOR[configTheme]);
+
+    html.classList.add(DEPRECATED_COLOR[configTheme]);
+    html.classList.add(themeMap[configTheme]);
 
     window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeThemeDone, value: configTheme }), location.origin);
+
+    return () => {
+      html.classList.remove(DEPRECATED_COLOR[configTheme]);
+      html.classList.remove(themeMap[configTheme]);
+    };
   }, [configTheme]);
 
   /*--------------
@@ -80,8 +98,10 @@ export const ConfigProvider: ConfigProviderType = ({ languageCode, theme, childr
   --------------*/
 
   useLayoutEffect(() => {
-    store.languageCode = languageCode || DEFAULT.LANGUAGE;
-    setConfigLanguageCodeTheme(store.languageCode);
+    if (languageCode) {
+      store.languageCode = languageCode;
+      setConfigLanguageCodeTheme(store.languageCode);
+    }
   }, [languageCode, store]);
 
   useEffect(() => {
