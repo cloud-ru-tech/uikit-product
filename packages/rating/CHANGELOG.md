@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.39 (2023-03-06)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-theme@0.35.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## [0.3.38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-rating@0.3.37...@sbercloud/uikit-product-rating@0.3.38) (2022-11-28)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-rating

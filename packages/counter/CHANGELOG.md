@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.6 (2023-03-06)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-theme@0.35.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.1.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## [0.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-counter@0.1.4...@sbercloud/uikit-product-counter@0.1.5) (2023-01-12)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-counter

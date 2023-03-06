@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.17 (2023-03-06)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-divider@2.0.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.35.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+
+
+
+
+
 ## [0.9.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-hierarchy-menu@0.9.15...@sbercloud/uikit-product-hierarchy-menu@0.9.16) (2022-11-28)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-hierarchy-menu

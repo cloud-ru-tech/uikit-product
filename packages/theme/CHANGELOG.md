@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.35.2 (2023-03-06)
+
+
+### Bug Fixes
+
+* **[DPS-2428](https://jira.sbercloud.tech/browse/DPS-2428):** fix table filter background color ([d1c08ff](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d1c08ff8bda00b29b5cc3c98b233f79c7361700c))
+
+
+
+
+
 ## [0.35.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-theme@0.35.0...@sbercloud/uikit-product-theme@0.35.1) (2022-09-23)
 
 
