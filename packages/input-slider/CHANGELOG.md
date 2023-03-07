@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2023-03-07)
+
+
+### Features
+
+* **[SVP-4382](https://jira.sbercloud.tech/browse/SVP-4382):** added marksPlacementsType, onFocus, onBlur props and custom mark styles in InputSlider ([831a900](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/831a900681591bd5f612cdaa4b1a304effb3ea69))
+
+
+
+
+
 ## 1.2.14 (2023-03-06)
 
 ### Only dependencies have been changed
