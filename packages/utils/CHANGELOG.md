@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2023-03-08)
+
+
+### Features
+
+* **[FF-1803](https://jira.sbercloud.tech/browse/FF-1803):** add support for tokens from new uikit ([6683f17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6683f176f80aceadf8458af10d21b3fd55a7f4eb))
+* **[FF-1803](https://jira.sbercloud.tech/browse/FF-1803):** extract useConfig hook ([adc776e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/adc776e078ea234d26639b4aef3d59d6e1d21e0f))
+
+
+
+
+
 ## 3.1.2 (2023-03-06)
 
 ### Only dependencies have been changed

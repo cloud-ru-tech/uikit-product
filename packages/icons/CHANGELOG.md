@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.6.0 (2023-03-08)
+
+
+### Features
+
+* **[AICDC-10367](https://jira.sbercloud.tech/browse/AICDC-10367):** add airflow interface icon ([d959c5e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d959c5e18ce57e23e49bda486dbc4bb4d701a899))
+
+
+
+
+
 # [5.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-icons@5.4.0...@sbercloud/uikit-product-icons@5.5.0) (2022-11-28)
 
 ### Features
