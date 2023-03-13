@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.7.0 (2023-03-13)
+
+
+### Features
+
+* **[DPS-2662](https://jira.sbercloud.tech/browse/DPS-2662):** add containers serviсe icon ([6fb7970](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6fb7970b4fd9bdcfcd7ffb9c565f75c6e4152ad7))
+
+
+
+
+
 # 5.6.0 (2023-03-08)
 
 
