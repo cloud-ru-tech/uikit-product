@@ -36,7 +36,7 @@ Package for client onboarding tour guide on web-page
 type WelcomeTourProps = {
   tourSteps: StepWithSubtitle[];
   tourStarted: boolean;
-  setTourStarted: Dispatch<SetStateAction<boolean>>;
+  setTourStarted(value: boolean): void;
   closeButtonText: string;
   primaryButtonText: string;
   backButtonText: string;

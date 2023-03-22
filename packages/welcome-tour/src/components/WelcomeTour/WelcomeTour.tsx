@@ -1,4 +1,3 @@
-import { Dispatch, SetStateAction } from 'react';
 import JoyRide, { CallBackProps, STATUS, TooltipRenderProps } from 'react-joyride';
 
 import { Hint } from '../Hint';
@@ -24,7 +23,7 @@ const customArrowSize = {
 export type WelcomeTourProps = {
   tourSteps: StepWithSubtitle[];
   tourStarted: boolean;
-  setTourStarted: Dispatch<SetStateAction<boolean>>;
+  setTourStarted(value: boolean): void;
   closeButtonText: string;
   primaryButtonText: string;
   backButtonText: string;
