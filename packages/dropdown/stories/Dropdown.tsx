@@ -3,6 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import { useCallback, useState } from 'react';
 
 import { Button, ButtonIcon, ButtonRound } from '@sbercloud/uikit-product-button';
+import { Checkbox } from '@sbercloud/uikit-product-checkbox';
 import { Divider } from '@sbercloud/uikit-product-divider';
 import {
   ChevronLeftInterfaceSVG,
@@ -46,10 +47,24 @@ const IconWrapper = styled.div`
 `;
 
 const Template: Story<DropdownMenuProps> = ({ ...args }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const onToggle = useCallback((value: boolean) => setIsOpen(value), []);
+  const [isOpen, setIsOpen] = useState({
+    filesButton: false,
+    filterButton: false,
+  });
+  const onToggle = useCallback(
+    (buttonName: string, value: boolean) => setIsOpen(state => ({ ...state, [buttonName]: value })),
+    [],
+  );
 
   const [value, setValue] = useState<string | undefined>(undefined);
+  const [checkboxes, setCheckboxes] = useState({});
+
+  const handleCheckCheckbox = (label: string, checked: boolean) => {
+    setCheckboxes(state => ({
+      ...state,
+      [label]: checked,
+    }));
+  };
 
   return (
     <Wrapper>
@@ -112,15 +127,43 @@ const Template: Story<DropdownMenuProps> = ({ ...args }) => {
           { value: '19', label: 'Загрузить файл', onClick: () => {} },
           { value: '20', label: 'Загрузить документ', onClick: () => {} },
         ]}
-        onToggle={onToggle}
+        onToggle={value => onToggle('filesButton', value)}
       >
         <Button
           text='Button text'
           icon={
-            <IconWrapper data-rotate={isOpen}>
+            <IconWrapper data-rotate={isOpen['filesButton']}>
               <ChevronLeftInterfaceSVG size={20} />
             </IconWrapper>
           }
+        />
+      </DropdownMenu>
+
+      <DropdownMenu
+        closeOnMenuClick={false}
+        data-test-id={args['data-test-id']}
+        actions={
+          <>
+            {['Пункт 1', 'Пункт 2', 'Пункт 3'].map(item => (
+              <DropdownItem key={item}>
+                <Checkbox
+                  label={item}
+                  checked={checkboxes[item]}
+                  handleChange={checked => handleCheckCheckbox(item, checked)}
+                />
+              </DropdownItem>
+            ))}
+          </>
+        }
+        onToggle={value => onToggle('filterButton', value)}
+      >
+        <Button
+          icon={
+            <IconWrapper data-rotate={isOpen['filterButton']}>
+              <ChevronLeftInterfaceSVG size={20} />
+            </IconWrapper>
+          }
+          text='Фильтр'
         />
       </DropdownMenu>
     </Wrapper>

@@ -1,7 +1,17 @@
 import { cx } from '@linaria/core';
-import { Children, cloneElement, isValidElement, ReactNode, useCallback, useState } from 'react';
+import {
+  Children,
+  cloneElement,
+  isValidElement,
+  PropsWithChildren,
+  ReactElement,
+  ReactNode,
+  useCallback,
+  useState,
+} from 'react';
 
 import {
+  Placements,
   TooltipMenuItemPrivate,
   TooltipMenuItemPrivateProps,
   TooltipMenuPrivate,
@@ -29,9 +39,11 @@ export type DropdownMenuProps = WithSupportProps<{
   actions: TDropdownMenuCustomActions | TDropdownMenuActionType[] | ReactNode;
   children: ReactNode;
   dropdownMenuClassName?: string;
+  placement?: Placements;
   onToggle?: (isOpen: boolean) => void;
   value?: string;
   onChange?: (value: string) => void;
+  closeOnMenuClick?: boolean;
 }>;
 
 export function DropdownItem(props: TooltipMenuItemPrivateProps) {
@@ -45,6 +57,8 @@ export function DropdownMenu({
   dropdownMenuClassName,
   value,
   onChange,
+  closeOnMenuClick = true,
+  placement = TooltipPrivate.placements.BottomEnd,
   ...rest
 }: DropdownMenuProps) {
   const [on, setOn] = useState(false);
@@ -65,7 +79,7 @@ export function DropdownMenu({
 
   return (
     <TooltipPrivate
-      placement={TooltipPrivate.placements.BottomEnd}
+      placement={placement}
       trigger={TooltipPrivate.triggerTypes.Click}
       interactive={false}
       visible={on}
@@ -74,6 +88,7 @@ export function DropdownMenu({
       offset={[0, 12]}
       delayShow={0}
       delayHide={0}
+      clickOutside
       tooltip={
         <TooltipMenuPrivate
           data-test-id='dropdown__tooltip-menu'
@@ -117,10 +132,15 @@ export function DropdownMenu({
             Children.map<ReactNode, ReactNode>(actions.props.children, child => {
               if (!isValidElement(child)) return child;
 
-              return cloneElement(child, {
+              type ClonnedElementProps = { onClick: () => void };
+
+              return cloneElement(child as ReactElement<PropsWithChildren<ClonnedElementProps>>, {
                 onClick: () => {
                   child.props.onClick?.();
-                  closeDropdown();
+
+                  if (closeOnMenuClick) {
+                    closeDropdown();
+                  }
                 },
               });
             })}
@@ -131,3 +151,5 @@ export function DropdownMenu({
     </TooltipPrivate>
   );
 }
+
+DropdownMenu.placements = Placements;
