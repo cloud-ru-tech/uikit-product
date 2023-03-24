@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.17.0 (2023-03-24)
+
+
+### Features
+
+* **[SVP-4712](https://jira.sbercloud.tech/browse/SVP-4712):** add Dropdown closeMode prop ([dcf378b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dcf378b640934c46b4a68676e07f9d1f8cc34437))
+
+
+
+
+
 ## 0.16.12 (2023-03-08)
 
 ### Only dependencies have been changed

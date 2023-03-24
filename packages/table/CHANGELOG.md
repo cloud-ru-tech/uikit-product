@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.48.24 (2023-03-24)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-toolbar@0.16.85](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/toolbar/CHANGELOG.md)
+
+
+
+
+
 ## 0.48.23 (2023-03-13)
 
 ### Only dependencies have been changed
