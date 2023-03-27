@@ -1,10 +1,10 @@
 import { BalanceWrapper } from '../BalanceWrapper';
-import { RegularText } from '../RegularText';
+import { Text } from '../Text';
 
 export function RubleSign() {
   return (
     <BalanceWrapper type='button' disabled>
-      <RegularText>₽</RegularText>
+      <Text>₽</Text>
     </BalanceWrapper>
   );
 }

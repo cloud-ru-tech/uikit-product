@@ -1,6 +1,7 @@
 # Header
 
 ## Installation
+
 `npm i @sbercloud/uikit-product-header`
 
 ## Props
@@ -21,7 +22,7 @@ type MobileHeaderProps = {
   children: ReactNode;
   className?: string;
   onMenuClick?(target: HTMLElement): void;
-}
+};
 ```
 
 ### MobileMenu
@@ -41,7 +42,11 @@ type MobileMenuReference = {
 
 ```ts
 type HeaderBalanceTooltipProps = WithSupportProps<{
+  customBalanceTooltip?: ReactNode;
+  balanceVariant?: BalanceVariant;
   balance?: number;
+  bonuses?: number;
+  bonusesUnit?: string;
   limit?: number;
   onBalanceClick?(): void;
   onRechargeClick?(): void;
@@ -206,7 +211,7 @@ import {
   Header,
   HeaderBalanceTooltip,
   HeaderLogo,
-  HeaderMenu, 
+  HeaderMenu,
   HeaderProjectDescription,
   HeaderProjectSelector,
   HeaderToolbar,
@@ -223,7 +228,7 @@ function App() {
   const mobileMenuRef = useRef<MobileMenuReference>(null);
 
   function handleLogoClick() {}
-    
+
   function handleBalanceClick() {}
 
   function handleRechargeClick() {}
@@ -235,7 +240,7 @@ function App() {
   function handleWorkspaceChange(workspace: string) {
     setWorkspace(workspace);
   }
-  
+
   if(isMobile) {
     return (
       <>

@@ -1,2 +1,2 @@
-export * from './Balance';
+export * from './Text';
 export * from './constants';

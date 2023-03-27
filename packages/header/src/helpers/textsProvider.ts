@@ -3,6 +3,7 @@ import { createTextProvider, LanguageCodeType } from '@sbercloud/uikit-product-u
 export enum Texts {
   HeaderBalanceTooltipBalance = 'header-balance-tooltip-balance',
   HeaderBalanceTooltipLimit = 'header-balance-tooltip-limit',
+  HeaderBalanceTooltipBonuses = 'header-balance-tooltip-bonuses',
   HeaderBalanceTooltipRecharge = 'header-balance-tooltip-recharge',
 
   HeaderProjectSelectorCreateProject = 'header-project-selector-create-project',
@@ -16,6 +17,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
     [Texts.HeaderBalanceTooltipBalance]: 'Баланс',
     [Texts.HeaderBalanceTooltipLimit]: 'Лимит',
+    [Texts.HeaderBalanceTooltipBonuses]: 'Бонусы',
     [Texts.HeaderBalanceTooltipRecharge]: 'Пополнить баланс',
 
     [Texts.HeaderProjectSelectorCreateProject]: 'Создать проект',
@@ -27,6 +29,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.enGB]: {
     [Texts.HeaderBalanceTooltipBalance]: 'Balance',
     [Texts.HeaderBalanceTooltipLimit]: 'Limit',
+    [Texts.HeaderBalanceTooltipBonuses]: 'Bonuses',
     [Texts.HeaderBalanceTooltipRecharge]: 'Recharge the balance',
 
     [Texts.HeaderProjectSelectorCreateProject]: 'Create project',

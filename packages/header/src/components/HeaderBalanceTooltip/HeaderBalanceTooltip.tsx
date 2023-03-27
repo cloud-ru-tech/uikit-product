@@ -1,12 +1,16 @@
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { Balance, Floating, Foldable, Pie, RubleSign, Spinner } from './components';
+import { Balance, BalanceVariant, Floating, Foldable, Pie, RubleSign, Spinner } from './components';
 import * as S from './styled';
 
 export type HeaderBalanceTooltipProps = WithSupportProps<{
+  customBalanceTooltip?: ReactNode;
+  balanceVariant?: BalanceVariant;
   balance?: number;
+  bonuses?: number;
+  bonusesUnit?: string;
   limit?: number;
   onBalanceClick?(): void;
   onRechargeClick?(): void;
@@ -14,7 +18,11 @@ export type HeaderBalanceTooltipProps = WithSupportProps<{
 }>;
 
 export function HeaderBalanceTooltip({
+  customBalanceTooltip,
   balance,
+  balanceVariant,
+  bonuses,
+  bonusesUnit,
   limit,
   onBalanceClick,
   onRechargeClick,
@@ -45,7 +53,16 @@ export function HeaderBalanceTooltip({
     }
 
     if (limit === undefined || isMobile) {
-      return <Balance balance={balance} onBalanceClick={onBalanceClick} />;
+      return (
+        <Balance
+          customBalanceTooltip={customBalanceTooltip}
+          balance={balance}
+          balanceVariant={balanceVariant}
+          bonuses={bonuses}
+          bonusesUnit={bonusesUnit}
+          onBalanceClick={onBalanceClick}
+        />
+      );
     }
 
     return (
@@ -59,7 +76,14 @@ export function HeaderBalanceTooltip({
           onClose={handleFoldableClose}
           fallback={isRechargeButtonVisible && <RubleSign />}
         >
-          <Balance balance={balance} limit={limit} onBalanceClick={onBalanceClick} />
+          <Balance
+            customBalanceTooltip={customBalanceTooltip}
+            balance={balance}
+            bonuses={bonuses}
+            bonusesUnit={bonusesUnit}
+            limit={limit}
+            onBalanceClick={onBalanceClick}
+          />
         </Foldable>
       </>
     );
@@ -76,3 +100,5 @@ export function HeaderBalanceTooltip({
     </S.Wrapper>
   );
 }
+
+HeaderBalanceTooltip.balanceVariants = BalanceVariant;

@@ -16,6 +16,8 @@ const Template: Story<
   <HeaderBalanceTooltip
     {...args}
     balance={showSpinner ? undefined : args.balance}
+    bonuses={showSpinner ? undefined : args.bonuses}
+    customBalanceTooltip={showSpinner ? undefined : args.customBalanceTooltip}
     limit={showPie ? args.limit : undefined}
     onRechargeClick={showRechargeButton ? args.onRechargeClick : undefined}
   />
@@ -24,6 +26,10 @@ const Template: Story<
 export const headerBalanceTooltip = Template.bind({});
 headerBalanceTooltip.args = {
   balance: 144_401_810,
+  balanceVariant: undefined,
+  customBalanceTooltip: undefined,
+  bonuses: undefined,
+  bonusesUnit: undefined,
   limit: 155_500_000,
   showRechargeButton: true,
   showSpinner: false,
