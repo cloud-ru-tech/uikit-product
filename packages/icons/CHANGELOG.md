@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.8.0 (2023-04-03)
+
+
+### Features
+
+* **[LK-1649](https://jira.sbercloud.tech/browse/LK-1649):** add Telegram icon ([1181bee](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1181beef0c3012336d8fd61bf20c22e3369998b6))
+
+
+
+
+
 # 5.7.0 (2023-03-13)
 
 
