@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2023-04-03)
+
+
+### Features
+
+* **[RM-506](https://jira.sbercloud.tech/browse/RM-506):** added bonuses and tooltip to HeaderBalanceTooltip ([26765d3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/26765d3cc30f1fc200b9791f0a7aa5f37448479c))
+
+
+
+
+
 ## 1.0.9 (2023-03-24)
 
 ### Only dependencies have been changed
