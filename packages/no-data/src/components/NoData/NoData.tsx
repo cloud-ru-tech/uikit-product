@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, ReactNode } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -7,7 +7,7 @@ import * as S from './styled';
 export type NoDataProps = WithSupportProps<{
   image: ReactElement;
   title: string;
-  description?: string;
+  description?: ReactNode;
   button?: ReactElement;
 }>;
 

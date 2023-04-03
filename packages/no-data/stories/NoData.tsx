@@ -49,6 +49,9 @@ noData.args = {
   button: 'Default',
 };
 noData.argTypes = {
+  description: {
+    type: 'string',
+  },
   image: {
     options: Object.keys(icons),
     mapping: icons,
