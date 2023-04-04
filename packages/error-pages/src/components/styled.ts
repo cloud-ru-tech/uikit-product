@@ -12,7 +12,7 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-const BIG_GEAR_WHEEL_SECONDS_PERIOD = 60;
+const GEAR_WHEEL_ROTATION_PERIOD = 10;
 
 export const Wrapper = styled.div`
   background-color: var(${COLORS.background});
@@ -93,7 +93,7 @@ export const rotateSmall = css`
   }
   transform-origin: center;
   transform-box: fill-box;
-  animation: rotating ${(BIG_GEAR_WHEEL_SECONDS_PERIOD * 13) / 17}s linear infinite;
+  animation: rotating ${GEAR_WHEEL_ROTATION_PERIOD}s linear infinite;
 `;
 
 export const rotateBig = css`
@@ -107,5 +107,5 @@ export const rotateBig = css`
   }
   transform-origin: center;
   transform-box: fill-box;
-  animation: rotating ${BIG_GEAR_WHEEL_SECONDS_PERIOD}s linear infinite;
+  animation: rotating ${GEAR_WHEEL_ROTATION_PERIOD}s linear infinite;
 `;
