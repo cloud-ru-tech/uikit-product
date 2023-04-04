@@ -20,6 +20,7 @@ export const Link = styled.a`
   height: 8px;
   padding: 2px;
   width: 8px;
+  box-sizing: content-box;
 
   &:hover,
   &[data-selected] {
