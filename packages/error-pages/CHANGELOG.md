@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2023-04-04)
+
+
+### Features
+
+* **[LK-1550](https://jira.sbercloud.tech/browse/LK-1550):** change gear wheels and rotation period ([587f03c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/587f03c9342a39e9e383a22e0b50e4ff87d25bba))
+
+
+
+
+
 ## 0.6.9 (2023-04-03)
 
 ### Only dependencies have been changed
