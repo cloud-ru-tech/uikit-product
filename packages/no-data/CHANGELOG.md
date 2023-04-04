@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-04-04)
+
+
+### Features
+
+* **[DPS-2821](https://jira.sbercloud.tech/browse/DPS-2821):** extend description prop ([584093a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/584093a57beac567eed9d94efdde6588fd4fbaff))
+
+
+
+
+
 ## 2.0.18 (2023-04-03)
 
 ### Only dependencies have been changed

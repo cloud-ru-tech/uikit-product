@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2023-04-04)
+
+
+### Features
+
+* **[FF-2060](https://jira.sbercloud.tech/browse/FF-2060):** add inherit cursor style for sidebar item label ([805c61a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/805c61aa47ed8d04742083d7b5b1dedbe59ce77c))
+
+
+
+
+
 ## 1.1.8 (2023-04-03)
 
 ### Only dependencies have been changed
