@@ -72,6 +72,10 @@ export const Label = styled(TruncateString)`
   color: var(--sidebar-item__text-color);
 
   transition: color ${ANIMATIONS.TRANSITION};
+
+  span {
+    cursor: inherit;
+  }
 `;
 
 // 28 = 20 + 8, 20 - icon size, 8 margin-right
