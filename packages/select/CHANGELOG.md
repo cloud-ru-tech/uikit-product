@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.27.0 (2023-04-05)
+
+
+### BREAKING CHANGES
+
+
+* **[DPS-2821](https://jira.sbercloud.tech/browse/DPS-2821):** wrap select in input-decorator ([74fde8b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74fde8be374c656bf4d6189b5cdc1c6955a93326))
+
+
+
+
 ## 0.26.50 (2023-04-03)
 
 ### Only dependencies have been changed
