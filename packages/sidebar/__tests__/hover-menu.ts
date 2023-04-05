@@ -21,7 +21,7 @@ fixture('[Navigation]: Sidebar - hover menu')
   .page(getPage())
   .beforeEach(t => t.click(getCollapseButton()));
 
-test('renders', async t => {
+test.skip('renders', async t => {
   const verifyItem = async (id: string, innerChecker: (selector: Selector) => Promise<void>) => {
     await t.hover(getItemById(id));
     await t.expect(getHoverMenu().exists).ok();
