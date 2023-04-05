@@ -14,11 +14,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import {
   ControlPrefixProps,
-  ISelectProps,
   MultiValueContainerPrefixProps,
   OptionPrefixProps,
   OptionTypeBase,
   Select,
+  SelectProps,
 } from '../src';
 import { groupedServices, services } from './helpers/mockData';
 
@@ -50,7 +50,7 @@ const Footer = styled.div`
   padding: 20px;
 `;
 
-const Template: Story<ISelectProps<OptionTypeBase>> = ({
+const Template: Story<SelectProps> = ({
   type,
   isMulti,
   showLogo,
@@ -190,9 +190,11 @@ const Template: Story<ISelectProps<OptionTypeBase>> = ({
 };
 
 export const select = Template.bind({});
+
 select.args = {
-  error: false,
+  error: undefined,
 };
+
 select.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
@@ -202,6 +204,7 @@ select.parameters = {
     url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=11428%3A185606',
   },
 };
+
 select.argTypes = {
   type: {
     options: ['medium', 'large', 'round-gray', 'round-light'],
@@ -215,8 +218,9 @@ select.argTypes = {
     },
   },
   error: {
+    options: [undefined, 'Text error'],
     control: {
-      type: 'boolean',
+      type: 'radio',
     },
   },
   isMulti: {

@@ -2,14 +2,12 @@ import { cx } from '@linaria/core';
 import { memo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { ISelectProps } from '../../../components';
+import { SelectProps } from '../../../components';
 import { optionClass, StyledDescWrap, StyledOption } from './styled';
 
 const Stub = (): JSX.Element => <></>;
 
-export const CustomOption = <CustomOptionType,>(
-  props: ISelectProps<CustomOptionType>,
-): typeof ReactSelectComponents.Option => {
+export const CustomOption = (props: SelectProps): typeof ReactSelectComponents.Option => {
   const { prefixOption, postfixOption } = props;
 
   if (!prefixOption && !postfixOption) {

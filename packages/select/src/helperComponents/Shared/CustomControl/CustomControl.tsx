@@ -1,13 +1,11 @@
 import { memo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { ISelectProps } from '../../../components';
+import { SelectProps } from '../../../components';
 
 const Stub = (): JSX.Element => <></>;
 
-export const CustomControl = <CustomOptionType,>(
-  props: ISelectProps<CustomOptionType>,
-): typeof ReactSelectComponents.Control => {
+export const CustomControl = (props: SelectProps): typeof ReactSelectComponents.Control => {
   const { prefixControl } = props;
 
   if (!prefixControl) {

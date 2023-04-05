@@ -1,9 +1,10 @@
 import { CSSProperties } from 'react';
 import { Props, Styles, Theme } from 'react-select';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { DEPRECATED_EXPORT_VARS, EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 const { COLORS_GENERAL, COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
+const { BLACK_ALFA } = EXPORT_VARS;
 
 export const theme =
   (typeTheme?: Partial<Theme>) =>
@@ -44,11 +45,12 @@ export const styles = (typeStyles?: Styles): Styles => ({
     border: menuIsOpen
       ? `1px solid var(${COLORS_SELECT.BORDER_FOCUS_COLOR})`
       : `1px solid var(${COLORS_SELECT.BORDER_COLOR})`,
+    background: `var(${COLORS_SELECT.BACKGROUND})`,
     ...(isDisabled
       ? {
-          borderColor: `var(${COLORS_SELECT.DISABLED_BORDER_COLOR})`,
+          borderColor: `var(${BLACK_ALFA[16]})`,
           color: `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`,
-          background: `var(${COLORS_SELECT.DISABLED_BACKGROUND})`,
+          background: `var(${BLACK_ALFA[4]})`,
         }
       : {}),
     ...(error
@@ -56,7 +58,6 @@ export const styles = (typeStyles?: Styles): Styles => ({
           border: `1px solid var(${COLORS_SELECT.BORDER_ERROR_COLOR})`,
         }
       : {}),
-    background: `var(${COLORS_SELECT.BACKGROUND})`,
     boxShadow: 'none !important',
     cursor: isDisabled ? 'not-allowed' : 'default',
     '&:focus': {

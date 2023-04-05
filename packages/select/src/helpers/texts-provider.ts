@@ -23,7 +23,7 @@ type DictionaryProperty = DictionaryPropertyAsFn | string;
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryProperty>>> = {
   [LanguageCodeType.ruRU]: {
     [Texts.NoData]: 'Нет данных',
-    [Texts.SelectPlaceholder]: 'Выберите',
+    [Texts.SelectPlaceholder]: 'Не выбрано',
     [Texts.ModalDeleteTagTitle]: 'Удаление тега',
     [Texts.ModalDeleteTagDesc]: ({ label }) => `Вы действительно хотите удалить тег «${label}»?`,
     [Texts.SelectValue]: 'Выберите значение',
@@ -41,7 +41,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
   },
   [LanguageCodeType.enGB]: {
     [Texts.NoData]: 'No data',
-    [Texts.SelectPlaceholder]: 'Select',
+    [Texts.SelectPlaceholder]: 'Not selected',
     [Texts.ModalDeleteTagTitle]: 'Delete tag',
     [Texts.ModalDeleteTagDesc]: ({ label }) => `Do you really want to delete the tag ${label}?`,
     [Texts.SelectValue]: 'Select a value',

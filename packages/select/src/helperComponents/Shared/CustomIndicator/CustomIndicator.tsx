@@ -1,13 +1,11 @@
 import { memo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { ISelectProps } from '../../../components';
+import { SelectProps } from '../../../components';
 
 const Stub = (): JSX.Element => <></>;
 
-export const CustomIndicator = <CustomOptionType,>(
-  props: ISelectProps<CustomOptionType>,
-): typeof ReactSelectComponents.Control => {
+export const CustomIndicator = (props: SelectProps): typeof ReactSelectComponents.Control => {
   const { postfixControl } = props;
 
   if (!postfixControl) {

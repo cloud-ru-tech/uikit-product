@@ -1,6 +1,8 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import mergeRefs from 'merge-refs';
+import React, { forwardRef, ForwardRefExoticComponent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import RCSelect, { components, OptionTypeBase as RCOptionTypeBase, SelectComponentsConfig } from 'react-select';
 
+import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-product-input-decorator-private';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { checkMobileDevice } from '../../helpers/checkMobileDevice';
@@ -17,10 +19,11 @@ export type MultiValueContainerPrefixProps = React.ComponentProps<typeof compone
 export type OptionTypeBase = RCOptionTypeBase;
 
 type RCProps = React.ComponentProps<typeof RCSelect>;
+type RCComponents = SelectComponentsConfig<typeof components, boolean>;
 
 const toLow = (str?: string): string => (str ? `${str}`.toLowerCase() : '');
 
-export interface ISelectProps<CustomOptionType> extends Omit<RCProps, 'components'> {
+export type SelectProps = {
   type?: SelectType;
   prefixControl?: (props: ControlPrefixProps) => JSX.Element;
   postfixControl?: (props: ControlPrefixProps) => JSX.Element;
@@ -28,29 +31,31 @@ export interface ISelectProps<CustomOptionType> extends Omit<RCProps, 'component
   prefixOption?: (props: OptionPrefixProps) => JSX.Element;
   postfixOption?: (props: OptionPrefixProps) => JSX.Element;
   className?: string;
-  error?: boolean;
-  components?: SelectComponentsConfig<CustomOptionType, any>;
+  error?: string;
+  components?: RCComponents;
   optionNoWrap?: boolean;
   menuRelative?: boolean;
   isSearchableCustom?: boolean;
   searchableProps?: string[];
   footer?: React.ReactNode;
-  customRef?: (instance: RCSelect<CustomOptionType> | null) => void;
   collapsedGroup?: boolean;
-}
+} & Omit<RCProps, 'components'> &
+  Pick<InputDecoratorPrivateProps, 'label' | 'labelTooltip' | 'optional' | 'hint'>;
 
-export const Select = <CustomOptionType extends OptionTypeBase>(
-  props: WithSupportProps<ISelectProps<CustomOptionType>>,
-): JSX.Element => {
-  const selectRef = useRef<HTMLDivElement>(null);
+type SelectRef = RCSelect & HTMLDivElement;
+
+export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((props, ref) => {
+  const innerRef = useRef<SelectRef>(null);
+  const selectRef = mergeRefs<SelectRef>(ref, innerRef);
+
   const {
+    id,
     options,
     type = 'medium',
     closeMenuOnSelect = true,
     isSearchable = false,
     searchableProps = ['value'],
     className,
-    customRef,
     onMenuClose,
     components,
     prefixControl,
@@ -61,10 +66,15 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
     collapsedGroup,
     placeholder,
     formatOptionLabel,
+    hint,
+    label,
+    labelTooltip,
+    optional,
+    error,
   } = props;
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const [stateOptions, setOptions] = useState<CustomOptionType[]>();
+  const [stateOptions, setOptions] = useState<RCComponents[]>();
   const [inputValue, setInputSearch] = useState<string>();
   const [isOpen, setIsOpen] = useState(false);
   const [customStyles, setCustomStyles] = useState(getSelectStyles(type));
@@ -80,7 +90,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
   const filterOptions = useCallback(
     (options, inputValue) =>
       options
-        .map((option: CustomOptionType) => {
+        .map((option: SelectProps['options']) => {
           const childOptions = option.options;
           const isGroup = childOptions && Array.isArray(childOptions);
 
@@ -92,7 +102,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
           }
           return option;
         })
-        .filter((option: CustomOptionType) => {
+        .filter((option: SelectProps['options']) => {
           const childOptions = option.options;
           const isGroup = childOptions && Array.isArray(childOptions);
 
@@ -117,12 +127,12 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
 
   const clickOutside = useCallback(
     event => {
-      const isClickInside = selectRef?.current?.contains(event.target);
+      const isClickInside = innerRef?.current?.contains(event.target);
       if (!isClickInside) {
         closeMenu();
       }
     },
-    [selectRef, closeMenu],
+    [closeMenu],
   );
 
   useEffect(() => {
@@ -137,7 +147,7 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
 
   const memoizeCustomComponents = useMemo(
     () =>
-      getSharedComponents<CustomOptionType>(
+      getSharedComponents(
         {
           prefixControl,
           postfixControl,
@@ -180,41 +190,52 @@ export const Select = <CustomOptionType extends OptionTypeBase>(
   );
 
   return (
-    <div className={className} ref={selectRef} {...extractSupportProps(props)}>
-      <RCSelect<CustomOptionType>
-        {...props}
-        placeholder={placeholder || textProvider<string>(languageCode, Texts.SelectPlaceholder)}
-        onMenuClose={onMenuClose}
-        ref={(instance): void => {
-          customRef?.(instance as RCSelect<CustomOptionType>);
-        }}
-        onChange={(...args): void => {
-          props?.onChange?.(...args);
-          if (closeMenuOnSelect) {
-            closeMenu();
-          }
-        }}
-        options={stateOptions}
-        formatGroupLabel={formatGroupLabel}
-        formatOptionLabel={formatOptionLabelInner}
-        components={componentsState}
-        styles={customStyles.styles}
-        theme={customStyles.theme}
-        isSearchable={false}
-        menuIsOpen={checkMobileDevice() ? undefined : isOpen}
-        blurInputOnSelect={checkMobileDevice() || undefined}
-        isSearchableCustom={isSearchable}
-        backspaceRemovesValue={false}
-        hideSelectedOptions={false}
-        searchValue={inputValue}
-        onSearch={setInputSearch}
-        toggleMenu={toggleMenu}
-        onKeyDown={(e: React.KeyboardEvent<HTMLElement>): void => {
-          /* todo: fix this `dirty` hack */
-          e.defaultPrevented = true;
-        }}
-        collapsedGroup={collapsedGroup}
-      />
-    </div>
+    <InputDecoratorPrivate
+      className={className}
+      hint={hint}
+      label={label}
+      labelTooltip={labelTooltip}
+      labelFor={id}
+      optional={optional}
+      error={error}
+      {...extractSupportProps(props)}
+    >
+      <div ref={selectRef}>
+        <RCSelect
+          {...props}
+          placeholder={placeholder || textProvider<string>(languageCode, Texts.SelectPlaceholder)}
+          onMenuClose={onMenuClose}
+          onChange={(...args): void => {
+            props?.onChange?.(...args);
+            if (closeMenuOnSelect) {
+              closeMenu();
+            }
+          }}
+          options={stateOptions}
+          formatGroupLabel={formatGroupLabel}
+          formatOptionLabel={formatOptionLabelInner}
+          components={componentsState}
+          styles={customStyles.styles}
+          theme={customStyles.theme}
+          isSearchable={false}
+          menuIsOpen={checkMobileDevice() ? undefined : isOpen}
+          menuPortalTarget={document.body}
+          blurInputOnSelect={checkMobileDevice() || undefined}
+          isSearchableCustom={isSearchable}
+          backspaceRemovesValue={false}
+          hideSelectedOptions={false}
+          searchValue={inputValue}
+          onSearch={setInputSearch}
+          toggleMenu={toggleMenu}
+          onKeyDown={(e: React.KeyboardEvent<HTMLElement>): void => {
+            /* todo: fix this `dirty` hack */
+            e.defaultPrevented = true;
+          }}
+          collapsedGroup={collapsedGroup}
+        />
+      </div>
+    </InputDecoratorPrivate>
   );
-};
+  // for storybook args autobinding
+  // see https://github.com/storybookjs/storybook/issues/15334
+}) as ForwardRefExoticComponent<SelectProps>;

@@ -5,7 +5,7 @@ import { components as ReactSelectComponents, SelectComponentsConfig } from 'rea
 import { CloseInterfaceSVG, DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { ISelectProps } from '../components';
+import { SelectProps } from '../components';
 import { CustomControl, CustomMenu, MultiValueContainer } from '../helperComponents/Shared';
 import { CustomGroup } from '../helperComponents/Shared/CustomGroup';
 import { CustomGroupHeading } from '../helperComponents/Shared/CustomGroupHeading';
@@ -37,18 +37,18 @@ const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponen
   return <ReactSelectComponents.NoOptionsMessage {...props}>{noDataText}</ReactSelectComponents.NoOptionsMessage>;
 };
 
-export const getSharedComponents = <CustomOptionType,>(
-  props: ISelectProps<CustomOptionType>,
+export const getSharedComponents = (
+  props: SelectProps,
   isMobile?: boolean,
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   /* @ts-ignore */
-): SelectComponentsConfig<CustomOptionType> => {
-  const customControl = CustomControl<CustomOptionType>(props);
-  const customOption = CustomOption<CustomOptionType>(props);
-  const customIndicator = CustomIndicator<CustomOptionType>(props);
-  const multiValueContainer = MultiValueContainer<CustomOptionType>(props);
-  const group = CustomGroup<CustomOptionType>(props);
-  const groupHeading = CustomGroupHeading<CustomOptionType>(props);
+): SelectComponentsConfig<typeof ReactSelectComponents> => {
+  const customControl = CustomControl(props);
+  const customOption = CustomOption(props);
+  const customIndicator = CustomIndicator(props);
+  const multiValueContainer = MultiValueContainer(props);
+  const group = CustomGroup(props);
+  const groupHeading = CustomGroupHeading(props);
 
   const mobile = {
     MultiValueRemove,

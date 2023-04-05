@@ -1,23 +1,21 @@
 import { COLOR_VALUES, Colors } from '../../constants';
 import * as ColorComponents from '../../helperComponents/ColorPicker';
-import { ISelectProps, OptionTypeBase, Select } from '../Default';
+import { Select, SelectProps } from '../Default';
 
 const colors = COLOR_VALUES.map(color => ({ value: color }));
 
 export type OptionTypeColor = { value: Colors };
 
-export interface IColorPicker<OptionTypeColor> extends ISelectProps<OptionTypeColor> {
+export type IColorPicker = {
   defaultValue?: OptionTypeColor;
   dropdownPlacement?: 'left' | 'right';
-}
+} & SelectProps;
 
-export const ColorPicker = <OptionTypeColor extends OptionTypeBase>(
-  props: IColorPicker<OptionTypeColor>,
-): JSX.Element => {
+export const ColorPicker = (props: IColorPicker): JSX.Element => {
   const { defaultValue = colors[0], dropdownPlacement = 'left' } = props;
 
   return (
-    <Select<OptionTypeColor>
+    <Select
       {...props}
       dropdownPlacement={dropdownPlacement}
       defaultValue={defaultValue}

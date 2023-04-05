@@ -2,20 +2,18 @@ import { components as ReactSelectComponents } from 'react-select';
 
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
-import { ISelectProps } from '../../../components';
+import { SelectProps } from '../../../components';
 import { arrowClass } from './styled';
 
-interface GroupHeadingProps<CustomOptionType> extends React.ComponentProps<typeof ReactSelectComponents.GroupHeading> {
+type GroupHeadingProps = {
   custom?: {
     open?: boolean;
     setOpen?: (open?: boolean) => void;
-    selectProps?: ISelectProps<CustomOptionType>;
+    selectProps?: SelectProps;
   };
-}
+} & React.ComponentProps<typeof ReactSelectComponents.GroupHeading>;
 
-export const CustomGroupHeading = <CustomOptionType,>(
-  props: ISelectProps<CustomOptionType>,
-): typeof ReactSelectComponents.GroupHeading => {
+export const CustomGroupHeading = (props: SelectProps): typeof ReactSelectComponents.GroupHeading => {
   const { collapsedGroup } = props;
 
   if (!collapsedGroup) {
@@ -24,14 +22,12 @@ export const CustomGroupHeading = <CustomOptionType,>(
     );
   }
 
-  return ({ custom, children, getStyles, ...props }: GroupHeadingProps<CustomOptionType>): JSX.Element => {
+  return ({ custom, children, getStyles, ...props }: GroupHeadingProps): JSX.Element => {
     const { open, setOpen, selectProps } = custom || {};
     return (
       <ReactSelectComponents.GroupHeading
         {...props}
-        getStyles={(key: string, props: GroupHeadingProps<CustomOptionType>) =>
-          getStyles(key, { ...props, selectProps })
-        }
+        getStyles={(key: string, props: GroupHeadingProps) => getStyles(key, { ...props, selectProps })}
         onClick={() => setOpen?.(!open)}
       >
         <DropdownDownInterfaceSVG className={arrowClass} data-open={open || undefined} />

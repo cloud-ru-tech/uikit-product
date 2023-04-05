@@ -1,14 +1,12 @@
 import { memo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { ISelectProps } from '../../../components';
+import { SelectProps } from '../../../components';
 import { StyledMultiValueContainer } from './styled';
 
 const Stub = (): JSX.Element => <></>;
 
-export const MultiValueContainer = <CustomOptionType,>(
-  props: ISelectProps<CustomOptionType>,
-): typeof ReactSelectComponents.MultiValueContainer => {
+export const MultiValueContainer = (props: SelectProps): typeof ReactSelectComponents.MultiValueContainer => {
   const { prefixMultiValueContainer } = props;
 
   if (!prefixMultiValueContainer) {

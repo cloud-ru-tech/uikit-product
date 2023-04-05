@@ -1,7 +1,7 @@
 import { FC, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-import { ISelectProps } from '../../../components';
+import { SelectProps } from '../../../components';
 
 const Group: FC<
   React.ComponentProps<typeof ReactSelectComponents.Group> & {
@@ -31,9 +31,7 @@ const Group: FC<
   );
 };
 
-export const CustomGroup = <CustomOptionType,>(
-  props: ISelectProps<CustomOptionType>,
-): typeof ReactSelectComponents.GroupHeading => {
+export const CustomGroup = (props: SelectProps): typeof ReactSelectComponents.GroupHeading => {
   const { collapsedGroup } = props;
 
   if (!collapsedGroup) {
