@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.33 (2023-04-05)
+
+
+### Bug Fixes
+
+* **[ONB-545](https://jira.sbercloud.tech/browse/ONB-545):** slider dots has direct content-box setting ([5b01e43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5b01e431ee98f3794a87a871872f50f1c1d2518b))
+
+
+
+
+
 ## 1.2.32 (2023-04-03)
 
 ### Only dependencies have been changed
