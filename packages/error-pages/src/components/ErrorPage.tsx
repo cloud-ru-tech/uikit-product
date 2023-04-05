@@ -42,37 +42,40 @@ export function ErrorPage({
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)}>
       <S.LeftSide>
-        {getLogoByVariant(logoVariant)}
+        <S.TextContainer>
+          {getLogoByVariant(logoVariant)}
 
-        <S.Title>
-          {textProvider(languageCode, content.title)}
+          <S.Title>
+            {textProvider(languageCode, content.title)}
 
-          {content.statusCode && (
-            <S.StatusCode color={Tag.colors.Gray} size={Tag.sizes.Medium} value={content.statusCode} />
-          )}
-        </S.Title>
-
-        <S.ActionWrapper>
-          <S.ActionTitle>{textProvider(languageCode, content.text)}</S.ActionTitle>
-
-          <S.ActionLinks>
-            {hasMainPageLink && (
-              <Link href={mainPageUrl} target={'_self'} text={textProvider(languageCode, Texts.MainPageLink)} />
+            {content.statusCode && (
+              <S.StatusCode color={Tag.colors.Gray} size={Tag.sizes.Medium} value={content.statusCode} />
             )}
+          </S.Title>
 
-            {hasBackLink && (
-              <Link
-                onClick={() => window.history.back()}
-                target={'_self'}
-                text={textProvider(languageCode, Texts.BackLink)}
-              />
-            )}
-          </S.ActionLinks>
-        </S.ActionWrapper>
+          <S.ActionWrapper>
+            <S.ActionTitle>{textProvider(languageCode, content.text)}</S.ActionTitle>
+
+            <S.ActionLinks>
+              {hasMainPageLink && (
+                <Link href={mainPageUrl} target={'_self'} text={textProvider(languageCode, Texts.MainPageLink)} />
+              )}
+
+              {hasBackLink && (
+                <Link
+                  onClick={() => window.history.back()}
+                  target={'_self'}
+                  text={textProvider(languageCode, Texts.BackLink)}
+                />
+              )}
+            </S.ActionLinks>
+          </S.ActionWrapper>
+        </S.TextContainer>
 
         <S.ButtonContainer>
           {onSupportCenterClick && (
             <Button
+              className={S.buttonClassName}
               variant={Button.variants.Outline}
               text={textProvider(languageCode, Texts.SupportCenterButton)}
               onClick={onSupportCenterClick}
@@ -81,6 +84,7 @@ export function ErrorPage({
           )}
 
           <Button
+            className={S.buttonClassName}
             variant={Button.variants.Filled}
             text={textProvider(languageCode, button.text)}
             href={button.href}
@@ -91,7 +95,7 @@ export function ErrorPage({
         </S.ButtonContainer>
       </S.LeftSide>
       <S.RightSide>
-        <svg width='863' height='520' viewBox='0 0 863 520' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <svg className={S.picClassName} viewBox='0 0 863 520' fill='none' xmlns='http://www.w3.org/2000/svg'>
           <path
             d='M721.711 93H94.2882C86.397 93 80 99.8168 80 108.226V446.774C80 455.183 86.397 462 94.2882 462H721.711C729.602 462 735.999 455.183 735.999 446.774V108.226C735.999 99.8168 729.602 93 721.711 93Z'
             fill={`var(${COLORS.svgBackground})`}

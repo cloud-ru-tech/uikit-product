@@ -14,7 +14,7 @@ export default {
 } as Meta;
 
 const Wrapper = styled.div`
-  height: 1000px;
+  height: calc(100vh - 40px);
 `;
 
 const Template: Story<ErrorPageProps & { showSupportCenterButton: boolean }> = ({
