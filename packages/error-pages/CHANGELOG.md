@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.2 (2023-04-07)
+
+
+### Bug Fixes
+
+* **[LK-1550](https://jira.sbercloud.tech/browse/LK-1550):** align image properly ([1daac29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1daac29f4cf4fb6df039b3640341d4014efbe90e))
+
+
+
+
+
 ## 0.7.1 (2023-04-07)
 
 
