@@ -110,9 +110,11 @@ export const RightSide = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: flex-end;
 
   @media ${CSS_BREAKPOINTS.tablet} {
     justify-content: flex-start;
+    align-items: center;
     min-width: 0;
     max-width: none;
     width: 100%;
