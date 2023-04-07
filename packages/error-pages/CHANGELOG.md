@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.1 (2023-04-07)
+
+
+### Bug Fixes
+
+* **[LK-1550](https://jira.sbercloud.tech/browse/LK-1550):** change elements positioning ([4983c65](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4983c65de37bebd1787261b3eb5d2a42dcb132d6))
+
+
+
+
+
 # 0.7.0 (2023-04-04)
 
 
