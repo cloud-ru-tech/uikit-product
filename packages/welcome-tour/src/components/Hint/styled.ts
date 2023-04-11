@@ -53,4 +53,5 @@ export const StepButtons = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-left: auto;
 `;

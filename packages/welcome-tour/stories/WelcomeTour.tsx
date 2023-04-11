@@ -42,6 +42,29 @@ const JoyrideSteps: StepWithSubtitle[] = [
   },
 ];
 
+const JoyrideStepsWithoutContent: StepWithSubtitle[] = [
+  {
+    title: 'Бизнес решение для вас',
+    subtitle:
+      'Решайте задачу с помощью наших бизнес-решений — внутри вас ждёт архитектура, преимущества и особенности конкретного решения, подробная инструкция подключения и полезные ссылки',
+    content: null,
+    target: '#test-1',
+  },
+  {
+    title: 'Бизнес решение для вас',
+    subtitle: 'Решайте задачу с помощью наших бизнес-решений',
+    content: null,
+    target: '#test-2',
+  },
+  {
+    title: 'Бизнес решение для вас',
+    subtitle:
+      'Внутри вас ждёт архитектура, преимущества и особенности конкретного решения, подробная инструкция подключения и полезные ссылки',
+    content: null,
+    target: '#test-3',
+  },
+];
+
 export default {
   title: 'Not stable/Welcome Tour',
   component: WelcomeTour,
@@ -49,6 +72,7 @@ export default {
 
 const Template: Story<WelcomeTourProps> = () => {
   const [tourStarted, setTourStarted] = useState(false);
+  const [steps, setSteps] = useState(JoyrideSteps);
 
   return (
     <div style={{ background: 'white', padding: 30 }}>
@@ -61,11 +85,24 @@ const Template: Story<WelcomeTourProps> = () => {
       <div id='test-3' style={{ width: 400, padding: 10 }}>
         Welcome tour component
       </div>
-      <div style={{ margin: 10 }}>
-        <Button text='Start the tour' onClick={() => setTourStarted(true)} />
+      <div style={{ margin: 10, display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <Button
+          text='Start the tour'
+          onClick={() => {
+            setSteps(JoyrideSteps);
+            setTourStarted(true);
+          }}
+        />
+        <Button
+          text='Start the tour without content'
+          onClick={() => {
+            setSteps(JoyrideStepsWithoutContent);
+            setTourStarted(true);
+          }}
+        />
       </div>
       <WelcomeTour
-        tourSteps={JoyrideSteps}
+        tourSteps={steps}
         tourStarted={tourStarted}
         setTourStarted={setTourStarted}
         primaryButtonText='Вперёд'

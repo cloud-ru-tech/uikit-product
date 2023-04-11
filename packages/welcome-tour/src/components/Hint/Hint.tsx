@@ -42,9 +42,9 @@ export function Hint({
         <ButtonIcon {...skipProps} variant={ButtonIcon.variants.Strong} icon={<CloseInterfaceSVG />} />
       </S.HeadingContainer>
       <S.SubHeading>{step.subtitle}</S.SubHeading>
-      <S.Content>{step.content}</S.Content>
+      {step.content && <S.Content>{step.content}</S.Content>}
       <S.Footer>
-        <Steps stepsCount={size} currentStep={index} />
+        {step.content && <Steps stepsCount={size} currentStep={index} />}
         <S.StepButtons>
           {index !== 0 && <ButtonGhost {...backButton} variant={ButtonGhost.variants.Primary} />}
           {isLastStep ? (
