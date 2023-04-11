@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.3 (2023-04-11)
+
+
+### Bug Fixes
+
+* **[FF-2142](https://jira.sbercloud.tech/browse/FF-2142):** add classname to mobile menu ([d04d1bd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d04d1bdf233b90d857e3053a06b5a032244e20ca))
+
+
+
+
+
 ## 1.1.2 (2023-04-11)
 
 ### Only dependencies have been changed
