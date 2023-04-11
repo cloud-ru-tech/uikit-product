@@ -13,6 +13,7 @@ import * as S from './styled';
 
 export type MobileMenuProps = WithSupportProps<{
   children: ReactNode;
+  className?: string;
 }>;
 
 export type MobileMenuReference = {
@@ -20,7 +21,7 @@ export type MobileMenuReference = {
   close(): void;
 };
 
-export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ children, ...rest }, ref) => {
+export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ children, className, ...rest }, ref) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const {
     y,
@@ -50,6 +51,7 @@ export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ ch
   return (
     <FloatingPortal root={document.body}>
       <S.Wrapper
+        className={className}
         top={y ?? 0}
         strategy={strategy}
         ref={setFloating}
