@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.9.0 (2023-04-11)
+
+
+### Features
+
+* **[ONB-554](https://jira.sbercloud.tech/browse/ONB-554):** added new icons for welcome screen ([9c438a1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9c438a16f0d0395cff20b3774e77a06f3041f324))
+
+
+
+
+
 # 5.8.0 (2023-04-03)
 
 

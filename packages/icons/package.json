@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-icons",
   "title": "React Icons",
-  "version": "5.8.0",
+  "version": "5.9.0",
   "sideEffects": [
     "*.css",
     "*.woff",
