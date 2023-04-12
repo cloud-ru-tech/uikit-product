@@ -23,6 +23,7 @@ module.exports = {
     '#CCCCCC': 'inherit',
     '#A0A0A0': 'inherit',
     '#CCC': 'inherit',
+    '#B3B3B3': 'inherit',
   },
   svgProps: {
     fill: 'inherit',
