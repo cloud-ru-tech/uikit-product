@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.9.1 (2023-04-12)
+
+
+### Bug Fixes
+
+* **[FF-2142](https://jira.sbercloud.tech/browse/FF-2142):** update description ([f31c741](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f31c741c520dd7d4fff0c9ef75f085408347e58b))
+
+
+
+
+
 # 5.9.0 (2023-04-11)
 
 

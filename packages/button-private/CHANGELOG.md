@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.17 (2023-04-12)
+
+
+### Bug Fixes
+
+* **[LK-1636](https://jira.sbercloud.tech/browse/LK-1636):** don't show an empty tooltip ([af71fc2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/af71fc22df77764219109c72acd05a1fbfefe49d))
+
+
+
+
+
 ## 2.0.16 (2023-04-11)
 
 ### Only dependencies have been changed
@@ -52,7 +63,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.11 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-button-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-tooltip@3.0.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
 
 ## [2.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button-private@2.0.9...@sbercloud/uikit-product-button-private@2.0.10) (2023-01-12)
 
