@@ -21,7 +21,7 @@ export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProp
     title, // чтобы не пробрасывался нативный вариант
     ...rest
   }: WrapperComponentProps) =>
-    tooltip || disabledTooltip ? (
+    tooltip || (rest.disabled && disabledTooltip) ? (
       <Tooltip
         {...(rest.disabled ? disabledTooltip || tooltip || {} : tooltip || {})}
         data-test-id={`button-tooltip__${ComposedComponent.displayName}`}
