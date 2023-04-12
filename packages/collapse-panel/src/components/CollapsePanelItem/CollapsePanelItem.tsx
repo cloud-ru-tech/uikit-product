@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { ReactNode, useState } from 'react';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
 import { DropdownUpInterfaceSVG, FavouriteInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -15,19 +15,20 @@ import {
   HeaderStyled,
 } from './styled';
 
-export interface CollapsePanelItemProps {
+export type CollapsePanelItemProps = {
   isCollapsed?: boolean;
   handleClick?: () => void;
   index: number;
+  children: ReactNode;
   isShowFavourites?: boolean;
   isFavourite?: boolean;
-  header?: React.ReactNode;
+  header?: ReactNode;
   isShowCollapse?: boolean;
   hasHeaderClickCollapsed?: boolean;
   hasExpandedAnimation?: boolean;
-}
+};
 
-export const CollapsePanelItem: FC<CollapsePanelItemProps> = ({
+export function CollapsePanelItem({
   isCollapsed,
   handleClick,
   header,
@@ -37,7 +38,7 @@ export const CollapsePanelItem: FC<CollapsePanelItemProps> = ({
   isShowCollapse,
   hasHeaderClickCollapsed,
   hasExpandedAnimation = true,
-}) => {
+}: CollapsePanelItemProps) {
   const [isFavouriteState, setIsFavourite] = useState(isFavourite);
 
   return (
@@ -75,4 +76,4 @@ export const CollapsePanelItem: FC<CollapsePanelItemProps> = ({
       </ContentWrapStyled>
     </ContainerStyled>
   );
-};
+}

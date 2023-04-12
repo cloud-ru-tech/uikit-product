@@ -7,7 +7,7 @@ import { InputCommon } from '@sbercloud/uikit-product-input';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { CollapsePanel, CollapsePanelItem, ICollapsePanelProps } from '../src';
+import { CollapsePanel, CollapsePanelItem, CollapsePanelProps } from '../src';
 
 export default {
   title: 'Not stable/CollapsePanel/Collapse Panel',
@@ -21,7 +21,7 @@ const ContentStyled = styled.div`
   margin-top: 20px;
 `;
 
-const Template: Story<ICollapsePanelProps> = ({ ...args }) => (
+const Template: Story<CollapsePanelProps> = ({ ...args }) => (
   <CollapsePanel {...args}>
     <CollapsePanelItem
       index={0}

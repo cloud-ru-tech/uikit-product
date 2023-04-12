@@ -1,26 +1,27 @@
-import { FC, isValidElement, ReactChildren, useState } from 'react';
+import { isValidElement, ReactChildren, ReactNode, useState } from 'react';
 
 import { CollapsePanelItem } from '../CollapsePanelItem';
 import { ContainerStyled } from './styled';
 
-export interface ICollapsePanelProps {
+export type CollapsePanelProps = {
+  children: ReactNode;
   defaultIndex?: number;
   onItemClick?: (props: number) => void;
   onFavouritesClick?: (props: number) => void;
   isShowFavourites?: boolean;
   isShowCollapse?: boolean;
   hasHeaderClickCollapsed?: boolean;
-}
+};
 
 // TODO: рефактор, контекст + убрать лишние пропсы + желательно избавиться от завязки на className
-export const CollapsePanel: FC<ICollapsePanelProps> = ({
+export function CollapsePanel({
   defaultIndex,
   onItemClick,
   children,
   isShowFavourites,
   isShowCollapse = true,
   hasHeaderClickCollapsed = false,
-}) => {
+}: CollapsePanelProps) {
   const [bindIndex, setBindIndex] = useState(defaultIndex);
   const changeItem = (itemIndex: number) => {
     if (typeof onItemClick === 'function') {
@@ -63,4 +64,4 @@ export const CollapsePanel: FC<ICollapsePanelProps> = ({
       })}
     </ContainerStyled>
   );
-};
+}
