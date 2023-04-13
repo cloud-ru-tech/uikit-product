@@ -13,7 +13,7 @@ export const SELECT_TYPES = {
 export type MultiselectOptionType = { label: ReactText; value: ReactText; amount?: number };
 
 export type TypeKeys = keyof typeof SELECT_TYPES;
-export type SelectType = typeof SELECT_TYPES[TypeKeys];
+export type SelectType = (typeof SELECT_TYPES)[TypeKeys];
 
 export enum SelectSizes {
   Small = 'small',
