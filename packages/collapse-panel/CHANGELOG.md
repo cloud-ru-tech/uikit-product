@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.85 (2023-04-13)
+
+
+### Bug Fixes
+
+* **[DPS-2788](https://jira.sbercloud.tech/browse/DPS-2788):** rm FC type ([75cbd2a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/75cbd2a5cb113f1c4cd76f1209a745f0fa3edb8d))
+
+
+
+
+
 ## 0.8.84 (2023-04-12)
 
 ### Only dependencies have been changed
