@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2023-04-13)
+
+
+### Features
+
+* **[ONB-558](https://jira.sbercloud.tech/browse/ONB-558):** fixing style for steps without content ([fdf0156](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fdf01561ef4d9606203161fb020bd80402e0812c))
+
+
+
+
+
 ## 0.1.6 (2023-04-13)
 
 ### Only dependencies have been changed
