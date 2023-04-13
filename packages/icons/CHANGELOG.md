@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.10.0 (2023-04-13)
+
+
+### Features
+
+* **[AICE-9302](https://jira.sbercloud.tech/browse/AICE-9302):** add like dislike icons ([fc08a3e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fc08a3e22babce423dd4cb6b495d395f536b3d26))
+
+
+
+
+
 ## 5.9.1 (2023-04-12)
 
 
