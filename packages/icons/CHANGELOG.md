@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.11.0 (2023-04-14)
+
+
+### Features
+
+* **[SVP-5274](https://jira.sbercloud.tech/browse/SVP-5274):** added icons for Evolution sidebar tree ([a8ea095](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a8ea095e9b698a716130778b17f7418b4a03d701))
+
+
+
+
+
 # 5.10.0 (2023-04-13)
 
 

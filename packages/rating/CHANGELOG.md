@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.46 (2023-04-14)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.11.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+
+
+
+
+
 ## 0.3.45 (2023-04-13)
 
 ### Only dependencies have been changed
