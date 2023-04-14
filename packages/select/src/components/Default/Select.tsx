@@ -1,10 +1,22 @@
-import mergeRefs from 'merge-refs';
-import React, { forwardRef, ForwardRefExoticComponent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import {
+  ComponentProps,
+  ComponentRef,
+  forwardRef,
+  ForwardRefExoticComponent,
+  KeyboardEvent,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import RCSelect, { components, OptionTypeBase as RCOptionTypeBase, SelectComponentsConfig } from 'react-select';
 
 import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-product-input-decorator-private';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
+import { MenuPortal, RCMenuPortal } from '../../helperComponents/MenuPortal';
 import { checkMobileDevice } from '../../helpers/checkMobileDevice';
 import { getSelectStyles } from '../../helpers/getSelectStyles';
 import { getSharedComponents } from '../../helpers/getSharedComponents';
@@ -13,12 +25,12 @@ import { SelectType } from '../../helpers/types';
 
 export { default as RCSelect } from 'react-select';
 
-export type OptionPrefixProps = React.ComponentProps<typeof components.Option>;
-export type ControlPrefixProps = React.ComponentProps<typeof components.Control>;
-export type MultiValueContainerPrefixProps = React.ComponentProps<typeof components.MultiValueContainer>;
+export type OptionPrefixProps = ComponentProps<typeof components.Option>;
+export type ControlPrefixProps = ComponentProps<typeof components.Control>;
+export type MultiValueContainerPrefixProps = ComponentProps<typeof components.MultiValueContainer>;
 export type OptionTypeBase = RCOptionTypeBase;
 
-type RCProps = React.ComponentProps<typeof RCSelect>;
+type RCProps = ComponentProps<typeof RCSelect>;
 type RCComponents = SelectComponentsConfig<typeof components, boolean>;
 
 const toLow = (str?: string): string => (str ? `${str}`.toLowerCase() : '');
@@ -37,16 +49,15 @@ export type SelectProps = {
   menuRelative?: boolean;
   isSearchableCustom?: boolean;
   searchableProps?: string[];
-  footer?: React.ReactNode;
+  footer?: ReactNode;
   collapsedGroup?: boolean;
 } & Omit<RCProps, 'components'> &
   Pick<InputDecoratorPrivateProps, 'label' | 'labelTooltip' | 'optional' | 'hint'>;
 
-type SelectRef = RCSelect & HTMLDivElement;
+type SelectRef = ComponentRef<typeof RCSelect>;
 
 export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((props, ref) => {
-  const innerRef = useRef<SelectRef>(null);
-  const selectRef = mergeRefs<SelectRef>(ref, innerRef);
+  const portalRef = useRef<HTMLDivElement>(null);
 
   const {
     id,
@@ -127,7 +138,7 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
 
   const clickOutside = useCallback(
     event => {
-      const isClickInside = innerRef?.current?.contains(event.target);
+      const isClickInside = portalRef?.current?.contains(event.target);
       if (!isClickInside) {
         closeMenu();
       }
@@ -165,6 +176,7 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
     () => ({
       ...memoizeCustomComponents,
       ...(components || {}),
+      MenuPortal: (props: RCMenuPortal) => <MenuPortal ref={portalRef} {...props} />,
     }),
     [memoizeCustomComponents, components],
   );
@@ -200,40 +212,39 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
       error={error}
       {...extractSupportProps(props)}
     >
-      <div ref={selectRef}>
-        <RCSelect
-          {...props}
-          placeholder={placeholder || textProvider<string>(languageCode, Texts.SelectPlaceholder)}
-          onMenuClose={onMenuClose}
-          onChange={(...args): void => {
-            props?.onChange?.(...args);
-            if (closeMenuOnSelect) {
-              closeMenu();
-            }
-          }}
-          options={stateOptions}
-          formatGroupLabel={formatGroupLabel}
-          formatOptionLabel={formatOptionLabelInner}
-          components={componentsState}
-          styles={customStyles.styles}
-          theme={customStyles.theme}
-          isSearchable={false}
-          menuIsOpen={checkMobileDevice() ? undefined : isOpen}
-          menuPortalTarget={document.body}
-          blurInputOnSelect={checkMobileDevice() || undefined}
-          isSearchableCustom={isSearchable}
-          backspaceRemovesValue={false}
-          hideSelectedOptions={false}
-          searchValue={inputValue}
-          onSearch={setInputSearch}
-          toggleMenu={toggleMenu}
-          onKeyDown={(e: React.KeyboardEvent<HTMLElement>): void => {
-            /* todo: fix this `dirty` hack */
-            e.defaultPrevented = true;
-          }}
-          collapsedGroup={collapsedGroup}
-        />
-      </div>
+      <RCSelect
+        {...props}
+        ref={ref}
+        placeholder={placeholder || textProvider<string>(languageCode, Texts.SelectPlaceholder)}
+        onMenuClose={onMenuClose}
+        onChange={(...args): void => {
+          props?.onChange?.(...args);
+          if (closeMenuOnSelect) {
+            closeMenu();
+          }
+        }}
+        options={stateOptions}
+        formatGroupLabel={formatGroupLabel}
+        formatOptionLabel={formatOptionLabelInner}
+        components={componentsState}
+        styles={customStyles.styles}
+        theme={customStyles.theme}
+        isSearchable={false}
+        menuIsOpen={checkMobileDevice() ? undefined : isOpen}
+        menuPortalTarget={document.body}
+        blurInputOnSelect={checkMobileDevice() || undefined}
+        isSearchableCustom={isSearchable}
+        backspaceRemovesValue={false}
+        hideSelectedOptions={false}
+        searchValue={inputValue}
+        onSearch={setInputSearch}
+        toggleMenu={toggleMenu}
+        onKeyDown={(e: KeyboardEvent<HTMLElement>): void => {
+          /* todo: fix this `dirty` hack */
+          e.defaultPrevented = true;
+        }}
+        collapsedGroup={collapsedGroup}
+      />
     </InputDecoratorPrivate>
   );
   // for storybook args autobinding

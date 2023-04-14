@@ -193,6 +193,8 @@ export const select = Template.bind({});
 
 select.args = {
   error: undefined,
+  collapsedGroup: true,
+  isGrouped: true,
 };
 
 select.parameters = {
