@@ -1,6 +1,9 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { COLORS, DARK_THEMES, LIGHT_THEMES } from './themes';
+
+LIGHT_THEMES;
+DARK_THEMES;
 
 export const DotsWrap = styled.div`
   margin-top: 20px;
@@ -15,13 +18,13 @@ export const Dot = styled.div`
   margin: 0 12px;
   border-radius: 50%;
   cursor: pointer;
-  background-color: var(${EXPORT_VARS.BLACK_ALFA['16']});
+  background-color: var(${COLORS.dot});
 
   &[data-active],
   &:hover {
     height: 10px;
     width: 10px;
     margin: 0 11px;
-    background-color: var(${EXPORT_VARS.PURPLE['100']});
+    background-color: var(${COLORS.dotActive});
   }
 `;
