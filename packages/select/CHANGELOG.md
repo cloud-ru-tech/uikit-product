@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.27.6 (2023-04-17)
+
+
+### Bug Fixes
+
+* **[DPS-2821](https://jira.sbercloud.tech/browse/DPS-2821):** fix outside click handler ([7378159](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/73781594d3dc6a430760520ab2c822ab4b0cc78b))
+
+
+
+
+
 ## 0.27.5 (2023-04-14)
 
 ### Only dependencies have been changed
