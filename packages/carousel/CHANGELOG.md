@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2023-04-17)
+
+
+### Features
+
+* **[SVP-5310](https://jira.sbercloud.tech/browse/SVP-5310):** add carousel themes ([45d37e8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/45d37e819940c5bda96d71ad2a0fa406dfed4836))
+
+
+
+
+
 ## 0.4.18 (2023-04-14)
 
 ### Only dependencies have been changed
