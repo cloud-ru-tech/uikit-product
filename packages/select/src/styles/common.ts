@@ -108,6 +108,11 @@ export const styles = (typeStyles?: Styles): Styles => ({
     minWidth: '100%',
     ...(state?.selectProps?.menuRelative ? { position: 'relative' } : {}),
   }),
+  menuPortal: (styles: CSSProperties): CSSProperties => ({
+    ...styles,
+    left: 0,
+    top: '100%',
+  }),
   option: (
     styles: CSSProperties,
     state: Props,

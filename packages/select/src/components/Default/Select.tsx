@@ -22,6 +22,7 @@ import { getSelectStyles } from '../../helpers/getSelectStyles';
 import { getSharedComponents } from '../../helpers/getSharedComponents';
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import { SelectType } from '../../helpers/types';
+import * as S from './styled';
 
 export { default as RCSelect } from 'react-select';
 
@@ -58,6 +59,7 @@ type SelectRef = ComponentRef<typeof RCSelect>;
 
 export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((props, ref) => {
   const portalRef = useRef<HTMLDivElement>(null);
+  const portalTargetRef = useRef<HTMLDivElement>(null);
 
   const {
     id,
@@ -138,7 +140,7 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
 
   const clickOutside = useCallback(
     event => {
-      const isClickInside = portalRef?.current?.contains(event.target);
+      const isClickInside = portalRef.current?.contains(event.target);
       if (!isClickInside) {
         closeMenu();
       }
@@ -212,39 +214,41 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
       error={error}
       {...extractSupportProps(props)}
     >
-      <RCSelect
-        {...props}
-        ref={ref}
-        placeholder={placeholder || textProvider<string>(languageCode, Texts.SelectPlaceholder)}
-        onMenuClose={onMenuClose}
-        onChange={(...args): void => {
-          props?.onChange?.(...args);
-          if (closeMenuOnSelect) {
-            closeMenu();
-          }
-        }}
-        options={stateOptions}
-        formatGroupLabel={formatGroupLabel}
-        formatOptionLabel={formatOptionLabelInner}
-        components={componentsState}
-        styles={customStyles.styles}
-        theme={customStyles.theme}
-        isSearchable={false}
-        menuIsOpen={checkMobileDevice() ? undefined : isOpen}
-        menuPortalTarget={document.body}
-        blurInputOnSelect={checkMobileDevice() || undefined}
-        isSearchableCustom={isSearchable}
-        backspaceRemovesValue={false}
-        hideSelectedOptions={false}
-        searchValue={inputValue}
-        onSearch={setInputSearch}
-        toggleMenu={toggleMenu}
-        onKeyDown={(e: KeyboardEvent<HTMLElement>): void => {
-          /* todo: fix this `dirty` hack */
-          e.defaultPrevented = true;
-        }}
-        collapsedGroup={collapsedGroup}
-      />
+      <S.PortalTarget ref={portalTargetRef}>
+        <RCSelect
+          {...props}
+          ref={ref}
+          placeholder={placeholder || textProvider<string>(languageCode, Texts.SelectPlaceholder)}
+          onMenuClose={onMenuClose}
+          onChange={(...args): void => {
+            props?.onChange?.(...args);
+            if (closeMenuOnSelect) {
+              closeMenu();
+            }
+          }}
+          options={stateOptions}
+          formatGroupLabel={formatGroupLabel}
+          formatOptionLabel={formatOptionLabelInner}
+          components={componentsState}
+          styles={customStyles.styles}
+          theme={customStyles.theme}
+          isSearchable={false}
+          menuIsOpen={checkMobileDevice() ? undefined : isOpen}
+          menuPortalTarget={portalTargetRef.current}
+          blurInputOnSelect={checkMobileDevice() || undefined}
+          isSearchableCustom={isSearchable}
+          backspaceRemovesValue={false}
+          hideSelectedOptions={false}
+          searchValue={inputValue}
+          onSearch={setInputSearch}
+          toggleMenu={toggleMenu}
+          onKeyDown={(e: KeyboardEvent<HTMLElement>): void => {
+            /* todo: fix this `dirty` hack */
+            e.defaultPrevented = true;
+          }}
+          collapsedGroup={collapsedGroup}
+        />
+      </S.PortalTarget>
     </InputDecoratorPrivate>
   );
   // for storybook args autobinding
