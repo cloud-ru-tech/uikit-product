@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.27.7 (2023-04-19)
+
+
+### Bug Fixes
+
+* **[DPS-2821](https://jira.sbercloud.tech/browse/DPS-2821):** fix menu-list position ([6a963a3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6a963a3e3c6a649241a3bc469b9d8999b734d2a6))
+
+
+
+
+
 ## 0.27.6 (2023-04-17)
 
 
