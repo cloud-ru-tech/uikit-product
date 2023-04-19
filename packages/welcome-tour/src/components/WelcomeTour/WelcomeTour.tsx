@@ -26,7 +26,7 @@ export type WelcomeTourProps = {
   setTourStarted(value: boolean): void;
   closeButtonText: string;
   primaryButtonText: string;
-  backButtonText: string;
+  backButtonText?: string;
 };
 
 export function WelcomeTour({
@@ -46,10 +46,14 @@ export function WelcomeTour({
 
   const renderTooltipComponent = (props: TooltipRenderProps) => (
     <Hint
-      backButton={{
-        ...props.backProps,
-        text: backButtonText,
-      }}
+      backButton={
+        backButtonText
+          ? {
+              ...props.backProps,
+              text: backButtonText,
+            }
+          : undefined
+      }
       closeButton={{
         ...props.closeProps,
         text: closeButtonText,
@@ -71,6 +75,7 @@ export function WelcomeTour({
       run={tourStarted}
       callback={checkTourFinish}
       floaterProps={customArrowSize}
+      disableOverlayClose
     />
   );
 }

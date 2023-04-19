@@ -10,6 +10,8 @@ Package for client onboarding tour guide on web-page
 
 ## Usage
 
+If you want to hide Back button for WelcomeTour, do not pass the backButtonText prop.
+
 ```typescript jsx
     <div id='test-1'>
       Component to start the tour with

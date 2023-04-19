@@ -18,7 +18,7 @@ type TooltipButtonProps = {
 };
 
 type HintProps = {
-  backButton: TooltipButtonProps;
+  backButton?: TooltipButtonProps;
   closeButton: TooltipButtonProps;
   primaryButton: TooltipButtonProps;
   step: StepWithSubtitle;
@@ -46,7 +46,7 @@ export function Hint({
       <S.Footer>
         {step.content && <Steps stepsCount={size} currentStep={index} />}
         <S.StepButtons>
-          {index !== 0 && <ButtonGhost {...backButton} variant={ButtonGhost.variants.Primary} />}
+          {backButton && index !== 0 && <ButtonGhost {...backButton} variant={ButtonGhost.variants.Primary} />}
           {isLastStep ? (
             <ButtonRound {...closeButton} variant={ButtonRound.variants.Filled} />
           ) : (

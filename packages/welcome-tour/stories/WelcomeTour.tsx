@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, Story } from '@storybook/react';
 import { useState } from 'react';
 import { StepWithSubtitle } from 'welcome-tour/src/components/types';
 
@@ -26,6 +26,7 @@ const JoyrideSteps: StepWithSubtitle[] = [
       </>
     ),
     target: '#test-1',
+    spotlightClicks: true,
   },
   {
     title: 'Бизнес решение для вас',
