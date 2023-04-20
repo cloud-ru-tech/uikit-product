@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.12.0 (2023-04-20)
+
+
+### Features
+
+* **[AICDC-10869](https://jira.sbercloud.tech/browse/AICDC-10869):** added new icons for FM ([31e969b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/31e969bcf6be9dfabbbab19ad0d4369ebb6d626a))
+
+
+
+
+
 # 5.11.0 (2023-04-14)
 
 
