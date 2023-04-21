@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.3 (2023-04-21)
+
+
+### Bug Fixes
+
+* **[ONB-593](https://jira.sbercloud.tech/browse/ONB-593):** welcome-tour backdrop changed to static ([de8bc81](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de8bc81eb564f731055d3ae667189993d521384d))
+
+
+
+
+
 ## 0.2.2 (2023-04-20)
 
 ### Only dependencies have been changed
