@@ -1,6 +1,6 @@
 const name = require('./package.json').name;
 
-module.exports = (buildType, version) => ({
+module.exports = (buildType, version, additionalPlugins = []) => ({
   sourceType: 'unambiguous',
   presets: [
     ['@babel/preset-env', { loose: false, modules: buildType === 'cjs' ? 'cjs' : false }],
@@ -23,11 +23,7 @@ module.exports = (buildType, version) => ({
     '@babel/plugin-proposal-export-namespace-from',
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-nullish-coalescing-operator',
-    [
-      '@babel/plugin-transform-runtime',
-      {
-        regenerator: true,
-      },
-    ],
+    ['@babel/plugin-transform-runtime', { regenerator: true }],
+    ...additionalPlugins,
   ].filter(Boolean),
 });

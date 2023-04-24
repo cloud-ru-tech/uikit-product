@@ -9,12 +9,13 @@ import { simpleCopy } from './compile/simple-copy';
 import { sortFolders } from './compile/sort-folders';
 import { transformJs } from './compile/transform-js';
 import { writeJs } from './compile/write-js';
+import { writeScss } from './compile/write-scss';
 import { logDebug, logHelp } from './utils/console';
 
 const argv = minimist(process.argv.slice(2));
 const pkg = argv.pkg || '*';
 
-(function () {
+(async function () {
   const start = performance.now();
   logDebug(`Compiling...`);
 
@@ -30,11 +31,18 @@ const pkg = argv.pkg || '*';
   const sortedFolders = sortFolders(folders);
 
   for (const folder of sortedFolders) {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const packageJson = require(`${folder}/package.json`);
     const src = `${folder}/${srcPart}`;
     const dist = `${folder}/${distPart}`;
     const distESM = `${dist}/esm`;
     const distCJS = `${dist}/cjs`;
+
+    const scssFiles = glob.sync(`${src}/**/!(_)*.scss`);
+    const scssPipe = writeScss({ src, distCJS, distESM });
+    for (const file of scssFiles) {
+      await scssPipe(file);
+    }
 
     const jsFiles = glob.sync(`${src}/**/*.{ts,tsx,js,jsx}`);
     const jsPipe = writeJs({ src, distCJS, distESM });

@@ -22,7 +22,15 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customRenderer": "../../scripts/compile/sass-custom-renderer.js"
+        }
+      }
+    ]
   },
   "include": ["./"],
   "exclude": ["node_modules"]
