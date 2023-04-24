@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
-import { H2_STYLES } from '@sbercloud/uikit-product-typography';
 import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { H2_STYLES } from '@sbercloud/uikit-product-typography';
 
 const { BERRY_RED, EMERALD_GREEN, PURPLE } = EXPORT_VARS;
 
@@ -10,6 +10,7 @@ import { GroupChart } from '../src/chart/GroupChart';
 import { SingleChart } from '../src/chart/SingleChart';
 import { PackagesStatistics } from '../src/types';
 
+// eslint-disable-next-line import/no-default-export
 export default {
   title: 'Welcome/Statistics',
 } as Meta;

@@ -50,7 +50,6 @@ addDecorator((Story, { globals: { locale, theme } }) => {
     <div id='story-root'>
       <FormProvider {...methods}>
         <ConfigProvider theme={theme || ConfigProvider.themes.Purple} languageCode={locale || LanguageCodeType.ruRU}>
-          {/* @ts-ignore */}
           <Story />
         </ConfigProvider>
       </FormProvider>

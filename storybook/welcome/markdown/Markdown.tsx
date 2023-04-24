@@ -25,13 +25,13 @@ export const Markdown = (props: MarkdownProps) => {
 
   return (
     <ReactMarkdown
-      children={props.md}
       className={'markdown-body'}
       components={{
         code({ inline, className, children, ...rest }) {
           const match = /language-(\w+)/.exec(className || '');
 
           return !inline && match ? (
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
             <SyntaxHighlighter style={CODE_THEME[theme]} language={match[1]} PreTag='div' {...rest}>
               {String(children).replace(/\n$/, '')}
@@ -43,6 +43,8 @@ export const Markdown = (props: MarkdownProps) => {
           );
         },
       }}
-    />
+    >
+      {props.md}
+    </ReactMarkdown>
   );
 };

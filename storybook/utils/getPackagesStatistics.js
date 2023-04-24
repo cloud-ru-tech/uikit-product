@@ -29,6 +29,7 @@ const getPackagesStatistics = () => {
       private: privateCount,
     };
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.log('Не удалось получить данные по статистике');
   }
 };

@@ -12,7 +12,7 @@
       "@sbercloud/uikit-product-*": [
         "./*/src"
       ],
-      "#storybookConstants": ["../.storybook/constants"],
+      "#storybookConstants": ["../storybook/constants"],
     },
     "target": "es6",
     "lib": ["es2017", "dom", "dom.iterable", "esnext"],

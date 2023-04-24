@@ -3,6 +3,7 @@ import { Meta, Story } from '@storybook/react/types-6-0';
 import Readme from '../../../README.md';
 import { Markdown } from '../markdown/Markdown';
 
+// eslint-disable-next-line import/no-default-export
 export default {
   title: 'Welcome/Welcome',
 } as Meta;
