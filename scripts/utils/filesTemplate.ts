@@ -50,7 +50,7 @@ export const packageJson = ({
     },
     author: `${user} <${email}>`,
     contributors: [`${user} <${email}>`],
-    files: ['dist', 'src'],
+    files: ['dist', 'src', './CHANGELOG.md'],
     license: 'UNLICENSED',
     scripts: {},
     dependencies: {
@@ -124,18 +124,34 @@ export const componentEntry = ({
 
   const indexFileContent = `export * from './${componentName}';
 `;
+
+  const className = `${componentName[0].toLowerCase()}${componentName.substring(1)}`;
+
   const componentFilePath = path.join(
     `./${PackagesRootFolder}/${packageRootFolderName}/${Folders.srcComponents}/${componentName}.tsx`,
   );
-  const componentFileContent = `export type ${componentName}Props = any;
+  const componentFileContent = `import styles from './styles.module.scss';
+
+export type ${componentName}Props = any;
 
 export function ${componentName}(props: ${componentName}Props) {
-  return <div />;
+  return <div className={styles.${className}} />;
+}
+`;
+
+  const stylesFilePath = path.join(
+    `./${PackagesRootFolder}/${packageRootFolderName}/${Folders.srcComponents}/styles.module.scss`,
+  );
+  const stylesFileContent = `@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.${className} {
+  box-sizing: border-box;
 }
 `;
 
   fs.writeFileSync(indexFilePath, indexFileContent);
   fs.writeFileSync(componentFilePath, componentFileContent);
+  fs.writeFileSync(stylesFilePath, stylesFileContent);
 };
 
 export const packageEntry = ({ packageRootFolderName }: { packageRootFolderName: string }) => {
@@ -159,51 +175,39 @@ export const storyEntry = ({
   );
   const componentStoryName = componentName.replace(/[A-Z]/, x => x.toLowerCase());
   const componentStoryTitle = componentName.split(/(?=[A-Z])/).join(' ');
-  const fileContent =
-    "import { Story, Meta } from '@storybook/react/types-6-0';\n\
-import { " +
-    `${componentName}, ${componentName}Props` +
-    " } from '../src';\n\
-\n\
-import componentReadme from '../README.md';\n\
-import componentChangelog from '../CHANGELOG.md';\n\
-import componentPackage from '../package.json';\n\
-\n\
-export default {\n\
-  title: 'Not stable/" +
-    `${componentStoryTitle}` +
-    "',\n\
-  component: " +
-    `${componentName}` +
-    ',\n\
-} as Meta;\n\
-\n' +
-    `const Template: Story<${componentName}Props> = ({ ...args }) => <${componentName} {...args} />;
+  const fileContent = `import { Meta, Story } from '@storybook/react/types-6-0';
 
-` +
-    'export const ' +
-    `${componentStoryName}` +
-    ' = Template.bind({});\n\
-' +
-    `${componentStoryName}` +
-    '.args = {};\n\
-' +
-    `${componentStoryName}` +
-    '.argTypes = {};\n\
-' +
-    `${componentStoryName}` +
-    ".parameters = {\n\
-  readme: {\n\
-    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],\n\
-  },\n\
-  design: {\n\
-    name: 'Figma',\n\
-    type: 'figma',\n\
-    //TODO\n\
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',\n\
-  },\n\
-};\n\
-";
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
+import { ${componentName}, ${componentName}Props } from '../src';
+
+export default {
+  title: 'Not stable/${componentStoryTitle}',
+  component: ${componentName},
+} as Meta;
+
+const Template: Story<${componentName}Props> = ({ ...args }) => <${componentName} {...args} />;
+
+export const ${componentStoryName} = Template.bind({});
+
+${componentStoryName}.args = {};
+
+${componentStoryName}.argTypes = {};
+
+${componentStoryName}.parameters = {
+  readme: {
+    sidebar: [\`Latest version: $\{componentPackage.version}\`, componentReadme, componentChangelog],
+  },
+  design: {
+    name: 'Figma',
+    type: 'figma',
+    //TODO: update to the correct one
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};
+
+`;
 
   fs.writeFileSync(filePath, fileContent);
 };
