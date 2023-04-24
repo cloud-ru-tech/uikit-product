@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.13.0 (2023-04-24)
+
+
+### Features
+
+* **[AICE-9236](https://jira.sbercloud.tech/browse/AICE-9236):** add new region SR003 icon ([9d37bdb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d37bdb541855bb3d9948b3c8e951a1cc98ff00a))
+
+
+
+
+
 # 5.12.0 (2023-04-20)
 
 

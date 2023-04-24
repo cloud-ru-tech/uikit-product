@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.104 (2023-04-24)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.2.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+
+
+
+
+
 ## 0.8.103 (2023-04-20)
 
 ### Only dependencies have been changed
