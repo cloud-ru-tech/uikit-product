@@ -8,7 +8,7 @@ import { shouldBeDefaultClick } from '../../helpers';
 import { SidebarItem, SidebarItemId, SidebarItemsGroup, SidebarOnActiveChange } from '../../types';
 import { Accordion } from '../Accordion';
 import { ListItem } from '../ListItem';
-import * as S from './styled';
+import styles from './styles.module.scss';
 
 export type SidebarMobileProps = WithSupportProps<{
   list: SidebarItemsGroup[];
@@ -46,17 +46,17 @@ export function SidebarMobile({ list, footerItems, active, onActiveChange, ...re
 
   return (
     <SidebarContext.Provider value={{ ...SIDEBAR_CONTEXT_STUB, handleItemClick, active }}>
-      <S.Wrapper {...extractSupportProps(rest)}>
-        <S.SidebarMobile>{list.map(group => group.items.map(renderItems))}</S.SidebarMobile>
+      <div className={styles.wrapper} {...extractSupportProps(rest)}>
+        <div className={styles.sidebarMobile}>{list.map(group => group.items.map(renderItems))}</div>
 
         {Boolean(footerItems?.length) && (
           <>
             <Divider />
 
-            <S.SidebarMobile>{footerItems?.map(renderItems)}</S.SidebarMobile>
+            <div className={styles.sidebarMobile}>{footerItems?.map(renderItems)}</div>
           </>
         )}
-      </S.Wrapper>
+      </div>
     </SidebarContext.Provider>
   );
 }

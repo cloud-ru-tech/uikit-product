@@ -8,4 +8,13 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
   },
   ignorePatterns: 'packages/icons/src',
+  overrides: [
+    {
+      files: ['packages/**/__tests__/**/*.ts'],
+      rules: {
+        'jest/expect-expect': 'off',
+        'jest/no-done-callback': 'off',
+      },
+    },
+  ],
 };

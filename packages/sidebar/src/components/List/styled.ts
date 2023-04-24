@@ -3,7 +3,12 @@ import { styled } from '@linaria/react';
 import { H5_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
-import { COLORS } from '../Sidebar/themes';
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
+
+GREEN_DARK_THEME;
+GREEN_THEME;
+PURPLE_DARK_THEME;
+PURPLE_THEME;
 
 export const Heading = styled.h5`
   ${H5_STYLES};

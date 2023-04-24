@@ -1,4 +1,3 @@
-import { SIDEBAR_COLLAPSED_WIDTH, SIDEBAR_FULL_WIDTH } from '../src/components/Sidebar/constants';
 import {
   basics,
   expectItemToBeActive,
@@ -24,6 +23,9 @@ import {
   itemIds,
   secondLevelTexts,
 } from './utils';
+
+const SIDEBAR_FULL_WIDTH = '255px';
+const SIDEBAR_COLLAPSED_WIDTH = '53px';
 
 fixture('[Navigation]: Sidebar - full version')
   .skipJsErrors(args => Boolean(args?.message.includes('ResizeObserver loop')))

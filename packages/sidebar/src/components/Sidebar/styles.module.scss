@@ -1,0 +1,30 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+$sidebar-full-width: 255px;
+$sidebar-collapsed-width: 53px;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: $sidebar-full-width;
+  height: 100%;
+  padding: 16px 0;
+  background-color: var($sys-neutral-background);
+  border-right: 1px solid var($sys-neutral-line-enabled);
+
+  &[data-collapsed] {
+    width: $sidebar-collapsed-width
+  }
+
+  &, * {
+    box-sizing: border-box;
+  }
+}
+
+.contentWrapper {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex: 1 0 auto;
+}
