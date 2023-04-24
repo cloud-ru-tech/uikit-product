@@ -5,11 +5,12 @@ import {
   useFloating,
   useInteractions,
 } from '@floating-ui/react-dom-interactions';
+import cn from 'classnames';
 import { forwardRef, ReactNode, useImperativeHandle, useState } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import * as S from './styled';
+import styles from './styles.module.scss';
 
 export type MobileMenuProps = WithSupportProps<{
   children: ReactNode;
@@ -50,16 +51,14 @@ export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ ch
 
   return (
     <FloatingPortal root={document.body}>
-      <S.Wrapper
-        className={className}
-        top={y ?? 0}
-        strategy={strategy}
+      <div
+        className={cn(styles.mobileMenu, className)}
         ref={setFloating}
-        {...getFloatingProps()}
+        {...getFloatingProps({ style: { '--strategy': strategy, '--top': `${y ?? 0}px` } })}
         {...extractSupportProps(rest)}
       >
         {children}
-      </S.Wrapper>
+      </div>
     </FloatingPortal>
   );
 });

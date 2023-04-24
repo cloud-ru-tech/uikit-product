@@ -1,0 +1,21 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.mobileWrapper {
+  display: grid;
+  grid-template-columns: [header-logo] 1fr [header-balance-tooltip] auto [header-mobile-menu-trigger] auto;
+  column-gap: 8px;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding: 8px 16px;
+
+  background-color: var($sys-neutral-background);
+
+  & * {
+    box-sizing: border-box;
+  }
+}
+
+.mobileMenuTrigger {
+  grid-area: header-mobile-menu-trigger;
+}

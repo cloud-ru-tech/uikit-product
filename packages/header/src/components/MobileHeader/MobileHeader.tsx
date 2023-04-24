@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { ReactNode, useRef } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
@@ -5,7 +6,7 @@ import { Divider } from '@sbercloud/uikit-product-divider';
 import { MainMenuInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import * as S from './styled';
+import styles from './styles.module.scss';
 
 export type MobileHeaderProps = WithSupportProps<{
   children: ReactNode;
@@ -18,16 +19,17 @@ export function MobileHeader({ children, className, onMenuClick, ...rest }: Mobi
 
   return (
     <div ref={headerRef}>
-      <S.MobileWrapper className={className} {...extractSupportProps(rest)}>
+      <header className={cn(styles.mobileWrapper, className)} {...extractSupportProps(rest)}>
         {children}
         {onMenuClick && (
-          <S.MobileMenuTrigger
+          <ButtonIcon
+            className={styles.mobileMenuTrigger}
             icon={<MainMenuInterfaceSVG size={24} />}
             variant={ButtonIcon.variants.Weak}
             onClick={() => headerRef.current && onMenuClick(headerRef.current)}
           />
         )}
-      </S.MobileWrapper>
+      </header>
 
       <Divider />
     </div>
