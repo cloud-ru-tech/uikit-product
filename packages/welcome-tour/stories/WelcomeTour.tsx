@@ -74,6 +74,7 @@ export default {
 const Template: Story<WelcomeTourProps> = () => {
   const [tourStarted, setTourStarted] = useState(false);
   const [steps, setSteps] = useState(JoyrideSteps);
+  const [successFinal, setSuccessFinal] = useState(false);
 
   return (
     <div style={{ background: 'white', padding: 30 }}>
@@ -101,14 +102,27 @@ const Template: Story<WelcomeTourProps> = () => {
             setTourStarted(true);
           }}
         />
+        {successFinal && (
+          <div>
+            <p>Ура, тур пройден</p>
+            <Button onClick={() => setSuccessFinal(false)} text='Сброс' />
+          </div>
+        )}
       </div>
       <WelcomeTour
         tourSteps={steps}
         tourStarted={tourStarted}
         setTourStarted={setTourStarted}
-        primaryButtonText='Вперёд'
-        backButtonText='Назад'
-        closeButtonText='Закрыть'
+        primaryButtonProps={{
+          text: 'Вперёд',
+        }}
+        backButtonProps={{
+          text: 'Назад',
+        }}
+        closeButtonProps={{
+          text: 'Закрыть',
+          onClick: () => setSuccessFinal(true),
+        }}
       />
     </div>
   );

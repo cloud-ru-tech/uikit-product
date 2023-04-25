@@ -24,18 +24,27 @@ export type WelcomeTourProps = {
   tourSteps: StepWithSubtitle[];
   tourStarted: boolean;
   setTourStarted(value: boolean): void;
-  closeButtonText: string;
-  primaryButtonText: string;
-  backButtonText?: string;
+  closeButtonProps: {
+    text: string;
+    onClick?(): void;
+  };
+  primaryButtonProps: {
+    text: string;
+    onClick?(): void;
+  };
+  backButtonProps?: {
+    text: string;
+    onClick?(): void;
+  };
 };
 
 export function WelcomeTour({
   tourSteps,
   tourStarted,
   setTourStarted,
-  closeButtonText,
-  primaryButtonText,
-  backButtonText,
+  closeButtonProps,
+  primaryButtonProps,
+  backButtonProps,
 }: WelcomeTourProps) {
   const stepsWithoutBeacon = tourSteps.map(step => ({ ...step, disableBeacon: true }));
   const checkTourFinish = ({ status }: CallBackProps) => {
@@ -47,20 +56,32 @@ export function WelcomeTour({
   const renderTooltipComponent = (props: TooltipRenderProps) => (
     <Hint
       backButton={
-        backButtonText
+        backButtonProps
           ? {
               ...props.backProps,
-              text: backButtonText,
+              text: backButtonProps.text,
+              onClick: e => {
+                backButtonProps.onClick?.();
+                props.backProps.onClick(e);
+              },
             }
           : undefined
       }
       closeButton={{
         ...props.closeProps,
-        text: closeButtonText,
+        text: closeButtonProps.text,
+        onClick: e => {
+          closeButtonProps.onClick?.();
+          props.closeProps.onClick(e);
+        },
       }}
       primaryButton={{
         ...props.primaryProps,
-        text: primaryButtonText,
+        text: primaryButtonProps.text,
+        onClick: e => {
+          primaryButtonProps.onClick?.();
+          props.primaryProps.onClick(e);
+        },
       }}
       {...props}
     />
