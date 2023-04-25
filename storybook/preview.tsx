@@ -1,19 +1,12 @@
 import { addDecorator, addParameters } from '@storybook/react';
-import { useEffect, useLayoutEffect } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
 
 import { ConfigProvider, Themes } from '../packages/utils/src';
 import { BADGE } from './constants';
+import { COLOR_MAP, useColorizeThemeButton } from './useColorizeThemeButton';
 
 const LanguageCodeType = ConfigProvider.languages;
-
-const COLOR_MAP = {
-  [Themes.Purple]: '#aaabfd',
-  [Themes.PurpleDark]: '#5558fa',
-  [Themes.Green]: '#07E897',
-  [Themes.GreenDark]: '#157552',
-};
 
 export const parameters = {
   controls: { expanded: true },
@@ -21,24 +14,8 @@ export const parameters = {
 
 addDecorator(withDesign);
 addDecorator((Story, { globals: { locale, theme } }) => {
-  const colorizeThemeButton = () => {
-    const themeIcon = window.parent.document.querySelector('button[title="Changing themes"]')?.querySelector('svg');
-    if (!themeIcon) {
-      setTimeout(() => colorizeThemeButton(), 200);
-      return;
-    }
+  useColorizeThemeButton(theme);
 
-    themeIcon.style.background = COLOR_MAP[theme];
-    themeIcon.style['border-radius'] = '100%';
-    themeIcon.style.color = 'rgb(0 0 0 / 10%)';
-  };
-  useLayoutEffect(() => {
-    colorizeThemeButton();
-  }, [theme]);
-
-  useEffect(() => {
-    colorizeThemeButton();
-  }, []);
   const methods = useForm({
     mode: 'onSubmit',
     reValidateMode: 'onSubmit',
