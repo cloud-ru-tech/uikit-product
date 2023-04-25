@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2023-04-25)
+
+
+### BREAKING CHANGES
+
+
+* **[ONB-593](https://jira.sbercloud.tech/browse/ONB-593):** added callback props to buttons in welcome tour ([e83180b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e83180b4b0fdc3152ba4cf1135a9f778723f935f))
+
+
+
+
 ## 0.2.4 (2023-04-24)
 
 ### Only dependencies have been changed
