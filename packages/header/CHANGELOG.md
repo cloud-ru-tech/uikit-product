@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.9 (2023-04-25)
+
+
+### Bug Fixes
+
+* **[FF-2221](https://jira.sbercloud.tech/browse/FF-2221):** use tokens for header & menu background/border color ([b6253c0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b6253c04e13ed6d198d4c0ed33eb85d3f76f219f))
+
+
+
+
+
 ## 1.1.8 (2023-04-24)
 
 ### Only dependencies have been changed

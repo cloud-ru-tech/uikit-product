@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.7 (2023-04-25)
+
+
+### Bug Fixes
+
+* **[FF-2221](https://jira.sbercloud.tech/browse/FF-2221):** use tokens for sidebar background & border color ([1070755](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1070755141eb797d3f88b115a4732961b0ddad36))
+
+
+
+
+
 ## 1.2.6 (2023-04-24)
 
 ### Only dependencies have been changed
