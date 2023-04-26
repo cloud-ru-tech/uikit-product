@@ -9,7 +9,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "add-package": "ts-node scripts/npm-init",
-    "build:storybook": "build-storybook",
+    "build:storybook": "build-storybook -c storybook",
     "build:packages": "npm run clean:all && npm run deps:packages && lerna run compile && ts-node scripts/compile",
     "changelog": "ts-node scripts/changelog",
     "clean:all": "npm run clean:dist && npm run clean:modules",
