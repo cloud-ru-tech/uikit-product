@@ -8,7 +8,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - cloud-platform/ui-gateway
+  - cloud-ui/ui-gateway
   http:
   - match:
     - uri:
