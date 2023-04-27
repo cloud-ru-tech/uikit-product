@@ -1,0 +1,29 @@
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: uikit-product-$CI_COMMIT_BRANCH_CUT
+  namespace: ui-uikit-product
+  labels:
+    app: uikit-product
+    todo: delete
+  annotations:
+    janitor/ttl: 7d
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - cloud-platform/ui-gateway
+  http:
+  - match:
+    - uri:
+        prefix: "/product/"
+      headers:
+        ui-uikit-product:
+          regex: "^.*(?i)$CI_COMMIT_BRANCH_CUT.*$"
+    route:
+    - destination:
+        host: uikit-product
+        subset: $CI_COMMIT_BRANCH_CUT
+        port:
+          number: 8080
