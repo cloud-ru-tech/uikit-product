@@ -2,43 +2,43 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: uikit-product-old
+  name: uikit-product-new
   namespace: ui-uikit-product
   labels:
     app: uikit-product
-    version: old
+    version: new
+    test: "true"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      version: old
+      version: new
   template:
     metadata:
       labels:
         app: uikit-product
-        version: old
+        version: new
+        test: "true"
       annotations:
         sidecar.istio.io/proxyCPU: "10m"
         sidecar.istio.io/proxyMemory: "64Mi"
     spec:
       containers:
-      - name: uikit-product-old
-        image: old
+      - name: uikit-product-new
+        image: new
         env:
         - name: LOG_LEVEL
-          value: 'info'
+          value: "info"
         ports:
         - name: http
           containerPort: 8080
         resources:
           limits:
-            memory: "256Mi"
-            cpu: "40m"
-          requests:
             memory: "128Mi"
             cpu: "20m"
-      imagePullSecrets:
-      - name: docker-auth-config
+          requests:
+            memory: "64Mi"
+            cpu: "10m"
   strategy:
     type: RollingUpdate
     rollingUpdate:
