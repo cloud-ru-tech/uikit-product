@@ -39,6 +39,8 @@ spec:
           requests:
             memory: "64Mi"
             cpu: "10m"
+      imagePullSecrets:
+      - name: docker-auth-config
   strategy:
     type: RollingUpdate
     rollingUpdate:
