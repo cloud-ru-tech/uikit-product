@@ -16,6 +16,8 @@ spec:
       headers:
         test:
           exact: "true"
+    rewrite:
+      uri: "/"
     route:
     - destination:
         host: uikit-product
@@ -27,6 +29,8 @@ spec:
         prefix: "/product/"
       withoutHeaders:
         ui-uikit-product: {}
+    rewrite:
+      uri: "/"
     route:
     - destination:
         host: uikit-product
