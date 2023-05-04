@@ -1,4 +1,4 @@
-import { isValidElement, ReactChildren, ReactNode, useState } from 'react';
+import { Children, isValidElement, ReactNode, useState } from 'react';
 
 import { CollapsePanelItem } from '../CollapsePanelItem';
 import { ContainerStyled } from './styled';
@@ -35,13 +35,9 @@ export function CollapsePanel({
     }
   };
 
-  const items: { props: { index: number; children: ReactChildren } }[] = Array.isArray(children)
-    ? children
-    : [children];
-
   return (
     <ContainerStyled>
-      {items.map(child => {
+      {Children.map(children, child => {
         if (isValidElement(child)) {
           const { props } = child;
 

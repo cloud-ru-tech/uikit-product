@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { PropsWithChildren, useMemo, useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
@@ -6,22 +6,22 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { textProvider, Texts } from '../helpers/texts-provider';
 import { ContentHiderStyled, ContentWrapperGradientStyled, ContentWrapperStyled } from './styled';
 
-export type ContentHiderProps = {
+export type ContentHiderProps = PropsWithChildren<{
   hideContentText: string;
   showContentText: string;
   displayedHeight: number;
   backgroundColor?: string;
   gradientClassName?: string;
-};
+}>;
 
-export const ContentHider: React.FC<ContentHiderProps> = ({
+export function ContentHider({
   children,
   backgroundColor,
   gradientClassName,
   displayedHeight = 500,
   hideContentText,
   showContentText,
-}) => {
+}: ContentHiderProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [showContent, setShowContent] = useState(false);
 
@@ -51,4 +51,4 @@ export const ContentHider: React.FC<ContentHiderProps> = ({
       />
     </div>
   );
-};
+}

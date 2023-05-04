@@ -26,11 +26,11 @@ export enum TriggerTypes {
   Focus = 'focus',
 }
 
-export interface TooltipPrivateProps extends Omit<Config, 'trigger'> {
+export type TooltipPrivateProps = Omit<Config, 'trigger' | 'placement'> & {
   popperOptions?: PopperOptions;
-  children?: React.ReactNode;
+  children?: ReactNode;
   hideArrow?: boolean;
-  tooltip: ReactNode | Element;
+  tooltip: ReactNode;
   clickOutside?: boolean;
   placement: Placements;
   classNameContainer?: string;
@@ -38,4 +38,4 @@ export interface TooltipPrivateProps extends Omit<Config, 'trigger'> {
   classNameTrigger?: string;
   getTooltipRef?: (ref: HTMLElement | null) => void;
   trigger?: TriggerTypes | TriggerTypes[] | null;
-}
+};

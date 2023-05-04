@@ -1,8 +1,19 @@
-import { useCallback, useState } from 'react';
+import { ReactNode, useCallback, useState } from 'react';
 
-export const TooltipStateContainerPrivate: React.FC = ({ children }) => {
+type ChildrenFunctionParams = {
+  on: boolean;
+  set: (on: boolean) => void;
+  toggle: () => void;
+  hide: () => void;
+};
+
+export type TooltipStateContainerPrivateProps = {
+  children: (params: ChildrenFunctionParams) => ReactNode;
+};
+
+export function TooltipStateContainerPrivate({ children }: TooltipStateContainerPrivateProps) {
   const [on, setOn] = useState(false);
-  const set = useCallback(on => setOn(on), []);
+  const set = useCallback((on: boolean) => setOn(on), []);
   const hide = useCallback(() => setOn(false), []);
   const toggle = useCallback(() => setOn(prevState => !prevState), []);
 
@@ -16,4 +27,4 @@ export const TooltipStateContainerPrivate: React.FC = ({ children }) => {
     toggle,
     hide,
   });
-};
+}

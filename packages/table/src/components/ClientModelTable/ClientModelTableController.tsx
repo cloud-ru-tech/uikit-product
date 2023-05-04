@@ -41,7 +41,7 @@ export type ClientModelTableControllerProps<T> = {
   suppressToolbar?: boolean;
 };
 
-export function ClientModelTableController<T>({
+export function ClientModelTableController<T extends object>({
   fieldId,
   data,
   pinnedData,
@@ -61,7 +61,7 @@ export function ClientModelTableController<T>({
   const [searchValue, setSearchValue] = useState('');
   const [isSearching, setIsSearching] = useState(false);
 
-  const onGridReady = useCallback(gridEv => {
+  const onGridReady = useCallback((gridEv: AgGridTypes.GridReadyEvent) => {
     setGridApi(gridEv.api);
   }, []);
 
@@ -208,7 +208,7 @@ export function ClientModelTableController<T>({
   }, [searchValue, pinnedData, bulkActions?.filter, bulkActions?.filter?.value]);
 
   const onSearchCallback = useCallback(
-    value => {
+    (value: string) => {
       setSearchValue(value);
       if (!gridApi) return;
       gridApi.setQuickFilter(value);
