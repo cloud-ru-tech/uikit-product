@@ -63,7 +63,7 @@ export function DropdownMenu({
 }: DropdownMenuProps) {
   const [on, setOn] = useState(false);
   const toggleDropdown = useCallback(
-    on => {
+    (on: boolean) => {
       setOn(on);
       if (onToggle) onToggle(on);
     },

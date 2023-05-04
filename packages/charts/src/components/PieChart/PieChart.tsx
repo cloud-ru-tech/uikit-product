@@ -1,5 +1,6 @@
-import { ReactText, useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { PieChart as Pie } from 'react-minimal-pie-chart';
+import { BaseDataEntry, LabelRenderFunction } from 'react-minimal-pie-chart/types/commonTypes';
 
 import { truncateString } from '@sbercloud/ft-formatters';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -8,8 +9,14 @@ import { CHART_COLORS, Colors } from '../../constants/colors';
 import { Legend } from './Legend';
 import * as S from './styled';
 
+type TextLike = string | number;
+
+type DataEntry = BaseDataEntry & {
+  label: TextLike;
+};
+
 export type PieChartProps = {
-  data: Array<{ label: ReactText; value: number }>;
+  data: Array<{ label: TextLike; value: number }>;
   options: {
     title: string;
     width?: number;
@@ -17,7 +24,7 @@ export type PieChartProps = {
     legendTitle?: string;
   };
   aggregatedLegend?: {
-    data: Array<{ label: ReactText; value: ReactText }>;
+    data: Array<{ label: TextLike; value: TextLike }>;
     title: string;
   };
 };
@@ -29,7 +36,7 @@ export function PieChart({
   ...rest
 }: WithSupportProps<PieChartProps>) {
   const [hovered, setHovered] = useState<number | undefined>(undefined);
-  const colorizedData = useMemo(
+  const colorizedData: DataEntry[] = useMemo(
     () =>
       data.map((x, index) => {
         const colorsKey = Object.values(Colors);
@@ -44,14 +51,14 @@ export function PieChart({
 
   const pieStyles = useMemo(() => ({ overflow: 'overlay' }), []);
   const segmentStyles = useMemo(() => ({ transition: 'all .3s', cursor: 'pointer' }), []);
-  const onMouseOverCallback = useCallback((_, index) => setHovered(index), []);
+  const onMouseOverCallback = useCallback((_: any, index: number) => setHovered(index), []);
   const onMouseOutCallback = useCallback(() => setHovered(undefined), []);
-  const segmentShiftHandler = useCallback(index => (index === hovered ? 1 : 0.5), [hovered]);
-  const labelRenderer = useCallback(
+  const segmentShiftHandler = useCallback((index: number) => (index === hovered ? 1 : 0.5), [hovered]);
+  const labelRenderer = useCallback<LabelRenderFunction<DataEntry>>(
     ({ dataEntry, dataIndex }) => (
       <>
         <S.SvgText x={50} y={48} data-hovered={hovered === dataIndex || undefined} key={`${dataIndex}_label`}>
-          {truncateString(dataEntry.label, 15)}
+          {truncateString(String(dataEntry.label), 15)}
         </S.SvgText>
         <S.SvgText
           x={50}

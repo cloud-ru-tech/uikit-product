@@ -1,11 +1,11 @@
-import { Filter, IFilterProps } from '@sbercloud/uikit-product-filter';
+import { Filter, FilterProps } from '@sbercloud/uikit-product-filter';
 import { FilterInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import { ToolbarButton } from '../ToolbarButton';
 
-export type ToolbarFilterProps = Required<Pick<IFilterProps, 'filterOptions' | 'value' | 'onChange'>>;
+export type ToolbarFilterProps = Required<Pick<FilterProps, 'filterOptions' | 'value' | 'onChange'>>;
 
 export const ToolbarFilter = ({ filterOptions, value, onChange }: WithSupportProps<ToolbarFilterProps>) => {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });

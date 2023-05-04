@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import React, { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
 import { CollapsePanel, CollapsePanelItem } from '@sbercloud/uikit-product-collapse-panel';
 
@@ -18,7 +18,11 @@ const Description = styled.div`
   white-space: break-spaces;
   word-break: break-all;
 `;
-export type TypographyStoryConfig = Array<{ name: string; Component: FC<{ className?: string }>; styles: string }>;
+export type TypographyStoryConfig = Array<{
+  name: string;
+  Component: FC<PropsWithChildren<{ className?: string }>>;
+  styles: string;
+}>;
 export const commonTemplate =
   (config: TypographyStoryConfig) =>
   ({ value }: { value: string }) =>

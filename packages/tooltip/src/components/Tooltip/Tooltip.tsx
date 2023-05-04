@@ -1,4 +1,5 @@
 import { cx } from '@linaria/core';
+import { ReactElement, ReactNode } from 'react';
 
 import { Link, LinkProps } from '@sbercloud/uikit-product-link';
 import {
@@ -25,8 +26,8 @@ export type TooltipProps = {
   children: TooltipPrivateProps['children'];
   type: TooltipType;
   title?: string;
-  content?: string | React.ReactNode;
-  icon?: React.ReactElement;
+  content?: ReactNode;
+  icon?: ReactElement;
   iconAction?(): void;
   classNameTrigger?: string;
   placement?: TooltipPrivateProps['placement'];

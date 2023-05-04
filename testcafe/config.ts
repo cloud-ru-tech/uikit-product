@@ -4,7 +4,7 @@ import { hooks } from './hooks';
 
 export const Config: Partial<TestCafeConfigurationOptions> & { hooks: any } = {
   src: ['packages/*/__tests__/*.ts'],
-  concurrency: 3,
+  concurrency: 2,
   quarantineMode: {
     successThreshold: 3,
     attemptLimit: 5,

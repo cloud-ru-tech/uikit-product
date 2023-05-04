@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { MouseEvent as ReactMouseEvent, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { DetalisationInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -35,7 +35,7 @@ export function TreeNode({
   }, [activeKey, directChildren, id]);
 
   const collapseClickHandler = useCallback(
-    e => {
+    (e: ReactMouseEvent<HTMLElement, MouseEvent>) => {
       e.stopPropagation();
       if (!collapsed && doesSubtreeContainActiveKey({ id, directChildren }, activeKey)) {
         setActiveKey(id);

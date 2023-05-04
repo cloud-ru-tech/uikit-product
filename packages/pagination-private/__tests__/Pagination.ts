@@ -35,18 +35,18 @@ for (const [props, expectation] of tests) {
   test.page(getPage(props))(
     `renders ${sample} when total pages are ${props.total} and current page is ${props.page}`,
     async t => {
-      const buttons = [...expectation.entries()].map(([index, entry]) =>
-        Selector(dataTestIdSelector(`pagination-entry-item-${index}`)).find(
-          dataTestIdSelector(
-            typeof entry === 'number'
-              ? `pagination-number-button-${entry}`
-              : `pagination-more-button-${entry[0]}-${entry[1]}`,
-          ),
-        ),
-      );
-      const exists = await Promise.all(buttons.map(button => button.exists));
-
-      await t.expect(exists.every(value => value)).ok();
+      const buttons = [...expectation.entries()].map(([index, entry]) => {
+        const itemId = dataTestIdSelector(`pagination-entry-item-${index}`);
+        const buttonId = dataTestIdSelector(
+          typeof entry === 'number'
+            ? `pagination-number-button-${entry}`
+            : `pagination-more-button-${entry[0]}-${entry[1]}`,
+        );
+        return [itemId, buttonId];
+      });
+      for (const [itemId, buttonId] of buttons) {
+        await t.expect(Selector(itemId).find(buttonId).exists).ok();
+      }
     },
   );
 }

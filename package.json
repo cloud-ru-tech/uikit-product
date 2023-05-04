@@ -47,7 +47,7 @@
     "@sbercloud/ft-all-linters-pack": "2.2.5",
     "@sbercloud/ft-config-linaria": "1.1.0",
     "@sbercloud/ft-conventional-changelog": "1.2.2",
-    "@sbercloud/ft-storybook-readme-addon": "1.1.0",
+    "@sbercloud/ft-storybook-readme-addon": "2.3.0",
     "@storybook/addon-actions": "6.5.13",
     "@storybook/addon-essentials": "6.5.13",
     "@storybook/addon-storysource": "6.5.13",
@@ -63,8 +63,8 @@
     "@types/mkdirp": "1.0.2",
     "@types/node": "16.18.3",
     "@types/normalize-path": "3.0.0",
-    "@types/react": "17.0.52",
-    "@types/react-dom": "17.0.18",
+    "@types/react": "18.0.38",
+    "@types/react-dom": "18.0.11",
     "@types/react-syntax-highlighter": "15.5.5",
     "@types/rimraf": "3.0.2",
     "@types/shelljs": "0.8.11",
@@ -85,9 +85,9 @@
     "normalize-path": "3.0.0",
     "nyc": "15.1.0",
     "postcss-discard-comments": "6.0.0",
-    "react": "17.0.2",
+    "react": "18.2.0",
     "react-docgen-typescript": "2.2.2",
-    "react-dom": "17.0.2",
+    "react-dom": "18.2.0",
     "react-hook-form": "7.38.0",
     "react-minimal-pie-chart": "8.4.0",
     "react-syntax-highlighter": "15.5.0",
@@ -107,6 +107,8 @@
     "webpack": "5.76.0"
   },
   "overrides": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "@linaria/cli": {
       "@linaria/babel-preset": "3.0.0-beta.13"
     },
