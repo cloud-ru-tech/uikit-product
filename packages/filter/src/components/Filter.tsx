@@ -1,4 +1,4 @@
-import { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import { MouseEventHandler, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
 import { CloseInterfaceSVG, PlusInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -12,13 +12,13 @@ import { getDefaultValue } from '../helpers/getValue';
 import { logicOptions } from '../helpers/logicOptions';
 import { parseQuery } from '../helpers/parseQuery';
 import { textProvider, Texts } from '../helpers/texts-provider';
-import { DatepickerType, IFilterProps, TFilterOption, TFilterOptionType, TFilterValueType } from '../helpers/types';
+import { DatepickerType, FilterProps, TFilterOption, TFilterOptionType, TFilterValueType } from '../helpers/types';
 import * as S from './styled';
 
-export type { TFilterValueType, IFilterProps };
+export type { TFilterValueType, FilterProps };
 export { TFilterOptionType, DatepickerType };
 
-export const Filter: FC<IFilterProps> = ({ filterOptions = [], value = [], onChange, children, className }) => {
+export function Filter({ filterOptions = [], value = [], onChange, children, className }: FilterProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [isMoreFilter, setIsMoreFilter] = useState<boolean>();
   const [noFilteredProps, setNoFilteredProps] = useState<TFilterOption[]>();
@@ -62,14 +62,14 @@ export const Filter: FC<IFilterProps> = ({ filterOptions = [], value = [], onCha
   }, [filterOptions, parsedValue]);
 
   const handleChange = useCallback(
-    val => {
+    (val: TFilterValueType[]) => {
       const queryString = encodeURIComponent(JSON.stringify(val));
       onChange?.(val, queryString);
     },
     [onChange],
   );
 
-  const addNewValue = useCallback(
+  const addNewValue = useCallback<MouseEventHandler<HTMLButtonElement>>(
     e => {
       e.stopPropagation();
       const { value: id, type, sourceData, includeConditions } = noFilteredProps?.[0] || {};
@@ -85,7 +85,7 @@ export const Filter: FC<IFilterProps> = ({ filterOptions = [], value = [], onCha
         condition,
       };
 
-      handleChange?.([...parsedValue, newValue]);
+      handleChange([...parsedValue, newValue]);
     },
     [noFilteredProps, parsedValue, handleChange, logicOptionsList],
   );
@@ -147,4 +147,4 @@ export const Filter: FC<IFilterProps> = ({ filterOptions = [], value = [], onCha
       </div>
     </Container>
   );
-};
+}

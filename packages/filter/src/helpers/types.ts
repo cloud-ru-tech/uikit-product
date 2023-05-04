@@ -28,7 +28,7 @@ export type TFilterOption = {
   datepickerType?: SettingType;
 };
 
-export interface IFilterProps {
+export type FilterProps = {
   filterOptions?: TFilterOption[];
   filterPropOptions?: Record<string, TFilterOption[]>;
   className?: string;
@@ -36,12 +36,12 @@ export interface IFilterProps {
   value: TFilterValueType[] | string;
   onChange?: (value: TFilterValueType[], queryString: string) => void;
   children?: (props: { badgeNumber?: number; open?: boolean }) => JSX.Element;
-}
+};
 
-export interface IFilterRowProps extends Partial<IFilterProps> {
+export type FilterRowProps = {
   index?: number;
   noFilteredProps?: TFilterOption[];
   propValue?: TFilterValueType;
   value: TFilterValueType[];
   onChange?: (value: TFilterValueType[]) => void;
-}
+} & Partial<FilterProps>;

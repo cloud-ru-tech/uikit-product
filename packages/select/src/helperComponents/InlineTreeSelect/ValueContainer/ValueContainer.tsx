@@ -1,4 +1,4 @@
-import React, { FC, useCallback } from 'react';
+import { ReactNode, useCallback } from 'react';
 
 import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
@@ -6,23 +6,25 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { DictionaryPropertyAsFn, textProvider, Texts } from '../../../helpers/texts-provider';
 import { iconClass, StyledContainer } from './styled';
 
-export interface IValueContainerProps {
-  value?: React.ReactText[];
+type ReactText = (string | number)[];
+
+export type ValueContainerProps = {
+  value?: ReactText;
   placeholder?: string;
-  valueFormatter?: (value?: React.ReactText[]) => string | React.ReactNode;
+  valueFormatter?: (value?: ReactText) => ReactNode;
   disabled?: boolean;
   open: boolean;
   setOpen: (open: boolean) => void;
-}
+};
 
-export const ValueContainer: FC<IValueContainerProps> = ({
+export function ValueContainer({
   open,
   setOpen,
   value,
   placeholder,
   valueFormatter,
   disabled = false,
-}) => {
+}: ValueContainerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const getVal = useCallback(() => {
     if (!value || !value.length) {
@@ -52,4 +54,4 @@ export const ValueContainer: FC<IValueContainerProps> = ({
       <DropdownDownInterfaceSVG className={iconClass} data-open={open} data-disabled={disabled} />
     </StyledContainer>
   );
-};
+}

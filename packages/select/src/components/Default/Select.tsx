@@ -11,7 +11,13 @@ import {
   useRef,
   useState,
 } from 'react';
-import RCSelect, { components, OptionTypeBase as RCOptionTypeBase, SelectComponentsConfig } from 'react-select';
+import RCSelect, {
+  components,
+  FormatOptionLabelMeta,
+  GroupType,
+  OptionTypeBase as RCOptionTypeBase,
+  SelectComponentsConfig,
+} from 'react-select';
 
 import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-product-input-decorator-private';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -101,7 +107,7 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
   }, [type]);
 
   const filterOptions = useCallback(
-    (options, inputValue) =>
+    (options: RCOptionTypeBase, inputValue: string) =>
       options
         .map((option: SelectProps['options']) => {
           const childOptions = option.options;
@@ -139,8 +145,8 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
   }, [options, inputValue, isSearchable, filterOptions]);
 
   const clickOutside = useCallback(
-    event => {
-      const isClickInside = portalRef.current?.contains(event.target);
+    (event: MouseEvent) => {
+      const isClickInside = portalRef.current?.contains(event.target as Node);
       if (!isClickInside) {
         closeMenu();
       }
@@ -192,10 +198,13 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
     setIsOpen(!isOpen);
   };
 
-  const formatGroupLabel = useCallback(group => <div data-test-group-id={`${group.label}`}>{group.label}</div>, []);
+  const formatGroupLabel = useCallback(
+    (group: GroupType<RCOptionTypeBase>) => <div data-test-group-id={`${group.label}`}>{group.label}</div>,
+    [],
+  );
 
   const formatOptionLabelInner = useCallback(
-    (option, labelMeta) => (
+    (option: RCOptionTypeBase, labelMeta: FormatOptionLabelMeta<RCOptionTypeBase, boolean>) => (
       <div data-test-option-id={`${option.value}`}>
         {formatOptionLabel ? formatOptionLabel(option, labelMeta) : option.label}
       </div>

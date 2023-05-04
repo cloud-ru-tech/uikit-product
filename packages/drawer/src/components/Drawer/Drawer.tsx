@@ -2,7 +2,7 @@ import 'rc-drawer/assets/index.css';
 
 import { cx } from '@linaria/core';
 import RcDrawer from 'rc-drawer';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { PropsWithChildren, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { ArrowBoldLeftInterfaceSVG, CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -23,21 +23,23 @@ import {
   LeftIconBoxStyled,
 } from './styled';
 
-export interface IDrawerProps {
-  open: boolean;
-  className?: string;
-  hideHeader?: boolean;
-  showCloseButton?: boolean;
-  width?: string | number;
-  footer?: React.ReactNode;
-  placement?: 'left' | 'right';
-  container?: string | HTMLElement;
-  headerText?: string | React.ReactNode;
-  onClose(): void;
-  onBackClick?(): void;
-}
+export type DrawerProps = WithSupportProps<
+  PropsWithChildren<{
+    open: boolean;
+    className?: string;
+    hideHeader?: boolean;
+    showCloseButton?: boolean;
+    width?: string | number;
+    footer?: React.ReactNode;
+    placement?: 'left' | 'right';
+    container?: string | HTMLElement;
+    headerText?: string | React.ReactNode;
+    onClose(): void;
+    onBackClick?(): void;
+  }>
+>;
 
-export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
+export function Drawer({
   open = false,
   width = '500px',
   placement = 'right',
@@ -51,7 +53,7 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
   hideHeader,
   onBackClick,
   ...restProps
-}) => {
+}: DrawerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const closeBtnText = useMemo(() => textProvider(languageCode, Texts.Close), [languageCode]);
@@ -169,4 +171,4 @@ export const Drawer: React.FC<WithSupportProps<IDrawerProps>> = ({
       {footer && <FooterBoxStyled width={widthToCssWidth(drawerWidth)}>{footer}</FooterBoxStyled>}
     </RcDrawer>
   );
-};
+}

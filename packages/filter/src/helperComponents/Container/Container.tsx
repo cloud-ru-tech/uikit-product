@@ -1,28 +1,28 @@
 import { cx } from '@linaria/core';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { PropsWithChildren, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { TooltipPrivate } from '@sbercloud/uikit-product-tooltip-private';
 
 import * as S from './styled';
 
-interface IContainerProps {
+type ContainerProps = PropsWithChildren<{
   getTrigger: (show: boolean) => React.ReactNode;
   className?: string;
-}
+}>;
 
-export const Container: React.FC<IContainerProps> = ({ getTrigger, children, className }) => {
+export function Container({ getTrigger, children, className }: ContainerProps) {
   const triggerEl = useRef<HTMLDivElement>(null);
   const [show, setShow] = useState(false);
   const [tooltipRef, setTooltipRef] = useState<HTMLElement | null>();
 
   const handleEvent = useCallback(
-    event => {
+    (event: MouseEvent) => {
       if (!show) return;
 
-      const isTrigger = triggerEl.current?.contains(event.target);
+      const isTrigger = triggerEl.current?.contains(event.target as Node);
       if (isTrigger) return;
 
-      const isClickInside = tooltipRef?.contains(event.target);
+      const isClickInside = tooltipRef?.contains(event.target as Node);
       if (isClickInside) return;
 
       setShow(false);
@@ -62,4 +62,4 @@ export const Container: React.FC<IContainerProps> = ({ getTrigger, children, cla
       <div ref={triggerEl}>{trigger}</div>
     </TooltipPrivate>
   );
-};
+}

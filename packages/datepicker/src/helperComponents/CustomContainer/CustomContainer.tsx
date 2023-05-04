@@ -74,7 +74,7 @@ export function CustomContainer(customProps: CustomContainerCustomProps, props: 
   }, [date, maxDate, minDate]);
 
   const handleLabelClick = useCallback(() => setPickTime?.(!pickTimeCheck), [pickTimeCheck, setPickTime]);
-  const handleSwitchChange = useCallback(checked => setPickTime?.(checked), [setPickTime]);
+  const handleSwitchChange = useCallback((checked: boolean) => setPickTime?.(checked), [setPickTime]);
 
   const disabled = useMemo(
     () => (minDate && date && minDate > date && maxDate && date > maxDate) || false,
@@ -96,7 +96,7 @@ export function CustomContainer(customProps: CustomContainerCustomProps, props: 
         <>
           <Divider />
           <S.Additional onClick={handleLabelClick}>
-            {textProvider(languageCode, Texts.SpecifyTime)}
+            {textProvider<string>(languageCode, Texts.SpecifyTime)}
             <Switch checked={Boolean(pickTimeCheck)} onChange={handleSwitchChange} />
           </S.Additional>
         </>

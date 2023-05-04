@@ -9,11 +9,11 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { findSelectValue } from '../../helpers/getValue';
 import { getLogicOptionByValue, LogicConditionType, logicOptions } from '../../helpers/logicOptions';
-import { IFilterRowProps, TFilterOptionType, TFilterValueType } from '../../helpers/types';
+import { FilterRowProps, TFilterOptionType, TFilterValueType } from '../../helpers/types';
 import { ActionButton } from '../ActionButton';
 import * as S from './styled';
 
-export const FilterRow: FC<IFilterRowProps> = ({
+export const FilterRow: FC<FilterRowProps> = ({
   value = [],
   index,
   propValue = {},

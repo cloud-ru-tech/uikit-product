@@ -1,4 +1,4 @@
-import { forwardRef, MouseEvent, RefObject, useCallback, useEffect, useMemo, useState } from 'react';
+import { forwardRef, MouseEventHandler, RefObject, useCallback, useEffect, useMemo, useState } from 'react';
 import RDatePicker from 'react-datepicker';
 
 import { CalendarInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -12,11 +12,13 @@ import { commonInputClassName } from '../../styled';
 import { HiddenInput } from '../HiddenInput';
 import * as S from './styled';
 
+type ClickHandler = MouseEventHandler<HTMLElement>;
+
 export type CustomDateInputProps = {
   setDate: (date: null | Date) => void;
   date: Date | null;
   minDate?: Date | null;
-  onClick?: ((event: MouseEvent<HTMLInputElement, MouseEvent>) => void) | undefined;
+  onClick?: ClickHandler;
   handleChange: (date: Date | null) => void;
   handleCalendarClose: () => void;
   calendarRef?: RefObject<RDatePicker>;
@@ -65,13 +67,6 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, CustomDateInputProps>
     if (isError) setError(false);
   }, [date]);
 
-  const handleContainerClick = useCallback(
-    e => {
-      onClick?.(e);
-    },
-    [onClick],
-  );
-
   const dateForFormatter = useMemo(
     () => ({
       day: (
@@ -115,7 +110,7 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, CustomDateInputProps>
     <>
       <S.InputContainer
         ref={ref}
-        onClick={handleContainerClick}
+        onClick={onClick}
         data-open={pickSettings?.isDatePickerOpen || undefined}
         data-error={isError || undefined}
         size={size}
@@ -125,7 +120,7 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, CustomDateInputProps>
         <CalendarInterfaceSVG className={S.calendarIconClassName} />
       </S.InputContainer>
       {isError && !pickSettings?.isDatePickerOpen && (
-        <S.Error>{textProvider(languageCode, Texts.IncorrectDateEntered)}</S.Error>
+        <S.Error>{textProvider<string>(languageCode, Texts.IncorrectDateEntered)}</S.Error>
       )}
     </>
   );

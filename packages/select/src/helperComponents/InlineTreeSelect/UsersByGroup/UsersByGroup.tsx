@@ -1,6 +1,6 @@
 import RcTree, { TreeProps } from 'rc-tree';
 import { DataNode, EventDataNode } from 'rc-tree/lib/interface';
-import React, { FC, useEffect, useMemo, useState } from 'react';
+import { ReactNode, useEffect, useMemo, useState } from 'react';
 
 import { Avatar } from '@sbercloud/uikit-product-avatar';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
@@ -8,58 +8,53 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { textProvider, Texts } from '../../../helpers/texts-provider';
 import { selectClassname, StyledContainer } from './styled';
 
-export interface IOptionType extends DataNode {
+type InnerOptionType = DataNode & {
   src?: string;
-  title?: string;
-  children?: IOptionType[];
-}
-
-export interface ICustomEventDataNode extends EventDataNode {
-  initKey?: string;
-}
-
-const Icon = ({ data }: { data: IOptionType }): React.ReactNode => {
-  const hasChildren = Boolean(data?.children);
-
-  if (hasChildren) {
-    return (
-      <Avatar
-        size={Avatar.sizes.ExtraSmall}
-        src={data?.src}
-        name={data.title || ''}
-        variant={Avatar.variants.Company}
-      />
-    );
-  }
-  return (
-    <Avatar size={Avatar.sizes.ExtraSmall} src={data?.src} name={data.title || ''} variant={Avatar.variants.User} />
-  );
+  children?: InnerOptionType[];
 };
+
+export type OptionType = InnerOptionType & {
+  title: string;
+  children?: OptionType[];
+};
+
+export type CustomEventDataNode = {
+  initKey?: string;
+} & EventDataNode;
+
+type IconProps = { data?: InnerOptionType };
+
+function Icon({ data }: IconProps): ReactNode {
+  const hasChildren = Boolean(data?.children);
+  return (
+    <Avatar
+      size={Avatar.sizes.ExtraSmall}
+      src={data?.src}
+      name={(data?.title || '') as string}
+      variant={hasChildren ? Avatar.variants.Company : Avatar.variants.User}
+    />
+  );
+}
+
+export type TextLike = string | number;
 
 export type CheckedType = {
-  checked: React.ReactText[];
-  halfChecked: React.ReactText[];
+  checked: TextLike[];
+  halfChecked: TextLike[];
 };
 
-export interface IUsersByGroupProps extends Partial<TreeProps> {
-  options?: IOptionType[];
+export type UsersByGroupProps = {
+  options?: OptionType[];
   filter?: (treeNode: EventDataNode) => boolean;
-  onChange?: (checked: { checked: React.ReactText[] | CheckedType; halfChecked?: React.ReactText[] }) => void;
+  onChange?: (checked: CheckedType) => void;
   isFiltered: boolean;
-}
+} & Partial<TreeProps>;
 
-const DELIMETR = ':';
+const DELIMITER = ':';
 
-export const UsersByGroup: FC<IUsersByGroupProps> = ({
-  options,
-  filter,
-  onChange,
-  checkedKeys,
-  isFiltered,
-  ...treeProps
-}) => {
+export function UsersByGroup({ options, filter, onChange, checkedKeys, isFiltered, ...treeProps }: UsersByGroupProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const [stateOptions, setStateOptions] = useState<IOptionType[]>();
+  const [stateOptions, setStateOptions] = useState<InnerOptionType[]>();
   const [checked, setChecked] = useState<CheckedType>();
 
   const optionsKeys = useMemo(
@@ -67,7 +62,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
       options?.reduce((acc, option) => {
         const res = option?.children?.map(childrenOption => childrenOption.key);
         return { ...acc, ...(res ? { [option.key]: res } : {}) };
-      }, {} as { [key: string]: React.ReactText[] }),
+      }, {} as { [key: string]: TextLike[] }),
     [options],
   );
 
@@ -78,7 +73,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
           ?.map(childrenOption => (childrenOption.disabled ? childrenOption.key : ''))
           .filter(Boolean);
         return { ...acc, ...(res ? { [option.key]: res } : {}) };
-      }, {} as { [key: string]: React.ReactText[] }),
+      }, {} as { [key: string]: TextLike[] }),
     [options],
   );
 
@@ -86,11 +81,11 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
     const checked = checkedKeys as CheckedType;
 
     const nextChecked = optionsKeys
-      ? [...(checked?.checked as React.ReactText[])].reduce((acc, checkedKey) => {
+      ? [...(checked?.checked as TextLike[])].reduce((acc, checkedKey) => {
           const res = [] as string[];
           Object.keys(optionsKeys).forEach(groupKey => {
             const inGroup = optionsKeys[groupKey].indexOf(checkedKey) !== -1;
-            if (inGroup) res.push(`${groupKey}${DELIMETR}${checkedKey}`);
+            if (inGroup) res.push(`${groupKey}${DELIMITER}${checkedKey}`);
           });
           return [...acc, ...res];
         }, [] as string[])
@@ -107,7 +102,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
               children: option.children.map(childOption => ({
                 ...childOption,
                 initKey: childOption.key,
-                key: `${option.key}${DELIMETR}${childOption.key}`,
+                key: `${option.key}${DELIMITER}${childOption.key}`,
               })),
             }
           : {}),
@@ -149,13 +144,13 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
         onCheck={(checked, props): void => {
           const { checked: isChecked, node, halfCheckedKeys } = props;
           const groupKeys = options?.map(option => option.key);
-          const customNode = node as ICustomEventDataNode;
+          const customNode = node as CustomEventDataNode;
 
           const filterKeys = customNode.children
             ? optionsKeys?.[customNode.key]?.filter(key => disabledOptionKeys?.[customNode.key]?.indexOf(key) === -1)
             : [customNode.initKey];
 
-          const resChecked = (checked as React.ReactText[])
+          const resChecked = (checked as TextLike[])
             .map(checkedKey => {
               const group = groupKeys?.filter(groupKey => !`${checkedKey}`.indexOf(`${groupKey}`))?.[0];
 
@@ -163,7 +158,7 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
                 return '';
               }
 
-              const reg = new RegExp(`^${group}${DELIMETR}`);
+              const reg = new RegExp(`^${group}${DELIMITER}`);
 
               return `${checkedKey}`.replace(reg, '');
             })
@@ -173,10 +168,10 @@ export const UsersByGroup: FC<IUsersByGroupProps> = ({
             : resChecked.filter(checkedKey => filterKeys?.indexOf(`${checkedKey}`) === -1);
           const uniqRes = [...new Set(filterChecked)] as string[];
 
-          onChange?.({ checked: uniqRes, halfChecked: halfCheckedKeys });
+          onChange?.({ checked: uniqRes, halfChecked: halfCheckedKeys || [] });
         }}
         filterTreeNode={filter}
       />
     </StyledContainer>
   );
-};
+}

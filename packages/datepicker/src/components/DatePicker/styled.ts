@@ -202,4 +202,20 @@ export const Container = styled.div`
       }
     }
   }
+
+  /**
+   * Невидимый для пользователей, но видимый для скринридера лейбл
+   * оригинал: packages/datepicker/node_modules/react-datepicker/dist/react-datepicker.css
+   */
+  .react-datepicker__aria-live {
+    position: absolute;
+    clip-path: circle(0);
+    border: 0;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    width: 1px;
+    white-space: nowrap;
+  }
 `;

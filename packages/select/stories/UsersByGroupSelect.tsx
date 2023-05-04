@@ -7,8 +7,8 @@ import { Button } from '@sbercloud/uikit-product-button';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { CheckedType, UsersByGroupSelect } from '../src';
-import { IOptionType } from '../src/helperComponents/InlineTreeSelect';
+import { UsersByGroupSelect } from '../src';
+import { CheckedType, OptionType } from '../src/helperComponents/InlineTreeSelect';
 import { treeOptions } from './helpers/mockData';
 
 export default {
@@ -21,9 +21,9 @@ const StyledButton = styled(Button)`
 `;
 
 const Template: Story = (args): JSX.Element => {
-  const defautVal = { checked: ['b'] };
-  const [tree, setTree] = useState<IOptionType[]>(treeOptions as IOptionType[]);
-  const [checked, setChecked] = useState<CheckedType | undefined>(defautVal);
+  const defaultVal: CheckedType = { checked: ['b'], halfChecked: [] };
+  const [tree, setTree] = useState<OptionType[]>(treeOptions as OptionType[]);
+  const [checked, setChecked] = useState<CheckedType | undefined>();
   const [isDisabled, setDisabled] = useState<boolean>(false);
 
   return (
@@ -36,20 +36,19 @@ const Template: Story = (args): JSX.Element => {
         defaultValue={checked}
         searchProps={['title', 'email']}
         onChange={(checked): void => {
-          // console.log("checked onChange: ", checked);
           setChecked(checked);
         }}
       />
       <StyledButton
         onClick={(): void => {
-          setTree(tree => (tree.length ? [] : (treeOptions as IOptionType[])));
+          setTree(tree => (tree.length ? [] : (treeOptions as OptionType[])));
         }}
         text='Trigger empty'
       />
 
       <StyledButton
         onClick={(): void => {
-          setChecked(defautVal);
+          setChecked(defaultVal);
         }}
         text='Set default'
       />

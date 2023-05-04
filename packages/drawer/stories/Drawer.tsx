@@ -12,7 +12,7 @@ import { Select } from '@sbercloud/uikit-product-select';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Drawer, IDrawerProps } from '../src';
+import { Drawer, DrawerProps } from '../src';
 
 export default {
   title: 'Not stable/Drawer',
@@ -69,7 +69,7 @@ const selectOptions = [
   },
 ];
 
-const Template: Story<IDrawerProps> = ({ ...args }) => {
+const Template: Story<DrawerProps> = ({ ...args }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState<string>('');
   const [radioValue, setRadioValue] = useState<React.ReactText>('');

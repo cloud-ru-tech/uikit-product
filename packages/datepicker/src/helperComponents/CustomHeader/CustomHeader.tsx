@@ -34,14 +34,14 @@ export function CustomHeader(customProps: HeaderCustomProps, props: HeaderProps)
       <ButtonIcon
         onClick={decreaseMonth}
         disabled={prevMonthButtonDisabled}
-        tooltip={{ content: textProvider(languageCode, Texts.Prev) }}
+        tooltip={{ content: textProvider<string>(languageCode, Texts.Prev) }}
         icon={<ChevronLeftInterfaceSVG />}
       />
 
       <ButtonIcon
         onClick={increaseMonth}
         disabled={nextMonthButtonDisabled}
-        tooltip={{ content: textProvider(languageCode, Texts.Next) }}
+        tooltip={{ content: textProvider<string>(languageCode, Texts.Next) }}
         icon={<ChevronRightInterfaceSVG />}
       />
     </S.Container>

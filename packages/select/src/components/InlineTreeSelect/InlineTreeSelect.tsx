@@ -1,11 +1,19 @@
 import { styled } from '@linaria/react';
 import isEqual from 'lodash.isequal';
-import React, { FC, useCallback, useEffect, useState } from 'react';
+import { EventDataNode } from 'rc-tree/lib/interface';
+import { ReactNode, useCallback, useEffect, useState } from 'react';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-import { IOptionType, IUsersByGroupProps, UsersByGroup, ValueContainer } from '../../helperComponents/InlineTreeSelect';
+import {
+  CheckedType,
+  OptionType,
+  TextLike,
+  UsersByGroup,
+  UsersByGroupProps,
+  ValueContainer,
+} from '../../helperComponents/InlineTreeSelect';
 import { InputSearch } from '../../helperComponents/Shared/InputSearch';
 import { DictionaryPropertyAsFn, textProvider, Texts } from '../../helpers/texts-provider';
 
@@ -17,36 +25,36 @@ const Content = styled.div`
   overflow: hidden;
 `;
 
-export type CheckedType = {
-  checked: React.ReactText[] | { checked: React.ReactText[]; halfChecked: React.ReactText[] };
-  halfChecked?: React.ReactText[];
-};
-
-export interface IInlineTreeSelectProps {
-  value?: CheckedType;
-  defaultValue?: CheckedType;
-  options: IOptionType[];
-  onChange?: (checked: CheckedType | undefined) => void;
-  valueFormatter?: (value?: React.ReactText[]) => string | React.ReactNode;
-  disabled: boolean;
-}
-
 export type ChildrenProps = {
   search: string;
-  handleChange: IUsersByGroupProps['onChange'];
-  keys: string[];
+  handleChange: UsersByGroupProps['onChange'];
+  keys?: CheckedType;
 };
 
-export const InlineTreeSelect: FC<IInlineTreeSelectProps> = ({
+type ChildrenFunction = (props: ChildrenProps) => ReactNode;
+
+export type InlineTreeSelectProps = {
+  children: ReactNode | ChildrenFunction;
+  value?: CheckedType;
+  defaultValue?: CheckedType;
+  options: OptionType[];
+  onChange?: (checked: CheckedType) => void;
+  valueFormatter?: (value?: TextLike[]) => string | ReactNode;
+  disabled: boolean;
+};
+
+const emptyChecked: CheckedType = { checked: [], halfChecked: [] };
+
+export function InlineTreeSelect({
   children,
   value,
   defaultValue,
   onChange,
   valueFormatter,
   disabled,
-}) => {
+}: InlineTreeSelectProps) {
   const [open, setOpen] = useState<boolean>(false);
-  const [stateValue, setStateValue] = useState<CheckedType | undefined>();
+  const [stateValue, setStateValue] = useState<CheckedType>();
   const [search, setSearch] = useState('');
 
   useEffect(() => {
@@ -72,7 +80,7 @@ export const InlineTreeSelect: FC<IInlineTreeSelectProps> = ({
   return (
     <>
       <ValueContainer
-        value={stateValue?.checked as React.ReactText[]}
+        value={stateValue?.checked as TextLike[]}
         valueFormatter={valueFormatter}
         open={open}
         setOpen={setOpen}
@@ -96,27 +104,27 @@ export const InlineTreeSelect: FC<IInlineTreeSelectProps> = ({
       )}
     </>
   );
-};
+}
 
-export interface IUsersByGroupSelectProps {
+export type UsersByGroupSelectProps = {
   value?: CheckedType;
   defaultValue?: CheckedType;
-  options: IOptionType[];
-  searchProps?: React.ReactText[];
+  options: OptionType[];
+  searchProps?: TextLike[];
   onChange?: (checked: CheckedType | undefined) => void;
   disabled?: boolean;
-}
+};
 
 const lCase = (str: string): string => str.toLowerCase();
 
-export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
+export function UsersByGroupSelect({
   value,
   defaultValue,
   options,
   onChange,
   searchProps = ['title'],
   disabled = false,
-}) => {
+}: UsersByGroupSelectProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const [groupKeys, setGroupsKeys] = useState<React.ReactText[]>();
   useEffect(() => {
@@ -125,7 +133,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
   }, [options]);
 
   const filterData = useCallback(
-    node => {
+    (node: EventDataNode) => {
       if (!searchProps || !searchProps.length) {
         return [];
       }
@@ -133,7 +141,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
       let data = children ? [] : searchProps.map(prop => node[prop]);
       if (children) {
         searchProps.forEach(prop => {
-          data = [...data, ...children.map((option: IOptionType) => option[prop as keyof IOptionType])];
+          data = [...data, ...children.map(option => option[prop as keyof OptionType])];
         });
       }
       return data.filter(Boolean);
@@ -152,7 +160,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
       onChange={onChange}
       disabled={disabled}
     >
-      {({ search, handleChange, keys }: ChildrenProps): React.ReactNode => (
+      {({ search, handleChange, keys = emptyChecked }: ChildrenProps): ReactNode => (
         <UsersByGroup
           isFiltered={Boolean(search)}
           options={options}
@@ -160,9 +168,7 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
           onChange={(checked): void => {
             handleChange?.({
               ...checked,
-              checked: (checked.checked as React.ReactText[])?.filter(
-                (id: React.ReactText) => groupKeys?.indexOf(id) === -1,
-              ),
+              checked: checked.checked?.filter(id => groupKeys?.indexOf(id) === -1),
             });
           }}
           filter={
@@ -177,4 +183,4 @@ export const UsersByGroupSelect: FC<IUsersByGroupSelectProps> = ({
       )}
     </InlineTreeSelect>
   );
-};
+}

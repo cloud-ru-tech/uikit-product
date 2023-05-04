@@ -23,12 +23,12 @@ export const Separators = {
   },
 };
 
-interface DateForFormat {
+type DateForFormat = {
   day?: React.ReactNode;
   month?: React.ReactNode;
   year?: React.ReactNode;
   time?: React.ReactNode;
-}
+};
 
 export enum Texts {
   SpecifyTime = 'specifyTime',

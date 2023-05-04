@@ -7,7 +7,7 @@ import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { DatepickerType, Filter, IFilterProps, LogicConditionType, TFilterOptionType, TFilterValueType } from '../src';
+import { DatepickerType, Filter, FilterProps, LogicConditionType, TFilterOptionType, TFilterValueType } from '../src';
 import { groupedServices, mockData } from '../src/helpers/mockData';
 
 export default {
@@ -99,7 +99,7 @@ const defValue: TFilterValueType[] = [
   },
 ];
 
-const Template: Story<IFilterProps> = () => {
+const Template: Story<FilterProps> = () => {
   const [value, setValue] = useState('');
   const [filterValue, setFilterValue] = useState<TFilterValueType[] | string>(defValue);
 
