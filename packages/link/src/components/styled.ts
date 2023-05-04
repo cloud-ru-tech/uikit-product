@@ -59,7 +59,6 @@ export const StyledLink = styled.a<{ showSuffixIcon: boolean }>`
   transition: color ${ANIMATIONS.TRANSITION}, fill ${ANIMATIONS.TRANSITION};
 
   &[data-disabled='true'] {
-    pointer-events: none;
     cursor: none;
   }
 

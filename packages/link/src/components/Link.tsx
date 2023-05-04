@@ -18,7 +18,7 @@ export type LinkProps = WithSupportProps<{
   prefixIcon?: React.ReactElement;
 }>;
 
-export const Link = ({
+export function Link({
   className,
   variant = Variant.OnPrimary,
   text,
@@ -30,28 +30,36 @@ export const Link = ({
   size = Sizes.Medium,
   prefixIcon,
   ...rest
-}: LinkProps) => (
-  <StyledLink
-    onClick={onClick}
-    data-variant={variant}
-    target={target}
-    className={className}
-    href={href}
-    data-disabled={disabled}
-    showSuffixIcon={showSuffixIcon}
-    data-size={size}
-    rel={target === '_blank' ? 'noopener noreferrer' : undefined}
-    {...extractSupportProps(rest)}
-  >
-    {prefixIcon && (
-      <IconWrapper data-size={size} data-variant={variant} data-test-id={'link__prefix-icon'}>
-        {prefixIcon}
-      </IconWrapper>
-    )}
-    {text}
-    {showSuffixIcon && <StyledArrowLinkInterfaceSVG data-test-id={'link__suffix-icon'} />}
-  </StyledLink>
-);
+}: LinkProps) {
+  return (
+    <StyledLink
+      onClick={e => {
+        if (disabled) {
+          e.preventDefault();
+        } else {
+          onClick?.(e);
+        }
+      }}
+      data-variant={variant}
+      target={target}
+      className={className}
+      href={href}
+      data-disabled={disabled}
+      showSuffixIcon={showSuffixIcon}
+      data-size={size}
+      rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+      {...extractSupportProps(rest)}
+    >
+      {prefixIcon && (
+        <IconWrapper data-size={size} data-variant={variant} data-test-id={'link__prefix-icon'}>
+          {prefixIcon}
+        </IconWrapper>
+      )}
+      {text}
+      {showSuffixIcon && <StyledArrowLinkInterfaceSVG data-test-id={'link__suffix-icon'} />}
+    </StyledLink>
+  );
+}
 
 Link.variants = Variant;
 Link.sizes = Sizes;
