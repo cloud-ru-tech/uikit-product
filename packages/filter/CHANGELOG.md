@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.18.0 (2023-05-05)
+
+
+### Features
+
+* **[FF-2270](https://jira.sbercloud.tech/browse/FF-2270):** update types ([74b2104](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74b2104f69c7948fcb4df9a164e7a1ed006ac89a))
+
+
+
+
+
 ## 0.17.9 (2023-04-24)
 
 ### Only dependencies have been changed
@@ -183,7 +194,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.16.6 (2023-01-30)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-filter
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-datepicker@0.14.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/datepicker/CHANGELOG.md)
+* [@sbercloud/uikit-product-divider@2.0.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@sbercloud/uikit-product-input-private@3.0.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-select@0.28.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/select/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip-private@1.2.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## 0.16.5 (2023-01-26)
 

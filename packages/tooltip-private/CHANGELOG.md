@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.25 (2023-05-05)
+
+
+### Bug Fixes
+
+* **[FF-2270](https://jira.sbercloud.tech/browse/FF-2270):** update types ([cd843f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd843f1db5c1aac401a27c2d67b314e81f5ddda3))
+
+
+
+
+
 ## 1.2.24 (2023-03-08)
 
 ### Only dependencies have been changed
@@ -23,7 +34,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.2.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tooltip-private@1.2.21...@sbercloud/uikit-product-tooltip-private@1.2.22) (2022-11-28)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-tooltip-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-utils@3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [1.2.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tooltip-private@1.2.20...@sbercloud/uikit-product-tooltip-private@1.2.21) (2022-10-10)
 

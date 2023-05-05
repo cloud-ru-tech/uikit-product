@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.2.1 (2023-05-05)
+
+
+### Bug Fixes
+
+* **[FF-2270](https://jira.sbercloud.tech/browse/FF-2270):** update types ([cd843f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd843f1db5c1aac401a27c2d67b314e81f5ddda3))
+
+
+
+
+
 # 3.2.0 (2023-03-08)
 
 

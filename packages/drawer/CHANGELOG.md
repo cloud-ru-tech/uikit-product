@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.17.0 (2023-05-05)
+
+
+### Features
+
+* **[FF-2270](https://jira.sbercloud.tech/browse/FF-2270):** update types ([74b2104](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74b2104f69c7948fcb4df9a164e7a1ed006ac89a))
+
+
+
+
+
 ## 0.16.53 (2023-04-24)
 
 ### Only dependencies have been changed
@@ -107,7 +118,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.16.43 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-drawer
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.2.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## 0.16.42 (2023-01-25)
 

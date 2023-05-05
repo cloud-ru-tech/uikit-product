@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.18.22 (2023-05-05)
+
+
+### Bug Fixes
+
+* **[FF-2270](https://jira.sbercloud.tech/browse/FF-2270):** update types ([cd843f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd843f1db5c1aac401a27c2d67b314e81f5ddda3))
+
+
+
+
+
 ## 0.18.21 (2023-04-24)
 
 ### Only dependencies have been changed
@@ -117,7 +128,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.18.11 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-form
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-input-decorator-private@3.0.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-decorator-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@3.0.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.18.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.18.9...@sbercloud/uikit-product-form@0.18.10) (2023-01-12)
 

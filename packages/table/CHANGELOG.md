@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.48.38 (2023-05-05)
+
+
+### Bug Fixes
+
+* **[FF-2270](https://jira.sbercloud.tech/browse/FF-2270):** update types ([cd843f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd843f1db5c1aac401a27c2d67b314e81f5ddda3))
+
+
+
+
+
 ## 0.48.37 (2023-04-24)
 
 ### Only dependencies have been changed
@@ -209,7 +220,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.48.19 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-table
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-modal@1.3.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal/CHANGELOG.md)
+* [@sbercloud/uikit-product-pagination-private@1.2.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/pagination-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-table-private@0.20.20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/table-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-toolbar@0.16.97](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/toolbar/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## 0.48.18 (2023-01-30)
 

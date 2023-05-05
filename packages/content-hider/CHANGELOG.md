@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.105 (2023-05-05)
+
+
+### Bug Fixes
+
+* **[FF-2270](https://jira.sbercloud.tech/browse/FF-2270):** update types ([cd843f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd843f1db5c1aac401a27c2d67b314e81f5ddda3))
+
+
+
+
+
 ## 0.8.104 (2023-04-24)
 
 ### Only dependencies have been changed
@@ -98,7 +109,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.8.94 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-content-hider
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.2.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## 0.8.93 (2023-01-25)
 

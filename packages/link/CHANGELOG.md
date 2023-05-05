@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.11 (2023-05-05)
+
+
+### Bug Fixes
+
+* **[FF-2270](https://jira.sbercloud.tech/browse/FF-2270):** click disabled link ([cf31d29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf31d29af4bab5096c2da0c1af9535e576e196c4))
+
+
+
+
+
 ## 3.1.10 (2023-04-24)
 
 ### Only dependencies have been changed
@@ -103,7 +114,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.0.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-link@3.0.40...@sbercloud/uikit-product-link@3.0.41) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-link
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-utils@3.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [3.0.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-link@3.0.39...@sbercloud/uikit-product-link@3.0.40) (2022-11-28)
 

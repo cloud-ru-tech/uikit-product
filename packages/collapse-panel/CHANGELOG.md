@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.90 (2023-05-05)
+
+
+### Bug Fixes
+
+* **[FF-2270](https://jira.sbercloud.tech/browse/FF-2270):** update types ([cd843f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd843f1db5c1aac401a27c2d67b314e81f5ddda3))
+
+
+
+
+
 ## 0.8.89 (2023-04-24)
 
 ### Only dependencies have been changed
@@ -108,7 +119,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.8.78](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-collapse-panel@0.8.77...@sbercloud/uikit-product-collapse-panel@0.8.78) (2022-11-28)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-collapse-panel
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-divider@2.0.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
 
 ## [0.8.77](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-collapse-panel@0.8.76...@sbercloud/uikit-product-collapse-panel@0.8.77) (2022-11-17)
 
