@@ -1,11 +1,8 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
-
 .header {
   display: grid;
   grid-template-columns: [header-menu] auto [header-logo] auto [header-project-selector] auto [header-balance-tooltip] auto [header-project-description] auto [header-toolbar] 1fr;
 
   padding: 8px 16px;
-
-  background-color: var($sys-neutral-background);
-  border-bottom: 1px solid var($sys-neutral-line-enabled);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
 }

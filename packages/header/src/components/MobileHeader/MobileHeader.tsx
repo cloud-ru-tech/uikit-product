@@ -4,6 +4,7 @@ import { ReactNode, useRef } from 'react';
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
 import { MainMenuInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import styles from './styles.module.scss';
@@ -19,7 +20,13 @@ export function MobileHeader({ children, className, onMenuClick, ...rest }: Mobi
 
   return (
     <div ref={headerRef}>
-      <header className={cn(styles.mobileWrapper, className)} {...extractSupportProps(rest)}>
+      <header
+        style={{
+          backgroundColor: `var(${GLOBAL_CSS_COLOR.NAVIGATION_BACKGROUND})`,
+        }}
+        className={cn(styles.mobileWrapper, className)}
+        {...extractSupportProps(rest)}
+      >
         {children}
         {onMenuClick && (
           <ButtonIcon

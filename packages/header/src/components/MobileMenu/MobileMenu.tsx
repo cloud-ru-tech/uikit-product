@@ -8,6 +8,7 @@ import {
 import cn from 'classnames';
 import { forwardRef, ReactNode, useImperativeHandle, useState } from 'react';
 
+import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import styles from './styles.module.scss';
@@ -54,7 +55,13 @@ export const MobileMenu = forwardRef<MobileMenuReference, MobileMenuProps>(({ ch
       <div
         className={cn(styles.mobileMenu, className)}
         ref={setFloating}
-        {...getFloatingProps({ style: { '--strategy': strategy, '--top': `${y ?? 0}px` } })}
+        {...getFloatingProps({
+          style: {
+            '--strategy': strategy,
+            '--top': `${y ?? 0}px`,
+            backgroundColor: `var(${GLOBAL_CSS_COLOR.NAVIGATION_BACKGROUND})`,
+          },
+        })}
         {...extractSupportProps(rest)}
       >
         {children}
