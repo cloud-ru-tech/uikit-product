@@ -58,10 +58,13 @@ export const FilterChipSelect = forwardRef(
 
     const actions = useMemo(() => {
       const actions = items
-        .filter(({ value, valueToFilter }) => {
+        .filter(({ label, valueToFilter }) => {
           const toSearch = search.trim().toLowerCase();
 
-          return prepareValueToFilter(value).includes(toSearch) || prepareValueToFilter(valueToFilter).includes(search);
+          return (
+            (Boolean(valueToFilter) && prepareValueToFilter(valueToFilter).includes(toSearch)) ||
+            (typeof label === 'string' && prepareValueToFilter(label).includes(toSearch))
+          );
         })
         .map(({ value, label, header }) => {
           const handleCheck = (checked: boolean) => {
