@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2023-05-12)
+
+
+### Features
+
+* **[FF-2331](https://jira.sbercloud.tech/browse/FF-2331):** update tokens ([74fcd39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74fcd39abaf03b1e5f5feed1e7bc668daf1471dd))
+
+
+
+
+
 ## 1.2.9 (2023-05-12)
 
 
@@ -220,7 +231,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.1.2 (2023-01-25)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-sidebar
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.2.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-counter@0.1.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/counter/CHANGELOG.md)
+* [@sbercloud/uikit-product-divider@2.0.43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@sbercloud/uikit-product-label@2.0.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/label/CHANGELOG.md)
+* [@sbercloud/uikit-product-scroll@1.4.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@sbercloud/uikit-product-search@0.2.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@sbercloud/uikit-product-status@6.0.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/status/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.36.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@3.0.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-truncate-string@0.6.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [1.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-sidebar@1.1.0...@sbercloud/uikit-product-sidebar@1.1.1) (2023-01-12)
 

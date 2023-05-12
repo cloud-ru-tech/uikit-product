@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.15 (2023-05-12)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-avatar@1.1.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@sbercloud/uikit-product-button@5.2.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-chip@2.0.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/chip/CHANGELOG.md)
+* [@sbercloud/uikit-product-dropdown@0.17.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@sbercloud/uikit-product-no-data@2.1.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/no-data/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.1.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-spinner@2.0.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/spinner/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.36.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@3.0.24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 1.1.14 (2023-05-12)
 
 ### Only dependencies have been changed

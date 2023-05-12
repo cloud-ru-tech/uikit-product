@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.92 (2023-05-12)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-divider@2.0.43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.36.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+
+
+
+
+
 ## 0.8.91 (2023-05-12)
 
 ### Only dependencies have been changed

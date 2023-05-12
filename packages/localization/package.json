@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-localization",
   "title": "React Localization",
-  "version": "0.10.40",
+  "version": "0.10.41",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,6 +27,6 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "3.2.2"
+    "@sbercloud/uikit-product-utils": "3.2.3"
   }
 }

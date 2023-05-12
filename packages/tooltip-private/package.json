@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-tooltip-private",
   "title": "React Tooltip Private",
-  "version": "1.2.26",
+  "version": "1.2.27",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "3.2.2",
+    "@sbercloud/uikit-product-utils": "3.2.3",
     "react-popper-tooltip": "4.3.1"
   }
 }

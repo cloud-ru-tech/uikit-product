@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.36.0 (2023-05-12)
+
+
+### Features
+
+* **[FF-2331](https://jira.sbercloud.tech/browse/FF-2331):** update tokens ([74fcd39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74fcd39abaf03b1e5f5feed1e7bc668daf1471dd))
+
+
+
+
+
 ## 0.35.3 (2023-05-12)
 
 
