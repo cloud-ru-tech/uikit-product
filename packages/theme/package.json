@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-theme",
   "title": "Theme",
-  "version": "0.35.2",
+  "version": "0.35.3",
   "sideEffects": [
     "*.css",
     "*.woff",

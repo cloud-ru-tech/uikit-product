@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-divider",
   "title": "React Divider",
-  "version": "2.0.41",
+  "version": "2.0.42",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-theme": "0.35.2",
-    "@sbercloud/uikit-product-utils": "3.2.1"
+    "@sbercloud/uikit-product-theme": "0.35.3",
+    "@sbercloud/uikit-product-utils": "3.2.2"
   }
 }

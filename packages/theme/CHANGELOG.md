@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.35.3 (2023-05-12)
+
+
+### Bug Fixes
+
+* **[FF-2331](https://jira.sbercloud.tech/browse/FF-2331):** remove wrong color tokens ([5880a3a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5880a3a396c5de7df7ce354b81933a62668b546c))
+
+
+
+
+
 ## 0.35.2 (2023-03-06)
 
 

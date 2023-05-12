@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.11 (2023-05-12)
+
+
+### Bug Fixes
+
+* **[FF-2331](https://jira.sbercloud.tech/browse/FF-2331):** remove wrong color tokens ([5880a3a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5880a3a396c5de7df7ce354b81933a62668b546c))
+
+
+
+
+
 ## 1.1.10 (2023-05-05)
 
 ### Only dependencies have been changed
@@ -215,7 +226,18 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.0.5 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-header
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-avatar@1.1.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@sbercloud/uikit-product-button@5.2.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-divider@2.0.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@sbercloud/uikit-product-dropdown@0.17.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@sbercloud/uikit-product-scroll@1.4.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@sbercloud/uikit-product-search@0.2.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.35.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip-private@1.2.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@3.0.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-truncate-string@0.6.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## 1.0.4 (2023-01-26)
 
