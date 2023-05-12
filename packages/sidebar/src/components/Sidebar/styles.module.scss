@@ -1,3 +1,5 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
 $sidebar-full-width: 255px;
 $sidebar-collapsed-width: 53px;
 
@@ -8,8 +10,8 @@ $sidebar-collapsed-width: 53px;
   width: $sidebar-full-width;
   height: 100%;
   padding: 16px 0;
-  border-style: solid;
-  border-right-width: 1px;
+  background-color: var($sys-neutral-background);
+  border-right: 1px solid var($sys-neutral-decor-default);
 
   &[data-collapsed] {
     width: $sidebar-collapsed-width

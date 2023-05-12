@@ -1,3 +1,5 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
 .mobileMenu {
   position: var(--strategy);
   z-index: 1;
@@ -13,6 +15,8 @@
   width: 100%;
   height: calc(100% - var(--top));
   padding: 12px 0;
+
+  background-color: var($sys-neutral-background);
 
   & * {
     box-sizing: border-box;

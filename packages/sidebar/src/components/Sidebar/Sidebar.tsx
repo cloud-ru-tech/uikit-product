@@ -1,6 +1,5 @@
 import cn from 'classnames';
 
-import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { SidebarContextProvider } from '../../contexts';
@@ -27,10 +26,6 @@ export function Sidebar({ list, active, footerItems, onActiveChange, className, 
     <aside
       data-collapsed={isCollapsed || undefined}
       className={cn(styles.sidebar, className)}
-      style={{
-        backgroundColor: `var(${GLOBAL_CSS_COLOR.NAVIGATION_BACKGROUND})`,
-        borderColor: `var(${GLOBAL_CSS_COLOR.NAVIGATION_BORDER})`,
-      }}
       {...extractSupportProps(rest)}
     >
       <SidebarContextProvider
