@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -11,7 +11,7 @@ export default {
   component: ButtonIconTransparent,
 } as Meta;
 
-const Template: Story<ButtonIconTransparentProps> = ({ ...args }) => (
+const Template: StoryFn<ButtonIconTransparentProps> = ({ ...args }) => (
   <TableWrapper>
     {Object.entries(ButtonIconTransparent.variants).map(([key, value]) => (
       <TableColumn

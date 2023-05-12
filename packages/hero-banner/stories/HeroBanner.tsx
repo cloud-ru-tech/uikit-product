@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 import { DataHubDisplaySVG } from '@sbercloud/uikit-product-icons';
@@ -19,7 +19,7 @@ export default {
   component: HeroBanner,
 } as Meta;
 
-const Template: Story<HeroBannerProps> = ({ ...args }) => <HeroBanner {...args} />;
+const Template: StoryFn<HeroBannerProps> = ({ ...args }) => <HeroBanner {...args} />;
 
 const bannerClassName = css`
   color: white;

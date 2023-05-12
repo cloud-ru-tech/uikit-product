@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -27,7 +27,7 @@ const Row = styled.div`
 
 const Name = styled.span``;
 
-const Template: Story<TagProps & { showRemoveButton: boolean }> = args => (
+const Template: StoryFn<TagProps & { showRemoveButton: boolean }> = args => (
   <Wrapper>
     {Object.entries(Tag.colors).map(([name, color]) => (
       <Row key={color}>

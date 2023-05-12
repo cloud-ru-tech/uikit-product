@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -12,11 +12,13 @@ export default {
   component: Alert,
 } as Meta;
 
-const Template: Story<AlertProps & { hideCloseButton: boolean }> = ({ hideCloseButton, ...args }) => (
+type Props = AlertProps & { hideCloseButton: boolean };
+
+const Template = ({ hideCloseButton, ...args }: Props) => (
   <Alert {...args} onClose={hideCloseButton ? undefined : args.onClose} />
 );
 
-export const alert = Template.bind({});
+export const alert: StoryFn<Props> = Template.bind({});
 
 alert.args = {
   title: 'Title',

@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -13,7 +13,7 @@ export default {
   component: InputMask,
 } as Meta;
 
-const Template: Story<InputMaskProps> = args => {
+const Template: StoryFn<InputMaskProps> = args => {
   const [value, setValue] = useState<string>();
 
   return <InputMask {...args} value={value} onChange={setValue} />;

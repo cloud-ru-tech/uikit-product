@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
@@ -23,7 +23,7 @@ const Container = styled.div<{ theme: Themes }>`
   background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
 `;
 
-const Template: Story<SpinnerProps> = ({ ...args }, { globals: { theme } }) => (
+const Template: StoryFn<SpinnerProps> = ({ ...args }, { globals: { theme } }) => (
   <Container theme={theme}>
     <Spinner {...args} />
   </Container>

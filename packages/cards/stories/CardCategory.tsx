@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { DatasetDisplaySVG, DockerRegistryDisplaySVG, RocketInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   overflow: auto;
 `;
 
-const Template: Story<CardCategoryProps> = ({ ...args }) => (
+const Template: StoryFn<CardCategoryProps> = ({ ...args }) => (
   <>
     Controlled:
     <Wrapper>

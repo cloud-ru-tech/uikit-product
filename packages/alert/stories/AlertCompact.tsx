@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -12,7 +12,7 @@ export default {
   component: AlertCompact,
 } as Meta;
 
-const Template: Story<AlertCompactProps> = ({ ...args }) => <AlertCompact {...args} />;
+const Template: StoryFn<AlertCompactProps> = ({ ...args }) => <AlertCompact {...args} />;
 
 export const alertCompact = Template.bind({});
 alertCompact.args = {

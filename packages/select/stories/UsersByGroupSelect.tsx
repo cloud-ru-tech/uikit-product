@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
@@ -20,7 +20,7 @@ const StyledButton = styled(Button)`
   margin: 10px 10px 0px 0px;
 `;
 
-const Template: Story = (args): JSX.Element => {
+const Template: StoryFn = (args): JSX.Element => {
   const defaultVal: CheckedType = { checked: ['b'], halfChecked: [] };
   const [tree, setTree] = useState<OptionType[]>(treeOptions as OptionType[]);
   const [checked, setChecked] = useState<CheckedType | undefined>();

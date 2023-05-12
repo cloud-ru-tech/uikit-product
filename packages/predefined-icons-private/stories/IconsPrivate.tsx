@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -13,7 +13,7 @@ export default {
   component: PredefinedIconsPrivate,
 } as Meta;
 
-const Template: Story<PredefinedIconsPrivateProps> = ({ ...args }) => (
+const Template: StoryFn<PredefinedIconsPrivateProps> = ({ ...args }) => (
   <div>
     <Block>
       <PredefinedIconsPrivate {...args} />

@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
+import { GlobalTypes } from '@storybook/types';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
@@ -30,19 +31,19 @@ const Wrapper = styled.div<{ theme: Themes }>`
   }
 `;
 
-const Template: Story<PredefinedMLSpaceLogoProps & PredefinedCloudLogoProps> = (
-  { ...args },
-  { globals: { theme } },
-) => (
+type Props = PredefinedMLSpaceLogoProps & PredefinedCloudLogoProps;
+
+const Template = ({ ...args }: Props, { globals: { theme } }: GlobalTypes) => (
   <Wrapper data-variant={args.variant} theme={theme}>
     <PredefinedMLSpaceLogo {...args} />
     <PredefinedCloudLogo {...args} />
   </Wrapper>
 );
 
-export const predefinedLogosPrivate = Template.bind({});
+export const predefinedLogosPrivate: StoryFn<Props> = Template.bind({});
 predefinedLogosPrivate.args = {
   height: 30,
+  variant: PredefinedCloudLogo.variants.OnDefault,
 };
 predefinedLogosPrivate.argTypes = {
   variant: {
@@ -50,7 +51,6 @@ predefinedLogosPrivate.argTypes = {
       type: 'radio',
     },
     options: Object.values(PredefinedCloudLogo.variants),
-    defaultValue: PredefinedCloudLogo.variants.OnDefault,
   },
 };
 predefinedLogosPrivate.parameters = {

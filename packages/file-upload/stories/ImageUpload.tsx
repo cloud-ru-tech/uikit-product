@@ -1,18 +1,18 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ImageUpload } from '../src';
+import { ImageUpload, ImageUploadProps } from '../src';
 
 export default {
   title: 'Not stable/FileUpload/Image Upload',
   component: ImageUpload,
 } as Meta;
 
-const Template: Story<any> = ({ ...args }) => <ImageUpload {...args} />;
+const Template: StoryFn<ImageUploadProps> = ({ ...args }: ImageUploadProps) => <ImageUpload {...args} />;
 
 export const imageUpload = Template.bind({});
 imageUpload.args = {

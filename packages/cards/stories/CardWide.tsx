@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 import { CircleAddInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   overflow: auto;
 `;
 
-const Template: Story<CardWideProps> = ({ ...args }) => (
+const Template: StoryFn<CardWideProps> = ({ ...args }) => (
   <Wrapper>
     <CardWide {...args} />
   </Wrapper>

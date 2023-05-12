@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useCallback, useEffect, useState } from 'react';
 
 import { Avatar } from '@sbercloud/uikit-product-avatar';
@@ -57,7 +57,7 @@ const defaultCard: Card = {
   },
 };
 
-const Template: Story<NotificationPopupProps & { cardsCount: number; totalCardsCount: number }> = ({ ...args }) => {
+const Template = ({ ...args }) => {
   const { cardsCount, totalCardsCount, onReadAllButtonClick, open } = args;
   const [hasMore, setHasMore] = useState(cardsCount < totalCardsCount);
   const [cards, setCards] = useState<Card[]>([]);
@@ -102,7 +102,7 @@ const Template: Story<NotificationPopupProps & { cardsCount: number; totalCardsC
         ),
       );
     }, 500);
-  }, [cards, cardsCount, totalCardsCount]);
+  }, [args.cards, cards, cardsCount, totalCardsCount]);
 
   useEffect(() => {
     const newAmount = cardsCount < totalCardsCount ? cardsCount : totalCardsCount;
@@ -122,7 +122,7 @@ const Template: Story<NotificationPopupProps & { cardsCount: number; totalCardsC
       })),
     );
     setHasMore(cardsCount < totalCardsCount);
-  }, [cardsCount, totalCardsCount]);
+  }, [args.cards, cardsCount, totalCardsCount]);
 
   useEffect(() => {
     setIsOpen(open);
@@ -151,19 +151,21 @@ const Template: Story<NotificationPopupProps & { cardsCount: number; totalCardsC
   );
 };
 
-export const notificationPanel = Template.bind({});
+export const notificationPanel: StoryFn<NotificationPopupProps & { cardsCount: number; totalCardsCount: number }> =
+  Template.bind({});
 notificationPanel.args = {
   headerTooltip: 'Уведомления',
   onReadAllButtonClick() {},
   onSeeAllButtonClick() {},
   cards: [defaultCard],
   open: true,
+  totalCardsCount: 50,
+  cardsCount: 11,
 };
 
 notificationPanel.argTypes = {
   totalCardsCount: {
     name: '[Stories]: Total cards count',
-    defaultValue: 50,
     control: {
       type: 'range',
       min: 0,
@@ -172,7 +174,6 @@ notificationPanel.argTypes = {
   },
   cardsCount: {
     name: '[Stories]: Cards to load count',
-    defaultValue: 11,
     control: {
       type: 'range',
       min: 0,

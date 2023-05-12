@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useCallback, useState } from 'react';
 
 import { Button, ButtonIcon, ButtonRound } from '@sbercloud/uikit-product-button';
@@ -46,7 +46,7 @@ const IconWrapper = styled.div`
   }
 `;
 
-const Template: Story<DropdownMenuProps> = ({ ...args }) => {
+const Template: StoryFn<DropdownMenuProps> = ({ ...args }) => {
   const [isOpen, setIsOpen] = useState({
     filesButton: false,
     filterButton: false,

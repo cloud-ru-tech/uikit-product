@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -11,7 +11,7 @@ export default {
   component: ButtonRoundBig,
 } as Meta;
 
-const Template: Story<ButtonRoundBigProps> = ({ ...args }) => (
+const Template: StoryFn<ButtonRoundBigProps> = ({ ...args }: ButtonRoundBigProps) => (
   <SingleWrapper>
     <ButtonRoundBig
       {...args}

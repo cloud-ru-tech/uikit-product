@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { ButtonIcon, CopyButton, CopyButtonProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
@@ -34,7 +34,7 @@ const getCopyFlow = (copyStrategy: CopyStrategy): CopyButtonProps['onClickBefore
   }
 };
 
-const Template: Story<CopyButtonProps & { copyStrategy?: CopyStrategy }> = ({
+const Template: StoryFn<CopyButtonProps & { copyStrategy?: CopyStrategy }> = ({
   copyStrategy = CopyStrategy.None,
   ...args
 }) => (

@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
@@ -30,7 +30,7 @@ export default {
   component: TableFree,
 } as Meta;
 
-const Template: Story<ITableFreeProps> = ({ rowData = [], ...args }) => {
+const Template: StoryFn<ITableFreeProps> = ({ rowData = [], ...args }) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   const searchedData = searchValue

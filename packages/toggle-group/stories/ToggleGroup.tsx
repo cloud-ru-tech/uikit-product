@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -13,7 +13,7 @@ export default {
   component: ToggleGroup,
 } as Meta;
 
-const Template: Story<ToggleGroupProps> = args => {
+const Template: StoryFn<ToggleGroupProps> = args => {
   const [value, setValue] = useState<number[]>();
 
   return (

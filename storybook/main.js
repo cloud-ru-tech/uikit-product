@@ -12,7 +12,10 @@ const STORIES = glob
 const WELCOME = path.resolve(__dirname, './welcome/stories/Welcome.tsx');
 const STATISTICS = path.resolve(__dirname, './welcome/stories/Statistics.tsx');
 const isTestServer = Boolean(process.env.TEST_SERVER);
-module.exports = {
+
+const regexForLinariaRule = /\.(mjs|tsx?|jsx?)$/;
+
+const mainConfig = {
   stories: [WELCOME, STATISTICS, ...STORIES],
   addons: [
     {
@@ -46,13 +49,21 @@ module.exports = {
     '@geometricpanda/storybook-addon-badges',
   ],
   staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
-  core: {
-    builder: 'webpack5',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {
+      builder: {
+        fsCache: true,
+      },
+    },
   },
   typescript: {
     check: true,
     reactDocgen: 'react-docgen-typescript',
     checkOptions: {},
+  },
+  features: {
+    storyStoreV7: false,
   },
   babel: base => ({ ...base, plugins: [...(base.plugins || []), ...(isTestServer ? ['istanbul'] : [])] }),
   env: config => ({
@@ -71,7 +82,10 @@ module.exports = {
       ...config.resolve.fallback,
       stream: require.resolve('stream-browserify'),
     };
-    config.module.rules[0].use.push({
+
+    const ruleForLinaria = config.module.rules.find(({ test }) => test?.toString() === regexForLinariaRule.toString());
+
+    ruleForLinaria.use.push({
       loader: '@linaria/webpack-loader',
       options: {
         sourceMap: config.mode !== 'production',
@@ -92,4 +106,10 @@ module.exports = {
 
     return config;
   },
+  docs: {
+    autodocs: false,
+  },
 };
+
+// eslint-disable-next-line import/no-default-export
+export default mainConfig;

@@ -26,6 +26,6 @@ export const Config: Partial<TestCafeConfigurationOptions> & { hooks: any } = {
   selectorTimeout: 10000,
   assertionTimeout: 10000,
   pageLoadTimeout: 20000,
-  pageRequestTimeout: 20000,
+  pageRequestTimeout: 500_000,
   hooks: hooks,
 };

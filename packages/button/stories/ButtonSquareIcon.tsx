@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { CopyInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -11,7 +11,7 @@ export default {
   component: ButtonSquareIcon,
 } as Meta;
 
-const Template: Story<ButtonSquareIconProps> = ({ ...args }) => (
+const Template: StoryFn<ButtonSquareIconProps> = ({ ...args }) => (
   <TableWrapper>
     {Object.entries(ButtonSquareIcon.variants).map(([key, value]) => (
       <TableColumn

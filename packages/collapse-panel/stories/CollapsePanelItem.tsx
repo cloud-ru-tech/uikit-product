@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { Avatar } from '@sbercloud/uikit-product-avatar';
@@ -19,7 +19,7 @@ const ContentStyled = styled.div`
   margin-top: 20px;
 `;
 
-const Template: Story<CollapsePanelItemProps> = ({ ...args }) => {
+const Template: StoryFn<CollapsePanelItemProps> = ({ ...args }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (

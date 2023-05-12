@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { ButtonTable, ButtonTableManagedLoading, ButtonTableProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
@@ -13,7 +13,7 @@ type StoryProps = ButtonTableProps & {
   getProgressText: string;
 };
 
-const Template: Story<StoryProps> = ({ getProgressText, ...args }: StoryProps) => {
+const Template: StoryFn<StoryProps> = ({ getProgressText, ...args }: StoryProps) => {
   let getProgressTextEvaluated: ButtonTableProps['getProgressText'];
 
   try {

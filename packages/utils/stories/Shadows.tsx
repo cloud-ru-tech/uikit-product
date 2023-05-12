@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
@@ -40,7 +40,7 @@ const Text = styled.div`
   text-align: center;
 `;
 
-const Template: Story = () => {
+const Template: StoryFn = () => {
   const { theme } = useTheme();
 
   return (

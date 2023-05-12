@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
@@ -27,7 +27,7 @@ const Container = styled.div<{ theme: Themes }>`
   background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
 `;
 
-const Template: Story<SwitchProps> = ({ checked: propsChecked, size, ...args }, { globals: { theme } }) => {
+const Template: StoryFn<SwitchProps> = ({ checked: propsChecked, size, ...args }, { globals: { theme } }) => {
   const [checked, setChecked] = useState(propsChecked || false);
   const [key, setKey] = useState(0);
   useEffect(() => setKey(x => x + 1), [size]);

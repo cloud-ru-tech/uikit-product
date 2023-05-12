@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { useRef, useState } from 'react';
 
 import { Badge } from '@sbercloud/uikit-product-badge-private';
@@ -91,7 +91,7 @@ const ProjectSelector = ({ isMobile }: { isMobile?: boolean }) => {
   );
 };
 
-const Template: Story<
+const Template: StoryFn<
   HeaderProps & {
     menuList: SidebarProps['list'];
     footerItems: SidebarProps['footerItems'];

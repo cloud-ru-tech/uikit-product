@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import { ButtonRound } from '@sbercloud/uikit-product-button';
@@ -77,7 +77,7 @@ const PopoverContent = styled.div`
   width: 216px;
 `;
 
-const Template: Story<PopoverProps & { uncontrolledBehavior: boolean }> = (
+const Template: StoryFn<PopoverProps & { uncontrolledBehavior: boolean }> = (
   { uncontrolledBehavior, ...args },
   { globals: { theme } },
 ) => {

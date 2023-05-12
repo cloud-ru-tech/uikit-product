@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { DatasetDisplaySVG, DockerRegistryDisplaySVG, RocketInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
   padding: 20px;
 `;
 
-const Template: Story<CardQuickActionProps> = ({ ...args }) => (
+const Template: StoryFn<CardQuickActionProps> = ({ ...args }) => (
   <>
     Controlled:
     <Wrapper>

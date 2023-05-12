@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import debounce from 'lodash.debounce';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
@@ -65,7 +65,7 @@ function generateRows(count: number): DataModel[] {
   return res;
 }
 
-const Template: Story<
+const Template: StoryFn<
   ClientModelTableProps<DataModel> & {
     rowsAmount: number;
     pinnedRowsAmount: number;

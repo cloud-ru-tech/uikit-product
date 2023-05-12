@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -13,7 +13,7 @@ export default {
   component: Counter,
 } as Meta;
 
-const Template: Story<CounterProps> = ({ variant, ...args }) => (
+const Template: StoryFn<CounterProps> = ({ variant, ...args }) => (
   <ThemeWrapper variant={variant}>
     <div>
       Counter <Counter {...args} variant={variant} type={Counter.types.Count} />

@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -35,7 +35,7 @@ function menuTreeGenerator(restDepth: number, latitude: number): HierarchyMenuPr
     });
 }
 
-const Template: Story<HierarchyMenuProps & { latitude: number; depth: number }> = ({ latitude, depth, ...args }) => {
+const Template: StoryFn<HierarchyMenuProps & { latitude: number; depth: number }> = ({ latitude, depth, ...args }) => {
   const [nodes, setNodes] = useState(menuTreeGenerator(depth, latitude));
   useEffect(() => setNodes(menuTreeGenerator(depth, latitude)), [depth, latitude]);
   return (

@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -31,7 +31,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<HeaderProjectSelectorProps & { showCreateButton: boolean; showEditButton: boolean }> = ({
+const Template: StoryFn<HeaderProjectSelectorProps & { showCreateButton: boolean; showEditButton: boolean }> = ({
   showCreateButton,
   showEditButton,
   ...args

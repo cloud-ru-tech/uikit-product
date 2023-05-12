@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
@@ -33,7 +33,7 @@ export default {
   component: Modal,
 } as Meta;
 
-const Template: Story<ModalProps> = ({ ...args }) => {
+const Template: StoryFn<ModalProps> = ({ ...args }) => {
   const [isControlledModalOpen, setIsControlledModalOpen] = useState(false);
   const [isEx1ModalOpen, setEx1ModalOpen] = useState(false);
   const [isEx2ModalOpen, setEx2ModalOpen] = useState(false);

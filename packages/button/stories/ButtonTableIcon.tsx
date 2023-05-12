@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { ButtonTableIcon, ButtonTableIconManagedLoading, ButtonTableIconProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
@@ -9,7 +9,7 @@ export default {
   component: ButtonTableIcon,
 } as Meta;
 
-const Template: Story<ButtonTableIconProps> = ({ ...args }) => (
+const Template: StoryFn<ButtonTableIconProps> = ({ ...args }) => (
   <TableWrapper>
     <TableColumn>
       <TableCell />

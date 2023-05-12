@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { ButtonIconTransparent, RefreshButton } from '@sbercloud/uikit-product-button';
@@ -49,7 +49,7 @@ export default {
   component: TextField,
 } as Meta;
 
-const Template: Story<TextFieldProps> = ({ ...args }) => {
+const Template: StoryFn<TextFieldProps> = ({ ...args }) => {
   const [text, setText] = useState(args.text);
 
   const onRequestSecuredField = async () => {

@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -19,7 +19,7 @@ type StoryProps = HeatMapChartProps & {
   height?: number;
 };
 
-const Template: Story<StoryProps> = ({ xAxisPosition, showLegend, height, ...args }) => {
+const Template: StoryFn<StoryProps> = ({ xAxisPosition, showLegend, height, ...args }) => {
   const props = {
     ...args,
     options: {

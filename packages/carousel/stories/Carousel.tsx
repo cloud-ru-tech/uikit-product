@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { CardQuickAction, CardTopic, CardWide } from '@sbercloud/uikit-product-cards';
 import { DockerRegistryDisplaySVG, UserInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -82,7 +82,7 @@ const cardsMock = [
   </CardsWrap>,
 ];
 
-const Template: Story<CarouselProps> = ({ ...args }) => (
+const Template: StoryFn<CarouselProps> = ({ ...args }) => (
   <StoryWrap>
     <Carousel
       {...args}

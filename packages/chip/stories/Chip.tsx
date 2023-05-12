@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
-import { useEffect } from '@storybook/addons';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { useEffect } from '@storybook/preview-api';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
 `;
 
-const Template: Story<ChipProps> = ({ checked, ...args }) => {
+const Template: StoryFn<ChipProps> = ({ checked, ...args }) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   useEffect(() => setIsChecked(checked), [checked]);

@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { EditInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -11,7 +11,7 @@ export default {
   component: ButtonOverlay,
 } as Meta;
 
-const Template: Story<ButtonOverlayProps> = ({ ...args }) => (
+const Template: StoryFn<ButtonOverlayProps> = ({ ...args }) => (
   <SingleWrapper>
     <ButtonOverlay
       {...args}

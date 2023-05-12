@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
@@ -24,7 +24,7 @@ const Container = styled.div<{ theme: Themes }>`
   padding: 12px;
 `;
 
-const Template: Story<RadioProps> = ({ ...args }, { globals: { theme } }) => (
+const Template: StoryFn<RadioProps> = ({ ...args }, { globals: { theme } }) => (
   <Container theme={theme}>
     <RadioGroup value={'story1'} onChange={() => {}}>
       <Radio {...args} />

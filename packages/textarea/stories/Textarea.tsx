@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useRef, useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
@@ -25,7 +25,7 @@ const Separator = styled(Divider)`
   margin-top: 50px;
 `;
 
-const Template: Story<TextareaProps> = ({ ...args }) => {
+const Template: StoryFn<TextareaProps> = ({ ...args }) => {
   const [value, setValue] = useState(args.value || '');
   useEffect(() => {
     setValue(args.value);

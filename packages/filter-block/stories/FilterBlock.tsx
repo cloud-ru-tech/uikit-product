@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -15,7 +15,7 @@ export default {
   component: FilterBlock,
 } as Meta;
 
-const Template: Story<FilterBlockProps> = ({ ...args }) => {
+const Template: StoryFn<FilterBlockProps> = ({ ...args }) => {
   const [activeFastFilters, setActiveFastFilters] = useState<string[]>([]);
   const [activeFilters, setActiveFilters] = useState({});
 

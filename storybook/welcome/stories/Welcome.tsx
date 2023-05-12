@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import Readme from '../../../README.md';
 import { Markdown } from '../markdown/Markdown';
@@ -8,7 +8,7 @@ export default {
   title: 'Welcome/Welcome',
 } as Meta;
 
-const Template: Story = () => <Markdown md={Readme} />;
+const Template: StoryFn = () => <Markdown md={Readme} />;
 
 export const welcome = Template.bind({});
 welcome.args = {};

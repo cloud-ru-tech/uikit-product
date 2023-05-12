@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   justify-content: center;
 `;
 
-const Template: Story = props => (
+const Template: StoryFn = props => (
   <Wrapper>
     <NoDataSearch {...props} />
   </Wrapper>

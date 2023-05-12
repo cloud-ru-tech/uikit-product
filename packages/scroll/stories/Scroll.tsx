@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -13,7 +13,7 @@ export default {
   component: Scroll,
 } as Meta;
 
-const Template: Story<ScrollProps> = ({ variant, flexbox, ...args }) => (
+const Template: StoryFn<ScrollProps> = ({ variant, flexbox, ...args }) => (
   <Wrapper flexbox={flexbox}>
     <Scroll variant={variant} flexbox={flexbox} {...args}>
       <ScrollContent variant={variant} />

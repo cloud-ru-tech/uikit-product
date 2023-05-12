@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { UserInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
@@ -23,7 +23,7 @@ const Container = styled.div<{ theme: Themes }>`
   background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#404040')};
 `;
 
-const Template: Story<StatusBadgeProps> = ({ ...args }, { globals: { theme } }) => (
+const Template: StoryFn<StatusBadgeProps> = ({ ...args }, { globals: { theme } }) => (
   <Container theme={theme}>
     <StatusBadge {...args} icon={<UserInterfaceSVG />} />
   </Container>

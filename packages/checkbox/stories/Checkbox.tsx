@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -28,7 +28,7 @@ type State =
       type: 'checked';
     };
 
-const Template: Story<CheckboxProps> = ({ checked, partChecked, ...args }) => {
+const Template: StoryFn<CheckboxProps> = ({ checked, partChecked, ...args }) => {
   const [checkedState, setCheckedState] = useState<State>({ type: 'unchecked' });
 
   useEffect(() => {

@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
@@ -52,7 +52,7 @@ const radios = [
   },
 ];
 
-const Template: Story<RadioProps & RadioGroupProps> = ({ ...args }, { globals: { theme } }) => {
+const Template: StoryFn<RadioProps & RadioGroupProps> = ({ ...args }, { globals: { theme } }) => {
   const [value, setValue] = useState<React.ReactText>('Story1');
 
   return (

@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { ReactText, useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
@@ -22,7 +22,7 @@ export default {
   component: NotificationSmall,
 } as Meta;
 
-const Template: Story<NotificationSmallProps> = ({ ...args }) => {
+const Template: StoryFn<NotificationSmallProps> = ({ ...args }: NotificationSmallProps) => {
   const [currentNotificationId, setNotificationId] = useState<ReactText>();
 
   const clickToOpen = async () => {

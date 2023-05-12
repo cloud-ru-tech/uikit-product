@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -13,7 +13,7 @@ export default {
   component: Rating,
 } as Meta;
 
-const Template: Story<RatingProps> = ({ ...args }) => {
+const Template: StoryFn<RatingProps> = ({ ...args }) => {
   const [mark, setMark] = useState<number | undefined>(undefined);
 
   const handleRatingChange = (value: number) => setMark(value);

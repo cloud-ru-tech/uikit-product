@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { CirclePlayFilledInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -11,7 +11,7 @@ export default {
   component: ButtonRound,
 } as Meta;
 
-const Template: Story<ButtonRoundProps> = ({ ...args }) => (
+const Template: StoryFn<ButtonRoundProps> = ({ ...args }) => (
   <TableWrapper>
     {Object.entries(ButtonRound.variants).map(([key, value]) => (
       <TableColumn key={key}>

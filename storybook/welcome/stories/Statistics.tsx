@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { H2_STYLES } from '@sbercloud/uikit-product-typography';
@@ -27,7 +27,7 @@ const Title = styled.h1`
   margin-bottom: 60px;
 `;
 
-const Template: Story = () => {
+const Template: StoryFn = () => {
   const count = process.env.PACKAGES_STATISTICS as unknown as PackagesStatistics;
 
   return (

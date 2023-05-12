@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -14,7 +14,7 @@ export default {
   component: InputSlider,
 } as Meta;
 
-const Template: Story<InputSliderProps> = ({ ...args }) => {
+const Template: StoryFn<InputSliderProps> = ({ ...args }) => {
   const [value, setValue] = useState(args.value || 10);
 
   const valueHandler = (v: string | number) => setValue(Number(v));

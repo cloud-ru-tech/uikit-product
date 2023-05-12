@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 import { StepWithSubtitle } from 'welcome-tour/src/components/types';
 
@@ -71,7 +71,7 @@ export default {
   component: WelcomeTour,
 } as Meta;
 
-const Template: Story<WelcomeTourProps> = () => {
+const Template: StoryFn<WelcomeTourProps> = () => {
   const [tourStarted, setTourStarted] = useState(false);
   const [steps, setSteps] = useState(JoyrideSteps);
   const [successFinal, setSuccessFinal] = useState(false);

@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -19,7 +19,9 @@ const Column = styled.div`
   overflow: auto;
 `;
 
-const Template: Story<TruncateStringProps & { columnWidth?: number }> = ({ ...args }) => (
+type TruncateProps = TruncateStringProps & { columnWidth?: number };
+
+const Template: StoryFn<TruncateProps> = ({ ...args }: TruncateProps) => (
   <Column>
     <TruncateString {...args} />
   </Column>

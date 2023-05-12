@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -20,7 +20,7 @@ export default {
   component: Label,
 } as Meta;
 
-const Template: Story<LabelProps> = ({ ...args }) => (
+const Template: StoryFn<LabelProps> = ({ ...args }) => (
   <LabelWrap>
     <Label variant={Label.variants.Green} text={'Новое'} />
     <Label variant={Label.variants.Blue} text={'Рекомендуемое'} />

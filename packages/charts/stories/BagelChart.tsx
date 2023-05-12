@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
 import { InfoInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   overflow: auto;
   resize: horizontal;
 `;
-const Template: Story<BagelChartProps> = ({ ...args }) => (
+const Template: StoryFn<BagelChartProps> = ({ ...args }) => (
   <Wrapper>
     <BagelChart {...args} />
   </Wrapper>

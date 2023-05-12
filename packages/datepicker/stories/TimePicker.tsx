@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -11,7 +11,7 @@ export default {
   component: TimePicker,
 } as Meta;
 
-const Template: Story<Omit<TimePickerProps, 'minTime'> & { minTime: boolean }> = ({ date, ...args }) => {
+const Template: StoryFn<Omit<TimePickerProps, 'minTime'> & { minTime: boolean }> = ({ date, ...args }) => {
   const [value, setValue] = useState(date);
 
   useEffect(() => {

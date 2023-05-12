@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
@@ -55,7 +55,7 @@ const Name = styled.span`
   font-size: 14px;
 `;
 
-const Template: Story<StatusDotProps> = ({ ...args }, { globals: { theme } }) => (
+const Template: StoryFn<StatusDotProps> = ({ ...args }, { globals: { theme } }) => (
   <Container theme={theme}>
     <Column>
       <Title>Controlled</Title>

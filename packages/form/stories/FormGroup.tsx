@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { ReactText, useState } from 'react';
 
 import { InputCommon } from '@sbercloud/uikit-product-input';
@@ -31,7 +31,7 @@ const RadioClassName = css`
   margin: 12px 0;
 `;
 
-const Template: Story = () => {
+const Template: StoryFn = () => {
   const [value, setValue] = useState(8);
   const [limit, setLimit] = useState<ReactText>('unlimited');
 

@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { SimpleInput } from '@sbercloud/uikit-product-input-private';
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   background-color: var(${COLORS_DRAWER.BACKGROUND});
 `;
 
-const Template: Story<FormFieldProps> = ({ label, hint, error, required, description }) => {
+const Template: StoryFn<FormFieldProps> = ({ label, hint, error, required, description }) => {
   const [value, setValue] = useState(8);
 
   return (

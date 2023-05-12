@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 
@@ -26,7 +26,7 @@ export default {
   component: Divider,
 } as Meta;
 
-const Template: Story<DividerProps> = ({ ...args }) => (
+const Template: StoryFn<DividerProps> = ({ ...args }) => (
   <Container>
     <Divider {...args} />
   </Container>

@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
@@ -31,7 +31,7 @@ const Wrap = styled.div`
   justify-content: space-around;
 `;
 
-const Template: Story = (args): JSX.Element => {
+const Template: StoryFn = (args): JSX.Element => {
   const [isHover, setHover] = useState(false);
   const [stateTags, setTags] = useState([
     {

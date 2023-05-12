@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -48,7 +48,7 @@ const options = [
   },
 ];
 
-const Template: Story = ({ ...args }) => {
+const Template: StoryFn = ({ ...args }) => {
   const [inputValue, setInputValue] = useState('');
   const [selectedOptions, setSelectedOptions] = useState<MultiselectOptionType[] | []>([]);
 

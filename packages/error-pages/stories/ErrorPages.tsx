@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   height: calc(100vh - 40px);
 `;
 
-const Template: Story<ErrorPageProps & { showSupportCenterButton: boolean }> = ({
+const Template: StoryFn<ErrorPageProps & { showSupportCenterButton: boolean }> = ({
   showSupportCenterButton,
   ...args
 }) => (

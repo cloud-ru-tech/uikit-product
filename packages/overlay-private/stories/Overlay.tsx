@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { SwitchRow } from '@sbercloud/uikit-product-switch';
@@ -26,7 +26,7 @@ const Container = styled.div`
   padding: 1rem;
 `;
 
-const Template: Story<OverlayPrivateProps> = ({ ...args }) => {
+const Template: StoryFn<OverlayPrivateProps> = ({ ...args }) => {
   const [isEnabled, setEnabled] = useState(false);
 
   return (

@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { RocketInterfaceSVG, SupportInterfaceSVG, UserInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -46,7 +46,7 @@ const RowCard = styled(CardTopic)`
   width: 250px;
 `;
 
-const Template: Story<CardTopicProps> = ({ ...args }) => (
+const Template: StoryFn<CardTopicProps> = ({ ...args }) => (
   <>
     Controlled:
     <Wrapper>

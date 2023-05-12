@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 
@@ -57,7 +57,7 @@ const actions: NotificationBigProps['actions'] = [
 
 const CustomNotification = ({ text }: { text: string }) => <CustomNotificationWrap>{text}</CustomNotificationWrap>;
 
-const Template: Story<NotificationBigProps> = ({ ...args }) => {
+const Template: StoryFn<NotificationBigProps> = ({ ...args }) => {
   const notification = (actions?: NotificationBigProps['actions']) => {
     openNotification({
       type: NotificationType.Big,

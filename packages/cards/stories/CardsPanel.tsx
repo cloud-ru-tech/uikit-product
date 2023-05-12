@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
-import { useEffect, useState } from '@storybook/addons';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { useEffect, useState } from '@storybook/preview-api';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { DockerRegistryDisplaySVG } from '@sbercloud/uikit-product-icons';
 import { Toolbar } from '@sbercloud/uikit-product-toolbar';
@@ -41,7 +41,7 @@ type StoryProps = {
   cardEntity: CardEntity;
 } & CardsPanelProps;
 
-const Template: Story<StoryProps> = ({ ...args }) => {
+const Template: StoryFn<StoryProps> = ({ ...args }) => {
   const [data, setData] = useState(generateData(args.cardsAmount));
   const [filteredData, setFilteredData] = useState(data);
   const [searchValue, setSearchValue] = useState('');

@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -22,7 +22,7 @@ const FavouriteWrap = styled.div`
   max-width: fit-content;
 `;
 
-const Template: Story<FavouriteProps> = ({ checked, ...args }) => {
+const Template: StoryFn<FavouriteProps> = ({ checked, ...args }) => {
   const [isChecked, setIsChecked] = useState(checked);
 
   useEffect(() => {

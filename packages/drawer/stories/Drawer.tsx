@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
@@ -69,7 +69,7 @@ const selectOptions = [
   },
 ];
 
-const Template: Story<DrawerProps> = ({ ...args }) => {
+const Template: StoryFn<DrawerProps> = ({ ...args }) => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState<string>('');
   const [radioValue, setRadioValue] = useState<React.ReactText>('');

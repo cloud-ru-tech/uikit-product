@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 
@@ -11,7 +11,7 @@ export default {
   component: RefreshButton,
 } as Meta;
 
-const Template: Story<RefreshButtonProps> = ({ ...args }) => (
+const Template: StoryFn<RefreshButtonProps> = ({ ...args }) => (
   <TableWrapper>
     <TableColumn>
       <TableCell>Button Icon Transparent / Default</TableCell>

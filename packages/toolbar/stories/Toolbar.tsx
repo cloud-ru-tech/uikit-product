@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { TFilterValueType } from '@sbercloud/uikit-product-filter';
@@ -16,7 +16,7 @@ export default {
   component: Toolbar.Container,
 } as Meta;
 
-const Template: Story<WithSupportProps<Toolbar.ContainerProps>> = ({ ...args }) => {
+const Template: StoryFn<WithSupportProps<Toolbar.ContainerProps>> = ({ ...args }) => {
   const [value, setValue] = useState<string>('');
   const [filterValue, setFilterValue] = useState<TFilterValueType[] | string>(defValue);
 

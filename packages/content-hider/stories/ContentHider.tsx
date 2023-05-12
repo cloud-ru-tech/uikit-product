@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -13,7 +13,7 @@ export default {
 const contentString = 'lorem ipsum dolor sit amet ';
 const content = [...new Array(300)].map(() => contentString).join('');
 
-const Template: Story<ContentHiderProps> = ({ ...args }) => <ContentHider {...args}>{content}</ContentHider>;
+const Template: StoryFn<ContentHiderProps> = ({ ...args }) => <ContentHider {...args}>{content}</ContentHider>;
 
 export const contentHider = Template.bind({});
 contentHider.args = {};

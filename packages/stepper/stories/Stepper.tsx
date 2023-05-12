@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect } from 'react';
 import { Controller, FormProvider, useForm, useFormContext } from 'react-hook-form';
 
@@ -85,7 +85,7 @@ const StepsView = ({ steps, className }: StepsProps) => {
   );
 };
 
-const Template: Story<StepsProps> = ({ ...args }) => (
+const Template: StoryFn<StepsProps> = ({ ...args }) => (
   <Stepper.Context stepsCount={args.steps.length}>
     <StepsView {...args} />
   </Stepper.Context>

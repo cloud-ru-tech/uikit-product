@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
 
@@ -53,7 +53,7 @@ const AVATARS: Record<string, Omit<AvatarProps, 'variant'>[]> = {
   ],
 };
 
-const Template: Story<AvatarProps> = props => (
+const Template: StoryFn<AvatarProps> = props => (
   <Wrapper>
     <Title>Controlled:</Title>
     <Avatar {...props} />

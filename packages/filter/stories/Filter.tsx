@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { FilterInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -99,7 +99,7 @@ const defValue: TFilterValueType[] = [
   },
 ];
 
-const Template: Story<FilterProps> = () => {
+const Template: StoryFn<FilterProps> = () => {
   const [value, setValue] = useState('');
   const [filterValue, setFilterValue] = useState<TFilterValueType[] | string>(defValue);
 

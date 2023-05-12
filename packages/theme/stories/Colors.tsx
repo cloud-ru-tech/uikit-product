@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { H2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
 
@@ -113,7 +113,7 @@ const color_hex = JSON.parse(`{
     .replace(/.$/, '')}
 }`);
 
-const Template: Story<typeof EXPORT_VARS.PRESET> = () => (
+const Template: StoryFn<typeof EXPORT_VARS.PRESET> = () => (
   <Wrapper>
     {COLOR_VARIANT_LIST.map(colorVariant => (
       <Group key={colorVariant.name}>

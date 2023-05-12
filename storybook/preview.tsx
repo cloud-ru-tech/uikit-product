@@ -1,4 +1,5 @@
-import { addDecorator, addParameters } from '@storybook/react';
+import { StoryFn } from '@storybook/react';
+import { DecoratorFunction, GlobalTypes, Parameters } from '@storybook/types';
 import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
 
@@ -8,42 +9,38 @@ import { COLOR_MAP, useColorizeThemeButton } from './useColorizeThemeButton';
 
 const LanguageCodeType = ConfigProvider.languages;
 
-export const parameters = {
+const decorators: DecoratorFunction[] = [
+  withDesign,
+  (Story: StoryFn, { globals: { locale, theme } }) => {
+    useColorizeThemeButton(theme);
+
+    const methods = useForm({
+      mode: 'onSubmit',
+      reValidateMode: 'onSubmit',
+      shouldFocusError: true,
+      shouldUnregister: true,
+    });
+    return (
+      // Add global styles and theme variables
+      <div id='story-root'>
+        <FormProvider {...methods}>
+          <ConfigProvider theme={theme || ConfigProvider.themes.Purple} languageCode={locale || LanguageCodeType.ruRU}>
+            <Story />
+          </ConfigProvider>
+        </FormProvider>
+      </div>
+    );
+  },
+];
+
+const parameters: Parameters = {
   controls: { expanded: true },
-};
-
-addDecorator(withDesign);
-addDecorator((Story, { globals: { locale, theme } }) => {
-  useColorizeThemeButton(theme);
-
-  const methods = useForm({
-    mode: 'onSubmit',
-    reValidateMode: 'onSubmit',
-    shouldFocusError: true,
-    shouldUnregister: true,
-  });
-  return (
-    // Add global styles and theme variables
-    <div id='story-root'>
-      <FormProvider {...methods}>
-        <ConfigProvider theme={theme || ConfigProvider.themes.Purple} languageCode={locale || LanguageCodeType.ruRU}>
-          <Story />
-        </ConfigProvider>
-      </FormProvider>
-    </div>
-  );
-});
-
-addParameters({
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
       order: ['Welcome', 'Theme', 'Typography', 'Utils', 'Components', 'Not stable'],
     },
   },
-});
-
-addParameters({
   badgesConfig: {
     [BADGE.PRIVATE]: {
       styles: {
@@ -54,7 +51,7 @@ addParameters({
       title: BADGE.PRIVATE,
     },
   },
-});
+};
 
 const getStyle = (theme: Themes) => ({
   background: COLOR_MAP[theme],
@@ -64,7 +61,7 @@ const getStyle = (theme: Themes) => ({
   boxShadow: 'rgb(0 0 0 / 10%) 0px 0px 0px 1px inset',
 });
 
-export const globalTypes = {
+const globalTypes: GlobalTypes = {
   theme: {
     name: 'Theme',
     description: 'Changing themes',
@@ -93,3 +90,12 @@ export const globalTypes = {
     },
   },
 };
+
+const preview = {
+  decorators,
+  parameters,
+  globalTypes,
+};
+
+// eslint-disable-next-line import/no-default-export
+export default preview;

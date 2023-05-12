@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 import { ReactElement } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
@@ -32,7 +32,7 @@ export default {
   component: NoData,
 } as Meta;
 
-const Template: Story<
+const Template: StoryFn<
   { image: string | ReactElement; button: string | ReactElement } & Omit<NoDataProps, 'image' | 'button'>
 > = ({ button, image, ...rest }) => (
   <Wrapper>

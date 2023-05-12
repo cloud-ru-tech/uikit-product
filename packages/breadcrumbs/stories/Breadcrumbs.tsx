@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { PropsWithChildren, useState } from 'react';
 
 import { Button, ButtonIcon, CopyButton } from '@sbercloud/uikit-product-button';
@@ -25,7 +25,7 @@ function CaseWrapper({ children, title }: PropsWithChildren<{ title: string }>) 
   );
 }
 
-const Template: Story<BreadcrumbsProps> = ({ ...args }) => {
+const Template: StoryFn<BreadcrumbsProps> = ({ ...args }) => {
   const [data, setData] = useState<BreadcrumbItem[]>([]);
   return (
     <>

@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
@@ -89,7 +89,7 @@ const ThemeWrapper = styled.span<{ theme: Themes }>`
   color: ${props => COLOR_MAP[props.theme]};
 `;
 
-const Template: Story<ConfigProviderProps> = ({ ...args }) => {
+const Template: StoryFn<ConfigProviderProps> = ({ ...args }) => {
   const { changeTheme, theme } = useTheme();
   const { languageCode, changeLanguage } = useLanguage();
   return (

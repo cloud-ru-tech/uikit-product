@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -11,7 +11,7 @@ export default {
   component: FilterRow,
 } as Meta;
 
-const Template: Story<FilterRowProps> = ({ ...args }) => <FilterRow {...args} />;
+const Template: StoryFn<FilterRowProps> = ({ ...args }) => <FilterRow {...args} />;
 
 export const filterRow = Template.bind({});
 filterRow.args = {

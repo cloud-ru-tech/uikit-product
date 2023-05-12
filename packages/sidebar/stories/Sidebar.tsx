@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -21,7 +21,7 @@ const Wrap = styled.div`
   width: 100%;
 `;
 
-const Template: Story<SidebarProps> = ({ active, ...args }) => {
+const Template: StoryFn<SidebarProps> = ({ active, ...args }) => {
   const [activeItem, setActiveItem] = useState<SidebarItemId | undefined>(active);
 
   useEffect(() => {

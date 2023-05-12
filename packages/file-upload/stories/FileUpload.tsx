@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Button, ButtonRound } from '@sbercloud/uikit-product-button';
 import { FileUploadFilledInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -16,7 +16,7 @@ export default {
   component: FileUpload,
 } as Meta;
 
-const Template: Story<FileUploadProps> = ({ ...args }) => (
+const Template: StoryFn<FileUploadProps> = ({ ...args }) => (
   <Container>
     <FileUpload {...args}>
       <ButtonRound text='Загрузить' variant={ButtonRound.variants.OutlineAccent} />

@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 import {
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
   resize: horizontal;
 `;
 
-const Template: Story<CardProductProps> = ({ ...args }) => (
+const Template: StoryFn<CardProductProps> = ({ ...args }) => (
   <>
     Controlled:
     <Wrapper>

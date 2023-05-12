@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { NotifyInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -14,7 +14,7 @@ export default {
   component: Badge,
 } as Meta;
 
-const Template: Story<BadgeProps> = ({ ...args }) => (
+const Template: StoryFn<BadgeProps> = ({ ...args }) => (
   <Badge {...args}>
     <NotifyInterfaceSVG />
   </Badge>

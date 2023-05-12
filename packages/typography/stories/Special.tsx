@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -51,7 +51,7 @@ const specialConfig: TypographyStoryConfig = [
   },
 ];
 
-const Template: Story<{ value: string }> = commonTemplate(specialConfig);
+const Template: StoryFn<{ value: string }> = commonTemplate(specialConfig);
 
 export const special = Template.bind({});
 special.args = {

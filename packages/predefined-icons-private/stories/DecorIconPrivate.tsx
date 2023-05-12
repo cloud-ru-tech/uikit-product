@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -17,7 +17,7 @@ export default {
 
 type StoryProps = Exclude<PredefinedDecorIconPrivateProps, 'icon' | 'type'>;
 
-const Template: Story<StoryProps> = props => (
+const Template: StoryFn<StoryProps> = (props: StoryProps) => (
   <TableWrapper>
     <TableColumn key='IconsNames'>
       <TableCell key='custom'>Custom</TableCell>

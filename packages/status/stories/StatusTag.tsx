@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 
@@ -64,7 +64,7 @@ const Title = styled.span`
   font-size: 20px;
 `;
 
-const Template: Story<StatusTagProps> = ({ ...args }) => (
+const Template: StoryFn<StatusTagProps> = ({ ...args }) => (
   <Container>
     <WrapperFContolled>
       <Title>Contolled</Title>

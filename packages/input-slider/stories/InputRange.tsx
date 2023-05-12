@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -14,7 +14,7 @@ export default {
   component: InputRange,
 } as Meta;
 
-const Template: Story<InputRangeProps> = ({ ...args }) => {
+const Template: StoryFn<InputRangeProps> = ({ ...args }) => {
   const [value, setValue] = useState<[number, number]>(args.value || [20, 80]);
 
   const valueHandler = (v: [number, number]) => setValue(v);

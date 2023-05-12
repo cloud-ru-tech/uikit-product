@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Avatar } from '@sbercloud/uikit-product-avatar';
 import { InputCommon } from '@sbercloud/uikit-product-input';
@@ -21,7 +21,7 @@ const ContentStyled = styled.div`
   margin-top: 20px;
 `;
 
-const Template: Story<CollapsePanelProps> = ({ ...args }) => (
+const Template: StoryFn<CollapsePanelProps> = ({ ...args }) => (
   <CollapsePanel {...args}>
     <CollapsePanelItem
       index={0}

@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -10,7 +10,7 @@ export default {
   component: HeaderBalanceTooltip,
 } as Meta;
 
-const Template: Story<
+const Template: StoryFn<
   HeaderBalanceTooltipProps & { showRechargeButton: boolean; showSpinner: boolean; showPie: boolean }
 > = ({ showRechargeButton, showSpinner, showPie, ...args }) => (
   <HeaderBalanceTooltip

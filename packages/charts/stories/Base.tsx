@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import merge from 'lodash.merge';
 import { useMemo, useState } from 'react';
 
@@ -16,7 +16,7 @@ export default {
   component: InteractiveChart,
 } as Meta;
 
-const Template: Story<
+const Template: StoryFn<
   InteractiveChartProps & { color: Colors; drawStyle: DrawStyles; lineInterpolation: LineInterpolations }
 > = ({ color, drawStyle, lineInterpolation, data, options }) => {
   const [key, setKey] = useState(0);

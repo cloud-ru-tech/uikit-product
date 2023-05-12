@@ -1,5 +1,5 @@
 import { css } from '@linaria/core';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { BADGE } from '#storybookConstants';
@@ -76,7 +76,7 @@ const DOCUMENTS: DocumentProps[] = [
   },
 ];
 
-const Template: Story<DocumentProps> = ({ disabled, ...props }) => {
+const Template: StoryFn<DocumentProps> = ({ disabled, ...props }) => {
   const [hasDownloadButtonBeenClicked, setHasDownloadButtonBeenClicked] = useState<boolean>(false);
   const [hasRemoveButtonBeenClicked, setHasRemoveButtonBeenClicked] = useState<boolean>(false);
 

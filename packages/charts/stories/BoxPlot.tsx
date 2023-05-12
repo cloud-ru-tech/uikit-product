@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -12,7 +12,7 @@ export default {
   component: InteractiveChart,
 } as Meta;
 
-const Template: Story<InteractiveChartProps> = ({ data, options }) => (
+const Template: StoryFn<InteractiveChartProps> = ({ data, options }) => (
   <InteractiveChart data={data} options={options} type={InteractiveChart.types.BoxPlot} />
 );
 

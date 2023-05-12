@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
 import { Divider } from '@sbercloud/uikit-product-divider';
@@ -62,7 +62,7 @@ const Target = styled.h4`
   ${H4_STYLES};
 `;
 
-const Template: Story<TooltipProps> = ({ ...args }, { globals: { theme } }) => (
+const Template: StoryFn<TooltipProps> = ({ ...args }, { globals: { theme } }) => (
   <Group>
     <Container theme={theme}>
       <Title>Via controls</Title>

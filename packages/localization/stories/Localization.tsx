@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
 import { ConfigProvider, useLanguage } from '@sbercloud/uikit-product-utils';
@@ -22,7 +22,7 @@ const HooksCodeWrapper = styled.span`
   ${TEXT_1_STYLES};
 `;
 
-const Template: Story = ({ showTime }) => {
+const Template: StoryFn = ({ showTime }) => {
   const { languageCode } = useLanguage();
   return (
     <>

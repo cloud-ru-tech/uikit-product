@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { FolderInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
@@ -34,7 +34,7 @@ export default {
   component: Link,
 } as Meta;
 
-const Template: Story<LinkProps> = ({ ...args }, { globals: { theme } }) => (
+const Template: StoryFn<LinkProps> = ({ ...args }, { globals: { theme } }) => (
   <Container variant={args.variant || Variant.OnPrimary} theme={theme}>
     <Link {...args} />
   </Container>

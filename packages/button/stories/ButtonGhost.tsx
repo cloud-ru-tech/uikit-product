@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { CopyInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
@@ -11,7 +11,7 @@ export default {
   component: ButtonGhost,
 } as Meta;
 
-const Template: Story<ButtonGhostProps> = ({ ...args }) => (
+const Template: StoryFn<ButtonGhostProps> = ({ ...args }: ButtonGhostProps) => (
   <TableWrapper>
     {Object.entries(ButtonGhost.variants).map(([key, value]) => (
       <TableColumn key={key} data-variant={TableColumn.variants[value]}>

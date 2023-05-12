@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -12,7 +12,7 @@ export default {
   component: PieChart,
 } as Meta;
 
-const Template: Story<PieChartProps> = ({ ...args }) => <PieChart {...args} />;
+const Template: StoryFn<PieChartProps> = ({ ...args }) => <PieChart {...args} />;
 
 export const pieChart = Template.bind({});
 pieChart.args = {

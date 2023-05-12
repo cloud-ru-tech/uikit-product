@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 import { useArgs } from '@storybook/client-api';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
@@ -34,7 +34,7 @@ const Container = styled.div<{ theme: Themes }>`
   }
 `;
 
-const Template: Story<Tabs.ContainerProps & { 'data-test-id'?: string; className?: string }> = (
+const Template: StoryFn<Tabs.ContainerProps & { 'data-test-id'?: string; className?: string }> = (
   { ...args },
   { globals: { theme } },
 ) => {

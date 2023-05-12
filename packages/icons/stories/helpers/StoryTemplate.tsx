@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { Story } from '@storybook/react/types-6-0';
+import { StoryFn } from '@storybook/react';
 import React, { useCallback, useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
@@ -83,7 +83,7 @@ const SearchWrapView = css`
 
 export function getTemplate(
   Icons: Record<string, React.FunctionComponent<{ size?: number | string; fill?: string; id?: string }>>,
-): Story {
+): StoryFn {
   return ({ size, fill }) => {
     const [search, setSearch] = useState('');
     const [selectedIcon, setSelectedIcon] = useState<{

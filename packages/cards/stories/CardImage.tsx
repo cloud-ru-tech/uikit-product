@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   overflow: auto;
 `;
 
-const Template: Story<CardImageProps> = ({ ...args }) => (
+const Template: StoryFn<CardImageProps> = ({ ...args }) => (
   <Wrapper>
     <CardImage {...args} />{' '}
   </Wrapper>

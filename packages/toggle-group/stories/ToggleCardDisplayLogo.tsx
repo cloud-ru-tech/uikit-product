@@ -1,4 +1,4 @@
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { ModelInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -15,7 +15,7 @@ export default {
   component: ToggleCardDisplayLogo,
 } as Meta;
 
-const Template: Story<ToggleCardDisplayLogoProps> = args => {
+const Template: StoryFn<ToggleCardDisplayLogoProps> = args => {
   const [value, setValue] = useState<number[]>();
 
   return (

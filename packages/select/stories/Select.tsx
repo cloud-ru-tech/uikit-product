@@ -1,5 +1,5 @@
 import { styled } from '@linaria/react';
-import { Meta, Story } from '@storybook/react/types-6-0';
+import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import {
@@ -50,7 +50,7 @@ const Footer = styled.div`
   padding: 20px;
 `;
 
-const Template: Story<SelectProps> = ({
+const Template: StoryFn<SelectProps> = ({
   type,
   isMulti,
   showLogo,
