@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.5 (2023-05-15)
+
+
+### Bug Fixes
+
+* **[SVP-5555](https://jira.sbercloud.tech/browse/SVP-5555):** filter chip select filter ([f09ff7f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f09ff7faf9124feb8bdfbead2644c5c2a14d027b))
+
+
+
+
+
 ## 0.1.4 (2023-05-12)
 
 ### Only dependencies have been changed
