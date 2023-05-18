@@ -91,12 +91,12 @@ export function WelcomeTour({
     <JoyRide
       tooltipComponent={renderTooltipComponent}
       steps={stepsWithoutBeacon}
-      continuous
       styles={customColors}
       run={tourStarted}
       callback={checkTourFinish}
       floaterProps={customArrowSize}
       disableOverlayClose
+      disableScrollParentFix={true}
     />
   );
 }
