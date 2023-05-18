@@ -41,5 +41,6 @@ spinner.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=3477%3A46976',
   },
-  badges: [BADGE.STABLE],
+  badges: [BADGE.DEPRECATED],
+  snackUiLink: 'https://frontend.cp.sbercloud.tech/snack/?path=/story/components-loaders-spinner--spinner',
 };

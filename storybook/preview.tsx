@@ -3,6 +3,9 @@ import { DecoratorFunction, GlobalTypes, Parameters } from '@storybook/types';
 import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
 
+import { Alert } from '@sbercloud/uikit-product-alert';
+import { Link } from '@sbercloud/uikit-product-link';
+
 import { ConfigProvider, Themes } from '../packages/utils/src';
 import { BADGE } from './constants';
 import { COLOR_MAP, useColorizeThemeButton } from './useColorizeThemeButton';
@@ -11,7 +14,7 @@ const LanguageCodeType = ConfigProvider.languages;
 
 const decorators: DecoratorFunction[] = [
   withDesign,
-  (Story: StoryFn, { globals: { locale, theme } }) => {
+  (Story: StoryFn, { globals: { locale, theme }, parameters: { badges, snackUiLink } }) => {
     useColorizeThemeButton(theme);
 
     const methods = useForm({
@@ -24,13 +27,34 @@ const decorators: DecoratorFunction[] = [
       // Add global styles and theme variables
       <div id='story-root'>
         <FormProvider {...methods}>
-          <ConfigProvider theme={theme || ConfigProvider.themes.Purple} languageCode={locale || LanguageCodeType.ruRU}>
-            <Story />
-          </ConfigProvider>
-        </FormProvider>
-      </div>
-    );
-  },
+          {Array.isArray(badges) && badges.includes(BADGE.DEPRECATED) && (
+          <>
+            <Alert
+              type={Alert.types.Warning}
+              description={
+                <>
+                  The package is deprecated.{' '}
+                  {snackUiLink ? (
+                    <>
+                      Go <Link href={snackUiLink} text={'here'} /> to see the new component
+                    </>
+                  ) : (
+                    'See Readme in the Right panel for more info'
+                  )}
+                </>
+              }
+              variant={Alert.variants.Accent}
+            />
+            <br />
+          </>
+        )}
+        <ConfigProvider theme={theme || ConfigProvider.themes.Purple} languageCode={locale || LanguageCodeType.ruRU}>
+          <Story />
+        </ConfigProvider>
+      </FormProvider>
+    </div>
+  );
+},
 ];
 
 const parameters: Parameters = {

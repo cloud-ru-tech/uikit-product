@@ -38,5 +38,6 @@ counter.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-DS%E3%83%BBComponents?node-id=5168%3A69430',
   },
-  badges: [BADGE.BETA],
+  badges: [BADGE.DEPRECATED],
+  snackUiLink: 'https://frontend.cp.sbercloud.tech/snack/?path=/story/components-counter--counter',
 };

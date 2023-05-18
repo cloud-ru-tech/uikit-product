@@ -61,7 +61,8 @@ special.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
-  badges: [BADGE.STABLE],
+  badges: [BADGE.DEPRECATED],
+  snackUiLink: 'https://frontend.cp.sbercloud.tech/snack/?path=/story/components-typography--typography',
   design: {
     name: 'Figma',
     type: 'figma',

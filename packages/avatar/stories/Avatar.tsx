@@ -103,5 +103,6 @@ avatar.parameters = {
     type: 'figma',
     url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=721%3A0',
   },
-  badges: [BADGE.STABLE],
+  badges: [BADGE.DEPRECATED],
+  snackUiLink: 'https://frontend.cp.sbercloud.tech/snack/?path=/story/components-avatar--avatar',
 };

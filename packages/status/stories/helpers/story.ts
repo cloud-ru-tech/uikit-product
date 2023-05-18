@@ -6,9 +6,11 @@ import componentReadme from '../../README.md';
 
 export function getDefaultParameters({
   figmaUrl,
+  snackUiLink,
   extraControlsInclude = [],
 }: {
   figmaUrl?: string;
+  snackUiLink?: string;
   extraControlsInclude?: string[];
 } = {}) {
   return {
@@ -22,7 +24,8 @@ export function getDefaultParameters({
           url: figmaUrl,
         }
       : undefined,
-    badges: [BADGE.STABLE],
+    badges: [BADGE.DEPRECATED],
+    snackUiLink,
     controls: { include: ['data-test-id', 'className'].concat(extraControlsInclude) },
   };
 }
