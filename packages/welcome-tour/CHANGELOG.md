@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.4 (2023-05-19)
+
+
+### Bug Fixes
+
+* **[ONB-655](https://jira.sbercloud.tech/browse/ONB-655):** fixing scroll ([0b5147b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0b5147b58151a8e0127656fd415f39b375d08e57))
+
+
+
+
+
 ## 0.3.3 (2023-05-12)
 
 ### Only dependencies have been changed
