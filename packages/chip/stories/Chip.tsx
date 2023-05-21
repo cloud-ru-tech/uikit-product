@@ -1,7 +1,6 @@
 import { styled } from '@linaria/react';
-import { useEffect } from '@storybook/preview-api';
 import { Meta, StoryFn } from '@storybook/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 

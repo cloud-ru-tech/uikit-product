@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
-import { useState } from '@storybook/preview-api';
 import { Meta, StoryFn } from '@storybook/react';
+import { useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

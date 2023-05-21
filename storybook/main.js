@@ -47,6 +47,8 @@ const mainConfig = {
       },
     },
     '@geometricpanda/storybook-addon-badges',
+    '@sbercloud/ft-storybook-brand-addon',
+    'storybook-dark-mode',
   ],
   staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
   framework: {

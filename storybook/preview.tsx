@@ -2,20 +2,23 @@ import { StoryFn } from '@storybook/react';
 import { DecoratorFunction, GlobalTypes, Parameters } from '@storybook/types';
 import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
+import { useDarkMode } from 'storybook-dark-mode';
 
+import { PARAM_CAN_ADD_CUSTOM_BRAND_KEY, PARAM_COLOR_MAP_KEY, PARAM_KEY } from '@sbercloud/ft-storybook-brand-addon';
 import { Alert } from '@sbercloud/uikit-product-alert';
 import { Link } from '@sbercloud/uikit-product-link';
 
-import { ConfigProvider, Themes } from '../packages/utils/src';
-import { BADGE } from './constants';
-import { COLOR_MAP, useColorizeThemeButton } from './useColorizeThemeButton';
+import { ConfigProvider } from '../packages/utils/src';
+import { BADGE, Brand, BRAND_TO_THEME_MAP, DEFAULT_BRAND_COLORS_MAP, DEFAULT_BRAND_MAP, Mode } from './constants';
 
 const LanguageCodeType = ConfigProvider.languages;
 
 const decorators: DecoratorFunction[] = [
   withDesign,
-  (Story: StoryFn, { globals: { locale, theme }, parameters: { badges, snackUiLink } }) => {
-    useColorizeThemeButton(theme);
+  (Story: StoryFn, { globals: { locale, [PARAM_KEY]: brand }, parameters: { badges, snackUiLink } }) => {
+    const isDark = useDarkMode();
+    const mode = isDark ? Mode.Dark : Mode.Light;
+    const normalizedBrand = Object.values(Brand).includes(brand) ? brand : Brand.Cloud;
 
     const methods = useForm({
       mode: 'onSubmit',
@@ -28,33 +31,36 @@ const decorators: DecoratorFunction[] = [
       <div id='story-root'>
         <FormProvider {...methods}>
           {Array.isArray(badges) && badges.includes(BADGE.DEPRECATED) && (
-          <>
-            <Alert
-              type={Alert.types.Warning}
-              description={
-                <>
-                  The package is deprecated.{' '}
-                  {snackUiLink ? (
-                    <>
-                      Go <Link href={snackUiLink} text={'here'} /> to see the new component
-                    </>
-                  ) : (
-                    'See Readme in the Right panel for more info'
-                  )}
-                </>
-              }
-              variant={Alert.variants.Accent}
-            />
-            <br />
-          </>
-        )}
-        <ConfigProvider theme={theme || ConfigProvider.themes.Purple} languageCode={locale || LanguageCodeType.ruRU}>
-          <Story />
-        </ConfigProvider>
-      </FormProvider>
-    </div>
-  );
-},
+            <>
+              <Alert
+                type={Alert.types.Warning}
+                description={
+                  <>
+                    The package is deprecated.{' '}
+                    {snackUiLink ? (
+                      <>
+                        Go <Link href={snackUiLink} text={'here'} /> to see the new component
+                      </>
+                    ) : (
+                      'See Readme in the Right panel for more info'
+                    )}
+                  </>
+                }
+                variant={Alert.variants.Accent}
+              />
+              <br />
+            </>
+          )}
+          <ConfigProvider
+            theme={BRAND_TO_THEME_MAP[normalizedBrand][mode] || ConfigProvider.themes.Purple}
+            languageCode={locale || LanguageCodeType.ruRU}
+          >
+            <Story />
+          </ConfigProvider>
+        </FormProvider>
+      </div>
+    );
+  },
 ];
 
 const parameters: Parameters = {
@@ -77,29 +83,7 @@ const parameters: Parameters = {
   },
 };
 
-const getStyle = (theme: Themes) => ({
-  background: COLOR_MAP[theme],
-  width: '1rem',
-  height: '1rem',
-  borderRadius: '1rem',
-  boxShadow: 'rgb(0 0 0 / 10%) 0px 0px 0px 1px inset',
-});
-
 const globalTypes: GlobalTypes = {
-  theme: {
-    name: 'Theme',
-    description: 'Changing themes',
-    defaultValue: Themes.Purple,
-    toolbar: {
-      icon: 'circlehollow',
-      items: [
-        { value: Themes.Purple, right: <div style={getStyle(Themes.Purple)} />, title: 'Purple' },
-        { value: Themes.PurpleDark, right: <div style={getStyle(Themes.PurpleDark)} />, title: 'PurpleDark' },
-        { value: Themes.Green, right: <div style={getStyle(Themes.Green)} />, title: 'Green' },
-        { value: Themes.GreenDark, right: <div style={getStyle(Themes.GreenDark)} />, title: 'GreenDark' },
-      ],
-    },
-  },
   locale: {
     name: 'Locale',
     description: 'Internationalization locale',
@@ -112,6 +96,30 @@ const globalTypes: GlobalTypes = {
         { value: LanguageCodeType.cimode, right: '🗝', title: 'CI Mode' },
       ],
     },
+  },
+  [PARAM_KEY]: {
+    name: 'Brand',
+    description: 'Changing brands',
+    defaultValue: Brand.MLSpace,
+  },
+  [PARAM_COLOR_MAP_KEY]: {
+    name: 'Brand Map with Colors',
+    description: 'Map of color for brands list',
+    defaultValue: DEFAULT_BRAND_COLORS_MAP,
+  },
+  [PARAM_CAN_ADD_CUSTOM_BRAND_KEY]: {
+    name: 'Can add custom brand',
+    defaultValue: false,
+  },
+  [Brand.Cloud]: {
+    name: 'Brand Cloud',
+    description: '',
+    defaultValue: DEFAULT_BRAND_MAP[Brand.Cloud],
+  },
+  [Brand.MLSpace]: {
+    name: 'Brand MLSpace',
+    description: '',
+    defaultValue: DEFAULT_BRAND_MAP[Brand.MLSpace],
   },
 };
 

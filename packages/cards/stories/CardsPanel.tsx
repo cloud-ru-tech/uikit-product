@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
-import { useEffect, useState } from '@storybook/preview-api';
 import { Meta, StoryFn } from '@storybook/react';
+import { useEffect, useState } from 'react';
 
 import { DockerRegistryDisplaySVG } from '@sbercloud/uikit-product-icons';
 import { Toolbar } from '@sbercloud/uikit-product-toolbar';

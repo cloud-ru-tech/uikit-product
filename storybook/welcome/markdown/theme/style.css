@@ -1,4 +1,4 @@
-body[data-theme='purpleDark'] {
+body[data-theme='purpleDark'], body[data-theme='greenDark'] {
   --color-prettylights-syntax-comment: #8b949e;
   --color-prettylights-syntax-constant: #79c0ff;
   --color-prettylights-syntax-entity: #d2a8ff;
@@ -43,7 +43,7 @@ body[data-theme='purpleDark'] {
   --color-danger-fg: #f85149;
 }
 
-body[data-theme='purple'] {
+body[data-theme='purple'], body[data-theme='green'] {
   --color-prettylights-syntax-comment: #6e7781;
   --color-prettylights-syntax-constant: #0550ae;
   --color-prettylights-syntax-entity: #8250df;
@@ -198,7 +198,6 @@ body[data-theme='purple'] {
   border-style: none;
   max-width: 100%;
   box-sizing: content-box;
-  background-color: var(--color-canvas-default);
 }
 
 .markdown-body code,
@@ -418,6 +417,11 @@ body[data-theme='purple'] {
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
   font-size: 12px;
   word-wrap: normal;
+}
+
+.markdown-body pre > div {
+  overflow: unset !important;
+  margin: 0 !important;
 }
 
 .markdown-body .octicon {

@@ -2,7 +2,7 @@ import { CSSProperties } from 'react';
 
 export const dark: { [key: string]: CSSProperties } = {
   'code[class*="language-"]': {
-    background: 'hsl(220, 13%, 18%)',
+    background: 'var(--color-canvas-subtle)',
     color: 'hsl(220, 14%, 71%)',
     textShadow: '0 1px rgba(0, 0, 0, 0.3)',
     fontFamily: '"Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace',
@@ -21,7 +21,7 @@ export const dark: { [key: string]: CSSProperties } = {
     hyphens: 'none',
   },
   'pre[class*="language-"]': {
-    background: 'hsl(220, 13%, 18%)',
+    background: 'var(--color-canvas-subtle)',
     color: 'hsl(220, 14%, 71%)',
     textShadow: '0 1px rgba(0, 0, 0, 0.3)',
     fontFamily: '"Fira Code", "Fira Mono", Menlo, Consolas, "DejaVu Sans Mono", monospace',
