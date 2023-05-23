@@ -45,7 +45,7 @@ function StylelessTablePrivate({
   ...tableProps
 }: TablePrivateProps) {
   const [gridApi, setGridApi] = useState<GridApi>();
-  const [displayedRowsCount, setDisplayedRowsCount] = useState<number | undefined>();
+  const [displayedRowsCount, setDisplayedRowsCount] = useState<number | undefined>(rowData.length);
   const [resizedColumns, setResizedColumns] = useState<{ [key: string]: string }>({});
 
   const handleGridReady = (params: GridReadyEvent) => {
