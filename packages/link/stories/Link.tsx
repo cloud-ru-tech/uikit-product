@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { FolderInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 import { BADGE } from '#storybookConstants';
 
@@ -12,16 +12,15 @@ import componentReadme from '../README.md';
 import { Link, LinkProps } from '../src';
 import { Variant } from '../src/components/constants';
 
-const Container = styled.div<{ variant: Variant; theme: Themes }>`
+const Container = styled.div<{ variant: Variant }>`
   width: 200px;
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
   border-radius: 10%;
-  background-color: ${({ variant, theme }) =>
-    variant === Variant.OnPrimary && ['purple', 'green'].includes(theme) ? '#ffffff' : '#333333'};
+  background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
 const prefixIcons = {
@@ -34,8 +33,8 @@ export default {
   component: Link,
 } as Meta;
 
-const Template: StoryFn<LinkProps> = ({ ...args }, { globals: { theme } }) => (
-  <Container variant={args.variant || Variant.OnPrimary} theme={theme}>
+const Template: StoryFn<LinkProps> = ({ ...args }) => (
+  <Container variant={args.variant || Variant.OnPrimary}>
     <Link {...args} />
   </Container>
 );

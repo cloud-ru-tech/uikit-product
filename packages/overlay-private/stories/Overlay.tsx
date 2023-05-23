@@ -2,6 +2,7 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { SwitchRow } from '@sbercloud/uikit-product-switch';
 
 import { BADGE } from '#storybookConstants';
@@ -19,7 +20,7 @@ export default {
 const Container = styled.div`
   width: 400px;
   height: 100%;
-  background-color: #fff;
+  background-color: var(${themeVars.sys.neutral.background2Level});
   position: absolute;
   top: 0;
   left: 0;

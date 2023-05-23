@@ -2,9 +2,9 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { ButtonRound } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 import { H2_STYLES, H4_SEMIBOLD_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { BADGE } from '#storybookConstants';
@@ -19,7 +19,7 @@ export default {
   component: Popover,
 } as Meta;
 
-const Container = styled.div<{ theme: Themes }>`
+const Container = styled.div`
   margin: auto;
   box-sizing: border-box;
   padding: 24px;
@@ -29,9 +29,9 @@ const Container = styled.div<{ theme: Themes }>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
   border-radius: 16px;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
 const TooltipWrapper = styled.div`
@@ -62,7 +62,7 @@ const H4SemiboldStyled = styled.span`
 const Text2Styled = styled.span`
   ${TEXT_2_STYLES};
 
-  color: var(${EXPORT_VARS.GREY[600]});
+  color: var(${themeVars.sys.neutral.textSupport});
 `;
 
 const Footer = styled.div`
@@ -77,10 +77,7 @@ const PopoverContent = styled.div`
   width: 216px;
 `;
 
-const Template: StoryFn<PopoverProps & { uncontrolledBehavior: boolean }> = (
-  { uncontrolledBehavior, ...args },
-  { globals: { theme } },
-) => {
+const Template: StoryFn<PopoverProps & { uncontrolledBehavior: boolean }> = ({ uncontrolledBehavior, ...args }) => {
   const [isVisible, setIsVisible] = useState(args.visible);
 
   useEffect(() => {
@@ -91,7 +88,7 @@ const Template: StoryFn<PopoverProps & { uncontrolledBehavior: boolean }> = (
 
   return (
     <Group>
-      <Container theme={theme}>
+      <Container>
         <Title>Via controls</Title>
         <Divider />
         <TooltipWrapper>
@@ -117,7 +114,7 @@ const Template: StoryFn<PopoverProps & { uncontrolledBehavior: boolean }> = (
           </Popover>
         </TooltipWrapper>
       </Container>
-      <Container theme={theme}>
+      <Container>
         <Title>Placements</Title>
         <Divider />
         {Object.values(Popover.placements).map(placement => (

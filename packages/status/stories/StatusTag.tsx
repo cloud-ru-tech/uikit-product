@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
-import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { StatusTag, StatusTagProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
@@ -18,8 +18,8 @@ const Container = styled.div`
 const TableWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
+  background-color: var(${themeVars.sys.neutral.background2Level});
   overflow: auto;
 `;
 
@@ -31,10 +31,10 @@ const TableColumn = styled.div`
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
 
-  background-color: var(${EXPORT_VARS.GREY[25]});
+  background-color: var(${themeVars.sys.neutral.background2Level});
 
   &:not(:last-child) {
-    border-right: 1px solid var(${EXPORT_VARS.GREY[100]});
+    border-right: 1px solid var(${themeVars.sys.neutral.decorDefault});
   }
 `;
 
@@ -48,7 +48,7 @@ const TableCell = styled.div`
   box-sizing: border-box;
 
   &:not(:last-child) {
-    border-bottom: 1px solid var(${EXPORT_VARS.GREY[100]});
+    border-bottom: 1px solid var(${themeVars.sys.neutral.decorDefault});
   }
 `;
 
@@ -56,7 +56,7 @@ const WrapperFContolled = styled.div`
   display: flex;
   padding: 30px;
   column-gap: 30px;
-  background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
+  background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
 const Title = styled.span`

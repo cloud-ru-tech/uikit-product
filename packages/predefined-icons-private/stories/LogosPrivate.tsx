@@ -1,8 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
-import { GlobalTypes } from '@storybook/types';
 
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { BADGE } from '#storybookConstants';
 
@@ -20,21 +19,20 @@ export default {
   title: 'Components/Icons/Predefined/Predefined Logos Private',
 } as Meta;
 
-const Wrapper = styled.div<{ theme: Themes }>`
+const Wrapper = styled.div`
   display: grid;
   grid-gap: 20px;
   padding: 16px;
 
   &[data-variant=${PredefinedCloudLogo.variants.OnAccent}] {
-    background-color: ${({ theme }) =>
-      ['purple', 'green'].includes(theme) ? `var(${EXPORT_VARS.GREY[800]})` : `var(${EXPORT_VARS.GREY[0]})`};
+    background-color: var(${themeVars.sys.invertNeutral.background});
   }
 `;
 
 type Props = PredefinedMLSpaceLogoProps & PredefinedCloudLogoProps;
 
-const Template = ({ ...args }: Props, { globals: { theme } }: GlobalTypes) => (
-  <Wrapper data-variant={args.variant} theme={theme}>
+const Template = ({ ...args }: Props) => (
+  <Wrapper data-variant={args.variant}>
     <PredefinedMLSpaceLogo {...args} />
     <PredefinedCloudLogo {...args} />
   </Wrapper>

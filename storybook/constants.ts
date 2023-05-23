@@ -37,6 +37,6 @@ export const DEFAULT_BRAND_MAP = {
 };
 
 export const DEFAULT_BRAND_COLORS_MAP = {
-  [Brand.Cloud]: '#06b877',
   [Brand.MLSpace]: '#5558fa',
+  [Brand.Cloud]: '#06b877',
 };

@@ -1,10 +1,10 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
 import { Divider } from '@sbercloud/uikit-product-divider';
 import { CopyInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 import { H2_STYLES, H4_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { BADGE } from '#storybookConstants';
@@ -19,7 +19,7 @@ export default {
   component: Tooltip,
 } as Meta;
 
-const Container = styled.div<{ theme: Themes }>`
+const Container = styled.div`
   margin: auto;
   box-sizing: border-box;
   padding: 24px;
@@ -29,9 +29,9 @@ const Container = styled.div<{ theme: Themes }>`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
   border-radius: 16px;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
 const icons = {
@@ -62,9 +62,9 @@ const Target = styled.h4`
   ${H4_STYLES};
 `;
 
-const Template: StoryFn<TooltipProps> = ({ ...args }, { globals: { theme } }) => (
+const Template: StoryFn<TooltipProps> = ({ ...args }) => (
   <Group>
-    <Container theme={theme}>
+    <Container>
       <Title>Via controls</Title>
       <Divider />
       <TooltipWrapper>
@@ -73,7 +73,7 @@ const Template: StoryFn<TooltipProps> = ({ ...args }, { globals: { theme } }) =>
         </Tooltip>
       </TooltipWrapper>
     </Container>
-    <Container theme={theme}>
+    <Container>
       <Title>Placements</Title>
       <Divider />
       {Object.values(Tooltip.placements).map(placement => (
@@ -82,7 +82,7 @@ const Template: StoryFn<TooltipProps> = ({ ...args }, { globals: { theme } }) =>
         </Tooltip>
       ))}
     </Container>
-    <Container theme={theme}>
+    <Container>
       <Title>Triggers</Title>
       <Divider />
       {Object.values(Tooltip.triggers).map(trigger => (

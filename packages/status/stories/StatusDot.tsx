@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { StatusDot, StatusDotProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
@@ -11,16 +11,16 @@ export default {
   component: StatusDot,
 } as Meta;
 
-const Container = styled.div<{ theme: Themes }>`
+const Container = styled.div`
   width: 400px;
   height: 400px;
   display: grid;
   align-items: flex-start;
   column-gap: 24px;
   padding: 48px;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
   border-radius: 10%;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#404040')};
+  background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
 const Row = styled.div`
@@ -55,8 +55,8 @@ const Name = styled.span`
   font-size: 14px;
 `;
 
-const Template: StoryFn<StatusDotProps> = ({ ...args }, { globals: { theme } }) => (
-  <Container theme={theme}>
+const Template: StoryFn<StatusDotProps> = ({ ...args }) => (
+  <Container>
     <Column>
       <Title>Controlled</Title>
       <Row>

@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { BADGE } from '#storybookConstants';
 
@@ -16,23 +16,23 @@ export default {
   component: SwitchComponent,
 } as Meta;
 
-const Container = styled.div<{ theme: Themes }>`
+const Container = styled.div`
   width: 200px;
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
   border-radius: 10%;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
-const Template: StoryFn<SwitchProps> = ({ checked: propsChecked, size, ...args }, { globals: { theme } }) => {
+const Template: StoryFn<SwitchProps> = ({ checked: propsChecked, size, ...args }) => {
   const [checked, setChecked] = useState(propsChecked || false);
   const [key, setKey] = useState(0);
   useEffect(() => setKey(x => x + 1), [size]);
   return (
-    <Container theme={theme}>
+    <Container>
       <SwitchComponent {...args} onChange={setChecked} size={size} checked={checked} key={key} />
     </Container>
   );

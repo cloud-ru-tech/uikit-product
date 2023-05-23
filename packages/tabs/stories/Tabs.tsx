@@ -2,8 +2,8 @@ import { styled } from '@linaria/react';
 import { useArgs } from '@storybook/client-api';
 import { Meta, StoryFn } from '@storybook/react';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { Divider } from '@sbercloud/uikit-product-divider';
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 import { BADGE } from '#storybookConstants';
 
@@ -17,16 +17,16 @@ export default {
   component: Tabs.Container,
 } as Meta;
 
-const Container = styled.div<{ theme: Themes }>`
+const Container = styled.div`
   margin-top: 16px;
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
   border-radius: 8px;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  background-color: var(${themeVars.sys.neutral.background2Level});
   padding: 12px;
 
   &:not(:last-child) {
@@ -34,10 +34,7 @@ const Container = styled.div<{ theme: Themes }>`
   }
 `;
 
-const Template: StoryFn<Tabs.ContainerProps & { 'data-test-id'?: string; className?: string }> = (
-  { ...args },
-  { globals: { theme } },
-) => {
+const Template: StoryFn<Tabs.ContainerProps & { 'data-test-id'?: string; className?: string }> = ({ ...args }) => {
   const [{ value }, updateArgs] = useArgs();
   const handleClick = (tab: string) => updateArgs({ value: tab });
 
@@ -66,7 +63,7 @@ const Template: StoryFn<Tabs.ContainerProps & { 'data-test-id'?: string; classNa
         <Tabs.NavigationItem value={'id20'} label={'Twenty'} />
       </Tabs.Navigation>
       <Divider />
-      <Container theme={theme}>
+      <Container>
         <Tabs.Content value={'id1'}>FIRST</Tabs.Content>
         <Tabs.Content value={'id2'}>SECOND</Tabs.Content>
         <Tabs.Content value={'id3'}>THIRD</Tabs.Content>

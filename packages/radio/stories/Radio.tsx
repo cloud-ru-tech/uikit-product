@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { Radio, RadioGroup, RadioProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
@@ -12,20 +12,20 @@ export default {
   component: Radio,
 } as Meta;
 
-const Container = styled.div<{ theme: Themes }>`
+const Container = styled.div`
   width: 200px;
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
   border-radius: 10%;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  background-color: var(${themeVars.sys.neutral.background2Level});
   padding: 12px;
 `;
 
-const Template: StoryFn<RadioProps> = ({ ...args }, { globals: { theme } }) => (
-  <Container theme={theme}>
+const Template: StoryFn<RadioProps> = ({ ...args }) => (
+  <Container>
     <RadioGroup value={'story1'} onChange={() => {}}>
       <Radio {...args} />
     </RadioGroup>

@@ -3,6 +3,7 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 import React, { useState } from 'react';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { Button } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
 import { InputCommon } from '@sbercloud/uikit-product-input';
@@ -36,7 +37,7 @@ const Wrap = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin: -1rem;
-  background-color: #fff;
+  background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
 const DrawerWrap = styled.div`

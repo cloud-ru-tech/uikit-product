@@ -3,7 +3,7 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { Radio, RadioGroup, RadioGroupProps, RadioProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
@@ -13,16 +13,16 @@ export default {
   component: RadioGroup,
 } as Meta;
 
-const Container = styled.div<{ theme: Themes }>`
+const Container = styled.div`
   width: 200px;
   min-height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
   border-radius: 10%;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#333333')};
+  background-color: var(${themeVars.sys.neutral.background2Level});
   padding: 12px;
 
   &:not(:last-child) {
@@ -52,12 +52,12 @@ const radios = [
   },
 ];
 
-const Template: StoryFn<RadioProps & RadioGroupProps> = ({ ...args }, { globals: { theme } }) => {
+const Template: StoryFn<RadioProps & RadioGroupProps> = ({ ...args }) => {
   const [value, setValue] = useState<React.ReactText>('Story1');
 
   return (
     <>
-      <Container theme={theme}>
+      <Container>
         <RadioGroup {...args} value={value} onChange={setValue}>
           {radios.map(({ value, label, disabled }) => (
             <Radio {...args} key={value} value={value} label={label} disabled={disabled} className={Item} />

@@ -1,6 +1,7 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { H2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { BADGE } from '#storybookConstants';
@@ -50,7 +51,7 @@ const Caption = styled.span`
   text-overflow: ellipsis;
   display: flex;
   align-items: center;
-  background: var(${EXPORT_VARS.PURPLE[10]});
+  background: var(${themeVars.sys.primary.background2Level});
 `;
 
 const Title = styled.div<{ background: string; color: string }>`

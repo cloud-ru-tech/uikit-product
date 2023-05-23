@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { UserInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
 import { StatusBadge, StatusBadgeProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
@@ -12,19 +12,19 @@ export default {
   component: StatusBadge,
 } as Meta;
 
-const Container = styled.div<{ theme: Themes }>`
+const Container = styled.div`
   width: 200px;
   height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${EXPORT_VARS.GREY[100]});
+  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
   border-radius: 10%;
-  background-color: ${({ theme }) => (['purple', 'green'].includes(theme) ? '#ffffff' : '#404040')};
+  background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
-const Template: StoryFn<StatusBadgeProps> = ({ ...args }, { globals: { theme } }) => (
-  <Container theme={theme}>
+const Template: StoryFn<StatusBadgeProps> = ({ ...args }) => (
+  <Container>
     <StatusBadge {...args} icon={<UserInterfaceSVG />} />
   </Container>
 );
