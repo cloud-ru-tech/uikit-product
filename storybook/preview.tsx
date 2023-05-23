@@ -1,4 +1,5 @@
 import { StoryFn } from '@storybook/react';
+import { themes, ThemeVars } from '@storybook/theming';
 import { DecoratorFunction, GlobalTypes, Parameters } from '@storybook/types';
 import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
@@ -63,6 +64,14 @@ const decorators: DecoratorFunction[] = [
   },
 ];
 
+const brandInfo: ThemeVars = {
+  base: 'light',
+  brandTitle: 'Cloud.ru',
+  brandUrl: '/',
+  brandImage: './packages/icons/svgs/color/platform/CloudFullLogo.svg',
+  brandTarget: '_self',
+};
+
 const parameters: Parameters = {
   controls: { expanded: true },
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -80,6 +89,12 @@ const parameters: Parameters = {
       },
       title: BADGE.PRIVATE,
     },
+  },
+  darkMode: {
+    // Override the default dark theme
+    dark: { ...themes.dark, ...brandInfo, base: 'dark' },
+    // Override the default light theme
+    light: { ...themes.normal, ...brandInfo, base: 'light' },
   },
 };
 

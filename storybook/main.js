@@ -50,7 +50,10 @@ const mainConfig = {
     '@sbercloud/ft-storybook-brand-addon',
     'storybook-dark-mode',
   ],
-  staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
+  staticDirs: [
+    { from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' },
+    { from: '../packages/icons/svgs/color/platform', to: '/packages/icons/svgs/color/platform' },
+  ],
   framework: {
     name: '@storybook/react-webpack5',
     options: {
