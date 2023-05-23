@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.20.23 (2023-05-23)
+
+
+### Bug Fixes
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** no data is blinking on first render ([88944d8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/88944d8294308f831dfd9b6fa978c2fb4d5cc7d8))
+
+
+
+
+
 ## 0.20.22 (2023-05-12)
 
 ### Only dependencies have been changed
