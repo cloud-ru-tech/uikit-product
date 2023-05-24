@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import JoyRide, { CallBackProps, STATUS, TooltipRenderProps } from 'react-joyride';
 
 import { Hint } from '../Hint';
@@ -23,7 +24,7 @@ const customArrowSize = {
 export type WelcomeTourProps = {
   tourSteps: StepWithSubtitle[];
   tourStarted: boolean;
-  setTourStarted(value: boolean): void;
+  setTourStarted(value: boolean, status: CallBackProps['status']): void;
   closeButtonProps: {
     text: string;
     onClick?(): void;
@@ -36,67 +37,83 @@ export type WelcomeTourProps = {
     text: string;
     onClick?(): void;
   };
+  customScrollOffset?: number;
 };
 
-export function WelcomeTour({
-  tourSteps,
-  tourStarted,
-  setTourStarted,
-  closeButtonProps,
-  primaryButtonProps,
-  backButtonProps,
-}: WelcomeTourProps) {
-  const stepsWithoutBeacon = tourSteps.map(step => ({ ...step, disableBeacon: true }));
-  const checkTourFinish = ({ status }: CallBackProps) => {
-    if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
-      setTourStarted(false);
-    }
-  };
-
-  const renderTooltipComponent = (props: TooltipRenderProps) => (
-    <Hint
-      backButton={
-        backButtonProps
-          ? {
-              ...props.backProps,
-              text: backButtonProps.text,
-              onClick: e => {
-                backButtonProps.onClick?.();
-                props.backProps.onClick(e);
-              },
-            }
-          : undefined
+const WelcomeTourWithRef = forwardRef<JoyRide, WelcomeTourProps>(
+  (
+    {
+      tourSteps,
+      tourStarted,
+      setTourStarted,
+      closeButtonProps,
+      primaryButtonProps,
+      backButtonProps,
+      customScrollOffset,
+    },
+    ref,
+  ) => {
+    const stepsWithoutBeacon = tourSteps.map(step => ({ ...step, disableBeacon: true }));
+    const checkTourFinish = ({ status }: CallBackProps) => {
+      if (status === STATUS.FINISHED || status === STATUS.SKIPPED) {
+        setTourStarted(false, status);
       }
-      closeButton={{
-        ...props.closeProps,
-        text: closeButtonProps.text,
-        onClick: e => {
-          closeButtonProps.onClick?.();
-          props.closeProps.onClick(e);
-        },
-      }}
-      primaryButton={{
-        ...props.primaryProps,
-        text: primaryButtonProps.text,
-        onClick: e => {
-          primaryButtonProps.onClick?.();
-          props.primaryProps.onClick(e);
-        },
-      }}
-      {...props}
-    />
-  );
+    };
 
-  return (
-    <JoyRide
-      tooltipComponent={renderTooltipComponent}
-      steps={stepsWithoutBeacon}
-      styles={customColors}
-      run={tourStarted}
-      callback={checkTourFinish}
-      floaterProps={customArrowSize}
-      disableOverlayClose
-      disableScrollParentFix={true}
-    />
-  );
-}
+    const renderTooltipComponent = (props: TooltipRenderProps) => (
+      <Hint
+        backButton={
+          backButtonProps
+            ? {
+                ...props.backProps,
+                text: backButtonProps.text,
+                onClick: e => {
+                  backButtonProps.onClick?.();
+                  props.backProps.onClick(e);
+                },
+              }
+            : undefined
+        }
+        closeButton={{
+          ...props.closeProps,
+          text: closeButtonProps.text,
+          onClick: e => {
+            closeButtonProps.onClick?.();
+            props.closeProps.onClick(e);
+          },
+        }}
+        primaryButton={{
+          ...props.primaryProps,
+          text: primaryButtonProps.text,
+          onClick: e => {
+            primaryButtonProps.onClick?.();
+            props.primaryProps.onClick(e);
+          },
+        }}
+        {...props}
+      />
+    );
+
+    return (
+      <JoyRide
+        tooltipComponent={renderTooltipComponent}
+        steps={stepsWithoutBeacon}
+        continuous
+        styles={customColors}
+        run={tourStarted}
+        callback={checkTourFinish}
+        floaterProps={customArrowSize}
+        disableOverlayClose
+        scrollOffset={customScrollOffset}
+        disableScrollParentFix
+        ref={ref}
+      />
+    );
+  },
+);
+
+export const WelcomeTour = WelcomeTourWithRef as typeof WelcomeTourWithRef & {
+  statuses: typeof STATUS;
+};
+
+WelcomeTour.statuses = STATUS;
