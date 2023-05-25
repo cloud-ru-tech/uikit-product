@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.16 (2023-05-25)
+
+
+### Bug Fixes
+
+* **[FF-2375](https://jira.sbercloud.tech/browse/FF-2375):** add correct background for filter block in dark theme ([1e84b59](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1e84b59ef7fc01d7af8408a07440adcd65e6a0ad))
+
+
+
+
+
 ## 0.4.15 (2023-05-12)
 
 ### Only dependencies have been changed
