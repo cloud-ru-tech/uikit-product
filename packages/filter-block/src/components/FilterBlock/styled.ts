@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { Button } from '@sbercloud/uikit-product-button';
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
 
 export const FilterWrap = styled.div`
@@ -12,7 +12,7 @@ export const FilterWrap = styled.div`
   width: 240px;
   border-radius: 8px;
   padding: 16px;
-  background-color: var(${EXPORT_VARS.GREY[0]});
+  background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
 export const FiltersBlock = styled.div``;
