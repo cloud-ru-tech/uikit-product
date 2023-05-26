@@ -12,13 +12,19 @@ import { useIsMounted } from '../../hooks';
 import { ButtonIconTransparent } from '../';
 import { StyledCheckInterfaceSVG } from './styled';
 
+type CopyButtonTooltip = {
+  tooltip?: WithTooltipProps['tooltip'] & {
+    show?: boolean;
+  };
+};
+
 export type CopyButtonOwnProps = {
   text: string;
   icon?: never;
   onClickBeforeCopy?: (
     event: ReactMouseEvent<HTMLButtonElement, MouseEvent>,
   ) => Promise<{ preventCopy?: boolean; textToCopy?: string } | void>;
-} & Pick<WithTooltipProps, 'tooltip'>;
+} & CopyButtonTooltip;
 
 export const CopyButtonDefaultElement = ButtonIconTransparent;
 
@@ -97,7 +103,9 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
         </>
       }
       onClick={wrappedOnClick}
-      tooltip={{ content: tooltip?.content ?? textProvider(languageCode, Texts.Copy) }}
+      tooltip={
+        Boolean(tooltip?.show ?? true) && { content: tooltip?.content ?? textProvider(languageCode, Texts.Copy) }
+      }
       {...extractedProps}
     />
   );
