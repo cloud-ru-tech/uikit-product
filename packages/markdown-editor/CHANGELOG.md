@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2023-05-29)
+
+
+### Features
+
+* **[FF-2375](https://jira.sbercloud.tech/browse/FF-2375):** add brand and dark mode addons ([d645879](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d645879a15bff7dffa38f58e14a80c7460bf4bc7))
+
+
+
+
+
 ## 0.2.32 (2023-05-12)
 
 ### Only dependencies have been changed
@@ -148,7 +159,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.2.19 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-markdown-editor
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-textarea-private@2.5.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/textarea-private/CHANGELOG.md)
 
 ## 0.2.18 (2023-01-25)
 

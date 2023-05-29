@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.3.0 (2023-05-29)
+
+
+### Features
+
+* **[AICE-9754](https://jira.sbercloud.tech/browse/AICE-9754):** add show tooltip prop ([4990b3d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4990b3dbca7c07df4f84b5707df1c44253a0a098))
+
+
+
+
+
 ## 5.2.16 (2023-05-12)
 
 ### Only dependencies have been changed

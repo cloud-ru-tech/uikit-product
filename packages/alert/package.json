@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-alert",
   "title": "Alert",
-  "version": "1.0.45",
+  "version": "1.0.46",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -25,7 +25,7 @@
   ],
   "license": "UNLICENSED",
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.2.16",
+    "@sbercloud/uikit-product-button": "5.3.0",
     "@sbercloud/uikit-product-icons": "5.13.0",
     "@sbercloud/uikit-product-link": "3.1.13",
     "@sbercloud/uikit-product-predefined-icons-private": "1.1.14",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2023-05-29)
+
+
+### Features
+
+* **[FF-2375](https://jira.sbercloud.tech/browse/FF-2375):** add brand and dark mode addons ([d645879](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d645879a15bff7dffa38f58e14a80c7460bf4bc7))
+
+
+
+
+
 ## 1.3.15 (2023-05-12)
 
 ### Only dependencies have been changed
@@ -205,7 +216,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.3.1 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-cards
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-tag@2.0.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tag/CHANGELOG.md)
 
 # 1.3.0 (2023-01-26)
 
