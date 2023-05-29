@@ -11,7 +11,6 @@ import {
   GridSizeChangedEvent,
 } from '@ag-grid-community/core';
 import { AgGridReact } from '@ag-grid-community/react';
-import { RangeSelectionModule } from '@ag-grid-enterprise/range-selection';
 import { cx } from '@linaria/core';
 import debounce from 'lodash.debounce';
 import { useEffect, useState } from 'react';
@@ -28,7 +27,7 @@ import { NoDataReasons, NoRows } from '../overlays';
 import * as S from './styled';
 import { SelectionMode, TablePrivateProps } from './types';
 
-const AgGridModules = [ClientSideRowModelModule, RangeSelectionModule];
+const AgGridModules = [ClientSideRowModelModule];
 
 function StylelessTablePrivate({
   rowData = [],

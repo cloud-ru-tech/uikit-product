@@ -3,6 +3,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import { AgGridTypes, SelectionMode, TablePrivateProps } from '@sbercloud/uikit-product-table-private';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
+import { exportDataAsExcel } from '../../helpers/exportDataAsExcel';
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import { ClientModelTableView } from './ClientModelTableView';
 import { ExportActions } from './constants';
@@ -251,7 +252,8 @@ export function ClientModelTableController<T extends object>({
         onClick: () => {
           exportProps.onExport?.(ExportActions.Xls);
 
-          gridApi.exportDataAsExcel({
+          exportDataAsExcel({
+            gridApi,
             fileName: exportProps.fileName,
             columnKeys,
           });

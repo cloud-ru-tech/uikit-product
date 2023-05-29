@@ -1,5 +1,4 @@
 import { CsvExportModule } from '@ag-grid-community/csv-export';
-import { ExcelExportModule } from '@ag-grid-enterprise/excel-export';
 
 import { DeleteInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Modal } from '@sbercloud/uikit-product-modal';
@@ -12,7 +11,7 @@ import { textProvider, Texts } from '../../helpers/texts-provider';
 import * as S from './styled';
 import { DeleteProps, FilterProps, PaginationProps } from './types';
 
-const additionModules = [CsvExportModule, ExcelExportModule];
+const additionModules = [CsvExportModule];
 
 type ClientModelTableViewProps<T> = {
   fieldId: string;

@@ -15,10 +15,12 @@ import { ClientModelTable as CMTable, ClientModelTableProps } from '../src';
 import { sizeFormatter } from './helpers/sizeFormatter';
 import { StatusCell } from './helpers/StatusCellRenderer';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Table/Client Model Table',
   component: CMTable,
-} as Meta;
+};
+
+export default meta;
 
 type DataModel = {
   name: string;
@@ -65,15 +67,15 @@ function generateRows(count: number): DataModel[] {
   return res;
 }
 
-const Template: StoryFn<
-  ClientModelTableProps<DataModel> & {
-    rowsAmount: number;
-    pinnedRowsAmount: number;
-    showDelete: boolean;
-    showFilter: boolean;
-    showExport: boolean;
-  }
-> = ({ rowsAmount, pinnedRowsAmount, showDelete, showFilter, showExport, ...args }) => {
+type StoryProps = ClientModelTableProps<DataModel> & {
+  rowsAmount: number;
+  pinnedRowsAmount: number;
+  showDelete: boolean;
+  showFilter: boolean;
+  showExport: boolean;
+};
+
+const Template = ({ rowsAmount, pinnedRowsAmount, showDelete, showFilter, showExport, ...args }: StoryProps) => {
   const [key, setKey] = useState(0);
   useEffect(() => setKey(x => x + 1), [args.selectionMode]);
   const [data, setData] = useState<DataModel[]>([]);
@@ -167,7 +169,7 @@ const ButtonGroup = styled.div`
   }
 `;
 
-export const clientModelTable = Template.bind({});
+export const clientModelTable: StoryFn<StoryProps> = Template.bind({});
 clientModelTable.args = {
   fieldId: 'name',
   columnDefinitions: [

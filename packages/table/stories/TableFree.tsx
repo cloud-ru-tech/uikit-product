@@ -25,12 +25,14 @@ const Container = styled.div`
   background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
 `;
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Table/Free',
   component: TableFree,
-} as Meta;
+};
 
-const Template: StoryFn<ITableFreeProps> = ({ rowData = [], ...args }) => {
+export default meta;
+
+const Template = ({ rowData = [], ...args }: ITableFreeProps) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   const searchedData = searchValue
@@ -56,7 +58,7 @@ const Template: StoryFn<ITableFreeProps> = ({ rowData = [], ...args }) => {
   );
 };
 
-export const free = Template.bind({});
+export const free: StoryFn<ITableFreeProps> = Template.bind({});
 free.args = {
   checkboxSelection: true,
   pageSize: undefined,

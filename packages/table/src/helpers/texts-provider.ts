@@ -16,14 +16,14 @@ const Dictionary: Record<EnabledLanguages, Record<Texts, string>> = {
     [Texts.Delete]: 'Удалить',
     [Texts.Export]: 'Экспорт',
     [Texts.ExportCSV]: 'Экспорт таблицы в .csv',
-    [Texts.ExportExcel]: 'Экспорт таблицы в .xls',
+    [Texts.ExportExcel]: 'Экспорт таблицы в .xlsx',
   },
   [LanguageCodeType.enGB]: {
     [Texts.SearchPlaceholder]: 'Search',
     [Texts.Delete]: 'Delete',
     [Texts.Export]: 'Export',
     [Texts.ExportCSV]: 'Exporting a table to .csv',
-    [Texts.ExportExcel]: 'Exporting a table to .xls',
+    [Texts.ExportExcel]: 'Exporting a table to .xlsx',
   },
 };
 
