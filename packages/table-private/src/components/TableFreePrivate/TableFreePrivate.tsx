@@ -1,5 +1,5 @@
-import '@ag-grid-community/core/dist/styles/ag-grid.min.css';
-import '@ag-grid-community/core/dist/styles/ag-theme-alpine.min.css';
+import '@ag-grid-community/styles/ag-grid.min.css';
+import '@ag-grid-community/styles/ag-theme-alpine.min.css';
 
 import { ClientSideRowModelModule } from '@ag-grid-community/client-side-row-model';
 import { GridReadyEvent, GridSizeChangedEvent } from '@ag-grid-community/core';
