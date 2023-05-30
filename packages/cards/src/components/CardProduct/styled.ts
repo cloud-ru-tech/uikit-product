@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
@@ -13,7 +14,7 @@ GREEN_DARK_THEME;
 
 const { GREY } = EXPORT_VARS;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ onClick?: () => void }>`
   display: flex;
   flex-direction: column;
   position: relative;
@@ -26,10 +27,18 @@ export const Wrapper = styled.div`
   transition: ${ANIMATIONS.TRANSITION};
   transition-property: background-color, box-shadow;
 
+  &[data-clickable] {
+    cursor: pointer;
+  }
+
   &:hover {
     background-color: var(${COLORS.background.hover});
     box-shadow: var(${COLORS.background.shadow});
   }
+`;
+
+export const cursorPointerClassName = css`
+  cursor: pointer;
 `;
 
 export const Heading = styled.div`

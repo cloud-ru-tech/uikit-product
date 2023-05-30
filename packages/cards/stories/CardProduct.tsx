@@ -60,6 +60,7 @@ product.args = {
     text: 'Active',
     type: CardProduct.statusTypes.Success,
   },
+  onClick: () => {},
 } as CardProductProps;
 
 product.argTypes = {

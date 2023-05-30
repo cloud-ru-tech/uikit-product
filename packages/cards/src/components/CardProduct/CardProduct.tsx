@@ -20,6 +20,7 @@ export type CardProductProps = WithSupportProps<{
   description: string;
   className?: string;
   actions?: ReactNode;
+  onClick?(): void;
   tag?:
     | {
         view: CardTag.Status;
@@ -33,9 +34,14 @@ export type CardProductProps = WithSupportProps<{
       };
 }>;
 
-export function CardProduct({ className, icon, title, description, tag, actions, ...rest }: CardProductProps) {
+export function CardProduct({ className, icon, title, description, tag, actions, onClick, ...rest }: CardProductProps) {
   return (
-    <S.Wrapper className={className} {...extractSupportProps(rest)}>
+    <S.Wrapper
+      className={className}
+      onClick={onClick}
+      data-clickable={Boolean(onClick) || undefined}
+      {...extractSupportProps(rest)}
+    >
       <S.Heading>
         <S.Icon>{icon}</S.Icon>
 
@@ -49,6 +55,7 @@ export function CardProduct({ className, icon, title, description, tag, actions,
         data-test-id='card-product__title'
         textEntity={TruncateString.textEntities.H3}
         maxLines={2}
+        textClassName={Boolean(onClick) ? S.cursorPointerClassName : undefined}
       />
 
       <S.Description
@@ -56,6 +63,7 @@ export function CardProduct({ className, icon, title, description, tag, actions,
         text={description}
         textEntity={TruncateString.textEntities.Text2}
         maxLines={4}
+        textClassName={Boolean(onClick) ? S.cursorPointerClassName : undefined}
       />
 
       {actions && <S.Actions>{actions}</S.Actions>}
