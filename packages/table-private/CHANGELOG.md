@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.21.0 (2023-05-30)
+
+
+### Bug Fixes
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** update ag-grid to v29 ([5d67971](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5d6797149f1efb530389586e9507842d26a3a1c0))
+
+
+### BREAKING CHANGES
+
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** remove paid modules of ag-grid: range-selection removed, excel-export replaced with custom code ([01df6e8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/01df6e8f8ba869e287040d243ce4d3205ee9debf))
+
+
+
+
 ## 0.20.23 (2023-05-23)
 
 

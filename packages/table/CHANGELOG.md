@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.49.0 (2023-05-30)
+
+
+### Bug Fixes
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** update ag-grid to v29 ([5d67971](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5d6797149f1efb530389586e9507842d26a3a1c0))
+
+
+### BREAKING CHANGES
+
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** remove paid modules of ag-grid: range-selection removed, excel-export replaced with custom code ([01df6e8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/01df6e8f8ba869e287040d243ce4d3205ee9debf))
+
+
+
+
 ## 0.48.42 (2023-05-29)
 
 ### Only dependencies have been changed
@@ -274,7 +290,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.48.18 (2023-01-30)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-table
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-modal@1.3.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal/CHANGELOG.md)
+* [@sbercloud/uikit-product-table-private@0.21.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/table-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-toolbar@0.16.101](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/toolbar/CHANGELOG.md)
 
 ## 0.48.17 (2023-01-26)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.5.0 (2023-05-30)
+
+
+### Features
+
+* **[LK-1607](https://jira.sbercloud.tech/browse/LK-1607):** add optional onClick prop on CardProduct ([dbc0d39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dbc0d39a7ab50a51c1bf1c3236a27c44737e1554))
+
+
+
+
+
 # 1.4.0 (2023-05-29)
 
 
@@ -228,7 +239,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.2.2 (2023-01-25)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-cards
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-truncate-string@0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 ## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.2.0...@sbercloud/uikit-product-cards@1.2.1) (2023-01-12)
 

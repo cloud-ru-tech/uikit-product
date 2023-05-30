@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2023-05-30)
+
+
+### Features
+
+* **[LK-1607](https://jira.sbercloud.tech/browse/LK-1607):** add textClassName to add cursor pointer if necessary ([c0786c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c0786c95b215830391d2d74daab1e69a2c7a3728))
+
+
+
+
+
 ## 0.6.16 (2023-05-12)
 
 ### Only dependencies have been changed
