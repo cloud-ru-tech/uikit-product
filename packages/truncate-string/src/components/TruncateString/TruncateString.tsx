@@ -14,7 +14,7 @@ import { Variant } from './constants';
 import * as Typography from './styled';
 import { getTag } from './utils';
 
-export type TruncateStringProps = { textEntity?: TextEntity } & (
+export type TruncateStringProps = { textEntity?: TextEntity; textClassName?: string } & (
   | ({ variant?: Variant.End } & Omit<TruncateStringEndProps, 'tag' | 'textClassName'>)
   | ({ variant: Variant.Middle } & Omit<TruncateStringMiddleProps, 'tag' | 'textClassName'>)
 );
@@ -22,10 +22,11 @@ export type TruncateStringProps = { textEntity?: TextEntity } & (
 export function TruncateString({
   variant = Variant.End,
   textEntity = TextEntity.Text2,
+  textClassName,
   ...props
 }: TruncateStringProps) {
   const tag = getTag(textEntity);
-  const textClassName = Typography[textEntity];
+  const textClassNameInner = Typography[textEntity];
 
   switch (variant) {
     case Variant.Middle: {
@@ -36,7 +37,7 @@ export function TruncateString({
           className={className}
           placement={placement}
           tag={tag}
-          textClassName={cx(textClassName, Typography.textClassName)}
+          textClassName={cx(textClassNameInner, Typography.textClassName, textClassName)}
           hideTooltip={hideTooltip}
           {...extractDataProps(rest)}
         />
@@ -59,7 +60,7 @@ export function TruncateString({
           className={className}
           placement={placement}
           tag={tag}
-          textClassName={cx(textClassName, Typography.textClassName)}
+          textClassName={cx(textClassNameInner, Typography.textClassName, textClassName)}
           maxLines={maxLines}
           hideTooltip={hideTooltip}
           {...extractDataProps(rest)}
