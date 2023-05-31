@@ -82,8 +82,8 @@ export const PURPLE_DARK_THEME = css`
 export const GREEN_THEME = css`
   :global() {
     body[data-theme='${Themes.Green}'] {
-      ${COLORS.custom.fill}: var(${EXPORT_VARS.GREEN[100]});
-      ${COLORS.custom.background}: var(${EXPORT_VARS.GREEN_ALFA[8]});
+      ${COLORS.custom.fill}: var(${EXPORT_VARS.BLACK_ALFA[24]});
+      ${COLORS.custom.background}: var(${EXPORT_VARS.BLACK_ALFA[4]});
 
       ${COLORS.predefined.background.info}: var(${EXPORT_VARS.BLACK_ALFA[8]});
       ${COLORS.predefined.background.success}: var(${EXPORT_VARS.EMERALD_GREEN_ALPHA[15]});
@@ -107,8 +107,8 @@ export const GREEN_THEME = css`
 export const GREEN_DARK_THEME = css`
   :global() {
     body[data-theme='${Themes.GreenDark}'] {
-      ${COLORS.custom.fill}: var(${EXPORT_VARS.GREEN[50]});
-      ${COLORS.custom.background}: var(${EXPORT_VARS.GREEN_ALFA[24]});
+      ${COLORS.custom.fill}: var(${EXPORT_VARS.WHITE_ALFA[48]});
+      ${COLORS.custom.background}: var(${EXPORT_VARS.WHITE_ALFA[8]});
 
       ${COLORS.predefined.background.info}: var(${EXPORT_VARS.WHITE_ALFA[8]});
       ${COLORS.predefined.background.success}: var(${EXPORT_VARS.EMERALD_GREEN_ALPHA[15]});
