@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2023-05-31)
+
+
+### BREAKING CHANGES
+
+
+* **[SVP-5312](https://jira.sbercloud.tech/browse/SVP-5312):** card product redesign, tag property removed, label and onClick properties added ([5356b53](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5356b535fdb3f60db1e5f0ef019ca0abf91fada1))
+
+
+
+
 # 1.5.0 (2023-05-30)
 
 
@@ -244,7 +255,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.2.0...@sbercloud/uikit-product-cards@1.2.1) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-cards
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.1.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
 
 # [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.1.11...@sbercloud/uikit-product-cards@1.2.0) (2022-12-16)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.15 (2023-05-31)
+
+
+### Bug Fixes
+
+* **[FF-2503](https://jira.sbercloud.tech/browse/FF-2503):** fix custom color in green theme ([0ef43ff](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0ef43ffb25407d7cccd601c7ae06712b2b324bd2))
+
+
+
+
+
 ## 1.1.14 (2023-05-12)
 
 ### Only dependencies have been changed

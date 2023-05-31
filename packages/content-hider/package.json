@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-content-hider",
   "title": "React Content Hider",
-  "version": "0.8.108",
+  "version": "0.8.109",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.3.0",
+    "@sbercloud/uikit-product-button": "5.3.1",
     "@sbercloud/uikit-product-theme": "0.36.0",
     "@sbercloud/uikit-product-utils": "3.2.3"
   }
