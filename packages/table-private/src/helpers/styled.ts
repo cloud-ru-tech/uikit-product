@@ -30,6 +30,7 @@ export const styledTable = <P extends TableProps>(Table: VFC<P>) => styled(Table
     .ag-root-wrapper {
       border: none;
       background-color: inherit;
+      z-index: 0;
     }
     .ag {
       &-row {
