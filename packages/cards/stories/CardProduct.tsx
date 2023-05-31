@@ -1,8 +1,9 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
-import { Button } from '@sbercloud/uikit-product-button';
+import { ButtonGhost } from '@sbercloud/uikit-product-button';
 import {
+  ArrowBoldRightInterfaceSVG,
   DataCatalogServiceSVG,
   DatasetDisplaySVG,
   DockerRegistryDisplaySVG,
@@ -17,10 +18,15 @@ import componentReadme from '../README.md';
 import { CardProduct, CardProductProps } from '../src';
 
 const ICONS = {
-  docker: <DockerRegistryDisplaySVG size={48} />,
-  dataset: <DatasetDisplaySVG size={48} />,
-  rocket: <RocketInterfaceSVG size={48} />,
+  docker: <DockerRegistryDisplaySVG />,
+  dataset: <DatasetDisplaySVG />,
+  rocket: <RocketInterfaceSVG />,
 };
+const ON_CLICK = {
+  onClick: () => {},
+  undefined: undefined,
+};
+
 export default {
   title: 'Components/Cards/Card/Product',
   component: CardProduct,
@@ -28,7 +34,7 @@ export default {
 
 const Wrapper = styled.div`
   display: flex;
-  min-width: 273px;
+  min-width: 246px;
   width: 400px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -49,18 +55,24 @@ const Template: StoryFn<CardProductProps> = ({ ...args }) => (
 export const product = Template.bind({});
 
 product.args = {
-  icon: <DataCatalogServiceSVG size={48} />,
+  icon: <DataCatalogServiceSVG size={24} />,
   title:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  actions: <Button text='Перейти' variant={Button.variants.Outline} />,
-  tag: {
-    view: CardProduct.tag.Status,
+  actions: (
+    <ButtonGhost
+      text='Перейти'
+      icon={<ArrowBoldRightInterfaceSVG />}
+      variant={ButtonGhost.variants.Primary}
+      size={ButtonGhost.sizes.Small}
+    />
+  ),
+  label: {
     text: 'Active',
-    type: CardProduct.statusTypes.Success,
+    variant: CardProduct.labelVariants.Green,
   },
-  onClick: () => {},
+  onClick: undefined,
 } as CardProductProps;
 
 product.argTypes = {
@@ -68,6 +80,14 @@ product.argTypes = {
     name: '[Stories]: Show icon examples',
     options: Object.keys(ICONS),
     mapping: ICONS,
+    control: {
+      type: 'radio',
+    },
+  },
+  onClick: {
+    name: 'onClick',
+    options: Object.keys(ON_CLICK),
+    mapping: ON_CLICK,
     control: {
       type: 'radio',
     },

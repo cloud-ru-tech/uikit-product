@@ -1,18 +1,10 @@
 import { ReactNode } from 'react';
 
-import { StatusTag } from '@sbercloud/uikit-product-status';
-import { Tag } from '@sbercloud/uikit-product-tag';
+import { Label, LabelProps } from '@sbercloud/uikit-product-label';
 import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
-import { Types } from './types/status';
-import { Colors } from './types/tag';
-
-enum CardTag {
-  Status = 'tag-status',
-  Colored = 'tag-colored',
-}
 
 export type CardProductProps = WithSupportProps<{
   icon: JSX.Element;
@@ -21,20 +13,22 @@ export type CardProductProps = WithSupportProps<{
   className?: string;
   actions?: ReactNode;
   onClick?(): void;
-  tag?:
-    | {
-        view: CardTag.Status;
-        text: string;
-        type: Types;
-      }
-    | {
-        view: CardTag.Colored;
-        text: string;
-        color: Colors;
-      };
+  label?: {
+    text: string;
+    variant: LabelProps['variant'];
+  };
 }>;
 
-export function CardProduct({ className, icon, title, description, tag, actions, onClick, ...rest }: CardProductProps) {
+export function CardProduct({
+  className,
+  icon,
+  title,
+  description,
+  label,
+  actions,
+  onClick,
+  ...rest
+}: CardProductProps) {
   return (
     <S.Wrapper
       className={className}
@@ -45,32 +39,36 @@ export function CardProduct({ className, icon, title, description, tag, actions,
       <S.Heading>
         <S.Icon>{icon}</S.Icon>
 
-        {tag?.view === CardTag.Status && <StatusTag text={tag.text} type={tag.type} />}
-
-        {tag?.view === CardTag.Colored && <Tag value={tag.text} color={tag.color} />}
+        <TruncateString
+          text={title}
+          data-test-id='card-product__title'
+          textEntity={TruncateString.textEntities.Text2}
+          maxLines={2}
+          textClassName={Boolean(onClick) ? S.cursorPointerClassName : undefined}
+        />
       </S.Heading>
-
-      <S.Title
-        text={title}
-        data-test-id='card-product__title'
-        textEntity={TruncateString.textEntities.H3}
-        maxLines={2}
-        textClassName={Boolean(onClick) ? S.cursorPointerClassName : undefined}
-      />
 
       <S.Description
         data-test-id='card-product__description'
         text={description}
-        textEntity={TruncateString.textEntities.Text2}
-        maxLines={4}
+        textEntity={TruncateString.textEntities.Text3}
+        maxLines={3}
         textClassName={Boolean(onClick) ? S.cursorPointerClassName : undefined}
       />
 
-      {actions && <S.Actions>{actions}</S.Actions>}
+      <S.Footer>
+        {actions}
+
+        {label && (
+          <S.Label
+            text={label.text}
+            variant={label.variant}
+            className={Boolean(onClick) ? S.cursorPointerClassName : undefined}
+          />
+        )}
+      </S.Footer>
     </S.Wrapper>
   );
 }
 
-CardProduct.statusTypes = Types;
-CardProduct.tagColors = Colors;
-CardProduct.tag = CardTag;
+CardProduct.labelVariants = Label.variants;
