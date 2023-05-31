@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.21.2 (2023-05-31)
+
+
+### Bug Fixes
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** table header separators are placed above other items on page ([1e99fe1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1e99fe1db433ce27e43587145c0ff135239648a4))
+
+
+
+
+
 ## 0.21.1 (2023-05-31)
 
 ### Only dependencies have been changed
