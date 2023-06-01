@@ -2,6 +2,8 @@ import { css } from '@linaria/core';
 
 import { EXPORT_VARS, Themes } from '@sbercloud/uikit-product-theme';
 
+export const PADDING = 12;
+
 const { GREY, BLUE_GREY, PURPLE, GREEN, BLACK_ALFA, WHITE_ALFA } = EXPORT_VARS;
 
 export const COLORS = {
