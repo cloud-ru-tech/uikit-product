@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.14.0 (2023-06-01)
+
+
+### Features
+
+* **[ONB-451](https://jira.sbercloud.tech/browse/ONB-451):** new service icons ([0bda245](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0bda2454674918106041661a3138f6826dc3b254))
+
+
+
+
+
 # 5.13.0 (2023-04-24)
 
 
