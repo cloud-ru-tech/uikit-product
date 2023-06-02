@@ -17,7 +17,9 @@ export const accordion = Template.bind({});
 accordion.args = {
   header: 'Accordion Header',
   subheader: 'Accordion Subheader',
-  content: 'Custom Content',
+  content:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  tooltip: 'Tooltip text',
   variant: Accordion.variants.Primary,
   disabled: false,
 };
