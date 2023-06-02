@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-popover",
   "title": "Popover",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-theme": "0.36.0",
-    "@sbercloud/uikit-product-tooltip-private": "1.2.27",
-    "@sbercloud/uikit-product-utils": "3.2.3"
+    "@sbercloud/uikit-product-theme": "0.37.0",
+    "@sbercloud/uikit-product-tooltip-private": "1.2.28",
+    "@sbercloud/uikit-product-utils": "3.2.4"
   }
 }

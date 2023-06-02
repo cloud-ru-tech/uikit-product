@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.18.7 (2023-06-02)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-datepicker@0.14.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/datepicker/CHANGELOG.md)
+* [@sbercloud/uikit-product-divider@2.0.44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@sbercloud/uikit-product-input-private@3.0.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-select@0.28.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/select/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.37.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip-private@1.2.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 0.18.6 (2023-06-01)
 
 ### Only dependencies have been changed

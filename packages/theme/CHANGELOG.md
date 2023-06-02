@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.37.0 (2023-06-02)
+
+
+### Features
+
+* **[LK-1811](https://jira.sbercloud.tech/browse/LK-1811):** add autocomplete ([40ba960](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/40ba96051288f1935ccea63fd30923294fd7d77c))
+
+
+
+
+
 # 0.36.0 (2023-05-12)
 
 

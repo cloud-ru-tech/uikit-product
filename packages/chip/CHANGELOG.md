@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-06-02)
+
+
+### Features
+
+* **[FF-2375](https://jira.sbercloud.tech/browse/FF-2375):** add brand and dark mode addons ([d645879](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d645879a15bff7dffa38f58e14a80c7460bf4bc7))
+
+
+
+
+
 ## 2.0.32 (2023-05-12)
 
 ### Only dependencies have been changed
@@ -53,7 +64,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.0.27](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-chip@2.0.26...@sbercloud/uikit-product-chip@2.0.27) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-chip
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-theme@0.37.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [2.0.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-chip@2.0.25...@sbercloud/uikit-product-chip@2.0.26) (2022-11-28)
 

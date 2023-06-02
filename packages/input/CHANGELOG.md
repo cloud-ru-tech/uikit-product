@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2023-06-02)
+
+
+### Features
+
+* **[LK-1811](https://jira.sbercloud.tech/browse/LK-1811):** add autocomplete ([40ba960](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/40ba96051288f1935ccea63fd30923294fd7d77c))
+
+
+
+
+
 ## 3.1.17 (2023-06-01)
 
 ### Only dependencies have been changed
@@ -168,7 +179,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.1.1 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-input
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-input-decorator-private@3.0.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-decorator-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-input-private@3.0.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-scroll@1.4.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/scroll/CHANGELOG.md)
+* [@sbercloud/uikit-product-spinner@2.0.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/spinner/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.37.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 # 3.1.0 (2023-01-26)
 
