@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.16.104 (2023-06-02)
+
+
+### Bug Fixes
+
+* **[DPS-4246](https://jira.sbercloud.tech/browse/DPS-4246):** enlarge toolbar button icon ([d336a99](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d336a99f954c10ccf333c33a7be49d948b936393))
+
+
+
+
+
 ## 0.16.103 (2023-06-01)
 
 ### Only dependencies have been changed
