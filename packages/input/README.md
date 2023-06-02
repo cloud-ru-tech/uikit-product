@@ -120,3 +120,30 @@ type InputOverviewProps = WithSupportProps<{
   placeholder?: string;
 }>;
 ```
+
+### Autocomplete
+
+```ts
+type AutocompleteProps = WithSupportProps<{
+  onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  onSelect: (option: DropListProps['options'][0]) => void;
+  onBlur?: (event?: FocusEvent<HTMLInputElement>) => void;
+  onMoreButtonClick: () => void;
+  moreButtonTooltipText?: string;
+  value?: string;
+  label?: string;
+  labelTooltip?: InputDecoratorPrivateProps['labelTooltip'];
+  optional?: boolean;
+  disabled?: boolean;
+  hint?: string;
+  error?: string;
+  maxLength?: number;
+  className?: string;
+  name?: string;
+  size?: SimpleInputProps['size'];
+  placeholder?: string;
+  options: DropListProps['options'];
+  loading?: boolean;
+  isOptionsError?: boolean;
+}>;
+```

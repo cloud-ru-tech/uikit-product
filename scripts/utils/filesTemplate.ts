@@ -175,7 +175,7 @@ export const storyEntry = ({
   );
   const componentStoryName = componentName.replace(/[A-Z]/, x => x.toLowerCase());
   const componentStoryTitle = componentName.split(/(?=[A-Z])/).join(' ');
-  const fileContent = `import { Meta, Story } from '@storybook/react/types-6-0';
+  const fileContent = `import { Meta, StoryFn } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -187,7 +187,7 @@ export default {
   component: ${componentName},
 } as Meta;
 
-const Template: Story<${componentName}Props> = ({ ...args }) => <${componentName} {...args} />;
+const Template: StoryFn<${componentName}Props> = ({ ...args }) => <${componentName} {...args} />;
 
 export const ${componentStoryName} = Template.bind({});
 

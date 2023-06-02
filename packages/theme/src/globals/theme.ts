@@ -19,7 +19,7 @@ export const globalCSSTheme = `
     }
     body[data-theme='${Themes.PurpleDark}'] {
       ${GLOBAL_CSS_COLOR.TEXT}: var(${GREY[200]});
-      ${GLOBAL_CSS_COLOR.BACKGROUND}: var(${GREY[800]});
+      ${GLOBAL_CSS_COLOR.BACKGROUND}: var(${GREY[900]});
       ${GLOBAL_CSS_COLOR.BACKGROUND_ACCENT}: var(${PURPLE[100]});
       ${GLOBAL_CSS_COLOR.BACKGROUND_DARK}: var(${BLUE_GREY[80]});
       ${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY}: var(${GREY[800]});
@@ -33,7 +33,7 @@ export const globalCSSTheme = `
     }
     body[data-theme='${Themes.GreenDark}'] {
       ${GLOBAL_CSS_COLOR.TEXT}: var(${GREY[200]});
-      ${GLOBAL_CSS_COLOR.BACKGROUND}: var(${GREY[800]});
+      ${GLOBAL_CSS_COLOR.BACKGROUND}: var(${GREY[900]});
       ${GLOBAL_CSS_COLOR.BACKGROUND_ACCENT}: var(${GREEN[125]});
       ${GLOBAL_CSS_COLOR.BACKGROUND_DARK}: var(${BLUE_GREY[80]});
       ${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY}: var(${GREY[800]});
