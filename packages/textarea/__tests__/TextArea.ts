@@ -34,7 +34,7 @@ test.page(
     const counter = wrapper.find(dataTestIdSelector('input-wrapper__length-counter'));
 
     const height = await input.getStyleProperty('height');
-    await t.expect(height).eql('32px');
+    await t.expect(height).eql('31px');
 
     await t.expect(input.value).eql('').expect(counter.textContent).eql('0/3').expect(clearButton.visible).notOk();
 
@@ -67,15 +67,15 @@ test.page(
   const input = wrapper.find(dataTestIdSelector('textarea__input'));
 
   const height = await input.getStyleProperty('height');
-  await t.expect(height).eql('72px');
+  await t.expect(height).eql('71px');
 
   await t.typeText(input, [...Array(10).keys()].join('\n'));
 
   const tenRowsHeight = await input.getStyleProperty('height');
-  await t.expect(tenRowsHeight).eql('212px');
+  await t.expect(tenRowsHeight).eql('211px');
 
   await t.typeText(input, [...Array(5).keys()].join('\n'));
 
   const stillTenRowsHeight = await input.getStyleProperty('height');
-  await t.expect(stillTenRowsHeight).eql('212px');
+  await t.expect(stillTenRowsHeight).eql('211px');
 });

@@ -21,7 +21,7 @@ export const styledSimpleTextarea = (SimpleTextarea: VFC<SimpleTextareaProps>): 
   max-width: 100%;
   transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
   box-sizing: border-box;
-  padding: 0 12px 6px 12px;
+  padding: 0 11px 11px;
   border: 1px solid var(${COLORS.border.default});
   border-radius: 4px;
   background-color: var(${COLORS.background.default});
@@ -53,10 +53,10 @@ export const styledSimpleTextarea = (SimpleTextarea: VFC<SimpleTextareaProps>): 
 
 export const ClearButton = styled(ButtonIcon)`
   align-self: flex-start;
-  margin-top: 12px;
+  margin-top: 11px;
 `;
 
 export const StyledPrivateTextarea = styled(TextareaPrivate)`
-  padding-top: 12px;
+  padding-top: 11px;
   padding-right: 12px;
 `;
