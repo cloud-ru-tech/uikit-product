@@ -140,3 +140,44 @@ runCommonTests(
   testId,
   { isMasked: true },
 );
+
+test.page(
+  visit({
+    onChange: () => {},
+    mask: 'Date' as InputMaskProps['mask'],
+  }),
+)('Date: Should render correct mask, allow correct characters', async t => {
+  const wrapper = Selector(dataTestIdSelector(testId));
+  const input = wrapper.find(dataTestIdSelector('private-input'));
+  const clearButton = wrapper.find(dataTestIdSelector('input__clear-button'));
+
+  await t.expect(input.value).eql('');
+  await t.typeText(input, 'Test').expect(input.value).eql('ДД.MM.ГГГГ');
+  await t.typeText(input, '99').expect(input.value).eql('ДД.MM.ГГГГ');
+  await t.typeText(input, '40309999').expect(input.value).eql('03.09.ГГГГ');
+  await t.selectText(input).pressKey('delete');
+  await t.typeText(input, '12').expect(input.value).eql('12.MM.ГГГГ');
+  await t.selectText(input).pressKey('delete');
+  await t.typeText(input, '1213').expect(input.value).eql('12.1M.ГГГГ');
+  await t.selectText(input).pressKey('delete');
+  await t.typeText(input, '1212').expect(input.value).eql('12.12.ГГГГ');
+  await t.selectText(input).pressKey('delete');
+  await t.typeText(input, '12121212').expect(input.value).eql('12.12.1ГГГ');
+  await t.selectText(input).pressKey('delete');
+  await t.typeText(input, '12121899').expect(input.value).eql('12.12.199Г');
+  await t.selectText(input).pressKey('delete');
+  await t.typeText(input, '12122023').expect(input.value).eql('12.12.2023');
+
+  await t.click(clearButton).expect(input.value).eql('ДД.MM.ГГГГ');
+});
+
+runCommonTests(
+  props =>
+    visit({
+      ...props,
+      onChange: () => {},
+      mask: 'Date' as InputMaskProps['mask'],
+    }),
+  testId,
+  { isMasked: true },
+);

@@ -9,6 +9,7 @@ export enum Masks {
   ConfirmationCode = 'ConfirmationCode',
   IpV4Address = 'IpV4Address',
   IpV4AddressWithMask = 'IpV4AddressWithMask',
+  Date = 'Date',
 }
 
 export const MASKS_CONFIG: Record<Masks, InputMaskOptions> = {
@@ -41,6 +42,15 @@ export const MASKS_CONFIG: Record<Masks, InputMaskOptions> = {
         from: 0,
         to: 32,
       },
+    },
+  },
+  [Masks.Date]: {
+    mask: IMask.MaskedDate,
+    lazy: false,
+    blocks: {
+      d: { mask: IMask.MaskedRange, placeholderChar: 'Д', from: 1, to: 31, maxLength: 2 },
+      m: { mask: IMask.MaskedRange, placeholderChar: 'M', from: 1, to: 12, maxLength: 2 },
+      Y: { mask: IMask.MaskedRange, placeholderChar: 'Г', from: 1900, to: 2100, maxLength: 4 },
     },
   },
 };
