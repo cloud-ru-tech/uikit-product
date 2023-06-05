@@ -6,7 +6,7 @@
 ## Components interface
 ```typescript
 enum Types {
-  Info = 'info',
+  Info = 'infoGroups',
   Alert = 'alert',
 }
 

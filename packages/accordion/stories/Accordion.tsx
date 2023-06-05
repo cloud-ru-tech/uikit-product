@@ -33,7 +33,6 @@ accordion.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    //TODO: update to the correct one
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/file/cdtItYHTIEGB0wMZPAp729/%5BLIB%5D-Platform-DS-%E2%88%99-Sandbox?type=design&node-id=1326-174372&t=SWIlCe8vYWEpjbI3-0',
   },
 };

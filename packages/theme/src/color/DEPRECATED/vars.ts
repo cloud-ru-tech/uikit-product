@@ -375,12 +375,12 @@ const COLORS_DRAWER = {
 };
 
 const COLORS_TOAST = {
-  INFO_COLOR: '--toast-info-color',
-  INFO_BG: '--toast-info-bg',
-  INFO_SECONDARY_COLOR: '--toast-info-secondary-color',
-  INFO_ICON_BG: '--toast-info-icon-bg',
-  INFO_ACTION_COLOR: '--toast-info-action-color',
-  INFO_ACTION_HOVER_COLOR: '--toast-info-action-hover-color',
+  INFO_COLOR: '--toast-infoGroups-color',
+  INFO_BG: '--toast-infoGroups-bg',
+  INFO_SECONDARY_COLOR: '--toast-infoGroups-secondary-color',
+  INFO_ICON_BG: '--toast-infoGroups-icon-bg',
+  INFO_ACTION_COLOR: '--toast-infoGroups-action-color',
+  INFO_ACTION_HOVER_COLOR: '--toast-infoGroups-action-hover-color',
   ERROR_COLOR: '--toast-error-color',
   ERROR_BG: '--toast-error-bg',
   ERROR_SECONDARY_COLOR: '--toast-error-secondary-color',
