@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-input",
   "title": "React Input",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,9 +28,9 @@
   "scripts": {},
   "dependencies": {
     "@floating-ui/react": "0.24.1",
-    "@sbercloud/uikit-product-icons": "5.14.0",
-    "@sbercloud/uikit-product-input-decorator-private": "3.0.26",
-    "@sbercloud/uikit-product-input-private": "3.0.28",
+    "@sbercloud/uikit-product-icons": "5.15.0",
+    "@sbercloud/uikit-product-input-decorator-private": "3.0.27",
+    "@sbercloud/uikit-product-input-private": "3.0.29",
     "@sbercloud/uikit-product-scroll": "1.4.7",
     "@sbercloud/uikit-product-spinner": "2.0.46",
     "@sbercloud/uikit-product-theme": "0.37.0",
