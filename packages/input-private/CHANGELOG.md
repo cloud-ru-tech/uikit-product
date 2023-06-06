@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2023-06-06)
+
+
+### Features
+
+* **[SVP-5107](https://jira.sbercloud.tech/browse/SVP-5107):** add Date mask to InputMask ([f65d72d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f65d72d226b19ebaa3dddb5da8c713a919063cf2))
+
+
+
+
+
 ## 3.0.29 (2023-06-05)
 
 ### Only dependencies have been changed
