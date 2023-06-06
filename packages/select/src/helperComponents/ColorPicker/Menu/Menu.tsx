@@ -1,6 +1,6 @@
 import { components as ReactSelectComponents } from 'react-select';
 
-export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Menu>): JSX.Element => {
+export function Menu(props: React.ComponentProps<typeof ReactSelectComponents.Menu>): JSX.Element {
   const {
     children,
     className,
@@ -16,4 +16,4 @@ export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Me
       {children}
     </div>
   );
-};
+}

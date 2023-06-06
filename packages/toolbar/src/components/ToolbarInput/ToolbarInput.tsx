@@ -1,4 +1,4 @@
-import { createRef, FC, useEffect, useState } from 'react';
+import { createRef, useEffect, useState } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -11,7 +11,7 @@ import { InputWrapStyled, searchIconClassname } from './styled';
 export type ToolbarInputProps = Required<Pick<InputPrivateProps, 'value' | 'onChange' | 'placeholder'>> &
   Pick<InputPrivateProps, 'disabled'>;
 
-export const ToolbarInput: FC<WithSupportProps<ToolbarInputProps>> = ({ value, onChange, ...inputAndSupportProps }) => {
+export function ToolbarInput({ value, onChange, ...inputAndSupportProps }: WithSupportProps<ToolbarInputProps>) {
   const { languageCode } = useLanguage();
   const inputWrapperRef = createRef<HTMLDivElement>();
   const inputRef = createRef<HTMLInputElement>();
@@ -60,4 +60,4 @@ export const ToolbarInput: FC<WithSupportProps<ToolbarInputProps>> = ({ value, o
       />
     </InputWrapStyled>
   );
-};
+}

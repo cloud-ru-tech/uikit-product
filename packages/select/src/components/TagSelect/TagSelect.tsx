@@ -41,7 +41,7 @@ export interface ITagSelect extends Omit<RCProps, 'components'> {
 type ApproveDeleteType = { tag: OptionTypeTag; callbackDelete: () => void };
 
 /* todo: слишком сложно, надо упрощать */
-export const TagSelect = (props: ITagSelect): JSX.Element => {
+export function TagSelect(props: ITagSelect): JSX.Element {
   const {
     isHover,
     onTagChange,
@@ -144,4 +144,4 @@ export const TagSelect = (props: ITagSelect): JSX.Element => {
       />
     </>
   );
-};
+}

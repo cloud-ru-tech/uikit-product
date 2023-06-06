@@ -13,13 +13,13 @@ export type SecuredIconProps = {
   hideSecuredText: () => void;
 };
 
-export const SecuredIcon = ({
+export function SecuredIcon({
   loading,
   disabled,
   isSecured,
   onShowSecuredIconClick,
   hideSecuredText,
-}: SecuredIconProps) => {
+}: SecuredIconProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   return (
@@ -41,4 +41,4 @@ export const SecuredIcon = ({
       }}
     />
   );
-};
+}

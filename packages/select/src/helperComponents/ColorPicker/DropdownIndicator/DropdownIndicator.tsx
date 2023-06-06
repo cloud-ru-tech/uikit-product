@@ -4,9 +4,9 @@ import { DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { arrowDownClassName, StyledColorBox, StyledDropdown } from './styled';
 
-export const DropdownIndicator = (
+export function DropdownIndicator(
   props: React.ComponentProps<typeof ReactSelectComponents.DropdownIndicator>,
-): JSX.Element => {
+): JSX.Element {
   const { hasValue, getValue } = props;
   const dropdownValue = hasValue && getValue();
   const value = (Array.isArray(dropdownValue) && dropdownValue[0]?.value) || undefined;
@@ -18,4 +18,4 @@ export const DropdownIndicator = (
       </StyledColorBox>
     </StyledDropdown>
   );
-};
+}

@@ -1,12 +1,10 @@
-import { FC } from 'react';
-
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-interface CurrencyFormatterProps {
+type CurrencyFormatterProps = {
   value: number;
-}
+};
 
-export const CurrencyFormatter: FC<CurrencyFormatterProps> = ({ value }) => {
+export function CurrencyFormatter({ value }: CurrencyFormatterProps) {
   const { languageCode } = useLanguage();
 
   return (
@@ -17,4 +15,4 @@ export const CurrencyFormatter: FC<CurrencyFormatterProps> = ({ value }) => {
       }).format(value)}
     </>
   );
-};
+}

@@ -1,6 +1,6 @@
 import { components as ReactSelectComponents } from 'react-select';
 
-export const Control = (props: React.ComponentProps<typeof ReactSelectComponents.Control>): JSX.Element => {
+export function Control(props: React.ComponentProps<typeof ReactSelectComponents.Control>): JSX.Element {
   const {
     selectProps: { customControl, menuIsOpen, toggleMenu },
   } = props;
@@ -18,4 +18,4 @@ export const Control = (props: React.ComponentProps<typeof ReactSelectComponents
       <ReactSelectComponents.Control {...props} />
     </div>
   );
-};
+}

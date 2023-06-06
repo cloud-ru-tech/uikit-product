@@ -19,7 +19,7 @@ import {
   StyledTagOptionLabel,
 } from './styled';
 
-export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.Option>): JSX.Element => {
+export function Option(props: React.ComponentProps<typeof ReactSelectComponents.Option>): JSX.Element {
   const {
     data,
     innerRef,
@@ -168,4 +168,4 @@ export const Option = (props: React.ComponentProps<typeof ReactSelectComponents.
       {notValid && isEdit && <NotValidMessage>{validateMessage}</NotValidMessage>}
     </ReactSelectComponents.Option>
   );
-};
+}

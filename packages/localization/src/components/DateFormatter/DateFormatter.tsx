@@ -1,13 +1,11 @@
-import { FC } from 'react';
-
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-interface DateFormatterProps {
+type DateFormatterProps = {
   value: Date;
   showTime?: boolean;
-}
+};
 
-export const DateFormatter: FC<DateFormatterProps> = ({ value, showTime = true }) => {
+export function DateFormatter({ value, showTime = true }: DateFormatterProps) {
   const { languageCode } = useLanguage();
 
   if (!showTime) {
@@ -33,4 +31,4 @@ export const DateFormatter: FC<DateFormatterProps> = ({ value, showTime = true }
       }).format(value)}
     </>
   );
-};
+}

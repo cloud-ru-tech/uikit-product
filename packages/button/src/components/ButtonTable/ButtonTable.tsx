@@ -21,7 +21,7 @@ export type ButtonTableProps = CommonButtonProps & {
   getProgressText?: (progress: number) => string;
 };
 
-const ButtonTableBase = ({
+function ButtonTableBase({
   text,
   variant = Variant.Fill,
   loading,
@@ -31,7 +31,7 @@ const ButtonTableBase = ({
   disabled,
   className,
   ...rest
-}: ButtonTableProps) => {
+}: ButtonTableProps) {
   const isProgress = typeof progress === 'number';
   const hasGetProgressText = typeof getProgressText === 'function';
   return (
@@ -56,7 +56,7 @@ const ButtonTableBase = ({
       </S.IconWrapper>
     </S.StyledButtonPrivate>
   );
-};
+}
 
 const ButtonTableWithTooltip = withTooltip(ButtonTableBase);
 

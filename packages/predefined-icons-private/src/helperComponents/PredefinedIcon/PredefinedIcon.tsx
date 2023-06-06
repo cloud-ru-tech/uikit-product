@@ -14,7 +14,7 @@ type PredefinedIconProps = {
   size?: number;
 };
 
-export const PredefinedIcon = ({ icon, ...rest }: PredefinedIconProps) => {
+export function PredefinedIcon({ icon, ...rest }: PredefinedIconProps) {
   switch (icon) {
     case Icon.Info:
       return <InfoInterfaceSVG {...rest} />;
@@ -32,4 +32,4 @@ export const PredefinedIcon = ({ icon, ...rest }: PredefinedIconProps) => {
     default:
       return notReachable(icon);
   }
-};
+}

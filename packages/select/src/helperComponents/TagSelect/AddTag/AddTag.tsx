@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { ComponentProps, useCallback, useMemo, useState } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { Button } from '@sbercloud/uikit-product-button';
@@ -11,7 +11,7 @@ import { getRandomInt } from '../../../helpers/getRandomInt';
 import { textProvider, Texts } from '../../../helpers/texts-provider';
 import { colorPickerClassName, Container, NotValidMessage, StyledButton, StyledTagWrapper } from './styled';
 
-export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.Menu>> = props => {
+export function AddTag(props: ComponentProps<typeof ReactSelectComponents.Menu>) {
   const { options, setValue, selectProps } = props;
   const { inputValue: search, colorDropdownPlacement, onTagChange, onSearch, validator, validateMessage } = selectProps;
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -52,4 +52,4 @@ export const AddTag: React.FC<React.ComponentProps<typeof ReactSelectComponents.
       {notValid && <NotValidMessage>{validateMessage}</NotValidMessage>}
     </>
   );
-};
+}

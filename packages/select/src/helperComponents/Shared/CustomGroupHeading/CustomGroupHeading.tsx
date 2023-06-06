@@ -17,12 +17,12 @@ export const CustomGroupHeading = (props: SelectProps): typeof ReactSelectCompon
   const { collapsedGroup } = props;
 
   if (!collapsedGroup) {
-    return (data: React.ComponentProps<typeof ReactSelectComponents.GroupHeading>): JSX.Element => (
-      <ReactSelectComponents.GroupHeading {...data} />
-    );
+    return function (data: React.ComponentProps<typeof ReactSelectComponents.GroupHeading>): JSX.Element {
+      return <ReactSelectComponents.GroupHeading {...data} />;
+    };
   }
 
-  return ({ custom, children, getStyles, ...props }: GroupHeadingProps): JSX.Element => {
+  return function ({ custom, children, getStyles, ...props }: GroupHeadingProps): JSX.Element {
     const { open, setOpen, selectProps } = custom || {};
     return (
       <ReactSelectComponents.GroupHeading

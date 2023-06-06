@@ -3,7 +3,9 @@ import { components as ReactSelectComponents } from 'react-select';
 
 import { SelectProps } from '../../../components';
 
-const Stub = (): JSX.Element => <></>;
+function Stub(): JSX.Element {
+  return <></>;
+}
 
 export const CustomIndicator = (props: SelectProps): typeof ReactSelectComponents.Control => {
   const { postfixControl } = props;
@@ -14,7 +16,7 @@ export const CustomIndicator = (props: SelectProps): typeof ReactSelectComponent
 
   const PostfixControlComponent = postfixControl ? memo(postfixControl) : Stub;
 
-  return (data: React.ComponentProps<typeof ReactSelectComponents.Control>): JSX.Element => (
-    <PostfixControlComponent {...data} />
-  );
+  return function (data: React.ComponentProps<typeof ReactSelectComponents.Control>): JSX.Element {
+    return <PostfixControlComponent {...data} />;
+  };
 };

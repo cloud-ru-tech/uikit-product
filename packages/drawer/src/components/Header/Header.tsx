@@ -1,9 +1,9 @@
 import { HeaderContainerStyled } from './styled';
 
-export interface IHeaderProps {
+export type IHeaderProps = {
   text: string | React.ReactNode;
-}
+};
 
-export const Header: React.FC<IHeaderProps> = ({ text }) => (
-  <HeaderContainerStyled data-test-id='drawer__header-title'>{text}</HeaderContainerStyled>
-);
+export function Header({ text }: IHeaderProps) {
+  return <HeaderContainerStyled data-test-id='drawer__header-title'>{text}</HeaderContainerStyled>;
+}

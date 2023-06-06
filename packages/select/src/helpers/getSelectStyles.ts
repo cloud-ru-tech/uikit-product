@@ -34,12 +34,12 @@ const styles = {
 /* @ts-ignore*/
 const getCustomStyles = (type?: string): Styles => (type ? styles[type] : mediumStyles);
 
-interface ICustomStyles {
+type ICustomStyles = {
   theme: themeFn;
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   /* @ts-ignore*/
   styles: Styles;
-}
+};
 
 export const getSelectStyles = (type?: string): ICustomStyles => ({
   theme: getTheme(type),

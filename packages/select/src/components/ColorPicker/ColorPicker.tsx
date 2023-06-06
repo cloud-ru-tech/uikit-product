@@ -11,7 +11,7 @@ export type IColorPicker = {
   dropdownPlacement?: 'left' | 'right';
 } & SelectProps;
 
-export const ColorPicker = (props: IColorPicker): JSX.Element => {
+export function ColorPicker(props: IColorPicker): JSX.Element {
   const { defaultValue = colors[0], dropdownPlacement = 'left' } = props;
 
   return (
@@ -25,4 +25,4 @@ export const ColorPicker = (props: IColorPicker): JSX.Element => {
       isSearchable={false}
     />
   );
-};
+}

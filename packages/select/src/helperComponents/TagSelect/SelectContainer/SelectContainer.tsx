@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
-export const SelectContainer = (
+export function SelectContainer(
   props: React.ComponentProps<typeof ReactSelectComponents.SelectContainer>,
-): JSX.Element => {
+): JSX.Element {
   const {
     children,
     selectProps: { containerRef, modalInstance },
@@ -38,4 +38,4 @@ export const SelectContainer = (
       <div ref={containerRef}>{children}</div>
     </ReactSelectComponents.SelectContainer>
   );
-};
+}

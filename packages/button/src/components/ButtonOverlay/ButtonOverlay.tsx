@@ -8,10 +8,12 @@ export type ButtonOverlayProps = CommonButtonProps & {
   icon: ReactElement;
 };
 
-const ButtonOverlayBase = ({ icon, className, ...rest }: ButtonOverlayProps) => (
-  <S.StyledButtonPrivate className={className} {...extractCommonButtonProps(rest)}>
-    {icon}
-  </S.StyledButtonPrivate>
-);
+function ButtonOverlayBase({ icon, className, ...rest }: ButtonOverlayProps) {
+  return (
+    <S.StyledButtonPrivate className={className} {...extractCommonButtonProps(rest)}>
+      {icon}
+    </S.StyledButtonPrivate>
+  );
+}
 
 export const ButtonOverlay = withTooltip(ButtonOverlayBase);

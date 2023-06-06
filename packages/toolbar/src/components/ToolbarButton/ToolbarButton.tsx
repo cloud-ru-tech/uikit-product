@@ -15,14 +15,16 @@ export type ToolbarButtonProps = CommonButtonPropsWithOptionalTooltip & {
   icon: ReactElement;
 };
 
-const ToolbarButtonBase = ({ icon, className, badgeProps, isActive, ...buttonProps }: ToolbarButtonProps) => (
-  <S.StyledButtonPrivate
-    data-active={isActive || undefined}
-    className={className}
-    {...extractCommonButtonProps(buttonProps)}
-  >
-    {badgeProps ? <Badge {...badgeProps}>{icon}</Badge> : <>{icon}</>}
-  </S.StyledButtonPrivate>
-);
+function ToolbarButtonBase({ icon, className, badgeProps, isActive, ...buttonProps }: ToolbarButtonProps) {
+  return (
+    <S.StyledButtonPrivate
+      data-active={isActive || undefined}
+      className={className}
+      {...extractCommonButtonProps(buttonProps)}
+    >
+      {badgeProps ? <Badge {...badgeProps}>{icon}</Badge> : <>{icon}</>}
+    </S.StyledButtonPrivate>
+  );
+}
 
 export const ToolbarButton = withTooltip(ToolbarButtonBase);

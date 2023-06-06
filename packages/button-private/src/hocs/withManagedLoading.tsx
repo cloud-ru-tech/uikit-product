@@ -2,9 +2,10 @@ import { ComponentType, MouseEvent as ReactMouseEvent, useCallback, useState } f
 
 import { WithManagedLoadingProps } from '../types';
 
-export const withManagedLoading =
-  <ComposedComponentProps extends WithManagedLoadingProps>(ComposedComponent: ComponentType<ComposedComponentProps>) =>
-  ({ onClick, ...rest }: ComposedComponentProps) => {
+export const withManagedLoading = <ComposedComponentProps extends WithManagedLoadingProps>(
+  ComposedComponent: ComponentType<ComposedComponentProps>,
+) =>
+  function ({ onClick, ...rest }: ComposedComponentProps) {
     const [loading, setLoading] = useState(false);
 
     const wrappedOnClick = useCallback(

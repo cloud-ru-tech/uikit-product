@@ -1,1 +1,3 @@
-export const ValueContainer = (): null => null;
+export function ValueContainer(): null {
+  return null;
+}

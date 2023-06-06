@@ -10,14 +10,14 @@ export type RatingProps = WithSupportProps<{
   onChange: (value: number) => void;
 }>;
 
-export const Rating = ({
+export function Rating({
   value,
   elements = 5,
   disabled = false,
   onChange,
   className,
   ...rest
-}: RatingProps): JSX.Element => {
+}: RatingProps): JSX.Element {
   const handleMarkClick = (value: number) => {
     onChange(value);
   };
@@ -33,4 +33,4 @@ export const Rating = ({
       ))}
     </MarkContainer>
   );
-};
+}

@@ -1,1 +1,3 @@
-export const NoOptionsMessage = () => null;
+export function NoOptionsMessage() {
+  return null;
+}

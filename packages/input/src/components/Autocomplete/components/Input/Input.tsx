@@ -10,7 +10,7 @@ export type InputProps = Omit<InputMasterProps, 'children'> & {
   onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const Input = ({ placeholder, onChange, ...props }: InputProps) => {
+export function Input({ placeholder, onChange, ...props }: InputProps) {
   const { isOpen, setIsOpen } = useContext(FloatingContext);
 
   const { getProps, setElement } = useContext(ReferenceContext);
@@ -45,4 +45,4 @@ export const Input = ({ placeholder, onChange, ...props }: InputProps) => {
       )}
     </InputMaster>
   );
-};
+}

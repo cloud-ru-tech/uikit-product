@@ -17,10 +17,10 @@ export enum TimeInputProps {
   year = 'year',
 }
 
-export interface PickSettingProps {
+export type PickSettingProps = {
   pickTimeCheck?: boolean;
   isPickTimeOptional?: boolean;
   setPickTime?: React.Dispatch<React.SetStateAction<boolean>>;
   isPickTime?: boolean;
   isDatePickerOpen?: boolean;
-}
+};

@@ -17,14 +17,14 @@ export type CardsPanelProps = {
   children?: React.ReactNode;
 };
 //TODO: Переписать
-export const CardsPanel = ({
+export function CardsPanel({
   children,
   autoFill,
   className,
   cardsPerRow = 4,
   paginateProps,
   ...rest
-}: WithSupportProps<CardsPanelProps>) => {
+}: WithSupportProps<CardsPanelProps>) {
   const [page, setPage] = useState(paginateProps?.page || 0);
   const isArrayChildren = Array.isArray(children);
   const pagesAmount =
@@ -71,4 +71,4 @@ export const CardsPanel = ({
       {children}
     </S.Container>
   );
-};
+}

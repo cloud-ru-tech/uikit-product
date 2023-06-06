@@ -5,11 +5,11 @@ import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
-interface IContainerType {
+type IContainerType = {
   open: boolean;
   hasValue: boolean;
   disabled: boolean;
-}
+};
 
 export const StyledContainer = styled.div<IContainerType>`
   position: relative;

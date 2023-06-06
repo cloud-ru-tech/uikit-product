@@ -2,10 +2,10 @@ import { components as ReactSelectComponents } from 'react-select';
 
 import { Tag } from '@sbercloud/uikit-product-tag';
 
-export const ValueContainer = ({
+export function ValueContainer({
   hasValue,
   getValue,
-}: React.ComponentProps<typeof ReactSelectComponents.ValueContainer>): JSX.Element | null => {
+}: React.ComponentProps<typeof ReactSelectComponents.ValueContainer>): JSX.Element | null {
   if (!hasValue) {
     return <div />;
   }
@@ -13,4 +13,4 @@ export const ValueContainer = ({
   const data = getValue()[0];
 
   return <Tag color={data.color} value={data.label} />;
-};
+}

@@ -13,7 +13,7 @@ export type ButtonGhostProps = {
   iconPosition?: IconPosition;
 } & CommonButtonProps;
 
-const ButtonGhostBase = ({
+function ButtonGhostBase({
   text,
   variant = Variant.Primary,
   size = Sizes.Medium,
@@ -21,26 +21,28 @@ const ButtonGhostBase = ({
   iconPosition = IconPosition.After,
   className,
   ...rest
-}: ButtonGhostProps) => (
-  <S.StyledButtonPrivate
-    className={className}
-    data-variant={variant}
-    data-size={size}
-    {...extractCommonButtonProps(rest)}
-  >
-    {icon && iconPosition === IconPosition.Before && (
-      <S.IconWrapper data-size={size} data-position={iconPosition}>
-        {icon}
-      </S.IconWrapper>
-    )}
-    {text}
-    {icon && iconPosition === IconPosition.After && (
-      <S.IconWrapper data-size={size} data-position={iconPosition}>
-        {icon}
-      </S.IconWrapper>
-    )}
-  </S.StyledButtonPrivate>
-);
+}: ButtonGhostProps) {
+  return (
+    <S.StyledButtonPrivate
+      className={className}
+      data-variant={variant}
+      data-size={size}
+      {...extractCommonButtonProps(rest)}
+    >
+      {icon && iconPosition === IconPosition.Before && (
+        <S.IconWrapper data-size={size} data-position={iconPosition}>
+          {icon}
+        </S.IconWrapper>
+      )}
+      {text}
+      {icon && iconPosition === IconPosition.After && (
+        <S.IconWrapper data-size={size} data-position={iconPosition}>
+          {icon}
+        </S.IconWrapper>
+      )}
+    </S.StyledButtonPrivate>
+  );
+}
 
 const ButtonGhostWithTooltip = withTooltip(ButtonGhostBase);
 

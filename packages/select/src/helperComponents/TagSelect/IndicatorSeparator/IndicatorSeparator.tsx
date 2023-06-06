@@ -1,1 +1,3 @@
-export const IndicatorSeparator = (): null => null;
+export function IndicatorSeparator(): null {
+  return null;
+}

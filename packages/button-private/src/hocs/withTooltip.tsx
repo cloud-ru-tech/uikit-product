@@ -10,7 +10,7 @@ export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProp
 ) => {
   type WrapperComponentProps = ComposedComponentProps & WithTooltipProps;
 
-  const WrappedComponent = ({
+  function WrappedComponent({
     tooltip,
     disabledTooltip,
     // т.к. основное назначение className это позиционирование,
@@ -20,8 +20,8 @@ export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProp
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     title, // чтобы не пробрасывался нативный вариант
     ...rest
-  }: WrapperComponentProps) =>
-    tooltip || (rest.disabled && disabledTooltip) ? (
+  }: WrapperComponentProps) {
+    return tooltip || (rest.disabled && disabledTooltip) ? (
       <Tooltip
         {...(rest.disabled ? disabledTooltip || tooltip || {} : tooltip || {})}
         data-test-id={`button-tooltip__${ComposedComponent.displayName}`}
@@ -33,6 +33,7 @@ export const withTooltip = <ComposedComponentProps extends Pick<CommonButtonProp
     ) : (
       <ComposedComponent {...(rest as ComposedComponentProps)} className={className} />
     );
+  }
 
   WrappedComponent.placements = Tooltip.placements;
   return WrappedComponent;

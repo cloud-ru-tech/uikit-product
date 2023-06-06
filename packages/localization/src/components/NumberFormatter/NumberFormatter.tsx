@@ -1,13 +1,11 @@
-import { FC } from 'react';
-
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
-interface NumberFormatterProps {
+type NumberFormatterProps = {
   value: number;
-}
+};
 
-export const NumberFormatter: FC<NumberFormatterProps> = ({ value }) => {
+export function NumberFormatter({ value }: NumberFormatterProps) {
   const { languageCode } = useLanguage();
 
   return <>{new Intl.NumberFormat(languageCode).format(value)}</>;
-};
+}

@@ -11,7 +11,7 @@ import { textProvider, Texts } from './texts-provider';
 
 type neqType = Parameters<typeof eq>;
 
-export interface IOperationsType {
+export type IOperationsType = {
   eq: typeof eq;
   neq: typeof eq;
   gt: typeof gt;
@@ -20,7 +20,7 @@ export interface IOperationsType {
   lte: typeof lte;
   include: (value: unknown[], other: unknown) => boolean;
   noinclude: (value: unknown[], other: unknown) => boolean;
-}
+};
 
 export enum LogicConditionType {
   Eq = 'eq',

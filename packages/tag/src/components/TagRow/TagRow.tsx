@@ -17,16 +17,18 @@ function renderTag(
   handleRemoveItem?: (item: TagRowItem['value']) => () => void,
   setRef?: (item: TagRowItem) => Ref<HTMLDivElement>,
 ) {
-  return (item: TagRowItem) => (
-    <TagWrapper key={item.value} ref={setRef?.(item)}>
-      <Tag
-        color={item.color}
-        size={props.size}
-        value={item.value}
-        onRemoveClick={handleRemoveItem && handleRemoveItem(item.value)}
-      />
-    </TagWrapper>
-  );
+  return function (item: TagRowItem) {
+    return (
+      <TagWrapper key={item.value} ref={setRef?.(item)}>
+        <Tag
+          color={item.color}
+          size={props.size}
+          value={item.value}
+          onRemoveClick={handleRemoveItem && handleRemoveItem(item.value)}
+        />
+      </TagWrapper>
+    );
+  };
 }
 
 export type TagRowProps = WithSupportProps<{

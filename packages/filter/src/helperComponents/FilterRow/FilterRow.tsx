@@ -1,5 +1,5 @@
 import cloneDeep from 'lodash.clonedeep';
-import { FC, useCallback, useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 
 import { DatePicker } from '@sbercloud/uikit-product-datepicker';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
@@ -13,14 +13,14 @@ import { FilterRowProps, TFilterOptionType, TFilterValueType } from '../../helpe
 import { ActionButton } from '../ActionButton';
 import * as S from './styled';
 
-export const FilterRow: FC<FilterRowProps> = ({
+export function FilterRow({
   value = [],
   index,
   propValue = {},
   filterOptions,
   noFilteredProps = [],
   onChange,
-}) => {
+}: FilterRowProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const handleChange = useCallback(
     (propName: string, val: unknown) => {
@@ -165,4 +165,4 @@ export const FilterRow: FC<FilterRowProps> = ({
       </S.FilterColumn>
     </S.FilterRow>
   );
-};
+}

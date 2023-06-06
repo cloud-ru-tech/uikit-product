@@ -17,25 +17,29 @@ const crossSVGClassName = css`
   fill: currentColor;
 `;
 
-export const DropdownIndicator = (
+export function DropdownIndicator(
   props: React.ComponentProps<typeof ReactSelectComponents.DropdownIndicator>,
-): JSX.Element => (
-  <ReactSelectComponents.DropdownIndicator {...props}>
-    <DropdownDownInterfaceSVG />
-  </ReactSelectComponents.DropdownIndicator>
-);
+): JSX.Element {
+  return (
+    <ReactSelectComponents.DropdownIndicator {...props}>
+      <DropdownDownInterfaceSVG />
+    </ReactSelectComponents.DropdownIndicator>
+  );
+}
 
-const MultiValueRemove = (props: React.ComponentProps<typeof ReactSelectComponents.MultiValueRemove>): JSX.Element => (
-  <ReactSelectComponents.MultiValueRemove {...props}>
-    <CloseInterfaceSVG className={crossSVGClassName} />
-  </ReactSelectComponents.MultiValueRemove>
-);
+function MultiValueRemove(props: React.ComponentProps<typeof ReactSelectComponents.MultiValueRemove>): JSX.Element {
+  return (
+    <ReactSelectComponents.MultiValueRemove {...props}>
+      <CloseInterfaceSVG className={crossSVGClassName} />
+    </ReactSelectComponents.MultiValueRemove>
+  );
+}
 
-const NoOptionsMessage = (props: React.ComponentProps<typeof ReactSelectComponents.NoOptionsMessage>): JSX.Element => {
+function NoOptionsMessage(props: React.ComponentProps<typeof ReactSelectComponents.NoOptionsMessage>): JSX.Element {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const noDataText = useMemo(() => textProvider<string>(languageCode, Texts.NoData), [languageCode]);
   return <ReactSelectComponents.NoOptionsMessage {...props}>{noDataText}</ReactSelectComponents.NoOptionsMessage>;
-};
+}
 
 export const getSharedComponents = (
   props: SelectProps,

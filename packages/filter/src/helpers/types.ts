@@ -41,7 +41,7 @@ export type FilterProps = {
 export type FilterRowProps = {
   index?: number;
   noFilteredProps?: TFilterOption[];
-  propValue?: TFilterValueType;
+  propValue?: TFilterValueType | Record<string, never>;
   value: TFilterValueType[];
   onChange?: (value: TFilterValueType[]) => void;
 } & Partial<FilterProps>;

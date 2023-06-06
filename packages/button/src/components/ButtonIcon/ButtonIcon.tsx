@@ -14,11 +14,13 @@ export type ButtonIconProps = CommonButtonPropsWithOptionalTooltip & {
   variant?: Variant;
 };
 
-const ButtonIconBase = ({ icon, variant = Variant.Weak, className, ...rest }: ButtonIconProps) => (
-  <S.StyledButtonPrivate className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
-    {icon}
-  </S.StyledButtonPrivate>
-);
+function ButtonIconBase({ icon, variant = Variant.Weak, className, ...rest }: ButtonIconProps) {
+  return (
+    <S.StyledButtonPrivate className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
+      {icon}
+    </S.StyledButtonPrivate>
+  );
+}
 
 const ButtonIconWithTooltip = withTooltip(ButtonIconBase);
 

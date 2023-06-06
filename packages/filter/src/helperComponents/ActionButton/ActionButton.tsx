@@ -1,5 +1,7 @@
+import { ButtonHTMLAttributes } from 'react';
+
 import * as S from './styled';
 
-export const ActionButton: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = props => (
-  <S.Button type='button' {...props} />
-);
+export function ActionButton(props: ButtonHTMLAttributes<HTMLButtonElement>) {
+  return <S.Button type='button' {...props} />;
+}

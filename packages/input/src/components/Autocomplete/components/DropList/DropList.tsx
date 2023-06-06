@@ -15,14 +15,14 @@ export type DropListProps = {
   droplistRef?: MutableRefObject<HTMLDivElement | null>;
 };
 
-export const DropList = ({
+export function DropList({
   options,
   value: inputValue,
   handleItemSelect,
   loading,
   isOptionsError,
   droplistRef,
-}: DropListProps) => {
+}: DropListProps) {
   const { setIsOpen } = useContext(FloatingContext);
 
   if (loading) {
@@ -76,4 +76,4 @@ export const DropList = ({
       })}
     </div>
   );
-};
+}

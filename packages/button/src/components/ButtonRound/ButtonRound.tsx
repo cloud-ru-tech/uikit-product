@@ -11,12 +11,14 @@ export type ButtonRoundProps = CommonButtonProps & {
   icon?: ReactElement;
 };
 
-const ButtonRoundBase = ({ text, variant = Variant.Filled, icon, className, ...rest }: ButtonRoundProps) => (
-  <S.StyledButtonPrivate className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
-    {text && <S.TextWrapper data-with-icon={Boolean(icon) || undefined}>{text}</S.TextWrapper>}
-    {icon && <S.IconWrapper data-variant={variant}>{icon}</S.IconWrapper>}
-  </S.StyledButtonPrivate>
-);
+function ButtonRoundBase({ text, variant = Variant.Filled, icon, className, ...rest }: ButtonRoundProps) {
+  return (
+    <S.StyledButtonPrivate className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
+      {text && <S.TextWrapper data-with-icon={Boolean(icon) || undefined}>{text}</S.TextWrapper>}
+      {icon && <S.IconWrapper data-variant={variant}>{icon}</S.IconWrapper>}
+    </S.StyledButtonPrivate>
+  );
+}
 
 const ButtonRoundWithTooltip = withTooltip(ButtonRoundBase);
 

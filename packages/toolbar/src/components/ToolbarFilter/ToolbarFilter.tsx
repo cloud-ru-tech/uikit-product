@@ -7,7 +7,7 @@ import { ToolbarButton } from '../ToolbarButton';
 
 export type ToolbarFilterProps = Required<Pick<FilterProps, 'filterOptions' | 'value' | 'onChange'>>;
 
-export const ToolbarFilter = ({ filterOptions, value, onChange }: WithSupportProps<ToolbarFilterProps>) => {
+export function ToolbarFilter({ filterOptions, value, onChange }: WithSupportProps<ToolbarFilterProps>) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   return (
     <div data-test-id='toolbar__filter'>
@@ -23,4 +23,4 @@ export const ToolbarFilter = ({ filterOptions, value, onChange }: WithSupportPro
       </Filter>
     </div>
   );
-};
+}

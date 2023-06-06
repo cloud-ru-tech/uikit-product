@@ -1,10 +1,12 @@
 import { Tag, TagProps } from '@sbercloud/uikit-product-tag';
 
-interface TagNameProps {
+type TagNameProps = {
   tag: {
     label: TagProps['value'];
     color: TagProps['color'];
   };
-}
+};
 
-export const TagName: React.FC<TagNameProps> = ({ tag }) => <Tag value={tag.label} color={tag.color} />;
+export function TagName({ tag }: TagNameProps) {
+  return <Tag value={tag.label} color={tag.color} />;
+}

@@ -8,10 +8,10 @@ PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
 
-interface IStyleProps {
+type IStyleProps = {
   variant: Variant;
   orientation: Orientation;
-}
+};
 
 export const StyledDivider = styled.hr<IStyleProps>`
   margin: 0;

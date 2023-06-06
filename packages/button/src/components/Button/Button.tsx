@@ -11,12 +11,14 @@ export type ButtonProps = {
   icon?: ReactElement;
 } & CommonButtonProps;
 
-const ButtonCmp = ({ text, variant = Variant.Filled, icon, className, ...rest }: ButtonProps) => (
-  <S.StyledButtonPrivate className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
-    {text}
-    {icon && <S.IconWrapper>{icon}</S.IconWrapper>}
-  </S.StyledButtonPrivate>
-);
+function ButtonCmp({ text, variant = Variant.Filled, icon, className, ...rest }: ButtonProps) {
+  return (
+    <S.StyledButtonPrivate className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
+      {text}
+      {icon && <S.IconWrapper>{icon}</S.IconWrapper>}
+    </S.StyledButtonPrivate>
+  );
+}
 
 const ButtonWithTooltip = withTooltip(ButtonCmp);
 

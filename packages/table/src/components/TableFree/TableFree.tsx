@@ -6,11 +6,11 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 
 import * as S from './styled';
 
-export interface ITableFreeProps extends TableFreePrivateProps {
+export type ITableFreeProps = {
   classNameContainer?: string;
   checkboxSelection?: boolean;
   pageSize?: number;
-}
+} & TableFreePrivateProps;
 
 /**
  * @deprecated please, migrate to ClientModelTable usage

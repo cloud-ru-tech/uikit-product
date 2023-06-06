@@ -16,7 +16,7 @@ const inputWrapperClassName = css`
   background: var(${COLORS_SELECT.BACKGROUND});
 `;
 
-export const CustomMenu = (props: React.ComponentProps<typeof ReactSelectComponents.Menu>): JSX.Element => {
+export function CustomMenu(props: React.ComponentProps<typeof ReactSelectComponents.Menu>): JSX.Element {
   const inputRef = useRef<HTMLInputElement>(null);
   const {
     children,
@@ -42,4 +42,4 @@ export const CustomMenu = (props: React.ComponentProps<typeof ReactSelectCompone
       {footer}
     </div>
   );
-};
+}

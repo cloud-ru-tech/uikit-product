@@ -33,16 +33,22 @@ const Icons = {
   [Variant.View]: <EyeOpenedInterfaceSVG />,
 };
 
-const ButtonTableIconBase = ({ variant = Variant.Play, loading, className, ...rest }: ButtonTableIconProps) => (
-  <S.StyledButtonPrivate className={className} data-loading={loading || undefined} {...extractCommonButtonProps(rest)}>
-    {loading && <LoadingIcon />}
-    {!loading && Icons[variant]}
-  </S.StyledButtonPrivate>
-);
+function ButtonTableIconBase({ variant = Variant.Play, loading, className, ...rest }: ButtonTableIconProps) {
+  return (
+    <S.StyledButtonPrivate
+      className={className}
+      data-loading={loading || undefined}
+      {...extractCommonButtonProps(rest)}
+    >
+      {loading && <LoadingIcon />}
+      {!loading && Icons[variant]}
+    </S.StyledButtonPrivate>
+  );
+}
 
 const ButtonTableIconWithTooltip = withTooltip(ButtonTableIconBase);
 
-const ButtonTableIconWithTooltipPredefined = (props: ComponentProps<typeof ButtonTableIconWithTooltip>) => {
+function ButtonTableIconWithTooltipPredefined(props: ComponentProps<typeof ButtonTableIconWithTooltip>) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   return (
     <ButtonTableIconWithTooltip
@@ -54,7 +60,7 @@ const ButtonTableIconWithTooltipPredefined = (props: ComponentProps<typeof Butto
       {...props}
     />
   );
-};
+}
 
 ButtonTableIconWithTooltipPredefined.placements = ButtonTableIconWithTooltip.placements;
 

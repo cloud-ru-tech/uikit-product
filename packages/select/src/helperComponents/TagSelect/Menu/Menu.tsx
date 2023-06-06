@@ -4,7 +4,7 @@ import { components as ReactSelectComponents } from 'react-select';
 import { AddTag } from '../AddTag';
 import { searchInputWrapClassname, StyledSearchInput } from './styled';
 
-export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Menu>): JSX.Element => {
+export function Menu(props: React.ComponentProps<typeof ReactSelectComponents.Menu>): JSX.Element {
   const {
     children,
     className,
@@ -35,4 +35,4 @@ export const Menu = (props: React.ComponentProps<typeof ReactSelectComponents.Me
       <AddTag {...props} />
     </div>
   );
-};
+}

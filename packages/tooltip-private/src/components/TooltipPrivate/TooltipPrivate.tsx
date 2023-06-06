@@ -8,7 +8,7 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import { Placements, TooltipPrivateProps, TriggerTypes } from '../../helpers/types';
 import { tooltipClassName, triggerClassName } from './styled';
 
-export const TooltipPrivate = ({
+export function TooltipPrivate({
   popperOptions,
   children,
   tooltip,
@@ -17,7 +17,7 @@ export const TooltipPrivate = ({
   classNameTrigger,
   getTooltipRef,
   ...props
-}: WithSupportProps<TooltipPrivateProps>) => {
+}: WithSupportProps<TooltipPrivateProps>) {
   const { getArrowProps, getTooltipProps, setTooltipRef, setTriggerRef, visible, tooltipRef } = usePopperTooltip(
     {
       interactive: true,
@@ -61,7 +61,7 @@ export const TooltipPrivate = ({
         )}
     </>
   );
-};
+}
 
 TooltipPrivate.triggerTypes = TriggerTypes;
 TooltipPrivate.placements = Placements;

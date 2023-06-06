@@ -4,28 +4,32 @@ import { components as ReactSelectComponents } from 'react-select';
 import { SelectProps } from '../../../components';
 import { StyledMultiValueContainer } from './styled';
 
-const Stub = (): JSX.Element => <></>;
+function Stub(): JSX.Element {
+  return <></>;
+}
 
 export const MultiValueContainer = (props: SelectProps): typeof ReactSelectComponents.MultiValueContainer => {
   const { prefixMultiValueContainer } = props;
 
   if (!prefixMultiValueContainer) {
-    return (data: React.ComponentProps<typeof ReactSelectComponents.MultiValueContainer>): JSX.Element => (
-      <ReactSelectComponents.MultiValueContainer {...data} />
-    );
+    return function (data: React.ComponentProps<typeof ReactSelectComponents.MultiValueContainer>): JSX.Element {
+      return <ReactSelectComponents.MultiValueContainer {...data} />;
+    };
   }
 
   const PrefixMultiValueContainerComponent = prefixMultiValueContainer ? memo(prefixMultiValueContainer) : Stub;
 
-  return ({
+  return function ({
     children,
     ...restData
-  }: React.ComponentProps<typeof ReactSelectComponents.MultiValueContainer>): JSX.Element => (
-    <ReactSelectComponents.MultiValueContainer {...restData}>
-      <StyledMultiValueContainer>
-        <PrefixMultiValueContainerComponent {...restData} />
-        {children}
-      </StyledMultiValueContainer>
-    </ReactSelectComponents.MultiValueContainer>
-  );
+  }: React.ComponentProps<typeof ReactSelectComponents.MultiValueContainer>): JSX.Element {
+    return (
+      <ReactSelectComponents.MultiValueContainer {...restData}>
+        <StyledMultiValueContainer>
+          <PrefixMultiValueContainerComponent {...restData} />
+          {children}
+        </StyledMultiValueContainer>
+      </ReactSelectComponents.MultiValueContainer>
+    );
+  };
 };

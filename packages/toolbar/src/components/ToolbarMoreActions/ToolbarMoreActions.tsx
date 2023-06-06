@@ -5,8 +5,10 @@ import { ToolbarButton, ToolbarButtonProps } from '../ToolbarButton';
 
 export type ToolbarMoreActionsProps = Pick<DropdownMenuProps, 'actions'> & Omit<ToolbarButtonProps, 'icon'>;
 
-export const ToolbarMoreActions = ({ actions, ...ownButtonProps }: ToolbarMoreActionsProps) => (
-  <DropdownMenu actions={actions}>
-    <ToolbarButton icon={<MoreInterfaceSVG />} {...ownButtonProps} />
-  </DropdownMenu>
-);
+export function ToolbarMoreActions({ actions, ...ownButtonProps }: ToolbarMoreActionsProps) {
+  return (
+    <DropdownMenu actions={actions}>
+      <ToolbarButton icon={<MoreInterfaceSVG />} {...ownButtonProps} />
+    </DropdownMenu>
+  );
+}

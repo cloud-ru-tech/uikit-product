@@ -9,18 +9,20 @@ export type AutocompleteProps = Omit<InputMasterProps, 'children' | 'autoComplet
   isOptionsError?: boolean;
 };
 
-const Autocomplete = ({ placeholder, options, onSelect, loading, isOptionsError, ...props }: AutocompleteProps) => (
-  <Floating
-    options={options}
-    value={props.value}
-    onSelect={onSelect}
-    loading={loading}
-    isOptionsError={isOptionsError}
-    disabled={props.disabled}
-  >
-    <Input {...props} placeholder={placeholder} />
-  </Floating>
-);
+function Autocomplete({ placeholder, options, onSelect, loading, isOptionsError, ...props }: AutocompleteProps) {
+  return (
+    <Floating
+      options={options}
+      value={props.value}
+      onSelect={onSelect}
+      loading={loading}
+      isOptionsError={isOptionsError}
+      disabled={props.disabled}
+    >
+      <Input {...props} placeholder={placeholder} />
+    </Floating>
+  );
+}
 
 Autocomplete.sizes = InputMaster.sizes;
 

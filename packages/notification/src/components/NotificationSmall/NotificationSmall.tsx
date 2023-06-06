@@ -25,7 +25,7 @@ export type NotificationSmallPropsWithAction = NotificationSmallCommonProps & {
 
 export type NotificationSmallProps = NotificationSmallCommonProps | NotificationSmallPropsWithAction;
 
-const ActionButton = (props: NotificationSmallProps) => {
+function ActionButton(props: NotificationSmallProps) {
   if (!('action' in props)) {
     return null;
   }
@@ -47,7 +47,7 @@ const ActionButton = (props: NotificationSmallProps) => {
       data-test-id={NOTIFICATION_SMALL_TEST_IDS.action}
     />
   );
-};
+}
 
 export function NotificationSmall(props: NotificationSmallProps) {
   const { status = NotificationSmallStatus.Success, text } = props;

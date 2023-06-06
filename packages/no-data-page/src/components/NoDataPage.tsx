@@ -5,13 +5,13 @@ import { useMatchMedia } from '@sbercloud/uikit-product-utils';
 import { NoDataPageVariants } from '../helpers/types';
 import * as S from './styled';
 
-export interface NoDataPageProps {
+export type NoDataPageProps = {
   type?: NoDataPageVariants;
   icon?: React.ReactElement;
   title?: string;
   className?: string;
   children?: React.ReactNode;
-}
+};
 
 const MOBILE_ICON_SIZE = 48;
 
@@ -20,7 +20,7 @@ const iconSize = {
   [NoDataPageVariants.Small]: 100,
 };
 
-export const NoDataPage = ({ type = NoDataPageVariants.Large, icon, title, className, children }: NoDataPageProps) => {
+export function NoDataPage({ type = NoDataPageVariants.Large, icon, title, className, children }: NoDataPageProps) {
   const { isMobile } = useMatchMedia();
 
   const customIcon = useMemo(
@@ -43,6 +43,6 @@ export const NoDataPage = ({ type = NoDataPageVariants.Large, icon, title, class
       </S.DescContainer>
     </S.Container>
   );
-};
+}
 
 NoDataPage.variants = NoDataPageVariants;

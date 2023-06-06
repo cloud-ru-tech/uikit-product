@@ -9,11 +9,13 @@ export type ButtonRoundBigProps = CommonButtonProps & {
   icon: ReactElement;
 };
 
-const ButtonRoundBigBase = ({ text, icon, className, ...rest }: ButtonRoundBigProps) => (
-  <S.StyledButtonPrivate className={className} {...extractCommonButtonProps(rest)}>
-    <S.IconWrapper>{icon}</S.IconWrapper>
-    {text}
-  </S.StyledButtonPrivate>
-);
+function ButtonRoundBigBase({ text, icon, className, ...rest }: ButtonRoundBigProps) {
+  return (
+    <S.StyledButtonPrivate className={className} {...extractCommonButtonProps(rest)}>
+      <S.IconWrapper>{icon}</S.IconWrapper>
+      {text}
+    </S.StyledButtonPrivate>
+  );
+}
 
 export const ButtonRoundBig = withTooltip(ButtonRoundBigBase);

@@ -29,7 +29,7 @@ export type BreadcrumbsProps = {
   size?: Size;
 };
 
-export const Breadcrumbs = ({
+export function Breadcrumbs({
   items,
   children,
   onClick,
@@ -39,7 +39,7 @@ export const Breadcrumbs = ({
   renderItem,
   crumbMaxLength = CRUMB_MAX_LENGTH,
   size = Size.Big,
-}: BreadcrumbsProps): JSX.Element => {
+}: BreadcrumbsProps): JSX.Element {
   const [isVisible, setVisible] = useState(false);
   const [isTextCut, setTextCut] = useState(false);
   const [visibleElementsCount, setVisibleElementsCount] = useState(1);
@@ -274,6 +274,6 @@ export const Breadcrumbs = ({
       {children && <ChildrenContainerStyled data-extension>{children}</ChildrenContainerStyled>}
     </ContainerStyled>
   );
-};
+}
 
 Breadcrumbs.size = Size;

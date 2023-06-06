@@ -15,22 +15,24 @@ export type ButtonIconTransparentProps = CommonButtonPropsWithOptionalTooltip & 
   rounded?: boolean;
 };
 
-const ButtonIconTransparentBase = ({
+function ButtonIconTransparentBase({
   icon,
   variant = Variant.Default,
   rounded,
   className,
   ...rest
-}: ButtonIconTransparentProps) => (
-  <S.StyledButtonPrivate
-    className={className}
-    data-variant={variant}
-    data-rounded={rounded || undefined}
-    {...extractCommonButtonProps(rest)}
-  >
-    {icon}
-  </S.StyledButtonPrivate>
-);
+}: ButtonIconTransparentProps) {
+  return (
+    <S.StyledButtonPrivate
+      className={className}
+      data-variant={variant}
+      data-rounded={rounded || undefined}
+      {...extractCommonButtonProps(rest)}
+    >
+      {icon}
+    </S.StyledButtonPrivate>
+  );
+}
 
 const ButtonIconTransparentWithTooltip = withTooltip(ButtonIconTransparentBase);
 

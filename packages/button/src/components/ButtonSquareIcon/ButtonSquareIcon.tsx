@@ -14,11 +14,13 @@ export type ButtonSquareIconProps = CommonButtonPropsWithOptionalTooltip & {
   variant?: Variant;
 };
 
-const ButtonSquareIconBase = ({ icon, variant = Variant.Default, className, ...rest }: ButtonSquareIconProps) => (
-  <S.StyledButtonPrivate className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
-    {icon}
-  </S.StyledButtonPrivate>
-);
+function ButtonSquareIconBase({ icon, variant = Variant.Default, className, ...rest }: ButtonSquareIconProps) {
+  return (
+    <S.StyledButtonPrivate className={className} data-variant={variant} {...extractCommonButtonProps(rest)}>
+      {icon}
+    </S.StyledButtonPrivate>
+  );
+}
 
 const ButtonSquareIconWithTooltip = withTooltip(ButtonSquareIconBase);
 
