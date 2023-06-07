@@ -67,6 +67,9 @@ const mainConfig = {
     reactDocgen: 'react-docgen-typescript',
     checkOptions: {},
   },
+  core: {
+    disableTelemetry: true,
+  },
   features: {
     storyStoreV7: false,
   },
