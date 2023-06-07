@@ -43,7 +43,7 @@ const decorators: DecoratorFunction[] = [
                         Go <Link href={snackUiLink} text={'here'} /> to see the new component
                       </>
                     ) : (
-                      'See Readme in the Right panel for more infoGroups'
+                      'See Readme in the Right panel for more info'
                     )}
                   </>
                 }

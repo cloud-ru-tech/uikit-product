@@ -5,19 +5,19 @@ import { TextField } from '@sbercloud/uikit-product-text-field';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Info, InfoProps } from '../src';
+import { InfoBlock, InfoBlockProps } from '../src';
 import { LabelWithTooltip } from '../src/components/LabelWithTooltip';
 
 export default {
-  title: 'Not stable/Info',
-  component: Info,
+  title: 'Not stable/Layout/LayoutWithGroups',
+  component: InfoBlock,
 } as Meta;
 
-const Template: StoryFn<InfoProps> = ({ ...args }) => <Info {...args} />;
+const Template: StoryFn<InfoBlockProps> = ({ ...args }) => <InfoBlock {...args} />;
 
-export const infoGroups = Template.bind({});
+export const layoutWithGroups = Template.bind({});
 
-infoGroups.args = {
+layoutWithGroups.args = {
   groups: [
     {
       title: 'Общие параметры',
@@ -50,9 +50,9 @@ infoGroups.args = {
   showButton: true,
 };
 
-infoGroups.argTypes = {};
+layoutWithGroups.argTypes = {};
 
-infoGroups.parameters = {
+layoutWithGroups.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

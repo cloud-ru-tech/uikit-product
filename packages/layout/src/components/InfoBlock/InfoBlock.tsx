@@ -2,10 +2,11 @@ import { ReactNode } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 import { Divider } from '@sbercloud/uikit-product-divider';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
 
-export type InfoProps = {
+export type InfoBlockProps = WithSupportProps<{
   groups: {
     title?: ReactNode;
     items: {
@@ -16,9 +17,9 @@ export type InfoProps = {
   buttonText: string;
   onClick(): void;
   showButton?: boolean;
-};
+}>;
 
-export function Info({ groups, buttonText, onClick, showButton }: InfoProps) {
+export function InfoBlock({ groups, buttonText, onClick, showButton }: InfoBlockProps) {
   return (
     <S.InfoWrapper>
       {groups.map(({ title, items }, groupIdx) => (

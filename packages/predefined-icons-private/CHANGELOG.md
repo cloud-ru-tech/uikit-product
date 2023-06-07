@@ -310,7 +310,7 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ### Features
 
-- **FF-153:** Added new icons (infoGroups, attention critical, attention warning) and new variant (on accent) to predefined icons ([8c1adf7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8c1adf7f03d095c4725f466986815c87ce0b970c))
+- **FF-153:** Added new icons (info, attention critical, attention warning) and new variant (on accent) to predefined icons ([8c1adf7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8c1adf7f03d095c4725f466986815c87ce0b970c))
 - **FF-153:** Decor Icon added to Predefined Icons Private ([dc1702d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc1702daae2e393d25b9c6ee8a7d6fffecde2a35))
 
 ## [0.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.1.4...@sbercloud/uikit-product-predefined-icons-private@0.1.5) (2022-06-23)

@@ -16,5 +16,11 @@ module.exports = {
         'jest/no-done-callback': 'off',
       },
     },
+    {
+      files: ['packages/*/stories/**/*', 'storybook/stories/**/*'],
+      rules: {
+        'react/function-component-definition': 'off',
+      },
+    },
   ],
 };

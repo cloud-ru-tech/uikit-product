@@ -13,7 +13,7 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import { Variant } from './constants';
 import * as S from './styled';
 
-export type AccordionProps = {
+export type AccordionProps = WithSupportProps<{
   header: string;
   subheader: string;
   content: string | ReactNode;
@@ -23,7 +23,7 @@ export type AccordionProps = {
   variant?: Variant;
   disabled?: boolean;
   hasExpandedAnimation?: boolean;
-};
+}>;
 
 export function Accordion({
   header,
@@ -36,7 +36,7 @@ export function Accordion({
   tooltip,
   hasExpandedAnimation = true,
   ...rest
-}: WithSupportProps<AccordionProps>) {
+}: AccordionProps) {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const toggleCollapsed = () => setIsCollapsed(prevState => !prevState);

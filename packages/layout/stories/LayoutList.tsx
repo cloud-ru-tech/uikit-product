@@ -3,19 +3,19 @@ import { Meta, StoryFn } from '@storybook/react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Info, InfoProps } from '../src';
+import { InfoBlock, InfoBlockProps } from '../src';
 import { LabelWithTooltip } from '../src/components/LabelWithTooltip';
 
 export default {
-  title: 'Not stable/Info',
-  component: Info,
+  title: 'Not stable/Layout/LayoutList',
+  component: InfoBlock,
 } as Meta;
 
-const Template: StoryFn<InfoProps> = ({ ...args }) => <Info {...args} />;
+const Template: StoryFn<InfoBlockProps> = ({ ...args }) => <InfoBlock {...args} />;
 
-export const infiList = Template.bind({});
+export const LayoutList = Template.bind({});
 
-infiList.args = {
+LayoutList.args = {
   groups: [
     {
       title: 'Заголовок',
@@ -39,9 +39,9 @@ infiList.args = {
   showButton: true,
 };
 
-infiList.argTypes = {};
+LayoutList.argTypes = {};
 
-infiList.parameters = {
+LayoutList.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

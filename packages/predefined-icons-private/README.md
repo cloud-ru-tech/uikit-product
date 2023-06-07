@@ -65,7 +65,7 @@ enum Variants {
 }
 
 enum Icon {
-  Info = 'infoGroups',
+  Info = 'info',
   Success = 'success',
   AttentionCritical = 'attention-critical',
   AttentionWarning = 'attention-warning',
