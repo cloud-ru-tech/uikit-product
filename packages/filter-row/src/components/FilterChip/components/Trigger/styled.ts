@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H5_STYLES } from '@sbercloud/uikit-product-typography';
+import { H5_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -30,4 +30,8 @@ export const Chip = styled.div`
 
 export const FilterLabel = styled.span`
   ${H5_STYLES};
+`;
+
+export const InnerLabel = styled.span`
+  ${TEXT_2_STYLES};
 `;

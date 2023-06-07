@@ -2,7 +2,15 @@ import { Tag } from '@sbercloud/uikit-product-tag';
 
 import { FilterRow, FilterRowProps } from '../src';
 
-export const filtersMock: FilterRowProps['filters'] = [
+export type Filters = {
+  vms: string[];
+  images: string[];
+  ip: boolean;
+  tags: string[];
+  dates: Date[];
+};
+
+export const filtersMock: FilterRowProps<Filters>['filters'] = [
   {
     type: FilterRow.filterTypes.Select,
     id: 'vms',
@@ -62,5 +70,11 @@ export const filtersMock: FilterRowProps['filters'] = [
       },
     ],
     withSearch: true,
+  },
+
+  {
+    type: FilterRow.filterTypes.Date,
+    id: 'dates',
+    label: 'Дата создания',
   },
 ];

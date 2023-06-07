@@ -1,11 +1,13 @@
 import { forwardRef, ForwardRefExoticComponent, RefAttributes } from 'react';
 
 import { FilterChipRadio, FilterChipSelect } from './components';
+import { FilterChipDate } from './components/FilterChipDate/FilterChipDate';
 import { ComponentProps, FilterChipProps, FilterChipType } from './types';
 
 const FILTER_COMPONENTS = {
   [FilterChipType.Select]: FilterChipSelect,
   [FilterChipType.Radio]: FilterChipRadio,
+  [FilterChipType.Date]: FilterChipDate,
 };
 
 export const ForwardedFilterChip = forwardRef(({ type, ...props }: FilterChipProps, ref) => {

@@ -11,25 +11,27 @@ type RemoveKey<Type, Key> = {
   [Property in keyof Type as Exclude<Property, Key>]: Type[Property];
 };
 type ClearFilterFn = { handleClearFilter(): void };
-type FilterValue = Parameters<FilterChipProps['onChange']>[number];
+export type FilterValue = Parameters<FilterChipProps['onChange']>[number];
 type ForwardedRefs = { [id: string]: ClearFilterFn };
-export type FiltersState = { [id: string]: FilterValue };
+export type FiltersDefaultState = { [id: string]: FilterValue };
 
-export type FilterRowProps = WithSupportProps<{
+export type FilterRowProps<T> = WithSupportProps<{
   filters: RemoveKey<FilterChipProps, 'onChange'>[];
-  onChange(filters: FiltersState): void;
+  onChange(filters: T): void;
   className?: string;
   withSingleFilterClearButton?: boolean;
 }>;
 
-export function FilterRow({
+export type FiltersState = Record<string, unknown>;
+
+export function FilterRow<T extends FiltersState>({
   filters,
   onChange,
   className,
   withSingleFilterClearButton = true,
   ...rest
-}: FilterRowProps) {
-  const [state, setState] = useState<FiltersState>({});
+}: FilterRowProps<T>) {
+  const [state, setState] = useState<T>({} as T);
   const filtersRefs = useRef<ForwardedRefs>({});
 
   const handleChange = (fieldId: string, value: FilterValue) => {
@@ -40,7 +42,7 @@ export function FilterRow({
   };
 
   const handleFiltersClear = () => {
-    setState({});
+    setState({} as T);
     Object.values(filtersRefs.current).forEach(f => f.handleClearFilter());
   };
 
@@ -51,7 +53,7 @@ export function FilterRow({
 
   const hasAnyFilter = Object.values(state).some(filter => {
     if (Array.isArray(filter)) {
-      return filter.length > 0;
+      return filter.length > 0 && Object.values(filter).some(Boolean);
     }
 
     return typeof filter === 'boolean' ? true : Boolean(filter);

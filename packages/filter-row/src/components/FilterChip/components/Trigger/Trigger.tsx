@@ -8,13 +8,14 @@ type FilterTriggerProps = {
   innerLabel: ReactNode;
   showClearButton?: boolean;
   onClear(): void;
+  onClick?(): void;
 } & ChipFilterLabelValue;
 
 export const Trigger = forwardRef<HTMLDivElement, FilterTriggerProps>(
-  ({ label, icon, innerLabel, showClearButton, onClear }, ref) => (
-    <S.Chip ref={ref}>
+  ({ label, icon, innerLabel, showClearButton, onClear, onClick }, ref) => (
+    <S.Chip onClick={onClick} ref={ref}>
       <S.FilterLabel>{label || icon}:</S.FilterLabel>
-      {innerLabel}
+      <S.InnerLabel>{innerLabel}</S.InnerLabel>
 
       {showClearButton && <ClearFilterButton onClick={onClear} />}
     </S.Chip>

@@ -4,7 +4,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { FilterRow, FilterRowProps } from '../src';
-import { filtersMock } from './helpers';
+import { Filters, filtersMock } from './helpers';
 
 const meta: Meta = {
   title: 'Not stable/Filter Row',
@@ -12,11 +12,11 @@ const meta: Meta = {
 };
 export default meta;
 
-function Template({ ...args }: FilterRowProps) {
+function Template({ ...args }: FilterRowProps<Filters>) {
   return <FilterRow {...args} />;
 }
 
-export const filterRow: StoryFn<FilterRowProps> = Template.bind({});
+export const filterRow: StoryFn<FilterRowProps<Filters>> = Template.bind({});
 filterRow.args = {
   filters: filtersMock,
   // eslint-disable-next-line no-console
