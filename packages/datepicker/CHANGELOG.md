@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.14.8 (2023-06-08)
+
+
+### Bug Fixes
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** fixes after eslint update ([df8d91b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df8d91bb99fc72a01d184327033619580c827b38))
+
+
+
+
+
 ## 0.14.7 (2023-06-05)
 
 ### Only dependencies have been changed
@@ -217,7 +228,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.13.2 (2023-01-25)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-datepicker
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-divider@2.0.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@sbercloud/uikit-product-switch@3.0.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/switch/CHANGELOG.md)
 
 ## [0.13.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.13.0...@sbercloud/uikit-product-datepicker@0.13.1) (2023-01-12)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.16.108 (2023-06-08)
+
+
+### Bug Fixes
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** fixes after eslint update ([df8d91b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df8d91bb99fc72a01d184327033619580c827b38))
+
+
+
+
+
 ## 0.16.107 (2023-06-06)
 
 ### Only dependencies have been changed
@@ -342,7 +353,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.16.80 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-toolbar
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button-private@2.0.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-button@5.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-divider@2.0.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@sbercloud/uikit-product-dropdown@0.17.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+* [@sbercloud/uikit-product-filter@0.18.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/filter/CHANGELOG.md)
+* [@sbercloud/uikit-product-input-private@3.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
 
 ## 0.16.79 (2023-01-30)
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-textarea",
   "title": "React Textarea",
-  "version": "2.2.53",
+  "version": "2.2.54",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-input-decorator-private": "3.0.27",
-    "@sbercloud/uikit-product-textarea-private": "2.5.35",
+    "@sbercloud/uikit-product-input-decorator-private": "3.0.28",
+    "@sbercloud/uikit-product-textarea-private": "2.5.36",
     "@sbercloud/uikit-product-utils": "3.2.4"
   }
 }

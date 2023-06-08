@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.1.25 (2023-06-08)
+
+
+### Bug Fixes
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** fixes after eslint update ([df8d91b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df8d91bb99fc72a01d184327033619580c827b38))
+
+
+
+
+
 ## 5.1.24 (2023-06-05)
 
 ### Only dependencies have been changed
@@ -199,7 +210,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.6 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-notification
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.1.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
 
 ## 5.1.5 (2023-01-25)
 

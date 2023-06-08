@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-06-08)
+
+
+### Bug Fixes
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** fixes after eslint update ([df8d91b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df8d91bb99fc72a01d184327033619580c827b38))
+
+
+### Features
+
+* **[LK-1867](https://jira.sbercloud.tech/browse/LK-1867):** add cursor pointer on text in CardTopic ([f414f05](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f414f05abcc5aca4ccee24caa38b5e388730b1a0))
+
+
+
+
+
 ## 2.0.3 (2023-06-05)
 
 ### Only dependencies have been changed
@@ -308,7 +324,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.1.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.1.10...@sbercloud/uikit-product-cards@1.1.11) (2022-12-07)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-cards
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.1.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-truncate-string@0.7.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 ## [1.1.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-cards@1.1.9...@sbercloud/uikit-product-cards@1.1.10) (2022-12-01)
 

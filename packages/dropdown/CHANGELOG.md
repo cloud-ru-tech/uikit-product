@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.17.5 (2023-06-08)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-tooltip-private@1.2.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip-private/CHANGELOG.md)
+
+
+
+
+
 ## 0.17.4 (2023-06-02)
 
 ### Only dependencies have been changed

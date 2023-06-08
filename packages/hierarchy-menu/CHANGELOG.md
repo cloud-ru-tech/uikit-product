@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.33 (2023-06-08)
+
+
+### Bug Fixes
+
+* **[FF-2440](https://jira.sbercloud.tech/browse/FF-2440):** fixes after eslint update ([df8d91b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df8d91bb99fc72a01d184327033619580c827b38))
+
+
+
+
+
 ## 0.9.32 (2023-06-05)
 
 ### Only dependencies have been changed
@@ -154,7 +165,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.9.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-hierarchy-menu@0.9.15...@sbercloud/uikit-product-hierarchy-menu@0.9.16) (2022-11-28)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-hierarchy-menu
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-divider@2.0.45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
 
 ## [0.9.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-hierarchy-menu@0.9.14...@sbercloud/uikit-product-hierarchy-menu@0.9.15) (2022-11-17)
 
