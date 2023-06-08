@@ -12,10 +12,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Textarea, TextareaProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Textarea',
   component: Textarea,
-} as Meta;
+};
+export default meta;
 
 const FocusBtn = styled(Button)`
   margin-top: 16px;
@@ -25,7 +26,7 @@ const Separator = styled(Divider)`
   margin-top: 50px;
 `;
 
-const Template: StoryFn<TextareaProps> = ({ ...args }) => {
+function Template({ ...args }: TextareaProps) {
   const [value, setValue] = useState(args.value || '');
   useEffect(() => {
     setValue(args.value);
@@ -45,9 +46,9 @@ const Template: StoryFn<TextareaProps> = ({ ...args }) => {
       <FocusBtn text={'Focus'} onClick={() => ref.current?.focus()} />
     </>
   );
-};
+}
 
-export const textarea = Template.bind({});
+export const textarea: StoryFn<TextareaProps> = Template.bind({});
 textarea.args = {
   placeholder: 'placeholder',
   label: 'Label',

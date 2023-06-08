@@ -6,10 +6,11 @@ import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { StatusDot, StatusDotProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Status/Status Dot',
   component: StatusDot,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   width: 400px;
@@ -55,43 +56,45 @@ const Name = styled.span`
   font-size: 14px;
 `;
 
-const Template: StoryFn<StatusDotProps> = ({ ...args }) => (
-  <Container>
-    <Column>
-      <Title>Controlled</Title>
-      <Row>
-        <StatusDot {...args} />
-      </Row>
-    </Column>
-    <ColumnWrapper>
+function Template({ ...args }: StatusDotProps) {
+  return (
+    <Container>
       <Column>
-        <Title>Sizes</Title>
-        {Object.entries(StatusDot.sizes).map(([name, size]) => (
-          <Row key={name}>
-            <Name>{name}</Name>
-            <StatusDotWrapper>
-              <StatusDot type={StatusDot.types.Neutral} size={size} />
-            </StatusDotWrapper>
-          </Row>
-        ))}
+        <Title>Controlled</Title>
+        <Row>
+          <StatusDot {...args} />
+        </Row>
       </Column>
+      <ColumnWrapper>
+        <Column>
+          <Title>Sizes</Title>
+          {Object.entries(StatusDot.sizes).map(([name, size]) => (
+            <Row key={name}>
+              <Name>{name}</Name>
+              <StatusDotWrapper>
+                <StatusDot type={StatusDot.types.Neutral} size={size} />
+              </StatusDotWrapper>
+            </Row>
+          ))}
+        </Column>
 
-      <Column>
-        <Title>Types</Title>
-        {Object.entries(StatusDot.types).map(([name, type]) => (
-          <Row key={name}>
-            <Name>{name}</Name>
-            <StatusDotWrapper>
-              <StatusDot size={StatusDot.sizes.Small} type={type} />
-            </StatusDotWrapper>
-          </Row>
-        ))}
-      </Column>
-    </ColumnWrapper>
-  </Container>
-);
+        <Column>
+          <Title>Types</Title>
+          {Object.entries(StatusDot.types).map(([name, type]) => (
+            <Row key={name}>
+              <Name>{name}</Name>
+              <StatusDotWrapper>
+                <StatusDot size={StatusDot.sizes.Small} type={type} />
+              </StatusDotWrapper>
+            </Row>
+          ))}
+        </Column>
+      </ColumnWrapper>
+    </Container>
+  );
+}
 
-export const statusDot = Template.bind({});
+export const statusDot: StoryFn<StatusDotProps> = Template.bind({});
 
 statusDot.parameters = getDefaultParameters({
   figmaUrl:

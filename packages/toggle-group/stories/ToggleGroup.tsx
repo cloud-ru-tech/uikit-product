@@ -8,12 +8,13 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ToggleCard, ToggleGroup, ToggleGroupProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Toggle Group/Toggle Group',
   component: ToggleGroup,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ToggleGroupProps> = args => {
+function Template(args: ToggleGroupProps) {
   const [value, setValue] = useState<number[]>();
 
   return (
@@ -57,9 +58,9 @@ const Template: StoryFn<ToggleGroupProps> = args => {
       />
     </ToggleGroup>
   );
-};
+}
 
-export const toggleGroup = Template.bind({});
+export const toggleGroup: StoryFn<ToggleGroupProps> = Template.bind({});
 toggleGroup.args = { mode: ToggleGroup.mode.Checkbox, breakpoint: 250 };
 toggleGroup.argTypes = {};
 toggleGroup.parameters = {

@@ -4,16 +4,17 @@ import { ButtonTable, ButtonTableManagedLoading, ButtonTableProps } from '../src
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters, onClick } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Button Table',
   component: ButtonTable,
-} as Meta;
+};
+export default meta;
 
 type StoryProps = ButtonTableProps & {
   getProgressText: string;
 };
 
-const Template: StoryFn<StoryProps> = ({ getProgressText, ...args }: StoryProps) => {
+function Template({ getProgressText, ...args }: StoryProps) {
   let getProgressTextEvaluated: ButtonTableProps['getProgressText'];
 
   try {
@@ -57,9 +58,9 @@ const Template: StoryFn<StoryProps> = ({ getProgressText, ...args }: StoryProps)
       ))}
     </TableWrapper>
   );
-};
+}
 
-export const buttonTable = Template.bind({});
+export const buttonTable: StoryFn<StoryProps> = Template.bind({});
 
 buttonTable.parameters = getDefaultParameters({
   figmaUrl:

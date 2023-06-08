@@ -22,10 +22,11 @@ import {
 } from '../src';
 import { groupedServices, services } from './helpers/mockData';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Select/Select',
   component: Select,
-} as Meta;
+};
+export default meta;
 
 const StyledLogoWrap = styled.div`
   display: flex;
@@ -50,7 +51,7 @@ const Footer = styled.div`
   padding: 20px;
 `;
 
-const Template: StoryFn<SelectProps> = ({
+function Template({
   type,
   isMulti,
   showLogo,
@@ -61,12 +62,12 @@ const Template: StoryFn<SelectProps> = ({
   optionPosition,
   isSearchableCustom,
   ...restProps
-}) => {
+}: SelectProps) {
   const [value, setValue] = useState<OptionTypeBase>();
 
   const getOption = () => {
     if (isMulti) {
-      return ({ data, hasValue, getValue }: OptionPrefixProps) => {
+      return function ({ data, hasValue, getValue }: OptionPrefixProps) {
         const isChecked = hasValue && (getValue() || []).indexOf(data) !== -1;
 
         if (optionPosition === 'prefix') {
@@ -94,7 +95,7 @@ const Template: StoryFn<SelectProps> = ({
     }
 
     if (showLogo) {
-      return ({ data, data: { logo }, hasValue, getValue }: OptionPrefixProps): JSX.Element => {
+      return function ({ data, data: { logo }, hasValue, getValue }: OptionPrefixProps): JSX.Element {
         const isChecked = hasValue && (getValue() || []).indexOf(data) !== -1;
 
         if (optionPosition && optionPosition.includes('prefix')) {
@@ -119,7 +120,9 @@ const Template: StoryFn<SelectProps> = ({
       };
     }
 
-    return () => <QuestionInterfaceSVG size={20} />;
+    return function () {
+      return <QuestionInterfaceSVG size={20} />;
+    };
   };
 
   const getOptionProp = () => {
@@ -187,9 +190,9 @@ const Template: StoryFn<SelectProps> = ({
       type={showLogo || showOption ? 'with-logo' : type}
     />
   );
-};
+}
 
-export const select = Template.bind({});
+export const select: StoryFn<SelectProps> = Template.bind({});
 
 select.args = {
   error: undefined,

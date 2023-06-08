@@ -9,9 +9,10 @@ import componentReadme from '../README.md';
 import { TEXT_1_STYLES, TEXT_2_STYLES, TEXT_3_STYLES, TEXT_4_STYLES } from '../src';
 import { commonTemplate, TypographyStoryConfig } from './helpers/CommonTemplate';
 
-export default {
+const meta: Meta = {
   title: 'Typography/Text',
-} as Meta;
+};
+export default meta;
 
 const textConfig: TypographyStoryConfig = [
   {

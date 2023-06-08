@@ -6,14 +6,15 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { MultiSelect } from '../src/components/MultiSelect';
+import { MultiSelect, MultiSelectProps } from '../src/components/MultiSelect';
 import { KEYS_TO_BREAK } from '../src/constants';
 import { MultiselectOptionType } from '../src/helpers/types';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Select/Multi Select',
   component: MultiSelect,
-} as Meta;
+};
+export default meta;
 
 const options = [
   {
@@ -48,7 +49,7 @@ const options = [
   },
 ];
 
-const Template: StoryFn = ({ ...args }) => {
+function Template({ ...args }: MultiSelectProps) {
   const [inputValue, setInputValue] = useState('');
   const [selectedOptions, setSelectedOptions] = useState<MultiselectOptionType[] | []>([]);
 
@@ -96,9 +97,9 @@ const Template: StoryFn = ({ ...args }) => {
       options={options}
     />
   );
-};
+}
 
-export const multiSelect = Template.bind({});
+export const multiSelect: StoryFn<MultiSelectProps> = Template.bind({});
 
 multiSelect.args = {
   label: 'Label',

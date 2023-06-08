@@ -16,10 +16,11 @@ import { ConfigProvider, ConfigProviderProps, LanguageCodeType, Themes, useLangu
 
 const { GREY } = EXPORT_VARS;
 
-export default {
+const meta: Meta = {
   title: 'Utils/Config Provider',
   component: ConfigProvider,
-} as Meta;
+};
+export default meta;
 
 const ConfigBody = styled.div`
   display: grid;
@@ -89,7 +90,7 @@ const ThemeWrapper = styled.span<{ theme: Themes }>`
   color: ${props => COLOR_MAP[props.theme]};
 `;
 
-const Template: StoryFn<ConfigProviderProps> = ({ ...args }) => {
+function Template({ ...args }: ConfigProviderProps) {
   const { changeTheme, theme } = useTheme();
   const { languageCode, changeLanguage } = useLanguage();
   return (
@@ -132,9 +133,9 @@ const Template: StoryFn<ConfigProviderProps> = ({ ...args }) => {
       </Wrapper>
     </ConfigProvider>
   );
-};
+}
 
-export const configProvider = Template.bind({});
+export const configProvider: StoryFn<ConfigProviderProps> = Template.bind({});
 configProvider.args = {};
 configProvider.argTypes = {};
 configProvider.parameters = {

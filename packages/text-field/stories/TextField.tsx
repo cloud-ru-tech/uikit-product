@@ -44,12 +44,13 @@ const DEFAULT_ARGS = {
 
 const SECURED_ARGS = { ...DEFAULT_ARGS, type: Types.Password };
 
-export default {
+const meta: Meta = {
   title: 'Components/Text Field',
   component: TextField,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<TextFieldProps> = ({ ...args }) => {
+function Template({ ...args }: TextFieldProps) {
   const [text, setText] = useState(args.text);
 
   const onRequestSecuredField = async () => {
@@ -88,9 +89,9 @@ const Template: StoryFn<TextFieldProps> = ({ ...args }) => {
       <TextField {...SECURED_ARGS} onRequestSecuredField={onRequestSecuredFieldWithError} />
     </Container>
   );
-};
+}
 
-export const textField = Template.bind({});
+export const textField: StoryFn<TextFieldProps> = Template.bind({});
 
 textField.args = DEFAULT_ARGS;
 textField.parameters = {

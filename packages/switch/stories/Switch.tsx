@@ -11,10 +11,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Switch as SwitchComponent, SwitchProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Switch/Switch',
   component: SwitchComponent,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   width: 200px;
@@ -27,7 +28,7 @@ const Container = styled.div`
   background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
-const Template: StoryFn<SwitchProps> = ({ checked: propsChecked, size, ...args }) => {
+function Template({ checked: propsChecked, size, ...args }: SwitchProps) {
   const [checked, setChecked] = useState(propsChecked || false);
   const [key, setKey] = useState(0);
   useEffect(() => setKey(x => x + 1), [size]);
@@ -36,9 +37,9 @@ const Template: StoryFn<SwitchProps> = ({ checked: propsChecked, size, ...args }
       <SwitchComponent {...args} onChange={setChecked} size={size} checked={checked} key={key} />
     </Container>
   );
-};
+}
 
-export const Switch = Template.bind({});
+export const Switch: StoryFn<SwitchProps> = Template.bind({});
 Switch.argTypes = {};
 Switch.parameters = {
   readme: {

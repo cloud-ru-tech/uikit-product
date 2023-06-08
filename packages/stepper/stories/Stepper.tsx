@@ -15,10 +15,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Stepper, StepsProps, useStepperContext } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Stepper',
   component: Stepper.Steps,
-} as Meta;
+};
+export default meta;
 
 const Row = styled.div`
   display: flex;
@@ -40,7 +41,7 @@ type FormValues = {
   thirdStep: string;
 };
 
-const StepsView = ({ steps, className }: StepsProps) => {
+function StepsView({ steps, className }: StepsProps) {
   const { moveForward, moveToPrevStep, currentStepIndex, clearErrors, raiseCurrentStepError } = useStepperContext();
   const formMethods = useForm<FormValues>();
 
@@ -83,15 +84,17 @@ const StepsView = ({ steps, className }: StepsProps) => {
       </Row>
     </FormProvider>
   );
-};
+}
 
-const Template: StoryFn<StepsProps> = ({ ...args }) => (
-  <Stepper.Context stepsCount={args.steps.length}>
-    <StepsView {...args} />
-  </Stepper.Context>
-);
+function Template({ ...args }: StepsProps) {
+  return (
+    <Stepper.Context stepsCount={args.steps.length}>
+      <StepsView {...args} />
+    </Stepper.Context>
+  );
+}
 
-const FirstStepContent = () => {
+function FirstStepContent() {
   const { watch, setError, clearErrors: clearFormErrors } = useFormContext();
   const { setValidator, clearErrors: clearStepperErrors } = useStepperContext();
   const firstStepField = watch(FIRST_STEP_FIELD_NAME);
@@ -133,9 +136,9 @@ const FirstStepContent = () => {
       />
     </div>
   );
-};
+}
 
-const SecondStepContent = () => {
+function SecondStepContent() {
   const { watch, setError, clearErrors: clearFormErrors } = useFormContext();
   const { setValidator, clearErrors: clearStepperErrors } = useStepperContext();
   const secondStepField = watch(SECOND_STEP_FIELD_NAME);
@@ -177,9 +180,9 @@ const SecondStepContent = () => {
       />
     </div>
   );
-};
+}
 
-const ThirdStepContent = () => {
+function ThirdStepContent() {
   const { watch, setError, clearErrors: clearFormErrors } = useFormContext();
   const { setValidator, clearErrors: clearStepperErrors } = useStepperContext();
   const thirdStepField = watch(THIRD_STEP_FIELD_NAME);
@@ -222,9 +225,9 @@ const ThirdStepContent = () => {
       />
     </div>
   );
-};
+}
 
-export const stepper = Template.bind({});
+export const stepper: StoryFn<StepsProps> = Template.bind({});
 stepper.args = {
   steps: [
     { label: 'Step1', content: <FirstStepContent />, id: '1' },

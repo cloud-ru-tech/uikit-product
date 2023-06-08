@@ -11,9 +11,10 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { COLORS_DEFAULT_MAP, EXPORT_VARS } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Theme/Colors',
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   display: grid;
@@ -114,28 +115,30 @@ const color_hex = JSON.parse(`{
     .replace(/.$/, '')}
 }`);
 
-const Template: StoryFn<typeof EXPORT_VARS.PRESET> = () => (
-  <Wrapper>
-    {COLOR_VARIANT_LIST.map(colorVariant => (
-      <Group key={colorVariant.name}>
-        <Title background={colorVariant.background} color={colorVariant.color}>
-          <Name>{colorVariant.name}</Name>
-        </Title>
-        {Object.entries(colorVariant.value).map(([key, color]) => (
-          <Item key={key} border={colorVariant.background}>
-            <Color data-color={color} background={color} key={key} />
-            <Text>
-              <Caption>{key}</Caption>
-              <Caption>{color_hex[color]}</Caption>
-            </Text>
-          </Item>
-        ))}
-      </Group>
-    ))}
-  </Wrapper>
-);
+function Template() {
+  return (
+    <Wrapper>
+      {COLOR_VARIANT_LIST.map(colorVariant => (
+        <Group key={colorVariant.name}>
+          <Title background={colorVariant.background} color={colorVariant.color}>
+            <Name>{colorVariant.name}</Name>
+          </Title>
+          {Object.entries(colorVariant.value).map(([key, color]) => (
+            <Item key={key} border={colorVariant.background}>
+              <Color data-color={color} background={color} key={key} />
+              <Text>
+                <Caption>{key}</Caption>
+                <Caption>{color_hex[color]}</Caption>
+              </Text>
+            </Item>
+          ))}
+        </Group>
+      ))}
+    </Wrapper>
+  );
+}
 
-export const Colors = Template.bind({});
+export const Colors: StoryFn<typeof EXPORT_VARS.PRESET> = Template.bind({});
 
 Colors.parameters = {
   readme: {

@@ -11,10 +11,12 @@ import { Breadcrumbs, BreadcrumbsProps } from '../src';
 import { BreadcrumbItem } from '../src/helpers/types';
 import { docker, fm, items, longItems, longSingle, longTwice } from './helpers/mockData';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Breadcrumbs',
   component: Breadcrumbs,
-} as Meta;
+};
+
+export default meta;
 
 function CaseWrapper({ children, title }: PropsWithChildren<{ title: string }>) {
   return (
@@ -25,7 +27,7 @@ function CaseWrapper({ children, title }: PropsWithChildren<{ title: string }>) 
   );
 }
 
-const Template: StoryFn<BreadcrumbsProps> = ({ ...args }) => {
+function Template({ ...args }: BreadcrumbsProps) {
   const [data, setData] = useState<BreadcrumbItem[]>([]);
   return (
     <>
@@ -65,9 +67,9 @@ const Template: StoryFn<BreadcrumbsProps> = ({ ...args }) => {
       <Button onClick={() => setData(fm)} text='Set data' />
     </>
   );
-};
+}
 
-export const breadcrumbs = Template.bind({});
+export const breadcrumbs: StoryFn<BreadcrumbsProps> = Template.bind({});
 breadcrumbs.args = {};
 breadcrumbs.parameters = {
   readme: {

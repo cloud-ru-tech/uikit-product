@@ -10,10 +10,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Spinner, SpinnerProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Spinner',
   component: Spinner,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   width: 500px;
@@ -23,13 +24,15 @@ const Container = styled.div`
   background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
-const Template: StoryFn<SpinnerProps> = ({ ...args }) => (
-  <Container>
-    <Spinner {...args} />
-  </Container>
-);
+function Template({ ...args }: SpinnerProps) {
+  return (
+    <Container>
+      <Spinner {...args} />
+    </Container>
+  );
+}
 
-export const spinner = Template.bind({});
+export const spinner: StoryFn<SpinnerProps> = Template.bind({});
 spinner.args = {};
 spinner.argTypes = {};
 spinner.parameters = {

@@ -13,23 +13,26 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { BagelChart, BagelChartProps } from '../src/components/BagelChart';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Charts/BagelChart',
   component: BagelChart,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   width: 100px;
   overflow: auto;
   resize: horizontal;
 `;
-const Template: StoryFn<BagelChartProps> = ({ ...args }) => (
-  <Wrapper>
-    <BagelChart {...args} />
-  </Wrapper>
-);
+function Template({ ...args }: BagelChartProps) {
+  return (
+    <Wrapper>
+      <BagelChart {...args} />
+    </Wrapper>
+  );
+}
 
-export const bagelChart = Template.bind({});
+export const bagelChart: StoryFn<BagelChartProps> = Template.bind({});
 bagelChart.args = {
   total: 100000,
   value: 75001,

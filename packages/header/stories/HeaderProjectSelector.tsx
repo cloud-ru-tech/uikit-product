@@ -6,7 +6,7 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { HeaderProjectSelector, HeaderProjectSelectorProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Header/Header Project Selector',
   component: HeaderProjectSelector,
   argTypes: {
@@ -29,13 +29,12 @@ export default {
       url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=331%3A8119',
     },
   },
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<HeaderProjectSelectorProps & { showCreateButton: boolean; showEditButton: boolean }> = ({
-  showCreateButton,
-  showEditButton,
-  ...args
-}) => {
+type StoryProps = HeaderProjectSelectorProps & { showCreateButton: boolean; showEditButton: boolean };
+
+function Template({ showCreateButton, showEditButton, ...args }: StoryProps) {
   const [value, setValue] = useState(args.value);
 
   useEffect(() => {
@@ -51,9 +50,9 @@ const Template: StoryFn<HeaderProjectSelectorProps & { showCreateButton: boolean
       value={value}
     />
   );
-};
+}
 
-export const projects = Template.bind({});
+export const projects: StoryFn<StoryProps> = Template.bind({});
 projects.args = {
   showCreateButton: true,
   showEditButton: true,
@@ -96,7 +95,7 @@ projects.args = {
   ],
 };
 
-export const workspaces = Template.bind({});
+export const workspaces: StoryFn<StoryProps> = Template.bind({});
 workspaces.args = {
   showCreateButton: true,
   showEditButton: true,

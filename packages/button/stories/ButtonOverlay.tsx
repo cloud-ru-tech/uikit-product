@@ -6,23 +6,26 @@ import { ButtonOverlay, ButtonOverlayProps } from '../src';
 import { SingleWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Button Overlay',
   component: ButtonOverlay,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ButtonOverlayProps> = ({ ...args }) => (
-  <SingleWrapper>
-    <ButtonOverlay
-      {...args}
-      tooltip={{ content: 'Edit', placement: ButtonOverlay.placements.Bottom }}
-      disabledTooltip={{ content: 'Unavailable', placement: ButtonOverlay.placements.Bottom }}
-      icon={<EditInterfaceSVG />}
-    />
-  </SingleWrapper>
-);
+function Template({ ...args }) {
+  return (
+    <SingleWrapper>
+      <ButtonOverlay
+        {...args}
+        tooltip={{ content: 'Edit', placement: ButtonOverlay.placements.Bottom }}
+        disabledTooltip={{ content: 'Unavailable', placement: ButtonOverlay.placements.Bottom }}
+        icon={<EditInterfaceSVG />}
+      />
+    </SingleWrapper>
+  );
+}
 
-export const buttonOverlay = Template.bind({});
+export const buttonOverlay: StoryFn<ButtonOverlayProps> = Template.bind({});
 
 buttonOverlay.parameters = getDefaultParameters({
   figmaUrl:

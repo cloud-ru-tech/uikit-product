@@ -8,18 +8,19 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InputOverview, InputOverviewProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Input/Overview',
   component: InputOverview,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InputOverviewProps> = args => {
+function Template(args: InputOverviewProps) {
   const [value, setValue] = useState<string>();
 
   return <InputOverview {...args} value={value} onChange={setValue} />;
-};
+}
 
-export const overview = Template.bind({});
+export const overview: StoryFn<InputOverviewProps> = Template.bind({});
 overview.args = {
   label: 'Label',
   labelTooltip: { content: 'Label tooltip content' },

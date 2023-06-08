@@ -12,10 +12,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { OverlayPrivate, OverlayPrivateProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Overlay Private',
   component: OverlayPrivate,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   width: 400px;
@@ -27,7 +28,7 @@ const Container = styled.div`
   padding: 1rem;
 `;
 
-const Template: StoryFn<OverlayPrivateProps> = ({ ...args }) => {
+function Template({ ...args }: OverlayPrivateProps) {
   const [isEnabled, setEnabled] = useState(false);
 
   return (
@@ -37,9 +38,9 @@ const Template: StoryFn<OverlayPrivateProps> = ({ ...args }) => {
       <SwitchRow data-test-id='toggle_overlay' title='toggle overlay' checked={isEnabled} onChange={setEnabled} />
     </Container>
   );
-};
+}
 
-export const overlayPrivate = Template.bind({});
+export const overlayPrivate: StoryFn<OverlayPrivateProps> = Template.bind({});
 
 overlayPrivate.args = {};
 overlayPrivate.argTypes = {};

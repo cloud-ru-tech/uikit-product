@@ -10,10 +10,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CardQuickAction, CardQuickActionProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Cards/Card/Quick Action',
   component: CardQuickAction,
-} as Meta;
+};
+export default meta;
 
 const ICONS = {
   docker: <DockerRegistryDisplaySVG />,
@@ -38,22 +39,24 @@ const Wrapper = styled.div`
   padding: 20px;
 `;
 
-const Template: StoryFn<CardQuickActionProps> = ({ ...args }) => (
-  <>
-    Controlled:
-    <Wrapper>
-      <CardQuickAction {...args} />
-    </Wrapper>
-    Examples:
-    {Object.values(CardQuickAction.variants).map((variant, index) => (
-      <Wrapper key={`${index}${variant}`}>
-        <CardQuickAction {...defaultArgs} variant={variant} />
+function Template({ ...args }: CardQuickActionProps) {
+  return (
+    <>
+      Controlled:
+      <Wrapper>
+        <CardQuickAction {...args} />
       </Wrapper>
-    ))}
-  </>
-);
+      Examples:
+      {Object.values(CardQuickAction.variants).map((variant, index) => (
+        <Wrapper key={`${index}${variant}`}>
+          <CardQuickAction {...defaultArgs} variant={variant} />
+        </Wrapper>
+      ))}
+    </>
+  );
+}
 
-export const quickAction = Template.bind({});
+export const quickAction: StoryFn<CardQuickActionProps> = Template.bind({});
 
 quickAction.args = {
   title: 'Заголовок',

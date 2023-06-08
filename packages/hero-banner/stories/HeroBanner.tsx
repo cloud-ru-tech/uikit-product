@@ -14,12 +14,15 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { HeroBanner, HeroBannerProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Hero Banner',
   component: HeroBanner,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<HeroBannerProps> = ({ ...args }) => <HeroBanner {...args} />;
+function Template({ ...args }: HeroBannerProps) {
+  return <HeroBanner {...args} />;
+}
 
 const bannerClassName = css`
   color: white;
@@ -45,7 +48,7 @@ const ProductText = styled.h3`
   margin-left: 12px;
 `;
 
-export const heroBanner = Template.bind({});
+export const heroBanner: StoryFn<HeroBannerProps> = Template.bind({});
 heroBanner.args = {
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco',
   title: 'ML Space DataHub',

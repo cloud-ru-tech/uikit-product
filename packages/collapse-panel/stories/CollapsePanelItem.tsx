@@ -10,16 +10,17 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CollapsePanelItem, CollapsePanelItemProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/CollapsePanel/Collapse Panel Item',
   component: CollapsePanelItem,
-} as Meta;
+};
+export default meta;
 
 const ContentStyled = styled.div`
   margin-top: 20px;
 `;
 
-const Template: StoryFn<CollapsePanelItemProps> = ({ ...args }) => {
+function Template({ ...args }: CollapsePanelItemProps) {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   return (
@@ -34,9 +35,9 @@ const Template: StoryFn<CollapsePanelItemProps> = ({ ...args }) => {
       <InputCommon value={'Some text'} onChange={() => {}} />
     </CollapsePanelItem>
   );
-};
+}
 
-export const collapsePanelItem = Template.bind({});
+export const collapsePanelItem: StoryFn<CollapsePanelItemProps> = Template.bind({});
 collapsePanelItem.args = {};
 collapsePanelItem.parameters = {
   readme: {

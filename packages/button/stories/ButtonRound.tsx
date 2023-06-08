@@ -6,46 +6,49 @@ import { ButtonRound, ButtonRoundProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Button Round',
   component: ButtonRound,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ButtonRoundProps> = ({ ...args }) => (
-  <TableWrapper>
-    {Object.entries(ButtonRound.variants).map(([key, value]) => (
-      <TableColumn key={key}>
-        <TableCell>{key}</TableCell>
+function Template({ ...args }) {
+  return (
+    <TableWrapper>
+      {Object.entries(ButtonRound.variants).map(([key, value]) => (
+        <TableColumn key={key}>
+          <TableCell>{key}</TableCell>
 
-        <TableCell>
-          <ButtonRound
-            variant={value}
-            tooltip={{ content: key, placement: ButtonRound.placements.Bottom }}
-            disabledTooltip={{ content: 'Unavailable', placement: ButtonRound.placements.Bottom }}
-            icon={<CirclePlayFilledInterfaceSVG />}
-            {...args}
-            text={undefined}
-          />
-        </TableCell>
+          <TableCell>
+            <ButtonRound
+              variant={value}
+              tooltip={{ content: key, placement: ButtonRound.placements.Bottom }}
+              disabledTooltip={{ content: 'Unavailable', placement: ButtonRound.placements.Bottom }}
+              icon={<CirclePlayFilledInterfaceSVG />}
+              {...args}
+              text={undefined}
+            />
+          </TableCell>
 
-        <TableCell>
-          <ButtonRound
-            variant={value}
-            tooltip={{ content: key, placement: ButtonRound.placements.Top }}
-            disabledTooltip={{ content: 'Unavailable', placement: ButtonRound.placements.Top }}
-            {...args}
-          />
-        </TableCell>
+          <TableCell>
+            <ButtonRound
+              variant={value}
+              tooltip={{ content: key, placement: ButtonRound.placements.Top }}
+              disabledTooltip={{ content: 'Unavailable', placement: ButtonRound.placements.Top }}
+              {...args}
+            />
+          </TableCell>
 
-        <TableCell>
-          <ButtonRound variant={value} tooltip={{ content: key }} icon={<CirclePlayFilledInterfaceSVG />} {...args} />
-        </TableCell>
-      </TableColumn>
-    ))}
-  </TableWrapper>
-);
+          <TableCell>
+            <ButtonRound variant={value} tooltip={{ content: key }} icon={<CirclePlayFilledInterfaceSVG />} {...args} />
+          </TableCell>
+        </TableColumn>
+      ))}
+    </TableWrapper>
+  );
+}
 
-export const buttonRound = Template.bind({});
+export const buttonRound: StoryFn<ButtonRoundProps> = Template.bind({});
 
 buttonRound.parameters = getDefaultParameters({
   figmaUrl:

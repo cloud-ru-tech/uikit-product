@@ -12,10 +12,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Tabs } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Tabs',
   component: Tabs.Container,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   margin-top: 16px;
@@ -34,7 +35,9 @@ const Container = styled.div`
   }
 `;
 
-const Template: StoryFn<Tabs.ContainerProps & { 'data-test-id'?: string; className?: string }> = ({ ...args }) => {
+type StoryProps = Tabs.ContainerProps & { 'data-test-id'?: string; className?: string };
+
+function Template({ ...args }: StoryProps) {
   const [{ value }, updateArgs] = useArgs();
   const handleClick = (tab: string) => updateArgs({ value: tab });
 
@@ -87,9 +90,9 @@ const Template: StoryFn<Tabs.ContainerProps & { 'data-test-id'?: string; classNa
       </Container>
     </Tabs.Container>
   );
-};
+}
 
-export const tabs = Template.bind({});
+export const tabs: StoryFn<StoryProps> = Template.bind({});
 tabs.args = {
   className: 'controlled-classname',
   'data-test-id': 'tabs__navigation-container',

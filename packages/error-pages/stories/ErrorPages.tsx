@@ -8,25 +8,27 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ErrorPage, ErrorPageProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Error Pages',
   component: ErrorPage,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   height: calc(100vh - 40px);
 `;
 
-const Template: StoryFn<ErrorPageProps & { showSupportCenterButton: boolean }> = ({
-  showSupportCenterButton,
-  ...args
-}) => (
-  <Wrapper>
-    <ErrorPage {...args} onSupportCenterClick={showSupportCenterButton ? args.onSupportCenterClick : undefined} />
-  </Wrapper>
-);
+type StoryProps = ErrorPageProps & { showSupportCenterButton: boolean };
 
-export const errorPages = Template.bind({});
+function Template({ showSupportCenterButton, ...args }: StoryProps) {
+  return (
+    <Wrapper>
+      <ErrorPage {...args} onSupportCenterClick={showSupportCenterButton ? args.onSupportCenterClick : undefined} />
+    </Wrapper>
+  );
+}
+
+export const errorPages: StoryFn<StoryProps> = Template.bind({});
 errorPages.args = {
   mainPageUrl: '/',
   errorType: ErrorPage.errorTypes.FrontendError,

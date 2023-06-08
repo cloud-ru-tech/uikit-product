@@ -6,36 +6,39 @@ import { Button, ButtonProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Button',
   component: Button,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ButtonProps> = ({ ...args }: ButtonProps) => (
-  <TableWrapper>
-    {Object.entries(Button.variants).map(([key, value]) => (
-      <TableColumn key={key} data-variant={TableColumn.variants[value]}>
-        <TableCell>{key}</TableCell>
+function Template({ ...args }: ButtonProps) {
+  return (
+    <TableWrapper>
+      {Object.entries(Button.variants).map(([key, value]) => (
+        <TableColumn key={key} data-variant={TableColumn.variants[value]}>
+          <TableCell>{key}</TableCell>
 
-        <TableCell>
-          <Button variant={value} tooltip={{ content: key }} {...args} />
-        </TableCell>
+          <TableCell>
+            <Button variant={value} tooltip={{ content: key }} {...args} />
+          </TableCell>
 
-        <TableCell>
-          <Button
-            variant={value}
-            tooltip={{ content: key, placement: Button.placements.Left }}
-            disabledTooltip={{ content: 'Unavailable', placement: Button.placements.Left }}
-            icon={<CopyInterfaceSVG />}
-            {...args}
-          />
-        </TableCell>
-      </TableColumn>
-    ))}
-  </TableWrapper>
-);
+          <TableCell>
+            <Button
+              variant={value}
+              tooltip={{ content: key, placement: Button.placements.Left }}
+              disabledTooltip={{ content: 'Unavailable', placement: Button.placements.Left }}
+              icon={<CopyInterfaceSVG />}
+              {...args}
+            />
+          </TableCell>
+        </TableColumn>
+      ))}
+    </TableWrapper>
+  );
+}
 
-export const button = Template.bind({});
+export const button: StoryFn<ButtonProps> = Template.bind({});
 
 button.parameters = getDefaultParameters({
   figmaUrl:

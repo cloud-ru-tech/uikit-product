@@ -14,10 +14,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Tooltip, TooltipProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Tooltip',
   component: Tooltip,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   margin: auto;
@@ -62,39 +63,41 @@ const Target = styled.h4`
   ${H4_STYLES};
 `;
 
-const Template: StoryFn<TooltipProps> = ({ ...args }) => (
-  <Group>
-    <Container>
-      <Title>Via controls</Title>
-      <Divider />
-      <TooltipWrapper>
-        <Tooltip {...args} iconAction={() => copyToClipboard(args.title || 'empty title')}>
-          <Target>Element</Target>
-        </Tooltip>
-      </TooltipWrapper>
-    </Container>
-    <Container>
-      <Title>Placements</Title>
-      <Divider />
-      {Object.values(Tooltip.placements).map(placement => (
-        <Tooltip content={'content'} placement={placement} key={placement} type={Tooltip.types.Instant}>
-          {placement}
-        </Tooltip>
-      ))}
-    </Container>
-    <Container>
-      <Title>Triggers</Title>
-      <Divider />
-      {Object.values(Tooltip.triggers).map(trigger => (
-        <Tooltip content={'content'} trigger={trigger} key={trigger} type={Tooltip.types.Instant}>
-          {trigger}
-        </Tooltip>
-      ))}
-    </Container>
-  </Group>
-);
+function Template({ ...args }: TooltipProps) {
+  return (
+    <Group>
+      <Container>
+        <Title>Via controls</Title>
+        <Divider />
+        <TooltipWrapper>
+          <Tooltip {...args} iconAction={() => copyToClipboard(args.title || 'empty title')}>
+            <Target>Element</Target>
+          </Tooltip>
+        </TooltipWrapper>
+      </Container>
+      <Container>
+        <Title>Placements</Title>
+        <Divider />
+        {Object.values(Tooltip.placements).map(placement => (
+          <Tooltip content={'content'} placement={placement} key={placement} type={Tooltip.types.Instant}>
+            {placement}
+          </Tooltip>
+        ))}
+      </Container>
+      <Container>
+        <Title>Triggers</Title>
+        <Divider />
+        {Object.values(Tooltip.triggers).map(trigger => (
+          <Tooltip content={'content'} trigger={trigger} key={trigger} type={Tooltip.types.Instant}>
+            {trigger}
+          </Tooltip>
+        ))}
+      </Container>
+    </Group>
+  );
+}
 
-export const tooltip = Template.bind({});
+export const tooltip: StoryFn<TooltipProps> = Template.bind({});
 tooltip.args = {
   title: 'Регион размещения',
   content:

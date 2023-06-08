@@ -9,20 +9,21 @@ import componentReadme from '../README.md';
 import { InputSlider } from '../src';
 import { InputSliderProps, MarksPlacement } from '../src/components/types';
 
-export default {
+const meta: Meta = {
   title: 'Components/Input Slider/Input Slider',
   component: InputSlider,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InputSliderProps> = ({ ...args }) => {
+function Template({ ...args }: InputSliderProps) {
   const [value, setValue] = useState(args.value || 10);
 
   const valueHandler = (v: string | number) => setValue(Number(v));
 
   return <InputSlider {...args} value={value} onChange={valueHandler} />;
-};
+}
 
-export const inputSlider = Template.bind({});
+export const inputSlider: StoryFn<InputSliderProps> = Template.bind({});
 inputSlider.args = {
   postfix: '₽',
   label: 'Label',

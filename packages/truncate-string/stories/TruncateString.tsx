@@ -6,10 +6,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TruncateString, TruncateStringProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Truncate String',
   component: TruncateString,
-} as Meta;
+};
+export default meta;
 
 const Column = styled.div`
   display: flex;
@@ -21,13 +22,15 @@ const Column = styled.div`
 
 type TruncateProps = TruncateStringProps & { columnWidth?: number };
 
-const Template: StoryFn<TruncateProps> = ({ ...args }: TruncateProps) => (
-  <Column>
-    <TruncateString {...args} />
-  </Column>
-);
+function Template({ ...args }: TruncateProps) {
+  return (
+    <Column>
+      <TruncateString {...args} />
+    </Column>
+  );
+}
 
-export const truncateString = Template.bind({});
+export const truncateString: StoryFn<TruncateProps> = Template.bind({});
 truncateString.args = {
   maxLines: 2,
   text: 'какой-то длинный текст который обрезается на самом интересном',

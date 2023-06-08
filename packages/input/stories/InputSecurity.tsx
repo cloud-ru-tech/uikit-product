@@ -8,18 +8,19 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InputSecurity, InputSecurityProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Input/Security',
   component: InputSecurity,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InputSecurityProps> = args => {
+function Template(args: InputSecurityProps) {
   const [value, setValue] = useState<string>();
 
   return <InputSecurity {...args} value={value} onChange={setValue} />;
-};
+}
 
-export const security = Template.bind({});
+export const security: StoryFn<InputSecurityProps> = Template.bind({});
 security.args = {
   label: 'Label',
   labelTooltip: { content: 'Label tooltip content' },

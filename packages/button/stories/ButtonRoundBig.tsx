@@ -6,23 +6,26 @@ import { ButtonRoundBig, ButtonRoundBigProps } from '../src';
 import { SingleWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Button Round Big',
   component: ButtonRoundBig,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ButtonRoundBigProps> = ({ ...args }: ButtonRoundBigProps) => (
-  <SingleWrapper>
-    <ButtonRoundBig
-      {...args}
-      tooltip={{ content: 'Play', placement: ButtonRoundBig.placements.Top }}
-      disabledTooltip={{ content: 'Unavailable', placement: ButtonRoundBig.placements.Top }}
-      icon={<CirclePlayFilledInterfaceSVG />}
-    />
-  </SingleWrapper>
-);
+function Template({ ...args }: ButtonRoundBigProps) {
+  return (
+    <SingleWrapper>
+      <ButtonRoundBig
+        {...args}
+        tooltip={{ content: 'Play', placement: ButtonRoundBig.placements.Top }}
+        disabledTooltip={{ content: 'Unavailable', placement: ButtonRoundBig.placements.Top }}
+        icon={<CirclePlayFilledInterfaceSVG />}
+      />
+    </SingleWrapper>
+  );
+}
 
-export const buttonRoundBig = Template.bind({});
+export const buttonRoundBig: StoryFn<ButtonRoundBigProps> = Template.bind({});
 
 buttonRoundBig.parameters = getDefaultParameters({
   figmaUrl:

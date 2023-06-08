@@ -11,23 +11,26 @@ import componentReadme from '../README.md';
 import { FileUpload, FileUploadProps } from '../src';
 import { Container } from './helperComponents';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/FileUpload/File Upload',
   component: FileUpload,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<FileUploadProps> = ({ ...args }) => (
-  <Container>
-    <FileUpload {...args}>
-      <ButtonRound text='Загрузить' variant={ButtonRound.variants.OutlineAccent} />
-    </FileUpload>
-    <FileUpload {...args}>
-      <Button text='Загрузить' variant={Button.variants.Transparent} icon={<FileUploadFilledInterfaceSVG />} />
-    </FileUpload>
-  </Container>
-);
+function Template({ ...args }: FileUploadProps) {
+  return (
+    <Container>
+      <FileUpload {...args}>
+        <ButtonRound text='Загрузить' variant={ButtonRound.variants.OutlineAccent} />
+      </FileUpload>
+      <FileUpload {...args}>
+        <Button text='Загрузить' variant={Button.variants.Transparent} icon={<FileUploadFilledInterfaceSVG />} />
+      </FileUpload>
+    </Container>
+  );
+}
 
-export const fileUpload = Template.bind({});
+export const fileUpload: StoryFn<FileUploadProps> = Template.bind({});
 fileUpload.args = {
   isMultiple: true,
   onFileSelected: e => console.warn('file \n\n', e.target.files),

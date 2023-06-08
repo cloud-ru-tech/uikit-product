@@ -9,10 +9,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Favourite, FavouriteProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Checkbox/Favourite',
   component: Favourite,
-} as Meta;
+};
+export default meta;
 
 const FavouriteWrap = styled.div`
   padding: 10px;
@@ -22,7 +23,7 @@ const FavouriteWrap = styled.div`
   max-width: fit-content;
 `;
 
-const Template: StoryFn<FavouriteProps> = ({ checked, ...args }) => {
+function Template({ checked, ...args }: FavouriteProps) {
   const [isChecked, setIsChecked] = useState(checked);
 
   useEffect(() => {
@@ -34,9 +35,9 @@ const Template: StoryFn<FavouriteProps> = ({ checked, ...args }) => {
       <Favourite {...args} checked={isChecked} handleChange={isChecked => setIsChecked(isChecked)} />
     </FavouriteWrap>
   );
-};
+}
 
-export const favourite = Template.bind({});
+export const favourite: StoryFn<FavouriteProps> = Template.bind({});
 favourite.args = { checked: false };
 favourite.parameters = {
   readme: {

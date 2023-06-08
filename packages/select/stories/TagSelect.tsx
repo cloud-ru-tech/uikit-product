@@ -7,14 +7,15 @@ import { Button } from '@sbercloud/uikit-product-button';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { TagSelect } from '../src';
+import { ITagSelect, TagSelect } from '../src';
 import { COLOR_VALUES } from '../src/constants';
 import { getRandomInt } from '../src/helpers/getRandomInt';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Select/Tag Select',
   component: TagSelect,
-} as Meta;
+};
+export default meta;
 
 const tags = [...new Array(100)].map(() => ({
   value: Math.random().toString(),
@@ -31,7 +32,7 @@ const Wrap = styled.div`
   justify-content: space-around;
 `;
 
-const Template: StoryFn = (args): JSX.Element => {
+function Template(args: ITagSelect) {
   const [isHover, setHover] = useState(false);
   const [stateTags, setTags] = useState([
     {
@@ -77,9 +78,9 @@ const Template: StoryFn = (args): JSX.Element => {
       </Wrap>
     </div>
   );
-};
+}
 
-export const tagSelect = Template.bind({});
+export const tagSelect: StoryFn<ITagSelect> = Template.bind({});
 tagSelect.args = {
   validator: (tagName: string) => tagName.length <= 16 && /^[A-Za-z0-9_.-]+$/.test(tagName),
   validateMessage:

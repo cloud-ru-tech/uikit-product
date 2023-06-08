@@ -10,12 +10,13 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ToggleCardDisplayExtra, ToggleCardDisplayExtraProps, ToggleGroup } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Toggle Group/Toggle Card/Display Extra',
   component: ToggleCardDisplayExtra,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ToggleCardDisplayExtraProps> = args => {
+function Template(args: ToggleCardDisplayExtraProps) {
   const [value, setValue] = useState<number[]>();
 
   return (
@@ -23,9 +24,9 @@ const Template: StoryFn<ToggleCardDisplayExtraProps> = args => {
       <ToggleCardDisplayExtra {...args} value={1} icon={<ModelInterfaceSVG />} />
     </ToggleGroup>
   );
-};
+}
 
-export const displayExtra = Template.bind({});
+export const displayExtra: StoryFn<ToggleCardDisplayExtraProps> = Template.bind({});
 displayExtra.args = { title: 'Title', description: 'Description', caption: 'Caption' };
 displayExtra.argTypes = {};
 displayExtra.parameters = {

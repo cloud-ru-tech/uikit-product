@@ -17,10 +17,11 @@ import {
 } from '../src';
 import { NotificationBig } from '../src/components/NotificationBig';
 
-export default {
+const meta: Meta = {
   title: 'Components/Notification/Notification Big',
   component: NotificationBig,
-} as Meta;
+};
+export default meta;
 
 const Block = styled.div`
   margin-bottom: 8px;
@@ -39,7 +40,7 @@ const CustomNotificationWrap = styled.div`
   cursor: default;
 `;
 
-const actions: NotificationBigProps['actions'] = [
+const actions: NonNullable<NotificationBigProps['actions']> = [
   {
     text: 'Принять',
     onClick: (_, close) => {
@@ -55,9 +56,11 @@ const actions: NotificationBigProps['actions'] = [
   },
 ];
 
-const CustomNotification = ({ text }: { text: string }) => <CustomNotificationWrap>{text}</CustomNotificationWrap>;
+function CustomNotification({ text }: { text: string }) {
+  return <CustomNotificationWrap>{text}</CustomNotificationWrap>;
+}
 
-const Template: StoryFn<NotificationBigProps> = ({ ...args }) => {
+function Template({ ...args }: NotificationBigProps) {
   const notification = (actions?: NotificationBigProps['actions']) => {
     openNotification({
       type: NotificationType.Big,
@@ -145,9 +148,9 @@ const Template: StoryFn<NotificationBigProps> = ({ ...args }) => {
       </Block>
     </>
   );
-};
+}
 
-export const notificationBig = Template.bind({});
+export const notificationBig: StoryFn<NotificationBigProps> = Template.bind({});
 notificationBig.args = {
   status: NotificationStatuses[NotificationType.Big].Info,
   title: 'Перенос данных завершен',

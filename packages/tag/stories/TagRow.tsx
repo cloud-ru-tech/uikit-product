@@ -8,19 +8,22 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TagRow, TagRowItem, TagRowProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Tag/Tag Row',
   component: TagRow,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<TagRowProps & { showRemoveButtons: boolean }> = ({ items, ...args }) => {
+type StoryProps = TagRowProps & { showRemoveButtons: boolean };
+
+function Template({ items, ...args }: StoryProps) {
   const [tags, setTags] = useState(items);
   const removeTag = (item: TagRowItem['value']) => setTags(x => x.filter(({ value }) => value !== item));
 
   return <TagRow {...args} items={tags} onItemRemove={args.showRemoveButtons ? removeTag : undefined} />;
-};
+}
 
-export const tagRow = Template.bind({});
+export const tagRow: StoryFn<StoryProps> = Template.bind({});
 tagRow.args = {
   showRemoveButtons: false,
   items: [

@@ -33,10 +33,11 @@ import {
   MobileMenuReference,
 } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Header',
   component: Header,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   position: fixed;
@@ -47,11 +48,13 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 
-const Tooltip = ({ isMobile }: { isMobile?: boolean }) => (
-  <HeaderBalanceTooltip isMobile={isMobile} balance={144_401_810} limit={155_500_000} onRechargeClick={() => {}} />
-);
+function Tooltip({ isMobile }: { isMobile?: boolean }) {
+  return (
+    <HeaderBalanceTooltip isMobile={isMobile} balance={144_401_810} limit={155_500_000} onRechargeClick={() => {}} />
+  );
+}
 
-const Logo = () => {
+function Logo() {
   const { theme } = useTheme();
 
   return (
@@ -63,9 +66,9 @@ const Logo = () => {
       )}
     </HeaderLogo>
   );
-};
+}
 
-const ProjectSelector = ({ isMobile }: { isMobile?: boolean }) => {
+function ProjectSelector({ isMobile }: { isMobile?: boolean }) {
   const [workspace, setWorkspace] = useState('workspace-0');
 
   return (
@@ -89,15 +92,15 @@ const ProjectSelector = ({ isMobile }: { isMobile?: boolean }) => {
       ]}
     />
   );
+}
+
+type StoryProps = HeaderProps & {
+  menuList: SidebarProps['list'];
+  footerItems: SidebarProps['footerItems'];
+  activeMenuItem: SidebarProps['active'];
 };
 
-const Template: StoryFn<
-  HeaderProps & {
-    menuList: SidebarProps['list'];
-    footerItems: SidebarProps['footerItems'];
-    activeMenuItem: SidebarProps['active'];
-  }
-> = ({ menuList, footerItems, activeMenuItem }) => {
+function Template({ menuList, footerItems, activeMenuItem }: StoryProps) {
   const { isMobile } = useMatchMedia();
   const mobileMenuRef = useRef<MobileMenuReference>(null);
 
@@ -176,9 +179,9 @@ const Template: StoryFn<
       </Header>
     </Wrapper>
   );
-};
+}
 
-export const header = Template.bind({});
+export const header: StoryFn<StoryProps> = Template.bind({});
 header.args = {
   activeMenuItem: 'main-advanced',
   menuList,

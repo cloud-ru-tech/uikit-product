@@ -6,10 +6,11 @@ import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { StatusTag, StatusTagProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Status/Status Tag',
   component: StatusTag,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   dispay: flex;
@@ -64,27 +65,29 @@ const Title = styled.span`
   font-size: 20px;
 `;
 
-const Template: StoryFn<StatusTagProps> = ({ ...args }) => (
-  <Container>
-    <WrapperFContolled>
-      <Title>Contolled</Title>
-      <StatusTag {...args} />
-    </WrapperFContolled>
+function Template({ ...args }: StatusTagProps) {
+  return (
+    <Container>
+      <WrapperFContolled>
+        <Title>Contolled</Title>
+        <StatusTag {...args} />
+      </WrapperFContolled>
 
-    <TableWrapper>
-      {Object.entries(StatusTag.variants).map(([key, value]) => (
-        <TableColumn key={key}>
-          <TableCell>{key}</TableCell>
-          <TableCell>
-            <StatusTag {...args} variant={value} />
-          </TableCell>
-        </TableColumn>
-      ))}
-    </TableWrapper>
-  </Container>
-);
+      <TableWrapper>
+        {Object.entries(StatusTag.variants).map(([key, value]) => (
+          <TableColumn key={key}>
+            <TableCell>{key}</TableCell>
+            <TableCell>
+              <StatusTag {...args} variant={value} />
+            </TableCell>
+          </TableColumn>
+        ))}
+      </TableWrapper>
+    </Container>
+  );
+}
 
-export const statusTag = Template.bind({});
+export const statusTag: StoryFn<StatusTagProps> = Template.bind({});
 
 statusTag.parameters = getDefaultParameters({
   figmaUrl:

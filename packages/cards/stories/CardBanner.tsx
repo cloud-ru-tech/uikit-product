@@ -10,10 +10,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CardBanner, CardBannerProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Cards/Card/Banner',
   component: CardBanner,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   width: 584px;
@@ -24,13 +25,15 @@ const Wrapper = styled.div`
   overflow: auto;
 `;
 
-const Template: StoryFn<CardBannerProps> = ({ ...args }) => (
-  <Wrapper>
-    <CardBanner {...args} />
-  </Wrapper>
-);
+function Template({ ...args }: CardBannerProps) {
+  return (
+    <Wrapper>
+      <CardBanner {...args} />
+    </Wrapper>
+  );
+}
 
-export const banner = Template.bind({});
+export const banner: StoryFn<CardBannerProps> = Template.bind({});
 banner.args = {
   title: 'Есть контент для DataHub?',
   description: 'Разместите свой контент на платформе и привлекайте новых клиентов',

@@ -11,10 +11,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Carousel, CarouselProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Carousel',
   component: Carousel,
-} as Meta;
+};
+export default meta;
 
 const StoryWrap = styled.div``;
 
@@ -82,18 +83,20 @@ const cardsMock = [
   </CardsWrap>,
 ];
 
-const Template: StoryFn<CarouselProps> = ({ ...args }) => (
-  <StoryWrap>
-    <Carousel
-      {...args}
-      items={cardsMock}
-      nextButtonTooltips={{ tooltipContent: 'next', disabledTooltipContent: 'disabled' }}
-      prevButtonTooltips={{ tooltipContent: 'prev', disabledTooltipContent: 'disabled' }}
-    />
-  </StoryWrap>
-);
+function Template({ ...args }: CarouselProps) {
+  return (
+    <StoryWrap>
+      <Carousel
+        {...args}
+        items={cardsMock}
+        nextButtonTooltips={{ tooltipContent: 'next', disabledTooltipContent: 'disabled' }}
+        prevButtonTooltips={{ tooltipContent: 'prev', disabledTooltipContent: 'disabled' }}
+      />
+    </StoryWrap>
+  );
+}
 
-export const carousel = Template.bind({});
+export const carousel: StoryFn<CarouselProps> = Template.bind({});
 carousel.args = {};
 carousel.argTypes = {
   carouselTitle: {

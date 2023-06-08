@@ -3,13 +3,16 @@ import { Meta, StoryFn } from '@storybook/react';
 import Readme from '../../../README.md';
 import { Markdown } from '../markdown/Markdown';
 
-// eslint-disable-next-line import/no-default-export
-export default {
+const meta: Meta = {
   title: 'Welcome/Welcome',
-} as Meta;
+};
+// eslint-disable-next-line import/no-default-export
+export default meta;
 
-const Template: StoryFn = () => <Markdown md={Readme} />;
+function Template() {
+  return <Markdown md={Readme} />;
+}
 
-export const welcome = Template.bind({});
+export const welcome: StoryFn = Template.bind({});
 welcome.args = {};
 welcome.argTypes = {};

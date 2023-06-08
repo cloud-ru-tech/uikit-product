@@ -8,20 +8,21 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Rating, RatingProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Rating',
   component: Rating,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<RatingProps> = ({ ...args }) => {
+function Template({ ...args }: RatingProps) {
   const [mark, setMark] = useState<number | undefined>(undefined);
 
   const handleRatingChange = (value: number) => setMark(value);
 
   return <Rating {...args} value={args.value || mark} onChange={handleRatingChange} />;
-};
+}
 
-export const rating = Template.bind({});
+export const rating: StoryFn<RatingProps> = Template.bind({});
 rating.args = { elements: 5 };
 rating.argTypes = {};
 rating.parameters = {

@@ -6,30 +6,33 @@ import { RefreshButton, RefreshButtonProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Refresh Button',
   component: RefreshButton,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<RefreshButtonProps> = ({ ...args }) => (
-  <TableWrapper>
-    <TableColumn>
-      <TableCell>Button Icon Transparent / Default</TableCell>
-      <TableCell>
-        <RefreshButton {...args} />
-      </TableCell>
-    </TableColumn>
+function Template({ ...args }: RefreshButtonProps) {
+  return (
+    <TableWrapper>
+      <TableColumn>
+        <TableCell>Button Icon Transparent / Default</TableCell>
+        <TableCell>
+          <RefreshButton {...args} />
+        </TableCell>
+      </TableColumn>
 
-    <TableColumn>
-      <TableCell>Button Toolbar</TableCell>
-      <TableCell>
-        <RefreshButton as={Toolbar.Button} {...args} />
-      </TableCell>
-    </TableColumn>
-  </TableWrapper>
-);
+      <TableColumn>
+        <TableCell>Button Toolbar</TableCell>
+        <TableCell>
+          <RefreshButton as={Toolbar.Button} {...args} />
+        </TableCell>
+      </TableColumn>
+    </TableWrapper>
+  );
+}
 
-export const refreshButton = Template.bind({});
+export const refreshButton: StoryFn<RefreshButtonProps> = Template.bind({});
 
 refreshButton.parameters = getDefaultParameters({
   extraControlsInclude: ['tooltip'],

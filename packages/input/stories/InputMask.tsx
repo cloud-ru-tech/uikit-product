@@ -8,18 +8,19 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InputMask, InputMaskProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Input/Mask',
   component: InputMask,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InputMaskProps> = args => {
+function Template(args: InputMaskProps) {
   const [value, setValue] = useState<string>();
 
   return <InputMask {...args} value={value} onChange={setValue} />;
-};
+}
 
-export const mask = Template.bind({});
+export const mask: StoryFn<InputMaskProps> = Template.bind({});
 mask.args = {
   label: 'Label',
   labelTooltip: { content: 'Label tooltip content' },

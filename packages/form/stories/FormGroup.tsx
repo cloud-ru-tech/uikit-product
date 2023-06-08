@@ -16,10 +16,11 @@ import { FormField, FormGroup } from '../src';
 
 const { COLORS_DRAWER } = DEPRECATED_EXPORT_VARS;
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Form/Form Group',
   component: FormGroup,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   padding: 24px;
@@ -31,7 +32,7 @@ const RadioClassName = css`
   margin: 12px 0;
 `;
 
-const Template: StoryFn = () => {
+function Template() {
   const [value, setValue] = useState(8);
   const [limit, setLimit] = useState<ReactText>('unlimited');
 
@@ -82,9 +83,9 @@ const Template: StoryFn = () => {
       </FormGroup>
     </Wrapper>
   );
-};
+}
 
-export const formGroup = Template.bind(null);
+export const formGroup: StoryFn = Template.bind(null);
 formGroup.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

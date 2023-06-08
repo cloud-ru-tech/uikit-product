@@ -15,9 +15,10 @@ import {
   PredefinedMLSpaceLogoProps,
 } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Icons/Predefined/Predefined Logos Private',
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   display: grid;
@@ -31,12 +32,14 @@ const Wrapper = styled.div`
 
 type Props = PredefinedMLSpaceLogoProps & PredefinedCloudLogoProps;
 
-const Template = ({ ...args }: Props) => (
-  <Wrapper data-variant={args.variant}>
-    <PredefinedMLSpaceLogo {...args} />
-    <PredefinedCloudLogo {...args} />
-  </Wrapper>
-);
+function Template({ ...args }: Props) {
+  return (
+    <Wrapper data-variant={args.variant}>
+      <PredefinedMLSpaceLogo {...args} />
+      <PredefinedCloudLogo {...args} />
+    </Wrapper>
+  );
+}
 
 export const predefinedLogosPrivate: StoryFn<Props> = Template.bind({});
 predefinedLogosPrivate.args = {

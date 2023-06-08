@@ -4,46 +4,49 @@ import { ButtonTableIcon, ButtonTableIconManagedLoading, ButtonTableIconProps } 
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters, onClick } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Button Table Icon',
   component: ButtonTableIcon,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ButtonTableIconProps> = ({ ...args }) => (
-  <TableWrapper>
-    <TableColumn>
-      <TableCell />
-      <TableCell>default</TableCell>
-      <TableCell>managed loading</TableCell>
-    </TableColumn>
-
-    {Object.entries(ButtonTableIcon.variants).map(([key, value]) => (
-      <TableColumn key={key} data-variant={value}>
-        <TableCell>{key}</TableCell>
-
-        <TableCell>
-          <ButtonTableIcon
-            variant={value}
-            disabledTooltip={{ content: 'Unavailable', placement: ButtonTableIcon.placements.Left }}
-            {...args}
-          />
-        </TableCell>
-
-        <TableCell>
-          <ButtonTableIconManagedLoading
-            variant={value}
-            onClick={onClick}
-            disabledTooltip={{ content: 'Unavailable', placement: ButtonTableIcon.placements.Right }}
-            {...args}
-            data-test-id={`${args['data-test-id'] || ''}-managed-loading`}
-          />
-        </TableCell>
+function Template({ ...args }) {
+  return (
+    <TableWrapper>
+      <TableColumn>
+        <TableCell />
+        <TableCell>default</TableCell>
+        <TableCell>managed loading</TableCell>
       </TableColumn>
-    ))}
-  </TableWrapper>
-);
 
-export const buttonTableIcon = Template.bind({});
+      {Object.entries(ButtonTableIcon.variants).map(([key, value]) => (
+        <TableColumn key={key} data-variant={value}>
+          <TableCell>{key}</TableCell>
+
+          <TableCell>
+            <ButtonTableIcon
+              variant={value}
+              disabledTooltip={{ content: 'Unavailable', placement: ButtonTableIcon.placements.Left }}
+              {...args}
+            />
+          </TableCell>
+
+          <TableCell>
+            <ButtonTableIconManagedLoading
+              variant={value}
+              onClick={onClick}
+              disabledTooltip={{ content: 'Unavailable', placement: ButtonTableIcon.placements.Right }}
+              {...args}
+              data-test-id={`${args['data-test-id'] || ''}-managed-loading`}
+            />
+          </TableCell>
+        </TableColumn>
+      ))}
+    </TableWrapper>
+  );
+}
+
+export const buttonTableIcon: StoryFn<ButtonTableIconProps> = Template.bind({});
 
 buttonTableIcon.parameters = getDefaultParameters({
   figmaUrl:

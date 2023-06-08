@@ -8,10 +8,11 @@ import componentReadme from '../README.md';
 import { HeatMapChart, HeatMapChartProps } from '../src';
 import { XAxisPosition } from '../src/components/HeatMapChart/constants';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Charts/Heat Map Chart',
   component: HeatMapChart,
-} as Meta;
+};
+export default meta;
 
 type StoryProps = HeatMapChartProps & {
   xAxisPosition: XAxisPosition;
@@ -19,7 +20,7 @@ type StoryProps = HeatMapChartProps & {
   height?: number;
 };
 
-const Template: StoryFn<StoryProps> = ({ xAxisPosition, showLegend, height, ...args }) => {
+function Template({ xAxisPosition, showLegend, height, ...args }: StoryProps) {
   const props = {
     ...args,
     options: {
@@ -40,7 +41,7 @@ const Template: StoryFn<StoryProps> = ({ xAxisPosition, showLegend, height, ...a
   };
 
   return <HeatMapChart {...props} />;
-};
+}
 
 const data = [
   [0.8793309438470729, 0.1003584229390681, 0, 0.015531660692951015, 0.0023894862604540022, 0.0023894862604540022],
@@ -60,7 +61,7 @@ const data = [
   [0, 0, 0.07113543091655267, 0, 0.0027359781121751026, 0.9261285909712722],
 ];
 const labels = Array.from({ length: data.length }, (_, i) => String(i));
-export const heatMapChart = Template.bind({});
+export const heatMapChart: StoryFn<StoryProps> = Template.bind({});
 heatMapChart.args = {
   data,
   options: {

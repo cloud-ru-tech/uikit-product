@@ -8,10 +8,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CardResult, CardResultProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Cards/Card/Result',
   component: CardResult,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   width: 452px;
@@ -21,13 +22,15 @@ const Wrapper = styled.div`
   overflow: auto;
 `;
 
-const Template: StoryFn<CardResultProps> = ({ ...args }) => (
-  <Wrapper>
-    <CardResult {...args} />
-  </Wrapper>
-);
+function Template({ ...args }: CardResultProps) {
+  return (
+    <Wrapper>
+      <CardResult {...args} />
+    </Wrapper>
+  );
+}
 
-export const result = Template.bind({});
+export const result: StoryFn<CardResultProps> = Template.bind({});
 result.args = {
   title: 'Platform · Product Name',
   description:

@@ -8,12 +8,13 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Pagination, PaginationProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Pagination/Pagination',
   component: Pagination,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<PaginationProps> = args => {
+function Template(args: PaginationProps) {
   const [page, setPage] = useState(args.page);
 
   useEffect(() => {
@@ -21,9 +22,9 @@ const Template: StoryFn<PaginationProps> = args => {
   }, [args.page]);
 
   return <Pagination {...args} page={page} onChange={setPage} />;
-};
+}
 
-export const pagination = Template.bind({});
+export const pagination: StoryFn<PaginationProps> = Template.bind({});
 pagination.args = { total: 10, page: 1 };
 pagination.argTypes = {};
 pagination.parameters = {

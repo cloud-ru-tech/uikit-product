@@ -8,18 +8,19 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InputPhone, InputPhoneProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Input/Phone',
   component: InputPhone,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InputPhoneProps> = args => {
+function Template(args: InputPhoneProps) {
   const [value, setValue] = useState<string>();
 
   return <InputPhone {...args} value={value} onChange={setValue} />;
-};
+}
 
-export const phone = Template.bind({});
+export const phone: StoryFn<InputPhoneProps> = Template.bind({});
 phone.args = {
   label: 'Label',
   labelTooltip: { content: 'Label tooltip content' },

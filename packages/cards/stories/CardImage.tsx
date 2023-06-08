@@ -8,10 +8,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CardImage, CardImageProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Cards/Card/Image',
   component: CardImage,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   width: 400px;
@@ -22,13 +23,15 @@ const Wrapper = styled.div`
   overflow: auto;
 `;
 
-const Template: StoryFn<CardImageProps> = ({ ...args }) => (
-  <Wrapper>
-    <CardImage {...args} />{' '}
-  </Wrapper>
-);
+function Template({ ...args }: CardImageProps) {
+  return (
+    <Wrapper>
+      <CardImage {...args} />{' '}
+    </Wrapper>
+  );
+}
 
-export const image = Template.bind({});
+export const image: StoryFn<CardImageProps> = Template.bind({});
 image.args = {
   title: 'Базовые образы',
   description: 'Готовые Docker-образы с популярными инструментами для обучения и инференса',

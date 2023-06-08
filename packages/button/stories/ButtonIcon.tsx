@@ -6,45 +6,48 @@ import { ButtonIcon, ButtonIconProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Button Icon',
   component: ButtonIcon,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ButtonIconProps> = ({ ...args }) => (
-  <TableWrapper>
-    {Object.entries(ButtonIcon.variants).map(([key, value]) => (
-      <TableColumn key={key} data-variant={TableColumn.variants[value]}>
-        <TableCell>{key}</TableCell>
+function Template({ ...args }) {
+  return (
+    <TableWrapper>
+      {Object.entries(ButtonIcon.variants).map(([key, value]) => (
+        <TableColumn key={key} data-variant={TableColumn.variants[value]}>
+          <TableCell>{key}</TableCell>
 
-        <TableCell>
-          <ButtonIcon
-            {...args}
-            variant={value}
-            tooltip={{ content: 'Close', placement: ButtonIcon.placements.Bottom }}
-            disabledTooltip={{ content: 'Unavailable', placement: ButtonIcon.placements.Bottom }}
-            icon={<CloseInterfaceSVG />}
-          />
-        </TableCell>
+          <TableCell>
+            <ButtonIcon
+              {...args}
+              variant={value}
+              tooltip={{ content: 'Close', placement: ButtonIcon.placements.Bottom }}
+              disabledTooltip={{ content: 'Unavailable', placement: ButtonIcon.placements.Bottom }}
+              icon={<CloseInterfaceSVG />}
+            />
+          </TableCell>
 
-        <TableCell>
-          <ButtonIcon {...args} variant={value} tooltip={{ content: 'More' }} icon={<MoreInterfaceSVG />} />
-        </TableCell>
+          <TableCell>
+            <ButtonIcon {...args} variant={value} tooltip={{ content: 'More' }} icon={<MoreInterfaceSVG />} />
+          </TableCell>
 
-        <TableCell>
-          <ButtonIcon
-            {...args}
-            variant={value}
-            tooltip={{ content: 'Delete', placement: ButtonIcon.placements.Right }}
-            disabledTooltip={{ content: 'Unavailable', placement: ButtonIcon.placements.Right }}
-            icon={<DeleteInterfaceSVG />}
-          />
-        </TableCell>
-      </TableColumn>
-    ))}
-  </TableWrapper>
-);
-export const buttonIcon = Template.bind({});
+          <TableCell>
+            <ButtonIcon
+              {...args}
+              variant={value}
+              tooltip={{ content: 'Delete', placement: ButtonIcon.placements.Right }}
+              disabledTooltip={{ content: 'Unavailable', placement: ButtonIcon.placements.Right }}
+              icon={<DeleteInterfaceSVG />}
+            />
+          </TableCell>
+        </TableColumn>
+      ))}
+    </TableWrapper>
+  );
+}
+export const buttonIcon: StoryFn<ButtonIconProps> = Template.bind({});
 
 buttonIcon.parameters = getDefaultParameters({
   figmaUrl:

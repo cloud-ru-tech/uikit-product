@@ -7,14 +7,18 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { AlertCompact, AlertCompactProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Alert/Alert Compact',
   component: AlertCompact,
-} as Meta;
+};
 
-const Template: StoryFn<AlertCompactProps> = ({ ...args }) => <AlertCompact {...args} />;
+export default meta;
 
-export const alertCompact = Template.bind({});
+function Template({ ...args }: AlertCompactProps) {
+  return <AlertCompact {...args} />;
+}
+
+export const alertCompact: StoryFn<AlertCompactProps> = Template.bind({});
 alertCompact.args = {
   description: 'Description',
   type: AlertCompact.types.Default,

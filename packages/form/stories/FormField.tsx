@@ -12,17 +12,18 @@ import { FormField, FormFieldProps } from '../src';
 
 const { COLORS_DRAWER } = DEPRECATED_EXPORT_VARS;
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Form/Form Field',
   component: FormField,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   padding: 24px;
   background-color: var(${COLORS_DRAWER.BACKGROUND});
 `;
 
-const Template: StoryFn<FormFieldProps> = ({ label, hint, error, required, description }) => {
+function Template({ label, hint, error, required, description }: FormFieldProps) {
   const [value, setValue] = useState(8);
 
   return (
@@ -32,9 +33,9 @@ const Template: StoryFn<FormFieldProps> = ({ label, hint, error, required, descr
       </FormField>
     </Wrapper>
   );
-};
+}
 
-export const formField = Template.bind(null);
+export const formField: StoryFn<FormFieldProps> = Template.bind(null);
 formField.argTypes = {
   label: {
     control: {

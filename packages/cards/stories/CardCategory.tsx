@@ -10,10 +10,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CardCategory, CardCategoryProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Cards/Card/Category',
   component: CardCategory,
-} as Meta;
+};
+export default meta;
 
 const ICONS = {
   docker: <DockerRegistryDisplaySVG />,
@@ -39,22 +40,24 @@ const Wrapper = styled.div`
   overflow: auto;
 `;
 
-const Template: StoryFn<CardCategoryProps> = ({ ...args }) => (
-  <>
-    Controlled:
-    <Wrapper>
-      <CardCategory {...args} />
-    </Wrapper>
-    Examples:
-    {Object.values(CardCategory.variants).map((variant, index) => (
-      <Wrapper key={`${index}${variant}`}>
-        <CardCategory {...defaultArgs} variant={variant} />
+function Template({ ...args }: CardCategoryProps) {
+  return (
+    <>
+      Controlled:
+      <Wrapper>
+        <CardCategory {...args} />
       </Wrapper>
-    ))}
-  </>
-);
+      Examples:
+      {Object.values(CardCategory.variants).map((variant, index) => (
+        <Wrapper key={`${index}${variant}`}>
+          <CardCategory {...defaultArgs} variant={variant} />
+        </Wrapper>
+      ))}
+    </>
+  );
+}
 
-export const category = Template.bind({});
+export const category: StoryFn<CardCategoryProps> = Template.bind({});
 category.args = {
   title: 'Контейнеры',
   description: 'С популярными библиотеками и инструментами',

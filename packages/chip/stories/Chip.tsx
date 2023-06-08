@@ -11,10 +11,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Chip, ChipProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Chip',
   component: Chip,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   padding: 20px;
@@ -22,7 +23,7 @@ const Wrapper = styled.div`
   background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
 `;
 
-const Template: StoryFn<ChipProps> = ({ checked, ...args }) => {
+function Template({ checked, ...args }: ChipProps) {
   const [isChecked, setIsChecked] = useState(checked);
 
   useEffect(() => setIsChecked(checked), [checked]);
@@ -32,9 +33,9 @@ const Template: StoryFn<ChipProps> = ({ checked, ...args }) => {
       <Chip {...args} handleChange={checked => setIsChecked(checked)} checked={isChecked} />
     </Wrapper>
   );
-};
+}
 
-export const chip = Template.bind({});
+export const chip: StoryFn<ChipProps> = Template.bind({});
 chip.args = {
   label: 'Chip',
   size: Chip.sizes.Medium,

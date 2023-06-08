@@ -8,20 +8,23 @@ import componentReadme from '../README.md';
 import { Scroll, ScrollProps } from '../src';
 import { ScrollContent, Wrapper } from './helperComponents';
 
-export default {
+const meta: Meta = {
   title: 'Components/Scroll',
   component: Scroll,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ScrollProps> = ({ variant, flexbox, ...args }) => (
-  <Wrapper flexbox={flexbox}>
-    <Scroll variant={variant} flexbox={flexbox} {...args}>
-      <ScrollContent variant={variant} />
-    </Scroll>
-  </Wrapper>
-);
+function Template({ variant, flexbox, ...args }: ScrollProps) {
+  return (
+    <Wrapper flexbox={flexbox}>
+      <Scroll variant={variant} flexbox={flexbox} {...args}>
+        <ScrollContent variant={variant} />
+      </Scroll>
+    </Wrapper>
+  );
+}
 
-export const scroll = Template.bind({});
+export const scroll: StoryFn<ScrollProps> = Template.bind({});
 scroll.args = {
   variant: Scroll.variants.Primary,
   size: Scroll.sizes.Medium,

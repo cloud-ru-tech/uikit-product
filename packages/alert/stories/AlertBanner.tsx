@@ -7,16 +7,18 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { AlertBanner, AlertBannerProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Alert/Alert Banner',
   component: AlertBanner,
-} as Meta;
+};
+
+export default meta;
 
 type Props = AlertBannerProps & { hideCloseButton: boolean };
 
-const Template = ({ hideCloseButton, ...args }: Props) => (
-  <AlertBanner {...args} onClose={hideCloseButton ? undefined : args.onClose} />
-);
+function Template({ hideCloseButton, ...args }: Props) {
+  return <AlertBanner {...args} onClose={hideCloseButton ? undefined : args.onClose} />;
+}
 
 export const alertBanner: StoryFn<Props> = Template.bind({});
 

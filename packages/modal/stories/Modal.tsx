@@ -28,12 +28,13 @@ const Text1 = styled.div`
   text-align: center;
 `;
 
-export default {
+const meta: Meta = {
   title: 'Components/Modal',
   component: Modal,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ModalProps> = ({ ...args }) => {
+function Template({ ...args }: ModalProps) {
   const [isControlledModalOpen, setIsControlledModalOpen] = useState(false);
   const [isEx1ModalOpen, setEx1ModalOpen] = useState(false);
   const [isEx2ModalOpen, setEx2ModalOpen] = useState(false);
@@ -178,9 +179,9 @@ const Template: StoryFn<ModalProps> = ({ ...args }) => {
       />
     </Container>
   );
-};
+}
 
-export const modal = Template.bind({});
+export const modal: StoryFn<ModalProps> = Template.bind({});
 
 modal.argTypes = {
   size: {

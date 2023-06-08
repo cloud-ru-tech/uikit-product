@@ -9,20 +9,21 @@ import componentReadme from '../README.md';
 import { InputRange } from '../src';
 import { InputRangeProps } from '../src/components/types';
 
-export default {
+const meta: Meta = {
   title: 'Components/Input Slider/Input Range',
   component: InputRange,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InputRangeProps> = ({ ...args }) => {
+function Template({ ...args }: InputRangeProps) {
   const [value, setValue] = useState<[number, number]>(args.value || [20, 80]);
 
   const valueHandler = (v: [number, number]) => setValue(v);
 
   return <InputRange {...args} value={value} onChange={valueHandler} />;
-};
+}
 
-export const inputRange = Template.bind({});
+export const inputRange: StoryFn<InputRangeProps> = Template.bind({});
 inputRange.args = {
   postfix: '₽',
   label: 'Label',

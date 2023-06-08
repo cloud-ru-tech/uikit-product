@@ -6,12 +6,15 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TimePicker, TimePickerProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/DatePicker/Time Picker',
   component: TimePicker,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<Omit<TimePickerProps, 'minTime'> & { minTime: boolean }> = ({ date, ...args }) => {
+type StoryProps = Omit<TimePickerProps, 'minTime'> & { minTime: boolean };
+
+function Template({ date, ...args }: StoryProps) {
   const [value, setValue] = useState(date);
 
   useEffect(() => {
@@ -29,9 +32,9 @@ const Template: StoryFn<Omit<TimePickerProps, 'minTime'> & { minTime: boolean }>
       />
     </div>
   );
-};
+}
 
-export const timePicker = Template.bind({});
+export const timePicker: StoryFn<StoryProps> = Template.bind({});
 timePicker.args = {
   date: new Date(),
   minTime: true,

@@ -28,18 +28,21 @@ const prefixIcons = {
   none: undefined,
 };
 
-export default {
+const meta: Meta = {
   title: 'Components/Link',
   component: Link,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<LinkProps> = ({ ...args }) => (
-  <Container variant={args.variant || Variant.OnPrimary}>
-    <Link {...args} />
-  </Container>
-);
+function Template({ ...args }: LinkProps) {
+  return (
+    <Container variant={args.variant || Variant.OnPrimary}>
+      <Link {...args} />
+    </Container>
+  );
+}
 
-export const link = Template.bind({});
+export const link: StoryFn<LinkProps> = Template.bind({});
 link.args = {
   text: 'Click me!',
   href: window.location.href.replace(/&args.*/g, ''),

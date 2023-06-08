@@ -10,10 +10,11 @@ import componentReadme from '../README.md';
 import { DatepickerType, Filter, FilterProps, LogicConditionType, TFilterOptionType, TFilterValueType } from '../src';
 import { groupedServices, mockData } from '../src/helpers/mockData';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Filter',
   component: Filter,
-} as Meta;
+};
+export default meta;
 
 const defOpt = [
   {
@@ -99,7 +100,7 @@ const defValue: TFilterValueType[] = [
   },
 ];
 
-const Template: StoryFn<FilterProps> = () => {
+function Template() {
   const [value, setValue] = useState('');
   const [filterValue, setFilterValue] = useState<TFilterValueType[] | string>(defValue);
 
@@ -126,9 +127,9 @@ const Template: StoryFn<FilterProps> = () => {
       </Toolbar.Container>
     </div>
   );
-};
+}
 
-export const filter = Template.bind({});
+export const filter: StoryFn<FilterProps> = Template.bind({});
 filter.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

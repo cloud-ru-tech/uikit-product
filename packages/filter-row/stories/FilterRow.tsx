@@ -6,14 +6,17 @@ import componentReadme from '../README.md';
 import { FilterRow, FilterRowProps } from '../src';
 import { filtersMock } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Filter Row',
   component: FilterRow,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<FilterRowProps> = ({ ...args }) => <FilterRow {...args} />;
+function Template({ ...args }: FilterRowProps) {
+  return <FilterRow {...args} />;
+}
 
-export const filterRow = Template.bind({});
+export const filterRow: StoryFn<FilterRowProps> = Template.bind({});
 filterRow.args = {
   filters: filtersMock,
   // eslint-disable-next-line no-console

@@ -5,18 +5,21 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { DatePicker, DatePickerProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/DatePicker/Date Picker',
   component: DatePicker,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<DatePickerProps> = args => (
-  <div style={{ width: 350 }}>
-    <DatePicker {...args} />
-  </div>
-);
+function Template(args: DatePickerProps) {
+  return (
+    <div style={{ width: 350 }}>
+      <DatePicker {...args} />
+    </div>
+  );
+}
 
-export const datePicker = Template.bind({});
+export const datePicker: StoryFn<DatePickerProps> = Template.bind({});
 datePicker.args = {
   value: new Date(),
   pickTime: DatePicker.timePicker.None,

@@ -67,12 +67,13 @@ const JoyrideStepsWithoutContent: StepWithSubtitle[] = [
   },
 ];
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Welcome Tour',
   component: WelcomeTour,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<WelcomeTourProps> = () => {
+function Template() {
   const [tourStarted, setTourStarted] = useState(false);
   const [steps, setSteps] = useState(JoyrideSteps);
   const [successFinal, setSuccessFinal] = useState(false);
@@ -127,9 +128,9 @@ const Template: StoryFn<WelcomeTourProps> = () => {
       />
     </div>
   );
-};
+}
 
-export const welcomeTour = Template.bind({});
+export const welcomeTour: StoryFn<WelcomeTourProps> = Template.bind({});
 welcomeTour.args = {};
 welcomeTour.argTypes = {};
 welcomeTour.parameters = {

@@ -15,10 +15,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Drawer, DrawerProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Drawer',
   component: Drawer,
-} as Meta;
+};
+export default meta;
 
 const buttonStyle = css`
   margin-left: 12px;
@@ -70,7 +71,7 @@ const selectOptions = [
   },
 ];
 
-const Template: StoryFn<DrawerProps> = ({ ...args }) => {
+function Template({ ...args }: DrawerProps) {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState<string>('');
   const [radioValue, setRadioValue] = useState<React.ReactText>('');
@@ -143,9 +144,9 @@ const Template: StoryFn<DrawerProps> = ({ ...args }) => {
       </DrawerWrap>
     </Wrap>
   );
-};
+}
 
-export const drawer = Template.bind({});
+export const drawer: StoryFn<DrawerProps> = Template.bind({});
 drawer.args = {};
 drawer.argTypes = {
   container: {

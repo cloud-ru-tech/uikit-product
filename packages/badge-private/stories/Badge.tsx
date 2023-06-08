@@ -9,18 +9,22 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Badge, BadgeProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Badge',
   component: Badge,
-} as Meta;
+};
 
-const Template: StoryFn<BadgeProps> = ({ ...args }) => (
-  <Badge {...args}>
-    <NotifyInterfaceSVG />
-  </Badge>
-);
+export default meta;
 
-export const badge = Template.bind({});
+function Template({ ...args }: BadgeProps) {
+  return (
+    <Badge {...args}>
+      <NotifyInterfaceSVG />
+    </Badge>
+  );
+}
+
+export const badge: StoryFn<BadgeProps> = Template.bind({});
 badge.args = {
   number: 10,
   disabled: false,

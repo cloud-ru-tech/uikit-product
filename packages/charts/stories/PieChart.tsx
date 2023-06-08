@@ -7,14 +7,17 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { PieChart, PieChartProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Charts/Pie Chart',
   component: PieChart,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<PieChartProps> = ({ ...args }) => <PieChart {...args} />;
+function Template({ ...args }: PieChartProps) {
+  return <PieChart {...args} />;
+}
 
-export const pieChart = Template.bind({});
+export const pieChart: StoryFn<PieChartProps> = Template.bind({});
 pieChart.args = {
   options: {
     width: 800,

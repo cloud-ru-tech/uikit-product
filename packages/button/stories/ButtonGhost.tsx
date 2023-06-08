@@ -6,47 +6,50 @@ import { ButtonGhost, ButtonGhostProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Button Ghost',
   component: ButtonGhost,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ButtonGhostProps> = ({ ...args }: ButtonGhostProps) => (
-  <TableWrapper>
-    {Object.entries(ButtonGhost.variants).map(([key, value]) => (
-      <TableColumn key={key} data-variant={TableColumn.variants[value]}>
-        <TableCell>{key}</TableCell>
+function Template({ ...args }: ButtonGhostProps) {
+  return (
+    <TableWrapper>
+      {Object.entries(ButtonGhost.variants).map(([key, value]) => (
+        <TableColumn key={key} data-variant={TableColumn.variants[value]}>
+          <TableCell>{key}</TableCell>
 
-        <TableCell>
-          <ButtonGhost
-            variant={value}
-            tooltip={{ content: key, placement: ButtonGhost.placements.Left }}
-            disabledTooltip={{ content: 'Unavailable', placement: ButtonGhost.placements.Left }}
-            icon={<CopyInterfaceSVG />}
-            iconPosition={ButtonGhost.iconPosition.Before}
-            {...args}
-          />
-        </TableCell>
+          <TableCell>
+            <ButtonGhost
+              variant={value}
+              tooltip={{ content: key, placement: ButtonGhost.placements.Left }}
+              disabledTooltip={{ content: 'Unavailable', placement: ButtonGhost.placements.Left }}
+              icon={<CopyInterfaceSVG />}
+              iconPosition={ButtonGhost.iconPosition.Before}
+              {...args}
+            />
+          </TableCell>
 
-        <TableCell>
-          <ButtonGhost
-            variant={value}
-            tooltip={{ content: key }}
-            icon={<CopyInterfaceSVG />}
-            iconPosition={ButtonGhost.iconPosition.After}
-            {...args}
-          />
-        </TableCell>
+          <TableCell>
+            <ButtonGhost
+              variant={value}
+              tooltip={{ content: key }}
+              icon={<CopyInterfaceSVG />}
+              iconPosition={ButtonGhost.iconPosition.After}
+              {...args}
+            />
+          </TableCell>
 
-        <TableCell>
-          <ButtonGhost variant={value} tooltip={{ content: key }} {...args} />
-        </TableCell>
-      </TableColumn>
-    ))}
-  </TableWrapper>
-);
+          <TableCell>
+            <ButtonGhost variant={value} tooltip={{ content: key }} {...args} />
+          </TableCell>
+        </TableColumn>
+      ))}
+    </TableWrapper>
+  );
+}
 
-export const buttonGhost = Template.bind({});
+export const buttonGhost: StoryFn<ButtonGhostProps> = Template.bind({});
 
 buttonGhost.parameters = getDefaultParameters({
   figmaUrl:

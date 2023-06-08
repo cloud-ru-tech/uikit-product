@@ -7,10 +7,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { HierarchyMenu, HierarchyMenuProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Hierarchy Menu',
   component: HierarchyMenu,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   height: 70vh;
@@ -35,7 +36,9 @@ function menuTreeGenerator(restDepth: number, latitude: number): HierarchyMenuPr
     });
 }
 
-const Template: StoryFn<HierarchyMenuProps & { latitude: number; depth: number }> = ({ latitude, depth, ...args }) => {
+type StoryProps = HierarchyMenuProps & { latitude: number; depth: number };
+
+function Template({ latitude, depth, ...args }: StoryProps) {
   const [nodes, setNodes] = useState(menuTreeGenerator(depth, latitude));
   useEffect(() => setNodes(menuTreeGenerator(depth, latitude)), [depth, latitude]);
   return (
@@ -43,9 +46,9 @@ const Template: StoryFn<HierarchyMenuProps & { latitude: number; depth: number }
       <HierarchyMenu {...args} nodes={nodes} />
     </Wrapper>
   );
-};
+}
 
-export const hierarchyMenu = Template.bind({});
+export const hierarchyMenu: StoryFn<StoryProps> = Template.bind({});
 hierarchyMenu.args = {
   latitude: 3,
   depth: 3,

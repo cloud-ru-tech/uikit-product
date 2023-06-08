@@ -10,10 +10,11 @@ import { GroupChart } from '../src/chart/GroupChart';
 import { SingleChart } from '../src/chart/SingleChart';
 import { PackagesStatistics } from '../src/types';
 
-// eslint-disable-next-line import/no-default-export
-export default {
+const meta: Meta = {
   title: 'Welcome/Statistics',
-} as Meta;
+};
+// eslint-disable-next-line import/no-default-export
+export default meta;
 
 const ChartsWrapper = styled.div`
   display: grid;
@@ -27,7 +28,7 @@ const Title = styled.h1`
   margin-bottom: 60px;
 `;
 
-const Template: StoryFn = () => {
+function Template() {
   const count = process.env.PACKAGES_STATISTICS as unknown as PackagesStatistics;
 
   return (
@@ -77,8 +78,8 @@ const Template: StoryFn = () => {
       )}
     </div>
   );
-};
+}
 
-export const statistics = Template.bind({});
+export const statistics: StoryFn = Template.bind({});
 statistics.args = {};
 statistics.argTypes = {};

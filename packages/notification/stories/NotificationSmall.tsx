@@ -17,12 +17,13 @@ import {
 } from '../src';
 import { NotificationSmall } from '../src/components/NotificationSmall';
 
-export default {
+const meta: Meta = {
   title: 'Components/Notification/Notification Small',
   component: NotificationSmall,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<NotificationSmallProps> = ({ ...args }: NotificationSmallProps) => {
+function Template({ ...args }: NotificationSmallProps) {
   const [currentNotificationId, setNotificationId] = useState<ReactText>();
 
   const clickToOpen = async () => {
@@ -91,9 +92,9 @@ const Template: StoryFn<NotificationSmallProps> = ({ ...args }: NotificationSmal
       />
     </>
   );
-};
+}
 
-export const notificationSmall = Template.bind({});
+export const notificationSmall: StoryFn<NotificationSmallProps> = Template.bind({});
 notificationSmall.args = {
   status: NotificationStatuses[NotificationType.Small].Success,
   text: 'Перенос данных завершен',

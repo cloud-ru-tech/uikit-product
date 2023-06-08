@@ -11,12 +11,15 @@ import componentReadme from '../README.md';
 import { Toolbar } from '../src';
 import { defOpt, defValue } from './helpers/mockData';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Toolbar',
   component: Toolbar.Container,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<WithSupportProps<Toolbar.ContainerProps>> = ({ ...args }) => {
+type StoryProps = WithSupportProps<Toolbar.ContainerProps>;
+
+function Template({ ...args }: StoryProps) {
   const [value, setValue] = useState<string>('');
   const [filterValue, setFilterValue] = useState<TFilterValueType[] | string>(defValue);
 
@@ -48,9 +51,9 @@ const Template: StoryFn<WithSupportProps<Toolbar.ContainerProps>> = ({ ...args }
       />
     </Toolbar.Container>
   );
-};
+}
 
-export const toolbar = Template.bind({});
+export const toolbar: StoryFn<StoryProps> = Template.bind({});
 toolbar.args = {};
 toolbar.argTypes = {
   'data-test-id': {

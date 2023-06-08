@@ -10,10 +10,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CardTopic, CardTopicProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Cards/Card/Topic',
   component: CardTopic,
-} as Meta;
+};
+export default meta;
 
 const ICONS = {
   support: <SupportInterfaceSVG />,
@@ -46,24 +47,26 @@ const RowCard = styled(CardTopic)`
   width: 250px;
 `;
 
-const Template: StoryFn<CardTopicProps> = ({ ...args }) => (
-  <>
-    Controlled:
-    <Wrapper>
-      <CardWrapper>
-        <CardTopic {...args} />
-      </CardWrapper>
-    </Wrapper>
-    Examples:
-    <Wrapper>
-      {Object.values(CardTopic.colors).map((color, index) => (
-        <RowCard key={`${index}${color}`} {...defaultArgs} color={color} />
-      ))}
-    </Wrapper>
-  </>
-);
+function Template({ ...args }: CardTopicProps) {
+  return (
+    <>
+      Controlled:
+      <Wrapper>
+        <CardWrapper>
+          <CardTopic {...args} />
+        </CardWrapper>
+      </Wrapper>
+      Examples:
+      <Wrapper>
+        {Object.values(CardTopic.colors).map((color, index) => (
+          <RowCard key={`${index}${color}`} {...defaultArgs} color={color} />
+        ))}
+      </Wrapper>
+    </>
+  );
+}
 
-export const topic = Template.bind({});
+export const topic: StoryFn<CardTopicProps> = Template.bind({});
 
 topic.args = {
   title: 'Заголовок',

@@ -11,23 +11,28 @@ import { createLayer, InteractiveChart, InteractiveChartProps } from '../src';
 import { DrawStyles, LineInterpolations } from '../src/components/InteractiveChart/constants';
 import { Colors } from '../src/constants/colors';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Charts/Base',
   component: InteractiveChart,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<
-  InteractiveChartProps & { color: Colors; drawStyle: DrawStyles; lineInterpolation: LineInterpolations }
-> = ({ color, drawStyle, lineInterpolation, data, options }) => {
+type StoryProps = InteractiveChartProps & {
+  color: Colors;
+  drawStyle: DrawStyles;
+  lineInterpolation: LineInterpolations;
+};
+
+function Template({ color, drawStyle, lineInterpolation, data, options }: StoryProps) {
   const [key, setKey] = useState(0);
   const layerOptions = useMemo(() => {
     setKey(x => x + 1);
     return merge(options, { series: [{}, createLayer('layer', color, drawStyle, lineInterpolation)] });
   }, [color, drawStyle, lineInterpolation, options]);
   return <InteractiveChart key={key} data={data} options={layerOptions} type={InteractiveChart.types.Default} />;
-};
+}
 
-export const base = Template.bind({});
+export const base: StoryFn<StoryProps> = Template.bind({});
 base.args = {
   data: [
     [1, 2, 3, 4, 5, 6],

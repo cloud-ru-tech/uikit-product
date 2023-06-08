@@ -8,9 +8,10 @@ import componentReadme from '../README.md';
 import * as Icons from '../src/components/services-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
-export default {
+const meta: Meta = {
   title: 'Components/Icons/Services',
-} as Meta;
+};
+export default meta;
 
 const Template = getTemplate(Icons);
 

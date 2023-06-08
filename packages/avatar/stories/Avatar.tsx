@@ -10,10 +10,12 @@ import componentReadme from '../README.md';
 import { Avatar, AvatarProps } from '../src';
 import { Column, Columns, Title, Wrapper } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Avatar',
   component: Avatar,
-} as Meta;
+};
+
+export default meta;
 
 const avatarSrc =
   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80';
@@ -53,26 +55,28 @@ const AVATARS: Record<string, Omit<AvatarProps, 'variant'>[]> = {
   ],
 };
 
-const Template: StoryFn<AvatarProps> = props => (
-  <Wrapper>
-    <Title>Controlled:</Title>
-    <Avatar {...props} />
-    <br />
-    <Divider />
+function Template(props: AvatarProps) {
+  return (
+    <Wrapper>
+      <Title>Controlled:</Title>
+      <Avatar {...props} />
+      <br />
+      <Divider />
 
-    <Columns>
-      <Title>Examples with statuses:</Title>
+      <Columns>
+        <Title>Examples with statuses:</Title>
 
-      <Column title='User' data={AVATARS.user} variant={Avatar.variants.User} size={props.size} />
+        <Column title='User' data={AVATARS.user} variant={Avatar.variants.User} size={props.size} />
 
-      <Column title='Company' data={AVATARS.company} variant={Avatar.variants.Company} size={props.size} />
+        <Column title='Company' data={AVATARS.company} variant={Avatar.variants.Company} size={props.size} />
 
-      <Column title='Other' data={AVATARS.other} variant={Avatar.variants.Other} size={props.size} />
-    </Columns>
-  </Wrapper>
-);
+        <Column title='Other' data={AVATARS.other} variant={Avatar.variants.Other} size={props.size} />
+      </Columns>
+    </Wrapper>
+  );
+}
 
-export const avatar = Template.bind({});
+export const avatar: StoryFn<AvatarProps> = Template.bind({});
 avatar.args = {
   name: 'Дмитрий Петрович Дмитриев',
   variant: Avatar.variants.User,

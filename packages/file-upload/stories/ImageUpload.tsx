@@ -7,14 +7,17 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ImageUpload, ImageUploadProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/FileUpload/Image Upload',
   component: ImageUpload,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ImageUploadProps> = ({ ...args }: ImageUploadProps) => <ImageUpload {...args} />;
+function Template({ ...args }: ImageUploadProps) {
+  return <ImageUpload {...args} />;
+}
 
-export const imageUpload = Template.bind({});
+export const imageUpload: StoryFn<ImageUploadProps> = Template.bind({});
 imageUpload.args = {
   infoText: (
     <>

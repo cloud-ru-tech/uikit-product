@@ -8,18 +8,19 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InputCommon, InputCommonProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Input/Common',
   component: InputCommon,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InputCommonProps> = args => {
+function Template(args: InputCommonProps) {
   const [value, setValue] = useState<string>();
 
   return <InputCommon {...args} value={value} onChange={setValue} />;
-};
+}
 
-export const common = Template.bind({});
+export const common: StoryFn<InputCommonProps> = Template.bind({});
 common.args = {
   label: 'Label',
   labelTooltip: { content: 'Label tooltip content' },

@@ -9,10 +9,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Checkbox, CheckboxProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Checkbox/Checkbox',
   component: Checkbox,
-} as Meta;
+};
+export default meta;
 
 const CheckboxWrap = styled.div`
   padding: 10px;
@@ -28,7 +29,7 @@ type State =
       type: 'checked';
     };
 
-const Template: StoryFn<CheckboxProps> = ({ checked, partChecked, ...args }) => {
+function Template({ checked, partChecked, ...args }: CheckboxProps) {
   const [checkedState, setCheckedState] = useState<State>({ type: 'unchecked' });
 
   useEffect(() => {
@@ -62,9 +63,9 @@ const Template: StoryFn<CheckboxProps> = ({ checked, partChecked, ...args }) => 
       />
     </CheckboxWrap>
   );
-};
+}
 
-export const checkbox = Template.bind({});
+export const checkbox: StoryFn<CheckboxProps> = Template.bind({});
 checkbox.args = {
   checked: false,
   partChecked: false,

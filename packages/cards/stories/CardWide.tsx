@@ -11,10 +11,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CardWide, CardWideProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Cards/Card/Wide',
   component: CardWide,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   height: 332px;
@@ -24,13 +25,15 @@ const Wrapper = styled.div`
   overflow: auto;
 `;
 
-const Template: StoryFn<CardWideProps> = ({ ...args }) => (
-  <Wrapper>
-    <CardWide {...args} />
-  </Wrapper>
-);
+function Template({ ...args }: CardWideProps) {
+  return (
+    <Wrapper>
+      <CardWide {...args} />
+    </Wrapper>
+  );
+}
 
-export const wide = Template.bind({});
+export const wide: StoryFn<CardWideProps> = Template.bind({});
 wide.args = {
   title: 'GOLOS by SberDevices: 1240 часов аудиоданных',
   titleImageSrc:

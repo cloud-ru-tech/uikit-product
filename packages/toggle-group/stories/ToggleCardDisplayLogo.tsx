@@ -10,12 +10,13 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ToggleCardDisplayLogo, ToggleCardDisplayLogoProps, ToggleGroup } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Toggle Group/Toggle Card/Display Logo',
   component: ToggleCardDisplayLogo,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ToggleCardDisplayLogoProps> = args => {
+function Template(args: ToggleCardDisplayLogoProps) {
   const [value, setValue] = useState<number[]>();
 
   return (
@@ -23,9 +24,9 @@ const Template: StoryFn<ToggleCardDisplayLogoProps> = args => {
       <ToggleCardDisplayLogo {...args} value={1} icon={<ModelInterfaceSVG />} />
     </ToggleGroup>
   );
-};
+}
 
-export const displayLogo = Template.bind({});
+export const displayLogo: StoryFn<ToggleCardDisplayLogoProps> = Template.bind({});
 displayLogo.args = { title: 'Title', caption: 'Caption' };
 displayLogo.argTypes = {};
 displayLogo.parameters = {

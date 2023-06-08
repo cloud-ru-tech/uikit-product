@@ -182,14 +182,17 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ${componentName}, ${componentName}Props } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/${componentStoryTitle}',
   component: ${componentName},
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<${componentName}Props> = ({ ...args }) => <${componentName} {...args} />;
+function Template({ ...args }: ${componentName}Props) {
+  return <${componentName} {...args} />;
+}
 
-export const ${componentStoryName} = Template.bind({});
+export const ${componentStoryName}: StoryFn<${componentName}Props> = Template.bind({});
 
 ${componentStoryName}.args = {};
 
@@ -206,7 +209,6 @@ ${componentStoryName}.parameters = {
     url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
   },
 };
-
 `;
 
   fs.writeFileSync(filePath, fileContent);

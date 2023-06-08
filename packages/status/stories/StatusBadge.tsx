@@ -7,10 +7,11 @@ import { UserInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { StatusBadge, StatusBadgeProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Status/Status Badge',
   component: StatusBadge,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   width: 200px;
@@ -23,13 +24,15 @@ const Container = styled.div`
   background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
-const Template: StoryFn<StatusBadgeProps> = ({ ...args }) => (
-  <Container>
-    <StatusBadge {...args} icon={<UserInterfaceSVG />} />
-  </Container>
-);
+function Template({ ...args }: StatusBadgeProps) {
+  return (
+    <Container>
+      <StatusBadge {...args} icon={<UserInterfaceSVG />} />
+    </Container>
+  );
+}
 
-export const statusBadge = Template.bind({});
+export const statusBadge: StoryFn<StatusBadgeProps> = Template.bind({});
 
 statusBadge.parameters = getDefaultParameters({
   figmaUrl:

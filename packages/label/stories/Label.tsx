@@ -15,21 +15,24 @@ const LabelWrap = styled.div`
   justify-content: space-between;
 `;
 
-export default {
+const meta: Meta = {
   title: 'Components/Label',
   component: Label,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<LabelProps> = ({ ...args }) => (
-  <LabelWrap>
-    <Label variant={Label.variants.Green} text={'Новое'} />
-    <Label variant={Label.variants.Blue} text={'Рекомендуемое'} />
-    <Label variant={Label.variants.Red} text={'Топ'} />
-    <Label {...args} />
-  </LabelWrap>
-);
+function Template({ ...args }: LabelProps) {
+  return (
+    <LabelWrap>
+      <Label variant={Label.variants.Green} text={'Новое'} />
+      <Label variant={Label.variants.Blue} text={'Рекомендуемое'} />
+      <Label variant={Label.variants.Red} text={'Топ'} />
+      <Label {...args} />
+    </LabelWrap>
+  );
+}
 
-export const label = Template.bind({});
+export const label: StoryFn<LabelProps> = Template.bind({});
 label.args = {
   text: 'Controls',
   variant: Label.variants.Red,

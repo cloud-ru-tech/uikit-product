@@ -21,18 +21,21 @@ const Container = styled.div`
   background-color: var(${GLOBAL_CSS_COLOR.BACKGROUND_SECONDARY});
 `;
 
-export default {
+const meta: Meta = {
   title: 'Components/Divider',
   component: Divider,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<DividerProps> = ({ ...args }) => (
-  <Container>
-    <Divider {...args} />
-  </Container>
-);
+function Template({ ...args }: DividerProps) {
+  return (
+    <Container>
+      <Divider {...args} />
+    </Container>
+  );
+}
 
-export const divider = Template.bind({});
+export const divider: StoryFn<DividerProps> = Template.bind({});
 
 divider.args = {
   'data-test-id': 'testId',

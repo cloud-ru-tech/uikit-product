@@ -7,16 +7,17 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InteractiveChart, InteractiveChartProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Charts/Box Plot',
   component: InteractiveChart,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InteractiveChartProps> = ({ data, options }) => (
-  <InteractiveChart data={data} options={options} type={InteractiveChart.types.BoxPlot} />
-);
+function Template({ data, options }: InteractiveChartProps) {
+  return <InteractiveChart data={data} options={options} type={InteractiveChart.types.BoxPlot} />;
+}
 
-export const boxPlot = Template.bind({});
+export const boxPlot: StoryFn<InteractiveChartProps> = Template.bind({});
 boxPlot.args = {
   data: [
     [1, 2, 3],

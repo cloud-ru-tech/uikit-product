@@ -10,10 +10,11 @@ import componentReadme from '../README.md';
 import { Document, DocumentProps } from '../src';
 import { getRemoveButtonProps } from './helpers/getRemoveButtonProps';
 
-export default {
+const meta: Meta = {
   title: 'Components/Document',
   component: Document,
-} as Meta;
+};
+export default meta;
 
 const documentSmallClassName = css`
   margin-bottom: 20px;
@@ -76,7 +77,7 @@ const DOCUMENTS: DocumentProps[] = [
   },
 ];
 
-const Template: StoryFn<DocumentProps> = ({ disabled, ...props }) => {
+function Template({ disabled, ...props }: DocumentProps) {
   const [hasDownloadButtonBeenClicked, setHasDownloadButtonBeenClicked] = useState<boolean>(false);
   const [hasRemoveButtonBeenClicked, setHasRemoveButtonBeenClicked] = useState<boolean>(false);
 
@@ -109,9 +110,9 @@ const Template: StoryFn<DocumentProps> = ({ disabled, ...props }) => {
       ))}
     </>
   );
-};
+}
 
-export const document = Template.bind({});
+export const document: StoryFn<DocumentProps> = Template.bind({});
 document.args = {
   file: {
     name: 'test.zip',

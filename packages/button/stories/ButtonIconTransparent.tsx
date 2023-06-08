@@ -6,35 +6,38 @@ import { ButtonIconTransparent, ButtonIconTransparentProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Button Icon Transparent',
   component: ButtonIconTransparent,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ButtonIconTransparentProps> = ({ ...args }) => (
-  <TableWrapper>
-    {Object.entries(ButtonIconTransparent.variants).map(([key, value]) => (
-      <TableColumn
-        key={key}
-        data-variant={value === ButtonIconTransparent.variants.Accent ? TableColumn.variants.onAccent : undefined}
-      >
-        <TableCell>{key}</TableCell>
+function Template({ ...args }) {
+  return (
+    <TableWrapper>
+      {Object.entries(ButtonIconTransparent.variants).map(([key, value]) => (
+        <TableColumn
+          key={key}
+          data-variant={value === ButtonIconTransparent.variants.Accent ? TableColumn.variants.onAccent : undefined}
+        >
+          <TableCell>{key}</TableCell>
 
-        <TableCell>
-          <ButtonIconTransparent
-            {...args}
-            variant={value}
-            tooltip={{ content: 'Play', placement: ButtonIconTransparent.placements.Top }}
-            disabledTooltip={{ content: 'Unavailable', placement: ButtonIconTransparent.placements.Top }}
-            icon={<CirclePlayFilledInterfaceSVG />}
-          />
-        </TableCell>
-      </TableColumn>
-    ))}
-  </TableWrapper>
-);
+          <TableCell>
+            <ButtonIconTransparent
+              {...args}
+              variant={value}
+              tooltip={{ content: 'Play', placement: ButtonIconTransparent.placements.Top }}
+              disabledTooltip={{ content: 'Unavailable', placement: ButtonIconTransparent.placements.Top }}
+              icon={<CirclePlayFilledInterfaceSVG />}
+            />
+          </TableCell>
+        </TableColumn>
+      ))}
+    </TableWrapper>
+  );
+}
 
-export const buttonIconTransparent = Template.bind({});
+export const buttonIconTransparent: StoryFn<ButtonIconTransparentProps> = Template.bind({});
 
 buttonIconTransparent.parameters = getDefaultParameters({
   figmaUrl:

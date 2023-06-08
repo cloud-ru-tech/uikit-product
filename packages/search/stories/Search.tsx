@@ -8,18 +8,19 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Search, SearchProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Search',
   component: Search,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<SearchProps> = ({ ...args }) => {
+function Template({ ...args }: SearchProps) {
   const [value, setValue] = useState('');
 
   return <Search {...args} value={value} onChange={setValue} />;
-};
+}
 
-export const search = Template.bind({});
+export const search: StoryFn<SearchProps> = Template.bind({});
 search.args = {};
 search.argTypes = {};
 search.parameters = {

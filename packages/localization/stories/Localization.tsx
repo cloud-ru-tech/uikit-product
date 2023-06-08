@@ -9,10 +9,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CurrencyFormatter, DateFormatter, NumberFormatter } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Localization',
   component: ConfigProvider,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   margin: 1rem;
@@ -21,8 +22,11 @@ const Wrapper = styled.div`
 const HooksCodeWrapper = styled.span`
   ${TEXT_1_STYLES};
 `;
+type StoryProps = {
+  showTime: boolean;
+};
 
-const Template: StoryFn = ({ showTime }) => {
+function Template({ showTime }: StoryProps) {
   const { languageCode } = useLanguage();
   return (
     <>
@@ -43,9 +47,9 @@ const Template: StoryFn = ({ showTime }) => {
       </Wrapper>
     </>
   );
-};
+}
 
-export const localization = Template.bind({});
+export const localization: StoryFn<StoryProps> = Template.bind({});
 localization.args = {};
 localization.argTypes = {
   showTime: {

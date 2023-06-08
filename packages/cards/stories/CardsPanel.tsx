@@ -12,10 +12,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CardCategory, CardImage, CardResult, CardsPanel, CardsPanelProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Cards/Panel',
   component: CardsPanel,
-} as Meta;
+};
+export default meta;
 
 const SearchWrapView = css`
   margin: 20px 0;
@@ -41,7 +42,7 @@ type StoryProps = {
   cardEntity: CardEntity;
 } & CardsPanelProps;
 
-const Template: StoryFn<StoryProps> = ({ ...args }) => {
+function Template({ ...args }: StoryProps) {
   const [data, setData] = useState(generateData(args.cardsAmount));
   const [filteredData, setFilteredData] = useState(data);
   const [searchValue, setSearchValue] = useState('');
@@ -114,9 +115,9 @@ const Template: StoryFn<StoryProps> = ({ ...args }) => {
       </CardsPanel>
     </>
   );
-};
+}
 
-export const panel = Template.bind({});
+export const panel: StoryFn<StoryProps> = Template.bind({});
 
 panel.args = {
   cardsAmount: 10,

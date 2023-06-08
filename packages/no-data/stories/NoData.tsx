@@ -27,20 +27,26 @@ const buttons = {
   Default: <Button text={'Button Text'} icon={<CircleAddInterfaceSVG />} variant={Button.variants.Transparent} />,
 };
 
-export default {
+const meta: Meta = {
   title: 'Components/No Data/No Data',
   component: NoData,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<
-  { image: string | ReactElement; button: string | ReactElement } & Omit<NoDataProps, 'image' | 'button'>
-> = ({ button, image, ...rest }) => (
-  <Wrapper>
-    <NoData {...rest} image={image as ReactElement} button={button as ReactElement}></NoData>
-  </Wrapper>
-);
+type StoryProps = { image: string | ReactElement; button: string | ReactElement } & Omit<
+  NoDataProps,
+  'image' | 'button'
+>;
 
-export const noData = Template.bind({});
+function Template({ button, image, ...rest }: StoryProps) {
+  return (
+    <Wrapper>
+      <NoData {...rest} image={image as ReactElement} button={button as ReactElement}></NoData>
+    </Wrapper>
+  );
+}
+
+export const noData: StoryFn<StoryProps> = Template.bind({});
 noData.args = {
   title: 'Нет данных',
   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 

@@ -14,10 +14,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Popover, PopoverProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Popover',
   component: Popover,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   margin: auto;
@@ -77,7 +78,9 @@ const PopoverContent = styled.div`
   width: 216px;
 `;
 
-const Template: StoryFn<PopoverProps & { uncontrolledBehavior: boolean }> = ({ uncontrolledBehavior, ...args }) => {
+type StoryProps = PopoverProps & { uncontrolledBehavior: boolean };
+
+function Template({ uncontrolledBehavior, ...args }: StoryProps) {
   const [isVisible, setIsVisible] = useState(args.visible);
 
   useEffect(() => {
@@ -125,9 +128,9 @@ const Template: StoryFn<PopoverProps & { uncontrolledBehavior: boolean }> = ({ u
       </Container>
     </Group>
   );
-};
+}
 
-export const popover = Template.bind({});
+export const popover: StoryFn<StoryProps> = Template.bind({});
 popover.args = { visible: true, placement: Popover.placements.BottomEnd };
 popover.argTypes = {
   uncontrolledBehavior: {

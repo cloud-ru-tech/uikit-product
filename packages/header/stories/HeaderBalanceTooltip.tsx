@@ -5,25 +5,28 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { HeaderBalanceTooltip, HeaderBalanceTooltipProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Header/Header Balance Tooltip',
   component: HeaderBalanceTooltip,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<
-  HeaderBalanceTooltipProps & { showRechargeButton: boolean; showSpinner: boolean; showPie: boolean }
-> = ({ showRechargeButton, showSpinner, showPie, ...args }) => (
-  <HeaderBalanceTooltip
-    {...args}
-    balance={showSpinner ? undefined : args.balance}
-    bonuses={showSpinner ? undefined : args.bonuses}
-    customBalanceTooltip={showSpinner ? undefined : args.customBalanceTooltip}
-    limit={showPie ? args.limit : undefined}
-    onRechargeClick={showRechargeButton ? args.onRechargeClick : undefined}
-  />
-);
+type StoryProps = HeaderBalanceTooltipProps & { showRechargeButton: boolean; showSpinner: boolean; showPie: boolean };
 
-export const headerBalanceTooltip = Template.bind({});
+function Template({ showRechargeButton, showSpinner, showPie, ...args }: StoryProps) {
+  return (
+    <HeaderBalanceTooltip
+      {...args}
+      balance={showSpinner ? undefined : args.balance}
+      bonuses={showSpinner ? undefined : args.bonuses}
+      customBalanceTooltip={showSpinner ? undefined : args.customBalanceTooltip}
+      limit={showPie ? args.limit : undefined}
+      onRechargeClick={showRechargeButton ? args.onRechargeClick : undefined}
+    />
+  );
+}
+
+export const headerBalanceTooltip: StoryFn<StoryProps> = Template.bind({});
 headerBalanceTooltip.args = {
   balance: 144_401_810,
   balanceVariant: undefined,

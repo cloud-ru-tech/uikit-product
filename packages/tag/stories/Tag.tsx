@@ -8,10 +8,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Tag, TagProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Tag/Tag',
   component: Tag,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   display: flex;
@@ -27,18 +28,22 @@ const Row = styled.div`
 
 const Name = styled.span``;
 
-const Template: StoryFn<TagProps & { showRemoveButton: boolean }> = args => (
-  <Wrapper>
-    {Object.entries(Tag.colors).map(([name, color]) => (
-      <Row key={color}>
-        <Name>{name}</Name>
-        <Tag {...args} onRemoveClick={args.showRemoveButton ? args.onRemoveClick : undefined} color={color} />
-      </Row>
-    ))}
-  </Wrapper>
-);
+type StoryProps = TagProps & { showRemoveButton: boolean };
 
-export const tag = Template.bind({});
+function Template(args: StoryProps) {
+  return (
+    <Wrapper>
+      {Object.entries(Tag.colors).map(([name, color]) => (
+        <Row key={color}>
+          <Name>{name}</Name>
+          <Tag {...args} onRemoveClick={args.showRemoveButton ? args.onRemoveClick : undefined} color={color} />
+        </Row>
+      ))}
+    </Wrapper>
+  );
+}
+
+export const tag: StoryFn<StoryProps> = Template.bind({});
 tag.args = { value: 'Tag', showRemoveButton: false };
 tag.argTypes = {
   showRemoveButton: {

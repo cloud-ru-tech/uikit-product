@@ -8,23 +8,26 @@ import componentReadme from '../README.md';
 import { Counter, CounterProps } from '../src';
 import { ThemeWrapper } from './helperComponents';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Counter',
   component: Counter,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<CounterProps> = ({ variant, ...args }) => (
-  <ThemeWrapper variant={variant}>
-    <div>
-      Counter <Counter {...args} variant={variant} type={Counter.types.Count} />
-    </div>
-    <div>
-      Counter-Notify <Counter {...args} variant={variant} type={Counter.types.Notify} />
-    </div>
-  </ThemeWrapper>
-);
+function Template({ variant, ...args }: CounterProps) {
+  return (
+    <ThemeWrapper variant={variant}>
+      <div>
+        Counter <Counter {...args} variant={variant} type={Counter.types.Count} />
+      </div>
+      <div>
+        Counter-Notify <Counter {...args} variant={variant} type={Counter.types.Notify} />
+      </div>
+    </ThemeWrapper>
+  );
+}
 
-export const counter = Template.bind({});
+export const counter: StoryFn<CounterProps> = Template.bind({});
 counter.args = {
   value: 5,
 };

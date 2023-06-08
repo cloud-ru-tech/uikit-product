@@ -8,12 +8,13 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ToggleCardExtended, ToggleCardExtendedProps, ToggleGroup } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Toggle Group/Toggle Card/Extended',
   component: ToggleCardExtended,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ToggleCardExtendedProps> = args => {
+function Template(args: ToggleCardExtendedProps) {
   const [value, setValue] = useState<number[]>();
 
   return (
@@ -21,9 +22,9 @@ const Template: StoryFn<ToggleCardExtendedProps> = args => {
       <ToggleCardExtended {...args} value={1} />
     </ToggleGroup>
   );
-};
+}
 
-export const extended = Template.bind({});
+export const extended: StoryFn<ToggleCardExtendedProps> = Template.bind({});
 extended.args = {
   title: 'Title',
   displayedValue: 'Displayed value',

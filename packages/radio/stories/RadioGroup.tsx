@@ -1,17 +1,18 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
-import { useState } from 'react';
+import { ReactText, useState } from 'react';
 
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { Radio, RadioGroup, RadioGroupProps, RadioProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Radio/Radio Group',
   component: RadioGroup,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   width: 200px;
@@ -52,8 +53,10 @@ const radios = [
   },
 ];
 
-const Template: StoryFn<RadioProps & RadioGroupProps> = ({ ...args }) => {
-  const [value, setValue] = useState<React.ReactText>('Story1');
+type StoryProps = RadioProps & RadioGroupProps;
+
+function Template({ ...args }: StoryProps) {
+  const [value, setValue] = useState<ReactText>('Story1');
 
   return (
     <>
@@ -66,9 +69,9 @@ const Template: StoryFn<RadioProps & RadioGroupProps> = ({ ...args }) => {
       </Container>
     </>
   );
-};
+}
 
-export const radioGroup = Template.bind({});
+export const radioGroup: StoryFn<StoryProps> = Template.bind({});
 
 radioGroup.parameters = getDefaultParameters({
   figmaUrl:

@@ -1,6 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+
 import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -8,23 +10,28 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { NoDataSearch } from '../src/components';
 
-export default {
+const meta: Meta = {
   title: 'Components/No Data/No Data Search',
   component: NoDataSearch,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-const Template: StoryFn = props => (
-  <Wrapper>
-    <NoDataSearch {...props} />
-  </Wrapper>
-);
+type StoryProps = WithSupportProps<object>;
 
-export const noDataSearch = Template.bind({});
+function Template(props: StoryProps) {
+  return (
+    <Wrapper>
+      <NoDataSearch {...props} />
+    </Wrapper>
+  );
+}
+
+export const noDataSearch: StoryFn<StoryProps> = Template.bind({});
 noDataSearch.args = {};
 noDataSearch.argTypes = {};
 noDataSearch.parameters = {

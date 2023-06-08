@@ -14,10 +14,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { Card, NotificationPopup, NotificationPopupProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Notification Panel',
   component: NotificationPopup,
-} as Meta;
+};
+export default meta;
 
 const avatarSrc =
   'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80';
@@ -28,12 +29,14 @@ const ContentDescriptionBold = styled.span`
   font-weight: 600;
 `;
 
-const ContentDescription = () => (
-  <>
-    <ContentDescriptionBold>[WorkspaceName]</ContentDescriptionBold> Description of{' '}
-    <ContentDescriptionBold>EventName</ContentDescriptionBold>
-  </>
-);
+function ContentDescription() {
+  return (
+    <>
+      <ContentDescriptionBold>[WorkspaceName]</ContentDescriptionBold> Description of{' '}
+      <ContentDescriptionBold>EventName</ContentDescriptionBold>
+    </>
+  );
+}
 
 const defaultCard: Card = {
   id: '',
@@ -57,7 +60,9 @@ const defaultCard: Card = {
   },
 };
 
-const Template = ({ ...args }) => {
+type StoryProps = NotificationPopupProps & { cardsCount: number; totalCardsCount: number };
+
+function Template({ ...args }: StoryProps) {
   const { cardsCount, totalCardsCount, onReadAllButtonClick, open } = args;
   const [hasMore, setHasMore] = useState(cardsCount < totalCardsCount);
   const [cards, setCards] = useState<Card[]>([]);
@@ -149,10 +154,9 @@ const Template = ({ ...args }) => {
       </NotificationPopup>
     </>
   );
-};
+}
 
-export const notificationPanel: StoryFn<NotificationPopupProps & { cardsCount: number; totalCardsCount: number }> =
-  Template.bind({});
+export const notificationPanel: StoryFn<StoryProps> = Template.bind({});
 notificationPanel.args = {
   headerTooltip: 'Уведомления',
   onReadAllButtonClick() {},

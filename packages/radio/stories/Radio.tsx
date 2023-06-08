@@ -7,10 +7,11 @@ import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { Radio, RadioGroup, RadioProps } from '../src';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Radio/Radio',
   component: Radio,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   width: 200px;
@@ -24,15 +25,17 @@ const Container = styled.div`
   padding: 12px;
 `;
 
-const Template: StoryFn<RadioProps> = ({ ...args }) => (
-  <Container>
-    <RadioGroup value={'story1'} onChange={() => {}}>
-      <Radio {...args} />
-    </RadioGroup>
-  </Container>
-);
+function Template({ ...args }: RadioProps) {
+  return (
+    <Container>
+      <RadioGroup value={'story1'} onChange={() => {}}>
+        <Radio {...args} />
+      </RadioGroup>
+    </Container>
+  );
+}
 
-export const radio = Template.bind({});
+export const radio: StoryFn<RadioProps> = Template.bind({});
 
 radio.parameters = getDefaultParameters({
   figmaUrl:

@@ -7,20 +7,21 @@ import { Button } from '@sbercloud/uikit-product-button';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { UsersByGroupSelect } from '../src';
+import { UsersByGroupSelect, UsersByGroupSelectProps } from '../src';
 import { CheckedType, OptionType } from '../src/helperComponents/InlineTreeSelect';
 import { treeOptions } from './helpers/mockData';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Select/Users By Group Select',
   component: UsersByGroupSelect,
-} as Meta;
+};
+export default meta;
 
 const StyledButton = styled(Button)`
   margin: 10px 10px 0px 0px;
 `;
 
-const Template: StoryFn = (args): JSX.Element => {
+function Template(args: UsersByGroupSelectProps) {
   const defaultVal: CheckedType = { checked: ['b'], halfChecked: [] };
   const [tree, setTree] = useState<OptionType[]>(treeOptions as OptionType[]);
   const [checked, setChecked] = useState<CheckedType | undefined>();
@@ -74,9 +75,9 @@ const Template: StoryFn = (args): JSX.Element => {
       />
     </>
   );
-};
+}
 
-export const usersByGroupSelect = Template.bind({});
+export const usersByGroupSelect: StoryFn<UsersByGroupSelectProps> = Template.bind({});
 usersByGroupSelect.argTypes = {};
 usersByGroupSelect.parameters = {
   readme: {

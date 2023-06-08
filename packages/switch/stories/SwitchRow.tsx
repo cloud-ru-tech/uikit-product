@@ -11,10 +11,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SwitchRow as SwitchComponent, SwitchRowProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Switch/Switch Row',
   component: SwitchComponent,
-} as Meta;
+};
+export default meta;
 
 const Container = styled.div`
   padding: 20px;
@@ -23,7 +24,7 @@ const Container = styled.div`
   background-color: var(${themeVars.sys.neutral.background2Level});
 `;
 
-const Template: StoryFn<SwitchRowProps> = ({ checked: propsChecked, ...args }) => {
+function Template({ checked: propsChecked, ...args }: SwitchRowProps) {
   const [checked, setChecked] = useState(propsChecked || false);
 
   useEffect(() => {
@@ -35,9 +36,9 @@ const Template: StoryFn<SwitchRowProps> = ({ checked: propsChecked, ...args }) =
       <SwitchComponent {...args} onChange={setChecked} checked={checked} />
     </Container>
   );
-};
+}
 
-export const SwitchRow = Template.bind({});
+export const SwitchRow: StoryFn<SwitchRowProps> = Template.bind({});
 SwitchRow.args = {
   title: 'Intel Xeon Высокопроизводительный процессор для серверов 3-го поколения',
   description:

@@ -10,12 +10,13 @@ import { FilterBlock, FilterBlockProps } from '../src';
 import { FilterTypes } from '../src/constants';
 import { mockFilters } from './helpers/mockFilters';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Filter Block',
   component: FilterBlock,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<FilterBlockProps> = ({ ...args }) => {
+function Template({ ...args }: FilterBlockProps) {
   const [activeFastFilters, setActiveFastFilters] = useState<string[]>([]);
   const [activeFilters, setActiveFilters] = useState({});
 
@@ -78,9 +79,9 @@ const Template: StoryFn<FilterBlockProps> = ({ ...args }) => {
       onResetButtonClick={handleResetButtonClick}
     />
   );
-};
+}
 
-export const filterBlock = Template.bind({});
+export const filterBlock: StoryFn<FilterBlockProps> = Template.bind({});
 filterBlock.args = {};
 filterBlock.argTypes = {};
 filterBlock.parameters = {

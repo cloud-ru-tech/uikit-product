@@ -18,10 +18,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { DropdownItem, DropdownMenu, DropdownMenuProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Dropdown',
   component: DropdownMenu,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   display: grid;
@@ -46,7 +47,7 @@ const IconWrapper = styled.div`
   }
 `;
 
-const Template: StoryFn<DropdownMenuProps> = ({ ...args }) => {
+function Template({ ...args }: DropdownMenuProps) {
   const [isOpen, setIsOpen] = useState({
     filesButton: false,
     filterButton: false,
@@ -168,9 +169,9 @@ const Template: StoryFn<DropdownMenuProps> = ({ ...args }) => {
       </DropdownMenu>
     </Wrapper>
   );
-};
+}
 
-export const dropdown = Template.bind({});
+export const dropdown: StoryFn<DropdownMenuProps> = Template.bind({});
 dropdown.args = {};
 dropdown.argTypes = {};
 dropdown.parameters = {

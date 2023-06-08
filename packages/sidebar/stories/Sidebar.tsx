@@ -8,10 +8,11 @@ import componentReadme from '../README.md';
 import { Sidebar, SidebarItemId, SidebarProps } from '../src/components';
 import { footerItems, menuList } from './mocks/menuList';
 
-export default {
+const meta: Meta = {
   title: 'Components/Sidebar',
   component: Sidebar,
-} as Meta;
+};
+export default meta;
 
 const Wrap = styled.div`
   position: fixed;
@@ -21,7 +22,7 @@ const Wrap = styled.div`
   width: 100%;
 `;
 
-const Template: StoryFn<SidebarProps> = ({ active, ...args }) => {
+function Template({ active, ...args }: SidebarProps) {
   const [activeItem, setActiveItem] = useState<SidebarItemId | undefined>(active);
 
   useEffect(() => {
@@ -37,9 +38,9 @@ const Template: StoryFn<SidebarProps> = ({ active, ...args }) => {
       <Sidebar {...args} active={activeItem} onActiveChange={handleItemClick} />
     </Wrap>
   );
-};
+}
 
-export const sidebar = Template.bind({});
+export const sidebar: StoryFn<SidebarProps> = Template.bind({});
 sidebar.args = {
   list: menuList,
   footerItems,

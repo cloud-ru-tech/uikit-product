@@ -27,10 +27,11 @@ const ON_CLICK = {
   undefined: undefined,
 };
 
-export default {
+const meta: Meta = {
   title: 'Components/Cards/Card/Product',
   component: CardProduct,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   display: flex;
@@ -43,16 +44,18 @@ const Wrapper = styled.div`
   resize: horizontal;
 `;
 
-const Template: StoryFn<CardProductProps> = ({ ...args }) => (
-  <>
-    Controlled:
-    <Wrapper>
-      <CardProduct {...args} />
-    </Wrapper>
-  </>
-);
+function Template({ ...args }: CardProductProps) {
+  return (
+    <>
+      Controlled:
+      <Wrapper>
+        <CardProduct {...args} />
+      </Wrapper>
+    </>
+  );
+}
 
-export const product = Template.bind({});
+export const product: StoryFn<CardProductProps> = Template.bind({});
 
 product.args = {
   icon: <DataCatalogServiceSVG size={24} />,

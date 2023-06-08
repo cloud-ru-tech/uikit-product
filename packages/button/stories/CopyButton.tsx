@@ -4,16 +4,19 @@ import { ButtonIcon, CopyButton, CopyButtonProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
 
-export default {
+const meta: Meta = {
   title: 'Components/Button/Copy Button',
   component: CopyButton,
-} as Meta;
+};
+export default meta;
 
 enum CopyStrategy {
   None = 'None',
   Prevent = 'Prevent',
   ReplaceText = 'ReplaceText',
 }
+
+type StoryProps = CopyButtonProps & { copyStrategy?: CopyStrategy; showTooltip?: boolean };
 
 const delayPromise = (ms: number) =>
   new Promise(resolve => {
@@ -34,39 +37,37 @@ const getCopyFlow = (copyStrategy: CopyStrategy): CopyButtonProps['onClickBefore
   }
 };
 
-const Template: StoryFn<CopyButtonProps & { copyStrategy?: CopyStrategy; showTooltip?: boolean }> = ({
-  copyStrategy = CopyStrategy.None,
-  showTooltip,
-  ...args
-}) => (
-  <TableWrapper>
-    <TableColumn>
-      <TableCell>Button Icon Transparent / Default</TableCell>
-      <TableCell>
-        <CopyButton
-          {...args}
-          tooltip={{ show: showTooltip, ...args.tooltip }}
-          onClickBeforeCopy={getCopyFlow(copyStrategy)}
-        />
-      </TableCell>
-    </TableColumn>
+function Template({ copyStrategy = CopyStrategy.None, showTooltip, ...args }: StoryProps) {
+  return (
+    <TableWrapper>
+      <TableColumn>
+        <TableCell>Button Icon Transparent / Default</TableCell>
+        <TableCell>
+          <CopyButton
+            {...args}
+            tooltip={{ show: showTooltip, ...args.tooltip }}
+            onClickBeforeCopy={getCopyFlow(copyStrategy)}
+          />
+        </TableCell>
+      </TableColumn>
 
-    <TableColumn>
-      <TableCell>Button Icon / Color</TableCell>
-      <TableCell>
-        <CopyButton
-          as={ButtonIcon}
-          variant={ButtonIcon.variants.Color}
-          {...args}
-          tooltip={{ show: showTooltip, ...args.tooltip }}
-          onClickBeforeCopy={getCopyFlow(copyStrategy)}
-        />
-      </TableCell>
-    </TableColumn>
-  </TableWrapper>
-);
+      <TableColumn>
+        <TableCell>Button Icon / Color</TableCell>
+        <TableCell>
+          <CopyButton
+            as={ButtonIcon}
+            variant={ButtonIcon.variants.Color}
+            {...args}
+            tooltip={{ show: showTooltip, ...args.tooltip }}
+            onClickBeforeCopy={getCopyFlow(copyStrategy)}
+          />
+        </TableCell>
+      </TableColumn>
+    </TableWrapper>
+  );
+}
 
-export const copyButton = Template.bind({});
+export const copyButton: StoryFn<StoryProps> = Template.bind({});
 
 copyButton.parameters = getDefaultParameters({
   extraControlsInclude: ['[Stories]: Show tooltip', 'text', 'tooltip', 'copyStrategy'],

@@ -10,12 +10,15 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ToggleCard, ToggleCardProps, ToggleGroup } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Toggle Group/Toggle Card/Card',
   component: ToggleCard,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<ToggleCardProps & { showIcon: boolean }> = ({ showIcon, ...args }) => {
+type StoryProps = ToggleCardProps & { showIcon: boolean };
+
+function Template({ showIcon, ...args }: StoryProps) {
   const [value, setValue] = useState<number[]>();
 
   return (
@@ -23,9 +26,9 @@ const Template: StoryFn<ToggleCardProps & { showIcon: boolean }> = ({ showIcon, 
       <ToggleCard {...args} value={1} icon={showIcon && <ModelInterfaceSVG />} />
     </ToggleGroup>
   );
-};
+}
 
-export const card = Template.bind({});
+export const card: StoryFn<StoryProps> = Template.bind({});
 card.args = { title: 'Title', showIcon: true, description: 'Description' };
 card.argTypes = {
   showIcon: {

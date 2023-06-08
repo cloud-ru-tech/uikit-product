@@ -9,35 +9,37 @@ import componentReadme from '../README.md';
 import { NoDataPage, NoDataPageProps } from '../src';
 import { NoDataPageVariants } from '../src/helpers/types';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/No Data Page',
   component: NoDataPage,
-} as Meta;
+};
+export default meta;
 
 const icons = {
   BucketSVG: <BucketInterfaceSVG />,
   ServiceDataTransferServiceSVG: <DataTransferServiceSVG />,
 };
 
-const Template: StoryFn<{ icon: string | React.ReactElement } & Omit<NoDataPageProps, 'icon'>> = ({
-  icon,
-  ...rest
-}) => (
-  <div style={{ width: '100%', height: '100vh' }}>
-    <NoDataPage {...rest} icon={icon as React.ReactElement}>
-      <p>
-        Хранилище ML Space - это восхитительный и полезный инструмент. Мы можем подвести итог, что современные
-        технологии, и компьютеры в частности, имеют как положительные, так и отрицательные последствия для жизни людей.
-        А для того, чтобы жить в гармонии люди должны найти правильный баланс.
-      </p>
-      <p>Чтобы сохранить ваши данные в хранилище ML Space, создайте бакет и загрузите в него файлы.</p>
-      <p>Подробнее о сервисе читайте в документации</p>
-      <Button text='Создать бакет' />
-    </NoDataPage>
-  </div>
-);
+type StoryProps = { icon: string | React.ReactElement } & Omit<NoDataPageProps, 'icon'>;
 
-export const noDataPage = Template.bind({});
+function Template({ icon, ...rest }: StoryProps) {
+  return (
+    <div style={{ width: '100%', height: '100vh' }}>
+      <NoDataPage {...rest} icon={icon as React.ReactElement}>
+        <p>
+          Хранилище ML Space - это восхитительный и полезный инструмент. Мы можем подвести итог, что современные
+          технологии, и компьютеры в частности, имеют как положительные, так и отрицательные последствия для жизни
+          людей. А для того, чтобы жить в гармонии люди должны найти правильный баланс.
+        </p>
+        <p>Чтобы сохранить ваши данные в хранилище ML Space, создайте бакет и загрузите в него файлы.</p>
+        <p>Подробнее о сервисе читайте в документации</p>
+        <Button text='Создать бакет' />
+      </NoDataPage>
+    </div>
+  );
+}
+
+export const noDataPage: StoryFn<StoryProps> = Template.bind({});
 noDataPage.args = {
   type: NoDataPageVariants.Large,
   title: 'Создайте ваш первый бакет для хранения объектов',

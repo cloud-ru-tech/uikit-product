@@ -8,9 +8,10 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SHADOW, Themes, useTheme } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Theme/Shadow',
-} as Meta;
+};
+export default meta;
 
 const ThemeWrapper = styled.div`
   display: flex;
@@ -40,7 +41,7 @@ const Text = styled.div`
   text-align: center;
 `;
 
-const Template: StoryFn = () => {
+function Template() {
   const { theme } = useTheme();
 
   return (
@@ -56,9 +57,9 @@ const Template: StoryFn = () => {
       ))}
     </ThemeWrapper>
   );
-};
+}
 
-export const shadow = Template.bind({});
+export const shadow: StoryFn = Template.bind({});
 shadow.args = {};
 shadow.argTypes = {};
 shadow.parameters = {

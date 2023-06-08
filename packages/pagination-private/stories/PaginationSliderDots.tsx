@@ -8,12 +8,13 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { PaginationSliderDots, PaginationSliderDotsProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Components/Pagination/Pagination Slider Dots',
   component: PaginationSliderDots,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<PaginationSliderDotsProps> = args => {
+function Template(args: PaginationSliderDotsProps) {
   const [page, setPage] = useState(args.page);
 
   useEffect(() => {
@@ -21,9 +22,9 @@ const Template: StoryFn<PaginationSliderDotsProps> = args => {
   }, [args.page]);
 
   return <PaginationSliderDots {...args} page={page} onChange={setPage} />;
-};
+}
 
-export const paginationSliderDots = Template.bind({});
+export const paginationSliderDots: StoryFn<PaginationSliderDotsProps> = Template.bind({});
 paginationSliderDots.args = { total: 10, page: 1 };
 paginationSliderDots.argTypes = {};
 paginationSliderDots.parameters = {

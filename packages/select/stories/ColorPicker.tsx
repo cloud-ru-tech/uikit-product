@@ -5,14 +5,17 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ColorPicker } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Select/Color Picker',
   component: ColorPicker,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn = () => <ColorPicker />;
+function Template() {
+  return <ColorPicker />;
+}
 
-export const colorPicker = Template.bind({});
+export const colorPicker: StoryFn = Template.bind({});
 
 colorPicker.parameters = {
   readme: {

@@ -18,9 +18,10 @@ import {
 } from '../src';
 import { commonTemplate, TypographyStoryConfig } from './helpers/CommonTemplate';
 
-export default {
+const meta: Meta = {
   title: 'Typography/Headers',
-} as Meta;
+};
+export default meta;
 
 const headersConfig: TypographyStoryConfig = [
   {
