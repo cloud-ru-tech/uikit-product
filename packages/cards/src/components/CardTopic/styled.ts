@@ -135,3 +135,7 @@ export const Seamount = css`
     background-color: var(${COLORS.image.seamount.background});
   }
 `;
+
+export const cursorPointerClassName = css`
+  cursor: pointer;
+`;
