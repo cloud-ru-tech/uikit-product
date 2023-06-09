@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2023-06-09)
+
+
+### Features
+
+* **[SVP-5107](https://jira.sbercloud.tech/browse/SVP-5107):** add DataChip to FilterRow ([d695f0d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d695f0d1f54639f7fd747ad23eb079cfe0b7ca3f))
+
+
+
+
+
 ## 0.1.12 (2023-06-08)
 
 ### Only dependencies have been changed

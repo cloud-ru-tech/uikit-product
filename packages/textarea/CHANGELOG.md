@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.55 (2023-06-09)
+
+
+### Bug Fixes
+
+* **[LK-1897](https://jira.sbercloud.tech/browse/LK-1897):** text area padding ([325b9c8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/325b9c885a9d858c0b5ab616dc94d3bcd1a3903e))
+
+
+
+
+
 ## 2.2.54 (2023-06-08)
 
 ### Only dependencies have been changed
@@ -199,7 +210,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.2.35 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-textarea
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-textarea-private@2.5.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/textarea-private/CHANGELOG.md)
 
 ## 2.2.34 (2023-01-25)
 

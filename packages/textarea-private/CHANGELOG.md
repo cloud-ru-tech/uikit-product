@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.5.37 (2023-06-09)
+
+
+### Bug Fixes
+
+* **[LK-1897](https://jira.sbercloud.tech/browse/LK-1897):** text area padding ([325b9c8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/325b9c885a9d858c0b5ab616dc94d3bcd1a3903e))
+
+
+
+
+
 ## 2.5.36 (2023-06-08)
 
 ### Only dependencies have been changed
