@@ -15,9 +15,8 @@ export default meta;
 const Column = styled.div`
   display: flex;
   width: 250px;
-  flex-direction: column;
   resize: horizontal;
-  overflow: auto;
+  overflow: hidden;
 `;
 
 type TruncateProps = TruncateStringProps & { columnWidth?: number };

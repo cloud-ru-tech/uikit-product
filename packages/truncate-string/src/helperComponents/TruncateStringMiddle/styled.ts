@@ -1,19 +1,15 @@
 import { styled } from '@linaria/react';
 
-export const Container = styled.span`
+export const Wrapper = styled.span`
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 100%;
   position: relative;
   overflow: hidden;
   white-space: nowrap;
 `;
 
-export const Wrapper = styled.span`
-  overflow: hidden;
-  display: block;
-  width: fit-content;
-  max-width: 100%;
-`;
-
-export const Display = styled.span`
+export const TruncatedText = styled.span`
   position: absolute;
   left: 0;
   display: -webkit-box;

@@ -48,23 +48,25 @@ export function TruncateStringMiddle({
   }, [showTooltip, tag, text, hideTooltip]);
 
   const textElement = (
-    <S.Container {...extractSupportProps(rest)}>
-      <S.Display as={tag} className={textClassName}>
+    <>
+      <S.TruncatedText as={tag} className={textClassName}>
         {truncatedString}
-      </S.Display>
+      </S.TruncatedText>
       <S.FullText as={tag} ref={textElementRef} className={textClassName}>
         {text}
       </S.FullText>
-    </S.Container>
+    </>
   );
 
-  if (showTooltip && !hideTooltip) {
-    return (
-      <Tooltip content={text} placement={placement} type={Tooltip.types.Truncated} classNameTrigger={className}>
-        {textElement}
-      </Tooltip>
-    );
-  }
-
-  return <S.Wrapper className={className}>{textElement}</S.Wrapper>;
+  return (
+    <S.Wrapper className={className} {...extractSupportProps(rest)}>
+      {showTooltip && !hideTooltip ? (
+        <Tooltip content={text} placement={placement} type={Tooltip.types.Truncated}>
+          {textElement}
+        </Tooltip>
+      ) : (
+        textElement
+      )}
+    </S.Wrapper>
+  );
 }
