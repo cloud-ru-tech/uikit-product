@@ -1,6 +1,6 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
-import { VFC } from 'react';
+import { FunctionComponent } from 'react';
 
 import { TEXT_2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
@@ -19,7 +19,9 @@ enum SWITCH_ROW__CSS_VARS {
   icon = '--switch-row__icon-color',
 }
 
-export const styledSwitchRow = (SwitchRow: VFC<SwitchRowProps>): VFC<SwitchRowProps> => styled(SwitchRow)`
+export const styledSwitchRow = (
+  SwitchRow: FunctionComponent<SwitchRowProps>,
+): FunctionComponent<SwitchRowProps> => styled(SwitchRow as FunctionComponent)`
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -63,6 +65,11 @@ export const titleTooltipClassName = css`
   z-index: 1;
   position: relative;
   fill: var(${SWITCH_ROW__CSS_VARS.icon});
+`;
+
+export const disabledToggleTooltip = css`
+  z-index: 1;
+  position: relative;
 `;
 
 export const Description = styled.div`

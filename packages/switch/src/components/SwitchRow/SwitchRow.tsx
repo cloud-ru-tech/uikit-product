@@ -18,6 +18,7 @@ function StylelessSwitchRow({
   onChange,
   tooltip,
   className,
+  disabledToggleTooltip,
   ...rest
 }: SwitchRowProps) {
   const titleContent = useMemo(() => {
@@ -27,7 +28,7 @@ function StylelessSwitchRow({
           {title}
 
           <Tooltip
-            data-test-id='switch-row__tooltip'
+            data-test-id='switch-row__title-tooltip'
             title={tooltip?.title}
             content={tooltip?.content}
             classNameTrigger={S.titleTooltipClassName}
@@ -42,6 +43,16 @@ function StylelessSwitchRow({
     return title;
   }, [title, tooltip]);
 
+  const toggle = (
+    <Switch
+      data-test-id='switch-row__switch'
+      size={Switch.sizes.Big}
+      checked={checked}
+      disabled={disabled}
+      onChange={onChange}
+    />
+  );
+
   return (
     <div
       className={className}
@@ -55,13 +66,20 @@ function StylelessSwitchRow({
       </S.Content>
 
       <S.SwitchLabel data-disabled={disabled || undefined}>
-        <Switch
-          data-test-id='switch-row__switch'
-          size={Switch.sizes.Big}
-          checked={checked}
-          disabled={disabled}
-          onChange={onChange}
-        />
+        {disabled && disabledToggleTooltip ? (
+          <Tooltip
+            title={disabledToggleTooltip.title}
+            placement={disabledToggleTooltip.placement}
+            content={disabledToggleTooltip.content}
+            type={Tooltip.types.Instant}
+            data-test-id='switch-row__toggle-tooltip'
+            classNameTrigger={S.disabledToggleTooltip}
+          >
+            {toggle}
+          </Tooltip>
+        ) : (
+          toggle
+        )}
       </S.SwitchLabel>
     </div>
   );

@@ -46,6 +46,10 @@ SwitchRow.args = {
   tooltip: {
     content: 'test',
   },
+  disabledToggleTooltip: {
+    content: 'test',
+  },
+  disabled: false,
   checked: false,
 };
 SwitchRow.argTypes = {};
