@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.5 (2023-06-13)
+
+
+### Bug Fixes
+
+* **FF-0000:** truncate string middle is blinking ([ed32d1a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ed32d1a82a0f3e6463b16493fe3efcc9117c94e1))
+* **FF-0000:** truncate string width is fit to content ([f3748eb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3748eb0a1d1a0b3af67b3f7ecaeb67c9ae2c33a))
+
+
+
+
+
 ## 0.7.4 (2023-06-08)
 
 ### Only dependencies have been changed
