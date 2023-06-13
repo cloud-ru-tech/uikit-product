@@ -44,6 +44,7 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 - `test:coverage-stable` - считает покрытие тестов по компонентам с версией не ниже *v1.0.0*
 - `test:testcafe` - запускает testcafe и прогоняет тесты
 - `test:testcafe:local` - запускает testcafe в watch режиме, перезапускает при изменении исходного кода теста
+- `test:testcafe:branch` - запускает testcafe против деплоя с текущей ветки (если деплой уже был). Требуется файл `.env`, в корне репозитория есть `.env.example`
 - `test:ci` - запуск сервера сторибук и тестов на нем для *CI/CD*
 
 ## Структура проекта
