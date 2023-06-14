@@ -33,6 +33,7 @@ type ClientModelTableViewProps<T> = {
   onRowClicked?: TablePrivateProps['onRowClicked'];
   onRowSelected?: TablePrivateProps['onRowSelected'];
   onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
+  onSortChanged?: TablePrivateProps['onSortChanged'];
   onSearchCallback(value: string): void;
   moreActions?: Toolbar.MoreActionsProps['actions'];
   searchValue: string;
@@ -57,6 +58,7 @@ export function ClientModelTableView<T>({
   moreActions,
   onRowClicked,
   onRowSelected,
+  onSortChanged,
   selectedRows,
   selectionMode,
   onRowDoubleClicked,
@@ -117,6 +119,7 @@ export function ClientModelTableView<T>({
         getRowId={getRowId}
         onRowClicked={onRowClicked}
         onRowSelected={onRowSelected}
+        onSortChanged={onSortChanged}
         onRowDoubleClicked={onRowDoubleClicked}
         doesRowPassFilter={filterProps?.doesRowPassFilter}
         gridOptions={{

@@ -39,6 +39,7 @@ function StylelessTablePrivate({
   doesRowPassFilter,
   className,
   onGridReady,
+  onSortChanged,
   additionModules = [],
   isSearching,
   ...tableProps
@@ -185,6 +186,7 @@ function StylelessTablePrivate({
         rowData={rowData}
         pinnedTopRowData={pinnedTopRowData}
         columnDefs={colDefs()}
+        onSortChanged={onSortChanged}
         isExternalFilterPresent={() => Boolean(doesRowPassFilter)}
         doesExternalFilterPass={node => doesRowPassFilter?.(node.data) || false}
         noRowsOverlayComponent={NoRows}

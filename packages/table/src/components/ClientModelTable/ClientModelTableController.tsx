@@ -38,6 +38,7 @@ export type ClientModelTableControllerProps<T> = {
     onRowClicked?: TablePrivateProps['onRowClicked'];
     onRowSelected?: TablePrivateProps['onRowSelected'];
     onRowDoubleClicked?: TablePrivateProps['onRowDoubleClicked'];
+    onSortChanged?: TablePrivateProps['onSortChanged'];
   };
   suppressToolbar?: boolean;
 };
@@ -298,6 +299,7 @@ export function ClientModelTableController<T extends object>({
       onRefreshCallback={onRefreshCallback}
       onRowClicked={advancedProps?.onRowClicked}
       onRowSelected={advancedProps?.onRowSelected}
+      onSortChanged={advancedProps?.onSortChanged}
       selectedRows={selectedRows}
       selectionMode={selectionMode}
       onRowDoubleClicked={advancedProps?.onRowDoubleClicked}
