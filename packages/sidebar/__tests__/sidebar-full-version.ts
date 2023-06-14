@@ -28,7 +28,7 @@ const SIDEBAR_FULL_WIDTH = '255px';
 const SIDEBAR_COLLAPSED_WIDTH = '53px';
 
 fixture('[Navigation]: Sidebar - full version')
-  .skipJsErrors(args => Boolean(args?.message.includes('ResizeObserver loop')))
+  .skipJsErrors(args => Boolean(args?.message?.includes('ResizeObserver loop')))
   .page(getPage());
 
 test('renders', async t => {

@@ -17,7 +17,7 @@ import {
 } from './utils';
 
 fixture('[Navigation]: Sidebar - hover menu')
-  .skipJsErrors(args => Boolean(args?.message.includes('ResizeObserver loop')))
+  .skipJsErrors(args => Boolean(args?.message?.includes('ResizeObserver loop')))
   .page(getPage())
   .beforeEach(t => t.click(getCollapseButton()));
 

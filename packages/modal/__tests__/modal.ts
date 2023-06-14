@@ -16,7 +16,7 @@ function getPage(props?: Partial<ModalProps>) {
   });
 }
 
-fixture('Modal').skipJsErrors(args => Boolean(args?.message.includes('ResizeObserver loop')));
+fixture('Modal').skipJsErrors(args => Boolean(args?.message?.includes('ResizeObserver loop')));
 
 test.page(getPage({ isOpen: false }))('Rendered modal', async t => {
   await t
