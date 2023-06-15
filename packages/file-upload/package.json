@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-file-upload",
   "title": "React File Upload",
-  "version": "0.3.80",
+  "version": "0.3.81",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.3.5",
+    "@sbercloud/uikit-product-button": "5.3.6",
     "@sbercloud/uikit-product-theme": "0.37.0"
   }
 }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.16.0 (2023-06-15)
+
+
+### Features
+
+* **[LK-1951](https://jira.sbercloud.tech/browse/LK-1951):** add new Cloud logo ([c91ece7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c91ece7691eeb7fa2f9f2919cafcbaaf3ac2cdf1))
+
+
+
+
+
 # 5.15.0 (2023-06-05)
 
 

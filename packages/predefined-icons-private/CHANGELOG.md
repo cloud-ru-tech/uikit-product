@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2023-06-15)
+
+
+### Features
+
+* **[DPS-4142](https://jira.sbercloud.tech/browse/DPS-4142):** add Info component ([e3ad20e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3ad20e37d1d356cbab1b08b8628dcfa4bee97dd))
+* **[DPS-4142](https://jira.sbercloud.tech/browse/DPS-4142):** review fixes ([6d3938a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6d3938a7cac0f3d8cd31bbaee55cb26c014054aa))
+
+
+
+
+
 ## 1.1.19 (2023-06-08)
 
 
@@ -188,7 +200,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.6.1...@sbercloud/uikit-product-predefined-icons-private@0.6.2) (2022-11-28)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.16.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 ## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.6.0...@sbercloud/uikit-product-predefined-icons-private@0.6.1) (2022-11-17)
 
