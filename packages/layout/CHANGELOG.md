@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2023-06-15)
+
+
+### Features
+
+* **[AICE-7933](https://jira.sbercloud.tech/browse/AICE-7933):** added new NoAccess component ([0c83848](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0c8384800de65913dc910f55270bcd2aec3bd342))
+
+
+
+
+
 # 0.1.0 (2023-06-13)
 
 
