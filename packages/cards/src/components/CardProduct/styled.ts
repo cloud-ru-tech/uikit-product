@@ -25,6 +25,7 @@ export const Wrapper = styled.div<{ onClick?: () => void }>`
   background-color: var(${COLORS.background.default});
   transition: ${ANIMATIONS.TRANSITION};
   transition-property: background-color, box-shadow;
+  cursor: default;
 
   &[data-clickable] {
     cursor: pointer;

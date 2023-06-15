@@ -56,7 +56,7 @@ export function CardTopic({ title, icon, color, className, onClick, ...rest }: C
       </S.LeftSide>
 
       <S.RightSide>
-        <S.Title data-test-id='card-topic__title' text={title} maxLines={2} textClassName={S.cursorPointerClassName} />
+        <S.Title data-test-id='card-topic__title' text={title} maxLines={2} />
       </S.RightSide>
     </S.Wrapper>
   );

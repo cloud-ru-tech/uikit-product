@@ -7,7 +7,7 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import * as S from './styled';
 
 export type CardProductProps = WithSupportProps<{
-  icon: JSX.Element;
+  icon: ReactNode;
   title: string;
   description: string;
   className?: string;
@@ -44,7 +44,6 @@ export function CardProduct({
           data-test-id='card-product__title'
           textEntity={TruncateString.textEntities.Text2}
           maxLines={2}
-          textClassName={Boolean(onClick) ? S.cursorPointerClassName : undefined}
         />
       </S.Heading>
 
@@ -53,7 +52,6 @@ export function CardProduct({
         text={description}
         textEntity={TruncateString.textEntities.Text3}
         maxLines={3}
-        textClassName={Boolean(onClick) ? S.cursorPointerClassName : undefined}
       />
 
       <S.Footer>
