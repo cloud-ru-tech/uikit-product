@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2023-06-15)
+
+
+### Features
+
+* **[DPS-4452](https://jira.sbercloud.tech/browse/DPS-4452):** up react-switch ([9b8ecf9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9b8ecf99151b4454919916c8ac6f6830c40fd879))
+
+
+
+
+
 ## 3.0.29 (2023-06-08)
 
 ### Only dependencies have been changed
