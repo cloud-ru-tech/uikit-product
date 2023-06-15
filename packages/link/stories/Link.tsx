@@ -61,6 +61,12 @@ link.argTypes = {
       type: 'text',
     },
   },
+  text: {
+    type: 'string',
+    control: {
+      type: 'text',
+    },
+  },
 };
 link.parameters = {
   readme: {

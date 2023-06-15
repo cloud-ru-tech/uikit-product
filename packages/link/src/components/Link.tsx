@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, MouseEventHandler } from 'react';
+import { AnchorHTMLAttributes, MouseEventHandler, ReactElement, ReactNode } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -8,14 +8,14 @@ import { IconWrapper, StyledArrowLinkInterfaceSVG, StyledLink } from './styled';
 export type LinkProps = WithSupportProps<{
   className?: string;
   variant?: Variant;
-  text?: string;
+  text?: ReactNode;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
   showSuffixIcon?: boolean;
   target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
   href?: string;
   disabled?: boolean;
   size?: Sizes;
-  prefixIcon?: React.ReactElement;
+  prefixIcon?: ReactElement;
 }>;
 
 export function Link({
