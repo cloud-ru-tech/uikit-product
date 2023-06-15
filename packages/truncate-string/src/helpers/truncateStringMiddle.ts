@@ -1,13 +1,43 @@
 import { isEllipsisActive } from './isEllipsisActive';
 
-const DELIMITER_LENGTH = 4;
+const CONFIG = [
+  { potentialDelimiterWidth: 2, leftHalfDelta: 0, rightHalfDelta: 0 },
+  { potentialDelimiterWidth: 2, leftHalfDelta: 1, rightHalfDelta: 0 },
+  { potentialDelimiterWidth: 2, leftHalfDelta: 0, rightHalfDelta: 1 },
+  { potentialDelimiterWidth: 3, leftHalfDelta: 0, rightHalfDelta: 0 },
+  { potentialDelimiterWidth: 3, leftHalfDelta: 1, rightHalfDelta: 0 },
+  { potentialDelimiterWidth: 3, leftHalfDelta: 0, rightHalfDelta: 1 },
+  { potentialDelimiterWidth: 4, leftHalfDelta: 0, rightHalfDelta: 0 },
+];
 const DELIMITER = '...';
 
-export const truncateStringMiddle = (element: HTMLElement | null, text: string) => {
-  if (element && isEllipsisActive(element)) {
+export const truncateStringMiddle = ({
+  text,
+  element,
+  truncatedElement,
+}: {
+  text: string;
+  element: HTMLElement | null;
+  truncatedElement: HTMLElement | null;
+}) => {
+  if (element && truncatedElement && isEllipsisActive(element)) {
     const baseWidth = element.scrollWidth / text.length;
-    const half = Math.floor((Math.floor(element.offsetWidth / baseWidth) - DELIMITER_LENGTH) / 2);
-    return `${text.slice(0, half)}${DELIMITER}${text.slice(text.length - half, text.length)}`;
+    let result = text;
+
+    for (const { potentialDelimiterWidth, leftHalfDelta, rightHalfDelta } of CONFIG) {
+      const half = Math.floor((element.offsetWidth / baseWidth - potentialDelimiterWidth) / 2);
+      const leftHalf = text.slice(0, half - leftHalfDelta);
+      const rightHalf = text.slice(text.length - half + rightHalfDelta, text.length);
+      result = `${leftHalf}${DELIMITER}${rightHalf}`;
+
+      truncatedElement.innerHTML = result;
+
+      if (truncatedElement.scrollWidth <= element.offsetWidth - 1) {
+        break;
+      }
+    }
+
+    return result;
   }
 
   return text;

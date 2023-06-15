@@ -1,7 +1,6 @@
 import { cx } from '@linaria/core';
 
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
-import { extractDataProps } from '@sbercloud/uikit-product-utils';
 
 import { TextEntity } from '../../constants';
 import {
@@ -22,50 +21,19 @@ export type TruncateStringProps = { textEntity?: TextEntity; textClassName?: str
 export function TruncateString({
   variant = Variant.End,
   textEntity = TextEntity.Text2,
-  textClassName,
   ...props
 }: TruncateStringProps) {
   const tag = getTag(textEntity);
-  const textClassNameInner = Typography[textEntity];
+  const textClassName = cx(Typography[textEntity], Typography.textClassName, props.textClassName);
 
   switch (variant) {
     case Variant.Middle: {
-      const { text, className, placement, hideTooltip, ...rest } = props;
-      return (
-        <TruncateStringMiddle
-          text={text}
-          className={className}
-          placement={placement}
-          tag={tag}
-          textClassName={cx(textClassNameInner, Typography.textClassName, textClassName)}
-          hideTooltip={hideTooltip}
-          {...extractDataProps(rest)}
-        />
-      );
+      return <TruncateStringMiddle {...props} tag={tag} textClassName={textClassName} />;
     }
 
     case Variant.End:
     default: {
-      const {
-        text,
-        className,
-        placement,
-        maxLines = 1,
-        hideTooltip,
-        ...rest
-      } = props as unknown as TruncateStringEndProps;
-      return (
-        <TruncateStringEnd
-          text={text}
-          className={className}
-          placement={placement}
-          tag={tag}
-          textClassName={cx(textClassNameInner, Typography.textClassName, textClassName)}
-          maxLines={maxLines}
-          hideTooltip={hideTooltip}
-          {...extractDataProps(rest)}
-        />
-      );
+      return <TruncateStringEnd {...props} tag={tag} textClassName={textClassName} />;
     }
   }
 }

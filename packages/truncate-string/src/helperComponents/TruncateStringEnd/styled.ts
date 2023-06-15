@@ -1,16 +1,26 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-export const Text = styled.span<{ maxLines: number }>`
+export const Text1Line = styled.span<{ maxLines: number }>`
+  display: block;
   overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+`;
+
+export const Text2LinesAndMore = styled.span<{ maxLines: number }>`
   display: -webkit-box;
 
   margin: 0;
+  overflow: hidden;
 
   text-overflow: ellipsis;
-  word-break: ${({ maxLines }) => (maxLines === 1 ? 'break-all' : 'initial')};
+  word-break: initial;
 
   -webkit-box-orient: vertical;
   -webkit-line-clamp: ${({ maxLines }) => maxLines};
 `;
 
-export const Wrapper = styled.span``;
+export const tooltipTriggerClassName = css`
+  display: grid;
+`;

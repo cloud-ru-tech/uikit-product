@@ -31,7 +31,7 @@ function Template({ ...args }: TruncateProps) {
 
 export const truncateString: StoryFn<TruncateProps> = Template.bind({});
 truncateString.args = {
-  maxLines: 2,
+  maxLines: 1,
   text: 'какой-то длинный текст который обрезается на самом интересном',
   textEntity: TruncateString.textEntities.Text2,
   placement: TruncateString.placements.Auto,

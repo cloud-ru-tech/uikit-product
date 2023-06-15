@@ -29,10 +29,17 @@ export function TruncateStringMiddle({
   const [showTooltip, setShowTooltip] = useState(false);
   const [truncatedString, setTruncatedString] = useState(text);
   const textElementRef = useRef<HTMLElement>(null);
+  const truncatedTextElementRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const setTruncate = debounce(() => {
-      setTruncatedString(truncateStringMiddle(textElementRef.current, text));
+      setTruncatedString(
+        truncateStringMiddle({
+          element: textElementRef.current,
+          truncatedElement: truncatedTextElementRef.current,
+          text,
+        }),
+      );
       setShowTooltip(isEllipsisActive(textElementRef.current));
     }, 50);
 
@@ -49,12 +56,12 @@ export function TruncateStringMiddle({
 
   const textElement = (
     <>
-      <S.TruncatedText as={tag} className={textClassName}>
-        {truncatedString}
-      </S.TruncatedText>
       <S.FullText as={tag} ref={textElementRef} className={textClassName}>
         {text}
       </S.FullText>
+      <S.TruncatedText as={tag} ref={truncatedTextElementRef} className={textClassName}>
+        {truncatedString}
+      </S.TruncatedText>
     </>
   );
 

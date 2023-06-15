@@ -1,3 +1,4 @@
+import { cx } from '@linaria/core';
 import debounce from 'lodash.debounce';
 import { useEffect, useRef, useState } from 'react';
 
@@ -45,21 +46,34 @@ export function TruncateStringEnd({
     };
   }, [showTooltip, hideTooltip, tag]);
 
+  const TextElement = maxLines > 1 ? S.Text2LinesAndMore : S.Text1Line;
+
   const textElement = (
-    <S.Text as={tag} ref={textElementRef} maxLines={maxLines} className={textClassName} {...extractSupportProps(rest)}>
+    <TextElement
+      as={tag}
+      ref={textElementRef}
+      maxLines={maxLines}
+      className={textClassName}
+      {...extractSupportProps(rest)}
+    >
       {text}
-    </S.Text>
+    </TextElement>
   );
 
   if (showTooltip && !hideTooltip) {
     error(showTooltip, 'Text is too long');
 
     return (
-      <Tooltip content={text} placement={placement} type={Tooltip.types.Truncated} classNameTrigger={className}>
+      <Tooltip
+        content={text}
+        placement={placement}
+        type={Tooltip.types.Truncated}
+        classNameTrigger={cx(className, S.tooltipTriggerClassName)}
+      >
         {textElement}
       </Tooltip>
     );
   }
 
-  return <S.Wrapper className={className}>{textElement}</S.Wrapper>;
+  return textElement;
 }
