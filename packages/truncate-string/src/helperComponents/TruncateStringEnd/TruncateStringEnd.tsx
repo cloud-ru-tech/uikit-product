@@ -16,14 +16,12 @@ export type TruncateStringEndProps = WithSupportProps<{
   placement?: TooltipProps['placement'];
   tag: Tag;
   text: string;
-  textClassName: string;
 }>;
 
 export function TruncateStringEnd({
   text,
   className,
   hideTooltip,
-  textClassName,
   tag,
   maxLines = 1,
   placement = Tooltip.placements.Auto,
@@ -47,20 +45,21 @@ export function TruncateStringEnd({
   }, [showTooltip, hideTooltip, tag]);
 
   const TextElement = maxLines > 1 ? S.Text2LinesAndMore : S.Text1Line;
+  const tooltipVisible = showTooltip && !hideTooltip;
 
   const textElement = (
     <TextElement
       as={tag}
       ref={textElementRef}
       maxLines={maxLines}
-      className={textClassName}
+      className={!tooltipVisible ? className : undefined}
       {...extractSupportProps(rest)}
     >
       {text}
     </TextElement>
   );
 
-  if (showTooltip && !hideTooltip) {
+  if (tooltipVisible) {
     error(showTooltip, 'Text is too long');
 
     return (

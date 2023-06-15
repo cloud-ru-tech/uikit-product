@@ -13,9 +13,9 @@ import { Variant } from './constants';
 import * as Typography from './styled';
 import { getTag } from './utils';
 
-export type TruncateStringProps = { textEntity?: TextEntity; textClassName?: string } & (
-  | ({ variant?: Variant.End } & Omit<TruncateStringEndProps, 'tag' | 'textClassName'>)
-  | ({ variant: Variant.Middle } & Omit<TruncateStringMiddleProps, 'tag' | 'textClassName'>)
+export type TruncateStringProps = { textEntity?: TextEntity } & (
+  | ({ variant?: Variant.End } & Omit<TruncateStringEndProps, 'tag'>)
+  | ({ variant: Variant.Middle } & Omit<TruncateStringMiddleProps, 'tag'>)
 );
 
 export function TruncateString({
@@ -24,16 +24,16 @@ export function TruncateString({
   ...props
 }: TruncateStringProps) {
   const tag = getTag(textEntity);
-  const textClassName = cx(Typography[textEntity], Typography.textClassName, props.textClassName);
+  const className = cx(props.className, Typography[textEntity]);
 
   switch (variant) {
     case Variant.Middle: {
-      return <TruncateStringMiddle {...props} tag={tag} textClassName={textClassName} />;
+      return <TruncateStringMiddle {...props} tag={tag} className={className} />;
     }
 
     case Variant.End:
     default: {
-      return <TruncateStringEnd {...props} tag={tag} textClassName={textClassName} />;
+      return <TruncateStringEnd {...props} tag={tag} className={className} />;
     }
   }
 }

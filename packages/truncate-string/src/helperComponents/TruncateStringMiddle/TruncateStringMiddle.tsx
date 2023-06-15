@@ -14,7 +14,6 @@ export type TruncateStringMiddleProps = WithSupportProps<{
   placement?: TooltipProps['placement'];
   tag: Tag;
   text: string;
-  textClassName: string;
 }>;
 
 export function TruncateStringMiddle({
@@ -22,7 +21,6 @@ export function TruncateStringMiddle({
   className,
   hideTooltip,
   tag,
-  textClassName,
   placement = Tooltip.placements.Auto,
   ...rest
 }: TruncateStringMiddleProps) {
@@ -56,10 +54,10 @@ export function TruncateStringMiddle({
 
   const textElement = (
     <>
-      <S.FullText as={tag} ref={textElementRef} className={textClassName}>
+      <S.FullText as={tag} ref={textElementRef}>
         {text}
       </S.FullText>
-      <S.TruncatedText as={tag} ref={truncatedTextElementRef} className={textClassName}>
+      <S.TruncatedText as={tag} ref={truncatedTextElementRef}>
         {truncatedString}
       </S.TruncatedText>
     </>
