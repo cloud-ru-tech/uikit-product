@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.50.0 (2023-06-20)
+
+
+### Features
+
+* **[AICE-9773](https://jira.sbercloud.tech/browse/AICE-9773):** add onSortChanged prop ([a1c7742](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a1c77426a27b8285b694646e2be08d3d275a2373))
+
+
+
+
+
 ## 0.49.11 (2023-06-15)
 
 ### Only dependencies have been changed
@@ -424,7 +435,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.48.16 (2023-01-25)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-table
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-table-private@0.22.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/table-private/CHANGELOG.md)
 
 ## 0.48.15 (2023-01-19)
 

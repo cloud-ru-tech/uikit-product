@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.22.0 (2023-06-20)
+
+
+### Features
+
+* **[AICE-9773](https://jira.sbercloud.tech/browse/AICE-9773):** add onSortChanged prop ([a1c7742](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a1c77426a27b8285b694646e2be08d3d275a2373))
+
+
+
+
+
 ## 0.21.7 (2023-06-15)
 
 ### Only dependencies have been changed
