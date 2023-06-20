@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.17.0 (2023-06-20)
+
+
+### Features
+
+* **[DPS-4384](https://jira.sbercloud.tech/browse/DPS-4384):** add icons helm chart and OCI ([f5e21ab](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f5e21abb27d29fb002da5f7c16c6bfefc5ff145f))
+
+
+
+
+
 # 5.16.0 (2023-06-15)
 
 
