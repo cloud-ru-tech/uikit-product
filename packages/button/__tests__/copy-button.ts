@@ -1,5 +1,3 @@
-import { CopyButtonProps } from '@sbercloud/uikit-product-button';
-
 import { getTestcafeUrl } from '../../../testcafe/utils';
 import { getButtonDataAfterClick } from './utils';
 
@@ -11,7 +9,7 @@ enum CopyStrategy {
   ReplaceText = 'ReplaceText',
 }
 
-function getPage(props?: Omit<CopyButtonProps, 'text'> & { copyStrategy?: CopyStrategy }) {
+function getPage(props?: Record<string, unknown> & { copyStrategy?: CopyStrategy }) {
   return getTestcafeUrl({
     group: 'button',
     name: 'copy-button',

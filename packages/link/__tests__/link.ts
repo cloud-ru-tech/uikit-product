@@ -1,11 +1,9 @@
 import { ClientFunction, fixture, Selector, test } from 'testcafe';
 
-import { LinkProps } from '@sbercloud/uikit-product-link';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const TEST_ID = 'link-test';
-function getPage(props?: Partial<LinkProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     name: 'link',
     props: {

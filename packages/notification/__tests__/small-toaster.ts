@@ -1,13 +1,11 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { NotificationSmallProps } from '@sbercloud/uikit-product-notification';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 import { NOTIFICATION_SMALL_TEST_IDS } from '../src/testIds';
 
-const Status = ['Success', 'Error', 'Neutral', 'Loading'] as Array<NotificationSmallProps['status']>;
+const Status = ['Success', 'Error', 'Neutral', 'Loading'];
 
-function getPage(props?: Partial<NotificationSmallProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     group: 'notification',
     name: 'notification-small',

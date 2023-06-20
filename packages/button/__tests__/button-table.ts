@@ -1,7 +1,5 @@
 import { fixture } from 'testcafe';
 
-import { ButtonTableProps } from '@sbercloud/uikit-product-button';
-
 import { getTestcafeUrl } from '../../../testcafe/utils';
 import { getButtonDataAfterClick } from './utils';
 
@@ -10,7 +8,7 @@ const managedLoadingTestId = `${testId}-managed-loading`;
 const text = 'Connect';
 const loadingText = 'Loading';
 
-function getPage(props?: Omit<ButtonTableProps, 'href'>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     group: 'button',
     name: 'button-table',

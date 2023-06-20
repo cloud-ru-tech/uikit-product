@@ -1,7 +1,5 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { TagRowProps } from '@sbercloud/uikit-product-tag';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const testId = 'tag-row-test';
@@ -30,7 +28,7 @@ const getFirstCloudTagText = () => getFirstCloudTag().find(dataTestIdSelector(ta
 
 const getTagDeleteButton = (selector: Selector) => selector.find(dataTestIdSelector(tagRemoveButton));
 
-function getPage(props?: Partial<TagRowProps> & { showRemoveButtons: boolean }) {
+function getPage(props?: Record<string, unknown> & { showRemoveButtons: boolean }) {
   return getTestcafeUrl({
     name: 'tag-row',
     group: 'tag',

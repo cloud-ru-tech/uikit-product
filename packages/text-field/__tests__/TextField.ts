@@ -1,7 +1,5 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { TextFieldProps } from '@sbercloud/uikit-product-text-field';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 import { Types } from '../src/components/constants';
 
@@ -11,7 +9,7 @@ const multilineText = `Lorem Ipsum - это текст-"рыба", часто и
 Lorem Ipsum`;
 const passwordText = 'super-secret-password';
 
-function getPage(props?: Partial<TextFieldProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     name: 'text-field',
     props: {

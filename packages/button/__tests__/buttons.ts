@@ -1,7 +1,5 @@
 import { Selector } from 'testcafe';
 
-import { CommonButtonPropsWithOptionalTooltip } from '@sbercloud/uikit-product-button-private';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 fixture('[Button]');
@@ -58,7 +56,7 @@ const buttons = [
 buttons.forEach(button => {
   const testId = `${button.name}-test`;
 
-  function getPage(props?: CommonButtonPropsWithOptionalTooltip) {
+  function getPage(props?: Record<string, unknown>) {
     return getTestcafeUrl({
       group: 'button',
       name: button.name,

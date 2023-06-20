@@ -1,12 +1,10 @@
-import { CommonButtonPropsWithOptionalTooltip } from '@sbercloud/uikit-product-button-private';
-
 import { getTestcafeUrl } from '../../../testcafe/utils';
 import { getButtonDataAfterClick } from './utils';
 
 const testId = 'buttonTableIcon-test';
 const managedLoadingTestId = `${testId}-managed-loading`;
 
-function getPage(props?: CommonButtonPropsWithOptionalTooltip) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     group: 'button',
     name: 'button-table-icon',

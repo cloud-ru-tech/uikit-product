@@ -1,7 +1,5 @@
 import { fixture, Selector } from 'testcafe';
 
-import { InputSecurityProps } from '@sbercloud/uikit-product-input';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 import { runCommonTests } from './utils';
 
@@ -9,7 +7,7 @@ fixture('[Input Security]:');
 
 const testId = 'inputSecurity-test';
 
-const visit = (props?: InputSecurityProps): string =>
+const visit = (props?: Record<string, unknown>): string =>
   getTestcafeUrl({
     group: 'input',
     name: 'security',

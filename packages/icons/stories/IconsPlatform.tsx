@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -15,7 +15,7 @@ export default meta;
 
 const Template = getTemplate(Icons);
 
-export const platform = Template.bind({});
+export const platform: StoryObj = Template.bind({});
 
 platform.args = {
   size: 180,

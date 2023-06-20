@@ -1,12 +1,10 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { ModalProps } from '@sbercloud/uikit-product-modal';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 import { Variant } from '../../modal-private/src/components/Container/constants';
 
 const TEST_ID = 'modal-test';
-function getPage(props?: Partial<ModalProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     name: 'modal',
     props: {
@@ -46,7 +44,7 @@ test.page(getPage({ isOpen: true }))('Should scroll long content', async t => {
   await t.expect(content.scrollTop).notEql(0);
 });
 
-test.page(getPage({ isOpen: true, disableScroll: true } as Partial<ModalProps>))(
+test.page(getPage({ isOpen: true, disableScroll: true }))(
   `Shouldn't scroll content when disableScroll is true`,
   async t => {
     const content = Selector(dataTestIdSelector('modal-private__content'));

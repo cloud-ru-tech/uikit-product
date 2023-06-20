@@ -10,8 +10,8 @@ import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { Toolbar } from '@sbercloud/uikit-product-toolbar';
 import { H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
+import { generateDataTestId } from '../../utils/generateDataTestId';
 import { svgExport } from './downloader';
-import { generateDataTestId } from './generateDataTestId';
 
 const { COLORS_BUTTON } = DEPRECATED_EXPORT_VARS;
 

@@ -1,7 +1,5 @@
 import { Selector } from 'testcafe';
 
-import { DocumentProps } from '@sbercloud/uikit-product-document';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const testId = 'document-test';
@@ -9,7 +7,7 @@ const noMimeTypeTestId = 'no-mime-type';
 const longTitleTestId = 'long-title';
 const file = { name: 'test.txt', size: 374329606 };
 
-function getPage(props?: DocumentProps) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     name: 'document',
     props: {

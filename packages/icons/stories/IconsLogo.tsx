@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
 
@@ -15,7 +15,7 @@ export default meta;
 
 const Template = getTemplate(Icons);
 
-export const logo = Template.bind({});
+export const logo: StoryObj = Template.bind({});
 
 logo.args = {
   size: 50,

@@ -1,12 +1,10 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { CardBannerProps } from '@sbercloud/uikit-product-cards';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const TEST_ID = 'card-banner-test';
 
-function getPage(props?: Partial<CardBannerProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     group: 'cards-card',
     name: 'banner',

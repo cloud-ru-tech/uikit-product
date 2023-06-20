@@ -1,13 +1,11 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { SwitchProps } from '@sbercloud/uikit-product-switch';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const TEST_ID = 'switch-test';
 const SwitchSelector = Selector(dataTestIdSelector(TEST_ID));
 
-function getPage(props?: Partial<SwitchProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     name: 'switch',
     group: 'switch',

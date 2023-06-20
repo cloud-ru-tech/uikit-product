@@ -1,10 +1,8 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { HeaderBalanceTooltipProps } from '@sbercloud/uikit-product-header';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
-function getPage(props: Partial<HeaderBalanceTooltipProps & { showRechargeButton: boolean }>) {
+function getPage(props: Record<string, unknown> & { showRechargeButton?: boolean }) {
   return getTestcafeUrl({
     category: 'components',
     group: 'header',

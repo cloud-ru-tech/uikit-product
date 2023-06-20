@@ -1,15 +1,14 @@
 import { fixture, Selector, test } from 'testcafe';
 
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
-import * as ServicesIcons from '../src/components/services-icons';
-import { generateDataTestId } from '../stories/helpers/generateDataTestId';
+import { getIconsDataTestIds } from '../utils/getIconsDataTestIds';
+
+const ServicesIcons = getIconsDataTestIds('svgs/inherit/services');
 
 fixture('Icons: Service').page(getTestcafeUrl({ name: 'services', group: 'icons' }));
 
 test('Rendered', async t => {
-  const iconsArray = Object.keys(ServicesIcons).map(generateDataTestId);
-
-  for (const icon of iconsArray) {
+  for (const icon of ServicesIcons) {
     await t.expect(Selector(dataTestIdSelector(icon)).exists).ok();
   }
 });

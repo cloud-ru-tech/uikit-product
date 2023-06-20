@@ -1,7 +1,5 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { InputSliderProps } from '@sbercloud/uikit-product-input-slider';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const TEST_ID = 'input-slider-test';
@@ -10,7 +8,7 @@ const InputSelector = Selector(ComponentSelector.find(dataTestIdSelector('input-
 const HandlerSelector = Selector(ComponentSelector.find('.rc-slider-handle'));
 const MarksSelector = Selector(ComponentSelector.find('.rc-slider-mark'));
 
-function getPage(props?: Partial<InputSliderProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     name: 'input-slider',
     group: 'input-slider',

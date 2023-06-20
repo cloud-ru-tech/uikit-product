@@ -1,7 +1,5 @@
 import { fixture, Selector } from 'testcafe';
 
-import { PredefinedIconsPrivateProps } from '@sbercloud/uikit-product-predefined-icons-private';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 import { Icon } from '../src/constants';
 
@@ -10,7 +8,7 @@ fixture('[Predefined Icon Private]:');
 Object.entries(Icon).forEach(([name, icon]) => {
   const testId = `predefinedIcon-${name}-test`;
 
-  const visit = (props?: PredefinedIconsPrivateProps) =>
+  const visit = (props?: Record<string, unknown>) =>
     getTestcafeUrl({
       group: 'icons-predefined',
       name: 'predefined-icons-private',

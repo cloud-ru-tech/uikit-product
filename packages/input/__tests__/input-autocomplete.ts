@@ -1,7 +1,5 @@
 import { fixture } from 'testcafe';
 
-import { AutocompleteProps } from '@sbercloud/uikit-product-input';
-
 import { getTestcafeUrl } from '../../../testcafe/utils';
 import { runCommonTests } from './utils';
 
@@ -9,7 +7,7 @@ fixture('[Input Autocomplete]:');
 
 const testId = 'inputAutocomplete-test';
 
-const visit = (props?: AutocompleteProps): string =>
+const visit = (props?: Record<string, unknown>): string =>
   getTestcafeUrl({
     group: 'input',
     name: 'autocomplete',

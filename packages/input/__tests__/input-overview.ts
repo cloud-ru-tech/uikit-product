@@ -1,7 +1,5 @@
 import { fixture, Selector } from 'testcafe';
 
-import { InputOverviewProps } from '@sbercloud/uikit-product-input';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 import { runCommonTests } from './utils';
 
@@ -9,7 +7,7 @@ fixture('[Input Overview]:');
 
 const testId = 'inputOverview-test';
 
-const visit = (props?: InputOverviewProps): string =>
+const visit = (props?: Record<string, unknown>): string =>
   getTestcafeUrl({
     group: 'input',
     name: 'overview',

@@ -1,14 +1,12 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { CheckboxProps } from '@sbercloud/uikit-product-checkbox';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const testId = 'checkbox__test';
 const checkedSvgIcon = 'icon-checkbox-checked';
 const partlyCheckedSvgIcon = 'icon-checkbox-partial-checked';
 
-const visit = (props?: CheckboxProps) =>
+const visit = (props?: Record<string, unknown>) =>
   getTestcafeUrl({
     group: 'checkbox',
     name: 'checkbox',

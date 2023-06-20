@@ -1,15 +1,11 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { NotificationBigProps } from '@sbercloud/uikit-product-notification';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 import { NOTIFICATION_BIG_TEST_IDS } from '../src/testIds';
 
-const Status = ['Info', 'Success', 'Warning', 'WarningCritical', 'WarningAlarm', 'Error', 'ErrorAlarm'] as Array<
-  NotificationBigProps['status']
->;
+const Status = ['Info', 'Success', 'Warning', 'WarningCritical', 'WarningAlarm', 'Error', 'ErrorAlarm'];
 
-function getPage(props?: Partial<NotificationBigProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     group: 'notification',
     name: 'notification-big',

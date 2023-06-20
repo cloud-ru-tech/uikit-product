@@ -1,12 +1,10 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { TextareaProps } from '@sbercloud/uikit-product-textarea';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const testId = 'textarea-test';
 
-const visit = (props?: TextareaProps) =>
+const visit = (props?: Record<string, unknown>) =>
   getTestcafeUrl({
     name: 'textarea',
     props: {

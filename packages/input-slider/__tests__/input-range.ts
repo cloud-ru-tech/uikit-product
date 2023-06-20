@@ -1,7 +1,5 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { InputRangeProps } from '@sbercloud/uikit-product-input-slider';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const TEST_ID = 'input-range-test';
@@ -14,7 +12,7 @@ const LeftHandlerSelector = Selector(ComponentSelector.find('.rc-slider-handle-1
 const RightHandlerSelector = Selector(ComponentSelector.find('.rc-slider-handle-2'));
 const MarksSelector = Selector(ComponentSelector.find('.rc-slider-mark'));
 
-function getPage(props?: Partial<InputRangeProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     name: 'input-range',
     group: 'input-slider',

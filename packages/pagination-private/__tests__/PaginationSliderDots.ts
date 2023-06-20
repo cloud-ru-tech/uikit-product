@@ -1,10 +1,8 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { PaginationSliderDotsProps } from '@sbercloud/uikit-product-pagination-private';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
-function getPage(props: Partial<PaginationSliderDotsProps>) {
+function getPage(props: Record<string, unknown>) {
   return getTestcafeUrl({ group: 'pagination', name: 'pagination-slider-dots', props });
 }
 

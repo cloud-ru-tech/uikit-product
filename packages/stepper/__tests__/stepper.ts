@@ -1,10 +1,10 @@
 import { fixture, Selector, test } from 'testcafe';
 
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
-import { StepperProps } from '../src/components/types';
 
 const TEST_ID = 'stepper-test';
-function getPage(props?: Partial<StepperProps>) {
+
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     name: 'stepper',
     props: {

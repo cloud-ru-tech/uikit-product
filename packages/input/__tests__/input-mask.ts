@@ -1,7 +1,5 @@
 import { fixture, Selector } from 'testcafe';
 
-import { InputMaskProps } from '@sbercloud/uikit-product-input';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 import { runCommonTests } from './utils';
 
@@ -9,7 +7,7 @@ fixture('[Input Mask]:');
 
 const testId = 'inputMask-test';
 
-const visit = (props?: InputMaskProps): string =>
+const visit = (props?: Record<string, unknown>): string =>
   getTestcafeUrl({
     group: 'input',
     name: 'mask',
@@ -22,7 +20,7 @@ const visit = (props?: InputMaskProps): string =>
 test.page(
   visit({
     onChange: () => {},
-    mask: 'Phone' as InputMaskProps['mask'],
+    mask: 'Phone',
   }),
 )('Phone: Should allow Russian phone format only and the clear button should remove entered value', async t => {
   const wrapper = Selector(dataTestIdSelector(testId));
@@ -40,7 +38,7 @@ test.page(
 test.page(
   visit({
     onChange: () => {},
-    mask: 'Passport' as InputMaskProps['mask'],
+    mask: 'Passport',
   }),
 )('Passport: Should allow Russian passport format only and the clear button should remove entered value', async t => {
   const wrapper = Selector(dataTestIdSelector(testId));
@@ -58,7 +56,7 @@ test.page(
 test.page(
   visit({
     onChange: () => {},
-    mask: 'Snils' as InputMaskProps['mask'],
+    mask: 'Snils',
   }),
 )('Snils: Should allow Russian snils number format only and the clear button should remove entered value', async t => {
   const wrapper = Selector(dataTestIdSelector(testId));
@@ -76,7 +74,7 @@ test.page(
 test.page(
   visit({
     onChange: () => {},
-    mask: 'ConfirmationCode' as InputMaskProps['mask'],
+    mask: 'ConfirmationCode',
   }),
 )(
   'ConfirmationCode: Should allow 4 digit confirmation code only and the clear button should remove entered value',
@@ -97,7 +95,7 @@ test.page(
 test.page(
   visit({
     onChange: () => {},
-    mask: 'IpV4Address' as InputMaskProps['mask'],
+    mask: 'IpV4Address',
   }),
 )('IpV4Address: Should allow correct characters and allow clean field', async t => {
   const wrapper = Selector(dataTestIdSelector(testId));
@@ -115,7 +113,7 @@ test.page(
 test.page(
   visit({
     onChange: () => {},
-    mask: 'IpV4AddressWithMask' as InputMaskProps['mask'],
+    mask: 'IpV4AddressWithMask',
   }),
 )('IpV4AddressWithMask: Should render correct mask, allow correct characters for mask postfix', async t => {
   const wrapper = Selector(dataTestIdSelector(testId));
@@ -135,7 +133,7 @@ runCommonTests(
     visit({
       ...props,
       onChange: () => {},
-      mask: 'Phone' as InputMaskProps['mask'],
+      mask: 'Phone',
     }),
   testId,
   { isMasked: true },
@@ -144,7 +142,7 @@ runCommonTests(
 test.page(
   visit({
     onChange: () => {},
-    mask: 'Date' as InputMaskProps['mask'],
+    mask: 'Date',
   }),
 )('Date: Should render correct mask, allow correct characters', async t => {
   const wrapper = Selector(dataTestIdSelector(testId));
@@ -176,7 +174,7 @@ runCommonTests(
     visit({
       ...props,
       onChange: () => {},
-      mask: 'Date' as InputMaskProps['mask'],
+      mask: 'Date',
     }),
   testId,
   { isMasked: true },

@@ -1,12 +1,11 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { CardQuickActionProps } from '@sbercloud/uikit-product-cards';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const TEST_ID = 'card-quick-action-test';
 const ControlledComponent = Selector(dataTestIdSelector(TEST_ID));
-function getPage(props?: Partial<CardQuickActionProps>) {
+
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     group: 'cards-card',
     name: 'quick-action',

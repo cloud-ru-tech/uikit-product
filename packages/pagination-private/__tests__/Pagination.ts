@@ -1,16 +1,14 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { PaginationProps } from '@sbercloud/uikit-product-pagination-private';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
-function getPage(props: Partial<PaginationProps>) {
+function getPage(props: Record<string, unknown>) {
   return getTestcafeUrl({ group: 'pagination', name: 'pagination', props });
 }
 
 fixture('Pagination');
 
-const tests: Array<[Partial<PaginationProps>, Array<number | [number, number]>]> = [
+const tests: Array<[Record<string, unknown>, Array<number | [number, number]>]> = [
   [{ total: 7, page: 1 }, [1, 2, 3, 4, 5, 6, 7]],
   [{ total: 7, page: 7 }, [1, 2, 3, 4, 5, 6, 7]],
   [{ total: 8, page: 1 }, [1, 2, 3, 4, 5, [6, 7], 8]],

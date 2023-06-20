@@ -1,18 +1,8 @@
 import { Selector } from 'testcafe';
 
-import {
-  InputCommonProps,
-  InputMaskProps,
-  InputOverviewProps,
-  InputPhoneProps,
-  InputSecurityProps,
-} from '@sbercloud/uikit-product-input';
-
 import { dataTestIdSelector } from '../../../../testcafe/utils';
 
-type InputProps = InputCommonProps | InputOverviewProps | InputMaskProps | InputPhoneProps | InputSecurityProps;
-
-export type VisitCallback = (props: InputProps) => string;
+export type VisitCallback = (props: Record<string, unknown>) => string;
 
 type Options = {
   isMasked: boolean;

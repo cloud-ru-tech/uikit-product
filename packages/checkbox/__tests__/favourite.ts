@@ -1,12 +1,10 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { FavouriteProps } from '@sbercloud/uikit-product-checkbox';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const testId = 'favorite__test';
 
-const visit = (props?: FavouriteProps) =>
+const visit = (props?: Record<string, unknown>) =>
   getTestcafeUrl({
     group: 'checkbox',
     name: 'favourite',

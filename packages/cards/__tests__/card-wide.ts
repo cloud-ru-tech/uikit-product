@@ -1,12 +1,10 @@
 import { fixture, Selector, test } from 'testcafe';
 
-import { CardWideProps } from '@sbercloud/uikit-product-cards';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
 const TEST_ID = 'card-wide-test';
 
-function getPage(props?: Partial<CardWideProps>) {
+function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
     group: 'cards-card',
     name: 'wide',

@@ -1,10 +1,11 @@
 import { Selector } from 'testcafe';
 
-import { NoDataProps } from '@sbercloud/uikit-product-no-data';
-
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
-type VisitProps = Partial<Pick<NoDataProps, 'title' | 'description'>>;
+type VisitProps = {
+  title?: string;
+  description?: string;
+};
 
 const testId = 'no-data__test';
 const title = 'NoDataTitle';
