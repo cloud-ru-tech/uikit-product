@@ -2,7 +2,7 @@ import { KeyboardEvent, ReactText, useMemo } from 'react';
 import RCSelect, { ActionMeta, createFilter, ValueType } from 'react-select';
 
 import { SelectActionTypes } from '../../constants';
-import { CustomOption, MultiValue } from '../../helperComponents/MultiSelect';
+import { CustomOption, LoadingMessage, MultiValue, NoOptionsMessage } from '../../helperComponents/MultiSelect';
 import { MultiselectOptionType, SelectSizes } from '../../helpers/types';
 import { styles } from '../../styles/multiSelect';
 import * as S from './styled';
@@ -17,6 +17,7 @@ export type MultiSelectProps = {
   onKeyDown?(e: KeyboardEvent<HTMLElement>): void;
   onInputChange?(value: string): void;
   inputValue?: string;
+  isLoading?: boolean;
   label?: ReactText;
   placeholder?: ReactText;
   className?: string;
@@ -27,6 +28,7 @@ export function MultiSelect({
   options,
   value,
   inputValue,
+  isLoading,
   onSelectOption,
   onRemoveOption,
   onKeyDown,
@@ -58,7 +60,7 @@ export function MultiSelect({
     <S.MultiSelectWrap className={className}>
       {label && <S.Label>{label}</S.Label>}
       <RCSelect
-        options={options}
+        options={isLoading ? undefined : options}
         value={value}
         onChange={handleChange}
         inputValue={inputValue}
@@ -67,6 +69,7 @@ export function MultiSelect({
         onKeyDown={onKeyDown}
         isMulti
         isSearchable
+        isLoading={isLoading}
         backspaceRemovesValue
         filterOption={createFilter({
           ignoreCase: true,
@@ -79,7 +82,8 @@ export function MultiSelect({
         placeholder={placeholder}
         components={{
           IndicatorsContainer: () => <></>,
-          NoOptionsMessage: () => <></>,
+          NoOptionsMessage,
+          LoadingMessage,
           MultiValue,
           Option: CustomOption,
         }}

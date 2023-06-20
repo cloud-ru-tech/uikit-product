@@ -28,10 +28,12 @@ export const SIZES_IN_PX = {
   },
   [SelectSizes.Medium]: {
     minHeight: '36px',
-    padding: '0 4px',
+    padding: '4px',
   },
   [SelectSizes.Large]: {
     minHeight: '44px',
-    padding: '0 8px',
+    padding: '8px',
   },
 };
+
+export const INFO_BOX_SIZE = 76;

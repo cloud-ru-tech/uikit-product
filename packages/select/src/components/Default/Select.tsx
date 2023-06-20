@@ -50,6 +50,7 @@ export type SelectProps = {
   prefixOption?: (props: OptionPrefixProps) => JSX.Element;
   postfixOption?: (props: OptionPrefixProps) => JSX.Element;
   className?: string;
+  isLoading?: boolean;
   error?: string;
   components?: RCComponents;
   optionNoWrap?: boolean;
@@ -75,6 +76,7 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
     isSearchable = false,
     searchableProps = ['value'],
     className,
+    isLoading,
     onMenuClose,
     components,
     prefixControl,
@@ -235,13 +237,14 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
               closeMenu();
             }
           }}
-          options={stateOptions}
+          options={isLoading ? undefined : stateOptions}
           formatGroupLabel={formatGroupLabel}
           formatOptionLabel={formatOptionLabelInner}
           components={componentsState}
           styles={customStyles.styles}
           theme={customStyles.theme}
           isSearchable={false}
+          isLoading={isLoading}
           menuIsOpen={checkMobileDevice() ? undefined : isOpen}
           menuPortalTarget={portalTargetRef.current}
           blurInputOnSelect={checkMobileDevice() || undefined}

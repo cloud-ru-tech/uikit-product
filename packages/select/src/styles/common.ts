@@ -2,6 +2,9 @@ import { CSSProperties } from 'react';
 import { Props, Styles, Theme } from 'react-select';
 
 import { DEPRECATED_EXPORT_VARS, EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { SHADOW } from '@sbercloud/uikit-product-utils';
+
+import { INFO_BOX_SIZE } from '../constants';
 
 const { COLORS_GENERAL, COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 const { BLACK_ALFA } = EXPORT_VARS;
@@ -104,7 +107,7 @@ export const styles = (typeStyles?: Styles): Styles => ({
     ...styles,
     ...(state?.selectProps?.optionNoWrap ? { right: 0, width: 'auto' } : {}),
     borderRadius: '4px',
-    boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
+    boxShadow: SHADOW.MEDIUM,
     minWidth: '100%',
     ...(state?.selectProps?.menuRelative ? { position: 'relative' } : {}),
   }),
@@ -192,6 +195,10 @@ export const styles = (typeStyles?: Styles): Styles => ({
       backgroundColor: 'transparent',
       fill: `var(${COLORS_SELECT.TEXT_COLOR})`,
     },
+  }),
+  loadingMessage: (styles: CSSProperties): CSSProperties => ({
+    ...styles,
+    height: INFO_BOX_SIZE,
   }),
   ...(typeStyles || {}),
 });

@@ -2,6 +2,7 @@ import { CSSProperties } from 'react';
 import { PlaceholderProps } from 'react-select';
 
 import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { SHADOW } from '@sbercloud/uikit-product-utils';
 
 import { SIZES_IN_PX } from '../constants';
 import { SelectSizes } from '../helpers/types';
@@ -61,6 +62,7 @@ export const styles = (size: SelectSizes) => {
     menu: (styles: CSSProperties) => ({
       ...styles,
       margin: '0',
+      boxShadow: SHADOW.MEDIUM,
     }),
   });
 

@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 import { components as ReactSelectComponents, SelectComponentsConfig } from 'react-select';
 
 import { CloseInterfaceSVG, DropdownDownInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { Spinner } from '@sbercloud/uikit-product-spinner';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { SelectProps } from '../components';
@@ -35,6 +36,14 @@ function MultiValueRemove(props: React.ComponentProps<typeof ReactSelectComponen
   );
 }
 
+function LoadingMessage(props: React.ComponentProps<typeof ReactSelectComponents.LoadingMessage>): JSX.Element {
+  return (
+    <ReactSelectComponents.LoadingMessage {...props}>
+      <Spinner size={Spinner.sizes.Small} />
+    </ReactSelectComponents.LoadingMessage>
+  );
+}
+
 function NoOptionsMessage(props: React.ComponentProps<typeof ReactSelectComponents.NoOptionsMessage>): JSX.Element {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const noDataText = useMemo(() => textProvider<string>(languageCode, Texts.NoData), [languageCode]);
@@ -64,6 +73,8 @@ export const getSharedComponents = (
     MultiValueContainer: multiValueContainer,
     Group: group,
     GroupHeading: groupHeading,
+    LoadingMessage,
+    LoadingIndicator: () => <></>,
   };
 
   return {
