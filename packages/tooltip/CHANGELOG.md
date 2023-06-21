@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2023-06-21)
+
+
+### Features
+
+* **[FF-2512](https://jira.sbercloud.tech/browse/FF-2512):** add className property ([cbe5b3a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cbe5b3a69858c67f1d69ca07ec472fa13a662ad1))
+
+
+
+
+
 ## 3.0.30 (2023-06-20)
 
 ### Only dependencies have been changed
@@ -192,7 +203,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.11 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-tooltip
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-link@3.1.19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/link/CHANGELOG.md)
 
 ## [3.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tooltip@3.0.9...@sbercloud/uikit-product-tooltip@3.0.10) (2023-01-12)
 

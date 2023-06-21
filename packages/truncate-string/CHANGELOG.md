@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2023-06-21)
+
+
+### Bug Fixes
+
+* **[FF-2512](https://jira.sbercloud.tech/browse/FF-2512):** make truncated string work better when placed with other elements in one container ([30c070f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/30c070f86fdf83759021617274fffc01a950a726))
+
+
+### BREAKING CHANGES
+
+
+* **[FF-2512](https://jira.sbercloud.tech/browse/FF-2512):** remove textClassName property ([db3fc2d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/db3fc2d98c6445f66aa95a36e98289734cabd58f))
+
+
+
+
 ## 0.7.7 (2023-06-20)
 
 ### Only dependencies have been changed
@@ -205,7 +221,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.6.3 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-truncate-string
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-tooltip@3.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
 
 ## 0.6.2 (2023-01-26)
 
