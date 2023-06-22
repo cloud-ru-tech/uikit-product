@@ -26,8 +26,8 @@ export function NotificationCard({
   const cardRef = useRef<HTMLDivElement>(null);
   const [isMouseCardEnter, setIsMouseCardEnter] = useState(false);
   const { headerIcon, breadcrumbsTitles = [], time } = header || {};
-  const { contentIcon = '', title = '', description = '', avatar, buttons } = content || {};
-  const isNotificationClickable = Array.isArray(buttons) && buttons.length === 1;
+  const { contentIcon = '', title = '', description = '', avatar, buttons, onCardClick } = content || {};
+  const isNotificationClickable = Boolean(onCardClick);
   const isDropdownMenuVisible = isMouseCardEnter;
   const isTimeVisible = !isDropdownMenuVisible && Boolean(time);
 
@@ -41,11 +41,7 @@ export function NotificationCard({
 
   const handleMoreIconClick = (e: MouseEvent) => e.stopPropagation();
 
-  const handleCardClick = (e: MouseEvent<HTMLElement>) => {
-    if (isNotificationClickable && buttons[0].onClick) {
-      buttons[0].onClick(e);
-    }
-  };
+  const handleCardClick = () => onCardClick?.(id);
 
   const handleButtonClick = (e: MouseEvent<HTMLElement>, cb: MouseEventHandler<HTMLElement> | undefined) => {
     e.stopPropagation();
@@ -110,6 +106,7 @@ export function NotificationCard({
               onClick={handleMoreIconClick}
             />
           </DropdownMenu>
+
           <S.Time data-visible={isTimeVisible || undefined}>{time}</S.Time>
         </S.HeaderRightSide>
       </S.HeaderWrapper>

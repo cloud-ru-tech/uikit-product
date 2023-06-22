@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { H3_STYLES } from '@sbercloud/uikit-product-typography';
@@ -97,4 +98,12 @@ export const FooterWrapper = styled.div`
   justify-content: center;
   align-items: flex-end;
   padding: 8px 0;
+`;
+
+export const spinnerClassName = css`
+  margin: 80px 0 80px 0;
+`;
+
+export const ErrorWrapper = styled.div`
+  margin: 80px 0 80px 0;
 `;

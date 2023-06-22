@@ -9,6 +9,9 @@ export enum Texts {
   DeleteNotification = 'DeleteNotification',
   NoNewNotificationsTitle = 'NoNewNotificationsTitle',
   NoNewNotificationsDescription = 'NoNewNotificationsDescription',
+  LoadingText = 'LoadingText',
+  ErrorTitle = 'ErrorTitle',
+  ErrorDescription = 'ErrorDescription',
 }
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -21,6 +24,9 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.DeleteNotification]: 'Удалить уведомление',
     [Texts.NoNewNotificationsTitle]: 'Нет новых уведомлений',
     [Texts.NoNewNotificationsDescription]: 'Здесь вы увидите уведомления о новых событиях, когда что-то произойдет',
+    [Texts.LoadingText]: 'Данные загружаются...',
+    [Texts.ErrorTitle]: 'Уже чиним',
+    [Texts.ErrorDescription]: 'Скоро здесь появятся ваши уведомления',
   },
   [LanguageCodeType.enGB]: {
     [Texts.All]: 'All',
@@ -31,6 +37,9 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.DeleteNotification]: 'Delete notification',
     [Texts.NoNewNotificationsTitle]: 'No new notifications',
     [Texts.NoNewNotificationsDescription]: 'Here you will see notifications of new events when something happens',
+    [Texts.LoadingText]: 'Loading...',
+    [Texts.ErrorTitle]: "We're already fixing it",
+    [Texts.ErrorDescription]: 'Your notifications will appear here soon',
   },
 };
 

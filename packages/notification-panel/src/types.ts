@@ -27,5 +27,6 @@ export type Card = {
     description: JSX.Element;
     avatar?: AvatarProps;
     buttons?: ButtonProps[];
+    onCardClick?(id: string): void;
   };
 };

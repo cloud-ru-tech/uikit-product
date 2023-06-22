@@ -13,6 +13,7 @@ import { Chip } from '@sbercloud/uikit-product-chip';
 import { CloseInterfaceSVG, NotifyInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { NoData } from '@sbercloud/uikit-product-no-data';
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
+import { Spinner } from '@sbercloud/uikit-product-spinner';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -24,7 +25,7 @@ import { ID_WRAPPER, Tab } from './constants';
 import * as S from './styled';
 
 export type NotificationPopupProps = WithSupportProps<{
-  children: ReactNode;
+  children?: ReactNode;
   cards: Card[];
   headerTooltip?: string;
   open: boolean;
@@ -33,10 +34,13 @@ export type NotificationPopupProps = WithSupportProps<{
     hasMore: boolean;
   };
   onToggle(value: boolean): void;
-  onCardRead(id: string): void;
+  onCardsRead(cardIds: string[]): void;
   onCardDelete(id: string): void;
   onReadAllButtonClick?(): void;
   onSeeAllButtonClick?(): void;
+  onTabChange?({ activeTab }: { activeTab?: Tab }): void;
+  loading?: boolean;
+  error?: boolean;
 }>;
 
 export function NotificationPopup({
@@ -47,8 +51,11 @@ export function NotificationPopup({
   onReadAllButtonClick,
   onSeeAllButtonClick,
   onToggle,
-  onCardRead,
+  onCardsRead,
   onCardDelete,
+  onTabChange,
+  loading,
+  error,
   children,
   ...rest
 }: NotificationPopupProps) {
@@ -60,8 +67,6 @@ export function NotificationPopup({
   const selectedTabCards = activeTab === Tab.All ? cards : newCards;
 
   const hasCardsDataOnTab = selectedTabCards.length > 0;
-  const showControlPanel = cards.length > 0;
-  const showFooter = hasCardsDataOnTab && onSeeAllButtonClick && cards.length > 0;
 
   const handleCardVisible = (id: string) => {
     if (!visibleCardIds.includes(id)) {
@@ -70,7 +75,7 @@ export function NotificationPopup({
   };
 
   const handleReadVisibleCards = () => {
-    visibleCardIds.forEach(id => onCardRead(id));
+    onCardsRead(visibleCardIds);
     setVisibleCardIds([]);
   };
 
@@ -87,6 +92,14 @@ export function NotificationPopup({
       handleReadVisibleCards();
     }
   }, [open]);
+
+  const showError = !loading && error;
+  const showNoData = !loading && !error && !hasCardsDataOnTab;
+  const showData = !loading && !error && hasCardsDataOnTab;
+
+  const showControlPanel =
+    ((cards.length > 0 && Tab.All === activeTab) || Tab.New === activeTab) && !showError && !loading;
+  const showFooter = hasCardsDataOnTab && onSeeAllButtonClick && cards.length > 0 && !showError && !loading;
 
   return (
     <>
@@ -125,7 +138,10 @@ export function NotificationPopup({
                       checked={activeTab === value}
                       variant={Chip.variants.Primary}
                       size={Chip.sizes.Small}
-                      handleChange={() => setActiveTab(value)}
+                      handleChange={() => {
+                        setActiveTab(value);
+                        onTabChange?.({ activeTab: value });
+                      }}
                     />
                   ))}
                 </S.ChipsWrapper>
@@ -141,7 +157,47 @@ export function NotificationPopup({
               </S.ControlPanel>
             )}
 
-            {hasCardsDataOnTab ? (
+            {loading && (
+              <Spinner
+                size={Spinner.sizes.Large}
+                text={textProvider(languageCode, Texts.LoadingText)}
+                className={S.spinnerClassName}
+              />
+            )}
+
+            {showError && (
+              <S.ErrorWrapper>
+                <NoData
+                  image={
+                    <PredefinedDecorIconPrivate
+                      icon={PredefinedDecorIconPrivate.icons.Cancel}
+                      type={PredefinedDecorIconPrivate.types.Predefined}
+                      size={PredefinedDecorIconPrivate.sizes.Medium}
+                    />
+                  }
+                  title={textProvider(languageCode, Texts.ErrorTitle)}
+                  description={textProvider(languageCode, Texts.ErrorDescription)}
+                />
+              </S.ErrorWrapper>
+            )}
+
+            {showNoData && (
+              <S.NoDataWrapper>
+                <NoData
+                  image={
+                    <PredefinedDecorIconPrivate
+                      icon={<NotifyInterfaceSVG />}
+                      type={PredefinedDecorIconPrivate.types.Custom}
+                      size={PredefinedDecorIconPrivate.sizes.Medium}
+                    />
+                  }
+                  title={textProvider(languageCode, Texts.NoNewNotificationsTitle)}
+                  description={textProvider(languageCode, Texts.NoNewNotificationsDescription)}
+                />
+              </S.NoDataWrapper>
+            )}
+
+            {showData && (
               <S.CardsWrapper data-test-id='notification-panel__cards-wrapper' id={ID_WRAPPER}>
                 <InfiniteScroll
                   dataLength={cards.length}
@@ -162,20 +218,6 @@ export function NotificationPopup({
                 </InfiniteScroll>
                 {loadCards.hasMore && <S.FakeChild />}
               </S.CardsWrapper>
-            ) : (
-              <S.NoDataWrapper>
-                <NoData
-                  image={
-                    <PredefinedDecorIconPrivate
-                      icon={<NotifyInterfaceSVG />}
-                      type={PredefinedDecorIconPrivate.types.Custom}
-                      size={PredefinedDecorIconPrivate.sizes.Medium}
-                    />
-                  }
-                  title={textProvider(languageCode, Texts.NoNewNotificationsTitle)}
-                  description={textProvider(languageCode, Texts.NoNewNotificationsDescription)}
-                />
-              </S.NoDataWrapper>
             )}
 
             {showFooter && (
@@ -198,5 +240,6 @@ export function NotificationPopup({
 }
 
 NotificationPopup.cardTypes = CardType;
+NotificationPopup.tabs = Tab;
 
 export type { Card };

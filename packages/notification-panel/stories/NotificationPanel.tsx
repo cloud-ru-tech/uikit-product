@@ -57,6 +57,7 @@ const defaultCard: Card = {
     },
     description: <ContentDescription />,
     buttons: [{ text: 'Посмотреть логи', onClick: () => {} }],
+    onCardClick: () => {},
   },
 };
 
@@ -70,8 +71,10 @@ function Template({ ...args }: StoryProps) {
 
   const handleReadAll = () => setCards(cards.map(card => ({ ...card, showNewBadge: false })));
 
-  const handleCardRead = (id: string) => {
-    setCards(cards => cards.map(card => ({ ...card, showNewBadge: card.id === id ? false : card.showNewBadge })));
+  const handleCardRead = (cardIds: string[]) => {
+    setCards(cards =>
+      cards.map(card => ({ ...card, showNewBadge: cardIds.includes(card.id) ? false : card.showNewBadge })),
+    );
   };
 
   const handleCardDelete = (id: string) => {
@@ -145,7 +148,7 @@ function Template({ ...args }: StoryProps) {
           hasMore,
         }}
         onReadAllButtonClick={onReadAllButtonClick ? handleReadAll : undefined}
-        onCardRead={handleCardRead}
+        onCardsRead={handleCardRead}
         onCardDelete={handleCardDelete}
       >
         <Badge type={Badge.types.Info} number={cards.filter(card => card.showNewBadge).length}>

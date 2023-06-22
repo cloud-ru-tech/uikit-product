@@ -1,10 +1,10 @@
 # Notification Panel
 
 ## Installation
+
 `npm i @sbercloud/uikit-product-notification-panel`
 
 [Changelog](./CHANGELOG.md)
-
 
 ## Props
 
@@ -34,18 +34,26 @@ type Card = {
     description: JSX.Element;
     avatar?: AvatarProps;
     buttons?: ButtonProps[];
+    onCardClick?(id: string): void;
   };
 };
 
 type NotificationPopupProps = WithSupportProps<{
-  children: ReactNode;
+  children?: ReactNode;
   cards: Card[];
   headerTooltip?: string;
   open: boolean;
+  loadCards?: {
+    fetchMore(): void;
+    hasMore: boolean;
+  };
   onToggle(value: boolean): void;
-  onCardRead(id: string): void;
+  onCardsRead(cardIds: string[]): void;
   onCardDelete(id: string): void;
   onReadAllButtonClick?(): void;
   onSeeAllButtonClick?(): void;
+  onTabChange?({ activeTab }: { activeTab?: Tab }): void;
+  loading?: boolean;
+  error?: boolean;
 }>;
 ```
