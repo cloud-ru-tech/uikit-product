@@ -100,7 +100,7 @@
     "storybook-addon-designs": "7.0.0-beta.2",
     "storybook-dark-mode": "3.0.0",
     "stream-browserify": "3.0.0",
-    "testcafe": "2.6.2",
+    "testcafe": "3.0.0",
     "ts-config-single-spa": "3.0.0",
     "ts-node": "10.9.1",
     "tsconfig-paths-webpack-plugin": "4.0.0",
