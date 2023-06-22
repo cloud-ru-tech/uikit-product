@@ -4,6 +4,7 @@ dist
 build.bat
 .linaria-cache
 storybook-static
+.env
 
 # Logs
 logs

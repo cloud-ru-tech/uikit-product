@@ -9,7 +9,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "add-package": "ts-node scripts/npm-init",
-    "build:storybook": "storybook build -c storybook",
+    "build:storybook": "cross-env TEST_SERVER=true storybook build -c storybook",
     "build:packages": "npm run clean:all && npm run deps:packages && lerna run compile && ts-node scripts/compile",
     "changelog": "ts-node scripts/changelog",
     "clean:all": "npm run clean:dist && npm run clean:modules",
