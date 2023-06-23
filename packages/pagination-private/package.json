@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-pagination-private",
   "title": "React Pagination Private",
-  "version": "1.2.47",
+  "version": "1.2.48",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "5.17.0",
+    "@sbercloud/uikit-product-icons": "5.17.1",
     "@sbercloud/uikit-product-theme": "0.37.0",
     "@sbercloud/uikit-product-utils": "3.2.4"
   }

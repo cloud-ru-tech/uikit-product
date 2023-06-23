@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-input-decorator-private",
   "title": "React Input Decorator Private",
-  "version": "3.0.31",
+  "version": "3.0.32",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "5.17.0",
+    "@sbercloud/uikit-product-icons": "5.17.1",
     "@sbercloud/uikit-product-theme": "0.37.0",
-    "@sbercloud/uikit-product-tooltip": "3.1.0",
+    "@sbercloud/uikit-product-tooltip": "3.1.1",
     "@sbercloud/uikit-product-typography": "1.3.0",
     "@sbercloud/uikit-product-utils": "3.2.4"
   }
