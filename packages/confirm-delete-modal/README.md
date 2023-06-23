@@ -1,6 +1,6 @@
 # Confirm Delete Modal
 
-Модальное окно для удаление основных продуктовых сущностей.
+Модальное окно для удаления основных продуктовых сущностей.
 
 Требует ввести название сущности для подтверждения.
 
@@ -9,12 +9,12 @@
 
 ## Props
 ```typescript
-type ConfirmDeleteModalProps = Pick<ModalProps, 'isOpen' | 'title' | 'onClose' | 'align'> & {
+type ConfirmDeleteModalProps = Pick<ModalProps, 'isOpen' | 'title' | 'onClose'> & {
   target: {
     name: string;
     value: string;
   };
-  onApprove: (fields: { name }) => void;
+  onApprove: VoidFunction;
 };
 ```
 

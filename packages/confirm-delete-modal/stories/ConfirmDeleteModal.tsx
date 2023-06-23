@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryFn } from '@storybook/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
 
@@ -18,17 +18,14 @@ export default meta;
 function Template({ ...args }: ConfirmDeleteModalProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    setIsOpen(args.isOpen);
+  }, [args.isOpen]);
+
   return (
     <>
       <Button text='Удалить' onClick={() => setIsOpen(true)} />
-
-      <ConfirmDeleteModal
-        title={args.title}
-        target={args.target}
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        onApprove={action('onApprove')}
-      />
+      <ConfirmDeleteModal {...args} isOpen={isOpen} onClose={() => setIsOpen(false)} onApprove={action('onApprove')} />
     </>
   );
 }
@@ -52,7 +49,6 @@ confirmDeleteModal.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    //TODO: update to the correct one
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/file/xutZzH1SnasFgFQD193iTu/%5BLIB%5D-Platform-DS-%E2%88%99-UX-Patterns?type=design&node-id=18627-138121&mode=design&t=2ljyNMWGHWcykSAy-0',
   },
 };

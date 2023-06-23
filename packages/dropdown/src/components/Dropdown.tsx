@@ -10,6 +10,7 @@ import {
   useState,
 } from 'react';
 
+import { Divider } from '@sbercloud/uikit-product-divider';
 import {
   Placements,
   TooltipMenuItemPrivate,
@@ -26,6 +27,8 @@ export type TDropdownMenuActionType = {
   onClick?(e?: React.MouseEvent<HTMLDivElement, MouseEvent>): void;
   value: string;
   disabled?: boolean;
+  withTopDivider?: boolean;
+  withBottomDivider?: boolean;
 };
 
 export type TDropdownMenuActionProps = {
@@ -96,7 +99,7 @@ export function DropdownMenu({
         >
           {isActionsArray &&
             (actions as TDropdownMenuActionType[]).map((menuItem, index) => {
-              const { label, disabled } = menuItem;
+              const { label, disabled, withTopDivider, withBottomDivider } = menuItem;
               const isNameFn = typeof label === 'function';
               const handlerOnClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>): void => {
                 if (disabled) return;
@@ -107,17 +110,21 @@ export function DropdownMenu({
               };
 
               return (
-                <TooltipMenuItemPrivate
-                  data-test-option-index={index}
-                  key={`menu-item-${menuItem.value}`}
-                  onClick={handlerOnClick}
-                  data-disabled={disabled || undefined}
-                  data-selected={menuItem.value === value || undefined}
-                  className={S.menuItemClassName}
-                  data-test-option-id={menuItem.value}
-                >
-                  {isNameFn ? label() : label}
-                </TooltipMenuItemPrivate>
+                <>
+                  {withTopDivider && <Divider variant={Divider.variants.Secondary} />}
+                  <TooltipMenuItemPrivate
+                    data-test-option-index={index}
+                    key={`menu-item-${menuItem.value}`}
+                    onClick={handlerOnClick}
+                    data-disabled={disabled || undefined}
+                    data-selected={menuItem.value === value || undefined}
+                    className={S.menuItemClassName}
+                    data-test-option-id={menuItem.value}
+                  >
+                    {isNameFn ? label() : label}
+                  </TooltipMenuItemPrivate>
+                  {withBottomDivider && <Divider variant={Divider.variants.Secondary} />}
+                </>
               );
             })}
           {isActionsFn &&

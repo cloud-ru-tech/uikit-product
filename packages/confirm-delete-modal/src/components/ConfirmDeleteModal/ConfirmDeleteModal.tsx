@@ -12,12 +12,12 @@ type Fields = {
   name: string;
 };
 
-export type ConfirmDeleteModalProps = Pick<ModalProps, 'isOpen' | 'title' | 'onClose' | 'align'> & {
+export type ConfirmDeleteModalProps = Pick<ModalProps, 'isOpen' | 'title' | 'onClose'> & {
   target: {
     name: string;
     value: string;
   };
-  onApprove: VoidFunction;
+  onApprove(): void;
 };
 
 export function ConfirmDeleteModal({ target, onApprove, onClose, ...restProps }: ConfirmDeleteModalProps) {
