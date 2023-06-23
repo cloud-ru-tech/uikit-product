@@ -64,34 +64,30 @@ const ForwarderInputSlider = forwardRef<HTMLInputElement, InputSliderProps>(
       onChange(newValue);
     };
 
-    const inputHandlerToClosestStepDebounced = useMemo(
+    const inputHandlerDebounced = useMemo(
       () =>
         debounce((v: string, onChange: InputSliderProps['onChange']) => {
-          if (!privateMarksValuesList.length) {
+          if (!privateMarksValuesList.length && onlyMarks) {
             return;
           }
 
           let newValue = getValueInRange({ value: Number(v), min, max, marks: privateMarks, marksPlacementType });
           // find closest to newValue mark
-          newValue = privateMarksValuesList.reduce((prev, curr) =>
-            Math.abs(curr - newValue) < Math.abs(prev - newValue) ? curr : prev,
-          );
+          if (onlyMarks) {
+            newValue = privateMarksValuesList.reduce((prev, curr) =>
+              Math.abs(curr - newValue) < Math.abs(prev - newValue) ? curr : prev,
+            );
+          }
 
           setTempInputValue(String(newValue));
           onChange(newValue);
         }, 500),
-      [marksPlacementType, max, min, privateMarks, privateMarksValuesList],
+      [marksPlacementType, max, min, privateMarks, privateMarksValuesList, onlyMarks],
     );
 
     const inputHandler = (v: string) => {
-      if (onlyMarks) {
-        setTempInputValue(v);
-        inputHandlerToClosestStepDebounced(v, onChange);
-      } else {
-        const formattedValue = getValueInRange({ value: Number(v), min, max, marks: privateMarks, marksPlacementType });
-        setTempInputValue(`${formattedValue}`);
-        onChange(formattedValue);
-      }
+      setTempInputValue(v);
+      inputHandlerDebounced(v, onChange);
     };
 
     const { isFocus, handleFocus, handleBlur } = useFocus({ onFocus, onBlur });

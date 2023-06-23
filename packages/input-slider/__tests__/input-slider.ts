@@ -40,6 +40,7 @@ test.page(getPage({ value: 50 }))('Change by typing, pressing left/right arrow, 
   await t.typeText(InputSelector, '10', { replace: true });
   await t.expect(InputSelector.value).eql('10');
 
+  await t.wait(500);
   await t.click(HandlerSelector).pressKey('right right right');
   await t.expect(InputSelector.value).eql('13');
 
