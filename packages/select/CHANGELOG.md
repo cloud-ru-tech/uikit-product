@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.29.0 (2023-06-23)
+
+
+### Features
+
+* **[SVP-5286](https://jira.sbercloud.tech/browse/SVP-5286):** added loading state for Select and Multiselect lists, empty list state for Multiselect, fix shadows and paddings ([78d8aa8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/78d8aa821a39946ad0ec5d73030ba160d4e216fe))
+
+
+
+
+
 ## 0.28.15 (2023-06-23)
 
 ### Only dependencies have been changed
