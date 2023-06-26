@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2023-06-26)
+
+
+### BREAKING CHANGES
+
+
+* **[DPS-4732](https://jira.sbercloud.tech/browse/DPS-4732):** imprv props ([33e4a7c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/33e4a7c55306f0106c2a6ec55175033a69ff1e94))
+
+
+
+
 ## 0.1.4 (2023-06-23)
 
 ### Only dependencies have been changed
