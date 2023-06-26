@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2023-06-26)
+
+
+### BREAKING CHANGES
+
+
+* **[LK-1885](https://jira.sbercloud.tech/browse/LK-1885):** add onTabChange, loading and error props and make onCardDelete and children props optional ([0355a08](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0355a087d19655ebe95b1337ef27705482dd21ef))
+
+
+
+
 ## 1.1.25 (2023-06-23)
 
 ### Only dependencies have been changed
