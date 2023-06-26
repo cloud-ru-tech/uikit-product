@@ -74,19 +74,20 @@ export const AccordionButtons = styled.div`
 `;
 
 export const AccordionContentWrapStyled = styled.div`
-  &[data-collapsed] {
+  &[aria-expanded='true'] {
     max-height: 0;
-    transition: max-height 0.2s ease-out;
     overflow: hidden;
   }
-
-  &[data-expanded] {
+  &[aria-expanded='false'] {
     max-height: 500px;
+    overflow: auto;
   }
 
-  &[data-expanded-animation] {
+  &[data-with-animation][aria-expanded='true'] {
+    transition: max-height 0.2s ease-out;
+  }
+  &[data-with-animation][aria-expanded='false'] {
     transition: max-height 0.5s ease-in;
-    overflow: auto;
   }
 `;
 

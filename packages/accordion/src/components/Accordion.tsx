@@ -15,14 +15,14 @@ import * as S from './styled';
 
 export type AccordionProps = WithSupportProps<{
   header: string;
-  subheader: string;
-  content: string | ReactNode;
-  onClose?(): void;
+  content: ReactNode;
+  subheader?: string;
+  onDelete?: VoidFunction;
   className?: string;
   tooltip?: string;
   variant?: Variant;
   disabled?: boolean;
-  hasExpandedAnimation?: boolean;
+  hasAnimation?: boolean;
 }>;
 
 export function Accordion({
@@ -32,9 +32,9 @@ export function Accordion({
   variant = Variant.Primary,
   className,
   disabled = false,
-  onClose,
+  onDelete,
   tooltip,
-  hasExpandedAnimation = true,
+  hasAnimation = true,
   ...rest
 }: AccordionProps) {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -51,17 +51,17 @@ export function Accordion({
       <S.AccordionCard>
         <div>
           <S.AccordionHeader data-variant={variant} data-disabled={disabled || undefined}>
-            {header}{' '}
+            {header}
             {tooltip && (
               <Tooltip type={Tooltip.types.Instant} content={tooltip}>
                 <ButtonIcon disabled={disabled} icon={<QuestionInterfaceSVG />} variant={ButtonIcon.variants.Weak} />
               </Tooltip>
             )}
           </S.AccordionHeader>
-          <S.AccordionSubheader data-disabled={disabled || undefined}>{subheader}</S.AccordionSubheader>
+          {subheader && <S.AccordionSubheader data-disabled={disabled || undefined}>{subheader}</S.AccordionSubheader>}
         </div>
         <S.AccordionButtons>
-          <ButtonIconTransparent disabled={disabled} onClick={onClose} icon={<DeleteInterfaceSVG />} />
+          {onDelete && <ButtonIconTransparent disabled={disabled} onClick={onDelete} icon={<DeleteInterfaceSVG />} />}
           <ButtonIconTransparent
             disabled={disabled}
             onClick={toggleCollapsed}
@@ -70,12 +70,7 @@ export function Accordion({
         </S.AccordionButtons>
       </S.AccordionCard>
 
-      <S.AccordionContentWrapStyled
-        data-expanded={!isCollapsed || undefined}
-        data-collapsed={isCollapsed || undefined}
-        data-expanded-animation={(hasExpandedAnimation && !isCollapsed) || undefined}
-        aria-expanded={isCollapsed}
-      >
+      <S.AccordionContentWrapStyled data-with-animation={hasAnimation || undefined} aria-expanded={!isCollapsed}>
         <S.AccordionContentStyled>{content}</S.AccordionContentStyled>
       </S.AccordionContentWrapStyled>
     </S.AccordionWrapper>
