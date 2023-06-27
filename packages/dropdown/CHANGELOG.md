@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.18.0 (2023-06-27)
+
+
+### Features
+
+* **[DPS-4447](https://jira.sbercloud.tech/browse/DPS-4447):** add divider props to DropdownMenuActionType ([22fbd4f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/22fbd4f7a906a06dd97e685f4b11277f4106db87))
+
+
+
+
+
 ## 0.17.5 (2023-06-08)
 
 ### Only dependencies have been changed

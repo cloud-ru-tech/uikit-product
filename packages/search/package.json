@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-search",
   "title": "Search",
-  "version": "0.2.41",
+  "version": "0.2.42",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.3.9",
-    "@sbercloud/uikit-product-icons": "5.17.1",
-    "@sbercloud/uikit-product-input-private": "3.1.5",
+    "@sbercloud/uikit-product-button": "5.3.10",
+    "@sbercloud/uikit-product-icons": "5.18.0",
+    "@sbercloud/uikit-product-input-private": "3.1.6",
     "@sbercloud/uikit-product-theme": "0.37.0",
     "@sbercloud/uikit-product-utils": "3.2.4",
     "merge-refs": "1.0.0"

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-hierarchy-menu",
   "title": "React Hierarchy Menu",
-  "version": "0.9.36",
+  "version": "0.9.37",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-divider": "2.0.45",
-    "@sbercloud/uikit-product-icons": "5.17.1",
+    "@sbercloud/uikit-product-icons": "5.18.0",
     "@sbercloud/uikit-product-theme": "0.37.0"
   }
 }

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.18.0 (2023-06-27)
+
+
+### Features
+
+* **[DPS-4447](https://jira.sbercloud.tech/browse/DPS-4447):** add ConfirmDeleteModal ([540dc50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/540dc50e41f5ea589141967b1352bb6793b86632))
+* **[DPS-4447](https://jira.sbercloud.tech/browse/DPS-4447):** add service icons ([00eb12b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/00eb12bd063080a4f724b4f640e5932c6ba89861))
+
+
+
+
+
 ## 5.17.1 (2023-06-23)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-icons
