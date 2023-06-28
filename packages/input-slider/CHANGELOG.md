@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2023-06-28)
+
+
+### Features
+
+* **[SVP-6277](https://jira.sbercloud.tech/browse/SVP-6277):** debounced input for InputSlider ([8104499](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8104499151104d00605a952694db16ef62ab3366))
+
+
+
+
+
 ## 1.3.24 (2023-06-27)
 
 ### Only dependencies have been changed
