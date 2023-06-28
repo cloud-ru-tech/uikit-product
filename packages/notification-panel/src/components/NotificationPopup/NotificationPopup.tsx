@@ -75,8 +75,10 @@ export function NotificationPopup({
   };
 
   const handleReadVisibleCards = () => {
-    onCardsRead(visibleCardIds);
-    setVisibleCardIds([]);
+    if (visibleCardIds.length) {
+      onCardsRead(visibleCardIds);
+      setVisibleCardIds([]);
+    }
   };
 
   const handleClosePopup = () => {
