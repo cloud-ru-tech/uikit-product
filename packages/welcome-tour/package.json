@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-welcome-tour",
   "title": "Welcome Tour",
-  "version": "0.3.15",
+  "version": "0.3.16",
   "sideEffects": [
     "*.css",
     "*.woff",

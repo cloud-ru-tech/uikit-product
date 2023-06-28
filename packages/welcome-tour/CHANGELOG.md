@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.16 (2023-06-28)
+
+
+### Bug Fixes
+
+* **[ONB-463](https://jira.sbercloud.tech/browse/ONB-463):** changed types and added disable scroll prop ([044ebbf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/044ebbf55dfc62d08eccbe168a581df8af0d4dad))
+
+
+
+
+
 ## 0.3.15 (2023-06-27)
 
 ### Only dependencies have been changed
