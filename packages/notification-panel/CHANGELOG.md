@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.2 (2023-06-28)
+
+
+### Bug Fixes
+
+* **[LK-1885](https://jira.sbercloud.tech/browse/LK-1885):** dont trigger onCardsRead with empty array ([e85927e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e85927e2763d8e99bc07ef5a0d492b96c5afdbcd))
+
+
+
+
+
 ## 2.0.1 (2023-06-27)
 
 ### Only dependencies have been changed
