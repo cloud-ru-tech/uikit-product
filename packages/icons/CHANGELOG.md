@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.19.0 (2023-06-29)
+
+
+### Features
+
+* **[LKP-141](https://jira.sbercloud.tech/browse/LKP-141):** add services/Clients svg icon ([04158ab](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/04158ab54af3cb884e56f1b84a4400b04918ec6d))
+
+
+
+
+
 # 5.18.0 (2023-06-27)
 
 

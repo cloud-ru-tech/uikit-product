@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.50.6 (2023-06-29)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.19.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-modal@1.3.29](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal/CHANGELOG.md)
+* [@sbercloud/uikit-product-pagination-private@1.2.50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/pagination-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-table-private@0.22.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/table-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-toolbar@0.16.117](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/toolbar/CHANGELOG.md)
+
+
+
+
+
 ## 0.50.5 (2023-06-27)
 
 ### Only dependencies have been changed
