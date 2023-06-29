@@ -36,21 +36,40 @@ export function Hint({
   tooltipProps,
 }: HintProps) {
   return (
-    <S.HintWrapper {...tooltipProps}>
+    <S.HintWrapper {...tooltipProps} data-test-id='welcome-tour-hint'>
       <S.HeadingContainer>
-        <S.Heading>{step.title}</S.Heading>
-        <ButtonIcon {...skipProps} variant={ButtonIcon.variants.Strong} icon={<CloseInterfaceSVG />} />
+        <S.Heading data-test-id='welcome-tour-hint__title'>{step.title}</S.Heading>
+        <ButtonIcon
+          data-test-id='welcome-tour-hint__button-close'
+          {...skipProps}
+          variant={ButtonIcon.variants.Strong}
+          icon={<CloseInterfaceSVG />}
+        />
       </S.HeadingContainer>
-      <S.SubHeading>{step.subtitle}</S.SubHeading>
-      {step.content && <S.Content>{step.content}</S.Content>}
+      <S.SubHeading data-test-id='welcome-tour-hint__subtitle'>{step.subtitle}</S.SubHeading>
+      {step.content && <S.Content data-test-id='welcome-tour-hint__content'>{step.content}</S.Content>}
       <S.Footer>
         {step.content && <Steps stepsCount={size} currentStep={index} />}
         <S.StepButtons>
-          {backButton && index !== 0 && <ButtonGhost {...backButton} variant={ButtonGhost.variants.Primary} />}
+          {backButton && index !== 0 && (
+            <ButtonGhost
+              data-test-id='welcome-tour-hint__button-back'
+              {...backButton}
+              variant={ButtonGhost.variants.Primary}
+            />
+          )}
           {isLastStep ? (
-            <ButtonRound {...closeButton} variant={ButtonRound.variants.Filled} />
+            <ButtonRound
+              data-test-id='welcome-tour-hint__button-close'
+              {...closeButton}
+              variant={ButtonRound.variants.Filled}
+            />
           ) : (
-            <ButtonRound {...primaryButton} variant={ButtonRound.variants.Filled} />
+            <ButtonRound
+              data-test-id='welcome-tour-hint__button-next'
+              {...primaryButton}
+              variant={ButtonRound.variants.Filled}
+            />
           )}
         </S.StepButtons>
       </S.Footer>

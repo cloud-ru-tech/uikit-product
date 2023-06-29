@@ -10,5 +10,13 @@ type StepsProps = {
 function noop() {}
 
 export function Steps({ currentStep, stepsCount }: StepsProps) {
-  return <PaginationSliderDots total={stepsCount} page={currentStep + 1} onChange={noop} className={noPointerEvents} />;
+  return (
+    <PaginationSliderDots
+      data-test-id='welcome-tour-pagination'
+      total={stepsCount}
+      page={currentStep + 1}
+      onChange={noop}
+      className={noPointerEvents}
+    />
+  );
 }
