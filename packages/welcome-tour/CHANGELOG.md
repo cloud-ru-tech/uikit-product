@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2023-06-30)
+
+
+### Features
+
+* **[ONB-783](https://jira.sbercloud.tech/browse/ONB-783):** added data-test-ids for elements in welcome tour ([08023d6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/08023d6290994102823cc3c13d9e6aee4bb7564c))
+
+
+
+
+
 ## 0.3.17 (2023-06-29)
 
 ### Only dependencies have been changed
