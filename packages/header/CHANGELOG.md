@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.16 (2023-07-03)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-dropdown@0.18.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/dropdown/CHANGELOG.md)
+
+
+
+
+
 ## 1.2.15 (2023-06-29)
 
 ### Only dependencies have been changed
