@@ -2,6 +2,7 @@ import { cx } from '@linaria/core';
 import {
   Children,
   cloneElement,
+  Fragment,
   isValidElement,
   PropsWithChildren,
   ReactElement,
@@ -110,11 +111,10 @@ export function DropdownMenu({
               };
 
               return (
-                <>
+                <Fragment key={`menu-item-${menuItem.value}`}>
                   {withTopDivider && <Divider variant={Divider.variants.Secondary} />}
                   <TooltipMenuItemPrivate
                     data-test-option-index={index}
-                    key={`menu-item-${menuItem.value}`}
                     onClick={handlerOnClick}
                     data-disabled={disabled || undefined}
                     data-selected={menuItem.value === value || undefined}
@@ -124,7 +124,7 @@ export function DropdownMenu({
                     {isNameFn ? label() : label}
                   </TooltipMenuItemPrivate>
                   {withBottomDivider && <Divider variant={Divider.variants.Secondary} />}
-                </>
+                </Fragment>
               );
             })}
           {isActionsFn &&
