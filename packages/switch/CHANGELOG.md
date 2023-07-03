@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2023-07-03)
+
+
+### Features
+
+* **[LK-1793](https://jira.sbercloud.tech/browse/LK-1793):** update SwitchRow active zones and add switch tooltip ([92bdda9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/92bdda962fd6c8969429c71a6c9a097fd7f1a3f6))
+
+
+
+
+
 ## 3.1.6 (2023-06-29)
 
 ### Only dependencies have been changed
