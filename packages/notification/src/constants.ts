@@ -12,10 +12,12 @@ export const NOTIFICATION_CONTAINER_DEFAULT_PROPS: Record<NotificationType, Noti
   [NotificationType.Big]: {
     limit: 5,
     position: NotificationContainer.position.BOTTOM_RIGHT,
+    displayCloseAllButton: true,
   },
   [NotificationType.Small]: {
     limit: 2,
     position: NotificationContainer.position.BOTTOM_CENTER,
+    displayCloseAllButton: false,
   },
 };
 
