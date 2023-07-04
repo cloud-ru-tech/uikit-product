@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.2.0 (2023-07-04)
+
+
+### Features
+
+* **[AICDC-11618](https://jira.sbercloud.tech/browse/AICDC-11618):** added close all btn ([25b0e60](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/25b0e603426e520ed672da043286a3ebe7c98497))
+
+
+
+
+
 ## 5.1.31 (2023-06-29)
 
 ### Only dependencies have been changed
