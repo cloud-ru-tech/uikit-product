@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.5 (2023-07-06)
+
+
+### Bug Fixes
+
+* **[LK-1884](https://jira.sbercloud.tech/browse/LK-1884):** add overflow hidden to card content ([ea91fa9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ea91fa988bdde3ca082137bc66abe992857153c8))
+
+
+
+
+
 ## 2.0.4 (2023-07-03)
 
 ### Only dependencies have been changed
