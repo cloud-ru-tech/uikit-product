@@ -122,7 +122,9 @@ function Template({ ...args }: StoryProps) {
         ...el,
         content: {
           ...el.content,
-          title: 'Event type ' + index,
+          title: Boolean(index)
+            ? 'Event type ' + index
+            : `loooooooooooooooooooooooooooooooooooooooooooooooong Event type ${index}`,
           description: Boolean(index) ? el.content.description : <ContentDescription longName />,
         },
         header: {

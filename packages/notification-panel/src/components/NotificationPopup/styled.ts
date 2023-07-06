@@ -28,6 +28,7 @@ export const FloatingWrapper = styled.div<{ strategy: string }>`
   box-shadow: ${SHADOW.LARGE};
   display: flex;
   flex-direction: column;
+  z-index: 1;
 `;
 
 export const HeaderWrapper = styled.div`

@@ -66,13 +66,13 @@ test.page(visit({ open: false, cardsCount: 11 }))(`Hide card notification `, asy
   await t.click(closeButton);
   await t.click(openButton);
 
-  for (const x of [0, 1, 2, 3, 4, 5, 6, 7]) {
+  for (const x of [0, 1, 2, 3, 4, 5, 6]) {
     await t.expect(infiniteScrollWrapper.child(x).find(dataTestIdSelector(notificationCardBadgeId)).exists).notOk();
   }
 
   await t.scroll(wrapper, 0, 1000).wait(200);
 
-  for (const x of [8, 9, 10]) {
+  for (const x of [7, 8, 9, 10]) {
     await t.expect(infiniteScrollWrapper.child(x).find(dataTestIdSelector(notificationCardBadgeId)).exists).ok();
   }
 });

@@ -112,6 +112,7 @@ export const ContentWrapper = styled.div`
 export const ContentLeftSide = styled.div`
   display: flex;
   flex-direction: column;
+  word-break: break-word;
 `;
 
 export const ContentRightSide = styled.div`
@@ -130,8 +131,6 @@ export const ContentTitle = styled.div`
 `;
 
 export const ContentDescription = styled.span`
-  display: inline-block;
-  word-break: break-word;
   ${TEXT_3_STYLES};
   margin-bottom: 10px;
   color: var(${COLORS.content.description});
