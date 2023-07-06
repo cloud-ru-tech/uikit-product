@@ -29,11 +29,13 @@ const ContentDescriptionBold = styled.span`
   font-weight: 600;
 `;
 
-function ContentDescription() {
+function ContentDescription({ longName }: { longName?: boolean }) {
   return (
     <>
       <ContentDescriptionBold>[WorkspaceName]</ContentDescriptionBold> Description of{' '}
-      <ContentDescriptionBold>EventName</ContentDescriptionBold>
+      <ContentDescriptionBold>
+        EventName {longName && 'with looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong name'}
+      </ContentDescriptionBold>
     </>
   );
 }
@@ -121,6 +123,7 @@ function Template({ ...args }: StoryProps) {
         content: {
           ...el.content,
           title: 'Event type ' + index,
+          description: Boolean(index) ? el.content.description : <ContentDescription longName />,
         },
         header: {
           ...el.header,

@@ -85,12 +85,18 @@ export function NotificationPopup({
     onToggle(false);
   };
 
+  const handleTabChange = (tab: Tab) => {
+    setActiveTab(tab);
+    onTabChange?.({ activeTab: tab });
+  };
+
   const { context, reference, floating, strategy } = useFloating({ open, onOpenChange: onToggle });
   const { getReferenceProps, getFloatingProps } = useInteractions([useClick(context), useDismiss(context)]);
 
   useEffect(() => {
     if (!open) {
-      setActiveTab(Tab.All);
+      handleTabChange(Tab.All);
+
       handleReadVisibleCards();
     }
   }, [open]);
@@ -140,10 +146,7 @@ export function NotificationPopup({
                       checked={activeTab === value}
                       variant={Chip.variants.Primary}
                       size={Chip.sizes.Small}
-                      handleChange={() => {
-                        setActiveTab(value);
-                        onTabChange?.({ activeTab: value });
-                      }}
+                      handleChange={() => handleTabChange(value)}
                     />
                   ))}
                 </S.ChipsWrapper>

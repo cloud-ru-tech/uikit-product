@@ -107,6 +107,7 @@ export const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 `;
 
 export const ContentLeftSide = styled.div`
