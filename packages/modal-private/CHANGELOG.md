@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2023-07-06)
+
+
+### Features
+
+* **[AICDC-11609](https://jira.sbercloud.tech/browse/AICDC-11609):** added hideCross props ([c5c193a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c5c193a6b101abcb17625e6cd27461eb05e6a8fb))
+
+
+
+
+
 ## 1.3.27 (2023-06-29)
 
 ### Only dependencies have been changed
