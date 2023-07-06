@@ -18,6 +18,7 @@ export type ContainerProps = PropsWithChildren<
     className?: string;
     variant?: Variant;
     onClose(): void;
+    hideCross?: boolean;
   }>
 >;
 
@@ -28,6 +29,7 @@ export function Container({
   onClose,
   size = Size.Small,
   variant = Variant.Regular,
+  hideCross = false,
   ...rest
 }: ContainerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -53,12 +55,14 @@ export function Container({
     >
       {children}
 
-      <S.CloseButton
-        icon={<CloseInterfaceSVG />}
-        onClick={onClose}
-        tooltip={{ content: textProvider(languageCode, Texts.Close) }}
-        data-test-id='modal-private__close-btn'
-      />
+      {!hideCross && (
+        <S.CloseButton
+          icon={<CloseInterfaceSVG />}
+          onClick={onClose}
+          tooltip={{ content: textProvider(languageCode, Texts.Close) }}
+          data-test-id='modal-private__close-btn'
+        />
+      )}
     </RCModal>
   );
 }
