@@ -107,7 +107,6 @@ export const ContentWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
 `;
 
 export const ContentLeftSide = styled.div`
@@ -131,6 +130,8 @@ export const ContentTitle = styled.div`
 `;
 
 export const ContentDescription = styled.span`
+  display: inline-block;
+  word-break: break-word;
   ${TEXT_3_STYLES};
   margin-bottom: 10px;
   color: var(${COLORS.content.description});
