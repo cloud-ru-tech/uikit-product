@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.7 (2023-07-06)
+
+
+### Bug Fixes
+
+* **[LK-1884](https://jira.sbercloud.tech/browse/LK-1884):** change card content text positioning ([c7c76a2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c7c76a2e3e5f057167573d8d08a57d70ea26c96a))
+
+
+
+
+
 ## 2.0.6 (2023-07-06)
 
 
