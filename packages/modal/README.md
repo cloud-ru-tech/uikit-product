@@ -46,7 +46,7 @@ export type CancelButtonProps = {
   text?: string;
 };
 
-export type ModalProps = WithSupportProps<{
+type DefaultModalProps = {
   onClose(): void;
   isOpen: boolean;
   isLoading?: boolean;
@@ -56,12 +56,26 @@ export type ModalProps = WithSupportProps<{
   cancelButton?: CancelButtonProps;
   additionalButton?: AdditionalButtonProps;
   size?: Size;
-  variant?: Variant;
   align?: Align;
   title: string;
   subtitle?: string;
   titleTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
-}>;
+  /** @warning Use only if available in a Modal with Dropdown, Select, Datepicker, Timepicker. It may be dangerous...
+   */
+  disableScroll?: boolean;
+};
+
+type RegularModalProps = {
+  variant?: Exclude<Variant, Variant.Aggressive>;
+};
+
+type AggressiveModalProps = {
+  variant?: Variant.Aggressive;
+  hideCross?: boolean;
+};
+
+export type ModalProps = WithSupportProps<DefaultModalProps & (RegularModalProps | AggressiveModalProps)>;
+
 ```
 
 [Changelog](./CHANGELOG.md)
