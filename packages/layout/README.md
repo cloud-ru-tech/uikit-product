@@ -1,7 +1,7 @@
 # Info
 
 ## Installation
-`npm i @sbercloud/uikit-product-information-block`
+`npm i @sbercloud/uikit-product-layout`
 
 [Changelog](./CHANGELOG.md)
 

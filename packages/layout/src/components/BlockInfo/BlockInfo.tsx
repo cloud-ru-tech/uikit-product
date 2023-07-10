@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
-import { Divider } from '@sbercloud/uikit-product-divider';
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
+import { InfoRow } from '../InfoRow';
 import * as S from './styled';
 
 export type InfoBlockProps = WithSupportProps<{
+  title?: string;
   groups: {
     title?: ReactNode;
     items: {
@@ -14,36 +15,29 @@ export type InfoBlockProps = WithSupportProps<{
       value: ReactNode;
     }[];
   }[];
-  buttonText: string;
-  onClick(): void;
+  buttonText?: string;
+  onClick?(): void;
   showButton?: boolean;
 }>;
 
-export function InfoBlock({ groups, buttonText, onClick, showButton }: InfoBlockProps) {
+export function BlockInfo({ title, groups, buttonText, onClick, showButton }: InfoBlockProps) {
   return (
     <S.InfoWrapper>
+      <S.H3>{title}</S.H3>
       {groups.map(({ title, items }, groupIdx) => (
-        <div key={groupIdx}>
+        <S.FieldsGroup key={groupIdx}>
           {title && <S.H4>{title}</S.H4>}
 
           <S.Fields>
             {items.map(({ label, value }, itemIdx, self) => {
               const notLast = itemIdx !== self.length - 1;
 
-              return (
-                <S.FieldWrapper key={itemIdx}>
-                  <S.Field>
-                    <S.Label>{label}</S.Label>
-                    <S.Value>{value}</S.Value>
-                  </S.Field>
-                  {notLast && <Divider variant={Divider.variants.Secondary} />}
-                </S.FieldWrapper>
-              );
+              return <InfoRow key={itemIdx} label={label} value={value} bottomDivider={notLast} />;
             })}
           </S.Fields>
-        </div>
+        </S.FieldsGroup>
       ))}
-      {showButton && (
+      {showButton && buttonText && (
         <S.ButtonContainer>
           <Button onClick={onClick} text={buttonText} variant={Button.variants.Filled} />
         </S.ButtonContainer>
