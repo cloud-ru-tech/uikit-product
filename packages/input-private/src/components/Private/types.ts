@@ -1,4 +1,4 @@
-import { ChangeEvent, FocusEventHandler, ReactNode, RefAttributes } from 'react';
+import { ChangeEvent, FocusEventHandler, MouseEventHandler, ReactNode, RefAttributes } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -18,6 +18,7 @@ export type InputPrivateProps = RefAttributes<HTMLInputElement> &
     maxLength?: number;
     onFocus?: FocusEventHandler<HTMLInputElement>;
     onBlur?: FocusEventHandler<HTMLInputElement>;
+    onMouseDown?: MouseEventHandler<HTMLInputElement>;
     prefix?: ReactNode;
     postfix?: ReactNode;
   }>;

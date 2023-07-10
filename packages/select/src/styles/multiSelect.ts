@@ -10,7 +10,7 @@ import { styles as cStyles } from './common';
 
 const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
-export const styles = (size: SelectSizes) => {
+export const styles = (size: SelectSizes, externalError?: string) => {
   const commonStyles = cStyles({
     control: (
       styles: CSSProperties,
@@ -29,9 +29,9 @@ export const styles = (size: SelectSizes) => {
             background: `var(${COLORS_SELECT.DISABLED_BACKGROUND})`,
           }
         : {}),
-      ...(error
+      ...(error || externalError
         ? {
-            border: `1px solid var(${COLORS_SELECT.BORDER_ERROR_COLOR})`,
+            borderColor: `var(${COLORS_SELECT.BORDER_ERROR_COLOR}) !important`,
           }
         : {}),
       boxShadow: 'none !important',
@@ -54,14 +54,18 @@ export const styles = (size: SelectSizes) => {
       minHeight: SIZES_IN_PX[size].minHeight,
       padding: SIZES_IN_PX[size].padding,
     }),
-    menuList: (styles: CSSProperties) => ({
+    menuList: (
+      styles: CSSProperties,
+      { selectProps: { isMenuSearch } }: { selectProps: { isMenuSearch: boolean } },
+    ) => ({
       ...styles,
-      borderRadius: '4px',
+      borderRadius: isMenuSearch ? 0 : 4,
       padding: 0,
     }),
     menu: (styles: CSSProperties) => ({
       ...styles,
-      margin: '0',
+      margin: 0,
+      background: `var(${COLORS_SELECT.BACKGROUND})`,
       boxShadow: SHADOW.MEDIUM,
     }),
   });

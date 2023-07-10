@@ -1,10 +1,12 @@
 import { styled } from '@linaria/react';
 
 import { CircleCancelFilledInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { INFO_BOX_SIZE } from '../../../constants';
+
+const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
 export const ErrorBox = styled.div`
   height: ${INFO_BOX_SIZE}px;
@@ -16,10 +18,10 @@ export const ErrorBox = styled.div`
 `;
 
 export const CircleCancelFilledInterfaceSVGStyled = styled(CircleCancelFilledInterfaceSVG)`
-  fill: var(${EXPORT_VARS.BLACK_ALFA[24]});
+  fill: var(${COLORS_SELECT.DROPDOWN_ICON_COLOR});
 `;
 
 export const Text2Grey = styled.div`
   ${TEXT_2_STYLES};
-  color: var(${EXPORT_VARS.BLACK_ALFA[48]});
+  color: var(${COLORS_SELECT.DROPDOWN_ICON_COLOR});
 `;

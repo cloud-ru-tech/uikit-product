@@ -6,7 +6,7 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { MultiSelect, MultiSelectProps } from '../src/components/MultiSelect';
+import { MultiSelect, MultiSelectProps, MultiSelectSearch } from '../src/components/MultiSelect';
 import { KEYS_TO_BREAK } from '../src/constants';
 import { MultiselectOptionType } from '../src/helpers/types';
 
@@ -49,7 +49,11 @@ const options = [
   },
 ];
 
-function Template({ ...args }: MultiSelectProps) {
+type StoryProps = {
+  searchPreset: keyof MultiSelectSearch;
+} & MultiSelectProps;
+
+function Template({ ...args }: StoryProps) {
   const [inputValue, setInputValue] = useState('');
   const [selectedOptions, setSelectedOptions] = useState<MultiselectOptionType[] | []>([]);
 
@@ -63,6 +67,14 @@ function Template({ ...args }: MultiSelectProps) {
 
   const handleRemoveOption = (option: MultiselectOptionType) => {
     setSelectedOptions(selectedOptions.filter((s: MultiselectOptionType) => s.value !== option?.value));
+  };
+
+  const handleSelectAllOptions = (options: MultiselectOptionType[]) => {
+    setSelectedOptions(options);
+  };
+
+  const handleRemoveAllOptions = () => {
+    setSelectedOptions([]);
   };
 
   const handleInputChange = (value: string) => {
@@ -84,11 +96,26 @@ function Template({ ...args }: MultiSelectProps) {
     }
   };
 
+  const search = args.search || {
+    [args.searchPreset]: {
+      defaultSearch: {
+        onRemoveOption: handleRemoveOption,
+        onSelectOption: handleSelectOption,
+      },
+      inMenuSearch: {
+        onRemoveOption: handleRemoveOption,
+        onSelectOption: handleSelectOption,
+        onRemoveOptions: handleRemoveAllOptions,
+        onSelectOptions: handleSelectAllOptions,
+        collapseOnReaching: 5,
+      },
+    }[args.searchPreset],
+  };
+
   return (
     <MultiSelect
       {...args}
-      onSelectOption={handleSelectOption}
-      onRemoveOption={handleRemoveOption}
+      search={search}
       onBlur={handleBlur}
       onKeyDown={handleKeyDown}
       onInputChange={handleInputChange}
@@ -99,11 +126,23 @@ function Template({ ...args }: MultiSelectProps) {
   );
 }
 
-export const multiSelect: StoryFn<MultiSelectProps> = Template.bind({});
+export const multiSelect: StoryFn<StoryProps> = Template.bind({});
+
+multiSelect.argTypes = {
+  searchPreset: {
+    name: '[Stories]: Select search preset',
+    description: 'Use search* control or these predefined values',
+    options: ['defaultSearch', 'inMenuSearch'],
+    control: {
+      type: 'radio',
+    },
+  },
+};
 
 multiSelect.args = {
   label: 'Label',
   placeholder: 'От 2 до 20 тегов через запятую',
+  searchPreset: 'defaultSearch',
 };
 
 multiSelect.parameters = {

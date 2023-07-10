@@ -4,6 +4,7 @@ export enum SelectActionTypes {
   RemoveValue = 'remove-value',
   SelectOption = 'select-option',
   PopValue = 'pop-value',
+  Reset = 'clear',
 }
 
 export const KEYS_TO_BREAK = [',', 'Enter'];

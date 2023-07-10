@@ -21,6 +21,7 @@ const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivate
       maxLength,
       onFocus,
       onBlur,
+      onMouseDown,
       prefix,
       postfix,
       ...rest
@@ -48,6 +49,7 @@ const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivate
           disabled={disabled}
           onFocus={onFocus}
           onBlur={onBlur}
+          onMouseDown={onMouseDown}
           {...extractDataProps(excludeSupportProps(rest))}
           {...extractSupportProps(rest)}
         />

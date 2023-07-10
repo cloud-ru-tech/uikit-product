@@ -12,7 +12,10 @@ export function MultiValue({ children, removeProps }: MultiValueProps<Multiselec
       color={Tag.colors.Gray}
       size={Tag.sizes.Small}
       value={children as ReactText}
-      onRemoveClick={removeProps.onClick}
+      onRemoveClick={e => {
+        e.stopPropagation();
+        removeProps.onClick(e);
+      }}
     />
   );
 }
