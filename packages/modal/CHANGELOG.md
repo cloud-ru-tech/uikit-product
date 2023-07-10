@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2023-07-10)
+
+
+### Features
+
+* **[LK-1912](https://jira.sbercloud.tech/browse/LK-1912):** allow hide cross on aggressive modal ([5fc7dc5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5fc7dc579d4ff58a3efda28ac515ce62f603ce6f))
+
+
+
+
+
 ## 1.3.30 (2023-07-06)
 
 ### Only dependencies have been changed
