@@ -19,7 +19,7 @@ export function MenuList(props: MenuListComponentProps<MultiselectOptionType, tr
     children,
     getValue,
     options,
-    selectProps: { inputValue = '', isMenuSearch, onChange },
+    selectProps: { inputValue = '', isLoading, isMenuSearch, onChange },
   } = props;
 
   const isAllSelected = getValue().length === options.length;
@@ -40,7 +40,7 @@ export function MenuList(props: MenuListComponentProps<MultiselectOptionType, tr
 
   return (
     <ReactSelectComponents.MenuList {...props}>
-      {isMenuSearch && inputValue.length === 0 && (
+      {!isLoading && isMenuSearch && inputValue.length === 0 && (
         <CustomOptionWithCheckbox onClick={handleSelect}>
           <CheckboxIconPrivate partChecked={isAllSelected} />
           <Label>

@@ -41,18 +41,20 @@ export type MultiSelectProps = {
   onInputChange?(value: string): void;
   error?: string;
   size?: SelectSizes;
-} & Pick<
-  RCSelectNamedProps,
-  | 'className'
-  | 'closeMenuOnScroll'
-  | 'closeMenuOnSelect'
-  | 'id'
-  | 'inputValue'
-  | 'isLoading'
-  | 'maxMenuHeight'
-  | 'placeholder'
-  | 'onBlur'
-  | 'onKeyDown'
+} & Partial<
+  Pick<
+    RCSelectNamedProps,
+    | 'className'
+    | 'closeMenuOnScroll'
+    | 'closeMenuOnSelect'
+    | 'id'
+    | 'inputValue'
+    | 'isLoading'
+    | 'maxMenuHeight'
+    | 'placeholder'
+    | 'onBlur'
+    | 'onKeyDown'
+  >
 > &
   Pick<InputDecoratorPrivateProps, 'label' | 'labelTooltip' | 'optional' | 'hint'>;
 

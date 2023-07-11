@@ -137,12 +137,18 @@ multiSelect.argTypes = {
       type: 'radio',
     },
   },
+  isLoading: {
+    control: {
+      type: 'boolean',
+    },
+  },
 };
 
 multiSelect.args = {
   label: 'Label',
   placeholder: 'От 2 до 20 тегов через запятую',
   searchPreset: 'defaultSearch',
+  isLoading: false,
 };
 
 multiSelect.parameters = {
