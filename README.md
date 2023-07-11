@@ -1,18 +1,18 @@
-# Sbercloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100/coverage.svg)](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100)
+# Cloud uikit [![lerna](https://img.shields.io/badge/maintained%20with-lerna-cc00ff.svg)](https://lerna.js.org/) [![coverage](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100/coverage.svg)](https://git.sbercloud.tech/sbercloud-ui/uikit-product/badges/master/coverage.svg?job=test-coverage-stable&key_text=stable-coverage&&key_width=100)
 
-Sbercloud uikit - библиотека компонентов, в которой каждый компонент это отдельный npm-пакет, со своей версионностью и зависимостями.
+Cloud uikit - библиотека компонентов (бизнес), в которой каждый компонент это отдельный npm-пакет, со своей версионностью и зависимостями.
 
-# Example
+# Storybook
 
-[Storybook [Latest master].](https://uikit.sbercloud.tech/)
+[Storybook [Latest master].](https://frontend.cp.sbercloud.tech/product/)
 
-[Storybook [Poc stand].](http://192.168.67.22:32333/)
+# Snack uikit
+
+[Snack Storybook [Latest master].](https://frontend.cp.sbercloud.tech/snack/)
 
 # Design
 
 [Figma](https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System)
-
-[Notion](https://scpds.notion.site/aa332f333c3b41a5866c46b5d2bdb0c6)
 
 # Browser support
 
@@ -93,22 +93,14 @@ changeTheme(Themes.Purple);
 # Changelog
 
 Change log разбит по пакетам.
-Вы можете посмотреть changelog либо в [Storybook](https://uikit.sbercloud.tech/) или в `package` необходимого пакета
+Вы можете посмотреть changelog либо в [Storybook](https://frontend.cp.sbercloud.tech/product/) или в `package` необходимого пакета
 
 # Questions
 
 Появились вопросы?
-Возможно ответ на ваши вопросы содержится в [Contribution Guide](CONTRIBUTING.md) или в [Issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/15?milestone_title=Idea)
+Возможно ответ на ваши вопросы содержится в [Contribution Guide](CONTRIBUTING.md).
 
-В противном случаи можно создать [новый issue](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/issues/new)
-
-# Issue board
-
-[Backlog](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/15?milestone_title=Idea) - Борда поступивших заявок
-
-[Idea board](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/51?milestone_title=None) - Борда для работы с идеями
-
-[Component status map](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/boards/52?milestone_title=Design) - Актуальный статус компонентов
+В противном случае можно их задать в [ff-support канал](https://mm.sbercloud.tech/default/channels/ff-support)
 
 # Issue Processes
 
@@ -124,11 +116,11 @@ Change log разбит по пакетам.
 Если есть необходимость, всегда можно организовать внеочередной грумминг
 ```
 
-3. После того как Issue пройдет этапы `Grooming` и in `Design`, попадает в `Ready for development` и готово к разработки. Может быть взято любой из команд в работу
+3. После того как Issue пройдет этапы `Grooming` и in `Design`, попадает в `Ready for development` и готово к разработке. Может быть взято любой из команд в работу
 
 # Team Duty
 
-`Core team` - Трифонов Михаил, Ахременко Григорий, Белов Алексей, Козлова Анна
+`Core team` - Трифонов Михаил, Ахременко Григорий, Белов Алексей, Козлова Анна, Хлупин Сергей, Безматерных Дмитрий, Ершов Никита
 
 > Несет ответственность за техническую часть проекта.
 >
@@ -140,15 +132,9 @@ Change log разбит по пакетам.
 >
 > Задачи Review team
 
-`Review team` - Шеховцов Кирилл, Бибин Егор, Авилов Дмитрий
-
-> Определяет визуальную составляющую компоненты
->
-> Определяет функциональность компоненты
-
 ---
 
-`Team lead` - Трифонов Михаил
+`Team lead` - Ахременко Григорий
 
 > Выстраивает процессы разработки.
 >
@@ -156,7 +142,7 @@ Change log разбит по пакетам.
 >
 > Занимается внутренним развитием проекта.
 
-`Design lead` - Ларионова Юлия
+`Design lead` - Малокостов Игорь
 
 > Определяет визуальную составляющую компонентов
 >
