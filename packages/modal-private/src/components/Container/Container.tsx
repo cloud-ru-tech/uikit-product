@@ -1,41 +1,28 @@
 import { cx } from '@linaria/core';
-import { PropsWithChildren } from 'react';
 import RCModal from 'react-modal';
 
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { OverlayElement } from '../../helperComponents';
 import { textProvider, Texts } from '../../helpers';
 import { Size, Variant } from './constants';
 import * as S from './styled';
+import { ContainerProps } from './types';
 import { getClosureProps, getDataTestAttributes } from './utils';
-
-export type ContainerProps = PropsWithChildren<
-  WithSupportProps<{
-    size?: Size;
-    isOpen: boolean;
-    className?: string;
-    variant?: Variant;
-    onClose(): void;
-    hideCross?: boolean;
-  }>
->;
 
 export function Container({
   isOpen,
   className: propsClassName,
   children,
-  onClose,
   size = Size.Small,
   variant = Variant.Regular,
-  hideCross = false,
   ...rest
 }: ContainerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const { shouldCloseOnOverlayClick, shouldCloseOnEsc } = getClosureProps(variant);
-  const handleOnClose = () => shouldCloseOnOverlayClick && onClose();
+  const handleOnClose = () => shouldCloseOnOverlayClick && 'onClose' in rest && rest.onClose();
 
   if (!isOpen) {
     return null;
@@ -47,18 +34,22 @@ export function Container({
       data={{ ...getDataTestAttributes(rest), size }}
       shouldCloseOnEsc={shouldCloseOnEsc}
       className={cx(S.contentClassname, propsClassName)}
-      onRequestClose={onClose}
+      onRequestClose={handleOnClose}
       appElement={document.body}
       overlayElement={(_, content) => (
-        <OverlayElement hasBlur={variant === Variant.Aggressive} content={content} onClose={handleOnClose} />
+        <OverlayElement
+          hasBlur={variant === Variant.Aggressive || variant === Variant.Forced}
+          content={content}
+          onClose={handleOnClose}
+        />
       )}
     >
       {children}
 
-      {!hideCross && (
+      {variant !== Variant.Forced && (
         <S.CloseButton
           icon={<CloseInterfaceSVG />}
-          onClick={onClose}
+          onClick={handleOnClose}
           tooltip={{ content: textProvider(languageCode, Texts.Close) }}
           data-test-id='modal-private__close-btn'
         />

@@ -1,10 +1,32 @@
-import { ModalPrivate, Size, Variant } from '@sbercloud/uikit-product-modal-private';
-import { extractDataTestProps } from '@sbercloud/uikit-product-utils';
+import { ReactNode } from 'react';
+
+import { FooterProps, ModalPrivate, Size, Variant } from '@sbercloud/uikit-product-modal-private';
+import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
+import { extractDataTestProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Align } from './constants';
 import * as S from './styled';
-import { ModalProps } from './types';
 import { getAlignProps } from './utils';
+
+export type ModalProps = WithSupportProps<{
+  onClose(): void;
+  isOpen: boolean;
+  isLoading?: boolean;
+  className?: string;
+  content?: ReactNode;
+  approveButton?: FooterProps['approveButton'];
+  cancelButton?: FooterProps['cancelButton'];
+  additionalButton?: FooterProps['additionalButton'];
+  size?: Size;
+  align?: Align;
+  variant?: Variant;
+  title: string;
+  subtitle?: string;
+  titleTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
+  /** @warning Use only if available in a Modal with Dropdown, Select, Datepicker, Timepicker. It may be dangerous...
+   */
+  disableScroll?: boolean;
+}>;
 
 export function Modal(props: ModalProps) {
   const {
@@ -31,7 +53,6 @@ export function Modal(props: ModalProps) {
   return (
     <ModalPrivate.Container
       isOpen={isOpen}
-      hideCross={variant === Variant.Aggressive && props.hideCross}
       className={className}
       size={size}
       onClose={onClose}

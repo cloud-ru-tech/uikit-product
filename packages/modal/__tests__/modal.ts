@@ -129,8 +129,24 @@ test.page(getPage({ isOpen: true, variant: Variant.Regular }))(
 );
 
 test.page(getPage({ isOpen: true, variant: Variant.Aggressive }))(
-  `Shouldn't close by click on overlay for Aggressive modal`,
+  `Shouldn't close by click on overlay for Aggressive modal and close button found`,
   async t => {
+    const closeBtn = Selector(dataTestIdSelector('modal-private__close-btn'));
+    await t.expect(closeBtn.exists).ok();
+
+    await t
+      .click(Selector(dataTestIdSelector('modal-private__overlay')))
+      .expect(Selector(dataTestIdSelector(TEST_ID)).exists)
+      .ok();
+  },
+);
+
+test.page(getPage({ isOpen: true, variant: Variant.Forced }))(
+  `Shouldn't close by click on overlay for Forced modal and close button not found`,
+  async t => {
+    const closeBtn = Selector(dataTestIdSelector('modal-private__close-btn'));
+    await t.expect(closeBtn.exists).notOk();
+
     await t
       .click(Selector(dataTestIdSelector('modal-private__overlay')))
       .expect(Selector(dataTestIdSelector(TEST_ID)).exists)

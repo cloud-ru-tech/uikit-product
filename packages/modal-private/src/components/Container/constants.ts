@@ -13,4 +13,5 @@ export enum SizeInPx {
 export enum Variant {
   Regular = 'Regular',
   Aggressive = 'Aggressive',
+  Forced = 'Forced',
 }

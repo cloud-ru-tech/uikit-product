@@ -40,6 +40,7 @@ function Template({ ...args }: ModalProps) {
   const [isEx2ModalOpen, setEx2ModalOpen] = useState(false);
   const [isEx3ModalOpen, setEx3ModalOpen] = useState(false);
   const [isEx4ModalOpen, setEx4ModalOpen] = useState(false);
+  const [isEx5ModalOpen, setEx5ModalOpen] = useState(false);
 
   const [value, setValue] = useState<number[]>();
 
@@ -52,6 +53,7 @@ function Template({ ...args }: ModalProps) {
       setEx2ModalOpen(false);
       setEx3ModalOpen(false);
       setEx4ModalOpen(false);
+      setEx5ModalOpen(false);
     }
   };
 
@@ -70,6 +72,7 @@ function Template({ ...args }: ModalProps) {
       <Button onClick={() => setEx2ModalOpen(true)} text='Open Example 2' data-test-id='modal-ex2-button' />
       <Button onClick={() => setEx3ModalOpen(true)} text='Open Example 3' data-test-id='modal-ex3-button' />
       <Button onClick={() => setEx4ModalOpen(true)} text='Open Example 4' data-test-id='modal-ex3-button' />
+      <Button onClick={() => setEx5ModalOpen(true)} text='Open Example 5' data-test-id='modal-ex3-button' />
 
       <Modal {...args} isOpen={isControlledModalOpen} onClose={closeModal} />
 
@@ -175,6 +178,22 @@ function Template({ ...args }: ModalProps) {
           />
         }
         variant={Modal.variants.Aggressive}
+        disableScroll
+      />
+
+      <Modal
+        data-test-id='modal-test-ex5'
+        isOpen={isEx5ModalOpen}
+        title='Удалить элемент'
+        subtitle='После удаления элемента он станет недоступен'
+        approveButton={{
+          onClick: closeModal,
+          alarm: true,
+          text: 'Удалить',
+        }}
+        cancelButton={{ onClick: closeModal, text: 'Отменить' }}
+        onClose={closeModal}
+        variant={Modal.variants.Forced}
         disableScroll
       />
     </Container>

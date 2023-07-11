@@ -10,6 +10,7 @@
 export enum Variant {
   Regular = 'Regular',
   Aggressive = 'Aggressive',
+  Forced = 'Forced'
 }
 
 export enum Size {
@@ -46,7 +47,7 @@ export type CancelButtonProps = {
   text?: string;
 };
 
-type DefaultModalProps = {
+export type ModalProps = WithSupportProps<{
   onClose(): void;
   isOpen: boolean;
   isLoading?: boolean;
@@ -57,25 +58,14 @@ type DefaultModalProps = {
   additionalButton?: AdditionalButtonProps;
   size?: Size;
   align?: Align;
+  variant?: Variant;
   title: string;
   subtitle?: string;
   titleTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
   /** @warning Use only if available in a Modal with Dropdown, Select, Datepicker, Timepicker. It may be dangerous...
    */
   disableScroll?: boolean;
-};
-
-type RegularModalProps = {
-  variant?: Exclude<Variant, Variant.Aggressive>;
-};
-
-type AggressiveModalProps = {
-  variant?: Variant.Aggressive;
-  hideCross?: boolean;
-};
-
-export type ModalProps = WithSupportProps<DefaultModalProps & (RegularModalProps | AggressiveModalProps)>;
-
+}>;
 ```
 
 [Changelog](./CHANGELOG.md)

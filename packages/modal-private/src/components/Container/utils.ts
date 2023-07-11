@@ -11,6 +11,13 @@ export function getClosureProps(variant: Variant) {
       };
     }
 
+    case Variant.Forced: {
+      return {
+        shouldCloseOnOverlayClick: false,
+        shouldCloseOnEsc: false,
+      };
+    }
+
     default: {
       return {
         shouldCloseOnOverlayClick: true,
