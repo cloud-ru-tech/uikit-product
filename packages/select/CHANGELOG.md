@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.29.6 (2023-07-11)
+
+
+### Bug Fixes
+
+* **[DPS-4733](https://jira.sbercloud.tech/browse/DPS-4733):** mark optional props ([626da42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/626da42ace744c6b7907d7e2c37b7e44231acf80))
+
+
+
+
+
 ## 0.29.5 (2023-07-11)
 
 ### Only dependencies have been changed
