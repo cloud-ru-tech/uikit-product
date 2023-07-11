@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.29.7 (2023-07-11)
+
+
+### Bug Fixes
+
+* **FF-0000:** select deps ([4d6bc97](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4d6bc9742c3f481e37c9a2c95a1c00322aef4aa5))
+
+
+
+
+
 ## 0.29.6 (2023-07-11)
 
 
