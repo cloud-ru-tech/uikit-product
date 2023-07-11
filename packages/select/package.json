@@ -29,6 +29,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-avatar": "1.1.36",
     "@sbercloud/uikit-product-button": "5.3.11",
+    "@sbercloud/uikit-product-checkbox": "3.1.25",
     "@sbercloud/uikit-product-divider": "2.0.45",
     "@sbercloud/uikit-product-icons": "5.19.0",
     "@sbercloud/uikit-product-input-decorator-private": "3.0.34",
