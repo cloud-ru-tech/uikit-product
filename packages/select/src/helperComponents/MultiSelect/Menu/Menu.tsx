@@ -8,7 +8,8 @@ import * as S from './styled';
 export function Menu(props: MenuProps<MultiselectOptionType, true>): JSX.Element {
   const {
     children,
-    selectProps: { inputValue = '', isLoading, isMenuSearch, onInputChange, onMenuInputFocus },
+    options,
+    selectProps: { inputValue = '', isMenuSearch, onInputChange, onMenuInputFocus },
   } = props;
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -35,7 +36,7 @@ export function Menu(props: MenuProps<MultiselectOptionType, true>): JSX.Element
   return (
     <ReactSelectComponents.Menu {...props}>
       <>
-        {isMenuSearch && !isLoading && (
+        {isMenuSearch && options.length > 0 && (
           <InputSearch
             ref={inputRef}
             className={S.inputSearchClassName}

@@ -16,7 +16,7 @@ const meta: Meta = {
 };
 export default meta;
 
-const options = [
+const OPTIONS = [
   {
     value: 'telegram',
     label: 'telegram',
@@ -51,6 +51,7 @@ const options = [
 
 type StoryProps = {
   searchPreset: keyof MultiSelectSearch;
+  optionsPreset: 'empty' | 'filled';
 } & MultiSelectProps;
 
 function Template({ ...args }: StoryProps) {
@@ -121,7 +122,7 @@ function Template({ ...args }: StoryProps) {
       onInputChange={handleInputChange}
       value={selectedOptions}
       inputValue={inputValue}
-      options={options}
+      options={args.optionsPreset === 'empty' ? [] : OPTIONS}
     />
   );
 }
@@ -137,6 +138,13 @@ multiSelect.argTypes = {
       type: 'radio',
     },
   },
+  optionsPreset: {
+    name: '[Stories]: Select options preset',
+    options: ['empty', 'filled'],
+    control: {
+      type: 'radio',
+    },
+  },
   isLoading: {
     control: {
       type: 'boolean',
@@ -145,9 +153,10 @@ multiSelect.argTypes = {
 };
 
 multiSelect.args = {
+  optionsPreset: 'filled',
+  searchPreset: 'defaultSearch',
   label: 'Label',
   placeholder: 'От 2 до 20 тегов через запятую',
-  searchPreset: 'defaultSearch',
   isLoading: false,
 };
 
