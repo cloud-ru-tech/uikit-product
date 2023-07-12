@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2023-07-12)
+
+
+### Features
+
+* **[DPS-4572](https://jira.sbercloud.tech/browse/DPS-4572):** add BlockInfo, LabelInfo and InfoRow components ([b226d21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b226d2107c0afa29ea25aa5296e378fa0bfa9e9f))
+
+
+
+
+
 ## 0.2.6 (2023-06-29)
 
 ### Only dependencies have been changed
