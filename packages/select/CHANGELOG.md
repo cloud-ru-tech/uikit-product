@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.29.8 (2023-07-12)
+
+
+### Bug Fixes
+
+* **DPS-0000:** fix on empty list ([850c554](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/850c554983748257fcb5b28bd27dab8736d98a4a))
+
+
+
+
+
 ## 0.29.7 (2023-07-11)
 
 
