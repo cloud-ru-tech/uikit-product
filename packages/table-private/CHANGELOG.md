@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.22.5 (2023-07-18)
+
+
+### Bug Fixes
+
+* **[LK-2123](https://jira.sbercloud.tech/browse/LK-2123):** change border-radius for table ([54aff56](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/54aff564a113205df4fb2a623839cfb9a55d823b))
+
+
+
+
+
 ## 0.22.4 (2023-06-29)
 
 ### Only dependencies have been changed
