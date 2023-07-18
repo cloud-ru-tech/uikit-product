@@ -16,6 +16,7 @@ export type TruncateStringEndProps = WithSupportProps<{
   placement?: TooltipProps['placement'];
   tag: Tag;
   text: string;
+  disableTooltipMaxWidth?: boolean;
 }>;
 
 export function TruncateStringEnd({
@@ -25,6 +26,7 @@ export function TruncateStringEnd({
   tag,
   maxLines = 1,
   placement = Tooltip.placements.Auto,
+  disableTooltipMaxWidth = false,
   ...rest
 }: TruncateStringEndProps) {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -68,6 +70,7 @@ export function TruncateStringEnd({
         placement={placement}
         type={Tooltip.types.Truncated}
         classNameTrigger={cx(className, S.tooltipTriggerClassName)}
+        disableMaxWidth={disableTooltipMaxWidth}
       >
         {textElement}
       </Tooltip>

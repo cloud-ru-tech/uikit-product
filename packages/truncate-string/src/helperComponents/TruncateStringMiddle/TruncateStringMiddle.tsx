@@ -14,6 +14,7 @@ export type TruncateStringMiddleProps = WithSupportProps<{
   placement?: TooltipProps['placement'];
   tag: Tag;
   text: string;
+  disableTooltipMaxWidth?: boolean;
 }>;
 
 export function TruncateStringMiddle({
@@ -22,6 +23,7 @@ export function TruncateStringMiddle({
   hideTooltip,
   tag,
   placement = Tooltip.placements.Auto,
+  disableTooltipMaxWidth = false,
   ...rest
 }: TruncateStringMiddleProps) {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -66,7 +68,12 @@ export function TruncateStringMiddle({
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)}>
       {showTooltip && !hideTooltip ? (
-        <Tooltip content={text} placement={placement} type={Tooltip.types.Truncated}>
+        <Tooltip
+          content={text}
+          placement={placement}
+          type={Tooltip.types.Truncated}
+          disableMaxWidth={disableTooltipMaxWidth}
+        >
           {textElement}
         </Tooltip>
       ) : (

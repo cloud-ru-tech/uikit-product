@@ -16,6 +16,7 @@ import {
   classNameArrow,
   containerClassName,
   containerWithIconClassName,
+  disableContainerMaxWidthClassName,
   IconWrapper,
   Text,
   Title,
@@ -33,6 +34,7 @@ export type TooltipProps = {
   placement?: TooltipPrivateProps['placement'];
   link?: LinkProps;
   trigger?: TooltipPrivateProps['trigger'];
+  disableMaxWidth?: boolean;
 };
 
 export function Tooltip({
@@ -46,6 +48,7 @@ export function Tooltip({
   iconAction,
   type,
   trigger = TriggerTypes.Hover,
+  disableMaxWidth = false,
   ...rest
 }: WithSupportProps<TooltipProps>) {
   return (
@@ -56,7 +59,11 @@ export function Tooltip({
       offset={OFFSET}
       delayShow={DELAY[type]}
       delayHide={100}
-      classNameContainer={cx(containerClassName, Boolean(icon) && containerWithIconClassName)}
+      classNameContainer={cx(
+        containerClassName,
+        Boolean(icon) && containerWithIconClassName,
+        Boolean(disableMaxWidth) && disableContainerMaxWidthClassName,
+      )}
       classNameArrow={classNameArrow}
       classNameTrigger={classNameTrigger}
       tooltip={

@@ -126,6 +126,10 @@ export const containerClassName = css`
   }
 `;
 
+export const disableContainerMaxWidthClassName = css`
+  max-width: none;
+`;
+
 export const containerWithIconClassName = css`
   padding-right: 44px;
 `;

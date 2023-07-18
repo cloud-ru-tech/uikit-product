@@ -116,6 +116,9 @@ tooltip.argTypes = {
     mapping: icons,
     control: { type: 'radio' },
   },
+  disableMaxWidth: {
+    control: { type: 'boolean' },
+  },
 };
 tooltip.parameters = {
   readme: {

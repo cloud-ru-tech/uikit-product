@@ -48,4 +48,8 @@ truncateString.parameters = {
     url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
   },
 };
-truncateString.argTypes = {};
+truncateString.argTypes = {
+  disableTooltipMaxWidth: {
+    control: { type: 'boolean' },
+  },
+};
