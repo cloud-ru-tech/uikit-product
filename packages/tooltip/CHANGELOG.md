@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2023-07-18)
+
+
+### Features
+
+* **[AICE-10198](https://jira.sbercloud.tech/browse/AICE-10198):** add disable tooltip max width prop ([2ad2b32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2ad2b325dd48e1c36380371897fbd546a717b8b8))
+
+
+### BREAKING CHANGES
+
+
+* **[AICE-10198](https://jira.sbercloud.tech/browse/AICE-10198):** remove className prop ([df9140e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df9140e54828cc0c79cc37ea99dd7b671dc31d03))
+
+
+
+
 ## 3.1.3 (2023-06-29)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2023-07-18)
+
+
+### Features
+
+* **[AICE-10198](https://jira.sbercloud.tech/browse/AICE-10198):** add disable tooltip max width prop ([2ad2b32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2ad2b325dd48e1c36380371897fbd546a717b8b8))
+
+
+
+
+
 ## 0.8.3 (2023-06-29)
 
 ### Only dependencies have been changed
@@ -259,7 +270,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-truncate-string@0.6.0...@sbercloud/uikit-product-truncate-string@0.6.1) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-truncate-string
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-tooltip@4.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
 
 # [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-truncate-string@0.5.0...@sbercloud/uikit-product-truncate-string@0.6.0) (2022-12-16)
 
