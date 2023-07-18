@@ -29,7 +29,6 @@ export type TooltipProps = {
   content?: ReactNode;
   icon?: ReactElement;
   iconAction?(): void;
-  className?: string;
   classNameTrigger?: string;
   placement?: TooltipPrivateProps['placement'];
   link?: LinkProps;
@@ -42,7 +41,6 @@ export function Tooltip({
   link,
   children,
   classNameTrigger,
-  className,
   placement = Placements.Top,
   icon,
   iconAction,
@@ -58,7 +56,7 @@ export function Tooltip({
       offset={OFFSET}
       delayShow={DELAY[type]}
       delayHide={100}
-      classNameContainer={cx(className, containerClassName, Boolean(icon) && containerWithIconClassName)}
+      classNameContainer={cx(containerClassName, Boolean(icon) && containerWithIconClassName)}
       classNameArrow={classNameArrow}
       classNameTrigger={classNameTrigger}
       tooltip={
