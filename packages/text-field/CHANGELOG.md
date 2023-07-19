@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.3.30 (2023-07-19)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-input-private@3.1.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
+
+
+
+
+
 ## 3.3.29 (2023-07-18)
 
 ### Only dependencies have been changed

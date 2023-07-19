@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.19 (2023-07-19)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-search@0.2.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/search/CHANGELOG.md)
+
+
+
+
+
 ## 1.2.18 (2023-07-18)
 
 ### Only dependencies have been changed

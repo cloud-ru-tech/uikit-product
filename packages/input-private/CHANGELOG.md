@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.10 (2023-07-19)
+
+
+### Bug Fixes
+
+* **[SVP-6202](https://jira.sbercloud.tech/browse/SVP-6202):** fixed ipMask shifting on char delete and removed fixed ipMask mask length ([f442ae9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f442ae94810b70732efd3dc1f799fe440ff9a2f3))
+
+
+
+
+
 ## 3.1.9 (2023-07-18)
 
 ### Only dependencies have been changed
