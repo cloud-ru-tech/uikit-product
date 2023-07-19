@@ -30,19 +30,12 @@ export const MASKS_CONFIG: Record<Masks, InputMaskOptions> = {
     placeholderChar: '_',
   },
   [Masks.IpV4Address]: {
-    mask: '0[00]{.}0[00]{.}0[00]{.}0[00]',
+    mask: '0[00]{.}`0[00]{.}`0[00]{.}`0[00]',
     placeholderChar: '_',
   },
   [Masks.IpV4AddressWithMask]: {
-    mask: '0[00]{.}0[00]{.}0[00]{.}0[00][{/}[MM]]',
+    mask: '0[00]{.}`0[00]{.}`0[00]{.}`0[00]{/}`0[0]',
     placeholderChar: '_',
-    blocks: {
-      MM: {
-        mask: IMask.MaskedRange,
-        from: 0,
-        to: 32,
-      },
-    },
   },
   [Masks.Date]: {
     mask: IMask.MaskedDate,

@@ -122,10 +122,10 @@ test.page(
 
   await t.expect(input.value).eql('');
   await t.typeText(input, 'Test').expect(input.value).notEql('Test');
-  await t.typeText(input, '10').expect(input.value).eql('10._._._/__');
+  await t.typeText(input, '10').expect(input.value).eql('10._._._/_');
   await t.typeText(input, '.10.0.1/32').expect(input.value).eql('10.10.0.1/32');
 
-  await t.click(clearButton).expect(input.value).eql('_._._._/__');
+  await t.click(clearButton).expect(input.value).eql('_._._._/_');
 });
 
 runCommonTests(
