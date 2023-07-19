@@ -23,6 +23,7 @@ export type AccordionProps = WithSupportProps<{
   variant?: Variant;
   disabled?: boolean;
   hasAnimation?: boolean;
+  isOpenDefault?: boolean;
 }>;
 
 export function Accordion({
@@ -35,11 +36,12 @@ export function Accordion({
   onDelete,
   tooltip,
   hasAnimation = true,
+  isOpenDefault = false,
   ...rest
 }: AccordionProps) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isOpened, setIsOpened] = useState(isOpenDefault);
 
-  const toggleCollapsed = () => setIsCollapsed(prevState => !prevState);
+  const toggleIsOpened = () => setIsOpened(prevState => !prevState);
 
   return (
     <S.AccordionWrapper
@@ -64,13 +66,13 @@ export function Accordion({
           {onDelete && <ButtonIconTransparent disabled={disabled} onClick={onDelete} icon={<DeleteInterfaceSVG />} />}
           <ButtonIconTransparent
             disabled={disabled}
-            onClick={toggleCollapsed}
-            icon={isCollapsed ? <ChevronDownInterfaceSVG /> : <ChevronUpInterfaceSVG />}
+            onClick={toggleIsOpened}
+            icon={isOpened ? <ChevronUpInterfaceSVG /> : <ChevronDownInterfaceSVG />}
           />
         </S.AccordionButtons>
       </S.AccordionCard>
 
-      <S.AccordionContentWrapStyled data-with-animation={hasAnimation || undefined} aria-expanded={!isCollapsed}>
+      <S.AccordionContentWrapStyled data-with-animation={hasAnimation || undefined} aria-expanded={isOpened}>
         <S.AccordionContentStyled>{content}</S.AccordionContentStyled>
       </S.AccordionContentWrapStyled>
     </S.AccordionWrapper>
