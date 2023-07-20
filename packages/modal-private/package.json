@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-modal-private",
   "title": "Modal Private",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "sideEffects": [
     "*.css",
     "*.woff",

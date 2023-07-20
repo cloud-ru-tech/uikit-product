@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.5.0 (2023-07-20)
+
+
+### Features
+
+* **[LK-1912](https://jira.sbercloud.tech/browse/LK-1912):** add forced modal variant ([ffd57da](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ffd57da75c8a1c675e528298850e0b1a8bd333ce))
+
+
+
+
+
 ## 1.4.1 (2023-07-18)
 
 ### Only dependencies have been changed
