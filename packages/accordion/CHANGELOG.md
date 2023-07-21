@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2023-07-21)
+
+
+### BREAKING CHANGES
+
+
+* **DPS-0000:** add isOpenDefault prop ([839b457](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/839b457527c52cd9db50b51b7646e460efe6fd07))
+
+
+
+
 ## 0.2.3 (2023-07-18)
 
 ### Only dependencies have been changed
