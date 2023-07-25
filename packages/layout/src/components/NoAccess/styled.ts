@@ -2,6 +2,7 @@ import { styled } from '@linaria/react';
 
 import { H2_STYLES, H5_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
+import { BlockBasic } from '../BlockBasic';
 import { COLORS, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_DARK_THEME;
@@ -17,10 +18,7 @@ export const Wrapper = styled.div`
   max-width: 1200px;
 `;
 
-export const BaseBlock = styled.div`
-  padding: 80px 0;
-  background: var(${COLORS.NO_ACCESS_PAGE.BACKGROUND});
-  border-radius: 12px;
+export const BaseBlock = styled(BlockBasic)`
   display: flex;
   flex-direction: column;
   flex: 1;

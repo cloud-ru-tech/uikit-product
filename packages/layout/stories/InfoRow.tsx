@@ -2,21 +2,16 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
 import { TextField } from '@sbercloud/uikit-product-text-field';
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { InfoRow, InfoRowProps, LabelInfo } from '../src';
+import { BlockBasic, InfoRow, InfoRowProps, LabelInfo } from '../src';
 
-const Container = styled.div`
+const Container = styled(BlockBasic)`
   display: flex;
   flex-direction: column;
   grid-gap: 20px;
-
-  background-color: var(${EXPORT_VARS.GREY[0]});
-  padding: 24px;
-  border-radius: 16px;
 `;
 
 export default {

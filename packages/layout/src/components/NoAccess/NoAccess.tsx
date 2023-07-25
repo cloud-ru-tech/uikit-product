@@ -1,19 +1,20 @@
 import { LockInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import * as S from './styled';
 
-export type NoAccessProps = {
+export type NoAccessProps = WithSupportProps<{
   serviceName?: string;
-};
+  className?: string;
+}>;
 
-export function NoAccess({ serviceName }: NoAccessProps) {
+export function NoAccess({ serviceName, className, ...rest }: NoAccessProps) {
   const { languageCode } = useLanguage();
 
   return (
-    <S.Wrapper>
+    <S.Wrapper {...extractSupportProps(rest)} className={className}>
       {serviceName && <S.ServiceName>{serviceName}</S.ServiceName>}
       <S.BaseBlock>
         <S.Content>

@@ -1,13 +1,14 @@
 import { ReactElement } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
-import { QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Size } from './constants';
 import * as S from './styled';
 
-export type LabelInfoProps = {
+export type LabelInfoProps = WithSupportProps<{
   label: string;
   tooltip?: {
     content: string;
@@ -19,11 +20,11 @@ export type LabelInfoProps = {
   className?: string;
   icon?: ReactElement;
   size?: Size;
-};
+}>;
 
-export function LabelInfo({ label, tooltip, className, icon, size = Size.Small }: LabelInfoProps) {
+export function LabelInfo({ label, tooltip, className, icon, size = Size.Small, ...rest }: LabelInfoProps) {
   return (
-    <S.LabelWithTooltipContainer data-size={size} className={className}>
+    <S.LabelWithTooltipContainer data-size={size} className={className} {...extractSupportProps(rest)}>
       {label}
       {tooltip && (
         <Tooltip
@@ -39,7 +40,7 @@ export function LabelInfo({ label, tooltip, className, icon, size = Size.Small }
               : undefined
           }
         >
-          <ButtonIcon icon={icon || <QuestionInterfaceSVG />} variant={ButtonIcon.variants.Weak} />
+          <ButtonIcon icon={icon || <QuestionSmallOutlineInterfaceSVG />} variant={ButtonIcon.variants.Weak} />
         </Tooltip>
       )}
     </S.LabelWithTooltipContainer>

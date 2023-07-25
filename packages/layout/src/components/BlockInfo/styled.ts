@@ -1,11 +1,10 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { H3_SEMIBOLD_STYLES, H4_SEMIBOLD_STYLES } from '@sbercloud/uikit-product-typography';
 
-export const InfoWrapper = styled.div`
-  background-color: var(${EXPORT_VARS.GREY[0]});
-  padding: 24px;
+import { BlockBasic } from '../BlockBasic';
+
+export const InfoWrapper = styled(BlockBasic)`
   border-radius: 16px;
 `;
 

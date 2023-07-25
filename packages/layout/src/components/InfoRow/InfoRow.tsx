@@ -1,19 +1,21 @@
 import { ReactNode } from 'react';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import * as S from './styled';
 
-export type InfoRowProps = {
+export type InfoRowProps = WithSupportProps<{
   label: ReactNode;
   value: ReactNode;
   topDivider?: boolean;
   bottomDivider?: boolean;
-};
+  className?: string;
+}>;
 
-export function InfoRow({ label, value, topDivider = false, bottomDivider = false }: InfoRowProps) {
+export function InfoRow({ label, value, topDivider = false, bottomDivider = false, className, ...rest }: InfoRowProps) {
   return (
-    <S.FieldWrapper>
+    <S.FieldWrapper {...extractSupportProps(rest)} className={className}>
       {topDivider && <Divider variant={Divider.variants.Secondary} />}
       <S.Field>
         <S.Label>{label}</S.Label>
