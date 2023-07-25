@@ -1,8 +1,8 @@
-import { Button } from '@sbercloud/uikit-product-button';
 import { MailInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { Link } from '@sbercloud/uikit-product-link';
-import { Tag } from '@sbercloud/uikit-product-tag';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { ButtonFilled, ButtonOutline } from '@snack-ui/button';
+import { Link } from '@snack-ui/link';
+import { Tag } from '@snack-ui/tag';
 
 import { textProvider, Texts } from '../helpers/texts-provider';
 import {
@@ -13,6 +13,7 @@ import {
   LogoVariant,
 } from './constants';
 import * as S from './styled';
+import styles from './styles.module.scss';
 import { COLORS } from './themes';
 
 export type ErrorPageProps = WithSupportProps<{
@@ -49,7 +50,12 @@ export function ErrorPage({
             {textProvider(languageCode, content.title)}
 
             {content.statusCode && (
-              <S.StatusCode color={Tag.colors.Gray} size={Tag.sizes.Medium} value={content.statusCode} />
+              <Tag
+                className={styles.statusCode}
+                appearance={Tag.appearances.Neutral}
+                size={Tag.sizes.S}
+                label={String(content.statusCode)}
+              />
             )}
           </S.Title>
 
@@ -58,11 +64,17 @@ export function ErrorPage({
 
             <S.ActionLinks>
               {hasMainPageLink && (
-                <Link href={mainPageUrl} target={'_self'} text={textProvider(languageCode, Texts.MainPageLink)} />
+                <Link
+                  size={Link.sizes.M}
+                  href={mainPageUrl}
+                  target={'_self'}
+                  text={textProvider(languageCode, Texts.MainPageLink)}
+                />
               )}
 
               {hasBackLink && (
                 <Link
+                  size={Link.sizes.M}
                   onClick={() => window.history.back()}
                   target={'_self'}
                   text={textProvider(languageCode, Texts.BackLink)}
@@ -74,19 +86,19 @@ export function ErrorPage({
 
         <S.ButtonContainer>
           {onSupportCenterClick && (
-            <Button
+            <ButtonOutline
+              size={ButtonOutline.sizes.M}
               className={S.buttonClassName}
-              variant={Button.variants.Outline}
-              text={textProvider(languageCode, Texts.SupportCenterButton)}
+              label={textProvider(languageCode, Texts.SupportCenterButton)}
               onClick={onSupportCenterClick}
               icon={<MailInterfaceSVG />}
             />
           )}
 
-          <Button
+          <ButtonFilled
+            size={ButtonFilled.sizes.M}
             className={S.buttonClassName}
-            variant={Button.variants.Filled}
-            text={textProvider(languageCode, button.text)}
+            label={textProvider(languageCode, button.text)}
             href={button.href}
             target={button.href && '_self'}
             onClick={button.onClick}

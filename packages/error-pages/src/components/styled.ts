@@ -1,22 +1,14 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
+import { BlockBasic } from '@sbercloud/uikit-product-layout';
 import { PredefinedCloudLogo, PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
-import { Tag } from '@sbercloud/uikit-product-tag';
 import { H1_STYLES, H2_STYLES, TEXT_1_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 import { CSS_BREAKPOINTS } from '@sbercloud/uikit-product-utils';
 
-import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
-
-PURPLE_THEME;
-PURPLE_DARK_THEME;
-GREEN_THEME;
-GREEN_DARK_THEME;
-
 const GEAR_WHEEL_ROTATION_PERIOD = 10;
 
-export const Wrapper = styled.div`
-  background-color: var(${COLORS.background});
+export const Wrapper = styled(BlockBasic)`
   height: 100%;
   border-radius: 8px;
   box-sizing: border-box;
@@ -65,11 +57,6 @@ export const Title = styled.h1`
   }
 `;
 
-export const StatusCode = styled(Tag)`
-  vertical-align: top;
-  margin-left: 8px;
-`;
-
 export const ActionWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -94,6 +81,10 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   gap: 8px;
+
+  * > path {
+    fill: currentColor;
+  }
 
   @media ${CSS_BREAKPOINTS.mobile} {
     flex-direction: column;
