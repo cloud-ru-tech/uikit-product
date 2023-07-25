@@ -29,18 +29,25 @@ export const COLORS = {
   },
 };
 
+// Unique colors for the new Cloud logo
+const CLOUD_ICON_COLOR = '#00D97B';
+const CLOUD_TEXT_COLOR = {
+  light: '#222',
+  dark: '#e7e7e7',
+};
+
 export const PURPLE_THEME = css`
   :global() {
     body[data-theme='${Themes.Purple}'] {
       ${COLORS.fill.icon.onDefault.MLSpace.text}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.fill.icon.onDefault.MLSpace.abbr}: var(${EXPORT_VARS.PURPLE[100]});
-      ${COLORS.fill.icon.onDefault.Cloud.text}: var(${EXPORT_VARS.BLUE_GREY[90]});
-      ${COLORS.fill.icon.onDefault.Cloud.icon}: var(${EXPORT_VARS.GREEN[100]});
+      ${COLORS.fill.icon.onDefault.Cloud.text}: ${CLOUD_TEXT_COLOR.light};
+      ${COLORS.fill.icon.onDefault.Cloud.icon}: ${CLOUD_ICON_COLOR};
 
       ${COLORS.fill.icon.onAccent.MLSpace.text}: var(${EXPORT_VARS.GREY[0]});
       ${COLORS.fill.icon.onAccent.MLSpace.abbr}: var(${EXPORT_VARS.PURPLE[50]});
-      ${COLORS.fill.icon.onAccent.Cloud.text}: var(${EXPORT_VARS.GREY[0]});
-      ${COLORS.fill.icon.onAccent.Cloud.icon}: var(${EXPORT_VARS.GREEN[100]});
+      ${COLORS.fill.icon.onAccent.Cloud.text}: ${CLOUD_TEXT_COLOR.dark};
+      ${COLORS.fill.icon.onAccent.Cloud.icon}: ${CLOUD_ICON_COLOR};
     }
   }
 `;
@@ -50,13 +57,13 @@ export const PURPLE_DARK_THEME = css`
     body[data-theme='${Themes.PurpleDark}'] {
       ${COLORS.fill.icon.onDefault.MLSpace.text}: var(${EXPORT_VARS.GREY[0]});
       ${COLORS.fill.icon.onDefault.MLSpace.abbr}: var(${EXPORT_VARS.PURPLE[50]});
-      ${COLORS.fill.icon.onDefault.Cloud.text}: var(${EXPORT_VARS.GREY[0]});
-      ${COLORS.fill.icon.onDefault.Cloud.icon}: var(${EXPORT_VARS.GREEN[100]});
+      ${COLORS.fill.icon.onDefault.Cloud.text}: ${CLOUD_TEXT_COLOR.dark};
+      ${COLORS.fill.icon.onDefault.Cloud.icon}: ${CLOUD_ICON_COLOR};
 
       ${COLORS.fill.icon.onAccent.MLSpace.text}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.fill.icon.onAccent.MLSpace.abbr}: var(${EXPORT_VARS.PURPLE[100]});
-      ${COLORS.fill.icon.onAccent.Cloud.text}: var(${EXPORT_VARS.BLUE_GREY[90]});
-      ${COLORS.fill.icon.onAccent.Cloud.icon}: var(${EXPORT_VARS.GREEN[100]});
+      ${COLORS.fill.icon.onAccent.Cloud.text}: ${CLOUD_TEXT_COLOR.light};
+      ${COLORS.fill.icon.onAccent.Cloud.icon}: ${CLOUD_ICON_COLOR};
     }
   }
 `;
@@ -66,13 +73,13 @@ export const GREEN_THEME = css`
     body[data-theme='${Themes.Green}'] {
       ${COLORS.fill.icon.onDefault.MLSpace.text}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.fill.icon.onDefault.MLSpace.abbr}: var(${EXPORT_VARS.PURPLE[100]});
-      ${COLORS.fill.icon.onDefault.Cloud.text}: var(${EXPORT_VARS.BLUE_GREY[90]});
-      ${COLORS.fill.icon.onDefault.Cloud.icon}: var(${EXPORT_VARS.GREEN[100]});
+      ${COLORS.fill.icon.onDefault.Cloud.text}: ${CLOUD_TEXT_COLOR.light};
+      ${COLORS.fill.icon.onDefault.Cloud.icon}: ${CLOUD_ICON_COLOR};
 
       ${COLORS.fill.icon.onAccent.MLSpace.text}: var(${EXPORT_VARS.GREY[0]});
       ${COLORS.fill.icon.onAccent.MLSpace.abbr}: var(${EXPORT_VARS.PURPLE[50]});
-      ${COLORS.fill.icon.onAccent.Cloud.text}: var(${EXPORT_VARS.GREY[0]});
-      ${COLORS.fill.icon.onAccent.Cloud.icon}: var(${EXPORT_VARS.GREEN[100]});
+      ${COLORS.fill.icon.onAccent.Cloud.text}: ${CLOUD_TEXT_COLOR.dark};
+      ${COLORS.fill.icon.onAccent.Cloud.icon}: ${CLOUD_ICON_COLOR};
     }
   }
 `;
@@ -82,13 +89,13 @@ export const GREEN_DARK_THEME = css`
     body[data-theme='${Themes.GreenDark}'] {
       ${COLORS.fill.icon.onDefault.MLSpace.text}: var(${EXPORT_VARS.GREY[0]});
       ${COLORS.fill.icon.onDefault.MLSpace.abbr}: var(${EXPORT_VARS.PURPLE[50]});
-      ${COLORS.fill.icon.onDefault.Cloud.text}: var(${EXPORT_VARS.GREY[0]});
-      ${COLORS.fill.icon.onDefault.Cloud.icon}: var(${EXPORT_VARS.GREEN[100]});
+      ${COLORS.fill.icon.onDefault.Cloud.text}: ${CLOUD_TEXT_COLOR.dark};
+      ${COLORS.fill.icon.onDefault.Cloud.icon}: ${CLOUD_ICON_COLOR};
 
       ${COLORS.fill.icon.onAccent.MLSpace.text}: var(${EXPORT_VARS.BLUE_GREY[90]});
       ${COLORS.fill.icon.onAccent.MLSpace.abbr}: var(${EXPORT_VARS.PURPLE[100]});
-      ${COLORS.fill.icon.onAccent.Cloud.text}: var(${EXPORT_VARS.BLUE_GREY[90]});
-      ${COLORS.fill.icon.onAccent.Cloud.icon}: var(${EXPORT_VARS.GREEN[100]});
+      ${COLORS.fill.icon.onAccent.Cloud.text}: ${CLOUD_TEXT_COLOR.light};
+      ${COLORS.fill.icon.onAccent.Cloud.icon}: ${CLOUD_ICON_COLOR};
     }
   }
 `;
