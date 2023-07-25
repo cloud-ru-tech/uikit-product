@@ -22,6 +22,7 @@ export function Container({
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const { shouldCloseOnOverlayClick, shouldCloseOnEsc } = getClosureProps(variant);
+
   const handleOnClose = () => shouldCloseOnOverlayClick && 'onClose' in rest && rest.onClose();
 
   if (!isOpen) {
@@ -49,7 +50,7 @@ export function Container({
       {variant !== Variant.Forced && (
         <S.CloseButton
           icon={<CloseInterfaceSVG />}
-          onClick={handleOnClose}
+          onClick={'onClose' in rest ? rest.onClose : undefined}
           tooltip={{ content: textProvider(languageCode, Texts.Close) }}
           data-test-id='modal-private__close-btn'
         />
