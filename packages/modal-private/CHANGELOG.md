@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.1 (2023-07-26)
+
+
+### Bug Fixes
+
+* **LK-0000:** cross click on agressive modal ([df69a51](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df69a51de862ba2404dad328592c6d525f101955))
+
+
+
+
+
 # 1.5.0 (2023-07-20)
 
 
