@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2023-07-26)
+
+
+### Features
+
+* **[FF-2638](https://jira.sbercloud.tech/browse/FF-2638):** add BlockBasic ([049f1b3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/049f1b3e3b03cd7ca4889661829abc7b500f53a9))
+
+
+
+
+
 ## 0.3.1 (2023-07-18)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.19.1 (2023-07-26)
+
+
+### Bug Fixes
+
+* **[FF-2638](https://jira.sbercloud.tech/browse/FF-2638):** dark theme cloud logo ([2da4953](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2da4953a4b81f6d695e461d2a621c1680f5cb634))
+
+
+
+
+
 # 5.19.0 (2023-06-29)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2023-07-26)
+
+
+### Features
+
+* **[FF-2146](https://jira.sbercloud.tech/browse/FF-2146):** build on tokens & snack-ui ([4530bb4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4530bb46bcf901de49fd9ac75a2aa0d7a2bd46e0))
+
+
+
+
+
 ## 0.7.24 (2023-07-18)
 
 ### Only dependencies have been changed
@@ -369,7 +380,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.6.5 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-error-pages
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.19.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-layout@0.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/layout/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
 
 ## 0.6.4 (2023-01-25)
 

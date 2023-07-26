@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.5 (2023-07-26)
+
+
+### Bug Fixes
+
+* **[FF-2638](https://jira.sbercloud.tech/browse/FF-2638):** dark theme cloud logo ([2da4953](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2da4953a4b81f6d695e461d2a621c1680f5cb634))
+
+
+
+
+
 ## 1.2.4 (2023-06-29)
 
 ### Only dependencies have been changed
@@ -241,7 +252,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.6.0...@sbercloud/uikit-product-predefined-icons-private@0.6.1) (2022-11-17)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.19.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 # [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.5.3...@sbercloud/uikit-product-predefined-icons-private@0.6.0) (2022-10-19)
 

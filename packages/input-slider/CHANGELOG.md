@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.5 (2023-07-26)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-input-decorator-private@3.0.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-decorator-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-input-private@3.1.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@4.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+
+
+
+
+
 ## 1.4.4 (2023-07-19)
 
 ### Only dependencies have been changed
