@@ -7,7 +7,7 @@ import { LabelInfo, LabelInfoProps } from '../src';
 import { Size } from '../src/components/LabelInfo/constants';
 
 export default {
-  title: 'Not stable/Layout/BlockInfo/LabelInfo',
+  title: 'Not stable/Layout/InfoGroup/LabelInfo',
   component: LabelInfo,
 } as Meta;
 

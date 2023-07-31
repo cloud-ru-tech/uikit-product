@@ -18,6 +18,7 @@ export const AccordionWrapper = styled.div`
   border-radius: 8px;
 
   &[data-variant='${Variant.Primary}'] {
+    border-radius: 12px;
     &:hover {
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
       transition: box-shadow 0.2s ease-in;

@@ -5,7 +5,7 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 
 import * as S from './styled';
 
-export type InfoRowProps = WithSupportProps<{
+export type InfoStrokeProps = WithSupportProps<{
   label: ReactNode;
   value: ReactNode;
   topDivider?: boolean;
@@ -13,7 +13,14 @@ export type InfoRowProps = WithSupportProps<{
   className?: string;
 }>;
 
-export function InfoRow({ label, value, topDivider = false, bottomDivider = false, className, ...rest }: InfoRowProps) {
+export function InfoStroke({
+  label,
+  value,
+  topDivider = false,
+  bottomDivider = false,
+  className,
+  ...rest
+}: InfoStrokeProps) {
   return (
     <S.FieldWrapper {...extractSupportProps(rest)} className={className}>
       {topDivider && <Divider variant={Divider.variants.Secondary} />}

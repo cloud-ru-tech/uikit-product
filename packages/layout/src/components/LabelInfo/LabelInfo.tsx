@@ -25,24 +25,26 @@ export type LabelInfoProps = WithSupportProps<{
 export function LabelInfo({ label, tooltip, className, icon, size = Size.Small, ...rest }: LabelInfoProps) {
   return (
     <S.LabelWithTooltipContainer data-size={size} className={className} {...extractSupportProps(rest)}>
-      {label}
-      {tooltip && (
-        <Tooltip
-          type={Tooltip.types.Instant}
-          content={tooltip.content}
-          link={
-            tooltip.link
-              ? {
-                  href: tooltip.link.href,
-                  text: tooltip.link.text,
-                  target: '_blank',
-                }
-              : undefined
-          }
-        >
-          <ButtonIcon icon={icon || <QuestionSmallOutlineInterfaceSVG />} variant={ButtonIcon.variants.Weak} />
-        </Tooltip>
-      )}
+      {label}&nbsp;
+      <S.LabelWithTooltipIcon>
+        {tooltip && (
+          <Tooltip
+            type={Tooltip.types.Instant}
+            content={tooltip.content}
+            link={
+              tooltip.link
+                ? {
+                    href: tooltip.link.href,
+                    text: tooltip.link.text,
+                    target: '_blank',
+                  }
+                : undefined
+            }
+          >
+            <ButtonIcon icon={icon || <QuestionSmallOutlineInterfaceSVG />} variant={ButtonIcon.variants.Weak} />
+          </Tooltip>
+        )}
+      </S.LabelWithTooltipIcon>
     </S.LabelWithTooltipContainer>
   );
 }

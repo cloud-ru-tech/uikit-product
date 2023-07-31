@@ -1,5 +1,5 @@
 export * from './BlockBasic';
-export * from './BlockInfo';
-export * from './InfoRow';
+export * from './InfoGroup';
+export * from './InfoStroke';
 export * from './LabelInfo';
 export * from './NoAccess';
