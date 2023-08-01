@@ -1,5 +1,8 @@
 import { css } from '@linaria/core';
 
+import { SHADOW } from '@sbercloud/uikit-product-utils';
+
 export const popoverClassName = css`
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: ${SHADOW.MEDIUM};
+  border-radius: 8px;
 `;
