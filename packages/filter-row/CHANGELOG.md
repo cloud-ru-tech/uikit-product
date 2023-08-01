@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.14 (2023-08-01)
+
+
+### Bug Fixes
+
+* **[SVP-5107](https://jira.sbercloud.tech/browse/SVP-5107):** calendar styles ([0d5d9fb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0d5d9fbaf867d02121d22066e076d3b4d2221a9e))
+
+
+
+
+
 ## 0.2.13 (2023-07-26)
 
 ### Only dependencies have been changed
