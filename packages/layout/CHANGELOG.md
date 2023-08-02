@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2023-08-02)
+
+
+### BREAKING CHANGES
+
+
+* **[DPS-5312](https://jira.sbercloud.tech/browse/DPS-5312):** changes for accordion and InfoGroup ([bb8698b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bb8698b0502d426fdac990e6064b20055d14e702))
+
+
+
+
 # 0.4.0 (2023-07-26)
 
 

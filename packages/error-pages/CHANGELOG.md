@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.1 (2023-08-02)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-layout@0.5.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/layout/CHANGELOG.md)
+
+
+
+
+
 # 0.8.0 (2023-07-26)
 
 
