@@ -80,8 +80,10 @@ export function Accordion({
         </S.AccordionButtons>
       </S.AccordionCard>
 
-      <S.AccordionContentWrapStyled data-with-animation={hasAnimation || undefined} aria-expanded={isOpened}>
-        <S.AccordionContentStyled>{content}</S.AccordionContentStyled>
+      <S.AccordionContentWrapStyled data-with-animation={hasAnimation || undefined} aria-hidden={!isOpened}>
+        <div>
+          <S.AccordionContentStyled>{content}</S.AccordionContentStyled>
+        </div>
       </S.AccordionContentWrapStyled>
     </S.AccordionWrapper>
   );

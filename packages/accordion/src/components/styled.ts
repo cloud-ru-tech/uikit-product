@@ -75,20 +75,19 @@ export const AccordionButtons = styled.div`
 `;
 
 export const AccordionContentWrapStyled = styled.div`
-  &[aria-expanded='true'] {
-    max-height: 500px;
-    overflow: auto;
-  }
-  &[aria-expanded='false'] {
-    max-height: 0;
-    overflow: hidden;
+  display: grid;
+  grid-template-rows: 0fr;
+
+  &[data-with-animation='true'] {
+    transition: grid-template-rows 400ms;
   }
 
-  &[data-with-animation][aria-expanded='true'] {
-    transition: max-height 0.5s ease-in;
+  &[aria-hidden='false'] {
+    grid-template-rows: 1fr;
   }
-  &[data-with-animation][aria-expanded='false'] {
-    transition: max-height 0.2s ease-out;
+
+  & > div {
+    overflow: hidden;
   }
 `;
 

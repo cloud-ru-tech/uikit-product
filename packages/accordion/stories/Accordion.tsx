@@ -1,3 +1,4 @@
+import { styled } from '@linaria/react';
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
@@ -15,13 +16,30 @@ export default meta;
 
 type StoryProps = {
   mode: 'controlled' | 'uncontrolled';
+  contentLines: number;
 } & AccordionProps;
 
-const Template = ({ mode, ...rest }: StoryProps) => {
+const AccordionContentStyled = styled.div`
+  span + span {
+    display: inline-block;
+    padding-top: 32px;
+  }
+`;
+
+const AccordionContent = ({ content, contentLines }: Pick<StoryProps, 'content' | 'contentLines'>) => (
+  <AccordionContentStyled>
+    {Array.from({ length: contentLines }, (_, idx) => `${idx + 1}. ${content}`).map(line => (
+      <span key={line}>{line}</span>
+    ))}
+  </AccordionContentStyled>
+);
+
+const Template = ({ mode, content, contentLines, ...rest }: StoryProps) => {
   const [isOpenControlled, toggleIsOpenControlled] = useState(true);
 
   const props: AccordionProps = {
     ...rest,
+    content: <AccordionContent content={content} contentLines={contentLines} />,
     ...(mode === 'controlled' && {
       isOpen: isOpenControlled,
       onChange: prev => {
@@ -38,6 +56,7 @@ export const accordion: StoryFn<StoryProps> = Template.bind({});
 
 accordion.args = {
   mode: 'uncontrolled',
+  contentLines: 1,
   header: 'Accordion Header',
   subheader: 'Accordion Subheader',
   content:
@@ -54,6 +73,14 @@ accordion.argTypes = {
     options: ['controlled', 'uncontrolled'],
     control: {
       type: 'radio',
+    },
+  },
+  contentLines: {
+    name: '[Stories]: Content',
+    description: 'The component adjusts to its content size. You can change it here',
+    control: {
+      type: 'number',
+      min: 1,
     },
   },
 };
