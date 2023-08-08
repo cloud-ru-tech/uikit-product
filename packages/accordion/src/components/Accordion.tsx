@@ -17,13 +17,15 @@ export type AccordionProps = WithSupportProps<{
   header: string;
   content: ReactNode;
   subheader?: string;
+  isOpenDefault?: boolean;
+  isOpen?: boolean;
+  onChange?: (currentState: boolean) => void;
   onDelete?: VoidFunction;
   className?: string;
   tooltip?: string;
   variant?: Variant;
   disabled?: boolean;
   hasAnimation?: boolean;
-  isOpenDefault?: boolean;
 }>;
 
 export function Accordion({
@@ -33,15 +35,21 @@ export function Accordion({
   variant = Variant.Primary,
   className,
   disabled = false,
+  isOpen,
+  onChange,
   onDelete,
   tooltip,
   hasAnimation = true,
   isOpenDefault = false,
   ...rest
 }: AccordionProps) {
-  const [isOpened, setIsOpened] = useState(isOpenDefault);
+  const [isOpenInternal, setIsOpenInternal] = useState(isOpenDefault);
+  const isOpened = isOpen ?? isOpenInternal;
 
-  const toggleIsOpened = () => setIsOpened(prevState => !prevState);
+  const toggleIsOpened = () => {
+    const isControlled = isOpen !== undefined && onChange !== undefined;
+    return isControlled ? onChange(isOpened) : setIsOpenInternal(prev => !prev);
+  };
 
   return (
     <S.AccordionWrapper
