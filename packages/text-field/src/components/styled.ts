@@ -38,6 +38,7 @@ export const Container = styled.div`
   min-height: 36px;
 
   &[data-size=${Size.Large}] {
+    min-height: 44px;
     padding: 8px 4px 8px 12px;
   }
 `;
