@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.3.32 (2023-08-10)
+
+
+### Bug Fixes
+
+* **[FF-2919](https://jira.sbercloud.tech/browse/FF-2919):** TextField large without icons height fixed ([334c78e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/334c78eaf19d1ddb809174d967a3036b6f5990cc))
+
+
+
+
+
 ## 3.3.31 (2023-07-26)
 
 ### Only dependencies have been changed
