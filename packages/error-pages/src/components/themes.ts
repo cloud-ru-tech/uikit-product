@@ -1,4 +1,4 @@
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@sbercloud/figma-tokens';
 
 export const COLORS = {
   svgExclamationMark: themeVars.sys.primary.accentDefault,
