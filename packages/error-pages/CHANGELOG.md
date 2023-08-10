@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.2 (2023-08-10)
+
+
+### Bug Fixes
+
+* **[FF-2926](https://jira.sbercloud.tech/browse/FF-2926):** Added tokens package for Error Pages component ([4139306](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4139306214fcaa2f24fdbe82e0654f2d18cfd451))
+
+
+
+
+
 ## 0.8.1 (2023-08-02)
 
 ### Only dependencies have been changed
