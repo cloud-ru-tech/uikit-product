@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2023-08-10)
+
+
+### Features
+
+* **[DPS-5590](https://jira.sbercloud.tech/browse/DPS-5590):** add content size adjustment ([64a1890](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/64a1890f870dc22ab6181eaa4aed4964339a85cb))
+* **[DPS-5590](https://jira.sbercloud.tech/browse/DPS-5590):** add controlled mode ([7cd870d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7cd870daa2639c24e563255def84dc7a53b9a647))
+
+
+
+
+
 # 0.4.0 (2023-08-02)
 
 
