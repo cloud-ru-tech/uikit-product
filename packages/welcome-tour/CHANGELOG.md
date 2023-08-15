@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.3 (2023-08-15)
+
+
+### Bug Fixes
+
+* **[ONB-929](https://jira.sbercloud.tech/browse/ONB-929):** changed data-test-id for close button ([a50bd1c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a50bd1c57fbcfa8359467dd4cdd5d0f6352bd606))
+
+
+
+
+
 ## 0.4.2 (2023-07-26)
 
 ### Only dependencies have been changed
