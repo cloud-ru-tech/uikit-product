@@ -40,7 +40,7 @@ export function Hint({
       <S.HeadingContainer>
         <S.Heading data-test-id='welcome-tour-hint__title'>{step.title}</S.Heading>
         <ButtonIcon
-          data-test-id='welcome-tour-hint__button-close'
+          data-test-id='welcome-tour-hint__icon-close'
           {...skipProps}
           variant={ButtonIcon.variants.Strong}
           icon={<CloseInterfaceSVG />}
