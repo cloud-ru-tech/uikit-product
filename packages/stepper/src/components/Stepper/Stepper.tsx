@@ -16,8 +16,8 @@ export function Stepper({ steps, className, ...rest }: WithSupportProps<StepperP
   const { innerSteps, setInnerSteps } = useInnerContextProvider();
 
   useEffect(() => {
-    setInnerSteps(steps.map(step => ({ ...step, isFilled: false, hasError: false })));
-  }, [setInnerSteps, steps]);
+    setInnerSteps(steps.map((step, idx) => ({ ...step, isFilled: idx < currentStepIndex, hasError: false })));
+  }, [currentStepIndex, setInnerSteps, steps]);
 
   const fillRowLeftPosition = useMemo(() => {
     const stepsAmount = steps.length - 1;

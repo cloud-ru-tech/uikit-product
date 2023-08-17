@@ -25,13 +25,14 @@ const StepperContextProvider = createContext<StepperContext>({
 
 export type ContextProps = {
   stepsCount: number;
+  startStepIndex?: number;
   children: ReactNode;
 };
 
 export const useOuterContextProvider = () => useContext(StepperContextProvider);
 
-export function OuterContextProvider({ stepsCount, children }: ContextProps) {
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+export function OuterContextProvider({ stepsCount, startStepIndex = 0, children }: ContextProps) {
+  const [currentStepIndex, setCurrentStepIndex] = useState(startStepIndex);
   const [validateCurrentStep, setValidateCurrentStep] = useState<(step: number) => boolean>(() => () => true);
   const [clearErrors, setClearErrors] = useState<() => void>(() => () => undefined);
   const [handleStepClick, setHandleStepClick] = useState<(stepIndex: number) => void>(() => () => undefined);

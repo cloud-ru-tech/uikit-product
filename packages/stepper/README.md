@@ -24,6 +24,7 @@ Stepper
 ```typescript
 type ContextProps = {
    stepsCount: number;
+   startStepIndex?: number;
    children: ReactNode;
 };
 
