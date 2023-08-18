@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2023-08-18)
+
+
+### Features
+
+* **[SVP-4747](https://jira.sbercloud.tech/browse/SVP-4747):** add initial step prop ([9ff34b7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9ff34b7cdfb147708f6006b3b89f56664f2d6e30))
+
+
+
+
+
 ## 1.1.31 (2023-07-26)
 
 ### Only dependencies have been changed
