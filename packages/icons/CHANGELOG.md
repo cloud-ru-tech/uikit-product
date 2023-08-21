@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.20.0 (2023-08-21)
+
+
+### Features
+
+* **[DPS-5880](https://jira.sbercloud.tech/browse/DPS-5880):** added icons Mongo&Redis services ([3132e1f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3132e1fa9c2002d4984762c64afe3ee9b7816ba6))
+
+
+
+
+
 ## 5.19.1 (2023-07-26)
 
 
