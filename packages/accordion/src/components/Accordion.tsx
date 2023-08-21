@@ -51,6 +51,13 @@ export function Accordion({
     return isControlled ? onChange(isOpened) : setIsOpenInternal(prev => !prev);
   };
 
+  const deleteHandler = (event: React.MouseEvent<HTMLElement>) => {
+    event.stopPropagation();
+    if (onDelete) {
+      onDelete();
+    }
+  };
+
   return (
     <S.AccordionWrapper
       className={className}
@@ -58,13 +65,14 @@ export function Accordion({
       data-disabled={disabled || undefined}
       {...extractSupportProps(rest)}
     >
-      <S.AccordionCard>
+      <S.AccordionCard onClick={toggleIsOpened}>
         <div>
           <S.AccordionHeader data-variant={variant} data-disabled={disabled || undefined}>
             {header}
             {tooltip && (
               <Tooltip type={Tooltip.types.Instant} content={tooltip}>
                 <ButtonIcon
+                  onClick={e => e.stopPropagation()}
                   disabled={disabled}
                   icon={<QuestionSmallOutlineInterfaceSVG />}
                   variant={ButtonIcon.variants.Weak}
@@ -75,10 +83,11 @@ export function Accordion({
           {subheader && <S.AccordionSubheader data-disabled={disabled || undefined}>{subheader}</S.AccordionSubheader>}
         </div>
         <S.AccordionButtons>
-          {onDelete && <ButtonIconTransparent disabled={disabled} onClick={onDelete} icon={<DeleteInterfaceSVG />} />}
+          {onDelete && (
+            <ButtonIconTransparent disabled={disabled} onClick={deleteHandler} icon={<DeleteInterfaceSVG />} />
+          )}
           <ButtonIconTransparent
             disabled={disabled}
-            onClick={toggleIsOpened}
             icon={isOpened ? <ChevronUpInterfaceSVG /> : <ChevronDownInterfaceSVG />}
           />
         </S.AccordionButtons>
