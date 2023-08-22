@@ -36,12 +36,15 @@ export type SelectChipProps = {
   withSingleFilterClearButton?: boolean;
 } & ChipFilterLabelValue;
 
+type RadioChipItem = {
+  value: string | boolean;
+  label: ReactNode;
+  valueToFilter?: string;
+  checked?: boolean;
+};
+
 export type RadioChipProps = {
-  items: Array<{
-    value: string | boolean;
-    label: ReactNode;
-    valueToFilter?: string;
-  }>;
+  items: Array<RadioChipItem>;
   onChange(value: string | boolean | null): void;
   withSearch?: boolean;
   withSingleFilterClearButton?: boolean;

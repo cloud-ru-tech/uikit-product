@@ -12,10 +12,14 @@ import { Trigger } from '../Trigger';
 
 export const FilterChipRadio = forwardRef(
   ({ withSearch, icon, label, items, onChange, withSingleFilterClearButton }: RadioChipProps, ref) => {
+    const preCheckedItem = useMemo(() => items.find(item => item.checked), [items]);
+
     const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
     const [search, setSearch] = useState('');
-    const [value, setValue] = useState<string | boolean | null>(null);
-    const [innerLabel, setInnerLabel] = useState<ReactNode>(textProvider(languageCode, Texts.All));
+    const [value, setValue] = useState<string | boolean | null>(preCheckedItem?.value || null);
+    const [innerLabel, setInnerLabel] = useState<ReactNode>(
+      preCheckedItem?.label || textProvider(languageCode, Texts.All),
+    );
 
     const searchItem = useMemo(() => <SearchItem value={search} onChange={setSearch} />, [search]);
 
