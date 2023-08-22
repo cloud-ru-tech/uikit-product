@@ -1,17 +1,10 @@
-import { memo, MouseEvent as ReactMouseEvent } from 'react';
+import { memo } from 'react';
 import { components as ReactSelectComponents } from 'react-select';
 
 import { SelectProps } from '../../../components';
 
 function Stub(): JSX.Element {
   return <></>;
-}
-
-function withStopPropagation(callback: () => void) {
-  return function (e: ReactMouseEvent<HTMLDivElement, MouseEvent>) {
-    e.stopPropagation();
-    callback();
-  };
 }
 
 export const CustomControl = (props: SelectProps): typeof ReactSelectComponents.Control => {
@@ -24,7 +17,7 @@ export const CustomControl = (props: SelectProps): typeof ReactSelectComponents.
       } = data;
 
       return (
-        <div role='presentation' onClick={withStopPropagation(toggleMenu)}>
+        <div role='presentation' onClick={toggleMenu}>
           <ReactSelectComponents.Control {...data} />
         </div>
       );
@@ -40,7 +33,7 @@ export const CustomControl = (props: SelectProps): typeof ReactSelectComponents.
     } = data;
 
     return (
-      <div role='presentation' onClick={withStopPropagation(toggleMenu)}>
+      <div role='presentation' onClick={toggleMenu}>
         <ReactSelectComponents.Control {...data}>
           <PrefixControlComponent {...data} />
           {children}

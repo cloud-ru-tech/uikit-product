@@ -99,6 +99,7 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
   const [inputValue, setInputSearch] = useState<string>();
   const [isOpen, setIsOpen] = useState(false);
   const [customStyles, setCustomStyles] = useState(getSelectStyles(type));
+
   const closeMenu = useCallback((): void => {
     setIsOpen(false);
     onMenuClose?.();
@@ -148,23 +149,34 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
 
   const clickOutside = useCallback(
     (event: MouseEvent) => {
-      const isClickInside = portalRef.current?.contains(event.target as Node);
-      if (!isClickInside) {
-        closeMenu();
+      if (!portalRef.current || !portalTargetRef.current) {
+        return;
       }
+
+      const isClickInsideSelect = portalTargetRef.current.contains(event.target as Node);
+
+      if (isClickInsideSelect) {
+        return;
+      }
+
+      const isClickInsideDropdown = portalRef.current.contains(event.target as Node);
+
+      if (isClickInsideDropdown) {
+        return;
+      }
+
+      closeMenu();
     },
     [closeMenu],
   );
 
   useEffect(() => {
-    if (isOpen) {
-      document.body.addEventListener('click', clickOutside);
-    }
+    document.body.addEventListener('click', clickOutside);
 
     return (): void => {
       document.body.removeEventListener('click', clickOutside);
     };
-  }, [clickOutside, isOpen]);
+  }, [clickOutside]);
 
   const memoizeCustomComponents = useMemo(
     () =>
@@ -191,14 +203,9 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
     [memoizeCustomComponents, components],
   );
 
-  const toggleMenu = (isMenuOpen?: boolean): void => {
-    if (typeof isMenuOpen === 'boolean') {
-      setIsOpen(isMenuOpen);
-      return;
-    }
-
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = useCallback((): void => {
+    setIsOpen(isOpen => !isOpen);
+  }, []);
 
   const formatGroupLabel = useCallback(
     (group: GroupType<RCOptionTypeBase>) => <div data-test-group-id={`${group.label}`}>{group.label}</div>,
