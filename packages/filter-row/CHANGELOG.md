@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2023-08-22)
+
+
+### Features
+
+* **[CORESERV-1463](https://jira.sbercloud.tech/browse/CORESERV-1463):** add default state to Select Type filter ([c49ddd8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c49ddd83e87e47180986cd9ab43ad8a4bb4c4931))
+
+
+
+
+
 ## 0.2.15 (2023-08-21)
 
 ### Only dependencies have been changed
