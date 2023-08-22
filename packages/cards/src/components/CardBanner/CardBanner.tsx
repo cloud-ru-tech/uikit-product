@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { Button, ButtonProps } from '@sbercloud/uikit-product-button';
 import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -8,7 +10,7 @@ export type CardBannerProps = WithSupportProps<{
   src: string;
   title: string;
   description: string;
-  buttons: ButtonProps[];
+  buttons: ButtonProps[] | ReactNode;
   className?: string;
 }>;
 
@@ -25,9 +27,9 @@ export function CardBanner({ title, description, src, buttons, className, ...res
         <S.Description data-test-id='card-banner__description' maxLines={2} text={description} />
 
         <S.ButtonsWrapper data-test-id='card-banner__buttons'>
-          {buttons.map((button, index) => (
-            <Button key={`${index}${button.text}`} {...button} />
-          ))}
+          {buttons instanceof Array
+            ? buttons.map((button, index) => <Button key={`${index}${button.text}`} {...button} />)
+            : buttons}
         </S.ButtonsWrapper>
       </S.LeftSide>
 
