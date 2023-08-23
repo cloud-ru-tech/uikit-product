@@ -2,7 +2,7 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 import React from 'react';
 
-import { InfoInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { InfoOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { TooltipType } from '@sbercloud/uikit-product-tooltip/src/helpers/types';
 
@@ -40,7 +40,7 @@ bagelChart.args = {
     <>
       <div>{'Title'}</div>
       <Tooltip type={TooltipType.Instant} content='content'>
-        <InfoInterfaceSVG />
+        <InfoOutlineInterfaceSVG />
       </Tooltip>
     </>
   ),

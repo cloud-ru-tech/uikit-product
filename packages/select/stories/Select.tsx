@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import {
   FavouriteInterfaceSVG,
-  QuestionInterfaceSVG,
+  QuestionSmallOutlineInterfaceSVG,
   RadioCheckedInterfaceSVG,
   RadioUncheckedInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
@@ -121,7 +121,7 @@ function Template({
     }
 
     return function () {
-      return <QuestionInterfaceSVG size={20} />;
+      return <QuestionSmallOutlineInterfaceSVG size={20} />;
     };
   };
 

@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
-import { InfoInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { InfoOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
 import { Select } from '@sbercloud/uikit-product-select';
 import { ToggleCard, ToggleGroup } from '@sbercloud/uikit-product-toggle-group';
@@ -255,7 +255,7 @@ modal.args = {
     disabledTooltip: {
       content: 'Нет доступа',
     },
-    icon: <InfoInterfaceSVG />,
+    icon: <InfoOutlineInterfaceSVG />,
   },
   disableScroll: false,
   size: Modal.sizes.Small,
