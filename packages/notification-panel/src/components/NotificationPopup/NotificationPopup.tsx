@@ -10,7 +10,11 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 import { ButtonGhost, ButtonIcon, ButtonIconTransparent } from '@sbercloud/uikit-product-button';
 import { Chip } from '@sbercloud/uikit-product-chip';
-import { CloseInterfaceSVG, NotifyInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import {
+  CloseInterfaceSVG,
+  NotifyInterfaceSVG,
+  QuestionSmallOutlineInterfaceSVG,
+} from '@sbercloud/uikit-product-icons';
 import { NoData } from '@sbercloud/uikit-product-no-data';
 import { PredefinedDecorIconPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 import { Spinner } from '@sbercloud/uikit-product-spinner';
@@ -123,7 +127,7 @@ export function NotificationPopup({
                 {textProvider(languageCode, Texts.Notifications)}
                 {headerTooltip && (
                   <Tooltip title={headerTooltip} placement={Tooltip.placements.Top} type={Tooltip.types.Truncated}>
-                    <ButtonIcon icon={<QuestionInterfaceSVG />} />
+                    <ButtonIcon icon={<QuestionSmallOutlineInterfaceSVG />} />
                   </Tooltip>
                 )}
               </S.Title>

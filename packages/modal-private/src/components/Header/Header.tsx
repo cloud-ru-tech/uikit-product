@@ -1,5 +1,5 @@
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
-import { QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
@@ -26,7 +26,7 @@ export function Header({ title, subtitle, titleTooltip, align = HeaderAlign.Left
 
           {titleTooltip && (
             <Tooltip {...titleTooltip} type={Tooltip.types.Instant} data-test-id='modal-private__header__title-tooltip'>
-              <ButtonIcon icon={<QuestionInterfaceSVG />} />
+              <ButtonIcon icon={<QuestionSmallOutlineInterfaceSVG />} />
             </Tooltip>
           )}
         </S.TitleWithTooltip>

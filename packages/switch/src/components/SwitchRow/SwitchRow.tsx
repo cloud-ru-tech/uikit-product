@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -34,7 +34,7 @@ function StylelessSwitchRow({
             classNameTrigger={S.titleTooltipClassName}
             type={Tooltip.types.Instant}
           >
-            <QuestionInterfaceSVG />
+            <QuestionSmallOutlineInterfaceSVG />
           </Tooltip>
         </>
       );

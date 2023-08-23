@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import { QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 
 import { Content, Header, hintClassName, Number, Title, tooltipTriggerClassName, Wrapper } from './styled';
@@ -23,7 +23,7 @@ export function FormGroup({ className, number, title, hint, children }: FormGrou
 
           {hint && (
             <Tooltip {...hint} classNameTrigger={tooltipTriggerClassName} type={Tooltip.types.Instant}>
-              <QuestionInterfaceSVG size={20} className={hintClassName} />
+              <QuestionSmallOutlineInterfaceSVG size={20} className={hintClassName} />
             </Tooltip>
           )}
         </Header>

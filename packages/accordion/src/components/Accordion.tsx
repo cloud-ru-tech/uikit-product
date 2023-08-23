@@ -5,7 +5,7 @@ import {
   ChevronDownInterfaceSVG,
   ChevronUpInterfaceSVG,
   DeleteInterfaceSVG,
-  QuestionInterfaceSVG,
+  QuestionSmallOutlineInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -64,7 +64,11 @@ export function Accordion({
             {header}
             {tooltip && (
               <Tooltip type={Tooltip.types.Instant} content={tooltip}>
-                <ButtonIcon disabled={disabled} icon={<QuestionInterfaceSVG />} variant={ButtonIcon.variants.Weak} />
+                <ButtonIcon
+                  disabled={disabled}
+                  icon={<QuestionSmallOutlineInterfaceSVG />}
+                  variant={ButtonIcon.variants.Weak}
+                />
               </Tooltip>
             )}
           </S.AccordionHeader>
