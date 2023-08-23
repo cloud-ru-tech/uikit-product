@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.29.15 (2023-08-23)
+
+
+### Bug Fixes
+
+* **[FF-2444](https://jira.sbercloud.tech/browse/FF-2444):** fixed multiple open Select ([cd430a2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd430a2c6e17470451adbcbdc73fa2f75052ae3c))
+
+
+
+
+
 ## 0.29.14 (2023-08-21)
 
 ### Only dependencies have been changed
