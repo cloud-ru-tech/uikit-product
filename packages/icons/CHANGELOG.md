@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.22.0 (2023-08-23)
+
+
+### Features
+
+* **[ONB-1012](https://jira.sbercloud.tech/browse/ONB-1012):** new iconfor studying button ([c22e629](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c22e629f3beb8655979c7ba1c317f71468121418))
+
+
+
+
+
 # 5.21.0 (2023-08-23)
 
 
