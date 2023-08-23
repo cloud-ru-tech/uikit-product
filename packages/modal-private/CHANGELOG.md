@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2023-08-23)
+
+
+### Features
+
+* **[FF-2946](https://jira.sbercloud.tech/browse/FF-2946):** replaced filled question and info icons with outline icons ([d957b4e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d957b4e2070e0762757a0653f6edff6bafb03e35))
+
+
+
+
+
 ## 1.5.3 (2023-08-21)
 
 ### Only dependencies have been changed
@@ -423,7 +434,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.2.2 (2023-01-25)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-modal-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.3.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@5.21.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@4.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-truncate-string@0.9.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 ## 1.2.1 (2023-01-19)
 

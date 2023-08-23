@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2023-08-23)
+
+
+### Features
+
+* **[FF-2946](https://jira.sbercloud.tech/browse/FF-2946):** replaced filled question and info icons with outline icons ([d957b4e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d957b4e2070e0762757a0653f6edff6bafb03e35))
+
+
+
+
+
 ## 3.0.37 (2023-08-21)
 
 ### Only dependencies have been changed
@@ -267,7 +278,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 3.0.11 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-input-decorator-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.21.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@4.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
 
 ## [3.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input-decorator-private@3.0.9...@sbercloud/uikit-product-input-decorator-private@3.0.10) (2023-01-12)
 

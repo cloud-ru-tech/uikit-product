@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-08-23)
+
+
+### Features
+
+* **[FF-2946](https://jira.sbercloud.tech/browse/FF-2946):** replaced filled question and info icons with outline icons ([d957b4e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d957b4e2070e0762757a0653f6edff6bafb03e35))
+
+
+
+
+
 ## 2.0.10 (2023-08-21)
 
 ### Only dependencies have been changed
@@ -497,7 +508,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.0.4 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-notification-panel
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-avatar@1.1.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+* [@sbercloud/uikit-product-button@5.3.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@5.21.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-no-data@2.1.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/no-data/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.2.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@4.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
 
 ## 1.0.3 (2023-01-25)
 
