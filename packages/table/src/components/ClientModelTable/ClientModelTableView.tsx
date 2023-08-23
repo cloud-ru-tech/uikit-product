@@ -122,6 +122,7 @@ export function ClientModelTableView<T>({
         onSortChanged={onSortChanged}
         onRowDoubleClicked={onRowDoubleClicked}
         doesRowPassFilter={filterProps?.doesRowPassFilter}
+        quickFilterText={searchValue}
         gridOptions={{
           defaultColDef: {
             suppressMenu: true,

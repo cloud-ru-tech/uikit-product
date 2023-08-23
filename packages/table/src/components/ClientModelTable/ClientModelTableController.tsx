@@ -7,7 +7,7 @@ import { exportDataAsExcel } from '../../helpers/exportDataAsExcel';
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import { ClientModelTableView } from './ClientModelTableView';
 import { ExportActions } from './constants';
-import { DeleteProps, FilterProps, PaginationProps } from './types';
+import { DeleteProps, FilterProps, PaginationProps, SearchProps } from './types';
 
 export type ClientModelTableControllerProps<T> = {
   fieldId: string;
@@ -27,6 +27,7 @@ export type ClientModelTableControllerProps<T> = {
       cancelText: string;
     };
     filter?: FilterProps<T>;
+    search?: SearchProps;
     export?: {
       fileName: string;
       onExport?(exportType: string): void;
@@ -60,7 +61,7 @@ export function ClientModelTableController<T extends object>({
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const [gridApi, setGridApi] = useState<AgGridTypes.GridApi | null>(null);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState(bulkActions?.search?.defaultValue || '');
   const [isSearching, setIsSearching] = useState(false);
 
   const onGridReady = useCallback((gridEv: AgGridTypes.GridReadyEvent) => {
@@ -212,13 +213,15 @@ export function ClientModelTableController<T extends object>({
   const onSearchCallback = useCallback(
     (value: string) => {
       setSearchValue(value);
+      bulkActions?.search?.onSearch?.(value);
+
       if (!gridApi) return;
       gridApi.setQuickFilter(value);
       gridApi.paginationGoToPage(0);
       setCurrentPage(0);
       setPageCount(gridApi.paginationGetTotalPages());
     },
-    [gridApi],
+    [bulkActions?.search, gridApi],
   );
   const moreActions = useMemo(() => {
     if (!gridApi || !bulkActions) {

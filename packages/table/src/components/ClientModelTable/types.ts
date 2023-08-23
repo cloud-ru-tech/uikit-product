@@ -14,6 +14,11 @@ export type DeleteProps = {
 
 export type FilterProps<T> = Toolbar.FilterProps & { doesRowPassFilter(data: T): boolean };
 
+export type SearchProps = {
+  defaultValue: string;
+  onSearch?: (value: string) => void;
+};
+
 export type PaginationProps = {
   pageCount: number;
   currentPage: number;

@@ -37,6 +37,7 @@ function StylelessTablePrivate({
   selectionMode,
   selectedRows,
   doesRowPassFilter,
+  quickFilterText,
   className,
   onGridReady,
   onSortChanged,
@@ -188,6 +189,7 @@ function StylelessTablePrivate({
         columnDefs={colDefs()}
         onSortChanged={onSortChanged}
         isExternalFilterPresent={() => Boolean(doesRowPassFilter)}
+        quickFilterText={quickFilterText}
         doesExternalFilterPass={node => doesRowPassFilter?.(node.data) || false}
         noRowsOverlayComponent={NoRows}
         noRowsOverlayComponentParams={{
