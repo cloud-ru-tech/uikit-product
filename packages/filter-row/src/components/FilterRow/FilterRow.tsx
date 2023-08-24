@@ -20,6 +20,7 @@ export type FilterRowProps<T> = WithSupportProps<{
   onChange(filters: T): void;
   className?: string;
   withSingleFilterClearButton?: boolean;
+  showClearAllButton?: boolean;
 }>;
 
 export type FiltersState = Record<string, unknown>;
@@ -29,6 +30,7 @@ export function FilterRow<T extends FiltersState>({
   onChange,
   className,
   withSingleFilterClearButton = true,
+  showClearAllButton = true,
   ...rest
 }: FilterRowProps<T>) {
   const [state, setState] = useState<T>({} as T);
@@ -75,7 +77,7 @@ export function FilterRow<T extends FiltersState>({
         ))}
       </S.FilterChipsContainer>
 
-      {hasAnyFilter && <ClearAllFiltersButton onClick={handleFiltersClear} />}
+      {hasAnyFilter && showClearAllButton && <ClearAllFiltersButton onClick={handleFiltersClear} />}
     </S.FilterRowContainer>
   );
 }
