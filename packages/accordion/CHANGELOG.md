@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.2 (2023-08-24)
+
+
+### Bug Fixes
+
+* **[DPS-5763](https://jira.sbercloud.tech/browse/DPS-5763):** fix accordion component ([c1d519a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c1d519a4c61791601a695ad6cf98b799b9ac319b))
+
+
+
+
+
 ## 0.6.1 (2023-08-23)
 
 ### Only dependencies have been changed
