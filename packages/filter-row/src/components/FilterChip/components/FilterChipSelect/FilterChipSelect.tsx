@@ -1,3 +1,4 @@
+import deepEqual from 'deep-equal';
 import {
   forwardRef,
   ReactNode,
@@ -21,13 +22,14 @@ import { MenuItem } from '../MenuItem';
 import { NoData } from '../NoData';
 import { SearchItem } from '../SearchItem';
 import { Trigger } from '../Trigger';
-import { CLEAR_STATE, getDefaultState, reducer, SET_ALL_CHECKED, SET_CHECKED } from './reducer';
+import { CLEAR_STATE, getDefaultState, reducer, SET_ALL_CHECKED, SET_CHECKED, SET_DEFAULT_STATE } from './reducer';
 import * as S from './styled';
 
 export const FilterChipSelect = forwardRef(
   ({ withSelectAll, withSearch, icon, label, items, onChange, withSingleFilterClearButton }: SelectChipProps, ref) => {
     const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
     const refs = useRef(null);
+    const prevItems = useRef(items);
 
     const [state, dispatch] = useReducer(reducer, getDefaultState(items));
     const [search, setSearch] = useState('');
@@ -136,6 +138,14 @@ export const FilterChipSelect = forwardRef(
     const handleClearFilter = () => {
       dispatch({ type: CLEAR_STATE, payload: items });
     };
+
+    useEffect(() => {
+      if (!deepEqual(prevItems.current, items)) {
+        dispatch({ type: SET_DEFAULT_STATE, payload: items });
+        prevItems.current = items;
+      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [items]);
 
     useImperativeHandle(ref, () => ({ handleClearFilter }));
 

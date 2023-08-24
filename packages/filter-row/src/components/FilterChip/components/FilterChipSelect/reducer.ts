@@ -5,6 +5,7 @@ import { SelectChipProps } from '../../types';
 export const SET_CHECKED = 'SET_CHECKED';
 export const SET_ALL_CHECKED = 'SET_ALL_CHECKED';
 export const CLEAR_STATE = 'CLEAR_STATE';
+export const SET_DEFAULT_STATE = 'SET_DEFAULT_STATE';
 
 export type FilterChipState = {
   allChecked: {
@@ -37,9 +38,29 @@ type ClearStateAction = {
   payload: SelectChipProps['items'];
 };
 
-type Action = SetCheckedAction | SetAllCheckedAction | ClearStateAction;
+type DefaultStateAction = {
+  type: typeof SET_DEFAULT_STATE;
+  payload: SelectChipProps['items'];
+};
+
+type Action = SetCheckedAction | SetAllCheckedAction | ClearStateAction | DefaultStateAction;
 
 export const getDefaultState = (items: SelectChipProps['items']): FilterChipState => ({
+  allChecked: {
+    value: items.every(value => value.checked),
+    partially: items.some(value => value.checked),
+  },
+  values: items.reduce((acc, next) => {
+    acc[next.value] = {
+      label: next.label,
+      checked: next.checked || false,
+    };
+
+    return acc;
+  }, {}),
+});
+
+export const getClearedState = (items: SelectChipProps['items']): FilterChipState => ({
   allChecked: {
     value: false,
     partially: false,
@@ -47,7 +68,7 @@ export const getDefaultState = (items: SelectChipProps['items']): FilterChipStat
   values: items.reduce((acc, next) => {
     acc[next.value] = {
       label: next.label,
-      checked: next.checked || false,
+      checked: false,
     };
 
     return acc;
@@ -96,6 +117,8 @@ export const reducer = (state: FilterChipState, action: Action) => {
         values: newValues,
       };
     case CLEAR_STATE:
+      return getClearedState(action.payload);
+    case SET_DEFAULT_STATE:
       return getDefaultState(action.payload);
     default:
       return state;

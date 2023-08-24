@@ -1,4 +1,5 @@
-import { forwardRef, ReactNode, useImperativeHandle, useMemo, useState } from 'react';
+import deepEqual from 'deep-equal';
+import { forwardRef, ReactNode, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
 
 import { DropdownMenu } from '@sbercloud/uikit-product-dropdown';
 import { useEventHandler, useLanguage } from '@sbercloud/uikit-product-utils';
@@ -13,6 +14,8 @@ import { Trigger } from '../Trigger';
 export const FilterChipRadio = forwardRef(
   ({ withSearch, icon, label, items, onChange, withSingleFilterClearButton }: RadioChipProps, ref) => {
     const preCheckedItem = useMemo(() => items.find(item => item.checked), [items]);
+
+    const prevItems = useRef(items);
 
     const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
     const [search, setSearch] = useState('');
@@ -56,6 +59,17 @@ export const FilterChipRadio = forwardRef(
 
       return actions;
     }, [items, handleChange, search, searchItem, withSearch]);
+
+    useEffect(() => {
+      if (!deepEqual(prevItems.current, items)) {
+        const preCheckedItem = items.find(item => item.checked);
+        setValue(preCheckedItem?.value || null);
+        setInnerLabel(preCheckedItem?.label || textProvider(languageCode, Texts.All));
+        handleChange(preCheckedItem?.value || null);
+        prevItems.current = items;
+      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [items]);
 
     const handleClearFilter = () => {
       setInnerLabel(textProvider(languageCode, Texts.All));
