@@ -93,3 +93,21 @@ test('If errors are present it is impossible to move to next step', async t => {
     .expect(Selector(dataTestIdSelector(`stepper__step-1`)).find('div:first-of-type[data-current="true"]').exists)
     .notOk();
 });
+
+test('Move any step by clicking the set step button', async t => {
+  await t
+    .expect(Selector(dataTestIdSelector(`stepper__step-0`)).find('div:first-of-type[data-current="true"]').exists)
+    .eql(true);
+
+  await t.click(Selector(dataTestIdSelector(`move-last-step`)));
+
+  await t
+    .expect(Selector(dataTestIdSelector(`stepper__step-2`)).find('div:first-of-type[data-current="true"]').exists)
+    .eql(true);
+
+  await t.click(Selector(dataTestIdSelector(`move-first-step`)));
+
+  await t
+    .expect(Selector(dataTestIdSelector(`stepper__step-0`)).find('div:first-of-type[data-current="true"]').exists)
+    .eql(true);
+});

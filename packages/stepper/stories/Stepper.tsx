@@ -42,7 +42,8 @@ type FormValues = {
 };
 
 function StepsView({ steps, className }: StepsProps) {
-  const { moveForward, moveToPrevStep, currentStepIndex, clearErrors, raiseCurrentStepError } = useStepperContext();
+  const { moveForward, moveToPrevStep, currentStepIndex, setCurrentStep, clearErrors, raiseCurrentStepError } =
+    useStepperContext();
   const formMethods = useForm<FormValues>();
 
   const clearAllErrors = () => {
@@ -69,6 +70,14 @@ function StepsView({ steps, className }: StepsProps) {
     }
   };
 
+  const handleSetFirstStep = () => {
+    setCurrentStep(0);
+  };
+
+  const handleSetLastStep = () => {
+    setCurrentStep(steps.length - 1);
+  };
+
   return (
     <FormProvider {...formMethods}>
       <Stepper.Steps steps={steps} className={className} data-test-id={'stepper-wrapper'} />
@@ -80,7 +89,21 @@ function StepsView({ steps, className }: StepsProps) {
         />
         <Button text='Следующий шаг' onClick={moveForward} data-test-id={'move-forward'} />
         <Button text='Очистить ошибки' onClick={clearAllErrors} data-test-id={'clear-errors'} />
-        {currentStepIndex === 2 && <Button text='Отправить' onClick={handleSubmit} data-test-id={'submit'} />}
+        <Button
+          text='Перейти на первый шаг'
+          onClick={handleSetFirstStep}
+          disabled={currentStepIndex === 0}
+          data-test-id={'move-first-step'}
+        />
+        <Button
+          text='Перейти на последний шаг'
+          onClick={handleSetLastStep}
+          disabled={currentStepIndex === steps.length - 1}
+          data-test-id={'move-last-step'}
+        />
+        {currentStepIndex === steps.length - 1 && (
+          <Button text='Отправить' onClick={handleSubmit} data-test-id={'submit'} />
+        )}
       </Row>
     </FormProvider>
   );

@@ -8,6 +8,7 @@ export type StepperContext = {
   currentStepIndex: number;
   moveForward(): void;
   moveToPrevStep(stepIndex: number): void;
+  setCurrentStep(stepIndex: number): void;
   setValidator(validator: (step: number) => boolean): void;
   clearErrors(): void;
   raiseCurrentStepError(): void;
@@ -18,6 +19,7 @@ const StepperContextProvider = createContext<StepperContext>({
   stepsCount: 0,
   moveForward() {},
   moveToPrevStep() {},
+  setCurrentStep() {},
   setValidator() {},
   clearErrors() {},
   raiseCurrentStepError() {},
@@ -36,6 +38,7 @@ export function OuterContextProvider({ stepsCount, startStepIndex = 0, children 
   const [validateCurrentStep, setValidateCurrentStep] = useState<(step: number) => boolean>(() => () => true);
   const [clearErrors, setClearErrors] = useState<() => void>(() => () => undefined);
   const [handleStepClick, setHandleStepClick] = useState<(stepIndex: number) => void>(() => () => undefined);
+  const [handleSetCurrentStep, setHandleSetCurrentStep] = useState<(stepIndex: number) => void>(() => () => undefined);
   const [innerSteps, setInnerSteps] = useState<InnerStepType[]>(() => []);
 
   const moveToPrevStep = (stepIndex: number) => {
@@ -52,6 +55,10 @@ export function OuterContextProvider({ stepsCount, startStepIndex = 0, children 
     }
 
     handleStepClick(currentStepIndex + 1);
+  };
+
+  const setCurrentStep = (stepIndex: number) => {
+    handleSetCurrentStep(stepIndex);
   };
 
   const setValidator = (validator: (step: number) => boolean) => {
@@ -76,12 +83,17 @@ export function OuterContextProvider({ stepsCount, startStepIndex = 0, children 
     setHandleStepClick(() => handleStepClick);
   }, []);
 
+  const setCurrentStepHandler = useCallback((handleSetCurrentStep: (stepIndex: number) => void) => {
+    setHandleSetCurrentStep(() => handleSetCurrentStep);
+  }, []);
+
   return (
     <StepperContextProvider.Provider
       value={{
         stepsCount,
         moveForward,
         moveToPrevStep,
+        setCurrentStep,
         currentStepIndex,
         setValidator,
         clearErrors,
@@ -94,6 +106,7 @@ export function OuterContextProvider({ stepsCount, startStepIndex = 0, children 
         setStepClickHandler={setStepClickHandler}
         handleStepClick={handleStepClick}
         setCurrentStepIndex={setCurrentStepIndex}
+        setCurrentStepHandler={setCurrentStepHandler}
         innerSteps={innerSteps}
         setInnerSteps={setInnerSteps}
       >
