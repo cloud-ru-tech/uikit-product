@@ -17,6 +17,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, WithSupportProps<Textare
       hint,
       value,
       onChange,
+      onBlur,
       placeholder,
       minRows,
       maxRows,
@@ -46,6 +47,7 @@ export const Textarea = forwardRef<HTMLTextAreaElement, WithSupportProps<Textare
           name={name}
           value={value}
           onChange={onChange}
+          onBlur={onBlur}
           placeholder={placeholder}
           error={Boolean(error)}
           minRows={minRows}

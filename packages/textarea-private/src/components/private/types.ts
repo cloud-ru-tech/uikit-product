@@ -1,4 +1,4 @@
-import { ChangeEvent, RefAttributes } from 'react';
+import { ChangeEvent, FocusEvent, RefAttributes } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -15,5 +15,5 @@ export type TextareaPrivateProps = RefAttributes<HTMLTextAreaElement> &
     maxLength?: number;
     autosize?: boolean;
     onFocus?: () => void;
-    onBlur?: () => void;
+    onBlur?: (e: FocusEvent<HTMLTextAreaElement>) => void;
   }>;

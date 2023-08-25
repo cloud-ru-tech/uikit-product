@@ -1,4 +1,4 @@
-import { ChangeEvent, RefAttributes } from 'react';
+import { ChangeEvent, FocusEvent, RefAttributes } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -7,6 +7,7 @@ export type SimpleTextareaProps = RefAttributes<HTMLTextAreaElement> &
     name?: string;
     value: string;
     onChange(value: string, e?: ChangeEvent<HTMLTextAreaElement>): void;
+    onBlur?(e?: FocusEvent<HTMLTextAreaElement>): void;
     className?: string;
     placeholder?: string;
     minRows?: number;

@@ -1,5 +1,5 @@
 import mergeRefs from 'merge-refs';
-import { forwardRef, useCallback, useRef, useState } from 'react';
+import { FocusEvent, forwardRef, useCallback, useRef, useState } from 'react';
 
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, useLanguage } from '@sbercloud/uikit-product-utils';
@@ -15,6 +15,7 @@ const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaPr
       name,
       value,
       onChange,
+      onBlur,
       placeholder,
       className,
       minRows,
@@ -33,7 +34,13 @@ const StylelessSimpleTextarea = forwardRef<HTMLTextAreaElement, SimpleTextareaPr
     const innerRef = useRef<HTMLTextAreaElement>(null);
     const textareaRef = mergeRefs(innerRef, ref);
     const onTextareaFocusHandler = useCallback(() => setIsFocused(true), []);
-    const onTextareaBlurHandler = useCallback(() => setIsFocused(false), []);
+    const onTextareaBlurHandler = useCallback(
+      (e: FocusEvent<HTMLTextAreaElement>) => {
+        setIsFocused(false);
+        if (onBlur) onBlur(e);
+      },
+      [onBlur],
+    );
     const onClearHandler = useCallback(() => {
       onChange('');
       innerRef.current?.focus();
