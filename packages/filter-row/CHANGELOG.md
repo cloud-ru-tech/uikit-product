@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2023-08-28)
+
+
+### Features
+
+* **[CORESERV-1428](https://jira.sbercloud.tech/browse/CORESERV-1428):** add prop to hide clear all button ([82211bd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/82211bdf6344647781e6d773573fe6be239e3d38))
+* **[CORESERV-1428](https://jira.sbercloud.tech/browse/CORESERV-1428):** update filter value and label on changing of items ([d26ff69](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d26ff6965235f1b2762fe5a0cf589f000c016a27))
+
+
+
+
+
 ## 0.3.2 (2023-08-23)
 
 ### Only dependencies have been changed
