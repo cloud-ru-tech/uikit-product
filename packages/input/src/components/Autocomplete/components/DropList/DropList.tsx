@@ -1,8 +1,8 @@
-import { MutableRefObject, useContext } from 'react';
+import { MutableRefObject, ReactNode } from 'react';
 
-import { Spinner } from '@sbercloud/uikit-product-spinner';
+import { Divider } from '@sbercloud/uikit-product-divider';
 
-import { FloatingContext } from '../../contexts';
+import { Content } from './components';
 import * as S from './styled';
 
 export type DropListProps = {
@@ -10,7 +10,7 @@ export type DropListProps = {
   value?: string;
   loading?: boolean;
   isOptionsError?: boolean;
-
+  additionalButton?: { text: string; onClick(): void; disabled?: boolean; icon?: ReactNode };
   handleItemSelect: (option: DropListProps['options'][0]) => void;
   droplistRef?: MutableRefObject<HTMLDivElement | null>;
 };
@@ -21,59 +21,34 @@ export function DropList({
   handleItemSelect,
   loading,
   isOptionsError,
+  additionalButton,
   droplistRef,
 }: DropListProps) {
-  const { setIsOpen } = useContext(FloatingContext);
-
-  if (loading) {
-    return (
-      <S.LoadingBox>
-        <Spinner size={Spinner.sizes.Small} />
-      </S.LoadingBox>
-    );
-  }
-
-  if (isOptionsError) {
-    return (
-      <S.ErrorBox>
-        <S.CircleCancelFilledInterfaceSVGStyled />
-        <S.Text2Red>Нет данных</S.Text2Red>
-      </S.ErrorBox>
-    );
-  }
-
-  if (!options.length) {
-    return (
-      <S.ErrorBox>
-        <S.SearchInterfaceSVGStyled />
-        <S.Text2Grey>Совпадений не найдено</S.Text2Grey>
-      </S.ErrorBox>
-    );
-  }
-
   return (
     <div ref={droplistRef}>
-      {options.map(option => {
-        const { subTitle, title, id, disabled } = option;
+      <Content
+        loading={loading}
+        isOptionsError={isOptionsError}
+        options={options}
+        handleItemSelect={handleItemSelect}
+        value={inputValue}
+        additionalButton={additionalButton}
+      />
 
-        return (
-          <S.ListItemWrapper key={id} data-disabled={disabled || undefined}>
-            <S.ListItem
-              data-disabled={disabled || undefined}
-              data-selected={title === inputValue || undefined}
-              onClick={() => {
-                if (!disabled) {
-                  handleItemSelect(option);
-                  setIsOpen(false);
-                }
-              }}
-            >
-              <S.Text2>{title}</S.Text2>
-              <S.Text3Grey>{subTitle}</S.Text3Grey>
-            </S.ListItem>
+      {additionalButton && (
+        <>
+          <S.DividerWrapper>
+            <Divider />
+          </S.DividerWrapper>
+
+          <S.ListItemWrapper data-disabled={additionalButton.disabled || undefined}>
+            <S.AdditionalItem data-disabled={additionalButton.disabled || undefined} onClick={additionalButton.onClick}>
+              {additionalButton.icon}
+              {additionalButton.text}
+            </S.AdditionalItem>
           </S.ListItemWrapper>
-        );
-      })}
+        </>
+      )}
     </div>
   );
 }

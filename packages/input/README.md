@@ -143,6 +143,7 @@ type AutocompleteProps = WithSupportProps<{
   size?: SimpleInputProps['size'];
   placeholder?: string;
   options: DropListProps['options'];
+  additionalButton?: DropListProps['additionalButton'];
   loading?: boolean;
   isOptionsError?: boolean;
 }>;

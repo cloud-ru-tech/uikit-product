@@ -1,9 +1,7 @@
-import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { SHADOW } from '@sbercloud/uikit-product-utils';
 
-import { DROPLIST_MAX_HEIGHT } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -24,8 +22,4 @@ export const Wrapper = styled.div<{ strategy: string; x: number; y: number; maxH
   border-radius: 8px;
   outline: none;
   box-shadow: ${SHADOW.SMALL};
-`;
-
-export const scrollClassName = css`
-  max-height: ${DROPLIST_MAX_HEIGHT}px;
 `;

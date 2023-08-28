@@ -1,10 +1,7 @@
 import { styled } from '@linaria/react';
 
-import { CircleCancelFilledInterfaceSVG, SearchInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
-import { TEXT_2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
+import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
-import { INFO_BOX_SIZE } from './constants';
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
 PURPLE_THEME;
@@ -18,64 +15,33 @@ export const ListItemWrapper = styled.div`
   }
 `;
 
-export const LoadingBox = styled.div`
-  height: ${INFO_BOX_SIZE}px;
-`;
-
-export const ErrorBox = styled(LoadingBox)`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2px;
-`;
-
-export const ListItem = styled.div`
+export const AdditionalItem = styled.div`
+  ${TEXT_2_STYLES};
   padding: 8px 12px;
 
   cursor: pointer;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: start;
   box-sizing: content-box;
+  gap: 8px;
 
-  &[data-selected] {
-    background-color: var(${COLORS.item.hover.background});
-  }
+  color: var(${COLORS.additionalItem.text});
+  fill: var(${COLORS.additionalItem.text});
 
   :hover {
-    background-color: var(${COLORS.item.hover.background});
+    background-color: var(${COLORS.additionalItem.hover.background});
   }
 
   &[data-disabled] {
     pointer-events: none;
 
     background-color: unset;
-    color: var(${COLORS.item.disabled.color});
+    color: var(${COLORS.additionalItem.disabled});
+    fill: var(${COLORS.additionalItem.disabled});
   }
 `;
 
-export const Text2 = styled.div`
-  ${TEXT_2_STYLES};
-`;
-
-export const Text3Grey = styled.div`
-  ${TEXT_3_STYLES};
-  color: var(${EXPORT_VARS.BLACK_ALFA[48]});
-`;
-
-export const Text2Red = styled(Text2)`
-  color: var(${EXPORT_VARS.BERRY_RED[100]});
-`;
-
-export const Text2Grey = styled(Text2)`
-  color: var(${EXPORT_VARS.BLACK_ALFA[48]});
-`;
-
-export const CircleCancelFilledInterfaceSVGStyled = styled(CircleCancelFilledInterfaceSVG)`
-  fill: var(${EXPORT_VARS.BERRY_RED[100]});
-`;
-
-export const SearchInterfaceSVGStyled = styled(SearchInterfaceSVG)`
-  fill: var(${EXPORT_VARS.BLACK_ALFA[24]});
+export const DividerWrapper = styled.div`
+  padding: 4px 12px 0px;
 `;

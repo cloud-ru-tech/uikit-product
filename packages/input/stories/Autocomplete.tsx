@@ -1,6 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
+import { EditInterfaceSVG } from '@sbercloud/uikit-product-icons';
+
 import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -28,11 +30,21 @@ autocomplete.args = {
   hint: 'Hint',
   placeholder: 'Placeholder',
   disabled: false,
+  additionalButton: { text: 'Click me', onClick: () => {}, disabled: false, icon: <EditInterfaceSVG /> },
   options: [
-    { title: '1', id: '1' },
+    {
+      title:
+        'long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long long ',
+      id: '1',
+    },
     { title: '2', id: '2', disabled: true },
     { title: 'title', id: '3', subTitle: 'subTitle' },
-    { title: '4', id: '4' },
+    {
+      title: '4',
+      id: '4',
+      subTitle:
+        'First name, Last name, Address loooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong',
+    },
     { title: '5', id: '5' },
     { title: '6', id: '6' },
     { title: '7', id: '7' },

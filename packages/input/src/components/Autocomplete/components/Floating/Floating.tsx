@@ -11,12 +11,10 @@ import {
 } from '@floating-ui/react';
 import { ReactNode, useEffect, useRef, useState } from 'react';
 
-import { Scroll } from '@sbercloud/uikit-product-scroll';
-
 import { AutocompleteProps } from '../../Autocomplete';
 import { FloatingContext, ReferenceContext } from '../../contexts';
 import { DropList } from '../DropList';
-import { INFO_BOX_SIZE } from '../DropList/constants';
+import { ADDITIONAL_BUTTON_SIZE, INFO_BOX_SIZE } from '../DropList/constants';
 import { DROPLIST_MAX_HEIGHT } from './constants';
 import * as S from './styled';
 
@@ -24,11 +22,21 @@ export type FloatingProps = {
   children: ReactNode;
 } & Pick<
   AutocompleteProps,
-  'value' | 'onSelect' | 'disabled' | 'isOptionsError' | 'loading' | 'isOptionsError' | 'options'
+  'value' | 'onSelect' | 'disabled' | 'isOptionsError' | 'loading' | 'isOptionsError' | 'options' | 'additionalButton'
 >;
 
-export function Floating({ children, onSelect, loading, isOptionsError, options, disabled, value }: FloatingProps) {
+export function Floating({
+  children,
+  onSelect,
+  loading,
+  isOptionsError,
+  options,
+  disabled,
+  value,
+  additionalButton,
+}: FloatingProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [dropListHeigth, setDropListHeight] = useState(0);
 
   const droplistRef = useRef<HTMLDivElement | null>(null);
 
@@ -50,10 +58,22 @@ export function Floating({ children, onSelect, loading, isOptionsError, options,
   });
 
   const { getReferenceProps } = useInteractions([useRole(context, { role: 'listbox' }), useDismiss(context)]);
+
+  const infoBoxSize = additionalButton ? INFO_BOX_SIZE + ADDITIONAL_BUTTON_SIZE : INFO_BOX_SIZE;
+
+  useEffect(() => {
+    if (!droplistRef.current) return;
+    const resizeObserver = new ResizeObserver(() => {
+      setDropListHeight(droplistRef.current?.clientHeight || 0);
+    });
+    resizeObserver.observe(droplistRef.current);
+    return () => resizeObserver.disconnect();
+  }, []);
+
   const droplistMaxHeight =
     loading || isOptionsError || !options.length
-      ? INFO_BOX_SIZE
-      : Math.min(droplistRef.current?.clientHeight || DROPLIST_MAX_HEIGHT, DROPLIST_MAX_HEIGHT);
+      ? infoBoxSize
+      : Math.min(dropListHeigth || DROPLIST_MAX_HEIGHT, DROPLIST_MAX_HEIGHT);
 
   useEffect(() => {
     if (isOpen && disabled) {
@@ -75,16 +95,15 @@ export function Floating({ children, onSelect, loading, isOptionsError, options,
             ref={refs.setFloating}
             data-test-id='droplist__floating'
           >
-            <Scroll variant={Scroll.variants.Primary} size={Scroll.sizes.Small} className={S.scrollClassName}>
-              <DropList
-                loading={loading}
-                isOptionsError={isOptionsError}
-                options={options}
-                handleItemSelect={onSelect}
-                droplistRef={droplistRef}
-                value={value}
-              />
-            </Scroll>
+            <DropList
+              loading={loading}
+              isOptionsError={isOptionsError}
+              options={options}
+              handleItemSelect={onSelect}
+              droplistRef={droplistRef}
+              value={value}
+              additionalButton={additionalButton}
+            />
           </S.Wrapper>
         )}
       </ReferenceContext.Provider>
