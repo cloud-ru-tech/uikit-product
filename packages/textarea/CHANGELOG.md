@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2023-08-28)
+
+
+### Features
+
+* **[LKP-268](https://jira.sbercloud.tech/browse/LKP-268):** add onBlur event for textarea ([e3ee887](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3ee887b31167182be5f5ea43ac5a8d4a5f47043))
+
+
+
+
+
 ## 2.2.66 (2023-08-23)
 
 ### Only dependencies have been changed
@@ -325,7 +336,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.2.34 (2023-01-25)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-textarea
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-textarea-private@2.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/textarea-private/CHANGELOG.md)
 
 ## [2.2.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea@2.2.32...@sbercloud/uikit-product-textarea@2.2.33) (2023-01-12)
 
