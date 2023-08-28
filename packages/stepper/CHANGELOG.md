@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2023-08-28)
+
+
+### Features
+
+* **[SVP-7865](https://jira.sbercloud.tech/browse/SVP-7865):** add setCuurentStep context value ([2239085](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2239085a6dfa1a0328cc906531211550f47d4f44))
+
+
+
+
+
 ## 1.2.3 (2023-08-23)
 
 ### Only dependencies have been changed
