@@ -1,10 +1,11 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 
+import { COLORS } from './themes';
+
 export const Container = styled.div`
-  background: var(${EXPORT_VARS.GREY[0]});
+  background: var(${COLORS.BACKGROUND});
   padding: 24px;
 
   border-radius: 8px;

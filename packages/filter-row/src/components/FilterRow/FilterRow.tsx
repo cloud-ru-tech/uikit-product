@@ -58,6 +58,10 @@ export function FilterRow<T extends FiltersState>({
       return filter.length > 0 && Object.values(filter).some(Boolean);
     }
 
+    if (filter && typeof filter === 'object') {
+      return Object.values(filter).some(Boolean);
+    }
+
     return typeof filter === 'boolean' ? true : Boolean(filter);
   });
 

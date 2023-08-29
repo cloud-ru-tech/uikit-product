@@ -77,4 +77,10 @@ export const filtersMock: FilterRowProps<Filters>['filters'] = [
     id: 'dates',
     label: 'Дата создания',
   },
+
+  {
+    type: FilterRow.filterTypes.Number,
+    id: 'cpu',
+    label: 'CPU',
+  },
 ];
