@@ -1,18 +1,20 @@
 import { MouseEvent, useCallback, useEffect, useRef } from 'react';
 import { components as ReactSelectComponents, MenuProps } from 'react-select';
 
-import { MultiselectOptionType } from '../../../helpers/types';
+import { MultiSelectModeType, MultiSelectOptionType } from '../../../helpers/types';
 import { InputSearch } from '../../Shared/InputSearch';
 import * as S from './styled';
 
-export function Menu(props: MenuProps<MultiselectOptionType, true>): JSX.Element {
+export function Menu(props: MenuProps<MultiSelectOptionType, true>): JSX.Element {
   const {
     children,
     options,
-    selectProps: { inputValue = '', isMenuSearch, onInputChange, onMenuInputFocus },
+    selectProps: { inputValue = '', mode, onInputChange, onMenuInputFocus },
   } = props;
 
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const isInMenuSearch = mode.type === MultiSelectModeType.InMenuSearch;
 
   const handleChange = (value: string) => {
     if (onInputChange) {
@@ -21,10 +23,10 @@ export function Menu(props: MenuProps<MultiselectOptionType, true>): JSX.Element
   };
 
   const handleFocus = useCallback(() => {
-    if (isMenuSearch) {
+    if (isInMenuSearch) {
       inputRef.current?.focus();
     }
-  }, [isMenuSearch]);
+  }, [isInMenuSearch]);
 
   const handleMouseDown = (e: MouseEvent) => {
     e.stopPropagation();
@@ -36,7 +38,7 @@ export function Menu(props: MenuProps<MultiselectOptionType, true>): JSX.Element
   return (
     <ReactSelectComponents.Menu {...props}>
       <>
-        {isMenuSearch && options.length > 0 && (
+        {isInMenuSearch && options.length > 0 && (
           <InputSearch
             ref={inputRef}
             className={S.inputSearchClassName}

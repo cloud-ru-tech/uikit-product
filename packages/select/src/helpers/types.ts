@@ -10,12 +10,6 @@ export const SELECT_TYPES = {
   COLOR: 'color',
 } as const;
 
-export type MultiselectOptionType = {
-  label: ReactNode;
-  value: ReactNode;
-  amount?: number;
-};
-
 export type TypeKeys = keyof typeof SELECT_TYPES;
 export type SelectType = (typeof SELECT_TYPES)[TypeKeys];
 
@@ -23,4 +17,16 @@ export enum SelectSizes {
   Small = 'small',
   Medium = 'medium',
   Large = 'large',
+}
+
+export type MultiSelectOptionType = {
+  label: ReactNode;
+  value: ReactNode;
+  amount?: number;
+};
+
+export enum MultiSelectModeType {
+  InInputSearch = 'inInputSearch',
+  InMenuSearch = 'inMenuSearch',
+  NoneSearch = 'noneSearch',
 }

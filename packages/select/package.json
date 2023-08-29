@@ -31,6 +31,7 @@
     "@sbercloud/uikit-product-button": "5.3.16",
     "@sbercloud/uikit-product-checkbox": "3.1.29",
     "@sbercloud/uikit-product-divider": "2.0.45",
+    "@sbercloud/uikit-product-dropdown": "0.18.1",
     "@sbercloud/uikit-product-icons": "5.22.0",
     "@sbercloud/uikit-product-input-decorator-private": "3.1.1",
     "@sbercloud/uikit-product-input-private": "3.1.14",
@@ -46,7 +47,6 @@
   },
   "devDependencies": {
     "@types/lodash.isequal": "4.5.5",
-    "@types/react-select": "3.1.2",
-    "type-fest": "3.13.0"
+    "@types/react-select": "3.1.2"
   }
 }

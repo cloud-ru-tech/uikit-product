@@ -1,6 +1,5 @@
 import { ReactNode, useEffect, useMemo, useRef, useState } from 'react';
 import RCSelect, { ActionMeta, createFilter, NamedProps as RCSelectNamedProps, ValueType } from 'react-select';
-import type { RequireExactlyOne } from 'type-fest';
 
 import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-product-input-decorator-private';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
@@ -13,31 +12,46 @@ import {
   MultiValue,
   NoOptionsMessage,
   Option,
-  SingleValue,
 } from '../../helperComponents/MultiSelect';
 import { textProvider, Texts } from '../../helpers/texts-provider';
-import { MultiselectOptionType, SelectSizes } from '../../helpers/types';
+import { MultiSelectModeType, MultiSelectOptionType, SelectSizes } from '../../helpers/types';
 import { styles } from '../../styles/multiSelect';
 
-export type MultiSelectSearch = {
-  defaultSearch: {
-    onSelectOption(option?: MultiselectOptionType): void;
-    onRemoveOption(option?: MultiselectOptionType): void;
-  };
-  inMenuSearch: {
-    onSelectOption(option?: MultiselectOptionType): void;
-    onRemoveOption(option?: MultiselectOptionType): void;
-    onSelectOptions(options?: MultiselectOptionType[]): void;
-    onRemoveOptions(): void;
-    renderOption?(props: MultiselectOptionType): ReactNode;
-    collapseOnReaching?: number;
-  };
-};
+type MultiSelectSearch =
+  | {
+      type: MultiSelectModeType.InInputSearch;
+      props: {
+        onSelectOption(option?: MultiSelectOptionType): void;
+        onRemoveOption(option?: MultiSelectOptionType): void;
+      };
+    }
+  | {
+      type: MultiSelectModeType.InMenuSearch;
+      props: {
+        onSelectOption(option?: MultiSelectOptionType): void;
+        onRemoveOption(option?: MultiSelectOptionType): void;
+        onSelectOptions(options?: MultiSelectOptionType[]): void;
+        onRemoveOptions(): void;
+        renderOption?(props: MultiSelectOptionType): ReactNode;
+        collapseOnReaching?: number;
+      };
+    }
+  | {
+      type: MultiSelectModeType.NoneSearch;
+      props: {
+        onSelectOption(option?: MultiSelectOptionType): void;
+        onRemoveOption(option?: MultiSelectOptionType): void;
+        renderOption?(props: MultiSelectOptionType): ReactNode;
+        collapseOnReaching?: number;
+        tagValuesDropdownClassName?: string;
+        tagValueClassName?: string;
+      };
+    };
 
 export type MultiSelectProps = {
-  options: MultiselectOptionType[];
-  value: MultiselectOptionType[];
-  search: RequireExactlyOne<MultiSelectSearch, 'defaultSearch' | 'inMenuSearch'>;
+  options: MultiSelectOptionType[];
+  value: MultiSelectOptionType[];
+  mode: MultiSelectSearch;
   onInputChange?(value: string): void;
   error?: string;
   size?: SelectSizes;
@@ -72,7 +86,7 @@ export function MultiSelect(props: MultiSelectProps) {
     options,
     placeholder,
     value,
-    search: { defaultSearch, inMenuSearch },
+    mode,
     closeMenuOnScroll = false,
     closeMenuOnSelect = true,
     maxMenuHeight = 300,
@@ -88,49 +102,39 @@ export function MultiSelect(props: MultiSelectProps) {
 
   const [isOpened, setIsOpened] = useState(false);
 
-  const isCollapsedValue = inMenuSearch && value?.length >= (inMenuSearch.collapseOnReaching ?? Infinity);
-  const isMultiValue = !isCollapsedValue || undefined;
+  const isNoneSearch = mode.type === MultiSelectModeType.NoneSearch;
+  const isInMenuSearch = mode.type === MultiSelectModeType.InMenuSearch;
 
   const components = useMemo(
     () => ({
       IndicatorsContainer: () => <></>,
       LoadingMessage,
-      Menu,
+      Menu: isNoneSearch ? () => <></> : Menu,
       MenuList,
       NoOptionsMessage,
       Option,
-      ...(isCollapsedValue ? { SingleValue } : { MultiValue }),
+      MultiValue,
     }),
-    [isCollapsedValue],
+    [isNoneSearch],
   );
 
   const appliedStyles = useMemo(() => styles(size, error), [size, error]);
 
-  const handleChange = (value: ValueType<MultiselectOptionType, true>, meta: ActionMeta<MultiselectOptionType>) => {
-    if (defaultSearch) {
-      switch (meta.action) {
-        case SelectActionTypes.SelectOption:
-          return defaultSearch.onSelectOption(meta.option);
-        case SelectActionTypes.RemoveValue:
-        case SelectActionTypes.PopValue:
-          return defaultSearch.onRemoveOption(meta.removedValue);
-        default:
-          return;
-      }
-    }
-
-    if (inMenuSearch) {
-      switch (meta.action) {
-        case SelectActionTypes.SelectOption:
-          return Array.isArray(value) ? inMenuSearch.onSelectOptions(value) : inMenuSearch.onSelectOption(meta.option);
-        case SelectActionTypes.RemoveValue:
-        case SelectActionTypes.PopValue:
-          return inMenuSearch.onRemoveOption(meta.removedValue);
-        case SelectActionTypes.Reset:
-          return inMenuSearch.onRemoveOptions();
-        default:
-          return;
-      }
+  const handleChange = (value: ValueType<MultiSelectOptionType, true>, meta: ActionMeta<MultiSelectOptionType>) => {
+    switch (meta.action) {
+      case SelectActionTypes.SelectOption:
+        return isInMenuSearch && Array.isArray(value)
+          ? mode.props.onSelectOptions(value)
+          : mode.props.onSelectOption(meta.option);
+      case SelectActionTypes.RemoveValue:
+      case SelectActionTypes.PopValue:
+        return mode.props.onRemoveOption(meta.removedValue);
+      case SelectActionTypes.Reset:
+        if (isInMenuSearch) {
+          return mode.props.onRemoveOptions();
+        }
+      default:
+        return;
     }
   };
 
@@ -168,14 +172,14 @@ export function MultiSelect(props: MultiSelectProps) {
             trim: true,
             matchFrom: 'start' as const,
           })}
-          hideSelectedOptions={!inMenuSearch}
           inputValue={inputValue}
           menuIsOpen={isOpened || undefined}
+          mode={mode}
           isFocused={isOpened || undefined}
           isLoading={isLoading}
-          isMulti={isMultiValue}
-          isMenuSearch={Boolean(inMenuSearch)}
-          isSearchable={Boolean(defaultSearch)}
+          isMulti
+          hideSelectedOptions={!isInMenuSearch}
+          isSearchable={!isInMenuSearch}
           maxMenuHeight={maxMenuHeight}
           openMenuOnFocus
           options={isLoading ? undefined : options}
@@ -183,7 +187,6 @@ export function MultiSelect(props: MultiSelectProps) {
           styles={appliedStyles}
           tabSelectsValue={false}
           value={value}
-          renderOption={inMenuSearch ? inMenuSearch.renderOption : undefined}
           onChange={handleChange}
           onMenuInputFocus={() => setIsOpened(true)}
           onBlur={onBlur}
@@ -194,3 +197,6 @@ export function MultiSelect(props: MultiSelectProps) {
     </InputDecoratorPrivate>
   );
 }
+
+MultiSelect.sizes = SelectSizes;
+MultiSelect.types = MultiSelectModeType;

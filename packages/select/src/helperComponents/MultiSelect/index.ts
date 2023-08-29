@@ -4,4 +4,3 @@ export * from './MenuList';
 export * from './Option';
 export * from './NoOptionsMessage';
 export * from './LoadingMessage';
-export * from './SingleValue';

@@ -3,21 +3,21 @@ import { OptionProps } from 'react-select';
 import { CheckboxIconPrivate } from '@sbercloud/uikit-product-checkbox';
 
 import { SelectActionTypes } from '../../../constants';
-import { MultiselectOptionType } from '../../../helpers/types';
+import { MultiSelectModeType, MultiSelectOptionType } from '../../../helpers/types';
 import * as S from './styled';
 
 const { RemoveValue, SelectOption } = SelectActionTypes;
 
-export function Option(props: OptionProps<MultiselectOptionType, true>) {
+export function Option(props: OptionProps<MultiSelectOptionType, true>) {
   const {
     innerProps,
     isSelected,
     isDisabled,
     data,
-    selectProps: { isMenuSearch, onChange, renderOption },
+    selectProps: { mode, onChange },
   } = props;
 
-  if (isMenuSearch) {
+  if (mode.type === MultiSelectModeType.InMenuSearch) {
     const handleCheckbox = () =>
       onChange?.(data, {
         action: isSelected ? RemoveValue : SelectOption,
@@ -25,7 +25,7 @@ export function Option(props: OptionProps<MultiselectOptionType, true>) {
         option: data,
       });
 
-    const label = renderOption ? renderOption(data) : data.label;
+    const label = mode.props.renderOption ? mode.props.renderOption(data) : data.label;
 
     return (
       <S.CustomOptionWithCheckbox {...innerProps} onClick={handleCheckbox}>

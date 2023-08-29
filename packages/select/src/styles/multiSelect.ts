@@ -5,7 +5,7 @@ import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { SHADOW } from '@sbercloud/uikit-product-utils';
 
 import { SIZES_IN_PX } from '../constants';
-import { SelectSizes } from '../helpers/types';
+import { MultiSelectModeType, SelectSizes } from '../helpers/types';
 import { styles as cStyles } from './common';
 
 const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
@@ -54,12 +54,16 @@ export const styles = (size: SelectSizes, externalError?: string) => {
       minHeight: SIZES_IN_PX[size].minHeight,
       padding: SIZES_IN_PX[size].padding,
     }),
+    input: (styles: CSSProperties) => ({
+      ...styles,
+      color: COLORS_SELECT.TEXT_COLOR,
+    }),
     menuList: (
       styles: CSSProperties,
-      { selectProps: { isMenuSearch } }: { selectProps: { isMenuSearch: boolean } },
+      { selectProps: { mode } }: { selectProps: { mode: { type: MultiSelectModeType } } },
     ) => ({
       ...styles,
-      borderRadius: isMenuSearch ? 0 : 4,
+      borderRadius: mode.type === MultiSelectModeType.InMenuSearch ? 0 : 4,
       padding: 0,
     }),
     menu: (styles: CSSProperties) => ({

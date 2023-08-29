@@ -9,22 +9,23 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { SelectActionTypes } from '../../../constants';
 import { textProvider, Texts } from '../../../helpers/texts-provider';
-import { MultiselectOptionType } from '../../../helpers/types';
+import { MultiSelectModeType, MultiSelectOptionType } from '../../../helpers/types';
 import { CustomOptionWithCheckbox, Label } from '../Option/styled';
 
-export function MenuList(props: MenuListComponentProps<MultiselectOptionType, true>): JSX.Element {
+export function MenuList(props: MenuListComponentProps<MultiSelectOptionType, true>): JSX.Element {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const {
     children,
     getValue,
     options,
-    selectProps: { inputValue = '', isMenuSearch, onChange },
+    selectProps: { inputValue = '', mode, onChange },
   } = props;
 
   const isAllSelected = getValue().length === options.length;
+  const isInMenuSearch = mode.type === MultiSelectModeType.InMenuSearch;
 
-  const handleChange = onChange as NonNullable<ReactSelectNamedProps<MultiselectOptionType, true>['onChange']>;
+  const handleChange = onChange as NonNullable<ReactSelectNamedProps<MultiSelectOptionType, true>['onChange']>;
 
   const handleSelect = () => {
     if (isAllSelected) {
@@ -40,7 +41,7 @@ export function MenuList(props: MenuListComponentProps<MultiselectOptionType, tr
 
   return (
     <ReactSelectComponents.MenuList {...props}>
-      {isMenuSearch && options.length > 0 && inputValue.length === 0 && (
+      {isInMenuSearch && options.length > 0 && inputValue.length === 0 && (
         <CustomOptionWithCheckbox onClick={handleSelect}>
           <CheckboxIconPrivate partChecked={isAllSelected} />
           <Label>
