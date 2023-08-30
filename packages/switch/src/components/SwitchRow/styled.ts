@@ -19,6 +19,14 @@ enum SWITCH_ROW__CSS_VARS {
   icon = '--switch-row__icon-color',
 }
 
+export const Wrapper = styled.div`
+  cursor: pointer;
+
+  &[data-disabled] {
+    cursor: not-allowed;
+  }
+`;
+
 export const styledSwitchRow = (
   SwitchRow: FunctionComponent<SwitchRowProps>,
 ): FunctionComponent<SwitchRowProps> => styled(SwitchRow as FunctionComponent)`
@@ -62,13 +70,11 @@ export const Title = styled.div`
 export const titleTooltipClassName = css`
   margin-left: 4px;
   vertical-align: bottom;
-  z-index: 1;
   position: relative;
   fill: var(${SWITCH_ROW__CSS_VARS.icon});
 `;
 
 export const disabledToggleTooltip = css`
-  z-index: 1;
   position: relative;
 `;
 
@@ -78,23 +84,10 @@ export const Description = styled.div`
   color: var(${SWITCH_ROW__CSS_VARS.description});
 `;
 
-export const SwitchLabel = styled.label`
-  border-radius: inherit;
+export const SwitchLabel = styled.label``;
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    border-radius: inherit;
-  }
-
+export const switchWithTooltipClassName = css`
   &[data-disabled] {
-    &:after {
-      cursor: not-allowed;
-    }
+    cursor: pointer;
   }
 `;

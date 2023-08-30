@@ -48,13 +48,18 @@ function StylelessSwitchRow({
       data-test-id='switch-row__switch'
       size={Switch.sizes.Big}
       checked={checked}
+      className={disabledToggleTooltip && S.switchWithTooltipClassName}
       disabled={disabled}
-      onChange={onChange}
+      // nit: onChange is not used, because we catch event on parent component
+      onChange={() => {}}
     />
   );
 
+  const handleChange = () => !disabled && onChange(!checked);
+
   return (
-    <div
+    <S.Wrapper
+      onClick={handleChange}
       className={className}
       data-disabled={disabled || undefined}
       data-checked={checked || undefined}
@@ -65,7 +70,7 @@ function StylelessSwitchRow({
         {description && <S.Description data-test-id='switch-row__description'>{description}</S.Description>}
       </S.Content>
 
-      <S.SwitchLabel data-disabled={disabled || undefined}>
+      <S.SwitchLabel>
         {disabled && disabledToggleTooltip ? (
           <Tooltip
             title={disabledToggleTooltip.title}
@@ -81,7 +86,7 @@ function StylelessSwitchRow({
           toggle
         )}
       </S.SwitchLabel>
-    </div>
+    </S.Wrapper>
   );
 }
 
