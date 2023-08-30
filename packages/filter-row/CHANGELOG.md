@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2023-08-30)
+
+
+### Features
+
+* **[SVP-4909](https://jira.sbercloud.tech/browse/SVP-4909):** added filter number ([39b4ef0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/39b4ef0bad7308dfebed468144b9e0a77b12c553))
+
+
+
+
+
 # 0.4.0 (2023-08-28)
 
 
