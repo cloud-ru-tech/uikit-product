@@ -18,7 +18,7 @@ export type SimpleInputProps = RefAttributes<HTMLInputElement> &
     type?: Types;
     disabled?: boolean;
     error?: boolean;
-    autoComplete?: boolean;
+    autoComplete?: boolean | string;
     ellipsis?: boolean;
     prefix?: string;
     moreButton?: {

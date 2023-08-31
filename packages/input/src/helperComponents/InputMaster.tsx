@@ -17,7 +17,7 @@ export type InputMasterProps = WithSupportProps<{
   error?: string;
   maxLength?: number;
   className?: string;
-  autoComplete?: boolean;
+  autoComplete?: boolean | string;
   name?: string;
   size?: SimpleInputProps['size'];
 }>;

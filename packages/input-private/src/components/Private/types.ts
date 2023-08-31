@@ -14,7 +14,7 @@ export type InputPrivateProps = RefAttributes<HTMLInputElement> &
     placeholder?: string;
     type?: Types;
     disabled?: boolean;
-    autoComplete?: boolean;
+    autoComplete?: boolean | string;
     maxLength?: number;
     onFocus?: FocusEventHandler<HTMLInputElement>;
     onBlur?: FocusEventHandler<HTMLInputElement>;

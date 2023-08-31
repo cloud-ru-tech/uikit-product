@@ -3,6 +3,7 @@ import { ChangeEventHandler, forwardRef, MouseEventHandler } from 'react';
 import { excludeSupportProps, extractDataProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Types } from './constants';
+import { getAutoCompleteAttributeValue } from './helpers';
 import { styledInputPrivate } from './styled';
 import { InputPrivateProps } from './types';
 
@@ -39,7 +40,7 @@ const StylelessForwardedPrivateInput = forwardRef<HTMLInputElement, InputPrivate
           maxLength={maxLength}
           id={id}
           className={className}
-          autoComplete={autoComplete ? 'on' : 'off'}
+          autoComplete={getAutoCompleteAttributeValue(autoComplete)}
           ref={ref}
           value={value}
           onChange={onChangeHandler}
