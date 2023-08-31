@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2023-08-31)
+
+
+### Features
+
+* **[LK-2312](https://jira.sbercloud.tech/browse/LK-2312):** make autocomplete option title and subTitle truncated and add additionalButton prop ([6721180](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6721180c828baff9570ce8c6a4ff24797992f139))
+
+
+
+
+
 ## 3.3.14 (2023-08-23)
 
 ### Only dependencies have been changed
