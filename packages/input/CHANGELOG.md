@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.5.0 (2023-08-31)
+
+
+### Features
+
+* **[DPS-6106](https://jira.sbercloud.tech/browse/DPS-6106):** allow different values for autocomplete attribute ([0a34f38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0a34f38f82f91f720d9ca21c9408c18eac86c774))
+
+
+
+
+
 # 3.4.0 (2023-08-31)
 
 
@@ -394,7 +405,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input@3.0.6...@sbercloud/uikit-product-input@3.0.7) (2022-12-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-input
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-input-private@3.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
 
 ## [3.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input@3.0.5...@sbercloud/uikit-product-input@3.0.6) (2022-11-28)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2023-08-31)
+
+
+### Features
+
+* **[DPS-6106](https://jira.sbercloud.tech/browse/DPS-6106):** allow different values for autocomplete attribute ([0a34f38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0a34f38f82f91f720d9ca21c9408c18eac86c774))
+
+
+
+
+
 ## 3.1.14 (2023-08-23)
 
 ### Only dependencies have been changed

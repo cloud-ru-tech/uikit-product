@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-header",
   "title": "Header",
-  "version": "1.2.23",
+  "version": "1.2.24",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -35,7 +35,7 @@
     "@sbercloud/uikit-product-dropdown": "0.18.1",
     "@sbercloud/uikit-product-icons": "5.22.0",
     "@sbercloud/uikit-product-scroll": "1.4.7",
-    "@sbercloud/uikit-product-search": "0.2.50",
+    "@sbercloud/uikit-product-search": "0.2.51",
     "@sbercloud/uikit-product-theme": "0.37.0",
     "@sbercloud/uikit-product-tooltip": "4.0.4",
     "@sbercloud/uikit-product-tooltip-private": "1.2.29",
