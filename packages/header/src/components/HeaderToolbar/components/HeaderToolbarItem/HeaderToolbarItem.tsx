@@ -8,7 +8,7 @@ import * as S from './styled';
 export type HeaderToolbarItemProps = WithSupportProps<{
   className?: string;
   icon: ReactElement;
-  title: string;
+  title: string | undefined;
   href?: string;
   target?: HTMLAttributeAnchorTarget;
   onClick?: MouseEventHandler<HTMLElement>;
@@ -34,13 +34,15 @@ export function HeaderToolbarItem({
     );
   }
 
+  const tooltipValue = title ? { title } : undefined;
+
   return (
     <ButtonIcon
       className={className}
       icon={icon}
       href={href}
       target={target}
-      tooltip={{ title }}
+      tooltip={tooltipValue}
       onClick={onClick}
       {...extractSupportProps(rest)}
     />
