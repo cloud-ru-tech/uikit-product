@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.30.0 (2023-08-31)
+
+
+### BREAKING CHANGES
+
+
+* **[DPS-4643](https://jira.sbercloud.tech/browse/DPS-4643):** add none-search mode ([c5952d5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c5952d59e534d1ef9024da26bfc2a455612ed6d4))
+
+
+
+
 ## 0.29.18 (2023-08-28)
 
 
