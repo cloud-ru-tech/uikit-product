@@ -3,12 +3,19 @@ import { styled } from '@linaria/react';
 
 import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from '../themes';
+
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
 
-  width: 300px;
+  width: 250px;
   border-radius: 8px;
 `;
 
@@ -20,6 +27,12 @@ export const Inputs = styled.div`
 
 export const inputsDividerClassName = css`
   fill: var(${EXPORT_VARS.GREY[200]});
+`;
+
+export const inputClassName = css`
+  & > div {
+    background-color: var(${COLORS.INPUT_BACKGROUND});
+  }
 `;
 
 export const inputClassNameBase = css`

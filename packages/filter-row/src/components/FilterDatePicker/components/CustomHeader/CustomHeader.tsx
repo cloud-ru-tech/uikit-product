@@ -1,3 +1,4 @@
+import { cx } from '@linaria/core';
 import { format, isValid } from 'date-fns';
 import { useCallback, useEffect, useState } from 'react';
 
@@ -83,7 +84,7 @@ export function CustomHeader({ isPeriod, startDate, endDate, openToDate, onChang
       <S.Inputs>
         <InputMask
           value={innerStartDate}
-          className={isPeriod ? S.inputClassNamePeriod : S.inputClassNameBase}
+          className={cx(S.inputClassName, isPeriod ? S.inputClassNamePeriod : S.inputClassNameBase)}
           onChange={handleChangeStartDate}
           mask={InputMask.masks.Date}
         />
@@ -92,7 +93,7 @@ export function CustomHeader({ isPeriod, startDate, endDate, openToDate, onChang
             <ArrowBoldRightInterfaceSVG width={24} height={24} className={S.inputsDividerClassName} />
             <InputMask
               value={innerEndDate}
-              className={isPeriod ? S.inputClassNamePeriod : S.inputClassNameBase}
+              className={cx(S.inputClassName, isPeriod ? S.inputClassNamePeriod : S.inputClassNameBase)}
               onChange={handleChangeEndDate}
               mask={InputMask.masks.Date}
             />

@@ -1,6 +1,5 @@
 import { styled } from '@linaria/react';
 
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { SHADOW } from '@sbercloud/uikit-product-utils';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -27,12 +26,6 @@ export const Container = styled.div`
     box-shadow: ${SHADOW.MEDIUM};
 
     line-height: 24px;
-  }
-
-  .react-datepicker__day--today:not(.react-datepicker__day--selected) {
-    color: var(${COLORS.TODAY});
-    border: 1px solid var(${COLORS.TODAY_BORDER});
-    border-radius: 4px;
   }
 
   .react-datepicker__triangle {
@@ -101,7 +94,6 @@ export const Container = styled.div`
 
   .react-datepicker__week {
     display: flex;
-    justify-content: space-between;
   }
 
   .react-datepicker__day-name,
@@ -174,6 +166,37 @@ export const Container = styled.div`
     }
   }
 
+  .react-datepicker__day {
+    &--today {
+      color: var(${COLORS.TODAY});
+      border: 1px solid var(${COLORS.TODAY_BORDER});
+      border-radius: 4px;
+      width: 34px;
+      height: 34px;
+    }
+
+    &--outside-month {
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    &--outside-month:not(&--selected) {
+      color: var(${COLORS.MUTED});
+    }
+
+    &:active {
+      background-color: var(${COLORS.SELECTED_BACKGROUND});
+      color: var(${COLORS.SELECTED});
+    }
+  }
+
+  .react-datepicker__day--outside-month.react-datepicker__day--selected,
+  .react-datepicker__day--outside-month.react-datepicker__day--range-start,
+  .react-datepicker__day--outside-month.react-datepicker__day--range-end {
+    background-color: var(${COLORS.SELECTED_RANGE_BACKGROUND});
+    color: var(${COLORS.MUTED});
+  }
+
   .react-datepicker__day--disabled.react-datepicker__day--selected {
     cursor: default;
   }
@@ -182,12 +205,6 @@ export const Container = styled.div`
     position: relative;
     display: inline-block;
     width: 100%;
-  }
-
-  .react-datepicker__day--outside-month {
-    color: var(${EXPORT_VARS.BLACK_ALFA[16]});
-    cursor: not-allowed;
-    pointer-events: none;
   }
 
   .react-datepicker--time-only {
