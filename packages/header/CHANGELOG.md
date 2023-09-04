@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.25 (2023-09-04)
+
+
+### Bug Fixes
+
+* **[FF-2852](https://jira.sbercloud.tech/browse/FF-2852):** add undefined for title in HeaderToolBarItem ([461a523](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/461a523346627f9f413933ee000d45fa6a693bb4))
+
+
+
+
+
 ## 1.2.24 (2023-08-31)
 
 ### Only dependencies have been changed
