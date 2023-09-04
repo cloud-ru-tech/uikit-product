@@ -10,6 +10,7 @@ import { MenuItem } from '../MenuItem';
 import { NoData } from '../NoData';
 import { SearchItem } from '../SearchItem';
 import { Trigger } from '../Trigger';
+import * as S from './styled';
 
 export const FilterChipRadio = forwardRef(
   ({ withSearch, icon, label, items, onChange, withSingleFilterClearButton }: RadioChipProps, ref) => {
@@ -82,7 +83,11 @@ export const FilterChipRadio = forwardRef(
     const hasValue = Boolean(typeof value === 'boolean' || value);
 
     return (
-      <DropdownMenu placement={DropdownMenu.placements.BottomStart} actions={<>{actions}</>}>
+      <DropdownMenu
+        dropdownMenuClassName={S.dropdownClassName}
+        placement={DropdownMenu.placements.BottomStart}
+        actions={<>{actions}</>}
+      >
         <Trigger
           label={label}
           icon={icon}

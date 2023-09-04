@@ -76,6 +76,8 @@ export const filtersMock: FilterRowProps<Filters>['filters'] = [
     type: FilterRow.filterTypes.Date,
     id: 'dates',
     label: 'Дата создания',
+    min: new Date('2010-10-10'),
+    max: new Date(),
   },
 
   {

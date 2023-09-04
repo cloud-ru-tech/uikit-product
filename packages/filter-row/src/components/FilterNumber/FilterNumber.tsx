@@ -37,6 +37,7 @@ export function FilterNumber({ filterValue = DEFAULT_FILTER_VALUE, onClear, onCh
   const handleEndValueChange = (newValue: string) => {
     if (!/\D/.test(newValue)) {
       setEndValue(newValue);
+
       onChange?.({ startValue, endValue: newValue, comparison });
     }
   };

@@ -73,6 +73,8 @@ type InnerDate = Date | undefined;
 
 type DateChipProps = {
   onChange(dates: [InnerDate, InnerDate?]): void;
+  min?: Date;
+  max?: Date;
   withSingleFilterClearButton?: boolean;
 } & ChipFilterLabelValue;
 
