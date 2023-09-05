@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.1 (2023-09-05)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-switch@3.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/switch/CHANGELOG.md)
+
+
+
+
+
 # 0.6.0 (2023-09-05)
 
 

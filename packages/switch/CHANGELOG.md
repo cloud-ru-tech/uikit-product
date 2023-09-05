@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2023-09-05)
+
+
+### Features
+
+* **[LK-2428](https://jira.sbercloud.tech/browse/LK-2428):** switch row updates ([e83fae4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e83fae4a84ea897f4a06ee416cc9a34ca8f6ab4b))
+
+
+
+
+
 ## 3.3.1 (2023-08-23)
 
 ### Only dependencies have been changed

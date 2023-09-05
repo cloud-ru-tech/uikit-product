@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.18.39 (2023-09-05)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-datepicker@0.14.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/datepicker/CHANGELOG.md)
+
+
+
+
+
 ## 0.18.38 (2023-08-31)
 
 ### Only dependencies have been changed
