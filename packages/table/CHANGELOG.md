@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.50.29 (2023-09-05)
+
+
+### Bug Fixes
+
+* **[FF-2834](https://jira.sbercloud.tech/browse/FF-2834):** add search props in table ([2aa2750](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2aa2750874278af0e1bc2a78994f32f2c3f3bbcb))
+
+
+
+
+
 ## 0.50.28 (2023-09-05)
 
 ### Only dependencies have been changed
@@ -730,7 +741,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.48.15 (2023-01-19)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-table
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-table-private@0.22.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/table-private/CHANGELOG.md)
 
 ## [0.48.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.48.13...@sbercloud/uikit-product-table@0.48.14) (2023-01-13)
 

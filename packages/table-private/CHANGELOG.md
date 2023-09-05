@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.22.10 (2023-09-05)
+
+
+### Bug Fixes
+
+* **[FF-2834](https://jira.sbercloud.tech/browse/FF-2834):** add search props in table ([2aa2750](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2aa2750874278af0e1bc2a78994f32f2c3f3bbcb))
+
+
+
+
+
 ## 0.22.9 (2023-08-23)
 
 ### Only dependencies have been changed
