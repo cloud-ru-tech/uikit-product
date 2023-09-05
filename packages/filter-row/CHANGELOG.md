@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2023-09-05)
+
+
+### Features
+
+* **[KUBER-3414](https://jira.sbercloud.tech/browse/KUBER-3414):** add min & max values ([5e93445](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5e93445bf5b7b1988e72d53a4bdd3701af00c308))
+
+
+
+
+
 ## 0.5.2 (2023-08-31)
 
 ### Only dependencies have been changed
