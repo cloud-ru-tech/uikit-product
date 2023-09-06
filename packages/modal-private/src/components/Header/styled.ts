@@ -46,6 +46,7 @@ export const TitleWithTooltip = styled.div`
   grid-column-start: 2;
   column-gap: 10px;
   align-items: center;
+  overflow: hidden;
 `;
 
 export const CloseButtonPlaceholder = styled.div`
