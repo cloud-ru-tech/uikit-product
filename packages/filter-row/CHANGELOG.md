@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.2 (2023-09-06)
+
+
+### Bug Fixes
+
+* **[FF-3016](https://jira.sbercloud.tech/browse/FF-3016):** brought calendar to standard layout ([d31c56a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d31c56a15c93be285abd590a64dbfee7a69d7cb4))
+
+
+
+
+
 ## 0.6.1 (2023-09-05)
 
 ### Only dependencies have been changed
