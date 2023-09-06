@@ -11,6 +11,7 @@ import * as S from './styled';
 
 export type TruncateStringEndProps = WithSupportProps<{
   className?: string;
+  typographyClassName: string;
   hideTooltip?: boolean;
   maxLines?: number;
   placement?: TooltipProps['placement'];
@@ -22,6 +23,7 @@ export type TruncateStringEndProps = WithSupportProps<{
 export function TruncateStringEnd({
   text,
   className,
+  typographyClassName,
   hideTooltip,
   tag,
   maxLines = 1,
@@ -46,15 +48,15 @@ export function TruncateStringEnd({
     };
   }, [showTooltip, hideTooltip, tag]);
 
-  const TextElement = maxLines > 1 ? S.Text2LinesAndMore : S.Text1Line;
   const tooltipVisible = showTooltip && !hideTooltip;
+  const TextElement = maxLines > 1 ? S.TextMultiLine : S.TextOneLine;
 
   const textElement = (
     <TextElement
       as={tag}
       ref={textElementRef}
       maxLines={maxLines}
-      className={!tooltipVisible ? className : undefined}
+      className={tooltipVisible ? typographyClassName : cx(className, typographyClassName)}
       {...extractSupportProps(rest)}
     >
       {text}

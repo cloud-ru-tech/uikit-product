@@ -10,6 +10,7 @@ import * as S from './styled';
 
 export type TruncateStringMiddleProps = WithSupportProps<{
   className?: string;
+  typographyClassName: string;
   hideTooltip?: boolean;
   placement?: TooltipProps['placement'];
   tag: Tag;
@@ -20,6 +21,7 @@ export type TruncateStringMiddleProps = WithSupportProps<{
 export function TruncateStringMiddle({
   text,
   className,
+  typographyClassName,
   hideTooltip,
   tag,
   placement = Tooltip.placements.Auto,
@@ -56,10 +58,10 @@ export function TruncateStringMiddle({
 
   const textElement = (
     <>
-      <S.FullText as={tag} ref={textElementRef}>
+      <S.FullText as={tag} ref={textElementRef} className={typographyClassName}>
         {text}
       </S.FullText>
-      <S.TruncatedText as={tag} ref={truncatedTextElementRef}>
+      <S.TruncatedText as={tag} ref={truncatedTextElementRef} className={typographyClassName}>
         {truncatedString}
       </S.TruncatedText>
     </>

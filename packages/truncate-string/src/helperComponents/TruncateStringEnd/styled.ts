@@ -1,14 +1,14 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-export const Text1Line = styled.span<{ maxLines: number }>`
+export const TextOneLine = styled.span`
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 `;
 
-export const Text2LinesAndMore = styled.span<{ maxLines: number }>`
+export const TextMultiLine = styled.span<{ maxLines: number }>`
   display: -webkit-box;
 
   margin: 0;

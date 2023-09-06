@@ -1,5 +1,3 @@
-import { cx } from '@linaria/core';
-
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 
 import { TextEntity } from '../../constants';
@@ -14,8 +12,8 @@ import * as Typography from './styled';
 import { getTag } from './utils';
 
 export type TruncateStringProps = { textEntity?: TextEntity } & (
-  | ({ variant?: Variant.End } & Omit<TruncateStringEndProps, 'tag'>)
-  | ({ variant: Variant.Middle } & Omit<TruncateStringMiddleProps, 'tag'>)
+  | ({ variant?: Variant.End } & Omit<TruncateStringEndProps, 'tag' | 'typographyClassName'>)
+  | ({ variant: Variant.Middle } & Omit<TruncateStringMiddleProps, 'tag' | 'typographyClassName'>)
 );
 
 export function TruncateString({
@@ -24,16 +22,16 @@ export function TruncateString({
   ...props
 }: TruncateStringProps) {
   const tag = getTag(textEntity);
-  const className = cx(props.className, Typography[textEntity]);
+  const typographyClassName: string = Typography[textEntity];
 
   switch (variant) {
     case Variant.Middle: {
-      return <TruncateStringMiddle {...props} tag={tag} className={className} />;
+      return <TruncateStringMiddle {...props} tag={tag} typographyClassName={typographyClassName} />;
     }
 
     case Variant.End:
     default: {
-      return <TruncateStringEnd {...props} tag={tag} className={className} />;
+      return <TruncateStringEnd {...props} tag={tag} typographyClassName={typographyClassName} />;
     }
   }
 }
