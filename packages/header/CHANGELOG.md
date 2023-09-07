@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.27 (2023-09-07)
+
+
+### Bug Fixes
+
+* **[LK-2377](https://jira.sbercloud.tech/browse/LK-2377):** truncate project description ([c9f9397](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c9f939723323d31e0e610eef28fc2a5f292da7db))
+
+
+
+
+
 ## 1.2.26 (2023-09-07)
 
 ### Only dependencies have been changed
