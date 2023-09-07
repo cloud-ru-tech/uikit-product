@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.6.2 (2023-09-07)
+
+
+### Bug Fixes
+
+* **[FF-2692](https://jira.sbercloud.tech/browse/FF-2692):** fixed truncate header in modal ([c22146f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c22146f9a81ac579820979aa9e060bcd03ce117a))
+
+
+
+
+
 ## 1.6.1 (2023-08-23)
 
 ### Only dependencies have been changed
@@ -466,7 +477,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal-private@1.1.0...@sbercloud/uikit-product-modal-private@1.1.1) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-modal-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-truncate-string@0.9.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 # 1.1.0 (2022-12-19)
 

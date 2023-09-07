@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.26 (2023-09-07)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-truncate-string@0.9.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+
+
+
+
+
 ## 1.2.25 (2023-09-04)
 
 

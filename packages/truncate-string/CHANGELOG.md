@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.5 (2023-09-07)
+
+
+### Bug Fixes
+
+* **[FF-2692](https://jira.sbercloud.tech/browse/FF-2692):** fixed handling of styles in truncate ([2d742d9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2d742d93d30f680f4b178348965318a4a53ea888))
+
+
+
+
+
 ## 0.9.4 (2023-08-23)
 
 ### Only dependencies have been changed

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.15 (2023-09-07)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-input@3.5.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input/CHANGELOG.md)
+* [@sbercloud/uikit-product-modal@1.5.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal/CHANGELOG.md)
+
+
+
+
+
 ## 0.1.14 (2023-08-31)
 
 ### Only dependencies have been changed

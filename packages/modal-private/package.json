@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-modal-private",
   "title": "Modal Private",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,7 +33,7 @@
     "@sbercloud/uikit-product-scroll": "1.4.7",
     "@sbercloud/uikit-product-theme": "0.37.0",
     "@sbercloud/uikit-product-tooltip": "4.0.4",
-    "@sbercloud/uikit-product-truncate-string": "0.9.4",
+    "@sbercloud/uikit-product-truncate-string": "0.9.5",
     "@sbercloud/uikit-product-utils": "3.2.4",
     "react-modal": "3.16.1"
   },
