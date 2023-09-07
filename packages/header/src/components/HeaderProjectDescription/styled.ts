@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
@@ -21,4 +22,8 @@ export const Description = styled.div`
   margin-left: 16px;
 
   color: var(${COLORS.text});
+`;
+
+export const descriptionClassName = css`
+  width: 100%;
 `;

@@ -9,7 +9,7 @@ export type HeaderProjectDescriptionProps = {
 export function HeaderProjectDescription({ label }: HeaderProjectDescriptionProps) {
   return (
     <S.Description data-test-id='header-project-description'>
-      <TruncateString placement={TruncateString.placements.Bottom} text={label} />
+      <TruncateString placement={TruncateString.placements.Bottom} text={label} className={S.descriptionClassName} />
     </S.Description>
   );
 }
