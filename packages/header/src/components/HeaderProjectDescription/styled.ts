@@ -10,6 +10,9 @@ DARK_THEMES;
 export const Description = styled.div`
   ${TEXT_2_STYLES};
 
+  // To fix bug with truncated string inside flex
+  min-width: 0;
+
   display: flex;
   grid-area: header-project-description;
   align-items: center;
