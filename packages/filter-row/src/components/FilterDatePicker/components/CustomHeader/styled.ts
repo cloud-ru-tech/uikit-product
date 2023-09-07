@@ -15,7 +15,6 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 24px;
 
-  width: 250px;
   border-radius: 8px;
 `;
 
@@ -36,11 +35,11 @@ export const inputClassName = css`
 `;
 
 export const inputClassNameBase = css`
-  flex-basis: 100%;
+  width: 100%;
 `;
 
 export const inputClassNamePeriod = css`
-  flex-basis: calc(50% - 8px - 10px);
+  width: 108px;
 `;
 
 export const SelectionWrapper = styled.div`

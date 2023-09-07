@@ -35,7 +35,7 @@ export const PURPLE_THEME = css`
       ${COLORS.DATE}: var(${GREY[600]});
       ${COLORS.DATE_BACKGROUND_HOVER}: var(${PURPLE_ALFA[8]});
 
-      ${COLORS.TODAY}: var(${GREY[0]});
+      ${COLORS.TODAY}: var(${GREY[600]});
       ${COLORS.TODAY_BORDER}: var(${BLACK_ALFA[48]});
 
       ${COLORS.DAY_NAME}: var(${GREY[800]});
@@ -60,7 +60,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.DATE}: var(${GREY[100]});
       ${COLORS.DATE_BACKGROUND_HOVER}: var(${PURPLE_ALFA[24]});
 
-      ${COLORS.TODAY}: var(${GREY[0]});
+      ${COLORS.TODAY}: var(${GREY[100]});
       ${COLORS.TODAY_BORDER}: var(${WHITE_ALFA[48]});
 
       ${COLORS.DAY_NAME}: var(${GREY[0]});
@@ -117,7 +117,7 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.MUTED}: var(${WHITE_ALFA[24]});
       ${COLORS.MUTED_BORDER}: var(${WHITE_ALFA[24]});
 
-      ${COLORS.SELECTED}: var(${GREY[0]});
+      ${COLORS.SELECTED}: var(${GREY[800]});
       ${COLORS.SELECTED_BACKGROUND}: var(${GREEN[75]});
       ${COLORS.SELECTED_BACKGROUND_HOVER}: var(${GREEN[50]});
       ${COLORS.SELECTED_RANGE}: var(${GREY[0]});

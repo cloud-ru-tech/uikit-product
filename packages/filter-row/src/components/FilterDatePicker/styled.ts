@@ -12,8 +12,11 @@ GREEN_DARK_THEME;
 export const Container = styled.div`
   background: var(${COLORS.BACKGROUND});
   padding: 24px;
-
   border-radius: 8px;
+
+  & * {
+    box-sizing: border-box;
+  }
 `;
 
 export const Footer = styled.div`

@@ -171,8 +171,12 @@ export const Container = styled.div`
       color: var(${COLORS.TODAY});
       border: 1px solid var(${COLORS.TODAY_BORDER});
       border-radius: 4px;
-      width: 34px;
-      height: 34px;
+    }
+
+    &--today.react-datepicker__day--selected,
+    &--today.react-datepicker__day--range-start,
+    &--today.react-datepicker__day--range-end {
+      color: var(${COLORS.SELECTED});
     }
 
     &--outside-month {
