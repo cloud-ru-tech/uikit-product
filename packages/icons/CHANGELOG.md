@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.23.0 (2023-09-08)
+
+
+### Features
+
+* **DPS-0000:** add ArenadataService icon ([2029afd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2029afdca28b015e5cd36d76463d5dfbff1765a3))
+
+
+
+
+
 # 5.22.0 (2023-08-23)
 
 
