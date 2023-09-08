@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.28 (2023-09-08)
+
+
+### Bug Fixes
+
+* **[LK-2377](https://jira.sbercloud.tech/browse/LK-2377):** TruncateStringEnd loop tooltip changing ([cac53a4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cac53a471d880c7ee0d41a302c9fc5f196afb03b))
+
+
+
+
+
 ## 1.2.27 (2023-09-07)
 
 
