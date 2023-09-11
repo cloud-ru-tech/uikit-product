@@ -23,6 +23,7 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
       id,
       className,
       prefix,
+      hideClearButton = false,
       moreButton,
       size = Sizes.Medium,
       type = Types.Text,
@@ -41,7 +42,7 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
     const inputRef = mergeRefs(ref, innerRef);
 
     const hasMoreButton = Boolean(moreButton);
-    const hasClearButton = Boolean(value) && !disabled;
+    const hasClearButton = Boolean(value) && !disabled && !hideClearButton;
     const hasShowButton = Boolean(value) && !disabled && type === Types.Password;
 
     const onClearHandler = () => {

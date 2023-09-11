@@ -20,6 +20,7 @@ export type InputMasterProps = WithSupportProps<{
   autoComplete?: boolean | string;
   name?: string;
   size?: SimpleInputProps['size'];
+  hideClearButton?: boolean;
 }>;
 
 export function InputMaster({
@@ -38,6 +39,7 @@ export function InputMaster({
   autoComplete,
   name,
   size,
+  hideClearButton,
   ...rest
 }: InputMasterProps) {
   const id = useUniqueId('InputMaster');
@@ -65,6 +67,7 @@ export function InputMaster({
         size,
         maxLength,
         disabled,
+        hideClearButton,
       })}
     </InputDecoratorPrivate>
   );

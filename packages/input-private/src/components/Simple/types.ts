@@ -21,6 +21,7 @@ export type SimpleInputProps = RefAttributes<HTMLInputElement> &
     autoComplete?: boolean | string;
     ellipsis?: boolean;
     prefix?: string;
+    hideClearButton?: boolean;
     moreButton?: {
       onClick(): void;
       tooltipText?: string;
