@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.5 (2023-09-11)
+
+
+### Bug Fixes
+
+* **[FF-3016](https://jira.sbercloud.tech/browse/FF-3016):** fixed colors in filter date picker ([00b1733](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/00b1733f9fcc7e5040d63d4f52e82ee4859079a5))
+
+
+
+
+
 ## 0.6.4 (2023-09-08)
 
 ### Only dependencies have been changed
