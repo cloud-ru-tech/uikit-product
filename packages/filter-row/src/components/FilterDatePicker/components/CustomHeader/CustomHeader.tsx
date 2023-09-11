@@ -87,6 +87,7 @@ export function CustomHeader({ isPeriod, startDate, endDate, openToDate, onChang
           className={cx(S.inputClassName, isPeriod ? S.inputClassNamePeriod : S.inputClassNameBase)}
           onChange={handleChangeStartDate}
           mask={InputMask.masks.Date}
+          hideClearButton
         />
         {isPeriod && (
           <>
@@ -96,6 +97,7 @@ export function CustomHeader({ isPeriod, startDate, endDate, openToDate, onChang
               className={cx(S.inputClassName, isPeriod ? S.inputClassNamePeriod : S.inputClassNameBase)}
               onChange={handleChangeEndDate}
               mask={InputMask.masks.Date}
+              hideClearButton
             />
           </>
         )}
