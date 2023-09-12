@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.6 (2023-09-12)
+
+
+### Bug Fixes
+
+* **[FF-3203](https://jira.sbercloud.tech/browse/FF-3203):** disabled button 'clear data' in inputs in FilterDataPicker ([b3ba8cb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b3ba8cbfdb2b28a8259ae7473616555e335e3673))
+
+
+
+
+
 ## 0.6.5 (2023-09-11)
 
 

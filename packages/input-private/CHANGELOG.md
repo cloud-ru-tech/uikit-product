@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.3.0 (2023-09-12)
+
+
+### Features
+
+* **[FF-3203](https://jira.sbercloud.tech/browse/FF-3203):** removed unnecessary style, add hideClearButton prop ([3c37ed4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3c37ed423b705bfbd1994c85bb5274b43999f68e))
+
+
+
+
+
 ## 3.2.1 (2023-09-08)
 
 ### Only dependencies have been changed

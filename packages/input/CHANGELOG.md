@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.6.0 (2023-09-12)
+
+
+### Features
+
+* **[FF-3203](https://jira.sbercloud.tech/browse/FF-3203):** removed unnecessary style, add hideClearButton prop ([3c37ed4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3c37ed423b705bfbd1994c85bb5274b43999f68e))
+
+
+
+
+
 ## 3.5.2 (2023-09-08)
 
 ### Only dependencies have been changed
@@ -431,7 +442,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.0.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input@3.0.5...@sbercloud/uikit-product-input@3.0.6) (2022-11-28)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-input
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-input-private@3.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
 
 ## [3.0.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input@3.0.4...@sbercloud/uikit-product-input@3.0.5) (2022-11-17)
 
