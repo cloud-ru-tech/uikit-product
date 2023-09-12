@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.3.18 (2023-09-12)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button-private@2.0.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button-private/CHANGELOG.md)
+
+
+
+
+
 ## 5.3.17 (2023-09-08)
 
 ### Only dependencies have been changed

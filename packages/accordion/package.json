@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-accordion",
   "title": "Accordion",
-  "version": "0.6.3",
+  "version": "0.6.4",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,10 +28,10 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.3.17",
+    "@sbercloud/uikit-product-button": "5.3.18",
     "@sbercloud/uikit-product-icons": "5.23.0",
     "@sbercloud/uikit-product-theme": "0.37.0",
-    "@sbercloud/uikit-product-tooltip": "4.0.5",
+    "@sbercloud/uikit-product-tooltip": "4.0.6",
     "@sbercloud/uikit-product-typography": "1.3.0",
     "@sbercloud/uikit-product-utils": "3.2.4"
   }

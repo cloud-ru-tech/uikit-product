@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-welcome-tour",
   "title": "Welcome Tour",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.3.17",
+    "@sbercloud/uikit-product-button": "5.3.18",
     "@sbercloud/uikit-product-icons": "5.23.0",
     "@sbercloud/uikit-product-pagination-private": "1.2.55",
     "@sbercloud/uikit-product-theme": "0.37.0",

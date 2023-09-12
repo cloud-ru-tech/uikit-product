@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2023-09-12)
+
+
+### Features
+
+* **[FF-3060](https://jira.sbercloud.tech/browse/FF-3060):** add fallback placements ([aa012db](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aa012db974dbdf489b9908d0313acab22eb6810e))
+
+
+
+
+
 ## 1.2.29 (2023-06-08)
 
 
