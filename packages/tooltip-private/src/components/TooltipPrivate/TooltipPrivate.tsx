@@ -5,6 +5,7 @@ import { usePopperTooltip } from 'react-popper-tooltip';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
+import { normalizeOptions } from '../../helpers/normalizeOptions';
 import { Placements, TooltipPrivateProps, TriggerTypes } from '../../helpers/types';
 import { tooltipClassName, triggerClassName } from './styled';
 
@@ -23,7 +24,7 @@ export function TooltipPrivate({
       interactive: true,
       ...props,
     },
-    popperOptions,
+    normalizeOptions(popperOptions),
   );
 
   useEffect(() => {
