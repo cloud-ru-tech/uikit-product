@@ -60,12 +60,13 @@ export function Accordion({
 
   return (
     <S.AccordionWrapper
+      onClick={toggleIsOpened}
       className={className}
       data-variant={variant}
       data-disabled={disabled || undefined}
       {...extractSupportProps(rest)}
     >
-      <S.AccordionCard onClick={toggleIsOpened}>
+      <S.AccordionCard>
         <div>
           <S.AccordionHeader data-variant={variant} data-disabled={disabled || undefined}>
             {header}
