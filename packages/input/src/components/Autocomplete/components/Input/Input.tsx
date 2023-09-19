@@ -8,9 +8,10 @@ import { FloatingContext, ReferenceContext } from '../../contexts';
 export type InputProps = Omit<InputMasterProps, 'children'> & {
   placeholder?: string;
   onChange: (value: string, event?: ChangeEvent<HTMLInputElement>) => void;
+  isOpenOnFocus?: boolean;
 };
 
-export function Input({ placeholder, onChange, ...props }: InputProps) {
+export function Input({ placeholder, onChange, isOpenOnFocus, ...props }: InputProps) {
   const { isOpen, setIsOpen } = useContext(FloatingContext);
 
   const { getProps, setElement } = useContext(ReferenceContext);
@@ -30,7 +31,7 @@ export function Input({ placeholder, onChange, ...props }: InputProps) {
   const handleFocus = (e: React.FocusEvent<HTMLInputElement, Element>) => {
     // необходимо для того, чтобы при нажатии на крестик и возвращении фокуса в поле не открывался дропдаун
     setTimeout(() => {
-      if (e.target.value) {
+      if (e.target.value || isOpenOnFocus) {
         setIsOpen(true);
       }
     }, 100);

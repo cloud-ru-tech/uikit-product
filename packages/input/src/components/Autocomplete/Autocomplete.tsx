@@ -8,6 +8,7 @@ export type AutocompleteProps = Omit<InputMasterProps, 'children' | 'autoComplet
   placeholder?: string;
   loading?: boolean;
   isOptionsError?: boolean;
+  isOpenOnFocus?: boolean;
 };
 
 function Autocomplete({
