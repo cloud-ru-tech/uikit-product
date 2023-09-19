@@ -47,7 +47,9 @@ export function Floating({
     placement: 'bottom-start',
     middleware: [
       offset(4),
-      shift(),
+      shift({
+        boundary: document.body,
+      }),
       flip(),
       size({
         apply({ elements, rects }) {
