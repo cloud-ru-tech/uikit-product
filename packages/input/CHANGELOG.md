@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.6.2 (2023-09-21)
+
+
+### Bug Fixes
+
+* **FF-0000:** autocomplete shift middleware ([f153dc0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f153dc0fd87019000b595fc6f6e57df72657a849))
+
+
+
+
+
 ## 3.6.1 (2023-09-12)
 
 ### Only dependencies have been changed
