@@ -59,7 +59,7 @@ export const ItemTextStyled = styled.p`
   margin: 0;
   white-space: nowrap;
 
-  &[data-link] {
+  &[data-cursor] {
     cursor: pointer;
   }
 

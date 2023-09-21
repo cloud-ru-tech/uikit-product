@@ -255,7 +255,7 @@ export function Breadcrumbs({
             <ItemTextStyled
               className={itemClassName}
               data-active={item.isActive || items.length === 1 || undefined}
-              data-link={item.link || undefined}
+              data-cursor={Boolean(item.link || onClick) || undefined}
               onClick={onClick ? (e): void => onClick(e, item.link) : undefined}
             >
               {isTextCut && !isVisible && typeof item.text === 'string'
