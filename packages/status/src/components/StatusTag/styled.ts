@@ -32,6 +32,7 @@ export const Wrapper = styled.span`
 `;
 
 export const Content = styled.span`
+  display: grid;
   ${TABLE_TEXT_STYLES};
   color: var(${COLORS.TEXT_COLOR});
 `;

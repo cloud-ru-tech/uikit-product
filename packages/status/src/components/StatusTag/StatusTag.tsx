@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Types, Variant } from '../../helpers';
@@ -8,7 +10,7 @@ export type StatusTagProps = {
   type?: Types;
   variant?: Variant;
   className?: string;
-  text: string;
+  text: ReactNode;
 };
 
 export function StatusTag({

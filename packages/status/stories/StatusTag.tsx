@@ -116,6 +116,7 @@ statusTag.argTypes = {
     options: Object.values(StatusTag.variants),
   },
   text: {
+    type: 'string',
     control: {
       required: true,
       type: 'text',
