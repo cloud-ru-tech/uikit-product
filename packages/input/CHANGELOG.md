@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.7.0 (2023-09-25)
+
+
+### Features
+
+* **[LK-2553](https://jira.sbercloud.tech/browse/LK-2553):** added isOpenOnFocus on Autocomplete ([b348b48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b348b483843a1c3323ffb6d6afca617e93f29850))
+
+
+
+
+
 ## 3.6.2 (2023-09-21)
 
 
