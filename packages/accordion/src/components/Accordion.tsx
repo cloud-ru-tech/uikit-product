@@ -60,13 +60,12 @@ export function Accordion({
 
   return (
     <S.AccordionWrapper
-      onClick={toggleIsOpened}
       className={className}
       data-variant={variant}
       data-disabled={disabled || undefined}
       {...extractSupportProps(rest)}
     >
-      <S.AccordionCard>
+      <S.AccordionCard onClick={toggleIsOpened}>
         <div>
           <S.AccordionHeader data-variant={variant} data-disabled={disabled || undefined}>
             {header}
@@ -94,10 +93,10 @@ export function Accordion({
         </S.AccordionButtons>
       </S.AccordionCard>
 
-      <S.AccordionContentWrapStyled data-with-animation={hasAnimation || undefined} aria-hidden={!isOpened}>
-        <div>
-          <S.AccordionContentStyled>{content}</S.AccordionContentStyled>
-        </div>
+      <S.AccordionContentWrapStyled aria-hidden={!isOpened}>
+        <S.AccordionContentStyled data-with-animation={hasAnimation || undefined} data-content>
+          {content}
+        </S.AccordionContentStyled>
       </S.AccordionContentWrapStyled>
     </S.AccordionWrapper>
   );

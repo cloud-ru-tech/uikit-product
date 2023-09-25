@@ -14,7 +14,6 @@ export const AccordionWrapper = styled.div`
   background-color: var(${COLORS.DEFAULT_BG});
   display: flex;
   flex-direction: column;
-  padding: 24px;
   border-radius: 8px;
 
   &[data-variant='${Variant.Primary}'] {
@@ -39,6 +38,7 @@ export const AccordionWrapper = styled.div`
 export const AccordionCard = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 24px;
 `;
 
 export const AccordionHeader = styled.div`
@@ -77,20 +77,29 @@ export const AccordionButtons = styled.div`
 export const AccordionContentWrapStyled = styled.div`
   display: grid;
   grid-template-rows: 0fr;
+  transition: grid-template-rows 400ms;
+  box-sizing: border-box;
+  padding: 0 24px;
 
-  &[data-with-animation='true'] {
-    transition: grid-template-rows 400ms;
+  &[aria-hidden='true'] {
+    overflow: hidden;
   }
 
   &[aria-hidden='false'] {
     grid-template-rows: 1fr;
-  }
+    padding-bottom: 24px;
 
-  & > div {
-    overflow: hidden;
+    & [data-content] {
+      visibility: visible;
+    }
   }
 `;
 
 export const AccordionContentStyled = styled.div`
-  margin-top: 20px;
+  min-height: 0;
+  visibility: hidden;
+
+  &[data-with-animation='true'] {
+    transition: visibility 400ms;
+  }
 `;
