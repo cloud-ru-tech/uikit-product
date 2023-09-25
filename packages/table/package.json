@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-table",
   "title": "React Table",
-  "version": "0.50.33",
+  "version": "0.50.34",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,7 +33,7 @@
     "@sbercloud/uikit-product-modal": "1.5.8",
     "@sbercloud/uikit-product-pagination-private": "1.2.55",
     "@sbercloud/uikit-product-table-private": "0.22.11",
-    "@sbercloud/uikit-product-toolbar": "0.16.142",
+    "@sbercloud/uikit-product-toolbar": "0.16.143",
     "@sbercloud/uikit-product-utils": "3.2.4",
     "xlsx": "0.18.5"
   }

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-sidebar",
   "title": "Sidebar",
-  "version": "1.3.27",
+  "version": "1.3.28",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -36,7 +36,7 @@
     "@sbercloud/uikit-product-label": "2.0.31",
     "@sbercloud/uikit-product-scroll": "1.4.7",
     "@sbercloud/uikit-product-search": "0.2.54",
-    "@sbercloud/uikit-product-status": "6.0.22",
+    "@sbercloud/uikit-product-status": "6.1.0",
     "@sbercloud/uikit-product-theme": "0.37.0",
     "@sbercloud/uikit-product-tooltip": "4.0.6",
     "@sbercloud/uikit-product-truncate-string": "0.9.7",

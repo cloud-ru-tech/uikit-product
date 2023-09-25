@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.4 (2023-09-25)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-avatar@1.1.42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/avatar/CHANGELOG.md)
+
+
+
+
+
 ## 2.1.3 (2023-09-12)
 
 ### Only dependencies have been changed

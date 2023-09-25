@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.1.0 (2023-09-25)
+
+
+### Features
+
+* **[AICNTB-263](https://jira.sbercloud.tech/browse/AICNTB-263):** Support ReactNode content type in Status Tag ([da27b10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/da27b1073fc7b199f811ce8d63689851939b92d2))
+
+
+
+
+
 ## 6.0.22 (2023-06-02)
 
 ### Only dependencies have been changed
