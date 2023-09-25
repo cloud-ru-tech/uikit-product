@@ -90,6 +90,7 @@ function ProjectSelector({ isMobile }: { isMobile?: boolean }) {
           ],
         },
       ]}
+      selectorType={HeaderProjectSelector.types.Workspace}
     />
   );
 }

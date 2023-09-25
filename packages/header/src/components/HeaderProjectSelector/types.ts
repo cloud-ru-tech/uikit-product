@@ -21,3 +21,8 @@ export type WorkspaceGroup = {
 };
 
 export type Item = ProjectGroup | WorkspaceGroup;
+
+export enum HeaderSelectorType {
+  Project = 'project',
+  Workspace = 'workspace',
+}

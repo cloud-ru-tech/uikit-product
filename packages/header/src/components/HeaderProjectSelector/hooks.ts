@@ -1,6 +1,6 @@
 import { Children, ReactNode } from 'react';
 
-import { Item, ProjectGroup, ProjectOption, WorkspaceGroup, WorkspaceOption } from './types';
+import { HeaderSelectorType, Item, ProjectGroup, ProjectOption, WorkspaceGroup, WorkspaceOption } from './types';
 
 type Option = ProjectOption | WorkspaceOption;
 
@@ -43,7 +43,12 @@ function isWorkspaceGroup(item: Item): item is WorkspaceGroup {
   return 'workspaces' in item;
 }
 
-function renderRegular(items: Item[], indexByOption: Map<Option, number>, renderer: Renderer) {
+function renderRegular(
+  items: Item[],
+  indexByOption: Map<Option, number>,
+  renderer: Renderer,
+  selectorType: HeaderSelectorType,
+) {
   function isFlat() {
     return items.length === 1;
   }
@@ -82,9 +87,19 @@ function renderRegular(items: Item[], indexByOption: Map<Option, number>, render
     });
   }
 
+  function getNoData() {
+    switch (selectorType) {
+      case HeaderSelectorType.Workspace:
+        return renderer.renderNoData({ renderCreateButton: renderer.renderCreateWorkspaceButton });
+      case HeaderSelectorType.Project:
+      default:
+        return renderer.renderNoData({ renderCreateButton: renderer.renderCreateProjectButton });
+    }
+  }
+
   function render(items: Item[]) {
     if (items.length === 0) {
-      return renderer.renderNoData({ renderCreateButton: renderer.renderCreateProjectButton });
+      return getNoData();
     }
 
     if (items.every(isProjectGroup)) {
@@ -199,10 +214,16 @@ export function useIndexByOption(projects: ProjectOption[], workspaces: Workspac
   return new Map<Option, number>([...projects, ...workspaces].map((option, index) => [option, index]));
 }
 
-export function useContent(items: Item[], search: string, indexByOption: Map<Option, number>, renderer: Renderer) {
+export function useContent(
+  items: Item[],
+  search: string,
+  indexByOption: Map<Option, number>,
+  renderer: Renderer,
+  type: HeaderSelectorType,
+) {
   const query = search.trim();
 
   return query === ''
-    ? renderRegular(items, indexByOption, renderer)
+    ? renderRegular(items, indexByOption, renderer, type)
     : renderSearch(items, indexByOption, renderer, query);
 }

@@ -27,7 +27,7 @@ import {
   useWorkspaces,
 } from './hooks';
 import * as S from './styled';
-import { Item } from './types';
+import { HeaderSelectorType, Item } from './types';
 
 export type HeaderProjectSelectorProps = WithSupportProps<{
   value: string;
@@ -37,6 +37,7 @@ export type HeaderProjectSelectorProps = WithSupportProps<{
   onEdit?(value: string): void;
   createDisabledReason?: string;
   isMobile?: boolean;
+  selectorType: HeaderSelectorType;
 }>;
 
 export function HeaderProjectSelector({
@@ -47,6 +48,7 @@ export function HeaderProjectSelector({
   onEdit,
   createDisabledReason,
   isMobile,
+  selectorType = HeaderSelectorType.Project,
   ...rest
 }: HeaderProjectSelectorProps) {
   const [search, setSearch] = useState('');
@@ -78,57 +80,63 @@ export function HeaderProjectSelector({
       />
     );
 
-  const content = useContent(items, search, indexByOption, {
-    renderCreateProjectButton,
-    renderCreateWorkspaceButton,
+  const content = useContent(
+    items,
+    search,
+    indexByOption,
+    {
+      renderCreateProjectButton,
+      renderCreateWorkspaceButton,
 
-    renderOptionList({ children, renderCreateButton }) {
-      return (
-        <>
-          <Scroll flexbox barHideStrategy={Scroll.barHideStrategies.Never}>
+      renderOptionList({ children, renderCreateButton }) {
+        return (
+          <>
+            <Scroll flexbox barHideStrategy={Scroll.barHideStrategies.Never}>
+              <S.List>{children}</S.List>
+            </Scroll>
+            {renderCreateButton()}
+          </>
+        );
+      },
+
+      renderGroupListItem({ label, children, index }) {
+        return (
+          <GroupListItem key={index} label={label}>
             <S.List>{children}</S.List>
-          </Scroll>
-          {renderCreateButton()}
-        </>
-      );
-    },
+          </GroupListItem>
+        );
+      },
 
-    renderGroupListItem({ label, children, index }) {
-      return (
-        <GroupListItem key={index} label={label}>
-          <S.List>{children}</S.List>
-        </GroupListItem>
-      );
-    },
+      renderProjectOptionListItem({ label, value, index, editable = DEFAULT_EDITABLE }) {
+        return (
+          <OptionListItem key={value} value={value} index={index} onEdit={editable ? onEdit : undefined}>
+            <ProjectLabel label={label} data-test-id='header-project-selector__project-option-list-item-label' />
+          </OptionListItem>
+        );
+      },
 
-    renderProjectOptionListItem({ label, value, index, editable = DEFAULT_EDITABLE }) {
-      return (
-        <OptionListItem key={value} value={value} index={index} onEdit={editable ? onEdit : undefined}>
-          <ProjectLabel label={label} data-test-id='header-project-selector__project-option-list-item-label' />
-        </OptionListItem>
-      );
-    },
+      renderWorkspaceOptionListItem({ label, value, index, editable = DEFAULT_EDITABLE }) {
+        return (
+          <OptionListItem key={value} value={value} index={index} onEdit={editable ? onEdit : undefined}>
+            <WorkspaceLabel label={label} data-test-id='header-project-selector__workspace-option-list-item-label' />
+          </OptionListItem>
+        );
+      },
 
-    renderWorkspaceOptionListItem({ label, value, index, editable = DEFAULT_EDITABLE }) {
-      return (
-        <OptionListItem key={value} value={value} index={index} onEdit={editable ? onEdit : undefined}>
-          <WorkspaceLabel label={label} data-test-id='header-project-selector__workspace-option-list-item-label' />
-        </OptionListItem>
-      );
+      renderNoData({ renderCreateButton }) {
+        return (
+          <>
+            <S.NoDataWrapper data-test-id='header-project-selector__no-data'>
+              <S.SearchIcon />
+              <S.NoDataLabel>{textProvider(languageCode, Texts.NoDataFound)}</S.NoDataLabel>
+            </S.NoDataWrapper>
+            {renderCreateButton()}
+          </>
+        );
+      },
     },
-
-    renderNoData({ renderCreateButton }) {
-      return (
-        <>
-          <S.NoDataWrapper data-test-id='header-project-selector__no-data'>
-            <S.SearchIcon />
-            <S.NoDataLabel>{textProvider(languageCode, Texts.NoDataFound)}</S.NoDataLabel>
-          </S.NoDataWrapper>
-          {renderCreateButton()}
-        </>
-      );
-    },
-  });
+    selectorType,
+  );
 
   return (
     <S.Wrapper data-mobile={isMobile || undefined} {...extractSupportProps(rest)}>
@@ -151,3 +159,5 @@ export function HeaderProjectSelector({
     </S.Wrapper>
   );
 }
+
+HeaderProjectSelector.types = HeaderSelectorType;
