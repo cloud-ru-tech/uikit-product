@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.33 (2023-09-26)
+
+
+### Bug Fixes
+
+* **[AICE-9209](https://jira.sbercloud.tech/browse/AICE-9209):** fix createWorkspaceButton selection ([254e901](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/254e901efdefd5c477cc0fe5885bb7b380f42858))
+
+
+
+
+
 ## 1.2.32 (2023-09-25)
 
 ### Only dependencies have been changed
