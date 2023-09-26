@@ -17,6 +17,11 @@ export const COLORS = {
     default: '--color__cards__card-product__background__default',
     shadow: '--color__cards__card-product__background__shadow',
   },
+  action: {
+    text: '--color__cards__card-product__action__text',
+    icon: '--color__cards__card-product__action__icon',
+  },
+  disabled: '--color__cards__card-product__disabled',
 };
 
 export const PURPLE_THEME = css`
@@ -27,6 +32,9 @@ export const PURPLE_THEME = css`
       ${COLORS.description}: var(${GREY[350]});
       ${COLORS.background.default}: var(${GREY[0]});
       ${COLORS.background.shadow}: ${SHADOW.MEDIUM};
+      ${COLORS.action.icon}: var(${PURPLE[100]});
+      ${COLORS.action.text}: var(${PURPLE[100]});
+      ${COLORS.disabled}: var(${BLACK_ALFA[16]});
     }
   }
 `;
@@ -39,6 +47,9 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.description}: var(${GREY[500]});
       ${COLORS.background.default}: var(${GREY[750]});
       ${COLORS.background.shadow}: ${SHADOW.MEDIUM};
+      ${COLORS.action.icon}: var(${PURPLE[50]});
+      ${COLORS.action.text}: var(${PURPLE[50]});
+      ${COLORS.disabled}: var(${WHITE_ALFA[16]});
     }
   }
 `;
@@ -51,6 +62,9 @@ export const GREEN_THEME = css`
       ${COLORS.description}: var(${GREY[350]});
       ${COLORS.background.default}: var(${GREY[0]});
       ${COLORS.background.shadow}: ${SHADOW.MEDIUM};
+      ${COLORS.action.icon}: var(${GREEN[125]});
+      ${COLORS.action.text}: var(${GREY[800]});
+      ${COLORS.disabled}: var(${BLACK_ALFA[16]});
     }
   }
 `;
@@ -63,6 +77,9 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.description}: var(${GREY[500]});
       ${COLORS.background.default}: var(${GREY[750]});
       ${COLORS.background.shadow}: ${SHADOW.MEDIUM};
+      ${COLORS.action.icon}: var(${GREEN[100]});
+      ${COLORS.action.text}: var(${GREEN[100]});
+      ${COLORS.disabled}: var(${WHITE_ALFA[16]});
     }
   }
 `;

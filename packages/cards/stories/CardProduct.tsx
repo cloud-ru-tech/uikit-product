@@ -1,13 +1,13 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
-import { ButtonGhost } from '@sbercloud/uikit-product-button';
 import {
   ArrowBoldRightInterfaceSVG,
   DataCatalogServiceSVG,
   DatasetDisplaySVG,
   DockerRegistryDisplaySVG,
   RocketInterfaceSVG,
+  SendInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
 
 import { BADGE } from '#storybookConstants';
@@ -21,6 +21,17 @@ const ICONS = {
   docker: <DockerRegistryDisplaySVG />,
   dataset: <DatasetDisplaySVG />,
   rocket: <RocketInterfaceSVG />,
+};
+const ACTIONS = {
+  goTo: {
+    text: 'Перейти',
+    icon: <ArrowBoldRightInterfaceSVG />,
+    isAnimated: true,
+  },
+  leaveRequest: {
+    text: 'Оставить заявку',
+    icon: <SendInterfaceSVG />,
+  },
 };
 const ON_CLICK = {
   onClick: () => {},
@@ -63,16 +74,13 @@ product.args = {
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-  actions: (
-    <ButtonGhost
-      text='Перейти'
-      icon={<ArrowBoldRightInterfaceSVG />}
-      variant={ButtonGhost.variants.Primary}
-      size={ButtonGhost.sizes.Small}
-    />
-  ),
+  action: {
+    text: 'Перейти',
+    icon: <ArrowBoldRightInterfaceSVG />,
+    isAnimated: true,
+  },
   label: {
-    text: 'Active',
+    text: 'Скидка 10%',
     variant: CardProduct.labelVariants.Green,
   },
   onClick: undefined,
@@ -83,6 +91,14 @@ product.argTypes = {
     name: '[Stories]: Show icon examples',
     options: Object.keys(ICONS),
     mapping: ICONS,
+    control: {
+      type: 'radio',
+    },
+  },
+  action: {
+    name: 'action',
+    options: Object.keys(ACTIONS),
+    mapping: ACTIONS,
     control: {
       type: 'radio',
     },

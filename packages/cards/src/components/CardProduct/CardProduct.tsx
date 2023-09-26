@@ -11,7 +11,11 @@ export type CardProductProps = WithSupportProps<{
   title: string;
   description: string;
   className?: string;
-  actions?: ReactNode;
+  action?: {
+    text: string;
+    icon?: ReactNode;
+    isAnimated?: boolean;
+  };
   onClick?(): void;
   label?: {
     text: string;
@@ -25,15 +29,19 @@ export function CardProduct({
   title,
   description,
   label,
-  actions,
+  action,
   onClick,
   ...rest
 }: CardProductProps) {
+  const isClickable = Boolean(onClick) || undefined;
+  const isAnimated = action?.isAnimated || undefined;
+
   return (
     <S.Wrapper
       className={className}
       onClick={onClick}
-      data-clickable={Boolean(onClick) || undefined}
+      data-clickable={isClickable}
+      data-animated={isAnimated}
       {...extractSupportProps(rest)}
     >
       <S.Heading>
@@ -55,13 +63,24 @@ export function CardProduct({
       />
 
       <S.Footer>
-        {actions}
+        {action && (
+          <S.ActionContainer>
+            <S.ActionText data-clickable={isClickable} data-test-id='card-product__action-text'>
+              {action.text}
+            </S.ActionText>
+            {action.icon && (
+              <S.ActionIcon data-clickable={isClickable} data-animated={isAnimated}>
+                {action.icon}
+              </S.ActionIcon>
+            )}
+          </S.ActionContainer>
+        )}
 
         {label && (
           <S.Label
             text={label.text}
             variant={label.variant}
-            className={Boolean(onClick) ? S.cursorPointerClassName : undefined}
+            className={isClickable ? S.cursorPointerClassName : undefined}
           />
         )}
       </S.Footer>

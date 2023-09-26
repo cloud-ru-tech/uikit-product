@@ -3,6 +3,7 @@ import { styled } from '@linaria/react';
 
 import { Label as UikitLabel } from '@sbercloud/uikit-product-label';
 import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
+import { TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './theme';
@@ -11,6 +12,27 @@ PURPLE_THEME;
 PURPLE_DARK_THEME;
 GREEN_THEME;
 GREEN_DARK_THEME;
+
+export const ActionIcon = styled.div`
+  fill: var(${COLORS.action.icon});
+  margin-left: 4px;
+  width: 16px;
+  height: 16px;
+
+  svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  &[data-animated] {
+    transition: ${ANIMATIONS.TRANSITION};
+    transition-property: margin-left;
+  }
+
+  :not(&[data-clickable]) {
+    fill: var(${COLORS.disabled});
+  }
+`;
 
 export const Wrapper = styled.div<{ onClick?: () => void }>`
   display: flex;
@@ -29,10 +51,14 @@ export const Wrapper = styled.div<{ onClick?: () => void }>`
 
   &[data-clickable] {
     cursor: pointer;
-  }
 
-  &:hover {
-    box-shadow: var(${COLORS.background.shadow});
+    &:hover {
+      box-shadow: var(${COLORS.background.shadow});
+    }
+
+    &[data-animated]:hover ${ActionIcon} {
+      margin-left: 8px;
+    }
   }
 `;
 
@@ -63,7 +89,7 @@ export const Icon = styled.div`
 `;
 
 export const Description = styled(TruncateString)`
-  margin-top: 16px;
+  padding-top: 16px;
   color: var(${COLORS.description});
 `;
 
@@ -74,6 +100,25 @@ export const Footer = styled.div`
   height: 20px;
 `;
 
+export const ActionContainer = styled.div`
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+`;
+
+export const ActionText = styled.span`
+  ${TEXT_3_STYLES};
+  color: var(${COLORS.action.text});
+  white-space: nowrap;
+
+  :not(&[data-clickable]) {
+    color: var(${COLORS.disabled});
+  }
+`;
+
 export const Label = styled(UikitLabel)`
   margin-left: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
