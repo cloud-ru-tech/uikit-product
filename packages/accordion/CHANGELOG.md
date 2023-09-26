@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2023-09-26)
+
+
+### Features
+
+* **[DPS-6682](https://jira.sbercloud.tech/browse/DPS-6682):** fix accordion animation and onClick handler ([1324507](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/132450787779d565952348c45c5028d1fee349d4))
+
+
+
+
+
 ## 0.6.5 (2023-09-19)
 
 
