@@ -166,6 +166,11 @@ multiSelect.argTypes = {
       type: 'boolean',
     },
   },
+  isDisabled: {
+    control: {
+      type: 'boolean',
+    },
+  },
 };
 
 multiSelect.args = {

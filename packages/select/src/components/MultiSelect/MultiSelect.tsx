@@ -68,6 +68,7 @@ export type MultiSelectProps = {
     | 'placeholder'
     | 'onBlur'
     | 'onKeyDown'
+    | 'isDisabled'
   >
 > &
   Pick<InputDecoratorPrivateProps, 'label' | 'labelTooltip' | 'optional' | 'hint'>;
@@ -87,6 +88,7 @@ export function MultiSelect(props: MultiSelectProps) {
     placeholder,
     value,
     mode,
+    isDisabled,
     closeMenuOnScroll = false,
     closeMenuOnSelect = true,
     maxMenuHeight = 300,
@@ -192,6 +194,7 @@ export function MultiSelect(props: MultiSelectProps) {
           onBlur={onBlur}
           onKeyDown={onKeyDown}
           onInputChange={onInputChange}
+          isDisabled={isDisabled}
         />
       </div>
     </InputDecoratorPrivate>

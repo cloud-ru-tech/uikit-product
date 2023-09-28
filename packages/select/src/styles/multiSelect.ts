@@ -1,12 +1,13 @@
 import { CSSProperties } from 'react';
 import { PlaceholderProps } from 'react-select';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { DEPRECATED_EXPORT_VARS, EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { SHADOW } from '@sbercloud/uikit-product-utils';
 
 import { SIZES_IN_PX } from '../constants';
 import { MultiSelectModeType, SelectSizes } from '../helpers/types';
 import { styles as cStyles } from './common';
+const { BLACK_ALFA } = EXPORT_VARS;
 
 const { COLORS_SELECT } = DEPRECATED_EXPORT_VARS;
 
@@ -22,13 +23,7 @@ export const styles = (size: SelectSizes, externalError?: string) => {
       ...styles,
       minHeight: 'auto',
       border: `1px solid var(${menuIsOpen ? COLORS_SELECT.BORDER_FOCUS_COLOR : COLORS_SELECT.BORDER_COLOR})`,
-      ...(isDisabled
-        ? {
-            borderColor: `var(${COLORS_SELECT.DISABLED_BORDER_COLOR})`,
-            color: `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`,
-            background: `var(${COLORS_SELECT.DISABLED_BACKGROUND})`,
-          }
-        : {}),
+
       ...(error || externalError
         ? {
             borderColor: `var(${COLORS_SELECT.BORDER_ERROR_COLOR}) !important`,
@@ -36,6 +31,13 @@ export const styles = (size: SelectSizes, externalError?: string) => {
         : {}),
       boxShadow: 'none !important',
       background: `var(${COLORS_SELECT.BACKGROUND})`,
+      ...(isDisabled
+        ? {
+            borderColor: `var(${BLACK_ALFA[16]})`,
+            color: `var(${COLORS_SELECT.DISABLED_TEXT_COLOR})`,
+            background: `var(${BLACK_ALFA[4]})`,
+          }
+        : {}),
       cursor: isDisabled ? 'not-allowed' : 'default',
       '&:focus': {
         borderColor: `var(${COLORS_SELECT.BORDER_FOCUS_COLOR}) !important`,
