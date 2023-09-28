@@ -1,8 +1,11 @@
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
-import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { CloseInterfaceSVG, QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 
+import { textProvider, Texts } from '../../helpers';
+import { Variant } from '../Container';
 import { HeaderAlign } from './constants';
 import * as S from './styled';
 
@@ -11,11 +14,24 @@ export type HeaderProps = {
   title: string;
   subtitle?: string;
   titleTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
+  onClose(): void;
+  variant?: Variant;
 };
 
-export function Header({ title, subtitle, titleTooltip, align = HeaderAlign.Left }: HeaderProps) {
+export function Header({ title, subtitle, titleTooltip, align = HeaderAlign.Left, variant, onClose }: HeaderProps) {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+
   return (
     <S.Wrapper data-align={align} data-test-id='modal-private__header'>
+      {variant !== Variant.Forced && (
+        <S.CloseButton
+          icon={<CloseInterfaceSVG />}
+          onClick={onClose}
+          tooltip={{ content: textProvider(languageCode, Texts.Close) }}
+          data-test-id='modal-private__close-btn'
+        />
+      )}
+
       <S.TitleWrapper data-align={align}>
         <S.TitleWithTooltip>
           <S.Title

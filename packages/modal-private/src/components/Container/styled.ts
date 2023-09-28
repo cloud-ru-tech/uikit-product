@@ -1,7 +1,5 @@
 import { css } from '@linaria/core';
-import { styled } from '@linaria/react';
 
-import { ButtonIconTransparent } from '@sbercloud/uikit-product-button';
 import { SHADOW } from '@sbercloud/uikit-product-utils';
 
 import { Size, SizeInPx } from './constants';
@@ -47,14 +45,4 @@ export const contentClassname = css`
   &[data-size=${Size.Large}] {
     width: ${SizeInPx[Size.Large]};
   }
-`;
-
-export const CloseButton = styled(ButtonIconTransparent)`
-  position: absolute;
-  top: 32px;
-  right: 32px;
-
-  overflow: hidden;
-
-  border-radius: 100%;
 `;

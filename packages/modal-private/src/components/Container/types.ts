@@ -8,17 +8,8 @@ type DefaultContainerProps = {
   size?: Size;
   isOpen: boolean;
   className?: string;
-};
-
-type BaseVariantContainerProps = {
-  variant?: Exclude<Variant, Variant.Forced>;
+  variant?: Variant;
   onClose(): void;
 };
 
-type ForcedVariantContainerProps = {
-  variant?: Variant.Forced;
-};
-
-export type ContainerProps = PropsWithChildren<
-  WithSupportProps<DefaultContainerProps & (BaseVariantContainerProps | ForcedVariantContainerProps)>
->;
+export type ContainerProps = PropsWithChildren<WithSupportProps<DefaultContainerProps>>;

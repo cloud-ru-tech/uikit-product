@@ -1,5 +1,6 @@
 import { styled } from '@linaria/react';
 
+import { ButtonIconTransparent } from '@sbercloud/uikit-product-button';
 import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 
 import { HeaderAlign } from './constants';
@@ -68,4 +69,14 @@ export const Subtitle = styled(TruncateString)`
   color: var(${COLORS.subtitle});
 
   margin-top: 8px;
+`;
+
+export const CloseButton = styled(ButtonIconTransparent)`
+  position: absolute;
+  top: 0px;
+  right: 32px;
+
+  overflow: hidden;
+
+  border-radius: 100%;
 `;
