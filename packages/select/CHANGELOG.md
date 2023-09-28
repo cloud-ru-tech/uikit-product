@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.31.0 (2023-09-28)
+
+
+### Features
+
+* **[RM-1058](https://jira.sbercloud.tech/browse/RM-1058):** added isDisabled property for multiselect ([209b904](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/209b9048aa54f3846e0603bb2954d9961578aa71))
+
+
+
+
+
 ## 0.30.6 (2023-09-25)
 
 ### Only dependencies have been changed
