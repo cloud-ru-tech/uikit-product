@@ -59,7 +59,14 @@ export function Modal(props: ModalProps) {
       variant={variant}
       {...extractDataTestProps(rest)}
     >
-      <ModalPrivate.Header title={title} subtitle={subtitle} titleTooltip={titleTooltip} align={headerAlign} />
+      <ModalPrivate.Header
+        title={title}
+        subtitle={subtitle}
+        titleTooltip={titleTooltip}
+        align={headerAlign}
+        onClose={onClose}
+        variant={variant}
+      />
 
       {isLoading ? (
         <ModalPrivate.Content content={<S.StyledSpinner data-test-id='modal__spinner' />} />
