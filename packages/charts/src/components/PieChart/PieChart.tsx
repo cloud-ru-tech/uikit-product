@@ -1,33 +1,13 @@
 import { useCallback, useMemo, useState } from 'react';
-import { PieChart as Pie } from 'react-minimal-pie-chart';
-import { BaseDataEntry, LabelRenderFunction } from 'react-minimal-pie-chart/types/commonTypes';
 
 import { truncateString } from '@sbercloud/ft-formatters';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { CHART_COLORS, Colors } from '../../constants/colors';
 import { Legend } from './Legend';
+import { Pie } from './Pie';
 import * as S from './styled';
-
-type TextLike = string | number;
-
-type DataEntry = BaseDataEntry & {
-  label: TextLike;
-};
-
-export type PieChartProps = {
-  data: Array<{ label: TextLike; value: number }>;
-  options: {
-    title: string;
-    width?: number;
-    height?: number;
-    legendTitle?: string;
-  };
-  aggregatedLegend?: {
-    data: Array<{ label: TextLike; value: TextLike }>;
-    title: string;
-  };
-};
+import { ColorizedDataType, DataType, LabelRenderFunction, PieChartProps } from './types';
 
 export function PieChart({
   options: { width, height, title, legendTitle },
@@ -36,7 +16,7 @@ export function PieChart({
   ...rest
 }: WithSupportProps<PieChartProps>) {
   const [hovered, setHovered] = useState<number | undefined>(undefined);
-  const colorizedData: DataEntry[] = useMemo(
+  const colorizedData: ColorizedDataType[] = useMemo(
     () =>
       data.map((x, index) => {
         const colorsKey = Object.values(Colors);
@@ -53,20 +33,13 @@ export function PieChart({
   const segmentStyles = useMemo(() => ({ transition: 'all .3s', cursor: 'pointer' }), []);
   const onMouseOverCallback = useCallback((_: any, index: number) => setHovered(index), []);
   const onMouseOutCallback = useCallback(() => setHovered(undefined), []);
-  const segmentShiftHandler = useCallback((index: number) => (index === hovered ? 1 : 0.5), [hovered]);
-  const labelRenderer = useCallback<LabelRenderFunction<DataEntry>>(
+  const labelRenderer = useCallback<LabelRenderFunction<DataType>>(
     ({ dataEntry, dataIndex }) => (
       <>
-        <S.SvgText x={50} y={48} data-hovered={hovered === dataIndex || undefined} key={`${dataIndex}_label`}>
+        <S.SvgText x={0} y={-4} data-hovered={hovered === dataIndex || undefined} key={`${dataIndex}_label`}>
           {truncateString(String(dataEntry.label), 15)}
         </S.SvgText>
-        <S.SvgText
-          x={50}
-          y={55}
-          data-hovered={hovered === dataIndex || undefined}
-          data-bolder
-          key={`${dataIndex}_value`}
-        >
+        <S.SvgText x={0} y={4} data-hovered={hovered === dataIndex || undefined} data-bolder key={`${dataIndex}_value`}>
           {dataEntry.value}
         </S.SvgText>
       </>
@@ -84,14 +57,13 @@ export function PieChart({
         <S.PieWrapper>
           <Pie
             style={pieStyles}
-            animationDuration={1000}
-            animate
-            lineWidth={50}
-            radius={45}
+            radius={46}
+            innerRadius={23}
             label={labelRenderer}
             data={colorizedData}
             segmentsStyle={segmentStyles}
-            segmentsShift={segmentShiftHandler}
+            segmentsShift={0.015}
+            hoveredIndex={hovered}
             onMouseOver={onMouseOverCallback}
             onMouseOut={onMouseOutCallback}
           />
