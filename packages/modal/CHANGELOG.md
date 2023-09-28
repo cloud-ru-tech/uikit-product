@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.9 (2023-09-28)
+
+
+### Bug Fixes
+
+* **[LK-2390](https://jira.sbercloud.tech/browse/LK-2390):** close button overlay ([38d79c8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/38d79c8b2be848628606f6a064b9f3a24fa10e21))
+
+
+
+
+
 ## 1.5.8 (2023-09-12)
 
 ### Only dependencies have been changed
@@ -422,7 +433,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.2.3 (2023-01-26)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-modal
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-modal-private@2.0.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal-private/CHANGELOG.md)
 
 ## 1.2.2 (2023-01-25)
 

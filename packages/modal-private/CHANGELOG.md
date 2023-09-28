@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2023-09-28)
+
+
+### BREAKING CHANGES
+
+
+* **[LK-2390](https://jira.sbercloud.tech/browse/LK-2390):** move close button to header to fix element overlay ([d97a12c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d97a12c7489a47e14c3d2f2c3b7b3962b9928e4e))
+
+
+
+
 ## 1.6.4 (2023-09-12)
 
 ### Only dependencies have been changed
