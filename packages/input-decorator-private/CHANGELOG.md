@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.1.4 (2023-09-29)
+
+
+### Bug Fixes
+
+* **FF-0000:** return filled info icon ([c097cdd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c097cdde92e8a56d3a289e0c2fcbb164b5e6cf08))
+
+
+
+
+
 ## 3.1.3 (2023-09-12)
 
 ### Only dependencies have been changed

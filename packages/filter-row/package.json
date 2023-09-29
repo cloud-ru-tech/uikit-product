@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-filter-row",
   "title": "Filter Row",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,7 +33,7 @@
     "@sbercloud/uikit-product-divider": "2.0.45",
     "@sbercloud/uikit-product-dropdown": "0.18.2",
     "@sbercloud/uikit-product-icons": "5.23.0",
-    "@sbercloud/uikit-product-input": "3.7.0",
+    "@sbercloud/uikit-product-input": "3.7.1",
     "@sbercloud/uikit-product-search": "0.2.54",
     "@sbercloud/uikit-product-switch": "3.4.2",
     "@sbercloud/uikit-product-theme": "0.37.0",
