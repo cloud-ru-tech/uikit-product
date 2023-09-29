@@ -96,13 +96,13 @@ export const Wrapper = styled.div`
     box-shadow: none;
   }
 
-  // Icon styles
+  /* Icon styles */
   &&[data-variant=${CardQuickAction.variants.Accent}] ${Icon} {
     fill: var(${COLORS.image.accent.icon});
     background-color: var(${COLORS.image.accent.background});
   }
 
-  // PlusIcon styles
+  /* PlusIcon styles */
   &&:hover ${PlusIcon} {
     fill: var(${COLORS.plus.primary.hover});
   }
@@ -123,7 +123,7 @@ export const Wrapper = styled.div`
     fill: var(${COLORS.plus.accent.active});
   }
 
-  // Title styles
+  /* Title styles */
   &&:hover ${Title} {
     color: var(${COLORS.title.primary.hover});
   }
@@ -144,7 +144,7 @@ export const Wrapper = styled.div`
     color: var(${COLORS.title.accent.active});
   }
 
-  // Description styles
+  /* Description styles */
   &[data-variant=${CardQuickAction.variants.Accent}] ${Description} {
     color: var(${COLORS.description.accent});
   }

@@ -35,7 +35,6 @@ export const AdditionalItem = styled.div`
 
   &[data-disabled] {
     pointer-events: none;
-
     background-color: unset;
     color: var(${COLORS.additionalItem.disabled});
     fill: var(${COLORS.additionalItem.disabled});
@@ -43,5 +42,5 @@ export const AdditionalItem = styled.div`
 `;
 
 export const DividerWrapper = styled.div`
-  padding: 4px 12px 0px;
+  padding: 4px 12px 0;
 `;

@@ -19,7 +19,10 @@ export const styledSimpleTextarea = (SimpleTextarea: VFC<SimpleTextareaProps>): 
   flex-direction: row;
   width: 100%;
   max-width: 100%;
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
   box-sizing: border-box;
   padding: 0 11px 11px;
   border: 1px solid var(${COLORS.border.default});

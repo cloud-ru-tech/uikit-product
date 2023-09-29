@@ -25,8 +25,11 @@ function Template({ ...args }: HeroBannerProps) {
 }
 
 const bannerClassName = css`
+  /* stylelint-disable-next-line color-named */
   color: white;
+  /* stylelint-disable-next-line color-named */
   fill: white;
+  /* stylelint-disable-next-line color-no-hex */
   background-color: #5558fa;
 `;
 

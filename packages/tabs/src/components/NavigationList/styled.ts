@@ -15,8 +15,7 @@ export const GroupStyled = styled.ul`
 
   list-style: none;
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -26,7 +25,7 @@ export const GroupStyled = styled.ul`
 export const GroupStyledContainer = styled.div`
   overflow-x: auto;
 
-  // Hide Scrollbar
+  /* Hide Scrollbar */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 

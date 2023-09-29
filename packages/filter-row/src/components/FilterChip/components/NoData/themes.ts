@@ -24,6 +24,7 @@ export const DARK_THEMES = css`
     body[data-theme=${Themes.PurpleDark}],
     body[data-theme=${Themes.GreenDark}] {
       ${COLORS.text}: var(${WHITE_ALFA[48]});
-      ${COLORS.icon}: var(${WHITE_ALFA[24]});  
+      ${COLORS.icon}: var(${WHITE_ALFA[24]});
     }
+  }
 `;

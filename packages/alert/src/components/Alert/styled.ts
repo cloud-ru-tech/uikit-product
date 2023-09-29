@@ -32,18 +32,22 @@ export const Wrapper = styled.div`
     background-color: var(${COLORS.background.success});
     border-color: var(${COLORS.border.success});
   }
+
   &[data-type='${Alert.types.Warning}'] {
     background-color: var(${COLORS.background.warning});
     border-color: var(${COLORS.border.warning});
   }
+
   &[data-type='${Alert.types.Error}'] {
     background-color: var(${COLORS.background.error});
     border-color: var(${COLORS.border.error});
   }
+
   &[data-type='${Alert.types.Neutral}'] {
     background-color: var(${COLORS.background.neutral});
     border-color: var(${COLORS.border.neutral});
   }
+
   &[data-type='${Alert.types.Loading}'] {
     background-color: var(${COLORS.background.loading});
     border-color: var(${COLORS.border.loading});

@@ -8,7 +8,7 @@ export const inputClassname = css`
   flex-grow: 1;
   box-sizing: border-box;
   width: 100%;
-  font-family: SB Sans Interface, serif;
+  font-family: 'SB Sans Interface', serif;
   color: var(${COLORS_INPUT.INPUT_TEXT_COLOR});
   font-style: normal;
   font-weight: normal;
@@ -29,25 +29,26 @@ export const inputClassname = css`
     &::-webkit-inner-spin-button {
       -webkit-appearance: none;
     }
+
     -moz-appearance: textfield;
+
     &:hover,
     &:focus {
       -moz-appearance: number-input;
     }
   }
 
-  &[data-disabled='true'] {
-    color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
-  }
-
   &[data-type='embed'] {
     height: 40px;
     padding: 10px 12px;
+    border: 0 !important;
+    border-radius: 0;
   }
 
   &:hover {
     background-color: var(${COLORS_INPUT.INPUT_HOVER_BACKGROUND});
     border: 1px solid var(${COLORS_INPUT.INPUT_HOVER_BORDER});
+
     &::placeholder {
       color: var(${COLORS_INPUT.INPUT_HOVER_PLACEHOLDER_COLOR});
     }
@@ -62,18 +63,15 @@ export const inputClassname = css`
     background-color: var(${COLORS_INPUT.INPUT_DISABLED_BACKGROUND});
     border: 1px solid var(${COLORS_INPUT.INPUT_DISABLED_BORDER});
     color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
+
     &::placeholder {
       color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
     }
+
     &:hover {
       &::placeholder {
         color: var(${COLORS_INPUT.INPUT_DISABLED_COLOR});
       }
     }
-  }
-
-  &[data-type='embed'] {
-    border: 0 !important;
-    border-radius: 0;
   }
 `;

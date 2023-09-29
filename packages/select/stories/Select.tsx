@@ -45,6 +45,7 @@ const StyledRadioWrap = styled.div<{ position: string }>`
 `;
 
 const Footer = styled.div`
+  /* stylelint-disable-next-line color-no-hex */
   background: #d2d2d2;
   height: 20px;
   width: 100%;

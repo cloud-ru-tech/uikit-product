@@ -13,6 +13,7 @@ export const PURPLE_THEME = css`
   :global() {
     body[data-theme='${Themes.Purple}'] {
       ${COLORS.INPUT_EDITABLE_TEXT}: var(${GREY[0]});
+      /* stylelint-disable-next-line color-no-hex */
       ${COLORS.INPUT_EDITABLE_BACKGROUND}: #0078d7;
     }
   }
@@ -22,6 +23,7 @@ export const PURPLE_DARK_THEME = css`
   :global() {
     body[data-theme='${Themes.PurpleDark}'] {
       ${COLORS.INPUT_EDITABLE_TEXT}: var(${GREY[0]});
+      /* stylelint-disable-next-line color-no-hex */
       ${COLORS.INPUT_EDITABLE_BACKGROUND}: #0078d7;
     }
   }
@@ -31,6 +33,7 @@ export const GREEN_THEME = css`
   :global() {
     body[data-theme='${Themes.Green}'] {
       ${COLORS.INPUT_EDITABLE_TEXT}: var(${GREY[0]});
+      /* stylelint-disable-next-line color-no-hex */
       ${COLORS.INPUT_EDITABLE_BACKGROUND}: #0078d7;
     }
   }
@@ -40,6 +43,7 @@ export const GREEN_DARK_THEME = css`
   :global() {
     body[data-theme='${Themes.GreenDark}'] {
       ${COLORS.INPUT_EDITABLE_TEXT}: var(${GREY[0]});
+      /* stylelint-disable-next-line color-no-hex */
       ${COLORS.INPUT_EDITABLE_BACKGROUND}: #0078d7;
     }
   }

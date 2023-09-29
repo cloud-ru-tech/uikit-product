@@ -14,7 +14,6 @@ export const Wrapper = styled.div`
 
   &[data-disabled] {
     cursor: not-allowed;
-
     padding-right: 0;
   }
 `;

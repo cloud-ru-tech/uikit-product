@@ -15,6 +15,7 @@ export const LIGHT_THEMES = css`
       ${COLORS.dot}: var(${BLACK_ALFA[16]});
       ${COLORS.dotActive}: var(${PURPLE[100]});
     }
+
     body[data-theme=${Themes.Green}] {
       ${COLORS.dot}: var(${BLACK_ALFA[16]});
       ${COLORS.dotActive}: var(${GREEN[100]});
@@ -28,6 +29,7 @@ export const DARK_THEMES = css`
       ${COLORS.dot}: var(${PURPLE[10]});
       ${COLORS.dotActive}: var(${PURPLE[100]});
     }
+
     body[data-theme=${Themes.GreenDark}] {
       ${COLORS.dot}: var(${GREEN[10]});
       ${COLORS.dotActive}: var(${GREEN[100]});

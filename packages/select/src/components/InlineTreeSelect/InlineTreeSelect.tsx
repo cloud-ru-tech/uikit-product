@@ -18,7 +18,9 @@ import { InputSearch } from '../../helperComponents/Shared/InputSearch';
 import { DictionaryPropertyAsFn, textProvider, Texts } from '../../helpers/texts-provider';
 
 const Content = styled.div`
-  background: #ffffff;
+  /* stylelint-disable-next-line color-no-hex */
+  background: #fff;
+  /* stylelint-disable-next-line color-no-hex */
   border: 1px solid #d2d2d2;
   box-sizing: border-box;
   border-radius: 4px;

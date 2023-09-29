@@ -16,7 +16,7 @@ export const styles = commonStyles({
     width: '20px',
     border: 0,
   }),
-  dropdownIndicator: (styles: CSSProperties, data: { selectProps: { menuIsOpen: any } }): CSSProperties => ({
+  dropdownIndicator: (styles: CSSProperties, data: { selectProps: { menuIsOpen: unknown } }): CSSProperties => ({
     ...styles,
     fill: data.selectProps.menuIsOpen ? `var(${COLORS_SELECT.TEXT_COLOR})` : 'none',
     transform: data.selectProps.menuIsOpen ? 'rotate(180deg)' : 'none',

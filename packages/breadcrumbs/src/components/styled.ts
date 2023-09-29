@@ -71,6 +71,7 @@ export const ItemTextStyled = styled.p`
 
 export const chevronClassName = css`
   min-width: 24px;
+
   & path {
     fill: var(${COLORS_BREADCRUMBS.INACTIVE_COLOR});
   }

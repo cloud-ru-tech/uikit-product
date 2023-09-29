@@ -14,7 +14,7 @@ export const theme = commonTheme({
 } as Theme);
 
 export const styles = commonStyles({
-  control: (styles: CSSProperties, data: any) => {
+  control: (styles: CSSProperties, data: { isDisabled: boolean }) => {
     const { isDisabled } = data;
     return {
       ...styles,

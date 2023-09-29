@@ -78,6 +78,7 @@ export function HeatMapChart({ data, options, className, ...rest }: WithSupportP
           xLabelsPos={xAxisPosition}
           yLabelsPos='left'
           cellRender={
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             (cellRender as any) ||
             ((x: number, y: number, value: number) => (
               <S.Cell title={String(value)} color={getContrastColor(colorScale(value))}>

@@ -16,8 +16,7 @@ export const Container = styled.div`
   height: 100%;
 
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  flex-flow: row nowrap;
 
   align-items: flex-start;
   justify-content: center;

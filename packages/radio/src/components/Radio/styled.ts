@@ -26,6 +26,7 @@ export const Wrapper = styled.label`
     ${Label} {
       color: var(${COLORS.RADIO.HOVER.LABEL});
     }
+
     ${IconContainer} {
       fill: var(${COLORS.RADIO.HOVER.ICON});
     }
@@ -37,6 +38,7 @@ export const Wrapper = styled.label`
     ${Label} {
       color: var(${COLORS.RADIO.DISABLED.LABEL});
     }
+
     ${IconContainer} {
       fill: var(${COLORS.RADIO.DISABLED.ICON});
     }
@@ -46,6 +48,7 @@ export const Wrapper = styled.label`
     ${Label} {
       color: var(${COLORS.RADIO_SELECTED.LABEL});
     }
+
     ${IconContainer} {
       fill: var(${COLORS.RADIO_SELECTED.ICON});
     }
@@ -54,6 +57,7 @@ export const Wrapper = styled.label`
       ${Label} {
         color: var(${COLORS.RADIO_SELECTED.HOVER.LABEL});
       }
+
       ${IconContainer} {
         fill: var(${COLORS.RADIO_SELECTED.HOVER.ICON});
       }
@@ -63,6 +67,7 @@ export const Wrapper = styled.label`
       ${Label} {
         color: var(${COLORS.RADIO_SELECTED.DISABLED.LABEL});
       }
+
       ${IconContainer} {
         fill: var(${COLORS.RADIO_SELECTED.DISABLED.ICON});
       }

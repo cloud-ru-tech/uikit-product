@@ -6,7 +6,8 @@ const { COLORS_FILTER } = DEPRECATED_EXPORT_VARS;
 
 export const tooltipClassName = css`
   background: var(${COLORS_FILTER.FILTER_BACKGROUND});
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  /* stylelint-disable-next-line function-disallowed-list */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 15%);
 
   max-height: inherit;
   max-width: 640px;

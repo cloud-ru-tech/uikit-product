@@ -10,6 +10,7 @@ GREEN_DARK_THEME;
 
 export const Wrapper = styled.div`
   cursor: pointer;
+
   &[data-disabled] {
     cursor: not-allowed;
   }
@@ -52,7 +53,7 @@ export const switchClassNameChecked = css`
   &:not(.${switchClassNameDisabled}):hover {
     background-color: var(${COLORS.BACKGROUND_ACTIVE_HOVERED});
   }
-  
+
   .react-switch-handle {
     background-color: var(${COLORS.HANDLE_ACTIVE}) !important;
   }
@@ -64,4 +65,4 @@ export const switchClassNameChecked = css`
       background-color: var(${COLORS.HANDLE_ACTIVE_DISABLED}) !important;
     }
   }
-}`;
+`;

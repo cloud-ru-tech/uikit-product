@@ -27,7 +27,6 @@ export const Wrapper = styled.div`
 
   &[data-align=${HeaderAlign.Center}] {
     align-items: center;
-
     text-align: center;
   }
 `;

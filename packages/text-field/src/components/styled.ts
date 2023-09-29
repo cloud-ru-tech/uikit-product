@@ -76,6 +76,7 @@ export const IconsContainer = styled.div`
   &[data-multiline] {
     justify-content: flex-end;
     flex-direction: column-reverse;
+
     > * {
       margin-bottom: 4px;
       margin-left: 0;

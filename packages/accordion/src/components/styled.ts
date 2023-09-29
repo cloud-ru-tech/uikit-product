@@ -18,8 +18,12 @@ export const AccordionWrapper = styled.div`
 
   &[data-variant='${Variant.Primary}'] {
     border-radius: 12px;
+
     &:hover {
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      /* stylelint-disable-next-line function-disallowed-list */
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 15%);
+      /* stylelint-disable-next-line color-named */
+      color: red;
       transition: box-shadow 0.2s ease-in;
     }
   }

@@ -19,6 +19,7 @@ export const commonInputClassName = css`
   &:not([data-disabled]):hover {
     background-color: var(${COLORS.INPUT_BACKGROUND_HOVER});
     border: 1px solid var(${COLORS.INPUT_BORDER_HOVER});
+
     &::placeholder {
       color: var(${COLORS.INPUT_PLACEHOLDER_HOVER});
     }

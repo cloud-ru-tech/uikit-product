@@ -27,7 +27,7 @@ export function getClosureProps(variant: Variant) {
   }
 }
 
-export const getDataTestAttributes = (rest: unknown) => {
+export const getDataTestAttributes = (rest: object) => {
   const dataTestProps = extractDataTestProps(rest);
 
   return Object.keys(dataTestProps).reduce((acc, key) => {

@@ -17,7 +17,8 @@ export const containerClassName = css`
 
 export const menuClassName = css`
   background-color: var(${COLORS.MENU_BACKGROUND});
-  // 9 elements
+
+  /* 9 elements */
   max-height: 332px;
   overflow-y: auto;
 `;

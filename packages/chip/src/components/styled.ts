@@ -48,6 +48,7 @@ export const ChipWrapper = styled.label`
       }
     }
   }
+
   &[data-variant='${Variant.Transparent}'] {
     background-color: transparent;
     border: 1px solid var(${COLORS.DEFAULT_BORDER});
@@ -81,16 +82,19 @@ export const ChipWrapper = styled.label`
     padding: 4px 12px;
     ${TEXT_3_STYLES};
   }
+
   &[data-size='${Size.Medium}'] {
     border-radius: 24px;
     padding: 8px 16px;
     ${TEXT_2_STYLES};
   }
+
   &[data-size='${Size.Large}'] {
     border-radius: 24px;
     padding: 12px 20px;
     ${TEXT_2_STYLES};
   }
+
   &[data-size='${Size.ExtraLarge}'] {
     border-radius: 32px;
     padding: 14px 24px;

@@ -20,7 +20,8 @@ export const LIGHT_THEMES = css`
 export const DARK_THEMES = css`
   :global() {
     body[data-theme=${Themes.PurpleDark}],
-    body[data-theme=${Themes.GreenDark}] {      
+    body[data-theme=${Themes.GreenDark}] {
       ${COLORS.text}: var(${GREY[500]});
+    }
   }
 `;

@@ -20,20 +20,17 @@ export const Pie = styled.div<{ percent: number }>`
   &::before,
   &::after {
     content: '';
-
     position: absolute;
     top: 0;
     left: 0;
-
     width: inherit;
     height: inherit;
-
     border-radius: inherit;
   }
 
   &::before {
     background: var(${EXPORT_VARS.GRADIENT[2]});
-
+    /* stylelint-disable-next-line color-no-hex */
     mask-image: conic-gradient(#000 ${props => props.percent}%, transparent ${props => props.percent}%);
   }
 

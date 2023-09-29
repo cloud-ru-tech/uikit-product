@@ -184,7 +184,7 @@ export const StatusDotWrap = styled.div`
   position: absolute;
   bottom: 0;
   right: 0;
-  font-size: 0; // to reduce div height
+  font-size: 0; /* to reduce div height */
 
   &[data-avatar-shape=${Shapes.Round}] {
     &[data-avatar-size=${Sizes.Medium}],

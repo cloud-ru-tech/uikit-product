@@ -21,6 +21,7 @@ export const DARK_THEMES = css`
   :global() {
     body[data-theme=${Themes.PurpleDark}],
     body[data-theme=${Themes.GreenDark}] {
-      ${COLORS.groupHeader}: var(${WHITE_ALFA[48]});    
+      ${COLORS.groupHeader}: var(${WHITE_ALFA[48]});
+    }
   }
 `;

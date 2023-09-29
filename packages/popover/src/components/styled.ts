@@ -51,13 +51,14 @@ export const containerClassName = css`
 
       &::before {
         border-color: transparent transparent var(${COLORS.container.border}) transparent;
-        border-width: 0 4px 4px 4px;
+        border-width: 0 4px 4px;
         position: absolute;
         top: -1px;
       }
+
       &::after {
         border-color: transparent transparent var(${COLORS.container.background}) transparent;
-        border-width: 0 4px 4px 4px;
+        border-width: 0 4px 4px;
       }
     }
   }
@@ -70,14 +71,14 @@ export const containerClassName = css`
 
       &::before {
         border-color: var(${COLORS.container.border}) transparent transparent transparent;
-        border-width: 4px 4px 0 4px;
+        border-width: 4px 4px 0;
         position: absolute;
         top: 1px;
       }
 
       &::after {
         border-color: var(${COLORS.container.background}) transparent transparent transparent;
-        border-width: 4px 4px 0 4px;
+        border-width: 4px 4px 0;
       }
     }
   }

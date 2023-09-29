@@ -35,17 +35,13 @@ export const ListWrap = styled.div`
   &::after {
     pointer-events: none;
     content: '';
-
     position: absolute;
     z-index: 1;
     left: 0;
-
     width: 100%;
     height: 48px;
-
     opacity: 0;
     background: var(${COLORS.listFading});
-
     transition: opacity ${ANIMATIONS.TRANSITION};
   }
 

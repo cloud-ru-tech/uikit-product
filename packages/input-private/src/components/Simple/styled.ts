@@ -26,6 +26,7 @@ enum SizeInPx {
 
 enum PaddingInPx {
   Small = '8px',
+  // eslint-disable-next-line @typescript-eslint/no-duplicate-enum-values
   Medium = '8px',
   Large = '12px',
 }

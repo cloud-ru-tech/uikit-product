@@ -36,6 +36,7 @@ export const StyledContainer = styled.div<IContainerType>`
     return `var(${COLORS_SELECT.TEXT_COLOR})`;
   }};
   cursor: ${(props): string => (props.disabled ? 'default' : 'pointer')};
+
   &:hover {
     border: 1px solid
       ${({ disabled, open }): string => {
@@ -58,9 +59,11 @@ export const iconClass = css`
   right: 8px;
   color: var(${COLORS_SELECT.TEXT_COLOR});
   fill: var(${COLORS_SELECT.TEXT_COLOR});
+
   &[data-open='true'] {
     transform: rotate(180deg);
   }
+
   &[data-disabled='true'] {
     color: var(${COLORS_SELECT.DISABLED_TEXT_COLOR});
     fill: var(${COLORS_SELECT.DISABLED_TEXT_COLOR});

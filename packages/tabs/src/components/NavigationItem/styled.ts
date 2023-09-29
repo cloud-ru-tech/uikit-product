@@ -14,8 +14,10 @@ GREEN_DARK_THEME;
 
 export const Tab = styled.li`
   min-width: fit-content;
+
   &[data-selected='true'] {
     color: var(${COLORS.text.selected.default});
+
     &:hover {
       cursor: pointer;
       color: var(${COLORS.text.selected.hover});
@@ -24,8 +26,10 @@ export const Tab = styled.li`
 
   &[data-selected='false'] {
     color: var(${COLORS.text.unselected.default});
+
     &[data-disabled] {
       color: var(${COLORS.text.unselected.disabled});
+
       &:hover {
         cursor: not-allowed;
       }
@@ -44,6 +48,7 @@ export const Tab = styled.li`
   }
 
   :last-child {
+    /* stylelint-disable-next-line property-no-unknown */
     parring-right: 0;
   }
 

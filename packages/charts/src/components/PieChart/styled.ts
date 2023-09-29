@@ -52,9 +52,11 @@ export const SvgText = styled.text`
   font-size: 5px;
   word-break: break-all;
   white-space: nowrap;
+
   &[data-hovered] {
     visibility: visible;
   }
+
   &[data-bolder] {
     font-weight: 700;
   }

@@ -25,7 +25,7 @@ import { styledTable } from '../../helpers/styled';
 import { ColumnDefinition } from '../../helpers/types';
 import { NoDataReasons, NoRows } from '../overlays';
 import * as S from './styled';
-import { SelectionMode, TablePrivateProps } from './types';
+import { DataRow, SelectionMode, TablePrivateProps } from './types';
 
 const AgGridModules = [ClientSideRowModelModule];
 
@@ -160,7 +160,7 @@ function StylelessTablePrivate({
       <AgGridReact
         modules={[...AgGridModules, ...additionModules]}
         gridOptions={{
-          isRowSelectable: ({ data }: any) => !Boolean(data?.disabled),
+          isRowSelectable: ({ data }: DataRow) => !Boolean(data?.disabled),
           suppressRowClickSelection: selectionMode !== SelectionMode.Single,
           suppressCellFocus: true,
           rowSelection: selectionMode !== SelectionMode.None ? selectionMode : undefined,

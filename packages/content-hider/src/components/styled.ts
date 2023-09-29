@@ -30,9 +30,10 @@ export const ContentWrapperGradientStyled = styled.div<{
   width: 100%;
   height: 83px;
   z-index: 2;
+  /* stylelint-disable function-disallowed-list */
   background: linear-gradient(
     180deg,
-    rgba(250, 250, 250, 0) 0%,
+    rgba(250, 250, 250, 0%) 0%,
     ${({ backgroundColor }) => backgroundColor || `var(${COLORS_GENERAL.BACKGROUND})`} 83.33%
   );
 `;

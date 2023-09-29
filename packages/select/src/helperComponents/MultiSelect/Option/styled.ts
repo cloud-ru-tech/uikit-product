@@ -10,6 +10,7 @@ export const CustomOption = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 8px 12px;
+
   &:hover {
     cursor: pointer;
     background-color: var(${COLORS_SELECT.DROPDOWN_HOVER_BACKGROUND});

@@ -30,6 +30,7 @@ export const ContentBoxStyled = styled.div`
   z-index: -1;
   position: relative;
   box-sizing: border-box;
+
   &[data-hasfooter] {
     height: calc(100% - 160px);
     overflow: auto;
@@ -43,7 +44,7 @@ export const HeaderTextBoxStyled = styled.div`
 `;
 
 export const HeaderBoxStyled = styled.div<{ width: string }>`
-  top: 0px;
+  top: 0;
   z-index: 2;
   display: flex;
   position: sticky;

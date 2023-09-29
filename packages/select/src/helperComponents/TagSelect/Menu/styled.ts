@@ -14,7 +14,8 @@ export const StyledSearchInput = styled(InputSearch)`
 export const searchInputWrapClassname = css`
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  border-bottom: 1px solid #cccccc;
+  /* stylelint-disable-next-line color-no-hex */
+  border-bottom: 1px solid #ccc;
   padding: 8px;
   background: var(${COLORS_SELECT.BACKGROUND});
 `;

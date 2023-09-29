@@ -13,7 +13,7 @@ import { ICON_SIZE } from './constants';
  */
 export const unpaddingButtonClassName = css`
   && > button {
-    padding: 0px;
+    padding: 0;
     width: ${PADDING * 2 + ICON_SIZE}px;
   }
 `;

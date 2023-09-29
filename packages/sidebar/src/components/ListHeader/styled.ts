@@ -19,7 +19,6 @@ export const TitleWrap = styled.div`
 
   &[data-hide] {
     pointer-events: none;
-
     opacity: 0;
   }
 `;
@@ -45,7 +44,6 @@ export const SearchWrap = styled.div`
 
   &[data-show] {
     pointer-events: auto;
-
     transform: translate(-100%, -50%);
   }
 `;

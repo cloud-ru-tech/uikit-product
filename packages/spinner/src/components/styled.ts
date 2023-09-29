@@ -36,10 +36,12 @@ export const Spin = styled.div<SpinProps>`
       left: -35%;
       right: 100%;
     }
+
     60% {
       left: 100%;
       right: -90%;
     }
+
     100% {
       left: 100%;
       right: -90%;
@@ -51,10 +53,12 @@ export const Spin = styled.div<SpinProps>`
       left: -200%;
       right: 100%;
     }
+
     60% {
       left: 107%;
       right: -8%;
     }
+
     100% {
       left: 107%;
       right: -8%;

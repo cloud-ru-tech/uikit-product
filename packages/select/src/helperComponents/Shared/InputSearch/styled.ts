@@ -9,6 +9,7 @@ export const searchIconClassname = css`
   align-self: center;
   fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   cursor: pointer;
+
   &:focus,
   &:hover {
     fill: var(${COLORS_INPUT.INPUT_ICON_HOVER_COLOR});
@@ -19,6 +20,7 @@ export const crossIconClassName = css`
   align-self: center;
   fill: var(${COLORS_INPUT.INPUT_ICON_COLOR});
   cursor: pointer;
+
   &:focus,
   &:hover {
     fill: var(${COLORS_INPUT.INPUT_ICON_HOVER_COLOR});

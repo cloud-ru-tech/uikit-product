@@ -41,9 +41,10 @@ export const Legend = styled.div`
 export const Gradient = styled.div<{ gradient: string }>`
   height: 20px;
   margin: 24px 0 8px;
+  background: ${props => props.gradient};
+  /* stylelint-disable-next-line color-named */
   background-color: red !important;
   border-radius: 4px;
-  background: ${props => props.gradient};
 `;
 
 export const LegendTicksWrapper = styled.div`
@@ -84,9 +85,11 @@ export const YAxisLabel = styled.div`
   font-size: 12px;
   font-weight: 600;
   color: var(${COLOR_VARS.LABEL});
+
   &[data-x-axis-position='${XAxisPosition.Top}'] {
     margin-top: ${TICKS_SIZE}px;
   }
+
   &[data-x-axis-position='${XAxisPosition.Bottom}'] {
     margin-bottom: ${TICKS_SIZE}px;
   }

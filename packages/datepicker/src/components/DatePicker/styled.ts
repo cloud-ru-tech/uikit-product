@@ -22,9 +22,7 @@ export const Container = styled.div`
     display: inline-block;
     position: relative;
     background-color: var(${COLORS.BACKGROUND});
-
     box-shadow: ${SHADOW.MEDIUM};
-
     line-height: 24px;
   }
 
@@ -48,6 +46,17 @@ export const Container = styled.div`
     border-top-left-radius: 4px;
     padding-top: 16px;
     position: relative;
+
+    &--time {
+      padding: 0;
+
+      &:not(&--only) {
+        padding-bottom: 8px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-top-left-radius: 0;
+      }
+    }
   }
 
   .react-datepicker__year-dropdown-container--select,
@@ -68,31 +77,6 @@ export const Container = styled.div`
 
   .react-datepicker__month-container {
     margin: 0 12px;
-  }
-
-  .react-datepicker__year {
-    margin: 0;
-    text-align: center;
-    &-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 180px;
-    }
-    .react-datepicker__year-text {
-      display: inline-block;
-      margin: 2px;
-    }
-  }
-
-  .react-datepicker__month {
-    margin: 0;
-    text-align: center;
-    padding-bottom: 16px;
-    .react-datepicker__month-text,
-    .react-datepicker__quarter-text {
-      display: inline-block;
-      margin: 2px;
-    }
   }
 
   .react-datepicker__day-names {
@@ -167,6 +151,34 @@ export const Container = styled.div`
     }
   }
 
+  .react-datepicker__month {
+    margin: 0;
+    text-align: center;
+    padding-bottom: 16px;
+
+    .react-datepicker__month-text,
+    .react-datepicker__quarter-text {
+      display: inline-block;
+      margin: 2px;
+    }
+  }
+
+  .react-datepicker__year {
+    margin: 0;
+    text-align: center;
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 180px;
+    }
+
+    .react-datepicker__year-text {
+      display: inline-block;
+      margin: 2px;
+    }
+  }
+
   .react-datepicker__day--disabled.react-datepicker__day--selected {
     cursor: default;
   }
@@ -184,23 +196,6 @@ export const Container = styled.div`
   .react-datepicker--time-only {
     padding: 0;
     width: 100%;
-  }
-
-  .react-datepicker__header {
-    text-align: center;
-    padding-top: 16px;
-    position: relative;
-
-    &--time {
-      padding: 0;
-
-      &:not(&--only) {
-        padding-bottom: 8px;
-        padding-left: 5px;
-        padding-right: 5px;
-        border-top-left-radius: 0;
-      }
-    }
   }
 
   /**

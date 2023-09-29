@@ -28,7 +28,6 @@ export const MenuItem = styled.a`
 
   &[data-disabled] {
     cursor: default;
-
     color: var(${COLORS.text.disabled});
   }
 

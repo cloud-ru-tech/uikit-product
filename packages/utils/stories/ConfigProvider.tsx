@@ -25,8 +25,8 @@ export default meta;
 const ConfigBody = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 12px;
   grid-column-gap: 20px;
-  grid-row-gap: 12px;
 `;
 
 const Header = styled.h1`

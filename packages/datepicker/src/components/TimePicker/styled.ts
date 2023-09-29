@@ -28,6 +28,7 @@ export const Container = styled.div`
         overflow-x: hidden;
         margin: 0 auto;
         border-radius: 4px;
+
         ul.react-datepicker__time-list {
           list-style: none;
           margin: 0;
@@ -48,10 +49,10 @@ export const Container = styled.div`
 
             &:hover {
               cursor: pointer;
-
               color: var(${COLORS.SELECT_TEXT_HOVER});
               background-color: var(${COLORS.SELECT_BACKGROUND_HOVER});
             }
+
             &--selected {
               color: var(${COLORS.SELECT_TEXT_SELECTED});
               background-color: var(${COLORS.SELECT_BACKGROUND_SELECTED});
@@ -60,6 +61,7 @@ export const Container = styled.div`
                 background-color: var(${COLORS.SELECT_BACKGROUND_HOVER});
               }
             }
+
             &--disabled {
               color: var(${COLORS.SELECT_TEXT_DISABLED});
 

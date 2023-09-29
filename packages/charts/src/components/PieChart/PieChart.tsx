@@ -31,7 +31,7 @@ export function PieChart({
 
   const pieStyles = useMemo(() => ({ overflow: 'overlay' }), []);
   const segmentStyles = useMemo(() => ({ transition: 'all .3s', cursor: 'pointer' }), []);
-  const onMouseOverCallback = useCallback((_: any, index: number) => setHovered(index), []);
+  const onMouseOverCallback = useCallback((_: unknown, index: number) => setHovered(index), []);
   const onMouseOutCallback = useCallback(() => setHovered(undefined), []);
   const labelRenderer = useCallback<LabelRenderFunction<DataType>>(
     ({ dataEntry, dataIndex }) => (

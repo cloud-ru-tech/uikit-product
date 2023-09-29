@@ -19,8 +19,8 @@ export default meta;
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, 288px);
+  grid-gap: 16px;
   grid-column-gap: 16px;
-  grid-row-gap: 16px;
   border-radius: 8px;
 `;
 
@@ -63,6 +63,7 @@ const Title = styled.div<{ background: string; color: string }>`
   background: ${p => p.background};
   display: flex;
   align-items: flex-end;
+
   & > * {
     margin: 12px 16px;
   }

@@ -41,7 +41,6 @@ export const Wrapper = styled.button`
 
   &[data-mobile] {
     justify-content: space-between;
-
     width: 100%;
   }
 `;
@@ -57,7 +56,6 @@ export const Selection = styled.div`
 
   &[data-mobile] {
     grid-auto-columns: 1fr;
-
     min-width: unset;
   }
 `;

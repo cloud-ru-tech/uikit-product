@@ -29,7 +29,7 @@ export const Wrapper = styled.div`
     background-color: var(${COLORS.background.hover});
     box-shadow: var(${COLORS.background.shadow});
   }
-  
+
   &[data-variant=${CardCategory.variants.Outline}] {
     background-color: transparent;
     border: 1px solid var(${COLORS.border.default});
@@ -40,6 +40,7 @@ export const Wrapper = styled.div`
     background-color: transparent;
     border: 1px solid var(${COLORS.border.hover});
     box-shadow: none;
+  }
 `;
 
 export const LeftSide = styled.div`

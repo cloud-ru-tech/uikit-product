@@ -22,7 +22,10 @@ export const Document = styled.div`
   border: 1px solid var(${COLORS.BORDER});
   color: var(${COLORS.PRIMARY_COLOR});
   background-color: var(${COLORS.BG});
-  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  transition:
+    color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
   cursor: pointer;
   box-sizing: border-box;
   position: relative;

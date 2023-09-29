@@ -121,6 +121,7 @@ export const rotateSmall = css`
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(360deg);
     }
@@ -135,6 +136,7 @@ export const rotateBig = css`
     from {
       transform: rotate(0deg);
     }
+
     to {
       transform: rotate(-360deg);
     }

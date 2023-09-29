@@ -50,7 +50,14 @@ export const styles = commonStyles({
     padding: '0 8px',
     flexWrap: 'nowrap',
   }),
-  menuList: (styles: CSSProperties, data: any) => ({
+  menuList: (
+    styles: CSSProperties,
+    data: {
+      selectProps: {
+        menuListBlockScroll?: boolean;
+      };
+    },
+  ) => ({
     ...styles,
     overflowY: data.selectProps.menuListBlockScroll ? 'hidden' : 'auto',
     paddingTop: 0,

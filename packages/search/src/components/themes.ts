@@ -50,6 +50,7 @@ export const DARK_THEMES = css`
       ${COLORS.icon.default}: var(${WHITE_ALFA[24]});
       ${COLORS.icon.disabled}: var(${WHITE_ALFA[8]});
       ${COLORS.placeholder.default}: var(${WHITE_ALFA[48]});
-      ${COLORS.placeholder.disabled}: var(${WHITE_ALFA[16]});      
+      ${COLORS.placeholder.disabled}: var(${WHITE_ALFA[16]});
+    }
   }
 `;

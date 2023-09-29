@@ -35,7 +35,7 @@ export const PURPLE_DARK_THEME = css`
       ${COLORS.CONTAINER_COLOR}: var(${GREY[0]});
       ${COLORS.CONTAINER_BACKGROUND_COLOR}: var(${BLUE_GREY[80]});
       ${COLORS.CONTAINER_BORDER_COLOR}: var(${BLUE_GREY[70]});
-      ${COLORS.CONTAINER_SHADOW}: 0px 0px 1px 0px var(${BLACK_ALFA[4]}), 0px 2px 6px 0px var(${BLACK_ALFA[4]}), 0px 10px 20px 0px var(${BLACK_ALFA[4]});
+      ${COLORS.CONTAINER_SHADOW}: 0 0 1px 0 var(${BLACK_ALFA[4]}), 0 2px 6px 0 var(${BLACK_ALFA[4]}), 0 10px 20px 0 var(${BLACK_ALFA[4]});
       ${COLORS.ICON_FILL}: var(${WHITE_ALFA[48]});
       ${COLORS.ICON_HOVER_FILL}: var(${PURPLE[25]});
       ${COLORS.ICON_ACTIVE_FILL}: var(${GREY[0]});
@@ -63,7 +63,7 @@ export const GREEN_DARK_THEME = css`
       ${COLORS.CONTAINER_COLOR}: var(${GREY[0]});
       ${COLORS.CONTAINER_BACKGROUND_COLOR}: var(${BLUE_GREY[80]});
       ${COLORS.CONTAINER_BORDER_COLOR}: var(${BLUE_GREY[70]});
-      ${COLORS.CONTAINER_SHADOW}: 0px 0px 1px 0px var(${BLACK_ALFA[4]}), 0px 2px 6px 0px var(${BLACK_ALFA[4]}), 0px 10px 20px 0px var(${BLACK_ALFA[4]});
+      ${COLORS.CONTAINER_SHADOW}: 0 0 1px 0 var(${BLACK_ALFA[4]}), 0 2px 6px 0 var(${BLACK_ALFA[4]}), 0 10px 20px 0 var(${BLACK_ALFA[4]});
       ${COLORS.ICON_FILL}: var(${WHITE_ALFA[48]});
       ${COLORS.ICON_HOVER_FILL}: var(${GREEN[10]});
       ${COLORS.ICON_ACTIVE_FILL}: var(${GREY[0]});

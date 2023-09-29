@@ -32,6 +32,7 @@ export const HeaderStyled = styled.div`
 
 export const HeaderGroupStyled = styled.div`
   display: flex;
+
   &[data-clicked] {
     cursor: pointer;
   }
@@ -55,12 +56,14 @@ export const CollapseButtonStyled = styled.button`
   cursor: pointer;
   align-items: center;
   justify-content: center;
+
   &[data-rotate] {
     transform: rotate(0.5turn);
   }
 `;
 
 export const collapseIconClassName = css`
+  /* stylelint-disable-next-line color-named */
   fill: black;
 `;
 
@@ -90,9 +93,11 @@ export const favouriteButtonClassName = css`
   fill: var(${COLORS_COLLAPSE_PANEL.COLLAPSE_PANEL_FAVOURITE_ICON_COLOR});
 
   transition: all 0.2s ease-in-out;
+
   &:hover {
     fill: var(${COLORS_COLLAPSE_PANEL.COLLAPSE_PANEL_FAVOURITE_ICON_HOVER_COLOR});
   }
+
   &[data-filled] {
     fill: var(${COLORS_COLLAPSE_PANEL.COLLAPSE_PANEL_FAVOURITE_ICON_FILLED_COLOR});
   }

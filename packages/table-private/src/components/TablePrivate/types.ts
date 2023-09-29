@@ -9,11 +9,17 @@ export enum SelectionMode {
   None = 'none',
 }
 
+export type DataRow = {
+  data: {
+    disabled?: boolean;
+  };
+};
+
 export type TablePrivateProps = AgGridReactProps & {
   className?: string;
   selectionMode?: SelectionMode;
   selectedRows?: string[];
-  doesRowPassFilter?(data: any): boolean;
+  doesRowPassFilter?(data: unknown): boolean;
   additionModules?: Module[];
   onRowClicked?(e: RowClickedEvent): void;
   onRowSelected?(e: RowSelectedEvent): void;

@@ -51,7 +51,6 @@ export const ListItem = styled.div`
 
   &[data-disabled] {
     pointer-events: none;
-
     background-color: unset;
     color: var(${COLORS.item.disabled.color});
   }

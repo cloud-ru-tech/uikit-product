@@ -19,7 +19,6 @@ export const Content = styled.div`
 
   &[data-hidden] {
     pointer-events: none;
-
     visibility: hidden;
   }
 `;

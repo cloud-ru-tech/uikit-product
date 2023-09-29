@@ -20,8 +20,8 @@ const Group = styled.div`
   padding-bottom: 24px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 12px;
   grid-column-gap: 20px;
-  grid-row-gap: 12px;
 `;
 
 const Item = styled.div`
@@ -34,6 +34,7 @@ const Item = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+
   :hover {
     color: ${() => `var(${COLORS_BUTTON.TRANSPARENT_HOVER_COLOR})`};
     background-color: ${() => `var(${COLORS_BUTTON.TRANSPARENT_HOVER_BG})`};
@@ -44,6 +45,7 @@ const IconOverview = styled.div`
   display: flex;
   box-sizing: border-box;
   flex-direction: column;
+
   & > * + * {
     margin-top: 24px;
   }
