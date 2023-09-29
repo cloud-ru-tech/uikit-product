@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.0.7 (2023-09-29)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-link@3.1.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/link/CHANGELOG.md)
+
+
+
+
+
 ## 4.0.6 (2023-09-12)
 
 ### Only dependencies have been changed

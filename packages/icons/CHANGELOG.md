@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.24.0 (2023-09-29)
+
+
+### Features
+
+* **[AICINF-487](https://jira.sbercloud.tech/browse/AICINF-487):** added new round arrow icons ([4328d00](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4328d0016b49da65d1e97c4fd0e09a0c8174310f))
+
+
+
+
+
 # 5.23.0 (2023-09-08)
 
 
