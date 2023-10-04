@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.5 (2023-10-04)
+
+
+### Bug Fixes
+
+* **[CORESERV-1974](https://jira.sbercloud.tech/browse/CORESERV-1974):** wrong state inside on items length 0 ([d715ce9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d715ce98d5e2d37318f6789032877624fb6fb661))
+
+
+
+
+
 ## 0.7.4 (2023-09-29)
 
 ### Only dependencies have been changed
