@@ -47,7 +47,7 @@ type Action = SetCheckedAction | SetAllCheckedAction | ClearStateAction | Defaul
 
 export const getDefaultState = (items: SelectChipProps['items']): FilterChipState => ({
   allChecked: {
-    value: items.every(value => value.checked),
+    value: Boolean(items.length) && items.every(value => value.checked),
     partially: items.some(value => value.checked),
   },
   values: items.reduce((acc, next) => {
