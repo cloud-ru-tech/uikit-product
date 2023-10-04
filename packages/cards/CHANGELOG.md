@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2023-10-04)
+
+
+### BREAKING CHANGES
+
+
+* **[SVP-8023](https://jira.sbercloud.tech/browse/SVP-8023):** update actions prop for CardProduct ([f8ead4d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f8ead4dea551285ebcf0df7a23f07326d6dcd70c))
+
+
+
+
 ## 2.2.6 (2023-09-29)
 
 ### Only dependencies have been changed
