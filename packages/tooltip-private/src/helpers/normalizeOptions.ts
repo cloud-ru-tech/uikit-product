@@ -1,4 +1,4 @@
-import { PopperOptions } from 'react-popper-tooltip';
+import { Config, PopperOptions } from 'react-popper-tooltip';
 
 import { Placements } from './types';
 
@@ -17,15 +17,25 @@ const FALLBACK_PLACEMENTS: Placements[] = [
   Placements.LeftStart,
 ];
 
-export const normalizeOptions = (options: PopperOptions = {}) => ({
-  ...options,
+export const normalizeOptions = ({
+  popperOptions = {},
+  offset,
+}: {
+  popperOptions?: PopperOptions;
+  offset: Config['offset'];
+}) => ({
+  ...popperOptions,
   modifiers: [
+    {
+      name: 'offset',
+      options: { offset },
+    },
     {
       name: 'flip',
       options: {
         fallbackPlacements: FALLBACK_PLACEMENTS,
       },
     },
-    ...(options.modifiers || []),
+    ...(popperOptions.modifiers || []),
   ],
 });

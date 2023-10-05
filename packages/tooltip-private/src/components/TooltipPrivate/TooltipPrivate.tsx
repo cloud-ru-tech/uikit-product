@@ -17,14 +17,16 @@ export function TooltipPrivate({
   classNameArrow,
   classNameTrigger,
   getTooltipRef,
+  offset,
   ...props
 }: WithSupportProps<TooltipPrivateProps>) {
   const { getArrowProps, getTooltipProps, setTooltipRef, setTriggerRef, visible, tooltipRef } = usePopperTooltip(
     {
       interactive: true,
+      offset,
       ...props,
     },
-    normalizeOptions(popperOptions),
+    normalizeOptions({ popperOptions, offset }),
   );
 
   useEffect(() => {
