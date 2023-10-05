@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.1 (2023-10-05)
+
+
+### Bug Fixes
+
+* **FF-0:** fix passing offset to popper-tooltip ([aa8e5a9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aa8e5a9e082f8edcc0a6abd2881afbe87a00f3f2))
+
+
+
+
+
 # 1.3.0 (2023-09-12)
 
 
