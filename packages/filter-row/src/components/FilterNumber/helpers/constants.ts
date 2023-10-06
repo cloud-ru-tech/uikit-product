@@ -1,4 +1,4 @@
-import { Texts } from './texts-provider';
+import { Texts } from './textsProvider';
 
 export enum Comparison {
   Equal = 'Equal',

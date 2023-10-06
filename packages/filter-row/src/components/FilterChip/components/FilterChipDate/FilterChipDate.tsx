@@ -14,7 +14,7 @@ import { areDatesHasChanged } from './helpers';
 import * as S from './styled';
 
 export const FilterChipDate = forwardRef(
-  ({ label, min, max, withSingleFilterClearButton, onChange }: DateChipProps, ref) => {
+  ({ label, icon, min, max, withSingleFilterClearButton, onChange }: DateChipProps, ref) => {
     const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
     const [value, setValue] = useState<[InnerDate, InnerDate?]>([undefined, undefined]);
     const [innerLabel, setInnerLabel] = useState<ReactNode>(textProvider(languageCode, Texts.All));
@@ -53,7 +53,7 @@ export const FilterChipDate = forwardRef(
       >
         <Trigger
           label={label}
-          icon={null}
+          icon={icon}
           innerLabel={innerLabel}
           showClearButton={withSingleFilterClearButton && hasValue}
           onClear={handleClearFilter}

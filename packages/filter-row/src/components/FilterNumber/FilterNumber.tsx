@@ -7,7 +7,7 @@ import { Switch } from '@sbercloud/uikit-product-switch';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { COMPARE_OPTIONS, Comparison, DEFAULT_FILTER_VALUE } from './helpers/constants';
-import { textProvider, Texts } from './helpers/texts-provider';
+import { textProvider, Texts } from './helpers/textsProvider';
 import { FilterNumberValue } from './helpers/types';
 import * as S from './styled';
 
@@ -37,7 +37,6 @@ export function FilterNumber({ filterValue = DEFAULT_FILTER_VALUE, onClear, onCh
   const handleEndValueChange = (newValue: string) => {
     if (!/\D/.test(newValue)) {
       setEndValue(newValue);
-
       onChange?.({ startValue, endValue: newValue, comparison });
     }
   };

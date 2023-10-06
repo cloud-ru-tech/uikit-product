@@ -30,6 +30,7 @@ export const Chip = styled.div`
 
 export const FilterLabel = styled.span`
   ${H5_STYLES};
+  max-height: 20px;
 `;
 
 export const InnerLabel = styled.span`
