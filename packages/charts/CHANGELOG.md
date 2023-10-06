@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.12 (2023-10-06)
+
+
+### Bug Fixes
+
+* **[FF-2828](https://jira.sbercloud.tech/browse/FF-2828):** fix pieChart display ([b7a1897](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b7a189794b325668e1b7f9b81a9ab4dc35cbf31a))
+
+
+
+
+
 ## 0.9.11 (2023-06-08)
 
 ### Only dependencies have been changed
