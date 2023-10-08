@@ -3,7 +3,7 @@ import JoyRide, { CallBackProps, STATUS, TooltipRenderProps } from 'react-joyrid
 
 import { Hint } from '../Hint';
 import { COLORS } from '../Hint/themes';
-import { StepWithSubtitle } from '../types';
+import { TourStepExtended } from '../types';
 
 const customColors = {
   options: {
@@ -22,7 +22,7 @@ const customArrowSize = {
 };
 
 export type WelcomeTourProps = {
-  tourSteps: StepWithSubtitle[];
+  tourSteps: TourStepExtended[];
   tourStarted: boolean;
   setTourStarted(value: boolean, status: CallBackProps['status']): void;
   closeButtonProps: {

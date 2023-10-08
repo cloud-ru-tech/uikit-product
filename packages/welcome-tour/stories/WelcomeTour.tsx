@@ -1,6 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
-import { StepWithSubtitle } from 'welcome-tour/src/components/types';
+import { TourStepExtended } from 'welcome-tour/src/components/types';
 
 import { simpleVar, themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { Button } from '@sbercloud/uikit-product-button';
@@ -12,7 +12,7 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { WelcomeTour, WelcomeTourProps } from '../src';
 
-const JoyrideSteps: StepWithSubtitle[] = [
+const JoyrideSteps: TourStepExtended[] = [
   {
     title: 'Бизнес решение для вас',
     subtitle:
@@ -44,7 +44,7 @@ const JoyrideSteps: StepWithSubtitle[] = [
   },
 ];
 
-const JoyrideStepsWithoutContent: StepWithSubtitle[] = [
+const JoyrideStepsWithoutContent: TourStepExtended[] = [
   {
     title: 'Бизнес решение для вас',
     subtitle:

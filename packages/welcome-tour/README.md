@@ -36,7 +36,7 @@ If you want to hide Back button for WelcomeTour, do not pass the backButtonProps
 
 ```typescript
 type WelcomeTourProps = {
-  tourSteps: StepWithSubtitle[];
+  tourSteps: TourStepExtended[];
   tourStarted: boolean;
   setTourStarted(value: boolean): void;
   closeButtonText: string;
@@ -44,8 +44,12 @@ type WelcomeTourProps = {
   backButtonText: string;
 };
 
-type StepWithSubtitle = {
+type TourStepExtended = {
   subtitle?: ReactNode;
+  primaryButtonText?: string;
+  backButtonText?: string;
+  closeButtonText?: string;
+  onFinish?(): void | boolean;
 } & Omit<Step, 'disableBeacon'>;
 
 interface Step extends CommonProps {

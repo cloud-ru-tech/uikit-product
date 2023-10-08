@@ -5,7 +5,7 @@ import { ButtonGhost, ButtonIcon, ButtonRound } from '@sbercloud/uikit-product-b
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { Steps } from '../Steps';
-import { StepWithSubtitle } from '../types';
+import { TourStepExtended } from '../types';
 import * as S from './styled';
 
 type TooltipButtonProps = {
@@ -21,7 +21,7 @@ type HintProps = {
   backButton?: TooltipButtonProps;
   closeButton: TooltipButtonProps;
   primaryButton: TooltipButtonProps;
-  step: StepWithSubtitle;
+  step: TourStepExtended;
 } & Omit<TooltipRenderProps, 'backProps' | 'closeProps' | 'primaryProps'>;
 
 export function Hint({
