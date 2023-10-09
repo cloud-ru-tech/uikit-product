@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.7 (2023-10-09)
+
+
+### Bug Fixes
+
+* **[SVP-8112](https://jira.sbercloud.tech/browse/SVP-8112):** FilterNumber fixes ([d6eeb83](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d6eeb83b60d3da1ad2c80cabac10447bea6c7ddd))
+
+
+
+
+
 ## 0.7.6 (2023-10-05)
 
 ### Only dependencies have been changed
