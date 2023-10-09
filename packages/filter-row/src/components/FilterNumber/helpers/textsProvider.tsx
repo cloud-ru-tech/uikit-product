@@ -37,4 +37,4 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   },
 };
 
-export const textProvider = createTextProvider<Texts, string>(Dictionary, 'datepicker');
+export const textProvider = createTextProvider<Texts, string>(Dictionary, 'filter-number');

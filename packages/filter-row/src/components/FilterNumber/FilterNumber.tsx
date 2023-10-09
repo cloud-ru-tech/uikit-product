@@ -12,8 +12,8 @@ import { FilterNumberValue } from './helpers/types';
 import * as S from './styled';
 
 type FilterNumberProps = {
-  onClear?: () => void;
-  onChange?: (value: FilterNumberValue) => void;
+  onClear?(): void;
+  onChange?(value: FilterNumberValue): void;
   filterValue: FilterNumberValue;
 };
 

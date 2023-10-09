@@ -1,10 +1,10 @@
 import { Texts } from './textsProvider';
 
 export enum Comparison {
-  Equal = 'Equal',
-  NotEqual = 'NotEqual',
-  More = 'More',
-  Less = 'Less',
+  Equal = 'equal',
+  NotEqual = 'notEqual',
+  More = 'more',
+  Less = 'less',
 }
 
 export const COMPARE_OPTIONS = [

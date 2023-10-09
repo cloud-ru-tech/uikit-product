@@ -2,12 +2,14 @@ import { ReactNode } from 'react';
 
 import { InnerDate } from '../FilterDatePicker/helpers/types';
 import { FilterNumberValue } from '../FilterNumber/helpers/types';
+import { FilterStringValue } from '../FilterString/helpers/types';
 
 export enum FilterChipType {
   Select = 'Select',
   Radio = 'Radio',
   Date = 'Date',
   Number = 'Number',
+  String = 'String',
 }
 
 type FilterLabelRequired = {
@@ -64,6 +66,11 @@ export type NumberChipProps = {
   withSingleFilterClearButton?: boolean;
 } & ChipFilterLabelValue;
 
+export type StringChipProps = {
+  onChange(value: FilterStringValue): void;
+  withSingleFilterClearButton?: boolean;
+} & ChipFilterLabelValue;
+
 type SelectFilterType = {
   type: FilterChipType.Select;
 } & SelectChipProps;
@@ -80,16 +87,10 @@ type NumberFilterType = {
   type: FilterChipType.Number;
 } & NumberChipProps;
 
+type StringFilterType = {
+  type: FilterChipType.String;
+} & StringChipProps;
+
 export type FilterChipProps = {
   id: string;
-} & (SelectFilterType | RadioFilterType | DateFilterType | NumberFilterType);
-
-export type ComponentProps<
-  T extends FilterChipType.Select | FilterChipType.Radio | FilterChipType.Date | FilterChipType.Number,
-> = T extends FilterChipType.Select
-  ? SelectChipProps
-  : T extends FilterChipType.Date
-  ? DateChipProps
-  : T extends FilterChipType.Number
-  ? NumberChipProps
-  : RadioChipProps;
+} & (SelectFilterType | RadioFilterType | DateFilterType | NumberFilterType | StringFilterType);

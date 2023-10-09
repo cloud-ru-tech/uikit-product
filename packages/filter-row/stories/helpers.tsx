@@ -85,4 +85,10 @@ export const filtersMock: FilterRowProps<Filters>['filters'] = [
     id: 'cpu',
     label: 'CPU',
   },
+
+  {
+    type: FilterRow.filterTypes.String,
+    id: 'name',
+    label: 'Название',
+  },
 ];
