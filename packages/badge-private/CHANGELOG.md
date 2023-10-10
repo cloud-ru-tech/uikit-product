@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2023-10-10)
+
+
+### Features
+
+* **[DPS-4142](https://jira.sbercloud.tech/browse/DPS-4142):** add Info component ([e3ad20e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3ad20e37d1d356cbab1b08b8628dcfa4bee97dd))
+* **[DPS-4142](https://jira.sbercloud.tech/browse/DPS-4142):** review fixes ([6d3938a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6d3938a7cac0f3d8cd31bbaee55cb26c014054aa))
+
+
+
+
+
 ## 3.1.29 (2023-06-02)
 
 ### Only dependencies have been changed
@@ -63,7 +75,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.1.23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-badge-private@3.1.22...@sbercloud/uikit-product-badge-private@3.1.23) (2022-11-28)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-badge-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-theme@0.38.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [3.1.22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-badge-private@3.1.21...@sbercloud/uikit-product-badge-private@3.1.22) (2022-10-10)
 

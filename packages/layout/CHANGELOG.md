@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2023-10-10)
+
+
+### Features
+
+* **[DPS-7013](https://jira.sbercloud.tech/browse/DPS-7013):** added medium size for LabelInfo ([0a02ccf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0a02ccf26dd5a9fd257e171d740ffa1e0b3566ee))
+
+
+
+
+
 ## 0.5.7 (2023-10-05)
 
 ### Only dependencies have been changed

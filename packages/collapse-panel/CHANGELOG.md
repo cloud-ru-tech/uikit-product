@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.108 (2023-10-10)
+
+
+### Bug Fixes
+
+* **[FF-2821](https://jira.sbercloud.tech/browse/FF-2821):** added stylelint config and refactored styles ([f201954](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+
+
+
+
+
 ## 0.8.107 (2023-09-29)
 
 ### Only dependencies have been changed
@@ -280,7 +291,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.8.77](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-collapse-panel@0.8.76...@sbercloud/uikit-product-collapse-panel@0.8.77) (2022-11-17)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-collapse-panel
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-divider@2.0.46](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/divider/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.38.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
 
 ## [0.8.76](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-collapse-panel@0.8.75...@sbercloud/uikit-product-collapse-panel@0.8.76) (2022-10-10)
 

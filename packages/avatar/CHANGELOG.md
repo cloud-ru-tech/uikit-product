@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.44 (2023-10-10)
+
+
+### Bug Fixes
+
+* **[FF-2821](https://jira.sbercloud.tech/browse/FF-2821):** added stylelint config and refactored styles ([f201954](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+
+
+
+
+
 ## 1.1.43 (2023-09-29)
 
 ### Only dependencies have been changed
@@ -268,7 +279,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.1.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-avatar@1.1.14...@sbercloud/uikit-product-avatar@1.1.15) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-avatar
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-status@6.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/status/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.38.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [1.1.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-avatar@1.1.13...@sbercloud/uikit-product-avatar@1.1.14) (2022-11-28)
 

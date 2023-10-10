@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.22.13 (2023-10-10)
+
+
+### Bug Fixes
+
+* **[FF-2821](https://jira.sbercloud.tech/browse/FF-2821):** added stylelint config and refactored styles ([f201954](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+* **[FF-2821](https://jira.sbercloud.tech/browse/FF-2821):** eslint fix ([cfcb4c3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cfcb4c3841f89973a3dcb1991a32da3ab43e1ff0))
+
+
+
+
+
 ## 0.22.12 (2023-09-29)
 
 ### Only dependencies have been changed
@@ -461,7 +473,13 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.20.8 (2023-01-25)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-table-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-checkbox@3.1.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/checkbox/CHANGELOG.md)
+* [@sbercloud/uikit-product-no-data@2.1.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/no-data/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.2.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-radio@3.1.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/radio/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.38.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.20.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table-private@0.20.6...@sbercloud/uikit-product-table-private@0.20.7) (2023-01-12)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2023-10-10)
+
+
+### Features
+
+* **[ONB-1182](https://jira.sbercloud.tech/browse/ONB-1182):** change step type ([4c23040](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4c23040057a43314c10d79069b1813cbd2a4973f))
+
+
+
+
+
 ## 0.4.10 (2023-10-05)
 
 ### Only dependencies have been changed

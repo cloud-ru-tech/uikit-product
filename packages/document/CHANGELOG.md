@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.53 (2023-10-10)
+
+
+### Bug Fixes
+
+* **[FF-2821](https://jira.sbercloud.tech/browse/FF-2821):** added stylelint config and refactored styles ([f201954](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+* **[FF-2821](https://jira.sbercloud.tech/browse/FF-2821):** eslint fix ([cfcb4c3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cfcb4c3841f89973a3dcb1991a32da3ab43e1ff0))
+
+
+
+
+
 ## 2.0.52 (2023-10-05)
 
 ### Only dependencies have been changed
@@ -375,7 +387,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 2.0.18 (2023-02-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-document
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.3.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.38.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@4.0.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## 2.0.17 (2023-01-27)
 

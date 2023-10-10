@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2023-10-10)
+
+
+### Bug Fixes
+
+* **[FF-2821](https://jira.sbercloud.tech/browse/FF-2821):** added stylelint config and refactored styles ([f201954](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+
+
+### Features
+
+* **[SVP-8386](https://jira.sbercloud.tech/browse/SVP-8386):** added FilterString ([c54bb6d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c54bb6d9390b1884ddbd7949bb61b750dcd5046e))
+
+
+
+
+
 ## 0.7.7 (2023-10-09)
 
 
