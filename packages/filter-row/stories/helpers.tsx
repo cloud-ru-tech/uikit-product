@@ -87,6 +87,13 @@ export const filtersMock: FilterRowProps<Filters>['filters'] = [
   },
 
   {
+    type: FilterRow.filterTypes.Number,
+    id: 'ram',
+    label: 'RAM',
+    showRangeChips: false,
+  },
+
+  {
     type: FilterRow.filterTypes.String,
     id: 'name',
     label: 'Название',

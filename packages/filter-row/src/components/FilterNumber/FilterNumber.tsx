@@ -15,11 +15,17 @@ type FilterNumberProps = {
   onClear?(): void;
   onChange?(value: FilterNumberValue): void;
   filterValue: FilterNumberValue;
+  showRangeChips?: boolean;
 };
 
 const DEFAULT_COMPARISON = COMPARE_OPTIONS[0].value;
 
-export function FilterNumber({ filterValue = DEFAULT_FILTER_VALUE, onClear, onChange }: FilterNumberProps) {
+export function FilterNumber({
+  filterValue = DEFAULT_FILTER_VALUE,
+  onClear,
+  onChange,
+  showRangeChips = true,
+}: FilterNumberProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const [startValue, setStartValue] = useState<string | undefined>(filterValue.startValue);
@@ -77,6 +83,8 @@ export function FilterNumber({ filterValue = DEFAULT_FILTER_VALUE, onClear, onCh
     [isRange],
   );
 
+  const isChipsShown = !isRange || showRangeChips;
+
   return (
     <S.Container>
       <S.Switch>
@@ -85,17 +93,19 @@ export function FilterNumber({ filterValue = DEFAULT_FILTER_VALUE, onClear, onCh
         <Switch checked={isRange} onChange={handleToggleRange} />
       </S.Switch>
 
-      <S.ChipsWrapper>
-        {filteredCompareOptions.map(({ textKey, value }) => (
-          <Chip
-            key={value}
-            label={textProvider<string>(languageCode, textKey)}
-            size={Chip.sizes.Small}
-            handleChange={() => handleChangeComparison(value)}
-            checked={comparison === value}
-          />
-        ))}
-      </S.ChipsWrapper>
+      {isChipsShown && (
+        <S.ChipsWrapper>
+          {filteredCompareOptions.map(({ textKey, value }) => (
+            <Chip
+              key={value}
+              label={textProvider<string>(languageCode, textKey)}
+              size={Chip.sizes.Small}
+              handleChange={() => handleChangeComparison(value)}
+              checked={comparison === value}
+            />
+          ))}
+        </S.ChipsWrapper>
+      )}
 
       {isRange ? (
         <S.InputsContainer>

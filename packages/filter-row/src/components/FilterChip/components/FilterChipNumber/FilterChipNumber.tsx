@@ -14,7 +14,7 @@ import { Trigger } from '../Trigger';
 import * as S from './styled';
 
 export const FilterChipNumber = forwardRef(
-  ({ label, icon, onChange, withSingleFilterClearButton }: NumberChipProps, ref) => {
+  ({ label, icon, onChange, withSingleFilterClearButton, showRangeChips }: NumberChipProps, ref) => {
     const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
     const [value, setValue] = useState<FilterNumberValue>(DEFAULT_FILTER_VALUE);
     const [innerLabel, setInnerLabel] = useState<string>(textProvider(languageCode, Texts.All));
@@ -58,7 +58,7 @@ export const FilterChipNumber = forwardRef(
       <Popover
         placement={Popover.placements.BottomStart}
         trigger={Popover.triggers.Click}
-        popoverContent={<FilterNumber onChange={handleChange} filterValue={value} />}
+        popoverContent={<FilterNumber onChange={handleChange} filterValue={value} showRangeChips={showRangeChips} />}
         offset={12}
         className={S.popoverClassName}
       >

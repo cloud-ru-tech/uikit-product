@@ -64,6 +64,7 @@ export type DateChipProps = {
 export type NumberChipProps = {
   onChange(value: FilterNumberValue): void;
   withSingleFilterClearButton?: boolean;
+  showRangeChips?: boolean;
 } & ChipFilterLabelValue;
 
 export type StringChipProps = {
