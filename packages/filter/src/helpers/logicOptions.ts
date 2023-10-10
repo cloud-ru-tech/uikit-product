@@ -85,10 +85,7 @@ export const logicOptions = (language: LanguageCodeType): LogicOptionType[] => [
 ];
 
 export const getLogicOptionByValue = (language: LanguageCodeType) =>
-  logicOptions(language).reduce(
-    (acc, curr) => {
-      acc[curr.value] = curr;
-      return acc;
-    },
-    {} as { [key: string]: OptionTypeBase },
-  );
+  logicOptions(language).reduce((acc, curr) => {
+    acc[curr.value] = curr;
+    return acc;
+  }, {} as { [key: string]: OptionTypeBase });

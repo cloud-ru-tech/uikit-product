@@ -59,27 +59,21 @@ export function UsersByGroup({ options, filter, onChange, checkedKeys, isFiltere
 
   const optionsKeys = useMemo(
     () =>
-      options?.reduce(
-        (acc, option) => {
-          const res = option?.children?.map(childrenOption => childrenOption.key);
-          return { ...acc, ...(res ? { [option.key]: res } : {}) };
-        },
-        {} as { [key: string]: TextLike[] },
-      ),
+      options?.reduce((acc, option) => {
+        const res = option?.children?.map(childrenOption => childrenOption.key);
+        return { ...acc, ...(res ? { [option.key]: res } : {}) };
+      }, {} as { [key: string]: TextLike[] }),
     [options],
   );
 
   const disabledOptionKeys = useMemo(
     () =>
-      options?.reduce(
-        (acc, option) => {
-          const res = option?.children
-            ?.map(childrenOption => (childrenOption.disabled ? childrenOption.key : ''))
-            .filter(Boolean);
-          return { ...acc, ...(res ? { [option.key]: res } : {}) };
-        },
-        {} as { [key: string]: TextLike[] },
-      ),
+      options?.reduce((acc, option) => {
+        const res = option?.children
+          ?.map(childrenOption => (childrenOption.disabled ? childrenOption.key : ''))
+          .filter(Boolean);
+        return { ...acc, ...(res ? { [option.key]: res } : {}) };
+      }, {} as { [key: string]: TextLike[] }),
     [options],
   );
 

@@ -18,7 +18,7 @@ export const getSubstr = (str: string, maxlength: number): string =>
   str.length > maxlength + 3 ? `${str.substring(0, maxlength)}...` : str;
 
 export const toStateItems = (items: BreadcrumbItem[]): StateItem[] =>
-  items.map((item, index) => ({ ...item, visible: true, key: item.key || index.toString() }) as StateItem);
+  items.map((item, index) => ({ ...item, visible: true, key: item.key || index.toString() } as StateItem));
 
 export const measureText = (child: HTMLDivElement, text: string | ReactElement): { width: number; height: number } => {
   const style = window?.getComputedStyle(child);

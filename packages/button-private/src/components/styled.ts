@@ -20,10 +20,7 @@ export const styledButtonPrivate = (
   justify-content: center;
   width: max-content;
   min-width: max-content;
-  transition:
-    fill ${ANIMATIONS.TRANSITION},
-    color ${ANIMATIONS.TRANSITION},
-    border-color ${ANIMATIONS.TRANSITION},
+  transition: fill ${ANIMATIONS.TRANSITION}, color ${ANIMATIONS.TRANSITION}, border-color ${ANIMATIONS.TRANSITION},
     background-color ${ANIMATIONS.TRANSITION};
   text-decoration: none;
   font-weight: normal;

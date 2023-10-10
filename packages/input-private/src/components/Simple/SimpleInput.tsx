@@ -57,8 +57,8 @@ const StylelessForwardedInput = forwardRef<HTMLInputElement, SimpleInputProps>(
         setInnerType(Types.Text);
       }
 
-      setTimeout(
-        () => innerRef.current?.setSelectionRange(innerRef.current.value.length, innerRef.current.value.length),
+      setTimeout(() =>
+        innerRef.current?.setSelectionRange(innerRef.current.value.length, innerRef.current.value.length),
       );
 
       innerRef.current?.focus();

@@ -25,9 +25,7 @@ export const styledTextareaPrivate = (TextareaPrivate: VFC<TextareaPrivateProps>
   max-width: 100%;
   height: 100%;
   scrollbar-width: none;
-  font-family:
-    SB Sans Interface,
-    serif;
+  font-family: SB Sans Interface, serif;
   color: var(${COLORS.text.default});
 
   &[disabled] {

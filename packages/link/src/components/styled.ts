@@ -56,9 +56,7 @@ export const StyledLink = styled.a<{ showSuffixIcon: boolean }>`
   display: inline-flex;
   align-items: center;
   fill: currentColor;
-  transition:
-    color ${ANIMATIONS.TRANSITION},
-    fill ${ANIMATIONS.TRANSITION};
+  transition: color ${ANIMATIONS.TRANSITION}, fill ${ANIMATIONS.TRANSITION};
 
   &[data-disabled='true'] {
     cursor: none;

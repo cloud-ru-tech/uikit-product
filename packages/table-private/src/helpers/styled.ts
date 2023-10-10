@@ -46,8 +46,7 @@ export const styledTable = <P extends TableProps>(Table: VFC<P>) => styled(Table
           &:before {
             display: none;
           }
-          box-shadow:
-            inset 4px 0 0 var(${COLORS_TABLE.TABLE_ROW_HOVER_SHADOW_LEFT}),
+          box-shadow: inset 4px 0 0 var(${COLORS_TABLE.TABLE_ROW_HOVER_SHADOW_LEFT}),
             inset 0px -1px 0px var(${COLORS_TABLE.TABLE_ROW_HOVER_SHADOW_TOP_BOTTOM}),
             inset 0px 1px 0px var(${COLORS_TABLE.TABLE_ROW_HOVER_SHADOW_TOP_BOTTOM});
         }
