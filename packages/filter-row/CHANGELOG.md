@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2023-10-11)
+
+
+### Features
+
+* **[KUBER-3899](https://jira.sbercloud.tech/browse/KUBER-3899):** added showRangeChips to FilterNumber ([529d558](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/529d558b907a603e66b82a501f5c57e1099bd32b))
+
+
+
+
+
 # 0.8.0 (2023-10-10)
 
 
