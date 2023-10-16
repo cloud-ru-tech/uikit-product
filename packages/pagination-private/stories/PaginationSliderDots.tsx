@@ -31,6 +31,7 @@ paginationSliderDots.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  packageName: componentPackage.name,
   badges: [BADGE.DEPRECATED],
   snackUiLink:
     'https://frontend.cp.sbercloud.tech/snack/?path=/story/components-pagination-pagination-slider--pagination-slider',

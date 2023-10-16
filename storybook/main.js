@@ -2,8 +2,10 @@ const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 const glob = require('glob');
 const path = require('path');
 const { getPackagesStatistics } = require('./utils/getPackagesStatistics');
+const { getDependenciesLinks } = require('./utils/getDependenciesLinks');
 
 const PACKAGES_STATISTICS = getPackagesStatistics();
+const DEPENDENCIES_LINKS = getDependenciesLinks();
 
 const STORIES = glob
   .sync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/stories/**/*.{ts,tsx}`)
@@ -49,6 +51,7 @@ const mainConfig = {
     '@geometricpanda/storybook-addon-badges',
     '@sbercloud/ft-storybook-brand-addon',
     'storybook-dark-mode',
+    '@sbercloud/ft-storybook-deps-graph-addon',
   ],
   staticDirs: [
     { from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' },
@@ -77,6 +80,7 @@ const mainConfig = {
   env: config => ({
     ...config,
     PACKAGES_STATISTICS,
+    DEPENDENCIES_LINKS,
   }),
   webpackFinal: async config => {
     isTestServer && (config.watch = false);

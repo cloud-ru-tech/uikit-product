@@ -86,6 +86,7 @@ category.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  packageName: componentPackage.name,
   badges: [BADGE.STABLE],
   design: {
     type: 'figma',

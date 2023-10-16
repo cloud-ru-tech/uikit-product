@@ -288,6 +288,7 @@ clientModelTable.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  packageName: componentPackage.name,
   design: {
     type: 'figma',
     url: 'https://www.figma.com/file/gCc4XarYocwWbficnQPInC/%F0%9F%93%9A-%5BLIB%5D-Platform-Design-System?node-id=535%3A0',

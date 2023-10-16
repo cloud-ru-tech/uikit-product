@@ -55,6 +55,7 @@ collapsePanel.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
+  packageName: componentPackage.name,
   design: {
     type: 'figma',
     //TODO

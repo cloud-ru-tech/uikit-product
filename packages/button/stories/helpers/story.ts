@@ -15,6 +15,7 @@ export function getDefaultParameters({
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
     },
+    packageName: componentPackage.name,
     design: figmaUrl
       ? {
           name: 'Figma',
