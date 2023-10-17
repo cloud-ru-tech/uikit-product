@@ -19,7 +19,7 @@ export const PURPLE_THEME = css`
       ${COLORS.container.text}: var(${GREY[800]});
       ${COLORS.container.background}: var(${GREY[0]});
       /* stylelint-disable-next-line function-disallowed-list */
-      ${COLORS.container.shadow}: drop-shadow(0, 4px, 15px, rgba(0, 0, 0, 15%));
+      ${COLORS.container.shadow}: drop-shadow(0 4px 15px rgba(0, 0, 0, 15%));
       ${COLORS.container.border}: transparent;
     }
   }
@@ -42,7 +42,7 @@ export const GREEN_THEME = css`
       ${COLORS.container.text}: var(${GREY[800]});
       ${COLORS.container.background}: var(${GREY[0]});
       /* stylelint-disable-next-line function-disallowed-list */
-      ${COLORS.container.shadow}: drop-shadow(0, 4px, 15px, rgba(0, 0, 0, 15%));
+      ${COLORS.container.shadow}: drop-shadow(0 4px 15px rgba(0, 0, 0, 15%));
       ${COLORS.container.border}: transparent;
     }
   }
