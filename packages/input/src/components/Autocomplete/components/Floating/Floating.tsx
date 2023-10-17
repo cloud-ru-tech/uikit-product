@@ -1,6 +1,7 @@
 import {
   autoUpdate,
   flip,
+  FloatingPortal,
   offset,
   shift,
   size,
@@ -89,24 +90,26 @@ export function Floating({
         {children}
 
         {isOpen && (
-          <S.Wrapper
-            maxHeight={droplistMaxHeight}
-            strategy={strategy}
-            x={x ?? 0}
-            y={y ?? 0}
-            ref={refs.setFloating}
-            data-test-id='droplist__floating'
-          >
-            <DropList
-              loading={loading}
-              isOptionsError={isOptionsError}
-              options={options}
-              handleItemSelect={onSelect}
-              droplistRef={droplistRef}
-              value={value}
-              additionalButton={additionalButton}
-            />
-          </S.Wrapper>
+          <FloatingPortal root={document.body}>
+            <S.Wrapper
+              maxHeight={droplistMaxHeight}
+              strategy={strategy}
+              x={x ?? 0}
+              y={y ?? 0}
+              ref={refs.setFloating}
+              data-test-id='droplist__floating'
+            >
+              <DropList
+                loading={loading}
+                isOptionsError={isOptionsError}
+                options={options}
+                handleItemSelect={onSelect}
+                droplistRef={droplistRef}
+                value={value}
+                additionalButton={additionalButton}
+              />
+            </S.Wrapper>
+          </FloatingPortal>
         )}
       </ReferenceContext.Provider>
     </FloatingContext.Provider>
