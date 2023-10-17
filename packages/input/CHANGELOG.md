@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.7.5 (2023-10-17)
+
+
+### Bug Fixes
+
+* **[LK-2815](https://jira.sbercloud.tech/browse/LK-2815):** change autocomplete droplist layout positioning ([7bffdc3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7bffdc3928438f45f49297e78f37625827fb402d))
+
+
+
+
+
 ## 3.7.4 (2023-10-10)
 
 
