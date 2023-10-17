@@ -22,8 +22,6 @@ export const AccordionWrapper = styled.div`
     &:hover {
       /* stylelint-disable-next-line function-disallowed-list */
       box-shadow: 0 4px 15px rgba(0, 0, 0, 15%);
-      /* stylelint-disable-next-line color-named */
-      color: red;
       transition: box-shadow 0.2s ease-in;
     }
   }
