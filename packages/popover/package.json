@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-popover",
   "title": "Popover",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "sideEffects": [
     "*.css",
     "*.woff",
