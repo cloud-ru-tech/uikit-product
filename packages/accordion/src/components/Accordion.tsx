@@ -1,10 +1,9 @@
-import { ReactNode, useState } from 'react';
+import { ReactElement, ReactNode, useState } from 'react';
 
 import { ButtonIcon, ButtonIconTransparent } from '@sbercloud/uikit-product-button';
 import {
   ChevronDownInterfaceSVG,
   ChevronUpInterfaceSVG,
-  DeleteInterfaceSVG,
   QuestionSmallOutlineInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
@@ -20,7 +19,10 @@ export type AccordionProps = WithSupportProps<{
   isOpenDefault?: boolean;
   isOpen?: boolean;
   onChange?: (currentState: boolean) => void;
-  onDelete?: VoidFunction;
+  action?: {
+    onClick: VoidFunction;
+    icon: ReactElement;
+  };
   className?: string;
   tooltip?: string;
   variant?: Variant;
@@ -37,7 +39,7 @@ export function Accordion({
   disabled = false,
   isOpen,
   onChange,
-  onDelete,
+  action,
   tooltip,
   hasAnimation = true,
   isOpenDefault = false,
@@ -51,10 +53,10 @@ export function Accordion({
     return isControlled ? onChange(isOpened) : setIsOpenInternal(prev => !prev);
   };
 
-  const deleteHandler = (event: React.MouseEvent<HTMLElement>) => {
+  const actionClickHandler = (event: React.MouseEvent<HTMLElement>) => {
     event.stopPropagation();
-    if (onDelete) {
-      onDelete();
+    if (action) {
+      action.onClick();
     }
   };
 
@@ -83,9 +85,7 @@ export function Accordion({
           {subheader && <S.AccordionSubheader data-disabled={disabled || undefined}>{subheader}</S.AccordionSubheader>}
         </div>
         <S.AccordionButtons>
-          {onDelete && (
-            <ButtonIconTransparent disabled={disabled} onClick={deleteHandler} icon={<DeleteInterfaceSVG />} />
-          )}
+          {action && <ButtonIconTransparent disabled={disabled} onClick={actionClickHandler} icon={action.icon} />}
           <ButtonIconTransparent
             disabled={disabled}
             icon={isOpened ? <ChevronUpInterfaceSVG /> : <ChevronDownInterfaceSVG />}

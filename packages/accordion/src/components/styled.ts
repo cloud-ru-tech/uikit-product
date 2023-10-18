@@ -15,6 +15,7 @@ export const AccordionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 8px;
+  overflow: hidden;
 
   &[data-variant='${Variant.Primary}'] {
     border-radius: 12px;
@@ -65,6 +66,7 @@ export const AccordionHeader = styled.div`
 export const AccordionSubheader = styled.div`
   color: var(${COLORS.DEFAULT_SUBHEADER_COLOR});
   ${TEXT_2_STYLES};
+  margin-top: 4px;
 
   &[data-disabled] {
     color: var(${COLORS.DISABLED_HEADER_COLOR});

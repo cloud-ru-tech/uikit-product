@@ -3,6 +3,8 @@ import { action } from '@storybook/addon-actions';
 import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
+import { DeleteInterfaceSVG, EditInterfaceSVG } from '@sbercloud/uikit-product-icons';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
@@ -13,6 +15,18 @@ const meta: Meta = {
   component: Accordion,
 };
 export default meta;
+
+const ACTIONS = {
+  delete: {
+    onClick: () => {},
+    icon: <DeleteInterfaceSVG />,
+  },
+  edit: {
+    onClick: () => {},
+    icon: <EditInterfaceSVG />,
+  },
+  undefined: undefined,
+};
 
 type StoryProps = {
   mode: 'controlled' | 'uncontrolled';
@@ -81,6 +95,14 @@ accordion.argTypes = {
     control: {
       type: 'number',
       min: 1,
+    },
+  },
+  action: {
+    name: 'action',
+    options: Object.keys(ACTIONS),
+    mapping: ACTIONS,
+    control: {
+      type: 'radio',
     },
   },
 };
