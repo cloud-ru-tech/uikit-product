@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2023-10-19)
+
+
+### BREAKING CHANGES
+
+
+* **[SVP-8843](https://jira.sbercloud.tech/browse/SVP-8843):** Accordion with custom action button ([bb3ffc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bb3ffc61d96d98915f0890dd0d39abf1ea2e899f))
+
+
+
+
 ## 0.7.4 (2023-10-17)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-accordion
