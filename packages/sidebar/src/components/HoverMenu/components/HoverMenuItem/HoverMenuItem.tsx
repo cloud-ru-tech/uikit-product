@@ -18,7 +18,7 @@ export function HoverMenuItem({
   label,
   href,
   onClick,
-  showNewLabel,
+  labelText,
   count,
   locked,
   nestedList,
@@ -67,7 +67,7 @@ export function HoverMenuItem({
           placement={TruncateString.placements.Right}
           maxLines={1}
         />
-        <ItemPostfix count={count} locked={locked} showNewLabel={showNewLabel} disabled={isItemDisabled} />
+        <ItemPostfix count={count} locked={locked} labelText={labelText} disabled={isItemDisabled} />
       </S.MenuItem>
 
       {showChildren &&

@@ -378,7 +378,7 @@ export const menuList: SidebarItemsGroup[] = [
         label: 'Маркетплейс AI Services',
         href: '/',
         icon: <AiMarketplaceServiceSVG />,
-        showNewLabel: true,
+        labelText: 'Новый',
       },
     ],
   },

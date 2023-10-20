@@ -22,7 +22,7 @@ export function ListItem({
   href,
   icon,
   count,
-  showNewLabel,
+  labelText,
   locked,
   disabled,
   showArrow,
@@ -63,7 +63,7 @@ export function ListItem({
       <ItemPostfix
         count={count}
         locked={locked}
-        showNewLabel={showNewLabel}
+        labelText={labelText}
         disabled={disabled}
         showArrow={showArrow}
         isOpen={isOpen}

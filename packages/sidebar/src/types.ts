@@ -18,7 +18,7 @@ type BaseSidebarItem = {
   href?: string;
   icon?: ReactElement;
   disabled?: boolean;
-  showNewLabel?: boolean;
+  labelText?: string;
   locked?: boolean;
   count?: number;
   mode?: Mode;

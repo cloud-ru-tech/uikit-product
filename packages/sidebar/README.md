@@ -1,6 +1,7 @@
 # Sidebar
 
 ## Installation
+
 `npm i @sbercloud/uikit-product-sidebar`
 
 ## Props
@@ -39,7 +40,7 @@ type BaseSidebarItem = {
   href?: string;
   icon?: ReactElement;
   disabled?: boolean;
-  showNewLabel?: boolean;
+  labelText?: boolean;
   locked?: boolean;
   count?: number;
   mode?: Mode;
