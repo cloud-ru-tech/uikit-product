@@ -65,6 +65,7 @@ export const CustomDateInput = forwardRef<HTMLSpanElement, CustomDateInputProps>
 
   useEffect(() => {
     if (isError) setError(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [date]);
 
   const dateForFormatter = useMemo(

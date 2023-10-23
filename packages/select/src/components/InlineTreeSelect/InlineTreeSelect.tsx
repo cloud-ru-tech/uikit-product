@@ -65,6 +65,7 @@ export function InlineTreeSelect({
     }
 
     setStateValue(value);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
   useEffect(() => {
@@ -73,6 +74,7 @@ export function InlineTreeSelect({
     }
 
     setStateValue(defaultValue);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -148,6 +150,7 @@ export function UsersByGroupSelect({
       }
       return data.filter(Boolean);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [options],
   );
 

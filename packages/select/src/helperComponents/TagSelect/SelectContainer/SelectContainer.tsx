@@ -31,6 +31,7 @@ export function SelectContainer(
     return (): void => {
       document.body?.removeEventListener('click', toggleMenu);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [containerRef.current, modalInstance]);
 
   return (

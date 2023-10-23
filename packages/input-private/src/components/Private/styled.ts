@@ -26,7 +26,9 @@ export const styledInputPrivate = (InputPrivate: VFC<InputPrivateProps>): VFC<In
   background-color: transparent;
   width: 100%;
   max-width: 100%;
-  font-family: SB Sans Interface, serif;
+  font-family:
+    SB Sans Interface,
+    serif;
 
   &[disabled] {
     ${DISABLED_TEXT_STYLES};

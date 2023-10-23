@@ -18,6 +18,8 @@ export function Menu(props: React.ComponentProps<typeof ReactSelectComponents.Me
     [dropdownPlacement],
   );
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => inputRef?.current?.focus(), [inputRef.current]);
 
   return (

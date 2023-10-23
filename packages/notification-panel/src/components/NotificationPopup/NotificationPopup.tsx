@@ -103,6 +103,7 @@ export function NotificationPopup({
 
       handleReadVisibleCards();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const showError = !loading && error;

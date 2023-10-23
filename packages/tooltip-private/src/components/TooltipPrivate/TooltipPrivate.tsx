@@ -31,6 +31,7 @@ export function TooltipPrivate({
 
   useEffect(() => {
     getTooltipRef?.(tooltipRef);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tooltipRef]);
 
   const handleClick = (e: MouseEvent<HTMLDivElement>) => {

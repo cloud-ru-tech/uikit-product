@@ -35,6 +35,7 @@ export function HiddenInput({ valueProp, date, onChange, handleCalendarClose }: 
 
     onChange(nextSplitDate);
     ref?.setSelectionRange(value.length, value.length);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

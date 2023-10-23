@@ -264,6 +264,7 @@ export function ClientModelTableController<T extends object>({
         },
       },
     ];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gridApi, bulkActions?.export, languageCode]);
 
   useEffect(() => {

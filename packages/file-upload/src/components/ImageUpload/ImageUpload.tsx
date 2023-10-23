@@ -43,6 +43,7 @@ export function ImageUpload({ maxFileSize, className, infoText, uploadButtonName
     } else {
       setError(false);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [image?.size]);
 
   return (

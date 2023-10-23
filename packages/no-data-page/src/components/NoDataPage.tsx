@@ -31,6 +31,7 @@ export function NoDataPage({ type = NoDataPageVariants.Large, icon, title, class
             size: isMobile ? MOBILE_ICON_SIZE : iconSize[type],
           })
         : null,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [icon, isMobile],
   );
 

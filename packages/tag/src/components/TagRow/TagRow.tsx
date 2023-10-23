@@ -71,6 +71,7 @@ export function TagRow({ items, size, className, onItemRemove, ...rest }: TagRow
 
         for (const [item, tagElement] of tagElementByItemEntries) {
           if (entryByTagElement.has(tagElement)) {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             const entry = entryByTagElement.get(tagElement)!;
             nextVisibilityByItem.set(item, entry.isIntersecting);
           }
@@ -80,6 +81,7 @@ export function TagRow({ items, size, className, onItemRemove, ...rest }: TagRow
       });
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     const hiddenRowElement = hiddenRowElementRef.current!;
     const observer = new IntersectionObserver(handleIntersect, {
       root: hiddenRowElement,

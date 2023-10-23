@@ -38,6 +38,7 @@ export function NavigationItem({ value, label, counter, disabled }: NavigationIt
         tabsWrapperRef.current.scrollTo({ left: offset - clientWidth / 2 + width / 2, behavior: 'smooth' });
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedTab]);
 
   useEffect(() => {
