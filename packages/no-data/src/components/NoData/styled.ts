@@ -14,20 +14,20 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   max-width: 500px;
-`;
-
-export const Title = styled.h5`
-  ${H5_STYLES};
-  color: var(${COLORS.TITLE});
-  margin-bottom: 8px;
-  text-align: center;
+  row-gap: 20px;
 `;
 
 export const DescContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px 0;
+  row-gap: 8px;
+`;
+
+export const Title = styled.h5`
+  ${H5_STYLES};
+  color: var(${COLORS.TITLE});
+  text-align: center;
 `;
 
 export const Description = styled.p`
