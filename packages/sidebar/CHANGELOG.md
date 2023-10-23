@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2023-10-23)
+
+
+### Features
+
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+### BREAKING CHANGES
+
+
+* **[CORESERV-2003](https://jira.sbercloud.tech/browse/CORESERV-2003):** add ability to change label text ([383467b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/383467ba2deb70875e91d0efc37aab1b0459bb43))
+
+
+
+
 ## 1.3.31 (2023-10-10)
 
 
