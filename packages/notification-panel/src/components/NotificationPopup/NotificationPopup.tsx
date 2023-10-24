@@ -112,7 +112,7 @@ export function NotificationPopup({
 
   const showControlPanel =
     ((cards.length > 0 && Tab.All === activeTab) || Tab.New === activeTab) && !showError && !loading;
-  const showFooter = hasCardsDataOnTab && onSeeAllButtonClick && cards.length > 0 && !showError && !loading;
+  const showFooter = Boolean(hasCardsDataOnTab && onSeeAllButtonClick && cards.length > 0 && !showError && !loading);
 
   return (
     <>
@@ -122,7 +122,13 @@ export function NotificationPopup({
 
       {open && (
         <FloatingPortal root={document.body}>
-          <S.FloatingWrapper ref={floating} strategy={strategy} {...getFloatingProps()} {...extractSupportProps(rest)}>
+          <S.FloatingWrapper
+            ref={floating}
+            strategy={strategy}
+            data-show-footer={showFooter}
+            {...getFloatingProps()}
+            {...extractSupportProps(rest)}
+          >
             <S.HeaderWrapper>
               <S.Title>
                 {textProvider(languageCode, Texts.Notifications)}

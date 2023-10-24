@@ -29,6 +29,10 @@ export const FloatingWrapper = styled.div<{ strategy: string }>`
   display: flex;
   flex-direction: column;
   z-index: 1;
+
+  &[data-show-footer='false'] {
+    padding-bottom: 8px;
+  }
 `;
 
 export const HeaderWrapper = styled.div`
