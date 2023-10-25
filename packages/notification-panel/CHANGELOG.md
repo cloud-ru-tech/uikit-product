@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2023-10-25)
+
+
+### Features
+
+* **[LK-2766](https://jira.sbercloud.tech/browse/LK-2766):** added bottom padding for notify panel without footer ([03a5a8b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03a5a8b47e9840455e02d68a983d2a72cf9274bd))
+
+
+
+
+
 ## 2.2.1 (2023-10-25)
 
 ### Only dependencies have been changed
