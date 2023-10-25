@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.21.0 (2023-10-25)
+
+
+### Features
+
+* **[FF-3462](https://jira.sbercloud.tech/browse/FF-3462):** add supportProps to FormGroup ([bfeb504](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bfeb504140ba9b3b101c07f4f9bb2dfc63714970))
+
+
+
+
+
 # 0.20.0 (2023-10-25)
 
 
@@ -410,7 +421,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.18.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.18.7...@sbercloud/uikit-product-form@0.18.8) (2022-11-17)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-form
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-input-decorator-private@3.1.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-decorator-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.39.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@4.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.18.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-form@0.18.6...@sbercloud/uikit-product-form@0.18.7) (2022-11-09)
 

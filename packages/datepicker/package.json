@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-datepicker",
   "title": "React Datepicker",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,12 +27,12 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.4.0",
-    "@sbercloud/uikit-product-divider": "2.0.46",
+    "@sbercloud/uikit-product-button": "5.4.1",
+    "@sbercloud/uikit-product-divider": "2.1.0",
     "@sbercloud/uikit-product-icons": "5.25.0",
-    "@sbercloud/uikit-product-switch": "3.5.0",
-    "@sbercloud/uikit-product-theme": "0.38.0",
-    "@sbercloud/uikit-product-utils": "3.2.5",
+    "@sbercloud/uikit-product-switch": "3.5.1",
+    "@sbercloud/uikit-product-theme": "0.39.0",
+    "@sbercloud/uikit-product-utils": "3.3.0",
     "date-fns": "2.28.0",
     "lodash.isequal": "4.5.0",
     "react-datepicker": "4.11.0",

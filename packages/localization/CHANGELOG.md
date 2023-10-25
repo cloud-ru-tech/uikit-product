@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2023-10-25)
+
+
+### Features
+
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+
+
+
 ## 0.10.44 (2023-10-10)
 
 ### Only dependencies have been changed
@@ -79,7 +90,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.10.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-localization@0.10.35...@sbercloud/uikit-product-localization@0.10.36) (2022-11-28)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-localization
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-utils@3.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.10.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-localization@0.10.34...@sbercloud/uikit-product-localization@0.10.35) (2022-10-10)
 
