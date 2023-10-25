@@ -39,9 +39,19 @@ type WelcomeTourProps = {
   tourSteps: TourStepExtended[];
   tourStarted: boolean;
   setTourStarted(value: boolean): void;
-  closeButtonText: string;
-  primaryButtonText: string;
-  backButtonText: string;
+  closeButtonProps: {
+    text: string;
+    onClick?(): void;
+  };
+  primaryButtonProps: {
+    text: string;
+    onClick?(): void;
+  };
+  backButtonProps?: {
+    text: string;
+    onClick?(): void;
+  };
+  customScrollOffset?: number;
 };
 
 type TourStepExtended = {

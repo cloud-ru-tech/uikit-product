@@ -46,7 +46,7 @@ export function Hint({
           icon={<CloseInterfaceSVG />}
         />
       </S.HeadingContainer>
-      <S.SubHeading data-test-id='welcome-tour-hint__subtitle'>{step.subtitle}</S.SubHeading>
+      {step.subtitle && <S.SubHeading data-test-id='welcome-tour-hint__subtitle'>{step.subtitle}</S.SubHeading>}
       {step.content && <S.Content data-test-id='welcome-tour-hint__content'>{step.content}</S.Content>}
       <S.Footer>
         {step.content && <Steps stepsCount={size} currentStep={index} />}
