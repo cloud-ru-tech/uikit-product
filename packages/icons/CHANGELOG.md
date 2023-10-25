@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.25.0 (2023-10-25)
+
+
+### Bug Fixes
+
+* **[FF-2821](https://jira.sbercloud.tech/browse/FF-2821):** added stylelint config and refactored styles ([f201954](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f201954303601b6dc5873b2ce2ee0928bc84a253))
+
+
+### Features
+
+* **[CORESERV-2145](https://jira.sbercloud.tech/browse/CORESERV-2145):** add all services icon ([0bc4012](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0bc4012e053a4c6de5e2a5ef1b140e6088dbe907))
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+
+
+
 # 5.24.0 (2023-09-29)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.8.0 (2023-10-25)
+
+
+### Features
+
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+
+
+
 ## 3.7.5 (2023-10-17)
 
 
@@ -546,7 +557,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input@3.0.3...@sbercloud/uikit-product-input@3.0.4) (2022-11-17)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-input
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.25.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-input-decorator-private@3.1.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-decorator-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-input-private@3.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-truncate-string@0.10.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
 
 ## [3.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-input@3.0.2...@sbercloud/uikit-product-input@3.0.3) (2022-11-14)
 

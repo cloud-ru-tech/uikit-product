@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2023-10-25)
+
+
+### Features
+
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+
+
+
 ## 0.8.10 (2023-10-10)
 
 
@@ -504,7 +515,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.6.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.6.1...@sbercloud/uikit-product-error-pages@0.6.2) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-error-pages
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.25.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-layout@0.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/layout/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
 
 ## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.6.0...@sbercloud/uikit-product-error-pages@0.6.1) (2022-12-07)
 

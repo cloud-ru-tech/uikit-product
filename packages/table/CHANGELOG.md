@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.51.0 (2023-10-25)
+
+
+### Features
+
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+
+
+
 ## 0.50.40 (2023-10-10)
 
 
@@ -868,7 +879,12 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.48.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.48.12...@sbercloud/uikit-product-table@0.48.13) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-table
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.25.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-modal@1.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal/CHANGELOG.md)
+* [@sbercloud/uikit-product-pagination-private@1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/pagination-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-table-private@0.22.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/table-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-toolbar@0.17.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/toolbar/CHANGELOG.md)
 
 ## [0.48.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-table@0.48.11...@sbercloud/uikit-product-table@0.48.12) (2023-01-12)
 

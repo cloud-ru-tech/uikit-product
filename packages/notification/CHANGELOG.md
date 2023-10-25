@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.3.0 (2023-10-25)
+
+
+### Features
+
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+
+
+
 ## 5.2.10 (2023-10-10)
 
 ### Only dependencies have been changed
@@ -396,7 +407,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 5.1.5 (2023-01-25)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-notification
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@5.25.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.3.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
 
 ## [5.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-notification@5.1.3...@sbercloud/uikit-product-notification@5.1.4) (2023-01-12)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0 (2023-10-25)
+
+
+### Features
+
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+
+
+
 ## 2.3.6 (2023-10-10)
 
 ### Only dependencies have been changed
@@ -401,7 +412,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.2.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea@2.2.32...@sbercloud/uikit-product-textarea@2.2.33) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-textarea
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-input-decorator-private@3.1.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-decorator-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-textarea-private@2.6.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/textarea-private/CHANGELOG.md)
 
 ## [2.2.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-textarea@2.2.31...@sbercloud/uikit-product-textarea@2.2.32) (2022-12-07)
 

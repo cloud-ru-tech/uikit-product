@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2023-10-25)
+
+
+### Features
+
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+
+
+
 ## 1.5.12 (2023-10-10)
 
 ### Only dependencies have been changed
@@ -470,7 +481,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.2.2 (2023-01-25)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-modal
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-modal-private@2.0.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-tooltip@4.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
 
 ## 1.2.1 (2023-01-19)
 

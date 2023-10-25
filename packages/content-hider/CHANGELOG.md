@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2023-10-25)
+
+
+### Features
+
+* **[FF-3478](https://jira.sbercloud.tech/browse/FF-3478):** add deps graph addon ([0f59586](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f5958674746342fe3ed3005da67905c0920f907))
+
+
+
+
+
 ## 0.8.129 (2023-10-10)
 
 
@@ -346,7 +357,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.8.92](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-content-hider@0.8.91...@sbercloud/uikit-product-content-hider@0.8.92) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-content-hider
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
 
 ## [0.8.91](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-content-hider@0.8.90...@sbercloud/uikit-product-content-hider@0.8.91) (2022-12-07)
 
