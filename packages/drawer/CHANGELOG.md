@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.19.0 (2023-10-26)
+
+
+### Features
+
+* **DPS-0000:** add onAfterClose prop ([92c9a75](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/92c9a75e9ba55c18ea0667ab84efb81027ec7bcb))
+
+
+
+
+
 ## 0.18.1 (2023-10-25)
 
 ### Only dependencies have been changed
