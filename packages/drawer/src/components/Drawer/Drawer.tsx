@@ -36,6 +36,7 @@ export type DrawerProps = WithSupportProps<
     headerText?: string | React.ReactNode;
     onClose(): void;
     onBackClick?(): void;
+    onAfterClose?(): void;
   }>
 >;
 
@@ -46,6 +47,7 @@ export function Drawer({
   showCloseButton = true,
   footer,
   onClose,
+  onAfterClose,
   children,
   container,
   className,
@@ -115,6 +117,7 @@ export function Drawer({
       setInternalIsDrawerOpen(false);
       timerRef.current = window.setTimeout(() => {
         setShouldRenderDrawer(false);
+        onAfterClose?.();
         window.removeEventListener('click', handleClick);
       }, 500);
     }
@@ -122,7 +125,7 @@ export function Drawer({
     return () => {
       window.removeEventListener('click', handleClick);
     };
-  }, [handleClick, open]);
+  }, [handleClick, onAfterClose, open]);
 
   if (!shouldRenderDrawer) {
     return null;
