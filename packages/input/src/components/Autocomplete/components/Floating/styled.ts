@@ -22,4 +22,7 @@ export const Wrapper = styled.div<{ strategy: string; x: number; y: number; maxH
   border-radius: 8px;
   outline: none;
   box-shadow: ${SHADOW.SMALL};
+
+  // Выпилится в таске: https://jira.sbercloud.tech/browse/FF-3637
+  z-index: 1;
 `;
