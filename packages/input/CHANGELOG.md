@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.8.2 (2023-10-26)
+
+
+### Bug Fixes
+
+* **LK-0000:** droplist positioning in modal ([d0e777e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0e777e225916e064e0d101c40a64b6aff24b293))
+
+
+
+
+
 ## 3.8.1 (2023-10-25)
 
 ### Only dependencies have been changed
