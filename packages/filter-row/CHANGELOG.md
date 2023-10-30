@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.4 (2023-10-30)
+
+
+### Bug Fixes
+
+* **FF-00:** loose deep equal check of filter options change ([f802d01](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f802d017f6393690384a74e83d04813e1ac83b16))
+
+
+
+
+
 ## 0.10.3 (2023-10-30)
 
 ### Only dependencies have been changed
