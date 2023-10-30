@@ -9,7 +9,7 @@ import { DropdownMenuContext } from '../../../../contexts';
 import * as S from './styled';
 
 export type HeaderMenuRootProps = WithSupportProps<{
-  title: string;
+  title?: string;
   children: ReactNode;
 }>;
 
@@ -19,9 +19,11 @@ export function HeaderMenuRoot({ title, children, ...rest }: HeaderMenuRootProps
       <DropdownMenu
         actions={({ hide }) => (
           <DropdownMenuContext.Provider value={{ hide }}>
-            <S.Item>
-              <S.Title>{title}</S.Title>
-            </S.Item>
+            {title && (
+              <S.Item>
+                <S.Title>{title}</S.Title>
+              </S.Item>
+            )}
             {Children.map(children, child => (
               <S.Item>{child}</S.Item>
             ))}

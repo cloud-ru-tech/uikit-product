@@ -7,7 +7,7 @@ import { DropdownMenuContext } from '../../../../contexts';
 import * as S from './styled';
 
 export type HeaderMenuItemProps = WithSupportProps<{
-  icon: ReactElement;
+  icon?: ReactElement;
   title: string;
   href: string;
   target?: HTMLAttributeAnchorTarget;
