@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.26.0 (2023-10-30)
+
+
+### Features
+
+* **[DPS-7506](https://jira.sbercloud.tech/browse/DPS-7506):** added RabbitMQ icon ([aeab05f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aeab05f40ecd72969dc9e5e7ec360da03d24e709))
+
+
+
+
+
 # 5.25.0 (2023-10-25)
 
 
