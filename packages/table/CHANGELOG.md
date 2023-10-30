@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.51.3 (2023-10-30)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-table-private@0.22.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/table-private/CHANGELOG.md)
+
+
+
+
+
 ## 0.51.2 (2023-10-30)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.3 (2023-10-30)
+
+
+### Bug Fixes
+
+* **[FF-3583](https://jira.sbercloud.tech/browse/FF-3583):** replaced margin with row-gap ([a817cf9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a817cf9ad1a3ec24788f9fb174e167f071fd9e8b))
+
+
+
+
+
 ## 2.2.2 (2023-10-30)
 
 ### Only dependencies have been changed
