@@ -62,7 +62,9 @@ export const FilterChipRadio = forwardRef(
     }, [items, handleChange, search, searchItem, withSearch]);
 
     useEffect(() => {
-      if (!deepEqual(prevItems.current, items)) {
+      const pickFields = (items: RadioChipProps['items']) => items.map(({ value }) => value);
+
+      if (!deepEqual(pickFields(prevItems.current), pickFields(items))) {
         const preCheckedItem = items.find(item => item.checked);
         setValue(preCheckedItem?.value || null);
         setInnerLabel(preCheckedItem?.label || textProvider(languageCode, Texts.All));

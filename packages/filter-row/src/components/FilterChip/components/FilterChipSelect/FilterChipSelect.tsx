@@ -140,11 +140,12 @@ export const FilterChipSelect = forwardRef(
     };
 
     useEffect(() => {
-      if (!deepEqual(prevItems.current, items)) {
+      const pickFields = (items: SelectChipProps['items']) => items.map(({ value }) => value);
+
+      if (!deepEqual(pickFields(prevItems.current), pickFields(items))) {
         dispatch({ type: SET_DEFAULT_STATE, payload: items });
         prevItems.current = items;
       }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [items]);
 
     useImperativeHandle(ref, () => ({ handleClearFilter }));
