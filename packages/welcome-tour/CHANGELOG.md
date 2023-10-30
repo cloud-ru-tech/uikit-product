@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2023-10-30)
+
+
+### Features
+
+* **[ONB-1278](https://jira.sbercloud.tech/browse/ONB-1278):** added new prop for welcome tour ([c4031dd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c4031dd64a26f5ab3f2a724e86928f3753ea3fbd))
+
+
+
+
+
 ## 0.6.2 (2023-10-30)
 
 ### Only dependencies have been changed
