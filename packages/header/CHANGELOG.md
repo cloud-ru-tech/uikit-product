@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2023-10-31)
+
+
+### Features
+
+* **[FF-3625](https://jira.sbercloud.tech/browse/FF-3625):** title and icon props are optional ([f3384e5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3384e5a57f686a258fe8fca6cf75b9f42e86f96))
+
+
+
+
+
 ## 1.3.2 (2023-10-30)
 
 ### Only dependencies have been changed
