@@ -145,11 +145,9 @@ function Template({ menuList, footerItems, activeMenuItem }: StoryProps) {
   return (
     <Wrapper>
       <Header>
-        <HeaderMenu.Root title='Платформы'>
-          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='ML Space' href='' />
-          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Enterprise' href='' />
-          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='SVP' href='' />
-          <HeaderMenu.Item icon={<QuestionInterfaceSVG />} title='Advanced' href='' />
+        <HeaderMenu.Root>
+          <HeaderMenu.Item title='Консоль' href='' />
+          <HeaderMenu.Item title='Партнерский кабинет' href='' />
         </HeaderMenu.Root>
 
         <Logo />

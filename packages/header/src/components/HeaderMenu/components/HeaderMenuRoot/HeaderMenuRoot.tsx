@@ -17,6 +17,7 @@ export function HeaderMenuRoot({ title, children, ...rest }: HeaderMenuRootProps
   return (
     <S.Wrapper {...extractSupportProps(rest)}>
       <DropdownMenu
+        placement={DropdownMenu.placements.BottomStart}
         actions={({ hide }) => (
           <DropdownMenuContext.Provider value={{ hide }}>
             {title && (
