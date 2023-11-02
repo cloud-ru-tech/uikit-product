@@ -11,19 +11,20 @@ export type InfoGroupProps = WithSupportProps<{
     label: ReactNode;
     value: ReactNode;
   }[];
+  itemDefaultValue?: ReactNode;
   buttonText?: string;
   onClick?(): void;
   showButton?: boolean;
 }>;
 
-export function InfoGroup({ items, buttonText, onClick, showButton }: InfoGroupProps) {
+export function InfoGroup({ items, itemDefaultValue, buttonText, onClick, showButton }: InfoGroupProps) {
   return (
     <>
       <div>
         {items.map(({ label, value }, itemIdx, self) => {
           const notLast = itemIdx !== self.length - 1;
 
-          return <InfoStroke key={itemIdx} label={label} value={value} bottomDivider={notLast} />;
+          return <InfoStroke key={itemIdx} label={label} value={value || itemDefaultValue} bottomDivider={notLast} />;
         })}
       </div>
       {showButton && buttonText && (

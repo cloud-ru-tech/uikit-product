@@ -6,11 +6,12 @@ import {
   ChevronUpInterfaceSVG,
   QuestionSmallOutlineInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
-import { Tooltip } from '@sbercloud/uikit-product-tooltip';
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Variant } from './constants';
 import * as S from './styled';
+import { getTooltipProps } from './utils';
 
 export type AccordionProps = WithSupportProps<{
   header: string;
@@ -24,7 +25,7 @@ export type AccordionProps = WithSupportProps<{
     icon: ReactElement;
   };
   className?: string;
-  tooltip?: string;
+  tooltip?: string | Omit<TooltipProps, 'children' | 'type'>;
   variant?: Variant;
   disabled?: boolean;
   hasAnimation?: boolean;
@@ -60,6 +61,8 @@ export function Accordion({
     }
   };
 
+  const tooltipProps = tooltip ? getTooltipProps(tooltip) : undefined;
+
   return (
     <S.AccordionWrapper
       className={className}
@@ -71,8 +74,8 @@ export function Accordion({
         <div>
           <S.AccordionHeader data-variant={variant} data-disabled={disabled || undefined}>
             {header}
-            {tooltip && (
-              <Tooltip type={Tooltip.types.Instant} content={tooltip}>
+            {tooltipProps && (
+              <Tooltip {...tooltipProps}>
                 <ButtonIcon
                   onClick={e => e.stopPropagation()}
                   disabled={disabled}

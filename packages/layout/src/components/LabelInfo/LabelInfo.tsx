@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { Tooltip } from '@sbercloud/uikit-product-tooltip';
+import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { Size } from './constants';
@@ -10,13 +10,7 @@ import * as S from './styled';
 
 export type LabelInfoProps = WithSupportProps<{
   label: string;
-  tooltip?: {
-    content: string;
-    link?: {
-      text: string;
-      href: string;
-    };
-  };
+  tooltip?: Omit<TooltipProps, 'children' | 'type'>;
   className?: string;
   icon?: ReactElement;
   size?: Size;
@@ -28,19 +22,7 @@ export function LabelInfo({ label, tooltip, className, icon, size = Size.Small, 
       {label}&nbsp;
       <S.LabelWithTooltipIcon>
         {tooltip && (
-          <Tooltip
-            type={Tooltip.types.Instant}
-            content={tooltip.content}
-            link={
-              tooltip.link
-                ? {
-                    href: tooltip.link.href,
-                    text: tooltip.link.text,
-                    target: '_blank',
-                  }
-                : undefined
-            }
-          >
+          <Tooltip type={Tooltip.types.Instant} {...tooltip}>
             <ButtonIcon icon={icon || <QuestionSmallOutlineInterfaceSVG />} variant={ButtonIcon.variants.Weak} />
           </Tooltip>
         )}
