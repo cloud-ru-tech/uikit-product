@@ -1,8 +1,11 @@
+import { cx } from '@linaria/core';
 import { Controller, useForm } from 'react-hook-form';
 
 import { ButtonIcon, CopyButton } from '@sbercloud/uikit-product-button';
 import { InputCommon } from '@sbercloud/uikit-product-input';
 import { Modal, ModalProps } from '@sbercloud/uikit-product-modal';
+import { SubtitleRenderProps } from '@sbercloud/uikit-product-modal-private';
+import { TruncateString } from '@sbercloud/uikit-product-truncate-string';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { DictionaryPropertyAsFn, textProvider, Texts } from '../../helpers';
@@ -14,8 +17,8 @@ type Fields = {
 
 export type ConfirmDeleteModalProps = Pick<ModalProps, 'isOpen' | 'title' | 'onClose'> & {
   target: {
+    type: string;
     name: string;
-    value: string;
   };
   onApprove(): void;
 };
@@ -41,7 +44,7 @@ export function ConfirmDeleteModal({ target, onApprove, onClose, ...restProps }:
   };
 
   const handleValidate = (value: string) => {
-    if (value !== target.value) {
+    if (value !== target.name) {
       return textProvider<string>(languageCode, Texts.InvalidName);
     }
   };
@@ -64,7 +67,12 @@ export function ConfirmDeleteModal({ target, onApprove, onClose, ...restProps }:
   return (
     <Modal
       {...restProps}
-      subtitle={textProvider<DictionaryPropertyAsFn>(languageCode, Texts.Sure)(target.name)}
+      subtitle={({ className, ...rest }: SubtitleRenderProps) => (
+        <div className={cx(S.subtitleClassName, className)} {...rest}>
+          {textProvider<DictionaryPropertyAsFn>(languageCode, Texts.Sure)(target.type)}
+          <TruncateString text={`${target.name}?`} variant={TruncateString.variants.Middle} hideTooltip />
+        </div>
+      )}
       onClose={handleClose}
       cancelButton={{
         text: textProvider<string>(languageCode, Texts.Cancel),
@@ -73,16 +81,21 @@ export function ConfirmDeleteModal({ target, onApprove, onClose, ...restProps }:
       approveButton={{
         alarm: true,
         onClick: handleApprove,
+        text: textProvider<string>(languageCode, Texts.Delete),
         disabled: Boolean(errors.name),
       }}
       content={
-        <S.Content>
+        <>
           <S.TextField>
-            <span>{textProvider<string>(languageCode, Texts.FieldLabel)}</span>
+            {textProvider<string>(languageCode, Texts.FieldLabel)}
 
             <S.CopyValue>
-              {target.value}
-              <CopyButton text={target.value} as={ButtonIcon} variant={ButtonIcon.variants.Strong} />
+              <TruncateString
+                text={target.name}
+                variant={TruncateString.variants.Middle}
+                textEntity={TruncateString.textEntities.H5}
+              />
+              <CopyButton text={target.name} as={ButtonIcon} variant={ButtonIcon.variants.Strong} />
             </S.CopyValue>
           </S.TextField>
 
@@ -105,7 +118,7 @@ export function ConfirmDeleteModal({ target, onApprove, onClose, ...restProps }:
               )}
             />
           </form>
-        </S.Content>
+        </>
       }
     />
   );

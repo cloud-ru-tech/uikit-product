@@ -35,8 +35,8 @@ export const confirmDeleteModal: StoryFn<ConfirmDeleteModalProps> = Template.bin
 confirmDeleteModal.args = {
   title: 'Удаление',
   target: {
-    name: 'запись',
-    value: 'recordValue',
+    type: 'инстанс',
+    name: 'какое-то_очень_длинное_значение_удаляемого_инстанса',
   },
 };
 
