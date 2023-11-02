@@ -13,6 +13,7 @@ export type DropListProps = {
   additionalButton?: { text: string; onClick(): void; disabled?: boolean; icon?: ReactNode };
   handleItemSelect: (option: DropListProps['options'][0]) => void;
   droplistRef?: MutableRefObject<HTMLDivElement | null>;
+  notFoundText?: string;
 };
 
 export function DropList({
@@ -23,6 +24,7 @@ export function DropList({
   isOptionsError,
   additionalButton,
   droplistRef,
+  notFoundText,
 }: DropListProps) {
   return (
     <div ref={droplistRef}>
@@ -33,6 +35,7 @@ export function DropList({
         handleItemSelect={handleItemSelect}
         value={inputValue}
         additionalButton={additionalButton}
+        notFoundText={notFoundText}
       />
 
       {additionalButton && (

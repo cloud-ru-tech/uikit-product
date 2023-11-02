@@ -31,6 +31,7 @@ autocomplete.args = {
   placeholder: 'Placeholder',
   disabled: false,
   additionalButton: { text: 'Click me', onClick: () => {}, disabled: false, icon: <EditInterfaceSVG /> },
+  notFoundText: 'Совпадений не найдено',
   options: [
     {
       title:

@@ -9,6 +9,7 @@ export type AutocompleteProps = Omit<InputMasterProps, 'children' | 'autoComplet
   loading?: boolean;
   isOptionsError?: boolean;
   isOpenOnFocus?: boolean;
+  notFoundText?: string;
 };
 
 function Autocomplete({
@@ -18,6 +19,7 @@ function Autocomplete({
   loading,
   isOptionsError,
   additionalButton,
+  notFoundText = 'Совпадений не найдено',
   ...props
 }: AutocompleteProps) {
   return (
@@ -29,6 +31,7 @@ function Autocomplete({
       isOptionsError={isOptionsError}
       disabled={props.disabled}
       additionalButton={additionalButton}
+      notFoundText={notFoundText}
     >
       <Input {...props} placeholder={placeholder} />
     </Floating>

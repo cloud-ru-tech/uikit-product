@@ -146,5 +146,6 @@ type AutocompleteProps = WithSupportProps<{
   additionalButton?: DropListProps['additionalButton'];
   loading?: boolean;
   isOptionsError?: boolean;
+  notFoundText?: string;
 }>;
 ```

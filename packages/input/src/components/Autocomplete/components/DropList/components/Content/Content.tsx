@@ -14,6 +14,7 @@ export type DropListProps = {
   isOptionsError?: boolean;
   additionalButton?: { text: string; onClick(): void; disabled?: boolean; icon?: ReactNode };
   handleItemSelect: (option: DropListProps['options'][0]) => void;
+  notFoundText?: string;
 };
 
 export function Content({
@@ -23,6 +24,7 @@ export function Content({
   loading,
   isOptionsError,
   additionalButton,
+  notFoundText,
 }: DropListProps) {
   const { setIsOpen } = useContext(FloatingContext);
 
@@ -47,7 +49,7 @@ export function Content({
     return (
       <S.ErrorBox>
         <S.SearchInterfaceSVGStyled />
-        <S.Text2Grey>Совпадений не найдено</S.Text2Grey>
+        <S.Text2Grey>{notFoundText}</S.Text2Grey>
       </S.ErrorBox>
     );
   }

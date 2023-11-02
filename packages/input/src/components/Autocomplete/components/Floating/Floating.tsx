@@ -23,7 +23,15 @@ export type FloatingProps = {
   children: ReactNode;
 } & Pick<
   AutocompleteProps,
-  'value' | 'onSelect' | 'disabled' | 'isOptionsError' | 'loading' | 'isOptionsError' | 'options' | 'additionalButton'
+  | 'value'
+  | 'onSelect'
+  | 'disabled'
+  | 'isOptionsError'
+  | 'loading'
+  | 'isOptionsError'
+  | 'options'
+  | 'additionalButton'
+  | 'notFoundText'
 >;
 
 export function Floating({
@@ -35,6 +43,7 @@ export function Floating({
   disabled,
   value,
   additionalButton,
+  notFoundText,
 }: FloatingProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [dropListHeigth, setDropListHeight] = useState(0);
@@ -107,6 +116,7 @@ export function Floating({
                 droplistRef={droplistRef}
                 value={value}
                 additionalButton={additionalButton}
+                notFoundText={notFoundText}
               />
             </S.Wrapper>
           </FloatingPortal>
