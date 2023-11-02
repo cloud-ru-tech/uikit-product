@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2023-11-02)
+
+
+### Features
+
+* **[DPS-7602](https://jira.sbercloud.tech/browse/DPS-7602):** InfoGroup: added default value. LabelInfo & Accordion: added more props for tooltip. ([005ac56](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/005ac56d9d9eaf39c163fd8f995d52c8738862e9))
+
+
+
+
+
 ## 0.9.2 (2023-10-30)
 
 ### Only dependencies have been changed
