@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 import { ButtonIcon } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG, QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
@@ -9,10 +11,15 @@ import { Variant } from '../Container';
 import { HeaderAlign } from './constants';
 import * as S from './styled';
 
+export type SubtitleRenderProps = {
+  className: string;
+  'data-test-id': string;
+};
+
 export type HeaderProps = {
   align?: HeaderAlign;
   title: string;
-  subtitle?: string;
+  subtitle?: string | ((props: SubtitleRenderProps) => ReactElement<SubtitleRenderProps>);
   titleTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
   onClose(): void;
   variant?: Variant;
@@ -49,7 +56,20 @@ export function Header({ title, subtitle, titleTooltip, align = HeaderAlign.Left
 
         <S.CloseButtonPlaceholder data-align={align} />
       </S.TitleWrapper>
-      {subtitle && <S.Subtitle data-test-id='modal-private__header__subtitle' maxLines={2} text={subtitle} />}
+
+      {subtitle &&
+        (typeof subtitle === 'string' ? (
+          <TruncateString
+            data-test-id='modal-private__header__subtitle'
+            className={S.subtitleClassName}
+            text={subtitle}
+          />
+        ) : (
+          subtitle({
+            'data-test-id': 'modal-private__header__subtitle',
+            className: S.subtitleClassName,
+          })
+        ))}
     </S.Wrapper>
   );
 }

@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { ButtonIconTransparent } from '@sbercloud/uikit-product-button';
@@ -64,9 +65,8 @@ export const Title = styled(TruncateString)`
   color: var(${COLORS.title});
 `;
 
-export const Subtitle = styled(TruncateString)`
+export const subtitleClassName = css`
   color: var(${COLORS.subtitle});
-
   margin-top: 8px;
 `;
 

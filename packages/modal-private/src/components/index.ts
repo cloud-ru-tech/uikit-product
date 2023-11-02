@@ -11,7 +11,7 @@ export namespace ModalPrivate {
 }
 
 export type { ContainerProps } from './Container';
-export type { HeaderProps } from './Header';
+export type { HeaderProps, SubtitleRenderProps } from './Header';
 export type { ContentProps } from './Content';
 export type { FooterProps } from './Footer';
 

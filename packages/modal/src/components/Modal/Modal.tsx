@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { FooterProps, ModalPrivate, Size, Variant } from '@sbercloud/uikit-product-modal-private';
+import { FooterProps, HeaderProps, ModalPrivate, Size, Variant } from '@sbercloud/uikit-product-modal-private';
 import { TooltipProps } from '@sbercloud/uikit-product-tooltip';
 import { extractDataTestProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -21,7 +21,7 @@ export type ModalProps = WithSupportProps<{
   align?: Align;
   variant?: Variant;
   title: string;
-  subtitle?: string;
+  subtitle?: HeaderProps['subtitle'];
   titleTooltip?: Pick<TooltipProps, 'title' | 'content' | 'link' | 'icon' | 'iconAction'>;
   /** @warning Use only if available in a Modal with Dropdown, Select, Datepicker, Timepicker. It may be dangerous...
    */
