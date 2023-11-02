@@ -1,4 +1,4 @@
-import debounce from 'lodash.debounce';
+import trottle from 'lodash.throttle';
 import { useEffect, useRef, useState } from 'react';
 
 import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
@@ -34,7 +34,7 @@ export function TruncateStringMiddle({
   const truncatedTextElementRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const setTruncate = debounce(() => {
+    const setTruncate = trottle(() => {
       setTruncatedString(
         truncateStringMiddle({
           element: textElementRef.current,
