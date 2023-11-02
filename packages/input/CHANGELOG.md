@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.9.0 (2023-11-02)
+
+
+### Features
+
+* **[LK-2069](https://jira.sbercloud.tech/browse/LK-2069):** add notFoundText prop to Autocomplete ([72f69f5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/72f69f52a3d90959a6d5aa1b8cef83fe2aa8de04))
+
+
+
+
+
 ## 3.8.3 (2023-10-30)
 
 ### Only dependencies have been changed
