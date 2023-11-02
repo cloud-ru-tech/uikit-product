@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.4.1 (2023-11-02)
+
+
+### Bug Fixes
+
+* **[FF-3625](https://jira.sbercloud.tech/browse/FF-3625):** domain selector placement ([3bdfbdb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3bdfbdb6073b89c98598babdfba1ecb2e421af06))
+
+
+
+
+
 # 1.4.0 (2023-10-31)
 
 
