@@ -70,7 +70,7 @@ export const styles = (size: SelectSizes, externalError?: string) => {
     }),
     menu: (styles: CSSProperties) => ({
       ...styles,
-      margin: 0,
+      margin: '4px 0 0 0',
       background: `var(${COLORS_SELECT.BACKGROUND})`,
       boxShadow: SHADOW.MEDIUM,
     }),

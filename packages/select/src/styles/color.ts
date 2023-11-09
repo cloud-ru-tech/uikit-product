@@ -26,6 +26,7 @@ export const styles = commonStyles({
     width: '124px',
     boxShadow: '0px 4px 15px rgba(0, 0, 0, 0.15)',
     borderRadius: 4,
+    marginTop: '4px',
   }),
   menuList: (styles: CSSProperties) => ({
     ...styles,

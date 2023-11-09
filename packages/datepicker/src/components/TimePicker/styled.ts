@@ -14,6 +14,10 @@ export const Container = styled.div`
     z-index: 1;
   }
 
+  .react-datepicker {
+    margin-top: 4px;
+  }
+
   .react-datepicker__time-container {
     float: right;
     width: 100%;

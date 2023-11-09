@@ -99,4 +99,8 @@ export const styles = commonStyles({
     transform: props.selectProps.menuIsOpen && 'rotate(180deg)',
     fill: props.selectProps.isHover ? `var(${COLORS_SELECT.TEXT_COLOR})` : 'transparent',
   }),
+  menu: (styles: CSSProperties) => ({
+    ...styles,
+    marginTop: '4px',
+  }),
 });

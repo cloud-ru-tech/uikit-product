@@ -17,6 +17,7 @@ export const Container = styled.div`
   }
 
   .react-datepicker {
+    margin-top: 4px;
     font-size: 16px;
     border-radius: 4px;
     display: inline-block;

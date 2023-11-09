@@ -25,6 +25,7 @@ const Content = styled.div`
   box-sizing: border-box;
   border-radius: 4px;
   overflow: hidden;
+  margin-top: 4px;
 `;
 
 export type ChildrenProps = {
