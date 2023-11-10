@@ -203,6 +203,12 @@ function Template({ ...args }: ModalProps) {
 export const modal: StoryFn<ModalProps> = Template.bind({});
 
 modal.argTypes = {
+  subtitle: {
+    control: {
+      type: 'text',
+    },
+    type: 'string',
+  },
   size: {
     control: {
       type: 'radio',
