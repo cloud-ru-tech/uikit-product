@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-11-13)
+
+
+### Features
+
+* **[DPS-7368](https://jira.sbercloud.tech/browse/DPS-7368):** extend subtitle prop typing ([df575c7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df575c77adc93d582a927cb9c9256702d11dc52d))
+
+
+
+
+
 ## 2.0.6 (2023-10-30)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2023-11-13)
+
+
+### Features
+
+* **[DPS-7368](https://jira.sbercloud.tech/browse/DPS-7368):** extend subtitle prop typing ([df575c7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df575c77adc93d582a927cb9c9256702d11dc52d))
+
+
+
+
+
 ## 1.6.2 (2023-10-30)
 
 ### Only dependencies have been changed
@@ -509,7 +520,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 1.2.1 (2023-01-19)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-modal
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-modal-private@2.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal-private/CHANGELOG.md)
 
 # [1.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-modal@1.1.1...@sbercloud/uikit-product-modal@1.2.0) (2023-01-13)
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2023-11-13)
+
+
+### BREAKING CHANGES
+
+
+* **[DPS-7368](https://jira.sbercloud.tech/browse/DPS-7368):** upd ConfirmDeleteModal design and change props target ([08d54ec](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/08d54ec9bd46f1f06c7b718dde7e60a262634ef8))
+
+
+
+
 ## 0.2.4 (2023-11-02)
 
 ### Only dependencies have been changed
