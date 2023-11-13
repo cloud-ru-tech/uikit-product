@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.32.4 (2023-11-13)
+
+
+### Bug Fixes
+
+* **FF-00:** apply offset 4px for droplist ([85a83c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/85a83c9cbf76e83bf7ee31dcce4280fc02b51390))
+
+
+
+
+
 ## 0.32.3 (2023-11-13)
 
 ### Only dependencies have been changed
