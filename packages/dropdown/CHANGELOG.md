@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.20.0 (2023-11-14)
+
+
+### Features
+
+* **FF-00:** add closeOnOutsideClick property ([a85573e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a85573ef669292b39640f4cc42d3ed899ed52c72))
+* **FF-00:** add open property for controlled state ([2f85c01](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2f85c0116aaa667037111b5a2faac68bd53b824b))
+
+
+
+
+
 # 0.19.0 (2023-10-25)
 
 
