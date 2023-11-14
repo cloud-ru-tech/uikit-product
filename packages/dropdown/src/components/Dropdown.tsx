@@ -47,6 +47,7 @@ export type DropdownMenuProps = WithSupportProps<{
   onToggle?: (isOpen: boolean) => void;
   value?: string;
   onChange?: (value: string) => void;
+  closeOnOutsideClick?: boolean;
   closeOnMenuClick?: boolean;
 }>;
 
@@ -61,6 +62,7 @@ export function DropdownMenu({
   dropdownMenuClassName,
   value,
   onChange,
+  closeOnOutsideClick = true,
   closeOnMenuClick = true,
   placement = TooltipPrivate.placements.BottomEnd,
   ...rest
@@ -92,7 +94,7 @@ export function DropdownMenu({
       offset={[0, 12]}
       delayShow={0}
       delayHide={0}
-      clickOutside
+      closeOnOutsideClick={closeOnOutsideClick}
       tooltip={
         <TooltipMenuPrivate
           data-test-id='dropdown__tooltip-menu'

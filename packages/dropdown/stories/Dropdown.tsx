@@ -88,6 +88,7 @@ function Template({ ...args }: DropdownMenuProps) {
             </DropdownItem>
           </>
         }
+        closeOnOutsideClick={args.closeOnOutsideClick}
       >
         <ButtonRound icon={<CircleAddInterfaceSVG />} text='Создать' />
       </DropdownMenu>
@@ -100,6 +101,7 @@ function Template({ ...args }: DropdownMenuProps) {
         ]}
         value={value}
         onChange={setValue}
+        closeOnOutsideClick={args.closeOnOutsideClick}
       >
         <ButtonIcon icon={<SettingsInterfaceSVG />} tooltip={{ content: 'Настройки' }} />
       </DropdownMenu>
@@ -129,6 +131,7 @@ function Template({ ...args }: DropdownMenuProps) {
           { value: '20', label: 'Загрузить документ', onClick: () => {} },
         ]}
         onToggle={value => onToggle('filesButton', value)}
+        closeOnOutsideClick={args.closeOnOutsideClick}
       >
         <Button
           text='Button text'
@@ -157,6 +160,7 @@ function Template({ ...args }: DropdownMenuProps) {
           </>
         }
         onToggle={value => onToggle('filterButton', value)}
+        closeOnOutsideClick={args.closeOnOutsideClick}
       >
         <Button
           icon={
@@ -172,7 +176,9 @@ function Template({ ...args }: DropdownMenuProps) {
 }
 
 export const dropdown: StoryFn<DropdownMenuProps> = Template.bind({});
-dropdown.args = {};
+dropdown.args = {
+  closeOnOutsideClick: true,
+};
 dropdown.argTypes = {};
 dropdown.parameters = {
   readme: {
