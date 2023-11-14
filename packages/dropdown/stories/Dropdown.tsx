@@ -2,12 +2,13 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 import { useCallback, useState } from 'react';
 
-import { Button, ButtonIcon, ButtonRound } from '@sbercloud/uikit-product-button';
+import { Button, ButtonGhost, ButtonIcon, ButtonRound } from '@sbercloud/uikit-product-button';
 import { Checkbox } from '@sbercloud/uikit-product-checkbox';
 import { Divider } from '@sbercloud/uikit-product-divider';
 import {
   ChevronLeftInterfaceSVG,
   CircleAddInterfaceSVG,
+  CloseInterfaceSVG,
   FileUploadFilledInterfaceSVG,
   FolderUploadFilledInterfaceSVG,
   SettingsInterfaceSVG,
@@ -159,6 +160,7 @@ function Template({ ...args }: DropdownMenuProps) {
             ))}
           </>
         }
+        open={isOpen.filterButton}
         onToggle={value => onToggle('filterButton', value)}
         closeOnOutsideClick={args.closeOnOutsideClick}
       >
@@ -171,6 +173,15 @@ function Template({ ...args }: DropdownMenuProps) {
           text='Фильтр'
         />
       </DropdownMenu>
+
+      {isOpen.filterButton && (
+        <ButtonGhost
+          icon={<CloseInterfaceSVG />}
+          iconPosition={ButtonGhost.iconPosition.After}
+          text={'Close filter by click'}
+          onClick={() => onToggle('filterButton', false)}
+        />
+      )}
     </Wrapper>
   );
 }

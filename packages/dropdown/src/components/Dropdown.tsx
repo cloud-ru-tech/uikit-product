@@ -8,8 +8,8 @@ import {
   ReactElement,
   ReactNode,
   useCallback,
-  useState,
 } from 'react';
+import { useUncontrolledProp } from 'uncontrollable';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
 import {
@@ -44,6 +44,7 @@ export type DropdownMenuProps = WithSupportProps<{
   children: ReactNode;
   dropdownMenuClassName?: string;
   placement?: Placements;
+  open?: boolean;
   onToggle?: (isOpen: boolean) => void;
   value?: string;
   onChange?: (value: string) => void;
@@ -58,6 +59,7 @@ export function DropdownItem(props: TooltipMenuItemPrivateProps) {
 export function DropdownMenu({
   actions,
   children,
+  open: openProp,
   onToggle,
   dropdownMenuClassName,
   value,
@@ -67,18 +69,11 @@ export function DropdownMenu({
   placement = TooltipPrivate.placements.BottomEnd,
   ...rest
 }: DropdownMenuProps) {
-  const [on, setOn] = useState(false);
-  const toggleDropdown = useCallback(
-    (on: boolean) => {
-      setOn(on);
-      if (onToggle) onToggle(on);
-    },
-    [onToggle],
-  );
+  const [open, toggleDropdown] = useUncontrolledProp(openProp, false, onToggle);
+
   const closeDropdown = useCallback(() => {
-    setOn(false);
-    if (onToggle) onToggle(false);
-  }, [onToggle]);
+    toggleDropdown(false);
+  }, [toggleDropdown]);
 
   const isActionsArray = Array.isArray(actions);
   const isActionsFn = !isActionsArray && typeof actions === 'function';
@@ -88,7 +83,7 @@ export function DropdownMenu({
       placement={placement}
       trigger={TooltipPrivate.triggerTypes.Click}
       interactive={false}
-      visible={on}
+      visible={open}
       onVisibleChange={toggleDropdown}
       classNameContainer={S.containerClassName}
       offset={[0, 12]}
@@ -131,7 +126,7 @@ export function DropdownMenu({
             })}
           {isActionsFn &&
             (actions as TDropdownMenuCustomActions)({
-              on,
+              on: open,
               set: toggleDropdown,
               hide: closeDropdown,
             })}
