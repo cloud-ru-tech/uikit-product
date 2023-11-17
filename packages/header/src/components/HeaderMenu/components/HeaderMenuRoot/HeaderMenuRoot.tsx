@@ -31,7 +31,7 @@ export function HeaderMenuRoot({ title, children, ...rest }: HeaderMenuRootProps
           </DropdownMenuContext.Provider>
         )}
       >
-        <ButtonIcon variant={ButtonIcon.variants.Color} icon={<ViewTileInterfaceSVG />} />
+        <ButtonIcon variant={ButtonIcon.variants.Weak} icon={<ViewTileInterfaceSVG />} />
       </DropdownMenu>
     </S.Wrapper>
   );
