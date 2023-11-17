@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.5.0 (2023-11-17)
+
+
+### Features
+
+* **[FF-3747](https://jira.sbercloud.tech/browse/FF-3747):** header root icon hover colour ([788b9d8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/788b9d8d5bea60a2794c8788902ebf1e46b27d09))
+
+
+
+
+
 ## 1.4.3 (2023-11-14)
 
 ### Only dependencies have been changed
