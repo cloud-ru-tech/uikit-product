@@ -12,8 +12,9 @@ module.exports = {
     {
       files: ['packages/**/__tests__/**/*.ts'],
       rules: {
-        'jest/expect-expect': 'off',
-        'jest/no-done-callback': 'off',
+        'vitest/expect-expect': 'off',
+        'vitest/no-done-callback': 'off',
+        'vitest/no-conditional-in-test': 'off',
       },
     },
     {

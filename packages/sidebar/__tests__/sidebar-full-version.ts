@@ -83,6 +83,54 @@ test('searches the items', async t => {
   await expectItemToBeActive(t, itemIds.foundBySearch);
 });
 
+test('default open accordion', async t => {
+  await t.click(getItemById(itemIds.defaultOpenSlide));
+
+  await t
+    .expect(
+      getItemById(itemIds.defaultOpenItem)
+        .find(getItemPostfixAccordionButtonSelectorString())
+        .hasAttribute('data-opened'),
+    )
+    .ok();
+});
+
+test('close default open accordion', async t => {
+  const accordionItem = getItemById(itemIds.defaultOpenItem);
+
+  await t.click(getItemById(itemIds.defaultOpenSlide));
+  await t.expect(accordionItem.find(getItemPostfixAccordionButtonSelectorString()).hasAttribute('data-opened')).ok();
+
+  await t.click(accordionItem);
+  await t.expect(accordionItem.find(getItemPostfixAccordionButtonSelectorString()).hasAttribute('data-opened')).notOk();
+});
+
+test('nearby items close default open accordion', async t => {
+  const defaultOpenItem = getItemById(itemIds.defaultOpenItem);
+
+  await t.click(getItemById(itemIds.defaultOpenSlide));
+  await t.expect(defaultOpenItem.find(getItemPostfixAccordionButtonSelectorString()).hasAttribute('data-opened')).ok();
+
+  await t.click(defaultOpenItem);
+  await t
+    .expect(defaultOpenItem.find(getItemPostfixAccordionButtonSelectorString()).hasAttribute('data-opened'))
+    .notOk();
+
+  await t.click(getItemById(itemIds.defaultOpenItem2));
+  await t
+    .expect(
+      getItemById(itemIds.defaultOpenItem2)
+        .find(getItemPostfixAccordionButtonSelectorString())
+        .hasAttribute('data-opened'),
+    )
+    .ok();
+  await t.click(getItemById(itemIds.defaultOpenItem3));
+
+  await t
+    .expect(defaultOpenItem.find(getItemPostfixAccordionButtonSelectorString()).hasAttribute('data-opened'))
+    .notOk();
+});
+
 test('collapse/uncollapse sidebar', async t => {
   await t.click(getCollapseButton());
 

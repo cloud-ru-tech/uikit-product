@@ -20,6 +20,7 @@ export function Accordion({ item, recalculateParentHeight, accordionLevel = 0, i
   const { handleItemClick, active } = useSidebarContext();
   const isAccordion = isItemAccordion(item, isMobile);
   const shouldBeOpen = useNestedActive(item, isMobile);
+  const isOpenedByDefault = shouldBeOpen || Boolean(isAccordion && item.isDefaultOpen);
   const [isOpen, setOpen] = useState(shouldBeOpen);
   const [maxHeight, setMaxHeight] = useState<number>(0);
   const maxHeightRef = useRef(0);
@@ -64,6 +65,12 @@ export function Accordion({ item, recalculateParentHeight, accordionLevel = 0, i
     setOpen(shouldBeOpen);
     toggle(shouldBeOpen);
   }, [shouldBeOpen, active]);
+
+  useEffect(() => {
+    setOpen(isOpenedByDefault);
+    toggle(isOpenedByDefault);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     recalculateOwnHeight();

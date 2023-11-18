@@ -29,6 +29,7 @@ type BaseSidebarItem = {
 
 export type AccordionSidebarItem = BaseSidebarItem & {
   mode: Mode.Accordion;
+  isDefaultOpen?: boolean;
   // eslint-disable-next-line no-use-before-define
   nestedList: SidebarItemsGroup[];
 };

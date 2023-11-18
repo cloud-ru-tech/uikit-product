@@ -18,6 +18,10 @@ export const itemIds = {
   withLockedIcon: 'special-for-you',
   withCounter: 'common-platform-services',
   foundBySearch: 'datahub',
+  defaultOpenSlide: 'default-open-content-slide',
+  defaultOpenItem: 'default-open-slide-child-1',
+  defaultOpenItem2: 'default-open-slide-child-3',
+  defaultOpenItem3: 'default-open-slide-child-4',
 };
 export const firstLevelTexts = [
   'Главная',
@@ -25,6 +29,7 @@ export const firstLevelTexts = [
   'Enterprise',
   'ML Space',
   'Other Slide Item',
+  'Default Open Content',
   'SVP',
   'Общие сервисы платформ',
   'Специально для вас',

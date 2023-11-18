@@ -348,6 +348,55 @@ export const menuList: SidebarItemsGroup[] = [
         ],
       },
       {
+        id: 'default-open-content-slide',
+        label: 'Default Open Content',
+        href: '/',
+        icon: <ChristofariServiceSVG />,
+        nestedList: [
+          {
+            items: [
+              {
+                id: 'default-open-slide-child-1',
+                label: 'Slide Item 1',
+                isDefaultOpen: true,
+                mode: Sidebar.listModes.Accordion,
+                icon: <ChristofariServiceSVG />,
+                nestedList: [
+                  {
+                    items: [
+                      {
+                        id: 'default-open-slide-child-2',
+                        label: 'Slide Item 2',
+                        href: '/',
+                        icon: <ChristofariServiceSVG />,
+                      },
+                    ],
+                  },
+                ],
+              },
+              {
+                id: 'default-open-slide-child-3',
+                label: 'Slide Item 3',
+                mode: Sidebar.listModes.Accordion,
+                icon: <ChristofariServiceSVG />,
+                nestedList: [
+                  {
+                    items: [
+                      {
+                        id: 'default-open-slide-child-4',
+                        label: 'Slide Item 4',
+                        href: '/',
+                        icon: <ChristofariServiceSVG />,
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
         id: 'main-svp',
         label: 'SVP',
         href: '/',
