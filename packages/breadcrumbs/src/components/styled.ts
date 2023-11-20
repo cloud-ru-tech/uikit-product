@@ -1,11 +1,14 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
+import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './theme';
+
+PURPLE_THEME;
+PURPLE_DARK_THEME;
+GREEN_THEME;
+GREEN_DARK_THEME;
 
 import { Size } from '../helpers/types';
-
-const { COLORS_BREADCRUMBS } = DEPRECATED_EXPORT_VARS;
 
 export const ContainerStyled = styled.div`
   width: 100%;
@@ -33,9 +36,14 @@ export const ItemStyled = styled.div<{ width?: number }>`
     line-height: 26px;
   }
 
-  &[data-size=${Size.Small}] {
+  &[data-size=${Size.Medium}] {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  &[data-size=${Size.Small}] {
+    font-size: 12px;
+    line-height: 16px;
   }
 
   &[data-fixed-width] {
@@ -54,8 +62,8 @@ export const ItemTextStyled = styled.p`
   text-overflow: ellipsis;
   font-size: inherit;
   line-height: inherit;
-  color: var(${COLORS_BREADCRUMBS.INACTIVE_COLOR});
-  fill: var(${COLORS_BREADCRUMBS.INACTIVE_COLOR});
+  color: var(${COLORS.label.inactive});
+  fill: var(${COLORS.label.inactive});
   margin: 0;
   white-space: nowrap;
 
@@ -64,8 +72,8 @@ export const ItemTextStyled = styled.p`
   }
 
   &[data-active] {
-    color: var(${COLORS_BREADCRUMBS.ACTIVE_COLOR});
-    fill: var(${COLORS_BREADCRUMBS.ACTIVE_COLOR});
+    color: var(${COLORS.label.active});
+    fill: var(${COLORS.label.active});
   }
 `;
 
@@ -73,7 +81,7 @@ export const chevronClassName = css`
   min-width: 24px;
 
   & path {
-    fill: var(${COLORS_BREADCRUMBS.INACTIVE_COLOR});
+    fill: var(${COLORS.icon});
   }
 `;
 
