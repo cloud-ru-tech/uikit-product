@@ -60,7 +60,9 @@ export function NavigationItem({ value, label, counter, disabled }: NavigationIt
       onClick={changeTabHandler}
       onKeyDown={keyboardSelectHandler(changeTabHandler)}
     >
-      <S.Label data-test-id={`tabs__navigation-list-item:${value}__label`}>{label}</S.Label>
+      <S.Label data-size={size} data-test-id={`tabs__navigation-list-item:${value}__label`}>
+        {label}
+      </S.Label>
       {Number.isInteger(counter) && (
         <S.StyledCounter
           value={counter as number}

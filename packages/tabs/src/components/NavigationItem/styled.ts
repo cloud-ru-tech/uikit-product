@@ -1,7 +1,7 @@
 import { styled } from '@linaria/react';
 
 import { Counter } from '@sbercloud/uikit-product-counter';
-import { H4_STYLES } from '@sbercloud/uikit-product-typography';
+import { H4_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
 import { ANIMATIONS } from '@sbercloud/uikit-product-utils';
 
 import { Sizes } from '../../helpers/types';
@@ -41,28 +41,37 @@ export const Tab = styled.li`
     }
   }
 
-  padding: 0 12px;
-
   :first-child {
     padding-left: 0;
   }
 
   :last-child {
-    /* stylelint-disable-next-line property-no-unknown */
-    parring-right: 0;
+    padding-right: 0;
+  }
+
+  &[data-size='${Sizes.Small}'] {
+    padding: 0 6px 6px;
   }
 
   &[data-size='${Sizes.Medium}'] {
-    padding-bottom: 8px;
+    padding: 0 12px 8px;
   }
 
   &[data-size='${Sizes.Large}'] {
-    padding-bottom: 16px;
+    padding: 0 12px 16px;
   }
 `;
 
 export const Label = styled.span`
-  ${H4_STYLES};
+  &[data-size='${Sizes.Small}'] {
+    ${TEXT_2_STYLES};
+  }
+
+  &[data-size='${Sizes.Medium}'],
+  &[data-size='${Sizes.Large}'] {
+    ${H4_STYLES};
+  }
+
   transition: color ${ANIMATIONS.TRANSITION};
   user-select: none;
 `;

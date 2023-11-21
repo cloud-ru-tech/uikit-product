@@ -13,6 +13,7 @@ For controlled you have to additionally pass onChange handler.
 type TabId = ReactText;
 
 enum Sizes {
+  Small = 'Small',
   Medium = 'Medium',
   Large = 'Large',
 }
