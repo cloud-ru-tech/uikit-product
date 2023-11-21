@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2023-11-21)
+
+
+### Features
+
+* **[DPS-7966](https://jira.sbercloud.tech/browse/DPS-7966):** adds small size ([56b5904](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/56b5904bf0728b60b653a5ae93a4ea4f68891fa5))
+
+
+
+
+
 # 2.1.0 (2023-10-25)
 
 

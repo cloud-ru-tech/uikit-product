@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.15.0 (2023-11-21)
+
+
+### BREAKING CHANGES
+
+
+* **[DPS-7966](https://jira.sbercloud.tech/browse/DPS-7966):** adds new small size, changes previous small size to medium ([b4fea52](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b4fea5215bb6ec3376eece3aa4ca653b7705366c))
+
+
+
+
 ## 0.14.2 (2023-10-30)
 
 ### Only dependencies have been changed
