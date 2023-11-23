@@ -30,46 +30,54 @@ export function Header({ title, subtitle, titleTooltip, align = HeaderAlign.Left
 
   return (
     <S.Wrapper data-align={align} data-test-id='modal-private__header'>
+      <S.WrapperLeft>
+        <S.TitleWrapper data-align={align}>
+          <S.TitleWithTooltip>
+            <S.Title
+              data-test-id='modal-private__header__title'
+              textEntity={TruncateString.textEntities.H3Semibold}
+              text={title}
+            />
+
+            {titleTooltip && (
+              <Tooltip
+                {...titleTooltip}
+                type={Tooltip.types.Instant}
+                data-test-id='modal-private__header__title-tooltip'
+              >
+                <ButtonIcon icon={<QuestionSmallOutlineInterfaceSVG />} />
+              </Tooltip>
+            )}
+          </S.TitleWithTooltip>
+
+          <S.CloseButtonPlaceholder data-align={align} />
+        </S.TitleWrapper>
+
+        {subtitle &&
+          (typeof subtitle === 'string' ? (
+            <TruncateString
+              max-lines={2}
+              data-test-id='modal-private__header__subtitle'
+              className={S.subtitleClassName}
+              text={subtitle}
+            />
+          ) : (
+            subtitle({
+              'data-test-id': 'modal-private__header__subtitle',
+              className: S.subtitleClassName,
+            })
+          ))}
+      </S.WrapperLeft>
+
       {variant !== Variant.Forced && (
         <S.CloseButton
+          rounded
           icon={<CloseInterfaceSVG />}
           onClick={onClose}
           tooltip={{ content: textProvider(languageCode, Texts.Close) }}
           data-test-id='modal-private__close-btn'
         />
       )}
-
-      <S.TitleWrapper data-align={align}>
-        <S.TitleWithTooltip>
-          <S.Title
-            data-test-id='modal-private__header__title'
-            textEntity={TruncateString.textEntities.H3Semibold}
-            text={title}
-          />
-
-          {titleTooltip && (
-            <Tooltip {...titleTooltip} type={Tooltip.types.Instant} data-test-id='modal-private__header__title-tooltip'>
-              <ButtonIcon icon={<QuestionSmallOutlineInterfaceSVG />} />
-            </Tooltip>
-          )}
-        </S.TitleWithTooltip>
-
-        <S.CloseButtonPlaceholder data-align={align} />
-      </S.TitleWrapper>
-
-      {subtitle &&
-        (typeof subtitle === 'string' ? (
-          <TruncateString
-            data-test-id='modal-private__header__subtitle'
-            className={S.subtitleClassName}
-            text={subtitle}
-          />
-        ) : (
-          subtitle({
-            'data-test-id': 'modal-private__header__subtitle',
-            className: S.subtitleClassName,
-          })
-        ))}
     </S.Wrapper>
   );
 }
