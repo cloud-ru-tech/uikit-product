@@ -41,14 +41,6 @@ export const Tab = styled.li`
     }
   }
 
-  :first-child {
-    padding-left: 0;
-  }
-
-  :last-child {
-    padding-right: 0;
-  }
-
   &[data-size='${Sizes.Small}'] {
     padding: 0 6px 6px;
   }
@@ -59,6 +51,14 @@ export const Tab = styled.li`
 
   &[data-size='${Sizes.Large}'] {
     padding: 0 12px 16px;
+  }
+
+  :first-child {
+    padding-left: 0;
+  }
+
+  :last-child {
+    padding-right: 0;
   }
 `;
 
