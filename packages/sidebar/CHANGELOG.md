@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2023-11-27)
+
+
+### Features
+
+* **[SVP-9199](https://jira.sbercloud.tech/browse/SVP-9199):** added default open sidebar item ([b52fc02](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b52fc0233e992accb776822e01eff75581540ccb))
+
+
+
+
+
 ## 2.0.4 (2023-11-13)
 
 ### Only dependencies have been changed
