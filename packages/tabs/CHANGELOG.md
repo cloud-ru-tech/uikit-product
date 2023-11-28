@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.1 (2023-11-28)
+
+
+### Bug Fixes
+
+* **[DPS-7966](https://jira.sbercloud.tech/browse/DPS-7966):** fixes padding for first and last element ([c8b5225](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c8b5225371f1c77e252973e038e48eeb09dcc7fb))
+
+
+
+
+
 # 2.2.0 (2023-11-21)
 
 
