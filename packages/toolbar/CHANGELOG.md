@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.17.6 (2023-11-28)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-filter@0.19.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/filter/CHANGELOG.md)
+
+
+
+
+
 ## 0.17.5 (2023-11-14)
 
 ### Only dependencies have been changed

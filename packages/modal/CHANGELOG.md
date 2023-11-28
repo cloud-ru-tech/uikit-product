@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.7.1 (2023-11-28)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-modal-private@2.1.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal-private/CHANGELOG.md)
+
+
+
+
+
 # 1.7.0 (2023-11-13)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.1 (2023-11-28)
+
+
+### Bug Fixes
+
+* **[DPS-7368](https://jira.sbercloud.tech/browse/DPS-7368):** add padding to the close button in subtitle ([947bf56](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/947bf56cc8a4a1fc7e66102acf3c84ad2399087a))
+
+
+
+
+
 # 2.1.0 (2023-11-13)
 
 
