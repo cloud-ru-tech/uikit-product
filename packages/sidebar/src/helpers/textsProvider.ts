@@ -16,7 +16,7 @@ export enum Texts {
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
-    [Texts.BackToPlatforms]: 'ко всем платформам',
+    [Texts.BackToPlatforms]: 'Ко всем платформам',
     [Texts.BackButton]: 'назад',
     [Texts.CloseSearch]: 'закрыть поиск',
     [Texts.ItemNew]: 'новый',
@@ -29,7 +29,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.NoDataFound]: 'Ничего не найдено',
   },
   [LanguageCodeType.enGB]: {
-    [Texts.BackToPlatforms]: 'to all platforms',
+    [Texts.BackToPlatforms]: 'To all platforms',
     [Texts.BackButton]: 'to level back',
     [Texts.CloseSearch]: 'close search',
     [Texts.ItemNew]: 'new',
