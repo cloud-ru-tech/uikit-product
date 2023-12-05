@@ -16,12 +16,11 @@ export const Wrapper = styled.div`
   position: relative;
 
   display: flex;
-
-  max-width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
 
   box-sizing: border-box;
   padding: 0 32px;
-  column-gap: 24px;
 
   &[data-align=${HeaderAlign.Left}] {
     align-items: flex-start;
@@ -33,19 +32,14 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const WrapperLeft = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  width: 100%;
-  overflow: hidden;
-`;
-
 export const TitleWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+
+  &[data-align=${HeaderAlign.Left}] {
+    margin-right: 40px;
+  }
 `;
 
 export const TitleWithTooltip = styled.div`
@@ -77,5 +71,11 @@ export const subtitleClassName = css`
 `;
 
 export const CloseButton = styled(ButtonIconTransparent)`
+  position: absolute;
+  top: 0px;
+  right: 32px;
+
+  overflow: hidden;
+
   border-radius: 100%;
 `;
