@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.3 (2023-12-05)
+
+
+### Bug Fixes
+
+* **[DPS-7368](https://jira.sbercloud.tech/browse/DPS-7368):** This reverts commit 947bf56cc8a4a1fc7e66102acf3c84ad2399087a. ([b132849](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b13284991473929797f1c09d1d98652bc1aa5651))
+
+
+
+
+
 ## 2.1.2 (2023-12-05)
 
 ### Only dependencies have been changed
