@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.27.0 (2023-12-05)
+
+
+### Features
+
+* **[HYCL-224](https://jira.sbercloud.tech/browse/HYCL-224):** add vCenter Manager icon service ([44b9a53](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/44b9a539f10e65340bad062864c88c30df45c58b))
+
+
+
+
+
 # 5.26.0 (2023-10-30)
 
 
