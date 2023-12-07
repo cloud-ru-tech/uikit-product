@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.28.0 (2023-12-07)
+
+
+### Features
+
+* **[DPS-8064](https://jira.sbercloud.tech/browse/DPS-8064):** add icon for spark ([d8ade34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d8ade34301d69006cdc3015a29fae7f47b548798))
+
+
+
+
+
 # 5.27.0 (2023-12-05)
 
 
