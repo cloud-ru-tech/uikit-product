@@ -5,7 +5,7 @@ import { MouseEvent, useEffect, useRef, useState } from 'react';
 import { downloadFile } from '@sbercloud/ft-download-file';
 import { formatBytes, Lang } from '@sbercloud/ft-formatters';
 import { ButtonIcon, ButtonIconProps } from '@sbercloud/uikit-product-button';
-import { CloseInterfaceSVG, FileInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { CloseInterfaceSVG, FileInterfaceSVG, LoadingWheelInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -17,6 +17,7 @@ export type DocumentProps = WithSupportProps<{
   file: FileProps;
   onClick?(file: FileProps, e?: MouseEvent): void;
   disabled?: boolean;
+  loading?: boolean;
   className?: string;
   removeButton?: {
     onClick(file: FileProps, e?: MouseEvent): void;
@@ -24,7 +25,7 @@ export type DocumentProps = WithSupportProps<{
   };
 }>;
 
-export function Document({ file, disabled, onClick, removeButton, className, ...rest }: DocumentProps) {
+export function Document({ file, disabled, onClick, removeButton, className, loading, ...rest }: DocumentProps) {
   const { languageCode } = useLanguage();
 
   const contentRef = useRef<HTMLDivElement | null>(null);
@@ -50,7 +51,7 @@ export function Document({ file, disabled, onClick, removeButton, className, ...
   }, []);
 
   const handleClick = (e: MouseEvent) => {
-    if (disabled) {
+    if (disabled || loading) {
       return;
     }
 
@@ -78,8 +79,16 @@ export function Document({ file, disabled, onClick, removeButton, className, ...
   };
 
   const documentContent = (
-    <S.Document data-disabled={disabled || undefined} onClick={handleClick} {...extractSupportProps(rest)}>
-      <FileInterfaceSVG size={32} className={S.iconClassName} />
+    <S.Document data-disabled={disabled || loading || undefined} onClick={handleClick} {...extractSupportProps(rest)}>
+      {loading ? (
+        <LoadingWheelInterfaceSVG
+          data-test-id='document__icon-loading'
+          size={32}
+          className={cx(S.loadingWheelClassName, S.iconClassName)}
+        />
+      ) : (
+        <FileInterfaceSVG data-test-id='document__icon' size={32} className={S.iconClassName} />
+      )}
 
       <S.Content data-has-remove={Boolean(removeButton) || undefined} ref={contentRef}>
         <S.Name data-test-id='document__name' ref={titleRef}>
@@ -97,7 +106,7 @@ export function Document({ file, disabled, onClick, removeButton, className, ...
         <ButtonIcon
           variant={ButtonIcon.variants.Color}
           data-test-id='document__remove'
-          disabled={disabled}
+          disabled={disabled || loading}
           tooltip={removeButton.tooltip}
           icon={<CloseInterfaceSVG size={20} />}
           onClick={handleRemoveClick}

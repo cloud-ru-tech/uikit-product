@@ -78,3 +78,13 @@ test.page(getPage({ file, disabled: true }))('Nothing should happen once disable
 
   await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-test-download-clicked')).notOk();
 });
+
+test.page(getPage({ file, loading: true }))('Nothing should happen once loading document is clicked', async t => {
+  await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-test-download-clicked')).notOk();
+
+  await Selector(dataTestIdSelector(testId)).find(dataTestIdSelector('document__icon-loading')).exists;
+
+  await t.click(Selector(dataTestIdSelector(testId)).find(dataTestIdSelector('document__name')));
+
+  await t.expect(Selector(dataTestIdSelector(testId)).hasAttribute('data-test-download-clicked')).notOk();
+});
