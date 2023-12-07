@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2023-12-07)
+
+
+### Features
+
+* **[LK-2069](https://jira.sbercloud.tech/browse/LK-2069):** added document loading ([03d8254](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03d8254566680c90997859ab3cecec783ecd8e96))
+
+
+
+
+
 ## 2.1.3 (2023-12-05)
 
 ### Only dependencies have been changed
