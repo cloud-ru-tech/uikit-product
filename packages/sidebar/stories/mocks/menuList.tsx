@@ -54,6 +54,12 @@ export const menuList: SidebarItemsGroup[] = [
   },
   {
     heading: 'Платформы',
+    tooltip: {
+      title: 'Tooltip',
+      content: 'Tooltip Content',
+      button: 'Button or Link',
+      callToAction: () => {},
+    },
     items: [
       {
         id: 'main-advanced',

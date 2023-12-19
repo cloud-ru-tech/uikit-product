@@ -1,7 +1,9 @@
 import throttle from 'lodash.throttle';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
+import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Scroll } from '@sbercloud/uikit-product-scroll';
+import { Tooltip } from '@sbercloud/uikit-product-tooltip';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { useSidebarContext } from '../../contexts';
@@ -98,6 +100,25 @@ export function List({ isFooter, level }: ListProps) {
           {group.heading && !isCollapsed && (
             <S.Heading data-first-on-inner-level={(level.depth > 0 && groupIndex === 0) || undefined}>
               {group.heading}
+              {group.tooltip && (
+                <Tooltip
+                  type={Tooltip.types.Instant}
+                  title={group.tooltip.title}
+                  trigger={Tooltip.triggers.Hover}
+                  content={
+                    <S.TooltipContent>
+                      {group.tooltip.content}
+                      {group.tooltip.button && (
+                        <S.TooltipContentButton onClick={group.tooltip.callToAction}>
+                          {group.tooltip.button}
+                        </S.TooltipContentButton>
+                      )}
+                    </S.TooltipContent>
+                  }
+                >
+                  <QuestionSmallOutlineInterfaceSVG />
+                </Tooltip>
+              )}
             </S.Heading>
           )}
 

@@ -63,6 +63,12 @@ type SidebarOnActiveChange = (item: Partial<Pick<SidebarItem, 'id' | 'href'>>) =
 
 type SidebarItemsGroup = {
   heading?: string;
+  tooltip?: {
+    title?: string;
+    content: string;
+    button?: string;
+    callToAction?: () => void;
+  };
   items: SidebarItem[];
 };
 ```

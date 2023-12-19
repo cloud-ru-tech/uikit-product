@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { H5_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
@@ -12,15 +13,23 @@ PURPLE_THEME;
 
 export const Heading = styled.h5`
   ${H5_STYLES};
+  display: flex;
+  align-items: center;
 
   margin-bottom: 8px;
   padding: 0 16px;
 
   color: var(${COLORS.heading});
+  fill: var(${COLORS.heading});
+  gap: 4px;
 
   &[data-first-on-inner-level] {
     margin-top: 12px;
   }
+`;
+
+export const HeadingIcon = css`
+  cursor: pointer;
 `;
 
 export const ListWrap = styled.div`
@@ -110,4 +119,20 @@ export const NoDataLabel = styled.div`
 
   color: var(${COLORS.noDataLabel});
   text-align: center;
+`;
+
+export const TooltipContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
+export const TooltipContentButton = styled.div`
+  color: var(${COLORS.tooltipButton});
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(${COLORS.tooltipButtonHover});
+  }
 `;
