@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2023-12-25)
+
+
+### Features
+
+* **[ONB-1350](https://jira.sbercloud.tech/browse/ONB-1350):** added tooltip for level heading ([dc94369](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc94369a91547f953edc5cc8b9dcc424476dcbde))
+
+
+
+
+
 ## 2.1.3 (2023-12-07)
 
 ### Only dependencies have been changed
