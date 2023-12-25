@@ -29,6 +29,7 @@ export function List({ isFooter, level }: ListProps) {
     top: false,
     bottom: false,
   });
+  const [tooltipVisible, setTooltipVisible] = useState<boolean | undefined>(undefined);
 
   const updateFadingVisibility = useMemo(
     () =>
@@ -105,18 +106,19 @@ export function List({ isFooter, level }: ListProps) {
                   type={Tooltip.types.Instant}
                   title={group.tooltip.title}
                   trigger={Tooltip.triggers.Hover}
-                  content={
-                    <S.TooltipContent>
-                      {group.tooltip.content}
-                      {group.tooltip.button && (
-                        <S.TooltipContentButton onClick={group.tooltip.callToAction}>
-                          {group.tooltip.button}
-                        </S.TooltipContentButton>
-                      )}
-                    </S.TooltipContent>
-                  }
+                  content={<S.TooltipContent>{group.tooltip.content}</S.TooltipContent>}
+                  link={{
+                    text: group.tooltip.button,
+                    onClick: () => {
+                      if (group.tooltip && group.tooltip.callToAction) group.tooltip.callToAction();
+                      setTooltipVisible(false);
+                    },
+                    showSuffixIcon: false,
+                    target: '_self',
+                  }}
+                  visible={tooltipVisible}
                 >
-                  <QuestionSmallOutlineInterfaceSVG />
+                  <QuestionSmallOutlineInterfaceSVG onMouseOver={() => setTooltipVisible(undefined)} />
                 </Tooltip>
               )}
             </S.Heading>

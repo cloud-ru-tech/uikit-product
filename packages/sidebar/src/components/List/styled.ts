@@ -126,13 +126,3 @@ export const TooltipContent = styled.div`
   flex-direction: column;
   gap: 12px;
 `;
-
-export const TooltipContentButton = styled.div`
-  color: var(${COLORS.tooltipButton});
-  cursor: pointer;
-  transition: color 0.3s;
-
-  &:hover {
-    color: var(${COLORS.tooltipButtonHover});
-  }
-`;
