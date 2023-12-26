@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.2.0 (2023-12-26)
+
+
+### Features
+
+* **[ONB-1350](https://jira.sbercloud.tech/browse/ONB-1350):** new prop for tooltip ([3103253](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3103253947b0103294f0be6f81517c3457d186f8))
+
+
+
+
+
 ## 4.1.4 (2023-12-07)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.4.5 (2023-12-26)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.4.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-input-private@3.3.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-textarea-private@2.6.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/textarea-private/CHANGELOG.md)
+
+
+
+
+
 ## 3.4.4 (2023-12-07)
 
 ### Only dependencies have been changed

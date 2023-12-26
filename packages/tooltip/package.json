@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-tooltip",
   "title": "React Tooltip",
-  "version": "4.1.4",
+  "version": "4.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",

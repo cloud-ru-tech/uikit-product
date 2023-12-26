@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.1 (2023-12-26)
+
+
+### Bug Fixes
+
+* **[ONB-1350](https://jira.sbercloud.tech/browse/ONB-1350):** changed custom button to default link ([c5a3e0c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c5a3e0ce599436a8b73e1c9930f5d4a38470c0bb))
+
+
+
+
+
 # 2.2.0 (2023-12-25)
 
 
