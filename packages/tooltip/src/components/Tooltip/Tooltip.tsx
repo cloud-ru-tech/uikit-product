@@ -35,6 +35,7 @@ export type TooltipProps = {
   link?: LinkProps;
   trigger?: TooltipPrivateProps['trigger'];
   disableMaxWidth?: boolean;
+  visible?: boolean;
 };
 
 export function Tooltip({
@@ -49,6 +50,7 @@ export function Tooltip({
   type,
   trigger = TriggerTypes.Hover,
   disableMaxWidth = false,
+  visible,
   ...rest
 }: WithSupportProps<TooltipProps>) {
   return (
@@ -66,6 +68,7 @@ export function Tooltip({
       )}
       classNameArrow={classNameArrow}
       classNameTrigger={classNameTrigger}
+      visible={visible}
       tooltip={
         <>
           <TooltipWrapper>
