@@ -30,7 +30,7 @@ export const COLORS = {
 };
 
 // Unique colors for the new Cloud logo
-const CLOUD_ICON_COLOR = '#00D97B';
+const CLOUD_ICON_COLOR = '#26d07c';
 const CLOUD_TEXT_COLOR = {
   light: '#222',
   dark: '#e7e7e7',
