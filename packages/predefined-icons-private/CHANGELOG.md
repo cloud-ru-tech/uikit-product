@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2024-01-15)
+
+
+### Features
+
+* **[LK-2780](https://jira.sbercloud.tech/browse/LK-2780):** changed logo color ([7817b1d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7817b1d7e8bde6606d7f86dfe1041c2fc449b6c0))
+
+
+
+
+
 ## 1.3.4 (2023-12-07)
 
 ### Only dependencies have been changed
@@ -390,7 +401,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.4.2...@sbercloud/uikit-product-predefined-icons-private@0.4.3) (2022-09-23)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@5.29.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 ## [0.4.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.4.1...@sbercloud/uikit-product-predefined-icons-private@0.4.2) (2022-09-20)
 

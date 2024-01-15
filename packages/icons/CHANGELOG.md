@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.29.0 (2024-01-15)
+
+
+### Features
+
+* **[LK-2780](https://jira.sbercloud.tech/browse/LK-2780):** changed colour inside svg too ([3a11b69](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3a11b693947574fecb3cf24dd8d26c498f756535))
+
+
+
+
+
 # 5.28.0 (2023-12-07)
 
 
