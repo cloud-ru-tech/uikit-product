@@ -121,11 +121,14 @@ export function ProductHeader({
               <Droplist
                 open={isSettingsOpen}
                 onOpenChange={setIsSettingsOpen}
-                triggerElement={<ButtonFunction size='m' icon={<SettingsSVG />} />}
+                triggerElement={
+                  <ButtonFunction data-test-id='header__settings-menu-button' size='m' icon={<SettingsSVG />} />
+                }
                 placement='bottom-end'
               >
                 {settings.map(setting => (
                   <Droplist.ItemSingle
+                    data-test-id='header__settings-item'
                     key={setting.label}
                     option={setting.label}
                     icon={setting.icon}
@@ -138,7 +141,14 @@ export function ProductHeader({
               </Droplist>
             )}
 
-            {onHelpMenuClick && <ButtonFunction size='m' icon={<QuestionSVG />} onClick={onHelpMenuClick} />}
+            {onHelpMenuClick && (
+              <ButtonFunction
+                data-test-id='header__help-menu-button'
+                size='m'
+                icon={<QuestionSVG />}
+                onClick={onHelpMenuClick}
+              />
+            )}
 
             {notifications && <Notifications {...notifications} />}
 

@@ -9,7 +9,7 @@ type GroupCardProps = {
 };
 
 export const GroupCard = forwardRef<HTMLDivElement, GroupCardProps>(({ id, title, children }, ref) => (
-  <div className={styles.card} id={id} ref={ref}>
+  <div className={styles.card} id={id} ref={ref} data-test-id={`header__drawer-menu-group-card-${id}`}>
     <span className={styles.cardTitle}>{title}</span>
 
     <div className={styles.cardBody}>{children}</div>

@@ -16,7 +16,7 @@ export type BreadcrumbsProps = {
 // TODO: to delete
 export function Breadcrumbs({ options, separator = '/' }: BreadcrumbsProps) {
   return (
-    <span className={styles.breadcrumbs}>
+    <span className={styles.breadcrumbs} data-test-id='header__breadcrumbs'>
       {options.map((option, index) => (
         <Fragment key={`${option.label}_${index}`}>
           {index > 0 && <span className={styles.separator}>{separator}</span>}

@@ -45,7 +45,8 @@ export function SelectProduct({ options, onChange, selectedItem }: SelectProduct
             groups={options}
             onItemChange={onChange}
             selectedItem={selectedItem}
-             />
+            data-test-id='header__drawer-menu-select-group-product'
+          />
         </div>
       }
       placement='bottom'
@@ -57,15 +58,18 @@ export function SelectProduct({ options, onChange, selectedItem }: SelectProduct
         data-open={isOpen || undefined}
         onKeyDown={handleSelectKeyDown}
         ref={navigateOutsideRef}
+        data-test-id='header__drawer-menu-select'
       >
         <div className={styles.logo}>
           {selectedItem.logo ?? <Avatar size='xs' name={selectedItem.name} showTwoSymbols shape='square' />}
         </div>
 
         <div className={styles.selectedSection}>
-          <div className={styles.selectedHeading}>{selectedItem.category}</div>
+          <div className={styles.selectedHeading} data-test-id='header__drawer-menu-select-product-category'>
+            {selectedItem.category}
+          </div>
 
-          <div className={styles.selectedOption}>
+          <div className={styles.selectedOption} data-test-id='header__drawer-menu-select-product-name'>
             <TruncateString text={selectedItem.name} hideTooltip />
           </div>
         </div>

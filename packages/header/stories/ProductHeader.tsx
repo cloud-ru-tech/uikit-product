@@ -15,7 +15,7 @@ import {
 } from '../src';
 import styles from './styles.modules.scss';
 
-type StoryProps = ProductHeaderProps & {
+export type StoryProps = ProductHeaderProps & {
   showSelect: boolean;
   showPagePath: boolean;
   showSettings: boolean;
@@ -260,7 +260,7 @@ productHeader.args = {
     links: [
       {
         label: 'Инфраструктура',
-        id: 'infrustructure',
+        id: 'infrastructure',
         items: [
           { label: 'Виртуальные машины', onClick: () => {}, icon: PlaceholderSVG },
           { label: 'Образы', onClick: () => {}, icon: PlaceholderSVG },
@@ -300,7 +300,7 @@ productHeader.args = {
       },
       {
         label: 'Мониторинг',
-        id: 'monotoring',
+        id: 'monitoring',
         items: [
           { label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
           { label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },

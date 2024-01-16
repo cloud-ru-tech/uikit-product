@@ -43,7 +43,7 @@ export function UserMenu({
       open={isUserMenuOpen}
       onOpenChange={setIsUserMenuOpen}
       triggerElement={
-        <div className={styles.userMenu} role={'button'} tabIndex={0}>
+        <div className={styles.userMenu} role={'button'} tabIndex={0} data-test-id='header__user-menu-button'>
           <Avatar size='xs' name={user.name} showTwoSymbols indicator={indicator} />
         </div>
       }
@@ -60,6 +60,7 @@ export function UserMenu({
       {onProfileManagementClick && (
         <>
           <Droplist.ItemSingle
+            data-test-id='header__user-menu-manage-profile'
             option={textProvider(languageCode, Texts.ManageProfile)}
             icon={<PlaceholderSVG />}
             onClick={() => {
@@ -74,6 +75,7 @@ export function UserMenu({
 
       {organizations.map(organization => (
         <Droplist.ItemSingle
+          data-test-id='header__user-menu-organization'
           key={organization.id}
           option={organization.name}
           icon={<Avatar size='xs' name={organization.name} showTwoSymbols />}
@@ -87,6 +89,7 @@ export function UserMenu({
 
       {onOrganizationAdd && (
         <Droplist.ItemSingle
+          data-test-id='header__user-menu-add-organization'
           option={textProvider(languageCode, Texts.AddOrganization)}
           icon={<PlusSVG />}
           onClick={() => {
@@ -100,6 +103,7 @@ export function UserMenu({
 
       {onThemeSwitchClick && (
         <Droplist.ItemSingle
+          data-test-id='header__user-menu-switch-theme'
           option={textProvider(languageCode, Texts.SwitchTheme)}
           icon={<NightSVG />}
           onClick={() => {
@@ -111,6 +115,7 @@ export function UserMenu({
 
       {onLogout && (
         <Droplist.ItemSingle
+          data-test-id='header__user-menu-logout'
           option={textProvider(languageCode, Texts.Logout)}
           icon={<PlaceholderSVG />}
           onClick={() => {

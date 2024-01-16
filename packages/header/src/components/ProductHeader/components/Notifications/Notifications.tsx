@@ -60,6 +60,7 @@ export function Notifications({ items, readAll, loading }: NotificationsProps) {
         <ButtonFunction
           size='m'
           icon={<BellIcon />}
+          data-test-id='header__notification-panel-button'
           {...(numberOfUnreadNotifications > 0
             ? {
                 counter: {

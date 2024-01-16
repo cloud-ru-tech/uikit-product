@@ -32,7 +32,12 @@ export function HeaderLayout({
           {logo}
         </a>
 
-        <ButtonFunction size='m' icon={<MainMenuIcon />} onClick={onMainMenuClick} />
+        <ButtonFunction
+          size='m'
+          icon={<MainMenuIcon />}
+          onClick={onMainMenuClick}
+          data-test-id='header__drawer-menu-button'
+        />
 
         <div className={styles.path}>{path}</div>
       </div>

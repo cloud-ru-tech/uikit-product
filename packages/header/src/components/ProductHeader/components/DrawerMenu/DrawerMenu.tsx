@@ -65,6 +65,7 @@ export function DrawerMenu({
       open={open}
       onClose={onClose}
       className={styles.drawer}
+      data-test-id='header__drawer-menu'
     >
       <div className={styles.drawerBody}>
         <div className={styles.menu}>
@@ -88,6 +89,7 @@ export function DrawerMenu({
                           size='m'
                           textMode={isLinkSelected(link) ? 'accent' : 'default'}
                           appearance={isLinkSelected(link) ? 'primary' : 'neutral'}
+                          data-test-id={`header__drawer-menu-link-${link.id}`}
                         />
                       ))}
                     </div>
@@ -142,6 +144,7 @@ export function DrawerMenu({
                       placeholder={textProvider(languageCode, Texts.SearchByServices)}
                       value={searchValue}
                       onChange={setSearchValue}
+                      data-test-id='header__drawer-menu-search'
                     />
                   )}
 

@@ -96,6 +96,7 @@ export function Select({
             onItemChange={onOrganizationChange}
             selectedItem={selectedOrganization}
             addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
+            data-test-id='header__select-group-organization'
           />
 
           <SelectGroupSection
@@ -105,6 +106,7 @@ export function Select({
             onItemChange={onProjectChange}
             selectedItem={selectedProject}
             addItem={{ label: textProvider(languageCode, Texts.AddProject), handler: onProjectAdd }}
+            data-test-id='header__select-group-project'
           />
 
           <SelectGroupSection
@@ -113,6 +115,7 @@ export function Select({
             groups={[{ id: '1', items: platforms }]}
             onItemChange={onPlatformChange}
             selectedItem={selectedPlatform}
+            data-test-id='header__select-group-platform'
           />
         </div>
       }
@@ -125,11 +128,12 @@ export function Select({
         data-open={isOpen || undefined}
         ref={navigateOutsideRef}
         onKeyDown={handleSelectKeyDown}
+        data-test-id='header__select'
       >
         <div className={styles.contentLayout}>
           <Avatar size='xs' name={selectedProject.name} showTwoSymbols shape='square' />
 
-          <span className={styles.project}>
+          <span className={styles.project} data-test-id='header__select-project-value'>
             <TruncateString text={selectedProject.name} hideTooltip />
           </span>
         </div>
@@ -139,7 +143,7 @@ export function Select({
         <div className={styles.contentLayout}>
           {selectedPlatform.logo}
 
-          <span className={styles.platform}>
+          <span className={styles.platform} data-test-id='header__select-platform-value'>
             <TruncateString text={selectedPlatform.name} hideTooltip />
           </span>
         </div>

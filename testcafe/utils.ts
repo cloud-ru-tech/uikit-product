@@ -32,23 +32,29 @@ const QS_OPTIONS: IStringifyOptions = {
   serializeDate: (date: Date) => `!date(${date.toISOString()})`,
 };
 
-const buildArgsParam = (args: Record<string, any>): string =>
+const buildArgsParam = (args: Record<string, unknown>): string =>
   stringify(encodeSpecialValues(args), QS_OPTIONS)
     .replace(/ /g, '+')
     .split(';')
     .map((part: string) => part.replace('=', ':'))
     .join(';');
 
-export function getTestcafeUrl({ name, group, props, story = name, category = 'components' }: any) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function getTestcafeUrl({ name, group, props, story = name, category = 'components', globals }: any) {
   let propsString = '';
+  let globalsString = '';
 
   if (props) {
     propsString = buildArgsParam(props);
   }
 
+  if (globals) {
+    globalsString = buildArgsParam(globals);
+  }
+
   return `${UIKIT_URL}iframe.html?id=${category}${group ? `-${group}` : ''}-${name}--${story}&viewMode=story${
-    propsString ? `&args=${propsString}` : ''
-  }`;
+    globalsString ? `&globals=${globalsString}` : ''
+  }${propsString ? `&args=${propsString}` : ''}`;
 }
 
 export function dataTestIdSelector(value: string) {

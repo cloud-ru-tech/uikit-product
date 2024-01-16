@@ -1,7 +1,7 @@
 import mergeRefs from 'merge-refs';
 import { KeyboardEvent, MouseEventHandler, RefObject, useRef } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { PlaceholderSVG, PlusSVG, SearchSVG } from '@snack-uikit/icons';
@@ -14,7 +14,7 @@ import { useSearch } from './hooks';
 import styles from './styles.modules.scss';
 import { Item, ItemsGroup } from './types';
 
-export type SelectGroupSectionProps = {
+export type SelectGroupSectionProps = WithSupportProps<{
   title?: string;
   last?: boolean;
   searchable?: boolean;
@@ -30,7 +30,7 @@ export type SelectGroupSectionProps = {
 
   navigateOutsideRef?: RefObject<HTMLDivElement>;
   navigateInsideRef?: RefObject<HTMLDivElement>;
-};
+}>;
 
 export function SelectGroupSection({
   title,
@@ -42,6 +42,7 @@ export function SelectGroupSection({
   addItem,
   navigateInsideRef,
   navigateOutsideRef,
+  ...rest
 }: SelectGroupSectionProps) {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -90,7 +91,7 @@ export function SelectGroupSection({
 
   return (
     <>
-      <div className={styles.section}>
+      <div className={styles.section} {...extractSupportProps(rest)}>
         {title && (
           <div className={styles.title}>
             {title}
@@ -101,6 +102,7 @@ export function SelectGroupSection({
                 icon={<SearchSVG />}
                 onClick={handleActivateSearch}
                 tabIndex={searchIconTabIndex}
+                data-test-id='header__select-group-section-search-icon'
               />
             )}
           </div>
@@ -117,10 +119,11 @@ export function SelectGroupSection({
             className={styles.search}
             data-transition-status={animationState.status}
             onBlur={handleSearchBlur}
+            data-test-id='header__select-group-section-search-input'
           />
         )}
 
-        <Scroll size='s'>
+        <Scroll size='s' data-test-id='header__select-group-section-scroll'>
           <div className={styles.itemsGroups}>
             {filteredGroups.map((group, groupIndex) => (
               <div className={styles.itemsGroup} key={group.id}>
@@ -151,6 +154,7 @@ export function SelectGroupSection({
                       onMouseDown={handleItemMouseDown}
                       onKeyDown={navigateOutside}
                       onClick={handleItemClick({ item, groupIndex, itemIndex })}
+                      data-test-id={`header__select-group-item-${item.id}`}
                     />
                   );
                 })}
@@ -170,6 +174,7 @@ export function SelectGroupSection({
             icon={<PlusSVG />}
             iconPosition='before'
             label={addItem.label}
+            data-test-id='header__select-group-section-add-button'
           />
         )}
       </div>
