@@ -2,7 +2,7 @@
 
 .container {
   box-sizing: border-box;
-  background: var($sys-neutral-background1-level);
-  border-radius: calc(var($dimension-2m) - var($dimension-050m));
-  padding: var($dimension-3m);
+  background: $sys-neutral-background1-level;
+  border-radius: calc($dimension-2m - $dimension-050m);
+  padding: $dimension-3m;
 }

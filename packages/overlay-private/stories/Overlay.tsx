@@ -21,7 +21,7 @@ export default meta;
 const Container = styled.div`
   width: 400px;
   height: 100%;
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  background-color: ${themeVars.sys.neutral.background2Level};
   position: absolute;
   top: 0;
   left: 0;

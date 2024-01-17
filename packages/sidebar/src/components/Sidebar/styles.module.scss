@@ -10,8 +10,8 @@ $sidebar-collapsed-width: 53px;
   width: $sidebar-full-width;
   height: 100%;
   padding: 16px 0;
-  background-color: var($sys-neutral-background);
-  border-right: 1px solid var($sys-neutral-decor-default);
+  background-color: $sys-neutral-background;
+  border-right: 1px solid $sys-neutral-decor-default;
 
   &[data-collapsed] {
     width: $sidebar-collapsed-width

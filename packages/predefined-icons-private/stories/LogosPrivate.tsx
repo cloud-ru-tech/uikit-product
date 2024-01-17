@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   padding: 16px;
 
   &[data-variant=${PredefinedCloudLogo.variants.OnAccent}] {
-    background-color: var(${themeVars.sys.invertNeutral.background});
+    background-color: ${themeVars.sys.invertNeutral.background};
   }
 `;
 

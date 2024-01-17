@@ -12,7 +12,7 @@ export const FilterWrap = styled.div`
   width: 240px;
   border-radius: 8px;
   padding: 16px;
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  background-color: ${themeVars.sys.neutral.background2Level};
 `;
 
 export const FiltersBlock = styled.div``;

@@ -23,9 +23,9 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
+  border: 1px solid ${themeVars.sys.neutral.decorDefault};
   border-radius: 10%;
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  background-color: ${themeVars.sys.neutral.background2Level};
 `;
 
 function Template({ checked: propsChecked, size, ...args }: SwitchProps) {

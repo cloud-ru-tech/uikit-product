@@ -19,8 +19,8 @@ const Container = styled.div`
 const TableWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  border: 1px solid ${themeVars.sys.neutral.decorDefault};
+  background-color: ${themeVars.sys.neutral.background2Level};
   overflow: auto;
 `;
 
@@ -32,10 +32,10 @@ const TableColumn = styled.div`
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
 
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  background-color: ${themeVars.sys.neutral.background2Level};
 
   &:not(:last-child) {
-    border-right: 1px solid var(${themeVars.sys.neutral.decorDefault});
+    border-right: 1px solid ${themeVars.sys.neutral.decorDefault};
   }
 `;
 
@@ -49,7 +49,7 @@ const TableCell = styled.div`
   box-sizing: border-box;
 
   &:not(:last-child) {
-    border-bottom: 1px solid var(${themeVars.sys.neutral.decorDefault});
+    border-bottom: 1px solid ${themeVars.sys.neutral.decorDefault};
   }
 `;
 
@@ -57,7 +57,7 @@ const WrapperFContolled = styled.div`
   display: flex;
   padding: 30px;
   column-gap: 30px;
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  background-color: ${themeVars.sys.neutral.background2Level};
 `;
 
 const Title = styled.span`

@@ -27,7 +27,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/figma-tokens": "1.14.0",
+    "@sbercloud/figma-tokens": "10.0.0",
     "@sbercloud/uikit-product-icons": "5.29.0",
     "@sbercloud/uikit-product-layout": "0.8.4",
     "@sbercloud/uikit-product-predefined-icons-private": "1.4.0",

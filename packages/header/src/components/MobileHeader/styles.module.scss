@@ -9,7 +9,7 @@
   box-sizing: border-box;
   padding: 8px 16px;
 
-  background-color: var($sys-neutral-background);
+  background-color: $sys-neutral-background;
 
   & * {
     box-sizing: border-box;

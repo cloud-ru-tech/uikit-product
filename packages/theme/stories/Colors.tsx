@@ -52,7 +52,7 @@ const Caption = styled.span`
   text-overflow: ellipsis;
   display: flex;
   align-items: center;
-  background: var(${themeVars.sys.primary.background2Level});
+  background: ${themeVars.sys.primary.background2Level};
 `;
 
 const Title = styled.div<{ background: string; color: string }>`

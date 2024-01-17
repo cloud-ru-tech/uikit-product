@@ -16,7 +16,7 @@
   height: calc(100% - var(--top));
   padding: 12px 0;
 
-  background-color: var($sys-neutral-background);
+  background-color: $sys-neutral-background;
 
   & * {
     box-sizing: border-box;

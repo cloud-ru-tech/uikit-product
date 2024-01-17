@@ -21,9 +21,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
+  border: 1px solid ${themeVars.sys.neutral.decorDefault};
   border-radius: 10%;
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  background-color: ${themeVars.sys.neutral.background2Level};
   padding: 12px;
 
   &:not(:last-child) {

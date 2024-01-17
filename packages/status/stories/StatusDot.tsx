@@ -19,9 +19,9 @@ const Container = styled.div`
   align-items: flex-start;
   column-gap: 24px;
   padding: 48px;
-  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
+  border: 1px solid ${themeVars.sys.neutral.decorDefault};
   border-radius: 10%;
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  background-color: ${themeVars.sys.neutral.background2Level};
 `;
 
 const Row = styled.div`

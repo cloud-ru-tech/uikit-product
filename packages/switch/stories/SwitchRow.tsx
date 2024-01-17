@@ -19,9 +19,9 @@ export default meta;
 
 const Container = styled.div`
   padding: 20px;
-  border: 1px solid var(${themeVars.sys.neutral.decorDefault});
+  border: 1px solid ${themeVars.sys.neutral.decorDefault};
   border-radius: 20px;
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  background-color: ${themeVars.sys.neutral.background2Level};
 `;
 
 function Template({ checked: propsChecked, ...args }: SwitchRowProps) {

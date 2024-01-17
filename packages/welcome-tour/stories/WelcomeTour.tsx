@@ -2,7 +2,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 import { TourStepExtended } from 'welcome-tour/src/components/types';
 
-import { simpleVar, themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { Button } from '@sbercloud/uikit-product-button';
 
 import { BADGE } from '#storybookConstants';
@@ -79,7 +79,7 @@ function Template() {
   const [successFinal, setSuccessFinal] = useState(false);
 
   return (
-    <div style={{ background: simpleVar(themeVars.sys.neutral.background2Level), padding: 30 }}>
+    <div style={{ background: themeVars.sys.neutral.background2Level, padding: 30 }}>
       <div id='test-1' style={{ width: 400, padding: 10 }}>
         Some text
       </div>

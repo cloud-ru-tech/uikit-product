@@ -38,7 +38,7 @@ const Wrap = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin: -1rem;
-  background-color: var(${themeVars.sys.neutral.background2Level});
+  background-color: ${themeVars.sys.neutral.background2Level};
 `;
 
 const DrawerWrap = styled.div`
