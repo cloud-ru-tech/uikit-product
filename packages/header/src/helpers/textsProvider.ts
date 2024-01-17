@@ -11,6 +11,25 @@ export enum Texts {
   HeaderProjectSelectorEditOption = 'header-project-selector-edit-option',
 
   NoDataFound = 'no-data-found',
+
+  // ЛК 2.0
+  SearchByServices = 'search-by-services',
+  NoData = 'no-data',
+  Notifications = 'notifications',
+  NotificationsAll = 'notifications-all',
+  NotificationsUnread = 'notifications-unread',
+  MarkAllAsRead = 'mark-all-as-read',
+  NoNotifications = 'no-notifications',
+  Search = 'search',
+  Edit = 'edit',
+  Organization = 'organization',
+  AddOrganization = 'add-organization',
+  Project = 'project',
+  AddProject = 'add-project',
+  Platforms = 'platforms',
+  ManageProfile = 'manage-profile',
+  SwitchTheme = 'switch-theme',
+  Logout = 'logout',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -25,6 +44,25 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.HeaderProjectSelectorEditOption]: 'Редактировать',
 
     [Texts.NoDataFound]: 'Ничего не найдено',
+
+    // ЛК 2.0
+    [Texts.SearchByServices]: 'Поиск по сервисам',
+    [Texts.NoData]: 'Нет данных',
+    [Texts.Notifications]: 'Уведомления',
+    [Texts.NotificationsAll]: 'Все',
+    [Texts.NotificationsUnread]: 'Прочитанные',
+    [Texts.MarkAllAsRead]: 'Пометить всё прочитанным',
+    [Texts.NoNotifications]: 'Нет уведомлений',
+    [Texts.Search]: 'Поиск',
+    [Texts.Edit]: 'Редактировать',
+    [Texts.Organization]: 'Организация',
+    [Texts.AddOrganization]: 'Добавить организацию',
+    [Texts.Project]: 'Проекты',
+    [Texts.AddProject]: 'Добавить проект',
+    [Texts.Platforms]: 'Платформы проекта',
+    [Texts.ManageProfile]: 'Управление профилем',
+    [Texts.SwitchTheme]: 'Переключить тему',
+    [Texts.Logout]: 'Выйти из аккаунта',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderBalanceTooltipBalance]: 'Balance',
@@ -37,6 +75,25 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.HeaderProjectSelectorEditOption]: 'Edit',
 
     [Texts.NoDataFound]: 'Nothing found',
+
+    // ЛК 2.0
+    [Texts.SearchByServices]: 'Search by service',
+    [Texts.NoData]: 'Nothing found',
+    [Texts.Notifications]: 'Notifications',
+    [Texts.NotificationsAll]: 'All',
+    [Texts.NotificationsUnread]: 'Unread',
+    [Texts.MarkAllAsRead]: 'Mark all as read',
+    [Texts.NoNotifications]: 'No notifications',
+    [Texts.Search]: 'Search',
+    [Texts.Edit]: 'Edit',
+    [Texts.Organization]: 'Organization',
+    [Texts.AddOrganization]: 'Add organization',
+    [Texts.Project]: 'Projects',
+    [Texts.AddProject]: 'Add projects',
+    [Texts.Platforms]: "Project's platform",
+    [Texts.ManageProfile]: 'Manage profile',
+    [Texts.SwitchTheme]: 'Switch theme',
+    [Texts.Logout]: 'Logout',
   },
 };
 

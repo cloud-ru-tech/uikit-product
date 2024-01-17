@@ -1,0 +1,10 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $sys-neutral-background2-level;
+  height: 100%;
+  width: 100%;
+}

@@ -1,0 +1,51 @@
+@import '../../../../../../../../../node_modules/@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '../../../../../../../../../node_modules/@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 0 calc($dimension-050m - $border-width-012m);
+  gap: $dimension-050m;
+  height: $dimension-4m;
+  color: $sys-neutral-text-main;
+  border-radius: $dimension-050m;
+  border: $border-width-012m $border-styles-solid transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: color-on-background-with-opacity($sys-neutral-accent-default, $sys-neutral-background2-level, $opacity-a008);
+  }
+
+  &:focus-visible {
+    @include outline-inside-var($container-focused-s);
+
+    outline-color: $sys-available-complementary;
+    background-color: color-on-background-with-opacity($sys-neutral-accent-default, $sys-neutral-background2-level, $opacity-a008);
+  }
+
+  &[data-selected] {
+    background-color: color-on-background-with-opacity($sys-primary-accent-default, $sys-neutral-background2-level, $opacity-a008);
+    border-color: $sys-primary-accent-default;
+
+    &:hover {
+      background-color: color-on-background-with-opacity($sys-primary-accent-default, $sys-neutral-background2-level, $opacity-a016);
+    }
+
+    &:focus-visible {
+      @include outline-var($container-focused-s);
+
+      outline-color: $sys-available-complementary;
+      background-color: color-on-background-with-opacity($sys-primary-accent-default, $sys-neutral-background2-level, $opacity-a016);
+    }
+  }
+}
+
+.itemLabel {
+  @include composite-var($sans-body-m);
+
+  width: calc(24 * $dimension-1m + $dimension-050m);
+
+  &[data-has-action-button] {
+    width: calc(21 * $dimension-1m);
+  }
+}

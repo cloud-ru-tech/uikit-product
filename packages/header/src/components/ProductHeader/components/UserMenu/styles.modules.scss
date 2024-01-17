@@ -1,0 +1,31 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.userMenu {
+  display: flex;
+  padding: $dimension-1m;
+  cursor: pointer;
+  border-radius: $dimension-050m;
+  color: $sys-primary-accent-default;
+
+  &:focus-visible {
+    @include outline-var($container-focused-s);
+
+    outline-color: $sys-available-complementary;
+  }
+}
+
+.userMenuAvatarItem {
+  @include composite-var($sans-body-s);
+
+  display: flex;
+  justify-content: space-between;
+  padding: $dimension-050m $dimension-1m;
+  gap: $dimension-2m;
+}
+
+.userMenuAvatarItemName {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-050m;
+}

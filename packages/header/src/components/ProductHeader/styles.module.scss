@@ -1,0 +1,10 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.divider {
+  height: $dimension-3m;
+}
+
+.breadcrumbs {
+  padding: 0 $dimension-1m;
+}

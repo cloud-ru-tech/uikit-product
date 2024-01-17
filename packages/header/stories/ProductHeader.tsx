@@ -1,0 +1,423 @@
+import { Meta, StoryFn } from '@storybook/react';
+import React, { useState } from 'react';
+
+import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
+
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
+import {
+  AdvancedPlatformLogo,
+  EvolutionPlatformLogo,
+  MLSpacePlatformLogo,
+  ProductHeader,
+  ProductHeaderProps,
+} from '../src';
+import styles from './styles.modules.scss';
+
+type StoryProps = ProductHeaderProps & {
+  showSelect: boolean;
+  showPagePath: boolean;
+  showSettings: boolean;
+  showHelpMenu: boolean;
+  showNotifications: boolean;
+  showUserMenu: boolean;
+  showUserMenuManagement: boolean;
+  showUserMenuThemeSwitch: boolean;
+  showUserMenuLogout: boolean;
+
+  showAddOrganization: boolean;
+
+  showLinks: boolean;
+  showFooterLinks: boolean;
+  showPinnedCards: boolean;
+};
+
+const meta: Meta = {
+  title: 'Snack Uikit/Product Header',
+  component: ProductHeader,
+};
+export default meta;
+
+const DEFAULT_USER = {
+  name: 'Юзер Пользователев',
+  email: 'почтовый@сервис.ру',
+};
+
+const DEFAULT_PROJECT = { id: '1_1', name: 'Проект 1' };
+const DEFAULT_PLATFORM = { id: '1', name: 'Evolution', logo: <EvolutionPlatformLogo /> };
+const DEFAULT_PRODUCT = { ...DEFAULT_PLATFORM, category: 'Облачная платформа' };
+const DEFAULT_NOTIFICATION = {
+  label: ['Категория', 'Подкатегория'].join('・'),
+  appearance: 'neutral' as const,
+  title: 'Уведомление',
+  content: `Демо-контент.
+
+Вам пришло какое-то уведомление, чтобы посмотреть детали, воспользуйтесь ссылкой ниже.`,
+  link: {
+    text: 'Ссылка на детальную информацию',
+    href: '#',
+  },
+  date: 'DD.MM.YYYY HH:MM',
+  actions: [
+    {
+      option: 'Действие 1',
+    },
+    {
+      option: 'Действие 2',
+    },
+  ],
+};
+
+function Template({
+  showSelect,
+  showPagePath,
+  showSettings,
+  showHelpMenu,
+  showNotifications,
+  showUserMenu,
+  showUserMenuManagement,
+  showUserMenuThemeSwitch,
+  showUserMenuLogout,
+  userMenu,
+  showAddOrganization,
+  showLinks,
+  showFooterLinks,
+  showPinnedCards,
+  ...args
+}: StoryProps) {
+  const [organization, setOrganization] = useState(args.selectedOrganization);
+  const [project, setProject] = useState(args.select?.selectedProject ?? DEFAULT_PROJECT);
+  const [platform, setPlatform] = useState(args.select?.selectedPlatform ?? DEFAULT_PLATFORM);
+  const [product, setProduct] = useState(args.drawerMenu.selectedProduct);
+
+  if (args.select) {
+    args.select.selectedProject = project;
+    args.select.onProjectChange = setProject;
+    args.select.selectedPlatform = platform;
+    args.select.onPlatformChange = setPlatform;
+  }
+
+  return (
+    <div className={styles.wrapper}>
+      <ProductHeader
+        {...args}
+        selectedOrganization={organization}
+        onOrganizationChange={setOrganization}
+        select={showSelect ? args.select : undefined}
+        pagePath={showPagePath ? args.pagePath : undefined}
+        settings={showSettings ? args.settings : undefined}
+        onHelpMenuClick={showHelpMenu ? args.onHelpMenuClick : undefined}
+        notifications={showNotifications ? args.notifications : undefined}
+        userMenu={
+          showUserMenu
+            ? {
+                user: userMenu?.user ?? DEFAULT_USER,
+                indicator: userMenu?.indicator,
+                onProfileManagementClick: showUserMenuManagement ? userMenu?.onProfileManagementClick : undefined,
+                onThemeSwitchClick: showUserMenuThemeSwitch ? userMenu?.onLogout : undefined,
+                onLogout: showUserMenuLogout ? userMenu?.onLogout : undefined,
+              }
+            : undefined
+        }
+        onOrganizationAdd={showAddOrganization ? args.onOrganizationAdd : undefined}
+        drawerMenu={{
+          ...args.drawerMenu,
+          links: showLinks ? args.drawerMenu.links : undefined,
+          footerLinks: showFooterLinks ? args.drawerMenu.footerLinks : undefined,
+          pinnedCards: showPinnedCards ? args.drawerMenu.pinnedCards : undefined,
+          selectedProduct: product,
+          onProductChange: setProduct,
+        }}
+      />
+    </div>
+  );
+}
+
+export const productHeader: StoryFn<StoryProps> = Template.bind({});
+
+productHeader.args = {
+  showSelect: true,
+  select: {
+    platforms: [
+      DEFAULT_PLATFORM,
+      { id: '2', name: 'Advanced', logo: <AdvancedPlatformLogo /> },
+      { id: '3', name: 'MLSpace', logo: <MLSpacePlatformLogo /> },
+    ],
+    selectedPlatform: DEFAULT_PLATFORM,
+    projects: [
+      {
+        id: '1',
+        heading: 'Folder 1',
+        items: [DEFAULT_PROJECT, { id: '1_2', name: 'Проект 2', onEdit: () => {} }],
+      },
+      {
+        id: '2',
+        heading: 'Folder 2',
+        items: [
+          { id: '2_1', name: 'Проект 3' },
+          { id: '2_2', name: 'Проект 4 с очень длинным названием', onEdit: () => {} },
+        ],
+      },
+      {
+        id: '3',
+        heading: 'Folder 3',
+        items: [
+          { id: '3_1', name: 'Проект 5' },
+          { id: '3_2', name: 'Проект 6 с очень длинным названием' },
+          { id: '3_3', name: 'Проект 7 с очень длинным названием' },
+        ],
+      },
+    ],
+    selectedProject: DEFAULT_PROJECT,
+    onProjectAdd: () => {},
+  },
+
+  showPagePath: true,
+  pagePath: [
+    { id: 'home', label: 'Home', onClick: () => {} },
+    { id: 'level-2', label: 'Level 2', onClick: () => {} },
+    { id: 'level-3', label: 'Level 3', icon: PlaceholderSVG, onClick: () => {} },
+  ],
+
+  showSettings: true,
+  settings: [
+    { label: 'Настройки организации', icon: <PlaceholderSVG />, onClick: () => {} },
+    { label: 'Пользователи', icon: <PlaceholderSVG />, onClick: () => {} },
+    { label: 'Договоры', icon: <PlaceholderSVG />, onClick: () => {} },
+    { label: 'Контроль затрат', icon: <PlaceholderSVG />, onClick: () => {} },
+  ],
+
+  showHelpMenu: true,
+  onHelpMenuClick: () => {},
+
+  showNotifications: true,
+
+  notifications: {
+    items: [
+      { ...DEFAULT_NOTIFICATION, id: '1', unread: true },
+      { ...DEFAULT_NOTIFICATION, id: '2', unread: false },
+    ],
+    readAll: () => {},
+  },
+
+  showUserMenu: true,
+  showUserMenuManagement: true,
+  showUserMenuThemeSwitch: true,
+  showUserMenuLogout: true,
+  userMenu: {
+    user: DEFAULT_USER,
+    indicator: 'green',
+    onProfileManagementClick: () => {},
+    onThemeSwitchClick: () => {},
+    onLogout: () => {},
+  },
+
+  showAddOrganization: true,
+  organizations: [
+    { id: '1', name: 'Облачные технологии' },
+    { id: '2', name: 'ИП Иванов И.И.' },
+  ],
+  selectedOrganization: { id: '1', name: 'Облачные технологии' },
+  onOrganizationAdd: () => {},
+
+  showLinks: true,
+  showFooterLinks: true,
+  showPinnedCards: true,
+  drawerMenu: {
+    allProducts: [
+      {
+        id: '1',
+        heading: 'Облачные платформы',
+        items: [
+          DEFAULT_PRODUCT,
+          { id: '2', name: 'Advanced', logo: <AdvancedPlatformLogo />, category: 'Облачная платформа' },
+          { id: '3', name: 'MLSpace', logo: <MLSpacePlatformLogo />, category: 'Облачная платформа' },
+        ],
+      },
+      {
+        id: '2',
+        heading: 'Другие продукты',
+        items: [
+          { id: 'lkp', name: 'Личный кабинет партнера', category: 'Другой продукт' },
+          { id: 'admin', name: 'Административная панель', category: 'Другой продукт' },
+        ],
+      },
+    ],
+    selectedProduct: DEFAULT_PRODUCT,
+    onProductChange: () => {},
+    footerLinks: [
+      { icon: <PlaceholderSVG />, label: 'Контроль затрат', onClick: () => {} },
+      { icon: <EmailSVG />, label: 'Поддержка', onClick: () => {} },
+      { icon: <SettingsSVG />, label: 'Администрирование', onClick: () => {} },
+      { icon: <PlaceholderSVG />, label: 'Пользователи', onClick: () => {} },
+      { icon: <FileSVG />, label: 'Документация', onClick: () => {} },
+    ],
+    pinnedCards: [
+      { title: 'GPT-4 модели', description: 'Генерация текста на любые темы, 1,3 млрд параметров', onClick: () => {} },
+      { title: 'AI Marketplace', description: 'Маркетплейс образов, программ, датасетов', onClick: () => {} },
+    ],
+    links: [
+      {
+        label: 'Инфраструктура',
+        id: 'infrustructure',
+        items: [
+          { label: 'Виртуальные машины', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Образы', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Bare Metal', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Резервные копии', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Сеть',
+        id: 'network',
+        items: [
+          { label: 'VPC', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'sNAT-шлюзы', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Подсети', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Группы безопасности', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Публичные IP-адреса', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Балансировщик нагрузки', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Хранение данных',
+        id: 'storage',
+        items: [
+          { label: 'Диски', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'S3 Objective Storage', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Контейнеры и оркестрация',
+        id: 'containers',
+        items: [
+          { label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Мониторинг',
+        id: 'monotoring',
+        items: [
+          { label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Инструменты разработчика',
+        id: 'devtools',
+        items: [
+          { label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Брокеры сообщений',
+        id: 'messages',
+        items: [
+          { label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Бессерверная разработка',
+        id: 'serverless',
+        items: [
+          { label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Базы данных',
+        id: 'database',
+        items: [
+          { label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Дата-платформа',
+        id: 'dataplatform',
+        items: [
+          { label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+    ],
+  },
+
+  homePageUrl: 'https://console.cloud.ru',
+};
+
+productHeader.argTypes = {
+  showSelect: { name: '[Story]: show header select', type: 'boolean' },
+  select: { table: { disable: true } },
+
+  showPagePath: { name: '[Story]: show page path', type: 'boolean' },
+  pagePath: { table: { disable: true } },
+
+  showSettings: { name: '[Story]: show settings menu', type: 'boolean' },
+  settings: { table: { disable: true } },
+
+  showHelpMenu: { name: '[Story]: show help menu', type: 'boolean' },
+  onHelpMenuClick: { table: { disable: true } },
+
+  showNotifications: { name: '[Story]: show notifications', type: 'boolean' },
+  notifications: { table: { disable: true } },
+
+  showUserMenu: { name: '[Story]: show user menu', type: 'boolean' },
+  userMenu: { table: { disable: true } },
+  showUserMenuManagement: {
+    name: '[Story]: show user menu -> profile management',
+    type: 'boolean',
+    if: { arg: 'showUserMenu', eq: true },
+  },
+  showUserMenuThemeSwitch: {
+    name: '[Story]: show user menu -> theme switch',
+    type: 'boolean',
+    if: { arg: 'showUserMenu', eq: true },
+  },
+  showUserMenuLogout: {
+    name: '[Story]: show user menu -> logout',
+    type: 'boolean',
+    if: { arg: 'showUserMenu', eq: true },
+  },
+
+  showAddOrganization: { name: '[Story]: show add organizations', type: 'boolean' },
+  organizations: { table: { disable: true } },
+  onOrganizationAdd: { table: { disable: true } },
+  onOrganizationChange: { table: { disable: true } },
+  selectedOrganization: { table: { disable: true } },
+
+  showLinks: { name: '[Story]: show drawer -> links', type: 'boolean' },
+  showFooterLinks: { name: '[Story]: show drawer -> footer links', type: 'boolean' },
+  showPinnedCards: { name: '[Story]: show drawer -> pinned cards', type: 'boolean' },
+  drawerMenu: { table: { disable: true } },
+};
+
+productHeader.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  packageName: componentPackage.name,
+  design: {
+    name: 'Figma',
+    type: 'figma',
+    url: 'https://www.figma.com/file/x6Rr5vkx6lrAJnlJ9nxpJl/branch/SG0EZxVoaD0AxdVvL8jHtN/Header?node-id=3%3A10&mode=dev',
+  },
+};

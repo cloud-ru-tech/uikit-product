@@ -7,3 +7,5 @@ export * from './HeaderProjectDescription';
 export * from './HeaderToolbar';
 export * from './MobileHeader';
 export * from './MobileMenu';
+export * from './PlatformLogo';
+export * from './ProductHeader';

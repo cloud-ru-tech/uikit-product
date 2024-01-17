@@ -1,0 +1,23 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.card {
+  background-color: $sys-neutral-background1-level;
+  display: flex;
+  flex-direction: column;
+  padding: $dimension-2m;
+  gap: $dimension-2m;
+  border-radius: $dimension-1m;
+}
+
+.cardTitle {
+  @include composite-var($sans-title-m);
+
+  color: $sys-neutral-text-main;
+}
+
+.cardBody {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  gap: $dimension-2m;
+}

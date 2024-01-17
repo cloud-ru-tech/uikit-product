@@ -1,0 +1,67 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.select {
+  display: flex;
+  align-items: center;
+  padding: 0 calc($dimension-1m + $dimension-050m - $border-width-012m);
+  gap: calc($dimension-1m + $dimension-050m);
+  border: $border-width-012m solid transparent;
+  background-color: $sys-neutral-background1-level;
+  width: calc(32 * $dimension-1m);
+  height: $dimension-8m;
+  border-radius: $dimension-050m;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $box-shadow-elevation-level2;
+  }
+
+  &:focus-visible, &[data-open] {
+    @include outline-var($container-focused-m);
+
+    box-shadow: $box-shadow-elevation-level2;
+    outline-color: $sys-primary-decor-activated;
+    border-color: $sys-primary-accent-default;
+  }
+}
+
+.logo {
+  width: $dimension-5m;
+  height: $dimension-5m;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  > * {
+    transform: scale(1.6667);
+  }
+}
+
+.droplist {
+  padding: $dimension-1m calc($dimension-1m + $dimension-050m);
+}
+
+.selectedSection {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.selectedHeading {
+  @include composite-var($sans-body-s);
+
+  color: $sys-neutral-text-light;
+}
+
+.selectedOption {
+  @include composite-var($sans-title-m);
+
+  color: $sys-neutral-text-main;
+}
+
+.chevron {
+  flex-shrink: 0;
+
+  color: $sys-neutral-text-light;
+}
