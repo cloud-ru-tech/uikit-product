@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 
 import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
 import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
@@ -23,8 +23,34 @@ const themeMap = {
 
 export function useConfig({ languageCode, theme }: UseConfigProps) {
   const store = getCustomStore({ theme, languageCode });
-  const [configTheme, setConfigTheme] = useState(store.theme);
   const [configLanguageCode, setConfigLanguageCodeTheme] = useState(store.languageCode);
+  const previousThemeRef = useRef<Themes>();
+
+  const updateTheme = useCallback(
+    (newTheme: Themes) => {
+      store.theme = newTheme;
+
+      const html = document.getElementsByTagName('html')[0];
+
+      if (previousThemeRef.current) {
+        html.classList.remove(DEPRECATED_COLOR[previousThemeRef.current]);
+        html.classList.remove(themeMap[previousThemeRef.current]);
+      }
+
+      html.setAttribute('data-theme', newTheme);
+
+      const body = document.getElementsByTagName('body')[0];
+      body.setAttribute('data-theme', newTheme);
+
+      html.classList.add(DEPRECATED_COLOR[newTheme]);
+      html.classList.add(themeMap[newTheme]);
+
+      window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeThemeDone, value: newTheme }), location.origin);
+
+      previousThemeRef.current = newTheme;
+    },
+    [store],
+  );
 
   useEffect(() => {
     const body = document.getElementsByTagName('body')[0];
@@ -34,10 +60,14 @@ export function useConfig({ languageCode, theme }: UseConfigProps) {
 
     const receiveChangeThemeMessage = (event: MessageEvent) => {
       const eventData = tryParseJson(event.data);
-      if (eventData.key !== POST_MESSAGE_KEY.changeTheme) return;
 
-      setConfigTheme(eventData.value);
+      if (eventData.key !== POST_MESSAGE_KEY.changeTheme) {
+        return;
+      }
+
+      updateTheme(eventData.value);
     };
+
     window.addEventListener('message', receiveChangeThemeMessage, false);
 
     body.classList.add(globals, color);
@@ -57,36 +87,16 @@ export function useConfig({ languageCode, theme }: UseConfigProps) {
       window.removeEventListener('message', receiveChangeThemeMessage, false);
       window.removeEventListener('message', receiveChangeLanguageMessage, false);
     };
-  }, []);
+  }, [updateTheme]);
 
   /*-------------
     ---- THEME ----
     -------------*/
 
-  useLayoutEffect(() => {
-    if (theme) {
-      store.theme = theme;
-      setConfigTheme(store.theme);
-    }
-  }, [store, theme]);
-
-  useEffect(() => {
-    const html = document.getElementsByTagName('html')[0];
-    html.setAttribute('data-theme', configTheme);
-
-    const body = document.getElementsByTagName('body')[0];
-    body.setAttribute('data-theme', configTheme);
-
-    html.classList.add(DEPRECATED_COLOR[configTheme]);
-    html.classList.add(themeMap[configTheme]);
-
-    window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeThemeDone, value: configTheme }), location.origin);
-
-    return () => {
-      html.classList.remove(DEPRECATED_COLOR[configTheme]);
-      html.classList.remove(themeMap[configTheme]);
-    };
-  }, [configTheme]);
+  // need to do it this way to update theme before any other child component render & useEffect/useLayoutEffect
+  if (previousThemeRef.current !== theme && theme) {
+    updateTheme(theme);
+  }
 
   /*--------------
     --- LANGUAGE ---
