@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.8 (2024-01-18)
+
+
+### Bug Fixes
+
+* **[FF-3910](https://jira.sbercloud.tech/browse/FF-3910):** update figma-tokens ([d0a6a63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+
+
+
+
+
 ## 0.9.7 (2024-01-15)
 
 ### Only dependencies have been changed
@@ -595,7 +606,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.6.0...@sbercloud/uikit-product-error-pages@0.6.1) (2022-12-07)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-error-pages
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-layout@0.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/layout/CHANGELOG.md)
 
 # [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.5.0...@sbercloud/uikit-product-error-pages@0.6.0) (2022-12-01)
 

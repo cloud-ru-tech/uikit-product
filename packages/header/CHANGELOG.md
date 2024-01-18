@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2024-01-18)
+
+
+### Bug Fixes
+
+* **[FF-3910](https://jira.sbercloud.tech/browse/FF-3910):** update figma-tokens ([d0a6a63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+
+
+### Features
+
+* **[FF-3910](https://jira.sbercloud.tech/browse/FF-3910):** add MVP of ProductHeader ([88a34d6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/88a34d6067f94d913e4d763aab3a291fffcffe03))
+
+
+
+
+
 ## 1.5.4 (2024-01-15)
 
 ### Only dependencies have been changed
