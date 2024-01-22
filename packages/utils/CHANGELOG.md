@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.3.1 (2024-01-22)
+
+
+### Bug Fixes
+
+* **FF-00:** apply theme from the initial render ([0a0fa65](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0a0fa65130894f14e7fbc170da1551d34e3ba832))
+
+
+
+
+
 # 3.3.0 (2023-10-25)
 
 

@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.7 (2024-01-22)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.4.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-input@3.9.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input/CHANGELOG.md)
+* [@sbercloud/uikit-product-modal-private@2.1.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-modal@1.7.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal/CHANGELOG.md)
+* [@sbercloud/uikit-product-truncate-string@0.10.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/truncate-string/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 0.3.6 (2024-01-15)
 
 ### Only dependencies have been changed

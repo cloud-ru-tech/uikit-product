@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.5 (2024-01-22)
+
+
+### Bug Fixes
+
+* **[FF-3910](https://jira.sbercloud.tech/browse/FF-3910):** update figma-tokens ([d0a6a63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+
+
+
+
+
 ## 0.7.4 (2024-01-15)
 
 ### Only dependencies have been changed

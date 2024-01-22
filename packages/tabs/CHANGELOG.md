@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.2.2 (2024-01-22)
+
+
+### Bug Fixes
+
+* **[FF-3910](https://jira.sbercloud.tech/browse/FF-3910):** update figma-tokens ([d0a6a63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+
+
+
+
+
 ## 2.2.1 (2023-11-28)
 
 
@@ -139,7 +150,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.2.2...@sbercloud/uikit-product-tabs@1.2.3) (2022-10-10)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-tabs
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-counter@0.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/counter/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [1.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-tabs@1.2.1...@sbercloud/uikit-product-tabs@1.2.2) (2022-10-07)
 

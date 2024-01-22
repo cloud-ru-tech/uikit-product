@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.19.6 (2024-01-22)
+
+
+### Bug Fixes
+
+* **[FF-3910](https://jira.sbercloud.tech/browse/FF-3910):** update figma-tokens ([d0a6a63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+
+
+
+
+
 ## 0.19.5 (2024-01-15)
 
 ### Only dependencies have been changed
@@ -463,7 +474,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.16.39](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-drawer@0.16.38...@sbercloud/uikit-product-drawer@0.16.39) (2022-12-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-drawer
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.4.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.16.38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-drawer@0.16.37...@sbercloud/uikit-product-drawer@0.16.38) (2022-11-28)
 

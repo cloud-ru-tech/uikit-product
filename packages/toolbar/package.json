@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-toolbar",
   "title": "React Toolbar",
-  "version": "0.17.11",
+  "version": "0.17.12",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,15 +27,15 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-badge-private": "3.3.0",
-    "@sbercloud/uikit-product-button": "5.4.6",
-    "@sbercloud/uikit-product-button-private": "2.0.51",
-    "@sbercloud/uikit-product-divider": "2.1.0",
-    "@sbercloud/uikit-product-dropdown": "0.20.0",
-    "@sbercloud/uikit-product-filter": "0.19.11",
+    "@sbercloud/uikit-product-badge-private": "3.3.1",
+    "@sbercloud/uikit-product-button": "5.4.7",
+    "@sbercloud/uikit-product-button-private": "2.0.52",
+    "@sbercloud/uikit-product-divider": "2.1.1",
+    "@sbercloud/uikit-product-dropdown": "0.20.1",
+    "@sbercloud/uikit-product-filter": "0.19.12",
     "@sbercloud/uikit-product-icons": "5.29.0",
-    "@sbercloud/uikit-product-input-private": "3.3.11",
+    "@sbercloud/uikit-product-input-private": "3.3.12",
     "@sbercloud/uikit-product-theme": "0.39.0",
-    "@sbercloud/uikit-product-utils": "3.3.0"
+    "@sbercloud/uikit-product-utils": "3.3.1"
   }
 }
