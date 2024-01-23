@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.30.0 (2024-01-23)
+
+
+### Features
+
+* **[HYCL-482](https://jira.sbercloud.tech/browse/HYCL-482):** add vmmanager icon ([bb68f25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bb68f25bbd5491d4b48361a6ebe08d544416882f))
+
+
+
+
+
 # 5.29.0 (2024-01-15)
 
 
