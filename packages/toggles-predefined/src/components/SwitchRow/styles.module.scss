@@ -1,0 +1,43 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.wrapper {
+  cursor: pointer;
+
+  &[data-disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.switchRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: $dimension-1m;
+  padding: $dimension-2m $dimension-1m;
+  cursor: pointer;
+  background-color: $sys-primary-decor-disabled;
+
+  border-radius: $dimension-050m;
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    background-color: $sys-neutral-decor-default;
+  }
+
+  * {
+    &[data-pointer] {
+      cursor: pointer;
+    }
+  }
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  gap: $dimension-1m;
+  color: $sys-neutral-text-main;
+}
+
+.description {
+  color: $sys-neutral-text-support;
+}

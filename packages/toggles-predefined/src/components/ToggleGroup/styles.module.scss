@@ -1,0 +1,24 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+$gaps: 's', 'm', 'l';
+
+$gap-sizes: (
+  's': $dimension-1m,
+  'm': $dimension-2m,
+  'l': $dimension-3m,
+);
+
+.toggleGroup {
+  display: grid;
+
+  @each $gap in $gaps {
+    &[data-gap='#{$gap}'] {
+      gap: simple-var($gap-sizes, $gap);
+    }
+  }
+
+  &[data-orientation='horizontal'] {
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(var(--toggle-group-breakpoint, 0px), 1fr));
+  }
+}
