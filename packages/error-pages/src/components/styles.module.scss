@@ -1,4 +1,164 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+$breakpoint-mobile: 767px;
+$breakpoint-tablet: 1023px;
+$gear-wheel-rotation-period: 10s;
+
+.wrapper {
+  --svgExclamationMark: #{$sys-primary-accent-default};
+  --svgStroke: #{$sys-neutral-decor-activated};
+  --svgBackground: #{$sys-neutral-background1-level};
+
+  height: 100%;
+  border-radius: $dimension-1m;
+  box-sizing: border-box;
+  padding: $dimension-6m;
+  gap: $dimension-6m;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $sys-neutral-background1-level;
+
+  @media (max-width: $breakpoint-mobile) {
+    padding: $dimension-3m;
+    gap: $dimension-3m;
+  }
+}
+
 .statusCode {
   vertical-align: top;
-  margin-left: 8px;
+  margin-left: $dimension-1m;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-3m;
+
+  @media (max-width: $breakpoint-mobile) {
+    height: 100%;
+    justify-content: space-between;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-3m;
+}
+
+.logo {
+  margin-bottom: $dimension-3m;
+}
+
+.actionsLink {
+  display: flex;
+  flex-direction: row;
+  gap: $dimension-2m;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  gap: $dimension-1m;
+
+  * > path {
+    fill: currentColor;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
+}
+
+.rightSide {
+  align-self: flex-end;
+  justify-self: center;
+  width: 50%;
+  min-width: 500px;
+  max-width: 862px;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  @media (max-width: $breakpoint-tablet) {
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 0;
+    max-width: none;
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    display: none;
+  }
+}
+
+.rotateSmall {
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: rotating $gear-wheel-rotation-period linear infinite;
+}
+
+.rotateBig {
+  @keyframes rotating {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: rotating $gear-wheel-rotation-period linear infinite;
+  animation-direction: reverse;
+}
+
+.button {
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
+.pic {
+  max-width: 863px;
+  max-height: 520px;
+
+  @media (max-width: $breakpoint-tablet) {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+.title {
+  @media (max-width: $breakpoint-mobile) {
+    font-family: $sans-headline-m-font-family !important;
+    font-weight: $sans-headline-m-font-weight !important;
+    line-height: $sans-headline-m-line-height !important;
+    font-size: $sans-headline-m-font-size !important;
+    letter-spacing: $sans-headline-m-letter-spacing !important;
+  }
+}
+
+.actionsTitle {
+  @media (max-width: $breakpoint-mobile) {
+    font-family: $sans-body-m-font-family !important;
+    font-weight: $sans-body-m-font-weight !important;
+    line-height: $sans-body-m-line-height !important;
+    font-size: $sans-body-m-font-size !important;
+    letter-spacing: $sans-body-m-letter-spacing !important;
+  }
 }

@@ -1,7 +1,6 @@
 import { HomeOutlineInterfaceSVG, RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { Texts } from '../helpers/texts-provider';
-import { CloudLogo, MlSpaceLogo } from './styled';
 
 export enum LogoVariant {
   MLSpace = 'MLSpace',
@@ -15,18 +14,6 @@ export enum ErrorType {
   PageNotFound = 'PageNotFound',
   Offline = 'Offline',
   Redirect = 'Redirect',
-}
-
-export function getLogoByVariant(logoVariant: LogoVariant) {
-  switch (logoVariant) {
-    case LogoVariant.MLSpace:
-      return <MlSpaceLogo height={24} />;
-    case LogoVariant.Cloud:
-      return <CloudLogo height={24} />;
-    case LogoVariant.None:
-    default:
-      return null;
-  }
 }
 
 export function getContentByErrorType(errorType: ErrorType) {
@@ -84,3 +71,9 @@ export function getButtonPropsByErrorType(errorType: ErrorType, mainPageUrl?: st
       };
   }
 }
+
+export const COLORS = {
+  svgExclamationMark: '--svgExclamationMark',
+  svgStroke: '--svgStroke',
+  svgBackground: '--svgBackground',
+};

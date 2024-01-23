@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { ErrorPage, ErrorPageProps } from '../src';
 
 const meta: Meta = {
-  title: 'Not stable/Error Pages',
+  title: 'Snack Uikit/Error Pages',
   component: ErrorPage,
 };
 export default meta;
