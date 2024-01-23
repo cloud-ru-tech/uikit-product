@@ -1,0 +1,18 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.copyValue {
+  display: flex;
+  align-items: center;
+  gap: $dimension-050m;
+}
+
+.textField {
+  margin-bottom: $dimension-3m;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  word-break: break-all;
+  color: $sys-neutral-text-support;
+}

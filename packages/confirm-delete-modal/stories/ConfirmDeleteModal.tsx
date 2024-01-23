@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
-import { Button } from '@sbercloud/uikit-product-button';
+import { ButtonFilled } from '@snack-uikit/button';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -10,7 +10,7 @@ import componentReadme from '../README.md';
 import { ConfirmDeleteModal, ConfirmDeleteModalProps } from '../src';
 
 const meta: Meta = {
-  title: 'Not stable/Confirm Delete Modal',
+  title: 'Snack UIkit/Confirm Delete Modal',
   component: ConfirmDeleteModal,
 };
 export default meta;
@@ -19,13 +19,13 @@ function Template({ ...args }: ConfirmDeleteModalProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    setIsOpen(args.isOpen);
-  }, [args.isOpen]);
+    setIsOpen(args.open);
+  }, [args.open]);
 
   return (
     <>
-      <Button text='Удалить' onClick={() => setIsOpen(true)} />
-      <ConfirmDeleteModal {...args} isOpen={isOpen} onClose={() => setIsOpen(false)} onApprove={action('onApprove')} />
+      <ButtonFilled label='Удалить' onClick={() => setIsOpen(true)} size='m' />
+      <ConfirmDeleteModal {...args} open={isOpen} onClose={() => setIsOpen(false)} onApprove={action('onApprove')} />
     </>
   );
 }
