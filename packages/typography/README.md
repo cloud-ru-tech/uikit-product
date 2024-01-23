@@ -2,11 +2,12 @@
 
 > ### Deprecation notice
 >
-> Вместо данного компонента следует использовать пакет [`@snack-ui/typography`](https://git.sbercloud.tech/sbercloud-ui/tokens-design-system/snack-uikit/-/tree/master/packages/typography),
+> Вместо данного компонента следует использовать пакет [`@snack-uikit/typography`](https://git.sbercloud.tech/sbercloud-ui/tokens-design-system/snack-uikit/-/tree/master/packages/typography),
 >
 > См. документацию [здесь](https://frontend.cp.sbercloud.tech/snack/?path=/story/components-typography--typography)
 
 ## Installation
+
 `npm i @sbercloud/uikit-product-typography`
 
 ## Usage
@@ -14,8 +15,9 @@
 На данный момент из пакета предоставляются только стили шрифтов без привязки к какому-либо тегу.
 
 Актуальный список linaria-css экспортов:
+
 ```text
-H1_STYLES 
+H1_STYLES
 H2_STYLES
 H2_SEMIBOLD_STYLES
 H3_STYLES

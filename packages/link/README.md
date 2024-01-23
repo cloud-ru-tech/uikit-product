@@ -2,10 +2,9 @@
 
 > ### Deprecation notice
 >
-> Вместо данного компонента следует использовать пакет [`@snack-ui/link`](https://git.sbercloud.tech/sbercloud-ui/tokens-design-system/snack-uikit/-/tree/master/packages/link),
+> Вместо данного компонента следует использовать пакет [`@snack-uikit/link`](https://git.sbercloud.tech/sbercloud-ui/tokens-design-system/snack-uikit/-/tree/master/packages/link),
 >
 > См. документацию [здесь](https://frontend.cp.sbercloud.tech/snack/?path=/story/components-link--link)
-
 
 ## Installation
 

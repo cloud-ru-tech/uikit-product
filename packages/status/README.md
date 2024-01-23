@@ -2,7 +2,7 @@
 
 > ### Deprecation notice
 >
-> Вместо данного компонента следует использовать пакет [`@snack-ui/status`](https://git.sbercloud.tech/sbercloud-ui/tokens-design-system/snack-uikit/-/tree/master/packages/status),
+> Вместо данного компонента следует использовать пакет [`@snack-uikit/status`](https://git.sbercloud.tech/sbercloud-ui/tokens-design-system/snack-uikit/-/tree/master/packages/status),
 >
 > См. документацию [здесь](https://frontend.cp.sbercloud.tech/snack/?path=/story/components-status-status--status)
 
