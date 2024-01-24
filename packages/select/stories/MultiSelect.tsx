@@ -25,6 +25,7 @@ const OPTIONS = [
   {
     value: 'tesla',
     label: 'tesla',
+    isFixed: true,
     amount: 42,
   },
   {
@@ -56,7 +57,11 @@ type StoryProps = {
 
 function Template({ ...args }: StoryProps) {
   const [inputValue, setInputValue] = useState('');
-  const [selectedOptions, setSelectedOptions] = useState<MultiSelectOptionType[]>([]);
+  const [selectedOptions, setSelectedOptions] = useState<MultiSelectOptionType[]>([
+    {
+      ...OPTIONS[1],
+    },
+  ]);
 
   const handleSelectOption = (option: MultiSelectOptionType) => {
     if (!option) return;

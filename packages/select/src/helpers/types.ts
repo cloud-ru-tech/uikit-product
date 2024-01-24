@@ -23,6 +23,7 @@ export type MultiSelectOptionType = {
   label: ReactNode;
   value: ReactNode;
   amount?: number;
+  isFixed?: boolean;
 };
 
 export enum MultiSelectModeType {

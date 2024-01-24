@@ -26,10 +26,11 @@ export function Option(props: OptionProps<MultiSelectOptionType, true>) {
       });
 
     const label = mode.props.renderOption ? mode.props.renderOption(data) : data.label;
+    const isFixed = data?.isFixed;
 
     return (
-      <S.CustomOptionWithCheckbox {...innerProps} onClick={handleCheckbox}>
-        <CheckboxIconPrivate checked={isSelected} disabled={isDisabled} />
+      <S.CustomOptionWithCheckbox {...innerProps} onClick={!isFixed ? handleCheckbox : undefined}>
+        <CheckboxIconPrivate checked={isSelected} disabled={isDisabled || isFixed} />
         <S.Label>{label}</S.Label>
       </S.CustomOptionWithCheckbox>
     );

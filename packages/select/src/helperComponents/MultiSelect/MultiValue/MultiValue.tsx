@@ -16,9 +16,9 @@ export function MultiValue({
   selectProps: { mode },
   removeProps,
   clearValue,
+  data,
 }: MultiValueProps<MultiSelectOptionType> & { index?: number }) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-
   const value = getValue();
   const collapseIndex = getCollapseIndex(value.length, mode.props.collapseOnReaching);
 
@@ -26,16 +26,16 @@ export function MultiValue({
     return <></>;
   }
 
+  const onRemoveClick = !data.isFixed
+    ? (e: React.MouseEvent<HTMLElement>) => {
+        e.stopPropagation();
+        removeProps.onClick(e);
+      }
+    : undefined;
+
   if (collapseIndex !== index) {
     return (
-      <TagValue
-        className={mode.props.tagValueClassName}
-        value={children as ReactText}
-        onRemoveClick={e => {
-          e.stopPropagation();
-          removeProps.onClick(e);
-        }}
-      />
+      <TagValue className={mode.props.tagValueClassName} value={children as ReactText} onRemoveClick={onRemoveClick} />
     );
   }
 
@@ -52,10 +52,7 @@ export function MultiValue({
     <TagValueMore
       dropdownMenuClassName={mode.props.tagValuesDropdownClassName}
       items={value.slice(collapseIndex)}
-      onRemove={e => {
-        e.stopPropagation();
-        removeProps.onClick(e);
-      }}
+      onRemove={onRemoveClick}
     />
   );
 }

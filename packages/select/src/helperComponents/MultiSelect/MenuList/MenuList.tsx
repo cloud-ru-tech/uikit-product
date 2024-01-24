@@ -29,7 +29,7 @@ export function MenuList(props: MenuListComponentProps<MultiSelectOptionType, tr
 
   const handleSelect = () => {
     if (isAllSelected) {
-      handleChange(undefined, {
+      handleChange(options, {
         action: SelectActionTypes.Reset,
       });
     } else {

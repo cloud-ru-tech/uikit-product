@@ -13,6 +13,7 @@ import {
   NoOptionsMessage,
   Option,
 } from '../../helperComponents/MultiSelect';
+import { sortOptionsByFixedFirst } from '../../helpers/sortOptionsByFixedFirst';
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import { MultiSelectModeType, MultiSelectOptionType, SelectSizes } from '../../helpers/types';
 import { styles } from '../../styles/multiSelect';
@@ -122,18 +123,22 @@ export function MultiSelect(props: MultiSelectProps) {
 
   const appliedStyles = useMemo(() => styles(size, error), [size, error]);
 
-  const handleChange = (value: ValueType<MultiSelectOptionType, true>, meta: ActionMeta<MultiSelectOptionType>) => {
+  const handleChange = (newValue: ValueType<MultiSelectOptionType, true>, meta: ActionMeta<MultiSelectOptionType>) => {
     switch (meta.action) {
       case SelectActionTypes.SelectOption:
-        return isInMenuSearch && Array.isArray(value)
-          ? mode.props.onSelectOptions(value)
+        return isInMenuSearch && Array.isArray(newValue)
+          ? mode.props.onSelectOptions(newValue)
           : mode.props.onSelectOption(meta.option);
       case SelectActionTypes.RemoveValue:
       case SelectActionTypes.PopValue:
-        return mode.props.onRemoveOption(meta.removedValue);
+        if (meta?.removedValue?.isFixed) {
+          return;
+        }
+        mode.props.onRemoveOption(meta.removedValue);
+        return;
       case SelectActionTypes.Reset:
         if (isInMenuSearch) {
-          return mode.props.onRemoveOptions();
+          return mode.props.onSelectOptions(newValue?.filter(v => v.isFixed));
         }
       default:
         return;
@@ -151,6 +156,8 @@ export function MultiSelect(props: MultiSelectProps) {
     document.body.addEventListener('click', onClickOutside);
     return () => document.body.removeEventListener('click', onClickOutside);
   }, [isOpened]);
+
+  const sortedValue = useMemo(() => sortOptionsByFixedFirst(value), [value]);
 
   return (
     <InputDecoratorPrivate
@@ -188,7 +195,7 @@ export function MultiSelect(props: MultiSelectProps) {
           placeholder={placeholder || textProvider<string>(languageCode, Texts.SelectPlaceholder)}
           styles={appliedStyles}
           tabSelectsValue={false}
-          value={value}
+          value={sortedValue}
           onChange={handleChange}
           onMenuInputFocus={() => setIsOpened(true)}
           onBlur={onBlur}
