@@ -43,7 +43,7 @@
     "@geometricpanda/storybook-addon-badges": "2.0.0",
     "@linaria/cli": "3.0.0-beta.13",
     "@sbercloud/figma-tokens-cloud-platform": "13.0.0",
-    "@sbercloud/figma-tokens-mlspace": "11.1.0",
+    "@sbercloud/figma-tokens-mlspace": "13.0.0",
     "@sbercloud/ft-all-linters-pack": "4.0.5",
     "@sbercloud/ft-config-linaria": "1.1.0",
     "@sbercloud/ft-conventional-changelog": "1.2.3",

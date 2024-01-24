@@ -112,7 +112,7 @@ const mainConfig = {
       new TsconfigPathsPlugin({
         configFile: './tsconfig.json',
         logLevel: 'INFO',
-        extensions: ['.ts', '.tsx', '.json', '.svg', '.png'],
+        extensions: ['.ts', '.tsx', '.json', '.svg', '.png', '.jpg'],
       }),
     );
 
