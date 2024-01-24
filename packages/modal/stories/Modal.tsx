@@ -6,7 +6,7 @@ import { Button } from '@sbercloud/uikit-product-button';
 import { InfoOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
 import { Select } from '@sbercloud/uikit-product-select';
-import { ToggleCard, ToggleGroup } from '@sbercloud/uikit-product-toggle-group';
+import { ToggleCard, ToggleGroup } from '@sbercloud/uikit-product-toggles-predefined';
 import { TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { BADGE } from '#storybookConstants';
@@ -28,6 +28,10 @@ const Text1 = styled.div`
   text-align: center;
 `;
 
+const Content = styled.div`
+  padding: 2px;
+`;
+
 const meta: Meta = {
   title: 'Components/Modal',
   component: Modal,
@@ -42,7 +46,7 @@ function Template({ ...args }: ModalProps) {
   const [isEx4ModalOpen, setEx4ModalOpen] = useState(false);
   const [isEx5ModalOpen, setEx5ModalOpen] = useState(false);
 
-  const [value, setValue] = useState<number[]>();
+  const [value, setValue] = useState<string[]>();
 
   const [pending, setPending] = useState(false);
 
@@ -99,11 +103,13 @@ function Template({ ...args }: ModalProps) {
           onClick: closeModal,
         }}
         content={
-          <ToggleGroup value={value} onChange={setValue} mode={ToggleGroup.mode.Checkbox}>
-            {CARDS.map((item, i) => (
-              <ToggleCard {...item} key={i} />
-            ))}
-          </ToggleGroup>
+          <Content>
+            <ToggleGroup value={value} onChange={setValue} selectionMode='multiple'>
+              {CARDS.map((item, i) => (
+                <ToggleCard {...item} key={i} />
+              ))}
+            </ToggleGroup>
+          </Content>
         }
       />
 
