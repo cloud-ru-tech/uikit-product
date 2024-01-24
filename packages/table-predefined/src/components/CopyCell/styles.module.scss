@@ -1,0 +1,20 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.copyCell {
+  display: flex;
+  gap: $dimension-050m;
+  cursor: pointer;
+
+  align-items: center;
+  min-width: 0;
+  max-width: 100%;
+  .copyButton {
+    display: none;
+  }
+
+  &:hover {
+    .copyButton {
+      display: inline-flex;
+    }
+  }
+}
