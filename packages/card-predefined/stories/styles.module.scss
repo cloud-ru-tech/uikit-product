@@ -1,0 +1,34 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+@mixin wrapperStyles {
+  resize: horizontal;
+
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  min-width: 204px;
+  padding: 20px;
+
+  background-color: $sys-neutral-background;
+  border: 1px solid $sys-neutral-decor-default;
+  border-radius: $dimension-050m;
+}
+
+.cardServiceSmall {
+  @include wrapperStyles;
+
+  width: 334px
+}
+
+.wrapper {
+  @include wrapperStyles;
+
+  width: 344px
+}
+
+.cardBanner {
+  @include wrapperStyles;
+
+  width: 684px;
+}

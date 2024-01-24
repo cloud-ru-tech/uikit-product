@@ -1,0 +1,28 @@
+import { fixture, Selector, test } from 'testcafe';
+
+import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
+
+const TEST_ID = 'card-service-small-test';
+
+function getPage(props?: Record<string, unknown>) {
+  return getTestcafeUrl({
+    category: 'snack-uikit',
+    group: 'cards',
+    name: 'servicesmall',
+    story: 'service-small',
+    props: {
+      'data-test-id': TEST_ID,
+      ...props,
+    },
+  });
+}
+
+fixture('Card Service Small');
+
+test.page(getPage({ title: 'Super title', description: 'Super description', promoBadge: 'badge' }))(
+  'Rendered',
+  async t => {
+    await t.expect(Selector(dataTestIdSelector('card__header__title')).textContent).eql('Super title');
+    await t.expect(Selector(dataTestIdSelector('card__promo-badge')).textContent).eql('badge');
+  },
+);
