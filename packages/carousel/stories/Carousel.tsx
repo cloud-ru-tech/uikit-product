@@ -1,7 +1,8 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
-import { CardQuickAction, CardTopic, CardWide } from '@sbercloud/uikit-product-cards';
+import { CardBanner, CardService, CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
 import { DockerRegistryDisplaySVG, UserInterfaceSVG } from '@sbercloud/uikit-product-icons';
 
 import { BADGE } from '#storybookConstants';
@@ -24,6 +25,10 @@ const CardsWrap = styled.div`
   gap: 20px;
 `;
 
+const cardClassName = css`
+  width: 100%;
+`;
+
 const CardWideWrapper = styled.div`
   height: 332px;
   width: 100%;
@@ -31,53 +36,62 @@ const CardWideWrapper = styled.div`
 
 const cardsMock = [
   <CardsWrap key={1}>
-    <CardTopic
-      icon={<DockerRegistryDisplaySVG />}
+    <CardServiceSmall
+      emblem={{
+        icon: DockerRegistryDisplaySVG,
+      }}
       title={'Заголовок'}
-      color={CardTopic.colors.Red}
-      onClick={() => {}}
+      className={cardClassName}
     />
-    <CardTopic
-      icon={<DockerRegistryDisplaySVG />}
+    <CardServiceSmall
+      emblem={{
+        icon: DockerRegistryDisplaySVG,
+      }}
       title={'Заголовок'}
-      color={CardTopic.colors.Blue}
-      onClick={() => {}}
+      className={cardClassName}
     />
-    <CardTopic
-      icon={<DockerRegistryDisplaySVG />}
+    <CardServiceSmall
+      emblem={{
+        icon: DockerRegistryDisplaySVG,
+      }}
       title={'Заголовок'}
-      color={CardTopic.colors.Green}
-      onClick={() => {}}
+      className={cardClassName}
     />
   </CardsWrap>,
   <CardsWrap key={2}>
-    <CardQuickAction
-      icon={<DockerRegistryDisplaySVG />}
+    <CardService
+      emblem={{
+        icon: DockerRegistryDisplaySVG,
+      }}
       title={'Заголовок'}
       description={'Описание в 1 строку'}
-      variant={CardQuickAction.variants.Primary}
-      onClick={() => {}}
+      actionLabel={'Кнопка'}
+      className={cardClassName}
     />
-    <CardQuickAction
-      icon={<UserInterfaceSVG />}
+    <CardService
+      emblem={{
+        icon: UserInterfaceSVG,
+      }}
       title={'Заголовок'}
       description={'Описание в 1 строку'}
-      variant={CardQuickAction.variants.Accent}
-      onClick={() => {}}
+      actionLabel={'Кнопка'}
+      className={cardClassName}
     />
   </CardsWrap>,
   <CardsWrap key={3}>
     <CardWideWrapper>
-      <CardWide
+      <CardBanner
         title={'Заголовок'}
-        titleImageSrc={
-          'https://images.unsplash.com/photo-1655720033654-a4239dd42d10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80'
-        }
         description={'Описание для карточки'}
-        buttons={[{ text: 'Открыть', onClick: () => {} }]}
-        imageSrc={
-          'https://images.unsplash.com/photo-1655720031554-a929595ffad7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80'
-        }
+        actionLabel={'Открыть'}
+        emblem={{
+          icon: UserInterfaceSVG,
+        }}
+        image={{
+          src: 'https://images.unsplash.com/photo-1655720031554-a929595ffad7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80',
+          alt: '',
+        }}
+        className={cardClassName}
       />
     </CardWideWrapper>
   </CardsWrap>,
