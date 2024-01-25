@@ -54,7 +54,7 @@
     "@snack-uikit/notification": "0.5.4",
     "@snack-uikit/scroll": "0.5.0",
     "@snack-uikit/search": "0.7.0",
-    "@snack-uikit/search-private": "0.1.0",
+    "@snack-uikit/search-private": "0.1.1",
     "@snack-uikit/tooltip": "0.10.3",
     "@snack-uikit/truncate-string": "0.4.4",
     "classnames": "2.3.2",
