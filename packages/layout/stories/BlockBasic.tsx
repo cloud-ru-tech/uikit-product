@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { BlockBasic, BlockBasicProps } from '../src';
 
 export default {
-  title: 'Not stable/Layout/BlockBasic',
+  title: 'Snack UIkit/Layout/BlockBasic',
   component: BlockBasic,
 } as Meta;
 

@@ -4,3 +4,4 @@ export * from './InfoStroke';
 export * from './LabelInfo';
 export * from './NoAccess';
 export * from './EmptyBlock';
+export * from './Page';

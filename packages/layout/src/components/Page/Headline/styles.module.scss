@@ -1,0 +1,20 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.headline {
+  display: flex;
+  flex-direction: row;
+  gap: $dimension-3m;
+}
+
+.title {
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.actions {
+  height: simple-var($sans-headline-m-line-height);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  flex-grow: 0;
+}

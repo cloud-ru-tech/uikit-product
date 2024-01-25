@@ -1,0 +1,23 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+$prefix-height: simple-var($sans-headline-m-line-height);
+
+.container {
+  padding: $dimension-3m;
+  min-width: fit-content;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-3m;
+  margin: 0 auto;
+  width: 800px;
+  padding: calc($dimension-7m - $prefix-height) $dimension-7m $dimension-7m;
+}
+
+.prefix {
+  display: flex;
+  align-items: center;
+  height: $prefix-height;
+}
