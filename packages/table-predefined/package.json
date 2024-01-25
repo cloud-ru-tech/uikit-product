@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-table-predefined",
   "title": "Table Predefined",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,14 +28,12 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/uikit-product-utils": "3.3.1",
     "@snack-uikit/button": "0.15.1",
+    "@snack-uikit/icons": "0.20.0",
     "@snack-uikit/table": "0.10.2",
     "@snack-uikit/truncate-string": "0.4.5",
-    "@snack-uikit/icons": "0.20.0",
-    "@sbercloud/uikit-product-utils": "3.3.1",
     "copy-to-clipboard": "3.3.3",
     "lodash.debounce": "4.0.8"
-  },
-  "devDependencies": {},
-  "peerDependencies": {}
+  }
 }

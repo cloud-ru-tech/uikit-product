@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.6.3 (2024-01-25)
+
+
+### Dependencies
+
+* **[FF-3643](https://jira.sbercloud.tech/browse/FF-3643):** up deps ([0eefbc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0eefbc6217e9a3f5fbda4afd072884a84f0f7793))
+
+
+
+
+
 ## 1.6.2 (2024-01-23)
 
 ### Only dependencies have been changed

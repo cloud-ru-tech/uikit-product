@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2024-01-25)
+
+
+### BREAKING CHANGES
+
+
+* **[FF-3643](https://jira.sbercloud.tech/browse/FF-3643):** migrate ConfirmDeleteModal to snack ([1873d4d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1873d4da391686a8077125cc1bb14f6128d728c8))
+
+
+
+
 ## 0.3.7 (2024-01-22)
 
 ### Only dependencies have been changed

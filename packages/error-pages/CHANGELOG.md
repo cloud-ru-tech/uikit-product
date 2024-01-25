@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2024-01-25)
+
+
+### BREAKING CHANGES
+
+
+* **[FF-3643](https://jira.sbercloud.tech/browse/FF-3643):** migrate ErrorPages to snack ([e1dfe09](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e1dfe093c8e161f7a7259935218abfb0564b5c2e))
+
+
+
+
 ## 0.9.9 (2024-01-22)
 
 ### Only dependencies have been changed
