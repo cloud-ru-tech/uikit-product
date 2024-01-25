@@ -1,0 +1,11 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.emptyBlock {
+  background-color: $sys-neutral-background1-level;
+  border-radius: calc($dimension-1m + $dimension-050m);
+  padding: $dimension-8m;
+}
+
+.infoBlock {
+  width: calc($dimension-3m * calc($dimension-3m + $dimension-025m));
+}
