@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.33.0 (2024-01-25)
+
+
+### Features
+
+* **[LK-1224](https://jira.sbercloud.tech/browse/LK-1224):** add fixed items to MultiSelect ([9440b60](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9440b60adaebcb57648984f79c45174f87a2c20c))
+
+
+
+
+
 ## 0.32.13 (2024-01-23)
 
 ### Only dependencies have been changed
