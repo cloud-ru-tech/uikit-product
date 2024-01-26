@@ -7,14 +7,15 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InfoStroke, InfoStrokeProps, LabelInfo } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Layout/InfoGroup/InfoStroke',
   component: InfoStroke,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InfoStrokeProps> = ({ ...args }) => <InfoStroke {...args} />;
+const Template = ({ ...args }: InfoStrokeProps) => <InfoStroke {...args} />;
 
-export const infoStroke = Template.bind({});
+export const infoStroke: StoryFn<InfoStrokeProps> = Template.bind({});
 
 infoStroke.args = {
   label: <LabelInfo label='Название' tooltip={{ content: 'Название' }} size={LabelInfo.sizes.Large} />,

@@ -7,10 +7,11 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { BlockBasic, BlockBasicProps } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Snack UIkit/Layout/BlockBasic',
   component: BlockBasic,
-} as Meta;
+};
+export default meta;
 
 const Wrapper = styled.div`
   width: 500px;
@@ -23,7 +24,7 @@ const exampleClassName = css`
   height: 100%;
 `;
 
-const Template: StoryFn<BlockBasicProps> = ({ ...args }) => (
+const Template = ({ ...args }: BlockBasicProps) => (
   <Wrapper>
     <BlockBasic {...args} className={exampleClassName}>
       Какое-то содержимое
@@ -31,7 +32,7 @@ const Template: StoryFn<BlockBasicProps> = ({ ...args }) => (
   </Wrapper>
 );
 
-export const blockBasic = Template.bind({});
+export const blockBasic: StoryFn<BlockBasicProps> = Template.bind({});
 
 blockBasic.args = {};
 

@@ -6,14 +6,15 @@ import componentReadme from '../README.md';
 import { LabelInfo, LabelInfoProps } from '../src';
 import { Size } from '../src/components/LabelInfo/constants';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Layout/InfoGroup/LabelInfo',
   component: LabelInfo,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<LabelInfoProps> = ({ ...args }) => <LabelInfo {...args} />;
+const Template = ({ ...args }: LabelInfoProps) => <LabelInfo {...args} />;
 
-export const labelInfo = Template.bind({});
+export const labelInfo: StoryFn<LabelInfoProps> = Template.bind({});
 
 labelInfo.args = {
   label: 'Название',

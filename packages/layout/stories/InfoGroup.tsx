@@ -8,14 +8,15 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InfoGroup, InfoGroupProps, LabelInfo } from '../src';
 
-export default {
+const meta: Meta = {
   title: 'Not stable/Layout/InfoGroup/InfoGroup',
   component: InfoGroup,
-} as Meta;
+};
+export default meta;
 
-const Template: StoryFn<InfoGroupProps> = ({ ...args }) => <InfoGroup {...args} />;
+const Template = ({ ...args }: InfoGroupProps) => <InfoGroup {...args} />;
 
-export const infoGroup = Template.bind({});
+export const infoGroup: StoryFn<InfoGroupProps> = Template.bind({});
 
 infoGroup.args = {
   items: [

@@ -3,26 +3,18 @@ import { JSXElementConstructor } from 'react';
 
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 import { PlaceholderSVG } from '@snack-uikit/icons';
-import * as Icons from '@snack-uikit/icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { EmptyBlock, EmptyBlockProps } from '../src';
+import { ICONS } from './constants';
 
 const meta: Meta = {
   title: 'Snack Uikit/Layout/EmptyBlock',
   component: EmptyBlock,
 };
 export default meta;
-
-const ICONS = Object.fromEntries(
-  Object.keys(Icons).map(key => {
-    const Icon = Icons[key];
-
-    return [key, Icon];
-  }),
-);
 
 const BUTTON_PROPS = { label: 'Label text', icon: <PlaceholderSVG /> };
 
