@@ -99,7 +99,10 @@ export function List({ isFooter, level }: ListProps) {
       {level.list.map((group, groupIndex) => (
         <S.GroupWrapper key={group.heading || group.items[0].id} data-hidden={showSearchResults || undefined}>
           {group.heading && !isCollapsed && (
-            <S.Heading data-first-on-inner-level={(level.depth > 0 && groupIndex === 0) || undefined}>
+            <S.Heading
+              data-first-on-inner-level={(level.depth > 0 && groupIndex === 0) || undefined}
+              data-test-id='sidebar__list__heading'
+            >
               {group.heading}
               {group.tooltip && (
                 <Tooltip
@@ -118,7 +121,10 @@ export function List({ isFooter, level }: ListProps) {
                   }}
                   visible={tooltipVisible}
                 >
-                  <QuestionSmallOutlineInterfaceSVG onMouseOver={() => setTooltipVisible(undefined)} />
+                  <QuestionSmallOutlineInterfaceSVG
+                    onMouseOver={() => setTooltipVisible(undefined)}
+                    data-test-id='sidebar__list__heading__tooltip'
+                  />
                 </Tooltip>
               )}
             </S.Heading>
