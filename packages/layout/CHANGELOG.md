@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2024-01-27)
+
+
+### Features
+
+* **[FF-4128](https://jira.sbercloud.tech/browse/FF-4128):** add page layout components ([e93f2d5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e93f2d5828791f4a60970dd35d6b1f0800f87266))
+
+
+
+
+
 # 0.9.0 (2024-01-26)
 
 
