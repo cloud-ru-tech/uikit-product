@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2024-01-29)
+
+
+### Features
+
+* **[ONB-1675](https://jira.sbercloud.tech/browse/ONB-1675):** added data-test-ids for sidebar heading ([e33e5ea](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e33e5eac84eab61d49d06f54a9b471617a793876))
+
+
+
+
+
 ## 2.2.5 (2024-01-23)
 
 ### Only dependencies have been changed
