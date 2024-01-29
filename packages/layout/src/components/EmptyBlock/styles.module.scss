@@ -7,5 +7,5 @@
 }
 
 .infoBlock {
-  width: calc($dimension-3m * calc($dimension-3m + $dimension-025m));
+  max-width: 624px;
 }
