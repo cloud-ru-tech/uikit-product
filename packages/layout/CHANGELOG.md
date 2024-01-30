@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2024-01-30)
+
+
+### Bug Fixes
+
+* **[FF-4159](https://jira.sbercloud.tech/browse/FF-4159):** EmptyBlock max-width value ([9a8c834](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9a8c83496bd2adc4a8b28c1218e3e8877c540992))
+
+
+### Features
+
+* **[FF-4124](https://jira.sbercloud.tech/browse/FF-4124):** add Widget component ([947e6ea](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/947e6eaef2d7626df1c5146c43fb1cd8a8b0ee32))
+
+
+
+
+
 # 0.10.0 (2024-01-27)
 
 
