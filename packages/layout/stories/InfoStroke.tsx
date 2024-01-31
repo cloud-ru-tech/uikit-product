@@ -1,24 +1,24 @@
 import { Meta, StoryFn } from '@storybook/react';
+import { LabelInfo } from 'layout/src/components/LabelInfo';
 
 import { TextField } from '@sbercloud/uikit-product-text-field';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { InfoStroke, InfoStrokeProps, LabelInfo } from '../src';
+import { InfoStroke, InfoStrokeProps } from '../src';
 
-const meta: Meta = {
-  title: 'Not stable/Layout/InfoGroup/InfoStroke',
+export default {
+  title: 'Snack UIkit/Layout/InfoGroup/InfoStroke',
   component: InfoStroke,
-};
-export default meta;
+} as Meta;
 
-const Template = ({ ...args }: InfoStrokeProps) => <InfoStroke {...args} />;
+const Template: StoryFn<InfoStrokeProps> = ({ ...args }) => <InfoStroke {...args} />;
 
-export const infoStroke: StoryFn<InfoStrokeProps> = Template.bind({});
+export const infoStroke = Template.bind({});
 
 infoStroke.args = {
-  label: <LabelInfo label='Название' tooltip={{ content: 'Название' }} size={LabelInfo.sizes.Large} />,
+  label: <LabelInfo label='Название' tip='Название' size='l' />,
   value: <TextField text='Text' size={TextField.sizes.Large} allowCopy />,
   topDivider: true,
   bottomDivider: true,

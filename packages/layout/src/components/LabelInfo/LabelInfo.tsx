@@ -1,34 +1,22 @@
-import { ReactElement } from 'react';
+import cn from 'classnames';
 
-import { ButtonIcon } from '@sbercloud/uikit-product-button';
-import { QuestionSmallOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { Tooltip, TooltipProps } from '@sbercloud/uikit-product-tooltip';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { QuestionTooltip, QuestionTooltipProps } from '@snack-uikit/tooltip';
 
-import { Size } from './constants';
-import * as S from './styled';
+import styles from './styles.module.scss';
 
 export type LabelInfoProps = WithSupportProps<{
   label: string;
-  tooltip?: Omit<TooltipProps, 'children' | 'type'>;
+  tip?: QuestionTooltipProps['tip'];
   className?: string;
-  icon?: ReactElement;
-  size?: Size;
+  size?: 's' | 'm' | 'l';
 }>;
 
-export function LabelInfo({ label, tooltip, className, icon, size = Size.Small, ...rest }: LabelInfoProps) {
+export function LabelInfo({ label, tip, className, size = 's', ...rest }: LabelInfoProps) {
   return (
-    <S.LabelWithTooltipContainer data-size={size} className={className} {...extractSupportProps(rest)}>
+    <div data-size={size} className={cn(styles.container, className)} {...extractSupportProps(rest)}>
       {label}&nbsp;
-      <S.LabelWithTooltipIcon>
-        {tooltip && (
-          <Tooltip type={Tooltip.types.Instant} {...tooltip}>
-            <ButtonIcon icon={icon || <QuestionSmallOutlineInterfaceSVG />} variant={ButtonIcon.variants.Weak} />
-          </Tooltip>
-        )}
-      </S.LabelWithTooltipIcon>
-    </S.LabelWithTooltipContainer>
+      <div className={styles.headline}>{tip && <QuestionTooltip tip={tip} size='s' />}</div>
+    </div>
   );
 }
-
-LabelInfo.sizes = Size;

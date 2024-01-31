@@ -4,22 +4,20 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { LabelInfo, LabelInfoProps } from '../src';
-import { Size } from '../src/components/LabelInfo/constants';
 
-const meta: Meta = {
-  title: 'Not stable/Layout/InfoGroup/LabelInfo',
+export default {
+  title: 'Snack UIkit/Layout/InfoGroup/LabelInfo',
   component: LabelInfo,
-};
-export default meta;
+} as Meta;
 
-const Template = ({ ...args }: LabelInfoProps) => <LabelInfo {...args} />;
+const Template: StoryFn<LabelInfoProps> = ({ ...args }) => <LabelInfo {...args} />;
 
-export const labelInfo: StoryFn<LabelInfoProps> = Template.bind({});
+export const labelInfo = Template.bind({});
 
 labelInfo.args = {
   label: 'Название',
-  tooltip: { content: 'Tooltip' },
-  size: Size.Small,
+  tip: 'Tooltip',
+  size: 's',
 };
 
 labelInfo.argTypes = {};

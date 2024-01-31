@@ -1,10 +1,10 @@
 import { ReactNode } from 'react';
 
-import { Button } from '@sbercloud/uikit-product-button';
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { ButtonFilled } from '@snack-uikit/button';
 
 import { InfoStroke } from '../InfoStroke';
-import * as S from './styled';
+import styles from './styles.module.scss';
 
 export type InfoGroupProps = WithSupportProps<{
   items: {
@@ -27,10 +27,11 @@ export function InfoGroup({ items, itemDefaultValue, buttonText, onClick, showBu
           return <InfoStroke key={itemIdx} label={label} value={value || itemDefaultValue} bottomDivider={notLast} />;
         })}
       </div>
+
       {showButton && buttonText && (
-        <S.ButtonContainer>
-          <Button onClick={onClick} text={buttonText} variant={Button.variants.Filled} />
-        </S.ButtonContainer>
+        <div className={styles.buttonContainer}>
+          <ButtonFilled onClick={onClick} label={buttonText} size='m' />
+        </div>
       )}
     </>
   );

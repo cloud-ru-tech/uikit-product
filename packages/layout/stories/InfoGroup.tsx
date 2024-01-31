@@ -8,28 +8,27 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { InfoGroup, InfoGroupProps, LabelInfo } from '../src';
 
-const meta: Meta = {
-  title: 'Not stable/Layout/InfoGroup/InfoGroup',
+export default {
+  title: 'Snack UIkit/Layout/InfoGroup/InfoGroup',
   component: InfoGroup,
-};
-export default meta;
+} as Meta;
 
-const Template = ({ ...args }: InfoGroupProps) => <InfoGroup {...args} />;
+const Template: StoryFn<InfoGroupProps> = ({ ...args }) => <InfoGroup {...args} />;
 
-export const infoGroup: StoryFn<InfoGroupProps> = Template.bind({});
+export const infoGroup = Template.bind({});
 
 infoGroup.args = {
   items: [
     {
-      label: <LabelInfo size={LabelInfo.sizes.Large} label='Название' tooltip={{ content: 'Название' }} />,
+      label: <LabelInfo size='l' label='Название' tip={'Название'} />,
       value: <TextField size={TextField.sizes.Large} text='Space' allowCopy />,
     },
     {
-      label: <LabelInfo size={LabelInfo.sizes.Large} label='Описание' />,
+      label: <LabelInfo size='l' label='Описание' />,
       value: <InputCommon size={InputCommon.sizes.Large} value={'Some text'} onChange={() => {}} />,
     },
     {
-      label: <LabelInfo label='Название конфигурации, длинный текст' tooltip={{ content: 'Название конфигурации' }} />,
+      label: <LabelInfo label='Название конфигурации, длинный текст' tip={'Название конфигурации'} />,
       value: 'Small',
     },
     {

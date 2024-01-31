@@ -1,0 +1,27 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.fieldWrapper {
+  max-width: 718px;
+  width: 100%;
+}
+
+.field {
+  padding: $dimension-3m 0;
+  display: flex;
+  column-gap: $dimension-3m;
+  width: 100%;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.value {
+  width: 100%;
+}
+
+.label {
+  max-width: 208px;
+  width: 100%;
+  color: $sys-neutral-text-support;
+}
