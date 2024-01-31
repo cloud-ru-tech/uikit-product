@@ -1,6 +1,7 @@
 import { Children, ReactNode } from 'react';
 
 import { Avatar } from '@sbercloud/uikit-product-avatar';
+import { Badge, BadgeProps } from '@sbercloud/uikit-product-badge-private';
 import { DropdownMenu } from '@sbercloud/uikit-product-dropdown';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -13,9 +14,14 @@ export type HeaderToolbarProfileMenuProps = WithSupportProps<{
   name: string;
   children: ReactNode;
   src?: string;
+  badge?: Omit<BadgeProps, 'children'>;
 }>;
 
-export function HeaderToolbarProfileMenu({ name, children, src, ...rest }: HeaderToolbarProfileMenuProps) {
+export function HeaderToolbarProfileMenu({ name, children, src, badge, ...rest }: HeaderToolbarProfileMenuProps) {
+  const avatar = (
+    <Avatar name={name} src={src} onClick={noop} variant={Avatar.variants.User} size={Avatar.sizes.ExtraSmall} />
+  );
+
   return (
     <DropdownMenu
       actions={({ hide }) => (
@@ -29,7 +35,7 @@ export function HeaderToolbarProfileMenu({ name, children, src, ...rest }: Heade
       )}
       {...extractSupportProps(rest)}
     >
-      <Avatar name={name} src={src} onClick={noop} variant={Avatar.variants.User} size={Avatar.sizes.ExtraSmall} />
+      {badge ? <Badge {...badge}>{avatar}</Badge> : avatar}
     </DropdownMenu>
   );
 }

@@ -10,6 +10,7 @@ import {
   QuestionInterfaceSVG,
   SupportInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
+import { Label } from '@sbercloud/uikit-product-label';
 import { PredefinedCloudLogo, PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
 import { SidebarItemId, SidebarMobile, SidebarProps } from '@sbercloud/uikit-product-sidebar';
 import { GLOBAL_CSS_COLOR, Themes } from '@sbercloud/uikit-product-theme';
@@ -170,8 +171,21 @@ function Template({ menuList, footerItems, activeMenuItem }: StoryProps) {
           />
           <HeaderToolbar.Item icon={<DocumentationInterfaceSVG />} title='Документация' href='' />
           <HeaderToolbar.Item icon={<SupportInterfaceSVG />} title='Поддержка' href='' />
-          <HeaderToolbar.ProfileMenu name='Андрей Иванов'>
+          <HeaderToolbar.ProfileMenu
+            name='Андрей Иванов'
+            badge={{
+              number: 1,
+              type: Badge.types.Alert,
+            }}
+          >
             <HeaderToolbar.ProfileMenuAvatarItem title='Профиль' href='' />
+
+            <HeaderToolbar.ProfileMenuItem
+              icon={<QuestionInterfaceSVG />}
+              title='Настройки'
+              href=''
+              badge={{ text: '1', variant: Label.variants.Green }}
+            />
             <HeaderToolbar.ProfileMenuItem icon={<QuestionInterfaceSVG />} title='Выход' href='' />
           </HeaderToolbar.ProfileMenu>
         </HeaderToolbar.Root>

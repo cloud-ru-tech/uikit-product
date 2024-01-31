@@ -1,6 +1,8 @@
+import cn from 'classnames';
 import { HTMLAttributeAnchorTarget, MouseEvent, MouseEventHandler, ReactElement, useContext } from 'react';
 
 import { DropdownItem } from '@sbercloud/uikit-product-dropdown';
+import { Label, LabelProps } from '@sbercloud/uikit-product-label';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { DropdownMenuContext } from '../../../../contexts';
@@ -12,6 +14,7 @@ export type HeaderToolbarProfileMenuItemProps = WithSupportProps<{
   href: string;
   target?: HTMLAttributeAnchorTarget;
   onClick?: MouseEventHandler<HTMLAnchorElement>;
+  badge?: LabelProps;
 }>;
 
 export function HeaderToolbarProfileMenuItem({
@@ -20,6 +23,7 @@ export function HeaderToolbarProfileMenuItem({
   href,
   target,
   onClick,
+  badge,
   ...rest
 }: HeaderToolbarProfileMenuItemProps) {
   const dropdownMenu = useContext(DropdownMenuContext);
@@ -34,6 +38,7 @@ export function HeaderToolbarProfileMenuItem({
       <DropdownItem>
         {icon}
         {title}
+        {badge && <Label {...badge} className={cn(badge.className, S.badgeClassName)} />}
       </DropdownItem>
     </S.Link>
   );
