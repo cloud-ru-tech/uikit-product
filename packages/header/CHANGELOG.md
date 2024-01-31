@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.7.0 (2024-01-31)
+
+
+### Features
+
+* **[LK-3034](https://jira.sbercloud.tech/browse/LK-3034):** added header profile and MenuItem badge ([841f939](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/841f939a1bf6a56746440ee796706c638d23e231))
+
+
+
+
+
 ## 1.6.3 (2024-01-25)
 
 
