@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2024-02-01)
+
+
+### Features
+
+* **[FF-4163](https://jira.sbercloud.tech/browse/FF-4163):** add info-group ([fb7c2e6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fb7c2e6d270e15c482c1ca913bebfa11ed714d33))
+
+
+
+
+
 # 0.11.0 (2024-01-30)
 
 
