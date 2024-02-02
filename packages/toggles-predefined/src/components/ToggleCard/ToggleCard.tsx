@@ -4,6 +4,7 @@ import { useToggleGroup } from '@snack-uikit/toggles';
 
 export type ToggleCardProps = WithSupportProps<{
   title: string;
+  truncate?: Pick<NonNullable<Card.HeaderProps['truncate']>, 'title' | 'description'>;
   value: string;
   description?: string;
   emblem?: Card.HeaderProps['emblem'];
@@ -22,6 +23,7 @@ export function ToggleCard({
   size,
   value,
   promoBadge,
+  truncate,
   ...rest
 }: ToggleCardProps) {
   const { isChecked, handleClick } = useToggleGroup({ value });
@@ -41,6 +43,7 @@ export function ToggleCard({
           metadata={description}
           emblem={emblem}
           className={className}
+          truncate={truncate ? { title: truncate.title, metadata: truncate.description } : undefined}
           {...extractSupportProps(rest)}
         />
       }
