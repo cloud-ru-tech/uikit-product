@@ -28,7 +28,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@snack-uikit/card": "0.8.0",
+    "@snack-uikit/card": "0.9.4",
     "@snack-uikit/icons": "0.20.0",
     "@snack-uikit/truncate-string": "0.4.4",
     "@snack-uikit/typography": "0.6.1",

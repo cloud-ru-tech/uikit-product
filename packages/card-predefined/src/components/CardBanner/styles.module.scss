@@ -11,6 +11,7 @@
 .cardBannerLeft {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   gap: calc($dimension-050m + $dimension-1m);
 }
 
