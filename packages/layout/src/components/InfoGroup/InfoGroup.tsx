@@ -1,16 +1,16 @@
 import { ReactNode } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 
 import { InfoStroke } from '../InfoStroke';
 import styles from './styles.module.scss';
 
 export type InfoGroupProps = WithSupportProps<{
-  items: {
+  items: WithSupportProps<{
     label: ReactNode;
     value: ReactNode;
-  }[];
+  }>[];
   itemDefaultValue?: ReactNode;
   buttonText?: string;
   onClick?(): void;
@@ -21,10 +21,18 @@ export function InfoGroup({ items, itemDefaultValue, buttonText, onClick, showBu
   return (
     <>
       <div>
-        {items.map(({ label, value }, itemIdx, self) => {
+        {items.map(({ label, value, ...rest }, itemIdx, self) => {
           const notLast = itemIdx !== self.length - 1;
 
-          return <InfoStroke key={itemIdx} label={label} value={value || itemDefaultValue} bottomDivider={notLast} />;
+          return (
+            <InfoStroke
+              key={itemIdx}
+              label={label}
+              value={value || itemDefaultValue}
+              bottomDivider={notLast}
+              {...extractSupportProps(rest)}
+            />
+          );
         })}
       </div>
 
