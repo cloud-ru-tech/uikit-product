@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2024-02-06)
+
+
+### Features
+
+* **DPS-0000:** upd InfoGroup typing ([b19d12c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b19d12c9cc4e9b333cedf7c32d4455efb76581a6))
+
+
+
+
+
 # 0.12.0 (2024-02-01)
 
 
