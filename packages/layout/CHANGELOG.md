@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.1 (2024-02-09)
+
+
+### Bug Fixes
+
+* **[FF-4241](https://jira.sbercloud.tech/browse/FF-4241):** add export HeadLine ([98c8950](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/98c8950dca94dfe4e886a7a947404b3ab42edf3d))
+
+
+
+
+
 # 0.13.0 (2024-02-06)
 
 
