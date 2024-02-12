@@ -179,7 +179,7 @@ export function MultiSelect(props: MultiSelectProps) {
             ignoreCase: true,
             ignoreAccents: false,
             trim: true,
-            matchFrom: 'start' as const,
+            matchFrom: 'any' as const,
           })}
           inputValue={inputValue}
           menuIsOpen={isOpened || undefined}
