@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.34.0 (2024-02-12)
+
+
+### Features
+
+* **[LK-1224](https://jira.sbercloud.tech/browse/LK-1224):** MultiSelect search of the entire string ([d0fcfa9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0fcfa92054ad581d7a3eda647388950d5fb752f))
+
+
+
+
+
 # 0.33.0 (2024-01-25)
 
 
