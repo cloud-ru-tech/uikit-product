@@ -10,6 +10,7 @@ export enum Masks {
   IpV4Address = 'IpV4Address',
   IpV4AddressWithMask = 'IpV4AddressWithMask',
   Date = 'Date',
+  Uuid = 'Uuid',
 }
 
 export const MASKS_CONFIG: Record<Masks, InputMaskOptions> = {
@@ -44,6 +45,13 @@ export const MASKS_CONFIG: Record<Masks, InputMaskOptions> = {
       d: { mask: IMask.MaskedRange, placeholderChar: 'Д', from: 1, to: 31, maxLength: 2 },
       m: { mask: IMask.MaskedRange, placeholderChar: 'M', from: 1, to: 12, maxLength: 2 },
       Y: { mask: IMask.MaskedRange, placeholderChar: 'Г', from: 1900, to: 2100, maxLength: 4 },
+    },
+  },
+  [Masks.Uuid]: {
+    mask: 'hhhhhhhh-hhhh-hhhh-hhhh-hhhhhhhhhhhh',
+    placeholderChar: '_',
+    definitions: {
+      h: /[0-9a-f]/,
     },
   },
 };
