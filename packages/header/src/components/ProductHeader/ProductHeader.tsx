@@ -1,27 +1,27 @@
-import { ReactElement, useState } from 'react';
+import { ReactElement, useCallback, useState } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
-import { Droplist } from '@snack-uikit/droplist';
 import { QuestionSVG, SettingsSVG } from '@snack-uikit/icons';
+import { Droplist } from '@snack-uikit/list';
 
 import {
   CloudRuLogo,
-  DrawerMenu,
+  DrawerMenuDesktop,
   DrawerMenuProps,
   HeaderLayout,
-  Notifications,
+  NotificationsPopover,
   NotificationsProps,
   Select,
   SelectProps,
   UserMenu,
   UserMenuProps,
-} from './components';
+} from '../../helperComponents';
 import styles from './styles.module.scss';
 
-type SettingOption = {
+export type SettingOption = {
   label: string;
   icon: ReactElement;
   onClick(): void;
@@ -77,6 +77,8 @@ export function ProductHeader({
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
+  const handleCloseMainMenu = useCallback(() => setIsMainMenuOpen(false), []);
+
   return (
     <>
       <HeaderLayout
@@ -119,25 +121,24 @@ export function ProductHeader({
           <>
             {settings?.length > 0 && (
               <Droplist
+                size='s'
                 open={isSettingsOpen}
                 onOpenChange={setIsSettingsOpen}
-                triggerElement={
-                  <ButtonFunction data-test-id='header__settings-menu-button' size='m' icon={<SettingsSVG />} />
-                }
+                items={settings.map(setting => ({
+                  'data-test-id': 'header__settings-item',
+                  content: {
+                    option: setting.label,
+                  },
+                  beforeContent: setting.icon,
+                  onClick: () => {
+                    setting.onClick();
+                    setIsSettingsOpen(false);
+                  },
+                }))}
                 placement='bottom-end'
+                trigger='clickAndFocusVisible'
               >
-                {settings.map(setting => (
-                  <Droplist.ItemSingle
-                    data-test-id='header__settings-item'
-                    key={setting.label}
-                    option={setting.label}
-                    icon={setting.icon}
-                    onClick={() => {
-                      setting.onClick();
-                      setIsSettingsOpen(false);
-                    }}
-                  />
-                ))}
+                <ButtonFunction data-test-id='header__settings-menu-button' size='m' icon={<SettingsSVG />} />
               </Droplist>
             )}
 
@@ -150,7 +151,7 @@ export function ProductHeader({
               />
             )}
 
-            {notifications && <Notifications {...notifications} />}
+            {notifications && <NotificationsPopover notifications={notifications} />}
 
             {userMenu && (
               <UserMenu
@@ -165,9 +166,9 @@ export function ProductHeader({
         }
       />
 
-      <DrawerMenu
+      <DrawerMenuDesktop
         open={isMainMenuOpen}
-        onClose={() => setIsMainMenuOpen(false)}
+        onClose={handleCloseMainMenu}
         links={links}
         pinnedCards={pinnedCards}
         allProducts={allProducts}

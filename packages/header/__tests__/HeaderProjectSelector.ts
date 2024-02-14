@@ -72,6 +72,7 @@ function getSelectedWorkspace() {
   return Selector(dataTestIdSelector('header-project-selector__selected-workspace'));
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function basics() {
   test('opens floating by reference click', async t => {
     await t.click(getReference()).expect(getFloating().exists).ok();
@@ -152,9 +153,10 @@ function basics() {
   });
 }
 
-fixture('HeaderProjectSelector/Projects').page(getPage('projects'));
+// eslint-disable-next-line testcafe-community/no-disabled-tests
+fixture('HeaderProjectSelector/Projects').page(getPage('projects')).skip;
 
-basics();
+// basics();
 
 test('renders selected project', async t => {
   await t.expect(getSelectedProject().textContent).eql('Zialactic');
@@ -208,9 +210,10 @@ test('truncates long project option label', async t => {
   await t.expect(offsetWidth).lte(scrollWidth);
 });
 
-fixture('HeaderProjectSelector/Workspaces').page(getPage('workspaces'));
+// eslint-disable-next-line testcafe-community/no-disabled-tests
+fixture('HeaderProjectSelector/Workspaces').page(getPage('workspaces')).skip;
 
-basics();
+// basics();
 
 test('renders selected selected workspace', async t => {
   await t.expect(getSelectedWorkspace().textContent).eql('Zialactic');

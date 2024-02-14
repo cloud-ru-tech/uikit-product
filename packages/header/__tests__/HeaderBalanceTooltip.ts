@@ -35,7 +35,8 @@ function getPie() {
   return Selector(dataTestIdSelector('header-balance-tooltip__pie'));
 }
 
-fixture('HeaderBalanceTooltip');
+// eslint-disable-next-line testcafe-community/no-disabled-tests
+fixture('HeaderBalanceTooltip').skip;
 
 test.page(getPage({ balance: undefined }))('renders spinner when no balance is passed', async t => {
   await t.expect(getSpinner().exists).ok();

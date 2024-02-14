@@ -51,6 +51,8 @@
     "@sbercloud/ft-storybook-deps-graph-addon": "0.1.1",
     "@sbercloud/ft-storybook-readme-addon": "3.0.1",
     "@snack-uikit/chips": "0.10.5",
+    "@snack-uikit/icons": "0.20.1",
+    "@snack-uikit/locale": "0.4.0",
     "@snack-uikit/toaster": "0.5.4",
     "@storybook/addon-actions": "7.0.10",
     "@storybook/addon-essentials": "7.0.10",

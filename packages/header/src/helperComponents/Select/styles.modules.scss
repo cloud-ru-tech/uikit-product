@@ -1,15 +1,6 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
-.divider {
-  height: $dimension-3m;
-}
-
-.breadcrumbs {
-  padding: $dimension-1m;
-  margin: calc(0px - $dimension-1m) 0;
-}
-
 .select {
   display: flex;
   align-items: center;
@@ -41,4 +32,42 @@
       $opacity-a008
     );
   }
+}
+
+.contentLayout {
+  display: flex;
+  align-items: center;
+  gap: $dimension-050m;
+}
+
+.separator {
+  @include composite-var($sans-body-m);
+
+  display: flex;
+  padding: 0 $dimension-050m;
+  color: $sys-neutral-text-disabled;
+}
+
+.project {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-light;
+  max-width: calc(2 * $dimension-10m);
+}
+
+.platform {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-light;
+  max-width: calc(2 * $dimension-10m);
+}
+
+.selectGroup {
+  gap: $dimension-2m;
+  padding: calc($dimension-2m - $dimension-050m) $dimension-2m;
+
+  min-height: calc(36 * $dimension-1m);
+
+  display: grid;
+  grid-template-columns: repeat(3, 232px);
 }

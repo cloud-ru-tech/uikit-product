@@ -1,0 +1,53 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 $dimension-2m;
+  height: $dimension-6m;
+  gap: $dimension-2m;
+  justify-content: space-between;
+
+  background-color: $sys-neutral-background;
+  border-bottom: $border-width-012m $border-styles-solid $sys-neutral-decor-default;
+}
+
+.left {
+  display: flex;
+}
+
+.right {
+  display: flex;
+}
+
+.path {
+  display: flex;
+  align-items: center;
+  gap: $dimension-1m;
+}
+
+a.logo {
+  display: flex;
+  padding: $dimension-1m;
+  cursor: pointer;
+  border-radius: $dimension-050m;
+  // necessary to fix color change to MLSpace theme
+  color: #00D97B; /* stylelint-disable-line color-no-hex */
+
+  &:focus-visible {
+    @include outline-var($container-focused-s);
+
+    outline-color: $sys-available-complementary;
+  }
+}
+
+.footer {
+  height: 32px;
+  box-sizing: border-box;
+  background-color: $sys-neutral-background;
+  border-bottom: $border-width-012m $border-styles-solid $sys-neutral-decor-default;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}

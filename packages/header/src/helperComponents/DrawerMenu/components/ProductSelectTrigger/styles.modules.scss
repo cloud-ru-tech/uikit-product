@@ -1,0 +1,165 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.drawer {
+  & [data-test-id='drawer__close-button'] {
+    display: none;
+  }
+}
+
+.drawerBody {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  min-height: $dimension-2m;
+  color: $sys-neutral-text-main;
+  background-color: $sys-neutral-background !important;
+  padding-left: calc($dimension-4m - $dimension-050m);
+}
+
+.menu {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.leftWrapper {
+  display: flex;
+  gap: $dimension-2m;
+  padding: $dimension-4m 0;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftTop {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-1m;
+  flex-grow: 1;
+}
+
+.selectProduct {
+  padding-left: $dimension-050m;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  padding-left: $dimension-050m;
+}
+
+.footerLinksDivider {
+  padding: $dimension-1m 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-2m;
+  padding-left: $dimension-050m;
+  padding-top: $dimension-1m;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-2m;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.pinnedCards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  gap: $dimension-2m;
+}
+
+.pinnedCard {
+  flex: 1 0 calc(50% - $dimension-1m);
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-2m;
+  padding: $dimension-4m $dimension-4m $dimension-4m $dimension-2m;
+}
+
+.noData {
+  @include composite-var($sans-body-l);
+
+  color: $sys-neutral-text-light;
+  display: flex;
+  justify-content: center;
+  padding: $dimension-2m;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  padding: 0 calc($dimension-1m + $dimension-050m - $border-width-012m);
+  gap: calc($dimension-1m + $dimension-050m);
+  border: $border-width-012m solid transparent;
+  background-color: $sys-neutral-background1-level;
+  width: calc(32 * $dimension-1m);
+  height: $dimension-8m;
+  border-radius: $dimension-050m;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: $box-shadow-elevation-level2;
+  }
+
+  &:focus-visible,
+  &[data-open] {
+    @include outline-var($container-focused-m);
+
+    box-shadow: $box-shadow-elevation-level2;
+    outline-color: $sys-primary-decor-activated;
+    border-color: $sys-primary-accent-default;
+  }
+}
+
+.logo {
+  width: $dimension-5m;
+  height: $dimension-5m;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  > * {
+    transform: scale(1.6667);
+  }
+}
+
+.droplist {
+  padding: $dimension-1m calc($dimension-1m + $dimension-050m);
+}
+
+.selectedSection {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.selectedHeading {
+  @include composite-var($sans-body-s);
+
+  color: $sys-neutral-text-light;
+}
+
+.selectedOption {
+  @include composite-var($sans-title-m);
+
+  color: $sys-neutral-text-main;
+}
+
+.chevron {
+  flex-shrink: 0;
+
+  color: $sys-neutral-text-light;
+}

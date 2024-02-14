@@ -1,0 +1,21 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.logo {
+  color: $sys-primary-on-accent;
+  height: $dimension-3m;
+  width: $dimension-3m;
+  border-radius: $dimension-050m;
+
+  &[data-platform='evolution'] {
+    // necessary to fix color change to MLSpace theme
+    background-color: #389F74; /* stylelint-disable-line color-no-hex */
+  }
+
+  &[data-platform='advanced'] {
+    background-color: $sys-red-accent-default;
+  }
+
+  &[data-platform='mlspace'] {
+    background-color: $sys-blue-accent-default;
+  }
+}

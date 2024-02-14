@@ -1,0 +1,116 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.divider {
+  height: $dimension-3m;
+}
+
+.headerMobile {
+  display: flex;
+  height: 48px;
+  padding: 0px 8px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex: 1 0 0;
+
+  border-bottom: 1px solid $sys-neutral-decor-default;
+  background: $sys-neutral-background;
+}
+
+.logo {
+  display: flex;
+  padding: $dimension-1m;
+  cursor: pointer;
+  border-radius: $dimension-050m;
+  color: $sys-primary-accent-default;
+
+  &:focus-visible {
+    @include outline-var($container-focused-s);
+
+    outline-color: $sys-available-complementary;
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  padding: 16px;
+  background-color: $sys-neutral-background;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobileSelectProduct {
+  width: auto;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  gap: $dimension-050m;
+  color: $sys-neutral-text-light;
+  cursor: pointer;
+}
+
+.contentLayout {
+  display: flex;
+  align-items: center;
+  gap: $dimension-050m;
+}
+
+.separator {
+  @include composite-var($sans-body-m);
+
+  display: flex;
+  padding: 0 $dimension-050m;
+  color: $sys-neutral-text-disabled;
+}
+
+.project {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-light;
+  max-width: calc(2 * $dimension-10m);
+}
+
+.platform {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-light;
+  max-width: calc(2 * $dimension-10m);
+}
+
+.selectGroup {
+  padding: 0 16px 16px;
+  box-sizing: border-box;
+}
+
+.breadcrumbs {
+  > div {
+    width: auto;
+  }
+}
+
+.nestedDrawer {
+  & [data-test-id='drawer__close-button'] {
+    transform: translate(16px, -16px);
+  }
+}
+
+.notificationsDrawer {
+  & [data-test-id='drawer__close-button'] {
+    z-index: 1;
+    transform: translate(16px, -16px);
+  }
+}
+
+.nestedHeader {
+  > div {
+    padding: 16px;
+  }
+}

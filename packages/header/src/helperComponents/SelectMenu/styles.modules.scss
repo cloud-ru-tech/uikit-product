@@ -1,0 +1,20 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.contentLayout {
+  display: flex;
+  align-items: center;
+  gap: $dimension-050m;
+}
+
+.project {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-light;
+  max-width: calc(2 * $dimension-10m);
+}
+
+.selectMenu {
+  display: grid;
+  grid-template-columns: repeat(3, 232px);
+}

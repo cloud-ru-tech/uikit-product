@@ -1,0 +1,88 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-2m;
+
+  position: relative;
+
+  // width: 232px;
+}
+
+.item {
+  width: 100%;
+  * div {
+    overflow: hidden;
+  }
+}
+
+.title {
+  @include composite-var($sans-title-m);
+
+  display: flex;
+  justify-content: space-between;
+  gap: $dimension-1m;
+  // width: calc(29 * $dimension-1m);
+}
+
+.search {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  transition-timing-function: ease-in-out;
+  transition-property: max-width;
+  transition-duration: 300ms;
+
+  background-color: $sys-neutral-background2-level;
+  width: 100%;
+  max-width: 0;
+  overflow: hidden;
+
+  &[data-transition-status='entering'],
+  &[data-transition-status='entered'] {
+    max-width: 100%;
+  }
+
+  &[data-transition-status='exiting'],
+  &[data-transition-status='exited'] {
+    max-width: 0;
+  }
+}
+
+.itemsGroups {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-2m;
+}
+
+.itemsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-025m;
+}
+
+.itemsGroupSubheading {
+  @include composite-var($sans-body-s);
+
+  color: $sys-neutral-text-light;
+}
+
+.addButton {
+  margin-top: auto;
+}
+
+// TODO: fix
+.divider[data-orientation='vertical'][data-weight='regular'] {
+  height: auto;
+}
+
+.noData {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-light;
+  display: flex;
+  justify-content: center;
+}

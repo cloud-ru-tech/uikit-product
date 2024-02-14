@@ -8,6 +8,8 @@ import { useDarkMode } from 'storybook-dark-mode';
 import { PARAM_CAN_ADD_CUSTOM_BRAND_KEY, PARAM_COLOR_MAP_KEY, PARAM_KEY } from '@sbercloud/ft-storybook-brand-addon';
 import { Alert } from '@sbercloud/uikit-product-alert';
 import { Link } from '@sbercloud/uikit-product-link';
+import { Sprite, SpriteSVG } from '@snack-uikit/icons';
+import { LocaleProvider } from '@snack-uikit/locale';
 
 import { ConfigProvider } from '../packages/utils/src';
 import { BADGE, Brand, BRAND_TO_THEME_MAP, DEFAULT_BRAND_COLORS_MAP, DEFAULT_BRAND_MAP, Mode } from './constants';
@@ -30,6 +32,7 @@ const decorators: DecoratorFunction[] = [
     return (
       // Add global styles and theme variables
       <div id='story-root'>
+        <Sprite content={SpriteSVG as unknown as string} />
         <FormProvider {...methods}>
           {Array.isArray(badges) && badges.includes(BADGE.DEPRECATED) && (
             <>
@@ -52,12 +55,14 @@ const decorators: DecoratorFunction[] = [
               <br />
             </>
           )}
-          <ConfigProvider
-            theme={BRAND_TO_THEME_MAP[normalizedBrand][mode] || ConfigProvider.themes.Purple}
-            languageCode={locale || LanguageCodeType.ruRU}
-          >
-            <Story />
-          </ConfigProvider>
+          <LocaleProvider lang={locale || LanguageCodeType.ruRU}>
+            <ConfigProvider
+              theme={BRAND_TO_THEME_MAP[normalizedBrand][mode] || ConfigProvider.themes.Purple}
+              languageCode={locale || LanguageCodeType.ruRU}
+            >
+              <Story />
+            </ConfigProvider>
+          </LocaleProvider>
         </FormProvider>
       </div>
     );
