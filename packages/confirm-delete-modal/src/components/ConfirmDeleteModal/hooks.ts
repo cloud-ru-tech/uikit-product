@@ -4,7 +4,7 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers';
 
-export function useTextFieldValidation(target: string) {
+export function useTextFieldValidation(target: string | undefined) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const ref = useRef<HTMLInputElement>(null);
@@ -21,7 +21,7 @@ export function useTextFieldValidation(target: string) {
   };
 
   const handleSubmit = (cb: () => void) => {
-    if (target === value) {
+    if (target === value || target === undefined) {
       return () => {
         setError('');
         cb();

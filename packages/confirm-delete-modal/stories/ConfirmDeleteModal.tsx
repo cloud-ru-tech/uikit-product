@@ -3,6 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import { ButtonFilled } from '@snack-uikit/button';
+import { TruncateString } from '@snack-uikit/truncate-string';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -25,7 +26,18 @@ function Template({ ...args }: ConfirmDeleteModalProps) {
   return (
     <>
       <ButtonFilled label='Удалить' onClick={() => setIsOpen(true)} size='m' />
-      <ConfirmDeleteModal {...args} open={isOpen} onClose={() => setIsOpen(false)} onApprove={action('onApprove')} />
+      <ConfirmDeleteModal
+        {...args}
+        subtitle={
+          <>
+            Вы действительно хотите удалить
+            <TruncateString text={`${args.targetName}?`} variant={'middle'} hideTooltip />
+          </>
+        }
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        onApprove={action('onApprove')}
+      />
     </>
   );
 }
@@ -34,10 +46,7 @@ export const confirmDeleteModal: StoryFn<ConfirmDeleteModalProps> = Template.bin
 
 confirmDeleteModal.args = {
   title: 'Удаление',
-  target: {
-    type: 'инстанс',
-    name: 'какое-то_очень_длинное_значение_удаляемого_инстанса',
-  },
+  targetName: 'какое-то_очень_длинное_значение_удаляемого_инстанса',
 };
 
 confirmDeleteModal.argTypes = {};

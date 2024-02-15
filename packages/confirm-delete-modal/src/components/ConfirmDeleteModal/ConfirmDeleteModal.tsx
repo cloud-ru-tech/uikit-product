@@ -1,33 +1,34 @@
+import { ReactNode } from 'react';
+
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { FieldText } from '@snack-uikit/fields';
 import { Modal, ModalProps } from '@snack-uikit/modal';
-import { TruncateString } from '@snack-uikit/truncate-string';
-import { Typography } from '@snack-uikit/typography';
 
-import { CopyButton } from '../../helperComponents';
-import { DictionaryPropertyAsFn, textProvider, Texts } from '../../helpers';
+import { InputConfirm } from '../../helperComponents';
+import { isDefined, textProvider, Texts } from '../../helpers';
 import { useTextFieldValidation } from './hooks';
-import styles from './styles.module.scss';
 
-export type ConfirmDeleteModalProps = Pick<ModalProps, 'open' | 'title' | 'onClose' | 'mode'> & {
-  target: {
-    type: string;
-    name: string;
-  };
+export type ConfirmDeleteModalProps = Pick<ModalProps, 'open' | 'title' | 'titleTooltip' | 'onClose'> & {
+  targetName?: string;
   onApprove(): void;
-  loading?: boolean;
+  isDeleting?: boolean;
+  subtitle?: ReactNode;
+  additionalContent?: React.ReactNode;
 };
 
 export function ConfirmDeleteModal({
-  target,
+  targetName,
+  additionalContent,
+  subtitle,
+  isDeleting,
   onApprove,
   onClose,
-  loading = false,
   ...restProps
 }: ConfirmDeleteModalProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const { value, onChange, reset, handleSubmit, error, ref } = useTextFieldValidation(target.name);
+  const withInputConfirmation = isDefined(targetName);
+
+  const { reset, handleSubmit, ...inputProps } = useTextFieldValidation(targetName);
 
   const handleClose = () => {
     onClose();
@@ -47,14 +48,7 @@ export function ConfirmDeleteModal({
   return (
     <Modal
       {...restProps}
-      subtitle={
-        (
-          <>
-            {textProvider<DictionaryPropertyAsFn>(languageCode, Texts.Sure)(target.type)}
-            <TruncateString text={`${target.name}?`} variant={'middle'} hideTooltip />
-          </>
-        ) as unknown as string
-      }
+      subtitle={subtitle as unknown as string}
       onClose={handleClose}
       additionalButton={{
         label: textProvider<string>(languageCode, Texts.Cancel),
@@ -63,37 +57,18 @@ export function ConfirmDeleteModal({
       approveButton={{
         appearance: 'destructive',
         label: textProvider<string>(languageCode, Texts.Delete),
+        loading: isDeleting,
+        disabled: isDeleting,
         onClick: handleApprove,
         loading,
       }}
       content={
-        <>
-          <div className={styles.textField}>
-            <Typography.SansLabelL className={styles.content}>
-              {textProvider<string>(languageCode, Texts.FieldLabel)}
-            </Typography.SansLabelL>
-
-            <Typography.SansBodyM tag='h5'>
-              <div className={styles.copyValue}>
-                <TruncateString text={target.name} variant='middle' />
-                <CopyButton valueToCopy={target.name} />
-              </div>
-            </Typography.SansBodyM>
-          </div>
-
-          <FieldText
-            ref={ref}
-            required
-            size='m'
-            placeholder={textProvider<string>(languageCode, Texts.EnterName)}
-            value={value}
-            onChange={onChange}
-            hint={error}
-            validationState={error ? 'error' : 'default'}
-            readonly={loading}
-            showCopyButton={false}
-          />
-        </>
+        (additionalContent || withInputConfirmation) && (
+          <>
+            {additionalContent}
+            {withInputConfirmation && <InputConfirm targetName={targetName} {...inputProps} />}
+          </>
+        )
       }
     />
   );
