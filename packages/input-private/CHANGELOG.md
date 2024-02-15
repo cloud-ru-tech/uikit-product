@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2024-02-15)
+
+
+### Features
+
+* **[LK-2834](https://jira.sbercloud.tech/browse/LK-2834):** added uuid mask ([7dd0fd4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7dd0fd41b01a33f588b7d848b7a64dfe1f492928))
+
+
+
+
+
 ## 3.3.13 (2024-01-23)
 
 ### Only dependencies have been changed

@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.17.16 (2024-02-15)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-filter@0.19.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/filter/CHANGELOG.md)
+* [@sbercloud/uikit-product-input-private@3.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/input-private/CHANGELOG.md)
+
+
+
+
+
 ## 0.17.15 (2024-02-12)
 
 ### Only dependencies have been changed
