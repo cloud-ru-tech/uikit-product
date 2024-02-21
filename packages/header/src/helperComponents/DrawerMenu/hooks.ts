@@ -57,6 +57,7 @@ export function useSearch({ links }: UseSearchProps) {
 export function useLinks({ searchValue, setSearchValue, links, drawerOpen }: UseScrollProps) {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const scrollRef = useRef<HTMLElement>(null);
+  const searchPanelRef = useRef<HTMLDivElement>(null);
 
   const firstLinkId = links?.[0].id;
   const [selectedLink, setSelectedLink] = useState(firstLinkId);
@@ -107,11 +108,23 @@ export function useLinks({ searchValue, setSearchValue, links, drawerOpen }: Use
     setSearchValue('');
 
     setTimeout(() => {
-      document.getElementById(link.id)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      scrollRef.current?.scrollTo({
+        left: 0,
+        top: (document.getElementById(link.id)?.offsetTop || 0) - (searchPanelRef.current?.offsetHeight || 0),
+        behavior: 'smooth',
+      });
     }, 0);
   };
 
   const isLinkSelected = (link: LinksGroup) => link.id === selectedLink && !searchValue;
 
-  return { cardsRef, scrollRef, addScrollHandler, removeScrollHandler, handleLinkClick, isLinkSelected };
+  return {
+    cardsRef,
+    scrollRef,
+    searchPanelRef,
+    addScrollHandler,
+    removeScrollHandler,
+    handleLinkClick,
+    isLinkSelected,
+  };
 }

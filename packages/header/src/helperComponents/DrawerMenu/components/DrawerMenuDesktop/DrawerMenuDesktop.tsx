@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { MouseEvent, useCallback, useState } from 'react';
 
 import { useLanguage } from '@sbercloud/uikit-product-utils';
@@ -31,13 +32,21 @@ export function DrawerMenuDesktop({
   onProductChange,
 }: DrawerMenuProps) {
   const { searchValue, setSearchValue, filteredLinks } = useSearch({ links });
-  const { cardsRef, scrollRef, addScrollHandler, removeScrollHandler, isLinkSelected, handleLinkClick } = useLinks({
+  const {
+    cardsRef,
+    scrollRef,
+    searchPanelRef,
+    addScrollHandler,
+    removeScrollHandler,
+    isLinkSelected,
+    handleLinkClick,
+  } = useLinks({
     links,
     searchValue,
     setSearchValue,
     drawerOpen: open,
   });
-  const showRightSection = links || pinnedCards;
+  const showRightSection = links?.length || pinnedCards;
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -114,7 +123,7 @@ export function DrawerMenuDesktop({
                 </div>
 
                 <Scroll>
-                  {links && (
+                  {links && links.length && (
                     <div className={styles.links}>
                       {links.map(link => (
                         <Link
@@ -161,7 +170,7 @@ export function DrawerMenuDesktop({
               <Scroll ref={scrollRef}>
                 <div className={styles.rightContent}>
                   {pinnedCards && (
-                    <div className={styles.pinnedCards}>
+                    <div className={cn(styles.pinnedCards, styles.rightContentItem)}>
                       {pinnedCards.map(item => (
                         <Card
                           className={styles.pinnedCard}
@@ -178,45 +187,46 @@ export function DrawerMenuDesktop({
                   )}
 
                   {links && (
-                    <Search
-                      size='m'
-                      placeholder={textProvider(languageCode, Texts.SearchByServices)}
-                      value={searchValue}
-                      onChange={setSearchValue}
-                      data-test-id='header__drawer-menu-search'
-                    />
+                    <div className={cn(styles.rightContentItem, styles.searchItem)} ref={searchPanelRef}>
+                      <Search
+                        size='m'
+                        placeholder={textProvider(languageCode, Texts.SearchByServices)}
+                        value={searchValue}
+                        onChange={setSearchValue}
+                        data-test-id='header__drawer-menu-search'
+                      />
+                    </div>
                   )}
 
                   {filteredLinks &&
                     filteredLinks.map((group, index) => (
-                      <GroupCard
-                        key={group.id}
-                        id={group.id}
-                        title={group.label}
-                        ref={el => (cardsRef.current[index] = el)}
-                      >
-                        {group.items.map(item => (
-                          <Card
-                            outline
-                            key={item.label}
-                            onClick={wrappedClick(item)}
-                            disabled={item.disabled}
-                            href={item.href}
-                            header={
-                              <Card.Header
-                                title={item.label ?? ''}
-                                emblem={{ icon: item.icon, decor: false }}
-                                size='s'
-                              />
-                            }
-                            size='s'
-                          />
-                        ))}
-                      </GroupCard>
+                      <div className={styles.rightContentItem} key={group.id}>
+                        <GroupCard id={group.id} title={group.label} ref={el => (cardsRef.current[index] = el)}>
+                          {group.items.map(item => (
+                            <Card
+                              outline
+                              key={item.label}
+                              onClick={wrappedClick(item)}
+                              disabled={item.disabled}
+                              href={item.href}
+                              header={
+                                <Card.Header
+                                  title={item.label ?? ''}
+                                  emblem={{ icon: item.icon, decor: false }}
+                                  size='s'
+                                />
+                              }
+                              size='s'
+                            />
+                          ))}
+                        </GroupCard>
+                      </div>
                     ))}
 
                   {filteredLinks?.length === 0 && (
-                    <div className={styles.noData}>{textProvider(languageCode, Texts.NoData)}</div>
+                    <div className={styles.rightContentItem}>
+                      <div className={styles.noData}>{textProvider(languageCode, Texts.NoData)}</div>
+                    </div>
                   )}
                 </div>
               </Scroll>

@@ -69,7 +69,6 @@
 .right {
   display: flex;
   flex-direction: column;
-  gap: $dimension-2m;
   flex-grow: 1;
   min-width: 0;
 }
@@ -84,13 +83,33 @@
 
 .pinnedCard {
   flex: 1 0 calc(50% - $dimension-1m);
+  z-index: 2;
 }
 
 .rightContent {
   display: flex;
   flex-direction: column;
-  gap: $dimension-2m;
-  padding: $dimension-4m $dimension-4m $dimension-4m $dimension-2m;
+  gap:0;
+  padding: 0 $dimension-4m 0 $dimension-2m;
+}
+
+.rightContentItem {
+  padding-top: $dimension-4m;
+  margin-bottom: calc($dimension-2m * -1);
+
+  &:last-child {
+    margin-bottom: 0;
+    padding-bottom: $dimension-4m;
+  }
+}
+
+.searchItem {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  background-color: $sys-neutral-background;
+  padding-bottom: $dimension-2m;
+  margin-bottom: calc($dimension-4m * -1);
 }
 
 .noData {
