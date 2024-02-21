@@ -10,7 +10,7 @@ $prefix-height: simple-var($sans-headline-m-line-height);
 .form {
   display: flex;
   flex-direction: column;
-  gap: $dimension-3m;
+  gap: $dimension-4m;
   margin: 0 auto;
   width: 800px;
   padding: calc($dimension-7m - $prefix-height) $dimension-7m $dimension-7m;
@@ -20,4 +20,16 @@ $prefix-height: simple-var($sans-headline-m-line-height);
   display: flex;
   align-items: center;
   height: $prefix-height;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainActions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }

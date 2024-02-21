@@ -1,20 +1,76 @@
 import { Meta, StoryFn } from '@storybook/react';
 
 import { ButtonFunction } from '@snack-uikit/button';
-import { ChevronLeftSVG } from '@snack-uikit/icons';
+import { ChevronLeftSVG, PlaceholderSVG } from '@snack-uikit/icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { PageForm, PageFormProps } from '../src/components/Page';
+import {
+  BUTTON_PRIMARY_VARIANT,
+  BUTTON_SECONDARY_VARIANT,
+  ButtonPrimaryVariant,
+  ButtonSecondaryVariant,
+  PageForm,
+  PageFormProps,
+} from '../src/components/Page';
 
 export default {
   title: 'Snack UIkit/Layout/PageForm',
   component: PageForm,
 } as Meta;
 
-const Template: StoryFn<PageFormProps & { showPrefix: boolean }> = ({ showPrefix, prefix, ...args }) => (
-  <PageForm {...args} prefix={showPrefix ? prefix : null} />
+const Template: StoryFn<
+  PageFormProps & {
+    showPrefix: boolean;
+    showFooter: boolean;
+    showSecondaryButton: boolean;
+    showAdditionalButton: boolean;
+    buttonPrimaryVariant: ButtonPrimaryVariant;
+    buttonSecondaryVariant: ButtonSecondaryVariant;
+    showButtonTooltip: boolean;
+  }
+> = ({
+  showPrefix,
+  prefix,
+  showFooter,
+  footer,
+  showAdditionalButton,
+  showSecondaryButton,
+  buttonPrimaryVariant,
+  buttonSecondaryVariant,
+  showButtonTooltip,
+  ...args
+}) => (
+  <PageForm
+    {...args}
+    prefix={showPrefix ? prefix : undefined}
+    footer={
+      showFooter
+        ? {
+            ...footer,
+            buttonPrimary: {
+              ...footer?.buttonPrimary,
+              variant: buttonPrimaryVariant,
+              tooltip: showButtonTooltip ? footer?.buttonPrimary.tooltip : undefined,
+            },
+            buttonSecondary: showSecondaryButton
+              ? {
+                  ...footer?.buttonSecondary,
+                  variant: buttonSecondaryVariant,
+                  tooltip: showButtonTooltip ? footer?.buttonSecondary?.tooltip : undefined,
+                }
+              : undefined,
+            buttonAdditional: showAdditionalButton
+              ? {
+                  ...footer?.buttonAdditional,
+                  tooltip: showButtonTooltip ? footer?.buttonAdditional?.tooltip : undefined,
+                }
+              : undefined,
+          }
+        : undefined
+    }
+  />
 );
 
 export const pageForm = Template.bind({});
@@ -22,14 +78,52 @@ export const pageForm = Template.bind({});
 pageForm.args = {
   title: 'Lorem ipsum dolor',
   prefix: <ButtonFunction label='Go back' icon={<ChevronLeftSVG />} iconPosition='before' />,
+  footer: {
+    buttonPrimary: {
+      variant: 'create',
+      tooltip: { tip: 'Primary Example tip' },
+    },
+    buttonSecondary: {
+      variant: 'cancel',
+      tooltip: { tip: 'Secondary Example tip' },
+    },
+    buttonAdditional: {
+      label: 'Label text',
+      icon: <PlaceholderSVG />,
+      tooltip: { tip: 'Additional Example tip' },
+    },
+  },
   children:
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci aliquid amet atque, consectetur deleniti dolorem dolorum ducimus eaque esse et fugiat hic illum inventore ipsum iure laudantium mollitia nemo perspiciatis quasi quos reiciendis ullam, veniam voluptates voluptatibus? Ad, laborum?',
   showPrefix: true,
+  showFooter: true,
+  buttonPrimaryVariant: 'create',
+  buttonSecondaryVariant: 'cancel',
+  showSecondaryButton: true,
+  showAdditionalButton: true,
+  showButtonTooltip: false,
 };
 
 pageForm.argTypes = {
   showPrefix: { name: '[Stories]: show prefix' },
+  showFooter: { name: '[Stories]: show footer' },
+  buttonPrimaryVariant: {
+    name: '[Stories]: show footer -> button primary variant',
+    if: { arg: 'showFooter', eq: true },
+    control: 'radio',
+    options: Object.values(BUTTON_PRIMARY_VARIANT),
+  },
+  buttonSecondaryVariant: {
+    name: '[Stories]: show footer -> button secondary variant',
+    if: { arg: 'showFooter', eq: true },
+    control: 'radio',
+    options: Object.values(BUTTON_SECONDARY_VARIANT),
+  },
+  showSecondaryButton: { name: '[Stories]: show footer -> button secondary', if: { arg: 'showFooter', eq: true } },
+  showAdditionalButton: { name: '[Stories]: show footer -> button additional', if: { arg: 'showFooter', eq: true } },
+  showButtonTooltip: { name: '[Stories]: show button tooltips', if: { arg: 'showFooter', eq: true } },
   prefix: { table: { disable: true } },
+  footer: { table: { disable: true } },
 };
 
 pageForm.parameters = {
