@@ -29,11 +29,11 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-utils": "3.3.1",
-    "@snack-uikit/button": "0.15.1",
-    "@snack-uikit/fields": "0.11.2",
-    "@snack-uikit/icons": "0.20.0",
-    "@snack-uikit/modal": "0.9.6",
-    "@snack-uikit/truncate-string": "0.4.5",
+    "@snack-uikit/button": "0.16.1",
+    "@snack-uikit/fields": "0.14.2",
+    "@snack-uikit/icons": "0.20.1",
+    "@snack-uikit/modal": "0.9.12",
+    "@snack-uikit/truncate-string": "0.4.8",
     "@snack-uikit/typography": "0.6.1",
     "copy-to-clipboard": "3.3.3"
   }
