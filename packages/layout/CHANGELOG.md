@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.14.0 (2024-02-22)
+
+
+### Features
+
+* **[PDS-18](https://jira.sbercloud.tech/browse/PDS-18):** add footer to page form ([7f267e6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7f267e67e1da3cab34da82a702fa3c3a6cb278df))
+* **FF-00:** add tooltip for buttons in EmptyBlock ([86f331c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/86f331ce7a1ceb235e4aed648a8f44e5a3af37ab))
+
+
+
+
+
 ## 0.13.1 (2024-02-09)
 
 
