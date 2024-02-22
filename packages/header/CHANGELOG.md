@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2024-02-22)
+
+
+### Features
+
+* **[FF-4075](https://jira.sbercloud.tech/browse/FF-4075):** add droplist to projects select items ([dee03dd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dee03dd9d13731095f48e02351a26fab69a130ab))
+* **[FF-4075](https://jira.sbercloud.tech/browse/FF-4075):** add mobile header, notifications update ([949a54e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/949a54eb63a99513ee9773e4927dd68ad46fe02a))
+* **[FF-4075](https://jira.sbercloud.tech/browse/FF-4075):** add prop hidden to filter links ([0bee611](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0bee6119580b78e08b5ecb0216a84a63e7b320b8))
+* **[FF-4317](https://jira.sbercloud.tech/browse/FF-4317):** add sticky search ([48479fb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/48479fbdb07f653617c70244dcb05686c3f53657))
+
+
+
+
+
 ## 1.7.1 (2024-02-15)
 
 ### Only dependencies have been changed
