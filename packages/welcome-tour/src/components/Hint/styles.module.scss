@@ -1,0 +1,43 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.hintWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-width: 250px;
+  max-width: 480px;
+  background: $sys-neutral-background2-level;
+  border-radius: 8px;
+}
+
+.headingContainer {
+  color: $sys-neutral-text-main;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.subHeading {
+  color: $sys-neutral-text-main;
+  margin-bottom: 16px;
+}
+
+.content {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stepButtons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}

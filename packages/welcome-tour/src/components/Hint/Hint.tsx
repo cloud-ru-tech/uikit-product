@@ -1,12 +1,13 @@
 import { MouseEvent } from 'react';
 import { TooltipRenderProps } from 'react-joyride';
 
-import { ButtonGhost, ButtonIcon, ButtonRound } from '@sbercloud/uikit-product-button';
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { ButtonFilled, ButtonSimple } from '@snack-uikit/button';
+import { Typography } from '@snack-uikit/typography';
 
 import { Steps } from '../Steps';
 import { TourStepExtended } from '../types';
-import * as S from './styled';
+import styles from './styles.module.scss';
 
 type TooltipButtonProps = {
   'aria-label': string;
@@ -14,7 +15,7 @@ type TooltipButtonProps = {
   onClick: (e: MouseEvent<HTMLElement>) => void;
   role: string;
   title: string;
-  text: string;
+  label: string;
 };
 
 type HintProps = {
@@ -36,43 +37,48 @@ export function Hint({
   tooltipProps,
 }: HintProps) {
   return (
-    <S.HintWrapper {...tooltipProps} data-test-id='welcome-tour-hint'>
-      <S.HeadingContainer>
-        <S.Heading data-test-id='welcome-tour-hint__title'>{step.title}</S.Heading>
-        <ButtonIcon
-          data-test-id='welcome-tour-hint__icon-close'
-          {...skipProps}
-          variant={ButtonIcon.variants.Strong}
-          icon={<CloseInterfaceSVG />}
-        />
-      </S.HeadingContainer>
-      {step.subtitle && <S.SubHeading data-test-id='welcome-tour-hint__subtitle'>{step.subtitle}</S.SubHeading>}
-      {step.content && <S.Content data-test-id='welcome-tour-hint__content'>{step.content}</S.Content>}
-      <S.Footer>
+    <div className={styles.hintWrapper} {...tooltipProps} data-test-id='welcome-tour-hint'>
+      <div className={styles.headingContainer}>
+        <Typography tag='h4' family='sans' purpose='title' size='m' data-test-id='welcome-tour-hint__title'>
+          {step.title}
+        </Typography>
+        <ButtonSimple data-test-id='welcome-tour-hint__icon-close' {...skipProps} icon={<CloseInterfaceSVG />} />
+      </div>
+      {step.subtitle && (
+        <Typography
+          tag='h4'
+          family='light'
+          purpose='title'
+          size='s'
+          className={styles.subHeading}
+          data-test-id='welcome-tour-hint__subtitle'
+        >
+          {step.subtitle}
+        </Typography>
+      )}
+      {step.content && (
+        <Typography
+          tag='h4'
+          family='sans'
+          purpose='body'
+          size='s'
+          className={styles.content}
+          data-test-id='welcome-tour-hint__content'
+        >
+          {step.content}
+        </Typography>
+      )}
+      <div className={styles.footer}>
         {step.content && <Steps stepsCount={size} currentStep={index} />}
-        <S.StepButtons>
-          {backButton && index !== 0 && (
-            <ButtonGhost
-              data-test-id='welcome-tour-hint__button-back'
-              {...backButton}
-              variant={ButtonGhost.variants.Primary}
-            />
-          )}
+        <div className={styles.stepButtons}>
+          {backButton && index !== 0 && <ButtonSimple data-test-id='welcome-tour-hint__button-back' {...backButton} />}
           {isLastStep ? (
-            <ButtonRound
-              data-test-id='welcome-tour-hint__button-close'
-              {...closeButton}
-              variant={ButtonRound.variants.Filled}
-            />
+            <ButtonFilled data-test-id='welcome-tour-hint__button-close' {...closeButton} />
           ) : (
-            <ButtonRound
-              data-test-id='welcome-tour-hint__button-next'
-              {...primaryButton}
-              variant={ButtonRound.variants.Filled}
-            />
+            <ButtonFilled data-test-id='welcome-tour-hint__button-next' {...primaryButton} />
           )}
-        </S.StepButtons>
-      </S.Footer>
-    </S.HintWrapper>
+        </div>
+      </div>
+    </div>
   );
 }

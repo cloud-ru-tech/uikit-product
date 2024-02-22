@@ -68,7 +68,7 @@ const JoyrideStepsWithoutContent: TourStepExtended[] = [
 ];
 
 const meta: Meta = {
-  title: 'Not stable/Welcome Tour',
+  title: 'Snack Uikit/Welcome Tour',
   component: WelcomeTour,
 };
 export default meta;
@@ -116,13 +116,13 @@ function Template() {
         tourStarted={tourStarted}
         setTourStarted={setTourStarted}
         primaryButtonProps={{
-          text: 'Вперёд',
+          label: 'Вперёд',
         }}
         backButtonProps={{
-          text: 'Назад',
+          label: 'Назад',
         }}
         closeButtonProps={{
-          text: 'Закрыть',
+          label: 'Закрыть',
           onClick: () => setSuccessFinal(true),
         }}
       />

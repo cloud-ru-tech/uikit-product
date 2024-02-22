@@ -40,15 +40,15 @@ type WelcomeTourProps = {
   tourStarted: boolean;
   setTourStarted(value: boolean): void;
   closeButtonProps: {
-    text: string;
+    label: string;
     onClick?(): void;
   };
   primaryButtonProps: {
-    text: string;
+    label: string;
     onClick?(): void;
   };
   backButtonProps?: {
-    text: string;
+    label: string;
     onClick?(): void;
   };
   customScrollOffset?: number;

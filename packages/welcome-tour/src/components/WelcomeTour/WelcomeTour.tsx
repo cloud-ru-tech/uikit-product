@@ -1,14 +1,15 @@
 import { forwardRef } from 'react';
 import JoyRide, { CallBackProps, STATUS, TooltipRenderProps } from 'react-joyride';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+
 import { Hint } from '../Hint';
-import { COLORS } from '../Hint/themes';
 import { TourStepExtended } from '../types';
 
 const customColors = {
   options: {
-    arrowColor: `var(${COLORS.container.background})`,
-    overlayColor: `var(${COLORS.container.overlay})`,
+    arrowColor: themeVars.sys.neutral.background2Level,
+    overlayColor: themeVars.sys.blackout,
   },
 };
 
@@ -26,15 +27,15 @@ export type WelcomeTourProps = {
   tourStarted: boolean;
   setTourStarted(value: boolean, status: CallBackProps['status']): void;
   closeButtonProps: {
-    text: string;
+    label: string;
     onClick?(): void;
   };
   primaryButtonProps: {
-    text: string;
+    label: string;
     onClick?(): void;
   };
   backButtonProps?: {
-    text: string;
+    label: string;
     onClick?(): void;
   };
   customScrollOffset?: number;
@@ -66,7 +67,7 @@ const WelcomeTourWithRef = forwardRef<JoyRide, WelcomeTourProps>(
           backButtonProps
             ? {
                 ...props.backProps,
-                text: backButtonProps.text,
+                label: backButtonProps.label,
                 onClick: e => {
                   backButtonProps.onClick?.();
                   props.backProps.onClick(e);
@@ -76,7 +77,7 @@ const WelcomeTourWithRef = forwardRef<JoyRide, WelcomeTourProps>(
         }
         closeButton={{
           ...props.closeProps,
-          text: closeButtonProps.text,
+          label: closeButtonProps.label,
           onClick: e => {
             closeButtonProps.onClick?.();
             props.closeProps.onClick(e);
@@ -84,7 +85,7 @@ const WelcomeTourWithRef = forwardRef<JoyRide, WelcomeTourProps>(
         }}
         primaryButton={{
           ...props.primaryProps,
-          text: primaryButtonProps.text,
+          label: primaryButtonProps.label,
           onClick: e => {
             primaryButtonProps.onClick?.();
             props.primaryProps.onClick(e);

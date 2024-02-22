@@ -1,6 +1,6 @@
-import { PaginationSliderDots } from '@sbercloud/uikit-product-pagination-private';
+import { PaginationSlider } from '@snack-uikit/pagination';
 
-import { noPointerEvents } from './styled';
+import styles from './styles.module.scss';
 
 type StepsProps = {
   stepsCount: number;
@@ -11,12 +11,12 @@ function noop() {}
 
 export function Steps({ currentStep, stepsCount }: StepsProps) {
   return (
-    <PaginationSliderDots
-      data-test-id='welcome-tour-pagination'
-      total={stepsCount}
+    <PaginationSlider
       page={currentStep + 1}
+      data-test-id='tour-pagination'
       onChange={noop}
-      className={noPointerEvents}
+      total={stepsCount}
+      className={styles.noPointerEvents}
     />
   );
 }
