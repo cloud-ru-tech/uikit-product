@@ -32,6 +32,8 @@ export function Select({
     }
   };
 
+  const closeDropdown = () => setIsOpen(false);
+
   return (
     <Dropdown
       open={isOpen}
@@ -50,6 +52,7 @@ export function Select({
             platforms={platforms ?? []}
             selectedPlatform={selectedPlatform ?? ({} as Platform)}
             onPlatformChange={onPlatformChange}
+            closeDropdown={closeDropdown}
           />
         </div>
       }

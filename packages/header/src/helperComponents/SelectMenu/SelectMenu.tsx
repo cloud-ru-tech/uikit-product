@@ -21,6 +21,8 @@ export type SelectProps = {
   platforms: Platform[];
   selectedPlatform: Platform;
   onPlatformChange?(value: Platform): void;
+
+  closeDropdown?(): void;
 };
 
 export function SelectMenu({
@@ -37,6 +39,8 @@ export function SelectMenu({
   platforms,
   selectedPlatform,
   onPlatformChange,
+
+  closeDropdown,
 }: SelectProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -58,6 +62,7 @@ export function SelectMenu({
         onItemChange={onProjectChange}
         selectedItem={selectedProject}
         addItem={{ label: textProvider(languageCode, Texts.AddProject), handler: onProjectAdd }}
+        closeDropdown={closeDropdown}
         data-test-id='header__select-group-project'
       />
 

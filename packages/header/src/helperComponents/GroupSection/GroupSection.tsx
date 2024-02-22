@@ -8,6 +8,7 @@ import { List } from '@snack-uikit/list';
 import { SearchPrivate } from '@snack-uikit/search-private';
 
 import { textProvider, Texts } from '../../helpers';
+import { GroupSectionItemDroplist } from './GroupSectionItemDroplist';
 import { useSearch } from './hooks';
 import styles from './styles.module.scss';
 import { Item, ItemsGroup } from './types';
@@ -26,6 +27,8 @@ export type GroupSectionProps = WithSupportProps<{
     handler?(): void;
   };
 
+  closeDropdown?(): void;
+
   navigateOutsideRef?: RefObject<HTMLDivElement>;
   navigateInsideRef?: RefObject<HTMLDivElement>;
 }>;
@@ -39,6 +42,7 @@ export function GroupSection({
   onItemChange,
   addItem,
   navigateOutsideRef,
+  closeDropdown,
   ...rest
 }: GroupSectionProps) {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -123,17 +127,29 @@ export function GroupSection({
         items={filteredGroups.map((group, groupIndex) => ({
           label: group.heading,
           mode: 'secondary',
-          items: group.items.map((item, itemIndex) => ({
-            content: {
-              option: item.name,
-            },
-            beforeContent: item.logo ?? <Avatar size='xs' name={item.name} showTwoSymbols shape='square' />,
-            id: item.id,
-            onKeyDown: navigateOutside,
-            className: styles.list,
-            onClick: handleItemClick({ item, groupIndex, itemIndex }),
-            'data-test-id': `header__select-group-item-${item.id}`,
-          })),
+          items: group.items.map((item, itemIndex) => {
+            const dataTestId = `header__select-group-item-${item.id}`;
+
+            return {
+              content: {
+                option: item.name,
+              },
+              beforeContent: item.logo ?? <Avatar size='xs' name={item.name} showTwoSymbols shape='square' />,
+              afterContent:
+                item.actions && item.actions.length > 0 ? (
+                  <GroupSectionItemDroplist
+                    actions={item.actions}
+                    dataTestId={dataTestId}
+                    onItemClick={closeDropdown}
+                  />
+                ) : undefined,
+              id: item.id,
+              onKeyDown: navigateOutside,
+              className: styles.list,
+              onClick: handleItemClick({ item, groupIndex, itemIndex }),
+              'data-test-id': dataTestId,
+            };
+          }),
         }))}
         footer={
           addItem && addItem.handler ? (

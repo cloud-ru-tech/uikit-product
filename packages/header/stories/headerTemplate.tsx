@@ -34,7 +34,9 @@ const DEFAULT_USER = {
   email: 'почтовый@сервис.ру',
 };
 
-const DEFAULT_PROJECT = { id: '1_1', name: 'Проект 1' };
+const PROJECT_ACTIONS = [{ id: 'test', content: { option: 'test' } }];
+
+const DEFAULT_PROJECT = { id: '1_1', name: 'Проект 1', actions: PROJECT_ACTIONS };
 const DEFAULT_PLATFORM = { id: '1', name: 'Evolution', logo: <EvolutionPlatformLogo /> };
 const DEFAULT_PRODUCT = { ...DEFAULT_PLATFORM, category: 'Облачная платформа' };
 const DEFAULT_NOTIFICATION = {
@@ -168,23 +170,23 @@ export const ARGS: StoryProps = {
       {
         id: '1',
         heading: 'Folder 1',
-        items: [DEFAULT_PROJECT, { id: '1_2', name: 'Проект 2', onEdit: () => {} }],
+        items: [DEFAULT_PROJECT, { id: '1_2', name: 'Проект 2', onEdit: () => {}, actions: PROJECT_ACTIONS }],
       },
       {
         id: '2',
         heading: 'Folder 2',
         items: [
-          { id: '2_1', name: 'Проект 3' },
-          { id: '2_2', name: 'Проект 4 с очень длинным названием', onEdit: () => {} },
+          { id: '2_1', name: 'Проект 3', actions: PROJECT_ACTIONS },
+          { id: '2_2', name: 'Проект 4 с очень длинным названием', actions: PROJECT_ACTIONS, onEdit: () => {} },
         ],
       },
       {
         id: '3',
         heading: 'Folder 3',
         items: [
-          { id: '3_1', name: 'Проект 5' },
-          { id: '3_2', name: 'Проект 6 с очень длинным названием' },
-          { id: '3_3', name: 'Проект 7 с очень длинным названием' },
+          { id: '3_1', name: 'Проект 5', actions: PROJECT_ACTIONS },
+          { id: '3_2', name: 'Проект 6 с очень длинным названием', actions: PROJECT_ACTIONS },
+          { id: '3_3', name: 'Проект 7 с очень длинным названием', actions: PROJECT_ACTIONS },
         ],
       },
     ],

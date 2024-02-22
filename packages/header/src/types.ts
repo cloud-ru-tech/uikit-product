@@ -1,5 +1,7 @@
 import { JSXElementConstructor, ReactElement } from 'react';
 
+import { BaseItemProps } from '@snack-uikit/list';
+
 export type { NotificationsProps } from './helperComponents';
 
 export type User = {
@@ -16,6 +18,7 @@ export type Project = {
   id: string;
   name: string;
   onEdit?(): void;
+  actions?: BaseItemProps[];
 };
 
 export type InnerLink = {
