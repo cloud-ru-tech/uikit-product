@@ -20,6 +20,7 @@ import {
   SelectMenu,
   SelectMenuTrigger,
 } from '../../helperComponents';
+import { filterHidden } from '../../helperComponents/DrawerMenu/utils';
 import { textProvider, Texts } from '../../helpers';
 import { Organization, Platform, ProductOption, Project } from '../../types';
 import { ProductHeaderProps } from '../ProductHeader';
@@ -55,6 +56,8 @@ export function ProductHeaderMobile({
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { theme } = useTheme();
   const isDarkTheme = [Themes.GreenDark, Themes.GreenDark].includes(theme);
+
+  const visibleSettings = useMemo(() => settings?.filter(filterHidden), [settings]);
 
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -209,10 +212,10 @@ export function ProductHeaderMobile({
       }
     }
 
-    if (settings.length > 0) {
+    if (visibleSettings.length > 0) {
       items.push({
         divider: true,
-        items: settings.map(setting => ({
+        items: visibleSettings.map(setting => ({
           'data-test-id': 'header__settings-item',
           content: {
             option: setting.label,
@@ -227,7 +230,7 @@ export function ProductHeaderMobile({
     }
 
     return items;
-  }, [select, userMenu, settings, languageCode, closeUserMenu, isDarkTheme]);
+  }, [select, userMenu, visibleSettings, languageCode, closeUserMenu, isDarkTheme]);
 
   return (
     <>

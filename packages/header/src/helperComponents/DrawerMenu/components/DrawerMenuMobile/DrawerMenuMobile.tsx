@@ -1,4 +1,4 @@
-import { MouseEvent, useCallback, useState } from 'react';
+import { MouseEvent, useCallback, useMemo, useState } from 'react';
 
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
@@ -13,6 +13,7 @@ import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
 import { ProductOption } from '../../../../types';
 import { DrawerMenuProps } from '../../types';
+import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
 import { ProductSelectTrigger } from '../ProductSelectTrigger';
 import { useLinks, useSearch } from './hooks';
@@ -26,9 +27,12 @@ export function DrawerMenuMobile({
   onProductChange: onProductChangeProp,
   ...rest
 }: DrawerMenuProps) {
-  const { searchValue, setSearchValue, filteredLinks } = useSearch({ links });
+  const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
+  const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
+
+  const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
   const { cardsRef } = useLinks({
-    links,
+    links: visibleLinks,
     searchValue,
     setSearchValue,
   });
@@ -90,7 +94,7 @@ export function DrawerMenuMobile({
               onClick={toggleInnerDrawer}
             />
 
-            {links && (
+            {visibleLinks && (
               <Search
                 size='m'
                 placeholder={textProvider(languageCode, Texts.SearchByServices)}
@@ -121,13 +125,13 @@ export function DrawerMenuMobile({
               <div className={styles.noData}>{textProvider(languageCode, Texts.NoData)}</div>
             )}
 
-            {footerLinks && (
+            {visibleFooterLinks && (
               <div className={styles.footerLinks}>
                 <div className={styles.footerLinksDivider}>
                   <Divider />
                 </div>
 
-                {footerLinks.map(link => (
+                {visibleFooterLinks.map(link => (
                   <ButtonFunction
                     key={link.label}
                     iconPosition='before'

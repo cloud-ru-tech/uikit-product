@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { MouseEvent, useCallback, useState } from 'react';
+import { MouseEvent, useCallback, useMemo, useState } from 'react';
 
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
@@ -18,6 +18,7 @@ import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
 import { useLinks, useSearch } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
+import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
 import styles from './styles.modules.scss';
 
@@ -31,7 +32,12 @@ export function DrawerMenuDesktop({
   selectedProduct,
   onProductChange,
 }: DrawerMenuProps) {
-  const { searchValue, setSearchValue, filteredLinks } = useSearch({ links });
+  const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
+  const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
+  const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
+
+  const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
+
   const {
     cardsRef,
     scrollRef,
@@ -41,12 +47,13 @@ export function DrawerMenuDesktop({
     isLinkSelected,
     handleLinkClick,
   } = useLinks({
-    links,
+    links: visibleLinks,
     searchValue,
     setSearchValue,
     drawerOpen: open,
   });
-  const showRightSection = links?.length || pinnedCards;
+
+  const showRightSection = visibleLinks?.length || visiblePinnedCards;
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -123,9 +130,9 @@ export function DrawerMenuDesktop({
                 </div>
 
                 <Scroll>
-                  {links && links.length && (
+                  {visibleLinks && visibleLinks.length && (
                     <div className={styles.links}>
-                      {links.map(link => (
+                      {visibleLinks.map(link => (
                         <Link
                           key={link.id}
                           text={link.label}
@@ -143,13 +150,13 @@ export function DrawerMenuDesktop({
                 </Scroll>
               </div>
 
-              {footerLinks && (
+              {visibleFooterLinks && (
                 <div className={styles.footerLinks}>
                   <div className={styles.footerLinksDivider}>
                     <Divider />
                   </div>
 
-                  {footerLinks.map(link => (
+                  {visibleFooterLinks.map(link => (
                     <ButtonFunction
                       {...link}
                       onClick={wrappedClick(link)}
@@ -169,9 +176,9 @@ export function DrawerMenuDesktop({
             <div className={styles.right} onMouseEnter={addScrollHandler} onMouseLeave={removeScrollHandler}>
               <Scroll ref={scrollRef}>
                 <div className={styles.rightContent}>
-                  {pinnedCards && (
+                  {visiblePinnedCards && (
                     <div className={cn(styles.pinnedCards, styles.rightContentItem)}>
-                      {pinnedCards.map(item => (
+                      {visiblePinnedCards.map(item => (
                         <Card
                           className={styles.pinnedCard}
                           key={item.title}
@@ -186,7 +193,7 @@ export function DrawerMenuDesktop({
                     </div>
                   )}
 
-                  {links && (
+                  {visibleLinks && (
                     <div className={cn(styles.rightContentItem, styles.searchItem)} ref={searchPanelRef}>
                       <Search
                         size='m'

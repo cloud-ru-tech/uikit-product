@@ -1,4 +1,4 @@
-import { ReactElement, useCallback, useState } from 'react';
+import { ReactElement, useCallback, useMemo, useState } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
@@ -19,6 +19,7 @@ import {
   UserMenu,
   UserMenuProps,
 } from '../../helperComponents';
+import { filterHidden } from '../../helperComponents/DrawerMenu/utils';
 import styles from './styles.module.scss';
 
 export type SettingOption = {
@@ -79,6 +80,8 @@ export function ProductHeader({
 
   const handleCloseMainMenu = useCallback(() => setIsMainMenuOpen(false), []);
 
+  const visibleSettings = useMemo(() => settings?.filter(filterHidden), [settings]);
+
   return (
     <>
       <HeaderLayout
@@ -119,12 +122,12 @@ export function ProductHeader({
         }
         toolbar={
           <>
-            {settings?.length > 0 && (
+            {visibleSettings?.length > 0 && (
               <Droplist
                 size='s'
                 open={isSettingsOpen}
                 onOpenChange={setIsSettingsOpen}
-                items={settings.map(setting => ({
+                items={visibleSettings.map(setting => ({
                   'data-test-id': 'header__settings-item',
                   content: {
                     option: setting.label,

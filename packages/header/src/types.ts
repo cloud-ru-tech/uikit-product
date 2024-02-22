@@ -27,11 +27,13 @@ export type InnerLink = {
   onClick(): void;
   href?: string;
   disabled?: boolean;
+  hidden?: boolean;
 };
 
 export type LinksGroup = {
   id: string;
   label: string;
+  hidden?: boolean;
   items: InnerLink[];
 };
 
@@ -49,6 +51,7 @@ export type PinnedCard = {
   onClick(): void;
   href?: string;
   disabled?: boolean;
+  hidden?: boolean;
 };
 
 export type FooterLink = {
@@ -57,6 +60,7 @@ export type FooterLink = {
   onClick(): void;
   href?: string;
   disabled?: boolean;
+  hidden?: boolean;
 };
 
 export type Platform = {
