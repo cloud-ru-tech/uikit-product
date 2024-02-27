@@ -48,6 +48,9 @@ serviceSmall.argTypes = {
       type: 'radio',
     },
   },
+  promoBadge: {
+    type: 'string',
+  },
 };
 
 serviceSmall.parameters = {

@@ -1,5 +1,6 @@
+import { ButtonTonal } from '@snack-uikit/button';
 import { Card, CardProps } from '@snack-uikit/card';
-import { ArrowRightSVG } from '@snack-uikit/icons';
+import { ArrowRightSVG, CrossSVG } from '@snack-uikit/icons';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
@@ -15,10 +16,20 @@ export type CardBannerProps = WithSupportProps<
       src: string;
       alt: string;
     };
+    onClose?(): void;
   }
 >;
 
-export function CardBanner({ title, description, onClick, actionLabel, image, className, ...rest }: CardBannerProps) {
+export function CardBanner({
+  title,
+  description,
+  onClick,
+  actionLabel,
+  image,
+  className,
+  onClose,
+  ...rest
+}: CardBannerProps) {
   return (
     <Card
       // TODO: typescript error
@@ -27,6 +38,13 @@ export function CardBanner({ title, description, onClick, actionLabel, image, cl
       {...extractSupportProps(rest)}
       className={className}
       onClick={onClick}
+      functionBadge={
+        onClose ? (
+          <div className={styles.cardFunctionBadgeWrapper}>
+            <ButtonTonal icon={<CrossSVG />} appearance='neutral' onClick={onClose} size='xs' />
+          </div>
+        ) : undefined
+      }
     >
       <div className={styles.cardBannerContent}>
         <div className={styles.cardBannerLeft}>

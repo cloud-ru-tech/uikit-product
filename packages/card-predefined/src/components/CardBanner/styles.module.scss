@@ -25,3 +25,9 @@
   object-position: center;
   object-fit: cover;
 }
+
+.cardFunctionBadgeWrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}

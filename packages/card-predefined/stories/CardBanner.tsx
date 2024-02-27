@@ -1,5 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 
+import { toaster } from '@snack-uikit/toaster';
+
 import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -15,15 +17,22 @@ const meta: Meta = {
 };
 export default meta;
 
-function Template({ ...args }: CardBannerProps) {
+type StoryProps = {
+  showOnClose?: boolean;
+} & CardBannerProps;
+
+function Template({ showOnClose, ...args }: StoryProps) {
+  const handleClose = () => {
+    toaster.userAction.neutral({ label: 'onClose click' });
+  };
   return (
     <div className={styles.cardBanner}>
-      <CardBanner {...args} />
+      <CardBanner {...args} onClose={showOnClose ? handleClose : undefined} />
     </div>
   );
 }
 
-export const banner: StoryFn<CardBannerProps> = Template.bind({});
+export const banner: StoryFn<StoryProps> = Template.bind({});
 banner.args = {
   title: 'Название сервиса, написанное в 1-2 строки',
   description: 'Подпись, которая может занимать высоту в 1-2 строки',
@@ -31,6 +40,13 @@ banner.args = {
   image: {
     src: cardImg,
     alt: '',
+  },
+  showOnClose: true,
+};
+
+banner.argTypes = {
+  showOnClose: {
+    name: '[Stories]: show onClose action',
   },
 };
 
