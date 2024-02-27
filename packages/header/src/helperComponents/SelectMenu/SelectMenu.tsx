@@ -1,5 +1,7 @@
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
+import { Divider } from '@snack-uikit/divider';
+import { ChevronDownSVG, ChevronUpSVG } from '@snack-uikit/icons';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../helpers';
@@ -25,6 +27,12 @@ export type SelectProps = {
   closeDropdown?(): void;
 };
 
+const divider = (
+  <div>
+    <Divider orientation='vertical' />
+  </div>
+);
+
 export function SelectMenu({
   organizations,
   selectedOrganization,
@@ -45,8 +53,9 @@ export function SelectMenu({
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   return (
-    <>
+    <div className={styles.selectGroup}>
       <GroupSection
+        className={styles.section}
         title={textProvider(languageCode, Texts.Organization)}
         groups={[{ id: '1', items: organizations }]}
         onItemChange={onOrganizationChange}
@@ -55,7 +64,10 @@ export function SelectMenu({
         data-test-id='header__select-group-organization'
       />
 
+      {divider}
+
       <GroupSection
+        className={styles.section}
         title={textProvider(languageCode, Texts.Project)}
         searchable={true}
         groups={projects}
@@ -66,7 +78,10 @@ export function SelectMenu({
         data-test-id='header__select-group-project'
       />
 
+      {divider}
+
       <GroupSection
+        className={styles.section}
         title={textProvider(languageCode, Texts.Platforms)}
         last={true}
         groups={[{ id: '1', items: platforms }]}
@@ -74,11 +89,11 @@ export function SelectMenu({
         selectedItem={selectedPlatform}
         data-test-id='header__select-group-platform'
       />
-    </>
+    </div>
   );
 }
 
-export function SelectMenuTrigger({ selectedProject }: { selectedProject: Project }) {
+export function SelectMenuTrigger({ selectedProject, open }: { selectedProject: Project; open: boolean }) {
   return (
     <div className={styles.contentLayout}>
       <Avatar size='xs' name={selectedProject.name} showTwoSymbols shape='square' />
@@ -86,6 +101,8 @@ export function SelectMenuTrigger({ selectedProject }: { selectedProject: Projec
       <span className={styles.project} data-test-id='header__select-project-value'>
         <TruncateString text={selectedProject.name} hideTooltip />
       </span>
+
+      {open ? <ChevronUpSVG size={16} /> : <ChevronDownSVG size={16} />}
     </div>
   );
 }

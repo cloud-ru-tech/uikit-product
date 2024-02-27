@@ -9,6 +9,8 @@
   gap: $dimension-050m;
   color: $sys-neutral-text-light;
   border-radius: $dimension-050m;
+  border: 1px solid $sys-neutral-decor-default;
+  box-sizing: border-box;
   cursor: pointer;
 
   &:hover,
@@ -60,14 +62,4 @@
 
   color: $sys-neutral-text-light;
   max-width: calc(2 * $dimension-10m);
-}
-
-.selectGroup {
-  gap: $dimension-2m;
-  padding: calc($dimension-2m - $dimension-050m) $dimension-2m;
-
-  min-height: calc(36 * $dimension-1m);
-
-  display: grid;
-  grid-template-columns: repeat(3, 232px);
 }

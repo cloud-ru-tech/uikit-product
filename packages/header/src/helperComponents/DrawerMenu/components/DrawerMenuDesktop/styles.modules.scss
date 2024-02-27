@@ -2,6 +2,8 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .drawer {
+  min-width: 656px;
+
   & [data-test-id='drawer__close-button'] {
     display: none;
   }
@@ -74,10 +76,8 @@
 }
 
 .pinnedCards {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: $dimension-2m;
 }
 

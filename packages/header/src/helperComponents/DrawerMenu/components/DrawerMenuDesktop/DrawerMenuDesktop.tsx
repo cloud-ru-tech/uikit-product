@@ -180,6 +180,7 @@ export function DrawerMenuDesktop({
                     <div className={cn(styles.pinnedCards, styles.rightContentItem)}>
                       {visiblePinnedCards.map(item => (
                         <Card
+                          promoBadge={item.badge}
                           className={styles.pinnedCard}
                           key={item.title}
                           onClick={wrappedClick(item)}
@@ -212,6 +213,7 @@ export function DrawerMenuDesktop({
                           {group.items.map(item => (
                             <Card
                               outline
+                              promoBadge={item.badge}
                               key={item.label}
                               onClick={wrappedClick(item)}
                               disabled={item.disabled}

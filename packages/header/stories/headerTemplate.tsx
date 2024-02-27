@@ -298,11 +298,11 @@ export const ARGS: StoryProps = {
         id: 'network',
         items: [
           { label: 'VPC', onClick: () => {}, icon: PlaceholderSVG },
-          { label: 'sNAT-шлюзы', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'sNAT-шлюзы', onClick: () => {}, icon: PlaceholderSVG, badge: 'Preview' },
           { label: 'Подсети', onClick: () => {}, icon: PlaceholderSVG },
           { label: 'Группы безопасности', onClick: () => {}, icon: PlaceholderSVG },
           { label: 'Публичные IP-адреса', onClick: () => {}, icon: PlaceholderSVG },
-          { label: 'Балансировщик нагрузки', onClick: () => {}, icon: PlaceholderSVG },
+          { label: 'Балансировщик нагрузки', onClick: () => {}, icon: PlaceholderSVG, badge: 'Preview' },
         ],
       },
       {

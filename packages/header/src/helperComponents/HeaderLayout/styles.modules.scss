@@ -4,7 +4,7 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 0 $dimension-2m;
+  padding: 0 $dimension-1m 0 0;
   height: $dimension-6m;
   gap: $dimension-2m;
   justify-content: space-between;
@@ -24,7 +24,6 @@
 .path {
   display: flex;
   align-items: center;
-  gap: $dimension-1m;
 }
 
 a.logo {

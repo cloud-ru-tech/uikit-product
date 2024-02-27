@@ -12,9 +12,19 @@
 
   color: $sys-neutral-text-light;
   max-width: calc(2 * $dimension-10m);
+  min-width: calc(2 * $dimension-7m);
 }
 
-.selectMenu {
-  display: grid;
-  grid-template-columns: repeat(3, 232px);
+.section {
+  width: 220px;
+  height: 320px;
+}
+
+.selectGroup {
+  gap: $dimension-1m;
+  padding: $dimension-050m $dimension-1m;
+  align-items: stretch;
+
+  display: flex;
+  flex-direction: row;
 }

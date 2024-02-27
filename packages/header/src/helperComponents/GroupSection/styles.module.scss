@@ -1,14 +1,12 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
+$vPadding: calc($dimension-1m + $dimension-025m);
+
 .section {
   display: flex;
   flex-direction: column;
-  gap: $dimension-2m;
-
   position: relative;
-
-  // width: 232px;
 }
 
 .item {
@@ -20,24 +18,28 @@
 
 .title {
   @include composite-var($sans-title-m);
+  position: relative;
 
   display: flex;
   justify-content: space-between;
   gap: $dimension-1m;
-  // width: calc(29 * $dimension-1m);
+  padding: $dimension-1m $vPadding;
 }
 
 .search {
   position: absolute;
   top: 0;
-  right: 0;
+  bottom: 0;
+  right: $vPadding;
+  display: flex;
+  align-items: center;
 
   transition-timing-function: ease-in-out;
   transition-property: max-width;
   transition-duration: 300ms;
 
   background-color: $sys-neutral-background2-level;
-  width: 100%;
+  width: calc(100% - 2 * $vPadding);
   max-width: 0;
   overflow: hidden;
 

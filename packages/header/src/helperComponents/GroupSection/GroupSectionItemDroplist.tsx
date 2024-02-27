@@ -14,22 +14,25 @@ type GroupSectionItemDroplistProps = {
 
 export function GroupSectionItemDroplist({ actions, onItemClick, dataTestId }: GroupSectionItemDroplistProps) {
   return (
-    <Droplist
-      items={actions.map(action => ({
-        ...action,
-        onClick(e) {
-          action.onClick?.(e);
-          onItemClick?.();
-        },
-      }))}
-    >
-      <ButtonFunction
-        size='xs'
-        icon={<KebabSVG />}
-        onClick={stopPropagationClick}
-        className={styles.droplistTrigger}
-        data-test-id={`${dataTestId}-droplist-trigger`}
-      />
-    </Droplist>
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+    <div onMouseDown={stopPropagationClick}>
+      <Droplist
+        items={actions.map(action => ({
+          ...action,
+          onClick(e) {
+            action.onClick?.(e);
+            onItemClick?.();
+          },
+        }))}
+      >
+        <ButtonFunction
+          size='xs'
+          icon={<KebabSVG />}
+          onClick={stopPropagationClick}
+          className={styles.droplistTrigger}
+          data-test-id={`${dataTestId}-droplist-trigger`}
+        />
+      </Droplist>
+    </div>
   );
 }

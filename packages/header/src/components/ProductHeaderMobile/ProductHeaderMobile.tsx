@@ -134,7 +134,7 @@ export function ProductHeaderMobile({
         },
         beforeContent: (
           <div className={styles.select} data-test-id='header__select'>
-            <SelectMenuTrigger selectedProject={selectedProject} />
+            <SelectMenuTrigger selectedProject={selectedProject} open={isProjectMenuOpen} />
           </div>
         ),
         afterContent: <ChevronRightSVG />,
@@ -230,7 +230,7 @@ export function ProductHeaderMobile({
     }
 
     return items;
-  }, [select, userMenu, visibleSettings, languageCode, closeUserMenu, isDarkTheme]);
+  }, [select, userMenu, visibleSettings, isProjectMenuOpen, languageCode, closeUserMenu, isDarkTheme]);
 
   return (
     <>

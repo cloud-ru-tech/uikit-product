@@ -31,6 +31,7 @@ export type InnerLink = {
   href?: string;
   disabled?: boolean;
   hidden?: boolean;
+  badge?: string;
 };
 
 export type LinksGroup = {
@@ -55,6 +56,7 @@ export type PinnedCard = {
   href?: string;
   disabled?: boolean;
   hidden?: boolean;
+  badge?: string;
 };
 
 export type FooterLink = {

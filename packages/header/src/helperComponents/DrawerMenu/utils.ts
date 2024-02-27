@@ -16,10 +16,12 @@ export function filterHiddenLinks(links?: LinksGroup[]) {
 
     const visibleLinks = cur.items.filter(link => !link.hidden);
 
-    acc.push({
-      ...cur,
-      items: visibleLinks,
-    });
+    if (visibleLinks.length) {
+      acc.push({
+        ...cur,
+        items: visibleLinks,
+      });
+    }
 
     return acc;
   }, []);

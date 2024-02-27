@@ -39,22 +39,20 @@ export function Select({
       open={isOpen}
       onOpenChange={setIsOpen}
       content={
-        <div className={styles.selectGroup}>
-          <SelectMenu
-            organizations={organizations}
-            selectedOrganization={selectedOrganization}
-            onOrganizationChange={onOrganizationChange}
-            onOrganizationAdd={onOrganizationAdd}
-            projects={projects ?? []}
-            selectedProject={selectedProject ?? ({} as ProductOption)}
-            onProjectChange={onProjectChange}
-            onProjectAdd={onProjectAdd}
-            platforms={platforms ?? []}
-            selectedPlatform={selectedPlatform ?? ({} as Platform)}
-            onPlatformChange={onPlatformChange}
-            closeDropdown={closeDropdown}
-          />
-        </div>
+        <SelectMenu
+          organizations={organizations}
+          selectedOrganization={selectedOrganization}
+          onOrganizationChange={onOrganizationChange}
+          onOrganizationAdd={onOrganizationAdd}
+          projects={projects ?? []}
+          selectedProject={selectedProject ?? ({} as ProductOption)}
+          onProjectChange={onProjectChange}
+          onProjectAdd={onProjectAdd}
+          platforms={platforms ?? []}
+          selectedPlatform={selectedPlatform ?? ({} as Platform)}
+          onPlatformChange={onPlatformChange}
+          closeDropdown={closeDropdown}
+        />
       }
       placement='bottom-start'
     >
@@ -67,7 +65,7 @@ export function Select({
         onKeyDown={handleSelectKeyDown}
         data-test-id='header__select'
       >
-        <SelectMenuTrigger selectedProject={selectedProject} />
+        <SelectMenuTrigger selectedProject={selectedProject} open={isOpen} />
       </div>
     </Dropdown>
   );

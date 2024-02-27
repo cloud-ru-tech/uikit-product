@@ -3,7 +3,6 @@ import { ReactElement, useCallback, useMemo, useState } from 'react';
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { ButtonFunction } from '@snack-uikit/button';
-import { Divider } from '@snack-uikit/divider';
 import { QuestionSVG, SettingsSVG } from '@snack-uikit/icons';
 import { Droplist } from '@snack-uikit/list';
 
@@ -103,20 +102,13 @@ export function ProductHeader({
             )}
 
             {pagePath && (
-              <>
-                <div className={styles.divider}>
-                  <Divider orientation='vertical' />
-                </div>
-
-                <Breadcrumbs
-                  className={styles.breadcrumbs}
-                  items={pagePath}
-                  separator='/'
-                  size='s'
-                  lastEmpty
-                  data-test-id='header__breadcrumbs'
-                />
-              </>
+              <Breadcrumbs
+                className={styles.breadcrumbs}
+                items={pagePath}
+                separator='/'
+                size='s'
+                data-test-id='header__breadcrumbs'
+              />
             )}
           </>
         }

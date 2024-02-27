@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { KeyboardEvent, RefObject, useRef } from 'react';
 
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -14,6 +15,7 @@ import styles from './styles.module.scss';
 import { Item, ItemsGroup } from './types';
 
 export type GroupSectionProps = WithSupportProps<{
+  className?: string;
   title?: string;
   last?: boolean;
   searchable?: boolean;
@@ -33,10 +35,13 @@ export type GroupSectionProps = WithSupportProps<{
   navigateInsideRef?: RefObject<HTMLDivElement>;
 }>;
 
+const getItemIndex = (groupId: string, itemId: string) => `${groupId}_${itemId}`;
+
 export function GroupSection({
   title,
   // last = false,
   searchable = false,
+  className,
   groups,
   selectedItem,
   onItemChange,
@@ -67,55 +72,51 @@ export function GroupSection({
     }
   };
 
-  const getItemIndex = (groupIndex: number, itemIndex: number) => `${groupIndex}_${itemIndex}`;
-
-  const handleItemClick =
-    ({ item, groupIndex, itemIndex }: { item: Item; groupIndex: number; itemIndex: number }) =>
+  const handleItemMouseDown =
+    ({ item, groupId }: { item: Item; groupId: string }) =>
     () => {
       onItemChange?.(item);
 
       if (searchValue.length > 0) {
         setIsSearchActive(false);
         setSearchValue('');
-        const selectedItem = itemRefs.current[getItemIndex(groupIndex, itemIndex)];
-
         setTimeout(() => {
+          const selectedItem = itemRefs.current[getItemIndex(groupId, item.id)];
           selectedItem?.scrollIntoView({ block: 'end' });
         }, 0);
       }
     };
 
   return (
-    <div className={styles.section} {...extractSupportProps(rest)}>
+    <div className={cn(styles.section, className)} {...extractSupportProps(rest)}>
       {title && (
         <div className={styles.title}>
           {title}
 
           {searchable && (
-            <ButtonFunction
-              size='xs'
-              icon={<SearchSVG />}
-              onClick={handleActivateSearch}
-              tabIndex={searchIconTabIndex}
-              data-test-id='header__select-group-section-search-icon'
-            />
+            <>
+              <ButtonFunction
+                size='xs'
+                icon={<SearchSVG />}
+                onClick={handleActivateSearch}
+                tabIndex={searchIconTabIndex}
+                data-test-id='header__select-group-section-search-icon'
+              />
+              <SearchPrivate
+                tabIndex={searchInputTabIndex}
+                size='m'
+                placeholder={textProvider(languageCode, Texts.Search)}
+                value={searchValue}
+                onChange={setSearchValue}
+                ref={searchRef}
+                className={styles.search}
+                data-transition-status={animationState.status}
+                onBlur={handleSearchBlur}
+                data-test-id='header__select-group-section-search-input'
+              />
+            </>
           )}
         </div>
-      )}
-
-      {searchable && (
-        <SearchPrivate
-          tabIndex={searchInputTabIndex}
-          size='m'
-          placeholder={textProvider(languageCode, Texts.Search)}
-          value={searchValue}
-          onChange={setSearchValue}
-          ref={searchRef}
-          className={styles.search}
-          data-transition-status={animationState.status}
-          onBlur={handleSearchBlur}
-          data-test-id='header__select-group-section-search-input'
-        />
       )}
 
       <List
@@ -124,10 +125,10 @@ export function GroupSection({
         size='m'
         className={styles.list}
         selection={{ mode: 'single', value: selectedItem.id }}
-        items={filteredGroups.map((group, groupIndex) => ({
+        items={filteredGroups.map(group => ({
           label: group.heading,
           mode: 'secondary',
-          items: group.items.map((item, itemIndex) => {
+          items: group.items.map(item => {
             const dataTestId = `header__select-group-item-${item.id}`;
 
             return {
@@ -146,8 +147,11 @@ export function GroupSection({
               id: item.id,
               onKeyDown: navigateOutside,
               className: styles.list,
-              onClick: handleItemClick({ item, groupIndex, itemIndex }),
+              onMouseDown: handleItemMouseDown({ item, groupId: group.id }),
               'data-test-id': dataTestId,
+              itemRef: ((ref: HTMLElement) => {
+                itemRefs.current[getItemIndex(group.id, item.id)] = ref;
+              }) as unknown as RefObject<HTMLElement>,
             };
           }),
         }))}
