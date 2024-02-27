@@ -29,6 +29,7 @@ import styles from './styles.module.scss';
 export function ProductHeaderMobile({
   // className,
   homePageUrl,
+  onLogoClick,
   drawerMenu: { links, allProducts, selectedProduct, onProductChange: onProductChangeProp, footerLinks },
 
   select,
@@ -237,6 +238,7 @@ export function ProductHeaderMobile({
       <HeaderLayout
         logo={<CloudRuLogo />}
         homePageUrl={homePageUrl}
+        onLogoClick={onLogoClick}
         toolbar={
           <>
             {onHelpMenuClick && (

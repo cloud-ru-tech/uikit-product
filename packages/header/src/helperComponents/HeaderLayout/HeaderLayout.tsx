@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { MouseEventHandler, ReactNode } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
@@ -9,6 +9,7 @@ import styles from './styles.modules.scss';
 export type HeaderLayoutProps = WithSupportProps<{
   className?: string;
   homePageUrl: string;
+  onLogoClick?: MouseEventHandler<HTMLAnchorElement>;
   toolbar: ReactNode;
   logo: ReactNode;
   path?: ReactNode;
@@ -19,6 +20,7 @@ export type HeaderLayoutProps = WithSupportProps<{
 export function HeaderLayout({
   className,
   homePageUrl,
+  onLogoClick,
   logo,
   path,
   toolbar,
@@ -30,7 +32,7 @@ export function HeaderLayout({
     <header className={className} {...extractSupportProps(rest)}>
       <div className={styles.header}>
         <div className={styles.left}>
-          <a className={styles.logo} href={homePageUrl} tabIndex={0}>
+          <a className={styles.logo} href={homePageUrl} tabIndex={0} onClick={onLogoClick}>
             {logo}
           </a>
 

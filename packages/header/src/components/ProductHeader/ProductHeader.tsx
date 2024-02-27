@@ -11,6 +11,7 @@ import {
   DrawerMenuDesktop,
   DrawerMenuProps,
   HeaderLayout,
+  HeaderLayoutProps,
   NotificationsPopover,
   NotificationsProps,
   Select,
@@ -30,7 +31,6 @@ export type SettingOption = {
 export type ProductHeaderProps = WithSupportProps<
   {
     className?: string;
-    homePageUrl: string;
     drawerMenu: Pick<
       DrawerMenuProps,
       'links' | 'pinnedCards' | 'footerLinks' | 'allProducts' | 'selectedProduct' | 'onProductChange'
@@ -53,12 +53,14 @@ export type ProductHeaderProps = WithSupportProps<
       UserMenuProps,
       'user' | 'indicator' | 'onProfileManagementClick' | 'onThemeSwitchClick' | 'onLogout'
     >;
-  } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'>
+  } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> &
+    Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick'>
 >;
 
 export function ProductHeader({
   className,
   homePageUrl,
+  onLogoClick,
   drawerMenu: { links, pinnedCards, footerLinks, allProducts, selectedProduct, onProductChange },
 
   select,
@@ -87,6 +89,7 @@ export function ProductHeader({
         {...rest}
         className={className}
         homePageUrl={homePageUrl}
+        onLogoClick={onLogoClick}
         onMainMenuClick={() => setIsMainMenuOpen(true)}
         logo={<CloudRuLogo />}
         path={
