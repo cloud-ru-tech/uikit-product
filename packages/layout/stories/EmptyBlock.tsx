@@ -65,6 +65,9 @@ emptyBlock.argTypes = {
       eq: true,
     },
   },
+  description: {
+    type: 'string',
+  },
 };
 
 emptyBlock.parameters = {
