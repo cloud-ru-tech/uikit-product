@@ -29,10 +29,8 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-utils": "3.3.1",
-    "@snack-uikit/card": "0.9.4",
-    "@snack-uikit/toggles": "0.9.4",
-    "@snack-uikit/tooltip": "0.10.4",
-    "@snack-uikit/typography": "0.6.1",
+    "@snack-uikit/card": "0.11.1",
+    "@snack-uikit/toggles": "0.9.6",
     "classnames": "2.3.2"
   }
 }
