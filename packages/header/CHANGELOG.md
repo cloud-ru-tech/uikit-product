@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.9.0 (2024-02-28)
+
+
+### Features
+
+* **[FF-4237](https://jira.sbercloud.tech/browse/FF-4237):** fix actions and search ([f308c33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f308c333a441ff95b6c3568638957b096065afc5))
+
+
+
+
+
 # 1.8.0 (2024-02-22)
 
 
