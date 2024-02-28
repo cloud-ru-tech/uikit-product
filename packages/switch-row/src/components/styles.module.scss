@@ -1,0 +1,104 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.description {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-support;
+}
+
+.titleLayout {
+  @include composite-var($sans-title-s);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  flex-grow: 0;
+  overflow: hidden;
+
+  color: $sys-neutral-text-main;
+}
+
+.tipWrapper {
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.headline {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.switchRow {
+  box-sizing: border-box;
+  padding: 14px;
+  cursor: pointer;
+  background-color: $sys-primary-background;
+  position: relative;
+
+  &:focus-visible {
+    @include outline-var($container-focused-s);
+
+    outline-color: $sys-available-complementary;
+  }
+
+  border-radius: 4px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+  }
+
+  &:not([data-disabled]) {
+    &:hover {
+      &::before {
+        background-color: $sys-neutral-accent-default;
+        opacity: 0.08;
+      }
+    }
+
+    &[data-checked] {
+      &::before {
+        background-color: $sys-primary-accent-default;
+        opacity: 0.08;
+      }
+
+      &:hover {
+        &::before {
+          background-color: $sys-primary-accent-default;
+          opacity: 0.16;
+        }
+      }
+    }
+  }
+
+  &[data-disabled] {
+    cursor: unset;
+    background-color: transparent;
+
+    &::before {
+      background-color: $sys-neutral-accent-default;
+      opacity: 0.08;
+    }
+
+    .titleLayout,
+    .description {
+      color: $sys-neutral-text-disabled;
+    }
+  }
+
+  * {
+    &[data-pointer] {
+      cursor: pointer;
+    }
+  }
+}
