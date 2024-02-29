@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.10.0 (2024-02-29)
+
+
+### Features
+
+* **[FF-4367](https://jira.sbercloud.tech/browse/FF-4367):** add onLogoClick prop ([5a03ac8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5a03ac8bbb5f0b94061b5f17bdc8063f2f3c240c))
+
+
+
+
+
 # 1.9.0 (2024-02-28)
 
 
