@@ -78,7 +78,7 @@ export function SwitchRow({
         </div>
 
         {disabled && disabledToggleTip ? (
-          <Tooltip tip={disabledToggleTip} data-test-id='switch-row__toggle-tooltip' tabIndex={-1}>
+          <Tooltip tip={disabledToggleTip} data-test-id='switch-row__toggle-tooltip'>
             {toggle}
           </Tooltip>
         ) : (
