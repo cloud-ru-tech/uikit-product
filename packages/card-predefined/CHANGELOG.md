@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-02-29)
+
+
+### Features
+
+* **[PSD-15](https://jira.sbercloud.tech/browse/PSD-15):** add disabled/truncate prop to CardServiceSmall; add onClose cb to CardBanner ([a23979c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a23979c9a137a6632c9f3c15200d3da5fc87c36b))
+
+
+
+
+
 ## 0.1.2 (2024-02-26)
 
 

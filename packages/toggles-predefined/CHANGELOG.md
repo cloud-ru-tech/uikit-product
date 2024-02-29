@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-02-29)
+
+
+### BREAKING CHANGES
+
+
+* **[PDS-28](https://jira.sbercloud.tech/browse/PDS-28):** remove SwitchRow ([4a754c2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4a754c20f8b6a1fd54e885434433d003b1790ed6))
+
+
+
+
 # 0.2.0 (2024-02-02)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.14.1 (2024-02-29)
+
+
+### Bug Fixes
+
+* **[PDS-15](https://jira.sbercloud.tech/browse/PDS-15):** fix styles EmptyBlock ([5601b18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5601b18fdf985834029e386a4aa927a15eada90a))
+
+
+
+
+
 # 0.14.0 (2024-02-22)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-card-predefined",
   "title": "Card Predefined",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
