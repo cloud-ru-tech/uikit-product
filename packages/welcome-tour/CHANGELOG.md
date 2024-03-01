@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2024-03-01)
+
+
+### Features
+
+* **[ONB-1720](https://jira.sbercloud.tech/browse/ONB-1720):** migrate welcome tour to snack ui ([11e0613](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/11e06135ada134597e5f06248aaee233ba97598b))
+
+
+
+
+
 ## 0.7.6 (2024-01-23)
 
 ### Only dependencies have been changed
