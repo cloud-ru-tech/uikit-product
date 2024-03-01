@@ -42,7 +42,6 @@
     "@babel/preset-typescript": "7.18.6",
     "@geometricpanda/storybook-addon-badges": "2.0.0",
     "@linaria/cli": "3.0.0-beta.13",
-    "@nx/nx-linux-x64-musl": "18.0.5",
     "@sbercloud/figma-tokens-cloud-platform": "13.5.2",
     "@sbercloud/figma-tokens-mlspace": "13.5.2",
     "@sbercloud/ft-all-linters-pack": "4.0.5",
