@@ -4,12 +4,12 @@ import { KeyboardEvent, RefObject, useRef } from 'react';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
-import { PlusSVG, SearchSVG } from '@snack-uikit/icons';
+import { SearchSVG } from '@snack-uikit/icons';
 import { List } from '@snack-uikit/list';
 import { SearchPrivate } from '@snack-uikit/search-private';
 
 import { textProvider, Texts } from '../../helpers';
-import { GroupSectionItemDroplist } from './GroupSectionItemDroplist';
+import { GroupSectionFooterButton, GroupSectionItemDroplist } from './components';
 import { useSearch } from './hooks';
 import styles from './styles.module.scss';
 import { Item, ItemsGroup } from './types';
@@ -27,6 +27,8 @@ export type GroupSectionProps = WithSupportProps<{
   addItem?: {
     label: string;
     handler?(): void;
+    tooltip?: string;
+    disabled?: boolean;
   };
 
   closeDropdown?(): void;
@@ -155,18 +157,7 @@ export function GroupSection({
             };
           }),
         }))}
-        footer={
-          addItem && addItem.handler ? (
-            <ButtonFunction
-              size='m'
-              onClick={addItem.handler}
-              icon={<PlusSVG />}
-              iconPosition='before'
-              label={addItem.label}
-              data-test-id='header__select-group-section-add-button'
-            />
-          ) : undefined
-        }
+        footer={addItem?.handler ? <GroupSectionFooterButton {...addItem} /> : undefined}
       />
 
       {/* {!last && <Divider orientation='vertical' className={styles.divider} />} */}

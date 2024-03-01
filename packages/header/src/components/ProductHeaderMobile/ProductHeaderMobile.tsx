@@ -50,7 +50,7 @@ export function ProductHeaderMobile({
     onPlatformChange: onPlatformChangeProp,
     onProjectChange: onProjectChangeProp,
     selectedPlatform,
-    onProjectAdd: onProjectAddProp,
+    projectAddButton: projectAddButtonProp,
     projects,
   } = select ?? {};
 
@@ -114,11 +114,18 @@ export function ProductHeaderMobile({
     [closeMainMenu, closeUserMenu, onPlatformChangeProp],
   );
 
-  const onProjectAdd = useCallback(() => {
-    closeMainMenu();
-    closeUserMenu();
-    onProjectAddProp?.();
-  }, [closeMainMenu, closeUserMenu, onProjectAddProp]);
+  const projectAddButton = useMemo(() => {
+    if (!projectAddButtonProp) return undefined;
+
+    return {
+      ...projectAddButtonProp,
+      onClick() {
+        closeMainMenu();
+        closeUserMenu();
+        projectAddButtonProp.onClick();
+      },
+    };
+  }, [closeMainMenu, closeUserMenu, projectAddButtonProp]);
 
   const items = useMemo(() => {
     const items: ItemProps[] = [];
@@ -286,7 +293,7 @@ export function ProductHeaderMobile({
             position='left'
             className={styles.nestedDrawer}
           >
-            <DrawerCustom.Header title={'Платформы'} className={styles.nestedHeader} />
+            <DrawerCustom.Header title={textProvider(languageCode, Texts.Platforms)} className={styles.nestedHeader} />
             <Scroll>
               {select && (
                 <div className={styles.selectGroup}>
@@ -298,7 +305,7 @@ export function ProductHeaderMobile({
                     projects={projects ?? []}
                     selectedProject={selectedProject ?? ({} as ProductOption)}
                     onProjectChange={onProjectChange}
-                    onProjectAdd={onProjectAdd}
+                    projectAddButton={projectAddButton}
                     platforms={platforms ?? []}
                     selectedPlatform={selectedPlatform ?? ({} as Platform)}
                     onPlatformChange={onPlatformChange}
@@ -309,7 +316,7 @@ export function ProductHeaderMobile({
           </DrawerCustom>
         }
       >
-        <DrawerCustom.Header title={'Меню'} className={styles.nestedHeader} />
+        <DrawerCustom.Header title={textProvider(languageCode, Texts.Menu)} className={styles.nestedHeader} />
 
         <Scroll>
           <div className={styles.selectGroup}>

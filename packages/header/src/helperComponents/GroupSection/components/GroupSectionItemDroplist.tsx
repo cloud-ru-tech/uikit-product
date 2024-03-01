@@ -2,9 +2,9 @@ import { ButtonFunction } from '@snack-uikit/button';
 import { KebabSVG } from '@snack-uikit/icons';
 import { Droplist } from '@snack-uikit/list';
 
-import { stopPropagationClick } from '../../utils';
-import styles from './styles.module.scss';
-import { Item } from './types';
+import { stopPropagationClick } from '../../../utils';
+import styles from '../styles.module.scss';
+import { Item } from '../types';
 
 type GroupSectionItemDroplistProps = {
   actions: NonNullable<Item['actions']>;
@@ -15,7 +15,7 @@ type GroupSectionItemDroplistProps = {
 export function GroupSectionItemDroplist({ actions, onItemClick, dataTestId }: GroupSectionItemDroplistProps) {
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-    <div onMouseDown={stopPropagationClick}>
+    <div onMouseDown={stopPropagationClick} className={styles.droplistTriggerWrap}>
       <Droplist
         items={actions.map(action => ({
           ...action,
@@ -29,7 +29,6 @@ export function GroupSectionItemDroplist({ actions, onItemClick, dataTestId }: G
           size='xs'
           icon={<KebabSVG />}
           onClick={stopPropagationClick}
-          className={styles.droplistTrigger}
           data-test-id={`${dataTestId}-droplist-trigger`}
         />
       </Droplist>

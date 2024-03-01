@@ -1,4 +1,4 @@
-import { KeyboardEvent, useRef, useState } from 'react';
+import { KeyboardEvent, useCallback, useMemo, useRef, useState } from 'react';
 
 import { Dropdown } from '@snack-uikit/droplist';
 
@@ -10,12 +10,12 @@ export function Select({
   organizations,
   selectedOrganization,
   onOrganizationChange,
-  onOrganizationAdd,
+  onOrganizationAdd: onOrganizationAddProp,
 
   projects,
   selectedProject,
   onProjectChange,
-  onProjectAdd,
+  projectAddButton: projectAddButtonProp,
 
   platforms,
   selectedPlatform,
@@ -32,7 +32,32 @@ export function Select({
     }
   };
 
-  const closeDropdown = () => setIsOpen(false);
+  const closeDropdown = useCallback(() => setIsOpen(false), []);
+
+  const onOrganizationAdd = useMemo(() => {
+    if (onOrganizationAddProp) {
+      return () => {
+        closeDropdown();
+        onOrganizationAddProp();
+      };
+    }
+
+    return undefined;
+  }, [closeDropdown, onOrganizationAddProp]);
+
+  const projectAddButton = useMemo(() => {
+    if (projectAddButtonProp) {
+      return {
+        ...projectAddButtonProp,
+        onClick() {
+          closeDropdown();
+          projectAddButtonProp.onClick();
+        },
+      };
+    }
+
+    return undefined;
+  }, [closeDropdown, projectAddButtonProp]);
 
   return (
     <Dropdown
@@ -47,7 +72,7 @@ export function Select({
           projects={projects ?? []}
           selectedProject={selectedProject ?? ({} as ProductOption)}
           onProjectChange={onProjectChange}
-          onProjectAdd={onProjectAdd}
+          projectAddButton={projectAddButton}
           platforms={platforms ?? []}
           selectedPlatform={selectedPlatform ?? ({} as Platform)}
           onPlatformChange={onPlatformChange}

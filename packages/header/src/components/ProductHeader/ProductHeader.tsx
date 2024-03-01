@@ -43,7 +43,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'projects'
       | 'selectedProject'
       | 'onProjectChange'
-      | 'onProjectAdd'
+      | 'projectAddButton'
     >;
     pagePath?: BreadcrumbsProps['items'];
     settings?: SettingOption[];

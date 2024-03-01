@@ -89,6 +89,6 @@ $vPadding: calc($dimension-1m + $dimension-025m);
   justify-content: center;
 }
 
-.droplistTrigger {
-  color: $sys-neutral-text-light;
+.droplistTriggerWrap {
+  display: flex;
 }

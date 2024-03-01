@@ -13,6 +13,7 @@ export enum Texts {
   NoDataFound = 'no-data-found',
 
   // ЛК 2.0
+  Menu = 'menu',
   SearchByServices = 'search-by-services',
   NoData = 'no-data',
   Notifications = 'notifications',
@@ -50,6 +51,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.NoDataFound]: 'Ничего не найдено',
 
     // ЛК 2.0
+    [Texts.Menu]: 'Меню',
     [Texts.SearchByServices]: 'Поиск по сервисам',
     [Texts.NoData]: 'Нет данных',
     [Texts.Notifications]: 'Уведомления',
@@ -86,6 +88,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.NoDataFound]: 'Nothing found',
 
     // ЛК 2.0
+    [Texts.Menu]: 'Menu',
     [Texts.SearchByServices]: 'Search by service',
     [Texts.NoData]: 'Nothing found',
     [Texts.Notifications]: 'Notifications',

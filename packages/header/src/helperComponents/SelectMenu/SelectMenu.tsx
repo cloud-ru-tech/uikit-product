@@ -18,7 +18,11 @@ export type SelectProps = {
   projects: ItemsGroup<Project>[];
   selectedProject: Project;
   onProjectChange?(value: Project): void;
-  onProjectAdd?(): void;
+  projectAddButton?: {
+    onClick(): void;
+    tooltip?: string;
+    disabled?: boolean;
+  };
 
   platforms: Platform[];
   selectedPlatform: Platform;
@@ -42,7 +46,8 @@ export function SelectMenu({
   projects,
   selectedProject,
   onProjectChange,
-  onProjectAdd,
+
+  projectAddButton,
 
   platforms,
   selectedPlatform,
@@ -73,10 +78,14 @@ export function SelectMenu({
         groups={projects}
         onItemChange={onProjectChange}
         selectedItem={selectedProject}
-        addItem={{
-          label: textProvider(languageCode, Texts.AddProject),
-          handler: onProjectAdd,
-        }}
+        addItem={
+          projectAddButton && {
+            label: textProvider(languageCode, Texts.AddProject),
+            handler: projectAddButton.onClick,
+            tooltip: projectAddButton.tooltip,
+            disabled: projectAddButton.disabled,
+          }
+        }
         closeDropdown={closeDropdown}
         data-test-id='header__select-group-project'
       />

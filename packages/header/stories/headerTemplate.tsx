@@ -191,7 +191,9 @@ export const ARGS: StoryProps = {
       },
     ],
     selectedProject: DEFAULT_PROJECT,
-    onProjectAdd: () => {},
+    projectAddButton: {
+      onClick: () => {},
+    },
   },
 
   showPagePath: true,
