@@ -1,0 +1,44 @@
+import * as fs from 'fs/promises';
+import path from 'path';
+
+import camelcase from 'lodash.camelcase';
+
+const SOURCE_PATH = 'scripts/import';
+const DESTINATION_PATH = 'svgs/illustrations';
+
+const IGNORED_FILES = ['.gitignore', '.DS_Store'];
+
+const capitalize = (value: string): string => {
+  const firstLetter = value[0].toUpperCase();
+  return `${firstLetter}${value.slice(1)}`;
+};
+
+const removeInvalidCharacters = (value: string): string => value.replace(/[^a-zA-Z0-9\s]+/gi, '');
+
+(async () => {
+  const collections = await fs.readdir(SOURCE_PATH);
+  const folders = collections.filter(collection => !IGNORED_FILES.includes(collection));
+
+  for (const folder of folders) {
+    const destinationFolder = folder.toLowerCase();
+
+    try {
+      await fs.mkdir(path.join(DESTINATION_PATH, destinationFolder));
+      // eslint-disable-next-line
+    } catch {}
+
+    const iconsFilesNames = await fs.readdir(path.join(SOURCE_PATH, folder));
+
+    for (const fileName of iconsFilesNames) {
+      const [name, extension] = fileName.split('.');
+      const camelcaseFileName = capitalize(camelcase(removeInvalidCharacters(name)));
+
+      await fs.copyFile(
+        path.join(SOURCE_PATH, folder, fileName),
+        path.join(DESTINATION_PATH, destinationFolder, `${camelcaseFileName}.${extension}`),
+      );
+    }
+  }
+
+  console.info('[DONE]');
+})();

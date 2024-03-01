@@ -3,6 +3,7 @@
   "title": "React Icons package",
   "version": "5.30.0",
   "sideEffects": [
+    "*.svg",
     "*.css",
     "*.woff",
     "*.woff2"
@@ -26,20 +27,46 @@
   ],
   "license": "UNLICENSED",
   "scripts": {
+    "create-sprite": "ts-node scripts/createSprite.ts",
+    "validate:icons": "ts-node scripts/validateIcons.ts",
+    "import:icons-multisize": "ts-node scripts/importMultiSizeIcons.ts",
+    "import:icons": "ts-node scripts/import.ts",
+    "create-export-index-file": "ts-node scripts/createExportIndexFile.ts",
+    "build:sprite-icons-components": "cross-var rimraf src/components/$npm_config_directory && cross-var svgr -d src/components/$npm_config_directory svgs-fixed/$npm_config_directory --config-file templates/.svgrrc-sprite.js",
+    "fix:icons": "cross-var rimraf svgs-fixed/interface-icons-system && cross-var rimraf svgs-fixed/interface-icons-product && ts-node scripts/fixIcons.ts",
     "build:services-icons": "rimraf src/components/services-icons && svgr -d src/components/services-icons svgs/inherit/services --config-file templates/.svgrrc.js",
     "build:extension-icons": "rimraf src/components/extension-icons && svgr -d src/components/extension-icons svgs/inherit/extension --config-file templates/.svgrrc.js",
     "build:display-icons": "rimraf src/components/display-icons && svgr -d src/components/display-icons svgs/inherit/display --config-file templates/.svgrrc.js",
-    "build:interface-icons": "rimraf src/components/interface-icons && svgr -d src/components/interface-icons svgs/inherit/interface --config-file templates/.svgrrc.js",
+    "build:interface-icons-product": "npm run build:sprite-icons-components --directory=interface-icons-product",
+    "build:interface-icons-old": "rimraf src/components/interface-icons-old && svgr -d src/components/interface-icons-old svgs/inherit/interface-old --config-file templates/.svgrrc-deprecated.js",
+    "build:illustrations-platforms-icons": "rimraf src/components/illustrations-platforms-icons && svgr --config-file templates/.svgrrc-illustrations.js -d src/components/illustrations-platforms-icons svgs/illustrations/platforms",
+    "build:illustrations-evolution-icons": "rimraf src/components/illustrations-evolution-icons && svgr --config-file templates/.svgrrc-illustrations.js -d src/components/illustrations-evolution-icons svgs/illustrations/evolution",
     "build:logo-icons": "rimraf src/components/logo-icons && svgr --config-file templates/.svgrrc-color.js -d src/components/logo-icons svgs/color/logos",
     "build:platform-icons": "rimraf src/components/platform-icons && svgr --config-file templates/.svgrrc-platform.js -d src/components/platform-icons svgs/color/platform",
     "build:avatarPlaceholder-icons": "rimraf src/components/avatarPlaceholder-icons && svgr -d src/components/avatarPlaceholder-icons svgs/inherit/avatarPlaceholder --config-file templates/.svgrrc.js",
     "build:color-icons": "rimraf src/components/color-icons && svgr --config-file templates/.svgrrc-color.js -d src/components/color-icons svgs/color/other",
+    "build:sprite-icons-all": "npm run build:interface-icons-product",
+    "build:sprite-icons": "npm run validate:icons && npm run fix:icons && npm run build:sprite-icons-all && npm run create-export-index-file && npm run create-sprite",
+    "build:svgs-illustrations": "npm run build:illustrations-evolution-icons && npm run build:illustrations-platforms-icons",
     "build:svgs-color": "npm run build:color-icons && npm run build:logo-icons && npm run build:platform-icons",
-    "build:svgs-inherit": "npm run build:extension-icons && npm run build:services-icons && npm run build:display-icons && npm run build:interface-icons && npm run build:avatarPlaceholder-icons",
-    "compile": "npm run build:svgs-inherit && npm run build:svgs-color"
+    "build:svgs-inherit": "npm run build:extension-icons && npm run build:services-icons && npm run build:display-icons && npm run build:interface-icons-old && npm run build:avatarPlaceholder-icons",
+    "compile": "npm run build:svgs-inherit && npm run build:svgs-color && npm run build:svgs-illustrations && npm run build:sprite-icons"
+  },
+  "dependencies": {
+    "@snack-uikit/icons": "0.20.1"
   },
   "devDependencies": {
     "@sbercloud/ft-download-file": "1.1.1",
-    "@svgr/cli": "6.3.1"
+    "@svgr/cli": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
+    "@types/lodash.camelcase": "4.3.9",
+    "@types/lodash.kebabcase": "4.1.9",
+    "@types/svg-sprite": "0.0.38",
+    "fast-xml-parser": "4.2.5",
+    "lodash.camelcase": "4.3.0",
+    "lodash.kebabcase": "4.1.1",
+    "oslllo-svg-fixer": "3.0.0",
+    "svg-sprite": "2.0.2",
+    "svgo": "3.1.0"
   }
 }

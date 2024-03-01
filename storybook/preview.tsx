@@ -7,8 +7,8 @@ import { useDarkMode } from 'storybook-dark-mode';
 
 import { PARAM_CAN_ADD_CUSTOM_BRAND_KEY, PARAM_COLOR_MAP_KEY, PARAM_KEY } from '@sbercloud/ft-storybook-brand-addon';
 import { Alert } from '@sbercloud/uikit-product-alert';
+import { Sprite, SpriteProductSVG, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
-import { Sprite, SpriteSVG } from '@snack-uikit/icons';
 import { LocaleProvider } from '@snack-uikit/locale';
 
 import { ConfigProvider } from '../packages/utils/src';
@@ -32,7 +32,8 @@ const decorators: DecoratorFunction[] = [
     return (
       // Add global styles and theme variables
       <div id='story-root'>
-        <Sprite content={SpriteSVG as unknown as string} />
+        <Sprite content={SpriteSystemSVG as unknown as string} />
+        <Sprite content={SpriteProductSVG as unknown as string} />
         <FormProvider {...methods}>
           {Array.isArray(badges) && badges.includes(BADGE.DEPRECATED) && (
             <>

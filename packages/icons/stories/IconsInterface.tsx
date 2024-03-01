@@ -5,7 +5,7 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import * as Icons from '../src/components/interface-icons';
+import * as Icons from '../src/components/interface-icons-old';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
