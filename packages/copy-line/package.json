@@ -1,0 +1,38 @@
+{
+  "name": "@sbercloud/uikit-product-copy-line",
+  "title": "Copy Line",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/copy-line",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/copy-line"
+  },
+  "author": "Nikita Ershov <niershov@cloud.ru>",
+  "contributors": [
+    "Nikita Ershov <niershov@cloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/ft-copy-to-clipboard": "3.0.1",
+    "@snack-uikit/truncate-string": "0.4.10",
+    "@snack-uikit/button": "0.17.0",
+    "@snack-uikit/icons": "0.20.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
