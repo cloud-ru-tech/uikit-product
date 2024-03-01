@@ -2,6 +2,7 @@ import { Avatar } from '@snack-uikit/avatar';
 import { ListProps } from '@snack-uikit/list';
 
 import { SelectProductsProps } from '../helperComponents';
+import { filterHidden } from '../helperComponents/DrawerMenu/utils';
 
 export function getSelectProductListProps({
   allProducts,
@@ -17,7 +18,7 @@ export function getSelectProductListProps({
       label: group.heading,
       mode: 'secondary',
 
-      items: group.items.map(item => ({
+      items: group.items.filter(filterHidden).map(item => ({
         content: {
           option: item.name,
         },

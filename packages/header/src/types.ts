@@ -48,6 +48,7 @@ export type ProductOption = {
   category: string;
   logo?: ReactElement;
   href?: string;
+  hidden?: boolean;
 };
 
 export type PinnedCard = {

@@ -25,10 +25,12 @@ export function DrawerMenuMobile({
   links,
   footerLinks,
   onProductChange: onProductChangeProp,
+  allProducts,
   ...rest
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
+  const visibleProducts = useMemo(() => allProducts.filter(filterHidden), [allProducts]);
 
   const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
   const { cardsRef } = useLinks({
@@ -80,7 +82,11 @@ export function DrawerMenuMobile({
           <DrawerCustom open={innerOpen} onClose={toggleInnerDrawer} position='left' className={styles.nestedDrawer}>
             <DrawerCustom.Header title={'Платформы'} className={styles.nestedHeader} />
 
-            <List {...getSelectProductListProps({ ...rest, onProductChange })} className={styles.nestedList} size='m' />
+            <List
+              {...getSelectProductListProps({ ...rest, allProducts: visibleProducts, onProductChange })}
+              className={styles.nestedList}
+              size='m'
+            />
           </DrawerCustom>
         }
       >

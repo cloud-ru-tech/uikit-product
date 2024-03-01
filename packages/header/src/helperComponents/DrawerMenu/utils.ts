@@ -1,6 +1,9 @@
-import { FooterLink, InnerLink, LinksGroup, PinnedCard } from '../../types';
+import { FooterLink, InnerLink, LinksGroup, PinnedCard, ProductOption } from '../../types';
+import { ItemsGroup } from '../GroupSection';
 
-export function filterHidden(item: FooterLink | InnerLink | LinksGroup | PinnedCard) {
+export function filterHidden(
+  item: FooterLink | InnerLink | LinksGroup | PinnedCard | ProductOption | ItemsGroup<ProductOption>,
+) {
   return !item.hidden;
 }
 
