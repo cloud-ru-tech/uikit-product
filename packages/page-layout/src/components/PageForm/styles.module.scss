@@ -1,0 +1,37 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+$prefix-height: simple-var($sans-headline-m-line-height);
+
+.container {
+  padding: $dimension-3m;
+  min-width: fit-content;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0 auto;
+  width: 800px;
+  background-color: $sys-neutral-background1-level;
+  padding: 56px;
+  flex-shrink: 0;
+}
+
+.prefix {
+  display: flex;
+  align-items: center;
+  height: $prefix-height;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainActions {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}

@@ -1,0 +1,39 @@
+{
+  "name": "@sbercloud/uikit-product-page-layout",
+  "title": "Page Layout",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/page-layout",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/page-layout"
+  },
+  "author": "Nikita Ershov <niershov@cloud.ru>",
+  "contributors": [
+    "Nikita Ershov <niershov@cloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-utils": "3.3.1",
+    "@snack-uikit/button": "0.17.0",
+    "@snack-uikit/tooltip": "0.12.1",
+    "@snack-uikit/utils": "3.2.0",
+    "classnames": "2.3.2"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
