@@ -10,7 +10,7 @@ export type CopyButtonProps = {
 
 export function CopyButton({ valueToCopy }: CopyButtonProps) {
   const [isChecked, setIsCheckedOpen] = useState(false);
-  const timerId = useRef<ReturnType<typeof setTimeout>>();
+  const timerId = useRef<NodeJS.Timeout>();
   const openChecked = () => setIsCheckedOpen(true);
   const closeChecked = () => setIsCheckedOpen(false);
 

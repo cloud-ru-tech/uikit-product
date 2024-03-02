@@ -9,7 +9,7 @@ import { DictionaryPropertyAsFn, textProvider, Texts } from '../../helpers';
 import { useTextFieldValidation } from './hooks';
 import styles from './styles.module.scss';
 
-export type ConfirmDeleteModalProps = Pick<ModalProps, 'open' | 'title' | 'onClose'> & {
+export type ConfirmDeleteModalProps = Pick<ModalProps, 'open' | 'title' | 'onClose' | 'mode'> & {
   target: {
     type: string;
     name: string;
@@ -58,7 +58,6 @@ export function ConfirmDeleteModal({ target, onApprove, onClose, ...restProps }:
         label: textProvider<string>(languageCode, Texts.Delete),
         onClick: handleApprove,
       }}
-      mode='forced'
       content={
         <>
           <div className={styles.textField}>
