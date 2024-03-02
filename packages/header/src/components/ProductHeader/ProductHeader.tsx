@@ -52,7 +52,13 @@ export type ProductHeaderProps = WithSupportProps<
     notifications?: NotificationsProps;
     userMenu?: Pick<
       UserMenuProps,
-      'user' | 'indicator' | 'onProfileManagementClick' | 'onThemeSwitchClick' | 'onLogout'
+      | 'user'
+      | 'indicator'
+      | 'invites'
+      | 'onAvatarClick'
+      | 'onProfileManagementClick'
+      | 'onThemeSwitchClick'
+      | 'onLogout'
     >;
   } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> &
     Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick'>

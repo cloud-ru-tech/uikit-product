@@ -1,6 +1,7 @@
+import { useArgs } from '@storybook/client-api';
 import { addons } from '@storybook/preview-api';
 import { ArgTypes } from '@storybook/react';
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { UPDATE_DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 
 import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
@@ -20,6 +21,8 @@ export type StoryProps = HeaderProps & {
   showUserMenuManagement: boolean;
   showUserMenuThemeSwitch: boolean;
   showUserMenuLogout: boolean;
+  showOrganizationInvite: boolean;
+  showOrganizationInvitePopover: boolean;
 
   showAddOrganization: boolean;
 
@@ -93,7 +96,9 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
     showUserMenuThemeSwitch,
     showUserMenuLogout,
     userMenu,
+    organizations,
     showAddOrganization,
+    showOrganizationInvite,
     showLinks,
     showFooterLinks,
     showPinnedCards,
@@ -109,6 +114,17 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
 
     const [notifyCards, setCards] = useState(args.notifications?.items || []);
 
+    const [{ showOrganizationInvitePopover }, setArgs] = useArgs<StoryProps>();
+
+    const closeInvitesPopover = () => setArgs({ showOrganizationInvitePopover: false });
+
+    useEffect(() => {
+      if (!showOrganizationInvite && showOrganizationInvitePopover) {
+        closeInvitesPopover();
+      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [showOrganizationInvite, showOrganizationInvitePopover]);
+
     if (args.select) {
       args.select.selectedProject = project;
       args.select.onProjectChange = setProject;
@@ -123,6 +139,14 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
           }
         : undefined;
     }
+
+    const orgs = useMemo(() => {
+      if (showOrganizationInvite) {
+        return [...organizations, { id: '3', name: 'ООО Инвайт', new: true }];
+      }
+
+      return organizations;
+    }, [organizations, showOrganizationInvite]);
 
     return (
       <div className={styles.wrapper}>
@@ -162,9 +186,19 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
                   onProfileManagementClick: showUserMenuManagement ? userMenu.onProfileManagementClick : undefined,
                   onThemeSwitchClick: showUserMenuThemeSwitch ? userMenu.onThemeSwitchClick : undefined,
                   onLogout: showUserMenuLogout ? userMenu.onLogout : undefined,
+                  onAvatarClick: closeInvitesPopover,
+                  invites: showOrganizationInvite
+                    ? {
+                        count: 1,
+                        showPopover: showOrganizationInvitePopover,
+                        onAcceptButtonClick: closeInvitesPopover,
+                        onCloseButtonClick: closeInvitesPopover,
+                      }
+                    : undefined,
                 }
               : undefined
           }
+          organizations={orgs}
           onOrganizationAdd={showAddOrganization ? args.onOrganizationAdd : undefined}
           drawerMenu={{
             ...args.drawerMenu,
@@ -254,6 +288,8 @@ export const ARGS: StoryProps = {
   showUserMenuManagement: true,
   showUserMenuThemeSwitch: true,
   showUserMenuLogout: true,
+  showOrganizationInvite: false,
+  showOrganizationInvitePopover: false,
   userMenu: {
     user: DEFAULT_USER,
     indicator: 'green',
@@ -457,6 +493,12 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   },
 
   showAddOrganization: { name: '[Story]: show add organizations', type: 'boolean' },
+  showOrganizationInvite: {
+    name: '[Story]: show organization invite badge and counter',
+  },
+  showOrganizationInvitePopover: {
+    name: '[Story]: show organization invite popover',
+  },
   organizations: { table: { disable: true } },
   onOrganizationAdd: { table: { disable: true } },
   onOrganizationChange: { table: { disable: true } },

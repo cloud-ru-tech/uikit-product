@@ -13,6 +13,7 @@ export type User = {
 export type Organization = {
   id: string;
   name: string;
+  new?: boolean;
 };
 
 export type Project = {

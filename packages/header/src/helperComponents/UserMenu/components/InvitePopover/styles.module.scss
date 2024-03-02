@@ -1,0 +1,24 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.invitePopover {
+  max-width: 290px;
+}
+
+.invitePopoverContent {
+  display: flex;
+  flex-direction: column;
+  gap: calc($dimension-025m + $dimension-3m);
+}
+
+.invitePopoverTexts {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-1m;
+}
+
+.invitePopoverButtons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $dimension-2m;
+}

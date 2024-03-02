@@ -2,12 +2,15 @@ import { useMemo, useRef, useState } from 'react';
 
 import { Themes, useLanguage, useTheme } from '@sbercloud/uikit-product-utils';
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
+import { Counter } from '@snack-uikit/counter';
 import { NightSVG, PlaceholderSVG, PlusSVG } from '@snack-uikit/icons';
 import { Droplist, ItemProps } from '@snack-uikit/list';
+import { PromoTag } from '@snack-uikit/promo-tag';
 import { Switch } from '@snack-uikit/toggles';
 
 import { textProvider, Texts } from '../../helpers';
 import { SelectProps } from '../SelectMenu';
+import { InvitePopover, InvitePopoverProps } from './components/InvitePopover';
 import styles from './styles.modules.scss';
 
 export type User = {
@@ -18,9 +21,14 @@ export type User = {
 export type UserMenuProps = {
   user: User;
   indicator?: AvatarProps['indicator'];
+  onAvatarClick?(): void;
   onProfileManagementClick?(): void;
   onThemeSwitchClick?(): void;
   onLogout?(): void;
+  invites?: {
+    count?: number;
+    showPopover?: boolean;
+  } & Pick<InvitePopoverProps, 'onAcceptButtonClick' | 'onCloseButtonClick'>;
 } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'>;
 
 export function UserMenu({
@@ -29,10 +37,12 @@ export function UserMenu({
   onProfileManagementClick,
   onThemeSwitchClick,
   onLogout,
+  onAvatarClick,
   organizations,
   selectedOrganization,
   onOrganizationChange,
   onOrganizationAdd,
+  invites,
 }: UserMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { theme } = useTheme();
@@ -81,6 +91,9 @@ export function UserMenu({
       items.push({
         'data-test-id': 'header__user-menu-organization',
         beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols />,
+        afterContent: organization.new && (
+          <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
+        ),
         content: {
           option: organization.name,
         },
@@ -157,6 +170,8 @@ export function UserMenu({
     user.name,
   ]);
 
+  const userMenuAvatar = <Avatar size='xs' name={user.name} showTwoSymbols indicator={indicator} />;
+
   return (
     <Droplist
       size='s'
@@ -178,8 +193,22 @@ export function UserMenu({
         tabIndex={0}
         data-test-id='header__user-menu-button'
         ref={triggerRef}
+        onClick={onAvatarClick}
       >
-        <Avatar size='xs' name={user.name} showTwoSymbols indicator={indicator} />
+        {invites?.showPopover ? (
+          <InvitePopover
+            onAcceptButtonClick={invites.onAcceptButtonClick}
+            onCloseButtonClick={invites.onCloseButtonClick}
+          >
+            {userMenuAvatar}
+          </InvitePopover>
+        ) : (
+          userMenuAvatar
+        )}
+
+        {invites?.count && invites.count > 0 && (
+          <Counter value={invites.count} appearance='primary' size='s' className={styles.userMenuAvatarCounter} />
+        )}
       </div>
     </Droplist>
   );

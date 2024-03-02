@@ -3,27 +3,8 @@ import { Meta, StoryFn } from '@storybook/react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Header, HeaderProps } from '../src';
-import { ARG_TYPES, ARGS, getTemplate } from './headerTemplate';
-
-export type StoryProps = HeaderProps & {
-  showSelect: boolean;
-  showWorkspaces: boolean;
-  showPagePath: boolean;
-  showSettings: boolean;
-  showHelpMenu: boolean;
-  showNotifications: boolean;
-  showUserMenu: boolean;
-  showUserMenuManagement: boolean;
-  showUserMenuThemeSwitch: boolean;
-  showUserMenuLogout: boolean;
-
-  showAddOrganization: boolean;
-
-  showLinks: boolean;
-  showFooterLinks: boolean;
-  showPinnedCards: boolean;
-};
+import { Header } from '../src';
+import { ARG_TYPES, ARGS, getTemplate, StoryProps } from './headerTemplate';
 
 const meta: Meta = {
   title: 'Snack Uikit/Header/Desktop',
