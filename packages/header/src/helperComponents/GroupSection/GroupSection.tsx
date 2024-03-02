@@ -82,6 +82,7 @@ export function GroupSection({
       if (searchValue.length > 0) {
         setIsSearchActive(false);
         setSearchValue('');
+
         setTimeout(() => {
           const selectedItem = itemRefs.current[getItemIndex(groupId, item.id)];
           selectedItem?.scrollIntoView({ block: 'end' });

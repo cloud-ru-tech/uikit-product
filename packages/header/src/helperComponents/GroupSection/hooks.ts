@@ -30,8 +30,9 @@ export function useSearch({ groups, searchable }: UseSearchProps) {
 
   const handleActivateSearch = () => setIsSearchActive(true);
   const handleSearchBlur = () => {
+    if (searchValue.length) return;
+
     setTimeout(() => {
-      setSearchValue('');
       setIsSearchActive(false);
     }, 0);
   };
