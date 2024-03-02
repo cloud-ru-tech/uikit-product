@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { MouseEvent, useCallback, useMemo, useState } from 'react';
+import { MouseEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
@@ -22,6 +22,12 @@ import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
 import styles from './styles.modules.scss';
 
+/**
+ * Если в правой части контент превышает высоту окна на эту долю,
+ * будут отображаться скролящие ссылки слева.
+ */
+const CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT = 0.3;
+
 export function DrawerMenuDesktop({
   open,
   onClose,
@@ -35,25 +41,35 @@ export function DrawerMenuDesktop({
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
   const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
+  const [showScrollLinks, setShowScrollLinks] = useState(false);
 
   const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
 
-  const {
-    cardsRef,
-    scrollRef,
-    searchPanelRef,
-    addScrollHandler,
-    removeScrollHandler,
-    isLinkSelected,
-    handleLinkClick,
-  } = useLinks({
+  const { cardsRef, scrollRef, searchPanelRef, handleLinkClick } = useLinks({
     links: visibleLinks,
     searchValue,
     setSearchValue,
     drawerOpen: open,
+    highlightClassName: styles.highlight,
   });
 
   const showRightSection = visibleLinks?.length || visiblePinnedCards;
+
+  const rightContainerRef = useRef<HTMLDivElement>(null);
+  const rightContentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open || !showRightSection || !rightContainerRef.current || !rightContentRef.current) {
+      return;
+    }
+
+    const containerHeight = rightContainerRef.current.offsetHeight;
+    const contentHeight = rightContentRef.current.offsetHeight;
+
+    if (contentHeight - containerHeight > contentHeight * CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT) {
+      setShowScrollLinks(true);
+    }
+  }, [showRightSection, open]);
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -101,8 +117,6 @@ export function DrawerMenuDesktop({
                       tabIndex={0}
                       role={'menu'}
                       data-open={isOpen || undefined}
-                      // onKeyDown={handleSelectKeyDown}
-                      // ref={navigateOutsideRef}
                       data-test-id='header__drawer-menu-select'
                     >
                       <div className={styles.logo}>
@@ -130,7 +144,7 @@ export function DrawerMenuDesktop({
                 </div>
 
                 <Scroll>
-                  {visibleLinks && visibleLinks.length && (
+                  {showScrollLinks && visibleLinks && visibleLinks.length && (
                     <div className={styles.links}>
                       {visibleLinks.map(link => (
                         <Link
@@ -140,8 +154,8 @@ export function DrawerMenuDesktop({
                           target={'_self'}
                           onClick={handleLinkClick(link)}
                           size='m'
-                          textMode={isLinkSelected(link) ? 'accent' : 'default'}
-                          appearance={isLinkSelected(link) ? 'primary' : 'neutral'}
+                          textMode='default'
+                          appearance='neutral'
                           data-test-id={`header__drawer-menu-link-${link.id}`}
                         />
                       ))}
@@ -173,9 +187,9 @@ export function DrawerMenuDesktop({
           </div>
 
           {showRightSection && (
-            <div className={styles.right} onMouseEnter={addScrollHandler} onMouseLeave={removeScrollHandler}>
+            <div className={styles.right} ref={rightContainerRef}>
               <Scroll ref={scrollRef}>
-                <div className={styles.rightContent}>
+                <div className={styles.rightContent} ref={rightContentRef}>
                   {visiblePinnedCards && (
                     <div className={cn(styles.pinnedCards, styles.rightContentItem)}>
                       {visiblePinnedCards.map(item => (
@@ -209,7 +223,7 @@ export function DrawerMenuDesktop({
                   {filteredLinks &&
                     filteredLinks.map((group, index) => (
                       <div className={styles.rightContentItem} key={group.id}>
-                        <GroupCard id={group.id} title={group.label} ref={el => (cardsRef.current[index] = el)}>
+                        <GroupCard title={group.label} id={group.id} ref={el => (cardsRef.current[index] = el)}>
                           {group.items.map(item => (
                             <Card
                               outline

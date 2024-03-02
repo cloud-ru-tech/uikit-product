@@ -111,6 +111,7 @@ export function DrawerMenuMobile({
                     <Card
                       outline
                       key={item.label}
+                      promoBadge={item.badge}
                       onClick={wrappedClick(item)}
                       header={
                         <Card.Header title={item.label ?? ''} emblem={{ icon: item.icon, decor: false }} size='s' />

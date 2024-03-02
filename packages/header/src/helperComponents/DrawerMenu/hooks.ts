@@ -1,7 +1,5 @@
-import throttle from 'lodash.throttle';
+import debounce from 'lodash.debounce';
 import { MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
-
-import { useEventHandler } from '@sbercloud/uikit-product-utils';
 
 import { LinksGroup } from '../../types';
 
@@ -14,12 +12,42 @@ type UseScrollProps = {
   searchValue: string;
   setSearchValue(value: string): void;
   drawerOpen: boolean;
+  highlightClassName: string;
 };
-
-const THROTTLE_TIMEOUT = 100;
 
 function matchSearchString(value: string, search: string) {
   return value.trim().toLowerCase().includes(search.trim().toLowerCase());
+}
+
+export function useHighlight(className: string) {
+  const element = useRef<HTMLElement>();
+
+  const highlight = useMemo(
+    () => {
+      const scheduleHighlight = debounce(() => {
+        element.current?.classList.add(className);
+        setTimeout(
+          () => {
+            element.current?.classList.remove(className);
+            element.current = undefined;
+          },
+          300,
+          { trailing: false },
+        );
+      }, 80);
+
+      return (elementToHighlight?: HTMLElement | null) => {
+        if (elementToHighlight) {
+          element.current = elementToHighlight;
+        }
+        scheduleHighlight();
+      };
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  );
+
+  return highlight;
 }
 
 export function useSearch({ links }: UseSearchProps) {
@@ -54,58 +82,30 @@ export function useSearch({ links }: UseSearchProps) {
   };
 }
 
-export function useLinks({ searchValue, setSearchValue, links, drawerOpen }: UseScrollProps) {
+export function useLinks({ setSearchValue, drawerOpen, highlightClassName }: UseScrollProps) {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const scrollRef = useRef<HTMLElement>(null);
   const searchPanelRef = useRef<HTMLDivElement>(null);
-
-  const firstLinkId = links?.[0].id;
-  const [selectedLink, setSelectedLink] = useState(firstLinkId);
+  const highlight = useHighlight(highlightClassName);
 
   useEffect(() => {
-    if (drawerOpen) {
-      setSelectedLink(firstLinkId);
+    const scroll = scrollRef.current;
+
+    if (!scroll || !drawerOpen) {
+      return;
     }
-  }, [drawerOpen, firstLinkId]);
 
-  const handleScroll = useEventHandler(
-    throttle(() => {
-      if (searchValue.length > 0) return;
+    const scrollHandler = () => highlight();
 
-      for (const card of cardsRef.current) {
-        if (!card) {
-          continue;
-        }
-
-        const { top } = card.getBoundingClientRect();
-
-        if (top > 0) {
-          const selectedLink = links?.find(link => link.id === card.id);
-
-          if (selectedLink) {
-            setSelectedLink(selectedLink.id);
-            document.querySelector(`a[href="#${selectedLink.id}"]`)?.scrollIntoView({ block: 'end' });
-          }
-
-          break;
-        }
-      }
-    }, THROTTLE_TIMEOUT),
-  );
-
-  const addScrollHandler = () => {
-    scrollRef.current?.addEventListener('scroll', handleScroll);
-  };
-
-  const removeScrollHandler = () => {
-    scrollRef.current?.removeEventListener('scroll', handleScroll);
-  };
+    scroll.addEventListener('scroll', scrollHandler);
+    return () => scroll.removeEventListener('scroll', scrollHandler);
+  }, [drawerOpen, highlight]);
 
   const handleLinkClick = (link: LinksGroup) => (event: MouseEvent) => {
     event.preventDefault();
-
-    setSelectedLink(link.id);
     setSearchValue('');
+
+    highlight(document.getElementById(link.id));
 
     setTimeout(() => {
       scrollRef.current?.scrollTo({
@@ -116,15 +116,10 @@ export function useLinks({ searchValue, setSearchValue, links, drawerOpen }: Use
     }, 0);
   };
 
-  const isLinkSelected = (link: LinksGroup) => link.id === selectedLink && !searchValue;
-
   return {
     cardsRef,
     scrollRef,
     searchPanelRef,
-    addScrollHandler,
-    removeScrollHandler,
     handleLinkClick,
-    isLinkSelected,
   };
 }

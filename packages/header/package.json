@@ -32,7 +32,7 @@
     "@snack-uikit/avatar": "0.5.0",
     "@snack-uikit/breadcrumbs": "0.8.10",
     "@snack-uikit/button": "0.15.1",
-    "@snack-uikit/card": "0.11.1",
+    "@snack-uikit/card": "0.11.3",
     "@snack-uikit/divider": "3.0.0",
     "@snack-uikit/drawer": "0.6.4",
     "@snack-uikit/droplist": "0.12.4",
@@ -46,6 +46,7 @@
     "@snack-uikit/toggles": "0.9.5",
     "@snack-uikit/truncate-string": "0.4.4",
     "classnames": "2.3.2",
+    "lodash.debounce": "4.0.8",
     "lodash.throttle": "4.1.1",
     "react-transition-state": "2.1.1"
   }

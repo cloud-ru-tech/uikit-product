@@ -302,7 +302,12 @@ export const ARGS: StoryProps = {
           { label: 'Подсети', onClick: () => {}, icon: PlaceholderSVG },
           { label: 'Группы безопасности', onClick: () => {}, icon: PlaceholderSVG },
           { label: 'Публичные IP-адреса', onClick: () => {}, icon: PlaceholderSVG },
-          { label: 'Балансировщик нагрузки', onClick: () => {}, icon: PlaceholderSVG, badge: 'Preview' },
+          {
+            label: 'Балансировщик нагрузки',
+            onClick: () => {},
+            icon: PlaceholderSVG,
+            badge: { text: 'New', appearance: 'pink' },
+          },
         ],
       },
       {

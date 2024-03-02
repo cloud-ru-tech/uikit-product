@@ -73,7 +73,10 @@ export function SelectMenu({
         groups={projects}
         onItemChange={onProjectChange}
         selectedItem={selectedProject}
-        addItem={{ label: textProvider(languageCode, Texts.AddProject), handler: onProjectAdd }}
+        addItem={{
+          label: textProvider(languageCode, Texts.AddProject),
+          handler: onProjectAdd,
+        }}
         closeDropdown={closeDropdown}
         data-test-id='header__select-group-project'
       />
