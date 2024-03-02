@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.11.0 (2024-03-02)
+
+
+### Features
+
+* **[FF-4318](https://jira.sbercloud.tech/browse/FF-4318):** add groups hightlight ([af78979](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/af789799929a242ebb6c694df60b9f8f08c2e397))
+
+
+
+
+
 # 1.10.0 (2024-02-29)
 
 
