@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.0.0 (2024-03-02)
+
+
+### Bug Fixes
+
+* **[FF-4425](https://jira.sbercloud.tech/browse/FF-4425):** drawer width with disabled right section ([655e9ac](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/655e9acc70ad0c70746c711ed8ee9cd267c73cf8))
+
+
+### Features
+
+* **[FF-4425](https://jira.sbercloud.tech/browse/FF-4425):** add hidden prop to allProducts and items ([91c9179](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/91c917999c14694a39c59419d656d5c84419fe38))
+* **[FF-4425](https://jira.sbercloud.tech/browse/FF-4425):** disable projects search close on blur if not empty ([5a2209f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5a2209f8ed94c7f9cda58d225de4401d13d718cd))
+
+
+### BREAKING CHANGES
+
+
+* **[FF-4425](https://jira.sbercloud.tech/browse/FF-4425):** changed prop onProjectAdd to projectAddButton, add closeDropdown on some actions ([c9be206](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c9be20606dd6f50eacc37a582914011179bc4bae))
+
+
+
+
 # 1.11.0 (2024-03-02)
 
 
