@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-confirm-delete-modal",
   "title": "Confirm Delete Modal",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "sideEffects": [
     "*.css",
     "*.woff",

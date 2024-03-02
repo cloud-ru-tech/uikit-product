@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.15.0 (2024-03-02)
+
+
+### BREAKING CHANGES
+
+
+* **FF-0001:** move Pages to Page Layout package; move InfoStroke to Info Row package ([f810c1d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f810c1d95c843ef4a1b0bc23e9a048d043d2ee5c))
+
+
+
+
 ## 0.14.1 (2024-02-29)
 
 

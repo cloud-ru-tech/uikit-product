@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-03-02)
+
+
+### Features
+
+* **FF-0001:** add mode props ([1d12f8c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1d12f8cc4fb01aab4cd6485736e762c85605de45))
+
+
+
+
+
 ## 0.4.1 (2024-02-22)
 
 
