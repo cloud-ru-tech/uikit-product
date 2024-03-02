@@ -129,7 +129,7 @@ export function GroupSection({
         className={styles.list}
         selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
         items={filteredGroups.map(group => ({
-          label: group.heading,
+          label: filteredGroups.length > 1 ? group.heading : undefined,
           mode: 'secondary',
           items: group.items.map(item => {
             const dataTestId = `header__select-group-item-${item.id}`;
