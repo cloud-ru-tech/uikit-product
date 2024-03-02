@@ -2,14 +2,22 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .drawer {
-  min-width: 656px;
-
   & [data-test-id='drawer__close-button'] {
     display: none;
   }
 
   svg {
     fill: currentColor;
+  }
+}
+
+.drawerRoot {
+  & [data-test-id='header__drawer-menu'][data-small] {
+    width: 344px;
+  }
+
+  & [data-test-id='header__drawer-menu']:not([data-small]) {
+    min-width: 656px;
   }
 }
 

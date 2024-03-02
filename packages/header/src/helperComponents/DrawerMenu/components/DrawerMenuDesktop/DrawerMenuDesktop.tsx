@@ -99,6 +99,8 @@ export function DrawerMenuDesktop({
       open={open}
       onClose={onClose}
       className={styles.drawer}
+      rootClassName={styles.drawerRoot}
+      data-small={!showRightSection || undefined}
       data-test-id='header__drawer-menu'
     >
       <div className={styles.drawerBody}>
