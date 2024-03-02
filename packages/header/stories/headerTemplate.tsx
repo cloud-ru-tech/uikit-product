@@ -11,6 +11,7 @@ import styles from './styles.modules.scss';
 
 export type StoryProps = HeaderProps & {
   showSelect: boolean;
+  showWorkspaces: boolean;
   showPagePath: boolean;
   showSettings: boolean;
   showHelpMenu: boolean;
@@ -38,6 +39,17 @@ const PROJECT_ACTIONS = [{ id: 'test', content: { option: 'test' } }];
 
 const DEFAULT_PROJECT = { id: '1_1', name: 'Проект 1', actions: PROJECT_ACTIONS };
 const DEFAULT_PLATFORM = { id: '1', name: 'Evolution', logo: <EvolutionPlatformLogo /> };
+const WORKSPACES = {
+  selectedWorkspace: { id: '1', name: 'Workspace 1' },
+  list: [
+    { id: '1', name: 'Workspace 1' },
+    { id: '2', name: 'Workspace 2' },
+    { id: '3', name: 'Workspace 3' },
+    { id: '4', name: 'Workspace 4' },
+  ],
+  onWorkspaceChange: () => {},
+  onWorkspaceAdd: () => {},
+};
 const DEFAULT_PRODUCT = { ...DEFAULT_PLATFORM, category: 'Облачная платформа' };
 const DEFAULT_NOTIFICATION = {
   label: ['Категория', 'Подкатегория'].join('・'),
@@ -91,6 +103,9 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
     const [project, setProject] = useState(args.select?.selectedProject ?? DEFAULT_PROJECT);
     const [platform, setPlatform] = useState(args.select?.selectedPlatform ?? DEFAULT_PLATFORM);
     const [product, setProduct] = useState(args.drawerMenu.selectedProduct);
+    const [workspace, setWorkspace] = useState(
+      args.select?.workspaces?.selectedWorkspace ?? WORKSPACES.selectedWorkspace,
+    );
 
     const [notifyCards, setCards] = useState(args.notifications?.items || []);
 
@@ -99,6 +114,14 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
       args.select.onProjectChange = setProject;
       args.select.selectedPlatform = platform;
       args.select.onPlatformChange = setPlatform;
+      args.select.workspaces = args.showWorkspaces
+        ? {
+            list: WORKSPACES.list,
+            selectedWorkspace: workspace,
+            onWorkspaceChange: setWorkspace,
+            onWorkspaceAdd: () => {},
+          }
+        : undefined;
     }
 
     return (
@@ -159,6 +182,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
 
 export const ARGS: StoryProps = {
   showSelect: true,
+  showWorkspaces: false,
   select: {
     platforms: [
       DEFAULT_PLATFORM,
@@ -399,6 +423,8 @@ export const ARGS: StoryProps = {
 export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   showSelect: { name: '[Story]: show header select', type: 'boolean' },
   select: { table: { disable: true } },
+
+  showWorkspaces: { name: '[Story]: show workspaces', type: 'boolean' },
 
   showPagePath: { name: '[Story]: show page path', type: 'boolean' },
   pagePath: { table: { disable: true } },

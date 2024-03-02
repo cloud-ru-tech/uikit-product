@@ -75,3 +75,8 @@ export type Platform = {
   name: string;
   logo: ReactElement;
 };
+
+export type Workspace = {
+  id: string;
+  name: string;
+};

@@ -8,6 +8,7 @@ import { ARG_TYPES, ARGS, getTemplate } from './headerTemplate';
 
 export type StoryProps = HeaderProps & {
   showSelect: boolean;
+  showWorkspaces: boolean;
   showPagePath: boolean;
   showSettings: boolean;
   showHelpMenu: boolean;

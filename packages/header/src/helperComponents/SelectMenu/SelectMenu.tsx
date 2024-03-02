@@ -1,3 +1,5 @@
+import cn from 'classnames';
+
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { Divider } from '@snack-uikit/divider';
@@ -5,7 +7,7 @@ import { ChevronDownSVG, ChevronUpSVG } from '@snack-uikit/icons';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../helpers';
-import { Organization, Platform, Project } from '../../types';
+import { Organization, Platform, Project, Workspace } from '../../types';
 import { GroupSection, ItemsGroup } from '../GroupSection';
 import styles from './styles.modules.scss';
 
@@ -28,6 +30,13 @@ export type SelectProps = {
   selectedPlatform: Platform;
   onPlatformChange?(value: Platform): void;
 
+  workspaces?: {
+    list: Workspace[];
+    selectedWorkspace?: Workspace;
+    onWorkspaceChange(value: Workspace): void;
+    onWorkspaceAdd(): void;
+  };
+
   closeDropdown?(): void;
 };
 
@@ -36,6 +45,10 @@ const divider = (
     <Divider orientation='vertical' />
   </div>
 );
+
+type SelectMenuProps = SelectProps & {
+  mobile: boolean;
+};
 
 export function SelectMenu({
   organizations,
@@ -53,14 +66,19 @@ export function SelectMenu({
   selectedPlatform,
   onPlatformChange,
 
+  workspaces,
+
   closeDropdown,
-}: SelectProps) {
+
+  mobile,
+}: SelectMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const className = cn({ [styles.fixedColumnsWidth]: !mobile });
 
   return (
-    <div className={styles.selectGroup}>
+    <>
       <GroupSection
-        className={styles.section}
+        className={className}
         title={textProvider(languageCode, Texts.Organization)}
         groups={[{ id: '1', items: organizations }]}
         onItemChange={onOrganizationChange}
@@ -72,7 +90,7 @@ export function SelectMenu({
       {divider}
 
       <GroupSection
-        className={styles.section}
+        className={className}
         title={textProvider(languageCode, Texts.Project)}
         searchable={true}
         groups={projects}
@@ -93,19 +111,50 @@ export function SelectMenu({
       {divider}
 
       <GroupSection
-        className={styles.section}
+        className={className}
         title={textProvider(languageCode, Texts.Platforms)}
-        last={true}
+        last={!workspaces}
         groups={[{ id: '1', items: platforms }]}
         onItemChange={onPlatformChange}
         selectedItem={selectedPlatform}
         data-test-id='header__select-group-platform'
       />
-    </div>
+
+      {workspaces && (
+        <>
+          {divider}
+
+          <GroupSection
+            className={className}
+            title={textProvider(languageCode, Texts.Workspaces)}
+            groups={[{ id: '1', items: workspaces.list }]}
+            onItemChange={workspaces.onWorkspaceChange}
+            selectedItem={workspaces.selectedWorkspace}
+            addItem={{
+              label: textProvider(languageCode, Texts.AddWorkspace),
+              handler: workspaces.onWorkspaceAdd,
+            }}
+            data-test-id='header__select-group-workspace'
+            searchable
+            last
+          />
+        </>
+      )}
+    </>
   );
 }
 
-export function SelectMenuTrigger({ selectedProject, open }: { selectedProject: Project; open: boolean }) {
+const getIcon = (open: boolean) => (open ? <ChevronUpSVG size={16} /> : <ChevronDownSVG size={16} />);
+
+export function SelectMenuTrigger({
+  selectedProject,
+  open,
+  showIcon = true,
+}: {
+  selectedProject: Project;
+  open: boolean;
+  showIcon: boolean;
+}) {
   return (
     <div className={styles.contentLayout}>
       <Avatar size='xs' name={selectedProject.name} showTwoSymbols shape='square' />
@@ -114,7 +163,7 @@ export function SelectMenuTrigger({ selectedProject, open }: { selectedProject: 
         <TruncateString text={selectedProject.name} hideTooltip />
       </span>
 
-      {open ? <ChevronUpSVG size={16} /> : <ChevronDownSVG size={16} />}
+      {showIcon && getIcon(open)}
     </div>
   );
 }

@@ -21,7 +21,7 @@ export type GroupSectionProps = WithSupportProps<{
   searchable?: boolean;
 
   groups: ItemsGroup<Item>[];
-  selectedItem: Item;
+  selectedItem?: Item;
   onItemChange?(item: Item): void;
 
   addItem?: {
@@ -127,7 +127,7 @@ export function GroupSection({
         marker
         size='m'
         className={styles.list}
-        selection={{ mode: 'single', value: selectedItem.id }}
+        selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
         items={filteredGroups.map(group => ({
           label: group.heading,
           mode: 'secondary',

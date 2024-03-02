@@ -44,6 +44,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'selectedProject'
       | 'onProjectChange'
       | 'projectAddButton'
+      | 'workspaces'
     >;
     pagePath?: BreadcrumbsProps['items'];
     settings?: SettingOption[];

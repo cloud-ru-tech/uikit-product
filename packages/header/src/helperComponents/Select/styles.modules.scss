@@ -63,3 +63,14 @@
   color: $sys-neutral-text-light;
   max-width: calc(2 * $dimension-10m);
 }
+
+.selectGroup {
+  height: 320px;
+  box-sizing: border-box;
+  padding: $dimension-050m $dimension-1m;
+
+  display: flex;
+  gap: $dimension-1m;
+  align-items: stretch;
+  flex-direction: row;
+}

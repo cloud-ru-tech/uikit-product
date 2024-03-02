@@ -35,6 +35,8 @@ export enum Texts {
   ManageProfile = 'manage-profile',
   SwitchTheme = 'switch-theme',
   Logout = 'logout',
+  Workspaces = 'workspaces',
+  AddWorkspace = 'add-workspace',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -66,7 +68,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     [Texts.Search]: 'Поиск',
     [Texts.Edit]: 'Редактировать',
-    [Texts.Organization]: 'Организация',
+    [Texts.Organization]: 'Организации',
     [Texts.AddOrganization]: 'Добавить организацию',
     [Texts.Project]: 'Проекты',
     [Texts.AddProject]: 'Добавить проект',
@@ -74,6 +76,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.ManageProfile]: 'Управление профилем',
     [Texts.SwitchTheme]: 'Переключить тему',
     [Texts.Logout]: 'Выйти из аккаунта',
+    [Texts.Workspaces]: 'Воркспейсы',
+    [Texts.AddWorkspace]: 'Добавить воркспейс',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderBalanceTooltipBalance]: 'Balance',
@@ -103,14 +107,16 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     [Texts.Search]: 'Search',
     [Texts.Edit]: 'Edit',
-    [Texts.Organization]: 'Organization',
+    [Texts.Organization]: 'Organizations',
     [Texts.AddOrganization]: 'Add organization',
     [Texts.Project]: 'Projects',
     [Texts.AddProject]: 'Add projects',
-    [Texts.Platforms]: "Project's platform",
+    [Texts.Platforms]: 'Platforms',
     [Texts.ManageProfile]: 'Manage profile',
     [Texts.SwitchTheme]: 'Switch theme',
     [Texts.Logout]: 'Logout',
+    [Texts.Workspaces]: 'Workspaces',
+    [Texts.AddWorkspace]: 'Add workspace',
   },
 };
 

@@ -2,7 +2,6 @@ import { KeyboardEvent, useCallback, useMemo, useRef, useState } from 'react';
 
 import { Dropdown } from '@snack-uikit/droplist';
 
-import { Platform, ProductOption } from '../../types';
 import { SelectMenu, SelectMenuTrigger, SelectProps } from '../SelectMenu';
 import styles from './styles.modules.scss';
 
@@ -20,6 +19,8 @@ export function Select({
   platforms,
   selectedPlatform,
   onPlatformChange,
+
+  workspaces,
 }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const navigateInsideRef = useRef<HTMLDivElement>(null);
@@ -59,25 +60,43 @@ export function Select({
     return undefined;
   }, [closeDropdown, projectAddButtonProp]);
 
+  const workspacesOptions = useMemo(
+    () =>
+      workspaces
+        ? {
+            ...workspaces,
+            onWorkspaceAdd() {
+              closeDropdown();
+              workspaces.onWorkspaceAdd();
+            },
+          }
+        : undefined,
+    [closeDropdown, workspaces],
+  );
+
   return (
     <Dropdown
       open={isOpen}
       onOpenChange={setIsOpen}
       content={
-        <SelectMenu
-          organizations={organizations}
-          selectedOrganization={selectedOrganization}
-          onOrganizationChange={onOrganizationChange}
-          onOrganizationAdd={onOrganizationAdd}
-          projects={projects ?? []}
-          selectedProject={selectedProject ?? ({} as ProductOption)}
-          onProjectChange={onProjectChange}
-          projectAddButton={projectAddButton}
-          platforms={platforms ?? []}
-          selectedPlatform={selectedPlatform ?? ({} as Platform)}
-          onPlatformChange={onPlatformChange}
-          closeDropdown={closeDropdown}
-        />
+        <div className={styles.selectGroup}>
+          <SelectMenu
+            organizations={organizations}
+            selectedOrganization={selectedOrganization}
+            onOrganizationChange={onOrganizationChange}
+            onOrganizationAdd={onOrganizationAdd}
+            projects={projects ?? []}
+            selectedProject={selectedProject}
+            onProjectChange={onProjectChange}
+            projectAddButton={projectAddButton}
+            platforms={platforms ?? []}
+            selectedPlatform={selectedPlatform}
+            onPlatformChange={onPlatformChange}
+            closeDropdown={closeDropdown}
+            workspaces={workspacesOptions}
+            mobile={false}
+          />
+        </div>
       }
       placement='bottom-start'
     >
@@ -90,7 +109,7 @@ export function Select({
         onKeyDown={handleSelectKeyDown}
         data-test-id='header__select'
       >
-        <SelectMenuTrigger selectedProject={selectedProject} open={isOpen} />
+        <SelectMenuTrigger selectedProject={selectedProject} open={isOpen} showIcon />
       </div>
     </Dropdown>
   );

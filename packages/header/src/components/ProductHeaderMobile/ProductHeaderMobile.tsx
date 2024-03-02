@@ -52,6 +52,7 @@ export function ProductHeaderMobile({
     selectedPlatform,
     projectAddButton: projectAddButtonProp,
     projects,
+    workspaces,
   } = select ?? {};
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -114,6 +115,21 @@ export function ProductHeaderMobile({
     [closeMainMenu, closeUserMenu, onPlatformChangeProp],
   );
 
+  const workspacesOptions = useMemo(
+    () =>
+      workspaces
+        ? {
+            ...workspaces,
+            onWorkspaceAdd() {
+              closeMainMenu();
+              closeUserMenu();
+              workspaces.onWorkspaceAdd?.();
+            },
+          }
+        : undefined,
+    [closeMainMenu, closeUserMenu, workspaces],
+  );
+
   const projectAddButton = useMemo(() => {
     if (!projectAddButtonProp) return undefined;
 
@@ -142,7 +158,7 @@ export function ProductHeaderMobile({
         },
         beforeContent: (
           <div className={styles.select} data-test-id='header__select'>
-            <SelectMenuTrigger selectedProject={selectedProject} open={isProjectMenuOpen} />
+            <SelectMenuTrigger selectedProject={selectedProject} open={isProjectMenuOpen} showIcon={false} />
           </div>
         ),
         afterContent: <ChevronRightSVG />,
@@ -309,6 +325,8 @@ export function ProductHeaderMobile({
                     platforms={platforms ?? []}
                     selectedPlatform={selectedPlatform ?? ({} as Platform)}
                     onPlatformChange={onPlatformChange}
+                    workspaces={workspacesOptions}
+                    mobile
                   />
                 </div>
               )}
