@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.1.1 (2024-03-03)
+
+
+### Dependencies
+
+* **[FF-4401](https://jira.sbercloud.tech/browse/FF-4401):** up card deps ([59508f6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/59508f62c7464630b7a1b6b81ec9b1a621fb0118))
+
+
+
+
+
 # 2.1.0 (2024-03-03)
 
 
