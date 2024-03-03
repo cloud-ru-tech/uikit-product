@@ -16,6 +16,7 @@ $prefix-height: simple-var($sans-headline-m-line-height);
   background-color: $sys-neutral-background1-level;
   padding: 56px;
   flex-shrink: 0;
+  border-radius: 16px;
 }
 
 .prefix {
