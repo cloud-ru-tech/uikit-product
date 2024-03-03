@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.1.0 (2024-03-03)
+
+
+### Features
+
+* **[FF-4385](https://jira.sbercloud.tech/browse/FF-4385):** add workspaces to selector ([98b414f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/98b414fe1d5cc912a6fbf1c52050534a8dc254cf))
+
+
+
+
+
 # 2.0.0 (2024-03-02)
 
 
