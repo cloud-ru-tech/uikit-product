@@ -1,6 +1,6 @@
 import { KeyboardEvent, useCallback, useMemo, useRef, useState } from 'react';
 
-import { Dropdown } from '@snack-uikit/droplist';
+import { Dropdown } from '@snack-uikit/dropdown';
 
 import { SelectMenu, SelectMenuTrigger, SelectProps } from '../SelectMenu';
 import styles from './styles.modules.scss';
