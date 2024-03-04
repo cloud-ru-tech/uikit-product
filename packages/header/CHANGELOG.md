@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0 (2024-03-04)
+
+
+### Bug Fixes
+
+* **[FF-4429](https://jira.sbercloud.tech/browse/FF-4429):** filter allProducts if children is hidden ([fb7a4f5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fb7a4f53168b81f1526d6670cb426deae6fb4f08))
+
+
+### Features
+
+* **[FF-4429](https://jira.sbercloud.tech/browse/FF-4429):** add invites counter, badge and popover ([aa9efd5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aa9efd525db6e3ffc8258c0f61ade60bf00d0a3a))
+* **[FF-4429](https://jira.sbercloud.tech/browse/FF-4429):** remove projects folder heading when only one folder ([781053e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/781053e731ba81d8ab4ec96b77b725544709f631))
+
+
+
+
+
 ## 2.1.1 (2024-03-03)
 
 
