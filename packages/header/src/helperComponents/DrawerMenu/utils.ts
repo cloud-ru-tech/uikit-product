@@ -1,23 +1,23 @@
 import { FooterLink, InnerLink, LinksGroup, PinnedCard, ProductOption } from '../../types';
 import { ItemsGroup } from '../GroupSection';
 
-export function filterHidden(
-  item: FooterLink | InnerLink | LinksGroup | PinnedCard | ProductOption | ItemsGroup<ProductOption>,
-) {
+export function filterHidden(item: FooterLink | InnerLink | PinnedCard | ProductOption) {
   return !item.hidden;
 }
 
-export function filterHiddenLinks(links?: LinksGroup[]) {
+export function filterHiddenLinks<T extends LinksGroup | ItemsGroup<ProductOption>>(links?: T[]) {
   if (!links) {
     return undefined;
   }
 
-  return links.reduce<LinksGroup[]>((acc, cur) => {
+  return links.reduce<T[]>((acc, cur) => {
     if (cur.hidden) {
       return acc;
     }
 
-    const visibleLinks = cur.items.filter(link => !link.hidden);
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const visibleLinks = cur.items.filter(filterHidden);
 
     if (visibleLinks.length) {
       acc.push({

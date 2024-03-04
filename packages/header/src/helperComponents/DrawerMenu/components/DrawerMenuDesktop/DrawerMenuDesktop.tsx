@@ -40,7 +40,7 @@ export function DrawerMenuDesktop({
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
-  const visibleProducts = useMemo(() => allProducts.filter(filterHidden), [allProducts]);
+  const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
   const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
   const [showScrollLinks, setShowScrollLinks] = useState(false);
 

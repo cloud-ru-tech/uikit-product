@@ -30,7 +30,7 @@ export function DrawerMenuMobile({
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
-  const visibleProducts = useMemo(() => allProducts.filter(filterHidden), [allProducts]);
+  const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
 
   const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
   const { cardsRef } = useLinks({
