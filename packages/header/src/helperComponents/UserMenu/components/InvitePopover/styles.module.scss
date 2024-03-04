@@ -22,3 +22,17 @@
   justify-content: flex-end;
   gap: $dimension-2m;
 }
+
+.invitePopoverTriggerStub {
+  position: absolute;
+  bottom: $dimension-1m;
+  height: 1px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+
+  > span {
+    display: block;
+    height: 100%;
+  }
+}

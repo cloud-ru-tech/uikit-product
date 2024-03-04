@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { MouseEventHandler, useState } from 'react';
 
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
@@ -11,45 +11,62 @@ import styles from './styles.module.scss';
 export type InvitePopoverProps = {
   onCloseButtonClick(): void;
   onAcceptButtonClick(): void;
-  children: ReactNode;
 };
 
-export function InvitePopover({ onCloseButtonClick, onAcceptButtonClick, children }: InvitePopoverProps) {
+export function InvitePopover({ onCloseButtonClick, onAcceptButtonClick }: InvitePopoverProps) {
   const { languageCode } = useLanguage();
 
+  const [isOpen, setOpen] = useState(true);
+
+  const handleCloseClick: MouseEventHandler<HTMLButtonElement> = e => {
+    e.stopPropagation();
+
+    setOpen(false);
+    onCloseButtonClick();
+  };
+
+  const handleAcceptClick: MouseEventHandler<HTMLButtonElement> = e => {
+    e.stopPropagation();
+
+    setOpen(false);
+    onAcceptButtonClick();
+  };
+
   return (
-    <Popover
-      trigger='click'
-      open
-      placement='bottom-end'
-      className={styles.invitePopover}
-      tip={
-        <div className={styles.invitePopoverContent}>
-          <div className={styles.invitePopoverTexts}>
-            <Typography.SansTitleS>{textProvider(languageCode, Texts.InvitePopoverTitle)}</Typography.SansTitleS>
+    <div className={styles.invitePopoverTriggerStub}>
+      <Popover
+        trigger='click'
+        open={isOpen}
+        placement='bottom-end'
+        className={styles.invitePopover}
+        tip={
+          <div className={styles.invitePopoverContent}>
+            <div className={styles.invitePopoverTexts}>
+              <Typography.SansTitleS>{textProvider(languageCode, Texts.InvitePopoverTitle)}</Typography.SansTitleS>
 
-            <Typography.LightLabelM>{textProvider(languageCode, Texts.InvitePopoverText)}</Typography.LightLabelM>
+              <Typography.LightLabelM>{textProvider(languageCode, Texts.InvitePopoverText)}</Typography.LightLabelM>
+            </div>
+
+            <div className={styles.invitePopoverButtons}>
+              <ButtonFunction
+                size='s'
+                appearance='neutral'
+                onClick={handleCloseClick}
+                label={textProvider(languageCode, Texts.InvitePopoverCancelButton)}
+              />
+
+              <ButtonFilled
+                size='s'
+                appearance='neutral'
+                onClick={handleAcceptClick}
+                label={textProvider(languageCode, Texts.InvitePopoverAcceptButton)}
+              />
+            </div>
           </div>
-
-          <div className={styles.invitePopoverButtons}>
-            <ButtonFunction
-              size='s'
-              appearance='neutral'
-              onClick={onCloseButtonClick}
-              label={textProvider(languageCode, Texts.InvitePopoverCancelButton)}
-            />
-
-            <ButtonFilled
-              size='s'
-              appearance='neutral'
-              onClick={onAcceptButtonClick}
-              label={textProvider(languageCode, Texts.InvitePopoverAcceptButton)}
-            />
-          </div>
-        </div>
-      }
-    >
-      {children}
-    </Popover>
+        }
+      >
+        <></>
+      </Popover>
+    </div>
   );
 }

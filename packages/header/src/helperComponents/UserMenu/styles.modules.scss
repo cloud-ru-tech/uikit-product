@@ -1,6 +1,10 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
+.userMenuWrap {
+  position: relative;
+}
+
 .userMenu {
   position: relative;
 
@@ -19,6 +23,6 @@
 
 .userMenuAvatarCounter {
   position: absolute;
-  top: 0;
+  top: 2px;
   right: 0;
 }

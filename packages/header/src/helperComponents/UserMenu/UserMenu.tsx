@@ -170,46 +170,44 @@ export function UserMenu({
     user.name,
   ]);
 
-  const userMenuAvatar = <Avatar size='xs' name={user.name} showTwoSymbols indicator={indicator} />;
-
   return (
-    <Droplist
-      size='s'
-      open={isUserMenuOpen}
-      onOpenChange={setIsUserMenuOpen}
-      placement='bottom-end'
-      items={items}
-      selection={{
-        mode: 'single',
-        value: selectedOrganization.id,
-      }}
-      marker={false}
-      triggerElemRef={triggerRef}
-      trigger='clickAndFocusVisible'
-    >
-      <div
-        className={styles.userMenu}
-        role={'button'}
-        tabIndex={0}
-        data-test-id='header__user-menu-button'
-        ref={triggerRef}
-        onClick={onAvatarClick}
+    <div className={styles.userMenuWrap}>
+      <Droplist
+        size='s'
+        open={isUserMenuOpen}
+        onOpenChange={setIsUserMenuOpen}
+        placement='bottom-end'
+        items={items}
+        selection={{
+          mode: 'single',
+          value: selectedOrganization.id,
+        }}
+        marker={false}
+        triggerElemRef={triggerRef}
+        trigger='clickAndFocusVisible'
       >
-        {invites?.showPopover ? (
-          <InvitePopover
-            onAcceptButtonClick={invites.onAcceptButtonClick}
-            onCloseButtonClick={invites.onCloseButtonClick}
-          >
-            {userMenuAvatar}
-          </InvitePopover>
-        ) : (
-          userMenuAvatar
-        )}
+        <div
+          className={styles.userMenu}
+          role={'button'}
+          tabIndex={0}
+          data-test-id='header__user-menu-button'
+          ref={triggerRef}
+          onClick={onAvatarClick}
+        >
+          <Avatar size='xs' name={user.name} showTwoSymbols indicator={indicator} />
 
-        {invites?.count && invites.count > 0 && (
-          <Counter value={invites.count} appearance='primary' size='s' className={styles.userMenuAvatarCounter} />
-        )}
-      </div>
-    </Droplist>
+          {invites?.count && invites.count > 0 && (
+            <Counter value={invites.count} appearance='primary' size='s' className={styles.userMenuAvatarCounter} />
+          )}
+        </div>
+      </Droplist>
+
+      {invites?.showPopover && (
+        <InvitePopover
+          onAcceptButtonClick={invites.onAcceptButtonClick}
+          onCloseButtonClick={invites.onCloseButtonClick}
+        />
+      )}
+    </div>
   );
 }
