@@ -1,4 +1,4 @@
-import { KeyboardEvent, useCallback, useMemo, useRef, useState } from 'react';
+import { KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Dropdown } from '@snack-uikit/dropdown';
 
@@ -25,6 +25,16 @@ export function Select({
   const [isOpen, setIsOpen] = useState(false);
   const navigateInsideRef = useRef<HTMLDivElement>(null);
   const navigateOutsideRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const listener = () => setIsOpen(true);
+
+    window.addEventListener('header__open-project-menu', listener);
+
+    return () => {
+      window.removeEventListener('header__open-project-menu', listener);
+    };
+  }, []);
 
   const handleSelectKeyDown = (event: KeyboardEvent) => {
     if (event.key === 'ArrowDown') {
@@ -99,6 +109,7 @@ export function Select({
         </div>
       }
       placement='bottom-start'
+      data-test-id='header__select-menu'
     >
       <div
         className={styles.select}

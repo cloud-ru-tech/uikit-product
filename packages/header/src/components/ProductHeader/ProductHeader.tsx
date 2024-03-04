@@ -1,4 +1,4 @@
-import { ReactElement, useCallback, useMemo, useState } from 'react';
+import { ReactElement, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
@@ -86,9 +86,37 @@ export function ProductHeader({
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
+  useEffect(() => {
+    const listener = () => setIsMainMenuOpen(true);
+
+    window.addEventListener('header__open-main-menu', listener);
+
+    return () => {
+      window.removeEventListener('header__open-main-menu', listener);
+    };
+  }, []);
+
   const handleCloseMainMenu = useCallback(() => setIsMainMenuOpen(false), []);
 
-  const visibleSettings = useMemo(() => settings?.filter(filterHidden), [settings]);
+  const visibleSettings = useMemo(() => {
+    const filteredSettings = settings?.filter(filterHidden);
+
+    if (filteredSettings && filteredSettings.length) {
+      return filteredSettings.map(setting => ({
+        'data-test-id': 'header__settings-item',
+        content: {
+          option: setting.label,
+        },
+        beforeContent: setting.icon,
+        onClick: () => {
+          setting.onClick();
+          setIsSettingsOpen(false);
+        },
+      }));
+    }
+
+    return undefined;
+  }, [settings]);
 
   return (
     <>
@@ -124,22 +152,12 @@ export function ProductHeader({
         }
         toolbar={
           <>
-            {visibleSettings?.length > 0 && (
+            {visibleSettings && (
               <Droplist
                 size='s'
                 open={isSettingsOpen}
                 onOpenChange={setIsSettingsOpen}
-                items={visibleSettings.map(setting => ({
-                  'data-test-id': 'header__settings-item',
-                  content: {
-                    option: setting.label,
-                  },
-                  beforeContent: setting.icon,
-                  onClick: () => {
-                    setting.onClick();
-                    setIsSettingsOpen(false);
-                  },
-                }))}
+                items={visibleSettings}
                 placement='bottom-end'
                 trigger='clickAndFocusVisible'
               >

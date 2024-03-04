@@ -105,7 +105,7 @@ export function DrawerMenuDesktop({
     >
       <div className={styles.drawerBody}>
         <div className={styles.menu}>
-          <div className={styles.leftWrapper}>
+          <div className={styles.leftWrapper} data-test-id='header__drawer-menu__left'>
             <div className={styles.left}>
               <div className={styles.leftTop}>
                 <div className={styles.selectProduct}>
@@ -190,7 +190,7 @@ export function DrawerMenuDesktop({
           </div>
 
           {showRightSection && (
-            <div className={styles.right} ref={rightContainerRef}>
+            <div className={styles.right} ref={rightContainerRef} data-test-id='header__drawer-menu__right'>
               <Scroll ref={scrollRef}>
                 <div className={styles.rightContent} ref={rightContentRef}>
                   {visiblePinnedCards && (
