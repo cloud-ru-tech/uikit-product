@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.31.0 (2024-03-04)
+
+
+### Features
+
+* **[FF-4371](https://jira.sbercloud.tech/browse/FF-4371):** service and product icons as sprites, service illustrations ([9da1fbd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9da1fbd97ae120b78ae90258755f608b7a6ce151))
+
+
+
+
+
 # 5.30.0 (2024-01-23)
 
 
