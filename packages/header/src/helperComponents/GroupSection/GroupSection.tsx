@@ -126,7 +126,6 @@ export function GroupSection({
         scroll
         marker
         size='m'
-        className={styles.list}
         selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
         items={filteredGroups.map(group => ({
           label: filteredGroups.length > 1 ? group.heading : undefined,
@@ -149,7 +148,6 @@ export function GroupSection({
                 ) : undefined,
               id: item.id,
               onKeyDown: navigateOutside,
-              className: styles.list,
               onMouseDown: handleItemMouseDown({ item, groupId: group.id }),
               'data-test-id': dataTestId,
               itemRef: ((ref: HTMLElement) => {

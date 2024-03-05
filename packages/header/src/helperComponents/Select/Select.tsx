@@ -6,7 +6,7 @@ import { SelectMenu, SelectMenuTrigger, SelectProps } from '../SelectMenu';
 import styles from './styles.modules.scss';
 
 export function Select({
-  organizations,
+  organizations: organizationsProp,
   selectedOrganization,
   onOrganizationChange,
   onOrganizationAdd: onOrganizationAddProp,
@@ -25,6 +25,8 @@ export function Select({
   const [isOpen, setIsOpen] = useState(false);
   const navigateInsideRef = useRef<HTMLDivElement>(null);
   const navigateOutsideRef = useRef<HTMLDivElement>(null);
+
+  const organizations = useMemo(() => organizationsProp?.filter(org => !org.new), [organizationsProp]);
 
   useEffect(() => {
     const listener = () => setIsOpen(true);

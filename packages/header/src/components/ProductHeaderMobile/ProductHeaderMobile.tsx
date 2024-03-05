@@ -338,7 +338,7 @@ export function ProductHeaderMobile({
 
         <Scroll>
           <div className={styles.selectGroup}>
-            <List items={items} scroll size='m' selection={{ mode: 'single', value: selectedOrganization.id }} />
+            <List items={items} scroll size='m' selection={{ mode: 'single', value: selectedOrganization?.id }} />
           </div>
         </Scroll>
       </DrawerCustom>

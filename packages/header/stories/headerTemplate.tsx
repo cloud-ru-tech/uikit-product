@@ -142,7 +142,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
 
     const orgs = useMemo(() => {
       if (showOrganizationInvite) {
-        return [...organizations, { id: '3', name: 'ООО Инвайт', new: true }];
+        return [...(organizations || []), { id: '3', name: 'ООО Инвайт', new: true }];
       }
 
       return organizations;

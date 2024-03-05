@@ -87,7 +87,7 @@ export function UserMenu({
       });
     }
 
-    organizations.forEach(organization =>
+    organizations?.forEach(organization =>
       items.push({
         'data-test-id': 'header__user-menu-organization',
         beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols />,
@@ -120,7 +120,7 @@ export function UserMenu({
       });
     }
 
-    if (organizations.length > 0 || onOrganizationAdd) {
+    if ((organizations && organizations.length > 0) || onOrganizationAdd) {
       items.push({
         divider: true,
         items: [],
@@ -180,7 +180,7 @@ export function UserMenu({
         items={items}
         selection={{
           mode: 'single',
-          value: selectedOrganization.id,
+          value: selectedOrganization?.id,
         }}
         marker={false}
         triggerElemRef={triggerRef}

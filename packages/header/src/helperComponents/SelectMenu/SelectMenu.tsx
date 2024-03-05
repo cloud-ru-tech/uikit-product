@@ -12,8 +12,8 @@ import { GroupSection, ItemsGroup } from '../GroupSection';
 import styles from './styles.modules.scss';
 
 export type SelectProps = {
-  organizations: Organization[];
-  selectedOrganization: Organization;
+  organizations?: Organization[];
+  selectedOrganization?: Organization;
   onOrganizationChange?(value: Organization): void;
   onOrganizationAdd?(): void;
 
@@ -77,22 +77,26 @@ export function SelectMenu({
 
   return (
     <>
-      <GroupSection
-        className={className}
-        title={textProvider(languageCode, Texts.Organization)}
-        groups={[{ id: '1', items: organizations }]}
-        onItemChange={onOrganizationChange}
-        selectedItem={selectedOrganization}
-        addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
-        data-test-id='header__select-group-organization'
-      />
+      {organizations && (
+        <>
+          <GroupSection
+            className={className}
+            title={textProvider(languageCode, Texts.Organization)}
+            groups={[{ id: '1', items: organizations }]}
+            onItemChange={onOrganizationChange}
+            selectedItem={selectedOrganization}
+            addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
+            data-test-id='header__select-group-organization'
+          />
 
-      {divider}
+          {divider}
+        </>
+      )}
 
       <GroupSection
         className={className}
         title={textProvider(languageCode, Texts.Project)}
-        searchable={true}
+        searchable
         groups={projects}
         onItemChange={onProjectChange}
         selectedItem={selectedProject}
