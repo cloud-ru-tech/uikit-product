@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.32.0 (2024-03-05)
+
+
+### Bug Fixes
+
+* **[FF-4371](https://jira.sbercloud.tech/browse/FF-4371):** correct sprite output paths ([229f94a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/229f94a2d148496c7abc1bab9d0ecebfa650f43f))
+
+
+### Features
+
+* **[FF-4371](https://jira.sbercloud.tech/browse/FF-4371):** added product icons for sprite ([3379f47](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3379f47ea800c13640f15bf55e52e7e33d8d09bc))
+
+
+
+
+
 # 5.31.0 (2024-03-04)
 
 
