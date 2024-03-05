@@ -1,5 +1,4 @@
 # React Icons
-`@sbercloud/icons` is no longer needed (**deprecated**). 
 
 ## Installation
 
