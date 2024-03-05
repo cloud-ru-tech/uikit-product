@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.3.0 (2024-03-05)
+
+
+### Bug Fixes
+
+* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** invite popover clicks ([02915a9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/02915a9f61336d1ef4844a13eec437c86d31659c))
+
+
+### Features
+
+* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** add id's for onboarding, add custom events to trigger project selector and main menu ([765e6a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/765e6a58b22be28931f76e2c74b609c924735510))
+
+
+
+
+
 # 2.2.0 (2024-03-04)
 
 
