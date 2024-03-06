@@ -133,11 +133,12 @@
   display: flex;
   align-items: center;
   padding: 0 calc($dimension-1m + $dimension-050m - $border-width-012m);
-  gap: calc($dimension-1m + $dimension-050m);
+  gap: $dimension-1m;
+  box-sizing: border-box;
   border: $border-width-012m solid transparent;
   background-color: $sys-neutral-background1-level;
   width: calc(32 * $dimension-1m);
-  height: $dimension-8m;
+  height: $dimension-7m;
   border-radius: $dimension-050m;
   cursor: pointer;
 
@@ -156,15 +157,15 @@
 }
 
 .logo {
-  width: $dimension-5m;
-  height: $dimension-5m;
+  width: $dimension-4m;
+  height: $dimension-4m;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 
   > * {
-    transform: scale(1.6667);
+    transform: scale(1.33333333333);
   }
 }
 
@@ -184,12 +185,13 @@
 }
 
 .selectedOption {
-  @include composite-var($sans-title-m);
+  @include composite-var($sans-title-s);
 
   color: $sys-neutral-text-main;
 }
 
 .chevron {
+  display: flex;
   flex-shrink: 0;
 
   color: $sys-neutral-text-light;

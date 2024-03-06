@@ -7,7 +7,12 @@ import { UPDATE_DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
 
 import { Header, HeaderProps } from '../src';
-import { AdvancedPlatformLogo, EvolutionPlatformLogo, MLSpacePlatformLogo } from '../src/helperComponents';
+import {
+  AdvancedPlatformLogo,
+  EnterprisePlatformLogo,
+  EvolutionPlatformLogo,
+  MLSpacePlatformLogo,
+} from '../src/helperComponents';
 import styles from './styles.modules.scss';
 
 export type StoryProps = HeaderProps & {
@@ -223,6 +228,7 @@ export const ARGS: StoryProps = {
       DEFAULT_PLATFORM,
       { id: '2', name: 'Advanced', logo: <AdvancedPlatformLogo /> },
       { id: '3', name: 'MLSpace', logo: <MLSpacePlatformLogo /> },
+      { id: '4', name: 'Enterprise', logo: <EnterprisePlatformLogo /> },
     ],
     selectedPlatform: DEFAULT_PLATFORM,
     projects: [
@@ -323,6 +329,7 @@ export const ARGS: StoryProps = {
           DEFAULT_PRODUCT,
           { id: '2', name: 'Advanced', logo: <AdvancedPlatformLogo />, category: 'Облачная платформа' },
           { id: '3', name: 'MLSpace', logo: <MLSpacePlatformLogo />, category: 'Облачная платформа' },
+          { id: '4', name: 'Enterprise', logo: <EnterprisePlatformLogo />, category: 'Облачная платформа' },
         ],
       },
       {

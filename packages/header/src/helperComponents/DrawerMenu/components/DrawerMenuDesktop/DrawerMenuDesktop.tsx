@@ -26,7 +26,7 @@ import styles from './styles.modules.scss';
  * Если в правой части контент превышает высоту окна на эту долю,
  * будут отображаться скролящие ссылки слева.
  */
-const CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT = 0.3;
+const CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT = 0.2;
 
 export function DrawerMenuDesktop({
   open,
@@ -114,6 +114,7 @@ export function DrawerMenuDesktop({
                     {...getSelectProductListProps({ allProducts: visibleProducts, onProductChange, selectedProduct })}
                     open={isOpen}
                     onOpenChange={setIsOpen}
+                    widthStrategy='eq'
                   >
                     <div
                       className={styles.select}

@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { KeyboardEvent, RefObject, useRef } from 'react';
 
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
-import { Avatar } from '@snack-uikit/avatar';
+import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { SearchSVG } from '@snack-uikit/icons';
 import { List } from '@snack-uikit/list';
@@ -36,6 +36,7 @@ export type GroupSectionProps = WithSupportProps<{
 
   navigateOutsideRef?: RefObject<HTMLDivElement>;
   navigateInsideRef?: RefObject<HTMLDivElement>;
+  avatarAppearance?: AvatarProps['appearance'];
 }>;
 
 const getItemIndex = (groupId: string, itemId: string) => `${groupId}_${itemId}`;
@@ -51,6 +52,7 @@ export function GroupSection({
   addItem,
   navigateOutsideRef,
   closeDropdown,
+  avatarAppearance,
   ...rest
 }: GroupSectionProps) {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -138,7 +140,9 @@ export function GroupSection({
               content: {
                 option: item.name,
               },
-              beforeContent: item.logo ?? <Avatar size='xs' name={item.name} showTwoSymbols shape='square' />,
+              beforeContent: item.logo ?? (
+                <Avatar appearance={avatarAppearance} size='xs' name={item.name} showTwoSymbols shape='square' />
+              ),
               afterContent: (
                 <>
                   {item.actions && item.actions.length > 0 ? (

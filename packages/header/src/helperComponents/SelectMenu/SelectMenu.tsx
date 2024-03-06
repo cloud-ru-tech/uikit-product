@@ -87,6 +87,7 @@ export function SelectMenu({
             selectedItem={selectedOrganization}
             addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
             data-test-id='header__select-group-organization'
+            avatarAppearance='red'
           />
 
           {divider}
@@ -110,6 +111,7 @@ export function SelectMenu({
         }
         closeDropdown={closeDropdown}
         data-test-id='header__select-group-project'
+        avatarAppearance='neutral'
       />
 
       {divider}
@@ -139,6 +141,7 @@ export function SelectMenu({
               handler: workspaces.onWorkspaceAdd,
             }}
             data-test-id='header__select-group-workspace'
+            avatarAppearance='blue'
             searchable
             last
           />
