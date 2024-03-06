@@ -160,6 +160,7 @@ export function ProductHeader({
                 items={visibleSettings}
                 placement='bottom-end'
                 trigger='clickAndFocusVisible'
+                className={styles.settingsDroplist}
               >
                 <ButtonFunction data-test-id='header__settings-menu-button' size='m' icon={<SettingsSVG />} />
               </Droplist>

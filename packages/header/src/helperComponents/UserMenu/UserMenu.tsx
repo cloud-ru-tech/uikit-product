@@ -185,6 +185,7 @@ export function UserMenu({
         marker={false}
         triggerElemRef={triggerRef}
         trigger='clickAndFocusVisible'
+        className={styles.userMenuDroplist}
       >
         <div
           className={styles.userMenu}
