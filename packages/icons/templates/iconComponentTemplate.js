@@ -48,7 +48,7 @@ const iconComponentTemplate =
           data-test-id={'icon' + testId}
           {...props}
          >
-           <use href={'#snack-uikit-' + testId.substring(1)} />
+           <use href={'#uikit-product-' + testId.substring(1)} />
         </svg>
       );
     }

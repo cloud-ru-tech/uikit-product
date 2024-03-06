@@ -1,12 +1,4 @@
-import * as SnackUiIcons from '@snack-uikit/icons'; // TODO: validate
-
-const { Sprite: SnackUiSpriteComponent, SpriteSVG, ...SnackUiIconsComponents } = SnackUiIcons;
-
-export default {
-  ...SnackUiIconsComponents,
-};
-
-export const Sprite = SnackUiSpriteComponent;
+export { Sprite } from '@snack-uikit/icons';
 
 export * from './components/color-icons';
 export * from './components/services-icons';
@@ -15,6 +7,7 @@ export * from './components/logo-icons';
 export * from './components/display-icons';
 export * from './components/interface-icons-old';
 export * from './components/interface-icons-product';
+export * from './components/interface-icons-system';
 export * from './components/avatarPlaceholder-icons';
 export * from './components/platform-icons';
 export * from './components/illustrations-evolution-icons';

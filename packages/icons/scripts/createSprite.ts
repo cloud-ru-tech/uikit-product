@@ -41,22 +41,16 @@ const OUTPUT_DIRS = [
   join(...['dist', 'cjs', 'sprite', 'svg']),
   join(...['dist', 'esm', 'sprite', 'svg']),
 ];
-const PREFIX = 'snack-uikit-';
 const FILENAME = 'sprite.symbol.svg';
 
 type CollectionConfig = {
   source: string;
   destinations?: string[];
   fileName?: string;
-  prefix?: string;
+  prefix: string;
 };
 
-async function createSprite({
-  source,
-  destinations = OUTPUT_DIRS,
-  fileName = FILENAME,
-  prefix = PREFIX,
-}: CollectionConfig) {
+async function createSprite({ source, destinations = OUTPUT_DIRS, fileName = FILENAME, prefix }: CollectionConfig) {
   const spriter = new SVGSpriter({
     dest: '',
     mode: { symbol: true },
@@ -98,10 +92,12 @@ const COLLECTIONS: CollectionConfig[] = [
   {
     source: 'svgs-fixed/interface-icons-system',
     fileName: 'sprite-system.symbol.svg',
+    prefix: 'snack-uikit-',
   },
   {
     source: 'svgs-fixed/interface-icons-product',
     fileName: 'sprite-product.symbol.svg',
+    prefix: 'uikit-product-',
   },
 ];
 
