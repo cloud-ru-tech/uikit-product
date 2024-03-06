@@ -1,6 +1,6 @@
+import { BellSVG } from '@sbercloud/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 
-import { BellIcon } from '../../icons';
 import { NotificationsProps } from '../Notifications';
 
 type NotificationsTriggerProps = Pick<NotificationsProps, 'items'> & {
@@ -13,7 +13,7 @@ export function NotificationsTrigger({ items, onClick }: NotificationsTriggerPro
   return (
     <ButtonFunction
       size='m'
-      icon={<BellIcon />}
+      icon={<BellSVG />}
       data-test-id='header__notification-panel-button'
       onClick={onClick}
       {...(numberOfUnreadNotifications > 0

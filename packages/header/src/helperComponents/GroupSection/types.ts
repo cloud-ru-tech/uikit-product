@@ -8,6 +8,7 @@ export type Item = {
   logo?: ReactElement;
   onEdit?(): void;
   actions?: BaseItemProps[];
+  new?: boolean;
 };
 
 export type ItemsGroup<T> = {

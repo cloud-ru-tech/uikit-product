@@ -1,11 +1,13 @@
 import { useCallback, useMemo, useState } from 'react';
 
+import { QuestionSVG } from '@sbercloud/uikit-product-icons';
 import { Themes, useLanguage, useTheme } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { Breadcrumbs } from '@snack-uikit/breadcrumbs';
 import { ButtonFunction } from '@snack-uikit/button';
+import { Counter } from '@snack-uikit/counter';
 import { DrawerCustom } from '@snack-uikit/drawer';
-import { ChevronRightSVG, NightSVG, PlaceholderSVG, QuestionSVG } from '@snack-uikit/icons';
+import { ChevronRightSVG, NightSVG, PlaceholderSVG } from '@snack-uikit/icons';
 import { ItemProps, List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { Switch } from '@snack-uikit/toggles';
@@ -15,6 +17,7 @@ import {
   DrawerMenuMobile,
   DrawerMenuProps,
   HeaderLayout,
+  InvitePopover,
   Notifications,
   NotificationsTrigger,
   SelectMenu,
@@ -285,7 +288,25 @@ export function ProductHeaderMobile({
             )}
 
             {userMenu && (
-              <ButtonFunction size='m' icon={<PlaceholderSVG />} onClick={() => setIsUserMenuOpen(v => !v)} />
+              <div className={styles.userMenuButtonWrap}>
+                <ButtonFunction size='m' icon={<PlaceholderSVG />} onClick={() => setIsUserMenuOpen(v => !v)} />
+
+                {userMenu.invites?.count && userMenu.invites.count > 0 && (
+                  <Counter
+                    value={userMenu.invites.count}
+                    appearance='primary'
+                    size='s'
+                    className={styles.userMenuAvatarCounter}
+                  />
+                )}
+
+                {userMenu?.invites?.showPopover && (
+                  <InvitePopover
+                    onAcceptButtonClick={userMenu.invites.onAcceptButtonClick}
+                    onCloseButtonClick={userMenu.invites.onCloseButtonClick}
+                  />
+                )}
+              </div>
             )}
           </>
         }

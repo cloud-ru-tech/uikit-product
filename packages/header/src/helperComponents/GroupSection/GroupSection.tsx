@@ -6,6 +6,7 @@ import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { SearchSVG } from '@snack-uikit/icons';
 import { List } from '@snack-uikit/list';
+import { PromoTag } from '@snack-uikit/promo-tag';
 import { SearchPrivate } from '@snack-uikit/search-private';
 
 import { textProvider, Texts } from '../../helpers';
@@ -138,14 +139,21 @@ export function GroupSection({
                 option: item.name,
               },
               beforeContent: item.logo ?? <Avatar size='xs' name={item.name} showTwoSymbols shape='square' />,
-              afterContent:
-                item.actions && item.actions.length > 0 ? (
-                  <GroupSectionItemDroplist
-                    actions={item.actions}
-                    dataTestId={dataTestId}
-                    onItemClick={closeDropdown}
-                  />
-                ) : undefined,
+              afterContent: (
+                <>
+                  {item.actions && item.actions.length > 0 ? (
+                    <GroupSectionItemDroplist
+                      actions={item.actions}
+                      dataTestId={dataTestId}
+                      onItemClick={closeDropdown}
+                    />
+                  ) : undefined}
+
+                  {item.new && (
+                    <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
+                  )}
+                </>
+              ),
               id: item.id,
               onKeyDown: navigateOutside,
               onMouseDown: handleItemMouseDown({ item, groupId: group.id }),

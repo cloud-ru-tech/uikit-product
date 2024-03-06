@@ -5,7 +5,7 @@ import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 import { Popover } from '@snack-uikit/popover';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../../../helpers';
+import { textProvider, Texts } from '../../helpers';
 import styles from './styles.module.scss';
 
 export type InvitePopoverProps = {

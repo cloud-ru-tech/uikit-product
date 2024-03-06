@@ -9,8 +9,8 @@ import { PromoTag } from '@snack-uikit/promo-tag';
 import { Switch } from '@snack-uikit/toggles';
 
 import { textProvider, Texts } from '../../helpers';
+import { InvitePopover, InvitePopoverProps } from '../InvitePopover';
 import { SelectProps } from '../SelectMenu';
-import { InvitePopover, InvitePopoverProps } from './components/InvitePopover';
 import styles from './styles.modules.scss';
 
 export type User = {
