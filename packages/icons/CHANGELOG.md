@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.32.1 (2024-03-06)
+
+
+### Bug Fixes
+
+* **[FF-4373](https://jira.sbercloud.tech/browse/FF-4373):** removed deprecation notice for old interface icons ([a98e882](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a98e882179f4a6e79b0c9d646dc4500447ea3ce1))
+
+
+
+
+
 # 5.32.0 (2024-03-05)
 
 
