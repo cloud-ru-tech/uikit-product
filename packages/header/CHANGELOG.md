@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0 (2024-03-06)
+
+
+### Bug Fixes
+
+* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** add invites to mobile header, update bellIcon ([9e4e60a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e4e60a08f659b2b98b81eb83fe6eead1c8eb3e7))
+* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** userMenu and settings droplist width ([a5c305a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a5c305a6f15df7462f8f2c64b9a26d68e8a95465))
+
+
+### Features
+
+* **[FF-4321](https://jira.sbercloud.tech/browse/FF-4321):** filter out new organizations from select, ability not to pass organizations ([0aa0643](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0aa0643aaa03ded6b0f169a2259554e6f07e5597))
+
+
+
+
+
 # 2.3.0 (2024-03-05)
 
 
