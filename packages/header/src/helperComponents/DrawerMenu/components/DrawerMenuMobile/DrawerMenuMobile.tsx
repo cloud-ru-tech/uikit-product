@@ -120,7 +120,7 @@ export function DrawerMenuMobile({
                       promoBadge={item.badge}
                       onClick={wrappedClick(item)}
                       title={item.label}
-                      emblem={{ icon: item.icon, decor: false }}
+                      emblem={{ icon: item.icon, decor: true }}
                     />
                   ))}
                 </GroupCard>

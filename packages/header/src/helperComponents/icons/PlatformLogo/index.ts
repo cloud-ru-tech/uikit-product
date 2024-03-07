@@ -7,7 +7,7 @@ import {
 
 import { getPlatformIconComponent } from './Container';
 
-export const AdvancedPlatformLogo = getPlatformIconComponent(AdvancedPlatformSVG, 'advanced');
-export const EnterprisePlatformLogo = getPlatformIconComponent(EnterprisePlatformSVG, 'enterprise');
-export const EvolutionPlatformLogo = getPlatformIconComponent(EvolutionPlatformSVG, 'evolution');
-export const MLSpacePlatformLogo = getPlatformIconComponent(MlSpacePlatformSVG, 'mlspace');
+export const AdvancedPlatformLogo = getPlatformIconComponent(AdvancedPlatformSVG);
+export const EnterprisePlatformLogo = getPlatformIconComponent(EnterprisePlatformSVG);
+export const EvolutionPlatformLogo = getPlatformIconComponent(EvolutionPlatformSVG);
+export const MLSpacePlatformLogo = getPlatformIconComponent(MlSpacePlatformSVG);

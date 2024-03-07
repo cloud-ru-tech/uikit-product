@@ -235,7 +235,7 @@ export function DrawerMenuDesktop({
                               onClick={wrappedClick(item)}
                               disabled={item.disabled}
                               href={item.href}
-                              emblem={{ icon: item.icon, decor: false }}
+                              emblem={{ icon: item.icon, decor: true }}
                               title={item.label}
                             />
                           ))}

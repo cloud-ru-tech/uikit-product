@@ -22,10 +22,10 @@ export type IconComponentProps = {
   className?: string;
 };
 
-export const getPlatformIconComponent = (Icon: JSXElementConstructor<{ size: number }>, platform: string) =>
+export const getPlatformIconComponent = (Icon: JSXElementConstructor<{ size: number }>) =>
   function IconComponent(props: IconComponentProps) {
     return (
-      <Container {...props} data-platform={platform}>
+      <Container {...props}>
         <Icon size={24} />
       </Container>
     );
