@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.4.1 (2024-03-07)
+
+
+### Bug Fixes
+
+* **[FF-4473](https://jira.sbercloud.tech/browse/FF-4473):** update list package to truncate long organization name in userMenu ([8a6442e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8a6442e0af14418429eafb3e24fb80988ad95f99))
+
+
+
+
+
 # 2.4.0 (2024-03-06)
 
 
