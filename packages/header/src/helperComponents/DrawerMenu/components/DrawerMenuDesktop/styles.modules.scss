@@ -13,7 +13,7 @@
 
 .drawerRoot {
   & [data-test-id='header__drawer-menu'][data-small] {
-    width: 344px;
+    width: 316px;
   }
 
   & [data-test-id='header__drawer-menu']:not([data-small]) {
