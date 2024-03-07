@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.32.2 (2024-03-07)
+
+
+### Bug Fixes
+
+* **[FF-4373](https://jira.sbercloud.tech/browse/FF-4373):** icons names overlapping fixed ([f42435b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f42435b5ef0f1d8f92fce4c14db6898edd74cf8d))
+
+
+
+
+
 ## 5.32.1 (2024-03-06)
 
 
