@@ -1,6 +1,6 @@
 import { JSXElementConstructor, ReactElement } from 'react';
 
-import { CardProps } from '@snack-uikit/card';
+import { CardServiceSmallProps, CardSuggestProps } from '@sbercloud/uikit-product-card-predefined';
 import { BaseItemProps } from '@snack-uikit/list';
 
 export type { NotificationsProps } from './helperComponents';
@@ -33,7 +33,7 @@ export type InnerLink = {
   href?: string;
   disabled?: boolean;
   hidden?: boolean;
-  badge?: CardProps['promoBadge'];
+  badge?: CardServiceSmallProps['promoBadge'];
 };
 
 export type LinksGroup = {
@@ -59,7 +59,7 @@ export type PinnedCard = {
   href?: string;
   disabled?: boolean;
   hidden?: boolean;
-  badge?: CardProps['promoBadge'];
+  badge?: CardSuggestProps['promoBadge'];
 };
 
 export type FooterLink = {

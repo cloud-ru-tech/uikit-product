@@ -1,8 +1,8 @@
 import { MouseEvent, useCallback, useMemo, useState } from 'react';
 
+import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
-import { Card } from '@snack-uikit/card';
 import { Divider } from '@snack-uikit/divider';
 import { DrawerCustom } from '@snack-uikit/drawer';
 import { List } from '@snack-uikit/list';
@@ -114,15 +114,13 @@ export function DrawerMenuMobile({
               filteredLinks.map((group, index) => (
                 <GroupCard key={group.id} id={group.id} title={group.label} ref={el => (cardsRef.current[index] = el)}>
                   {group.items.map(item => (
-                    <Card
+                    <CardServiceSmall
                       outline
                       key={item.label}
                       promoBadge={item.badge}
                       onClick={wrappedClick(item)}
-                      header={
-                        <Card.Header title={item.label ?? ''} emblem={{ icon: item.icon, decor: false }} size='s' />
-                      }
-                      size='s'
+                      title={item.label}
+                      emblem={{ icon: item.icon, decor: false }}
                     />
                   ))}
                 </GroupCard>

@@ -1,10 +1,10 @@
 import cn from 'classnames';
 import { MouseEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
+import { CardServiceSmall, CardSuggest } from '@sbercloud/uikit-product-card-predefined';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
-import { Card } from '@snack-uikit/card';
 import { Divider } from '@snack-uikit/divider';
 import { DrawerCustom } from '@snack-uikit/drawer';
 import { ChevronDownSVG, ChevronUpSVG } from '@snack-uikit/icons';
@@ -196,17 +196,16 @@ export function DrawerMenuDesktop({
                   {visiblePinnedCards && (
                     <div className={cn(styles.pinnedCards, styles.rightContentItem)}>
                       {visiblePinnedCards.map(item => (
-                        <Card
+                        <CardSuggest
                           promoBadge={item.badge}
                           className={styles.pinnedCard}
                           key={item.title}
                           onClick={wrappedClick(item)}
                           disabled={item.disabled}
                           href={item.href}
-                          header={<Card.Header title={item.title ?? ''} />}
-                        >
-                          {item.description}
-                        </Card>
+                          title={item.title}
+                          description={item.description}
+                        />
                       ))}
                     </div>
                   )}
@@ -228,21 +227,15 @@ export function DrawerMenuDesktop({
                       <div className={styles.rightContentItem} key={group.id}>
                         <GroupCard title={group.label} id={group.id} ref={el => (cardsRef.current[index] = el)}>
                           {group.items.map(item => (
-                            <Card
+                            <CardServiceSmall
                               outline
                               promoBadge={item.badge}
                               key={item.label}
                               onClick={wrappedClick(item)}
                               disabled={item.disabled}
                               href={item.href}
-                              header={
-                                <Card.Header
-                                  title={item.label ?? ''}
-                                  emblem={{ icon: item.icon, decor: false }}
-                                  size='s'
-                                />
-                              }
-                              size='s'
+                              emblem={{ icon: item.icon, decor: false }}
+                              title={item.label}
                             />
                           ))}
                         </GroupCard>

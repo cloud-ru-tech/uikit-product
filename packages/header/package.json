@@ -28,12 +28,12 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/uikit-product-card-predefined": "0.3.0",
     "@sbercloud/uikit-product-icons": "5.32.2",
     "@sbercloud/uikit-product-utils": "3.3.1",
     "@snack-uikit/avatar": "0.6.0",
     "@snack-uikit/breadcrumbs": "0.8.19",
     "@snack-uikit/button": "0.17.0",
-    "@snack-uikit/card": "0.11.4",
     "@snack-uikit/counter": "0.6.1",
     "@snack-uikit/divider": "3.0.2",
     "@snack-uikit/drawer": "0.6.14",
