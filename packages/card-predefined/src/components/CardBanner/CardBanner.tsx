@@ -8,7 +8,7 @@ import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 import styles from './styles.module.scss';
 
 export type CardBannerProps = WithSupportProps<
-  Pick<CardProps, 'onClick' | 'className'> & {
+  Pick<CardProps, 'onClick' | 'className' | 'disabled'> & {
     title: string;
     description: string;
     actionLabel: string;
@@ -28,6 +28,7 @@ export function CardBanner({
   image,
   className,
   onClose,
+  disabled,
   ...rest
 }: CardBannerProps) {
   return (
@@ -38,6 +39,7 @@ export function CardBanner({
       {...extractSupportProps(rest)}
       className={className}
       onClick={onClick}
+      disabled={disabled}
       functionBadge={
         onClose ? (
           <div className={styles.cardFunctionBadgeWrapper}>
