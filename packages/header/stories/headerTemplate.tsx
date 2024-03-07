@@ -304,6 +304,7 @@ export const ARGS: StoryProps = {
   organizations: [
     { id: '1', name: 'Облачные технологии' },
     { id: '2', name: 'ИП Иванов И.И.' },
+    { id: '3', name: 'Очень-очень длинное название очень большой организации' },
   ],
   selectedOrganization: { id: '1', name: 'Облачные технологии' },
   onOrganizationAdd: () => {},
