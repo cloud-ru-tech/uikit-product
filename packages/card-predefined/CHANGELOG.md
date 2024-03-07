@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-03-07)
+
+
+### Features
+
+* **[FF-4478](https://jira.sbercloud.tech/browse/FF-4478):** add disable props ([66c2097](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/66c2097c715b393ea8c1cf6a92f461a3aed6498c))
+* **[FF-4478](https://jira.sbercloud.tech/browse/FF-4478):** set promoBadge absolute position in CardServiceSmall; add outline prop ([f607b84](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f607b849704d0779cea29451dcc59ef189ab8626))
+
+
+
+
+
 # 0.2.0 (2024-02-29)
 
 
