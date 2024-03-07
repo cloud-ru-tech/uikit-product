@@ -5,7 +5,7 @@ import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 import { TRUNCATE_DEFAULTS } from './constants';
 
 export type CardSuggestProps = WithSupportProps<
-  Pick<CardProps, 'promoBadge' | 'onClick' | 'className' | 'disabled'> & {
+  Pick<CardProps, 'promoBadge' | 'onClick' | 'className' | 'disabled' | 'href'> & {
     title: string;
     description: string;
     truncate?: {
@@ -15,7 +15,17 @@ export type CardSuggestProps = WithSupportProps<
   }
 >;
 
-export function CardSuggest({ title, description, truncate, onClick, className, disabled, ...rest }: CardSuggestProps) {
+export function CardSuggest({
+  title,
+  description,
+  truncate,
+  onClick,
+  className,
+  disabled,
+  href,
+  promoBadge,
+  ...rest
+}: CardSuggestProps) {
   const truncateLines = { ...TRUNCATE_DEFAULTS, ...truncate };
 
   return (
@@ -24,6 +34,8 @@ export function CardSuggest({ title, description, truncate, onClick, className, 
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       {...extractSupportProps(rest)}
+      promoBadge={promoBadge}
+      href={href}
       disabled={disabled}
       header={<Card.Header title={title} truncate={{ title: truncateLines.title }} />}
       onClick={onClick}

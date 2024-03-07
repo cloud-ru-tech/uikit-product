@@ -8,7 +8,7 @@ import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 import styles from './styles.module.scss';
 
 export type CardBannerProps = WithSupportProps<
-  Pick<CardProps, 'onClick' | 'className' | 'disabled'> & {
+  Pick<CardProps, 'onClick' | 'className' | 'disabled' | 'href'> & {
     title: string;
     description: string;
     actionLabel: string;
@@ -21,6 +21,7 @@ export type CardBannerProps = WithSupportProps<
 >;
 
 export function CardBanner({
+  href,
   title,
   description,
   onClick,
@@ -37,6 +38,7 @@ export function CardBanner({
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       {...extractSupportProps(rest)}
+      href={href}
       className={className}
       onClick={onClick}
       disabled={disabled}

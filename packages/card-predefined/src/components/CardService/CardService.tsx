@@ -4,7 +4,7 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
 export type CardServiceProps = WithSupportProps<
-  Pick<CardProps, 'onClick' | 'className' | 'disabled'> &
+  Pick<CardProps, 'onClick' | 'className' | 'disabled' | 'href'> &
     Required<Pick<Card.HeaderProps, 'title' | 'emblem'>> & {
       description: string;
       actionLabel: string;
@@ -12,6 +12,7 @@ export type CardServiceProps = WithSupportProps<
 >;
 
 export function CardService({
+  href,
   title,
   description,
   actionLabel,
@@ -27,6 +28,7 @@ export function CardService({
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       {...extractSupportProps(rest)}
+      href={href}
       disabled={disabled}
       className={className}
       header={<Card.Header title={title} emblem={emblem} truncate={{ title: 2 }} />}

@@ -1,3 +1,5 @@
+import cn from 'classnames';
+
 import { Card, CardProps } from '@snack-uikit/card';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
@@ -5,13 +7,14 @@ import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 import styles from './styles.module.scss';
 
 export type CardServiceSmallProps = WithSupportProps<
-  Pick<CardProps, 'promoBadge' | 'onClick' | 'className' | 'disabled' | 'outline'> &
+  Pick<CardProps, 'promoBadge' | 'onClick' | 'className' | 'disabled' | 'outline' | 'href'> &
     Required<Pick<Card.HeaderProps, 'title' | 'emblem'>> & {
       truncate?: Pick<NonNullable<Card.HeaderProps['truncate']>, 'title'>;
     }
 >;
 
 export function CardServiceSmall({
+  href,
   promoBadge,
   title,
   emblem,
@@ -23,19 +26,20 @@ export function CardServiceSmall({
   ...rest
 }: CardServiceSmallProps) {
   return (
-    <div className={styles.wrapper}>
+    <div className={cn(styles.wrapper, className)}>
       <Card
         // TODO: typescript error
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         {...extractSupportProps(rest)}
-        className={className}
+        href={href}
         header={<Card.Header title={title} emblem={emblem} truncate={truncate} />}
         onClick={onClick}
         disabled={disabled}
         outline={outline}
         size='s'
       />
+
       {promoBadge && (
         <div className={styles.promoTagWrapper}>
           <PromoTag
