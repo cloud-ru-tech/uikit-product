@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.5.0 (2024-03-07)
+
+
+### Bug Fixes
+
+* **[FF-4473](https://jira.sbercloud.tech/browse/FF-4473):** drawer small width ([452795a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/452795a5ab109df216a6d112486f0e8d4e2af65e))
+* **[FF-4473](https://jira.sbercloud.tech/browse/FF-4473):** notifications count ([f48632f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f48632f77f43eba4a47cf98d7011d963762db123))
+
+
+### Features
+
+* **[FF-4473](https://jira.sbercloud.tech/browse/FF-4473):** update cards ([ffe4620](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ffe462025509dfed36af2efcb1ad119ffbda81db))
+
+
+
+
+
 ## 2.4.2 (2024-03-07)
 
 ### Only dependencies have been changed
