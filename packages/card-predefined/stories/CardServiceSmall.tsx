@@ -37,6 +37,7 @@ serviceSmall.args = {
   title: 'Карточка сервиса',
   promoBadge: 'Beta',
   emblemMode: 'icon',
+  outline: false,
 };
 
 serviceSmall.argTypes = {
