@@ -278,7 +278,7 @@ export function ProductHeaderMobile({
 
             {notifications && (
               <NotificationsTrigger
-                items={notifications.items}
+                count={notifications.count}
                 onClick={() => {
                   notifications.onNotifyTriggerClick?.();
                   notifications.onOpenChange?.(true);

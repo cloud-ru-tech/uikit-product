@@ -25,7 +25,7 @@ export function NotificationsPopover({ notifications }: NotificationsPopoverProp
       onOpenChange={handleOpenChange}
       content={<Notifications {...notifications} open={isOpen} className={styles.notifications} />}
     >
-      <NotificationsTrigger items={notifications.items} onClick={notifications.onNotifyTriggerClick} />
+      <NotificationsTrigger count={notifications.count} onClick={notifications.onNotifyTriggerClick} />
     </NotificationPanelPopover>
   );
 }

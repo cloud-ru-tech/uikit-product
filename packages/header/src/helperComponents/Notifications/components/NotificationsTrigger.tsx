@@ -3,24 +3,22 @@ import { ButtonFunction } from '@snack-uikit/button';
 
 import { NotificationsProps } from '../Notifications';
 
-type NotificationsTriggerProps = Pick<NotificationsProps, 'items'> & {
+type NotificationsTriggerProps = Pick<NotificationsProps, 'count'> & {
   onClick?(): void;
 };
 
-export function NotificationsTrigger({ items, onClick }: NotificationsTriggerProps) {
-  const numberOfUnreadNotifications = items.filter(card => card.unread).length ?? 0;
-
+export function NotificationsTrigger({ count, onClick }: NotificationsTriggerProps) {
   return (
     <ButtonFunction
       size='m'
       icon={<BellSVG />}
       data-test-id='header__notification-panel-button'
       onClick={onClick}
-      {...(numberOfUnreadNotifications > 0
+      {...(count > 0
         ? {
             counter: {
-              value: numberOfUnreadNotifications,
-              variant: numberOfUnreadNotifications > 9 ? 'count-plus' : 'count',
+              value: count,
+              variant: count > 9 ? 'count-plus' : 'count',
             },
           }
         : {})}

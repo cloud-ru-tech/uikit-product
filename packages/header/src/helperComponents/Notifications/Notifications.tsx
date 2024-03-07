@@ -9,6 +9,7 @@ import { textProvider, Texts } from '../../helpers';
 type ChipFilter = 'all' | 'unread';
 
 export type NotificationsProps = {
+  count: number;
   items: Omit<NotificationCardProps, 'onVisible'>[];
   loading?: boolean;
   error?: boolean;

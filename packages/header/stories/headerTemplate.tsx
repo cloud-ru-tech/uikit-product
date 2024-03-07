@@ -163,6 +163,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
             showNotifications && args.notifications
               ? {
                   ...args.notifications,
+                  count: notifyCards.filter(card => card.unread).length,
                   items: notifyCards,
                   loadCards: {
                     fetchMore() {
@@ -275,6 +276,7 @@ export const ARGS: StoryProps = {
   showNotifications: true,
 
   notifications: {
+    count: 0,
     items: generateCards(8, true),
     readAll: () => {},
     loadCards: {
