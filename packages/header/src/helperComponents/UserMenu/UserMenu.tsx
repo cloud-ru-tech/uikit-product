@@ -1,9 +1,9 @@
 import { useMemo, useRef, useState } from 'react';
 
+import { ExitSVG, NightSVG, PlusSVG, SettingsSVG } from '@sbercloud/uikit-product-icons';
 import { Themes, useLanguage, useTheme } from '@sbercloud/uikit-product-utils';
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { Counter } from '@snack-uikit/counter';
-import { NightSVG, PlaceholderSVG, PlusSVG } from '@snack-uikit/icons';
 import { Droplist, ItemProps } from '@snack-uikit/list';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { Switch } from '@snack-uikit/toggles';
@@ -70,7 +70,7 @@ export function UserMenu({
     if (onProfileManagementClick) {
       items.push({
         'data-test-id': 'header__user-menu-manage-profile',
-        beforeContent: <PlaceholderSVG />,
+        beforeContent: <SettingsSVG />,
         onClick: () => {
           onProfileManagementClick();
           closeUserMenu();
@@ -145,7 +145,7 @@ export function UserMenu({
         content: {
           option: textProvider(languageCode, Texts.Logout),
         },
-        beforeContent: <PlaceholderSVG />,
+        beforeContent: <ExitSVG />,
         onClick: () => {
           onLogout();
           closeUserMenu();

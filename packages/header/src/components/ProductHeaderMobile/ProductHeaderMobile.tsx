@@ -1,13 +1,19 @@
 import { useCallback, useMemo, useState } from 'react';
 
-import { QuestionSVG } from '@sbercloud/uikit-product-icons';
+import {
+  BurgerSVG,
+  ChevronRightSVG,
+  ExitSVG,
+  NightSVG,
+  QuestionSVG,
+  SettingsSVG,
+} from '@sbercloud/uikit-product-icons';
 import { Themes, useLanguage, useTheme } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { Breadcrumbs } from '@snack-uikit/breadcrumbs';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Counter } from '@snack-uikit/counter';
 import { DrawerCustom } from '@snack-uikit/drawer';
-import { ChevronRightSVG, NightSVG, PlaceholderSVG } from '@snack-uikit/icons';
 import { ItemProps, List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { Switch } from '@snack-uikit/toggles';
@@ -191,7 +197,7 @@ export function ProductHeaderMobile({
       if (onProfileManagementClick) {
         items.push({
           'data-test-id': 'header__user-menu-manage-profile',
-          beforeContent: <PlaceholderSVG />,
+          beforeContent: <SettingsSVG />,
           onClick: () => {
             onProfileManagementClick();
             closeUserMenu();
@@ -228,7 +234,7 @@ export function ProductHeaderMobile({
           content: {
             option: textProvider(languageCode, Texts.Logout),
           },
-          beforeContent: <PlaceholderSVG />,
+          beforeContent: <ExitSVG />,
           onClick: () => {
             onLogout();
             closeUserMenu();
@@ -289,7 +295,7 @@ export function ProductHeaderMobile({
 
             {userMenu && (
               <div className={styles.userMenuButtonWrap}>
-                <ButtonFunction size='m' icon={<PlaceholderSVG />} onClick={() => setIsUserMenuOpen(v => !v)} />
+                <ButtonFunction size='m' icon={<BurgerSVG />} onClick={() => setIsUserMenuOpen(v => !v)} />
 
                 {userMenu.invites?.count && userMenu.invites.count > 0 && (
                   <Counter

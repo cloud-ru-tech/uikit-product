@@ -4,6 +4,7 @@ import { ArgTypes } from '@storybook/react';
 import { useEffect, useMemo, useState } from 'react';
 import { UPDATE_DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 
+import { DetalisationSVG, MoneySVG, UsersSVG } from '@sbercloud/uikit-product-icons';
 import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
 
 import { Header, HeaderProps } from '../src';
@@ -270,10 +271,10 @@ export const ARGS: StoryProps = {
 
   showSettings: true,
   settings: [
-    { label: 'Настройки организации', icon: <PlaceholderSVG />, onClick: () => {} },
-    { label: 'Пользователи', icon: <PlaceholderSVG />, onClick: () => {} },
-    { label: 'Договоры', icon: <PlaceholderSVG />, onClick: () => {} },
-    { label: 'Контроль затрат', icon: <PlaceholderSVG />, onClick: () => {} },
+    { label: 'Настройки организации', icon: <SettingsSVG />, onClick: () => {} },
+    { label: 'Пользователи', icon: <UsersSVG />, onClick: () => {} },
+    { label: 'Договоры', icon: <DetalisationSVG />, onClick: () => {} },
+    { label: 'Контроль затрат', icon: <MoneySVG />, onClick: () => {} },
   ],
 
   showHelpMenu: true,
