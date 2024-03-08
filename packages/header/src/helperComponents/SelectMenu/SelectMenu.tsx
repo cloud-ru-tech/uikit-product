@@ -94,27 +94,31 @@ export function SelectMenu({
         </>
       )}
 
-      <GroupSection
-        className={className}
-        title={textProvider(languageCode, Texts.Project)}
-        searchable
-        groups={projects}
-        onItemChange={onProjectChange}
-        selectedItem={selectedProject}
-        addItem={
-          projectAddButton && {
-            label: textProvider(languageCode, Texts.AddProject),
-            handler: projectAddButton.onClick,
-            tooltip: projectAddButton.tooltip,
-            disabled: projectAddButton.disabled,
-          }
-        }
-        closeDropdown={closeDropdown}
-        data-test-id='header__select-group-project'
-        avatarAppearance='neutral'
-      />
+      {!workspaces && (
+        <>
+          <GroupSection
+            className={className}
+            title={textProvider(languageCode, Texts.Project)}
+            searchable
+            groups={projects}
+            onItemChange={onProjectChange}
+            selectedItem={selectedProject}
+            addItem={
+              projectAddButton && {
+                label: textProvider(languageCode, Texts.AddProject),
+                handler: projectAddButton.onClick,
+                tooltip: projectAddButton.tooltip,
+                disabled: projectAddButton.disabled,
+              }
+            }
+            closeDropdown={closeDropdown}
+            data-test-id='header__select-group-project'
+            avatarAppearance='neutral'
+          />
 
-      {divider}
+          {divider}
+        </>
+      )}
 
       <GroupSection
         className={className}
@@ -155,19 +159,23 @@ const getIcon = (open: boolean) => (open ? <ChevronUpSVG size={16} /> : <Chevron
 
 export function SelectMenuTrigger({
   selectedProject,
+  selectedWorkspace,
   open,
   showIcon = true,
 }: {
   selectedProject: Project;
+  selectedWorkspace?: Workspace;
   open: boolean;
   showIcon: boolean;
 }) {
+  const name = selectedWorkspace?.name ?? selectedProject.name;
+
   return (
     <div className={styles.contentLayout}>
-      <Avatar size='xs' name={selectedProject.name} showTwoSymbols shape='square' />
+      <Avatar size='xs' name={name} showTwoSymbols shape='square' />
 
       <span className={styles.project} data-test-id='header__select-project-value'>
-        <TruncateString text={selectedProject.name} hideTooltip />
+        <TruncateString text={name} hideTooltip />
       </span>
 
       {showIcon && getIcon(open)}

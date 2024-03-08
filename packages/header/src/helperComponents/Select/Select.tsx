@@ -122,7 +122,12 @@ export function Select({
         onKeyDown={handleSelectKeyDown}
         data-test-id='header__select'
       >
-        <SelectMenuTrigger selectedProject={selectedProject} open={isOpen} showIcon />
+        <SelectMenuTrigger
+          selectedProject={selectedProject}
+          selectedWorkspace={workspaces?.selectedWorkspace}
+          open={isOpen}
+          showIcon
+        />
       </div>
     </Dropdown>
   );
