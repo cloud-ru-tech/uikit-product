@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-modal-private",
   "title": "Modal Private",
-  "version": "2.1.12",
+  "version": "2.1.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,13 +27,13 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.4.12",
-    "@sbercloud/uikit-product-icons": "5.32.2",
+    "@sbercloud/uikit-product-button": "5.4.13",
+    "@sbercloud/uikit-product-icons": "5.33.0",
     "@sbercloud/uikit-product-overlay-private": "1.2.1",
     "@sbercloud/uikit-product-scroll": "1.5.1",
     "@sbercloud/uikit-product-theme": "0.39.0",
-    "@sbercloud/uikit-product-tooltip": "4.2.7",
-    "@sbercloud/uikit-product-truncate-string": "0.10.13",
+    "@sbercloud/uikit-product-tooltip": "4.2.8",
+    "@sbercloud/uikit-product-truncate-string": "0.10.14",
     "@sbercloud/uikit-product-utils": "3.3.1",
     "react-modal": "3.16.1"
   },

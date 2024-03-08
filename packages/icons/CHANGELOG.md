@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.33.0 (2024-03-08)
+
+
+### Features
+
+* **[FF-4358](https://jira.sbercloud.tech/browse/FF-4358):** add platform icons and select design minor fixes ([95d6509](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/95d650972f4b094c76be369d86eb9afcbde3566b))
+* **[FF-4358](https://jira.sbercloud.tech/browse/FF-4358):** add service icons ([8f247a4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8f247a4c5e38fb8990853770d626533657ee672d))
+
+
+
+
+
 ## 5.32.2 (2024-03-07)
 
 

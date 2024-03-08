@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-modal",
   "title": "React Modal",
-  "version": "1.7.12",
+  "version": "1.7.13",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-modal-private": "2.1.12",
+    "@sbercloud/uikit-product-modal-private": "2.1.13",
     "@sbercloud/uikit-product-spinner": "2.1.1",
-    "@sbercloud/uikit-product-tooltip": "4.2.7",
+    "@sbercloud/uikit-product-tooltip": "4.2.8",
     "@sbercloud/uikit-product-utils": "3.3.1"
   }
 }
