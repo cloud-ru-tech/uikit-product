@@ -2,6 +2,7 @@ import { KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from
 
 import { Dropdown } from '@snack-uikit/dropdown';
 
+import { Workspace } from '../../types';
 import { SelectMenu, SelectMenuTrigger, SelectProps } from '../SelectMenu';
 import styles from './styles.modules.scss';
 
@@ -16,17 +17,21 @@ export function Select({
   onProjectChange,
   projectAddButton: projectAddButtonProp,
 
-  platforms,
+  platforms: platformsProp,
   selectedPlatform,
   onPlatformChange,
 
   workspaces,
+
+  onClose,
 }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const navigateInsideRef = useRef<HTMLDivElement>(null);
   const navigateOutsideRef = useRef<HTMLDivElement>(null);
 
   const organizations = useMemo(() => organizationsProp?.filter(org => !org.new), [organizationsProp]);
+
+  const platforms = useMemo(() => platformsProp?.filter(platform => !platform.hidden), [platformsProp]);
 
   useEffect(() => {
     const listener = () => setIsOpen(true);
@@ -45,7 +50,18 @@ export function Select({
     }
   };
 
-  const closeDropdown = useCallback(() => setIsOpen(false), []);
+  const toggleOpen = (open: boolean) => {
+    setIsOpen(open);
+
+    if (!open) {
+      onClose?.();
+    }
+  };
+
+  const closeDropdown = useCallback(() => {
+    setIsOpen(false);
+    onClose?.();
+  }, [onClose]);
 
   const onOrganizationAdd = useMemo(() => {
     if (onOrganizationAddProp) {
@@ -77,6 +93,10 @@ export function Select({
       workspaces
         ? {
             ...workspaces,
+            onWorkspaceChange(value: Workspace) {
+              closeDropdown();
+              workspaces?.onWorkspaceChange(value);
+            },
             onWorkspaceAdd() {
               closeDropdown();
               workspaces.onWorkspaceAdd();
@@ -89,7 +109,7 @@ export function Select({
   return (
     <Dropdown
       open={isOpen}
-      onOpenChange={setIsOpen}
+      onOpenChange={toggleOpen}
       content={
         <div className={styles.selectGroup}>
           <SelectMenu

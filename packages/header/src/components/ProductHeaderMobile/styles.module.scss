@@ -124,3 +124,11 @@
   top: 2px;
   right: 0;
 }
+
+// TODO: code duplicate from src/helperComponents/UserMenu/styles.modules.scss
+.userMenuInfoItem {
+  [data-test-id="list__base-item-option"] {
+    // TODO: подумать как "нормально" прокидывать стили/типографику
+    @include composite-var($sans-label-m);
+  }
+}

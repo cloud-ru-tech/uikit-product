@@ -37,6 +37,8 @@ export type SelectProps = {
     onWorkspaceAdd(): void;
   };
 
+  onClose?(): void;
+
   closeDropdown?(): void;
 };
 
@@ -94,31 +96,27 @@ export function SelectMenu({
         </>
       )}
 
-      {!workspaces && (
-        <>
-          <GroupSection
-            className={className}
-            title={textProvider(languageCode, Texts.Project)}
-            searchable
-            groups={projects}
-            onItemChange={onProjectChange}
-            selectedItem={selectedProject}
-            addItem={
-              projectAddButton && {
-                label: textProvider(languageCode, Texts.AddProject),
-                handler: projectAddButton.onClick,
-                tooltip: projectAddButton.tooltip,
-                disabled: projectAddButton.disabled,
-              }
-            }
-            closeDropdown={closeDropdown}
-            data-test-id='header__select-group-project'
-            avatarAppearance='neutral'
-          />
+      <GroupSection
+        className={className}
+        title={textProvider(languageCode, Texts.Project)}
+        searchable
+        groups={projects}
+        onItemChange={onProjectChange}
+        selectedItem={selectedProject}
+        addItem={
+          projectAddButton && {
+            label: textProvider(languageCode, Texts.AddProject),
+            handler: projectAddButton.onClick,
+            tooltip: projectAddButton.tooltip,
+            disabled: projectAddButton.disabled,
+          }
+        }
+        closeDropdown={closeDropdown}
+        data-test-id='header__select-group-project'
+        avatarAppearance='neutral'
+      />
 
-          {divider}
-        </>
-      )}
+      {divider}
 
       <GroupSection
         className={className}

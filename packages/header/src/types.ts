@@ -75,6 +75,7 @@ export type Platform = {
   id: string;
   name: string;
   logo: ReactElement;
+  hidden?: boolean;
 };
 
 export type Workspace = {

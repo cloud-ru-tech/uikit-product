@@ -193,11 +193,15 @@ export function ProductHeaderMobile({
         content: {
           option: userMenu?.user.name,
           description: user.email,
+          truncate: {
+            description: 1,
+          },
         },
         afterContent: <Avatar size='s' name={user.name} showTwoSymbols indicator={indicator} />,
         inactive: true,
         id: 'header__user-menu-button',
         'data-test-id': 'header__user-menu-button',
+        className: styles.userMenuInfoItem,
       });
 
       if (onProfileManagementClick) {

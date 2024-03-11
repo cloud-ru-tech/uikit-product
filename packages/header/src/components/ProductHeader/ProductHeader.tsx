@@ -33,8 +33,8 @@ export type ProductHeaderProps = WithSupportProps<
     className?: string;
     drawerMenu: Pick<
       DrawerMenuProps,
-      'links' | 'pinnedCards' | 'footerLinks' | 'allProducts' | 'selectedProduct' | 'onProductChange'
-    >;
+      'links' | 'pinnedCards' | 'footerLinks' | 'allProducts' | 'selectedProduct' | 'onProductChange' | 'onClose'
+    > & { onClose?(): void };
     select?: Pick<
       SelectProps,
       | 'platforms'
@@ -45,6 +45,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'onProjectChange'
       | 'projectAddButton'
       | 'workspaces'
+      | 'onClose'
     >;
     pagePath?: BreadcrumbsProps['items'];
     settings?: SettingOption[];
@@ -68,7 +69,7 @@ export function ProductHeader({
   className,
   homePageUrl,
   onLogoClick,
-  drawerMenu: { links, pinnedCards, footerLinks, allProducts, selectedProduct, onProductChange },
+  drawerMenu: { links, pinnedCards, footerLinks, allProducts, selectedProduct, onProductChange, onClose },
 
   select,
   organizations,
@@ -96,7 +97,10 @@ export function ProductHeader({
     };
   }, []);
 
-  const handleCloseMainMenu = useCallback(() => setIsMainMenuOpen(false), []);
+  const handleCloseMainMenu = useCallback(() => {
+    setIsMainMenuOpen(false);
+    onClose?.();
+  }, [onClose]);
 
   const visibleSettings = useMemo(() => {
     const filteredSettings = settings?.filter(filterHidden);

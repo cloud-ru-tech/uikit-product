@@ -25,6 +25,13 @@
   }
 }
 
+.userMenuInfoItem {
+  [data-test-id="list__base-item-option"] {
+    // TODO: подумать как "нормально" прокидывать стили/типографику
+    @include composite-var($sans-label-m);
+  }
+}
+
 .userMenuAvatarCounter {
   position: absolute;
   top: 2px;
