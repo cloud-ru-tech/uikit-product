@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.6.1 (2024-03-11)
+
+
+### Bug Fixes
+
+* **[FF-4485](https://jira.sbercloud.tech/browse/FF-4485):** add missing icons ([b4724e6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b4724e6520e726ce5242fca59a645f2df10f6330))
+* **[FF-4485](https://jira.sbercloud.tech/browse/FF-4485):** hide projects if workspaces passed ([33ecd61](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/33ecd6171d020d70258ddc9fd12a3f3d57e3a55a))
+
+
+
+
+
 # 2.6.0 (2024-03-08)
 
 
