@@ -32,6 +32,8 @@ export type StoryProps = HeaderProps & {
 
   showAddOrganization: boolean;
 
+  showPlatformsLoading: boolean;
+
   showLinks: boolean;
   showFooterLinks: boolean;
   showPinnedCards: boolean;
@@ -108,6 +110,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
     showLinks,
     showFooterLinks,
     showPinnedCards,
+    showPlatformsLoading,
     ...args
   }: StoryProps) {
     const [organization, setOrganization] = useState(args.selectedOrganization);
@@ -136,6 +139,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
       args.select.onProjectChange = setProject;
       args.select.selectedPlatform = platform;
       args.select.onPlatformChange = setPlatform;
+      args.select.platformsLoading = showPlatformsLoading;
       args.select.workspaces = args.showWorkspaces
         ? {
             list: WORKSPACES.list,
@@ -299,6 +303,7 @@ export const ARGS: StoryProps = {
   showUserMenuLogout: true,
   showOrganizationInvite: false,
   showOrganizationInvitePopover: false,
+  showPlatformsLoading: false,
   userMenu: {
     user: DEFAULT_USER,
     indicator: 'green',
@@ -470,6 +475,8 @@ export const ARGS: StoryProps = {
 export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   showSelect: { name: '[Story]: show header select', type: 'boolean' },
   select: { table: { disable: true } },
+
+  showPlatformsLoading: { name: '[Story]: show skeleton for platforms', type: 'boolean' },
 
   showWorkspaces: { name: '[Story]: show workspaces', type: 'boolean' },
 

@@ -16,10 +16,12 @@ export function Select({
   selectedProject,
   onProjectChange,
   projectAddButton: projectAddButtonProp,
+  projectsLoading,
 
   platforms: platformsProp,
   selectedPlatform,
   onPlatformChange,
+  platformsLoading,
 
   workspaces,
 
@@ -119,10 +121,12 @@ export function Select({
             onOrganizationAdd={onOrganizationAdd}
             projects={projects ?? []}
             selectedProject={selectedProject}
+            projectsLoading={projectsLoading}
             onProjectChange={onProjectChange}
             projectAddButton={projectAddButton}
             platforms={platforms ?? []}
             selectedPlatform={selectedPlatform}
+            platformsLoading={platformsLoading}
             onPlatformChange={onPlatformChange}
             closeDropdown={closeDropdown}
             workspaces={workspacesOptions}

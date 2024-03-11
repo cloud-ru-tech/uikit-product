@@ -11,6 +11,7 @@ import { SearchPrivate } from '@snack-uikit/search-private';
 
 import { textProvider, Texts } from '../../helpers';
 import { GroupSectionFooterButton, GroupSectionItemDroplist } from './components';
+import { GroupSectionSkeletonItem } from './components/GroupSectionSkeletonItem';
 import { useSearch } from './hooks';
 import styles from './styles.module.scss';
 import { Item, ItemsGroup } from './types';
@@ -20,6 +21,7 @@ export type GroupSectionProps = WithSupportProps<{
   title?: string;
   last?: boolean;
   searchable?: boolean;
+  loading?: boolean;
 
   groups: ItemsGroup<Item>[];
   selectedItem?: Item;
@@ -44,6 +46,7 @@ const getItemIndex = (groupId: string, itemId: string) => `${groupId}_${itemId}`
 export function GroupSection({
   title,
   // last = false,
+  loading,
   searchable = false,
   className,
   groups,
@@ -125,51 +128,55 @@ export function GroupSection({
         </div>
       )}
 
-      <List
-        scroll
-        marker
-        size='m'
-        selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
-        items={filteredGroups.map(group => ({
-          label: filteredGroups.length > 1 ? group.heading : undefined,
-          mode: 'secondary',
-          items: group.items.map(item => {
-            const dataTestId = `header__select-group-item-${item.id}`;
+      {loading ? (
+        <GroupSectionSkeletonItem />
+      ) : (
+        <List
+          scroll
+          marker
+          size='m'
+          selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
+          items={filteredGroups.map(group => ({
+            label: filteredGroups.length > 1 ? group.heading : undefined,
+            mode: 'secondary',
+            items: group.items.map(item => {
+              const dataTestId = `header__select-group-item-${item.id}`;
 
-            return {
-              content: {
-                option: item.name,
-              },
-              beforeContent: item.logo ?? (
-                <Avatar appearance={avatarAppearance} size='xs' name={item.name} showTwoSymbols shape='square' />
-              ),
-              afterContent: (
-                <>
-                  {item.actions && item.actions.length > 0 ? (
-                    <GroupSectionItemDroplist
-                      actions={item.actions}
-                      dataTestId={dataTestId}
-                      onItemClick={closeDropdown}
-                    />
-                  ) : undefined}
+              return {
+                content: {
+                  option: item.name,
+                },
+                beforeContent: item.logo ?? (
+                  <Avatar appearance={avatarAppearance} size='xs' name={item.name} showTwoSymbols shape='square' />
+                ),
+                afterContent: (
+                  <>
+                    {item.actions && item.actions.length > 0 ? (
+                      <GroupSectionItemDroplist
+                        actions={item.actions}
+                        dataTestId={dataTestId}
+                        onItemClick={closeDropdown}
+                      />
+                    ) : undefined}
 
-                  {item.new && (
-                    <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
-                  )}
-                </>
-              ),
-              id: item.id,
-              onKeyDown: navigateOutside,
-              onMouseDown: handleItemMouseDown({ item, groupId: group.id }),
-              'data-test-id': dataTestId,
-              itemRef: ((ref: HTMLElement) => {
-                itemRefs.current[getItemIndex(group.id, item.id)] = ref;
-              }) as unknown as RefObject<HTMLElement>,
-            };
-          }),
-        }))}
-        footer={addItem?.handler ? <GroupSectionFooterButton {...addItem} /> : undefined}
-      />
+                    {item.new && (
+                      <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
+                    )}
+                  </>
+                ),
+                id: item.id,
+                onKeyDown: navigateOutside,
+                onMouseDown: handleItemMouseDown({ item, groupId: group.id }),
+                'data-test-id': dataTestId,
+                itemRef: ((ref: HTMLElement) => {
+                  itemRefs.current[getItemIndex(group.id, item.id)] = ref;
+                }) as unknown as RefObject<HTMLElement>,
+              };
+            }),
+          }))}
+          footer={addItem?.handler ? <GroupSectionFooterButton {...addItem} /> : undefined}
+        />
+      )}
 
       {/* {!last && <Divider orientation='vertical' className={styles.divider} />} */}
     </div>

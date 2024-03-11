@@ -47,6 +47,7 @@
     "@snack-uikit/scroll": "0.5.2",
     "@snack-uikit/search": "0.7.16",
     "@snack-uikit/search-private": "0.1.2",
+    "@snack-uikit/skeleton": "0.3.3",
     "@snack-uikit/toggles": "0.9.7",
     "@snack-uikit/tooltip": "0.13.0",
     "@snack-uikit/truncate-string": "0.4.10",

@@ -33,15 +33,17 @@ export type ProductHeaderProps = WithSupportProps<
     className?: string;
     drawerMenu: Pick<
       DrawerMenuProps,
-      'links' | 'pinnedCards' | 'footerLinks' | 'allProducts' | 'selectedProduct' | 'onProductChange' | 'onClose'
+      'links' | 'pinnedCards' | 'footerLinks' | 'allProducts' | 'selectedProduct' | 'onProductChange'
     > & { onClose?(): void };
     select?: Pick<
       SelectProps,
       | 'platforms'
       | 'selectedPlatform'
       | 'onPlatformChange'
+      | 'platformsLoading'
       | 'projects'
       | 'selectedProject'
+      | 'projectsLoading'
       | 'onProjectChange'
       | 'projectAddButton'
       | 'workspaces'

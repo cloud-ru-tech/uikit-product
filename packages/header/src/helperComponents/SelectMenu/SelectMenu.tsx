@@ -18,6 +18,7 @@ export type SelectProps = {
   onOrganizationAdd?(): void;
 
   projects: ItemsGroup<Project>[];
+  projectsLoading?: boolean;
   selectedProject: Project;
   onProjectChange?(value: Project): void;
   projectAddButton?: {
@@ -29,10 +30,12 @@ export type SelectProps = {
   platforms: Platform[];
   selectedPlatform: Platform;
   onPlatformChange?(value: Platform): void;
+  platformsLoading?: boolean;
 
   workspaces?: {
     list: Workspace[];
     selectedWorkspace?: Workspace;
+    loading?: boolean;
     onWorkspaceChange(value: Workspace): void;
     onWorkspaceAdd(): void;
   };
@@ -61,12 +64,13 @@ export function SelectMenu({
   projects,
   selectedProject,
   onProjectChange,
-
+  projectsLoading,
   projectAddButton,
 
   platforms,
   selectedPlatform,
   onPlatformChange,
+  platformsLoading,
 
   workspaces,
 
@@ -111,6 +115,7 @@ export function SelectMenu({
             disabled: projectAddButton.disabled,
           }
         }
+        loading={projectsLoading}
         closeDropdown={closeDropdown}
         data-test-id='header__select-group-project'
         avatarAppearance='neutral'
@@ -125,6 +130,7 @@ export function SelectMenu({
         groups={[{ id: '1', items: platforms }]}
         onItemChange={onPlatformChange}
         selectedItem={selectedPlatform}
+        loading={platformsLoading}
         data-test-id='header__select-group-platform'
       />
 
@@ -138,6 +144,7 @@ export function SelectMenu({
             groups={[{ id: '1', items: workspaces.list }]}
             onItemChange={workspaces.onWorkspaceChange}
             selectedItem={workspaces.selectedWorkspace}
+            loading={workspaces.loading}
             addItem={{
               label: textProvider(languageCode, Texts.AddWorkspace),
               handler: workspaces.onWorkspaceAdd,

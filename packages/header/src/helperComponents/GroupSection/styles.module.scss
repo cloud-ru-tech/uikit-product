@@ -92,3 +92,19 @@ $vPadding: calc($dimension-1m + $dimension-025m);
 .droplistTriggerWrap {
   display: flex;
 }
+
+.skeletonItem {
+  // TODO: надо будет пофиксить, пока так для скорости
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: $space-drop-list-item-m-container-vertical-padding $space-drop-list-item-m-container-horizontal-padding;
+  gap: $space-drop-list-item-m-container-gap;
+}
+
+.skeletonIcon {
+  border-radius: $radius-avatar-square-xs;
+  width: $size-icon-container-s;
+  height: $size-icon-container-s;
+  flex-shrink: 0;
+}
