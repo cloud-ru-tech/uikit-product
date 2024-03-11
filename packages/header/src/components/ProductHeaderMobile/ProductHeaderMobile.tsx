@@ -100,29 +100,35 @@ export function ProductHeaderMobile({
     [closeMainMenu, closeUserMenu, onOrganizationChangeProp],
   );
 
-  const onOrganizationAdd = useCallback(() => {
-    closeMainMenu();
-    closeUserMenu();
-    onOrganizationAddProp?.();
+  const onOrganizationAdd = useMemo(() => {
+    if (!onOrganizationAddProp) return undefined;
+
+    return () => {
+      closeMainMenu();
+      closeUserMenu();
+      onOrganizationAddProp();
+    };
   }, [closeMainMenu, closeUserMenu, onOrganizationAddProp]);
 
-  const onProjectChange = useCallback(
-    (project: Project) => {
-      closeMainMenu();
-      closeUserMenu();
-      onProjectChangeProp?.(project);
-    },
-    [closeMainMenu, closeUserMenu, onProjectChangeProp],
-  );
+  const onProjectChange = useMemo(() => {
+    if (!onProjectChangeProp) return undefined;
 
-  const onPlatformChange = useCallback(
-    (platform: Platform) => {
+    return (project: Project) => {
       closeMainMenu();
       closeUserMenu();
-      onPlatformChangeProp?.(platform);
-    },
-    [closeMainMenu, closeUserMenu, onPlatformChangeProp],
-  );
+      onProjectChangeProp(project);
+    };
+  }, [closeMainMenu, closeUserMenu, onProjectChangeProp]);
+
+  const onPlatformChange = useMemo(() => {
+    if (!onPlatformChangeProp) return undefined;
+
+    return (platform: Platform) => {
+      closeMainMenu();
+      closeUserMenu();
+      onPlatformChangeProp(platform);
+    };
+  }, [closeMainMenu, closeUserMenu, onPlatformChangeProp]);
 
   const workspacesOptions = useMemo(
     () =>
