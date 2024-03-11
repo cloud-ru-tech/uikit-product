@@ -3,24 +3,20 @@ import path from 'path';
 
 import camelcase from 'lodash.camelcase';
 
+import { capitalize, kebabCase, removeInvalidCharacters, replaceColorsWithBlack } from './utils';
+
 const SOURCE_PATH = 'scripts/import';
 const DESTINATION_PATH = 'svgs/illustrations';
+const DESTINATION_PLATFORMS_PATH = 'svgs/inherit/interface-icons-product';
 
 const IGNORED_FILES = ['.gitignore', '.DS_Store'];
-
-const capitalize = (value: string): string => {
-  const firstLetter = value[0].toUpperCase();
-  return `${firstLetter}${value.slice(1)}`;
-};
-
-const removeInvalidCharacters = (value: string): string => value.replace(/[^a-zA-Z0-9\s]+/gi, '');
 
 (async () => {
   const collections = await fs.readdir(SOURCE_PATH);
   const folders = collections.filter(collection => !IGNORED_FILES.includes(collection));
 
   for (const folder of folders) {
-    const destinationFolder = folder.toLowerCase();
+    const destinationFolder = camelcase(folder).toLowerCase();
 
     try {
       await fs.mkdir(path.join(DESTINATION_PATH, destinationFolder));
@@ -36,6 +32,23 @@ const removeInvalidCharacters = (value: string): string => value.replace(/[^a-zA
       await fs.copyFile(
         path.join(SOURCE_PATH, folder, fileName),
         path.join(DESTINATION_PATH, destinationFolder, `${camelcaseFileName}.${extension}`),
+      );
+
+      const camelCaseProductFileName = `${destinationFolder}Service${camelcaseFileName}`;
+      try {
+        await fs.mkdir(path.join(DESTINATION_PLATFORMS_PATH, camelCaseProductFileName));
+        // eslint-disable-next-line
+      } catch {}
+
+      const kebabFileName = kebabCase(`${camelCaseProductFileName}-s`);
+      const iconBuffer = await fs.readFile(path.join(SOURCE_PATH, folder, fileName));
+      const iconString = iconBuffer.toString();
+      const blackIcon = replaceColorsWithBlack(iconString);
+      const blackIconBuffer = Buffer.from(blackIcon, 'utf8');
+
+      await fs.writeFile(
+        path.join(DESTINATION_PLATFORMS_PATH, camelCaseProductFileName, `${kebabFileName}.${extension}`),
+        blackIconBuffer,
       );
     }
   }

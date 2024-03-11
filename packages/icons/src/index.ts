@@ -12,6 +12,8 @@ export * from './components/avatarPlaceholder-icons';
 export * from './components/platform-icons';
 export * from './components/illustrations-evolution-icons';
 export * from './components/illustrations-platforms-icons';
+export * from './components/illustrations-enterprise-icons';
+export * from './components/illustrations-mlspace-icons';
 
 export { default as SpriteProductSVG } from './sprite/svg/sprite-product.symbol.svg';
 export { default as SpriteSystemSVG } from './sprite/svg/sprite-system.symbol.svg';

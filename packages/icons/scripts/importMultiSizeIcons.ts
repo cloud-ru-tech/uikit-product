@@ -2,7 +2,8 @@ import * as fs from 'fs/promises';
 import path from 'path';
 
 import camelcase from 'lodash.camelcase';
-import kebabcase from 'lodash.kebabcase';
+
+import { kebabCase } from './utils';
 
 const SOURCE_PATH = 'scripts/import';
 const DESTINATION_PATH = 'svgs/inherit';
@@ -33,7 +34,7 @@ const IGNORED_FILES = ['.gitignore', '.DS_Store'];
       for (const fileName of iconsFilesNames) {
         const [name, extension] = fileName.split('.');
         const camelcaseFileName = camelcase(name);
-        const kebabFileName = kebabcase(`${name}-${size}`).toLowerCase();
+        const kebabFileName = `${kebabCase(camelcaseFileName)}-${size}`.toLowerCase();
 
         try {
           await fs.mkdir(path.join(DESTINATION_PATH, folder, camelcaseFileName));
