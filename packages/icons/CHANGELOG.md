@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0 (2024-03-12)
+
+
+### BREAKING CHANGES
+
+
+* **[FF-4373](https://jira.sbercloud.tech/browse/FF-4373):** new enterprise, mlspace and evolution icons ([e835d97](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e835d97dbd11c7fdd2ff04102cd94b93401a164b))
+
+
+
+
 # 5.33.0 (2024-03-08)
 
 
