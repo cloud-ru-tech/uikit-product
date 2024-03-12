@@ -12,10 +12,17 @@ type NotificationsPopoverProps = {
 
 export function NotificationsPopover({ notifications }: NotificationsPopoverProps) {
   const [isOpen, setOpen] = useState<boolean>(false);
+  // isOpen destroys NotificationPanelPopoverContent
+  // localOpen is used to unsure hooks in Notifications will be called
+  const [localOpen, setLocalOpen] = useState<boolean>(false);
 
   const handleOpenChange = (open: boolean) => {
     notifications.onOpenChange?.(open);
-    setOpen(open);
+    setLocalOpen(open);
+
+    setTimeout(() => {
+      setOpen(open);
+    }, 0);
   };
 
   return (
@@ -23,7 +30,8 @@ export function NotificationsPopover({ notifications }: NotificationsPopoverProp
       placement='bottom-end'
       trigger='click'
       onOpenChange={handleOpenChange}
-      content={<Notifications {...notifications} open={isOpen} className={styles.notifications} />}
+      open={isOpen}
+      content={<Notifications {...notifications} open={localOpen} className={styles.notifications} />}
     >
       <NotificationsTrigger count={notifications.count} onClick={notifications.onNotifyTriggerClick} />
     </NotificationPanelPopover>

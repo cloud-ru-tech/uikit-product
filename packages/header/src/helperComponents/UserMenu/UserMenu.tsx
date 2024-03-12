@@ -186,7 +186,6 @@ export function UserMenu({
           mode: 'single',
           value: selectedOrganization?.id,
         }}
-        marker={false}
         triggerElemRef={triggerRef}
         trigger='clickAndFocusVisible'
         className={styles.userMenuDroplist}

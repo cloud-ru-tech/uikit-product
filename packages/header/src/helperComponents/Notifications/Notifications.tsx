@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
+import { BellSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { PlaceholderSVG } from '@snack-uikit/icons';
+import { AlarmFilledSVG } from '@snack-uikit/icons';
 import { NotificationCard, NotificationCardProps, NotificationPanel } from '@snack-uikit/notification';
 
 import { textProvider, Texts } from '../../helpers';
@@ -59,10 +60,13 @@ export function Notifications({
 
   const [chipFilter, setChipFilter] = useState<ChipFilter>('all');
 
-  const handleTabChange: NotificationsProps['onTabChange'] = tab => {
-    setChipFilter(tab);
-    onTabChange?.(tab);
-  };
+  const handleTabChange = useCallback<NonNullable<NotificationsProps['onTabChange']>>(
+    tab => {
+      setChipFilter(tab);
+      onTabChange?.(tab);
+    },
+    [onTabChange],
+  );
 
   const chips = useMemo<{ value: ChipFilter; label: string }[]>(
     () => [
@@ -92,6 +96,12 @@ export function Notifications({
       setVisibleCardIds([]);
     }
   }, [onCardsRead, open, visibleCardIds]);
+
+  useEffect(() => {
+    if (!open && chipFilter === 'unread') {
+      handleTabChange('all');
+    }
+  }, [chipFilter, handleTabChange, open]);
 
   useEffect(() => {
     if (!hasMore || !fetchMore || chipFilter === 'unread') return;
@@ -148,7 +158,7 @@ export function Notifications({
           {showError && (
             <NotificationPanel.Blank
               icon={{
-                icon: PlaceholderSVG,
+                icon: BellSVG,
                 appearance: 'red',
               }}
               title={textProvider(languageCode, Texts.NotificationsErrorTitle)}
@@ -158,8 +168,9 @@ export function Notifications({
 
           {showBlank && (
             <NotificationPanel.Blank
-              icon={{ icon: PlaceholderSVG }}
-              title={textProvider(languageCode, Texts.NoNotifications)}
+              icon={{ icon: AlarmFilledSVG }}
+              title={textProvider(languageCode, Texts.NoNotificationsTitle)}
+              description={textProvider(languageCode, Texts.NoNotificationsDescription)}
             />
           )}
 
