@@ -136,6 +136,12 @@ export function GroupSection({
           marker
           size='m'
           selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
+          noDataState={{
+            description: textProvider(languageCode, Texts.NoData),
+          }}
+          noResultsState={{
+            description: textProvider(languageCode, Texts.NoDataFound),
+          }}
           items={filteredGroups.map(group => ({
             label: filteredGroups.length > 1 ? group.heading : undefined,
             mode: 'secondary',

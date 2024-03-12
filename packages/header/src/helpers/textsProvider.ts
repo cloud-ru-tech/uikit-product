@@ -106,7 +106,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     // ЛК 2.0
     [Texts.Menu]: 'Menu',
     [Texts.SearchByServices]: 'Search by service',
-    [Texts.NoData]: 'Nothing found',
+    [Texts.NoData]: 'No data',
     [Texts.Notifications]: 'Notifications',
     [Texts.NotificationsAll]: 'All',
     [Texts.NotificationsUnread]: 'Unread',
