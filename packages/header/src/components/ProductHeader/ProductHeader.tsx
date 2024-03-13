@@ -44,6 +44,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'projects'
       | 'selectedProject'
       | 'projectsLoading'
+      | 'projectsEmptyState'
       | 'onProjectChange'
       | 'projectAddButton'
       | 'workspaces'

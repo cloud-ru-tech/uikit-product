@@ -17,6 +17,7 @@ export function Select({
   onProjectChange,
   projectAddButton: projectAddButtonProp,
   projectsLoading,
+  projectsEmptyState,
 
   platforms: platformsProp,
   selectedPlatform,
@@ -127,6 +128,7 @@ export function Select({
             projectsLoading={projectsLoading}
             onProjectChange={onProjectChange}
             projectAddButton={projectAddButton}
+            projectsEmptyState={projectsEmptyState}
             platforms={platforms}
             selectedPlatform={selectedPlatform}
             platformsLoading={platformsLoading}

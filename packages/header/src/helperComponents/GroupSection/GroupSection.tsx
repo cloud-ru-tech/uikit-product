@@ -5,7 +5,7 @@ import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/u
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { SearchSVG } from '@snack-uikit/icons';
-import { List } from '@snack-uikit/list';
+import { List, ListProps } from '@snack-uikit/list';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { SearchPrivate } from '@snack-uikit/search-private';
 
@@ -24,6 +24,7 @@ export type GroupSectionProps = WithSupportProps<{
   loading?: boolean;
 
   groups: ItemsGroup<Item>[];
+  noDataState?: ListProps['noDataState'];
   selectedItem?: Item;
   onItemChange?(item: Item): void;
 
@@ -56,6 +57,7 @@ export function GroupSection({
   navigateOutsideRef,
   closeDropdown,
   avatarAppearance,
+  noDataState,
   ...rest
 }: GroupSectionProps) {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -138,6 +140,7 @@ export function GroupSection({
           selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
           noDataState={{
             description: textProvider(languageCode, Texts.NoData),
+            ...noDataState,
           }}
           noResultsState={{
             description: textProvider(languageCode, Texts.NoDataFound),

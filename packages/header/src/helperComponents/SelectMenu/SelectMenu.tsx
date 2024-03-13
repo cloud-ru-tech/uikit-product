@@ -4,6 +4,7 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { Divider } from '@snack-uikit/divider';
 import { ChevronDownSVG, ChevronUpSVG } from '@snack-uikit/icons';
+import { ListProps } from '@snack-uikit/list';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../helpers';
@@ -26,6 +27,8 @@ export type SelectProps = {
     tooltip?: string;
     disabled?: boolean;
   };
+
+  projectsEmptyState?: ListProps['noDataState'];
 
   platforms?: Platform[];
   selectedPlatform?: Platform;
@@ -66,6 +69,7 @@ export function SelectMenu({
   onProjectChange,
   projectsLoading,
   projectAddButton,
+  projectsEmptyState,
 
   platforms,
   selectedPlatform,
@@ -107,6 +111,7 @@ export function SelectMenu({
             groups={projects}
             onItemChange={onProjectChange}
             selectedItem={selectedProject}
+            noDataState={projectsEmptyState}
             addItem={
               projectAddButton && {
                 label: textProvider(languageCode, Texts.AddProject),
