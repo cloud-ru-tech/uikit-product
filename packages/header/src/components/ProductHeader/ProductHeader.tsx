@@ -64,7 +64,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'onLogout'
     >;
   } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> &
-    Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick'>
+    Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick' | 'showMainMenu'>
 >;
 
 export function ProductHeader({
@@ -84,6 +84,7 @@ export function ProductHeader({
   onHelpMenuClick,
   notifications,
   userMenu,
+  showMainMenu,
   ...rest
 }: ProductHeaderProps) {
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
@@ -135,6 +136,7 @@ export function ProductHeader({
         homePageUrl={homePageUrl}
         onLogoClick={onLogoClick}
         onMainMenuClick={() => setIsMainMenuOpen(true)}
+        showMainMenu={showMainMenu}
         logo={<CloudRuLogo />}
         path={
           <>
@@ -199,16 +201,18 @@ export function ProductHeader({
         }
       />
 
-      <DrawerMenuDesktop
-        open={isMainMenuOpen}
-        onClose={handleCloseMainMenu}
-        links={links}
-        pinnedCards={pinnedCards}
-        allProducts={allProducts}
-        selectedProduct={selectedProduct}
-        onProductChange={onProductChange}
-        footerLinks={footerLinks}
-      />
+      {showMainMenu && (
+        <DrawerMenuDesktop
+          open={isMainMenuOpen}
+          onClose={handleCloseMainMenu}
+          links={links}
+          pinnedCards={pinnedCards}
+          allProducts={allProducts}
+          selectedProduct={selectedProduct}
+          onProductChange={onProductChange}
+          footerLinks={footerLinks}
+        />
+      )}
     </>
   );
 }

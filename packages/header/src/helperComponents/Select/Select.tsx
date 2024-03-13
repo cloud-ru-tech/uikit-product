@@ -122,12 +122,12 @@ export function Select({
             selectedOrganization={selectedOrganization}
             onOrganizationChange={onOrganizationChange}
             onOrganizationAdd={onOrganizationAdd}
-            projects={projects ?? []}
+            projects={projects}
             selectedProject={selectedProject}
             projectsLoading={projectsLoading}
             onProjectChange={onProjectChange}
             projectAddButton={projectAddButton}
-            platforms={platforms ?? []}
+            platforms={platforms}
             selectedPlatform={selectedPlatform}
             platformsLoading={platformsLoading}
             onPlatformChange={onPlatformChange}

@@ -111,7 +111,11 @@ export function DrawerMenuDesktop({
                 <div className={styles.selectProduct}>
                   <Droplist
                     size='m'
-                    {...getSelectProductListProps({ allProducts: visibleProducts, onProductChange, selectedProduct })}
+                    {...getSelectProductListProps({
+                      allProducts: visibleProducts,
+                      onProductChange,
+                      selectedProduct,
+                    })}
                     open={isOpen}
                     onOpenChange={setIsOpen}
                     widthStrategy='eq'

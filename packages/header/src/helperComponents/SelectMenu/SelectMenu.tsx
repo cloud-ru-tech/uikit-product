@@ -17,9 +17,9 @@ export type SelectProps = {
   onOrganizationChange?(value: Organization, source: 'user-menu' | 'select'): void;
   onOrganizationAdd?(): void;
 
-  projects: ItemsGroup<Project>[];
+  projects?: ItemsGroup<Project>[];
   projectsLoading?: boolean;
-  selectedProject: Project;
+  selectedProject?: Project;
   onProjectChange?(value: Project): void;
   projectAddButton?: {
     onClick(): void;
@@ -27,8 +27,8 @@ export type SelectProps = {
     disabled?: boolean;
   };
 
-  platforms: Platform[];
-  selectedPlatform: Platform;
+  platforms?: Platform[];
+  selectedPlatform?: Platform;
   onPlatformChange?(value: Platform): void;
   platformsLoading?: boolean;
 
@@ -84,55 +84,61 @@ export function SelectMenu({
   return (
     <>
       {organizations && (
+        <GroupSection
+          className={className}
+          title={textProvider(languageCode, Texts.Organization)}
+          groups={[{ id: '1', items: organizations }]}
+          onItemChange={val => onOrganizationChange?.(val, 'select')}
+          selectedItem={selectedOrganization}
+          addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
+          data-test-id='header__select-group-organization'
+          avatarAppearance='red'
+        />
+      )}
+
+      {projects && (
         <>
+          {divider}
+
           <GroupSection
             className={className}
-            title={textProvider(languageCode, Texts.Organization)}
-            groups={[{ id: '1', items: organizations }]}
-            onItemChange={val => onOrganizationChange?.(val, 'select')}
-            selectedItem={selectedOrganization}
-            addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
-            data-test-id='header__select-group-organization'
-            avatarAppearance='red'
+            title={textProvider(languageCode, Texts.Project)}
+            searchable
+            groups={projects}
+            onItemChange={onProjectChange}
+            selectedItem={selectedProject}
+            addItem={
+              projectAddButton && {
+                label: textProvider(languageCode, Texts.AddProject),
+                handler: projectAddButton.onClick,
+                tooltip: projectAddButton.tooltip,
+                disabled: projectAddButton.disabled,
+              }
+            }
+            loading={projectsLoading}
+            closeDropdown={closeDropdown}
+            data-test-id='header__select-group-project'
+            avatarAppearance='neutral'
           />
-
-          {divider}
         </>
       )}
 
-      <GroupSection
-        className={className}
-        title={textProvider(languageCode, Texts.Project)}
-        searchable
-        groups={projects}
-        onItemChange={onProjectChange}
-        selectedItem={selectedProject}
-        addItem={
-          projectAddButton && {
-            label: textProvider(languageCode, Texts.AddProject),
-            handler: projectAddButton.onClick,
-            tooltip: projectAddButton.tooltip,
-            disabled: projectAddButton.disabled,
-          }
-        }
-        loading={projectsLoading}
-        closeDropdown={closeDropdown}
-        data-test-id='header__select-group-project'
-        avatarAppearance='neutral'
-      />
+      {platforms && (
+        <>
+          {divider}
 
-      {divider}
-
-      <GroupSection
-        className={className}
-        title={textProvider(languageCode, Texts.Platforms)}
-        last={!workspaces}
-        groups={[{ id: '1', items: platforms }]}
-        onItemChange={onPlatformChange}
-        selectedItem={selectedPlatform}
-        loading={platformsLoading}
-        data-test-id='header__select-group-platform'
-      />
+          <GroupSection
+            className={className}
+            title={textProvider(languageCode, Texts.Platforms)}
+            last={!workspaces}
+            groups={[{ id: '1', items: platforms }]}
+            onItemChange={onPlatformChange}
+            selectedItem={selectedPlatform}
+            loading={platformsLoading}
+            data-test-id='header__select-group-platform'
+          />
+        </>
+      )}
 
       {workspaces && (
         <>
@@ -168,12 +174,12 @@ export function SelectMenuTrigger({
   open,
   showIcon = true,
 }: {
-  selectedProject: Project;
+  selectedProject?: Project;
   selectedWorkspace?: Workspace;
   open: boolean;
   showIcon: boolean;
 }) {
-  const name = selectedWorkspace?.name ?? selectedProject.name;
+  const name = selectedWorkspace?.name ?? selectedProject?.name ?? '';
 
   return (
     <div className={styles.contentLayout}>

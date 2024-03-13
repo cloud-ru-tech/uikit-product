@@ -59,6 +59,7 @@ export function ProductHeaderMobile({
   onHelpMenuClick,
   notifications,
   userMenu, // ...rest
+  showMainMenu,
 }: ProductHeaderProps) {
   const {
     platforms,
@@ -325,6 +326,7 @@ export function ProductHeaderMobile({
         }
         pathFooter
         path={pagePath && <Breadcrumbs items={pagePath ?? []} separator='/' size='xs' lastEmpty />}
+        showMainMenu={showMainMenu}
         onMainMenuClick={() => {
           setIsMainMenuOpen(true);
         }}
@@ -352,11 +354,11 @@ export function ProductHeaderMobile({
                     selectedOrganization={selectedOrganization}
                     onOrganizationChange={onOrganizationChange}
                     onOrganizationAdd={onOrganizationAdd}
-                    projects={projects ?? []}
+                    projects={projects}
                     selectedProject={selectedProject ?? ({} as ProductOption)}
                     onProjectChange={onProjectChange}
                     projectAddButton={projectAddButton}
-                    platforms={platforms ?? []}
+                    platforms={platforms}
                     selectedPlatform={selectedPlatform ?? ({} as Platform)}
                     onPlatformChange={onPlatformChange}
                     workspaces={workspacesOptions}
@@ -377,15 +379,17 @@ export function ProductHeaderMobile({
         </Scroll>
       </DrawerCustom>
 
-      <DrawerMenuMobile
-        open={isMainMenuOpen}
-        onClose={closeMainMenu}
-        links={links}
-        allProducts={allProducts}
-        selectedProduct={selectedProduct}
-        footerLinks={footerLinks}
-        onProductChange={onProductChange}
-      />
+      {showMainMenu && (
+        <DrawerMenuMobile
+          open={isMainMenuOpen}
+          onClose={closeMainMenu}
+          links={links}
+          allProducts={allProducts}
+          selectedProduct={selectedProduct}
+          footerLinks={footerLinks}
+          onProductChange={onProductChange}
+        />
+      )}
 
       {notifications && (
         <DrawerCustom

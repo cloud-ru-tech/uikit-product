@@ -15,6 +15,7 @@ export type HeaderLayoutProps = WithSupportProps<{
   path?: ReactNode;
   onMainMenuClick(): void;
   pathFooter?: boolean;
+  showMainMenu?: boolean;
 }>;
 
 export function HeaderLayout({
@@ -26,6 +27,7 @@ export function HeaderLayout({
   toolbar,
   onMainMenuClick,
   pathFooter,
+  showMainMenu = true,
   ...rest
 }: HeaderLayoutProps) {
   return (
@@ -36,12 +38,14 @@ export function HeaderLayout({
             {logo}
           </a>
 
-          <ButtonFunction
-            size='m'
-            icon={<MainMenuIcon />}
-            onClick={onMainMenuClick}
-            data-test-id='header__drawer-menu-button'
-          />
+          {showMainMenu && (
+            <ButtonFunction
+              size='m'
+              icon={<MainMenuIcon />}
+              onClick={onMainMenuClick}
+              data-test-id='header__drawer-menu-button'
+            />
+          )}
 
           {!pathFooter && Boolean(path) && <div className={styles.path}>{path}</div>}
         </div>
