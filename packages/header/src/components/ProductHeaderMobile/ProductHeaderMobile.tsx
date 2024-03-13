@@ -31,7 +31,7 @@ import {
 } from '../../helperComponents';
 import { filterHidden } from '../../helperComponents/DrawerMenu/utils';
 import { textProvider, Texts } from '../../helpers';
-import { Organization, Platform, ProductOption, Project } from '../../types';
+import { Organization, Platform, ProductOption, Workspace } from '../../types';
 import { ProductHeaderProps } from '../ProductHeader';
 import styles from './styles.module.scss';
 
@@ -39,7 +39,14 @@ export function ProductHeaderMobile({
   // className,
   homePageUrl,
   onLogoClick,
-  drawerMenu: { links, allProducts, selectedProduct, onProductChange: onProductChangeProp, footerLinks },
+  drawerMenu: {
+    links,
+    allProducts,
+    selectedProduct,
+    onProductChange: onProductChangeProp,
+    footerLinks,
+    onClose: onDrawerClose,
+  },
 
   select,
   organizations,
@@ -56,12 +63,13 @@ export function ProductHeaderMobile({
   const {
     platforms,
     selectedProject,
-    onPlatformChange: onPlatformChangeProp,
-    onProjectChange: onProjectChangeProp,
+    onPlatformChange,
+    onProjectChange,
     selectedPlatform,
     projectAddButton: projectAddButtonProp,
     projects,
     workspaces,
+    onClose: onSelectClose,
   } = select ?? {};
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -75,8 +83,14 @@ export function ProductHeaderMobile({
   const [isProjectMenuOpen, setIsProjectMenuOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
 
-  const closeMainMenu = useCallback(() => setIsMainMenuOpen(false), []);
-  const closeProjectMenu = useCallback(() => setIsProjectMenuOpen(false), []);
+  const closeMainMenu = useCallback(() => {
+    setIsMainMenuOpen(false);
+    onDrawerClose?.();
+  }, [onDrawerClose]);
+  const closeProjectMenu = useCallback(() => {
+    setIsProjectMenuOpen(false);
+    onSelectClose?.();
+  }, [onSelectClose]);
   const closeUserMenu = useCallback(() => {
     setIsUserMenuOpen(false);
     closeProjectMenu();
@@ -93,11 +107,9 @@ export function ProductHeaderMobile({
 
   const onOrganizationChange = useCallback(
     (item: Organization) => {
-      closeMainMenu();
-      closeUserMenu();
-      onOrganizationChangeProp?.(item);
+      onOrganizationChangeProp?.(item, 'select');
     },
-    [closeMainMenu, closeUserMenu, onOrganizationChangeProp],
+    [onOrganizationChangeProp],
   );
 
   const onOrganizationAdd = useMemo(() => {
@@ -110,31 +122,16 @@ export function ProductHeaderMobile({
     };
   }, [closeMainMenu, closeUserMenu, onOrganizationAddProp]);
 
-  const onProjectChange = useMemo(() => {
-    if (!onProjectChangeProp) return undefined;
-
-    return (project: Project) => {
-      closeMainMenu();
-      closeUserMenu();
-      onProjectChangeProp(project);
-    };
-  }, [closeMainMenu, closeUserMenu, onProjectChangeProp]);
-
-  const onPlatformChange = useMemo(() => {
-    if (!onPlatformChangeProp) return undefined;
-
-    return (platform: Platform) => {
-      closeMainMenu();
-      closeUserMenu();
-      onPlatformChangeProp(platform);
-    };
-  }, [closeMainMenu, closeUserMenu, onPlatformChangeProp]);
-
   const workspacesOptions = useMemo(
     () =>
       workspaces
         ? {
             ...workspaces,
+            onWorkspaceChange(value: Workspace) {
+              closeMainMenu();
+              closeUserMenu();
+              workspaces.onWorkspaceChange?.(value);
+            },
             onWorkspaceAdd() {
               closeMainMenu();
               closeUserMenu();

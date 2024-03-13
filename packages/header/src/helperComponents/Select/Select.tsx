@@ -36,12 +36,15 @@ export function Select({
   const platforms = useMemo(() => platformsProp?.filter(platform => !platform.hidden), [platformsProp]);
 
   useEffect(() => {
-    const listener = () => setIsOpen(true);
+    const openListener = () => setIsOpen(true);
+    const closeListener = () => setIsOpen(false);
 
-    window.addEventListener('header__open-project-menu', listener);
+    window.addEventListener('header__open-project-menu', openListener);
+    window.addEventListener('header__close-project-menu', closeListener);
 
     return () => {
-      window.removeEventListener('header__open-project-menu', listener);
+      window.removeEventListener('header__open-project-menu', openListener);
+      window.removeEventListener('header__close-project-menu', closeListener);
     };
   }, []);
 

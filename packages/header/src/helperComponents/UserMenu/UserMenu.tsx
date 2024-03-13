@@ -102,7 +102,7 @@ export function UserMenu({
           option: organization.name,
         },
         onClick: () => {
-          onOrganizationChange?.(organization);
+          onOrganizationChange?.(organization, 'user-menu');
           closeUserMenu();
         },
         id: organization.id,

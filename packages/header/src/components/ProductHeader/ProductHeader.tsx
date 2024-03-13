@@ -90,12 +90,15 @@ export function ProductHeader({
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   useEffect(() => {
-    const listener = () => setIsMainMenuOpen(true);
+    const openListener = () => setIsMainMenuOpen(true);
+    const closeListener = () => setIsMainMenuOpen(false);
 
-    window.addEventListener('header__open-main-menu', listener);
+    window.addEventListener('header__open-main-menu', openListener);
+    window.addEventListener('header__close-main-menu', closeListener);
 
     return () => {
-      window.removeEventListener('header__open-main-menu', listener);
+      window.removeEventListener('header__open-main-menu', openListener);
+      window.removeEventListener('header__close-main-menu', closeListener);
     };
   }, []);
 

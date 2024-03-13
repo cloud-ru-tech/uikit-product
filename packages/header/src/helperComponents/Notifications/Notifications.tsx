@@ -84,7 +84,8 @@ export function Notifications({
     [items],
   );
 
-  const hasCards = chipFilter === 'unread' ? cards.unread.length > 0 : items.length > 0;
+  const hasInitialCards = items.length > 0;
+  const hasCards = chipFilter === 'unread' ? cards.unread.length > 0 : hasInitialCards;
 
   const showError = !loading && error;
   const showBlank = !loading && !error && !hasCards;
@@ -135,17 +136,25 @@ export function Notifications({
       loading={loading || isLoadingMore}
       skeletonsAmount={isLoadingMore ? 1 : undefined}
       title={textProvider(languageCode, Texts.Notifications)}
-      chips={chips.map(chip => ({
-        label: chip.label,
-        checked: chip.value === chipFilter,
-        onChange() {
-          handleTabChange(chip.value);
-        },
-      }))}
-      readAllButton={{
-        onClick: readAll,
-        label: textProvider(languageCode, Texts.MarkAllAsRead),
-      }}
+      chips={
+        showError
+          ? undefined
+          : chips.map(chip => ({
+              label: chip.label,
+              checked: chip.value === chipFilter,
+              onChange() {
+                handleTabChange(chip.value);
+              },
+            }))
+      }
+      readAllButton={
+        showCards && chipFilter === 'all'
+          ? {
+              onClick: readAll,
+              label: textProvider(languageCode, Texts.MarkAllAsRead),
+            }
+          : undefined
+      }
       footerButton={
         onFooterButtonClick && {
           label: textProvider(languageCode, Texts.NotificationsFooterButton),
@@ -177,7 +186,12 @@ export function Notifications({
           {showCards && (
             <>
               {cards.unread.map(card => (
-                <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} />
+                <NotificationCard
+                  {...card}
+                  link={card.link ? { ...card.link, external: true } : undefined}
+                  key={card.id}
+                  onVisible={handleCardVisible}
+                />
               ))}
 
               {chipFilter === 'all' && (

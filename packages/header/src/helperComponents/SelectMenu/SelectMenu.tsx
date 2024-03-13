@@ -14,7 +14,7 @@ import styles from './styles.modules.scss';
 export type SelectProps = {
   organizations?: Organization[];
   selectedOrganization?: Organization;
-  onOrganizationChange?(value: Organization): void;
+  onOrganizationChange?(value: Organization, source: 'user-menu' | 'select'): void;
   onOrganizationAdd?(): void;
 
   projects: ItemsGroup<Project>[];
@@ -89,7 +89,7 @@ export function SelectMenu({
             className={className}
             title={textProvider(languageCode, Texts.Organization)}
             groups={[{ id: '1', items: organizations }]}
-            onItemChange={onOrganizationChange}
+            onItemChange={val => onOrganizationChange?.(val, 'select')}
             selectedItem={selectedOrganization}
             addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
             data-test-id='header__select-group-organization'
