@@ -156,6 +156,7 @@ export function Select({
           selectedWorkspace={workspaces?.selectedWorkspace}
           open={isOpen}
           showIcon
+          loading={projectsLoading}
         />
       </div>
     </Dropdown>

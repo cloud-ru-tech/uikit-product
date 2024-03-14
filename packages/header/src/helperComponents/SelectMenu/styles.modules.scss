@@ -1,5 +1,6 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-avatar';
 
 .contentLayout {
   display: flex;
@@ -17,4 +18,15 @@
 
 .fixedColumnsWidth {
   width: 220px;
+}
+
+.avatarSkeleton {
+  @include composite-var($avatar-round-xs);
+
+  flex-shrink: 0;
+
+  > div {
+    height: 100%;
+    border-radius: inherit;
+  }
 }

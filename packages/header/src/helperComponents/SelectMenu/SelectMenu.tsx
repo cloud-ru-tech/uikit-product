@@ -5,6 +5,7 @@ import { Avatar } from '@snack-uikit/avatar';
 import { Divider } from '@snack-uikit/divider';
 import { ChevronDownSVG, ChevronUpSVG } from '@snack-uikit/icons';
 import { ListProps } from '@snack-uikit/list';
+import { Skeleton, SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../helpers';
@@ -173,28 +174,43 @@ export function SelectMenu({
 
 const getIcon = (open: boolean) => (open ? <ChevronUpSVG size={16} /> : <ChevronDownSVG size={16} />);
 
+function SelectMenuTriggerSkeleton() {
+  return (
+    <div className={styles.contentLayout}>
+      <div className={styles.avatarSkeleton}>
+        <Skeleton />
+      </div>
+      <SkeletonText lines={1} className={styles.project} />
+    </div>
+  );
+}
+
 export function SelectMenuTrigger({
   selectedProject,
   selectedWorkspace,
   open,
   showIcon = true,
+  loading,
 }: {
   selectedProject?: Project;
   selectedWorkspace?: Workspace;
   open: boolean;
   showIcon: boolean;
+  loading?: boolean;
 }) {
   const name = selectedWorkspace?.name ?? selectedProject?.name ?? '';
 
   return (
-    <div className={styles.contentLayout}>
-      <Avatar size='xs' name={name} showTwoSymbols shape='square' />
+    <WithSkeleton skeleton={<SelectMenuTriggerSkeleton />} loading={loading}>
+      <div className={styles.contentLayout}>
+        <Avatar size='xs' name={name} showTwoSymbols shape='square' />
 
-      <span className={styles.project} data-test-id='header__select-project-value'>
-        <TruncateString text={name} hideTooltip />
-      </span>
+        <span className={styles.project} data-test-id='header__select-project-value'>
+          <TruncateString text={name} hideTooltip />
+        </span>
 
-      {showIcon && getIcon(open)}
-    </div>
+        {showIcon && getIcon(open)}
+      </div>
+    </WithSkeleton>
   );
 }
