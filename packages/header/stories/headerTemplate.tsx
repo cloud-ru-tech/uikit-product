@@ -407,8 +407,6 @@ export const ARGS: StoryProps = {
         items: [
           { id: 'con_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
           { id: 'con_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'con_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'con_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
         ],
       },
       {
@@ -417,8 +415,6 @@ export const ARGS: StoryProps = {
         items: [
           { id: 'mon_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
           { id: 'mon_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'mon_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'mon_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
         ],
       },
       {
@@ -429,46 +425,6 @@ export const ARGS: StoryProps = {
           { id: 'devtools_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
           { id: 'devtools_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
           { id: 'devtools_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
-        ],
-      },
-      {
-        label: 'Брокеры сообщений',
-        id: 'messages',
-        items: [
-          { id: 'messages_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'messages_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'messages_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'messages_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
-        ],
-      },
-      {
-        label: 'Бессерверная разработка',
-        id: 'serverless',
-        items: [
-          { id: 'serverless_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'serverless_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'serverless_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'serverless_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
-        ],
-      },
-      {
-        label: 'Базы данных',
-        id: 'database',
-        items: [
-          { id: 'database_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'database_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'database_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'database_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
-        ],
-      },
-      {
-        label: 'Дата-платформа',
-        id: 'dataplatform',
-        items: [
-          { id: 'dataplatform_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'dataplatform_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'dataplatform_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'dataplatform_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
         ],
       },
     ],
