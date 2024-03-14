@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-03-14)
+
+
+### Features
+
+* **[LK-3579](https://jira.sbercloud.tech/browse/LK-3579):** optional more link ([23b542c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/23b542cf39ee5a383f73923c6abc8fa5a153e1ad))
+
+
+
+
+
 # 0.1.0 (2024-03-09)
 
 
