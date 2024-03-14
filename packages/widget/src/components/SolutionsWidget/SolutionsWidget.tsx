@@ -18,14 +18,16 @@ export function SolutionsWidget({ moreLink, cards, ...rest }: SolutionsWidgetPro
     <S.Wrapper {...extractSupportProps(rest)}>
       <S.Header>
         <Typography.SansTitleL tag='h5'>{textProvider(languageCode, Texts.SolutionsWidgetTitle)}</Typography.SansTitleL>
-        <Link
-          text={textProvider(languageCode, Texts.SolutionsWidgetLink)}
-          size='m'
-          appearance='neutral'
-          onClick={moreLink?.onClick}
-          href={moreLink?.href}
-          external
-        />
+        {moreLink && (
+          <Link
+            text={textProvider(languageCode, Texts.SolutionsWidgetLink)}
+            size='m'
+            appearance='neutral'
+            onClick={moreLink?.onClick}
+            href={moreLink?.href}
+            external
+          />
+        )}
       </S.Header>
       <S.Cards>
         {cards.map(({ description, title, onClick }) => (
