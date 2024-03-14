@@ -26,6 +26,8 @@ export function DrawerMenuMobile({
   footerLinks,
   onProductChange: onProductChangeProp,
   allProducts,
+  selectedLink,
+  onLinkChange,
   ...rest
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
@@ -46,7 +48,7 @@ export function DrawerMenuMobile({
   const toggleInnerDrawer = () => setInnerOpen(prev => !prev);
 
   const wrappedClick = useCallback(
-    ({ disabled, onClick }: { disabled?: boolean; onClick?(e?: MouseEvent<HTMLElement>): void }) =>
+    ({ disabled, onClick }: { disabled?: boolean; onClick?(e?: MouseEvent<HTMLElement>): void }, cb?: () => void) =>
       (e?: MouseEvent<HTMLElement>) => {
         e?.preventDefault();
 
@@ -57,6 +59,8 @@ export function DrawerMenuMobile({
         onClose();
 
         onClick?.(e);
+
+        cb?.();
       },
     [onClose],
   );
@@ -115,10 +119,11 @@ export function DrawerMenuMobile({
                 <GroupCard key={group.id} id={group.id} title={group.label} ref={el => (cardsRef.current[index] = el)}>
                   {group.items.map(item => (
                     <CardServiceSmall
+                      checked={item.id === selectedLink}
                       outline
                       key={item.label}
                       promoBadge={item.badge}
-                      onClick={wrappedClick(item)}
+                      onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
                       title={item.label}
                       emblem={{ icon: item.icon, decor: true }}
                     />

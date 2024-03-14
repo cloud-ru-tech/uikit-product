@@ -11,6 +11,8 @@ export type DrawerMenuProps = {
   open: boolean;
   onClose(): void;
   links?: LinksGroup[];
+  selectedLink?: string;
+  onLinkChange?(value: string): void;
   pinnedCards?: PinnedCard[];
   footerLinks?: FooterLink[];
 } & SelectProductsProps;

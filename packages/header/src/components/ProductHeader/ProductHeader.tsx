@@ -33,7 +33,14 @@ export type ProductHeaderProps = WithSupportProps<
     className?: string;
     drawerMenu: Pick<
       DrawerMenuProps,
-      'links' | 'pinnedCards' | 'footerLinks' | 'allProducts' | 'selectedProduct' | 'onProductChange'
+      | 'links'
+      | 'pinnedCards'
+      | 'footerLinks'
+      | 'allProducts'
+      | 'selectedProduct'
+      | 'onProductChange'
+      | 'selectedLink'
+      | 'onLinkChange'
     > & { onClose?(): void };
     select?: Pick<
       SelectProps,
@@ -72,7 +79,17 @@ export function ProductHeader({
   className,
   homePageUrl,
   onLogoClick,
-  drawerMenu: { links, pinnedCards, footerLinks, allProducts, selectedProduct, onProductChange, onClose },
+  drawerMenu: {
+    links,
+    pinnedCards,
+    footerLinks,
+    allProducts,
+    selectedProduct,
+    onProductChange,
+    onClose,
+    selectedLink,
+    onLinkChange,
+  },
 
   select,
   organizations,
@@ -85,7 +102,7 @@ export function ProductHeader({
   onHelpMenuClick,
   notifications,
   userMenu,
-  showMainMenu,
+  showMainMenu = true,
   ...rest
 }: ProductHeaderProps) {
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
@@ -207,6 +224,8 @@ export function ProductHeader({
           open={isMainMenuOpen}
           onClose={handleCloseMainMenu}
           links={links}
+          selectedLink={selectedLink}
+          onLinkChange={onLinkChange}
           pinnedCards={pinnedCards}
           allProducts={allProducts}
           selectedProduct={selectedProduct}

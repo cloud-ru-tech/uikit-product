@@ -27,7 +27,7 @@ export function HeaderLayout({
   toolbar,
   onMainMenuClick,
   pathFooter,
-  showMainMenu = true,
+  showMainMenu,
   ...rest
 }: HeaderLayoutProps) {
   return (

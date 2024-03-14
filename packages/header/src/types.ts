@@ -1,4 +1,4 @@
-import { JSXElementConstructor, ReactElement } from 'react';
+import { JSXElementConstructor, MouseEvent, ReactElement } from 'react';
 
 import { CardServiceSmallProps, CardSuggestProps } from '@sbercloud/uikit-product-card-predefined';
 import { BaseItemProps } from '@snack-uikit/list';
@@ -24,12 +24,13 @@ export type Project = {
 };
 
 export type InnerLink = {
+  id: string;
   icon: JSXElementConstructor<{
     size?: number;
     className?: string;
   }>;
   label: string;
-  onClick(): void;
+  onClick(e?: MouseEvent<HTMLElement>): void;
   href?: string;
   disabled?: boolean;
   hidden?: boolean;
@@ -65,7 +66,7 @@ export type PinnedCard = {
 export type FooterLink = {
   icon: ReactElement;
   label: string;
-  onClick(): void;
+  onClick(e?: MouseEvent<HTMLElement>): void;
   href?: string;
   disabled?: boolean;
   hidden?: boolean;

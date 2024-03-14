@@ -37,6 +37,8 @@ export function DrawerMenuDesktop({
   allProducts,
   selectedProduct,
   onProductChange,
+  selectedLink,
+  onLinkChange,
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
@@ -77,7 +79,7 @@ export function DrawerMenuDesktop({
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const wrappedClick = useCallback(
-    ({ disabled, onClick }: { disabled?: boolean; onClick?(e?: MouseEvent<HTMLElement>): void }) =>
+    ({ disabled, onClick }: { disabled?: boolean; onClick?(e?: MouseEvent<HTMLElement>): void }, cb?: () => void) =>
       (e?: MouseEvent<HTMLElement>) => {
         e?.preventDefault();
 
@@ -88,6 +90,8 @@ export function DrawerMenuDesktop({
         onClose();
 
         onClick?.(e);
+
+        cb?.();
       },
     [onClose],
   );
@@ -233,10 +237,11 @@ export function DrawerMenuDesktop({
                         <GroupCard title={group.label} id={group.id} ref={el => (cardsRef.current[index] = el)}>
                           {group.items.map(item => (
                             <CardServiceSmall
+                              checked={item.id === selectedLink}
                               outline
                               promoBadge={item.badge}
                               key={item.label}
-                              onClick={wrappedClick(item)}
+                              onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
                               disabled={item.disabled}
                               href={item.href}
                               emblem={{ icon: item.icon, decor: true }}

@@ -43,6 +43,8 @@ export function ProductHeaderMobile({
     links,
     allProducts,
     selectedProduct,
+    selectedLink,
+    onLinkChange,
     onProductChange: onProductChangeProp,
     footerLinks,
     onClose: onDrawerClose,
@@ -59,7 +61,7 @@ export function ProductHeaderMobile({
   onHelpMenuClick,
   notifications,
   userMenu, // ...rest
-  showMainMenu,
+  showMainMenu = true,
 }: ProductHeaderProps) {
   const {
     platforms,
@@ -384,6 +386,8 @@ export function ProductHeaderMobile({
           open={isMainMenuOpen}
           onClose={closeMainMenu}
           links={links}
+          selectedLink={selectedLink}
+          onLinkChange={onLinkChange}
           allProducts={allProducts}
           selectedProduct={selectedProduct}
           footerLinks={footerLinks}
