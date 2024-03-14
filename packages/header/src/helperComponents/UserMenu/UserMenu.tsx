@@ -94,7 +94,7 @@ export function UserMenu({
     organizations?.forEach(organization =>
       items.push({
         'data-test-id': 'header__user-menu-organization',
-        beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols />,
+        beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols shape='square' />,
         afterContent: organization.new && (
           <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
         ),
