@@ -7,7 +7,7 @@ import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 import styles from './styles.module.scss';
 
 export type CardServiceSmallProps = WithSupportProps<
-  Pick<CardProps, 'promoBadge' | 'onClick' | 'className' | 'disabled' | 'outline' | 'href'> &
+  Pick<CardProps, 'promoBadge' | 'onClick' | 'className' | 'disabled' | 'outline' | 'href' | 'checked'> &
     Required<Pick<Card.HeaderProps, 'title' | 'emblem'>> & {
       truncate?: Pick<NonNullable<Card.HeaderProps['truncate']>, 'title'>;
     }
@@ -23,6 +23,7 @@ export function CardServiceSmall({
   disabled,
   truncate,
   outline,
+  checked,
   ...rest
 }: CardServiceSmallProps) {
   return (
@@ -37,6 +38,7 @@ export function CardServiceSmall({
         onClick={onClick}
         disabled={disabled}
         outline={outline}
+        checked={checked}
         size='s'
       />
 
