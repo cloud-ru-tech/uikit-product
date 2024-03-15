@@ -29,6 +29,7 @@ export function Select({
   onClose,
 }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [enableOutsideClick, setEnableOutsideClick] = useState(true);
   const navigateInsideRef = useRef<HTMLDivElement>(null);
   const navigateOutsideRef = useRef<HTMLDivElement>(null);
 
@@ -37,8 +38,15 @@ export function Select({
   const platforms = useMemo(() => platformsProp?.filter(platform => !platform.hidden), [platformsProp]);
 
   useEffect(() => {
-    const openListener = () => setIsOpen(true);
-    const closeListener = () => setIsOpen(false);
+    const openListener = () => {
+      setIsOpen(true);
+      setEnableOutsideClick(false);
+    };
+
+    const closeListener = () => {
+      setIsOpen(false);
+      setEnableOutsideClick(true);
+    };
 
     window.addEventListener('header__open-project-menu', openListener);
     window.addEventListener('header__close-project-menu', closeListener);
@@ -116,6 +124,7 @@ export function Select({
     <Dropdown
       open={isOpen}
       onOpenChange={toggleOpen}
+      outsideClick={enableOutsideClick}
       content={
         <div className={styles.selectGroup}>
           <SelectMenu
