@@ -73,6 +73,7 @@ export function ProductHeaderMobile({
     projects,
     workspaces,
     onClose: onSelectClose,
+    projectsEmptyState,
   } = select ?? {};
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -364,6 +365,7 @@ export function ProductHeaderMobile({
                     selectedPlatform={selectedPlatform ?? ({} as Platform)}
                     onPlatformChange={onPlatformChange}
                     workspaces={workspacesOptions}
+                    projectsEmptyState={projectsEmptyState}
                     mobile
                   />
                 </div>
