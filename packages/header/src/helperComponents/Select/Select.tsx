@@ -93,14 +93,13 @@ export function Select({
       return {
         ...projectAddButtonProp,
         onClick() {
-          closeDropdown();
           projectAddButtonProp.onClick();
         },
       };
     }
 
     return undefined;
-  }, [closeDropdown, projectAddButtonProp]);
+  }, [projectAddButtonProp]);
 
   const workspacesOptions = useMemo(
     () =>
