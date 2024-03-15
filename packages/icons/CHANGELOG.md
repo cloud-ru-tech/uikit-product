@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.1 (2024-03-15)
+
+
+### Bug Fixes
+
+* **[FF-4373](https://jira.sbercloud.tech/browse/FF-4373):** dislike icon naming ([d61961c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d61961cb0a959e8b25615c44fd228ffe58a96c10))
+
+
+
+
+
 # 6.0.0 (2024-03-12)
 
 
