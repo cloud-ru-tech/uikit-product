@@ -32,7 +32,7 @@ a.logo {
   cursor: pointer;
   border-radius: $dimension-050m;
   // necessary to fix color change to MLSpace theme
-  color: #00D97B; /* stylelint-disable-line color-no-hex */
+  color: #389F74; /* stylelint-disable-line color-no-hex */
 
   &:focus-visible {
     @include outline-var($container-focused-s);

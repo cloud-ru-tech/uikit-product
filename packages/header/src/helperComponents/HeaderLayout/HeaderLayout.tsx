@@ -1,9 +1,9 @@
 import { MouseEventHandler, ReactNode } from 'react';
 
+import { MainMenuSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 
-import { MainMenuIcon } from '../icons';
 import styles from './styles.modules.scss';
 
 export type HeaderLayoutProps = WithSupportProps<{
@@ -41,7 +41,7 @@ export function HeaderLayout({
           {showMainMenu && (
             <ButtonFunction
               size='m'
-              icon={<MainMenuIcon />}
+              icon={<MainMenuSVG />}
               onClick={onMainMenuClick}
               data-test-id='header__drawer-menu-button'
             />
