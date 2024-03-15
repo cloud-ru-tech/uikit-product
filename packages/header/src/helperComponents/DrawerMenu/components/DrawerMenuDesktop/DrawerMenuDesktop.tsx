@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { MouseEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { MouseEvent, useCallback, useMemo, useRef, useState } from 'react';
 
 import { CardServiceSmall, CardSuggest } from '@sbercloud/uikit-product-card-predefined';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
@@ -26,7 +26,7 @@ import styles from './styles.modules.scss';
  * Если в правой части контент превышает высоту окна на эту долю,
  * будут отображаться скролящие ссылки слева.
  */
-const CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT = 0.33;
+// const CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT = 0.33;
 
 export function DrawerMenuDesktop({
   open,
@@ -44,7 +44,10 @@ export function DrawerMenuDesktop({
   const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
   const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
-  const [showScrollLinks, setShowScrollLinks] = useState(false);
+  const [
+    showScrollLinks,
+    // setShowScrollLinks
+  ] = useState(true);
 
   const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
 
@@ -61,18 +64,18 @@ export function DrawerMenuDesktop({
   const rightContainerRef = useRef<HTMLDivElement>(null);
   const rightContentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!open || !showRightSection || !rightContainerRef.current || !rightContentRef.current) {
-      return;
-    }
+  // useEffect(() => {
+  //   if (!open || !showRightSection || !rightContainerRef.current || !rightContentRef.current) {
+  //     return;
+  //   }
 
-    const containerHeight = rightContainerRef.current.offsetHeight;
-    const contentHeight = rightContentRef.current.offsetHeight;
+  //   const containerHeight = rightContainerRef.current.offsetHeight;
+  //   const contentHeight = rightContentRef.current.offsetHeight;
 
-    if (contentHeight - containerHeight > contentHeight * CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT) {
-      setShowScrollLinks(true);
-    }
-  }, [showRightSection, open]);
+  //   if (contentHeight - containerHeight > contentHeight * CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT) {
+  //     setShowScrollLinks(true);
+  //   }
+  // }, [showRightSection, open]);
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -200,7 +203,7 @@ export function DrawerMenuDesktop({
 
           {showRightSection && (
             <div className={styles.right} ref={rightContainerRef} data-test-id='header__drawer-menu__right'>
-              <Scroll ref={scrollRef}>
+              <Scroll ref={scrollRef} barHideStrategy='never'>
                 <div className={styles.rightContent} ref={rightContentRef}>
                   {visiblePinnedCards && (
                     <div className={cn(styles.pinnedCards, styles.rightContentItem)}>
