@@ -80,13 +80,13 @@ export function Select({
   const onOrganizationAdd = useMemo(() => {
     if (onOrganizationAddProp) {
       return () => {
-        closeDropdown();
+        // closeDropdown();
         onOrganizationAddProp();
       };
     }
 
     return undefined;
-  }, [closeDropdown, onOrganizationAddProp]);
+  }, [onOrganizationAddProp]);
 
   const projectAddButton = useMemo(() => {
     if (projectAddButtonProp) {
