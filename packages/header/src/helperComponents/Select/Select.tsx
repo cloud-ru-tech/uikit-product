@@ -25,6 +25,7 @@ export function Select({
   platformsLoading,
 
   workspaces,
+  onOpenChange,
 
   onClose,
 }: SelectProps) {
@@ -122,7 +123,10 @@ export function Select({
   return (
     <Dropdown
       open={isOpen}
-      onOpenChange={toggleOpen}
+      onOpenChange={open => {
+        toggleOpen(open);
+        onOpenChange?.(open);
+      }}
       outsideClick={enableOutsideClick}
       content={
         <div className={styles.selectGroup}>

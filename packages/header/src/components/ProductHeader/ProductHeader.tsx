@@ -31,6 +31,7 @@ export type SettingOption = {
 export type ProductHeaderProps = WithSupportProps<
   {
     className?: string;
+    onSelectOpenChange?(open: boolean): void;
     drawerMenu: Pick<
       DrawerMenuProps,
       | 'links'
@@ -92,6 +93,7 @@ export function ProductHeader({
   },
 
   select,
+  onSelectOpenChange,
   organizations,
   selectedOrganization,
   onOrganizationChange,
@@ -161,6 +163,7 @@ export function ProductHeader({
             {select && (
               <Select
                 {...select}
+                onOpenChange={onSelectOpenChange}
                 organizations={organizations}
                 selectedOrganization={selectedOrganization}
                 onOrganizationChange={onOrganizationChange}

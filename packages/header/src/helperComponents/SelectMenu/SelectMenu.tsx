@@ -19,6 +19,8 @@ export type SelectProps = {
   onOrganizationChange?(value: Organization, source: 'user-menu' | 'select'): void;
   onOrganizationAdd?(): void;
 
+  onOpenChange?(open: boolean): void;
+
   projects?: ItemsGroup<Project>[];
   projectsLoading?: boolean;
   selectedProject?: Project;
