@@ -138,6 +138,7 @@ export function GroupSection({
           marker
           size='m'
           selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
+          dataFiltered={searchValue.length > 0}
           noDataState={{
             description: textProvider(languageCode, Texts.NoData),
             ...noDataState,
