@@ -116,7 +116,13 @@ export function DrawerMenuMobile({
 
             {filteredLinks &&
               filteredLinks.map((group, index) => (
-                <GroupCard key={group.id} id={group.id} title={group.label} ref={el => (cardsRef.current[index] = el)}>
+                <GroupCard
+                  key={group.id}
+                  id={group.id}
+                  title={group.label}
+                  ref={el => (cardsRef.current[index] = el)}
+                  mobile
+                >
                   {group.items.map(item => (
                     <CardServiceSmall
                       checked={item.id === selectedLink}
