@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2024-03-19)
+
+
+### Bug Fixes
+
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add checked property for CardServiceSmall ([fbd85fd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fbd85fd4618928f5308f5775980fd7e298a8e753))
+
+
+
+
+
 # 0.4.0 (2024-03-07)
 
 

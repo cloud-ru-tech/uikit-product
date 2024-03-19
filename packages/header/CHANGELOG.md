@@ -3,6 +3,45 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.7.0 (2024-03-19)
+
+
+### Bug Fixes
+
+* **[FF-4401](https://jira.sbercloud.tech/browse/FF-4401):** fix card width ([4c2afe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4c2afe045f1919f1c886b668e8ec1485870724ca))
+* **[FF-4485](https://jira.sbercloud.tech/browse/FF-4485):** back close drawer ([2cd51ce](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2cd51ce479cde4ed36d134061834fa83f119ce20))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add empty state for workspaces ([ee37f6d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ee37f6d4761c23945dfeed0c53abcf26099d6fa0))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add empty state to mobile ([bf290e8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bf290e8b3dee0afaa6bb72f42d46eda1380fd4dd))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** fix breadcrumb mobile ([a28ca96](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a28ca96097977e63c362c23509ad7b2d4f85fcb3))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** fix icon and logo color ([1791490](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1791490b91dd8a022cc453f343a86fc42a90c873))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** hide add organization button on mobile if prop not passed ([49d19f2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/49d19f254ce9ea19d3672089829bb75086f3af04))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** hide links on 33% ([a65aec9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a65aec9d2f89d7103929ec58bddb3fc47d968867))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** highlight selected card in links in drawer ([056cb1c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/056cb1c8db626200c8c66c8f82fe229bc12473f4))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** notifications onCardsRead call, icons ([d0fc233](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0fc2330627c8af3a4698512910ffd45374b7af5))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** square avatar for organizations ([52801a6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/52801a698d8109e69fcd475fc9f7185f06f8f27b))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** texts for no data screens in selectors ([e61d55c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e61d55cca6447bf0a704a06dd74e31c408da81f6))
+* **[FF-4550](https://jira.sbercloud.tech/browse/FF-4550):** fix search message ([d7cb713](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d7cb713407858a20c9bafe9470a13e7a692f8d80))
+* **FF-0000:** card grid display ([e578d91](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e578d918386628c4adb97b2b1abe62f4c65effe6))
+
+
+### Features
+
+* **[FF-4400](https://jira.sbercloud.tech/browse/FF-4400):** always show bar; remove 30% rule ([7a502b1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7a502b10841a4cf65ddd348d5a762898fdb68405))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add external link icon to notifications, add source arg to onOrganizationChange, add close event listeners ([00fb660](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/00fb660d9fae96c826c915673e90311bc4ad3127))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add hidden prop to platforms, bold username in menu, add onClose to drawerMenu ([a23d9d8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a23d9d81982c329388411cffbc08c1110d2a8510))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add loading props and skeleton in selector ([0ef36e5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0ef36e568e2f4ce3d1654a5e3b75b61a2578d58c))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** add on select open handler ([1747841](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/17478410040bf4266879c15c82695b1104e980f9))
+* **[FF-4490](https://jira.sbercloud.tech/browse/FF-4490):** platform is optional, add showMainMenu prop ([dc8dd34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc8dd34d17fb0013a26c5fd5e09c3c5774f25f0e))
+* **[FF-4507](https://jira.sbercloud.tech/browse/FF-4507):** add prop to empty project list state ([3c8e7e4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3c8e7e46b559671042d96e68dec2a07bb29af109))
+* **[FF-4507](https://jira.sbercloud.tech/browse/FF-4507):** add selector trigger skeleton ([dc061cd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dc061cdef6baecb51dedcee5030e391bdde38e62))
+* **[FF-4525](https://jira.sbercloud.tech/browse/FF-4525):** remove drawer close ([74b477e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74b477ef914846b30facbcbb62b4dcd1730b49db))
+* **[FF-4525](https://jira.sbercloud.tech/browse/FF-4525):** remove drawer close ([04d7b6a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/04d7b6a30095564ce9fa6b4b81a220194384cc90))
+* **[ONB-1994](https://jira.sbercloud.tech/browse/ONB-1994):** open project menu without outsideClick ([d0a0089](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0a008923af103b706ea6a8c725e32d4d7f69ba5))
+
+
+
+
+
 ## 2.6.3 (2024-03-15)
 
 ### Only dependencies have been changed

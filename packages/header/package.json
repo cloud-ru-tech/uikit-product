@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-header",
   "title": "Header",
-  "version": "2.6.3",
+  "version": "2.7.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-card-predefined": "0.4.0",
+    "@sbercloud/uikit-product-card-predefined": "0.4.1",
     "@sbercloud/uikit-product-icons": "6.0.1",
     "@sbercloud/uikit-product-utils": "3.3.1",
     "@snack-uikit/avatar": "0.6.0",
