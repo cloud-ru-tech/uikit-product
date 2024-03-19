@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.7.1 (2024-03-19)
+
+
+### Bug Fixes
+
+* **[FF-4559](https://jira.sbercloud.tech/browse/FF-4559):** truncate long group label ([1dc06fe](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1dc06fe0e7b7bf7cafbdeec0f4088edf812a4814))
+
+
+
+
+
 # 2.7.0 (2024-03-19)
 
 
