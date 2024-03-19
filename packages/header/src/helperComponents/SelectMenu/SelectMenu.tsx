@@ -44,6 +44,7 @@ export type SelectProps = {
     loading?: boolean;
     onWorkspaceChange(value: Workspace): void;
     onWorkspaceAdd(): void;
+    emptyState?: ListProps['noDataState'];
   };
 
   onClose?(): void;
@@ -155,10 +156,11 @@ export function SelectMenu({
           <GroupSection
             className={className}
             title={textProvider(languageCode, Texts.Workspaces)}
-            groups={[{ id: '1', items: workspaces.list }]}
+            groups={workspaces.list.length > 0 ? [{ id: '1', items: workspaces.list }] : []}
             onItemChange={workspaces.onWorkspaceChange}
             selectedItem={workspaces.selectedWorkspace}
             loading={workspaces.loading}
+            noDataState={workspaces.emptyState}
             addItem={{
               label: textProvider(languageCode, Texts.AddWorkspace),
               handler: workspaces.onWorkspaceAdd,
