@@ -203,8 +203,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
                     ? {
                         count: 1,
                         showPopover: showOrganizationInvitePopover,
-                        onAcceptButtonClick: closeInvitesPopover,
-                        onCloseButtonClick: closeInvitesPopover,
+                        onOpenButtonClick: closeInvitesPopover,
                       }
                     : undefined,
                 }

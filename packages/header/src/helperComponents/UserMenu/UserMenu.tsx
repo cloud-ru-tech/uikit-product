@@ -28,7 +28,7 @@ export type UserMenuProps = {
   invites?: {
     count?: number;
     showPopover?: boolean;
-  } & Pick<InvitePopoverProps, 'onAcceptButtonClick' | 'onCloseButtonClick'>;
+  } & Pick<InvitePopoverProps, 'onOpenButtonClick'>;
 } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'>;
 
 export function UserMenu({
@@ -206,12 +206,7 @@ export function UserMenu({
         </div>
       </Droplist>
 
-      {invites?.showPopover && (
-        <InvitePopover
-          onAcceptButtonClick={invites.onAcceptButtonClick}
-          onCloseButtonClick={invites.onCloseButtonClick}
-        />
-      )}
+      {invites?.showPopover && <InvitePopover onOpenButtonClick={invites?.onOpenButtonClick} />}
     </div>
   );
 }

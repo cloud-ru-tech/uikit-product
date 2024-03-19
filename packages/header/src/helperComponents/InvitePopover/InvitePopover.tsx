@@ -9,11 +9,10 @@ import { textProvider, Texts } from '../../helpers';
 import styles from './styles.module.scss';
 
 export type InvitePopoverProps = {
-  onCloseButtonClick(): void;
-  onAcceptButtonClick(): void;
+  onOpenButtonClick(): void;
 };
 
-export function InvitePopover({ onCloseButtonClick, onAcceptButtonClick }: InvitePopoverProps) {
+export function InvitePopover({ onOpenButtonClick }: InvitePopoverProps) {
   const { languageCode } = useLanguage();
 
   const [isOpen, setOpen] = useState(true);
@@ -22,14 +21,13 @@ export function InvitePopover({ onCloseButtonClick, onAcceptButtonClick }: Invit
     e.stopPropagation();
 
     setOpen(false);
-    onCloseButtonClick();
   };
 
   const handleAcceptClick: MouseEventHandler<HTMLButtonElement> = e => {
     e.stopPropagation();
 
     setOpen(false);
-    onAcceptButtonClick();
+    onOpenButtonClick();
   };
 
   return (

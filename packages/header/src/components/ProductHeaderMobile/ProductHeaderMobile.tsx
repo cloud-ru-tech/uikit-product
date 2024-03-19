@@ -310,12 +310,7 @@ export function ProductHeaderMobile({
                   />
                 )}
 
-                {userMenu?.invites?.showPopover && (
-                  <InvitePopover
-                    onAcceptButtonClick={userMenu.invites.onAcceptButtonClick}
-                    onCloseButtonClick={userMenu.invites.onCloseButtonClick}
-                  />
-                )}
+                {userMenu?.invites?.showPopover && <InvitePopover onOpenButtonClick={() => setIsUserMenuOpen(true)} />}
               </div>
             )}
           </>
