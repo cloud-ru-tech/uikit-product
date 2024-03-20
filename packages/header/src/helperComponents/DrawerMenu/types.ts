@@ -5,6 +5,7 @@ export type SelectProductsProps = {
   allProducts: ItemsGroup<ProductOption>[];
   onProductChange(product: ProductOption): void;
   selectedProduct: ProductOption;
+  closeDropList?(): void;
 };
 
 export type DrawerMenuProps = {

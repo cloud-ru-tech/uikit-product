@@ -8,6 +8,7 @@ export function getSelectProductListProps({
   allProducts,
   onProductChange,
   selectedProduct,
+  closeDropList,
 }: SelectProductsProps): ListProps {
   return {
     selection: {
@@ -25,7 +26,10 @@ export function getSelectProductListProps({
         beforeContent: item.logo ?? <Avatar size='xs' name={item.name} showTwoSymbols shape='square' />,
         id: item.id,
 
-        onClick: () => onProductChange(item),
+        onClick: () => {
+          onProductChange(item);
+          closeDropList?.();
+        },
         'data-test-id': `header__select-group-item-${item.id}`,
       })),
     })),

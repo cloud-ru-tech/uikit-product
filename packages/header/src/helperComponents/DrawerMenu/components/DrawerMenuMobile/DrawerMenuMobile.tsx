@@ -90,7 +90,11 @@ export function DrawerMenuMobile({
             <DrawerCustom.Header title={textProvider(languageCode, Texts.Platforms)} className={styles.nestedHeader} />
 
             <List
-              {...getSelectProductListProps({ ...rest, allProducts: visibleProducts, onProductChange })}
+              {...getSelectProductListProps({
+                ...rest,
+                allProducts: visibleProducts,
+                onProductChange,
+              })}
               className={styles.nestedList}
               size='m'
             />

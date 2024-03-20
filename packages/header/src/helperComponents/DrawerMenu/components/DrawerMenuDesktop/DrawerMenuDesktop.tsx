@@ -123,6 +123,7 @@ export function DrawerMenuDesktop({
                       allProducts: visibleProducts,
                       onProductChange,
                       selectedProduct,
+                      closeDropList: () => setIsOpen(false),
                     })}
                     open={isOpen}
                     onOpenChange={setIsOpen}
