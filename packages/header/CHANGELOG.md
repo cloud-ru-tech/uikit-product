@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.7.2 (2024-03-20)
+
+
+### Bug Fixes
+
+* **[FF-4582](https://jira.sbercloud.tech/browse/FF-4582):** fix selector color ([8365e00](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8365e0098ff0c696b6be143edd5a17ade9719022))
+
+
+
+
+
 ## 2.7.1 (2024-03-19)
 
 
