@@ -207,7 +207,7 @@ export function SelectMenuTrigger({
   return (
     <WithSkeleton skeleton={<SelectMenuTriggerSkeleton />} loading={loading}>
       <div className={styles.contentLayout}>
-        <Avatar size='xs' name={name} showTwoSymbols shape='square' />
+        <Avatar size='xs' name={name} showTwoSymbols shape='square' appearance='neutral' />
 
         <span className={styles.project} data-test-id='header__select-project-value'>
           <TruncateString text={name} hideTooltip />
