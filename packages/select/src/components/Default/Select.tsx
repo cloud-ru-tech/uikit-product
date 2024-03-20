@@ -17,6 +17,7 @@ import RCSelect, {
   GroupType,
   OptionTypeBase as RCOptionTypeBase,
   SelectComponentsConfig,
+  StylesConfig,
 } from 'react-select';
 
 import { InputDecoratorPrivate, InputDecoratorPrivateProps } from '@sbercloud/uikit-product-input-decorator-private';
@@ -59,6 +60,7 @@ export type SelectProps = {
   searchableProps?: string[];
   footer?: ReactNode;
   collapsedGroup?: boolean;
+  selectStyles?: StylesConfig<OptionTypeBase, false>;
 } & Omit<RCProps, 'components'> &
   Pick<InputDecoratorPrivateProps, 'label' | 'labelTooltip' | 'optional' | 'hint'>;
 
@@ -92,6 +94,7 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
     labelTooltip,
     optional,
     error,
+    selectStyles,
   } = props;
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -221,6 +224,16 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
     [formatOptionLabel],
   );
 
+  const appliedSelectStyles = useMemo(() => {
+    if (!selectStyles) {
+      return customStyles.styles;
+    }
+    return {
+      ...customStyles.styles,
+      ...selectStyles,
+    };
+  }, [customStyles, selectStyles]);
+
   return (
     <InputDecoratorPrivate
       className={className}
@@ -248,7 +261,7 @@ export const Select = forwardRef<SelectRef, WithSupportProps<SelectProps>>((prop
           formatGroupLabel={formatGroupLabel}
           formatOptionLabel={formatOptionLabelInner}
           components={componentsState}
-          styles={customStyles.styles}
+          styles={appliedSelectStyles}
           theme={customStyles.theme}
           isSearchable={false}
           isLoading={isLoading}
