@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.35.0 (2024-03-21)
+
+
+### Features
+
+* **[DPS-10241](https://jira.sbercloud.tech/browse/DPS-10241):** pass style prop to customize default ([e1df713](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e1df7132bb342691769f7438296940686e39f4fe))
+
+
+
+
+
 ## 0.34.8 (2024-03-15)
 
 ### Only dependencies have been changed
