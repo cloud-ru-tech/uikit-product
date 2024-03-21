@@ -17,7 +17,18 @@
 }
 
 .fixedColumnsWidth {
+  min-width: 220px;
   width: 220px;
+}
+
+.projectColumnsWidth {
+  min-width: 220px;
+  max-width: 424px;
+}
+
+.workspacesColumnWidth {
+  width: fit-content;
+  min-width: 220px;
 }
 
 .avatarSkeleton {

@@ -1,6 +1,7 @@
 import { KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { Dropdown } from '@snack-uikit/dropdown';
+import { Scroll } from '@snack-uikit/scroll';
 
 import { Workspace } from '../../types';
 import { SelectMenu, SelectMenuTrigger, SelectProps } from '../SelectMenu';
@@ -130,25 +131,29 @@ export function Select({
       outsideClick={enableOutsideClick}
       content={
         <div className={styles.selectGroup}>
-          <SelectMenu
-            organizations={organizations}
-            selectedOrganization={selectedOrganization}
-            onOrganizationChange={onOrganizationChange}
-            onOrganizationAdd={onOrganizationAdd}
-            projects={projects}
-            selectedProject={selectedProject}
-            projectsLoading={projectsLoading}
-            onProjectChange={onProjectChange}
-            projectAddButton={projectAddButton}
-            projectsEmptyState={projectsEmptyState}
-            platforms={platforms}
-            selectedPlatform={selectedPlatform}
-            platformsLoading={platformsLoading}
-            onPlatformChange={onPlatformChange}
-            closeDropdown={closeDropdown}
-            workspaces={workspacesOptions}
-            mobile={false}
-          />
+          <Scroll barHideStrategy='never'>
+            <div className={styles.selectGroupScroll}>
+              <SelectMenu
+                organizations={organizations}
+                selectedOrganization={selectedOrganization}
+                onOrganizationChange={onOrganizationChange}
+                onOrganizationAdd={onOrganizationAdd}
+                projects={projects}
+                selectedProject={selectedProject}
+                projectsLoading={projectsLoading}
+                onProjectChange={onProjectChange}
+                projectAddButton={projectAddButton}
+                projectsEmptyState={projectsEmptyState}
+                platforms={platforms}
+                selectedPlatform={selectedPlatform}
+                platformsLoading={platformsLoading}
+                onPlatformChange={onPlatformChange}
+                closeDropdown={closeDropdown}
+                workspaces={workspacesOptions}
+                mobile={false}
+              />
+            </div>
+          </Scroll>
         </div>
       }
       placement='bottom-start'

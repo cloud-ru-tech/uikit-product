@@ -56,7 +56,7 @@ const WORKSPACES = {
     { id: '1', name: 'Workspace 1' },
     { id: '2', name: 'Workspace 2' },
     { id: '3', name: 'Workspace 3' },
-    { id: '4', name: 'Workspace 4' },
+    { id: '4', name: 'W'.repeat(16) },
   ],
   onWorkspaceChange: () => {},
   onWorkspaceAdd: () => {},
@@ -250,15 +250,15 @@ export const ARGS: StoryProps = {
         heading: 'Folder 2',
         items: [
           { id: '2_1', name: 'Проект 3', actions: PROJECT_ACTIONS },
-          { id: '2_2', name: 'Проект 4 с очень длинным названием', actions: PROJECT_ACTIONS, onEdit: () => {} },
+          { id: '2_2', name: 'W'.repeat(26), actions: PROJECT_ACTIONS, onEdit: () => {} },
         ],
       },
       {
         id: '3',
-        heading: 'Folder 3',
+        heading: 'Long Long Long Long Long Long Long Long Long Long name of the Folder',
         items: [
           { id: '3_1', name: 'Проект 5', actions: PROJECT_ACTIONS },
-          { id: '3_2', name: 'Проект 6 с очень длинным названием', actions: PROJECT_ACTIONS },
+          { id: '3_2', name: 'Проект 6 с очень очень очень очень длинным названием', actions: PROJECT_ACTIONS },
           { id: '3_3', name: 'Проект 7 с очень длинным названием', actions: PROJECT_ACTIONS },
         ],
       },

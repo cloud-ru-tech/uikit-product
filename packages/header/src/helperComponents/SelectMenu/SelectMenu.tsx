@@ -87,15 +87,18 @@ export function SelectMenu({
   mobile,
 }: SelectMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const className = cn({ [styles.fixedColumnsWidth]: !mobile });
+  const fixedColumnWidth = cn({ [styles.fixedColumnsWidth]: !mobile });
+  const projectColumnWidth = cn({ [styles.projectColumnsWidth]: !mobile });
+  const workspacesColumnWidth = cn({ [styles.workspacesColumnWidth]: !mobile });
 
   return (
     <>
       {organizations && (
         <GroupSection
-          className={className}
+          className={fixedColumnWidth}
           title={textProvider(languageCode, Texts.Organization)}
           groups={[{ id: '1', items: organizations }]}
+          truncateVariant='middle'
           onItemChange={val => onOrganizationChange?.(val, 'select')}
           selectedItem={selectedOrganization}
           addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
@@ -109,10 +112,11 @@ export function SelectMenu({
           {divider}
 
           <GroupSection
-            className={className}
+            className={projectColumnWidth}
             title={textProvider(languageCode, Texts.Project)}
             searchable
             groups={projects}
+            truncateVariant='middle'
             onItemChange={onProjectChange}
             selectedItem={selectedProject}
             noDataState={projectsEmptyState}
@@ -137,7 +141,7 @@ export function SelectMenu({
           {divider}
 
           <GroupSection
-            className={className}
+            className={fixedColumnWidth}
             title={textProvider(languageCode, Texts.Platforms)}
             last={!workspaces}
             groups={[{ id: '1', items: platforms }]}
@@ -154,7 +158,7 @@ export function SelectMenu({
           {divider}
 
           <GroupSection
-            className={className}
+            className={workspacesColumnWidth}
             title={textProvider(languageCode, Texts.Workspaces)}
             groups={workspaces.list.length > 0 ? [{ id: '1', items: workspaces.list }] : []}
             onItemChange={workspaces.onWorkspaceChange}
@@ -207,7 +211,13 @@ export function SelectMenuTrigger({
   return (
     <WithSkeleton skeleton={<SelectMenuTriggerSkeleton />} loading={loading}>
       <div className={styles.contentLayout}>
-        <Avatar size='xs' name={name} showTwoSymbols shape='square' appearance='neutral' />
+        <Avatar
+          size='xs'
+          name={name}
+          showTwoSymbols
+          shape='square'
+          appearance={selectedWorkspace ? 'blue' : 'neutral'}
+        />
 
         <span className={styles.project} data-test-id='header__select-project-value'>
           <TruncateString text={name} hideTooltip />

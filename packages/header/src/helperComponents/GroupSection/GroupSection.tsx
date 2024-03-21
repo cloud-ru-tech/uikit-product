@@ -5,7 +5,7 @@ import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/u
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { SearchSVG } from '@snack-uikit/icons';
-import { List, ListProps } from '@snack-uikit/list';
+import { BaseItemProps, List, ListProps } from '@snack-uikit/list';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { SearchPrivate } from '@snack-uikit/search-private';
 
@@ -24,6 +24,7 @@ export type GroupSectionProps = WithSupportProps<{
   loading?: boolean;
 
   groups: ItemsGroup<Item>[];
+  truncateVariant?: NonNullable<BaseItemProps['content']['truncate']>['variant'];
   noDataState?: ListProps['noDataState'];
   selectedItem?: Item;
   onItemChange?(item: Item): void;
@@ -58,6 +59,7 @@ export function GroupSection({
   closeDropdown,
   avatarAppearance,
   noDataState,
+  truncateVariant,
   ...rest
 }: GroupSectionProps) {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -148,6 +150,7 @@ export function GroupSection({
           }}
           items={filteredGroups.map(group => ({
             label: filteredGroups.length > 1 ? group.heading : undefined,
+            truncate: { variant: truncateVariant },
             mode: 'secondary',
             items: group.items.map(item => {
               const dataTestId = `header__select-group-item-${item.id}`;
@@ -155,6 +158,7 @@ export function GroupSection({
               return {
                 content: {
                   option: item.name,
+                  truncate: { variant: truncateVariant },
                 },
                 beforeContent: item.logo ?? (
                   <Avatar appearance={avatarAppearance} size='xs' name={item.name} showTwoSymbols shape='square' />
