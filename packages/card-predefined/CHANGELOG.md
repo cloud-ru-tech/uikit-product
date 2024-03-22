@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-03-22)
+
+
+### Features
+
+* **[FF-4578](https://jira.sbercloud.tech/browse/FF-4578):** add size prop ([1373c4d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1373c4df3a77979fd33b423597fc6174d3da2c83))
+
+
+
+
+
 ## 0.4.1 (2024-03-19)
 
 

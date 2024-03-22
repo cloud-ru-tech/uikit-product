@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.8.0 (2024-03-22)
+
+
+### Features
+
+* **[FF-4578](https://jira.sbercloud.tech/browse/FF-4578):** add pinned cards to mobile header ([de32424](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de324249c474a9f0b4f6045acc17df020329653d))
+
+
+
+
+
 ## 2.7.2 (2024-03-20)
 
 
