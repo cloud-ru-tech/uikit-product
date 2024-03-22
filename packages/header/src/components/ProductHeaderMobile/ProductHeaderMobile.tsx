@@ -39,16 +39,7 @@ export function ProductHeaderMobile({
   // className,
   homePageUrl,
   onLogoClick,
-  drawerMenu: {
-    links,
-    allProducts,
-    selectedProduct,
-    selectedLink,
-    onLinkChange,
-    onProductChange: onProductChangeProp,
-    footerLinks,
-    onClose: onDrawerClose,
-  },
+  drawerMenu: { onProductChange: onProductChangeProp, onClose: onDrawerClose, ...drawerMenuProps },
 
   select,
   organizations,
@@ -91,10 +82,12 @@ export function ProductHeaderMobile({
     setIsMainMenuOpen(false);
     onDrawerClose?.();
   }, [onDrawerClose]);
+
   const closeProjectMenu = useCallback(() => {
     setIsProjectMenuOpen(false);
     onSelectClose?.();
   }, [onSelectClose]);
+
   const closeUserMenu = useCallback(() => {
     setIsUserMenuOpen(false);
     closeProjectMenu();
@@ -387,13 +380,8 @@ export function ProductHeaderMobile({
         <DrawerMenuMobile
           open={isMainMenuOpen}
           onClose={closeMainMenu}
-          links={links}
-          selectedLink={selectedLink}
-          onLinkChange={onLinkChange}
-          allProducts={allProducts}
-          selectedProduct={selectedProduct}
-          footerLinks={footerLinks}
           onProductChange={onProductChange}
+          {...drawerMenuProps}
         />
       )}
 
@@ -404,7 +392,6 @@ export function ProductHeaderMobile({
             notifications.onOpenChange?.(false);
             setIsNotificationsOpen(false);
           }}
-          // title='Уведомления'
           className={styles.notificationsDrawer}
           position='left'
         >

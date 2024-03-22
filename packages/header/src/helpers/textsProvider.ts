@@ -14,6 +14,7 @@ export enum Texts {
 
   // ЛК 2.0
   Menu = 'menu',
+  Navigation = 'Navigation',
   SearchByServices = 'search-by-services',
   NoData = 'no-data',
   Notifications = 'notifications',
@@ -60,6 +61,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     // ЛК 2.0
     [Texts.Menu]: 'Меню',
+    [Texts.Navigation]: 'Навигация',
     [Texts.SearchByServices]: 'Поиск по сервисам',
     [Texts.NoData]: 'Нет данных',
     [Texts.Notifications]: 'Уведомления',
@@ -105,6 +107,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     // ЛК 2.0
     [Texts.Menu]: 'Menu',
+    [Texts.Navigation]: 'Navigation',
     [Texts.SearchByServices]: 'Search by service',
     [Texts.NoData]: 'No data',
     [Texts.Notifications]: 'Notifications',

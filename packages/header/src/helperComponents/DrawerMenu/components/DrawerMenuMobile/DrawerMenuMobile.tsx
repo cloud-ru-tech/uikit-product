@@ -12,6 +12,7 @@ import { Search } from '@snack-uikit/search';
 import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
 import { ProductOption } from '../../../../types';
+import { PinnedCard } from '../../../PinnedCard';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
@@ -28,11 +29,15 @@ export function DrawerMenuMobile({
   allProducts,
   selectedLink,
   onLinkChange,
+  pinnedCards,
   ...rest
 }: DrawerMenuProps) {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
+  const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
 
   const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
   const { cardsRef } = useLinks({
@@ -40,8 +45,6 @@ export function DrawerMenuMobile({
     searchValue,
     setSearchValue,
   });
-
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const [innerOpen, setInnerOpen] = useState(false);
 
@@ -84,7 +87,7 @@ export function DrawerMenuMobile({
         push={{ distance: 8 }}
         nestedDrawer={
           <DrawerCustom open={innerOpen} onClose={toggleInnerDrawer} position='left' className={styles.nestedDrawer}>
-            <DrawerCustom.Header title={'Платформы'} className={styles.nestedHeader} />
+            <DrawerCustom.Header title={textProvider(languageCode, Texts.Platforms)} className={styles.nestedHeader} />
 
             <List
               {...getSelectProductListProps({ ...rest, allProducts: visibleProducts, onProductChange })}
@@ -94,10 +97,24 @@ export function DrawerMenuMobile({
           </DrawerCustom>
         }
       >
-        <DrawerCustom.Header title={'Навигация'} className={styles.nestedHeader} />
+        <DrawerCustom.Header title={textProvider(languageCode, Texts.Navigation)} className={styles.nestedHeader} />
 
         <Scroll>
           <div className={styles.content}>
+            {visiblePinnedCards?.map(item => (
+              <PinnedCard
+                key={item.title}
+                promoBadge={item.badge}
+                className={styles.pinnedCard}
+                onClick={wrappedClick(item)}
+                disabled={item.disabled}
+                href={item.href}
+                title={item.title}
+                description={item.description}
+                size='s'
+              />
+            ))}
+
             <ProductSelectTrigger
               selectedProduct={rest.selectedProduct}
               className={styles.trigger}

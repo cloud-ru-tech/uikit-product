@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { MouseEvent, useCallback, useMemo, useRef, useState } from 'react';
 
-import { CardServiceSmall, CardSuggest } from '@sbercloud/uikit-product-card-predefined';
+import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
@@ -16,6 +16,7 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
+import { PinnedCard } from '../../../PinnedCard';
 import { useLinks, useSearch } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
@@ -208,10 +209,10 @@ export function DrawerMenuDesktop({
                   {visiblePinnedCards && (
                     <div className={cn(styles.pinnedCards, styles.rightContentItem)}>
                       {visiblePinnedCards.map(item => (
-                        <CardSuggest
+                        <PinnedCard
+                          key={item.title}
                           promoBadge={item.badge}
                           className={styles.pinnedCard}
-                          key={item.title}
                           onClick={wrappedClick(item)}
                           disabled={item.disabled}
                           href={item.href}
