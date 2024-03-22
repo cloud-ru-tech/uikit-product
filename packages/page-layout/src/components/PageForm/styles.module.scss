@@ -23,6 +23,13 @@ $prefix-height: simple-var($sans-headline-m-line-height);
   display: flex;
   align-items: center;
   height: $prefix-height;
+  top: calc(0px - $prefix-height);
+  position: absolute;
+  left: 0;
+}
+
+.headline {
+  position: relative;
 }
 
 .footer {

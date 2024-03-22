@@ -62,7 +62,7 @@ export function PageForm({ children, title, className, prefix, footer }: PageFor
   return (
     <div className={cn(styles.container, className)}>
       <div className={styles.form}>
-        <div>
+        <div className={styles.headline}>
           <div className={styles.prefix}>{prefix}</div>
           <Headline title={title} />
         </div>
