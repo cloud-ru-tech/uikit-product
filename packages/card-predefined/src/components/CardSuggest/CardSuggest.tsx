@@ -6,6 +6,7 @@ import { TRUNCATE_DEFAULTS } from './constants';
 
 export type CardSuggestProps = WithSupportProps<
   Pick<CardProps, 'promoBadge' | 'onClick' | 'className' | 'disabled' | 'href'> & {
+    size?: 's' | 'm';
     title: string;
     description: string;
     truncate?: {
@@ -24,6 +25,7 @@ export function CardSuggest({
   disabled,
   href,
   promoBadge,
+  size,
   ...rest
 }: CardSuggestProps) {
   const truncateLines = { ...TRUNCATE_DEFAULTS, ...truncate };
@@ -34,6 +36,7 @@ export function CardSuggest({
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       {...extractSupportProps(rest)}
+      size={size}
       promoBadge={promoBadge}
       href={href}
       disabled={disabled}
