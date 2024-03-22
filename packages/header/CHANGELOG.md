@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.8.1 (2024-03-22)
+
+
+### Bug Fixes
+
+* **[FF-4582](https://jira.sbercloud.tech/browse/FF-4582):** add project and organization middle truncate, workspaces fit the content ([f85e6fc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f85e6fc1bd6f23dd7b39b1827ef31340eb22c8c8))
+* **[FF-4582](https://jira.sbercloud.tech/browse/FF-4582):** close drawer selector on platform change ([8d18fc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8d18fc6fd4d59a46fa19a04b8d106bc0c97652a1))
+
+
+
+
+
 # 2.8.0 (2024-03-22)
 
 
