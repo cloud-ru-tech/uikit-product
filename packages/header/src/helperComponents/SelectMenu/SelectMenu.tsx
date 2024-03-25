@@ -109,7 +109,7 @@ export function SelectMenu({
 
       {projects && (
         <>
-          {divider}
+          {organizations && divider}
 
           <GroupSection
             className={projectColumnWidth}
