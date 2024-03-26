@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.8.2 (2024-03-26)
+
+
+### Bug Fixes
+
+* **[FF-4630](https://jira.sbercloud.tech/browse/FF-4630):** hide project action list on scroll ([cb90eb4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cb90eb4ca366f3e1c9f2e7b3ad32edb23dbadd1f))
+
+
+
+
+
 ## 2.8.1 (2024-03-22)
 
 
