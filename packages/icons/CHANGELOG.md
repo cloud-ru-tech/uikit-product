@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.2.0 (2024-03-26)
+
+
+### Features
+
+* **[FF-4642](https://jira.sbercloud.tech/browse/FF-4642):** add secret manager product icon ([b167d90](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b167d90e258555f772ee16a8e5ef54734cc8113d))
+
+
+
+
+
 # 6.1.0 (2024-03-26)
 
 
