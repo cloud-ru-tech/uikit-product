@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.9.0 (2024-03-26)
+
+
+### Features
+
+* **[LK-3431](https://jira.sbercloud.tech/browse/LK-3431):** changed invite popover behavior ([cd488b1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd488b1056ad313de898d3d0a9388f11a6e0c349))
+
+
+
+
+
 ## 2.8.2 (2024-03-26)
 
 
