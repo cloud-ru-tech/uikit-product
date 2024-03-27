@@ -78,9 +78,25 @@ export function DrawerMenuDesktop({
   //   }
   // }, [showRightSection, open]);
 
+  const hasChoice = useMemo(
+    () => visibleProducts.reduce((acc, group) => acc + group.items.length, 0) > 1,
+    [visibleProducts],
+  );
+
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpenValue] = useState<boolean>(false);
+
+  const setIsOpen = useCallback(
+    (value: boolean) => {
+      if (value && !hasChoice) {
+        return;
+      }
+
+      setIsOpenValue(value);
+    },
+    [hasChoice],
+  );
 
   const wrappedClick = useCallback(
     ({ disabled, onClick }: { disabled?: boolean; onClick?(e?: MouseEvent<HTMLElement>): void }, cb?: () => void) =>
@@ -131,9 +147,10 @@ export function DrawerMenuDesktop({
                   >
                     <div
                       className={styles.select}
-                      tabIndex={0}
+                      tabIndex={hasChoice ? 0 : -1}
                       role={'menu'}
                       data-open={isOpen || undefined}
+                      data-active={hasChoice || undefined}
                       data-test-id='header__drawer-menu-select'
                     >
                       <div className={styles.logo}>
@@ -155,7 +172,9 @@ export function DrawerMenuDesktop({
                         </div>
                       </div>
 
-                      <div className={styles.chevron}>{isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}</div>
+                      {hasChoice && (
+                        <div className={styles.chevron}>{isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}</div>
+                      )}
                     </div>
                   </Droplist>
                 </div>

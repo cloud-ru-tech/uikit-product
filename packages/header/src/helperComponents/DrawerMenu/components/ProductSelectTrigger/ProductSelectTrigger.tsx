@@ -12,9 +12,16 @@ type ProductSelectTriggerProps = {
   isOpen?: boolean;
   onClick?(): void;
   className?: string;
+  hasChoice: boolean;
 };
 
-export function ProductSelectTrigger({ selectedProduct, isOpen, onClick, className }: ProductSelectTriggerProps) {
+export function ProductSelectTrigger({
+  selectedProduct,
+  isOpen,
+  onClick,
+  className,
+  hasChoice,
+}: ProductSelectTriggerProps) {
   return (
     <div
       className={cn(styles.select, className)}
@@ -23,6 +30,7 @@ export function ProductSelectTrigger({ selectedProduct, isOpen, onClick, classNa
       data-open={isOpen || undefined}
       data-test-id='header__drawer-menu-select'
       onClick={onClick}
+      data-active={hasChoice}
     >
       <div className={styles.logo}>
         {selectedProduct.logo ?? <Avatar size='xs' name={selectedProduct.name} showTwoSymbols shape='square' />}
@@ -38,7 +46,7 @@ export function ProductSelectTrigger({ selectedProduct, isOpen, onClick, classNa
         </div>
       </div>
 
-      <div className={styles.chevron}>{isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}</div>
+      {hasChoice && <div className={styles.chevron}>{isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}</div>}
     </div>
   );
 }

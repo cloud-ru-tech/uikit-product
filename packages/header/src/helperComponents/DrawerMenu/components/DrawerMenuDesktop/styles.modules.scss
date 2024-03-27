@@ -140,11 +140,6 @@
   width: calc(32 * $dimension-1m);
   height: $dimension-7m;
   border-radius: $dimension-050m;
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: $box-shadow-elevation-level2;
-  }
 
   &:focus-visible,
   &[data-open] {
@@ -153,6 +148,13 @@
     box-shadow: $box-shadow-elevation-level2;
     outline-color: $sys-primary-decor-activated;
     border-color: $sys-primary-accent-default;
+  }
+
+  &[data-active] {
+    cursor: pointer;
+    &:hover {
+      box-shadow: $box-shadow-elevation-level2;
+    }
   }
 }
 

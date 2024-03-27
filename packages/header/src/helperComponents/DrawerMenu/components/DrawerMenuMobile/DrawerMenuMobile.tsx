@@ -46,9 +46,20 @@ export function DrawerMenuMobile({
     setSearchValue,
   });
 
+  const hasChoice = useMemo(
+    () => visibleProducts.reduce((acc, group) => acc + group.items.length, 0) > 1,
+    [visibleProducts],
+  );
+
   const [innerOpen, setInnerOpen] = useState(false);
 
-  const toggleInnerDrawer = () => setInnerOpen(prev => !prev);
+  const toggleInnerDrawer = () =>
+    setInnerOpen(prev => {
+      if (!prev && !hasChoice) {
+        return false;
+      }
+      return !prev;
+    });
 
   const wrappedClick = useCallback(
     ({ disabled, onClick }: { disabled?: boolean; onClick?(e?: MouseEvent<HTMLElement>): void }, cb?: () => void) =>
@@ -123,6 +134,7 @@ export function DrawerMenuMobile({
               selectedProduct={rest.selectedProduct}
               className={styles.trigger}
               onClick={toggleInnerDrawer}
+              hasChoice={hasChoice}
             />
 
             {visibleLinks && (

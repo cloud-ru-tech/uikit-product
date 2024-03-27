@@ -37,6 +37,8 @@ export type StoryProps = HeaderProps & {
   showLinks: boolean;
   showFooterLinks: boolean;
   showPinnedCards: boolean;
+
+  showSinglePlatform: boolean;
 };
 
 const channel = addons.getChannel();
@@ -62,6 +64,35 @@ const WORKSPACES = {
   onWorkspaceAdd: () => {},
 };
 const DEFAULT_PRODUCT = { ...DEFAULT_PLATFORM, category: 'Облачная платформа' };
+const ALL_PRODUCTS_MULTI = [
+  {
+    id: '1',
+    heading: 'Облачные платформы',
+    items: [
+      DEFAULT_PRODUCT,
+      { id: '2', name: 'Advanced', logo: <AdvancedPlatformLogo />, category: 'Облачная платформа' },
+      { id: '3', name: 'MLSpace', logo: <MLSpacePlatformLogo />, category: 'Облачная платформа' },
+      { id: '4', name: 'Enterprise', logo: <EnterprisePlatformLogo />, category: 'Облачная платформа' },
+    ],
+  },
+  {
+    id: '2',
+    heading: 'Другие продукты',
+    items: [
+      { id: 'lkp', name: 'Личный кабинет партнера', category: 'Другой продукт' },
+      { id: 'admin', name: 'Административная панель', category: 'Другой продукт' },
+    ],
+  },
+];
+
+const ALL_PRODUCTS_SINGLE = [
+  {
+    id: '1',
+    heading: 'Облачные платформы',
+    items: [DEFAULT_PRODUCT],
+  },
+];
+
 const DEFAULT_NOTIFICATION = {
   label: ['Категория', 'Подкатегория'].join('・'),
   appearance: 'neutral' as const,
@@ -111,6 +142,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
     showFooterLinks,
     showPinnedCards,
     showPlatformsLoading,
+    showSinglePlatform,
     ...args
   }: StoryProps) {
     const [organization, setOrganization] = useState(args.selectedOrganization);
@@ -150,6 +182,8 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
           }
         : undefined;
     }
+
+    args.drawerMenu.allProducts = showSinglePlatform ? ALL_PRODUCTS_SINGLE : ALL_PRODUCTS_MULTI;
 
     const orgs = useMemo(() => {
       if (showOrganizationInvite) {
@@ -328,6 +362,7 @@ export const ARGS: StoryProps = {
   showLinks: true,
   showFooterLinks: true,
   showPinnedCards: true,
+  showSinglePlatform: false,
   drawerMenu: {
     allProducts: [
       {
@@ -486,4 +521,5 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   showFooterLinks: { name: '[Story]: show drawer -> footer links', type: 'boolean' },
   showPinnedCards: { name: '[Story]: show drawer -> pinned cards', type: 'boolean' },
   drawerMenu: { table: { disable: true } },
+  showSinglePlatform: { name: '[Story]: show drawer -> single platform', type: 'boolean' },
 };
