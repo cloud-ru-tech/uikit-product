@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.10.0 (2024-03-27)
+
+
+### Features
+
+* **[FF-4604](https://jira.sbercloud.tech/browse/FF-4604):** add product selectro single mode ([b670d06](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b670d06968dfcf0420018f658d1375d36dfa6589))
+
+
+
+
+
 ## 2.9.2 (2024-03-26)
 
 ### Only dependencies have been changed
