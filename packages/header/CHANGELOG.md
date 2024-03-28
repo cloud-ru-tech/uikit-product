@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.10.1 (2024-03-28)
+
+
+### Bug Fixes
+
+* **[LKP-660](https://jira.sbercloud.tech/browse/LKP-660):** hide divider if there are no organizations ([3619215](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3619215b5842b68eb816ea4b3c7c047fbd3a71e4))
+
+
+
+
+
 # 2.10.0 (2024-03-27)
 
 
