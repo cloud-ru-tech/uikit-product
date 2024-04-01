@@ -15,6 +15,7 @@ type RowActionButton = {
 
 export type InfoRowProps = WithSupportProps<{
   label: string;
+  labelTruncate?: number;
   labelTooltip?:
     | Pick<QuestionTooltipProps, 'trigger' | 'tip' | 'placement' | 'disableMaxWidth' | 'open' | 'onOpenChange'>
     | string;
@@ -44,6 +45,7 @@ export function InfoRow({
   labelTooltip,
   content,
   rowActions,
+  labelTruncate = 1,
   ...rest
 }: InfoRowProps) {
   return (
@@ -52,7 +54,7 @@ export function InfoRow({
 
       <div className={styles.infoRow}>
         <div className={styles.labelLayout}>
-          <TruncateString text={label} maxLines={1} />
+          <TruncateString text={label} maxLines={labelTruncate} />
 
           {labelTooltip &&
             (typeof labelTooltip === 'string' ? (
