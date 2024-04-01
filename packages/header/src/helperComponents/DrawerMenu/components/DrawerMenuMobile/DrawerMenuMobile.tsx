@@ -12,6 +12,7 @@ import { Search } from '@snack-uikit/search';
 import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
 import { ProductOption } from '../../../../types';
+import { extractAppNameFromId } from '../../../../utils';
 import { PinnedCard } from '../../../PinnedCard';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
@@ -118,7 +119,8 @@ export function DrawerMenuMobile({
           <div className={styles.content}>
             {visiblePinnedCards?.map(item => (
               <PinnedCard
-                key={item.title}
+                key={item.id}
+                id={item.id}
                 promoBadge={item.badge}
                 className={styles.pinnedCard}
                 onClick={wrappedClick(item)}
@@ -127,6 +129,7 @@ export function DrawerMenuMobile({
                 title={item.title}
                 description={item.description}
                 size='s'
+                data-test-id={`header__drawer-menu__pinned-card-${extractAppNameFromId(item.id)}`}
               />
             ))}
 
@@ -143,7 +146,7 @@ export function DrawerMenuMobile({
                 placeholder={textProvider(languageCode, Texts.SearchByServices)}
                 value={searchValue}
                 onChange={setSearchValue}
-                data-test-id='header__drawer-menu-search'
+                data-test-id='header__drawer-menu__search'
               />
             )}
 
@@ -165,13 +168,16 @@ export function DrawerMenuMobile({
                       onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
                       title={item.label}
                       emblem={{ icon: item.icon, decor: true }}
+                      data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
                     />
                   ))}
                 </GroupCard>
               ))}
 
             {filteredLinks?.length === 0 && (
-              <div className={styles.noData}>{textProvider(languageCode, Texts.NoData)}</div>
+              <div className={styles.noData} data-test-id='header__drawer-menu__no-data'>
+                {textProvider(languageCode, Texts.NoData)}
+              </div>
             )}
 
             {visibleFooterLinks && (
@@ -182,11 +188,12 @@ export function DrawerMenuMobile({
 
                 {visibleFooterLinks.map(link => (
                   <ButtonFunction
+                    {...link}
                     key={link.label}
                     iconPosition='before'
                     size='m'
-                    {...link}
                     onClick={wrappedClick(link)}
+                    data-test-id={`header__drawer-menu__footer-link-${extractAppNameFromId(link.id)}`}
                   />
                 ))}
               </div>

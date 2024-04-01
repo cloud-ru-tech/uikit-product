@@ -65,6 +65,8 @@ export function GroupSection({
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
+  const itemTestIdPrefix = rest['data-test-id'] || 'header__select-group';
+
   const {
     searchRef,
     searchValue,
@@ -153,7 +155,7 @@ export function GroupSection({
             truncate: { variant: truncateVariant },
             mode: 'secondary',
             items: group.items.map(item => {
-              const dataTestId = `header__select-group-item-${item.id}`;
+              const dataTestId = `${itemTestIdPrefix}__item-${item.id}`;
 
               return {
                 content: {

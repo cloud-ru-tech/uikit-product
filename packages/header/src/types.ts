@@ -54,6 +54,7 @@ export type ProductOption = {
 };
 
 export type PinnedCard = {
+  id: string;
   title: string;
   description: string;
   onClick(): void;
@@ -64,6 +65,7 @@ export type PinnedCard = {
 };
 
 export type FooterLink = {
+  id: string;
   icon: ReactElement;
   label: string;
   onClick(e?: MouseEvent<HTMLElement>): void;

@@ -30,7 +30,7 @@ export function getSelectProductListProps({
           onProductChange(item);
           closeDropList?.();
         },
-        'data-test-id': `header__select-group-item-${item.id}`,
+        'data-test-id': `header__select-group-platform__item-${item.id}`,
       })),
     })),
   };

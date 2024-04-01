@@ -1,7 +1,9 @@
 import { CardSuggest, CardSuggestProps } from '@sbercloud/uikit-product-card-predefined';
 
-export type PinnedCardProps = Omit<CardSuggestProps, 'data-test-id'>;
+export type PinnedCardProps = CardSuggestProps & {
+  id: string;
+};
 
 export function PinnedCard(props: PinnedCardProps) {
-  return <CardSuggest {...props} data-test-id='header__pinned-card' />;
+  return <CardSuggest {...props} />;
 }

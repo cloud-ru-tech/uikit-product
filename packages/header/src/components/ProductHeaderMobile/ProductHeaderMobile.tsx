@@ -32,6 +32,7 @@ import {
 import { filterHidden } from '../../helperComponents/DrawerMenu/utils';
 import { textProvider, Texts } from '../../helpers';
 import { Organization, Platform, ProductOption, Workspace } from '../../types';
+import { extractAppNameFromId } from '../../utils';
 import { ProductHeaderProps } from '../ProductHeader';
 import styles from './styles.module.scss';
 
@@ -48,7 +49,7 @@ export function ProductHeaderMobile({
   onOrganizationAdd: onOrganizationAddProp,
 
   pagePath,
-  settings = [],
+  settings,
   onHelpMenuClick,
   notifications,
   userMenu, // ...rest
@@ -193,14 +194,14 @@ export function ProductHeaderMobile({
         },
         afterContent: <Avatar size='s' name={user.name} showTwoSymbols indicator={indicator} />,
         inactive: true,
-        id: 'header__user-menu-button',
-        'data-test-id': 'header__user-menu-button',
+        id: 'header__user-menu__button',
+        'data-test-id': 'header__user-menu__button',
         className: styles.userMenuInfoItem,
       });
 
       if (onProfileManagementClick) {
         items.push({
-          'data-test-id': 'header__user-menu-manage-profile',
+          'data-test-id': 'header__user-menu__manage-profile',
           beforeContent: <SettingsSVG />,
           onClick: () => {
             onProfileManagementClick();
@@ -209,7 +210,7 @@ export function ProductHeaderMobile({
           content: {
             option: textProvider(languageCode, Texts.ManageProfile),
           },
-          id: 'header__user-menu-manage-profile',
+          id: 'header__user-menu__manage-profile',
         });
 
         items.push({
@@ -228,8 +229,8 @@ export function ProductHeaderMobile({
           onClick: () => {
             onThemeSwitchClick();
           },
-          id: 'header__user-menu-switch-theme',
-          'data-test-id': 'header__user-menu-switch-theme',
+          id: 'header__user-menu__switch-theme',
+          'data-test-id': 'header__user-menu__switch-theme',
         });
       }
 
@@ -243,17 +244,17 @@ export function ProductHeaderMobile({
             onLogout();
             closeUserMenu();
           },
-          id: 'header__user-menu-logout',
-          'data-test-id': 'header__user-menu-logout',
+          id: 'header__user-menu__logout',
+          'data-test-id': 'header__user-menu__logout',
         });
       }
     }
 
-    if (visibleSettings.length > 0) {
+    if (visibleSettings && visibleSettings.length > 0) {
       items.push({
         divider: true,
         items: visibleSettings.map(setting => ({
-          'data-test-id': 'header__settings-item',
+          'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
           content: {
             option: setting.label,
           },

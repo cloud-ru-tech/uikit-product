@@ -16,6 +16,7 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
+import { extractAppNameFromId } from '../../../../utils';
 import { PinnedCard } from '../../../PinnedCard';
 import { useLinks, useSearch } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
@@ -151,7 +152,7 @@ export function DrawerMenuDesktop({
                       role={'menu'}
                       data-open={isOpen || undefined}
                       data-active={hasChoice || undefined}
-                      data-test-id='header__drawer-menu-select'
+                      data-test-id='header__drawer-menu__select'
                     >
                       <div className={styles.logo}>
                         {selectedProduct.logo ?? (
@@ -162,12 +163,12 @@ export function DrawerMenuDesktop({
                       <div className={styles.selectedSection}>
                         <div
                           className={styles.selectedHeading}
-                          data-test-id='header__drawer-menu-select-product-category'
+                          data-test-id='header__drawer-menu__select__product-category'
                         >
                           {selectedProduct.category}
                         </div>
 
-                        <div className={styles.selectedOption} data-test-id='header__drawer-menu-select-product-name'>
+                        <div className={styles.selectedOption} data-test-id='header__drawer-menu__select__product-name'>
                           <TruncateString text={selectedProduct.name} hideTooltip />
                         </div>
                       </div>
@@ -192,7 +193,7 @@ export function DrawerMenuDesktop({
                           size='m'
                           textMode='default'
                           appearance='neutral'
-                          data-test-id={`header__drawer-menu-link-${link.id}`}
+                          data-test-id={`header__drawer-menu__link-anchor-${extractAppNameFromId(link.id)}`}
                         />
                       ))}
                     </div>
@@ -209,10 +210,11 @@ export function DrawerMenuDesktop({
                   {visibleFooterLinks.map(link => (
                     <ButtonFunction
                       {...link}
-                      onClick={wrappedClick(link)}
                       key={link.label}
                       iconPosition='before'
                       size='m'
+                      onClick={wrappedClick(link)}
+                      data-test-id={`header__drawer-menu__footer-link-${extractAppNameFromId(link.id)}`}
                     />
                   ))}
                 </div>
@@ -230,7 +232,8 @@ export function DrawerMenuDesktop({
                     <div className={cn(styles.pinnedCards, styles.rightContentItem)}>
                       {visiblePinnedCards.map(item => (
                         <PinnedCard
-                          key={item.title}
+                          key={item.id}
+                          id={item.id}
                           promoBadge={item.badge}
                           className={styles.pinnedCard}
                           onClick={wrappedClick(item)}
@@ -238,6 +241,7 @@ export function DrawerMenuDesktop({
                           href={item.href}
                           title={item.title}
                           description={item.description}
+                          data-test-id={`header__drawer-menu__pinned-card-${extractAppNameFromId(item.id)}`}
                         />
                       ))}
                     </div>
@@ -250,7 +254,7 @@ export function DrawerMenuDesktop({
                         placeholder={textProvider(languageCode, Texts.SearchByServices)}
                         value={searchValue}
                         onChange={setSearchValue}
-                        data-test-id='header__drawer-menu-search'
+                        data-test-id='header__drawer-menu__search'
                       />
                     </div>
                   )}
@@ -270,6 +274,7 @@ export function DrawerMenuDesktop({
                               href={item.href}
                               emblem={{ icon: item.icon, decor: true }}
                               title={item.label}
+                              data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
                             />
                           ))}
                         </GroupCard>
@@ -278,7 +283,9 @@ export function DrawerMenuDesktop({
 
                   {filteredLinks?.length === 0 && (
                     <div className={styles.rightContentItem}>
-                      <div className={styles.noData}>{textProvider(languageCode, Texts.NoData)}</div>
+                      <div className={styles.noData} data-test-id='header__drawer-menu__no-data'>
+                        {textProvider(languageCode, Texts.NoData)}
+                      </div>
                     </div>
                   )}
                 </div>

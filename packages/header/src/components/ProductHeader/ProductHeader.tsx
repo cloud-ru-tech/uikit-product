@@ -20,9 +20,11 @@ import {
   UserMenuProps,
 } from '../../helperComponents';
 import { filterHidden } from '../../helperComponents/DrawerMenu/utils';
+import { extractAppNameFromId } from '../../utils';
 import styles from './styles.module.scss';
 
 export type SettingOption = {
+  id: string;
   label: string;
   icon: ReactElement;
   onClick(): void;
@@ -100,7 +102,7 @@ export function ProductHeader({
   onOrganizationAdd,
 
   pagePath,
-  settings = [],
+  settings,
   onHelpMenuClick,
   notifications,
   userMenu,
@@ -133,7 +135,7 @@ export function ProductHeader({
 
     if (filteredSettings && filteredSettings.length) {
       return filteredSettings.map(setting => ({
-        'data-test-id': 'header__settings-item',
+        'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
         content: {
           option: setting.label,
         },
@@ -194,7 +196,7 @@ export function ProductHeader({
                 trigger='clickAndFocusVisible'
                 className={styles.settingsDroplist}
               >
-                <ButtonFunction data-test-id='header__settings-menu-button' size='m' icon={<SettingsSVG />} />
+                <ButtonFunction data-test-id='header__settings__menu-button' size='m' icon={<SettingsSVG />} />
               </Droplist>
             )}
 

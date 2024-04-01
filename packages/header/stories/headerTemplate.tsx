@@ -311,10 +311,10 @@ export const ARGS: StoryProps = {
 
   showSettings: true,
   settings: [
-    { label: 'Настройки организации', icon: <SettingsSVG />, onClick: () => {} },
-    { label: 'Пользователи', icon: <UsersSVG />, onClick: () => {} },
-    { label: 'Договоры', icon: <DetalisationSVG />, onClick: () => {} },
-    { label: 'Контроль затрат', icon: <MoneySVG />, onClick: () => {} },
+    { id: 'settings', label: 'Настройки организации', icon: <SettingsSVG />, onClick: () => {} },
+    { id: 'users', label: 'Пользователи', icon: <UsersSVG />, onClick: () => {} },
+    { id: 'agreements', label: 'Договоры', icon: <DetalisationSVG />, onClick: () => {} },
+    { id: 'billing', label: 'Контроль затрат', icon: <MoneySVG />, onClick: () => {} },
   ],
 
   showHelpMenu: true,
@@ -387,15 +387,25 @@ export const ARGS: StoryProps = {
     selectedProduct: DEFAULT_PRODUCT,
     onProductChange: () => {},
     footerLinks: [
-      { icon: <PlaceholderSVG />, label: 'Контроль затрат', onClick: () => {} },
-      { icon: <EmailSVG />, label: 'Поддержка', onClick: () => {} },
-      { icon: <SettingsSVG />, label: 'Администрирование', onClick: () => {} },
-      { icon: <PlaceholderSVG />, label: 'Пользователи', onClick: () => {} },
-      { icon: <FileSVG />, label: 'Документация', onClick: () => {} },
+      { id: 'billing', icon: <PlaceholderSVG />, label: 'Контроль затрат', onClick: () => {} },
+      { id: 'support', icon: <EmailSVG />, label: 'Поддержка', onClick: () => {} },
+      { id: 'administration', icon: <SettingsSVG />, label: 'Администрирование', onClick: () => {} },
+      { id: 'users', icon: <PlaceholderSVG />, label: 'Пользователи', onClick: () => {} },
+      { id: 'documentation', icon: <FileSVG />, label: 'Документация', onClick: () => {} },
     ],
     pinnedCards: [
-      { title: 'GPT-4 модели', description: 'Генерация текста на любые темы, 1,3 млрд параметров', onClick: () => {} },
-      { title: 'AI Marketplace', description: 'Маркетплейс образов, программ, датасетов', onClick: () => {} },
+      {
+        id: 'gpt-4',
+        title: 'GPT-4 модели',
+        description: 'Генерация текста на любые темы, 1,3 млрд параметров',
+        onClick: () => {},
+      },
+      {
+        id: 'marketplace',
+        title: 'AI Marketplace',
+        description: 'Маркетплейс образов, программ, датасетов',
+        onClick: () => {},
+      },
     ],
     selectedLink: 'vms',
     links: [

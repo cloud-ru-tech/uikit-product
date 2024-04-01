@@ -66,14 +66,14 @@ export function UserMenu({
       },
       afterContent: <Avatar size='s' name={user.name} showTwoSymbols indicator={indicator} />,
       inactive: true,
-      id: 'header__user-menu-button',
-      'data-test-id': 'header__user-menu-button',
+      id: 'header__user-menu__button',
+      'data-test-id': 'header__user-menu__button',
       className: styles.userMenuInfoItem,
     });
 
     if (onProfileManagementClick) {
       items.push({
-        'data-test-id': 'header__user-menu-manage-profile',
+        'data-test-id': 'header__user-menu__manage-profile',
         beforeContent: <SettingsSVG />,
         onClick: () => {
           onProfileManagementClick();
@@ -82,7 +82,7 @@ export function UserMenu({
         content: {
           option: textProvider(languageCode, Texts.ManageProfile),
         },
-        id: 'header__user-menu-manage-profile',
+        id: 'header__user-menu__manage-profile',
       });
 
       items.push({
@@ -93,7 +93,7 @@ export function UserMenu({
 
     organizations?.forEach(organization =>
       items.push({
-        'data-test-id': 'header__user-menu-organization',
+        'data-test-id': `header__user-menu__organization-${organization.id}`,
         beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols shape='square' />,
         afterContent: organization.new && (
           <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
@@ -119,8 +119,8 @@ export function UserMenu({
           onOrganizationAdd();
           closeUserMenu();
         },
-        id: 'header__user-menu-add-organization',
-        'data-test-id': 'header__user-menu-add-organization',
+        id: 'header__user-menu__add-organization',
+        'data-test-id': 'header__user-menu__add-organization',
       });
     }
 
@@ -139,8 +139,8 @@ export function UserMenu({
         beforeContent: <NightSVG />,
         afterContent: <Switch checked={isDarkTheme} />,
         onClick: onThemeSwitchClick,
-        id: 'header__user-menu-switch-theme',
-        'data-test-id': 'header__user-menu-switch-theme',
+        id: 'header__user-menu__switch-theme',
+        'data-test-id': 'header__user-menu__switch-theme',
       });
     }
 
@@ -154,8 +154,8 @@ export function UserMenu({
           onLogout();
           closeUserMenu();
         },
-        id: 'header__user-menu-logout',
-        'data-test-id': 'header__user-menu-logout',
+        id: 'header__user-menu__logout',
+        'data-test-id': 'header__user-menu__logout',
       });
     }
 
@@ -194,7 +194,7 @@ export function UserMenu({
           className={styles.userMenu}
           role={'button'}
           tabIndex={0}
-          data-test-id='header__user-menu-button'
+          data-test-id='header__user-menu__button'
           ref={triggerRef}
           onClick={onAvatarClick}
         >

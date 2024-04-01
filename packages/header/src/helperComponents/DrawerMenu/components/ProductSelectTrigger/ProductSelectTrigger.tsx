@@ -28,7 +28,7 @@ export function ProductSelectTrigger({
       tabIndex={0}
       role={'menu'}
       data-open={isOpen || undefined}
-      data-test-id='header__drawer-menu-select'
+      data-test-id='header__drawer-menu__select'
       onClick={onClick}
       data-active={hasChoice}
     >
@@ -37,11 +37,11 @@ export function ProductSelectTrigger({
       </div>
 
       <div className={styles.selectedSection}>
-        <div className={styles.selectedHeading} data-test-id='header__drawer-menu-select-product-category'>
+        <div className={styles.selectedHeading} data-test-id='header__drawer-menu__select-product-category'>
           {selectedProduct.category}
         </div>
 
-        <div className={styles.selectedOption} data-test-id='header__drawer-menu-select-product-name'>
+        <div className={styles.selectedOption} data-test-id='header__drawer-menu__select-product-name'>
           <TruncateString text={selectedProduct.name} hideTooltip />
         </div>
       </div>
