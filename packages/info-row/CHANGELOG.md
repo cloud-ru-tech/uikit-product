@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-04-01)
+
+
+### Features
+
+* **PDS-0000:** add label truncate prop ([d5e80ef](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d5e80ef5be19e45ca51f228abf3efc08924b3136))
+
+
+
+
+
 # 0.1.0 (2024-03-02)
 
 
