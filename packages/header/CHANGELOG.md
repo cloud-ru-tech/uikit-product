@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.11.0 (2024-04-02)
+
+
+### Features
+
+* **[FF-4645](https://jira.sbercloud.tech/browse/FF-4645):** add id props and proper test-ids ([c2d9a41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c2d9a417533924e7a944c55d587dd25233576595))
+
+
+
+
+
 ## 2.10.1 (2024-03-28)
 
 
