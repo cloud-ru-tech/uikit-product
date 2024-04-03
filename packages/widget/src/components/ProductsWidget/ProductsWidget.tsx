@@ -32,14 +32,7 @@ export function ProductsWidget({ products, loading = false, columnSize, rowSize,
   return (
     <S.Wrapper {...extractSupportProps(rest)}>
       <Typography.SansTitleL tag='h5'>{textProvider(languageCode, Texts.ProductsWidgetTitle)}</Typography.SansTitleL>
-      <Carousel
-        gap='8px'
-        infiniteScroll
-        swipe={false}
-        showItems={ROW_SIZE}
-        scrollBy={ROW_SIZE}
-        key={String(loading) + columnSize + rowSize}
-      >
+      <Carousel gap='8px' infiniteScroll swipe={false} showItems={ROW_SIZE} scrollBy={ROW_SIZE}>
         {productsCards.map((d, index) => (
           <S.Column key={index}>{d}</S.Column>
         ))}
