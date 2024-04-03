@@ -1,13 +1,16 @@
 import cn from 'classnames';
 
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { InfoBlock, InfoBlockProps } from '@snack-uikit/info-block';
-import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
 import styles from './styles.module.scss';
 
 export type EmptyBlockProps = WithSupportProps<
   Pick<InfoBlockProps, 'title' | 'description' | 'icon' | 'className'> &
-    Pick<InfoBlock.FooterProps, 'primaryButton' | 'secondaryButton'>
+    (
+      | Pick<InfoBlock.FooterProps, 'primaryButton' | 'secondaryButton'>
+      | { primaryButton?: never; secondaryButton?: never }
+    )
 >;
 
 export function EmptyBlock({
@@ -20,9 +23,6 @@ export function EmptyBlock({
   ...rest
 }: EmptyBlockProps) {
   return (
-    // TODO: typescript error
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     <div className={cn(styles.emptyBlock, className)} {...extractSupportProps(rest)}>
       <InfoBlock
         title={title}
@@ -30,7 +30,11 @@ export function EmptyBlock({
         icon={icon}
         align='horizontal'
         size='l'
-        footer={<InfoBlock.Footer primaryButton={primaryButton} secondaryButton={secondaryButton} />}
+        footer={
+          primaryButton ? (
+            <InfoBlock.Footer primaryButton={primaryButton} secondaryButton={secondaryButton} />
+          ) : undefined
+        }
         className={styles.infoBlock}
       />
     </div>
