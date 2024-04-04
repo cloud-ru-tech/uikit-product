@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-layout",
   "title": "Info",
-  "version": "0.16.4",
+  "version": "0.16.5",
   "sideEffects": [
     "*.css",
     "*.woff",

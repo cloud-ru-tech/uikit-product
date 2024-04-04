@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.1 (2024-04-04)
+
+
+### Bug Fixes
+
+* **[PDS-92](https://jira.sbercloud.tech/browse/PDS-92):** add stopPropagation on onClose; add event to onClose ([f3c243b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3c243bc78f4e86b5cd5c9032602cdfdbd499284))
+
+
+
+
+
 # 0.5.0 (2024-03-22)
 
 

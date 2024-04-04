@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.16.5 (2024-04-04)
+
+
+### Bug Fixes
+
+* **[PDS-96](https://jira.sbercloud.tech/browse/PDS-96):** make primary button not required for empty block ([f3319a7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3319a71ab7ac01caca58f4f6eed0a9f937e5a21))
+
+
+
+
+
 ## 0.16.4 (2024-03-26)
 
 ### Only dependencies have been changed

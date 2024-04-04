@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.3 (2024-04-04)
+
+
+### Dependencies
+
+* **[PDS-92](https://jira.sbercloud.tech/browse/PDS-92):** up carousel version ([a534b37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a534b37b305e8b73789620b796a7efb98c80c456))
+
+
+
+
+
 ## 0.2.2 (2024-03-22)
 
 ### Only dependencies have been changed
