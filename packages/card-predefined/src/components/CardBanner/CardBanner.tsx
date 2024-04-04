@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react';
+
 import { ButtonTonal } from '@snack-uikit/button';
 import { Card, CardProps } from '@snack-uikit/card';
 import { ArrowRightSVG, CrossSVG } from '@snack-uikit/icons';
@@ -16,7 +18,7 @@ export type CardBannerProps = WithSupportProps<
       src: string;
       alt: string;
     };
-    onClose?(): void;
+    onClose?: MouseEventHandler<HTMLElement>;
   }
 >;
 
@@ -45,7 +47,15 @@ export function CardBanner({
       functionBadge={
         onClose ? (
           <div className={styles.cardFunctionBadgeWrapper}>
-            <ButtonTonal icon={<CrossSVG />} appearance='neutral' onClick={onClose} size='xs' />
+            <ButtonTonal
+              icon={<CrossSVG />}
+              appearance='neutral'
+              onClick={e => {
+                e.stopPropagation();
+                onClose(e);
+              }}
+              size='xs'
+            />
           </div>
         ) : undefined
       }
