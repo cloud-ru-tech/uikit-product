@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { InfoRow, InfoRowProps } from '../src';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Info Row',
+  title: 'Snack UIkit/Info Row/Info Row',
   component: InfoRow,
 };
 export default meta;
@@ -45,6 +45,7 @@ infoRow.args = {
   content: 'Connect your local component with unique',
   showRowActions: true,
   twoButtons: true,
+  loading: false,
   rowActions: {
     first: {
       icon: <PlaceholderSVG />,

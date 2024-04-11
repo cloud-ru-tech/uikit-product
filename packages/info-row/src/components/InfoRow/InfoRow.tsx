@@ -4,6 +4,7 @@ import { ReactNode } from 'react';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonTonal, ButtonTonalProps } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
+import { SkeletonContextProvider, SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
 import { QuestionTooltip, QuestionTooltipProps, Tooltip, TooltipProps } from '@snack-uikit/tooltip';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
@@ -13,7 +14,7 @@ type RowActionButton = {
   tip?: Pick<TooltipProps, 'trigger' | 'tip' | 'placement' | 'disableMaxWidth' | 'open' | 'onOpenChange'> | string;
 } & Omit<ButtonTonalProps, 'size' | 'appearance' | 'label'>;
 
-export type InfoRowProps = WithSupportProps<{
+export type InfoRowPropsBase = {
   label: string;
   labelTruncate?: number;
   labelTooltip?:
@@ -27,7 +28,10 @@ export type InfoRowProps = WithSupportProps<{
     first: RowActionButton;
     second?: RowActionButton;
   };
-}>;
+  loading?: boolean;
+};
+
+export type InfoRowProps = WithSupportProps<InfoRowPropsBase>;
 
 export function withTip(children: ReactNode, tip?: TooltipProps | string) {
   if (!tip) {
@@ -46,6 +50,7 @@ export function InfoRow({
   content,
   rowActions,
   labelTruncate = 1,
+  loading = false,
   ...rest
 }: InfoRowProps) {
   return (
@@ -64,13 +69,33 @@ export function InfoRow({
             ))}
         </div>
         <div className={styles.contentLayout}>
-          <div className={styles.content}>{content}</div>
+          <SkeletonContextProvider loading={loading}>
+            <WithSkeleton skeleton={<SkeletonText width={'100%'} lines={1} />}>
+              <div className={styles.content}>{content}</div>
+            </WithSkeleton>
+          </SkeletonContextProvider>
 
           {rowActions && (
             <div className={styles.rowActions}>
-              {withTip(<ButtonTonal {...rowActions.first} appearance='neutral' size='s' />, rowActions.first.tip)}
+              {withTip(
+                <ButtonTonal
+                  {...rowActions.first}
+                  disabled={loading || rowActions.first.disabled}
+                  appearance='neutral'
+                  size='s'
+                />,
+                rowActions.first.tip,
+              )}
               {rowActions.second &&
-                withTip(<ButtonTonal {...rowActions.second} appearance='neutral' size='s' />, rowActions.second.tip)}
+                withTip(
+                  <ButtonTonal
+                    {...rowActions.second}
+                    disabled={loading || rowActions.second.disabled}
+                    appearance='neutral'
+                    size='s'
+                  />,
+                  rowActions.second.tip,
+                )}
             </div>
           )}
         </div>

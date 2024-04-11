@@ -33,6 +33,7 @@
     "@snack-uikit/divider": "3.0.2",
     "@snack-uikit/tooltip": "0.13.0",
     "@snack-uikit/truncate-string": "0.4.10",
+    "@snack-uikit/skeleton": "0.3.3",
     "classnames": "2.3.2"
   }
 }
