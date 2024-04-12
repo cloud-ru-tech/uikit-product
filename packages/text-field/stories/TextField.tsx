@@ -4,7 +4,6 @@ import { useState } from 'react';
 
 import { ButtonIconTransparent, RefreshButton } from '@sbercloud/uikit-product-button';
 import { InfoInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { notification } from '@sbercloud/uikit-product-notification';
 import { EXPORT_VARS, GLOBAL_CSS_COLOR } from '@sbercloud/uikit-product-theme';
 
 import { BADGE } from '#storybookConstants';
@@ -67,7 +66,7 @@ function Template({ ...args }: TextFieldProps) {
 
       throw new Error('some error occured');
     } catch (e: unknown) {
-      notification.big.error({ title: 'Произошла ошибка при загрузке поля' });
+      alert('Произошла ошибка при загрузке поля');
       return { preventAction: true };
     }
   };
