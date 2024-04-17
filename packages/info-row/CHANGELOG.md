@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-04-17)
+
+
+### Features
+
+* **[PDS-116](https://jira.sbercloud.tech/browse/PDS-116):** add loading prop on InfoRow, add InfoGroup component ([2663588](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2663588d792caa4922f4457c377029375bbb3ff8))
+
+
+
+
+
 # 0.2.0 (2024-04-01)
 
 
