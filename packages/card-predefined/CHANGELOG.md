@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.2 (2024-04-18)
+
+
+### Dependencies
+
+* **FF-00:** up card version ([2919160](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2919160de0c7c28480e38c1f64475dbd470d1410))
+
+
+
+
+
 ## 0.5.1 (2024-04-04)
 
 

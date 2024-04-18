@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.4 (2024-04-18)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-card-predefined@0.5.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+
+
+
+
+
 ## 0.2.3 (2024-04-04)
 
 
