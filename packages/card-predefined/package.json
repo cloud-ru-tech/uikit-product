@@ -29,7 +29,7 @@
   "scripts": {},
   "dependencies": {
     "@snack-uikit/button": "0.17.0",
-    "@snack-uikit/card": "0.11.2",
+    "@snack-uikit/card": "0.12.4",
     "@snack-uikit/icons": "0.20.1",
     "@snack-uikit/promo-tag": "0.4.1",
     "@snack-uikit/truncate-string": "0.4.10",
