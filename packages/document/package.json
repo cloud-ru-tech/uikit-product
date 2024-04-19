@@ -39,6 +39,7 @@
     "mime-db": "1.52.0"
   },
   "devDependencies": {
-    "@types/mime-db": "1.43.1"
+    "@types/mime-db": "1.43.1",
+    "@types/lodash.debounce": "4.0.9"
   }
 }

@@ -56,5 +56,9 @@
     "lodash.debounce": "4.0.8",
     "lodash.throttle": "4.1.1",
     "react-transition-state": "2.1.1"
+  },
+  "devDependencies": {
+    "@types/lodash.throttle": "4.1.9",
+    "@types/lodash.debounce": "4.0.9"
   }
 }
