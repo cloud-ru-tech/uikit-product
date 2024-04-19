@@ -1,0 +1,31 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: $sys-neutral-text-main;
+  flex-direction: column;
+}
+
+.text {
+  @include composite-var($theme-variables, 'sans', 'body', 'm');
+}
+
+.title {
+  @include composite-var($theme-variables, 'sans', 'title', 's');
+}
+
+.group {
+  margin-top: 24px;
+  padding-bottom: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-gap: 12px;
+  grid-column-gap: 20px;
+}
+
+.search {
+  margin-top: 16px;
+}

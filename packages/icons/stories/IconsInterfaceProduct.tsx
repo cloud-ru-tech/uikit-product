@@ -1,10 +1,10 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import * as Icons from '../src/components/interface-icons-product';
-import classnames from './styles.module.scss';
+import { getTemplate } from './helpers/StoryTemplate';
 
 type StoryProps = {
   size?: number | string;
@@ -15,19 +15,7 @@ const meta: Meta = {
 };
 export default meta;
 
-const Template: StoryFn<StoryProps> = ({ size }) => (
-  <div className={classnames.wrapper}>
-    {Object.keys(Icons).map(name => {
-      const Icon = Icons[name];
-      return (
-        <div key={name} className={classnames.iconCard}>
-          <Icon size={size} />
-          {name}
-        </div>
-      );
-    })}
-  </div>
-);
+const Template = getTemplate(Icons);
 
 export const interfaceProduct: StoryObj<StoryProps> = Template.bind({});
 

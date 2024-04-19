@@ -1,38 +1,21 @@
-import { Meta, StoryFn, StoryObj } from '@storybook/react';
-
-import * as SnackUiIcons from '@snack-uikit/icons';
+import { Meta, StoryObj } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import classnames from './styles.module.scss';
+import * as Icons from '../src/components/interface-icons-system';
+import { getTemplate } from './helpers/StoryTemplate';
 
 type StoryProps = {
   size?: number | string;
-  applySprite?: boolean;
 };
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { Sprite: SnackUiSprite, SpriteSVG: SnackUiSpriteSvg, ...Icons } = SnackUiIcons;
 
 const meta: Meta = {
   title: 'Components/Icons/Interface System',
 };
 export default meta;
 
-const Template: StoryFn<StoryProps> = ({ size }) => (
-  <div className={classnames.wrapper}>
-    {Object.keys(Icons).map(name => {
-      const Icon = Icons[name];
-      return (
-        <div key={name} className={classnames.iconCard}>
-          <Icon size={size} />
-          {name}
-        </div>
-      );
-    })}
-  </div>
-);
+const Template = getTemplate(Icons);
 
 export const interfaceSystem: StoryObj<StoryProps> = Template.bind({});
 

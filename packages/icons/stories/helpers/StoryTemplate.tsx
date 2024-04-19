@@ -1,87 +1,14 @@
-import { css } from '@linaria/core';
-import { styled } from '@linaria/react';
 import { StoryFn } from '@storybook/react';
 import React, { useCallback, useState } from 'react';
 
-import { Button } from '@sbercloud/uikit-product-button';
-import { Modal } from '@sbercloud/uikit-product-modal';
-import { TextField } from '@sbercloud/uikit-product-text-field';
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
-import { Toolbar } from '@sbercloud/uikit-product-toolbar';
-import { H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
+import { Card } from '@snack-uikit/card';
+import { FieldText } from '@snack-uikit/fields';
+import { Modal } from '@snack-uikit/modal';
+import { Search } from '@snack-uikit/search';
 
 import { generateDataTestId } from '../../utils/generateDataTestId';
 import { svgExport } from './downloader';
-
-const { COLORS_BUTTON } = DEPRECATED_EXPORT_VARS;
-
-const Group = styled.div`
-  margin-top: 24px;
-  padding-bottom: 24px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 250px);
-  grid-gap: 12px;
-  grid-column-gap: 20px;
-`;
-
-const Item = styled.div`
-  margin: 0.5rem;
-  padding: 0.5rem;
-  display: flex;
-  height: fit-content;
-  box-sizing: border-box;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  cursor: pointer;
-
-  :hover {
-    color: ${() => `var(${COLORS_BUTTON.TRANSPARENT_HOVER_COLOR})`};
-    background-color: ${() => `var(${COLORS_BUTTON.TRANSPARENT_HOVER_BG})`};
-  }
-`;
-
-const IconOverview = styled.div`
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: column;
-
-  & > * + * {
-    margin-top: 24px;
-  }
-  justify-content: space-between;
-  align-items: center;
-`;
-
-const CopyInputWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-basis: fit-content;
-  align-items: center;
-`;
-
-const Label = styled.span`
-  min-width: 96px;
-  margin-right: 12px;
-`;
-
-const TextWrapper = styled.div`
-  margin-top: 12px;
-`;
-
-const Title = styled.h3`
-  ${H3_STYLES};
-`;
-
-const Text = styled.span`
-  ${TEXT_2_STYLES};
-`;
-
-const SearchWrapView = css`
-  margin: 20px 0;
-`;
+import styles from './styles.module.scss';
 
 export function getTemplate(
   Icons: Record<string, React.FunctionComponent<{ size?: number | string; fill?: string; id?: string }>>,
@@ -106,21 +33,22 @@ export function getTemplate(
 
     return (
       <>
-        <Title>Кликните на иконку для отображения дополнительной информации</Title>
-        <Toolbar.Container className={SearchWrapView}>
-          <Toolbar.Input
-            value={search}
-            onChange={value => {
-              setSearch(value.toLowerCase());
-            }}
-            placeholder='Поиск'
-          />
-        </Toolbar.Container>
-        <Group>
+        <span className={styles.title}>Кликните на иконку для отображения дополнительной информации</span>
+
+        <Search
+          value={search}
+          onChange={value => {
+            setSearch(value.toLowerCase());
+          }}
+          placeholder='Поиск'
+          className={styles.search}
+        />
+
+        <div className={styles.group}>
           {Object.entries(Icons)
             .filter(([key]) => key.toLowerCase().includes(search))
             .map(([key, Icon]) => (
-              <Item
+              <Card
                 key={key}
                 onClick={() =>
                   setSelectedIcon({
@@ -130,35 +58,36 @@ export function getTemplate(
                   })
                 }
               >
-                <Icon size={size} fill={fill} id={key} />
-                <TextWrapper>
-                  <Text>{key}</Text>
-                </TextWrapper>
-              </Item>
+                <div className={styles.content}>
+                  <Icon size={size} fill={fill} id={key} />
+                  <span className={styles.text}>{key}</span>
+                </div>
+              </Card>
             ))}
-        </Group>
+        </div>
+
         {selectedIcon !== null && (
           <Modal
-            isOpen={true}
-            title={selectedIcon.iconName}
+            open
             onClose={onCloseHandler}
+            title={selectedIcon.iconName}
             content={
-              <IconOverview>
+              <div className={styles.content}>
                 {selectedIcon.Icon({ size, fill })}
-                <CopyInputWrapper>
-                  <Label>import:</Label>
-                  <TextField text={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-product-icons';`} />
-                </CopyInputWrapper>
-                <CopyInputWrapper>
-                  <Label>data-test-id:</Label>
-                  <TextField text={selectedIcon.dataAttribute} />
-                </CopyInputWrapper>
-                <CopyInputWrapper>
-                  <Label>png:</Label>
-                  <Button text={'download as png'} onClick={downloadAsPngHandler} />
-                </CopyInputWrapper>
-              </IconOverview>
+
+                <FieldText
+                  label='Import'
+                  value={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-product-icons';`}
+                  readonly
+                />
+
+                <FieldText label={'data-test-id'} value={selectedIcon.dataAttribute} readonly />
+              </div>
             }
+            approveButton={{
+              label: 'download as png',
+              onClick: downloadAsPngHandler,
+            }}
           />
         )}
       </>
