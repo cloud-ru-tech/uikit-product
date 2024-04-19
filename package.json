@@ -62,6 +62,7 @@
     "@snack-uikit/modal": "0.9.18",
     "@snack-uikit/search": "0.7.18",
     "@snack-uikit/toaster": "0.5.4",
+    "@snack-uikit/tooltip": "0.13.1",
     "@storybook/addon-actions": "7.0.10",
     "@storybook/addon-essentials": "7.0.10",
     "@storybook/addon-storysource": "7.0.10",

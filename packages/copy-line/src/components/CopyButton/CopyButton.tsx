@@ -1,15 +1,17 @@
 import { MouseEventHandler, useEffect, useRef, useState } from 'react';
 
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction, ButtonFunctionProps } from '@snack-uikit/button';
 import { CheckSVG, CopySVG } from '@snack-uikit/icons';
 
-export type CopyButtonProps = {
+export type CopyButtonProps = WithSupportProps<{
   valueToCopy: string | number;
   size?: ButtonFunctionProps['size'];
-};
+  className?: string;
+}>;
 
-export function CopyButton({ valueToCopy, size = 'xs' }: CopyButtonProps) {
+export function CopyButton({ valueToCopy, size = 'xs', className, ...rest }: CopyButtonProps) {
   const [isChecked, setIsCheckedOpen] = useState(false);
   const timerId = useRef<NodeJS.Timeout>();
   const openChecked = () => setIsCheckedOpen(true);
@@ -33,7 +35,9 @@ export function CopyButton({ valueToCopy, size = 'xs' }: CopyButtonProps) {
 
   return (
     <ButtonFunction
+      {...extractSupportProps(rest)}
       onClick={handleClick}
+      className={className}
       data-test-id='button-copy-value'
       type='button'
       icon={isChecked ? <CheckSVG /> : <CopySVG />}

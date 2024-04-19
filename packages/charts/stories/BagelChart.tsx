@@ -1,10 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
-import React from 'react';
 
 import { InfoOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { Tooltip } from '@sbercloud/uikit-product-tooltip';
-import { TooltipType } from '@sbercloud/uikit-product-tooltip/src/helpers/types';
+import { Tooltip } from '@snack-uikit/tooltip';
 
 import { BADGE } from '#storybookConstants';
 
@@ -39,7 +37,7 @@ bagelChart.args = {
   title: (
     <>
       <div>{'Title'}</div>
-      <Tooltip type={TooltipType.Instant} content='content'>
+      <Tooltip tip='content'>
         <InfoOutlineInterfaceSVG />
       </Tooltip>
     </>
