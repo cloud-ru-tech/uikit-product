@@ -1,5 +1,7 @@
 import { ReactText } from 'react';
 
+import { Divider } from '@snack-uikit/divider';
+
 import * as S from './styled';
 
 function LegendItem({ color, label, value }: { color?: string; label: ReactText; value: ReactText }) {
@@ -26,13 +28,19 @@ export function Legend({
       {legendTitle && (
         <>
           <div>{legendTitle}</div>
-          <S.LegendDivider />
+          <S.LegendDividerWrapper>
+            <Divider />
+          </S.LegendDividerWrapper>
         </>
       )}
       {data.map((x, index) => (
         <div key={`legend_${x.label}_${index}`}>
           <LegendItem {...x} />
-          {index !== data.length - 1 && <S.LegendDivider />}
+          {index !== data.length - 1 && (
+            <S.LegendDividerWrapper>
+              <Divider />
+            </S.LegendDividerWrapper>
+          )}
         </div>
       ))}
     </S.Legend>

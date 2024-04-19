@@ -3,9 +3,9 @@ import { ChangeEvent, useState } from 'react';
 import ReactMarkdown, { Options as ReactMarkdownOptions } from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-import { Divider } from '@sbercloud/uikit-product-divider';
 import { SimpleTextarea } from '@sbercloud/uikit-product-textarea-private';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Divider } from '@snack-uikit/divider';
 
 import { Blockquote } from './Blockquote';
 import { Code } from './Code';

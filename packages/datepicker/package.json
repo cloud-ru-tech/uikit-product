@@ -28,7 +28,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-button": "5.4.17",
-    "@sbercloud/uikit-product-divider": "2.1.1",
+    "@snack-uikit/divider": "3.0.2",
     "@sbercloud/uikit-product-icons": "6.2.0",
     "@snack-uikit/toggles": "0.9.7",
     "@sbercloud/uikit-product-theme": "0.39.0",

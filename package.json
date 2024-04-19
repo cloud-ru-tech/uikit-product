@@ -55,6 +55,7 @@
     "@snack-uikit/button": "0.17.0",
     "@snack-uikit/card": "0.12.4",
     "@snack-uikit/chips": "0.10.5",
+    "@snack-uikit/divider": "3.0.2",
     "@snack-uikit/fields": "0.18.1",
     "@snack-uikit/icons": "0.20.1",
     "@snack-uikit/locale": "0.4.0",

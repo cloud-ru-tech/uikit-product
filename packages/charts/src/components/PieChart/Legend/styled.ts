@@ -1,7 +1,5 @@
 import { styled } from '@linaria/react';
 
-import { Divider } from '@sbercloud/uikit-product-divider';
-
 import { COLORS } from '../themes';
 
 export const Legend = styled.div`
@@ -31,7 +29,7 @@ export const Dot = styled.span<{ color: string }>`
   background-color: ${({ color }) => color};
 `;
 
-export const LegendDivider = styled(Divider)`
+export const LegendDividerWrapper = styled.div`
   margin: 16px 0;
 `;
 

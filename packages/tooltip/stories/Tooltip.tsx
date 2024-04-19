@@ -3,9 +3,9 @@ import { Meta, StoryFn } from '@storybook/react';
 
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
-import { Divider } from '@sbercloud/uikit-product-divider';
 import { CopyInterfaceSVG, QuestionInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { H2_STYLES, H4_STYLES } from '@sbercloud/uikit-product-typography';
+import { Divider } from '@snack-uikit/divider';
 
 import { BADGE } from '#storybookConstants';
 

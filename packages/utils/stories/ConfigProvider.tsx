@@ -3,9 +3,9 @@ import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
 import { Button } from '@sbercloud/uikit-product-button';
-import { Divider } from '@sbercloud/uikit-product-divider';
 import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 import { H1_STYLES, H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
+import { Divider } from '@snack-uikit/divider';
 
 import { BADGE } from '#storybookConstants';
 

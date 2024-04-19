@@ -205,7 +205,7 @@ import {
   SupportInterfaceSVG,
 } from '@sbercloud/uikit-product-icons';
 import { Badge } from '@sbercloud/uikit-product-badge-private';
-import { Divider } from '@sbercloud/uikit-product-divider';
+import { Divider } from '@snack-uikit/divider';
 import { PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
 import {
   Header,

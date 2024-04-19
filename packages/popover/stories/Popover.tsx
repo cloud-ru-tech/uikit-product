@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { ButtonRound } from '@sbercloud/uikit-product-button';
-import { Divider } from '@sbercloud/uikit-product-divider';
 import { H2_STYLES, H4_SEMIBOLD_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
+import { Divider } from '@snack-uikit/divider';
 
 import { BADGE } from '#storybookConstants';
 

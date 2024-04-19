@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useRef, useState } from 'react';
 
 import { Button } from '@sbercloud/uikit-product-button';
-import { Divider } from '@sbercloud/uikit-product-divider';
+import { Divider } from '@snack-uikit/divider';
 
 import { BADGE } from '#storybookConstants';
 
@@ -22,7 +22,7 @@ const FocusBtn = styled(Button)`
   margin-top: 16px;
 `;
 
-const Separator = styled(Divider)`
+const Separator = styled.div`
   margin-top: 50px;
 `;
 
@@ -42,7 +42,9 @@ function Template({ ...args }: TextareaProps) {
         ref={ref}
         error={(value === 'error' && 'You have triggered error') || args.error}
       />
-      <Separator />
+      <Separator>
+        <Divider />
+      </Separator>
       <FocusBtn text={'Focus'} onClick={() => ref.current?.focus()} />
     </>
   );

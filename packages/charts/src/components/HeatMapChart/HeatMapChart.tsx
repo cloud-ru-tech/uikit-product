@@ -2,8 +2,8 @@ import { scaleLinear } from 'd3-scale';
 import { useCallback, useMemo } from 'react';
 import { HeatMapGrid } from 'react-grid-heatmap';
 
-import { Divider } from '@sbercloud/uikit-product-divider';
 import { extractSupportProps, Themes, useTheme, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Divider } from '@snack-uikit/divider';
 
 import { XAxisPosition } from './constants';
 import { getContrastColor, getStyles, getTickValues } from './helpers';

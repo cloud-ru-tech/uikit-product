@@ -2,8 +2,8 @@ import isEqual from 'date-fns/isEqual';
 import { Dispatch, ReactNode, SetStateAction, useCallback, useMemo } from 'react';
 import { ReactDatePickerProps } from 'react-datepicker';
 
-import { Divider } from '@sbercloud/uikit-product-divider';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { Divider } from '@snack-uikit/divider';
 import { Switch } from '@snack-uikit/toggles';
 
 import { DatePickerProps, TimePicker } from '../../components';
