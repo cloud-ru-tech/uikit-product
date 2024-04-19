@@ -2,8 +2,6 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { FC, PropsWithChildren } from 'react';
 
-import { CollapsePanel, CollapsePanelItem } from '@sbercloud/uikit-product-collapse-panel';
-
 const Row = styled.div`
   display: flex;
   flex-direction: row;
@@ -14,9 +12,10 @@ const VariantView = css`
   margin-right: 8px !important;
 `;
 
-const Description = styled.div`
-  white-space: break-spaces;
-  word-break: break-all;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 `;
 export type TypographyStoryConfig = Array<{
   name: string;
@@ -25,22 +24,13 @@ export type TypographyStoryConfig = Array<{
 }>;
 export const commonTemplate =
   (config: TypographyStoryConfig) =>
-  ({ value }: { value: string }) =>
-    (
-      <CollapsePanel>
-        {config.map(({ name, Component, styles }, index) => (
-          <CollapsePanelItem
-            index={index}
-            key={index}
-            header={
-              <Row>
-                <Component className={VariantView}>{name}:</Component>
-                <Component>{value}</Component>
-              </Row>
-            }
-          >
-            <Description>{styles}</Description>
-          </CollapsePanelItem>
-        ))}
-      </CollapsePanel>
-    );
+  ({ value }: { value: string }) => (
+    <Wrapper>
+      {config.map(({ name, Component }, index) => (
+        <Row key={index}>
+          <Component className={VariantView}>{name}:</Component>
+          <Component>{value}</Component>
+        </Row>
+      ))}
+    </Wrapper>
+  );
