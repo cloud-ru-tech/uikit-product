@@ -3,7 +3,7 @@ import { Meta, StoryFn } from '@storybook/react';
 import { useState } from 'react';
 
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
-import { SwitchRow } from '@sbercloud/uikit-product-switch';
+import { SwitchRow } from '@sbercloud/uikit-product-switch-row';
 
 import { BADGE } from '#storybookConstants';
 
