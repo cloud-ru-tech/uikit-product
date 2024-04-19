@@ -6,9 +6,9 @@ import { withDesign } from 'storybook-addon-designs';
 import { useDarkMode } from 'storybook-dark-mode';
 
 import { PARAM_CAN_ADD_CUSTOM_BRAND_KEY, PARAM_COLOR_MAP_KEY, PARAM_KEY } from '@sbercloud/ft-storybook-brand-addon';
-import { Alert } from '@sbercloud/uikit-product-alert';
 import { Sprite, SpriteProductSVG, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
+import { Alert } from '@snack-uikit/alert';
 import { LocaleProvider } from '@snack-uikit/locale';
 
 import { ConfigProvider } from '../packages/utils/src';
@@ -38,7 +38,7 @@ const decorators: DecoratorFunction[] = [
           {Array.isArray(badges) && badges.includes(BADGE.DEPRECATED) && (
             <>
               <Alert
-                type={Alert.types.Warning}
+                appearance='warning'
                 description={
                   <>
                     The package is deprecated.{' '}
@@ -51,7 +51,6 @@ const decorators: DecoratorFunction[] = [
                     )}
                   </>
                 }
-                variant={Alert.variants.Accent}
               />
               <br />
             </>
