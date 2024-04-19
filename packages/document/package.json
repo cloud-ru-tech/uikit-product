@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-document",
   "title": "React Document",
-  "version": "2.2.14",
+  "version": "2.2.15",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -39,7 +39,7 @@
     "mime-db": "1.52.0"
   },
   "devDependencies": {
-    "@types/mime-db": "1.43.1",
-    "@types/lodash.debounce": "4.0.9"
+    "@types/lodash.debounce": "4.0.9",
+    "@types/mime-db": "1.43.1"
   }
 }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.18 (2024-04-19)
+
+
+### Dependencies
+
+* **[FF-4699](https://jira.sbercloud.tech/browse/FF-4699):** change product -> snack divider ([bd49fc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bd49fc619626923b0278b7b72221ad1aca7800f8))
+
+
+
+
+
 ## 0.4.17 (2024-03-26)
 
 ### Only dependencies have been changed

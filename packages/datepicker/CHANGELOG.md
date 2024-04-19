@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.15.19 (2024-04-19)
+
+
+### Dependencies
+
+* **[FF-4699](https://jira.sbercloud.tech/browse/FF-4699):** change product -> snack divider ([bd49fc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bd49fc619626923b0278b7b72221ad1aca7800f8))
+* **[FF-4699](https://jira.sbercloud.tech/browse/FF-4699):** change switch -> toggles ([559cb4f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/559cb4f2e9c03604c2bc2b4591f998389a18bc9a))
+
+
+
+
+
 ## 0.15.18 (2024-03-26)
 
 ### Only dependencies have been changed

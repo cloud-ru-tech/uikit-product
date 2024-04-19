@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-header",
   "title": "Header",
-  "version": "2.11.2",
+  "version": "2.11.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -58,7 +58,7 @@
     "react-transition-state": "2.1.1"
   },
   "devDependencies": {
-    "@types/lodash.throttle": "4.1.9",
-    "@types/lodash.debounce": "4.0.9"
+    "@types/lodash.debounce": "4.0.9",
+    "@types/lodash.throttle": "4.1.9"
   }
 }

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.2 (2024-04-19)
+
+
+### Bug Fixes
+
+* **PDS-0000:** add hover show/hide behavior for copyButton in line; add forgotten props ([ff0d97a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ff0d97a052ef0e53ed6fe144ab7d58a9366ae93c))
+
+
+### Dependencies
+
+* **[FF-4699](https://jira.sbercloud.tech/browse/FF-4699):** change product -> snack divider ([bd49fc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bd49fc619626923b0278b7b72221ad1aca7800f8))
+
+
+
+
+
 ## 0.10.1 (2024-01-22)
 
 ### Only dependencies have been changed

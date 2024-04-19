@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2024-04-19)
+
+
+### Bug Fixes
+
+* **PDS-0000:** add hover show/hide behavior for copyButton in line; add forgotten props ([ff0d97a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ff0d97a052ef0e53ed6fe144ab7d58a9366ae93c))
+
+
+
+
+
 # 0.1.0 (2024-03-02)
 
 
