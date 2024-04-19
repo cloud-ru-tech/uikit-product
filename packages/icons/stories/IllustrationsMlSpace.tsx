@@ -9,7 +9,7 @@ import * as Icons from '../src/components/illustrations-mlspace-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons/Illustrations/ML Space',
+  title: 'Snack Uikit/Icons/Illustrations/ML Space',
 };
 export default meta;
 

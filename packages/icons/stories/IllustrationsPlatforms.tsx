@@ -9,7 +9,7 @@ import * as Icons from '../src/components/illustrations-platforms-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons/Illustrations/Platforms',
+  title: 'Snack Uikit/Icons/Illustrations/Platforms',
 };
 export default meta;
 

@@ -16,7 +16,7 @@ import {
 } from '../src';
 
 const meta: Meta = {
-  title: 'Components/Icons/Predefined/Predefined Logos Private',
+  title: 'Snack Uikit/Icons/Predefined/Predefined Logos Private',
 };
 export default meta;
 

@@ -11,7 +11,7 @@ type StoryProps = {
 };
 
 const meta: Meta = {
-  title: 'Components/Icons/Interface Product',
+  title: 'Snack Uikit/Icons/Interface Product',
 };
 export default meta;
 

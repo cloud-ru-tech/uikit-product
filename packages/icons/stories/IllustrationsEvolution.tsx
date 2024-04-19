@@ -9,7 +9,7 @@ import * as Icons from '../src/components/illustrations-evolution-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons/Illustrations/Evolution',
+  title: 'Snack Uikit/Icons/Illustrations/Evolution',
 };
 export default meta;
 

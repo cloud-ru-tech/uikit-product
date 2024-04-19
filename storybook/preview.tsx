@@ -82,7 +82,7 @@ const parameters: Parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
   options: {
     storySort: {
-      order: ['Welcome', 'Theme', 'Typography', 'Utils', 'Components', 'Not stable'],
+      order: ['Welcome', 'Snack Uikit', 'Utils', 'Components', 'Not stable', 'Theme', 'Typography'],
     },
   },
   dependenciesGraph: {
