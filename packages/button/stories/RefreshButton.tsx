@@ -1,7 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
 
-import { Toolbar } from '@sbercloud/uikit-product-toolbar';
-
 import { RefreshButton, RefreshButtonProps } from '../src';
 import { TableCell, TableColumn, TableWrapper } from './helperComponents';
 import { getDefaultArgs, getDefaultParameters } from './helpers';
@@ -19,13 +17,6 @@ function Template({ ...args }: RefreshButtonProps) {
         <TableCell>Button Icon Transparent / Default</TableCell>
         <TableCell>
           <RefreshButton {...args} />
-        </TableCell>
-      </TableColumn>
-
-      <TableColumn>
-        <TableCell>Button Toolbar</TableCell>
-        <TableCell>
-          <RefreshButton as={Toolbar.Button} {...args} />
         </TableCell>
       </TableColumn>
     </TableWrapper>
