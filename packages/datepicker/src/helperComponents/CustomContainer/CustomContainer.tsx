@@ -3,8 +3,8 @@ import { Dispatch, ReactNode, SetStateAction, useCallback, useMemo } from 'react
 import { ReactDatePickerProps } from 'react-datepicker';
 
 import { Divider } from '@sbercloud/uikit-product-divider';
-import { Switch } from '@sbercloud/uikit-product-switch';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { Switch } from '@snack-uikit/toggles';
 
 import { DatePickerProps, TimePicker } from '../../components';
 import { textProvider, Texts } from '../../helpers/texts-provider';
