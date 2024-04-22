@@ -1,21 +1,25 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
+$labelWidth: 200px;
+$contentWidth: 496px;
+$gap: $dimension-3m;
+
 .wrapper {
-  width: 720px;
+  width: calc($labelWidth + $gap + $contentWidth);
 }
 
 .infoRow {
   padding: $dimension-2m 0;
   display: flex;
-  column-gap: $dimension-3m;
+  column-gap: $gap;
   width: 100%;
   align-items: center;
 }
 
 .labelLayout {
   @include composite-var($light-label-l);
-  max-width: 200px;
-  width: 100%;
+  position: relative;
+  width: $labelWidth;
   color: $sys-neutral-text-main;
   display: flex;
   column-gap: 4px;
@@ -25,6 +29,8 @@
 }
 
 .contentLayout {
+  position: relative;
+  width: $contentWidth;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -34,6 +40,8 @@
 
 .content {
   @include composite-var($sans-body-m);
+  position: relative;
+  min-width: 0;
   color: $sys-neutral-text-main;
   display: flex;
   height: 100%;
