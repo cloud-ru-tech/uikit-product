@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.1 (2024-04-22)
+
+
+### Bug Fixes
+
+* **[FF-4655](https://jira.sbercloud.tech/browse/FF-4655):** add word-break for long titles ([849581f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/849581f4c8388a6734cb7771e3f7d03d68517245))
+
+
+
+
+
 # 0.2.0 (2024-04-04)
 
 
