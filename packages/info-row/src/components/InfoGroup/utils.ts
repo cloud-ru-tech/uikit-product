@@ -3,6 +3,8 @@ import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
 import { textProvider, Texts } from '../../helpers';
 import { DataType, InfoGroupItem, InfoGroupProps } from './types';
 
+const NO_DATA_PLACEHOLDER = '—';
+
 const isNil = (value: unknown): value is undefined | null => value === undefined || value === null;
 const isBoolean = (value: unknown): value is boolean => typeof value === 'boolean';
 
@@ -11,7 +13,7 @@ type Props<T extends DataType> = Pick<InfoGroupProps<T>, 'data'> &
 
 export const getContent = <T extends DataType>({ data, accessorKey, render, languageCode }: Props<T>) => {
   if (!data) {
-    return null;
+    return NO_DATA_PLACEHOLDER;
   }
 
   const value = accessorKey ? data[accessorKey] : undefined;
@@ -29,5 +31,5 @@ export const getContent = <T extends DataType>({ data, accessorKey, render, lang
     return render(data);
   }
 
-  return null;
+  return NO_DATA_PLACEHOLDER;
 };

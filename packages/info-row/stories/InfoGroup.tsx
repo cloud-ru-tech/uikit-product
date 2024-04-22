@@ -30,7 +30,7 @@ export const infoGroup: StoryFn<StoryProps> = Template.bind({});
 
 const data: MockData = {
   firstName: 'John',
-  lastName: 'Doe',
+  lastName: undefined,
   about:
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam est eveniet rerum ullam vero? Ab dignissimos, dolorem expedita, explicabo iure necessitatibus nemo nihil, quam quibusdam quis quisquam quos tempora temporibus.',
   age: 21,
@@ -44,7 +44,7 @@ const items: InfoGroupItem<MockData>[] = [
   },
   {
     label: 'Фамилия',
-    render: ({ lastName }) => lastName,
+    accessorKey: 'lastName',
   },
   {
     label: 'Возраст',
