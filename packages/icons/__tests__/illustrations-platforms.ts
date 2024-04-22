@@ -5,7 +5,9 @@ import { getIconsDataTestIds } from '../utils/getIconsDataTestIds';
 
 const illustrationPlatformsIcons = getIconsDataTestIds('svgs/illustrations/platforms');
 
-fixture('Illustrations: Platforms').page(getTestcafeUrl({ name: 'platforms', group: 'icons-illustrations' }));
+fixture('Illustrations: Platforms').page(
+  getTestcafeUrl({ name: 'platforms', group: 'icons-illustrations', category: 'snack-uikit' }),
+);
 
 test('Rendered', async t => {
   for (const icon of illustrationPlatformsIcons) {

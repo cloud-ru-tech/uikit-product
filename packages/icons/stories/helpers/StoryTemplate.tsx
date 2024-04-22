@@ -32,65 +32,67 @@ export function getTemplate(
     };
 
     return (
-      <>
-        <span className={styles.title}>Кликните на иконку для отображения дополнительной информации</span>
+      <div className={styles.viewBox}>
+        <div className={styles.scrollContent}>
+          <span className={styles.title}>Кликните на иконку для отображения дополнительной информации</span>
 
-        <Search
-          value={search}
-          onChange={value => {
-            setSearch(value.toLowerCase());
-          }}
-          placeholder='Поиск'
-          className={styles.search}
-        />
-
-        <div className={styles.group}>
-          {Object.entries(Icons)
-            .filter(([key]) => key.toLowerCase().includes(search))
-            .map(([key, Icon]) => (
-              <Card
-                key={key}
-                onClick={() =>
-                  setSelectedIcon({
-                    iconName: key,
-                    Icon: Icon,
-                    dataAttribute: generateDataTestId(key),
-                  })
-                }
-              >
-                <div className={styles.content}>
-                  <Icon size={size} fill={fill} id={key} />
-                  <span className={styles.text}>{key}</span>
-                </div>
-              </Card>
-            ))}
-        </div>
-
-        {selectedIcon !== null && (
-          <Modal
-            open
-            onClose={onCloseHandler}
-            title={selectedIcon.iconName}
-            content={
-              <div className={styles.content}>
-                {selectedIcon.Icon({ size, fill })}
-
-                <FieldText
-                  label='Import'
-                  value={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-product-icons';`}
-                  readonly
-                />
-
-                <FieldText label={'data-test-id'} value={selectedIcon.dataAttribute} readonly />
-              </div>
-            }
-            approveButton={{
-              label: 'download as png',
-              onClick: downloadAsPngHandler,
+          <Search
+            value={search}
+            onChange={value => {
+              setSearch(value.toLowerCase());
             }}
+            placeholder='Поиск'
+            className={styles.search}
           />
-        )}
-      </>
+
+          <div className={styles.group}>
+            {Object.entries(Icons)
+              .filter(([key]) => key.toLowerCase().includes(search))
+              .map(([key, Icon]) => (
+                <Card
+                  key={key}
+                  onClick={() =>
+                    setSelectedIcon({
+                      iconName: key,
+                      Icon: Icon,
+                      dataAttribute: generateDataTestId(key),
+                    })
+                  }
+                >
+                  <div className={styles.content}>
+                    <Icon size={size} fill={fill} id={key} />
+                    <span className={styles.text}>{key}</span>
+                  </div>
+                </Card>
+              ))}
+          </div>
+
+          {selectedIcon !== null && (
+            <Modal
+              open={selectedIcon !== null}
+              onClose={onCloseHandler}
+              title={selectedIcon.iconName}
+              content={
+                <div className={styles.content}>
+                  {selectedIcon.Icon({ size, fill })}
+
+                  <FieldText
+                    label='Import'
+                    value={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-product-icons';`}
+                    readonly
+                  />
+
+                  <FieldText label={'data-test-id'} value={selectedIcon.dataAttribute} readonly />
+                </div>
+              }
+              approveButton={{
+                label: 'download as png',
+                onClick: downloadAsPngHandler,
+              }}
+            />
+          )}
+        </div>
+      </div>
     );
   };
 }

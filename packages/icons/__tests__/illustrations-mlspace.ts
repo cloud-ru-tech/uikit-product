@@ -5,7 +5,9 @@ import { getIconsDataTestIds } from '../utils/getIconsDataTestIds';
 
 const illustrationEvolutionIcons = getIconsDataTestIds('svgs/illustrations/mlspace');
 
-fixture('Illustrations: ML Space').page(getTestcafeUrl({ name: 'ml-space', group: 'icons-illustrations' }));
+fixture('Illustrations: ML Space').page(
+  getTestcafeUrl({ name: 'ml-space', group: 'icons-illustrations', category: 'snack-uikit' }),
+);
 
 test('Rendered', async t => {
   for (const icon of illustrationEvolutionIcons) {

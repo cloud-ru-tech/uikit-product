@@ -8,6 +8,7 @@ const visit = () =>
   getTestcafeUrl({
     group: 'icons-predefined',
     name: 'predefined-logos-private',
+    category: 'snack-uikit',
   });
 
 test.page(visit())(`Rendered`, async t => {

@@ -19,7 +19,6 @@
 
 .group {
   margin-top: 24px;
-  padding-bottom: 24px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
   grid-gap: 12px;
@@ -28,4 +27,14 @@
 
 .search {
   margin-top: 16px;
+}
+
+.scrollContent {
+  padding: 16px;
+}
+
+.viewBox {
+  margin: -16px;
+  height: 100vh;
+  overflow-y: scroll;
 }

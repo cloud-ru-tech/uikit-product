@@ -5,7 +5,9 @@ import { getIconsDataTestIds } from '../utils/getIconsDataTestIds';
 
 const illustrationEvolutionIcons = getIconsDataTestIds('svgs/illustrations/evolution');
 
-fixture('Illustrations: Evolution').page(getTestcafeUrl({ name: 'evolution', group: 'icons-illustrations' }));
+fixture('Illustrations: Evolution').page(
+  getTestcafeUrl({ name: 'evolution', group: 'icons-illustrations', category: 'snack-uikit' }),
+);
 
 test('Rendered', async t => {
   for (const icon of illustrationEvolutionIcons) {
