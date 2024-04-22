@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.1 (2024-04-22)
+
+
+### Bug Fixes
+
+* **[FF-4649](https://jira.sbercloud.tech/browse/FF-4649):** strong content width ([81f3c10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/81f3c10f63feaed581d4f7fdb699d7c3295934d6))
+
+
+
+
+
 # 0.3.0 (2024-04-17)
 
 
