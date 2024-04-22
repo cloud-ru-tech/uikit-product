@@ -10,7 +10,7 @@ type PropsWithAccessorKey<T extends DataType> = {
 } & Omit<InfoRowPropsBase, 'content'>;
 
 type PropsWithRender<T extends DataType> = {
-  render: (data: T) => ReactNode;
+  render: (data: T, noDataPlaceholder: string) => ReactNode;
   accessorKey?: never;
 } & Omit<InfoRowPropsBase, 'content'>;
 
