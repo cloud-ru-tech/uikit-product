@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-04-23)
+
+
+### Features
+
+* **PDS-0000:** InfoGroup no data placeholder with empty string, empty array and object ([d5d8e18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d5d8e18e8c11227b842111a8bc4d7942b55a9007))
+
+
+
+
+
 # 0.4.0 (2024-04-22)
 
 
