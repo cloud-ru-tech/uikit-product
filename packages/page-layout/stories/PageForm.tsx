@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 
 import { ButtonFunction } from '@snack-uikit/button';
-import { ArrowLeftSVG, PlaceholderSVG } from '@snack-uikit/icons';
+import { ChevronLeftSVG, PlaceholderSVG } from '@snack-uikit/icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -77,7 +77,7 @@ export const pageForm = Template.bind({});
 
 pageForm.args = {
   title: 'Lorem ipsum dolor',
-  prefix: <ButtonFunction label='Go back' icon={<ArrowLeftSVG />} iconPosition='before' />,
+  prefix: <ButtonFunction label='Go back' icon={<ChevronLeftSVG />} iconPosition='before' />,
   footer: {
     buttonPrimary: {
       variant: 'create',

@@ -12,3 +12,8 @@
   border: 1px solid $sys-neutral-decor-default;
   border-radius: $dimension-050m;
 }
+
+.fullPageHeight {
+  position: relative;
+  height: 100vh;
+}

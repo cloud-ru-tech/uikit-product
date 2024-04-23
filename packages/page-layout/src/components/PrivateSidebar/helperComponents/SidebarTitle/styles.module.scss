@@ -1,0 +1,21 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: $dimension-1m;
+  gap: $dimension-1m;
+  align-items: center;
+}
+
+.icon {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.title {
+  overflow: hidden;
+  flex-grow: 1;
+  flex-shrink: 1;
+  color: $sys-neutral-text-main;
+}

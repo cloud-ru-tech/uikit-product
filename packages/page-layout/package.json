@@ -28,11 +28,18 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/uikit-product-icons": "6.2.0",
     "@sbercloud/uikit-product-utils": "3.3.1",
     "@snack-uikit/button": "0.17.0",
+    "@snack-uikit/icon-predefined": "0.5.0",
+    "@snack-uikit/list": "0.11.0",
     "@snack-uikit/loaders": "0.5.1",
+    "@snack-uikit/scroll": "0.5.2",
     "@snack-uikit/tooltip": "0.12.1",
+    "@snack-uikit/truncate-string": "0.4.12",
+    "@snack-uikit/typography": "0.6.1",
     "@snack-uikit/utils": "3.2.0",
-    "classnames": "2.3.2"
+    "classnames": "2.3.2",
+    "uncontrollable": "8.0.4"
   }
 }

@@ -1,0 +1,88 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+$width: 256px;
+$catcherWidth: $dimension-050m;
+$instantAnimation: left .15s ease-in-out;
+$delayedAnimation: left .15s .35s ease-in-out;
+
+.wrapper {
+  width: $width;
+
+  &[data-collapsed] {
+    width: 0;
+  }
+
+  .body {
+    position: absolute;
+    height: 100%;
+    width: $width;
+    display: flex;
+    transition: $delayedAnimation;
+
+    &[data-hover-off] {
+      pointer-events: none;
+      transition: $instantAnimation;
+    }
+
+    &[data-collapsed] {
+      left: calc(-1 * $width);
+
+      &::before {
+        position: absolute;
+        content: ' ';
+        height: 100%;
+        right: calc(-1 * $catcherWidth);
+        width: $catcherWidth;
+        // uncomment for debug
+        // background-color: aqua;
+        // opacity: 0.2;
+      }
+
+      &:hover {
+        transition: $instantAnimation;
+        left: 0;
+
+        &::before {
+          right: calc(-4 * $catcherWidth);
+          width: calc(4 * $catcherWidth);
+        }
+      }
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    display: flex;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 4px 0;
+    flex-direction: column;
+    background-color: $sys-neutral-background;
+    border-right: 1px solid $sys-neutral-decor-default;
+
+    &[data-collapsed] {
+      box-shadow: $box-shadow-elevation-level3;
+      border-right: none;
+      margin: 4px;
+    }
+  }
+
+  .list {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  .toggler {
+    display: flex;
+    justify-content: end;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 0 4px;
+  }
+
+  .expandButton {
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+  }
+}
