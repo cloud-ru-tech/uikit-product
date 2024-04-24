@@ -17,12 +17,15 @@ export function useTopPinnedContent(header?: HeaderProps): { title?: ReactNode; 
     switch (header?.type) {
       case 'title':
         return {
-          title: <SidebarTitle title={header.label} icon={header.icon} />,
-          pinTop: EMPTY_LIST,
+          pinTop: [
+            {
+              content: <SidebarTitle title={header.label} icon={header.icon} />,
+              inactive: true,
+            },
+          ],
         };
       case 'back':
         return {
-          title: null,
           pinTop: [
             {
               content: { option: `${textProvider(languageCode, Texts.BackTo)} ${header.label}` },
@@ -39,7 +42,7 @@ export function useTopPinnedContent(header?: HeaderProps): { title?: ReactNode; 
           ],
         };
       default:
-        return { title: null, pinTop: EMPTY_LIST };
+        return { pinTop: EMPTY_LIST };
     }
   }, [header, languageCode]);
 }

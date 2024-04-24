@@ -58,7 +58,7 @@ export function PrivateSidebar({
   );
 
   const list = useItemsContent(items, onSelect);
-  const { pinTop, title } = useTopPinnedContent(header);
+  const { pinTop } = useTopPinnedContent(header);
   const bottomPinned = useBottomPinnedContent(documentation);
 
   return (
@@ -79,7 +79,6 @@ export function PrivateSidebar({
       )}
       <div data-collapsed={!open || undefined} data-hover-off={hoverOff || undefined} className={styles.body}>
         <div className={styles.content} data-collapsed={!open || undefined}>
-          {title}
           <div className={styles.list}>
             <List
               selection={{ mode: 'single', value: selected }}
