@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.3.0 (2024-04-24)
+
+
+### Features
+
+* **[PDS-117](https://jira.sbercloud.tech/browse/PDS-117):** add product icons for MKP/LKP ([5b7fe93](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5b7fe934b35cb85cf19b56c5d45db73b3cb1ccf4))
+
+
+
+
+
 # 6.2.0 (2024-03-26)
 
 
