@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-04-24)
+
+
+### Features
+
+* **[PDS-65](https://jira.sbercloud.tech/browse/PDS-65):** add sidebar to page services ([9f7fb9f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9f7fb9f902c5152bb56e5f566486ed9a1f468a1e))
+
+
+
+
+
 ## 0.2.1 (2024-04-22)
 
 
