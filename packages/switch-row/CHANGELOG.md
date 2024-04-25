@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2024-04-25)
+
+
+### Bug Fixes
+
+* **[FF-4715](https://jira.sbercloud.tech/browse/FF-4715):** visible corners ([736bc50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/736bc500f8ac7fcad263d94e6f41d3188e60a3f7))
+
+
+
+
+
 # 0.1.0 (2024-02-29)
 
 
