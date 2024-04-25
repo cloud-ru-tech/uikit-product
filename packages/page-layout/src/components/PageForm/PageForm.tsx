@@ -23,6 +23,7 @@ export const BUTTON_PRIMARY_VARIANT = {
   Create: 'create',
   Save: 'save',
   Rent: 'rent',
+  Send: 'send',
 } as const;
 
 export const BUTTON_SECONDARY_VARIANT = {
