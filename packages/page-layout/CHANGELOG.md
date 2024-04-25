@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2024-04-25)
+
+
+### Bug Fixes
+
+* **[PDS-65](https://jira.sbercloud.tech/browse/PDS-65):** container min height ([681b8a0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/681b8a0e7a85bcdc122205d4e5b30319a007b304))
+* **[PDS-65](https://jira.sbercloud.tech/browse/PDS-65):** fix page-service alignment ([df013db](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/df013db70e2e0e81712160b813a11523e194b020))
+* **[PDS-65](https://jira.sbercloud.tech/browse/PDS-65):** fix pinTop divider view ([156d1a9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/156d1a9c0464149a5d1a08f37c61bce0ef019cf6))
+* **[PDS-65](https://jira.sbercloud.tech/browse/PDS-65):** usin global container id to get height ([2648b6f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2648b6f0d59a40e9e0f37e54475ab25719a6ab19))
+
+
+### Features
+
+* **[PDS-168](https://jira.sbercloud.tech/browse/PDS-168):** add send button ([7f702f8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7f702f89107c931a94658392a18c2fbdacaaeeb7))
+
+
+
+
+
 ## 0.3.1 (2024-04-24)
 
 ### Only dependencies have been changed
