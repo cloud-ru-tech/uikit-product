@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { PropsWithChildren, ReactNode } from 'react';
+import { PropsWithChildren, ReactNode, useEffect, useState } from 'react';
 
 import { Headline, HeadlineProps } from '../Headline';
 import { PrivateSidebar, PrivateSidebarProps } from '../PrivateSidebar';
@@ -14,9 +14,32 @@ export type PageServicesProps = PropsWithChildren<
   }
 >;
 
+const GLOBAL_CONTAINER_ID = 'single-spa-page';
+
 export function PageServices({ children, title, actions, className, sidebar, tempTopSlot }: PageServicesProps) {
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    const container = document.getElementById(GLOBAL_CONTAINER_ID);
+
+    if (container) {
+      const observer = new ResizeObserver(entities =>
+        entities.forEach(entity => {
+          if (entity.target === container) {
+            const { height } = entity.contentRect;
+            setHeight(height);
+          }
+        }),
+      );
+
+      observer.observe(container);
+
+      return () => observer.disconnect();
+    }
+  }, []);
+
   return (
-    <div className={cn(styles.wrapper, className)}>
+    <div className={cn(styles.wrapper, className)} style={{ height }}>
       <div className={styles.tempContainer}>
         <div className={styles.container}>
           <div>
