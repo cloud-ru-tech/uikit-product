@@ -15,9 +15,16 @@ export type ConfirmDeleteModalProps = Pick<ModalProps, 'open' | 'title' | 'onClo
     name: string;
   };
   onApprove(): void;
+  loading?: boolean;
 };
 
-export function ConfirmDeleteModal({ target, onApprove, onClose, ...restProps }: ConfirmDeleteModalProps) {
+export function ConfirmDeleteModal({
+  target,
+  onApprove,
+  onClose,
+  loading = false,
+  ...restProps
+}: ConfirmDeleteModalProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const { value, onChange, reset, handleSubmit, error, ref } = useTextFieldValidation(target.name);
@@ -57,6 +64,7 @@ export function ConfirmDeleteModal({ target, onApprove, onClose, ...restProps }:
         appearance: 'destructive',
         label: textProvider<string>(languageCode, Texts.Delete),
         onClick: handleApprove,
+        loading,
       }}
       content={
         <>
@@ -82,6 +90,8 @@ export function ConfirmDeleteModal({ target, onApprove, onClose, ...restProps }:
             onChange={onChange}
             hint={error}
             validationState={error ? 'error' : 'default'}
+            readonly={loading}
+            showCopyButton={false}
           />
         </>
       }
