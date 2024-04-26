@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2024-04-26)
+
+
+### Features
+
+* **[FF-4715](https://jira.sbercloud.tech/browse/FF-4715):** add loading state ([8d7fc36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8d7fc36222421506ce79fa172c961d95661b87a7))
+
+
+
+
+
 # 0.5.0 (2024-03-02)
 
 
