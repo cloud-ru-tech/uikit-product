@@ -1,26 +1,22 @@
-import { styled } from '@linaria/react';
 import { Meta, StoryFn } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { NoAccess, NoAccessProps } from '../src';
+import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Not stable/Layout/NoAccess',
+  title: 'Snack Uikit/Layout/NoAccess',
   component: NoAccess,
 };
 export default meta;
 
-const Wrapper = styled.div`
-  height: calc(100vh - 20px);
-`;
-
 function Template({ ...args }: NoAccessProps) {
   return (
-    <Wrapper>
+    <div className={styles.wrapper}>
       <NoAccess {...args} />
-    </Wrapper>
+    </div>
   );
 }
 

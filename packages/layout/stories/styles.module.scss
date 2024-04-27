@@ -1,14 +1,5 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
-.wrapperResize {
-  resize: horizontal;
-
-  overflow: auto;
-
-  width: 600px;
-  min-width: 304px;
-  padding: 20px;
-
-  border: 1px solid $sys-neutral-decor-default;
-  border-radius: $dimension-050m;
+.wrapper {
+  height: calc(100vh - 20px);
 }

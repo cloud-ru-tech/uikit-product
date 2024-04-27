@@ -1,0 +1,38 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  flex-grow: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1200px;
+}
+
+.baseBlock {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+}
+
+.serviceName {
+  @include composite-var($sans-headline-m);
+
+  display: block;
+  margin-bottom: 24px;
+  color: $sys-neutral-text-main;
+}
+
+.description {
+  margin-top: 8px;
+  max-width: 500px;
+}
+
+.text {
+  display: block;
+  text-align: center;
+  white-space: break-spaces;
+}
