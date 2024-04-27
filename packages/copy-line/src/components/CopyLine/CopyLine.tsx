@@ -13,9 +13,10 @@ export type CopyLineProps = WithSupportProps<{
   content: string | number;
   valueToCopy?: string | number;
   className?: string;
+  onClick?: MouseEventHandler;
 }>;
 
-export function CopyLine({ content, valueToCopy, className, ...rest }: CopyLineProps) {
+export function CopyLine({ content, valueToCopy, className, onClick, ...rest }: CopyLineProps) {
   const [isChecked, setIsCheckedOpen] = useState(false);
   const timerId = useRef<NodeJS.Timeout>();
   const openChecked = () => setIsCheckedOpen(true);
@@ -27,6 +28,8 @@ export function CopyLine({ content, valueToCopy, className, ...rest }: CopyLineP
     openChecked();
     clearTimeout(timerId.current);
     timerId.current = setTimeout(closeChecked, 1000);
+
+    onClick?.(event);
   };
 
   useEffect(
