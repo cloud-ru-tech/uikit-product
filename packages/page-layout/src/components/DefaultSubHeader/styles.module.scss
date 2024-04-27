@@ -1,0 +1,17 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.subheader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: calc($dimension-2m - $dimension-050m);
+}
+
+.label {
+  @include composite-var($sans-body-m);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: $dimension-050m;
+}

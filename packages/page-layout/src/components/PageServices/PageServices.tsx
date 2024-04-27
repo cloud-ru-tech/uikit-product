@@ -6,7 +6,7 @@ import { PrivateSidebar, PrivateSidebarProps } from '../PrivateSidebar';
 import styles from './styles.module.scss';
 
 export type PageServicesProps = PropsWithChildren<
-  Pick<HeadlineProps, 'title' | 'actions'> & {
+  Pick<HeadlineProps, 'title' | 'actions' | 'status' | 'subHeader' | 'prefixButton'> & {
     className?: string;
     sidebar?: PrivateSidebarProps;
     /** Временный слот для крошек до переезда на целевую историю в хедере */
@@ -16,7 +16,17 @@ export type PageServicesProps = PropsWithChildren<
 
 const GLOBAL_CONTAINER_ID = 'single-spa-page';
 
-export function PageServices({ children, title, actions, className, sidebar, tempTopSlot }: PageServicesProps) {
+export function PageServices({
+  children,
+  title,
+  actions,
+  className,
+  sidebar,
+  tempTopSlot,
+  status,
+  subHeader,
+  prefixButton,
+}: PageServicesProps) {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
@@ -44,7 +54,13 @@ export function PageServices({ children, title, actions, className, sidebar, tem
         <div className={styles.container}>
           <div>
             {tempTopSlot}
-            <Headline title={title} actions={actions} />
+            <Headline
+              title={title}
+              actions={actions}
+              prefixButton={prefixButton}
+              status={status}
+              subHeader={subHeader}
+            />
           </div>
           <div className={styles.childWrapper}>{children}</div>
         </div>

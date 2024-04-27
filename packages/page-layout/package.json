@@ -30,10 +30,12 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "6.3.0",
     "@sbercloud/uikit-product-utils": "3.3.1",
+    "@sbercloud/uikit-product-copy-line": "0.1.1",
     "@snack-uikit/button": "0.17.0",
     "@snack-uikit/icon-predefined": "0.5.0",
     "@snack-uikit/list": "0.11.1",
     "@snack-uikit/loaders": "0.5.1",
+    "@snack-uikit/status": "0.5.2",
     "@snack-uikit/tooltip": "0.12.1",
     "@snack-uikit/truncate-string": "0.4.12",
     "@snack-uikit/typography": "0.6.1",

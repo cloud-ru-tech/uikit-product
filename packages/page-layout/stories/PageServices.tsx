@@ -3,11 +3,12 @@ import { HeaderProps } from 'page-layout/src/components/PrivateSidebar/types';
 import { MouseEvent, useMemo, useState } from 'react';
 
 import { StarSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG } from '@snack-uikit/icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { PageServices, PageServicesProps } from '../src/components';
+import { DefaultSubHeader, PageServices, PageServicesProps } from '../src/components';
 import { HeadlineActions } from './components/HeadlineActions';
 import styles from './styles.module.scss';
 
@@ -71,26 +72,26 @@ const Template: StoryFn<
   PageServicesProps & {
     sidebarType: 'none' | 'title' | 'back';
     showActions: boolean;
+    showPrefixButton: boolean;
+    showStatus: boolean;
+    showSubheader: boolean;
     showIcons: boolean;
   }
-> = ({ sidebarType, showActions, ...args }) => {
+> = ({ sidebarType, showActions, showPrefixButton, showStatus, showSubheader, ...args }) => {
   const [selected, setSelected] = useState(0);
   const sidebar = useMemo(() => getSidebarProps({ type: sidebarType, selected, setSelected }), [sidebarType, selected]);
 
   return (
     <div id='single-spa-page' className={styles.fullPageHeight}>
-      <PageServices {...args} sidebar={sidebar} actions={showActions ? args.actions : null}>
-        {Array(15)
-          .fill(null)
-          .map((_, i) => (
-            <div key={i}>
-              <h3>Headline {i}</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dignissimos hic id iste magni molestiae
-                officiis perferendis qui quibusdam sit?
-              </p>
-            </div>
-          ))}
+      <PageServices
+        {...args}
+        sidebar={sidebar}
+        actions={showActions ? args.actions : null}
+        prefixButton={showPrefixButton ? args.prefixButton : undefined}
+        status={showStatus ? args.status : undefined}
+        subHeader={showSubheader ? args.subHeader : undefined}
+      >
+        {args.children}
       </PageServices>
     </div>
   );
@@ -102,7 +103,30 @@ pageServices.args = {
   title: 'Lorem ipsum dolor',
   actions: <HeadlineActions />,
   sidebarType: 'title',
+  prefixButton: { icon: <PlaceholderSVG /> },
+  status: { label: 'Label text', hasBackground: true, appearance: 'green' },
+  subHeader: (
+    <DefaultSubHeader
+      label={'Label'}
+      labelTooltip={'Label tooltip'}
+      value={{ content: 'Connect your local component with unique' }}
+    />
+  ),
+  children: Array(15)
+    .fill(null)
+    .map((_, i) => (
+      <div key={i}>
+        <h3>Headline {i}</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dignissimos hic id iste magni molestiae
+          officiis perferendis qui quibusdam sit?
+        </p>
+      </div>
+    )),
+  showPrefixButton: true,
+  showStatus: true,
   showActions: true,
+  showSubheader: true,
 };
 
 pageServices.argTypes = {
@@ -112,7 +136,13 @@ pageServices.argTypes = {
     options: ['none', 'title', 'back', 'headless'],
   },
   showActions: { name: '[Stories]: show headline actions' },
+  showPrefixButton: { name: '[Stories]: show prefix button' },
+  showStatus: { name: '[Stories]: show status' },
+  showSubheader: { name: '[Stories]: show subheader' },
   sidebar: { table: { disable: true } },
+  status: { table: { disable: true } },
+  prefixButton: { table: { disable: true } },
+  subHeader: { table: { disable: true } },
   actions: { table: { disable: true } },
   children: { table: { disable: true } },
 };
