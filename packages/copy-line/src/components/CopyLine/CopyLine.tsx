@@ -16,7 +16,7 @@ export type CopyLineProps = WithSupportProps<{
   onClick?: MouseEventHandler;
 }>;
 
-export function CopyLine({ content, valueToCopy, className, onClick, ...rest }: CopyLineProps) {
+export function CopyLine({ content, valueToCopy = content, className, onClick, ...rest }: CopyLineProps) {
   const [isChecked, setIsCheckedOpen] = useState(false);
   const timerId = useRef<NodeJS.Timeout>();
   const openChecked = () => setIsCheckedOpen(true);

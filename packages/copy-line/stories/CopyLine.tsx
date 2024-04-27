@@ -12,22 +12,33 @@ const meta: Meta = {
 };
 export default meta;
 
-function Template({ ...args }: CopyLineProps) {
+type StoryProps = CopyLineProps & {
+  differentValueToCopy: boolean;
+};
+
+function Template({ differentValueToCopy, valueToCopy, ...args }: StoryProps) {
   return (
     <div className={styles.wrapper}>
-      <CopyLine {...args} />
+      <CopyLine {...args} valueToCopy={differentValueToCopy ? valueToCopy : undefined} />
     </div>
   );
 }
 
-export const copyLine: StoryFn<CopyLineProps> = Template.bind({});
+export const copyLine: StoryFn<StoryProps> = Template.bind({});
 
 copyLine.args = {
   content: 'Content truncate 1 line',
-  valueToCopy: 'value to copy',
+  valueToCopy: 'different value to copy',
+  differentValueToCopy: false,
 };
 
-copyLine.argTypes = {};
+copyLine.argTypes = {
+  valueToCopy: { table: { disable: true } },
+  differentValueToCopy: {
+    name: '[STORIES]: different value to copy',
+    type: 'boolean',
+  },
+};
 
 copyLine.parameters = {
   readme: {
