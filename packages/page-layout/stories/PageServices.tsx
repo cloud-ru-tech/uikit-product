@@ -82,7 +82,7 @@ const Template: StoryFn<
   const sidebar = useMemo(() => getSidebarProps({ type: sidebarType, selected, setSelected }), [sidebarType, selected]);
 
   return (
-    <div id='single-spa-page' className={styles.fullPageHeight}>
+    <div id='single-spa-wrapper' className={styles.fullPageHeight}>
       <PageServices
         {...args}
         sidebar={sidebar}

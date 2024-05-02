@@ -14,7 +14,7 @@ export type PageServicesProps = PropsWithChildren<
   }
 >;
 
-const GLOBAL_CONTAINER_ID = 'single-spa-page';
+const GLOBAL_CONTAINER_ID = 'single-spa-wrapper';
 
 export function PageServices({
   children,
@@ -36,7 +36,7 @@ export function PageServices({
       const observer = new ResizeObserver(entities =>
         entities.forEach(entity => {
           if (entity.target === container) {
-            const { height } = entity.contentRect;
+            const height = entity.target.clientHeight;
             setHeight(height);
           }
         }),
