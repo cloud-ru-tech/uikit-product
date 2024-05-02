@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2024-05-02)
+
+
+### Bug Fixes
+
+* **FF-00:** remove fit-content from main wrapper in page-services ([8d54283](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8d54283a7bff00f32f841ebc3757f6c765d70337))
+
+
+
+
+
 # 0.4.0 (2024-04-25)
 
 
