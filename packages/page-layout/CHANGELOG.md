@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-05-02)
+
+
+### Features
+
+* **[PDS-9](https://jira.sbercloud.tech/browse/PDS-9):** add prefixButton, status and subheader to page-services ([74c8f0f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74c8f0f94ad085af8b2268c7b105f3e1ce620011))
+
+
+
+
+
 ## 0.4.1 (2024-05-02)
 
 
@@ -94,7 +105,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.2 (2024-03-04)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-page-layout
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-copy-line@0.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/copy-line/CHANGELOG.md)
 
 
 

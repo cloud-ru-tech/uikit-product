@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-05-02)
+
+
+### Bug Fixes
+
+* **[PDS-9](https://jira.sbercloud.tech/browse/PDS-9):** copy from content by default ([ba80736](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ba80736c1ff31685384c1f7bc499308a0d840cd7))
+
+
+### Features
+
+* **[PDS-9](https://jira.sbercloud.tech/browse/PDS-9):** add onClick property ([0016294](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/00162941a4d40aca119845bb24305cd8f1e13f8d))
+
+
+
+
+
 ## 0.1.1 (2024-04-19)
 
 
