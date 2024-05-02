@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.17.0 (2024-05-02)
+
+
+### Features
+
+* **[FF-4653](https://jira.sbercloud.tech/browse/FF-4653):** move NoAccess to snack ([33219a2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/33219a2ae31c2e209d81993b8e9da0e9724b459e))
+
+
+
+
+
 ## 0.16.6 (2024-04-24)
 
 ### Only dependencies have been changed
