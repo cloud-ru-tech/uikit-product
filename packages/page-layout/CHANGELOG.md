@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.1 (2024-05-02)
+
+
+### Bug Fixes
+
+* **[PDS-9](https://jira.sbercloud.tech/browse/PDS-9):** remove vertical scroll on small screens for page services ([6a91d80](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6a91d801e9d0bd3a891dfa38982f2a52ca71635c))
+
+
+
+
+
 # 0.5.0 (2024-05-02)
 
 
