@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2024-05-06)
+
+
+### Features
+
+* **[SVP-12821](https://jira.sbercloud.tech/browse/SVP-12821):** toggle card promoBadge prop ([725abe8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/725abe8d64ffb333e9dbd6005d9f37ed6c951b42))
+
+
+
+
+
 # 0.3.0 (2024-02-29)
 
 
