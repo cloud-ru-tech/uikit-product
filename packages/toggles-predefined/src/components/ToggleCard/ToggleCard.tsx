@@ -8,7 +8,7 @@ export type ToggleCardProps = WithSupportProps<{
   value: string;
   description?: string;
   emblem?: Card.HeaderProps['emblem'];
-  promoBadge?: string;
+  promoBadge?: CardProps['promoBadge'];
   className?: string;
   disabled?: boolean;
   size?: CardProps['size'];
