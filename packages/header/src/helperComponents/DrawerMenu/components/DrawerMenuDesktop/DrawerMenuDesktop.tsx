@@ -2,13 +2,13 @@ import cn from 'classnames';
 import { MouseEvent, useCallback, useMemo, useRef, useState } from 'react';
 
 import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
+import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { DrawerCustom } from '@snack-uikit/drawer';
 import { HotSpot } from '@snack-uikit/hot-spot';
-import { ChevronDownSVG, ChevronUpSVG } from '@snack-uikit/icons';
 import { Link } from '@snack-uikit/link';
 import { Droplist } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';

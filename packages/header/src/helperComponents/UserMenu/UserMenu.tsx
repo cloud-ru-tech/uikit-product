@@ -86,6 +86,7 @@ export function UserMenu({
       });
 
       items.push({
+        type: 'group',
         divider: true,
         items: [],
       });
@@ -127,6 +128,7 @@ export function UserMenu({
     if ((organizations && organizations.length > 0) || onOrganizationAdd) {
       items.push({
         divider: true,
+        type: 'group',
         items: [],
       });
     }

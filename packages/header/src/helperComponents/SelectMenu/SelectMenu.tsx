@@ -1,9 +1,9 @@
 import cn from 'classnames';
 
+import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { Divider } from '@snack-uikit/divider';
-import { ChevronDownSVG, ChevronUpSVG } from '@snack-uikit/icons';
 import { ListProps } from '@snack-uikit/list';
 import { Skeleton, SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
 import { TruncateString } from '@snack-uikit/truncate-string';

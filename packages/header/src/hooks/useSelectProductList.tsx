@@ -18,6 +18,7 @@ export function getSelectProductListProps({
     items: allProducts.map(group => ({
       label: group.heading,
       mode: 'secondary',
+      type: 'group',
 
       items: group.items.filter(filterHidden).map(item => ({
         content: {

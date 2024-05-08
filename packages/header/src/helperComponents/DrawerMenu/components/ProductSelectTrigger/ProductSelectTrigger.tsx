@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
+import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
 import { Avatar } from '@snack-uikit/avatar';
-import { ChevronDownSVG, ChevronUpSVG } from '@snack-uikit/icons';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { ProductOption } from '../../../../types';

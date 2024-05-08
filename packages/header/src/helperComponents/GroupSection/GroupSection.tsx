@@ -1,13 +1,14 @@
 import cn from 'classnames';
 import { KeyboardEvent, RefObject, useRef } from 'react';
 
+import { SearchSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
-import { SearchSVG } from '@snack-uikit/icons';
-import { BaseItemProps, List, ListProps } from '@snack-uikit/list';
+import { List, ListProps } from '@snack-uikit/list';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { SearchPrivate } from '@snack-uikit/search-private';
+import { TruncateStringProps } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../helpers';
 import { GroupSectionFooterButton, GroupSectionItemDroplist } from './components';
@@ -24,7 +25,7 @@ export type GroupSectionProps = WithSupportProps<{
   loading?: boolean;
 
   groups: ItemsGroup<Item>[];
-  truncateVariant?: NonNullable<BaseItemProps['content']['truncate']>['variant'];
+  truncateVariant?: TruncateStringProps['variant'];
   noDataState?: ListProps['noDataState'];
   selectedItem?: Item;
   onItemChange?(item: Item): void;
@@ -154,6 +155,7 @@ export function GroupSection({
             label: filteredGroups.length > 1 ? group.heading : undefined,
             truncate: { variant: truncateVariant },
             mode: 'secondary',
+            type: 'group',
             items: group.items.map(item => {
               const dataTestId = `${itemTestIdPrefix}__item-${item.id}`;
 

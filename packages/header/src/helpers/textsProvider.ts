@@ -1,11 +1,6 @@
 import { createTextProvider, LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
 export enum Texts {
-  HeaderBalanceTooltipBalance = 'header-balance-tooltip-balance',
-  HeaderBalanceTooltipLimit = 'header-balance-tooltip-limit',
-  HeaderBalanceTooltipBonuses = 'header-balance-tooltip-bonuses',
-  HeaderBalanceTooltipRecharge = 'header-balance-tooltip-recharge',
-
   HeaderProjectSelectorCreateProject = 'header-project-selector-create-project',
   HeaderProjectSelectorCreateWorkspace = 'header-project-selector-create-workspace',
   HeaderProjectSelectorEditOption = 'header-project-selector-edit-option',
@@ -44,15 +39,17 @@ export enum Texts {
   Logout = 'logout',
   Workspaces = 'workspaces',
   AddWorkspace = 'add-workspace',
+
+  FinancialMenuTitle = 'financial-menu-title',
+  FinancialMenuBalance = 'financial-menu-balance',
+  FinancialMenuBonuses = 'financial-menu-bonuses',
+  FinancialMenuEyeButtonDavaVisibleTip = 'financial-menu-eye-button-data-visible-tip',
+  FinancialMenuEyeButtonDataHiddenTip = 'financial-menu-eye-button-data-hidden-tip',
+  FinancialMenuBonusSign = 'financial-menu-bonus-sign',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
-    [Texts.HeaderBalanceTooltipBalance]: 'Баланс',
-    [Texts.HeaderBalanceTooltipLimit]: 'Лимит',
-    [Texts.HeaderBalanceTooltipBonuses]: 'Бонусы',
-    [Texts.HeaderBalanceTooltipRecharge]: 'Пополнить баланс',
-
     [Texts.HeaderProjectSelectorCreateProject]: 'Создать проект',
     [Texts.HeaderProjectSelectorCreateWorkspace]: 'Создать workspace',
     [Texts.HeaderProjectSelectorEditOption]: 'Редактировать',
@@ -92,13 +89,15 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Logout]: 'Выйти из аккаунта',
     [Texts.Workspaces]: 'Воркспейсы',
     [Texts.AddWorkspace]: 'Добавить воркспейс',
+
+    [Texts.FinancialMenuTitle]: 'Контроль затрат',
+    [Texts.FinancialMenuBalance]: 'Баланс',
+    [Texts.FinancialMenuBonuses]: 'Бонусы',
+    [Texts.FinancialMenuEyeButtonDavaVisibleTip]: 'Скрыть баланс в шапке',
+    [Texts.FinancialMenuEyeButtonDataHiddenTip]: 'Показать баланс в шапке',
+    [Texts.FinancialMenuBonusSign]: 'Б',
   },
   [LanguageCodeType.enGB]: {
-    [Texts.HeaderBalanceTooltipBalance]: 'Balance',
-    [Texts.HeaderBalanceTooltipLimit]: 'Limit',
-    [Texts.HeaderBalanceTooltipBonuses]: 'Bonuses',
-    [Texts.HeaderBalanceTooltipRecharge]: 'Recharge the balance',
-
     [Texts.HeaderProjectSelectorCreateProject]: 'Create project',
     [Texts.HeaderProjectSelectorCreateWorkspace]: 'Create workspace',
     [Texts.HeaderProjectSelectorEditOption]: 'Edit',
@@ -138,6 +137,13 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Logout]: 'Logout',
     [Texts.Workspaces]: 'Workspaces',
     [Texts.AddWorkspace]: 'Add workspace',
+
+    [Texts.FinancialMenuTitle]: 'Budget control',
+    [Texts.FinancialMenuBalance]: 'Balance',
+    [Texts.FinancialMenuBonuses]: 'Bonuses',
+    [Texts.FinancialMenuEyeButtonDavaVisibleTip]: 'Hide balance in header',
+    [Texts.FinancialMenuEyeButtonDataHiddenTip]: 'Show balance in header',
+    [Texts.FinancialMenuBonusSign]: 'B',
   },
 };
 

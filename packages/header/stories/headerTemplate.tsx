@@ -6,6 +6,7 @@ import { UPDATE_DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 
 import { DetalisationSVG, MoneySVG, UsersSVG } from '@sbercloud/uikit-product-icons';
 import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
+import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { Header, HeaderProps } from '../src';
@@ -13,6 +14,7 @@ import {
   AdvancedPlatformLogo,
   EnterprisePlatformLogo,
   EvolutionPlatformLogo,
+  FinancialMenuProps,
   MLSpacePlatformLogo,
 } from '../src/helperComponents';
 import styles from './styles.modules.scss';
@@ -21,6 +23,21 @@ export type StoryProps = HeaderProps & {
   showSelect: boolean;
   showWorkspaces: boolean;
   showPagePath: boolean;
+  showFinancialMenu: boolean;
+  financialMenuHotSpot: 'none' | NonNullable<FinancialMenuProps['button']>['hotSpot'];
+  financialMenuButtonType: NonNullable<FinancialMenuProps['button']>['type'];
+  financialMenuButtonStatus: NonNullable<FinancialMenuProps['button']>['status'];
+  financialMenuLoading: boolean;
+  financialMenuPromoTag: 'none' | NonNullable<FinancialMenuProps['content']['tag']>['appearance'];
+  financialMenuPromoTagContent: string;
+  financialMenuAgreement: string;
+  financialMenuBalanceValue: number;
+  financialMenuBalanceTip: string;
+  financialMenuBalanceDescription: string;
+  financialMenuBalanceStatus: NonNullable<FinancialMenuProps['content']>['balance']['status'];
+  financialMenuBonusesValue: number;
+  financialMenuBonusesTip: string;
+  financialMenuBonusesDescription: string;
   showSettings: boolean;
   showHelpMenu: boolean;
   showNotifications: boolean;
@@ -128,6 +145,27 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
   return function ({
     showSelect,
     showPagePath,
+
+    showFinancialMenu,
+
+    financialMenuHotSpot,
+    financialMenuButtonType,
+    financialMenuButtonStatus,
+
+    financialMenuLoading,
+    financialMenuPromoTag,
+    financialMenuPromoTagContent,
+    financialMenuAgreement,
+
+    financialMenuBalanceValue,
+    financialMenuBalanceTip,
+    financialMenuBalanceDescription,
+    financialMenuBalanceStatus,
+
+    financialMenuBonusesValue,
+    financialMenuBonusesTip,
+    financialMenuBonusesDescription,
+
     showSettings,
     showHelpMenu,
     showNotifications,
@@ -160,6 +198,12 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
     const [{ showOrganizationInvitePopover }, setArgs] = useArgs<StoryProps>();
 
     const closeInvitesPopover = () => setArgs({ showOrganizationInvitePopover: false });
+
+    const [balanceVisible, setBalanceVisible] = useState(true);
+
+    const eyeButtonOnClick = () => {
+      setBalanceVisible(!balanceVisible);
+    };
 
     useEffect(() => {
       if (!showOrganizationInvite && showOrganizationInvitePopover) {
@@ -194,6 +238,9 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
       return organizations;
     }, [organizations, showOrganizationInvite]);
 
+    const financialMenuButtonValue =
+      financialMenuButtonType === 'balance' ? financialMenuBalanceValue : financialMenuBonusesValue;
+
     return (
       <div className={styles.wrapper}>
         <Header
@@ -203,6 +250,44 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
           onOrganizationChange={setOrganization}
           select={showSelect ? args.select : undefined}
           pagePath={showPagePath ? args.pagePath : undefined}
+          financialMenu={
+            showFinancialMenu
+              ? {
+                  button: {
+                    hotSpot: financialMenuHotSpot === 'none' ? undefined : financialMenuHotSpot,
+                    value: financialMenuButtonValue,
+                    type: financialMenuButtonType,
+                    status: financialMenuButtonStatus,
+                  },
+                  content: {
+                    loading: financialMenuLoading,
+                    tag:
+                      financialMenuPromoTag === 'none'
+                        ? undefined
+                        : {
+                            appearance: financialMenuPromoTag,
+                            text: financialMenuPromoTagContent,
+                          },
+                    eyeButton: { dataVisible: balanceVisible, onClick: eyeButtonOnClick },
+                    link: { onClick: () => {}, href: '#' },
+                    agreement: financialMenuAgreement,
+                    balance: {
+                      onAddClick: () => toaster.userAction.success({ label: 'balance add click' }),
+                      value: financialMenuBalanceValue,
+                      tip: financialMenuBalanceTip,
+                      description: financialMenuBalanceDescription,
+                      status: financialMenuBalanceStatus,
+                    },
+                    bonuses: {
+                      onAddClick: () => toaster.userAction.success({ label: 'bonuses add click' }),
+                      value: financialMenuBonusesValue,
+                      tip: financialMenuBonusesTip,
+                      description: financialMenuBonusesDescription,
+                    },
+                  },
+                }
+              : undefined
+          }
           settings={showSettings ? args.settings : undefined}
           onHelpMenuClick={showHelpMenu ? args.onHelpMenuClick : undefined}
           notifications={
@@ -315,7 +400,25 @@ export const ARGS: StoryProps = {
     },
   ],
 
+  showFinancialMenu: true,
+  financialMenuHotSpot: 'green',
+  financialMenuButtonType: 'bonuses',
+  financialMenuButtonStatus: 'default',
+  financialMenuLoading: false,
+  financialMenuPromoTag: 'green',
+  financialMenuPromoTagContent: '~ на 14 дней',
+  financialMenuAgreement: 'Д/Д-СМ/5253/23 от 09.08.2023',
+  financialMenuBalanceValue: 800.64,
+  financialMenuBalanceTip: 'Баланс по договору с учетом текущего потребления',
+  financialMenuBalanceDescription: '',
+  financialMenuBalanceStatus: 'default',
+  financialMenuBonusesValue: 12345,
+  financialMenuBonusesTip:
+    'Сейчас вы платите бонусами из расчета 1 бонус = 1 ₽. После того как бонусы закончатся, оплата продолжится с основного баланса',
+  financialMenuBonusesDescription: 'Расходуется до 31 марта',
+
   showSettings: true,
+
   settings: [
     { id: 'settings', label: 'Настройки организации', icon: <SettingsSVG />, onClick: () => {} },
     { id: 'users', label: 'Пользователи', icon: <UsersSVG />, onClick: () => {} },
@@ -494,7 +597,6 @@ export const ARGS: StoryProps = {
       },
     ],
   },
-
   homePageUrl: 'https://console.cloud.ru',
 };
 
@@ -543,6 +645,88 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   showOrganizationInvitePopover: {
     name: '[Story]: show organization invite popover',
   },
+
+  showFinancialMenu: { name: '[Story]: show financial menu', type: 'boolean' },
+  financialMenu: { table: { disable: true } },
+  financialMenuHotSpot: {
+    name: '[Story]: financial menu -> hot spot',
+    control: { type: 'radio' },
+    options: ['none', 'green', 'red'],
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuButtonType: {
+    name: '[Story]: financial menu -> button type',
+    control: { type: 'radio' },
+    options: ['balance', 'bonuses'],
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuButtonStatus: {
+    name: '[Story]: financial menu -> button status',
+    control: { type: 'radio' },
+    options: ['default', 'attention'],
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+
+  financialMenuLoading: {
+    name: '[Story]: financial menu -> loading',
+    type: 'boolean',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuPromoTag: {
+    name: '[Story]: financial menu -> promo tag',
+    control: { type: 'radio' },
+    options: ['none', 'green', 'yellow', 'red'],
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuPromoTagContent: {
+    name: '[Story]: financial menu -> promo tag content',
+    type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuAgreement: {
+    name: '[Story]: financial menu -> agreement',
+    type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+
+  financialMenuBalanceValue: {
+    name: '[Story]: financial menu -> balance value',
+    type: 'number',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuBalanceTip: {
+    name: '[Story]: financial menu -> balance tip',
+    type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuBalanceDescription: {
+    name: '[Story]: financial menu -> balance description',
+    type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuBalanceStatus: {
+    name: '[Story]: financial menu -> balance status',
+    control: { type: 'radio' },
+    options: ['default', 'attention'],
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+
+  financialMenuBonusesValue: {
+    name: '[Story]: financial menu -> bonuses value',
+    type: 'number',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuBonusesTip: {
+    name: '[Story]: financial menu -> bonuses tip',
+    type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuBonusesDescription: {
+    name: '[Story]: financial menu -> bonuses description',
+    type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+
   organizations: { table: { disable: true } },
   onOrganizationAdd: { table: { disable: true } },
   onOrganizationChange: { table: { disable: true } },

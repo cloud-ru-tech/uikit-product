@@ -1,0 +1,44 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-1m;
+  min-width: 242px;
+  position: relative;
+  box-sizing: border-box;
+  margin: calc($dimension-1m + $dimension-050m) $dimension-2m;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: $dimension-050m;
+  align-items: flex-start;
+  padding: $dimension-050m 0;
+}
+
+.closeButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: $dimension-1m;
+  width: 100%;
+}
+
+.linkWrapper {
+  flex-grow: 1;
+}
+
+.agreement {
+  @include composite-var($light-label-s);
+  width: 242px;
+  white-space: nowrap;
+  color: $sys-neutral-text-main;
+}

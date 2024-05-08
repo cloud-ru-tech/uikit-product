@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { BellSVG } from '@sbercloud/uikit-product-icons';
+import { AlarmFilledSVG, BellSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { AlarmFilledSVG } from '@snack-uikit/icons';
 import { NotificationCard, NotificationCardProps, NotificationPanel } from '@snack-uikit/notification';
 
 import { textProvider, Texts } from '../../helpers';

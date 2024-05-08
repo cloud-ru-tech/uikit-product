@@ -29,6 +29,10 @@ function getSettingsButton() {
   return Selector(dataTestIdSelector('header__settings-menu-button'));
 }
 
+function getFinancialMenuButton() {
+  return Selector(dataTestIdSelector('header__financial-menu__button'));
+}
+
 function getHelpButton() {
   return Selector(dataTestIdSelector('header__help-menu-button'));
 }
@@ -262,11 +266,13 @@ test.page(
     showHelpMenu: true,
     showNotifications: true,
     showUserMenu: true,
+    showBudget: true,
   }),
 )('renders basic elements', async t => {
   await t.expect(getHeader().exists).ok('header is missing');
   await t.expect(getSelect().exists).ok('select is missing');
   await t.expect(getBreadcrumbs().exists).ok('breadcrumbs is missing');
+  await t.expect(getFinancialMenuButton().exists).ok('budget is missing');
   await t.expect(getSettingsButton().exists).ok('settings button is missing');
   await t.expect(getHelpButton().exists).ok('help button is missing');
   await t.expect(getNotificationButton().exists).ok('notification button is missing');
@@ -281,11 +287,13 @@ test.page(
     showHelpMenu: false,
     showNotifications: false,
     showUserMenu: false,
+    showBudget: false,
   }),
 )('renders with hidden basic elements', async t => {
   await t.expect(getSelect().exists).notOk('select is present');
   await t.expect(getBreadcrumbs().exists).notOk('breadcrumbs is present');
   await t.expect(getSettingsButton().exists).notOk('settings button is present');
+  await t.expect(getFinancialMenuButton().exists).notOk('budget is present');
   await t.expect(getHelpButton().exists).notOk('help button is present');
   await t.expect(getNotificationButton().exists).notOk('notification button is present');
   await t.expect(getUserMenuButton().exists).notOk('user menu is present');

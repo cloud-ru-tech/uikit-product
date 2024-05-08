@@ -1,5 +1,5 @@
+import { KebabSVG } from '@sbercloud/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
-import { KebabSVG } from '@snack-uikit/icons';
 import { Droplist } from '@snack-uikit/list';
 
 import { stopPropagationClick } from '../../../utils';

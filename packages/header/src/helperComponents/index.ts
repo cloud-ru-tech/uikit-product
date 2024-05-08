@@ -8,3 +8,4 @@ export * from './Select';
 export * from './SelectMenu';
 export * from './InvitePopover';
 export * from './PinnedCard';
+export * from './FinancialMenu';

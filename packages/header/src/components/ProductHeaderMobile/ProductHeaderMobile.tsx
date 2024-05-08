@@ -176,6 +176,7 @@ export function ProductHeaderMobile({
       });
 
       items.push({
+        type: 'group',
         divider: true,
         items: [],
       });
@@ -214,6 +215,7 @@ export function ProductHeaderMobile({
         });
 
         items.push({
+          type: 'group',
           divider: true,
           items: [],
         });
@@ -253,6 +255,7 @@ export function ProductHeaderMobile({
     if (visibleSettings && visibleSettings.length > 0) {
       items.push({
         divider: true,
+        type: 'group',
         items: visibleSettings.map(setting => ({
           'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
           content: {

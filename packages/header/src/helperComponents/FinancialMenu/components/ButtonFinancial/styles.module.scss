@@ -1,0 +1,56 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.button {
+  display: flex;
+  align-items: center;
+  padding: 0 $dimension-1m;
+  gap: $dimension-025m;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  height: $dimension-5m;
+  color: $sys-neutral-text-light;
+  flex-shrink: 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  outline-offset: 0;
+  border-radius: $dimension-050m;
+
+  @include composite-var($sans-label-m);
+
+  &:hover {
+    color: $sys-neutral-accent-hovered;
+  }
+
+  &:focus-visible {
+    @include outline-var($container-focused-s);
+    color: $sys-neutral-accent-hovered;
+    outline-color: $sys-available-complementary;
+  }
+
+  &:active {
+    color: $sys-neutral-accent-pressed;
+  }
+
+  &[data-status='attention'] {
+    color: $sys-red-accent-default;
+
+    &:hover {
+      color: $sys-red-accent-hovered;
+    }
+
+    &:focus-visible {
+      color: $sys-red-accent-hovered;
+    }
+
+    &:active {
+      color: $sys-red-accent-pressed;
+    }
+  }
+}
+
+.label {
+  white-space: nowrap;
+}

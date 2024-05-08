@@ -1,15 +1,17 @@
 import { ReactElement, useCallback, useEffect, useMemo, useState } from 'react';
 
+import { QuestionSVG, SettingsSVG } from '@sbercloud/uikit-product-icons';
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { ButtonFunction } from '@snack-uikit/button';
-import { QuestionSVG, SettingsSVG } from '@snack-uikit/icons';
 import { Droplist } from '@snack-uikit/list';
 
 import {
   CloudRuLogo,
   DrawerMenuDesktop,
   DrawerMenuProps,
+  FinancialMenu,
+  FinancialMenuProps,
   HeaderLayout,
   HeaderLayoutProps,
   NotificationsPopover,
@@ -64,6 +66,7 @@ export type ProductHeaderProps = WithSupportProps<
     settings?: SettingOption[];
     onHelpMenuClick?(): void;
     notifications?: NotificationsProps;
+    financialMenu?: FinancialMenuProps;
     userMenu?: Pick<
       UserMenuProps,
       | 'user'
@@ -102,6 +105,7 @@ export function ProductHeader({
   onOrganizationAdd,
 
   pagePath,
+  financialMenu,
   settings,
   onHelpMenuClick,
   notifications,
@@ -187,6 +191,8 @@ export function ProductHeader({
         }
         toolbar={
           <>
+            {financialMenu && <FinancialMenu {...financialMenu} />}
+
             {visibleSettings && (
               <Droplist
                 size='s'

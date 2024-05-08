@@ -1,9 +1,9 @@
 import throttle from 'lodash.throttle';
 import { MouseEvent, useMemo, useRef, useState } from 'react';
 
+import { NightSVG, PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { useEventHandler, useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
-import { NightSVG, PlaceholderSVG } from '@snack-uikit/icons';
 
 import { ProductHeaderProps } from '../components/ProductHeader';
 import { textProvider, Texts } from '../helpers';
