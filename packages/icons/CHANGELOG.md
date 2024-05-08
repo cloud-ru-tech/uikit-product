@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.4.0 (2024-05-08)
+
+
+### Features
+
+* **[PDS-191](https://jira.sbercloud.tech/browse/PDS-191):** add ref to icons ([adcbcfd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/adcbcfdc0e1aba7507990070c43b93843f323736))
+
+
+
+
+
 # 6.3.0 (2024-04-24)
 
 
