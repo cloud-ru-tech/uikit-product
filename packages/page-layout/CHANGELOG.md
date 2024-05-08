@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.2 (2024-05-08)
+
+
+### Bug Fixes
+
+* **FF-0000:** page-services height setter ([f01e235](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f01e2356320a05a96bf6d0aa6fa174dd2315e4ca))
+
+
+
+
+
 ## 0.5.1 (2024-05-02)
 
 
