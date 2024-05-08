@@ -29,6 +29,7 @@ module.exports = {
   svgProps: {
     fill: 'inherit',
     'data-test-id': '{testId}',
+    ref: '{ref}',
   },
   typescript: true,
 };

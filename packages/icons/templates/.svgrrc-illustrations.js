@@ -23,6 +23,7 @@ module.exports = {
   svgProps: {
     fill: 'none',
     'data-test-id': '{testId}',
+    ref: '{ref}',
   },
   typescript: true,
 };

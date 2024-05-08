@@ -27,7 +27,7 @@ const template =
       style?: React.CSSProperties;
     }
 
-    const ${componentName} = (${componentProp}): React.ReactElement | null => {
+    const ${componentName} = React.forwardRef((${componentProp}, ref: React.Ref<SVGSVGElement>) => {
       props.width = undefined;
       props.height = undefined;
       
@@ -45,7 +45,7 @@ const template =
       }
 
       return ${jsx};
-    }
+    })
     
     ${exports}
     `;

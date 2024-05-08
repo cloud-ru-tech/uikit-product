@@ -56,7 +56,7 @@
     "compile": "npm run build:svgs-inherit && npm run build:svgs-color && npm run build:svgs-illustrations && npm run build:sprite-icons"
   },
   "dependencies": {
-    "@snack-uikit/icons": "0.20.1"
+    "@snack-uikit/icons": "0.21.0"
   },
   "devDependencies": {
     "@sbercloud/ft-download-file": "1.1.1",

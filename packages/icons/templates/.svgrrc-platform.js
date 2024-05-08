@@ -15,6 +15,7 @@ module.exports = {
   },
   svgProps: {
     'data-test-id': '{testId}',
+    ref: '{ref}',
   },
   typescript: true,
 };
