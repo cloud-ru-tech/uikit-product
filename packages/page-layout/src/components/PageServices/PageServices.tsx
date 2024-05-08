@@ -36,8 +36,8 @@ export function PageServices({
       const observer = new ResizeObserver(entities =>
         entities.forEach(entity => {
           if (entity.target === container) {
-            const height = entity.target.clientHeight;
-            setHeight(height);
+            const [{ blockSize }] = entity.contentBoxSize;
+            setHeight(Math.floor(blockSize));
           }
         }),
       );
