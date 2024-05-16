@@ -11,6 +11,7 @@ import {
   BUTTON_SECONDARY_VARIANT,
   ButtonPrimaryVariant,
   ButtonSecondaryVariant,
+  DefaultSubHeader,
   PageForm,
   PageFormProps,
 } from '../src/components';
@@ -24,6 +25,7 @@ const Template: StoryFn<
   PageFormProps & {
     showPrefix: boolean;
     showFooter: boolean;
+    showSubheader: boolean;
     showSecondaryButton: boolean;
     showAdditionalButton: boolean;
     buttonPrimaryVariant: ButtonPrimaryVariant;
@@ -40,10 +42,12 @@ const Template: StoryFn<
   buttonPrimaryVariant,
   buttonSecondaryVariant,
   showButtonTooltip,
+  showSubheader,
   ...args
 }) => (
   <PageForm
     {...args}
+    subHeader={showSubheader ? args.subHeader : undefined}
     prefix={showPrefix ? prefix : undefined}
     footer={
       showFooter
@@ -102,6 +106,14 @@ pageForm.args = {
   showSecondaryButton: true,
   showAdditionalButton: true,
   showButtonTooltip: false,
+  showSubheader: true,
+  subHeader: (
+    <DefaultSubHeader
+      label={'Label'}
+      labelTooltip={'Label tooltip'}
+      value={{ content: 'Connect your local component with unique' }}
+    />
+  ),
 };
 
 pageForm.argTypes = {
@@ -122,6 +134,8 @@ pageForm.argTypes = {
   showSecondaryButton: { name: '[Stories]: show footer -> button secondary', if: { arg: 'showFooter', eq: true } },
   showAdditionalButton: { name: '[Stories]: show footer -> button additional', if: { arg: 'showFooter', eq: true } },
   showButtonTooltip: { name: '[Stories]: show button tooltips', if: { arg: 'showFooter', eq: true } },
+  showSubheader: { name: '[Stories]: show subheader' },
+  subHeader: { table: { disable: true } },
   prefix: { table: { disable: true } },
   footer: { table: { disable: true } },
 };

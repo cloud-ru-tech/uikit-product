@@ -35,7 +35,7 @@ export type ButtonPrimaryVariant = ValueOf<typeof BUTTON_PRIMARY_VARIANT>;
 export type ButtonSecondaryVariant = ValueOf<typeof BUTTON_SECONDARY_VARIANT>;
 
 export type PageFormProps = PropsWithChildren<
-  Pick<HeadlineProps, 'title'> & {
+  Pick<HeadlineProps, 'title' | 'subHeader'> & {
     prefix?: ReactNode;
     className?: string;
     footer?: {
@@ -54,7 +54,7 @@ export type PageFormProps = PropsWithChildren<
   }
 >;
 
-export function PageForm({ children, title, className, prefix, footer }: PageFormProps) {
+export function PageForm({ children, title, subHeader, className, prefix, footer }: PageFormProps) {
   const { languageCode } = useLanguage();
 
   const PrimaryButton = useButtonWithTooltip({ Button: ButtonFilled, tooltip: footer?.buttonPrimary.tooltip });
@@ -66,7 +66,7 @@ export function PageForm({ children, title, className, prefix, footer }: PageFor
       <div className={styles.form}>
         <div className={styles.headline}>
           <div className={styles.prefix}>{prefix}</div>
-          <Headline title={title} />
+          <Headline title={title} subHeader={subHeader} />
         </div>
 
         <div>{children}</div>
