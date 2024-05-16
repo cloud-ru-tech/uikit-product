@@ -1,9 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { FavouriteInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
-
-const { GREY, BLACK_ALFA, SUNNY_YELLOW } = EXPORT_VARS;
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 export const MarkContainer = styled.div`
   display: flex;
@@ -21,17 +18,14 @@ export const IconWrapper = styled.div`
   cursor: pointer;
 
   border-radius: 100%;
-  border: 1px solid var(${GREY[25]});
+  border: 1px solid ${themeVars.sys.neutral.decorDefault};
+  color: ${themeVars.sys.neutral.decorActivated};
+
+  &[data-selected] {
+    color: ${themeVars.sys.yellow.accentDefault};
+  }
 
   &[data-disabled] {
     pointer-events: none;
-  }
-`;
-
-export const FavouriteInterfaceSVGStyled = styled(FavouriteInterfaceSVG)`
-  fill: var(${BLACK_ALFA[16]});
-
-  &[data-selected] {
-    fill: var(${SUNNY_YELLOW[100]});
   }
 `;

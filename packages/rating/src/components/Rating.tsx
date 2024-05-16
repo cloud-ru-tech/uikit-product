@@ -1,6 +1,7 @@
+import { StarFilledSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { FavouriteInterfaceSVGStyled, IconWrapper, MarkContainer } from './styled';
+import * as S from './styled';
 
 export type RatingProps = WithSupportProps<{
   value?: number;
@@ -25,12 +26,17 @@ export function Rating({
   const marksArray = Array.from({ length: elements }, (_, index) => index + 1);
 
   return (
-    <MarkContainer {...extractSupportProps(rest)} className={className}>
+    <S.MarkContainer {...extractSupportProps(rest)} className={className}>
       {marksArray.map(mark => (
-        <IconWrapper key={mark} onClick={() => handleMarkClick(mark)} data-disabled={disabled || undefined}>
-          <FavouriteInterfaceSVGStyled size={28} data-selected={(value && value >= mark) || undefined} />
-        </IconWrapper>
+        <S.IconWrapper
+          key={mark}
+          onClick={() => handleMarkClick(mark)}
+          data-disabled={disabled || undefined}
+          data-selected={(value && value >= mark) || undefined}
+        >
+          <StarFilledSVG />
+        </S.IconWrapper>
       ))}
-    </MarkContainer>
+    </S.MarkContainer>
   );
 }
