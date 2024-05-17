@@ -1,4 +1,4 @@
-import { AnchorHTMLAttributes, MouseEvent, MouseEventHandler } from 'react';
+import { AnchorHTMLAttributes, MouseEvent, MouseEventHandler, ReactNode } from 'react';
 
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 
@@ -8,6 +8,7 @@ export type SidebarItem = {
   'data-test-id'?: string;
   onClick?(e: MouseEvent<HTMLElement>): void;
   href?: string;
+  afterContent?: ReactNode;
 };
 
 export type Icon = IconPredefinedProps['icon'];

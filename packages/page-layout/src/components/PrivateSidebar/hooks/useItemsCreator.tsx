@@ -69,7 +69,7 @@ export function useBottomPinnedContent(documentation?: Documentation): ItemProps
 export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | number) => void): ItemProps[] {
   return useMemo(
     () =>
-      items.map(({ id, label, href, onClick }): ItemProps => {
+      items.map(({ id, label, href, onClick, afterContent }): ItemProps => {
         const clickHandler = (event: MouseEvent<HTMLElement>) => {
           onClick?.(event);
           onSelect?.(id);
@@ -86,6 +86,7 @@ export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | n
               )
             : undefined,
           onClick: href ? undefined : clickHandler,
+          afterContent,
         };
       }),
     [items, onSelect],
