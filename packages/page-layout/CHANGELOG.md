@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2024-05-17)
+
+
+### Features
+
+* **[PDS-238](https://jira.sbercloud.tech/browse/PDS-238):** add subheader to PageForm ([0fbe968](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0fbe96864ef0fed7779bd0224f478074280cf40d))
+
+
+
+
+
 ## 0.5.3 (2024-05-08)
 
 ### Only dependencies have been changed
