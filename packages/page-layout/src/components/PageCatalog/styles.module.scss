@@ -10,3 +10,9 @@
   max-width: min(100%, 1248px);
   min-width: 992px;
 }
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
