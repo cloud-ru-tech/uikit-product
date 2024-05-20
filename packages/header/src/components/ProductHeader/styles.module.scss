@@ -4,6 +4,7 @@
 .breadcrumbs {
   padding: $dimension-1m;
   margin: calc(0px - $dimension-1m) 0;
+  min-width: 0;
 }
 
 .select {

@@ -177,6 +177,7 @@ export function ProductHeader({
               <Breadcrumbs
                 className={styles.breadcrumbs}
                 items={pagePath}
+                inactiveLastItem
                 separator='/'
                 size='s'
                 data-test-id='header__breadcrumbs'

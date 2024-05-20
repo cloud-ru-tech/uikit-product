@@ -306,7 +306,12 @@ export const ARGS: StoryProps = {
   pagePath: [
     { id: 'home', label: 'Home', onClick: () => {} },
     { id: 'level-2', label: 'Level 2', onClick: () => {} },
-    { id: 'level-3', label: 'Level 3', icon: PlaceholderSVG, onClick: () => {} },
+    {
+      id: 'level-3',
+      label: 'Super-puper-duper-hyper-xxl-proMax crumb level 3',
+      icon: PlaceholderSVG,
+      onClick: () => {},
+    },
   ],
 
   showSettings: true,
