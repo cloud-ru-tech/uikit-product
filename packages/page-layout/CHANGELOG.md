@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.1 (2024-05-21)
+
+
+### Bug Fixes
+
+* **[FF-4717](https://jira.sbercloud.tech/browse/FF-4717):** make content of page catalog take the full space of a container ([9d42d4a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d42d4add5e3b7154c4068ebfddd9f0ea2413eb6))
+
+
+
+
+
 # 0.6.0 (2024-05-17)
 
 

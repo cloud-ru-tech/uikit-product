@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-05-21)
+
+
+### Features
+
+* **[FF-4717](https://jira.sbercloud.tech/browse/FF-4717):** move to snack ([58ad02b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/58ad02ba19e7ea1831843ef32f0864b629e90757))
+
+
+
+
+
 ## 0.4.18 (2024-05-08)
 
 ### Only dependencies have been changed
