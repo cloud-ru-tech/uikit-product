@@ -7,6 +7,7 @@ import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { DrawerCustom } from '@snack-uikit/drawer';
+import { HotSpot } from '@snack-uikit/hot-spot';
 import { ChevronDownSVG, ChevronUpSVG } from '@snack-uikit/icons';
 import { Link } from '@snack-uikit/link';
 import { Droplist } from '@snack-uikit/list';
@@ -208,14 +209,15 @@ export function DrawerMenuDesktop({
                   </div>
 
                   {visibleFooterLinks.map(link => (
-                    <ButtonFunction
-                      {...link}
-                      key={link.label}
-                      iconPosition='before'
-                      size='m'
-                      onClick={wrappedClick(link)}
-                      data-test-id={`header__drawer-menu__footer-link-${extractAppNameFromId(link.id)}`}
-                    />
+                    <HotSpot {...link.hotSpot} key={link.label} enabled={link?.hotSpot?.enabled ?? false}>
+                      <ButtonFunction
+                        {...link}
+                        iconPosition='before'
+                        size='m'
+                        onClick={wrappedClick(link)}
+                        data-test-id={`header__drawer-menu__footer-link-${extractAppNameFromId(link.id)}`}
+                      />
+                    </HotSpot>
                   ))}
                 </div>
               )}

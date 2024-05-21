@@ -1,6 +1,7 @@
 import { JSXElementConstructor, MouseEvent, ReactElement } from 'react';
 
 import { CardServiceSmallProps, CardSuggestProps } from '@sbercloud/uikit-product-card-predefined';
+import { HotSpotProps } from '@snack-uikit/hot-spot';
 import { BaseItemProps } from '@snack-uikit/list';
 
 export type { NotificationsProps } from './helperComponents';
@@ -72,6 +73,7 @@ export type FooterLink = {
   href?: string;
   disabled?: boolean;
   hidden?: boolean;
+  hotSpot?: HotSpotProps;
 };
 
 export type Platform = {

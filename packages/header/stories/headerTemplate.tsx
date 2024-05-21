@@ -6,6 +6,7 @@ import { UPDATE_DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 
 import { DetalisationSVG, MoneySVG, UsersSVG } from '@sbercloud/uikit-product-icons';
 import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
+import { Tooltip } from '@snack-uikit/tooltip';
 
 import { Header, HeaderProps } from '../src';
 import {
@@ -392,7 +393,22 @@ export const ARGS: StoryProps = {
     selectedProduct: DEFAULT_PRODUCT,
     onProductChange: () => {},
     footerLinks: [
-      { id: 'billing', icon: <PlaceholderSVG />, label: 'Контроль затрат', onClick: () => {} },
+      {
+        id: 'billing',
+        icon: <PlaceholderSVG />,
+        label: 'Контроль затрат',
+        onClick: () => {},
+        hotSpot: {
+          enabled: true,
+          placement: 'right',
+          offsetX: 15,
+          dotRender: dot => (
+            <Tooltip placement='bottom' tip={'Тут можно передать ReactNode и засунуть любой компонент'} trigger='click'>
+              {dot}
+            </Tooltip>
+          ),
+        },
+      },
       { id: 'support', icon: <EmailSVG />, label: 'Поддержка', onClick: () => {} },
       { id: 'administration', icon: <SettingsSVG />, label: 'Администрирование', onClick: () => {} },
       { id: 'users', icon: <PlaceholderSVG />, label: 'Пользователи', onClick: () => {} },

@@ -38,6 +38,7 @@
     "@snack-uikit/divider": "3.0.2",
     "@snack-uikit/drawer": "0.6.14",
     "@snack-uikit/dropdown": "0.2.0",
+    "@snack-uikit/hot-spot": "0.1.1",
     "@snack-uikit/icons": "0.20.1",
     "@snack-uikit/link": "0.11.4",
     "@snack-uikit/list": "0.9.1",
