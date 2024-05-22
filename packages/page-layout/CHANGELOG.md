@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2024-05-22)
+
+
+### Features
+
+* **[FF-4716](https://jira.sbercloud.tech/browse/FF-4716):** add custom labels for PageForm ([211244e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/211244eef9a2227874c43c9c63fd2d635d3c6d82))
+
+
+
+
+
 # 0.7.0 (2024-05-22)
 
 
