@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2024-05-22)
+
+
+### Features
+
+* **FF-0000:** add afterContent prop into sidebar items ([ab45e97](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ab45e97fa34808378a864cb04f8e0e62c32ff7ea))
+
+
+
+
+
 ## 0.6.1 (2024-05-21)
 
 
