@@ -39,12 +39,26 @@ export type PageFormProps = PropsWithChildren<
     prefix?: ReactNode;
     className?: string;
     footer?: {
-      buttonPrimary: {
-        variant: ButtonPrimaryVariant;
+      buttonPrimary: (
+        | {
+            variant: ButtonPrimaryVariant;
+          }
+        | {
+            variant: 'custom';
+            label: string;
+          }
+      ) & {
         tooltip?: TooltipProps;
       } & Omit<ButtonFilledProps, 'label'>;
-      buttonSecondary?: {
-        variant: ButtonSecondaryVariant;
+      buttonSecondary?: (
+        | {
+            variant: ButtonSecondaryVariant;
+          }
+        | {
+            variant: 'custom';
+            label: string;
+          }
+      ) & {
         tooltip?: TooltipProps;
       } & Omit<ButtonOutlineProps, 'label'>;
       buttonAdditional?: ButtonSimpleProps & {
@@ -77,7 +91,11 @@ export function PageForm({ children, title, subHeader, className, prefix, footer
               <SecondaryButton
                 size='m'
                 {...footer.buttonSecondary}
-                label={textProvider(languageCode, footer.buttonSecondary.variant as unknown as Texts)}
+                label={
+                  footer.buttonSecondary.variant === 'custom'
+                    ? footer.buttonSecondary.label
+                    : textProvider(languageCode, footer.buttonSecondary.variant as unknown as Texts)
+                }
               />
             )}
 
@@ -87,7 +105,11 @@ export function PageForm({ children, title, subHeader, className, prefix, footer
               <PrimaryButton
                 size='m'
                 {...footer.buttonPrimary}
-                label={textProvider(languageCode, footer.buttonPrimary.variant as unknown as Texts)}
+                label={
+                  footer.buttonPrimary.variant === 'custom'
+                    ? footer.buttonPrimary.label
+                    : textProvider(languageCode, footer.buttonPrimary.variant as unknown as Texts)
+                }
               />
             </div>
           </div>
