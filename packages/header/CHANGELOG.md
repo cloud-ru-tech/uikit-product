@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.12.0 (2024-05-23)
+
+
+### Features
+
+* **[CORESERV-4247](https://jira.sbercloud.tech/browse/CORESERV-4247):** add hotspot to footerLinks ([79dfeb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/79dfeb9113c6e42e6ba786a33849863e2cb6fa3b))
+
+
+
+
+
 ## 2.11.6 (2024-05-21)
 
 
