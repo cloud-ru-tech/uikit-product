@@ -1,0 +1,6 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.skeleton {
+  @include composite-var($sans-body-m);
+  padding: 0 4px;
+}
