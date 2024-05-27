@@ -1,0 +1,95 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.title {
+  @include composite-var($sans-title-s);
+
+  color: $sys-neutral-text-main;
+}
+
+.dataWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.dataRow {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px;
+  width: 100%;
+}
+
+.text {
+  @include composite-var($light-label-m);
+
+  overflow: hidden;
+}
+
+.created {
+  color: $sys-neutral-text-light;
+}
+
+.available {
+  color: $sys-neutral-text-support;
+}
+
+.quotaCard {
+  box-sizing: border-box;
+  display: flex;
+  width: 240px;
+  min-width: 240px;
+  max-width: 240px;
+  height: 88px;
+  min-height: 88px;
+  max-height: 88px;
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+
+  border-radius: 4px;
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: $sys-neutral-decor-default;
+
+  background-color: $sys-neutral-background1-level;
+
+  &[data-exceeded] {
+    border-color: $sys-red-decor-default;
+    background-color: $sys-red-background1-level;
+
+    .text {
+      color: $sys-red-text-support;
+    }
+  }
+}
+
+.noDataWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.noData {
+  @include composite-var($sans-body-s);
+  text-align: center;
+  color: $sys-neutral-text-support;
+}
+
+.retryButton {
+  svg {
+    transform: rotate(-360deg);
+    transition: transform 0.5s;
+  }
+
+  &:active {
+    svg {
+      transform: rotate(0deg);
+      transition-duration: 0s;
+    }
+  }
+}

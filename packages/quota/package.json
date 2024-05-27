@@ -1,0 +1,46 @@
+{
+  "name": "@sbercloud/uikit-product-quota",
+  "title": "Quota",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/quota",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/quota"
+  },
+  "author": "Nikita Ershov <niershov@cloud.ru>",
+  "contributors": [
+    "Nikita Ershov <niershov@cloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@snack-uikit/button": "0.17.1",
+    "@snack-uikit/link": "0.11.9",
+    "@snack-uikit/tooltip": "0.13.3",
+    "@snack-uikit/truncate-string": "0.4.15",
+    "@snack-uikit/skeleton": "0.3.4",
+    "@snack-uikit/scroll": "0.6.0",
+    "@sbercloud/uikit-product-button-predefined": "0.0.0",
+    "@sbercloud/uikit-product-icons": "6.4.0",
+    "@sbercloud/uikit-product-utils": "3.3.1",
+    "classnames": "2.3.2"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@snack-uikit/locale": "*"
+  }
+}
