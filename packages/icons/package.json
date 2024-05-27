@@ -48,10 +48,11 @@
     "build:platform-icons": "rimraf src/components/platform-icons && svgr --config-file templates/.svgrrc-platform.js -d src/components/platform-icons svgs/color/platform",
     "build:avatarPlaceholder-icons": "rimraf src/components/avatarPlaceholder-icons && svgr -d src/components/avatarPlaceholder-icons svgs/inherit/avatarPlaceholder --config-file templates/.svgrrc.js",
     "build:color-icons": "rimraf src/components/color-icons && svgr --config-file templates/.svgrrc-color.js -d src/components/color-icons svgs/color/other",
+    "build:flag-icons": "rimraf src/components/flag-icons && svgr --config-file templates/.svgrrc-color.js -d src/components/flag-icons svgs/color/flags",
     "build:sprite-icons-all": "npm run build:interface-icons-product",
     "build:sprite-icons": "npm run validate:icons && npm run fix:icons && npm run build:sprite-icons-all && npm run create-export-index-file && npm run create-sprite",
     "build:svgs-illustrations": "npm run build:illustrations:evolution && npm run build:illustrations:platforms && npm run build:illustrations:enterprise && npm run build:illustrations:mlspace",
-    "build:svgs-color": "npm run build:color-icons && npm run build:logo-icons && npm run build:platform-icons",
+    "build:svgs-color": "npm run build:color-icons && npm run build:logo-icons && npm run build:platform-icons && npm run build:flag-icons",
     "build:svgs-inherit": "npm run build:extension-icons && npm run build:services-icons && npm run build:display-icons && npm run build:interface-icons-old && npm run build:avatarPlaceholder-icons",
     "compile": "npm run build:svgs-inherit && npm run build:svgs-color && npm run build:svgs-illustrations && npm run build:sprite-icons"
   },
