@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.5.0 (2024-05-29)
+
+
+### Features
+
+* **[LK-4125](https://jira.sbercloud.tech/browse/LK-4125):** added flag icons ([e3840c2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3840c22ab3b127d72e80c1b3166f0a97db75f79))
+
+
+
+
+
 # 6.4.0 (2024-05-08)
 
 
