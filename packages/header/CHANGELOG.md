@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.13.0 (2024-05-29)
+
+
+### Features
+
+* **[PDS-150](https://jira.sbercloud.tech/browse/PDS-150):** financial menu added ([8b92f54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8b92f54b1d2b7690c560477a09b2438b31ef5488))
+
+
+
+
+
 ## 2.12.1 (2024-05-29)
 
 ### Only dependencies have been changed

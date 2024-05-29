@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-header",
   "title": "Header",
-  "version": "2.12.1",
+  "version": "2.13.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -54,10 +54,10 @@
     "@snack-uikit/truncate-string": "0.4.15",
     "@snack-uikit/typography": "0.6.2",
     "classnames": "2.3.2",
-    "uncontrollable": "8.0.4",
     "lodash.debounce": "4.0.8",
     "lodash.throttle": "4.1.1",
-    "react-transition-state": "2.1.1"
+    "react-transition-state": "2.1.1",
+    "uncontrollable": "8.0.4"
   },
   "devDependencies": {
     "@types/lodash.debounce": "4.0.9",
