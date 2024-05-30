@@ -4,6 +4,10 @@
   @include composite-var($sans-title-s);
 
   color: $sys-neutral-text-main;
+
+  overflow: hidden;
+
+  width: 100%;
 }
 
 .dataWrapper {
@@ -49,6 +53,7 @@
   gap: 4px;
 
   border-radius: 4px;
+  overflow: hidden;
 
   border-style: solid;
   border-width: 1px;

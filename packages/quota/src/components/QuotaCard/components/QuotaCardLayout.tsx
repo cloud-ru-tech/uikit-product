@@ -17,9 +17,9 @@ type QuotaCardLayoutProps = WithSupportProps<{
 export function QuotaCardLayout({ title, exceeded, loading, children, ...rest }: QuotaCardLayoutProps) {
   return (
     <div className={styles.quotaCard} data-exceeded={exceeded || undefined} {...extractSupportProps(rest)}>
-      <span className={styles.title}>
+      <div className={styles.title}>
         <TruncateString text={title} maxLines={1} />
-      </span>
+      </div>
 
       <WithSkeleton loading={loading} skeleton={<DataSkeleton />}>
         <div className={styles.dataWrapper}>{children}</div>
