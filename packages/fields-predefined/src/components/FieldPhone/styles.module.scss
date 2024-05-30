@@ -1,0 +1,9 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+
+.fieldPhone {
+  &[data-empty] {
+    input {
+      color: ste.$sys-neutral-text-disabled;
+    }
+  }
+}

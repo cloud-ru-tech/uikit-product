@@ -1,0 +1,13 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.wrapper {
+  resize: horizontal;
+
+  overflow: hidden;
+
+  padding: 16px;
+
+  background: styles-theme-variables.$sys-neutral-background1-level;
+  border: 1px solid styles-theme-variables.$sys-neutral-decor-default;
+  width: max-content;
+}
