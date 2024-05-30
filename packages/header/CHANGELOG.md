@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.13.1 (2024-05-30)
+
+
+### Bug Fixes
+
+* **[FF-5004](https://jira.sbercloud.tech/browse/FF-5004):** clickable platform crumb ([751c7df](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/751c7df14e6dc55c2730e2466c30c3e7e402d104))
+
+
+
+
+
 # 2.13.0 (2024-05-29)
 
 
