@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.6.0 (2024-05-31)
+
+
+### Features
+
+* **[ENTDEV-1390](https://jira.sbercloud.tech/browse/ENTDEV-1390):** add anti-ddos service icon ([46cb7a8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/46cb7a89bc2299304e96744c4904412c74bc40f0))
+
+
+
+
+
 # 6.5.0 (2024-05-29)
 
 
