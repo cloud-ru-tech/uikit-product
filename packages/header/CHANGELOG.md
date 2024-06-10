@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.13.4 (2024-06-10)
+
+
+### Bug Fixes
+
+* **[FF-5062](https://jira.sbercloud.tech/browse/FF-5062):** update breadcrumbs dependency ([5c58ea5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5c58ea59d47a5d7c86bc075ac92eb581c73d716b))
+
+
+
+
+
 ## 2.13.3 (2024-06-07)
 
 
