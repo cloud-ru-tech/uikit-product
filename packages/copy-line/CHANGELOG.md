@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-06-11)
+
+
+### Features
+
+* **PDS-0000:** change content prop to ReactNode ([b62243b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b62243b600d498e450dabfb76d1eeb96c4e141e4))
+
+
+
+
+
 # 0.2.0 (2024-05-02)
 
 
