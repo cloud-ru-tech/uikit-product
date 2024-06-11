@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { MouseEventHandler, useEffect, useRef, useState } from 'react';
+import { MouseEventHandler, ReactNode, useEffect, useRef, useState } from 'react';
 
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -8,15 +8,17 @@ import { CheckSVG, CopySVG } from '@snack-uikit/icons';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import styles from './styles.module.scss';
+import { isStringOrNumber } from './utils';
 
 export type CopyLineProps = WithSupportProps<{
-  content: string | number;
+  content: ReactNode;
   valueToCopy?: string | number;
   className?: string;
   onClick?: MouseEventHandler;
 }>;
 
-export function CopyLine({ content, valueToCopy = content, className, onClick, ...rest }: CopyLineProps) {
+export function CopyLine({ content, className, valueToCopy: valueToCopyProp, onClick, ...rest }: CopyLineProps) {
+  const valueToCopy = valueToCopyProp ?? (isStringOrNumber(content) ? String(content) : '');
   const [isChecked, setIsCheckedOpen] = useState(false);
   const timerId = useRef<NodeJS.Timeout>();
   const openChecked = () => setIsCheckedOpen(true);
@@ -47,13 +49,13 @@ export function CopyLine({ content, valueToCopy = content, className, onClick, .
       role='presentation'
       {...extractSupportProps(rest)}
     >
-      <TruncateString text={String(content)} maxLines={1} />
+      {isStringOrNumber(content) ? <TruncateString text={String(content)} maxLines={1} /> : content}
 
       <ButtonFunction
         data-test-id='button-copy-value'
         type='button'
         icon={isChecked ? <CheckSVG /> : <CopySVG />}
-        size='s'
+        size='xs'
         className={styles.copyButton}
       />
     </div>

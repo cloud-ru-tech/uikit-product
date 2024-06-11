@@ -1,5 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 
+import { Link } from '@snack-uikit/link';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
@@ -14,12 +16,31 @@ export default meta;
 
 type StoryProps = CopyLineProps & {
   differentValueToCopy: boolean;
+  contentType: 'string' | 'link';
 };
 
-function Template({ differentValueToCopy, valueToCopy, ...args }: StoryProps) {
+function Template({ differentValueToCopy, valueToCopy, contentType, content, ...args }: StoryProps) {
   return (
     <div className={styles.wrapper}>
-      <CopyLine {...args} valueToCopy={differentValueToCopy ? valueToCopy : undefined} />
+      <CopyLine
+        {...args}
+        content={
+          contentType === 'string' ? (
+            content
+          ) : (
+            <Link
+              text={content as string}
+              href='#'
+              onClick={e => {
+                e.preventDefault();
+                e.stopPropagation();
+              }}
+              size='m'
+            />
+          )
+        }
+        valueToCopy={differentValueToCopy ? valueToCopy : undefined}
+      />
     </div>
   );
 }
@@ -30,9 +51,20 @@ copyLine.args = {
   content: 'Content truncate 1 line',
   valueToCopy: 'different value to copy',
   differentValueToCopy: false,
+  contentType: 'string',
 };
 
 copyLine.argTypes = {
+  content: {
+    type: 'string',
+  },
+  contentType: {
+    name: '[STORIES]: demo content type',
+    options: ['string', 'link'],
+    control: {
+      type: 'radio',
+    },
+  },
   valueToCopy: { table: { disable: true } },
   differentValueToCopy: {
     name: '[STORIES]: different value to copy',

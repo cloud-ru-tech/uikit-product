@@ -30,7 +30,7 @@
   "dependencies": {
     "@sbercloud/ft-copy-to-clipboard": "3.0.1",
     "@sbercloud/uikit-product-utils": "3.3.1",
-    "@snack-uikit/button": "0.17.0",
+    "@snack-uikit/button": "0.17.2",
     "@snack-uikit/icons": "0.20.1",
     "@snack-uikit/truncate-string": "0.4.10",
     "classnames": "2.3.2"
