@@ -18,6 +18,8 @@ export function Select({
   onProjectChange,
   projectAddButton: projectAddButtonProp,
   projectsLoading,
+  projectsSearchActive,
+  onProjectsSearchActiveChange,
   projectsEmptyState,
 
   platforms: platformsProp,
@@ -141,6 +143,8 @@ export function Select({
                 projects={projects}
                 selectedProject={selectedProject}
                 projectsLoading={projectsLoading}
+                projectsSearchActive={projectsSearchActive}
+                onProjectsSearchActiveChange={onProjectsSearchActiveChange}
                 onProjectChange={onProjectChange}
                 projectAddButton={projectAddButton}
                 projectsEmptyState={projectsEmptyState}
@@ -158,6 +162,7 @@ export function Select({
       }
       placement='bottom-start'
       data-test-id='header__select-menu'
+      triggerRef={navigateOutsideRef}
     >
       <div
         className={styles.select}
@@ -174,6 +179,8 @@ export function Select({
           open={isOpen}
           showIcon
           loading={projectsLoading}
+          nameClassName={styles.name}
+          entityClassName={styles.entity}
         />
       </div>
     </Dropdown>

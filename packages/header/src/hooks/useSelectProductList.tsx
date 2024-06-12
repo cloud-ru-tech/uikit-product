@@ -24,7 +24,9 @@ export function getSelectProductListProps({
         content: {
           option: item.name,
         },
-        beforeContent: item.logo ?? <Avatar size='xs' name={item.name} showTwoSymbols shape='square' />,
+        beforeContent: item.logo ?? (
+          <Avatar size='xs' name={item.name} showTwoSymbols shape='square' appearance='neutral' />
+        ),
         id: item.id,
 
         onClick: () => {

@@ -5,15 +5,31 @@
 .contentLayout {
   display: flex;
   align-items: center;
-  gap: $dimension-050m;
+  gap: $dimension-1m;
+  flex-shrink: 0;
+  width: 100%;
 }
 
-.project {
-  @include composite-var($sans-body-m);
-
-  color: $sys-neutral-text-light;
+.name,
+.entity {
   max-width: calc(2 * $dimension-10m);
   min-width: calc(2 * $dimension-7m);
+}
+
+.name {
+  @include composite-var($light-label-m);
+}
+
+.entity {
+  @include composite-var($light-label-s);
+}
+
+.textWrapper {
+  flex: 1;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .fixedColumnsWidth {
@@ -28,7 +44,7 @@
 
 .workspacesColumnWidth {
   width: fit-content;
-  min-width: 220px;
+  min-width: 228px;
 }
 
 .avatarSkeleton {

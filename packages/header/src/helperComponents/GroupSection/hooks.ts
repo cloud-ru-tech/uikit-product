@@ -1,41 +1,39 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import useTransition from 'react-transition-state';
+import { useUncontrolledProp } from 'uncontrollable';
 
 import { Item, ItemsGroup } from './types';
 
 type UseSearchProps = {
   groups: ItemsGroup<Item>[];
   searchable?: boolean;
+  active?: boolean;
+  onActiveChange?(value?: boolean): void;
 };
 
 function matchSearchString(value: string, search: string) {
   return value.trim().toLowerCase().includes(search.trim().toLowerCase());
 }
 
-export function useSearch({ groups, searchable }: UseSearchProps) {
+export function useSearch({ groups, searchable, active, onActiveChange }: UseSearchProps) {
   const [searchValue, setSearchValue] = useState('');
-  const [isSearchActive, setIsSearchActive] = useState(false);
+  const [isSearchActive, setIsSearchActive] = useUncontrolledProp<boolean>(active, false, onActiveChange);
   const searchRef = useRef<HTMLInputElement>(null);
   const searchIconTabIndex = isSearchActive ? -1 : undefined;
+  const closeSearchIconTabIndex = isSearchActive ? undefined : -1;
   const searchInputTabIndex = isSearchActive ? undefined : -1;
 
   const [animationState, toggle] = useTransition({
     mountOnEnter: true,
     unmountOnExit: true,
-    initialEntered: false,
+    initialEntered: isSearchActive,
     timeout: { enter: 300, exit: 300 },
   });
 
   useEffect(() => toggle(isSearchActive), [isSearchActive]);
 
   const handleActivateSearch = () => setIsSearchActive(true);
-  const handleSearchBlur = () => {
-    if (searchValue.length) return;
-
-    setTimeout(() => {
-      setIsSearchActive(false);
-    }, 0);
-  };
+  const handleDeactivateSearch = () => setIsSearchActive(false);
 
   const filteredGroups = useMemo(
     () =>
@@ -71,10 +69,11 @@ export function useSearch({ groups, searchable }: UseSearchProps) {
     setSearchValue,
     setIsSearchActive,
     handleActivateSearch,
-    handleSearchBlur,
+    handleDeactivateSearch,
     animationState,
     filteredGroups,
     searchIconTabIndex,
+    closeSearchIconTabIndex,
     searchInputTabIndex,
   };
 }

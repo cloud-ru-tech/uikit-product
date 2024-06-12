@@ -2,10 +2,9 @@ import cn from 'classnames';
 
 import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { Avatar } from '@snack-uikit/avatar';
 import { Divider } from '@snack-uikit/divider';
 import { ListProps } from '@snack-uikit/list';
-import { Skeleton, SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
+import { SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../helpers';
@@ -23,6 +22,8 @@ export type SelectProps = {
 
   projects?: ItemsGroup<Project>[];
   projectsLoading?: boolean;
+  projectsSearchActive?: boolean;
+  onProjectsSearchActiveChange?(value: boolean): void;
   selectedProject?: Project;
   onProjectChange?(value: Project): void;
   projectAddButton?: {
@@ -45,6 +46,8 @@ export type SelectProps = {
     onWorkspaceChange(value: Workspace): void;
     onWorkspaceAdd(): void;
     emptyState?: ListProps['noDataState'];
+    searchActive?: boolean;
+    onSearchActiveChange?(value: boolean): void;
   };
 
   onClose?(): void;
@@ -74,6 +77,8 @@ export function SelectMenu({
   projectsLoading,
   projectAddButton,
   projectsEmptyState,
+  projectsSearchActive,
+  onProjectsSearchActiveChange,
 
   platforms,
   selectedPlatform,
@@ -96,7 +101,7 @@ export function SelectMenu({
       {organizations && (
         <GroupSection
           className={fixedColumnWidth}
-          title={textProvider(languageCode, Texts.Organization)}
+          title={textProvider(languageCode, Texts.Organizations)}
           groups={[{ id: '1', items: organizations }]}
           truncateVariant='middle'
           onItemChange={val => onOrganizationChange?.(val, 'select')}
@@ -113,8 +118,11 @@ export function SelectMenu({
 
           <GroupSection
             className={projectColumnWidth}
-            title={textProvider(languageCode, Texts.Project)}
+            title={textProvider(languageCode, Texts.Projects)}
             searchable
+            searchActive={projectsSearchActive}
+            onSearchActiveChange={onProjectsSearchActiveChange}
+            searchPlaceholder={textProvider(languageCode, Texts.SearchProjectsPlaceholder)}
             groups={projects}
             truncateVariant='middle'
             onItemChange={onProjectChange}
@@ -143,7 +151,6 @@ export function SelectMenu({
           <GroupSection
             className={fixedColumnWidth}
             title={textProvider(languageCode, Texts.Platforms)}
-            last={!workspaces}
             groups={[{ id: '1', items: platforms }]}
             onItemChange={onPlatformChange}
             selectedItem={selectedPlatform}
@@ -172,7 +179,9 @@ export function SelectMenu({
             data-test-id='header__select-group-workspace'
             avatarAppearance='blue'
             searchable
-            last
+            searchActive={workspaces.searchActive}
+            onSearchActiveChange={workspaces.onSearchActiveChange}
+            searchPlaceholder={textProvider(languageCode, Texts.SearchWorkspacesPlaceholder)}
           />
         </>
       )}
@@ -184,11 +193,9 @@ const getIcon = (open: boolean) => (open ? <ChevronUpSVG size={16} /> : <Chevron
 
 function SelectMenuTriggerSkeleton() {
   return (
-    <div className={styles.contentLayout}>
-      <div className={styles.avatarSkeleton}>
-        <Skeleton />
-      </div>
-      <SkeletonText lines={1} className={styles.project} />
+    <div className={styles.textWrapper}>
+      <SkeletonText lines={1} className={styles.name} />
+      <SkeletonText lines={1} className={styles.entity} />
     </div>
   );
 }
@@ -199,29 +206,36 @@ export function SelectMenuTrigger({
   open,
   showIcon = true,
   loading,
+  nameClassName,
+  entityClassName,
 }: {
   selectedProject?: Project;
   selectedWorkspace?: Workspace;
   open: boolean;
   showIcon: boolean;
   loading?: boolean;
+  nameClassName?: string;
+  entityClassName?: string;
 }) {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const name = selectedWorkspace?.name ?? selectedProject?.name ?? '';
+  const entity =
+    (selectedWorkspace?.name && textProvider(languageCode, Texts.Workspace)) ||
+    (selectedProject?.name && textProvider(languageCode, Texts.Project)) ||
+    '';
 
   return (
     <WithSkeleton skeleton={<SelectMenuTriggerSkeleton />} loading={loading}>
       <div className={styles.contentLayout}>
-        <Avatar
-          size='xs'
-          name={name}
-          showTwoSymbols
-          shape='square'
-          appearance={selectedWorkspace ? 'blue' : 'neutral'}
-        />
+        <div className={styles.textWrapper}>
+          <span className={cn(styles.name, nameClassName)} data-test-id='header__select-project-value'>
+            <TruncateString text={name} variant='middle' />
+          </span>
 
-        <span className={styles.project} data-test-id='header__select-project-value'>
-          <TruncateString text={name} hideTooltip />
-        </span>
+          <span className={cn(styles.entity, entityClassName)} data-test-id='header__select-project-entity'>
+            <TruncateString text={entity} variant='middle' />
+          </span>
+        </div>
 
         {showIcon && getIcon(open)}
       </div>

@@ -1,13 +1,14 @@
 import cn from 'classnames';
-import { KeyboardEvent, RefObject, useRef } from 'react';
+import { KeyboardEvent, RefObject, useEffect, useRef } from 'react';
 
-import { SearchSVG } from '@sbercloud/uikit-product-icons';
+import { SearchSVG, VerticalMenuRightCloseSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { List, ListProps } from '@snack-uikit/list';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { SearchPrivate } from '@snack-uikit/search-private';
+import { Tooltip } from '@snack-uikit/tooltip';
 import { TruncateStringProps } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../helpers';
@@ -20,8 +21,12 @@ import { Item, ItemsGroup } from './types';
 export type GroupSectionProps = WithSupportProps<{
   className?: string;
   title?: string;
-  last?: boolean;
   searchable?: boolean;
+  searchActive?: boolean;
+  onSearchActiveChange?(value: boolean): void;
+  searchDefaultFocused?: boolean;
+  searchPlaceholder?: string;
+  onSearchOpenChange?(open: boolean): void;
   loading?: boolean;
 
   groups: ItemsGroup<Item>[];
@@ -44,13 +49,12 @@ export type GroupSectionProps = WithSupportProps<{
   avatarAppearance?: AvatarProps['appearance'];
 }>;
 
-const getItemIndex = (groupId: string, itemId: string) => `${groupId}_${itemId}`;
-
 export function GroupSection({
   title,
-  // last = false,
   loading,
   searchable = false,
+  searchActive,
+  onSearchActiveChange,
   className,
   groups,
   selectedItem,
@@ -61,9 +65,11 @@ export function GroupSection({
   avatarAppearance,
   noDataState,
   truncateVariant,
+  searchPlaceholder,
   ...rest
 }: GroupSectionProps) {
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const shouldScrollToSelectedItem = useRef(true);
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const itemTestIdPrefix = rest['data-test-id'] || 'header__select-group';
@@ -72,14 +78,19 @@ export function GroupSection({
     searchRef,
     searchValue,
     setSearchValue,
-    setIsSearchActive,
     handleActivateSearch,
-    handleSearchBlur,
+    handleDeactivateSearch,
     filteredGroups,
     animationState,
     searchIconTabIndex,
+    closeSearchIconTabIndex,
     searchInputTabIndex,
-  } = useSearch({ groups, searchable });
+  } = useSearch({
+    groups,
+    searchable,
+    active: searchActive,
+    onActiveChange: onSearchActiveChange,
+  });
 
   const navigateOutside = (event: KeyboardEvent) => {
     if (navigateOutsideRef && event.key === 'ArrowUp') {
@@ -88,20 +99,30 @@ export function GroupSection({
   };
 
   const handleItemMouseDown =
-    ({ item, groupId }: { item: Item; groupId: string }) =>
+    ({ item }: { item: Item; groupId: string }) =>
     () => {
       onItemChange?.(item);
 
       if (searchValue.length > 0) {
-        setIsSearchActive(false);
         setSearchValue('');
 
         setTimeout(() => {
-          const selectedItem = itemRefs.current[getItemIndex(groupId, item.id)];
-          selectedItem?.scrollIntoView({ block: 'end' });
+          const selectedItem = itemRefs.current[item.id];
+          selectedItem?.scrollIntoView({ block: 'center' });
         }, 0);
       }
     };
+
+  useEffect(() => {
+    shouldScrollToSelectedItem.current = true;
+  }, [groups]);
+
+  useEffect(() => {
+    if (selectedItem?.id && shouldScrollToSelectedItem.current) {
+      itemRefs.current[selectedItem?.id]?.scrollIntoView({ block: 'center' });
+      shouldScrollToSelectedItem.current = false;
+    }
+  }, [selectedItem]);
 
   return (
     <div className={cn(styles.section, className)} {...extractSupportProps(rest)}>
@@ -111,25 +132,37 @@ export function GroupSection({
 
           {searchable && (
             <>
-              <ButtonFunction
-                size='xs'
-                icon={<SearchSVG />}
-                onClick={handleActivateSearch}
-                tabIndex={searchIconTabIndex}
-                data-test-id='header__select-group-section-search-icon'
-              />
-              <SearchPrivate
-                tabIndex={searchInputTabIndex}
-                size='m'
-                placeholder={textProvider(languageCode, Texts.Search)}
-                value={searchValue}
-                onChange={setSearchValue}
-                ref={searchRef}
-                className={styles.search}
-                data-transition-status={animationState.status}
-                onBlur={handleSearchBlur}
-                data-test-id='header__select-group-section-search-input'
-              />
+              <Tooltip tip={textProvider(languageCode, Texts.SearchOpenButton)}>
+                <ButtonFunction
+                  size='xs'
+                  icon={<SearchSVG />}
+                  onClick={handleActivateSearch}
+                  tabIndex={searchIconTabIndex}
+                  data-test-id='header__select-group-section-search-icon'
+                />
+              </Tooltip>
+
+              <div className={styles.search} data-transition-status={animationState.status}>
+                <SearchPrivate
+                  tabIndex={searchInputTabIndex}
+                  size='m'
+                  placeholder={searchPlaceholder ?? textProvider(languageCode, Texts.Search)}
+                  value={searchValue}
+                  onChange={setSearchValue}
+                  ref={searchRef}
+                  data-test-id='header__select-group-section-search-input'
+                />
+
+                <Tooltip tip={textProvider(languageCode, Texts.SearchCloseButton)}>
+                  <ButtonFunction
+                    size='xs'
+                    icon={<VerticalMenuRightCloseSVG />}
+                    onClick={handleDeactivateSearch}
+                    tabIndex={closeSearchIconTabIndex}
+                    data-test-id='header__select-group-section-close-search-icon'
+                  />
+                </Tooltip>
+              </div>
             </>
           )}
         </div>
@@ -187,7 +220,7 @@ export function GroupSection({
                 onMouseDown: handleItemMouseDown({ item, groupId: group.id }),
                 'data-test-id': dataTestId,
                 itemRef: ((ref: HTMLElement) => {
-                  itemRefs.current[getItemIndex(group.id, item.id)] = ref;
+                  itemRefs.current[item.id] = ref;
                 }) as unknown as RefObject<HTMLElement>,
               };
             }),
@@ -195,8 +228,6 @@ export function GroupSection({
           footer={addItem?.handler ? <GroupSectionFooterButton {...addItem} /> : undefined}
         />
       )}
-
-      {/* {!last && <Divider orientation='vertical' className={styles.divider} />} */}
     </div>
   );
 }

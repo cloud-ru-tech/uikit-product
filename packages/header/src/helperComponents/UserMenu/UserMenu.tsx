@@ -127,8 +127,8 @@ export function UserMenu({
 
     if ((organizations && organizations.length > 0) || onOrganizationAdd) {
       items.push({
-        divider: true,
         type: 'group',
+        divider: true,
         items: [],
       });
     }

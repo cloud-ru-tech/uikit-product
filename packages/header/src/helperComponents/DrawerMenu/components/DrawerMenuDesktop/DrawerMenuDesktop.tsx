@@ -157,7 +157,13 @@ export function DrawerMenuDesktop({
                     >
                       <div className={styles.logo}>
                         {selectedProduct.logo ?? (
-                          <Avatar size='xs' name={selectedProduct.name} showTwoSymbols shape='square' />
+                          <Avatar
+                            size='xs'
+                            name={selectedProduct.name}
+                            showTwoSymbols
+                            shape='square'
+                            appearance='neutral'
+                          />
                         )}
                       </div>
 

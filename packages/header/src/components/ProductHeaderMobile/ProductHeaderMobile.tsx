@@ -160,17 +160,14 @@ export function ProductHeaderMobile({
       const { selectedProject } = select;
 
       items.push({
-        content: {
-          option: '',
-        },
-        onClick: () => {
-          setIsProjectMenuOpen(true);
-        },
-        beforeContent: (
+        content: (
           <div className={styles.select} data-test-id='header__select'>
             <SelectMenuTrigger selectedProject={selectedProject} open={isProjectMenuOpen} showIcon={false} />
           </div>
         ),
+        onClick: () => {
+          setIsProjectMenuOpen(true);
+        },
         afterContent: <ChevronRightSVG />,
         className: styles.breadcrumbs,
       });
@@ -254,8 +251,8 @@ export function ProductHeaderMobile({
 
     if (visibleSettings && visibleSettings.length > 0) {
       items.push({
-        divider: true,
         type: 'group',
+        divider: true,
         items: visibleSettings.map(setting => ({
           'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
           content: {

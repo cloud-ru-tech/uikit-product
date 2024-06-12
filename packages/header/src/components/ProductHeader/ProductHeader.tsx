@@ -56,6 +56,8 @@ export type ProductHeaderProps = WithSupportProps<
       | 'projects'
       | 'selectedProject'
       | 'projectsLoading'
+      | 'projectsSearchActive'
+      | 'onProjectsSearchActiveChange'
       | 'projectsEmptyState'
       | 'onProjectChange'
       | 'projectAddButton'

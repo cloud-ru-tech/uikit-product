@@ -1,15 +1,24 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
+.name {
+  color: $sys-neutral-text-support;
+}
+
+.entity {
+  color: $sys-neutral-text-light;
+}
+
 .select {
   display: flex;
   align-items: center;
-  height: $dimension-5m;
+  height: $dimension-6m;
   padding: 0 $dimension-1m;
   gap: $dimension-050m;
   color: $sys-neutral-text-light;
-  border-radius: $dimension-050m;
-  border: 1px solid $sys-neutral-decor-default;
+  width: 176px;
+  border-left: 1px solid $sys-neutral-decor-default;
+  border-right: 1px solid $sys-neutral-decor-default;
   box-sizing: border-box;
   cursor: pointer;
 
@@ -21,10 +30,14 @@
       $sys-neutral-background,
       $opacity-a008
     );
+
+    & .name {
+      color: $sys-neutral-text-main;
+    }
   }
 
   &:focus-visible {
-    @include outline-var($container-focused-s);
+    @include outline-inside-var($container-focused-s);
 
     outline-color: $sys-available-complementary;
     color: $sys-neutral-text-support;
@@ -33,35 +46,11 @@
       $sys-neutral-background,
       $opacity-a008
     );
+
+    & .name {
+      color: $sys-neutral-text-main;
+    }
   }
-}
-
-.contentLayout {
-  display: flex;
-  align-items: center;
-  gap: $dimension-050m;
-}
-
-.separator {
-  @include composite-var($sans-body-m);
-
-  display: flex;
-  padding: 0 $dimension-050m;
-  color: $sys-neutral-text-disabled;
-}
-
-.project {
-  @include composite-var($sans-body-m);
-
-  color: $sys-neutral-text-light;
-  max-width: calc(2 * $dimension-10m);
-}
-
-.platform {
-  @include composite-var($sans-body-m);
-
-  color: $sys-neutral-text-light;
-  max-width: calc(2 * $dimension-10m);
 }
 
 .selectGroup {
