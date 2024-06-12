@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.4 (2024-06-12)
+
+
+### Dependencies
+
+* **[PDS-83](https://jira.sbercloud.tech/browse/PDS-83):** update deps ([491b47d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/491b47d42acd8cb179b0d66c616033d61fe95d7e))
+
+
+
+
+
 ## 0.8.3 (2024-06-11)
 
 ### Only dependencies have been changed
@@ -216,7 +227,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 0.1.1 (2024-03-03)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-page-layout
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-copy-line@0.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/copy-line/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@6.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
 
 
 

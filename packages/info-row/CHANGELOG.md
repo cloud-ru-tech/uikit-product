@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.1 (2024-06-12)
+
+
+### Dependencies
+
+* **[PDS-83](https://jira.sbercloud.tech/browse/PDS-83):** update deps ([491b47d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/491b47d42acd8cb179b0d66c616033d61fe95d7e))
+
+
+
+
+
 # 0.5.0 (2024-04-23)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.14 (2024-06-12)
+
+
+### Dependencies
+
+* **[PDS-83](https://jira.sbercloud.tech/browse/PDS-83):** update deps ([491b47d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/491b47d42acd8cb179b0d66c616033d61fe95d7e))
+
+
+
+
+
 ## 0.10.13 (2024-05-31)
 
 ### Only dependencies have been changed
@@ -595,7 +606,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.6.0...@sbercloud/uikit-product-error-pages@0.6.1) (2022-12-07)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-error-pages
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@6.7.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.4.16](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
 
 # [0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.5.0...@sbercloud/uikit-product-error-pages@0.6.0) (2022-12-01)
 

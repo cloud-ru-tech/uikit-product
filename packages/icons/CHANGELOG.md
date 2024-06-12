@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.7.0 (2024-06-12)
+
+
+### Features
+
+* **[PDS-83](https://jira.sbercloud.tech/browse/PDS-83):** add icon ([abfa301](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/abfa3011650a5327e2d656aa1055e3d813f47e5a))
+
+
+
+
+
 # 6.6.0 (2024-05-31)
 
 

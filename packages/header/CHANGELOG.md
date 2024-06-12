@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.14.0 (2024-06-12)
+
+
+### Features
+
+* **[PDS-83](https://jira.sbercloud.tech/browse/PDS-83):** redesign header ([3ec38b4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3ec38b4344b31aac223d2797408abdbcc5d5047e))
+
+
+
+
+
 ## 2.13.4 (2024-06-10)
 
 
