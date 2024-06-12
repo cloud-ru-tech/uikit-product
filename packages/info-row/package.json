@@ -29,11 +29,11 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-utils": "3.3.1",
-    "@snack-uikit/button": "0.17.0",
-    "@snack-uikit/divider": "3.0.2",
+    "@snack-uikit/button": "0.17.1",
+    "@snack-uikit/divider": "3.0.3",
     "@snack-uikit/skeleton": "0.3.3",
-    "@snack-uikit/tooltip": "0.13.0",
-    "@snack-uikit/truncate-string": "0.4.10",
+    "@snack-uikit/tooltip": "0.13.3",
+    "@snack-uikit/truncate-string": "0.4.15",
     "classnames": "2.3.2"
   }
 }
