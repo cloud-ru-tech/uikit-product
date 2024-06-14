@@ -8,5 +8,5 @@ const iconsFolder = resolve(process.cwd(), './packages/icons');
 export function getIconsDataTestIds(pathToIcons: string) {
   const icons = readdirSync(resolve(iconsFolder, pathToIcons));
 
-  return icons.map(generateDataTestId);
+  return icons.filter(icon => icon.endsWith('.svg')).map(generateDataTestId);
 }

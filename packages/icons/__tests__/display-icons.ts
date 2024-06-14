@@ -5,7 +5,7 @@ import { getIconsDataTestIds } from '../utils/getIconsDataTestIds';
 
 const DisplayIcons = getIconsDataTestIds('svgs/inherit/display');
 
-fixture('Icons: Display').page(getTestcafeUrl({ name: 'display', group: 'icons' }));
+fixture('Icons: Display').page(getTestcafeUrl({ name: 'display', group: 'icons-deprecated' }));
 
 test('Rendered', async t => {
   for (const icon of DisplayIcons) {

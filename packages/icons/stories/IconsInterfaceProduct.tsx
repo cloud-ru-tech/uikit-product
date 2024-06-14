@@ -11,25 +11,30 @@ type StoryProps = {
 };
 
 const meta: Meta = {
-  title: 'Snack Uikit/Icons/Interface Product',
+  title: 'Snack UIkit/Icons/Interface/Product',
 };
 export default meta;
 
 const Template = getTemplate(Icons);
 
-export const interfaceProduct: StoryObj<StoryProps> = Template.bind({});
+export const product: StoryObj<StoryProps> = Template.bind({});
 
-interfaceProduct.args = {
+product.args = {
   size: 24,
 };
 
-interfaceProduct.argTypes = {
+product.argTypes = {
   size: {
-    type: 'number',
+    control: {
+      type: 'range',
+      min: 10,
+      max: 200,
+    },
   },
 };
 
-interfaceProduct.parameters = {
+product.parameters = {
+  controls: { expanded: false },
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

@@ -9,7 +9,7 @@ import * as Icons from '../src/components/extension-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons/Extension',
+  title: 'Snack UIkit/Icons/Extension',
 };
 export default meta;
 
@@ -21,6 +21,7 @@ extension.args = {
   size: 20,
 };
 extension.parameters = {
+  controls: { expanded: false },
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

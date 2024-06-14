@@ -9,7 +9,7 @@ import * as Icons from '../src/components/display-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons/Display',
+  title: 'Components/Icons (deprecated)/Display',
 };
 export default meta;
 
@@ -21,6 +21,7 @@ display.args = {
   size: 20,
 };
 display.parameters = {
+  controls: { expanded: false },
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

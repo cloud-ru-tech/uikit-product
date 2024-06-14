@@ -5,7 +5,7 @@ import { getIconsDataTestIds } from '../utils/getIconsDataTestIds';
 
 const ExtensionIcons = getIconsDataTestIds('svgs/inherit/extension');
 
-fixture('Icons: Extension').page(getTestcafeUrl({ name: 'extension', group: 'icons' }));
+fixture('Icons: Extension').page(getTestcafeUrl({ name: 'extension', group: 'icons', category: 'snack-uikit' }));
 
 test('Rendered', async t => {
   for (const icon of ExtensionIcons) {

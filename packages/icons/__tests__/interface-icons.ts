@@ -5,7 +5,7 @@ import { getIconsDataTestIds } from '../utils/getIconsDataTestIds';
 
 const interfaceIcons = getIconsDataTestIds('svgs/inherit/interface-old');
 
-fixture('Icons: Interface').page(getTestcafeUrl({ name: 'interfaces', group: 'icons' }));
+fixture('Icons: Interface').page(getTestcafeUrl({ name: 'interfaces', group: 'icons-deprecated' }));
 
 test('Rendered', async t => {
   for (const icon of interfaceIcons) {

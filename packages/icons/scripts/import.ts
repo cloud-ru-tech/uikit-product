@@ -3,7 +3,7 @@ import path from 'path';
 
 import camelcase from 'lodash.camelcase';
 
-import { capitalize, kebabCase, removeInvalidCharacters, replaceColorsWithBlack } from './utils';
+import { capitalize, kebabCase, removeInvalidCharacters, replaceColorsWithValue } from './utils';
 
 const SOURCE_PATH = 'scripts/import';
 const DESTINATION_PATH = 'svgs/illustrations';
@@ -43,7 +43,7 @@ const IGNORED_FILES = ['.gitignore', '.DS_Store'];
       const kebabFileName = kebabCase(`${camelCaseProductFileName}-s`);
       const iconBuffer = await fs.readFile(path.join(SOURCE_PATH, folder, fileName));
       const iconString = iconBuffer.toString();
-      const blackIcon = replaceColorsWithBlack(iconString);
+      const blackIcon = replaceColorsWithValue(iconString);
       const blackIconBuffer = Buffer.from(blackIcon, 'utf8');
 
       await fs.writeFile(

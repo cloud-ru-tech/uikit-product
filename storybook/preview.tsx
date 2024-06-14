@@ -6,7 +6,7 @@ import { withDesign } from 'storybook-addon-designs';
 import { useDarkMode } from 'storybook-dark-mode';
 
 import { PARAM_CAN_ADD_CUSTOM_BRAND_KEY, PARAM_COLOR_MAP_KEY, PARAM_KEY } from '@sbercloud/ft-storybook-brand-addon';
-import { Sprite, SpriteProductSVG, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
+import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
 import { Alert } from '@snack-uikit/alert';
 import { LocaleProvider } from '@snack-uikit/locale';
@@ -33,7 +33,6 @@ const decorators: DecoratorFunction[] = [
       // Add global styles and theme variables
       <div id='story-root'>
         <Sprite content={SpriteSystemSVG as unknown as string} />
-        <Sprite content={SpriteProductSVG as unknown as string} />
         <FormProvider {...methods}>
           {Array.isArray(badges) && badges.includes(BADGE.DEPRECATED) && (
             <>
@@ -73,7 +72,7 @@ const brandInfo: ThemeVars = {
   base: 'light',
   brandTitle: 'Cloud.ru',
   brandUrl: '/',
-  brandImage: './packages/icons/svgs/color/platform/CloudFullLogo.svg',
+  brandImage: './packages/icons/svgs/color/logos/CloudFullLogo.svg',
   brandTarget: '_self',
 };
 

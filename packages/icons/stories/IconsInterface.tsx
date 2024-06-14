@@ -9,7 +9,7 @@ import * as Icons from '../src/components/interface-icons-old';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons/Interfaces',
+  title: 'Components/Icons (deprecated)/Interfaces',
 };
 export default meta;
 
@@ -21,6 +21,7 @@ interfaces.args = {
   size: 20,
 };
 interfaces.parameters = {
+  controls: { expanded: false },
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

@@ -9,7 +9,7 @@ import * as Icons from '../src/components/services-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons/Services',
+  title: 'Components/Icons (deprecated)/Services',
 };
 export default meta;
 
@@ -21,6 +21,7 @@ services.args = {
   size: 20,
 };
 services.parameters = {
+  controls: { expanded: false },
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

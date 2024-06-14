@@ -18,15 +18,11 @@
 }
 
 .group {
-  margin-top: 24px;
+  margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 250px);
   grid-gap: 12px;
-  grid-column-gap: 20px;
-}
-
-.search {
-  margin-top: 16px;
+  grid-column-gap: 16px;
 }
 
 .scrollContent {
@@ -37,4 +33,29 @@
   margin: -16px;
   height: 100vh;
   overflow-y: scroll;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: $sys-neutral-background1-level;
+  border-radius: $dimension-1m;
+  justify-content: space-between;
+}
+
+.filter {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  align-items: center;
+  max-width: 484px;
+  gap: 16px;
 }

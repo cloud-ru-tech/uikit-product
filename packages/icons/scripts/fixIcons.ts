@@ -4,21 +4,13 @@ import fs from 'fs';
 import SVGFixer, { FixerOptions } from 'oslllo-svg-fixer';
 import path from 'path';
 
+import yargs from 'yargs';
+
 type CollectionConfig = {
   source: string;
   destination: string;
+  folder?: string;
 };
-
-const COLLECTIONS: CollectionConfig[] = [
-  {
-    source: 'svgs/inherit/interface-icons-system',
-    destination: 'svgs-fixed/interface-icons-system',
-  },
-  {
-    source: 'svgs/inherit/interface-icons-product',
-    destination: 'svgs-fixed/interface-icons-product',
-  },
-];
 
 const FIXER_OPTION: FixerOptions = {
   // другие настройки тут - https://docs.oslllo.com/svg-fixer/master/#/getting-started/basic-usage?id=parameters
@@ -35,20 +27,29 @@ const fixIcons = async (source: string, destination: string) => {
   }
 };
 
-const processFiles = ({ source, destination }: CollectionConfig) => {
-  const files = fs.readdirSync(source);
+const processFiles = ({ source, destination, folder = '' }: CollectionConfig) => {
+  const files = fs.readdirSync(path.resolve(source, folder));
 
   for (const file of files) {
-    const filePath = path.join(source, file);
-    const dirName = path.basename(path.dirname(filePath));
-    const destPath = path.join(destination, dirName);
-    const stats = fs.statSync(filePath);
+    const filePath = path.resolve(source, folder, file);
+    const destPath = path.resolve(destination, folder);
 
-    stats.isDirectory() ? processFiles({ source: filePath, destination }) : fixIcons(filePath, destPath);
+    fs.statSync(filePath).isDirectory()
+      ? processFiles({ source, destination, folder: path.join(folder, file) })
+      : fixIcons(filePath, destPath);
   }
 };
 
-COLLECTIONS.forEach(collection => {
+async function main() {
+  const argv = await yargs(process.argv.slice(2)).argv;
+
+  const collection = {
+    source: argv['source'] as string,
+    destination: argv['destination'] as string,
+  };
+
   fs.mkdirSync(collection.destination);
   processFiles(collection);
-});
+}
+
+main().catch(console.error);

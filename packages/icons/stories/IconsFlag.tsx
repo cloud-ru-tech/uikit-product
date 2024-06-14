@@ -9,7 +9,7 @@ import * as Icons from '../src/components/flag-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons/Flag',
+  title: 'Snack Uikit/Icons/Flag',
 };
 export default meta;
 
@@ -21,6 +21,7 @@ flag.args = {
   size: 24,
 };
 flag.parameters = {
+  controls: { expanded: false },
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

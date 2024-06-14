@@ -13,10 +13,7 @@ const OPTIONS = {
 const xmlParser = new XMLParser(OPTIONS);
 const validators: Validator[] = [validateIconSize, validateIconUniqueness];
 
-const COLLECTIONS = [
-  path.join(__dirname, '../svgs/inherit/interface-icons-system'),
-  path.join(__dirname, '../svgs/inherit/interface-icons-product'),
-];
+const COLLECTIONS = [path.join(__dirname, '../svgs/inherit/interface-icons-system')];
 
 const IGNORED_FILES = ['.gitignore'];
 

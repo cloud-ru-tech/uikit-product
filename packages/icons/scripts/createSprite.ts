@@ -94,11 +94,6 @@ const COLLECTIONS: CollectionConfig[] = [
     fileName: 'sprite-system.symbol.svg',
     prefix: 'snack-uikit-',
   },
-  {
-    source: 'svgs-fixed/interface-icons-product',
-    fileName: 'sprite-product.symbol.svg',
-    prefix: 'uikit-product-',
-  },
 ];
 
 (async () => {

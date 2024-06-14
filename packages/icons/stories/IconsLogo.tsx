@@ -9,7 +9,7 @@ import * as Icons from '../src/components/logo-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons/Logo',
+  title: 'Snack UIkit/Icons/Logo',
 };
 export default meta;
 
@@ -21,6 +21,7 @@ logo.args = {
   size: 50,
 };
 logo.parameters = {
+  controls: { expanded: false },
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

@@ -2,7 +2,7 @@ const { themeVars } = require('@sbercloud/figma-tokens-cloud-platform');
 
 module.exports = {
   template: require('./template-illustrations.js')({ size: 20 }),
-  indexTemplate: require('./indexTemplate.js'),
+  indexTemplate: require('./indexTemplateIllustrations.js'),
   ext: 'tsx',
   svgo: true,
   svgoConfig: {

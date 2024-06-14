@@ -53,10 +53,7 @@ const mainConfig = {
     'storybook-dark-mode',
     '@sbercloud/ft-storybook-deps-graph-addon',
   ],
-  staticDirs: [
-    { from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' },
-    { from: '../packages/icons/svgs/color/platform', to: '/packages/icons/svgs/color/platform' },
-  ],
+  staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
   framework: {
     name: '@storybook/react-webpack5',
     options: {

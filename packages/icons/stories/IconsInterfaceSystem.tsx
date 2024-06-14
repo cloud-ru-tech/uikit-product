@@ -11,25 +11,30 @@ type StoryProps = {
 };
 
 const meta: Meta = {
-  title: 'Snack Uikit/Icons/Interface System',
+  title: 'Snack UIkit/Icons/Interface/System',
 };
 export default meta;
 
 const Template = getTemplate(Icons);
 
-export const interfaceSystem: StoryObj<StoryProps> = Template.bind({});
+export const system: StoryObj<StoryProps> = Template.bind({});
 
-interfaceSystem.args = {
+system.args = {
   size: 24,
 };
 
-interfaceSystem.argTypes = {
+system.argTypes = {
   size: {
-    type: 'number',
+    control: {
+      type: 'range',
+      min: 10,
+      max: 200,
+    },
   },
 };
 
-interfaceSystem.parameters = {
+system.parameters = {
+  controls: { expanded: false },
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
