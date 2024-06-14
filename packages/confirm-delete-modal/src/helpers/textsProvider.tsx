@@ -1,7 +1,8 @@
 import { createTextProvider, LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
 export enum Texts {
-  Sure = 'sure',
+  Title = 'title',
+  // Sure = 'sure',
   FieldLabel = 'fieldLabel',
   Required = 'required',
   InvalidName = 'invalidName',
@@ -15,7 +16,7 @@ type DictionaryProperty = DictionaryPropertyAsFn | string;
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryProperty>>> = {
   [LanguageCodeType.ruRU]: {
-    [Texts.Sure]: (recordName: string) => `Вы действительно хотите удалить ${recordName} `,
+    [Texts.Title]: (objectType: string) => `Удаление ${objectType}`,
     [Texts.FieldLabel]: 'Для этого введите:',
     [Texts.EnterName]: 'Введите название',
     [Texts.Required]: 'Поле должно быть заполнено',
@@ -24,7 +25,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
     [Texts.Delete]: 'Удалить',
   },
   [LanguageCodeType.enGB]: {
-    [Texts.Sure]: (recordName: string) => `Do you really want to delete ${recordName} `,
+    [Texts.Title]: (recordName: string) => `Delete ${recordName}`,
     [Texts.FieldLabel]: 'To do this, enter:',
     [Texts.EnterName]: 'Enter a name',
     [Texts.Required]: 'Field must be filled',
