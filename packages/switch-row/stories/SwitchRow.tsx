@@ -45,6 +45,7 @@ switchRow.args = {
   disabledToggleTip: 'disabledToggleTip',
   disabled: false,
   checked: false,
+  loading: false,
 };
 switchRow.argTypes = {};
 switchRow.parameters = {

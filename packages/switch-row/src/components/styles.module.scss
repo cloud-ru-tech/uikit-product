@@ -33,6 +33,10 @@
   justify-content: space-between;
 }
 
+.switchRowWrapper {
+  display: inline-flex;
+}
+
 .switchRow {
   box-sizing: border-box;
   padding: 14px;
@@ -82,8 +86,24 @@
     }
   }
 
+  * {
+    &[data-pointer] {
+      cursor: pointer;
+    }
+  }
+
+  &[data-loading] {
+    cursor: wait;
+
+    * {
+      &[data-pointer] {
+        cursor: wait;
+      }
+    }
+  }
+
   &[data-disabled] {
-    cursor: unset;
+    cursor: not-allowed;
     background-color: transparent;
 
     &::before {
@@ -95,11 +115,11 @@
     .description {
       color: $sys-neutral-text-disabled;
     }
-  }
 
-  * {
-    &[data-pointer] {
-      cursor: pointer;
+    * {
+      &[data-pointer] {
+        cursor: not-allowed;
+      }
     }
   }
 }

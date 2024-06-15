@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { ReactNode } from 'react';
+import { KeyboardEventHandler, ReactNode } from 'react';
 
 import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { Switch } from '@snack-uikit/toggles';
@@ -13,6 +13,7 @@ export type SwitchRowProps = {
   description?: string;
   checked: boolean;
   disabled?: boolean;
+  loading?: boolean;
   onChange(checked: boolean): void;
   tip?: ReactNode;
   disabledToggleTip?: ReactNode;
@@ -28,9 +29,16 @@ export function SwitchRow({
   tip,
   className,
   disabledToggleTip,
+  loading,
   ...rest
 }: SwitchRowProps) {
   const handleChange = () => !disabled && onChange(!checked);
+
+  const handleKeyDown: KeyboardEventHandler<HTMLDivElement> = e => {
+    if (e.code === 'Enter' || e.code === 'Space') {
+      handleChange();
+    }
+  };
 
   const toggle = (
     <Switch
@@ -41,6 +49,7 @@ export function SwitchRow({
       data-pointer
       showIcon
       tabIndex={-1}
+      loading={loading}
     />
   );
 
@@ -51,12 +60,9 @@ export function SwitchRow({
       aria-checked={checked}
       tabIndex={disabled ? -1 : 0}
       onClick={handleChange}
-      onKeyDown={e => {
-        if (!disabled && (e.code === 'Enter' || e.code === 'Space')) {
-          handleChange();
-        }
-      }}
+      onKeyDown={handleKeyDown}
       data-disabled={disabled || undefined}
+      data-loading={loading || undefined}
       data-checked={checked || undefined}
       {...extractSupportProps(rest)}
     >
@@ -78,7 +84,11 @@ export function SwitchRow({
         </div>
 
         {disabled && disabledToggleTip ? (
-          <Tooltip tip={disabledToggleTip} data-test-id='switch-row__toggle-tooltip'>
+          <Tooltip
+            tip={disabledToggleTip}
+            data-test-id='switch-row__toggle-tooltip'
+            triggerClassName={styles.switchRowWrapper}
+          >
             {toggle}
           </Tooltip>
         ) : (
