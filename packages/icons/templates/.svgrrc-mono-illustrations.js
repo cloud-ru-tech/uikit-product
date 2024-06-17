@@ -16,8 +16,12 @@ module.exports = {
       'prefixIds',
     ],
   },
+  replaceAttrValues: {
+    '#000': 'inherit',
+    black: 'inherit',
+  },
   svgProps: {
-    fill: 'none',
+    fill: 'currentColor',
     'data-test-id': '{testId}',
     ref: '{ref}',
   },

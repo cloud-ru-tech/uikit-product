@@ -26,11 +26,7 @@ async function main() {
     // eslint-disable-next-line no-console
     console.log(`Convert to monochrome: ${path.resolve(rootPath, destination, file)} - done.`);
 
-    await fs.writeFile(
-      path.resolve(rootPath, destination, file),
-      replaceColorsWithValue(svgFile, 'currentColor'),
-      'utf-8',
-    );
+    await fs.writeFile(path.resolve(rootPath, destination, file), replaceColorsWithValue(svgFile), 'utf-8');
   }
 }
 
