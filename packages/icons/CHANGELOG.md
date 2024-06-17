@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 7.0.0 (2024-06-17)
+
+
+### BREAKING CHANGES
+
+
+* **[PDS-120](https://jira.sbercloud.tech/browse/PDS-120):** redefine icon packs ([6dabbb7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6dabbb7b44ebeee4d79ce06aca26a387e525adbb))
+
+
+
+
 # 6.7.0 (2024-06-12)
 
 

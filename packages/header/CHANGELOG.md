@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.14.1 (2024-06-17)
+
+
+### Bug Fixes
+
+* **[PDS-120](https://jira.sbercloud.tech/browse/PDS-120):** update platform icons ([c5041b6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c5041b6d80ca24db7633689f44f500ee48b69e1f))
+
+
+
+
+
 # 2.14.0 (2024-06-12)
 
 
