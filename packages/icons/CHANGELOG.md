@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.1 (2024-06-18)
+
+
+### Bug Fixes
+
+* **[PDS-120](https://jira.sbercloud.tech/browse/PDS-120):** mono illustrations building ([aef1554](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aef15544b3988a71fd6e9971a03aae147458481f))
+
+
+
+
+
 # 7.0.0 (2024-06-17)
 
 
