@@ -12,6 +12,6 @@ const visit = () =>
   });
 
 test.page(visit())(`Rendered`, async t => {
-  await t.expect(Selector(dataTestIdSelector('icon-ml-space-full-logo')).exists).ok();
-  await t.expect(Selector(dataTestIdSelector('icon-cloud-full-logo')).exists).ok();
+  await t.expect(Selector(dataTestIdSelector('icon-ml-space-full-logo-light')).exists).ok();
+  await t.expect(Selector(dataTestIdSelector('icon-cloud-full-logo-light')).exists).ok();
 });
