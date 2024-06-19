@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 8.0.0 (2024-06-19)
+
+
+### BREAKING CHANGES
+
+
+* **[PDS-296](https://jira.sbercloud.tech/browse/PDS-296):** new logo icon pack and remove display icons ([5bbcf06](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5bbcf06d27ee92b9f38dcf5baf7731cca0d2e2f4))
+
+
+
+
 ## 7.0.2 (2024-06-19)
 
 
