@@ -395,7 +395,6 @@ export const ARGS: StoryProps = {
     {
       id: 'level-3',
       label: 'Super-puper-duper-hyper-xxl-proMax crumb level 3',
-      icon: PlaceholderSVG,
       onClick: () => {},
     },
   ],
