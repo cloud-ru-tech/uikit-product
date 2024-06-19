@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 7.0.2 (2024-06-19)
+
+
+### Bug Fixes
+
+* **[PDS-120](https://jira.sbercloud.tech/browse/PDS-120):** product icons color and size ([ca4155b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ca4155bf4e037e61520c694e67e17466d3b140a6))
+
+
+
+
+
 ## 7.0.1 (2024-06-18)
 
 
