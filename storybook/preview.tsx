@@ -72,7 +72,7 @@ const brandInfo: ThemeVars = {
   base: 'light',
   brandTitle: 'Cloud.ru',
   brandUrl: '/',
-  brandImage: './packages/icons/svgs/color/logos/CloudFullLogo.svg',
+  brandImage: './packages/icons/svgs/color/logos/CloudFullLogoLight.svg',
   brandTarget: '_self',
 };
 

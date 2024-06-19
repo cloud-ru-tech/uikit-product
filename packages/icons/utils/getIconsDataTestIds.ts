@@ -5,8 +5,10 @@ import { generateDataTestId } from './generateDataTestId';
 
 const iconsFolder = resolve(process.cwd(), './packages/icons');
 
-export function getIconsDataTestIds(pathToIcons: string) {
+export function getIconsDataTestIds(pathToIcons: string, filterMap?: (name: string) => string) {
   const icons = readdirSync(resolve(iconsFolder, pathToIcons));
 
-  return icons.filter(icon => icon.endsWith('.svg')).map(generateDataTestId);
+  const finalList = filterMap ? icons.map(filterMap).filter(Boolean) : icons.filter(icon => icon.endsWith('.svg'));
+
+  return finalList.map(generateDataTestId);
 }

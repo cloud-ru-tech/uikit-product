@@ -30,17 +30,19 @@
     "compile": "npm run build:svgs-inherit && npm run build:svgs-color && npm run build:svgs-illustrations && npm run build:sprite-icons",
     "import:icons-multisize": "ts-node scripts/importMultiSizeIcons.ts",
     "import:icons": "ts-node scripts/import.ts",
-    "build:svgs-inherit": "npm run build:extension-icons && npm run build:services-icons && npm run build:display-icons && npm run build:interface-icons-old && npm run compile:interface-icons-product",
+    "build:svgs-inherit": "npm run build:extension-icons && npm run build:services-icons && npm run build:interface-icons-old && npm run compile:interface-icons-product",
     "build:extension-icons": "rimraf src/components/extension-icons && svgr -d src/components/extension-icons svgs/inherit/extension --config-file templates/.svgrrc.js",
     "build:services-icons": "rimraf src/components/services-icons && svgr -d src/components/services-icons svgs/inherit/services --config-file templates/.svgrrc.js",
-    "build:display-icons": "rimraf src/components/display-icons && svgr -d src/components/display-icons svgs/inherit/display --config-file templates/.svgrrc.js",
     "build:interface-icons-old": "rimraf src/components/interface-icons-old && svgr -d src/components/interface-icons-old svgs/inherit/interface-old --config-file templates/.svgrrc.js",
     "compile:interface-icons-product": "npm run fix:interface-icons-product && npm run build:interface-icons-product",
     "fix:interface-icons-product": "cross-var rimraf svgs-fixed/interface-icons-product && ts-node scripts/fixIcons.ts --source='svgs/inherit/interface-icons-product' --destination='svgs-fixed/interface-icons-product'",
     "build:interface-icons-product": "rimraf src/components/interface-icons-product && svgr -d src/components/interface-icons-product svgs-fixed/interface-icons-product --config-file templates/.svgrrc-product.js",
     "build:svgs-color": "npm run build:logo-icons && npm run build:flag-icons",
-    "build:logo-icons": "rimraf src/components/logo-icons && svgr --config-file templates/.svgrrc-color.js -d src/components/logo-icons svgs/color/logos",
     "build:flag-icons": "rimraf src/components/flag-icons && svgr --config-file templates/.svgrrc-color.js -d src/components/flag-icons svgs/color/flags",
+    "build:logo-icons": "npm run prepare:logo-icons && npm run compile:logo-icons && npm run index:logo-icons",
+    "prepare:logo-icons": "rimraf svgs-fixed/logo-icons && ts-node scripts/prepareAdaptiveIcons.ts --source='svgs/color/logos' --destination='svgs-fixed/logo-icons'",
+    "compile:logo-icons": "rimraf src/components/logo-icons && svgr -d src/components/logo-icons svgs-fixed/logo-icons --config-file templates/.svgrrc-adaptive.js",
+    "index:logo-icons": "ts-node scripts/createExportIndexFile.ts --folder=src/components/logo-icons",
     "build:svgs-illustrations": "npm run build:illustrations-themed && npm run compile:illustrations",
     "build:illustrations-themed": "rimraf src/components/service-illustrations-themed-icons && svgr --config-file templates/.svgrrc-illustrations.js -d src/components/service-illustrations-themed-icons svgs/service-illustrations",
     "compile:illustrations": "npm run mono:illustrations && npm run fix:illustrations && npm run build:illustrations",
@@ -53,6 +55,7 @@
     "create-sprite": "ts-node scripts/createSprite.ts"
   },
   "dependencies": {
+    "@sbercloud/uikit-product-utils": "3.3.1",
     "@snack-uikit/icons": "0.21.0"
   },
   "devDependencies": {

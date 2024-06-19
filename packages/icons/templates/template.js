@@ -12,12 +12,12 @@ const template =
     return tpl`
     ${`
     // DO NOT EDIT IT MANUALLY
-    
+
     `}
     ${imports}
     ${interfaces}
     ${`
-    
+
     `}
     export interface ISvgIconProps extends SVGProps<SVGSVGElement> {
       className?: string;

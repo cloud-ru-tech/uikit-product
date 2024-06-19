@@ -4,7 +4,6 @@ export * from './components/flag-icons';
 export * from './components/services-icons';
 export * from './components/extension-icons';
 export * from './components/logo-icons';
-export * from './components/display-icons';
 export * from './components/interface-icons-old';
 export * from './components/interface-icons-product';
 export * from './components/interface-icons-system';

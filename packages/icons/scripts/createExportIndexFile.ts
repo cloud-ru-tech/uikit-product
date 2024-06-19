@@ -1,6 +1,7 @@
 import fs from 'fs';
+import path from 'path';
 
-const capitalizeFirstLetter = (str: string) => str.replace(str[0], str[0].toUpperCase());
+import yargs from 'yargs';
 
 function createExportIndexFile(folderPath: string, outputFile: string) {
   const folders = fs
@@ -8,29 +9,34 @@ function createExportIndexFile(folderPath: string, outputFile: string) {
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name);
 
-  const exports = folders
-    .map(folderName => `export { default as ${capitalizeFirstLetter(folderName)}SVG } from './${folderName}'`)
-    .join('\n');
+  const exports = folders.map(folderName => `export { default as ${folderName}SVG } from './${folderName}'`).join('\n');
 
   fs.writeFileSync(outputFile, exports);
 }
 
-const folders = ['components'];
-const collections = ['interface-icons-product'];
+async function main() {
+  const argv = await yargs(process.argv.slice(2)).argv;
+  const workingDirectory = argv['folder'] as string;
 
-try {
-  for (const folder of folders) {
-    for (const collection of collections) {
-      const folderPath = `src/${folder}/${collection}`;
-      const outputFile = `src/${folder}/${collection}/index.tsx`;
-
-      createExportIndexFile(folderPath, outputFile);
-    }
+  if (!workingDirectory) {
+    // eslint-disable-next-line no-console
+    console.log('Error: folder param is required');
+    return;
   }
 
-  // eslint-disable-next-line no-console
-  console.log('Export icons files created.');
-} catch (err) {
-  // eslint-disable-next-line no-console
-  console.log('Error: ', err);
+  try {
+    const folderPath = path.resolve(__dirname, '../', workingDirectory);
+    const indexFilePath = path.resolve(workingDirectory, 'index.ts');
+
+    createExportIndexFile(folderPath, indexFilePath);
+
+    // eslint-disable-next-line no-console
+    console.log('Export icons files created.');
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    console.log('Error: ', err);
+  }
 }
+
+// eslint-disable-next-line no-console
+main().catch(console.log);
