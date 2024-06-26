@@ -1,0 +1,28 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.description {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-support;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  gap: 8px;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footerActions {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  gap: 8px;
+}

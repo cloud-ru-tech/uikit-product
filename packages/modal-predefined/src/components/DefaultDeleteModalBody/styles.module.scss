@@ -1,0 +1,7 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-2m;
+}
