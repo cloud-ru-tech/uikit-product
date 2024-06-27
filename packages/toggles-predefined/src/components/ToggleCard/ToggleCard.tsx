@@ -40,7 +40,7 @@ export function ToggleCard({
       header={
         <Card.Header
           title={title}
-          metadata={description}
+          description={description}
           emblem={emblem}
           className={className}
           truncate={truncate ? { title: truncate.title, metadata: truncate.description } : undefined}
