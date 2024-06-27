@@ -12,6 +12,7 @@ export type ToggleGroupProps = ToggleGroupPropsSnack &
     gap?: 's' | 'm' | 'l';
     breakpoint?: number;
   }>;
+
 export function ToggleGroup({
   children,
   value,
