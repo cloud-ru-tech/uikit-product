@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-06-28)
+
+
+### Bug Fixes
+
+* **[SVP-11371](https://jira.sbercloud.tech/browse/SVP-11371):** change metadata to description ([2c6206c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2c6206cb99bc899015ea9c742fb72c284b58f077))
+
+
+### Features
+
+* **[SVP-11371](https://jira.sbercloud.tech/browse/SVP-11371):** re-export useToggleGroup hook ([ab62b13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ab62b133ce92c8e46f82140967cd172576f6fa31))
+
+
+
+
+
 ## 0.4.1 (2024-06-12)
 
 
