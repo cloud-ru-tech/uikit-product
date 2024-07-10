@@ -47,7 +47,7 @@ const getSidebarProps = ({
         onSelect: setSelected,
         items: [
           { id: 0, label: 'Инстансы' },
-          { id: 1, label: 'Мониторинг' },
+          { id: 1, label: 'Мониторинг', disabledReason: 'У вас нет прав, чтобы зайти сюда' },
           { id: 2, label: 'Администрирование' },
           { id: 3, label: 'Сеть' },
           { id: 4, label: 'Инстансы' },

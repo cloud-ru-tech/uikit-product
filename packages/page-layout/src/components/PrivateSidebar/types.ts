@@ -9,6 +9,7 @@ export type SidebarItem = {
   onClick?(e: MouseEvent<HTMLElement>): void;
   href?: string;
   afterContent?: ReactNode;
+  disabledReason?: ReactNode;
 };
 
 export type Icon = IconPredefinedProps['icon'];

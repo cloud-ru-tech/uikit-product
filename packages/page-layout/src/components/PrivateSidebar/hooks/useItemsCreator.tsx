@@ -3,6 +3,7 @@ import { MouseEvent, ReactNode, useMemo } from 'react';
 import { ChevronLeftSVG, FileSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ItemProps } from '@snack-uikit/list';
+import { Tooltip } from '@snack-uikit/tooltip';
 
 import { SidebarTitle } from '../helperComponents/SidebarTitle';
 import { textProvider, Texts } from '../helpers/texts-provider';
@@ -69,7 +70,7 @@ export function useBottomPinnedContent(documentation?: Documentation): ItemProps
 export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | number) => void): ItemProps[] {
   return useMemo(
     () =>
-      items.map(({ id, label, href, onClick, afterContent }): ItemProps => {
+      items.map(({ id, label, href, onClick, afterContent, disabledReason }): ItemProps => {
         const clickHandler = (event: MouseEvent<HTMLElement>) => {
           onClick?.(event);
           onSelect?.(id);
@@ -78,15 +79,27 @@ export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | n
         return {
           id,
           content: { option: label },
-          itemWrapRender: href
-            ? item => (
+          itemWrapRender: item => {
+            if (!disabledReason) {
+              return href ? (
                 <a href={href} onClick={clickHandler}>
                   {item}
                 </a>
-              )
-            : undefined,
+              ) : (
+                item
+              );
+            }
+
+            return (
+              <Tooltip hoverDelayOpen={500} open={disabledReason ? undefined : false} tip={disabledReason}>
+                {item}
+              </Tooltip>
+            );
+          },
+
           onClick: href ? undefined : clickHandler,
           afterContent,
+          disabled: Boolean(disabledReason),
         };
       }),
     [items, onSelect],
