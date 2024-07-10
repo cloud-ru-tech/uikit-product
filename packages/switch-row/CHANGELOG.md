@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-07-10)
+
+
+### Features
+
+* **PDS-0000:** add loading prop & up deps ([1f866f2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1f866f26cf9f60324ea66359bf605890008f6d5d))
+
+
+
+
+
 ## 0.1.2 (2024-06-12)
 
 
