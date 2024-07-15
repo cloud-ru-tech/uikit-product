@@ -5,6 +5,7 @@ import { useEffect, useMemo } from 'react';
 import { UPDATE_DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 
 import { DetalisationSVG, MoneySVG, UsersSVG } from '@sbercloud/uikit-product-icons';
+import { PageServices } from '@sbercloud/uikit-product-page-layout';
 import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
 import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
@@ -242,7 +243,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
       financialMenuButtonType === 'balance' ? financialMenuBalanceValue : financialMenuBonusesValue;
 
     return (
-      <div className={styles.wrapper}>
+      <div className={styles.fullPageHeight}>
         <Header
           {...args}
           mobile={mobile}
@@ -342,6 +343,32 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
             onProductChange: setProduct,
           }}
         />
+        <div id='single-spa-wrapper' className={styles.page}>
+          <PageServices
+            title='Header'
+            sidebar={{
+              header: {
+                type: 'title',
+                label: 'Title',
+                icon: PlaceholderSVG,
+              },
+              items: [
+                {
+                  label: 'item 1',
+                  id: '1',
+                },
+                {
+                  label: 'item 2',
+                  id: '2',
+                },
+                {
+                  label: 'item 3',
+                  id: '3',
+                },
+              ],
+            }}
+          />
+        </div>
       </div>
     );
   };
