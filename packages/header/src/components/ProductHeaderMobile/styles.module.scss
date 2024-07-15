@@ -96,16 +96,9 @@
   }
 }
 
-.nestedDrawer {
-  & [data-test-id='drawer__close-button'] {
-    transform: translate(16px, -16px);
-  }
-}
-
 .notificationsDrawer {
   & [data-test-id='drawer__close-button'] {
     z-index: 1;
-    transform: translate(16px, -16px);
   }
 }
 
@@ -127,7 +120,7 @@
 
 // TODO: code duplicate from src/helperComponents/UserMenu/styles.modules.scss
 .userMenuInfoItem {
-  [data-test-id="list__base-item-option"] {
+  [data-test-id='list__base-item-option'] {
     // TODO: подумать как "нормально" прокидывать стили/типографику
     @include composite-var($sans-label-m);
   }

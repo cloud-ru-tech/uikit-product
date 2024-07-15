@@ -98,7 +98,7 @@ export function DrawerMenuMobile({
         size='s'
         push={{ distance: 8 }}
         nestedDrawer={
-          <DrawerCustom open={innerOpen} onClose={toggleInnerDrawer} position='left' className={styles.nestedDrawer}>
+          <DrawerCustom open={innerOpen} onClose={toggleInnerDrawer} position='left'>
             <DrawerCustom.Header title={textProvider(languageCode, Texts.Platforms)} className={styles.nestedHeader} />
 
             <List

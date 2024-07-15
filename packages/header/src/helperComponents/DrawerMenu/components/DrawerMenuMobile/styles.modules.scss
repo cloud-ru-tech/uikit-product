@@ -4,9 +4,6 @@
   svg {
     fill: currentColor;
   }
-  & [data-test-id='drawer__close-button'] {
-    transform: translate(16px, -16px);
-  }
   background-color: $sys-neutral-background !important;
 }
 
@@ -15,7 +12,6 @@
   box-sizing: border-box;
   min-height: $dimension-2m;
   color: $sys-neutral-text-main;
-  // background-color: $sys-neutral-background !important;
 }
 
 .menu {
@@ -110,12 +106,6 @@
 
 div.trigger {
   width: auto;
-}
-
-.nestedDrawer {
-  & [data-test-id='drawer__close-button'] {
-    transform: translate(16px, -16px);
-  }
 }
 
 .nestedHeader {

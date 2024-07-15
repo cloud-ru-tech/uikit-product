@@ -22,6 +22,8 @@ $vPadding: calc($dimension-1m + $dimension-025m);
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
   gap: $dimension-1m;
   padding: $dimension-1m $vPadding;
 }
@@ -30,27 +32,39 @@ $vPadding: calc($dimension-1m + $dimension-025m);
   position: absolute;
   top: 0;
   bottom: 0;
-  right: $vPadding;
+  height: 100%;
+  right: 0;
+
   display: flex;
   align-items: center;
 
   transition-timing-function: ease-in-out;
-  transition-property: max-width;
+  transition-property: all;
   transition-duration: 300ms;
 
   background-color: $sys-neutral-background2-level;
-  width: calc(100% - 2 * $vPadding);
-  max-width: 0;
+  width: calc(100% - 1 * $vPadding);
+  max-width: calc($dimension-3m + $vPadding);
   overflow: hidden;
+  z-index: -1;
+
+  &[data-is-mounted] {
+    z-index: 0;
+  }
 
   &[data-transition-status='entering'],
   &[data-transition-status='entered'] {
     max-width: 100%;
+    min-width: calc($dimension-3m + $vPadding);
+    right: $vPadding;
+    width: calc(100% - 2 * $vPadding);
   }
 
   &[data-transition-status='exiting'],
   &[data-transition-status='exited'] {
-    max-width: 0;
+    max-width: calc($dimension-3m + $vPadding);
+    right: 0;
+    width: calc(100% - 2 * $vPadding);
   }
 }
 

@@ -34,10 +34,6 @@ export function HeaderLayout({
     <header className={className} {...extractSupportProps(rest)}>
       <div className={styles.header}>
         <div className={styles.left}>
-          <a className={styles.logo} href={homePageUrl} tabIndex={0} onClick={onLogoClick} data-test-id='header__logo'>
-            {logo}
-          </a>
-
           {showMainMenu && (
             <ButtonFunction
               size='m'
@@ -46,6 +42,10 @@ export function HeaderLayout({
               data-test-id='header__drawer-menu-button'
             />
           )}
+
+          <a className={styles.logo} href={homePageUrl} tabIndex={0} onClick={onLogoClick} data-test-id='header__logo'>
+            {logo}
+          </a>
 
           {!pathFooter && Boolean(path) && <div className={styles.path}>{path}</div>}
         </div>

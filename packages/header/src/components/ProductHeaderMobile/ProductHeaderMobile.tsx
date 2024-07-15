@@ -328,15 +328,9 @@ export function ProductHeaderMobile({
         open={isUserMenuOpen}
         onClose={closeUserMenu}
         position='left'
-        className={styles.nestedDrawer}
         push={{ distance: 8 }}
         nestedDrawer={
-          <DrawerCustom
-            open={isProjectMenuOpen}
-            onClose={closeProjectMenu}
-            position='left'
-            className={styles.nestedDrawer}
-          >
+          <DrawerCustom open={isProjectMenuOpen} onClose={closeProjectMenu} position='left'>
             <DrawerCustom.Header title={textProvider(languageCode, Texts.Platforms)} className={styles.nestedHeader} />
             <Scroll>
               {select && (

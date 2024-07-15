@@ -132,17 +132,23 @@ export function GroupSection({
 
           {searchable && (
             <>
-              <Tooltip tip={textProvider(languageCode, Texts.SearchOpenButton)}>
-                <ButtonFunction
-                  size='xs'
-                  icon={<SearchSVG />}
-                  onClick={handleActivateSearch}
-                  tabIndex={searchIconTabIndex}
-                  data-test-id='header__select-group-section-search-icon'
-                />
-              </Tooltip>
+              {!animationState.isMounted && (
+                <Tooltip tip={textProvider(languageCode, Texts.SearchOpenButton)}>
+                  <ButtonFunction
+                    size='xs'
+                    icon={<SearchSVG />}
+                    onClick={handleActivateSearch}
+                    tabIndex={searchIconTabIndex}
+                    data-test-id='header__select-group-section-search-icon'
+                  />
+                </Tooltip>
+              )}
 
-              <div className={styles.search} data-transition-status={animationState.status}>
+              <div
+                className={styles.search}
+                data-transition-status={animationState.status}
+                data-is-mounted={animationState.isMounted || undefined}
+              >
                 <SearchPrivate
                   tabIndex={searchInputTabIndex}
                   size='m'
