@@ -82,7 +82,7 @@ export function PrivateSidebar({
           <div className={styles.list}>
             <List
               selection={{ mode: 'single', value: selected }}
-              size='s'
+              size='m'
               items={list}
               pinTop={pinTop}
               pinBottom={bottomPinned}
