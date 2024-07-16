@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2024-07-16)
+
+
+### Bug Fixes
+
+* **[FF-235](https://jira.sbercloud.tech/browse/FF-235):** change sidebar size to m; change h1 gap ([2b299c1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2b299c12e233fdf75d8ea282a5e43ebf89661592))
+
+
+### Features
+
+* **[PDS-444](https://jira.sbercloud.tech/browse/PDS-444):** sidebar item disabled state ([fc54d74](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fc54d74a09bd6f8aa3443515030598786073e732))
+
+
+### BREAKING CHANGES
+
+
+* **[FF-235](https://jira.sbercloud.tech/browse/FF-235):** remove tempTopSlot ([34dcf7e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/34dcf7e4a26d3164aa4f3d7719892ebd49092e57))
+
+
+
+
 ## 0.8.8 (2024-06-19)
 
 ### Only dependencies have been changed

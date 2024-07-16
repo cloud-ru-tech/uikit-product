@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.15.0 (2024-07-16)
+
+
+### Features
+
+* **[FF-235](https://jira.sbercloud.tech/browse/FF-235):** swap menu & logo; fix search animation ([bd59275](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bd59275c0d1fa356dfebe67813de030ffb48c798))
+
+
+
+
+
 ## 2.14.4 (2024-06-19)
 
 ### Only dependencies have been changed

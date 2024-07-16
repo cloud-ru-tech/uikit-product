@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-page-layout",
   "title": "Page Layout",
-  "version": "0.8.8",
+  "version": "0.9.0",
   "sideEffects": [
     "*.css",
     "*.woff",
