@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 8.1.0 (2024-07-17)
+
+
+### Features
+
+* **[DPS-13181](https://jira.sbercloud.tech/browse/DPS-13181):** Adding EvoBi icon ([87ca5d5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/87ca5d55b77b16b4108d80c1b59ea2e4e9a6a637))
+
+
+
+
+
 # 8.0.0 (2024-06-19)
 
 
