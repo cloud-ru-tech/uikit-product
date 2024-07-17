@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 8.1.1 (2024-07-17)
+
+
+### Bug Fixes
+
+* **[DPS-13181](https://jira.sbercloud.tech/browse/DPS-13181):** mv EvoBi icon to service-illustrations ([96114cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/96114cce2d13890f65f5fc918a5ebec71ee72185))
+
+
+
+
+
 # 8.1.0 (2024-07-17)
 
 
