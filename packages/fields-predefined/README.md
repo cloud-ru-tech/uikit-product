@@ -306,6 +306,51 @@
 | addButton | `boolean` | - | Поле появляется по кнопке "Добавить описание" (только для опционального поля) |
 | ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
+## FieldMask
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| mask* | enum Mask: `"code"`, `"uuid"`, `"passport"`, `"snils"`, `"ip-v4-address"`, `"ip-v4-address-with-mask"` | - |  |
+| id | `string` | - | Значение html-атрибута id |
+| name | `string` | - | Значение html-атрибута name |
+| placeholder | `string` | - | Значение плейсхолдера |
+| maxLength | `number` | - | Максимальная длина вводимого значения |
+| disabled | `boolean` | false | Является ли поле деактивированным |
+| readonly | `boolean` | false | Является ли поле доступным только для чтения |
+| onFocus | `FocusEventHandler<HTMLInputElement>` | - | Колбек обработки получения фокуса |
+| onBlur | `FocusEventHandler<HTMLInputElement>` | - | Колбек обработки потери фокуса |
+| autoComplete | `string \| boolean` | false | Включен ли автокомплит для поля |
+| autoFocus | `boolean` | false | Включен ли авто-фокус для поля |
+| onPaste | `ClipboardEventHandler<HTMLInputElement>` | - | Колбек обработки вставки значения |
+| onKeyDown | `KeyboardEventHandler<HTMLInputElement>` | - | Колбек обработки начала нажатия клавиши клавиатуры |
+| spellCheck | `boolean` | true | Значение атрибута spellcheck (проверка орфографии) |
+| pattern | `string` | - | Регулярное выражение валидного инпута |
+| className | `string` | - | CSS-класс |
+| label | `string` | - | Лейбл |
+| labelTooltip | `ReactNode` | - | Всплывающая подсказка лейбла |
+| required | `boolean` | - | Является ли поле обязательным |
+| caption | `string` | - | Подпись справа от лейбла |
+| hint | `string` | - | Подсказка внизу |
+| showHintIcon | `boolean` | - | Отображать иконку подсказки |
+| size | enum Size: `"s"`, `"m"`, `"l"` | - | Размер |
+| validationState | enum ValidationState: `"error"`, `"default"`, `"warning"`, `"success"` | - | Состояние валидации |
+| labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
+| error | `string` | - |  |
+| prefix | `ReactNode` | - | Произвольный префикс для поля |
+| prefixIcon | `ReactElement<any, string \| JSXElementConstructor<any>>` | - | Иконка-префикс для поля |
+| postfix | `ReactNode` | - | Произвольный постфикс для поля |
+| allowMoreThanMaxLength | `boolean` | - | Можно ли вводить больше разрешённого кол-ва символов |
+| button | `Button` | - | Кнопка действия внутри поля |
+| type | "text" \| "tel" \| "email" | - |  |
+| showCopyButton | `boolean` | - | Отображение кнопки Копировать для поля (актуально только для `readonly = true`) |
+| onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
+| showClearButton | `boolean` | true | Отображение кнопки очистки поля |
+| onClearButtonClick | `() => void` | - | Колбек клика по кнопке очистки поля |
+| value | `string` | - |  |
+| onChange | `(value: string, mask: InputMask<Record<string, unknown>>) => void` | - |  |
+| ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

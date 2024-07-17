@@ -54,6 +54,7 @@
     "react-textarea-autosize": "8.5.9"
   },
   "devDependencies": {
+    "imask": "7.6.1",
     "@types/merge-refs": "1.0.0"
   },
   "peerDependencies": {
