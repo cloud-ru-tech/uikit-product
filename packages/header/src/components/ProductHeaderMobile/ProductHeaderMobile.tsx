@@ -4,11 +4,11 @@ import {
   BurgerSVG,
   ChevronRightSVG,
   ExitSVG,
-  NightSVG,
   QuestionSVG,
   SettingsSVG,
+  ThemeContrastSVG,
 } from '@sbercloud/uikit-product-icons';
-import { Themes, useLanguage, useTheme } from '@sbercloud/uikit-product-utils';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 import { Breadcrumbs } from '@snack-uikit/breadcrumbs';
 import { ButtonFunction } from '@snack-uikit/button';
@@ -16,7 +16,6 @@ import { Counter } from '@snack-uikit/counter';
 import { DrawerCustom } from '@snack-uikit/drawer';
 import { ItemProps, List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
-import { Switch } from '@snack-uikit/toggles';
 
 import {
   CloudRuLogo,
@@ -31,6 +30,7 @@ import {
 } from '../../helperComponents';
 import { filterHidden } from '../../helperComponents/DrawerMenu/utils';
 import { textProvider, Texts } from '../../helpers';
+import { getThemeModeOptions } from '../../helpers/getThemeModeOptions';
 import { Organization, Platform, ProductOption, Workspace } from '../../types';
 import { extractAppNameFromId } from '../../utils';
 import { ProductHeaderProps } from '../ProductHeader';
@@ -69,14 +69,13 @@ export function ProductHeaderMobile({
   } = select ?? {};
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const { theme } = useTheme();
-  const isDarkTheme = [Themes.GreenDark, Themes.GreenDark].includes(theme);
 
   const visibleSettings = useMemo(() => settings?.filter(filterHidden), [settings]);
 
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [isProjectMenuOpen, setIsProjectMenuOpen] = useState(false);
+  const [isThemeModeMenuOpen, setIsThemeModeMenuOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
 
   const closeMainMenu = useCallback(() => {
@@ -180,7 +179,7 @@ export function ProductHeaderMobile({
     }
 
     if (userMenu) {
-      const { user, indicator, onLogout, onThemeSwitchClick, onProfileManagementClick } = userMenu;
+      const { user, indicator, onLogout, onProfileManagementClick, themeMode } = userMenu;
 
       items.push({
         content: {
@@ -210,26 +209,27 @@ export function ProductHeaderMobile({
           },
           id: 'header__user-menu__manage-profile',
         });
+      }
 
+      if (themeMode) {
+        items.push({
+          content: {
+            option: textProvider(languageCode, Texts.ThemeModeLabel),
+          },
+          onClick: () => {
+            setIsThemeModeMenuOpen(true);
+          },
+          afterContent: <ChevronRightSVG />,
+          beforeContent: <ThemeContrastSVG />,
+          'data-test-id': 'header__user-menu__theme-mode',
+        });
+      }
+
+      if (themeMode || onProfileManagementClick) {
         items.push({
           type: 'group',
           divider: true,
           items: [],
-        });
-      }
-
-      if (onThemeSwitchClick) {
-        items.push({
-          content: {
-            option: textProvider(languageCode, Texts.SwitchTheme),
-          },
-          beforeContent: <NightSVG />,
-          afterContent: <Switch checked={isDarkTheme} />,
-          onClick: () => {
-            onThemeSwitchClick();
-          },
-          id: 'header__user-menu__switch-theme',
-          'data-test-id': 'header__user-menu__switch-theme',
         });
       }
 
@@ -268,7 +268,7 @@ export function ProductHeaderMobile({
     }
 
     return items;
-  }, [select, userMenu, visibleSettings, isProjectMenuOpen, languageCode, closeUserMenu, isDarkTheme]);
+  }, [select, userMenu, visibleSettings, isProjectMenuOpen, languageCode, closeUserMenu]);
 
   return (
     <>
@@ -330,31 +330,52 @@ export function ProductHeaderMobile({
         position='left'
         push={{ distance: 8 }}
         nestedDrawer={
-          <DrawerCustom open={isProjectMenuOpen} onClose={closeProjectMenu} position='left'>
-            <DrawerCustom.Header title={textProvider(languageCode, Texts.Platforms)} className={styles.nestedHeader} />
-            <Scroll>
-              {select && (
-                <div className={styles.selectGroup}>
-                  <SelectMenu
-                    organizations={organizations}
-                    selectedOrganization={selectedOrganization}
-                    onOrganizationChange={onOrganizationChange}
-                    onOrganizationAdd={onOrganizationAdd}
-                    projects={projects}
-                    selectedProject={selectedProject ?? ({} as ProductOption)}
-                    onProjectChange={onProjectChange}
-                    projectAddButton={projectAddButton}
-                    platforms={platforms}
-                    selectedPlatform={selectedPlatform ?? ({} as Platform)}
-                    onPlatformChange={onPlatformChange}
-                    workspaces={workspacesOptions}
-                    projectsEmptyState={projectsEmptyState}
-                    mobile
-                  />
-                </div>
-              )}
-            </Scroll>
-          </DrawerCustom>
+          <>
+            <DrawerCustom open={isProjectMenuOpen} onClose={closeProjectMenu} position='left'>
+              <DrawerCustom.Header
+                title={textProvider(languageCode, Texts.Platforms)}
+                className={styles.nestedHeader}
+              />
+              <Scroll>
+                {select && (
+                  <div className={styles.selectGroup}>
+                    <SelectMenu
+                      organizations={organizations}
+                      selectedOrganization={selectedOrganization}
+                      onOrganizationChange={onOrganizationChange}
+                      onOrganizationAdd={onOrganizationAdd}
+                      projects={projects}
+                      selectedProject={selectedProject ?? ({} as ProductOption)}
+                      onProjectChange={onProjectChange}
+                      projectAddButton={projectAddButton}
+                      platforms={platforms}
+                      selectedPlatform={selectedPlatform ?? ({} as Platform)}
+                      onPlatformChange={onPlatformChange}
+                      workspaces={workspacesOptions}
+                      projectsEmptyState={projectsEmptyState}
+                      mobile
+                    />
+                  </div>
+                )}
+              </Scroll>
+            </DrawerCustom>
+            {userMenu?.themeMode && (
+              <DrawerCustom open={isThemeModeMenuOpen} onClose={() => setIsThemeModeMenuOpen(false)} position='left'>
+                <DrawerCustom.Header
+                  title={textProvider(languageCode, Texts.ThemeModeLabel)}
+                  className={styles.nestedHeader}
+                />
+                <Scroll>
+                  <div className={styles.selectGroup}>
+                    <List
+                      items={getThemeModeOptions({ themeMode: userMenu.themeMode, languageCode })}
+                      selection={{ mode: 'single' }}
+                    />
+                  </div>
+                </Scroll>
+              </DrawerCustom>
+            )}
+          </>
         }
       >
         <DrawerCustom.Header title={textProvider(languageCode, Texts.Menu)} className={styles.nestedHeader} />

@@ -1,7 +1,7 @@
 import throttle from 'lodash.throttle';
 import { MouseEvent, useMemo, useRef, useState } from 'react';
 
-import { NightSVG, PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { useEventHandler, useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar } from '@snack-uikit/avatar';
 
@@ -17,7 +17,7 @@ export function useUserMenuItems(userMenu?: ProductHeaderProps['userMenu']) {
     const items = [];
 
     if (userMenu) {
-      const { user, indicator, onLogout, onThemeSwitchClick, onProfileManagementClick } = userMenu;
+      const { user, indicator, onLogout, onProfileManagementClick } = userMenu;
 
       items.push({
         content: {
@@ -86,25 +86,6 @@ export function useUserMenuItems(userMenu?: ProductHeaderProps['userMenu']) {
       //     items: [],
       //   });
       // }
-
-      if (onThemeSwitchClick) {
-        items.push({
-          content: {
-            option: textProvider(languageCode, Texts.SwitchTheme),
-          },
-          beforeContent: <NightSVG />,
-          // TODO: можем добавить, но надо value знать/передавать
-          // afterContent: <Switch value={isDarkTheme}/>,
-          onClick: () => {
-            () => {
-              onThemeSwitchClick();
-              // closeUserMenu();
-            };
-          },
-          id: 'header__user-menu-switch-theme',
-          'data-test-id': 'header__user-menu-switch-theme',
-        });
-      }
 
       if (onLogout) {
         items.push({

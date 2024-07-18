@@ -87,3 +87,13 @@ export type Workspace = {
   id: string;
   name: string;
 };
+
+type ValueOf<T> = T[keyof T];
+
+export const THEME_MODE = {
+  Light: 'light',
+  Dark: 'dark',
+  System: 'system',
+} as const;
+
+export type ThemeMode = ValueOf<typeof THEME_MODE>;

@@ -53,6 +53,11 @@ export enum Texts {
   Project = 'project',
   Workspace = 'workspace',
   Organization = 'organization',
+
+  ThemeModeLight = 'theme-mode-light',
+  ThemeModeDark = 'theme-mode-dark',
+  ThemeModeSystem = 'theme-mode-system',
+  ThemeModeLabel = 'theme-mode-label',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -112,6 +117,11 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     [Texts.SearchProjectsPlaceholder]: 'Поиск по проектам',
     [Texts.SearchWorkspacesPlaceholder]: 'Поиск по воркспейсам',
+
+    [Texts.ThemeModeLight]: 'Светлая',
+    [Texts.ThemeModeDark]: 'Темная',
+    [Texts.ThemeModeSystem]: 'Системная',
+    [Texts.ThemeModeLabel]: 'Тема интерфейса',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderProjectSelectorCreateProject]: 'Create project',
@@ -169,6 +179,11 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
 
     [Texts.SearchProjectsPlaceholder]: 'Search by projects',
     [Texts.SearchWorkspacesPlaceholder]: 'Search by workspaces',
+
+    [Texts.ThemeModeLight]: 'Light',
+    [Texts.ThemeModeDark]: 'Dark',
+    [Texts.ThemeModeSystem]: 'System',
+    [Texts.ThemeModeLabel]: 'Interface Theme',
   },
 };
 

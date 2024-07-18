@@ -1,14 +1,15 @@
 import { useMemo, useRef, useState } from 'react';
 
-import { ExitSVG, NightSVG, PlusSVG, SettingsSVG } from '@sbercloud/uikit-product-icons';
-import { Themes, useLanguage, useTheme } from '@sbercloud/uikit-product-utils';
+import { ExitSVG, PlusSVG, SettingsSVG, ThemeContrastSVG } from '@sbercloud/uikit-product-icons';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { Counter } from '@snack-uikit/counter';
 import { Droplist, ItemProps } from '@snack-uikit/list';
 import { PromoTag } from '@snack-uikit/promo-tag';
-import { Switch } from '@snack-uikit/toggles';
 
 import { textProvider, Texts } from '../../helpers';
+import { getThemeModeOptions } from '../../helpers/getThemeModeOptions';
+import { ThemeMode } from '../../types';
 import { InvitePopover, InvitePopoverProps } from '../InvitePopover';
 import { SelectProps } from '../SelectMenu';
 import styles from './styles.modules.scss';
@@ -23,30 +24,32 @@ export type UserMenuProps = {
   indicator?: AvatarProps['indicator'];
   onAvatarClick?(): void;
   onProfileManagementClick?(): void;
-  onThemeSwitchClick?(): void;
   onLogout?(): void;
   invites?: {
     count?: number;
     showPopover?: boolean;
   } & Pick<InvitePopoverProps, 'onOpenButtonClick'>;
-} & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'>;
+} & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> & {
+    themeMode?: {
+      value: ThemeMode;
+      onChange(value: ThemeMode): void;
+    };
+  };
 
 export function UserMenu({
   user,
   indicator,
   onProfileManagementClick,
-  onThemeSwitchClick,
   onLogout,
   onAvatarClick,
   organizations,
   selectedOrganization,
   onOrganizationChange,
   onOrganizationAdd,
+  themeMode,
   invites,
 }: UserMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const { theme } = useTheme();
-  const isDarkTheme = [Themes.GreenDark, Themes.GreenDark].includes(theme);
 
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const closeUserMenu = () => setIsUserMenuOpen(false);
@@ -84,6 +87,19 @@ export function UserMenu({
         },
         id: 'header__user-menu__manage-profile',
       });
+
+      if (themeMode) {
+        items.push({
+          type: 'next-list',
+          content: {
+            option: textProvider(languageCode, Texts.ThemeModeLabel),
+          },
+          placement: 'left-start',
+          beforeContent: <ThemeContrastSVG />,
+          'data-test-id': 'header__user-menu__theme-mode',
+          items: getThemeModeOptions({ themeMode, languageCode }),
+        });
+      }
 
       items.push({
         type: 'group',
@@ -133,19 +149,6 @@ export function UserMenu({
       });
     }
 
-    if (onThemeSwitchClick) {
-      items.push({
-        content: {
-          option: textProvider(languageCode, Texts.SwitchTheme),
-        },
-        beforeContent: <NightSVG />,
-        afterContent: <Switch checked={isDarkTheme} />,
-        onClick: onThemeSwitchClick,
-        id: 'header__user-menu__switch-theme',
-        'data-test-id': 'header__user-menu__switch-theme',
-      });
-    }
-
     if (onLogout) {
       items.push({
         content: {
@@ -164,14 +167,13 @@ export function UserMenu({
     return items;
   }, [
     indicator,
-    isDarkTheme,
     languageCode,
     onLogout,
     onOrganizationAdd,
     onOrganizationChange,
     onProfileManagementClick,
-    onThemeSwitchClick,
     organizations,
+    themeMode,
     user.email,
     user.name,
   ]);
@@ -189,7 +191,7 @@ export function UserMenu({
           value: selectedOrganization?.id,
         }}
         triggerElemRef={triggerRef}
-        trigger='clickAndFocusVisible'
+        trigger='click'
         className={styles.userMenuDroplist}
       >
         <div

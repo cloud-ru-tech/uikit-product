@@ -1,8 +1,6 @@
 import { useArgs, useState } from '@storybook/client-api';
-import { addons } from '@storybook/preview-api';
 import { ArgTypes } from '@storybook/react';
 import { useEffect, useMemo } from 'react';
-import { UPDATE_DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
 
 import { DetalisationSVG, MoneySVG, UsersSVG } from '@sbercloud/uikit-product-icons';
 import { PageServices } from '@sbercloud/uikit-product-page-layout';
@@ -10,7 +8,7 @@ import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/ico
 import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
 
-import { Header, HeaderProps } from '../src';
+import { Header, HeaderProps, THEME_MODE, ThemeMode } from '../src';
 import {
   AdvancedPlatformLogo,
   EnterprisePlatformLogo,
@@ -44,7 +42,7 @@ export type StoryProps = HeaderProps & {
   showNotifications: boolean;
   showUserMenu: boolean;
   showUserMenuManagement: boolean;
-  showUserMenuThemeSwitch: boolean;
+
   showUserMenuLogout: boolean;
   showOrganizationInvite: boolean;
   showOrganizationInvitePopover: boolean;
@@ -59,8 +57,6 @@ export type StoryProps = HeaderProps & {
 
   showSinglePlatform: boolean;
 };
-
-const channel = addons.getChannel();
 
 const DEFAULT_USER = {
   name: 'Юзер Пользователев',
@@ -172,7 +168,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
     showNotifications,
     showUserMenu,
     showUserMenuManagement,
-    showUserMenuThemeSwitch,
+
     showUserMenuLogout,
     userMenu,
     organizations,
@@ -238,6 +234,8 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
 
       return organizations;
     }, [organizations, showOrganizationInvite]);
+
+    const [themeMode, setThemeMode] = useState<ThemeMode>(THEME_MODE.Light);
 
     const financialMenuButtonValue =
       financialMenuButtonType === 'balance' ? financialMenuBalanceValue : financialMenuBonusesValue;
@@ -317,7 +315,6 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
                   user: userMenu.user ?? DEFAULT_USER,
                   indicator: userMenu.indicator,
                   onProfileManagementClick: showUserMenuManagement ? userMenu.onProfileManagementClick : undefined,
-                  onThemeSwitchClick: showUserMenuThemeSwitch ? userMenu.onThemeSwitchClick : undefined,
                   onLogout: showUserMenuLogout ? userMenu.onLogout : undefined,
                   onAvatarClick: closeInvitesPopover,
                   invites: showOrganizationInvite
@@ -327,6 +324,10 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
                         onOpenButtonClick: closeInvitesPopover,
                       }
                     : undefined,
+                  themeMode: {
+                    value: themeMode,
+                    onChange: setThemeMode,
+                  },
                 }
               : undefined
           }
@@ -344,30 +345,32 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
           }}
         />
         <div id='single-spa-wrapper' className={styles.page}>
-          <PageServices
-            title='Header'
-            sidebar={{
-              header: {
-                type: 'title',
-                label: 'Title',
-                icon: PlaceholderSVG,
-              },
-              items: [
-                {
-                  label: 'item 1',
-                  id: '1',
+          {!mobile && (
+            <PageServices
+              title='Header'
+              sidebar={{
+                header: {
+                  type: 'title',
+                  label: 'Title',
+                  icon: PlaceholderSVG,
                 },
-                {
-                  label: 'item 2',
-                  id: '2',
-                },
-                {
-                  label: 'item 3',
-                  id: '3',
-                },
-              ],
-            }}
-          />
+                items: [
+                  {
+                    label: 'item 1',
+                    id: '1',
+                  },
+                  {
+                    label: 'item 2',
+                    id: '2',
+                  },
+                  {
+                    label: 'item 3',
+                    id: '3',
+                  },
+                ],
+              }}
+            />
+          )}
         </div>
       </div>
     );
@@ -470,7 +473,7 @@ export const ARGS: StoryProps = {
 
   showUserMenu: true,
   showUserMenuManagement: true,
-  showUserMenuThemeSwitch: true,
+
   showUserMenuLogout: true,
   showOrganizationInvite: false,
   showOrganizationInvitePopover: false,
@@ -479,9 +482,6 @@ export const ARGS: StoryProps = {
     user: DEFAULT_USER,
     indicator: 'green',
     onProfileManagementClick: () => {},
-    onThemeSwitchClick: () => {
-      channel.emit(UPDATE_DARK_MODE_EVENT_NAME);
-    },
     onLogout: () => {},
   },
 
@@ -653,11 +653,7 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
     type: 'boolean',
     if: { arg: 'showUserMenu', eq: true },
   },
-  showUserMenuThemeSwitch: {
-    name: '[Story]: show user menu -> theme switch',
-    type: 'boolean',
-    if: { arg: 'showUserMenu', eq: true },
-  },
+
   showUserMenuLogout: {
     name: '[Story]: show user menu -> logout',
     type: 'boolean',
