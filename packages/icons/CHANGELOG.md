@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 9.0.0 (2024-07-19)
+
+
+### Features
+
+* **[FF-5224](https://jira.sbercloud.tech/browse/FF-5224):** add new icons: cost-control, link-disconnected, laptop-phone, theme-contrast, watch, cloud-sertificate-manager, magic-router, mind-migration, container-security-platform ([0322a50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0322a501145308b56a4fb0b23c37ef64c3458ccc))
+
+
+### BREAKING CHANGES
+
+
+* **[FF-5224](https://jira.sbercloud.tech/browse/FF-5224):** delete time-svg, use watch-svg instead ([31eabcb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/31eabcb2d642507b83d82e2bef7c2860f97e3916))
+* **[FF-5224](https://jira.sbercloud.tech/browse/FF-5224):** delete colored service illustrations ([18bd93a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/18bd93add51aee9e1f8aa7dc32802bc10de6d344))
+
+
+
+
 ## 8.1.1 (2024-07-17)
 
 

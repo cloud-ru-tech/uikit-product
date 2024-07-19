@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-datepicker",
   "title": "React Datepicker",
-  "version": "0.15.30",
+  "version": "0.15.31",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,8 +27,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.4.28",
-    "@sbercloud/uikit-product-icons": "8.1.1",
+    "@sbercloud/uikit-product-button": "5.4.29",
+    "@sbercloud/uikit-product-icons": "9.0.0",
     "@sbercloud/uikit-product-theme": "0.39.0",
     "@sbercloud/uikit-product-utils": "3.3.1",
     "@snack-uikit/divider": "3.0.2",
