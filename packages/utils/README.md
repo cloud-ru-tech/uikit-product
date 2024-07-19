@@ -5,7 +5,29 @@
 
 ### Config provider
 
-If component is mounted, then it extends html tag by current lang and current themes data-attributes, adds classes with colors to body. Controls for changing are enabled via `useTheme` and `useLanguage` hooks. 
+If component is mounted, then it extends html tag by current lang and current themes data-attributes, adds classes with colors to body. Controls for changing are enabled via `useTheme` and `useLanguage` hooks.
+
+### ForThemeMode component
+
+Tool component to adapt to current theme modification (light or dark). You can pass different JSX for light and dark theme mode, and the one will be rendered according current mode.
+
+```tsx
+<ForThemeMode
+  light={<BannerForLightMode />}
+  dark={<BannerForDarkMode />}
+/>
+```
+
+You can also use hook `useForThemeMode` to pick data according to current theme mode:
+
+```tsx
+const imageSrc = useForThemeMode({
+  light: 'assets/light-image.webp',
+  dark: 'assets/dark-image.webp',
+});
+
+<img src={imageSrc} alt={imgDescr} />
+```
 
 
 ### Dev utils
@@ -41,16 +63,16 @@ import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 
 const sampleProps = {
   ['data-test-id']: '1',
-  ['aria-disabled']: true, 
+  ['aria-disabled']: true,
   ['data-disabled']: false,
   onClick: () => {},
   value: '123'
 }
 
 extractSupportProps(sampleProps) => {
-  ['data-test-id']: '1', 
+  ['data-test-id']: '1',
   ['aria-disabled']: true
-}   
+}
 ```
 
 #### ExtractDataTestProps
@@ -70,7 +92,7 @@ const sampleProps = {
 
 extractDataTestProps(sampleProps) => {
   ['data-test-id']: '1'
-}   
+}
 ```
 
 #### ExcludeSupportProps
@@ -82,7 +104,7 @@ import { excludeSupportProps } from '@sbercloud/uikit-product-utils';
 
 const sampleProps = {
   ['data-test-id']: '1',
-  ['aria-disabled']: true, 
+  ['aria-disabled']: true,
   ['data-disabled']: false,
   onClick: () => {},
   value: '123'
@@ -92,7 +114,7 @@ excludeSupportProps(sampleProps) => {
   ['data-disabled']: false,
   onClick: () => {},
   value: '123'
-}   
+}
 ```
 
 #### KeyboardSelectHandler
@@ -161,7 +183,7 @@ import { useForceUpdate } from '@sbercloud/uikit-product-utils';
 function Component() {
   const rerender = useForceUpdate();
   ...
-  rerender(); // <- will lead to rerender  
+  rerender(); // <- will lead to rerender
 }
 ```
 
@@ -175,7 +197,7 @@ Could be helpfull in cases when you need await for css applied.
 import { useForceUpdateOnPageLoadedCompletely } from '@sbercloud/uikit-product-utils';
 
 function Component() {
-    useForceUpdateOnPageLoadedCompletely(); 
+    useForceUpdateOnPageLoadedCompletely();
 }
 ```
 
@@ -209,4 +231,3 @@ function Chat() {
   return <SendButton onClick={handleClick} />;
 }
 ```
-
