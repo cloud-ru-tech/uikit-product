@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.2 (2024-07-19)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-copy-line@0.3.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/copy-line/CHANGELOG.md)
+* [@sbercloud/uikit-product-switch-row@0.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/switch-row/CHANGELOG.md)
+* [@sbercloud/uikit-product-toggles-predefined@0.5.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/toggles-predefined/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.4.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 0.1.1 (2024-07-10)
 
 ### Only dependencies have been changed

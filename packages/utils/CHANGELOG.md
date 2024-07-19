@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.4.0 (2024-07-19)
+
+
+### Dependencies
+
+* **[FF-4699](https://jira.sbercloud.tech/browse/FF-4699):** change product -> snack divider ([bd49fc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bd49fc619626923b0278b7b72221ad1aca7800f8))
+
+
+### Features
+
+* **[FF-5149](https://jira.sbercloud.tech/browse/FF-5149):** add ForThemeMode component and useForThemeMode hook ([4d88452](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4d88452e8142e1359dc702e048586ac1f5d8e5b5))
+
+
+
+
+
 ## 3.3.1 (2024-01-22)
 
 
