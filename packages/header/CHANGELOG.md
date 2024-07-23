@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.16.0 (2024-07-23)
+
+
+### Features
+
+* **[FF-5156](https://jira.sbercloud.tech/browse/FF-5156):** add themeMode to userMenu ([301e622](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/301e6224c504023b9ef90086c3719c71d39c97da))
+
+
+
+
+
 ## 2.15.4 (2024-07-19)
 
 ### Only dependencies have been changed
