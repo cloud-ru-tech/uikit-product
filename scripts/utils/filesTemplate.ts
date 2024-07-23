@@ -2,7 +2,6 @@ import fs from 'fs';
 import path from 'path';
 
 import globConfig from '../../package.json';
-import { version as themeVersion } from '../../packages/theme/package.json';
 
 const PackagesRootFolder = 'packages';
 
@@ -53,9 +52,7 @@ export const packageJson = ({
     files: ['dist', 'src', './CHANGELOG.md'],
     license: 'UNLICENSED',
     scripts: {},
-    dependencies: {
-      '@sbercloud/uikit-product-theme': themeVersion,
-    },
+    dependencies: {},
     devDependencies: {},
     peerDependencies: {},
   };
@@ -183,7 +180,7 @@ import componentReadme from '../README.md';
 import { ${componentName}, ${componentName}Props } from '../src';
 
 const meta: Meta = {
-  title: 'Not stable/${componentStoryTitle}',
+  title: 'Snack Uikit/${componentStoryTitle}',
   component: ${componentName},
 };
 export default meta;
