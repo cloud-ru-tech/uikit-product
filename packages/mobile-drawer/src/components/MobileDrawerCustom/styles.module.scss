@@ -1,0 +1,170 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
+
+$modes: ('regular', 'soft');
+$sizes: ('s', 'm', 'l');
+$drawer-background-color: (
+  'regular': $sys-neutral-background1-level,
+  'soft': $sys-neutral-background2-level,
+);
+
+.content {
+  flex-grow: 1;
+  cursor: grab;
+  min-width: $dimension-5m;
+  min-height: $dimension-5m;
+  display: flex;
+  flex-direction: column;
+
+  &[data-pointers] {
+    cursor: grabbing;
+    user-select: none;
+
+    -webkit-user-drag: none;
+  }
+}
+
+.drawerRoot {
+  z-index: auto !important; /* stylelint-disable-line declaration-no-important */
+
+  div[data-content-wrapper='true'] {
+    will-change: transform;
+
+    z-index: auto;
+    overflow: hidden;
+
+    &[data-position='left'], &[data-position='right'] {
+      height: 100%;
+      max-height: 100%;
+      max-width: calc(100% - $space-drawer-outside-gap);
+      top: 0;
+      bottom: 0;
+
+      .content {
+        max-height: calc(100vh);
+      }
+
+      @each $size in $sizes {
+        &[data-size='#{$size}'] {
+          @include composite-var($drawer, 'window', $size);
+        }
+      }
+    }
+
+    &[data-position='left'] {
+      left: 0;
+
+      &[data-border-radius] {
+        border-bottom-right-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+    }
+
+    &[data-position='right'] {
+      right: 0;
+
+      &[data-border-radius] {
+        border-bottom-left-radius: 12px;
+        border-top-left-radius: 12px;
+      }
+    }
+
+    &[data-position='bottom'], &[data-position='top'] {
+      width: 100%;
+      max-width: 100%;
+      max-height: calc(100% - $space-drawer-outside-gap);
+      left: 0;
+      right: 0;
+
+      .content {
+        max-height: calc(100vh - $space-drawer-outside-gap);
+      }
+
+      @each $size in $sizes {
+        &[data-size='#{$size}'] {
+          height: simple-var($drawer, 'window', $size, 'width');
+          min-height: simple-var($drawer, 'window', $size, 'min-width');
+        }
+      }
+    }
+
+    &[data-position='bottom'] {
+      bottom: 0;
+
+      &[data-border-radius] {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+    }
+
+    &[data-position='top'] {
+      top: 0;
+
+      &[data-border-radius] {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+      }
+    }
+
+    @each $mode in $modes {
+      &[data-mode='#{$mode}'] {
+        .drawer {
+          background-color: simple-var($drawer-background-color, $mode);
+        }
+      }
+    }
+  }
+}
+
+.drawer {
+  overflow: unset;
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  box-shadow: simple-var($box-shadow-elevation-level5);
+}
+
+.mask {
+  z-index: auto !important; /* stylelint-disable-line declaration-no-important */
+  background-color: simple-var($sys-blackout);
+}
+
+$swiper-length: $dimension-10m;
+
+.swiper {
+  position: absolute;
+
+  background-color: $sys-neutral-decor-default;
+  border-radius: $dimension-050m;
+
+  &[data-position='left'], &[data-position='right'] {
+    width: $dimension-050m;
+    height: $swiper-length;
+  }
+
+  &[data-position='left'] {
+    right: $dimension-050m;
+    top: calc(50% - $swiper-length / 2);
+  }
+
+  &[data-position='right'] {
+    left: $dimension-050m;
+    top: calc(50% - $swiper-length / 2);
+  }
+
+  &[data-position='bottom'], &[data-position='top'] {
+    width: $swiper-length;
+    height: $dimension-050m;
+  }
+
+  &[data-position='bottom'] {
+    top: $dimension-050m;
+    left: calc(50% - $swiper-length / 2);
+  }
+
+  &[data-position='top'] {
+    bottom: $dimension-050m;
+    left: calc(50% - $swiper-length / 2);
+  }
+}
