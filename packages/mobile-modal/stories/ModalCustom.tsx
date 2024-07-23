@@ -1,0 +1,50 @@
+import { Meta, StoryFn } from '@storybook/react';
+import { useState } from 'react';
+
+import { ButtonFilled } from '@snack-uikit/button';
+
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
+import { MobileModalCustom, MobileModalCustomProps } from '../src';
+import { SIZE } from '../src/constants';
+
+const meta: Meta = {
+  title: 'Mobile/Modal/Modal Custom',
+  component: MobileModalCustom,
+};
+export default meta;
+
+function Template({ open: openProp, ...args }: MobileModalCustomProps) {
+  const [open, setOpen] = useState(false);
+
+  const handleClose = () => setOpen(false);
+
+  return (
+    <div>
+      <ButtonFilled label={'Open modal'} onClick={() => setOpen(!open)} />
+      <MobileModalCustom {...args} open={openProp ?? open} onClose={handleClose} />
+    </div>
+  );
+}
+
+export const modalCustom: StoryFn<MobileModalCustomProps> = Template.bind({});
+
+modalCustom.args = {
+  size: SIZE.Auto,
+};
+
+modalCustom.argTypes = {};
+
+modalCustom.parameters = {
+  readme: {
+    sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+  },
+  packageName: componentPackage.name,
+  design: {
+    name: 'Figma',
+    type: 'figma',
+    //TODO: update to the correct one
+    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+  },
+};

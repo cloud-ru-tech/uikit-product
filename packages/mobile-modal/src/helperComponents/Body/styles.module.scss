@@ -1,0 +1,16 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-modal';
+
+.modalBody {
+  @include composite-var($sans-body-m);
+
+  padding: $dimension-3m $dimension-2m;
+
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  min-height: $dimension-2m;
+  color: $sys-neutral-text-main;
+
+  &[data-align='center'] {
+    text-align: center;
+  }
+}

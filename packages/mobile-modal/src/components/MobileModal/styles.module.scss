@@ -1,0 +1,14 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.modalFooter {
+  &[data-align='vertical'] {
+    .footerButton {
+      width: 100%;
+    }
+  }
+}
+
+.modalBody {
+  flex: 0 1 auto;
+  height: min-content;
+}
