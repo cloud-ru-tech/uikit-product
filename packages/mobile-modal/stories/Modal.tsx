@@ -70,7 +70,6 @@ modal.args = {
   additionalButton: {
     label: 'Tertiary',
   },
-  // picture: undefined,
   showIcon: false,
   showImage: false,
   icon: Icons.PlaceholderSVG,
@@ -93,7 +92,6 @@ modal.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    //TODO: update to the correct one
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    url: 'https://www.figma.com/design/SZjPEs7Ac3a2wS0HapamrE/branch/Cmwj5iKjN1YQVClS16yh36/Product-components?node-id=12599-164564&m=auto',
   },
 };

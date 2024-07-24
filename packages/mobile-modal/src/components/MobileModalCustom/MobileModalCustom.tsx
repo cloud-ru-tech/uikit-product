@@ -12,7 +12,7 @@ import {
   ModalHeader,
   ModalHeaderProps,
 } from '../../helperComponents';
-import { Size } from '../../types';
+import { Mode, Size } from '../../types';
 
 export type MobileModalCustomProps = WithSupportProps<{
   /** Управляет состоянием показан/не показан. */
@@ -26,7 +26,7 @@ export type MobileModalCustomProps = WithSupportProps<{
    * <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части
    * @default Mode.Regular
    */
-  // mode?: Mode;
+  mode?: Mode;
   /**
    * Размер модального окна
    * @default Size.Auto
@@ -42,6 +42,7 @@ export function MobileModalCustom({ size = SIZE.Auto, ...rest }: MobileModalCust
   return (
     <MobileDrawerCustom
       {...rest}
+      mode='regular'
       size={size === SIZE.Auto ? 'auto' : '100%'}
       hasBorderRadius={true}
       position='bottom'

@@ -1,0 +1,7 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.fullPageHeight {
+  position: relative;
+  height: calc(100vh - 2rem);
+  overflow: auto;
+}

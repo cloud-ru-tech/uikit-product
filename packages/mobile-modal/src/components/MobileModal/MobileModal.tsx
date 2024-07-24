@@ -41,8 +41,6 @@ export type MobileModalProps = Omit<MobileModalCustomProps, 'children'> & {
    * <br> для size=`s` - все
    */
   align?: Align;
-  /** Можно передать иконку из пакета `@snack-uikit/icon-predefined`, или путь к картинке и атрибут `alt` */
-  // picture?: MobileModalCustom.HeaderProps['picture'];
   /**
    *  Максимальное кол-во строк
    * <br> - `title` - в заголовке

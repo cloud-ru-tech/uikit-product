@@ -1,0 +1,44 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-1m;
+}
+
+.headlineLayout {
+  display: flex;
+  flex-direction: row;
+  gap: $dimension-1m;
+  align-items: flex-start;
+}
+
+.titleLayout {
+  display: flex;
+  flex-direction: row;
+  gap: $dimension-050m;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.title {
+  @include composite-var($sans-headline-s);
+
+  color: $sys-neutral-text-main;
+  margin: 0;
+  word-break: break-word;
+}
+
+.prefixButtonWrapper {
+  display: flex;
+  align-items: center;
+  height: $sans-headline-m-line-height;
+  flex-shrink: 0;
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  height: $sans-headline-m-line-height;
+  flex-shrink: 0;
+}

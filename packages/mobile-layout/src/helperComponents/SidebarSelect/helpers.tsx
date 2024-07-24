@@ -1,0 +1,48 @@
+import { MouseEvent, useMemo } from 'react';
+
+import { MobileDropdownProps } from '@sbercloud/uikit-product-mobile-dropdown';
+import { Tooltip } from '@snack-uikit/tooltip';
+
+import { SidebarItem } from './types';
+
+export function useItemsContent(
+  items: SidebarItem[],
+  onSelect?: (id: string | number) => void,
+): MobileDropdownProps['items'] {
+  return useMemo(
+    () =>
+      items.map(({ id, label, href, onClick, afterContent, disabledReason }) => {
+        const clickHandler = (event: MouseEvent<HTMLElement>) => {
+          onClick?.(event);
+          onSelect?.(id);
+        };
+
+        return {
+          id,
+          content: { option: label },
+          itemWrapRender: item => {
+            if (!disabledReason) {
+              return href ? (
+                <a href={href} onClick={clickHandler}>
+                  {item}
+                </a>
+              ) : (
+                item
+              );
+            }
+
+            return (
+              <Tooltip hoverDelayOpen={500} open={disabledReason ? undefined : false} tip={disabledReason}>
+                {item}
+              </Tooltip>
+            );
+          },
+
+          onClick: href ? undefined : clickHandler,
+          afterContent,
+          disabled: Boolean(disabledReason),
+        };
+      }),
+    [items, onSelect],
+  );
+}
