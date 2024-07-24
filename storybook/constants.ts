@@ -20,7 +20,7 @@ export enum Mode {
   Dark = 'Dark',
 }
 
-export const BRAND_TO_THEME_MAP = {
+export const BRAND_TO_THEME_MAP: Record<Brand, Record<Mode, Themes>> = {
   [Brand.Cloud]: {
     [Mode.Light]: Themes.Green,
     [Mode.Dark]: Themes.GreenDark,

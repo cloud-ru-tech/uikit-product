@@ -68,7 +68,7 @@ export function GroupSection({
   searchPlaceholder,
   ...rest
 }: GroupSectionProps) {
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const itemRefs = useRef<Record<string, HTMLDivElement | null>>({});
   const shouldScrollToSelectedItem = useRef(true);
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -119,7 +119,7 @@ export function GroupSection({
 
   useEffect(() => {
     if (selectedItem?.id && shouldScrollToSelectedItem.current) {
-      itemRefs.current[selectedItem?.id]?.scrollIntoView({ block: 'center' });
+      itemRefs.current[selectedItem.id]?.scrollIntoView({ block: 'center' });
       shouldScrollToSelectedItem.current = false;
     }
   }, [selectedItem]);
@@ -225,7 +225,7 @@ export function GroupSection({
                 onKeyDown: navigateOutside,
                 onMouseDown: handleItemMouseDown({ item, groupId: group.id }),
                 'data-test-id': dataTestId,
-                itemRef: ((ref: HTMLElement) => {
+                itemRef: ((ref: HTMLDivElement) => {
                   itemRefs.current[item.id] = ref;
                 }) as unknown as RefObject<HTMLElement>,
               };

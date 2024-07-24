@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
 import { excludeSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction, ButtonFunctionProps } from '@snack-uikit/button';
@@ -12,6 +14,10 @@ export type ButtonDropdownProps = Omit<ButtonFunctionProps, 'icon' | 'iconPositi
 function isDroplistProps(props: ButtonDropdownProps): props is DroplistProps {
   return 'items' in props;
 }
+
+type ContentfulDropdownProps = Record<string, unknown> & {
+  content: ReactNode;
+};
 
 export function ButtonDropdown({
   size = 's',
@@ -38,7 +44,7 @@ export function ButtonDropdown({
   }
 
   return (
-    <Dropdown {...(excludeSupportProps(props) as DropdownProps)} open={open} onOpenChange={onOpenChange}>
+    <Dropdown {...(excludeSupportProps(props) as ContentfulDropdownProps)} open={open} onOpenChange={onOpenChange}>
       <ButtonFunction size={size} {...props} className={className} {...extractSupportProps(props)} icon={<Icon />} />
     </Dropdown>
   );

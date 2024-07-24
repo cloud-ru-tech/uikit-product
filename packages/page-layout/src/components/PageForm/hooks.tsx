@@ -1,13 +1,13 @@
-import { JSXElementConstructor } from 'react';
+import { ForwardRefExoticComponent } from 'react';
 
 import { Tooltip, TooltipProps } from '@snack-uikit/tooltip';
 
-export function useButtonWithTooltip<T>({
+export function useButtonWithTooltip<T extends Record<string, unknown>>({
   Button,
   tooltip,
 }: {
   tooltip?: TooltipProps;
-  Button: JSXElementConstructor<T>;
+  Button: ForwardRefExoticComponent<T>;
 }) {
   if (tooltip) {
     return function ButtonWithTooltip(props: T) {

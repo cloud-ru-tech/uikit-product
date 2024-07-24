@@ -2,7 +2,7 @@ import { ElementType, MouseEvent as ReactMouseEvent, useCallback, useState } fro
 import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
-import { extractCommonButtonProps, WithTooltipProps } from '@sbercloud/uikit-product-button-private';
+import { CommonButtonProps, extractCommonButtonProps, WithTooltipProps } from '@sbercloud/uikit-product-button-private';
 import { CopyInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { PredefinedIconsPrivate } from '@sbercloud/uikit-product-predefined-icons-private';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
@@ -86,8 +86,9 @@ export function CopyButton<T extends ElementType = typeof CopyButtonDefaultEleme
     [copy, onClick, onClickBeforeCopy],
   );
 
-  const extractedProps: ReturnType<typeof extractCommonButtonProps> & { variant?: unknown } =
-    extractCommonButtonProps(rest);
+  const extractedProps: ReturnType<typeof extractCommonButtonProps> & { variant?: unknown } = extractCommonButtonProps(
+    rest as CommonButtonProps,
+  );
 
   if ('variant' in rest) {
     extractedProps.variant = rest.variant;

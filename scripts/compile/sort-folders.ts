@@ -3,9 +3,10 @@ import { DepGraph } from 'dependency-graph';
 export function sortFolders(folders: string[]) {
   const graph = new DepGraph();
 
-  const foldersByPackageName = {};
+  const foldersByPackageName: Record<string, string> = {};
 
   folders.forEach(folder => {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     const packageConfig = require(`${folder}/package.json`);
 
     const packageName = packageConfig.name;

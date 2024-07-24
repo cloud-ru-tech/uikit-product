@@ -6,7 +6,7 @@ import { version as themeVersion } from '../../packages/theme/package.json';
 
 const PackagesRootFolder = 'packages';
 
-const Folders = {
+const Folders: Record<string, string> = {
   root: '/',
   src: '/src',
   stories: '/stories',

@@ -2,6 +2,7 @@ import { ElementType } from 'react';
 import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 
 import {
+  CommonButtonProps,
   extractCommonButtonProps,
   rotateOnClickClassName,
   WithTooltipProps,
@@ -29,8 +30,9 @@ export function RefreshButton<T extends ElementType = typeof RefreshButtonDefaul
 
   const Element: ElementType = as || RefreshButtonDefaultElement;
 
-  const extractedProps: ReturnType<typeof extractCommonButtonProps> & { variant?: unknown } =
-    extractCommonButtonProps(rest);
+  const extractedProps: ReturnType<typeof extractCommonButtonProps> & { variant?: unknown } = extractCommonButtonProps(
+    rest as CommonButtonProps,
+  );
 
   if ('variant' in rest) {
     extractedProps.variant = rest.variant;

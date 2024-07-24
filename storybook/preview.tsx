@@ -21,7 +21,7 @@ const decorators: DecoratorFunction[] = [
   (Story: StoryFn, { globals: { locale, [PARAM_KEY]: brand }, parameters: { badges, snackUiLink } }) => {
     const isDark = useDarkMode();
     const mode = isDark ? Mode.Dark : Mode.Light;
-    const normalizedBrand = Object.values(Brand).includes(brand) ? brand : Brand.Cloud;
+    const normalizedBrand = Object.values(Brand).includes(brand) ? (brand as Brand) : Brand.Cloud;
 
     const methods = useForm({
       mode: 'onSubmit',

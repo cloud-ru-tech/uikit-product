@@ -18,7 +18,7 @@ export default meta;
 
 function Template({ ...args }: FilterBlockProps) {
   const [activeFastFilters, setActiveFastFilters] = useState<string[]>([]);
-  const [activeFilters, setActiveFilters] = useState({});
+  const [activeFilters, setActiveFilters] = useState<Record<string, string | string[]>>({});
 
   const handleFastFilterChange = (field: string) => {
     if (activeFastFilters.includes(field)) {
@@ -33,9 +33,10 @@ function Template({ ...args }: FilterBlockProps) {
       if (activeFilters[title]) {
         setActiveFilters({
           ...activeFilters,
-          [title]: activeFilters[title].includes(field)
-            ? [...activeFilters[title].filter((item: string) => item !== field)]
-            : [...activeFilters[title], field],
+          [title]:
+            typeof activeFilters[title] !== 'string' && activeFilters[title].includes(field)
+              ? [...activeFilters[title].filter((item: string) => item !== field)]
+              : [...activeFilters[title], field],
         });
       } else {
         setActiveFilters({

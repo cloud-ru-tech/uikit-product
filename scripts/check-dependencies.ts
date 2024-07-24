@@ -21,7 +21,7 @@ const options = {
 
 const packages = `../packages/*`;
 
-const InternalPackages = {};
+const InternalPackages: Record<string, string> = {};
 const folders = glob.sync(`${path.resolve(__dirname, packages)}`);
 
 for (const folder of folders) {

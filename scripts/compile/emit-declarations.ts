@@ -6,7 +6,7 @@ import { createCompilerHost, createProgram, JsxEmit } from 'typescript';
 import { name } from '../../package.json';
 import { ensureDirectory } from '../utils/ensureDirectory';
 
-const createdFiles = {};
+const createdFiles: Record<string, string> = {};
 
 export function createTSProgram({ fileNames }: { fileNames: string[] }) {
   const options = {

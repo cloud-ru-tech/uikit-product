@@ -2,17 +2,22 @@ import { ReactNode } from 'react';
 
 import { createTextProvider, LanguageCodeType } from '@sbercloud/uikit-product-utils';
 
-export const TimeFormat = {
+export const TimeFormat: Record<string, string> = {
   [LanguageCodeType.enGB]: 'p',
   [LanguageCodeType.ruRU]: 'HH:mm',
 };
 
-export const AmPmFormat = {
+export const AmPmFormat: Record<string, boolean> = {
   [LanguageCodeType.enGB]: true,
   [LanguageCodeType.ruRU]: false,
 };
 
-export const Separators = {
+type LanguageSeparators = {
+  daySeparator: string;
+  timeSeparator: string | ReactNode;
+};
+
+export const Separators: Record<string, LanguageSeparators> = {
   [LanguageCodeType.ruRU]: {
     daySeparator: '.',
     timeSeparator: ', ',
