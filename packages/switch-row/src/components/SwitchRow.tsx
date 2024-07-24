@@ -3,9 +3,9 @@ import { KeyboardEventHandler, ReactNode } from 'react';
 
 import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { Switch } from '@snack-uikit/toggles';
-import { QuestionTooltip, Tooltip } from '@snack-uikit/tooltip';
-import { TruncateString } from '@snack-uikit/truncate-string';
+import { Tooltip } from '@snack-uikit/tooltip';
 
+import { Title } from '../helperComponents';
 import styles from './styles.module.scss';
 
 export type SwitchRowProps = {
@@ -18,6 +18,7 @@ export type SwitchRowProps = {
   tip?: ReactNode;
   disabledToggleTip?: ReactNode;
   className?: string;
+  disableTitleTruncate?: boolean;
 };
 
 export function SwitchRow({
@@ -30,6 +31,7 @@ export function SwitchRow({
   className,
   disabledToggleTip,
   loading,
+  disableTitleTruncate = false,
   ...rest
 }: SwitchRowProps) {
   const handleChange = () => !disabled && onChange(!checked);
@@ -68,19 +70,9 @@ export function SwitchRow({
     >
       <div className={styles.headline} data-test-id='switch-row__title'>
         <div className={styles.titleLayout}>
-          <TruncateString text={title} />
-
-          {tip && (
-            <span className={styles.tipWrapper}>
-              <QuestionTooltip
-                data-pointer
-                tip={tip}
-                data-test-id='switch-row__title-tooltip'
-                size='xs'
-                tabIndex={-1}
-              />
-            </span>
-          )}
+          <div className={styles.titleWrapper}>
+            <Title title={title} tip={tip} disableTitleTruncate={disableTitleTruncate} />
+          </div>
         </div>
 
         {disabled && disabledToggleTip ? (

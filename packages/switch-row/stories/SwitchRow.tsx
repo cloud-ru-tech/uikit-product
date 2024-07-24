@@ -39,6 +39,7 @@ function Template({ checked: propsChecked, ...args }: SwitchRowProps) {
 export const switchRow: StoryFn<SwitchRowProps> = Template.bind({});
 switchRow.args = {
   title: 'Intel Xeon Высокопроизводительный процессор для серверов 3-го поколения',
+  disableTitleTruncate: false,
   description:
     'Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов говорит о возможностях стандартных подходов. Принимая во внимание показатели успешности, высококачественный прототип будущего проекта однозначнова...',
   tip: 'Tip',

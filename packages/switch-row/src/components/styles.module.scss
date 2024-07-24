@@ -19,16 +19,11 @@
   color: $sys-neutral-text-main;
 }
 
-.tipWrapper {
-  margin-right: 4px;
-  display: flex;
-  align-items: center;
-}
-
 .headline {
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 8px;
 
   justify-content: space-between;
 }
@@ -122,4 +117,12 @@
       }
     }
   }
+}
+
+.titleWrapper {
+  padding: 2px 0;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  gap: 4px;
 }
