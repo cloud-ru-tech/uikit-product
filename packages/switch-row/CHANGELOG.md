@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-07-25)
+
+
+### Features
+
+* **[PDS-486](https://jira.sbercloud.tech/browse/PDS-486):** add titleTrucate prop ([c83c47f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c83c47f588fe1ec130e5d9fd4e5ddb8adc497e3e))
+
+
+
+
+
 ## 0.2.1 (2024-07-19)
 
 ### Only dependencies have been changed
