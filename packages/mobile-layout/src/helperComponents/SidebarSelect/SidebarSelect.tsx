@@ -39,12 +39,7 @@ export function SidebarSelect({ className, items, selected, onSelect, ...otherPr
         open={isOpen}
         onOpenChange={setIsOpen}
       >
-        <MobileBlockBasic
-          className={cn(styles.wrapper, className)}
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          {...extractSupportProps(otherProps)}
-        >
+        <MobileBlockBasic className={cn(styles.wrapper, className)} {...extractSupportProps(otherProps)}>
           <TruncateString className={styles.triggerText} text={selectedItem?.label || ''} />
 
           {isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}

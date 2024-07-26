@@ -1,0 +1,76 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-infoBlock';
+
+div.emptyBlock {
+  background-color: $sys-neutral-background1-level;
+  border-radius: calc($dimension-1m + $dimension-050m);
+  padding: $dimension-4m $dimension-2m;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.contentLayout {
+  display: flex;
+  flex-direction: column;
+}
+
+.textWrap {
+  display: flex;
+  flex-direction: column;
+
+  word-wrap: break-all;
+  max-width: 100%;
+}
+
+.footer {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.title {
+  color: $sys-neutral-text-main;
+}
+
+.description {
+  color: $sys-neutral-text-support;
+}
+
+.infoBlock {
+  display: flex;
+  box-sizing: border-box;
+
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  .footer {
+    text-align: center;
+  }
+
+  .description,
+  .title {
+    text-align: center;
+  }
+
+  @include composite-var($info-block, 'm', 'container');
+
+  .contentLayout {
+    @include composite-var($info-block, 'm', 'content-layout');
+
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .textWrap {
+    @include composite-var($info-block, 'm', 'text-wrap');
+
+    align-items: center;
+
+    width: 100%;
+  }
+}

@@ -1,0 +1,11 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-infoBlock';
+
+.infoBlockFooter {
+  @include composite-var($info-block-footer);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+}
