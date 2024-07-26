@@ -1,0 +1,34 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.wrapper {
+  resize: horizontal;
+
+  overflow: hidden;
+
+  padding: 16px;
+
+  background: $sys-neutral-background1-level;
+  border: 1px solid $sys-neutral-decor-default;
+
+  &[data-size='s'] {
+    width: 256px;
+  }
+
+  &[data-size='m'] {
+    width: 280px;
+  }
+
+  &[data-size='l'] {
+    width: 304px;
+  }
+}
+
+.decoratorStory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100px;
+
+  background-color: $sys-neutral-background2-level;
+}
