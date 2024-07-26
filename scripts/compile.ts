@@ -48,7 +48,7 @@ const pkg = argv.pkg || '*';
     const jsPipe = writeJs({ src, distCJS, distESM });
     jsFiles.forEach(jsPipe(transformJs(packageJson.version)));
 
-    const filesToCopy = glob.sync(`${src}/**/*.{woff,woff2,png}`);
+    const filesToCopy = glob.sync(`${src}/**/*.{woff,woff2,png,css}`);
     filesToCopy.forEach(simpleCopy({ src, distCJS, distESM }));
 
     emitDeclarations({
