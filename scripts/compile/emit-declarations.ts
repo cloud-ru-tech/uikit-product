@@ -53,6 +53,10 @@ export function emitDeclarations({
     ensureDirectory(cjsOutFile);
     ensureDirectory(esmOutFile);
 
+    if (dtsContent === undefined) {
+      throw new Error(`[ERROR] could not emit types for file "${file}"`);
+    }
+
     fs.writeFileSync(cjsOutFile, dtsContent);
     fs.writeFileSync(esmOutFile, dtsContent);
   });
