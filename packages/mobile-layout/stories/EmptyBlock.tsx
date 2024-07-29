@@ -11,7 +11,7 @@ import { MobileEmptyBlock, MobileEmptyBlockProps } from '../src';
 import { ICONS } from './constants';
 
 const meta: Meta = {
-  title: 'Mobile/Layout/Mobile Empty Block',
+  title: 'Mobile/Layout/Empty Block',
   component: MobileEmptyBlock,
 };
 export default meta;
@@ -36,9 +36,9 @@ const Template: StoryFn<StoryProps> = ({ chosenIcon, icon, showIcon, ...args }: 
   />
 );
 
-export const mobileEmptyBlock: StoryObj<StoryProps> = Template.bind({});
+export const emptyBlock: StoryObj<StoryProps> = Template.bind({});
 
-mobileEmptyBlock.args = {
+emptyBlock.args = {
   title: 'Title',
   description: 'Description',
   icon: {
@@ -49,7 +49,7 @@ mobileEmptyBlock.args = {
   chosenIcon: PlaceholderSVG,
 };
 
-mobileEmptyBlock.argTypes = {
+emptyBlock.argTypes = {
   showIcon: {
     name: '[Stories]: Show icon',
   },
@@ -70,7 +70,7 @@ mobileEmptyBlock.argTypes = {
   },
 };
 
-mobileEmptyBlock.parameters = {
+emptyBlock.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },
@@ -78,6 +78,6 @@ mobileEmptyBlock.parameters = {
   design: {
     name: 'Figma',
     type: 'figma',
-    url: 'https://www.figma.com/file/SZjPEs7Ac3a2wS0HapamrE/Product-components?type=design&node-id=632%3A4876&mode=design&t=ofuRBtivGxvlUbmO-1',
+    url: 'https://www.figma.com/design/SZjPEs7Ac3a2wS0HapamrE/branch/Cmwj5iKjN1YQVClS16yh36/Product-components?node-id=14058-63324&t=kj5jEzKrnqWog6s8-0&m=auto',
   },
 };
