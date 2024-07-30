@@ -7,7 +7,6 @@ import {
   ButtonSimpleProps,
 } from '@snack-uikit/button';
 import { Link, LinkProps } from '@snack-uikit/link';
-import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 
 import { ALIGN, TEST_IDS } from '../../constants';
@@ -62,7 +61,6 @@ export function MobileModal({
   cancelButton,
   additionalButton,
   disclaimer,
-  truncate,
   align = ALIGN.Default,
   ...rest
 }: MobileModalProps) {
@@ -71,12 +69,7 @@ export function MobileModal({
 
   return (
     <MobileModalCustom {...rest}>
-      <MobileModalCustom.Header
-        title={<TruncateString text={title} maxLines={truncate?.title || 1} />}
-        titleTooltip={titleTooltip}
-        subtitle={subtitle ? <TruncateString text={subtitle} maxLines={truncate?.subtitle || 2} /> : undefined}
-        align={aligns.header}
-      />
+      <MobileModalCustom.Header title={title} titleTooltip={titleTooltip} subtitle={subtitle} align={aligns.header} />
 
       {Boolean(content) && (
         <MobileModalCustom.Body className={styles.modalBody} content={content} align={aligns.body} />

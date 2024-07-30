@@ -35,9 +35,12 @@ export function ModalHeader({
         <div className={styles.headline}>
           <Typography.SansHeadlineS className={styles.title} data-test-id={TEST_IDS.title}>
             {title}
+            {titleTooltip && (
+              <span className={styles.questionTooltip}>
+                <QuestionTooltip tip={titleTooltip} size='s' data-test-id={TEST_IDS.tooltip} />
+              </span>
+            )}
           </Typography.SansHeadlineS>
-
-          {titleTooltip && <QuestionTooltip tip={titleTooltip} size='s' data-test-id={TEST_IDS.tooltip} />}
         </div>
 
         {subtitle && (

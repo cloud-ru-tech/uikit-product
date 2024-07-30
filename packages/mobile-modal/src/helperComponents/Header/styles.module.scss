@@ -7,12 +7,23 @@ $aligns: 'default', 'center';
 }
 
 .title {
-  display: grid;
+  display: inline;
   color: $sys-neutral-text-main;
+  word-break: break-word;
 }
 
 .subtitle {
   color: $sys-neutral-text-support;
+}
+
+.questionTooltip {
+  display: inline-flex;
+  height: $dimension-4m;
+  padding-left: 4px;
+
+  > span {
+    transform: translate(0, 4px);
+  }
 }
 
 .image {

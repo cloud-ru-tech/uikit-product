@@ -1,0 +1,28 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-1m;
+}
+
+.textFieldDescription {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  @include composite-var($sans-body-m);
+
+  word-break: break-all;
+  color: $sys-neutral-text-support;
+}
+
+.copyValue {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-main;
+  display: flex;
+  align-items: center;
+  gap: $dimension-050m;
+}
