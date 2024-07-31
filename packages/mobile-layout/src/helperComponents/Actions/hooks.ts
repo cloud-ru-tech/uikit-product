@@ -14,8 +14,7 @@ export function useDynamicList({ items, containerRef }: UseDynamicListProps): {
   visibleActions: ActionsProps['items'];
   hiddenActions: ActionsProps['items'];
 } {
-  const [visibleActions, setVisibleActions] = useState<ActionsProps['items']>(items);
-  const [hiddenActions, setHiddenActions] = useState<ActionsProps['items']>([]);
+  const [visibleActionsAmount, setVisibleActionsAmount] = useState<number>(items.length);
   const [width, setWidth] = useState(Infinity);
   const widthRef = useRef(width);
 
@@ -23,21 +22,19 @@ export function useDynamicList({ items, containerRef }: UseDynamicListProps): {
     const container = containerRef.current;
 
     if (container && container.scrollWidth - container.offsetWidth > 0) {
-      const actionToHide = visibleActions.at(-1);
+      const actionToHide = items[visibleActionsAmount - 1];
 
       if (actionToHide) {
-        setVisibleActions(actions => actions.slice(0, -1));
-        setHiddenActions(actions => [actionToHide, ...actions]);
+        setVisibleActionsAmount(value => value - 1);
       }
     }
   });
 
   const tryShowingAction = useEventHandler(() => {
-    const actionToShow = hiddenActions[0];
+    const actionToShow = items[visibleActionsAmount];
 
     if (actionToShow) {
-      setVisibleActions(actions => [...actions, actionToShow]);
-      setHiddenActions(actions => actions.slice(1));
+      setVisibleActionsAmount(value => value + 1);
     }
   });
 
@@ -80,11 +77,14 @@ export function useDynamicList({ items, containerRef }: UseDynamicListProps): {
     }
 
     widthRef.current = width;
-  }, [tryHidingAction, tryShowingAction, width]);
+  }, [tryHidingAction, tryShowingAction, width, items]);
 
   useLayoutEffect(() => {
     tryHidingAction();
-  }, [tryHidingAction, visibleActions]);
+  }, [tryHidingAction, visibleActionsAmount]);
 
-  return { visibleActions, hiddenActions };
+  return {
+    visibleActions: items.slice(0, visibleActionsAmount),
+    hiddenActions: items.slice(visibleActionsAmount),
+  };
 }
