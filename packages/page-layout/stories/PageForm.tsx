@@ -1,7 +1,6 @@
 import { Meta, StoryFn } from '@storybook/react';
 
-import { ButtonFunction } from '@snack-uikit/button';
-import { ChevronLeftSVG, PlaceholderSVG } from '@snack-uikit/icons';
+import { PlaceholderSVG } from '@snack-uikit/icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -33,8 +32,6 @@ const Template: StoryFn<
     showButtonTooltip: boolean;
   }
 > = ({
-  showPrefix,
-  prefix,
   showFooter,
   footer,
   showAdditionalButton,
@@ -48,7 +45,6 @@ const Template: StoryFn<
   <PageForm
     {...args}
     subHeader={showSubheader ? args.subHeader : undefined}
-    prefix={showPrefix ? prefix : undefined}
     footer={
       showFooter
         ? {
@@ -81,7 +77,6 @@ export const pageForm = Template.bind({});
 
 pageForm.args = {
   title: 'Lorem ipsum dolor',
-  prefix: <ButtonFunction label='Go back' icon={<ChevronLeftSVG />} iconPosition='before' />,
   footer: {
     buttonPrimary: {
       variant: 'create',
@@ -136,7 +131,7 @@ pageForm.argTypes = {
   showButtonTooltip: { name: '[Stories]: show button tooltips', if: { arg: 'showFooter', eq: true } },
   showSubheader: { name: '[Stories]: show subheader' },
   subHeader: { table: { disable: true } },
-  prefix: { table: { disable: true } },
+
   footer: { table: { disable: true } },
 };
 

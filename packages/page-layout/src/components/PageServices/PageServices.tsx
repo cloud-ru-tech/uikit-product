@@ -6,7 +6,7 @@ import { PrivateSidebar, PrivateSidebarProps } from '../PrivateSidebar';
 import styles from './styles.module.scss';
 
 export type PageServicesProps = PropsWithChildren<
-  Pick<HeadlineProps, 'title' | 'actions' | 'status' | 'subHeader' | 'prefixButton'> & {
+  Pick<HeadlineProps, 'title' | 'actions' | 'subHeader' | 'afterHeadline' | 'beforeHeadline'> & {
     className?: string;
     sidebar?: PrivateSidebarProps;
   }
@@ -20,9 +20,9 @@ export function PageServices({
   actions,
   className,
   sidebar,
-  status,
+  beforeHeadline,
   subHeader,
-  prefixButton,
+  afterHeadline,
 }: PageServicesProps) {
   const [height, setHeight] = useState(0);
 
@@ -49,7 +49,13 @@ export function PageServices({
     <div className={cn(styles.wrapper, className)} style={{ height }}>
       <div className={styles.tempContainer}>
         <div className={styles.container}>
-          <Headline title={title} actions={actions} prefixButton={prefixButton} status={status} subHeader={subHeader} />
+          <Headline
+            title={title}
+            actions={actions}
+            beforeHeadline={beforeHeadline}
+            afterHeadline={afterHeadline}
+            subHeader={subHeader}
+          />
 
           <div className={styles.childWrapper}>{children}</div>
         </div>

@@ -12,7 +12,7 @@ import {
 import styles from './styles.module.scss';
 
 export type MobilePageServicesProps = PropsWithChildren<
-  Pick<HeadlineProps, 'title' | 'status' | 'subHeader' | 'prefixButton'> & {
+  Pick<HeadlineProps, 'title' | 'beforeHeadline' | 'subHeader' | 'afterHeadline'> & {
     className?: string;
     sidebar?: SidebarSelectProps;
     actions?: ActionsProps['items'];
@@ -25,13 +25,13 @@ export function MobilePageServices({
   actions = [],
   className,
   sidebar,
-  status,
+  afterHeadline,
   subHeader,
-  prefixButton,
+  beforeHeadline,
 }: MobilePageServicesProps) {
   return (
     <div className={cn(styles.wrapper, className)}>
-      <Headline title={title} prefixButton={prefixButton} status={status} subHeader={subHeader} />
+      <Headline title={title} beforeHeadline={beforeHeadline} afterHeadline={afterHeadline} subHeader={subHeader} />
 
       {sidebar && <SidebarSelect {...sidebar} />}
 

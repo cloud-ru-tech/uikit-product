@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { PropsWithChildren, ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import {
@@ -36,7 +36,6 @@ export type ButtonSecondaryVariant = ValueOf<typeof BUTTON_SECONDARY_VARIANT>;
 
 export type PageFormProps = PropsWithChildren<
   Pick<HeadlineProps, 'title' | 'subHeader'> & {
-    prefix?: ReactNode;
     className?: string;
     footer?: {
       buttonPrimary: (
@@ -68,7 +67,7 @@ export type PageFormProps = PropsWithChildren<
   }
 >;
 
-export function PageForm({ children, title, subHeader, className, prefix, footer }: PageFormProps) {
+export function PageForm({ children, title, subHeader, className, footer }: PageFormProps) {
   const { languageCode } = useLanguage();
 
   const PrimaryButton = useButtonWithTooltip({ Button: ButtonFilled, tooltip: footer?.buttonPrimary.tooltip });
@@ -79,7 +78,6 @@ export function PageForm({ children, title, subHeader, className, prefix, footer
     <div className={cn(styles.container, className)}>
       <div className={styles.form}>
         <div className={styles.headline}>
-          <div className={styles.prefix}>{prefix}</div>
           <Headline title={title} subHeader={subHeader} />
         </div>
 

@@ -3,7 +3,9 @@ import { HeaderProps } from 'page-layout/src/components/PrivateSidebar/types';
 import { MouseEvent, useMemo, useState } from 'react';
 
 import { StarSVG } from '@sbercloud/uikit-product-icons';
+import { ButtonFunction } from '@snack-uikit/button';
 import { PlaceholderSVG } from '@snack-uikit/icons';
+import { Status } from '@snack-uikit/status';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -72,12 +74,12 @@ const Template: StoryFn<
   PageServicesProps & {
     sidebarType: 'none' | 'title' | 'back';
     showActions: boolean;
-    showPrefixButton: boolean;
-    showStatus: boolean;
+    showAfterHeadline: boolean;
+    showBeforeHeadline: boolean;
     showSubheader: boolean;
     showIcons: boolean;
   }
-> = ({ sidebarType, showActions, showPrefixButton, showStatus, showSubheader, ...args }) => {
+> = ({ sidebarType, showActions, showAfterHeadline, showBeforeHeadline, showSubheader, ...args }) => {
   const [selected, setSelected] = useState(0);
   const sidebar = useMemo(() => getSidebarProps({ type: sidebarType, selected, setSelected }), [sidebarType, selected]);
 
@@ -87,8 +89,8 @@ const Template: StoryFn<
         {...args}
         sidebar={sidebar}
         actions={showActions ? args.actions : null}
-        prefixButton={showPrefixButton ? args.prefixButton : undefined}
-        status={showStatus ? args.status : undefined}
+        beforeHeadline={showBeforeHeadline ? args.beforeHeadline : undefined}
+        afterHeadline={showAfterHeadline ? args.afterHeadline : undefined}
         subHeader={showSubheader ? args.subHeader : undefined}
       >
         {args.children}
@@ -103,8 +105,8 @@ pageServices.args = {
   title: 'Lorem ipsum dolor',
   actions: <HeadlineActions />,
   sidebarType: 'title',
-  prefixButton: { icon: <PlaceholderSVG /> },
-  status: { label: 'Label text', hasBackground: true, appearance: 'green' },
+  beforeHeadline: <ButtonFunction icon={<PlaceholderSVG />} />,
+  afterHeadline: <Status label='Label text' hasBackground appearance='green' size='s' />,
   subHeader: (
     <DefaultSubHeader
       label={'Label'}
@@ -123,8 +125,8 @@ pageServices.args = {
         </p>
       </div>
     )),
-  showPrefixButton: true,
-  showStatus: true,
+  showBeforeHeadline: true,
+  showAfterHeadline: true,
   showActions: true,
   showSubheader: true,
 };
@@ -136,12 +138,12 @@ pageServices.argTypes = {
     options: ['none', 'title', 'back', 'headless'],
   },
   showActions: { name: '[Stories]: show headline actions' },
-  showPrefixButton: { name: '[Stories]: show prefix button' },
-  showStatus: { name: '[Stories]: show status' },
+  showBeforeHeadline: { name: '[Stories]: show before headline' },
+  showAfterHeadline: { name: '[Stories]: show after headline' },
   showSubheader: { name: '[Stories]: show subheader' },
   sidebar: { table: { disable: true } },
-  status: { table: { disable: true } },
-  prefixButton: { table: { disable: true } },
+  beforeHeadline: { table: { disable: true } },
+  afterHeadline: { table: { disable: true } },
   subHeader: { table: { disable: true } },
   actions: { table: { disable: true } },
   children: { table: { disable: true } },

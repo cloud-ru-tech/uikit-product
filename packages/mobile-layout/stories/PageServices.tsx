@@ -2,6 +2,8 @@ import { Meta, StoryFn } from '@storybook/react';
 import { useMemo, useState } from 'react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { ButtonFunction } from '@snack-uikit/button';
+import { Status } from '@snack-uikit/status';
 import { Typography } from '@snack-uikit/typography';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -49,8 +51,8 @@ const getSidebarProps = ({
 type PageServicesStoryProps = MobilePageServicesProps & {
   showSidebar: boolean;
   showActions: boolean;
-  showPrefixButton: boolean;
-  showStatus: boolean;
+  showBeforeHeadline: boolean;
+  showAfterHeadline: boolean;
   showSubheader: boolean;
   showIcons: boolean;
 };
@@ -58,8 +60,8 @@ type PageServicesStoryProps = MobilePageServicesProps & {
 function Template({
   showSidebar,
   showActions,
-  showPrefixButton,
-  showStatus,
+  showBeforeHeadline,
+  showAfterHeadline,
   showSubheader,
   ...args
 }: PageServicesStoryProps) {
@@ -72,8 +74,8 @@ function Template({
         {...args}
         sidebar={showSidebar ? sidebar : undefined}
         actions={showActions ? args.actions : undefined}
-        prefixButton={showPrefixButton ? args.prefixButton : undefined}
-        status={showStatus ? args.status : undefined}
+        beforeHeadline={showBeforeHeadline ? args.beforeHeadline : undefined}
+        afterHeadline={showAfterHeadline ? args.afterHeadline : undefined}
         subHeader={showSubheader ? args.subHeader : undefined}
       >
         {args.children}
@@ -103,8 +105,8 @@ pageServices.args = {
       icon: <PlaceholderSVG />,
     },
   ],
-  prefixButton: { icon: <PlaceholderSVG /> },
-  status: { label: 'Label text', hasBackground: true, appearance: 'green' },
+  beforeHeadline: <ButtonFunction icon={<PlaceholderSVG />} />,
+  afterHeadline: <Status label='Label text' hasBackground appearance='green' size='s' />,
   subHeader: <Typography.SansBodyM>Subheader</Typography.SansBodyM>,
   children: (
     <>
@@ -115,20 +117,20 @@ pageServices.args = {
     </>
   ),
   showSidebar: true,
-  showPrefixButton: true,
-  showStatus: true,
+  showBeforeHeadline: true,
+  showAfterHeadline: true,
   showActions: true,
   showSubheader: true,
 };
 
 pageServices.argTypes = {
   showActions: { name: '[Stories]: show headline actions' },
-  showPrefixButton: { name: '[Stories]: show prefix button' },
-  showStatus: { name: '[Stories]: show status' },
+  showBeforeHeadline: { name: '[Stories]: show before headline' },
+  showAfterHeadline: { name: '[Stories]: show after headline' },
   showSubheader: { name: '[Stories]: show subheader' },
   sidebar: { table: { disable: true } },
-  status: { table: { disable: true } },
-  prefixButton: { table: { disable: true } },
+  afterHeadline: { table: { disable: true } },
+  beforeHeadline: { table: { disable: true } },
   subHeader: { table: { disable: true } },
   actions: { table: { disable: true } },
   children: { table: { disable: true } },

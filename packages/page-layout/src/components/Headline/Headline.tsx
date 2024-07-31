@@ -1,36 +1,25 @@
 import { ReactNode } from 'react';
 
-import { ButtonSimple, ButtonSimpleProps } from '@snack-uikit/button';
-import { Status, StatusProps } from '@snack-uikit/status';
-
 import styles from './styles.module.scss';
 
 export type HeadlineProps = {
   title: string;
-  status?: Omit<StatusProps, 'size'>;
-  prefixButton?: Omit<ButtonSimpleProps, 'label' | 'size'>;
+  beforeHeadline?: ReactNode;
+  afterHeadline?: ReactNode;
   actions?: ReactNode;
   subHeader?: ReactNode;
 };
 
-export function Headline({ title, actions, prefixButton, status, subHeader }: HeadlineProps) {
+export function Headline({ title, actions, beforeHeadline, afterHeadline, subHeader }: HeadlineProps) {
   return (
     <div className={styles.headline}>
       <div className={styles.headlineLayout}>
         <div className={styles.titleLayout}>
-          {prefixButton && (
-            <div className={styles.prefixButtonWrapper}>
-              <ButtonSimple {...prefixButton} size='s' />
-            </div>
-          )}
+          {beforeHeadline && <div className={styles.prefixButtonWrapper}>{beforeHeadline}</div>}
 
           <h1 className={styles.title}>{title}</h1>
 
-          {status && (
-            <div className={styles.statusWrapper}>
-              <Status {...status} size='s' />
-            </div>
-          )}
+          {afterHeadline && <div className={styles.statusWrapper}>{afterHeadline}</div>}
         </div>
 
         {Boolean(actions) && <div className={styles.actions}>{actions}</div>}
