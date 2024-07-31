@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-fields",
   "title": "Mobile Fields",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,7 +28,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "9.0.3",
+    "@sbercloud/uikit-product-icons": "9.1.0",
     "@sbercloud/uikit-product-mobile-dropdown": "0.1.0",
     "@snack-uikit/fields": "0.23.4",
     "@snack-uikit/input-private": "3.1.4",

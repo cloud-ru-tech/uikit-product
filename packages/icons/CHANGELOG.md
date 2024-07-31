@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 9.1.0 (2024-07-31)
+
+
+### Features
+
+* **[LK-4414](https://jira.sbercloud.tech/browse/LK-4414):** add countries flags ([84c7b07](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/84c7b0752cd3d65f167a259d5b2ff00ee45b44a8))
+
+
+
+
+
 ## 9.0.3 (2024-07-31)
 
 
