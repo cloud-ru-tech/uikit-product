@@ -23,9 +23,11 @@ export type PopoverContentProps = {
   agreement?: string;
   balance: Pick<PopoverRowProps, 'tip' | 'onAddClick' | 'description' | 'status'> & {
     value: number;
+    onOpenChange?(isOpen: boolean): void;
   };
   bonuses: Pick<PopoverRowProps, 'tip' | 'onAddClick' | 'description'> & {
     value: number;
+    onOpenChange?(isOpen: boolean): void;
   };
   eyeButton: {
     dataVisible: boolean;

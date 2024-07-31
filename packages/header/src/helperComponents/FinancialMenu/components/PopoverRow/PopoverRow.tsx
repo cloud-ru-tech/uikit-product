@@ -10,19 +10,28 @@ export type PopoverRowProps = {
   label: string;
   description?: string;
   tip?: ReactNode;
+  onOpenChange?(isOpen: boolean): void;
   value: string;
   onAddClick(): void;
   status?: 'default' | 'attention';
 };
 
-export function PopoverRow({ label, description, tip, value, onAddClick, status = 'default' }: PopoverRowProps) {
+export function PopoverRow({
+  label,
+  description,
+  tip,
+  onOpenChange,
+  value,
+  onAddClick,
+  status = 'default',
+}: PopoverRowProps) {
   return (
     <div className={styles.rowWrapper}>
       <div className={styles.row}>
         <div className={styles.titleWrapper}>
           <span className={styles.title}>{label}</span>
 
-          {tip && <QuestionTooltip tip={tip} placement='top' />}
+          {tip && <QuestionTooltip tip={tip} placement='top' onOpenChange={onOpenChange} />}
         </div>
 
         <div className={styles.contentWrapper}>
