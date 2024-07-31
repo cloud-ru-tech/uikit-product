@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.2 (2024-07-31)
+
+
+### Bug Fixes
+
+* **[FF-5148](https://jira.sbercloud.tech/browse/FF-5148):** layout buttons are updated on props change ([94d2741](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/94d274156e1397fd8744387a1b1d0df97a3a62da))
+
+
+
+
+
 ## 0.1.1 (2024-07-31)
 
 ### Only dependencies have been changed
