@@ -15,6 +15,7 @@ $drawer-background-color: (
   display: flex;
   flex-direction: column;
 
+  overscroll-behavior: contain;
   &[data-pointers] {
     cursor: grabbing;
     user-select: none;
@@ -31,8 +32,10 @@ $drawer-background-color: (
 
     z-index: auto;
     overflow: hidden;
+    touch-action: none;
 
-    &[data-position='left'], &[data-position='right'] {
+    &[data-position='left'],
+    &[data-position='right'] {
       height: 100%;
       max-height: 100%;
       max-width: calc(100% - $space-drawer-outside-gap);
@@ -68,7 +71,8 @@ $drawer-background-color: (
       }
     }
 
-    &[data-position='bottom'], &[data-position='top'] {
+    &[data-position='bottom'],
+    &[data-position='top'] {
       width: 100%;
       max-width: 100%;
       max-height: calc(100% - $space-drawer-outside-gap);
@@ -138,7 +142,8 @@ $swiper-length: $dimension-10m;
   background-color: $sys-neutral-decor-default;
   border-radius: $dimension-050m;
 
-  &[data-position='left'], &[data-position='right'] {
+  &[data-position='left'],
+  &[data-position='right'] {
     width: $dimension-050m;
     height: $swiper-length;
   }
@@ -153,7 +158,8 @@ $swiper-length: $dimension-10m;
     top: calc(50% - $swiper-length / 2);
   }
 
-  &[data-position='bottom'], &[data-position='top'] {
+  &[data-position='bottom'],
+  &[data-position='top'] {
     width: $swiper-length;
     height: $dimension-050m;
   }
