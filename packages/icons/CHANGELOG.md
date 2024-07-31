@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 9.0.3 (2024-07-31)
+
+
+### Bug Fixes
+
+* **[FF-5148](https://jira.sbercloud.tech/browse/FF-5148):** add sort icon ([18f4a5d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/18f4a5d2c8fb3bdb4c124924da4d9a1b59537793))
+
+
+
+
+
 ## 9.0.2 (2024-07-31)
 
 ### Only dependencies have been changed

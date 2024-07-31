@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-drawer",
   "title": "Mobile Drawer",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,5 @@
     "classnames": "2.3.2",
     "rc-drawer": "6.4.1",
     "uncontrollable": "8.0.4"
-  },
-  "devDependencies": {},
-  "peerDependencies": {}
+  }
 }
