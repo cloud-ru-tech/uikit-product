@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.4.31 (2024-07-31)
+
+
+### Bug Fixes
+
+* **[FF-3789](https://jira.sbercloud.tech/browse/FF-3789):** updated typescript to v5 ([1e50951](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1e50951d88db18b69a760d38a6a8bf93335dcd1c))
+
+
+
+
+
 ## 5.4.30 (2024-07-19)
 
 ### Only dependencies have been changed
@@ -740,7 +751,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [5.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.2.0...@sbercloud/uikit-product-button@5.2.1) (2023-01-12)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-button
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button-private@2.0.76](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@9.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.4.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 # [5.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.1.4...@sbercloud/uikit-product-button@5.2.0) (2022-12-07)
 

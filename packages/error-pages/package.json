@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-error-pages",
   "title": "Error Pages",
-  "version": "0.10.22",
+  "version": "0.10.23",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "9.0.1",
-    "@sbercloud/uikit-product-predefined-icons-private": "1.4.24",
-    "@sbercloud/uikit-product-utils": "3.4.0",
+    "@sbercloud/uikit-product-icons": "9.0.2",
+    "@sbercloud/uikit-product-predefined-icons-private": "1.4.25",
+    "@sbercloud/uikit-product-utils": "3.4.1",
     "@snack-uikit/button": "0.17.1",
     "@snack-uikit/link": "0.11.9",
     "@snack-uikit/tag": "0.9.2",

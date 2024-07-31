@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.76 (2024-07-31)
+
+
+### Bug Fixes
+
+* **[FF-3789](https://jira.sbercloud.tech/browse/FF-3789):** updated typescript to v5 ([1e50951](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1e50951d88db18b69a760d38a6a8bf93335dcd1c))
+
+
+
+
+
 ## 2.0.75 (2024-07-19)
 
 ### Only dependencies have been changed
@@ -613,7 +624,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [2.0.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button-private@2.0.7...@sbercloud/uikit-product-button-private@2.0.8) (2022-11-17)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-button-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-tooltip@4.2.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [2.0.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button-private@2.0.6...@sbercloud/uikit-product-button-private@2.0.7) (2022-11-09)
 

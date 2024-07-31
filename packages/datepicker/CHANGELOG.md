@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.15.33 (2024-07-31)
+
+
+### Bug Fixes
+
+* **[FF-3789](https://jira.sbercloud.tech/browse/FF-3789):** updated typescript to v5 ([1e50951](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1e50951d88db18b69a760d38a6a8bf93335dcd1c))
+
+
+
+
+
 ## 0.15.32 (2024-07-19)
 
 ### Only dependencies have been changed
@@ -824,7 +835,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.11.75](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.74...@sbercloud/uikit-product-datepicker@0.11.75) (2022-12-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-datepicker
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.4.31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@9.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.4.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.11.74](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.73...@sbercloud/uikit-product-datepicker@0.11.74) (2022-11-28)
 
