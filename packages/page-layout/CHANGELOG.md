@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2024-08-01)
+
+
+### BREAKING CHANGES
+
+
+* **[PDS-308](https://jira.sbercloud.tech/browse/PDS-308):** add before/after Headline nodes; remove prefix ([6cc718c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6cc718c8786de7d9dad87d7fbf2a13933d3af1cc))
+
+
+
+
 ## 0.9.7 (2024-07-31)
 
 ### Only dependencies have been changed
