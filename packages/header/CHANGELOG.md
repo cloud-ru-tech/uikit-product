@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.17.0 (2024-08-01)
+
+
+### Features
+
+* **[RM-2000](https://jira.sbercloud.tech/browse/RM-2000):** added a callback for opening a tooltip in the financial menu ([4109ba1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4109ba1b26eb78e2439336712da63dc3e1911061))
+
+
+
+
+
 ## 2.16.3 (2024-07-31)
 
 ### Only dependencies have been changed
