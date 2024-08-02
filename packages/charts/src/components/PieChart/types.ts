@@ -1,19 +1,19 @@
 import { ReactNode } from 'react';
 
-type TextLike = string | number;
+export type TextLike = string | number;
 
-type LegendType = {
+export type LegendType = {
   label: TextLike;
   value: TextLike;
+  id?: string;
 };
 
 export type DataType = {
   label: TextLike;
   value: number;
+  id?: string;
 };
-export type ColorizedDataType = {
-  label: TextLike;
-  value: number;
+export type ColorizedDataType = DataType & {
   color: string;
 };
 
@@ -24,10 +24,14 @@ export type PieChartProps = {
     width?: number;
     height?: number;
     legendTitle?: string;
+    typographySize?: 's' | 'm' | 'l';
   };
+  onPieSegmentClick?: (data: DataType) => void;
+  onLegendItemClick?: (data: LegendType) => void;
   aggregatedLegend?: {
     data: LegendType[];
     title: string;
+    onAggregatedLegendItemClick?: (data: LegendType) => void;
   };
 };
 

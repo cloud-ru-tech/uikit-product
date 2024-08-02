@@ -1,3 +1,4 @@
+import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
@@ -18,10 +19,8 @@ export const Wrapper = styled.div<{ width?: number; height?: number }>`
   padding: 24px;
 `;
 
-export const Title = styled.div`
+export const titleClassname = css`
   padding-bottom: 24px;
-  font-size: 20px;
-  font-weight: bold;
 `;
 
 export const ContentWrapper = styled.div`

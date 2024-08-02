@@ -1,5 +1,5 @@
 import { arc, pie, PieArcDatum } from 'd3-shape';
-import { CSSProperties, Fragment } from 'react';
+import { CSSProperties, Fragment, MouseEvent } from 'react';
 
 import { ColorizedDataType, DataType, LabelRenderFunction } from './types';
 
@@ -7,7 +7,8 @@ type PieProps = {
   data: ColorizedDataType[];
   label: LabelRenderFunction<DataType>;
   onMouseOut: () => void;
-  onMouseOver: (event: React.MouseEvent<SVGPathElement>, dataIndex: number) => void;
+  onMouseOver: (event: MouseEvent<SVGPathElement>, dataIndex: number) => void;
+  onMouseDown: (event: MouseEvent<SVGPathElement>, dataIndex: number) => void;
   radius: number;
   innerRadius: number;
   segmentsShift: number;
@@ -27,6 +28,7 @@ export function Pie({
   style,
   segmentsStyle,
   onMouseOver,
+  onMouseDown,
 }: PieProps) {
   const pieSegments = pie<ColorizedDataType>()
     .sort(null)
@@ -54,6 +56,7 @@ export function Pie({
             <path
               onMouseOver={e => onMouseOver(e, index)}
               onMouseOut={onMouseOut}
+              onMouseDown={e => onMouseDown(e, index)}
               fill={segment.data.color}
               d={hoveredIndex === index ? String(getHoveredPath(segment)) : String(getPath(segment))}
               style={segmentsStyle}

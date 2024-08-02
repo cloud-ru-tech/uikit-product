@@ -1,41 +1,63 @@
-import { ReactText } from 'react';
+import { MouseEvent } from 'react';
 
 import { Divider } from '@snack-uikit/divider';
+import { Link } from '@snack-uikit/link';
+import { Typography } from '@snack-uikit/typography';
 
+import { TextLike } from '../types';
 import * as S from './styled';
 
-function LegendItem({ color, label, value }: { color?: string; label: ReactText; value: ReactText }) {
+type LegendItem = {
+  label: TextLike;
+  value: TextLike;
+  color?: string;
+  id?: string;
+};
+
+type LegendItemProps = LegendItem & {
+  size: 's' | 'm' | 'l';
+  onItemClick?: (event: MouseEvent<HTMLAnchorElement>) => void;
+};
+
+function LegendItem({ color, label, value, size, onItemClick }: LegendItemProps) {
   return (
     <S.LegendItemWrapper>
       <S.LegendItemTitle>
         {color && <S.Dot color={color} />}
-        <span>{label}</span>
+        <Link onClick={onItemClick} text={String(label)} size={size} />
       </S.LegendItemTitle>
       <S.LegendValue>{value}</S.LegendValue>
     </S.LegendItemWrapper>
   );
 }
 
-export function Legend({
-  data,
-  legendTitle,
-}: {
-  data: Array<{ label: ReactText; value: ReactText; color?: string }>;
+type LegendProps = {
+  data: Array<LegendItem>;
+  typographySize: 's' | 'm' | 'l';
   legendTitle?: string;
-}) {
+  onItemClick?: (event: MouseEvent<HTMLAnchorElement>, data: LegendItem) => void;
+};
+
+export function Legend({ data, legendTitle, typographySize, onItemClick }: LegendProps) {
   return (
     <S.Legend>
       {legendTitle && (
         <>
-          <div>{legendTitle}</div>
+          <Typography purpose={'label'} family={'sans'} size={typographySize}>
+            {legendTitle}
+          </Typography>
           <S.LegendDividerWrapper>
             <Divider />
           </S.LegendDividerWrapper>
         </>
       )}
-      {data.map((x, index) => (
-        <div key={`legend_${x.label}_${index}`}>
-          <LegendItem {...x} />
+      {data.map((item, index) => (
+        <div key={`legend_${item.label}_${index}`}>
+          <LegendItem
+            {...item}
+            size={typographySize}
+            onItemClick={onItemClick ? event => onItemClick(event, item) : undefined}
+          />
           {index !== data.length - 1 && (
             <S.LegendDividerWrapper>
               <Divider />
