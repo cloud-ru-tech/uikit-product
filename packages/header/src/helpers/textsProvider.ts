@@ -45,8 +45,6 @@ export enum Texts {
   AddWorkspace = 'add-workspace',
 
   FinancialMenuTitle = 'financial-menu-title',
-  FinancialMenuBalance = 'financial-menu-balance',
-  FinancialMenuBonuses = 'financial-menu-bonuses',
   FinancialMenuEyeButtonDavaVisibleTip = 'financial-menu-eye-button-data-visible-tip',
   FinancialMenuEyeButtonDataHiddenTip = 'financial-menu-eye-button-data-hidden-tip',
   FinancialMenuBonusSign = 'financial-menu-bonus-sign',
@@ -105,8 +103,6 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.AddWorkspace]: 'Добавить воркспейс',
 
     [Texts.FinancialMenuTitle]: 'Контроль затрат',
-    [Texts.FinancialMenuBalance]: 'Баланс',
-    [Texts.FinancialMenuBonuses]: 'Бонусы',
     [Texts.FinancialMenuEyeButtonDavaVisibleTip]: 'Скрыть баланс в шапке',
     [Texts.FinancialMenuEyeButtonDataHiddenTip]: 'Показать баланс в шапке',
     [Texts.FinancialMenuBonusSign]: 'Б',
@@ -167,8 +163,6 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.AddWorkspace]: 'Add workspace',
 
     [Texts.FinancialMenuTitle]: 'Budget control',
-    [Texts.FinancialMenuBalance]: 'Balance',
-    [Texts.FinancialMenuBonuses]: 'Bonuses',
     [Texts.FinancialMenuEyeButtonDavaVisibleTip]: 'Hide balance in header',
     [Texts.FinancialMenuEyeButtonDataHiddenTip]: 'Show balance in header',
     [Texts.FinancialMenuBonusSign]: 'B',

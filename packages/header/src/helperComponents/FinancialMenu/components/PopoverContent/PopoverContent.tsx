@@ -21,11 +21,11 @@ export type PopoverContentProps = {
   tag?: Pick<PromoTagProps, 'text' | 'appearance'>;
   link: Required<Pick<LinkProps, 'onClick' | 'href'>>;
   agreement?: string;
-  balance: Pick<PopoverRowProps, 'tip' | 'onAddClick' | 'description' | 'status'> & {
+  balance: Pick<PopoverRowProps, 'tip' | 'label' | 'onAddClick' | 'description' | 'status'> & {
     value: number;
     onOpenChange?(isOpen: boolean): void;
   };
-  bonuses: Pick<PopoverRowProps, 'tip' | 'onAddClick' | 'description'> & {
+  bonuses: Pick<PopoverRowProps, 'tip' | 'label' | 'onAddClick' | 'description'> & {
     value: number;
     onOpenChange?(isOpen: boolean): void;
   };
@@ -95,13 +95,13 @@ export function PopoverContent({
 
         <PopoverRow
           {...balance}
-          label={textProvider(languageCode, Texts.FinancialMenuBalance)}
+          label={balance.label}
           value={`${formatNumber(balance.value, { type: formatNumber.types.DigitSpaces })} ${CURRENCY_MAP.ruble}`}
         />
 
         <PopoverRow
           {...bonuses}
-          label={textProvider(languageCode, Texts.FinancialMenuBonuses)}
+          label={bonuses.label}
           value={`${formatNumber(bonuses.value, { type: formatNumber.types.DigitSpaces })} ${textProvider(
             languageCode,
             Texts.FinancialMenuBonusSign,

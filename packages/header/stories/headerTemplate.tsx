@@ -32,10 +32,12 @@ export type StoryProps = HeaderProps & {
   financialMenuAgreement: string;
   financialMenuBalanceValue: number;
   financialMenuBalanceTip: string;
+  financialMenuBalanceLabel: string;
   financialMenuBalanceDescription: string;
   financialMenuBalanceStatus: NonNullable<FinancialMenuProps['content']>['balance']['status'];
   financialMenuBonusesValue: number;
   financialMenuBonusesTip: string;
+  financialMenuBonusesLabel: string;
   financialMenuBonusesDescription: string;
   showSettings: boolean;
   showHelpMenu: boolean;
@@ -156,11 +158,13 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
 
     financialMenuBalanceValue,
     financialMenuBalanceTip,
+    financialMenuBalanceLabel,
     financialMenuBalanceDescription,
     financialMenuBalanceStatus,
 
     financialMenuBonusesValue,
     financialMenuBonusesTip,
+    financialMenuBonusesLabel,
     financialMenuBonusesDescription,
 
     showSettings,
@@ -271,6 +275,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
                     link: { onClick: () => {}, href: '#' },
                     agreement: financialMenuAgreement,
                     balance: {
+                      label: financialMenuBalanceLabel,
                       onAddClick: () => toaster.userAction.success({ label: 'balance add click' }),
                       value: financialMenuBalanceValue,
                       tip: financialMenuBalanceTip,
@@ -278,6 +283,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
                       status: financialMenuBalanceStatus,
                     },
                     bonuses: {
+                      label: financialMenuBonusesLabel,
                       onAddClick: () => toaster.userAction.success({ label: 'bonuses add click' }),
                       value: financialMenuBonusesValue,
                       tip: financialMenuBonusesTip,
@@ -439,11 +445,13 @@ export const ARGS: StoryProps = {
   financialMenuAgreement: 'Д/Д-СМ/5253/23 от 09.08.2023',
   financialMenuBalanceValue: 800.64,
   financialMenuBalanceTip: 'Баланс по договору с учетом текущего потребления',
+  financialMenuBalanceLabel: 'Баланс',
   financialMenuBalanceDescription: '',
   financialMenuBalanceStatus: 'default',
   financialMenuBonusesValue: 12345,
   financialMenuBonusesTip:
     'Сейчас вы платите бонусами из расчета 1 бонус = 1 ₽. После того как бонусы закончатся, оплата продолжится с основного баланса',
+  financialMenuBonusesLabel: 'Бонусы',
   financialMenuBonusesDescription: 'Расходуется до 31 марта',
 
   showSettings: true,
@@ -721,6 +729,11 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
     type: 'string',
     if: { arg: 'showFinancialMenu', eq: true },
   },
+  financialMenuBalanceLabel: {
+    name: '[Story]: financial menu -> balance label',
+    type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
   financialMenuBalanceDescription: {
     name: '[Story]: financial menu -> balance description',
     type: 'string',
@@ -740,6 +753,11 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   },
   financialMenuBonusesTip: {
     name: '[Story]: financial menu -> bonuses tip',
+    type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuBonusesLabel: {
+    name: '[Story]: financial menu -> bonuses label',
     type: 'string',
     if: { arg: 'showFinancialMenu', eq: true },
   },
