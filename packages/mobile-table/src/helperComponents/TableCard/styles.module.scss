@@ -1,0 +1,48 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.card {
+  position: relative;
+  box-sizing: border-box;
+  padding: $dimension-2m;
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-2m;
+
+  &:not(:last-child) {
+    border-bottom: $border-width-general-xs solid $sys-neutral-decor-default;
+  }
+}
+
+.button {
+  position: absolute;
+  top: $dimension-1m;
+  right: $dimension-1m;
+}
+
+.headline {
+  @include composite-var($sans-title-m);
+
+  color: $sys-neutral-text-main;
+  padding-right: $dimension-4m;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-2m;
+}
+
+.cardRow {
+  @include composite-var($sans-body-m);
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-050m;
+}
+
+.cardRowHeader {
+  color: $sys-neutral-text-support;
+}
+
+.cardRowContent {
+  color: $sys-neutral-text-main;
+}
