@@ -17,13 +17,14 @@ function getPageCoordinate(e: TouchEvent | MouseEvent, position: Position): numb
 type UseSwipePropsProps = {
   onClose(): void;
   position: Position;
+  enabled: boolean;
 };
 
 const TRANSFORM = 0;
 const CLOSE_DELTA_IN_PX = 40;
 const CLOSE_RATIO = 5;
 
-export function useSwipeProps({ onClose, position }: UseSwipePropsProps) {
+export function useSwipeProps({ onClose, position, enabled }: UseSwipePropsProps) {
   const swipeRef = useRef<HTMLDivElement>(null);
   const itemSize =
     (position === 'bottom' || position === 'top' ? swipeRef.current?.offsetHeight : swipeRef.current?.offsetWidth) ?? 0;
@@ -61,6 +62,10 @@ export function useSwipeProps({ onClose, position }: UseSwipePropsProps) {
   }>();
 
   const handleDragStart = (e: MouseEvent | TouchEvent) => {
+    if (!enabled) {
+      return;
+    }
+
     setDrag({
       ...drag,
       isDown: true,
@@ -71,6 +76,10 @@ export function useSwipeProps({ onClose, position }: UseSwipePropsProps) {
   };
 
   const handleDragFinish = () => {
+    if (!enabled) {
+      return;
+    }
+
     if (drag.finished) {
       return;
     }
@@ -98,6 +107,10 @@ export function useSwipeProps({ onClose, position }: UseSwipePropsProps) {
   };
 
   const handleDragMove = (e: MouseEvent | TouchEvent) => {
+    if (!enabled) {
+      return;
+    }
+
     if (!drag.isDown) {
       return;
     }

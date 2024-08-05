@@ -33,6 +33,8 @@ export type MobileDrawerCustomProps = WithSupportProps<
     container?: string | HTMLElement;
     /** Есть ли радиус у дровера */
     hasBorderRadius?: boolean;
+    /** Работает ли закрытие на свайп */
+    swipeEnabled?: boolean;
   }>
 >;
 
@@ -46,6 +48,7 @@ export function MobileDrawerCustom({
   container,
   children,
   hasBorderRadius = false,
+  swipeEnabled = true,
   ...rest
 }: MobileDrawerCustomProps) {
   const isPredefinedSize = typeof size === 'string' && SIZE_AS_VALUES.includes(size);
@@ -59,6 +62,7 @@ export function MobileDrawerCustom({
   const { swipeRef, drawerStyles, maskStyles, drawerMotionProps, swipeProps, showPointer } = useSwipeProps({
     position,
     onClose: handleClose,
+    enabled: swipeEnabled,
   });
 
   return (
