@@ -1,0 +1,114 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+@mixin chip-defaults {
+  cursor: pointer;
+
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: max-content;
+  min-width: max-content;
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  text-transform: none;
+
+  border-style: solid;
+  outline: 0;
+  outline-offset: 0;
+
+  .spinner {
+    display: inline-flex;
+  }
+}
+
+@mixin chip-anatomy-styles($chip-theme, $sizes, $typography, $contentClassName: null) {
+  @include icon-size;
+
+  .labelLayout {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  @each $size in $sizes {
+    &[data-size='#{$size}'] {
+      .label {
+        @include composite-var($typography, $size);
+      }
+
+      .labelLayout {
+        @include composite-var($chip-theme, 'label-layout', $size);
+      }
+
+      @if ($contentClassName) {
+        .#{$contentClassName} {
+          @include composite-var($chip-theme, 'container', $size);
+        }
+      }
+
+ @else {
+        @include composite-var($chip-theme, 'container', $size);
+
+      }
+    }
+  }
+}
+
+@mixin icon-size {
+  .icon {
+    display: inline-flex;
+
+    svg {
+      width: $icon-s !important; /* stylelint-disable-line declaration-no-important */
+      height: $icon-s !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+}
+
+@mixin chip-loading-state($chip-theme, $condition, $classNamesToHide, $contentClassName: null, $relativeSpinner: null) {
+  @if ($contentClassName) {
+    .#{$contentClassName} {
+      cursor: progress;
+    }
+  }
+
+ @else {
+    cursor: progress;
+  }
+
+  #{$condition} {
+    @if $classNamesToHide {
+      @each $className in $classNamesToHide {
+        .#{$className} {
+          @include composite-var($chip-theme, 'label-layout', 'label', 'load-label-only');
+        }
+      }
+    }
+
+    .spinner {
+      @if not $relativeSpinner {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@mixin chip-outline {
+  @include outline-var($container-focused-s);
+
+  outline-color: $sys-available-complementary;
+  outline-offset: $spacing-state-focus-offset;
+}
