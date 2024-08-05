@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {
   ButtonFilled,
   ButtonFilledProps,
@@ -66,13 +68,19 @@ export function MobileModal({
 }: MobileModalProps) {
   const aligns = getAlignProps({ align });
   const buttonsSize = getButtonsSize();
+  const [swipeEnabled, setSwipeEnabled] = useState(true);
 
   return (
-    <MobileModalCustom {...rest}>
+    <MobileModalCustom {...rest} swipeEnabled={swipeEnabled}>
       <MobileModalCustom.Header title={title} titleTooltip={titleTooltip} subtitle={subtitle} align={aligns.header} />
 
       {Boolean(content) && (
-        <MobileModalCustom.Body className={styles.modalBody} content={content} align={aligns.body} />
+        <MobileModalCustom.Body
+          className={styles.modalBody}
+          content={content}
+          align={aligns.body}
+          onSwipeEnabledChange={setSwipeEnabled}
+        />
       )}
 
       <MobileModalCustom.Footer

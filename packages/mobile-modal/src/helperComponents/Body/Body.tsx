@@ -14,14 +14,25 @@ export type ModalBodyProps = WithSupportProps<{
   /** Выравнивание контента */
   align?: ContentAlign;
   className?: string;
+  onSwipeEnabledChange?(value: boolean): void;
 }>;
 
-export function ModalBody({ content, align = CONTENT_ALIGN.Default, className, ...rest }: ModalBodyProps) {
+export function ModalBody({
+  content,
+  align = CONTENT_ALIGN.Default,
+  className,
+  onSwipeEnabledChange,
+  ...rest
+}: ModalBodyProps) {
   return (
     <Scroll
       size='m'
       barHideStrategy='never'
       className={cn(styles.modalBody, className)}
+      onScroll={event => {
+        const scrollTop = (event?.target as HTMLDivElement | undefined)?.scrollTop;
+        onSwipeEnabledChange?.(!scrollTop);
+      }}
       {...extractSupportProps(rest)}
       data-align={align}
       data-test-id={TEST_IDS.content}

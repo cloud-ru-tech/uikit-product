@@ -57,6 +57,36 @@ modal.args = {
       For replacement, use the property: ◆Slot... Connect your local component with unique content to this property
       <br /> <br />
       The maximum height of the modal window can be equal to the height of the browser view window with margins of 24 px
+      <br /> <br />
+      Demo content
+      <br /> <br />
+      For replacement, use the property: ◆Slot... Connect your local component with unique content to this property
+      <br /> <br />
+      The maximum height of the modal window can be equal to the height of the browser view window with margins of 24 px
+      <br /> <br />
+      Demo content
+      <br /> <br />
+      For replacement, use the property: ◆Slot... Connect your local component with unique content to this property
+      <br /> <br />
+      The maximum height of the modal window can be equal to the height of the browser view window with margins of 24 px
+      <br /> <br />
+      Demo content
+      <br /> <br />
+      For replacement, use the property: ◆Slot... Connect your local component with unique content to this property
+      <br /> <br />
+      The maximum height of the modal window can be equal to the height of the browser view window with margins of 24 px
+      <br /> <br />
+      Demo content
+      <br /> <br />
+      For replacement, use the property: ◆Slot... Connect your local component with unique content to this property
+      <br /> <br />
+      The maximum height of the modal window can be equal to the height of the browser view window with margins of 24 px
+      <br /> <br />
+      Demo content
+      <br /> <br />
+      For replacement, use the property: ◆Slot... Connect your local component with unique content to this property
+      <br /> <br />
+      The maximum height of the modal window can be equal to the height of the browser view window with margins of 24 px
     </>
   ),
   size: SIZE.Auto,
