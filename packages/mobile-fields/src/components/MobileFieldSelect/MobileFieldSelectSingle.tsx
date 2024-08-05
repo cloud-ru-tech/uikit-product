@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import mergeRefs from 'merge-refs';
 import {
   FocusEvent,
@@ -15,13 +14,13 @@ import {
   useState,
 } from 'react';
 
-import { MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
-import { SelectionSingleValueType } from '@snack-uikit/list';
+import { List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
 import { extractSupportProps, useValueControl } from '@snack-uikit/utils';
 
-import { FieldContainerPrivate } from '../../helperComponents';
+import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
 import { useButtons, useHandleOnKeyDown, useSearchInput } from './hooks';
 import { useFuzzySearch } from './legacy';
 import styles from './styles.module.scss';
@@ -75,14 +74,11 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
 
     const [{ selectedItem, items = [] }, setItems] = useState<{
       selectedItem?: ItemWithId;
-      items: MobileDroplistProps['items'];
+      items: ListProps['items'];
     }>(() => updateItems({ options, value, currentItems: [], selectedItem: undefined }));
 
-    const { inputValue, setInputValue, prevInputValue, updateInputValue } = useSearchInput({
+    const { inputValue, setInputValue, prevInputValue } = useSearchInput({
       ...search,
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-expect-error
-      defaultValue: selectedItem?.content.option ?? '',
       selectedOptionFormatter,
     });
 
@@ -104,7 +100,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       }
 
       prevSelectedItem.current = selectedItem;
-      updateInputValue(selectedItem);
+      setInputValue('');
 
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedItem, prevSelectedItem]);
@@ -116,6 +112,8 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
         setOpen(true);
       }
     }, [required, setOpen, setValue]);
+
+    const [swipeEnabled, setSwipeEnabled] = useState<boolean>(true);
 
     const { ArrowIcon, arrowIconSize } = getArrowIcon({ size, open });
 
@@ -131,7 +129,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
       if (!open && !buttonsRefs.filter(Boolean).includes(e.relatedTarget)) {
-        updateInputValue(selectedItem);
+        setInputValue('');
 
         rest?.onBlur?.(e);
       }
@@ -177,7 +175,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
         setOpen(open);
 
         if (!open) {
-          updateInputValue(selectedItem);
+          setInputValue('');
         }
       }
     };
@@ -190,27 +188,52 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
 
     const fieldValidationState = getValidationState({ validationState, error: rest.error });
 
-    return (
-      <FieldDecorator
-        {...extractSupportProps(rest)}
-        {...extractFieldDecoratorProps(rest)}
-        validationState={fieldValidationState}
-        required={required}
-        readonly={readonly}
-        labelFor={id}
-        disabled={disabled}
-        size={size}
-      >
-        <MobileDroplist
+    const listJsx = (
+      <div className={styles.listWrapper}>
+        <List
           {...extractListProps(rest)}
+          size='l'
           items={result}
+          contentRender={({ content, ...rest }) => {
+            if (typeof content !== 'function') {
+              return <ItemContent {...(content as ItemContentProps)} {...rest} />;
+            }
+
+            return content;
+          }}
+          scroll
+          onScroll={event => {
+            const scrollTop = (event?.target as HTMLDivElement | undefined)?.scrollTop;
+            setSwipeEnabled?.(!scrollTop);
+          }}
+          search={
+            searchable
+              ? {
+                  value: inputValue,
+                  onChange: setInputValue,
+                }
+              : undefined
+          }
           selection={{
             mode: 'single',
             value: value,
             onChange: handleSelectionChange,
           }}
-          open={open}
-          onOpenChange={handleOpenChange}
+        />
+      </div>
+    );
+
+    return (
+      <>
+        <FieldDecorator
+          {...extractSupportProps(rest)}
+          {...extractFieldDecoratorProps(rest)}
+          validationState={fieldValidationState}
+          required={required}
+          readonly={readonly}
+          labelFor={id}
+          disabled={disabled}
+          size={size}
         >
           <FieldContainerPrivate
             className={styles.container}
@@ -222,6 +245,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
             inputRef={localRef}
             size={size}
             prefix={prefixIcon}
+            onClick={() => handleOpenChange(true)}
           >
             <InputPrivate
               id={id}
@@ -230,15 +254,13 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
               disabled={disabled}
               placeholder={placeholder}
               ref={mergeRefs(ref, localRef)}
-              onChange={searchable ? setInputValue : undefined}
-              value={searchable ? inputValue : selectedOptionFormatter(selectedItem)}
-              readonly={readonly}
+              onChange={undefined}
+              value={selectedOptionFormatter(selectedItem)}
+              readonly
               data-test-id='field-select__input'
               onKeyDown={handleOnKeyDown()}
               onBlur={handleBlur}
-              className={cn({
-                [styles.readonlyCursor]: !searchable,
-              })}
+              className={styles.readonlyCursor}
             />
 
             <div className={styles.postfix}>
@@ -246,8 +268,19 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
               <ArrowIcon size={arrowIconSize} className={styles.arrowIcon} />
             </div>
           </FieldContainerPrivate>
-        </MobileDroplist>
-      </FieldDecorator>
+        </FieldDecorator>
+
+        <MobileModalCustom
+          open={open}
+          onClose={() => handleOpenChange(false)}
+          size={searchable ? 'full' : 'auto'}
+          swipeEnabled={swipeEnabled}
+        >
+          <MobileModalCustom.Header title={rest.label} />
+
+          {searchable ? listJsx : <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} />}
+        </MobileModalCustom>
+      </>
     );
   },
 );

@@ -62,7 +62,9 @@ $base-min-width: 4px;
           $button-width: simple-var($icons-sizes, $size);
           $postfix-width: calc(var(#{$space-fields-postfix-gap}) + $button-width * 2);
           $margin-right: calc(
-            #{simple-var($fields, $containerVariant, $size, 'padding-right')} + #{simple-var($fields, $containerVariant, $size, 'gap')} + #{$postfix-width}
+            #{simple-var($fields, $containerVariant, $size, 'padding-right')} +
+              #{simple-var($fields, $containerVariant, $size, 'gap')} +
+              #{$postfix-width}
           );
 
           width: calc(100% - $margin-right);
@@ -110,8 +112,6 @@ $base-min-width: 4px;
   display: inline-flex;
   flex: 1;
 
-  min-width: $base-min-width;
-
   color: transparent;
 
   &[data-searchable='false'] {
@@ -130,4 +130,48 @@ $base-min-width: 4px;
 input.readonlyCursor {
   cursor: pointer;
   caret-color: transparent;
+}
+
+.searchDivider {
+  margin-bottom: 4px;
+}
+
+.footer {
+  width: 100%;
+}
+
+.footerTopLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.counter {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-light;
+}
+
+.listWrapper {
+  @include composite-var($sans-body-m);
+
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  min-height: $dimension-2m;
+  color: $sys-neutral-text-main;
+  padding: 16px 0;
+}
+
+.body {
+  @include composite-var($sans-body-m);
+
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  min-height: $dimension-2m;
+  color: $sys-neutral-text-main;
+}
+
+.bodyNoPadding {
+  padding: 0 !important;
 }

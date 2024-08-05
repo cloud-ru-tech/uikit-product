@@ -13,14 +13,15 @@ import {
   useState,
 } from 'react';
 
-import { MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
-import { SelectionSingleValueType } from '@snack-uikit/list';
+import { ItemId, List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
 import { Tag } from '@snack-uikit/tag';
 import { extractSupportProps, useValueControl } from '@snack-uikit/utils';
 
-import { FieldContainerPrivate } from '../../helperComponents';
+import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
 import { useButtons, useHandleDeleteItem, useHandleOnKeyDown, useSearchInput } from './hooks';
 import { useFuzzySearch } from './legacy';
 import styles from './styles.module.scss';
@@ -32,8 +33,6 @@ import {
   getValidationState,
   updateMultipleItems,
 } from './utils';
-
-const BASE_MIN_WIDTH = 4;
 
 const defaultSelectedOptionFormatter: SelectedOptionFormatter = item =>
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -72,20 +71,15 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
     ref,
   ) => {
     const localRef = useRef<HTMLInputElement>(null);
-    const inputPlugRef = useRef<HTMLSpanElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
 
     const [open = false, setOpen] = useValueControl<boolean>({ value: openProp, onChange: onOpenChange });
 
-    const [value, setValue] = useValueControl<SelectionSingleValueType[]>({
-      value: valueProp,
-      defaultValue,
-      onChange: onChangeProp,
-    });
+    const [value, setValue] = useState<SelectionSingleValueType[] | undefined>(valueProp || defaultValue || []);
 
     const [{ selectedItems, items = [] }, setItems] = useState<{
       selectedItems?: ItemWithId[];
-      items: MobileDroplistProps['items'];
+      items: ListProps['items'];
     }>(() => updateMultipleItems({ options, value, currentItems: [], selectedItems: undefined }));
 
     const { inputValue, setInputValue, prevInputValue, updateInputValue } = useSearchInput({
@@ -99,7 +93,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
     }, [options, value]);
 
     const onClear = () => {
-      setValue(selectedItems?.filter(item => item.disabled).map(item => item.id));
+      setValue(selectedItems?.filter(item => item.disabled).map(item => item.id) as ItemId[]);
       localRef.current?.focus();
 
       if (rest.required) {
@@ -129,7 +123,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
     const handleOnKeyDown = (onKeyDown?: KeyboardEventHandler<HTMLElement>) => (e: KeyboardEvent<HTMLInputElement>) => {
       if (removeByBackspace && e.code === 'Backspace' && inputValue === '') {
         if (selectedItems?.length && !selectedItems.slice(-1)[0].disabled) {
-          handleItemDelete(selectedItems.pop() as MobileDroplistProps['items'][0])();
+          handleItemDelete(selectedItems.pop() as ListProps['items'][0])();
         }
       }
 
@@ -140,7 +134,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
 
       if (addOptionByEnter && e.code === 'Enter' && inputValue !== '') {
         if (!(value ?? []).includes(inputValue)) {
-          setValue((value: SelectionSingleValueType[]) => (value ?? []).concat(inputValue));
+          setValue(value => (value ?? []).concat(inputValue));
           updateInputValue();
         }
       }
@@ -157,17 +151,15 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
         setOpen(open);
 
         if (!open) {
-          if (inputPlugRef.current) {
-            inputPlugRef.current.style.width = BASE_MIN_WIDTH + 'px';
-          }
-        }
-
-        if (open) {
-          if (inputPlugRef.current) {
-            inputPlugRef.current.style.width = 'unset';
-          }
+          updateInputValue();
         }
       }
+    };
+
+    const handleApplyChange = () => {
+      onChangeProp?.(selectedItems?.map(item => item.id));
+      handleOpenChange(false);
+      setInputValue('');
     };
 
     const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
@@ -183,31 +175,53 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       autocomplete || !searchable || prevInputValue.current === inputValue ? items : fuzzySearch(inputValue);
 
     const fieldValidationState = getValidationState({ validationState, error: rest.error });
+    const [swipeEnabled, setSwipeEnabled] = useState<boolean>(true);
 
-    return (
-      <FieldDecorator
-        {...extractSupportProps(rest)}
-        {...extractFieldDecoratorProps(rest)}
-        labelFor={id}
-        size={size}
-        validationState={fieldValidationState}
-      >
-        <MobileDroplist
+    const listJsx = (
+      <div className={styles.listWrapper}>
+        <List
           {...extractListProps(rest)}
           items={result}
+          size='l'
+          scroll
+          search={
+            searchable
+              ? {
+                  value: inputValue,
+                  onChange: setInputValue,
+                }
+              : undefined
+          }
+          onScroll={event => {
+            const scrollTop = (event?.target as HTMLDivElement | undefined)?.scrollTop;
+            setSwipeEnabled?.(!scrollTop);
+          }}
+          contentRender={({ content, ...rest }) => {
+            if (typeof content !== 'function') {
+              return <ItemContent {...(content as ItemContentProps)} {...rest} />;
+            }
+
+            return content;
+          }}
           selection={{
             mode: 'multiple',
             value: value,
             onChange: value => {
               setValue(value);
-              if (inputValue) {
-                localRef.current?.focus();
-                updateInputValue();
-              }
             },
           }}
-          open={!disabled && !readonly && open}
-          onOpenChange={handleOpenChange}
+        />
+      </div>
+    );
+
+    return (
+      <>
+        <FieldDecorator
+          {...extractSupportProps(rest)}
+          {...extractFieldDecoratorProps(rest)}
+          labelFor={id}
+          size={size}
+          validationState={fieldValidationState}
         >
           <FieldContainerPrivate
             className={cn(styles.container, styles.tagContainer)}
@@ -219,6 +233,9 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
             inputRef={localRef}
             size={size}
             prefix={prefixIcon}
+            onClick={() => {
+              handleOpenChange(true);
+            }}
           >
             <>
               <div className={styles.contentWrapper} ref={contentRef}>
@@ -230,21 +247,10 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
                       label={selectedOptionFormatter(option)}
                       key={option.id}
                       appearance={option.appearance ?? 'neutral'}
-                      onDelete={!option.disabled && !disabled && !readonly ? handleItemDelete(option) : undefined}
                     />
                   ))}
 
-                <div
-                  className={styles.inputWrapper}
-                  style={{
-                    minWidth: value
-                      ? Math.min(
-                          contentRef.current?.clientWidth ?? BASE_MIN_WIDTH,
-                          inputPlugRef.current?.clientWidth ?? BASE_MIN_WIDTH,
-                        )
-                      : '100%',
-                  }}
-                >
+                <div className={styles.inputWrapper}>
                   <InputPrivate
                     id={id}
                     name={name}
@@ -252,31 +258,50 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
                     disabled={disabled}
                     placeholder={!selectedItems || !selectedItems.length ? placeholder : undefined}
                     ref={mergeRefs(ref, localRef)}
-                    onChange={searchable ? setInputValue : undefined}
-                    value={searchable ? inputValue : ''}
-                    readonly={!searchable || readonly}
+                    onChange={undefined}
+                    value={''}
+                    readonly
                     data-test-id='field-select__input'
                     onKeyDown={handleOnKeyDown()}
                     onBlur={handleBlur}
-                    className={cn({
-                      [styles.readonlyCursor]: !searchable,
-                    })}
+                    className={styles.readonlyCursor}
                   />
                 </div>
               </div>
 
               <div className={styles.postfix}>
                 {buttons}
-                <ArrowIcon size={arrowIconSize} className={styles.arrowIcon} />
+                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                {/* @ts-ignore */}
+                <ArrowIcon size={arrowIconSize} className={styles.arrowIcon} onClick={() => handleOpenChange(true)} />
               </div>
-
-              <span ref={inputPlugRef} className={styles.inputPlug}>
-                {inputValue}
-              </span>
             </>
           </FieldContainerPrivate>
-        </MobileDroplist>
-      </FieldDecorator>
+        </FieldDecorator>
+
+        <MobileModalCustom
+          open={open}
+          onClose={() => handleOpenChange(false)}
+          size={searchable ? 'full' : 'auto'}
+          swipeEnabled={swipeEnabled}
+        >
+          <MobileModalCustom.Header title={rest.label} />
+
+          {searchable ? listJsx : <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} />}
+
+          <MobileModalCustom.Footer
+            actions={
+              <div className={styles.footer}>
+                <div className={styles.footerTopLine}>
+                  <span className={styles.counter}>{`Выбрано: ${selectedItems?.length || 0}`}</span>
+                  <ButtonFunction label='Сбросить все' onClick={onClear} size='m' />
+                </div>
+                <ButtonFilled fullWidth label='Выбрать' onClick={handleApplyChange} size='l' />
+              </div>
+            }
+          />
+        </MobileModalCustom>
+      </>
     );
   },
 );

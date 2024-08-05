@@ -37,7 +37,7 @@ export function transformOptionsToItems(
       ...rest,
       id: value,
       appearance: appearance,
-      content: { option: contentOption, caption, description },
+      content: { description, option: contentOption, caption: caption },
     };
   });
 }

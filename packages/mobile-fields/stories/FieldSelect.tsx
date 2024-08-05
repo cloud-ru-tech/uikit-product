@@ -24,7 +24,13 @@ const DEFAULT_OPTIONS: OptionProps[] = [
     label: 'Group',
     type: 'group',
     options: [
-      { value: 'op1', option: 'Option 1', caption: 'Green Tag', appearance: 'green' },
+      {
+        value: 'op1',
+        option:
+          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui est veniam autem, minus accusamus molestiae non vero rerum. Accusamus in possimus illo ipsam delectus consectetur commodi nemo, illum voluptatem.',
+        caption: 'Green Tag',
+        appearance: 'green',
+      },
       { value: 'op2', option: 'Option 2', description: 'Description' },
       { value: 'op3', option: 'Option 3', caption: 'Caption' },
       {
