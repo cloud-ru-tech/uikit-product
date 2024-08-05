@@ -1,0 +1,40 @@
+{
+  "name": "@sbercloud/uikit-product-mobile-info-row",
+  "title": "Mobile Info Row",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/mobile-info-row",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/mobile-info-row"
+  },
+  "author": "Anna Kozlova <apkozlova@cloud.ru>",
+  "contributors": [
+    "Anna Kozlova <apkozlova@cloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-utils": "3.4.1",
+    "@snack-uikit/button": "0.17.1",
+    "@snack-uikit/divider": "3.0.3",
+    "@snack-uikit/skeleton": "0.3.3",
+    "@snack-uikit/tooltip": "0.13.3",
+    "classnames": "2.3.2"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}

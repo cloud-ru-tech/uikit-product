@@ -1,0 +1,50 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.wrapper {
+  width: 100%;
+}
+
+.infoRow {
+  padding: $dimension-2m 0;
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-050m;
+  width: 100%;
+}
+
+.labelLayout {
+  @include composite-var($light-label-l);
+  position: relative;
+  color: $sys-neutral-text-support;
+  display: flex;
+  gap: $dimension-050m;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.contentLayout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: $dimension-2m;
+}
+
+.content {
+  @include composite-var($sans-body-m);
+  position: relative;
+  min-width: 0;
+  color: $sys-neutral-text-main;
+  display: flex;
+  height: 100%;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.rowActions {
+  display: flex;
+  align-items: center;
+  gap: $dimension-1m;
+}
