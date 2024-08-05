@@ -6,15 +6,15 @@ import { ButtonFilled } from '@snack-uikit/button';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { MobileDropdown, MobileDropdownProps } from '../src';
+import { MobileDroplist, MobileDroplistProps } from '../src';
 
 const meta: Meta = {
-  title: 'Mobile/Dropdown',
-  component: MobileDropdown,
+  title: 'Mobile/Droplist',
+  component: MobileDroplist,
 };
 export default meta;
 
-function Template({ open: openProp, ...args }: MobileDropdownProps) {
+function Template({ open: openProp, ...args }: MobileDroplistProps) {
   const [open, setOpen] = useState(false);
   const [selected, setSelected] = useState<string>();
 
@@ -25,21 +25,21 @@ function Template({ open: openProp, ...args }: MobileDropdownProps) {
 
   return (
     <div>
-      <MobileDropdown
+      <MobileDroplist
         {...args}
         open={openProp ?? open}
         onOpenChange={setOpen}
         selection={{ mode: 'single', value: selected, onChange: handleSelect }}
       >
         <ButtonFilled label={'Open dropdown'} />
-      </MobileDropdown>
+      </MobileDroplist>
     </div>
   );
 }
 
-export const dropdown: StoryFn<MobileDropdownProps> = Template.bind({});
+export const droplist: StoryFn<MobileDroplistProps> = Template.bind({});
 
-dropdown.args = {
+droplist.args = {
   items: [
     { id: '1', content: { option: 'Option' } },
     { id: '2', content: { option: 'Option' } },
@@ -48,9 +48,9 @@ dropdown.args = {
   ],
 };
 
-dropdown.argTypes = {};
+droplist.argTypes = {};
 
-dropdown.parameters = {
+droplist.parameters = {
   readme: {
     sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
   },

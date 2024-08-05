@@ -1,21 +1,20 @@
-import { cloneElement, isValidElement, MouseEvent, PropsWithChildren, useMemo } from 'react';
+import { cloneElement, isValidElement, MouseEvent, PropsWithChildren, ReactNode, useMemo } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
 import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
-import { List, ListProps } from '@snack-uikit/list';
 import { WithSupportProps } from '@snack-uikit/utils';
 
 import styles from './styles.module.scss';
 
 export type MobileDropdownProps = PropsWithChildren<
-  Pick<ListProps, 'items' | 'selection'> &
-    WithSupportProps<{
-      open?: boolean;
-      onOpenChange?(value: boolean): void;
-    }>
+  WithSupportProps<{
+    open?: boolean;
+    onOpenChange?(value: boolean): void;
+    content: ReactNode;
+  }>
 >;
 
-export function MobileDropdown({ open, onOpenChange, items, selection, children, ...rest }: MobileDropdownProps) {
+export function MobileDropdown({ open, onOpenChange, children, content, ...rest }: MobileDropdownProps) {
   const [isOpen, setIsOpen] = useUncontrolledProp(open, false, onOpenChange);
 
   const handleClose = () => setIsOpen(false);
@@ -47,7 +46,7 @@ export function MobileDropdown({ open, onOpenChange, items, selection, children,
       {trigger}
 
       <MobileModalCustom open={isOpen} onClose={handleClose} className={styles.modal} {...rest}>
-        <List items={items} selection={selection} size='l' />
+        {content}
       </MobileModalCustom>
     </>
   );
