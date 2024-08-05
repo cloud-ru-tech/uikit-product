@@ -1,7 +1,7 @@
 import { ReactNode, useRef, useState } from 'react';
 
 import { KebabSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
 import { ButtonFilled, ButtonFunction, ButtonOutline, ButtonSimple, ButtonTonal } from '@snack-uikit/button';
 import { Tooltip } from '@snack-uikit/tooltip';
 
@@ -48,7 +48,7 @@ export function Actions({ items }: ActionsProps) {
       })}
 
       {hiddenActions.length > 0 && (
-        <MobileDropdown
+        <MobileDroplist
           open={isOpen}
           onOpenChange={setIsOpen}
           items={hiddenActions.map(action => ({
@@ -68,7 +68,7 @@ export function Actions({ items }: ActionsProps) {
           }))}
         >
           <ButtonOutline appearance='neutral' icon={<KebabSVG />} size='m' />
-        </MobileDropdown>
+        </MobileDroplist>
       )}
     </div>
   );

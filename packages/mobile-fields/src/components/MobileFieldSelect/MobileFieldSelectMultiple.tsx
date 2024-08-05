@@ -13,7 +13,7 @@ import {
   useState,
 } from 'react';
 
-import { MobileDropdown, MobileDropdownProps } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
 import { SelectionSingleValueType } from '@snack-uikit/list';
@@ -85,7 +85,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
 
     const [{ selectedItems, items = [] }, setItems] = useState<{
       selectedItems?: ItemWithId[];
-      items: MobileDropdownProps['items'];
+      items: MobileDroplistProps['items'];
     }>(() => updateMultipleItems({ options, value, currentItems: [], selectedItems: undefined }));
 
     const { inputValue, setInputValue, prevInputValue, updateInputValue } = useSearchInput({
@@ -129,7 +129,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
     const handleOnKeyDown = (onKeyDown?: KeyboardEventHandler<HTMLElement>) => (e: KeyboardEvent<HTMLInputElement>) => {
       if (removeByBackspace && e.code === 'Backspace' && inputValue === '') {
         if (selectedItems?.length && !selectedItems.slice(-1)[0].disabled) {
-          handleItemDelete(selectedItems.pop() as MobileDropdownProps['items'][0])();
+          handleItemDelete(selectedItems.pop() as MobileDroplistProps['items'][0])();
         }
       }
 
@@ -192,7 +192,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
         size={size}
         validationState={fieldValidationState}
       >
-        <MobileDropdown
+        <MobileDroplist
           {...extractListProps(rest)}
           items={result}
           selection={{
@@ -275,7 +275,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
               </span>
             </>
           </FieldContainerPrivate>
-        </MobileDropdown>
+        </MobileDroplist>
       </FieldDecorator>
     );
   },

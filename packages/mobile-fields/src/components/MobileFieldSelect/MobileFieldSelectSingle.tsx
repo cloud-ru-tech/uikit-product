@@ -15,7 +15,7 @@ import {
   useState,
 } from 'react';
 
-import { MobileDropdown, MobileDropdownProps } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
 import { SelectionSingleValueType } from '@snack-uikit/list';
@@ -75,7 +75,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
 
     const [{ selectedItem, items = [] }, setItems] = useState<{
       selectedItem?: ItemWithId;
-      items: MobileDropdownProps['items'];
+      items: MobileDroplistProps['items'];
     }>(() => updateItems({ options, value, currentItems: [], selectedItem: undefined }));
 
     const { inputValue, setInputValue, prevInputValue, updateInputValue } = useSearchInput({
@@ -201,7 +201,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
         disabled={disabled}
         size={size}
       >
-        <MobileDropdown
+        <MobileDroplist
           {...extractListProps(rest)}
           items={result}
           selection={{
@@ -246,7 +246,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
               <ArrowIcon size={arrowIconSize} className={styles.arrowIcon} />
             </div>
           </FieldContainerPrivate>
-        </MobileDropdown>
+        </MobileDroplist>
       </FieldDecorator>
     );
   },

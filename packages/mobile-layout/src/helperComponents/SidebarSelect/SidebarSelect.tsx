@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { useState } from 'react';
 
 import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
@@ -33,7 +33,7 @@ export function SidebarSelect({ className, items, selected, onSelect, ...otherPr
 
   return (
     <>
-      <MobileDropdown
+      <MobileDroplist
         selection={{ mode: 'single', value: selected, onChange: handleSelect }}
         items={list}
         open={isOpen}
@@ -44,7 +44,7 @@ export function SidebarSelect({ className, items, selected, onSelect, ...otherPr
 
           {isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}
         </MobileBlockBasic>
-      </MobileDropdown>
+      </MobileDroplist>
     </>
   );
 }

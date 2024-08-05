@@ -1,6 +1,6 @@
 import { MouseEvent, useMemo } from 'react';
 
-import { MobileDropdownProps } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { SidebarItem } from './types';
@@ -8,7 +8,7 @@ import { SidebarItem } from './types';
 export function useItemsContent(
   items: SidebarItem[],
   onSelect?: (id: string | number) => void,
-): MobileDropdownProps['items'] {
+): MobileDroplistProps['items'] {
   return useMemo(
     () =>
       items.map(({ id, label, href, onClick, afterContent, disabledReason }) => {
@@ -19,7 +19,7 @@ export function useItemsContent(
 
         return {
           id,
-          content: { option: label },
+          content: label,
           itemWrapRender: item => {
             if (!disabledReason) {
               return href ? (
