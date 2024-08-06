@@ -28,11 +28,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/uikit-product-mobile-tooltip": "0.0.0",
     "@sbercloud/uikit-product-utils": "3.4.1",
     "@snack-uikit/button": "0.17.3",
     "@snack-uikit/divider": "3.0.3",
     "@snack-uikit/skeleton": "0.3.4",
-    "@snack-uikit/tooltip": "0.13.7",
     "classnames": "2.3.2"
   },
   "devDependencies": {},

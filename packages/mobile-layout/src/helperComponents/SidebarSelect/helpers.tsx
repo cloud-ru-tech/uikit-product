@@ -1,7 +1,7 @@
 import { MouseEvent, useMemo } from 'react';
 
 import { MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
-import { Tooltip } from '@snack-uikit/tooltip';
+import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 
 import { SidebarItem } from './types';
 
@@ -32,9 +32,9 @@ export function useItemsContent(
             }
 
             return (
-              <Tooltip hoverDelayOpen={500} open={disabledReason ? undefined : false} tip={disabledReason}>
+              <MobileTooltip hoverDelayOpen={500} open={disabledReason ? undefined : false} tip={disabledReason}>
                 {item}
-              </Tooltip>
+              </MobileTooltip>
             );
           },
 

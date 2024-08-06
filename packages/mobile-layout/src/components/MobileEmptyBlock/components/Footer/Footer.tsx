@@ -1,16 +1,16 @@
 import cn from 'classnames';
 
+import { MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
 import { ButtonFilled, ButtonFilledProps, ButtonTonal, ButtonTonalProps } from '@snack-uikit/button';
-import { TooltipProps } from '@snack-uikit/tooltip';
 
 import { useButtonWithTooltip } from './hooks';
 import styles from './styles.module.scss';
 
 export type FooterProps = {
   /** Основная кнопка */
-  primaryButton: Omit<ButtonFilledProps, 'size'> & { tooltip?: TooltipProps };
+  primaryButton: Omit<ButtonFilledProps, 'size'> & { tooltip?: MobileTooltipProps };
   /** Дополнительная кнопка */
-  secondaryButton?: Omit<ButtonTonalProps, 'size'> & { tooltip?: TooltipProps };
+  secondaryButton?: Omit<ButtonTonalProps, 'size'> & { tooltip?: MobileTooltipProps };
   className?: string;
 };
 

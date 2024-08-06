@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { QuestionTooltip, QuestionTooltipProps } from '@snack-uikit/tooltip';
+import { MobileQuestionTooltip, MobileQuestionTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
 import { Typography } from '@snack-uikit/typography';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
@@ -13,7 +13,7 @@ export type ModalHeaderProps = WithSupportProps<{
   /** Заголовок модального окна */
   title: ReactNode;
   /** Тултип для заголовка */
-  titleTooltip?: QuestionTooltipProps['tip'];
+  titleTooltip?: MobileQuestionTooltipProps['tip'];
   /** Подзаголовок */
   subtitle?: ReactNode;
   /** Выравнивание контента */
@@ -37,7 +37,7 @@ export function ModalHeader({
             {title}
             {titleTooltip && (
               <span className={styles.questionTooltip}>
-                <QuestionTooltip tip={titleTooltip} size='s' data-test-id={TEST_IDS.tooltip} />
+                <MobileQuestionTooltip tip={titleTooltip} size='s' data-test-id={TEST_IDS.tooltip} />
               </span>
             )}
           </Typography.SansHeadlineS>

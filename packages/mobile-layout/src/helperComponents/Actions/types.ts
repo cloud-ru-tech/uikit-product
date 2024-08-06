@@ -1,3 +1,4 @@
+import { MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
 import {
   ButtonFilledProps,
   ButtonFunctionProps,
@@ -5,12 +6,11 @@ import {
   ButtonSimpleProps,
   ButtonTonalProps,
 } from '@snack-uikit/button';
-import { TooltipProps } from '@snack-uikit/tooltip';
 
 import { BUTTON_TYPE } from './constants';
 
 type Action = {
-  tooltip?: TooltipProps;
+  tooltip?: MobileTooltipProps;
 } & (
   | ({ variant?: typeof BUTTON_TYPE.Filled } & ButtonFilledProps)
   | ({ variant: typeof BUTTON_TYPE.Outline } & ButtonOutlineProps)

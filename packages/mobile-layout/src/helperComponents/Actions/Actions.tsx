@@ -2,8 +2,8 @@ import { ReactNode, useRef, useState } from 'react';
 
 import { KebabSVG } from '@sbercloud/uikit-product-icons';
 import { MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 import { ButtonFilled, ButtonFunction, ButtonOutline, ButtonSimple, ButtonTonal } from '@snack-uikit/button';
-import { Tooltip } from '@snack-uikit/tooltip';
 
 import { BUTTON_TYPE } from './constants';
 import { useDynamicList } from './hooks';
@@ -29,7 +29,7 @@ export function Actions({ items }: ActionsProps) {
         };
 
         const addTooltip = (component: ReactNode) =>
-          tooltip ? <Tooltip {...tooltip}>{component}</Tooltip> : component;
+          tooltip ? <MobileTooltip {...tooltip}>{component}</MobileTooltip> : component;
 
         switch (variant) {
           case BUTTON_TYPE.Filled:
@@ -60,9 +60,9 @@ export function Actions({ items }: ActionsProps) {
             beforeContent: action.icon,
             itemWrapRender: action.tooltip
               ? item => (
-                  <Tooltip tip={action.tooltip?.tip ?? ''} {...action.tooltip}>
+                  <MobileTooltip tip={action.tooltip?.tip ?? ''} {...action.tooltip}>
                     {item}
-                  </Tooltip>
+                  </MobileTooltip>
                 )
               : undefined,
           }))}

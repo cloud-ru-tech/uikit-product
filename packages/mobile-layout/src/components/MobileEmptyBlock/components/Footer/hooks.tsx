@@ -1,22 +1,22 @@
 import { JSXElementConstructor } from 'react';
 
-import { Tooltip, TooltipProps } from '@snack-uikit/tooltip';
+import { MobileTooltip, MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
 
 export function useButtonWithTooltip<T>({
   Button,
   tooltip,
 }: {
-  tooltip?: TooltipProps;
+  tooltip?: MobileTooltipProps;
   Button: JSXElementConstructor<T>;
 }) {
   if (tooltip) {
     return function ButtonWithTooltip(props: T) {
       return (
-        <Tooltip {...tooltip}>
+        <MobileTooltip {...tooltip}>
           {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
           {/* @ts-ignore */}
           <Button {...props} />
-        </Tooltip>
+        </MobileTooltip>
       );
     };
   }
