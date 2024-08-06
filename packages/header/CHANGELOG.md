@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.19.0 (2024-08-06)
+
+
+### Features
+
+* **[PDS-534](https://jira.sbercloud.tech/browse/PDS-534):** add hotspot for product list ([48b38cf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/48b38cfb1828ebf10e498a47e0c6ea136915f414))
+
+
+
+
+
 # 2.18.0 (2024-08-06)
 
 
