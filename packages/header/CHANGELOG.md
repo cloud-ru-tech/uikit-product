@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.18.0 (2024-08-06)
+
+
+### Features
+
+* **[RM-2214](https://jira.sbercloud.tech/browse/RM-2214):** added label prop for bonuses in financial menu ([ad2f034](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ad2f03421b52848d2b2f8a6eadaa2d932fd87f00))
+
+
+
+
+
 # 2.17.0 (2024-08-01)
 
 
