@@ -35,7 +35,7 @@ export type MobileModalProps = Omit<MobileModalCustomProps, 'children'> & {
   /** Небольшой текст под кнопками футера с возможностью передать дополнительно ссылку */
   disclaimer?: {
     text: string;
-    link?: Pick<LinkProps, 'text' | 'href' | 'target' | 'external'>;
+    link?: Pick<LinkProps, 'text' | 'href' | 'target'>;
   };
   /**
    * Выравнивание, для разных размеров доступны разные значения
@@ -120,9 +120,7 @@ export function MobileModal({
             <>
               <Typography.SansBodyS data-test-id={TEST_IDS.disclaimerText}>{disclaimer.text}</Typography.SansBodyS>
 
-              {disclaimer.link && (
-                <Link external {...disclaimer.link} size='s' data-test-id={TEST_IDS.disclaimerLink} />
-              )}
+              {disclaimer.link && <Link {...disclaimer.link} size='s' data-test-id={TEST_IDS.disclaimerLink} />}
             </>
           )
         }
