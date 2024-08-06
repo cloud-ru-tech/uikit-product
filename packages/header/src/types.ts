@@ -52,6 +52,7 @@ export type ProductOption = {
   logo?: ReactElement;
   href?: string;
   hidden?: boolean;
+  hotSpot?: HotSpotProps;
 };
 
 export type PinnedCard = {

@@ -1,4 +1,5 @@
 import { Avatar } from '@snack-uikit/avatar';
+import { HotSpot } from '@snack-uikit/hot-spot';
 import { ListProps } from '@snack-uikit/list';
 
 import { SelectProductsProps } from '../helperComponents';
@@ -27,6 +28,9 @@ export function getSelectProductListProps({
         beforeContent: item.logo ?? (
           <Avatar size='xs' name={item.name} showTwoSymbols shape='square' appearance='neutral' />
         ),
+
+        ...(item.hotSpot ? { afterContent: <HotSpot {...item.hotSpot} /> } : {}),
+
         id: item.id,
 
         onClick: () => {

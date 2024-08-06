@@ -4,6 +4,7 @@ import { useEffect, useMemo } from 'react';
 
 import { DetalisationSVG, MoneySVG, UsersSVG } from '@sbercloud/uikit-product-icons';
 import { PageServices } from '@sbercloud/uikit-product-page-layout';
+import { HotSpotProps } from '@snack-uikit/hot-spot';
 import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
 import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
@@ -81,6 +82,9 @@ const WORKSPACES = {
   onWorkspaceAdd: () => {},
 };
 const DEFAULT_PRODUCT = { ...DEFAULT_PLATFORM, category: 'Облачная платформа' };
+
+const PRODUCT_HOT_SPOT: HotSpotProps = { enabled: true, pulse: true, appearance: 'primary' };
+
 const ALL_PRODUCTS_MULTI = [
   {
     id: '1',
@@ -96,7 +100,12 @@ const ALL_PRODUCTS_MULTI = [
     id: '2',
     heading: 'Другие продукты',
     items: [
-      { id: 'lkp', name: 'Личный кабинет партнера', category: 'Другой продукт' },
+      {
+        id: 'lkp',
+        name: 'Личный кабинет партнера',
+        category: 'Другой продукт',
+        hotSpot: PRODUCT_HOT_SPOT,
+      },
       { id: 'admin', name: 'Административная панель', category: 'Другой продукт' },
     ],
   },
@@ -522,7 +531,12 @@ export const ARGS: StoryProps = {
         id: '2',
         heading: 'Другие продукты',
         items: [
-          { id: 'lkp', name: 'Личный кабинет партнера', category: 'Другой продукт' },
+          {
+            id: 'lkp',
+            name: 'Личный кабинет партнера',
+            category: 'Другой продукт',
+            hotSpot: PRODUCT_HOT_SPOT,
+          },
           { id: 'admin', name: 'Административная панель', category: 'Другой продукт' },
         ],
       },
