@@ -1,0 +1,18 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.story {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 400px;
+  padding: 24px;
+
+  background-color: $sys-neutral-background1-level;
+  border: 1px solid $sys-neutral-decor-default;
+  border-radius: $dimension-050m;
+}
+
+.item {
+  height: 10px;
+}
