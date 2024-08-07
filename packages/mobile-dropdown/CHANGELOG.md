@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-08-07)
+
+
+### Dependencies
+
+* **[PDS-559](https://jira.sbercloud.tech/browse/PDS-559):** up snack deps ([e0a0fbd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e0a0fbd952420dd0031e3e4f8adef8c50375f31d))
+
+
+### Features
+
+* **[PDS-559](https://jira.sbercloud.tech/browse/PDS-559):** export list helpres ([4a2ae51](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4a2ae517ccf4920ac569bd2a0a716785f49309e8))
+
+
+### BREAKING CHANGES
+
+
+* **[PDS-559](https://jira.sbercloud.tech/browse/PDS-559):** change api of mobile-dropdown, add mobile-droplist ([1c68e3e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1c68e3eebe5f821cc17906821c583bb5c46c259b))
+
+
+
+
 # 0.1.0 (2024-07-31)
 
 

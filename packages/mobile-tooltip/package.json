@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-tooltip",
   "title": "Mobile Tooltip",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,7 +33,5 @@
     "@snack-uikit/utils": "3.3.0",
     "classnames": "2.3.2",
     "uncontrollable": "8.0.4"
-  },
-  "devDependencies": {},
-  "peerDependencies": {}
+  }
 }

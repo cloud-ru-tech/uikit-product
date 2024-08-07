@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-08-07)
+
+
+### Features
+
+* **[PDS-559](https://jira.sbercloud.tech/browse/PDS-559):** add swipeEnabled property ([5cce53b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5cce53b8b0408a07d81582385a6fc9bb42fb9170))
+
+
+
+
+
 # 0.1.0 (2024-07-31)
 
 
