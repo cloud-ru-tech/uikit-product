@@ -66,6 +66,13 @@ export type PinnedCard = {
   badge?: CardSuggestProps['promoBadge'];
 };
 
+export const DIVIDER_SETTING_OPTION_ID = 'divider';
+
+export type DividerItem = {
+  id: typeof DIVIDER_SETTING_OPTION_ID;
+  hidden?: boolean;
+};
+
 export type FooterLink = {
   id: string;
   icon: ReactElement;

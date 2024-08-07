@@ -125,3 +125,7 @@
     @include composite-var($sans-label-m);
   }
 }
+
+.settingIcon {
+  color: $sys-neutral-text-light;
+}

@@ -9,7 +9,7 @@ import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/ico
 import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
 
-import { Header, HeaderProps, THEME_MODE, ThemeMode } from '../src';
+import { DIVIDER_SETTING_OPTION_ID, Header, HeaderProps, THEME_MODE, ThemeMode } from '../src';
 import {
   AdvancedPlatformLogo,
   EnterprisePlatformLogo,
@@ -466,10 +466,28 @@ export const ARGS: StoryProps = {
   showSettings: true,
 
   settings: [
-    { id: 'settings', label: 'Настройки организации', icon: <SettingsSVG />, onClick: () => {} },
+    {
+      hidden: false,
+      id: DIVIDER_SETTING_OPTION_ID,
+    },
+    { id: 'settings', label: 'Настройки организации', icon: <SettingsSVG />, onClick: () => {}, hidden: false },
     { id: 'users', label: 'Пользователи', icon: <UsersSVG />, onClick: () => {} },
     { id: 'agreements', label: 'Договоры', icon: <DetalisationSVG />, onClick: () => {} },
+    {
+      hidden: false,
+      id: DIVIDER_SETTING_OPTION_ID,
+    },
+    {
+      hidden: false,
+      id: DIVIDER_SETTING_OPTION_ID,
+    },
+    { id: 'settings', label: 'Настройки организации', icon: <SettingsSVG />, onClick: () => {}, hidden: true },
+    { id: 'users', label: 'Пользователи', icon: <UsersSVG />, onClick: () => {}, hidden: true },
     { id: 'billing', label: 'Контроль затрат', icon: <MoneySVG />, onClick: () => {} },
+    {
+      hidden: false,
+      id: DIVIDER_SETTING_OPTION_ID,
+    },
   ],
 
   showHelpMenu: true,

@@ -67,46 +67,46 @@ export function UserMenu({
           description: 1,
         },
       },
-      afterContent: <Avatar size='s' name={user.name} showTwoSymbols indicator={indicator} />,
-      inactive: true,
+      beforeContent: <Avatar size='xs' name={user.name} showTwoSymbols indicator={indicator} />,
+      afterContent: (
+        <div className={styles.settingIcon}>
+          <SettingsSVG />
+        </div>
+      ),
+      inactive: !onProfileManagementClick || undefined,
+      onClick: () => {
+        onProfileManagementClick?.();
+        closeUserMenu();
+      },
       id: 'header__user-menu__button',
       'data-test-id': 'header__user-menu__button',
       className: styles.userMenuInfoItem,
     });
 
-    if (onProfileManagementClick) {
+    items.push({
+      type: 'group',
+      divider: true,
+      items: [],
+    });
+
+    if (themeMode) {
       items.push({
-        'data-test-id': 'header__user-menu__manage-profile',
-        beforeContent: <SettingsSVG />,
-        onClick: () => {
-          onProfileManagementClick();
-          closeUserMenu();
-        },
+        type: 'next-list',
         content: {
-          option: textProvider(languageCode, Texts.ManageProfile),
+          option: textProvider(languageCode, Texts.ThemeModeLabel),
         },
-        id: 'header__user-menu__manage-profile',
-      });
-
-      if (themeMode) {
-        items.push({
-          type: 'next-list',
-          content: {
-            option: textProvider(languageCode, Texts.ThemeModeLabel),
-          },
-          placement: 'left-start',
-          beforeContent: <ThemeContrastSVG />,
-          'data-test-id': 'header__user-menu__theme-mode',
-          items: getThemeModeOptions({ themeMode, languageCode }),
-        });
-      }
-
-      items.push({
-        type: 'group',
-        divider: true,
-        items: [],
+        placement: 'left-start',
+        beforeContent: <ThemeContrastSVG />,
+        'data-test-id': 'header__user-menu__theme-mode',
+        items: getThemeModeOptions({ themeMode, languageCode }),
       });
     }
+
+    items.push({
+      type: 'group',
+      divider: true,
+      items: [],
+    });
 
     organizations?.forEach(organization =>
       items.push({

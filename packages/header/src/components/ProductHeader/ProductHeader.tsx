@@ -21,16 +21,23 @@ import {
   UserMenu,
   UserMenuProps,
 } from '../../helperComponents';
-import { filterHidden } from '../../helperComponents/DrawerMenu/utils';
+import { DIVIDER_SETTING_OPTION_ID, DividerItem } from '../../types';
 import { extractAppNameFromId } from '../../utils';
 import styles from './styles.module.scss';
 
-export type SettingOption = {
+export type BaseSettingOption = {
   id: string;
   label: string;
   icon: ReactElement;
   onClick(): void;
+  hidden?: boolean;
 };
+
+export type SettingOption = BaseSettingOption | DividerItem;
+
+export function isDividerItem<T extends object>(item: T | DividerItem): item is DividerItem {
+  return item && 'id' in item && item['id'] === DIVIDER_SETTING_OPTION_ID;
+}
 
 export type ProductHeaderProps = WithSupportProps<
   {
@@ -131,20 +138,48 @@ export function ProductHeader({
   }, [onClose]);
 
   const visibleSettings = useMemo(() => {
-    const filteredSettings = settings?.filter(filterHidden);
+    let filteredSettings = settings?.filter(item => !item?.hidden);
+
+    filteredSettings = filteredSettings?.reduce((res, item, idx) => {
+      if (item.id !== DIVIDER_SETTING_OPTION_ID) {
+        res.push(item);
+      }
+
+      if (
+        item.id === DIVIDER_SETTING_OPTION_ID &&
+        res.at(-1)?.id !== DIVIDER_SETTING_OPTION_ID &&
+        res.length > 0 &&
+        idx + 1 < (filteredSettings?.length || 0)
+      ) {
+        res.push(item);
+      }
+
+      return res;
+    }, [] as SettingOption[]);
 
     if (filteredSettings && filteredSettings.length) {
-      return filteredSettings.map(setting => ({
-        'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
-        content: {
-          option: setting.label,
-        },
-        beforeContent: setting.icon,
-        onClick: () => {
-          setting.onClick();
-          setIsSettingsOpen(false);
-        },
-      }));
+      return filteredSettings.map(setting => {
+        if (!isDividerItem<BaseSettingOption>(setting)) {
+          return {
+            'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
+            content: {
+              option: setting.label,
+            },
+            beforeContent: setting.icon,
+            onClick: () => {
+              setting.onClick();
+              setIsSettingsOpen(false);
+            },
+          };
+        }
+
+        return {
+          type: 'group',
+          divider: true,
+          hidden: setting.hidden,
+          items: [],
+        };
+      });
     }
 
     return undefined;

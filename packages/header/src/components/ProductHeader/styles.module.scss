@@ -2,8 +2,8 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .breadcrumbs {
-  padding: $dimension-1m;
-  margin: calc(0px - $dimension-1m) 0;
+  padding: $dimension-1m !important;
+  margin: calc(0px - $dimension-1m) 0 !important;
   min-width: 0;
 }
 

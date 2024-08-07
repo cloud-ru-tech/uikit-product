@@ -28,12 +28,11 @@ import {
   SelectMenu,
   SelectMenuTrigger,
 } from '../../helperComponents';
-import { filterHidden } from '../../helperComponents/DrawerMenu/utils';
 import { textProvider, Texts } from '../../helpers';
 import { getThemeModeOptions } from '../../helpers/getThemeModeOptions';
-import { Organization, Platform, ProductOption, Workspace } from '../../types';
+import { DIVIDER_SETTING_OPTION_ID, Organization, Platform, ProductOption, Workspace } from '../../types';
 import { extractAppNameFromId } from '../../utils';
-import { ProductHeaderProps } from '../ProductHeader';
+import { isDividerItem, ProductHeaderProps } from '../ProductHeader';
 import styles from './styles.module.scss';
 
 export function ProductHeaderMobile({
@@ -70,7 +69,10 @@ export function ProductHeaderMobile({
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const visibleSettings = useMemo(() => settings?.filter(filterHidden), [settings]);
+  const visibleSettings = useMemo(
+    () => settings?.filter(item => !item.hidden && item.id !== DIVIDER_SETTING_OPTION_ID),
+    [settings],
+  );
 
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -189,29 +191,29 @@ export function ProductHeaderMobile({
             description: 1,
           },
         },
-        afterContent: <Avatar size='s' name={user.name} showTwoSymbols indicator={indicator} />,
-        inactive: true,
+        beforeContent: <Avatar size='xs' name={user.name} showTwoSymbols indicator={indicator} />,
+        afterContent: (
+          <div className={styles.settingIcon}>
+            <SettingsSVG />
+          </div>
+        ),
+        inactive: !onProfileManagementClick || undefined,
+        onClick: () => {
+          onProfileManagementClick?.();
+          closeUserMenu();
+        },
         id: 'header__user-menu__button',
         'data-test-id': 'header__user-menu__button',
         className: styles.userMenuInfoItem,
       });
 
-      if (onProfileManagementClick) {
-        items.push({
-          'data-test-id': 'header__user-menu__manage-profile',
-          beforeContent: <SettingsSVG />,
-          onClick: () => {
-            onProfileManagementClick();
-            closeUserMenu();
-          },
-          content: {
-            option: textProvider(languageCode, Texts.ManageProfile),
-          },
-          id: 'header__user-menu__manage-profile',
-        });
-      }
-
       if (themeMode) {
+        items.push({
+          type: 'group',
+          divider: true,
+          items: [],
+        });
+
         items.push({
           content: {
             option: textProvider(languageCode, Texts.ThemeModeLabel),
@@ -253,17 +255,28 @@ export function ProductHeaderMobile({
       items.push({
         type: 'group',
         divider: true,
-        items: visibleSettings.map(setting => ({
-          'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
-          content: {
-            option: setting.label,
-          },
-          beforeContent: setting.icon,
-          onClick: () => {
-            setting.onClick();
-            closeUserMenu();
-          },
-        })),
+        items: visibleSettings.map(setting => {
+          if (!isDividerItem(setting)) {
+            return {
+              'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
+              content: {
+                option: setting.label,
+              },
+              beforeContent: setting.icon,
+              onClick: () => {
+                setting.onClick();
+                closeUserMenu();
+              },
+            };
+          }
+
+          return {
+            type: 'group',
+            hidden: setting.hidden,
+            divider: true,
+            items: [],
+          };
+        }),
       });
     }
 
