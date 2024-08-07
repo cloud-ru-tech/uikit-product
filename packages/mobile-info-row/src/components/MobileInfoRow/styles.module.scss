@@ -15,7 +15,7 @@
 .labelLayout {
   @include composite-var($light-label-l);
   position: relative;
-  color: $sys-neutral-text-support;
+  color: $sys-neutral-text-light;
   display: flex;
   gap: $dimension-050m;
   align-items: center;
@@ -41,6 +41,7 @@
   flex: 1;
   justify-content: flex-start;
   align-items: flex-start;
+  word-break: break-word;
 }
 
 .rowActions {
