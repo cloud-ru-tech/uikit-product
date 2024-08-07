@@ -1,0 +1,45 @@
+{
+  "name": "@sbercloud/uikit-product-mobile-accordion",
+  "title": "Mobile Accordion",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/mobile-accordion",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/mobile-accordion"
+  },
+  "author": "Anna Kozlova <apkozlova@cloud.ru>",
+  "contributors": [
+    "Anna Kozlova <apkozlova@cloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-icons": "9.1.0",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.1.0",
+    "@snack-uikit/accordion": "0.7.13",
+    "@snack-uikit/button": "0.17.3",
+    "@snack-uikit/toggles": "0.10.3",
+    "@snack-uikit/typography": "0.6.2",
+    "@snack-uikit/utils": "3.3.0",
+    "classnames": "2.3.2",
+    "lodash.debounce": "4.0.8"
+  },
+  "devDependencies": {
+    "@types/lodash.debounce": "4.0.8"
+  },
+  "peerDependencies": {}
+}

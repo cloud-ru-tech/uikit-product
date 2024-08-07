@@ -1,0 +1,11 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-accordion';
+
+.accordionPrimary {
+  --accordion-header-padding-horizontal: #{$dimension-2m};
+  --accordion-header-padding-vertical: #{$dimension-2m};
+
+  @include composite-var($accordion-primary);
+
+  display: flex;
+  flex-direction: column;
+}
