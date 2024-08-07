@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-08-07)
+
+
+### Features
+
+* **[PDS-592](https://jira.sbercloud.tech/browse/PDS-592):** mobile adaptation for select ([6018004](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/60180042f3db66569ce31ba79135f7cde4b8702d))
+
+
+
+
+
 ## 0.1.2 (2024-08-07)
 
 
