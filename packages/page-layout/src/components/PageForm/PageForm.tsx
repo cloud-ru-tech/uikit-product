@@ -87,8 +87,9 @@ export function PageForm({ children, title, subHeader, className, footer }: Page
           <div className={styles.footer}>
             {footer.buttonSecondary && (
               <SecondaryButton
-                size='m'
                 {...footer.buttonSecondary}
+                size='m'
+                appearance='neutral'
                 label={
                   footer.buttonSecondary.variant === 'custom'
                     ? footer.buttonSecondary.label
@@ -98,11 +99,11 @@ export function PageForm({ children, title, subHeader, className, footer }: Page
             )}
 
             <div className={styles.mainActions}>
-              {footer.buttonAdditional && <AdditionalButton size='m' {...footer.buttonAdditional} />}
+              {footer.buttonAdditional && <AdditionalButton {...footer.buttonAdditional} size='m' />}
 
               <PrimaryButton
-                size='m'
                 {...footer.buttonPrimary}
+                size='m'
                 label={
                   footer.buttonPrimary.variant === 'custom'
                     ? footer.buttonPrimary.label
