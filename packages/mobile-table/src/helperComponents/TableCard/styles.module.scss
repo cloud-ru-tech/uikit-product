@@ -41,8 +41,10 @@
 
 .cardRowHeader {
   color: $sys-neutral-text-light;
+  word-break: break-word;
 }
 
 .cardRowContent {
   color: $sys-neutral-text-main;
+  word-break: break-word;
 }
