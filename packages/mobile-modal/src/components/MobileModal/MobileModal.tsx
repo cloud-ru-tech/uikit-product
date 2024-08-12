@@ -17,7 +17,7 @@ import { getAlignProps, getButtonsSize } from '../../utils';
 import { MobileModalCustom, MobileModalCustomProps } from '../MobileModalCustom';
 import styles from './styles.module.scss';
 
-export type MobileModalProps = Omit<MobileModalCustomProps, 'children'> & {
+export type MobileModalProps = Omit<MobileModalCustomProps, 'children' | 'swipeEnabled'> & {
   /** Заголовок модального окна */
   title: string;
   /** Всплывающая подсказка для заголовка */
