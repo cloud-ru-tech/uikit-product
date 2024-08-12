@@ -1,7 +1,7 @@
 import { MobileDrawerCustom, MobileDrawerCustomProps } from '@sbercloud/uikit-product-mobile-drawer';
 import { WithSupportProps } from '@snack-uikit/utils';
 
-import { SIZE } from '../../constants';
+import { MODE, SIZE } from '../../constants';
 import {
   ModalBody,
   ModalBodyProps,
@@ -32,11 +32,11 @@ export type MobileModalCustomProps = Pick<
     size?: Size;
   }>;
 
-export function MobileModalCustom({ size = SIZE.Auto, ...rest }: MobileModalCustomProps) {
+export function MobileModalCustom({ size = SIZE.Auto, mode = MODE.Regular, ...rest }: MobileModalCustomProps) {
   return (
     <MobileDrawerCustom
       {...rest}
-      mode='regular'
+      modalMode={mode}
       size={size === SIZE.Auto ? 'auto' : '100%'}
       hasBorderRadius={true}
       position='bottom'

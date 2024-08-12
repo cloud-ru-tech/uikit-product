@@ -9,7 +9,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MobileModal, MobileModalProps } from '../src';
-import { ALIGN, SIZE } from '../src/constants';
+import { ALIGN, MODE, SIZE } from '../src/constants';
 
 const meta: Meta = {
   title: 'Mobile/Modal/Modal',
@@ -91,6 +91,7 @@ modal.args = {
   ),
   size: SIZE.Auto,
   align: ALIGN.Default,
+  mode: MODE.Regular,
   approveButton: {
     label: 'Primary',
   },

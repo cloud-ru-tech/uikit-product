@@ -7,7 +7,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MobileModalCustom, MobileModalCustomProps } from '../src';
-import { SIZE } from '../src/constants';
+import { MODE, SIZE } from '../src/constants';
 
 const meta: Meta = {
   title: 'Mobile/Modal/Modal Custom',
@@ -32,6 +32,7 @@ export const modalCustom: StoryFn<MobileModalCustomProps> = Template.bind({});
 
 modalCustom.args = {
   size: SIZE.Auto,
+  mode: MODE.Regular,
 };
 
 modalCustom.argTypes = {};
