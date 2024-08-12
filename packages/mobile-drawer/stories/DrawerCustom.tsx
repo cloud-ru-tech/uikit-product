@@ -7,7 +7,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MobileDrawerCustom, MobileDrawerCustomProps } from '../src';
-import { SIZE } from '../src/constants';
+import { MODAL_MODE, POSITION, SIZE } from '../src/constants';
 import { Size } from '../src/types';
 
 const meta: Meta = {
@@ -39,6 +39,9 @@ export const drawerCustom: StoryFn<DrawerCustomStoryProps> = Template.bind({});
 drawerCustom.args = {
   sizePredefined: SIZE.S,
   sizeCustom: undefined,
+  position: POSITION.Left,
+  modalMode: MODAL_MODE.Regular,
+  swipeEnabled: true,
 };
 
 drawerCustom.argTypes = {

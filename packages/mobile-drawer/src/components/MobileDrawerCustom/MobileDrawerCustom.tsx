@@ -7,8 +7,8 @@ import { useUncontrolledProp } from 'uncontrollable';
 
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
-import { POSITION, SIZE, SIZE_AS_VALUES } from '../../constants';
-import { Mode, Position, Size } from '../../types';
+import { MODAL_MODE, POSITION, SIZE, SIZE_AS_VALUES } from '../../constants';
+import { ModalMode, Mode, Position, Size } from '../../types';
 import { motionProps } from './constants';
 import { useSwipeProps } from './hooks';
 import styles from './styles.module.scss';
@@ -21,6 +21,14 @@ export type MobileDrawerCustomProps = WithSupportProps<
     onClose(): void;
     /** Режим отображения */
     mode?: Mode;
+    /**
+     * Режим отображения для модального окна:
+     * <br> - __`Regular`__ -  есть закрытие по свайпу, клик на оверлей и нажатие кнопки `Esc` закрывают модалку
+     * <br> - __`Aggressive`__ - есть кнопка закрытия, но выключен клик на оверлей и не работает закрытие по клавише `Esc`
+     * <br> - __`Forced`__ - закрыть модальное окно можно только по нажатию на кнопку действия в нижней части
+     * @default Mode.Regular
+     */
+    modalMode?: ModalMode;
     /** Расположение открытого Drawer */
     position?: Position;
     /** CSS-класс для элемента с контентом */
@@ -49,20 +57,23 @@ export function MobileDrawerCustom({
   children,
   hasBorderRadius = false,
   swipeEnabled = true,
+  modalMode = MODAL_MODE.Regular,
   ...rest
 }: MobileDrawerCustomProps) {
   const isPredefinedSize = typeof size === 'string' && SIZE_AS_VALUES.includes(size);
   const [open, setOpen] = useUncontrolledProp(openProp, false);
+  const hasBlur = ([MODAL_MODE.Forced, MODAL_MODE.Aggressive] as ModalMode[]).includes(modalMode);
+  const hasSwipe = ([MODAL_MODE.Regular, MODAL_MODE.Aggressive] as ModalMode[]).includes(modalMode);
 
   const handleClose = () => {
     setOpen(false);
-    onClose?.();
+    onClose();
   };
 
   const { swipeRef, drawerStyles, maskStyles, drawerMotionProps, swipeProps, showPointer } = useSwipeProps({
     position,
     onClose: handleClose,
-    enabled: swipeEnabled,
+    enabled: hasSwipe && swipeEnabled,
   });
 
   return (
@@ -70,7 +81,9 @@ export function MobileDrawerCustom({
       mask={true}
       maskClosable={true}
       keyboard={true}
-      maskClassName={styles.mask}
+      maskClassName={cn(styles.mask, {
+        [styles.maskBlur]: hasBlur,
+      })}
       {...{
         width: !isPredefinedSize && (position === POSITION.Right || position === POSITION.Left) ? size : 'null',
         height: !isPredefinedSize && (position === POSITION.Top || position === POSITION.Bottom) ? size : 'null',
@@ -80,12 +93,15 @@ export function MobileDrawerCustom({
       destroyOnClose={true}
       push={false}
       afterOpenChange={setOpen}
-      onClose={handleClose}
+      onClose={modalMode === MODAL_MODE.Regular ? handleClose : undefined}
       getContainer={container}
       className={styles.drawer}
-      rootClassName={cn(styles.drawerRoot, rootClassName)}
+      rootClassName={cn(styles.drawerRoot, rootClassName, {
+        [styles.drawerBlur]: hasBlur,
+      })}
       {...extractSupportProps(rest)}
       data-content-wrapper={true}
+      data-blur={hasBlur || undefined}
       data-border-radius={hasBorderRadius || undefined}
       data-size={isPredefinedSize ? size : undefined}
       data-mode='regular'

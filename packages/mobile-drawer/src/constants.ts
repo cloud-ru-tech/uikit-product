@@ -11,6 +11,12 @@ export const MODE = {
   Soft: 'soft',
 } as const;
 
+export const MODAL_MODE = {
+  Regular: 'regular',
+  Aggressive: 'aggressive',
+  Forced: 'forced',
+} as const;
+
 export const POSITION = {
   Right: 'right',
   Left: 'left',

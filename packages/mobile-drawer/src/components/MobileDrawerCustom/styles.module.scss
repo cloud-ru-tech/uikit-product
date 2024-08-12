@@ -16,6 +16,7 @@ $drawer-background-color: (
   flex-direction: column;
 
   overscroll-behavior: contain;
+
   &[data-pointers] {
     cursor: grabbing;
     user-select: none;
@@ -132,6 +133,14 @@ $drawer-background-color: (
 .mask {
   z-index: auto !important; /* stylelint-disable-line declaration-no-important */
   background-color: simple-var($sys-blackout);
+}
+
+.maskBlur {
+  backdrop-filter: blur(simple-var($background-blur-background-blur));
+}
+
+.drawerBlur {
+  outline: none;
 }
 
 $swiper-length: $dimension-10m;
