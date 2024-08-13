@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.1 (2024-08-13)
+
+
+### Bug Fixes
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** page-form - change secondary button appearance to neutral ([7aab5f0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7aab5f0fa216d73ce560bb04a783312b9cce9ca6))
+
+
+
+
+
 # 0.10.0 (2024-08-01)
 
 

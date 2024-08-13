@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-08-13)
+
+
+### Features
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** add mode property ([4f9a73c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4f9a73ce5569e97fe7f23c2f4295470e182aa43d))
+
+
+### BREAKING CHANGES
+
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** remove swipeEnabled property ([893700f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/893700f97c2db996a1f36428529a87b347523a17))
+
+
+
+
 ## 0.1.1 (2024-08-07)
 
 

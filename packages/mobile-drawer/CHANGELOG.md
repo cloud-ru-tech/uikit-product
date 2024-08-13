@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-08-13)
+
+
+### Features
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** add modalMode property ([0eb0e35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0eb0e35eba17459789ea50fbb4918178dad7dc59))
+
+
+
+
+
 # 0.2.0 (2024-08-07)
 
 

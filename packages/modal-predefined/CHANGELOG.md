@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.5 (2024-08-13)
+
+
+### Bug Fixes
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** add word-break for text content ([75512af](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/75512af978d4c5248bf564cab9e7463527048fb0))
+
+
+
+
+
 ## 0.1.4 (2024-07-31)
 
 ### Only dependencies have been changed

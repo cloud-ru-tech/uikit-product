@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-modal",
   "title": "Mobile Modal",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,7 +29,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-copy-line": "0.3.3",
-    "@sbercloud/uikit-product-mobile-drawer": "0.2.0",
+    "@sbercloud/uikit-product-mobile-drawer": "0.3.0",
     "@sbercloud/uikit-product-mobile-tooltip": "0.1.0",
     "@sbercloud/uikit-product-utils": "3.4.1",
     "@snack-uikit/button": "0.17.3",

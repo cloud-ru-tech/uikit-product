@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-info-row",
   "title": "Mobile Info Row",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "sideEffects": [
     "*.css",
     "*.woff",

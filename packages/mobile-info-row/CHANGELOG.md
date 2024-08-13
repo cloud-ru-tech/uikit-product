@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2024-08-13)
+
+
+### Bug Fixes
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** add more contrast between label and value ([8ec261d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8ec261db0368370310a94e13dfc045e0bb30503d))
+
+
+
+
+
 # 0.1.0 (2024-08-07)
 
 
