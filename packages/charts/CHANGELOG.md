@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2024-08-14)
+
+
+### Features
+
+* **[FF-5338](https://jira.sbercloud.tech/browse/FF-5338):** pie chart segment click functionality ([edee45d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/edee45d44942a2a0caf4ebc8485a05a18b5a504c))
+
+
+
+
+
 ## 0.10.4 (2024-07-31)
 
 ### Only dependencies have been changed
