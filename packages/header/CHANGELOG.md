@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.20.0 (2024-08-14)
+
+
+### Features
+
+* **[PDS-459](https://jira.sbercloud.tech/browse/PDS-459):** add divider items to settings ([844113d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/844113d38af4e0871c2937f131209aa7bd018606))
+* **[PDS-459](https://jira.sbercloud.tech/browse/PDS-459):** add profileItemWrapRender prop ([c204e26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c204e262dd0d3bed56c1b00327fc53f5585c29f7))
+
+
+
+
+
 # 2.19.0 (2024-08-06)
 
 
