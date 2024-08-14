@@ -42,6 +42,7 @@ drawerCustom.args = {
   position: POSITION.Left,
   modalMode: MODAL_MODE.Regular,
   swipeEnabled: true,
+  closeButtonEnabled: true,
 };
 
 drawerCustom.argTypes = {

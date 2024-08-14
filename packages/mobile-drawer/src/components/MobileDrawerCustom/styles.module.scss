@@ -9,7 +9,6 @@ $drawer-background-color: (
 
 .content {
   flex-grow: 1;
-  cursor: grab;
   min-width: $dimension-5m;
   min-height: $dimension-5m;
   display: flex;
@@ -17,11 +16,15 @@ $drawer-background-color: (
 
   overscroll-behavior: contain;
 
-  &[data-pointers] {
-    cursor: grabbing;
-    user-select: none;
+  &[data-swipe] {
+    cursor: grab;
 
-    -webkit-user-drag: none;
+    &[data-pointers] {
+      cursor: grabbing;
+      user-select: none;
+
+      -webkit-user-drag: none;
+    }
   }
 }
 
@@ -182,4 +185,16 @@ $swiper-length: $dimension-10m;
     bottom: $dimension-050m;
     left: calc(50% - $swiper-length / 2);
   }
+}
+
+.headerElements {
+  @include composite-var($drawer-header-elements-container);
+  @include composite-var($drawer-header-elements-elements-layout);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
 }

@@ -8,6 +8,15 @@ import { useUncontrolledProp } from 'uncontrollable';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
 import { MODAL_MODE, POSITION, SIZE, SIZE_AS_VALUES } from '../../constants';
+import {
+  ButtonClose,
+  DrawerBody,
+  DrawerBodyProps,
+  DrawerFooter,
+  DrawerFooterProps,
+  DrawerHeader,
+  DrawerHeaderProps,
+} from '../../helperComponents';
 import { ModalMode, Mode, Position, Size } from '../../types';
 import { motionProps } from './constants';
 import { useSwipeProps } from './hooks';
@@ -43,10 +52,12 @@ export type MobileDrawerCustomProps = WithSupportProps<
     hasBorderRadius?: boolean;
     /** Работает ли закрытие на свайп */
     swipeEnabled?: boolean;
+    /** Показывать ли кнопку закрытия */
+    closeButtonEnabled?: boolean;
   }>
 >;
 
-export function MobileDrawerCustom({
+function MobileDrawerCustomComponent({
   open: openProp,
   position = POSITION.Left,
   onClose,
@@ -58,6 +69,7 @@ export function MobileDrawerCustom({
   hasBorderRadius = false,
   swipeEnabled = true,
   modalMode = MODAL_MODE.Regular,
+  closeButtonEnabled = true,
   ...rest
 }: MobileDrawerCustomProps) {
   const isPredefinedSize = typeof size === 'string' && SIZE_AS_VALUES.includes(size);
@@ -118,12 +130,36 @@ export function MobileDrawerCustom({
         className={cn(className, styles.content)}
         {...swipeProps}
         ref={swipeRef}
+        data-swipe={swipeEnabled || undefined}
         data-pointers={showPointer || undefined}
       >
-        <div className={styles.swiper} data-position={position} />
+        {swipeEnabled && <div className={styles.swiper} data-position={position} />}
 
         {children}
+
+        {closeButtonEnabled && (
+          <div className={styles.headerElements}>
+            <ButtonClose onClick={onClose} />
+          </div>
+        )}
       </div>
     </RcDrawer>
   );
+}
+
+/** Компонент-конструктор */
+export const MobileDrawerCustom = MobileDrawerCustomComponent as typeof MobileDrawerCustomComponent & {
+  Header: typeof DrawerHeader;
+  Body: typeof DrawerBody;
+  Footer: typeof DrawerFooter;
+};
+
+MobileDrawerCustom.Header = DrawerHeader;
+MobileDrawerCustom.Body = DrawerBody;
+MobileDrawerCustom.Footer = DrawerFooter;
+
+export namespace MobileDrawerCustom {
+  export type HeaderProps = DrawerHeaderProps;
+  export type BodyProps = DrawerBodyProps;
+  export type FooterProps = DrawerFooterProps;
 }
