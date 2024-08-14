@@ -285,7 +285,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
           size={searchable ? 'full' : 'auto'}
           swipeEnabled={swipeEnabled}
         >
-          <MobileModalCustom.Header title={rest.label} />
+          {rest.label && <MobileModalCustom.Header title={rest.label} />}
 
           {searchable ? listJsx : <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} />}
 
