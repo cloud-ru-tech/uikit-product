@@ -20,7 +20,6 @@ export const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
-  max-height: 132px;
 `;
 
 export const cardClassName = css`
