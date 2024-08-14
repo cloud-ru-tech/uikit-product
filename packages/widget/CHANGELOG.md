@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.8 (2024-08-14)
+
+
+### Bug Fixes
+
+* **[ONB-2670](https://jira.sbercloud.tech/browse/ONB-2670):** fix max height for card ([e508d72](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e508d722c6ea25b20bc7865bac21d22ded372aea))
+
+
+
+
+
 ## 0.2.7 (2024-07-31)
 
 
