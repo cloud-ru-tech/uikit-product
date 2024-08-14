@@ -27,6 +27,7 @@ export function TablePagination<TData>({ table }: TablePaginationProps<TData>) {
     <div className={styles.pagination}>
       {table.getPageCount() > 1 && (
         <Pagination
+          maxLength={6}
           total={table.getPageCount()}
           page={tablePaginationState.pageIndex + 1}
           onChange={handlePaginationOnChange}
