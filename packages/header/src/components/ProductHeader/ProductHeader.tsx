@@ -78,7 +78,14 @@ export type ProductHeaderProps = WithSupportProps<
     financialMenu?: FinancialMenuProps;
     userMenu?: Pick<
       UserMenuProps,
-      'user' | 'indicator' | 'invites' | 'onAvatarClick' | 'onProfileManagementClick' | 'onLogout' | 'themeMode'
+      | 'user'
+      | 'indicator'
+      | 'invites'
+      | 'onAvatarClick'
+      | 'onProfileManagementClick'
+      | 'onLogout'
+      | 'themeMode'
+      | 'profileItemWrapRender'
     >;
   } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> &
     Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick' | 'showMainMenu'>

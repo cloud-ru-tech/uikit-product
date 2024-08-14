@@ -181,7 +181,7 @@ export function ProductHeaderMobile({
     }
 
     if (userMenu) {
-      const { user, indicator, onLogout, onProfileManagementClick, themeMode } = userMenu;
+      const { user, indicator, onLogout, onProfileManagementClick, themeMode, profileItemWrapRender } = userMenu;
 
       items.push({
         content: {
@@ -197,6 +197,7 @@ export function ProductHeaderMobile({
             <SettingsSVG />
           </div>
         ),
+        itemWrapRender: profileItemWrapRender,
         inactive: !onProfileManagementClick || undefined,
         onClick: () => {
           onProfileManagementClick?.();

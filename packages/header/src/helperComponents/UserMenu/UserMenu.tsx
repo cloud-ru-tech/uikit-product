@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react';
+import { ReactNode, useMemo, useRef, useState } from 'react';
 
 import { ExitSVG, PlusSVG, SettingsSVG, ThemeContrastSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
@@ -34,6 +34,7 @@ export type UserMenuProps = {
       value: ThemeMode;
       onChange(value: ThemeMode): void;
     };
+    profileItemWrapRender?(item: ReactNode): ReactNode;
   };
 
 export function UserMenu({
@@ -48,6 +49,7 @@ export function UserMenu({
   onOrganizationAdd,
   themeMode,
   invites,
+  profileItemWrapRender,
 }: UserMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -73,6 +75,7 @@ export function UserMenu({
           <SettingsSVG />
         </div>
       ),
+      itemWrapRender: profileItemWrapRender,
       inactive: !onProfileManagementClick || undefined,
       onClick: () => {
         onProfileManagementClick?.();
