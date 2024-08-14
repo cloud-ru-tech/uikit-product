@@ -40,6 +40,7 @@ export function MobileModalCustom({ size = SIZE.Auto, mode = MODE.Regular, ...re
       size={size === SIZE.Auto ? 'auto' : '100%'}
       hasBorderRadius={true}
       position='bottom'
+      closeButtonEnabled={false}
     />
   );
 }
