@@ -5,7 +5,6 @@
   @include composite-var($tooltip-container);
   @include composite-var($sans-body-s);
 
-  padding: $dimension-2m;
 
   overflow: hidden;
 
@@ -15,10 +14,7 @@
   word-wrap: break-word;
 
   background-color: $sys-invert-neutral-background;
-
-  &[data-disable-max-width='true'] {
-    max-width: calc(100vw - $dimension-2m);
-  }
+  max-width: calc(100vw - $dimension-4m);
 }
 
 .tooltipArrowContainer {

@@ -33,6 +33,7 @@ export function MobileQuestionTooltip({
   ...rest
 }: MobileQuestionTooltipProps) {
   const [isOpen, setIsOpen] = useUncontrolledProp(open, false, onOpenChange);
+
   return (
     <MobileTooltip
       {...rest}
@@ -43,7 +44,9 @@ export function MobileQuestionTooltip({
     >
       {({ getReferenceProps, ref }) => (
         <span
-          {...getReferenceProps()}
+          {...getReferenceProps({
+            onClick: event => event.stopPropagation(),
+          })}
           ref={ref}
           data-size={size}
           data-opened={isOpen}
