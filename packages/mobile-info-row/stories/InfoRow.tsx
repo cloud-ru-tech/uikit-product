@@ -7,6 +7,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MobileInfoRow, MobileInfoRowProps } from '../src';
+import { POSITION } from '../src/constants';
 
 const meta: Meta = {
   title: 'Mobile/Info Row/Info Row',
@@ -46,6 +47,7 @@ infoRow.args = {
   showRowActions: true,
   twoButtons: true,
   loading: false,
+  position: POSITION.Inner,
   rowActions: {
     first: {
       icon: <PlaceholderSVG />,

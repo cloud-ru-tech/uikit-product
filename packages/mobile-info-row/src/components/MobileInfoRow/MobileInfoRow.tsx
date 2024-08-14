@@ -12,6 +12,8 @@ import { ButtonTonal, ButtonTonalProps } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { SkeletonContextProvider, SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
 
+import { POSITION } from '../../constants';
+import { Position } from '../../types';
 import styles from './styles.module.scss';
 
 type RowActionButton = {
@@ -21,6 +23,7 @@ type RowActionButton = {
 } & Omit<ButtonTonalProps, 'size' | 'appearance' | 'label'>;
 
 export type MobileInfoRowPropsBase = {
+  position?: Position;
   label: string;
   labelTruncate?: number;
   labelTooltip?:
@@ -60,13 +63,14 @@ export function MobileInfoRow({
   content,
   rowActions,
   loading = false,
+  position = POSITION.Inner,
   ...rest
 }: MobileInfoRowProps) {
   return (
     <div {...extractSupportProps(rest)} className={cn(styles.wrapper, className)}>
-      {topDivider && <Divider weight='regular' />}
+      {topDivider && position !== POSITION.First && <Divider weight='regular' />}
 
-      <div className={styles.infoRow}>
+      <div className={styles.infoRow} data-position={position}>
         <div className={styles.labelLayout}>
           {label}
 
@@ -111,7 +115,7 @@ export function MobileInfoRow({
         </div>
       </div>
 
-      {bottomDivider && <Divider weight='regular' />}
+      {bottomDivider && position !== POSITION.Last && <Divider weight='regular' />}
     </div>
   );
 }

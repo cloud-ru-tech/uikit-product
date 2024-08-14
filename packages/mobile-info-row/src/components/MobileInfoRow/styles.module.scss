@@ -5,11 +5,22 @@
 }
 
 .infoRow {
-  padding: $dimension-2m 0;
   display: flex;
   flex-direction: column;
   gap: $dimension-050m;
   width: 100%;
+
+  &[data-position='inner'] {
+    padding: $dimension-2m 0;
+  }
+
+  &[data-position='first'] {
+    padding-bottom: $dimension-2m;
+  }
+
+  &[data-position='last'] {
+    padding-top: $dimension-2m;
+  }
 }
 
 .labelLayout {
