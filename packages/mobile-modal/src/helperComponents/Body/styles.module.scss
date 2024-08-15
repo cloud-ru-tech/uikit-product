@@ -2,7 +2,6 @@
 
 .modalBody {
   @include composite-var($sans-body-m);
-
   padding: $dimension-3m $dimension-2m;
 
   flex: 1 1 auto;

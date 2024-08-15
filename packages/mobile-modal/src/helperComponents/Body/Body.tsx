@@ -1,7 +1,7 @@
 import cn from 'classnames';
-import { ReactNode } from 'react';
+import { ReactNode, RefObject } from 'react';
 
-import { Scroll } from '@snack-uikit/scroll';
+import { MobileDrawerCustom } from '@sbercloud/uikit-product-mobile-drawer';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
 import { CONTENT_ALIGN, TEST_IDS } from '../../constants';
@@ -13,31 +13,20 @@ export type ModalBodyProps = WithSupportProps<{
   content: ReactNode;
   /** Выравнивание контента */
   align?: ContentAlign;
+  /** Ссылка на скроллящийся элемент дровера */
+  scrollRef?: RefObject<HTMLElement>;
   className?: string;
-  onSwipeEnabledChange?(value: boolean): void;
 }>;
 
-export function ModalBody({
-  content,
-  align = CONTENT_ALIGN.Default,
-  className,
-  onSwipeEnabledChange,
-  ...rest
-}: ModalBodyProps) {
+export function ModalBody({ content, align = CONTENT_ALIGN.Default, className, scrollRef, ...rest }: ModalBodyProps) {
   return (
-    <Scroll
-      size='m'
-      barHideStrategy='never'
+    <MobileDrawerCustom.Body
+      content={content}
       className={cn(styles.modalBody, className)}
-      onScroll={event => {
-        const scrollTop = (event?.target as HTMLDivElement | undefined)?.scrollTop;
-        onSwipeEnabledChange?.(!scrollTop);
-      }}
+      scrollRef={scrollRef}
       {...extractSupportProps(rest)}
       data-align={align}
       data-test-id={TEST_IDS.content}
-    >
-      {content}
-    </Scroll>
+    />
   );
 }

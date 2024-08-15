@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { ReactNode } from 'react';
+import { ReactNode, RefObject } from 'react';
 
 import { Scroll } from '@snack-uikit/scroll';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
@@ -11,12 +11,15 @@ export type DrawerBodyProps = WithSupportProps<{
   content: ReactNode;
   /** CSS-класс */
   className?: string;
+  /** Ссылка на скроллящийся элемент */
+  scrollRef?: RefObject<HTMLElement>;
 }>;
 
 /** Вспомогательный компонент для добавления "тела" в DrawerCustom */
-export function DrawerBody({ content, className, ...rest }: DrawerBodyProps) {
+export function DrawerBody({ content, className, scrollRef, ...rest }: DrawerBodyProps) {
   return (
     <Scroll
+      ref={scrollRef}
       size='m'
       barHideStrategy='never'
       className={cn(styles.drawerBody, className)}

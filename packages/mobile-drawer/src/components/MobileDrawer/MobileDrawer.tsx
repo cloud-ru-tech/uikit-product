@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useRef } from 'react';
 
 import { MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
 import {
@@ -61,9 +61,10 @@ export function MobileDrawer({
   ...rest
 }: DrawerProps) {
   const needFooter = Boolean(approveButton) || Boolean(cancelButton) || Boolean(additionalButton);
+  const scrollRef = useRef(null);
 
   return (
-    <MobileDrawerCustom {...rest} closeButtonEnabled={true} swipeEnabled={false}>
+    <MobileDrawerCustom {...rest} closeButtonEnabled={true} swipeEnabled={false} scrollRef={scrollRef}>
       <MobileDrawerCustom.Header
         title={title}
         titleTooltip={titleTooltip}
@@ -72,7 +73,7 @@ export function MobileDrawer({
         data-test-id={TEST_IDS.header}
       />
 
-      <MobileDrawerCustom.Body content={content} data-test-id={TEST_IDS.content} />
+      <MobileDrawerCustom.Body content={content} data-test-id={TEST_IDS.content} scrollRef={scrollRef} />
 
       {needFooter && (
         <MobileDrawerCustom.Footer

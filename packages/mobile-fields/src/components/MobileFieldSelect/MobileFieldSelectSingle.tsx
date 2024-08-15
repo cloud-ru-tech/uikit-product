@@ -65,6 +65,8 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
     ref,
   ) => {
     const localRef = useRef<HTMLInputElement>(null);
+    const scrollRef = useRef(null);
+
     const [open = false, setOpen] = useValueControl<boolean>({ value: openProp, onChange: onOpenChange });
     const [value, setValue] = useValueControl<SelectionSingleValueType>({
       value: valueProp,
@@ -112,8 +114,6 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
         setOpen(true);
       }
     }, [required, setOpen, setValue]);
-
-    const [swipeEnabled, setSwipeEnabled] = useState<boolean>(true);
 
     const { ArrowIcon, arrowIconSize } = getArrowIcon({ size, open });
 
@@ -202,10 +202,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
             return content;
           }}
           scroll
-          onScroll={event => {
-            const scrollTop = (event?.target as HTMLDivElement | undefined)?.scrollTop;
-            setSwipeEnabled?.(!scrollTop);
-          }}
+          scrollContainerRef={scrollRef}
           search={
             searchable
               ? {
@@ -274,11 +271,15 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
           open={open}
           onClose={() => handleOpenChange(false)}
           size={searchable ? 'full' : 'auto'}
-          swipeEnabled={swipeEnabled}
+          scrollRef={scrollRef}
         >
           {rest.label && <MobileModalCustom.Header title={rest.label} />}
 
-          {searchable ? listJsx : <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} />}
+          {searchable ? (
+            listJsx
+          ) : (
+            <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} scrollRef={scrollRef} />
+          )}
         </MobileModalCustom>
       </>
     );

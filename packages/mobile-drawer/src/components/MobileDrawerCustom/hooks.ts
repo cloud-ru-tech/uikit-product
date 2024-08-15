@@ -1,4 +1,4 @@
-import { CSSProperties, MouseEvent, TouchEvent, useRef, useState } from 'react';
+import { CSSProperties, MouseEvent, RefObject, TouchEvent, useEffect, useRef, useState } from 'react';
 
 import { Position } from '../../types';
 
@@ -18,17 +18,32 @@ type UseSwipePropsProps = {
   onClose(): void;
   position: Position;
   enabled: boolean;
+  scrollRef?: RefObject<HTMLElement>;
 };
 
 const TRANSFORM = 0;
 const CLOSE_DELTA_IN_PX = 40;
 const CLOSE_RATIO = 5;
 
-export function useSwipeProps({ onClose, position, enabled }: UseSwipePropsProps) {
+export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwipePropsProps) {
   const swipeRef = useRef<HTMLDivElement>(null);
   const itemSize =
     (position === 'bottom' || position === 'top' ? swipeRef.current?.offsetHeight : swipeRef.current?.offsetWidth) ?? 0;
 
+  const scrollRefElement = scrollRef?.current;
+  const [isScrolledToTop, setIsScrolledToTop] = useState(true);
+  const shouldDrag = enabled && isScrolledToTop;
+
+  useEffect(() => {
+    if (scrollRefElement) {
+      const handleScroll = () => {
+        setIsScrolledToTop(scrollRefElement.scrollTop === 0);
+      };
+
+      scrollRefElement.addEventListener('scroll', handleScroll);
+      return () => scrollRefElement.removeEventListener('scroll', handleScroll);
+    }
+  }, [scrollRefElement]);
   const [drag, setDrag] = useState({
     initial: TRANSFORM,
     start: 0,
@@ -61,22 +76,26 @@ export function useSwipeProps({ onClose, position, enabled }: UseSwipePropsProps
     mask: CSSProperties | undefined;
   }>();
 
-  const handleDragStart = (e: MouseEvent | TouchEvent) => {
-    if (!enabled) {
+  const handleDragStart = (event: MouseEvent | TouchEvent) => {
+    event.stopPropagation();
+
+    if (!shouldDrag) {
       return;
     }
 
     setDrag({
       ...drag,
       isDown: true,
-      start: getPageCoordinate(e, position),
+      start: getPageCoordinate(event, position),
       initial: TRANSFORM,
       finished: false,
     });
   };
 
-  const handleDragFinish = () => {
-    if (!enabled) {
+  const handleDragFinish = (event: MouseEvent | TouchEvent) => {
+    event.stopPropagation();
+
+    if (!shouldDrag) {
       return;
     }
 
@@ -106,8 +125,10 @@ export function useSwipeProps({ onClose, position, enabled }: UseSwipePropsProps
     return;
   };
 
-  const handleDragMove = (e: MouseEvent | TouchEvent) => {
-    if (!enabled) {
+  const handleDragMove = (event: MouseEvent | TouchEvent) => {
+    event.stopPropagation();
+
+    if (!shouldDrag) {
       return;
     }
 
@@ -115,7 +136,7 @@ export function useSwipeProps({ onClose, position, enabled }: UseSwipePropsProps
       return;
     }
 
-    const pos = getPageCoordinate(e, position);
+    const pos = getPageCoordinate(event, position);
     const newDrag = drag.start - pos;
     const adjustedDrag = position === 'top' || position === 'left' ? Math.max(0, newDrag) : Math.min(0, newDrag);
 

@@ -72,6 +72,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
   ) => {
     const localRef = useRef<HTMLInputElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
+    const scrollRef = useRef(null);
 
     const [open = false, setOpen] = useValueControl<boolean>({ value: openProp, onChange: onOpenChange });
 
@@ -175,7 +176,6 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       autocomplete || !searchable || prevInputValue.current === inputValue ? items : fuzzySearch(inputValue);
 
     const fieldValidationState = getValidationState({ validationState, error: rest.error });
-    const [swipeEnabled, setSwipeEnabled] = useState<boolean>(true);
 
     const listJsx = (
       <div className={styles.listWrapper}>
@@ -192,10 +192,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
                 }
               : undefined
           }
-          onScroll={event => {
-            const scrollTop = (event?.target as HTMLDivElement | undefined)?.scrollTop;
-            setSwipeEnabled?.(!scrollTop);
-          }}
+          scrollContainerRef={scrollRef}
           contentRender={({ content, ...rest }) => {
             if (typeof content !== 'function') {
               return <ItemContent {...(content as ItemContentProps)} {...rest} />;
@@ -283,11 +280,15 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
           open={open}
           onClose={() => handleOpenChange(false)}
           size={searchable ? 'full' : 'auto'}
-          swipeEnabled={swipeEnabled}
+          scrollRef={scrollRef}
         >
           {rest.label && <MobileModalCustom.Header title={rest.label} />}
 
-          {searchable ? listJsx : <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} />}
+          {searchable ? (
+            listJsx
+          ) : (
+            <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} scrollRef={scrollRef} />
+          )}
 
           <MobileModalCustom.Footer
             actions={
