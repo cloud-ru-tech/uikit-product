@@ -38,10 +38,25 @@ export function useDynamicList({ items, containerRef }: UseDynamicListProps): {
     }
   });
 
+  const toggleButtonWidth = useEventHandler(
+    ({ changedWidth, initialWidth }: { changedWidth: number; initialWidth: number }) => {
+      if (changedWidth > initialWidth) {
+        //try to add extra button
+        tryShowingAction();
+      } else if (changedWidth < initialWidth) {
+        // check if button should be hidden
+        tryHidingAction();
+      }
+    },
+  );
+
   useEffect(() => {
     const listener = () => {
       tryHidingAction();
-      containerRef.current && setWidth(containerRef.current.scrollWidth);
+
+      if (containerRef.current) {
+        setWidth(containerRef.current.scrollWidth);
+      }
     };
 
     document.fonts.addEventListener('loadingdone', listener);
@@ -68,16 +83,22 @@ export function useDynamicList({ items, containerRef }: UseDynamicListProps): {
   }, [containerRef]);
 
   useLayoutEffect(() => {
-    if (width > widthRef.current) {
-      //try to add extra button
-      tryShowingAction();
-    } else if (width < widthRef.current) {
-      // check if button should be hidden
-      tryHidingAction();
+    if (containerRef.current) {
+      toggleButtonWidth({
+        initialWidth: containerRef.current.scrollWidth,
+        changedWidth: widthRef.current,
+      });
     }
+  }, [items, containerRef, toggleButtonWidth]);
+
+  useLayoutEffect(() => {
+    toggleButtonWidth({
+      initialWidth: widthRef.current,
+      changedWidth: width,
+    });
 
     widthRef.current = width;
-  }, [tryHidingAction, tryShowingAction, width, items]);
+  }, [width, toggleButtonWidth]);
 
   useLayoutEffect(() => {
     tryHidingAction();
