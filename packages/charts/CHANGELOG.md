@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.1 (2024-08-15)
+
+
+### Bug Fixes
+
+* **[FF-5338](https://jira.sbercloud.tech/browse/FF-5338):** classname for pie chart ([d13bc42](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d13bc42acceef99a202cb26b29f1e9fb186287b2))
+
+
+
+
+
 # 0.11.0 (2024-08-14)
 
 
