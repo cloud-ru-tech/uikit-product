@@ -20,7 +20,7 @@ export function Headline({ title, beforeHeadline, afterHeadline, subHeader }: He
 
       {afterHeadline && <div className={styles.statusWrapper}>{afterHeadline}</div>}
 
-      {subHeader}
+      {subHeader && <div className={styles.subHeader}>{subHeader}</div>}
     </div>
   );
 }

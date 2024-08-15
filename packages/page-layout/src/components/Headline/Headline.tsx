@@ -24,7 +24,8 @@ export function Headline({ title, actions, beforeHeadline, afterHeadline, subHea
 
         {Boolean(actions) && <div className={styles.actions}>{actions}</div>}
       </div>
-      {subHeader}
+
+      {subHeader && <div className={styles.subHeader}>{subHeader}</div>}
     </div>
   );
 }
