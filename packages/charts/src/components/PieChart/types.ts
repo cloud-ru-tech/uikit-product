@@ -33,6 +33,7 @@ export type PieChartProps = {
     title: string;
     onAggregatedLegendItemClick?: (data: LegendType) => void;
   };
+  className?: string;
 };
 
 export type LabelRenderProps<DataType> = {

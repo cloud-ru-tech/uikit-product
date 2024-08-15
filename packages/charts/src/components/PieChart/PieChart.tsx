@@ -16,6 +16,7 @@ export function PieChart({
   aggregatedLegend,
   onPieSegmentClick,
   onLegendItemClick,
+  className,
   ...rest
 }: WithSupportProps<PieChartProps>) {
   const [hovered, setHovered] = useState<number | undefined>(undefined);
@@ -83,7 +84,7 @@ export function PieChart({
   );
 
   return (
-    <S.Wrapper width={width} height={height} {...extractSupportProps(rest)}>
+    <S.Wrapper width={width} height={height} {...extractSupportProps(rest)} className={className}>
       <Typography purpose={'title'} family={'sans'} size={typographySize} className={S.titleClassname}>
         {title}
       </Typography>
