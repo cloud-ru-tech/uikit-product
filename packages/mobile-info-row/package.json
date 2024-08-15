@@ -30,7 +30,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-mobile-tooltip": "0.1.0",
     "@sbercloud/uikit-product-utils": "3.4.1",
-    "@snack-uikit/button": "0.17.3",
+    "@snack-uikit/button": "0.17.4",
     "@snack-uikit/divider": "3.0.3",
     "@snack-uikit/skeleton": "0.3.4",
     "@snack-uikit/utils": "3.3.0",
