@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-08-16)
+
+
+### Dependencies
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** up snack deps ([de10652](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+
+
+### Features
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** add position prop ([88d1ee3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/88d1ee3ebdd3540fda585dba1594a8642f6a8a74))
+
+
+
+
+
 ## 0.1.1 (2024-08-13)
 
 

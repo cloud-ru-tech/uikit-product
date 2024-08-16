@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2024-08-16)
+
+
+### Bug Fixes
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** stop propagation of onClick event for question-tooltip, add margins and stretch tooltip for the whole screen ([a85a360](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a85a3601156c609495d30a0013eeecbf55194468))
+
+
+
+
+
 # 0.1.0 (2024-08-07)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.2 (2024-08-16)
+
+
+### Dependencies
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** up snack deps ([de10652](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+
+
+
+
+
 ## 0.1.1 (2024-08-13)
 
 ### Only dependencies have been changed

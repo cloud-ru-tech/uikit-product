@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.1 (2024-08-16)
+
+
+### Bug Fixes
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** fix scroll & drag behavior ([ef63b33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef63b3397ab062e060b448f8eddf40fc42fd0550))
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** hide close button ([d733bb7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d733bb720fcd4d397cce0c0a4a88eeb00c6ee687))
+
+
+### Dependencies
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** up snack deps ([de10652](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+
+
+
+
+
 # 0.2.0 (2024-08-13)
 
 

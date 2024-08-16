@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-08-16)
+
+
+### Bug Fixes
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** fix incorrect button position calculation when actions are changed ([e218e45](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e218e451996d60813850f72cef8830aeaaa92bb8))
+
+
+### Dependencies
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** up snack deps ([de10652](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+
+
+### Features
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** add mobile-page-form ([8996200](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/89962009c91ea71aa46f6379e9ac83603e0d9418))
+
+
+
+
+
 ## 0.2.2 (2024-08-13)
 
 ### Only dependencies have been changed

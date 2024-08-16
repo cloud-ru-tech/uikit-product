@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2024-08-16)
+
+
+### Bug Fixes
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** fix scroll & drag behavior ([ef63b33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef63b3397ab062e060b448f8eddf40fc42fd0550))
+
+
+### Dependencies
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** up snack deps ([de10652](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de10652ca4f8ac2a5f11dc2c0f9bb01e17f30c3c))
+
+
+### Features
+
+* **[FF-5186](https://jira.sbercloud.tech/browse/FF-5186):** add mobile-drawer ([a50bb74](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a50bb7418ff06c4afd8b2eed7236ad92dc373ffd))
+
+
+
+
+
 # 0.3.0 (2024-08-13)
 
 
