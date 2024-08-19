@@ -42,6 +42,8 @@ export function SidebarSelect({ className, items, selected, onSelect, ...otherPr
         <MobileBlockBasic className={cn(styles.wrapper, className)} {...extractSupportProps(otherProps)}>
           <TruncateString className={styles.triggerText} text={selectedItem?.label || ''} />
 
+          {selectedItem?.afterContent}
+
           {isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}
         </MobileBlockBasic>
       </MobileDroplist>

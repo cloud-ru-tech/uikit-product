@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
+import { Counter } from '@snack-uikit/counter';
 import { Status } from '@snack-uikit/status';
 import { Typography } from '@snack-uikit/typography';
 
@@ -28,7 +29,7 @@ const getSidebarProps = ({
   selected,
   onSelect: setSelected,
   items: [
-    { id: 0, label: 'Инстансы' },
+    { id: 0, label: 'Инстансы', afterContent: <Counter value={5} size='m' /> },
     { id: 1, label: 'Мониторинг', disabledReason: 'У вас нет прав, чтобы зайти сюда' },
     { id: 2, label: 'Администрирование' },
     { id: 3, label: 'Сеть' },
