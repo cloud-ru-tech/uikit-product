@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2024-08-19)
+
+
+### Features
+
+* **[FF-5187](https://jira.sbercloud.tech/browse/FF-5187):** add afterContent to mobile page services ([ace5da7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ace5da70b45a0e021421c939760185dcfa77ccfc))
+
+
+
+
+
 # 0.3.0 (2024-08-16)
 
 
