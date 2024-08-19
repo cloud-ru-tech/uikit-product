@@ -34,6 +34,7 @@
     "@sbercloud/uikit-product-utils": "3.4.1",
     "@snack-uikit/divider": "3.0.2",
     "@snack-uikit/link": "0.13.0",
+    "@snack-uikit/scroll": "0.6.0",
     "@snack-uikit/typography": "0.6.2",
     "d3-scale": "4.0.2",
     "d3-shape": "3.2.0",

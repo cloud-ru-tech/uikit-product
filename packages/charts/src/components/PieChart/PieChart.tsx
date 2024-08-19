@@ -2,6 +2,7 @@ import { MouseEvent, useCallback, useMemo, useState } from 'react';
 
 import { truncateString } from '@sbercloud/ft-formatters';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Scroll } from '@snack-uikit/scroll';
 import { Typography } from '@snack-uikit/typography';
 
 import { CHART_COLORS, Colors } from '../../constants/colors';
@@ -90,12 +91,14 @@ export function PieChart({
       </Typography>
       <S.ContentWrapper>
         <S.LegendWrapper>
-          <Legend
-            data={colorizedData}
-            legendTitle={legendTitle}
-            onItemClick={onColorizedLegendItemClick}
-            typographySize={typographySize}
-          />
+          <Scroll size={'s'}>
+            <Legend
+              data={colorizedData}
+              legendTitle={legendTitle}
+              onItemClick={onColorizedLegendItemClick}
+              typographySize={typographySize}
+            />
+          </Scroll>
         </S.LegendWrapper>
         <S.PieWrapper>
           <Pie
@@ -114,12 +117,14 @@ export function PieChart({
         </S.PieWrapper>
         {aggregatedLegend && (
           <S.LegendWrapper>
-            <Legend
-              data={aggregatedLegend.data}
-              legendTitle={aggregatedLegend.title}
-              onItemClick={onAggregatedItemClick}
-              typographySize={typographySize}
-            />
+            <Scroll size={'s'}>
+              <Legend
+                data={aggregatedLegend.data}
+                legendTitle={aggregatedLegend.title}
+                onItemClick={onAggregatedItemClick}
+                typographySize={typographySize}
+              />
+            </Scroll>
           </S.LegendWrapper>
         )}
       </S.ContentWrapper>

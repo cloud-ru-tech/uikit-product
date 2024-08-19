@@ -6,6 +6,7 @@ export const Legend = styled.div`
   display: flex;
   flex-direction: column;
   color: var(${COLORS.LEGEND_TITLE});
+  padding-right: 8px;
 `;
 
 export const LegendItemWrapper = styled.div`

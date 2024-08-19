@@ -23,7 +23,7 @@ const handleClick = ({ label }: { label: string | number }) => alert(`${label} c
 function Template({ aggregatedLegendTitle, width, height, ...args }: StoryProps) {
   const data = useMemo(
     () => [
-      { id: 'true_positives', label: 'True Positives', value: 10 },
+      { id: 'true_positives', label: 'True Positives With Some Extremely Long Title', value: 10 },
       { id: 'true_negatives', label: 'True Negatives', value: 15 },
       { id: 'false_positives', label: 'False Positives', value: 45 },
       { id: 'false_negatives', label: 'False Negatives', value: 30 },

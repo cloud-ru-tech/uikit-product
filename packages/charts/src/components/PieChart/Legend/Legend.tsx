@@ -1,4 +1,4 @@
-import { MouseEvent } from 'react';
+import { Fragment, MouseEvent } from 'react';
 
 import { Divider } from '@snack-uikit/divider';
 import { Link } from '@snack-uikit/link';
@@ -52,7 +52,7 @@ export function Legend({ data, legendTitle, typographySize, onItemClick }: Legen
         </>
       )}
       {data.map((item, index) => (
-        <div key={`legend_${item.label}_${index}`}>
+        <Fragment key={`legend_${item.label}_${index}`}>
           <LegendItem
             {...item}
             size={typographySize}
@@ -63,7 +63,7 @@ export function Legend({ data, legendTitle, typographySize, onItemClick }: Legen
               <Divider />
             </S.LegendDividerWrapper>
           )}
-        </div>
+        </Fragment>
       ))}
     </S.Legend>
   );
