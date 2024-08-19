@@ -76,7 +76,11 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
 
     const [open = false, setOpen] = useValueControl<boolean>({ value: openProp, onChange: onOpenChange });
 
-    const [value, setValue] = useState<SelectionSingleValueType[] | undefined>(valueProp || defaultValue || []);
+    const [value, setValue] = useValueControl<SelectionSingleValueType[]>({
+      value: valueProp,
+      defaultValue,
+      onChange: onChangeProp,
+    });
 
     const [{ selectedItems, items = [] }, setItems] = useState<{
       selectedItems?: ItemWithId[];
@@ -135,7 +139,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
 
       if (addOptionByEnter && e.code === 'Enter' && inputValue !== '') {
         if (!(value ?? []).includes(inputValue)) {
-          setValue(value => (value ?? []).concat(inputValue));
+          setValue((value: SelectionSingleValueType[]) => (value ?? []).concat(inputValue));
           updateInputValue();
         }
       }
