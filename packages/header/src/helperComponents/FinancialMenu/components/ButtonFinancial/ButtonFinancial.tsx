@@ -13,6 +13,7 @@ export type ButtonFinancialProps = {
   hotSpot?: HotSpotProps['appearance'];
   status?: 'default' | 'attention';
   valueVisible?: boolean;
+  onClick?(): void;
 };
 
 export function ButtonFinancial({
@@ -21,6 +22,7 @@ export function ButtonFinancial({
   hotSpot,
   status = 'default',
   valueVisible,
+  onClick,
 }: ButtonFinancialProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -31,6 +33,7 @@ export function ButtonFinancial({
         className={styles.button}
         data-status={status}
         type='button'
+        onClick={onClick}
       >
         {valueVisible && (
           <>

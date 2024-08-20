@@ -48,6 +48,7 @@ export enum Texts {
   FinancialMenuEyeButtonDavaVisibleTip = 'financial-menu-eye-button-data-visible-tip',
   FinancialMenuEyeButtonDataHiddenTip = 'financial-menu-eye-button-data-hidden-tip',
   FinancialMenuBonusSign = 'financial-menu-bonus-sign',
+  FinancialMenuDrawerTitle = 'financial-menu-drawer-title',
   Project = 'project',
   Workspace = 'workspace',
   Organization = 'organization',
@@ -106,6 +107,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.FinancialMenuEyeButtonDavaVisibleTip]: 'Скрыть баланс в шапке',
     [Texts.FinancialMenuEyeButtonDataHiddenTip]: 'Показать баланс в шапке',
     [Texts.FinancialMenuBonusSign]: 'Б',
+    [Texts.FinancialMenuDrawerTitle]: 'Баланс',
 
     [Texts.Project]: 'Проект',
     [Texts.Workspace]: 'Воркспейс',
@@ -166,6 +168,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.FinancialMenuEyeButtonDavaVisibleTip]: 'Hide balance in header',
     [Texts.FinancialMenuEyeButtonDataHiddenTip]: 'Show balance in header',
     [Texts.FinancialMenuBonusSign]: 'B',
+    [Texts.FinancialMenuDrawerTitle]: 'Balance',
 
     [Texts.Project]: 'Project',
     [Texts.Workspace]: 'Workspace',
