@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.3 (2024-08-20)
+
+
+### Bug Fixes
+
+* **[PDS-632](https://jira.sbercloud.tech/browse/PDS-632):** add valueControl to multiple ([92ed778](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/92ed77847bc0219ddad8a92a31f73174299d18e4))
+
+
+
+
+
 ## 0.2.2 (2024-08-16)
 
 
