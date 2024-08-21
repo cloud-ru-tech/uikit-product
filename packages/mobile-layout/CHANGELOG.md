@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-08-21)
+
+
+### Features
+
+* **[PDS-670](https://jira.sbercloud.tech/browse/PDS-670):** added margin-top to subheader ([bf802f4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bf802f4f9f580c30b0279735d104929771fec5d0))
+
+
+
+
+
 # 0.4.0 (2024-08-19)
 
 
