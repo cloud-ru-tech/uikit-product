@@ -143,15 +143,19 @@ export function MobileTable<TData extends object>({
             ))}
           </SkeletonContextProvider>
         ) : (
-          tableRows.map((row, index) => <TableCard key={index} headlineId={headlineId} row={row} table={table} />)
-        )}
+          <>
+            {tableRows.map((row, index) => (
+              <TableCard key={index} headlineId={headlineId} row={row} table={table} />
+            ))}
 
-        <TableEmptyState
-          emptyStates={emptyStates}
-          dataError={dataError}
-          dataFiltered={dataFiltered || Boolean(table.getState().globalFilter)}
-          tableRowsLength={tableRows.length}
-        />
+            <TableEmptyState
+              emptyStates={emptyStates}
+              dataError={dataError}
+              dataFiltered={dataFiltered || Boolean(table.getState().globalFilter)}
+              tableRowsLength={tableRows.length}
+            />
+          </>
+        )}
       </div>
 
       {!suppressPagination && <TablePagination table={table} />}
