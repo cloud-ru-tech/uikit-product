@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.2 (2024-08-22)
+
+
+### Bug Fixes
+
+* **[FF-5407](https://jira.sbercloud.tech/browse/FF-5407):** scroll for pie chart legends ([1c8a8be](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1c8a8be714248a1fb768dd6af6fb4ee8313bd332))
+
+
+
+
+
 ## 0.11.1 (2024-08-15)
 
 
