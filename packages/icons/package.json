@@ -28,7 +28,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "compile": "npm run build:svgs-inherit && npm run build:svgs-color && npm run build:sprite-icons",
-    "import:icons-multisize": "ts-node scripts/importMultiSizeIcons.ts",
+    "import:icons-interface-system": "ts-node scripts/importInterfaceSystemIcons.ts",
+    "import:icons-interface-product": "ts-node scripts/importInterfaceProductIcons.ts",
     "import:icons": "ts-node scripts/import.ts",
     "build:svgs-inherit": "npm run build:extension-icons && npm run build:services-icons-old && npm run build:interface-icons-old && npm run compile:interface-icons-product && npm run compile:service-icons",
     "build:extension-icons": "rimraf src/components/extension-icons && svgr -d src/components/extension-icons svgs/inherit/extension --config-file templates/.svgrrc.js",
