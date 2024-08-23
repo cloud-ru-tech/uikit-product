@@ -2,7 +2,7 @@ import { css } from '@linaria/core';
 
 import { GLOBAL_CSS_COLOR, globalCSSTheme } from './theme';
 
-export const globals = css`
+export const globals = /*#__PURE__*/ css`
   :global() {
     ${globalCSSTheme}
 

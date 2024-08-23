@@ -201,7 +201,7 @@ export const COLORS_DEFAULT_MAP = `
 
 `;
 
-export const color = css`
+export const color = /*#__PURE__*/ css`
   :global() {
     :root {
       ${COLORS_DEFAULT_MAP};

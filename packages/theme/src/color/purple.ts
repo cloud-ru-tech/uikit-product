@@ -3,9 +3,9 @@ import { css } from '@linaria/core';
 import { Themes } from '../types/theme';
 import { purpleDeprecated } from './DEPRECATED/purple';
 
-export const purple = css`
+export const purple = /*#__PURE__*/ css`
   :global() {
-    [data-theme='${Themes.Purple}'] {
+    html[data-theme='${Themes.Purple}'] {
       ${purpleDeprecated};
     }
   }

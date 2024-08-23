@@ -3,9 +3,9 @@ import { css } from '@linaria/core';
 import { Themes } from '../types/theme';
 import { greenDarkDeprecated } from './DEPRECATED/green-dark';
 
-export const greenDark = css`
+export const greenDark = /*#__PURE__*/ css`
   :global() {
-    [data-theme='${Themes.GreenDark}'] {
+    html[data-theme='${Themes.GreenDark}'] {
       ${greenDarkDeprecated};
     }
   }

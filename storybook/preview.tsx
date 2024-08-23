@@ -1,6 +1,7 @@
 import { StoryFn } from '@storybook/react';
 import { themes, ThemeVars } from '@storybook/theming';
 import { DecoratorFunction, GlobalTypes, Parameters } from '@storybook/types';
+import cn from 'classnames';
 import { FormProvider, useForm } from 'react-hook-form';
 import { withDesign } from 'storybook-addon-designs';
 import { useDarkMode } from 'storybook-dark-mode';
@@ -8,6 +9,7 @@ import { useDarkMode } from 'storybook-dark-mode';
 import { PARAM_CAN_ADD_CUSTOM_BRAND_KEY, PARAM_COLOR_MAP_KEY, PARAM_KEY } from '@sbercloud/ft-storybook-brand-addon';
 import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
+import { color, globals, green, greenDark, purple, purpleDark } from '@sbercloud/uikit-product-theme';
 import { Alert } from '@snack-uikit/alert';
 import { LocaleProvider } from '@snack-uikit/locale';
 
@@ -31,7 +33,7 @@ const decorators: DecoratorFunction[] = [
     });
     return (
       // Add global styles and theme variables
-      <div id='story-root'>
+      <div id='story-root' className={cn(color, globals, green, greenDark, purple, purpleDark)}>
         <Sprite content={SpriteSystemSVG as unknown as string} />
         <FormProvider {...methods}>
           {Array.isArray(badges) && badges.includes(BADGE.DEPRECATED) && (

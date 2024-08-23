@@ -2,9 +2,8 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react
 
 import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
 import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
-import { color, globals } from '@sbercloud/uikit-product-theme';
 
-import { DEPRECATED_COLOR, POST_MESSAGE_KEY } from '../constants';
+import { POST_MESSAGE_KEY } from '../constants';
 import { tryParseJson } from '../helpers/tryParseJson';
 import { LanguageCodeType, Themes } from '../types';
 import { getCustomStore } from './private/getCustomStore';
@@ -33,7 +32,6 @@ export function useConfig({ languageCode, theme }: UseConfigProps) {
       const html = document.getElementsByTagName('html')[0];
 
       if (previousThemeRef.current) {
-        html.classList.remove(DEPRECATED_COLOR[previousThemeRef.current]);
         html.classList.remove(themeMap[previousThemeRef.current]);
       }
 
@@ -42,7 +40,6 @@ export function useConfig({ languageCode, theme }: UseConfigProps) {
       const body = document.getElementsByTagName('body')[0];
       body.setAttribute('data-theme', newTheme);
 
-      html.classList.add(DEPRECATED_COLOR[newTheme]);
       html.classList.add(themeMap[newTheme]);
 
       window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeThemeDone, value: newTheme }), location.origin);
@@ -53,7 +50,6 @@ export function useConfig({ languageCode, theme }: UseConfigProps) {
   );
 
   useEffect(() => {
-    const body = document.getElementsByTagName('body')[0];
     /*-----------
         --- THEME ---
         -----------*/
@@ -69,8 +65,6 @@ export function useConfig({ languageCode, theme }: UseConfigProps) {
     };
 
     window.addEventListener('message', receiveChangeThemeMessage, false);
-
-    body.classList.add(globals, color);
 
     /*--------------
         --- LANGUAGE ---
