@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.5.0 (2024-08-23)
+
+
+### Features
+
+* **[FF-5392](https://jira.sbercloud.tech/browse/FF-5392):** css optimization ([79cc390](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/79cc390d1d49b0434b75f8e1ae893e7c7f9f450b))
+
+
+
+
+
 ## 3.4.1 (2024-07-31)
 
 
@@ -146,7 +157,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [3.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@3.0.1...@sbercloud/uikit-product-utils@3.0.2) (2022-08-11)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-utils
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-theme@0.40.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
 
 ## [3.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-utils@3.0.0...@sbercloud/uikit-product-utils@3.0.1) (2022-07-25)
 

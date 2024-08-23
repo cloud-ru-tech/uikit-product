@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.40.0 (2024-08-23)
+
+
+### Bug Fixes
+
+* **[FF-3910](https://jira.sbercloud.tech/browse/FF-3910):** update figma-tokens ([d0a6a63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0a6a63f8982cc84a6840a575bb8e4b65c471c87))
+
+
+### Features
+
+* **[FF-5392](https://jira.sbercloud.tech/browse/FF-5392):** css optimization ([79cc390](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/79cc390d1d49b0434b75f8e1ae893e7c7f9f450b))
+
+
+
+
+
 # 0.39.0 (2023-10-25)
 
 
