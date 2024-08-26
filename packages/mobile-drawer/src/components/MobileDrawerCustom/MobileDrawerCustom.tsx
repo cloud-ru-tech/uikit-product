@@ -132,7 +132,7 @@ function MobileDrawerCustomComponent({
     >
       <div
         className={cn(className, styles.content)}
-        {...swipeProps}
+        {...(swipeEnabled && hasSwipe ? swipeProps : undefined)}
         ref={swipeRef}
         data-swipe={swipeEnabled || undefined}
         data-pointers={showPointer || undefined}
