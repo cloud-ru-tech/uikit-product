@@ -10,6 +10,7 @@ import {
   useCallback,
   useEffect,
   useLayoutEffect,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -17,7 +18,7 @@ import {
 import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
-import { List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
+import { kindFlattenItems, List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
 import { extractSupportProps, useValueControl } from '@snack-uikit/utils';
 
 import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
@@ -47,7 +48,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       onChange: onChangeProp,
       disabled = false,
       readonly = false,
-      searchable = true,
+      searchable: searchableProp = true,
       showCopyButton = true,
       showClearButton = true,
       onKeyDown: onInputKeyDownProp,
@@ -89,6 +90,10 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
     useLayoutEffect(() => {
       setItems(({ selectedItem }) => updateItems({ options, value, selectedItem }));
     }, [options, value]);
+
+    const { flattenItems } = useMemo(() => kindFlattenItems({ items }), [items]);
+
+    const searchable = searchableProp && Object.values(flattenItems).length > 5 && !autocomplete;
 
     useEffect(() => {
       if (

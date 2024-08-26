@@ -39,7 +39,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
   valueRender,
   size = SIZE.S,
   label,
-  searchable,
+  searchable: searchableProp,
   contentRender,
   showClearButton = true,
   ...rest
@@ -55,6 +55,8 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
 
     return flattenOptions;
   }, [options]);
+
+  const searchable = searchableProp && Object.values(flattenOptions).length > 5;
 
   const [searchValue = '', setSearchValue] = useState<string>('');
 

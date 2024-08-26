@@ -9,6 +9,7 @@ import {
   PropsWithoutRef,
   RefAttributes,
   useLayoutEffect,
+  useMemo,
   useRef,
   useState,
 } from 'react';
@@ -17,7 +18,7 @@ import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
-import { ItemId, List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
+import { ItemId, kindFlattenItems, List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
 import { Tag } from '@snack-uikit/tag';
 import { extractSupportProps, useValueControl } from '@snack-uikit/utils';
 
@@ -54,7 +55,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       onChange: onChangeProp,
       disabled = false,
       readonly = false,
-      searchable = true,
+      searchable: searchableProp = true,
       showClearButton = true,
       onKeyDown: onInputKeyDownProp,
       validationState = 'default',
@@ -86,6 +87,10 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       selectedItems?: ItemWithId[];
       items: ListProps['items'];
     }>(() => updateMultipleItems({ options, value, currentItems: [], selectedItems: undefined }));
+
+    const { flattenItems } = useMemo(() => kindFlattenItems({ items }), [items]);
+
+    const searchable = searchableProp && Object.values(flattenItems).length > 5 && !autocomplete;
 
     const { inputValue, setInputValue, prevInputValue, updateInputValue } = useSearchInput({
       ...search,

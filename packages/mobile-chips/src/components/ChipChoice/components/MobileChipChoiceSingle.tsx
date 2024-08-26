@@ -28,7 +28,7 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
   valueRender,
   size = SIZE.S,
   label,
-  searchable,
+  searchable: searchableProp,
   contentRender,
   ...rest
 }: MobileChipChoiceSingleProps<T>) {
@@ -43,6 +43,8 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
 
     return flattenOptions;
   }, [options]);
+
+  const searchable = searchableProp && Object.values(flattenOptions).length > 5;
 
   const { t } = useLocale('Chips');
 
