@@ -47,7 +47,7 @@ $drawer-background-color: (
       bottom: 0;
 
       .content {
-        max-height: calc(100vh);
+        max-height: 100dvh;
       }
 
       @each $size in $sizes {
@@ -84,7 +84,7 @@ $drawer-background-color: (
       right: 0;
 
       .content {
-        max-height: calc(100vh - $space-drawer-outside-gap);
+        max-height: calc(100dvh - $space-drawer-outside-gap);
       }
 
       @each $size in $sizes {
