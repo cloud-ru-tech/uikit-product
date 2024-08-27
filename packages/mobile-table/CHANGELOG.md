@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.5 (2024-08-27)
+
+
+### Bug Fixes
+
+* **FF-00000:** fix loading & noData state conflict ([bf6c5da](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bf6c5daa3b3454bc6ab94776ea70feb2295612a4))
+
+
+
+
+
 ## 0.1.4 (2024-08-27)
 
 ### Only dependencies have been changed
