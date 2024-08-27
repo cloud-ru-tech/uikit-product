@@ -90,7 +90,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
 
     const { flattenItems } = useMemo(() => kindFlattenItems({ items }), [items]);
 
-    const searchable = searchableProp && Object.values(flattenItems).length > 5 && !autocomplete;
+    const searchable = (searchableProp && Object.values(flattenItems).length > 5) || autocomplete;
 
     const { inputValue, setInputValue, prevInputValue, updateInputValue } = useSearchInput({
       ...search,
