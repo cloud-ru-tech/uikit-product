@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.3 (2024-08-27)
+
+
+### Bug Fixes
+
+* **[FF-5188](https://jira.sbercloud.tech/browse/FF-5188):** back swiveEnabledProp ([8b2052d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8b2052d1bac48112579fc3de7fb4237bc01ba2de))
+* **[FF-5188](https://jira.sbercloud.tech/browse/FF-5188):** remove touch handlers with swipeDisabled ([0e12ab1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0e12ab153223f9a81dab94f53c6ef77f1e7cb2cc))
+
+
+
+
+
 ## 0.2.2 (2024-08-23)
 
 ### Only dependencies have been changed

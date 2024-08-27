@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-08-27)
+
+
+### Features
+
+* **[FF-5188](https://jira.sbercloud.tech/browse/FF-5188):** hide search on fieldSelect/chips with low 5 items ([97f1533](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/97f1533dc11b9254e9928dd7a1c826f1f8bddb39))
+
+
+
+
+
 ## 0.1.3 (2024-08-23)
 
 ### Only dependencies have been changed
