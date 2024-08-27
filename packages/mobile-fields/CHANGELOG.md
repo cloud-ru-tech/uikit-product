@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.1 (2024-08-27)
+
+
+### Bug Fixes
+
+* **FF-00:** fix autocomplete search ([2a0ccb5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2a0ccb5d00560636868f0f22430b35b894fcb1a8))
+
+
+
+
+
 # 0.3.0 (2024-08-27)
 
 
