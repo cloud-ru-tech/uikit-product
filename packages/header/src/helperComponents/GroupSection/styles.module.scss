@@ -25,7 +25,11 @@ $vPadding: calc($dimension-1m + $dimension-025m);
   align-items: center;
   overflow: hidden;
   gap: $dimension-1m;
-  padding: $dimension-1m $vPadding;
+  padding: $dimension-1m 0;
+}
+
+.titleText {
+  padding: 0 $vPadding;
 }
 
 .search {
@@ -42,29 +46,32 @@ $vPadding: calc($dimension-1m + $dimension-025m);
   transition-property: all;
   transition-duration: 300ms;
 
-  background-color: $sys-neutral-background2-level;
-  width: calc(100% - 1 * $vPadding);
-  max-width: calc($dimension-3m + $vPadding);
-  overflow: hidden;
+  background-color: $sys-neutral-background1-level;
+  width: calc(100%);
+  max-width: calc($dimension-3m + 2 * $vPadding);
+  padding-left: $vPadding;
+  box-sizing: border-box;
+
   z-index: -1;
 
   &[data-is-mounted] {
     z-index: 0;
+    background-color: $sys-neutral-background2-level;
   }
 
   &[data-transition-status='entering'],
   &[data-transition-status='entered'] {
     max-width: 100%;
-    min-width: calc($dimension-3m + $vPadding);
-    right: $vPadding;
-    width: calc(100% - 2 * $vPadding);
+    min-width: calc($dimension-3m + 2 * $vPadding);
+    right: 0;
+    width: calc(100%);
   }
 
   &[data-transition-status='exiting'],
   &[data-transition-status='exited'] {
-    max-width: calc($dimension-3m + $vPadding);
+    max-width: calc($dimension-3m + 2 * $vPadding);
     right: 0;
-    width: calc(100% - 2 * $vPadding);
+    width: calc(100%);
   }
 }
 
@@ -121,4 +128,19 @@ $vPadding: calc($dimension-1m + $dimension-025m);
   width: $size-icon-container-s;
   height: $size-icon-container-s;
   flex-shrink: 0;
+}
+
+.searchOpenButton {
+  background-color: $sys-neutral-background1-level !important;
+}
+
+.searchCloseButton {
+  background-color: $sys-neutral-background2-level !important;
+}
+
+.searchButton {
+  height: 40px !important;
+  margin: calc(0px - $dimension-1m) 0 !important;
+  width: calc($dimension-3m + $vPadding) !important;
+  justify-content: flex-start !important;
 }

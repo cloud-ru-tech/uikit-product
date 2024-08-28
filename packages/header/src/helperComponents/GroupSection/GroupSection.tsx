@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { KeyboardEvent, RefObject, useEffect, useRef } from 'react';
 
 import { SearchSVG, VerticalMenuRightCloseSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, useMatchMedia, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { List, ListProps } from '@snack-uikit/list';
@@ -124,19 +124,22 @@ export function GroupSection({
     }
   }, [selectedItem]);
 
+  const { isMobile } = useMatchMedia();
+
   return (
     <div className={cn(styles.section, className)} {...extractSupportProps(rest)}>
       {title && (
         <div className={styles.title}>
-          {title}
+          <span className={styles.titleText}>{title}</span>
 
           {searchable && (
             <>
               {!animationState.isMounted && (
-                <Tooltip tip={textProvider(languageCode, Texts.SearchOpenButton)}>
+                <Tooltip tip={textProvider(languageCode, Texts.SearchOpenButton)} open={isMobile ? false : undefined}>
                   <ButtonFunction
                     size='xs'
                     icon={<SearchSVG />}
+                    className={cn(styles.searchButton, styles.searchOpenButton)}
                     onClick={handleActivateSearch}
                     tabIndex={searchIconTabIndex}
                     data-test-id='header__select-group-section-search-icon'
@@ -159,9 +162,10 @@ export function GroupSection({
                   data-test-id='header__select-group-section-search-input'
                 />
 
-                <Tooltip tip={textProvider(languageCode, Texts.SearchCloseButton)}>
+                <Tooltip tip={textProvider(languageCode, Texts.SearchCloseButton)} open={isMobile ? false : undefined}>
                   <ButtonFunction
                     size='xs'
+                    className={cn(styles.searchButton, styles.searchCloseButton)}
                     icon={<VerticalMenuRightCloseSVG />}
                     onClick={handleDeactivateSearch}
                     tabIndex={closeSearchIconTabIndex}
