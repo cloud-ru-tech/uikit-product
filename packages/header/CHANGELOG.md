@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.21.0 (2024-08-28)
+
+
+### Bug Fixes
+
+* **FF-00:** fix header search ([ec25787](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ec25787cb9aaf5550ff872dd0832f48a77f8a5a0))
+
+
+### Features
+
+* **FF-00:** add balance into mobile header ([1ed0f2f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ed0f2fd74fa1b19a41956e9a7b7f76dd61121fd))
+
+
+
+
+
 ## 2.20.3 (2024-08-28)
 
 ### Only dependencies have been changed
