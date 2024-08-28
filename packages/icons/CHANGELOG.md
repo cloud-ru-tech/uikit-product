@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 9.2.0 (2024-08-28)
+
+
+### Features
+
+* **[PDS-640](https://jira.sbercloud.tech/browse/PDS-640):** extensions icons and service icons updates ([aab14bc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aab14bc902f92a0c7fcd03ff29da6aa87a824d59))
+* **[PDS-640](https://jira.sbercloud.tech/browse/PDS-640):** interface product icons and interface-icons-* instructions ([a03fc1b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a03fc1bf3a11c96e9b63fd8ba2d97a115e19979d))
+
+
+
+
+
 ## 9.1.1 (2024-08-23)
 
 ### Only dependencies have been changed
