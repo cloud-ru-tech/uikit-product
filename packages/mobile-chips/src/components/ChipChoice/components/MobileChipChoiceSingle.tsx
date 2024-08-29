@@ -106,6 +106,7 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
         }
         setOpen(open);
       }}
+      label={label}
     >
       <ChipChoiceBase
         {...rest}

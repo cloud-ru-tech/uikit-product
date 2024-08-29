@@ -4,3 +4,17 @@
   box-sizing: border-box;
   padding: $dimension-3m 0;
 }
+
+.bodyNoPadding {
+  padding: 0 !important;
+}
+
+.listWrapper {
+  @include composite-var($sans-body-m);
+
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  min-height: $dimension-2m;
+  color: $sys-neutral-text-main;
+  padding: 16px 0;
+}

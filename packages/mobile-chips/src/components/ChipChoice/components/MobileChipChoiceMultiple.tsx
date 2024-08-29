@@ -123,6 +123,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
         }
         setOpen(open);
       }}
+      label={label}
     >
       <ChipChoiceBase
         {...rest}
