@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { ItemId, MobileDroplist, SelectionSingleValueType } from '@sbercloud/uikit-product-mobile-dropdown';
+import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 import { useLocale } from '@snack-uikit/locale';
 import { useValueControl } from '@snack-uikit/utils';
 
@@ -10,6 +11,7 @@ import { ContentRenderProps, MobileChipChoiceMultipleProps } from '../types';
 import { FlattenOption, kindFlattenOptions } from '../utils';
 import { transformOptionsToItems } from '../utils/options';
 import { ChipChoiceBase } from './ChipChoiceBase';
+import styles from './styles.module.scss';
 
 export type ChipChoiceMultipleValueFormatterProps<T extends ContentRenderProps = ContentRenderProps> = {
   value: FlattenOption<T>[];
@@ -124,6 +126,28 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
         setOpen(open);
       }}
       label={label}
+      footer={
+        <div className={styles.footer}>
+          <div className={styles.footerTopLine}>
+            <span className={styles.counter}>{`Выбрано: ${value?.length || 0}`}</span>
+            <ButtonFunction
+              label='Сбросить все'
+              onClick={() => {
+                setValue([]);
+              }}
+              size='m'
+            />
+          </div>
+          <ButtonFilled
+            fullWidth
+            label='Выбрать'
+            onClick={() => {
+              setOpen(false);
+            }}
+            size='l'
+          />
+        </div>
+      }
     >
       <ChipChoiceBase
         {...rest}

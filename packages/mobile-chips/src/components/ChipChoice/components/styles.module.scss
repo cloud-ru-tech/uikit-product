@@ -1,0 +1,23 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields';
+
+.footer {
+  width: 100%;
+}
+
+.footerTopLine {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.counter {
+  @include composite-var($sans-body-m);
+
+  color: $sys-neutral-text-light;
+}
+
+.bodyNoPadding {
+  padding: 0 !important;
+}
