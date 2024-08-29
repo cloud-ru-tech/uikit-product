@@ -1,4 +1,11 @@
-import { getCoreRowModel, getFilteredRowModel, getPaginationRowModel, useReactTable } from '@tanstack/react-table';
+import {
+  getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  SortingState,
+  useReactTable,
+} from '@tanstack/react-table';
 import cn from 'classnames';
 import { useCallback, useMemo } from 'react';
 
@@ -40,6 +47,7 @@ export type MobileTableProps<TData extends object> = Pick<
   | 'noDataState'
   | 'noResultsState'
   | 'errorDataState'
+  | 'sorting'
 > &
   WithSupportProps<{
     headlineId?: string;
@@ -67,10 +75,12 @@ export function MobileTable<TData extends object>({
   loading,
   dataError,
   dataFiltered,
+  sorting: sortingProp,
   ...rest
 }: MobileTableProps<TData>) {
   const defaultPaginationState = useMemo(() => ({ pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE }), []);
 
+  const { state: sorting, onStateChange: onSortingChange } = useStateControl<SortingState>(sortingProp, []);
   const { state: globalFilter, onStateChange: onGlobalFilterChange } = useStateControl<string>(search, '');
   const { state: pagination, onStateChange: onPaginationChange } = useStateControl<PaginationState>(
     undefined,
@@ -83,8 +93,11 @@ export function MobileTable<TData extends object>({
     getCoreRowModel: getCoreRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
-    state: { pagination, globalFilter },
+    getSortedRowModel: getSortedRowModel(),
+
+    state: { pagination, globalFilter, sorting },
     onPaginationChange,
+    onSortingChange,
     globalFilterFn: enableFuzzySearch ? fuzzyFilter : 'includesString',
 
     enableFilters: true,
