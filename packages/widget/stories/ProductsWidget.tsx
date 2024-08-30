@@ -1,10 +1,12 @@
 import { Meta, StoryFn } from '@storybook/react';
+import { ReactNode } from 'react';
+
+import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ProductsWidget, ProductsWidgetProps } from '../src';
-import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Snack Uikit/Widget/Products Widget',
@@ -12,19 +14,16 @@ const meta: Meta = {
 };
 export default meta;
 
-const PRODUCTS = Array.from({ length: 24 }).fill({
-  title: 'Title',
-  description: 'Description',
-}) as ProductsWidgetProps['products'];
+const CARDS = Array.from({ length: 24 }).fill(
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  <CardServiceSmall title={'Title'} description={'Description'} />,
+) as ReactNode[];
 
 type StoryProps = ProductsWidgetProps;
 
 function Template({ ...args }: StoryProps) {
-  return (
-    <div className={styles.wrapperResize}>
-      <ProductsWidget {...args} />
-    </div>
-  );
+  return <ProductsWidget {...args} />;
 }
 
 export const productsWidget: StoryFn<StoryProps> = Template.bind({});
@@ -32,7 +31,7 @@ export const productsWidget: StoryFn<StoryProps> = Template.bind({});
 productsWidget.args = {
   columnSize: 3,
   rowSize: 4,
-  products: PRODUCTS,
+  cards: CARDS,
   loading: false,
 };
 

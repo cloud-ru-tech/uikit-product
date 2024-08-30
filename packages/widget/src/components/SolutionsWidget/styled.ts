@@ -1,6 +1,8 @@
 import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 
+import { CSS_BREAKPOINTS } from '@sbercloud/uikit-product-utils';
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -20,6 +22,12 @@ export const Cards = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+
+  @media ${CSS_BREAKPOINTS.mobile} {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 export const cardClassName = css`
