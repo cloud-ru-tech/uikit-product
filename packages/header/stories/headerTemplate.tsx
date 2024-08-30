@@ -38,6 +38,7 @@ export type StoryProps = HeaderProps & {
   financialMenuBalanceStatus: NonNullable<FinancialMenuProps['content']>['balance']['status'];
   financialMenuBonusesValue: number;
   financialMenuBonusesTip: string;
+  financialMenuBonusesTipMoreButtonLink: string;
   financialMenuBonusesLabel: string;
   financialMenuBonusesDescription: string;
   showSettings: boolean;
@@ -173,6 +174,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
 
     financialMenuBonusesValue,
     financialMenuBonusesTip,
+    financialMenuBonusesTipMoreButtonLink,
     financialMenuBonusesLabel,
     financialMenuBonusesDescription,
 
@@ -296,6 +298,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
                       onAddClick: () => toaster.userAction.success({ label: 'bonuses add click' }),
                       value: financialMenuBonusesValue,
                       tip: financialMenuBonusesTip,
+                      tipMoreButtonLink: financialMenuBonusesTipMoreButtonLink,
                       description: financialMenuBonusesDescription,
                     },
                   },
@@ -460,6 +463,7 @@ export const ARGS: StoryProps = {
   financialMenuBonusesValue: 12345,
   financialMenuBonusesTip:
     'Сейчас вы платите бонусами из расчета 1 бонус = 1 ₽. После того как бонусы закончатся, оплата продолжится с основного баланса',
+  financialMenuBonusesTipMoreButtonLink: 'https://cloud.ru/docs/billing/ug/topics/concepts__billing_bonus.html',
   financialMenuBonusesLabel: 'Бонусы',
   financialMenuBonusesDescription: 'Расходуется до 31 марта',
 

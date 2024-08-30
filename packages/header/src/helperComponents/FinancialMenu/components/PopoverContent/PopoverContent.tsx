@@ -25,7 +25,7 @@ export type PopoverContentProps = {
     value: number;
     onOpenChange?(isOpen: boolean): void;
   };
-  bonuses: Pick<PopoverRowProps, 'tip' | 'label' | 'onAddClick' | 'description'> & {
+  bonuses: Pick<PopoverRowProps, 'tip' | 'tipMoreButtonLink' | 'label' | 'onAddClick' | 'description'> & {
     value: number;
     onOpenChange?(isOpen: boolean): void;
   };
