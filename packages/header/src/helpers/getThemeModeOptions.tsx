@@ -1,6 +1,5 @@
 import { DaySVG, LaptopPhoneSVG, NightSVG } from '@sbercloud/uikit-product-icons';
 import { LanguageCodeType } from '@sbercloud/uikit-product-utils';
-import { PromoTag } from '@snack-uikit/promo-tag';
 
 import { UserMenuProps } from '../helperComponents';
 import { THEME_MODE } from '../types';
@@ -35,7 +34,6 @@ export function getThemeModeOptions({ themeMode, languageCode }: GetThemeModeOpt
       onClick: () => {
         onChange(THEME_MODE.Dark);
       },
-      afterContent: <PromoTag text='beta' appearance='blue' />,
       'data-test-id': 'header__user-menu__theme-mode__dark-option',
     },
     {
@@ -47,7 +45,6 @@ export function getThemeModeOptions({ themeMode, languageCode }: GetThemeModeOpt
       onClick: () => {
         onChange(THEME_MODE.System);
       },
-      afterContent: <PromoTag text='beta' appearance='blue' />,
       'data-test-id': 'header__user-menu__theme-mode__system-option',
     },
   ];
