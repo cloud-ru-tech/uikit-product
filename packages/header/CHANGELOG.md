@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.22.0 (2024-08-30)
+
+
+### Features
+
+* **[FF-5415](https://jira.sbercloud.tech/browse/FF-5415):** remove beta label ([ad04154](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ad04154ebdbf20793106a15e0934e8467c9b9bb3))
+
+
+
+
+
 # 2.21.0 (2024-08-28)
 
 
