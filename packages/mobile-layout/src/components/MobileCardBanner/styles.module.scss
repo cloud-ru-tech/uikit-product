@@ -1,0 +1,48 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.cardBannerContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: $dimension-2m;
+  width: 100%;
+  height: 100%;
+}
+
+.cardBannerLeft {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: calc($dimension-050m + $dimension-1m);
+}
+
+.cardBannerDescription {
+  color: $sys-neutral-text-support;
+}
+
+.cardBannerTitle {
+  @include composite-var($sans-title-m);
+
+  max-width: 100%;
+  color: $sys-neutral-text-main;
+}
+
+.cardBannerImage {
+  width: calc($dimension-5m + $dimension-7m);
+  flex-shrink: 0;
+  object-position: center;
+  object-fit: cover;
+}
+
+.cardFunctionBadgeWrapper {
+  position: absolute;
+  right: $dimension-1m;
+  top: $dimension-1m;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.cardBannerFooter {
+  margin-top: auto;
+}
