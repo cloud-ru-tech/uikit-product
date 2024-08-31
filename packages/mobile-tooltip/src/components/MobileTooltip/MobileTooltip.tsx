@@ -43,7 +43,7 @@ export function MobileTooltip({
     <PopoverPrivate
       placement={placement}
       popoverContent={
-        <div className={styles.tooltipContainer} data-disable-max-width={disableMaxWidth}>
+        <div className={styles.tooltipContainer} data-disable-max-width={disableMaxWidth} data-placement={placement}>
           {tip}
         </div>
       }
