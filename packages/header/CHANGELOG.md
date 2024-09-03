@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.23.0 (2024-09-03)
+
+
+### Features
+
+* **[RM-2327](https://jira.sbercloud.tech/browse/RM-2327):** add bonus tooltip link ([04ee480](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/04ee480c9fca1e153d23357693b1d4e459cc398f))
+
+
+
+
+
 # 2.22.0 (2024-08-30)
 
 
