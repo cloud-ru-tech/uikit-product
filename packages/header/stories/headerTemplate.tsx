@@ -67,7 +67,15 @@ const DEFAULT_USER = {
   email: 'почтовый@сервис.ру',
 };
 
-const PROJECT_ACTIONS = [{ id: 'test', content: { option: 'test' } }];
+const PROJECT_ACTIONS = [
+  {
+    id: 'test',
+    content: { option: 'test' },
+    onClick: () => {
+      window.dispatchEvent(new CustomEvent('header__close-main-menu'));
+    },
+  },
+];
 
 const DEFAULT_PROJECT = { id: '1_1', name: 'Проект 1', actions: PROJECT_ACTIONS };
 const DEFAULT_PLATFORM = { id: '1', name: 'Evolution', logo: <EvolutionPlatformLogo /> };
@@ -526,7 +534,7 @@ export const ARGS: StoryProps = {
 
   showAddOrganization: true,
   organizations: [
-    { id: '1', name: 'Облачные технологии' },
+    { id: '1', name: 'Облачные технологии', actions: PROJECT_ACTIONS },
     { id: '2', name: 'ИП Иванов И.И.' },
     { id: '3', name: 'Очень-очень длинное название очень большой организации' },
   ],

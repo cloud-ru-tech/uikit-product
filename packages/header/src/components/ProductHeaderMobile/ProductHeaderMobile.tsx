@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import {
   BurgerSVG,
@@ -80,6 +80,19 @@ export function ProductHeaderMobile({
   const [isProjectMenuOpen, setIsProjectMenuOpen] = useState(false);
   const [isThemeModeMenuOpen, setIsThemeModeMenuOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+
+  useEffect(() => {
+    const closeListener = () => {
+      setIsMainMenuOpen(false);
+      setIsUserMenuOpen(false);
+    };
+
+    window.addEventListener('header__close-main-menu', closeListener);
+
+    return () => {
+      window.removeEventListener('header__close-main-menu', closeListener);
+    };
+  }, [setIsMainMenuOpen]);
 
   const closeMainMenu = useCallback(() => {
     setIsMainMenuOpen(false);

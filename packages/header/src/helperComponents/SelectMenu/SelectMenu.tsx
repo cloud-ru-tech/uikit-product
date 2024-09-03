@@ -109,6 +109,7 @@ export function SelectMenu({
           onItemChange={val => onOrganizationChange?.(val, 'select')}
           selectedItem={selectedOrganization}
           addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
+          closeDropdown={closeDropdown}
           data-test-id='header__select-group-organization'
           avatarAppearance='red'
         />

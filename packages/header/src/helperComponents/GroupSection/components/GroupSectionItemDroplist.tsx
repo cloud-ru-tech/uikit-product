@@ -24,6 +24,7 @@ export function GroupSectionItemDroplist({ actions, onItemClick, dataTestId }: G
             onItemClick?.();
           },
         }))}
+        placement='bottom-end'
       >
         <ButtonFunction
           size='xs'

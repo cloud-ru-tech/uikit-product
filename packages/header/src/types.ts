@@ -15,6 +15,7 @@ export type Organization = {
   id: string;
   name: string;
   new?: boolean;
+  actions?: BaseItemProps[];
 };
 
 export type Project = {
