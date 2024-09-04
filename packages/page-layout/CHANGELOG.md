@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2024-09-04)
+
+
+### Features
+
+* **CORESERV-0000:** add ref to element with scroll ([08c4485](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/08c44853e95ffbf68aff64ab82b2df568aaf5657))
+
+
+
+
+
 ## 0.11.2 (2024-08-28)
 
 ### Only dependencies have been changed
