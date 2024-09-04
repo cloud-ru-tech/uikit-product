@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.24.0 (2024-09-04)
+
+
+### Features
+
+* **[AICCORE-1782](https://jira.sbercloud.tech/browse/AICCORE-1782):** added logic for ws create ([4e8c9a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4e8c9a595f876348fb7cbce30cfad65d44fcf8e5))
+
+
+
+
+
 # 2.23.0 (2024-09-03)
 
 
