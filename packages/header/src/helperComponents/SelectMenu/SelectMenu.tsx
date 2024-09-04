@@ -48,6 +48,8 @@ export type SelectProps = {
     emptyState?: ListProps['noDataState'];
     searchActive?: boolean;
     onSearchActiveChange?(value: boolean): void;
+    tooltip?: string;
+    disabled?: boolean;
   };
 
   onClose?(): void;
@@ -175,6 +177,8 @@ export function SelectMenu({
             addItem={{
               label: textProvider(languageCode, Texts.AddWorkspace),
               handler: workspaces.onWorkspaceAdd,
+              tooltip: workspaces.tooltip,
+              disabled: workspaces.disabled,
             }}
             data-test-id='header__select-group-workspace'
             avatarAppearance='blue'
