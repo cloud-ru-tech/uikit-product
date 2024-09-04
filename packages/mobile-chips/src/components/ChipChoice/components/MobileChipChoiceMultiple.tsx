@@ -1,11 +1,13 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { ItemId, MobileDroplist, SelectionSingleValueType } from '@sbercloud/uikit-product-mobile-dropdown';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 import { useLocale } from '@snack-uikit/locale';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { CHIP_CHOICE_TEST_IDS, SIZE } from '../../../constants';
+import { textProvider, Texts } from '../../../helpers/texts-provider';
 import { useFuzzySearch, useHandleOnKeyDown } from '../hooks';
 import { ContentRenderProps, MobileChipChoiceMultipleProps } from '../types';
 import { FlattenOption, kindFlattenOptions } from '../utils';
@@ -46,6 +48,8 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
   showClearButton = true,
   ...rest
 }: MobileChipChoiceMultipleProps<T>) {
+  const { languageCode } = useLanguage();
+
   const [value, setValue] = useValueControl<SelectionSingleValueType[]>({
     value: valueProp,
     defaultValue,
@@ -129,9 +133,11 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
       footer={
         <div className={styles.footer}>
           <div className={styles.footerTopLine}>
-            <span className={styles.counter}>{`Выбрано: ${value?.length || 0}`}</span>
+            <span className={styles.counter}>{`${textProvider(languageCode, Texts.SelectedN)}${
+              value?.length || 0
+            }`}</span>
             <ButtonFunction
-              label='Сбросить все'
+              label={textProvider(languageCode, Texts.ResetAll)}
               onClick={() => {
                 setValue([]);
               }}
@@ -140,7 +146,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
           </div>
           <ButtonFilled
             fullWidth
-            label='Выбрать'
+            label={textProvider(languageCode, Texts.Select)}
             onClick={() => {
               setOpen(false);
             }}

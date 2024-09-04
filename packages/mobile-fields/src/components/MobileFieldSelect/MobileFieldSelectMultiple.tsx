@@ -15,6 +15,7 @@ import {
 } from 'react';
 
 import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
@@ -23,6 +24,7 @@ import { Tag } from '@snack-uikit/tag';
 import { extractSupportProps, useValueControl } from '@snack-uikit/utils';
 
 import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
+import { textProvider, Texts } from '../../helpers/texts-provider';
 import { useButtons, useHandleDeleteItem, useHandleOnKeyDown, useSearchInput } from './hooks';
 import { useFuzzySearch } from './legacy';
 import styles from './styles.module.scss';
@@ -71,6 +73,8 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
     },
     ref,
   ) => {
+    const { languageCode } = useLanguage();
+
     const localRef = useRef<HTMLInputElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
     const scrollRef = useRef(null);
@@ -303,10 +307,17 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
             actions={
               <div className={styles.footer}>
                 <div className={styles.footerTopLine}>
-                  <span className={styles.counter}>{`Выбрано: ${selectedItems?.length || 0}`}</span>
-                  <ButtonFunction label='Сбросить все' onClick={onClear} size='m' />
+                  <span className={styles.counter}>{`${textProvider(languageCode, Texts.SelectedN)}${
+                    selectedItems?.length || 0
+                  }`}</span>
+                  <ButtonFunction label={textProvider(languageCode, Texts.ResetAll)} onClick={onClear} size='m' />
                 </div>
-                <ButtonFilled fullWidth label='Выбрать' onClick={handleApplyChange} size='l' />
+                <ButtonFilled
+                  fullWidth
+                  label={textProvider(languageCode, Texts.Select)}
+                  onClick={handleApplyChange}
+                  size='l'
+                />
               </div>
             }
           />
