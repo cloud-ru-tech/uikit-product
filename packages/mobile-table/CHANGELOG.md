@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-09-04)
+
+
+### Features
+
+* **[FF-5189](https://jira.sbercloud.tech/browse/FF-5189):** add sorting to table ([9d6980c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d6980cd8adc49494c52b1f14ae38e96f9f425d9))
+
+
+
+
+
 ## 0.1.6 (2024-08-28)
 
 ### Only dependencies have been changed

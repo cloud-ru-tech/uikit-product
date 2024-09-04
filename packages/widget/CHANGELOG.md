@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-09-04)
+
+
+### BREAKING CHANGES
+
+
+* **[PDS-685](https://jira.sbercloud.tech/browse/PDS-685):** mobile adaptation for solution and product widgets; products property replaced with cards property in ProductWidget ([f23c1a6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f23c1a6ec2ff1d243ffdb1b33dd72d97c82f93cf))
+
+
+
+
 ## 0.2.9 (2024-08-23)
 
 ### Only dependencies have been changed

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-09-04)
+
+
+### Bug Fixes
+
+* **[FF-5189](https://jira.sbercloud.tech/browse/FF-5189):** add localization ([d401c7c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d401c7c1ed3ae9c66905736179dd699430481cca))
+
+
+### Features
+
+* **[FF-5189](https://jira.sbercloud.tech/browse/FF-5189):** add footer to chip multiple ([ae0b1b3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ae0b1b368ea02bbdaa8a98631f394a2b4f9188a7))
+* **[FF-5189](https://jira.sbercloud.tech/browse/FF-5189):** upd mobile list ([51c0092](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/51c0092f3795ab8f65774dcd0a7e42847166d49e))
+
+
+
+
+
 ## 0.2.1 (2024-08-28)
 
 ### Only dependencies have been changed

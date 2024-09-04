@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2024-09-04)
+
+
+### Features
+
+* **[PDS-685](https://jira.sbercloud.tech/browse/PDS-685):** add mobile card banner ([de39207](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de39207320cf5b15001c26645d0ca4dcf698551c))
+
+
+
+
+
 ## 0.5.3 (2024-08-28)
 
 ### Only dependencies have been changed

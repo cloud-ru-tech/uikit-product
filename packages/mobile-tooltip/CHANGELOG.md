@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.5 (2024-09-04)
+
+
+### Bug Fixes
+
+* **[PDS-685](https://jira.sbercloud.tech/browse/PDS-685):** fix mobile tooltip margins ([b8ebebd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b8ebebd55f2b41aab113d32321a1b27b1f5c1190))
+
+
+
+
+
 ## 0.1.4 (2024-08-28)
 
 ### Only dependencies have been changed

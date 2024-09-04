@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.3 (2024-09-04)
+
+
+### Bug Fixes
+
+* **[FF-5189](https://jira.sbercloud.tech/browse/FF-5189):** add localization ([d401c7c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d401c7c1ed3ae9c66905736179dd699430481cca))
+
+
+
+
+
 ## 0.3.2 (2024-08-28)
 
 ### Only dependencies have been changed

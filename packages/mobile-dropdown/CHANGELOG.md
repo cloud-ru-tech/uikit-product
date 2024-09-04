@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-09-04)
+
+
+### Features
+
+* **[FF-5189](https://jira.sbercloud.tech/browse/FF-5189):** upd mobile list ([51c0092](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/51c0092f3795ab8f65774dcd0a7e42847166d49e))
+
+
+
+
+
 ## 0.2.5 (2024-08-28)
 
 ### Only dependencies have been changed
