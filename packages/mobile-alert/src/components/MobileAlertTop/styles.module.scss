@@ -1,0 +1,137 @@
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-alert-alertTop';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+$colors: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue';
+$tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue';
+
+.alertTop {
+  @include composite-var($alert-top-container-container);
+
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  gap: 0;
+
+  @each $color in $colors {
+    &[data-color='#{$color}'] {
+      @if $color == 'invert-neutral' {
+        background-color: $sys-invert-neutral-background;
+      } @else {
+        background-color: simple-var($theme-variables, 'sys', $color, 'accent-default');
+      }
+    }
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @each $color in $colors {
+    &[data-color='#{$color}'] {
+      @if $color == 'invert-neutral' {
+        color: $sys-invert-neutral-text-main;
+      } @else {
+        color: simple-var($theme-variables, 'sys', $color, 'on-accent');
+      }
+    }
+  }
+
+  svg {
+    width: $icon-s !important; /* stylelint-disable-line declaration-no-important */
+    height: $icon-s !important; /* stylelint-disable-line declaration-no-important */
+  }
+}
+
+.title {
+  @include composite-var($sans-title-s);
+
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @each $color in $colors {
+    &[data-color='#{$color}'] {
+      @if $color == 'invert-neutral' {
+        color: $sys-invert-neutral-text-main;
+      } @else {
+        color: simple-var($theme-variables, 'sys', $color, 'on-accent');
+      }
+    }
+  }
+}
+
+.description {
+  @include composite-var($sans-body-m);
+
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @each $color in $colors {
+    &[data-color='#{$color}'] {
+      @if $color == 'invert-neutral' {
+        color: $sys-invert-neutral-text-main;
+      } @else {
+        color: simple-var($theme-variables, 'sys', $color, 'on-accent');
+      }
+    }
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $dimension-1m;
+  align-items: flex-start;
+  min-width: 0;
+  justify-content: center;
+}
+
+.contentLayout {
+  @include composite-var($alert-top-container-content-layout);
+
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+}
+
+.textLayout {
+  overflow: hidden;
+
+  &[data-expanded] {
+    .title, .description {
+      overflow: initial;
+      text-overflow: initial;
+      white-space: initial;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+}
+
+.expandingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: $dimension-5m;
+  height: $dimension-5m;
+
+  @each $appearance in $tonalAppearances {
+    &[data-appearance='#{$appearance}'] {
+      @if $appearance == 'invert-neutral' {
+        color: simple-var($theme-variables, 'sys', $appearance, 'text-main');
+      } @else {
+        color: simple-var($theme-variables, 'sys', $appearance, 'on-accent');
+      }
+    }
+  }
+}
