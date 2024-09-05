@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { ReactNode, RefObject, useCallback, useLayoutEffect, useRef, useState } from 'react';
+import { MouseEventHandler, ReactNode, RefObject, useCallback, useLayoutEffect, useRef, useState } from 'react';
 
 import { ChevronDownSVG, ChevronUpSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
 import { Link, LinkProps } from '@snack-uikit/link';
@@ -59,6 +59,21 @@ export function MobileAlertTop({
   const showCloseButton = Boolean(onClose && ((canExpand && isExpanded) || !canExpand));
   const showLink = Boolean(link && isExpanded);
   const showAction = Boolean(action && isExpanded);
+
+  const handleClose: MouseEventHandler = event => {
+    event.stopPropagation();
+    onClose?.();
+  };
+
+  const handleActionButtonClick: MouseEventHandler<HTMLButtonElement> = event => {
+    event.stopPropagation();
+    action?.onClick?.(event);
+  };
+
+  const handleLinkClick: MouseEventHandler<HTMLAnchorElement> = event => {
+    event.stopPropagation();
+    link?.onClick?.(event);
+  };
 
   const updateIsLarge = useCallback(
     ({ ref, setter }: { ref: RefObject<HTMLDivElement>; setter(value: boolean): void }) => {
@@ -141,6 +156,7 @@ export function MobileAlertTop({
             <span>
               <Link
                 {...link}
+                onClick={handleLinkClick}
                 appearance={APPEARANCE_TO_COLOR_MAP[appearance]}
                 textMode='on-accent'
                 size='m'
@@ -150,7 +166,9 @@ export function MobileAlertTop({
           )}
         </div>
 
-        {showAction && <AlertButton {...action} appearance={invertAppearance} variant='tonal' />}
+        {showAction && (
+          <AlertButton {...action} onClick={handleActionButtonClick} appearance={invertAppearance} variant='tonal' />
+        )}
       </div>
 
       <div className={styles.actions}>
@@ -166,7 +184,7 @@ export function MobileAlertTop({
 
         {showCloseButton && (
           <AlertButton
-            onClick={onClose}
+            onClick={handleClose}
             appearance={invertAppearance}
             icon={<CrossSVG />}
             variant='tonal'
