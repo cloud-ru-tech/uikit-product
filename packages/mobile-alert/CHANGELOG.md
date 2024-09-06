@@ -1,3 +1,24 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 0.1.0 (2024-09-06)
+
+
+### Bug Fixes
+
+* **[PDS-623](https://jira.sbercloud.tech/browse/PDS-623):** fix margins for fallback tooltip placement ([502dcb7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/502dcb7a2bf8a2e3e24d4cd20e65ed9b2badf7d5))
+
+
+### Features
+
+* **[PDS-623](https://jira.sbercloud.tech/browse/PDS-623):** add mobile-alert package ([b96194b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b96194b156c37827cf3f35fbad36cd0913e7bacc))
+
+
+
+
+
 ## CHANGELOG
 
 ### v0.0.0
