@@ -58,7 +58,6 @@ export function DeleteModal({
 
   const handleDelete = handleSubmit(() => {
     onDelete();
-    handleClose();
   });
 
   return (

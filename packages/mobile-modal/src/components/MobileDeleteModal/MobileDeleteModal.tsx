@@ -57,7 +57,6 @@ export function MobileDeleteModal({
 
   const handleDelete = handleSubmit(() => {
     onDelete();
-    handleClose();
   });
 
   return (
