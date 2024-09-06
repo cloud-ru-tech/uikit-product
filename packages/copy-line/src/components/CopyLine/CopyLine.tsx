@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { MouseEventHandler, ReactNode, useEffect, useRef, useState } from 'react';
 
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useMatchMedia, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { CheckSVG, CopySVG } from '@snack-uikit/icons';
 import { TruncateString } from '@snack-uikit/truncate-string';
@@ -23,6 +23,8 @@ export function CopyLine({ content, className, valueToCopy: valueToCopyProp, onC
   const timerId = useRef<NodeJS.Timeout>();
   const openChecked = () => setIsCheckedOpen(true);
   const closeChecked = () => setIsCheckedOpen(false);
+
+  const { isMobile } = useMatchMedia();
 
   const handleClick: MouseEventHandler<HTMLElement> = event => {
     event.stopPropagation();
@@ -56,7 +58,7 @@ export function CopyLine({ content, className, valueToCopy: valueToCopyProp, onC
         type='button'
         icon={isChecked ? <CheckSVG /> : <CopySVG />}
         size='xs'
-        className={styles.copyButton}
+        className={cn({ [styles.copyButton]: !isMobile }, className)}
       />
     </div>
   );
