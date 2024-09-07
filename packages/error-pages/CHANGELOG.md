@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.28 (2024-09-07)
+
+
+### Bug Fixes
+
+* **[FF-5383](https://jira.sbercloud.tech/browse/FF-5383):** update snack packages versions ([3fc6a2f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3fc6a2f940db810e5c514c7fb3d30350b291c61b))
+
+
+
+
+
 ## 0.10.27 (2024-08-28)
 
 ### Only dependencies have been changed
