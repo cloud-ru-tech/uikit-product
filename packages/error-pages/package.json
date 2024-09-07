@@ -30,9 +30,9 @@
     "@sbercloud/uikit-product-icons": "9.2.0",
     "@sbercloud/uikit-product-predefined-icons-private": "1.4.29",
     "@sbercloud/uikit-product-utils": "3.5.0",
-    "@snack-uikit/button": "0.17.1",
-    "@snack-uikit/link": "0.11.9",
-    "@snack-uikit/tag": "0.9.2",
+    "@snack-uikit/button": "0.17.4",
+    "@snack-uikit/link": "0.13.1",
+    "@snack-uikit/tag": "0.9.8",
     "@snack-uikit/typography": "0.6.2",
     "classnames": "2.3.2"
   }
