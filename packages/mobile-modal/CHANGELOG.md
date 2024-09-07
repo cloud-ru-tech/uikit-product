@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.7 (2024-09-07)
+
+
+### Bug Fixes
+
+* **FF-00:** remove zero gap with empty content ([765933a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/765933a209da70087a167c98cdc74078148a3a5c))
+
+
+
+
+
 ## 0.2.6 (2024-09-06)
 
 ### Only dependencies have been changed
