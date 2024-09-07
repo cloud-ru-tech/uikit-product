@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { useRef } from 'react';
 
 import {
@@ -72,7 +73,13 @@ export function MobileModal({
 
   return (
     <MobileModalCustom {...rest} scrollRef={scrollRef}>
-      <MobileModalCustom.Header title={title} titleTooltip={titleTooltip} subtitle={subtitle} align={aligns.header} />
+      <MobileModalCustom.Header
+        className={cn({ [styles.modalHeader]: !Boolean(content) })}
+        title={title}
+        titleTooltip={titleTooltip}
+        subtitle={subtitle}
+        align={aligns.header}
+      />
 
       {Boolean(content) && (
         <MobileModalCustom.Body
