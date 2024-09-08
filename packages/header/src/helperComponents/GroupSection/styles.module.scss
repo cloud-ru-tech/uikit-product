@@ -46,7 +46,6 @@ $vPadding: calc($dimension-1m + $dimension-025m);
   transition-property: all;
   transition-duration: 300ms;
 
-  background-color: $sys-neutral-background1-level;
   width: calc(100%);
   max-width: calc($dimension-3m + 2 * $vPadding);
   padding-left: $vPadding;
@@ -128,14 +127,6 @@ $vPadding: calc($dimension-1m + $dimension-025m);
   width: $size-icon-container-s;
   height: $size-icon-container-s;
   flex-shrink: 0;
-}
-
-.searchOpenButton {
-  background-color: $sys-neutral-background1-level !important;
-}
-
-.searchCloseButton {
-  background-color: $sys-neutral-background2-level !important;
 }
 
 .searchButton {

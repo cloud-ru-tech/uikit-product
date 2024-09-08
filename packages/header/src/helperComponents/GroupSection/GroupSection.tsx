@@ -139,7 +139,7 @@ export function GroupSection({
                   <ButtonFunction
                     size='xs'
                     icon={<SearchSVG />}
-                    className={cn(styles.searchButton, styles.searchOpenButton)}
+                    className={styles.searchButton}
                     onClick={handleActivateSearch}
                     tabIndex={searchIconTabIndex}
                     data-test-id='header__select-group-section-search-icon'
@@ -165,7 +165,7 @@ export function GroupSection({
                 <Tooltip tip={textProvider(languageCode, Texts.SearchCloseButton)} open={isMobile ? false : undefined}>
                   <ButtonFunction
                     size='xs'
-                    className={cn(styles.searchButton, styles.searchCloseButton)}
+                    className={styles.searchButton}
                     icon={<VerticalMenuRightCloseSVG />}
                     onClick={handleDeactivateSearch}
                     tabIndex={closeSearchIconTabIndex}
