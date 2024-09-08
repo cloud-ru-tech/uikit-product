@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.24.2 (2024-09-08)
+
+
+### Bug Fixes
+
+* **FF-00:** fix search bg color ([3078188](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3078188c7cfff67f8c35f002533b029c8710acb9))
+
+
+
+
+
 ## 2.24.1 (2024-09-07)
 
 ### Only dependencies have been changed
