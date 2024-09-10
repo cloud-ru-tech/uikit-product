@@ -9,7 +9,7 @@ $gap: $dimension-3m;
 }
 
 .infoRow {
-  padding: $dimension-2m 0;
+  padding: calc($dimension-1m + $dimension-050m) 0;
   display: flex;
   column-gap: $gap;
   width: 100%;
