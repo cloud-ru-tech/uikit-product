@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-09-10)
+
+
+### BREAKING CHANGES
+
+
+* **FF-0000:** Remove onClose handler after submit from DeleteModal ([b4de35c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b4de35c1121d2f1cdd54206de241c02cceed5764))
+
+
+
+
 ## 0.2.7 (2024-09-07)
 
 
