@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2024-09-10)
+
+
+### Features
+
+* **[LK-4553](https://jira.sbercloud.tech/browse/LK-4553):** add adaptive for CopyLine ([669e96e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/669e96ed7d88811f60838e3f412834791110649c))
+
+
+
+
+
 ## 0.3.4 (2024-08-23)
 
 ### Only dependencies have been changed

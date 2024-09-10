@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.25.0 (2024-09-10)
+
+
+### Features
+
+* **[LK-4553](https://jira.sbercloud.tech/browse/LK-4553):** add organization actions ([b0cd60c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b0cd60c317fd1d41071acb3b58e9279d9fcb57df))
+
+
+
+
+
 ## 2.24.2 (2024-09-08)
 
 
