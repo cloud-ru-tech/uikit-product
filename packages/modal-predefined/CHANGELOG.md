@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2024-09-10)
+
+
+### Bug Fixes
+
+* **FF-00:** change cancel button to outline ([6de595e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6de595ee7dde05131d6680304b10741e60bde19c))
+
+
+### Features
+
+* **FF-00:** add subtitle to delete modal ([1e8efcb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1e8efcbe99ad4cb837c1ada7bc549e0867beea28))
+
+
+
+
+
 # 0.2.0 (2024-09-10)
 
 

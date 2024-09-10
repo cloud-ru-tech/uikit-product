@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2024-09-10)
+
+
+### Features
+
+* **FF-00:** add subtitle to delete modal ([1e8efcb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1e8efcbe99ad4cb837c1ada7bc549e0867beea28))
+
+
+
+
+
 # 0.3.0 (2024-09-10)
 
 
