@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
-import { ButtonFilled, ButtonSimple } from '@snack-uikit/button';
+import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { ModalCustom, ModalCustomProps } from '@snack-uikit/modal';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
@@ -93,7 +93,7 @@ export function DeleteModal({
                 size='m'
                 appearance='destructive'
               />
-              <ButtonSimple
+              <ButtonOutline
                 label={textProvider<string>(languageCode, Texts.Cancel)}
                 onClick={handleCancel}
                 appearance='neutral'
