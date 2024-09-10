@@ -84,6 +84,7 @@ deleteModal.args = {
   hideConfirmCopyButton: false,
   mode: 'regular',
   titleTooltip: 'tip',
+  subtitle: 'subtitle',
 };
 
 deleteModal.argTypes = {
@@ -95,6 +96,9 @@ deleteModal.argTypes = {
     },
   },
   titleTooltip: {
+    type: 'string',
+  },
+  subtitle: {
     type: 'string',
   },
   confirmable: {

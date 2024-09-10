@@ -25,6 +25,8 @@ export type MobileDeleteModalProps = Pick<MobileModalCustomProps, 'open' | 'onCl
     confirmText?: string;
     /** Скрыть кнопку копирования для текста подтверждения */
     hideConfirmCopyButton?: boolean;
+    /** Подзаголовок */
+    subtitle?: ReactNode;
   }>;
 
 export function MobileDeleteModal({
@@ -36,6 +38,7 @@ export function MobileDeleteModal({
   onDelete,
   onClose,
   open,
+  subtitle,
   deleting,
   ...restProps
 }: MobileDeleteModalProps) {
@@ -64,6 +67,7 @@ export function MobileDeleteModal({
       <MobileModalCustom.Header
         title={textProvider<DictionaryPropertyAsFn>(languageCode, Texts.Title)(objectType ?? '')}
         titleTooltip={titleTooltip}
+        subtitle={subtitle}
       />
 
       <MobileModalCustom.Body content={<div className={styles.description}>{description}</div>} />

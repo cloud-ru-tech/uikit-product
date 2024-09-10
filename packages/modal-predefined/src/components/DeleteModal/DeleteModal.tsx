@@ -26,6 +26,8 @@ export type DeleteModalProps = Pick<ModalCustomProps, 'open' | 'onClose' | 'mode
     confirmText?: string;
     /** Скрыть кнопку копирования для текста подтверждения */
     hideConfirmCopyButton?: boolean;
+    /** Подзаголовок */
+    subtitle?: ReactNode;
   }>;
 
 export function DeleteModal({
@@ -38,6 +40,7 @@ export function DeleteModal({
   onClose,
   open,
   deleting,
+  subtitle,
   ...restProps
 }: DeleteModalProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -69,6 +72,7 @@ export function DeleteModal({
             maxLines={2}
           />
         }
+        subtitle={subtitle}
         titleTooltip={titleTooltip}
       />
 
