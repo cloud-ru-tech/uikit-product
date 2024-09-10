@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2024-09-10)
+
+
+### Features
+
+* **[PDS-729](https://jira.sbercloud.tech/browse/PDS-729):** changed paddings in InfoRow ([e436908](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e436908a28a0699040340ca27229853b029d053b))
+
+
+
+
+
 ## 0.5.4 (2024-08-23)
 
 ### Only dependencies have been changed
