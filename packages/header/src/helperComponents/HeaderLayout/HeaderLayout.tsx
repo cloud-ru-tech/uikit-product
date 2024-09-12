@@ -16,6 +16,7 @@ export type HeaderLayoutProps = WithSupportProps<{
   onMainMenuClick(): void;
   pathFooter?: boolean;
   showMainMenu?: boolean;
+  disableMainMenu?: boolean;
 }>;
 
 export function HeaderLayout({
@@ -28,6 +29,7 @@ export function HeaderLayout({
   onMainMenuClick,
   pathFooter,
   showMainMenu,
+  disableMainMenu,
   ...rest
 }: HeaderLayoutProps) {
   return (
@@ -39,6 +41,7 @@ export function HeaderLayout({
               size='m'
               icon={<MainMenuSVG />}
               onClick={onMainMenuClick}
+              disabled={disableMainMenu}
               data-test-id='header__drawer-menu-button'
             />
           )}

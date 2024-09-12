@@ -88,7 +88,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'profileItemWrapRender'
     >;
   } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> &
-    Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick' | 'showMainMenu'>
+    Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick' | 'showMainMenu' | 'disableMainMenu'>
 >;
 
 export function ProductHeader({
@@ -121,6 +121,7 @@ export function ProductHeader({
   notifications,
   userMenu,
   showMainMenu = true,
+  disableMainMenu = false,
   ...rest
 }: ProductHeaderProps) {
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
@@ -201,6 +202,7 @@ export function ProductHeader({
         onLogoClick={onLogoClick}
         onMainMenuClick={() => setIsMainMenuOpen(true)}
         showMainMenu={showMainMenu}
+        disableMainMenu={disableMainMenu}
         logo={<CloudRuLogo />}
         path={
           <>
