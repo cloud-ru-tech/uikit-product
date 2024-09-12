@@ -24,7 +24,7 @@ const encodeSpecialValues = (value: unknown): any => {
   return value;
 };
 
-const QS_OPTIONS: IStringifyOptions = {
+const QS_OPTIONS: IStringifyOptions<true> = {
   encode: false,
   delimiter: ';',
   allowDots: true,
