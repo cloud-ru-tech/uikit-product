@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.26.0 (2024-09-12)
+
+
+### Features
+
+* **[FF-5572](https://jira.sbercloud.tech/browse/FF-5572):** add disabled state for menu button ([974abb3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/974abb3cd551043015954ff4bd5548bace0ecb5c))
+
+
+
+
+
 # 2.25.0 (2024-09-10)
 
 
