@@ -1,4 +1,4 @@
-const glob = require('glob');
+const { sync } = require('glob');
 const path = require('path');
 const { readFileSync } = require('fs');
 const globalPackageJson = require('../../package.json');
@@ -8,7 +8,7 @@ const getDependenciesLinks = () => {
   const reversedLinks = {};
 
   try {
-    const packagesPaths = glob.sync(`packages/*/package.json`);
+    const packagesPaths = sync(`packages/*/package.json`);
     const repositoryName = globalPackageJson.name;
 
     packagesPaths.map(pkgPath => {

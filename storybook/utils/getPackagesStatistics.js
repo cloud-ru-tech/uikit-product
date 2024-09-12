@@ -1,11 +1,11 @@
-const glob = require('glob');
+const { sync } = require('glob');
 const path = require('path');
 
 const { readFileSync } = require('fs');
 
 const getPackagesStatistics = () => {
   try {
-    const packages = glob.sync(`packages/*/package.json`);
+    const packages = sync(`packages/*/package.json`);
 
     const withVersion = packages.map(pkg => {
       const version = JSON.parse(readFileSync(path.resolve(__dirname, `../../${pkg}`), { encoding: 'utf-8' })).version;

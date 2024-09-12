@@ -1,6 +1,6 @@
 import path from 'path';
 
-import glob from 'glob';
+import { sync } from 'glob';
 
 import { getChangedPackages } from '../utils/getChangedPackages';
 import { shouldRunAllTests } from '../utils/shouldRunAllTests';
@@ -21,7 +21,7 @@ function toPattern(basename: string) {
 function getPackageEntries() {
   const runAllTests = shouldRunAllTests();
 
-  const allPackages = glob.sync(path.join(packagesDir, '*'));
+  const allPackages = sync(path.join(packagesDir, '*'));
 
   const paths = runAllTests ? allPackages : getChangedPackages();
 

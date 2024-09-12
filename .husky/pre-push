@@ -1,5 +1,3 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
+# 7.0.0
 node_modules/.bin/solidarity
 node_modules/.bin/ts-node scripts/check-dependencies.ts

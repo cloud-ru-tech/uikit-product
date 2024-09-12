@@ -1,7 +1,7 @@
 import path from 'path';
 
 import depCheck from 'depcheck';
-import glob from 'glob';
+import { sync } from 'glob';
 
 import { logDebug, logError, logInfo } from './utils/console';
 
@@ -22,7 +22,7 @@ const options = {
 const packages = `../packages/*`;
 
 const InternalPackages: Record<string, string> = {};
-const folders = glob.sync(`${path.resolve(__dirname, packages)}`);
+const folders = sync(`${path.resolve(__dirname, packages)}`);
 
 for (const folder of folders) {
   // eslint-disable-next-line @typescript-eslint/no-var-requires

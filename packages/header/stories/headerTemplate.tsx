@@ -1,4 +1,4 @@
-import { useArgs, useState } from '@storybook/client-api';
+import { useArgs, useState } from '@storybook/preview-api';
 import { ArgTypes } from '@storybook/react';
 import { useEffect, useMemo } from 'react';
 

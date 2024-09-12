@@ -70,7 +70,7 @@ const decorators: DecoratorFunction[] = [
   },
 ];
 
-const brandInfo: ThemeVars = {
+const brandInfo: Partial<ThemeVars> = {
   base: 'light',
   brandTitle: 'Cloud.ru',
   brandUrl: '/',

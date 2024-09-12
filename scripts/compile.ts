@@ -1,6 +1,6 @@
 import path from 'path';
 
-import glob from 'glob';
+import { sync } from 'glob';
 import minimist from 'minimist';
 
 import { createTSProgram, emitDeclarations } from './compile/emit-declarations';
@@ -20,12 +20,12 @@ const pkg = argv.pkg || '*';
   logDebug(`Compiling...`);
 
   const packages = `../packages/${pkg}`;
-  const folders = glob.sync(`${path.resolve(__dirname, packages)}`);
+  const folders = sync(`${path.resolve(__dirname, packages)}`);
   const linariaConfig = path.resolve(__dirname, '../linaria.config.js');
   const distPart = 'dist';
   const srcPart = 'src';
 
-  const tsFiles = glob.sync(path.resolve(__dirname, `../packages/*/src/**/*.{ts,tsx}`));
+  const tsFiles = sync(path.resolve(__dirname, `../packages/*/src/**/*.{ts,tsx}`));
   createTSProgram({ fileNames: tsFiles });
 
   const sortedFolders = sortFolders(folders);
@@ -38,17 +38,17 @@ const pkg = argv.pkg || '*';
     const distESM = `${dist}/esm`;
     const distCJS = `${dist}/cjs`;
 
-    const scssFiles = glob.sync(`${src}/**/!(_)*.scss`);
+    const scssFiles = sync(`${src}/**/!(_)*.scss`);
     const scssPipe = writeScss({ src, distCJS, distESM });
     for (const file of scssFiles) {
       await scssPipe(file);
     }
 
-    const jsFiles = glob.sync(`${src}/**/*.{ts,tsx,js,jsx}`);
+    const jsFiles = sync(`${src}/**/*.{ts,tsx,js,jsx}`);
     const jsPipe = writeJs({ src, distCJS, distESM });
     jsFiles.forEach(jsPipe(transformJs(packageJson.version)));
 
-    const filesToCopy = glob.sync(`${src}/**/*.{woff,woff2,png,css}`);
+    const filesToCopy = sync(`${src}/**/*.{woff,woff2,png,css}`);
     filesToCopy.forEach(simpleCopy({ src, distCJS, distESM }));
 
     emitDeclarations({

@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 import { transform } from '@linaria/babel-preset';
-import mkdirp from 'mkdirp';
+import { mkdirp } from 'mkdirp';
 import normalize from 'normalize-path';
 
 import { getClassNameSlug } from '../utils/getClassNameSlug';
