@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.9 (2024-09-12)
+
+
+### Bug Fixes
+
+* **[FF-5429](https://jira.sbercloud.tech/browse/FF-5429):** eslint errors ([8fba980](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8fba980dc29cca17a2ac680e779aa9b10bbc8972))
+
+
+
+
+
 ## 0.3.8 (2024-09-10)
 
 ### Only dependencies have been changed
