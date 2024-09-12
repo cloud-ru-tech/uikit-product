@@ -175,14 +175,13 @@ export function useHandleDeleteItem(setValue: Handler) {
       }
 
       if (isBaseOptionProps(item)) {
-        setValue(
-          (value: SelectionSingleValueType[]) =>
-            value?.filter(
-              v =>
-                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-                // @ts-expect-error
-                v !== item.id,
-            ),
+        setValue((value: SelectionSingleValueType[]) =>
+          value?.filter(
+            v =>
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-expect-error
+              v !== item.id,
+          ),
         );
       }
     },
