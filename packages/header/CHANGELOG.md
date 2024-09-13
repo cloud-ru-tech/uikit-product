@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.27.0 (2024-09-13)
+
+
+### Bug Fixes
+
+* **[FF-5443](https://jira.sbercloud.tech/browse/FF-5443):** add disableMainMenu prop for mobile header ([5741a18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5741a18d3014fe48b083e9692712e5669855420a))
+
+
+### Features
+
+* **[FF-5429](https://jira.sbercloud.tech/browse/FF-5429):** node 22 support ([ed0f067](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ed0f0672279c8a34cfe4df174d3757d2e93b175f))
+
+
+
+
+
 # 2.26.0 (2024-09-12)
 
 
