@@ -54,6 +54,7 @@ export function ProductHeaderMobile({
   notifications,
   userMenu, // ...rest
   showMainMenu = true,
+  disableMainMenu,
 }: ProductHeaderProps) {
   const {
     platforms,
@@ -349,6 +350,7 @@ export function ProductHeaderMobile({
         pathFooter
         path={pagePath && <Breadcrumbs items={pagePath ?? []} separator='/' size='xs' />}
         showMainMenu={showMainMenu}
+        disableMainMenu={disableMainMenu}
         onMainMenuClick={() => {
           setIsMainMenuOpen(true);
         }}
