@@ -4,6 +4,7 @@ import { useEffect, useMemo } from 'react';
 
 import { DetalisationSVG, MoneySVG, UsersSVG } from '@sbercloud/uikit-product-icons';
 import { PageServices } from '@sbercloud/uikit-product-page-layout';
+import { LayoutType } from '@sbercloud/uikit-product-utils';
 import { HotSpotProps } from '@snack-uikit/hot-spot';
 import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
 import { toaster } from '@snack-uikit/toaster';
@@ -19,7 +20,7 @@ import {
 } from '../src/helperComponents';
 import styles from './styles.modules.scss';
 
-export type StoryProps = HeaderProps & {
+export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showSelect: boolean;
   showWorkspaces: boolean;
   showPagePath: boolean;
@@ -158,7 +159,7 @@ function generateCards(amount: number, addUnread?: boolean) {
   }));
 }
 
-export function getTemplate({ mobile }: { mobile: boolean }) {
+export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
   return function ({
     showSelect,
     showPagePath,
@@ -267,7 +268,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
       <div className={styles.fullPageHeight}>
         <Header
           {...args}
-          mobile={mobile}
+          layoutType={layoutType}
           selectedOrganization={organization}
           onOrganizationChange={setOrganization}
           select={showSelect ? args.select : undefined}
@@ -371,7 +372,7 @@ export function getTemplate({ mobile }: { mobile: boolean }) {
           }}
         />
         <div id='single-spa-wrapper' className={styles.page}>
-          {!mobile && (
+          {!(layoutType === 'mobile' || layoutType === 'desktopSmall') && (
             <PageServices
               title='Header'
               sidebar={{

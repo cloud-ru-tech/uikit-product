@@ -112,6 +112,7 @@ export function SelectMenu({
           closeDropdown={closeDropdown}
           data-test-id='header__select-group-organization'
           avatarAppearance='red'
+          mobile={mobile}
         />
       )}
 
@@ -143,6 +144,7 @@ export function SelectMenu({
             closeDropdown={closeDropdown}
             data-test-id='header__select-group-project'
             avatarAppearance='neutral'
+            mobile={mobile}
           />
         </>
       )}
@@ -159,6 +161,7 @@ export function SelectMenu({
             selectedItem={selectedPlatform}
             loading={platformsLoading}
             data-test-id='header__select-group-platform'
+            mobile={mobile}
           />
         </>
       )}
@@ -187,6 +190,7 @@ export function SelectMenu({
             searchActive={workspaces.searchActive}
             onSearchActiveChange={workspaces.onSearchActiveChange}
             searchPlaceholder={textProvider(languageCode, Texts.SearchWorkspacesPlaceholder)}
+            mobile={mobile}
           />
         </>
       )}

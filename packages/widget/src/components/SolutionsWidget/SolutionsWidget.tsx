@@ -1,18 +1,21 @@
 import { CardSuggest, CardSuggestProps } from '@sbercloud/uikit-product-card-predefined';
-import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Link, LinkProps } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';
 
 import { textProvider, Texts } from '../../helpers';
 import * as S from './styled';
 
-export type SolutionsWidgetProps = WithSupportProps<{
-  moreLink?: Pick<LinkProps, 'onClick' | 'href'>;
-  cards: Pick<CardSuggestProps, 'description' | 'title' | 'onClick'>[];
-}>;
+export type SolutionsWidgetProps = WithLayoutType<
+  WithSupportProps<{
+    moreLink?: Pick<LinkProps, 'onClick' | 'href'>;
+    cards: Pick<CardSuggestProps, 'description' | 'title' | 'onClick'>[];
+  }>
+>;
 
-export function SolutionsWidget({ moreLink, cards, ...rest }: SolutionsWidgetProps) {
+export function SolutionsWidget({ layoutType, moreLink, cards, ...rest }: SolutionsWidgetProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const isMobile = layoutType === 'mobile';
 
   return (
     <S.Wrapper {...extractSupportProps(rest)}>
@@ -29,7 +32,7 @@ export function SolutionsWidget({ moreLink, cards, ...rest }: SolutionsWidgetPro
           />
         )}
       </S.Header>
-      <S.Cards>
+      <S.Cards data-mobile={isMobile || undefined}>
         {cards.map(({ description, title, onClick }) => (
           <CardSuggest
             className={S.cardClassName}

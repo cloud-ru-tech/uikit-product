@@ -28,6 +28,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/uikit-product-info-row": "0.6.0",
     "@sbercloud/uikit-product-mobile-tooltip": "0.1.6",
     "@sbercloud/uikit-product-utils": "3.5.0",
     "@snack-uikit/button": "0.17.4",

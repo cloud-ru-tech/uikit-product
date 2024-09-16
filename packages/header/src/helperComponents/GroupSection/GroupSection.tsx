@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { KeyboardEvent, RefObject, useEffect, useRef } from 'react';
 
 import { SearchSVG, VerticalMenuRightCloseSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, useLanguage, useMatchMedia, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { List, ListProps } from '@snack-uikit/list';
@@ -47,6 +47,8 @@ export type GroupSectionProps = WithSupportProps<{
   navigateOutsideRef?: RefObject<HTMLDivElement>;
   navigateInsideRef?: RefObject<HTMLDivElement>;
   avatarAppearance?: AvatarProps['appearance'];
+
+  mobile: boolean;
 }>;
 
 export function GroupSection({
@@ -66,6 +68,7 @@ export function GroupSection({
   noDataState,
   truncateVariant,
   searchPlaceholder,
+  mobile,
   ...rest
 }: GroupSectionProps) {
   const itemRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -124,8 +127,6 @@ export function GroupSection({
     }
   }, [selectedItem]);
 
-  const { isMobile } = useMatchMedia();
-
   return (
     <div className={cn(styles.section, className)} {...extractSupportProps(rest)}>
       {title && (
@@ -135,7 +136,7 @@ export function GroupSection({
           {searchable && (
             <>
               {!animationState.isMounted && (
-                <Tooltip tip={textProvider(languageCode, Texts.SearchOpenButton)} open={isMobile ? false : undefined}>
+                <Tooltip tip={textProvider(languageCode, Texts.SearchOpenButton)} open={mobile ? false : undefined}>
                   <ButtonFunction
                     size='xs'
                     icon={<SearchSVG />}
@@ -162,7 +163,7 @@ export function GroupSection({
                   data-test-id='header__select-group-section-search-input'
                 />
 
-                <Tooltip tip={textProvider(languageCode, Texts.SearchCloseButton)} open={isMobile ? false : undefined}>
+                <Tooltip tip={textProvider(languageCode, Texts.SearchCloseButton)} open={mobile ? false : undefined}>
                   <ButtonFunction
                     size='xs'
                     className={styles.searchButton}

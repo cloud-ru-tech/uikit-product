@@ -29,8 +29,10 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "9.2.0",
+    "@sbercloud/uikit-product-utils": "3.5.0",
     "@snack-uikit/popover-private": "0.13.5",
     "@snack-uikit/utils": "3.3.0",
+    "@snack-uikit/tooltip": "0.13.8",
     "classnames": "2.3.2",
     "uncontrollable": "8.0.4"
   }

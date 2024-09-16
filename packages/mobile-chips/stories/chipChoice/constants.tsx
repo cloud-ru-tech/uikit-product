@@ -4,7 +4,7 @@ import { PlaceholderSVG } from '@snack-uikit/icons';
 import { Tag } from '@snack-uikit/tag';
 
 import { FilterOption } from '../../src';
-import { BaseOption } from '../../src/components/ChipChoice/types';
+import { BaseOption } from '../../src/components/MobileChipChoice/types';
 import { SIZE } from '../../src/constants';
 import { COMMON_ARG_TYPES } from '../constants';
 

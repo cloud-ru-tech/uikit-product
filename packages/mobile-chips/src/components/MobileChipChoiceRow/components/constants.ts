@@ -1,5 +1,5 @@
-import { MobileChipChoice } from '../../ChipChoice';
-import { CHIP_CHOICE_TYPE } from '../../ChipChoice/constants';
+import { MobileChipChoice } from '../../MobileChipChoice';
+import { CHIP_CHOICE_TYPE } from '../../MobileChipChoice/constants';
 
 export const MAP_CHIP_TYPE_TO_COMPONENT = {
   [CHIP_CHOICE_TYPE.Single]: MobileChipChoice.Single,

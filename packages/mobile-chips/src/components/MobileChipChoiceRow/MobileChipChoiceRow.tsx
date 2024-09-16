@@ -14,7 +14,7 @@ import { ChipChoiceProps, ChipChoiceRowSize, FilterValue, OmitBetter } from './t
 
 export type FiltersState = Record<string, unknown>;
 
-export type ChipChoiceRowProps<TState extends FiltersState> = WithSupportProps<{
+export type MobileChipChoiceRowProps<TState extends FiltersState> = WithSupportProps<{
   /** Состояние фильтров */
   value?: TState;
   /** Начальное состояние фильтров */
@@ -43,7 +43,7 @@ export function MobileChipChoiceRow<TState extends FiltersState>({
   defaultValue,
   size = CHIP_CHOICE_ROW_SIZE.S,
   ...rest
-}: ChipChoiceRowProps<TState>) {
+}: MobileChipChoiceRowProps<TState>) {
   const { t } = useLocale('Chips');
 
   const clearAllButtonLabel = clearAllButtonLabelProp ?? t('clearAllButton');

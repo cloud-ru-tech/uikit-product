@@ -1,2 +1,3 @@
-export * from './ChipChoice';
+export * from './AdaptiveChips';
+export * from './MobileChipChoice';
 export * from './MobileChipChoiceRow';

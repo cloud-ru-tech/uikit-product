@@ -1,10 +1,12 @@
+import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+
 import { ProductHeader, ProductHeaderProps } from '../ProductHeader';
 import { ProductHeaderMobile } from '../ProductHeaderMobile';
 
-export type HeaderProps = { mobile?: boolean } & ProductHeaderProps;
+export type HeaderProps = WithLayoutType<ProductHeaderProps>;
 
-export function Header({ mobile, ...props }: HeaderProps) {
-  if (mobile) {
+export function Header({ layoutType, ...props }: HeaderProps) {
+  if (layoutType === 'mobile' || layoutType === 'desktopSmall') {
     return <ProductHeaderMobile {...props} />;
   }
 

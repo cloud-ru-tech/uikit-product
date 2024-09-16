@@ -2,12 +2,10 @@ import { action } from '@storybook/addon-actions';
 import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
-import { FieldDateProps } from '@snack-uikit/fields';
-
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { MobileFieldDate, parseDate } from '../src';
+import { MobileFieldDate, MobileFieldDateProps, parseDate } from '../src';
 import { COMMON_ARG_TYPES } from './constants';
 import { getBuildCellProps } from './helpers';
 import styles from './styles.module.scss';
@@ -18,7 +16,7 @@ const meta: Meta = {
 };
 export default meta;
 
-type StoryProps = Omit<FieldDateProps, 'locale'> & {
+type StoryProps = Omit<MobileFieldDateProps, 'locale'> & {
   localeName: 'ru-RU' | 'en-US';
   prefixIcon: undefined;
   modeBuildCellProps: 'for-tests' | 'disable-past' | 'none';

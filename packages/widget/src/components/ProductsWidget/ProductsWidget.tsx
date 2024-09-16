@@ -1,7 +1,7 @@
 import { ReactNode, useMemo, useState } from 'react';
 
 import { ArrowLeftSVG, ArrowRightSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, useLanguage, useMatchMedia, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Carousel } from '@snack-uikit/carousel';
 import { Typography } from '@snack-uikit/typography';
@@ -20,14 +20,15 @@ export type ProductsWidgetProps = WithSupportProps<{
 }>;
 
 export function ProductsWidget({
+  layoutType,
   cards = [],
   loading = false,
   columnSize: columnSizeProp = COLUMN_SIZE,
   rowSize: rowSizeProp = ROW_SIZE,
   ...rest
-}: ProductsWidgetProps) {
+}: WithLayoutType<ProductsWidgetProps>) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const { isMobile } = useMatchMedia();
+  const isMobile = layoutType === 'mobile';
   const columnSize = isMobile ? MOBILE_COLUMN_SIZE : columnSizeProp;
   const rowSize = isMobile ? MOBILE_ROW_SIZE : rowSizeProp;
 

@@ -12,7 +12,7 @@ const meta: Meta = {
 };
 export default meta;
 
-export const mobile: StoryFn<StoryProps> = getTemplate({ mobile: true }).bind({});
+export const mobile: StoryFn<StoryProps> = getTemplate({ layoutType: 'mobile' }).bind({});
 
 mobile.args = ARGS;
 mobile.argTypes = ARG_TYPES;

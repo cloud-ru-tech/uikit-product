@@ -73,9 +73,9 @@ type FieldDateOwnProps = {
   locale?: Intl.Locale;
 } & Pick<CalendarProps, 'buildCellProps'>;
 
-export type FieldDateProps = WithSupportProps<FieldDateOwnProps & InputProps & WrapperProps>;
+export type MobileFieldDateProps = WithSupportProps<FieldDateOwnProps & InputProps & WrapperProps>;
 
-export const MobileFieldDate = forwardRef<HTMLInputElement, FieldDateProps>(
+export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps>(
   (
     {
       id,

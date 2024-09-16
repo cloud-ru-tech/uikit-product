@@ -1,5 +1,5 @@
 import { ChipChoiceRowProps } from '../src';
-import { CustomContentRenderProps } from '../src/components/ChipChoice/components';
+import { CustomContentRenderProps } from '../src/components/MobileChipChoice/components';
 import { STORY_TEST_IDS } from './testIds';
 
 export type Filters = {

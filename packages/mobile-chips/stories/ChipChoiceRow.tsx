@@ -4,7 +4,7 @@ import { useState } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ChipChoiceRowProps, MobileChipChoiceRow } from '../src';
+import { MobileChipChoiceRow, MobileChipChoiceRowProps } from '../src';
 import { CHIP_CHOICE_ROW_SIZE } from '../src/components/MobileChipChoiceRow/constants';
 import { Filters, filtersMock } from './helpers';
 import { STORY_TEST_IDS } from './testIds';
@@ -15,7 +15,7 @@ const meta: Meta = {
 };
 export default meta;
 
-function Template({ ...args }: ChipChoiceRowProps<Filters>) {
+function Template({ ...args }: MobileChipChoiceRowProps<Filters>) {
   const [state, setState] = useState<Filters>((args.defaultValue ?? {}) as Filters);
 
   return (
@@ -28,7 +28,7 @@ function Template({ ...args }: ChipChoiceRowProps<Filters>) {
   );
 }
 
-export const chipChoiceRow: StoryFn<ChipChoiceRowProps<Filters>> = Template.bind({});
+export const chipChoiceRow: StoryFn<MobileChipChoiceRowProps<Filters>> = Template.bind({});
 chipChoiceRow.args = {
   filters: filtersMock,
   showClearAllButton: true,
