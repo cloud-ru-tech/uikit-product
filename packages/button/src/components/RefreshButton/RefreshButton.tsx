@@ -1,5 +1,4 @@
 import { ElementType } from 'react';
-import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 
 import {
   CommonButtonProps,
@@ -11,6 +10,7 @@ import { RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers';
+import { PolymorphicPropsWithRef } from '../../types';
 import { ButtonIconTransparent } from '../';
 
 export type RefreshButtonOwnProps = { icon?: never } & Pick<WithTooltipProps, 'tooltip'>;

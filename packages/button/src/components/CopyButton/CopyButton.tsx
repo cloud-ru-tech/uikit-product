@@ -1,5 +1,4 @@
 import { ElementType, MouseEvent as ReactMouseEvent, useCallback, useState } from 'react';
-import type { PolymorphicPropsWithRef } from 'react-polymorphic-types';
 
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
 import { CommonButtonProps, extractCommonButtonProps, WithTooltipProps } from '@sbercloud/uikit-product-button-private';
@@ -9,6 +8,7 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { textProvider, Texts } from '../../helpers';
 import { useIsMounted } from '../../hooks';
+import { PolymorphicPropsWithRef } from '../../types';
 import { ButtonIconTransparent } from '../';
 import { StyledCheckInterfaceSVG } from './styled';
 
