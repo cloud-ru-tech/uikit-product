@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
 
-import { DEFAULT, POST_MESSAGE_KEY } from '../constants';
+import { DEFAULT, POST_MESSAGE_KEY } from '../constants/environment';
 import { tryParseJson } from '../helpers/tryParseJson';
 import { LanguageCodeType } from '../types';
 import { getCustomStore } from './private/getCustomStore';

@@ -1,4 +1,4 @@
-import { DEFAULT } from '../../constants';
+import { DEFAULT } from '../../constants/environment';
 import { WindowStore } from '../../types';
 
 export function getCustomStore(

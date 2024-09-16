@@ -3,7 +3,7 @@ import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react
 import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
 import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
 
-import { POST_MESSAGE_KEY } from '../constants';
+import { POST_MESSAGE_KEY } from '../constants/environment';
 import { tryParseJson } from '../helpers/tryParseJson';
 import { LanguageCodeType, Themes } from '../types';
 import { getCustomStore } from './private/getCustomStore';

@@ -7,3 +7,4 @@ export * from './useForceUpdateOnPageLoadedCompletely';
 export * from './useEventHandler';
 export * from './useUniqueId';
 export * from './useConfig';
+export * from './useAdaptive';

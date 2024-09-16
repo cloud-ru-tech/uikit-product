@@ -1,4 +1,4 @@
-import { LanguageCodeType, Themes } from './types';
+import { LanguageCodeType, Themes } from '../types';
 
 export const DEFAULT = { LANGUAGE: LanguageCodeType.ruRU, THEME: Themes.Purple };
 

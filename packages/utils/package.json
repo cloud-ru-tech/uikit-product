@@ -29,7 +29,12 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-debug-mode": "1.1.0",
-    "@sbercloud/uikit-product-theme": "0.40.0"
+    "@sbercloud/uikit-product-theme": "0.40.0",
+    "@snack-uikit/utils": "3.3.0",
+    "ua-parser-js": "1.0.38"
+  },
+  "devDependencies": {
+    "@types/ua-parser-js": "0.7.39"
   },
   "peerDependencies": {
     "@sbercloud/figma-tokens-cloud-platform": "*",
