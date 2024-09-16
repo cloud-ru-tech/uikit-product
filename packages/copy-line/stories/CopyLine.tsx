@@ -52,6 +52,7 @@ copyLine.args = {
   valueToCopy: 'different value to copy',
   differentValueToCopy: false,
   contentType: 'string',
+  copyButtonHideStrategy: 'hover',
 };
 
 copyLine.argTypes = {

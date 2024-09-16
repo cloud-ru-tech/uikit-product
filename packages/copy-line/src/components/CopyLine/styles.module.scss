@@ -17,13 +17,15 @@
 
   color: $sys-neutral-text-main;
 
-  .copyButton {
-    display: none;
-  }
-
-  &:hover {
+  &[data-copy-button-hide-strategy='hover'] {
     .copyButton {
-      display: inline-flex;
+      display: none;
+    }
+
+    &:hover {
+      .copyButton {
+        display: inline-flex;
+      }
     }
   }
 }
