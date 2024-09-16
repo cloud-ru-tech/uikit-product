@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2024-09-16)
+
+
+### BREAKING CHANGES
+
+
+* **[FF-5361](https://jira.sbercloud.tech/browse/FF-5361):** remove mobile version, add copyButtonHideStrategy prop ([853e548](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/853e5489be973fc834aea8e00bc3e619be5b9059))
+
+
+
+
 # 0.4.0 (2024-09-10)
 
 

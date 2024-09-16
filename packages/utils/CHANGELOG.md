@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.6.0 (2024-09-16)
+
+
+### Features
+
+* **[FF-5375](https://jira.sbercloud.tech/browse/FF-5375):** add hooks/utils for adaptiveness ([2c5a3cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2c5a3cc2bec030525f81dd5b02c1b7aee653bb32))
+
+
+
+
+
 # 3.5.0 (2024-08-23)
 
 

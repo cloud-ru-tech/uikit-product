@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.4.36 (2024-09-16)
+
+
+### Bug Fixes
+
+* **[FF-5375](https://jira.sbercloud.tech/browse/FF-5375):** remove unnecessary dep react-polymorphic-types ([d86fdfe](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d86fdfe626b1537722baabc0a60b171c1360826b))
+
+
+
+
+
 ## 5.4.35 (2024-08-28)
 
 ### Only dependencies have been changed
@@ -811,7 +822,11 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [5.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.1.3...@sbercloud/uikit-product-button@5.1.4) (2022-12-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-button
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button-private@2.0.81](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@9.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.4.30](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [5.1.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-button@5.1.2...@sbercloud/uikit-product-button@5.1.3) (2022-11-28)
 

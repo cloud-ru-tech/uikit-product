@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2024-09-16)
+
+
+### Features
+
+* **[FF-5361](https://jira.sbercloud.tech/browse/FF-5361):** add adaptive component versions ([0e1ddce](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0e1ddceda6085479ea8365f2b034b326da366fbb))
+
+
+
+
+
 ## 0.6.5 (2024-09-10)
 
 ### Only dependencies have been changed

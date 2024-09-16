@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-overlay-private",
   "title": "React Overlay Private",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,6 +28,6 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-theme": "0.40.0",
-    "@sbercloud/uikit-product-utils": "3.5.0"
+    "@sbercloud/uikit-product-utils": "3.6.0"
   }
 }

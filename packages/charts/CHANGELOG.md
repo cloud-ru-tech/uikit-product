@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.4 (2024-09-16)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-localization@0.11.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/localization/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 0.11.3 (2024-08-23)
 
 ### Only dependencies have been changed
