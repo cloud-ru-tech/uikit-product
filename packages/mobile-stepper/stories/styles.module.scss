@@ -1,0 +1,19 @@
+@import '@snack-uikit/figma-tokens/build/scss/styles-theme-variables';
+
+.story {
+  margin-bottom: 1em;
+  padding: 1em;
+
+  background-color: $sys-neutral-background1-level;
+  border: 1px solid $sys-neutral-decor-default;
+  border-radius: $dimension-050m;
+}
+
+.panel {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 1rem;
+}

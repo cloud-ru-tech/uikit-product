@@ -1,0 +1,17 @@
+.wrapper {
+  overflow: auto;
+  width: 100%;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.stepper {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  width: max-content;
+}

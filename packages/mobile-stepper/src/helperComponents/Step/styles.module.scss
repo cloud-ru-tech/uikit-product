@@ -1,0 +1,95 @@
+@import '@snack-uikit/figma-tokens/build/scss/components/styles-tokens-stepper';
+@import '@snack-uikit/figma-tokens/build/scss/components/styles-tokens-element';
+
+.tailLine {
+  @include composite-var($stepper-step-track-line);
+
+  flex-grow: 1;
+  background-color: $sys-neutral-decor-default;
+}
+
+.tail {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 1;
+  align-items: center;
+
+  min-width: $dimension-2m;
+
+  &[data-completed] .tailLine {
+    background-color: $sys-primary-accent-default;
+  }
+}
+
+.title {
+  overflow: hidden;
+  color: $sys-neutral-text-main;
+}
+
+.description {
+  overflow: hidden;
+  color: $sys-neutral-text-light;
+}
+
+.step {
+  @include composite-var($stepper-step-container);
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+
+  max-width: 170px;
+}
+
+.track {
+  @include composite-var($stepper-step-track);
+
+  display: flex;
+  width: 100%;
+}
+
+.statusContainer {
+  @include composite-var($stepper-step-status-container);
+
+  overflow: hidden;
+  display: flex;
+  flex-shrink: 1;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  color: $sys-neutral-text-main;
+
+  background-color: transparent;
+  border: none;
+
+  &:focus-visible {
+    @include outline-var($container-focused-s);
+
+    outline-color: $sys-available-complementary;
+    outline-offset: $spacing-state-focus-offset;
+  }
+
+  &:not([disabled]) {
+    cursor: pointer;
+    &:focus-visible,
+    &:hover {
+      color: $sys-neutral-text-light;
+    }
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.icon {
+  flex-shrink: 0;
+}

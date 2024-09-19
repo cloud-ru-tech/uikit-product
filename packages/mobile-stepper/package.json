@@ -1,0 +1,41 @@
+{
+  "name": "@sbercloud/uikit-product-mobile-stepper",
+  "title": "Mobile Stepper",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Mobile version of snack-uikit stepper component",
+  "main": "./dist/esm/index.js",
+  "module": "./dist/esm/index.js",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/mobile-stepper",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/mobile-stepper"
+  },
+  "author": "Данил Панов <dapanov@cloud.ru>",
+  "contributors": [
+    "Данил Панов <dapanov@cloud.ru>"
+  ],
+  "files": [
+    "dist",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@snack-uikit/icons": "0.22.0",
+    "@snack-uikit/loaders": "0.5.2",
+    "@snack-uikit/truncate-string": "0.4.21",
+    "@snack-uikit/typography": "0.6.2",
+    "@snack-uikit/utils": "3.3.0",
+    "@snack-uikit/figma-tokens": "15.5.4",
+    "@sbercloud/uikit-product-utils": "3.6.0",
+    "@snack-uikit/stepper": "0.6.11",
+    "classnames": "2.3.2"
+  }
+}
