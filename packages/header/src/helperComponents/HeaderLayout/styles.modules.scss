@@ -35,6 +35,8 @@ a.logo {
   padding: $dimension-1m;
   cursor: pointer;
   border-radius: $dimension-050m;
+  min-width: 40px;
+  box-sizing: border-box;
   // necessary to fix color change to MLSpace theme
   color: #389f74; /* stylelint-disable-line color-no-hex */
 
@@ -53,4 +55,10 @@ a.logo {
   display: flex;
   align-items: center;
   padding: 0 8px;
+}
+
+.logoImg {
+  width: 'auto';
+  max-height: 24px;
+  min-height: 24px;
 }

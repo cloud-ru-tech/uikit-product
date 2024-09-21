@@ -29,6 +29,7 @@ import styles from './styles.modules.scss';
 
 export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showSelect: boolean;
+  customLogo: boolean;
   showWorkspaces: boolean;
   showPagePath: boolean;
   showFinancialMenu: boolean;
@@ -271,6 +272,34 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     const financialMenuButtonValue =
       financialMenuButtonType === 'balance' ? financialMenuBalanceValue : financialMenuBonusesValue;
 
+    const [logo, setLogo] = useState<{
+      path?: string;
+      loading?: boolean;
+    }>({
+      loading: true,
+    });
+
+    useEffect(() => {
+      let timeout: NodeJS.Timeout;
+      if (args.customLogo) {
+        setLogo({
+          loading: true,
+        });
+        timeout = setTimeout(() => {
+          setLogo({
+            loading: false,
+            path: 'https://img.freepik.com/free-photo/beautiful-kitten-with-colorful-clouds_23-2150752964.jpg?w=1060&t=st=1727438409~exp=1727439009~hmac=f5b8aea828125647fb7d35bfab17b918f1ca233ac6f289ff07e3c2b00a834ed6',
+          });
+        }, 300);
+      } else {
+        setLogo({});
+      }
+
+      return () => {
+        clearTimeout(timeout);
+      };
+    }, [args.customLogo]);
+
     return (
       <div className={styles.fullPageHeight}>
         <Header
@@ -280,6 +309,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
           onOrganizationChange={setOrganization}
           select={showSelect ? args.select : undefined}
           pagePath={showPagePath ? args.pagePath : undefined}
+          logo={logo}
           financialMenu={
             showFinancialMenu
               ? {
@@ -414,6 +444,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 export const ARGS: StoryProps = {
   showSelect: true,
   showWorkspaces: false,
+  customLogo: false,
   select: {
     platforms: [
       DEFAULT_PLATFORM,
@@ -687,6 +718,7 @@ export const ARGS: StoryProps = {
 };
 
 export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
+  customLogo: { name: '[Story: show custom logo with loading', type: 'boolean' },
   showSelect: { name: '[Story]: show header select', type: 'boolean' },
   select: { table: { disable: true } },
 

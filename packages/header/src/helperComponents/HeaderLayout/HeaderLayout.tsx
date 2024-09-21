@@ -1,9 +1,11 @@
-import { MouseEventHandler, ReactNode } from 'react';
+import { MouseEventHandler, ReactNode, useEffect, useState } from 'react';
 
 import { MainMenuSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
+import { Skeleton } from '@snack-uikit/skeleton';
 
+import { CloudRuLogo } from '../icons';
 import styles from './styles.modules.scss';
 
 export type HeaderLayoutProps = WithSupportProps<{
@@ -11,13 +13,48 @@ export type HeaderLayoutProps = WithSupportProps<{
   homePageUrl: string;
   onLogoClick?: MouseEventHandler<HTMLAnchorElement>;
   toolbar: ReactNode;
-  logo: ReactNode;
+  logo?: {
+    loading?: boolean;
+    path?: string;
+  };
   path?: ReactNode;
   onMainMenuClick(): void;
   pathFooter?: boolean;
   showMainMenu?: boolean;
   disableMainMenu?: boolean;
 }>;
+
+function LogoWithFallBack({ path, loading }: { path?: string; loading?: boolean }) {
+  const [error, setError] = useState<boolean>(false);
+
+  useEffect(() => {
+    setError(false);
+  }, [path, loading]);
+
+  if (loading) {
+    return <Skeleton width={24} height={24} loading borderRadius={4} />;
+  }
+
+  if (path && !error) {
+    return (
+      <>
+        <img
+          src={path}
+          alt='logo'
+          className={styles.logoImg}
+          onLoad={() => {
+            setError(false);
+          }}
+          onError={() => {
+            setError(true);
+          }}
+        />
+      </>
+    );
+  }
+
+  return <CloudRuLogo />;
+}
 
 export function HeaderLayout({
   className,
@@ -47,7 +84,7 @@ export function HeaderLayout({
           )}
 
           <a className={styles.logo} href={homePageUrl} tabIndex={0} onClick={onLogoClick} data-test-id='header__logo'>
-            {logo}
+            <LogoWithFallBack {...logo} />
           </a>
 
           {!pathFooter && Boolean(path) && <div className={styles.path}>{path}</div>}

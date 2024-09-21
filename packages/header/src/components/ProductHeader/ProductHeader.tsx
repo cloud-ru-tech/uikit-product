@@ -7,7 +7,6 @@ import { ButtonFunction } from '@snack-uikit/button';
 import { Droplist } from '@snack-uikit/list';
 
 import {
-  CloudRuLogo,
   DrawerMenuDesktop,
   DrawerMenuProps,
   FinancialMenu,
@@ -87,6 +86,10 @@ export type ProductHeaderProps = WithSupportProps<
       | 'themeMode'
       | 'profileItemWrapRender'
     >;
+    logo?: {
+      loading?: boolean;
+      path?: string;
+    };
   } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> &
     Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick' | 'showMainMenu' | 'disableMainMenu'>
 >;
@@ -122,6 +125,7 @@ export function ProductHeader({
   userMenu,
   showMainMenu = true,
   disableMainMenu = false,
+  logo,
   ...rest
 }: ProductHeaderProps) {
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
@@ -203,7 +207,7 @@ export function ProductHeader({
         onMainMenuClick={() => setIsMainMenuOpen(true)}
         showMainMenu={showMainMenu}
         disableMainMenu={disableMainMenu}
-        logo={<CloudRuLogo />}
+        logo={logo}
         path={
           <>
             {select && (

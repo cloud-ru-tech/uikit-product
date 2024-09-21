@@ -18,7 +18,6 @@ import { ItemProps, List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 
 import {
-  CloudRuLogo,
   DrawerMenuMobile,
   DrawerMenuProps,
   HeaderLayout,
@@ -55,6 +54,7 @@ export function ProductHeaderMobile({
   userMenu, // ...rest
   showMainMenu = true,
   disableMainMenu,
+  logo,
 }: ProductHeaderProps) {
   const {
     platforms,
@@ -302,7 +302,7 @@ export function ProductHeaderMobile({
   return (
     <>
       <HeaderLayout
-        logo={<CloudRuLogo />}
+        logo={logo}
         homePageUrl={homePageUrl}
         onLogoClick={onLogoClick}
         toolbar={
