@@ -1,18 +1,20 @@
 import { ReactNode } from 'react';
 
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+
 import styles from './styles.module.scss';
 
-export type HeadlineProps = {
+export type HeadlineProps = WithSupportProps<{
   title: string;
   beforeHeadline?: ReactNode;
   afterHeadline?: ReactNode;
   actions?: ReactNode;
   subHeader?: ReactNode;
-};
+}>;
 
-export function Headline({ title, actions, beforeHeadline, afterHeadline, subHeader }: HeadlineProps) {
+export function Headline({ title, actions, beforeHeadline, afterHeadline, subHeader, ...rest }: HeadlineProps) {
   return (
-    <div className={styles.headline}>
+    <div className={styles.headline} {...extractSupportProps(rest)}>
       <div className={styles.headlineLayout}>
         <div className={styles.titleLayout}>
           {beforeHeadline && <div className={styles.prefixButtonWrapper}>{beforeHeadline}</div>}

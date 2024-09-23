@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { PropsWithChildren } from 'react';
 
 import { MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import {
   ButtonFilled,
   ButtonFilledProps,
@@ -34,40 +34,42 @@ export const BUTTON_SECONDARY_VARIANT = {
 export type ButtonPrimaryVariant = ValueOf<typeof BUTTON_PRIMARY_VARIANT>;
 export type ButtonSecondaryVariant = ValueOf<typeof BUTTON_SECONDARY_VARIANT>;
 
-export type MobilePageFormProps = PropsWithChildren<
-  Pick<HeadlineProps, 'title' | 'subHeader'> & {
-    className?: string;
-    footer?: {
-      buttonPrimary: (
-        | {
-            variant: ButtonPrimaryVariant;
-          }
-        | {
-            variant: 'custom';
-            label: string;
-          }
-      ) & {
-        tooltip?: MobileTooltipProps;
-      } & Omit<ButtonFilledProps, 'label'>;
-      buttonSecondary?: (
-        | {
-            variant: ButtonSecondaryVariant;
-          }
-        | {
-            variant: 'custom';
-            label: string;
-          }
-      ) & {
-        tooltip?: MobileTooltipProps;
-      } & Omit<ButtonOutlineProps, 'label'>;
-      buttonAdditional?: ButtonSimpleProps & {
-        tooltip?: MobileTooltipProps;
+export type MobilePageFormProps = WithSupportProps<
+  PropsWithChildren<
+    Pick<HeadlineProps, 'title' | 'subHeader'> & {
+      className?: string;
+      footer?: {
+        buttonPrimary: (
+          | {
+              variant: ButtonPrimaryVariant;
+            }
+          | {
+              variant: 'custom';
+              label: string;
+            }
+        ) & {
+          tooltip?: MobileTooltipProps;
+        } & Omit<ButtonFilledProps, 'label'>;
+        buttonSecondary?: (
+          | {
+              variant: ButtonSecondaryVariant;
+            }
+          | {
+              variant: 'custom';
+              label: string;
+            }
+        ) & {
+          tooltip?: MobileTooltipProps;
+        } & Omit<ButtonOutlineProps, 'label'>;
+        buttonAdditional?: ButtonSimpleProps & {
+          tooltip?: MobileTooltipProps;
+        };
       };
-    };
-  }
+    }
+  >
 >;
 
-export function MobilePageForm({ children, title, subHeader, className, footer }: MobilePageFormProps) {
+export function MobilePageForm({ children, title, subHeader, className, footer, ...rest }: MobilePageFormProps) {
   const { languageCode } = useLanguage();
 
   const PrimaryButton = useButtonWithTooltip({ Button: ButtonFilled, tooltip: footer?.buttonPrimary.tooltip });
@@ -75,7 +77,7 @@ export function MobilePageForm({ children, title, subHeader, className, footer }
   const AdditionalButton = useButtonWithTooltip({ Button: ButtonSimple, tooltip: footer?.buttonAdditional?.tooltip });
 
   return (
-    <div className={cn(styles.container, className)}>
+    <div className={cn(styles.container, className)} {...extractSupportProps(rest)}>
       <div className={styles.form}>
         <Headline title={title} subHeader={subHeader} />
 

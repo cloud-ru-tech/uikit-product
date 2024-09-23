@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { PropsWithChildren } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import {
   ButtonFilled,
   ButtonFilledProps,
@@ -34,40 +34,42 @@ export const BUTTON_SECONDARY_VARIANT = {
 export type ButtonPrimaryVariant = ValueOf<typeof BUTTON_PRIMARY_VARIANT>;
 export type ButtonSecondaryVariant = ValueOf<typeof BUTTON_SECONDARY_VARIANT>;
 
-export type PageFormProps = PropsWithChildren<
-  Pick<HeadlineProps, 'title' | 'subHeader'> & {
-    className?: string;
-    footer?: {
-      buttonPrimary: (
-        | {
-            variant: ButtonPrimaryVariant;
-          }
-        | {
-            variant: 'custom';
-            label: string;
-          }
-      ) & {
-        tooltip?: TooltipProps;
-      } & Omit<ButtonFilledProps, 'label'>;
-      buttonSecondary?: (
-        | {
-            variant: ButtonSecondaryVariant;
-          }
-        | {
-            variant: 'custom';
-            label: string;
-          }
-      ) & {
-        tooltip?: TooltipProps;
-      } & Omit<ButtonOutlineProps, 'label'>;
-      buttonAdditional?: ButtonSimpleProps & {
-        tooltip?: TooltipProps;
+export type PageFormProps = WithSupportProps<
+  PropsWithChildren<
+    Pick<HeadlineProps, 'title' | 'subHeader'> & {
+      className?: string;
+      footer?: {
+        buttonPrimary: (
+          | {
+              variant: ButtonPrimaryVariant;
+            }
+          | {
+              variant: 'custom';
+              label: string;
+            }
+        ) & {
+          tooltip?: TooltipProps;
+        } & Omit<ButtonFilledProps, 'label'>;
+        buttonSecondary?: (
+          | {
+              variant: ButtonSecondaryVariant;
+            }
+          | {
+              variant: 'custom';
+              label: string;
+            }
+        ) & {
+          tooltip?: TooltipProps;
+        } & Omit<ButtonOutlineProps, 'label'>;
+        buttonAdditional?: ButtonSimpleProps & {
+          tooltip?: TooltipProps;
+        };
       };
-    };
-  }
+    }
+  >
 >;
 
-export function PageForm({ children, title, subHeader, className, footer }: PageFormProps) {
+export function PageForm({ children, title, subHeader, className, footer, ...rest }: PageFormProps) {
   const { languageCode } = useLanguage();
 
   const PrimaryButton = useButtonWithTooltip({ Button: ButtonFilled, tooltip: footer?.buttonPrimary.tooltip });
@@ -75,7 +77,7 @@ export function PageForm({ children, title, subHeader, className, footer }: Page
   const AdditionalButton = useButtonWithTooltip({ Button: ButtonSimple, tooltip: footer?.buttonAdditional?.tooltip });
 
   return (
-    <div className={cn(styles.container, className)}>
+    <div className={cn(styles.container, className)} {...extractSupportProps(rest)}>
       <div className={styles.form}>
         <div className={styles.headline}>
           <Headline title={title} subHeader={subHeader} />
