@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2024-09-24)
+
+
+### Features
+
+* **[FF-5498](https://jira.sbercloud.tech/browse/FF-5498):** add data-test-id in mobile and page layout ([74ec82e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74ec82ef221775af3da71321d1d257aa76c1b96e))
+
+
+
+
+
 ## 0.12.2 (2024-09-16)
 
 ### Only dependencies have been changed
