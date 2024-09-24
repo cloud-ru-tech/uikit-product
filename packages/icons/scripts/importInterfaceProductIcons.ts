@@ -1,9 +1,7 @@
 import * as fs from 'fs/promises';
 import path from 'path';
 
-import camelcase from 'lodash.camelcase';
-
-import { removeInvalidCharacters } from './utils';
+import { normalizeName } from './utils';
 
 const SOURCE_PATH = 'scripts/import/interface-icons-product/S';
 const DESTINATION_PATH = 'svgs/inherit/interface-icons-product';
@@ -13,7 +11,7 @@ const DESTINATION_PATH = 'svgs/inherit/interface-icons-product';
 
   for (const fileName of iconsFilesNames) {
     const [name, extension] = fileName.split('.');
-    const camelcaseFileName = camelcase(removeInvalidCharacters(name));
+    const camelcaseFileName = normalizeName(name);
 
     await fs.copyFile(
       path.join(SOURCE_PATH, fileName),

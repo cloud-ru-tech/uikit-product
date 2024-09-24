@@ -3,7 +3,7 @@ import path from 'path';
 
 import camelcase from 'lodash.camelcase';
 
-import { capitalize, kebabCase, removeInvalidCharacters, replaceColorsWithValue } from './utils';
+import { capitalize, kebabCase, normalizeName, replaceColorsWithValue } from './utils';
 
 const SOURCE_PATH = 'scripts/import';
 const DESTINATION_PATH = 'svgs/illustrations';
@@ -27,7 +27,7 @@ const IGNORED_FILES = ['.gitignore', '.DS_Store'];
 
     for (const fileName of iconsFilesNames) {
       const [name, extension] = fileName.split('.');
-      const camelcaseFileName = capitalize(camelcase(removeInvalidCharacters(name)));
+      const camelcaseFileName = capitalize(normalizeName(name));
 
       await fs.copyFile(
         path.join(SOURCE_PATH, folder, fileName),
