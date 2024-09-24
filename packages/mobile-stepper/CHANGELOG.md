@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.2 (2024-09-24)
+
+
+### Bug Fixes
+
+* **[ONB-2187](https://jira.sbercloud.tech/browse/ONB-2187):** step width fix ([fb1ab5d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fb1ab5d517fc7952d5f4f321921cf9e0b05a094d))
+
+
+
+
+
 ## 0.1.1 (2024-09-24)
 
 
