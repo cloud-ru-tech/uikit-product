@@ -1,4 +1,4 @@
-import { ArgTypes } from '@storybook/types';
+import { ArgTypes } from '@storybook/react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { Tag } from '@snack-uikit/tag';

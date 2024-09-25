@@ -1,12 +1,16 @@
-import { StoryFn } from '@storybook/react';
+import { GlobalTypes, Parameters } from '@storybook/csf';
+import { Preview } from '@storybook/react';
 import { themes, ThemeVars } from '@storybook/theming';
-import { DecoratorFunction, GlobalTypes, Parameters } from '@storybook/types';
 import cn from 'classnames';
 import { FormProvider, useForm } from 'react-hook-form';
-import { withDesign } from 'storybook-addon-designs';
 import { useDarkMode } from 'storybook-dark-mode';
 
-import { PARAM_CAN_ADD_CUSTOM_BRAND_KEY, PARAM_COLOR_MAP_KEY, PARAM_KEY } from '@sbercloud/ft-storybook-brand-addon';
+import {
+  PARAM_CAN_ADD_CUSTOM_BRAND_KEY,
+  PARAM_COLOR_MAP_KEY,
+  PARAM_KEY,
+  withBrand,
+} from '@sbercloud/ft-storybook-brand-addon';
 import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
 import { Link } from '@sbercloud/uikit-product-link';
 import { color, globals, green, greenDark, purple, purpleDark } from '@sbercloud/uikit-product-theme';
@@ -18,9 +22,9 @@ import { BADGE, Brand, BRAND_TO_THEME_MAP, DEFAULT_BRAND_COLORS_MAP, DEFAULT_BRA
 
 const LanguageCodeType = ConfigProvider.languages;
 
-const decorators: DecoratorFunction[] = [
-  withDesign,
-  (Story: StoryFn, { globals: { locale, [PARAM_KEY]: brand }, parameters: { badges, snackUiLink } }) => {
+const decorators: Preview['decorators'] = [
+  withBrand,
+  (Story, { globals: { locale, [PARAM_KEY]: brand }, parameters: { badges, snackUiLink } }) => {
     const isDark = useDarkMode();
     const mode = isDark ? Mode.Dark : Mode.Light;
     const normalizedBrand = Object.values(Brand).includes(brand) ? (brand as Brand) : Brand.Cloud;
@@ -101,7 +105,7 @@ const parameters: Parameters = {
   },
   darkMode: {
     // Override the default dark theme
-    dark: { ...themes.dark, ...brandInfo, base: 'dark' },
+    dark: { ...themes.dark, ...brandInfo, base: 'dark', appPreviewBg: 'transparent' },
     // Override the default light theme
     light: { ...themes.normal, ...brandInfo, base: 'light' },
   },
@@ -147,7 +151,7 @@ const globalTypes: GlobalTypes = {
   },
 };
 
-const preview = {
+const preview: Preview = {
   decorators,
   parameters,
   globalTypes,

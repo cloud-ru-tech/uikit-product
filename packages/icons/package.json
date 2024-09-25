@@ -63,6 +63,7 @@
     "@types/lodash.camelcase": "4.3.9",
     "@types/lodash.kebabcase": "4.1.9",
     "@types/svg-sprite": "0.0.38",
+    "@types/yargs": "17.0.33",
     "fast-xml-parser": "4.2.5",
     "lodash.camelcase": "4.3.0",
     "oslllo-svg-fixer": "3.0.0",

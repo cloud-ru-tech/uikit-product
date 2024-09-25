@@ -1,3 +1,5 @@
+import { ArgTypes } from '@storybook/react';
+
 import * as Icons from '@sbercloud/uikit-product-icons';
 import { VALIDATION_STATE } from '@snack-uikit/fields/dist/constants';
 
@@ -12,7 +14,7 @@ export const ICONS = {
   ),
 };
 
-export const COMMON_ARG_TYPES = {
+export const COMMON_ARG_TYPES: ArgTypes = {
   validationState: {
     options: Object.values(VALIDATION_STATE),
     control: {

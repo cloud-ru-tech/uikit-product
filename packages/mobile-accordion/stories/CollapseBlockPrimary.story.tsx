@@ -1,0 +1,97 @@
+import { ArgTypes, Meta, StoryFn, StoryObj } from '@storybook/react';
+import { useEffect, useMemo, useState } from 'react';
+
+import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { ButtonFunction } from '@snack-uikit/button';
+import { toaster } from '@snack-uikit/toaster';
+
+import componentChangelog from '../CHANGELOG.md';
+import componentPackage from '../package.json';
+import componentReadme from '../README.md';
+import { MobileAccordionPrimary, MobileCollapseBlockPrimaryProps } from '../src';
+import { CollapseBlockHeaderProps } from '../src/helperComponents';
+import { TEST_IDS } from '../src/testIds';
+import { COLLAPSE_BLOCK_STORY_SETTINGS } from './constants';
+import { Content, CustomHeader } from './helperComponents';
+import styles from './styles.module.scss';
+
+const meta: Meta = {
+  title: 'Mobile/Accordion/CollapseBlockPrimary',
+  component: MobileAccordionPrimary.CollapseBlock,
+};
+
+export default meta;
+
+type StoryProps = MobileCollapseBlockPrimaryProps & {
+  showTip: boolean;
+  showActions: boolean;
+  expanded: boolean;
+  customHeader: boolean;
+  name?: string;
+  metadata?: string;
+} & CollapseBlockHeaderProps;
+
+const Template: StoryFn<StoryProps> = ({ id, showActions, customHeader, shape, outline, ...args }: StoryProps) => {
+  const [expanded, setExpanded] = useState<string>();
+
+  useEffect(() => {
+    setExpanded(() => {
+      if (!args.expanded) {
+        return undefined;
+      }
+
+      return id;
+    });
+  }, [args.expanded, id]);
+
+  const actions = useMemo(() => {
+    if (showActions) {
+      return (
+        <ButtonFunction
+          icon={<PlaceholderSVG />}
+          size='xs'
+          data-test-id={TEST_IDS.actions}
+          onClick={e => {
+            e.stopPropagation();
+            toaster.userAction.neutral({ label: 'Actions click' });
+          }}
+        />
+      );
+    }
+  }, [showActions]);
+
+  return (
+    <div className={styles.wrapper}>
+      <MobileAccordionPrimary expanded={expanded} onExpandedChange={setExpanded} data-test-id={TEST_IDS.accordion}>
+        <MobileAccordionPrimary.CollapseBlock
+          id={id}
+          actions={actions}
+          data-test-id={args['data-test-id']}
+          outline={outline}
+          shape={shape}
+          header={customHeader ? <CustomHeader {...args} /> : <MobileAccordionPrimary.CollapseBlockHeader {...args} />}
+        >
+          <Content />
+        </MobileAccordionPrimary.CollapseBlock>
+      </MobileAccordionPrimary>
+    </div>
+  );
+};
+
+export const collapseBlockPrimary: StoryObj<StoryProps> = {
+  render: Template,
+  args: { ...COLLAPSE_BLOCK_STORY_SETTINGS.args, outline: false, shape: 'round' },
+  argTypes: COLLAPSE_BLOCK_STORY_SETTINGS.argTypes as Partial<ArgTypes<StoryProps>>,
+
+  parameters: {
+    readme: {
+      sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
+    },
+    packageName: componentPackage.name,
+    design: {
+      name: 'Figma',
+      type: 'figma',
+      url: 'https://www.figma.com/file/jtGxAPvFJOMir7V0eQFukN/Snack-UI-Kit-1.1.0?node-id=41%3A262548&mode=design',
+    },
+  },
+};

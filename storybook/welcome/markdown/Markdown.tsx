@@ -20,7 +20,7 @@ const CODE_THEME: Record<Themes, { [key: string]: CSSProperties }> = {
   [Themes.GreenDark]: dark,
 };
 
-export const Markdown = (props: MarkdownProps) => {
+export function Markdown(props: MarkdownProps) {
   const { theme } = useTheme();
 
   return (
@@ -47,4 +47,4 @@ export const Markdown = (props: MarkdownProps) => {
       {props.md}
     </ReactMarkdown>
   );
-};
+}

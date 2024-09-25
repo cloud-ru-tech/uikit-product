@@ -172,7 +172,7 @@ export const storyEntry = ({
   );
   const componentStoryName = componentName.replace(/[A-Z]/, x => x.toLowerCase());
   const componentStoryTitle = componentName.split(/(?=[A-Z])/).join(' ');
-  const fileContent = `import { Meta, StoryFn } from '@storybook/react';
+  const fileContent = `import { Meta, StoryObj, StoryFn } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -185,28 +185,26 @@ const meta: Meta = {
 };
 export default meta;
 
-function Template({ ...args }: ${componentName}Props) {
-  return <${componentName} {...args} />;
-}
+const Template: StoryFn<${componentName}Props> = ({ ...args }) => <${componentName} {...args} />;
 
-export const ${componentStoryName}: StoryFn<${componentName}Props> = Template.bind({});
-
-${componentStoryName}.args = {};
-
-${componentStoryName}.argTypes = {};
-
-${componentStoryName}.parameters = {
-  readme: {
-    sidebar: [\`Latest version: $\{componentPackage.version}\`, componentReadme, componentChangelog],
-  },
-  packageName: componentPackage.name,
-  design: {
-    name: 'Figma',
-    type: 'figma',
-    //TODO: update to the correct one
-    url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+export const ${componentStoryName}: StoryObj<${componentName}Props> = {
+  render: Template,
+  args: {},
+  argTypes: {},
+  parameters: {
+    readme: {
+      sidebar: [\`Latest version: $\{componentPackage.version}\`, componentReadme, componentChangelog],
+    },
+    packageName: componentPackage.name,
+    design: {
+      name: 'Figma',
+      type: 'figma',
+      //TODO: update to the correct one
+      url: 'https://pocka.github.io/storybook-addon-designs/?path=/story/docs-quick-start--page',
+    },
   },
 };
+
 `;
 
   fs.writeFileSync(filePath, fileContent);

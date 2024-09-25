@@ -1,14 +1,21 @@
-import { BADGE as Badges } from '@geometricpanda/storybook-addon-badges';
+// import { BADGE as Badges } from '@geometricpanda/storybook-addon-badges';
 
 import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
 import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
 import { Themes } from '@sbercloud/uikit-product-theme';
 
-enum CustomBadges {
+/*enum CustomBadges {
   PRIVATE = 'private',
 }
 
-export const BADGE = { ...Badges, ...CustomBadges };
+export const BADGE = { ...Badges, ...CustomBadges };*/
+export const BADGE = {
+  STABLE: 'stable',
+  PRIVATE: 'private',
+  DEPRECATED: 'deprecated',
+  BETA: 'beta',
+  NEEDS_REVISION: 'needs revision',
+}; // FIXME: вернуть обратно
 
 export enum Brand {
   Cloud = 'Cloud',
