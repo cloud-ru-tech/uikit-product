@@ -38,15 +38,14 @@
   cursor: pointer;
   background-color: $sys-primary-background;
   position: relative;
+  border-radius: 4px;
+  overflow: hidden;
 
   &:focus-visible {
     @include outline-var($container-focused-s);
 
     outline-color: $sys-available-complementary;
   }
-
-  border-radius: 4px;
-  overflow: hidden;
 
   &::before {
     content: '';

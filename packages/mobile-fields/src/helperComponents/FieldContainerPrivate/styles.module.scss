@@ -32,20 +32,17 @@ $variants: 'single-line-container', 'multi-line-container';
 }
 
 .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  border-style: solid;
+
   @include validationState('default', 'primary', 'neutral');
   @include validationState('error', 'red', 'red');
   @include validationState('warning', 'yellow', 'yellow');
   @include validationState('success', 'green', 'green');
-
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  box-sizing: border-box;
-
-  border-style: solid;
 
   @each $size in $sizes {
     &[data-size='#{$size}'] {

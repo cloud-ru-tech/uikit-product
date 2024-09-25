@@ -1,8 +1,8 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-chips-chipChoice';
 
-.chipChoiceRow { 
-  @include composite-var($chip-choice-row-container);
-
+.chipChoiceRow {
   display: flex;
   flex-wrap: wrap;
+
+  @include composite-var($chip-choice-row-container);
 }

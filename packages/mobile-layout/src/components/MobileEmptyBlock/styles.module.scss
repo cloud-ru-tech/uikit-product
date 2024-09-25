@@ -47,6 +47,8 @@ div.emptyBlock {
 
   width: 100%;
 
+  @include composite-var($info-block, 'm', 'container');
+
   .footer {
     text-align: center;
   }
@@ -55,8 +57,6 @@ div.emptyBlock {
   .title {
     text-align: center;
   }
-
-  @include composite-var($info-block, 'm', 'container');
 
   .contentLayout {
     @include composite-var($info-block, 'm', 'content-layout');

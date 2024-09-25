@@ -13,9 +13,9 @@
 }
 
 .counter {
-  @include composite-var($sans-body-m);
-
   color: $sys-neutral-text-light;
+
+  @include composite-var($sans-body-m);
 }
 
 .bodyNoPadding {

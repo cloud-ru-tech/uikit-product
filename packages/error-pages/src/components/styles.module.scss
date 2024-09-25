@@ -97,33 +97,15 @@ $gear-wheel-rotation-period: 10s;
 }
 
 .rotateSmall {
-  @keyframes rotating {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(360deg);
-    }
-  }
   transform-origin: center;
   transform-box: fill-box;
-  animation: rotating $gear-wheel-rotation-period linear infinite;
+  animation: rotatingForward $gear-wheel-rotation-period linear infinite;
 }
 
 .rotateBig {
-  @keyframes rotating {
-    from {
-      transform: rotate(0deg);
-    }
-
-    to {
-      transform: rotate(-360deg);
-    }
-  }
   transform-origin: center;
   transform-box: fill-box;
-  animation: rotating $gear-wheel-rotation-period linear infinite;
+  animation: rotatingBackwards $gear-wheel-rotation-period linear infinite;
   animation-direction: reverse;
 }
 
@@ -160,5 +142,25 @@ $gear-wheel-rotation-period: 10s;
     line-height: $sans-body-m-line-height !important;
     font-size: $sans-body-m-font-size !important;
     letter-spacing: $sans-body-m-letter-spacing !important;
+  }
+}
+
+@keyframes rotatingForward {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotatingBackwards {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
   }
 }

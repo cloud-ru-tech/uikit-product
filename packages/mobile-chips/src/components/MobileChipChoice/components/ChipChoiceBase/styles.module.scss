@@ -25,11 +25,11 @@ $valueTypography: (
 }
 
 .choiceChip {
-  @include chip-defaults;
-  @include chip-anatomy-styles($chip-choice, $sizes, $labelTypography);
-
   background-color: $sys-neutral-background1-level;
   border-color: $sys-neutral-decor-default;
+
+  @include chip-defaults;
+  @include chip-anatomy-styles($chip-choice, $sizes, $labelTypography);
 
   .label,
   .value {
@@ -79,10 +79,10 @@ $valueTypography: (
   }
 
   &[data-loading] {
-    @include chip-loading-state($chip-choice, '&:not([data-label])', value, null, true);
-
     background-color: $sys-neutral-background;
     border-color: $sys-neutral-decor-activated;
+
+    @include chip-loading-state($chip-choice, '&:not([data-label])', value, null, true);
 
     .label,
     .value {

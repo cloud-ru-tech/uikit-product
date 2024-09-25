@@ -1,10 +1,11 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .drawer {
+  background-color: $sys-neutral-background !important;
+
   svg {
     fill: currentColor;
   }
-  background-color: $sys-neutral-background !important;
 }
 
 .drawerBody {
