@@ -7,7 +7,7 @@ import { ButtonElevated } from '@snack-uikit/button';
 import { List } from '@snack-uikit/list';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
-import { useBottomPinnedContent, useItemsContent, useTopPinnedContent } from './hooks/useItemsCreator';
+import { useItemsContent, useTopPinnedContent } from './hooks/useItemsCreator';
 import styles from './styles.module.scss';
 import { Documentation, HeaderProps, SidebarItem } from './types';
 
@@ -16,6 +16,7 @@ export type PrivateSidebarProps = WithSupportProps<{
   defaultOpen?: boolean;
   onOpenChanged?(open: boolean): void;
   items: SidebarItem[];
+  footerItems?: SidebarItem[];
   header?: HeaderProps;
   selected?: string | number;
   onSelect?(id: string | number): void;
@@ -30,7 +31,7 @@ export function PrivateSidebar({
   onOpenChanged,
   className,
   items,
-  documentation,
+  footerItems = [],
   header,
   selected,
   onSelect,
@@ -58,8 +59,8 @@ export function PrivateSidebar({
   );
 
   const list = useItemsContent(items, onSelect);
+  const footerList = useItemsContent(footerItems);
   const { pinTop } = useTopPinnedContent(header);
-  const bottomPinned = useBottomPinnedContent(documentation);
 
   return (
     <div
@@ -85,7 +86,7 @@ export function PrivateSidebar({
               size='m'
               items={list}
               pinTop={pinTop}
-              pinBottom={bottomPinned}
+              pinBottom={footerList}
               scroll
             />
           </div>

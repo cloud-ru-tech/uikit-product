@@ -1,13 +1,13 @@
 import { MouseEvent, ReactNode, useMemo } from 'react';
 
-import { ChevronLeftSVG, FileSVG } from '@sbercloud/uikit-product-icons';
+import { ChevronLeftSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ItemProps } from '@snack-uikit/list';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { SidebarTitle } from '../helperComponents/SidebarTitle';
 import { textProvider, Texts } from '../helpers/texts-provider';
-import { Documentation, HeaderProps, SidebarItem } from '../types';
+import { HeaderProps, SidebarItem } from '../types';
 
 const EMPTY_LIST: ItemProps[] = [];
 
@@ -20,7 +20,7 @@ export function useTopPinnedContent(header?: HeaderProps): { title?: ReactNode; 
         return {
           pinTop: [
             {
-              content: <SidebarTitle title={header.label} icon={header.icon} />,
+              content: <SidebarTitle title={header.label} icon={header.icon} afterContent={header.afterContent} />,
               inactive: true,
             },
           ],
@@ -46,25 +46,6 @@ export function useTopPinnedContent(header?: HeaderProps): { title?: ReactNode; 
         return { pinTop: EMPTY_LIST };
     }
   }, [header, languageCode]);
-}
-
-export function useBottomPinnedContent(documentation?: Documentation): ItemProps[] {
-  const { languageCode } = useLanguage();
-
-  return useMemo(
-    () =>
-      documentation
-        ? [
-            {
-              content: { option: textProvider(languageCode, Texts.Documentation) },
-              beforeContent: <FileSVG />,
-              itemWrapRender: documentation.href ? item => <a {...documentation}>{item}</a> : undefined,
-              onClick: documentation.href ? undefined : documentation.onClick,
-            },
-          ]
-        : EMPTY_LIST,
-    [documentation, languageCode],
-  );
 }
 
 export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | number) => void): ItemProps[] {

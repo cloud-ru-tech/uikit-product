@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { ReactNode } from 'react';
 
 import { IconPredefined } from '@snack-uikit/icon-predefined';
 import { TruncateString } from '@snack-uikit/truncate-string';
@@ -11,9 +12,10 @@ export type SidebarTitleProps = {
   title: string;
   icon: Icon;
   className?: string;
+  afterContent?: ReactNode;
 };
 
-export function SidebarTitle({ title, className, icon }: SidebarTitleProps) {
+export function SidebarTitle({ title, className, icon, afterContent }: SidebarTitleProps) {
   return (
     <div className={cn(className, styles.wrapper)}>
       <div className={styles.icon}>
@@ -24,6 +26,7 @@ export function SidebarTitle({ title, className, icon }: SidebarTitleProps) {
           <TruncateString text={title} />
         </Typography.SansLabelL>
       </div>
+      {afterContent}
     </div>
   );
 }

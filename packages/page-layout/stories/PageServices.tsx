@@ -40,10 +40,6 @@ const getSidebarProps = ({
           headless: undefined,
           none: undefined,
         }[type] as HeaderProps,
-        documentation: {
-          href: 'https://cloud.ru',
-          target: '_blank',
-        },
         selected,
         onSelect: setSelected,
         items: [
@@ -65,6 +61,7 @@ const getSidebarProps = ({
           { id: 15, label: 'Администрирование' },
           { id: 16, label: 'Сеть' },
         ],
+        footerItems: [{ id: 17, label: 'Документация' }],
         pageContainerId: 'pageContainer',
       }
     : undefined;

@@ -15,7 +15,7 @@ export type SidebarItem = {
 export type Icon = IconPredefinedProps['icon'];
 
 export type HeaderProps =
-  | { type: 'title'; label: string; icon: Icon }
+  | { type: 'title'; label: string; icon: Icon; afterContent?: ReactNode }
   | { type: 'back'; label: string; href?: string; onClick?: MouseEventHandler };
 
 export type Documentation = {
