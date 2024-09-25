@@ -76,7 +76,7 @@ export function DeleteModal({
         titleTooltip={titleTooltip}
       />
 
-      <ModalCustom.Body content={<div className={styles.description}>{description}</div>} />
+      {description && <ModalCustom.Body content={<div className={styles.description}>{description}</div>} />}
 
       <ModalCustom.Footer
         actions={
