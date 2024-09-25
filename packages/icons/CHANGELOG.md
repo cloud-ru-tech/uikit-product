@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 9.3.0 (2024-09-25)
+
+
+### Features
+
+* **[PDS-732](https://jira.sbercloud.tech/browse/PDS-732):** add icons ([e3a2a10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3a2a103d5217d0f38028253e12230b6fd427a33))
+
+
+
+
+
 ## 9.2.2 (2024-09-25)
 
 
