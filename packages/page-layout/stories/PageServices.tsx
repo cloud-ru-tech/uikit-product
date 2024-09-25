@@ -2,9 +2,8 @@ import { Meta, StoryFn } from '@storybook/react';
 import { HeaderProps } from 'page-layout/src/components/PrivateSidebar/types';
 import { MouseEvent, useMemo, useState } from 'react';
 
-import { StarSVG } from '@sbercloud/uikit-product-icons';
+import { PlaceholderSVG, StarSVG } from '@sbercloud/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
-import { PlaceholderSVG } from '@snack-uikit/icons';
 import { Status } from '@snack-uikit/status';
 
 import componentChangelog from '../CHANGELOG.md';

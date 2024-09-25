@@ -1,5 +1,5 @@
+import { ArrowRightSVG } from '@sbercloud/uikit-product-icons';
 import { Card, CardProps } from '@snack-uikit/card';
-import { ArrowRightSVG } from '@snack-uikit/icons';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 

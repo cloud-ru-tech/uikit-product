@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { PlaceholderSVG } from '@snack-uikit/icons';
+import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';

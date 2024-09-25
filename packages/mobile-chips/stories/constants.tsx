@@ -1,4 +1,4 @@
-import * as Icons from '@snack-uikit/icons';
+import * as Icons from '@sbercloud/uikit-product-icons';
 
 import { SIZE } from '../src/constants';
 

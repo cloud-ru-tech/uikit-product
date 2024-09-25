@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
-import { PlaceholderSVG } from '@snack-uikit/icons';
+import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 
 import { BADGE } from '#storybookConstants';
 

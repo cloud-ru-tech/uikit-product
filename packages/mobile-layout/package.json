@@ -35,12 +35,12 @@
     "@sbercloud/uikit-product-mobile-tooltip": "0.2.0",
     "@sbercloud/uikit-product-page-layout": "0.13.0",
     "@sbercloud/uikit-product-utils": "3.6.0",
-    "@snack-uikit/button": "0.17.4",
-    "@snack-uikit/card": "0.12.34",
-    "@snack-uikit/icon-predefined": "0.5.1",
-    "@snack-uikit/truncate-string": "0.4.20",
-    "@snack-uikit/typography": "0.6.2",
-    "@snack-uikit/utils": "3.3.0",
+    "@snack-uikit/button": "0.17.5",
+    "@snack-uikit/card": "0.12.37",
+    "@snack-uikit/icon-predefined": "0.5.2",
+    "@snack-uikit/truncate-string": "0.4.23",
+    "@snack-uikit/typography": "0.6.3",
+    "@snack-uikit/utils": "3.4.0",
     "classnames": "2.3.2"
   }
 }

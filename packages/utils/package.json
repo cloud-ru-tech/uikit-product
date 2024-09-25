@@ -30,7 +30,7 @@
   "dependencies": {
     "@sbercloud/ft-debug-mode": "1.1.0",
     "@sbercloud/uikit-product-theme": "0.40.0",
-    "@snack-uikit/utils": "3.3.0",
+    "@snack-uikit/utils": "3.4.0",
     "ua-parser-js": "1.0.38"
   },
   "devDependencies": {

@@ -30,11 +30,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "9.2.1",
     "@sbercloud/uikit-product-utils": "3.6.0",
-    "@snack-uikit/info-block": "0.4.0",
+    "@snack-uikit/info-block": "0.4.9",
     "classnames": "2.3.2"
-  },
-  "devDependencies": {
-    "@snack-uikit/button": "0.15.1",
-    "@snack-uikit/icons": "0.20.0"
   }
 }

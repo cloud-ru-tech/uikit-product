@@ -30,9 +30,9 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "9.2.1",
     "@sbercloud/uikit-product-utils": "3.6.0",
-    "@snack-uikit/button": "0.17.4",
-    "@snack-uikit/dropdown": "0.2.5",
-    "@snack-uikit/list": "0.16.1",
+    "@snack-uikit/button": "0.17.5",
+    "@snack-uikit/dropdown": "0.2.7",
+    "@snack-uikit/list": "0.16.3",
     "uncontrollable": "8.0.4"
   }
 }

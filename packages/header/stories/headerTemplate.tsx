@@ -2,11 +2,18 @@ import { useArgs, useState } from '@storybook/preview-api';
 import { ArgTypes } from '@storybook/react';
 import { useEffect, useMemo } from 'react';
 
-import { DetalisationSVG, MoneySVG, UsersSVG } from '@sbercloud/uikit-product-icons';
+import {
+  DetalisationSVG,
+  EmailSVG,
+  FileSVG,
+  MoneySVG,
+  PlaceholderSVG,
+  SettingsSVG,
+  UsersSVG,
+} from '@sbercloud/uikit-product-icons';
 import { PageServices } from '@sbercloud/uikit-product-page-layout';
 import { LayoutType } from '@sbercloud/uikit-product-utils';
 import { HotSpotProps } from '@snack-uikit/hot-spot';
-import { EmailSVG, FileSVG, PlaceholderSVG, SettingsSVG } from '@snack-uikit/icons';
 import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
 

@@ -185,12 +185,7 @@ export function Notifications({
           {showCards && (
             <>
               {cards.unread.map(card => (
-                <NotificationCard
-                  {...card}
-                  link={card.link ? { ...card.link, external: true } : undefined}
-                  key={card.id}
-                  onVisible={handleCardVisible}
-                />
+                <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} />
               ))}
 
               {chipFilter === 'all' && (

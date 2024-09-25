@@ -1,8 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react';
 import { useMemo } from 'react';
 
+import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
-import { PlaceholderSVG } from '@snack-uikit/icons';
 import { Link } from '@snack-uikit/link';
 import { ValueOf } from '@snack-uikit/utils';
 
@@ -35,7 +35,7 @@ function Template({ emblem, icon, headerSlot: headerSlotProp, showIcon, ...args 
   const headerSlot = useMemo<WidgetProps['headerSlot']>(() => {
     switch (headerSlotProp) {
       case HEADER_SLOT_VARIANT.custom: {
-        return <Link text='Link text' external={true} appearance='neutral' href='#' size='m' />;
+        return <Link text='Link text' appearance='neutral' href='#' size='m' />;
       }
       case HEADER_SLOT_VARIANT.none:
       default: {

@@ -2,9 +2,9 @@ import cn from 'classnames';
 import { MouseEventHandler, ReactNode, useEffect, useRef, useState } from 'react';
 
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
+import { CheckSVG, CopySVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
-import { CheckSVG, CopySVG } from '@snack-uikit/icons';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { COPY_BUTTON_HIDE_STRATEGY } from './constants';

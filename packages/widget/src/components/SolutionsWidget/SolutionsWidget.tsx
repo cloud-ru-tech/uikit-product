@@ -28,7 +28,6 @@ export function SolutionsWidget({ layoutType, moreLink, cards, ...rest }: Soluti
             appearance='neutral'
             onClick={moreLink?.onClick}
             href={moreLink?.href}
-            external
           />
         )}
       </S.Header>

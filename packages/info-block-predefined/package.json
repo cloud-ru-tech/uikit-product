@@ -28,8 +28,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@snack-uikit/button": "0.17.1",
-    "@snack-uikit/info-block": "0.4.0",
-    "@snack-uikit/tooltip": "0.13.4"
+    "@snack-uikit/button": "0.17.5",
+    "@snack-uikit/info-block": "0.4.9",
+    "@snack-uikit/tooltip": "0.13.10"
   }
 }

@@ -1,5 +1,5 @@
+import * as Icons from '@sbercloud/uikit-product-icons';
 import { VALIDATION_STATE } from '@snack-uikit/fields/dist/constants';
-import * as Icons from '@snack-uikit/icons';
 
 export const ICONS = {
   none: undefined,

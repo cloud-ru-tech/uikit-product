@@ -1,9 +1,9 @@
 import { MouseEventHandler, useEffect, useRef, useState } from 'react';
 
 import { copyToClipboard } from '@sbercloud/ft-copy-to-clipboard';
+import { CheckSVG, CopySVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction, ButtonFunctionProps } from '@snack-uikit/button';
-import { CheckSVG, CopySVG } from '@snack-uikit/icons';
 
 export type CopyButtonProps = WithSupportProps<{
   valueToCopy: string | number;

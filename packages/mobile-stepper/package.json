@@ -29,13 +29,12 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-utils": "3.6.0",
-    "@snack-uikit/figma-tokens": "15.5.4",
-    "@snack-uikit/icons": "0.22.0",
-    "@snack-uikit/loaders": "0.5.2",
-    "@snack-uikit/stepper": "0.6.11",
-    "@snack-uikit/truncate-string": "0.4.21",
-    "@snack-uikit/typography": "0.6.2",
-    "@snack-uikit/utils": "3.3.0",
+    "@sbercloud/uikit-product-icons": "9.2.1",
+    "@snack-uikit/loaders": "0.5.3",
+    "@snack-uikit/stepper": "0.6.13",
+    "@snack-uikit/truncate-string": "0.4.23",
+    "@snack-uikit/typography": "0.6.3",
+    "@snack-uikit/utils": "3.4.0",
     "classnames": "2.3.2"
   }
 }

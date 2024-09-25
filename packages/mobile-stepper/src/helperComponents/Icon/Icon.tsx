@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { useMemo } from 'react';
 
-import { CheckSVG, CrossSVG } from '@snack-uikit/icons';
+import { CheckSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
 import { Sun } from '@snack-uikit/loaders';
 import { Typography } from '@snack-uikit/typography';
 

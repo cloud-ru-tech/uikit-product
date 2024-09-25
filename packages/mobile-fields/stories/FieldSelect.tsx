@@ -1,8 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react';
 import React, { useLayoutEffect, useState } from 'react';
 
+import { DaySVG } from '@sbercloud/uikit-product-icons';
 import { Avatar } from '@snack-uikit/avatar';
-import { DaySVG } from '@snack-uikit/icons';
 import { SelectionSingleValueType } from '@snack-uikit/list';
 import { Tag } from '@snack-uikit/tag';
 

@@ -30,11 +30,11 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "9.2.1",
     "@sbercloud/uikit-product-mobile-tooltip": "0.2.0",
-    "@snack-uikit/accordion": "0.7.14",
-    "@snack-uikit/button": "0.17.4",
-    "@snack-uikit/toggles": "0.10.3",
-    "@snack-uikit/typography": "0.6.2",
-    "@snack-uikit/utils": "3.3.0",
+    "@snack-uikit/accordion": "0.7.17",
+    "@snack-uikit/button": "0.17.5",
+    "@snack-uikit/toggles": "0.10.4",
+    "@snack-uikit/typography": "0.6.3",
+    "@snack-uikit/utils": "3.4.0",
     "classnames": "2.3.2",
     "lodash.debounce": "4.0.8"
   },

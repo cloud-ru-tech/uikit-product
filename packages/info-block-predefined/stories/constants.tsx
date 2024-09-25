@@ -1,3 +1,3 @@
-import { PlaceholderSVG } from '@snack-uikit/icons';
+import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 
 export const BUTTON_PROPS = { label: 'Label text', icon: <PlaceholderSVG /> };
