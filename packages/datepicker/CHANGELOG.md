@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.15.39 (2024-09-25)
+
+
+### Dependencies
+
+* **[PDS-611](https://jira.sbercloud.tech/browse/PDS-611):** up deps ([c30ac4c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+
+
+
 ## 0.15.38 (2024-09-16)
 
 ### Only dependencies have been changed
@@ -895,7 +906,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.11.74](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.73...@sbercloud/uikit-product-datepicker@0.11.74) (2022-11-28)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-datepicker
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button@5.4.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@9.2.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.11.73](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-datepicker@0.11.72...@sbercloud/uikit-product-datepicker@0.11.73) (2022-11-28)
 

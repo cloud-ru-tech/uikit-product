@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.5 (2024-09-25)
+
+
+### Dependencies
+
+* **[PDS-611](https://jira.sbercloud.tech/browse/PDS-611):** up deps ([c30ac4c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c30ac4c2adb7c00e84fbe557d85314add6b6977a))
+
+
+
+
+
 ## 0.11.4 (2024-09-16)
 
 ### Only dependencies have been changed
@@ -241,7 +252,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.9.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.9.0...@sbercloud/uikit-product-charts@0.9.1) (2022-10-10)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-charts
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-localization@0.11.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/localization/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.6.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 # [0.9.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.8.29...@sbercloud/uikit-product-charts@0.9.0) (2022-09-28)
 
