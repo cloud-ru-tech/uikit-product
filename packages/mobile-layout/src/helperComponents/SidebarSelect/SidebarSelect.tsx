@@ -13,13 +13,22 @@ import { SidebarItem } from './types';
 
 export type SidebarSelectProps = WithSupportProps<{
   items: SidebarItem[];
+  footerItems?: SidebarItem[];
   selected?: string | number;
   onSelect?(id: string | number): void;
   className?: string;
 }>;
 
-export function SidebarSelect({ className, items, selected, onSelect, ...otherProps }: SidebarSelectProps) {
+export function SidebarSelect({
+  className,
+  items,
+  footerItems = [],
+  selected,
+  onSelect,
+  ...otherProps
+}: SidebarSelectProps) {
   const list = useItemsContent(items, onSelect);
+  const footerList = useItemsContent(footerItems);
   const [isOpen, setIsOpen] = useState(false);
   const selectedItem = items.find(item => item.id === selected);
 
@@ -35,7 +44,7 @@ export function SidebarSelect({ className, items, selected, onSelect, ...otherPr
     <>
       <MobileDroplist
         selection={{ mode: 'single', value: selected, onChange: handleSelect }}
-        items={list}
+        items={[...list, ...footerList]}
         open={isOpen}
         onOpenChange={setIsOpen}
       >
