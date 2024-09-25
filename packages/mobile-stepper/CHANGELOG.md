@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.4 (2024-09-25)
+
+
+### Bug Fixes
+
+* **[ONB-2187](https://jira.sbercloud.tech/browse/ONB-2187):** fix contexts for adaptive stepper ([e23f22a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e23f22af39a954d6607153b9d4c438f442092421))
+
+
+
+
+
 ## 0.1.3 (2024-09-25)
 
 
