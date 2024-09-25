@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.2 (2024-09-25)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-modal-predefined@0.3.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal-predefined/CHANGELOG.md)
+
+
+
+
+
 ## 0.5.1 (2024-09-25)
 
 

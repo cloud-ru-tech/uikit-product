@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.4 (2024-09-25)
+
+
+### Bug Fixes
+
+* **EVOSCV-0000:** hide optional body in delete modal ([f804045](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f804045af134235d18ade25bbd67625da2c66241))
+
+
+
+
+
 ## 0.3.3 (2024-09-25)
 
 
