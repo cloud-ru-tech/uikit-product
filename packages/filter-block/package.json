@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-filter-block",
   "title": "React Filter Block",
-  "version": "0.5.39",
+  "version": "0.5.40",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -27,9 +27,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button": "5.4.38",
-    "@sbercloud/uikit-product-checkbox": "3.2.37",
-    "@sbercloud/uikit-product-radio": "3.2.37",
+    "@sbercloud/uikit-product-button": "5.4.39",
+    "@sbercloud/uikit-product-checkbox": "3.2.38",
+    "@sbercloud/uikit-product-radio": "3.2.38",
     "@sbercloud/uikit-product-theme": "0.40.0",
     "@sbercloud/uikit-product-typography": "1.3.0",
     "@sbercloud/uikit-product-utils": "3.6.1"

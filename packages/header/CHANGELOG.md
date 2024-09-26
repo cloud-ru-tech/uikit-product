@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.28.3 (2024-09-26)
+
+
+### Bug Fixes
+
+* **[FF-4988](https://jira.sbercloud.tech/browse/FF-4988):** stylelint deprecation warnings ([a21bc05](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a21bc05bf1e843e58193d01aaf81b066c2e24cd7))
+
+
+
+
+
 ## 2.28.2 (2024-09-25)
 
 ### Only dependencies have been changed

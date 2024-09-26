@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.32 (2024-09-26)
+
+
+### Bug Fixes
+
+* **[FF-4988](https://jira.sbercloud.tech/browse/FF-4988):** stylelint deprecation warnings ([a21bc05](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a21bc05bf1e843e58193d01aaf81b066c2e24cd7))
+
+
+
+
+
 ## 0.10.31 (2024-09-25)
 
 ### Only dependencies have been changed
@@ -823,7 +834,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.2.4...@sbercloud/uikit-product-error-pages@0.2.5) (2022-11-17)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-error-pages
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@9.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-predefined-icons-private@1.4.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/predefined-icons-private/CHANGELOG.md)
 
 ## [0.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-error-pages@0.2.3...@sbercloud/uikit-product-error-pages@0.2.4) (2022-11-17)
 
