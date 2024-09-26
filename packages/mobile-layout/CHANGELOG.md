@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2024-09-26)
+
+
+### Features
+
+* **[PDS-799](https://jira.sbercloud.tech/browse/PDS-799):** added footerItems ([a79fab2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a79fab221491e76bba6dd2bb0b7464468adf5825))
+
+
+
+
+
 ## 0.8.3 (2024-09-25)
 
 ### Only dependencies have been changed

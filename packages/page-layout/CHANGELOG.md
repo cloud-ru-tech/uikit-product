@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.14.0 (2024-09-26)
+
+
+### BREAKING CHANGES
+
+
+* **[PDS-799](https://jira.sbercloud.tech/browse/PDS-799):** updated list pin-bottom usage in sidebar, added afterContent to header ([23024ca](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/23024cafeb9f31f422b42a420b1b5d46efe88c23))
+
+
+
+
 ## 0.13.2 (2024-09-25)
 
 ### Only dependencies have been changed
