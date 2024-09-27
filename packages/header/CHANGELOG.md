@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.29.0 (2024-09-27)
+
+
+### Features
+
+* **[FF-5522](https://jira.sbercloud.tech/browse/FF-5522):** add custom logo to header ([ffc0cb7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ffc0cb73ce5644653fa3d8bad1aa0b79c4daa80c))
+
+
+
+
+
 ## 2.28.3 (2024-09-26)
 
 
