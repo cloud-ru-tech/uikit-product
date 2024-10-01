@@ -95,6 +95,7 @@ export type Platform = {
 export type Workspace = {
   id: string;
   name: string;
+  tag?: ReactElement;
 };
 
 type ValueOf<T> = T[keyof T];

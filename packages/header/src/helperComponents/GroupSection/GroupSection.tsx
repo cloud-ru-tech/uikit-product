@@ -213,6 +213,12 @@ export function GroupSection({
                 ),
                 afterContent: (
                   <>
+                    {item.new && (
+                      <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
+                    )}
+
+                    {item?.tag}
+
                     {item.actions && item.actions.length > 0 ? (
                       <GroupSectionItemDroplist
                         actions={item.actions}
@@ -220,10 +226,6 @@ export function GroupSection({
                         onItemClick={closeDropdown}
                       />
                     ) : undefined}
-
-                    {item.new && (
-                      <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
-                    )}
                   </>
                 ),
                 id: item.id,

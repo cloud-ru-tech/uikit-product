@@ -6,6 +6,7 @@ export type Item = {
   id: string;
   name: string;
   logo?: ReactElement;
+  tag?: ReactElement;
   onEdit?(): void;
   actions?: BaseItemProps[];
   new?: boolean;

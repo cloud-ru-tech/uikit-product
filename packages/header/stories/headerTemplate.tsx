@@ -14,6 +14,7 @@ import {
 import { PageServices } from '@sbercloud/uikit-product-page-layout';
 import { LayoutType } from '@sbercloud/uikit-product-utils';
 import { HotSpotProps } from '@snack-uikit/hot-spot';
+import { Tag } from '@snack-uikit/tag';
 import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
 
@@ -91,7 +92,15 @@ const DEFAULT_PLATFORM = { id: '1', name: 'Evolution', logo: <EvolutionPlatformL
 const WORKSPACES = {
   selectedWorkspace: { id: '1', name: 'Workspace 1' },
   list: [
-    { id: '1', name: 'Workspace 1' },
+    {
+      id: '1',
+      name: 'Workspace 1',
+      tag: (
+        <Tooltip tip='This workspace is deprecated'>
+          <Tag label='Deprecated' appearance='neutral' />
+        </Tooltip>
+      ),
+    },
     { id: '2', name: 'Workspace 2' },
     { id: '3', name: 'Workspace 3' },
     { id: '4', name: 'W'.repeat(16) },
