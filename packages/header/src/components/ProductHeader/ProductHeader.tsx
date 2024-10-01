@@ -73,6 +73,7 @@ export type ProductHeaderProps = WithSupportProps<
     pagePath?: BreadcrumbsProps['items'];
     settings?: SettingOption[];
     onHelpMenuClick?(): void;
+    onMainMenuClick?(): void;
     notifications?: NotificationsProps;
     financialMenu?: FinancialMenuProps;
     userMenu?: Pick<
@@ -98,6 +99,7 @@ export function ProductHeader({
   className,
   homePageUrl,
   onLogoClick,
+  onMainMenuClick,
   drawerMenu: {
     links,
     pinnedCards,
@@ -148,6 +150,11 @@ export function ProductHeader({
     setIsMainMenuOpen(false);
     onClose?.();
   }, [onClose]);
+
+  const handleMainMenuClick = useCallback(() => {
+    setIsMainMenuOpen(true);
+    onMainMenuClick?.();
+  }, [onMainMenuClick]);
 
   const visibleSettings = useMemo(() => {
     let filteredSettings = settings?.filter(item => !item?.hidden);
@@ -204,7 +211,7 @@ export function ProductHeader({
         className={className}
         homePageUrl={homePageUrl}
         onLogoClick={onLogoClick}
-        onMainMenuClick={() => setIsMainMenuOpen(true)}
+        onMainMenuClick={handleMainMenuClick}
         showMainMenu={showMainMenu}
         disableMainMenu={disableMainMenu}
         logo={logo}
