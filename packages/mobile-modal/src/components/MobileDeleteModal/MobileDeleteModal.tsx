@@ -15,8 +15,10 @@ export type MobileDeleteModalProps = Pick<MobileModalCustomProps, 'open' | 'onCl
     titleTooltip?: MobileModalCustom.HeaderProps['titleTooltip'];
     /** Тип удаляемого объекта. Отображается в заголовке модального окна */
     objectType?: string;
-    /** Колбек нажатия кнопки удаления */
-    onDelete(): void;
+    /** Колбек нажатия кнопки удаления
+     *  @param onClose колбэк для закрытия модального окна
+     */
+    onDelete(onClose: () => void): void;
     /** Состояние загрузки кнопки удаления */
     deleting?: boolean;
     /** Описание */
@@ -59,7 +61,7 @@ export function MobileDeleteModal({
   };
 
   const handleDelete = handleSubmit(() => {
-    onDelete();
+    onDelete(handleClose);
   });
 
   return (
