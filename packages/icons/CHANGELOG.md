@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 9.4.0 (2024-10-03)
+
+
+### Bug Fixes
+
+* **[AICW-6045](https://jira.sbercloud.tech/browse/AICW-6045):** correct pipelines, repo's icons ([59e5b2f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/59e5b2fb68e1818df0472c70025a6ef8d84c1952))
+
+
+### Features
+
+* **[AICW-6045](https://jira.sbercloud.tech/browse/AICW-6045):** add DevTools services icons ([40e61d7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/40e61d7c6c9cfc0b47a1c681adf4ed6df40ea293))
+
+
+
+
+
 ## 9.3.1 (2024-09-26)
 
 **Note:** Version bump only for package @sbercloud/uikit-product-icons
