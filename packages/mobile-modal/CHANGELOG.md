@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.6 (2024-10-03)
+
+
+### Bug Fixes
+
+* **[CORESERV-5502](https://jira.sbercloud.tech/browse/CORESERV-5502):** Add onClose param to onDelete props in DeleteModal. ([5c7239e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5c7239e3ea6b2f58b94910976b3de486e9ca5044))
+
+
+
+
+
 ## 0.5.5 (2024-10-03)
 
 ### Only dependencies have been changed
