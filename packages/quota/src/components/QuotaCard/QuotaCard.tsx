@@ -16,7 +16,7 @@ export type QuotaCardProps = WithSupportProps<{
 
 export function QuotaCard({ loading, title, limit, created, increaseLink, onRetry, ...rest }: QuotaCardProps) {
   const available = (limit ?? 0) - (created ?? 0);
-  const exceeded = available < 0;
+  const exceeded = available <= 0;
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
