@@ -5,6 +5,7 @@ import { columnHighlightPlugin } from '../plugins/columnHighlightPlugin';
 import { legendAsTooltipPlugin } from '../plugins/legendAsTooltipPlugin';
 
 export const boxPlotOptions: uPlot.Options = {
+  id: 'boxPlot',
   title: 'Distribution of object predictions by bin',
   width: 800,
   height: 600,

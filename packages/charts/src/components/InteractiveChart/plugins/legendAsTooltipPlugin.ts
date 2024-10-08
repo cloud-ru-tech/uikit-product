@@ -8,7 +8,8 @@ export function legendAsTooltipPlugin({ className = '', style = { backgroundColo
   let legendEl;
 
   function init(u: uPlot, opts) {
-    legendEl = u.root.querySelector('.u-legend') as Element;
+    const uniqId = u.root.id;
+    legendEl = u.root.querySelector(`#${uniqId} > .u-legend`) as Element;
 
     legendEl.classList.remove('u-inline');
     className && legendEl.classList.add(className);

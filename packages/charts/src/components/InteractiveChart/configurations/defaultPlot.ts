@@ -1,6 +1,7 @@
 import { wheelZoomPlugin } from '../plugins/wheelZoomPlugin';
 
 export const defaultPlotOptions: uPlot.Options = {
+  id: 'defaultPlot',
   title: 'Title',
   width: 800,
   height: 600,
