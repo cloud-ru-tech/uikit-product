@@ -48,6 +48,12 @@ export type MobileTableProps<TData extends object> = Pick<
   | 'noResultsState'
   | 'errorDataState'
   | 'sorting'
+  | 'pagination'
+  | 'pageCount'
+  | 'manualFiltering'
+  | 'manualPagination'
+  | 'manualSorting'
+  | 'getRowId'
 > &
   WithSupportProps<{
     headlineId?: string;
@@ -75,7 +81,13 @@ export function MobileTable<TData extends object>({
   loading,
   dataError,
   dataFiltered,
+  pagination: paginationProp,
+  pageCount,
   sorting: sortingProp,
+  manualSorting = false,
+  manualPagination = false,
+  manualFiltering = false,
+  getRowId,
   ...rest
 }: MobileTableProps<TData>) {
   const defaultPaginationState = useMemo(() => ({ pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE }), []);
@@ -83,7 +95,7 @@ export function MobileTable<TData extends object>({
   const { state: sorting, onStateChange: onSortingChange } = useStateControl<SortingState>(sortingProp, []);
   const { state: globalFilter, onStateChange: onGlobalFilterChange } = useStateControl<string>(search, '');
   const { state: pagination, onStateChange: onPaginationChange } = useStateControl<PaginationState>(
-    undefined,
+    paginationProp,
     defaultPaginationState,
   );
 
@@ -96,14 +108,16 @@ export function MobileTable<TData extends object>({
     getSortedRowModel: getSortedRowModel(),
 
     state: { pagination, globalFilter, sorting },
+    pageCount,
     onPaginationChange,
     onSortingChange,
     globalFilterFn: enableFuzzySearch ? fuzzyFilter : 'includesString',
 
     enableFilters: true,
-    manualSorting: false,
-    manualPagination: false,
-    manualFiltering: false,
+    manualSorting,
+    manualPagination,
+    manualFiltering,
+    getRowId,
   });
 
   const { loadingTable } = useLoadingTable({
