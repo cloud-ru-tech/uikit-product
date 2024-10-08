@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.22 (2024-10-08)
+
+
+### Bug Fixes
+
+* **[PDS-876](https://jira.sbercloud.tech/browse/PDS-876):** quota card limit error ([d12d663](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d12d663111336c5d9f38d912f323b09230e2a3c4))
+
+
+
+
+
 ## 0.1.21 (2024-10-03)
 
 ### Only dependencies have been changed

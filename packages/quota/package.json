@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-quota",
   "title": "Quota",
-  "version": "0.1.21",
+  "version": "0.1.22",
   "sideEffects": [
     "*.css",
     "*.woff",
