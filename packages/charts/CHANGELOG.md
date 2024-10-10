@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.6 (2024-10-10)
+
+
+### Bug Fixes
+
+* **[HYCL-2303](https://jira.sbercloud.tech/browse/HYCL-2303):** fix boxPlot chart selector id ([73a7451](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/73a74510570c4d46984349385536bb20c2a26d2b))
+
+
+
+
+
 ## 0.11.5 (2024-09-25)
 
 
