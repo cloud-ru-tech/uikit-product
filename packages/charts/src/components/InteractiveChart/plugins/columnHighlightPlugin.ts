@@ -5,13 +5,13 @@
 import uPlot from 'uplot';
 
 export function columnHighlightPlugin({ className = '', style = { backgroundColor: 'rgba(128,128,128,0.1)' } } = {}) {
-  let underEl, overEl, highlightEl: HTMLDivElement, currIdx: number;
+  let underEl, overEl, currIdx: number;
 
   function init(u: uPlot) {
     underEl = u.under;
     overEl = u.over;
 
-    highlightEl = document.createElement('div');
+    const highlightEl = document.createElement('div');
 
     className && highlightEl.classList.add(className);
 
@@ -27,6 +27,8 @@ export function columnHighlightPlugin({ className = '', style = { backgroundColo
 
     underEl.appendChild(highlightEl);
 
+    u._highlightEl = highlightEl;
+
     // show/hide highlight on enter/exit
     overEl.addEventListener('mouseenter', () => {
       highlightEl.style.display = null;
@@ -39,6 +41,7 @@ export function columnHighlightPlugin({ className = '', style = { backgroundColo
   function update(u) {
     if (currIdx !== u.cursor.idx) {
       currIdx = u.cursor.idx;
+      const highlightEl = u._highlightEl;
 
       const dx = u.scales.x.max - u.scales.x.min;
       const width = u.bbox.width / dx / devicePixelRatio;

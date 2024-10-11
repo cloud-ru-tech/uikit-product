@@ -5,11 +5,8 @@
 import uPlot from 'uplot';
 
 export function legendAsTooltipPlugin({ className = '', style = { backgroundColor: '#373E45', color: '#fff' } } = {}) {
-  let legendEl;
-
   function init(u: uPlot, opts) {
-    const uniqId = u.root.id;
-    legendEl = u.root.querySelector(`#${uniqId} > .u-legend`) as Element;
+    const legendEl = u.root.querySelector(`.u-legend`) as Element;
 
     legendEl.classList.remove('u-inline');
     className && legendEl.classList.add(className);
@@ -48,6 +45,7 @@ export function legendAsTooltipPlugin({ className = '', style = { backgroundColo
 
   function update(u) {
     const { left, top } = u.cursor;
+    const legendEl = u.root.querySelector(`.u-legend`) as Element;
     legendEl.style.transform = 'translate(' + (left + 15) + 'px, ' + top + 'px)';
   }
 
