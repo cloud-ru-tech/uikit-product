@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.7 (2024-10-11)
+
+
+### Bug Fixes
+
+* **[HYCL-2303](https://jira.sbercloud.tech/browse/HYCL-2303):** fix bug with closure element ([3605f5c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3605f5c7a320d2f96c0c992b1c5966c5780e8750))
+
+
+
+
+
 ## 0.11.6 (2024-10-10)
 
 
