@@ -1,5 +1,5 @@
 import { formatNumber } from '@sbercloud/ft-formatters';
-import { RubleSVG } from '@sbercloud/uikit-product-icons';
+import { CostControlSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { HotSpot, HotSpotProps } from '@snack-uikit/hot-spot';
 
@@ -45,7 +45,7 @@ export function ButtonFinancial({
           </>
         )}
 
-        <RubleSVG />
+        <CostControlSVG />
       </button>
     </HotSpot>
   );
