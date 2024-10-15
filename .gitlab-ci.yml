@@ -1,4 +1,4 @@
 include:
   - project: sbercloud-ui/cicd
-    ref: master
+    ref: fix-previos-changelog
     file: /gitlab-ci-uikit-product.yml
