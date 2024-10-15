@@ -1,11 +1,10 @@
 import { MouseEventHandler, ReactNode, useEffect, useState } from 'react';
 
-import { MainMenuSVG } from '@sbercloud/uikit-product-icons';
+import { CloudLogoSVG, MainMenuSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Skeleton } from '@snack-uikit/skeleton';
 
-import { CloudRuLogo } from '../icons';
 import styles from './styles.modules.scss';
 
 export type HeaderLayoutProps = WithSupportProps<{
@@ -53,7 +52,7 @@ function LogoWithFallBack({ path, loading }: { path?: string; loading?: boolean 
     );
   }
 
-  return <CloudRuLogo />;
+  return <CloudLogoSVG />;
 }
 
 export function HeaderLayout({
