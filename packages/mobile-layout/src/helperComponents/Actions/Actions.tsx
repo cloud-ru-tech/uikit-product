@@ -52,6 +52,7 @@ export function Actions({ items }: ActionsProps) {
           open={isOpen}
           onOpenChange={setIsOpen}
           items={hiddenActions.map(action => ({
+            ...action,
             content: { option: action.label ?? '' },
             onClick: event => {
               setIsOpen(false);
