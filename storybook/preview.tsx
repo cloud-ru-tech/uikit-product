@@ -105,9 +105,20 @@ const parameters: Parameters = {
   },
   darkMode: {
     // Override the default dark theme
-    dark: { ...themes.dark, ...brandInfo, base: 'dark', appPreviewBg: 'transparent' },
+    dark: {
+      ...themes.dark,
+      ...brandInfo,
+      base: 'dark',
+      appPreviewBg: 'transparent',
+      brandImage: './packages/icons/svgs/color/logos/CloudFullLogoDark.svg',
+    },
     // Override the default light theme
-    light: { ...themes.normal, ...brandInfo, base: 'light' },
+    light: {
+      ...themes.normal,
+      ...brandInfo,
+      base: 'light',
+      brandImage: './packages/icons/svgs/color/logos/CloudFullLogoLight.svg',
+    },
   },
 };
 

@@ -3,10 +3,10 @@ import { ArgTypes } from '@storybook/react';
 import { useEffect, useMemo } from 'react';
 
 import {
+  CostControlSVG,
   DetalisationSVG,
   EmailSVG,
   FileSVG,
-  MoneySVG,
   PlaceholderSVG,
   SettingsSVG,
   UsersSVG,
@@ -543,7 +543,7 @@ export const ARGS: StoryProps = {
     },
     { id: 'settings', label: 'Настройки организации', icon: <SettingsSVG />, onClick: () => {}, hidden: true },
     { id: 'users', label: 'Пользователи', icon: <UsersSVG />, onClick: () => {}, hidden: true },
-    { id: 'billing', label: 'Контроль затрат', icon: <MoneySVG />, onClick: () => {} },
+    { id: 'billing', label: 'Контроль затрат', icon: <CostControlSVG />, onClick: () => {} },
     {
       hidden: false,
       id: DIVIDER_SETTING_OPTION_ID,
