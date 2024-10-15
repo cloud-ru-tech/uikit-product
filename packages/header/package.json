@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-header",
   "title": "Header",
-  "version": "2.30.3",
+  "version": "2.31.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -29,8 +29,8 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-formatters": "3.1.0",
-    "@sbercloud/uikit-product-card-predefined": "0.5.9",
-    "@sbercloud/uikit-product-icons": "9.5.0",
+    "@sbercloud/uikit-product-card-predefined": "0.5.10",
+    "@sbercloud/uikit-product-icons": "9.6.0",
     "@sbercloud/uikit-product-utils": "3.6.1",
     "@snack-uikit/avatar": "0.6.2",
     "@snack-uikit/breadcrumbs": "0.8.57",

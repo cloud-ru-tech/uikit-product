@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.31.0 (2024-10-15)
+
+
+### Bug Fixes
+
+* **[RM-2435](https://jira.sbercloud.tech/browse/RM-2435):** Change finance drop list item icon to another one ([84ed3fc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/84ed3fc909b2092d3d8291035f9b0d8d878d87a2))
+
+
+### Features
+
+* **[PDS-884](https://jira.sbercloud.tech/browse/PDS-884):** correct cloud logo for both modifications ([55e13e0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/55e13e092592d5575f5cf37939d74ddc5d994bde))
+
+
+
+
+
 ## 2.30.3 (2024-10-15)
 
 ### Only dependencies have been changed

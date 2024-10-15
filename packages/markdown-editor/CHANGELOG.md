@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.43 (2024-10-15)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-link@3.2.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/link/CHANGELOG.md)
+* [@sbercloud/uikit-product-textarea-private@2.6.48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/textarea-private/CHANGELOG.md)
+
+
+
+
+
 ## 0.4.42 (2024-10-15)
 
 ### Only dependencies have been changed

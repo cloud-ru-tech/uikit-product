@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.8 (2024-10-15)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-copy-line@0.5.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/copy-line/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-drawer@0.4.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-tooltip@0.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-modal-predefined@0.3.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/modal-predefined/CHANGELOG.md)
+
+
+
+
+
 ## 0.5.7 (2024-10-15)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 9.6.0 (2024-10-15)
+
+
+### Features
+
+* **[PDS-884](https://jira.sbercloud.tech/browse/PDS-884):** correct cloud logo for both modifications ([55e13e0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/55e13e092592d5575f5cf37939d74ddc5d994bde))
+
+
+
+
+
 # 9.5.0 (2024-10-15)
 
 
