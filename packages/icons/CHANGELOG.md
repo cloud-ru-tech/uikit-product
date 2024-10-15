@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 9.5.0 (2024-10-15)
+
+
+### Bug Fixes
+
+* **[RM-2435](https://jira.sbercloud.tech/browse/RM-2435):** Remove icons: CoinsSVG, duplicate CostСotrolSVG, MoneyFilledSVG ([f8d060d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f8d060d30badcae4ac549b33f54843102a76c0e7))
+
+
+### Features
+
+* **[PDS-905](https://jira.sbercloud.tech/browse/PDS-905):** Clickhouse and ResourceManager icons have been added ([d54652f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d54652fa845bb853b81a092c651b4fe1538a8590))
+
+
+
+
+
 # 9.4.0 (2024-10-03)
 
 
