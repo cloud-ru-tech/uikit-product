@@ -1,7 +1,7 @@
 import { formatNumber } from '@sbercloud/ft-formatters';
 import { CostControlSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { HotSpot, HotSpotProps } from '@snack-uikit/hot-spot';
+import { HotSpot } from '@snack-uikit/hot-spot';
 
 import { textProvider, Texts } from '../../../../helpers';
 import { CURRENCY_MAP } from '../../constants';
@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 export type ButtonFinancialProps = {
   value: number;
   type?: 'balance' | 'bonuses';
-  hotSpot?: HotSpotProps['appearance'];
+  hotSpot?: boolean;
   status?: 'default' | 'attention';
   valueVisible?: boolean;
   onClick?(): void;
@@ -19,7 +19,7 @@ export type ButtonFinancialProps = {
 export function ButtonFinancial({
   value,
   type = 'balance',
-  hotSpot,
+  hotSpot = false,
   status = 'default',
   valueVisible,
   onClick,
@@ -27,7 +27,7 @@ export function ButtonFinancial({
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   return (
-    <HotSpot enabled={Boolean(hotSpot)} appearance={hotSpot} offsetY={4} offsetX={-4}>
+    <HotSpot enabled={hotSpot} appearance={status === 'attention' ? 'red' : 'primary'} offsetY={4} offsetX={-4}>
       <button
         data-test-id='header__financial-menu__button'
         className={styles.button}

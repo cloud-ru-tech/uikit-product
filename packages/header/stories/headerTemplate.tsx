@@ -507,7 +507,7 @@ export const ARGS: StoryProps = {
   ],
 
   showFinancialMenu: true,
-  financialMenuHotSpot: 'green',
+  financialMenuHotSpot: true,
   financialMenuButtonType: 'bonuses',
   financialMenuButtonStatus: 'default',
   financialMenuLoading: false,
@@ -779,8 +779,7 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   financialMenu: { table: { disable: true } },
   financialMenuHotSpot: {
     name: '[Story]: financial menu -> hot spot',
-    control: { type: 'radio' },
-    options: ['none', 'green', 'red'],
+    control: { type: 'boolean' },
     if: { arg: 'showFinancialMenu', eq: true },
   },
   financialMenuButtonType: {
