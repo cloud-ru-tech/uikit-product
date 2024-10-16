@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-import { AlarmFilledSVG, BellSVG } from '@sbercloud/uikit-product-icons';
+import { AlarmFilledSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { NotificationCard, NotificationCardProps, NotificationPanel } from '@snack-uikit/notification';
 
@@ -166,8 +166,8 @@ export function Notifications({
           {showError && (
             <NotificationPanel.Blank
               icon={{
-                icon: BellSVG,
-                appearance: 'red',
+                icon: CrossSVG,
+                appearance: 'neutral',
               }}
               title={textProvider(languageCode, Texts.NotificationsErrorTitle)}
               description={textProvider(languageCode, Texts.NotificationsErrorDescription)}

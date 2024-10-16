@@ -54,6 +54,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showSettings: boolean;
   showHelpMenu: boolean;
   showNotifications: boolean;
+  showNotificationError: boolean;
   showUserMenu: boolean;
   showUserMenuManagement: boolean;
 
@@ -211,6 +212,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showUserMenuManagement,
 
     showUserMenuLogout,
+    showNotificationError,
     userMenu,
     organizations,
     showAddOrganization,
@@ -366,6 +368,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
             showNotifications && args.notifications
               ? {
                   ...args.notifications,
+                  error: showNotificationError,
                   count: notifyCards.filter(card => card.unread).length,
                   items: notifyCards,
                   loadCards: {
@@ -554,6 +557,7 @@ export const ARGS: StoryProps = {
   onHelpMenuClick: () => {},
 
   showNotifications: true,
+  showNotificationError: false,
 
   notifications: {
     count: 0,
@@ -734,6 +738,8 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   showPlatformsLoading: { name: '[Story]: show skeleton for platforms', type: 'boolean' },
 
   showWorkspaces: { name: '[Story]: show workspaces', type: 'boolean' },
+
+  showNotificationError: { name: '[Story]: show notifications -> show error', type: 'boolean' },
 
   showPagePath: { name: '[Story]: show page path', type: 'boolean' },
   pagePath: { table: { disable: true } },
