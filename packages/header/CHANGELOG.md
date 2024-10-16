@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.31.3 (2024-10-16)</small>
+
+* fix(PDS-885)!: hotSpot prop is boolean ([56c334e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/56c334e))
+
+
+
+
+
 ## <small>2.31.2 (2024-10-16)</small>
 
 * fix(PDS-755): error icon in Notifications ([e7bf537](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e7bf537))
