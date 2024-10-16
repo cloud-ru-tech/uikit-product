@@ -113,6 +113,7 @@
     "react-hook-form": "7.53.0",
     "react-minimal-pie-chart": "8.4.0",
     "react-syntax-highlighter": "15.5.0",
+    "rimraf": "6.0.1",
     "sass": "1.79.5",
     "shelljs": "0.8.5",
     "storybook": "8.3.5",
