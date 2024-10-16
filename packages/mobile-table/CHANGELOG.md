@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.3.9 (2024-10-16)</small>
+
+* feat(EVOSCV-1833): added mobile server table ([867fd20](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/867fd20))
+
+
+
+
+
 ## 0.3.8 (2024-10-15)
 
 ### Only dependencies have been changed
