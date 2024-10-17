@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.9.6 (2024-10-17)</small>
+
+* feat(EVOSCV-1832): added additional props in mobile actions ([06d5c21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/06d5c21))
+
+
+
+
+
 ## 0.9.5 (2024-10-15)
 
 ### Only dependencies have been changed
