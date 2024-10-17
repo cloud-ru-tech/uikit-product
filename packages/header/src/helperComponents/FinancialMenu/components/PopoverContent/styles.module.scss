@@ -1,44 +1,52 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
-.content {
+.contentWrapper {
   display: flex;
   flex-direction: column;
-  gap: styles-theme-variables.$dimension-1m;
-  min-width: 242px;
-  position: relative;
-  box-sizing: border-box;
-  margin: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-050m) styles-theme-variables.$dimension-2m;
+  width: 550px;
+  margin: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-050m)
+    styles-theme-variables.$dimension-2m;
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
-  gap: styles-theme-variables.$dimension-050m;
+  gap: styles-theme-variables.$dimension-2m;
   align-items: flex-start;
-  padding: styles-theme-variables.$dimension-050m 0;
 }
 
-.closeButton {
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.title {
+.titleLine {
   display: flex;
   align-items: center;
   gap: styles-theme-variables.$dimension-1m;
   width: 100%;
 }
 
-.linkWrapper {
+.titleLeft {
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-050m;
 }
 
-.agreement {
-  @include styles-theme-variables.composite-var(styles-theme-variables.$light-label-s);
-  width: 242px;
-  white-space: nowrap;
-  color: styles-theme-variables.$sys-neutral-text-main;
+.content {
+  display: grid;
+  grid-template-columns: auto auto fit-content(136px);
+  gap: 12px styles-theme-variables.$dimension-2m;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.divider,
+.grantDivider {
+  grid-column: 1 / 4;
+}
+
+.divider {
+  width: calc(100% + styles-theme-variables.$dimension-4m);
+  margin: 0 calc(-1 * styles-theme-variables.$dimension-2m);
+}
+
+.greyText {
+  color: styles-theme-variables.$sys-neutral-text-support;
 }

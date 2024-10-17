@@ -1,49 +1,27 @@
-import { MouseEventHandler } from 'react';
+import { Fragment, MouseEventHandler } from 'react';
 
 import { formatNumber } from '@sbercloud/ft-formatters';
-import { EyeClosedSVG, EyeSVG } from '@sbercloud/uikit-product-icons';
+import { CostControlSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { ButtonFunction } from '@snack-uikit/button';
-import { Link, LinkProps } from '@snack-uikit/link';
-import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
+import { Divider } from '@snack-uikit/divider';
+import { Link } from '@snack-uikit/link';
 import { SkeletonText } from '@snack-uikit/skeleton';
-import { Tooltip } from '@snack-uikit/tooltip';
-import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../../../helpers';
-import { CURRENCY_MAP } from '../../constants';
-import { PopoverRow, PopoverRowProps } from '../PopoverRow';
+import { PopoverContentProps } from '../../types';
+import { EyeButton } from '../EyeButton';
+import { FinanceInfoRow } from './components';
+import { Grant } from './components/Grant';
 import styles from './styles.module.scss';
-
-export type PopoverContentProps = {
-  loading?: boolean;
-  onClose(): void;
-  tag?: Pick<PromoTagProps, 'text' | 'appearance'>;
-  link: Required<Pick<LinkProps, 'onClick' | 'href'>>;
-  agreement?: string;
-  balance: Pick<PopoverRowProps, 'tip' | 'label' | 'onAddClick' | 'description' | 'status'> & {
-    value: number;
-    onOpenChange?(isOpen: boolean): void;
-  };
-  bonuses: Pick<PopoverRowProps, 'tip' | 'tipMoreButtonLink' | 'label' | 'onAddClick' | 'description'> & {
-    value: number;
-    onOpenChange?(isOpen: boolean): void;
-  };
-  eyeButton: {
-    dataVisible: boolean;
-    onClick?: MouseEventHandler<HTMLButtonElement>;
-  };
-};
 
 export function PopoverContent({
   loading = false,
   onClose,
-  tag,
   link,
-  agreement,
   bonuses,
   balance,
   eyeButton,
+  bonusGrants = [],
 }: PopoverContentProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -52,61 +30,51 @@ export function PopoverContent({
     onClose();
   };
 
+  const balanceValue = formatNumber(balance.value, { type: formatNumber.types.Currency });
+  const balanceActionButtonText = textProvider(languageCode, Texts.FinancialMenuBalanceAction);
+
+  const bonusGrantValue: string = formatNumber(bonuses.value, {
+    type: formatNumber.types.DigitSpaces,
+    unit: textProvider(languageCode, Texts.FinancialMenuBonusSign),
+  });
+  let bonusGrantsDesc = bonuses.description || textProvider(languageCode, Texts.FinancialMenuNoGrants);
+
+  if (bonusGrants.length !== 0) {
+    bonusGrantsDesc = '';
+  }
+  const bonusGrantActionButtonText = textProvider(languageCode, Texts.FinancialMenuBonesesAction);
+
+  const titleText = `${textProvider(languageCode, Texts.FinancialMenuTitle)} ❯`;
+
   return (
-    <div className={styles.content}>
+    <div className={styles.contentWrapper}>
       <SkeletonText lines={6} loading={loading}>
         <div className={styles.header}>
-          {tag && <PromoTag {...tag} />}
-
-          <div className={styles.title}>
-            <div className={styles.linkWrapper}>
-              <Link
-                size='m'
-                appearance='primary'
-                textMode='accent'
-                text={textProvider(languageCode, Texts.FinancialMenuTitle)}
-                {...link}
-                onClick={handleLinkClick}
-              />
+          <div className={styles.titleLine}>
+            <div className={styles.titleLeft}>
+              <CostControlSVG />
+              <Link {...link} onClick={handleLinkClick} text={titleText} size='l' appearance='neutral' />
             </div>
-
-            <Tooltip
-              tip={
-                eyeButton.dataVisible
-                  ? textProvider(languageCode, Texts.FinancialMenuEyeButtonDavaVisibleTip)
-                  : textProvider(languageCode, Texts.FinancialMenuEyeButtonDataHiddenTip)
-              }
-              placement='top'
-            >
-              <ButtonFunction
-                size='xs'
-                icon={eyeButton.dataVisible ? <EyeClosedSVG /> : <EyeSVG />}
-                onClick={eyeButton.onClick}
-              />
-            </Tooltip>
+            <EyeButton {...eyeButton} />
           </div>
-
-          {agreement && (
-            <span className={styles.agreement}>
-              <TruncateString text={agreement} />
-            </span>
-          )}
         </div>
 
-        <PopoverRow
-          {...balance}
-          label={balance.label}
-          value={`${formatNumber(balance.value, { type: formatNumber.types.DigitSpaces })} ${CURRENCY_MAP.ruble}`}
-        />
-
-        <PopoverRow
-          {...bonuses}
-          label={bonuses.label}
-          value={`${formatNumber(bonuses.value, { type: formatNumber.types.DigitSpaces })} ${textProvider(
-            languageCode,
-            Texts.FinancialMenuBonusSign,
-          )}`}
-        />
+        <div className={styles.content}>
+          <FinanceInfoRow {...balance} value={balanceValue} actionButtonText={balanceActionButtonText} />
+          <Divider className={styles.divider} />
+          <FinanceInfoRow
+            {...bonuses}
+            value={bonusGrantValue}
+            actionButtonText={bonusGrantActionButtonText}
+            description={bonusGrantsDesc}
+          />
+          {bonusGrants.map(grant => (
+            <Fragment key={grant.id}>
+              <Divider className={styles.grantDivider} />
+              <Grant {...grant} />
+            </Fragment>
+          ))}
+        </div>
       </SkeletonText>
     </div>
   );

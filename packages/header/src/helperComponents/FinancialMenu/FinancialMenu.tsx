@@ -5,8 +5,9 @@ import { DrawerCustom } from '@snack-uikit/drawer';
 import { Dropdown } from '@snack-uikit/dropdown';
 
 import { textProvider, Texts } from '../../helpers';
-import { ButtonFinancial, ButtonFinancialProps, PopoverContent, PopoverContentProps } from './components';
+import { ButtonFinancial, ButtonFinancialProps, PopoverContent, PopoverContentMobile } from './components';
 import styles from './styles.module.scss';
+import { PopoverContentProps } from './types';
 
 export type FinancialMenuProps = {
   open?: boolean;
@@ -58,7 +59,7 @@ export function MobileFinancialMenu({ button, content, open, onOpenChange }: Fin
           title={textProvider(languageCode, Texts.FinancialMenuDrawerTitle)}
           className={styles.nestedHeader}
         />
-        <PopoverContent {...content} onClose={handleClose} />
+        <PopoverContentMobile {...content} onClose={handleClose} />
       </DrawerCustom>
     </>
   );

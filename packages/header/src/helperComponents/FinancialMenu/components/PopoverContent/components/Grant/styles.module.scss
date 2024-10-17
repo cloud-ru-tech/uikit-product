@@ -1,0 +1,42 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.nameWrapper,
+.amount,
+.dateWrapper {
+  align-self: start;
+}
+
+.amount,
+.dateWrapper {
+  justify-self: end;
+}
+
+.amount,
+.date,
+.name {
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-s);
+}
+
+.amount,
+.date {
+  &[data-disabled] {
+    color: styles-tokens-element.$sys-neutral-text-disabled;
+  }
+}
+
+.dateWrapper {
+  display: flex;
+  gap: styles-tokens-element.$dimension-1m;
+  align-items: center;
+}
+
+.initialAmount,
+.date {
+  text-wrap: nowrap;
+  color: styles-tokens-element.$sys-neutral-text-support;
+}
+
+.status {
+  @include styles-tokens-element.composite-var(styles-tokens-element.$light-label-s);
+  color: styles-tokens-element.$sys-neutral-text-support;
+}

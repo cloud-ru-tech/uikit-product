@@ -26,6 +26,7 @@ import {
   FinancialMenuProps,
   MLSpacePlatformLogo,
 } from '../src/helperComponents';
+import { GrantProps } from '../src/helperComponents/FinancialMenu/components/PopoverContent/components/Grant';
 import styles from './styles.module.scss';
 
 export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
@@ -51,6 +52,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   financialMenuBonusesTipMoreButtonLink: string;
   financialMenuBonusesLabel: string;
   financialMenuBonusesDescription: string;
+  financialMenuBonusGrants: GrantProps[];
   showSettings: boolean;
   showHelpMenu: boolean;
   showNotifications: boolean;
@@ -204,6 +206,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     financialMenuBonusesTipMoreButtonLink,
     financialMenuBonusesLabel,
     financialMenuBonusesDescription,
+    financialMenuBonusGrants,
 
     showSettings,
     showHelpMenu,
@@ -368,6 +371,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                       tipMoreButtonLink: financialMenuBonusesTipMoreButtonLink,
                       description: financialMenuBonusesDescription,
                     },
+                    bonusGrants: financialMenuBonusGrants,
                   },
                 }
               : undefined
@@ -528,17 +532,49 @@ export const ARGS: StoryProps = {
   financialMenuPromoTag: 'green',
   financialMenuPromoTagContent: '~ на 14 дней',
   financialMenuAgreement: 'Д/Д-СМ/5253/23 от 09.08.2023',
-  financialMenuBalanceValue: 800.64,
+  financialMenuBalanceValue: 142911.6903025,
   financialMenuBalanceTip: 'Баланс по договору с учетом текущего потребления',
   financialMenuBalanceLabel: 'Баланс',
   financialMenuBalanceDescription: '',
   financialMenuBalanceStatus: 'default',
   financialMenuBonusesValue: 12345,
   financialMenuBonusesTip:
-    'Сейчас вы платите бонусами из расчета 1 бонус = 1 ₽. После того как бонусы закончатся, оплата продолжится с основного баланса',
+    'Грант – это бонусы, которые можно потратить на сервисы из условий гранта. У грантов может быть разный срок действия.',
   financialMenuBonusesTipMoreButtonLink: 'https://cloud.ru/docs/billing/ug/topics/concepts__billing_bonus.html',
-  financialMenuBonusesLabel: 'Бонусы',
+  financialMenuBonusesLabel: 'Гранты',
   financialMenuBonusesDescription: 'Расходуется до 31 марта',
+  financialMenuBonusGrants: [
+    {
+      id: 'c267609c-cb9b-4ced-ab9f-462557b9b0bd',
+      name: 'Бессрочный_грант',
+      beginAt: '2024-10-03T21:00:00Z',
+      expireAt: '2031-10-19T20:59:00Z',
+      initialAmount: '15000',
+      currentAmount: '15000',
+      spentAmount: '',
+      status: 'BONUS_GRANT_STATUS_READY',
+    },
+    {
+      id: 'f0bd923b-8f92-4da3-9247-ecf93c66c977',
+      name: 'Грант_со_сроком',
+      beginAt: '2024-10-03T21:00:00Z',
+      expireAt: '2024-12-04T20:59:59.900Z',
+      initialAmount: '10000',
+      currentAmount: '9000',
+      spentAmount: '1000',
+      status: 'BONUS_GRANT_STATUS_READY',
+    },
+    {
+      id: '76b038cc-9ff4-4222-bd03-86ddda9dd1d7',
+      name: 'Грант_не_активированный и очень длинное название из маркетплейса',
+      beginAt: '2024-11-30T21:00:00Z',
+      expireAt: '2025-02-06T20:59:59.900Z',
+      initialAmount: '12000',
+      currentAmount: '12000',
+      spentAmount: '',
+      status: 'BONUS_GRANT_STATUS_NOT_STARTED',
+    },
+  ],
 
   showSettings: true,
 

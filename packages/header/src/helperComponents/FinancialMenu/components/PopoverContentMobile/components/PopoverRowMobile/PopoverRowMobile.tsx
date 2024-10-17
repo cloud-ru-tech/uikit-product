@@ -5,10 +5,10 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction, ButtonTonal } from '@snack-uikit/button';
 import { QuestionTooltip } from '@snack-uikit/tooltip';
 
-import { textProvider, Texts } from '../../../../helpers';
+import { textProvider, Texts } from '../../../../../../helpers';
 import styles from './styles.module.scss';
 
-export type PopoverRowProps = {
+export type PopoverRowMobileProps = {
   label: string;
   description?: string;
   tip?: ReactNode;
@@ -19,7 +19,7 @@ export type PopoverRowProps = {
   status?: 'default' | 'attention';
 };
 
-export function PopoverRow({
+export function PopoverRowMobile({
   label,
   description,
   tip,
@@ -28,7 +28,7 @@ export function PopoverRow({
   value,
   onAddClick,
   status = 'default',
-}: PopoverRowProps) {
+}: PopoverRowMobileProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   return (

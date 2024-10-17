@@ -1,0 +1,39 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: styles-tokens-element.$dimension-1m;
+  min-width: 242px;
+  position: relative;
+  box-sizing: border-box;
+  margin: calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-050m)
+    styles-tokens-element.$dimension-2m;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  gap: styles-tokens-element.$dimension-050m;
+  align-items: flex-start;
+  padding: styles-tokens-element.$dimension-050m 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: styles-tokens-element.$dimension-1m;
+  width: 100%;
+}
+
+.linkWrapper {
+  flex-grow: 1;
+}
+
+.agreement {
+  @include styles-tokens-element.composite-var(styles-tokens-element.$light-label-s);
+  width: 242px;
+  white-space: nowrap;
+  color: styles-tokens-element.$sys-neutral-text-main;
+}
