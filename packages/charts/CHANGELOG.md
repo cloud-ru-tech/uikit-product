@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.11.8 (2024-10-18)</small>
+
+* fix(HYCL-2482): fix shadowWidth in boxPlotPlugin ([1da6644](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1da6644))
+
+
+
+
+
 ## 0.11.7 (2024-10-11)
 
 
