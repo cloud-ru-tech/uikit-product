@@ -2,9 +2,10 @@ import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
-import { H2_STYLES } from '@sbercloud/uikit-product-typography';
 
 const { BERRY_RED, EMERALD_GREEN, PURPLE } = EXPORT_VARS;
+
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { GroupChart } from '../src/chart/GroupChart';
 import { SingleChart } from '../src/chart/SingleChart';
@@ -24,7 +25,7 @@ const ChartsWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  ${H2_STYLES};
+  ${themeVars.sans.headline.m};
   margin-bottom: 60px;
 `;
 

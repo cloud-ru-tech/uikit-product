@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { TourStepExtended } from 'welcome-tour/src/components/types';
 
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
-import { Button } from '@sbercloud/uikit-product-button';
+import { ButtonFilled } from '@snack-uikit/button';
 
 import { BADGE } from '#storybookConstants';
 
@@ -90,15 +90,15 @@ function Template() {
         Welcome tour component
       </div>
       <div style={{ margin: 10, display: 'flex', flexDirection: 'column', gap: '16px' }}>
-        <Button
-          text='Start the tour'
+        <ButtonFilled
+          label='Start the tour'
           onClick={() => {
             setSteps(JoyrideSteps);
             setTourStarted(true);
           }}
         />
-        <Button
-          text='Start the tour without content'
+        <ButtonFilled
+          label='Start the tour without content'
           onClick={() => {
             setSteps(JoyrideStepsWithoutContent);
             setTourStarted(true);
@@ -107,7 +107,7 @@ function Template() {
         {successFinal && (
           <div>
             <p>Ура, тур пройден</p>
-            <Button onClick={() => setSuccessFinal(false)} text='Сброс' />
+            <ButtonFilled onClick={() => setSuccessFinal(false)} label='Сброс' />
           </div>
         )}
       </div>

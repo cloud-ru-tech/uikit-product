@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H3_STYLES, H5_STYLES, TEXT_4_STYLES } from '@sbercloud/uikit-product-typography';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { XAxisPosition } from './constants';
 import { LEGEND_HEIGHT, TICKS_SIZE, TITLE_HEIGHT, X_AXIS_LABEL_HEIGHT } from './helpers/constants';
@@ -25,7 +25,7 @@ export const GridWrapper = styled.div<{ displayAsGrid: boolean }>`
 `;
 
 export const Title = styled.h3`
-  ${H3_STYLES};
+  ${themeVars.sans.title.m};
   margin-bottom: 24px;
   font-size: 20px;
   font-weight: bold;
@@ -53,13 +53,13 @@ export const LegendTicksWrapper = styled.div`
 `;
 
 export const Tick = styled.span`
-  ${TEXT_4_STYLES};
+  ${themeVars.sans.body.m};
   color: var(${COLOR_VARS.LABEL});
   font-size: 12px;
 `;
 
 export const Cell = styled.h5<{ color: string }>`
-  ${H5_STYLES};
+  ${themeVars.sans.body.s};
   color: ${props => props.color};
   text-overflow: ellipsis;
   overflow: hidden;

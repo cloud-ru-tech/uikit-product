@@ -1,8 +1,8 @@
 import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { TEXT_1_STYLES } from '@sbercloud/uikit-product-typography';
 import { ConfigProvider, useLanguage } from '@sbercloud/uikit-product-utils';
+import { Typography } from '@snack-uikit/typography';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -19,9 +19,8 @@ const Wrapper = styled.div`
   margin: 1rem;
 `;
 
-const HooksCodeWrapper = styled.span`
-  ${TEXT_1_STYLES};
-`;
+const HooksCodeWrapper = Typography.SansHeadlineM;
+
 type StoryProps = {
   showTime: boolean;
 };

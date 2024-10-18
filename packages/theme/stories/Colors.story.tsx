@@ -2,7 +2,6 @@ import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
-import { H2_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
 
 import { BADGE } from '#storybookConstants';
 
@@ -42,11 +41,12 @@ const Text = styled.div`
 `;
 
 const Name = styled.h2`
-  ${H2_STYLES};
+  ${themeVars.sans.title.m};
 `;
 
 const Caption = styled.span`
-  ${TEXT_3_STYLES};
+  ${themeVars.sans.body.m};
+
   padding-left: 4px;
   overflow: hidden;
   text-overflow: ellipsis;

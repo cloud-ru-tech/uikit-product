@@ -12,9 +12,9 @@ import {
   withBrand,
 } from '@sbercloud/ft-storybook-brand-addon';
 import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
-import { Link } from '@sbercloud/uikit-product-link';
 import { color, globals, green, greenDark, purple, purpleDark } from '@sbercloud/uikit-product-theme';
 import { Alert } from '@snack-uikit/alert';
+import { Link } from '@snack-uikit/link';
 import { LocaleProvider } from '@snack-uikit/locale';
 
 import { ConfigProvider } from '../packages/utils/src';

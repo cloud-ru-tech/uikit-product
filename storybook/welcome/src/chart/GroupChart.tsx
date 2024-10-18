@@ -1,20 +1,20 @@
 import { styled } from '@linaria/react';
 import { PieChart, pieChartDefaultProps } from 'react-minimal-pie-chart';
 
-import { H3_STYLES } from '@sbercloud/uikit-product-typography';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { Themes, useTheme } from '@sbercloud/uikit-product-utils';
 
 import * as S from '../styles';
 import { DefaultChartProps } from '../types';
 
 const Title = styled.h3`
-  ${H3_STYLES};
+  ${themeVars.sans.title.m};
   margin-bottom: 20px;
 `;
 
 const LIGHT_THEMES = [Themes.Purple, Themes.Green];
 
-export const GroupChart = (props: DefaultChartProps) => {
+export function GroupChart(props: DefaultChartProps) {
   const { theme } = useTheme();
   const labelColor = LIGHT_THEMES.includes(theme) ? '#000' : '#fff';
 
@@ -40,4 +40,4 @@ export const GroupChart = (props: DefaultChartProps) => {
       />
     </S.Wrapper>
   );
-};
+}

@@ -2,9 +2,9 @@ import { css } from '@linaria/core';
 import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from '@sbercloud/uikit-product-button';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
-import { H1_STYLES, H3_STYLES, TEXT_2_STYLES } from '@sbercloud/uikit-product-typography';
+import { ButtonFilled } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 
 import { BADGE } from '#storybookConstants';
@@ -30,7 +30,7 @@ const ConfigBody = styled.div`
 `;
 
 const Header = styled.h1`
-  ${H1_STYLES};
+  ${themeVars.sans.headline.m};
 `;
 
 const TitleWrapper = styled.div`
@@ -38,11 +38,11 @@ const TitleWrapper = styled.div`
 `;
 
 const Title = styled.h3`
-  ${H3_STYLES};
+  ${themeVars.sans.title.m};
 `;
 
 const Caption = styled.span`
-  ${TEXT_2_STYLES};
+  ${themeVars.sans.body.m};
 `;
 
 const dividerCSS = css`
@@ -108,10 +108,10 @@ function Template({ ...args }: ConfigProviderProps) {
           <Caption>(нажми на кнопку)</Caption>
         </TitleWrapper>
         <ConfigBody>
-          <Button onClick={() => changeTheme(Themes.Purple)} text='Purple Theme' />
-          <Button onClick={() => changeTheme(Themes.PurpleDark)} text='Purple Dark Theme' />
-          <Button onClick={() => changeTheme(Themes.Green)} text='Green Theme' />
-          <Button onClick={() => changeTheme(Themes.GreenDark)} text='Green Dark Theme' />
+          <ButtonFilled onClick={() => changeTheme(Themes.Purple)} label='Purple Theme' />
+          <ButtonFilled onClick={() => changeTheme(Themes.PurpleDark)} label='Purple Dark Theme' />
+          <ButtonFilled onClick={() => changeTheme(Themes.Green)} label='Green Theme' />
+          <ButtonFilled onClick={() => changeTheme(Themes.GreenDark)} label='Green Dark Theme' />
         </ConfigBody>
       </Wrapper>
       <Wrapper>
@@ -127,8 +127,8 @@ function Template({ ...args }: ConfigProviderProps) {
           <Caption>(нажми на кнопку)</Caption>
         </TitleWrapper>
         <ConfigBody>
-          <Button onClick={() => changeLanguage(LanguageCodeType.ruRU)} text='ruRU' />
-          <Button onClick={() => changeLanguage(LanguageCodeType.enUS)} text='enUS' />
+          <ButtonFilled onClick={() => changeLanguage(LanguageCodeType.ruRU)} label='ruRU' />
+          <ButtonFilled onClick={() => changeLanguage(LanguageCodeType.enUS)} label='enUS' />
         </ConfigBody>
       </Wrapper>
     </ConfigProvider>

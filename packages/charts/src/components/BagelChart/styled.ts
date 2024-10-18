@@ -1,6 +1,6 @@
 import { styled } from '@linaria/react';
 
-import { H4_SEMIBOLD_STYLES, H5_STYLES, TEXT_3_STYLES } from '@sbercloud/uikit-product-typography';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { COLORS, GREEN_DARK_THEME, GREEN_THEME, PURPLE_DARK_THEME, PURPLE_THEME } from './themes';
 
@@ -15,7 +15,8 @@ export const Wrapper = styled.div`
 `;
 
 export const TitleWrapper = styled.div`
-  ${H5_STYLES};
+  ${themeVars.sans.title.m};
+
   color: var(${COLORS.chart.title});
   margin-bottom: 8px;
   display: flex;
@@ -24,13 +25,15 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Value = styled.text`
+  ${themeVars.sans.title.m};
+
   fill: var(${COLORS.svg.text.value});
-  ${H4_SEMIBOLD_STYLES};
   text-anchor: middle;
 `;
 
 export const Limit = styled.text`
+  ${themeVars.sans.body.m};
+
   fill: var(${COLORS.svg.text.limit});
-  ${TEXT_3_STYLES};
   text-anchor: middle;
 `;
