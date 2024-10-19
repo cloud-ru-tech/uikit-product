@@ -1,61 +1,39 @@
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-stepper';
 @import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
-.tailLine {
-  @include composite-var($stepper-step-track-line);
+.track {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: $sys-neutral-decor-default;
 
-  flex-grow: 1;
+  transform: translate(0, -50%);
+}
+
+.status {
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
   background-color: $sys-neutral-decor-default;
 }
 
-.tail {
-  display: flex;
-  flex-grow: 1;
-  flex-shrink: 1;
-  align-items: center;
-
-  min-width: $dimension-2m;
-
-  &[data-completed] .tailLine {
-    background-color: $sys-primary-accent-default;
-  }
-}
-
-.title {
-  overflow: hidden;
-  color: $sys-neutral-text-main;
-}
-
-.description {
-  overflow: hidden;
-  color: $sys-neutral-text-light;
-}
-
 .step {
-  @include composite-var($stepper-step-container);
-
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 170px;
-}
-
-.track {
-  @include composite-var($stepper-step-track);
-
-  display: flex;
-  width: 100%;
-}
-
-.statusContainer {
-  @include composite-var($stepper-step-status-container);
-
-  overflow: hidden;
-  display: flex;
-  flex-shrink: 1;
-  align-items: center;
+  position: relative;
+  min-height: 32px;
 
   margin: 0;
   padding: 0;
@@ -79,14 +57,43 @@
       color: $sys-neutral-text-light;
     }
   }
-}
 
-.content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+  &[data-state='current'] {
+    .track {
+      background-color: $sys-primary-accent-default;
+    }
+    .status {
+      display: none;
+    }
+  }
 
-.icon {
-  flex-shrink: 0;
+  &[data-state='completed'] {
+    .track,
+    .status {
+      background-color: $sys-primary-decor-default;
+      color: $sys-primary-accent-default;
+    }
+  }
+
+  &[data-state='rejected'] {
+    .track,
+    .status {
+      background-color: $sys-red-accent-default;
+      color: $sys-red-on-accent;
+    }
+  }
+
+  &[data-state='waiting'] {
+    .status {
+      display: none;
+    }
+  }
+
+  &[data-state='loading'] {
+    .track,
+    .status {
+      color: $sys-neutral-accent-default;
+      border-color: $sys-neutral-decor-default;
+    }
+  }
 }

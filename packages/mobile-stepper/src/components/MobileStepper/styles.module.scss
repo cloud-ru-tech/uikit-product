@@ -1,17 +1,29 @@
-.wrapper {
-  overflow: auto;
-  width: 100%;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-stepper';
+@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .stepper {
   display: flex;
-  flex-direction: row;
-  align-items: start;
-  width: max-content;
+  flex-direction: column;
+}
+
+.steps {
+  display: grid;
+  gap: 4px;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.title {
+  overflow: hidden;
+  color: $sys-neutral-text-main;
+}
+
+.description {
+  overflow: hidden;
+  color: $sys-neutral-text-light;
 }

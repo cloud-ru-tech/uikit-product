@@ -1,9 +1,11 @@
 import cn from 'classnames';
-import { ReactElement, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { ReactElement, useCallback, useEffect, useMemo, useState } from 'react';
 
+import { TruncateString } from '@snack-uikit/truncate-string';
+import { Typography } from '@snack-uikit/typography';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
-import { STEP_STATE, STEPPER_SPACING } from '../../constants';
+import { STEP_STATE } from '../../constants';
 import { Step } from '../../helperComponents';
 import { MobileStepperContext } from '../../MobileStepperContext';
 import { MobileStepperApi, StepData, StepState, StepsValidator, StepViewData } from '../../types';
@@ -53,9 +55,6 @@ export function MobileStepper({
   const [currentStepIndex, setCurrentStepIndexValue] = useState(defaultCurrentStepIndex);
   const [isCompleted, setIsCompleted] = useState(defaultIsCompleted);
   const [stepsValidator, setStepsValidator] = useState<{ value: StepsValidator }>();
-
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     onCompleteChange?.(isCompleted);
@@ -125,16 +124,6 @@ export function MobileStepper({
     [currentStepIndex, isCompleted, setCurrentStepIndex],
   );
 
-  useEffect(() => {
-    const currentStepElement = stepRefs.current[currentStepIndex];
-    const container = containerRef.current;
-
-    if (currentStepElement && container) {
-      const elementLeft = currentStepElement.offsetLeft - STEPPER_SPACING;
-      container.scrollTo({ left: elementLeft, behavior: 'smooth' });
-    }
-  }, [currentStepIndex]);
-
   const stepsView: StepViewData[] = useMemo(
     () =>
       steps.map((step, index) => {
@@ -168,17 +157,25 @@ export function MobileStepper({
   }, []);
 
   const stepper = (
-    <div className={styles.wrapper} ref={containerRef}>
-      <div className={cn(styles.stepper, className)} {...extractSupportProps(props)}>
+    <div className={cn(styles.stepper, className)} {...extractSupportProps(props)}>
+      <div className={styles.steps} style={{ gridTemplateColumns: `repeat(${stepsView.length}, 1fr)` }}>
         {stepsView.map((step, index) => (
-          <Step
-            key={step.title + index}
-            step={step}
-            data-test-id={props['data-test-id']}
-            hideTailLine={index === steps.length - 1}
-            ref={el => (stepRefs.current[index] = el)}
-          />
+          <Step key={step.title + index} step={step} data-test-id={props['data-test-id']} />
         ))}
+      </div>
+
+      <div>
+        <div className={styles.content}>
+          <Typography.SansBodyM className={styles.title} tag='div'>
+            <TruncateString text={stepsView[currentStepIndex].title} />
+          </Typography.SansBodyM>
+
+          {stepsView[currentStepIndex].description && (
+            <Typography.SansBodyS className={styles.description} tag='div'>
+              <TruncateString text={stepsView[currentStepIndex].description} maxLines={2} />
+            </Typography.SansBodyS>
+          )}
+        </div>
       </div>
     </div>
   );
