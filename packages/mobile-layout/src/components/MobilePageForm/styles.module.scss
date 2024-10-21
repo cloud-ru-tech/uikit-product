@@ -5,39 +5,94 @@ $prefix-height: simple-var($sans-headline-m-line-height);
 .container {
   background-color: $sys-neutral-background1-level;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   flex-grow: 1;
-}
 
-.form {
   display: flex;
   flex-direction: column;
+
   gap: $dimension-2m;
   padding: $dimension-2m;
+  box-sizing: border-box;
+
+  position: relative;
+  /* stylelint-disable-next-line property-disallowed-list */
+  z-index: 0;
 }
 
 .body {
   @include composite-var($sans-body-m);
   color: $sys-neutral-text-main;
-}
-
-.prefix {
-  display: flex;
-  align-items: center;
-  height: $prefix-height;
-  top: calc(0px - $prefix-height);
-  position: absolute;
-  left: 0;
+  background-color: $sys-neutral-background1-level;
+  flex: 1;
 }
 
 .footer {
+  position: sticky;
+  bottom: 0;
+  /* stylelint-disable-next-line property-disallowed-list */
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   gap: $dimension-1m;
+
+  border-top: solid 1px $sys-neutral-decor-default;
+  box-sizing: border-box;
+  background-color: $sys-neutral-background1-level;
+  padding: $dimension-1m $dimension-2m $dimension-2m;
+  margin: calc(0px - $dimension-1m) calc(0px - $dimension-2m) calc(0px - $dimension-2m);
+
+  .actions {
+    display: flex;
+    flex-direction: row;
+    gap: $dimension-1m;
+
+    &[data-column] {
+      flex-direction: column;
+    }
+  }
 }
 
 .mainActions {
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+
+.priceSummary {
+  display: flex;
+  justify-content: space-between;
+  min-height: 40px;
+  align-items: center;
+  gap: 4px;
+}
+
+.priceSummaryText {
+  color: $sys-neutral-text-support;
+}
+
+.priceSummaryRight {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.stepper {
+  position: sticky;
+  top: 0;
+
+  /* stylelint-disable-next-line property-disallowed-list */
+  z-index: 1;
+
+  background-color: $sys-neutral-background1-level;
+  padding: 0 $dimension-2m $dimension-1m;
+  margin: 0 calc(0px - $dimension-2m) calc(0px - $dimension-1m);
+
+  border-bottom: solid 1px $sys-neutral-decor-default;
+  box-sizing: border-box;
+}
+
+.modalContent {
+  padding: 0 $dimension-2m;
 }

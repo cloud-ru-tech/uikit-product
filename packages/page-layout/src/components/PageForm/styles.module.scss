@@ -5,27 +5,24 @@ $prefix-height: simple-var($sans-headline-m-line-height);
 .container {
   padding: $dimension-3m;
   min-width: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin: 0 auto;
   width: 800px;
   background-color: $sys-neutral-background1-level;
   padding: 56px;
   flex-shrink: 0;
   border-radius: 16px;
-}
-
-.prefix {
-  display: flex;
-  align-items: center;
-  height: $prefix-height;
-  top: calc(0px - $prefix-height);
-  position: absolute;
-  left: 0;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 
 .headline {
@@ -42,4 +39,21 @@ $prefix-height: simple-var($sans-headline-m-line-height);
   display: flex;
   align-items: center;
   margin-left: auto;
+}
+
+.sideItems {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 304px;
+  position: sticky;
+  top: 24px;
+  align-self: flex-start;
+}
+
+.body {
+  @include composite-var($sans-body-m);
+  color: $sys-neutral-text-main;
+  background-color: $sys-neutral-background1-level;
+  flex: 1;
 }

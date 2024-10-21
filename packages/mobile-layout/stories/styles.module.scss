@@ -8,3 +8,10 @@
   width: 100vw;
   overflow: auto;
 }
+
+.sideBlock {
+  text-align: center;
+  align-content: center;
+  height: 80px;
+  border: solid 1px $sys-neutral-decor-default;
+}

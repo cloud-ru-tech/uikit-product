@@ -1,6 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { Stepper } from '@snack-uikit/stepper';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -14,6 +15,7 @@ import {
   PageForm,
   PageFormProps,
 } from '../src/components';
+import styles from './styles.module.scss';
 
 export default {
   title: 'Snack UIkit/Page Layout/Page Form',
@@ -30,6 +32,9 @@ const Template: StoryFn<
     buttonPrimaryVariant: ButtonPrimaryVariant;
     buttonSecondaryVariant: ButtonSecondaryVariant;
     showButtonTooltip: boolean;
+    showStepper: boolean;
+    showPriceSummary: boolean;
+    showSideBlock: boolean;
   }
 > = ({
   showFooter,
@@ -40,37 +45,63 @@ const Template: StoryFn<
   buttonSecondaryVariant,
   showButtonTooltip,
   showSubheader,
+  showStepper,
+  showPriceSummary,
+  showSideBlock,
   ...args
 }) => (
-  <PageForm
-    {...args}
-    subHeader={showSubheader ? args.subHeader : undefined}
-    footer={
-      showFooter
-        ? {
-            ...footer,
-            buttonPrimary: {
-              ...footer?.buttonPrimary,
-              variant: buttonPrimaryVariant,
-              tooltip: showButtonTooltip ? footer?.buttonPrimary.tooltip : undefined,
-            },
-            buttonSecondary: showSecondaryButton
+  <div className={styles.fullPageHeight}>
+    <Stepper
+      steps={[
+        {
+          title: 'Step 1',
+        },
+        {
+          title: 'Step 2',
+        },
+      ]}
+      defaultCurrentStepIndex={0}
+    >
+      {({
+        stepper,
+        /* You can also get api of stepper here */
+        // goPrev, goNext, isCompleted, currentStepIndex, resetValidation
+      }) => (
+        <PageForm
+          {...args}
+          stepper={showStepper ? stepper : undefined}
+          subHeader={showSubheader ? args.subHeader : undefined}
+          priceSummary={showPriceSummary ? args.priceSummary : undefined}
+          sideBlock={showSideBlock ? args.sideBlock : undefined}
+          footer={
+            showFooter
               ? {
-                  ...footer?.buttonSecondary,
-                  variant: buttonSecondaryVariant,
-                  tooltip: showButtonTooltip ? footer?.buttonSecondary?.tooltip : undefined,
+                  ...footer,
+                  buttonPrimary: {
+                    ...footer?.buttonPrimary,
+                    variant: buttonPrimaryVariant,
+                    tooltip: showButtonTooltip ? footer?.buttonPrimary.tooltip : undefined,
+                  },
+                  buttonSecondary: showSecondaryButton
+                    ? {
+                        ...footer?.buttonSecondary,
+                        variant: buttonSecondaryVariant,
+                        tooltip: showButtonTooltip ? footer?.buttonSecondary?.tooltip : undefined,
+                      }
+                    : undefined,
+                  buttonAdditional: showAdditionalButton
+                    ? {
+                        ...footer?.buttonAdditional,
+                        tooltip: showButtonTooltip ? footer?.buttonAdditional?.tooltip : undefined,
+                      }
+                    : undefined,
                 }
-              : undefined,
-            buttonAdditional: showAdditionalButton
-              ? {
-                  ...footer?.buttonAdditional,
-                  tooltip: showButtonTooltip ? footer?.buttonAdditional?.tooltip : undefined,
-                }
-              : undefined,
+              : undefined
           }
-        : undefined
-    }
-  />
+        />
+      )}
+    </Stepper>
+  </div>
 );
 
 export const pageForm = {
@@ -110,6 +141,24 @@ export const pageForm = {
         value={{ content: 'Connect your local component with unique' }}
       />
     ),
+    showStepper: true,
+    showPriceSummary: true,
+    showSideBlock: true,
+
+    priceSummary: {
+      total: '5 076 ₽ в месяц',
+      content: <div className={styles.sideBlock}>PriceSummary</div>,
+    },
+    sideBlock: [
+      {
+        label: 'Документация',
+        content: <div className={styles.sideBlock}>Документация</div>,
+      },
+      {
+        label: 'Бюджеты',
+        content: <div className={styles.sideBlock}>Бюджеты</div>,
+      },
+    ],
   },
 
   argTypes: {
@@ -133,6 +182,9 @@ export const pageForm = {
     showSubheader: { name: '[Stories]: show subheader' },
     subHeader: { table: { disable: true } },
 
+    priceSummary: { table: { disable: true } },
+    stepper: { table: { disable: true } },
+    sideBlock: { table: { disable: true } },
     footer: { table: { disable: true } },
   },
 

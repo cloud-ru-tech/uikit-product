@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, ReactNode, useMemo } from 'react';
 
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import {
@@ -38,6 +38,19 @@ export type PageFormProps = WithSupportProps<
   PropsWithChildren<
     Pick<HeadlineProps, 'title' | 'subHeader'> & {
       className?: string;
+
+      stepper?: ReactNode;
+
+      priceSummary?: {
+        total: ReactNode;
+        content?: ReactNode;
+      };
+
+      sideBlock?: {
+        label: string;
+        content: ReactNode;
+      }[];
+
       footer?: {
         buttonPrimary: (
           | {
@@ -69,8 +82,23 @@ export type PageFormProps = WithSupportProps<
   >
 >;
 
-export function PageForm({ children, title, subHeader, className, footer, ...rest }: PageFormProps) {
+export function PageForm({
+  children,
+  stepper,
+  title,
+  subHeader,
+  className,
+  footer,
+  sideBlock,
+  priceSummary,
+  ...rest
+}: PageFormProps) {
   const { languageCode } = useLanguage();
+
+  const moreItems = useMemo(
+    () => [priceSummary?.content].concat(sideBlock?.map(item => item.content)).filter(Boolean),
+    [priceSummary?.content, sideBlock],
+  );
 
   const PrimaryButton = useButtonWithTooltip({ Button: ButtonFilled, tooltip: footer?.buttonPrimary.tooltip });
   const SecondaryButton = useButtonWithTooltip({ Button: ButtonOutline, tooltip: footer?.buttonSecondary?.tooltip });
@@ -83,7 +111,9 @@ export function PageForm({ children, title, subHeader, className, footer, ...res
           <Headline title={title} subHeader={subHeader} />
         </div>
 
-        <div>{children}</div>
+        {stepper}
+
+        <div className={styles.body}>{children}</div>
 
         {footer && (
           <div className={styles.footer}>
@@ -116,6 +146,8 @@ export function PageForm({ children, title, subHeader, className, footer, ...res
           </div>
         )}
       </div>
+
+      {moreItems?.length > 0 && <div className={styles.sideItems}>{moreItems}</div>}
     </div>
   );
 }

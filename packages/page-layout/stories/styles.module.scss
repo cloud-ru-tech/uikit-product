@@ -18,3 +18,10 @@
   height: 100vh;
   overflow: auto;
 }
+
+.sideBlock {
+  text-align: center;
+  align-content: center;
+  height: 80px;
+  border: solid 1px $sys-neutral-decor-default;
+}

@@ -1,6 +1,7 @@
 import { Meta, StoryFn } from '@storybook/react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { MobileStepper } from '@sbercloud/uikit-product-mobile-stepper';
 import { Typography } from '@snack-uikit/typography';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -31,6 +32,9 @@ const Template: StoryFn<
     buttonPrimaryVariant: ButtonPrimaryVariant;
     buttonSecondaryVariant: ButtonSecondaryVariant;
     showButtonTooltip: boolean;
+    showStepper: boolean;
+    showPriceSummary: boolean;
+    showSideBlock: boolean;
   }
 > = ({
   showFooter,
@@ -41,38 +45,62 @@ const Template: StoryFn<
   buttonSecondaryVariant,
   showButtonTooltip,
   showSubheader,
+  showStepper,
+  showPriceSummary,
+  showSideBlock,
   ...args
 }) => (
   <div className={styles.fullPageHeight}>
-    <MobilePageForm
-      {...args}
-      subHeader={showSubheader ? args.subHeader : undefined}
-      footer={
-        showFooter
-          ? {
-              ...footer,
-              buttonPrimary: {
-                ...footer?.buttonPrimary,
-                variant: buttonPrimaryVariant,
-                tooltip: showButtonTooltip ? footer?.buttonPrimary.tooltip : undefined,
-              },
-              buttonSecondary: showSecondaryButton
-                ? {
-                    ...footer?.buttonSecondary,
-                    variant: buttonSecondaryVariant,
-                    tooltip: showButtonTooltip ? footer?.buttonSecondary?.tooltip : undefined,
-                  }
-                : undefined,
-              buttonAdditional: showAdditionalButton
-                ? {
-                    ...footer?.buttonAdditional,
-                    tooltip: showButtonTooltip ? footer?.buttonAdditional?.tooltip : undefined,
-                  }
-                : undefined,
-            }
-          : undefined
-      }
-    />
+    <MobileStepper
+      steps={[
+        {
+          title: '1',
+        },
+        {
+          title: '2',
+        },
+      ]}
+      defaultCurrentStepIndex={0}
+    >
+      {({
+        stepper,
+        /* You can also get api of stepper here */
+        // goPrev, goNext, isCompleted, currentStepIndex, resetValidation
+      }) => (
+        <MobilePageForm
+          {...args}
+          stepper={showStepper ? stepper : undefined}
+          subHeader={showSubheader ? args.subHeader : undefined}
+          priceSummary={showPriceSummary ? args.priceSummary : undefined}
+          sideBlock={showSideBlock ? args.sideBlock : undefined}
+          footer={
+            showFooter
+              ? {
+                  ...footer,
+                  buttonPrimary: {
+                    ...footer?.buttonPrimary,
+                    variant: buttonPrimaryVariant,
+                    tooltip: showButtonTooltip ? footer?.buttonPrimary.tooltip : undefined,
+                  },
+                  buttonSecondary: showSecondaryButton
+                    ? {
+                        ...footer?.buttonSecondary,
+                        variant: buttonSecondaryVariant,
+                        tooltip: showButtonTooltip ? footer?.buttonSecondary?.tooltip : undefined,
+                      }
+                    : undefined,
+                  buttonAdditional: showAdditionalButton
+                    ? {
+                        ...footer?.buttonAdditional,
+                        tooltip: showButtonTooltip ? footer?.buttonAdditional?.tooltip : undefined,
+                      }
+                    : undefined,
+                }
+              : undefined
+          }
+        />
+      )}
+    </MobileStepper>
   </div>
 );
 
@@ -103,10 +131,27 @@ export const pageForm = {
     buttonPrimaryVariant: 'create',
     buttonSecondaryVariant: 'cancel',
     showSecondaryButton: true,
-    showAdditionalButton: true,
+    showAdditionalButton: false,
     showButtonTooltip: false,
     showSubheader: true,
+    showStepper: true,
+    showPriceSummary: true,
+    showSideBlock: true,
     subHeader: <Typography.SansBodyM>Subheader</Typography.SansBodyM>,
+    priceSummary: {
+      total: '5 076 ₽ в месяц',
+      content: <div className={styles.sideBlock}>PriceSummary</div>,
+    },
+    sideBlock: [
+      {
+        label: 'Документация',
+        content: <div className={styles.sideBlock}>Документация</div>,
+      },
+      {
+        label: 'Бюджеты',
+        content: <div className={styles.sideBlock}>Бюджеты</div>,
+      },
+    ],
   },
 
   argTypes: {
@@ -128,8 +173,14 @@ export const pageForm = {
     showAdditionalButton: { name: '[Stories]: show footer -> button additional', if: { arg: 'showFooter', eq: true } },
     showButtonTooltip: { name: '[Stories]: show button tooltips', if: { arg: 'showFooter', eq: true } },
     showSubheader: { name: '[Stories]: show subheader' },
+    showStepper: { name: '[Stories]: show stepper' },
+    showPriceSummary: { name: '[Stories]: show price summary' },
+    showSideBlock: { name: '[Stories]: show sideBlock' },
     subHeader: { table: { disable: true } },
 
+    priceSummary: { table: { disable: true } },
+    stepper: { table: { disable: true } },
+    sideBlock: { table: { disable: true } },
     footer: { table: { disable: true } },
   },
 
