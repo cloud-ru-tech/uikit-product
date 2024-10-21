@@ -19,7 +19,9 @@ export function useItemsContent(
 
         return {
           id,
-          content: label,
+          content: {
+            option: label,
+          },
           itemWrapRender: item => {
             if (!disabledReason) {
               return href ? (
