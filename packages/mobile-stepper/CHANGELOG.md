@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.1.10 (2024-10-21)</small>
+
+* feat(PDS-848): mobile stepper ([81777b9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/81777b9))
+
+
+
+
+
 ## 0.1.9 (2024-10-15)
 
 ### Only dependencies have been changed
