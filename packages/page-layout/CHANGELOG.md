@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.14.5 (2024-10-22)</small>
+
+* feat(PDS-840): add stepper & sideBlock into PageForm/MobilePageForm ([7f7c55d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7f7c55d))
+
+
+
+
+
 ## 0.14.4 (2024-10-15)
 
 ### Only dependencies have been changed
