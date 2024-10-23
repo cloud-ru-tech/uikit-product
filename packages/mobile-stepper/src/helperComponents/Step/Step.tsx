@@ -16,9 +16,9 @@ const getStepTestId = getTestIdBuilder('_element-step');
 function getContent(state: StepState) {
   switch (state) {
     case STEP_STATE.Completed:
-      return <CheckSVG size='16' />;
+      return <CheckSVG size={16} />;
     case STEP_STATE.Rejected:
-      return <CrossSVG size='16' />;
+      return <CrossSVG size={16} />;
     case STEP_STATE.Loading:
       return <Sun size='xs' />;
     default:

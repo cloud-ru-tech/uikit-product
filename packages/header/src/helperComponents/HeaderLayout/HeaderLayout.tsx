@@ -52,7 +52,7 @@ function LogoWithFallBack({ path, loading }: { path?: string; loading?: boolean 
     );
   }
 
-  return <CloudLogoSVG />;
+  return <CloudLogoSVG size={24} />;
 }
 
 export function HeaderLayout({
