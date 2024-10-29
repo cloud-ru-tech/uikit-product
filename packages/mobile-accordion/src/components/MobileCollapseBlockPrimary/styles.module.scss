@@ -31,11 +31,10 @@
 .containerOutline {
   @include styles-tokens-accordion.composite-var(styles-tokens-accordion.$collapse-block-container-primary);
   padding: styles-tokens-accordion.$dimension-2m;
+  gap: styles-tokens-accordion.$dimension-2m;
 
   border-width: 0;
-  outline-color: styles-tokens-accordion.$sys-neutral-decor-default;
-  outline-style: solid;
-  outline-width: styles-tokens-accordion.$border-width-accordion-collapse-block-primary;
+  outline: styles-tokens-accordion.$border-width-accordion-collapse-block-primary solid styles-tokens-accordion.$sys-neutral-decor-default;
 
   &:focus-within,
   &:hover {
