@@ -1,0 +1,32 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.mobileBody {
+  padding-right: styles-theme-variables.$dimension-1m;
+}
+
+.mobileCarousel {
+  height: 100%;
+
+  & > div {
+    height: 100%;
+  }
+}
+
+.footerActions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footerRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: styles-theme-variables.$dimension-1m;
+}
+
+.pageCounter {
+  color: styles-theme-variables.$sys-neutral-text-light;
+}

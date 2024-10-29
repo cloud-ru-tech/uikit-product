@@ -1,0 +1,7 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.sliderControls {
+  display: flex;
+  flex-direction: row;
+  gap: styles-theme-variables.$dimension-1m;
+}

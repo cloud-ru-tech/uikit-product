@@ -1,0 +1,37 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
+
+.noteItemWrapper {
+  margin-right: calc(-1 * styles-tokens-drawer.$dimension-1m);
+  height: 100%;
+}
+
+.noteItemContent {
+  display: flex;
+  flex-direction: column;
+  gap: styles-theme-variables.$dimension-2m;
+  padding-right: styles-tokens-drawer.$dimension-2m;
+}
+
+.noteItemIllustration {
+  width: 100%;
+  pointer-events: none;
+}
+
+.noteItemSkeletonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: styles-theme-variables.$dimension-2m;
+  width: 100%;
+}
+
+.noteItemContentSkeletonWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: styles-theme-variables.$dimension-2m;
+}
+
+.noteItemHeaderSkeleton {
+  font-size: styles-theme-variables.$sans-title-l-font-size;
+  line-height: styles-theme-variables.$sans-title-l-line-height;
+}

@@ -9,6 +9,9 @@ export enum Texts {
   EnterName = 'enterName',
   Cancel = 'cancel',
   Delete = 'delete',
+  WhatsNew = 'whatsNew',
+  ReadLater = 'readLater',
+  OutOf = 'outOf',
 }
 
 export type DictionaryPropertyAsFn = (params: string) => string;
@@ -23,6 +26,9 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
     [Texts.InvalidName]: 'Неверное название',
     [Texts.Cancel]: 'Отмена',
     [Texts.Delete]: 'Удалить',
+    [Texts.WhatsNew]: 'Что нового',
+    [Texts.ReadLater]: 'Ознакомиться позже',
+    [Texts.OutOf]: 'из',
   },
   [LanguageCodeType.enGB]: {
     [Texts.Title]: (recordName: string) => `Delete ${recordName}`,
@@ -32,6 +38,9 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
     [Texts.InvalidName]: 'Invalid name',
     [Texts.Cancel]: 'Cancel',
     [Texts.Delete]: 'Delete',
+    [Texts.WhatsNew]: "What's new",
+    [Texts.ReadLater]: 'Read later',
+    [Texts.OutOf]: 'of',
   },
 };
 
