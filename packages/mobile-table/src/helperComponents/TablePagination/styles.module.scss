@@ -1,8 +1,8 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .pagination {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: $dimension-1m;
+  padding-top: styles-theme-variables.$dimension-1m;
 }

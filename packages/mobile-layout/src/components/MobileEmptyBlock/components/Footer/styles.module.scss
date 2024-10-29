@@ -1,7 +1,7 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-infoBlock';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-infoBlock';
 
 .infoBlockFooter {
-  @include composite-var($info-block-footer);
+  @include styles-tokens-infoBlock.composite-var(styles-tokens-infoBlock.$info-block-footer);
 
   display: flex;
   flex-direction: column;

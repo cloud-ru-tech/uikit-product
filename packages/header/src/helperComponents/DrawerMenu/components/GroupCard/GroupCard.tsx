@@ -1,6 +1,6 @@
 import { forwardRef, ReactNode } from 'react';
 
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 type GroupCardProps = {
   id: string;

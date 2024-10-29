@@ -2,7 +2,7 @@ import { JSXElementConstructor, PropsWithChildren } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import styled from './styles.modules.scss';
+import styled from './styles.module.scss';
 
 export type ContainerProps = PropsWithChildren<
   WithSupportProps<{

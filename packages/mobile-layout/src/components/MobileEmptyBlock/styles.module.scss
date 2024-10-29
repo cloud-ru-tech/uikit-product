@@ -1,10 +1,9 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-infoBlock';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-infoBlock';
 
 div.emptyBlock {
-  background-color: $sys-neutral-background1-level;
-  border-radius: calc($dimension-1m + $dimension-050m);
-  padding: $dimension-4m $dimension-2m;
+  background-color: styles-tokens-infoBlock.$sys-neutral-background1-level;
+  border-radius: calc(styles-tokens-infoBlock.$dimension-1m + styles-tokens-infoBlock.$dimension-050m);
+  padding: styles-tokens-infoBlock.$dimension-4m styles-tokens-infoBlock.$dimension-2m;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,11 +30,11 @@ div.emptyBlock {
 }
 
 .title {
-  color: $sys-neutral-text-main;
+  color: styles-tokens-infoBlock.$sys-neutral-text-main;
 }
 
 .description {
-  color: $sys-neutral-text-support;
+  color: styles-tokens-infoBlock.$sys-neutral-text-support;
 }
 
 .infoBlock {
@@ -47,7 +46,7 @@ div.emptyBlock {
 
   width: 100%;
 
-  @include composite-var($info-block, 'm', 'container');
+  @include styles-tokens-infoBlock.composite-var(styles-tokens-infoBlock.$info-block, 'm', 'container');
 
   .footer {
     text-align: center;
@@ -59,7 +58,7 @@ div.emptyBlock {
   }
 
   .contentLayout {
-    @include composite-var($info-block, 'm', 'content-layout');
+    @include styles-tokens-infoBlock.composite-var(styles-tokens-infoBlock.$info-block, 'm', 'content-layout');
 
     align-items: center;
 
@@ -67,7 +66,7 @@ div.emptyBlock {
   }
 
   .textWrap {
-    @include composite-var($info-block, 'm', 'text-wrap');
+    @include styles-tokens-infoBlock.composite-var(styles-tokens-infoBlock.$info-block, 'm', 'text-wrap');
 
     align-items: center;
 

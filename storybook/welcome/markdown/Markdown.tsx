@@ -1,6 +1,6 @@
 import './theme/style.css';
 
-import { CSSProperties } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
@@ -27,7 +27,7 @@ export function Markdown(props: MarkdownProps) {
     <ReactMarkdown
       className={'markdown-body'}
       components={{
-        code({ inline, className, children, ...rest }) {
+        code({ inline, className, children, ...rest }: { inline?: boolean; className?: string; children?: ReactNode }) {
           const match = /language-(\w+)/.exec(className || '');
 
           return !inline && match ? (

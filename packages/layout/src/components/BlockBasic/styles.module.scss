@@ -1,8 +1,8 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 .container {
   box-sizing: border-box;
-  background: $sys-neutral-background1-level;
-  border-radius: calc($dimension-2m - $dimension-050m);
-  padding: $dimension-3m;
+  background: styles-theme-variables.$sys-neutral-background1-level;
+  border-radius: calc(styles-theme-variables.$dimension-2m - styles-theme-variables.$dimension-050m);
+  padding: styles-theme-variables.$dimension-3m;
 }

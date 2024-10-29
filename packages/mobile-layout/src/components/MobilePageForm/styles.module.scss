@@ -1,9 +1,9 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
-$prefix-height: simple-var($sans-headline-m-line-height);
+$prefix-height: styles-theme-variables.simple-var(styles-theme-variables.$sans-headline-m-line-height);
 
 .container {
-  background-color: $sys-neutral-background1-level;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
   width: 100%;
   min-height: 100%;
   flex-grow: 1;
@@ -11,42 +11,42 @@ $prefix-height: simple-var($sans-headline-m-line-height);
   display: flex;
   flex-direction: column;
 
-  gap: $dimension-2m;
-  padding: $dimension-2m;
+  gap: styles-theme-variables.$dimension-2m;
+  padding: styles-theme-variables.$dimension-2m;
   box-sizing: border-box;
 
   position: relative;
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 0;
 }
 
 .body {
-  @include composite-var($sans-body-m);
-  color: $sys-neutral-text-main;
-  background-color: $sys-neutral-background1-level;
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
+  color: styles-theme-variables.$sys-neutral-text-main;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
   flex: 1;
 }
 
 .footer {
   position: sticky;
   bottom: 0;
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 1;
 
   display: flex;
   flex-direction: column;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
 
-  border-top: solid 1px $sys-neutral-decor-default;
+  border-top: solid 1px styles-theme-variables.$sys-neutral-decor-default;
   box-sizing: border-box;
-  background-color: $sys-neutral-background1-level;
-  padding: $dimension-1m $dimension-2m $dimension-2m;
-  margin: calc(0px - $dimension-1m) calc(0px - $dimension-2m) calc(0px - $dimension-2m);
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  padding: styles-theme-variables.$dimension-1m styles-theme-variables.$dimension-2m styles-theme-variables.$dimension-2m;
+  margin: calc(0px - styles-theme-variables.$dimension-1m) calc(0px - styles-theme-variables.$dimension-2m) calc(0px - styles-theme-variables.$dimension-2m);
 
   .actions {
     display: flex;
     flex-direction: row;
-    gap: $dimension-1m;
+    gap: styles-theme-variables.$dimension-1m;
 
     &[data-column] {
       flex-direction: column;
@@ -69,7 +69,7 @@ $prefix-height: simple-var($sans-headline-m-line-height);
 }
 
 .priceSummaryText {
-  color: $sys-neutral-text-support;
+  color: styles-theme-variables.$sys-neutral-text-support;
 }
 
 .priceSummaryRight {
@@ -82,17 +82,17 @@ $prefix-height: simple-var($sans-headline-m-line-height);
   position: sticky;
   top: 0;
 
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 1;
 
-  background-color: $sys-neutral-background1-level;
-  padding: 0 $dimension-2m $dimension-1m;
-  margin: 0 calc(0px - $dimension-2m) calc(0px - $dimension-1m);
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  padding: 0 styles-theme-variables.$dimension-2m styles-theme-variables.$dimension-1m;
+  margin: 0 calc(0px - styles-theme-variables.$dimension-2m) calc(0px - styles-theme-variables.$dimension-1m);
 
-  border-bottom: solid 1px $sys-neutral-decor-default;
+  border-bottom: solid 1px styles-theme-variables.$sys-neutral-decor-default;
   box-sizing: border-box;
 }
 
 .modalContent {
-  padding: 0 $dimension-2m;
+  padding: 0 styles-theme-variables.$dimension-2m;
 }

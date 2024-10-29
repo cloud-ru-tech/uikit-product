@@ -1,8 +1,7 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .divider {
-  height: $dimension-3m;
+  height: styles-tokens-element.$dimension-3m;
 }
 
 .headerMobile {
@@ -14,21 +13,21 @@
   gap: 16px;
   flex: 1 0 0;
 
-  border-bottom: 1px solid $sys-neutral-decor-default;
-  background: $sys-neutral-background;
+  border-bottom: 1px solid styles-tokens-element.$sys-neutral-decor-default;
+  background: styles-tokens-element.$sys-neutral-background;
 }
 
 .logo {
   display: flex;
-  padding: $dimension-1m;
+  padding: styles-tokens-element.$dimension-1m;
   cursor: pointer;
-  border-radius: $dimension-050m;
-  color: $sys-primary-accent-default;
+  border-radius: styles-tokens-element.$dimension-050m;
+  color: styles-tokens-element.$sys-primary-accent-default;
 
   &:focus-visible {
-    @include outline-var($container-focused-s);
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
 
-    outline-color: $sys-available-complementary;
+    outline-color: styles-tokens-element.$sys-available-complementary;
   }
 }
 
@@ -39,7 +38,7 @@
 
 .content {
   padding: 16px;
-  background-color: $sys-neutral-background;
+  background-color: styles-tokens-element.$sys-neutral-background;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -52,37 +51,37 @@
 .select {
   display: flex;
   align-items: center;
-  gap: $dimension-050m;
-  color: $sys-neutral-text-light;
+  gap: styles-tokens-element.$dimension-050m;
+  color: styles-tokens-element.$sys-neutral-text-light;
   cursor: pointer;
 }
 
 .contentLayout {
   display: flex;
   align-items: center;
-  gap: $dimension-050m;
+  gap: styles-tokens-element.$dimension-050m;
 }
 
 .separator {
-  @include composite-var($sans-body-m);
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-m);
 
   display: flex;
-  padding: 0 $dimension-050m;
-  color: $sys-neutral-text-disabled;
+  padding: 0 styles-tokens-element.$dimension-050m;
+  color: styles-tokens-element.$sys-neutral-text-disabled;
 }
 
 .project {
-  @include composite-var($sans-body-m);
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-m);
 
-  color: $sys-neutral-text-light;
-  max-width: calc(2 * $dimension-10m);
+  color: styles-tokens-element.$sys-neutral-text-light;
+  max-width: calc(2 * styles-tokens-element.$dimension-10m);
 }
 
 .platform {
-  @include composite-var($sans-body-m);
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-m);
 
-  color: $sys-neutral-text-light;
-  max-width: calc(2 * $dimension-10m);
+  color: styles-tokens-element.$sys-neutral-text-light;
+  max-width: calc(2 * styles-tokens-element.$dimension-10m);
 }
 
 .selectGroup {
@@ -98,6 +97,7 @@
 
 .notificationsDrawer {
   & [data-test-id='drawer__close-button'] {
+    /* stylelint-disable-next-line declaration-property-value-allowed-list */
     z-index: 1;
   }
 }
@@ -118,14 +118,14 @@
   right: 0;
 }
 
-// TODO: code duplicate from src/helperComponents/UserMenu/styles.modules.scss
+// TODO: code duplicate from src/helperComponents/UserMenu/styles.module.scss
 .userMenuInfoItem {
   [data-test-id='list__base-item-option'] {
     // TODO: подумать как "нормально" прокидывать стили/типографику
-    @include composite-var($sans-label-m);
+    @include styles-tokens-element.composite-var(styles-tokens-element.$sans-label-m);
   }
 }
 
 .settingIcon {
-  color: $sys-neutral-text-light;
+  color: styles-tokens-element.$sys-neutral-text-light;
 }

@@ -1,4 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .wrapperResize {
   resize: horizontal;
@@ -9,8 +9,8 @@
   min-width: 304px;
   padding: 20px;
 
-  border: 1px solid $sys-neutral-decor-default;
-  border-radius: $dimension-050m;
+  border: 1px solid styles-theme-variables.$sys-neutral-decor-default;
+  border-radius: styles-theme-variables.$dimension-050m;
 }
 
 .fullPageHeight {
@@ -23,5 +23,5 @@
   text-align: center;
   align-content: center;
   height: 80px;
-  border: solid 1px $sys-neutral-decor-default;
+  border: solid 1px styles-theme-variables.$sys-neutral-decor-default;
 }

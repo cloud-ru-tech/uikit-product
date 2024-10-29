@@ -1,15 +1,15 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
 
 .footer {
-  padding: $dimension-2m;
-  gap: $dimension-1m;
+  padding: styles-tokens-drawer.$dimension-2m;
+  gap: styles-tokens-drawer.$dimension-1m;
 
   display: flex;
   flex-direction: column;
 }
 
 .footerActions {
-  @include composite-var($drawer-action-row);
+  @include styles-tokens-drawer.composite-var(styles-tokens-drawer.$drawer-action-row);
 
   display: flex;
   flex-direction: row-reverse;

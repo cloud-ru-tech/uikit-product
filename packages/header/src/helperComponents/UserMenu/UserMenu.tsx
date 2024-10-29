@@ -12,7 +12,7 @@ import { getThemeModeOptions } from '../../helpers/getThemeModeOptions';
 import { ThemeMode } from '../../types';
 import { InvitePopover, InvitePopoverProps } from '../InvitePopover';
 import { SelectProps } from '../SelectMenu';
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 export type User = {
   name: string;

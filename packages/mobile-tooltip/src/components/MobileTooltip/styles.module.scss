@@ -1,20 +1,20 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-tooltip';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-tooltip';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 
 .tooltipContainer {
-  @include composite-var($tooltip-container);
-  @include composite-var($sans-body-s);
+  @include styles-tokens-element.composite-var(styles-tokens-tooltip.$tooltip-container);
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-s);
 
   overflow: hidden;
 
   box-sizing: border-box;
 
-  color: $sys-invert-neutral-text-main;
+  color: styles-tokens-element.$sys-invert-neutral-text-main;
   word-wrap: break-word;
 
-  background-color: $sys-invert-neutral-background;
-  max-width: calc(100dvw - $dimension-4m);
+  background-color: styles-tokens-element.$sys-invert-neutral-background;
+  max-width: calc(100dvw - styles-tokens-element.$dimension-4m);
 }
 
 .tooltip {
@@ -22,7 +22,7 @@
   &[data-placement='top-start'],
   &[data-placement='top-end'] {
     .tooltipContainer {
-      margin: $dimension-2m $dimension-2m 0;
+      margin: styles-tokens-element.$dimension-2m styles-tokens-element.$dimension-2m 0;
     }
   }
 
@@ -30,7 +30,7 @@
   &[data-placement='bottom-start'],
   &[data-placement='bottom-end'] {
     .tooltipContainer {
-      margin: 0 $dimension-2m $dimension-2m;
+      margin: 0 styles-tokens-element.$dimension-2m styles-tokens-element.$dimension-2m;
     }
   }
 
@@ -38,7 +38,7 @@
   &[data-placement='left-start'],
   &[data-placement='left-end'] {
     .tooltipContainer {
-      margin: $dimension-2m 0 $dimension-2m $dimension-2m;
+      margin: styles-tokens-element.$dimension-2m 0 styles-tokens-element.$dimension-2m styles-tokens-element.$dimension-2m;
     }
   }
 
@@ -46,13 +46,13 @@
   &[data-placement='right-start'],
   &[data-placement='right-end'] {
     .tooltipContainer {
-      margin: $dimension-2m $dimension-2m $dimension-2m 0;
+      margin: styles-tokens-element.$dimension-2m styles-tokens-element.$dimension-2m styles-tokens-element.$dimension-2m 0;
     }
   }
 }
 
 .tooltipArrowContainer {
-  @include composite-var($tooltip-tooltip-pointer);
+  @include styles-tokens-element.composite-var(styles-tokens-tooltip.$tooltip-tooltip-pointer);
 
   position: absolute;
 
@@ -61,11 +61,11 @@
   padding-top: 0;
   padding-bottom: 0;
 
-  color: $sys-invert-neutral-background;
+  color: styles-tokens-element.$sys-invert-neutral-background;
 }
 
 .tooltipArrowElement {
-  @include composite-var($tooltip-pointer-arrow);
+  @include styles-tokens-element.composite-var(styles-tokens-tooltip.$tooltip-pointer-arrow);
 
   fill: currentColor;
 }

@@ -1,6 +1,5 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-alert';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-alert-alertTop';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-alert-alertTop';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 $simpleAppearances: 'neutral', 'primary', 'red', 'yellow', 'green', 'blue';
 $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue';
@@ -23,7 +22,7 @@ $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue'
 
   .text {
     &[data-size='m'] {
-      @include composite-var($theme-variables, 'sans', 'label', 'l')
+      @include styles-tokens-element.composite-var(styles-tokens-element.$theme-variables, 'sans', 'label', 'l')
     }
   }
 
@@ -32,12 +31,12 @@ $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue'
     align-items: center;
     justify-content: center;
 
-    width: $icon-s;
-    height: $icon-s;
+    width: styles-tokens-element.$icon-s;
+    height: styles-tokens-element.$icon-s;
 
     svg {
-      max-width: $icon-s;
-      max-height: $icon-s;
+      max-width: styles-tokens-element.$icon-s;
+      max-height: styles-tokens-element.$icon-s;
     }
   }
 
@@ -50,39 +49,39 @@ $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue'
   }
   
   &[data-variant='tonal'] {
-    @include composite-var($alert-top-button-button-action);
+    @include styles-tokens-element.composite-var(styles-tokens-alert-alertTop.$alert-top-button-button-action);
 
-    background: $sys-opacity-enabled;
+    background: styles-tokens-element.$sys-opacity-enabled;
 
     &[data-icon-only] {
-      @include composite-var($alert-top-button-button-close);
-      height: $dimension-5m;
-      width: $dimension-5m;
+      @include styles-tokens-element.composite-var(styles-tokens-alert-alertTop.$alert-top-button-button-close);
+      height: styles-tokens-element.$dimension-5m;
+      width: styles-tokens-element.$dimension-5m;
 
       background: none;
     }
 
     &:hover {
       opacity: unset;
-      background-color: $sys-opacity-hovered;
+      background-color: styles-tokens-element.$sys-opacity-hovered;
     }
 
     &:focus-visible {
-      @include outline-var($container-focused-s);
+      @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
 
-      background-color: $sys-opacity-hovered;
-      outline-color: $sys-available-on-complementary;
+      background-color: styles-tokens-element.$sys-opacity-hovered;
+      outline-color: styles-tokens-element.$sys-available-on-complementary;
     }
     &:active {
-      background-color: $sys-opacity-activated;
+      background-color: styles-tokens-element.$sys-opacity-activated;
     }
 
     @each $appearance in $tonalAppearances {
       &[data-appearance='#{$appearance}'] {
         @if $appearance == 'invert-neutral' {
-          color: simple-var($theme-variables, 'sys', $appearance, 'text-main');
+          color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $appearance, 'text-main');
         } @else {
-          color: simple-var($theme-variables, 'sys', $appearance, 'on-accent');
+          color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $appearance, 'on-accent');
         }
       }
     }

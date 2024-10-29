@@ -5,7 +5,7 @@ import { Scroll } from '@snack-uikit/scroll';
 
 import { Workspace } from '../../types';
 import { SelectMenu, SelectMenuTrigger, SelectProps } from '../SelectMenu';
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 export function Select({
   organizations: organizationsProp,

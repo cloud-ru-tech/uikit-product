@@ -1,8 +1,8 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .modal {
   box-sizing: border-box;
-  padding: $dimension-3m 0;
+  padding: styles-theme-variables.$dimension-3m 0;
 }
 
 .bodyNoPadding {
@@ -10,11 +10,11 @@
 }
 
 .listWrapper {
-  @include composite-var($sans-body-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
 
   flex: 1 1 auto;
   box-sizing: border-box;
-  min-height: $dimension-2m;
-  color: $sys-neutral-text-main;
+  min-height: styles-theme-variables.$dimension-2m;
+  color: styles-theme-variables.$sys-neutral-text-main;
   padding: 16px 0;
 }

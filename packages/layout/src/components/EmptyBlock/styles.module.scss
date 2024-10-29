@@ -1,9 +1,9 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 div.emptyBlock {
-  background-color: $sys-neutral-background1-level;
-  border-radius: calc($dimension-1m + $dimension-050m);
-  padding: $dimension-8m;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  border-radius: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-050m);
+  padding: styles-theme-variables.$dimension-8m;
   display: flex;
   align-items: center;
   justify-content: center;

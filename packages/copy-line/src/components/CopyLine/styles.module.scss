@@ -1,7 +1,7 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .copyLine {
-  @include composite-var($sans-body-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
 
   display: inline-flex;
   flex-shrink: 0;
@@ -15,7 +15,7 @@
   max-width: 100%;
   min-height: 32px;
 
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
 
   &[data-copy-button-hide-strategy='hover'] {
     .copyButton {

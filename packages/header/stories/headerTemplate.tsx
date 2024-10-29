@@ -26,7 +26,7 @@ import {
   FinancialMenuProps,
   MLSpacePlatformLogo,
 } from '../src/helperComponents';
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showSelect: boolean;

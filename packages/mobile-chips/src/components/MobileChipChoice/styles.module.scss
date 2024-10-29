@@ -1,21 +1,21 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-chips-chipChoice';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
-@import '../../styles.module';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-chips-chipChoice';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '../../styles.module';
 
 $sizes: 'xs', 's', 'm', 'l';
 
 $labelTypography: (
-  'xs': $light-label-s,
-  's': $light-label-m,
-  'm': $sans-label-l,
-  'l': $light-label-l,
+  'xs': styles-tokens-element.$light-label-s,
+  's': styles-tokens-element.$light-label-m,
+  'm': styles-tokens-element.$sans-label-l,
+  'l': styles-tokens-element.$light-label-l,
 );
 
 $valueTypography: (
-  'xs': $sans-label-s,
-  's': $sans-label-m,
-  'm': $sans-label-l,
-  'l': $sans-label-l,
+  'xs': styles-tokens-element.$sans-label-s,
+  's': styles-tokens-element.$sans-label-m,
+  'm': styles-tokens-element.$sans-label-l,
+  'l': styles-tokens-element.$sans-label-l,
 );
 
 .label,
@@ -25,25 +25,25 @@ $valueTypography: (
 }
 
 .choiceChip {
-  background-color: $sys-neutral-background1-level;
-  border-color: $sys-neutral-decor-default;
+  background-color: styles-tokens-element.$sys-neutral-background1-level;
+  border-color: styles-tokens-element.$sys-neutral-decor-default;
 
-  @include chip-defaults;
-  @include chip-anatomy-styles($chip-choice, $sizes, $labelTypography);
+  @include styles.chip-defaults;
+  @include styles.chip-anatomy-styles(styles-tokens-chips-chipChoice.$chip-choice, $sizes, $labelTypography);
 
   .label,
   .value {
-    color: $sys-neutral-text-support;
+    color: styles-tokens-element.$sys-neutral-text-support;
   }
 
   .icon {
-    color: $sys-neutral-text-light;
+    color: styles-tokens-element.$sys-neutral-text-light;
   }
 
   @each $size in $sizes {
     &[data-size='#{$size}'] {
       .value {
-        @include composite-var($valueTypography, $size);
+        @include styles-tokens-element.composite-var($valueTypography, $size);
       }
     }
   }
@@ -51,46 +51,46 @@ $valueTypography: (
   &:hover,
   &:active,
   &:focus-visible {
-    background-color: $sys-neutral-background2-level;
-    border-color: $sys-neutral-decor-hovered;
+    background-color: styles-tokens-element.$sys-neutral-background2-level;
+    border-color: styles-tokens-element.$sys-neutral-decor-hovered;
 
     .label {
-      color: $sys-neutral-text-support;
+      color: styles-tokens-element.$sys-neutral-text-support;
     }
 
     .value {
-      color: $sys-neutral-text-main;
+      color: styles-tokens-element.$sys-neutral-text-main;
     }
   }
 
   &:focus-visible {
-    @include chip-outline;
+    @include styles.chip-outline;
   }
 
   &[data-disabled] {
     cursor: not-allowed;
-    background-color: $sys-neutral-background;
-    border-color: $sys-neutral-decor-disabled;
+    background-color: styles-tokens-element.$sys-neutral-background;
+    border-color: styles-tokens-element.$sys-neutral-decor-disabled;
 
     .label,
     .value {
-      color: $sys-neutral-text-light;
+      color: styles-tokens-element.$sys-neutral-text-light;
     }
   }
 
   &[data-loading] {
-    background-color: $sys-neutral-background;
-    border-color: $sys-neutral-decor-activated;
+    background-color: styles-tokens-element.$sys-neutral-background;
+    border-color: styles-tokens-element.$sys-neutral-decor-activated;
 
-    @include chip-loading-state($chip-choice, true, null, null, true);
+    @include styles.chip-loading-state(styles-tokens-chips-chipChoice.$chip-choice, true, null, null, true);
 
     .label,
     .value {
-      color: $sys-neutral-text-support;
+      color: styles-tokens-element.$sys-neutral-text-support;
     }
   }
 }
 
 .triggerClassName {
-  --offset: #{$space-drop-list-drop-offset};
+  --offset: #{styles-tokens-element.$space-drop-list-drop-offset};
 }

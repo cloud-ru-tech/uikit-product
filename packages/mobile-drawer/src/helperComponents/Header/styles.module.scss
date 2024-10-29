@@ -1,11 +1,11 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
 
 .drawerHeader {
   /* stub for proper typings */
 }
 
 .image {
-  @include composite-var($drawer-image);
+  @include styles-tokens-drawer.composite-var(styles-tokens-drawer.$drawer-image);
 
   display: block;
   width: 100%;
@@ -13,15 +13,15 @@
 }
 
 .headlineLayout {
-  padding: $dimension-2m;
-  gap: $dimension-1m;
+  padding: styles-tokens-drawer.$dimension-2m;
+  gap: styles-tokens-drawer.$dimension-1m;
 
   display: flex;
   flex-direction: column;
 }
 
 .headline {
-  @include composite-var($drawer-headline);
+  @include styles-tokens-drawer.composite-var(styles-tokens-drawer.$drawer-headline);
 
   display: flex;
   align-items: center;
@@ -29,9 +29,9 @@
 
 .title {
   display: grid;
-  color: $sys-neutral-text-main;
+  color: styles-tokens-drawer.$sys-neutral-text-main;
 }
 
 .subtitle {
-  color: $sys-neutral-text-support;
+  color: styles-tokens-drawer.$sys-neutral-text-support;
 }

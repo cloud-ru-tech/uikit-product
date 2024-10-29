@@ -1,4 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 .wrapper {
   width: 100%;
@@ -19,11 +19,11 @@
 }
 
 .serviceName {
-  @include composite-var($sans-headline-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-headline-m);
 
   display: block;
   margin-bottom: 24px;
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
 }
 
 .description {

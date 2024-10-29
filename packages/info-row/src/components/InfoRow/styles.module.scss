@@ -1,15 +1,15 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 $labelWidth: 200px;
 $contentWidth: 496px;
-$gap: $dimension-3m;
+$gap: styles-theme-variables.$dimension-3m;
 
 .wrapper {
   width: calc($labelWidth + $gap + $contentWidth);
 }
 
 .infoRow {
-  padding: calc($dimension-1m + $dimension-050m) 0;
+  padding: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-050m) 0;
   display: flex;
   column-gap: $gap;
   width: 100%;
@@ -17,10 +17,10 @@ $gap: $dimension-3m;
 }
 
 .labelLayout {
-  @include composite-var($light-label-l);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$light-label-l);
   position: relative;
   width: $labelWidth;
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
   display: flex;
   column-gap: 4px;
   align-items: center;
@@ -39,10 +39,10 @@ $gap: $dimension-3m;
 }
 
 .content {
-  @include composite-var($sans-body-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
   position: relative;
   min-width: 0;
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
   display: flex;
   height: 100%;
   flex: 1;

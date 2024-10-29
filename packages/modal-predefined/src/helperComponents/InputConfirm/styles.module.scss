@@ -1,9 +1,9 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
 }
 
 .textFieldDescription {
@@ -12,17 +12,17 @@
 }
 
 .content {
-  @include composite-var($sans-body-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
 
   word-break: break-all;
-  color: $sys-neutral-text-support;
+  color: styles-theme-variables.$sys-neutral-text-support;
 }
 
 .copyValue {
-  @include composite-var($sans-body-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
 
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
   display: flex;
   align-items: center;
-  gap: $dimension-050m;
+  gap: styles-theme-variables.$dimension-050m;
 }

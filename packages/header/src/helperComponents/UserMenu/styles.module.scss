@@ -1,0 +1,42 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.userMenuWrap {
+  position: relative;
+}
+
+.userMenuDroplist {
+  width: 256px;
+}
+
+.userMenu {
+  position: relative;
+
+  display: flex;
+  padding: styles-tokens-element.$dimension-1m;
+  cursor: pointer;
+  border-radius: styles-tokens-element.$dimension-050m;
+  color: styles-tokens-element.$sys-primary-accent-default;
+
+  &:focus-visible {
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
+
+    outline-color: styles-tokens-element.$sys-available-complementary;
+  }
+}
+
+.userMenuInfoItem {
+  [data-test-id='list__base-item-option'] {
+    // TODO: подумать как "нормально" прокидывать стили/типографику
+    @include styles-tokens-element.composite-var(styles-tokens-element.$sans-label-m);
+  }
+}
+
+.userMenuAvatarCounter {
+  position: absolute;
+  top: 2px;
+  right: 0;
+}
+
+.settingIcon {
+  color: styles-tokens-element.$sys-neutral-text-light;
+}

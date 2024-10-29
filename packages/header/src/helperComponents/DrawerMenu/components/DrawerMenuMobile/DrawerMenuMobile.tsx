@@ -19,7 +19,7 @@ import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
 import { ProductSelectTrigger } from '../ProductSelectTrigger';
 import { useLinks, useSearch } from './hooks';
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 export function DrawerMenuMobile({
   open,

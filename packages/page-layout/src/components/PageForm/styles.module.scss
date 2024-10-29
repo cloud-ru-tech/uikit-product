@@ -1,9 +1,9 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
-$prefix-height: simple-var($sans-headline-m-line-height);
+$prefix-height: styles-theme-variables.simple-var(styles-theme-variables.$sans-headline-m-line-height);
 
 .container {
-  padding: $dimension-3m;
+  padding: styles-theme-variables.$dimension-3m;
   min-width: fit-content;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@ $prefix-height: simple-var($sans-headline-m-line-height);
   flex-direction: column;
   gap: 32px;
   width: 800px;
-  background-color: $sys-neutral-background1-level;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
   padding: 56px;
   flex-shrink: 0;
   border-radius: 16px;
@@ -52,8 +52,8 @@ $prefix-height: simple-var($sans-headline-m-line-height);
 }
 
 .body {
-  @include composite-var($sans-body-m);
-  color: $sys-neutral-text-main;
-  background-color: $sys-neutral-background1-level;
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
+  color: styles-theme-variables.$sys-neutral-text-main;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
   flex: 1;
 }

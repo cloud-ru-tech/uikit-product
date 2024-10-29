@@ -1,9 +1,9 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .description {
-  @include composite-var($sans-body-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
 
-  color: $sys-neutral-text-support;
+  color: styles-theme-variables.$sys-neutral-text-support;
 
   display: flex;
   flex-direction: column;

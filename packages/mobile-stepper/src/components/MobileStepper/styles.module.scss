@@ -1,5 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-stepper';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .stepper {
   display: flex;
@@ -20,10 +19,10 @@
 
 .title {
   overflow: hidden;
-  color: $sys-neutral-text-main;
+  color: styles-tokens-element.$sys-neutral-text-main;
 }
 
 .description {
   overflow: hidden;
-  color: $sys-neutral-text-light;
+  color: styles-tokens-element.$sys-neutral-text-light;
 }

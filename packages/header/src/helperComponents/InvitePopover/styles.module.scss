@@ -1,4 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .invitePopover {
   max-width: 290px;
@@ -7,25 +7,25 @@
 .invitePopoverContent {
   display: flex;
   flex-direction: column;
-  gap: calc($dimension-025m + $dimension-3m);
+  gap: calc(styles-theme-variables.$dimension-025m + styles-theme-variables.$dimension-3m);
 }
 
 .invitePopoverTexts {
   display: flex;
   flex-direction: column;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
 }
 
 .invitePopoverButtons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: $dimension-2m;
+  gap: styles-theme-variables.$dimension-2m;
 }
 
 .invitePopoverTriggerStub {
   position: absolute;
-  bottom: $dimension-1m;
+  bottom: styles-theme-variables.$dimension-1m;
   height: 1px;
   left: 0;
   width: 100%;

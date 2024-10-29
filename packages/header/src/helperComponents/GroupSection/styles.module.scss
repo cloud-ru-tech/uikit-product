@@ -1,7 +1,6 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
-$vPadding: calc($dimension-1m + $dimension-025m);
+$vPadding: calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-025m);
 
 .section {
   display: flex;
@@ -17,15 +16,15 @@ $vPadding: calc($dimension-1m + $dimension-025m);
 }
 
 .title {
-  @include composite-var($sans-title-m);
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-title-m);
   position: relative;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  gap: $dimension-1m;
-  padding: $dimension-1m 0;
+  gap: styles-tokens-element.$dimension-1m;
+  padding: styles-tokens-element.$dimension-1m 0;
 }
 
 .titleText {
@@ -47,28 +46,25 @@ $vPadding: calc($dimension-1m + $dimension-025m);
   transition-duration: 300ms;
 
   width: calc(100%);
-  max-width: calc($dimension-3m + 2 * $vPadding);
+  max-width: calc(styles-tokens-element.$dimension-3m + 2 * $vPadding);
   padding-left: $vPadding;
   box-sizing: border-box;
 
-  z-index: -1;
-
   &[data-is-mounted] {
-    z-index: 0;
-    background-color: $sys-neutral-background2-level;
+    background-color: styles-tokens-element.$sys-neutral-background2-level;
   }
 
   &[data-transition-status='entering'],
   &[data-transition-status='entered'] {
     max-width: 100%;
-    min-width: calc($dimension-3m + 2 * $vPadding);
+    min-width: calc(styles-tokens-element.$dimension-3m + 2 * $vPadding);
     right: 0;
     width: calc(100%);
   }
 
   &[data-transition-status='exiting'],
   &[data-transition-status='exited'] {
-    max-width: calc($dimension-3m + 2 * $vPadding);
+    max-width: calc(styles-tokens-element.$dimension-3m + 2 * $vPadding);
     right: 0;
     width: calc(100%);
   }
@@ -77,19 +73,19 @@ $vPadding: calc($dimension-1m + $dimension-025m);
 .itemsGroups {
   display: flex;
   flex-direction: column;
-  gap: $dimension-2m;
+  gap: styles-tokens-element.$dimension-2m;
 }
 
 .itemsGroup {
   display: flex;
   flex-direction: column;
-  gap: $dimension-025m;
+  gap: styles-tokens-element.$dimension-025m;
 }
 
 .itemsGroupSubheading {
-  @include composite-var($sans-body-s);
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-s);
 
-  color: $sys-neutral-text-light;
+  color: styles-tokens-element.$sys-neutral-text-light;
 }
 
 .addButton {
@@ -102,9 +98,9 @@ $vPadding: calc($dimension-1m + $dimension-025m);
 }
 
 .noData {
-  @include composite-var($sans-body-m);
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-m);
 
-  color: $sys-neutral-text-light;
+  color: styles-tokens-element.$sys-neutral-text-light;
   display: flex;
   justify-content: center;
 }
@@ -118,20 +114,20 @@ $vPadding: calc($dimension-1m + $dimension-025m);
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding: $space-drop-list-item-m-container-vertical-padding $space-drop-list-item-m-container-horizontal-padding;
-  gap: $space-drop-list-item-m-container-gap;
+  padding: styles-tokens-element.$space-drop-list-item-m-container-vertical-padding styles-tokens-element.$space-drop-list-item-m-container-horizontal-padding;
+  gap: styles-tokens-element.$space-drop-list-item-m-container-gap;
 }
 
 .skeletonIcon {
-  border-radius: $radius-avatar-square-xs;
-  width: $size-icon-container-s;
-  height: $size-icon-container-s;
+  border-radius: styles-tokens-element.$radius-avatar-square-xs;
+  width: styles-tokens-element.$size-icon-container-s;
+  height: styles-tokens-element.$size-icon-container-s;
   flex-shrink: 0;
 }
 
 .searchButton {
   height: 40px !important;
-  margin: calc(0px - $dimension-1m) 0 !important;
-  width: calc($dimension-3m + $vPadding) !important;
+  margin: calc(0px - styles-tokens-element.$dimension-1m) 0 !important;
+  width: calc(styles-tokens-element.$dimension-3m + $vPadding) !important;
   justify-content: flex-start !important;
 }

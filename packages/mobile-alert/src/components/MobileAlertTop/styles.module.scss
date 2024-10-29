@@ -1,11 +1,11 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-alert-alertTop';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-alert-alertTop';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 $colors: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue';
 $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue';
 
 .alertTop {
-  @include composite-var($alert-top-container-container);
+  @include styles-tokens-element.composite-var(styles-tokens-alert-alertTop.$alert-top-container-container);
 
   display: flex;
   justify-content: space-between;
@@ -15,9 +15,9 @@ $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue'
   @each $color in $colors {
     &[data-color='#{$color}'] {
       @if $color == 'invert-neutral' {
-        background-color: $sys-invert-neutral-background;
+        background-color: styles-tokens-element.$sys-invert-neutral-background;
       } @else {
-        background-color: simple-var($theme-variables, 'sys', $color, 'accent-default');
+        background-color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $color, 'accent-default');
       }
     }
   }
@@ -31,21 +31,21 @@ $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue'
   @each $color in $colors {
     &[data-color='#{$color}'] {
       @if $color == 'invert-neutral' {
-        color: $sys-invert-neutral-text-main;
+        color: styles-tokens-element.$sys-invert-neutral-text-main;
       } @else {
-        color: simple-var($theme-variables, 'sys', $color, 'on-accent');
+        color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $color, 'on-accent');
       }
     }
   }
 
   svg {
-    width: $icon-s !important; /* stylelint-disable-line declaration-no-important */
-    height: $icon-s !important; /* stylelint-disable-line declaration-no-important */
+    width: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
+    height: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
   }
 }
 
 .title {
-  @include composite-var($sans-title-s);
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-title-s);
 
   word-wrap: break-word;
   overflow: hidden;
@@ -55,16 +55,16 @@ $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue'
   @each $color in $colors {
     &[data-color='#{$color}'] {
       @if $color == 'invert-neutral' {
-        color: $sys-invert-neutral-text-main;
+        color: styles-tokens-element.$sys-invert-neutral-text-main;
       } @else {
-        color: simple-var($theme-variables, 'sys', $color, 'on-accent');
+        color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $color, 'on-accent');
       }
     }
   }
 }
 
 .description {
-  @include composite-var($sans-body-m);
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-m);
 
   word-wrap: break-word;
   overflow: hidden;
@@ -74,9 +74,9 @@ $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue'
   @each $color in $colors {
     &[data-color='#{$color}'] {
       @if $color == 'invert-neutral' {
-        color: $sys-invert-neutral-text-main;
+        color: styles-tokens-element.$sys-invert-neutral-text-main;
       } @else {
-        color: simple-var($theme-variables, 'sys', $color, 'on-accent');
+        color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $color, 'on-accent');
       }
     }
   }
@@ -85,14 +85,14 @@ $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue'
 .contentWrapper {
   display: flex;
   flex-direction: column;
-  gap: $dimension-1m;
+  gap: styles-tokens-element.$dimension-1m;
   align-items: flex-start;
   min-width: 0;
   justify-content: center;
 }
 
 .contentLayout {
-  @include composite-var($alert-top-container-content-layout);
+  @include styles-tokens-element.composite-var(styles-tokens-alert-alertTop.$alert-top-container-content-layout);
 
   display: flex;
   flex-direction: column;
@@ -122,15 +122,15 @@ $tonalAppearances: 'invert-neutral', 'primary', 'red', 'yellow', 'green', 'blue'
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: $dimension-5m;
-  height: $dimension-5m;
+  width: styles-tokens-element.$dimension-5m;
+  height: styles-tokens-element.$dimension-5m;
 
   @each $appearance in $tonalAppearances {
     &[data-appearance='#{$appearance}'] {
       @if $appearance == 'invert-neutral' {
-        color: simple-var($theme-variables, 'sys', $appearance, 'text-main');
+        color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $appearance, 'text-main');
       } @else {
-        color: simple-var($theme-variables, 'sys', $appearance, 'on-accent');
+        color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $appearance, 'on-accent');
       }
     }
   }

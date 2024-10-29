@@ -1,0 +1,26 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.card {
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  display: flex;
+  flex-direction: column;
+  padding: styles-theme-variables.$dimension-2m;
+  gap: styles-theme-variables.$dimension-2m;
+  border-radius: styles-theme-variables.$dimension-1m;
+}
+
+.cardTitle {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-m);
+
+  color: styles-theme-variables.$sys-neutral-text-main;
+}
+
+.cardBody {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: styles-theme-variables.$dimension-2m;
+
+  &[data-mobile] {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

@@ -1,19 +1,19 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-accordion';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-accordion';
 
 .container {
-  @include composite-var($collapse-block-container-secondary);
-  gap: $dimension-2m;
+  @include styles-tokens-accordion.composite-var(styles-tokens-accordion.$collapse-block-container-secondary);
+  gap: styles-tokens-accordion.$dimension-2m;
 
   box-sizing: border-box;
   max-width: 100%;
 
-  border-color: $sys-neutral-decor-default;
+  border-color: styles-tokens-accordion.$sys-neutral-decor-default;
   border-style: solid;
   border-top: 0;
   border-right: 0;
   border-left: 0;
 
   &:hover {
-    border-color: $sys-neutral-accent-hovered;
+    border-color: styles-tokens-accordion.$sys-neutral-accent-hovered;
   }
 } 

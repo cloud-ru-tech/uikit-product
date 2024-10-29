@@ -1,15 +1,14 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-loader';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-loader';
 
 .wrapper {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  color: $sys-neutral-accent-default;
+  color: styles-tokens-loader.$sys-neutral-accent-default;
 }
 
 .spinner {
   position: fixed;
-  top: calc(50% - simple-var($loader-spiner-m, 'height') / 2);
-  left: calc(50% - simple-var($loader-spiner-m, 'width') / 2);
+  top: calc(50% - styles-tokens-loader.simple-var(styles-tokens-loader.$loader-spiner-m, 'height') / 2);
+  left: calc(50% - styles-tokens-loader.simple-var(styles-tokens-loader.$loader-spiner-m, 'width') / 2);
 }

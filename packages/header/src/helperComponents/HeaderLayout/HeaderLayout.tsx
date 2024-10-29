@@ -5,7 +5,7 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import { ButtonFunction } from '@snack-uikit/button';
 import { Skeleton } from '@snack-uikit/skeleton';
 
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 export type HeaderLayoutProps = WithSupportProps<{
   className?: string;

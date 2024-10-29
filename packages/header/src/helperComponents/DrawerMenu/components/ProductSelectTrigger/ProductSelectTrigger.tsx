@@ -5,7 +5,7 @@ import { Avatar } from '@snack-uikit/avatar';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { ProductOption } from '../../../../types';
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 type ProductSelectTriggerProps = {
   selectedProduct: ProductOption;

@@ -1,4 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 .hintWrapper {
   display: flex;
@@ -6,12 +6,12 @@
   padding: 20px;
   min-width: 250px;
   max-width: 480px;
-  background: $sys-neutral-background2-level;
+  background: styles-theme-variables.$sys-neutral-background2-level;
   border-radius: 8px;
 }
 
 .headingContainer {
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,7 +19,7 @@
 }
 
 .subHeading {
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
   margin-bottom: 16px;
 }
 

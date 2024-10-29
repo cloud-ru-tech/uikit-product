@@ -1,22 +1,22 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
   min-width: 242px;
   position: relative;
   box-sizing: border-box;
-  margin: calc($dimension-1m + $dimension-050m) $dimension-2m;
+  margin: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-050m) styles-theme-variables.$dimension-2m;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  gap: $dimension-050m;
+  gap: styles-theme-variables.$dimension-050m;
   align-items: flex-start;
-  padding: $dimension-050m 0;
+  padding: styles-theme-variables.$dimension-050m 0;
 }
 
 .closeButton {
@@ -28,7 +28,7 @@
 .title {
   display: flex;
   align-items: center;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
   width: 100%;
 }
 
@@ -37,8 +37,8 @@
 }
 
 .agreement {
-  @include composite-var($light-label-s);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$light-label-s);
   width: 242px;
   white-space: nowrap;
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
 }

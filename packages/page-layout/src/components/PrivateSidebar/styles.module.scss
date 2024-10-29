@@ -1,7 +1,7 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 $width: 256px;
-$catcherWidth: $dimension-050m;
+$catcherWidth: styles-theme-variables.$dimension-050m;
 $instantAnimation: left .15s ease-in-out;
 $delayedAnimation: left .15s .35s ease-in-out;
 
@@ -57,11 +57,11 @@ $delayedAnimation: left .15s .35s ease-in-out;
     box-sizing: border-box;
     padding: 4px 0;
     flex-direction: column;
-    background-color: $sys-neutral-background;
-    border-right: 1px solid $sys-neutral-decor-default;
+    background-color: styles-theme-variables.$sys-neutral-background;
+    border-right: 1px solid styles-theme-variables.$sys-neutral-decor-default;
 
     &[data-collapsed] {
-      box-shadow: $box-shadow-elevation-level3;
+      box-shadow: styles-theme-variables.$box-shadow-elevation-level3;
       border-right: none;
       margin: 4px;
     }

@@ -1,14 +1,14 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 .wrapper {
-  @include composite-var($sans-body-l);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-l);
 
-  padding: 0 calc($dimension-2m - $dimension-050m);
-  gap: $dimension-1m;
-  height: $dimension-6m;
+  padding: 0 calc(styles-theme-variables.$dimension-2m - styles-theme-variables.$dimension-050m);
+  gap: styles-theme-variables.$dimension-1m;
+  height: styles-theme-variables.$dimension-6m;
   display: flex;
   align-items: center;
-  color: $sys-neutral-text-support;
+  color: styles-theme-variables.$sys-neutral-text-support;
   cursor: pointer;
 }
 

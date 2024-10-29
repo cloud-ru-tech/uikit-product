@@ -10,7 +10,7 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 import { textProvider, Texts } from '../../helpers';
 import { Organization, Platform, Project, Workspace } from '../../types';
 import { GroupSection, ItemsGroup } from '../GroupSection';
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 export type SelectProps = {
   organizations?: Organization[];

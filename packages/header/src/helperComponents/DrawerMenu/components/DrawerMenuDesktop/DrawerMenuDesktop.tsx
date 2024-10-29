@@ -23,7 +23,7 @@ import { useLinks, useSearch } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 /**
  * Если в правой части контент превышает высоту окна на эту долю,

@@ -1,39 +1,39 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 $breakpoint-mobile: 767px;
 $breakpoint-tablet: 1023px;
 $gear-wheel-rotation-period: 10s;
 
 .wrapper {
-  --svgExclamationMark: #{$sys-primary-accent-default};
-  --svgStroke: #{$sys-neutral-decor-activated};
-  --svgBackground: #{$sys-neutral-background1-level};
+  --svgExclamationMark: #{styles-theme-variables.$sys-primary-accent-default};
+  --svgStroke: #{styles-theme-variables.$sys-neutral-decor-activated};
+  --svgBackground: #{styles-theme-variables.$sys-neutral-background1-level};
 
   height: 100%;
-  border-radius: $dimension-1m;
+  border-radius: styles-theme-variables.$dimension-1m;
   box-sizing: border-box;
-  padding: $dimension-6m;
-  gap: $dimension-6m;
+  padding: styles-theme-variables.$dimension-6m;
+  gap: styles-theme-variables.$dimension-6m;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: $sys-neutral-background1-level;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
 
   @media (max-width: $breakpoint-mobile) {
-    padding: $dimension-3m;
-    gap: $dimension-3m;
+    padding: styles-theme-variables.$dimension-3m;
+    gap: styles-theme-variables.$dimension-3m;
   }
 }
 
 .statusCode {
   vertical-align: top;
-  margin-left: $dimension-1m;
+  margin-left: styles-theme-variables.$dimension-1m;
 }
 
 .leftSide {
   display: flex;
   flex-direction: column;
-  gap: $dimension-3m;
+  gap: styles-theme-variables.$dimension-3m;
 
   @media (max-width: $breakpoint-mobile) {
     height: 100%;
@@ -44,23 +44,23 @@ $gear-wheel-rotation-period: 10s;
 .textContainer {
   display: flex;
   flex-direction: column;
-  gap: $dimension-3m;
+  gap: styles-theme-variables.$dimension-3m;
 }
 
 .logo {
-  margin-bottom: $dimension-3m;
+  margin-bottom: styles-theme-variables.$dimension-3m;
 }
 
 .actionsLink {
   display: flex;
   flex-direction: row;
-  gap: $dimension-2m;
+  gap: styles-theme-variables.$dimension-2m;
 }
 
 .buttonContainer {
   display: flex;
   flex-direction: row;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
 
   * > path {
     fill: currentColor;
@@ -127,21 +127,21 @@ $gear-wheel-rotation-period: 10s;
 
 .title {
   @media (max-width: $breakpoint-mobile) {
-    font-family: $sans-headline-m-font-family !important;
-    font-weight: $sans-headline-m-font-weight !important;
-    line-height: $sans-headline-m-line-height !important;
-    font-size: $sans-headline-m-font-size !important;
-    letter-spacing: $sans-headline-m-letter-spacing !important;
+    font-family: styles-theme-variables.$sans-headline-m-font-family !important;
+    font-weight: styles-theme-variables.$sans-headline-m-font-weight !important;
+    line-height: styles-theme-variables.$sans-headline-m-line-height !important;
+    font-size: styles-theme-variables.$sans-headline-m-font-size !important;
+    letter-spacing: styles-theme-variables.$sans-headline-m-letter-spacing !important;
   }
 }
 
 .actionsTitle {
   @media (max-width: $breakpoint-mobile) {
-    font-family: $sans-body-m-font-family !important;
-    font-weight: $sans-body-m-font-weight !important;
-    line-height: $sans-body-m-line-height !important;
-    font-size: $sans-body-m-font-size !important;
-    letter-spacing: $sans-body-m-letter-spacing !important;
+    font-family: styles-theme-variables.$sans-body-m-font-family !important;
+    font-weight: styles-theme-variables.$sans-body-m-font-weight !important;
+    line-height: styles-theme-variables.$sans-body-m-line-height !important;
+    font-size: styles-theme-variables.$sans-body-m-font-size !important;
+    letter-spacing: styles-theme-variables.$sans-body-m-letter-spacing !important;
   }
 }
 

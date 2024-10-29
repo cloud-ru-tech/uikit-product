@@ -1,4 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .wrapperResize {
   resize: both;
@@ -12,6 +12,6 @@
   min-width: 304px;
   padding: 20px;
 
-  border: 1px solid $sys-neutral-decor-default;
-  border-radius: $dimension-050m;
+  border: 1px solid styles-theme-variables.$sys-neutral-decor-default;
+  border-radius: styles-theme-variables.$dimension-050m;
 }

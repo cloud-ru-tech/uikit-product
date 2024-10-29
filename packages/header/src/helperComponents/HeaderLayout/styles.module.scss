@@ -1,0 +1,63 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.header {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 0 styles-tokens-element.$dimension-1m 0 0;
+  height: styles-tokens-element.$dimension-6m;
+  gap: styles-tokens-element.$dimension-2m;
+  justify-content: space-between;
+
+  background-color: styles-tokens-element.$sys-neutral-background;
+  border-bottom: styles-tokens-element.$border-width-012m styles-tokens-element.$border-styles-solid styles-tokens-element.$sys-neutral-decor-default;
+}
+
+.left {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+}
+
+.path {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+a.logo {
+  display: flex;
+  padding: styles-tokens-element.$dimension-1m;
+  cursor: pointer;
+  border-radius: styles-tokens-element.$dimension-050m;
+  min-width: 40px;
+  box-sizing: border-box;
+  // necessary to fix color change to MLSpace theme
+  color: #389f74; /* stylelint-disable-line color-no-hex */
+
+  &:focus-visible {
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
+
+    outline-color: styles-tokens-element.$sys-available-complementary;
+  }
+}
+
+.footer {
+  height: 32px;
+  box-sizing: border-box;
+  background-color: styles-tokens-element.$sys-neutral-background;
+  border-bottom: styles-tokens-element.$border-width-012m styles-tokens-element.$border-styles-solid styles-tokens-element.$sys-neutral-decor-default;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+}
+
+.logoImg {
+  width: 'auto';
+  max-height: 24px;
+  min-height: 24px;
+}

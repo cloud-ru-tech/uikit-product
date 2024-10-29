@@ -1,47 +1,49 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .tableWrapper {
   position: relative;
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 0;
-  margin-top: calc(-1 * $dimension-1m);
+  margin-top: calc(-1 * styles-theme-variables.$dimension-1m);
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
   position: sticky;
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 1;
   top: 0;
-  padding-top: $dimension-1m;
-  padding-bottom: $dimension-1m;
-  margin-bottom: calc(-1 * $dimension-1m);
+  padding-top: styles-theme-variables.$dimension-1m;
+  padding-bottom: styles-theme-variables.$dimension-1m;
+  margin-bottom: calc(-1 * styles-theme-variables.$dimension-1m);
 
   &[data-background='default'] {
-    background-color: $sys-neutral-background;
+    background-color: styles-theme-variables.$sys-neutral-background;
   }
 
   &[data-background='1-level'] {
-    background-color: $sys-neutral-background1-level;
+    background-color: styles-theme-variables.$sys-neutral-background1-level;
   }
 
   &[data-background='2-level'] {
-    background-color: $sys-neutral-background2-level;
+    background-color: styles-theme-variables.$sys-neutral-background2-level;
   }
 }
 
 .table {
   box-sizing: border-box;
-  border: $border-width-012m solid $sys-neutral-decor-default;
-  border-radius: $dimension-050m;
-  background: $sys-neutral-background1-level;
-  margin-top: $dimension-1m;
+  border: styles-theme-variables.$border-width-012m solid styles-theme-variables.$sys-neutral-decor-default;
+  border-radius: styles-theme-variables.$dimension-050m;
+  background: styles-theme-variables.$sys-neutral-background1-level;
+  margin-top: styles-theme-variables.$dimension-1m;
 }
 
 .filtersWrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: $dimension-050m;
+  gap: styles-theme-variables.$dimension-050m;
   align-items: center;
   justify-content: flex-start;
 }

@@ -1,9 +1,9 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .title {
-  @include composite-var($sans-title-s);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-s);
 
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
 
   overflow: hidden;
 
@@ -25,17 +25,17 @@
 }
 
 .text {
-  @include composite-var($light-label-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$light-label-m);
 
   overflow: hidden;
 }
 
 .created {
-  color: $sys-neutral-text-light;
+  color: styles-theme-variables.$sys-neutral-text-light;
 }
 
 .available {
-  color: $sys-neutral-text-support;
+  color: styles-theme-variables.$sys-neutral-text-support;
 }
 
 .quotaCard {
@@ -57,16 +57,16 @@
 
   border-style: solid;
   border-width: 1px;
-  border-color: $sys-neutral-decor-default;
+  border-color: styles-theme-variables.$sys-neutral-decor-default;
 
-  background-color: $sys-neutral-background1-level;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
 
   &[data-exceeded] {
-    border-color: $sys-red-decor-default;
-    background-color: $sys-red-background1-level;
+    border-color: styles-theme-variables.$sys-red-decor-default;
+    background-color: styles-theme-variables.$sys-red-background1-level;
 
     .text {
-      color: $sys-red-text-support;
+      color: styles-theme-variables.$sys-red-text-support;
     }
   }
 }
@@ -80,9 +80,9 @@
 }
 
 .noData {
-  @include composite-var($sans-body-s);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-s);
   text-align: center;
-  color: $sys-neutral-text-support;
+  color: styles-theme-variables.$sys-neutral-text-support;
 }
 
 .retryButton {

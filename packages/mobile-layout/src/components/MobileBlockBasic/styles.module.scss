@@ -1,5 +1,5 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .wrapper[data-mobile] {
-  padding: $dimension-2m;
+  padding: styles-theme-variables.$dimension-2m;
 }

@@ -1,0 +1,168 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.drawer {
+  & [data-test-id='drawer__close-button'] {
+    display: none;
+  }
+}
+
+.drawerBody {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  min-height: styles-tokens-element.$dimension-2m;
+  color: styles-tokens-element.$sys-neutral-text-main;
+  background-color: styles-tokens-element.$sys-neutral-background !important;
+  padding-left: calc(styles-tokens-element.$dimension-4m - styles-tokens-element.$dimension-050m);
+}
+
+.menu {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.leftWrapper {
+  display: flex;
+  gap: styles-tokens-element.$dimension-2m;
+  padding: styles-tokens-element.$dimension-4m 0;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.leftTop {
+  display: flex;
+  flex-direction: column;
+  gap: styles-tokens-element.$dimension-1m;
+  flex-grow: 1;
+}
+
+.selectProduct {
+  padding-left: styles-tokens-element.$dimension-050m;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  padding-left: styles-tokens-element.$dimension-050m;
+}
+
+.footerLinksDivider {
+  padding: styles-tokens-element.$dimension-1m 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: styles-tokens-element.$dimension-2m;
+  padding-left: styles-tokens-element.$dimension-050m;
+  padding-top: styles-tokens-element.$dimension-1m;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: styles-tokens-element.$dimension-2m;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.pinnedCards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  gap: styles-tokens-element.$dimension-2m;
+}
+
+.pinnedCard {
+  flex: 1 0 calc(50% - styles-tokens-element.$dimension-1m);
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  gap: styles-tokens-element.$dimension-2m;
+  padding: styles-tokens-element.$dimension-4m styles-tokens-element.$dimension-4m styles-tokens-element.$dimension-4m styles-tokens-element.$dimension-2m;
+}
+
+.noData {
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-l);
+
+  color: styles-tokens-element.$sys-neutral-text-light;
+  display: flex;
+  justify-content: center;
+  padding: styles-tokens-element.$dimension-2m;
+}
+
+.select {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 0 calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-050m - styles-tokens-element.$border-width-012m);
+  gap: styles-tokens-element.$dimension-1m;
+  border: styles-tokens-element.$border-width-012m solid transparent;
+  background-color: styles-tokens-element.$sys-neutral-background1-level;
+  width: calc(32 * styles-tokens-element.$dimension-1m);
+  height: styles-tokens-element.$dimension-7m;
+  border-radius: styles-tokens-element.$dimension-050m;
+
+  &[data-active] {
+    cursor: pointer;
+    &:hover {
+      box-shadow: styles-tokens-element.$box-shadow-elevation-level2;
+    }
+}
+
+  &:focus-visible,
+  &[data-open] {
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-m);
+
+    box-shadow: styles-tokens-element.$box-shadow-elevation-level2;
+    outline-color: styles-tokens-element.$sys-primary-decor-activated;
+    border-color: styles-tokens-element.$sys-primary-accent-default;
+  }
+}
+
+.logo {
+  width: styles-tokens-element.$dimension-4m;
+  height: styles-tokens-element.$dimension-4m;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  > div {
+    transform: scale(1.33333333333);
+  }
+}
+
+.droplist {
+  padding: styles-tokens-element.$dimension-1m calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-050m);
+}
+
+.selectedSection {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.selectedHeading {
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-s);
+
+  color: styles-tokens-element.$sys-neutral-text-light;
+}
+
+.selectedOption {
+  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-title-s);
+
+  color: styles-tokens-element.$sys-neutral-text-main;
+}
+
+.chevron {
+  display: flex;
+  flex-shrink: 0;
+
+  color: styles-tokens-element.$sys-neutral-text-light;
+}

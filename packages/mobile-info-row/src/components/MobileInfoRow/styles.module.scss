@@ -1,4 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 .wrapper {
   width: 100%;
@@ -7,28 +7,28 @@
 .infoRow {
   display: flex;
   flex-direction: column;
-  gap: $dimension-050m;
+  gap: styles-theme-variables.$dimension-050m;
   width: 100%;
 
   &[data-position='inner'] {
-    padding: $dimension-2m 0;
+    padding: styles-theme-variables.$dimension-2m 0;
   }
 
   &[data-position='first'] {
-    padding-bottom: $dimension-2m;
+    padding-bottom: styles-theme-variables.$dimension-2m;
   }
 
   &[data-position='last'] {
-    padding-top: $dimension-2m;
+    padding-top: styles-theme-variables.$dimension-2m;
   }
 }
 
 .labelLayout {
-  @include composite-var($light-label-l);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$light-label-l);
   position: relative;
-  color: $sys-neutral-text-light;
+  color: styles-theme-variables.$sys-neutral-text-light;
   display: flex;
-  gap: $dimension-050m;
+  gap: styles-theme-variables.$dimension-050m;
   align-items: center;
   justify-content: flex-start;
   height: 100%;
@@ -39,14 +39,14 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: $dimension-2m;
+  gap: styles-theme-variables.$dimension-2m;
 }
 
 .content {
-  @include composite-var($sans-body-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
   position: relative;
   min-width: 0;
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
   display: flex;
   height: 100%;
   flex: 1;
@@ -58,5 +58,5 @@
 .rowActions {
   display: flex;
   align-items: center;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
 }

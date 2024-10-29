@@ -1,11 +1,11 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
 
 .drawerBody {
-  @include composite-var($drawer-body);
-  padding: 0 $dimension-2m;
+  @include styles-tokens-drawer.composite-var(styles-tokens-drawer.$drawer-body);
+  padding: 0 styles-tokens-drawer.$dimension-2m;
 
   flex: 1 1 auto;
   box-sizing: border-box;
-  min-height: $dimension-2m;
-  color: $sys-neutral-text-main;
+  min-height: styles-tokens-drawer.$dimension-2m;
+  color: styles-tokens-drawer.$sys-neutral-text-main;
 }

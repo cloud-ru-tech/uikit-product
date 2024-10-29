@@ -1,27 +1,25 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-avatar';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-avatar';
 
 .contentLayout {
   display: flex;
   align-items: center;
-  gap: $dimension-1m;
+  gap: styles-tokens-avatar.$dimension-1m;
   flex-shrink: 0;
   width: 100%;
 }
 
 .name,
 .entity {
-  max-width: calc(2 * $dimension-10m);
-  min-width: calc(2 * $dimension-7m);
+  max-width: calc(2 * styles-tokens-avatar.$dimension-10m);
+  min-width: calc(2 * styles-tokens-avatar.$dimension-7m);
 }
 
 .name {
-  @include composite-var($light-label-m);
+  @include styles-tokens-avatar.composite-var(styles-tokens-avatar.$light-label-m);
 }
 
 .entity {
-  @include composite-var($light-label-s);
+  @include styles-tokens-avatar.composite-var(styles-tokens-avatar.$light-label-s);
 }
 
 .textWrapper {
@@ -48,7 +46,7 @@
 }
 
 .avatarSkeleton {
-  @include composite-var($avatar-round-xs);
+  @include styles-tokens-avatar.composite-var(styles-tokens-avatar.$avatar-round-xs);
 
   flex-shrink: 0;
 

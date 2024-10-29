@@ -1,0 +1,13 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.container {
+  width: 24px;
+  height: 24px;
+  color: styles-theme-variables.$sys-primary-on-accent;
+  fill: styles-theme-variables.$sys-primary-on-accent;
+  background-color: styles-theme-variables.$sys-neutral-accent-default;
+  border-radius: styles-theme-variables.$dimension-050m;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

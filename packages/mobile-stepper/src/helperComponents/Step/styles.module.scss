@@ -1,5 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-stepper';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .track {
   position: absolute;
@@ -8,7 +7,7 @@
   top: 50%;
   height: 4px;
   border-radius: 4px;
-  background-color: $sys-neutral-decor-default;
+  background-color: styles-tokens-element.$sys-neutral-decor-default;
 
   transform: translate(0, -50%);
 }
@@ -28,7 +27,7 @@
   align-items: center;
   justify-content: center;
 
-  background-color: $sys-neutral-decor-default;
+  background-color: styles-tokens-element.$sys-neutral-decor-default;
 }
 
 .step {
@@ -38,29 +37,29 @@
   margin: 0;
   padding: 0;
 
-  color: $sys-neutral-text-main;
+  color: styles-tokens-element.$sys-neutral-text-main;
 
   background-color: transparent;
   border: none;
 
   &:focus-visible {
-    @include outline-var($container-focused-s);
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
 
-    outline-color: $sys-available-complementary;
-    outline-offset: $spacing-state-focus-offset;
+    outline-color: styles-tokens-element.$sys-available-complementary;
+    outline-offset: styles-tokens-element.$spacing-state-focus-offset;
   }
 
   &:not([disabled]) {
     cursor: pointer;
     &:focus-visible,
     &:hover {
-      color: $sys-neutral-text-light;
+      color: styles-tokens-element.$sys-neutral-text-light;
     }
   }
 
   &[data-state='current'] {
     .track {
-      background-color: $sys-primary-accent-default;
+      background-color: styles-tokens-element.$sys-primary-accent-default;
     }
     .status {
       display: none;
@@ -70,16 +69,16 @@
   &[data-state='completed'] {
     .track,
     .status {
-      background-color: $sys-primary-decor-default;
-      color: $sys-primary-accent-default;
+      background-color: styles-tokens-element.$sys-primary-decor-default;
+      color: styles-tokens-element.$sys-primary-accent-default;
     }
   }
 
   &[data-state='rejected'] {
     .track,
     .status {
-      background-color: $sys-red-accent-default;
-      color: $sys-red-on-accent;
+      background-color: styles-tokens-element.$sys-red-accent-default;
+      color: styles-tokens-element.$sys-red-on-accent;
     }
   }
 
@@ -92,8 +91,8 @@
   &[data-state='loading'] {
     .track,
     .status {
-      color: $sys-neutral-accent-default;
-      border-color: $sys-neutral-decor-default;
+      color: styles-tokens-element.$sys-neutral-accent-default;
+      border-color: styles-tokens-element.$sys-neutral-decor-default;
     }
   }
 }

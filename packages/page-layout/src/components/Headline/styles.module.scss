@@ -1,4 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .headline {
   display: flex;
@@ -8,22 +8,22 @@
 .headlineLayout {
   display: flex;
   flex-direction: row;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
   align-items: flex-start;
 }
 
 .titleLayout {
   display: flex;
   flex-direction: row;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
   align-items: flex-start;
   flex-grow: 1;
 }
 
 .title {
-  @include composite-var($sans-headline-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-headline-m);
 
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
   margin: 0;
   word-break: break-word;
 }
@@ -31,19 +31,19 @@
 .prefixButtonWrapper {
   display: flex;
   align-items: center;
-  height: $sans-headline-m-line-height;
+  height: styles-theme-variables.$sans-headline-m-line-height;
   flex-shrink: 0;
 }
 
 .statusWrapper {
   display: flex;
   align-items: center;
-  height: $sans-headline-m-line-height;
+  height: styles-theme-variables.$sans-headline-m-line-height;
   flex-shrink: 0;
 }
 
 .actions {
-  height: $sans-headline-m-line-height;
+  height: styles-theme-variables.$sans-headline-m-line-height;
   display: flex;
   align-items: center;
   gap: 8px;

@@ -1,30 +1,28 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
-
-/* stylelint-disable no-descending-specificity */
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 $sizes: 's', 'm', 'l';
 $variants: 'single-line-container', 'multi-line-container';
 
 @mixin validationState($state, $rainbowColor, $bgDefault) {
   &[data-validation='#{$state}'] {
-    background-color: simple-var($theme-variables, 'sys', $bgDefault, 'background1-level');
-    border-color: simple-var($theme-variables, 'sys', $bgDefault, 'decor-default');
+    background-color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $bgDefault, 'background1-level');
+    border-color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $bgDefault, 'decor-default');
 
     &:hover {
-      background-color: $sys-neutral-background2-level;
-      border-color: simple-var($theme-variables, 'sys', $rainbowColor, 'decor-hovered');
+      background-color: styles-tokens-element.$sys-neutral-background2-level;
+      border-color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $rainbowColor, 'decor-hovered');
     }
 
     &:not([data-readonly]) {
       &:focus-within,
       &[data-focused] {
         &:not([data-disabled]) {
-          @include outline-var($container-focused-m);
+          @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-m);
 
-          background-color: simple-var($sys-neutral-background2-level);
-          border-color: simple-var($theme-variables, 'sys', $rainbowColor, 'accent-default');
-          outline-color: simple-var($theme-variables, 'sys', $rainbowColor, 'decor-activated');
+          background-color: styles-tokens-element.simple-var(styles-tokens-element.$sys-neutral-background2-level);
+          border-color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $rainbowColor, 'accent-default');
+          outline-color: styles-tokens-element.simple-var(styles-tokens-element.$theme-variables, 'sys', $rainbowColor, 'decor-activated');
         }
       }
     }
@@ -46,19 +44,19 @@ $variants: 'single-line-container', 'multi-line-container';
 
   @each $size in $sizes {
     &[data-size='#{$size}'] {
-      @include composite-var($fields, 'container', $size);
+      @include styles-tokens-element.composite-var(styles-tokens-fields.$fields, 'container', $size);
 
       &,
       input,
       select,
       textarea,
       span {
-        @include composite-var($theme-variables, 'sans', 'body', $size);
+        @include styles-tokens-element.composite-var(styles-tokens-element.$theme-variables, 'sans', 'body', $size);
       }
 
       @each $variant in $variants {
         &[data-variant='#{$variant}'] {
-          @include composite-var($fields, $variant, $size);
+          @include styles-tokens-element.composite-var(styles-tokens-fields.$fields, $variant, $size);
         }
       }
     }
@@ -85,16 +83,16 @@ $variants: 'single-line-container', 'multi-line-container';
 
     &,
     &:hover {
-      background-color: simple-var($sys-neutral-decor-disabled);
-      border-color: simple-var($sys-neutral-decor-disabled);
+      background-color: styles-tokens-element.simple-var(styles-tokens-element.$sys-neutral-decor-disabled);
+      border-color: styles-tokens-element.simple-var(styles-tokens-element.$sys-neutral-decor-disabled);
     }
 
     &:focus-within,
     &[data-focused] {
-      @include outline-var($container-focused-m);
+      @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-m);
 
-      background-color: simple-var($sys-neutral-decor-disabled);
-      border-color: simple-var($sys-neutral-decor-disabled);
+      background-color: styles-tokens-element.simple-var(styles-tokens-element.$sys-neutral-decor-disabled);
+      border-color: styles-tokens-element.simple-var(styles-tokens-element.$sys-neutral-decor-disabled);
       outline: none;
     }
   }
@@ -106,15 +104,15 @@ $variants: 'single-line-container', 'multi-line-container';
     textarea,
     span {
       cursor: not-allowed;
-      background-color: simple-var($sys-neutral-background);
+      background-color: styles-tokens-element.simple-var(styles-tokens-element.$sys-neutral-background);
     }
 
     &,
     &:focus-within,
     &[data-focused],
     &:hover {
-      background-color: simple-var($sys-neutral-background);
-      border-color: simple-var($sys-neutral-decor-disabled);
+      background-color: styles-tokens-element.simple-var(styles-tokens-element.$sys-neutral-background);
+      border-color: styles-tokens-element.simple-var(styles-tokens-element.$sys-neutral-decor-disabled);
       outline: none;
     }
   }
@@ -123,11 +121,11 @@ $variants: 'single-line-container', 'multi-line-container';
 .prefix {
   display: inline-flex;
   flex-shrink: 0;
-  color: $sys-neutral-text-disabled;
+  color: styles-tokens-element.$sys-neutral-text-disabled;
 }
 
 .postfix {
   display: inline-flex;
   flex-shrink: 0;
-  gap: $space-fields-postfix-gap;
+  gap: styles-tokens-element.$space-fields-postfix-gap;
 }

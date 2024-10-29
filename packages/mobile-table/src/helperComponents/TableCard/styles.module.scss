@@ -1,50 +1,50 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .card {
   position: relative;
   box-sizing: border-box;
-  padding: $dimension-2m;
+  padding: styles-theme-variables.$dimension-2m;
   display: flex;
   flex-direction: column;
-  gap: $dimension-2m;
+  gap: styles-theme-variables.$dimension-2m;
 
   &:not(:last-child) {
-    border-bottom: $border-width-general-xs solid $sys-neutral-decor-default;
+    border-bottom: styles-theme-variables.$border-width-general-xs solid styles-theme-variables.$sys-neutral-decor-default;
   }
 }
 
 .button {
   position: absolute;
-  top: $dimension-1m;
-  right: $dimension-1m;
+  top: styles-theme-variables.$dimension-1m;
+  right: styles-theme-variables.$dimension-1m;
 }
 
 .headline {
-  @include composite-var($sans-title-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-m);
 
-  color: $sys-neutral-text-main;
-  padding-right: $dimension-4m;
+  color: styles-theme-variables.$sys-neutral-text-main;
+  padding-right: styles-theme-variables.$dimension-4m;
 }
 
 .body {
   display: flex;
   flex-direction: column;
-  gap: $dimension-2m;
+  gap: styles-theme-variables.$dimension-2m;
 }
 
 .cardRow {
-  @include composite-var($sans-body-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
   display: flex;
   flex-direction: column;
-  gap: $dimension-050m;
+  gap: styles-theme-variables.$dimension-050m;
 }
 
 .cardRowHeader {
-  color: $sys-neutral-text-light;
+  color: styles-theme-variables.$sys-neutral-text-light;
   word-break: break-word;
 }
 
 .cardRowContent {
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
   word-break: break-word;
 }

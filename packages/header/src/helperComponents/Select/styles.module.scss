@@ -1,0 +1,75 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.name {
+  color: styles-tokens-element.$sys-neutral-text-support;
+}
+
+.entity {
+  color: styles-tokens-element.$sys-neutral-text-light;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  height: styles-tokens-element.$dimension-6m;
+  padding: 0 styles-tokens-element.$dimension-1m;
+  gap: styles-tokens-element.$dimension-050m;
+  color: styles-tokens-element.$sys-neutral-text-light;
+  width: 176px;
+  border-left: 1px solid styles-tokens-element.$sys-neutral-decor-default;
+  border-right: 1px solid styles-tokens-element.$sys-neutral-decor-default;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover,
+  &[data-open] {
+    color: styles-tokens-element.$sys-neutral-text-support;
+    background-color: styles-tokens-element.color-on-background-with-opacity(
+      styles-tokens-element.$sys-neutral-accent-default,
+      styles-tokens-element.$sys-neutral-background,
+      styles-tokens-element.$opacity-a008
+    );
+
+    & .name {
+      color: styles-tokens-element.$sys-neutral-text-main;
+    }
+  }
+
+  &:focus-visible {
+    @include styles-tokens-element.outline-inside-var(styles-tokens-element.$container-focused-s);
+
+    outline-color: styles-tokens-element.$sys-available-complementary;
+    color: styles-tokens-element.$sys-neutral-text-support;
+    background-color: styles-tokens-element.color-on-background-with-opacity(
+      styles-tokens-element.$sys-neutral-accent-default,
+      styles-tokens-element.$sys-neutral-background,
+      styles-tokens-element.$opacity-a008
+    );
+
+    & .name {
+      color: styles-tokens-element.$sys-neutral-text-main;
+    }
+  }
+}
+
+.selectGroup {
+  height: 320px;
+  box-sizing: border-box;
+  padding: 0 styles-tokens-element.$dimension-1m;
+
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  max-width: 100dvw;
+}
+
+.selectGroupScroll {
+  display: flex;
+  box-sizing: border-box;
+  padding: styles-tokens-element.$dimension-050m 0;
+  height: 100%;
+  gap: styles-tokens-element.$dimension-1m;
+  align-items: stretch;
+  flex-direction: row;
+  width: max-content;
+}

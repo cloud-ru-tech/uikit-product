@@ -1,10 +1,10 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 .cardBannerContent {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: $dimension-2m;
+  gap: styles-theme-variables.$dimension-2m;
   width: 100%;
   height: 100%;
 }
@@ -13,22 +13,22 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: calc($dimension-050m + $dimension-1m);
+  gap: calc(styles-theme-variables.$dimension-050m + styles-theme-variables.$dimension-1m);
 }
 
 .cardBannerDescription {
-  color: $sys-neutral-text-support;
+  color: styles-theme-variables.$sys-neutral-text-support;
 }
 
 .cardBannerTitle {
-  @include composite-var($sans-title-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-m);
 
   max-width: 100%;
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
 }
 
 .cardBannerImage {
-  width: calc($dimension-5m + $dimension-7m);
+  width: calc(styles-theme-variables.$dimension-5m + styles-theme-variables.$dimension-7m);
   flex-shrink: 0;
   object-position: center;
   object-fit: cover;
@@ -36,8 +36,8 @@
 
 .cardFunctionBadgeWrapper {
   position: absolute;
-  right: $dimension-1m;
-  top: $dimension-1m;
+  right: styles-theme-variables.$dimension-1m;
+  top: styles-theme-variables.$dimension-1m;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;

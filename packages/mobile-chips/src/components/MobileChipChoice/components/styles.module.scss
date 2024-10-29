@@ -1,5 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields';
 
 .footer {
   width: 100%;
@@ -13,9 +12,9 @@
 }
 
 .counter {
-  color: $sys-neutral-text-light;
+  color: styles-tokens-fields.$sys-neutral-text-light;
 
-  @include composite-var($sans-body-m);
+  @include styles-tokens-fields.composite-var(styles-tokens-fields.$sans-body-m);
 }
 
 .bodyNoPadding {

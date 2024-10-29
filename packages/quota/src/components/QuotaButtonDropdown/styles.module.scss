@@ -1,9 +1,9 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .title {
-  @include composite-var($sans-title-m);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-m);
 
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
 
   overflow: hidden;
 }
@@ -24,9 +24,9 @@
 }
 
 .description {
-  @include composite-var($sans-body-s);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-s);
 
-  color: $sys-neutral-text-support;
+  color: styles-theme-variables.$sys-neutral-text-support;
 }
 
 .content {
@@ -79,9 +79,9 @@
 }
 
 .noData {
-  @include composite-var($sans-body-s);
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-s);
   text-align: center;
-  color: $sys-neutral-text-support;
+  color: styles-theme-variables.$sys-neutral-text-support;
 }
 
 .retryButton {

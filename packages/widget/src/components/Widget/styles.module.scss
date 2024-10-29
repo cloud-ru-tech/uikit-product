@@ -1,32 +1,32 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .widget {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: calc($dimension-1m + $dimension-025m);
-  background-color: $sys-neutral-background1-level;
-  border-radius: calc($dimension-1m + $dimension-050m);
-  padding: $dimension-2m;
+  gap: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-025m);
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  border-radius: calc(styles-theme-variables.$dimension-1m + styles-theme-variables.$dimension-050m);
+  padding: styles-theme-variables.$dimension-2m;
 }
 
 .widgetHeading {
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
 }
 
 .widgetHeader {
   display: flex;
   align-items: center;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
   min-width: 0;
   width: 100%;
 }
 
 .widgetTitle {
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
   min-width: 0;
 }
 
@@ -35,5 +35,5 @@
 }
 
 .widgetContent {
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
 }

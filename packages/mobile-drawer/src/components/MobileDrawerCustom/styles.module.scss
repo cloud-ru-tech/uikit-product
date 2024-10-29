@@ -1,16 +1,16 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
 
 $modes: ('regular', 'soft');
 $sizes: ('s', 'm', 'l');
 $drawer-background-color: (
-  'regular': $sys-neutral-background1-level,
-  'soft': $sys-neutral-background2-level,
+  'regular': styles-tokens-drawer.$sys-neutral-background1-level,
+  'soft': styles-tokens-drawer.$sys-neutral-background2-level,
 );
 
 .content {
   flex-grow: 1;
-  min-width: $dimension-5m;
-  min-height: $dimension-5m;
+  min-width: styles-tokens-drawer.$dimension-5m;
+  min-height: styles-tokens-drawer.$dimension-5m;
   display: flex;
   flex-direction: column;
 
@@ -29,12 +29,12 @@ $drawer-background-color: (
 }
 
 .drawerRoot {
-  z-index: auto !important; /* stylelint-disable-line declaration-no-important */
+  z-index: initial !important; /* stylelint-disable-line declaration-no-important */
 
   div[data-content-wrapper='true'] {
     will-change: transform;
 
-    z-index: auto;
+    z-index: initial;
     overflow: hidden;
     touch-action: none;
 
@@ -42,7 +42,7 @@ $drawer-background-color: (
     &[data-position='right'] {
       height: 100%;
       max-height: 100%;
-      max-width: calc(100% - $space-drawer-outside-gap);
+      max-width: calc(100% - styles-tokens-drawer.$space-drawer-outside-gap);
       top: 0;
       bottom: 0;
 
@@ -52,7 +52,7 @@ $drawer-background-color: (
 
       @each $size in $sizes {
         &[data-size='#{$size}'] {
-          @include composite-var($drawer, 'window', $size);
+          @include styles-tokens-drawer.composite-var(styles-tokens-drawer.$drawer, 'window', $size);
         }
       }
     }
@@ -79,18 +79,18 @@ $drawer-background-color: (
     &[data-position='top'] {
       width: 100%;
       max-width: 100%;
-      max-height: calc(100% - $space-drawer-outside-gap);
+      max-height: calc(100% - styles-tokens-drawer.$space-drawer-outside-gap);
       left: 0;
       right: 0;
 
       .content {
-        max-height: calc(100dvh - $space-drawer-outside-gap);
+        max-height: calc(100dvh - styles-tokens-drawer.$space-drawer-outside-gap);
       }
 
       @each $size in $sizes {
         &[data-size='#{$size}'] {
-          height: simple-var($drawer, 'window', $size, 'width');
-          min-height: simple-var($drawer, 'window', $size, 'min-width');
+          height: styles-tokens-drawer.simple-var(styles-tokens-drawer.$drawer, 'window', $size, 'width');
+          min-height: styles-tokens-drawer.simple-var(styles-tokens-drawer.$drawer, 'window', $size, 'min-width');
         }
       }
     }
@@ -116,7 +116,7 @@ $drawer-background-color: (
     @each $mode in $modes {
       &[data-mode='#{$mode}'] {
         .drawer {
-          background-color: simple-var($drawer-background-color, $mode);
+          background-color: styles-tokens-drawer.simple-var($drawer-background-color, $mode);
         }
       }
     }
@@ -130,66 +130,66 @@ $drawer-background-color: (
 
   box-sizing: border-box;
 
-  box-shadow: simple-var($box-shadow-elevation-level5);
+  box-shadow: styles-tokens-drawer.simple-var(styles-tokens-drawer.$box-shadow-elevation-level5);
 }
 
 .mask {
-  z-index: auto !important; /* stylelint-disable-line declaration-no-important */
-  background-color: simple-var($sys-blackout);
+  z-index: initial !important; /* stylelint-disable-line declaration-no-important */
+  background-color: styles-tokens-drawer.simple-var(styles-tokens-drawer.$sys-blackout);
 }
 
 .maskBlur {
-  backdrop-filter: blur(simple-var($background-blur-background-blur));
+  backdrop-filter: blur(styles-tokens-drawer.simple-var(styles-tokens-drawer.$background-blur-background-blur));
 }
 
 .drawerBlur {
   outline: none;
 }
 
-$swiper-length: $dimension-10m;
+$swiper-length: styles-tokens-drawer.$dimension-10m;
 
 .swiper {
   position: absolute;
 
-  background-color: $sys-neutral-decor-default;
-  border-radius: $dimension-050m;
+  background-color: styles-tokens-drawer.$sys-neutral-decor-default;
+  border-radius: styles-tokens-drawer.$dimension-050m;
 
   &[data-position='left'],
   &[data-position='right'] {
-    width: $dimension-050m;
+    width: styles-tokens-drawer.$dimension-050m;
     height: $swiper-length;
   }
 
   &[data-position='left'] {
-    right: $dimension-050m;
+    right: styles-tokens-drawer.$dimension-050m;
     top: calc(50% - $swiper-length / 2);
   }
 
   &[data-position='right'] {
-    left: $dimension-050m;
+    left: styles-tokens-drawer.$dimension-050m;
     top: calc(50% - $swiper-length / 2);
   }
 
   &[data-position='bottom'],
   &[data-position='top'] {
     width: $swiper-length;
-    height: $dimension-050m;
+    height: styles-tokens-drawer.$dimension-050m;
   }
 
   &[data-position='bottom'] {
-    top: $dimension-050m;
+    top: styles-tokens-drawer.$dimension-050m;
     left: calc(50% - $swiper-length / 2);
   }
 
   &[data-position='top'] {
-    bottom: $dimension-050m;
+    bottom: styles-tokens-drawer.$dimension-050m;
     left: calc(50% - $swiper-length / 2);
   }
 }
 
 .headerElements {
-  @include composite-var($drawer-header-elements-container);
-  @include composite-var($drawer-header-elements-elements-layout);
+  @include styles-tokens-drawer.composite-var(styles-tokens-drawer.$drawer-header-elements-container);
+  @include styles-tokens-drawer.composite-var(styles-tokens-drawer.$drawer-header-elements-elements-layout);
 
   position: absolute;
   top: 0;

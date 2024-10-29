@@ -1,4 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .wrapper {
   display: flex;
@@ -6,8 +6,8 @@
   width: 100%;
   min-height: 100%;
   box-sizing: border-box;
-  padding: $dimension-2m;
-  gap: $dimension-2m;
+  padding: styles-theme-variables.$dimension-2m;
+  gap: styles-theme-variables.$dimension-2m;
 }
 
 .childWrapper {

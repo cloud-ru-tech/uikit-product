@@ -1,9 +1,9 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
 
 .wrapper {
   display: flex;
   flex-direction: row;
-  gap: $dimension-1m;
+  gap: styles-theme-variables.$dimension-1m;
   align-items: center;
 }
 
@@ -16,5 +16,5 @@
   overflow: hidden;
   flex-grow: 1;
   flex-shrink: 1;
-  color: $sys-neutral-text-main;
+  color: styles-theme-variables.$sys-neutral-text-main;
 }

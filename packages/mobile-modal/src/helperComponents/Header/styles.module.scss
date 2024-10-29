@@ -1,4 +1,4 @@
-@import '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-modal';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-modal';
 
 $aligns: 'default', 'center';
 
@@ -8,17 +8,17 @@ $aligns: 'default', 'center';
 
 .title {
   display: inline;
-  color: $sys-neutral-text-main;
+  color: styles-tokens-modal.$sys-neutral-text-main;
   word-break: break-word;
 }
 
 .subtitle {
-  color: $sys-neutral-text-support;
+  color: styles-tokens-modal.$sys-neutral-text-support;
 }
 
 .questionTooltip {
   display: inline-flex;
-  height: $dimension-4m;
+  height: styles-tokens-modal.$dimension-4m;
   padding-left: 4px;
 
   > span {
@@ -27,7 +27,7 @@ $aligns: 'default', 'center';
 }
 
 .image {
-  @include composite-var($modal, 'image');
+  @include styles-tokens-modal.composite-var(styles-tokens-modal.$modal, 'image');
 
   display: block;
   width: 100%;
@@ -35,15 +35,15 @@ $aligns: 'default', 'center';
 }
 
 .icon {
-  @include composite-var($modal, 'icon-decor');
+  @include styles-tokens-modal.composite-var(styles-tokens-modal.$modal, 'icon-decor');
 
   display: flex;
   justify-content: center;
 }
 
 .headlineLayout {
-  padding: $dimension-3m $dimension-2m 0;
-  gap: $dimension-1m;
+  padding: styles-tokens-modal.$dimension-3m styles-tokens-modal.$dimension-2m 0;
+  gap: styles-tokens-modal.$dimension-1m;
   display: flex;
   flex-direction: column;
 
@@ -57,7 +57,7 @@ $aligns: 'default', 'center';
 }
 
 .headline {
-  @include composite-var($modal-headline);
+  @include styles-tokens-modal.composite-var(styles-tokens-modal.$modal-headline);
 
   display: flex;
   align-items: center;
