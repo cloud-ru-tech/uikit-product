@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-quota",
   "title": "Quota",
-  "version": "0.1.24",
+  "version": "0.2.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,8 +28,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button-predefined": "0.1.23",
-    "@sbercloud/uikit-product-icons": "9.6.0",
+    "@sbercloud/uikit-product-button-predefined": "0.2.0",
+    "@sbercloud/uikit-product-icons": "10.0.0",
     "@sbercloud/uikit-product-utils": "3.6.1",
     "@snack-uikit/button": "0.17.5",
     "@snack-uikit/link": "0.13.3",

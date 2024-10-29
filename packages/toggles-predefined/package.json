@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-toggles-predefined",
   "title": "Toggles Predefined",
-  "version": "0.5.6",
+  "version": "0.6.0",
   "sideEffects": [
     "*.css",
     "*.woff",

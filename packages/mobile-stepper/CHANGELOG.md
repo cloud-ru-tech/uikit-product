@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2024-10-29)
+
+
+### Features
+
+* **[FF-5782](https://jira.sbercloud.tech/browse/FF-5782):** dart v3 use/forward approach ([eb0c4b3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+
+
+
+
+
 ## <small>0.1.11 (2024-10-23)</small>
 
 * fix: safari icon hidden issue ([d80343f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d80343f))

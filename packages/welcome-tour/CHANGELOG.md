@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2024-10-29)
+
+
+### Features
+
+* **[FF-5782](https://jira.sbercloud.tech/browse/FF-5782):** dart v3 use/forward approach ([eb0c4b3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+* **FF-0000:** remove legacy packages with linaria ([29a468e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/29a468ea525ff94f3516a5baea0618a0fe6ffb7e))
+
+
+
+
+
 ## 0.8.34 (2024-10-15)
 
 ### Only dependencies have been changed

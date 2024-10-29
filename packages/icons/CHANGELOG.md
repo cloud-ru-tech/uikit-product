@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 10.0.0 (2024-10-29)
+
+
+### Features
+
+* **[FF-5782](https://jira.sbercloud.tech/browse/FF-5782):** dart v3 use/forward approach ([eb0c4b3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eb0c4b30a008aa82ad7555ecc9d8420c21b1c7a4))
+
+
+### BREAKING CHANGES
+
+
+* **[FF-5782](https://jira.sbercloud.tech/browse/FF-5782):** size prop is only number ([e696246](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e69624652e5a0cedd4bddd84e4356c950ebbd27b))
+
+
+
+
 # 9.6.0 (2024-10-15)
 
 
