@@ -13,7 +13,7 @@ import { generateDataTestId } from '../../utils/generateDataTestId';
 import { svgExport } from './downloader';
 import styles from './styles.module.scss';
 
-type IconDictionary = Record<string, React.FunctionComponent<{ size?: number | string; fill?: string; id?: string }>>;
+type IconDictionary = Record<string, React.FunctionComponent<{ size?: number; fill?: string; id?: string }>>;
 
 export function getTemplate(MonochromeIcons: IconDictionary, ThemedIcons?: IconDictionary): StoryFn {
   const fullCount = Object.keys(MonochromeIcons).length;
@@ -23,7 +23,7 @@ export function getTemplate(MonochromeIcons: IconDictionary, ThemedIcons?: IconD
     const [search, setSearch] = useState('');
     const [selectedIcon, setSelectedIcon] = useState<{
       iconName: string;
-      Icon: React.FunctionComponent<{ size?: number | string; fill?: string }>;
+      Icon: React.FunctionComponent<{ size?: number; fill?: string }>;
       dataAttribute: string;
     } | null>(null);
 
@@ -107,7 +107,7 @@ export function getTemplate(MonochromeIcons: IconDictionary, ThemedIcons?: IconD
 
           {selectedIcon !== null && (
             <Modal
-              open
+              open={true}
               onClose={onCloseHandler}
               title={selectedIcon.iconName}
               content={

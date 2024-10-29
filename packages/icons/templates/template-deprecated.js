@@ -21,9 +21,7 @@ const template =
     `}
     export interface ISvgIconProps extends SVGProps<SVGSVGElement> {
       className?: string;
-      wrapperSize?: string | number;
-      size?: string | number;
-      wrapperClasses?: string;
+      size?: number;
       style?: React.CSSProperties;
     }
 
