@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.1 (2024-10-30)
+
+
+### Bug Fixes
+
+* **[PDS-984](https://jira.sbercloud.tech/browse/PDS-984):** correct gap for mobile accordion primary ([72fe53b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/72fe53b4205c6234ff3c064f5c235cb47a613127))
+
+
+
+
+
 # 0.2.0 (2024-10-29)
 
 
