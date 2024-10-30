@@ -1,4 +1,5 @@
-import { Themes, useTheme } from '../../';
+import { useTheme } from '../../hooks/useTheme';
+import { Themes } from '../../types/theme';
 
 type UseForThemeModeParams<L, D> = {
   light: L;
