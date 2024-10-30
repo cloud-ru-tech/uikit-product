@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.7.0 (2024-10-30)
+
+
+### Bug Fixes
+
+* **[FF-5846](https://jira.sbercloud.tech/browse/FF-5846):** getting rid of circular import ([f78432a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f78432a0c63bb6f33e1d586fb183dcddc068f5d0))
+
+
+### Features
+
+* **FF-0000:** remove legacy packages with linaria ([29a468e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/29a468ea525ff94f3516a5baea0618a0fe6ffb7e))
+
+
+
+
+
 ## 3.6.1 (2024-09-25)
 
 
