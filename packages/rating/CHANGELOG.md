@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2024-10-30)
+
+
+### Features
+
+* **[FF-5836](https://jira.sbercloud.tech/browse/FF-5836):** support cjs syntax ([d44abd0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+
+
+
+
+
 ## 0.5.25 (2024-10-30)
 
 ### Only dependencies have been changed
@@ -695,7 +706,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-rating@0.3.36...@sbercloud/uikit-product-rating@0.3.37) (2022-11-17)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-rating
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@10.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.3.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-rating@0.3.35...@sbercloud/uikit-product-rating@0.3.36) (2022-10-10)
 

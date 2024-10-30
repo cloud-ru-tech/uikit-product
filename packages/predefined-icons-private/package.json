@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-predefined-icons-private",
   "title": "React Predefined Icons Private",
-  "version": "1.4.38",
+  "version": "1.5.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,8 +32,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "10.0.1",
-    "@sbercloud/uikit-product-theme": "0.40.0",
-    "@sbercloud/uikit-product-utils": "3.7.0"
+    "@sbercloud/uikit-product-icons": "10.1.0",
+    "@sbercloud/uikit-product-theme": "0.41.0",
+    "@sbercloud/uikit-product-utils": "3.8.0"
   }
 }

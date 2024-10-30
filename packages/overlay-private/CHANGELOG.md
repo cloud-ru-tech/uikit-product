@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.3.0 (2024-10-30)
+
+
+### Features
+
+* **[FF-5836](https://jira.sbercloud.tech/browse/FF-5836):** support cjs syntax ([d44abd0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+
+
+
+
+
 ## 1.2.7 (2024-10-30)
 
 ### Only dependencies have been changed
@@ -178,7 +189,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [1.0.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-overlay-private@1.0.10...@sbercloud/uikit-product-overlay-private@1.0.11) (2022-09-20)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-overlay-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-theme@0.41.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [1.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-overlay-private@1.0.9...@sbercloud/uikit-product-overlay-private@1.0.10) (2022-08-11)
 

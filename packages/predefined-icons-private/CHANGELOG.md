@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.5.0 (2024-10-30)
+
+
+### Features
+
+* **[FF-5836](https://jira.sbercloud.tech/browse/FF-5836):** support cjs syntax ([d44abd0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+
+
+
+
+
 ## 1.4.38 (2024-10-30)
 
 ### Only dependencies have been changed
@@ -778,7 +789,10 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.5...@sbercloud/uikit-product-predefined-icons-private@0.3.6) (2022-09-09)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@10.1.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-theme@0.41.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/theme/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.4...@sbercloud/uikit-product-predefined-icons-private@0.3.5) (2022-09-09)
 

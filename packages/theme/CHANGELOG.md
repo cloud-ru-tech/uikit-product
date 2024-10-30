@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.41.0 (2024-10-30)
+
+
+### Features
+
+* **[FF-5836](https://jira.sbercloud.tech/browse/FF-5836):** support cjs syntax ([d44abd0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d44abd0ddbbea0cd2bf0e1b99442cdb83b87df48))
+* **FF-0000:** remove legacy packages with linaria ([29a468e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/29a468ea525ff94f3516a5baea0618a0fe6ffb7e))
+
+
+
+
+
 # 0.40.0 (2024-08-23)
 
 
