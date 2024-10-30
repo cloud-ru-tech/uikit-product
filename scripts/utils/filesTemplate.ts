@@ -39,8 +39,12 @@ export const packageJson = ({
     version: '0.0.0',
     sideEffects: ['*.css', '*.woff', '*.woff2'],
     description: `${packageDescription}`,
-    main: './dist/esm/index.js',
-    module: './dist/esm/index.js',
+    types: './dist/esm/index.d.ts',
+    exports: {
+      import: './dist/esm/index.js',
+      require: './dist/cjs/index.js',
+    },
+    files: ['dist/esm', 'dist/cjs', 'src', './CHANGELOG.md'],
     homepage: `${globConfig.homepage}packages/${packageRootFolderName}`,
     repository: {
       type: 'git',
@@ -49,7 +53,6 @@ export const packageJson = ({
     },
     author: `${user} <${email}>`,
     contributors: [`${user} <${email}>`],
-    files: ['dist', 'src', './CHANGELOG.md'],
     license: 'UNLICENSED',
     scripts: {},
     dependencies: {},
@@ -139,7 +142,7 @@ export function ${componentName}(props: ${componentName}Props) {
   const stylesFilePath = path.join(
     `./${PackagesRootFolder}/${packageRootFolderName}/${Folders.srcComponents}/styles.module.scss`,
   );
-  const stylesFileContent = `@import '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+  const stylesFileContent = `@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .${className} {
   box-sizing: border-box;

@@ -7,9 +7,18 @@
     "*.woff",
     "*.woff2"
   ],
-  "description": "Package for client unboarding tour on Welcome page",
-  "main": "./dist/esm/index.js",
-  "module": "./dist/esm/index.js",
+  "description": "Package for client onboarding tour on Welcome page",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
   "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/welcome-tour",
   "repository": {
     "type": "git",
@@ -19,10 +28,6 @@
   "author": "Данил Панов <dapanov@sbercloud.ru>",
   "contributors": [
     "Данил Панов <dapanov@sbercloud.ru>"
-  ],
-  "files": [
-    "dist",
-    "src"
   ],
   "license": "UNLICENSED",
   "scripts": {},
