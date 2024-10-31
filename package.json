@@ -25,7 +25,7 @@
     "test:coverage-unstable": "ts-node scripts/test-coverage-unstable-packages",
     "test:coverage-stable": "ts-node scripts/test-coverage-stable-packages",
     "test:ci": "ts-node scripts/run-tests",
-    "test:testcafe": "testcafe chrome --config-file testcafe.config.js --live",
+    "test:testcafe": "testcafe firefox --config-file testcafe.config.js --live",
     "test:testcafe:local": "cross-env TEST_LOCAL=true npm run test:testcafe",
     "test:testcafe:branch": "cross-env TEST_ON_BRANCH=true npm run test:testcafe"
   },

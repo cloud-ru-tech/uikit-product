@@ -19,15 +19,17 @@ export default meta;
 
 type StoryProps = CardServiceSmallProps & {
   emblemMode: 'icon' | 'image';
+  showFavorite: boolean;
+  visibilityStrategy: NonNullable<CardServiceSmallProps['favorite']>['visibilityStrategy'];
 };
 
-function Template({ emblemMode, ...args }: StoryProps) {
+function Template({ emblemMode, showFavorite, visibilityStrategy, ...args }: StoryProps) {
   const emblem: CardServiceSmallProps['emblem'] =
     emblemMode === 'icon' ? { icon: PlaceholderSVG } : { src: cardImg, alt: '' };
 
   return (
     <div className={styles.cardServiceSmall}>
-      <CardServiceSmall {...args} emblem={emblem} />
+      <CardServiceSmall {...args} emblem={emblem} favorite={{ enabled: showFavorite, visibilityStrategy }} />
     </div>
   );
 }
@@ -40,6 +42,8 @@ export const serviceSmall: StoryObj<StoryProps> = {
     promoBadge: 'Beta',
     emblemMode: 'icon',
     outline: false,
+    showFavorite: false,
+    visibilityStrategy: 'hover',
   },
 
   argTypes: {
@@ -50,6 +54,15 @@ export const serviceSmall: StoryObj<StoryProps> = {
       control: {
         type: 'radio',
       },
+    },
+    visibilityStrategy: {
+      name: '[Story]: Favorite visibility strategy',
+      options: ['hover', 'always'],
+      defaultValue: 'hover',
+      control: {
+        type: 'radio',
+      },
+      if: { arg: 'showFavorite', eq: true },
     },
     promoBadge: {
       type: 'string',
