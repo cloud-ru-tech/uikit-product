@@ -1,9 +1,12 @@
 import debounce from 'lodash.debounce';
 import { MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
 
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { isBrowser } from '@snack-uikit/utils';
 
-import { LinksGroup } from '../../types';
+import { textProvider, Texts } from '../../helpers';
+import { InnerLink, LinksGroup } from '../../types';
+import { DrawerMenuProps } from './types';
 
 type UseSearchProps = {
   links?: LinksGroup[];
@@ -127,3 +130,38 @@ export function useLinks({ setSearchValue, drawerOpen, highlightClassName }: Use
     handleLinkClick,
   };
 }
+
+export const useWithFavorites = ({ links = [], favorites }: Pick<DrawerMenuProps, 'links' | 'favorites'>) => {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const favouriteItemIds = useMemo(() => favorites?.itemIds ?? [], [favorites?.itemIds]);
+
+  const idsToLinks = useMemo(
+    () =>
+      links
+        .flatMap(group => group.items)
+        .reduce(
+          (res, link) => {
+            res[link.id] = link;
+            return res;
+          },
+          {} as Record<string, InnerLink>,
+        ),
+    [links],
+  );
+
+  const favoriteItems = useMemo(
+    () =>
+      favouriteItemIds.length > 0
+        ? [
+            {
+              label: textProvider(languageCode, Texts.Favorite),
+              id: 'favorite',
+              items: favouriteItemIds.map(id => idsToLinks[id]),
+            },
+          ]
+        : [],
+    [favouriteItemIds, idsToLinks, languageCode],
+  );
+
+  return useMemo(() => [...favoriteItems, ...links], [favoriteItems, links]);
+};

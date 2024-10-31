@@ -424,6 +424,7 @@ export function ProductHeaderMobile({
           open={isMainMenuOpen}
           onClose={closeMainMenu}
           onProductChange={onProductChange}
+          favorites={drawerMenuProps.favorites}
           {...drawerMenuProps}
         />
       )}

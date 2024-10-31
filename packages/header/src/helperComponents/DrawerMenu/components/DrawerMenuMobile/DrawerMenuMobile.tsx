@@ -14,6 +14,7 @@ import { getSelectProductListProps } from '../../../../hooks/useSelectProductLis
 import { ProductOption } from '../../../../types';
 import { extractAppNameFromId } from '../../../../utils';
 import { PinnedCard } from '../../../PinnedCard';
+import { useWithFavorites } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
@@ -31,12 +32,14 @@ export function DrawerMenuMobile({
   selectedLink,
   onLinkChange,
   pinnedCards,
+  favorites,
   ...rest
 }: DrawerMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
+  const allLinks = useWithFavorites({ links, favorites });
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
-  const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
+  const visibleLinks = useMemo(() => filterHiddenLinks(allLinks), [allLinks]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
   const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
 
@@ -159,18 +162,24 @@ export function DrawerMenuMobile({
                   ref={el => (cardsRef.current[index] = el)}
                   mobile
                 >
-                  {group.items.map(item => (
-                    <CardServiceSmall
-                      checked={item.id === selectedLink}
-                      outline
-                      key={item.label}
-                      promoBadge={item.badge}
-                      onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
-                      title={item.label}
-                      emblem={{ icon: item.icon, decor: true }}
-                      data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
-                    />
-                  ))}
+                  {group.items.map(item => {
+                    const checked = favorites?.itemIds.includes(item.id);
+                    const onChange = favorites?.onChange(item.id);
+
+                    return (
+                      <CardServiceSmall
+                        checked={item.id === selectedLink}
+                        outline
+                        key={item.label}
+                        promoBadge={item.badge}
+                        favorite={{ enabled: true, visibilityStrategy: 'always', checked, onChange }}
+                        onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
+                        title={item.label}
+                        emblem={{ icon: item.icon, decor: true }}
+                        data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
+                      />
+                    );
+                  })}
                 </GroupCard>
               ))}
 
