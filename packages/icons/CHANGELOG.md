@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 10.2.0 (2024-11-01)
+
+
+### Features
+
+* **[FF-5855](https://jira.sbercloud.tech/browse/FF-5855):** add VirtualizationPlatforms icons ([1329b7c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1329b7c82608ef25a44fbfa5e7b4d460e077167f))
+
+
+
+
+
 # 10.1.0 (2024-10-30)
 
 

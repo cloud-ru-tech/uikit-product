@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-modal-predefined",
   "title": "Modal Predefined",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-copy-line": "0.7.0",
+    "@sbercloud/uikit-product-copy-line": "0.7.1",
     "@sbercloud/uikit-product-switch-row": "0.5.0",
     "@sbercloud/uikit-product-toggles-predefined": "0.7.0",
     "@sbercloud/uikit-product-utils": "3.8.0",
