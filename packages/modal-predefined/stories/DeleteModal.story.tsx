@@ -3,19 +3,22 @@ import { Meta, StoryObj } from '@storybook/react';
 import { useEffect, useState } from 'react';
 
 import { ButtonFilled } from '@snack-uikit/button';
+import { ValueOf } from '@snack-uikit/utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { DefaultDeleteModalBody, DeleteModal, DeleteModalProps } from '../src';
+import { AdaptiveDeleteModal, DefaultDeleteModalBody, DeleteModalProps } from '../src';
+import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Snack UIkit/Modal Predefined/Delete Modal',
-  component: DeleteModal,
+  component: AdaptiveDeleteModal,
 };
 
 type StoryProps = DeleteModalProps & {
+  layoutType: ValueOf<typeof LAYOUT_TYPE>;
   switchRowExample: boolean;
   confirmable: boolean;
   customDescription: boolean;
@@ -31,7 +34,7 @@ function Template({ customDescription, description, switchRowExample, ...args }:
   return (
     <>
       <ButtonFilled label='Удалить' onClick={() => setIsOpen(true)} size='m' />
-      <DeleteModal
+      <AdaptiveDeleteModal
         {...args}
         description={
           <DefaultDeleteModalBody
@@ -76,6 +79,7 @@ export const deleteModal: StoryObj<StoryProps> = {
   render: Template,
 
   args: {
+    layoutType: LAYOUT_TYPE.desktop,
     switchRowExample: false,
     confirmable: true,
     customDescription: false,
@@ -89,6 +93,13 @@ export const deleteModal: StoryObj<StoryProps> = {
   },
 
   argTypes: {
+    layoutType: {
+      name: '[Stories]: Layout type',
+      options: Object.values(LAYOUT_TYPE),
+      control: {
+        type: 'radio',
+      },
+    },
     description: {
       type: 'string',
       if: {

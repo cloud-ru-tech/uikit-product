@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 
+import { MobileModalCustom, MobileModalCustomProps } from '@sbercloud/uikit-product-mobile-modal';
 import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 
 import { InputConfirm } from '../../helperComponents';
 import { DictionaryPropertyAsFn, isDefined, textProvider, Texts } from '../../helpers';
-import { MobileModalCustom, MobileModalCustomProps } from '../MobileModalCustom';
 import { useTextFieldValidation } from './hooks';
 import styles from './styles.module.scss';
 

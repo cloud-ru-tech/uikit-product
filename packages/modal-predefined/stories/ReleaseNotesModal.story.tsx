@@ -11,16 +11,12 @@ import { AdaptiveReleaseNotesModal, ReleaseNotesModalProps } from '../src/compon
 import sampleNewsImage1 from './assets/img/sample-news-1.jpg';
 import sampleNewsImage2 from './assets/img/sample-news-2.jpg';
 import sampleNewsImage3 from './assets/img/sample-news-3.jpg';
+import { LAYOUT_TYPE } from './constants';
 
 const meta: Meta = {
   title: 'Snack UIkit/Modal Predefined/Release Notes Modal',
   component: AdaptiveReleaseNotesModal,
 };
-
-const LAYOUT_TYPE = {
-  desktop: 'desktop',
-  mobile: 'mobile',
-} as const;
 
 type StoryProps = ReleaseNotesModalProps & {
   layoutType: ValueOf<typeof LAYOUT_TYPE>;
