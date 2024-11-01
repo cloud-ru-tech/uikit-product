@@ -8,7 +8,6 @@ import {
   KeyboardEventHandler,
   PropsWithoutRef,
   RefAttributes,
-  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -21,7 +20,7 @@ import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
 import { ItemId, kindFlattenItems, List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
 import { Tag } from '@snack-uikit/tag';
-import { extractSupportProps, useValueControl } from '@snack-uikit/utils';
+import { extractSupportProps, isBrowser, useLayoutEffect, useValueControl } from '@snack-uikit/utils';
 
 import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
 import { textProvider, Texts } from '../../helpers/texts-provider';
@@ -161,7 +160,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
     };
 
     const handleOpenChange = (open: boolean) => {
-      if (!readonly && !disabled && !buttonsRefs.includes(document.activeElement)) {
+      if (!readonly && !disabled && isBrowser() && !buttonsRefs.includes(document.activeElement)) {
         setOpen(open);
 
         if (!open) {

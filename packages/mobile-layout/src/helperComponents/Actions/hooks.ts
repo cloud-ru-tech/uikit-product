@@ -1,6 +1,6 @@
-import { RefObject, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { RefObject, useEffect, useRef, useState } from 'react';
 
-import { useEventHandler } from '@snack-uikit/utils';
+import { useEventHandler, useLayoutEffect } from '@snack-uikit/utils';
 
 import { ActionsProps } from './types';
 

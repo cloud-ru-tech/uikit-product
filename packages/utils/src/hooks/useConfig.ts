@@ -1,7 +1,8 @@
-import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
 import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
+import { isBrowser, useLayoutEffect } from '@snack-uikit/utils';
 
 import { POST_MESSAGE_KEY } from '../constants/environment';
 import { tryParseJson } from '../helpers/tryParseJson';
@@ -27,24 +28,26 @@ export function useConfig({ languageCode, theme }: UseConfigProps) {
 
   const updateTheme = useCallback(
     (newTheme: Themes) => {
-      store.theme = newTheme;
+      if (isBrowser()) {
+        store.theme = newTheme;
 
-      const html = document.getElementsByTagName('html')[0];
+        const html = document.getElementsByTagName('html')[0];
 
-      if (previousThemeRef.current) {
-        html.classList.remove(themeMap[previousThemeRef.current]);
+        if (previousThemeRef.current) {
+          html.classList.remove(themeMap[previousThemeRef.current]);
+        }
+
+        html.setAttribute('data-theme', newTheme);
+
+        const body = document.getElementsByTagName('body')[0];
+        body.setAttribute('data-theme', newTheme);
+
+        html.classList.add(themeMap[newTheme]);
+
+        window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeThemeDone, value: newTheme }), location.origin);
+
+        previousThemeRef.current = newTheme;
       }
-
-      html.setAttribute('data-theme', newTheme);
-
-      const body = document.getElementsByTagName('body')[0];
-      body.setAttribute('data-theme', newTheme);
-
-      html.classList.add(themeMap[newTheme]);
-
-      window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeThemeDone, value: newTheme }), location.origin);
-
-      previousThemeRef.current = newTheme;
     },
     [store],
   );

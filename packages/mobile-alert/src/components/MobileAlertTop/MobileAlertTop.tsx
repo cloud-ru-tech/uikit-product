@@ -1,9 +1,9 @@
 import cn from 'classnames';
-import { MouseEventHandler, ReactNode, RefObject, useCallback, useLayoutEffect, useRef, useState } from 'react';
+import { MouseEventHandler, ReactNode, RefObject, useCallback, useRef, useState } from 'react';
 
 import { ChevronDownSVG, ChevronUpSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
 import { Link, LinkProps } from '@snack-uikit/link';
-import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
+import { extractSupportProps, isBrowser, useLayoutEffect, WithSupportProps } from '@snack-uikit/utils';
 
 import { APPEARANCE, APPEARANCE_TO_COLOR_MAP } from '../../constants';
 import { AlertButton, AlertButtonProps } from '../../helperComponents';
@@ -91,7 +91,7 @@ export function MobileAlertTop({
     ({ ref, setter }: { ref: RefObject<HTMLDivElement>; setter(value: boolean): void }) => {
       const refElement = ref.current;
 
-      if (refElement) {
+      if (refElement && isBrowser()) {
         const observer = new ResizeObserver(entities =>
           entities.forEach(entity => {
             if (entity.target === refElement) {

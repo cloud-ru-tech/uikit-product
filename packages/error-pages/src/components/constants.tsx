@@ -1,4 +1,5 @@
 import { HomeOutlineInterfaceSVG, RefreshInterfaceSVG } from '@sbercloud/uikit-product-icons';
+import { isBrowser } from '@snack-uikit/utils';
 
 import { Texts } from '../helpers/texts-provider';
 
@@ -67,7 +68,7 @@ export function getButtonPropsByErrorType(errorType: ErrorType, mainPageUrl?: st
       return {
         text: Texts.RefreshButton,
         icon: <RefreshInterfaceSVG />,
-        onClick: () => window.location.reload(),
+        onClick: () => isBrowser() && window.location.reload(),
       };
   }
 }

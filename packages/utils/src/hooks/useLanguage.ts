@@ -1,4 +1,6 @@
-import { useCallback, useEffect, useLayoutEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
+
+import { isBrowser, useLayoutEffect } from '@snack-uikit/utils';
 
 import { DEFAULT, POST_MESSAGE_KEY } from '../constants/environment';
 import { tryParseJson } from '../helpers/tryParseJson';
@@ -48,7 +50,12 @@ export const useLanguage = (props?: useLanguageProps) => {
   }, [languageCode, onlyEnabledLanguage]);
 
   const changeLanguage = useCallback((languageCode: LanguageCodeType) => {
-    window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeLanguage, value: languageCode }), location.origin);
+    if (isBrowser()) {
+      window.postMessage(
+        JSON.stringify({ key: POST_MESSAGE_KEY.changeLanguage, value: languageCode }),
+        location.origin,
+      );
+    }
   }, []);
 
   return { languageCode, changeLanguage };

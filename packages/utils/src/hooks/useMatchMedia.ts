@@ -1,4 +1,6 @@
-import { useLayoutEffect, useState } from 'react';
+import { useState } from 'react';
+
+import { useLayoutEffect } from '@snack-uikit/utils';
 
 import { MatchMedia } from '../types/adaptive';
 import { getMatchMedia, MEDIA_QUERY_LIST } from '../utils';

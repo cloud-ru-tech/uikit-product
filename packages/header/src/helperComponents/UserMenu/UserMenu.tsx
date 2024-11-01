@@ -176,6 +176,7 @@ export function UserMenu({
     onOrganizationChange,
     onProfileManagementClick,
     organizations,
+    profileItemWrapRender,
     themeMode,
     user.email,
     user.name,

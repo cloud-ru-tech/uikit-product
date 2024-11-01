@@ -9,7 +9,6 @@ import {
   RefAttributes,
   useCallback,
   useEffect,
-  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -19,7 +18,7 @@ import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
 import { FieldDecorator } from '@snack-uikit/fields';
 import { InputPrivate } from '@snack-uikit/input-private';
 import { kindFlattenItems, List, ListProps, SelectionSingleValueType } from '@snack-uikit/list';
-import { extractSupportProps, useValueControl } from '@snack-uikit/utils';
+import { extractSupportProps, isBrowser, useLayoutEffect, useValueControl } from '@snack-uikit/utils';
 
 import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
 import { useButtons, useHandleOnKeyDown, useSearchInput } from './hooks';
@@ -176,7 +175,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
     };
 
     const handleOpenChange = (open: boolean) => {
-      if (!readonly && !disabled && !buttonsRefs.includes(document.activeElement)) {
+      if (!readonly && !disabled && isBrowser() && !buttonsRefs.includes(document.activeElement)) {
         setOpen(open);
 
         if (!open) {

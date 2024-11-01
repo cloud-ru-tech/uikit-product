@@ -1,4 +1,6 @@
-import { useCallback, useLayoutEffect, useRef } from 'react';
+import { useCallback, useRef } from 'react';
+
+import { useLayoutEffect } from '@snack-uikit/utils';
 
 import { warning } from '../utils';
 

@@ -1,11 +1,12 @@
 module.exports = {
-  extends: ['@sbercloud/eslint-config/monorepo', 'plugin:testcafe-community/recommended'],
+  extends: [
+    '@sbercloud/eslint-config/monorepo',
+    'plugin:testcafe-community/recommended',
+    'plugin:@cloud-ru/ssr-safe-react/recommended',
+  ],
   plugins: ['testcafe-community'],
   rules: {
     '@typescript-eslint/no-namespace': 'off',
-    // TODO: need to remove these rules and fix errors
-    '@typescript-eslint/no-non-null-assertion': 'warn',
-    'react-hooks/exhaustive-deps': 'warn',
   },
   ignorePatterns: 'packages/icons/src',
   overrides: [
@@ -15,12 +16,14 @@ module.exports = {
         'vitest/expect-expect': 'off',
         'vitest/no-done-callback': 'off',
         'vitest/no-conditional-in-test': 'off',
+        '@cloud-ru/ssr-safe-react/domApi': 'off',
       },
     },
     {
       files: ['packages/*/stories/**/*', 'storybook/stories/**/*'],
       rules: {
         'react/function-component-definition': 'off',
+        '@cloud-ru/ssr-safe-react/domApi': 'off',
       },
     },
   ],

@@ -1,3 +1,5 @@
+import { isBrowser } from '@snack-uikit/utils';
+
 import { CSS_BREAKPOINTS, QueriesTitle } from '../constants/adaptive';
 import { MatchMedia } from '../types';
 
@@ -17,10 +19,10 @@ const INITIAL_QUERIES_VALUE = {
   [QueriesTitle.IsLarge]: false,
 };
 
-const MEDIA_QUERIES = Object.entries(QUERIES).reduce(
-  (acc, [key, q]) => ({ ...acc, [key]: globalThis.matchMedia(q) }),
-  {},
-) as Record<QueriesTitle, MediaQueryList>;
+const MEDIA_QUERIES = Object.values(QueriesTitle).reduce(
+  (acc, key) => ({ ...acc, [key]: isBrowser() ? globalThis.matchMedia(QUERIES[key]) : undefined }),
+  {} as Record<QueriesTitle, MediaQueryList>,
+);
 
 export const MEDIA_QUERY_LIST = Object.entries(MEDIA_QUERIES) as Array<[QueriesTitle, MediaQueryList]>;
 

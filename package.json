@@ -42,6 +42,7 @@
     "@babel/preset-typescript": "7.26.0",
     "@geometricpanda/storybook-addon-badges": "2.0.5",
     "@linaria/cli": "3.0.0-beta.13",
+    "@cloud-ru/eslint-plugin-ssr-safe-react": "0.2.0",
     "@sbercloud/figma-tokens-cloud-platform": "16.0.0",
     "@sbercloud/figma-tokens-mlspace": "16.0.0",
     "@sbercloud/ft-all-linters-pack": "4.1.8",

@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
+import { isBrowser } from '@snack-uikit/utils';
+
 import { DEFAULT, POST_MESSAGE_KEY } from '../constants/environment';
 import { tryParseJson } from '../helpers/tryParseJson';
 import { Themes } from '../types/theme';
@@ -21,7 +23,8 @@ export const useTheme = () => {
   }, []);
 
   const changeTheme = useCallback((theme: Themes) => {
-    window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeTheme, value: theme }), location.origin);
+    isBrowser() &&
+      window.postMessage(JSON.stringify({ key: POST_MESSAGE_KEY.changeTheme, value: theme }), location.origin);
   }, []);
 
   return { theme, changeTheme };

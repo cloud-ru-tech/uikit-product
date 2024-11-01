@@ -8,6 +8,7 @@ import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
 import { Tag } from '@snack-uikit/tag';
 import { Typography } from '@snack-uikit/typography';
+import { isBrowser } from '@snack-uikit/utils';
 
 import { textProvider, Texts } from '../helpers/texts-provider';
 import { COLORS, ErrorType, getButtonPropsByErrorType, getContentByErrorType, LogoVariant } from './constants';
@@ -81,7 +82,7 @@ export function ErrorPage({
               {hasBackLink && (
                 <Link
                   size='m'
-                  onClick={() => window.history.back()}
+                  onClick={() => isBrowser() && window.history.back()}
                   target={'_self'}
                   text={textProvider(languageCode, Texts.BackLink)}
                 />

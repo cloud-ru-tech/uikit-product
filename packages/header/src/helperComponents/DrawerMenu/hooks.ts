@@ -1,6 +1,8 @@
 import debounce from 'lodash.debounce';
 import { MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
 
+import { isBrowser } from '@snack-uikit/utils';
+
 import { LinksGroup } from '../../types';
 
 type UseSearchProps = {
@@ -105,15 +107,17 @@ export function useLinks({ setSearchValue, drawerOpen, highlightClassName }: Use
     event.preventDefault();
     setSearchValue('');
 
-    highlight(document.getElementById(link.id));
+    if (isBrowser()) {
+      highlight(document.getElementById(link.id));
 
-    setTimeout(() => {
-      scrollRef.current?.scrollTo({
-        left: 0,
-        top: (document.getElementById(link.id)?.offsetTop || 0) - (searchPanelRef.current?.offsetHeight || 0),
-        behavior: 'smooth',
-      });
-    }, 0);
+      setTimeout(() => {
+        scrollRef.current?.scrollTo({
+          left: 0,
+          top: (document.getElementById(link.id)?.offsetTop || 0) - (searchPanelRef.current?.offsetHeight || 0),
+          behavior: 'smooth',
+        });
+      }, 0);
+    }
   };
 
   return {

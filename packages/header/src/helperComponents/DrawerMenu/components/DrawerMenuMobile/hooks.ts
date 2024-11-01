@@ -2,6 +2,7 @@ import throttle from 'lodash.throttle';
 import { MouseEvent, useMemo, useRef, useState } from 'react';
 
 import { useEventHandler } from '@sbercloud/uikit-product-utils';
+import { isBrowser } from '@snack-uikit/utils';
 
 import { LinksGroup } from '../../../../types';
 
@@ -74,7 +75,7 @@ export function useLinks({ searchValue, setSearchValue, links }: UseScrollProps)
 
           if (selectedLink) {
             setSelectedLink(selectedLink.id);
-            document.querySelector(`a[href="#${selectedLink.id}"]`)?.scrollIntoView({ block: 'end' });
+            isBrowser() && document.querySelector(`a[href="#${selectedLink.id}"]`)?.scrollIntoView({ block: 'end' });
           }
 
           break;
@@ -84,11 +85,11 @@ export function useLinks({ searchValue, setSearchValue, links }: UseScrollProps)
   );
 
   const addScrollHandler = () => {
-    scrollRef.current?.addEventListener('scroll', handleScroll);
+    isBrowser() && scrollRef.current?.addEventListener('scroll', handleScroll);
   };
 
   const removeScrollHandler = () => {
-    scrollRef.current?.removeEventListener('scroll', handleScroll);
+    isBrowser() && scrollRef.current?.removeEventListener('scroll', handleScroll);
   };
 
   const handleLinkClick = (link: LinksGroup) => (event: MouseEvent) => {
@@ -97,9 +98,11 @@ export function useLinks({ searchValue, setSearchValue, links }: UseScrollProps)
     setSelectedLink(link.id);
     setSearchValue('');
 
-    setTimeout(() => {
-      document.getElementById(link.id)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
-    }, 0);
+    if (isBrowser()) {
+      setTimeout(() => {
+        document.getElementById(link.id)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      }, 0);
+    }
   };
 
   const isLinkSelected = (link: LinksGroup) => link.id === selectedLink && !searchValue;
