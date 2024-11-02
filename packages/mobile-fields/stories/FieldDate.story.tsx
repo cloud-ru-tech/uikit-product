@@ -1,11 +1,11 @@
 import { action } from '@storybook/addon-actions';
 import { Meta, StoryObj } from '@storybook/react';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { MobileFieldDate, MobileFieldDateProps, parseDate } from '../src';
+import { MobileFieldDate, MobileFieldDateProps } from '../src';
 import { COMMON_ARG_TYPES } from './constants';
 import { getBuildCellProps } from './helpers';
 import styles from './styles.module.scss';
@@ -16,17 +16,15 @@ const meta: Meta = {
 };
 export default meta;
 
-type StoryProps = Omit<MobileFieldDateProps, 'locale'> & {
-  localeName: 'ru-RU' | 'en-US';
+type StoryProps = Omit<MobileFieldDateProps, 'value'> & {
   prefixIcon: undefined;
   modeBuildCellProps: 'for-tests' | 'disable-past' | 'none';
+  dateValue?: string;
+  showSeconds?: boolean;
 };
 
-const Template = ({ size, localeName, modeBuildCellProps, ...args }: StoryProps) => {
-  const locale = new Intl.Locale(localeName);
-
-  const argsNormalizedValue = args.value?.replaceAll('-', '.');
-
+const Template = ({ size, modeBuildCellProps, ...args }: StoryProps) => {
+  const argsNormalizedValue = useMemo(() => (args.dateValue ? new Date(args.dateValue) : undefined), [args.dateValue]);
   const [value, setValue] = useState(argsNormalizedValue);
 
   useEffect(() => {
@@ -34,13 +32,14 @@ const Template = ({ size, localeName, modeBuildCellProps, ...args }: StoryProps)
   }, [argsNormalizedValue]);
 
   const buildCellProps = getBuildCellProps(modeBuildCellProps) || undefined;
-  const validationState = buildCellProps?.(parseDate(value), 'month')?.isDisabled ? 'error' : undefined;
+  const validationState = value && buildCellProps?.(value, 'month')?.isDisabled ? 'error' : undefined;
   const hint = validationState === 'error' ? 'Дата не может быть выбрана' : args.hint;
 
   return (
-    <div className={styles.wrapper} data-size={size}>
+    <div className={styles.wrapper} data-size={size} key={args.mode}>
       <MobileFieldDate
         {...args}
+        showSeconds={'showSeconds' in args ? (args.showSeconds as boolean) : undefined}
         size={size}
         value={value}
         buildCellProps={buildCellProps}
@@ -50,7 +49,6 @@ const Template = ({ size, localeName, modeBuildCellProps, ...args }: StoryProps)
           action('onChange')(value);
           setValue(value);
         }}
-        locale={locale}
       />
     </div>
   );
@@ -60,9 +58,11 @@ export const fieldDate: StoryObj<StoryProps> = {
   render: Template,
 
   args: {
+    mode: 'date',
+    showSeconds: true,
     id: 'date',
-    value: '',
     readonly: false,
+    showCopyButton: true,
     disabled: false,
     label: 'Label text',
     labelTooltip: 'Tooltip description',
@@ -71,14 +71,18 @@ export const fieldDate: StoryObj<StoryProps> = {
     hint: 'Hint text',
     size: 's',
     validationState: 'default',
-    showCopyButton: true,
     showClearButton: true,
-    localeName: 'en-US',
     modeBuildCellProps: 'none',
   },
 
   argTypes: {
     ...COMMON_ARG_TYPES,
+    showSeconds: {
+      if: {
+        arg: 'mode',
+        eq: 'date-time',
+      },
+    },
     prefixIcon: {
       table: {
         disable: true,
@@ -88,6 +92,10 @@ export const fieldDate: StoryObj<StoryProps> = {
       name: '[story] select buildCellProps operating mode',
       options: ['for-tests', 'disable-past', 'none'],
       control: { type: 'radio' },
+    },
+    dateValue: {
+      name: 'value',
+      control: { type: 'date' },
     },
   },
 

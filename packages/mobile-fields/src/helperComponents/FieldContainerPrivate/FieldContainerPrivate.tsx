@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { CSSProperties, MouseEventHandler, ReactElement, ReactNode, RefObject } from 'react';
+import { CSSProperties, MouseEventHandler, ReactNode, RefObject } from 'react';
 
 import { Size } from '@snack-uikit/input-private';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
@@ -19,8 +19,8 @@ export type FieldContainerPrivateProps = WithSupportProps<{
   focused?: boolean;
   selectable?: boolean;
   style?: CSSProperties;
-  prefix?: ReactElement;
-  postfix?: ReactElement;
+  prefix?: ReactNode;
+  postfix?: ReactNode;
   inputRef: RefObject<HTMLElement>;
   onClick?: MouseEventHandler;
 }>;

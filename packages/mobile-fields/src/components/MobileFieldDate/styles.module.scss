@@ -15,9 +15,17 @@ $icons-sizes: (
   width: 100%;
 }
 
+.dateWrapper {
+  height: 384px;
+}
+
+.dateTimeWrapper {
+  height: 458px;
+  padding-bottom: 8px;
+}
+
 .calendarWrapper {
   width: 100%;
-  height: 100%;
 
   &[data-size='s'] {
     min-width: 240px;

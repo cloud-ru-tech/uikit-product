@@ -1,32 +1,71 @@
 import { ChangeEvent, FocusEventHandler, KeyboardEvent, RefObject, useCallback, useMemo, useRef } from 'react';
 
+import { TimePickerProps } from '@snack-uikit/calendar';
 import { isBrowser } from '@snack-uikit/utils';
 
-import { DEFAULT_LOCALE, MASK, SlotKey, SLOTS, SLOTS_PLACEHOLDER } from '../constants';
-import { getNextSlotKey, getPrevSlotKey, getSlotKey } from '../utils';
-import { useDateFieldHelpers } from './useDateFieldHelpers';
+import {
+  DEFAULT_LOCALE,
+  FocusSlot,
+  MASK,
+  MODES,
+  NO_SECONDS_MODE,
+  SLOT_ORDER,
+  SlotKey,
+  SLOTS,
+  SLOTS_PLACEHOLDER,
+} from '../../constants';
+import { Mode, TimeMode } from '../../types';
+import { parseDate } from '../../utils/dateFields';
+import { useDateFieldHelpersForMode } from './useDateFieldHelpersForMode';
 
-type UseDateFieldProps = {
+type BaseProps = {
   inputRef: RefObject<HTMLInputElement>;
-  onChange?(value: string): void;
   readonly?: boolean;
   locale?: Intl.Locale;
   setIsOpen(v: boolean): void;
+  showSeconds?: boolean;
 };
 
-type FocusSlot = SlotKey.Day | SlotKey.Year | 'auto';
+type UseDateFieldProps =
+  | ({
+      mode: Mode;
+      onChange?(value: Date | undefined): void;
+    } & BaseProps)
+  | ({
+      mode: TimeMode;
+      onChange?: TimePickerProps['onChangeValue'];
+    } & BaseProps);
 
-export function useDateField({ inputRef, onChange, readonly, locale = DEFAULT_LOCALE, setIsOpen }: UseDateFieldProps) {
-  const { setFocus, updateSlot, getSlot, isLikeDate, isAllSelected, isValidInput, tryToCompleteInput } =
-    useDateFieldHelpers(inputRef);
-  const focusSlotRef = useRef<FocusSlot>(SlotKey.Day);
+export function useDateField({
+  inputRef,
+  onChange,
+  readonly,
+  locale = DEFAULT_LOCALE,
+  setIsOpen,
+  mode,
+  showSeconds,
+}: UseDateFieldProps) {
+  const dateTimeMode = mode === MODES.DateTime && !showSeconds ? NO_SECONDS_MODE : mode;
+  const slotsInfo = SLOTS[dateTimeMode];
+  const mask = MASK[dateTimeMode][locale.baseName] || MASK[dateTimeMode][DEFAULT_LOCALE.baseName];
+  const slotsPlaceholder =
+    SLOTS_PLACEHOLDER[dateTimeMode][locale.baseName] || SLOTS_PLACEHOLDER[dateTimeMode][DEFAULT_LOCALE.baseName];
+  const slotOrder = SLOT_ORDER[dateTimeMode];
+  const {
+    getNextSlotKey,
+    getPrevSlotKey,
+    getSlotKeyFromIndex,
+    setFocus,
+    updateSlot,
+    getSlot,
+    isLikeDate,
+    isAllSelected,
+    tryToCompleteInput,
+    isValidInput,
+  } = useDateFieldHelpersForMode({ inputRef, mode: dateTimeMode });
 
-  const mask = useMemo(() => MASK[locale.baseName] || MASK[DEFAULT_LOCALE.baseName], [locale]);
-
-  const slotsPlaceHolder = useMemo(
-    () => SLOTS_PLACEHOLDER[locale.baseName] || SLOTS_PLACEHOLDER[DEFAULT_LOCALE.baseName],
-    [locale.baseName],
-  );
+  const focusSlotKey = useMemo(() => slotOrder[0], [slotOrder]);
+  const focusSlotRef = useRef<FocusSlot>(focusSlotKey);
 
   const setInputFocus = useCallback(
     (focusSlot?: FocusSlot) => {
@@ -35,20 +74,20 @@ export function useDateField({ inputRef, onChange, readonly, locale = DEFAULT_LO
       }
 
       if (isBrowser() && document.activeElement !== inputRef.current) {
-        focusSlotRef.current = focusSlot || SlotKey.Day;
+        focusSlotRef.current = focusSlot || focusSlotKey;
         inputRef.current.focus();
         return;
       }
 
       const focusSlotValue = focusSlot || focusSlotRef.current;
 
-      if (isLikeDate() && focusSlotValue === SlotKey.Day) {
+      if (isLikeDate() && focusSlotValue === focusSlotKey) {
         return;
       }
 
       if (!inputRef.current.value) {
         inputRef.current.value = mask;
-        setFocus(SlotKey.Day);
+        setFocus(focusSlotKey);
         return;
       }
 
@@ -57,14 +96,14 @@ export function useDateField({ inputRef, onChange, readonly, locale = DEFAULT_LO
         return;
       }
 
-      const slotKey = getSlotKey(inputRef.current.selectionStart);
+      const slotKey = getSlotKeyFromIndex(inputRef.current.selectionStart);
 
       if (slotKey) {
-        const { start, end } = SLOTS[slotKey];
+        const { start, end } = slotsInfo[slotKey];
         inputRef.current.setSelectionRange(start, end);
       }
     },
-    [inputRef, isLikeDate, mask, readonly, setFocus],
+    [inputRef, readonly, isLikeDate, focusSlotKey, getSlotKeyFromIndex, mask, setFocus, slotsInfo],
   );
 
   const handleClick = useCallback(() => {
@@ -72,12 +111,12 @@ export function useDateField({ inputRef, onChange, readonly, locale = DEFAULT_LO
   }, [setInputFocus]);
 
   const handleChange: (value: string, e?: ChangeEvent<HTMLInputElement> | undefined) => void = () => {
-    onChange && isLikeDate() && onChange(inputRef.current?.value || '');
+    onChange && isLikeDate() && onChange(parseDate(inputRef.current?.value || ''));
   };
 
   const checkInputAndGoNext = useCallback(
-    (slotKey: string) => {
-      if (slotKey === SlotKey.Year && tryToCompleteInput()) {
+    (slotKey: SlotKey | undefined) => {
+      if (slotKey === slotOrder[slotOrder.length - 1] && tryToCompleteInput()) {
         return;
       }
 
@@ -88,19 +127,19 @@ export function useDateField({ inputRef, onChange, readonly, locale = DEFAULT_LO
 
       switch (slotKey) {
         case SlotKey.Day:
-          updateSlot(SlotKey.Month, slotsPlaceHolder[SlotKey.Month]);
+          updateSlot(SlotKey.Month, slotsPlaceholder?.[SlotKey.Month] ?? '');
           setFocus(SlotKey.Month);
           return;
         case SlotKey.Year:
         case SlotKey.Month:
-          updateSlot(SlotKey.Day, slotsPlaceHolder[SlotKey.Day]);
+          updateSlot(SlotKey.Day, slotsPlaceholder?.[SlotKey.Day] ?? '');
           setFocus(SlotKey.Day);
           return;
         default:
           setFocus(getNextSlotKey(slotKey));
       }
     },
-    [tryToCompleteInput, isValidInput, setFocus, slotsPlaceHolder, updateSlot],
+    [slotOrder, tryToCompleteInput, isValidInput, setFocus, getNextSlotKey, updateSlot, slotsPlaceholder],
   );
 
   const handleKeyDown = useCallback(
@@ -125,16 +164,16 @@ export function useDateField({ inputRef, onChange, readonly, locale = DEFAULT_LO
         }
 
         const clickIndex = inputRef.current.selectionStart;
-        const slotKey = getSlotKey(clickIndex);
+        const slotKey = getSlotKeyFromIndex(clickIndex);
 
         if (slotKey) {
           const value = getSlot(slotKey);
-          const { max } = SLOTS[slotKey];
+          const { max } = slotsInfo[slotKey];
 
           const numberValue = Number(value) || 0;
 
           if (e.key === 'ArrowRight') {
-            if (isAllSelected() || slotKey === SlotKey.Year) {
+            if (isAllSelected() || slotKey === slotOrder[slotOrder.length - 1]) {
               inputRef.current.selectionStart = inputRef.current.value.length;
               return;
             }
@@ -150,9 +189,9 @@ export function useDateField({ inputRef, onChange, readonly, locale = DEFAULT_LO
           if (e.key === 'Backspace') {
             if (isAllSelected()) {
               inputRef.current.value = mask;
-              setFocus(SlotKey.Day);
+              setFocus(focusSlotKey);
             } else {
-              updateSlot(slotKey, slotsPlaceHolder[slotKey]);
+              updateSlot(slotKey, slotsPlaceholder[slotKey] ?? '');
             }
           }
 
@@ -189,24 +228,31 @@ export function useDateField({ inputRef, onChange, readonly, locale = DEFAULT_LO
               }
             }
           }
-          onChange?.(isLikeDate() ? inputRef.current.value : '');
+          const newDate = parseDate(isLikeDate() ? inputRef.current.value : '');
+          onChange?.(newDate);
         }
       }
     },
     [
-      checkInputAndGoNext,
-      getSlot,
       inputRef,
-      isAllSelected,
-      isLikeDate,
-      mask,
-      onChange,
       readonly,
-      setFocus,
+      getSlotKeyFromIndex,
       setIsOpen,
-      slotsPlaceHolder,
       tryToCompleteInput,
+      getSlot,
+      slotsInfo,
+      isLikeDate,
+      onChange,
+      isAllSelected,
+      slotOrder,
+      setFocus,
+      getNextSlotKey,
+      getPrevSlotKey,
+      mask,
+      focusSlotKey,
       updateSlot,
+      slotsPlaceholder,
+      checkInputAndGoNext,
     ],
   );
 
@@ -214,8 +260,8 @@ export function useDateField({ inputRef, onChange, readonly, locale = DEFAULT_LO
     if (!readonly && inputRef.current?.value === mask) {
       inputRef.current.value = '';
     }
-    focusSlotRef.current = SlotKey.Day;
-  }, [inputRef, mask, readonly]);
+    focusSlotRef.current = focusSlotKey;
+  }, [inputRef, mask, readonly, focusSlotKey]);
 
   return {
     handleKeyDown,

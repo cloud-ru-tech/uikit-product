@@ -1,7 +1,8 @@
 import { ArgTypes } from '@storybook/react';
 
 import * as Icons from '@sbercloud/uikit-product-icons';
-import { VALIDATION_STATE } from '@snack-uikit/fields/dist/constants';
+
+import { VALIDATION_STATE } from '../src/constants';
 
 export const ICONS = {
   none: undefined,

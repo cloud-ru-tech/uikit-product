@@ -1,15 +1,6 @@
+import cn from 'classnames';
 import mergeRefs from 'merge-refs';
-import {
-  FocusEvent,
-  forwardRef,
-  KeyboardEvent,
-  MouseEvent,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import { FocusEvent, forwardRef, KeyboardEvent, MouseEvent, useCallback, useEffect, useMemo, useRef } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
 import { CalendarSVG } from '@sbercloud/uikit-product-icons';
@@ -17,6 +8,7 @@ import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
 import { Calendar, CalendarProps } from '@snack-uikit/calendar';
 import { FieldDecorator, FieldDecoratorProps } from '@snack-uikit/fields';
 import {
+  ButtonProps,
   ICON_SIZE,
   InputPrivate,
   InputPrivateProps,
@@ -25,20 +17,16 @@ import {
   useButtonNavigation,
   useClearButton,
 } from '@snack-uikit/input-private';
+import { Scroll } from '@snack-uikit/scroll';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
-import { CONTAINER_VARIANT, VALIDATION_STATE } from '../../constants';
+import { CONTAINER_VARIANT, DEFAULT_LOCALE, MODES, SlotKey, VALIDATION_STATE } from '../../constants';
 import { FieldContainerPrivate } from '../../helperComponents';
-import { useCopyButton } from '../../hooks';
+import { useCopyButton, useDateField, useFocusHandlers, useHandlers } from '../../hooks';
 import { getValidationState } from '../../utils/getValidationState';
-import { DEFAULT_LOCALE, SlotKey } from './constants';
-import { useDateField } from './hooks';
-import { useFocusHandlers } from './hooks/useFocusHandlers';
-import { useHandlers } from './hooks/useHandlers';
 import styles from './styles.module.scss';
-import { parseDate } from './utils';
 
-type InputProps = Pick<InputPrivateProps, 'id' | 'name' | 'value' | 'disabled' | 'readonly' | 'onFocus' | 'onBlur'>;
+type InputProps = Pick<InputPrivateProps, 'id' | 'name' | 'disabled' | 'readonly' | 'onFocus' | 'onBlur'>;
 
 type WrapperProps = Pick<
   FieldDecoratorProps,
@@ -55,13 +43,20 @@ type WrapperProps = Pick<
   | 'error'
 >;
 
+type FieldDateWithSeconds = {
+  mode: typeof MODES.DateTime;
+  showSeconds?: boolean;
+};
+
 type FieldDateOwnProps = {
   /** Открыт date-picker */
   open?: boolean;
   /** Колбек открытия пикера */
   onOpenChange?(value: boolean): void;
+  /** Значение поля */
+  value?: Date;
   /** Колбек смены значения */
-  onChange?(value: string): void;
+  onChange?(value: Date | undefined): void;
   /** Отображение кнопки копирования */
   showCopyButton?: boolean;
   /**
@@ -69,9 +64,13 @@ type FieldDateOwnProps = {
    * @default true
    */
   showClearButton?: boolean;
-  /** Текущая локаль календаря */
-  locale?: Intl.Locale;
-} & Pick<CalendarProps, 'buildCellProps'>;
+} & Pick<CalendarProps, 'buildCellProps'> &
+  (
+    | {
+        mode: typeof MODES.Date;
+      }
+    | FieldDateWithSeconds
+  );
 
 export type MobileFieldDateProps = WithSupportProps<FieldDateOwnProps & InputProps & WrapperProps>;
 
@@ -100,15 +99,14 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
       showHintIcon,
       size = SIZE.S,
       validationState = VALIDATION_STATE.Default,
-      locale = DEFAULT_LOCALE,
       buildCellProps,
       error,
+      mode,
       ...rest
     },
     ref,
   ) => {
     const [isOpen, setIsOpen] = useUncontrolledProp(open, false, onOpenChange);
-    const [pickerAutofocus, setPickerAutofocus] = useState(false);
 
     const localRef = useRef<HTMLInputElement>(null);
     const clearButtonRef = useRef<HTMLButtonElement>(null);
@@ -118,20 +116,23 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
     const showAdditionalButton = Boolean(valueProp && !disabled);
     const showClearButton = showClearButtonProp && showAdditionalButton && !readonly;
     const showCopyButton = showCopyButtonProp && showAdditionalButton && readonly;
+    const showSeconds = mode === 'date-time' ? (rest as FieldDateWithSeconds).showSeconds ?? true : undefined;
     const fieldValidationState = getValidationState({ validationState, error });
+
+    const navigationStartRef: CalendarProps['navigationStartRef'] = useRef(null);
 
     const checkForLeavingFocus = useCallback(
       <T extends HTMLInputElement | HTMLButtonElement>(event: KeyboardEvent<T>) => {
         if (event.key === 'ArrowDown') {
-          setPickerAutofocus(true);
           setIsOpen(true);
+          setTimeout(() => navigationStartRef.current?.focus(), 0);
         }
       },
       [setIsOpen],
     );
 
     const handleClear = useCallback(() => {
-      onChange && onChange('');
+      onChange && onChange(undefined);
       if (localRef.current?.value) {
         localRef.current.value = '';
       }
@@ -145,12 +146,44 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
       }
     }, [onChange, required, setIsOpen]);
 
+    const getStringDateValue = useCallback(
+      (date: Date | undefined) => {
+        if (!date) return '';
+
+        if (mode === 'date') {
+          return date.toLocaleDateString(DEFAULT_LOCALE);
+        }
+
+        return date.toLocaleString(DEFAULT_LOCALE, {
+          year: 'numeric',
+          month: 'numeric',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: showSeconds ? '2-digit' : undefined,
+        });
+      },
+      [mode, showSeconds],
+    );
+
+    const valueToCopy = getStringDateValue(valueProp);
     const clearButtonSettings = useClearButton({ clearButtonRef, showClearButton, size, onClear: handleClear });
-    const copyButtonSettings = useCopyButton({ copyButtonRef, showCopyButton, size, valueToCopy: valueProp || '' });
+    const copyButtonSettings = useCopyButton({ copyButtonRef, showCopyButton, size, valueToCopy });
+    const calendarIcon: ButtonProps = useMemo(
+      () => ({
+        active: false,
+        show: true,
+        id: 'calendarIcon',
+        render: props => (
+          <CalendarSVG {...props} size={calendarIconSize} className={styles.calendarIcon} data-size={size} />
+        ),
+      }),
+      [calendarIconSize, size],
+    );
 
     const memorizedButtons = useMemo(
-      () => [clearButtonSettings, copyButtonSettings],
-      [clearButtonSettings, copyButtonSettings],
+      () => [clearButtonSettings, copyButtonSettings, calendarIcon],
+      [clearButtonSettings, copyButtonSettings, calendarIcon],
     );
 
     const {
@@ -165,31 +198,39 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
       inputRef: localRef,
       onChange,
       readonly,
-      locale,
+      locale: DEFAULT_LOCALE,
       setIsOpen,
+      mode,
+      showSeconds,
     });
 
-    const setInputFocusFromButtons = useCallback(() => setInputFocus(SlotKey.Year), [setInputFocus]);
+    const setInputFocusFromButtons = useCallback(
+      () => setInputFocus(mode === 'date' ? SlotKey.Year : SlotKey.Seconds),
+      [mode, setInputFocus],
+    );
 
     const {
-      buttons,
+      postfixButtons,
       inputTabIndex,
       onInputKeyDown: navigationInputKeyDownHandler,
       setInitialTabIndices,
     } = useButtonNavigation({
       setInputFocus: setInputFocusFromButtons,
       inputRef: localRef,
-      buttons: memorizedButtons,
+      postfixButtons: memorizedButtons,
       onButtonKeyDown: checkForLeavingFocus,
       readonly,
       submitKeys: ['Enter', 'Space', 'Tab'],
     });
 
-    // TODO: do not hardcode locale here
     const handleSelectDate = (date: Date) => {
-      onChange && onChange(date.toLocaleDateString(DEFAULT_LOCALE));
+      onChange && onChange(date);
       localRef.current?.focus();
       setIsOpen(false);
+
+      if (localRef.current) {
+        localRef.current.value = getStringDateValue(date);
+      }
     };
 
     const handleCalendarFocusLeave: CalendarProps['onFocusLeave'] = () => {
@@ -215,10 +256,10 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
     }, [open]);
 
     useEffect(() => {
-      if (localRef.current) {
-        localRef.current.value = valueProp;
+      if (localRef.current && document.activeElement !== localRef.current) {
+        localRef.current.value = getStringDateValue(valueProp);
       }
-    }, [valueProp]);
+    }, [getStringDateValue, valueProp]);
 
     const onFocusByKeyboard = useCallback(
       (e: FocusEvent<HTMLInputElement>) => {
@@ -272,24 +313,24 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
                 onOpenChange: setIsOpen,
               })}
           content={
-            <div className={styles.calendarWrapper} data-size={size}>
+            <Scroll
+              className={cn(styles.calendarWrapper, mode === 'date-time' ? styles.dateTimeWrapper : styles.dateWrapper)}
+              data-size={size}
+              barHideStrategy='never'
+            >
               <Calendar
-                mode='date'
+                mode={mode}
                 size='l'
-                value={valueProp ? parseDate(valueProp) : undefined}
+                value={valueProp}
+                showSeconds={showSeconds}
                 onChangeValue={handleSelectDate}
                 buildCellProps={buildCellProps}
-                navigationStartRef={element => {
-                  if (pickerAutofocus) {
-                    element?.focus();
-                    setPickerAutofocus(false);
-                  }
-                }}
+                navigationStartRef={navigationStartRef}
                 onFocusLeave={handleCalendarFocusLeave}
-                locale={locale}
+                locale={DEFAULT_LOCALE}
                 data-test-id='field-date__calendar'
               />
-            </div>
+            </Scroll>
           }
         >
           <FieldContainerPrivate
@@ -301,12 +342,7 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
             variant={CONTAINER_VARIANT.SingleLine}
             focused={showDropList}
             inputRef={localRef}
-            postfix={
-              <>
-                {buttons}
-                <CalendarSVG size={calendarIconSize} className={styles.calendarIcon} data-size={size} />
-              </>
-            }
+            postfix={postfixButtons}
           >
             <InputPrivate
               ref={mergeRefs(ref, localRef)}

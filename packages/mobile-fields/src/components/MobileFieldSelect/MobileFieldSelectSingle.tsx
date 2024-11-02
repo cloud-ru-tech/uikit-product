@@ -21,6 +21,7 @@ import { kindFlattenItems, List, ListProps, SelectionSingleValueType } from '@sn
 import { extractSupportProps, isBrowser, useLayoutEffect, useValueControl } from '@snack-uikit/utils';
 
 import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
+import { usePostfix, usePrefix } from '../../hooks';
 import { useButtons, useHandleOnKeyDown, useSearchInput } from './hooks';
 import { useFuzzySearch } from './legacy';
 import styles from './styles.module.scss';
@@ -56,6 +57,8 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       search,
       autocomplete = false,
       prefixIcon,
+      prefix,
+      postfix,
       addOptionByEnter = false,
       open: openProp,
       onOpenChange,
@@ -85,6 +88,9 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
     });
 
     const prevSelectedItem = useRef<ItemWithId | undefined>(selectedItem);
+
+    const prefixSettings = usePrefix({ prefix, disabled });
+    const postfixSettings = usePostfix({ postfix, disabled });
 
     useLayoutEffect(() => {
       setItems(({ selectedItem }) => updateItems({ options, value, selectedItem }));
@@ -121,7 +127,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
 
     const { ArrowIcon, arrowIconSize } = getArrowIcon({ size, open });
 
-    const { buttons, inputKeyDownNavigationHandler, buttonsRefs } = useButtons({
+    const { postfixButtons, inputKeyDownNavigationHandler, buttonsRefs } = useButtons({
       readonly,
       size,
       showClearButton: showClearButton && !disabled && !readonly && value !== undefined,
@@ -245,7 +251,14 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
             variant={'single-line-container'}
             inputRef={localRef}
             size={size}
-            prefix={prefixIcon}
+            prefix={
+              (prefixIcon || prefixSettings.show) && (
+                <>
+                  {prefixIcon}
+                  {prefixSettings.show && prefixSettings.render({ key: prefixSettings.id })}
+                </>
+              )
+            }
             onClick={() => handleOpenChange(true)}
           >
             <InputPrivate
@@ -265,7 +278,8 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
             />
 
             <div className={styles.postfix}>
-              {buttons}
+              {postfixButtons}
+              {postfixSettings.show && postfixSettings.render({ key: postfixSettings.id })}
               <ArrowIcon size={arrowIconSize} className={styles.arrowIcon} />
             </div>
           </FieldContainerPrivate>

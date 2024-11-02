@@ -56,6 +56,8 @@ type UseCopyButtonProps = {
   size: Size;
   onValueRequest?(): AsyncValueRequest;
   disabled?: boolean;
+  prefix?: string;
+  postfix?: string;
 };
 
 export function useCopyButton({
@@ -65,23 +67,26 @@ export function useCopyButton({
   valueToCopy,
   onValueRequest,
   disabled,
+  prefix = '',
+  postfix = '',
 }: UseCopyButtonProps): ButtonProps {
   return useMemo(
     () => ({
       id: 'copy',
+      active: true,
       ref: copyButtonRef,
       show: showCopyButton,
       render: props => (
         <ButtonCopyValue
           {...props}
           size={BUTTON_SIZE_MAP[size]}
-          valueToCopy={valueToCopy}
+          valueToCopy={(prefix ?? '') + valueToCopy + (postfix ?? '')}
           onValueRequest={onValueRequest}
           disabled={disabled}
         />
       ),
     }),
-    [copyButtonRef, disabled, onValueRequest, showCopyButton, size, valueToCopy],
+    [copyButtonRef, disabled, onValueRequest, showCopyButton, size, valueToCopy, prefix, postfix],
   );
 }
 
@@ -121,15 +126,15 @@ export function useButtons({
     size,
     valueToCopy,
   });
-  const { onInputKeyDown: inputKeyDownNavigationHandler, buttons } = useButtonNavigation({
+  const { onInputKeyDown: inputKeyDownNavigationHandler, postfixButtons } = useButtonNavigation({
     inputRef,
-    buttons: useMemo(() => [clearButtonSettings, copyButtonSettings], [clearButtonSettings, copyButtonSettings]),
+    postfixButtons: useMemo(() => [clearButtonSettings, copyButtonSettings], [clearButtonSettings, copyButtonSettings]),
     onButtonKeyDown: undefined,
     readonly,
     submitKeys: ['Enter', 'Space', 'Tab'],
   });
 
-  return { buttons, inputKeyDownNavigationHandler, buttonsRefs };
+  return { postfixButtons, inputKeyDownNavigationHandler, buttonsRefs };
 }
 
 export function useSearchInput({

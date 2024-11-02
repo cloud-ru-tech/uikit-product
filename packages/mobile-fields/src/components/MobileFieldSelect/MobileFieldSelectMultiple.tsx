@@ -24,6 +24,7 @@ import { extractSupportProps, isBrowser, useLayoutEffect, useValueControl } from
 
 import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
 import { textProvider, Texts } from '../../helpers/texts-provider';
+import { usePostfix, usePrefix } from '../../hooks';
 import { useButtons, useHandleDeleteItem, useHandleOnKeyDown, useSearchInput } from './hooks';
 import { useFuzzySearch } from './legacy';
 import styles from './styles.module.scss';
@@ -63,6 +64,8 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       search,
       autocomplete = false,
       prefixIcon,
+      prefix,
+      postfix,
       removeByBackspace = false,
       addOptionByEnter = false,
       open: openProp,
@@ -101,6 +104,9 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       selectedOptionFormatter,
     });
 
+    const prefixSettings = usePrefix({ prefix, disabled });
+    const postfixSettings = usePostfix({ postfix, disabled });
+
     useLayoutEffect(() => {
       setItems(({ selectedItems }) => updateMultipleItems({ options, value, selectedItems }));
     }, [options, value]);
@@ -116,7 +122,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
 
     const { ArrowIcon, arrowIconSize } = getArrowIcon({ size, open });
 
-    const { buttons, inputKeyDownNavigationHandler, buttonsRefs } = useButtons({
+    const { postfixButtons, inputKeyDownNavigationHandler, buttonsRefs } = useButtons({
       readonly,
       size,
       showClearButton:
@@ -241,7 +247,14 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
             variant='single-line-container'
             inputRef={localRef}
             size={size}
-            prefix={prefixIcon}
+            prefix={
+              (prefixIcon || prefixSettings.show) && (
+                <>
+                  {prefixIcon}
+                  {prefixSettings.show && prefixSettings.render({ key: prefixSettings.id })}
+                </>
+              )
+            }
             onClick={() => {
               handleOpenChange(true);
             }}
@@ -279,10 +292,9 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
               </div>
 
               <div className={styles.postfix}>
-                {buttons}
-                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-                {/* @ts-ignore */}
-                <ArrowIcon size={arrowIconSize} className={styles.arrowIcon} onClick={() => handleOpenChange(true)} />
+                {postfixButtons}
+                {postfixSettings.show && postfixSettings.render({ key: postfixSettings.id })}
+                <ArrowIcon size={arrowIconSize} className={styles.arrowIcon} />
               </div>
             </>
           </FieldContainerPrivate>

@@ -1,0 +1,17 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields';
+
+.prefix {
+  color: styles-tokens-fields.$sys-neutral-text-support;
+
+  &[data-disabled] {
+    opacity: styles-tokens-fields.$opacity-a056;
+  }
+}
+
+.postfix {
+  color: styles-tokens-fields.$sys-neutral-text-support;
+
+  &[data-disabled] {
+    opacity: styles-tokens-fields.$opacity-a056;
+  }
+}
