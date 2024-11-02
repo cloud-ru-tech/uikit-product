@@ -35,10 +35,10 @@
     "@sbercloud/uikit-product-info-row": "0.8.0",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.1",
     "@sbercloud/uikit-product-utils": "3.8.0",
-    "@snack-uikit/button": "0.17.5",
-    "@snack-uikit/divider": "3.0.4",
-    "@snack-uikit/skeleton": "0.3.5",
-    "@snack-uikit/utils": "3.4.0",
-    "classnames": "2.3.2"
+    "@snack-uikit/button": "0.19.1",
+    "@snack-uikit/divider": "3.2.0",
+    "@snack-uikit/skeleton": "0.5.0",
+    "@snack-uikit/utils": "3.5.0",
+    "classnames": "2.5.1"
   }
 }

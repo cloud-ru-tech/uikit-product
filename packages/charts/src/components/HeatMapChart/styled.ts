@@ -42,7 +42,7 @@ export const Gradient = styled.div<{ gradient: string }>`
   height: 20px;
   margin: 24px 0 8px;
   background: ${props => props.gradient};
-  /* stylelint-disable-next-line color-named */
+  /* stylelint-disable-next-line color-named,declaration-no-important */
   background-color: red !important;
   border-radius: 4px;
 `;

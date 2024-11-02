@@ -126,22 +126,24 @@ $gear-wheel-rotation-period: 10s;
 }
 
 .title {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-display-s);
+
+  box-sizing: border-box;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-wrap: break-word;
+
   @media (max-width: $breakpoint-mobile) {
-    font-family: styles-theme-variables.$sans-headline-m-font-family !important;
-    font-weight: styles-theme-variables.$sans-headline-m-font-weight !important;
-    line-height: styles-theme-variables.$sans-headline-m-line-height !important;
-    font-size: styles-theme-variables.$sans-headline-m-font-size !important;
-    letter-spacing: styles-theme-variables.$sans-headline-m-letter-spacing !important;
+    @include styles-theme-variables.composite-var(styles-theme-variables.$sans-headline-m);
   }
 }
 
 .actionsTitle {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-l);
+
   @media (max-width: $breakpoint-mobile) {
-    font-family: styles-theme-variables.$sans-body-m-font-family !important;
-    font-weight: styles-theme-variables.$sans-body-m-font-weight !important;
-    line-height: styles-theme-variables.$sans-body-m-line-height !important;
-    font-size: styles-theme-variables.$sans-body-m-font-size !important;
-    letter-spacing: styles-theme-variables.$sans-body-m-letter-spacing !important;
+    @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
   }
 }
 

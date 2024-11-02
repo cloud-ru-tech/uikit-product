@@ -33,11 +33,11 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-utils": "3.8.0",
-    "@snack-uikit/button": "0.17.5",
-    "@snack-uikit/divider": "3.0.4",
-    "@snack-uikit/skeleton": "0.3.5",
-    "@snack-uikit/tooltip": "0.13.10",
-    "@snack-uikit/truncate-string": "0.4.23",
-    "classnames": "2.3.2"
+    "@snack-uikit/button": "0.19.1",
+    "@snack-uikit/divider": "3.2.0",
+    "@snack-uikit/skeleton": "0.5.0",
+    "@snack-uikit/tooltip": "0.15.0",
+    "@snack-uikit/truncate-string": "0.6.0",
+    "classnames": "2.5.1"
   }
 }

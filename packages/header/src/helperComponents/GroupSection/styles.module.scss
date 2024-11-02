@@ -126,8 +126,12 @@ $vPadding: calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dim
 }
 
 .searchButton {
+  /* stylelint-disable-next-line declaration-no-important */
   height: 40px !important;
+  /* stylelint-disable-next-line declaration-no-important */
   margin: calc(0px - styles-tokens-element.$dimension-1m) 0 !important;
+  /* stylelint-disable-next-line declaration-no-important */
   width: calc(styles-tokens-element.$dimension-3m + $vPadding) !important;
+  /* stylelint-disable-next-line declaration-no-important */
   justify-content: flex-start !important;
 }

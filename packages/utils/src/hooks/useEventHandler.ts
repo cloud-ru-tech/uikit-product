@@ -14,7 +14,7 @@ export function useEventHandler<T extends (...args: never[]) => unknown>(handler
   return useCallback((...args: Parameters<T>) => {
     const handler = handlerRef.current;
 
-    warning(handler === null, 'The event handler cannot be called during render');
+    warning('The event handler cannot be called during render', handler === null);
 
     return handler?.(...args);
   }, []) as T;

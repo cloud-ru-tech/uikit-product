@@ -7,7 +7,6 @@ import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/u
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
 import { Tag } from '@snack-uikit/tag';
-import { Typography } from '@snack-uikit/typography';
 import { isBrowser } from '@snack-uikit/utils';
 
 import { textProvider, Texts } from '../helpers/texts-provider';
@@ -56,18 +55,16 @@ export function ErrorPage({
         <div className={styles.textContainer}>
           {logo}
 
-          <Typography.SansDisplayS className={styles.title} data-user tag='h1'>
+          <h1 className={styles.title} data-user>
             {textProvider(languageCode, content.title)}
 
             {content.statusCode && (
               <Tag className={styles.statusCode} appearance='neutral' size='s' label={String(content.statusCode)} />
             )}
-          </Typography.SansDisplayS>
+          </h1>
 
           <div className={styles.actionWrapper}>
-            <Typography.SansBodyL className={styles.actionsTitle}>
-              {textProvider(languageCode, content.text)}
-            </Typography.SansBodyL>
+            <span className={styles.actionsTitle}>{textProvider(languageCode, content.text)}</span>
 
             <div className={styles.actionsLink}>
               {hasMainPageLink && (

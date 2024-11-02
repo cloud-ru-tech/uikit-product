@@ -1,6 +1,7 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
 .drawer {
+  /* stylelint-disable-next-line declaration-no-important */
   background-color: styles-theme-variables.$sys-neutral-background !important;
 
   svg {

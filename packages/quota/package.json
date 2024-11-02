@@ -35,13 +35,13 @@
     "@sbercloud/uikit-product-button-predefined": "0.3.1",
     "@sbercloud/uikit-product-icons": "10.2.0",
     "@sbercloud/uikit-product-utils": "3.8.0",
-    "@snack-uikit/button": "0.17.5",
-    "@snack-uikit/link": "0.13.3",
-    "@snack-uikit/scroll": "0.6.1",
-    "@snack-uikit/skeleton": "0.3.5",
-    "@snack-uikit/tooltip": "0.13.10",
-    "@snack-uikit/truncate-string": "0.4.23",
-    "classnames": "2.3.2"
+    "@snack-uikit/button": "0.19.1",
+    "@snack-uikit/link": "0.15.0",
+    "@snack-uikit/scroll": "0.9.0",
+    "@snack-uikit/skeleton": "0.5.0",
+    "@snack-uikit/tooltip": "0.15.0",
+    "@snack-uikit/truncate-string": "0.6.0",
+    "classnames": "2.5.1"
   },
   "peerDependencies": {
     "@snack-uikit/locale": "*"

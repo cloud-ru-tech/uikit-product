@@ -16,8 +16,8 @@ export type BagelChartProps = WithSupportProps<{
 }>;
 
 export function BagelChart({ value, total, title, className, ...rest }: BagelChartProps) {
-  error(value > 9_999_999, 'Value is too long');
-  error(total > 999_999_999, 'Total is too long');
+  error('Value is too long', value > 9_999_999);
+  error('Total is too long', total > 999_999_999);
 
   return (
     <S.Wrapper className={className} {...extractSupportProps(rest)}>

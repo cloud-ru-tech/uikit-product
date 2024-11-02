@@ -25,6 +25,7 @@
   box-sizing: border-box;
   min-height: styles-tokens-element.$dimension-2m;
   color: styles-tokens-element.$sys-neutral-text-main;
+  /* stylelint-disable-next-line declaration-no-important */
   background-color: styles-tokens-element.$sys-neutral-background !important;
   padding-left: calc(styles-tokens-element.$dimension-4m - styles-tokens-element.$dimension-050m);
 }

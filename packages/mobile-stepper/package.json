@@ -34,11 +34,11 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "10.2.0",
     "@sbercloud/uikit-product-utils": "3.8.0",
-    "@snack-uikit/loaders": "0.5.3",
-    "@snack-uikit/stepper": "0.6.13",
-    "@snack-uikit/truncate-string": "0.4.23",
-    "@snack-uikit/typography": "0.6.3",
-    "@snack-uikit/utils": "3.4.0",
-    "classnames": "2.3.2"
+    "@snack-uikit/loaders": "0.7.1",
+    "@snack-uikit/stepper": "0.8.1",
+    "@snack-uikit/truncate-string": "0.6.0",
+    "@snack-uikit/typography": "0.8.0",
+    "@snack-uikit/utils": "3.5.0",
+    "classnames": "2.5.1"
   }
 }

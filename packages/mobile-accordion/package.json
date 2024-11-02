@@ -34,15 +34,15 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "10.2.0",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.1",
-    "@snack-uikit/accordion": "0.7.17",
-    "@snack-uikit/button": "0.17.5",
-    "@snack-uikit/toggles": "0.10.4",
-    "@snack-uikit/typography": "0.6.3",
-    "@snack-uikit/utils": "3.4.0",
-    "classnames": "2.3.2",
+    "@snack-uikit/accordion": "0.9.1",
+    "@snack-uikit/button": "0.19.1",
+    "@snack-uikit/toggles": "0.12.0",
+    "@snack-uikit/typography": "0.8.0",
+    "@snack-uikit/utils": "3.5.0",
+    "classnames": "2.5.1",
     "lodash.debounce": "4.0.8"
   },
   "devDependencies": {
-    "@types/lodash.debounce": "4.0.8"
+    "@types/lodash.debounce": "4.0.9"
   }
 }
