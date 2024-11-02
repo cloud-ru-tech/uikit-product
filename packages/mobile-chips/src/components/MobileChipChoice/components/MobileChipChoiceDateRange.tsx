@@ -9,6 +9,7 @@ import { CHIP_CHOICE_TEST_IDS, DEFAULT_EMPTY_VALUE, SIZE } from '../../../consta
 import { useHandleOnKeyDown } from '../hooks';
 import { ChipChoiceCommonProps } from '../types';
 import { ChipChoiceBase } from './ChipChoiceBase';
+import styles from './styles.module.scss';
 
 type Range = [Date, Date];
 
@@ -68,18 +69,18 @@ export function MobileChipChoiceDateRange({
   return (
     <MobileDropdown
       content={
-        <Calendar
-          mode='range'
-          size='l'
-          value={selectedValue}
-          onChangeValue={value => {
-            setSelectedValue(value);
-            closeDroplist();
-          }}
-          // bug with focus
-          // navigationStartRef={element => element?.focus()}
-          onFocusLeave={closeDroplist}
-        />
+        <div className={styles.dateWrapper}>
+          <Calendar
+            mode='range'
+            size='l'
+            value={selectedValue}
+            onChangeValue={value => {
+              setSelectedValue(value);
+              closeDroplist();
+            }}
+            onFocusLeave={closeDroplist}
+          />
+        </div>
       }
       open={open}
       data-test-id={CHIP_CHOICE_TEST_IDS.droplist}

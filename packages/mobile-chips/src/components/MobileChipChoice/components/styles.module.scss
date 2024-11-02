@@ -18,5 +18,15 @@
 }
 
 .bodyNoPadding {
+  /* stylelint-disable-next-line declaration-no-important */
   padding: 0 !important;
+}
+
+.dateWrapper {
+  height: 384px;
+}
+
+.dateTimeWrapper {
+  height: 458px;
+  padding-bottom: 8px;
 }

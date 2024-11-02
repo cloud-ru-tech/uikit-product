@@ -38,6 +38,7 @@ export const chipChoiceDate: StoryObj<StoryProps> = {
   render: Template,
 
   args: {
+    mode: 'date',
     ...CHIP_CHOICE_STORY_ARGS,
     useDefaultValue: false,
   },

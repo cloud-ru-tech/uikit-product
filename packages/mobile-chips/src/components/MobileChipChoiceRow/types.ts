@@ -21,6 +21,10 @@ type ChipChoiceDateType = {
   type: typeof CHIP_CHOICE_TYPE.Date;
 } & MobileChipChoiceDateProps;
 
+type ChipChoiceDateTimeType = {
+  type: typeof CHIP_CHOICE_TYPE.DateTime;
+} & Omit<MobileChipChoiceDateProps, 'mode'> & { mode: 'date-time'; showSeconds?: boolean };
+
 type ChipChoiceDateRangeType = {
   type: typeof CHIP_CHOICE_TYPE.DateRange;
 } & MobileChipChoiceDateRangeProps;
@@ -35,6 +39,7 @@ export type ChipChoiceProps = {
   | ChipChoiceMultipleType
   | ChipChoiceSingleType
   | ChipChoiceDateType
+  | ChipChoiceDateTimeType
   | ChipChoiceDateRangeType
   | ChipChoiceCustomType
 );

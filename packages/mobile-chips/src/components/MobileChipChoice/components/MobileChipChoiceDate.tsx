@@ -1,14 +1,22 @@
-import { ReactNode, useCallback, useRef, useState } from 'react';
+import { ReactNode, useCallback, useMemo, useRef, useState } from 'react';
 
 import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
-import { Calendar } from '@snack-uikit/calendar';
+import { Calendar, CalendarProps } from '@snack-uikit/calendar';
 import { useLocale } from '@snack-uikit/locale';
+import { Scroll } from '@snack-uikit/scroll';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { CHIP_CHOICE_TEST_IDS, SIZE } from '../../../constants';
+import { DEFAULT_LOCALE } from '../constants';
 import { useHandleOnKeyDown } from '../hooks';
 import { ChipChoiceCommonProps } from '../types';
 import { ChipChoiceBase } from './ChipChoiceBase';
+import styles from './styles.module.scss';
+
+type ChipChoiceDateWithSeconds = {
+  mode?: 'date-time';
+  showSeconds?: boolean;
+};
 
 export type MobileChipChoiceDateProps = ChipChoiceCommonProps & {
   /** Значение компонента */
@@ -19,7 +27,13 @@ export type MobileChipChoiceDateProps = ChipChoiceCommonProps & {
   onChange?(value: Date): void;
   /** Колбек формирующий строковое представление выбранного значения. Принимает выбранное значение */
   valueRender?(value?: Date): ReactNode;
-};
+  mode?: Exclude<CalendarProps['mode'], 'range'>;
+} & (
+    | ChipChoiceDateWithSeconds
+    | {
+        mode?: 'date' | 'month';
+      }
+  );
 
 export function MobileChipChoiceDate({
   size = SIZE.S,
@@ -27,9 +41,12 @@ export function MobileChipChoiceDate({
   defaultValue,
   onChange,
   valueRender,
+  mode = 'date',
   ...rest
 }: MobileChipChoiceDateProps) {
   const [selectedValue, setSelectedValue] = useValueControl<Date>({ value, defaultValue, onChange });
+
+  const showSeconds = mode === 'date-time' ? (rest as ChipChoiceDateWithSeconds).showSeconds ?? true : undefined;
 
   const localRef = useRef<HTMLDivElement>(null);
 
@@ -43,26 +60,60 @@ export function MobileChipChoiceDate({
 
   const { t } = useLocale('Chips');
 
-  const valueToRender = valueRender
-    ? valueRender(selectedValue)
-    : (selectedValue && new Date(selectedValue).toLocaleDateString()) || t('allLabel');
+  const valueToRender = useMemo(() => {
+    if (valueRender) {
+      return valueRender(selectedValue);
+    }
+
+    if (!selectedValue) return t('allLabel');
+
+    const date = new Date(selectedValue);
+
+    if (mode === 'date-time') {
+      return date.toLocaleString(DEFAULT_LOCALE, {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: showSeconds ? '2-digit' : undefined,
+      });
+    }
+
+    return date.toLocaleDateString(DEFAULT_LOCALE, {
+      year: 'numeric',
+      month: 'numeric',
+      day: mode === 'date' ? 'numeric' : undefined,
+    });
+  }, [mode, selectedValue, showSeconds, t, valueRender]);
 
   const clearValue = () => setSelectedValue(undefined);
+
+  const handleChangeValue = useCallback(
+    (value: Date) => {
+      setSelectedValue(value);
+      closeDroplist();
+    },
+    [closeDroplist, setSelectedValue],
+  );
+
+  const navigationStartRef = useRef<HTMLButtonElement>(null);
 
   return (
     <MobileDropdown
       content={
-        <Calendar
-          mode='date'
-          size='l'
-          value={selectedValue}
-          onChangeValue={value => {
-            setSelectedValue(value);
-            closeDroplist();
-          }}
-          navigationStartRef={element => element?.focus()}
-          onFocusLeave={closeDroplist}
-        />
+        <Scroll className={mode === 'date-time' ? styles.dateTimeWrapper : styles.dateWrapper} barHideStrategy='never'>
+          <Calendar
+            mode={mode}
+            size='l'
+            value={selectedValue}
+            onChangeValue={handleChangeValue}
+            navigationStartRef={navigationStartRef}
+            onFocusLeave={closeDroplist}
+            showSeconds={showSeconds}
+            locale={DEFAULT_LOCALE}
+          />
+        </Scroll>
       }
       open={open}
       onOpenChange={setOpen}
