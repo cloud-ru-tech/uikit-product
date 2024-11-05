@@ -10,6 +10,7 @@ export type Item = {
   onEdit?(): void;
   actions?: BaseItemProps[];
   new?: boolean;
+  partner?: boolean;
 };
 
 export type ItemsGroup<T> = {

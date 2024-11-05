@@ -31,6 +31,7 @@ export enum Texts {
   Organizations = 'organizations',
   AddOrganization = 'add-organization',
   OrganizationNewBadge = 'organization-new-badge',
+  PartnerOrganizationBadge = 'partner-organization-badge',
   InvitePopoverTitle = 'invite-popover-title',
   InvitePopoverText = 'invite-popover-text',
   InvitePopoverAcceptButton = 'invite-popover-accept-button',
@@ -68,6 +69,11 @@ export enum Texts {
   ThemeModeDark = 'theme-mode-dark',
   ThemeModeSystem = 'theme-mode-system',
   ThemeModeLabel = 'theme-mode-label',
+
+  PartnerPopoverTitle = 'partner-popover-title',
+  PartnerPopoverText = 'partner-popover-text',
+  PartnerPopoverDescription = 'partner-popover-description',
+  PartnerPopoverCancelButton = 'partner-popover-cancel-button',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -101,6 +107,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Organizations]: 'Организации',
     [Texts.AddOrganization]: 'Добавить организацию',
     [Texts.OrganizationNewBadge]: 'Новая',
+    [Texts.PartnerOrganizationBadge]: 'Партнер',
     [Texts.InvitePopoverTitle]: 'Теперь вам доступна другая организация',
     [Texts.InvitePopoverText]: 'Сменить организацию можно нажав на профиль',
     [Texts.InvitePopoverAcceptButton]: 'Сменить сейчас',
@@ -141,6 +148,12 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.ThemeModeDark]: 'Темная',
     [Texts.ThemeModeSystem]: 'Системная',
     [Texts.ThemeModeLabel]: 'Тема интерфейса',
+
+    [Texts.PartnerPopoverTitle]: 'Доступна новая организация',
+    [Texts.PartnerPopoverText]: 'Для нее одобрена заявка на участие в реферальной программе.',
+    [Texts.PartnerPopoverDescription]:
+      'Переключитесь на эту организацию, чтобы начать работу в партнерском кабинете. Переключаться между организациями можно в профиле или в меню выбора проекта.',
+    [Texts.PartnerPopoverCancelButton]: 'Больше не показывать',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderProjectSelectorCreateProject]: 'Create project',
@@ -172,6 +185,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Organizations]: 'Organizations',
     [Texts.AddOrganization]: 'Add organization',
     [Texts.OrganizationNewBadge]: 'New',
+    [Texts.PartnerOrganizationBadge]: 'Partner',
     [Texts.InvitePopoverTitle]: 'A different organization is now available to you',
     [Texts.InvitePopoverText]: 'You can change your organization by clicking on your profile',
     [Texts.InvitePopoverAcceptButton]: 'Change now',
@@ -212,6 +226,12 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.ThemeModeDark]: 'Dark',
     [Texts.ThemeModeSystem]: 'System',
     [Texts.ThemeModeLabel]: 'Interface Theme',
+
+    [Texts.PartnerPopoverTitle]: 'New organization available',
+    [Texts.PartnerPopoverText]: 'The application for participation in the referral program has been approved',
+    [Texts.PartnerPopoverDescription]:
+      'Switch to this organization to start working in the partner account. You can switch between organizations in your profile or in the project selection menu.',
+    [Texts.PartnerPopoverCancelButton]: `Don't show again`,
   },
 };
 

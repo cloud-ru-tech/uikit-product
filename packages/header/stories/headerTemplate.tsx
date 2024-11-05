@@ -63,6 +63,9 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showOrganizationInvite: boolean;
   showOrganizationInvitePopover: boolean;
 
+  showPartnerOrganization: boolean;
+  showPartnerOrganizationPopover: boolean;
+
   showAddOrganization: boolean;
 
   showPlatformsLoading: boolean;
@@ -222,6 +225,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     organizations,
     showAddOrganization,
     showOrganizationInvite,
+    showPartnerOrganization,
     showLinks,
     showFooterLinks,
     showPinnedCards,
@@ -240,9 +244,12 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 
     const [notifyCards, setCards] = useState(args.notifications?.items || []);
 
-    const [{ showOrganizationInvitePopover }, setArgs] = useArgs<StoryProps>();
+    const [{ showOrganizationInvitePopover, showPartnerOrganizationPopover }, setArgs] = useArgs<StoryProps>();
 
-    const closeInvitesPopover = () => setArgs({ showOrganizationInvitePopover: false });
+    const closeInvitesPopover = () =>
+      setArgs({ showOrganizationInvitePopover: false, showPartnerOrganizationPopover: false });
+
+    const closePartnerOrganizationPopover = () => setArgs({ showPartnerOrganizationPopover: false });
 
     const [balanceVisible, setBalanceVisible] = useState(true);
 
@@ -276,12 +283,18 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     args.drawerMenu.allProducts = showSinglePlatform ? ALL_PRODUCTS_SINGLE : ALL_PRODUCTS_MULTI;
 
     const orgs = useMemo(() => {
+      const allOrganizations = [...(organizations ?? [])];
+
       if (showOrganizationInvite) {
-        return [...(organizations || []), { id: '3', name: 'ООО Инвайт', new: true }];
+        allOrganizations.push({ id: '4', name: 'ООО Инвайт', new: true });
       }
 
-      return organizations;
-    }, [organizations, showOrganizationInvite]);
+      if (showPartnerOrganization) {
+        allOrganizations.push({ id: '5', name: 'ИП Реферал', partner: true });
+      }
+
+      return allOrganizations;
+    }, [organizations, showOrganizationInvite, showPartnerOrganization]);
 
     const [themeMode, setThemeMode] = useState<ThemeMode>(THEME_MODE.Light);
 
@@ -414,6 +427,13 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                         count: 1,
                         showPopover: showOrganizationInvitePopover,
                         onOpenButtonClick: closeInvitesPopover,
+                      }
+                    : undefined,
+                  partnerInvites: showPartnerOrganization
+                    ? {
+                        count: 1,
+                        showPopover: showPartnerOrganizationPopover,
+                        onCloseClick: closePartnerOrganizationPopover,
                       }
                     : undefined,
                   themeMode: {
@@ -628,6 +648,8 @@ export const ARGS: StoryProps = {
   showUserMenuLogout: true,
   showOrganizationInvite: false,
   showOrganizationInvitePopover: false,
+  showPartnerOrganization: false,
+  showPartnerOrganizationPopover: false,
   showPlatformsLoading: false,
   userMenu: {
     user: DEFAULT_USER,
@@ -875,6 +897,13 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   },
   showOrganizationInvitePopover: {
     name: '[Story]: show organization invite popover',
+  },
+
+  showPartnerOrganization: {
+    name: '[Story]: show partner organization badge and counter',
+  },
+  showPartnerOrganizationPopover: {
+    name: '[Story]: show partner organization popover',
   },
 
   showFinancialMenu: { name: '[Story]: show financial menu', type: 'boolean' },

@@ -15,6 +15,7 @@ export type Organization = {
   id: string;
   name: string;
   new?: boolean;
+  partner?: boolean;
   actions?: BaseItemProps[];
 };
 

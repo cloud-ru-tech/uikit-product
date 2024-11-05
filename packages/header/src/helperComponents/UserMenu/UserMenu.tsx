@@ -11,6 +11,7 @@ import { textProvider, Texts } from '../../helpers';
 import { getThemeModeOptions } from '../../helpers/getThemeModeOptions';
 import { ThemeMode } from '../../types';
 import { InvitePopover, InvitePopoverProps } from '../InvitePopover';
+import { PartnerPopover, PartnerPopoverProps } from '../PartnerPopover/PartnerPopover';
 import { SelectProps } from '../SelectMenu';
 import styles from './styles.module.scss';
 
@@ -29,6 +30,10 @@ export type UserMenuProps = {
     count?: number;
     showPopover?: boolean;
   } & Pick<InvitePopoverProps, 'onOpenButtonClick'>;
+  partnerInvites?: {
+    count?: number;
+    showPopover?: boolean;
+  } & Pick<PartnerPopoverProps, 'onCloseClick'>;
 } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> & {
     themeMode?: {
       value: ThemeMode;
@@ -50,6 +55,7 @@ export function UserMenu({
   themeMode,
   invites,
   profileItemWrapRender,
+  partnerInvites,
 }: UserMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -115,8 +121,16 @@ export function UserMenu({
       items.push({
         'data-test-id': `header__user-menu__organization-${organization.id}`,
         beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols shape='square' />,
-        afterContent: organization.new && (
-          <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
+        afterContent: (
+          <>
+            {organization.new && (
+              <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
+            )}
+
+            {organization.partner && (
+              <PromoTag text={textProvider(languageCode, Texts.PartnerOrganizationBadge)} appearance='blue' />
+            )}
+          </>
         ),
         content: {
           option: organization.name,
@@ -182,6 +196,8 @@ export function UserMenu({
     user.name,
   ]);
 
+  const count = (invites?.count ?? 0) + (partnerInvites?.count ?? 0);
+
   return (
     <div className={styles.userMenuWrap}>
       <Droplist
@@ -208,13 +224,14 @@ export function UserMenu({
         >
           <Avatar size='xs' name={user.name} showTwoSymbols indicator={indicator} />
 
-          {invites?.count && invites.count > 0 && (
-            <Counter value={invites.count} appearance='primary' size='s' className={styles.userMenuAvatarCounter} />
+          {count > 0 && (
+            <Counter value={count} appearance='primary' size='s' className={styles.userMenuAvatarCounter} />
           )}
         </div>
       </Droplist>
 
-      {invites?.showPopover && <InvitePopover onOpenButtonClick={invites?.onOpenButtonClick} />}
+      {(partnerInvites?.showPopover && <PartnerPopover onCloseClick={partnerInvites?.onCloseClick} />) ||
+        (invites?.showPopover && <InvitePopover onOpenButtonClick={invites?.onOpenButtonClick} />)}
     </div>
   );
 }

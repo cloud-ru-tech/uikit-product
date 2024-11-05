@@ -87,6 +87,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'onLogout'
       | 'themeMode'
       | 'profileItemWrapRender'
+      | 'partnerInvites'
     >;
     logo?: {
       loading?: boolean;

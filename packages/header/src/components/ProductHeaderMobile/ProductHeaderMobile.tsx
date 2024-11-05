@@ -25,6 +25,7 @@ import {
   MobileFinancialMenu,
   Notifications,
   NotificationsTrigger,
+  PartnerPopover,
   SelectMenu,
   SelectMenuTrigger,
 } from '../../helperComponents';
@@ -299,6 +300,8 @@ export function ProductHeaderMobile({
     return items;
   }, [select, userMenu, visibleSettings, isProjectMenuOpen, languageCode, closeUserMenu]);
 
+  const count = (userMenu?.invites?.count ?? 0) + (userMenu?.partnerInvites?.count ?? 0);
+
   return (
     <>
       <HeaderLayout
@@ -333,16 +336,15 @@ export function ProductHeaderMobile({
               <div className={styles.userMenuButtonWrap}>
                 <ButtonFunction size='m' icon={<BurgerSVG />} onClick={() => setIsUserMenuOpen(v => !v)} />
 
-                {userMenu.invites?.count && userMenu.invites.count > 0 && (
-                  <Counter
-                    value={userMenu.invites.count}
-                    appearance='primary'
-                    size='s'
-                    className={styles.userMenuAvatarCounter}
-                  />
+                {count > 0 && (
+                  <Counter value={count} appearance='primary' size='s' className={styles.userMenuAvatarCounter} />
                 )}
-
-                {userMenu?.invites?.showPopover && <InvitePopover onOpenButtonClick={() => setIsUserMenuOpen(true)} />}
+                {(userMenu?.partnerInvites?.showPopover && (
+                  <PartnerPopover onCloseClick={userMenu?.partnerInvites?.onCloseClick} />
+                )) ||
+                  (userMenu?.invites?.showPopover && (
+                    <InvitePopover onOpenButtonClick={() => setIsUserMenuOpen(true)} />
+                  ))}
               </div>
             )}
           </>

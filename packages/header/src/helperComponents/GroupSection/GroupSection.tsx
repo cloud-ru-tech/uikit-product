@@ -154,6 +154,10 @@ export function GroupSection({
                   <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
                 )}
 
+                {item.partner && (
+                  <PromoTag text={textProvider(languageCode, Texts.PartnerOrganizationBadge)} appearance='blue' />
+                )}
+
                 {item?.tag}
 
                 {item.actions && item.actions.length > 0 ? (

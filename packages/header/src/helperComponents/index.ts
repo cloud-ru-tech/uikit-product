@@ -9,3 +9,4 @@ export * from './SelectMenu';
 export * from './InvitePopover';
 export * from './PinnedCard';
 export * from './FinancialMenu';
+export * from './PartnerPopover';
