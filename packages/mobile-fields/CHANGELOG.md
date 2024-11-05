@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.2 (2024-11-05)</small>
+
+* feat(FF-5830)!: add date-time mode to field-date, change value type to Date in field-date, add postf ([1f2dd7a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1f2dd7a))
+* deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03aefe0))
+* fix(FF-5830): make component ssr-safe ([f3001c6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3001c6))
+
+
+
+
+
 ## 0.6.1 (2024-11-01)
 
 ### Only dependencies have been changed

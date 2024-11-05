@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>1.5.2 (2024-11-05)</small>
+
+* deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03aefe0))
+
+
+
+
+
 ## 1.5.1 (2024-11-01)
 
 ### Only dependencies have been changed
@@ -805,7 +813,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.3.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.4...@sbercloud/uikit-product-predefined-icons-private@0.3.5) (2022-09-09)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-predefined-icons-private
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@10.2.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.3.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-predefined-icons-private@0.3.3...@sbercloud/uikit-product-predefined-icons-private@0.3.4) (2022-09-08)
 

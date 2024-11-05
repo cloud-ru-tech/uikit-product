@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.2 (2024-11-05)</small>
+
+* feat(FF-5830): add date-time & month modes to chip-choice ([56eda07](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/56eda07))
+
+
+
+
+
 ## 0.6.1 (2024-11-01)
 
 ### Only dependencies have been changed

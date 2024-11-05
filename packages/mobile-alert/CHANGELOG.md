@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.4.2 (2024-11-05)</small>
+
+* deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03aefe0))
+* fix(FF-5830): make component ssr-safe ([f3001c6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3001c6))
+
+
+
+
+
 ## 0.4.1 (2024-11-01)
 
 ### Only dependencies have been changed
