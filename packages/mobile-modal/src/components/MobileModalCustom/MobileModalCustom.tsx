@@ -14,7 +14,7 @@ import { Mode, Size } from '../../types';
 
 export type MobileModalCustomProps = Pick<
   MobileDrawerCustomProps,
-  'open' | 'onClose' | 'className' | 'children' | 'scrollRef' | 'swipeEnabled'
+  'open' | 'onClose' | 'className' | 'children' | 'scrollRef' | 'swipeEnabled' | 'closeButtonEnabled'
 > &
   WithSupportProps<{
     /**
@@ -36,6 +36,7 @@ export function MobileModalCustom({
   size = SIZE.Auto,
   mode = MODE.Regular,
   swipeEnabled = true,
+  closeButtonEnabled = false,
   ...rest
 }: MobileModalCustomProps) {
   return (
@@ -46,7 +47,7 @@ export function MobileModalCustom({
       hasBorderRadius={true}
       position='bottom'
       swipeEnabled={swipeEnabled}
-      closeButtonEnabled={false}
+      closeButtonEnabled={closeButtonEnabled}
     />
   );
 }
