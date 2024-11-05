@@ -36,7 +36,7 @@
     "@sbercloud/uikit-product-utils": "3.8.1",
     "@snack-uikit/button": "0.19.1",
     "@snack-uikit/dropdown": "0.4.0",
-    "@snack-uikit/list": "0.21.0",
+    "@snack-uikit/list": "0.21.1",
     "uncontrollable": "8.0.4"
   }
 }

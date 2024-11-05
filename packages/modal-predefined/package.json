@@ -37,7 +37,7 @@
     "@sbercloud/uikit-product-toggles-predefined": "0.7.1",
     "@sbercloud/uikit-product-utils": "3.8.1",
     "@snack-uikit/button": "0.19.1",
-    "@snack-uikit/fields": "0.32.0",
+    "@snack-uikit/fields": "0.32.1",
     "@snack-uikit/modal": "0.14.1",
     "@snack-uikit/truncate-string": "0.6.0"
   }

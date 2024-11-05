@@ -37,7 +37,7 @@
     "@sbercloud/uikit-product-utils": "3.8.1",
     "@snack-uikit/button": "0.19.1",
     "@snack-uikit/icon-predefined": "0.7.0",
-    "@snack-uikit/list": "0.21.0",
+    "@snack-uikit/list": "0.21.1",
     "@snack-uikit/loaders": "0.7.1",
     "@snack-uikit/tooltip": "0.15.0",
     "@snack-uikit/truncate-string": "0.6.0",
