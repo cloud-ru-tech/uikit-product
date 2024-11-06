@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.4 (2024-11-06)</small>
+
+* feat(PDS-804)!: relocated mobile delete modal from mobile-modal package to modal-predefined package ([4356ac6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4356ac6))
+* fix(PDS-804): enable close button for mobile modal custom ([46145eb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/46145eb))
+
+
+
+
+
 ## <small>0.7.3 (2024-11-06)</small>
 
 * deps(PDS-955): up snack-uikit deps ([8e7bbb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e7bbb9))
