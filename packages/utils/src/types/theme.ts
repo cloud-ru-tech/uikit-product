@@ -1,1 +1,6 @@
-export { Themes } from '@sbercloud/uikit-product-theme';
+export enum Themes {
+  Purple = 'purple',
+  PurpleDark = 'purpleDark',
+  Green = 'green',
+  GreenDark = 'greenDark',
+}

@@ -1,7 +1,9 @@
-import { StarFilledSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import cn from 'classnames';
 
-import * as S from './styled';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Favorite } from '@snack-uikit/toggles';
+
+import styles from './styles.module.scss';
 
 export type RatingProps = WithSupportProps<{
   value?: number;
@@ -11,14 +13,7 @@ export type RatingProps = WithSupportProps<{
   onChange: (value: number) => void;
 }>;
 
-export function Rating({
-  value,
-  elements = 5,
-  disabled = false,
-  onChange,
-  className,
-  ...rest
-}: RatingProps): JSX.Element {
+export function Rating({ value, elements = 5, disabled = false, onChange, className, ...rest }: RatingProps) {
   const handleMarkClick = (value: number) => {
     onChange(value);
   };
@@ -26,17 +21,18 @@ export function Rating({
   const marksArray = Array.from({ length: elements }, (_, index) => index + 1);
 
   return (
-    <S.MarkContainer {...extractSupportProps(rest)} className={className}>
+    <div {...extractSupportProps(rest)} className={cn(className, styles.markContainer)}>
       {marksArray.map(mark => (
-        <S.IconWrapper
-          key={mark}
-          onClick={() => handleMarkClick(mark)}
-          data-disabled={disabled || undefined}
-          data-selected={(value && value >= mark) || undefined}
-        >
-          <StarFilledSVG />
-        </S.IconWrapper>
+        <label key={mark} className={styles.toggleWrapper} htmlFor={String(mark)}>
+          <Favorite
+            id={String(mark)}
+            onClick={() => handleMarkClick(mark)}
+            disabled={disabled || undefined}
+            checked={(value && value >= mark) || undefined}
+            icon='star'
+          />
+        </label>
       ))}
-    </S.MarkContainer>
+    </div>
   );
 }

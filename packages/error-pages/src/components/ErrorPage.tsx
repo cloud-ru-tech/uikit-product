@@ -1,8 +1,7 @@
 import cn from 'classnames';
 import { useMemo } from 'react';
 
-import { MailInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { PredefinedCloudLogo, PredefinedMLSpaceLogo } from '@sbercloud/uikit-product-predefined-icons-private';
+import { CloudFullLogoSVG, MailInterfaceSVG, MlSpaceFullLogoSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
@@ -40,9 +39,17 @@ export function ErrorPage({
   const logo = useMemo(() => {
     switch (logoVariant) {
       case LogoVariant.MLSpace:
-        return <PredefinedMLSpaceLogo height={24} className={styles.logo} />;
+        return (
+          <div className={styles.logo}>
+            <MlSpaceFullLogoSVG />
+          </div>
+        );
       case LogoVariant.Cloud:
-        return <PredefinedCloudLogo height={24} className={styles.logo} />;
+        return (
+          <div className={styles.logo}>
+            <CloudFullLogoSVG />
+          </div>
+        );
       case LogoVariant.None:
       default:
         return null;

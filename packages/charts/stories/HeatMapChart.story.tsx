@@ -9,7 +9,7 @@ import { HeatMapChart, HeatMapChartProps } from '../src';
 import { XAxisPosition } from '../src/components/HeatMapChart/constants';
 
 const meta: Meta = {
-  title: 'Not stable/Charts/Heat Map Chart',
+  title: 'Snack Uikit/Charts/Heat Map Chart',
   component: HeatMapChart,
 };
 export default meta;

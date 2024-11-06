@@ -5,7 +5,7 @@ import { Link } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';
 
 import { TextLike } from '../types';
-import * as S from './styled';
+import styles from './styles.module.scss';
 
 type LegendItem = {
   label: TextLike;
@@ -21,13 +21,14 @@ type LegendItemProps = LegendItem & {
 
 function LegendItem({ color, label, value, size, onItemClick }: LegendItemProps) {
   return (
-    <S.LegendItemWrapper>
-      <S.LegendItemTitle>
-        {color && <S.Dot color={color} />}
+    <div className={styles.legendItemWrapper}>
+      <span className={styles.legendItemTitle}>
+        {color && <span className={styles.dot} style={{ '--color': color }} />}
         <Link onClick={onItemClick} text={String(label)} size={size} />
-      </S.LegendItemTitle>
-      <S.LegendValue>{value}</S.LegendValue>
-    </S.LegendItemWrapper>
+      </span>
+
+      <span className={styles.legendValue}>{value}</span>
+    </div>
   );
 }
 
@@ -40,15 +41,15 @@ type LegendProps = {
 
 export function Legend({ data, legendTitle, typographySize, onItemClick }: LegendProps) {
   return (
-    <S.Legend>
+    <div className={styles.legend}>
       {legendTitle && (
         <>
           <Typography purpose={'label'} family={'sans'} size={typographySize}>
             {legendTitle}
           </Typography>
-          <S.LegendDividerWrapper>
+          <div className={styles.legendDividerWrapper}>
             <Divider />
-          </S.LegendDividerWrapper>
+          </div>
         </>
       )}
       {data.map((item, index) => (
@@ -59,12 +60,12 @@ export function Legend({ data, legendTitle, typographySize, onItemClick }: Legen
             onItemClick={onItemClick ? event => onItemClick(event, item) : undefined}
           />
           {index !== data.length - 1 && (
-            <S.LegendDividerWrapper>
+            <div className={styles.legendDividerWrapper}>
               <Divider />
-            </S.LegendDividerWrapper>
+            </div>
           )}
         </Fragment>
       ))}
-    </S.Legend>
+    </div>
   );
 }

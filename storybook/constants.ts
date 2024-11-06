@@ -2,7 +2,7 @@ import { BADGE as Badges } from '@geometricpanda/storybook-addon-badges';
 
 import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
 import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
-import { Themes } from '@sbercloud/uikit-product-theme';
+import { Themes } from '@sbercloud/uikit-product-utils';
 
 enum CustomBadges {
   PRIVATE = 'private',

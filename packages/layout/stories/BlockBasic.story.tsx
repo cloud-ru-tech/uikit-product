@@ -1,35 +1,24 @@
-import { css } from '@linaria/core';
-import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { BlockBasic, BlockBasicProps } from '../src';
+import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Snack UIkit/Layout/BlockBasic',
   component: BlockBasic,
 };
+
 export default meta;
 
-const Wrapper = styled.div`
-  width: 500px;
-  height: 300px;
-  resize: both;
-  overflow: auto;
-`;
-
-const exampleClassName = css`
-  height: 100%;
-`;
-
 const Template = ({ ...args }: BlockBasicProps) => (
-  <Wrapper>
-    <BlockBasic {...args} className={exampleClassName}>
+  <div className={styles.blockBasicWrapper}>
+    <BlockBasic {...args} className={styles.block}>
       Какое-то содержимое
     </BlockBasic>
-  </Wrapper>
+  </div>
 );
 
 export const blockBasic: StoryObj<BlockBasicProps> = {

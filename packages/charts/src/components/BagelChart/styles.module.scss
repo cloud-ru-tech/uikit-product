@@ -1,0 +1,29 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.wrapper {
+  min-width: 100px;
+}
+
+.titleWrapper {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-m);
+
+  color: styles-theme-variables.$sys-neutral-text-support;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+
+.value {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-m);
+
+  fill: styles-theme-variables.$sys-neutral-text-main;
+  text-anchor: middle;
+}
+
+.limit {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
+
+  fill: styles-theme-variables.$sys-neutral-text-support;
+  text-anchor: middle;
+}

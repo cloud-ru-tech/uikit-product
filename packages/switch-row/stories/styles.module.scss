@@ -1,0 +1,8 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.container {
+  padding: styles-theme-variables.$dimension-3m;
+  border: 1px solid styles-theme-variables.$sys-neutral-decor-default;
+  border-radius: styles-theme-variables.$dimension-3m;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+}

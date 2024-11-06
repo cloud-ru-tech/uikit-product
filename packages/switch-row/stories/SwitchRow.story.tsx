@@ -1,26 +1,17 @@
-import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
 import { useEffect, useState } from 'react';
-
-import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SwitchRow, SwitchRowProps } from '../src';
+import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Snack Uikit/Switch Row ',
   component: SwitchRow,
 };
 export default meta;
-
-const Container = styled.div`
-  padding: ${themeVars.dimension['3m']};
-  border: 1px solid ${themeVars.sys.neutral.decorDefault};
-  border-radius: ${themeVars.dimension['3m']};
-  background-color: ${themeVars.sys.neutral.background2Level};
-`;
 
 function Template({ checked: propsChecked, ...args }: SwitchRowProps) {
   const [checked, setChecked] = useState(propsChecked || false);
@@ -30,9 +21,9 @@ function Template({ checked: propsChecked, ...args }: SwitchRowProps) {
   }, [propsChecked]);
 
   return (
-    <Container>
+    <div className={styles.container}>
       <SwitchRow {...args} onChange={setChecked} checked={checked} />
-    </Container>
+    </div>
   );
 }
 

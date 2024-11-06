@@ -12,7 +12,7 @@ import { DrawStyles, LineInterpolations } from '../src/components/InteractiveCha
 import { Colors } from '../src/constants/colors';
 
 const meta: Meta = {
-  title: 'Not stable/Charts/Base',
+  title: 'Snack Uikit/Charts/Base',
   component: InteractiveChart,
 };
 export default meta;

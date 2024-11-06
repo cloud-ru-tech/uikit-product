@@ -1,32 +1,26 @@
-import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
 
-import { InfoOutlineInterfaceSVG } from '@sbercloud/uikit-product-icons';
-import { Tooltip } from '@snack-uikit/tooltip';
+import { QuestionTooltip } from '@snack-uikit/tooltip';
 
 import { BADGE } from '#storybookConstants';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { BagelChart, BagelChartProps } from '../src/components/BagelChart';
+import { BagelChart, BagelChartProps } from '../src';
+import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Not stable/Charts/BagelChart',
+  title: 'Snack Uikit/Charts/BagelChart',
   component: BagelChart,
 };
 export default meta;
 
-const Wrapper = styled.div`
-  width: 100px;
-  overflow: auto;
-  resize: horizontal;
-`;
 function Template({ ...args }: BagelChartProps) {
   return (
-    <Wrapper>
+    <div className={styles.wrapper}>
       <BagelChart {...args} />
-    </Wrapper>
+    </div>
   );
 }
 
@@ -37,12 +31,11 @@ export const bagelChart: StoryObj<BagelChartProps> = {
     total: 100000,
     value: 75001,
     title: (
-      <>
+      <div className={styles.title}>
         <div>{'Title'}</div>
-        <Tooltip tip='content'>
-          <InfoOutlineInterfaceSVG />
-        </Tooltip>
-      </>
+
+        <QuestionTooltip tip='content' size='s' />
+      </div>
     ),
   },
 

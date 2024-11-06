@@ -1,0 +1,30 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.themeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shadowItem {
+  &:not(:last-of-type) {
+    margin-right: 60px;
+  }
+}
+
+.shadowPreview {
+  width: 256px;
+  height: 256px;
+  border-radius: 16px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: var(--shadow);
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+}
+
+.text {
+  margin-top: 4px;
+  text-align: center;
+}

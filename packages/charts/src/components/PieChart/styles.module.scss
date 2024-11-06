@@ -1,0 +1,54 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.wrapper {
+  display: flex;
+  width: var(--width, 100%);
+  height: var(--height, 100%);
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.title {
+  padding-bottom: 24px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  height: calc(100% - 50px);
+  justify-content: space-between;
+}
+
+.legendWrapper {
+  min-width: 25%;
+  max-width: 33%;
+}
+
+.pieWrapper {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svgText {
+  text-anchor: middle;
+  visibility: hidden;
+  width: 30px;
+  font-size: 5px;
+  word-break: break-all;
+  white-space: nowrap;
+
+  &[data-hovered] {
+    visibility: visible;
+  }
+
+  &[data-bolder] {
+    font-weight: 700;
+  }
+}

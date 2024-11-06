@@ -1,0 +1,94 @@
+@use "@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables";
+
+@font-face {
+  font-family: 'SB Sans Interface';
+  src:
+    url('./fonts/SBSansInterface-Semibold.woff2') format('woff2'),
+    url('./fonts/SBSansInterface-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SB Sans Interface';
+  src:
+    url('./fonts/SBSansInterface-Light.woff2') format('woff2'),
+    url('./fonts/SBSansInterface-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SB Sans Interface';
+  src:
+    url('./fonts/SBSansInterface-Bold.woff2') format('woff2'),
+    url('./fonts/SBSansInterface-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SB Sans Interface Caps';
+  src:
+    url('./fonts/SBSansInterface-Caps.woff2') format('woff2'),
+    url('./fonts/SBSansInterface-Caps.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SB Sans Interface';
+  src:
+    url('./fonts/SBSansInterface-Regular.woff2') format('woff2'),
+    url('./fonts/SBSansInterface-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SB Sans Text Mono';
+  src:
+    url('./fonts/SBSansTextMono-Bold.woff2') format('woff2'),
+    url('./fonts/SBSansTextMono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'SB Sans Text Mono';
+  src:
+    url('./fonts/SBSansTextMono-Regular.woff2') format('woff2'),
+    url('./fonts/SBSansTextMono-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: styles-theme-variables.$sys-neutral-background;
+  transition: all 0.4s ease-in-out;
+}
+
+body,
+button,
+input {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
+
+  color: styles-theme-variables.$sys-neutral-text-main;
+  fill: styles-theme-variables.$sys-neutral-text-main;
+}
+
+a {
+  text-decoration: none;
+}

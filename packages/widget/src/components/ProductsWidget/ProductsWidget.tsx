@@ -8,7 +8,7 @@ import { Typography } from '@snack-uikit/typography';
 
 import { textProvider, Texts } from '../../helpers';
 import { COLUMN_SIZE, MOBILE_COLUMN_SIZE, MOBILE_ROW_SIZE, ROW_SIZE } from './constants';
-import * as S from './styled';
+import styles from './styles.module.scss';
 import { getLoadingCards } from './utils/getLoadingCards';
 import { getProductColumns } from './utils/getProductColumns';
 
@@ -42,24 +42,24 @@ export function ProductsWidget({
   const totalPages = productsCards.length;
 
   return (
-    <S.Wrapper {...extractSupportProps(rest)}>
-      <S.HeaderWrapper>
+    <div className={styles.wrapper} {...extractSupportProps(rest)}>
+      <div className={styles.headerWrapper}>
         <Typography.SansTitleL tag='h5'>{textProvider(languageCode, Texts.ProductsWidgetTitle)}</Typography.SansTitleL>
 
         {isMobile && (
-          <S.ArrowWrapper style={{ display: 'flex' }}>
-            <S.PageNumber>{page + 1}</S.PageNumber>
+          <div className={styles.arrowWrapper} style={{ display: 'flex' }}>
+            <span className={styles.pageNumber}>{page + 1}</span>
 
-            <S.PageTotal>/{totalPages}</S.PageTotal>
+            <span className={styles.pageNumber}>/{totalPages}</span>
 
             <ButtonFunction
               icon={<ArrowLeftSVG />}
               onClick={() => setPage(page - 1 >= 0 ? page - 1 : totalPages - 1)}
             />
             <ButtonFunction icon={<ArrowRightSVG />} onClick={() => setPage(page + 1 < totalPages ? page + 1 : 0)} />
-          </S.ArrowWrapper>
+          </div>
         )}
-      </S.HeaderWrapper>
+      </div>
 
       <Carousel
         gap='8px'
@@ -72,9 +72,11 @@ export function ProductsWidget({
         state={{ page, onChange: setPage }}
       >
         {productsCards.map((d, index) => (
-          <S.Column key={index}>{d}</S.Column>
+          <div className={styles.column} key={index}>
+            {d}
+          </div>
         ))}
       </Carousel>
-    </S.Wrapper>
+    </div>
   );
 }

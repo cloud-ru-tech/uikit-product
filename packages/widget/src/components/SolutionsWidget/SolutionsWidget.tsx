@@ -4,7 +4,7 @@ import { Link, LinkProps } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';
 
 import { textProvider, Texts } from '../../helpers';
-import * as S from './styled';
+import styles from './styles.module.scss';
 
 export type SolutionsWidgetProps = WithLayoutType<
   WithSupportProps<{
@@ -18,9 +18,10 @@ export function SolutionsWidget({ layoutType, moreLink, cards, ...rest }: Soluti
   const isMobile = layoutType === 'mobile';
 
   return (
-    <S.Wrapper {...extractSupportProps(rest)}>
-      <S.Header>
+    <div className={styles.wrapper} {...extractSupportProps(rest)}>
+      <div className={styles.header}>
         <Typography.SansTitleL tag='h5'>{textProvider(languageCode, Texts.SolutionsWidgetTitle)}</Typography.SansTitleL>
+
         {moreLink && (
           <Link
             text={textProvider(languageCode, Texts.SolutionsWidgetLink)}
@@ -30,18 +31,13 @@ export function SolutionsWidget({ layoutType, moreLink, cards, ...rest }: Soluti
             href={moreLink?.href}
           />
         )}
-      </S.Header>
-      <S.Cards data-mobile={isMobile || undefined}>
+      </div>
+
+      <div className={styles.cards} data-mobile={isMobile || undefined}>
         {cards.map(({ description, title, onClick }) => (
-          <CardSuggest
-            className={S.cardClassName}
-            key={title}
-            description={description}
-            title={title}
-            onClick={onClick}
-          />
+          <CardSuggest className={styles.card} key={title} description={description} title={title} onClick={onClick} />
         ))}
-      </S.Cards>
-    </S.Wrapper>
+      </div>
+    </div>
   );
 }

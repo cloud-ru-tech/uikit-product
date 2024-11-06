@@ -1,4 +1,3 @@
-import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { BADGE } from '#storybookConstants';
@@ -7,6 +6,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { ErrorPage, ErrorPageProps } from '../src';
+import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Snack Uikit/Error Pages',
@@ -14,17 +14,13 @@ const meta: Meta = {
 };
 export default meta;
 
-const Wrapper = styled.div`
-  height: calc(100vh - 40px);
-`;
-
 type StoryProps = ErrorPageProps & { showSupportCenterButton: boolean };
 
 function Template({ showSupportCenterButton, ...args }: StoryProps) {
   return (
-    <Wrapper>
+    <div className={styles.wrapper}>
       <ErrorPage {...args} onSupportCenterClick={showSupportCenterButton ? args.onSupportCenterClick : undefined} />
-    </Wrapper>
+    </div>
   );
 }
 

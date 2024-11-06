@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { MouseEvent, useCallback, useMemo, useState } from 'react';
 
 import { truncateString } from '@sbercloud/ft-formatters';
@@ -8,7 +9,7 @@ import { Typography } from '@snack-uikit/typography';
 import { CHART_COLORS, Colors } from '../../constants/colors';
 import { Legend } from './Legend';
 import { Pie } from './Pie';
-import * as S from './styled';
+import styles from './styles.module.scss';
 import { ColorizedDataType, DataType, LabelRenderFunction, LegendType, PieChartProps } from './types';
 
 export function PieChart({
@@ -73,24 +74,42 @@ export function PieChart({
   const labelRenderer = useCallback<LabelRenderFunction<DataType>>(
     ({ dataEntry, dataIndex }) => (
       <>
-        <S.SvgText x={0} y={-4} data-hovered={hovered === dataIndex || undefined} key={`${dataIndex}_label`}>
+        <text
+          className={styles.svgText}
+          x={0}
+          y={-4}
+          data-hovered={hovered === dataIndex || undefined}
+          key={`${dataIndex}_label`}
+        >
           {truncateString(String(dataEntry.label), 15)}
-        </S.SvgText>
-        <S.SvgText x={0} y={4} data-hovered={hovered === dataIndex || undefined} data-bolder key={`${dataIndex}_value`}>
+        </text>
+        <text
+          className={styles.svgText}
+          x={0}
+          y={4}
+          data-hovered={hovered === dataIndex || undefined}
+          data-bolder
+          key={`${dataIndex}_value`}
+        >
           {dataEntry.value}
-        </S.SvgText>
+        </text>
       </>
     ),
     [hovered],
   );
 
   return (
-    <S.Wrapper width={width} height={height} {...extractSupportProps(rest)} className={className}>
-      <Typography purpose={'title'} family={'sans'} size={typographySize} className={S.titleClassname}>
+    <div
+      {...extractSupportProps(rest)}
+      className={cn(className, styles.wrapper)}
+      style={{ '--width': width ? `${width}px` : undefined, '--height': height ? `${height}px` : undefined }}
+    >
+      <Typography purpose={'title'} family={'sans'} size={typographySize} className={styles.title}>
         {title}
       </Typography>
-      <S.ContentWrapper>
-        <S.LegendWrapper>
+
+      <div className={styles.contentWrapper}>
+        <div className={styles.legendWrapper}>
           <Scroll size={'s'}>
             <Legend
               data={colorizedData}
@@ -99,8 +118,9 @@ export function PieChart({
               typographySize={typographySize}
             />
           </Scroll>
-        </S.LegendWrapper>
-        <S.PieWrapper>
+        </div>
+
+        <div className={styles.pieWrapper}>
           <Pie
             style={pieStyles}
             radius={46}
@@ -114,9 +134,10 @@ export function PieChart({
             onMouseOut={onMouseOutCallback}
             onMouseDown={onMouseDownCallback}
           />
-        </S.PieWrapper>
+        </div>
+
         {aggregatedLegend && (
-          <S.LegendWrapper>
+          <div className={styles.legendWrapper}>
             <Scroll size={'s'}>
               <Legend
                 data={aggregatedLegend.data}
@@ -125,9 +146,9 @@ export function PieChart({
                 typographySize={typographySize}
               />
             </Scroll>
-          </S.LegendWrapper>
+          </div>
         )}
-      </S.ContentWrapper>
-    </S.Wrapper>
+      </div>
+    </div>
   );
 }

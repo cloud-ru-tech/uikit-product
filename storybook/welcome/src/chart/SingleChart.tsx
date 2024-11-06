@@ -1,37 +1,26 @@
-import { styled } from '@linaria/react';
 import { PieChart } from 'react-minimal-pie-chart';
-
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
-
-const { PURPLE } = EXPORT_VARS;
 
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
-import * as S from '../styles';
+import styles from '../styles.module.scss';
 import { SingleChartProps } from '../types';
-
-const Title = styled.h3`
-  ${themeVars.sans.title.m};
-
-  margin-bottom: 60px;
-`;
 
 export function SingleChart(props: SingleChartProps) {
   return (
-    <S.Wrapper height={props.height}>
-      <Title>{props.title}</Title>
+    <div className={styles.wrapper} style={{ '--height': props.height + '%' }}>
+      <h3 className={styles.singleTitle}>{props.title}</h3>
       <PieChart
-        data={[{ value: props.value, color: `var(${PURPLE[100]})` }]}
+        data={[{ value: props.value, color: themeVars.sys.primary.accentDefault }]}
         totalValue={props.total}
         lineWidth={20}
         label={({ dataEntry }) => dataEntry.value}
         labelStyle={{
-          fontSize: '25px',
+          fontSize: '24px',
           fontFamily: 'sans-serif',
-          fill: `var(${PURPLE[100]})`,
+          fill: themeVars.sys.neutral.textSupport,
         }}
         labelPosition={0}
       />
-    </S.Wrapper>
+    </div>
   );
 }

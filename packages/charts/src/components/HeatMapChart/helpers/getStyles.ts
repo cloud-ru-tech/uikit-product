@@ -1,6 +1,7 @@
 import { ScaleLinear } from 'd3-scale';
 
-import { COLOR_VARS } from '../themes';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+
 import { HeatMapChartStyles } from '../types';
 import { TICKS_SIZE } from './constants';
 
@@ -12,14 +13,14 @@ export const getStyles = (colorScale: ScaleLinear<string, string>, data: number[
     justifyContent: 'center',
     borderRadius: '4px',
     padding: '4px',
-    borderColor: `var(${COLOR_VARS.BACKGROUND})`,
+    borderColor: themeVars.sys.neutral.background1Level,
   }),
   xLabelsStyle: () => ({
     fontSize: '12px',
     lineHeight: '10px',
     fontWeight: 400,
     marginTop: '12px',
-    color: `var(${COLOR_VARS.LABEL})`,
+    color: themeVars.sys.neutral.textSupport,
     padding: 0,
     height: `${TICKS_SIZE - 12}px`,
   }),
@@ -28,6 +29,6 @@ export const getStyles = (colorScale: ScaleLinear<string, string>, data: number[
     fontSize: '12px',
     marginRight: '8px',
     padding: '0',
-    color: `var(${COLOR_VARS.LABEL})`,
+    color: themeVars.sys.neutral.textSupport,
   }),
 });

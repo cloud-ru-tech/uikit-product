@@ -1,18 +1,18 @@
-import { GlobalTypes, Parameters } from '@storybook/csf';
-import { Preview } from '@storybook/react';
-import { themes, ThemeVars } from '@storybook/theming';
-import cn from 'classnames';
-import { FormProvider, useForm } from 'react-hook-form';
-import { useDarkMode } from 'storybook-dark-mode';
+import './styles.module.scss';
 
 import {
   PARAM_CAN_ADD_CUSTOM_BRAND_KEY,
   PARAM_COLOR_MAP_KEY,
   PARAM_KEY,
   withBrand,
-} from '@sbercloud/ft-storybook-brand-addon';
+} from '@cloud-ru/ft-storybook-brand-addon';
+import { GlobalTypes, Parameters } from '@storybook/csf';
+import { Preview } from '@storybook/react';
+import { themes, ThemeVars } from '@storybook/theming';
+import { FormProvider, useForm } from 'react-hook-form';
+import { useDarkMode } from 'storybook-dark-mode';
+
 import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
-import { color, globals, green, greenDark, purple, purpleDark } from '@sbercloud/uikit-product-theme';
 import { Alert } from '@snack-uikit/alert';
 import { Link } from '@snack-uikit/link';
 import { LocaleProvider } from '@snack-uikit/locale';
@@ -36,9 +36,9 @@ const decorators: Preview['decorators'] = [
       shouldUnregister: true,
     });
     return (
-      // Add global styles and theme variables
-      <div id='story-root' className={cn(color, globals, green, greenDark, purple, purpleDark)}>
+      <div id='story-root'>
         <Sprite content={SpriteSystemSVG as unknown as string} />
+
         <FormProvider {...methods}>
           {Array.isArray(badges) && badges.includes(BADGE.DEPRECATED) && (
             <>

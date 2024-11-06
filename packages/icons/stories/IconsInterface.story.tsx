@@ -9,7 +9,7 @@ import * as Icons from '../src/components/interface-icons-old';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons (deprecated)/Interfaces',
+  title: 'Deprecated/Icons/Interfaces',
 };
 export default meta;
 

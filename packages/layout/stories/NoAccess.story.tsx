@@ -14,7 +14,7 @@ export default meta;
 
 function Template({ ...args }: NoAccessProps) {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.noAccessWrapper}>
       <NoAccess {...args} />
     </div>
   );

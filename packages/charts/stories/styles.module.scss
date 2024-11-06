@@ -1,0 +1,10 @@
+.wrapper {
+  width: 100px;
+  overflow: auto;
+  resize: horizontal;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}

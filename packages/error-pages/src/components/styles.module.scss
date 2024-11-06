@@ -48,7 +48,13 @@ $gear-wheel-rotation-period: 10s;
 }
 
 .logo {
+  height: styles-theme-variables.$dimension-3m;
   margin-bottom: styles-theme-variables.$dimension-3m;
+  display: inline-flex;
+
+  svg {
+    height: 100%;
+  }
 }
 
 .actionsLink {

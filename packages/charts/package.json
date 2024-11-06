@@ -4,6 +4,7 @@
   "version": "0.12.1",
   "sideEffects": [
     "*.css",
+    "*.scss",
     "*.woff",
     "*.woff2"
   ],
@@ -34,7 +35,6 @@
   "dependencies": {
     "@sbercloud/ft-formatters": "3.4.3",
     "@sbercloud/uikit-product-localization": "0.13.1",
-    "@sbercloud/uikit-product-theme": "0.41.0",
     "@sbercloud/uikit-product-utils": "3.8.1",
     "@snack-uikit/divider": "3.2.0",
     "@snack-uikit/link": "0.15.0",
@@ -47,7 +47,8 @@
     "react-grid-heatmap": "1.2.0",
     "react-minimal-pie-chart": "8.4.0",
     "uplot": "1.6.22",
-    "uplot-react": "1.1.1"
+    "uplot-react": "1.1.1",
+    "classnames": "2.5.1"
   },
   "devDependencies": {
     "@types/d3-scale": "4.0.2",

@@ -11,9 +11,9 @@ import { getPackagesStatistics } from './utils/getPackagesStatistics';
 const PACKAGES_STATISTICS = getPackagesStatistics();
 const DEPENDENCIES_LINKS = getDependenciesLinks();
 
-const STORIES = globSync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/stories/**/*.story.{ts,tsx}`).map(x =>
-  path.resolve(__dirname, `../${x}`),
-);
+const STORIES = globSync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/stories/**/*.story.{ts,tsx}`)
+  .map(x => path.resolve(__dirname, `../${x}`))
+  .sort((a, b) => a.localeCompare(b));
 
 const WELCOME = path.resolve(__dirname, './welcome/stories/Welcome.story.tsx');
 const STATISTICS = path.resolve(__dirname, './welcome/stories/Statistics.story.tsx');
@@ -33,14 +33,16 @@ const mainConfig: StorybookConfig = {
         },
       },
     },
-    '@sbercloud/ft-storybook-readme-addon',
+    '@cloud-ru/ft-storybook-readme-addon',
     '@storybook/addon-designs',
     {
       name: '@storybook/addon-storysource',
       options: {
         rule: {
-          test: [/\.tsx?$/],
           include: STORIES,
+        },
+        loaderOptions: {
+          injectStoryParameters: true,
         },
       },
     },
@@ -51,9 +53,9 @@ const mainConfig: StorybookConfig = {
       },
     },
     '@geometricpanda/storybook-addon-badges',
-    '@sbercloud/ft-storybook-brand-addon',
+    '@cloud-ru/ft-storybook-brand-addon',
     'storybook-dark-mode',
-    '@sbercloud/ft-storybook-deps-graph-addon',
+    '@cloud-ru/ft-storybook-deps-graph-addon',
     '@storybook/addon-webpack5-compiler-babel',
   ],
   staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
@@ -101,19 +103,6 @@ const mainConfig: StorybookConfig = {
           extensions: ['.ts', '.tsx', '.json', '.svg', '.png'],
         }),
       );
-    }
-
-    if (config.module?.rules) {
-      config.module.rules.push({
-        test: /\.([tj]s(x?))$/,
-        exclude: /node_modules|dist/,
-        use: {
-          loader: '@linaria/webpack-loader',
-          options: {
-            sourceMap: config.mode !== 'production',
-          },
-        },
-      });
     }
 
     const SVG_SPRITE_EXPRESSION = /\.symbol.svg$/;

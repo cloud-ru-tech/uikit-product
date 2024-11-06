@@ -1,0 +1,96 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+$title-height: 74;
+$legend-height: 94;
+$x-axis-label-height: 32;
+$ticks-size: 34;
+
+.wrapper {
+  padding: 24px;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  border-radius: 8px;
+}
+
+.gridWrapper {
+  position: relative;
+  display: block;
+
+  &[data-grid] {
+    display: grid;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-columns: auto 1fr;
+  }
+}
+
+.title {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-m);
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  color: styles-theme-variables.$sys-neutral-text-main;
+  height: #{$title-height - 24}px;
+}
+
+.legend {
+  margin-top: 24px;
+  height: #{$legend-height - 24}px;
+}
+
+.gradient {
+  height: 20px;
+  margin: 24px 0 8px;
+  background: var(--gradient);
+  /* stylelint-disable-next-line declaration-no-important */
+  background-color: styles-theme-variables.$sys-red-accent-default !important;
+  border-radius: 4px;
+}
+
+.legendTicksWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tick {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
+
+  color: styles-theme-variables.$sys-neutral-text-support;
+  font-size: 12px;
+}
+
+.cell {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-s);
+
+  color: var(--color);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.xAxisLabel {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  color: styles-theme-variables.$sys-neutral-text-support;
+  font-size: 12px;
+  font-weight: 600;
+  height: #{$x-axis-label-height - 8}px;
+  margin-left: 6px;
+}
+
+.yAxisLabel {
+  margin-right: 16px;
+  transform: rotate(180deg);
+  transform-origin: right, top;
+  writing-mode: vertical-rl;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: styles-theme-variables.$sys-neutral-text-support;
+
+  &[data-x-axis-position='top'] {
+    margin-top: #{$ticks-size}px;
+  }
+
+  &[data-x-axis-position='bottom'] {
+    margin-bottom: #{$ticks-size}px;
+  }
+}

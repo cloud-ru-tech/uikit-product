@@ -1,0 +1,45 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.legend {
+  display: flex;
+  flex-direction: column;
+  color: styles-theme-variables.$sys-neutral-text-support;
+  padding-right: 8px;
+}
+
+.legendItemWrapper {
+  color: styles-theme-variables.$sys-neutral-text-main;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: space-between;
+}
+
+.dot {
+  display: inline-block;
+  min-width: 8px;
+  min-height: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+
+  margin-right: 12px;
+  background-color: var(--color);
+}
+
+.legendDividerWrapper {
+  margin: 16px 0;
+}
+
+.legendItemTitle {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
+
+  display: flex;
+  align-items: center;
+}
+
+.legendValue {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-label-l);
+}
+

@@ -1,0 +1,14 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.chartsWrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-auto-rows: 400px;
+}
+
+.title {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-headline-m);
+
+  margin-bottom: 60px;
+}

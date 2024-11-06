@@ -1,15 +1,11 @@
-import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
-
-import { EXPORT_VARS } from '@sbercloud/uikit-product-theme';
-
-const { BERRY_RED, EMERALD_GREEN, PURPLE } = EXPORT_VARS;
 
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 
 import { GroupChart } from '../src/chart/GroupChart';
 import { SingleChart } from '../src/chart/SingleChart';
 import { PackagesStatistics } from '../src/types';
+import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Welcome/Statistics',
@@ -17,29 +13,17 @@ const meta: Meta = {
 // eslint-disable-next-line import/no-default-export
 export default meta;
 
-const ChartsWrapper = styled.div`
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(auto-fill, 400px);
-  grid-auto-rows: 400px;
-`;
-
-const Title = styled.h1`
-  ${themeVars.sans.headline.m};
-  margin-bottom: 60px;
-`;
-
 function Template() {
   const count = process.env.PACKAGES_STATISTICS as unknown as PackagesStatistics;
 
   return (
     <div>
-      <Title>Статистика</Title>
+      <h1 className={styles.title}>Статистика</h1>
 
       {!count ? (
         <>Не удалось получить данные {'=('}</>
       ) : (
-        <ChartsWrapper>
+        <div className={styles.chartsWrapper}>
           <SingleChart height={70} value={count.all} total={count.all} title={'Общее количество пакетов'} />
 
           <GroupChart
@@ -48,12 +32,12 @@ function Template() {
               {
                 title: 'Стабильные',
                 value: count.stable,
-                color: `var(${EMERALD_GREEN[100]})`,
+                color: themeVars.sys.green.accentDefault,
               },
               {
                 title: 'Нестабильные',
                 value: count.nonStable,
-                color: `var(${BERRY_RED[100]})`,
+                color: themeVars.sys.red.accentDefault,
               },
             ]}
             title={'Количество пакетов по секциям'}
@@ -65,17 +49,17 @@ function Template() {
               {
                 title: 'Публичные',
                 value: count.public,
-                color: `var(${PURPLE[100]})`,
+                color: themeVars.sys.primary.accentDefault,
               },
               {
                 title: 'Приватные',
                 value: count.private,
-                color: `var(${PURPLE[75]})`,
+                color: themeVars.sys.primary.background1Level,
               },
             ]}
             title={'Количество пакетов по типу'}
           />
-        </ChartsWrapper>
+        </div>
       )}
     </div>
   );

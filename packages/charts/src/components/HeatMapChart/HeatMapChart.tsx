@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { scaleLinear } from 'd3-scale';
 import { useCallback, useMemo } from 'react';
 import { HeatMapGrid } from 'react-grid-heatmap';
@@ -5,7 +6,7 @@ import { HeatMapGrid } from 'react-grid-heatmap';
 import { extractSupportProps, Themes, useTheme, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Divider } from '@snack-uikit/divider';
 
-import { XAxisPosition } from './constants';
+import { COLORS, XAxisPosition } from './constants';
 import { getContrastColor, getStyles, getTickValues } from './helpers';
 import {
   DEFAULT_CHART_HEIGHT,
@@ -14,12 +15,20 @@ import {
   TITLE_HEIGHT,
   X_AXIS_LABEL_HEIGHT,
 } from './helpers/constants';
-import * as S from './styled';
-import { COLORS } from './themes';
+import styles from './styles.module.scss';
 import { HeatMapChartProps } from './types';
 
 export function HeatMapChart({ data, options, className, ...rest }: WithSupportProps<HeatMapChartProps>) {
-  const { title, height = DEFAULT_CHART_HEIGHT, axes = {}, formatter, legend, domain, cellRender, styles } = options;
+  const {
+    title,
+    height = DEFAULT_CHART_HEIGHT,
+    axes = {},
+    formatter,
+    legend,
+    domain,
+    cellRender,
+    styles: stylesProp,
+  } = options;
   const { xAxis, yAxis } = axes;
   const xAxisPosition = xAxis?.position || XAxisPosition.Bottom;
   const isLegendEnabled = legend?.show ?? true;
@@ -66,11 +75,15 @@ export function HeatMapChart({ data, options, className, ...rest }: WithSupportP
   );
 
   return (
-    <S.Wrapper className={className} {...extractSupportProps(rest)}>
-      {title && <S.Title>{title}</S.Title>}
-      {xAxis?.label && xAxisPosition === XAxisPosition.Top && <S.XAxisLabel>{xAxis.label}</S.XAxisLabel>}
-      <S.GridWrapper displayAsGrid={Boolean(yAxis?.label)}>
-        {yAxis?.label && <S.YAxisLabel data-x-axis-position={xAxisPosition}>{yAxis.label}</S.YAxisLabel>}
+    <div className={cn(styles.wrapper, className)} {...extractSupportProps(rest)}>
+      {title && <h3 className={styles.title}>{title}</h3>}
+      {xAxis?.label && xAxisPosition === XAxisPosition.Top && <div className={styles.xAxisLabel}>{xAxis.label}</div>}
+      <div className={styles.gridWrapper} data-grid={Boolean(yAxis?.label) || undefined}>
+        {yAxis?.label && (
+          <div className={styles.yAxisLabel} data-x-axis-position={xAxisPosition}>
+            {yAxis.label}
+          </div>
+        )}
         <HeatMapGrid
           data={data}
           xLabels={xAxis?.ticks}
@@ -81,30 +94,36 @@ export function HeatMapChart({ data, options, className, ...rest }: WithSupportP
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             (cellRender as any) ||
             ((x: number, y: number, value: number) => (
-              <S.Cell title={String(value)} color={getContrastColor(colorScale(value))}>
+              <h5
+                className={styles.cell}
+                title={String(value)}
+                style={{ '--color': getContrastColor(colorScale(value)) }}
+              >
                 {formatValue(value)}
-              </S.Cell>
+              </h5>
             ))
           }
-          xLabelsStyle={styles?.xLabelsStyle || commonStyles.xLabelsStyle}
-          yLabelsStyle={styles?.yLabelsStyle || commonStyles.yLabelsStyle}
-          cellStyle={styles?.cellStyle || commonStyles.cellStyle}
+          xLabelsStyle={stylesProp?.xLabelsStyle || commonStyles.xLabelsStyle}
+          yLabelsStyle={stylesProp?.yLabelsStyle || commonStyles.yLabelsStyle}
+          cellStyle={stylesProp?.cellStyle || commonStyles.cellStyle}
           cellHeight={cellHeight}
         />
-      </S.GridWrapper>
-      {xAxis?.label && xAxisPosition === XAxisPosition.Bottom && <S.XAxisLabel>{xAxis.label}</S.XAxisLabel>}
+      </div>
+      {xAxis?.label && xAxisPosition === XAxisPosition.Bottom && <div className={styles.xAxisLabel}>{xAxis.label}</div>}
       {isLegendEnabled && (
-        <S.Legend>
+        <div className={styles.legend}>
           <Divider />
-          <S.Gradient gradient={gradient} />
-          <S.LegendTicksWrapper>
+          <div className={styles.gradient} style={{ '--gradient': gradient }} />
+          <div className={styles.legendTicksWrapper}>
             {legendTicks.map((tick: string) => (
-              <S.Tick key={tick}>{tick}</S.Tick>
+              <span className={styles.tick} key={tick}>
+                {tick}
+              </span>
             ))}
-          </S.LegendTicksWrapper>
-        </S.Legend>
+          </div>
+        </div>
       )}
-    </S.Wrapper>
+    </div>
   );
 }
 

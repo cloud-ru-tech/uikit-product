@@ -1,0 +1,40 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  grid-column: span 12;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: styles-theme-variables.$dimension-1m;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: styles-theme-variables.$dimension-050m;
+}
+
+.arrowWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.pageNumber {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-label-l);
+
+  color: styles-theme-variables.$sys-neutral-text-main;
+}
+
+.pageTotal {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
+
+  margin-right: styles-theme-variables.$dimension-050m;
+  color: styles-theme-variables.$sys-neutral-text-support;
+}

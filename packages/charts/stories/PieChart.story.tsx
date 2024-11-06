@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { PieChart, PieChartProps } from '../src';
 
 const meta: Meta = {
-  title: 'Not stable/Charts/Pie Chart',
+  title: 'Snack Uikit/Charts/Pie Chart',
   component: PieChart,
 };
 export default meta;

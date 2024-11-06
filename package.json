@@ -41,16 +41,14 @@
     "@babel/preset-react": "7.25.9",
     "@babel/preset-typescript": "7.26.0",
     "@geometricpanda/storybook-addon-badges": "2.0.5",
-    "@linaria/cli": "3.0.0-beta.13",
     "@cloud-ru/eslint-plugin-ssr-safe-react": "0.2.0",
+    "@cloud-ru/ft-conventional-changelog": "1.1.2",
+    "@cloud-ru/ft-storybook-brand-addon": "2.0.4",
+    "@cloud-ru/ft-storybook-deps-graph-addon": "2.0.3",
+    "@cloud-ru/ft-storybook-readme-addon": "2.0.3",
     "@sbercloud/figma-tokens-cloud-platform": "16.0.1",
     "@sbercloud/figma-tokens-mlspace": "16.0.1",
     "@sbercloud/ft-all-linters-pack": "4.1.9",
-    "@sbercloud/ft-config-linaria": "3.0.1",
-    "@sbercloud/ft-conventional-changelog": "3.0.0",
-    "@sbercloud/ft-storybook-brand-addon": "2.1.0",
-    "@sbercloud/ft-storybook-deps-graph-addon": "1.1.0",
-    "@sbercloud/ft-storybook-readme-addon": "4.3.0",
     "@snack-uikit/alert": "0.15.1",
     "@snack-uikit/avatar": "0.8.0",
     "@snack-uikit/button": "0.19.1",
@@ -135,19 +133,7 @@
   "overrides": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "testcafe-browser-tools": "2.0.23",
-    "@linaria/cli": {
-      "@linaria/babel-preset": "3.0.0-beta.13"
-    },
-    "@linaria/babel-preset": "3.0.0-beta.13",
-    "@linaria/core": "3.0.0-beta.13",
-    "@linaria/logger": "3.0.0-beta.15",
-    "@linaria/preeval": "3.0.0-beta.13",
-    "@linaria/react": "3.0.0-beta.13",
-    "@linaria/shaker": "3.0.0-beta.13",
-    "@linaria/webpack-loader": "3.0.0-beta.13",
-    "@linaria/webpack4-loader": "3.0.0-beta.13",
-    "@linaria/webpack5-loader": "3.0.0-beta.13"
+    "testcafe-browser-tools": "2.0.23"
   },
   "workspaces": [
     "packages/*"

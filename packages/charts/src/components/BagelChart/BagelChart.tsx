@@ -1,11 +1,12 @@
+import cn from 'classnames';
 import React from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
 
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
 import { NumberFormatter } from '@sbercloud/uikit-product-localization';
 import { error, extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import * as S from './styled';
-import { COLORS } from './themes';
+import styles from './styles.module.scss';
 import { getSegmentColor } from './utils';
 
 export type BagelChartProps = WithSupportProps<{
@@ -20,27 +21,27 @@ export function BagelChart({ value, total, title, className, ...rest }: BagelCha
   error('Total is too long', total > 999_999_999);
 
   return (
-    <S.Wrapper className={className} {...extractSupportProps(rest)}>
-      {title && <S.TitleWrapper>{title}</S.TitleWrapper>}
+    <div className={cn(styles.wrapper, className)} {...extractSupportProps(rest)}>
+      {title && <div className={styles.titleWrapper}>{title}</div>}
 
       <PieChart
         data={[{ value, color: getSegmentColor({ value, total }) }]}
         totalValue={total}
-        background={`var(${COLORS.svg.segment.grey})`}
+        background={themeVars.sys.neutral.decorDefault}
         startAngle={270}
         lineWidth={15}
         label={() => (
-          <React.Fragment key='label'>
-            <S.Value x={50} y={45}>
+          <>
+            <text className={styles.value} x={50} y={45}>
               <NumberFormatter value={value} />
-            </S.Value>
-            <S.Limit x={50} y={65}>
+            </text>
+            <text className={styles.limit} x={50} y={65}>
               <NumberFormatter value={total} />
-            </S.Limit>
-          </React.Fragment>
+            </text>
+          </>
         )}
         labelPosition={0}
       />
-    </S.Wrapper>
+    </div>
   );
 }

@@ -1,61 +1,29 @@
-import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
-
-import { DEPRECATED_EXPORT_VARS } from '@sbercloud/uikit-product-theme';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { SHADOW, Themes, useTheme } from '../src';
+import { SHADOW } from '../src';
+import styles from './shadow-styles.module.scss';
 
 const meta: Meta = {
-  title: 'Theme/Shadow',
+  title: 'Utils/Shadow',
 };
 export default meta;
 
-const ThemeWrapper = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
-
-const ShadowItem = styled.div`
-  &:not(:last-of-type) {
-    margin-right: 60px;
-  }
-`;
-
-const ShadowPreview = styled.div<{ shadow?: string; theme: Themes }>`
-  width: 250px;
-  height: 250px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  box-shadow: ${({ shadow }) => shadow || 'none'};
-  background-color: var(${DEPRECATED_EXPORT_VARS.COLORS_CARD.CARD_HOVER_BACKGROUND});
-`;
-
-const Text = styled.div`
-  margin-top: 5px;
-  text-align: center;
-`;
-
 function Template() {
-  const { theme } = useTheme();
-
   return (
-    <ThemeWrapper>
+    <div className={styles.themeWrapper}>
       {Object.keys(SHADOW).map(shadowKey => (
-        <ShadowItem key={shadowKey}>
-          <ShadowPreview shadow={SHADOW[shadowKey]} theme={theme}>
+        <div className={styles.shadowItem} key={shadowKey}>
+          <div className={styles.shadowPreview} style={{ '--shadow': SHADOW[shadowKey] }}>
             {shadowKey}
 
-            <Text>{SHADOW[shadowKey]}</Text>
-          </ShadowPreview>
-        </ShadowItem>
+            <div className={styles.text}>{SHADOW[shadowKey]}</div>
+          </div>
+        </div>
       ))}
-    </ThemeWrapper>
+    </div>
   );
 }
 

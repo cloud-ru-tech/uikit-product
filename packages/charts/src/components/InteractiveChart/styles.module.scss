@@ -1,0 +1,38 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown*/
+:global {
+  .interactive-chart-wrapper {
+    & .uplot {
+      font-family: inherit;
+      background-color: styles-theme-variables.$sys-neutral-background1-level;
+      padding: 16px 0;
+      border-radius: 8px;
+    }
+
+    & .uplot .u-title {
+      font-size: 20px;
+      text-align: unset;
+      padding-left: 24px;
+    }
+
+    /* mouse cross hair */
+    & .u-hz .u-cursor-x,
+    & .u-vt .u-cursor-y,
+    & .u-hz .u-cursor-y,
+    & .u-vt .u-cursor-x {
+      border-color: styles-theme-variables.$sys-neutral-decor-default;
+    }
+
+    /* Selected area */
+    & .u-select {
+      background-color: styles-theme-variables.$sys-neutral-decor-disabled;
+    }
+
+    & table .u-series .u-marker {
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+    }
+  }
+}

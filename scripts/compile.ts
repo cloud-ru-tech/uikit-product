@@ -4,7 +4,6 @@ import { sync } from 'glob';
 import minimist from 'minimist';
 
 import { createTSProgram, emitDeclarations } from './compile/emit-declarations';
-import { extractStyles } from './compile/extract-styles';
 import { simpleCopy } from './compile/simple-copy';
 import { sortFolders } from './compile/sort-folders';
 import { transformJs } from './compile/transform-js';
@@ -21,7 +20,6 @@ const pkg = argv.pkg || '*';
 
   const packages = `../packages/${pkg}`;
   const folders = sync(`${path.resolve(__dirname, packages)}`);
-  const linariaConfig = path.resolve(__dirname, '../linaria.config.js');
   const distPart = 'dist';
   const srcPart = 'src';
 
@@ -56,15 +54,6 @@ const pkg = argv.pkg || '*';
       distCJS,
       distESM,
       fileNames: jsFiles.filter(file => file.endsWith('.ts') || file.endsWith('.tsx')),
-    });
-
-    extractStyles({
-      files: jsFiles,
-      configFile: linariaConfig,
-      version: packageJson.version,
-      distESM,
-      distCJS,
-      src,
     });
 
     logDebug(`FINISHED: ${folder}`);

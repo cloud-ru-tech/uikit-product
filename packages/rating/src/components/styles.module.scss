@@ -1,0 +1,19 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.markContainer {
+  display: flex;
+  column-gap: styles-theme-variables.$dimension-2m;
+  flex-direction: row;
+}
+
+.toggleWrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  border-radius: 100%;
+  border: 1px solid styles-theme-variables.$sys-neutral-decor-default;
+}

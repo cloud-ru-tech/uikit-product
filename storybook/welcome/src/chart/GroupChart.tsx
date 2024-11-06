@@ -1,26 +1,14 @@
-import { styled } from '@linaria/react';
 import { PieChart, pieChartDefaultProps } from 'react-minimal-pie-chart';
 
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
-import { Themes, useTheme } from '@sbercloud/uikit-product-utils';
 
-import * as S from '../styles';
+import styles from '../styles.module.scss';
 import { DefaultChartProps } from '../types';
 
-const Title = styled.h3`
-  ${themeVars.sans.title.m};
-  margin-bottom: 20px;
-`;
-
-const LIGHT_THEMES = [Themes.Purple, Themes.Green];
-
 export function GroupChart(props: DefaultChartProps) {
-  const { theme } = useTheme();
-  const labelColor = LIGHT_THEMES.includes(theme) ? '#000' : '#fff';
-
   return (
-    <S.Wrapper height={props.height}>
-      <Title>{props.title}</Title>
+    <div className={styles.wrapper} style={{ '--height': props.height + '%' }}>
+      <h3 className={styles.groupTitle}>{props.title}</h3>
       <PieChart
         data={props?.data}
         radius={pieChartDefaultProps.radius - 14}
@@ -32,12 +20,12 @@ export function GroupChart(props: DefaultChartProps) {
         label={({ dataEntry }) => `${dataEntry.title}: ${dataEntry.value}`}
         labelPosition={112}
         labelStyle={{
-          fontSize: '5px',
-          fill: labelColor,
+          fontSize: '4px',
+          fill: themeVars.sys.neutral.textSupport,
           opacity: 0.75,
           pointerEvents: 'none',
         }}
       />
-    </S.Wrapper>
+    </div>
   );
 }

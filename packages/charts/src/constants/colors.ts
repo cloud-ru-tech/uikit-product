@@ -17,6 +17,7 @@ export enum Colors {
   Crimson4 = 'crimson4',
 }
 
+// TODO: update colors
 export const CHART_COLORS: Record<Colors, { stroke: string; fill: string }> = {
   [Colors.Green1]: { stroke: '#02e497', fill: 'rgba(2, 228, 151, 0.1)' },
   [Colors.Green2]: { stroke: '#0dc8a2', fill: 'rgba(13, 200, 162, 0.1)' },

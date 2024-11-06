@@ -1,5 +1,8 @@
 import 'uplot/dist/uPlot.min.css';
 
+import './styles.module.scss';
+
+import cn from 'classnames';
 import merge from 'lodash.merge';
 import { useMemo } from 'react';
 import uPlot from 'uplot';
@@ -9,7 +12,6 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 
 import { boxPlotOptions, defaultPlotOptions } from './configurations';
 import { PlotTypes } from './constants';
-import * as S from './styled';
 
 export type InteractiveChartProps = {
   data: uPlot.AlignedData;
@@ -38,9 +40,9 @@ export function InteractiveChart({
   const resultOptions = useMemo(() => merge({}, chooseBaseOptions(type), options), [options, type]);
 
   return (
-    <S.Wrapper className={className} {...extractSupportProps(rest)}>
+    <div className={cn('interactive-chart-wrapper', className)} {...extractSupportProps(rest)}>
       <UPlotReact options={resultOptions} data={data} />
-    </S.Wrapper>
+    </div>
   );
 }
 

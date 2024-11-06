@@ -1,3 +1,5 @@
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+
 function getLoadingWheelAnimationPerChild(quantity: number, duration: number) {
   function getLoadingWheelAnimation(child: number) {
     return `
@@ -59,7 +61,7 @@ export const ANIMATIONS = {
 };
 
 export const SHADOW: Record<string, string> = {
-  SMALL: '0 2px 12px rgba(0, 0, 0, 0.04)',
-  MEDIUM: '0 4px 20px rgba(0, 0, 0, 0.08)',
-  LARGE: '0 8px 32px rgba(0, 0, 0, 0.08)',
+  SMALL: themeVars.boxShadow.elevation.level1, // old value: '0 2px 12px rgba(0, 0, 0, 0.04)',
+  MEDIUM: themeVars.boxShadow.elevation.level3, // old value: '0 4px 20px rgba(0, 0, 0, 0.08)',
+  LARGE: themeVars.boxShadow.elevation.level4, // old value: '0 8px 32px rgba(0, 0, 0, 0.08)',
 };

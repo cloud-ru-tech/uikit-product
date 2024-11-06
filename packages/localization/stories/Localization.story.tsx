@@ -1,4 +1,3 @@
-import { styled } from '@linaria/react';
 import { Meta, StoryObj } from '@storybook/react';
 
 import { ConfigProvider, useLanguage } from '@sbercloud/uikit-product-utils';
@@ -8,18 +7,13 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { CurrencyFormatter, DateFormatter, NumberFormatter } from '../src';
+import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Not stable/Localization',
+  title: 'Snack UIkit/Localization',
   component: ConfigProvider,
 };
 export default meta;
-
-const Wrapper = styled.div`
-  margin: 1rem;
-`;
-
-const HooksCodeWrapper = Typography.SansHeadlineM;
 
 type StoryProps = {
   showTime: boolean;
@@ -29,21 +23,21 @@ function Template({ showTime }: StoryProps) {
   const { languageCode } = useLanguage();
   return (
     <>
-      <Wrapper>
-        <HooksCodeWrapper>
+      <div className={styles.wrapper}>
+        <Typography.SansHeadlineM>
           <strong>HooksCode:</strong> {languageCode}
-        </HooksCodeWrapper>
-      </Wrapper>
-      <Wrapper>
+        </Typography.SansHeadlineM>
+      </div>
+      <div className={styles.wrapper}>
         <strong>CurrencyFormatter:</strong> <CurrencyFormatter value={1000e10} />
-      </Wrapper>
+      </div>
 
-      <Wrapper>
+      <div className={styles.wrapper}>
         <strong>NumberFormatter:</strong> <NumberFormatter value={1000e10} />
-      </Wrapper>
-      <Wrapper>
+      </div>
+      <div className={styles.wrapper}>
         <strong>DateFormatter:</strong> <DateFormatter showTime={showTime} value={new Date()} />
-      </Wrapper>
+      </div>
     </>
   );
 }

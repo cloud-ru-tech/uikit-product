@@ -9,7 +9,7 @@ import * as Icons from '../src/components/services-icons-old';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Components/Icons (deprecated)/Services',
+  title: 'Deprecated/Icons/Services',
 };
 export default meta;
 
