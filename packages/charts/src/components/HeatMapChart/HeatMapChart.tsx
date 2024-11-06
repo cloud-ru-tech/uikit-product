@@ -1,13 +1,15 @@
 import cn from 'classnames';
 import { scaleLinear } from 'd3-scale';
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { HeatMapGrid } from 'react-grid-heatmap';
 
-import { extractSupportProps, Themes, useTheme, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { extractSupportProps, useTheme, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Divider } from '@snack-uikit/divider';
+import { useLayoutEffect } from '@snack-uikit/utils';
 
-import { COLORS, XAxisPosition } from './constants';
-import { getContrastColor, getStyles, getTickValues } from './helpers';
+import { XAxisPosition } from './constants';
+import { getComputedColor, getContrastColor, getStyles, getTickValues } from './helpers';
 import {
   DEFAULT_CHART_HEIGHT,
   LEGEND_HEIGHT,
@@ -32,22 +34,27 @@ export function HeatMapChart({ data, options, className, ...rest }: WithSupportP
   const { xAxis, yAxis } = axes;
   const xAxisPosition = xAxis?.position || XAxisPosition.Bottom;
   const isLegendEnabled = legend?.show ?? true;
+  const colorContainerRef = useRef<HTMLDivElement>(null);
 
   const { theme } = useTheme();
 
-  const colorRange: string[] = useMemo(() => {
-    switch (theme) {
-      case Themes.Purple:
-        return [COLORS.RANGE_START_LIGHT, COLORS.RANGE_END_PURPLE_LIGHT];
-      case Themes.PurpleDark:
-        return [COLORS.RANGE_START_DARK, COLORS.RANGE_END_PURPLE_DARK];
-      case Themes.Green:
-        return [COLORS.RANGE_START_LIGHT, COLORS.RANGE_END_GREEN_LIGHT];
-      case Themes.GreenDark:
-        return [COLORS.RANGE_START_DARK, COLORS.RANGE_END_GREEN_DARK];
-      default:
-        return [COLORS.RANGE_START_LIGHT, COLORS.RANGE_END_PURPLE_LIGHT];
+  const [colorRange, setColorRange] = useState(['#ffffff', '#000000']);
+  const [lightTextColor, setLightTextColor] = useState('#ffffff');
+  const [darkTextColor, setDarkTextColor] = useState('#000000');
+
+  useLayoutEffect(() => {
+    if (!colorContainerRef.current) {
+      return;
     }
+
+    const rangeStart = getComputedColor(colorContainerRef.current, '--range-start');
+    const rangeEnd = getComputedColor(colorContainerRef.current, '--range-end');
+    const lightTextColor = getComputedColor(colorContainerRef.current, '--light-text');
+    const darkTextColor = getComputedColor(colorContainerRef.current, '--dark-text');
+
+    setColorRange([rangeStart, rangeEnd]);
+    setLightTextColor(lightTextColor);
+    setDarkTextColor(darkTextColor);
   }, [theme]);
 
   const colorScale = useMemo(() => scaleLinear(colorRange).domain(domain), [colorRange, domain]);
@@ -75,7 +82,17 @@ export function HeatMapChart({ data, options, className, ...rest }: WithSupportP
   );
 
   return (
-    <div className={cn(styles.wrapper, className)} {...extractSupportProps(rest)}>
+    <div
+      className={cn(styles.wrapper, className)}
+      {...extractSupportProps(rest)}
+      ref={colorContainerRef}
+      style={{
+        '--range-start': themeVars.sys.primary.decorDisabled,
+        '--range-end': themeVars.sys.primary.accentDefault,
+        '--light-text': themeVars.ref.brand['90'],
+        '--dark-text': themeVars.ref.brand['30'],
+      }}
+    >
       {title && <h3 className={styles.title}>{title}</h3>}
       {xAxis?.label && xAxisPosition === XAxisPosition.Top && <div className={styles.xAxisLabel}>{xAxis.label}</div>}
       <div className={styles.gridWrapper} data-grid={Boolean(yAxis?.label) || undefined}>
@@ -97,7 +114,13 @@ export function HeatMapChart({ data, options, className, ...rest }: WithSupportP
               <h5
                 className={styles.cell}
                 title={String(value)}
-                style={{ '--color': getContrastColor(colorScale(value)) }}
+                style={{
+                  '--color': getContrastColor({
+                    lightColor: lightTextColor,
+                    darkColor: darkTextColor,
+                    rgb: colorScale(value),
+                  }),
+                }}
               >
                 {formatValue(value)}
               </h5>
