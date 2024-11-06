@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.3 (2024-11-06)</small>
+
+* deps(PDS-955): up snack-uikit deps ([8e7bbb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e7bbb9))
+
+
+
+
+
 ## <small>0.6.2 (2024-11-05)</small>
 
 * feat(FF-5830)!: add date-time mode to field-date, change value type to Date in field-date, add postf ([1f2dd7a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1f2dd7a))

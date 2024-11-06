@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.3 (2024-11-06)</small>
+
+* deps(PDS-955): up snack-uikit deps ([8e7bbb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e7bbb9))
+* feat(PDS-955): add favorites prop ([8b3ee1d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8b3ee1d))
+
+
+
+
+
 ## <small>2.33.2 (2024-11-05)</small>
 
 * deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03aefe0))

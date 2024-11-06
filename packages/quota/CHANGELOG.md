@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.3.3 (2024-11-06)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button-predefined@0.3.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button-predefined/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.3.2 (2024-11-05)</small>
 
 * deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03aefe0))

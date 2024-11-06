@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.3 (2024-11-06)</small>
+
+* feat(PDS-955): add favorite toggle to card-service-small ([46521e1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/46521e1))
+
+
+
+
+
 ## <small>0.7.2 (2024-11-05)</small>
 
 * deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03aefe0))
