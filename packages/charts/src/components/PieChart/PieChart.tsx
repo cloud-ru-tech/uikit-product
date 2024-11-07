@@ -6,7 +6,7 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import { Scroll } from '@snack-uikit/scroll';
 import { Typography } from '@snack-uikit/typography';
 
-import { CHART_COLORS, Colors } from '../../constants/colors';
+import { CHART_SERIES_COLORS, SERIES_COLORS, SeriesColor } from '../../constants/colors';
 import { Legend } from './Legend';
 import { Pie } from './Pie';
 import styles from './styles.module.scss';
@@ -25,11 +25,11 @@ export function PieChart({
   const colorizedData: ColorizedDataType[] = useMemo(
     () =>
       data.map((x, index) => {
-        const colorsKey = Object.values(Colors);
-        const chartColor = CHART_COLORS[colorsKey[index % colorsKey.length]];
+        const colorsKey = Object.values<SeriesColor>(SERIES_COLORS);
+        const chartColor = CHART_SERIES_COLORS[colorsKey[index % colorsKey.length]];
         return {
           ...x,
-          color: chartColor.stroke,
+          color: chartColor,
         };
       }),
     [data],

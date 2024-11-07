@@ -7,9 +7,10 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { createLayer, InteractiveChart, InteractiveChartProps } from '../src';
-import { DrawStyles, LineInterpolations } from '../src/components/InteractiveChart/constants';
-import { Colors } from '../src/constants/colors';
+import { InteractiveChart, InteractiveChartProps, useLayer } from '../src';
+import { DRAW_STYLES, LINE_INTERPOLATIONS } from '../src/components/InteractiveChart/constants';
+import { DrawStyle, LineInterpolation } from '../src/components/InteractiveChart/types';
+import { SERIES_COLORS, SeriesColor } from '../src/constants/colors';
 
 const meta: Meta = {
   title: 'Snack Uikit/Charts/Base',
@@ -18,18 +19,20 @@ const meta: Meta = {
 export default meta;
 
 type StoryProps = InteractiveChartProps & {
-  color: Colors;
-  drawStyle: DrawStyles;
-  lineInterpolation: LineInterpolations;
+  color: SeriesColor;
+  drawStyle: DrawStyle;
+  lineInterpolation: LineInterpolation;
 };
 
 function Template({ color, drawStyle, lineInterpolation, data, options }: StoryProps) {
   const [key, setKey] = useState(0);
+  const layer = useLayer({ label: 'layer', color, drawStyle, lineInterpolation });
   const layerOptions = useMemo(() => {
     setKey(x => x + 1);
-    return merge(options, { series: [{}, createLayer('layer', color, drawStyle, lineInterpolation)] });
-  }, [color, drawStyle, lineInterpolation, options]);
-  return <InteractiveChart key={key} data={data} options={layerOptions} type={InteractiveChart.types.Default} />;
+    return merge(options, { series: [{}, layer] });
+  }, [layer, options]);
+
+  return <InteractiveChart key={key} data={data} options={layerOptions} type='default' />;
 }
 
 export const base: StoryObj<StoryProps> = {
@@ -40,22 +43,22 @@ export const base: StoryObj<StoryProps> = {
       [1, 2, 3, 4, 5, 6],
       [5, 1, 5, 1, 10, 5],
     ],
-    color: Colors.Blue1,
-    drawStyle: DrawStyles.Line,
-    lineInterpolation: LineInterpolations.Linear,
+    color: SERIES_COLORS.Blue1,
+    drawStyle: DRAW_STYLES.Line,
+    lineInterpolation: LINE_INTERPOLATIONS.Linear,
   },
 
   argTypes: {
     color: {
-      options: Object.values(Colors),
+      options: Object.values(SERIES_COLORS),
       control: { type: 'select' },
     },
     drawStyle: {
-      options: Object.values(DrawStyles),
+      options: Object.values(DRAW_STYLES),
       control: { type: 'select' },
     },
     lineInterpolation: {
-      options: Object.values(LineInterpolations),
+      options: Object.values(LINE_INTERPOLATIONS),
       control: { type: 'select' },
     },
   },

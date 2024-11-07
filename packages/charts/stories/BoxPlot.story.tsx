@@ -14,7 +14,7 @@ const meta: Meta = {
 export default meta;
 
 function Template({ data, options }: InteractiveChartProps) {
-  return <InteractiveChart data={data} options={options} type={InteractiveChart.types.BoxPlot} />;
+  return <InteractiveChart data={data} options={options} type='boxPlot' />;
 }
 
 export const boxPlot: StoryObj<InteractiveChartProps> = {

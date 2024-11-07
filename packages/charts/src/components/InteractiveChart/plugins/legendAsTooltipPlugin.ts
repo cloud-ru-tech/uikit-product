@@ -3,8 +3,18 @@
 /* eslint-disable */
 
 import uPlot from 'uplot';
+import { ColorMap, OTHER_COLORS } from '../../../constants/colors';
 
-export function legendAsTooltipPlugin({ className = '', style = { backgroundColor: '#373E45', color: '#fff' } } = {}) {
+export function legendAsTooltipPlugin({
+  className = '',
+  computedColors,
+}: {
+  className?: string;
+  computedColors: ColorMap;
+}) {
+  const backgroundColor = computedColors[OTHER_COLORS.TooltipBackgroundColor];
+  const color = computedColors[OTHER_COLORS.TooltipColor];
+
   function init(u: uPlot, opts) {
     const legendEl = u.root.querySelector(`.u-legend`) as Element;
 
@@ -20,7 +30,8 @@ export function legendAsTooltipPlugin({ className = '', style = { backgroundColo
       left: 0,
       top: 0,
       zIndex: 100,
-      ...style,
+      backgroundColor,
+      color,
     });
 
     // hide series color markers

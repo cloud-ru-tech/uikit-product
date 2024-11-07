@@ -1,10 +1,19 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 /* eslint-disable */
-
+import Color from 'color';
 import uPlot from 'uplot';
+import { ColorMap, OTHER_COLORS } from '../../../constants/colors';
 
-export function columnHighlightPlugin({ className = '', style = { backgroundColor: 'rgba(128,128,128,0.1)' } } = {}) {
+export function columnHighlightPlugin({
+  className = '',
+  computedColors,
+}: {
+  className?: string;
+  computedColors: ColorMap;
+}) {
+  const backgroundColor = new Color(computedColors[OTHER_COLORS.ColumnHighlightColor]).alpha(0.5).rgb().string();
+
   let underEl, overEl, currIdx: number;
 
   function init(u: uPlot) {
@@ -22,7 +31,7 @@ export function columnHighlightPlugin({ className = '', style = { backgroundColo
       left: 0,
       top: 0,
       height: '100%',
-      ...style,
+      backgroundColor,
     });
 
     underEl.appendChild(highlightEl);

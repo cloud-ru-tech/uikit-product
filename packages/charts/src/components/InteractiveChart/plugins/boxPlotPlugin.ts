@@ -1,11 +1,25 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 /* eslint-disable */
+import Color from 'color';
 import uPlot from 'uplot';
 
-import { CHART_COLORS, Colors } from '../../../constants/colors';
+import { SERIES_COLORS, ColorMap, OTHER_COLORS } from '../../../constants/colors';
 
-export function boxPlotPlugin({ gap = 5, shadowColor = '#63696E', bodyMaxWidth = 60, shadowWidth = 3 } = {}) {
+export function boxPlotPlugin({
+  gap = 5,
+  bodyMaxWidth = 60,
+  shadowWidth = 3,
+  computedColors,
+}: {
+  gap?: number;
+  bodyMaxWidth?: number;
+  shadowWidth?: number;
+  computedColors: ColorMap;
+}) {
+  const shadowColor = computedColors[OTHER_COLORS.ShadowColor];
+  const lineColor = new Color(computedColors[OTHER_COLORS.LineColor]).alpha(0.5).rgb().string();
+
   function roundRect(ctx, x, y, width, height, radius) {
     ctx.beginPath();
     ctx.moveTo(x + radius, y);
@@ -73,7 +87,8 @@ export function boxPlotPlugin({ gap = 5, shadowColor = '#63696E', bodyMaxWidth =
       const bodyY = lowAsY;
 
       if (Math.abs(bodyHeight) > 8) {
-        u.ctx.fillStyle = CHART_COLORS[Object.values(Colors)[i % Object.keys(Colors).length]].stroke;
+        u.ctx.fillStyle = computedColors?.[Object.values(SERIES_COLORS)[i % Object.keys(SERIES_COLORS).length]];
+
         roundRect(
           u.ctx,
           Math.round(bodyX),
@@ -85,7 +100,7 @@ export function boxPlotPlugin({ gap = 5, shadowColor = '#63696E', bodyMaxWidth =
           true,
         );
 
-        u.ctx.fillStyle = 'rgba(255,255,255,0.48)';
+        u.ctx.fillStyle = lineColor;
         u.ctx.fillRect(Math.round(bodyX), medianAsY - shadowWidth / 2, Math.round(bodyWidth), Math.round(shadowWidth));
       }
     }

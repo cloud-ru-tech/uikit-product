@@ -1,19 +1,19 @@
-export enum PlotTypes {
-  BoxPlot = 'boxPlot',
-  Default = 'default',
-}
+export const PLOT_TYPES = {
+  BoxPlot: 'boxPlot',
+  Default: 'default',
+} as const;
 
-export enum LineInterpolations {
-  Linear = 'linear',
-  StepAfter = 'stepAfter',
-  StepBefore = 'stepBefore',
-  Spline = 'spline',
-}
+export const LINE_INTERPOLATIONS = {
+  Linear: 'linear',
+  StepAfter: 'stepAfter',
+  StepBefore: 'stepBefore',
+  Spline: 'spline',
+} as const;
 
-export enum DrawStyles {
-  Line = 'line',
-  Bars = 'bars',
-  Points = 'points',
-  BarsLeft = 'barsLeft',
-  BarsRight = 'barsRight',
-}
+export const DRAW_STYLES = {
+  Line: 'line',
+  Bars: 'bars',
+  Points: 'points',
+  BarsLeft: 'barsLeft',
+  BarsRight: 'barsRight',
+} as const;

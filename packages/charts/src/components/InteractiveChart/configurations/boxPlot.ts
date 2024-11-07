@@ -1,10 +1,11 @@
 import uPlot from 'uplot';
 
+import { ColorMap } from '../../../constants/colors';
 import { boxPlotPlugin } from '../plugins/boxPlotPlugin';
 import { columnHighlightPlugin } from '../plugins/columnHighlightPlugin';
 import { legendAsTooltipPlugin } from '../plugins/legendAsTooltipPlugin';
 
-export const boxPlotOptions: uPlot.Options = {
+export const getBoxPlotOptions = ({ computedColors }: { computedColors: ColorMap }): uPlot.Options => ({
   id: 'boxPlot',
   title: 'Distribution of object predictions by bin',
   width: 800,
@@ -15,7 +16,11 @@ export const boxPlotOptions: uPlot.Options = {
       y: false,
     },
   },
-  plugins: [boxPlotPlugin(), columnHighlightPlugin(), legendAsTooltipPlugin()],
+  plugins: [
+    boxPlotPlugin({ computedColors }),
+    columnHighlightPlugin({ computedColors }),
+    legendAsTooltipPlugin({ computedColors }),
+  ],
   series: [
     {
       label: 'bin',
@@ -67,4 +72,4 @@ export const boxPlotOptions: uPlot.Options = {
       },
     },
   ],
-};
+});
