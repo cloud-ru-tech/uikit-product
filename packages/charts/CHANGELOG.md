@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.12.2 (2024-11-07)</small>
+
+* fix(FF-5801): fix heat map chart colors ([bf360bc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bf360bc))
+* fix(FF-5801): remove linaria from repo ([f9e6b49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9e6b49))
+
+
+
+
+
 ## <small>0.12.1 (2024-11-05)</small>
 
 * deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03aefe0))
@@ -350,7 +359,9 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.8.26](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.8.25...@sbercloud/uikit-product-charts@0.8.26) (2022-08-01)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-charts
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-localization@0.13.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/localization/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.8.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-charts@0.8.24...@sbercloud/uikit-product-charts@0.8.25) (2022-07-25)
 

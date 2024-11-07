@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.12.3 (2024-11-07)</small>
+
+* fix(FF-5801): remove linaria from repo ([f9e6b49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9e6b49))
+* fix(FF-5801): sync gear-wheel rotation ([1a86e7a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1a86e7a))
+
+
+
+
+
 ## <small>0.12.2 (2024-11-05)</small>
 
 * deps(FF-5830): up snack-uikit & some common deps ([03aefe0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03aefe0))

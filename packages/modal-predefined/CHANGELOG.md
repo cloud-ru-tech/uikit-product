@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.5 (2024-11-07)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-copy-line@0.7.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/copy-line/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-modal@0.7.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@sbercloud/uikit-product-switch-row@0.5.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/switch-row/CHANGELOG.md)
+* [@sbercloud/uikit-product-toggles-predefined@0.7.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/toggles-predefined/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.5.4 (2024-11-06)</small>
 
 * feat(PDS-804)!: relocated mobile delete modal from mobile-modal package to modal-predefined package ([4356ac6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4356ac6))

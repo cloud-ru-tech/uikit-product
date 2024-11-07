@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.3 (2024-11-07)</small>
+
+* fix(FF-5801): remove linaria from repo ([f9e6b49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9e6b49))
+
+
+
+
+
 ## <small>0.5.2 (2024-11-06)</small>
 
 * deps(PDS-955): up snack-uikit deps ([8e7bbb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e7bbb9))

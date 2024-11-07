@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.13.2 (2024-11-07)</small>
+
+* fix(FF-5801): remove linaria from repo ([f9e6b49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9e6b49))
+
+
+
+
+
 ## <small>0.13.1 (2024-11-05)</small>
 
 ### Only dependencies have been changed
@@ -190,7 +198,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## [0.10.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-localization@0.10.32...@sbercloud/uikit-product-localization@0.10.33) (2022-09-20)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-localization
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-utils@3.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 ## [0.10.32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/compare/@sbercloud/uikit-product-localization@0.10.31...@sbercloud/uikit-product-localization@0.10.32) (2022-08-11)
 

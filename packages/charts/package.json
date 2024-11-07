@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-charts",
   "title": "React Charts",
-  "version": "0.12.1",
+  "version": "0.12.2",
   "sideEffects": [
     "*.css",
     "*.scss",
@@ -34,13 +34,14 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-formatters": "3.4.3",
-    "@sbercloud/uikit-product-localization": "0.13.1",
-    "@sbercloud/uikit-product-utils": "3.8.1",
+    "@sbercloud/uikit-product-localization": "0.13.2",
+    "@sbercloud/uikit-product-utils": "3.8.2",
     "@snack-uikit/divider": "3.2.0",
     "@snack-uikit/link": "0.15.0",
     "@snack-uikit/scroll": "0.9.0",
     "@snack-uikit/typography": "0.8.0",
     "@snack-uikit/utils": "3.5.0",
+    "classnames": "2.5.1",
     "d3-scale": "4.0.2",
     "d3-shape": "3.2.0",
     "lodash.merge": "4.6.2",
@@ -48,8 +49,7 @@
     "react-grid-heatmap": "1.2.0",
     "react-minimal-pie-chart": "8.4.0",
     "uplot": "1.6.22",
-    "uplot-react": "1.1.1",
-    "classnames": "2.5.1"
+    "uplot-react": "1.1.1"
   },
   "devDependencies": {
     "@types/d3-scale": "4.0.2",

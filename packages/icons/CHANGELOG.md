@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>10.2.2 (2024-11-07)</small>
+
+* fix(FF-5801): remove linaria from repo ([f9e6b49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9e6b49))
+
+
+
+
+
 ## <small>10.2.1 (2024-11-05)</small>
 
 ### Only dependencies have been changed

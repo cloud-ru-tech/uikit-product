@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.3 (2024-11-07)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-utils@3.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.7.2 (2024-11-06)</small>
 
 * deps(PDS-955): up snack-uikit deps ([8e7bbb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e7bbb9))

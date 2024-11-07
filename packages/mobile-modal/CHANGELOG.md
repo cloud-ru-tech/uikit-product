@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.5 (2024-11-07)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-drawer@0.6.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-tooltip@0.4.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.7.4 (2024-11-06)</small>
 
 * feat(PDS-804)!: relocated mobile delete modal from mobile-modal package to modal-predefined package ([4356ac6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4356ac6))
