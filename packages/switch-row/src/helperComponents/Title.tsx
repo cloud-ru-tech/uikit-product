@@ -1,8 +1,12 @@
+import { MouseEvent } from 'react';
+
 import { QuestionTooltip } from '@snack-uikit/tooltip';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { SwitchRowProps } from '../components';
 import styles from './styles.module.scss';
+
+const stopPropagation = (e: MouseEvent) => e.stopPropagation();
 
 export function Title({
   title,
@@ -14,7 +18,8 @@ export function Title({
       <span>
         {title}
         {tip && (
-          <span className={styles.tipWrapperInline}>
+          // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+          <span className={styles.tipWrapperInline} onClick={stopPropagation}>
             <QuestionTooltip data-pointer tip={tip} data-test-id='switch-row__title-tooltip' size='xs' tabIndex={-1} />
           </span>
         )}
@@ -26,7 +31,8 @@ export function Title({
     <>
       <TruncateString text={title} />
       {tip && (
-        <span className={styles.tipWrapper}>
+        // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+        <span className={styles.tipWrapper} onClick={stopPropagation}>
           <QuestionTooltip data-pointer tip={tip} data-test-id='switch-row__title-tooltip' size='xs' tabIndex={-1} />
         </span>
       )}
