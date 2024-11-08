@@ -52,7 +52,6 @@ export type ProductHeaderProps = WithSupportProps<
       | 'onProductChange'
       | 'selectedLink'
       | 'onLinkChange'
-      | 'favorites'
     > & { onClose?(): void };
     select?: Pick<
       SelectProps,
@@ -103,7 +102,6 @@ export function ProductHeader({
   onMainMenuClick,
   drawerMenu: {
     links,
-    favorites,
     pinnedCards,
     footerLinks,
     allProducts,
@@ -289,7 +287,6 @@ export function ProductHeader({
           open={isMainMenuOpen}
           onClose={handleCloseMainMenu}
           links={links}
-          favorites={favorites}
           selectedLink={selectedLink}
           onLinkChange={onLinkChange}
           pinnedCards={pinnedCards}

@@ -19,7 +19,7 @@ import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
 import { extractAppNameFromId } from '../../../../utils';
 import { PinnedCard } from '../../../PinnedCard';
-import { useLinks, useSearch, useWithFavorites } from '../../hooks';
+import { useLinks, useSearch } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
@@ -42,15 +42,15 @@ export function DrawerMenuDesktop({
   onProductChange,
   selectedLink,
   onLinkChange,
-  favorites,
 }: DrawerMenuProps) {
-  const allLinks = useWithFavorites({ links, favorites });
-
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
-  const visibleLinks = useMemo(() => filterHiddenLinks(allLinks), [allLinks]);
-  const [showScrollLinks] = useState(true);
+  const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
+  const [
+    showScrollLinks,
+    // setShowScrollLinks
+  ] = useState(true);
 
   const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
 
@@ -66,6 +66,19 @@ export function DrawerMenuDesktop({
 
   const rightContainerRef = useRef<HTMLDivElement>(null);
   const rightContentRef = useRef<HTMLDivElement>(null);
+
+  // useEffect(() => {
+  //   if (!open || !showRightSection || !rightContainerRef.current || !rightContentRef.current) {
+  //     return;
+  //   }
+
+  //   const containerHeight = rightContainerRef.current.offsetHeight;
+  //   const contentHeight = rightContentRef.current.offsetHeight;
+
+  //   if (contentHeight - containerHeight > contentHeight * CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT) {
+  //     setShowScrollLinks(true);
+  //   }
+  // }, [showRightSection, open]);
 
   const hasChoice = useMemo(
     () => visibleProducts.reduce((acc, group) => acc + group.items.length, 0) > 1,
@@ -258,26 +271,20 @@ export function DrawerMenuDesktop({
                     filteredLinks.map((group, index) => (
                       <div className={styles.rightContentItem} key={group.id}>
                         <GroupCard title={group.label} id={group.id} ref={el => (cardsRef.current[index] = el)}>
-                          {group.items.map(item => {
-                            const checked = favorites?.itemIds.includes(item.id);
-                            const onChange = favorites?.onChange(item.id);
-
-                            return (
-                              <CardServiceSmall
-                                checked={item.id === selectedLink}
-                                outline
-                                promoBadge={item.badge}
-                                favorite={{ enabled: true, visibilityStrategy: 'hover', checked, onChange }}
-                                key={item.label}
-                                onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
-                                disabled={item.disabled}
-                                href={item.href}
-                                emblem={{ icon: item.icon, decor: true }}
-                                title={item.label}
-                                data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
-                              />
-                            );
-                          })}
+                          {group.items.map(item => (
+                            <CardServiceSmall
+                              checked={item.id === selectedLink}
+                              outline
+                              promoBadge={item.badge}
+                              key={item.label}
+                              onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
+                              disabled={item.disabled}
+                              href={item.href}
+                              emblem={{ icon: item.icon, decor: true }}
+                              title={item.label}
+                              data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
+                            />
+                          ))}
                         </GroupCard>
                       </div>
                     ))}

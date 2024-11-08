@@ -314,16 +314,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       };
     }, [args.customLogo]);
 
-    const [favouriteItems, setFavouriteItems] = useState<string[]>([]);
-
-    const onFavoriteChange = (id: string) => (value: boolean) => {
-      if (value) {
-        setFavouriteItems([id, ...favouriteItems]);
-      } else {
-        setFavouriteItems(favouriteItems.filter(item => item !== id));
-      }
-    };
-
     return (
       <div className={styles.fullPageHeight}>
         <Header
@@ -430,10 +420,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
             links: showLinks ? args.drawerMenu.links : undefined,
             footerLinks: showFooterLinks ? args.drawerMenu.footerLinks : undefined,
             pinnedCards: showPinnedCards ? args.drawerMenu.pinnedCards : undefined,
-            favorites: {
-              itemIds: favouriteItems,
-              onChange: onFavoriteChange,
-            },
             selectedProduct: product,
             onProductChange: setProduct,
           }}

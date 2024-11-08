@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   padding: styles-theme-variables.$dimension-2m;
-  gap: styles-theme-variables.$dimension-1m;
+  gap: styles-theme-variables.$dimension-2m;
   border-radius: styles-theme-variables.$dimension-1m;
 }
 
@@ -18,7 +18,7 @@
 .cardBody {
   display: grid;
   grid-template-columns: repeat(2, minmax(150px, 1fr));
-  gap: styles-theme-variables.$dimension-1m;
+  gap: styles-theme-variables.$dimension-2m;
 
   &[data-mobile] {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
