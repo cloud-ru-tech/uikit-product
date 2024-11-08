@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.5 (2024-11-08)</small>
+
+* feat(RM-2456): Add grants in header component ([e10df37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e10df37))
+
+
+
+
+
 ## <small>2.33.4 (2024-11-07)</small>
 
 ### Only dependencies have been changed

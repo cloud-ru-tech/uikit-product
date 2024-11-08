@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-header",
   "title": "Header",
-  "version": "2.33.4",
+  "version": "2.33.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -54,12 +54,12 @@
     "@snack-uikit/search": "0.10.2",
     "@snack-uikit/search-private": "0.4.1",
     "@snack-uikit/skeleton": "0.5.0",
+    "@snack-uikit/status": "0.5.3",
     "@snack-uikit/tooltip": "0.15.0",
     "@snack-uikit/truncate-string": "0.6.0",
     "@snack-uikit/typography": "0.8.0",
     "@snack-uikit/utils": "3.5.0",
     "classnames": "2.5.1",
-    "@snack-uikit/status": "0.5.3",
     "lodash.debounce": "4.0.8",
     "lodash.throttle": "4.1.1",
     "react-transition-state": "2.1.3",
