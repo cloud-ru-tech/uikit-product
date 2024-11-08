@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.4 (2024-11-08)</small>
+
+* fix(PDS-961): add stopPropagation on tooltip ([d685d86](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d685d86))
+
+
+
+
+
 ## <small>0.5.3 (2024-11-07)</small>
 
 * fix(FF-5801): remove linaria from repo ([f9e6b49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9e6b49))
