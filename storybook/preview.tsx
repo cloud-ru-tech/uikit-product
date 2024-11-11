@@ -22,6 +22,8 @@ import { BADGE, Brand, BRAND_TO_THEME_MAP, DEFAULT_BRAND_COLORS_MAP, DEFAULT_BRA
 
 const LanguageCodeType = ConfigProvider.languages;
 
+const url = process.env.DEPS_URL && new URL(process.env.DEPS_URL);
+
 const decorators: Preview['decorators'] = [
   withBrand,
   (Story, { globals: { locale, [PARAM_KEY]: brand }, parameters: { badges, snackUiLink } }) => {
@@ -93,6 +95,7 @@ const parameters: Parameters = {
   dependenciesGraph: {
     graphLinks: process.env.DEPENDENCIES_LINKS,
   },
+  packagesUrl: url ? url.pathname : undefined,
   badgesConfig: {
     [BADGE.PRIVATE]: {
       styles: {

@@ -56,6 +56,7 @@ const mainConfig: StorybookConfig = {
     '@cloud-ru/ft-storybook-brand-addon',
     'storybook-dark-mode',
     '@cloud-ru/ft-storybook-deps-graph-addon',
+    '@sbercloud/ft-storybook-deps-table-addon',
     '@storybook/addon-webpack5-compiler-babel',
   ],
   staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
@@ -76,6 +77,7 @@ const mainConfig: StorybookConfig = {
     ...config,
     PACKAGES_STATISTICS: PACKAGES_STATISTICS as unknown as string,
     DEPENDENCIES_LINKS: DEPENDENCIES_LINKS as unknown as string,
+    DEPS_URL: (process.env.DEPS_URL || '') as unknown as string,
   }),
   webpackFinal: async config => {
     isTestServer && (config.watch = false);
