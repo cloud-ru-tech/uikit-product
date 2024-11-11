@@ -42,7 +42,7 @@ $drawer-background-color: (
     &[data-position='right'] {
       height: 100%;
       max-height: 100%;
-      max-width: calc(100% - styles-tokens-drawer.$space-drawer-outside-gap);
+      max-width: calc(100% - #{styles-tokens-drawer.$space-drawer-outside-gap});
       top: 0;
       bottom: 0;
 
@@ -79,12 +79,12 @@ $drawer-background-color: (
     &[data-position='top'] {
       width: 100%;
       max-width: 100%;
-      max-height: calc(100% - styles-tokens-drawer.$space-drawer-outside-gap);
+      max-height: calc(100% - #{styles-tokens-drawer.$space-drawer-outside-gap});
       left: 0;
       right: 0;
 
       .content {
-        max-height: calc(100dvh - styles-tokens-drawer.$space-drawer-outside-gap);
+        max-height: calc(100dvh - #{styles-tokens-drawer.$space-drawer-outside-gap});
       }
 
       @each $size in $sizes {
@@ -131,6 +131,8 @@ $drawer-background-color: (
   box-sizing: border-box;
 
   box-shadow: styles-tokens-drawer.simple-var(styles-tokens-drawer.$box-shadow-elevation-level5);
+
+  overscroll-behavior: contain;
 }
 
 .mask {

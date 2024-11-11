@@ -23,7 +23,7 @@ type UseSwipePropsProps = {
 
 const TRANSFORM = 0;
 const CLOSE_DELTA_IN_PX = 40;
-const CLOSE_RATIO = 5;
+const CLOSE_RATIO = 3;
 
 export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwipePropsProps) {
   const swipeRef = useRef<HTMLDivElement>(null);
@@ -44,6 +44,7 @@ export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwip
       return () => scrollRefElement.removeEventListener('scroll', handleScroll);
     }
   }, [scrollRefElement]);
+
   const [drag, setDrag] = useState({
     initial: TRANSFORM,
     start: 0,
@@ -69,7 +70,7 @@ export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwip
 
   const getMaskOpacity = (value = drag.drag) => 1 + value / itemSize;
 
-  const shouldCloseDrawer = Math.abs(drag.drag) < Math.min(CLOSE_DELTA_IN_PX, itemSize / CLOSE_RATIO);
+  const shouldCloseDrawer = Math.abs(drag.drag) < Math.max(CLOSE_DELTA_IN_PX, itemSize / CLOSE_RATIO);
 
   const [styles, setStyles] = useState<{
     drawer: CSSProperties | undefined;
@@ -77,8 +78,6 @@ export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwip
   }>();
 
   const handleDragStart = (event: MouseEvent | TouchEvent) => {
-    event.stopPropagation();
-
     if (!shouldDrag) {
       return;
     }
@@ -92,9 +91,7 @@ export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwip
     });
   };
 
-  const handleDragFinish = (event: MouseEvent | TouchEvent) => {
-    event.stopPropagation();
-
+  const handleDragFinish = () => {
     if (!shouldDrag) {
       return;
     }
@@ -126,8 +123,6 @@ export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwip
   };
 
   const handleDragMove = (event: MouseEvent | TouchEvent) => {
-    event.stopPropagation();
-
     if (!shouldDrag) {
       return;
     }
