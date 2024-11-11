@@ -13,7 +13,7 @@
   color: styles-tokens-element.$sys-neutral-text-main;
   /* stylelint-disable-next-line declaration-no-important */
   background-color: styles-tokens-element.$sys-neutral-background !important;
-  padding-left: calc(styles-tokens-element.$dimension-4m - styles-tokens-element.$dimension-050m);
+  padding-left: calc(#{styles-tokens-element.$dimension-4m} - #{styles-tokens-element.$dimension-050m});
 }
 
 .menu {
@@ -38,10 +38,6 @@
   flex-direction: column;
   gap: styles-tokens-element.$dimension-1m;
   flex-grow: 1;
-}
-
-.selectProduct {
-  padding-left: styles-tokens-element.$dimension-050m;
 }
 
 .footerLinks {
@@ -79,7 +75,7 @@
 }
 
 .pinnedCard {
-  flex: 1 0 calc(50% - styles-tokens-element.$dimension-1m);
+  flex: 1 0 calc(50% - #{styles-tokens-element.$dimension-1m});
 }
 
 .rightContent {
@@ -102,11 +98,11 @@
   display: flex;
   box-sizing: border-box;
   align-items: center;
-  padding: 0 calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-050m - styles-tokens-element.$border-width-012m);
+  padding: 0 11px;
   gap: styles-tokens-element.$dimension-1m;
   border: styles-tokens-element.$border-width-012m solid transparent;
   background-color: styles-tokens-element.$sys-neutral-background1-level;
-  width: calc(32 * styles-tokens-element.$dimension-1m);
+  width: 224px;
   height: styles-tokens-element.$dimension-7m;
   border-radius: styles-tokens-element.$dimension-050m;
 
@@ -141,7 +137,7 @@
 }
 
 .droplist {
-  padding: styles-tokens-element.$dimension-1m calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-050m);
+  padding: styles-tokens-element.$dimension-1m calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element.$dimension-050m});
 }
 
 .selectedSection {

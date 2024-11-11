@@ -7,7 +7,7 @@
   min-width: 242px;
   position: relative;
   box-sizing: border-box;
-  margin: calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-050m)
+  margin: calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element.$dimension-050m})
     styles-tokens-element.$dimension-2m;
 }
 

@@ -28,7 +28,7 @@
   color: styles-tokens-element.$sys-neutral-text-main;
   /* stylelint-disable-next-line declaration-no-important */
   background-color: styles-tokens-element.$sys-neutral-background !important;
-  padding-left: calc(styles-tokens-element.$dimension-4m - styles-tokens-element.$dimension-050m);
+  padding-left: calc(#{styles-tokens-element.$dimension-4m} - #{styles-tokens-element.$dimension-050m});
 }
 
 .menu {
@@ -54,10 +54,6 @@
   gap: styles-tokens-element.$dimension-1m;
   flex-grow: 1;
   min-height: styles-tokens-element.$dimension-7m;
-}
-
-.selectProduct {
-  padding-left: styles-tokens-element.$dimension-050m;
 }
 
 .footerLinks {
@@ -92,7 +88,7 @@
 }
 
 .pinnedCard {
-  flex: 1 0 calc(50% - styles-tokens-element.$dimension-1m);
+  flex: 1 0 calc(50% - #{styles-tokens-element.$dimension-1m});
   /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 2;
 }
@@ -106,7 +102,7 @@
 
 .rightContentItem {
   padding-top: styles-tokens-element.$dimension-4m;
-  margin-bottom: calc(styles-tokens-element.$dimension-2m * -1);
+  margin-bottom: calc(#{styles-tokens-element.$dimension-2m} * -1);
 
   &:last-child {
     margin-bottom: 0;
@@ -121,7 +117,7 @@
   top: 0;
   background-color: styles-tokens-element.$sys-neutral-background;
   padding-bottom: styles-tokens-element.$dimension-2m;
-  margin-bottom: calc(styles-tokens-element.$dimension-4m * -1);
+  margin-bottom: calc(#{styles-tokens-element.$dimension-4m} * -1);
 }
 
 .noData {
@@ -136,12 +132,12 @@
 .select {
   display: flex;
   align-items: center;
-  padding: 0 calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-050m - styles-tokens-element.$border-width-012m);
+  padding: 0 11px;
   gap: styles-tokens-element.$dimension-1m;
   box-sizing: border-box;
   border: styles-tokens-element.$border-width-012m solid transparent;
   background-color: styles-tokens-element.$sys-neutral-background1-level;
-  width: calc(32 * styles-tokens-element.$dimension-1m);
+  width: 224px;
   height: styles-tokens-element.$dimension-7m;
   border-radius: styles-tokens-element.$dimension-050m;
 
@@ -176,7 +172,7 @@
 }
 
 .droplist {
-  padding: styles-tokens-element.$dimension-1m calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-050m);
+  padding: styles-tokens-element.$dimension-1m calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element.$dimension-050m});
 }
 
 .selectedSection {

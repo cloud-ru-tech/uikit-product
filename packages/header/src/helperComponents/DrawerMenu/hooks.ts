@@ -1,9 +1,13 @@
 import debounce from 'lodash.debounce';
 import { MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
 
+import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { isBrowser } from '@snack-uikit/utils';
 
-import { LinksGroup } from '../../types';
+import { textProvider, Texts } from '../../helpers';
+import { InnerLink, LinksGroup } from '../../types';
+import { DrawerMenuProps } from './types';
+import { filterHiddenLinks } from './utils';
 
 type UseSearchProps = {
   links?: LinksGroup[];
@@ -84,7 +88,7 @@ export function useSearch({ links }: UseSearchProps) {
   };
 }
 
-export function useLinks({ setSearchValue, drawerOpen, highlightClassName }: UseScrollProps) {
+export function useLinksScrollToSelected({ setSearchValue, drawerOpen, highlightClassName }: UseScrollProps) {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const scrollRef = useRef<HTMLElement>(null);
   const searchPanelRef = useRef<HTMLDivElement>(null);
@@ -125,5 +129,57 @@ export function useLinks({ setSearchValue, drawerOpen, highlightClassName }: Use
     scrollRef,
     searchPanelRef,
     handleLinkClick,
+  };
+}
+
+export const useWithFavorites = ({ links, favorites }: Pick<DrawerMenuProps, 'links' | 'favorites'>) => {
+  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const favoriteItemIds = useMemo(() => favorites?.value ?? [], [favorites?.value]);
+
+  const favoriteItems = useMemo(() => {
+    if (!links || favoriteItemIds.length === 0) {
+      return [];
+    }
+
+    const idsToLinks = links
+      .flatMap(group => group.items)
+      .reduce(
+        (res, link) => {
+          res[link.id] = link;
+          return res;
+        },
+        {} as Record<string, InnerLink>,
+      );
+
+    const favouriteItems = favoriteItemIds.map(id => idsToLinks[id]).filter(item => Boolean(item));
+
+    if (favouriteItems.length === 0) {
+      return [];
+    }
+
+    return [
+      {
+        label: textProvider(languageCode, Texts.Favorite),
+        id: 'favorite',
+        items: favouriteItems,
+      },
+    ];
+  }, [favoriteItemIds, languageCode, links]);
+
+  return useMemo(() => (links ? [...favoriteItems, ...links] : undefined), [favoriteItems, links]);
+};
+
+export function useLinks({ links, favorites }: Pick<DrawerMenuProps, 'links' | 'favorites'>) {
+  const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
+  const visibleLinksWithFavorites = useWithFavorites({ links: visibleLinks, favorites });
+  const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
+
+  const shownLinks = searchValue.length > 0 ? filteredLinks : visibleLinksWithFavorites;
+
+  return {
+    searchValue,
+    setSearchValue,
+    rightSectionLinks: shownLinks,
+    leftSectionLinks: visibleLinksWithFavorites,
   };
 }

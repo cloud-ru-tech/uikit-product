@@ -43,6 +43,7 @@ export enum Texts {
   Logout = 'logout',
   Workspaces = 'workspaces',
   AddWorkspace = 'add-workspace',
+  Favorite = 'favorite',
 
   FinancialMenuTitle = 'financial-menu-title',
   FinancialMenuEyeButtonDavaVisibleTip = 'financial-menu-eye-button-data-visible-tip',
@@ -112,6 +113,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Logout]: 'Выйти из аккаунта',
     [Texts.Workspaces]: 'Воркспейсы',
     [Texts.AddWorkspace]: 'Добавить воркспейс',
+    [Texts.Favorite]: 'Избранное',
 
     [Texts.FinancialMenuTitle]: 'Контроль затрат',
     [Texts.FinancialMenuEyeButtonDavaVisibleTip]: 'Скрыть баланс в шапке',
@@ -182,6 +184,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Logout]: 'Logout',
     [Texts.Workspaces]: 'Workspaces',
     [Texts.AddWorkspace]: 'Add workspace',
+    [Texts.Favorite]: 'Favorite',
 
     [Texts.FinancialMenuTitle]: 'Budget control',
     [Texts.FinancialMenuEyeButtonDavaVisibleTip]: 'Hide balance in header',

@@ -14,11 +14,12 @@ import { getSelectProductListProps } from '../../../../hooks/useSelectProductLis
 import { ProductOption } from '../../../../types';
 import { extractAppNameFromId } from '../../../../utils';
 import { PinnedCard } from '../../../PinnedCard';
+import { useLinks } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
 import { ProductSelectTrigger } from '../ProductSelectTrigger';
-import { useLinks, useSearch } from './hooks';
+import { useLinksScrollToSelected } from './hooks';
 import styles from './styles.module.scss';
 
 export function DrawerMenuMobile({
@@ -31,18 +32,17 @@ export function DrawerMenuMobile({
   selectedLink,
   onLinkChange,
   pinnedCards,
+  favorites,
   ...rest
 }: DrawerMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
-  const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
   const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
+  const { searchValue, setSearchValue, rightSectionLinks, leftSectionLinks } = useLinks({ links, favorites });
 
-  const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
-  const { cardsRef } = useLinks({
-    links: visibleLinks,
+  const { cardsRef } = useLinksScrollToSelected({
+    links: leftSectionLinks,
     searchValue,
     setSearchValue,
   });
@@ -140,7 +140,7 @@ export function DrawerMenuMobile({
               hasChoice={hasChoice}
             />
 
-            {visibleLinks && (
+            {leftSectionLinks && (
               <Search
                 size='m'
                 placeholder={textProvider(languageCode, Texts.SearchByServices)}
@@ -150,8 +150,8 @@ export function DrawerMenuMobile({
               />
             )}
 
-            {filteredLinks &&
-              filteredLinks.map((group, index) => (
+            {rightSectionLinks &&
+              rightSectionLinks.map((group, index) => (
                 <GroupCard
                   key={group.id}
                   id={group.id}
@@ -159,22 +159,28 @@ export function DrawerMenuMobile({
                   ref={el => (cardsRef.current[index] = el)}
                   mobile
                 >
-                  {group.items.map(item => (
-                    <CardServiceSmall
-                      checked={item.id === selectedLink}
-                      outline
-                      key={item.label}
-                      promoBadge={item.badge}
-                      onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
-                      title={item.label}
-                      emblem={{ icon: item.icon, decor: true }}
-                      data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
-                    />
-                  ))}
+                  {group.items.map(item => {
+                    const checked = favorites?.value.includes(item.id);
+                    const onChange = favorites?.onChange(item.id);
+
+                    return (
+                      <CardServiceSmall
+                        checked={item.id === selectedLink}
+                        outline
+                        key={item.label}
+                        promoBadge={item.badge}
+                        favorite={{ enabled: Boolean(favorites), visibilityStrategy: 'always', checked, onChange }}
+                        onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
+                        title={item.label}
+                        emblem={{ icon: item.icon, decor: true }}
+                        data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
+                      />
+                    );
+                  })}
                 </GroupCard>
               ))}
 
-            {filteredLinks?.length === 0 && (
+            {rightSectionLinks?.length === 0 && (
               <div className={styles.noData} data-test-id='header__drawer-menu__no-data'>
                 {textProvider(languageCode, Texts.NoData)}
               </div>

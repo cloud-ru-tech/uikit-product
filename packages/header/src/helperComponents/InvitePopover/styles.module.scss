@@ -7,7 +7,7 @@
 .invitePopoverContent {
   display: flex;
   flex-direction: column;
-  gap: calc(styles-theme-variables.$dimension-025m + styles-theme-variables.$dimension-3m);
+  gap: calc(#{styles-theme-variables.$dimension-025m} + #{styles-theme-variables.$dimension-3m});
 }
 
 .invitePopoverTexts {

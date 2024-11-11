@@ -1,6 +1,6 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
-$vPadding: calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dimension-025m);
+$vPadding: calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element.$dimension-025m});
 
 .section {
   display: flex;
@@ -46,7 +46,7 @@ $vPadding: calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dim
   transition-duration: 300ms;
 
   width: calc(100%);
-  max-width: calc(styles-tokens-element.$dimension-3m + 2 * $vPadding);
+  max-width: calc(#{styles-tokens-element.$dimension-3m} + 2 * $vPadding);
   padding-left: $vPadding;
   box-sizing: border-box;
 
@@ -57,14 +57,14 @@ $vPadding: calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dim
   &[data-transition-status='entering'],
   &[data-transition-status='entered'] {
     max-width: 100%;
-    min-width: calc(styles-tokens-element.$dimension-3m + 2 * $vPadding);
+    min-width: calc(#{styles-tokens-element.$dimension-3m} + 2 * $vPadding);
     right: 0;
     width: calc(100%);
   }
 
   &[data-transition-status='exiting'],
   &[data-transition-status='exited'] {
-    max-width: calc(styles-tokens-element.$dimension-3m + 2 * $vPadding);
+    max-width: calc(#{styles-tokens-element.$dimension-3m} + 2 * $vPadding);
     right: 0;
     width: calc(100%);
   }
@@ -129,9 +129,9 @@ $vPadding: calc(styles-tokens-element.$dimension-1m + styles-tokens-element.$dim
   /* stylelint-disable-next-line declaration-no-important */
   height: 40px !important;
   /* stylelint-disable-next-line declaration-no-important */
-  margin: calc(0px - styles-tokens-element.$dimension-1m) 0 !important;
+  margin: calc(0px - #{styles-tokens-element.$dimension-1m}) 0 !important;
   /* stylelint-disable-next-line declaration-no-important */
-  width: calc(styles-tokens-element.$dimension-3m + $vPadding) !important;
+  width: calc(#{styles-tokens-element.$dimension-3m} + $vPadding) !important;
   /* stylelint-disable-next-line declaration-no-important */
   justify-content: flex-start !important;
 }

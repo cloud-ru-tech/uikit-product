@@ -1,14 +1,10 @@
 import throttle from 'lodash.throttle';
-import { MouseEvent, useMemo, useRef, useState } from 'react';
+import { MouseEvent, useRef, useState } from 'react';
 
 import { useEventHandler } from '@sbercloud/uikit-product-utils';
 import { isBrowser } from '@snack-uikit/utils';
 
 import { LinksGroup } from '../../../../types';
-
-type UseSearchProps = {
-  links?: LinksGroup[];
-};
 
 type UseScrollProps = {
   links?: LinksGroup[];
@@ -18,43 +14,7 @@ type UseScrollProps = {
 
 const THROTTLE_TIMEOUT = 100;
 
-function matchSearchString(value: string, search: string) {
-  return value.trim().toLowerCase().includes(search.trim().toLowerCase());
-}
-
-export function useSearch({ links }: UseSearchProps) {
-  const [searchValue, setSearchValue] = useState('');
-
-  const filteredLinks = useMemo(
-    () =>
-      links && searchValue.length > 0
-        ? links.reduce((result, group) => {
-            if (group.label && matchSearchString(group.label, searchValue)) {
-              result.push(group);
-              return result;
-            }
-
-            const items = group.items.filter(item => matchSearchString(item.label, searchValue));
-
-            if (items.length > 0) {
-              result.push({ ...group, items });
-              return result;
-            }
-
-            return result;
-          }, [] as LinksGroup[])
-        : links,
-    [links, searchValue],
-  );
-
-  return {
-    searchValue,
-    setSearchValue,
-    filteredLinks,
-  };
-}
-
-export function useLinks({ searchValue, setSearchValue, links }: UseScrollProps) {
+export function useLinksScrollToSelected({ searchValue, setSearchValue, links }: UseScrollProps) {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const scrollRef = useRef<HTMLElement>(null);
   const [selectedLink, setSelectedLink] = useState(links?.[0].id);

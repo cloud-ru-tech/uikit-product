@@ -26,7 +26,6 @@ import {
   FinancialMenuProps,
   MLSpacePlatformLogo,
 } from '../src/helperComponents';
-import { GrantProps } from '../src/helperComponents/FinancialMenu/components/PopoverContent/components/Grant';
 import styles from './styles.module.scss';
 
 export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
@@ -52,7 +51,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   financialMenuBonusesTipMoreButtonLink: string;
   financialMenuBonusesLabel: string;
   financialMenuBonusesDescription: string;
-  financialMenuBonusGrants: GrantProps[];
+  financialMenuBonusGrants: NonNullable<FinancialMenuProps['content']>['bonusGrants'];
   showSettings: boolean;
   showHelpMenu: boolean;
   showNotifications: boolean;
@@ -74,6 +73,9 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
 
   showSinglePlatform: boolean;
 };
+
+const EMPTY_ON_CLICK = () => {};
+const EMPTY_HREF = '#';
 
 const DEFAULT_USER = {
   name: 'Юзер Пользователев',
@@ -132,7 +134,7 @@ const ALL_PRODUCTS_MULTI = [
     items: [
       {
         id: 'lkp',
-        name: 'Личный кабинет партнера',
+        name: 'Партнёрский кабинет',
         category: 'Другой продукт',
         hotSpot: PRODUCT_HOT_SPOT,
       },
@@ -314,6 +316,16 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       };
     }, [args.customLogo]);
 
+    const [favoriteItems, setFavoriteItems] = useState<string[]>([]);
+
+    const onFavoriteChange = (id: string) => (value: boolean) => {
+      if (value) {
+        setFavoriteItems([id, ...favoriteItems]);
+      } else {
+        setFavoriteItems(favoriteItems.filter(item => item !== id));
+      }
+    };
+
     return (
       <div className={styles.fullPageHeight}>
         <Header
@@ -420,6 +432,10 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
             links: showLinks ? args.drawerMenu.links : undefined,
             footerLinks: showFooterLinks ? args.drawerMenu.footerLinks : undefined,
             pinnedCards: showPinnedCards ? args.drawerMenu.pinnedCards : undefined,
+            favorites: {
+              value: favoriteItems,
+              onChange: onFavoriteChange,
+            },
             selectedProduct: product,
             onProductChange: setProduct,
           }}
@@ -651,7 +667,7 @@ export const ARGS: StoryProps = {
         items: [
           {
             id: 'lkp',
-            name: 'Личный кабинет партнера',
+            name: 'Партнёрский кабинет',
             category: 'Другой продукт',
             hotSpot: PRODUCT_HOT_SPOT,
           },
@@ -703,25 +719,45 @@ export const ARGS: StoryProps = {
         label: 'Инфраструктура',
         id: 'infrastructure',
         items: [
-          { id: 'vms', label: 'Виртуальные машины', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'images', label: 'Образы', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'bms', label: 'Bare Metal', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'rcs', label: 'Резервные копии', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'vms', label: 'Виртуальные машины', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          { id: 'images', label: 'Образы', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          { id: 'bms', label: 'Bare Metal', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          { id: 'rcs', label: 'Резервные копии', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
         ],
       },
       {
         label: 'Сеть',
         id: 'network',
         items: [
-          { id: 'vpc', label: 'VPC', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'snat', label: 'sNAT-шлюзы', onClick: () => {}, icon: PlaceholderSVG, badge: 'Preview' },
-          { id: 'subnets', label: 'Подсети', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'safegroups', label: 'Группы безопасности', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'public-ipis', label: 'Публичные IP-адреса', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'vpc', label: 'VPC', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          {
+            id: 'snat',
+            label: 'sNAT-шлюзы',
+            onClick: EMPTY_ON_CLICK,
+            href: EMPTY_HREF,
+            icon: PlaceholderSVG,
+            badge: 'Preview',
+          },
+          { id: 'subnets', label: 'Подсети', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          {
+            id: 'safegroups',
+            label: 'Группы безопасности',
+            onClick: EMPTY_ON_CLICK,
+            href: EMPTY_HREF,
+            icon: PlaceholderSVG,
+          },
+          {
+            id: 'public-ipis',
+            label: 'Публичные IP-адреса',
+            onClick: EMPTY_ON_CLICK,
+            href: EMPTY_HREF,
+            icon: PlaceholderSVG,
+          },
           {
             id: 'load-balancer',
             label: 'Балансировщик нагрузки',
-            onClick: () => {},
+            onClick: EMPTY_ON_CLICK,
+            href: EMPTY_HREF,
             icon: PlaceholderSVG,
             badge: { text: 'New', appearance: 'pink' },
           },
@@ -731,34 +767,34 @@ export const ARGS: StoryProps = {
         label: 'Хранение данных',
         id: 'storage',
         items: [
-          { id: 'disks', label: 'Диски', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 's3', label: 'S3 Objective Storage', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'disks', label: 'Диски', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          { id: 's3', label: 'S3 Objective Storage', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
         ],
       },
       {
         label: 'Контейнеры и оркестрация',
         id: 'containers',
         items: [
-          { id: 'con_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'con_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'con_i1', label: 'Item 1', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          { id: 'con_i2', label: 'Item 2', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
         ],
       },
       {
         label: 'Мониторинг',
         id: 'monitoring',
         items: [
-          { id: 'mon_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'mon_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'mon_i1', label: 'Item 1', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          { id: 'mon_i2', label: 'Item 2', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
         ],
       },
       {
         label: 'Инструменты разработчика',
         id: 'devtools',
         items: [
-          { id: 'devtools_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'devtools_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'devtools_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
-          { id: 'devtools_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i1', label: 'Item 1', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          { id: 'devtools_i2', label: 'Item 2', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          { id: 'devtools_i3', label: 'Item 3', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
+          { id: 'devtools_i4', label: 'Item 4', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
         ],
       },
       {

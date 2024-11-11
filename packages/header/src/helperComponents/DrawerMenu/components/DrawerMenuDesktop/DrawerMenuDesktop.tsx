@@ -19,7 +19,7 @@ import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
 import { extractAppNameFromId } from '../../../../utils';
 import { PinnedCard } from '../../../PinnedCard';
-import { useLinks, useSearch } from '../../hooks';
+import { useLinks, useLinksScrollToSelected } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
@@ -42,43 +42,26 @@ export function DrawerMenuDesktop({
   onProductChange,
   selectedLink,
   onLinkChange,
+  favorites,
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
-  const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
-  const [
-    showScrollLinks,
-    // setShowScrollLinks
-  ] = useState(true);
+  const { searchValue, setSearchValue, rightSectionLinks, leftSectionLinks } = useLinks({ links, favorites });
 
-  const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
-
-  const { cardsRef, scrollRef, searchPanelRef, handleLinkClick } = useLinks({
-    links: visibleLinks,
+  const { cardsRef, scrollRef, searchPanelRef, handleLinkClick } = useLinksScrollToSelected({
+    links: leftSectionLinks,
     searchValue,
     setSearchValue,
     drawerOpen: open,
     highlightClassName: styles.highlight,
   });
 
-  const showRightSection = visibleLinks?.length || visiblePinnedCards;
+  const showRightSection = leftSectionLinks?.length || visiblePinnedCards;
 
   const rightContainerRef = useRef<HTMLDivElement>(null);
   const rightContentRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   if (!open || !showRightSection || !rightContainerRef.current || !rightContentRef.current) {
-  //     return;
-  //   }
-
-  //   const containerHeight = rightContainerRef.current.offsetHeight;
-  //   const contentHeight = rightContentRef.current.offsetHeight;
-
-  //   if (contentHeight - containerHeight > contentHeight * CONTENT_OVERFLOW_SCROLLING_LINKS_LIMIT) {
-  //     setShowScrollLinks(true);
-  //   }
-  // }, [showRightSection, open]);
+  const triggerRef = useRef<HTMLDivElement>(null);
 
   const hasChoice = useMemo(
     () => visibleProducts.reduce((acc, group) => acc + group.items.length, 0) > 1,
@@ -134,63 +117,63 @@ export function DrawerMenuDesktop({
           <div className={styles.leftWrapper} data-test-id='header__drawer-menu__left'>
             <div className={styles.left}>
               <div className={styles.leftTop}>
-                <div className={styles.selectProduct}>
-                  <Droplist
-                    size='m'
-                    {...getSelectProductListProps({
-                      allProducts: visibleProducts,
-                      onProductChange,
-                      selectedProduct,
-                      closeDropList: () => setIsOpen(false),
-                    })}
-                    open={isOpen}
-                    onOpenChange={setIsOpen}
-                    widthStrategy='eq'
+                <Droplist
+                  size='m'
+                  {...getSelectProductListProps({
+                    allProducts: visibleProducts,
+                    onProductChange,
+                    selectedProduct,
+                    closeDropList: () => setIsOpen(false),
+                  })}
+                  open={isOpen}
+                  onOpenChange={setIsOpen}
+                  widthStrategy='gte'
+                  triggerElemRef={triggerRef}
+                >
+                  <div
+                    ref={triggerRef}
+                    className={styles.select}
+                    tabIndex={hasChoice ? 0 : -1}
+                    role={'menu'}
+                    data-open={isOpen || undefined}
+                    data-active={hasChoice || undefined}
+                    data-test-id='header__drawer-menu__select'
                   >
-                    <div
-                      className={styles.select}
-                      tabIndex={hasChoice ? 0 : -1}
-                      role={'menu'}
-                      data-open={isOpen || undefined}
-                      data-active={hasChoice || undefined}
-                      data-test-id='header__drawer-menu__select'
-                    >
-                      <div className={styles.logo}>
-                        {selectedProduct.logo ?? (
-                          <Avatar
-                            size='xs'
-                            name={selectedProduct.name}
-                            showTwoSymbols
-                            shape='square'
-                            appearance='neutral'
-                          />
-                        )}
-                      </div>
-
-                      <div className={styles.selectedSection}>
-                        <div
-                          className={styles.selectedHeading}
-                          data-test-id='header__drawer-menu__select__product-category'
-                        >
-                          {selectedProduct.category}
-                        </div>
-
-                        <div className={styles.selectedOption} data-test-id='header__drawer-menu__select__product-name'>
-                          <TruncateString text={selectedProduct.name} hideTooltip />
-                        </div>
-                      </div>
-
-                      {hasChoice && (
-                        <div className={styles.chevron}>{isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}</div>
+                    <div className={styles.logo}>
+                      {selectedProduct.logo ?? (
+                        <Avatar
+                          size='xs'
+                          name={selectedProduct.name}
+                          showTwoSymbols
+                          shape='square'
+                          appearance='neutral'
+                        />
                       )}
                     </div>
-                  </Droplist>
-                </div>
+
+                    <div className={styles.selectedSection}>
+                      <div
+                        className={styles.selectedHeading}
+                        data-test-id='header__drawer-menu__select__product-category'
+                      >
+                        {selectedProduct.category}
+                      </div>
+
+                      <div className={styles.selectedOption} data-test-id='header__drawer-menu__select__product-name'>
+                        <TruncateString text={selectedProduct.name} hideTooltip />
+                      </div>
+                    </div>
+
+                    {hasChoice && (
+                      <div className={styles.chevron}>{isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}</div>
+                    )}
+                  </div>
+                </Droplist>
 
                 <Scroll>
-                  {showScrollLinks && visibleLinks && visibleLinks.length && (
+                  {leftSectionLinks && leftSectionLinks.length && (
                     <div className={styles.links}>
-                      {visibleLinks.map(link => (
+                      {leftSectionLinks.map(link => (
                         <Link
                           key={link.id}
                           text={link.label}
@@ -255,7 +238,7 @@ export function DrawerMenuDesktop({
                     </div>
                   )}
 
-                  {visibleLinks && (
+                  {leftSectionLinks && (
                     <div className={cn(styles.rightContentItem, styles.searchItem)} ref={searchPanelRef}>
                       <Search
                         size='m'
@@ -267,29 +250,40 @@ export function DrawerMenuDesktop({
                     </div>
                   )}
 
-                  {filteredLinks &&
-                    filteredLinks.map((group, index) => (
+                  {rightSectionLinks &&
+                    rightSectionLinks.map((group, index) => (
                       <div className={styles.rightContentItem} key={group.id}>
                         <GroupCard title={group.label} id={group.id} ref={el => (cardsRef.current[index] = el)}>
-                          {group.items.map(item => (
-                            <CardServiceSmall
-                              checked={item.id === selectedLink}
-                              outline
-                              promoBadge={item.badge}
-                              key={item.label}
-                              onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
-                              disabled={item.disabled}
-                              href={item.href}
-                              emblem={{ icon: item.icon, decor: true }}
-                              title={item.label}
-                              data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
-                            />
-                          ))}
+                          {group.items.map(item => {
+                            const checked = favorites?.value.includes(item.id);
+                            const onChange = favorites?.onChange(item.id);
+
+                            return (
+                              <CardServiceSmall
+                                checked={item.id === selectedLink}
+                                outline
+                                promoBadge={item.badge}
+                                favorite={{
+                                  enabled: Boolean(favorites),
+                                  visibilityStrategy: 'hover',
+                                  checked,
+                                  onChange,
+                                }}
+                                key={item.label}
+                                onClick={wrappedClick(item, () => onLinkChange?.(item.id))}
+                                disabled={item.disabled}
+                                href={item.href}
+                                emblem={{ icon: item.icon, decor: true }}
+                                title={item.label}
+                                data-test-id={`header__drawer-menu__link-${extractAppNameFromId(item.id)}`}
+                              />
+                            );
+                          })}
                         </GroupCard>
                       </div>
                     ))}
 
-                  {filteredLinks?.length === 0 && (
+                  {rightSectionLinks?.length === 0 && (
                     <div className={styles.rightContentItem}>
                       <div className={styles.noData} data-test-id='header__drawer-menu__no-data'>
                         {textProvider(languageCode, Texts.NoData)}

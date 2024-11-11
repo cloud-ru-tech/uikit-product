@@ -40,10 +40,6 @@
   flex-grow: 1;
 }
 
-.selectProduct {
-  padding-left: styles-theme-variables.$dimension-050m;
-}
-
 .footerLinks {
   display: flex;
   flex-direction: column;
@@ -79,7 +75,7 @@
 }
 
 .pinnedCard {
-  flex: 1 0 calc(50% - styles-theme-variables.$dimension-1m);
+  flex: 1 0 calc(50% - #{styles-theme-variables.$dimension-1m});
 }
 
 .rightContent {
