@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.4 (2024-11-12)</small>
+
+* fix(PDS-1015): fix broken drag events with enabled swipe ([7c88c23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7c88c23))
+
+
+
+
+
 ## <small>0.6.3 (2024-11-07)</small>
 
 ### Only dependencies have been changed

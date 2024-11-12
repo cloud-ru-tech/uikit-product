@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.6 (2024-11-12)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-dropdown@0.6.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-modal@0.7.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.6.5 (2024-11-07)</small>
 
 ### Only dependencies have been changed

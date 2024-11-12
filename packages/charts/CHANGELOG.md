@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.12.3 (2024-11-12)</small>
+
+* fix(FF-5801): remove all predefined chart colors ([451fa9a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/451fa9a))
+
+
+
+
+
 ## <small>0.12.2 (2024-11-07)</small>
 
 * fix(FF-5801): fix heat map chart colors ([bf360bc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bf360bc))
