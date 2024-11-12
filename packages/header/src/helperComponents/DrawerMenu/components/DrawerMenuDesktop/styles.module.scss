@@ -17,6 +17,7 @@
 
   & [data-test-id='header__drawer-menu']:not([data-small]) {
     min-width: 656px;
+    overflow: hidden;
   }
 }
 
@@ -52,6 +53,7 @@
   flex-direction: column;
   gap: styles-tokens-element.$dimension-1m;
   flex-grow: 1;
+  min-height: styles-tokens-element.$dimension-7m;
 }
 
 .selectProduct {

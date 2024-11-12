@@ -761,6 +761,36 @@ export const ARGS: StoryProps = {
           { id: 'devtools_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
         ],
       },
+      {
+        label: 'Инструменты',
+        id: 'devtoolsssss',
+        items: [
+          { id: 'devtools_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Разработчика',
+        id: 'ddddevtools',
+        items: [
+          { id: 'devtools_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
+      {
+        label: 'Devtools',
+        id: 'deeeeevtools',
+        items: [
+          { id: 'devtools_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i2', label: 'Item 2', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i3', label: 'Item 3', onClick: () => {}, icon: PlaceholderSVG },
+          { id: 'devtools_i4', label: 'Item 4', onClick: () => {}, icon: PlaceholderSVG },
+        ],
+      },
     ],
   },
   homePageUrl: 'https://console.cloud.ru',
