@@ -68,6 +68,7 @@
     "@snack-uikit/stepper": "0.8.3",
     "@snack-uikit/toaster": "0.8.3",
     "@snack-uikit/tooltip": "0.15.1",
+    "@snack-uikit/tag": "0.11.2",
     "@snack-uikit/tabs": "0.8.3",
     "@storybook/addon-actions": "8.3.6",
     "@storybook/addon-designs": "8.0.3",

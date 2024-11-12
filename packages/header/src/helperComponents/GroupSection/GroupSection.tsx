@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { KeyboardEvent, RefObject, useEffect, useRef } from 'react';
+import { createRef, KeyboardEvent, RefObject, useCallback, useMemo } from 'react';
 
 import { SearchSVG, VerticalMenuRightCloseSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -71,10 +71,8 @@ export function GroupSection({
   mobile,
   ...rest
 }: GroupSectionProps) {
-  const itemRefs = useRef<Record<string, HTMLDivElement | null>>({});
-  const shouldScrollToSelectedItem = useRef(true);
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-
+  const itemRefs: Record<string, RefObject<HTMLElement>> = useMemo(() => ({}), []);
   const itemTestIdPrefix = rest['data-test-id'] || 'header__select-group';
 
   const {
@@ -95,37 +93,98 @@ export function GroupSection({
     onActiveChange: onSearchActiveChange,
   });
 
-  const navigateOutside = (event: KeyboardEvent) => {
-    if (navigateOutsideRef && event.key === 'ArrowUp') {
-      navigateOutsideRef.current?.focus();
-    }
-  };
-
-  const handleItemMouseDown =
-    ({ item }: { item: Item; groupId: string }) =>
-    () => {
-      onItemChange?.(item);
-
-      if (searchValue.length > 0) {
-        setSearchValue('');
-
-        setTimeout(() => {
-          const selectedItem = itemRefs.current[item.id];
-          selectedItem?.scrollIntoView({ block: 'center' });
-        }, 0);
+  const navigateOutside = useCallback(
+    (event: KeyboardEvent) => {
+      if (navigateOutsideRef && event.key === 'ArrowUp') {
+        navigateOutsideRef.current?.focus();
       }
-    };
+    },
+    [navigateOutsideRef],
+  );
 
-  useEffect(() => {
-    shouldScrollToSelectedItem.current = true;
-  }, [groups]);
+  const handleItemMouseDown = useCallback(
+    ({ item }: { item: Item; groupId: string }) =>
+      () => {
+        onItemChange?.(item);
 
-  useEffect(() => {
-    if (selectedItem?.id && shouldScrollToSelectedItem.current) {
-      itemRefs.current[selectedItem.id]?.scrollIntoView({ block: 'center' });
-      shouldScrollToSelectedItem.current = false;
-    }
-  }, [selectedItem]);
+        if (searchValue.length > 0) {
+          setSearchValue('');
+
+          setTimeout(() => {
+            const selectedItem = itemRefs[item.id]?.current;
+            selectedItem?.scrollIntoView({ block: 'center' });
+          }, 0);
+        }
+      },
+    [itemRefs, onItemChange, searchValue.length, setSearchValue],
+  );
+
+  const getItemRef = useCallback(
+    (id: string) => {
+      if (!itemRefs[id]) {
+        itemRefs[id] = createRef();
+      }
+
+      return itemRefs[id];
+    },
+    [itemRefs],
+  );
+
+  const items: ListProps['items'] = useMemo(
+    () =>
+      filteredGroups.map(group => ({
+        label: filteredGroups.length > 1 ? group.heading : undefined,
+        truncate: { variant: truncateVariant },
+        mode: 'secondary',
+        type: 'group',
+        items: group.items.map(item => {
+          const dataTestId = `${itemTestIdPrefix}__item-${item.id}`;
+
+          return {
+            content: {
+              option: item.name,
+              truncate: { variant: truncateVariant },
+            },
+            beforeContent: item.logo ?? (
+              <Avatar appearance={avatarAppearance} size='xs' name={item.name} showTwoSymbols shape='square' />
+            ),
+            afterContent: (
+              <>
+                {item.new && (
+                  <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
+                )}
+
+                {item?.tag}
+
+                {item.actions && item.actions.length > 0 ? (
+                  <GroupSectionItemDroplist
+                    actions={item.actions}
+                    dataTestId={dataTestId}
+                    onItemClick={closeDropdown}
+                  />
+                ) : undefined}
+              </>
+            ),
+            id: item.id,
+            onKeyDown: navigateOutside,
+            onMouseDown: handleItemMouseDown({ item, groupId: group.id }),
+            'data-test-id': dataTestId,
+            itemRef: getItemRef(item.id),
+          };
+        }),
+      })),
+    [
+      avatarAppearance,
+      closeDropdown,
+      filteredGroups,
+      getItemRef,
+      handleItemMouseDown,
+      itemTestIdPrefix,
+      languageCode,
+      navigateOutside,
+      truncateVariant,
+    ],
+  );
 
   return (
     <div className={cn(styles.section, className)} {...extractSupportProps(rest)}>
@@ -184,6 +243,7 @@ export function GroupSection({
       ) : (
         <List
           scroll
+          scrollToSelectedItem
           marker
           size='m'
           selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
@@ -195,49 +255,7 @@ export function GroupSection({
           noResultsState={{
             description: textProvider(languageCode, Texts.NoDataFound),
           }}
-          items={filteredGroups.map(group => ({
-            label: filteredGroups.length > 1 ? group.heading : undefined,
-            truncate: { variant: truncateVariant },
-            mode: 'secondary',
-            type: 'group',
-            items: group.items.map(item => {
-              const dataTestId = `${itemTestIdPrefix}__item-${item.id}`;
-
-              return {
-                content: {
-                  option: item.name,
-                  truncate: { variant: truncateVariant },
-                },
-                beforeContent: item.logo ?? (
-                  <Avatar appearance={avatarAppearance} size='xs' name={item.name} showTwoSymbols shape='square' />
-                ),
-                afterContent: (
-                  <>
-                    {item.new && (
-                      <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
-                    )}
-
-                    {item?.tag}
-
-                    {item.actions && item.actions.length > 0 ? (
-                      <GroupSectionItemDroplist
-                        actions={item.actions}
-                        dataTestId={dataTestId}
-                        onItemClick={closeDropdown}
-                      />
-                    ) : undefined}
-                  </>
-                ),
-                id: item.id,
-                onKeyDown: navigateOutside,
-                onMouseDown: handleItemMouseDown({ item, groupId: group.id }),
-                'data-test-id': dataTestId,
-                itemRef: ((ref: HTMLDivElement) => {
-                  itemRefs.current[item.id] = ref;
-                }) as unknown as RefObject<HTMLElement>,
-              };
-            }),
-          }))}
+          items={items}
           footer={addItem?.handler ? <GroupSectionFooterButton {...addItem} /> : undefined}
         />
       )}
