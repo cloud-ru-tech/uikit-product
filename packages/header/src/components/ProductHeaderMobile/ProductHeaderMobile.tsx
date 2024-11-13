@@ -4,6 +4,7 @@ import {
   BurgerSVG,
   ChevronRightSVG,
   ExitSVG,
+  FeaturedSVG,
   QuestionSVG,
   SettingsSVG,
   ThemeContrastSVG,
@@ -197,7 +198,8 @@ export function ProductHeaderMobile({
     }
 
     if (userMenu) {
-      const { user, indicator, onLogout, onProfileManagementClick, themeMode, profileItemWrapRender } = userMenu;
+      const { user, indicator, onLogout, onWhatsNewClick, onProfileManagementClick, themeMode, profileItemWrapRender } =
+        userMenu;
 
       items.push({
         content: {
@@ -241,6 +243,21 @@ export function ProductHeaderMobile({
           afterContent: <ChevronRightSVG />,
           beforeContent: <ThemeContrastSVG />,
           'data-test-id': 'header__user-menu__theme-mode',
+        });
+      }
+
+      if (onWhatsNewClick) {
+        items.push({
+          content: {
+            option: textProvider(languageCode, Texts.WhatsNew),
+          },
+          beforeContent: <FeaturedSVG />,
+          onClick: () => {
+            onWhatsNewClick();
+            closeUserMenu();
+          },
+          id: 'header__user-menu__whats-new',
+          'data-test-id': 'header__user-menu__whats-new',
         });
       }
 

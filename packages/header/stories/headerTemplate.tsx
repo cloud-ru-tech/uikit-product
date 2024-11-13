@@ -61,6 +61,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showUserMenu: boolean;
   showUserMenuManagement: boolean;
 
+  showUserMenuWhatsNew: boolean;
   showUserMenuLogout: boolean;
   showOrganizationInvite: boolean;
   showOrganizationInvitePopover: boolean;
@@ -222,6 +223,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showUserMenu,
     showUserMenuManagement,
 
+    showUserMenuWhatsNew,
     showUserMenuLogout,
     showNotificationError,
     userMenu,
@@ -424,6 +426,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                   user: userMenu.user ?? DEFAULT_USER,
                   indicator: userMenu.indicator,
                   onProfileManagementClick: showUserMenuManagement ? userMenu.onProfileManagementClick : undefined,
+                  onWhatsNewClick: showUserMenuWhatsNew ? userMenu.onWhatsNewClick : undefined,
                   onLogout: showUserMenuLogout ? userMenu.onLogout : undefined,
                   onAvatarClick: closeInvitesPopover,
                   invites: showOrganizationInvite
@@ -663,6 +666,7 @@ export const ARGS: StoryProps = {
   showUserMenu: true,
   showUserMenuManagement: true,
 
+  showUserMenuWhatsNew: true,
   showUserMenuLogout: true,
   showOrganizationInvite: false,
   showOrganizationInvitePopover: false,
@@ -673,6 +677,7 @@ export const ARGS: StoryProps = {
     user: DEFAULT_USER,
     indicator: 'green',
     onProfileManagementClick: () => {},
+    onWhatsNewClick: () => {},
     onLogout: () => {},
   },
 
@@ -885,6 +890,12 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   userMenu: { table: { disable: true } },
   showUserMenuManagement: {
     name: '[Story]: show user menu -> profile management',
+    type: 'boolean',
+    if: { arg: 'showUserMenu', eq: true },
+  },
+
+  showUserMenuWhatsNew: {
+    name: '[Story]: show user menu -> whats new',
     type: 'boolean',
     if: { arg: 'showUserMenu', eq: true },
   },

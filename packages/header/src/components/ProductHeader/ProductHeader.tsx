@@ -85,6 +85,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'invites'
       | 'onAvatarClick'
       | 'onProfileManagementClick'
+      | 'onWhatsNewClick'
       | 'onLogout'
       | 'themeMode'
       | 'profileItemWrapRender'

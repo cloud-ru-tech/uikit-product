@@ -1,6 +1,6 @@
 import { ReactNode, useMemo, useRef, useState } from 'react';
 
-import { ExitSVG, PlusSVG, SettingsSVG, ThemeContrastSVG } from '@sbercloud/uikit-product-icons';
+import { ExitSVG, FeaturedSVG, PlusSVG, SettingsSVG, ThemeContrastSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { Counter } from '@snack-uikit/counter';
@@ -26,6 +26,7 @@ export type UserMenuProps = {
   onAvatarClick?(): void;
   onProfileManagementClick?(): void;
   onLogout?(): void;
+  onWhatsNewClick?(): void;
   invites?: {
     count?: number;
     showPopover?: boolean;
@@ -56,6 +57,7 @@ export function UserMenu({
   invites,
   profileItemWrapRender,
   partnerInvites,
+  onWhatsNewClick,
 }: UserMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -108,6 +110,21 @@ export function UserMenu({
         beforeContent: <ThemeContrastSVG />,
         'data-test-id': 'header__user-menu__theme-mode',
         items: getThemeModeOptions({ themeMode, languageCode }),
+      });
+    }
+
+    if (onWhatsNewClick) {
+      items.push({
+        content: {
+          option: textProvider(languageCode, Texts.WhatsNew),
+        },
+        beforeContent: <FeaturedSVG />,
+        onClick: () => {
+          onWhatsNewClick();
+          closeUserMenu();
+        },
+        id: 'header__user-menu__whats-new',
+        'data-test-id': 'header__user-menu__whats-new',
       });
     }
 
@@ -189,6 +206,7 @@ export function UserMenu({
     onOrganizationAdd,
     onOrganizationChange,
     onProfileManagementClick,
+    onWhatsNewClick,
     organizations,
     profileItemWrapRender,
     themeMode,
