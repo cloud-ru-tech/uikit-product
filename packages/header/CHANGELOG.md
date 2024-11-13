@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.7 (2024-11-13)</small>
+
+* fix(PDS-967): scroll for menu links categories ([a644bf0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a644bf0))
+
+
+
+
+
 ## <small>2.33.6 (2024-11-08)</small>
 
 * Revert "feat(PDS-955): add favorites prop" ([82c8853](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/82c8853))
