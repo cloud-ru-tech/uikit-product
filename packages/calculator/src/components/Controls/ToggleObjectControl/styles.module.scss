@@ -1,0 +1,13 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: stv.$dimension-1m;
+  gap: stv.$dimension-3m;
+  padding: stv.$dimension-050m;
+}
+
+.tip {
+  max-width: stv.$size-tooltip-container-max-width;
+}

@@ -1,0 +1,15 @@
+.tipWrapper {
+  display: inline-flex;
+  height: 20px;
+  align-items: center;
+}
+
+.tipWrapperInline {
+  display: inline-flex;
+  height: 20px;
+  padding-left: 4px;
+
+  > span {
+    transform: translate(0, 4px);
+  }
+}

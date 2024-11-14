@@ -1,0 +1,13 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.content {
+  padding: stv.$dimension-3m;
+  display: flex;
+  gap: stv.$dimension-3m;
+  flex-direction: column;
+
+  &[data-mobile] {
+    padding: stv.$dimension-2m;
+    gap: stv.$dimension-2m;
+  }
+}

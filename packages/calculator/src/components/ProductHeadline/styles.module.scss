@@ -1,0 +1,62 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.left,
+.right {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.left {
+  gap: stv.$dimension-1m;
+}
+
+.right {
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: stv.$dimension-2m;
+}
+
+.counter {
+  max-width: 140px;
+  min-width: 100px;
+}
+
+.header {
+  border-bottom: solid 1px stv.$sys-neutral-decor-default;
+
+  display: flex;
+  gap: stv.$dimension-2m;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  padding: 0 stv.$dimension-3m;
+
+  height: 88px;
+
+  &[data-mobile] {
+    flex-direction: column;
+
+    height: auto;
+
+    align-items: inherit;
+    justify-content: inherit;
+    padding: stv.$dimension-2m;
+
+    .right {
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .counter {
+      width: 100px;
+    }
+
+    .price,
+    .total {
+      justify-content: flex-start;
+    }
+  }
+}

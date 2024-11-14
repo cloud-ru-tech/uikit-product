@@ -1,0 +1,10 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.footer {
+  color: styles-theme-variables.$sys-neutral-text-light;
+  display: flex;
+  flex-direction: column;
+  gap: styles-theme-variables.$dimension-3m;
+
+  text-align: justify;
+}

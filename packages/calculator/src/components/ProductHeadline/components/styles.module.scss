@@ -1,0 +1,52 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: end;
+  width: 160px;
+
+  .total {
+    color: stv.$sys-neutral-text-main;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    display: flex;
+    gap: stv.$dimension-050m;
+
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .caption {
+    @include stv.composite-var(stv.$sans-body-s);
+    color: stv.$sys-neutral-text-support;
+  }
+
+  &[data-mobile],
+  &[data-mobile] > .total {
+    justify-content: flex-start;
+    text-align: left;
+  }
+}
+
+.sale {
+  color: stv.$sys-red-text-support;
+}
+
+.partnersWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  box-sizing: border-box;
+
+  gap: stv.$dimension-1m;
+
+  &[data-mobile-with-counter] {
+    flex: 1;
+    grid-template-columns: 1fr;
+    padding-right: stv.$dimension-1m;
+    border-right: solid 1px stv.$sys-neutral-decor-default;
+  }
+}

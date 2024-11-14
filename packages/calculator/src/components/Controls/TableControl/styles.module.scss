@@ -1,0 +1,104 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-table' as ft-table;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ft;
+
+.tipWrapper {
+  display: inline-flex;
+  height: 16px;
+  align-items: center;
+}
+
+.tipWrapperInline {
+  display: inline-flex;
+  height: 16px;
+  > span {
+    transform: translate(0, 3px);
+  }
+}
+
+$border: solid ft-table.$border-width-table ft.$sys-neutral-decor-default;
+
+.table {
+  @include ft.composite-var(ft.$sans-body-m);
+
+  border-radius: ft-table.$radius-table-container;
+
+  border: $border;
+  box-sizing: border-box;
+}
+
+.row {
+  @include ft-table.composite-var(ft-table.$table-line-container);
+
+  height: auto;
+  min-height: ft-table.$size-table-line-height;
+
+  display: grid;
+  grid-template-columns: 2fr minmax(186px, 1fr) minmax(160px, 1fr);
+  align-items: center;
+
+  box-sizing: border-box;
+
+  min-width: 500px;
+}
+
+.cell {
+  @include ft-table.composite-var(ft-table.$table-cells);
+
+  box-sizing: border-box;
+
+  display: flex;
+  height: 100%;
+  width: 100%;
+
+  align-items: center;
+
+  color: ft.$sys-neutral-text-main;
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  border-right: $border;
+  border-bottom: $border;
+}
+
+.cell:last-child {
+  border-right: none;
+}
+
+.row.header {
+  .cell {
+    color: ft.$sys-neutral-text-light;
+  }
+}
+
+.row:last-child {
+  .cell {
+    border-bottom: none;
+  }
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-direction: row;
+
+  &[data-mobile] {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.counter {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 24px;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

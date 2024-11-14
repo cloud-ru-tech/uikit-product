@@ -1,0 +1,98 @@
+import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+import { ButtonFilled } from '@snack-uikit/button';
+import { FieldStepper } from '@snack-uikit/fields';
+import { IconPredefined } from '@snack-uikit/icon-predefined';
+import { Tooltip } from '@snack-uikit/tooltip';
+import { Typography } from '@snack-uikit/typography';
+
+import { useCalculatorContext, useProductContext } from '../../contexts';
+import { AnyType, CALCULATOR_TYPE, Product } from '../../types';
+import { getValue, setValue } from '../../utils';
+import { PriceCount } from './components';
+import styles from './styles.module.scss';
+
+type ProductPageHeadlineProps = {
+  product: Product;
+};
+
+export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
+  const { icon, label, enableChangeProductQuantity, freeTier } = product;
+
+  const { value: valueProp, onChange: onChangeProp, price } = useProductContext();
+
+  const value = getValue(valueProp, 'productQuantity');
+
+  const onChange = (newValue: AnyType) => {
+    setValue(valueProp, 'productQuantity', newValue);
+    onChangeProp(valueProp);
+  };
+
+  const {
+    layoutType,
+    pricePeriod,
+    calculatorType,
+    actions: { onConnectClick },
+  } = useCalculatorContext();
+
+  const isPartners = calculatorType === CALCULATOR_TYPE.Partners;
+  const isMobile = layoutType !== LAYOUT_TYPE.Desktop && layoutType !== LAYOUT_TYPE.DesktopSmall;
+  const hasCounter = enableChangeProductQuantity || freeTier;
+  const TitleComponent = isMobile ? Typography.SansTitleL : Typography.SansHeadlineS;
+
+  function ConnectButton() {
+    return !isPartners && product.enableConnectToConsole ? (
+      <Tooltip
+        hoverDelayOpen={600}
+        tip='Вы будете перенаправлены в личный кабинет для подключения выбранной конфигурации'
+      >
+        <ButtonFilled
+          fullWidth={isMobile}
+          label='Подключить'
+          size='m'
+          appearance='primary'
+          onClick={() => onConnectClick?.(product.id, valueProp)}
+        />
+      </Tooltip>
+    ) : null;
+  }
+
+  return (
+    <div className={styles.header} data-mobile={isMobile || undefined}>
+      <div className={styles.left}>
+        <IconPredefined icon={icon} size={isMobile ? 's' : 'm'} decor={false} appearance='primary' />
+
+        <TitleComponent>{label}</TitleComponent>
+      </div>
+
+      <div className={styles.right}>
+        <PriceCount
+          price={price}
+          pricePeriod={pricePeriod}
+          freeTier={freeTier}
+          mobile={isMobile}
+          partners={isPartners}
+          hasCounter={hasCounter}
+        />
+
+        {hasCounter && (
+          <div className={styles.counter}>
+            <FieldStepper
+              size='m'
+              step={1}
+              min={1}
+              max={99}
+              value={value}
+              onChange={onChange}
+              disabled={freeTier}
+              allowMoreThanLimits={false}
+            />
+          </div>
+        )}
+
+        {!isMobile && <ConnectButton />}
+      </div>
+
+      {isMobile && <ConnectButton />}
+    </div>
+  );
+}

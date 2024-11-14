@@ -1,0 +1,38 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterUserAction';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.footerLinks {
+  display: flex;
+
+  gap: styles-theme-variables.$dimension-1m;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: styles-theme-variables.$sys-green-accent-default;
+
+  svg {
+    width: styles-tokens-element.$icon-xs !important; /* stylelint-disable-line declaration-no-important */
+    height: styles-tokens-element.$icon-xs !important; /* stylelint-disable-line declaration-no-important */
+  }
+}
+
+.label {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
+
+  color: styles-theme-variables.$sys-invert-neutral-text-main;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  gap: 4px;
+}

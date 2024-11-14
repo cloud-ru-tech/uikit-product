@@ -1,0 +1,33 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  gap: stv.$dimension-1m;
+  align-items: flex-start;
+
+  .trash {
+    margin-top: stv.$dimension-3m;
+  }
+
+  .trashInvert {
+    margin-top: calc(0px - stv.$dimension-1m);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-3m;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-3m;
+
+  &[data-mobile] {
+    gap: stv.$dimension-2m;
+  }
+}

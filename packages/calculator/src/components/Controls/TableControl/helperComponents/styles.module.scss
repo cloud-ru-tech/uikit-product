@@ -1,0 +1,53 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ft;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields' as ft-fields;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ft-element;
+
+.input {
+  @include ft.composite-var(ft-fields.$fields-single-line-container-s);
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+
+  border-style: solid;
+  border-color: ft.$sys-neutral-decor-default;
+  padding: 0 2px;
+  gap: 0;
+
+  &:hover {
+    background-color: ft.$sys-neutral-background2-level;
+  }
+
+  &:focus-within {
+    @include ft.outline-var(ft-element.$container-focused-m);
+
+    background-color: ft.$sys-neutral-background2-level;
+    border-color: ft.$sys-primary-accent-default;
+    outline-color: ft.$sys-primary-decor-activated;
+  }
+
+  .content {
+    @include ft.composite-var(ft.$sans-body-s);
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: ft.$dimension-050m;
+
+    input:read-only {
+      @include ft.composite-var(ft.$sans-body-s);
+
+      /* stylelint-disable-next-line declaration-no-important */
+      color: ft.$sys-neutral-text-main !important;
+
+      cursor: default;
+    }
+  }
+
+  .postfix {
+    color: ft.$sys-neutral-text-support;
+  }
+}

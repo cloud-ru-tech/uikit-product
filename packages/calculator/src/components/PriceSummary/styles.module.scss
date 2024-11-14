@@ -1,0 +1,103 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.scroll {
+  height: 320px;
+  padding: stv.$dimension-3m;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-1m;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-3m;
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  gap: stv.$dimension-2m;
+
+  padding: 0 stv.$dimension-3m;
+
+  height: 88px;
+  box-sizing: border-box;
+
+  border-bottom: solid 1px stv.$sys-neutral-decor-default;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-2m;
+  padding: stv.$dimension-3m;
+  box-sizing: border-box;
+  border-top: solid 1px stv.$sys-neutral-decor-default;
+}
+
+.caption {
+  @include stv.composite-var(stv.$sans-body-s);
+
+  color: stv.$sys-neutral-text-light;
+}
+
+.priceSummary {
+  background-color: stv.$sys-neutral-background1-level;
+
+  display: flex;
+
+  flex-direction: column;
+
+  flex-shrink: 0;
+
+  &[data-mobile] {
+    .headline {
+      flex-direction: column;
+
+      height: auto;
+
+      align-items: inherit;
+      justify-content: inherit;
+    }
+
+    .headline,
+    .scroll,
+    .footer {
+      padding: stv.$dimension-2m;
+    }
+  }
+}
+
+.total {
+  color: stv.$sys-neutral-text-main;
+
+  display: flex;
+  gap: stv.$dimension-1m;
+
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: hidden;
+
+  * > {
+    min-width: 0;
+  }
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-1m;
+}
+
+.footerHeadline {
+  display: flex;
+  gap: stv.$dimension-1m;
+  align-items: center;
+}

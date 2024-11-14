@@ -1,0 +1,7 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: stv.$dimension-1m;
+}

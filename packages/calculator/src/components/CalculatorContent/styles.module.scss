@@ -1,0 +1,78 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.page {
+  background-color: stv.$sys-neutral-background1-level;
+
+  display: flex;
+  flex-direction: column;
+
+  flex-shrink: 0;
+
+  min-height: 500px;
+}
+
+.page,
+.pageWrapper {
+  width: 800px;
+}
+
+.content {
+  padding: stv.$dimension-3m;
+  display: flex;
+  gap: stv.$dimension-3m;
+  flex-direction: column;
+}
+
+.priceSummary {
+  width: 384px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 24px;
+}
+
+.calculator {
+  box-sizing: border-box;
+  position: relative;
+
+  color: stv.$sys-neutral-text-main;
+
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 0;
+
+  display: flex;
+
+  gap: stv.$dimension-3m;
+
+  align-items: flex-start;
+
+  &:not(&[data-layout-type='desktop']) {
+    flex-direction: column;
+
+    .page,
+    .pageWrapper {
+      width: 100%;
+    }
+
+    .priceSummary {
+      width: 100%;
+      position: inherit;
+      top: inherit;
+    }
+  }
+}
+
+.footer {
+  color: stv.$sys-neutral-text-light;
+  margin-top: stv.$dimension-3m;
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-3m;
+
+  &[data-mobile] {
+    margin-top: stv.$dimension-2m;
+  }
+}
+
+.disclaimer {
+  margin-top: stv.$dimension-3m;
+}

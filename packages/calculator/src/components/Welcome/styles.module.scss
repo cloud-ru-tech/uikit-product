@@ -1,0 +1,64 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.welcome {
+  background-color: stv.$sys-neutral-background1-level;
+
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 0;
+
+  padding: stv.$dimension-6m stv.$dimension-3m;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: stv.$dimension-3m;
+
+  min-height: 500px;
+
+  .image {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 550px;
+    height: 400px;
+  }
+
+  .headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: stv.$sys-neutral-text-main;
+
+    gap: stv.$dimension-3m;
+  }
+
+  .headline,
+  .action {
+    /* stylelint-disable-next-line declaration-property-value-allowed-list */
+    z-index: 1;
+  }
+
+  &[data-mobile] {
+    justify-content: flex-start;
+
+    padding: stv.$dimension-4m stv.$dimension-3m;
+
+    .action {
+      width: 100%;
+    }
+
+    .image {
+      width: 350px;
+      height: 250px;
+      bottom: 0px;
+      right: 0px;
+    }
+  }
+}

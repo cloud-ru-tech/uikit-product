@@ -1,0 +1,110 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-accordion' as accordion;
+
+.description {
+  @include accordion.composite-var(accordion.$sans-body-m);
+
+  color: accordion.$sys-neutral-text-support;
+}
+
+.titleLayout {
+  @include accordion.composite-var(accordion.$sans-title-m);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  flex-grow: 0;
+  overflow: hidden;
+
+  color: accordion.$sys-neutral-text-main;
+}
+
+.headline {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+
+  justify-content: space-between;
+}
+
+.switchRowWrapper {
+  display: inline-flex;
+}
+
+.switchRow {
+  @include accordion.composite-var(accordion.$collapse-block-container-primary);
+  @include accordion.composite-var(accordion.$collapse-block, 'container', 'shape-round');
+
+  box-sizing: border-box;
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border: solid 1px accordion.$sys-neutral-decor-default;
+
+  background-color: accordion.$sys-neutral-background1-level;
+
+  &:focus-within,
+  &:hover {
+    background-color: accordion.$sys-neutral-background2-level;
+  }
+
+  &:focus-visible {
+    @include accordion.outline-var(element.$container-focused-s);
+
+    outline-color: accordion.$sys-available-complementary;
+  }
+
+  * {
+    &[data-pointer] {
+      cursor: pointer;
+    }
+  }
+
+  &[data-loading] {
+    cursor: wait;
+
+    * {
+      &[data-pointer] {
+        cursor: wait;
+      }
+    }
+  }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    background-color: transparent;
+
+    &::before {
+      background-color: accordion.$sys-neutral-accent-default;
+      opacity: 0.08;
+    }
+
+    .titleLayout,
+    .description {
+      color: accordion.$sys-neutral-text-disabled;
+    }
+
+    * {
+      &[data-pointer] {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &[data-mobile] {
+    padding: 16px;
+  }
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+  gap: 4px;
+}
+
+.wrap {
+  display: flex;
+}

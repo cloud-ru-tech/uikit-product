@@ -47,8 +47,8 @@
     "@cloud-ru/ft-storybook-deps-graph-addon": "2.0.3",
     "@cloud-ru/ft-storybook-readme-addon": "2.0.3",
     "@geometricpanda/storybook-addon-badges": "2.0.5",
-    "@sbercloud/figma-tokens-cloud-platform": "16.0.1",
-    "@sbercloud/figma-tokens-mlspace": "16.0.1",
+    "@sbercloud/figma-tokens-cloud-platform": "16.1.0",
+    "@sbercloud/figma-tokens-mlspace": "16.1.0",
     "@sbercloud/ft-all-linters-pack": "4.1.9",
     "@sbercloud/ft-storybook-deps-table-addon": "0.1.1",
     "@snack-uikit/alert": "0.15.3",
@@ -148,5 +148,8 @@
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@sbercloud/ft-copy-to-clipboard": "3.0.1"
+  }
 }

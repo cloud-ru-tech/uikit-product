@@ -1,0 +1,104 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.calculator {
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-2m;
+  min-height: 400px;
+  padding-bottom: stv.$dimension-3m;
+}
+
+.contentHeadline {
+  @include stv.composite-var(stv.$sans-title-l);
+}
+
+.contentCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: stv.$dimension-2m;
+}
+
+.categoriesWrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin-top: stv.$dimension-2m;
+}
+
+.selectCard {
+  display: flex;
+  padding: stv.$dimension-3m;
+  border: solid 1px stv.$sys-neutral-decor-default;
+}
+
+.card {
+  width: 280px;
+}
+
+.modal {
+  /* stylelint-disable-next-line declaration-no-important */
+  width: 1298px !important;
+
+  max-width: calc(100dvw - 2 * stv.$dimension-3m);
+
+  color: stv.$sys-neutral-text-main;
+}
+
+.sidebar {
+  padding-bottom: stv.$dimension-3m;
+}
+
+.wrapper {
+  position: relative;
+  min-height: 100%;
+
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 0;
+  display: grid;
+  grid-template-columns: 256px 1fr;
+
+  gap: stv.$dimension-4m;
+
+  &[data-mobile] {
+    grid-template-columns: 1fr;
+    gap: stv.$dimension-1m;
+    min-height: inherit;
+
+    .card {
+      width: 100%;
+      height: inherit;
+    }
+    .content {
+      min-height: inherit;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 0;
+      left: 0;
+      background-color: stv.$sys-neutral-background1-level;
+      padding: stv.$dimension-3m 0 stv.$dimension-1m;
+      transform: translateY(calc(0px - stv.$dimension-3m));
+
+      /* stylelint-disable-next-line declaration-property-value-allowed-list */
+      z-index: 1;
+    }
+
+    .contentCards {
+      margin: 0 stv.$dimension-050m;
+    }
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-050m;
+}
+
+.tag {
+  margin-top: stv.$dimension-050m;
+}

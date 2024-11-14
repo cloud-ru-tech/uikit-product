@@ -1,0 +1,69 @@
+{
+  "name": "@sbercloud/uikit-product-calculator",
+  "title": "Calculator",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/calculator",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/calculator"
+  },
+  "author": "Nikita Ershov <niershov@cloud.ru>",
+  "contributors": [
+    "Nikita Ershov <niershov@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-icons": "10.2.4",
+    "@sbercloud/uikit-product-mobile-accordion": "0.3.7",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.6.9",
+    "@sbercloud/uikit-product-mobile-fields": "0.6.9",
+    "@sbercloud/uikit-product-mobile-modal": "0.7.9",
+    "@sbercloud/uikit-product-utils": "3.8.3",
+    "@snack-uikit/alert": "0.15.3",
+    "@snack-uikit/button": "0.19.3",
+    "@snack-uikit/card": "0.16.1",
+    "@snack-uikit/carousel": "0.4.4",
+    "@snack-uikit/chips": "0.21.0",
+    "@snack-uikit/divider": "3.2.1",
+    "@snack-uikit/fields": "0.35.0",
+    "@snack-uikit/input-private": "4.3.0",
+    "@snack-uikit/icon-predefined": "0.7.1",
+    "@snack-uikit/list": "0.21.6",
+    "@snack-uikit/modal": "0.14.4",
+    "@snack-uikit/scroll": "0.9.1",
+    "@snack-uikit/pagination": "0.9.3",
+    "@snack-uikit/toggles": "0.13.1",
+    "@snack-uikit/tooltip": "0.15.1",
+    "@snack-uikit/tag": "0.11.2",
+    "@snack-uikit/truncate-string": "0.6.1",
+    "@snack-uikit/typography": "0.8.1",
+    "@snack-uikit/utils": "3.5.0",
+    "swr": "2.2.5",
+    "lodash": "4.17.21",
+    "classnames": "2.5.1",
+    "deepmerge": "4.3.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.17.13"
+  },
+  "peerDependencies": {}
+}

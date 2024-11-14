@@ -1,0 +1,14 @@
+export const CONTROL = {
+  Object: 'object',
+  Array: 'array',
+  ToggleObject: 'toggle-object',
+  SelectSingle: 'select-single',
+  SelectMultiple: 'select-multiple',
+  Segmented: 'segmented',
+  Carousel: 'carousel',
+  Toggle: 'toggle',
+  ToggleCards: 'toggle-cards',
+  Stepper: 'stepper',
+  Alert: 'alert',
+  Table: 'table',
+} as const;

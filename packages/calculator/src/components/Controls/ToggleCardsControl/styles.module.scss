@@ -1,0 +1,40 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.carousel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  gap: stv.$dimension-1m;
+
+  .headline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .label {
+      @include stv.composite-var(stv.$sans-label-l);
+      color: stv.$sys-neutral-text-support;
+      .tip {
+        transform: translateY(stv.$dimension-050m);
+        margin-left: stv.$dimension-050m;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 stv.$dimension-2m;
+    list-style-type: disc;
+  }
+
+  li {
+    list-style-type: disc;
+  }
+}
+
+.group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: stv.$dimension-2m;
+}

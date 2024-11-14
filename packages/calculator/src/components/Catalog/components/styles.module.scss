@@ -1,0 +1,35 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-card' as st-card;
+
+$sizes: 's', 'm', 'l';
+
+.titleLayout {
+  @include stv.composite-var(st-card.$card, 'content', 's', 'header');
+
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.contentLayout {
+  overflow: hidden;
+  display: block;
+  max-width: 100%;
+}
+
+.title {
+  display: block;
+  max-width: 100%;
+  color: stv.$sys-neutral-text-main;
+}
+
+.metadata {
+  max-width: 100%;
+  color: stv.$sys-neutral-text-light;
+}
+
+.description {
+  max-width: 100%;
+  color: stv.$sys-neutral-text-support;
+}

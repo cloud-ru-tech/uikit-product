@@ -1,0 +1,16 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.hintWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  box-sizing: border-box;
+  padding: stv.$dimension-050m;
+}
+
+.hint {
+  @include stv.composite-var(stv.$sans-body-m);
+
+  color: stv.$sys-neutral-text-support;
+}
