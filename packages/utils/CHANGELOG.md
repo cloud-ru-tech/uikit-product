@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>3.8.3 (2024-11-14)</small>
+
+* fix(FF-00): fix on ssr ([58dff37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/58dff37))
+
+
+
+
+
 ## <small>3.8.2 (2024-11-07)</small>
 
 * fix(FF-5801): remove linaria from repo ([f9e6b49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9e6b49))

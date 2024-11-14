@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.8 (2024-11-14)</small>
+
+* deps(FF-5678): up deps classnames/uncontrollable ([17b3e6e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/17b3e6e))
+
+
+
+
+
 ## <small>2.33.7 (2024-11-13)</small>
 
 * fix(PDS-967): scroll for menu links categories ([a644bf0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a644bf0))
