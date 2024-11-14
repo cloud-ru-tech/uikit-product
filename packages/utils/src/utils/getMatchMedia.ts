@@ -27,4 +27,4 @@ const MEDIA_QUERIES = Object.values(QueriesTitle).reduce(
 export const MEDIA_QUERY_LIST = Object.entries(MEDIA_QUERIES) as Array<[QueriesTitle, MediaQueryList]>;
 
 export const getMatchMedia = (): MatchMedia =>
-  MEDIA_QUERY_LIST.reduce((acc, [key, q]) => ({ ...acc, [key]: q.matches }), INITIAL_QUERIES_VALUE);
+  MEDIA_QUERY_LIST.reduce((acc, [key, q]) => ({ ...acc, [key]: q?.matches || false }), INITIAL_QUERIES_VALUE);
