@@ -35,11 +35,11 @@
     "@sbercloud/uikit-product-mobile-drawer": "0.6.4",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.3",
     "@sbercloud/uikit-product-utils": "3.8.2",
-    "@snack-uikit/button": "0.19.1",
+    "@snack-uikit/button": "0.19.3",
     "@snack-uikit/drawer": "0.10.1",
-    "@snack-uikit/link": "0.15.0",
-    "@snack-uikit/modal": "0.14.1",
-    "@snack-uikit/typography": "0.8.0",
+    "@snack-uikit/link": "0.15.1",
+    "@snack-uikit/modal": "0.14.4",
+    "@snack-uikit/typography": "0.8.1",
     "@snack-uikit/utils": "3.5.0",
     "classnames": "2.5.1"
   }

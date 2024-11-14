@@ -37,16 +37,16 @@
     "@sbercloud/uikit-product-switch-row": "0.5.4",
     "@sbercloud/uikit-product-toggles-predefined": "0.7.3",
     "@sbercloud/uikit-product-utils": "3.8.2",
-    "@snack-uikit/button": "0.19.1",
-    "@snack-uikit/carousel": "0.4.2",
-    "@snack-uikit/fields": "0.32.1",
+    "@snack-uikit/button": "0.19.3",
+    "@snack-uikit/carousel": "0.4.4",
+    "@snack-uikit/fields": "0.32.5",
     "@snack-uikit/icons": "0.24.0",
     "@snack-uikit/markdown": "0.3.0",
-    "@snack-uikit/modal": "0.14.1",
+    "@snack-uikit/modal": "0.14.4",
     "@snack-uikit/pagination": "0.9.0",
     "@snack-uikit/scroll": "0.8.0",
     "@snack-uikit/skeleton": "0.5.0",
     "@snack-uikit/truncate-string": "0.6.0",
-    "@snack-uikit/typography": "0.6.3"
+    "@snack-uikit/typography": "0.8.1"
   }
 }

@@ -35,7 +35,7 @@
     "@sbercloud/ft-copy-to-clipboard": "3.0.1",
     "@sbercloud/uikit-product-icons": "10.2.2",
     "@sbercloud/uikit-product-utils": "3.8.2",
-    "@snack-uikit/button": "0.19.1",
+    "@snack-uikit/button": "0.19.3",
     "@snack-uikit/truncate-string": "0.6.0",
     "@snack-uikit/utils": "3.5.0",
     "classnames": "2.5.1"

@@ -35,8 +35,8 @@
     "@sbercloud/uikit-product-info-row": "0.8.2",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.3",
     "@sbercloud/uikit-product-utils": "3.8.2",
-    "@snack-uikit/button": "0.19.1",
-    "@snack-uikit/divider": "3.2.0",
+    "@snack-uikit/button": "0.19.3",
+    "@snack-uikit/divider": "3.2.1",
     "@snack-uikit/skeleton": "0.5.0",
     "@snack-uikit/utils": "3.5.0",
     "classnames": "2.5.1"

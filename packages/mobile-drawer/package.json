@@ -34,9 +34,9 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "10.2.2",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.3",
-    "@snack-uikit/button": "0.19.1",
-    "@snack-uikit/scroll": "0.9.0",
-    "@snack-uikit/typography": "0.8.0",
+    "@snack-uikit/button": "0.19.3",
+    "@snack-uikit/scroll": "0.9.1",
+    "@snack-uikit/typography": "0.8.1",
     "@snack-uikit/utils": "3.5.0",
     "classnames": "2.5.1",
     "rc-drawer": "6.5.2",
