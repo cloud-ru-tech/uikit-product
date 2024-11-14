@@ -56,7 +56,7 @@
     "@snack-uikit/skeleton": "0.5.1",
     "@snack-uikit/status": "0.7.1",
     "@snack-uikit/tooltip": "0.15.1",
-    "@snack-uikit/truncate-string": "0.6.0",
+    "@snack-uikit/truncate-string": "0.6.1",
     "@snack-uikit/typography": "0.8.1",
     "@snack-uikit/utils": "3.5.0",
     "classnames": "2.5.1",

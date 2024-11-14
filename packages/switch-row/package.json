@@ -35,7 +35,7 @@
     "@sbercloud/uikit-product-utils": "3.8.3",
     "@snack-uikit/toggles": "0.13.1",
     "@snack-uikit/tooltip": "0.15.1",
-    "@snack-uikit/truncate-string": "0.6.0",
+    "@snack-uikit/truncate-string": "0.6.1",
     "classnames": "2.5.1"
   }
 }
