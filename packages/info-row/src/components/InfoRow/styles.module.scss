@@ -48,6 +48,7 @@ $gap: styles-theme-variables.$dimension-3m;
   flex: 1;
   justify-content: flex-start;
   align-items: flex-start;
+  overflow-wrap: anywhere;
 }
 
 .rowActions {
