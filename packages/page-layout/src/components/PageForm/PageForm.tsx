@@ -24,6 +24,7 @@ export const BUTTON_PRIMARY_VARIANT = {
   Save: 'save',
   Rent: 'rent',
   Send: 'send',
+  Restore: 'restore',
 } as const;
 
 export const BUTTON_SECONDARY_VARIANT = {

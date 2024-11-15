@@ -8,6 +8,7 @@ export enum Texts {
   Back = 'back',
   Rent = 'rent',
   Send = 'send',
+  Restore = 'restore',
 }
 
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -19,6 +20,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Back]: 'Назад',
     [Texts.Rent]: 'Арендовать',
     [Texts.Send]: 'Отправить',
+    [Texts.Restore]: 'Восстановить',
   },
   [LanguageCodeType.enGB]: {
     [Texts.Continue]: 'Continue',
@@ -28,6 +30,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Back]: 'Back',
     [Texts.Rent]: 'Rent',
     [Texts.Send]: 'Send',
+    [Texts.Restore]: 'Restore',
   },
 };
 
