@@ -63,13 +63,14 @@
     "@snack-uikit/locale": "0.10.0",
     "@snack-uikit/modal": "0.14.4",
     "@snack-uikit/search": "0.10.6",
-    "@snack-uikit/status": "0.7.1",
     "@snack-uikit/slider": "0.3.2",
+    "@snack-uikit/status": "0.7.1",
     "@snack-uikit/stepper": "0.8.3",
-    "@snack-uikit/toaster": "0.8.3",
-    "@snack-uikit/tooltip": "0.15.1",
-    "@snack-uikit/tag": "0.11.2",
     "@snack-uikit/tabs": "0.8.3",
+    "@snack-uikit/tag": "0.11.2",
+    "@snack-uikit/toaster": "0.8.3",
+    "@snack-uikit/toggles": "0.13.1",
+    "@snack-uikit/tooltip": "0.15.1",
     "@storybook/addon-actions": "8.3.6",
     "@storybook/addon-designs": "8.0.3",
     "@storybook/addon-essentials": "8.3.6",
@@ -134,6 +135,10 @@
     "typescript": "5.5.4",
     "typescript-plugin-css-modules": "5.1.0",
     "webpack": "5.95.0"
+  },
+  "optionalDependencies": {
+    "@nx/nx-linux-x64-musl": "19.1.1",
+    "@resvg/resvg-js-linux-x64-gnu": "2.6.0"
   },
   "overrides": {
     "react": "18.2.0",
