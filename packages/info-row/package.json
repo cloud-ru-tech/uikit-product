@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-info-row",
   "title": "Info Row",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "sideEffects": [
     "*.css",
     "*.woff",

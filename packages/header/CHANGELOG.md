@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.10 (2024-11-17)</small>
+
+* deps(FF-00): up deps ([9e2378c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e2378c))
+
+
+
+
+
 ## <small>2.33.9 (2024-11-14)</small>
 
 * fix(PDS-991): scroll to selected item in project selector ([9e9fe31](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e9fe31))
