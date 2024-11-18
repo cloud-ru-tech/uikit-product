@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.6 (2024-11-18)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-info-row@0.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/info-row/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.5.5 (2024-11-17)</small>
 
 * deps(FF-00): up deps ([9e2378c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e2378c))

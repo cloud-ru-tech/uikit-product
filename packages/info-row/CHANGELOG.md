@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.8.5 (2024-11-18)</small>
+
+* fix(CORESERV-5760): add overflow anywhere to InfoRow component ([634ea19](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/634ea19))
+
+
+
+
+
 ## <small>0.8.4 (2024-11-17)</small>
 
 * deps(FF-00): up deps ([9e2378c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e2378c))
