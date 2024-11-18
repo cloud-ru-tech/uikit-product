@@ -1,11 +1,13 @@
 import { Fragment, MouseEventHandler } from 'react';
 
 import { formatNumber } from '@sbercloud/ft-formatters';
-import { CostControlSVG } from '@sbercloud/uikit-product-icons';
+import { CostControlSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { Link } from '@snack-uikit/link';
 import { SkeletonText } from '@snack-uikit/skeleton';
+import { Tag } from '@snack-uikit/tag';
 
 import { textProvider, Texts } from '../../../../helpers';
 import { PopoverContentProps } from '../../types';
@@ -22,11 +24,17 @@ export function PopoverContent({
   balance,
   eyeButton,
   bonusGrants = [],
+  starterGrant,
 }: PopoverContentProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const handleLinkClick: MouseEventHandler<HTMLAnchorElement> = event => {
     link?.onClick?.(event);
+    onClose();
+  };
+
+  const handleGetStarterGrantClick = () => {
+    starterGrant?.onGetGrantClick?.();
     onClose();
   };
 
@@ -42,7 +50,7 @@ export function PopoverContent({
   if (bonusGrants.length !== 0) {
     bonusGrantsDesc = '';
   }
-  const bonusGrantActionButtonText = textProvider(languageCode, Texts.FinancialMenuBonesesAction);
+  const bonusGrantActionButtonText = textProvider(languageCode, Texts.FinancialMenuBonusesAction);
 
   const titleText = `${textProvider(languageCode, Texts.FinancialMenuTitle)} ❯`;
 
@@ -53,21 +61,26 @@ export function PopoverContent({
           <div className={styles.titleLine}>
             <div className={styles.titleLeft}>
               <CostControlSVG />
+
               <Link {...link} onClick={handleLinkClick} text={titleText} size='l' appearance='neutral' />
             </div>
+
             <EyeButton {...eyeButton} />
           </div>
         </div>
 
         <div className={styles.content}>
           <FinanceInfoRow {...balance} value={balanceValue} actionButtonText={balanceActionButtonText} />
+
           <Divider className={styles.divider} />
+
           <FinanceInfoRow
             {...bonuses}
             value={bonusGrantValue}
             actionButtonText={bonusGrantActionButtonText}
             description={bonusGrantsDesc}
           />
+
           {bonusGrants.map(grant => (
             <Fragment key={grant.id}>
               <Divider className={styles.grantDivider} />
@@ -75,6 +88,26 @@ export function PopoverContent({
             </Fragment>
           ))}
         </div>
+
+        {starterGrant?.isAvailable && (
+          <ButtonFunction
+            className={styles.starterGrant}
+            size='xs'
+            appearance='primary'
+            label={textProvider(languageCode, Texts.FinancialMenuGetStarterGrant)}
+            icon={<PlusSVG />}
+            onClick={handleGetStarterGrantClick}
+          />
+        )}
+
+        {starterGrant?.inProcess && (
+          <Tag
+            className={styles.starterGrant}
+            size='xs'
+            appearance='blue'
+            label={textProvider(languageCode, Texts.FinancialMenuStarterGrantIsOnTheWay)}
+          />
+        )}
       </SkeletonText>
     </div>
   );

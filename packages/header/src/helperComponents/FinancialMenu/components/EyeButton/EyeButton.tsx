@@ -18,7 +18,7 @@ export function EyeButton({ onClick, dataVisible }: EyeButtonType) {
   const icon = dataVisible ? <EyeClosedSVG /> : <EyeSVG />;
   const tip = textProvider(
     languageCode,
-    dataVisible ? Texts.FinancialMenuEyeButtonDavaVisibleTip : Texts.FinancialMenuEyeButtonDataHiddenTip,
+    dataVisible ? Texts.FinancialMenuEyeButtonDataVisibleTip : Texts.FinancialMenuEyeButtonDataHiddenTip,
   );
 
   return (

@@ -18,6 +18,12 @@ export type FinanceInfoRowType = {
   onOpenChange?(isOpen: boolean): void;
 };
 
+export type StarterGrant = {
+  isAvailable?: boolean;
+  onGetGrantClick?(): void;
+  inProcess?: boolean;
+};
+
 export type PopoverContentProps = {
   loading?: boolean;
   onClose(): void;
@@ -31,4 +37,5 @@ export type PopoverContentProps = {
     onClick?: MouseEventHandler<HTMLButtonElement>;
   };
   bonusGrants?: GrantProps[];
+  starterGrant?: StarterGrant;
 };

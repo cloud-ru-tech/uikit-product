@@ -1,5 +1,6 @@
 import { useArgs, useState } from '@storybook/preview-api';
 import { ArgTypes } from '@storybook/react';
+import { StarterGrant } from 'header/src/helperComponents/FinancialMenu/types';
 import { useEffect, useMemo } from 'react';
 
 import {
@@ -52,6 +53,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   financialMenuBonusesLabel: string;
   financialMenuBonusesDescription: string;
   financialMenuBonusGrants: NonNullable<FinancialMenuProps['content']>['bonusGrants'];
+  financialMenuStarterGrant: StarterGrant;
   showSettings: boolean;
   showHelpMenu: boolean;
   showNotifications: boolean;
@@ -212,6 +214,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     financialMenuBonusesLabel,
     financialMenuBonusesDescription,
     financialMenuBonusGrants,
+    financialMenuStarterGrant,
 
     showSettings,
     showHelpMenu,
@@ -387,6 +390,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                       description: financialMenuBonusesDescription,
                     },
                     bonusGrants: financialMenuBonusGrants,
+                    starterGrant: financialMenuStarterGrant,
                   },
                 }
               : undefined
@@ -597,6 +601,11 @@ export const ARGS: StoryProps = {
       status: 'BONUS_GRANT_STATUS_NOT_STARTED',
     },
   ],
+  financialMenuStarterGrant: {
+    isAvailable: true,
+    inProcess: false,
+    onGetGrantClick: () => {},
+  },
 
   showSettings: true,
 
@@ -985,6 +994,11 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
     type: 'string',
     if: { arg: 'showFinancialMenu', eq: true },
   },
+  financialMenuBonusesTipMoreButtonLink: {
+    name: '[Story]: financial menu -> bonuses tip more link',
+    type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
   financialMenuBonusesLabel: {
     name: '[Story]: financial menu -> bonuses label',
     type: 'string',
@@ -993,6 +1007,14 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   financialMenuBonusesDescription: {
     name: '[Story]: financial menu -> bonuses description',
     type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuBonusGrants: {
+    name: '[Story]: financial menu -> grants list',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuStarterGrant: {
+    name: '[Story]: financial menu -> starter grant',
     if: { arg: 'showFinancialMenu', eq: true },
   },
 
