@@ -1,10 +1,13 @@
 import { MouseEventHandler } from 'react';
 
 import { formatNumber } from '@sbercloud/ft-formatters';
+import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { ButtonFunction } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { SkeletonText } from '@snack-uikit/skeleton';
+import { Tag } from '@snack-uikit/tag';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../../../helpers';
@@ -22,11 +25,17 @@ export function PopoverContentMobile({
   bonuses,
   balance,
   eyeButton,
+  starterGrant,
 }: PopoverContentProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const handleLinkClick: MouseEventHandler<HTMLAnchorElement> = event => {
     link?.onClick?.(event);
+    onClose();
+  };
+
+  const handleGetStarterGrantClick = () => {
+    starterGrant?.onGetGrantClick?.();
     onClose();
   };
 
@@ -66,6 +75,24 @@ export function PopoverContentMobile({
 
         <PopoverRowMobile {...balance} label={balance.label} value={balanceValue} />
         <PopoverRowMobile {...bonuses} label={bonuses.label} value={bonusGrantValue} />
+
+        {starterGrant?.isAvailable && (
+          <ButtonFunction
+            size='xs'
+            appearance='primary'
+            label={textProvider(languageCode, Texts.FinancialMenuGetStarterGrant)}
+            icon={<PlusSVG />}
+            onClick={handleGetStarterGrantClick}
+          />
+        )}
+
+        {starterGrant?.inProcess && (
+          <Tag
+            size='xs'
+            appearance='blue'
+            label={textProvider(languageCode, Texts.FinancialMenuStarterGrantIsOnTheWay)}
+          />
+        )}
       </SkeletonText>
     </div>
   );
