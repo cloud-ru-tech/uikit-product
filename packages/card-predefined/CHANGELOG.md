@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.6 (2024-11-21)</small>
+
+* fix(PDS-955): allow to click on favorite when link is provided ([05461d8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/05461d8))
+
+
+
+
+
 ## <small>0.7.5 (2024-11-14)</small>
 
 * deps(FF-5678): up deps classnames/uncontrollable ([17b3e6e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/17b3e6e))

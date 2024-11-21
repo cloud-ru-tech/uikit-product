@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.11 (2024-11-21)</small>
+
+* feat(PDS-955): bring back favorites ([e2d651a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e2d651a))
+
+
+
+
+
 ## <small>2.33.10 (2024-11-17)</small>
 
 * deps(FF-00): up deps ([9e2378c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e2378c))
