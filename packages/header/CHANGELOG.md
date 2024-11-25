@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.13 (2024-11-25)</small>
+
+* feat(PDS-976): add tag for organizations, popupText and title ([0680985](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0680985))
+
+
+
+
+
 ## <small>2.33.12 (2024-11-25)</small>
 
 ### Only dependencies have been changed
