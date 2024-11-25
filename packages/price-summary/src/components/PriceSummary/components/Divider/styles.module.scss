@@ -1,0 +1,8 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.divider {
+  width: 100%;
+  height: 0;
+  border-top: 1px dashed styles-theme-variables.$sys-neutral-decor-default;
+  margin: styles-theme-variables.$dimension-050m 0;
+}

@@ -1,0 +1,17 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.discountGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: styles-theme-variables.$dimension-1m;
+  color: styles-theme-variables.$sys-neutral-text-support;
+}
+
+.priceCell {
+  justify-self: end;
+}
+
+.discountCell {
+  justify-self: end;
+  color: styles-theme-variables.$sys-red-text-support;
+}

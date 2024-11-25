@@ -1,0 +1,39 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.itemGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  &[data-discount='true'] {
+    margin-bottom: styles-theme-variables.$dimension-050m;
+  }
+}
+
+.labelCell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.priceCell {
+  justify-self: end;
+}
+
+.labelCell,
+.priceCell,
+.percentCell {
+  &[data-secondary='true'] {
+    color: styles-theme-variables.$sys-neutral-text-light;
+  }
+}
+
+.discountCell {
+  justify-self: end;
+  color: styles-theme-variables.$sys-red-accent-default;
+
+  &[data-secondary='true'] {
+    color: styles-theme-variables.$sys-red-text-disabled;
+  }
+}

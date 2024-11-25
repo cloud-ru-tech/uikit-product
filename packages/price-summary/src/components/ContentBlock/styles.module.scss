@@ -1,0 +1,14 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.loadingBlock {
+  display: flex;
+  justify-content: center;
+  padding: styles-theme-variables.$dimension-050m;
+}
+
+.dataErrorBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: styles-theme-variables.$sys-neutral-text-light;
+}

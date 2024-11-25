@@ -1,0 +1,16 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-050m;
+}
+
+.vat {
+  color: styles-theme-variables.$sys-neutral-text-light;
+}
+
+.promoBadge {
+  display: flex;
+}

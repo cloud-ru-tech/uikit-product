@@ -1,0 +1,25 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.priceSummarySmall {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: styles-theme-variables.$dimension-050m;
+  padding: styles-theme-variables.$dimension-2m;
+  border-radius: styles-theme-variables.$dimension-1m;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  color: styles-theme-variables.$sys-neutral-text-main;
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-050m;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: styles-theme-variables.$sys-neutral-text-light;
+}

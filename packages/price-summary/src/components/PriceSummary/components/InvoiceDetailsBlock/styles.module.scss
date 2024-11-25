@@ -1,0 +1,19 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.main {
+  border-radius: styles-theme-variables.$dimension-050m;
+  padding: styles-theme-variables.$dimension-050m styles-theme-variables.$dimension-1m;
+  border: 1px dashed styles-theme-variables.$sys-neutral-decor-default;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

@@ -1,0 +1,18 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: styles-theme-variables.$sys-neutral-text-light;
+}
+
+.icon {
+  flex-shrink: 0;
+}

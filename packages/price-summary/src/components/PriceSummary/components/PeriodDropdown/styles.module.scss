@@ -1,0 +1,18 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.period {
+  display: flex;
+  align-items: center;
+  gap: styles-theme-variables.$dimension-1m;
+
+  &[data-single] {
+    gap: styles-theme-variables.$dimension-050m;
+  }
+}
+
+.single {
+  min-height: styles-theme-variables.$size-button-s;
+  display: flex;
+  align-items: center;
+  color: styles-theme-variables.$sys-neutral-text-light;
+}
