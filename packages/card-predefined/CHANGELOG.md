@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.7 (2024-11-25)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@10.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.7.6 (2024-11-21)</small>
 
 * fix(PDS-955): allow to click on favorite when link is provided ([05461d8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/05461d8))

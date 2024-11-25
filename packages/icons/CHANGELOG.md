@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>10.2.4 (2024-11-25)</small>
+
+* feat(PDS-1051): new logo icons ([60a1c6f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/60a1c6f))
+
+
+
+
+
 ## <small>10.2.3 (2024-11-14)</small>
 
 ### Only dependencies have been changed

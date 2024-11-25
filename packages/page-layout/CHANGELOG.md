@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.16.8 (2024-11-25)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-copy-line@0.7.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/copy-line/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@10.2.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.16.7 (2024-11-20)</small>
 
 * feat(EVOSCV-1945): added restore submitFormBtn type ([8824604](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8824604))
