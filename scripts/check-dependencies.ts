@@ -9,7 +9,14 @@ const options = {
   ignoreBinPackage: false,
   skipMissing: false,
   ignorePatterns: ['stories', 'dist', '__tests__'],
-  ignoreMatches: ['react', 'react-dom', '@sbercloud/figma-tokens-cloud-platform', '@sbercloud/figma-tokens-mlspace'],
+  ignoreMatches: [
+    'react',
+    'react-dom',
+    '@sbercloud/figma-tokens-cloud-platform',
+    '@sbercloud/figma-tokens-mlspace',
+    '@sbercloud/figma-tokens-admin',
+    '@sbercloud/figma-tokens-web',
+  ],
 };
 
 const packages = `../packages/*`;

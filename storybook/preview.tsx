@@ -10,7 +10,6 @@ import { GlobalTypes, Parameters } from '@storybook/csf';
 import { Preview } from '@storybook/react';
 import { themes, ThemeVars } from '@storybook/theming';
 import { FormProvider, useForm } from 'react-hook-form';
-import { useDarkMode } from 'storybook-dark-mode';
 
 import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
 import { Alert } from '@snack-uikit/alert';
@@ -18,7 +17,7 @@ import { Link } from '@snack-uikit/link';
 import { LocaleProvider } from '@snack-uikit/locale';
 
 import { ConfigProvider } from '../packages/utils/src';
-import { BADGE, Brand, BRAND_TO_THEME_MAP, DEFAULT_BRAND_COLORS_MAP, DEFAULT_BRAND_MAP, Mode } from './constants';
+import { BADGE, Brand, DEFAULT_BRAND_COLORS_MAP, DEFAULT_BRAND_MAP } from './constants';
 
 const LanguageCodeType = ConfigProvider.languages;
 
@@ -26,11 +25,7 @@ const url = process.env.DEPS_URL && new URL(process.env.DEPS_URL);
 
 const decorators: Preview['decorators'] = [
   withBrand,
-  (Story, { globals: { locale, [PARAM_KEY]: brand }, parameters: { badges, snackUiLink } }) => {
-    const isDark = useDarkMode();
-    const mode = isDark ? Mode.Dark : Mode.Light;
-    const normalizedBrand = Object.values(Brand).includes(brand) ? (brand as Brand) : Brand.Cloud;
-
+  (Story, { globals: { locale }, parameters: { badges, snackUiLink } }) => {
     const methods = useForm({
       mode: 'onSubmit',
       reValidateMode: 'onSubmit',
@@ -63,12 +58,7 @@ const decorators: Preview['decorators'] = [
             </>
           )}
           <LocaleProvider lang={locale || LanguageCodeType.ruRU}>
-            <ConfigProvider
-              theme={BRAND_TO_THEME_MAP[normalizedBrand][mode] || ConfigProvider.themes.Purple}
-              languageCode={locale || LanguageCodeType.ruRU}
-            >
-              <Story />
-            </ConfigProvider>
+            <Story />
           </LocaleProvider>
         </FormProvider>
       </div>
@@ -162,6 +152,16 @@ const globalTypes: GlobalTypes = {
     name: 'Brand MLSpace',
     description: '',
     defaultValue: DEFAULT_BRAND_MAP[Brand.MLSpace],
+  },
+  [Brand.Admin]: {
+    name: 'Brand Admin',
+    description: '',
+    defaultValue: DEFAULT_BRAND_MAP[Brand.Admin],
+  },
+  [Brand.Site]: {
+    name: 'Brand Site',
+    description: '',
+    defaultValue: DEFAULT_BRAND_MAP[Brand.Site],
   },
 };
 
