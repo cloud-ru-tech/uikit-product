@@ -6,7 +6,7 @@ import { ButtonFunction, ButtonFunctionProps } from '@snack-uikit/button';
 import { Dropdown, DropdownProps } from '@snack-uikit/dropdown';
 import { Droplist, DroplistProps } from '@snack-uikit/list';
 
-import { useValueControl } from '../hooks';
+import { useValueControl } from '../../hooks';
 
 export type ButtonDropdownProps = Omit<ButtonFunctionProps, 'icon' | 'iconPosition'> &
   (Omit<DropdownProps, 'children'> | Omit<DroplistProps, 'children' | 'size'>);

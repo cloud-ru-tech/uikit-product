@@ -1,0 +1,79 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element';
+
+@mixin icon-fill($color) {
+  .icon {
+    color: $color;
+  }
+}
+
+@mixin label-color($color) {
+  .label {
+    color: $color;
+  }
+}
+
+@mixin icon-size($icon-sizes, $size) {
+  .icon {
+    display: inline-flex;
+
+    svg {
+      width: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
+      height: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
+    }
+  }
+}
+
+@mixin button-anatomy-styles($button-theme, $sizes, $variants, $typography, $hasLabel: true) {
+  @each $size in $sizes {
+    &[data-size='#{$size}'] {
+      @if $hasLabel == true {
+        .label {
+          @include styles-tokens-element.composite-var($typography, $size);
+        }
+      }
+
+      .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: styles-tokens-element.$icon-s;
+        height: styles-tokens-element.$icon-s;
+
+        svg {
+          max-width: styles-tokens-element.$icon-s;
+          max-height: styles-tokens-element.$icon-s;
+        }
+      }
+
+      @each $variant in $variants {
+        &[data-variant='#{$variant}'] {
+          @include styles-tokens-element.composite-var($button-theme, 'container', $size, $variant);
+        }
+      }
+    }
+  }
+}
+
+@mixin loading-label-only($button-theme) {
+  &[data-loading][data-variant='label-only'] {
+    .icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .label {
+      @include styles-tokens-element.composite-var($button-theme, 'label', 'load-label-only');
+    }
+  }
+}
+
+@mixin button-common-state {
+  &:focus-visible {
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
+
+    outline-offset: styles-tokens-element.$spacing-state-focus-offset;
+  }
+}

@@ -1,2 +1,1 @@
 export * from './ButtonDropdown';
-export * from './ButtonPromo';

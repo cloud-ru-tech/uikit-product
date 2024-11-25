@@ -1,0 +1,46 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element';
+
+.button {
+  cursor: pointer;
+
+  position: relative;
+
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: max-content;
+  min-width: max-content;
+  margin: 0;
+  padding: 0;
+
+  color: transparent;
+  text-decoration: none;
+  text-transform: none;
+
+  background-color: transparent;
+  border: 0 solid transparent;
+  outline: 0;
+  outline-offset: 0;
+
+  &[data-full-width] {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 100%;
+  }
+
+  > * {
+    cursor: pointer;
+  }
+
+  &:disabled,
+  &[data-disabled],
+  &[data-loading] {
+    cursor: not-allowed;
+    > * {
+      cursor: not-allowed;
+    }
+  }
+}
