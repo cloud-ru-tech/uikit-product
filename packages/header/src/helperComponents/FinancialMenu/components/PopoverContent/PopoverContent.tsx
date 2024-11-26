@@ -87,27 +87,37 @@ export function PopoverContent({
               <Grant {...grant} />
             </Fragment>
           ))}
+
+          {(starterGrant?.isAvailable || starterGrant?.inProcess) && (
+            <>
+              <Divider className={styles.grantDivider} />
+
+              <div className={styles.starterGrant}>
+                <span className={styles.starterGrantName}>
+                  {textProvider(languageCode, Texts.FinancialMenuStarterGrantName)}
+                </span>
+
+                {starterGrant?.isAvailable && (
+                  <ButtonFunction
+                    size='xs'
+                    appearance='primary'
+                    label={textProvider(languageCode, Texts.FinancialMenuGetGrant)}
+                    icon={<PlusSVG />}
+                    onClick={handleGetStarterGrantClick}
+                  />
+                )}
+
+                {starterGrant?.inProcess && (
+                  <Tag
+                    size='xs'
+                    appearance='blue'
+                    label={textProvider(languageCode, Texts.FinancialMenuGrantIsOnTheWay)}
+                  />
+                )}
+              </div>
+            </>
+          )}
         </div>
-
-        {starterGrant?.isAvailable && (
-          <ButtonFunction
-            className={styles.starterGrant}
-            size='xs'
-            appearance='primary'
-            label={textProvider(languageCode, Texts.FinancialMenuGetStarterGrant)}
-            icon={<PlusSVG />}
-            onClick={handleGetStarterGrantClick}
-          />
-        )}
-
-        {starterGrant?.inProcess && (
-          <Tag
-            className={styles.starterGrant}
-            size='xs'
-            appearance='blue'
-            label={textProvider(languageCode, Texts.FinancialMenuStarterGrantIsOnTheWay)}
-          />
-        )}
       </SkeletonText>
     </div>
   );

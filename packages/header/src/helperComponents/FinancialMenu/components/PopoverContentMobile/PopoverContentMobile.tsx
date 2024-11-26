@@ -76,22 +76,26 @@ export function PopoverContentMobile({
         <PopoverRowMobile {...balance} label={balance.label} value={balanceValue} />
         <PopoverRowMobile {...bonuses} label={bonuses.label} value={bonusGrantValue} />
 
-        {starterGrant?.isAvailable && (
-          <ButtonFunction
-            size='xs'
-            appearance='primary'
-            label={textProvider(languageCode, Texts.FinancialMenuGetStarterGrant)}
-            icon={<PlusSVG />}
-            onClick={handleGetStarterGrantClick}
-          />
-        )}
+        {(starterGrant?.isAvailable || starterGrant?.inProcess) && (
+          <div className={styles.starterGrant}>
+            <span className={styles.starterGrantName}>
+              {textProvider(languageCode, Texts.FinancialMenuStarterGrantName)}
+            </span>
 
-        {starterGrant?.inProcess && (
-          <Tag
-            size='xs'
-            appearance='blue'
-            label={textProvider(languageCode, Texts.FinancialMenuStarterGrantIsOnTheWay)}
-          />
+            {starterGrant?.isAvailable && (
+              <ButtonFunction
+                size='xs'
+                appearance='primary'
+                label={textProvider(languageCode, Texts.FinancialMenuGetGrant)}
+                icon={<PlusSVG />}
+                onClick={handleGetStarterGrantClick}
+              />
+            )}
+
+            {starterGrant?.inProcess && (
+              <Tag size='xs' appearance='blue' label={textProvider(languageCode, Texts.FinancialMenuGrantIsOnTheWay)} />
+            )}
+          </div>
         )}
       </SkeletonText>
     </div>
