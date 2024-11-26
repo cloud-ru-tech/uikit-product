@@ -1,0 +1,110 @@
+import cx from 'clsx';
+import { useRef } from 'react';
+import { toast, ToastContainerProps, ToastPosition, useToastContainer } from 'react-toastify';
+
+import { useStackedToastsContext } from '../../contexts';
+import { CustomToast } from '../CustomToast';
+import { isFn } from '../CustomToast/utiils';
+import { defaultProps } from './constants';
+import { useIsomorphicLayoutEffect } from './hooks';
+import { parseClassName } from './utils';
+
+export function CustomToastContainer(props: ToastContainerProps) {
+  const containerProps: ToastContainerProps = {
+    ...defaultProps,
+    ...props,
+  };
+  const stacked = props.stacked;
+  const { collapsed, setCollapsed } = useStackedToastsContext();
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { getToastToRender, isToastActive, count } = useToastContainer(containerProps);
+  const { className, style, rtl, containerId } = containerProps;
+
+  function getClassName(position: ToastPosition) {
+    const defaultClassName = cx(`Toastify__toast-container`, `Toastify__toast-container--${position}`, {
+      [`Toastify__toast-container--rtl`]: rtl,
+    });
+    return isFn(className)
+      ? className({
+          position,
+          rtl,
+          defaultClassName,
+        })
+      : cx(defaultClassName, parseClassName(className));
+  }
+
+  function collapseAll() {
+    if (stacked) {
+      setCollapsed(true);
+      toast.play();
+    }
+  }
+
+  useIsomorphicLayoutEffect(() => {
+    if (stacked && containerRef.current) {
+      const nodes = containerRef.current.querySelectorAll('[data-in="true"]');
+      const gap = 4;
+      const isTop = containerProps.position?.includes('top');
+      let usedHeight = 0;
+      let prevS = 0;
+
+      Array.from(nodes)
+        .reverse()
+        .forEach((n, i) => {
+          const node = n as HTMLElement;
+          node.classList.add(`Toastify__toast--stacked`);
+
+          if (i > 0) node.dataset.collapsed = `${collapsed}`;
+
+          if (!node.dataset.pos) node.dataset.pos = isTop ? 'top' : 'bot';
+
+          const y = usedHeight * (collapsed ? 0.2 : 1) + (collapsed ? 0 : gap * i);
+
+          node.style.setProperty('--y', `${isTop ? y : y * -1}px`);
+          node.style.setProperty('--g', `${gap}`);
+          node.style.setProperty('--s', `${1 - (collapsed ? prevS : 0)}`);
+
+          usedHeight += node.offsetHeight;
+          prevS += 0.025;
+        });
+    }
+  }, [collapsed, count, stacked]);
+
+  return (
+    <div
+      ref={containerRef}
+      className={'Toastify'}
+      id={containerId as string}
+      onMouseEnter={() => {
+        if (stacked) {
+          setCollapsed(false);
+          toast.pause();
+        }
+      }}
+      onMouseLeave={collapseAll}
+    >
+      {getToastToRender((position, toastList) => {
+        const containerStyle: React.CSSProperties = !toastList.length
+          ? { ...style, pointerEvents: 'none' }
+          : { ...style };
+
+        return (
+          <div className={getClassName(position)} style={containerStyle} key={`container-${position}`}>
+            {toastList.map(({ content, props: toastProps }) => (
+              <CustomToast
+                {...toastProps}
+                stacked={stacked}
+                collapseAll={() => {}}
+                isIn={isToastActive(toastProps.toastId, toastProps.containerId)}
+                style={toastProps.style}
+                key={`toast-${toastProps.key}`}
+              >
+                {content}
+              </CustomToast>
+            ))}
+          </div>
+        );
+      })}
+    </div>
+  );
+}

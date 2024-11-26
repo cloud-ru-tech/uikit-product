@@ -1,0 +1,233 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterSystemEvent';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+@mixin colorMap($background-color, $icon-color, $title-color, $description-color, $progress-color) {
+  background-color: $background-color;
+
+  .icon {
+    color: $icon-color;
+  }
+
+  .title {
+    color: $title-color;
+  }
+
+  .description {
+    color: $description-color;
+  }
+
+  .progress {
+    background-color: $progress-color;
+  }
+}
+
+.icon {
+  svg {
+    width: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
+    height: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
+  }
+}
+
+.buttonClose {
+  @include styles-theme-variables.composite-var(
+    styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toast-button-button-close
+  );
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  color: styles-theme-variables.$sys-invert-neutral-text-light;
+
+  background-color: transparent;
+  border: none;
+
+  svg {
+    width: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
+    height: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
+  }
+
+  &:hover {
+    color: styles-theme-variables.$sys-invert-neutral-text-main;
+  }
+
+  &:focus,
+  &:active {
+    color: styles-theme-variables.$sys-invert-neutral-accent-pressed;
+  }
+
+  &:focus-visible {
+    @include styles-theme-variables.outline-var(styles-tokens-element.$container-focused-s);
+
+    color: styles-theme-variables.$sys-invert-neutral-text-main;
+    outline-color: styles-theme-variables.$sys-available-on-complementary;
+    outline-offset: styles-theme-variables.$spacing-state-focus-offset;
+  }
+}
+
+.contentLayout {
+  @include styles-theme-variables.composite-var(
+    styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toast-content-layout
+  );
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  min-width: 0;
+
+  word-break: break-word;
+}
+
+.title {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-title-s);
+
+  display: grid;
+}
+
+.description {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-m);
+}
+
+@keyframes progressBarAnimation {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.progress {
+  @include styles-theme-variables.composite-var(
+    styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toast-progress-bar
+  );
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 0;
+
+  animation: progressBarAnimation linear 1 forwards;
+  animation-play-state: running;
+}
+
+.body {
+  @include styles-theme-variables.composite-var(
+    styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toast-body
+  );
+
+  display: flex;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.footer {
+  @include styles-theme-variables.composite-var(
+    styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toast-footer
+  );
+
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+.container {
+  @include styles-theme-variables.composite-var(
+    styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toast-container
+  );
+
+  cursor: default;
+
+  position: relative;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  &:hover .progress {
+    animation-play-state: paused;
+  }
+
+  &[data-appearance='neutral'] {
+    @include colorMap(
+      styles-theme-variables.$sys-invert-neutral-background,
+      styles-theme-variables.$sys-invert-neutral-accent-default,
+      styles-theme-variables.$sys-invert-neutral-text-main,
+      styles-theme-variables.$sys-invert-neutral-text-support,
+      styles-theme-variables.$sys-neutral-accent-default
+    );
+  }
+
+  &[data-appearance='error'] {
+    @include colorMap(
+      styles-theme-variables.$sys-invert-neutral-background,
+      styles-theme-variables.$sys-red-accent-default,
+      styles-theme-variables.$sys-invert-neutral-text-main,
+      styles-theme-variables.$sys-invert-neutral-text-support,
+      styles-theme-variables.$sys-red-accent-default
+    );
+  }
+
+  &[data-appearance='errorCritical'] {
+    @include colorMap(
+      styles-theme-variables.$sys-red-accent-default,
+      styles-theme-variables.$sys-red-on-accent,
+      styles-theme-variables.$sys-red-on-accent,
+      styles-theme-variables.$sys-red-on-accent,
+      styles-theme-variables.$sys-red-decor-activated
+    );
+
+    .buttonClose {
+      color: styles-theme-variables.$sys-red-on-accent;
+      opacity: styles-theme-variables.$opacity-a064;
+
+      &:hover,
+      &:focus-visible {
+        opacity: 1;
+      }
+
+      &:active {
+        opacity: styles-theme-variables.$opacity-a048;
+      }
+    }
+  }
+
+  &[data-appearance='warning'] {
+    @include colorMap(
+      styles-theme-variables.$sys-invert-neutral-background,
+      styles-theme-variables.$sys-yellow-accent-default,
+      styles-theme-variables.$sys-invert-neutral-text-main,
+      styles-theme-variables.$sys-invert-neutral-text-support,
+      styles-theme-variables.$sys-yellow-accent-default
+    );
+  }
+
+  &[data-appearance='success'] {
+    @include colorMap(
+      styles-theme-variables.$sys-invert-neutral-background,
+      styles-theme-variables.$sys-green-accent-default,
+      styles-theme-variables.$sys-invert-neutral-text-main,
+      styles-theme-variables.$sys-invert-neutral-text-support,
+      styles-theme-variables.$sys-green-accent-default
+    );
+  }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: styles-theme-variables.$sys-invert-neutral-text-main;
+}

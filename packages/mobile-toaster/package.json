@@ -1,0 +1,46 @@
+{
+  "name": "@sbercloud/uikit-product-mobile-toaster",
+  "title": "Mobile Toaster",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/mobile-toaster",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/mobile-toaster"
+  },
+  "author": "Артемий Зимин <aazimin@cloud.ru>",
+  "contributors": [
+    "Артемий Зимин <aazimin@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-utils": "3.8.3",
+    "@snack-uikit/icons": "0.24.0",
+    "@snack-uikit/link": "0.15.1",
+    "@snack-uikit/loaders": "0.8.1",
+    "@snack-uikit/toaster": "0.8.3",
+    "@snack-uikit/truncate-string": "0.6.1",
+    "@snack-uikit/utils": "3.5.0",
+    "classnames": "2.5.1",
+    "clsx": "2.1.1",
+    "react-toastify": "10.0.6"
+  }
+}

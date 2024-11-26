@@ -1,0 +1,68 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterUserAction';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
+    height: styles-tokens-element.$icon-s !important; /* stylelint-disable-line declaration-no-important */
+  }
+}
+
+.label {
+  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-label-l);
+
+  color: styles-theme-variables.$sys-invert-neutral-text-main;
+}
+
+.container {
+  @include styles-theme-variables.composite-var(
+    styles-tokens-toaster-toasterUserAction.$toaster-user-action-toast-container
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background-color: styles-theme-variables.$sys-invert-neutral-background;
+
+  &[data-appearance='error'] {
+    .icon {
+      color: styles-theme-variables.$sys-red-accent-default;
+    }
+  }
+
+  &[data-appearance='warning'] {
+    .icon {
+      color: styles-theme-variables.$sys-yellow-accent-default;
+    }
+  }
+
+  &[data-appearance='success'] {
+    .icon {
+      color: styles-theme-variables.$sys-green-accent-default;
+    }
+  }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: styles-theme-variables.$sys-invert-neutral-text-main;
+}
+
+.contentLayout {
+  @include styles-theme-variables.composite-var(
+    styles-tokens-toaster-toasterUserAction.$toaster-user-action-toast-content-layout
+  );
+
+  display: flex;
+  align-items: center;
+}

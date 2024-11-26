@@ -1,0 +1,58 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterSystemEvent';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.wrapper {
+  display: flex;
+  gap: styles-theme-variables.$dimension-1m;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  margin-bottom: styles-theme-variables.$dimension-2m;
+  padding: styles-theme-variables.$dimension-3m;
+
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  border: 1px solid styles-theme-variables.$sys-neutral-decor-default;
+  border-radius: styles-theme-variables.$dimension-050m;
+}
+
+$border-width: 0.5px;
+
+.table {
+  display: inline-grid;
+  grid-template-columns: repeat(2, max-content);
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  border: $border-width solid styles-theme-variables.$sys-neutral-decor-default;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: styles-theme-variables.$dimension-1m;
+
+  border: $border-width solid styles-theme-variables.$sys-neutral-decor-disabled;
+}
+
+.headerCell {
+  min-width: styles-theme-variables.$dimension-6m;
+  text-transform: uppercase;
+}
+
+.toastContainer {
+  @include styles-theme-variables.composite-var(
+    styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toaster-container
+  );
+
+  box-sizing: border-box;
+}
+
+.systemEvent {
+  flex: 1;
+
+  > [role='progressbar'] {
+    width: 50%;
+    animation: none;
+  }
+}
