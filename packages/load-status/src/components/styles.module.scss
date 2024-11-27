@@ -1,0 +1,32 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.loadStatus {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.labelValue {
+  margin-left: 4px;
+
+  color: styles-theme-variables.$sys-neutral-text-light;
+}
+
+.valueSymbol {
+  color: styles-theme-variables.$sys-neutral-text-light;
+}
+
+.hint {
+  color: styles-theme-variables.$sys-neutral-text-light;
+}
+
+.hintWrapper {
+  display: flex;
+  align-items: center;
+  gap: 2px
+}

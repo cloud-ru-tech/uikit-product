@@ -1,0 +1,64 @@
+import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { CrossFilledSVG } from '@snack-uikit/icons';
+import { ProgressBar, ProgressBarProps } from '@snack-uikit/progress-bar';
+import { Typography } from '@snack-uikit/typography';
+
+import { DEFAULT_APPEARANCE_BY_PROGRESS, SYMBOL_BY_TYPE } from './constants';
+import styles from './styles.module.scss';
+import { LoadValueType, ProgressLimitList } from './types';
+import { getProgressBarColor } from './utils';
+
+export type LoadStatusProps = WithSupportProps<
+  {
+    label?: string;
+    value?: string;
+    hint?: string;
+    valueType?: LoadValueType;
+    appearanceByProgress?: ProgressLimitList;
+    showErrorIcon?: boolean;
+  } & Pick<ProgressBarProps, 'progress' | 'size'>
+>;
+
+export function LoadStatus({
+  label,
+  value,
+  hint,
+  valueType = 'none',
+  progress,
+  size = 's',
+  appearanceByProgress = DEFAULT_APPEARANCE_BY_PROGRESS,
+  showErrorIcon,
+  ...props
+}: LoadStatusProps) {
+  const progressAppearance = getProgressBarColor(progress, appearanceByProgress);
+
+  const isShowHeader = label || value || valueType !== 'none';
+
+  const symbol = SYMBOL_BY_TYPE[valueType];
+
+  return (
+    <div className={styles.loadStatus} {...props}>
+      {isShowHeader && (
+        <div className={styles.header}>
+          <Typography.SansBodyS>
+            {label}
+            <span className={styles.labelValue}>{value}</span>
+          </Typography.SansBodyS>
+
+          {symbol && (
+            <Typography.SansBodyS className={styles.valueSymbol}>{`${progress} ${symbol}`}</Typography.SansBodyS>
+          )}
+        </div>
+      )}
+      <ProgressBar progress={progress} size={size} appearance={progressAppearance} />
+      {hint && (
+        <div className={styles.hintWrapper}>
+          {showErrorIcon && <CrossFilledSVG color={themeVars.sys.red.accentDefault} size={16} />}
+
+          <Typography.SansBodyS className={styles.hint}>{hint}</Typography.SansBodyS>
+        </div>
+      )}
+    </div>
+  );
+}
