@@ -11,7 +11,7 @@ import { QUOTA_CARD_DEFAULT_PROPS } from './contants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Quota/Quota Dropdown',
+  title: 'Console/Quota/Quota Dropdown',
   component: QuotaDropdown,
 };
 export default meta;

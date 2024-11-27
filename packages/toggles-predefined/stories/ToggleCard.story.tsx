@@ -12,7 +12,7 @@ import componentReadme from '../README.md';
 import { ToggleCard, ToggleCardProps } from '../src';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Toggles Predefined/Card',
+  title: 'Console/Toggles Predefined/Card',
   component: ToggleCard,
 };
 export default meta;

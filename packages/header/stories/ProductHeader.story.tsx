@@ -7,7 +7,7 @@ import { Header } from '../src';
 import { ARG_TYPES, ARGS, getTemplate, StoryProps } from './headerTemplate';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Header/Desktop',
+  title: 'Console/Header/Desktop',
   component: Header,
 };
 export default meta;

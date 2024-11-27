@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { InteractiveChart, InteractiveChartProps } from '../src';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Charts/Box Plot',
+  title: 'Console/Charts/Box Plot',
   component: InteractiveChart,
 };
 export default meta;

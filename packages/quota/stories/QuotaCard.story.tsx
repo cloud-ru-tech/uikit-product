@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { QuotaCard, QuotaCardProps } from '../src';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Quota/Quota Card',
+  title: 'Console/Quota/Quota Card',
   component: QuotaCard,
 };
 export default meta;

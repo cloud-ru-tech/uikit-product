@@ -11,7 +11,7 @@ import { EmptyBlock, EmptyBlockProps } from '../src';
 import { ICONS } from './constants';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Layout/EmptyBlock',
+  title: 'Console/Layout/EmptyBlock',
   component: EmptyBlock,
 };
 export default meta;

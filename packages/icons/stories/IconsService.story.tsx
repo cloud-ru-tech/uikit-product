@@ -9,7 +9,7 @@ import * as Icons from '../src/components/service-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Icons/Service',
+  title: 'Console/Icons/Service',
 };
 export default meta;
 

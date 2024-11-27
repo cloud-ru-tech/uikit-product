@@ -9,7 +9,7 @@ import { CopyLine, CopyLineProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Copy Line/Copy Line',
+  title: 'Console/Copy Line/Copy Line',
   component: CopyLine,
 };
 export default meta;

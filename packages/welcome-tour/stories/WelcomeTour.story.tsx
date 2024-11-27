@@ -68,7 +68,7 @@ const JoyrideStepsWithoutContent: TourStepExtended[] = [
 ];
 
 const meta: Meta = {
-  title: 'Snack Uikit/Welcome Tour',
+  title: 'Console/Welcome Tour',
   component: WelcomeTour,
 };
 export default meta;

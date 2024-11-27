@@ -7,7 +7,7 @@ import { BlockBasic, BlockBasicProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Layout/BlockBasic',
+  title: 'Console/Layout/BlockBasic',
   component: BlockBasic,
 };
 

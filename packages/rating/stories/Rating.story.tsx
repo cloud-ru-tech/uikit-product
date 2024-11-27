@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { Rating, RatingProps } from '../src';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Rating',
+  title: 'Console/Rating',
   component: Rating,
 };
 export default meta;

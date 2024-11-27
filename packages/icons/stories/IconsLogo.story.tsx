@@ -9,7 +9,7 @@ import * as Icons from '../src/components/logo-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Icons/Logo',
+  title: 'Console/Icons/Logo',
 };
 export default meta;
 

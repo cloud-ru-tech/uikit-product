@@ -6,7 +6,7 @@ import componentReadme from '../README.md';
 import { PageLoading, PageLoadingProps } from '../src/components';
 
 export default {
-  title: 'Snack UIkit/Page Layout/Page Loading',
+  title: 'Console/Page Layout/Page Loading',
   component: PageLoading,
 } as Meta;
 

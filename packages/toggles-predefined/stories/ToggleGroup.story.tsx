@@ -11,7 +11,7 @@ import componentReadme from '../README.md';
 import { ToggleCard, ToggleGroup, ToggleGroupProps } from '../src';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Toggles Predefined/Toggle Group',
+  title: 'Console/Toggles Predefined/Toggle Group',
   component: ToggleGroup,
 };
 export default meta;

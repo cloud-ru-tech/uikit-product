@@ -10,7 +10,7 @@ import componentReadme from '../README.md';
 import { ProductsWidget, ProductsWidgetProps } from '../src';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Widget/Products Widget',
+  title: 'Console/Widget/Products Widget',
   component: ProductsWidget,
 };
 export default meta;

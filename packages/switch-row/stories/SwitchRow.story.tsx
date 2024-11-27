@@ -8,7 +8,7 @@ import { SwitchRow, SwitchRowProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Switch Row ',
+  title: 'Console/Switch Row ',
   component: SwitchRow,
 };
 export default meta;

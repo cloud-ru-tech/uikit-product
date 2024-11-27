@@ -9,7 +9,7 @@ import { InfoBlockPredefined, InfoBlockPredefinedProps } from '../src';
 import { BUTTON_PROPS } from './constants';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Info Block Predefined',
+  title: 'Console/Info Block Predefined',
   component: InfoBlockPredefined,
 };
 export default meta;

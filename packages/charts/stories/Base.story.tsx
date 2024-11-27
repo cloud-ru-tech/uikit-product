@@ -13,7 +13,7 @@ import { DrawStyle, LineInterpolation } from '../src/components/InteractiveChart
 import { SERIES_COLORS, SeriesColor } from '../src/constants/colors';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Charts/Base',
+  title: 'Console/Charts/Base',
   component: InteractiveChart,
 };
 export default meta;

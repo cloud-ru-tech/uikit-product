@@ -7,7 +7,7 @@ import { PageCatalog, PageCatalogProps } from '../src/components';
 import { HeadlineActions } from './components/HeadlineActions';
 
 export default {
-  title: 'Snack UIkit/Page Layout/Page Catalog',
+  title: 'Console/Page Layout/Page Catalog',
   component: PageCatalog,
 } as Meta;
 

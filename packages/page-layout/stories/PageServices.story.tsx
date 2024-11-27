@@ -14,7 +14,7 @@ import { HeadlineActions } from './components/HeadlineActions';
 import styles from './styles.module.scss';
 
 export default {
-  title: 'Snack UIkit/Page Layout/Page Services',
+  title: 'Console/Page Layout/Page Services',
   component: PageServices,
 } as Meta;
 

@@ -7,7 +7,7 @@ import { SolutionsWidget, SolutionsWidgetProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Widget/Solutions Widget',
+  title: 'Console/Widget/Solutions Widget',
   component: SolutionsWidget,
 };
 export default meta;

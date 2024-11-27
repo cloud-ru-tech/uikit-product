@@ -11,7 +11,7 @@ import { BagelChart, BagelChartProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Charts/BagelChart',
+  title: 'Console/Charts/BagelChart',
   component: BagelChart,
 };
 export default meta;

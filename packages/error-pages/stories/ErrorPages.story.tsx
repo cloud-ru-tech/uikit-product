@@ -9,7 +9,7 @@ import { ErrorPage, ErrorPageProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Error Pages',
+  title: 'Console/Error Pages',
   component: ErrorPage,
 };
 export default meta;

@@ -8,7 +8,7 @@ import componentReadme from '../README.md';
 import { InfoGroup, InfoGroupItem, InfoGroupProps } from '../src';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Info Row/Info Group',
+  title: 'Console/Info Row/Info Group',
   component: InfoGroup,
 };
 export default meta;

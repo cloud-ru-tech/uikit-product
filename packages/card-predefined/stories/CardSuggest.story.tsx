@@ -9,7 +9,7 @@ import { CardSuggest, CardSuggestProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Cards/Suggest',
+  title: 'Console/Cards/Suggest',
   component: CardSuggest,
 };
 export default meta;

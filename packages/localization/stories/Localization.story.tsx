@@ -10,7 +10,7 @@ import { CurrencyFormatter, DateFormatter, NumberFormatter } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Localization',
+  title: 'Console/Localization',
   component: ConfigProvider,
 };
 export default meta;

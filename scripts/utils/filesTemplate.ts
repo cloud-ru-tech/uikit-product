@@ -183,7 +183,7 @@ import componentReadme from '../README.md';
 import { ${componentName}, ${componentName}Props } from '../src';
 
 const meta: Meta = {
-  title: 'Snack Uikit/${componentStoryTitle}',
+  title: 'Console/${componentStoryTitle}',
   component: ${componentName},
 };
 export default meta;

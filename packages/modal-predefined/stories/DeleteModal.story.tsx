@@ -13,7 +13,7 @@ import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Modal Predefined/Delete Modal',
+  title: 'Console/Modal Predefined/Delete Modal',
   component: AdaptiveDeleteModal,
 };
 

@@ -9,7 +9,7 @@ import componentReadme from '../README.md';
 import { InfoRow, InfoRowProps } from '../src';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Info Row/Info Row',
+  title: 'Console/Info Row/Info Row',
   component: InfoRow,
 };
 export default meta;

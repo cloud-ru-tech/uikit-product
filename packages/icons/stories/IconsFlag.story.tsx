@@ -9,7 +9,7 @@ import * as Icons from '../src/components/flag-icons';
 import { getTemplate } from './helpers/StoryTemplate';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Icons/Flag',
+  title: 'Console/Icons/Flag',
 };
 export default meta;
 

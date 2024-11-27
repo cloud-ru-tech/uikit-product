@@ -11,7 +11,7 @@ import { CATALOG_CONFIG } from './config';
 import { getFetcherFn, getOnDownloadFileClick, getOnShareClick } from './services';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Calculator',
+  title: 'Console/Calculator',
   component: Calculator,
 };
 export default meta;

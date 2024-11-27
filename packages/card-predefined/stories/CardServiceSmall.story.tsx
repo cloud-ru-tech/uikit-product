@@ -12,7 +12,7 @@ import cardImg from './cardImg.jpg';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Cards/ServiceSmall',
+  title: 'Console/Cards/ServiceSmall',
   component: CardServiceSmall,
 };
 export default meta;

@@ -14,7 +14,7 @@ import { ICONS } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Widget/Widget',
+  title: 'Console/Widget/Widget',
   component: Widget,
 };
 export default meta;

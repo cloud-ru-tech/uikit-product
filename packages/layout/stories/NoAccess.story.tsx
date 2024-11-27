@@ -7,7 +7,7 @@ import { NoAccess, NoAccessProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack Uikit/Layout/NoAccess',
+  title: 'Console/Layout/NoAccess',
   component: NoAccess,
 };
 export default meta;

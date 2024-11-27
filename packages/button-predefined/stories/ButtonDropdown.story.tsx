@@ -10,7 +10,7 @@ import { DROPLIST_ITEMS } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Button Predefined/Button Dropdown',
+  title: 'Console/Button Predefined/Button Dropdown',
   component: ButtonDropdown,
 };
 export default meta;

@@ -18,7 +18,7 @@ import {
 import styles from './styles.module.scss';
 
 export default {
-  title: 'Snack UIkit/Page Layout/Page Form',
+  title: 'Console/Page Layout/Page Form',
   component: PageForm,
 } as Meta;
 

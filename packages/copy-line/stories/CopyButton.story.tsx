@@ -7,7 +7,7 @@ import { CopyButton, CopyButtonProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Snack UIkit/Copy Line/Copy Button',
+  title: 'Console/Copy Line/Copy Button',
   component: CopyButton,
 };
 export default meta;
