@@ -1,4 +1,6 @@
-import { FooterLink, LinksGroup, PinnedCard, ProductOption } from '../../types';
+import { MouseEvent } from 'react';
+
+import { FooterLink, LinksGroup, ProductOption } from '../../types';
 import { ItemsGroup } from '../GroupSection';
 
 export type SelectProductsProps = {
@@ -14,10 +16,10 @@ export type DrawerMenuProps = {
   links?: LinksGroup[];
   selectedLink?: string;
   onLinkChange?(value: string): void;
-  pinnedCards?: PinnedCard[];
   footerLinks?: FooterLink[];
   favorites?: {
     value: string[];
     onChange(id: string): (value: boolean) => void;
   };
+  onMarketplaceBannerClick?(e?: MouseEvent<HTMLElement>): void;
 } & SelectProductsProps;

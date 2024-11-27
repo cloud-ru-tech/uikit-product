@@ -13,7 +13,7 @@ import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
 import { ProductOption } from '../../../../types';
 import { extractAppNameFromId } from '../../../../utils';
-import { PinnedCard } from '../../../PinnedCard';
+import { BannerCard } from '../../../BannerCard';
 import { useLinks } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
@@ -31,14 +31,13 @@ export function DrawerMenuMobile({
   allProducts,
   selectedLink,
   onLinkChange,
-  pinnedCards,
   favorites,
+  onMarketplaceBannerClick,
   ...rest
 }: DrawerMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
-  const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
   const { searchValue, setSearchValue, rightSectionLinks, leftSectionLinks } = useLinks({ links, favorites });
 
   const { cardsRef } = useLinksScrollToSelected({
@@ -117,22 +116,6 @@ export function DrawerMenuMobile({
 
         <Scroll>
           <div className={styles.content}>
-            {visiblePinnedCards?.map(item => (
-              <PinnedCard
-                key={item.id}
-                id={item.id}
-                promoBadge={item.badge}
-                className={styles.pinnedCard}
-                onClick={wrappedClick(item)}
-                disabled={item.disabled}
-                href={item.href}
-                title={item.title}
-                description={item.description}
-                size='s'
-                data-test-id={`header__drawer-menu__pinned-card-${extractAppNameFromId(item.id)}`}
-              />
-            ))}
-
             <ProductSelectTrigger
               selectedProduct={rest.selectedProduct}
               className={styles.trigger}
@@ -147,6 +130,15 @@ export function DrawerMenuMobile({
                 value={searchValue}
                 onChange={setSearchValue}
                 data-test-id='header__drawer-menu__search'
+              />
+            )}
+
+            {!searchValue && onMarketplaceBannerClick && (
+              <BannerCard
+                title={textProvider(languageCode, Texts.MkpBannerTitle)}
+                promoBadge={textProvider(languageCode, Texts.MkpBannerCount)}
+                onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
+                isMobile
               />
             )}
 

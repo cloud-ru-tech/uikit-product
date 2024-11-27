@@ -77,6 +77,10 @@ export enum Texts {
   PartnerPopoverText = 'partner-popover-text',
   PartnerPopoverDescription = 'partner-popover-description',
   PartnerPopoverCancelButton = 'partner-popover-cancel-button',
+
+  MkpBannerTitle = 'mkp-banner-title',
+  MkpBannerText = 'mkp-banner-text',
+  MkpBannerCount = 'mkp-banner-count',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -160,6 +164,10 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.PartnerPopoverDescription]:
       'Переключитесь на эту организацию, чтобы начать работу в партнерском кабинете. Переключаться между организациями можно в профиле или в меню выбора проекта.',
     [Texts.PartnerPopoverCancelButton]: 'Больше не показывать',
+
+    [Texts.MkpBannerTitle]: 'Маркетплейс',
+    [Texts.MkpBannerText]: 'Для разработки, анализа данных и других задач.',
+    [Texts.MkpBannerCount]: '120+ сервисов',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderProjectSelectorCreateProject]: 'Create project',
@@ -241,6 +249,10 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.PartnerPopoverDescription]:
       'Switch to this organization to start working in the partner account. You can switch between organizations in your profile or in the project selection menu.',
     [Texts.PartnerPopoverCancelButton]: `Don't show again`,
+
+    [Texts.MkpBannerTitle]: 'Marketplace',
+    [Texts.MkpBannerText]: 'For development, data analysis and other tasks.',
+    [Texts.MkpBannerCount]: '120+ services',
   },
 };
 

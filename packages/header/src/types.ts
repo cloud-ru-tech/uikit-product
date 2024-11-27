@@ -1,6 +1,6 @@
 import { JSXElementConstructor, MouseEvent, ReactElement } from 'react';
 
-import { CardServiceSmallProps, CardSuggestProps } from '@sbercloud/uikit-product-card-predefined';
+import { CardServiceSmallProps } from '@sbercloud/uikit-product-card-predefined';
 import { HotSpotProps } from '@snack-uikit/hot-spot';
 import { BaseItemProps } from '@snack-uikit/list';
 
@@ -55,17 +55,6 @@ export type ProductOption = {
   href?: string;
   hidden?: boolean;
   hotSpot?: HotSpotProps;
-};
-
-export type PinnedCard = {
-  id: string;
-  title: string;
-  description: string;
-  onClick(): void;
-  href?: string;
-  disabled?: boolean;
-  hidden?: boolean;
-  badge?: CardSuggestProps['promoBadge'];
 };
 
 export const DIVIDER_SETTING_OPTION_ID = 'divider';

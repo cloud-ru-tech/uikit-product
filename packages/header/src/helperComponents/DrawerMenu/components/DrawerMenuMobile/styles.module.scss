@@ -66,18 +66,6 @@
   min-width: 0;
 }
 
-.pinnedCards {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-
-  gap: styles-theme-variables.$dimension-2m;
-}
-
-.pinnedCard {
-  flex: 1 0 calc(50% - #{styles-theme-variables.$dimension-1m});
-}
-
 .rightContent {
   display: flex;
   flex-direction: column;

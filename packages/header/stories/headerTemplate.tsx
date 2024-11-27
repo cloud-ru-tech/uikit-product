@@ -74,7 +74,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
 
   showLinks: boolean;
   showFooterLinks: boolean;
-  showPinnedCards: boolean;
+  showMarketplaceBanner: boolean;
 
   showSinglePlatform: boolean;
 };
@@ -231,7 +231,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showPartnerOrganization,
     showLinks,
     showFooterLinks,
-    showPinnedCards,
+    showMarketplaceBanner,
     showPlatformsLoading,
     showSinglePlatform,
     ...args
@@ -455,7 +455,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
             onLinkChange: setSelectedLink,
             links: showLinks ? args.drawerMenu.links : undefined,
             footerLinks: showFooterLinks ? args.drawerMenu.footerLinks : undefined,
-            pinnedCards: showPinnedCards ? args.drawerMenu.pinnedCards : undefined,
+            onMarketplaceBannerClick: showMarketplaceBanner ? () => undefined : undefined,
             favorites: {
               value: favoriteItems,
               onChange: onFavoriteChange,
@@ -678,7 +678,7 @@ export const ARGS: StoryProps = {
 
   showLinks: true,
   showFooterLinks: true,
-  showPinnedCards: true,
+  showMarketplaceBanner: true,
   showSinglePlatform: false,
   drawerMenu: {
     allProducts: [
@@ -729,20 +729,6 @@ export const ARGS: StoryProps = {
       { id: 'administration', icon: <SettingsSVG />, label: 'Администрирование', onClick: () => {} },
       { id: 'users', icon: <PlaceholderSVG />, label: 'Пользователи', onClick: () => {} },
       { id: 'documentation', icon: <FileSVG />, label: 'Документация', onClick: () => {} },
-    ],
-    pinnedCards: [
-      {
-        id: 'gpt-4',
-        title: 'GPT-4 модели',
-        description: 'Генерация текста на любые темы, 1,3 млрд параметров',
-        onClick: () => {},
-      },
-      {
-        id: 'marketplace',
-        title: 'AI Marketplace',
-        description: 'Маркетплейс образов, программ, датасетов',
-        onClick: () => {},
-      },
     ],
     selectedLink: 'vms',
     links: [
@@ -1025,7 +1011,7 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
 
   showLinks: { name: '[Story]: show drawer -> links', type: 'boolean' },
   showFooterLinks: { name: '[Story]: show drawer -> footer links', type: 'boolean' },
-  showPinnedCards: { name: '[Story]: show drawer -> pinned cards', type: 'boolean' },
+  showMarketplaceBanner: { name: '[Story]: show drawer -> onMarketplaceBannerClick', type: 'boolean' },
   drawerMenu: { table: { disable: true } },
   showSinglePlatform: { name: '[Story]: show drawer -> single platform', type: 'boolean' },
 };

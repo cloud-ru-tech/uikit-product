@@ -1,0 +1,45 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  &.mobile {
+    gap: 0;
+  }
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 12px;
+
+  &.mobile {
+    gap: 4px;
+  }
+}
+
+.card {
+  margin-top: styles-tokens-element.$dimension-4m;
+  margin-bottom: calc(#{styles-tokens-element.$dimension-2m} * -1);
+  padding-top: 1px; // fixes border on hover
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  color: styles-tokens-element.$sys-neutral-text-main;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.text {
+  color: styles-tokens-element.$sys-neutral-text-support;
+}

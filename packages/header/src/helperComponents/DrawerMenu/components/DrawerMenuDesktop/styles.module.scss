@@ -81,18 +81,6 @@
   min-width: 0;
 }
 
-.pinnedCards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: styles-tokens-element.$dimension-2m;
-}
-
-.pinnedCard {
-  flex: 1 0 calc(50% - #{styles-tokens-element.$dimension-1m});
-  /* stylelint-disable-next-line declaration-property-value-allowed-list */
-  z-index: 2;
-}
-
 .rightContent {
   display: flex;
   flex-direction: column;

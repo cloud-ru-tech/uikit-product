@@ -18,7 +18,7 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 import { textProvider, Texts } from '../../../../helpers';
 import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
 import { extractAppNameFromId } from '../../../../utils';
-import { PinnedCard } from '../../../PinnedCard';
+import { BannerCard } from '../../../BannerCard';
 import { useLinks, useLinksScrollToSelected } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
@@ -36,16 +36,15 @@ export function DrawerMenuDesktop({
   onClose,
   links,
   footerLinks,
-  pinnedCards,
   allProducts,
   selectedProduct,
   onProductChange,
   selectedLink,
   onLinkChange,
   favorites,
+  onMarketplaceBannerClick,
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
-  const visiblePinnedCards = useMemo(() => pinnedCards?.filter(filterHidden), [pinnedCards]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
   const { searchValue, setSearchValue, rightSectionLinks, leftSectionLinks } = useLinks({ links, favorites });
 
@@ -57,7 +56,7 @@ export function DrawerMenuDesktop({
     highlightClassName: styles.highlight,
   });
 
-  const showRightSection = leftSectionLinks?.length || visiblePinnedCards;
+  const showRightSection = leftSectionLinks?.length || onMarketplaceBannerClick;
 
   const rightContainerRef = useRef<HTMLDivElement>(null);
   const rightContentRef = useRef<HTMLDivElement>(null);
@@ -219,25 +218,6 @@ export function DrawerMenuDesktop({
             <div className={styles.right} ref={rightContainerRef} data-test-id='header__drawer-menu__right'>
               <Scroll ref={scrollRef} barHideStrategy='never'>
                 <div className={styles.rightContent} ref={rightContentRef}>
-                  {visiblePinnedCards && (
-                    <div className={cn(styles.pinnedCards, styles.rightContentItem)}>
-                      {visiblePinnedCards.map(item => (
-                        <PinnedCard
-                          key={item.id}
-                          id={item.id}
-                          promoBadge={item.badge}
-                          className={styles.pinnedCard}
-                          onClick={wrappedClick(item)}
-                          disabled={item.disabled}
-                          href={item.href}
-                          title={item.title}
-                          description={item.description}
-                          data-test-id={`header__drawer-menu__pinned-card-${extractAppNameFromId(item.id)}`}
-                        />
-                      ))}
-                    </div>
-                  )}
-
                   {leftSectionLinks && (
                     <div className={cn(styles.rightContentItem, styles.searchItem)} ref={searchPanelRef}>
                       <Search
@@ -248,6 +228,15 @@ export function DrawerMenuDesktop({
                         data-test-id='header__drawer-menu__search'
                       />
                     </div>
+                  )}
+
+                  {!searchValue && onMarketplaceBannerClick && (
+                    <BannerCard
+                      title={textProvider(languageCode, Texts.MkpBannerTitle)}
+                      text={textProvider(languageCode, Texts.MkpBannerText)}
+                      promoBadge={textProvider(languageCode, Texts.MkpBannerCount)}
+                      onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
+                    />
                   )}
 
                   {rightSectionLinks &&
