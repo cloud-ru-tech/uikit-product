@@ -14,10 +14,10 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 
 import { TOASTER_CONTAINER_PREFIX, TOASTER_TYPE } from '../../constants';
 import { useStackedToastsContext } from '../../contexts/StackedToastsContext';
+import { CustomToastContainer } from '../../helperComponents/CustomToastContainer';
 import { textProvider, Texts } from '../../helpers/texts-provider';
 import { TOAST_SYSTEM_EVENT_TEST_IDS } from '../../testIds';
 import { ToasterType } from '../../types';
-import { CustomToastContainer } from '../CustomToastContainer';
 import styles from './styles.module.scss';
 
 export type MobileToasterContainerProps = {
