@@ -7,7 +7,12 @@ export function getCustomStore(
   const customWindow: WindowStore = window as WindowStore & { sbercloudUIKit: null };
 
   if (!customWindow.sbercloudUIKit) {
-    customWindow.sbercloudUIKit = { theme: DEFAULT.THEME, languageCode: DEFAULT.LANGUAGE, ...defaultStore };
+    customWindow.sbercloudUIKit = {
+      brand: DEFAULT.BRAND,
+      theme: DEFAULT.THEME,
+      languageCode: DEFAULT.LANGUAGE,
+      ...defaultStore,
+    };
   }
 
   return customWindow.sbercloudUIKit;

@@ -5,11 +5,11 @@
 
 ### Config provider
 
-If component is mounted, then it extends html tag by current lang and current themes data-attributes, adds classes with colors to body. Controls for changing are enabled via `useTheme` and `useLanguage` hooks.
+If component is mounted, then it extends html tag by current lang and current themes/brands data-attributes, adds classes with colors to body. Controls for changing are enabled via `useTheme`, `useBrand` and `useLanguage` hooks.
 
 ### ForThemeMode component
 
-Tool component to adapt to current theme modification (light or dark). You can pass different JSX for light and dark theme mode, and the one will be rendered according current mode.
+Tool component to adapt to current theme/brand modification (light or dark). You can pass different JSX for light and dark theme/brand mode, and the one will be rendered according current mode.
 
 ```tsx
 <ForThemeMode
@@ -161,7 +161,19 @@ function Component() {
 }
 ```
 
-#### useTheme
+#### useBrand
+
+Require Config Provider to be mounted
+
+```typescript jsx
+import { useBrand } from '@sbercloud/uikit-product-utils';
+
+function Component() {
+  const { brand, changeBrand } = useBrand();
+}
+```
+
+#### useTheme (deprecated)
 
 Require Config Provider to be mounted
 

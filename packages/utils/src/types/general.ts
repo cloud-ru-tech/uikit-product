@@ -1,6 +1,10 @@
 import { LanguageCodeType } from './language';
-import { Themes } from './theme';
+import { Brand, Themes } from './theme';
 
 export type WindowStore = {
-  sbercloudUIKit: { languageCode: LanguageCodeType; theme: Themes };
+  sbercloudUIKit: {
+    languageCode: LanguageCodeType;
+    theme: Themes;
+    brand: Brand;
+  };
 };

@@ -4,7 +4,7 @@ import { CSSProperties, ReactNode } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 
-import { Themes, useTheme } from '@sbercloud/uikit-product-utils';
+import { Brand, useBrand } from '@sbercloud/uikit-product-utils';
 
 import { dark } from './theme/code/dark';
 import { light } from './theme/code/light';
@@ -13,15 +13,19 @@ type MarkdownProps = {
   md: string;
 };
 
-const CODE_THEME: Record<Themes, { [key: string]: CSSProperties }> = {
-  [Themes.Purple]: light,
-  [Themes.Green]: light,
-  [Themes.PurpleDark]: dark,
-  [Themes.GreenDark]: dark,
+const BRAND_MAP: Record<Brand, { [key: string]: CSSProperties }> = {
+  [Brand.Cloud]: light,
+  [Brand.MLSpace]: light,
+  [Brand.Admin]: light,
+  [Brand.Site]: light,
+  [Brand.CloudDark]: dark,
+  [Brand.MLSpaceDark]: dark,
+  [Brand.AdminDark]: dark,
+  [Brand.SiteDark]: dark,
 };
 
 export function Markdown(props: MarkdownProps) {
-  const { theme } = useTheme();
+  const { brand } = useBrand();
 
   return (
     <ReactMarkdown
@@ -33,7 +37,7 @@ export function Markdown(props: MarkdownProps) {
           return !inline && match ? (
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             // @ts-ignore
-            <SyntaxHighlighter style={CODE_THEME[theme]} language={match[1]} PreTag='div' {...rest}>
+            <SyntaxHighlighter style={BRAND_MAP[brand]} language={match[1]} PreTag='div' {...rest}>
               {String(children).replace(/\n$/, '')}
             </SyntaxHighlighter>
           ) : (

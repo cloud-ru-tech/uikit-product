@@ -8,7 +8,16 @@ import { BADGE } from '#storybookConstants';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ConfigProvider, ConfigProviderProps, LanguageCodeType, Themes, useLanguage, useTheme } from '../src';
+import {
+  Brand,
+  ConfigProvider,
+  ConfigProviderProps,
+  LanguageCodeType,
+  Themes,
+  useBrand,
+  useLanguage,
+  useTheme,
+} from '../src';
 import styles from './config-styles.module.scss';
 
 const meta: Meta = {
@@ -18,12 +27,42 @@ const meta: Meta = {
 export default meta;
 
 function Template({ ...args }: ConfigProviderProps) {
+  const { brand, changeBrand } = useBrand();
   const { changeTheme, theme } = useTheme();
   const { languageCode, changeLanguage } = useLanguage();
+
   return (
     <ConfigProvider {...args}>
       <div className={styles.wrapper}>
-        <h1 className={styles.header}>Theme Setting</h1>
+        <h1 className={styles.header}>Brand Setting</h1>
+
+        <Divider className={styles.divider} />
+
+        <div className={styles.titleWrapper}>
+          <h3 className={styles.title}>
+            Активный бренд: <span className={styles.themeWrapper}>{brand}</span>
+          </h3>
+        </div>
+
+        <div className={styles.titleWrapper}>
+          <h3 className={styles.title}>Смена брэнда через changeBrand</h3>
+          <span className={styles.caption}>(нажми на кнопку)</span>
+        </div>
+
+        <div className={styles.configBody}>
+          <ButtonFilled onClick={() => changeBrand(Brand.Cloud)} label='Cloud' />
+          <ButtonFilled onClick={() => changeBrand(Brand.CloudDark)} label='Cloud Dark' />
+          <ButtonFilled onClick={() => changeBrand(Brand.MLSpace)} label='MLSpace' />
+          <ButtonFilled onClick={() => changeBrand(Brand.MLSpaceDark)} label='MLSpace Dark' />
+          <ButtonFilled onClick={() => changeBrand(Brand.Admin)} label='Admin' />
+          <ButtonFilled onClick={() => changeBrand(Brand.AdminDark)} label='Admin Dark' />
+          <ButtonFilled onClick={() => changeBrand(Brand.Site)} label='Site' />
+          <ButtonFilled onClick={() => changeBrand(Brand.SiteDark)} label='Site Dark' />
+        </div>
+      </div>
+
+      <div className={styles.wrapper}>
+        <h1 className={styles.header}>Theme Setting (deprecated)</h1>
 
         <Divider className={styles.divider} />
 

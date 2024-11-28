@@ -10,6 +10,7 @@ import { GlobalTypes, Parameters } from '@storybook/csf';
 import { Preview } from '@storybook/react';
 import { themes, ThemeVars } from '@storybook/theming';
 import { FormProvider, useForm } from 'react-hook-form';
+import { useDarkMode } from 'storybook-dark-mode';
 
 import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
 import { Alert } from '@snack-uikit/alert';
@@ -17,7 +18,15 @@ import { Link } from '@snack-uikit/link';
 import { LocaleProvider } from '@snack-uikit/locale';
 
 import { ConfigProvider } from '../packages/utils/src';
-import { BADGE, Brand, DEFAULT_BRAND_COLORS_MAP, DEFAULT_BRAND_MAP } from './constants';
+import {
+  BADGE,
+  Brand,
+  BRAND_TO_BRAND_MODE_MAP,
+  BRAND_TO_THEME_MAP,
+  DEFAULT_BRAND_COLORS_MAP,
+  DEFAULT_BRAND_MAP,
+  Mode,
+} from './constants';
 
 const LanguageCodeType = ConfigProvider.languages;
 
@@ -25,7 +34,11 @@ const url = process.env.DEPS_URL && new URL(process.env.DEPS_URL);
 
 const decorators: Preview['decorators'] = [
   withBrand,
-  (Story, { globals: { locale }, parameters: { badges, snackUiLink } }) => {
+  (Story, { globals: { locale, [PARAM_KEY]: brand }, parameters: { badges, snackUiLink } }) => {
+    const isDark = useDarkMode();
+    const mode = isDark ? Mode.Dark : Mode.Light;
+    const normalizedBrand = Object.values(Brand).includes(brand) ? (brand as Brand) : Brand.Cloud;
+
     const methods = useForm({
       mode: 'onSubmit',
       reValidateMode: 'onSubmit',
@@ -57,8 +70,15 @@ const decorators: Preview['decorators'] = [
               <br />
             </>
           )}
+
           <LocaleProvider lang={locale || LanguageCodeType.ruRU}>
-            <Story />
+            <ConfigProvider
+              theme={BRAND_TO_THEME_MAP[normalizedBrand][mode] || ConfigProvider.themes.Purple}
+              brand={BRAND_TO_BRAND_MODE_MAP[normalizedBrand][mode] || ConfigProvider.brand.Cloud}
+              languageCode={locale || LanguageCodeType.ruRU}
+            >
+              <Story />
+            </ConfigProvider>
           </LocaleProvider>
         </FormProvider>
       </div>
@@ -132,7 +152,7 @@ const globalTypes: GlobalTypes = {
   [PARAM_KEY]: {
     name: 'Brand',
     description: 'Changing brands',
-    defaultValue: Brand.MLSpace,
+    defaultValue: Brand.Cloud,
   },
   [PARAM_COLOR_MAP_KEY]: {
     name: 'Brand Map with Colors',

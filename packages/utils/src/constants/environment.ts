@@ -1,10 +1,16 @@
-import { LanguageCodeType, Themes } from '../types';
+import { Brand, LanguageCodeType, Themes } from '../types';
 
-export const DEFAULT = { LANGUAGE: LanguageCodeType.ruRU, THEME: Themes.Purple };
+export const DEFAULT = {
+  LANGUAGE: LanguageCodeType.ruRU,
+  BRAND: Brand.Cloud,
+  THEME: Themes.Purple,
+};
 
 export enum POST_MESSAGE_KEY {
   changeTheme = 'changeTheme',
   changeThemeDone = 'changeThemeDone',
+  changeBrand = 'changeBrand',
+  changeBrandDone = 'changeBrandDone',
   changeLanguage = 'changeLanguage',
   changeLanguageDone = 'changeLanguageDone',
 }

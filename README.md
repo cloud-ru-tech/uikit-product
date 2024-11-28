@@ -71,10 +71,22 @@ export const defaultLinariaConfig = (uniqueString: string): Record<string, unkno
 
 1. Импортируем ConfigProvider:
    `import { ConfigProvider } from "@sbercloud/uikit-product-utils";`
-2. Оборачиваем проект, theme передаем тему по умолчанию:
-   `<ConfigProvider theme={ConfigProvider.themes.Purple}>...</ConfigProvider>`
+2. Оборачиваем проект: в theme передаем тему (deprecated), а в brand – брэнд по умолчанию:
+   `<ConfigProvider theme={ConfigProvider.themes.Purple} brand={ConfigProvider.brand.Cloud}>...</ConfigProvider>`
 
-## Change theme
+## Change brand
+
+1. Импортируем hook useBrand:
+   `import { useBrand } from "@sbercloud/uikit-product-utils";`
+
+2. Используем callback для смены темы:
+
+```js
+const { Brand, changeBrand } = useBrand();
+changeBrand(Brand.MLSpace);
+```
+
+## Change theme (deprecated)
 
 1. Импортируем hook useTheme:
    `import { useTheme } from "@sbercloud/uikit-product-utils";`

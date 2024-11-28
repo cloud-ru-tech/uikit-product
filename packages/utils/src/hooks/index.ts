@@ -1,6 +1,7 @@
 export * from './useLanguage';
 export * from './useComponentSize';
 export * from './useTheme';
+export * from './useBrand';
 export * from './useMatchMedia';
 export * from './useForceUpdate';
 export * from './useForceUpdateOnPageLoadedCompletely';
