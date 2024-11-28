@@ -6,7 +6,7 @@ const TEST_ID = 'card-banner-test';
 
 function getPage(props?: Record<string, unknown>) {
   return getTestcafeUrl({
-    category: 'snack-uikit',
+    category: 'console',
     group: 'cards',
     name: 'banner',
     props: {

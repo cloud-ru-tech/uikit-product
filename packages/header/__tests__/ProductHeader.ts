@@ -6,7 +6,7 @@ const HEADER_TEST_ID = 'product-header';
 
 function getPage(props: Record<string, unknown> = {}) {
   return getTestcafeUrl({
-    category: 'snack-uikit',
+    category: 'console',
     name: 'product-header',
     globals: { brand: 'Cloud' },
     props: { ...props, 'data-test-id': HEADER_TEST_ID },

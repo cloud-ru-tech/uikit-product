@@ -40,7 +40,7 @@ const buildArgsParam = (args: Record<string, unknown>): string =>
     .join(';');
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function getTestcafeUrl({ name, group, props, story = name, category = 'components', globals }: any) {
+export function getTestcafeUrl({ name, group, props, story = name, category = 'console', globals }: any) {
   let propsString = '';
   let globalsString = '';
 

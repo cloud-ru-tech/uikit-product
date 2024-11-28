@@ -7,7 +7,7 @@ const LogoIconsLight = getIconsDataTestIds('svgs/color/logos', fileName =>
   fileName.endsWith('Light.svg') ? fileName.replace('.svg', '') : '',
 );
 
-fixture('Icons: Logo').page(getTestcafeUrl({ name: 'logo', group: 'icons', category: 'snack-uikit' }));
+fixture('Icons: Logo').page(getTestcafeUrl({ name: 'logo', group: 'icons', category: 'console' }));
 
 test('Rendered', async t => {
   for (const icon of LogoIconsLight) {

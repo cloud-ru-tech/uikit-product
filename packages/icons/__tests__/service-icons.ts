@@ -5,7 +5,7 @@ import { getIconsDataTestIds } from '../utils/getIconsDataTestIds';
 
 const serviceIcons = getIconsDataTestIds('svgs/service-icons');
 
-fixture('Icons: Service Icons').page(getTestcafeUrl({ name: 'service', group: 'icons', category: 'snack-uikit' }));
+fixture('Icons: Service Icons').page(getTestcafeUrl({ name: 'service', group: 'icons', category: 'console' }));
 
 test('Rendered', async t => {
   for (const icon of serviceIcons) {
