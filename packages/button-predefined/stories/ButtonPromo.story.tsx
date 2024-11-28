@@ -92,7 +92,7 @@ export const buttonPromo: StoryObj<StoryProps> = {
     design: {
       name: 'Figma',
       type: 'figma',
-      url: 'https://www.figma.com/file/jtGxAPvFJOMir7V0eQFukN/Snack-UI-Kit-1.1.0?node-id=9%3A535&mode=design',
+      url: 'https://www.figma.com/design/pCLrU1Wg1VsoMQGLmH1J8t/Website-components?node-id=2534-240075&node-type=canvas&m=dev',
     },
   },
 };
