@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.14 (2024-11-29)</small>
+
+* fix(RM-2613): added a tag and a starter grant button in the mobile financial menu ([7bd3ee1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7bd3ee1))
+* fix(RM-2613): added starter grant name ([4ba9ccf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4ba9ccf))
+* feat(RM-2613): added a tag and a starter grant button in the financial menu ([21aa197](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/21aa197))
+* feat(RM-2613): update tag package on header ([6ff80cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6ff80cc))
+* chore(FF-5944): fixed stories paths for tests ([4319822](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4319822))
+* chore(FF-5944): renamed snack uikit category to console ([411a818](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/411a818))
+
+
+
+
+
 ## <small>2.33.13 (2024-11-25)</small>
 
 * feat(PDS-976): add tag for organizations, popupText and title ([0680985](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0680985))
