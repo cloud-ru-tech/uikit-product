@@ -1,7 +1,7 @@
 import './style.css';
 
 import cn from 'classnames';
-import { useEffect, useState } from 'react';
+import { MouseEvent, useEffect, useState } from 'react';
 import {
   DraggableDirection,
   toast,
@@ -51,7 +51,8 @@ export function MobileToasterContainer({
     setIsCloseAllButtonHidden(true);
   };
 
-  const showLess = () => {
+  const showLess = (e: MouseEvent) => {
+    e.stopPropagation();
     if (stacked) {
       if (!collapsed) {
         toast.play();

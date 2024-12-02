@@ -98,7 +98,6 @@ export function MobileToastSystemEvent({
             className={styles.buttonClose}
             onClick={handleCloseClick}
             data-test-id={TOAST_SYSTEM_EVENT_TEST_IDS.buttonClose}
-            // TODO add translations
             aria-label='close notification'
           >
             <CrossSVG />
@@ -109,7 +108,6 @@ export function MobileToastSystemEvent({
       {progressBar && (
         <div
           role='progressbar'
-          // TODO add translations
           aria-label='progressbar'
           data-test-id={TOAST_SYSTEM_EVENT_TEST_IDS.progressbar}
           className={styles.progress}

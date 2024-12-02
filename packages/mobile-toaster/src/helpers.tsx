@@ -345,7 +345,7 @@ export const mobileToaster: Toaster = {
   systemEvent,
 };
 
-export function adaptiveToaster({ layoutType }: WithLayoutType<void>): Toaster {
+export function adaptiveToaster({ layoutType }: WithLayoutType<unknown>): Toaster {
   const isMobile = layoutType === 'mobile';
 
   return isMobile ? mobileToaster : toaster;

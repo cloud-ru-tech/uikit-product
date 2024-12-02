@@ -9,13 +9,13 @@ export enum Texts {
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
     [Texts.CloseAll]: 'Закрыть все',
-    [Texts.ShowLess]: 'Показать меньше',
-    [Texts.ShowMore]: 'Показать больше',
+    [Texts.ShowLess]: 'Свернуть',
+    [Texts.ShowMore]: 'Развернуть',
   },
   [LanguageCodeType.enGB]: {
     [Texts.CloseAll]: 'Close all',
-    [Texts.ShowLess]: 'Show less',
-    [Texts.ShowMore]: 'Show more',
+    [Texts.ShowLess]: 'Collapse',
+    [Texts.ShowMore]: 'Expand',
   },
 };
 

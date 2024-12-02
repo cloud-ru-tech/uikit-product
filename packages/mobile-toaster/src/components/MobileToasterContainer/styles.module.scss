@@ -3,6 +3,13 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterSystemEvent';
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterUserAction';
 
+/* stylelint-disable */
+$toaster-buttons-height: calc(
+  styles-theme-variables.$size-toaster-button-close-column -
+    styles-theme-variables.$radius-toaster-system-event-button-close-column
+);
+/* stylelint-enable */
+
 .buttonCloseColumnWrapper {
   @include styles-theme-variables.composite-var(
     styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toaster-container
@@ -16,6 +23,9 @@
   max-width: 448px;
   padding: 16px;
 
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 2;
+
   position: fixed;
   box-sizing: border-box;
 }
@@ -28,12 +38,7 @@
 
   box-sizing: border-box;
   width: 100%;
-  /* stylelint-disable */
-  height: calc(
-    styles-theme-variables.$size-toaster-button-close-column -
-      styles-theme-variables.$radius-toaster-system-event-button-close-column
-  );
-  /* stylelint-enable */
+  height: $toaster-buttons-height;
 
   color: styles-theme-variables.$sys-invert-neutral-text-main;
 
@@ -122,6 +127,17 @@ $theme-name: osThemeSnack;
       box-shadow: none;
     }
 
+    .Toastify__toast-container-scroll {
+      position: relative;
+
+      width: 100%;
+      height: calc(100vh - 32px - $toaster-buttons-height);
+
+      overflow-y: scroll;
+
+      margin-top: 16px;
+    }
+
     .Toastify__toast--stacked {
       position: absolute !important; /* stylelint-disable-line declaration-no-important */
 
@@ -143,11 +159,15 @@ $theme-name: osThemeSnack;
       &[data-collapsed='false'] {
         overflow: visible;
         transform: translate3d(0, var(--y), 0) scale(var(--s));
+        opacity: 1;
       }
 
       &[data-collapsed='true']:not(:last-child) > * {
         filter: contrast(calc(100% - (1 - var(--s, 1)) * 1000%));
-        transition: filter 0.1s;
+      }
+
+      &[data-collapsed='true']:not(:nth-last-child(-n + 3)) {
+        opacity: 0;
       }
 
       &:after {
@@ -160,7 +180,7 @@ $theme-name: osThemeSnack;
       }
 
       &[data-pos='top'] {
-        top: 16px;
+        top: 0;
       }
 
       &[data-pos='bot'] {
@@ -263,6 +283,10 @@ $theme-name: osThemeSnack;
     flex-direction: column;
     width: 100%;
     max-width: 448px;
+
+    &:has(.Toastify__toast--stacked) {
+      padding: 0;
+    }
   }
 
   .#{$theme-name}.Toastify__toast-container.osThemeSnack__toast-container__user-action {

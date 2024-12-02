@@ -1,5 +1,5 @@
 import cx from 'clsx';
-import { useRef } from 'react';
+import { MouseEvent, useRef } from 'react';
 import { toast, ToastContainerProps, ToastPosition, useToastContainer } from 'react-toastify';
 
 import { useStackedToastsContext } from '../../contexts';
@@ -33,11 +33,22 @@ export function CustomToastContainer(props: ToastContainerProps) {
       : cx(defaultClassName, parseClassName(className));
   }
 
-  function collapseAll() {
-    if (stacked) {
-      setCollapsed(true);
-      toast.play();
-    }
+  function collapseAll(e: MouseEvent) {
+    setTimeout(() => {
+      if (stacked && !e.isPropagationStopped()) {
+        setCollapsed(true);
+        toast.play();
+      }
+    }, 0);
+  }
+
+  function expandAll(e: MouseEvent) {
+    setTimeout(() => {
+      if (stacked && !e.isPropagationStopped()) {
+        setCollapsed(false);
+        toast.pause();
+      }
+    }, 0);
   }
 
   useIsomorphicLayoutEffect(() => {
@@ -75,12 +86,7 @@ export function CustomToastContainer(props: ToastContainerProps) {
       ref={containerRef}
       className={'Toastify'}
       id={containerId as string}
-      onMouseEnter={() => {
-        if (stacked) {
-          setCollapsed(false);
-          toast.pause();
-        }
-      }}
+      onMouseEnter={expandAll}
       onMouseLeave={collapseAll}
     >
       {getToastToRender((position, toastList) => {
@@ -90,18 +96,20 @@ export function CustomToastContainer(props: ToastContainerProps) {
 
         return (
           <div className={getClassName(position)} style={containerStyle} key={`container-${position}`}>
-            {toastList.map(({ content, props: toastProps }) => (
-              <CustomToast
-                {...toastProps}
-                stacked={stacked}
-                collapseAll={() => {}}
-                isIn={isToastActive(toastProps.toastId, toastProps.containerId)}
-                style={toastProps.style}
-                key={`toast-${toastProps.key}`}
-              >
-                {content}
-              </CustomToast>
-            ))}
+            <div className='Toastify__toast-container-scroll'>
+              {toastList.map(({ content, props: toastProps }) => (
+                <CustomToast
+                  {...toastProps}
+                  stacked={stacked}
+                  collapseAll={() => {}}
+                  isIn={isToastActive(toastProps.toastId, toastProps.containerId)}
+                  style={toastProps.style}
+                  key={`toast-${toastProps.key}`}
+                >
+                  {content}
+                </CustomToast>
+              ))}
+            </div>
           </div>
         );
       })}
