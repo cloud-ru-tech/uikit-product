@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.15 (2024-12-02)</small>
+
+* feat(PDS-1039)!: new marketplace entry point, remove pinnedCards ([ac94db1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ac94db1))
+
+
+
+
+
 ## <small>2.33.14 (2024-11-29)</small>
 
 * fix(RM-2613): added a tag and a starter grant button in the mobile financial menu ([7bd3ee1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7bd3ee1))
