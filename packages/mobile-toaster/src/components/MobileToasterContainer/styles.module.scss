@@ -128,21 +128,28 @@ $theme-name: osThemeSnack;
     }
 
     .Toastify__toast-container-scroll {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
       position: relative;
 
       width: 100%;
-      height: calc(100vh - 32px - $toaster-buttons-height);
+      height: auto;
 
       overflow-y: scroll;
 
-      margin-top: 16px;
+      margin-top: 4px;
     }
 
     .Toastify__toast--stacked {
       position: absolute !important; /* stylelint-disable-line declaration-no-important */
 
       transform: translate3d(0, calc(var(--y) * 0.5), 0) scale(var(--s));
-      transition: transform 0.3s;
+      transition:
+        transform 0.3s,
+        opacity 0.1s,
+        filter 0.1s;
 
       width: 100%;
 
@@ -288,8 +295,15 @@ $theme-name: osThemeSnack;
       padding-right: 16px;
     }
 
-    &:has(.Toastify__toast--stacked) {
-      padding: 0;
+    .Toastify__toast-container-scroll {
+      height: 180px;
+      transition: height 0.3s;
+    }
+
+    .Toastify__toast-container-scroll--active {
+      &.Toastify__toast-container-scroll {
+        height: calc(100vh - 32px - $toaster-buttons-height);
+      }
     }
   }
 
@@ -302,6 +316,10 @@ $theme-name: osThemeSnack;
     flex-direction: column;
     align-items: center;
     width: fit-content;
+
+    .Toastify__toast-container-scroll {
+      overflow: visible;
+    }
   }
 
   .#{$theme-name}.Toastify__toast-container--top-center {

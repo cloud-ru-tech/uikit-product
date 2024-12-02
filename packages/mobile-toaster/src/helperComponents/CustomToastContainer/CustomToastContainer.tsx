@@ -96,7 +96,12 @@ export function CustomToastContainer(props: ToastContainerProps) {
 
         return (
           <div className={getClassName(position)} style={containerStyle} key={`container-${position}`}>
-            <div className='Toastify__toast-container-scroll'>
+            <div
+              className={cx(
+                'Toastify__toast-container-scroll',
+                collapsed ? '' : 'Toastify__toast-container-scroll--active',
+              )}
+            >
               {toastList.map(({ content, props: toastProps }) => (
                 <CustomToast
                   {...toastProps}
