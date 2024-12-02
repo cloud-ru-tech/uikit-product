@@ -148,8 +148,6 @@ $theme-name: osThemeSnack;
 
       left: 0;
       right: 0;
-      padding-left: 16px;
-      padding-right: 16px;
 
       &[data-collapsed] .Toastify__toast-body,
       &[data-collapsed] .Toastify__close-button {
@@ -281,8 +279,14 @@ $theme-name: osThemeSnack;
 
     display: flex;
     flex-direction: column;
-    width: 100%;
-    max-width: 448px;
+
+    &:has(.Toastify__toast) {
+      width: 100%;
+      max-width: 448px;
+
+      padding-left: 16px;
+      padding-right: 16px;
+    }
 
     &:has(.Toastify__toast--stacked) {
       padding: 0;
