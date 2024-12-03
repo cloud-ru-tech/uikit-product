@@ -1,51 +1,27 @@
-import { CSSProperties, MouseEvent, RefObject, TouchEvent, useEffect, useRef, useState } from 'react';
+import mergeRefs from 'merge-refs';
+import { CSSProperties, useRef, useState } from 'react';
+import { SwipeCallback, useSwipeable } from 'react-swipeable';
 
 import { Position } from '../../types';
-
-function getPageCoordinate(e: TouchEvent | MouseEvent, position: Position): number {
-  const key = position === 'top' || position === 'bottom' ? 'pageY' : 'pageX';
-
-  if (e.nativeEvent instanceof globalThis.MouseEvent) {
-    return e.nativeEvent[key];
-  } else if (e.nativeEvent instanceof globalThis.TouchEvent) {
-    return e.nativeEvent.changedTouches[0][key];
-  }
-
-  return 0;
-}
+import { POSITION_TO_SWIPE_DIRECTION_MAP } from './constants';
 
 type UseSwipePropsProps = {
-  onClose(): void;
+  onSwiped(): void;
   position: Position;
   enabled: boolean;
-  scrollRef?: RefObject<HTMLElement>;
 };
 
 const TRANSFORM = 0;
-const CLOSE_DELTA_IN_PX = 40;
-const CLOSE_RATIO = 3;
+const SWIPE_DURATION = 500;
 
-export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwipePropsProps) {
+export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProps) {
   const swipeRef = useRef<HTMLDivElement>(null);
+  const canCloseDrawer = useRef(true);
   const itemSize =
     (position === 'bottom' || position === 'top' ? swipeRef.current?.offsetHeight : swipeRef.current?.offsetWidth) ?? 0;
+  const swipeStart = useRef(0);
 
-  const scrollRefElement = scrollRef?.current;
-  const [isScrolledToTop, setIsScrolledToTop] = useState(true);
-  const shouldDrag = enabled && isScrolledToTop;
-
-  useEffect(() => {
-    if (scrollRefElement) {
-      const handleScroll = () => {
-        setIsScrolledToTop(scrollRefElement.scrollTop === 0);
-      };
-
-      scrollRefElement.addEventListener('scroll', handleScroll);
-      return () => scrollRefElement.removeEventListener('scroll', handleScroll);
-    }
-  }, [scrollRefElement]);
-
-  const [drag, setDrag] = useState({
+  const getInitialDrag = () => ({
     initial: TRANSFORM,
     start: 0,
     isDown: false,
@@ -54,7 +30,14 @@ export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwip
     pointers: true,
   });
 
-  const getDrawerTransform = (value = drag.drag) => {
+  const [drag, setDrag] = useState(getInitialDrag);
+
+  const [styles, setStyles] = useState<{
+    drawer: CSSProperties | undefined;
+    mask: CSSProperties | undefined;
+  }>();
+
+  const getDrawerTransform = (value: number) => {
     switch (position) {
       case 'bottom':
         return `translateY(${TRANSFORM - value}px)`;
@@ -68,78 +51,50 @@ export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwip
     }
   };
 
-  const getMaskOpacity = (value = drag.drag) => 1 + value / itemSize;
+  const getMaskOpacity = (value: number) => 1 + value / itemSize;
 
-  const shouldCloseDrawer = Math.abs(drag.drag) < Math.max(CLOSE_DELTA_IN_PX, itemSize / CLOSE_RATIO);
-
-  const [styles, setStyles] = useState<{
-    drawer: CSSProperties | undefined;
-    mask: CSSProperties | undefined;
-  }>();
-
-  const handleDragStart = (event: MouseEvent | TouchEvent) => {
-    if (!shouldDrag) {
-      return;
-    }
-
-    setDrag({
-      ...drag,
-      isDown: true,
-      start: getPageCoordinate(event, position),
-      initial: TRANSFORM,
-      finished: false,
-    });
+  const resetStyles = () => {
+    setStyles(undefined);
+    setDrag(getInitialDrag());
   };
 
-  const handleDragFinish = () => {
-    if (!shouldDrag) {
-      return;
-    }
-
-    if (drag.finished) {
-      return;
-    }
-
-    if (shouldCloseDrawer) {
-      setStyles(undefined);
-
-      return setDrag({
-        initial: TRANSFORM,
-        start: 0,
-        isDown: false,
-        drag: 0,
-        finished: true,
-        pointers: true,
-      });
-    }
-
-    onClose();
-    setStyles({
-      drawer: { transform: getDrawerTransform() },
-      mask: { opacity: getMaskOpacity() },
-    });
-    setDrag({ ...drag, drag: 0, isDown: false, finished: true, pointers: true });
-    return;
+  const handleSwipeStart: SwipeCallback = () => {
+    swipeStart.current = Date.now();
   };
 
-  const handleDragMove = (event: MouseEvent | TouchEvent) => {
-    if (!shouldDrag) {
+  const handleSwiping: SwipeCallback = eventData => {
+    if (!enabled) {
       return;
     }
 
-    if (!drag.isDown) {
+    if (eventData.dir !== POSITION_TO_SWIPE_DIRECTION_MAP[position]) {
       return;
     }
 
-    const pos = getPageCoordinate(event, position);
-    const newDrag = drag.start - pos;
-    const adjustedDrag = position === 'top' || position === 'left' ? Math.max(0, newDrag) : Math.min(0, newDrag);
+    let adjustedDrag = 0;
 
-    setDrag({
-      ...drag,
+    switch (position) {
+      case 'left':
+        adjustedDrag = Math.max(0, -eventData.deltaX);
+        break;
+      case 'right':
+        adjustedDrag = Math.min(0, -eventData.deltaX);
+        break;
+      case 'top':
+        adjustedDrag = Math.max(0, -eventData.deltaY);
+        break;
+      case 'bottom':
+        adjustedDrag = Math.min(0, -eventData.deltaY);
+        break;
+      default:
+        break;
+    }
+
+    setDrag(prevDrag => ({
+      ...prevDrag,
       drag: adjustedDrag,
-      pointers: Math.abs(drag.start - pos) < Number.MIN_SAFE_INTEGER,
-    });
+      pointers: eventData.absX < Number.MIN_SAFE_INTEGER,
+    }));
 
     setStyles({
       drawer: { transform: getDrawerTransform(adjustedDrag), transition: 'none' },
@@ -147,28 +102,83 @@ export function useSwipeProps({ onClose, position, enabled, scrollRef }: UseSwip
     });
   };
 
+  const handleSwiped: SwipeCallback = eventData => {
+    if (!enabled) {
+      return;
+    }
+
+    if (eventData.dir !== POSITION_TO_SWIPE_DIRECTION_MAP[position]) {
+      return resetStyles();
+    }
+
+    if (Date.now() - swipeStart.current > SWIPE_DURATION) {
+      return resetStyles();
+    }
+
+    const {
+      scrollLeft = 0,
+      scrollTop = 0,
+      scrollWidth = 0,
+      offsetWidth = 0,
+      scrollHeight = 0,
+      offsetHeight = 0,
+    } = (eventData.event.target ?? {}) as Record<string, number | undefined>;
+
+    switch (position) {
+      case 'right':
+        if (scrollLeft > 0) {
+          canCloseDrawer.current = false;
+          return resetStyles();
+        }
+        break;
+      case 'left':
+        if (scrollWidth - offsetWidth > scrollLeft) {
+          canCloseDrawer.current = false;
+          return resetStyles();
+        }
+        break;
+      case 'bottom':
+        if (scrollTop > 0) {
+          canCloseDrawer.current = false;
+          return resetStyles();
+        }
+        break;
+      case 'top':
+        if (scrollHeight - offsetHeight > scrollTop) {
+          canCloseDrawer.current = false;
+          return resetStyles();
+        }
+        break;
+      default:
+        break;
+    }
+
+    if (!canCloseDrawer.current) {
+      canCloseDrawer.current = true;
+      return resetStyles();
+    }
+
+    onSwiped();
+    setStyles({ drawer: { transform: getDrawerTransform(drag.drag) }, mask: { opacity: getMaskOpacity(drag.drag) } });
+    setDrag(prevDrag => ({ ...prevDrag, drag: 0, isDown: false, finished: true, pointers: true }));
+  };
+
+  const { ref, ...swipeProps } = useSwipeable({
+    onSwipeStart: handleSwipeStart,
+    onSwiping: handleSwiping,
+    onSwiped: handleSwiped,
+    trackMouse: true,
+  });
+
   return {
-    swipeRef,
+    swipeRef: mergeRefs(ref as (value: HTMLDivElement) => void, swipeRef),
     drawerStyles: styles?.drawer,
     maskStyles: styles?.mask,
     showPointer: !drag.pointers,
-    swipeProps: {
-      onTouchCancel: handleDragFinish,
-      onTouchEnd: handleDragFinish,
-      onTouchMove: handleDragMove,
-      onTouchStart: handleDragStart,
-      onMouseDown: handleDragStart,
-      onMouseLeave: handleDragFinish,
-      onMouseUp: handleDragFinish,
-      onMouseMove: handleDragMove,
-    },
+    swipeProps,
     drawerMotionProps: {
-      onLeaveActive: () => {
-        setStyles(undefined);
-      },
-      onLeaveEnd: () => {
-        setStyles(undefined);
-      },
+      onLeaveActive: () => setStyles(undefined),
+      onLeaveEnd: () => setStyles(undefined),
     },
   };
 }

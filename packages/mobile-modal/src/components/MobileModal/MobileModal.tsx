@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import { useRef } from 'react';
 
 import {
   ButtonFilled,
@@ -69,12 +68,11 @@ export function MobileModal({
 }: MobileModalProps) {
   const aligns = getAlignProps({ align });
   const buttonsSize = getButtonsSize();
-  const scrollRef = useRef(null);
   const needFooter =
     Boolean(approveButton) || Boolean(cancelButton) || Boolean(additionalButton) || Boolean(disclaimer);
 
   return (
-    <MobileModalCustom {...rest} scrollRef={scrollRef}>
+    <MobileModalCustom {...rest}>
       <MobileModalCustom.Header
         className={cn({ [styles.modalHeader]: !Boolean(content) })}
         title={title}
@@ -84,12 +82,7 @@ export function MobileModal({
       />
 
       {Boolean(content) && (
-        <MobileModalCustom.Body
-          className={styles.modalBody}
-          content={content}
-          align={aligns.body}
-          scrollRef={scrollRef}
-        />
+        <MobileModalCustom.Body className={styles.modalBody} content={content} align={aligns.body} />
       )}
       {needFooter && (
         <MobileModalCustom.Footer

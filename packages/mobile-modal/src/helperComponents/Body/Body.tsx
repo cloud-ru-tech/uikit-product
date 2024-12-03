@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { ReactNode, RefObject } from 'react';
+import { ReactNode } from 'react';
 
 import { MobileDrawerCustom } from '@sbercloud/uikit-product-mobile-drawer';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
@@ -13,17 +13,14 @@ export type ModalBodyProps = WithSupportProps<{
   content: ReactNode;
   /** Выравнивание контента */
   align?: ContentAlign;
-  /** Ссылка на скроллящийся элемент дровера */
-  scrollRef?: RefObject<HTMLElement>;
   className?: string;
 }>;
 
-export function ModalBody({ content, align = CONTENT_ALIGN.Default, className, scrollRef, ...rest }: ModalBodyProps) {
+export function ModalBody({ content, align = CONTENT_ALIGN.Default, className, ...rest }: ModalBodyProps) {
   return (
     <MobileDrawerCustom.Body
       content={content}
       className={cn(styles.modalBody, className)}
-      scrollRef={scrollRef}
       {...extractSupportProps(rest)}
       data-align={align}
       data-test-id={TEST_IDS.content}

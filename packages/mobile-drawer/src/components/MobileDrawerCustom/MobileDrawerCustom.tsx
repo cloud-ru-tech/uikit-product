@@ -2,7 +2,7 @@ import 'rc-drawer/assets/index.css';
 
 import cn from 'classnames';
 import RcDrawer from 'rc-drawer';
-import { PropsWithChildren, RefObject } from 'react';
+import { PropsWithChildren } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
@@ -54,8 +54,6 @@ export type MobileDrawerCustomProps = WithSupportProps<
     swipeEnabled?: boolean;
     /** Показывать ли кнопку закрытия */
     closeButtonEnabled?: boolean;
-    /** Ссылка на скроллящийся элемент дровера */
-    scrollRef?: RefObject<HTMLElement>;
   }>
 >;
 
@@ -72,7 +70,6 @@ function MobileDrawerCustomComponent({
   swipeEnabled = true,
   modalMode = MODAL_MODE.Regular,
   closeButtonEnabled = true,
-  scrollRef,
   ...rest
 }: MobileDrawerCustomProps) {
   const isPredefinedSize = typeof size === 'string' && SIZE_AS_VALUES.includes(size);
@@ -87,9 +84,8 @@ function MobileDrawerCustomComponent({
 
   const { swipeRef, drawerStyles, maskStyles, drawerMotionProps, swipeProps, showPointer } = useSwipeProps({
     position,
-    onClose: handleClose,
+    onSwiped: handleClose,
     enabled: hasSwipe && swipeEnabled,
-    scrollRef,
   });
 
   return (
