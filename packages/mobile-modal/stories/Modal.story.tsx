@@ -39,7 +39,9 @@ function Template({ open: openProp, ...args }: ModalStoryProps) {
         {...args}
         open={openProp ?? open}
         onClose={closeModal}
-        approveButton={{ ...args.approveButton, onClick: closeModal }}
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        approveButton={!args.approveButton ? undefined : { ...args.approveButton, onClick: closeModal }}
         cancelButton={!args.cancelButton ? undefined : { ...args.cancelButton, onClick: closeModal }}
         additionalButton={!args.additionalButton ? undefined : { ...args.additionalButton, onClick: closeModal }}
         content={

@@ -70,6 +70,8 @@ export function MobileModal({
   const aligns = getAlignProps({ align });
   const buttonsSize = getButtonsSize();
   const scrollRef = useRef(null);
+  const needFooter =
+    Boolean(approveButton) || Boolean(cancelButton) || Boolean(additionalButton) || Boolean(disclaimer);
 
   return (
     <MobileModalCustom {...rest} scrollRef={scrollRef}>
@@ -89,51 +91,54 @@ export function MobileModal({
           scrollRef={scrollRef}
         />
       )}
-
-      <MobileModalCustom.Footer
-        actions={
-          <>
-            <ButtonFilled
-              appearance='primary'
-              {...approveButton}
-              size={buttonsSize}
-              className={styles.footerButton}
-              data-test-id={TEST_IDS.approveButton}
-            />
-
-            {cancelButton && (
-              <ButtonOutline
-                appearance='neutral'
-                {...cancelButton}
-                size={buttonsSize}
-                className={styles.footerButton}
-                data-test-id={TEST_IDS.cancelButton}
-              />
-            )}
-
-            {additionalButton && (
-              <ButtonSimple
-                appearance='neutral'
-                {...additionalButton}
-                size={buttonsSize}
-                className={styles.footerButton}
-                data-test-id={TEST_IDS.additionalButton}
-              />
-            )}
-          </>
-        }
-        disclaimer={
-          disclaimer && (
+      {needFooter && (
+        <MobileModalCustom.Footer
+          actions={
             <>
-              <Typography.SansBodyS data-test-id={TEST_IDS.disclaimerText}>{disclaimer.text}</Typography.SansBodyS>
+              {approveButton && (
+                <ButtonFilled
+                  appearance='primary'
+                  {...approveButton}
+                  size={buttonsSize}
+                  className={cn(styles.footerButton, approveButton.className)}
+                  data-test-id={TEST_IDS.approveButton}
+                />
+              )}
 
-              {disclaimer.link && <Link {...disclaimer.link} size='s' data-test-id={TEST_IDS.disclaimerLink} />}
+              {cancelButton && (
+                <ButtonOutline
+                  appearance='neutral'
+                  {...cancelButton}
+                  size={buttonsSize}
+                  className={cn(styles.footerButton, cancelButton.className)}
+                  data-test-id={TEST_IDS.cancelButton}
+                />
+              )}
+
+              {additionalButton && (
+                <ButtonSimple
+                  appearance='neutral'
+                  {...additionalButton}
+                  size={buttonsSize}
+                  className={cn(styles.footerButton, additionalButton.className)}
+                  data-test-id={TEST_IDS.additionalButton}
+                />
+              )}
             </>
-          )
-        }
-        align={aligns.footer}
-        className={styles.modalFooter}
-      />
+          }
+          disclaimer={
+            disclaimer && (
+              <>
+                <Typography.SansBodyS data-test-id={TEST_IDS.disclaimerText}>{disclaimer.text}</Typography.SansBodyS>
+
+                {disclaimer.link && <Link {...disclaimer.link} size='s' data-test-id={TEST_IDS.disclaimerLink} />}
+              </>
+            )
+          }
+          align={aligns.footer}
+          className={styles.modalFooter}
+        />
+      )}
     </MobileModalCustom>
   );
 }
