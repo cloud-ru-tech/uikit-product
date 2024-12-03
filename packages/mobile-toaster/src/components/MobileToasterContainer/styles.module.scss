@@ -2,6 +2,7 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterSystemEvent';
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toaster-toasterUserAction';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-scroll';
 
 /* stylelint-disable */
 $toaster-buttons-height: calc(
@@ -9,6 +10,8 @@ $toaster-buttons-height: calc(
     styles-theme-variables.$radius-toaster-system-event-button-close-column
 );
 /* stylelint-enable */
+
+$toaster-system-event-width: 480px;
 
 .buttonCloseColumnWrapper {
   @include styles-theme-variables.composite-var(
@@ -20,11 +23,11 @@ $toaster-buttons-height: calc(
   gap: styles-theme-variables.$space-toaster-system-event-gap;
 
   width: 100%;
-  max-width: 448px;
+  max-width: $toaster-system-event-width;
   padding: 16px;
 
   /* stylelint-disable-next-line declaration-property-value-allowed-list */
-  z-index: 2;
+  z-index: 1;
 
   position: fixed;
   box-sizing: border-box;
@@ -132,18 +135,54 @@ $theme-name: osThemeSnack;
       flex-direction: column;
       gap: 4px;
 
+      box-sizing: border-box;
+
       position: relative;
 
       width: 100%;
       height: auto;
 
-      overflow-y: scroll;
+      overflow: visible;
+
+      &::-webkit-scrollbar {
+        @include styles-theme-variables.composite-var(styles-tokens-scroll.$scroll-slider-vertical-s);
+
+        background-color: transparent;
+        margin-left: 5px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @include styles-theme-variables.composite-var(styles-tokens-scroll.$scroll-slider-vertical-s);
+
+        opacity: styles-tokens-scroll.simple-var(styles-tokens-scroll.$theme-variables, 'opacity', 'a032');
+        background-color: styles-tokens-scroll.simple-var(
+          styles-tokens-scroll.$theme-variables,
+          'sys',
+          'neutral',
+          'accent-default'
+        );
+
+        &.active,
+        &:hover {
+          opacity: styles-tokens-scroll.simple-var(styles-tokens-scroll.$theme-variables, 'opacity', 'a064');
+          background-color: styles-tokens-scroll.simple-var(
+            styles-tokens-scroll.$theme-variables,
+            'sys',
+            'neutral',
+            'accent-default'
+          );
+        }
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
 
       margin-top: 4px;
     }
 
     .Toastify__toast--stacked {
-      position: absolute !important; /* stylelint-disable-line declaration-no-important */
+      position: absolute;
 
       transform: translate3d(0, calc(var(--y) * 0.5), 0) scale(var(--s));
       transition:
@@ -289,20 +328,28 @@ $theme-name: osThemeSnack;
 
     &:has(.Toastify__toast) {
       width: 100%;
-      max-width: 448px;
+      max-width: $toaster-system-event-width;
 
       padding-left: 16px;
       padding-right: 16px;
     }
 
-    .Toastify__toast-container-scroll {
-      height: 180px;
-      transition: height 0.3s;
+    &:has(.Toastify__toast--stacked) {
+      .Toastify__toast-container-scroll {
+        position: sticky;
+
+        max-width: calc($toaster-system-event-width - 32px);
+      }
     }
 
     .Toastify__toast-container-scroll--active {
       &.Toastify__toast-container-scroll {
+        position: relative;
+
         height: calc(100vh - 32px - $toaster-buttons-height);
+
+        overflow-y: auto;
+        overflow-x: hidden;
       }
     }
   }

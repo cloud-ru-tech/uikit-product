@@ -33,10 +33,10 @@ export type MobileToasterContainerProps = {
 
 export function MobileToasterContainer({
   position = 'bottom-right',
-  limit = 5,
   stacked = false,
   draggable = false,
   draggableDirection = 'x',
+  limit,
   containerId,
   displayCloseAllButton,
   type = TOASTER_TYPE.SystemEvent,
@@ -46,9 +46,12 @@ export function MobileToasterContainer({
   const [isCloseAllButtonHidden, setIsCloseAllButtonHidden] = useState(false);
   const { collapsed, setCollapsed } = useStackedToastsContext();
 
+  const defaultLimit = !stacked && !limit ? 5 : limit;
+
   const closeAll = () => {
     toast.dismiss();
     setIsCloseAllButtonHidden(true);
+    setCollapsed(true);
   };
 
   const showLess = (e: MouseEvent) => {
@@ -72,12 +75,19 @@ export function MobileToasterContainer({
           setNotificationCounter(prev => prev + 1);
         }
         if (status === 'removed') {
-          setNotificationCounter(prev => prev - 1);
+          setNotificationCounter(prev => {
+            if (prev === 1) {
+              setCollapsed(true);
+            }
+
+            return prev - 1;
+          });
         }
       }
     });
 
     return unsubscribe;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const hasCloseButtons = displayCloseAllButton && notificationCounter > 1 && !isCloseAllButtonHidden;
@@ -118,7 +128,7 @@ export function MobileToasterContainer({
         toastClassName={styles.toaster}
         bodyClassName={styles.toaster}
         position={position}
-        limit={limit}
+        limit={defaultLimit}
         containerId={containerId}
         stacked={stacked}
       />

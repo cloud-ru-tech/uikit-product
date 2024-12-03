@@ -8,7 +8,6 @@ export const TOASTER_TYPE = {
 
 export const TOASTER_CONTAINER_DEFAULT_PROPS: Record<ToasterType, MobileToasterContainerProps> = {
   [TOASTER_TYPE.SystemEvent]: {
-    limit: 5,
     position: 'top-center',
     displayCloseAllButton: true,
     type: TOASTER_TYPE.SystemEvent,
@@ -25,7 +24,7 @@ export const TOASTER_CONTAINER_DEFAULT_PROPS: Record<ToasterType, MobileToasterC
 };
 
 export const AUTO_CLOSE_TIME = {
-  [TOASTER_TYPE.SystemEvent]: 5000,
+  [TOASTER_TYPE.SystemEvent]: 500000,
   [TOASTER_TYPE.UserAction]: 2000,
 };
 
