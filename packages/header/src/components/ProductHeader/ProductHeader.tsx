@@ -1,4 +1,4 @@
-import { ReactElement, useCallback, useEffect, useMemo, useState } from 'react';
+import { MouseEvent, ReactElement, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { QuestionSVG, SettingsSVG } from '@sbercloud/uikit-product-icons';
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -28,7 +28,8 @@ export type BaseSettingOption = {
   id: string;
   label: string;
   icon: ReactElement;
-  onClick(): void;
+  href?: string;
+  onClick(e?: MouseEvent<HTMLElement>): void;
   hidden?: boolean;
 };
 
@@ -182,16 +183,25 @@ export function ProductHeader({
     if (filteredSettings && filteredSettings.length) {
       return filteredSettings.map(setting => {
         if (!isDividerItem<BaseSettingOption>(setting)) {
+          const handleClick = (e?: MouseEvent<HTMLElement>) => {
+            setting?.onClick(e);
+            setIsSettingsOpen(false);
+          };
+
           return {
             'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
             content: {
               option: setting.label,
             },
+            itemWrapRender: setting.href
+              ? (item: ReactNode) => (
+                  <a href={setting.href} onClick={handleClick}>
+                    {item}
+                  </a>
+                )
+              : undefined,
             beforeContent: setting.icon,
-            onClick: () => {
-              setting.onClick();
-              setIsSettingsOpen(false);
-            },
+            onClick: !setting.href ? handleClick : undefined,
           };
         }
 

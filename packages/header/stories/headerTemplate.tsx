@@ -614,7 +614,16 @@ export const ARGS: StoryProps = {
       hidden: false,
       id: DIVIDER_SETTING_OPTION_ID,
     },
-    { id: 'settings', label: 'Настройки организации', icon: <SettingsSVG />, onClick: () => {}, hidden: false },
+    {
+      id: 'settings',
+      label: 'Настройки организации',
+      icon: <SettingsSVG />,
+      onClick: e => {
+        e?.preventDefault();
+      },
+      href: 'https://console.cloud.ru/projects/x/spa/administration',
+      hidden: false,
+    },
     { id: 'users', label: 'Пользователи', icon: <UsersSVG />, onClick: () => {} },
     { id: 'agreements', label: 'Договоры', icon: <DetalisationSVG />, onClick: () => {} },
     {

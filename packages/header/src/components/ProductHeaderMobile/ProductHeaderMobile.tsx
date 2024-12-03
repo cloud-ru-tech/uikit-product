@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { MouseEvent, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 
 import {
   BurgerSVG,
@@ -274,16 +274,25 @@ export function ProductHeaderMobile({
         divider: true,
         items: visibleSettings.map(setting => {
           if (!isDividerItem(setting)) {
+            const handleClick = (e?: MouseEvent<HTMLElement>) => {
+              setting?.onClick(e);
+              closeUserMenu();
+            };
+
             return {
               'data-test-id': `header__settings__item-${extractAppNameFromId(setting.id)}`,
               content: {
                 option: setting.label,
               },
+              itemWrapRender: setting.href
+                ? (item: ReactNode) => (
+                    <a href={setting.href} onClick={handleClick}>
+                      {item}
+                    </a>
+                  )
+                : undefined,
               beforeContent: setting.icon,
-              onClick: () => {
-                setting.onClick();
-                closeUserMenu();
-              },
+              onClick: !setting.href ? handleClick : undefined,
             };
           }
 
