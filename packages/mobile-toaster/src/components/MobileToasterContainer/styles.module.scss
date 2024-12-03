@@ -182,7 +182,8 @@ $theme-name: osThemeSnack;
     }
 
     .Toastify__toast--stacked {
-      position: absolute;
+      /* stylelint-disable-next-line declaration-no-important */
+      position: absolute !important;
 
       transform: translate3d(0, calc(var(--y) * 0.5), 0) scale(var(--s));
       transition:
