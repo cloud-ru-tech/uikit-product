@@ -1,3 +1,23 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## <small>0.0.1 (2024-12-04)</small>
+
+* fix(PDS-773): css classes priority ([5ab2b37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5ab2b37))
+* fix(PDS-773): on mobile scrolling not working ([b863114](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b863114))
+* fix(PDS-773): scroll container position and styling ([ded5686](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ded5686))
+* chore(PDS-773): change css classes to prevent mashing ([f44cf44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f44cf44))
+* chore(PDS-773): change text, added corrent behaviour and scroll ([a9ac409](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a9ac409))
+* chore(PDS-773): move custom toast components to helper components ([b936631](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b936631))
+* chore(PDS-773): returned auto close time toaster normal duration ([fdc50af](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fdc50af))
+* feat(PDS-773): add mobile-toaster ([f9bb25d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9bb25d))
+
+
+
+
+
 ## CHANGELOG
 
 ### v0.0.0
