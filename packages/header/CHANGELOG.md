@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.16 (2024-12-04)</small>
+
+* feat(FF-5823): setting item as link ([e93e6cb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e93e6cb))
+
+
+
+
+
 ## <small>2.33.15 (2024-12-02)</small>
 
 * feat(PDS-1039)!: new marketplace entry point, remove pinnedCards ([ac94db1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ac94db1))
