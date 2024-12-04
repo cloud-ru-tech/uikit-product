@@ -12,7 +12,7 @@ export const TOASTER_CONTAINER_DEFAULT_PROPS: Record<ToasterType, MobileToasterC
     displayCloseAllButton: true,
     type: TOASTER_TYPE.SystemEvent,
     stacked: true,
-    draggable: true,
+    draggable: false,
     draggableDirection: 'x',
   },
   [TOASTER_TYPE.UserAction]: {

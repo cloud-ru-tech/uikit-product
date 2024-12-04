@@ -351,6 +351,12 @@ $theme-name: osThemeSnack;
 
         overflow-y: auto;
         overflow-x: hidden;
+
+        touch-action: pan-y;
+
+        & > * {
+          touch-action: auto;
+        }
       }
     }
   }
