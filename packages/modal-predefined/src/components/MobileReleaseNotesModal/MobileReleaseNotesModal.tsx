@@ -88,14 +88,7 @@ export function MobileReleaseNotesModal({
   }, [dataError, items.length, loading]);
 
   return (
-    <MobileModalCustom
-      open={open}
-      onClose={onCloseInner}
-      size='full'
-      scrollRef={{ current: childrenScrollRefs.current?.[pageIndex] }}
-      closeButtonEnabled
-      swipeEnabled={false}
-    >
+    <MobileModalCustom open={open} onClose={onCloseInner} size='full' closeButtonEnabled swipeEnabled={false}>
       <MobileModalCustom.Header title={textProvider<string>(languageCode, Texts.WhatsNew)} />
 
       <MobileModalCustom.Body className={loading ? undefined : styles.mobileBody} content={content} />

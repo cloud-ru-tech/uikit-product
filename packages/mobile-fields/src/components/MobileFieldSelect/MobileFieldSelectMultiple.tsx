@@ -79,7 +79,6 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
 
     const localRef = useRef<HTMLInputElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
-    const scrollRef = useRef(null);
 
     const [open = false, setOpen] = useValueControl<boolean>({ value: openProp, onChange: onOpenChange });
 
@@ -210,7 +209,6 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
                 }
               : undefined
           }
-          scrollContainerRef={scrollRef}
           contentRender={({ content, ...rest }) => {
             if (typeof content !== 'function') {
               return <ItemContent {...(content as ItemContentProps)} {...rest} />;
@@ -300,19 +298,10 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
           </FieldContainerPrivate>
         </FieldDecorator>
 
-        <MobileModalCustom
-          open={open}
-          onClose={() => handleOpenChange(false)}
-          size={searchable ? 'full' : 'auto'}
-          scrollRef={scrollRef}
-        >
+        <MobileModalCustom open={open} onClose={() => handleOpenChange(false)} size={searchable ? 'full' : 'auto'}>
           {rest.label && <MobileModalCustom.Header title={rest.label} />}
 
-          {searchable ? (
-            listJsx
-          ) : (
-            <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} scrollRef={scrollRef} />
-          )}
+          {searchable ? listJsx : <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} />}
 
           <MobileModalCustom.Footer
             actions={

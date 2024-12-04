@@ -71,14 +71,10 @@ export function MobileDroplist({
     <>
       {trigger}
 
-      <MobileModalCustom open={open} onClose={handleClose} size={searchable ? 'full' : 'auto'} scrollRef={scrollRef}>
+      <MobileModalCustom open={open} onClose={handleClose} size={searchable ? 'full' : 'auto'}>
         {label && <MobileModalCustom.Header title={label} />}
 
-        {searchable ? (
-          listJsx
-        ) : (
-          <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} scrollRef={scrollRef} />
-        )}
+        {searchable ? listJsx : <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} />}
 
         {footer && <MobileModalCustom.Footer actions={footer} />}
       </MobileModalCustom>

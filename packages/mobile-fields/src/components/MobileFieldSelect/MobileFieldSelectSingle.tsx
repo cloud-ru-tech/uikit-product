@@ -68,7 +68,6 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
     ref,
   ) => {
     const localRef = useRef<HTMLInputElement>(null);
-    const scrollRef = useRef(null);
 
     const [open = false, setOpen] = useValueControl<boolean>({ value: openProp, onChange: onOpenChange });
     const [value, setValue] = useValueControl<SelectionSingleValueType>({
@@ -212,7 +211,6 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
             return content;
           }}
           scroll
-          scrollContainerRef={scrollRef}
           search={
             searchable
               ? {
@@ -285,19 +283,10 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
           </FieldContainerPrivate>
         </FieldDecorator>
 
-        <MobileModalCustom
-          open={open}
-          onClose={() => handleOpenChange(false)}
-          size={searchable ? 'full' : 'auto'}
-          scrollRef={scrollRef}
-        >
+        <MobileModalCustom open={open} onClose={() => handleOpenChange(false)} size={searchable ? 'full' : 'auto'}>
           {rest.label && <MobileModalCustom.Header title={rest.label} />}
 
-          {searchable ? (
-            listJsx
-          ) : (
-            <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} scrollRef={scrollRef} />
-          )}
+          {searchable ? listJsx : <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} />}
         </MobileModalCustom>
       </>
     );
