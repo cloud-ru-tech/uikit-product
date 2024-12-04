@@ -61,7 +61,7 @@ export function MobileReleaseNotesModal({
         <Carousel
           arrows={false}
           pagination={false}
-          swipe={false}
+          swipe
           state={{ page: pageIndex, onChange: setPage }}
           className={styles.mobileCarousel}
         >
@@ -88,7 +88,7 @@ export function MobileReleaseNotesModal({
   }, [dataError, items.length, loading]);
 
   return (
-    <MobileModalCustom open={open} onClose={onCloseInner} size='full' closeButtonEnabled swipeEnabled={false}>
+    <MobileModalCustom open={open} onClose={onCloseInner} size='full' closeButtonEnabled>
       <MobileModalCustom.Header title={textProvider<string>(languageCode, Texts.WhatsNew)} />
 
       <MobileModalCustom.Body className={loading ? undefined : styles.mobileBody} content={content} />
