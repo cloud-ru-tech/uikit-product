@@ -26,10 +26,10 @@ type ModalStoryProps = MobileModalProps & {
 
 function Template({ open: openProp, ...args }: ModalStoryProps) {
   const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
 
   const closeModal = () => setOpen(false);
-
-  const [swipeEnabled, setSwipeEnabled] = useState<boolean>(true);
+  const closeModal2 = () => setOpen2(false);
 
   return (
     <div>
@@ -44,6 +44,16 @@ function Template({ open: openProp, ...args }: ModalStoryProps) {
         approveButton={!args.approveButton ? undefined : { ...args.approveButton, onClick: closeModal }}
         cancelButton={!args.cancelButton ? undefined : { ...args.cancelButton, onClick: closeModal }}
         additionalButton={!args.additionalButton ? undefined : { ...args.additionalButton, onClick: closeModal }}
+        content={<ButtonFilled label={'Open modal #2'} onClick={() => setOpen2(!open2)} />}
+      />
+
+      <MobileModal
+        {...args}
+        open={open2}
+        onClose={closeModal2}
+        approveButton={{ ...args.approveButton, onClick: closeModal2 }}
+        cancelButton={!args.cancelButton ? undefined : { ...args.cancelButton, onClick: closeModal2 }}
+        additionalButton={!args.additionalButton ? undefined : { ...args.additionalButton, onClick: closeModal2 }}
         content={
           <>
             Demo content
@@ -70,18 +80,7 @@ function Template({ open: openProp, ...args }: ModalStoryProps) {
             The maximum height of the modal window can be equal to the height of the browser view window with margins of
             24 px
             <br /> <br />
-            <div
-              onTouchMove={e => {
-                e.preventDefault();
-                setSwipeEnabled(false);
-              }}
-              onTouchEnd={e => {
-                e.preventDefault();
-                setSwipeEnabled(true);
-              }}
-            >
-              <FieldSlider min={1} max={100} step={1} marks={{ 1: '1', 25: '25', 50: '50', 75: '75', 100: '100' }} />
-            </div>
+            <FieldSlider min={1} max={100} step={1} marks={{ 1: '1', 25: '25', 50: '50', 75: '75', 100: '100' }} />
             Demo content
             <br /> <br />
             For replacement, use the property: ◆Slot... Connect your local component with unique content to this
@@ -107,7 +106,6 @@ function Template({ open: openProp, ...args }: ModalStoryProps) {
             24 px
           </>
         }
-        swipeEnabled={swipeEnabled}
       />
     </div>
   );

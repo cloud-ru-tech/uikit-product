@@ -1,10 +1,10 @@
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { Modal, ModalCustom, ModalProps as DesktopModalProps } from '@snack-uikit/modal';
 
-import { MobileModal, MobileModalProps } from '../MobileModal';
+import { MobileModal } from '../MobileModal';
 import { MobileModalCustom } from '../MobileModalCustom';
 
-type ModalProps = DesktopModalProps & Pick<MobileModalProps, 'swipeEnabled'>;
+type ModalProps = DesktopModalProps;
 
 export function AdaptiveModal({ size, layoutType, ...props }: WithLayoutType<ModalProps>) {
   const isMobile = layoutType === 'mobile';
