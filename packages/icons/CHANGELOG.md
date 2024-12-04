@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>10.2.5 (2024-12-04)</small>
+
+* feat(PDS-1144): add icon for bare metal migration ([4c3dfb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4c3dfb9))
+* chore(FF-5944): fixed stories paths for tests ([4319822](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4319822))
+* chore(FF-5944): renamed snack uikit category to console ([411a818](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/411a818))
+
+
+
+
+
 ## <small>10.2.4 (2024-11-25)</small>
 
 * feat(PDS-1051): new logo icons ([60a1c6f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/60a1c6f))

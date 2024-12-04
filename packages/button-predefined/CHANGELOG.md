@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.3.9 (2024-12-04)</small>
+
+* chore(FF-5944): button promo figma url ([48cbb6c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/48cbb6c))
+
+
+
+
+
 ## <small>0.3.8 (2024-11-28)</small>
 
 * chore(FF-5944): renamed snack uikit category to console ([411a818](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/411a818))

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.2 (2024-12-04)</small>
+
+* chore(FF-5944): renamed snack uikit category to console ([411a818](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/411a818))
+
+
+
+
+
 ## <small>0.0.1 (2024-11-25)</small>
 
 * feat(FF-5681): add calclucalor ([007661e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/007661e))
