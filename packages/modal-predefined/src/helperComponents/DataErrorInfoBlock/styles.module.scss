@@ -1,0 +1,8 @@
+.infoBlockDataError {
+  margin-top: 64px;
+  margin-bottom: 96px;
+
+  &[data-error-action] {
+    margin-bottom: 64px;
+  }
+}

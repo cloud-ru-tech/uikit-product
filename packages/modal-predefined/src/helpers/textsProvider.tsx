@@ -12,6 +12,11 @@ export enum Texts {
   WhatsNew = 'whatsNew',
   ReadLater = 'readLater',
   OutOf = 'outOf',
+  NoDataTitle = 'noDataTitle',
+  NoDataDescription = 'noDataDescription',
+  DataErrorTitle = 'dataErrorTitle',
+  DataErrorDescription = 'dataErrorDescription',
+  DataErrorAction = 'dataErrorAction',
 }
 
 export type DictionaryPropertyAsFn = (params: string) => string;
@@ -29,6 +34,11 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
     [Texts.WhatsNew]: 'Что нового',
     [Texts.ReadLater]: 'Ознакомиться позже',
     [Texts.OutOf]: 'из',
+    [Texts.NoDataTitle]: 'Новостей пока нет',
+    [Texts.NoDataDescription]: 'Скоро здесь появятся новости платформы',
+    [Texts.DataErrorTitle]: 'Не удалось получить данные',
+    [Texts.DataErrorDescription]: 'Попробуйте перезагрузить страницу',
+    [Texts.DataErrorAction]: 'Обновить',
   },
   [LanguageCodeType.enGB]: {
     [Texts.Title]: (recordName: string) => `Delete ${recordName}`,
@@ -41,6 +51,11 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
     [Texts.WhatsNew]: "What's new",
     [Texts.ReadLater]: 'Read later',
     [Texts.OutOf]: 'of',
+    [Texts.NoDataTitle]: 'No news yet',
+    [Texts.NoDataDescription]: 'Platform news will be here soon',
+    [Texts.DataErrorTitle]: 'Could not load data',
+    [Texts.DataErrorDescription]: 'Try to refresh the page',
+    [Texts.DataErrorAction]: 'Refresh',
   },
 };
 

@@ -12,5 +12,9 @@ export type ReleaseNotesModalProps = WithLayoutType<
       loading?: boolean;
       /** Действие при клике по кнопке Ознакомиться позже */
       onReadLaterClick?(): void;
+      /** Состояние ошибки получения данных */
+      dataError?: boolean;
+      /** Действие при клике по кнопке "Перезагрузить" на экране ошибки */
+      onDataErrorRetryClick?(): void;
     }>
 >;

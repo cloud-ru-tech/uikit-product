@@ -22,6 +22,8 @@ type StoryProps = ReleaseNotesModalProps & {
   layoutType: ValueOf<typeof LAYOUT_TYPE>;
   singleItemMode: boolean;
   readLaterEnabled: boolean;
+  noDataMode: boolean;
+  errorStateActionEnabled: boolean;
 };
 
 const sampleNews: ReleaseNotesModalProps['items'] = [
@@ -56,7 +58,14 @@ const sampleNews: ReleaseNotesModalProps['items'] = [
   },
 ];
 
-function Template({ singleItemMode, readLaterEnabled, loading, ...args }: StoryProps) {
+function Template({
+  singleItemMode,
+  readLaterEnabled,
+  loading,
+  noDataMode,
+  errorStateActionEnabled,
+  ...args
+}: StoryProps) {
   const [isOpen, setIsOpen] = useState(args.open);
 
   useEffect(() => {
@@ -84,9 +93,10 @@ function Template({ singleItemMode, readLaterEnabled, loading, ...args }: StoryP
         {...args}
         open={isOpen}
         onClose={handleClose}
-        items={items}
+        items={noDataMode ? [] : items}
         onReadLaterClick={readLaterEnabled ? handleClose : undefined}
         loading={loading}
+        onDataErrorRetryClick={errorStateActionEnabled ? () => alert('Data reloaded') : undefined}
       />
     </>
   );
@@ -99,8 +109,11 @@ export const releaseNotesModal: StoryObj<StoryProps> = {
     layoutType: LAYOUT_TYPE.desktop,
     singleItemMode: false,
     readLaterEnabled: true,
+    noDataMode: false,
     open: false,
     loading: false,
+    dataError: false,
+    errorStateActionEnabled: true,
   },
 
   argTypes: {
@@ -118,6 +131,15 @@ export const releaseNotesModal: StoryObj<StoryProps> = {
     readLaterEnabled: {
       name: '[Story]: Read Later button enabled',
       type: 'boolean',
+    },
+    noDataMode: {
+      name: '[Story]: No data mode',
+      type: 'boolean',
+    },
+    errorStateActionEnabled: {
+      name: '[Story]: Error state action enabled',
+      type: 'boolean',
+      if: { arg: 'dataError', eq: true },
     },
     onClose: { table: { disable: true } },
     onReadLaterClick: { table: { disable: true } },
