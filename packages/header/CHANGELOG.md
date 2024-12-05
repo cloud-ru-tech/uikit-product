@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.18 (2024-12-05)</small>
+
+* feat(FF-5698): user menu whats new item ([1057bcc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1057bcc))
+
+
+
+
+
 ## <small>2.33.17 (2024-12-04)</small>
 
 ### Only dependencies have been changed
