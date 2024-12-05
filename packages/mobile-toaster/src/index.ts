@@ -1,4 +1,12 @@
-export { adaptiveToaster, mobileToaster, openMobileToast, updateMobileToast, dismissMobileToast } from './helpers';
+export {
+  adaptiveToaster,
+  adaptiveOpenToast,
+  adaptiveUpdateToast,
+  mobileToaster,
+  openMobileToast,
+  updateMobileToast,
+  dismissMobileToast,
+} from './helpers';
 export type {
   MobileToastSystemEventProps,
   MobileToastUserActionProps,

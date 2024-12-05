@@ -4,6 +4,7 @@ import { ToastContentProps as RtToastContentProps } from 'react-toastify';
 
 import { Link } from '@snack-uikit/link';
 import { Sun } from '@snack-uikit/loaders';
+import { TruncateString } from '@snack-uikit/truncate-string';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
 import { TOAST_USER_ACTION_TEST_IDS } from '../../testIds';
@@ -50,8 +51,8 @@ export function MobileToastUserAction({
         )
       )}
       <div className={styles.contentLayout}>
-        <span className={styles.label} data-test-id={TOAST_USER_ACTION_TEST_IDS.label}>
-          {label}
+        <span className={styles.label}>
+          <TruncateString text={label} maxLines={2} variant='end' data-test-id={TOAST_USER_ACTION_TEST_IDS.label} />
         </span>
 
         {link && (
@@ -62,6 +63,7 @@ export function MobileToastUserAction({
             onClick={link.onClick}
             appearance='invert-neutral'
             data-test-id={TOAST_USER_ACTION_TEST_IDS.link}
+            textMode='accent'
           />
         )}
       </div>

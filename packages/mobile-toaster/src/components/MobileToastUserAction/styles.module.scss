@@ -16,6 +16,8 @@
 .label {
   @include styles-theme-variables.composite-var(styles-theme-variables.$sans-label-l);
 
+  display: grid;
+
   color: styles-theme-variables.$sys-invert-neutral-text-main;
 }
 
@@ -28,7 +30,13 @@
   align-items: center;
   justify-content: center;
 
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   box-sizing: border-box;
+
+  height: fit-content;
+  min-height: styles-theme-variables.$size-toaster-toast-user-action-container;
 
   background-color: styles-theme-variables.$sys-invert-neutral-background;
 
@@ -64,5 +72,7 @@
   );
 
   display: flex;
+  flex-direction: row;
+
   align-items: center;
 }

@@ -11,7 +11,7 @@ $toaster-buttons-height: calc(
 );
 /* stylelint-enable */
 
-$toaster-system-event-width: 480px;
+$toaster-mobile-width: 480px;
 
 .buttonCloseColumnWrapper {
   @include styles-theme-variables.composite-var(
@@ -23,7 +23,7 @@ $toaster-system-event-width: 480px;
   gap: styles-theme-variables.$space-toaster-system-event-gap;
 
   width: 100%;
-  max-width: $toaster-system-event-width;
+  max-width: $toaster-mobile-width;
   padding: 16px;
 
   /* stylelint-disable-next-line declaration-property-value-allowed-list */
@@ -177,8 +177,6 @@ $theme-name: osThemeSnack;
       &::-webkit-scrollbar-track {
         background-color: transparent;
       }
-
-      margin-top: 4px;
     }
 
     .Toastify__toast--stacked {
@@ -329,17 +327,16 @@ $theme-name: osThemeSnack;
 
     &:has(.Toastify__toast) {
       width: 100%;
-      max-width: $toaster-system-event-width;
+      max-width: $toaster-mobile-width;
 
-      padding-left: 16px;
-      padding-right: 16px;
+      padding: 16px;
     }
 
     &:has(.Toastify__toast--stacked) {
       .Toastify__toast-container-scroll {
         position: sticky;
 
-        max-width: calc($toaster-system-event-width - 32px);
+        max-width: calc($toaster-mobile-width - 32px);
       }
     }
 
@@ -371,8 +368,18 @@ $theme-name: osThemeSnack;
     align-items: center;
     width: fit-content;
 
+    &:has(.Toastify__toast) {
+      width: 100%;
+      max-width: $toaster-mobile-width;
+
+      padding: 16px;
+    }
+
     .Toastify__toast-container-scroll {
       overflow: visible;
+      align-items: center;
+
+      max-width: $toaster-mobile-width;
     }
   }
 

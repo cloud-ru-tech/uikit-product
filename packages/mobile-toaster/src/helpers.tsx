@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Id, toast, ToastOptions as RtToastOptions } from 'react-toastify';
 
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
-import { toaster } from '@snack-uikit/toaster';
+import { openToast, toaster, updateToast } from '@snack-uikit/toaster';
 import { isBrowser } from '@snack-uikit/utils';
 
 import {
@@ -349,4 +349,16 @@ export function adaptiveToaster({ layoutType }: WithLayoutType<unknown>): Toaste
   const isMobile = layoutType === 'mobile';
 
   return isMobile ? mobileToaster : toaster;
+}
+
+export function adaptiveOpenToast({ layoutType }: WithLayoutType<unknown>): OpenToast {
+  const isMobile = layoutType === 'mobile';
+
+  return isMobile ? openMobileToast : openToast;
+}
+
+export function adaptiveUpdateToast({ layoutType }: WithLayoutType<unknown>): UpdateToast {
+  const isMobile = layoutType === 'mobile';
+
+  return isMobile ? updateMobileToast : updateToast;
 }
