@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.16.10 (2024-12-06)</small>
+
+* feat(EVOSCV-1776): added Add button type on PageForm ([ad7d943](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ad7d943))
+
+
+
+
+
 ## <small>0.16.9 (2024-12-04)</small>
 
 * chore(FF-5944): renamed snack uikit category to console ([411a818](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/411a818))
