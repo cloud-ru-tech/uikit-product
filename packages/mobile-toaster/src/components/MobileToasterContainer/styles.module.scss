@@ -325,7 +325,7 @@ $theme-name: osThemeSnack;
     display: flex;
     flex-direction: column;
 
-    &:has(.Toastify__toast) {
+    &:has(.Toastify__toast-container-scroll) {
       width: 100%;
       max-width: $toaster-mobile-width;
 
