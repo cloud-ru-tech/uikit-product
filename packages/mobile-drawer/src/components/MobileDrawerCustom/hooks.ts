@@ -3,7 +3,7 @@ import { CSSProperties, useRef, useState } from 'react';
 import { SwipeCallback, useSwipeable } from 'react-swipeable';
 
 import { Position } from '../../types';
-import { POSITION_TO_SWIPE_DIRECTION_MAP } from './constants';
+import { SWIPE_DIRECTION_TO_POSITION_MAP } from './constants';
 
 type UseSwipePropsProps = {
   onSwiped(): void;
@@ -40,11 +40,9 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
   const getDrawerTransform = (value: number) => {
     switch (position) {
       case 'bottom':
-        return `translateY(${TRANSFORM - value}px)`;
       case 'top':
         return `translateY(${TRANSFORM - value}px)`;
       case 'right':
-        return `translateX(${TRANSFORM - value}px)`;
       case 'left':
       default:
         return `translateX(${TRANSFORM - value}px)`;
@@ -58,6 +56,28 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
     setDrag(getInitialDrag());
   };
 
+  const isInScrolledArea = ({
+    element,
+    condition,
+  }: {
+    element: HTMLElement | undefined;
+    condition(element: HTMLElement): boolean;
+  }): boolean => {
+    if (!element) {
+      return false;
+    }
+
+    if (element === swipeRef.current) {
+      return false;
+    }
+
+    if (!element.parentElement) {
+      return false;
+    }
+
+    return condition(element) || isInScrolledArea({ element: element.parentElement, condition });
+  };
+
   const handleSwipeStart: SwipeCallback = () => {
     swipeStart.current = Date.now();
   };
@@ -67,23 +87,44 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
       return;
     }
 
-    if (eventData.dir !== POSITION_TO_SWIPE_DIRECTION_MAP[position]) {
+    if (position !== SWIPE_DIRECTION_TO_POSITION_MAP[eventData.dir]) {
+      return;
+    }
+
+    if (!canCloseDrawer.current) {
       return;
     }
 
     let adjustedDrag = 0;
+    const element = eventData.event.target as HTMLElement;
 
     switch (position) {
       case 'left':
+        if (isInScrolledArea({ element, condition: el => el.scrollWidth - el.offsetWidth > el.scrollLeft })) {
+          canCloseDrawer.current = false;
+          return;
+        }
         adjustedDrag = Math.max(0, -eventData.deltaX);
         break;
       case 'right':
+        if (isInScrolledArea({ element, condition: el => el.scrollLeft > 0 })) {
+          canCloseDrawer.current = false;
+          return;
+        }
         adjustedDrag = Math.min(0, -eventData.deltaX);
         break;
       case 'top':
+        if (isInScrolledArea({ element, condition: el => el.scrollHeight - el.offsetHeight > el.scrollTop })) {
+          canCloseDrawer.current = false;
+          return;
+        }
         adjustedDrag = Math.max(0, -eventData.deltaY);
         break;
       case 'bottom':
+        if (isInScrolledArea({ element, condition: el => el.scrollTop > 0 })) {
+          canCloseDrawer.current = false;
+          return;
+        }
         adjustedDrag = Math.min(0, -eventData.deltaY);
         break;
       default:
@@ -107,50 +148,12 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
       return;
     }
 
-    if (eventData.dir !== POSITION_TO_SWIPE_DIRECTION_MAP[position]) {
-      return resetStyles();
-    }
-
     if (Date.now() - swipeStart.current > SWIPE_DURATION) {
       return resetStyles();
     }
 
-    const {
-      scrollLeft = 0,
-      scrollTop = 0,
-      scrollWidth = 0,
-      offsetWidth = 0,
-      scrollHeight = 0,
-      offsetHeight = 0,
-    } = (eventData.event.target ?? {}) as Record<string, number | undefined>;
-
-    switch (position) {
-      case 'right':
-        if (scrollLeft > 0) {
-          canCloseDrawer.current = false;
-          return resetStyles();
-        }
-        break;
-      case 'left':
-        if (scrollWidth - offsetWidth > scrollLeft) {
-          canCloseDrawer.current = false;
-          return resetStyles();
-        }
-        break;
-      case 'bottom':
-        if (scrollTop > 0) {
-          canCloseDrawer.current = false;
-          return resetStyles();
-        }
-        break;
-      case 'top':
-        if (scrollHeight - offsetHeight > scrollTop) {
-          canCloseDrawer.current = false;
-          return resetStyles();
-        }
-        break;
-      default:
-        break;
+    if (position !== SWIPE_DIRECTION_TO_POSITION_MAP[eventData.dir]) {
+      return resetStyles();
     }
 
     if (!canCloseDrawer.current) {

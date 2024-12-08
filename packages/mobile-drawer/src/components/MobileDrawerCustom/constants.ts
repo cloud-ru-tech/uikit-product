@@ -20,9 +20,9 @@ export const motionProps: Partial<DrawerProps> = {
   motion,
 };
 
-export const POSITION_TO_SWIPE_DIRECTION_MAP: Record<Position, SwipeDirections> = {
-  right: 'Right',
-  left: 'Left',
-  top: 'Up',
-  bottom: 'Down',
+export const SWIPE_DIRECTION_TO_POSITION_MAP: Record<SwipeDirections, Position> = {
+  Right: 'right',
+  Left: 'left',
+  Up: 'top',
+  Down: 'bottom',
 };
