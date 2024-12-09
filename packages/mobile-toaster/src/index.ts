@@ -2,6 +2,7 @@ export {
   adaptiveToaster,
   adaptiveOpenToast,
   adaptiveUpdateToast,
+  adaptiveDismissToast,
   mobileToaster,
   openMobileToast,
   updateMobileToast,
