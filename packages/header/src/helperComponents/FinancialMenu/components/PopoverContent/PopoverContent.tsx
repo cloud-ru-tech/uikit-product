@@ -1,7 +1,6 @@
 import { Fragment, MouseEventHandler } from 'react';
 
 import { formatNumber } from '@sbercloud/ft-formatters';
-import { CostControlSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Divider } from '@snack-uikit/divider';
 import { Link } from '@snack-uikit/link';
@@ -51,18 +50,18 @@ export function PopoverContent({
   }
   const bonusGrantActionButtonText = textProvider(languageCode, Texts.FinancialMenuBonusesAction);
 
-  const titleText = `${textProvider(languageCode, Texts.FinancialMenuTitle)} ❯`;
-
   return (
     <div className={styles.contentWrapper}>
       <SkeletonText lines={6} loading={loading}>
         <div className={styles.header}>
           <div className={styles.titleLine}>
-            <div className={styles.titleLeft}>
-              <CostControlSVG />
-
-              <Link {...link} onClick={handleLinkClick} text={titleText} size='l' appearance='neutral' />
-            </div>
+            <Link
+              {...link}
+              onClick={handleLinkClick}
+              text={textProvider(languageCode, Texts.FinancialMenuTitle)}
+              size='l'
+              appearance='neutral'
+            />
 
             <EyeButton {...eyeButton} />
           </div>

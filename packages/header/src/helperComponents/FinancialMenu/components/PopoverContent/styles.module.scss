@@ -18,15 +18,9 @@
 .titleLine {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: styles-theme-variables.$dimension-1m;
   width: 100%;
-}
-
-.titleLeft {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  gap: styles-theme-variables.$dimension-050m;
 }
 
 .content {
