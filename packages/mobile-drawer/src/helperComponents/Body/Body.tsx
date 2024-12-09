@@ -22,6 +22,7 @@ export function DrawerBody({ content, className, scrollRef, ...rest }: DrawerBod
       ref={scrollRef}
       size='m'
       barHideStrategy='never'
+      paddingAbsolute
       className={cn(styles.drawerBody, className)}
       {...extractSupportProps(rest)}
     >

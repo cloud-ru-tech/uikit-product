@@ -15,6 +15,7 @@ import { DrawerBodyProps, DrawerHeaderProps } from '../../helperComponents';
 import { WithTooltip } from '../../helperComponents/WithTooltip';
 import { Size } from '../../types';
 import { MobileDrawerCustom, MobileDrawerCustomProps } from '../MobileDrawerCustom';
+import styles from './styles.module.scss';
 
 export type DrawerProps = Omit<
   MobileDrawerCustomProps,
@@ -75,7 +76,7 @@ export function MobileDrawer({
 
       <MobileDrawerCustom.Body content={content} data-test-id={TEST_IDS.content} scrollRef={scrollRef} />
 
-      {needFooter && (
+      {needFooter ? (
         <MobileDrawerCustom.Footer
           data-test-id={TEST_IDS.footer}
           actions={
@@ -110,6 +111,8 @@ export function MobileDrawer({
             </>
           }
         />
+      ) : (
+        <div className={styles.footerPlug} />
       )}
     </MobileDrawerCustom>
   );
