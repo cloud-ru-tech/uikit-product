@@ -15,8 +15,7 @@ import { Scroll } from '@snack-uikit/scroll';
 import { Search } from '@snack-uikit/search';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
-import { textProvider, Texts } from '../../../../helpers';
-import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
+import { getSelectProductListProps, textProvider, Texts } from '../../../../helpers';
 import { extractAppNameFromId } from '../../../../utils';
 import { BannerCard } from '../../../BannerCard';
 import { useLinks, useLinksScrollToSelected } from '../../hooks';

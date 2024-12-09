@@ -9,8 +9,7 @@ import { List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { Search } from '@snack-uikit/search';
 
-import { textProvider, Texts } from '../../../../helpers';
-import { getSelectProductListProps } from '../../../../hooks/useSelectProductList';
+import { getSelectProductListProps, textProvider, Texts } from '../../../../helpers';
 import { ProductOption } from '../../../../types';
 import { extractAppNameFromId } from '../../../../utils';
 import { BannerCard } from '../../../BannerCard';

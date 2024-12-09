@@ -647,7 +647,9 @@ export const ARGS: StoryProps = {
   ],
 
   showHelpMenu: true,
-  onHelpMenuClick: () => {},
+  onHelpMenuClick: () => {
+    toaster.userAction.success({ label: 'Help menu clicked' });
+  },
 
   showNotifications: true,
   showNotificationError: false,
@@ -676,9 +678,15 @@ export const ARGS: StoryProps = {
   userMenu: {
     user: DEFAULT_USER,
     indicator: 'green',
-    onProfileManagementClick: () => {},
-    onWhatsNewClick: () => {},
-    onLogout: () => {},
+    onProfileManagementClick: () => {
+      toaster.userAction.success({ label: 'Profile item clicked' });
+    },
+    onWhatsNewClick: () => {
+      toaster.userAction.success({ label: "What's new item clicked" });
+    },
+    onLogout: () => {
+      toaster.userAction.success({ label: 'Logout clicked' });
+    },
   },
 
   showAddOrganization: true,
@@ -688,7 +696,9 @@ export const ARGS: StoryProps = {
     { id: '3', name: 'Очень-очень длинное название очень большой организации' },
   ],
   selectedOrganization: { id: '1', name: 'Облачные технологии' },
-  onOrganizationAdd: () => {},
+  onOrganizationAdd: () => {
+    toaster.userAction.success({ label: 'Organization add clicked' });
+  },
 
   showLinks: true,
   showFooterLinks: true,

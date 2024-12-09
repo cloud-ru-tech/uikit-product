@@ -1,16 +1,7 @@
 import { MouseEvent, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 
-import {
-  BurgerSVG,
-  ChevronRightSVG,
-  ExitSVG,
-  FeaturedSVG,
-  QuestionSVG,
-  SettingsSVG,
-  ThemeContrastSVG,
-} from '@sbercloud/uikit-product-icons';
+import { BurgerSVG, ChevronRightSVG, QuestionSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { Avatar } from '@snack-uikit/avatar';
 import { Breadcrumbs } from '@snack-uikit/breadcrumbs';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Counter } from '@snack-uikit/counter';
@@ -29,16 +20,18 @@ import {
   PartnerPopover,
   SelectMenu,
   SelectMenuTrigger,
+  useGeneralMenu,
+  useLogoutMenu,
+  useOrganizationsMenu,
+  useProfileMenu,
 } from '../../helperComponents';
-import { textProvider, Texts } from '../../helpers';
-import { getThemeModeOptions } from '../../helpers/getThemeModeOptions';
-import { DIVIDER_SETTING_OPTION_ID, Organization, Platform, ProductOption, Workspace } from '../../types';
+import { getThemeModeOptions, textProvider, Texts } from '../../helpers';
+import { DIVIDER_SETTING_OPTION_ID, Platform, ProductOption, Workspace } from '../../types';
 import { extractAppNameFromId } from '../../utils';
 import { isDividerItem, ProductHeaderProps } from '../ProductHeader';
 import styles from './styles.module.scss';
 
 export function ProductHeaderMobile({
-  // className,
   homePageUrl,
   onLogoClick,
   drawerMenu: { onProductChange: onProductChangeProp, onClose: onDrawerClose, ...drawerMenuProps },
@@ -46,14 +39,14 @@ export function ProductHeaderMobile({
   select,
   organizations,
   selectedOrganization,
-  onOrganizationChange: onOrganizationChangeProp,
+  onOrganizationChange,
   onOrganizationAdd: onOrganizationAddProp,
   financialMenu,
   pagePath,
   settings,
   onHelpMenuClick,
   notifications,
-  userMenu, // ...rest
+  userMenu,
   showMainMenu = true,
   disableMainMenu,
   logo,
@@ -112,6 +105,10 @@ export function ProductHeaderMobile({
     closeProjectMenu();
   }, [closeProjectMenu]);
 
+  const onThemeSelectorClick = useCallback(() => {
+    setIsThemeModeMenuOpen(true);
+  }, []);
+
   const onProductChange = useCallback<DrawerMenuProps['onProductChange']>(
     item => {
       closeMainMenu();
@@ -119,13 +116,6 @@ export function ProductHeaderMobile({
       onProductChangeProp(item);
     },
     [closeMainMenu, closeUserMenu, onProductChangeProp],
-  );
-
-  const onOrganizationChange = useCallback(
-    (item: Organization) => {
-      onOrganizationChangeProp?.(item, 'select');
-    },
-    [onOrganizationChangeProp],
   );
 
   const onOrganizationAdd = useMemo(() => {
@@ -171,6 +161,30 @@ export function ProductHeaderMobile({
     };
   }, [closeMainMenu, closeUserMenu, projectAddButtonProp]);
 
+  const profileMenu = useProfileMenu({
+    user: userMenu?.user,
+    indicator: userMenu?.indicator,
+    onProfileManagementClick: userMenu?.onProfileManagementClick,
+    profileItemWrapRender: userMenu?.profileItemWrapRender,
+    closeUserMenu,
+    hasDivider: Boolean(select),
+  });
+
+  const generalMenu = useGeneralMenu({
+    onWhatsNewClick: userMenu?.onWhatsNewClick,
+    closeUserMenu,
+    onThemeSelectorClick: userMenu?.themeMode ? onThemeSelectorClick : undefined,
+  });
+
+  const organizationMenu = useOrganizationsMenu({
+    organizations,
+    onOrganizationAdd,
+    onOrganizationChange,
+    closeUserMenu,
+  });
+
+  const logoutMenu = useLogoutMenu({ onLogout: userMenu?.onLogout, closeUserMenu });
+
   const items = useMemo(() => {
     const items: ItemProps[] = [];
 
@@ -189,101 +203,12 @@ export function ProductHeaderMobile({
         afterContent: <ChevronRightSVG />,
         className: styles.breadcrumbs,
       });
-
-      items.push({
-        type: 'group',
-        divider: true,
-        items: [],
-      });
     }
 
-    if (userMenu) {
-      const { user, indicator, onLogout, onWhatsNewClick, onProfileManagementClick, themeMode, profileItemWrapRender } =
-        userMenu;
-
-      items.push({
-        content: {
-          option: userMenu?.user.name,
-          description: user.email,
-          truncate: {
-            description: 1,
-          },
-        },
-        beforeContent: <Avatar size='xs' name={user.name} showTwoSymbols indicator={indicator} />,
-        afterContent: (
-          <div className={styles.settingIcon}>
-            <SettingsSVG />
-          </div>
-        ),
-        itemWrapRender: profileItemWrapRender,
-        inactive: !onProfileManagementClick || undefined,
-        onClick: () => {
-          onProfileManagementClick?.();
-          closeUserMenu();
-        },
-        id: 'header__user-menu__button',
-        'data-test-id': 'header__user-menu__button',
-        className: styles.userMenuInfoItem,
-      });
-
-      if (themeMode) {
-        items.push({
-          type: 'group',
-          divider: true,
-          items: [],
-        });
-
-        items.push({
-          content: {
-            option: textProvider(languageCode, Texts.ThemeModeLabel),
-          },
-          onClick: () => {
-            setIsThemeModeMenuOpen(true);
-          },
-          afterContent: <ChevronRightSVG />,
-          beforeContent: <ThemeContrastSVG />,
-          'data-test-id': 'header__user-menu__theme-mode',
-        });
-      }
-
-      if (onWhatsNewClick) {
-        items.push({
-          content: {
-            option: textProvider(languageCode, Texts.WhatsNew),
-          },
-          beforeContent: <FeaturedSVG />,
-          onClick: () => {
-            onWhatsNewClick();
-            closeUserMenu();
-          },
-          id: 'header__user-menu__whats-new',
-          'data-test-id': 'header__user-menu__whats-new',
-        });
-      }
-
-      if (themeMode || onProfileManagementClick) {
-        items.push({
-          type: 'group',
-          divider: true,
-          items: [],
-        });
-      }
-
-      if (onLogout) {
-        items.push({
-          content: {
-            option: textProvider(languageCode, Texts.Logout),
-          },
-          beforeContent: <ExitSVG />,
-          onClick: () => {
-            onLogout();
-            closeUserMenu();
-          },
-          id: 'header__user-menu__logout',
-          'data-test-id': 'header__user-menu__logout',
-        });
-      }
-    }
+    items.push(...profileMenu);
+    items.push(...generalMenu);
+    items.push(...organizationMenu);
+    items.push(...logoutMenu);
 
     if (visibleSettings && visibleSettings.length > 0) {
       items.push({
@@ -324,7 +249,16 @@ export function ProductHeaderMobile({
     }
 
     return items;
-  }, [select, userMenu, visibleSettings, isProjectMenuOpen, languageCode, closeUserMenu]);
+  }, [
+    select,
+    profileMenu,
+    generalMenu,
+    organizationMenu,
+    logoutMenu,
+    visibleSettings,
+    isProjectMenuOpen,
+    closeUserMenu,
+  ]);
 
   const count = (userMenu?.invites?.count ?? 0) + (userMenu?.partnerInvites?.count ?? 0);
 
@@ -402,7 +336,7 @@ export function ProductHeaderMobile({
                     <SelectMenu
                       organizations={organizations}
                       selectedOrganization={selectedOrganization}
-                      onOrganizationChange={onOrganizationChange}
+                      onOrganizationChange={item => onOrganizationChange?.(item, 'select')}
                       onOrganizationAdd={onOrganizationAdd}
                       projects={projects}
                       selectedProject={selectedProject ?? ({} as ProductOption)}
