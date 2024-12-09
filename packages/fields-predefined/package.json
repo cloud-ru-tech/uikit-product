@@ -18,7 +18,8 @@
   },
   "author": "anbelov <anbelov@cloud.ru>",
   "contributors": [
-    "anbelov <anbelov@cloud.ru>"
+    "anbelov <anbelov@cloud.ru>",
+    "Пономарева Нина <niponomareva@cloud.ru>"
   ],
   "files": [
     "dist",
@@ -34,7 +35,10 @@
     "@snack-uikit/utils": "3.5.0",
     "classnames": "2.5.1",
     "merge-refs": "1.2.2",
-    "react-imask": "7.6.1"
+    "react-imask": "7.6.1",
+    "@sbercloud/uikit-product-mobile-modal" : "0.7.22",
+    "@snack-uikit/button": "0.19.3",
+    "@snack-uikit/icons": "0.24.0"
   },
   "devDependencies": {
     "@types/merge-refs": "1.0.0"

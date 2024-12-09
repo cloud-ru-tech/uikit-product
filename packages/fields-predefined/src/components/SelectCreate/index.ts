@@ -1,2 +1,1 @@
-export * from './FieldPhone';
 export * from './SelectCreate';

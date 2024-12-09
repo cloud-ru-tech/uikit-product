@@ -1,0 +1,9 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+
+.footerWrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+  border-top: 1px solid styles-theme-variables.$sys-neutral-decor-disabled;
+}
+
