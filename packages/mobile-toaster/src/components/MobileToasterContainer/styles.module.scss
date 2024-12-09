@@ -101,12 +101,12 @@ $theme-name: osThemeSnack;
 
 /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
 :global {
-  .#{$theme-name}.Toastify__toast-container {
+  .#{$theme-name}.Toastify__toast-container-mobile {
     position: fixed;
     box-sizing: border-box;
     padding: 0;
 
-    .Toastify__toast {
+    .Toastify__toast-mobile {
       --y: 0;
 
       touch-action: none;
@@ -130,7 +130,7 @@ $theme-name: osThemeSnack;
       box-shadow: none;
     }
 
-    .Toastify__toast-container-scroll {
+    .Toastify__toast-container-mobile-scroll {
       display: flex;
       flex-direction: column;
       gap: 4px;
@@ -179,7 +179,7 @@ $theme-name: osThemeSnack;
       }
     }
 
-    .Toastify__toast--stacked {
+    .Toastify__toast-mobile--stacked {
       /* stylelint-disable-next-line declaration-no-important */
       position: absolute !important;
 
@@ -194,7 +194,7 @@ $theme-name: osThemeSnack;
       left: 0;
       right: 0;
 
-      &[data-collapsed] .Toastify__toast-body,
+      &[data-collapsed] .Toastify__toast-mobile-body,
       &[data-collapsed] .Toastify__close-button {
         transition: opacity 0.1s;
       }
@@ -230,11 +230,11 @@ $theme-name: osThemeSnack;
         bottom: 0;
       }
 
-      &[data-pos='bot'].Toastify__toast--stacked:before {
+      &[data-pos='bot'].Toastify__toast-mobile--stacked:before {
         transform-origin: top;
       }
 
-      &[data-pos='top'].Toastify__toast--stacked:before {
+      &[data-pos='top'].Toastify__toast-mobile--stacked:before {
         transform-origin: bottom;
       }
 
@@ -251,7 +251,7 @@ $theme-name: osThemeSnack;
       }
     }
 
-    .Toastify__toast-body {
+    .Toastify__toast-mobile-body {
       max-width: 100%;
       width: 100%;
       margin: 0;
@@ -285,7 +285,7 @@ $theme-name: osThemeSnack;
       outline: none;
     }
 
-    .Toastify__toast-container {
+    .Toastify__toast-container-mobile {
       margin: 0;
       padding: 0;
     }
@@ -317,7 +317,7 @@ $theme-name: osThemeSnack;
     }
   }
 
-  .#{$theme-name}.Toastify__toast-container.osThemeSnack__toast-container__system-event {
+  .#{$theme-name}.Toastify__toast-container-mobile.osThemeSnack__toast-container__system-event {
     @include styles-theme-variables.composite-var(
       styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toaster-container
     );
@@ -325,23 +325,23 @@ $theme-name: osThemeSnack;
     display: flex;
     flex-direction: column;
 
-    &:has(.Toastify__toast-container-scroll) {
+    &:has(.Toastify__toast-container-mobile-scroll) {
       width: 100%;
       max-width: $toaster-mobile-width;
 
       padding: 16px;
     }
 
-    &:has(.Toastify__toast--stacked) {
-      .Toastify__toast-container-scroll {
+    &:has(.Toastify__toast-mobile--stacked) {
+      .Toastify__toast-container-mobile-scroll {
         position: sticky;
 
         max-width: calc($toaster-mobile-width - 32px);
       }
     }
 
-    .Toastify__toast-container-scroll--active {
-      &.Toastify__toast-container-scroll {
+    .Toastify__toast-container-mobile-scroll--active {
+      &.Toastify__toast-container-mobile-scroll {
         position: relative;
 
         height: calc(100vh - 32px - $toaster-buttons-height);
@@ -358,7 +358,7 @@ $theme-name: osThemeSnack;
     }
   }
 
-  .#{$theme-name}.Toastify__toast-container.osThemeSnack__toast-container__user-action {
+  .#{$theme-name}.Toastify__toast-container-mobile.osThemeSnack__toast-container__user-action {
     @include styles-theme-variables.composite-var(
       styles-tokens-toaster-toasterUserAction.$toaster-user-action-toaster-container
     );
@@ -368,14 +368,14 @@ $theme-name: osThemeSnack;
     align-items: center;
     width: fit-content;
 
-    &:has(.Toastify__toast) {
+    &:has(.Toastify__toast-mobile) {
       width: 100%;
       max-width: $toaster-mobile-width;
 
       padding: 16px;
     }
 
-    .Toastify__toast-container-scroll {
+    .Toastify__toast-container-mobile-scroll {
       overflow: visible;
       align-items: center;
 

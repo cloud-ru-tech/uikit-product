@@ -21,7 +21,7 @@ export function CustomToastContainer(props: ToastContainerProps) {
   const { className, style, rtl, containerId } = containerProps;
 
   function getClassName(position: ToastPosition) {
-    const defaultClassName = cx(`Toastify__toast-container`, `Toastify__toast-container--${position}`, {
+    const defaultClassName = cx(`Toastify__toast-container-mobile`, `Toastify__toast-container--${position}`, {
       [`Toastify__toast-container--rtl`]: rtl,
     });
     return isFn(className)
@@ -63,7 +63,7 @@ export function CustomToastContainer(props: ToastContainerProps) {
         .reverse()
         .forEach((n, i) => {
           const node = n as HTMLElement;
-          node.classList.add(`Toastify__toast--stacked`);
+          node.classList.add(`Toastify__toast-mobile--stacked`);
 
           if (i > 0) node.dataset.collapsed = `${collapsed}`;
 
@@ -98,8 +98,8 @@ export function CustomToastContainer(props: ToastContainerProps) {
           <div className={getClassName(position)} style={containerStyle} key={`container-${position}`}>
             <div
               className={cx(
-                'Toastify__toast-container-scroll',
-                collapsed ? '' : 'Toastify__toast-container-scroll--active',
+                'Toastify__toast-container-mobile-scroll',
+                collapsed ? '' : 'Toastify__toast-container-mobile-scroll--active',
               )}
             >
               {toastList.map(({ content, props: toastProps }) => (

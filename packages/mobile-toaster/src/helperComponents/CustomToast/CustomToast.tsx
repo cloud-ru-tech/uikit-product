@@ -45,7 +45,7 @@ export function CustomToast(props: ToastProps) {
   const { transition: Transition } = props;
 
   const defaultClassName = cx(
-    `Toastify__toast`,
+    `Toastify__toast-mobile`,
     `Toastify__toast-theme--${props.theme}`,
     `Toastify__toast--${props.type}`,
     {
@@ -90,7 +90,7 @@ export function CustomToast(props: ToastProps) {
           className={
             isFn(props.bodyClassName) && props.bodyClassName
               ? props.bodyClassName({ type: props.type })
-              : cx(`Toastify__toast-body`, props.bodyClassName)
+              : cx(`Toastify__toast-mobile-body`, props.bodyClassName)
           }
           style={props.bodyStyle}
         >
