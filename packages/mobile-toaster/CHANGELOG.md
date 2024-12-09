@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.3 (2024-12-09)</small>
+
+* fix(PDS-1215): add -mobile prefix to toaster styles ([41aa826](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/41aa826))
+
+
+
+
+
 ## <small>0.0.2 (2024-12-09)</small>
 
 * chore(PDS-543): add adaptiveDismissToast ([162781a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/162781a))
