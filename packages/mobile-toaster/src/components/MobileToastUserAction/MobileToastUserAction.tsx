@@ -52,7 +52,13 @@ export function MobileToastUserAction({
       )}
       <div className={styles.contentLayout}>
         <span className={styles.label}>
-          <TruncateString text={label} maxLines={2} variant='end' data-test-id={TOAST_USER_ACTION_TEST_IDS.label} />
+          <TruncateString
+            text={label}
+            maxLines={2}
+            variant='end'
+            data-test-id={TOAST_USER_ACTION_TEST_IDS.label}
+            hideTooltip
+          />
         </span>
 
         {link && (
