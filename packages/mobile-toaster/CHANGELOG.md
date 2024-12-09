@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.2 (2024-12-09)</small>
+
+* chore(PDS-543): add adaptiveDismissToast ([162781a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/162781a))
+* chore(PDS-543): add hideTooltip for userAction toast ([d3fed58](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d3fed58))
+* chore(PDS-543): fixed wrond styles with desktop toast ([94e88bc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/94e88bc))
+* feat(PDS-543): userAction mobile version ([094c906](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/094c906))
+
+
+
+
+
 ## <small>0.0.1 (2024-12-04)</small>
 
 * fix(PDS-773): css classes priority ([5ab2b37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5ab2b37))
