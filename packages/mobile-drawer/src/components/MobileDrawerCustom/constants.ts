@@ -1,7 +1,8 @@
 import './motion.css';
 
 import type { DrawerProps } from 'rc-drawer';
-import type { SwipeDirections } from 'react-swipeable';
+
+import type { SwipeDirections } from '@snack-uikit/utils';
 
 import { Position } from '../../types';
 

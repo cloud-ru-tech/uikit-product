@@ -1,6 +1,7 @@
 import mergeRefs from 'merge-refs';
 import { CSSProperties, useRef, useState } from 'react';
-import { SwipeCallback, useSwipeable } from 'react-swipeable';
+
+import { DATA_SWIPE_DIRECTIONS_ATTRIBUTE, SwipeCallback, SwipeEventData, useSwipeable } from '@snack-uikit/utils';
 
 import { Position } from '../../types';
 import { SWIPE_DIRECTION_TO_POSITION_MAP } from './constants';
@@ -56,7 +57,7 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
     setDrag(getInitialDrag());
   };
 
-  const isInScrolledArea = ({
+  const isContainedInArea = ({
     element,
     condition,
   }: {
@@ -75,7 +76,21 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
       return false;
     }
 
-    return condition(element) || isInScrolledArea({ element: element.parentElement, condition });
+    return condition(element) || isContainedInArea({ element: element.parentElement, condition });
+  };
+
+  const isSwipeEnabled = (eventData: SwipeEventData): boolean => {
+    const element = eventData.event.target as HTMLElement;
+    const equalDirectionsCondition = (el: HTMLElement) => {
+      const directions = el.getAttribute(DATA_SWIPE_DIRECTIONS_ATTRIBUTE)?.split(' ') ?? [];
+      return directions.some(direction => direction === eventData.dir);
+    };
+
+    if (isContainedInArea({ element, condition: equalDirectionsCondition })) {
+      return false;
+    }
+
+    return position === SWIPE_DIRECTION_TO_POSITION_MAP[eventData.dir];
   };
 
   const handleSwipeStart: SwipeCallback = () => {
@@ -83,11 +98,7 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
   };
 
   const handleSwiping: SwipeCallback = eventData => {
-    if (!enabled) {
-      return;
-    }
-
-    if (position !== SWIPE_DIRECTION_TO_POSITION_MAP[eventData.dir]) {
+    if (!isSwipeEnabled(eventData)) {
       return;
     }
 
@@ -100,28 +111,28 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
 
     switch (position) {
       case 'left':
-        if (isInScrolledArea({ element, condition: el => el.scrollWidth - el.offsetWidth > el.scrollLeft })) {
+        if (isContainedInArea({ element, condition: el => el.scrollWidth - el.offsetWidth > el.scrollLeft })) {
           canCloseDrawer.current = false;
           return;
         }
         adjustedDrag = Math.max(0, -eventData.deltaX);
         break;
       case 'right':
-        if (isInScrolledArea({ element, condition: el => el.scrollLeft > 0 })) {
+        if (isContainedInArea({ element, condition: el => el.scrollLeft > 0 })) {
           canCloseDrawer.current = false;
           return;
         }
         adjustedDrag = Math.min(0, -eventData.deltaX);
         break;
       case 'top':
-        if (isInScrolledArea({ element, condition: el => el.scrollHeight - el.offsetHeight > el.scrollTop })) {
+        if (isContainedInArea({ element, condition: el => el.scrollHeight - el.offsetHeight > el.scrollTop })) {
           canCloseDrawer.current = false;
           return;
         }
         adjustedDrag = Math.max(0, -eventData.deltaY);
         break;
       case 'bottom':
-        if (isInScrolledArea({ element, condition: el => el.scrollTop > 0 })) {
+        if (isContainedInArea({ element, condition: el => el.scrollTop > 0 })) {
           canCloseDrawer.current = false;
           return;
         }
@@ -144,15 +155,11 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
   };
 
   const handleSwiped: SwipeCallback = eventData => {
-    if (!enabled) {
-      return;
-    }
-
-    if (Date.now() - swipeStart.current > SWIPE_DURATION) {
+    if (!isSwipeEnabled(eventData)) {
       return resetStyles();
     }
 
-    if (position !== SWIPE_DIRECTION_TO_POSITION_MAP[eventData.dir]) {
+    if (Date.now() - swipeStart.current > SWIPE_DURATION) {
       return resetStyles();
     }
 
@@ -170,6 +177,7 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
     onSwipeStart: handleSwipeStart,
     onSwiping: handleSwiping,
     onSwiped: handleSwiped,
+    enabled,
     trackMouse: true,
   });
 
