@@ -145,8 +145,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.FinancialMenuGrantStatusNotSpending]: 'Не тратится',
     [Texts.FinancialMenuGrantStatusNotStart]: 'Срок действия пока не наступил',
     [Texts.FinancialMenuAddServicesLink]: 'Подключить сервисы',
-    [Texts.FinancialMenuGetGrant]: 'Получить грант',
-    [Texts.FinancialMenuGrantIsOnTheWay]: 'Грант уже в пути',
+    [Texts.FinancialMenuGetGrant]: 'Получить стартовый грант',
+    [Texts.FinancialMenuGrantIsOnTheWay]: 'Стартовый грант уже в пути',
     [Texts.FinancialMenuStarterGrantName]: 'Все сервисы, без GPU',
 
     [Texts.Project]: 'Проект',
@@ -231,8 +231,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.FinancialMenuGrantStatusNotSpending]: 'Not spending',
     [Texts.FinancialMenuGrantStatusNotStart]: 'No expiration date yet',
     [Texts.FinancialMenuAddServicesLink]: 'Connect services',
-    [Texts.FinancialMenuGetGrant]: 'Get a grant',
-    [Texts.FinancialMenuGrantIsOnTheWay]: 'The grant is on its way',
+    [Texts.FinancialMenuGetGrant]: 'Get an initial grant',
+    [Texts.FinancialMenuGrantIsOnTheWay]: 'The initial grant is on the way',
     [Texts.FinancialMenuStarterGrantName]: 'All services, without GPU',
 
     [Texts.Project]: 'Project',

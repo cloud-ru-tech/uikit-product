@@ -1,18 +1,16 @@
 import { MouseEventHandler } from 'react';
 
 import { formatNumber } from '@sbercloud/ft-formatters';
-import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { ButtonFunction } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { SkeletonText } from '@snack-uikit/skeleton';
-import { Tag } from '@snack-uikit/tag';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { textProvider, Texts } from '../../../../helpers';
 import { PopoverContentProps } from '../../types';
 import { EyeButton } from '../EyeButton';
+import { StarterGrant } from '../StarterGrant';
 import { PopoverRowMobile } from './components/PopoverRowMobile';
 import styles from './styles.module.scss';
 
@@ -77,25 +75,7 @@ export function PopoverContentMobile({
         <PopoverRowMobile {...bonuses} label={bonuses.label} value={bonusGrantValue} />
 
         {(starterGrant?.isAvailable || starterGrant?.inProcess) && (
-          <div className={styles.starterGrant}>
-            <span className={styles.starterGrantName}>
-              {textProvider(languageCode, Texts.FinancialMenuStarterGrantName)}
-            </span>
-
-            {starterGrant?.isAvailable && (
-              <ButtonFunction
-                size='xs'
-                appearance='primary'
-                label={textProvider(languageCode, Texts.FinancialMenuGetGrant)}
-                icon={<PlusSVG />}
-                onClick={handleGetStarterGrantClick}
-              />
-            )}
-
-            {starterGrant?.inProcess && (
-              <Tag size='xs' appearance='blue' label={textProvider(languageCode, Texts.FinancialMenuGrantIsOnTheWay)} />
-            )}
-          </div>
+          <StarterGrant {...starterGrant} onGetGrantClick={handleGetStarterGrantClick} isMobile />
         )}
       </SkeletonText>
     </div>

@@ -50,16 +50,3 @@
 .greyText {
   color: styles-theme-variables.$sys-neutral-text-support;
 }
-
-.starterGrant {
-  display: flex;
-  justify-content: space-between;
-  grid-column: 1 / 4;
-  align-items: center;
-}
-
-.starterGrantName {
-  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-s);
-
-  color: styles-theme-variables.$sys-neutral-text-main
-}

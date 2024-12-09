@@ -1,17 +1,16 @@
 import { Fragment, MouseEventHandler } from 'react';
 
 import { formatNumber } from '@sbercloud/ft-formatters';
-import { CostControlSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
+import { CostControlSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { Link } from '@snack-uikit/link';
 import { SkeletonText } from '@snack-uikit/skeleton';
-import { Tag } from '@snack-uikit/tag';
 
 import { textProvider, Texts } from '../../../../helpers';
 import { PopoverContentProps } from '../../types';
 import { EyeButton } from '../EyeButton';
+import { StarterGrant } from '../StarterGrant';
 import { FinanceInfoRow } from './components';
 import { Grant } from './components/Grant';
 import styles from './styles.module.scss';
@@ -91,30 +90,7 @@ export function PopoverContent({
           {(starterGrant?.isAvailable || starterGrant?.inProcess) && (
             <>
               <Divider className={styles.grantDivider} />
-
-              <div className={styles.starterGrant}>
-                <span className={styles.starterGrantName}>
-                  {textProvider(languageCode, Texts.FinancialMenuStarterGrantName)}
-                </span>
-
-                {starterGrant?.isAvailable && (
-                  <ButtonFunction
-                    size='xs'
-                    appearance='primary'
-                    label={textProvider(languageCode, Texts.FinancialMenuGetGrant)}
-                    icon={<PlusSVG />}
-                    onClick={handleGetStarterGrantClick}
-                  />
-                )}
-
-                {starterGrant?.inProcess && (
-                  <Tag
-                    size='xs'
-                    appearance='blue'
-                    label={textProvider(languageCode, Texts.FinancialMenuGrantIsOnTheWay)}
-                  />
-                )}
-              </div>
+              <StarterGrant {...starterGrant} onGetGrantClick={handleGetStarterGrantClick} />
             </>
           )}
         </div>
