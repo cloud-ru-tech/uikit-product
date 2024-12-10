@@ -50,6 +50,7 @@ export function ProductHeaderMobile({
   showMainMenu = true,
   disableMainMenu,
   logo,
+  onSelectOpenChange,
 }: ProductHeaderProps) {
   const {
     platforms,
@@ -77,6 +78,14 @@ export function ProductHeaderMobile({
   const [isThemeModeMenuOpen, setIsThemeModeMenuOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
 
+  const handleProjectMenuOpen = useCallback(
+    (isOpen: boolean) => {
+      setIsProjectMenuOpen(isOpen);
+      onSelectOpenChange?.(isOpen);
+    },
+    [onSelectOpenChange],
+  );
+
   useEffect(() => {
     const closeListener = () => {
       setIsMainMenuOpen(false);
@@ -96,9 +105,9 @@ export function ProductHeaderMobile({
   }, [onDrawerClose]);
 
   const closeProjectMenu = useCallback(() => {
-    setIsProjectMenuOpen(false);
+    handleProjectMenuOpen(false);
     onSelectClose?.();
-  }, [onSelectClose]);
+  }, [handleProjectMenuOpen, onSelectClose]);
 
   const closeUserMenu = useCallback(() => {
     setIsUserMenuOpen(false);
@@ -198,7 +207,7 @@ export function ProductHeaderMobile({
           </div>
         ),
         onClick: () => {
-          setIsProjectMenuOpen(true);
+          handleProjectMenuOpen(true);
         },
         afterContent: <ChevronRightSVG />,
         className: styles.breadcrumbs,
@@ -258,6 +267,7 @@ export function ProductHeaderMobile({
     visibleSettings,
     isProjectMenuOpen,
     closeUserMenu,
+    handleProjectMenuOpen,
   ]);
 
   const count = (userMenu?.invites?.count ?? 0) + (userMenu?.partnerInvites?.count ?? 0);
