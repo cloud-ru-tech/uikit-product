@@ -1,0 +1,32 @@
+$breakpoint-sm: 636px;
+$breakpoint-md: 828px;
+$breakpoint-desktop: 1279;
+
+.sectionWrapper {
+  width: 100%;
+}
+
+.contentWrapper {
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  // TODO: move to data-layout-type once breakpoints are calibrated
+  //&[data-layout-type='desktop'] {
+  //  padding: 0 25px;
+  //}
+
+  @media (max-width: $breakpoint-desktop) {
+    padding: 0 25px;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    box-sizing: border-box;
+    max-width: unset;
+    padding: 0 40px;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    padding: 0 24px;
+  }
+}

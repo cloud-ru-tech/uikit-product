@@ -1,0 +1,102 @@
+@use '../../assets/scss/core/variables' as var;
+@use '../../assets/scss/core/mixins' as mix;
+
+$social-border: #434343; /* stylelint-disable-line color-no-hex */
+
+.root {
+  display: flex;
+}
+
+.socialButton {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+  width: 33px;
+  height: 33px;
+  margin-right: 6px;
+
+  color: #fff; /* stylelint-disable-line color-no-hex */
+
+  background: transparent;
+  backdrop-filter: blur(3px);
+  border: 3px solid #3d4b56; /* stylelint-disable-line color-no-hex */
+  border-radius: 2px;
+
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+
+  &:hover {
+    color: var.$green-main-100;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.img {
+  &Vk {
+    @include mix.media(
+      (
+        sm: (
+          width: 24px,
+          height: 12px,
+        ),
+      )
+    );
+
+    width: 21px;
+    height: 12px;
+  }
+
+  &Fb {
+    width: 16px;
+    height: 21px;
+    padding-left: 4px;
+  }
+
+  &Yt {
+    @include mix.media(
+      (
+        sm: (
+          width: 17px,
+          height: 20px,
+        ),
+      )
+    );
+
+    width: 15px;
+    height: 15px;
+  }
+
+  &Tg {
+    @include mix.media(
+      (
+        sm: (
+          width: 23px,
+          height: 19px,
+        ),
+      )
+    );
+
+    width: 16px;
+    height: 21px;
+  }
+
+  &Hb {
+    @include mix.media(
+      (
+        sm: (
+          width: 24px,
+          height: 25px,
+        ),
+      )
+    );
+
+    width: 21px;
+    height: 22px;
+  }
+}

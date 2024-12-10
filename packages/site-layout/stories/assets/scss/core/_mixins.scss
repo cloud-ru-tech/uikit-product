@@ -1,0 +1,490 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:string';
+@use './variables' as var;
+
+$breakpoints: (
+  xlg: 1260,
+  lg: 1052,
+  md: 828,
+  sm: 636,
+  xsm: 435,
+) !default;
+$width: (
+  xlg: var.$desktop-width-small,
+  lg: var.$tablet-width,
+  md: var.$tablet-width-small,
+  sm: 100%,
+);
+
+@function split-screens($string, $separator) {
+  @if type_of($string) == 'string' {
+    $sep-id: string.index(string.quote($string), $separator);
+
+    @if $sep-id {
+      $array: ();
+
+      @if string.quote(string.slice($string, 0, 1)) == 'h' {
+        @for $i from 1 through 3 {
+          $array: (
+            string.quote(string.slice($string, 0, 1)),
+            string.quote(string.slice($string, 3, 5)),
+            string.quote(string.slice($string, 7))
+          );
+        }
+      } @else {
+        $array: (
+          string.quote(string.slice($string, 0, $sep-id - 1)),
+          string.quote(string.slice($string, $sep-id + 1))
+        );
+      }
+
+      @return $array;
+    } @else {
+      @return $string;
+    }
+  } @else {
+    @return inspect($string);
+  }
+}
+
+@mixin add_default_width($values) {
+  @if type_of($values) == 'list' {
+    @each $value in $values {
+      @if map-has-key($breakpoints, $value) {
+        @media (max-width: #{map.get($breakpoints, $value) + px}) {
+          width: map.get($width, $value);
+        }
+      }
+    }
+  } @else {
+    @each $screen, $width-value in $width {
+      @if map-has-key($breakpoints, $screen) {
+        @media (max-width: #{map.get($breakpoints, $screen) + px}) {
+          width: map.get($width, $screen);
+        }
+      }
+    }
+  }
+}
+
+@mixin add_media($map, $breakpoints, $screen, $properties-value) {
+  $screen: split-screens($screen, '-');
+
+  @if type_of($screen) == 'list' {
+    @if list.length($screen) == 3 {
+      $direction: list.nth($screen, 2);
+      $screen: list.nth($screen, 3);
+
+      @media (#{$direction}-height: #{$screen + px}) {
+        @each $property, $value in $map {
+          @include css_property($property, $value);
+        }
+      }
+    } @else {
+      $direction: list.nth($screen, 1);
+      $screen: list.nth($screen, 2);
+
+      @if map-has-key($breakpoints, $screen) {
+        @media (#{$direction}-width: #{map.get($breakpoints, $screen) + px}) {
+          @each $property, $value in $map {
+            @include css_property($property, $value);
+          }
+        }
+      } @else {
+        @media (#{$direction}-width: #{$screen + px}) {
+          @each $property, $value in $map {
+            @include css_property($property, $value);
+          }
+        }
+      }
+    }
+  } @else {
+    @if map-has-key($breakpoints, $screen) {
+      @media (max-width: #{map.get($breakpoints, $screen) + px}) {
+        @each $property, $value in $map {
+          @include css_property($property, $value);
+        }
+      }
+    } @else {
+      @if $screen != 'default' {
+        @media (max-width: #{$screen + px}) {
+          @each $property, $value in $map {
+            @include css_property($property, $value);
+          }
+        }
+      } @else {
+        @if type_of($properties-value) == 'list' {
+          @include add_default_width($properties-value);
+        } @else {
+          @include add_default_width(true);
+        }
+      }
+    }
+  }
+}
+
+@mixin css_property($property, $value) {
+  @if type_of($value) == string {
+    #{$property}: string.unquote($value);
+  } @else {
+    #{$property}: $value;
+  }
+}
+
+@mixin media($properties) {
+  @each $screen, $properties-value in $properties {
+    $map: ();
+
+    @if type_of($properties-value) == 'map' {
+      @each $property, $value in $properties-value {
+        $map: map.merge(
+          $map,
+          (
+            '#{$property}': $value,
+          )
+        );
+      }
+    }
+
+    @include add_media($map, $breakpoints, $screen, $properties-value);
+  }
+}
+
+@function vw($PXSize, $windowSize: 1280) {
+  @return math.div($PXSize * 100vw, $windowSize);
+}
+
+@mixin TitleHero {
+  margin: 0;
+
+  font-family: var.$main-font, sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 64px;
+  color: var.$graphite-100;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(56),
+        line-height: vw(64),
+      ),
+      md: (
+        font-size: 32px,
+        line-height: 40px,
+      ),
+    )
+  );
+}
+
+@mixin TitleH1 {
+  margin: 0;
+
+  font-family: var.$main-font, sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  color: var.$graphite-100;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(48),
+        line-height: vw(56),
+      ),
+      md: (
+        font-size: 32px,
+        line-height: 40px,
+      ),
+    )
+  );
+}
+
+@mixin TitleH2 {
+  margin: 0;
+
+  font-family: var.$main-font, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  color: var.$graphite-100;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(32),
+        line-height: vw(40),
+      ),
+      md: (
+        font-size: 24px,
+        line-height: 32px,
+      ),
+    )
+  );
+}
+
+@mixin TitleH3 {
+  margin: 0;
+
+  font-family: var.$main-font, sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: var.$graphite-100;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(24),
+        line-height: vw(32),
+      ),
+      md: (
+        font-size: 20px,
+        line-height: 28px,
+      ),
+    )
+  );
+}
+
+@mixin TitleH4 {
+  margin: 0;
+
+  font-family: var.$main-font, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  color: var.$graphite-100;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(20),
+        line-height: vw(28),
+      ),
+      md: (
+        font-size: 20px,
+        line-height: 28px,
+      ),
+    )
+  );
+}
+
+@mixin TitleSubheadline {
+  margin: 0;
+
+  font-family: var.$main-font, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var.$graphite-100;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(20),
+        line-height: vw(28),
+      ),
+      md: (
+        font-size: 16px,
+        line-height: 24px,
+      ),
+    )
+  );
+}
+
+@mixin TextB1Regular {
+  margin: 0;
+
+  font-family: var.$text-font, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var.$graphite-100;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(16),
+        line-height: vw(24),
+      ),
+      md: (
+        font-size: 16px,
+        line-height: 24px,
+      ),
+    )
+  );
+}
+
+@mixin TextB1RegularItalic {
+  @include TextB1Regular;
+
+  font-style: italic;
+}
+
+@mixin TextB1Semibold {
+  @include TextB1Regular;
+
+  font-weight: 600;
+}
+
+@mixin TextB1SemiboldItalic {
+  @include TextB1Semibold;
+
+  font-style: italic;
+}
+
+@mixin TextB2Regular {
+  margin: 0;
+
+  font-family: var.$text-font, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var.$graphite-90;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(14),
+        line-height: vw(20),
+      ),
+      md: (
+        font-size: 14px,
+        line-height: 20px,
+      ),
+    )
+  );
+}
+
+@mixin TextB2RegularItalic {
+  @include TextB2Regular;
+
+  font-style: italic;
+}
+
+@mixin TextB2Semibold {
+  @include TextB2Regular;
+
+  font-weight: 600;
+}
+
+@mixin TextB2SemiboldItalic {
+  @include TextB2Semibold;
+
+  font-style: italic;
+}
+
+@mixin TextB3Regular {
+  margin: 0;
+
+  font-family: var.$text-font, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: var.$graphite-90;
+  letter-spacing: 0.14px;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(14),
+        line-height: vw(22),
+      ),
+      md: (
+        font-size: 14px,
+        line-height: 22px,
+      ),
+    )
+  );
+}
+
+@mixin TextCaptionRegular {
+  margin: 0;
+
+  font-family: var.$text-font, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var.$graphite-90;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(12),
+        line-height: vw(16),
+      ),
+      md: (
+        font-size: 12px,
+        line-height: 16px,
+      ),
+    )
+  );
+}
+
+@mixin TextCaptionRegularItalic {
+  @include TextCaptionRegular;
+
+  font-style: italic;
+}
+
+@mixin TextCaptionSemibold {
+  @include TextCaptionRegular;
+
+  font-weight: 600;
+}
+
+@mixin TextCaptionSemiboldItalic {
+  @include TextCaptionSemibold;
+
+  font-style: italic;
+}
+
+@mixin TextButton {
+  font-family: var.$text-font, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var.$graphite-100;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+
+  @include media(
+    (
+      1280: (
+        font-size: vw(14),
+        line-height: vw(20),
+      ),
+      md: (
+        font-size: 14px,
+        line-height: 20px,
+      ),
+    )
+  );
+}
+
+@mixin CustomScrollBarDark {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar-track {
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    -webkit-overflow-scrolling: auto !important; /* stylelint-disable-line declaration-no-important */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var.$graphite-50;
+  }
+}
+
+@mixin CustomScrollBarLight {
+  @include CustomScrollBarDark;
+
+  &::-webkit-scrollbar-thumb {
+    background: var.$gray-80;
+  }
+}

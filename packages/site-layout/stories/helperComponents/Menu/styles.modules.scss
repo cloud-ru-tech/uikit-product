@@ -1,0 +1,68 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+@use '../../assets/scss/core/mixins' as mix;
+@use '../../assets/scss/core/variables' as var;
+
+.menu {
+  @include mix.media(
+    (
+      1220: (
+        gap: 16px,
+      ),
+    )
+  );
+
+  display: flex;
+  gap: 32px;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+
+  &Item {
+    cursor: pointer;
+
+    position: relative;
+
+    display: flex;
+    gap: 2px;
+    align-items: center;
+
+    padding: 9px 0 8px;
+
+    transition: color 0.3s ease-in-out;
+    color: ste.$sys-neutral-accent-default;
+
+    @include mix.media(
+      (
+        1280: (
+          padding: mix.vw(9) 0 mix.vw(8),
+        ),
+      )
+    );
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      bottom: -14px;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+
+      opacity: 0;
+      background: var.$green-main-100;
+
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover,
+    &Active {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

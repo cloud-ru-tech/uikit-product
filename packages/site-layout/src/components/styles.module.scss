@@ -1,0 +1,10 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  min-height: 100dvh;
+
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+}

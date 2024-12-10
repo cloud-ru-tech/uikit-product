@@ -1,0 +1,297 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+@use '../../assets/scss/core/mixins' as mix;
+@use '../../assets/scss/core/variables' as var;
+
+.hidden {
+  display: none;
+}
+
+.root {
+  position: sticky;
+  z-index: 30; /* stylelint-disable-line declaration-property-value-allowed-list */
+  top: 0;
+
+  background: #fff; /* stylelint-disable-line color-no-hex */
+
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  &[data-mobile] {
+    z-index: 0; /* stylelint-disable-line declaration-property-value-allowed-list */
+  }
+}
+
+.header {
+  &Top,
+  &Bottom {
+    position: relative;
+    border-bottom: 1px solid #f5f5f7; /* stylelint-disable-line color-no-hex */
+    z-index: 3; /* stylelint-disable-line declaration-property-value-allowed-list */
+  }
+}
+
+.headerBottom {
+  @include mix.media(
+    (
+      md: (
+        display: none,
+      ),
+    )
+  );
+}
+
+.wrapper {
+  @include mix.media(
+    (
+      1280: (
+        padding: mix.vw(12) 0 mix.vw(11),
+        max-width: mix.vw(1216),
+      ),
+      md: (
+        box-sizing: border-box,
+        max-width: 100%,
+        padding: 12px 40px,
+        justify-content: space-between,
+        gap: 8px,
+      ),
+      sm: (
+        padding: 12px 16px,
+      ),
+    )
+  );
+
+  .locale {
+    margin-right: 24px;
+    color: #212830; /* stylelint-disable-line color-no-hex */
+
+    @include mix.media(
+      (
+        1280: (
+          margin-right: mix.vw(24),
+        ),
+      )
+    );
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 12px 0 11px;
+}
+
+.logo {
+  @include mix.media(
+    (
+      1280: (
+        width: mix.vw(130),
+        height: mix.vw(24),
+      ),
+      md: (
+        width: 130px,
+        height: 24px,
+      ),
+      sm: (
+        width: 109px,
+        height: 20px,
+      ),
+    )
+  );
+
+  flex: none;
+
+  width: 130px;
+  height: 24px;
+
+  color: #222; /* stylelint-disable-line color-no-hex */
+
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #00d97b; /* stylelint-disable-line color-no-hex */
+  }
+
+  &Wrapper {
+    margin-right: 40px;
+    display: flex;
+
+    @include mix.media(
+      (
+        1240: (
+          margin-right: 24px,
+        ),
+      )
+    );
+
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.overlay {
+  background: rgb(34 34 34 / 80%); /* stylelint-disable-line function-disallowed-list */
+}
+
+.search {
+  z-index: 21; /* stylelint-disable-line declaration-property-value-allowed-list */
+}
+
+.consultation {
+  @include mix.TextB2Regular;
+  text-transform: unset;
+  margin-left: auto;
+  letter-spacing: 0;
+
+  @include mix.media(
+    (
+      1280: (
+        padding: mix.vw(8) mix.vw(16),
+      ),
+    )
+  );
+}
+
+.menuDesktop {
+  margin-right: 32px;
+
+  @include mix.media(
+    (
+      md: (
+        display: none,
+      ),
+      1240: (
+        margin-right: 16px,
+      ),
+    )
+  );
+}
+
+.toolbar {
+  margin-left: auto;
+  display: flex;
+  gap: 32px;
+
+  @include mix.media(
+    (
+      1280: (
+        gap: mix.vw(32),
+      ),
+      md: (
+        flex-grow: 1,
+        gap: 32px,
+      ),
+      sm: (
+        gap: 24px,
+      ),
+    )
+  );
+}
+
+.smallFileSize {
+  width: 13px;
+  height: 15px;
+
+  @include mix.media(
+    (
+      1280: (
+        width: mix.vw(13),
+        height: mix.vw(15),
+      ),
+      md: (
+        width: 13px,
+        height: 15px,
+      ),
+    )
+  );
+}
+
+.searchWrapper {
+  max-width: 660px;
+  flex-grow: 1;
+
+  @include mix.media(
+    (
+      1269: (
+        max-width: 100%,
+      ),
+    )
+  );
+}
+
+.button {
+  @include mix.TextCaptionRegular;
+
+  overflow: hidden;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: var.$graphite-100;
+  min-width: fit-content;
+
+  @include mix.media(
+    (
+      1280: (
+        padding: mix.vw(8) mix.vw(16),
+      ),
+      md: (
+        padding: 8px 16px,
+      ),
+    )
+  );
+}
+
+.buttonsWrapper {
+  flex-shrink: 0;
+  margin-left: auto;
+  @include mix.media(
+    (
+      1240: (
+        margin-left: 24px,
+      ),
+      1269: (
+        margin-left: 0,
+        display: flex,
+        align-items: center,
+        gap: 8px,
+      ),
+    )
+  );
+}
+
+.consoleButton {
+  margin-left: 16px;
+
+  @include mix.media(
+    (
+      1269: (
+        margin-left: 0,
+      ),
+    )
+  );
+
+  &.mobileHidden {
+    @include mix.media(
+      (
+        1269: (
+          display: none,
+        ),
+      )
+    );
+  }
+}
+
+.authAvatar {
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.dropdown {
+  z-index: 55; /* stylelint-disable-line declaration-property-value-allowed-list */
+  padding: 0;
+
+  & > div:first-child {
+    padding: 0;
+    border-radius: 0;
+  }
+}

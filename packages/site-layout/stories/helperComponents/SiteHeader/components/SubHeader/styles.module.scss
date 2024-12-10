@@ -1,0 +1,141 @@
+@use '../../../../assets/scss/core/mixins' as mix;
+@use '../../../../assets/scss/core/variables' as var;
+
+.root {
+  @include mix.media(
+    (
+      1280: (
+        padding: mix.vw(8) 0,
+      ),
+      md: (
+        padding: 8px 0,
+      ),
+    )
+  );
+
+  box-sizing: border-box;
+  padding: 8px 0;
+  background: var.$green-main-100;
+}
+
+.wrapper {
+  @include mix.media(
+    (
+      sm: (
+        align-items: start,
+      ),
+    )
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrow {
+  @include mix.media(
+    (
+      1280: (
+        width: mix.vw(20),
+        height: mix.vw(20),
+      ),
+      md: (
+        width: 20px,
+        min-width: 20px,
+        min-height: 20px,
+        height: 20px,
+      ),
+    )
+  );
+
+  width: 20px;
+  height: 20px;
+}
+
+.icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  color: var.$graphite-100;
+  flex-shrink: 0;
+
+  @include mix.media(
+    (
+      1280: (
+        width: mix.vw(20),
+        height: mix.vw(20),
+      ),
+      md: (
+        width: 20px,
+        height: 20px,
+      ),
+    )
+  );
+
+  transition: color 0.3s ease-in-out;
+
+  &Close {
+    box-sizing: border-box;
+    padding: 5px;
+    transition: color 0.3s ease-in-out;
+
+    @include mix.media(
+      (
+        1280: (
+          padding: mix.vw(5),
+        ),
+        md: (
+          padding: 5px,
+        ),
+      )
+    );
+  }
+}
+
+.banner {
+  &Text {
+    @include mix.TextB1Regular;
+    width: 100%;
+
+    transition: color 0.3s ease-in-out;
+  }
+
+  &Wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &:hover .bannerText {
+      color: #fff;  /* stylelint-disable-line color-no-hex */
+    }
+
+    &:hover .icon {
+      color: #fff; /* stylelint-disable-line color-no-hex */
+    }
+
+    @include mix.media(
+      (
+        sm: (
+          margin-right: 20px,
+        ),
+      )
+    );
+  }
+}
+
+.green {
+  background-color: var.$green-main-100;
+}
+
+.yellow {
+  background-color: var.$warning-100;
+}
+
+.blue {
+  background-color: var.$information-100;
+}
+
+.link {
+  text-decoration: underline;
+}

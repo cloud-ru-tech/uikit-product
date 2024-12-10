@@ -1,0 +1,121 @@
+/* stylelint-disable color-no-hex */
+
+// Colors new
+$green-color: #26d07c;
+$main-color: #343f48;
+$secondary-color: #4e545a;
+$product-border: #e1e1e1;
+$dark-background: #ebebeb;
+$page-background: #fff;
+$error-color: #ff516d;
+$light-background: #f9f9f9;
+
+// Container width
+$desktop-width: 1200px;
+$desktop-width-small: 992px;
+$tablet-width: 768px;
+$tablet-width-small: 576px;
+$mobile-width: 375px;
+$mobile-width-small: 300px;
+
+// fonts
+$font-base-path: '/fonts';
+$main-font: 'SB Sans Display';
+$secondary-font: 'SB Sans Interface';
+$text-font: 'SB Sans Text';
+
+// New UiKit colors
+// GreenMain
+$green-main-100: #26d07c;
+$green-main-90: #49d891;
+$green-main-80: #6cdfa6;
+$green-main-70: #8ee7bb;
+$green-main-60: #b1eed0;
+$green-main-50: #d4f6e5;
+$green-main-hover: #12bf6a;
+$green-main-active: #0ea55b;
+
+// GraphiteMain
+$graphite-100: #222;
+$graphite-90: #2d2d2d;
+$graphite-80: #383838;
+$graphite-70: #434343;
+$graphite-60: #4e4e4e;
+$graphite-50: #595959;
+$graphite-30: #9c9c9c;
+$graphite-10: #d3d3d3;
+$graphite-hover: #858585;
+
+// GrayMain
+$gray-100: #f2f2f2;
+$gray-90: #f5f5f5;
+$gray-80: #f7f7f7;
+$gray-70: #fafafa;
+$gray-60: #fcfcfc;
+$gray-0: #fff;
+
+// SystemColors
+$error-100: #dc362e;
+$warning-100: #f0d559;
+$information-100: #0063ff; // ultramarine/100
+
+// AdditionalColors
+$fluorescent-yellow-1: #cff500;
+$fluorescent-yellow-2: #71784b;
+$fluorescent-yellow-3: #a3aa7d;
+$fluorescent-yellow-4: #cfd995;
+$fluorescent-yellow-5: #f5ffbd;
+$fluorescent-yellow-hover: #b9db00;
+$fluorescent-yellow-active: #a3c200;
+$aquamarine-1: #18f4cf;
+$aquamarine-2: #75f9e3;
+$aquamarine-3: #008871;
+$aquamarine-4: #38b59d;
+$aquamarine-5: #8bccc1;
+$aquamarine-6: #c9f2ea;
+$ultramarine-1: #0063ff; // information-100
+$ultramarine-2: #174c9f;
+$ultramarine-3: #5d779f;
+$ultramarine-4: #9cadce;
+$ultramarine-5: #c9d9f2;
+$ultramarine-6: #99c1ff;
+$purple-1: #a068ff;
+$purple-2: #583d87;
+$purple-3: #8372a1;
+$purple-4: #bdb0d2;
+$purple-5: #e1d7f2;
+$purple-hover: #48326e;
+$purple-active: #372654;
+$magneta-1: #f0f;
+$magneta-2: #940294;
+$magneta-3: #c067c0;
+$magneta-4: #d6b2ce;
+$magneta-5: #f9dff4;
+$carrot-1: #ff4517;
+$carrot-2: #ad381b;
+$carrot-3: #dd7d64;
+$carrot-4: #edc0b5;
+$carrot-5: #f7e2dc;
+$coral-1: #ff0642;
+$coral-2: #c21341;
+$coral-3: #e25b7c;
+$coral-4: #f0b2c1;
+$coral-5: #ffd7e0;
+
+// Colors by Figma
+$white-0: #fff;
+$blue-100: #0e8bff;
+$green-100: #26d07c;
+$green-adaptive-100: #06bd7b;
+$blue-gray-10: #e9e9ea;
+$blue-gray-20: #d3d4d6;
+$blue-gray-30: #bcbfc1;
+$blue-gray-40: #a6a9ac;
+$blue-gray-60: #7a7e83;
+$blue-gray-70: #63696e;
+$blue-gray-80: #4d5359;
+$blue-gray-90: #373e45;
+$blue-gray-100: #212830;
+$blue-gray-special: #f6f7f8;
+$blue-gray-special-5: #f8f8fa;
+$blue-gray-special-10: #f5f5f7;

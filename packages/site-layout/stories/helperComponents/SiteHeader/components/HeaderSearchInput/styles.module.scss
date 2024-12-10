@@ -1,0 +1,53 @@
+@use '../../../../assets/scss/core/mixins' as mix;
+@use '../../../../assets/scss/core/variables' as var;
+
+.root {
+  @include mix.TextB2Regular;
+
+  @include mix.media(
+    (
+      md: (
+        width: 100%,
+      ),
+    )
+  );
+  position: relative;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  color: var.$graphite-80;
+  font-weight: 600;
+  transition: border 0.3s ease-in-out;
+}
+
+.icon {
+  @include mix.media(
+    (
+      1280: (
+        width: mix.vw(14),
+        height: mix.vw(14),
+        padding: mix.vw(3),
+      ),
+      md: (
+        width: 14px,
+        height: 14px,
+        padding: 3px,
+        position: absolute,
+        right: 4px,
+      ),
+    )
+  );
+
+  flex: none;
+
+  width: 12px;
+  height: 12px;
+  padding: 4px;
+
+  transition: color 0.3s ease-in-out;
+}

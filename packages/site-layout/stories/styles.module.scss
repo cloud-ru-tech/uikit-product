@@ -1,0 +1,19 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.body {
+  background: ste.$sys-neutral-background2-level;
+}
+
+.sampleSection {
+  background: ste.$sys-neutral-background;
+  height: 300px;
+}
+
+.fullPageHeight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}

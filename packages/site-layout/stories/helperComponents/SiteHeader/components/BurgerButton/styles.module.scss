@@ -1,0 +1,6 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.icon {
+  flex: none;
+  color: ste.$sys-neutral-accent-default;
+}

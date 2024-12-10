@@ -1,0 +1,9 @@
+.footer {
+  position: relative;
+  padding: 52px 0;
+
+  &[data-layout-type='mobile'],
+  &[data-layout-type='tablet'] {
+    padding: 40px 0;
+  }
+}

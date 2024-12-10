@@ -1,0 +1,24 @@
+@use '../../assets/scss/core/variables' as var;
+@use '../../assets/scss/core/mixins' as mix;
+
+.wrapper {
+  @include mix.media(
+    (
+      1280: (
+        padding: 0 25px,
+      ),
+      md: (
+        box-sizing: border-box,
+        max-width: unset,
+        padding: 0 40px,
+      ),
+      sm: (
+        padding: 0 24px,
+      ),
+    )
+  );
+
+  max-width: 1216px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
