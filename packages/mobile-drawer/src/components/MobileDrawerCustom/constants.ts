@@ -27,3 +27,5 @@ export const SWIPE_DIRECTION_TO_POSITION_MAP: Record<SwipeDirections, Position> 
   Up: 'top',
   Down: 'bottom',
 };
+
+export const DRAWER_CLOSING_TIMEOUT = 300;

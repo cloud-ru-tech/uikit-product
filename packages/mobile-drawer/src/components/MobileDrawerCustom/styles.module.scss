@@ -14,8 +14,6 @@ $drawer-background-color: (
   display: flex;
   flex-direction: column;
 
-  overscroll-behavior: contain;
-
   &[data-swipe] {
     cursor: grab;
 
@@ -30,6 +28,10 @@ $drawer-background-color: (
 
 .drawerRoot {
   z-index: initial !important; /* stylelint-disable-line declaration-no-important */
+
+  &, & * {
+    overscroll-behavior-y: contain;
+  }
 
   div[data-content-wrapper='true'] {
     will-change: transform;
@@ -131,8 +133,6 @@ $drawer-background-color: (
   box-sizing: border-box;
 
   box-shadow: styles-tokens-drawer.simple-var(styles-tokens-drawer.$box-shadow-elevation-level5);
-
-  overscroll-behavior: contain;
 }
 
 .mask {

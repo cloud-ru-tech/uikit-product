@@ -2,7 +2,7 @@ import 'rc-drawer/assets/index.css';
 
 import cn from 'classnames';
 import RcDrawer from 'rc-drawer';
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, useEffect } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
@@ -18,7 +18,7 @@ import {
   DrawerHeaderProps,
 } from '../../helperComponents';
 import { ModalMode, Mode, Position, Size } from '../../types';
-import { motionProps } from './constants';
+import { DRAWER_CLOSING_TIMEOUT, motionProps } from './constants';
 import { useSwipeProps } from './hooks';
 import styles from './styles.module.scss';
 
@@ -87,6 +87,21 @@ function MobileDrawerCustomComponent({
     onSwiped: handleClose,
     enabled: hasSwipe && swipeEnabled,
   });
+
+  // Fix to prevent refresh when swiping on ios
+  useEffect(() => {
+    const hasOtherDrawers = () => Boolean(document.querySelector('[data-content-wrapper]'));
+    const disableRefresh = () => (document.documentElement.style.overscrollBehaviorY = 'none');
+    const enableRefresh = () => (document.documentElement.style.overscrollBehaviorY = '');
+
+    if (open && !document.documentElement.style.overscrollBehaviorY) {
+      disableRefresh();
+
+      return () => {
+        setTimeout(() => !hasOtherDrawers() && enableRefresh(), DRAWER_CLOSING_TIMEOUT + 50);
+      };
+    }
+  }, [open]);
 
   return (
     <RcDrawer
