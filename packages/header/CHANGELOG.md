@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.19 (2024-12-11)</small>
+
+* fix(PDS-1222): Change text for getting welcome grant component ([29b154b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/29b154b))
+* fix(PDS-1222): Remove CostControl icon in popup Finance menu ([9721caf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9721caf))
+
+
+
+
+
 ## <small>2.33.18 (2024-12-05)</small>
 
 * feat(FF-5698): user menu whats new item ([1057bcc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1057bcc))
