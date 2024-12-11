@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>10.2.6 (2024-12-11)</small>
+
+* feat(PDS-1204): add new icons ([9dd65f0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9dd65f0))
+
+
+
+
+
 ## <small>10.2.5 (2024-12-04)</small>
 
 * feat(PDS-1144): add icon for bare metal migration ([4c3dfb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4c3dfb9))

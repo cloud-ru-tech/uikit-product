@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.19.7 (2024-12-11)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@10.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.19.6 (2024-12-04)</small>
 
 * chore(FF-5944): renamed snack uikit category to console ([411a818](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/411a818))

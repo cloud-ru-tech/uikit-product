@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.16.11 (2024-12-11)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-copy-line@0.7.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/copy-line/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@10.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.16.10 (2024-12-06)</small>
 
 * feat(EVOSCV-1776): added Add button type on PageForm ([ad7d943](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ad7d943))
