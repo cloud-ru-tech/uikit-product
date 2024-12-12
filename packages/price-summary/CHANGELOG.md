@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.3 (2024-12-12)</small>
+
+* fix(PDS-37): fixed render for zero and undefined values ([6e1cf8b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6e1cf8b))
+
+
+
+
+
 ## <small>0.0.2 (2024-12-11)</small>
 
 ### Only dependencies have been changed
