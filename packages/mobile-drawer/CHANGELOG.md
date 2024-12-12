@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.10 (2024-12-12)</small>
+
+* fix(PDS-1027): add padding absolute into drawer body ([6d4d921](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6d4d921))
+
+
+
+
+
 ## <small>0.6.9 (2024-12-11)</small>
 
 ### Only dependencies have been changed

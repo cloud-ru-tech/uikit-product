@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-drawer",
   "title": "Mobile Drawer",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "sideEffects": [
     "*.css",
     "*.woff",

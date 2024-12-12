@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.12 (2024-12-12)</small>
+
+* fix(PDS-1027): fix footer approvebtn ([5dd4723](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5dd4723))
+
+
+
+
+
 ## <small>0.7.11 (2024-12-11)</small>
 
 ### Only dependencies have been changed
