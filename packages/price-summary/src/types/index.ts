@@ -22,7 +22,7 @@ export type InvoiceItem = {
   label: string;
   labelMaxLines?: number;
   quantity?: string | number;
-  price: number;
+  price?: number;
   discount?: DiscountItem;
   primary?: boolean;
   topDivider?: boolean;

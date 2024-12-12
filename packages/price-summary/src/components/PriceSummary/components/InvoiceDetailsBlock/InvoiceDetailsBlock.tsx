@@ -31,7 +31,7 @@ export function InvoiceDetailsBlock({ invoice, layoutType }: InvoiceDetailsBlock
         <InvoiceItemBlock key={index} item={item} index={index} layoutType={layoutType} />
       ))}
 
-      {invoice.price && (
+      {invoice.price !== undefined && (
         <>
           <Divider />
 

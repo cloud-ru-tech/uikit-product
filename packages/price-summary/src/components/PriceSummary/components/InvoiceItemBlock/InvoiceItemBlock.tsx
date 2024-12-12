@@ -32,7 +32,7 @@ export function InvoiceItemBlock({ item, index, layoutType }: InvoiceItemBlockPr
         </div>
 
         <Typography.SansBodyS tag='div' className={styles.priceCell} data-secondary={isSecondary}>
-          {formatCurrency(item.price)}
+          {item.price !== undefined ? formatCurrency(item.price) : undefined}
         </Typography.SansBodyS>
 
         {item.discount && (
