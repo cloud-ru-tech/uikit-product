@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.15 (2024-12-12)</small>
+
+* fix(PDS-1047): remove inner scroll refs ([5d762d0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5d762d0))
+* fix(PDS-1047): return swipe behavior ([f9096ae](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f9096ae))
+
+
+
+
+
 ## <small>0.5.14 (2024-12-12)</small>
 
 ### Only dependencies have been changed

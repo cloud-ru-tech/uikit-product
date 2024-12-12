@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.11 (2024-12-12)</small>
+
+* fix(PDS-1047): prevent page refresh on swipe for ios ([2ee5aeb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2ee5aeb))
+* fix(PDS-1047): prevent swipe when interacting with slider ([e58e3ae](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e58e3ae))
+* fix(PDS-1047): remove paddingAbsolute from scroll container ([27c457e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/27c457e))
+* chore(PDS-1047): fix scroll inside swipe behavior ([866cf3b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/866cf3b))
+* fix(PDS-1047)!: new swipe behavior, remove scrollRef prop ([baca26e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/baca26e))
+
+
+
+
+
 ## <small>0.6.10 (2024-12-12)</small>
 
 * fix(PDS-1027): add padding absolute into drawer body ([6d4d921](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6d4d921))

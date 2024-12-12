@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.13 (2024-12-12)</small>
+
+* fix(PDS-1047)!: new swipe behavior, remove scrollRef prop ([baca26e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/baca26e))
+* fix(PDS-1047)!: remove swipeEnabled prop ([275d83a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/275d83a))
+
+
+
+
+
 ## <small>0.7.12 (2024-12-12)</small>
 
 * fix(PDS-1027): fix footer approvebtn ([5dd4723](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5dd4723))
