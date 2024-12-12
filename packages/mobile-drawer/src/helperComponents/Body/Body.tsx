@@ -19,7 +19,6 @@ export function DrawerBody({ content, className, ...rest }: DrawerBodyProps) {
     <Scroll
       size='m'
       barHideStrategy='never'
-      paddingAbsolute
       className={cn(styles.drawerBody, className)}
       {...extractSupportProps(rest)}
     >
