@@ -5,12 +5,14 @@ import * as Icons from '@sbercloud/uikit-product-icons';
 import { ButtonFilled } from '@snack-uikit/button';
 import { FieldSlider } from '@snack-uikit/fields';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
+import { Slider } from '@snack-uikit/slider';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MobileModal, MobileModalProps } from '../src';
 import { ALIGN, MODE, SIZE } from '../src/constants';
+import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Mobile/Modal/Modal',
@@ -44,7 +46,15 @@ function Template({ open: openProp, ...args }: ModalStoryProps) {
         approveButton={!args.approveButton ? undefined : { ...args.approveButton, onClick: closeModal }}
         cancelButton={!args.cancelButton ? undefined : { ...args.cancelButton, onClick: closeModal }}
         additionalButton={!args.additionalButton ? undefined : { ...args.additionalButton, onClick: closeModal }}
-        content={<ButtonFilled label={'Open modal #2'} onClick={() => setOpen2(!open2)} />}
+        content={
+          <div className={styles.content}>
+            <ButtonFilled label={'Open modal #2'} onClick={() => setOpen2(!open2)} />
+
+            <FieldSlider min={1} max={100} step={1} marks={{ 1: '1', 25: '25', 50: '50', 75: '75', 100: '100' }} />
+
+            <Slider min={1} max={10} step={1} marks={{ 1: 1, 4: 4, 7: 7, 10: 10 }} />
+          </div>
+        }
       />
 
       <MobileModal
