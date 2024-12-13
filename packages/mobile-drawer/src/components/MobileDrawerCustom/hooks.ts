@@ -4,7 +4,7 @@ import { CSSProperties, useRef, useState } from 'react';
 import { DATA_SWIPE_DIRECTIONS_ATTRIBUTE, SwipeCallback, SwipeEventData, useSwipeable } from '@snack-uikit/utils';
 
 import { Position } from '../../types';
-import { SWIPE_DIRECTION_TO_POSITION_MAP } from './constants';
+import { POSITION_TO_SWIPE_DIRECTION_MAP, SWIPE_DIRECTION_TO_POSITION_MAP } from './constants';
 
 type UseSwipePropsProps = {
   onSwiped(): void;
@@ -178,6 +178,7 @@ export function useSwipeProps({ onSwiped, position, enabled }: UseSwipePropsProp
     onSwiping: handleSwiping,
     onSwiped: handleSwiped,
     enabled,
+    availableDirections: [POSITION_TO_SWIPE_DIRECTION_MAP[position]],
     trackMouse: true,
   });
 

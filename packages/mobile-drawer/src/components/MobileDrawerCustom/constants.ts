@@ -28,4 +28,8 @@ export const SWIPE_DIRECTION_TO_POSITION_MAP: Record<SwipeDirections, Position> 
   Down: 'bottom',
 };
 
+export const POSITION_TO_SWIPE_DIRECTION_MAP = Object.fromEntries(
+  Object.entries(SWIPE_DIRECTION_TO_POSITION_MAP).map(([key, value]) => [value, key]),
+) as Record<Position, SwipeDirections>;
+
 export const DRAWER_CLOSING_TIMEOUT = 300;
