@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.21 (2024-12-13)</small>
+
+* fix(PDS-1155): apply onSelectOpenChange in mobile header ([d943b09](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d943b09))
+* feat(PDS-1155): add organization selection in mobile view ([9d2acf5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d2acf5))
+
+
+
+
+
 ## <small>2.33.20 (2024-12-11)</small>
 
 ### Only dependencies have been changed
