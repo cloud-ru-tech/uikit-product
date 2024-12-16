@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.14 (2024-12-16)</small>
+
+* chore(PDS-1047): update story ([620dd81](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/620dd81))
+
+
+
+
+
 ## <small>0.7.13 (2024-12-12)</small>
 
 * fix(PDS-1047)!: new swipe behavior, remove scrollRef prop ([baca26e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/baca26e))

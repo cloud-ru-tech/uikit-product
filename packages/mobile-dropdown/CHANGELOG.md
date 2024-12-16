@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.14 (2024-12-16)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-modal@0.7.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.6.13 (2024-12-12)</small>
 
 * fix(PDS-1047): remove inner scroll refs ([5d762d0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5d762d0))

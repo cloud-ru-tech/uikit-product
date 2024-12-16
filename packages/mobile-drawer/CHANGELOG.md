@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.12 (2024-12-16)</small>
+
+* fix(PDS-1047): freeze available direction for swipe ([9546bda](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9546bda))
+
+
+
+
+
 ## <small>0.6.11 (2024-12-12)</small>
 
 * fix(PDS-1047): prevent page refresh on swipe for ios ([2ee5aeb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2ee5aeb))
