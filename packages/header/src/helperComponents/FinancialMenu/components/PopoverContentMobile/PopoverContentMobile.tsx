@@ -72,7 +72,13 @@ export function PopoverContentMobile({
         </div>
 
         <PopoverRowMobile {...balance} label={balance.label} value={balanceValue} />
-        <PopoverRowMobile {...bonuses} label={bonuses.label} value={bonusGrantValue} />
+        <PopoverRowMobile
+          {...bonuses}
+          label={bonuses.label}
+          value={bonusGrantValue}
+          isButtonDisabled={Number(balance.value) < 0}
+          buttonTip={textProvider(languageCode, Texts.FinancialMenuBonusesDisabledTip)}
+        />
 
         {(starterGrant?.isAvailable || starterGrant?.inProcess) && (
           <StarterGrant {...starterGrant} onGetGrantClick={handleGetStarterGrantClick} isMobile />

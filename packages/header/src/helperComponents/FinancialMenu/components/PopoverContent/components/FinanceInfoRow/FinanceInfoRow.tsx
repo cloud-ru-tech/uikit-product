@@ -1,8 +1,10 @@
+import { ReactNode } from 'react';
+
 import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonTonal } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
-import { QuestionTooltip } from '@snack-uikit/tooltip';
+import { QuestionTooltip, Tooltip } from '@snack-uikit/tooltip';
 import { Typography } from '@snack-uikit/typography';
 
 import { textProvider, Texts } from '../../../../../../helpers';
@@ -11,6 +13,8 @@ import styles from './styles.module.scss';
 
 export type FinanceInfoRowProps = FinanceInfoRowType & {
   actionButtonText: string;
+  isButtonDisabled?: boolean;
+  buttonTip?: ReactNode;
 };
 
 export function FinanceInfoRow({
@@ -23,8 +27,20 @@ export function FinanceInfoRow({
   actionButtonText,
   onAddClick,
   status = 'default',
+  isButtonDisabled,
+  buttonTip,
 }: FinanceInfoRowProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+
+  const renderButton = () => (
+    <ButtonTonal
+      size='xs'
+      label={actionButtonText}
+      icon={<PlusSVG />}
+      onClick={onAddClick}
+      disabled={isButtonDisabled}
+    />
+  );
 
   return (
     <>
@@ -58,7 +74,13 @@ export function FinanceInfoRow({
         </Typography.SansLabelL>
       </div>
       <div className={styles.rightAlign}>
-        <ButtonTonal size='xs' label={actionButtonText} icon={<PlusSVG />} onClick={onAddClick} />
+        {isButtonDisabled ? (
+          <Tooltip className={styles.negativeBalanceTooltip} tip={buttonTip} placement='left'>
+            {renderButton()}
+          </Tooltip>
+        ) : (
+          renderButton()
+        )}
       </div>
       {description && (
         <Typography.SansBodyS tag='div' className={styles.description}>

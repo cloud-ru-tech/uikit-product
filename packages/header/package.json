@@ -36,6 +36,7 @@
     "@sbercloud/ft-formatters": "3.4.3",
     "@sbercloud/uikit-product-card-predefined": "0.7.11",
     "@sbercloud/uikit-product-icons": "10.2.8",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.4.10",
     "@sbercloud/uikit-product-utils": "3.8.5",
     "@snack-uikit/avatar": "0.8.1",
     "@snack-uikit/breadcrumbs": "0.10.6",

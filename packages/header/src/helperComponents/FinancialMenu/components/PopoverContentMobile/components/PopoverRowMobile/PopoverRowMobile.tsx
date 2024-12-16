@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import { ArrowLinksSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
+import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction, ButtonTonal } from '@snack-uikit/button';
 import { QuestionTooltip } from '@snack-uikit/tooltip';
@@ -17,6 +18,8 @@ export type PopoverRowMobileProps = {
   value: string;
   onAddClick(): void;
   status?: 'default' | 'attention';
+  isButtonDisabled?: boolean;
+  buttonTip?: ReactNode;
 };
 
 export function PopoverRowMobile({
@@ -28,8 +31,14 @@ export function PopoverRowMobile({
   value,
   onAddClick,
   status = 'default',
+  isButtonDisabled,
+  buttonTip,
 }: PopoverRowMobileProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+
+  const renderButton = () => (
+    <ButtonTonal size='xs' icon={<PlusSVG />} appearance='primary' onClick={onAddClick} disabled={isButtonDisabled} />
+  );
 
   return (
     <div className={styles.rowWrapper}>
@@ -65,7 +74,7 @@ export function PopoverRowMobile({
             {value}
           </span>
 
-          <ButtonTonal size='xs' icon={<PlusSVG />} appearance='primary' onClick={onAddClick} />
+          {isButtonDisabled ? <MobileTooltip tip={buttonTip}>{renderButton()}</MobileTooltip> : renderButton()}
         </div>
       </div>
       {description && <div className={styles.description}>{description}</div>}

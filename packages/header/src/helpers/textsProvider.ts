@@ -55,6 +55,7 @@ export enum Texts {
   FinancialMenuTooltipMoreButton = 'financial-menu-tooltip-more-button',
   FinancialMenuBalanceAction = 'financial-menu-balance-action',
   FinancialMenuBonusesAction = 'financial-menu-bonuses-action',
+  FinancialMenuBonusesDisabledTip = 'financial-menu-bonuses-disabled-tip',
   FinancialMenuGrantInfinity = 'financial-menu-grant-infinity',
   FinancialMenuNoGrants = 'financial-menu-no-grants',
   FinancialMenuGrantStatusSpending = 'financial-menu-grant-status-spending',
@@ -139,6 +140,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.FinancialMenuTooltipMoreButton]: 'Подробнее',
     [Texts.FinancialMenuBalanceAction]: 'Пополнить баланс',
     [Texts.FinancialMenuBonusesAction]: 'Ввести промокод',
+    [Texts.FinancialMenuBonusesDisabledTip]:
+      'Пополните баланс. Чтобы активировать промокод, ваш баланс должен быть положительным.',
     [Texts.FinancialMenuGrantInfinity]: 'без срока',
     [Texts.FinancialMenuNoGrants]: 'Грантов пока нет',
     [Texts.FinancialMenuGrantStatusSpending]: 'Тратится',
@@ -225,6 +228,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.FinancialMenuTooltipMoreButton]: 'More details',
     [Texts.FinancialMenuBalanceAction]: 'Top up the balance',
     [Texts.FinancialMenuBonusesAction]: 'Enter promo code',
+    [Texts.FinancialMenuBonusesDisabledTip]:
+      'Top up your balance. To activate the promo code, your balance must be positive.',
     [Texts.FinancialMenuGrantInfinity]: 'without a statute',
     [Texts.FinancialMenuNoGrants]: 'No grants yet',
     [Texts.FinancialMenuGrantStatusSpending]: 'Spending',
