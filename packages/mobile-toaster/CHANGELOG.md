@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.4 (2024-12-16)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-utils@3.8.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.0.3 (2024-12-09)</small>
 
 * fix(PDS-1215): add -mobile prefix to toaster styles ([41aa826](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/41aa826))
