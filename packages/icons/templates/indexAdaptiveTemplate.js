@@ -21,12 +21,13 @@ const defaultIndexTemplate = filePaths => {
     import { Ref, forwardRef } from 'react'
     import ${dirName}Light, { ISvgIconProps } from './${lightBasename}';
     import ${dirName}Dark from './${darkBasename}';
-    import { useThemeModification } from '../../utils';
+    import { useThemeModification, useBrandModification } from '../../utils';
 
     const ${dirName}Svg = forwardRef(function ${dirName}Svg(props: ISvgIconProps, ref: Ref<SVGSVGElement>) {
       const { isDarkTheme } = useThemeModification();
+      const { isDarkBrand } = useBrandModification();
     
-      return isDarkTheme
+      return isDarkTheme || isDarkBrand 
         ? <${dirName}Dark {...props} ref={ref} />
         : <${dirName}Light {...props} ref={ref} />;
     });
