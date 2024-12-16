@@ -36,6 +36,7 @@ export function HeatMapChart({ data, options, className, ...rest }: WithSupportP
   const isLegendEnabled = legend?.show ?? true;
   const colorContainerRef = useRef<HTMLDivElement>(null);
 
+  // TODO https://jira.sbercloud.tech/browse/FF-6024
   const { theme } = useTheme();
 
   const [colorRange, setColorRange] = useState(['#ffffff', '#000000']);
