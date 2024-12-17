@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.24 (2024-12-17)</small>
+
+* fix(PDS-1272): Disable bonus button when user has negative balance ([560f81a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/560f81a))
+
+
+
+
+
 ## <small>2.33.23 (2024-12-17)</small>
 
 ### Only dependencies have been changed
