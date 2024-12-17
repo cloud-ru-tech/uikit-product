@@ -1,0 +1,40 @@
+{
+  "name": "@sbercloud/uikit-product-site-grid",
+  "title": "Site Grid",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-grid",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/site-grid"
+  },
+  "author": "Belyavskiy Ilya <iabelyavskiy@cloud.ru>",
+  "contributors": [
+    "Belyavskiy Ilya <iabelyavskiy@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-utils": "3.8.5",
+    "classnames": "2.5.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
