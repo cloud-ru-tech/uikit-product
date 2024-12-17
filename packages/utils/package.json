@@ -41,7 +41,9 @@
     "@types/ua-parser-js": "0.7.39"
   },
   "peerDependencies": {
+    "@sbercloud/figma-tokens-admin": "*",
     "@sbercloud/figma-tokens-cloud-platform": "*",
-    "@sbercloud/figma-tokens-mlspace": "*"
+    "@sbercloud/figma-tokens-mlspace": "*",
+    "@sbercloud/figma-tokens-web": "*"
   }
 }
