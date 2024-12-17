@@ -17,7 +17,8 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { getSelectProductListProps, textProvider, Texts } from '../../../../helpers';
 import { extractAppNameFromId } from '../../../../utils';
-import { BannerCard } from '../../../BannerCard';
+import { MarketplaceBannerCard } from '../../../MarketplaceBannerCard';
+import { ReferralBannerCard } from '../../../ReferralBannerCard';
 import { useLinks, useLinksScrollToSelected } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
@@ -42,6 +43,7 @@ export function DrawerMenuDesktop({
   onLinkChange,
   favorites,
   onMarketplaceBannerClick,
+  onReferralBannerClick,
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
@@ -55,7 +57,7 @@ export function DrawerMenuDesktop({
     highlightClassName: styles.highlight,
   });
 
-  const showRightSection = leftSectionLinks?.length || onMarketplaceBannerClick;
+  const showRightSection = leftSectionLinks?.length || onMarketplaceBannerClick || onReferralBannerClick;
 
   const rightContainerRef = useRef<HTMLDivElement>(null);
   const rightContentRef = useRef<HTMLDivElement>(null);
@@ -229,13 +231,25 @@ export function DrawerMenuDesktop({
                     </div>
                   )}
 
-                  {!searchValue && onMarketplaceBannerClick && (
-                    <BannerCard
-                      title={textProvider(languageCode, Texts.MkpBannerTitle)}
-                      text={textProvider(languageCode, Texts.MkpBannerText)}
-                      promoBadge={textProvider(languageCode, Texts.MkpBannerCount)}
-                      onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
-                    />
+                  {!searchValue && (
+                    <div className={styles.bannersWrapper}>
+                      {onReferralBannerClick && (
+                        <ReferralBannerCard
+                          title={textProvider(languageCode, Texts.ReferralBannerTitle)}
+                          text={textProvider(languageCode, Texts.ReferralBannerText)}
+                          promoBadge={textProvider(languageCode, Texts.ReferralBannerTag)}
+                          onClick={wrappedClick({ onClick: onReferralBannerClick })}
+                        />
+                      )}
+                      {onMarketplaceBannerClick && (
+                        <MarketplaceBannerCard
+                          title={textProvider(languageCode, Texts.MkpBannerTitle)}
+                          text={textProvider(languageCode, Texts.MkpBannerText)}
+                          promoBadge={textProvider(languageCode, Texts.MkpBannerCount)}
+                          onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
+                        />
+                      )}
+                    </div>
                   )}
 
                   {rightSectionLinks &&

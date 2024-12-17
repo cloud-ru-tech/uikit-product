@@ -83,6 +83,10 @@ export enum Texts {
   MkpBannerTitle = 'mkp-banner-title',
   MkpBannerText = 'mkp-banner-text',
   MkpBannerCount = 'mkp-banner-count',
+
+  ReferralBannerTitle = 'referral-banner-title',
+  ReferralBannerText = 'referral-banner-title-text',
+  ReferralBannerTag = 'referral-banner-tag',
 }
 
 const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
@@ -173,6 +177,10 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.MkpBannerTitle]: 'Маркетплейс',
     [Texts.MkpBannerText]: 'Для разработки, анализа данных и других задач.',
     [Texts.MkpBannerCount]: '120+ сервисов',
+
+    [Texts.ReferralBannerTitle]: 'Реферальная программа',
+    [Texts.ReferralBannerText]: 'Зарабатывайте 15% на рекомендациях сервисов Cloud.ru',
+    [Texts.ReferralBannerTag]: '15%',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderProjectSelectorCreateProject]: 'Create project',
@@ -261,6 +269,10 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.MkpBannerTitle]: 'Marketplace',
     [Texts.MkpBannerText]: 'For development, data analysis and other tasks.',
     [Texts.MkpBannerCount]: '120+ services',
+
+    [Texts.ReferralBannerTitle]: 'Referral program',
+    [Texts.ReferralBannerText]: 'Earn 15% on recommendations of Cloud.ru services',
+    [Texts.ReferralBannerTag]: '15%',
   },
 };
 

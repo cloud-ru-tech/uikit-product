@@ -22,4 +22,5 @@ export type DrawerMenuProps = {
     onChange(id: string): (value: boolean) => void;
   };
   onMarketplaceBannerClick?(e?: MouseEvent<HTMLElement>): void;
+  onReferralBannerClick?(e?: MouseEvent<HTMLElement>): void;
 } & SelectProductsProps;

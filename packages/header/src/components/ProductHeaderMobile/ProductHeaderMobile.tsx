@@ -20,6 +20,7 @@ import {
   PartnerPopover,
   SelectMenu,
   SelectMenuTrigger,
+  useAlertMenu,
   useGeneralMenu,
   useLogoutMenu,
   useOrganizationsMenu,
@@ -192,6 +193,8 @@ export function ProductHeaderMobile({
     closeUserMenu,
   });
 
+  const alertMenu = useAlertMenu(userMenu?.alert);
+
   const logoutMenu = useLogoutMenu({ onLogout: userMenu?.onLogout, closeUserMenu });
 
   const items = useMemo(() => {
@@ -217,6 +220,7 @@ export function ProductHeaderMobile({
     items.push(...profileMenu);
     items.push(...generalMenu);
     items.push(...organizationMenu);
+    items.push(...alertMenu);
     items.push(...logoutMenu);
 
     if (visibleSettings && visibleSettings.length > 0) {
@@ -268,6 +272,7 @@ export function ProductHeaderMobile({
     isProjectMenuOpen,
     closeUserMenu,
     handleProjectMenuOpen,
+    alertMenu,
   ]);
 
   const count = (userMenu?.invites?.count ?? 0) + (userMenu?.partnerInvites?.count ?? 0);

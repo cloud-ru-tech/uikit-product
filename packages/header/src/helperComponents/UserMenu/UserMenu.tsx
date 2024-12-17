@@ -8,7 +8,15 @@ import { ThemeMode } from '../../types';
 import { InvitePopover, InvitePopoverProps } from '../InvitePopover';
 import { PartnerPopover, PartnerPopoverProps } from '../PartnerPopover';
 import { SelectProps } from '../SelectMenu';
-import { useGeneralMenu, useLogoutMenu, useOrganizationsMenu, useProfileMenu, User } from './hooks';
+import {
+  useAlertMenu,
+  UseAlertMenuProps,
+  useGeneralMenu,
+  useLogoutMenu,
+  useOrganizationsMenu,
+  useProfileMenu,
+  User,
+} from './hooks';
 import styles from './styles.module.scss';
 
 export type UserMenuProps = {
@@ -32,6 +40,8 @@ export type UserMenuProps = {
       onChange(value: ThemeMode): void;
     };
     profileItemWrapRender?(item: ReactNode): ReactNode;
+  } & {
+    alert?: UseAlertMenuProps;
   };
 
 export function UserMenu({
@@ -49,6 +59,7 @@ export function UserMenu({
   profileItemWrapRender,
   partnerInvites,
   onWhatsNewClick,
+  alert,
 }: UserMenuProps) {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const closeUserMenu = () => setIsUserMenuOpen(false);
@@ -72,11 +83,13 @@ export function UserMenu({
     closeUserMenu,
   });
 
+  const alertMenu = useAlertMenu(alert);
+
   const logoutMenu = useLogoutMenu({ onLogout, closeUserMenu });
 
   const items = useMemo(
-    () => [...profileMenu, ...generalMenu, ...organizationMenu, ...logoutMenu],
-    [profileMenu, generalMenu, organizationMenu, logoutMenu],
+    () => [...profileMenu, ...generalMenu, ...organizationMenu, ...alertMenu, ...logoutMenu],
+    [profileMenu, generalMenu, organizationMenu, logoutMenu, alertMenu],
   );
 
   const count = (invites?.count ?? 0) + (partnerInvites?.count ?? 0);

@@ -16,7 +16,7 @@
   }
 
   & [data-test-id='header__drawer-menu']:not([data-small]) {
-    min-width: 656px;
+    min-width: 744px;
     overflow: hidden;
   }
 }
@@ -200,4 +200,9 @@
   71% { transform:translate(0,0) }
   89% { transform:translate(3px,0) }
   100% { transform:translate(0,0) }
+}
+
+.bannersWrapper {
+  display: flex;
+  gap: styles-tokens-element.$dimension-1m;
 }

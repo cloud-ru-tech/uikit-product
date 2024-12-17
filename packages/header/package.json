@@ -62,6 +62,7 @@
     "@snack-uikit/truncate-string": "0.6.1",
     "@snack-uikit/typography": "0.8.1",
     "@snack-uikit/utils": "3.5.0",
+    "@snack-uikit/alert": "0.15.5",
     "classnames": "2.5.1",
     "lodash.debounce": "4.0.8",
     "lodash.throttle": "4.1.1",

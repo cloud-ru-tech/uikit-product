@@ -54,6 +54,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'onLinkChange'
       | 'favorites'
       | 'onMarketplaceBannerClick'
+      | 'onReferralBannerClick'
     > & { onClose?(): void };
     select?: Pick<
       SelectProps,
@@ -90,6 +91,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'themeMode'
       | 'profileItemWrapRender'
       | 'partnerInvites'
+      | 'alert'
     >;
     logo?: {
       loading?: boolean;
@@ -108,6 +110,7 @@ export function ProductHeader({
     links,
     favorites,
     onMarketplaceBannerClick,
+    onReferralBannerClick,
     footerLinks,
     allProducts,
     selectedProduct,
@@ -303,6 +306,7 @@ export function ProductHeader({
           links={links}
           favorites={favorites}
           onMarketplaceBannerClick={onMarketplaceBannerClick}
+          onReferralBannerClick={onReferralBannerClick}
           selectedLink={selectedLink}
           onLinkChange={onLinkChange}
           allProducts={allProducts}

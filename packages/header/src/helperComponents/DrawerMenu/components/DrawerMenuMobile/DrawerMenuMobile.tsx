@@ -12,7 +12,8 @@ import { Search } from '@snack-uikit/search';
 import { getSelectProductListProps, textProvider, Texts } from '../../../../helpers';
 import { ProductOption } from '../../../../types';
 import { extractAppNameFromId } from '../../../../utils';
-import { BannerCard } from '../../../BannerCard';
+import { MarketplaceBannerCard } from '../../../MarketplaceBannerCard';
+import { ReferralBannerCard } from '../../../ReferralBannerCard';
 import { useLinks } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
@@ -32,6 +33,7 @@ export function DrawerMenuMobile({
   onLinkChange,
   favorites,
   onMarketplaceBannerClick,
+  onReferralBannerClick,
   ...rest
 }: DrawerMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -132,13 +134,25 @@ export function DrawerMenuMobile({
               />
             )}
 
-            {!searchValue && onMarketplaceBannerClick && (
-              <BannerCard
-                title={textProvider(languageCode, Texts.MkpBannerTitle)}
-                promoBadge={textProvider(languageCode, Texts.MkpBannerCount)}
-                onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
-                isMobile
-              />
+            {!searchValue && (
+              <>
+                {onMarketplaceBannerClick && (
+                  <MarketplaceBannerCard
+                    title={textProvider(languageCode, Texts.MkpBannerTitle)}
+                    promoBadge={textProvider(languageCode, Texts.MkpBannerCount)}
+                    onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
+                    isMobile
+                  />
+                )}
+                {onReferralBannerClick && (
+                  <ReferralBannerCard
+                    title={textProvider(languageCode, Texts.ReferralBannerTitle)}
+                    promoBadge={textProvider(languageCode, Texts.ReferralBannerTag)}
+                    onClick={wrappedClick({ onClick: onReferralBannerClick })}
+                    isMobile
+                  />
+                )}
+              </>
             )}
 
             {rightSectionLinks &&

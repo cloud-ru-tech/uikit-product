@@ -63,6 +63,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
 
   showUserMenuWhatsNew: boolean;
   showUserMenuLogout: boolean;
+  showUserMenuAlert: boolean;
   showOrganizationInvite: boolean;
   showOrganizationInvitePopover: boolean;
 
@@ -76,6 +77,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showLinks: boolean;
   showFooterLinks: boolean;
   showMarketplaceBanner: boolean;
+  showReferralBanner: boolean;
 
   showSinglePlatform: boolean;
 };
@@ -224,6 +226,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showUserMenuManagement,
 
     showUserMenuWhatsNew,
+    showUserMenuAlert,
     showUserMenuLogout,
     showNotificationError,
     userMenu,
@@ -234,6 +237,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showLinks,
     showFooterLinks,
     showMarketplaceBanner,
+    showReferralBanner,
     showPlatformsLoading,
     showSinglePlatform,
     ...args
@@ -447,6 +451,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                     value: themeMode,
                     onChange: setThemeMode,
                   },
+                  alert: showUserMenuAlert ? userMenu.alert : undefined,
                 }
               : undefined
           }
@@ -459,6 +464,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
             links: showLinks ? args.drawerMenu.links : undefined,
             footerLinks: showFooterLinks ? args.drawerMenu.footerLinks : undefined,
             onMarketplaceBannerClick: showMarketplaceBanner ? () => undefined : undefined,
+            onReferralBannerClick: showReferralBanner ? () => undefined : undefined,
             favorites: {
               value: favoriteItems,
               onChange: onFavoriteChange,
@@ -675,6 +681,7 @@ export const ARGS: StoryProps = {
   showUserMenuManagement: true,
 
   showUserMenuWhatsNew: true,
+  showUserMenuAlert: true,
   showUserMenuLogout: true,
   showOrganizationInvite: false,
   showOrganizationInvitePopover: false,
@@ -693,6 +700,20 @@ export const ARGS: StoryProps = {
     onLogout: () => {
       toaster.userAction.success({ label: 'Logout clicked' });
     },
+    alert: {
+      size: 's',
+      appearance: 'info',
+      icon: false,
+      title: 'Реферальная программа',
+      description: 'Зарабатывайте 15% на рекомендациях сервисов Cloud.ru',
+      onClose: () => {},
+      actions: {
+        primary: {
+          text: 'Подробнее',
+          onClick: () => {},
+        },
+      },
+    },
   },
 
   showAddOrganization: true,
@@ -709,6 +730,7 @@ export const ARGS: StoryProps = {
   showLinks: true,
   showFooterLinks: true,
   showMarketplaceBanner: true,
+  showReferralBanner: true,
   showSinglePlatform: false,
   drawerMenu: {
     allProducts: [
@@ -916,6 +938,12 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
     if: { arg: 'showUserMenu', eq: true },
   },
 
+  showUserMenuAlert: {
+    name: '[Story]: show user menu -> alert',
+    type: 'boolean',
+    if: { arg: 'showUserMenu', eq: true },
+  },
+
   showUserMenuLogout: {
     name: '[Story]: show user menu -> logout',
     type: 'boolean',
@@ -1047,7 +1075,12 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
 
   showLinks: { name: '[Story]: show drawer -> links', type: 'boolean' },
   showFooterLinks: { name: '[Story]: show drawer -> footer links', type: 'boolean' },
-  showMarketplaceBanner: { name: '[Story]: show drawer -> onMarketplaceBannerClick', type: 'boolean' },
+  showMarketplaceBanner: {
+    name: '[Story]: show drawer -> marketplace banner',
+    type: 'boolean',
+    if: { arg: 'showReferralBanner', eq: true },
+  },
+  showReferralBanner: { name: '[Story]: show drawer -> referral banner', type: 'boolean' },
   drawerMenu: { table: { disable: true } },
   showSinglePlatform: { name: '[Story]: show drawer -> single platform', type: 'boolean' },
 };

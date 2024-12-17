@@ -14,42 +14,42 @@ import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';
 
-export type BannerCardProps = Pick<CardProps, 'onClick'> & {
+export type MarketplaceBannerCardProps = Pick<CardProps, 'onClick'> & {
   promoBadge: string;
   title: string;
   text?: string;
   isMobile?: boolean;
 };
 
-export function BannerCard(props: BannerCardProps) {
+export function MarketplaceBannerCard(props: MarketplaceBannerCardProps) {
   return (
     <div className={cn(!props.isMobile && styles.card)}>
-      <Card size={'m'} onClick={props.onClick}>
+      <Card size={'m'} onClick={props.onClick} {...(!props.isMobile && { promoBadge: props.promoBadge })}>
         <div className={cn(styles.wrapper, props.isMobile && styles.mobile)}>
           <div className={styles.left}>
-            <Typography.SansTitleM className={styles.title}>
+            <Typography.SansTitleS className={styles.title}>
               {props.title}
-              <PromoTag text={props.promoBadge as string} />
-            </Typography.SansTitleM>
+              {props.isMobile && <PromoTag text={props.promoBadge as string} />}
+            </Typography.SansTitleS>
 
-            {props.text && <Typography.SansBodyM className={styles.text}>{props.text}</Typography.SansBodyM>}
+            {props.text && <Typography.SansBodyS className={styles.text}>{props.text}</Typography.SansBodyS>}
           </div>
 
           <div className={cn(styles.icons, props.isMobile && styles.mobile)}>
             {props.isMobile ? (
               <>
-                <NodejsLogoSVG size={24} />
-                <KuberLogoSVG size={24} />
-                <NginxLogoSVG size={24} />
+                <NodejsLogoSVG size={20} />
+                <KuberLogoSVG size={20} />
+                <NginxLogoSVG size={20} />
               </>
             ) : (
               <>
-                <StrongSwanLogoSVG size={24} />
-                <KuberLogoSVG size={24} />
-                <NodejsLogoSVG size={24} />
-                <NginxLogoSVG size={24} />
-                <UbuntuLogoSVG size={24} />
-                <GigaChatLogoSVG size={24} />
+                <StrongSwanLogoSVG size={16} />
+                <KuberLogoSVG size={16} />
+                <NodejsLogoSVG size={16} />
+                <NginxLogoSVG size={16} />
+                <UbuntuLogoSVG size={16} />
+                <GigaChatLogoSVG size={16} />
               </>
             )}
           </div>
