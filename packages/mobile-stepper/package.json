@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-stepper",
   "title": "Mobile Stepper",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,8 +32,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "10.2.7",
-    "@sbercloud/uikit-product-utils": "3.8.4",
+    "@sbercloud/uikit-product-icons": "10.2.8",
+    "@sbercloud/uikit-product-utils": "3.8.5",
     "@snack-uikit/loaders": "0.8.1",
     "@snack-uikit/stepper": "0.8.3",
     "@snack-uikit/truncate-string": "0.6.1",

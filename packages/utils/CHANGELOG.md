@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>3.8.5 (2024-12-17)</small>
+
+* fix(FF-5970): admin and site figma tokens added to utils peerdeps ([3601836](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3601836))
+
+
+
+
+
 ## <small>3.8.4 (2024-12-16)</small>
 
 * feat(FF-5970)!: replaced themes with brand in utils and storybook ([e28224c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e28224c))

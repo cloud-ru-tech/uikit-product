@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.12.6 (2024-12-17)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-localization@0.13.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/localization/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.12.5 (2024-12-16)</small>
 
 * chore(FF-5944): renamed snack uikit category to console ([411a818](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/411a818))
