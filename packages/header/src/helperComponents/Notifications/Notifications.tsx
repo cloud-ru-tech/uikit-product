@@ -1,10 +1,17 @@
+import cn from 'classnames';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { AlarmFilledSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
-import { NotificationCard, NotificationCardProps, NotificationPanel } from '@snack-uikit/notification';
+import {
+  NotificationCard,
+  NotificationCardProps,
+  NotificationPanel,
+  NotificationPanelProps,
+} from '@snack-uikit/notification';
 
 import { textProvider, Texts } from '../../helpers';
+import styles from './styles.module.scss';
 
 type ChipFilter = 'all' | 'unread';
 
@@ -23,11 +30,13 @@ export type NotificationsProps = {
   onFooterButtonClick?(): void;
   onNotifyTriggerClick?(): void;
   onOpenChange?(open: boolean): void;
+  settings?: NotificationPanelProps['settings'];
 };
 
 type NotificationsComponentProps = NotificationsProps & {
   open: boolean;
   className?: string;
+  isMobile?: boolean;
 };
 
 export function Notifications({
@@ -41,6 +50,8 @@ export function Notifications({
   onTabChange,
   onFooterButtonClick,
   className,
+  settings,
+  isMobile,
 }: NotificationsComponentProps) {
   const { hasMore, fetchMore } = loadCards || {};
 
@@ -131,6 +142,7 @@ export function Notifications({
 
   return (
     <NotificationPanel
+      settings={settings}
       scrollEndRef={scrollRef}
       loading={loading || isLoadingMore}
       skeletonsAmount={isLoadingMore ? 1 : undefined}
@@ -160,7 +172,7 @@ export function Notifications({
           onClick: onFooterButtonClick,
         }
       }
-      className={className}
+      className={cn(className, { [styles.mobilePanel]: isMobile })}
       content={
         <>
           {showError && (

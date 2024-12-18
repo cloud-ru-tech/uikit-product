@@ -411,7 +411,7 @@ export function ProductHeaderMobile({
           className={styles.notificationsDrawer}
           position='left'
         >
-          <Notifications {...notifications} open={isNotificationsOpen} />
+          <Notifications {...notifications} open={isNotificationsOpen} isMobile />
         </DrawerCustom>
       )}
     </>

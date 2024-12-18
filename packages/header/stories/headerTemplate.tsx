@@ -663,6 +663,12 @@ export const ARGS: StoryProps = {
       hasMore: true,
     },
     onCardsRead() {},
+    settings: {
+      button: {
+        icon: <SettingsSVG />,
+        onClick: () => toaster.userAction.success({ label: 'Settings button clicked' }),
+      },
+    },
   },
 
   showUserMenu: true,

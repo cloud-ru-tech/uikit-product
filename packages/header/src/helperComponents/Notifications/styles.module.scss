@@ -1,0 +1,9 @@
+.mobilePanel {
+  & > div:first-child {
+    padding-top: 16px;
+  }
+
+  & [data-test-id="notification-panel__settings__droplist-trigger"] {
+    margin-right: 48px;
+  }
+}
