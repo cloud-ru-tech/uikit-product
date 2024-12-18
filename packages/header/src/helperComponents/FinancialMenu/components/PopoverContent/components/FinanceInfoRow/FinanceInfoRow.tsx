@@ -11,7 +11,7 @@ import { textProvider, Texts } from '../../../../../../helpers';
 import { FinanceInfoRowType } from '../../../../types';
 import styles from './styles.module.scss';
 
-export type FinanceInfoRowProps = FinanceInfoRowType & {
+export type FinanceInfoRowProps = Omit<FinanceInfoRowType, 'visible'> & {
   actionButtonText: string;
   isButtonDisabled?: boolean;
   buttonTip?: ReactNode;

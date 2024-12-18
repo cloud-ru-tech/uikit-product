@@ -68,9 +68,13 @@ export function PopoverContent({
         </div>
 
         <div className={styles.content}>
-          <FinanceInfoRow {...balance} value={balanceValue} actionButtonText={balanceActionButtonText} />
+          {balance.visible && (
+            <>
+              <FinanceInfoRow {...balance} value={balanceValue} actionButtonText={balanceActionButtonText} />
 
-          <Divider className={styles.divider} />
+              <Divider className={styles.divider} />
+            </>
+          )}
 
           <FinanceInfoRow
             {...bonuses}

@@ -8,6 +8,7 @@ export type Currency = 'ruble';
 import { GrantProps } from './components/PopoverContent/components/Grant';
 
 export type FinanceInfoRowType = {
+  visible?: boolean;
   value: number | string;
   tip?: ReactNode;
   label: string;

@@ -71,7 +71,8 @@ export function PopoverContentMobile({
           )}
         </div>
 
-        <PopoverRowMobile {...balance} label={balance.label} value={balanceValue} />
+        {balance.visible && <PopoverRowMobile {...balance} label={balance.label} value={balanceValue} />}
+
         <PopoverRowMobile
           {...bonuses}
           label={bonuses.label}

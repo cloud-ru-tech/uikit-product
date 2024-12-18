@@ -42,6 +42,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   financialMenuPromoTag: 'none' | NonNullable<FinancialMenuProps['content']['tag']>['appearance'];
   financialMenuPromoTagContent: string;
   financialMenuAgreement: string;
+  financialMenuBalanceVisible: boolean;
   financialMenuBalanceValue: number;
   financialMenuBalanceTip: string;
   financialMenuBalanceLabel: string;
@@ -205,6 +206,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     financialMenuPromoTagContent,
     financialMenuAgreement,
 
+    financialMenuBalanceVisible,
     financialMenuBalanceValue,
     financialMenuBalanceTip,
     financialMenuBalanceLabel,
@@ -380,6 +382,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                     link: { onClick: () => {}, href: '#' },
                     agreement: financialMenuAgreement,
                     balance: {
+                      visible: financialMenuBalanceVisible,
                       label: financialMenuBalanceLabel,
                       onAddClick: () => toaster.userAction.success({ label: 'balance add click' }),
                       value: financialMenuBalanceValue,
@@ -567,6 +570,7 @@ export const ARGS: StoryProps = {
   financialMenuPromoTag: 'green',
   financialMenuPromoTagContent: '~ на 14 дней',
   financialMenuAgreement: 'Д/Д-СМ/5253/23 от 09.08.2023',
+  financialMenuBalanceVisible: true,
   financialMenuBalanceValue: 142911.6903025,
   financialMenuBalanceTip: 'Баланс по договору с учетом текущего потребления',
   financialMenuBalanceLabel: 'Баланс',
@@ -1007,6 +1011,11 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
     if: { arg: 'showFinancialMenu', eq: true },
   },
 
+  financialMenuBalanceVisible: {
+    name: '[Story]: financial menu -> balance visible',
+    type: 'boolean',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
   financialMenuBalanceValue: {
     name: '[Story]: financial menu -> balance value',
     type: 'number',
