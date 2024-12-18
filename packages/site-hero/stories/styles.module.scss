@@ -1,0 +1,24 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.customBackground {
+  background-color: var.$sys-neutral-background;
+}
+
+.wrapper {
+  resize: both;
+  overflow: auto;
+  background: var.$sys-neutral-background2-level;
+}
+
+.body {
+  background: var.$sys-neutral-background2-level;
+}
+
+.fullPageHeight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+}

@@ -1,0 +1,90 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.heroZero {
+  position: relative;
+  padding: var.$dimension-5m 0 0;
+
+  &[data-layout-type='tablet'] {
+    padding: var.$dimension-4m 0 0;
+  }
+
+  &[data-layout-type='mobile'] {
+    padding: var.$dimension-3m 0 0;
+  }
+}
+
+.withBottomPadding {
+  padding-bottom: var.$dimension-7m;
+
+  &[data-layout-type='tablet'] {
+    padding-bottom: var.$dimension-4m;
+  }
+
+  &[data-layout-type='mobile'] {
+    padding-bottom: var.$dimension-3m;
+  }
+}
+
+.contentLayout {
+  display: flex;
+  flex-direction: column;
+  padding: var.$dimension-050m;
+  gap: var.$dimension-6m;
+
+  &[data-layout-type='tablet'] {
+    gap: var.$dimension-4m;
+  }
+
+  &[data-layout-type='mobile'] {
+    gap: var.$dimension-3m;
+  }
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  gap: var.$dimension-4m;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile']{
+    gap: var.$dimension-3m;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var.$dimension-1m + var.$dimension-050m);
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile']{
+    gap: var.$dimension-1m;
+  }
+}
+
+.title {
+  color: var.$sys-neutral-text-main;
+}
+
+.description {
+  color: var.$sys-neutral-text-support
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: var.$dimension-2m;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    flex-direction: column;
+    gap: var.$dimension-1m;
+  }
+}
+
+.button{
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    width: 100%;
+  }
+}
