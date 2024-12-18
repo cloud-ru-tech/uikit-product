@@ -1,29 +1,28 @@
 import { ReactNode } from 'react';
 
-import { MobileModalCustom, MobileModalCustomProps } from '@sbercloud/uikit-product-mobile-modal';
 import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
+import { ModalCustom, ModalCustomProps } from '@snack-uikit/modal';
+import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { InputConfirm } from '../../helperComponents';
-import { DictionaryPropertyAsFn, isDefined, textProvider, Texts } from '../../helpers';
+import { isDefined, textProvider, Texts } from '../../helpers';
 import { useTextFieldValidation } from './hooks';
 import styles from './styles.module.scss';
 
-export type MobileDeleteModalProps = Pick<MobileModalCustomProps, 'open' | 'onClose' | 'mode'> &
+export type RecallModalProps = Pick<ModalCustomProps, 'open' | 'onClose' | 'mode'> &
   WithSupportProps<{
     /** Всплывающая подсказка для заголовка */
-    titleTooltip?: MobileModalCustom.HeaderProps['titleTooltip'];
-    /** Тип удаляемого объекта. Отображается в заголовке модального окна */
-    objectType?: string;
-    /** Колбек нажатия кнопки удаления
+    titleTooltip?: ModalCustom.HeaderProps['titleTooltip'];
+    /** Колбек нажатия кнопки отзыва
      *  @param onClose колбэк для закрытия модального окна
      */
-    onDelete(onClose: () => void): void;
-    /** Состояние загрузки кнопки удаления */
-    deleting?: boolean;
+    onRecall(onClose: () => void): void;
+    /** Состояние загрузки кнопки отзыва */
+    loading?: boolean;
     /** Описание */
     description?: ReactNode;
-    /** Текст для подтверждения удаления */
+    /** Текст для подтверждения отзыва */
     confirmText?: string;
     /** Скрыть кнопку копирования для текста подтверждения */
     hideConfirmCopyButton?: boolean;
@@ -31,19 +30,18 @@ export type MobileDeleteModalProps = Pick<MobileModalCustomProps, 'open' | 'onCl
     subtitle?: ReactNode;
   }>;
 
-export function MobileDeleteModal({
+export function RecallModal({
   confirmText,
   titleTooltip,
   hideConfirmCopyButton,
   description,
-  objectType,
-  onDelete,
+  onRecall,
   onClose,
   open,
+  loading,
   subtitle,
-  deleting,
   ...restProps
-}: MobileDeleteModalProps) {
+}: RecallModalProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const withInputConfirmation = isDefined(confirmText);
@@ -61,51 +59,49 @@ export function MobileDeleteModal({
   };
 
   const handleDelete = handleSubmit(() => {
-    onDelete(handleClose);
+    onRecall(handleClose);
   });
 
   return (
-    <MobileModalCustom {...restProps} open={open} onClose={handleClose}>
-      <MobileModalCustom.Header
-        title={textProvider<DictionaryPropertyAsFn>(languageCode, Texts.Title)(objectType ?? '')}
-        titleTooltip={titleTooltip}
+    <ModalCustom {...restProps} open={open} onClose={handleClose}>
+      <ModalCustom.Header
+        title={<TruncateString text={textProvider(languageCode, Texts.RecallTitle)} maxLines={2} />}
         subtitle={subtitle}
+        titleTooltip={titleTooltip}
       />
 
-      <MobileModalCustom.Body content={<div className={styles.description}>{description}</div>} />
+      {description && <ModalCustom.Body content={<div className={styles.description}>{description}</div>} />}
 
-      <MobileModalCustom.Footer
+      <ModalCustom.Footer
         actions={
           <div className={styles.footer}>
             {withInputConfirmation && (
               <InputConfirm
                 confirmText={confirmText}
                 hideConfirmCopyButton={hideConfirmCopyButton}
-                labelText={Texts.FieldLabel}
+                labelText={Texts.RecallFieldLabel}
                 {...inputProps}
               />
             )}
 
             <div className={styles.footerActions}>
               <ButtonFilled
-                label={textProvider<string>(languageCode, Texts.Delete)}
-                loading={deleting}
+                label={textProvider<string>(languageCode, Texts.Recall)}
+                loading={loading}
                 onClick={handleDelete}
                 size='m'
                 appearance='destructive'
-                fullWidth
               />
               <ButtonOutline
                 label={textProvider<string>(languageCode, Texts.Cancel)}
                 onClick={handleCancel}
                 appearance='neutral'
                 size='m'
-                fullWidth
               />
             </div>
           </div>
         }
       />
-    </MobileModalCustom>
+    </ModalCustom>
   );
 }

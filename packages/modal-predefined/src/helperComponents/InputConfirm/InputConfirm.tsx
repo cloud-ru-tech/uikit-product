@@ -13,17 +13,18 @@ export type InputConfirmProps = {
   hideConfirmCopyButton?: boolean;
   value: string;
   error: string;
+  labelText: Texts;
   onChange: (newValue: string) => void;
 };
 
 export const InputConfirm = forwardRef<HTMLInputElement, InputConfirmProps>(
-  ({ confirmText, value, error, onChange, hideConfirmCopyButton }, ref) => {
+  ({ confirmText, value, error, onChange, hideConfirmCopyButton, labelText }, ref) => {
     const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
     return (
       <div className={styles.wrapper}>
         <div className={styles.textFieldDescription}>
-          <span className={styles.content}>{textProvider<string>(languageCode, Texts.FieldLabel)}</span>
+          <span className={styles.content}>{textProvider<string>(languageCode, labelText)}</span>
 
           <div className={styles.copyValue}>
             <TruncateString text={confirmText} variant='middle' />

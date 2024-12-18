@@ -84,7 +84,12 @@ export function DeleteModal({
         actions={
           <div className={styles.footer}>
             {withInputConfirmation && (
-              <InputConfirm confirmText={confirmText} hideConfirmCopyButton={hideConfirmCopyButton} {...inputProps} />
+              <InputConfirm
+                confirmText={confirmText}
+                hideConfirmCopyButton={hideConfirmCopyButton}
+                labelText={Texts.FieldLabel}
+                {...inputProps}
+              />
             )}
 
             <div className={styles.footerActions}>
