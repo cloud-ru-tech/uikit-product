@@ -1,32 +1,23 @@
-$breakpoint-sm: 636px;
-$breakpoint-md: 828px;
-$breakpoint-desktop: 1279;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
 
 .sectionWrapper {
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
 .contentWrapper {
+  width: 100%;
   max-width: 1216px;
-  margin: 0 auto;
-  padding: 0 25px;
+  padding: 0 var.$dimension-4m;
 
-  // TODO: move to data-layout-type once breakpoints are calibrated
-  //&[data-layout-type='desktop'] {
-  //  padding: 0 25px;
-  //}
-
-  @media (max-width: $breakpoint-desktop) {
-    padding: 0 25px;
-  }
-
-  @media (max-width: $breakpoint-md) {
-    box-sizing: border-box;
+  &[data-layout-type='tablet'] {
     max-width: unset;
-    padding: 0 40px;
+    padding: 0 var.$dimension-4m;
   }
 
-  @media (max-width: $breakpoint-sm) {
-    padding: 0 24px;
+  &[data-layout-type='mobile'] {
+    max-width: unset;
+    padding: 0 var.$dimension-2m;
   }
 }

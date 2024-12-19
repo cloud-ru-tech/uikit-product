@@ -20,7 +20,9 @@ export const SectionWrapper = forwardRef<HTMLDivElement, SectionWrapperProps>(
       data-layout-type={layoutType}
       {...extractSupportProps(rest)}
     >
-      <div className={styles.contentWrapper}>{children}</div>
+      <div className={styles.contentWrapper} data-layout-type={layoutType}>
+        {children}
+      </div>
     </div>
   ),
 );
