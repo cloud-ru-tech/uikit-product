@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.19 (2024-12-19)</small>
+
+* feat(FF-00): add autogenerate docs ([b5017d4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5017d4))
+* feat(PDS-1033): create RecallModal component ([5efdaf1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5efdaf1))
+
+
+
+
+
 ## <small>0.5.18 (2024-12-17)</small>
 
 ### Only dependencies have been changed
