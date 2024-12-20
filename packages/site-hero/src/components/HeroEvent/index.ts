@@ -1,2 +1,1 @@
 export * from './HeroEvent';
-export * from './HeroZero';

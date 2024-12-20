@@ -1,0 +1,106 @@
+import cn from 'classnames';
+
+import { Layout } from '@sbercloud/uikit-product-site-layout';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
+import { PromoTag } from '@snack-uikit/promo-tag';
+
+import { AUDIENCE_LABELS, CATEGORY_TAG_META, FORMAT_LABELS, HERO_EVENT_COLORS } from '../../constants';
+import { HeroButtonProps, HeroEventButton, Place, PlaceProps } from '../../helperComponents';
+import { Audience, Category, Format, HeroEventColor } from '../../types';
+import styles from './styles.module.scss';
+
+export type HeroEventProps = WithSupportProps<{
+  /** CSS - класснейм */
+  className?: string;
+  /** Заголовок события */
+  title: string;
+  /** Начало события события */
+  startsAt: string;
+  /** Место проведения события */
+  place: Omit<PlaceProps, 'title'> & { title?: PlaceProps['title'] };
+  /** Ссылка на изображение */
+  image: string;
+  /** Цвета фона */
+  backgroundColor?: HeroEventColor;
+  /** Категория события */
+  category?: Category;
+  /** Формат проведения события */
+  format: Format;
+  /** Аудитория, для которой проводится событие */
+  audience: Audience;
+  /** Хлебные крошки для события */
+  breadcrumbs: BreadcrumbsProps['items'];
+  /** Настройки кнопки */
+  button: HeroButtonProps;
+}> &
+  WithLayoutType;
+
+export function HeroEvent({
+  className,
+  title,
+  breadcrumbs,
+  backgroundColor = HERO_EVENT_COLORS.NeutralBackground,
+  category,
+  format,
+  audience,
+  startsAt,
+  place,
+  image,
+  button,
+  layoutType,
+  ...rest
+}: HeroEventProps) {
+  const formatTitle = FORMAT_LABELS[format];
+  const audienceTitle = AUDIENCE_LABELS[audience];
+  const categoryMeta = category && CATEGORY_TAG_META[category];
+  const showTagRow = Boolean(categoryMeta || formatTitle || audienceTitle);
+
+  return (
+    <Layout.SectionWrapper
+      layoutType={layoutType}
+      className={cn(className, styles['heroEventBackground--' + backgroundColor])}
+    >
+      <section className={styles.wrapper} data-layout-type={layoutType} {...extractSupportProps(rest)}>
+        <div className={styles.heroEvent} data-layout-type={layoutType}>
+          <Breadcrumbs size='xs' items={breadcrumbs} data-test-id='hero-event__breadcrumbs' />
+
+          <div className={styles.content} data-layout-type={layoutType}>
+            <div className={styles.left} data-layout-type={layoutType}>
+              <div className={styles.titleWrapper} data-layout-type={layoutType}>
+                {showTagRow && (
+                  <div className={styles.tagRow}>
+                    {categoryMeta && <PromoTag {...categoryMeta} color='decor' size='xs' />}
+                    {formatTitle && <PromoTag appearance='violet' text={formatTitle} color='decor' size='xs' />}
+                    {audienceTitle && <PromoTag appearance='violet' text={audienceTitle} color='decor' size='xs' />}
+                  </div>
+                )}
+
+                <div className={styles.textWrapper} data-layout-type={layoutType}>
+                  <h2 className={styles.title} data-layout-type={layoutType}>
+                    {title}
+                  </h2>
+
+                  <p className={styles.coords} data-color={backgroundColor}>
+                    <time className={styles.time}>
+                      {startsAt}
+                      {place.title && ', '}
+                    </time>
+
+                    {place.title && <Place {...place} title={place.title} />}
+                  </p>
+                </div>
+              </div>
+
+              <HeroEventButton {...button} layoutType={layoutType} />
+            </div>
+
+            <div className={styles.imageWrapper} data-layout-type={layoutType}>
+              <img className={styles.image} alt='hero_img' src={image} data-layout-type={layoutType} />
+            </div>
+          </div>
+        </div>
+      </section>
+    </Layout.SectionWrapper>
+  );
+}
