@@ -1,0 +1,32 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.siteSectionExperts {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  padding: var.$dimension-7m 0;
+  gap: var.$dimension-5m 0;
+
+  &[data-layout-type='tablet'] {
+    padding: var.$dimension-5m 0;
+    gap: var.$dimension-4m 0;
+  }
+
+  &[data-layout-type='mobile'] {
+    padding: var.$dimension-4m 0;
+    gap: var.$dimension-3m 0;
+  }
+}
+
+.sectionBackground--neutral-background1-level {
+  background-color: var.$sys-neutral-background1-level;
+}
+
+.sectionBackground--neutral-background {
+  background-color: var.$sys-neutral-background;
+}
+
+.title {
+  color: var.$sys-neutral-text-main;
+}

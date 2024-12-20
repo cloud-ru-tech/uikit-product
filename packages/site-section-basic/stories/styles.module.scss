@@ -1,7 +1,0 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
-
-.wrapper {
-  background-color: styles-theme-variables.$sys-neutral-background1-level;
-  resize: both;
-  overflow: auto;
-}

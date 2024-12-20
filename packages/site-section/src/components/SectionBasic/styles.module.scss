@@ -18,16 +18,33 @@
   }
 }
 
+.sectionBackground--neutral-background1-level {
+  background-color: var.$sys-neutral-background1-level;
+}
+
+.sectionBackground--neutral-background {
+  background-color: var.$sys-neutral-background;
+}
+
 .sectionTitle {
   display: flex;
   flex-direction: column;
   gap: var.$dimension-1m;
 }
 
+.title {
+  color: var.$sys-neutral-text-main;
+}
+
+.description {
+  color: var.$sys-neutral-text-support;
+}
+
 .sectionTabs {
   display: flex;
   flex-direction: column;
   gap: var.$dimension-4m;
+  color: var.$sys-neutral-text-main;
 }
 
 .sectionFilters {

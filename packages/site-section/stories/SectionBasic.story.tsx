@@ -1,7 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useMemo, useState } from 'react';
 
-import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { FieldSelectProps } from '@snack-uikit/fields';
 import { PaginationProps } from '@snack-uikit/pagination';
 
@@ -9,11 +8,12 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SectionBasic, SectionBasicProps } from '../src';
+import { SECTION_COLORS } from '../src/constants';
 import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Section Basic',
+  title: 'Site/Section/Basic',
   component: SectionBasic,
 };
 export default meta;
@@ -62,6 +62,7 @@ const Template: StoryFn<StoryProps> = ({
   description,
   layoutType,
   titleSectionSize,
+  backgroundColor,
 }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
 
@@ -76,29 +77,29 @@ const Template: StoryFn<StoryProps> = ({
   }, [currentPage]);
 
   return (
-    <div className={styles.wrapper}>
-      <Layout.SectionWrapper layoutType={layoutType}>
-        <SectionBasic
-          title={showTitle ? title : undefined}
-          description={showTitle ? description : undefined}
-          tabBarItems={showTabs ? tabsConfig : undefined}
-          filterItems={showFilters ? filtersConfig : undefined}
-          pagination={showPagination ? paginationConfig : undefined}
-          onLoadMoreClick={showLoadMoreButton ? handleShowMoreButtonClick : undefined}
-          layoutType={layoutType}
-          titleSectionSize={titleSectionSize}
-        >
-          hello world
-        </SectionBasic>
-      </Layout.SectionWrapper>
+    <div className={styles.resizeWrapper}>
+      <SectionBasic
+        title={showTitle ? title : undefined}
+        description={showTitle ? description : undefined}
+        tabBarItems={showTabs ? tabsConfig : undefined}
+        filterItems={showFilters ? filtersConfig : undefined}
+        pagination={showPagination ? paginationConfig : undefined}
+        onLoadMoreClick={showLoadMoreButton ? handleShowMoreButtonClick : undefined}
+        layoutType={layoutType}
+        titleSectionSize={titleSectionSize}
+        backgroundColor={backgroundColor}
+      >
+        hello world
+      </SectionBasic>
     </div>
   );
 };
 
-export const sectionBasic: StoryObj<StoryProps> = {
+export const basic: StoryObj<StoryProps> = {
   render: Template,
   args: {
     layoutType: LAYOUT_TYPE.Desktop,
+    backgroundColor: SECTION_COLORS.NeutralBackground1Level,
     title: 'Заголовок',
     description: 'Описание',
     titleSectionSize: 'm',
@@ -109,6 +110,7 @@ export const sectionBasic: StoryObj<StoryProps> = {
     showLoadMoreButton: true,
   },
   argTypes: {
+    backgroundColor: { control: { type: 'select' } },
     layoutType: {
       name: '[Story]: Layout type',
       options: Object.values(LAYOUT_TYPE),
