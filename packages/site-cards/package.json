@@ -1,0 +1,37 @@
+{
+  "name": "@sbercloud/uikit-product-site-cards",
+  "title": "Site Cards",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-cards",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/site-cards"
+  },
+  "author": "Nikita Ershov <niershov@cloud.ru>",
+  "contributors": [
+    "Nikita Ershov <niershov@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "peerDependencies": {}
+}
