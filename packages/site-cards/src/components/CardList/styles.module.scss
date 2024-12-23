@@ -1,5 +1,102 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as element;
 
-.siteCards {
-  box-sizing: border-box;
+$transition: 0.3s;
+$scale: 1.05;
+
+.title {
+  flex: 1 0 auto;
+
+  color: var.$sys-neutral-text-main;
+}
+
+.img,
+.title {
+  transition: all $transition;
+}
+
+.imgWrapper {
+  .img {
+    height: 100%;
+    width: 100%;
+  }
+
+  aspect-ratio: 1.6;
+  height: 176px;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var.$dimension-2m;
+  text-decoration: none;
+
+  &[data-layout-type='tablet'] {
+    .imgWrapper {
+      height: 160px;
+    }
+  }
+
+  &[data-layout-type='mobile'] {
+    .imgWrapper {
+      aspect-ratio: none;
+      width: 100%;
+      height: auto;
+    }
+
+    grid-template-columns: 1fr;
+  }
+
+  &[aria-disabled] {
+    pointer-events: none;
+    cursor: not-allowed;
+
+    .title {
+      color: var.$sys-neutral-text-disabled;
+    }
+
+    .imgWrapper {
+      opacity: 0.5;
+    }
+  }
+
+  &:not([aria-disabled]) {
+    &:hover {
+      .title {
+        color: var.$sys-primary-accent-hovered;
+      }
+    }
+
+    &:focus-visible {
+      @include element.outline-var(element.$container-focused-m);
+
+      outline-color: var.$sys-primary-decor-activated;
+    }
+
+    &:hover,
+    &:focus-visible {
+      .img {
+        scale: $scale;
+      }
+    }
+  }
+}
+
+.tagRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: var.$dimension-1m;
+
+  flex-wrap: wrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var.$dimension-2m;
+}
+
+.labelDate {
+  color: var.$sys-neutral-text-light;
 }

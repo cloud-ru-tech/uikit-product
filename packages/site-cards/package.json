@@ -31,7 +31,13 @@
   ],
   "license": "UNLICENSED",
   "scripts": {},
-  "dependencies": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-utils": "3.8.7",
+    "@snack-uikit/promo-tag": "0.7.0",
+    "@snack-uikit/typography": "0.8.3",
+    "@snack-uikit/truncate-string": "0.6.2",
+    "classnames": "2.5.1"
+  },
   "devDependencies": {},
   "peerDependencies": {}
 }
