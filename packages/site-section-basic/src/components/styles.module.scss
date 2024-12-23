@@ -1,23 +1,20 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
 
 .sectionBasic {
-  max-width: 1216px;
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
 
   gap: var.$dimension-5m;
-  padding: var.$dimension-7m calc(var.$dimension-10m + var.$dimension-4m);
+  padding: var.$dimension-7m 0;
 
   &[data-layout-type='tablet'] {
     gap: var.$dimension-4m;
-    padding: var.$dimension-5m var.$dimension-4m;
+    padding: var.$dimension-5m 0;
   }
 
   &[data-layout-type='mobile'] {
     gap: var.$dimension-3m;
-    padding: var.$dimension-4m var.$dimension-3m;
+    padding: var.$dimension-4m 0;
   }
 }
 

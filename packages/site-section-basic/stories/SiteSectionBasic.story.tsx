@@ -1,6 +1,7 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useMemo, useState } from 'react';
 
+import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { FieldSelectProps } from '@snack-uikit/fields';
 import { PaginationProps } from '@snack-uikit/pagination';
 
@@ -76,18 +77,20 @@ const Template: StoryFn<StoryProps> = ({
 
   return (
     <div className={styles.wrapper}>
-      <SectionBasic
-        title={showTitle ? title : undefined}
-        description={showTitle ? description : undefined}
-        tabBarItems={showTabs ? tabsConfig : undefined}
-        filterItems={showFilters ? filtersConfig : undefined}
-        pagination={showPagination ? paginationConfig : undefined}
-        onLoadMoreClick={showLoadMoreButton ? handleShowMoreButtonClick : undefined}
-        layoutType={layoutType}
-        titleSectionSize={titleSectionSize}
-      >
-        hello world
-      </SectionBasic>
+      <Layout.SectionWrapper layoutType={layoutType}>
+        <SectionBasic
+          title={showTitle ? title : undefined}
+          description={showTitle ? description : undefined}
+          tabBarItems={showTabs ? tabsConfig : undefined}
+          filterItems={showFilters ? filtersConfig : undefined}
+          pagination={showPagination ? paginationConfig : undefined}
+          onLoadMoreClick={showLoadMoreButton ? handleShowMoreButtonClick : undefined}
+          layoutType={layoutType}
+          titleSectionSize={titleSectionSize}
+        >
+          hello world
+        </SectionBasic>
+      </Layout.SectionWrapper>
     </div>
   );
 };

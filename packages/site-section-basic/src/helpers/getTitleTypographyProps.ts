@@ -41,6 +41,11 @@ export const getTitleTypographyProps = ({
           };
 
         case 's':
+          return {
+            purpose: 'title',
+            size: 'm',
+          };
+
         case 'm':
         default:
           return {
