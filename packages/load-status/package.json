@@ -35,6 +35,7 @@
     "@sbercloud/uikit-product-utils": "3.8.5",
     "@snack-uikit/icons": "0.24.0",
     "@snack-uikit/progress-bar": "0.1.1",
-    "@snack-uikit/typography": "0.8.1"
+    "@snack-uikit/typography": "0.8.1",
+    "classnames": "2.5.1"
   }
 }

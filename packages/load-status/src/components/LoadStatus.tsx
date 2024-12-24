@@ -1,5 +1,7 @@
+import cn from 'classnames';
+
 import { themeVars } from '@sbercloud/figma-tokens-cloud-platform';
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { CrossFilledSVG } from '@snack-uikit/icons';
 import { ProgressBar, ProgressBarProps } from '@snack-uikit/progress-bar';
 import { Typography } from '@snack-uikit/typography';
@@ -17,6 +19,7 @@ export type LoadStatusProps = WithSupportProps<
     valueType?: LoadValueType;
     appearanceByProgress?: ProgressLimitList;
     showErrorIcon?: boolean;
+    className?: string;
   } & Pick<ProgressBarProps, 'progress' | 'size'>
 >;
 
@@ -29,6 +32,7 @@ export function LoadStatus({
   size = 's',
   appearanceByProgress = DEFAULT_APPEARANCE_BY_PROGRESS,
   showErrorIcon,
+  className,
   ...props
 }: LoadStatusProps) {
   const progressAppearance = getProgressBarColor(progress, appearanceByProgress);
@@ -38,7 +42,7 @@ export function LoadStatus({
   const symbol = SYMBOL_BY_TYPE[valueType];
 
   return (
-    <div className={styles.loadStatus} {...props}>
+    <div className={cn(styles.loadStatus, className)} {...extractSupportProps(props)}>
       {isShowHeader && (
         <div className={styles.header}>
           <Typography.SansBodyS>
