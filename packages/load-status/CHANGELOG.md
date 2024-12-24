@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.4 (2024-12-24)</small>
+
+* feat(HYCL-000): provide classname to load-status ([44795d7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/44795d7))
+
+
+
+
+
 ## <small>0.0.3 (2024-12-17)</small>
 
 ### Only dependencies have been changed
