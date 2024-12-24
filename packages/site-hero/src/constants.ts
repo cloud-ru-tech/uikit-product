@@ -72,7 +72,7 @@ export const HERO_BUTTON_META: Record<
   [HERO_BUTTONS.RegistrationClosed]: { label: 'Регистрация закрыта', disabled: true },
 };
 
-export const HERO_EVENT_COLORS = {
+export const HERO_COLORS = {
   NeutralBackground1Level: 'neutral-background1-level',
   NeutralBackground: 'neutral-background',
 } as const;

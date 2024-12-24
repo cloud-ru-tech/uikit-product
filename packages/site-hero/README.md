@@ -21,7 +21,7 @@ Hero blocks for Site
 | startsAt* | `string` | - | Начало события события |
 | title* | `string` | - | Заголовок события |
 | className | `string` | - | CSS - класснейм |
-| backgroundColor | enum HeroEventColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background | Цвета фона |
+| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background | Цвета фона |
 | category | enum Category: `"news"`, `"article"`, `"press-release"`, `"conference"`, `"webinar"`, `"course"`, `"certification"` | - | Категория события |
 ## HeroZero
 ### Props
@@ -31,8 +31,9 @@ Hero blocks for Site
 | title* | `string` | - | Название секции |
 | breadcrumbs* | `Item[]` | - | Хлебные крошки |
 | description | `string` | - | Описание секции |
-| buttons | `ButtonFilledProps[]` | - | Массив с настройками кнопок ButtonFilled |
+| buttons | `[ButtonFilledProps, ButtonFilledProps?]` | - | Массив с настройками кнопок ButtonFilled |
 | showBottomPadding | `boolean` | true | Наличие нижнего паддинга |
+| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background | Цвет фона |
 | className | `string` | - | CSS - класснейм |
 
 

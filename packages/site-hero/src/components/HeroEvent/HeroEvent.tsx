@@ -5,9 +5,9 @@ import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sberclou
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { PromoTag } from '@snack-uikit/promo-tag';
 
-import { AUDIENCE_LABELS, CATEGORY_TAG_META, FORMAT_LABELS, HERO_EVENT_COLORS } from '../../constants';
+import { AUDIENCE_LABELS, CATEGORY_TAG_META, FORMAT_LABELS, HERO_COLORS } from '../../constants';
 import { HeroButtonProps, HeroEventButton, Place, PlaceProps } from '../../helperComponents';
-import { Audience, Category, Format, HeroEventColor } from '../../types';
+import { Audience, Category, Format, HeroColor } from '../../types';
 import styles from './styles.module.scss';
 
 export type HeroEventProps = WithSupportProps<{
@@ -22,7 +22,7 @@ export type HeroEventProps = WithSupportProps<{
   /** Ссылка на изображение */
   image: string;
   /** Цвета фона */
-  backgroundColor?: HeroEventColor;
+  backgroundColor?: HeroColor;
   /** Категория события */
   category?: Category;
   /** Формат проведения события */
@@ -40,7 +40,7 @@ export function HeroEvent({
   className,
   title,
   breadcrumbs,
-  backgroundColor = HERO_EVENT_COLORS.NeutralBackground,
+  backgroundColor = HERO_COLORS.NeutralBackground,
   category,
   format,
   audience,
