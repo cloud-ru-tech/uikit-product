@@ -2,6 +2,7 @@ const KEY = Symbol.for('SBERCLOUD_UIKIT_PRODUCT_UTILS_UNIQUE_ID_KEY');
 const DEFAULT_NAMESPACE = '__DEFAULT_NAMESPACE__';
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
   interface Window {
     [KEY]: Record<string, number>;
   }

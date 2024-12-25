@@ -59,7 +59,7 @@ export function CarouselControlUi({
   const items = useMemo(() => relatedItems ?? itemsProp, [itemsProp, relatedItems]);
   const [page, setPage] = useState<number>(0);
 
-  const maxPage = isMobile ? items.length - 0 : items.length - 1;
+  const maxPage = isMobile ? items.length : items.length - 1;
 
   useEffect(() => {
     const pageIndex = items.findIndex(item => String(item.value) === String(value));

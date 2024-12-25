@@ -57,7 +57,7 @@ export type MobileDrawerCustomProps = WithSupportProps<
   }>
 >;
 
-function MobileDrawerCustomComponent({
+export function MobileDrawerCustom({
   open: openProp,
   position = POSITION.Left,
   onClose,
@@ -162,19 +162,11 @@ function MobileDrawerCustomComponent({
   );
 }
 
-/** Компонент-конструктор */
-export const MobileDrawerCustom = MobileDrawerCustomComponent as typeof MobileDrawerCustomComponent & {
-  Header: typeof DrawerHeader;
-  Body: typeof DrawerBody;
-  Footer: typeof DrawerFooter;
-};
-
-MobileDrawerCustom.Header = DrawerHeader;
-MobileDrawerCustom.Body = DrawerBody;
-MobileDrawerCustom.Footer = DrawerFooter;
-
 export namespace MobileDrawerCustom {
   export type HeaderProps = DrawerHeaderProps;
   export type BodyProps = DrawerBodyProps;
   export type FooterProps = DrawerFooterProps;
+  export const Header = DrawerHeader;
+  export const Body = DrawerBody;
+  export const Footer = DrawerFooter;
 }

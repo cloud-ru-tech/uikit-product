@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import cx from 'clsx';
 import { ReactNode } from 'react';
 import {
@@ -14,7 +13,7 @@ import {
 } from 'react-toastify';
 
 import { ProgressBar } from '../CustomProgressBar';
-import { isFn } from './utiils';
+import { isFn } from './utils';
 
 type Id = number | string;
 
@@ -76,6 +75,7 @@ export function CustomToast(props: ToastProps) {
       nodeRef={toastRef}
       playToast={playToast}
     >
+      {/* eslint-disable-next-line jsx-a11y/no-static-element-interactions */}
       <div
         ref={toastRef}
         id={props.toastId as string}

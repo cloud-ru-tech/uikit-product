@@ -74,7 +74,7 @@ export function MobileModal({
   return (
     <MobileModalCustom {...rest}>
       <MobileModalCustom.Header
-        className={cn({ [styles.modalHeader]: !Boolean(content) })}
+        className={cn({ [styles.modalHeader]: !content })}
         title={title}
         titleTooltip={titleTooltip}
         subtitle={subtitle}

@@ -4,7 +4,7 @@ import { toast, ToastContainerProps, ToastPosition, useToastContainer } from 're
 
 import { useStackedToastsContext } from '../../contexts';
 import { CustomToast } from '../CustomToast';
-import { isFn } from '../CustomToast/utiils';
+import { isFn } from '../CustomToast/utils';
 import { defaultProps } from './constants';
 import { useIsomorphicLayoutEffect } from './hooks';
 import { parseClassName } from './utils';

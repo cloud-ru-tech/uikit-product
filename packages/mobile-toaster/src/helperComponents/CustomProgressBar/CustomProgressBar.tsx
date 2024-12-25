@@ -2,7 +2,7 @@
 import cx from 'clsx';
 import { Theme, ToastClassName, TypeOptions } from 'react-toastify';
 
-import { isFn } from '../CustomToast/utiils';
+import { isFn } from '../CustomToast/utils';
 
 type CustomProgressBarProps = {
   delay: number;
