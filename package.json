@@ -41,7 +41,7 @@
     "@babel/preset-env": "7.26.0",
     "@babel/preset-react": "7.25.9",
     "@babel/preset-typescript": "7.26.0",
-    "@cloud-ru/eslint-plugin-ssr-safe-react": "0.2.0",
+    "@cloud-ru/eslint-plugin-ssr-safe-react": "0.3.0",
     "@cloud-ru/ft-conventional-changelog": "1.1.2",
     "@cloud-ru/ft-storybook-brand-addon": "2.0.5",
     "@cloud-ru/ft-storybook-deps-graph-addon": "2.0.3",
@@ -51,7 +51,7 @@
     "@sbercloud/figma-tokens-cloud-platform": "17.1.0",
     "@sbercloud/figma-tokens-mlspace": "17.1.0",
     "@sbercloud/figma-tokens-web": "17.1.0",
-    "@sbercloud/ft-all-linters-pack": "4.1.9",
+    "@sbercloud/ft-all-linters-pack": "4.1.10",
     "@sbercloud/ft-copy-to-clipboard": "3.0.1",
     "@sbercloud/ft-storybook-deps-table-addon": "0.1.1",
     "@snack-uikit/alert": "0.15.3",
@@ -107,7 +107,6 @@
     "depcheck": "1.4.7",
     "dependency-graph": "1.0.0",
     "dotenv": "16.4.5",
-    "eslint-plugin-testcafe-community": "2.0.0",
     "glob": "11.0.0",
     "http-proxy-middleware": "3.0.3",
     "inquirer": "8.2.6",
@@ -146,7 +145,8 @@
   "overrides": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "testcafe-browser-tools": "2.0.23"
+    "testcafe-browser-tools": "2.0.23",
+    "get-symbol-description": "1.0.2"
   },
   "workspaces": [
     "packages/*"
