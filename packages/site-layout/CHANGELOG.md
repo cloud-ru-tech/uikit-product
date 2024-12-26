@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.3 (2024-12-26)</small>
+
+* fix(PDS-1106): fix some styles ([1a47066](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1a47066))
+
+
+
+
+
 ## <small>0.0.2 (2024-12-24)</small>
 
 * fix(PDS-1105): site layout content wrapper full width ([d044add](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d044add))
