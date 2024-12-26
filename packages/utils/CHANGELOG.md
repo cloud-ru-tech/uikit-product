@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>3.8.6 (2024-12-26)</small>
+
+* fix(PDS-1115): getCustomStore compatibility with next ([b525773](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b525773))
+
+
+
+
+
 ## <small>3.8.5 (2024-12-17)</small>
 
 * fix(FF-5970): admin and site figma tokens added to utils peerdeps ([3601836](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3601836))

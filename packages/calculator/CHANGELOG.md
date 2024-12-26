@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.9 (2024-12-26)</small>
+
+* chore(PDS-1090): calculator readme update ([718b302](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/718b302))
+
+
+
+
+
 ## <small>0.0.8 (2024-12-17)</small>
 
 ### Only dependencies have been changed

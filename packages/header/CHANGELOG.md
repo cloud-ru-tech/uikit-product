@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.25 (2024-12-26)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-card-predefined@0.7.12](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@10.2.9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-tooltip@0.4.11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## <small>2.33.24 (2024-12-17)</small>
 
 * fix(PDS-1272): Disable bonus button when user has negative balance ([560f81a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/560f81a))
