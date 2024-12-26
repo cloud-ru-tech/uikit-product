@@ -44,9 +44,9 @@ export function ToggleCard({
           emblem={emblem}
           className={className}
           truncate={truncate ? { title: truncate.title, metadata: truncate.description } : undefined}
-          {...extractSupportProps(rest)}
         />
       }
+      {...extractSupportProps(rest)}
     />
   );
 }
