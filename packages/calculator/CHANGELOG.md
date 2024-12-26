@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.10 (2024-12-26)</small>
+
+* fix(FF-5734): eslint fixes ([4ba62cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4ba62cc))
+
+
+
+
+
 ## <small>0.0.9 (2024-12-26)</small>
 
 * chore(PDS-1090): calculator readme update ([718b302](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/718b302))

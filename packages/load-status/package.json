@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-load-status",
   "title": "Load Status",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "3.8.6",
+    "@sbercloud/uikit-product-utils": "3.8.7",
     "@snack-uikit/icons": "0.24.0",
     "@snack-uikit/progress-bar": "0.1.1",
     "@snack-uikit/typography": "0.8.1",
