@@ -4,12 +4,14 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  min-width: 0;
 }
 
 .contentWrapper {
   width: 100%;
   max-width: 1216px;
   padding: 0 var.$dimension-4m;
+  min-width: 0;
 
   &[data-layout-type='tablet'] {
     max-width: unset;

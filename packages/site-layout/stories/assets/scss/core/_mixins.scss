@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:meta';
 @use 'sass:list';
 @use 'sass:math';
 @use 'sass:string';
@@ -19,7 +20,7 @@ $width: (
 );
 
 @function split-screens($string, $separator) {
-  @if type_of($string) == 'string' {
+  @if meta.type-of($string) == 'string' {
     $sep-id: string.index(string.quote($string), $separator);
 
     @if $sep-id {
@@ -45,14 +46,14 @@ $width: (
       @return $string;
     }
   } @else {
-    @return inspect($string);
+    @return meta.inspect($string);
   }
 }
 
 @mixin add_default_width($values) {
-  @if type_of($values) == 'list' {
+  @if meta.type-of($values) == 'list' {
     @each $value in $values {
-      @if map-has-key($breakpoints, $value) {
+      @if map.has-key($breakpoints, $value) {
         @media (max-width: #{map.get($breakpoints, $value) + px}) {
           width: map.get($width, $value);
         }
@@ -60,7 +61,7 @@ $width: (
     }
   } @else {
     @each $screen, $width-value in $width {
-      @if map-has-key($breakpoints, $screen) {
+      @if map.has-key($breakpoints, $screen) {
         @media (max-width: #{map.get($breakpoints, $screen) + px}) {
           width: map.get($width, $screen);
         }
@@ -72,7 +73,7 @@ $width: (
 @mixin add_media($map, $breakpoints, $screen, $properties-value) {
   $screen: split-screens($screen, '-');
 
-  @if type_of($screen) == 'list' {
+  @if meta.type-of($screen) == 'list' {
     @if list.length($screen) == 3 {
       $direction: list.nth($screen, 2);
       $screen: list.nth($screen, 3);
@@ -86,7 +87,7 @@ $width: (
       $direction: list.nth($screen, 1);
       $screen: list.nth($screen, 2);
 
-      @if map-has-key($breakpoints, $screen) {
+      @if map.has-key($breakpoints, $screen) {
         @media (#{$direction}-width: #{map.get($breakpoints, $screen) + px}) {
           @each $property, $value in $map {
             @include css_property($property, $value);
@@ -101,7 +102,7 @@ $width: (
       }
     }
   } @else {
-    @if map-has-key($breakpoints, $screen) {
+    @if map.has-key($breakpoints, $screen) {
       @media (max-width: #{map.get($breakpoints, $screen) + px}) {
         @each $property, $value in $map {
           @include css_property($property, $value);
@@ -115,7 +116,7 @@ $width: (
           }
         }
       } @else {
-        @if type_of($properties-value) == 'list' {
+        @if meta.type-of($properties-value) == 'list' {
           @include add_default_width($properties-value);
         } @else {
           @include add_default_width(true);
@@ -126,7 +127,7 @@ $width: (
 }
 
 @mixin css_property($property, $value) {
-  @if type_of($value) == string {
+  @if meta.type-of($value) == string {
     #{$property}: string.unquote($value);
   } @else {
     #{$property}: $value;
@@ -137,7 +138,7 @@ $width: (
   @each $screen, $properties-value in $properties {
     $map: ();
 
-    @if type_of($properties-value) == 'map' {
+    @if meta.type-of($properties-value) == 'map' {
       @each $property, $value in $properties-value {
         $map: map.merge(
           $map,
