@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.20 (2024-12-26)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-toggles-predefined@0.7.7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/toggles-predefined/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.5.19 (2024-12-19)</small>
 
 * feat(FF-00): add autogenerate docs ([b5017d4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5017d4))

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.7 (2024-12-26)</small>
+
+* fix(AICNTB-1503): exctractSupportProps moved to Card component ([b3a0e32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b3a0e32))
+
+
+
+
+
 ## <small>0.7.6 (2024-12-17)</small>
 
 ### Only dependencies have been changed
