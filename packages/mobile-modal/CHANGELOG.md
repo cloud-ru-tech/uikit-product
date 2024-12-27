@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.7.19 (2024-12-27)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-drawer@0.6.17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-drawer/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-tooltip@0.4.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.7.18 (2024-12-26)</small>
 
 * fix(FF-5734): eslint fixes ([4ba62cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4ba62cc))

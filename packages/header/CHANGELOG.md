@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.27 (2024-12-27)</small>
+
+* chore(FF-5734): eslint fixes ([d82234d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d82234d))
+
+
+
+
+
 ## <small>2.33.26 (2024-12-26)</small>
 
 ### Only dependencies have been changed
