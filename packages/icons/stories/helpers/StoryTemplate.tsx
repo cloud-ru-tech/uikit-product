@@ -41,7 +41,7 @@ export function getTemplate(MonochromeIcons: IconDictionary, ThemedIcons?: IconD
 
     const filteredIcons = useMemo(
       () => Object.entries(Icons).filter(([key]) => key.toLowerCase().includes(search)),
-      [search, showThemed],
+      [search, Icons],
     );
 
     return (

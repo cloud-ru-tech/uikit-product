@@ -7,12 +7,11 @@ export const getUtmFromUrl = (href: string) => {
   const hrefWithUtm = regexCheckUtm.test(href) ? href : null;
   if (!hrefWithUtm) return '';
   //
-  const regexGetUtm = new RegExp(/utm_(.*)(?=\#)/);
+  const regexGetUtm = new RegExp(/utm_(.*)(?=#)/);
   const utmWithHash = regexGetUtm.exec(hrefWithUtm + '#');
   if (!utmWithHash || !utmWithHash?.[0]) return '';
   //
-  const regexGetHash = new RegExp(/\#(.*)/);
-  const utm = utmWithHash[0].replace(regexGetHash, '');
-  //
-  return utm;
+  const regexGetHash = new RegExp(/#(.*)/);
+
+  return utmWithHash[0].replace(regexGetHash, '');
 };

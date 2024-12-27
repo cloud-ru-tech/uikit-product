@@ -11,7 +11,7 @@ export const getOriginalUTM = () => {
   if (originalUTM) {
     try {
       decodedOriginalUTM = decodeURI(originalUTM);
-    } catch (e) {
+    } catch {
       decodedOriginalUTM = originalUTM;
     }
   }

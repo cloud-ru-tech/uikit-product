@@ -13,7 +13,7 @@ export const replaceColorsWithValue = (icon: string, value = 'black'): string =>
     .replace(/fill="#([A-Fa-f\d]{6})"/gim, `fill="${value}"`);
 
 export const normalizeName = (value: string): string => {
-  if (value.match(/[^a-zA-Z0-9\s\-]+/i)) {
+  if (value.match(/[^a-zA-Z0-9\s-]+/i)) {
     throw new Error(`There is invalid icon name: ${value}`);
   }
 

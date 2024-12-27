@@ -11,7 +11,12 @@ export default [
     },
   },
   {
-    ignores: ['**/dist/**/*', 'packages/icons/src/components/**/*', 'packages/icons/templates/**/*'],
+    ignores: [
+      '**/dist/**/*',
+      'packages/icons/src/components/**/*',
+      'packages/icons/templates/**/*',
+      'packages/icons/scripts/**/*',
+    ],
   },
   {
     rules: {
@@ -32,6 +37,8 @@ export default [
     rules: {
       'react/function-component-definition': 'off',
       '@cloud-ru/ssr-safe-react/domApi': 'off',
+      'import/no-default-export': 'off',
+      'no-restricted-imports': 'off',
     },
   },
   {

@@ -153,7 +153,6 @@ function basics() {
   });
 }
 
-// eslint-disable-next-line testcafe-community/no-disabled-tests
 fixture('HeaderProjectSelector/Projects').page(getPage('projects')).skip;
 
 // basics();
@@ -210,7 +209,6 @@ test('truncates long project option label', async t => {
   await t.expect(offsetWidth).lte(scrollWidth);
 });
 
-// eslint-disable-next-line testcafe-community/no-disabled-tests
 fixture('HeaderProjectSelector/Workspaces').page(getPage('workspaces')).skip;
 
 // basics();

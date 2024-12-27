@@ -255,7 +255,6 @@ async function verifySelectedLink({
   }
 }
 
-// eslint-disable-next-line testcafe-community/no-disabled-tests
 fixture('Product Header').page(getPage()).skip;
 
 test.page(
