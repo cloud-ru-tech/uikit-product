@@ -22,7 +22,7 @@ type StoryProps = WithLayoutType<LayoutProps>;
 const Template = ({ layoutType }: StoryProps) => (
   <div className={cn(styles.body, styles.fullPageHeight)}>
     <Layout>
-      <Layout.Header>
+      <Layout.Header data-test-id='header-test-id' data-attr='layout-header'>
         <SiteHeader layoutType={layoutType} />
       </Layout.Header>
       <Layout.Main>
