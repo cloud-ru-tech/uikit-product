@@ -1,11 +1,14 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import cn from 'classnames';
 
+import { ValueOf } from '@snack-uikit/utils';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { HeroEvent, HeroEventProps } from '../src';
 import { HERO_BUTTONS } from '../src/constants';
+import { CATEGORY_TAG_META, CATEGORY_TAGS } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -17,19 +20,25 @@ export default meta;
 type StoryProps = HeroEventProps & {
   placeTitle: string;
   heroButtonType: HeroEventProps['button']['type'];
+  categoryStoryType: ValueOf<typeof CATEGORY_TAGS>;
 };
 
-const Template: StoryFn<StoryProps> = ({ placeTitle, heroButtonType, ...args }) => (
-  <div className={cn(styles.body, styles.fullPageHeight)}>
-    <div className={styles.wrapper}>
-      <HeroEvent
-        {...args}
-        place={placeTitle ? { title: placeTitle } : {}}
-        button={heroButtonType ? { type: heroButtonType } : {}}
-      />
+const Template: StoryFn<StoryProps> = ({ placeTitle, heroButtonType, categoryStoryType, ...args }) => {
+  const categoryMeta = categoryStoryType && CATEGORY_TAG_META[categoryStoryType];
+
+  return (
+    <div className={cn(styles.body, styles.fullPageHeight)}>
+      <div className={styles.wrapper}>
+        <HeroEvent
+          {...args}
+          category={categoryMeta}
+          place={placeTitle ? { title: placeTitle } : {}}
+          button={heroButtonType ? { type: heroButtonType } : {}}
+        />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export const heroEvent: StoryObj<StoryProps> = {
   render: Template,
@@ -41,7 +50,7 @@ export const heroEvent: StoryObj<StoryProps> = {
       { id: 'events', label: 'Мероприятия', href: '/events' },
       { id: 'event', label: 'Как подтвердить знания про облака: анонс новых курсов и сертификации' },
     ],
-    category: 'webinar',
+    categoryStoryType: 'webinar',
     format: 'online',
     audience: 'it',
     backgroundColor: 'neutral-background',
@@ -52,7 +61,11 @@ export const heroEvent: StoryObj<StoryProps> = {
   },
   argTypes: {
     layoutType: { control: { type: 'select' } },
-    category: { control: { type: 'select' } },
+    categoryStoryType: {
+      name: '[Story]: Category',
+      control: { type: 'select' },
+      options: Object.values(CATEGORY_TAGS),
+    },
     format: { control: { type: 'select' } },
     audience: { control: { type: 'select' } },
     backgroundColor: { control: { type: 'select' } },

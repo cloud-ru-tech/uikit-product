@@ -1,9 +1,8 @@
 import { JSXElementConstructor } from 'react';
 
 import { DownloadSVG, PlaySVG } from '@sbercloud/uikit-product-icons';
-import { PromoTagProps } from '@snack-uikit/promo-tag';
 
-import { Category, HeroButtonType } from './types';
+import { HeroButtonType } from './types';
 
 export const FORMATS = {
   Online: 'online',
@@ -27,26 +26,6 @@ export const AUDIENCE_LABELS = {
   [AUDIENCES.It]: 'Для IT',
   [AUDIENCES.Students]: 'Для студентов',
   [AUDIENCES.Business]: 'Для бизнеса',
-};
-
-export const CATEGORY_TAGS = {
-  News: 'news',
-  Article: 'article',
-  PressRelease: 'press-release',
-  Conference: 'conference',
-  Webinar: 'webinar',
-  Course: 'course',
-  Certification: 'certification',
-} as const;
-
-export const CATEGORY_TAG_META: Record<Category, PromoTagProps> = {
-  [CATEGORY_TAGS.News]: { text: 'Новость', appearance: 'neutral' },
-  [CATEGORY_TAGS.Article]: { text: 'Статья', appearance: 'neutral' },
-  [CATEGORY_TAGS.PressRelease]: { text: 'Пресс-релиз', appearance: 'neutral' },
-  [CATEGORY_TAGS.Conference]: { text: 'Конференция', appearance: 'violet' },
-  [CATEGORY_TAGS.Webinar]: { text: 'Вебинар', appearance: 'violet' },
-  [CATEGORY_TAGS.Course]: { text: 'Курс', appearance: 'blue' },
-  [CATEGORY_TAGS.Certification]: { text: 'Сертификация', appearance: 'orange' },
 };
 
 export const HERO_BUTTONS = {

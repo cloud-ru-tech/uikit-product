@@ -14,15 +14,15 @@ Hero blocks for Site
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | button* | `HeroButtonProps` | - | Настройки кнопки |
 | breadcrumbs* | `Item[]` | - | Хлебные крошки для события |
-| audience* | enum Audience: `"it"`, `"students"`, `"business"` | - | Аудитория, для которой проводится событие |
-| format* | enum Format: `"online"`, `"offline"`, `"hybrid"` | - | Формат проведения события |
 | image* | `string` | - | Ссылка на изображение |
 | place* | `Omit<PlaceProps, "title"> & { title?: string; }` | - | Место проведения события |
 | startsAt* | `string` | - | Начало события события |
 | title* | `string` | - | Заголовок события |
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background | Цвета фона |
-| category | enum Category: `"news"`, `"article"`, `"press-release"`, `"conference"`, `"webinar"`, `"course"`, `"certification"` | - | Категория события |
+| category | `PromoTagProps` | - | Категория события |
+| format | enum Format: `"online"`, `"offline"`, `"hybrid"` | - | Формат проведения события |
+| audience | enum Audience: `"it"`, `"students"`, `"business"` | - | Аудитория, для которой проводится событие |
 ## HeroZero
 ### Props
 | name | type | default value | description |

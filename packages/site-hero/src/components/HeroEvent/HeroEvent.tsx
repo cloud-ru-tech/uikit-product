@@ -3,11 +3,11 @@ import cn from 'classnames';
 import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
-import { PromoTag } from '@snack-uikit/promo-tag';
+import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
 
-import { AUDIENCE_LABELS, CATEGORY_TAG_META, FORMAT_LABELS, HERO_COLORS } from '../../constants';
+import { AUDIENCE_LABELS, FORMAT_LABELS, HERO_COLORS } from '../../constants';
 import { HeroButtonProps, HeroEventButton, Place, PlaceProps } from '../../helperComponents';
-import { Audience, Category, Format, HeroColor } from '../../types';
+import { Audience, Format, HeroColor } from '../../types';
 import styles from './styles.module.scss';
 
 export type HeroEventProps = WithSupportProps<{
@@ -24,11 +24,11 @@ export type HeroEventProps = WithSupportProps<{
   /** Цвета фона */
   backgroundColor?: HeroColor;
   /** Категория события */
-  category?: Category;
+  category?: PromoTagProps;
   /** Формат проведения события */
-  format: Format;
+  format?: Format;
   /** Аудитория, для которой проводится событие */
-  audience: Audience;
+  audience?: Audience;
   /** Хлебные крошки для события */
   breadcrumbs: BreadcrumbsProps['items'];
   /** Настройки кнопки */
@@ -51,10 +51,9 @@ export function HeroEvent({
   layoutType,
   ...rest
 }: HeroEventProps) {
-  const formatTitle = FORMAT_LABELS[format];
-  const audienceTitle = AUDIENCE_LABELS[audience];
-  const categoryMeta = category && CATEGORY_TAG_META[category];
-  const showTagRow = Boolean(categoryMeta || formatTitle || audienceTitle);
+  const formatTitle = format ? FORMAT_LABELS[format] : undefined;
+  const audienceTitle = audience ? AUDIENCE_LABELS[audience] : undefined;
+  const showTagRow = Boolean(category || formatTitle || audienceTitle);
 
   return (
     <Layout.SectionWrapper
@@ -70,7 +69,7 @@ export function HeroEvent({
               <div className={styles.titleWrapper} data-layout-type={layoutType}>
                 {showTagRow && (
                   <div className={styles.tagRow}>
-                    {categoryMeta && <PromoTag {...categoryMeta} color='decor' size='xs' />}
+                    {category && <PromoTag {...category} color='decor' size='xs' />}
                     {formatTitle && <PromoTag appearance='violet' text={formatTitle} color='decor' size='xs' />}
                     {audienceTitle && <PromoTag appearance='violet' text={audienceTitle} color='decor' size='xs' />}
                   </div>
