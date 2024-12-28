@@ -86,6 +86,7 @@ export function SectionExperts({
             state={{ page: currentPage, onChange: setCurrentPage }}
             arrows={showArrows}
             showItems={itemsPerPageAmount}
+            pagination={items.length > itemsPerPageAmount}
             swipe={items.length > itemsPerPageAmount}
           >
             {items.map(item => (

@@ -124,7 +124,7 @@ export function SectionBasic({
           </div>
         )}
 
-        <div className={styles.content}>{children}</div>
+        {children}
 
         {showFooter && (
           <div className={styles.footer} data-layout-type={layoutType}>
