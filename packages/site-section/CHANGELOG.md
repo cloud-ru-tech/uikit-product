@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.5 (2024-12-28)</small>
+
+* fix(PDS-1112): section experts pagination fix ([30d497e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/30d497e))
+
+
+
+
+
 ## <small>0.0.4 (2024-12-27)</small>
 
 ### Only dependencies have been changed

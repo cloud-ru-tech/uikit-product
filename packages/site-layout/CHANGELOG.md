@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.7 (2024-12-28)</small>
+
+* fix(PDS-1112): site layout header wrapper improvement ([1ab8ea1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ab8ea1))
+* chore(FF-5734): eslint fixes ([d82234d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d82234d))
+
+
+
+
+
 ## <small>0.0.6 (2024-12-26)</small>
 
 * fix(PDS-1105): changed layout sectionwrapper dom element to section ([135a528](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/135a528))
