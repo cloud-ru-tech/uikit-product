@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.29 (2025-01-09)</small>
+
+* feat(LK-4922): pass notifications settings prop to Header ([2242e22](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2242e22))
+
+
+
+
+
 ## <small>2.33.28 (2025-01-09)</small>
 
 ### Only dependencies have been changed
