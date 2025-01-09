@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.15 (2025-01-09)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-tooltip@0.4.14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-tooltip/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.5.14 (2024-12-27)</small>
 
 ### Only dependencies have been changed

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-section",
   "title": "Site Section",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-mobile-fields": "0.6.19",
+    "@sbercloud/uikit-product-mobile-fields": "0.6.20",
     "@sbercloud/uikit-product-site-layout": "0.0.7",
     "@sbercloud/uikit-product-utils": "3.8.7",
     "@snack-uikit/button": "0.19.4",
