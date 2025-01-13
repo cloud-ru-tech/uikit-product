@@ -29,6 +29,7 @@ export type InfoRowPropsBase = {
     second?: RowActionButton;
   };
   loading?: boolean;
+  width?: 'fixed' | 'full';
 };
 
 export type InfoRowProps = WithSupportProps<InfoRowPropsBase>;
@@ -51,10 +52,11 @@ export function InfoRow({
   rowActions,
   labelTruncate = 1,
   loading = false,
+  width = 'fixed',
   ...rest
 }: InfoRowProps) {
   return (
-    <div {...extractSupportProps(rest)} className={cn(styles.wrapper, className)}>
+    <div {...extractSupportProps(rest)} className={cn(styles.wrapper, className)} data-width={width}>
       {topDivider && <Divider weight='regular' />}
 
       <div className={styles.infoRow}>

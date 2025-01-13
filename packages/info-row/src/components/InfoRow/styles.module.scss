@@ -6,6 +6,10 @@ $gap: styles-theme-variables.$dimension-3m;
 
 .wrapper {
   width: calc($labelWidth + $gap + $contentWidth);
+
+  &[data-width=full] {
+    width: 100%;
+  }
 }
 
 .infoRow {
@@ -30,11 +34,12 @@ $gap: styles-theme-variables.$dimension-3m;
 
 .contentLayout {
   position: relative;
-  width: $contentWidth;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
   column-gap: 12px;
 }
 
