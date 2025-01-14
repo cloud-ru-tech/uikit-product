@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.8.10 (2025-01-14)</small>
+
+* feat(PDS-1071): add width prop to info-row ([608207a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/608207a))
+
+
+
+
+
 ## <small>0.8.9 (2024-12-26)</small>
 
 ### Only dependencies have been changed
