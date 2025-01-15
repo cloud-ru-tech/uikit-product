@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react';
+
 import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 import { FieldStepper } from '@snack-uikit/fields';
@@ -32,12 +34,21 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
     pricePeriod,
     calculatorType,
     actions: { onConnectClick },
+    selectedProduct,
   } = useCalculatorContext();
 
   const isPartners = calculatorType === CALCULATOR_TYPE.Partners;
+  const isProductType = calculatorType === CALCULATOR_TYPE.Product;
   const isMobile = layoutType !== LAYOUT_TYPE.Desktop && layoutType !== LAYOUT_TYPE.DesktopSmall;
   const hasCounter = enableChangeProductQuantity || freeTier;
   const TitleComponent = isMobile ? Typography.SansTitleL : Typography.SansHeadlineS;
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (headerRef.current && isMobile && !isProductType) {
+      headerRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [selectedProduct, isMobile, isProductType]);
 
   function ConnectButton() {
     return !isPartners && product.enableConnectToConsole ? (
@@ -57,7 +68,7 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
   }
 
   return (
-    <div className={styles.header} data-mobile={isMobile || undefined}>
+    <div className={styles.header} data-mobile={isMobile || undefined} ref={headerRef}>
       <div className={styles.left}>
         <IconPredefined icon={icon} size={isMobile ? 's' : 'm'} decor={false} appearance='primary' />
 
