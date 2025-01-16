@@ -1,0 +1,12 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+.wrapper {
+  width: 90%;
+  height: 400px;
+  padding: 20px;
+  background-color: styles-theme-variables.$sys-neutral-background2-level;
+}
+
+.wrapperSize {
+  max-width: 340px;
+}

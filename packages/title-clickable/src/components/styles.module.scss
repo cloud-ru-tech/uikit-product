@@ -1,0 +1,50 @@
+@use '@sbercloud/figma-tokens-cloud-platform//build/scss/styles-theme-variables';
+@use "@sbercloud/figma-tokens-cloud-platform//build/scss/components/styles-tokens-element";
+
+.contentWrapper {
+  display: flex;
+  gap: styles-theme-variables.$dimension-1m;
+  align-items: center;
+  max-width: 100%;
+}
+
+.titleClickable {
+  cursor: pointer;
+
+  display: flex;
+  gap: styles-theme-variables.$dimension-1m;
+  align-items: center;
+
+  box-sizing: border-box;
+  max-width: fit-content;
+  padding: 0 styles-theme-variables.$dimension-050m;
+  color: styles-tokens-element.$sys-neutral-text-main;
+
+  &[data-full-width] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  &:focus-visible {
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
+    border-radius: styles-theme-variables.$dimension-050m;
+    outline-color: styles-tokens-element.$sys-available-complementary;
+  }
+
+  &:active {
+    outline: none;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: styles-theme-variables.$sys-neutral-decor-disabled;
+  border-radius: styles-theme-variables.$dimension-050m;
+  color: styles-theme-variables.$sys-neutral-accent-default;
+}

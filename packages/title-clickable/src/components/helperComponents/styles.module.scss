@@ -1,0 +1,29 @@
+@use '@sbercloud/figma-tokens-cloud-platform//build/scss/styles-theme-variables';
+
+.contentWrapper {
+  display: flex;
+  gap: styles-theme-variables.$dimension-1m;
+  align-items: center;
+  max-width: 100%;
+
+  &[data-full-width] {
+
+    width: 100%;
+  }
+}
+
+.iconTitleWrapper {
+  display: flex;
+  gap: styles-theme-variables.$dimension-1m;
+  align-items: center;
+}
+
+.avatarWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.subtitle {
+  color: styles-theme-variables.$sys-neutral-text-light;
+}

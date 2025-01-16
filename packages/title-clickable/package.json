@@ -1,0 +1,45 @@
+{
+  "name": "@sbercloud/uikit-product-title-clickable",
+  "title": "Title Clickable",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Кликабельный заголовок с шевроном в двух выравниваниях и предустановленными сборками.",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/title-clickable",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/title-clickable"
+  },
+  "author": "Alexey Grudnov <aagrudnov@cloud.ru>",
+  "contributors": [
+    "Alexey Grudnov <aagrudnov@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@snack-uikit/avatar": "0.8.3",
+    "@snack-uikit/icons": "0.24.1",
+    "@snack-uikit/typography": "0.8.3",
+    "@snack-uikit/utils": "3.6.0",
+    "@snack-uikit/icon-predefined": "0.7.2",
+    "@snack-uikit/truncate-string": "0.6.4",
+    "classnames": "2.5.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
