@@ -13,7 +13,7 @@ export const CATEGORY_TAGS = {
   Article: 'article',
   PressRelease: 'press-release',
   Conference: 'conference',
-  Webinar: 'webinar',
+  Webinar: 'webinars',
   Course: 'course',
   Certification: 'certification',
 } as const;

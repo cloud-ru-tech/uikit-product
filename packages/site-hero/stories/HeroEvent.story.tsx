@@ -1,5 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import cn from 'classnames';
+import { useMemo } from 'react';
 
 import { ValueOf } from '@snack-uikit/utils';
 
@@ -21,10 +22,30 @@ type StoryProps = HeroEventProps & {
   placeTitle: string;
   heroButtonType: HeroEventProps['button']['type'];
   categoryStoryType: ValueOf<typeof CATEGORY_TAGS>;
+  showPlaceLink: boolean;
 };
 
-const Template: StoryFn<StoryProps> = ({ placeTitle, heroButtonType, categoryStoryType, ...args }) => {
+const Template: StoryFn<StoryProps> = ({ placeTitle, heroButtonType, categoryStoryType, showPlaceLink, ...args }) => {
   const categoryMeta = categoryStoryType && CATEGORY_TAG_META[categoryStoryType];
+
+  const place: HeroEventProps['place'] = useMemo(() => {
+    if (!placeTitle) {
+      return {};
+    }
+
+    const placeConfig = {
+      title: placeTitle,
+    };
+
+    if (showPlaceLink) {
+      return {
+        ...placeConfig,
+        href: 'https://cloud.ru',
+      };
+    }
+
+    return placeConfig;
+  }, [placeTitle, showPlaceLink]);
 
   return (
     <div className={cn(styles.body, styles.fullPageHeight)}>
@@ -32,7 +53,7 @@ const Template: StoryFn<StoryProps> = ({ placeTitle, heroButtonType, categorySto
         <HeroEvent
           {...args}
           category={categoryMeta}
-          place={placeTitle ? { title: placeTitle } : {}}
+          place={place}
           button={heroButtonType ? { type: heroButtonType } : {}}
         />
       </div>
@@ -50,12 +71,13 @@ export const heroEvent: StoryObj<StoryProps> = {
       { id: 'events', label: 'Мероприятия', href: '/events' },
       { id: 'event', label: 'Как подтвердить знания про облака: анонс новых курсов и сертификации' },
     ],
-    categoryStoryType: 'webinar',
+    categoryStoryType: 'webinars',
     format: 'online',
     audience: 'it',
     backgroundColor: 'neutral-background',
     startsAt: '16 января в 11:00 мск',
     placeTitle: 'Лужники',
+    showPlaceLink: true,
     heroButtonType: 'watch',
     image: 'https://cdn.cloud.ru/backend/webinars-images/education.png',
   },
@@ -72,6 +94,12 @@ export const heroEvent: StoryObj<StoryProps> = {
     placeTitle: {
       name: '[Story]: place title',
       control: { type: 'text' },
+    },
+    showPlaceLink: {
+      name: '[Story]: show place link',
+      control: {
+        type: 'boolean',
+      },
     },
     heroButtonType: {
       name: '[Story]: hero button type',
