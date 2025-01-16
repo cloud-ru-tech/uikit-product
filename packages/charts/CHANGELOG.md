@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.12.9 (2025-01-16)</small>
+
+* fix(FF-6045): deps updated to resolve vulnerabilities ([2003088](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2003088))
+
+
+
+
+
 ## <small>0.12.8 (2024-12-26)</small>
 
 ### Only dependencies have been changed
