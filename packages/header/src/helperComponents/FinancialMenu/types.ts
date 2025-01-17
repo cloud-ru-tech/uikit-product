@@ -17,6 +17,7 @@ export type FinanceInfoRowType = {
   status?: 'default' | 'attention';
   tipMoreButtonLink?: string;
   onOpenChange?(isOpen: boolean): void;
+  isButtonDisabled?: boolean;
 };
 
 export type StarterGrant = {

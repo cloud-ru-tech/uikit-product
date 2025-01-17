@@ -13,7 +13,6 @@ import styles from './styles.module.scss';
 
 export type FinanceInfoRowProps = Omit<FinanceInfoRowType, 'visible'> & {
   actionButtonText: string;
-  isButtonDisabled?: boolean;
   buttonTip?: ReactNode;
 };
 

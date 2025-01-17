@@ -53,6 +53,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   financialMenuBonusesTipMoreButtonLink: string;
   financialMenuBonusesLabel: string;
   financialMenuBonusesDescription: string;
+  financialMenuBonusesIsButtonDisabled: boolean;
   financialMenuBonusGrants: NonNullable<FinancialMenuProps['content']>['bonusGrants'];
   financialMenuStarterGrant: StarterGrant;
   showSettings: boolean;
@@ -218,6 +219,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     financialMenuBonusesTipMoreButtonLink,
     financialMenuBonusesLabel,
     financialMenuBonusesDescription,
+    financialMenuBonusesIsButtonDisabled,
     financialMenuBonusGrants,
     financialMenuStarterGrant,
 
@@ -397,6 +399,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                       tip: financialMenuBonusesTip,
                       tipMoreButtonLink: financialMenuBonusesTipMoreButtonLink,
                       description: financialMenuBonusesDescription,
+                      isButtonDisabled: financialMenuBonusesIsButtonDisabled,
                     },
                     bonusGrants: financialMenuBonusGrants,
                     starterGrant: financialMenuStarterGrant,
@@ -582,6 +585,7 @@ export const ARGS: StoryProps = {
   financialMenuBonusesTipMoreButtonLink: 'https://cloud.ru/docs/billing/ug/topics/concepts__billing_bonus.html',
   financialMenuBonusesLabel: 'Гранты',
   financialMenuBonusesDescription: 'Расходуется до 31 марта',
+  financialMenuBonusesIsButtonDisabled: false,
   financialMenuBonusGrants: [
     {
       id: 'c267609c-cb9b-4ced-ab9f-462557b9b0bd',
@@ -1066,6 +1070,11 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   financialMenuBonusesDescription: {
     name: '[Story]: financial menu -> bonuses description',
     type: 'string',
+    if: { arg: 'showFinancialMenu', eq: true },
+  },
+  financialMenuBonusesIsButtonDisabled: {
+    name: '[Story]: financial menu -> bonuses isButtonDisabled',
+    type: 'boolean',
     if: { arg: 'showFinancialMenu', eq: true },
   },
   financialMenuBonusGrants: {

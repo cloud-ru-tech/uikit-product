@@ -77,7 +77,6 @@ export function PopoverContentMobile({
           {...bonuses}
           label={bonuses.label}
           value={bonusGrantValue}
-          isButtonDisabled={Number(balance.value) < 0}
           buttonTip={textProvider(languageCode, Texts.FinancialMenuBonusesDisabledTip)}
         />
 

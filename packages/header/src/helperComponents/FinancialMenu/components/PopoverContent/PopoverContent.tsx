@@ -81,7 +81,6 @@ export function PopoverContent({
             value={bonusGrantValue}
             actionButtonText={bonusGrantActionButtonText}
             description={bonusGrantsDesc}
-            isButtonDisabled={Number(balance.value) < 0}
             buttonTip={textProvider(languageCode, Texts.FinancialMenuBonusesDisabledTip)}
           />
 
