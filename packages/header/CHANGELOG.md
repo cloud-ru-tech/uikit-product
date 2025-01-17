@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.31 (2025-01-17)</small>
+
+* fix(PDS-1284): header - added balance display setting ([955c219](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/955c219))
+* fix(PDS-1284): header - logic of disabling the promo code button has been implemented ([c2d3288](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c2d3288))
+
+
+
+
+
 ## <small>2.33.30 (2025-01-14)</small>
 
 * feat(PDS-972): add referral banner and alert ([b054a7f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b054a7f))
