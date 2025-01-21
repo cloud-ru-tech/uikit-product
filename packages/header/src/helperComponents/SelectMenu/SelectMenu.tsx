@@ -1,7 +1,8 @@
 import cn from 'classnames';
 
-import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
+import { ChevronDownSVG, ChevronUpSVG, LockInterfaceSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { ButtonFilled } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { ListProps } from '@snack-uikit/list';
 import { SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
@@ -51,6 +52,7 @@ export type SelectProps = {
     tooltip?: string;
     disabled?: boolean;
   };
+  onAccessRequestClick?(): void;
 
   onClose?(): void;
 
@@ -88,6 +90,7 @@ export function SelectMenu({
   platformsLoading,
 
   workspaces,
+  onAccessRequestClick,
 
   closeDropdown,
 
@@ -177,7 +180,21 @@ export function SelectMenu({
             onItemChange={workspaces.onWorkspaceChange}
             selectedItem={workspaces.selectedWorkspace}
             loading={workspaces.loading}
-            noDataState={workspaces.emptyState}
+            noDataState={
+              onAccessRequestClick
+                ? {
+                    footer: (
+                      <ButtonFilled
+                        label={textProvider(languageCode, Texts.RequestAccessWorkspacesLabel)}
+                        icon={<PlusSVG />}
+                        onClick={onAccessRequestClick}
+                      />
+                    ),
+                    description: textProvider(languageCode, Texts.RequestAccessWorkspaces),
+                    icon: { icon: LockInterfaceSVG, appearance: 'neutral' },
+                  }
+                : workspaces.emptyState
+            }
             addItem={{
               label: textProvider(languageCode, Texts.AddWorkspace),
               handler: workspaces.onWorkspaceAdd,

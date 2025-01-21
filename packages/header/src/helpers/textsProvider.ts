@@ -44,6 +44,8 @@ export enum Texts {
   Logout = 'logout',
   WhatsNew = 'whats-new',
   Workspaces = 'workspaces',
+  RequestAccessWorkspaces = 'workspaces-request',
+  RequestAccessWorkspacesLabel = 'workspaces-request-label',
   AddWorkspace = 'add-workspace',
   Favorite = 'favorite',
 
@@ -133,6 +135,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Logout]: 'Выйти из аккаунта',
     [Texts.WhatsNew]: 'Что нового',
     [Texts.Workspaces]: 'Воркспейсы',
+    [Texts.RequestAccessWorkspaces]: 'Нет доступа к воркспейсам проекта',
+    [Texts.RequestAccessWorkspacesLabel]: 'Запросить',
     [Texts.AddWorkspace]: 'Добавить воркспейс',
     [Texts.Favorite]: 'Избранное',
 
@@ -225,6 +229,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Logout]: 'Logout',
     [Texts.WhatsNew]: "What's new",
     [Texts.Workspaces]: 'Workspaces',
+    [Texts.RequestAccessWorkspaces]: 'No access to project workspaces',
+    [Texts.RequestAccessWorkspacesLabel]: 'Request',
     [Texts.AddWorkspace]: 'Add workspace',
     [Texts.Favorite]: 'Favorite',
 

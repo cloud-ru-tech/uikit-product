@@ -71,6 +71,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'onProjectChange'
       | 'projectAddButton'
       | 'workspaces'
+      | 'onAccessRequestClick'
       | 'onClose'
     >;
     pagePath?: BreadcrumbsProps['items'];

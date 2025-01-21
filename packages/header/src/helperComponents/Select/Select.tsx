@@ -28,6 +28,7 @@ export function Select({
   platformsLoading,
 
   workspaces,
+  onAccessRequestClick,
   onOpenChange,
 
   onClose,
@@ -154,6 +155,7 @@ export function Select({
                 onPlatformChange={onPlatformChange}
                 closeDropdown={closeDropdown}
                 workspaces={workspacesOptions}
+                onAccessRequestClick={onAccessRequestClick}
                 mobile={false}
               />
             </div>

@@ -64,6 +64,7 @@ export function ProductHeaderMobile({
     workspaces,
     onClose: onSelectClose,
     projectsEmptyState,
+    onAccessRequestClick,
   } = select ?? {};
 
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -361,6 +362,7 @@ export function ProductHeaderMobile({
                       selectedPlatform={selectedPlatform ?? ({} as Platform)}
                       onPlatformChange={onPlatformChange}
                       workspaces={workspacesOptions}
+                      onAccessRequestClick={onAccessRequestClick}
                       projectsEmptyState={projectsEmptyState}
                       mobile
                     />

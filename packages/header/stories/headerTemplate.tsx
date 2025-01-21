@@ -33,6 +33,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showSelect: boolean;
   customLogo: boolean;
   showWorkspaces: boolean;
+  showMLSpaceAccessRequestButton: boolean;
   showPagePath: boolean;
   showFinancialMenu: boolean;
   financialMenuHotSpot: 'none' | NonNullable<FinancialMenuProps['button']>['hotSpot'];
@@ -279,9 +280,10 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       args.select.selectedPlatform = platform;
       args.select.onPlatformChange = setPlatform;
       args.select.platformsLoading = showPlatformsLoading;
+      args.select.onAccessRequestClick = args.showMLSpaceAccessRequestButton ? () => {} : undefined;
       args.select.workspaces = args.showWorkspaces
         ? {
-            list: WORKSPACES.list,
+            list: args.showMLSpaceAccessRequestButton ? [] : WORKSPACES.list,
             selectedWorkspace: workspace,
             onWorkspaceChange: setWorkspace,
             onWorkspaceAdd: () => {},
@@ -504,6 +506,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 export const ARGS: StoryProps = {
   showSelect: true,
   showWorkspaces: false,
+  showMLSpaceAccessRequestButton: false,
   customLogo: false,
   select: {
     platforms: [
@@ -909,6 +912,7 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   showPlatformsLoading: { name: '[Story]: show skeleton for platforms', type: 'boolean' },
 
   showWorkspaces: { name: '[Story]: show workspaces', type: 'boolean' },
+  showMLSpaceAccessRequestButton: { name: '[Story]: show mlspace access request button', type: 'boolean' },
 
   showNotificationError: { name: '[Story]: show notifications -> show error', type: 'boolean' },
 
