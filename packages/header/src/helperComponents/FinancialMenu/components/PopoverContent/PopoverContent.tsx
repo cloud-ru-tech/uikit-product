@@ -5,6 +5,7 @@ import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { Divider } from '@snack-uikit/divider';
 import { Link } from '@snack-uikit/link';
 import { SkeletonText } from '@snack-uikit/skeleton';
+import { Typography } from '@snack-uikit/typography';
 
 import { textProvider, Texts } from '../../../../helpers';
 import { PopoverContentProps } from '../../types';
@@ -23,6 +24,7 @@ export function PopoverContent({
   eyeButton,
   bonusGrants = [],
   starterGrant,
+  agreement,
 }: PopoverContentProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -55,15 +57,13 @@ export function PopoverContent({
       <SkeletonText lines={6} loading={loading}>
         <div className={styles.header}>
           <div className={styles.titleLine}>
-            <Link
-              {...link}
-              onClick={handleLinkClick}
-              text={textProvider(languageCode, Texts.FinancialMenuTitle)}
-              size='l'
-              appearance='neutral'
-            />
+            <Typography.SansBodyL>{textProvider(languageCode, Texts.FinancialMenuTitle)}</Typography.SansBodyL>
 
             <EyeButton {...eyeButton} />
+          </div>
+
+          <div className={styles.titleLine}>
+            <Link {...link} onClick={handleLinkClick} text={agreement} textMode='accent' appearance='primary' />
           </div>
         </div>
 

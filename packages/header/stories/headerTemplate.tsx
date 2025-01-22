@@ -572,7 +572,7 @@ export const ARGS: StoryProps = {
   financialMenuLoading: false,
   financialMenuPromoTag: 'green',
   financialMenuPromoTagContent: '~ на 14 дней',
-  financialMenuAgreement: 'Д/Д-СМ/5253/23 от 09.08.2023',
+  financialMenuAgreement: 'Договор Д/Д-СМ/55123/24 от 10.06.2024',
   financialMenuBalanceVisible: true,
   financialMenuBalanceValue: 142911.6903025,
   financialMenuBalanceTip: 'Баланс по договору с учетом текущего потребления',
