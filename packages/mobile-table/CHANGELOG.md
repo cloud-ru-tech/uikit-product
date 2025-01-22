@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.21 (2025-01-22)</small>
+
+* deps(FF-0000): up snack deps for mobile table ([8e251fd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e251fd))
+
+
+
+
+
 ## <small>0.5.20 (2025-01-09)</small>
 
 ### Only dependencies have been changed
