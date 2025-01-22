@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.13 (2025-01-22)</small>
+
+* fix(ONB-3308): scroll to top of calculator while product change ([93c3e65](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/93c3e65))
+
+
+
+
+
 ## <small>0.0.12 (2025-01-09)</small>
 
 ### Only dependencies have been changed
