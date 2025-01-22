@@ -58,7 +58,7 @@ export function CardList({
       className={cn(styles.wrapper, className)}
       aria-disabled={disabled || undefined}
       tabIndex={disabled ? -1 : 0}
-      onClick={disabled ? onClick : undefined}
+      onClick={disabled ? undefined : onClick}
       data-layout-type={layoutType}
     >
       <div className={styles.imgWrapper} data-test-id={`${dataTestId}-imgWrapper`}>
