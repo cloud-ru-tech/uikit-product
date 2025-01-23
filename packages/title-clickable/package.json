@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-title-clickable",
   "title": "Title Clickable",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,13 +33,11 @@
   "scripts": {},
   "dependencies": {
     "@snack-uikit/avatar": "0.8.3",
+    "@snack-uikit/icon-predefined": "0.7.2",
     "@snack-uikit/icons": "0.24.1",
+    "@snack-uikit/truncate-string": "0.6.4",
     "@snack-uikit/typography": "0.8.3",
     "@snack-uikit/utils": "3.6.0",
-    "@snack-uikit/icon-predefined": "0.7.2",
-    "@snack-uikit/truncate-string": "0.6.4",
     "classnames": "2.5.1"
-  },
-  "devDependencies": {},
-  "peerDependencies": {}
+  }
 }
