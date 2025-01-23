@@ -33,7 +33,10 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-utils": "3.8.8",
-    "@snack-uikit/promo-tag": "0.7.0",
+    "@sbercloud/uikit-product-site-rich-text": "0.0.1",
+    "@sbercloud/uikit-product-site-tag": "0.0.2",
+    "@snack-uikit/card": "0.16.17",
+    "@snack-uikit/promo-tag": "0.7.1",
     "@snack-uikit/truncate-string": "0.6.2",
     "@snack-uikit/typography": "0.8.3",
     "classnames": "2.5.1"

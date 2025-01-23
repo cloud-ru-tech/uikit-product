@@ -1,0 +1,21 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.icon {
+  flex-shrink: 0;
+  color: ste.$sys-graphite-text-main;
+
+  svg {
+    width: 100% !important; /* stylelint-disable-line declaration-no-important */
+    height: 100% !important; /* stylelint-disable-line declaration-no-important */
+  }
+
+  &[data-size='m'] {
+    height: 24px;
+    width: 24px;
+  }
+
+  &[data-size='l'] {
+    height: 48px;
+    width: 48px;
+  }
+}

@@ -1,0 +1,10 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.customNode {
+  height: 100%;
+  width: fit-content;
+  color: ste.$sys-primary-accent-default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

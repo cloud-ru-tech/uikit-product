@@ -1,0 +1,31 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  gap: ste.$dimension-2m;
+
+  width: 100%;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: ste.$dimension-1m;
+
+    .description {
+      color: ste.$sys-neutral-text-support;
+    }
+  }
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    flex-direction: column;
+    gap: ste.$dimension-1m;
+
+    .content {
+      gap: ste.$dimension-050m;
+    }
+  }
+}

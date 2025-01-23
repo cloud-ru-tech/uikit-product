@@ -10,7 +10,7 @@ import componentReadme from '../README.md';
 import { CardList, CardListProps } from '../src';
 
 const meta: Meta = {
-  title: 'Site/Cards/CardList',
+  title: 'Site/Cards/Card List',
   component: CardList,
 };
 export default meta;
