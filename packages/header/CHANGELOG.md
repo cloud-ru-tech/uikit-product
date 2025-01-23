@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.32 (2025-01-23)</small>
+
+* fix(PDS-1412): Header - deleted the link from title and added the link text to the section when ther ([cf2cf4f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf2cf4f))
+* fix(PDS-1412): Header - show the title as a link when there is no agreement ([3b11950](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3b11950))
+* fix(PDS-1412): Header - updated the link text in financial menu ([48afb0e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/48afb0e))
+* feat(PDS-1412): added the display of the agreement on the desktop financial menu ([a096911](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a096911))
+
+
+
+
+
 ## <small>2.33.31 (2025-01-17)</small>
 
 * fix(PDS-1284): header - added balance display setting ([955c219](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/955c219))
