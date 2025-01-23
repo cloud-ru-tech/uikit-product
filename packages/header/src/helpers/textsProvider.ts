@@ -138,7 +138,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Favorite]: 'Избранное',
 
     [Texts.FinancialMenuTitle]: 'Контроль затрат',
-    [Texts.FinancialMenuToSection]: 'В раздел',
+    [Texts.FinancialMenuToSection]: 'К разделу',
     [Texts.FinancialMenuEyeButtonDataVisibleTip]: 'Скрыть баланс в шапке',
     [Texts.FinancialMenuEyeButtonDataHiddenTip]: 'Показать баланс в шапке',
     [Texts.FinancialMenuBonusSign]: 'Б',
