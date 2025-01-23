@@ -57,14 +57,27 @@ export function PopoverContent({
       <SkeletonText lines={6} loading={loading}>
         <div className={styles.header}>
           <div className={styles.titleLine}>
-            <Typography.SansBodyL>{textProvider(languageCode, Texts.FinancialMenuTitle)}</Typography.SansBodyL>
+            {/* TODO: Удалить вариант с ссылкой после того как договор будет всегда */}
+            {agreement ? (
+              <Typography.SansBodyL>{textProvider(languageCode, Texts.FinancialMenuTitle)}</Typography.SansBodyL>
+            ) : (
+              <Link
+                {...link}
+                onClick={handleLinkClick}
+                text={textProvider(languageCode, Texts.FinancialMenuTitle)}
+                size='l'
+                appearance='neutral'
+              />
+            )}
 
             <EyeButton {...eyeButton} />
           </div>
 
-          <div className={styles.titleLine}>
-            <Link {...link} onClick={handleLinkClick} text={agreement} textMode='accent' appearance='primary' />
-          </div>
+          {agreement && (
+            <div className={styles.titleLine}>
+              <Link {...link} onClick={handleLinkClick} text={agreement} textMode='accent' appearance='primary' />
+            </div>
+          )}
         </div>
 
         <div className={styles.content}>
