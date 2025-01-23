@@ -48,6 +48,7 @@ export enum Texts {
   Favorite = 'favorite',
 
   FinancialMenuTitle = 'financial-menu-title',
+  FinancialMenuToSection = 'financial-menu-to-section',
   FinancialMenuEyeButtonDataVisibleTip = 'financial-menu-eye-button-data-visible-tip',
   FinancialMenuEyeButtonDataHiddenTip = 'financial-menu-eye-button-data-hidden-tip',
   FinancialMenuBonusSign = 'financial-menu-bonus-sign',
@@ -137,6 +138,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Favorite]: 'Избранное',
 
     [Texts.FinancialMenuTitle]: 'Контроль затрат',
+    [Texts.FinancialMenuToSection]: 'В раздел',
     [Texts.FinancialMenuEyeButtonDataVisibleTip]: 'Скрыть баланс в шапке',
     [Texts.FinancialMenuEyeButtonDataHiddenTip]: 'Показать баланс в шапке',
     [Texts.FinancialMenuBonusSign]: 'Б',
@@ -229,6 +231,7 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.Favorite]: 'Favorite',
 
     [Texts.FinancialMenuTitle]: 'Budget control',
+    [Texts.FinancialMenuToSection]: 'To section',
     [Texts.FinancialMenuEyeButtonDataVisibleTip]: 'Hide balance in header',
     [Texts.FinancialMenuEyeButtonDataHiddenTip]: 'Show balance in header',
     [Texts.FinancialMenuBonusSign]: 'B',

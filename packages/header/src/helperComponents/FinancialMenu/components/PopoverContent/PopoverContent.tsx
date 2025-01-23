@@ -51,33 +51,21 @@ export function PopoverContent({
     bonusGrantsDesc = '';
   }
   const bonusGrantActionButtonText = textProvider(languageCode, Texts.FinancialMenuBonusesAction);
+  const toSectionLink = agreement || textProvider(languageCode, Texts.FinancialMenuToSection);
 
   return (
     <div className={styles.contentWrapper}>
       <SkeletonText lines={6} loading={loading}>
         <div className={styles.header}>
           <div className={styles.titleLine}>
-            {/* TODO: Удалить вариант с ссылкой после того как договор будет всегда */}
-            {agreement ? (
-              <Typography.SansBodyL>{textProvider(languageCode, Texts.FinancialMenuTitle)}</Typography.SansBodyL>
-            ) : (
-              <Link
-                {...link}
-                onClick={handleLinkClick}
-                text={textProvider(languageCode, Texts.FinancialMenuTitle)}
-                size='l'
-                appearance='neutral'
-              />
-            )}
+            <Typography.SansBodyL>{textProvider(languageCode, Texts.FinancialMenuTitle)}</Typography.SansBodyL>
 
             <EyeButton {...eyeButton} />
           </div>
 
-          {agreement && (
-            <div className={styles.titleLine}>
-              <Link {...link} onClick={handleLinkClick} text={agreement} textMode='accent' appearance='primary' />
-            </div>
-          )}
+          <div className={styles.titleLine}>
+            <Link {...link} onClick={handleLinkClick} text={toSectionLink} textMode='accent' appearance='primary' />
+          </div>
         </div>
 
         <div className={styles.content}>
