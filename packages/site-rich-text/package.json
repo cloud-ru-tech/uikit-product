@@ -1,0 +1,39 @@
+{
+  "name": "@sbercloud/uikit-product-site-rich-text",
+  "title": "Site Rich Text",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "site rich text",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-rich-text",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/site-rich-text"
+  },
+  "author": "Ruslan Chulkov <rgchulkov@cloud.ru>",
+  "contributors": [
+    "Ruslan Chulkov <rgchulkov@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "classnames": "2.5.1"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}

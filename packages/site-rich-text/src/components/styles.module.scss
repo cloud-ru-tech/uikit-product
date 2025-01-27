@@ -1,0 +1,39 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.richText {
+  p {
+    margin: 0;
+  }
+
+  a {
+    display: inline-block;
+    pointer-events: visible;
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    word-break: break-word;
+
+    transition: color 0.3s ease-in-out;
+
+    width: fit-content;
+
+    &:hover {
+      color: ste.$sys-primary-accent-hovered;
+    }
+  }
+
+  ul,
+  ol {
+    margin: 0;
+    padding: 0 0 0 20px;
+  }
+
+  img {
+    max-width: 100%;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
