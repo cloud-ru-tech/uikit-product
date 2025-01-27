@@ -1,6 +1,7 @@
 import { QuestionTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
 
 export enum PricePeriod {
+  Year = 'year',
   Month = 'month',
   Day = 'day',
   Hour = 'hour',

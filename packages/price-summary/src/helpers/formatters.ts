@@ -13,6 +13,7 @@ export function formatQuantity(value: string | number) {
 }
 
 const PERIOD_MAP: Record<PricePeriod, string> = {
+  [PricePeriod.Year]: Texts.PricePeriodYear,
   [PricePeriod.Month]: Texts.PricePeriodMonth,
   [PricePeriod.Day]: Texts.PricePeriodDay,
   [PricePeriod.Hour]: Texts.PricePeriodHour,

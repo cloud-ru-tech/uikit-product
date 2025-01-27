@@ -6,19 +6,13 @@ import { formatPeriod, textProvider, Texts } from '../../../../helpers';
 import { PricePeriod } from '../../../../types';
 import styles from './styles.module.scss';
 
-const DEFAULT_PRICE_PERIOD_OPTIONS = [PricePeriod.Month, PricePeriod.Day, PricePeriod.Hour, PricePeriod.Minute];
-
 export type PeriodDropdownProps = {
   period: PricePeriod;
+  periodOptions: PricePeriod[];
   onPeriodChanged?: (period: PricePeriod) => void;
-  periodOptions?: PricePeriod[];
 };
 
-export function PeriodDropdown({
-  period,
-  onPeriodChanged = () => {},
-  periodOptions = DEFAULT_PRICE_PERIOD_OPTIONS,
-}: PeriodDropdownProps) {
+export function PeriodDropdown({ period, onPeriodChanged = () => {}, periodOptions }: PeriodDropdownProps) {
   const { languageCode } = useLanguage();
 
   const actions = periodOptions

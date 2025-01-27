@@ -3,6 +3,7 @@ import { createTextProvider, LanguageCodeType } from '@sbercloud/uikit-product-u
 export enum Texts {
   Total = 'total',
   Vat = 'vat',
+  PricePeriodYear = 'pricePeriodYear',
   PricePeriodMonth = 'pricePeriodMonth',
   PricePeriodDay = 'pricePeriodDay',
   PricePeriodHour = 'pricePeriodHour',
@@ -20,6 +21,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
     [Texts.Total]: 'Итого',
     [Texts.Vat]: 'с учётом НДС',
+    [Texts.PricePeriodYear]: 'в год',
     [Texts.PricePeriodMonth]: 'в месяц',
     [Texts.PricePeriodDay]: 'в день',
     [Texts.PricePeriodHour]: 'в час',
@@ -35,6 +37,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.enGB]: {
     [Texts.Total]: 'Total',
     [Texts.Vat]: 'including VAT',
+    [Texts.PricePeriodYear]: 'per year',
     [Texts.PricePeriodMonth]: 'per month',
     [Texts.PricePeriodDay]: 'per day',
     [Texts.PricePeriodHour]: 'per hour',
