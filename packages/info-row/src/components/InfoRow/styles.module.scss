@@ -41,6 +41,10 @@ $gap: styles-theme-variables.$dimension-3m;
   flex-shrink: 1;
   flex-basis: 0;
   column-gap: 12px;
+
+  [data-width=fixed] & {
+    width: $contentWidth;
+  }
 }
 
 .content {
