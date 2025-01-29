@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.7 (2025-01-29)</small>
+
+* feat(PDS-1403): add section accordion ([c02434e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c02434e))
+
+
+
+
+
 ## <small>0.0.6 (2025-01-09)</small>
 
 ### Only dependencies have been changed
