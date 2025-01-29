@@ -25,6 +25,7 @@ export function PopoverContent({
   bonusGrants = [],
   starterGrant,
   agreement,
+  isMobile,
 }: PopoverContentProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
@@ -54,52 +55,74 @@ export function PopoverContent({
   const toSectionLink = agreement || textProvider(languageCode, Texts.FinancialMenuToSection);
 
   return (
-    <div className={styles.contentWrapper}>
-      <SkeletonText lines={6} loading={loading}>
-        <div className={styles.header}>
+    <SkeletonText lines={6} loading={loading}>
+      <div className={styles.header}>
+        {isMobile ? (
           <div className={styles.titleLine}>
-            <Typography.SansBodyL>{textProvider(languageCode, Texts.FinancialMenuTitle)}</Typography.SansBodyL>
+            <Link
+              {...link}
+              onClick={handleLinkClick}
+              text={toSectionLink}
+              textMode='accent'
+              appearance='primary'
+              truncateVariant='end'
+              className={styles.agreementLink}
+            />
 
             <EyeButton {...eyeButton} />
           </div>
+        ) : (
+          <>
+            <div className={styles.titleLine}>
+              <Typography.SansBodyL>{textProvider(languageCode, Texts.FinancialMenuTitle)}</Typography.SansBodyL>
 
-          <div className={styles.titleLine}>
-            <Link {...link} onClick={handleLinkClick} text={toSectionLink} textMode='accent' appearance='primary' />
-          </div>
-        </div>
+              <EyeButton {...eyeButton} />
+            </div>
 
-        <div className={styles.content}>
-          {balance.visible && (
-            <>
-              <FinanceInfoRow {...balance} value={balanceValue} actionButtonText={balanceActionButtonText} />
+            <div className={styles.titleLine}>
+              <Link {...link} onClick={handleLinkClick} text={toSectionLink} textMode='accent' appearance='primary' />
+            </div>
+          </>
+        )}
+      </div>
 
-              <Divider className={styles.divider} />
-            </>
-          )}
+      <div className={styles.content}>
+        {balance.visible && (
+          <>
+            <FinanceInfoRow
+              {...balance}
+              value={balanceValue}
+              actionButtonText={balanceActionButtonText}
+              isMobile={isMobile}
+            />
 
-          <FinanceInfoRow
-            {...bonuses}
-            value={bonusGrantValue}
-            actionButtonText={bonusGrantActionButtonText}
-            description={bonusGrantsDesc}
-            buttonTip={textProvider(languageCode, Texts.FinancialMenuBonusesDisabledTip)}
-          />
+            <Divider className={styles.divider} />
+          </>
+        )}
 
-          {bonusGrants.map(grant => (
-            <Fragment key={grant.id}>
-              <Divider className={styles.grantDivider} />
-              <Grant {...grant} />
-            </Fragment>
-          ))}
+        <FinanceInfoRow
+          {...bonuses}
+          value={bonusGrantValue}
+          actionButtonText={bonusGrantActionButtonText}
+          description={bonusGrantsDesc}
+          buttonTip={textProvider(languageCode, Texts.FinancialMenuBonusesDisabledTip)}
+          isMobile={isMobile}
+        />
 
-          {(starterGrant?.isAvailable || starterGrant?.inProcess) && (
-            <>
-              <Divider className={styles.grantDivider} />
-              <StarterGrant {...starterGrant} onGetGrantClick={handleGetStarterGrantClick} />
-            </>
-          )}
-        </div>
-      </SkeletonText>
-    </div>
+        {bonusGrants.map(grant => (
+          <Fragment key={grant.id}>
+            <Divider className={styles.grantDivider} />
+            <Grant {...grant} isMobile={isMobile} />
+          </Fragment>
+        ))}
+
+        {(starterGrant?.isAvailable || starterGrant?.inProcess) && (
+          <>
+            <Divider className={styles.grantDivider} />
+            <StarterGrant {...starterGrant} onGetGrantClick={handleGetStarterGrantClick} isMobile={isMobile} />
+          </>
+        )}
+      </div>
+    </SkeletonText>
   );
 }

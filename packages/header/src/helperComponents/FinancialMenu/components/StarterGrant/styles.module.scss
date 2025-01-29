@@ -7,7 +7,9 @@
   align-items: center;
 
   &[data-mobile] {
-    grid-column: auto;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
   }
 }
 

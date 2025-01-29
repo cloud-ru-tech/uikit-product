@@ -1,5 +1,9 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
+.nameWrapper {
+  min-width: 0;
+}
+
 .nameWrapper,
 .amount,
 .dateWrapper {
@@ -18,10 +22,17 @@
 }
 
 .amount,
+.amountWithDate,
 .date {
   &[data-disabled] {
     color: styles-tokens-element.$sys-neutral-text-disabled;
   }
+}
+
+.amountWithDate {
+  grid-column: 2 / 4;
+
+  text-align: right;
 }
 
 .dateWrapper {

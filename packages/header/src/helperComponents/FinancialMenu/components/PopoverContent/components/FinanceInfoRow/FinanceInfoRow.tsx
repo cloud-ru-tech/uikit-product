@@ -1,10 +1,11 @@
 import { ReactNode } from 'react';
 
 import { PlusSVG } from '@sbercloud/uikit-product-icons';
+import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonTonal } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
-import { QuestionTooltip, Tooltip } from '@snack-uikit/tooltip';
+import { QuestionTooltip, Tooltip, TooltipProps } from '@snack-uikit/tooltip';
 import { Typography } from '@snack-uikit/typography';
 
 import { textProvider, Texts } from '../../../../../../helpers';
@@ -14,6 +15,7 @@ import styles from './styles.module.scss';
 export type FinanceInfoRowProps = Omit<FinanceInfoRowType, 'visible'> & {
   actionButtonText: string;
   buttonTip?: ReactNode;
+  isMobile?: boolean;
 };
 
 export function FinanceInfoRow({
@@ -28,18 +30,30 @@ export function FinanceInfoRow({
   status = 'default',
   isButtonDisabled,
   buttonTip,
+  isMobile,
 }: FinanceInfoRowProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   const renderButton = () => (
     <ButtonTonal
       size='xs'
-      label={actionButtonText}
+      label={isMobile ? undefined : actionButtonText}
       icon={<PlusSVG />}
       onClick={onAddClick}
       disabled={isButtonDisabled}
     />
   );
+
+  function AdaptiveTooltip() {
+    const props: TooltipProps = {
+      className: styles.negativeBalanceTooltip,
+      tip: buttonTip,
+      placement: 'left',
+      children: renderButton(),
+    };
+
+    return isMobile ? <MobileTooltip {...props} /> : <Tooltip {...props} />;
+  }
 
   return (
     <>
@@ -72,15 +86,9 @@ export function FinanceInfoRow({
           {value}
         </Typography.SansLabelL>
       </div>
-      <div className={styles.rightAlign}>
-        {isButtonDisabled ? (
-          <Tooltip className={styles.negativeBalanceTooltip} tip={buttonTip} placement='left'>
-            {renderButton()}
-          </Tooltip>
-        ) : (
-          renderButton()
-        )}
-      </div>
+
+      <div className={styles.rightAlign}>{isButtonDisabled ? AdaptiveTooltip() : renderButton()}</div>
+
       {description && (
         <Typography.SansBodyS tag='div' className={styles.description}>
           {description}

@@ -1,13 +1,5 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
-.contentWrapper {
-  display: flex;
-  flex-direction: column;
-  width: 550px;
-  margin: calc(#{styles-theme-variables.$dimension-1m} + #{styles-theme-variables.$dimension-050m})
-    styles-theme-variables.$dimension-2m;
-}
-
 .header {
   display: flex;
   flex-direction: column;
@@ -19,8 +11,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: styles-theme-variables.$dimension-1m;
+  gap: 16px;
   width: 100%;
+}
+.agreementLink {
+  min-width: 0;
 }
 
 .content {

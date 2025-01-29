@@ -39,8 +39,6 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   financialMenuButtonType: NonNullable<FinancialMenuProps['button']>['type'];
   financialMenuButtonStatus: NonNullable<FinancialMenuProps['button']>['status'];
   financialMenuLoading: boolean;
-  financialMenuPromoTag: 'none' | NonNullable<FinancialMenuProps['content']['tag']>['appearance'];
-  financialMenuPromoTagContent: string;
   financialMenuAgreement: string;
   financialMenuBalanceVisible: boolean;
   financialMenuBalanceValue: number;
@@ -203,8 +201,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     financialMenuButtonStatus,
 
     financialMenuLoading,
-    financialMenuPromoTag,
-    financialMenuPromoTagContent,
     financialMenuAgreement,
 
     financialMenuBalanceVisible,
@@ -373,13 +369,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                   },
                   content: {
                     loading: financialMenuLoading,
-                    tag:
-                      financialMenuPromoTag === 'none'
-                        ? undefined
-                        : {
-                            appearance: financialMenuPromoTag,
-                            text: financialMenuPromoTagContent,
-                          },
                     eyeButton: { dataVisible: balanceVisible, onClick: eyeButtonOnClick },
                     link: { onClick: () => {}, href: '#' },
                     agreement: financialMenuAgreement,
@@ -570,8 +559,6 @@ export const ARGS: StoryProps = {
   financialMenuButtonType: 'bonuses',
   financialMenuButtonStatus: 'default',
   financialMenuLoading: false,
-  financialMenuPromoTag: 'green',
-  financialMenuPromoTagContent: '~ на 14 дней',
   financialMenuAgreement: 'Договор Д/Д-СМ/55123/24 от 10.06.2024',
   financialMenuBalanceVisible: true,
   financialMenuBalanceValue: 142911.6903025,
@@ -996,17 +983,6 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   financialMenuLoading: {
     name: '[Story]: financial menu -> loading',
     type: 'boolean',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuPromoTag: {
-    name: '[Story]: financial menu -> promo tag',
-    control: { type: 'radio' },
-    options: ['none', 'green', 'yellow', 'red'],
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuPromoTagContent: {
-    name: '[Story]: financial menu -> promo tag content',
-    type: 'string',
     if: { arg: 'showFinancialMenu', eq: true },
   },
   financialMenuAgreement: {

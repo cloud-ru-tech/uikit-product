@@ -5,7 +5,7 @@ import { DrawerCustom } from '@snack-uikit/drawer';
 import { Dropdown } from '@snack-uikit/dropdown';
 
 import { textProvider, Texts } from '../../helpers';
-import { ButtonFinancial, ButtonFinancialProps, PopoverContent, PopoverContentMobile } from './components';
+import { ButtonFinancial, ButtonFinancialProps, PopoverContent } from './components';
 import styles from './styles.module.scss';
 import { PopoverContentProps } from './types';
 
@@ -27,7 +27,11 @@ export function FinancialMenu({ button, content, open, onOpenChange }: Financial
     <Dropdown
       open={isOpen}
       onOpenChange={setIsOpen}
-      content={<PopoverContent {...content} onClose={handlePopoverClose} />}
+      content={
+        <div className={styles.contentWrapper}>
+          <PopoverContent {...content} onClose={handlePopoverClose} />
+        </div>
+      }
       trigger='click'
       placement='bottom-end'
     >
@@ -57,10 +61,13 @@ export function MobileFinancialMenu({ button, content, open, onOpenChange }: Fin
 
       <DrawerCustom open={isOpen} onClose={handleClose} position='left'>
         <DrawerCustom.Header
-          title={textProvider(languageCode, Texts.FinancialMenuDrawerTitle)}
+          title={textProvider(languageCode, Texts.FinancialMenuTitle)}
           className={styles.nestedHeader}
         />
-        <PopoverContentMobile {...content} onClose={handleClose} />
+
+        <div className={styles.mobileContentWrapper}>
+          <PopoverContent {...content} onClose={handleClose} isMobile />
+        </div>
       </DrawerCustom>
     </>
   );

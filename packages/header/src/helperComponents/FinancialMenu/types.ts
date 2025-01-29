@@ -1,7 +1,6 @@
 import { MouseEventHandler, ReactNode } from 'react';
 
 import { LinkProps } from '@snack-uikit/link';
-import { PromoTagProps } from '@snack-uikit/promo-tag';
 
 export type Currency = 'ruble';
 
@@ -29,7 +28,6 @@ export type StarterGrant = {
 export type PopoverContentProps = {
   loading?: boolean;
   onClose(): void;
-  tag?: Pick<PromoTagProps, 'text' | 'appearance'>;
   link: Required<Pick<LinkProps, 'onClick' | 'href'>>;
   agreement?: string;
   balance: FinanceInfoRowType;
@@ -40,4 +38,5 @@ export type PopoverContentProps = {
   };
   bonusGrants?: GrantProps[];
   starterGrant?: StarterGrant;
+  isMobile?: boolean;
 };
