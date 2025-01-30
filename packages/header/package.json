@@ -50,6 +50,7 @@
     "@snack-uikit/hot-spot": "0.4.0",
     "@snack-uikit/link": "0.15.1",
     "@snack-uikit/list": "0.21.6",
+    "@snack-uikit/loaders": "0.8.1",
     "@snack-uikit/notification": "0.9.7",
     "@snack-uikit/popover": "0.8.1",
     "@snack-uikit/promo-tag": "0.6.1",

@@ -31,7 +31,7 @@ export function FinancialMenu({ button, content, open, onOpenChange }: Financial
       trigger='click'
       placement='bottom-end'
     >
-      <ButtonFinancial {...button} valueVisible={content.eyeButton?.dataVisible} />
+      <ButtonFinancial {...button} valueVisible={content.eyeButton?.dataVisible} isLoading={content.loading} />
     </Dropdown>
   );
 }
@@ -49,6 +49,7 @@ export function MobileFinancialMenu({ button, content, open, onOpenChange }: Fin
       <ButtonFinancial
         {...button}
         valueVisible={content.eyeButton?.dataVisible}
+        isLoading={content.loading}
         onClick={() => {
           setIsOpen(true);
         }}
