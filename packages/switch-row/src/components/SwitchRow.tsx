@@ -5,7 +5,9 @@ import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { Switch } from '@snack-uikit/toggles';
 import { Tooltip } from '@snack-uikit/tooltip';
 
+import { SWITCH_ROW_TYPES } from '../constants';
 import { Title } from '../helperComponents';
+import { SwitchRowType } from '../types';
 import styles from './styles.module.scss';
 
 export type SwitchRowProps = {
@@ -19,6 +21,7 @@ export type SwitchRowProps = {
   disabledToggleTip?: ReactNode;
   className?: string;
   disableTitleTruncate?: boolean;
+  type?: SwitchRowType;
 };
 
 export function SwitchRow({
@@ -32,6 +35,7 @@ export function SwitchRow({
   disabledToggleTip,
   loading,
   disableTitleTruncate = false,
+  type = SWITCH_ROW_TYPES.Block,
   ...rest
 }: SwitchRowProps) {
   const handleChange = () => !disabled && onChange(!checked);
@@ -55,6 +59,14 @@ export function SwitchRow({
     />
   );
 
+  const titleLayout = (
+    <div className={styles.titleLayout}>
+      <div className={styles.titleWrapper}>
+        <Title title={title} tip={tip} disableTitleTruncate={disableTitleTruncate} />
+      </div>
+    </div>
+  );
+
   return (
     <div
       className={cn(styles.switchRow, className)}
@@ -63,17 +75,14 @@ export function SwitchRow({
       tabIndex={disabled ? -1 : 0}
       onClick={handleChange}
       onKeyDown={handleKeyDown}
+      data-type={type}
       data-disabled={disabled || undefined}
       data-loading={loading || undefined}
       data-checked={checked || undefined}
       {...extractSupportProps(rest)}
     >
       <div className={styles.headline} data-test-id='switch-row__title'>
-        <div className={styles.titleLayout}>
-          <div className={styles.titleWrapper}>
-            <Title title={title} tip={tip} disableTitleTruncate={disableTitleTruncate} />
-          </div>
-        </div>
+        {type === SWITCH_ROW_TYPES.Block && titleLayout}
 
         {disabled && disabledToggleTip ? (
           <Tooltip
@@ -86,12 +95,14 @@ export function SwitchRow({
         ) : (
           toggle
         )}
+
+        {type === SWITCH_ROW_TYPES.Line && titleLayout}
       </div>
 
       {description && (
-        <span className={styles.description} data-test-id='switch-row__description'>
+        <div className={styles.description} data-test-id='switch-row__description'>
           {description}
-        </span>
+        </div>
       )}
     </div>
   );

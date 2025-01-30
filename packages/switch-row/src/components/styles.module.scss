@@ -56,7 +56,7 @@
     background-color: transparent;
   }
 
-  &:not([data-disabled]) {
+  &:not([data-disabled]):not([data-type='line']) {
     &:hover {
       &::before {
         background-color: styles-tokens-element.$sys-neutral-accent-default;
@@ -99,7 +99,7 @@
     cursor: not-allowed;
     background-color: transparent;
 
-    &::before {
+    &:not([data-type='line'])::before {
       background-color: styles-tokens-element.$sys-neutral-accent-default;
       opacity: 0.08;
     }
@@ -113,6 +113,20 @@
       &[data-pointer] {
         cursor: not-allowed;
       }
+    }
+  }
+
+  &[data-type='line'] {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+
+    .headline {
+      justify-content: flex-start;
+    }
+
+    .description {
+      padding-left: 44px;
     }
   }
 }

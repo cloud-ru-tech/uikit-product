@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { SwitchRow, SwitchRowProps } from '../src';
+import { SWITCH_ROW_TYPES, SwitchRow, SwitchRowProps } from '../src';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -34,9 +34,10 @@ export const switchRow: StoryObj<SwitchRowProps> = {
     title: 'Intel Xeon Высокопроизводительный процессор для серверов 3-го поколения',
     disableTitleTruncate: false,
     description:
-      'Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов говорит о возможностях стандартных подходов. Принимая во внимание показатели успешности, высококачественный прототип будущего проекта однозначнова...',
+      'Идейные соображения высшего порядка, а также убеждённость некоторых оппонентов говорит о возможностях стандартных подходов. Принимая во внимание показатели успешности, высококачественный прототип будущего проекта однозначно ва...',
     tip: 'Tip',
     disabledToggleTip: 'disabledToggleTip',
+    type: SWITCH_ROW_TYPES.Block,
     disabled: false,
     checked: false,
     loading: false,
