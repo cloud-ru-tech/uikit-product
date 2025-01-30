@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-switch-row",
   "title": "Switch Row",
-  "version": "0.5.10",
+  "version": "0.5.11",
   "sideEffects": [
     "*.css",
     "*.woff",

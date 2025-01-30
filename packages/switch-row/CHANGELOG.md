@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.11 (2025-01-30)</small>
+
+* feat(PDS-780): Make text grey only when disabled switch row is unchecked ([c58c687](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c58c687))
+* feat(PDS-780): SwitchRow add line type ([2322518](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2322518))
+
+
+
+
+
 ## <small>0.5.10 (2024-12-26)</small>
 
 ### Only dependencies have been changed
