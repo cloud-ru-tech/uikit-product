@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { MouseEvent, ReactNode, useMemo, useState } from 'react';
+import { MouseEvent, ReactNode, useState } from 'react';
 
 import { AdaptiveFieldSelect, FieldSelectProps } from '@sbercloud/uikit-product-mobile-fields';
 import { Layout } from '@sbercloud/uikit-product-site-layout';
@@ -7,13 +7,12 @@ import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } fr
 import { ButtonOutline } from '@snack-uikit/button';
 import { Pagination, PaginationProps } from '@snack-uikit/pagination';
 import { Tabs } from '@snack-uikit/tabs';
-import { Typography } from '@snack-uikit/typography';
 
 import { SECTION_COLORS } from '../../constants';
+import { SectionTitle, SectionTitleProps } from '../../helperComponents';
 import { textProvider, Texts } from '../../helpers';
 import { SectionColor } from '../../types';
 import styles from './styles.module.scss';
-import { getTitleTypographyProps } from './utils';
 
 type TabBarItem = WithSupportProps<{
   value: string;
@@ -25,27 +24,23 @@ type TabBarItem = WithSupportProps<{
 }>;
 
 export type SectionBasicProps = WithLayoutType<
-  WithSupportProps<{
-    children: ReactNode;
-    /** Заголовок */
-    title?: string;
-    /** Описание заголовка */
-    description?: string;
-    /** Размер секции заголовка */
-    titleSectionSize?: 's' | 'm' | 'l';
-    /** Массив табов */
-    tabBarItems?: TabBarItem[];
-    /** Массив фильтров */
-    filterItems?: FieldSelectProps[];
-    /** Настройки пагинации */
-    pagination?: PaginationProps;
-    /** Цвет фона */
-    backgroundColor?: SectionColor;
-    /** CSS-класс */
-    className?: string;
-    /** Колбек на клик по кнопке "Показать ещё" */
-    onLoadMoreClick?(): void;
-  }>
+  WithSupportProps<
+    Pick<SectionTitleProps, 'title' | 'description' | 'titleSectionSize'> & {
+      children: ReactNode;
+      /** Массив табов */
+      tabBarItems?: TabBarItem[];
+      /** Массив фильтров */
+      filterItems?: FieldSelectProps[];
+      /** Настройки пагинации */
+      pagination?: PaginationProps;
+      /** Цвет фона */
+      backgroundColor?: SectionColor;
+      /** CSS-класс */
+      className?: string;
+      /** Колбек на клик по кнопке "Показать ещё" */
+      onLoadMoreClick?(): void;
+    }
+  >
 >;
 
 const getInitialTab = (tabBarItems?: TabBarItem[]) => {
@@ -75,11 +70,6 @@ export function SectionBasic({
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const showFooter = Boolean(pagination || onLoadMoreClick);
 
-  const titleProps = useMemo(
-    () => getTitleTypographyProps({ titleSectionSize, layoutType }),
-    [layoutType, titleSectionSize],
-  );
-
   return (
     <Layout.SectionWrapper
       layoutType={layoutType}
@@ -88,16 +78,12 @@ export function SectionBasic({
       {...extractSupportProps(rest)}
     >
       <div className={styles.sectionBasic} data-layout-type={layoutType}>
-        {(title || description) && (
-          <div className={styles.sectionTitle}>
-            {title && (
-              <Typography family='sans' {...titleProps} className={styles.title}>
-                {title}
-              </Typography>
-            )}
-            {description && <Typography.SansBodyL className={styles.description}>{description}</Typography.SansBodyL>}
-          </div>
-        )}
+        <SectionTitle
+          layoutType={layoutType}
+          title={title}
+          description={description}
+          titleSectionSize={titleSectionSize}
+        />
 
         {tabBarItems?.length && (
           <div className={styles.sectionTabs}>

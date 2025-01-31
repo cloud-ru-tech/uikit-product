@@ -1,0 +1,53 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.cardLeading {
+  overflow: hidden;
+}
+
+.videoWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var.$dimension-2m;
+
+  padding: var.$dimension-4m;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    padding: var.$dimension-3m;
+  }
+}
+
+.cardLeadingColor {
+  color: var.$sys-neutral-text-main;
+}
+
+.video {
+  pointer-events: none;
+  scale: 1.01; // fixes vertical line on the ride side, as if "border-right: 1px solid black;" was applied
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  padding: var.$dimension-4m;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    padding: var.$dimension-3m;
+  }
+}

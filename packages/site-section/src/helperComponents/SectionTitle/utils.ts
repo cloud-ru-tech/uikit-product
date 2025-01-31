@@ -1,8 +1,10 @@
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { TypographyProps } from '@snack-uikit/typography';
 
+import { Size } from './types';
+
 type Props = WithLayoutType<{
-  titleSectionSize: 's' | 'm' | 'l';
+  titleSectionSize: Size;
 }>;
 
 export const getTitleTypographyProps = ({

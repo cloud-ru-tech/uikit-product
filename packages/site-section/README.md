@@ -21,9 +21,9 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| title | `string` | - | Заголовок |
-| description | `string` | - | Описание заголовка |
-| titleSectionSize | "s" \| "m" \| "l" | m | Размер секции заголовка |
+| title | `string` | - | Название секции |
+| description | `string` | - | Описание секции |
+| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | tabBarItems | `TabBarItem[]` | - | Массив табов |
 | filterItems | `FieldSelectProps[]` | - | Массив фильтров |
 | pagination | `PaginationProps` | - | Настройки пагинации |
@@ -36,7 +36,19 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `ExpertDetails[]` | - | Массив айтемов |
-| title* | `string` | - | Название секции |
+| title | `string` | - | Название секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
+| className | `string` | - | CSS - класснейм |
+## SectionCardLeading
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| items* | `CardLeadingItem[]` | - | Массив айтемов |
+| title | `string` | - | Название секции |
+| description | `string` | - | Описание секции |
+| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
+| footerDescription | `string` | - | Описание секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS - класснейм |
 

@@ -1,0 +1,15 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  gap: var.$dimension-1m;
+}
+
+.title {
+  color: var.$sys-neutral-text-main;
+}
+
+.description {
+  color: var.$sys-neutral-text-support;
+}
