@@ -18,4 +18,8 @@
   min-height: styles-theme-variables.$dimension-2m;
   color: styles-theme-variables.$sys-neutral-text-main;
   padding: 16px 0;
+
+  &[data-virtualized] {
+    height: 100%;
+  }
 }

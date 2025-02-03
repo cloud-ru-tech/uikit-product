@@ -7,7 +7,11 @@ import { useValueControl } from '@snack-uikit/utils';
 import { MobileDropdownProps } from './MobileDropdown';
 import styles from './styles.module.scss';
 
-export type MobileDroplistProps = Omit<MobileDropdownProps, 'content'> & ListProps & { label?: string };
+export type MobileDroplistProps = Omit<MobileDropdownProps, 'content'> &
+  ListProps & {
+    label?: string;
+    virtualized?: boolean;
+  };
 
 export function MobileDroplist({
   items,
@@ -18,6 +22,7 @@ export function MobileDroplist({
   search,
   label,
   footer,
+  virtualized,
   ...rest
 }: MobileDroplistProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -31,13 +36,15 @@ export function MobileDroplist({
   const searchable = search && Object.values(flattenItems).length > 5;
 
   const listJsx = (
-    <div className={styles.listWrapper}>
+    <div className={styles.listWrapper} data-virtualized={virtualized || undefined}>
       <List
         items={items}
         selection={selection}
         size='l'
         search={searchable ? search : undefined}
-        scrollRef={searchable ? scrollRef : undefined}
+        scrollRef={searchable || virtualized ? scrollRef : undefined}
+        scroll={virtualized}
+        virtualized={virtualized}
         {...rest}
       />
     </div>
@@ -71,7 +78,7 @@ export function MobileDroplist({
     <>
       {trigger}
 
-      <MobileModalCustom open={open} onClose={handleClose} size={searchable ? 'full' : 'auto'}>
+      <MobileModalCustom open={open} onClose={handleClose} size={searchable || virtualized ? 'full' : 'auto'}>
         {label && <MobileModalCustom.Header title={label} />}
 
         {searchable ? listJsx : <MobileModalCustom.Body className={styles.bodyNoPadding} content={listJsx} />}
