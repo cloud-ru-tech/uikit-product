@@ -1,6 +1,5 @@
 import { BADGE as Badges } from '@geometricpanda/storybook-addon-badges';
 
-import AdminBrandThemes from '@sbercloud/figma-tokens-admin/build/css/brand.module.css';
 import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
 import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
 import SiteBrandThemes from '@sbercloud/figma-tokens-web/build/css/brand.module.css';
@@ -16,7 +15,6 @@ export enum Brand {
   Cloud = 'Cloud',
   MLSpace = 'MLSpace',
   Site = 'Site',
-  Admin = 'Admin',
 }
 
 export enum Mode {
@@ -30,10 +28,6 @@ export const BRAND_TO_THEME_MAP: Record<Brand, Record<Mode, Themes>> = {
     [Mode.Dark]: Themes.GreenDark,
   },
   [Brand.MLSpace]: {
-    [Mode.Light]: Themes.Purple,
-    [Mode.Dark]: Themes.PurpleDark,
-  },
-  [Brand.Admin]: {
     [Mode.Light]: Themes.Purple,
     [Mode.Dark]: Themes.PurpleDark,
   },
@@ -52,10 +46,6 @@ export const BRAND_TO_BRAND_MODE_MAP: Record<Brand, Record<Mode, UtilsBrand>> = 
     [Mode.Light]: UtilsBrand.MLSpace,
     [Mode.Dark]: UtilsBrand.MLSpaceDark,
   },
-  [Brand.Admin]: {
-    [Mode.Light]: UtilsBrand.Admin,
-    [Mode.Dark]: UtilsBrand.AdminDark,
-  },
   [Brand.Site]: {
     [Mode.Light]: UtilsBrand.Site,
     [Mode.Dark]: UtilsBrand.SiteDark,
@@ -65,13 +55,11 @@ export const BRAND_TO_BRAND_MODE_MAP: Record<Brand, Record<Mode, UtilsBrand>> = 
 export const DEFAULT_BRAND_MAP = {
   [Brand.Cloud]: CloudBrandThemes,
   [Brand.MLSpace]: MLSpaceBrandThemes,
-  [Brand.Admin]: AdminBrandThemes,
   [Brand.Site]: SiteBrandThemes,
 };
 
 export const DEFAULT_BRAND_COLORS_MAP = {
   [Brand.Cloud]: '#06b877',
   [Brand.MLSpace]: '#5558fa',
-  [Brand.Admin]: '#1677ff',
   [Brand.Site]: '#26d07c',
 };

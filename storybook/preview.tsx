@@ -173,11 +173,6 @@ const globalTypes: GlobalTypes = {
     description: '',
     defaultValue: DEFAULT_BRAND_MAP[Brand.MLSpace],
   },
-  [Brand.Admin]: {
-    name: 'Brand Admin',
-    description: '',
-    defaultValue: DEFAULT_BRAND_MAP[Brand.Admin],
-  },
   [Brand.Site]: {
     name: 'Brand Site',
     description: '',
@@ -191,5 +186,4 @@ const preview: Preview = {
   globalTypes,
 };
 
-// eslint-disable-next-line import/no-default-export
 export default preview;
