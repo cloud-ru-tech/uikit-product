@@ -1,0 +1,96 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toolbar' as toolbar;
+
+.toolbar {
+  box-sizing: border-box;
+}
+
+.containerWrapper {
+  @include element.composite-var(toolbar.$toolbar-container-wrapper);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  @include element.composite-var(toolbar.$toolbar-container);
+
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+
+  background-color: element.$sys-neutral-background1-level;
+
+  &[data-outline] {
+    &::before {
+      @include element.composite-var(toolbar.$toolbar-container-outline);
+
+      pointer-events: none;
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      box-sizing: border-box;
+      width: 100%;
+      height: 100%;
+
+      border-color: element.$sys-neutral-decor-default;
+      border-style: solid;
+    }
+  }
+
+}
+
+.search {
+  @include element.composite-var(toolbar.$toolbar-search);
+
+  &:focus-within {
+    @include element.outline-var(element.$container-focused-s);
+
+    position: relative;
+    outline-color: element.$sys-available-complementary;
+  }
+}
+
+.updateButton {
+  flex-shrink: 0;
+
+  svg {
+    transform: rotate(360deg);
+    transition: transform 0.5s;
+  }
+
+  &:active {
+    svg {
+      transform: rotate(0deg);
+      transition-duration: 0s;
+    }
+  }
+}
+
+.beforeSearch {
+  display: flex;
+  flex-shrink: 1;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.flexRow {
+  display: flex;
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  &[data-align-right] {
+    margin-left: auto;
+  }
+}
+
+.actions {
+  flex-shrink: 0;
+  box-sizing: border-box;
+}

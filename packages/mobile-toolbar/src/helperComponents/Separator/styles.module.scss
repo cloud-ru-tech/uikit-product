@@ -1,0 +1,15 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-toolbar' as toolbar;
+
+.separatorWrapper {
+  @include toolbar.composite-var(toolbar.$toolbar-separator-wrap);
+
+  flex-shrink: 0;
+}
+
+
+.separator {
+  box-sizing: border-box;
+  width: toolbar.$border-width-toolbar-separator;
+  height: 100%;
+  background-color: toolbar.$sys-neutral-decor-default;
+}
