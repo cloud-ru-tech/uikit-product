@@ -14,6 +14,7 @@
     "changelog": "ts-node scripts/changelog",
     "clean:all": "npm run clean:dist && npm run clean:modules",
     "clean:dist": "rimraf \"./packages/**/dist/\"",
+    "clean:empty": "ts-node scripts/removeEmptyPackages.ts",
     "clean:modules": "rimraf \"./packages/**/node_modules/\"",
     "docgen": "ts-node scripts/docgen/docgenForAllPackages",
     "deps:all": "npm run deps:global && npm run deps:packages",
