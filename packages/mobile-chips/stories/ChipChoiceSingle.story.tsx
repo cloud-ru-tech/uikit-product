@@ -12,7 +12,6 @@ import {
   ChipChoiceCustomStoryProps,
   FILTER_OPTIONS,
 } from './chipChoice/constants';
-import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Mobile/Chips/ChipChoice',
@@ -31,14 +30,14 @@ const Template: StoryFn<StoryProps> = ({
 }: StoryProps) => (
   <ChipChoiceStoryWrap
     showClickCounter={showClickCounter}
-    chipControlled={({ increaseCounter }) => (
+    defaultValue={useDefaultValue ? defaultValue || BASE_OPTIONS[0].value : undefined}
+    chipControlled={({ increaseCounter, ...props }) => (
       <MobileChipChoice.Single
         {...args}
-        defaultValue={useDefaultValue ? defaultValue || BASE_OPTIONS[0].value : undefined}
+        {...props}
         options={useBaseOptions ? BASE_OPTIONS : FILTER_OPTIONS}
         onClick={increaseCounter}
         label={CHIP_CHOICE_STORY_ARGS.label}
-        dropDownClassName={styles.droplist}
       />
     )}
   />
@@ -46,7 +45,11 @@ const Template: StoryFn<StoryProps> = ({
 
 export const chipChoiceSingle: StoryObj<StoryProps> = {
   render: Template,
-  args: CHIP_CHOICE_STORY_ARGS,
+  args: {
+    ...CHIP_CHOICE_STORY_ARGS,
+    disableFuzzySearch: false,
+    autoApply: true,
+  },
   argTypes: CHIP_CHOICE_ARG_TYPES,
 
   parameters: {

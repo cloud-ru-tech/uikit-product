@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useUncontrolledProp } from 'uncontrollable';
 
 import { ItemId, MobileDroplist, SelectionSingleValueType } from '@sbercloud/uikit-product-mobile-dropdown';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
@@ -8,7 +9,7 @@ import { useValueControl } from '@snack-uikit/utils';
 
 import { CHIP_CHOICE_TEST_IDS, SIZE } from '../../../constants';
 import { textProvider, Texts } from '../../../helpers/texts-provider';
-import { useFuzzySearch, useHandleOnKeyDown } from '../hooks';
+import { useAutoApplyFooter, useHandleOnKeyDown, useOptionSearch } from '../hooks';
 import { ContentRenderProps, MobileChipChoiceMultipleProps } from '../types';
 import { FlattenOption, kindFlattenOptions } from '../utils';
 import { transformOptionsToItems } from '../utils/options';
@@ -45,7 +46,14 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
   label,
   searchable: searchableProp,
   contentRender,
-  showClearButton = true,
+  onClearButtonClick,
+  open: openProp,
+  onOpenChange,
+  virtualized,
+  disableFuzzySearch = false,
+  autoApply = true,
+  onApprove,
+  onCancel,
   ...rest
 }: MobileChipChoiceMultipleProps<T>) {
   const { languageCode } = useLanguage();
@@ -54,6 +62,10 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
     value: valueProp,
     defaultValue,
     onChange: onChangeProp,
+  });
+
+  const [deferredValue, setDeferredValue] = useValueControl<SelectionSingleValueType[]>({
+    defaultValue,
   });
 
   const flattenOptions = useMemo(() => {
@@ -68,10 +80,12 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
 
   const { t } = useLocale('Chips');
 
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useUncontrolledProp(openProp, false, onOpenChange);
   const handleOnKeyDown = useHandleOnKeyDown({ setOpen });
 
   const flatMapOptions = useMemo(() => Object.values(flattenOptions), [flattenOptions]);
+
+  const dropListSelection = useMemo(() => (autoApply ? value : deferredValue), [autoApply, deferredValue, value]);
 
   const selectedOptions = useMemo(
     () => (value && value.length ? value.map(id => flattenOptions[id]).filter(Boolean) : ([] as FlattenOption<T>[])),
@@ -86,30 +100,53 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
         allLabel: t('allLabel'),
       });
 
-  const fuzzySearch = useFuzzySearch(options, flatMapOptions);
+  const optionSearch = useOptionSearch({ options, flatMapOptions, disableFuzzySearch });
 
   const result = useMemo(
-    () => (!searchable || valueToRender === searchValue ? options : fuzzySearch(searchValue)),
-    [fuzzySearch, options, searchValue, searchable, valueToRender],
+    () => (!searchable || valueToRender === searchValue ? options : optionSearch(searchValue)),
+    [optionSearch, options, searchValue, searchable, valueToRender],
   );
   const items = useMemo(() => transformOptionsToItems<T>(result, contentRender), [contentRender, result]);
 
-  const clearValue = () => setValue([]);
   const chipRef = useRef<HTMLDivElement>(null);
   const listRef = useRef<HTMLElement>(null);
 
   const handleSelectionChange = useCallback(
-    (newValue?: SelectionSingleValueType) => {
+    (newValue?: SelectionSingleValueType[]) => {
       if (newValue !== undefined) {
-        setValue(newValue);
+        if (autoApply) {
+          setValue(newValue);
+        } else {
+          setDeferredValue(newValue);
+        }
+
         if (searchValue) {
           listRef.current?.focus();
         }
-        setSearchValue('');
       }
     },
-    [searchValue, setValue],
+    [autoApply, searchValue, setValue, setDeferredValue],
   );
+
+  const handleOnCancelClick = () => {
+    onCancel?.();
+
+    setDeferredValue(value);
+    setOpen(false);
+  };
+
+  const handleOnApproveClick = () => {
+    onApprove?.();
+
+    setValue(deferredValue);
+    setOpen(false);
+  };
+
+  const autoApplyFooter = useAutoApplyFooter({
+    autoApply,
+    onApprove: handleOnApproveClick,
+    onCancel: handleOnCancelClick,
+  });
 
   useEffect(() => {
     if (searchValue && !open) {
@@ -117,19 +154,30 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
     }
   }, [searchable, open, searchValue]);
 
+  useEffect(() => {
+    setDeferredValue(value);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value]);
+
   return (
     <MobileDroplist
       items={items}
-      selection={{ value, onChange: handleSelectionChange, mode: 'multiple' }}
+      selection={{
+        value: dropListSelection,
+        onChange: handleSelectionChange,
+        mode: 'multiple',
+      }}
       data-test-id={CHIP_CHOICE_TEST_IDS.droplist}
       open={open}
       onOpenChange={open => {
         if (!open) {
           setSearchValue('');
+          handleOnCancelClick();
         }
         setOpen(open);
       }}
       label={label}
+      virtualized={virtualized}
       footer={
         <div className={styles.footer}>
           <div className={styles.footerTopLine}>
@@ -139,28 +187,32 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
             <ButtonFunction
               label={textProvider(languageCode, Texts.ResetAll)}
               onClick={() => {
-                setValue([]);
+                handleSelectionChange(undefined);
               }}
               size='m'
             />
           </div>
-          <ButtonFilled
-            fullWidth
-            label={textProvider(languageCode, Texts.Select)}
-            onClick={() => {
-              setOpen(false);
-            }}
-            size='l'
-          />
+
+          {autoApply ? (
+            <ButtonFilled
+              fullWidth
+              label={textProvider(languageCode, Texts.Select)}
+              onClick={() => {
+                setOpen(false);
+              }}
+              size='l'
+            />
+          ) : (
+            autoApplyFooter
+          )}
         </div>
       }
     >
       <ChipChoiceBase
         {...rest}
         ref={chipRef}
-        onClearButtonClick={clearValue}
+        onClearButtonClick={onClearButtonClick}
         value={value}
-        showClearButton={showClearButton && !(Array.isArray(value) && [0].includes(value.length))}
         valueToRender={valueToRender}
         label={label}
         loading={rest.loading}

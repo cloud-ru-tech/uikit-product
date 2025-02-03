@@ -73,9 +73,12 @@ export type ChipChoiceCommonProps = WithSupportProps<
     size?: Size;
     /** Колбек обработки клика */
     onClick?: MouseEventHandler<HTMLButtonElement | HTMLDivElement>;
-    /** Отображение кнопки очистки значения @default true*/
-    showClearButton?: boolean;
-    dropDownClassName?: string;
+    /** Колбек для клика по кнопке очистки */
+    onClearButtonClick?: MouseEventHandler<HTMLButtonElement>;
+    /** Управляет состоянием показан/не показан. */
+    open?: boolean;
+    /** Колбек отображения компонента. Срабатывает при изменении состояния open. */
+    onOpenChange?(isOpen: boolean): void;
   }
 >;
 
@@ -86,6 +89,18 @@ export type ChipChoiceSelectCommonProps<T extends ContentRenderProps = ContentRe
   filterFn?(option: { label: ItemId; value?: ItemId; contentRenderProps?: T }): boolean;
 
   searchable?: boolean;
+  /**
+   * Отключает Fuzzy Search. Иногда в дроплисте могут быть различные айдишники - нам важно искать их без Fuzzy Search
+   * @default false
+   */
+  disableFuzzySearch?: boolean;
+
+  /** Флаг, отвечающий за применение выбранного значения по умолчанию  */
+  autoApply?: boolean;
+  /** Колбек основной кнопки */
+  onApprove?(): void;
+  /** Колбек кнопки отмены */
+  onCancel?(): void;
 } & Pick<
     DroplistProps,
     | 'selection'
@@ -99,6 +114,7 @@ export type ChipChoiceSelectCommonProps<T extends ContentRenderProps = ContentRe
     | 'dataFiltered'
     | 'noResultsState'
     | 'loading'
+    | 'virtualized'
   >;
 
 export type MobileChipChoiceSingleProps<T extends ContentRenderProps = ContentRenderProps> =

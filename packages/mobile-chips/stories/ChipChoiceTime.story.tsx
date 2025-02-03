@@ -3,44 +3,49 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { MobileChipChoice, MobileChipChoiceDateProps } from '../src';
+import { MobileChipChoice, MobileChipChoiceTimeProps } from '../src';
 import { ChipChoiceStoryWrap } from './chipChoice/ChipChoiceStoryWrap';
 import { CHIP_CHOICE_ARG_TYPES, CHIP_CHOICE_STORY_ARGS, ChipChoiceCustomStoryProps } from './chipChoice/constants';
 
 const meta: Meta = {
   title: 'Mobile/Chips/ChipChoice',
-  component: MobileChipChoice.Date,
+  component: MobileChipChoice.Time,
 };
 export default meta;
 
-type StoryProps = MobileChipChoiceDateProps & ChipChoiceCustomStoryProps;
+type StoryProps = MobileChipChoiceTimeProps & ChipChoiceCustomStoryProps;
+
+const DEFAULT_VALUE: MobileChipChoiceTimeProps['value'] = {
+  hours: 20,
+  minutes: 15,
+  seconds: 30,
+};
 
 const Template: StoryFn<StoryProps> = ({ useDefaultValue, showClickCounter, showClearButton, ...args }: StoryProps) => {
-  const formatter = args.customFormatter ? (value?: Date): string => value?.toUTCString() || 'empty' : undefined;
+  const formatter = args.customFormatter
+    ? (value?: MobileChipChoiceTimeProps['value']): string => {
+        if (!value) return 'empty';
+
+        return `${value.hours}-${value.minutes}-${value.seconds}`;
+      }
+    : undefined;
 
   return (
     <ChipChoiceStoryWrap
       showClickCounter={showClickCounter}
-      defaultValue={useDefaultValue ? new Date('2023-10-15') : undefined}
       showClearButton={showClearButton}
+      defaultValue={useDefaultValue ? DEFAULT_VALUE : undefined}
       chipControlled={({ increaseCounter, ...props }) => (
-        <MobileChipChoice.Date
-          {...args}
-          {...props}
-          valueRender={formatter}
-          onClick={increaseCounter}
-          label={CHIP_CHOICE_STORY_ARGS.label}
-        />
+        <MobileChipChoice.Time {...args} {...props} valueRender={formatter} onClick={increaseCounter} />
       )}
     />
   );
 };
 
-export const chipChoiceDate: StoryObj<StoryProps> = {
+export const chipChoiceTime: StoryObj<StoryProps> = {
   render: Template,
 
   args: {
-    mode: 'date',
     ...CHIP_CHOICE_STORY_ARGS,
     useDefaultValue: false,
   },

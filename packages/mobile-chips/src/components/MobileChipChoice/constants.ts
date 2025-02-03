@@ -14,6 +14,7 @@ export const CHIP_CHOICE_TYPE = {
   DateRange: 'date-range',
   Single: 'single',
   Custom: 'custom',
+  Time: 'time',
 } as const;
 
 export const DEFAULT_LOCALE = new Intl.Locale('ru-RU');

@@ -13,7 +13,7 @@ import styles from './styles.module.scss';
 
 export type ChipChoiceBaseProps = Pick<
   ChipChoiceCommonProps,
-  'loading' | 'tabIndex' | 'showClearButton' | 'disabled' | 'icon' | 'label' | 'size' | 'onClick' | 'className'
+  'loading' | 'tabIndex' | 'disabled' | 'icon' | 'label' | 'size' | 'onClick' | 'className'
 > & {
   /** Отображаемое значение */
   valueToRender?: ReactNode;
@@ -40,7 +40,6 @@ export const ChipChoiceBase = forwardRef<HTMLDivElement, ChipChoiceBaseProps>(
       tabIndex = 0,
       onClearButtonClick,
       onKeyDown,
-      showClearButton: showClearButtonProp = true,
       ...rest
     },
     ref,
@@ -51,6 +50,7 @@ export const ChipChoiceBase = forwardRef<HTMLDivElement, ChipChoiceBaseProps>(
     const localRef = useRef<HTMLDivElement>(null);
 
     const clearButtonRef = useRef<HTMLButtonElement>(null);
+    const showClearButton = Boolean(onClearButtonClick);
 
     const [isDroplistOpened, setIsDroplistOpened] = useState(false);
 
@@ -93,8 +93,6 @@ export const ChipChoiceBase = forwardRef<HTMLDivElement, ChipChoiceBaseProps>(
       }
     };
 
-    const showClearButton = showClearButtonProp && (value instanceof Date || Boolean(value));
-
     return (
       <div
         {...extractSupportProps(rest)}
@@ -104,7 +102,6 @@ export const ChipChoiceBase = forwardRef<HTMLDivElement, ChipChoiceBaseProps>(
         data-size={size}
         data-variant={variant}
         data-loading={loading || undefined}
-        // data-test-id={testId || undefined}
         data-disabled={(!loading && disabled) || undefined}
         onClick={handleChipClick}
         onKeyDown={handleChipKeyDown}

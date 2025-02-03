@@ -1,4 +1,4 @@
-import { ReactNode, useCallback, useRef, useState } from 'react';
+import { ReactNode, useCallback, useRef } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
 import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
@@ -43,6 +43,9 @@ export function MobileChipChoiceDateRange({
   defaultValue,
   onChange,
   valueRender,
+  onClearButtonClick,
+  open: openProp,
+  onOpenChange,
   ...rest
 }: MobileChipChoiceDateRangeProps) {
   const [selectedValue, setSelectedValue] = useUncontrolledProp<Range>(value, defaultValue, onChange);
@@ -53,16 +56,14 @@ export function MobileChipChoiceDateRange({
     ? valueRender(selectedValue)
     : defaultRangeFormatter({ value: selectedValue, allLabel: t('allLabel') });
 
-  const clearValue = () => setSelectedValue(undefined);
-
   const localRef = useRef<HTMLDivElement>(null);
 
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useUncontrolledProp(openProp, false, onOpenChange);
 
   const closeDroplist = useCallback(() => {
     setOpen(false);
     setTimeout(() => localRef.current?.focus(), 0);
-  }, []);
+  }, [setOpen]);
 
   const handleOnKeyDown = useHandleOnKeyDown({ setOpen });
 
@@ -89,7 +90,7 @@ export function MobileChipChoiceDateRange({
       <ChipChoiceBase
         {...rest}
         ref={localRef}
-        onClearButtonClick={clearValue}
+        onClearButtonClick={onClearButtonClick}
         value={selectedValue}
         valueToRender={valueToRender}
         size={size}

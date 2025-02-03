@@ -1,8 +1,11 @@
 import { ValueOf } from '@snack-uikit/utils';
 
-import { MobileChipChoiceCustomProps } from '../MobileChipChoice/components';
-import { MobileChipChoiceDateProps } from '../MobileChipChoice/components/MobileChipChoiceDate';
-import { MobileChipChoiceDateRangeProps } from '../MobileChipChoice/components/MobileChipChoiceDateRange';
+import {
+  MobileChipChoiceCustomProps,
+  MobileChipChoiceDateProps,
+  MobileChipChoiceDateRangeProps,
+  MobileChipChoiceTimeProps,
+} from '../MobileChipChoice/components';
 import { CHIP_CHOICE_TYPE } from '../MobileChipChoice/constants';
 import { MobileChipChoiceMultipleProps, MobileChipChoiceSingleProps } from '../MobileChipChoice/types';
 import { CHIP_CHOICE_ROW_SIZE } from './constants';
@@ -29,6 +32,10 @@ type ChipChoiceDateRangeType = {
   type: typeof CHIP_CHOICE_TYPE.DateRange;
 } & MobileChipChoiceDateRangeProps;
 
+type ChipChoiceTimeType = {
+  type: typeof CHIP_CHOICE_TYPE.Time;
+} & MobileChipChoiceTimeProps;
+
 type ChipChoiceCustomType = {
   type: typeof CHIP_CHOICE_TYPE.Custom;
 } & MobileChipChoiceCustomProps;
@@ -41,6 +48,7 @@ export type ChipChoiceProps = {
   | ChipChoiceDateType
   | ChipChoiceDateTimeType
   | ChipChoiceDateRangeType
+  | ChipChoiceTimeType
   | ChipChoiceCustomType
 );
 

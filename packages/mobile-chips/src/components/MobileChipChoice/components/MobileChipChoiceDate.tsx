@@ -1,4 +1,5 @@
-import { ReactNode, useCallback, useMemo, useRef, useState } from 'react';
+import { ReactNode, useCallback, useMemo, useRef } from 'react';
+import { useUncontrolledProp } from 'uncontrollable';
 
 import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
 import { Calendar, CalendarProps } from '@snack-uikit/calendar';
@@ -42,6 +43,9 @@ export function MobileChipChoiceDate({
   onChange,
   valueRender,
   mode = 'date',
+  onClearButtonClick,
+  open: openProp,
+  onOpenChange,
   ...rest
 }: MobileChipChoiceDateProps) {
   const [selectedValue, setSelectedValue] = useValueControl<Date>({ value, defaultValue, onChange });
@@ -50,13 +54,13 @@ export function MobileChipChoiceDate({
 
   const localRef = useRef<HTMLDivElement>(null);
 
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useUncontrolledProp(openProp, false, onOpenChange);
   const handleOnKeyDown = useHandleOnKeyDown({ setOpen });
 
   const closeDroplist = useCallback(() => {
     setOpen(false);
     setTimeout(() => localRef.current?.focus(), 0);
-  }, []);
+  }, [setOpen]);
 
   const { t } = useLocale('Chips');
 
@@ -86,8 +90,6 @@ export function MobileChipChoiceDate({
       day: mode === 'date' ? 'numeric' : undefined,
     });
   }, [mode, selectedValue, showSeconds, t, valueRender]);
-
-  const clearValue = () => setSelectedValue(undefined);
 
   const handleChangeValue = useCallback(
     (value: Date) => {
@@ -122,7 +124,7 @@ export function MobileChipChoiceDate({
       <ChipChoiceBase
         {...rest}
         ref={localRef}
-        onClearButtonClick={clearValue}
+        onClearButtonClick={onClearButtonClick}
         value={selectedValue}
         valueToRender={valueToRender}
         size={size}

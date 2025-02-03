@@ -63,7 +63,7 @@
     "@snack-uikit/divider": "3.2.1",
     "@snack-uikit/fields": "0.33.0",
     "@snack-uikit/icons": "0.24.0",
-    "@snack-uikit/locale": "0.10.0",
+    "@snack-uikit/locale": "0.11.1-preview-985e2518.0",
     "@snack-uikit/modal": "0.14.4",
     "@snack-uikit/search": "0.10.6",
     "@snack-uikit/slider": "0.3.3",

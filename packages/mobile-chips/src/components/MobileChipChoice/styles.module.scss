@@ -94,3 +94,10 @@ $valueTypography: (
 .triggerClassName {
   --offset: #{styles-tokens-element.$space-drop-list-drop-offset};
 }
+
+.autoApplyFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}

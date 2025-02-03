@@ -26,11 +26,16 @@ const Template: StoryFn<StoryProps> = ({ useDefaultValue, showClickCounter, ...a
 
   return (
     <ChipChoiceStoryWrap
+      defaultValue={
+        useDefaultValue
+          ? ([new Date('2022-10-15'), new Date('2023-10-15')] as MobileChipChoiceDateRangeProps['value'])
+          : undefined
+      }
       showClickCounter={showClickCounter}
-      chipControlled={({ increaseCounter }) => (
+      chipControlled={({ increaseCounter, ...props }) => (
         <MobileChipChoice.DateRange
           {...args}
-          defaultValue={useDefaultValue ? [new Date(2022, 10, 15), new Date(2023, 10, 15)] : undefined}
+          {...props}
           onClick={increaseCounter}
           label={CHIP_CHOICE_STORY_ARGS.label}
           valueRender={formatter}

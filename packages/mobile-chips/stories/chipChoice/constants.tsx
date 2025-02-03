@@ -105,6 +105,9 @@ export const CHIP_CHOICE_ARG_TYPES: ArgTypes = {
   useDefaultValue: {
     name: '[Stories]: Init component with default value',
   },
+  showClearButton: {
+    name: '[Stories]: Show clear button',
+  },
   useBaseOptions: {
     name: '[Stories]: BaseOptions',
   },
@@ -115,4 +118,5 @@ export type ChipChoiceCustomStoryProps = {
   customFormatter: boolean;
   useDefaultValue: boolean;
   useBaseOptions: boolean;
+  showClearButton: boolean;
 };

@@ -32,3 +32,11 @@ export const COMMON_ARG_TYPES: ArgTypes = {
     },
   },
 };
+
+export const DEFAULT_VALUES = {
+  multiple2: ['vm-1'],
+  date: new Date('2025-01-01'),
+  single2: 'true',
+  dateRange: [new Date('2025-01-01'), new Date('2025-01-31')],
+  time: { hours: 12, minutes: 0 },
+};

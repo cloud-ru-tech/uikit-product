@@ -28,10 +28,16 @@ export const CHIP_CHOICE_TEST_IDS = {
   value: 'chip-choice__value',
   clearButton: 'chip-choice__clear-button',
   droplist: 'chip-choice__droplist',
+  footer: 'chip-choice__footer',
+  cancelButton: 'chip-choice__cancel-button',
+  approveButton: 'chip-choice__approve-button',
 };
 
 export const CHIP_CHOICE_ROW_IDS = {
-  clearAllButton: 'chip-choice-row__clear-all-button',
+  clearButton: 'chip-choice-row__clear-button',
+  addButton: 'chip-choice-row__add-button',
+  addButtonTooltip: 'chip-choice-row__add-button-tooltip',
+  addButtonOption: 'chip-choice-row__add-button-option',
 };
 
 export const CHIP_TOGGLE_TEST_IDS = {

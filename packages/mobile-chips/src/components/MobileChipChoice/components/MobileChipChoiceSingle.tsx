@@ -1,15 +1,17 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useUncontrolledProp } from 'uncontrollable';
 
 import { ItemId, MobileDroplist, SelectionSingleValueType } from '@sbercloud/uikit-product-mobile-dropdown';
 import { useLocale } from '@snack-uikit/locale';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { CHIP_CHOICE_TEST_IDS, SIZE } from '../../../constants';
-import { useFuzzySearch, useHandleOnKeyDown } from '../hooks';
+import { useAutoApplyFooter, useHandleOnKeyDown, useOptionSearch } from '../hooks';
 import { ContentRenderProps, MobileChipChoiceSingleProps } from '../types';
 import { FlattenOption, kindFlattenOptions } from '../utils';
 import { transformOptionsToItems } from '../utils/options';
 import { ChipChoiceBase } from './ChipChoiceBase';
+import styles from './styles.module.scss';
 
 export type ChipChoiceSingleValueFormatterProps = {
   label?: ItemId;
@@ -30,12 +32,24 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
   label,
   searchable: searchableProp,
   contentRender,
+  onClearButtonClick,
+  open: openProp,
+  onOpenChange,
+  virtualized,
+  disableFuzzySearch = false,
+  autoApply = true,
+  onApprove,
+  onCancel,
   ...rest
 }: MobileChipChoiceSingleProps<T>) {
   const [value, setValue] = useValueControl<SelectionSingleValueType>({
     value: valueProp,
     defaultValue,
     onChange: onChangeProp,
+  });
+
+  const [deferredValue, setDeferredValue] = useValueControl<SelectionSingleValueType>({
+    defaultValue,
   });
 
   const flattenOptions = useMemo(() => {
@@ -48,10 +62,12 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
 
   const { t } = useLocale('Chips');
 
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useUncontrolledProp(openProp, false, onOpenChange);
   const handleOnKeyDown = useHandleOnKeyDown({ setOpen });
 
   const flatMapOptions = useMemo(() => Object.values(flattenOptions), [flattenOptions]);
+
+  const dropListSelection = useMemo(() => (autoApply ? value : deferredValue), [autoApply, deferredValue, value]);
 
   const selectedOption = useMemo(
     () => (value ? flattenOptions[value] : ({} as FlattenOption<T>)),
@@ -64,15 +80,14 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
     ? valueRender(selectedOption)
     : defaultSingleValueFormatter({ label: selectedOption?.label, allLabel: t('allLabel') });
 
-  const fuzzySearch = useFuzzySearch(options, flatMapOptions);
+  const optionSearch = useOptionSearch({ options, flatMapOptions, disableFuzzySearch });
 
   const result = useMemo(
-    () => (!searchable || valueToRender === searchValue ? options : fuzzySearch(searchValue)),
-    [fuzzySearch, options, searchValue, searchable, valueToRender],
+    () => (!searchable || valueToRender === searchValue ? options : optionSearch(searchValue)),
+    [optionSearch, options, searchValue, searchable, valueToRender],
   );
   const items = useMemo(() => transformOptionsToItems<T>(result, contentRender), [contentRender, result]);
 
-  const clearValue = () => setValue(undefined);
   const chipRef = useRef<HTMLDivElement>(null);
 
   const handleSelectionChange = useCallback(
@@ -80,13 +95,36 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
       if (newValue !== undefined) {
         chipRef.current?.focus();
 
-        setOpen(false);
-        setValue(newValue);
-        setSearchValue('');
+        if (autoApply) {
+          setOpen(false);
+          setSearchValue('');
+          setValue(newValue);
+        } else {
+          setDeferredValue(newValue);
+        }
       }
     },
-    [setSearchValue, setValue],
+    [autoApply, setOpen, setValue, setDeferredValue],
   );
+  const handleOnCancelClick = () => {
+    onCancel?.();
+
+    setDeferredValue(value);
+    setOpen(false);
+  };
+
+  const handleOnApproveClick = () => {
+    onApprove?.();
+
+    setValue(deferredValue);
+    setOpen(false);
+  };
+
+  const autoApplyFooter = useAutoApplyFooter({
+    autoApply,
+    onApprove: handleOnApproveClick,
+    onCancel: handleOnCancelClick,
+  });
 
   useEffect(() => {
     if (searchValue && !open) {
@@ -97,21 +135,28 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
   return (
     <MobileDroplist
       items={items}
-      selection={{ value, onChange: handleSelectionChange, mode: 'single' }}
+      selection={{
+        value: dropListSelection,
+        onChange: handleSelectionChange,
+        mode: 'single',
+      }}
       data-test-id={CHIP_CHOICE_TEST_IDS.droplist}
       open={open}
       onOpenChange={open => {
         if (!open) {
           setSearchValue('');
+          handleOnCancelClick();
         }
         setOpen(open);
       }}
       label={label}
+      virtualized={virtualized}
+      footer={<div className={styles.footer}>{!autoApply && autoApplyFooter}</div>}
     >
       <ChipChoiceBase
         {...rest}
         ref={chipRef}
-        onClearButtonClick={clearValue}
+        onClearButtonClick={onClearButtonClick}
         value={value}
         valueToRender={valueToRender}
         label={label}
