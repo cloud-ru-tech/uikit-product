@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { HeaderContext } from '@tanstack/react-table';
 import { useMemo } from 'react';
 
-import { MobileChipChoiceRow } from '@sbercloud/uikit-product-mobile-chips';
 import { TagRow, TagRowProps } from '@snack-uikit/tag';
 import { toaster } from '@snack-uikit/toaster';
 
@@ -12,7 +11,7 @@ import componentReadme from '../README.md';
 import { MobileTable, MobileTableProps } from '../src';
 import { STORY_TEST_IDS } from './constants';
 import { generateRows, numberFormatter } from './helpers';
-import { StubData } from './types';
+import { Filters, StubData } from './types';
 
 const meta: Meta = {
   title: 'Mobile/Table',
@@ -20,21 +19,12 @@ const meta: Meta = {
 };
 export default meta;
 
-type Props = MobileTableProps<StubData>;
+type Props = MobileTableProps<StubData, Filters>;
 
-type StoryProps = Omit<Props, 'rowSelection' | 'sort'> & {
-  // rowSelection?: { enable: boolean; multiRow: boolean };
+type StoryProps = Props & {
   rowsAmount: number;
-  // disableSomeRows: boolean;
-  // pinSomeRows: boolean;
-  // showExport: boolean;
-  // statusColumnViewMode?: StoryStatusColumnViewMode;
   showActionsColumn?: boolean;
-  // rowSelectionMode?: 'single' | 'multi';
-  // enableOnRowClick: boolean;
 };
-
-// const PINNED_TOP_ROWS = ['0', '2'];
 
 const renderHeader = (ctx: HeaderContext<StubData, unknown>) => `Table column №${ctx.column.id}`;
 const accessorFn = (key: keyof StubData) => (row: StubData) =>
@@ -49,40 +39,66 @@ const tags: TagRowProps['items'] = [
   { label: 'tag6x', appearance: 'pink' },
 ];
 
-const columnFilters: MobileTableProps<StubData>['columnFilters'] = (
-  <MobileChipChoiceRow
-    size='s'
-    filters={[
-      {
-        id: 'filter1',
-        type: 'single',
-        label: 'Filter 1',
-        options: [
-          { value: '1', label: 'Option 1' },
-          { value: '2', label: 'Option 2' },
-          { value: '3', label: 'Option 3' },
-        ],
-      },
-      {
-        id: 'filter2',
-        type: 'multiple',
-        label: 'Filter 2',
-        options: [
-          { value: '1', label: 'Option 1' },
-          { value: '2', label: 'Option 2' },
-          { value: '3', label: 'Option 3' },
-        ],
-      },
-      {
-        id: 'filter3',
-        type: 'date',
-        label: 'Filter 3',
-      },
-    ]}
-  />
-);
+const columnFilters: Props['columnFilters'] = {
+  filters: [
+    {
+      id: 'single',
+      type: 'single',
+      label: 'Single',
+      pinned: true,
+      options: [
+        { value: '1', label: 'Option 1' },
+        { value: '2', label: 'Option 2' },
+        { value: '3', label: 'Option 3' },
+      ],
+    },
+    {
+      id: 'multiple',
+      type: 'multiple',
+      label: 'Multiple',
+      pinned: true,
+      options: [
+        { value: '1', label: 'Option 1' },
+        { value: '2', label: 'Option 2' },
+        { value: '3', label: 'Option 3' },
+      ],
+    },
+    {
+      id: 'single2',
+      type: 'single',
+      label: 'Single with apply button',
+      autoApply: false,
+      options: [
+        { value: '1', label: 'Option 1' },
+        { value: '2', label: 'Option 2' },
+        { value: '3', label: 'Option 3' },
+      ],
+    },
+    {
+      id: 'multiple2',
+      type: 'multiple',
+      label: 'Multiple with apply button',
+      autoApply: false,
+      options: [
+        { value: '1', label: 'Option 1' },
+        { value: '2', label: 'Option 2' },
+        { value: '3', label: 'Option 3' },
+      ],
+    },
+    {
+      id: 'date',
+      type: 'date',
+      label: 'Date',
+    },
+    {
+      id: 'time',
+      type: 'time',
+      label: 'Time',
+    },
+  ],
+};
 
-const columnDefinitions: MobileTableProps<StubData>['columnDefinitions'] = [
+const columnDefinitions: Props['columnDefinitions'] = [
   {
     id: '1',
     accessorKey: 'col1',
@@ -123,15 +139,6 @@ const columnDefinitions: MobileTableProps<StubData>['columnDefinitions'] = [
     enableSorting: true,
     enableResizing: true,
   },
-  // {
-  //   id: '5',
-  //   accessorKey: 'col5',
-  //   header: renderHeader,
-  //   accessorFn: accessorFn('col5'),
-  //   cell: ctx => <CopyCell value={ctx.getValue<string>()} />,
-  //   enableSorting: true,
-  //   enableResizing: true,
-  // },
   {
     id: '6',
     accessorKey: 'col6',

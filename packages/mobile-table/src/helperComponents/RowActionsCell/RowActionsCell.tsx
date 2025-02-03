@@ -2,6 +2,7 @@ import { CellContext, Row } from '@tanstack/react-table';
 import { MouseEvent, MouseEventHandler, useCallback, useMemo, useState } from 'react';
 
 import { MoreSVG } from '@sbercloud/uikit-product-icons';
+import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
 import { isBaseItemProps, MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
 import { ButtonFunction } from '@snack-uikit/button';
 
@@ -72,9 +73,9 @@ export type RowActionsColumnDefProps<TData> = {
 };
 
 /** Вспомогательная функция для создания ячейки с дополнительными действиями у строки */
-export function getRowActionsColumnDef<TData extends object>({
+export function getRowActionsColumnDef<TData extends object, TFilters extends FiltersState>({
   actionsGenerator,
-}: RowActionsColumnDefProps<TData>): MobileTableProps<TData>['columnDefinitions'][0] {
+}: RowActionsColumnDefProps<TData>): MobileTableProps<TData, TFilters>['columnDefinitions'][0] {
   return {
     id: ROW_ACTIONS_COLUMN_ID,
     meta: {

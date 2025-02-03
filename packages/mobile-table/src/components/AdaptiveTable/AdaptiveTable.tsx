@@ -1,3 +1,4 @@
+import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import {
   CellContext,
@@ -9,9 +10,13 @@ import {
 
 import { MobileTable, MobileTableProps } from '../MobileTable';
 
-type TableProps<T extends object> = DesktopTableProps<T> & MobileTableProps<T>;
+type TableProps<TData extends object, TFilters extends FiltersState> = DesktopTableProps<TData, TFilters> &
+  MobileTableProps<TData, TFilters>;
 
-export function AdaptiveTable<T extends object>({ layoutType, ...props }: WithLayoutType<TableProps<T>>) {
+export function AdaptiveTable<TState extends object, TFilters extends FiltersState>({
+  layoutType,
+  ...props
+}: WithLayoutType<TableProps<TState, TFilters>>) {
   const isMobile = layoutType === 'mobile';
   return isMobile ? <MobileTable headerBackground='1-level' {...props} /> : <Table {...props} />;
 }

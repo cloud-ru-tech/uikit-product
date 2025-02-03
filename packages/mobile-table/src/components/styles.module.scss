@@ -1,49 +1,49 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ds;
 
 .tableWrapper {
   position: relative;
   /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 0;
-  margin-top: calc(-1 * styles-theme-variables.$dimension-1m);
+  margin-top: calc(-1 * #{ds.$dimension-1m});
 }
 
 .header {
   display: flex;
   flex-direction: column;
-  gap: styles-theme-variables.$dimension-1m;
+  gap: ds.$dimension-1m;
   position: sticky;
   /* stylelint-disable-next-line declaration-property-value-allowed-list */
   z-index: 1;
   top: 0;
-  padding-top: styles-theme-variables.$dimension-1m;
-  padding-bottom: styles-theme-variables.$dimension-1m;
-  margin-bottom: calc(-1 * styles-theme-variables.$dimension-1m);
+  padding-top: ds.$dimension-1m;
+  padding-bottom: ds.$dimension-1m;
+  margin-bottom: calc(-1 * #{ds.$dimension-1m});
 
   &[data-background='default'] {
-    background-color: styles-theme-variables.$sys-neutral-background;
+    background-color: ds.$sys-neutral-background;
   }
 
   &[data-background='1-level'] {
-    background-color: styles-theme-variables.$sys-neutral-background1-level;
+    background-color: ds.$sys-neutral-background1-level;
   }
 
   &[data-background='2-level'] {
-    background-color: styles-theme-variables.$sys-neutral-background2-level;
+    background-color: ds.$sys-neutral-background2-level;
   }
 }
 
 .table {
   box-sizing: border-box;
-  border: styles-theme-variables.$border-width-012m solid styles-theme-variables.$sys-neutral-decor-default;
-  border-radius: styles-theme-variables.$dimension-050m;
-  background: styles-theme-variables.$sys-neutral-background1-level;
-  margin-top: styles-theme-variables.$dimension-1m;
+  border: ds.$border-width-012m solid ds.$sys-neutral-decor-default;
+  border-radius: ds.$dimension-050m;
+  background: ds.$sys-neutral-background1-level;
+  margin-top: ds.$dimension-1m;
 }
 
 .filtersWrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: styles-theme-variables.$dimension-050m;
+  gap: ds.$dimension-050m;
   align-items: center;
   justify-content: flex-start;
 }

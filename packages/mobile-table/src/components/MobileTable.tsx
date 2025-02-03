@@ -9,11 +9,12 @@ import {
 import cn from 'classnames';
 import { useCallback, useMemo } from 'react';
 
+import { FiltersState, MobileChipChoiceRowProps } from '@sbercloud/uikit-product-mobile-chips';
+import { MobileToolbar } from '@sbercloud/uikit-product-mobile-toolbar';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { useLocale } from '@snack-uikit/locale';
 import { SkeletonContextProvider } from '@snack-uikit/skeleton';
 import { PaginationState, TableProps } from '@snack-uikit/table';
-import { Toolbar } from '@snack-uikit/toolbar';
 
 import {
   getRowActionsColumnDef,
@@ -27,18 +28,17 @@ import { useLoadingTable, useStateControl } from './hooks';
 import styles from './styles.module.scss';
 import { fuzzyFilter } from './utils';
 
-export type MobileTableProps<TData extends object> = Pick<
-  TableProps<TData>,
+export type MobileTableProps<TData extends object, TFilters extends FiltersState> = Pick<
+  TableProps<TData, TFilters>,
   | 'data'
   | 'columnDefinitions'
   | 'suppressPagination'
   | 'suppressToolbar'
+  | 'suppressSearch'
   | 'search'
   | 'onRefresh'
-  | 'toolbarBefore'
   | 'toolbarAfter'
   | 'moreActions'
-  | 'columnFilters'
   | 'className'
   | 'enableFuzzySearch'
   | 'loading'
@@ -58,18 +58,19 @@ export type MobileTableProps<TData extends object> = Pick<
   WithSupportProps<{
     headlineId?: string;
     headerBackground?: 'default' | '1-level' | '2-level';
+    columnFilters?: MobileChipChoiceRowProps<FiltersState>;
   }>;
 
-export function MobileTable<TData extends object>({
+export function MobileTable<TData extends object, TFilters extends FiltersState>({
   data,
   columnDefinitions,
   headlineId,
   suppressPagination = false,
   suppressToolbar = false,
+  suppressSearch = false,
   enableFuzzySearch = false,
   search,
   onRefresh,
-  toolbarBefore,
   toolbarAfter,
   moreActions,
   columnFilters,
@@ -89,7 +90,7 @@ export function MobileTable<TData extends object>({
   manualFiltering = false,
   getRowId,
   ...rest
-}: MobileTableProps<TData>) {
+}: MobileTableProps<TData, TFilters>) {
   const defaultPaginationState = useMemo(() => ({ pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE }), []);
 
   const { state: sorting, onStateChange: onSortingChange } = useStateControl<SortingState>(sortingProp, []);
@@ -140,25 +141,23 @@ export function MobileTable<TData extends object>({
     <div className={cn(styles.tableWrapper, className)} {...extractSupportProps(rest)}>
       {(!suppressToolbar || columnFilters) && (
         <div className={styles.header} data-background={headerBackground}>
-          {!suppressToolbar && (
-            <Toolbar
-              search={{
-                value: globalFilter,
-                onChange: onGlobalFilterChange,
-                loading: search?.loading,
-                placeholder: search?.placeholder || t('searchPlaceholder'),
-              }}
-              checked={table.getIsAllPageRowsSelected()}
-              indeterminate={table.getIsSomePageRowsSelected()}
-              onRefresh={onRefresh ? handleOnRefresh : undefined}
-              outline
-              before={toolbarBefore}
-              after={toolbarAfter}
-              moreActions={moreActions}
-            />
-          )}
-
-          {columnFilters && <div className={styles.filtersWrapper}>{columnFilters}</div>}
+          <MobileToolbar
+            search={
+              suppressSearch
+                ? undefined
+                : {
+                    value: globalFilter,
+                    onChange: onGlobalFilterChange,
+                    loading: search?.loading,
+                    placeholder: search?.placeholder || t('searchPlaceholder'),
+                  }
+            }
+            onRefresh={onRefresh ? handleOnRefresh : undefined}
+            outline
+            filterRow={columnFilters}
+            after={toolbarAfter}
+            moreActions={moreActions}
+          />
         </div>
       )}
 

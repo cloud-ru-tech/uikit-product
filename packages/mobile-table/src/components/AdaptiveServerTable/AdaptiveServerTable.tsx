@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
+import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import {
   PaginationState,
@@ -12,9 +13,13 @@ import { useStateControl } from '../hooks';
 import { MobileTable, MobileTableProps } from '../MobileTable';
 import { onSearchDebounced } from '../utils';
 
-type ServerTableProps<T extends object> = DesktopServerTableProps<T> & Omit<MobileTableProps<T>, 'data'>;
+type ServerTableProps<TData extends object, TFilters extends FiltersState> = DesktopServerTableProps<TData, TFilters> &
+  Omit<MobileTableProps<TData, TFilters>, 'data'>;
 
-export function AdaptiveServerTable<T extends object>({ layoutType, ...props }: WithLayoutType<ServerTableProps<T>>) {
+export function AdaptiveServerTable<TData extends object, TFilters extends FiltersState>({
+  layoutType,
+  ...props
+}: WithLayoutType<ServerTableProps<TData, TFilters>>) {
   const isMobile = layoutType === 'mobile';
 
   const {

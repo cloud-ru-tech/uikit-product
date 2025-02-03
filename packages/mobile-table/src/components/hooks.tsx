@@ -2,6 +2,7 @@ import { getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import { useMemo } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
+import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
 import { SkeletonText } from '@snack-uikit/skeleton';
 import { TableProps } from '@snack-uikit/table';
 
@@ -27,12 +28,15 @@ export function useStateControl<TState>(
   };
 }
 
-type UseLoadingTableProps<TData extends object> = {
-  columnDefinitions: TableProps<TData>['columnDefinitions'];
+type UseLoadingTableProps<TData extends object, TFilters extends FiltersState> = {
+  columnDefinitions: TableProps<TData, TFilters>['columnDefinitions'];
   pageSize: number;
 };
 
-export function useLoadingTable<TData extends object>({ pageSize, columnDefinitions }: UseLoadingTableProps<TData>) {
+export function useLoadingTable<TData extends object, TFilters extends FiltersState>({
+  pageSize,
+  columnDefinitions,
+}: UseLoadingTableProps<TData, TFilters>) {
   const data = useMemo(() => (Array.from({ length: pageSize }).map(() => ({})) || []) as TData[], [pageSize]);
   const columns = useMemo(
     () =>
