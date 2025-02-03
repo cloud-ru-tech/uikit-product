@@ -1,0 +1,60 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+
+.wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  width: max-content;
+  height: 64px;
+  margin-bottom: 16px;
+  padding: 0 24px;
+
+  background-color: ste.$sys-neutral-background1-level;
+  border: 1px solid ste.$sys-neutral-decor-default;
+  border-radius: ste.$dimension-050m;
+}
+
+.tagRowWrapper {
+  resize: horizontal;
+
+  overflow: auto hidden;
+  display: flex;
+  gap: 8px;
+
+  width: 400px;
+  padding: 8px;
+
+  background-color: ste.$sys-neutral-background1-level;
+  border: 1px solid ste.$sys-neutral-decor-default;
+  border-radius: ste.$dimension-050m;
+
+  &[data-full-width='true'] {
+    width: 100%;
+  }
+}
+
+$border-width: 0.5px;
+
+.table {
+  display: inline-grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  background-color: ste.$sys-neutral-background1-level;
+  border: $border-width solid ste.$sys-neutral-decor-default;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  padding: 8px;
+
+  border: $border-width solid ste.$sys-neutral-decor-disabled;
+}
+
+.headerCell {
+  text-transform: uppercase;
+  justify-content: center;
+}

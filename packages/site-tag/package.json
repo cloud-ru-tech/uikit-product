@@ -1,0 +1,42 @@
+{
+  "name": "@sbercloud/uikit-product-site-tag",
+  "title": "Site Tag",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "site tag predifined",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-tag",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/site-tag"
+  },
+  "author": "Ruslan Chulkov <rgchulkov@cloud.ru>",
+  "contributors": [
+    "Ruslan Chulkov <rgchulkov@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@snack-uikit/promo-tag": "0.7.1",
+    "@snack-uikit/tooltip": "0.16.0",
+    "@snack-uikit/utils": "3.7.0",
+    "@sbercloud/uikit-product-utils": "3.8.7"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
