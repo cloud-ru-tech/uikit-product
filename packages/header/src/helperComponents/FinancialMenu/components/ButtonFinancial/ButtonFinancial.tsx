@@ -40,7 +40,7 @@ export function ButtonFinancial({
       >
         {isLoading && <Spinner size='xs' />}
 
-        {valueVisible && (
+        {!isLoading && valueVisible && (
           <>
             <div className={styles.label}>{formatNumber(value, { type: formatNumber.types.DigitSpaces })}</div>
 
