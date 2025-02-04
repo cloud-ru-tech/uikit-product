@@ -51,6 +51,14 @@
 | footerDescription | `string` | - | Описание секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS - класснейм |
+## SectionPersonalManager
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| onGetConsultationClick* | `() => void` | - | Хэндлер клика по кнопке "Получить консультацию" |
+| image | `string` | - | Ссылка на изображение |
+| className | `string` | - | CSS-класс |
 
 
 [//]: DOCUMENTATION_SECTION_END

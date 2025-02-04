@@ -1,0 +1,111 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.sectionPersonalManager {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+
+  flex-direction: row;
+  gap: var.$dimension-4m;
+
+  &[data-layout-type='tablet'] {
+    flex-direction: column;
+    gap: var.$dimension-2m;
+  }
+
+  &[data-layout-type='mobile'] {
+    flex-direction: column;
+    gap: var.$dimension-2m;
+  }
+}
+
+.card {
+  background-color: var.$sys-neutral-background;
+
+  padding: var.$dimension-4m;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    padding: var.$dimension-3m;
+  }
+}
+
+.cardTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: var.$dimension-2m;
+}
+
+.leftSide {
+  display: flex;
+  gap: var.$dimension-3m;
+
+  flex-direction: row;
+
+  &[data-layout-type='tablet'] {
+    justify-content: space-between;
+  }
+
+  &[data-layout-type='mobile'] {
+    flex-direction: column-reverse;
+  }
+}
+
+.approachTextWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var.$dimension-3m;
+}
+
+.consultationButton {
+  &[data-layout-type='mobile'] {
+    width: 100%;
+  }
+}
+
+.expertiseCards {
+  display: flex;
+
+  flex-direction: row;
+  gap: var.$dimension-4m;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile']{
+    flex-direction: column;
+    gap: var.$dimension-2m;
+  }
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &[data-layout-type='tablet'] {
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 288px;
+  }
+
+  &[data-layout-type='mobile'] {
+    overflow: hidden;
+  }
+}
+
+.imageBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var.$sys-neutral-accent-default;
+  opacity: 0.08;
+}
+
+.approachManager {
+  position: relative;
+  object-fit: cover;
+  pointer-events: none;
+}
