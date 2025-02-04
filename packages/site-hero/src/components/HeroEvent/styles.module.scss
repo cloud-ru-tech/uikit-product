@@ -1,11 +1,13 @@
 @use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as ds;
 
-.heroEventBackground--neutral-background1-level {
-  background-color: ds.$sys-neutral-background1-level;
-}
+.sectionWrapper {
+  &[data-section-background='neutral-background1-level'] {
+    background-color: ds.$sys-neutral-background1-level;
+  }
 
-.heroEventBackground--neutral-background {
-  background-color: ds.$sys-neutral-background;
+  &[data-section-background='neutral-background'] {
+    background-color: ds.$sys-neutral-background;
+  }
 }
 
 .wrapper {

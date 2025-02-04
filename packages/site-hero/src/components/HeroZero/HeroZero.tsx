@@ -47,7 +47,8 @@ export function HeroZero({
   return (
     <Layout.SectionWrapper
       layoutType={layoutType}
-      className={cn(className, styles['heroBackground--' + backgroundColor])}
+      className={cn(className, styles.sectionWrapper)}
+      data-section-background={backgroundColor}
       {...extractSupportProps(rest)}
     >
       <div className={cn(styles.heroZero, { [styles.withBottomPadding]: showBottomPadding })}>

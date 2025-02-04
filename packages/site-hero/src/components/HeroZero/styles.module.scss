@@ -13,12 +13,14 @@
   }
 }
 
-.heroBackground--neutral-background1-level {
-  background-color: var.$sys-neutral-background1-level;
-}
+.sectionWrapper {
+  &[data-section-background='neutral-background1-level'] {
+    background-color: var.$sys-neutral-background1-level;
+  }
 
-.heroBackground--neutral-background {
-  background-color: var.$sys-neutral-background;
+  &[data-section-background='neutral-background'] {
+    background-color: var.$sys-neutral-background;
+  }
 }
 
 .withBottomPadding {

@@ -58,7 +58,8 @@ export function HeroEvent({
   return (
     <Layout.SectionWrapper
       layoutType={layoutType}
-      className={cn(className, styles['heroEventBackground--' + backgroundColor])}
+      className={cn(className, styles.sectionWrapper)}
+      data-section-background={backgroundColor}
     >
       <section className={styles.wrapper} data-layout-type={layoutType} {...extractSupportProps(rest)}>
         <div className={styles.heroEvent} data-layout-type={layoutType}>
