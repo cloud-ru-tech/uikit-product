@@ -83,7 +83,8 @@ export function SectionBasic({
   return (
     <Layout.SectionWrapper
       layoutType={layoutType}
-      className={cn(className, styles['sectionBackground--' + backgroundColor])}
+      className={cn(className, styles.wrapper)}
+      data-section-background={backgroundColor}
       {...extractSupportProps(rest)}
     >
       <div className={styles.sectionBasic} data-layout-type={layoutType}>

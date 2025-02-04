@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import debounce from 'lodash.debounce';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -42,25 +42,25 @@ export function SectionExperts({
 
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  const calculateAmountOfItems = useCallback(() => {
-    const wrapperWidth = wrapperRef.current?.offsetWidth;
-    if (!wrapperWidth) {
-      return;
-    }
-
-    setItemsPerPageAmount(calculateAmountOfItemsPerPage(wrapperWidth));
-  }, []);
-
   useEffect(() => {
     const node = wrapperRef.current;
     if (!node) {
       return;
     }
 
+    const calculateAmountOfItems = () => {
+      const wrapperWidth = wrapperRef.current?.offsetWidth;
+      if (!wrapperWidth) {
+        return;
+      }
+
+      setItemsPerPageAmount(calculateAmountOfItemsPerPage(wrapperWidth));
+    };
+
     const observer = new ResizeObserver(debounce(calculateAmountOfItems, 100));
     observer.observe(node);
     return () => observer.disconnect();
-  }, [calculateAmountOfItems]);
+  }, []);
 
   const showArrows = useMemo(() => {
     if (MOBILE_LAYOUTS.includes(layoutType)) {
@@ -73,7 +73,8 @@ export function SectionExperts({
   return (
     <Layout.SectionWrapper
       layoutType={layoutType}
-      className={cn(className, styles['sectionBackground--' + backgroundColor])}
+      className={cn(className, styles.wrapper)}
+      data-section-background={backgroundColor}
       {...extractSupportProps(rest)}
     >
       <div ref={wrapperRef} className={styles.siteSectionExperts} data-layout-type={layoutType}>
