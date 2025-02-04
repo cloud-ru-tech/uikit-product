@@ -96,7 +96,7 @@ export function PopoverContent({
               isMobile={isMobile}
             />
 
-            <Divider className={styles.divider} />
+            <Divider className={isMobile ? styles.divider : styles.wideDivider} />
           </>
         )}
 
@@ -111,14 +111,14 @@ export function PopoverContent({
 
         {bonusGrants.map(grant => (
           <Fragment key={grant.id}>
-            <Divider className={styles.grantDivider} />
+            <Divider className={styles.divider} />
             <Grant {...grant} isMobile={isMobile} />
           </Fragment>
         ))}
 
         {(starterGrant?.isAvailable || starterGrant?.inProcess) && (
           <>
-            <Divider className={styles.grantDivider} />
+            <Divider className={styles.divider} />
             <StarterGrant {...starterGrant} onGetGrantClick={handleGetStarterGrantClick} isMobile={isMobile} />
           </>
         )}

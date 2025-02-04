@@ -27,11 +27,11 @@
 }
 
 .divider,
-.grantDivider {
+.wideDivider {
   grid-column: 1 / 4;
 }
 
-.divider {
+.wideDivider {
   width: calc(100% + #{styles-theme-variables.$dimension-4m});
   margin: 0 calc(-1 * #{styles-theme-variables.$dimension-2m});
 }
