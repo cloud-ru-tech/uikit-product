@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.33 (2025-02-04)</small>
+
+* fix(PDS-1519): Header - the content of financial menu button is hidden when loading ([5af70a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5af70a5))
+* feat(PDS-1519): Header - added loader for financialMenu ([9c3ad4f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9c3ad4f))
+
+
+
+
+
 ## <small>2.33.32 (2025-01-23)</small>
 
 * fix(PDS-1412): Header - deleted the link from title and added the link text to the section when ther ([cf2cf4f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf2cf4f))
