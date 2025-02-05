@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-modal-predefined",
   "title": "Modal Predefined",
-  "version": "0.5.25",
+  "version": "0.5.26",
   "sideEffects": [
     "*.css",
     "*.woff",
