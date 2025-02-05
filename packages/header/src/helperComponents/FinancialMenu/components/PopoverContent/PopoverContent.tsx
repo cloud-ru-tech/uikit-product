@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { Fragment, MouseEventHandler } from 'react';
 
 import { formatNumber } from '@sbercloud/ft-formatters';
@@ -96,7 +97,12 @@ export function PopoverContent({
               isMobile={isMobile}
             />
 
-            <Divider className={isMobile ? styles.divider : styles.wideDivider} />
+            <Divider
+              className={cn({
+                [styles.divider]: isMobile,
+                [styles.wideDivider]: !isMobile,
+              })}
+            />
           </>
         )}
 

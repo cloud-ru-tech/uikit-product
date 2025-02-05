@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 
 import { PlusSVG } from '@sbercloud/uikit-product-icons';
-import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { AdaptiveTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
+import { LAYOUT_TYPE, useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonTonal } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
-import { QuestionTooltip, Tooltip, TooltipProps } from '@snack-uikit/tooltip';
+import { QuestionTooltip } from '@snack-uikit/tooltip';
 import { Typography } from '@snack-uikit/typography';
 
 import { textProvider, Texts } from '../../../../../../helpers';
@@ -34,7 +34,7 @@ export function FinanceInfoRow({
 }: FinanceInfoRowProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
-  const renderButton = () => (
+  const plusButton = (
     <ButtonTonal
       size='xs'
       label={isMobile ? undefined : actionButtonText}
@@ -43,17 +43,6 @@ export function FinanceInfoRow({
       disabled={isButtonDisabled}
     />
   );
-
-  function AdaptiveTooltip() {
-    const props: TooltipProps = {
-      className: styles.negativeBalanceTooltip,
-      tip: buttonTip,
-      placement: 'left',
-      children: renderButton(),
-    };
-
-    return isMobile ? <MobileTooltip {...props} /> : <Tooltip {...props} />;
-  }
 
   return (
     <>
@@ -87,7 +76,20 @@ export function FinanceInfoRow({
         </Typography.SansLabelL>
       </div>
 
-      <div className={styles.rightAlign}>{isButtonDisabled ? AdaptiveTooltip() : renderButton()}</div>
+      <div className={styles.rightAlign}>
+        {isButtonDisabled ? (
+          <AdaptiveTooltip
+            layoutType={isMobile ? LAYOUT_TYPE.Mobile : LAYOUT_TYPE.Desktop}
+            className={styles.negativeBalanceTooltip}
+            tip={buttonTip}
+            placement={'left'}
+          >
+            {plusButton}
+          </AdaptiveTooltip>
+        ) : (
+          plusButton
+        )}
+      </div>
 
       {description && (
         <Typography.SansBodyS tag='div' className={styles.description}>
