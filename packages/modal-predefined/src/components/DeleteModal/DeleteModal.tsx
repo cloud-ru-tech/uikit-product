@@ -96,6 +96,7 @@ export function DeleteModal({
               <ButtonFilled
                 label={textProvider<string>(languageCode, Texts.Delete)}
                 loading={deleting}
+                data-test-id='delete-modal__approve-button'
                 onClick={handleDelete}
                 size='m'
                 appearance='destructive'
@@ -103,6 +104,7 @@ export function DeleteModal({
               <ButtonOutline
                 label={textProvider<string>(languageCode, Texts.Cancel)}
                 onClick={handleCancel}
+                data-test-id='delete-modal__cancel-button'
                 appearance='neutral'
                 size='m'
               />
