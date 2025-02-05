@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.24 (2025-02-05)</small>
+
+* feat(PDS-1081)!: use filter props from toolbar for columnFilters ([f2292aa](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f2292aa))
+
+
+
+
+
 ## <small>0.5.23 (2025-02-05)</small>
 
 ### Only dependencies have been changed

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.23 (2025-02-05)</small>
+
+* feat(PDS-1081): up deps, add virtualized prop ([8917f50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8917f50))
+
+
+
+
+
 ## <small>0.6.22 (2025-02-05)</small>
 
 ### Only dependencies have been changed

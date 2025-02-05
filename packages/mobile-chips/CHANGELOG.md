@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.6.23 (2025-02-05)</small>
+
+* feat(PDS-1081)!: add chip choice time, replace showClearButton with onClearButtonClick in individual ([8685e47](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8685e47))
+
+
+
+
+
 ## <small>0.6.22 (2025-02-05)</small>
 
 ### Only dependencies have been changed
