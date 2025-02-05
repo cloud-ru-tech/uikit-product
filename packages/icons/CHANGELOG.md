@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>10.2.13 (2025-02-05)</small>
+
+* feat(PDS-1286)!: updated service icons ([c950c52](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c950c52))
+* chore(PDS-1286): updated icons import script ([d75bfa2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d75bfa2))
+* feat(PDS-1286): interface product icons ([131bab9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/131bab9))
+
+
+
+
+
 ## <small>10.2.12 (2025-01-09)</small>
 
 * feat(PDS-1276): added bootcamp and gitverse logo ([aa23638](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aa23638))

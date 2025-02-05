@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.11 (2025-02-05)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@10.2.13](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.0.10 (2025-02-05)</small>
 
 * fix(PDS-1381): site hero background color minor improvement ([656e274](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/656e274))
