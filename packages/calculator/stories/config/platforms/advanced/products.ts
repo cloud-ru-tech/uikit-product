@@ -1,5 +1,5 @@
 import { CatalogConfig, PLATFORM } from '@sbercloud/uikit-product-calculator';
-import { CloudBackupAndRecoverySapSVG, DistributedCacheServiceForMemcachedSVG } from '@sbercloud/uikit-product-icons';
+import { CloudBackupAndRecoverySVG, DistributedCacheServiceForMemcachedSVG } from '@sbercloud/uikit-product-icons';
 
 import { ADVANCED_PRODUCT } from './constants';
 import { CLOUD_BACKUP_FORM_CONFIG, DSC_MEMCACHED_FORM_CONFIG } from './product-config';
@@ -22,7 +22,7 @@ export const ADVANCED_PRODUCTS: CatalogConfig['products'] = {
     label: 'Advanced Cloud Backup and Recovery',
     caption: 'Резервное копирование облачных дисков и серверов',
     formConfig: CLOUD_BACKUP_FORM_CONFIG,
-    icon: CloudBackupAndRecoverySapSVG,
+    icon: CloudBackupAndRecoverySVG,
     enableChangeProductQuantity: false,
   },
 };
