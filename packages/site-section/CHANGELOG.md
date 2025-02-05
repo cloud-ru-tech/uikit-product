@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.8 (2025-02-05)</small>
+
+* feat(PDS-1381): section card leading ([7f197ee](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7f197ee))
+* fix(PDS-1381): section basic and experts background color minor improvement ([383021b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/383021b))
+
+
+
+
+
 ## <small>0.0.7 (2025-01-29)</small>
 
 * feat(PDS-1403): add section accordion ([c02434e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c02434e))

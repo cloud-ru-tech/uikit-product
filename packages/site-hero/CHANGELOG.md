@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.10 (2025-02-05)</small>
+
+* fix(PDS-1381): site hero background color minor improvement ([656e274](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/656e274))
+
+
+
+
+
 ## <small>0.0.9 (2025-01-16)</small>
 
 * fix(SITE-8603): HeroEvent place link style fix ([d498545](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d498545))

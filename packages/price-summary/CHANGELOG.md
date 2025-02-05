@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.11 (2025-02-05)</small>
+
+* fix(PDS-1584): replaced unsupported character ([c8938f6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c8938f6))
+* chore(PDS-1491): fix storybook for price summary ([5664dc8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5664dc8))
+
+
+
+
+
 ## <small>0.0.10 (2025-01-27)</small>
 
 * feat(PDS-1491)!: added year period, periodOptions is a required prop ([1ad4c5d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ad4c5d))

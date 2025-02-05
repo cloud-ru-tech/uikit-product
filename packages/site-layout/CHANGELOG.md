@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.8 (2025-02-05)</small>
+
+* fix(PDS-1381): data attributes support for site layout sectionWrapper ([7997f3d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7997f3d))
+
+
+
+
+
 ## <small>0.0.7 (2024-12-28)</small>
 
 * fix(PDS-1112): site layout header wrapper improvement ([1ab8ea1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ab8ea1))
