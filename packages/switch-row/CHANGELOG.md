@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.5.12 (2025-02-05)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-utils@3.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.5.11 (2025-01-30)</small>
 
 * feat(PDS-780): Make text grey only when disabled switch row is unchecked ([c58c687](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c58c687))

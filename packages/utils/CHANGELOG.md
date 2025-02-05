@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>3.8.8 (2025-02-05)</small>
+
+* feat(PDS-1181): add text provider hook ([c897d17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c897d17))
+
+
+
+
+
 ## <small>3.8.7 (2024-12-26)</small>
 
 * fix(FF-5734): eslint fixes ([4ba62cc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4ba62cc))

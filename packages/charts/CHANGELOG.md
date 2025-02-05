@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.12.10 (2025-02-05)</small>
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-localization@0.13.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/localization/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@3.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## <small>0.12.9 (2025-01-16)</small>
 
 * fix(FF-6045): deps updated to resolve vulnerabilities ([2003088](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2003088))

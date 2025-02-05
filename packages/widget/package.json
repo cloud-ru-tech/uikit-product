@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-widget",
   "title": "Widget",
-  "version": "0.6.17",
+  "version": "0.6.18",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,9 +32,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-card-predefined": "0.7.16",
-    "@sbercloud/uikit-product-icons": "10.2.13",
-    "@sbercloud/uikit-product-utils": "3.8.7",
+    "@sbercloud/uikit-product-card-predefined": "0.7.17",
+    "@sbercloud/uikit-product-icons": "10.2.14",
+    "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/button": "0.19.3",
     "@snack-uikit/carousel": "0.4.4",
     "@snack-uikit/icon-predefined": "0.7.1",
