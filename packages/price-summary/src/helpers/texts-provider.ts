@@ -20,7 +20,7 @@ export enum Texts {
 const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
   [LanguageCodeType.ruRU]: {
     [Texts.Total]: 'Итого',
-    [Texts.Vat]: 'с учётом НДС',
+    [Texts.Vat]: 'с учетом НДС',
     [Texts.PricePeriodYear]: 'в год',
     [Texts.PricePeriodMonth]: 'в месяц',
     [Texts.PricePeriodDay]: 'в день',
