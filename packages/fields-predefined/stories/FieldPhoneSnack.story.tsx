@@ -9,7 +9,7 @@ import { FieldPhone, FieldPhoneOptionsProps, FieldPhoneProps, usePredefinedPhone
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Console/Fields/Field Phone',
+  title: 'Console/Fields Predefined/Field Phone',
   component: FieldPhone,
 };
 export default meta;
