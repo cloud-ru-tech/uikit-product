@@ -2,17 +2,18 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import cn from 'classnames';
 import { Fragment } from 'react';
 
+import { TagPredefined } from '@sbercloud/uikit-product-site-tag';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { TagPromo, TagPromoProps } from '../src/components';
 import { SIZE } from '../src/components/constants';
-import { PROMO_TYPE } from '../src/components/TagPromo/constants';
+import { PROMO_TYPE, TagPromoProps } from '../src/components/TagPredefined/helpers';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Site/Tag Predefined/Tag Promo',
-  component: TagPromo,
+  component: TagPredefined,
 };
 
 export default meta;
@@ -26,7 +27,7 @@ const Template: StoryFn<TagPromoProps> = ({ ...args }) => {
     <>
       <div className={styles.wrapper}>
         Controlled:
-        <TagPromo {...args} />
+        <TagPredefined {...args} variant='promo' />
       </div>
 
       <div className={styles.table} style={{ '--columns': 3 }}>
@@ -41,7 +42,7 @@ const Template: StoryFn<TagPromoProps> = ({ ...args }) => {
             <div className={headerCellClassnames}>{type}</div>
             {sizes.map(size => (
               <div key={size} className={styles.cell}>
-                <TagPromo type={type} size={size} />
+                <TagPredefined variant='promo' type={type} size={size} />
               </div>
             ))}
           </Fragment>
@@ -57,7 +58,16 @@ export const tagPromo: StoryObj<TagPromoProps> = {
     type: 'free-configuration',
     size: 's',
   },
-  argTypes: {},
+  argTypes: {
+    type: {
+      options: Object.values(PROMO_TYPE),
+    },
+    variant: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

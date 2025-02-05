@@ -1,14 +1,20 @@
 import { ValueOf } from '@snack-uikit/utils';
 
-import { TagSpecial, TagSpecialProps } from '../../helperComponents';
-import { PLATFORM_TYPE } from './constants';
+import { TagPredefinedCommonProps, TagProps } from '../types';
 
-export type TagPlatformProps = {
+export const PLATFORM_TYPE = {
+  Evolution: 'evolution',
+  Advanced: 'advanced',
+  MlSpace: 'ml-space',
+  Vmware: 'vmware',
+} as const;
+
+export type TagPlatformProps = TagPredefinedCommonProps & {
   type: ValueOf<typeof PLATFORM_TYPE>;
-  size: TagSpecialProps['size'];
+  variant: 'platform';
 };
 
-const getTagSpecialArgs = (type: TagPlatformProps['type']): Pick<TagSpecialProps, 'text' | 'tip'> | null => {
+export const getTagPlatformProps = (type: TagPlatformProps['type']): TagProps => {
   switch (type) {
     case PLATFORM_TYPE.Evolution:
       return {
@@ -35,9 +41,3 @@ const getTagSpecialArgs = (type: TagPlatformProps['type']): Pick<TagSpecialProps
       return null;
   }
 };
-
-export function TagPlatform({ type, size }: TagPlatformProps) {
-  const tagArgs = getTagSpecialArgs(type);
-
-  return tagArgs && <TagSpecial size={size} appearance='neutral' {...tagArgs} />;
-}

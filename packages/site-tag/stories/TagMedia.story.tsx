@@ -5,14 +5,14 @@ import { Fragment } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { TagMedia, TagMediaProps } from '../src/components';
+import { TagPredefined } from '../src/components';
 import { SIZE } from '../src/components/constants';
-import { MEDIA_TYPE } from '../src/components/TagMedia/constants';
+import { MEDIA_TYPE, TagMediaProps } from '../src/components/TagPredefined/helpers';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Site/Tag Predefined/Tag Media',
-  component: TagMedia,
+  component: TagPredefined,
 };
 
 export default meta;
@@ -26,7 +26,7 @@ const Template: StoryFn<TagMediaProps> = ({ ...args }) => {
     <>
       <div className={styles.wrapper}>
         Controlled:
-        <TagMedia {...args} />
+        <TagPredefined {...args} variant='media' />
       </div>
 
       <div className={styles.table} style={{ '--columns': 3 }}>
@@ -41,7 +41,7 @@ const Template: StoryFn<TagMediaProps> = ({ ...args }) => {
             <div className={headerCellClassnames}>{type}</div>
             {sizes.map(size => (
               <div key={size} className={styles.cell}>
-                <TagMedia type={type} size={size} />
+                <TagPredefined type={type} size={size} variant='media' />
               </div>
             ))}
           </Fragment>
@@ -57,7 +57,16 @@ export const tagMedia: StoryObj<TagMediaProps> = {
     type: 'news',
     size: 'xs',
   },
-  argTypes: {},
+  argTypes: {
+    type: {
+      options: Object.values(MEDIA_TYPE),
+    },
+    variant: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

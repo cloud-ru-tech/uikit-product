@@ -5,14 +5,14 @@ import { Fragment } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { TagFormat, TagFormatProps } from '../src/components';
+import { TagPredefined } from '../src';
 import { SIZE } from '../src/components/constants';
-import { FORMAT_TYPE } from '../src/components/TagFormat/constants';
+import { FORMAT_TYPE, TagFormatProps } from '../src/components/TagPredefined/helpers';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Site/Tag Predefined/Tag Format',
-  component: TagFormat,
+  component: TagPredefined,
 };
 
 export default meta;
@@ -26,7 +26,7 @@ const Template: StoryFn<TagFormatProps> = ({ ...args }) => {
     <>
       <div className={styles.wrapper}>
         Controlled:
-        <TagFormat {...args} />
+        <TagPredefined {...args} variant='format' />
       </div>
 
       <div className={styles.table} style={{ '--columns': 3 }}>
@@ -41,7 +41,7 @@ const Template: StoryFn<TagFormatProps> = ({ ...args }) => {
             <div className={headerCellClassnames}>{type}</div>
             {sizes.map(size => (
               <div key={size} className={styles.cell}>
-                <TagFormat type={type} size={size} />
+                <TagPredefined variant='format' type={type} size={size} />
               </div>
             ))}
           </Fragment>
@@ -57,7 +57,16 @@ export const tagFormat: StoryObj<TagFormatProps> = {
     type: 'online',
     size: 'xs',
   },
-  argTypes: {},
+  argTypes: {
+    type: {
+      options: Object.values(FORMAT_TYPE),
+    },
+    variant: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

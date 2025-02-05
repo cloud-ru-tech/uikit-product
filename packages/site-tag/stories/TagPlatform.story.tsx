@@ -2,17 +2,18 @@ import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import cn from 'classnames';
 import { Fragment } from 'react';
 
+import { TagPredefined } from '@sbercloud/uikit-product-site-tag';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { TagPlatform, TagPlatformProps } from '../src/components';
 import { SIZE } from '../src/components/constants';
-import { PLATFORM_TYPE } from '../src/components/TagPlatform/constants';
+import { PLATFORM_TYPE, TagPlatformProps } from '../src/components/TagPredefined/helpers';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Site/Tag Predefined/Tag Platform',
-  component: TagPlatform,
+  component: TagPredefined,
 };
 
 export default meta;
@@ -26,7 +27,7 @@ const Template: StoryFn<TagPlatformProps> = ({ ...args }) => {
     <>
       <div className={styles.wrapper}>
         Controlled:
-        <TagPlatform {...args} />
+        <TagPredefined {...args} variant='platform' />
       </div>
 
       <div className={styles.table} style={{ '--columns': 3 }}>
@@ -41,7 +42,7 @@ const Template: StoryFn<TagPlatformProps> = ({ ...args }) => {
             <div className={headerCellClassnames}>{type}</div>
             {sizes.map(size => (
               <div key={size} className={styles.cell}>
-                <TagPlatform type={type} size={size} />
+                <TagPredefined variant='platform' type={type} size={size} />
               </div>
             ))}
           </Fragment>
@@ -57,7 +58,16 @@ export const tagPlatform: StoryObj<TagPlatformProps> = {
     type: 'evolution',
     size: 'xs',
   },
-  argTypes: {},
+  argTypes: {
+    type: {
+      options: Object.values(PLATFORM_TYPE),
+    },
+    variant: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

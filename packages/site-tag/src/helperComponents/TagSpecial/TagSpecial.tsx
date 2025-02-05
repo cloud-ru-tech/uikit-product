@@ -11,9 +11,10 @@ export type TagSpecialProps = WithSupportProps<{
   size: Exclude<PromoTagProps['size'], 'xxs' | undefined>;
   appearance: NonNullable<Exclude<PromoTagProps['appearance'], 'primary'>>;
   tip?: ReactNode;
+  className?: string;
 }>;
 
-export function TagSpecial({ text, size, appearance = 'neutral', tip, ...rest }: TagSpecialProps) {
+export function TagSpecial({ text, size, appearance = 'neutral', tip, className, ...rest }: TagSpecialProps) {
   return (
     <PromoTag
       size={size}
@@ -21,6 +22,7 @@ export function TagSpecial({ text, size, appearance = 'neutral', tip, ...rest }:
       appearance={appearance}
       color='decor'
       afterContent={tip && <Tooltip appearance={APPEARANCE_TO_COLOR_MAP[appearance]} tip={tip} />}
+      className={className}
       {...extractSupportProps(rest)}
     />
   );

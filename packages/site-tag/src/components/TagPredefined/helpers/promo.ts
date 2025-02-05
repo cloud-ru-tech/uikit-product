@@ -1,16 +1,25 @@
 import { ValueOf } from '@snack-uikit/utils';
 
-import { TagSpecial, TagSpecialProps } from '../../helperComponents';
-import { PROMO_TYPE } from './constants';
+import { TagPredefinedCommonProps, TagProps } from '../types';
 
-export type TagPromoProps = {
+export const PROMO_TYPE = {
+  Free: 'free',
+  FreeConfiguration: 'free-configuration',
+  FreeStart: 'free-start',
+  BonusRubles: 'bonus-rubles',
+  Registration: 'registration',
+  Available: 'available',
+  Legal: 'legal',
+  Record: 'record',
+  Preview: 'preview',
+} as const;
+
+export type TagPromoProps = TagPredefinedCommonProps & {
   type: ValueOf<typeof PROMO_TYPE>;
-  size: TagSpecialProps['size'];
+  variant: 'promo';
 };
 
-const getTagSpecialArgs = (
-  type: TagPromoProps['type'],
-): Pick<TagSpecialProps, 'text' | 'appearance' | 'tip'> | null => {
+export const getTagPromoProps = (type: TagPromoProps['type']): TagProps => {
   switch (type) {
     case PROMO_TYPE.Free:
       return {
@@ -64,8 +73,3 @@ const getTagSpecialArgs = (
       return null;
   }
 };
-
-export function TagPromo({ type, size }: TagPromoProps) {
-  const tagArgs = getTagSpecialArgs(type);
-  return tagArgs && <TagSpecial size={size} {...tagArgs} />;
-}

@@ -5,14 +5,14 @@ import { Fragment } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { TagAudience, TagAudienceProps } from '../src/components';
+import { TagPredefined } from '../src/components';
 import { SIZE } from '../src/components/constants';
-import { AUDIENCE_TYPE } from '../src/components/TagAudience/constants';
+import { AUDIENCE_TYPE, TagAudienceProps } from '../src/components/TagPredefined/helpers';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Site/Tag Predefined/Tag Audience',
-  component: TagAudience,
+  component: TagPredefined,
 };
 
 export default meta;
@@ -26,7 +26,7 @@ const Template: StoryFn<TagAudienceProps> = ({ ...args }) => {
     <>
       <div className={styles.wrapper}>
         Controlled:
-        <TagAudience {...args} />
+        <TagPredefined {...args} variant='audience' />
       </div>
 
       <div className={styles.table} style={{ '--columns': 3 }}>
@@ -41,7 +41,7 @@ const Template: StoryFn<TagAudienceProps> = ({ ...args }) => {
             <div className={headerCellClassnames}>{type}</div>
             {sizes.map(size => (
               <div key={size} className={styles.cell}>
-                <TagAudience type={type} size={size} />
+                <TagPredefined variant='audience' type={type} size={size} />
               </div>
             ))}
           </Fragment>
@@ -57,7 +57,16 @@ export const tagAudience: StoryObj<TagAudienceProps> = {
     type: 'it',
     size: 'xs',
   },
-  argTypes: {},
+  argTypes: {
+    type: {
+      options: Object.values(AUDIENCE_TYPE),
+    },
+    variant: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   parameters: {
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

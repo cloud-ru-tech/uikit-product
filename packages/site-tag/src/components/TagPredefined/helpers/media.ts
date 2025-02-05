@@ -1,14 +1,23 @@
 import { ValueOf } from '@snack-uikit/utils';
 
-import { TagSpecial, TagSpecialProps } from '../../helperComponents';
-import { MEDIA_TYPE } from './constants';
+import { TagPredefinedCommonProps, TagProps } from '../types';
 
-export type TagMediaProps = {
+export const MEDIA_TYPE = {
+  News: 'news',
+  Article: 'article',
+  PressRelease: 'press-release',
+  Course: 'course',
+  Certification: 'certification',
+  Webinar: 'webinar',
+  Conference: 'conference',
+} as const;
+
+export type TagMediaProps = TagPredefinedCommonProps & {
   type: ValueOf<typeof MEDIA_TYPE>;
-  size: TagSpecialProps['size'];
+  variant: 'media';
 };
 
-const getTagSpecialArgs = (type: TagMediaProps['type']): Pick<TagSpecialProps, 'text' | 'appearance'> | null => {
+export const getTagMediaProps = (type: TagMediaProps['type']): TagProps => {
   switch (type) {
     case MEDIA_TYPE.News:
       return {
@@ -51,9 +60,3 @@ const getTagSpecialArgs = (type: TagMediaProps['type']): Pick<TagSpecialProps, '
     }
   }
 };
-
-export function TagMedia({ type, size }: TagMediaProps) {
-  const tagArgs = getTagSpecialArgs(type);
-
-  return tagArgs && <TagSpecial size={size} {...tagArgs} />;
-}
