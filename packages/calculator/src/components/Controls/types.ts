@@ -7,6 +7,7 @@ import { CarouselControl } from './CarouselControl';
 import { ObjectControl } from './ObjectControl';
 import { SegmentedControl } from './SegmentedControl';
 import { SelectMultipleControl, SelectSingleControl } from './SelectControl';
+import { SliderControl } from './SliderControl';
 import { StepperControl } from './StepperControl';
 import { TableControl } from './TableControl';
 import { ToggleCardsControl } from './ToggleCardsControl';
@@ -154,6 +155,7 @@ export type FormControl =
   | ToggleObjectControl
   | AlertControl
   | ToggleCardsControl
+  | SliderControl
   | TableControl;
 
 export type FormConfig = Omit<ObjectControl, 'type'>;

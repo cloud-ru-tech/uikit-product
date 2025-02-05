@@ -8,6 +8,7 @@ import { CONTROL } from '../constants';
 import { ObjectControlUi } from '../ObjectControl';
 import { SegmentedControlUi } from '../SegmentedControl';
 import { SelectMultipleUi, SelectSingleUi } from '../SelectControl';
+import { SliderControlUi } from '../SliderControl';
 import { StepperControlUi } from '../StepperControl';
 import { TableControlUi } from '../TableControl';
 import { ToggleCardsControlUi } from '../ToggleCardsControl';
@@ -95,6 +96,9 @@ export function Control({ formControl }: ControlProps) {
     }
     case CONTROL.Alert: {
       return <AlertControlUi {...formControl} watchedValues={watchedValues} />;
+    }
+    case CONTROL.Slider: {
+      return <SliderControlUi {...formControl} onChange={onChange} watchedValues={watchedValues} />;
     }
     default:
       throw new Error('not reachable');

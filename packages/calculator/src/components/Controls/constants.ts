@@ -11,4 +11,5 @@ export const CONTROL = {
   Stepper: 'stepper',
   Alert: 'alert',
   Table: 'table',
+  Slider: 'slider',
 } as const;
