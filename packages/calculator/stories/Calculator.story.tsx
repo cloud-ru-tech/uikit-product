@@ -5,10 +5,9 @@ import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { Calculator, CALCULATOR_TYPE, CalculatorProps } from '../src';
+import { Calculator, CALCULATOR_TYPE, CalculatorProps, CATALOG_CONFIG } from '../src';
+import { getFetcherFn, getOnDownloadFileClick, getOnShareClick } from '../src/services';
 import src from './bg.webp';
-import { CATALOG_CONFIG } from './config';
-import { getFetcherFn, getOnDownloadFileClick, getOnShareClick } from './services';
 
 const meta: Meta = {
   title: 'Console/Calculator',

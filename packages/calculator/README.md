@@ -56,15 +56,27 @@ export function Calculator() {
 | bgImage | `string` | - | Изображение на заднем фоне в состоянии "пустой" корзины |
 | initialActiveProduct | `string` | - | Id продукта который будет "по умолчанию" в корзине |
 | iniState | `Record<string, ProductState[]>` | - | Начальное состояние корзины |
-## Control
+## getOnDownloadFileClick
+`helper` 
+
+
+Функция для выгрузки расчета по ценам
+## getOnShareClick
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| formControl* | `FormControl & { accessorKey?: string; }` | - |  |
-## getDefaultValues
-### Props
-| name | type | default value | description |
-|------|------|---------------|-------------|
+| backendHost | `string` | 'https://api.cloud.ru' |  |
+| baseUrl | `string` | 'https://cloud.ru' |  |
+## getFetcherFn
+`helper` 
+
+
+Функция для отправки запросов на цены
+## getInitPrice
+`helper` 
+
+
+Функция для получения стартовой цены
 
 
 [//]: DOCUMENTATION_SECTION_END

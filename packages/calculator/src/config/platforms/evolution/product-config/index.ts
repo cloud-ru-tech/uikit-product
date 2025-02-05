@@ -1,0 +1,7 @@
+export * from './EvolutionBareMetal';
+export * from './EvolutionCloudServer';
+export * from './EvolutionCloudServerFreeTier';
+export * from './EvolutionKubernetes';
+export * from './EvolutionPostgreSql';
+export * from './EvolutionStorageS3';
+export * from './EvolutionStorageS3FreeTier';

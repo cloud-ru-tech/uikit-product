@@ -8,7 +8,8 @@ import { ProductContext, ProductsState, useCalculatorContext } from '../../conte
 import { useAdaptive } from '../../hooks';
 import { AnyType } from '../../types';
 import { getValue, setValue } from '../../utils';
-import { CONTROL, Control } from '../Controls';
+import { CONTROL } from '../Controls';
+import { Control } from '../Controls/Control';
 import { ProductPageHeadline } from '../ProductHeadline';
 import styles from './styles.module.scss';
 

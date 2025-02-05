@@ -1,4 +1,4 @@
-import { getDefaultValues } from '../components';
+import { getDefaultValues } from '../components/Controls/utils';
 import { DEFAULT_CATEGORY, DEFAULT_PRICE } from '../constants';
 import { ProductsState, useCalculatorContext } from '../contexts';
 

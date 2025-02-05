@@ -1,0 +1,9 @@
+export const EVOLUTION_PRODUCT = {
+  EvolutionCloudServer: 'evolutionCloudServer',
+  EvolutionCloudServerFreeTier: 'evolutionCloudServerFreeTier',
+  EvolutionKubernetes: 'evolutionKubernetes',
+  EvolutionStorageS3FreeTier: 'evolutionStorageS3FreeTier',
+  EvolutionStorageS3: 'evolutionStorageS3',
+  EvolutionManagedPostgreSQL: 'evolutionPostgreSql',
+  EvolutionBareMetal: 'evolutionBareMetal',
+} as const;

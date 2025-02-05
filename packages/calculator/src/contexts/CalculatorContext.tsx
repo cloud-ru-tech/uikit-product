@@ -2,7 +2,8 @@ import { createContext, PropsWithChildren, useContext, useState } from 'react';
 
 import { LAYOUT_TYPE, LayoutType } from '@sbercloud/uikit-product-utils';
 
-import { CalculatorProps, getDefaultValues } from '../components';
+import { CalculatorProps } from '../components';
+import { getDefaultValues } from '../components/Controls/utils';
 import { DEFAULT_CATEGORY, DEFAULT_PRICE, PLATFORM } from '../constants';
 import { CatalogConfig, FetcherFn, FormValues, PlatformType, PRICE_PERIOD, PricePeriod, ProductState } from '../types';
 import { CALCULATOR_TYPE, CalculatorType } from '../types/CalculatorType';
