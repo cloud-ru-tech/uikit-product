@@ -1,6 +1,7 @@
 # Utils
 
 ## Installation
+
 `npm i @sbercloud/uikit-product-utils`
 
 ### Config provider
@@ -12,10 +13,7 @@ If component is mounted, then it extends html tag by current lang and current th
 Tool component to adapt to current theme/brand modification (light or dark). You can pass different JSX for light and dark theme/brand mode, and the one will be rendered according current mode.
 
 ```tsx
-<ForThemeMode
-  light={<BannerForLightMode />}
-  dark={<BannerForDarkMode />}
-/>
+<ForThemeMode light={<BannerForLightMode />} dark={<BannerForDarkMode />} />
 ```
 
 You can also use hook `useForThemeMode` to pick data according to current theme mode:
@@ -26,13 +24,13 @@ const imageSrc = useForThemeMode({
   dark: 'assets/dark-image.webp',
 });
 
-<img src={imageSrc} alt={imgDescr} />
+<img src={imageSrc} alt={imgDescr} />;
 ```
-
 
 ### Dev utils
 
 #### CreateTextProvider
+
 creates text provider
 
 ```typescript jsx
@@ -209,7 +207,7 @@ Could be helpfull in cases when you need await for css applied.
 import { useForceUpdateOnPageLoadedCompletely } from '@sbercloud/uikit-product-utils';
 
 function Component() {
-    useForceUpdateOnPageLoadedCompletely();
+  useForceUpdateOnPageLoadedCompletely();
 }
 ```
 
@@ -241,5 +239,26 @@ function Chat() {
   });
 
   return <SendButton onClick={handleClick} />;
+}
+```
+
+#### useTextProvider
+
+A hook to simplify usage of textProvider (to avoid manually passing current language code to the text provider function each time).
+
+```typescript jsx
+import { useTextProvider } from '@sbercloud/uikit-product-utils';
+import { textProvider, Texts } from '../../helpers';
+
+function Component() {
+ const getText = useTextProvider(textProvider);
+
+ return (
+  <div>
+    <ButtonFunction label={getText(Texts.Button1)} />
+    <ButtonFunction label={getText(Texts.Button2)} />
+    <ButtonFunction label={getText(Texts.Button3)} />
+  </div>
+ )
 }
 ```
