@@ -1,7 +1,7 @@
 import { LayoutType } from '@sbercloud/uikit-product-utils';
 import { TypographyProps } from '@snack-uikit/typography';
 
-export const getHeroZeroTypographyProps = (layoutType: LayoutType): Pick<TypographyProps, 'size' | 'purpose'> => {
+export const getTitleTypographyProps = (layoutType: LayoutType): Pick<TypographyProps, 'size' | 'purpose'> => {
   switch (layoutType) {
     case 'tablet':
     case 'mobile':

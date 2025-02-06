@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import { useMemo } from 'react';
 
 import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -8,9 +7,9 @@ import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 
 import { HERO_COLORS } from '../../constants';
-import { getHeroZeroTypographyProps } from '../../helpers';
 import { HeroColor } from '../../types';
 import styles from './styles.module.scss';
+import { getTitleTypographyProps } from './utils';
 
 export type HeroZeroProps = WithSupportProps<
   WithLayoutType<{
@@ -42,8 +41,6 @@ export function HeroZero({
   showBottomPadding = true,
   ...rest
 }: HeroZeroProps) {
-  const titleTypographyProps = useMemo(() => getHeroZeroTypographyProps(layoutType), [layoutType]);
-
   return (
     <Layout.SectionWrapper
       layoutType={layoutType}
@@ -57,7 +54,7 @@ export function HeroZero({
             <Breadcrumbs items={breadcrumbs} size='xs' />
 
             <div className={styles.text} data-layout-type={layoutType}>
-              <Typography family='sans' tag='h1' className={styles.title} {...titleTypographyProps}>
+              <Typography family='sans' tag='h1' className={styles.title} {...getTitleTypographyProps(layoutType)}>
                 {title}
               </Typography>
 

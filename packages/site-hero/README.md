@@ -35,6 +35,22 @@ Hero blocks for Site
 | showBottomPadding | `boolean` | true | Наличие нижнего паддинга |
 | backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background | Цвет фона |
 | className | `string` | - | CSS - класснейм |
+## HeroProduct
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| breadcrumbs* | `Item[]` | - | Хлебные крошки для продукта |
+| image* | `string` | - | Ссылка на изображение |
+| description* | `string` | - | Описание продукта |
+| title* | `string` | - | Заголовок продукта |
+| tags | `Pick<TagPredefinedProps, "type" \| "variant">[]` | [] | Тэги |
+| platforms | `Platform[]` | [] | Платформы |
+| handlePlatformClick | `() => void` | - | Обработка клика по платформе |
+| backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвета фона |
+| buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<ButtonOutlineProps, "size" \| "appearance">?]` | - | Массив с настройками кнопок ButtonFilled |
+| className | `string` | - | CSS - класснейм |
+| navbarItems | `LinkProps[]` | [] | Ссылки в Navbar'е |
 
 
 [//]: DOCUMENTATION_SECTION_END

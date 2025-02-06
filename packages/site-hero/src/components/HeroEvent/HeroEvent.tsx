@@ -5,10 +5,12 @@ import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sberclou
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
 
-import { AUDIENCE_LABELS, FORMAT_LABELS, HERO_COLORS } from '../../constants';
+import { HERO_COLORS } from '../../constants';
 import { HeroButtonProps, HeroEventButton, Place, PlaceProps } from '../../helperComponents';
-import { Audience, Format, HeroColor } from '../../types';
+import { HeroColor } from '../../types';
+import { AUDIENCE_LABELS, FORMAT_LABELS } from './constants';
 import styles from './styles.module.scss';
+import { Audience, Format } from './types';
 
 export type HeroEventProps = WithSupportProps<{
   /** CSS - класснейм */

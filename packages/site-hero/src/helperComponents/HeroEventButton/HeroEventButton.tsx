@@ -3,8 +3,8 @@ import { MouseEventHandler } from 'react';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
 
-import { HERO_BUTTON_META } from '../../constants';
-import { HeroButtonType } from '../../types';
+import { HERO_BUTTON_META } from './constants';
+import { HeroButtonType } from './types';
 
 export type HeroButtonProps = Pick<ButtonFilledProps, 'label' | 'href' | 'disabled' | 'icon'> & {
   type?: HeroButtonType;

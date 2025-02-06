@@ -8,7 +8,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { HeroEvent, HeroEventProps } from '../src';
-import { HERO_BUTTONS } from '../src/constants';
+import { HERO_EVENT_BUTTONS } from '../src/constants';
 import { CATEGORY_TAG_META, CATEGORY_TAGS } from './constants';
 import styles from './styles.module.scss';
 
@@ -104,7 +104,7 @@ export const heroEvent: StoryObj<StoryProps> = {
     heroButtonType: {
       name: '[Story]: hero button type',
       control: { type: 'select' },
-      options: Object.values(HERO_BUTTONS),
+      options: Object.values(HERO_EVENT_BUTTONS),
     },
     place: { table: { disable: true } },
     button: { table: { disable: true } },
