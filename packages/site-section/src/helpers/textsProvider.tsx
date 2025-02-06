@@ -4,7 +4,7 @@ export enum Texts {
   // SectionBasic
   ShowMore = 'showMore',
 
-  // SectionCardLeading
+  // SectionLeading
   IaasValue = 'iaasValue',
   IaasLabel = 'iaasLabel',
   IaasDescription = 'iaasDescription',
@@ -35,7 +35,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
   [LanguageCodeType.ruRU]: {
     // SectionBasic
     [Texts.ShowMore]: 'Показать ещё',
-    // SectionCardLeading
+    // SectionLeading
     [Texts.IaasValue]: '№1',
     [Texts.IaasLabel]: 'по темпам роста IaaS',
     [Texts.IaasDescription]: 'iKS-Consulting, 2024',
@@ -61,7 +61,7 @@ const Dictionary: Partial<Record<LanguageCodeType, Record<Texts, DictionaryPrope
   [LanguageCodeType.enGB]: {
     // SectionBasic
     [Texts.ShowMore]: 'Show More',
-    // SectionCardLeading
+    // SectionLeading
     [Texts.IaasValue]: '№1',
     [Texts.IaasLabel]: 'growth rate in IaaS',
     [Texts.IaasDescription]: 'iKS-Consulting, 2024',

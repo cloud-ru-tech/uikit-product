@@ -39,7 +39,7 @@
 | title | `string` | - | Название секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS - класснейм |
-## SectionCardLeading
+## SectionLeading
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|

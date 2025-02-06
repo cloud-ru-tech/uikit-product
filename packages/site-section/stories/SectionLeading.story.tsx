@@ -5,24 +5,24 @@ import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { SectionCardLeading, SectionCardLeadingProps } from '../src';
+import { SectionLeading, SectionLeadingProps } from '../src';
 import { SECTION_COLORS } from '../src/constants';
 import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Section/CardLeading',
-  component: SectionCardLeading,
+  title: 'Site/Section/Leading',
+  component: SectionLeading,
 };
 
 export default meta;
 
-type StoryProps = SectionCardLeadingProps &
+type StoryProps = SectionLeadingProps &
   WithLayoutType<{
     expertsAmount: number;
   }>;
 
-const items: SectionCardLeadingProps['items'] = [
+const items: SectionLeadingProps['items'] = [
   {
     type: 'iaas',
   },
@@ -36,7 +36,7 @@ const items: SectionCardLeadingProps['items'] = [
 
 const Template: StoryFn<StoryProps> = ({ title, description, footerDescription, layoutType, backgroundColor }) => (
   <div className={styles.resizeWrapper}>
-    <SectionCardLeading
+    <SectionLeading
       title={title}
       description={description}
       items={items}
@@ -47,7 +47,7 @@ const Template: StoryFn<StoryProps> = ({ title, description, footerDescription, 
   </div>
 );
 
-export const cardLeading: StoryObj<StoryProps> = {
+export const leading: StoryObj<StoryProps> = {
   render: Template,
   args: {
     title: 'Cloud.ru – ведущий провайдер облачных и AI‑технологий',

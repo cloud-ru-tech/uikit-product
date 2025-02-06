@@ -13,7 +13,7 @@ import { SectionColor } from '../../types';
 import styles from './styles.module.scss';
 import { calculateAmountOfItemsPerPage } from './utils';
 
-export type SectionCardLeadingProps = WithSupportProps<
+export type SectionLeadingProps = WithSupportProps<
   WithLayoutType<
     Pick<SectionTitleProps, 'title' | 'description' | 'titleSectionSize'> & {
       /** Массив айтемов */
@@ -30,7 +30,7 @@ export type SectionCardLeadingProps = WithSupportProps<
 
 const MOBILE_LAYOUTS = ['tablet', 'mobile'];
 
-export function SectionCardLeading({
+export function SectionLeading({
   title,
   description,
   titleSectionSize = 'm',
@@ -40,7 +40,7 @@ export function SectionCardLeading({
   className,
   layoutType,
   ...rest
-}: SectionCardLeadingProps) {
+}: SectionLeadingProps) {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [itemsPerPageAmount, setItemsPerPageAmount] = useState<number>(0);
 
@@ -81,7 +81,7 @@ export function SectionCardLeading({
       data-section-background={backgroundColor}
       {...extractSupportProps(rest)}
     >
-      <div ref={wrapperRef} className={styles.cardsLeadingSection} data-layout-type={layoutType}>
+      <div ref={wrapperRef} className={styles.leadingSection} data-layout-type={layoutType}>
         <SectionTitle
           layoutType={layoutType}
           title={title}
