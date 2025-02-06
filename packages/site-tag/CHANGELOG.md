@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.3 (2025-02-06)</small>
+
+* feat(PDS-1424): TagPredefined with variant instead of separate components ([5fc3200](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5fc3200))
+
+
+
+
+
 ## <small>0.0.2 (2025-02-05)</small>
 
 ### Only dependencies have been changed
