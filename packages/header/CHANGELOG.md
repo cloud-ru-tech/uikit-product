@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>2.33.36 (2025-02-06)</small>
+
+* fix(PDS-1495): Header - fixed wide divider in the mobile financial menu ([f1f08ce](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f1f08ce))
+* fix(PDS-1495): Header - removed gap between date and status indicator ([c625eb1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c625eb1))
+* fix(PDS-1495): Header - the mobile version of financialMenu is aligned with the desktop version ([8a9fe36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8a9fe36))
+* fix(PDS-1552): Header - use adaptive tooltip in financial menu row ([1d31c4d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1d31c4d))
+
+
+
+
+
 ## <small>2.33.35 (2025-02-05)</small>
 
 ### Only dependencies have been changed
