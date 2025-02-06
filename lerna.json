@@ -7,7 +7,7 @@
       "registry": "https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm"
     },
     "version": {
-      "changelogPreset": "@cloud-ru/ft-conventional-changelog",
+      "changelogPreset": "@cloud-ru/ft-conventional-changelog-old",
       "ignoreChanges": [
         "**/*.md",
         "**/*.MD",
