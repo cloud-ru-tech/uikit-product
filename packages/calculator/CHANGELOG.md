@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.17 (2025-02-07)</small>
+
+* feat(ONB-3543): migrate calc configs to uikit ([6d7488f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6d7488f))
+
+
+
+
+
 ## <small>0.0.16 (2025-02-05)</small>
 
 ### Only dependencies have been changed
