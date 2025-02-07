@@ -1,11 +1,22 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as element;
 
-$vPadding: calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element.$dimension-025m});
+$vPadding: calc(#{element.$dimension-1m} + #{element.$dimension-025m});
 
 .section {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: 100%;
+
+  & ul {
+    min-height: 0;
+  }
 }
 
 .item {
@@ -16,15 +27,16 @@ $vPadding: calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element
 }
 
 .title {
-  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-title-m);
+  @include element.composite-var(element.$sans-title-m);
   position: relative;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
-  gap: styles-tokens-element.$dimension-1m;
-  padding: styles-tokens-element.$dimension-1m 0;
+  gap: element.$dimension-1m;
+  padding: element.$dimension-1m 0;
+  flex-shrink: 0;
 }
 
 .titleText {
@@ -46,25 +58,25 @@ $vPadding: calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element
   transition-duration: 300ms;
 
   width: calc(100%);
-  max-width: calc(#{styles-tokens-element.$dimension-3m} + 2 * $vPadding);
+  max-width: calc(#{element.$dimension-3m} + 2 * $vPadding);
   padding-left: $vPadding;
   box-sizing: border-box;
 
   &[data-is-mounted] {
-    background-color: styles-tokens-element.$sys-neutral-background2-level;
+    background-color: element.$sys-neutral-background2-level;
   }
 
   &[data-transition-status='entering'],
   &[data-transition-status='entered'] {
     max-width: 100%;
-    min-width: calc(#{styles-tokens-element.$dimension-3m} + 2 * $vPadding);
+    min-width: calc(#{element.$dimension-3m} + 2 * $vPadding);
     right: 0;
     width: calc(100%);
   }
 
   &[data-transition-status='exiting'],
   &[data-transition-status='exited'] {
-    max-width: calc(#{styles-tokens-element.$dimension-3m} + 2 * $vPadding);
+    max-width: calc(#{element.$dimension-3m} + 2 * $vPadding);
     right: 0;
     width: calc(100%);
   }
@@ -73,19 +85,19 @@ $vPadding: calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element
 .itemsGroups {
   display: flex;
   flex-direction: column;
-  gap: styles-tokens-element.$dimension-2m;
+  gap: element.$dimension-2m;
 }
 
 .itemsGroup {
   display: flex;
   flex-direction: column;
-  gap: styles-tokens-element.$dimension-025m;
+  gap: element.$dimension-025m;
 }
 
 .itemsGroupSubheading {
-  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-s);
+  @include element.composite-var(element.$sans-body-s);
 
-  color: styles-tokens-element.$sys-neutral-text-light;
+  color: element.$sys-neutral-text-light;
 }
 
 .addButton {
@@ -98,9 +110,9 @@ $vPadding: calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element
 }
 
 .noData {
-  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-m);
+  @include element.composite-var(element.$sans-body-m);
 
-  color: styles-tokens-element.$sys-neutral-text-light;
+  color: element.$sys-neutral-text-light;
   display: flex;
   justify-content: center;
 }
@@ -114,14 +126,14 @@ $vPadding: calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  padding: styles-tokens-element.$space-drop-list-item-m-container-vertical-padding styles-tokens-element.$space-drop-list-item-m-container-horizontal-padding;
-  gap: styles-tokens-element.$space-drop-list-item-m-container-gap;
+  padding: element.$space-drop-list-item-m-container-vertical-padding element.$space-drop-list-item-m-container-horizontal-padding;
+  gap: element.$space-drop-list-item-m-container-gap;
 }
 
 .skeletonIcon {
-  border-radius: styles-tokens-element.$radius-avatar-square-xs;
-  width: styles-tokens-element.$size-icon-container-s;
-  height: styles-tokens-element.$size-icon-container-s;
+  border-radius: element.$radius-avatar-square-xs;
+  width: element.$size-icon-container-s;
+  height: element.$size-icon-container-s;
   flex-shrink: 0;
 }
 
@@ -129,9 +141,9 @@ $vPadding: calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element
   /* stylelint-disable-next-line declaration-no-important */
   height: 40px !important;
   /* stylelint-disable-next-line declaration-no-important */
-  margin: calc(0px - #{styles-tokens-element.$dimension-1m}) 0 !important;
+  margin: calc(0px - #{element.$dimension-1m}) 0 !important;
   /* stylelint-disable-next-line declaration-no-important */
-  width: calc(#{styles-tokens-element.$dimension-3m} + $vPadding) !important;
+  width: calc(#{element.$dimension-3m} + $vPadding) !important;
   /* stylelint-disable-next-line declaration-no-important */
   justify-content: flex-start !important;
 }

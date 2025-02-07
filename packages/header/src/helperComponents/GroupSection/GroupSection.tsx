@@ -49,6 +49,7 @@ export type GroupSectionProps = WithSupportProps<{
   avatarAppearance?: AvatarProps['appearance'];
 
   mobile: boolean;
+  virtualized?: boolean;
 }>;
 
 export function GroupSection({
@@ -69,6 +70,7 @@ export function GroupSection({
   truncateVariant,
   searchPlaceholder,
   mobile,
+  virtualized,
   ...rest
 }: GroupSectionProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -191,7 +193,7 @@ export function GroupSection({
   );
 
   return (
-    <div className={cn(styles.section, className)} {...extractSupportProps(rest)}>
+    <div className={cn(styles.section, className)} data-mobile={mobile || undefined} {...extractSupportProps(rest)}>
       {title && (
         <div className={styles.title}>
           <span className={styles.titleText}>{title}</span>
@@ -246,6 +248,8 @@ export function GroupSection({
         <GroupSectionSkeletonItem />
       ) : (
         <List
+          className={cn({ [styles.list]: mobile })}
+          virtualized={virtualized}
           scroll
           scrollToSelectedItem
           marker

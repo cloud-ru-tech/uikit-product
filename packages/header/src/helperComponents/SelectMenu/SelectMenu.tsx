@@ -94,15 +94,13 @@ export function SelectMenu({
   mobile,
 }: SelectMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
-  const fixedColumnWidth = cn({ [styles.fixedColumnsWidth]: !mobile });
-  const projectColumnWidth = cn({ [styles.projectColumnsWidth]: !mobile });
-  const workspacesColumnWidth = cn({ [styles.workspacesColumnWidth]: !mobile });
 
   return (
     <>
       {organizations && (
         <GroupSection
-          className={fixedColumnWidth}
+          virtualized
+          className={styles.organizations}
           title={textProvider(languageCode, Texts.Organizations)}
           groups={[{ id: '1', items: organizations }]}
           truncateVariant='middle'
@@ -121,7 +119,8 @@ export function SelectMenu({
           {organizations && divider}
 
           <GroupSection
-            className={projectColumnWidth}
+            virtualized
+            className={styles.projects}
             title={textProvider(languageCode, Texts.Projects)}
             searchable
             searchActive={projectsSearchActive}
@@ -154,7 +153,7 @@ export function SelectMenu({
           {divider}
 
           <GroupSection
-            className={fixedColumnWidth}
+            className={styles.platforms}
             title={textProvider(languageCode, Texts.Platforms)}
             groups={[{ id: '1', items: platforms }]}
             onItemChange={onPlatformChange}
@@ -171,7 +170,8 @@ export function SelectMenu({
           {divider}
 
           <GroupSection
-            className={workspacesColumnWidth}
+            virtualized
+            className={styles.workspaces}
             title={textProvider(languageCode, Texts.Workspaces)}
             groups={workspaces.list.length > 0 ? [{ id: '1', items: workspaces.list }] : []}
             onItemChange={workspaces.onWorkspaceChange}

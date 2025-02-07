@@ -536,6 +536,11 @@ export const ARGS: StoryProps = {
           { id: '3_3', name: 'Проект 7 с очень длинным названием', actions: PROJECT_ACTIONS },
         ],
       },
+      {
+        id: '4',
+        heading: 'Large group',
+        items: new Array(10000).fill(0).map((_, index) => ({ id: `4_${index}`, name: `Проект 4_${index}` })),
+      },
     ],
     selectedProject: DEFAULT_PROJECT,
     projectAddButton: {

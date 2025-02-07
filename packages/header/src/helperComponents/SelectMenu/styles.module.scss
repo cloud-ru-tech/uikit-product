@@ -1,25 +1,25 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-avatar';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-avatar' as avatar;
 
 .contentLayout {
   display: flex;
   align-items: center;
-  gap: styles-tokens-avatar.$dimension-1m;
+  gap: avatar.$dimension-1m;
   flex-shrink: 0;
   width: 100%;
 }
 
 .name,
 .entity {
-  max-width: calc(2 * styles-tokens-avatar.$dimension-10m);
-  min-width: calc(2 * styles-tokens-avatar.$dimension-7m);
+  max-width: calc(2 * #{avatar.$dimension-10m});
+  min-width: calc(2 * #{avatar.$dimension-7m});
 }
 
 .name {
-  @include styles-tokens-avatar.composite-var(styles-tokens-avatar.$light-label-m);
+  @include avatar.composite-var(avatar.$light-label-m);
 }
 
 .entity {
-  @include styles-tokens-avatar.composite-var(styles-tokens-avatar.$light-label-s);
+  @include avatar.composite-var(avatar.$light-label-s);
 }
 
 .textWrapper {
@@ -30,28 +30,59 @@
   flex-direction: column;
 }
 
-.fixedColumnsWidth {
-  min-width: 220px;
-  width: 220px;
-}
-
-.projectColumnsWidth {
-  min-width: 220px;
-  max-width: 424px;
-}
-
-.workspacesColumnWidth {
-  width: fit-content;
-  min-width: 228px;
-}
-
 .avatarSkeleton {
-  @include styles-tokens-avatar.composite-var(styles-tokens-avatar.$avatar-round-xs);
+  @include avatar.composite-var(avatar.$avatar-round-xs);
 
   flex-shrink: 0;
 
   > div {
     height: 100%;
     border-radius: inherit;
+  }
+}
+
+$mobile-height: 308px;
+
+.organizations {
+  &:not([data-mobile]) {
+    min-width: 220px;
+    width: 220px;
+  }
+
+  &[data-mobile] {
+    max-height: $mobile-height;
+  }
+}
+
+.projects {
+  &:not([data-mobile]) {
+    min-width: 220px;
+    max-width: 424px;
+  }
+
+  &[data-mobile] {
+    max-height: $mobile-height;
+  }
+}
+
+.platforms {
+  &:not([data-mobile]) {
+    min-width: 220px;
+    width: 220px;
+  }
+
+  &[data-mobile] {
+    max-height: $mobile-height;
+  }
+}
+
+.workspaces {
+  &:not([data-mobile]) {
+    width: fit-content;
+    min-width: 228px;
+  }
+
+  &[data-mobile] {
+    max-height: $mobile-height;
   }
 }
