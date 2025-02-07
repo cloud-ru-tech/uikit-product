@@ -4,6 +4,7 @@
   resize: both;
   overflow: auto;
   background: var.$sys-neutral-background2-level;
+  height: 500px;
 }
 
 .body {
@@ -17,4 +18,11 @@
   height: 100vh;
   width: 100vw;
   overflow: auto;
+}
+
+.longContent {
+  margin: 16px;
+  padding: 16px;
+  border: 1px solid var.$sys-neutral-accent-default;
+  height: 2000px;
 }

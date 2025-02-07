@@ -35,7 +35,7 @@ Hero blocks for Site
 | showBottomPadding | `boolean` | true | Наличие нижнего паддинга |
 | backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background | Цвет фона |
 | className | `string` | - | CSS - класснейм |
-## HeroProduct
+## HeroMain
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
@@ -50,7 +50,7 @@ Hero blocks for Site
 | backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвета фона |
 | buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<ButtonOutlineProps, "size" \| "appearance">?]` | - | Массив с настройками кнопок ButtonFilled |
 | className | `string` | - | CSS - класснейм |
-| navbarItems | `LinkProps[]` | [] | Ссылки в Navbar'е |
+| navbar | `Pick<SiteNavbarProps, "items" \| "active" \| "onItemClick">` | - | Navbar |
 
 
 [//]: DOCUMENTATION_SECTION_END

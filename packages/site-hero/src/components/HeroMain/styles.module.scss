@@ -1,0 +1,145 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as ds;
+
+.sectionWrapper {
+  &[data-section-background='neutral-background1-level'] {
+    background-color: ds.$sys-neutral-background1-level;
+  }
+
+  &[data-section-background='neutral-background'] {
+    background-color: ds.$sys-neutral-background;
+  }
+
+  &[data-sticky] {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.contentWrapper {
+  padding: ds.$dimension-5m 0;
+
+  &[data-layout-type='tablet'] {
+    padding: ds.$dimension-4m 0;
+  }
+
+  &[data-layout-type='mobile'] {
+    padding: ds.$dimension-3m 0;
+  }
+}
+
+.content {
+  display: flex;
+  align-items: stretch;
+
+  gap: ds.$dimension-4m;
+  flex-direction: row;
+
+  &[data-layout-type='tablet'] {
+    flex-direction: column;
+  }
+
+  &[data-layout-type='mobile'] {
+    flex-direction: column;
+    gap: ds.$dimension-2m;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+
+  gap: ds.$dimension-4m;
+
+  &[data-layout-type='mobile'] {
+    gap: ds.$dimension-3m;
+  }
+}
+
+.leftContent {
+  display: flex;
+  flex-direction: column;
+
+  gap: ds.$dimension-4m;
+
+  &[data-layout-type='mobile'] {
+    gap: ds.$dimension-3m;
+  }
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: ds.$dimension-050m;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: ds.$dimension-2m;
+}
+
+.title {
+  color: ds.$sys-neutral-text-main;
+  word-break: break-word;
+  max-width: 720px;
+}
+
+.description {
+  color: ds.$sys-neutral-text-support;
+  word-break: break-word;
+  max-width: 560px;
+}
+
+.platforms {
+  color: ds.$sys-neutral-text-main;
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: center;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    align-items: center;
+  }
+}
+
+.image {
+  max-height: 300px;
+  max-width: 300px;
+
+  &[data-layout-type='mobile'] {
+    max-width: 248px;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: ds.$dimension-2m;
+
+  &[data-layout-type='tablet'] {
+    flex-direction: column;
+  }
+
+  &[data-layout-type='mobile'] {
+    flex-direction: column;
+    gap: ds.$dimension-1m;
+  }
+}
+
+.buttonPrimary,
+.buttonOutline {
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    width: 100%;
+  }
+}
+
+.navbarWrapper {
+  width: 100%;
+}

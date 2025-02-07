@@ -1,0 +1,13 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as ds;
+
+.heroNavbar {
+  display: flex;
+  flex-direction: row;
+}
+
+.heroNavbarItem {
+  @include ds.composite-var(ds.$sans-body-m);
+
+  color: ds.$sys-neutral-text-main;
+  padding: 10px;
+}
