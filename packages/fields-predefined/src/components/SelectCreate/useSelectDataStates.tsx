@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonTonal } from '@snack-uikit/button';
 import { FieldSelectProps } from '@snack-uikit/fields';
+import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 import { SearchSVG, UpdateSVG } from '@snack-uikit/icons';
 
 import { capitalize } from '../../helpers';
@@ -12,18 +13,20 @@ import { EntityName } from './types';
 type Props = {
   onRefetch?: VoidFunction;
   entityName: EntityName;
+  entityIcon?: IconPredefinedProps['icon'];
 };
 
-export function useSelectDataStates({ onRefetch, entityName }: Props) {
+export function useSelectDataStates({ onRefetch, entityName, entityIcon }: Props) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
   return useMemo<Pick<FieldSelectProps, 'noResultsState' | 'noDataState' | 'errorDataState'>>(
     () => ({
       noDataState: {
+        icon: { icon: entityIcon ?? SearchSVG },
         description: `${capitalize(entityName.plural)} ${textProvider(languageCode, Texts.NoData)}`,
       },
       noResultsState: {
-        icon: { icon: SearchSVG, appearance: 'neutral' },
+        icon: { icon: SearchSVG },
         description: (
           <>
             {capitalize(entityName.plural)} {textProvider(languageCode, Texts.NoResult)}.
@@ -46,6 +49,6 @@ export function useSelectDataStates({ onRefetch, entityName }: Props) {
         ),
       },
     }),
-    [languageCode, entityName, onRefetch],
+    [entityIcon, entityName, languageCode, onRefetch],
   );
 }

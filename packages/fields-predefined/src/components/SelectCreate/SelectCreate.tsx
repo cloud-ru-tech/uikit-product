@@ -4,6 +4,7 @@ import { AdaptiveDrawer, AdaptiveModal, DrawerProps, ModalProps } from '@sberclo
 import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { FieldSelect, FieldSelectProps } from '@snack-uikit/fields';
+import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 import { PlusSVG } from '@snack-uikit/icons';
 
 import { useOpen } from '../../hooks';
@@ -24,11 +25,14 @@ export type SelectCreateProps = WithSupportProps<
     /** Коллбек рефетча запроса на получение списка опций в случае ошибки (при передаче dataError в selectProps). */
     onRefetch?: VoidFunction;
     className?: string;
+    /** Коллбек после закрытия модального окна/дровера */
     afterClose?: VoidFunction;
+    /** Иконка сервиса */
+    entityIcon?: IconPredefinedProps['icon'];
   }
 >;
 
-export const SelectCreate = memo(function ({
+export const SelectCreate = memo(function SelectCreate({
   selectProps,
   createLayoutProps,
   createLayoutType = 'drawer',
@@ -37,11 +41,12 @@ export const SelectCreate = memo(function ({
   onRefetch,
   className,
   afterClose,
+  entityIcon,
   ...rest
 }: SelectCreateProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
   const { onClose, onOpen, isOpen } = useOpen();
-  const selectDataStates = useSelectDataStates({ entityName, onRefetch });
+  const selectDataStates = useSelectDataStates({ entityName, entityIcon, onRefetch });
   const selectSize: FieldSelectProps['size'] = selectProps.size || 'm';
 
   const handleClose = useCallback(() => {

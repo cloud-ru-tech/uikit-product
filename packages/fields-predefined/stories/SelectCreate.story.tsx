@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
+import { KeyManagerSVG } from '@sbercloud/uikit-product-icons';
 import { useAdaptive } from '@sbercloud/uikit-product-utils';
 import { FieldSelectProps } from '@snack-uikit/fields';
 
@@ -36,7 +37,12 @@ function Template(args: SelectCreateProps) {
     <SelectCreate
       className={styles.createSelectWrapper}
       {...args}
-      selectProps={{ value, options, onChange: (id: string) => setValue(id) }}
+      selectProps={{
+        value,
+        options,
+        onChange: (id: string) => setValue(id),
+        label: 'Ключ шифрования',
+      }}
       submitHandler={() =>
         new Promise(resolve => {
           const newOption = { option: `Ключ ${count}`, value: `Ключ ${count}` };
@@ -56,6 +62,7 @@ export const selectCreate: StoryObj<SelectCreateProps> = {
     createLayoutType: 'drawer',
     onRefetch: undefined,
     entityName: { single: 'Ключ', plural: 'Ключи' },
+    entityIcon: KeyManagerSVG,
   },
   argTypes: {
     createLayoutType: {
@@ -70,7 +77,7 @@ export const selectCreate: StoryObj<SelectCreateProps> = {
     design: {
       name: 'Figma',
       type: 'figma',
-      url: 'https://www.figma.com/design/SZjPEs7Ac3a2wS0HapamrE/branch/OFum2xpAbcdY6oEEldLu3Q/Product-components?node-id=23092-69144&node-type=canvas&t=1KcG17KmvDZGSCM4-0',
+      url: 'https://www.figma.com/design/SZjPEs7Ac3a2wS0HapamrE/Product-components?node-id=23888-34929&t=pMfZPU3GO08Pci83-4',
     },
   },
 };
