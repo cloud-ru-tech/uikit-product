@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.12 (2025-02-07)</small>
+
+* fix(PDS-1387): renamed SectionCardLeading to SectionLeading ([d9ac769](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d9ac769))
+* feat(PDS-1387): section personal manager ([8ff0129](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8ff0129))
+
+
+
+
+
 ## <small>0.0.11 (2025-02-05)</small>
 
 ### Only dependencies have been changed
