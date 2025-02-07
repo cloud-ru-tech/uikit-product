@@ -14,13 +14,13 @@ import { useFilters } from './hooks';
 import styles from './styles.module.scss';
 import { CheckedToolbarProps, DefaultToolbarProps, FilterRow } from './types';
 
-export type MobileToolbarProps<TState extends FiltersState> = WithSupportProps<
+export type MobileToolbarProps<TState extends FiltersState = Record<string, unknown>> = WithSupportProps<
   DefaultToolbarProps | CheckedToolbarProps
 > & {
   filterRow?: FilterRow<TState>;
 };
 
-export function MobileToolbar<TState extends FiltersState>({
+export function MobileToolbar<TState extends FiltersState = Record<string, unknown>>({
   className,
   after,
   outline,

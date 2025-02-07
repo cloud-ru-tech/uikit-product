@@ -28,7 +28,7 @@ import { useLoadingTable, useStateControl } from './hooks';
 import styles from './styles.module.scss';
 import { fuzzyFilter } from './utils';
 
-export type MobileTableProps<TData extends object, TFilters extends FiltersState> = Pick<
+export type MobileTableProps<TData extends object, TFilters extends FiltersState = Record<string, unknown>> = Pick<
   TableProps<TData, TFilters>,
   | 'data'
   | 'columnDefinitions'
@@ -61,7 +61,7 @@ export type MobileTableProps<TData extends object, TFilters extends FiltersState
     columnFilters?: MobileChipChoiceRowProps<FiltersState>;
   }>;
 
-export function MobileTable<TData extends object, TFilters extends FiltersState>({
+export function MobileTable<TData extends object, TFilters extends FiltersState = Record<string, unknown>>({
   data,
   columnDefinitions,
   headlineId,

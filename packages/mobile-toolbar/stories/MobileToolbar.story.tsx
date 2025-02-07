@@ -21,7 +21,7 @@ const meta: Meta = {
 
 export default meta;
 
-type StoryProps = MobileToolbarProps<Record<string, string>> & {
+type StoryProps = MobileToolbarProps & {
   showSearch: boolean;
   showOnRefresh: boolean;
   showBulkActions: boolean;
