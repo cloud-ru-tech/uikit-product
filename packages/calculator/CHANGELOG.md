@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## <small>0.0.18 (2025-02-08)</small>
+
+* feat(ONB-3344): slider component for calculator ([e3cf426](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3cf426))
+
+
+
+
+
 ## <small>0.0.17 (2025-02-07)</small>
 
 * feat(ONB-3543): migrate calc configs to uikit ([6d7488f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6d7488f))
