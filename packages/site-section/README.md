@@ -24,6 +24,7 @@
 | title | `string` | - | Название секции |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | tabBarItems | `TabBarItem[]` | - | Массив табов |
 | filterItems | `FieldSelectProps[]` | - | Массив фильтров |
 | pagination | `PaginationProps` | - | Настройки пагинации |
@@ -37,6 +38,7 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `ExpertDetails[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS - класснейм |
 ## SectionLeading
@@ -48,6 +50,7 @@
 | title | `string` | - | Название секции |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | footerDescription | `string` | - | Описание секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS - класснейм |

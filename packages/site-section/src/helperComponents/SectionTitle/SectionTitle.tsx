@@ -4,7 +4,7 @@ import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';
-import { Size } from './types';
+import { SectionTag, Size } from './types';
 import { getTitleTypographyProps } from './utils';
 
 export type SectionTitleProps = WithLayoutType<{
@@ -14,9 +14,17 @@ export type SectionTitleProps = WithLayoutType<{
   description?: string;
   /** Размер шрифтов заголовка и подзаголовка */
   titleSectionSize?: Size;
+  /** Тег заголовка */
+  titleTag?: SectionTag;
 }>;
 
-export function SectionTitle({ title, description, titleSectionSize = 'm', layoutType }: SectionTitleProps) {
+export function SectionTitle({
+  title,
+  description,
+  titleSectionSize = 'm',
+  titleTag = 'h2',
+  layoutType,
+}: SectionTitleProps) {
   const titleProps = useMemo(
     () => getTitleTypographyProps({ titleSectionSize, layoutType }),
     [layoutType, titleSectionSize],
@@ -27,7 +35,7 @@ export function SectionTitle({ title, description, titleSectionSize = 'm', layou
       {(title || description) && (
         <div className={styles.sectionTitle}>
           {title && (
-            <Typography family='sans' {...titleProps} className={styles.title}>
+            <Typography family='sans' {...titleProps} tag={titleTag} className={styles.title}>
               {title}
             </Typography>
           )}

@@ -25,7 +25,7 @@ type TabBarItem = WithSupportProps<{
 
 export type SectionBasicProps = WithLayoutType<
   WithSupportProps<
-    Pick<SectionTitleProps, 'title' | 'description' | 'titleSectionSize'> & {
+    Pick<SectionTitleProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag'> & {
       children: ReactNode;
       /** Массив табов */
       tabBarItems?: TabBarItem[];
@@ -57,6 +57,7 @@ export function SectionBasic({
   title,
   description,
   titleSectionSize = 'm',
+  titleTag,
   tabBarItems,
   filterItems,
   onLoadMoreClick,
@@ -83,6 +84,7 @@ export function SectionBasic({
           title={title}
           description={description}
           titleSectionSize={titleSectionSize}
+          titleTag={titleTag}
         />
 
         {tabBarItems?.length && (

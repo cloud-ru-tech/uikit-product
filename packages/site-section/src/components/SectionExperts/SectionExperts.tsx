@@ -15,7 +15,7 @@ import { calculateAmountOfItemsPerPage } from './utils';
 
 export type SectionExpertsProps = WithSupportProps<
   WithLayoutType<
-    Pick<SectionTitleProps, 'title'> & {
+    Pick<SectionTitleProps, 'title' | 'titleTag'> & {
       /** Массив айтемов */
       items: ExpertDetails[];
       /** Цвет фона */
@@ -30,6 +30,7 @@ const MOBILE_LAYOUTS = ['tablet', 'mobile'];
 
 export function SectionExperts({
   title,
+  titleTag,
   items,
   backgroundColor = SECTION_COLORS.NeutralBackground1Level,
   className,
@@ -77,7 +78,7 @@ export function SectionExperts({
       {...extractSupportProps(rest)}
     >
       <div ref={wrapperRef} className={styles.siteSectionExperts} data-layout-type={layoutType}>
-        <SectionTitle layoutType={layoutType} title={title} />
+        <SectionTitle layoutType={layoutType} title={title} titleTag={titleTag} />
 
         {itemsPerPageAmount > 0 && (
           <Carousel
