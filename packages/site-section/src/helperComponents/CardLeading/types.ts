@@ -1,11 +1,14 @@
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
-import { ValueOf } from '@snack-uikit/utils';
-
-import { TYPE } from './constants';
-
-export type Type = ValueOf<typeof TYPE>;
 
 export type CardLeadingItem = WithSupportProps<{
-  /** Область, сфера лидерства */
-  type: Type;
+  /** Заголовок карточки, значение */
+  value: string;
+  /** Подзаголовок карточки */
+  label: string;
+  /** Описание карточки */
+  description: string;
+  /** Ссылка на видео */
+  video: string;
+  /** Ссылка на превью-изображение */
+  poster: string;
 }>;

@@ -100,12 +100,7 @@ export function SectionLeading({
             swipe={items.length > itemsPerPageAmount}
           >
             {items.map(item => (
-              <CardLeading
-                key={item.type}
-                type={item.type}
-                layoutType={layoutType}
-                data-test-id={item['data-test-id']}
-              />
+              <CardLeading key={item.label} {...item} layoutType={layoutType} data-test-id={item['data-test-id']} />
             ))}
           </Carousel>
         )}

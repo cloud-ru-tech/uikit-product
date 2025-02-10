@@ -7,6 +7,12 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SectionLeading, SectionLeadingProps } from '../src';
 import { SECTION_COLORS } from '../src/constants';
+import aiVideo from './assets/ai.mp4';
+import aiPreview from './assets/ai.png';
+import iaasVideo from './assets/iaas.mp4';
+import iaasPreview from './assets/iaas.png';
+import paasVideo from './assets/paas.mp4';
+import paasPreview from './assets/paas.png';
 import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
@@ -24,13 +30,25 @@ type StoryProps = SectionLeadingProps &
 
 const items: SectionLeadingProps['items'] = [
   {
-    type: 'iaas',
+    video: iaasVideo,
+    poster: iaasPreview,
+    value: '№1',
+    label: 'по темпам роста IaaS',
+    description: 'iKS-Consulting, 2024',
   },
   {
-    type: 'paas',
+    video: paasVideo,
+    poster: paasPreview,
+    value: '№1',
+    label: 'в сегменте PaaS',
+    description: 'iKS-Consulting, 2024',
   },
   {
-    type: 'ai',
+    video: aiVideo,
+    poster: aiPreview,
+    value: '№1',
+    label: 'на рынке AI',
+    description: 'CNews Analytics, 2023',
   },
 ];
 
@@ -75,7 +93,7 @@ export const leading: StoryObj<StoryProps> = {
     design: {
       name: 'Figma',
       type: 'figma',
-      url: 'https://www.figma.com/design/pCLrU1Wg1VsoMQGLmH1J8t/%5BLIB%5D%5BSITE%5D-Product-UI-Kit?m=auto&node-id=7369-475592&t=6PG0wWrr0AIK5xSu-1',
+      url: 'https://www.figma.com/design/pCLrU1Wg1VsoMQGLmH1J8t/%5BLIB%5D%5BSITE%5D-Product-UI-Kit?m=auto&node-id=7970-397415',
     },
   },
 };
