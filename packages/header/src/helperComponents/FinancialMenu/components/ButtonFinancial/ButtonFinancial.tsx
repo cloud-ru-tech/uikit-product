@@ -28,6 +28,19 @@ export function ButtonFinancial({
   onClick,
 }: ButtonFinancialProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  let content = null;
+
+  if (valueVisible) {
+    content = isLoading ? (
+      <Spinner size='xs' />
+    ) : (
+      <>
+        <div className={styles.label}>{formatNumber(value, { type: formatNumber.types.DigitSpaces })}</div>
+
+        <div>{type === 'bonuses' ? textProvider(languageCode, Texts.FinancialMenuBonusSign) : CURRENCY_MAP.ruble}</div>
+      </>
+    );
+  }
 
   return (
     <HotSpot enabled={hotSpot} appearance={status === 'attention' ? 'red' : 'primary'} offsetY={4} offsetX={-4}>
@@ -38,18 +51,7 @@ export function ButtonFinancial({
         type='button'
         onClick={onClick}
       >
-        {isLoading && <Spinner size='xs' />}
-
-        {!isLoading && valueVisible && (
-          <>
-            <div className={styles.label}>{formatNumber(value, { type: formatNumber.types.DigitSpaces })}</div>
-
-            <div>
-              {type === 'bonuses' ? textProvider(languageCode, Texts.FinancialMenuBonusSign) : CURRENCY_MAP.ruble}
-            </div>
-          </>
-        )}
-
+        {content}
         <CostControlSVG />
       </button>
     </HotSpot>

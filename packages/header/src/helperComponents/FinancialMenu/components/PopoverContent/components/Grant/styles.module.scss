@@ -1,13 +1,17 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
 .nameWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
   min-width: 0;
 }
 
 .nameWrapper,
 .amount,
 .dateWrapper {
-  align-self: start;
+  align-self: flex-end;
 }
 
 .amount,
@@ -21,6 +25,13 @@
   @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-s);
 }
 
+.name {
+  &[data-mobile] {
+    display: flex;
+    gap: 2px;
+  }
+}
+
 .amount,
 .amountWithDate,
 .date {
@@ -30,6 +41,8 @@
 }
 
 .amountWithDate {
+  display: flex;
+  flex-direction: column;
   grid-column: 2 / 4;
 
   text-align: right;

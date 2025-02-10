@@ -77,17 +77,17 @@ export function Grant({ name, beginAt, expireAt, initialAmount, currentAmount, s
     return (
       <>
         <div className={styles.nameWrapper}>
-          <div className={styles.name}>
+          <div className={styles.name} data-mobile>
             <TruncateString text={name} />
-          </div>
 
-          <span className={styles.initialAmount}>{`(${initialGrantAmount})`}</span>
+            <div className={styles.initialAmount}>{`(${initialGrantAmount})`}</div>
+          </div>
 
           {statusTextId && <div className={styles.status}>{textProvider(languageCode, statusTextId)}</div>}
         </div>
 
         <div className={styles.amountWithDate} data-disabled={isDisableAppearance}>
-          {currentGrantAmount}
+          <div className={styles.amount}>{currentGrantAmount}</div>
 
           <div className={styles.dateWrapper}>
             <div
