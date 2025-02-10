@@ -8,14 +8,13 @@ import { Typography } from '@snack-uikit/typography';
 
 import { textProvider, Texts } from '../../helpers';
 import { SectionBasic } from '../SectionBasic';
-import fallbackManager from './assets/personal_manager.png';
 import styles from './styles.module.scss';
 import { getCardTitleTypographyProps } from './utils';
 
 export type SectionPersonalManagerProps = WithSupportProps<
   WithLayoutType<{
     /** Ссылка на изображение */
-    image?: string;
+    image: string;
     /** CSS-класс */
     className?: string;
     /** Хэндлер клика по кнопке "Получить консультацию" */
@@ -64,12 +63,7 @@ export function SectionPersonalManager({
           </div>
           <div className={styles.imageWrapper} data-layout-type={layoutType}>
             <div className={styles.imageBackground}></div>
-            <img
-              src={image ?? fallbackManager}
-              alt='personal_manager'
-              className={styles.approachManager}
-              data-layout-type={layoutType}
-            />
+            <img src={image} alt='personal_manager' className={styles.approachManager} data-layout-type={layoutType} />
           </div>
         </div>
         <div className={cn(styles.card, styles.cardTextContent)}>

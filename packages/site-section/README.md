@@ -60,7 +60,7 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onGetConsultationClick* | `() => void` | - | Хэндлер клика по кнопке "Получить консультацию" |
-| image | `string` | - | Ссылка на изображение |
+| image* | `string` | - | Ссылка на изображение |
 | className | `string` | - | CSS-класс |
 
 

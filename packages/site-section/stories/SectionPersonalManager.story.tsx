@@ -4,6 +4,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SectionPersonalManager, SectionPersonalManagerProps } from '../src';
+import sampleManager from './assets/personal_manager.png';
 import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
@@ -20,7 +21,11 @@ const handleClick = () => window.alert('Button clicked!');
 
 const Template: StoryFn<StoryProps> = ({ layoutType, image }) => (
   <div className={styles.resizeWrapper}>
-    <SectionPersonalManager image={image} onGetConsultationClick={handleClick} layoutType={layoutType} />
+    <SectionPersonalManager
+      image={image ?? sampleManager}
+      onGetConsultationClick={handleClick}
+      layoutType={layoutType}
+    />
   </div>
 );
 
