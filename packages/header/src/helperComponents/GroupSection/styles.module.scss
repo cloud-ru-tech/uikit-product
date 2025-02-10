@@ -9,7 +9,8 @@ $vPadding: calc(#{element.$dimension-1m} + #{element.$dimension-025m});
 }
 
 .list {
-  display: flex;
+  /* stylelint-disable-next-line declaration-no-important */
+  display: flex !important;
   flex-direction: column;
   min-height: 0;
   max-height: 100%;
