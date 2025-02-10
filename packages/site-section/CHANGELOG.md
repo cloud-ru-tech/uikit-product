@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-02-10)
+
+
+### Features
+
+* **SITE-8734:** add titleTag prop to all site sections ([0484f2b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0484f2b6792d16287b1d9417a848109fc81c0088))
+
+
+
+
+
 ## <small>0.0.12 (2025-02-07)</small>
 
 * fix(PDS-1387): renamed SectionCardLeading to SectionLeading ([d9ac769](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d9ac769))
