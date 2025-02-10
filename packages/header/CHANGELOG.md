@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.33.38 (2025-02-10)
+
+
+### Bug Fixes
+
+* **FF-4704:** make list always flex, besides style order ([5607c2b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5607c2b7d907803700ba6e224487d19a23c6a380))
+
+
+
+
+
 ## 2.33.37 (2025-02-10)
 
 
