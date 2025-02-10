@@ -1,6 +1,7 @@
 # Site Section
 
 ## Installation
+
 `npm i @sbercloud/uikit-product-site-section`
 
 [//]: DOCUMENTATION_SECTION_START
@@ -31,6 +32,18 @@
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS-класс |
 | onLoadMoreClick | `() => void` | - | Колбек на клик по кнопке "Показать ещё" |
+## SectionBenefits
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| content* | `ContentBasicTab[] \| CardBasicArray \| ContentInfoTab[] \| CardInfoArray` | - |  |
+| type* | "basic" \| "info" | - |  |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
+| title* | `string` | - | Название секции |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| description | `string` | - | Описание секции |
+| tabBarItems | `TabBarItem[]` | - |  |
 ## SectionExperts
 ### Props
 | name | type | default value | description |
@@ -67,5 +80,3 @@
 [//]: DOCUMENTATION_SECTION_END
 
 [Changelog](./CHANGELOG.md)
-
-
