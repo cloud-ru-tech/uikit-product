@@ -1,11 +1,11 @@
 import { memo, useCallback, useMemo } from 'react';
 
+import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { AdaptiveDrawer, AdaptiveModal, DrawerProps, ModalProps } from '@sbercloud/uikit-product-mobile-modal';
 import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { FieldSelect, FieldSelectProps } from '@snack-uikit/fields';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
-import { PlusSVG } from '@snack-uikit/icons';
 
 import { useOpen } from '../../hooks';
 import { SelectFooter } from './SelectFooter';

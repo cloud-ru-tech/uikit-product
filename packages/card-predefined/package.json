@@ -33,13 +33,13 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "10.2.14",
-    "@snack-uikit/button": "0.19.3",
-    "@snack-uikit/card": "0.16.0",
-    "@snack-uikit/promo-tag": "0.6.1",
-    "@snack-uikit/toggles": "0.13.1",
-    "@snack-uikit/truncate-string": "0.6.1",
-    "@snack-uikit/typography": "0.8.1",
-    "@snack-uikit/utils": "3.5.0",
+    "@snack-uikit/button": "0.19.7",
+    "@snack-uikit/card": "0.16.19",
+    "@snack-uikit/promo-tag": "0.7.1",
+    "@snack-uikit/toggles": "0.13.5",
+    "@snack-uikit/truncate-string": "0.6.9",
+    "@snack-uikit/typography": "0.8.4",
+    "@snack-uikit/utils": "3.7.0",
     "classnames": "2.5.1",
     "uncontrollable": "8.0.4"
   }

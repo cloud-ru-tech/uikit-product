@@ -1,6 +1,6 @@
 import cn from 'classnames';
 
-import { ChevronRightSVG } from '@snack-uikit/icons';
+import { ChevronRightSVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps } from '@snack-uikit/utils';
 
 import { TEST_IDS } from '../constants';

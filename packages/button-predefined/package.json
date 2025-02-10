@@ -34,11 +34,11 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "10.2.14",
     "@sbercloud/uikit-product-utils": "3.8.8",
-    "@snack-uikit/button": "0.19.3",
-    "@snack-uikit/dropdown": "0.4.1",
-    "@snack-uikit/list": "0.21.6",
-    "@snack-uikit/loaders": "0.8.1",
-    "@snack-uikit/utils": "3.5.0",
+    "@snack-uikit/button": "0.19.7",
+    "@snack-uikit/dropdown": "0.4.5",
+    "@snack-uikit/list": "0.25.0",
+    "@snack-uikit/loaders": "0.9.1",
+    "@snack-uikit/utils": "3.7.0",
     "classnames": "2.5.1",
     "uncontrollable": "8.0.4"
   }

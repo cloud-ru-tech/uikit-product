@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
 
+import { SearchSVG, UpdateSVG } from '@sbercloud/uikit-product-icons';
 import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonTonal } from '@snack-uikit/button';
 import { FieldSelectProps } from '@snack-uikit/fields';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
-import { SearchSVG, UpdateSVG } from '@snack-uikit/icons';
 
 import { capitalize } from '../../helpers';
 import { textProvider, Texts } from './textsProvider';

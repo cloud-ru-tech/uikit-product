@@ -74,6 +74,7 @@
     "@snack-uikit/toaster": "0.8.13",
     "@snack-uikit/toggles": "0.13.5",
     "@snack-uikit/tooltip": "0.16.2",
+    "@snack-uikit/typography": "0.8.4",
     "@storybook/addon-actions": "8.3.6",
     "@storybook/addon-designs": "8.0.3",
     "@storybook/addon-essentials": "8.3.6",

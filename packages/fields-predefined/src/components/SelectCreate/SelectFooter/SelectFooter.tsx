@@ -1,5 +1,5 @@
+import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
-import { PlusSVG } from '@snack-uikit/icons';
 
 import styled from './styles.module.scss';
 type SelectFooterProps = {

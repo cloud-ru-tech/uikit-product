@@ -4,25 +4,23 @@ import { KebabSVG } from '@sbercloud/uikit-product-icons';
 import { MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
 import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 import { ButtonFilled, ButtonFunction, ButtonOutline, ButtonSimple, ButtonTonal } from '@snack-uikit/button';
+import { useDynamicList } from '@snack-uikit/utils';
 
 import { BUTTON_TYPE } from './constants';
-import { useDynamicList } from './hooks';
 import styles from './styles.module.scss';
 import { ActionsProps } from './types';
 
 export function Actions({ items }: ActionsProps) {
-  const buttonRefs = useRef<HTMLButtonElement[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
-  const { visibleActions, hiddenActions } = useDynamicList({ containerRef, buttonRefs, items });
+  const { visibleItems, hiddenItems } = useDynamicList({ parentContainerRef: containerRef, items });
 
   return (
     <div className={styles.actionsWrapper} ref={containerRef}>
-      {visibleActions.map(({ variant, tooltip, ...buttonProps }, index) => {
+      {visibleItems.map(({ variant, tooltip, ...buttonProps }, index) => {
         const commonProps = {
           key: index,
-          ref: (button: HTMLButtonElement) => (buttonRefs.current[index] = button),
           fullWidth: true,
           className: styles.button,
           size: 'm' as const,
@@ -47,11 +45,11 @@ export function Actions({ items }: ActionsProps) {
         }
       })}
 
-      {hiddenActions.length > 0 && (
+      {hiddenItems.length > 0 && (
         <MobileDroplist
           open={isOpen}
           onOpenChange={setIsOpen}
-          items={hiddenActions.map(action => ({
+          items={hiddenItems.map(action => ({
             ...action,
             content: { option: action.label ?? '' },
             onClick: event => {

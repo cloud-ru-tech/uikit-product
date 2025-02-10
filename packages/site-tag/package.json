@@ -34,7 +34,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/promo-tag": "0.7.1",
-    "@snack-uikit/tooltip": "0.16.0",
+    "@snack-uikit/tooltip": "0.16.2",
     "@snack-uikit/utils": "3.7.0"
   }
 }
