@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.33.37 (2025-02-10)
+
+
+### Bug Fixes
+
+* **FF-4704:** add virtualization to project selector ([4747903](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4747903d376d9e73f98ed48099b835dc5bc269db))
+
+
+
+
+
 ## <small>2.33.36 (2025-02-06)</small>
 
 * fix(PDS-1495): Header - fixed wide divider in the mobile financial menu ([f1f08ce](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f1f08ce))

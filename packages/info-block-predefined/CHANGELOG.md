@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.3 (2025-02-10)
+
+
+### Dependencies
+
+* **FF-4704:** up deps ([7da95ef](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7da95ef6551ced9a63c75970f43b047cc564cedc))
+
+
+
+
+
 ## <small>0.3.2 (2024-11-14)</small>
 
 * deps(FF-5678): up deps classnames/uncontrollable ([17b3e6e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/17b3e6e))

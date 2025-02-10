@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-page-layout",
   "title": "Page Layout",
-  "version": "0.16.19",
+  "version": "0.16.20",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,8 +32,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-copy-line": "0.7.16",
-    "@sbercloud/uikit-product-icons": "10.2.14",
+    "@sbercloud/uikit-product-copy-line": "0.7.17",
+    "@sbercloud/uikit-product-icons": "10.2.15",
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/icon-predefined": "0.7.3",

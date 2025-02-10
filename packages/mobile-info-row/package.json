@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-info-row",
   "title": "Mobile Info Row",
-  "version": "0.5.19",
+  "version": "0.5.20",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,8 +32,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-info-row": "0.8.12",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.4.16",
+    "@sbercloud/uikit-product-info-row": "0.8.13",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.4.17",
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/divider": "3.2.3",
