@@ -48,7 +48,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
     },
     {
       id: CATEGORY.Computations,
-      label: 'Вычисления',
+      label: 'Инфраструктура',
       dataTestId: 'computations',
       visibleProducts: [
         EVOLUTION_PRODUCT.EvolutionCloudServer,
@@ -57,20 +57,20 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       ],
     },
     {
-      id: CATEGORY.Containerization,
-      label: 'Контейнеризация',
-      dataTestId: 'containerization',
-      visibleProducts: [EVOLUTION_PRODUCT.EvolutionKubernetes],
-    },
-    {
       id: CATEGORY.Storage,
-      label: 'Хранилище',
+      label: 'Хранение и резервное копирование',
       dataTestId: 'storage',
       visibleProducts: [EVOLUTION_PRODUCT.EvolutionStorageS3, EVOLUTION_PRODUCT.EvolutionStorageS3FreeTier],
     },
     {
+      id: CATEGORY.Containerization,
+      label: 'Контейнеры',
+      dataTestId: 'containerization',
+      visibleProducts: [EVOLUTION_PRODUCT.EvolutionKubernetes],
+    },
+    {
       id: CATEGORY.Database,
-      label: 'Базы данных',
+      label: 'Платформы данных',
       dataTestId: 'database',
       visibleProducts: [EVOLUTION_PRODUCT.EvolutionManagedPostgreSQL],
     },
