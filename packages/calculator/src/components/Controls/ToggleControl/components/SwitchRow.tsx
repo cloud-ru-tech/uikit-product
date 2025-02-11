@@ -6,6 +6,7 @@ import { Switch } from '@snack-uikit/toggles';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { ObjectDecorator } from '../../ObjectDecorator';
+import { TooltipPlacement } from '../../types';
 import styles from './styles.module.scss';
 
 export type SwitchRowProps = {
@@ -16,6 +17,7 @@ export type SwitchRowProps = {
   loading?: boolean;
   onChange(checked: boolean): void;
   labelTooltip?: ReactNode;
+  tooltipPlacement?: TooltipPlacement;
   disabledToggleTip?: ReactNode;
   className?: string;
   disableTitleTruncate?: boolean;
@@ -28,6 +30,7 @@ export function SwitchRow({
   disabled,
   onChange,
   labelTooltip,
+  tooltipPlacement,
   className,
   disabledToggleTip,
   loading,
@@ -70,7 +73,7 @@ export function SwitchRow({
       <div className={styles.headline}>
         <div className={styles.titleLayout}>
           <div className={styles.titleWrapper}>
-            <ObjectDecorator label={label} labelTooltip={labelTooltip} />
+            <ObjectDecorator label={label} labelTooltip={labelTooltip} tooltipPlacement={tooltipPlacement} />
           </div>
         </div>
 

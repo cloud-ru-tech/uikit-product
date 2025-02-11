@@ -6,6 +6,7 @@ import {
   StepperControl,
   ToggleObjectControl,
 } from '../../../../components';
+import { TooltipPlacement } from '../../../../components/Controls/types';
 import { AnyType } from '../../../../types';
 import { generateInstanceConfigItems, getDisk } from '../../../utils';
 
@@ -179,14 +180,21 @@ function getNodeConfig(props: GetNodeConfigProps): ObjectControl {
 type GetToggleNodeConfigProps = GetNodeConfigProps & {
   label: string;
   labelTooltip: string;
+  tooltipPlacement?: TooltipPlacement;
 };
 
-function getToggleNodeConfig({ label, labelTooltip, ...rest }: GetToggleNodeConfigProps): ToggleObjectControl {
+function getToggleNodeConfig({
+  label,
+  labelTooltip,
+  tooltipPlacement,
+  ...rest
+}: GetToggleNodeConfigProps): ToggleObjectControl {
   return {
     type: CONTROL.ToggleObject,
     decoratorProps: {
       label,
       labelTooltip,
+      tooltipPlacement,
     },
     switchKey: `${rest.prefix}.isIncluded`,
     control: getNodeConfig(rest),

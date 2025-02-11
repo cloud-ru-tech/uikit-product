@@ -22,18 +22,28 @@ const onDownloadFileClick = getOnDownloadFileClick();
 const Template: StoryFn<CalculatorProps> = ({ ...args }) => (
   <div
     style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       padding: '8px 0',
     }}
   >
-    <Calculator
-      {...args}
-      config={CATALOG_CONFIG}
-      fetcherFn={fetcherFn}
-      actions={{
-        onDownloadFileClick,
-        onShareClick,
+    <div
+      style={{
+        padding: '8px 0',
+        maxWidth: '1248px',
       }}
-    />
+    >
+      <Calculator
+        {...args}
+        config={CATALOG_CONFIG}
+        fetcherFn={fetcherFn}
+        actions={{
+          onDownloadFileClick,
+          onShareClick,
+        }}
+      />
+    </div>
   </div>
 );
 

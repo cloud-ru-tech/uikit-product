@@ -12,14 +12,14 @@ import { formatNumber, getPrice, getValue, setValue } from '../../../utils';
 import { CONTROL } from '../constants';
 import { ObjectDecorator } from '../ObjectDecorator';
 import { StepperControlUi } from '../StepperControl';
-import { BaseDecoratorProps } from '../types';
+import { BaseDecoratorProps, TooltipPlacement } from '../types';
 import { StepperWithAllowedValues } from './helperComponents';
 import styles from './styles.module.scss';
 
 type TableRow = {
   label: string;
   labelTooltip?: ReactNode;
-
+  tooltipPlacement?: TooltipPlacement;
   accessorKey: string;
   priceAccessorKey?: string;
 
@@ -33,7 +33,7 @@ export type TableControl = {
   defaultValue?: FormValues;
   accessorKey?: string;
 
-  decoratorProps?: Pick<BaseDecoratorProps, 'label' | 'labelTooltip'>;
+  decoratorProps?: Pick<BaseDecoratorProps, 'label' | 'labelTooltip' | 'tooltipPlacement'>;
   counter?: {
     accessorKey: string;
     label: string;
@@ -101,14 +101,20 @@ export function TableControlUi({
             <div className={styles.cell}>Стоимость в месяц</div>
           </div>
 
-          {rows.map(({ accessorKey, label, labelTooltip, uiProps, allowedValues }) => (
+          {rows.map(({ accessorKey, label, labelTooltip, tooltipPlacement, uiProps, allowedValues }) => (
             <div className={styles.row} key={accessorKey}>
               <div className={styles.cell}>
                 <span>
                   {label}&nbsp;
                   {labelTooltip && (
                     <span className={styles.tipWrapperInline}>
-                      <QuestionTooltip data-pointer tip={labelTooltip} size='xs' tabIndex={-1} />
+                      <QuestionTooltip
+                        data-pointer
+                        tip={labelTooltip}
+                        placement={tooltipPlacement}
+                        size='xs'
+                        tabIndex={-1}
+                      />
                     </span>
                   )}
                 </span>

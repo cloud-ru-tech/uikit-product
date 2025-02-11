@@ -14,6 +14,20 @@ import { ToggleCardsControl } from './ToggleCardsControl';
 import { ToggleControl } from './ToggleControl';
 import { ToggleObjectControl } from './ToggleObjectControl';
 
+export type TooltipPlacement =
+  | 'left'
+  | 'left-start'
+  | 'left-end'
+  | 'right'
+  | 'right-start'
+  | 'right-end'
+  | 'top'
+  | 'top-start'
+  | 'top-end'
+  | 'bottom'
+  | 'bottom-start'
+  | 'bottom-end';
+
 /** Базовые параметры декоратора для поля */
 export type BaseDecoratorProps = {
   /** Лейбл */
@@ -22,6 +36,8 @@ export type BaseDecoratorProps = {
   hint?: string;
   /** Вспомогательный тултип */
   labelTooltip?: ReactNode;
+  /** Расположение тултипа */
+  tooltipPlacement?: TooltipPlacement;
   /** Дополтительный текст сверху */
   caption?: string;
   /** Флаг обязательное поле или нет */

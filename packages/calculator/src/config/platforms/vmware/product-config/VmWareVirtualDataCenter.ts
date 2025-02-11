@@ -1,19 +1,18 @@
 import { CONTROL, FormConfig } from '../../../../components';
 
+const payAsYouGoTooltip =
+  'При модели pay-as-you-go оплачивается фактическое использование ресурсов в почасовом режиме, начиная с первой минуты использования ресурсов. Тарифицируется сумма используемых ресурсов для всех VM. Ресурсы виртуального процессора и памяти тарифицируются в период работы VM. Ресурсы хранения тарифицируются после создания VM и не зависят от состояния активности VM. Для каждой VM учитываются максимальные значения ресурсов за каждый час. Неполные часы использования ресурсов округляются до полного часа.';
+const payAsYouAllocateTooltip =
+  'При модели Allocation ресурсы начинают тарифицироваться при создании виртуального ЦОД. Использование или не использование ресурсов внутри виртуального ЦОД не влияет на тарификацию. Например, если вы создали виртуальный ЦОД с объемом оперативной памяти 500 ГБ, а VM внутри ЦОД используют только 100 ГБ, тарифицироваться будут 500 ГБ.';
+
 export const VIRTUAL_DATA_CENTER_FORM_CONFIG: FormConfig = {
-  ui: ['alert', 'instancePayg', 'instancePaya', 'additionalServices', 'os'],
+  ui: ['instancePayg', 'instancePaya', 'additionalServices', 'os'],
   controls: {
-    alert: {
-      type: CONTROL.Alert,
-      uiProps: {
-        description:
-          'Продукт тарифицируется по модели Allocation — все зарезервированные ресурсы оплачиваются независимо от их фактического потребления. Оплата раз в месяц.',
-      },
-    },
     instancePayg: {
       type: CONTROL.Table,
       decoratorProps: {
-        label: 'Ресурсы Pay As You Go',
+        label: 'Pay As You Go',
+        labelTooltip: payAsYouGoTooltip,
       },
       accessorKey: 'instancePayg',
       defaultValue: {
@@ -84,7 +83,9 @@ export const VIRTUAL_DATA_CENTER_FORM_CONFIG: FormConfig = {
     instancePaya: {
       type: CONTROL.Table,
       decoratorProps: {
-        label: 'Ресурсы Pay As You Allocate',
+        label: 'Pay As You Allocate',
+        labelTooltip: payAsYouAllocateTooltip,
+        tooltipPlacement: 'right',
       },
       accessorKey: 'instancePaya',
       defaultValue: {

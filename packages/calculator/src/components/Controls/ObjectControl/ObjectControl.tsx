@@ -51,7 +51,7 @@ export type ObjectControl = {
   visible?: boolean;
   /** Исходное значение */
   defaultValue?: FormValues;
-  decoratorProps?: Pick<BaseDecoratorProps, 'label' | 'labelTooltip'>;
+  decoratorProps?: Pick<BaseDecoratorProps, 'label' | 'labelTooltip' | 'tooltipPlacement'>;
   /**
    * Отслеживаемые "более главные" поля
    *
