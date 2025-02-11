@@ -1,5 +1,5 @@
 import { CONTROL, FormConfig } from '../../../../components';
-import { generateCpuItems, generateRamItems } from '../../../utils';
+import { generateRamItems } from '../../../utils';
 
 const DeploymentMode = {
   Standard: 'standart',
@@ -77,7 +77,7 @@ export const EVOLUTION_POSTGRE_SQL_FORM_CONFIG: FormConfig = {
       ui: [['vCpu', 'ram']],
       controls: {
         vCpu: {
-          type: CONTROL.Segmented,
+          type: CONTROL.Slider,
           accessorKey: 'flavorConfig.vCpu',
           defaultValue: '0.5',
           items: [],
@@ -91,7 +91,7 @@ export const EVOLUTION_POSTGRE_SQL_FORM_CONFIG: FormConfig = {
 
             if (items?.length > 0) {
               return {
-                items: generateCpuItems(items),
+                items,
               };
             }
           },

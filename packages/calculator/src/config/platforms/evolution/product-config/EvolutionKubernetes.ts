@@ -119,10 +119,10 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
             },
           },
           vCpuCount: {
-            type: CONTROL.Segmented,
+            type: CONTROL.Slider,
             accessorKey: 'workerNode.vCpuCount',
             defaultValue: '2',
-            items: generateCpuItems([2, 4, 8]),
+            items: [2, 4, 8],
             decoratorProps: {
               label: 'Количество ядер vCPU',
               labelTooltip: 'Виртуальные ядра',
@@ -133,7 +133,7 @@ export const EVOLUTION_KUBERNETES_FORM_CONFIG: FormConfig = {
 
               if (items?.length > 0) {
                 return {
-                  items: generateCpuItems(items),
+                  items,
                 };
               }
             },

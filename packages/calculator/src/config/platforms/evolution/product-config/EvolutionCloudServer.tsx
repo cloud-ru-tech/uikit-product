@@ -1,5 +1,5 @@
 import { CONTROL, FormConfig } from '../../../../components';
-import { generateBaseItems, generateCpuItems, generateRamItems, getDisk } from '../../../utils';
+import { generateBaseItems, generateRamItems, getDisk } from '../../../utils';
 
 const GuaranteedPartItem = {
   '10': '10',
@@ -124,10 +124,10 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
     },
 
     vCpuCoreCount: {
-      type: CONTROL.Segmented,
+      type: CONTROL.Slider,
       accessorKey: 'vCpuCoreCount',
       defaultValue: '1',
-      items: generateCpuItems([1, 2, 4, 8]),
+      items: [1, 2, 4, 8],
       decoratorProps: {
         label: 'Количество ядер vCPU',
         labelTooltip: 'Количество ядер vCPU',
@@ -138,7 +138,7 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
 
         if (items?.length > 0) {
           return {
-            items: generateCpuItems(items),
+            items: items,
           };
         }
       },
