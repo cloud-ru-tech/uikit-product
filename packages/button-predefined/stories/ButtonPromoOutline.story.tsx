@@ -6,17 +6,17 @@ import { PlaceholderSVG } from '@snack-uikit/icons';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ButtonPromo, ButtonPromoProps } from '../src';
+import { ButtonPromoOutline, ButtonPromoOutlineProps } from '../src';
 import { BUTTON_ARGS, COMMON_ARG_TYPES } from './constants';
 import { ControlledWrapper, TableCell, TableColumn, TableWrapper } from './helperComponents';
 
 const meta: Meta = {
-  title: 'Site/Button Predefined/Button Promo',
-  component: ButtonPromo,
+  title: 'Site/Button Predefined/Button Promo Outline',
+  component: ButtonPromoOutline,
 };
 export default meta;
 
-type StoryProps = ButtonPromoProps & { testMode: boolean };
+type StoryProps = ButtonPromoOutlineProps & { testMode: boolean };
 const Template: StoryFn<StoryProps> = ({ testMode, ...args }) => {
   const [count, setCount] = useState<number>(0);
 
@@ -31,37 +31,37 @@ const Template: StoryFn<StoryProps> = ({ testMode, ...args }) => {
   return (
     <>
       <ControlledWrapper>
-        <ButtonPromo {...args} onClick={inc} />
+        <ButtonPromoOutline {...args} onClick={inc} />
       </ControlledWrapper>
 
       <TableWrapper>
         <TableColumn>
           <TableCell>Icon Only</TableCell>
           <TableCell>
-            <ButtonPromo {...BUTTON_ARGS} appearance='tertiary' icon={<PlaceholderSVG />} label={undefined} />
+            <ButtonPromoOutline {...BUTTON_ARGS} appearance='tertiary' icon={<PlaceholderSVG />} label={undefined} />
           </TableCell>
           <TableCell>
-            <ButtonPromo {...BUTTON_ARGS} appearance='secondary' icon={<PlaceholderSVG />} label={undefined} />
+            <ButtonPromoOutline {...BUTTON_ARGS} appearance='secondary' icon={<PlaceholderSVG />} label={undefined} />
           </TableCell>
         </TableColumn>
 
         <TableColumn>
           <TableCell>Label Only</TableCell>
           <TableCell>
-            <ButtonPromo {...BUTTON_ARGS} appearance='tertiary' icon={undefined} label='Label Only' />
+            <ButtonPromoOutline {...BUTTON_ARGS} appearance='tertiary' icon={undefined} label='Label Only' />
           </TableCell>
           <TableCell>
-            <ButtonPromo {...BUTTON_ARGS} appearance='secondary' icon={undefined} label='Label Only' />
+            <ButtonPromoOutline {...BUTTON_ARGS} appearance='secondary' icon={undefined} label='Label Only' />
           </TableCell>
         </TableColumn>
 
         <TableColumn>
           <TableCell>Label + Icon</TableCell>
           <TableCell>
-            <ButtonPromo {...BUTTON_ARGS} appearance='tertiary' icon={<PlaceholderSVG />} label='IconAfter' />
+            <ButtonPromoOutline {...BUTTON_ARGS} appearance='tertiary' icon={<PlaceholderSVG />} label='IconAfter' />
           </TableCell>
           <TableCell>
-            <ButtonPromo {...BUTTON_ARGS} appearance='secondary' icon={<PlaceholderSVG />} label='IconAfter' />
+            <ButtonPromoOutline {...BUTTON_ARGS} appearance='secondary' icon={<PlaceholderSVG />} label='IconAfter' />
           </TableCell>
         </TableColumn>
       </TableWrapper>
@@ -74,7 +74,7 @@ const Template: StoryFn<StoryProps> = ({ testMode, ...args }) => {
   );
 };
 
-export const buttonPromo: StoryObj<StoryProps> = {
+export const buttonPromoOutline: StoryObj<StoryProps> = {
   render: Template,
 
   args: {
@@ -101,7 +101,7 @@ export const buttonPromo: StoryObj<StoryProps> = {
     design: {
       name: 'Figma',
       type: 'figma',
-      url: 'https://www.figma.com/design/pCLrU1Wg1VsoMQGLmH1J8t/Website-components?node-id=2534-240075&node-type=canvas&m=dev',
+      url: 'https://www.figma.com/design/pCLrU1Wg1VsoMQGLmH1J8t/%5BLIB%5D%5BSITE%5D-Product-UI-Kit?node-id=3236-37122&t=QSQmRTkPhuqe9cBP-0',
     },
   },
 };
