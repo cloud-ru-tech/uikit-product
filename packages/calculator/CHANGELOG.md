@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.20 (2025-02-11)
+
+
+### Bug Fixes
+
+* **ONB-3531:** changed category naming in catalog ([4467d05](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4467d05d81ae4c6d6e7b1d7f11d3204540c4c426))
+
+
+
+
+
 ## 0.0.19 (2025-02-10)
 
 
