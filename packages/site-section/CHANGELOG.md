@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.2 (2025-02-11)
+
+
+### Bug Fixes
+
+* **FF-6217:** remove fallback image from section personal manager ([0cdd4ff](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0cdd4ff7a97b9eb831bfe2ff4eac7b5d4bbb45e1))
+* **FF-6217:** replaced hardcoded media content with props for section leading ([eb8b438](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eb8b438ef0730a2bc60eb502b6a322d635c2df37))
+
+
+
+
+
 ## 0.1.1 (2025-02-10)
 
 
