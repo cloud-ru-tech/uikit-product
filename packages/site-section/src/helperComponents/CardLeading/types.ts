@@ -7,8 +7,6 @@ export type CardLeadingItem = WithSupportProps<{
   label: string;
   /** Описание карточки */
   description: string;
-  /** Ссылка на видео */
-  video: string;
-  /** Ссылка на превью-изображение */
-  poster: string;
+  /** Ссылка на картинку */
+  image: string;
 }>;

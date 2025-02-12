@@ -7,24 +7,10 @@ import { getLabelTypographyProps, getValueTypographyProps } from './utils';
 
 export type CardLeadingProps = WithLayoutType<CardLeadingItem>;
 
-export function CardLeading({ layoutType, value, label, description, video, poster, ...rest }: CardLeadingProps) {
+export function CardLeading({ layoutType, value, label, description, image, ...rest }: CardLeadingProps) {
   return (
     <div className={styles.cardLeading} {...extractSupportProps(rest)}>
-      <div className={styles.videoWrapper}>
-        <video
-          className={styles.video}
-          width='100%'
-          preload='auto'
-          loop
-          muted
-          autoPlay
-          playsInline
-          disablePictureInPicture
-          controlsList='nodownload noplaybackrate'
-          onContextMenu={event => event.preventDefault()}
-          src={video}
-          poster={poster}
-        />
+      <div className={styles.wrapper}>
         <div className={styles.header}>
           <Typography family='sans' {...getValueTypographyProps(layoutType)} className={styles.cardLeadingColor}>
             {value}
@@ -33,6 +19,7 @@ export function CardLeading({ layoutType, value, label, description, video, post
             {label}
           </Typography>
         </div>
+        <img className={styles.illustration} src={image} alt='illustration' />
         <div className={styles.footer} data-layout-type={layoutType}>
           <Typography.SansBodyL className={styles.cardLeadingColor}>{description}</Typography.SansBodyL>
         </div>

@@ -7,12 +7,9 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SectionLeading, SectionLeadingProps } from '../src';
 import { SECTION_COLORS } from '../src/constants';
-import aiVideo from './assets/ai.mp4';
-import aiPreview from './assets/ai.png';
-import iaasVideo from './assets/iaas.mp4';
-import iaasPreview from './assets/iaas.png';
-import paasVideo from './assets/paas.mp4';
-import paasPreview from './assets/paas.png';
+import ai from './assets/ai.webp';
+import iaas from './assets/iaas.webp';
+import paas from './assets/paas.webp';
 import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
@@ -30,22 +27,19 @@ type StoryProps = SectionLeadingProps &
 
 const items: SectionLeadingProps['items'] = [
   {
-    video: iaasVideo,
-    poster: iaasPreview,
+    image: iaas,
     value: '№1',
     label: 'по темпам роста IaaS',
     description: 'iKS-Consulting, 2024',
   },
   {
-    video: paasVideo,
-    poster: paasPreview,
+    image: paas,
     value: '№1',
     label: 'в сегменте PaaS',
     description: 'iKS-Consulting, 2024',
   },
   {
-    video: aiVideo,
-    poster: aiPreview,
+    image: ai,
     value: '№1',
     label: 'на рынке AI',
     description: 'CNews Analytics, 2023',
