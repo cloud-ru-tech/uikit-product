@@ -1,0 +1,99 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.navbarItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var.$dimension-1m;
+  padding: 8px 10px;
+  cursor: pointer;
+  position: relative;
+
+  &:focus-visible {
+    @include ste.outline-var(ste.$container-focused-s);
+
+    outline-color: var.$sys-primary-accent-default;
+    outline-offset: calc(0px - #{var.$spacing-state-focus-offset});
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &[data-checked] {
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      pointer-events: none;
+      content: '';
+
+      height: ste.$border-state-focus-s-border-width;
+      background-color: var.$sys-primary-accent-default;
+    }
+  }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    background-color: transparent;
+    opacity: initial;
+
+    &[data-checked] {
+      &:after {
+        background-color: var.$sys-neutral-decor-disabled;
+      }
+    }
+  }
+}
+
+.background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  opacity: 0.08;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var.$sys-neutral-accent-default;
+  }
+
+  &[data-checked] {
+    background-color: var.$sys-primary-accent-default;
+
+    &:hover {
+      opacity: 0.16;
+    }
+
+    &:focus-visible {
+      opacity: 0.16;
+      border-bottom: none;
+    }
+  }
+
+  &[data-disabled] {
+    background-color: transparent;
+  }
+}
+
+.text {
+  white-space: nowrap;
+}
+
+.iconWrapper {
+  display: flex;
+}
+
+.text,
+.iconWrapper {
+  color: var.$sys-neutral-text-main;
+
+  &[data-disabled] {
+    color: var.$sys-neutral-text-disabled;
+  }
+}

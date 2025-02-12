@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &[data-sticky] {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.navbarItemsWrapper {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: visible;
+  max-width: 100%;
+  scrollbar-width: none;
+}
