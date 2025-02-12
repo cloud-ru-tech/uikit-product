@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-02-12)
+
+
+### Features
+
+* **PDS-1617:** button promo outline ([65ee31b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/65ee31b7b46f4d71cc3890533fe737ca8f6b32e2))
+
+
+
+
+
 ## 0.3.19 (2025-02-10)
 
 

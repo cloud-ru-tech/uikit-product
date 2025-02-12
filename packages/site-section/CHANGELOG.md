@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.3 (2025-02-12)
+
+
+### Bug Fixes
+
+* **PDS-1617:** changed typography props for site section title mobile ([f900beb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f900beb8b806c7afa23410d06457b3589e9487ac))
+
+
+
+
+
 ## 0.1.2 (2025-02-11)
 
 
