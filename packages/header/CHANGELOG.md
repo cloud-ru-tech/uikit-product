@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.33.39 (2025-02-12)
+
+
+### Bug Fixes
+
+* **RM-2855:** Header (financial menu) - fix mobile text sizes & margin on safari & hide spinner ([8a49a64](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8a49a64ad1a64e21e087630da8e9999dc9481530))
+
+
+
+
+
 ## 2.33.38 (2025-02-10)
 
 
