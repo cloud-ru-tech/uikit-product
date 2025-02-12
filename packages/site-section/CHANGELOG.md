@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-02-12)
+
+
+### Features
+
+* **PDS-1375:** add section benefits ([e16990d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e16990d5ba28c82893679611cde5c50072956a10))
+
+
+
+
+
 ## 0.1.3 (2025-02-12)
 
 
