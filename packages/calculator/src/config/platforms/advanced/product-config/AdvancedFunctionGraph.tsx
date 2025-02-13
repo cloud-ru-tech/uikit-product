@@ -38,6 +38,7 @@ export const FUNCTION_GRAPH_FORM_CONFIG: FormConfig = {
       uiProps: {
         description: <>Первые 2&nbsp;000&nbsp;000 запросов бесплатно</>,
       },
+      accessorKey: 'first-free',
     },
     computationTime: {
       type: CONTROL.Stepper,
@@ -58,6 +59,7 @@ export const FUNCTION_GRAPH_FORM_CONFIG: FormConfig = {
       uiProps: {
         description: <>Продолжительность вычислений в&nbsp;размере 400&nbsp;000&nbsp;ГБ/с бесплатно</>,
       },
+      accessorKey: 'free',
     },
   },
 };

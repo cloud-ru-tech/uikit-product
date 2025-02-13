@@ -63,6 +63,7 @@ export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
       uiProps: {
         description: 'Первые 120 vCPU и 480 ГБ RAM не тарифицируется каждый месяц в рамках free tier',
       },
+      accessorKey: 'tarification',
     },
     config: {
       type: CONTROL.SelectSingle,

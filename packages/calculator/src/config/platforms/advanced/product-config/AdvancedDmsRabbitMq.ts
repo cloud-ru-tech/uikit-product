@@ -82,6 +82,7 @@ export const DSC_RABBIT_MQ_FORM_CONFIG: FormConfig = {
           };
         }
       },
+      accessorKey: 'instance',
     },
     instanceConfig: {
       type: CONTROL.SelectSingle,

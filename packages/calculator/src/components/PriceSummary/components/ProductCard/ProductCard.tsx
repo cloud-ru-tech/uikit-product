@@ -6,7 +6,7 @@ import { ButtonFunction } from '@snack-uikit/button';
 import { Card } from '@snack-uikit/card';
 
 import { useCalculatorContext } from '../../../../contexts';
-import { formatNumber, getPrice, getValue } from '../../../../utils';
+import { formatNumber, getPrice, getValue, parseKeyToDataTest } from '../../../../utils';
 import { PRICE_NAME } from '../PricePeriodSelect';
 import styles from './styles.module.scss';
 
@@ -25,6 +25,7 @@ export function ProductCard({ id, idx, label, selectedProduct, onProductClick, o
   const { layoutType, pricePeriod, calculatorType, products } = useCalculatorContext();
   const isPartners = calculatorType === 'partners';
   const isChecked = selectedProduct?.id === id && selectedProduct?.idx === idx;
+  const dataTestAttribute = parseKeyToDataTest('price', 'summary-product-card');
 
   const price = useDeferredValue(getValue(products, `[${id}][${idx}].price`));
 
@@ -38,6 +39,7 @@ export function ProductCard({ id, idx, label, selectedProduct, onProductClick, o
         checked={isChecked}
         outline
         key={id + '_' + idx}
+        data-test-id={dataTestAttribute}
       >
         <>
           <div className={styles.wrapper}>

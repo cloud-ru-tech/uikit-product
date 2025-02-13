@@ -244,6 +244,7 @@ export const EVOLUTION_CLOUD_SERVER_GPU_FORM_CONFIG: FormConfig = {
             outline: true,
             description: 'Можно добавить до 7 дополнительных дисков',
           },
+          accessorKey: 'addDisk',
         },
         additionalDisks: {
           type: CONTROL.Array,

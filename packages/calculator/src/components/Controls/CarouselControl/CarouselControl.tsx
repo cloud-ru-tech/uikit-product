@@ -9,6 +9,7 @@ import { ToggleGroup } from '@snack-uikit/toggles';
 
 import { useAdaptive } from '../../../hooks';
 import { FormValues } from '../../../types';
+import { parseKeyToDataTest } from '../../../utils';
 import { CONTROL } from '../constants';
 import { ToggleCard, ToggleCardItem } from '../ToggleCard';
 import { BaseControlWithItems } from '../types';
@@ -47,6 +48,7 @@ export function CarouselControlUi({
   decoratorProps,
   watchedValues,
   relateFn,
+  accessorKey,
 }: CarouselControlUiProps) {
   const { isMobile } = useAdaptive();
 
@@ -60,6 +62,9 @@ export function CarouselControlUi({
   const [page, setPage] = useState<number>(0);
 
   const maxPage = isMobile ? items.length : items.length - 1;
+
+  const dataTestAttribute = parseKeyToDataTest('carousel', accessorKey);
+  const navigationDataTestAttribute = parseKeyToDataTest('carousel-navigation');
 
   useEffect(() => {
     const pageIndex = items.findIndex(item => String(item.value) === String(value));
@@ -113,14 +118,25 @@ export function CarouselControlUi({
           maxPage > 1
             ? ((
                 <div className={styles.controls}>
-                  <ButtonFunction icon={<ChevronLeftSVG />} size='s' onClick={decPage} />
-                  <ButtonFunction icon={<ChevronRightSVG />} size='s' onClick={incPage} />
+                  <ButtonFunction
+                    icon={<ChevronLeftSVG />}
+                    size='s'
+                    onClick={decPage}
+                    data-test-id={`${navigationDataTestAttribute}-button-left`}
+                  />
+                  <ButtonFunction
+                    icon={<ChevronRightSVG />}
+                    size='s'
+                    onClick={incPage}
+                    data-test-id={`${navigationDataTestAttribute}-button-right`}
+                  />
                 </div>
               ) as unknown as string)
             : undefined
         }
         {...decoratorProps}
         {...relatedDecoratorProps}
+        data-test-id={dataTestAttribute}
       >
         <ToggleGroup
           selectionMode='single'

@@ -3,6 +3,7 @@ import { ButtonFilled } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 
 import { useCalculatorContext } from '../../contexts';
+import { parseKeyToDataTest } from '../../utils';
 import styles from './styles.module.scss';
 
 type WelcomeProps = {
@@ -26,8 +27,8 @@ export function Welcome({ bgImage }: WelcomeProps) {
   const TitleComponent = isMobile ? Typography.SansHeadlineL : Typography.SansDisplayS;
 
   return (
-    <div className={styles.welcome} data-mobile={isMobile || undefined}>
-      <div className={styles.headline}>
+    <div className={styles.welcome} data-mobile={isMobile || undefined} data-test-id={parseKeyToDataTest('welcome')}>
+      <div className={styles.headline} data-test-id={parseKeyToDataTest('welcome', 'headline')}>
         <TitleComponent>
           Калькулятор цен: узнайте, <br /> сколько будет стоить облако
         </TitleComponent>
@@ -38,11 +39,13 @@ export function Welcome({ bgImage }: WelcomeProps) {
         </Typography.SansBodyL>
       </div>
 
-      <div className={styles.action}>
+      <div className={styles.action} data-test-id={parseKeyToDataTest('welcome', 'action')}>
         <ButtonFilled size='l' onClick={handleCatalogOpen} label='Начать расчет' fullWidth={isMobile} />
       </div>
 
-      {bgImage && <img className={styles.image} src={bgImage} alt={''} />}
+      {bgImage && (
+        <img className={styles.image} src={bgImage} alt={''} data-test-id={parseKeyToDataTest('welcome', 'image')} />
+      )}
     </div>
   );
 }

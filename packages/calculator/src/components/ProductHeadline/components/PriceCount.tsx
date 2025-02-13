@@ -3,7 +3,7 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 
 import { Price, PRICE_PERIOD, PricePeriod } from '../../../types';
-import { formatNumber, getPrice } from '../../../utils';
+import { formatNumber, getPrice, parseKeyToDataTest } from '../../../utils';
 import styles from './styles.module.scss';
 
 const PRICE_NAME: Record<PricePeriod, string> = {
@@ -23,6 +23,7 @@ type PriceCountProps = {
 
 export function BasePriceCount({ price, pricePeriod, freeTier, mobile }: PriceCountProps) {
   const total = getPrice({ price, pricePeriod });
+  const dataTestAttribute = parseKeyToDataTest('product', 'price');
 
   if (freeTier && !total)
     return (
@@ -34,7 +35,7 @@ export function BasePriceCount({ price, pricePeriod, freeTier, mobile }: PriceCo
     );
 
   return (
-    <div className={styles.price} data-mobile={mobile || undefined}>
+    <div className={styles.price} data-mobile={mobile || undefined} data-test-id={dataTestAttribute}>
       <div className={styles.total}>
         <Typography.SansTitleM>
           <TruncateString text={formatNumber(total)} maxLines={1} />
@@ -51,10 +52,15 @@ export function PartnersPriceCount({ price, pricePeriod, mobile, hasCounter }: P
   const partnersTotal = getPrice({ price, pricePeriod, partners: true });
   const mobileWithCounter = mobile && hasCounter;
 
+  const dataTestAttribute = parseKeyToDataTest('product', 'price-partners');
   const partnersSale = `-${100 - Math.trunc((partnersTotal / total) * 100 + 0.1)}%`;
 
   return (
-    <div className={styles.partnersWrapper} data-mobile-with-counter={mobileWithCounter || undefined}>
+    <div
+      className={styles.partnersWrapper}
+      data-mobile-with-counter={mobileWithCounter || undefined}
+      data-test-id={dataTestAttribute}
+    >
       <div className={styles.price} data-mobile={mobile || undefined}>
         <div className={styles.caption}>Рыночная цена</div>
         <div className={styles.total}>

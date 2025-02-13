@@ -5,6 +5,7 @@ import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { Switch } from '@snack-uikit/toggles';
 import { Tooltip } from '@snack-uikit/tooltip';
 
+import { parseKeyToDataTest } from '../../../../utils';
 import { ObjectDecorator } from '../../ObjectDecorator';
 import { TooltipPlacement } from '../../types';
 import styles from './styles.module.scss';
@@ -21,6 +22,7 @@ export type SwitchRowProps = {
   disabledToggleTip?: ReactNode;
   className?: string;
   disableTitleTruncate?: boolean;
+  dataTestId: string;
 };
 
 export function SwitchRow({
@@ -34,6 +36,7 @@ export function SwitchRow({
   className,
   disabledToggleTip,
   loading,
+  dataTestId,
   ...rest
 }: SwitchRowProps) {
   const handleChange = () => !disabled && onChange(!checked);
@@ -68,11 +71,12 @@ export function SwitchRow({
       data-loading={loading || undefined}
       data-checked={checked || undefined}
       data-mobile
+      data-test-id={dataTestId}
       {...extractSupportProps(rest)}
     >
       <div className={styles.headline}>
         <div className={styles.titleLayout}>
-          <div className={styles.titleWrapper}>
+          <div className={styles.titleWrapper} data-test-id={parseKeyToDataTest('toggle', 'title')}>
             <ObjectDecorator label={label} labelTooltip={labelTooltip} tooltipPlacement={tooltipPlacement} />
           </div>
         </div>

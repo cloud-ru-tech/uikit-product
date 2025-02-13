@@ -2,6 +2,7 @@ import { ReactNode, useMemo } from 'react';
 
 import { useCalculatorContext } from '../../../contexts';
 import { AnyType, FormValues, PRICE_PERIOD } from '../../../types';
+import { parseKeyToDataTest } from '../../../utils';
 import { FormControl } from '..';
 import { CONTROL } from '../constants';
 import { Control } from '../Control';
@@ -94,6 +95,8 @@ export function ObjectControlUi({
   const isMobile = layoutType === 'mobile';
   const { visible: relatedVisible } = useMemo(() => relateFn?.(watchedValues ?? {}) ?? {}, [relateFn, watchedValues]);
 
+  const dataTestAttribute = parseKeyToDataTest('row');
+
   const visible = relatedVisible ?? visibleProp ?? true;
 
   if (!visible) {
@@ -111,7 +114,12 @@ export function ObjectControlUi({
 
         if (Array.isArray(uiRow)) {
           return (
-            <div className={styles.row} data-mobile={isMobile || undefined} key={uiRow.join(' ')}>
+            <div
+              className={styles.row}
+              data-test-id={dataTestAttribute}
+              data-mobile={isMobile || undefined}
+              key={uiRow.join(' ')}
+            >
               {uiRow.map(rowItem => (
                 <Control formControl={controls[rowItem]} key={rowItem} />
               ))}

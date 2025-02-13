@@ -276,6 +276,7 @@ function getAlert(prefix: string, label: string): AlertControl {
         ),
       },
     }),
+    accessorKey: 'vm-add',
   };
 }
 

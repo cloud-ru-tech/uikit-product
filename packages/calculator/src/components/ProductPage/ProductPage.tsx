@@ -7,7 +7,7 @@ import { useValueControl } from '@snack-uikit/utils';
 import { ProductContext, ProductsState, useCalculatorContext } from '../../contexts';
 import { useAdaptive } from '../../hooks';
 import { AnyType } from '../../types';
-import { getValue, setValue } from '../../utils';
+import { getValue, parseKeyToDataTest, setValue } from '../../utils';
 import { CONTROL } from '../Controls';
 import { Control } from '../Controls/Control';
 import { ProductPageHeadline } from '../ProductHeadline';
@@ -75,6 +75,7 @@ export function ProductPage({ className, selectedProduct }: ProductPageProps) {
 
   const deferredPrice = useDeferredValue(getValue(products, accessorKey.price));
   const deferredPriceList = useDeferredValue(getValue(products, accessorKey.priceList));
+  const dataTestAttribute = parseKeyToDataTest('configurator');
 
   return (
     <ProductContext.Provider
@@ -86,7 +87,7 @@ export function ProductPage({ className, selectedProduct }: ProductPageProps) {
         priceList: deferredPriceList,
       }}
     >
-      <div className={className}>
+      <div className={className} data-test-id={dataTestAttribute}>
         <ProductPageHeadline product={config.products[selectedProduct.id]} />
 
         <div className={styles.content} data-mobile={isMobile || undefined}>

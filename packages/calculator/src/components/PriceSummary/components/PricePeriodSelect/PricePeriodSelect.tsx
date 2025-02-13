@@ -7,6 +7,7 @@ import { Tooltip } from '@snack-uikit/tooltip';
 
 import { useCalculatorContext } from '../../../../contexts';
 import { PRICE_PERIOD } from '../../../../types/Price';
+import { parseKeyToDataTest } from '../../../../utils';
 
 export const PRICE_NAME = {
   [PRICE_PERIOD.Month]: 'В месяц',
@@ -32,6 +33,7 @@ export const PRICE_PERIOD_ITEMS = [
 export function PricePeriodSelect({ hasPayaGo }: { hasPayaGo: boolean }) {
   const { layoutType, pricePeriod, setPricePeriod } = useCalculatorContext();
   const ref = useRef<HTMLButtonElement>(null);
+  const dataTestAttribute = parseKeyToDataTest('price', 'summary-footer-total');
 
   const [open, setOpen] = useState<boolean>(false);
 
@@ -59,6 +61,7 @@ export function PricePeriodSelect({ hasPayaGo }: { hasPayaGo: boolean }) {
       onOpenChange={setOpen}
       items={PRICE_PERIOD_ITEMS}
       triggerElemRef={ref}
+      data-test-id={dataTestAttribute}
     >
       <Tooltip
         tip='Доступен период только в месяц, т.к. в расчет добавлен сервис с методом тарификации PAYA (Pay As You Allocate). Чтобы изменить период расчета, удалите PAYA-сервис из расчета'

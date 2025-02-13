@@ -17,6 +17,7 @@ import { Tooltip } from '@snack-uikit/tooltip';
 import { useCalculatorContext } from '../../contexts';
 import { useCatalogCardClick } from '../../hooks';
 import { CatalogConfig, PlatformType } from '../../types';
+import { parseKeyToDataTest } from '../../utils';
 import { PrivateCardHeader } from './components';
 import styles from './styles.module.scss';
 
@@ -81,6 +82,7 @@ export function Catalog() {
         setCatalogOpen?.(false);
       }}
       className={cn({ [styles.modal]: !isMobile })}
+      data-test-id={parseKeyToDataTest('catalog')}
     >
       <AdaptiveModal.Header title='Каталог продуктов' />
       <AdaptiveModal.Body
@@ -133,7 +135,7 @@ export function Catalog() {
             </div>
 
             <div className={styles.content}>
-              <div className={styles.contentHeadline}>
+              <div className={styles.contentHeadline} data-test-id={parseKeyToDataTest('catalog', 'category-title')}>
                 {config.catalog[selectedPlatform].find(item => item.id === selectedCategory)?.label}
               </div>
 
@@ -168,7 +170,7 @@ export function Catalog() {
                               metadata={product?.caption}
                               description={
                                 product?.freeTier ? (
-                                  <div className={styles.tag}>
+                                  <div className={styles.tag} data-test-id={parseKeyToDataTest('catalog', 'card-tag')}>
                                     <Tag label='Бесплатная конфигурация' appearance='green' />
                                   </div>
                                 ) : null
@@ -176,7 +178,7 @@ export function Catalog() {
                             />
                           </Tooltip>
                         }
-                        data-test-id={product?.dataTestId}
+                        data-test-id={parseKeyToDataTest('catalog', 'card')}
                       />
                     );
                   })}

@@ -9,7 +9,7 @@ import { Typography } from '@snack-uikit/typography';
 
 import { useCalculatorContext, useProductContext } from '../../contexts';
 import { AnyType, CALCULATOR_TYPE, Product } from '../../types';
-import { getValue, setValue } from '../../utils';
+import { getValue, parseKeyToDataTest, setValue } from '../../utils';
 import { PriceCount } from './components';
 import styles from './styles.module.scss';
 
@@ -53,6 +53,8 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
   }, [selectedProduct, isMobile, isProductType]);
 
   function ConnectButton() {
+    const dataTestAttribute = parseKeyToDataTest('product', 'connect-button');
+
     return !isPartners && product.enableConnectToConsole ? (
       <Tooltip
         hoverDelayOpen={600}
@@ -64,6 +66,7 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
           size='m'
           appearance='primary'
           onClick={() => onConnectClick?.(product.id, valueProp)}
+          data-test-id={dataTestAttribute}
         />
       </Tooltip>
     ) : null;
@@ -72,9 +75,15 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
   return (
     <div className={styles.header} data-mobile={isMobile || undefined} ref={headerRef}>
       <div className={styles.left}>
-        <IconPredefined icon={icon} size={isMobile ? 's' : 'm'} decor={false} appearance='primary' />
+        <IconPredefined
+          icon={icon}
+          size={isMobile ? 's' : 'm'}
+          decor={false}
+          appearance='primary'
+          data-test-id={parseKeyToDataTest('product', 'icon')}
+        />
 
-        <TitleComponent>{label}</TitleComponent>
+        <TitleComponent data-test-id={parseKeyToDataTest('product', 'title')}>{label}</TitleComponent>
       </div>
 
       <div className={styles.right}>
@@ -88,7 +97,7 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
         />
 
         {hasCounter && (
-          <div className={styles.counter}>
+          <div className={styles.counter} data-test-id={parseKeyToDataTest('product', 'counter')}>
             <FieldStepper
               size='m'
               step={1}

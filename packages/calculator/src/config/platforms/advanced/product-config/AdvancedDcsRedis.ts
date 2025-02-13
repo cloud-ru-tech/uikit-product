@@ -172,6 +172,7 @@ export const DCS_REDIS_FORM_CONFIG: FormConfig = {
       uiProps: {
         description: 'Хранилище используется под бэкапы. Рекомендуем указывать объем не меньше объема кэша',
       },
+      accessorKey: 'backup',
     },
     replicasCount: {
       type: CONTROL.Segmented,

@@ -12,7 +12,7 @@ import { Typography } from '@snack-uikit/typography';
 import { PLATFORM } from '../../constants';
 import { useCalculatorContext } from '../../contexts';
 import { useProductClick, useProductDelete } from '../../hooks';
-import { formatNumber, getPrice } from '../../utils';
+import { formatNumber, getPrice, parseKeyToDataTest } from '../../utils';
 import { PricePeriodSelect, ProductCard, ProductListActions } from './components';
 import { useScrollListToActiveProduct } from './hooks';
 import styles from './styles.module.scss';
@@ -68,9 +68,13 @@ export function PriceSummary({ className }: PriceSummaryProps) {
   };
 
   return (
-    <div className={cn(styles.priceSummary, className)} data-mobile={isMobile || undefined}>
+    <div
+      className={cn(styles.priceSummary, className)}
+      data-mobile={isMobile || undefined}
+      data-test-id={parseKeyToDataTest('price', 'summary')}
+    >
       <div className={styles.headline}>
-        <TitleComponent>Расчет</TitleComponent>
+        <TitleComponent data-test-id={parseKeyToDataTest('price', 'summary-title')}>Расчет</TitleComponent>
         <ButtonTonal
           onClick={handleCatalogOpen}
           size='m'
@@ -78,16 +82,17 @@ export function PriceSummary({ className }: PriceSummaryProps) {
           label='Добавить сервис'
           fullWidth={isMobile}
           appearance='neutral'
+          data-test-id={parseKeyToDataTest('price', 'summary-button')}
         />
       </div>
 
-      <Scroll className={styles.scroll} ref={scrollRef}>
+      <Scroll className={styles.scroll} ref={scrollRef} data-test-id={parseKeyToDataTest('price', 'summary-products')}>
         <div className={styles.content}>
           {Object.entries(productCards)
             .filter(([, products]) => products.length > 0)
             .map(([platformId, cards]) => (
               <div key={platformId} className={styles.platform}>
-                <Typography.SansTitleM>
+                <Typography.SansTitleM data-test-id={parseKeyToDataTest('price', 'summary-platform')}>
                   Платформа {platforms.find(item => item.id === platformId)?.label}{' '}
                   {isPartners && <Tag label={`${PlatformSale[platformId]}% скидка`} appearance='red' size='xs' />}
                 </Typography.SansTitleM>
@@ -114,11 +119,13 @@ export function PriceSummary({ className }: PriceSummaryProps) {
         </div>
       </Scroll>
 
-      <div className={styles.footer}>
+      <div className={styles.footer} data-test-id={parseKeyToDataTest('price', 'summary-footer')}>
         <div>
-          <div className={styles.caption}>Общая стоимость с&nbsp;НДС</div>
+          <div className={styles.caption} data-test-id={parseKeyToDataTest('price', 'summary-title')}>
+            Общая стоимость с&nbsp;НДС
+          </div>
           <div className={styles.footerHeadline}>
-            <div className={styles.total}>
+            <div className={styles.total} data-test-id={parseKeyToDataTest('price', 'summary-footer-total')}>
               <Typography.SansHeadlineS>
                 <TruncateString text={formatNumber(deferredTotal)} maxLines={1} />
               </Typography.SansHeadlineS>

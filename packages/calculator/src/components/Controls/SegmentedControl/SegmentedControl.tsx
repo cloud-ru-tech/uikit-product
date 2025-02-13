@@ -4,6 +4,7 @@ import { FieldDecorator } from '@snack-uikit/fields';
 import { ToggleGroup } from '@snack-uikit/toggles';
 
 import { FormValues } from '../../../types';
+import { parseKeyToDataTest } from '../../../utils';
 import { CONTROL } from '../constants';
 import { BaseControlWithItems } from '../types';
 import { SegmentedControlCard, SegmentedControlItem } from './SegmentedControlCard';
@@ -30,6 +31,7 @@ export function SegmentedControlUi({
   items: itemsProp,
   relateFn,
   watchedValues,
+  accessorKey,
 }: SegmentedControlUiProps) {
   const {
     items: relatedItems,
@@ -38,6 +40,8 @@ export function SegmentedControlUi({
   } = useMemo(() => relateFn?.(watchedValues ?? {}) ?? {}, [relateFn, watchedValues]);
 
   const items = useMemo(() => relatedItems ?? itemsProp, [itemsProp, relatedItems]);
+
+  const dataTestAttribute = parseKeyToDataTest('segmented', accessorKey);
 
   useEffect(() => {
     if (!items.find(item => String(item?.value) === String(value))) {
@@ -52,7 +56,7 @@ export function SegmentedControlUi({
   }
 
   return (
-    <FieldDecorator {...decoratorProps} {...relatedDecoratorProps} size='m'>
+    <FieldDecorator {...decoratorProps} {...relatedDecoratorProps} size='m' data-test-id={dataTestAttribute}>
       <ToggleGroup
         selectionMode='single'
         value={value}

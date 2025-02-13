@@ -383,6 +383,7 @@ export const CLOUD_SERVER_FORM_CONFIG: FormConfig = {
         description:
           'По умолчанию в стоимость расчета входит ОС Linux. Для расчета стоимости виртуальных машин с другими ОС оставьте заявку на консультацию',
       },
+      accessorKey: 'default',
       relateFn: ({ calculatorType }) => {
         if (calculatorType !== CALCULATOR_TYPE.Partners) {
           return {
@@ -521,40 +522,5 @@ export const CLOUD_SERVER_FORM_CONFIG: FormConfig = {
     eip: getEip({
       trafficKey: 'eip.traffic',
     }),
-
-    // Hidden
-    counter: {
-      accessorKey: 'counter',
-      type: CONTROL.Stepper,
-      defaultValue: 1,
-      decoratorProps: {},
-      uiProps: {
-        visible: false,
-      },
-    },
-    // Hidden
-    ecs: {
-      type: 'stepper',
-      accessorKey: 'ecs',
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      defaultValue: {
-        specification: 'General-Purpose (ECS)',
-        os: 'Linux', // Essentials только для partners
-        gen: '6',
-        cpu: '1',
-        ram: '1',
-        frequency: '2.6',
-        assuredBandwidth: '0.1',
-        maxBandwidth: '0.8',
-        pps: '100',
-      },
-      decoratorProps: {
-        label: '',
-      },
-      uiProps: {
-        visible: false,
-      },
-    },
   },
 };

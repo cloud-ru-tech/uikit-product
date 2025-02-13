@@ -30,3 +30,5 @@ export const CATEGORY = {
 } as const;
 
 export const DEFAULT_CATEGORY = CATEGORY.Popular;
+
+export const CALCULATOR_DATA_TEST_ID = 'calculator';

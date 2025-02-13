@@ -6,6 +6,7 @@ import { ToggleGroup } from '@snack-uikit/toggles';
 
 import { useAdaptive } from '../../../hooks';
 import { FormValues } from '../../../types';
+import { parseKeyToDataTest } from '../../../utils';
 import { CarouselControlUi } from '../CarouselControl';
 import { CONTROL } from '../constants';
 import { ToggleCard, ToggleCardItem } from '../ToggleCard';
@@ -37,6 +38,7 @@ function ToggleCardsControlUiDesktop({
   decoratorProps,
   relateFn,
   watchedValues,
+  accessorKey,
 }: ToggleCardsControlUiProps) {
   const {
     items: relatedItems,
@@ -45,6 +47,8 @@ function ToggleCardsControlUiDesktop({
   } = useMemo(() => relateFn?.(watchedValues ?? {}) ?? {}, [relateFn, watchedValues]);
 
   const items = useMemo(() => relatedItems ?? itemsProp, [itemsProp, relatedItems]);
+
+  const dataTestAttribute = parseKeyToDataTest('toggle-cards', accessorKey);
 
   useEffect(() => {
     if (!items.find(item => String(item.value) === String(value))) {
@@ -60,7 +64,7 @@ function ToggleCardsControlUiDesktop({
 
   return (
     <div className={styles.carousel}>
-      <FieldDecorator {...decoratorProps} {...relatedDecoratorProps}>
+      <FieldDecorator {...decoratorProps} {...relatedDecoratorProps} data-test-id={dataTestAttribute}>
         <ToggleGroup
           selectionMode='single'
           value={value}

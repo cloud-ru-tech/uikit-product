@@ -139,6 +139,7 @@ export const POSTGRE_SQL_DATA_BASE_FORM_CONFIG: FormConfig = {
         outline: true,
         visible: false,
       },
+      accessorKey: 'instances',
       watchedControls: { bdInstanceType: 'rds.bdInstanceType' },
       relateFn: ({ bdInstanceType }) => {
         if (bdInstanceType === BdInstanceTypeItem.PrimaryStandby) {

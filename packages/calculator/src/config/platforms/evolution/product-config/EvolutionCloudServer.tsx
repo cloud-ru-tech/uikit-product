@@ -99,6 +99,7 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
           </>
         ),
       },
+      accessorKey: 'start',
     },
 
     guaranteedPart: {
@@ -192,6 +193,7 @@ export const EVOLUTION_CLOUD_SERVER_FORM_CONFIG: FormConfig = {
         outline: true,
         description: 'Можно добавить до 7 дополнительных дисков',
       },
+      accessorKey: 'risks',
     },
     additionalDisks: {
       type: CONTROL.Array,

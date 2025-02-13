@@ -74,6 +74,7 @@ export const CLOUD_CONTAINER_ENGINE_FORM_CONFIG: FormConfig = {
         },
         visible: false,
       },
+      accessorKey: 'turbo',
       watchedControls: { masterNodeNumber: 'cce.masterNodeNumber' },
       relateFn: ({ masterNodeNumber }) => {
         if (Number(masterNodeNumber) >= 1000) {
@@ -120,6 +121,7 @@ export const CLOUD_CONTAINER_ENGINE_FORM_CONFIG: FormConfig = {
               ),
             },
           },
+
           ecsOs: {
             type: CONTROL.Segmented,
             accessorKey: 'ecs.os',
@@ -129,6 +131,7 @@ export const CLOUD_CONTAINER_ENGINE_FORM_CONFIG: FormConfig = {
               label: 'Операционная система',
             },
           },
+
           counter: {
             type: CONTROL.Stepper,
             accessorKey: 'counter',
@@ -141,6 +144,7 @@ export const CLOUD_CONTAINER_ENGINE_FORM_CONFIG: FormConfig = {
               max: 99,
             },
           },
+
           ecsCpu: {
             type: CONTROL.SelectSingle,
             accessorKey: 'ecs.cpu',
@@ -250,31 +254,6 @@ export const CLOUD_CONTAINER_ENGINE_FORM_CONFIG: FormConfig = {
             },
           },
         },
-      },
-    },
-
-    // Hidden
-    ecsHidden: {
-      type: 'stepper',
-      accessorKey: 'ecs',
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      defaultValue: {
-        specification: 'General-Purpose (ECS)',
-        os: 'Linux', // Essentials только для partners
-        gen: '6',
-        cpu: '1',
-        ram: '1',
-        frequency: '2.6',
-        assuredBandwidth: '0.1',
-        maxBandwidth: '0.8',
-        pps: '100',
-      },
-      decoratorProps: {
-        label: '',
-      },
-      uiProps: {
-        visible: false,
       },
     },
   },

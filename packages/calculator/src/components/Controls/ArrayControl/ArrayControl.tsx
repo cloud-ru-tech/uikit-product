@@ -4,7 +4,7 @@ import { ButtonFunction } from '@snack-uikit/button';
 import { ProductContext, useProductContext } from '../../../contexts';
 import { useAdaptive } from '../../../hooks';
 import { AnyType } from '../../../types';
-import { getValue, setValue } from '../../../utils';
+import { getValue, parseKeyToDataTest, setValue } from '../../../utils';
 import { CONTROL } from '../constants';
 import { ObjectControl, ObjectControlUi } from '../ObjectControl';
 import { getDefaultValues } from '../utils';
@@ -96,6 +96,7 @@ export function ArrayControlUi({
           onClick={() => {
             onChange((value ?? []).concat([getDefaultValues(controls)]));
           }}
+          data-test-id={parseKeyToDataTest('button')}
         />
       )}
     </div>

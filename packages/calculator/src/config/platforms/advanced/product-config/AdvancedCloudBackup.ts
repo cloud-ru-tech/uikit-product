@@ -36,6 +36,7 @@ export const CLOUD_BACKUP_FORM_CONFIG: FormConfig = {
       uiProps: {
         description: 'Рекомендуем выбирать объем хранилища под бэкапы на 20% больше объема самого продукта',
       },
+      accessorKey: 'cbr.alert',
     },
     service: {
       type: CONTROL.Carousel,

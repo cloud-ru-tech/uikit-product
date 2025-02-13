@@ -19,6 +19,7 @@ export const EVOLUTION_CLOUD_SERVER_FREE_TIER_FORM_CONFIG: FormConfig = {
       uiProps: {
         description: 'Можно подключить только 1 бесплатную виртуальную машину',
       },
+      accessorKey: 'free',
     },
     guaranteedPart: {
       decoratorProps: {
@@ -120,6 +121,7 @@ export const EVOLUTION_CLOUD_SERVER_FREE_TIER_FORM_CONFIG: FormConfig = {
                   outline: true,
                   description: 'Можно добавить до 7 дополнительных дисков',
                 },
+                accessorKey: 'disks',
               },
               additionalDisks: {
                 type: CONTROL.Array,

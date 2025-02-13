@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 
 import { AnyType, FormValues, PRICE_PERIOD } from '../../../types';
+import { parseKeyToDataTest } from '../../../utils';
 import { CONTROL } from '../constants';
 import { BaseControl } from '../types';
 import { SwitchRow, SwitchRowProps } from './components';
@@ -29,11 +30,14 @@ export function ToggleControlUi({
   onChange,
   watchedValues,
   relateFn,
+  accessorKey,
 }: ToggleControlUiProps) {
   const { decoratorProps: relatedDecoratorProps, uiProps: relatedUiProps } = useMemo(
     () => relateFn?.(watchedValues ?? {}) ?? {},
     [relateFn, watchedValues],
   );
+
+  const dataTestAttribute = parseKeyToDataTest('toggle', accessorKey);
 
   const visible = relatedUiProps?.visible ?? uiProps?.visible ?? true;
 
@@ -45,6 +49,7 @@ export function ToggleControlUi({
     <SwitchRow
       checked={value || false}
       onChange={onChange ?? noop}
+      dataTestId={dataTestAttribute}
       {...decoratorProps}
       {...relatedDecoratorProps}
       {...uiProps}

@@ -5,6 +5,7 @@ import { ButtonTonal } from '@snack-uikit/button';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { useCalculatorContext } from '../../../../contexts';
+import { parseKeyToDataTest } from '../../../../utils';
 import styles from './styles.module.scss';
 
 export function ProductListActions() {
@@ -53,7 +54,7 @@ export function ProductListActions() {
     });
 
   return (
-    <div className={styles.footerLinks}>
+    <div className={styles.footerLinks} data-test-id={parseKeyToDataTest('price', 'summary-footer')}>
       {onShareClick && (
         <Tooltip
           tip={
@@ -71,12 +72,26 @@ export function ProductListActions() {
           hoverDelayOpen={600}
           open={isChecked || undefined}
         >
-          <ButtonTonal size='m' icon={<LinkSVG />} appearance='neutral' fullWidth onClick={handleShareClick} />
+          <ButtonTonal
+            size='m'
+            icon={<LinkSVG />}
+            appearance='neutral'
+            fullWidth
+            onClick={handleShareClick}
+            data-test-id={parseKeyToDataTest('price', 'summary-footer-copy-link')}
+          />
         </Tooltip>
       )}
 
       <Tooltip tip='Скачать расчет' hoverDelayOpen={600}>
-        <ButtonTonal size='m' icon={<DownloadSVG />} appearance='neutral' fullWidth onClick={handleDownloadFileClick} />
+        <ButtonTonal
+          size='m'
+          icon={<DownloadSVG />}
+          appearance='neutral'
+          data-test-id={parseKeyToDataTest('price', 'summary-footer-download')}
+          fullWidth
+          onClick={handleDownloadFileClick}
+        />
       </Tooltip>
 
       {onRequestConsultationClick && (
@@ -87,6 +102,7 @@ export function ProductListActions() {
             appearance='neutral'
             fullWidth
             onClick={handleRequestConsultationClick}
+            data-test-id={parseKeyToDataTest('price', 'summary-footer-consultation')}
           />
         </Tooltip>
       )}

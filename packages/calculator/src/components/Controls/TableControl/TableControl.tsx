@@ -31,7 +31,7 @@ type TableRow = {
 export type TableControl = {
   type: typeof CONTROL.Table;
   defaultValue?: FormValues;
-  accessorKey?: string;
+  accessorKey: string;
 
   decoratorProps?: Pick<BaseDecoratorProps, 'label' | 'labelTooltip' | 'tooltipPlacement'>;
   counter?: {
@@ -61,6 +61,7 @@ export function TableControlUi({
   value: valueProp,
   onChange: onChangeProp,
   priceList,
+  accessorKey,
 }: TableControlUiProps) {
   const { isMobile } = useAdaptive();
 
@@ -86,6 +87,7 @@ export function TableControlUi({
                 showHint: false,
                 ...counter.uiProps,
               }}
+              accessorKey={accessorKey}
               type='stepper'
               decoratorProps={{}}
             />
@@ -139,6 +141,7 @@ export function TableControlUi({
                     }}
                     type='stepper'
                     decoratorProps={{}}
+                    accessorKey={accessorKey}
                   />
                 )}
               </div>

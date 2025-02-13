@@ -75,7 +75,7 @@ export type BaseControl<UiPropsT, DecoratorPropsT = BaseDecoratorProps> = {
    *
    * @example 'esc.cpu'
    */
-  accessorKey?: string;
+  accessorKey: string;
   /**
    * Функция для мутирования значения формы, eсли при изменении контролла, нужно изменить "явно" значения других
    *

@@ -130,6 +130,7 @@ export const EVOLUTION_BARE_METAL_FORM_CONFIG: FormConfig = {
       uiProps: {
         description: 'При подключении сервиса публичный IP-адрес назначается по умолчанию',
       },
+      accessorKey: 'public-ip',
     },
     eip: {
       type: CONTROL.Toggle,

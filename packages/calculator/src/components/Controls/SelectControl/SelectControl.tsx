@@ -5,6 +5,7 @@ import { BaseOptionProps, FieldSelectSingleProps } from '@snack-uikit/fields';
 
 import { useCalculatorContext } from '../../../contexts';
 import { FormValues, PRICE_PERIOD } from '../../../types';
+import { parseKeyToDataTest } from '../../../utils';
 import { CONTROL } from '../constants';
 import { BaseControlWithItems } from '../types';
 import styles from './styles.module.scss';
@@ -75,6 +76,7 @@ export function SelectSingleUi({
   items: itemsProp,
   watchedValues,
   relateFn,
+  accessorKey,
 }: SelectSingleUiProps) {
   const { layoutType } = useCalculatorContext();
 
@@ -85,6 +87,8 @@ export function SelectSingleUi({
   } = useMemo(() => relateFn?.(watchedValues ?? {}) ?? {}, [relateFn, watchedValues]);
 
   const items = useMemo(() => relatedItems ?? itemsProp, [itemsProp, relatedItems]);
+
+  const dataTestAttribute = parseKeyToDataTest('select', accessorKey);
 
   useEffect(() => {
     if (!items.find(item => String(item.value) === String(value))) {
@@ -113,6 +117,7 @@ export function SelectSingleUi({
         value={value}
         onChange={onChange}
         options={convertItemsToOptions(items)}
+        data-test-id={dataTestAttribute}
         {...uiProps}
         {...relatedUiProps}
       />

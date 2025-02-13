@@ -11,6 +11,7 @@ export const EVOLUTION_CONTAINER_APPS_FREE_TIER_CONFIG: FormConfig = {
       uiProps: {
         description: 'Не тарифицируется каждый месяц',
       },
+      accessorKey: 'tarification',
     },
     config: {
       type: CONTROL.SelectSingle,

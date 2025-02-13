@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 import { FieldSlider, FieldSliderProps } from '@snack-uikit/fields';
 
 import { FormValues } from '../../../types';
+import { parseKeyToDataTest } from '../../../utils';
 import { CONTROL } from '../constants';
 import { BaseControlWithItems } from '../types';
 
@@ -29,6 +30,7 @@ export function SliderControlUi({
   items: itemsProp,
   watchedValues,
   relateFn,
+  accessorKey,
 }: SliderControlUiProps) {
   const {
     items: relatedItems,
@@ -37,6 +39,8 @@ export function SliderControlUi({
   } = useMemo(() => relateFn?.(watchedValues ?? {}) ?? {}, [relateFn, watchedValues]);
 
   const items = useMemo(() => relatedItems ?? itemsProp, [itemsProp, relatedItems]);
+
+  const dataTestAttribute = parseKeyToDataTest('slider', accessorKey);
 
   const { marks } = useMemo(() => {
     const marks = items
@@ -73,6 +77,7 @@ export function SliderControlUi({
       max={items.length}
       step={null}
       textInputFormatter={textInputValueFormatter}
+      data-test-id={dataTestAttribute}
       {...uiProps}
       {...relatedUiProps}
       {...decoratorProps}

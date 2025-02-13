@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { FieldDecorator, FieldStepper, FieldStepperProps } from '@snack-uikit/fields';
 
 import { FormValues } from '../../../types';
+import { parseKeyToDataTest } from '../../../utils';
 import { formatNumber } from '../../../utils/formatNumber';
 import { CONTROL } from '../constants';
 import { BaseControl, WithVisible } from '../types';
@@ -39,8 +40,11 @@ export function StepperControlUi({
   onChange,
   watchedValues,
   relateFn,
+  accessorKey,
 }: StepperControlUiProps) {
   const [innerValue, setInnerValue] = useState<number>(value ?? 0);
+
+  const dataTestAttribute = parseKeyToDataTest('stepper', accessorKey);
 
   useEffect(() => {
     setInnerValue(value ?? 0);
@@ -112,6 +116,7 @@ export function StepperControlUi({
             handleValueChange(innerValue);
           }}
           allowMoreThanLimits={false}
+          data-test-id={dataTestAttribute}
           {...uiProps}
           {...relatedUiProps}
         />
