@@ -18,7 +18,9 @@ type ProductPageHeadlineProps = {
 };
 
 export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
-  const { icon, label, enableChangeProductQuantity, freeTier } = product;
+  const { icon, label, enableChangeProductQuantity, productQuantityValues, freeTier, disabledProductQuantity } =
+    product;
+  const { min: minProductQuantity = 1, max: maxProductQuantity = 99 } = productQuantityValues ?? {};
 
   const { value: valueProp, onChange: onChangeProp, price } = useProductContext();
 
@@ -90,11 +92,11 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
             <FieldStepper
               size='m'
               step={1}
-              min={1}
-              max={99}
+              min={minProductQuantity}
+              max={maxProductQuantity}
               value={value}
               onChange={onChange}
-              disabled={freeTier}
+              disabled={freeTier || disabledProductQuantity}
               allowMoreThanLimits={false}
             />
           </div>

@@ -4,6 +4,8 @@ import { ChipToggle } from '@snack-uikit/chips';
 import { useToggleGroup } from '@snack-uikit/toggles';
 import { Tooltip } from '@snack-uikit/tooltip';
 
+import { AnyType, PRICE_PERIOD } from '../../../types';
+
 export type SegmentedControlItem = {
   value: string;
 
@@ -14,6 +16,8 @@ export type SegmentedControlItem = {
   disabledReason?: ReactNode;
 
   dataTestId?: string;
+  onChangePeriod?: (value: PRICE_PERIOD, setValue: (arr: [string, AnyType[]]) => void) => void;
+  canChangeWholePricePeriod?: boolean;
 };
 
 export function SegmentedControlCard({ value, label, disabled, disabledReason, dataTestId }: SegmentedControlItem) {

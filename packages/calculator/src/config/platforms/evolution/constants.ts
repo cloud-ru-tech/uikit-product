@@ -7,4 +7,6 @@ export const EVOLUTION_PRODUCT = {
   EvolutionStorageS3: 'evolutionStorageS3',
   EvolutionManagedPostgreSQL: 'evolutionPostgreSql',
   EvolutionBareMetal: 'evolutionBareMetal',
+  EvolutionContainerApps: 'evolutionContainerApps',
+  EvolutionContainerAppsFreeTier: 'evolutionContainerAppsFreeTier',
 } as const;

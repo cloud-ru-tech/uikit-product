@@ -9,10 +9,10 @@ export type Price = {
   pricePartnersMonthNds: number;
 };
 
-export const PRICE_PERIOD = {
-  Month: 'month',
-  Day: 'day',
-  Hour: 'hour',
-} as const;
+export enum PRICE_PERIOD {
+  Month = 'month',
+  Day = 'day',
+  Hour = 'hour',
+}
 
 export type PricePeriod = ValueOf<typeof PRICE_PERIOD>;

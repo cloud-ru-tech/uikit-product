@@ -23,6 +23,13 @@ export type Product = {
   freeTier?: boolean;
   /** Можно ли менять кол-во продуктов текущей конфигурации в чеке */
   enableChangeProductQuantity?: boolean;
+  /** Задизейблить изменение количества продуктов */
+  disabledProductQuantity?: boolean;
+  /** Ограничить минимальное и максимальное количество продукта */
+  productQuantityValues?: {
+    min?: number;
+    max?: number;
+  };
   /** Можно ли подключить продукта в консоли */
   enableConnectToConsole?: boolean;
   /** Конфиг страницы расчета по продукту */

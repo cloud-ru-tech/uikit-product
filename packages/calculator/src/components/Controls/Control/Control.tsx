@@ -1,5 +1,7 @@
+import { useEffect } from 'react';
+
 import { useCalculatorContext, useProductContext } from '../../../contexts';
-import { AnyType, FormValues } from '../../../types';
+import { AnyType, FormValues, PRICE_PERIOD } from '../../../types';
 import { getValue, setValue } from '../../../utils';
 import { AlertControlUi } from '../AlertControl';
 import { ArrayControlUi } from '../ArrayControl';
@@ -17,12 +19,32 @@ import { ToggleObjectControlUi } from '../ToggleObjectControl';
 import { FormControl } from '../types';
 
 type ControlProps = {
-  formControl: FormControl & { accessorKey?: string };
+  formControl: FormControl & {
+    accessorKey?: string;
+    onChangePeriod?: (period: PRICE_PERIOD, setValue: (arr: [string, AnyType][]) => void) => void;
+    canChangeWholePricePeriod?: boolean;
+  };
 };
 
 export function Control({ formControl }: ControlProps) {
   const { calculatorType } = useCalculatorContext();
   const { value: valueProp, onChange: onChangeProp, priceList: priceListProp } = useProductContext();
+  const { pricePeriod, setPricePeriod } = useCalculatorContext();
+
+  const accessorKey = formControl?.accessorKey ?? '';
+
+  useEffect(() => {
+    const setValueFn = (arr: [string, AnyType][]) => {
+      arr.forEach(([accessorKey, newValue]) => {
+        setValue(valueProp, accessorKey, newValue);
+      });
+
+      onChangeProp(valueProp);
+    };
+
+    formControl?.onChangePeriod?.(pricePeriod, setValueFn);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pricePeriod]);
 
   const watchedValues = Object.keys(formControl?.watchedControls ?? {})?.reduce((res, fieldName) => {
     const key = formControl?.watchedControls?.[fieldName];
@@ -43,11 +65,12 @@ export function Control({ formControl }: ControlProps) {
     return <ArrayControlUi {...formControl} />;
   }
 
-  const accessorKey = formControl?.accessorKey ?? '';
-
   const value = getValue(valueProp, accessorKey);
   const priceList = getValue(priceListProp, accessorKey);
   let onChange = (newValue: AnyType) => {
+    if (formControl?.canChangeWholePricePeriod) {
+      setPricePeriod(newValue);
+    }
     setValue(valueProp, accessorKey, newValue);
     onChangeProp(valueProp);
   };

@@ -29,7 +29,10 @@ export type ToggleObjectControl = {
   control: FormControl;
 
   onChangeFn?: never;
-} & Pick<BaseControl<UiProps>, 'decoratorProps' | 'uiProps' | 'watchedControls' | 'relateFn'>;
+} & Pick<
+  BaseControl<UiProps>,
+  'decoratorProps' | 'uiProps' | 'watchedControls' | 'relateFn' | 'onChangePeriod' | 'canChangeWholePricePeriod'
+>;
 
 type ToggleObjectControlUiProps = ToggleObjectControl & {
   value: FormValues;

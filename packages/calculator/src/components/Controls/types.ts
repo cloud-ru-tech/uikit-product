@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { AnyType, FormValues } from '../../types';
+import { AnyType, FormValues, PRICE_PERIOD } from '../../types';
 import { AlertControl } from './AlertControl';
 import { ArrayControl } from './ArrayControl';
 import { CarouselControl } from './CarouselControl';
@@ -127,6 +127,8 @@ export type BaseControl<UiPropsT, DecoratorPropsT = BaseDecoratorProps> = {
         uiProps?: Partial<WithVisible<UiPropsT>>;
       }
     | undefined;
+  onChangePeriod?: (value: PRICE_PERIOD, setValue: (arr: [string, AnyType][]) => void) => void;
+  canChangeWholePricePeriod?: boolean;
 };
 
 export type BaseControlWithItems<ItemT, UiPropsT, DecoratorPropsT = BaseDecoratorProps> = Omit<
@@ -157,6 +159,8 @@ export type BaseControlWithItems<ItemT, UiPropsT, DecoratorPropsT = BaseDecorato
         items?: ItemT[];
       }
     | undefined;
+  onChangePeriod?: (value: PRICE_PERIOD, setValue: (arr: [string, AnyType][]) => void) => void;
+  canChangeWholePricePeriod?: boolean;
 };
 
 export type FormControl =

@@ -6,7 +6,10 @@ import { FormValues } from '../../../types';
 import { CONTROL } from '../constants';
 import { BaseControl, WithVisible } from '../types';
 
-export type AlertControl = Pick<BaseControl<AlertProps>, 'uiProps' | 'accessorKey' | 'watchedControls'> & {
+export type AlertControl = Pick<
+  BaseControl<AlertProps>,
+  'uiProps' | 'accessorKey' | 'watchedControls' | 'onChangePeriod' | 'canChangeWholePricePeriod'
+> & {
   type: typeof CONTROL.Alert;
   relateFn?(watchedValues: FormValues):
     | {

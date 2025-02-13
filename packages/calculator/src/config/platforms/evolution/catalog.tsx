@@ -23,7 +23,11 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       id: CATEGORY.FreeTier,
       label: 'Free Tier',
       dataTestId: 'free-tier',
-      visibleProducts: [EVOLUTION_PRODUCT.EvolutionCloudServerFreeTier, EVOLUTION_PRODUCT.EvolutionStorageS3FreeTier],
+      visibleProducts: [
+        EVOLUTION_PRODUCT.EvolutionCloudServerFreeTier,
+        EVOLUTION_PRODUCT.EvolutionStorageS3FreeTier,
+        EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier,
+      ],
       banner: (
         <Alert
           appearance='info'
@@ -67,7 +71,11 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       id: CATEGORY.Containerization,
       label: 'Контейнеры',
       dataTestId: 'containerization',
-      visibleProducts: [EVOLUTION_PRODUCT.EvolutionKubernetes],
+      visibleProducts: [
+        EVOLUTION_PRODUCT.EvolutionKubernetes,
+        EVOLUTION_PRODUCT.EvolutionContainerApps,
+        EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier,
+      ],
     },
     {
       id: CATEGORY.Database,

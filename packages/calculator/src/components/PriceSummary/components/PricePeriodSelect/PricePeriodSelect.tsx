@@ -37,7 +37,7 @@ export function PricePeriodSelect({ hasPayaGo }: { hasPayaGo: boolean }) {
 
   useEffect(() => {
     if (hasPayaGo) {
-      setPricePeriod('month');
+      setPricePeriod(PRICE_PERIOD.Month);
     }
 
     setOpen(false);

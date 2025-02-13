@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { FormValues } from '../../../types';
+import { AnyType, FormValues, PRICE_PERIOD } from '../../../types';
 import { CONTROL } from '../constants';
 import { BaseControl } from '../types';
 import { SwitchRow, SwitchRowProps } from './components';
@@ -15,6 +15,8 @@ export type ToggleControl = {
 export type ToggleControlUiProps = ToggleControl & {
   value?: boolean;
   onChange?(value: boolean): void;
+  onChangePeriod?: (value: PRICE_PERIOD, setValue: (arr: [string, AnyType][]) => void) => void;
+  canChangeWholePricePeriod?: boolean;
   watchedValues?: FormValues;
 };
 

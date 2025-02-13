@@ -4,7 +4,7 @@ import { AdaptiveFieldSelect } from '@sbercloud/uikit-product-mobile-fields';
 import { BaseOptionProps, FieldSelectSingleProps } from '@snack-uikit/fields';
 
 import { useCalculatorContext } from '../../../contexts';
-import { FormValues } from '../../../types';
+import { FormValues, PRICE_PERIOD } from '../../../types';
 import { CONTROL } from '../constants';
 import { BaseControlWithItems } from '../types';
 import styles from './styles.module.scss';
@@ -17,6 +17,8 @@ export type SelectControlItem = {
   disabled?: boolean;
   disabledReason?: ReactNode;
   dataTestId?: string;
+  onChangePeriod?: (value: PRICE_PERIOD) => void;
+  canChangeWholePricePeriod?: boolean;
 };
 
 type SelectUiProps = Pick<

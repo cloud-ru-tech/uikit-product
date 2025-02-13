@@ -1,7 +1,7 @@
 import { ReactNode, useMemo } from 'react';
 
 import { useCalculatorContext } from '../../../contexts';
-import { FormValues } from '../../../types';
+import { AnyType, FormValues, PRICE_PERIOD } from '../../../types';
 import { FormControl } from '..';
 import { CONTROL } from '../constants';
 import { Control } from '../Control';
@@ -76,6 +76,8 @@ export type ObjectControl = {
         visible?: boolean;
       }
     | undefined;
+  onChangePeriod?: (value: PRICE_PERIOD, setValue: (arr: [string, AnyType][]) => void) => void;
+  canChangeWholePricePeriod?: boolean;
 };
 
 type ObjectControlUiProps = ObjectControl & { watchedValues?: FormValues };
