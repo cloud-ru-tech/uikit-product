@@ -3,6 +3,7 @@ import mergeRefs from 'merge-refs';
 import { ClipboardEventHandler, forwardRef, useEffect, useMemo, useRef, useState } from 'react';
 import { useIMask } from 'react-imask';
 
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { FieldText, FieldTextProps } from '@snack-uikit/fields';
 import { useValueControl } from '@snack-uikit/utils';
 
@@ -149,7 +150,7 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
     return (
       <FieldText
         data-test-id='field-phone'
-        {...rest}
+        {...extractSupportProps(rest)}
         type='tel'
         ref={mergeRefs(ref, localRef, iMaskRef)}
         className={cn(className, styles.fieldPhone)}

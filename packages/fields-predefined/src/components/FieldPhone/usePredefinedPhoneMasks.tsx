@@ -19,7 +19,7 @@ import { FieldPhoneOptionsProps } from './types';
 const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
   {
     id: 'Russia',
-    mask: '(XXX) XXX XX-XX',
+    mask: 'XXX XXX-XX-XX',
     content: {
       option: Texts.Russia,
       caption: '+7',
@@ -28,7 +28,7 @@ const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
   },
   {
     id: 'Belarus',
-    mask: '(XXX) XXX XX XX',
+    mask: 'XXX XXX-XX-XX',
     content: {
       option: Texts.Belarus,
       caption: '+375',
@@ -37,7 +37,7 @@ const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
   },
   {
     id: 'Kazakhstan',
-    mask: '(XXX) XXX XX-XX',
+    mask: 'XXX XXX-XX-XX',
     content: {
       option: Texts.Kazakhstan,
       caption: '+7',
@@ -46,7 +46,7 @@ const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
   },
   {
     id: 'Armenia',
-    mask: '(XX) XXX XXX',
+    mask: 'XX XXX-XXX',
     content: {
       option: Texts.Armenia,
       caption: '+374',
@@ -55,7 +55,7 @@ const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
   },
   {
     id: 'Kyrgyzstan',
-    mask: '(XXX) XXX XXX',
+    mask: 'XXX XXX-XXX',
     content: {
       option: Texts.Kyrgyzstan,
       caption: '+996',
@@ -64,7 +64,7 @@ const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
   },
   {
     id: 'Uzbekistan',
-    mask: '(XX) XXX XX XX',
+    mask: 'XX XXX-XX-XX',
     content: {
       option: Texts.Uzbekistan,
       caption: '+998',
@@ -73,7 +73,7 @@ const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
   },
   {
     id: 'Azerbaijan',
-    mask: '(XX) XXX XX XX',
+    mask: 'XX XXX-XX-XX',
     content: {
       option: Texts.Azerbaijan,
       caption: '+994',
@@ -82,7 +82,7 @@ const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
   },
   {
     id: 'Tajikistan',
-    mask: '(XXX) XX XX XX',
+    mask: 'XXX XX-XX-XX',
     content: {
       option: Texts.Tajikistan,
       caption: '+992',
@@ -91,7 +91,7 @@ const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
   },
   {
     id: 'Georgia',
-    mask: '(XXX) XXX XXX',
+    mask: 'XXX XXX-XXX',
     content: {
       option: Texts.Georgia,
       caption: '+995',
