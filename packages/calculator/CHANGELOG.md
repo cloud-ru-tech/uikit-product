@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-02-14)
+
+
+### Features
+
+* **ONB-3529:** change block`s label, add tooltip ([b6c4c77](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b6c4c77af89e500f666fb9d9e79a502ad804e0b0))
+
+
+
+
+
 ## 0.0.21 (2025-02-14)
 
 
