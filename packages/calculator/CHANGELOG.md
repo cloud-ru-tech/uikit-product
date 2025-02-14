@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.21 (2025-02-14)
+
+
+### Bug Fixes
+
+* **ONB-3344:** change input tabs to slider for vcpu ([cf22878](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf22878ae051143d90452a84f3cf04212d47d1bb))
+
+
+
+
+
 ## 0.0.20 (2025-02-11)
 
 
