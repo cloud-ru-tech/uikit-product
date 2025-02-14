@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-charts",
   "title": "React Charts",
-  "version": "0.12.11",
+  "version": "0.13.0",
   "sideEffects": [
     "*.css",
     "*.scss",

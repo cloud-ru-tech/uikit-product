@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2025-02-14)
+
+
+### Features
+
+* **FF-6232:** added color prop to legend ([3e8c495](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3e8c4951cdc17b14bef4dab8f8eace615ed4b7d8))
+
+
+
+
+
 ## 0.12.11 (2025-02-10)
 
 
