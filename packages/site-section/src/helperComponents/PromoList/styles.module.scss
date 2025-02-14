@@ -1,0 +1,46 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.promoList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var.$sys-invert-neutral-text-main;
+
+  position: relative;
+
+  max-width: 480px;
+
+  &[data-layout-type='mobile'] {
+    max-width: 100%;
+  }
+}
+
+.title {
+  @include var.composite-var(var.$sans-headline-s);
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    @include var.composite-var(var.$sans-title-l);
+  }
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.listItem {
+  @include var.composite-var(var.$sans-body-m);
+
+  display: flex;
+  gap: 8px;
+}
+
+.listItemIcon {
+  color: var.$sys-invert-neutral-accent-default;
+  flex-shrink: 0;
+}

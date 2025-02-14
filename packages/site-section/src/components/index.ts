@@ -4,3 +4,4 @@ export * from './SectionBenefits';
 export * from './SectionExperts';
 export * from './SectionLeading';
 export * from './SectionPersonalManager';
+export * from './SectionPromoList';

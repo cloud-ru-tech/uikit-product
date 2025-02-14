@@ -4,7 +4,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SectionPersonalManager, SectionPersonalManagerProps } from '../src';
-import sampleManager from './assets/personal_manager.png';
+import sampleManager from './assets/personal-manager.png';
 import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 

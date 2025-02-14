@@ -75,6 +75,17 @@
 | onGetConsultationClick* | `() => void` | - | Хэндлер клика по кнопке "Получить консультацию" |
 | image* | `string` | - | Ссылка на изображение |
 | className | `string` | - | CSS-класс |
+## SectionPromoList
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| rightList* | `PromoListProps` | - | Элементы правого списка |
+| leftList* | `PromoListProps` | - | Элементы левого списка |
+| image* | `string` | - | Ссылка на изображение |
+| title* | `string` | - | Заголовок |
+| className | `string` | - | CSS-класс |
+| description | `string` | - | Описание |
 
 
 [//]: DOCUMENTATION_SECTION_END

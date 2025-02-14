@@ -1,0 +1,52 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.sectionPromoList {
+  width: 100%;
+  position: relative;
+}
+
+.cards {
+  display: flex;
+  gap: 8px;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    flex-direction: column;
+  }
+}
+
+.left {
+  padding: 32px;
+  background-color: var.$sys-invert-neutral-background;
+}
+
+.right {
+  --image-size: 440px;
+  --image-visible-size: 304px;
+  padding: 32px;
+  position: relative;
+  flex-grow: 1;
+  background-color: var.$sys-invert-neutral-background;
+  background-image: var(--image);
+  background-repeat: no-repeat;
+  background-size: var(--image-size);
+  background-position: calc(100% + var(--image-size) - var(--image-visible-size)) calc(100% + var(--image-size) - var(--image-visible-size));
+
+  &[data-layout-type='tablet'] {
+    --image-visible-size: 300px;
+  }
+
+  &[data-layout-type='mobile'] {
+    --image-visible-size: 140px;
+    --image-size: 280px;
+
+    padding: 0 0 var(--image-visible-size);
+    background-position-x: center;
+  }
+}
+
+.rightSectionText {
+  &[data-layout-type='mobile'] {
+    padding: 32px 32px 0;
+  }
+}
