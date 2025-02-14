@@ -10,7 +10,7 @@ import { CHART_SERIES_COLORS, SERIES_COLORS, SeriesColor } from '../../constants
 import { Legend } from './Legend';
 import { Pie } from './Pie';
 import styles from './styles.module.scss';
-import { ColorizedDataType, DataType, LabelRenderFunction, LegendType, PieChartProps } from './types';
+import { DataType, LabelRenderFunction, LegendType, PieChartProps } from './types';
 
 export function PieChart({
   options: { width, height, title, legendTitle, typographySize = 'l' },
@@ -22,14 +22,14 @@ export function PieChart({
   ...rest
 }: WithSupportProps<PieChartProps>) {
   const [hovered, setHovered] = useState<number | undefined>(undefined);
-  const colorizedData: ColorizedDataType[] = useMemo(
+  const colorizedData: DataType[] = useMemo(
     () =>
       data.map((x, index) => {
         const colorsKey = Object.values<SeriesColor>(SERIES_COLORS);
         const chartColor = CHART_SERIES_COLORS[colorsKey[index % colorsKey.length]];
         return {
           ...x,
-          color: chartColor,
+          color: x.color || chartColor,
         };
       }),
     [data],
@@ -88,7 +88,7 @@ export function PieChart({
           x={0}
           y={4}
           data-hovered={hovered === dataIndex || undefined}
-          data-bolder
+          data-bolder='true'
           key={`${dataIndex}_value`}
         >
           {dataEntry.value}

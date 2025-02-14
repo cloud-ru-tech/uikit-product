@@ -12,9 +12,7 @@ export type DataType = {
   label: TextLike;
   value: number;
   id?: string;
-};
-export type ColorizedDataType = DataType & {
-  color: string;
+  color?: string;
 };
 
 export type PieChartProps = {
