@@ -40,7 +40,7 @@
 | type* | "basic" \| "info" | - |  |
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
-| title* | `string` | - | Название секции |
+| title | `string` | - | Название секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | description | `string` | - | Описание секции |
 | tabBarItems | `TabBarItem[]` | - |  |

@@ -11,7 +11,7 @@ import { ContentBasic, ContentInfo } from './types';
 export type SectionBenefitsProps = WithSupportProps<
   WithLayoutType<{
     /** Название секции */
-    title: string;
+    title?: string;
     /** Тег заголовка */
     titleTag?: SectionTitleProps['titleTag'];
     /** Описание секции */
