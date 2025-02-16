@@ -2,7 +2,7 @@ import {
   BareMetalSVG,
   EvolutionComputeSVG,
   ManagedKubernetesSVG,
-  PostgreLogoSVG,
+  ManagedPostgreSqlSVG,
   S3StorageSVG,
 } from '@sbercloud/uikit-product-icons';
 
@@ -80,7 +80,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     platform: PLATFORM.Evolution,
     label: 'Evolution Managed PostgreSQL®',
     caption: 'Управляемые базы данных PostgreSQL®',
-    icon: PostgreLogoSVG,
+    icon: ManagedPostgreSqlSVG,
     formConfig: EVOLUTION_POSTGRE_SQL_FORM_CONFIG,
     dataTestId: 'evolutionPostgreSql',
     enableChangeProductQuantity: true,
