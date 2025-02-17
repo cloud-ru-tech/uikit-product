@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-02-17)
+
+
+### Features
+
+* **FF-6234:** made prop tile optional ([cc8ade6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cc8ade622f03bb4e028a008f910aa4ffeae77057))
+
+
+
+
+
 # 0.2.0 (2025-02-12)
 
 
