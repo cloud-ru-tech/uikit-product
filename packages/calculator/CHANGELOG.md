@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2025-02-17)
+
+
+### Bug Fixes
+
+* **ONB-3344:** changed icon for postgre ([09831e6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/09831e6346afd798377ffbbe78d1f2d15ee93479))
+
+
+
+
+
 # 0.1.0 (2025-02-14)
 
 
