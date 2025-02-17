@@ -21,7 +21,7 @@
     }
   }
 
-  &[data-checked] {
+  &[data-active] {
     &:after {
       position: absolute;
       bottom: 0;
@@ -41,7 +41,7 @@
     background-color: transparent;
     opacity: initial;
 
-    &[data-checked] {
+    &[data-active] {
       &:after {
         background-color: var.$sys-neutral-decor-disabled;
       }
@@ -63,7 +63,7 @@
     background-color: var.$sys-neutral-accent-default;
   }
 
-  &[data-checked] {
+  &[data-active] {
     background-color: var.$sys-primary-accent-default;
 
     &:hover {

@@ -7,15 +7,22 @@ import styles from './styles.module.scss';
 export type NavbarItemProps = {
   id: string;
   text: string;
-  handleClick(): void;
   icon?: ReactElement;
-  checked?: boolean;
   disabled?: boolean;
 };
 
 const KEYS = ['Space', 'Enter'];
 
-export function NavbarItem({ text, icon, handleClick, checked = false, disabled = false }: NavbarItemProps) {
+type Props = NavbarItemProps & {
+  active?: boolean;
+  onClick(id: string): void;
+};
+
+export function NavbarItem({ id, text, icon, onClick, active = false, disabled = false }: Props) {
+  const handleClick = useCallback(() => {
+    onClick(id);
+  }, [id, onClick]);
+
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (KEYS.includes(e.code)) {
@@ -29,13 +36,13 @@ export function NavbarItem({ text, icon, handleClick, checked = false, disabled 
   return (
     <div
       className={styles.navbarItem}
-      data-checked={checked || undefined}
+      data-active={active || undefined}
       data-disabled={disabled || undefined}
       onClick={disabled ? undefined : handleClick}
       onKeyDown={disabled ? undefined : handleKeyDown}
       tabIndex={disabled ? undefined : 0}
     >
-      <div className={styles.background} data-checked={checked || undefined} data-disabled={disabled || undefined} />
+      <div className={styles.background} data-active={active || undefined} data-disabled={disabled || undefined} />
       <Typography
         family='sans'
         purpose='body'

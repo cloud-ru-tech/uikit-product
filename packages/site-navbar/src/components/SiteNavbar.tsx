@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import { useRef } from 'react';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -10,19 +9,18 @@ import styles from './styles.module.scss';
 
 export type SiteNavbarProps = WithSupportProps<{
   items: NavbarItemProps[];
-  sticky?: boolean;
+  onItemClick(id: string): void;
+  active?: string;
   className?: string;
 }>;
 
-export function SiteNavbar({ items, className, sticky, ...rest }: SiteNavbarProps) {
-  const scrollContainerRef = useRef<HTMLElement>(null);
-
+export function SiteNavbar({ items, className, onItemClick, active, ...rest }: SiteNavbarProps) {
   return (
-    <div data-sticky={sticky || undefined} className={cn(styles.navbar, className)} {...extractSupportProps(rest)}>
+    <div className={cn(styles.navbar, className)} {...extractSupportProps(rest)}>
       <Divider />
-      <ScrollContainer className={styles.navbarItemsWrapper} innerRef={scrollContainerRef}>
+      <ScrollContainer className={styles.navbarItemsWrapper}>
         {items.map(item => (
-          <NavbarItem key={item.id} {...item} />
+          <NavbarItem key={item.id} {...item} active={active === item.id} onClick={onItemClick} />
         ))}
       </ScrollContainer>
     </div>
