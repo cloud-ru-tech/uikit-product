@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-02-17)
+
+
+### Features
+
+* **PDS-1634:** phone masks without parenthesis ([b929e87](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b929e8740b4c299b94a73f35dc09d348942f71d1))
+
+
+
+
+
 ## 0.0.4 (2025-02-10)
 
 
