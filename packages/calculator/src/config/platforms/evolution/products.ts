@@ -1,5 +1,6 @@
 import {
   BareMetalSVG,
+  ElasticCloudServerWithGpuSVG,
   EvolutionComputeSVG,
   ManagedKubernetesSVG,
   ManagedPostgreSqlSVG,
@@ -13,6 +14,7 @@ import {
   EVOLUTION_BARE_METAL_FORM_CONFIG,
   EVOLUTION_CLOUD_SERVER_FORM_CONFIG,
   EVOLUTION_CLOUD_SERVER_FREE_TIER_FORM_CONFIG,
+  EVOLUTION_CLOUD_SERVER_GPU_FORM_CONFIG,
   EVOLUTION_KUBERNETES_FORM_CONFIG,
   EVOLUTION_POSTGRE_SQL_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FORM_CONFIG,
@@ -96,5 +98,16 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     dataTestId: EVOLUTION_PRODUCT.EvolutionBareMetal,
     enableChangeProductQuantity: false,
     enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionCloudServerGpu]: {
+    id: EVOLUTION_PRODUCT.EvolutionCloudServerGpu,
+    platform: PLATFORM.Evolution,
+    label: 'Вычислительные мощности с GPU',
+    caption: 'Аренда виртуальных машин, серверов и ML-сервисов с графическими ускорителями',
+    icon: ElasticCloudServerWithGpuSVG,
+    formConfig: EVOLUTION_CLOUD_SERVER_GPU_FORM_CONFIG,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionCloudServerGpu,
+    enableChangeProductQuantity: true,
+    enableConnectToConsole: false,
   },
 };

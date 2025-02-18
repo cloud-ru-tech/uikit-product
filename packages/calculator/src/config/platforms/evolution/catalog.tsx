@@ -54,6 +54,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
         EVOLUTION_PRODUCT.EvolutionCloudServer,
         EVOLUTION_PRODUCT.EvolutionCloudServerFreeTier,
         EVOLUTION_PRODUCT.EvolutionBareMetal,
+        EVOLUTION_PRODUCT.EvolutionCloudServerGpu,
       ],
     },
     {

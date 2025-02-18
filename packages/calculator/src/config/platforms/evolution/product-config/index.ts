@@ -5,3 +5,4 @@ export * from './EvolutionKubernetes';
 export * from './EvolutionPostgreSql';
 export * from './EvolutionStorageS3';
 export * from './EvolutionStorageS3FreeTier';
+export * from './EvolutionCloudServerGpu';
