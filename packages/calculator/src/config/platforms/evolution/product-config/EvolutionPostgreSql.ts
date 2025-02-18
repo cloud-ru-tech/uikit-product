@@ -1,10 +1,10 @@
 import { CONTROL, FormConfig } from '../../../../components';
 import { generateRamItems } from '../../../utils';
 
-const DeploymentMode = {
-  Standard: 'standart',
-  Business: 'business',
-};
+enum DeploymentMode {
+  Standard = 'standart',
+  Business = 'business',
+}
 
 const deploymentModes = [
   {
@@ -19,24 +19,96 @@ const deploymentModes = [
   },
 ];
 
-const deploymentToVCpuMap = {
-  [DeploymentMode.Standard]: [0.5, 1, 2],
-  [DeploymentMode.Business]: [4, 8],
-};
+enum ClusterType {
+  Single = 'single',
+  Master_Replica = 'master/replica',
+}
 
-const deploymentVCpuToRamMap: Record<string, Record<string, number[]>> = {
+const clusterTypeItems = [
+  {
+    label: 'Single',
+    value: ClusterType.Single,
+    description: 'Одноузловая конфигурация',
+  },
+  {
+    label: 'Master/Replica',
+    value: ClusterType.Master_Replica,
+    description: 'Отказоустойчивый кластер высокой доступности',
+  },
+];
+
+type MapType<T> = Record<DeploymentMode, Record<ClusterType, T>>;
+
+const vCpuMap: MapType<number[]> = {
   [DeploymentMode.Standard]: {
-    '0.5': [1, 2, 4],
-    '1': [2, 4, 8],
-    '2': [4, 8, 16],
+    [ClusterType.Single]: [1, 2],
+    [ClusterType.Master_Replica]: [1, 2],
   },
   [DeploymentMode.Business]: {
-    '4': [8, 16],
-    '8': [32],
+    [ClusterType.Single]: [4, 8],
+    [ClusterType.Master_Replica]: [4, 8],
+  },
+};
+
+const ramMap: MapType<Record<string, number[]>> = {
+  [DeploymentMode.Standard]: {
+    [ClusterType.Single]: {
+      '0.5': [1, 2, 4],
+      '1': [2, 4, 8],
+      '2': [4, 8, 16],
+      '4': [8, 16],
+      '8': [32],
+    },
+    [ClusterType.Master_Replica]: {
+      '0.5': [1, 2, 4],
+      '1': [2, 4, 8],
+      '2': [4, 8, 16],
+      '4': [8],
+    },
+  },
+  [DeploymentMode.Business]: {
+    [ClusterType.Single]: {
+      '4': [8, 16],
+      '8': [32],
+      '16': [32, 64, 128],
+      '24': [48],
+      '32': [64, 128, 256],
+      '64': [128, 256],
+    },
+    [ClusterType.Master_Replica]: {
+      '4': [8, 16],
+      '8': [16, 32, 64],
+      '16': [16, 64, 128, 256],
+      '24': [48],
+      '32': [64, 128, 256],
+      '64': [128, 256],
+    },
   },
 };
 
 const ramAmount = generateRamItems([1, 2, 4, 8, 16, 32]);
+
+const getMinMaxDiskSize = ({ deploymentMode }: { deploymentMode: DeploymentMode }) => {
+  switch (deploymentMode) {
+    case DeploymentMode.Business: {
+      return {
+        uiProps: {
+          min: 40,
+          max: 16000,
+        },
+      };
+    }
+    case DeploymentMode.Standard:
+    default: {
+      return {
+        uiProps: {
+          min: 10,
+          max: 2000,
+        },
+      };
+    }
+  }
+};
 
 export const EVOLUTION_POSTGRE_SQL_FORM_CONFIG: FormConfig = {
   ui: ['deploymentMode', 'clusterType', 'flavorConfig', ['systemDisk']],
@@ -61,13 +133,7 @@ export const EVOLUTION_POSTGRE_SQL_FORM_CONFIG: FormConfig = {
       type: CONTROL.Carousel,
       accessorKey: 'clusterType',
       defaultValue: 'single',
-      items: [
-        {
-          label: 'Single',
-          value: 'single',
-          description: 'Одноузловая конфигурация',
-        },
-      ],
+      items: clusterTypeItems,
       decoratorProps: {
         label: 'Тип кластера',
       },
@@ -85,9 +151,9 @@ export const EVOLUTION_POSTGRE_SQL_FORM_CONFIG: FormConfig = {
             label: 'Количество ядер vCPU',
             labelTooltip: 'Виртуальные ядра',
           },
-          watchedControls: { deploymentMode: 'deploymentMode' },
-          relateFn: ({ deploymentMode }) => {
-            const items = deploymentToVCpuMap?.[deploymentMode];
+          watchedControls: { deploymentMode: 'deploymentMode', clusterType: 'clusterType' },
+          relateFn: ({ deploymentMode, clusterType }: { deploymentMode: DeploymentMode; clusterType: ClusterType }) => {
+            const items = vCpuMap?.[deploymentMode]?.[clusterType];
 
             if (items?.length > 0) {
               return {
@@ -105,9 +171,17 @@ export const EVOLUTION_POSTGRE_SQL_FORM_CONFIG: FormConfig = {
           decoratorProps: {
             label: 'Количество оперативной памяти (RAM)',
           },
-          watchedControls: { deploymentMode: 'deploymentMode', vCpu: 'flavorConfig.vCpu' },
-          relateFn: ({ deploymentMode, vCpu }) => {
-            const items = deploymentVCpuToRamMap?.[deploymentMode]?.[vCpu];
+          watchedControls: { deploymentMode: 'deploymentMode', clusterType: 'clusterType', vCpu: 'flavorConfig.vCpu' },
+          relateFn: ({
+            deploymentMode,
+            clusterType,
+            vCpu,
+          }: {
+            deploymentMode: DeploymentMode;
+            clusterType: ClusterType;
+            vCpu: string;
+          }) => {
+            const items = ramMap?.[deploymentMode]?.[clusterType]?.[vCpu];
 
             if (items?.length > 0) {
               return {
@@ -135,35 +209,13 @@ export const EVOLUTION_POSTGRE_SQL_FORM_CONFIG: FormConfig = {
             postfix: 'ГБ',
           },
           watchedControls: { deploymentMode: 'deploymentMode' },
-          relateFn: ({ deploymentMode }) => {
-            switch (deploymentMode) {
-              case DeploymentMode.Business: {
-                return {
-                  uiProps: {
-                    min: 40,
-                    max: 16000,
-                  },
-                };
-              }
-              case DeploymentMode.Standard:
-              default: {
-                return {
-                  uiProps: {
-                    min: 10,
-                    max: 2000,
-                  },
-                };
-              }
-            }
-          },
+          relateFn: getMinMaxDiskSize,
         },
         specification: {
           type: CONTROL.SelectSingle,
           accessorKey: 'systemDisk.specification',
           decoratorProps: {
             label: '',
-            // TODO: need disabled state hint
-            // disabledHint: 'Скоро будут доступны другие типы дисков',
           },
           defaultValue: 'SSD',
           items: [
