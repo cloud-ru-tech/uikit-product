@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-02-18)
+
+
+### Features
+
+* **ONB-0000:** add evo cloud server gpu ([eda5c5d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/eda5c5d83be704a10292fbc0590a149d9ad12f28))
+
+
+
+
+
 ## 0.1.1 (2025-02-17)
 
 
