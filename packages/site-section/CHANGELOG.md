@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-02-19)
+
+
+### Features
+
+* **PDS-1405:** add section promo list ([71edeca](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/71edeca797b632bb80e4082f7313ba7edb9e6148))
+
+
+
+
+
 # 0.3.0 (2025-02-17)
 
 
