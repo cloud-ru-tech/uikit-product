@@ -1,0 +1,40 @@
+{
+  "name": "@sbercloud/uikit-product-promo-tag-predefined",
+  "title": "PromoTag Predefined",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/promo-tag-predefined",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/promo-tag-predefined"
+  },
+  "author": "Dmitry Krivyakov <dvkrivyakov@cloud.ru>",
+  "contributors": [
+    "Dmitry Krivyakov <dvkrivyakov@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@sbercloud/uikit-product-utils": "3.8.8",
+    "@snack-uikit/promo-tag": "0.7.1",
+    "@snack-uikit/tooltip": "0.16.2",
+    "@snack-uikit/utils": "3.7.0"
+  }
+}
