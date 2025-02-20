@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2025-02-20)
+
+
+### Bug Fixes
+
+* **PDS-1652:** replaced video with webp images in site section leading ([d59eeb6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d59eeb6edf51889d7a4b1a086ed8bc9f332d2bd8))
+
+
+
+
+
 # 0.4.0 (2025-02-19)
 
 
