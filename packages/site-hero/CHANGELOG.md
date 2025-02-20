@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-02-20)
+
+
+### Bug Fixes
+
+* **PDS-1359:** site hero minor refactoring ([d67554c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d67554cf828544d699805dccbaf7cac0a281f6de))
+
+
+### Features
+
+* **PDS-1359:** site HeroMain ([4668a3b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4668a3b168eb3cb3faa585a9a2291b277d7f4338))
+
+
+
+
+
 ## 0.0.13 (2025-02-10)
 
 

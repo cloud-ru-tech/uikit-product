@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-02-20)
+
+
+### Features
+
+* **PDS-1616:** site-navbar props update ([fcba50c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fcba50c5ac604d183eca997a6017f6a2d6fe46ea))
+
+
+
+
+
 # 0.1.0 (2025-02-17)
 
 
