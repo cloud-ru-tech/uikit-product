@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2025-02-20)
+
+
+### Bug Fixes
+
+* **PDS-1681:** forwarding props ([0ed3b61](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0ed3b61220ca17b25d63588fe94012881245606f))
+
+
+
+
+
 # 0.1.0 (2025-02-17)
 
 
