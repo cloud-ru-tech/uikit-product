@@ -11,6 +11,8 @@ import { getBlockTitleProps } from './utils';
 
 export type SectionAccordionProps = WithSupportProps<
   WithLayoutType<{
+    /** id секции */
+    id?: string;
     /** Название секции */
     title: string;
     /** Массив айтемов */
@@ -21,13 +23,13 @@ export type SectionAccordionProps = WithSupportProps<
     backgroundColor?: SectionColor;
     /** Внешний бордер для блоков */
     outline?: boolean;
-
     /** CSS-класс */
     className?: string;
   }>
 >;
 
 export function SectionAccordion({
+  id,
   title,
   items,
   selectionMode,
@@ -39,6 +41,7 @@ export function SectionAccordion({
 }: SectionAccordionProps) {
   return (
     <SectionBasic
+      id={id}
       title={title}
       layoutType={layoutType}
       backgroundColor={backgroundColor}

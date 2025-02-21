@@ -52,6 +52,7 @@ type StoryProps = SectionBenefitsProps & {
 };
 
 const Template: StoryFn<StoryProps> = ({
+  id,
   layoutType,
   type = 'basic',
   title,
@@ -82,6 +83,7 @@ const Template: StoryFn<StoryProps> = ({
   if (type === 'basic') {
     return (
       <SectionBenefits
+        id={id}
         title={title}
         titleTag={titleTag}
         description={description}
@@ -95,6 +97,7 @@ const Template: StoryFn<StoryProps> = ({
 
   return (
     <SectionBenefits
+      id={id}
       title={title}
       titleTag={titleTag}
       description={description}
@@ -109,6 +112,7 @@ const Template: StoryFn<StoryProps> = ({
 export const benefits: StoryObj<StoryProps> = {
   render: Template,
   args: {
+    id: 'section-benefits',
     title: 'Section Title',
     description: 'description',
     type: 'basic',

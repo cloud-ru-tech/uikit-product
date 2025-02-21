@@ -46,9 +46,10 @@ const items: SectionLeadingProps['items'] = [
   },
 ];
 
-const Template: StoryFn<StoryProps> = ({ title, description, footerDescription, layoutType, backgroundColor }) => (
+const Template: StoryFn<StoryProps> = ({ id, title, description, footerDescription, layoutType, backgroundColor }) => (
   <div className={styles.resizeWrapper}>
     <SectionLeading
+      id={id}
       title={title}
       description={description}
       items={items}
@@ -62,6 +63,7 @@ const Template: StoryFn<StoryProps> = ({ title, description, footerDescription, 
 export const leading: StoryObj<StoryProps> = {
   render: Template,
   args: {
+    id: 'section-leading',
     title: 'Cloud.ru – ведущий провайдер облачных и AI‑технологий',
     description: `Мы создаем персональные решения, оказываем экспертную поддержку и решаем задачи бизнеса любого масштаба: от ритейла и телекома до тяжелой промышленности и банков.`,
     footerDescription:

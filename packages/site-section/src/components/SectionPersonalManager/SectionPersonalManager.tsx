@@ -13,6 +13,8 @@ import { getCardTitleTypographyProps } from './utils';
 
 export type SectionPersonalManagerProps = WithSupportProps<
   WithLayoutType<{
+    /** id секции */
+    id?: string;
     /** Ссылка на изображение */
     image: string;
     /** CSS-класс */
@@ -23,6 +25,7 @@ export type SectionPersonalManagerProps = WithSupportProps<
 >;
 
 export function SectionPersonalManager({
+  id,
   layoutType,
   image,
   className,
@@ -33,6 +36,7 @@ export function SectionPersonalManager({
 
   return (
     <SectionBasic
+      id={id}
       title={textProvider<string>(languageCode, Texts.PersonalManagerTitle)}
       description={textProvider<string>(languageCode, Texts.PersonalManagerSubtitle)}
       backgroundColor='neutral-background1-level'

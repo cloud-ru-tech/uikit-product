@@ -17,15 +17,16 @@ export default meta;
 
 type StoryProps = SectionPromoListProps;
 
-const Template: StoryFn<StoryProps> = ({ layoutType, image, ...rest }) => (
+const Template: StoryFn<StoryProps> = ({ id, layoutType, image, ...rest }) => (
   <div className={styles.resizeWrapper}>
-    <SectionPromoList image={image ?? promoListImage} layoutType={layoutType} {...rest} />
+    <SectionPromoList id={id} image={image ?? promoListImage} layoutType={layoutType} {...rest} />
   </div>
 );
 
 export const promoList: StoryObj<StoryProps> = {
   render: Template,
   args: {
+    id: 'section-promo-list',
     layoutType: 'desktop',
     title: 'Section Title',
     description: 'Description',

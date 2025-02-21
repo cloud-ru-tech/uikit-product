@@ -13,6 +13,7 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `AccordionItem[]` | - | Массив айтемов |
 | title* | `string` | - | Название секции |
+| id | `string` | - | id секции |
 | selectionMode | "single" \| "multiple" | - | Режим работы аккордиона |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | outline | `boolean` | - | Внешний бордер для блоков |
@@ -26,6 +27,7 @@
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| id | `string` | - | id секции |
 | tabBarItems | `TabBarItem[]` | - | Массив табов |
 | filterItems | `FieldSelectProps[]` | - | Массив фильтров |
 | pagination | `PaginationProps` | - | Настройки пагинации |
@@ -40,6 +42,7 @@
 | type* | "basic" \| "info" | - |  |
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
+| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | description | `string` | - | Описание секции |
@@ -52,6 +55,7 @@
 | items* | `ExpertDetails[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| id | `string` | - | id секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS - класснейм |
 ## SectionLeading
@@ -64,6 +68,7 @@
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| id | `string` | - | id секции |
 | footerDescription | `string` | - | Описание секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS - класснейм |
@@ -74,6 +79,7 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onGetConsultationClick* | `() => void` | - | Хэндлер клика по кнопке "Получить консультацию" |
 | image* | `string` | - | Ссылка на изображение |
+| id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
 ## SectionPromoList
 ### Props
@@ -84,6 +90,7 @@
 | leftList* | `PromoListProps` | - | Элементы левого списка |
 | image* | `string` | - | Ссылка на изображение |
 | title* | `string` | - | Заголовок |
+| id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
 | description | `string` | - | Описание |
 

@@ -8,6 +8,8 @@ import styles from './styles.module.scss';
 
 export type SectionPromoListProps = WithSupportProps<
   WithLayoutType<{
+    /** id секции */
+    id?: string;
     /** CSS-класс */
     className?: string;
     /** Заголовок */
@@ -24,6 +26,7 @@ export type SectionPromoListProps = WithSupportProps<
 >;
 
 export function SectionPromoList({
+  id,
   layoutType,
   className,
   title,
@@ -35,6 +38,7 @@ export function SectionPromoList({
 }: SectionPromoListProps) {
   return (
     <SectionBasic
+      id={id}
       title={title}
       description={description}
       backgroundColor='neutral-background1-level'

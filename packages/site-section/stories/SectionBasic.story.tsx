@@ -58,6 +58,7 @@ const Template: StoryFn<StoryProps> = ({
   showFilters,
   showPagination,
   showLoadMoreButton,
+  id,
   title,
   description,
   layoutType,
@@ -79,6 +80,7 @@ const Template: StoryFn<StoryProps> = ({
   return (
     <div className={styles.resizeWrapper}>
       <SectionBasic
+        id={id}
         title={showTitle ? title : undefined}
         description={showTitle ? description : undefined}
         tabBarItems={showTabs ? tabsConfig : undefined}
@@ -98,6 +100,7 @@ const Template: StoryFn<StoryProps> = ({
 export const basic: StoryObj<StoryProps> = {
   render: Template,
   args: {
+    id: 'section-basic',
     layoutType: LAYOUT_TYPE.Desktop,
     backgroundColor: SECTION_COLORS.NeutralBackground1Level,
     title: 'Заголовок',

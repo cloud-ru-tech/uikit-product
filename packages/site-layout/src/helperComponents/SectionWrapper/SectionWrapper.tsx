@@ -12,14 +12,16 @@ import styles from './styles.module.scss';
 
 export type SectionWrapperProps = WithSupportProps<
   WithLayoutType<{
+    id?: string;
     children: ReactNode;
     className?: string;
   }>
 >;
 
 export const SectionWrapper = forwardRef<HTMLDivElement, SectionWrapperProps>(
-  ({ children, className, layoutType, ...rest }, ref) => (
+  ({ id, children, className, layoutType, ...rest }, ref) => (
     <section
+      id={id}
       ref={ref}
       className={cn(styles.sectionWrapper, className)}
       data-layout-type={layoutType}

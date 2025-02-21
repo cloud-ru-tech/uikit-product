@@ -16,6 +16,8 @@ import { calculateAmountOfItemsPerPage } from './utils';
 export type SectionExpertsProps = WithSupportProps<
   WithLayoutType<
     Pick<SectionTitleProps, 'title' | 'titleTag'> & {
+      /** id секции */
+      id?: string;
       /** Массив айтемов */
       items: ExpertDetails[];
       /** Цвет фона */
@@ -29,6 +31,7 @@ export type SectionExpertsProps = WithSupportProps<
 const MOBILE_LAYOUTS = ['tablet', 'mobile'];
 
 export function SectionExperts({
+  id,
   title,
   titleTag,
   items,
@@ -72,6 +75,7 @@ export function SectionExperts({
 
   return (
     <Layout.SectionWrapper
+      id={id}
       layoutType={layoutType}
       className={cn(className, styles.wrapper)}
       data-section-background={backgroundColor}

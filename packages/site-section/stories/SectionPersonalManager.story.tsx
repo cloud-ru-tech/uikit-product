@@ -19,9 +19,10 @@ type StoryProps = SectionPersonalManagerProps;
 
 const handleClick = () => window.alert('Button clicked!');
 
-const Template: StoryFn<StoryProps> = ({ layoutType, image }) => (
+const Template: StoryFn<StoryProps> = ({ id, layoutType, image }) => (
   <div className={styles.resizeWrapper}>
     <SectionPersonalManager
+      id={id}
       image={image ?? sampleManager}
       onGetConsultationClick={handleClick}
       layoutType={layoutType}
@@ -32,6 +33,7 @@ const Template: StoryFn<StoryProps> = ({ layoutType, image }) => (
 export const personalManager: StoryObj<StoryProps> = {
   render: Template,
   args: {
+    id: 'section-personal-manager',
     layoutType: 'desktop',
   },
   argTypes: {

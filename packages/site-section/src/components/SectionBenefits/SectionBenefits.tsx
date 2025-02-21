@@ -10,6 +10,8 @@ import { ContentBasic, ContentInfo } from './types';
 
 export type SectionBenefitsProps = WithSupportProps<
   WithLayoutType<{
+    /** id секции */
+    id?: string;
     /** Название секции */
     title?: string;
     /** Тег заголовка */
@@ -23,6 +25,7 @@ export type SectionBenefitsProps = WithSupportProps<
   (ContentBasic | ContentInfo);
 
 export function SectionBenefits({
+  id,
   title,
   titleTag,
   description,
@@ -52,6 +55,7 @@ export function SectionBenefits({
 
   return (
     <SectionBasic
+      id={id}
       title={title}
       titleTag={titleTag}
       description={description}

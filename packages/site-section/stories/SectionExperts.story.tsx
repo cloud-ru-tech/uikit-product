@@ -42,12 +42,18 @@ const generateExperts = (amount: number): ExpertDetails[] => {
   return experts;
 };
 
-const Template: StoryFn<StoryProps> = ({ title, expertsAmount, layoutType, backgroundColor }) => {
+const Template: StoryFn<StoryProps> = ({ id, title, expertsAmount, layoutType, backgroundColor }) => {
   const sampleExperts = useMemo(() => generateExperts(expertsAmount), [expertsAmount]);
 
   return (
     <div className={styles.resizeWrapper}>
-      <SectionExperts title={title} items={sampleExperts} layoutType={layoutType} backgroundColor={backgroundColor} />
+      <SectionExperts
+        id={id}
+        title={title}
+        items={sampleExperts}
+        layoutType={layoutType}
+        backgroundColor={backgroundColor}
+      />
     </div>
   );
 };
@@ -55,6 +61,7 @@ const Template: StoryFn<StoryProps> = ({ title, expertsAmount, layoutType, backg
 export const experts: StoryObj<StoryProps> = {
   render: Template,
   args: {
+    id: 'section-experts',
     title: 'Эксперты курса',
     expertsAmount: 9,
     backgroundColor: SECTION_COLORS.NeutralBackground1Level,

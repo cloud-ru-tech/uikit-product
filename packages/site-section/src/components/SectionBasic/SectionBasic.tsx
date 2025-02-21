@@ -26,6 +26,8 @@ type TabBarItem = WithSupportProps<{
 export type SectionBasicProps = WithLayoutType<
   WithSupportProps<
     Pick<SectionTitleProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag'> & {
+      /** id секции */
+      id?: string;
       children: ReactNode;
       /** Массив табов */
       tabBarItems?: TabBarItem[];
@@ -53,6 +55,7 @@ const getInitialTab = (tabBarItems?: TabBarItem[]) => {
 };
 
 export function SectionBasic({
+  id,
   children,
   title,
   description,
@@ -73,6 +76,7 @@ export function SectionBasic({
 
   return (
     <Layout.SectionWrapper
+      id={id}
       layoutType={layoutType}
       className={cn(className, styles.wrapper)}
       data-section-background={backgroundColor}

@@ -16,6 +16,8 @@ import { calculateAmountOfItemsPerPage } from './utils';
 export type SectionLeadingProps = WithSupportProps<
   WithLayoutType<
     Pick<SectionTitleProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag'> & {
+      /** id секции */
+      id?: string;
       /** Массив айтемов */
       items: CardLeadingItem[];
       /** Описание секции */
@@ -31,6 +33,7 @@ export type SectionLeadingProps = WithSupportProps<
 const MOBILE_LAYOUTS = ['tablet', 'mobile'];
 
 export function SectionLeading({
+  id,
   title,
   description,
   titleSectionSize = 'm',
@@ -77,6 +80,7 @@ export function SectionLeading({
 
   return (
     <Layout.SectionWrapper
+      id={id}
       layoutType={layoutType}
       className={cn(className, styles.wrapper)}
       data-section-background={backgroundColor}
