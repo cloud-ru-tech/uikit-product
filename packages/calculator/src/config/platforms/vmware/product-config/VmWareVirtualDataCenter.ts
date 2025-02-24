@@ -267,13 +267,6 @@ export const VIRTUAL_DATA_CENTER_FORM_CONFIG: FormConfig = {
       },
       accessorKey: 'os',
       defaultValue: {
-        osAltServer10: 0,
-        osAltRabochayaStantsiya10: 0,
-        osAltServerSp8Fstek: 0,
-        osRedOsServer73Fstek: 0,
-        osRedOsServer73Standart: 0,
-        osRedOsRabochayaStantsiya73Fstek: 0,
-        osRedOsRabochayaStantsiya73Standart: 0,
         osRosaServerKobaltFstek: 0,
         osRosaServerHromStandart: 0,
         osRosaRabochayaStantsiyaHromStandart: 0,
@@ -281,33 +274,6 @@ export const VIRTUAL_DATA_CENTER_FORM_CONFIG: FormConfig = {
         osDatacenter: 0,
       },
       rows: [
-        {
-          label: 'Альт Сервер 10',
-          accessorKey: 'osAltServer10',
-          uiProps: {
-            min: 0,
-            max: 999,
-            postfix: 'Шт',
-          },
-        },
-        {
-          label: 'Альт Рабочая станция 10',
-          accessorKey: 'osAltRabochayaStantsiya10',
-          uiProps: {
-            min: 0,
-            max: 999,
-            postfix: 'Шт',
-          },
-        },
-        {
-          label: 'Альт Сервер СП 8 ФСТЭК',
-          accessorKey: 'osAltServerSp8Fstek',
-          uiProps: {
-            min: 0,
-            max: 999,
-            postfix: 'Шт',
-          },
-        },
         {
           label: 'Роса Сервер "КОБАЛЬТ" ФСТЭК',
           accessorKey: 'osRosaServerKobaltFstek',
