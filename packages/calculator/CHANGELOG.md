@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-02-24)
+
+
+### Features
+
+* **ONB-3408:** add evolution container apps calc ([430d7c6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/430d7c6104bf08cd7ba14263cb0473d968d976ce))
+
+
+
+
+
 # 0.2.0 (2025-02-18)
 
 
