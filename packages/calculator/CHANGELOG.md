@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-02-24)
+
+
+### Features
+
+* **ONB-3566:** remove os in virtual data center ([1af927a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1af927ad7a166a89eb5cbf9b5484efd1ef4c3b56))
+
+
+
+
+
 # 0.3.0 (2025-02-24)
 
 
