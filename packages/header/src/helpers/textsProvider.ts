@@ -183,8 +183,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.MkpBannerCount]: '120+ сервисов',
 
     [Texts.ReferralBannerTitle]: 'Реферальная программа',
-    [Texts.ReferralBannerText]: 'Зарабатывайте 15% на рекомендациях сервисов Cloud.ru',
-    [Texts.ReferralBannerTag]: '15%',
+    [Texts.ReferralBannerText]: 'Зарабатывайте 20% на рекомендациях сервисов Cloud.ru',
+    [Texts.ReferralBannerTag]: '20%',
   },
   [LanguageCodeType.enGB]: {
     [Texts.HeaderProjectSelectorCreateProject]: 'Create project',
@@ -277,8 +277,8 @@ const dictionary: Partial<Record<LanguageCodeType, Record<Texts, string>>> = {
     [Texts.MkpBannerCount]: '120+ services',
 
     [Texts.ReferralBannerTitle]: 'Referral program',
-    [Texts.ReferralBannerText]: 'Earn 15% on recommendations of Cloud.ru services',
-    [Texts.ReferralBannerTag]: '15%',
+    [Texts.ReferralBannerText]: 'Earn 20% on recommendations of Cloud.ru services',
+    [Texts.ReferralBannerTag]: '20%',
   },
 };
 
