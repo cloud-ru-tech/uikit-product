@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.1 (2025-02-25)
+
+
+### Bug Fixes
+
+* **PDS-1714:** description typography ([4cf2051](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4cf2051c7363b68138affb6091fab7aba9840535))
+
+
+
+
+
 # 0.5.0 (2025-02-25)
 
 
