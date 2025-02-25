@@ -187,7 +187,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
             <ButtonFunction
               label={textProvider(languageCode, Texts.ResetAll)}
               onClick={() => {
-                handleSelectionChange(undefined);
+                handleSelectionChange([]);
               }}
               size='m'
             />
