@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2025-02-25)
+
+
+### Features
+
+* **ONB-3453:** evo postgre sql new flavors ([6d4c773](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6d4c77344f214c3d768fb735899a365e4505cc1c))
+
+
+
+
+
 # 0.4.0 (2025-02-24)
 
 
