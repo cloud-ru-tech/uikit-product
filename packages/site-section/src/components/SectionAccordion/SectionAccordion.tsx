@@ -7,7 +7,7 @@ import { SectionColor } from '../../types';
 import { SectionBasic } from '../SectionBasic';
 import styles from './styles.module.scss';
 import { AccordionItem } from './types';
-import { getBlockTitleProps } from './utils';
+import { getBlockDescriptionSize, getBlockTitleProps } from './utils';
 
 export type SectionAccordionProps = WithSupportProps<
   WithLayoutType<{
@@ -61,9 +61,15 @@ export function SectionAccordion({
             removeContentFromDOM={false}
             outline={outline}
           >
-            <Typography.SansBodyM>
+            <Typography
+              family='sans'
+              purpose='body'
+              tag='div'
+              size={getBlockDescriptionSize(layoutType)}
+              className={styles.description}
+            >
               <RichText richText={description} />
-            </Typography.SansBodyM>
+            </Typography>
           </AccordionPrimary.CollapseBlock>
         ))}
       </AccordionSecondary>
