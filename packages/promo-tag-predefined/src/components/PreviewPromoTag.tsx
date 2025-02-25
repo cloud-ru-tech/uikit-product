@@ -22,7 +22,7 @@ export function PreviewPromoTag({ context = PREVIEW_PROMO_TAG_CONTEXT.Service, .
   }, [context, getText]);
 
   return (
-    <Tooltip tip={text} {...props} className={styles.tooltip}>
+    <Tooltip tip={text} {...props} className={styles.tooltip} triggerClassName={styles.trigger}>
       <PromoTag text={getText(Texts.Text)} appearance='blue' />
     </Tooltip>
   );
