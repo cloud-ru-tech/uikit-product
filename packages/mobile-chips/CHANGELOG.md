@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.25 (2025-02-25)
+
+
+### Bug Fixes
+
+* **FF-6290:** multi value reset ([9a1382c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9a1382cc3e20f58cecb690efc3a522c9ac36ed57))
+
+
+
+
+
 ## 0.6.24 (2025-02-10)
 
 
