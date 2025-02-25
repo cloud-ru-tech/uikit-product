@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-promo-tag-predefined",
   "title": "PromoTag Predefined",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
