@@ -12,14 +12,14 @@ export const ICONS = {
       .filter(key => key !== 'Sprite')
       .map(key => {
         const Icon = Icons[key];
-        return [key, <Icon key={key} />];
+        return [key, Icon];
       }),
   ),
 };
 
 export type CommonCardStoryProps = {
   storyIcon: IconElement;
-  iconMode: 'icon' | 'custom';
+  iconMode: 'icon' | 'image' | 'custom';
   imgSrc: string;
 };
 
@@ -44,11 +44,11 @@ export const COMMON_CARD_STORY_ARG_TYPES: StoryObj['argTypes'] = {
   },
   imgSrc: {
     name: '[Stories]: Image',
-    if: { arg: 'iconMode', eq: 'img' },
+    if: { arg: 'iconMode', eq: 'image' },
   },
   iconMode: {
     name: '[Stories]: Card Icon mode',
-    options: ['icon', 'custom'],
+    options: ['icon', 'image', 'custom'],
     control: {
       type: 'radio',
     },
@@ -60,16 +60,19 @@ export const COMMON_CARD_STORY_ARG_TYPES: StoryObj['argTypes'] = {
   },
 };
 
-export function useStoryIcon({ iconMode, storyIcon }: CommonCardStoryProps): IconProps['icon'] {
+export function useStoryIcon({ iconMode, storyIcon, imgSrc }: CommonCardStoryProps): IconProps['icon'] {
   return useMemo(() => {
     switch (iconMode) {
       case 'custom': {
         return <div className={styles.customNode}>1</div>;
+      }
+      case 'image': {
+        return <img className={styles.image} alt='emblem' src={imgSrc} />;
       }
       case 'icon':
       default: {
         return storyIcon;
       }
     }
-  }, [iconMode, storyIcon]);
+  }, [imgSrc, iconMode, storyIcon]);
 }

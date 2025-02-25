@@ -1,0 +1,66 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+
+  [data-layout-type=mobile] &,
+  [data-layout-type=tablet] & {
+    gap: 12px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6px;
+  align-items: flex-start;
+  gap: 4px;
+  flex: 1 0 0;
+
+  a {
+    color: ste.$sys-neutral-text-main;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  [data-layout-type=mobile] &,
+  [data-layout-type=tablet] & {
+    gap: 0;
+    padding-top: 0;
+  }
+}
+
+.title {
+  color: ste.$sys-neutral-text-main;
+  word-break: break-word;
+}
+
+.description {
+  color: ste.$sys-neutral-text-support;
+  word-break: break-word;
+}
+
+.tagList {
+  display: flex;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 4px;
+  align-self: stretch;
+  flex-wrap: wrap;
+
+  [data-layout-type=mobile] &,
+  [data-layout-type=tablet] & {
+    padding-bottom: 0;
+  }
+}

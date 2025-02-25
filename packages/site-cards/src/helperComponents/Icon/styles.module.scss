@@ -1,12 +1,40 @@
 @use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
 
+$decor-padding: 8px;
+
 .icon {
   flex-shrink: 0;
   color: ste.$sys-graphite-text-main;
+  position: relative;
 
   svg {
     width: 100% !important; /* stylelint-disable-line declaration-no-important */
     height: 100% !important; /* stylelint-disable-line declaration-no-important */
+  }
+
+  &[data-decor] {
+    padding: $decor-padding;
+
+    & svg {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      width: calc(100% - 2 * #{$decor-padding}) !important; /* stylelint-disable-line declaration-no-important */
+      height: calc(100% - 2 * #{$decor-padding}) !important; /* stylelint-disable-line declaration-no-important */
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 50%;
+      background-color: ste.$sys-graphite-decor-default;
+      border-radius: ste.$radius-icon-predefined-decor-square-m;
+    }
   }
 
   &[data-size='m'] {
