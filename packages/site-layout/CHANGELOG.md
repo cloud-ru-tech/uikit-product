@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-02-25)
+
+
+### Features
+
+* **PDS-1701:** add id prop ([359c2d4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/359c2d41920891e8b1e8dbcecb0da9580b3bf54a))
+
+
+
+
+
 ## <small>0.0.9 (2025-02-05)</small>
 
 ### Only dependencies have been changed
