@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.34.0 (2025-02-25)
+
+
+### Features
+
+* **AICCORE-3612:** added access request for ws ([2b8020e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2b8020ece4c578f72efe5638154681057f61f638))
+
+
+
+
+
 ## 2.33.39 (2025-02-12)
 
 
