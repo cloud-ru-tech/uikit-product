@@ -64,7 +64,7 @@ function ToggleCardsControlUiDesktop({
 
   return (
     <div className={styles.carousel}>
-      <FieldDecorator {...decoratorProps} {...relatedDecoratorProps} data-test-id={dataTestAttribute}>
+      <FieldDecorator size='m' {...decoratorProps} {...relatedDecoratorProps} data-test-id={dataTestAttribute}>
         <ToggleGroup
           selectionMode='single'
           value={value}
