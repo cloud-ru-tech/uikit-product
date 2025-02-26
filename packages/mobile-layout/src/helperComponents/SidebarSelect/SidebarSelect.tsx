@@ -1,13 +1,13 @@
 import cn from 'classnames';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
 import { MobileBlockBasic } from '../../components';
-import { useItemsContent } from './helpers';
+import { useItemsContent, useSearchFilter, useSelectedItem } from './hooks';
 import styles from './styles.module.scss';
 import { SidebarItem } from './types';
 
@@ -17,6 +17,7 @@ export type SidebarSelectProps = WithSupportProps<{
   selected?: string | number;
   onSelect?(id: string | number): void;
   className?: string;
+  collapse?: MobileDroplistProps['collapse'];
 }>;
 
 export function SidebarSelect({
@@ -25,12 +26,21 @@ export function SidebarSelect({
   footerItems = [],
   selected,
   onSelect,
+  collapse,
   ...otherProps
 }: SidebarSelectProps) {
-  const list = useItemsContent(items, onSelect);
+  const [searchValue, setSearchValue] = useState('');
+  const { filteredList, searchCollapseState } = useSearchFilter(items, searchValue);
+  const list = useItemsContent(filteredList, onSelect);
   const footerList = useItemsContent(footerItems);
   const [isOpen, setIsOpen] = useState(false);
-  const selectedItem = items.find(item => item.id === selected);
+  const selectedItem = useSelectedItem(items, selected);
+
+  const selectedCollapsedState = useMemo(() => {
+    if (selectedItem.item) {
+      return { defaultValue: selectedItem.path };
+    }
+  }, [selectedItem.item, selectedItem.path]);
 
   const handleSelect = (value: string | number) => {
     if (value) {
@@ -47,11 +57,15 @@ export function SidebarSelect({
         items={[...list, ...footerList]}
         open={isOpen}
         onOpenChange={setIsOpen}
+        collapse={searchValue ? searchCollapseState : collapse || selectedCollapsedState}
+        search={{ value: searchValue, onChange: setSearchValue }}
+        virtualized
+        scrollToSelectedItem
       >
         <MobileBlockBasic className={cn(styles.wrapper, className)} {...extractSupportProps(otherProps)}>
-          <TruncateString className={styles.triggerText} text={selectedItem?.label || ''} />
+          <TruncateString className={styles.triggerText} text={selectedItem.item?.label || ''} />
 
-          {selectedItem?.afterContent}
+          {selectedItem.item?.afterContent}
 
           {isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}
         </MobileBlockBasic>

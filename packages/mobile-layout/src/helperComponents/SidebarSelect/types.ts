@@ -8,4 +8,5 @@ export type SidebarItem = {
   href?: string;
   afterContent?: ReactNode;
   disabledReason?: ReactNode;
+  items?: SidebarItem[];
 };

@@ -3,7 +3,6 @@ import { useMemo, useState } from 'react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
-import { Counter } from '@snack-uikit/counter';
 import { Status } from '@snack-uikit/status';
 import { Typography } from '@snack-uikit/typography';
 
@@ -11,6 +10,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MobilePageServices, MobilePageServicesProps } from '../src';
+import { SIDEBAR_ITEMS } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -18,26 +18,6 @@ const meta: Meta = {
   component: MobilePageServices,
 };
 export default meta;
-
-const SIDEBAR_ITEMS = [
-  { id: 0, label: 'Инстансы', afterContent: <Counter value={5} size='m' /> },
-  { id: 1, label: 'Мониторинг', disabledReason: 'У вас нет прав, чтобы зайти сюда' },
-  { id: 2, label: 'Администрирование' },
-  { id: 3, label: 'Сеть' },
-  { id: 4, label: 'Инстансы' },
-  { id: 5, label: 'Мониторинг' },
-  { id: 6, label: 'Администрирование' },
-  { id: 7, label: 'Сеть' },
-  { id: 8, label: 'Пункт с очень-очень длинным названием' },
-  { id: 9, label: 'Инстансы' },
-  { id: 10, label: 'Мониторинг' },
-  { id: 11, label: 'Администрирование' },
-  { id: 12, label: 'Сеть' },
-  { id: 13, label: 'Инстансы' },
-  { id: 14, label: 'Мониторинг' },
-  { id: 15, label: 'Администрирование' },
-  { id: 16, label: 'Сеть' },
-];
 
 const getSidebarProps = ({
   selected,
