@@ -1,7 +1,7 @@
 import { cloneElement, isValidElement, useMemo, useRef } from 'react';
 
 import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
-import { kindFlattenItems, List, ListProps } from '@snack-uikit/list';
+import { List, ListProps } from '@snack-uikit/list';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { MobileDropdownProps } from './MobileDropdown';
@@ -27,13 +27,8 @@ export function MobileDroplist({
 }: MobileDroplistProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [open = false, setIsOpen] = useValueControl<boolean>({ value: openProp, onChange: onOpenChange });
-  const flattenItems = useMemo(() => {
-    const { flattenItems } = kindFlattenItems({ items });
 
-    return flattenItems;
-  }, [items]);
-
-  const searchable = search && Object.values(flattenItems).length > 5;
+  const searchable = search;
 
   const listJsx = (
     <div className={styles.listWrapper} data-virtualized={virtualized || undefined}>
