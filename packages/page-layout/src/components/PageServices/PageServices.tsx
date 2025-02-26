@@ -5,14 +5,14 @@ import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { extractSupportProps } from '@snack-uikit/utils';
 
 import { Headline, HeadlineProps } from '../Headline';
-import { PrivateSidebar, PrivateSidebarProps } from '../PrivateSidebar';
+import { PageSidebar, PageSidebarProps } from '../PageSidebar';
 import styles from './styles.module.scss';
 
 export type PageServicesProps = WithSupportProps<
   PropsWithChildren<
-    Pick<HeadlineProps, 'title' | 'actions' | 'subHeader' | 'afterHeadline' | 'beforeHeadline'> & {
+    Pick<HeadlineProps, 'title' | 'actions' | 'subHeader' | 'afterHeadline' | 'beforeHeadline' | 'truncateTitle'> & {
       className?: string;
-      sidebar?: PrivateSidebarProps;
+      sidebar?: PageSidebarProps;
     }
   >
 >;
@@ -20,7 +20,10 @@ export type PageServicesProps = WithSupportProps<
 const GLOBAL_CONTAINER_ID = 'single-spa-wrapper';
 
 export const PageServices = forwardRef<HTMLDivElement, PageServicesProps>(
-  ({ children, title, actions, className, sidebar, beforeHeadline, subHeader, afterHeadline, ...rest }, ref) => {
+  (
+    { children, title, actions, className, sidebar, beforeHeadline, subHeader, afterHeadline, truncateTitle, ...rest },
+    ref,
+  ) => {
     const [height, setHeight] = useState(0);
 
     useEffect(() => {
@@ -52,6 +55,7 @@ export const PageServices = forwardRef<HTMLDivElement, PageServicesProps>(
               beforeHeadline={beforeHeadline}
               afterHeadline={afterHeadline}
               subHeader={subHeader}
+              truncateTitle={truncateTitle}
             />
 
             <div className={styles.childWrapper}>{children}</div>
@@ -59,7 +63,7 @@ export const PageServices = forwardRef<HTMLDivElement, PageServicesProps>(
         </div>
         {sidebar && (
           <div className={styles.sidebar}>
-            <PrivateSidebar {...sidebar} />
+            <PageSidebar {...sidebar} />
           </div>
         )}
       </div>

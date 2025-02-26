@@ -1,5 +1,5 @@
 import { Meta, StoryFn } from '@storybook/react';
-import { HeaderProps } from 'page-layout/src/components/PrivateSidebar/types';
+import { HeaderProps } from 'page-layout/src/components/PageSidebar/types';
 import { MouseEvent, useMemo, useState } from 'react';
 
 import { PlaceholderSVG, StarSVG } from '@sbercloud/uikit-product-icons';
@@ -11,6 +11,7 @@ import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { DefaultSubHeader, PageServices, PageServicesProps } from '../src/components';
 import { HeadlineActions } from './components/HeadlineActions';
+import { Items } from './constants';
 import styles from './styles.module.scss';
 
 export default {
@@ -40,27 +41,10 @@ const getSidebarProps = ({
           headless: undefined,
           none: undefined,
         }[type] as HeaderProps,
+        hasSearch: true,
         selected,
         onSelect: setSelected,
-        items: [
-          { id: 0, label: 'Инстансы' },
-          { id: 1, label: 'Мониторинг', disabledReason: 'У вас нет прав, чтобы зайти сюда' },
-          { id: 2, label: 'Администрирование' },
-          { id: 3, label: 'Сеть' },
-          { id: 4, label: 'Инстансы' },
-          { id: 5, label: 'Мониторинг' },
-          { id: 6, label: 'Администрирование' },
-          { id: 7, label: 'Сеть' },
-          { id: 8, label: 'Пункт с очень-очень длинным названием' },
-          { id: 9, label: 'Инстансы' },
-          { id: 10, label: 'Мониторинг' },
-          { id: 11, label: 'Администрирование' },
-          { id: 12, label: 'Сеть' },
-          { id: 13, label: 'Инстансы' },
-          { id: 14, label: 'Мониторинг' },
-          { id: 15, label: 'Администрирование' },
-          { id: 16, label: 'Сеть' },
-        ],
+        items: Items,
         footerItems: [{ id: 17, label: 'Документация' }],
         pageContainerId: 'pageContainer',
       }

@@ -17,15 +17,7 @@
   flex-direction: row;
   gap: styles-theme-variables.$dimension-1m;
   align-items: flex-start;
-  flex-grow: 1;
-}
-
-.title {
-  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-headline-m);
-
-  color: styles-theme-variables.$sys-neutral-text-main;
-  margin: 0;
-  word-break: break-word;
+  width: 100%;
 }
 
 .prefixButtonWrapper {

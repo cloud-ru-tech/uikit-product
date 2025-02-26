@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { TruncateString } from '@snack-uikit/truncate-string';
+import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';
 
@@ -10,16 +12,26 @@ export type HeadlineProps = WithSupportProps<{
   afterHeadline?: ReactNode;
   actions?: ReactNode;
   subHeader?: ReactNode;
+  truncateTitle?: boolean;
 }>;
 
-export function Headline({ title, actions, beforeHeadline, afterHeadline, subHeader, ...rest }: HeadlineProps) {
+export function Headline({
+  title,
+  actions,
+  beforeHeadline,
+  afterHeadline,
+  subHeader,
+  truncateTitle,
+  ...rest
+}: HeadlineProps) {
   return (
     <div className={styles.headline} {...extractSupportProps(rest)}>
       <div className={styles.headlineLayout}>
         <div className={styles.titleLayout}>
           {beforeHeadline && <div className={styles.prefixButtonWrapper}>{beforeHeadline}</div>}
-
-          <h1 className={styles.title}>{title}</h1>
+          <Typography.SansHeadlineM tag='h1'>
+            {truncateTitle ? <TruncateString variant='end' text={title} maxLines={1} /> : title}
+          </Typography.SansHeadlineM>
 
           {afterHeadline && <div className={styles.statusWrapper}>{afterHeadline}</div>}
         </div>

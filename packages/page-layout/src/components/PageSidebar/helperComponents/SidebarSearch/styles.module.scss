@@ -1,0 +1,28 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss';
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element';
+
+.searchItem {
+  background-color: styles-theme-variables.$sys-neutral-background;
+}
+
+.button {
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+
+  &:focus,
+  &:focus-visible {
+    @include styles-tokens-element.outline-var(styles-tokens-element.$container-focused-s);
+
+    border-radius: styles-theme-variables.$dimension-050m;
+    outline-color: styles-tokens-element.$sys-available-complementary;
+  }
+
+  &:active {
+    outline: none;
+  }
+}

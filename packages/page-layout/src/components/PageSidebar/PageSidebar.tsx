@@ -4,14 +4,17 @@ import { useUncontrolledProp } from 'uncontrollable';
 
 import { VerticalMenuCloseSVG, VerticalMenuOpenSVG } from '@sbercloud/uikit-product-icons';
 import { ButtonElevated } from '@snack-uikit/button';
-import { List } from '@snack-uikit/list';
+import { List, ListProps } from '@snack-uikit/list';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
+import { SearchContextProvider } from './contexts';
+import { SidebarSearch } from './helperComponents/SidebarSearch';
 import { useItemsContent, useTopPinnedContent } from './hooks/useItemsCreator';
+import { useSearchFilter } from './hooks/useSearchFilter';
 import styles from './styles.module.scss';
 import { Documentation, HeaderProps, SidebarItem } from './types';
 
-export type PrivateSidebarProps = WithSupportProps<{
+export type PageSidebarProps = WithSupportProps<{
   open?: boolean;
   defaultOpen?: boolean;
   onOpenChanged?(open: boolean): void;
@@ -23,9 +26,11 @@ export type PrivateSidebarProps = WithSupportProps<{
   className?: string;
   documentation?: Documentation;
   pageContainerId?: string;
+  hasSearch?: boolean;
+  collapse?: ListProps['collapse'];
 }>;
 
-export function PrivateSidebar({
+function PrivateSideBar({
   open: openProp,
   defaultOpen,
   onOpenChanged,
@@ -35,8 +40,10 @@ export function PrivateSidebar({
   header,
   selected,
   onSelect,
+  hasSearch,
+  collapse,
   ...otherProps
-}: PrivateSidebarProps) {
+}: PageSidebarProps) {
   const [open, setOpenState] = useUncontrolledProp(openProp, defaultOpen || true, onOpenChanged);
   const [hoverOff, setHoverOff] = useState(false);
 
@@ -58,9 +65,10 @@ export function PrivateSidebar({
     [open, setOpenState],
   );
 
-  const list = useItemsContent(items, onSelect);
+  const { filteredList, searchOpened, searchValue, searchCollapseState } = useSearchFilter(items);
+  const list = useItemsContent(filteredList, onSelect);
   const footerList = useItemsContent(footerItems);
-  const { pinTop } = useTopPinnedContent(header);
+  const { pinTop } = useTopPinnedContent(header, hasSearch);
 
   return (
     <div
@@ -78,7 +86,13 @@ export function PrivateSidebar({
           onClick={() => toggleOpen(true)}
         />
       )}
-      <div data-collapsed={!open || undefined} data-hover-off={hoverOff || undefined} className={styles.body}>
+
+      <div
+        data-collapsed={!open || undefined}
+        data-hover-off={hoverOff || undefined}
+        data-has-search={hasSearch || undefined}
+        className={styles.body}
+      >
         <div className={styles.content} data-collapsed={!open || undefined}>
           <div className={styles.list}>
             <List
@@ -88,7 +102,15 @@ export function PrivateSidebar({
               pinTop={pinTop}
               pinBottom={footerList}
               scroll
+              scrollToSelectedItem
+              collapse={searchValue ? searchCollapseState : collapse}
+              barHideStrategy='leave'
             />
+            {hasSearch && searchOpened && (
+              <div className={styles.searchWrapper}>
+                <SidebarSearch />
+              </div>
+            )}
           </div>
           <div className={styles.toggler}>
             <ButtonElevated
@@ -99,5 +121,13 @@ export function PrivateSidebar({
         </div>
       </div>
     </div>
+  );
+}
+
+export function PageSidebar(props: PageSidebarProps) {
+  return (
+    <SearchContextProvider>
+      <PrivateSideBar {...props} />
+    </SearchContextProvider>
   );
 }
