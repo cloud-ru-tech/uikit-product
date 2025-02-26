@@ -63,7 +63,7 @@ export function useSearch({ links }: UseSearchProps) {
     () =>
       links && searchValue.length > 0
         ? links.reduce((result, group) => {
-            if (group.label && matchSearchString(group.label, searchValue)) {
+            if (group.label && matchSearchString(group.label.text, searchValue)) {
               result.push(group);
               return result;
             }
@@ -159,7 +159,7 @@ export const useWithFavorites = ({ links, favorites }: Pick<DrawerMenuProps, 'li
 
     return [
       {
-        label: textProvider(languageCode, Texts.Favorite),
+        label: { text: textProvider(languageCode, Texts.Favorite) },
         id: 'favorite',
         items: favouriteItems,
       },

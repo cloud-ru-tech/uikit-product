@@ -1,20 +1,41 @@
-import { forwardRef, ReactNode } from 'react';
+import { forwardRef, ReactNode, useCallback } from 'react';
 
+import { TitleClickable } from '@sbercloud/uikit-product-title-clickable';
+
+import { LinksGroupTitle } from '../../../../types';
 import styles from './styles.module.scss';
 
 type GroupCardProps = {
   id: string;
-  title: string;
+  title: LinksGroupTitle;
   children: ReactNode;
   mobile?: boolean;
+  onClose?: () => void;
 };
 
-export const GroupCard = forwardRef<HTMLDivElement, GroupCardProps>(({ id, title, children, mobile }, ref) => (
-  <div className={styles.card} id={id} ref={ref} data-test-id={`header__drawer-menu__group-card-${id}`}>
-    <span className={styles.cardTitle}>{title}</span>
+export const GroupCard = forwardRef<HTMLDivElement, GroupCardProps>(({ id, title, children, mobile, onClose }, ref) => {
+  const handleClick = useCallback(
+    (evt: React.MouseEvent<HTMLAnchorElement>) => {
+      if (title.onClick) {
+        title.onClick(evt);
+        evt.preventDefault();
+      }
+      onClose?.();
+    },
+    [onClose, title],
+  );
 
-    <div className={styles.cardBody} data-mobile={mobile || undefined}>
-      {children}
+  return (
+    <div className={styles.card} id={id} ref={ref} data-test-id={`header__drawer-menu__group-card-${id}`}>
+      {!title.onClick ? (
+        <span className={styles.cardTitle}>{title.text}</span>
+      ) : (
+        <TitleClickable title={title.text} href='#' onClick={handleClick} />
+      )}
+
+      <div className={styles.cardBody} data-mobile={mobile || undefined}>
+        {children}
+      </div>
     </div>
-  </div>
-));
+  );
+});

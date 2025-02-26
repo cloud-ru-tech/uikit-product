@@ -55,6 +55,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'favorites'
       | 'onMarketplaceBannerClick'
       | 'onReferralBannerClick'
+      | 'hideProductSelect'
     > & { onClose?(): void };
     select?: Pick<
       SelectProps,
@@ -119,6 +120,7 @@ export function ProductHeader({
     onClose,
     selectedLink,
     onLinkChange,
+    hideProductSelect,
   },
 
   select,
@@ -314,6 +316,7 @@ export function ProductHeader({
           selectedProduct={selectedProduct}
           onProductChange={onProductChange}
           footerLinks={footerLinks}
+          hideProductSelect={hideProductSelect}
         />
       )}
     </>

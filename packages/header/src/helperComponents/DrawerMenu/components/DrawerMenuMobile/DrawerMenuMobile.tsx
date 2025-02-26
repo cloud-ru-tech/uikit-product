@@ -34,6 +34,7 @@ export function DrawerMenuMobile({
   favorites,
   onMarketplaceBannerClick,
   onReferralBannerClick,
+  hideProductSelect = false,
   ...rest
 }: DrawerMenuProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
@@ -117,12 +118,14 @@ export function DrawerMenuMobile({
 
         <Scroll>
           <div className={styles.content}>
-            <ProductSelectTrigger
-              selectedProduct={rest.selectedProduct}
-              className={styles.trigger}
-              onClick={toggleInnerDrawer}
-              hasChoice={hasChoice}
-            />
+            {!hideProductSelect && (
+              <ProductSelectTrigger
+                selectedProduct={rest.selectedProduct}
+                className={styles.trigger}
+                onClick={toggleInnerDrawer}
+                hasChoice={hasChoice}
+              />
+            )}
 
             {leftSectionLinks && (
               <Search

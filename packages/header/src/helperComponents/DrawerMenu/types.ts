@@ -23,4 +23,5 @@ export type DrawerMenuProps = {
   };
   onMarketplaceBannerClick?(e?: MouseEvent<HTMLElement>): void;
   onReferralBannerClick?(e?: MouseEvent<HTMLElement>): void;
+  hideProductSelect?: boolean;
 } & SelectProductsProps;

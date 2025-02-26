@@ -1,10 +1,10 @@
-import { JSXElementConstructor, MouseEvent, ReactElement } from 'react';
+import { JSXElementConstructor, MouseEvent, MouseEventHandler, ReactElement } from 'react';
 
 import { CardServiceSmallProps } from '@sbercloud/uikit-product-card-predefined';
 import { HotSpotProps } from '@snack-uikit/hot-spot';
 import { BaseItemProps } from '@snack-uikit/list';
 
-export type { NotificationsProps, FinancialMenuProps } from './helperComponents';
+export type { NotificationsProps, FinancialMenuProps, DrawerMenuProps } from './helperComponents';
 
 export type User = {
   name: string;
@@ -40,9 +40,21 @@ export type InnerLink = {
   badge?: CardServiceSmallProps['promoBadge'];
 };
 
+type TitleStatic = {
+  text: string;
+  onClick?: never;
+};
+
+type TitleClickable = {
+  text: string;
+  onClick?: MouseEventHandler<HTMLAnchorElement>;
+};
+
+export type LinksGroupTitle = TitleStatic | TitleClickable;
+
 export type LinksGroup = {
   id: string;
-  label: string;
+  label: LinksGroupTitle;
   hidden?: boolean;
   items: InnerLink[];
 };

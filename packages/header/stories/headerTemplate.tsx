@@ -81,6 +81,8 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showReferralBanner: boolean;
 
   showSinglePlatform: boolean;
+
+  showProductSelect: boolean;
 };
 
 const EMPTY_ON_CLICK = () => {};
@@ -241,6 +243,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showReferralBanner,
     showPlatformsLoading,
     showSinglePlatform,
+    showProductSelect,
     ...args
   }: StoryProps) {
     const [organization, setOrganization] = useState(args.selectedOrganization);
@@ -468,6 +471,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
             },
             selectedProduct: product,
             onProductChange: setProduct,
+            hideProductSelect: !showProductSelect,
           }}
         />
         <div id='single-spa-wrapper' className={styles.page}>
@@ -735,6 +739,7 @@ export const ARGS: StoryProps = {
   showMarketplaceBanner: true,
   showReferralBanner: true,
   showSinglePlatform: false,
+  showProductSelect: true,
   drawerMenu: {
     allProducts: [
       {
@@ -788,7 +793,7 @@ export const ARGS: StoryProps = {
     selectedLink: 'vms',
     links: [
       {
-        label: 'Инфраструктура',
+        label: { text: 'Инфраструктура' },
         id: 'infrastructure',
         items: [
           { id: 'vms', label: 'Виртуальные машины', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
@@ -798,7 +803,7 @@ export const ARGS: StoryProps = {
         ],
       },
       {
-        label: 'Сеть',
+        label: { text: 'Инфраструктура' },
         id: 'network',
         items: [
           { id: 'vpc', label: 'VPC', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
@@ -836,7 +841,10 @@ export const ARGS: StoryProps = {
         ],
       },
       {
-        label: 'Хранение данных',
+        label: {
+          text: 'Хранение данных',
+          onClick: () => undefined,
+        },
         id: 'storage',
         items: [
           { id: 'disks', label: 'Диски', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
@@ -844,7 +852,7 @@ export const ARGS: StoryProps = {
         ],
       },
       {
-        label: 'Контейнеры и оркестрация',
+        label: { text: 'Контейнеры и оркестрация' },
         id: 'containers',
         items: [
           { id: 'con_i1', label: 'Item 1', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
@@ -852,7 +860,7 @@ export const ARGS: StoryProps = {
         ],
       },
       {
-        label: 'Мониторинг',
+        label: { text: 'Мониторинг' },
         id: 'monitoring',
         items: [
           { id: 'mon_i1', label: 'Item 1', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
@@ -860,7 +868,7 @@ export const ARGS: StoryProps = {
         ],
       },
       {
-        label: 'Инструменты разработчика',
+        label: { text: 'Инструменты разработчика' },
         id: 'devtools',
         items: [
           { id: 'devtools_i1', label: 'Item 1', onClick: EMPTY_ON_CLICK, href: EMPTY_HREF, icon: PlaceholderSVG },
@@ -870,7 +878,7 @@ export const ARGS: StoryProps = {
         ],
       },
       {
-        label: 'Инструменты',
+        label: { text: 'Инструменты' },
         id: 'devtoolsssss',
         items: [
           { id: 'devtools_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
@@ -880,7 +888,7 @@ export const ARGS: StoryProps = {
         ],
       },
       {
-        label: 'Разработчика',
+        label: { text: 'Разработчика' },
         id: 'ddddevtools',
         items: [
           { id: 'devtools_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
@@ -890,7 +898,7 @@ export const ARGS: StoryProps = {
         ],
       },
       {
-        label: 'Devtools',
+        label: { text: 'Devtools' },
         id: 'deeeeevtools',
         items: [
           { id: 'devtools_i1', label: 'Item 1', onClick: () => {}, icon: PlaceholderSVG },
@@ -1086,4 +1094,8 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   showReferralBanner: { name: '[Story]: show drawer -> referral banner', type: 'boolean' },
   drawerMenu: { table: { disable: true } },
   showSinglePlatform: { name: '[Story]: show drawer -> single platform', type: 'boolean' },
+  showProductSelect: {
+    name: '[Story]: show drawer -> product select',
+    type: 'boolean',
+  },
 };

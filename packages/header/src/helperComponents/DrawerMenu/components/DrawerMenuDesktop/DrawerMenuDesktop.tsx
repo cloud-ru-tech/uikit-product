@@ -44,6 +44,7 @@ export function DrawerMenuDesktop({
   favorites,
   onMarketplaceBannerClick,
   onReferralBannerClick,
+  hideProductSelect = false,
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
@@ -117,58 +118,60 @@ export function DrawerMenuDesktop({
           <div className={styles.leftWrapper} data-test-id='header__drawer-menu__left'>
             <div className={styles.left}>
               <div className={styles.leftTop}>
-                <Droplist
-                  size='m'
-                  {...getSelectProductListProps({
-                    allProducts: visibleProducts,
-                    onProductChange,
-                    selectedProduct,
-                    closeDropList: () => setIsOpen(false),
-                  })}
-                  open={isOpen}
-                  onOpenChange={setIsOpen}
-                  widthStrategy='gte'
-                  triggerElemRef={triggerRef}
-                >
-                  <div
-                    ref={triggerRef}
-                    className={styles.select}
-                    tabIndex={hasChoice ? 0 : -1}
-                    role={'menu'}
-                    data-open={isOpen || undefined}
-                    data-active={hasChoice || undefined}
-                    data-test-id='header__drawer-menu__select'
+                {!hideProductSelect && (
+                  <Droplist
+                    size='m'
+                    {...getSelectProductListProps({
+                      allProducts: visibleProducts,
+                      onProductChange,
+                      selectedProduct,
+                      closeDropList: () => setIsOpen(false),
+                    })}
+                    open={isOpen}
+                    onOpenChange={setIsOpen}
+                    widthStrategy='gte'
+                    triggerElemRef={triggerRef}
                   >
-                    <div className={styles.logo}>
-                      {selectedProduct.logo ?? (
-                        <Avatar
-                          size='xs'
-                          name={selectedProduct.name}
-                          showTwoSymbols
-                          shape='square'
-                          appearance='neutral'
-                        />
+                    <div
+                      ref={triggerRef}
+                      className={styles.select}
+                      tabIndex={hasChoice ? 0 : -1}
+                      role={'menu'}
+                      data-open={isOpen || undefined}
+                      data-active={hasChoice || undefined}
+                      data-test-id='header__drawer-menu__select'
+                    >
+                      <div className={styles.logo}>
+                        {selectedProduct.logo ?? (
+                          <Avatar
+                            size='xs'
+                            name={selectedProduct.name}
+                            showTwoSymbols
+                            shape='square'
+                            appearance='neutral'
+                          />
+                        )}
+                      </div>
+
+                      <div className={styles.selectedSection}>
+                        <div
+                          className={styles.selectedHeading}
+                          data-test-id='header__drawer-menu__select__product-category'
+                        >
+                          {selectedProduct.category}
+                        </div>
+
+                        <div className={styles.selectedOption} data-test-id='header__drawer-menu__select__product-name'>
+                          <TruncateString text={selectedProduct.name} hideTooltip />
+                        </div>
+                      </div>
+
+                      {hasChoice && (
+                        <div className={styles.chevron}>{isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}</div>
                       )}
                     </div>
-
-                    <div className={styles.selectedSection}>
-                      <div
-                        className={styles.selectedHeading}
-                        data-test-id='header__drawer-menu__select__product-category'
-                      >
-                        {selectedProduct.category}
-                      </div>
-
-                      <div className={styles.selectedOption} data-test-id='header__drawer-menu__select__product-name'>
-                        <TruncateString text={selectedProduct.name} hideTooltip />
-                      </div>
-                    </div>
-
-                    {hasChoice && (
-                      <div className={styles.chevron}>{isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}</div>
-                    )}
-                  </div>
-                </Droplist>
+                  </Droplist>
+                )}
 
                 <Scroll>
                   {leftSectionLinks && leftSectionLinks.length && (
@@ -176,7 +179,7 @@ export function DrawerMenuDesktop({
                       {leftSectionLinks.map(link => (
                         <Link
                           key={link.id}
-                          text={link.label}
+                          text={link.label.text}
                           href={'#' + link.id}
                           target={'_self'}
                           onClick={handleLinkClick(link)}
@@ -255,7 +258,12 @@ export function DrawerMenuDesktop({
                   {rightSectionLinks &&
                     rightSectionLinks.map((group, index) => (
                       <div className={styles.rightContentItem} key={group.id}>
-                        <GroupCard title={group.label} id={group.id} ref={el => (cardsRef.current[index] = el)}>
+                        <GroupCard
+                          title={group.label}
+                          id={group.id}
+                          ref={el => (cardsRef.current[index] = el)}
+                          onClose={onClose}
+                        >
                           {group.items.map(item => {
                             const checked = favorites?.value.includes(item.id);
                             const onChange = favorites?.onChange(item.id);
