@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.34.1 (2025-02-26)
+
+
+### Bug Fixes
+
+* **FF-6287:** add data-attributes for drawer banners ([ce8a7a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ce8a7a50c46e85d1d47428f0cb5cac3d2e8caa5d))
+
+
+
+
+
 # 2.34.0 (2025-02-25)
 
 
