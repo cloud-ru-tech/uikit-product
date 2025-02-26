@@ -15,7 +15,7 @@ export type ReferralBannerCardProps = Pick<CardProps, 'onClick'> & {
 
 export function ReferralBannerCard(props: ReferralBannerCardProps) {
   return (
-    <div className={cn(!props.isMobile && styles.cardWrapper)}>
+    <div className={cn(!props.isMobile && styles.cardWrapper)} data-test-id='header__drawer-menu__referral-banner'>
       <Card
         size={'m'}
         className={styles.card}
