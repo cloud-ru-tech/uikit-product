@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2025-02-26)
+
+
+### Features
+
+* **ONB-3612:** remove disclaimer ([59e9366](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/59e936673b4ae147b897cc5bab60b6b3307c1a9b))
+
+
+
+
+
 # 0.5.0 (2025-02-25)
 
 
