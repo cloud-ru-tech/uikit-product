@@ -47,6 +47,19 @@
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | description | `string` | - | Описание секции |
 | tabBarItems | `TabBarItem[]` | - |  |
+## SectionCatalog
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| categories* | `ProductCategory[]` | - | Список продуктов по категориям |
+| title* | `string` | - | Заголовок |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS-класс |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| selectedCategory | `string` | - | Выбранная категория продуктов |
+| onCategorySelect | `(category: string) => void` | - | Колбек смены выбранной категории продуктов |
+| footer | `FooterItem[]` | - | Список элементов для футера в каталоге |
 ## SectionExperts
 ### Props
 | name | type | default value | description |

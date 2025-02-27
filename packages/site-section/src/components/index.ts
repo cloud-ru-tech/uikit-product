@@ -1,6 +1,7 @@
 export * from './SectionAccordion';
 export * from './SectionBasic';
 export * from './SectionBenefits';
+export * from './SectionCatalog';
 export * from './SectionExperts';
 export * from './SectionLeading';
 export * from './SectionPersonalManager';
