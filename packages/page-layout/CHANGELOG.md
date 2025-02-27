@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.17.0 (2025-02-27)
+
+
+### Features
+
+* **PDS-1183:** update page layout - accordions for list, search, move sidebar to public ([31cd304](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/31cd304ff90b411ebfa9551155c98954fa5c4090))
+
+
+
+
+
 ## 0.16.20 (2025-02-10)
 
 

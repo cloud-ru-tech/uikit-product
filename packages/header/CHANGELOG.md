@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.35.0 (2025-02-27)
+
+
+### Features
+
+* **PDS-1183:** add titleClickable and hideProductSelect prop for header ([ba87f76](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ba87f76f66abd4ba2e13b9078a2c3cd12b6138b2))
+
+
+
+
+
 ## 2.34.1 (2025-02-26)
 
 

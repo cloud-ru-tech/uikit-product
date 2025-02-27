@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.25 (2025-02-27)
+
+
+### Bug Fixes
+
+* **PDS-1183:** view search input for empty state ([87e4867](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/87e4867e932ff9985d42995d1c2d8588a71939c0))
+
+
+
+
+
 ## 0.6.24 (2025-02-10)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2025-02-27)
+
+
+### Features
+
+* **PDS-1183:** add collapsed list and search for MobilePageServices ([ea462cf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ea462cf24d13bb2350b4908f1675a99b684d882f))
+
+
+
+
+
 ## 0.11.27 (2025-02-10)
 
 
