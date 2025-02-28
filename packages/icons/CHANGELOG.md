@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 10.3.0 (2025-02-28)
+
+
+### Features
+
+* **LK-5285:** added Moldova flag ([0f23fdb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f23fdb95b08281d122c91ec867abdafa62bb2d1))
+
+
+
+
+
 ## 10.2.15 (2025-02-10)
 
 
