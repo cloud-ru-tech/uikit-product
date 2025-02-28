@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-02-28)
+
+
+### Features
+
+* **ONB-3309:** data-test-id for calculator ([265ecf9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/265ecf9ead1c0632d95137387998aa7d017602a7))
+
+
+
+
+
 ## 0.6.2 (2025-02-28)
 
 ### Only dependencies have been changed
