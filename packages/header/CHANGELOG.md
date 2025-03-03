@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.36.0 (2025-03-03)
+
+
+### Features
+
+* **LKP-1440:** change referral reward ([9e407b1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9e407b116701782872a0bf4f6097c7a2b47b7b1d))
+
+
+
+
+
 ## 2.35.1 (2025-02-28)
 
 ### Only dependencies have been changed
