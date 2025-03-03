@@ -3,6 +3,7 @@ import mergeRefs from 'merge-refs';
 import { forwardRef, KeyboardEvent, KeyboardEventHandler, MouseEventHandler, ReactNode, useRef, useState } from 'react';
 
 import { Sun, SunProps } from '@snack-uikit/loaders';
+import { TruncateString } from '@snack-uikit/truncate-string';
 import { extractSupportProps } from '@snack-uikit/utils';
 
 import { CHIP_CHOICE_TEST_IDS, SIZE, VARIANT } from '../../../../constants';
@@ -13,7 +14,7 @@ import styles from './styles.module.scss';
 
 export type ChipChoiceBaseProps = Pick<
   ChipChoiceCommonProps,
-  'loading' | 'tabIndex' | 'disabled' | 'icon' | 'label' | 'size' | 'onClick' | 'className'
+  'loading' | 'tabIndex' | 'disabled' | 'icon' | 'label' | 'size' | 'onClick' | 'className' | 'truncateVariant'
 > & {
   /** Отображаемое значение */
   valueToRender?: ReactNode;
@@ -40,6 +41,7 @@ export const ChipChoiceBase = forwardRef<HTMLDivElement, ChipChoiceBaseProps>(
       tabIndex = 0,
       onClearButtonClick,
       onKeyDown,
+      truncateVariant = 'middle',
       ...rest
     },
     ref,
@@ -126,7 +128,7 @@ export const ChipChoiceBase = forwardRef<HTMLDivElement, ChipChoiceBaseProps>(
             </span>
           ) : (
             <span className={styles.value} data-test-id={CHIP_CHOICE_TEST_IDS.value}>
-              {valueToRender ?? value}
+              <TruncateString text={valueToRender ?? value} variant={truncateVariant} />
             </span>
           )}
         </span>

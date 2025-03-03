@@ -11,6 +11,7 @@ import {
   SelectionMultipleState,
   SelectionSingleState,
 } from '@sbercloud/uikit-product-mobile-dropdown';
+import { TruncateStringProps } from '@snack-uikit/truncate-string';
 import { WithSupportProps } from '@snack-uikit/utils';
 
 import { BaseChipProps, Size } from '../../types';
@@ -79,6 +80,8 @@ export type ChipChoiceCommonProps = WithSupportProps<
     open?: boolean;
     /** Колбек отображения компонента. Срабатывает при изменении состояния open. */
     onOpenChange?(isOpen: boolean): void;
+    /** Вариант обрезания значения */
+    truncateVariant?: TruncateStringProps['variant'];
   }
 >;
 

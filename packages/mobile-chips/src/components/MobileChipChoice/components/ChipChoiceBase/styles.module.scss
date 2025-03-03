@@ -3,18 +3,26 @@
 @use '../../styles.module' as styles2;
 @use "../../../../styles.module";
 
-.label,
+.label {
+  display: inline-flex;
+  flex-grow: 1;
+  align-items: center;
+  white-space: nowrap;
+}
+
 .value {
   display: inline-flex;
   align-items: center;
+  min-width: 0;
 }
 
 .choiceChip {
-  background-color: styles-tokens-element.$sys-neutral-background1-level;
-  border-color: styles-tokens-element.$sys-neutral-decor-default;
-
   @include styles.chip-defaults;
   @include styles.chip-anatomy-styles(styles-tokens-chips-chipChoice.$chip-choice, styles2.$sizes, styles2.$labelTypography);
+
+  background-color: styles-tokens-element.$sys-neutral-background1-level;
+  border-color: styles-tokens-element.$sys-neutral-decor-default;
+  min-width: 0;
 
   .label,
   .value {

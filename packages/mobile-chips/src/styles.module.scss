@@ -32,6 +32,7 @@
   .labelLayout {
     display: inline-flex;
     align-items: center;
+    min-width: 0;
   }
 
   @each $size in $sizes {
@@ -49,10 +50,8 @@
           @include styles-tokens-element.composite-var($chip-theme, 'container', $size);
         }
       }
-
- @else {
+      @else {
         @include styles-tokens-element.composite-var($chip-theme, 'container', $size);
-
       }
     }
   }
