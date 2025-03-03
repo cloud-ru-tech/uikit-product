@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-03-03)
+
+
+### Features
+
+* **ONB-3579:** change dms kafka product ([d1df06b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d1df06bef6d25836a40e4d7f36d534c2cb199bac))
+
+
+
+
+
 # 0.7.0 (2025-02-28)
 
 
