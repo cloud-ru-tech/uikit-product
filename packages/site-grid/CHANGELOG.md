@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.5 (2025-03-04)
+
+
+### Bug Fixes
+
+* **PDS-1377:** grid columns amount is now maxAmount ([fd90492](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fd9049205510ab67db87e8cb385bfb44e4cc5434))
+
+
+
+
+
 ## <small>0.0.4 (2025-02-05)</small>
 
 ### Only dependencies have been changed

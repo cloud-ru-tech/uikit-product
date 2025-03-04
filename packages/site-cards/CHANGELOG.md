@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-03-04)
+
+
+### Features
+
+* **PDS-1437:** add card product ([d609135](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d60913578fd1f9a4bef4e2c9b28937f103df46a7))
+
+
+
+
+
 ## 0.0.5 (2025-02-10)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2025-03-04)
+
+
+### Features
+
+* **PDS-1377:** add section catalog ([a9815c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a9815c92ec029391380720d14c95cb66981b4128))
+
+
+
+
+
 ## 0.5.4 (2025-03-04)
 
 ### Only dependencies have been changed
