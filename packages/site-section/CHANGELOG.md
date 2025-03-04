@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.1 (2025-03-04)
+
+
+### Bug Fixes
+
+* **PDS-1770:** add color to title items ([2cfba2d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2cfba2d3b5d10836b99f91350b2f875d32693f64))
+
+
+
+
+
 # 0.6.0 (2025-03-04)
 
 
