@@ -5,7 +5,8 @@ export const getColumnsStyles = ({ columnsConfig, layoutType }: Pick<GridProps, 
     case 'mobile':
       if (columnsConfig.mobile) {
         return {
-          gridTemplateColumns: `repeat(${columnsConfig.mobile.amount}, minmax(${columnsConfig.mobile.minWidth}px, 1fr))`,
+          '--grid-column-count': columnsConfig.mobile.amount,
+          '--grid-item--min-width': `${columnsConfig.mobile.minWidth}px`,
         };
       }
       break;
@@ -13,7 +14,8 @@ export const getColumnsStyles = ({ columnsConfig, layoutType }: Pick<GridProps, 
     case 'tablet':
       if (columnsConfig.tablet) {
         return {
-          gridTemplateColumns: `repeat(${columnsConfig.tablet.amount}, minmax(${columnsConfig.tablet.minWidth}px, 1fr))`,
+          '--grid-column-count': columnsConfig.tablet.amount,
+          '--grid-item--min-width': `${columnsConfig.tablet.minWidth}px`,
         };
       }
       break;
@@ -21,12 +23,14 @@ export const getColumnsStyles = ({ columnsConfig, layoutType }: Pick<GridProps, 
     case 'desktopSmall':
       if (columnsConfig.desktopSmall) {
         return {
-          gridTemplateColumns: `repeat(${columnsConfig.desktopSmall.amount}, minmax(${columnsConfig.desktopSmall.minWidth}px, 1fr))`,
+          '--grid-column-count': columnsConfig.desktopSmall.amount,
+          '--grid-item--min-width': `${columnsConfig.desktopSmall.minWidth}px`,
         };
       }
       if (columnsConfig.desktop) {
         return {
-          gridTemplateColumns: `repeat(${columnsConfig.desktop.amount}, minmax(${columnsConfig.desktop.minWidth}px, 1fr))`,
+          '--grid-column-count': columnsConfig.desktop.amount,
+          '--grid-item--min-width': `${columnsConfig.desktop.minWidth}px`,
         };
       }
       break;
@@ -34,7 +38,8 @@ export const getColumnsStyles = ({ columnsConfig, layoutType }: Pick<GridProps, 
     case 'desktop':
       if (columnsConfig.desktop) {
         return {
-          gridTemplateColumns: `repeat(${columnsConfig.desktop.amount}, minmax(${columnsConfig.desktop.minWidth}px, 1fr))`,
+          '--grid-column-count': columnsConfig.desktop.amount,
+          '--grid-item--min-width': `${columnsConfig.desktop.minWidth}px`,
         };
       }
       break;
