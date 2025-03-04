@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 0.1.0 (2025-03-04)
+
+
+### Features
+
+* **PDS-1711:** add site-banner-predefined package ([89b4e1f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/89b4e1f7ade0b102f901d1bcf478fb2a2139c5c1))
+
+
+
+
+
 ## CHANGELOG
 
 ### v0.0.0

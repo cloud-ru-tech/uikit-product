@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-banner",
   "title": "Site Banner",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -35,8 +35,8 @@
     "@sbercloud/uikit-product-button-predefined": "0.4.2",
     "@sbercloud/uikit-product-site-tag": "0.0.4",
     "@sbercloud/uikit-product-utils": "3.8.8",
-    "@snack-uikit/tooltip": "0.16.2",
     "@snack-uikit/promo-tag": "0.7.1",
+    "@snack-uikit/tooltip": "0.16.2",
     "@snack-uikit/typography": "0.8.4",
     "@snack-uikit/utils": "3.7.0",
     "classnames": "2.5.1"
