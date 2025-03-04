@@ -1,0 +1,183 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+$colors: (
+  neutral: var.$sys-neutral-background,
+  white: var.$sys-neutral-background1-level,
+  violet: var.$sys-violet-background,
+  blue: var.$sys-blue-background,
+);
+
+$decor: 'decor';
+$graphite: 'graphite';
+$brand: 'brand';
+
+$rectangle: 'rectangle';
+$square: 'square';
+
+@mixin decor-background-colors {
+  @each $color, $value in $colors {
+    &[data-color='#{$color}'][data-appearance='#{$decor}'] {
+      background-color: $value;
+    }
+  }
+}
+
+@mixin appearance {
+  &[data-appearance='#{$graphite}'] {
+    background-color: var.$sys-graphite-accent-default;
+
+    .text {
+      color: var.$sys-invert-neutral-text-main;
+    }
+  }
+
+  &[data-appearance='#{$brand}'] {
+    background-color: var.$sys-primary-accent-default;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  padding: 32px;
+}
+
+.title,
+.description {
+  word-break: break-all;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  color: var.$sys-graphite-text-main;
+}
+
+.buttons {
+  display: flex;
+  margin-top: auto;
+  gap: 16px;
+}
+
+.img {
+  width: 100%;
+  height: 272px;
+
+  flex-shrink: 0;
+
+  &Wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.erid {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+}
+
+.root {
+  position: relative;
+
+  display: grid;
+
+  min-width: 360px;
+
+  background-color: var.$sys-neutral-background;
+
+  @include decor-background-colors;
+  @include appearance;
+
+  &[data-image-type='#{$rectangle}'] {
+    grid-template-columns: 1fr 396px;
+  }
+
+  &[data-image-type='#{$square}'] {
+    grid-template-columns: 1fr 272px;
+  }
+
+  &[data-layout-type='tablet'] {
+    display: flex;
+    flex-direction: column;
+
+    &[data-image-type='#{$square}'] {
+      .img {
+        width: 272px;
+        height: 272px;
+      }
+    }
+
+    &[data-image-type='#{$rectangle}'] {
+      .img {
+        width: 396px;
+        height: 272px;
+      }
+    }
+
+    .content {
+      padding: 24px;
+    }
+
+    .text {
+      gap: 8px;
+    }
+
+    .buttons {
+      flex-direction: column;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  &[data-layout-type='mobile'] {
+    display: flex;
+    flex-direction: column;
+
+    &[data-image-type='#{$square}'] {
+      .img {
+        width: 272px;
+        height: 272px;
+      }
+    }
+
+    &[data-image-type='#{$rectangle}'] {
+      .img {
+        width: 360px;
+        height: 247px;
+      }
+    }
+
+    .content {
+      padding: 16px;
+      gap: 24px;
+    }
+
+    .text {
+      gap: 4px;
+    }
+
+    .buttons {
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+}
