@@ -53,7 +53,7 @@ export function SectionAccordion({
             key={index}
             id={index.toString()}
             header={
-              <Typography family='sans' {...getBlockTitleProps(layoutType)}>
+              <Typography family='sans' {...getBlockTitleProps(layoutType)} className={styles.title}>
                 {title}
               </Typography>
             }
