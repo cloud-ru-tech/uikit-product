@@ -106,6 +106,10 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
 | description | `string` | - | Описание |
+## SectionTable
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
 
 
 [//]: DOCUMENTATION_SECTION_END

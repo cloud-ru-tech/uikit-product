@@ -1,0 +1,19 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+.sectionTable {
+  width: 100%;
+  position: relative;
+}
+
+.subtitle {
+  @include var.composite-var(var.$sans-title-m);
+
+  color: var.$sys-neutral-text-main;
+}
+
+.description {
+  @include var.composite-var(var.$sans-body-l);
+  color: var.$sys-neutral-text-support;
+
+  word-break: break-word;
+}

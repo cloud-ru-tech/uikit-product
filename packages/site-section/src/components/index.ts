@@ -6,3 +6,4 @@ export * from './SectionExperts';
 export * from './SectionLeading';
 export * from './SectionPersonalManager';
 export * from './SectionPromoList';
+export * from './SectionTable';
