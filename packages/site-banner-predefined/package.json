@@ -1,13 +1,13 @@
 {
-  "name": "@sbercloud/uikit-product-site-banner",
-  "title": "Site Banner",
+  "name": "@sbercloud/uikit-product-site-banner-predefined",
+  "title": "Site Banner Predefined",
   "version": "0.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
     "*.woff2"
   ],
-  "description": "Site Banner",
+  "description": "Site Banner Predefined",
   "types": "./dist/esm/index.d.ts",
   "exports": {
     "import": "./dist/esm/index.js",
@@ -19,11 +19,11 @@
     "src",
     "./CHANGELOG.md"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-banner",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-banner-predefined",
   "repository": {
     "type": "git",
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
-    "directory": "packages/site-banner"
+    "directory": "packages/site-banner-predefined"
   },
   "author": "Ruslan Chulkov <rgchulkov@cloud.ru>",
   "contributors": [
@@ -32,13 +32,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button-predefined": "0.4.2",
-    "@sbercloud/uikit-product-site-tag": "0.0.4",
-    "@sbercloud/uikit-product-utils": "3.8.8",
-    "@snack-uikit/tooltip": "0.16.2",
-    "@snack-uikit/promo-tag": "0.7.1",
-    "@snack-uikit/typography": "0.8.4",
-    "@snack-uikit/utils": "3.7.0",
-    "classnames": "2.5.1"
-  }
+    "@sbercloud/uikit-product-site-banner": "0.0.0",
+    "@sbercloud/uikit-product-utils": "3.8.8"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
 }
