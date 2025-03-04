@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-tooltip",
   "title": "Mobile Tooltip",
-  "version": "0.4.18",
+  "version": "0.4.19",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "10.3.0",
+    "@sbercloud/uikit-product-icons": "10.4.0",
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/popover-private": "0.14.5",
     "@snack-uikit/tooltip": "0.16.2",

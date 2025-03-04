@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 10.4.0 (2025-03-04)
+
+
+### Features
+
+* **PDS-1226:** add new logo icons for dev/stage ([b628e62](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b628e621fa56b4bd3402e4371f2b8c227e264c9c))
+
+
+
+
+
 # 10.3.0 (2025-02-28)
 
 
