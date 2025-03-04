@@ -11,7 +11,7 @@ import { AUDIENCE_TYPE, TagAudienceProps } from '../src/components/TagPredefined
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Tag Predefined/Tag Audience',
+  title: 'Site/Tag Predefined/Audience',
   component: TagPredefined,
 };
 
@@ -51,7 +51,7 @@ const Template: StoryFn<TagAudienceProps> = ({ ...args }) => {
   );
 };
 
-export const tagAudience: StoryObj<TagAudienceProps> = {
+export const audience: StoryObj<TagAudienceProps> = {
   render: Template,
   args: {
     type: 'it',

@@ -12,7 +12,7 @@ import { PLATFORM_TYPE, TagPlatformProps } from '../src/components/TagPredefined
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Tag Predefined/Tag Platform',
+  title: 'Site/Tag Predefined/Platform',
   component: TagPredefined,
 };
 
@@ -52,7 +52,7 @@ const Template: StoryFn<TagPlatformProps> = ({ ...args }) => {
   );
 };
 
-export const tagPlatform: StoryObj<TagPlatformProps> = {
+export const platform: StoryObj<TagPlatformProps> = {
   render: Template,
   args: {
     type: 'evolution',

@@ -12,7 +12,7 @@ import { PROMO_TYPE, TagPromoProps } from '../src/components/TagPredefined/helpe
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Tag Predefined/Tag Promo',
+  title: 'Site/Tag Predefined/Promo',
   component: TagPredefined,
 };
 
@@ -52,7 +52,7 @@ const Template: StoryFn<TagPromoProps> = ({ ...args }) => {
   );
 };
 
-export const tagPromo: StoryObj<TagPromoProps> = {
+export const promo: StoryObj<TagPromoProps> = {
   render: Template,
   args: {
     type: 'free-configuration',

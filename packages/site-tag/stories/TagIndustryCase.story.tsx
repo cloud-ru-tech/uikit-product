@@ -12,7 +12,7 @@ import { INDUSTRY_CASE_TYPE, TagIndustryCaseProps } from '../src/components/TagP
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Tag Predefined/Tag Industry Case',
+  title: 'Site/Tag Predefined/Industry Case',
   component: TagPredefined,
 };
 
@@ -52,7 +52,7 @@ const Template: StoryFn<TagIndustryCaseProps> = ({ ...args }) => {
   );
 };
 
-export const tagIndustryCase: StoryObj<TagIndustryCaseProps> = {
+export const industryCase: StoryObj<TagIndustryCaseProps> = {
   render: Template,
   args: {
     type: 'secure',

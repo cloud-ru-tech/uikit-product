@@ -11,7 +11,7 @@ import { MEDIA_TYPE, TagMediaProps } from '../src/components/TagPredefined/helpe
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Tag Predefined/Tag Media',
+  title: 'Site/Tag Predefined/Media',
   component: TagPredefined,
 };
 
@@ -51,7 +51,7 @@ const Template: StoryFn<TagMediaProps> = ({ ...args }) => {
   );
 };
 
-export const tagMedia: StoryObj<TagMediaProps> = {
+export const media: StoryObj<TagMediaProps> = {
   render: Template,
   args: {
     type: 'news',

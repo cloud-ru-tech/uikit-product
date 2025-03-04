@@ -11,7 +11,7 @@ import { FORMAT_TYPE, TagFormatProps } from '../src/components/TagPredefined/hel
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Tag Predefined/Tag Format',
+  title: 'Site/Tag Predefined/Format',
   component: TagPredefined,
 };
 
@@ -51,7 +51,7 @@ const Template: StoryFn<TagFormatProps> = ({ ...args }) => {
   );
 };
 
-export const tagFormat: StoryObj<TagFormatProps> = {
+export const format: StoryObj<TagFormatProps> = {
   render: Template,
   args: {
     type: 'online',
