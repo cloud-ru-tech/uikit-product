@@ -41,6 +41,7 @@ export function CardBasic({ title, description, className, icon, layoutType, ...
           purpose='title'
           size={getTypographySize(layoutType)}
           data-test-id={`${dataTestId}__title`}
+          className={styles.title}
         >
           {title}
         </Typography>

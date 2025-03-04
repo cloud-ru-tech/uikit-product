@@ -14,6 +14,10 @@
     flex-direction: column;
     gap: ste.$dimension-1m;
 
+    .title {
+      color: ste.$sys-neutral-text-main;
+    }
+
     .description {
       color: ste.$sys-neutral-text-support;
     }
