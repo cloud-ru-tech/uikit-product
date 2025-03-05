@@ -1,0 +1,68 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.card {
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  [data-layout-type=mobile] & {
+    flex-direction: column-reverse;
+    gap: 12px;
+  }
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 10px;
+
+  color: ste.$sys-neutral-text-main;
+
+  a {
+    color: ste.$sys-neutral-text-main;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.logo {
+  flex-shrink: 0;
+  width: 144px;
+  height: 40px;
+  object-fit: contain;
+
+  [data-layout-type=mobile] & {
+    align-self: center;
+  }
+}
+
+.description {
+  @include ste.composite-var(ste.$sans-body-m);
+
+  color: ste.$sys-neutral-text-support;
+}
