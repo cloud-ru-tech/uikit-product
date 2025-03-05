@@ -1,0 +1,10 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss' as var;
+
+.resizeWrapper {
+  resize: both;
+  overflow: auto;
+  background-color: var.$sys-neutral-background1-level;
+  border: 1px solid var.$sys-neutral-decor-default;
+  padding: 16px;
+  box-sizing: border-box;
+}
