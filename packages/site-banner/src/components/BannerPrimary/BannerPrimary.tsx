@@ -97,10 +97,22 @@ export function BannerPrimary({
 
         {buttons && buttons.length > 0 && (
           <div className={styles.buttons}>
-            <ButtonPromo className={styles.button} {...buttons[0]} size='l' appearance={buttonAppearance} />
+            <ButtonPromo
+              className={styles.button}
+              target='_self'
+              {...buttons[0]}
+              size='l'
+              appearance={buttonAppearance}
+            />
 
             {buttons?.length > 1 && (
-              <ButtonPromoOutline className={styles.button} {...buttons[1]} size='l' appearance={buttonAppearance} />
+              <ButtonPromoOutline
+                className={styles.button}
+                target='_self'
+                {...buttons[1]}
+                size='l'
+                appearance={buttonAppearance}
+              />
             )}
           </div>
         )}
