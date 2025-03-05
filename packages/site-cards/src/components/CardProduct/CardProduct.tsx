@@ -1,13 +1,12 @@
-import { AnchorHTMLAttributes, KeyboardEvent, MouseEvent, useRef } from 'react';
+import { AnchorHTMLAttributes } from 'react';
 
 import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Card, CardProps } from '@snack-uikit/card';
 import { Typography } from '@snack-uikit/typography';
 
-import { TRIGGER_CLICK_KEY_CODES } from '../../constants';
 import { Icon, IconProps } from '../../helperComponents/Icon';
-import { noop } from '../utils';
+import { useCardInteractions } from '../../hooks';
 import { MapLayoutToTitleTypography } from './constants';
 import styles from './styles.module.scss';
 
@@ -39,32 +38,16 @@ export function CardProduct({
   onClick,
   disabled,
   tags,
+  'data-test-id': dataTestId = 'card-product',
   ...rest
 }: CardProductProps) {
   const Title = MapLayoutToTitleTypography[layoutType];
 
-  const dataTestId = rest['data-test-id'] ?? 'card-info';
-
-  const ref = useRef<HTMLAnchorElement>(null);
-
-  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
-    if (disabled) {
-      e.preventDefault();
-      return;
-    }
-
-    onClick?.(e);
-  };
-
-  const handleCardClick = disabled || !href ? undefined : noop;
-
-  const handleCardKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
-    if (disabled) return;
-
-    if (TRIGGER_CLICK_KEY_CODES.includes(e.key)) {
-      ref?.current?.click();
-    }
-  };
+  const { anchorRef, handleCardKeyDown, handleCardClick, handleLinkClick } = useCardInteractions({
+    href,
+    onClick,
+    disabled,
+  });
 
   return (
     <Card
@@ -85,7 +68,7 @@ export function CardProduct({
             {href ? (
               <a
                 tabIndex={-1}
-                ref={ref}
+                ref={anchorRef}
                 href={href}
                 target={target}
                 onClick={handleLinkClick}

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { AnchorHTMLAttributes, KeyboardEvent, MouseEvent, useRef } from 'react';
+import { AnchorHTMLAttributes, MouseEvent } from 'react';
 
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
@@ -7,8 +7,8 @@ import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sberclou
 import { Card } from '@snack-uikit/card';
 import { Typography } from '@snack-uikit/typography';
 
-import { TRIGGER_CLICK_KEY_CODES } from '../../constants';
-import { getTypographySize, noop } from '../utils';
+import { useCardInteractions } from '../../hooks';
+import { getTypographySize } from '../utils';
 import styles from './styles.module.scss';
 
 type GetPromoTagProps<T> = T extends TagPredefinedProps & { variant: 'industry' } ? T : never;
@@ -58,26 +58,11 @@ export function CardCase({
 }: CardCaseProps) {
   const dataTestId = rest['data-test-id'] ?? 'card-case';
 
-  const ref = useRef<HTMLAnchorElement>(null);
-
-  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
-    if (disabled) {
-      e.preventDefault();
-      return;
-    }
-
-    onClick?.(e);
-  };
-
-  const handleCardClick = disabled || !href ? undefined : noop;
-
-  const handleCardKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
-    if (disabled) return;
-
-    if (TRIGGER_CLICK_KEY_CODES.includes(e.key)) {
-      ref?.current?.click();
-    }
-  };
+  const { anchorRef, handleLinkClick, handleCardClick, handleCardKeyDown } = useCardInteractions({
+    href,
+    disabled,
+    onClick,
+  });
 
   return (
     <Card
@@ -103,7 +88,7 @@ export function CardCase({
               {href ? (
                 <a
                   tabIndex={-1}
-                  ref={ref}
+                  ref={anchorRef}
                   href={href}
                   target={target}
                   onClick={handleLinkClick}

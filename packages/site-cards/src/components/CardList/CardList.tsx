@@ -46,10 +46,9 @@ export function CardList({
   onClick,
   tags,
   target,
+  'data-test-id': dataTestId = 'card-list',
   ...rest
 }: CardListProps) {
-  const dataTestId = rest['data-test-id'];
-
   return (
     <a
       {...extractSupportProps(rest)}

@@ -22,9 +22,15 @@ export type CardBasicProps = WithSupportProps<
   }>
 >;
 
-export function CardBasic({ title, description, className, icon, layoutType, ...rest }: CardBasicProps) {
-  const dataTestId = rest['data-test-id'] ?? 'card-basic';
-
+export function CardBasic({
+  title,
+  description,
+  className,
+  icon,
+  layoutType,
+  'data-test-id': dataTestId = 'card-basic',
+  ...rest
+}: CardBasicProps) {
   return (
     <div
       {...extractSupportProps(rest)}

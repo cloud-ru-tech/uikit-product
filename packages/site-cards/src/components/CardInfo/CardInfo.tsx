@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { AnchorHTMLAttributes, KeyboardEvent, MouseEvent, useRef } from 'react';
+import { AnchorHTMLAttributes, MouseEvent } from 'react';
 
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
@@ -8,9 +8,9 @@ import { Card } from '@snack-uikit/card';
 import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
 import { Typography } from '@snack-uikit/typography';
 
-import { TRIGGER_CLICK_KEY_CODES } from '../../constants';
 import { Icon, IconProps } from '../../helperComponents/Icon';
-import { getTypographySize, noop } from '../utils';
+import { useCardInteractions } from '../../hooks';
+import { getTypographySize } from '../utils';
 import styles from './styles.module.scss';
 import { BetterOmit } from './utilsTypes';
 
@@ -51,30 +51,14 @@ export function CardInfo({
   disabled = false,
   className,
   layoutType,
+  'data-test-id': dataTestId = 'card-info',
   ...rest
 }: CardInfoProps) {
-  const dataTestId = rest['data-test-id'] ?? 'card-info';
-
-  const ref = useRef<HTMLAnchorElement>(null);
-
-  const handleLinkClick = (e: MouseEvent<HTMLAnchorElement>) => {
-    if (disabled) {
-      e.preventDefault();
-      return;
-    }
-
-    onClick?.(e);
-  };
-
-  const handleCardClick = disabled || !href ? undefined : noop;
-
-  const handleCardKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
-    if (disabled) return;
-
-    if (TRIGGER_CLICK_KEY_CODES.includes(e.key)) {
-      ref?.current?.click();
-    }
-  };
+  const { anchorRef, handleLinkClick, handleCardClick, handleCardKeyDown } = useCardInteractions({
+    href,
+    disabled,
+    onClick,
+  });
 
   return (
     <Card
@@ -108,7 +92,7 @@ export function CardInfo({
             {href ? (
               <a
                 tabIndex={-1}
-                ref={ref}
+                ref={anchorRef}
                 href={href}
                 target={target}
                 onClick={handleLinkClick}
