@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 10.5.0 (2025-03-05)
+
+
+### Features
+
+* **PDS-1766:** add drag and functionSettings icons ([5b0e371](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5b0e3716e4f5b8ad85d9476b442bab1a02a7ba63))
+
+
+
+
+
 # 10.4.0 (2025-03-04)
 
 
