@@ -48,7 +48,7 @@ export type MobileChipChoiceRowProps<TState extends FiltersState> = WithSupportP
 export function MobileChipChoiceRow<TState extends FiltersState>({
   filters,
   onChange,
-  showClearButton = true,
+  showClearButton: showClearButtonProp = true,
   showAddButton = true,
   className,
   value,
@@ -203,6 +203,9 @@ export function MobileChipChoiceRow<TState extends FiltersState>({
     addListPrevValue.current = addListValue;
   }, [addListValue, handleChipOpen]);
 
+  const showClearButton = showClearButtonProp && hasAnyFilter;
+  const showPinnedFiltersDivider = showAddButton || showClearButton || visibleFilters.length > 0;
+
   return (
     <div className={cn(styles.chipChoiceRow, className)} {...extractSupportProps(rest)}>
       {pinnedFilters.length > 0 && (
@@ -218,7 +221,7 @@ export function MobileChipChoiceRow<TState extends FiltersState>({
             />
           ))}
 
-          <Divider orientation='vertical' className={styles.divider} />
+          {showPinnedFiltersDivider && <Divider orientation='vertical' className={styles.divider} />}
         </div>
       )}
 
@@ -256,7 +259,7 @@ export function MobileChipChoiceRow<TState extends FiltersState>({
           </MobileTooltip>
         )}
 
-        {showClearButton && hasAnyFilter && (
+        {showClearButton && (
           <ButtonFunction
             onClick={handleFiltersClear}
             label={t('clear')}
