@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-table",
   "title": "Site Table",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,10 +32,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@snack-uikit/scroll": "0.9.4",
     "@sbercloud/uikit-product-utils": "3.8.8",
+    "@snack-uikit/scroll": "0.9.4",
     "classnames": "2.5.1"
-  },
-  "devDependencies": {},
-  "peerDependencies": {}
+  }
 }

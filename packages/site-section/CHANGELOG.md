@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-03-05)
+
+
+### Features
+
+* **PDS-1507:** add section-table ([4638d38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4638d38336c36685a71caff0bab78c3c8712ac05))
+
+
+
+
+
 ## 0.6.3 (2025-03-05)
 
 ### Only dependencies have been changed
