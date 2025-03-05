@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.2 (2025-03-05)
+
+
+### Bug Fixes
+
+* **PDS-1797:** upd target of buttons and styles ([11e4743](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/11e4743f1ef953184e629104a4d169522f5fbb46))
+
+
+
+
+
 ## 0.1.1 (2025-03-05)
 
 ### Only dependencies have been changed
