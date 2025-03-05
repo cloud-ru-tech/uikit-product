@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-03-05)
+
+
+### Bug Fixes
+
+* **PDS-1672:** hide pinned filters divider if no elements is on the right ([d5205b9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d5205b9f8c5eeeb2790f91df1fba89f4ef964c90))
+
+
+### Features
+
+* **PDS-1685:** add truncate to chips ([67156ba](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/67156bab207032fff6b43fabf4119fd566c3e800))
+
+
+
+
+
 ## 0.6.29 (2025-03-05)
 
 ### Only dependencies have been changed
