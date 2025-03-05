@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-section",
   "title": "Site Section",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -34,10 +34,10 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "10.5.0",
     "@sbercloud/uikit-product-mobile-fields": "0.6.28",
-    "@sbercloud/uikit-product-site-cards": "0.1.1",
+    "@sbercloud/uikit-product-site-cards": "0.2.0",
     "@sbercloud/uikit-product-site-grid": "0.0.5",
     "@sbercloud/uikit-product-site-layout": "0.1.0",
-    "@sbercloud/uikit-product-site-rich-text": "0.0.1",
+    "@sbercloud/uikit-product-site-rich-text": "0.1.0",
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/accordion": "0.10.5",
     "@snack-uikit/button": "0.19.7",

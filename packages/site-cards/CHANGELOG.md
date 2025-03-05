@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-03-05)
+
+
+### Features
+
+* **PDS-1578:** add card-case ([aa3f86f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aa3f86fc8385f59405bdce83c0cecc47e0a5a543))
+
+
+
+
+
 ## 0.1.1 (2025-03-04)
 
 
