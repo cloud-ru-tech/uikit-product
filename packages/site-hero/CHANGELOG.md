@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.5 (2025-03-06)
+
+
+### Bug Fixes
+
+* **PDS-1809:** h1 tag in hero ([a8e07f2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a8e07f2dd6411f222a139b375f1a82fbf51c8569))
+
+
+
+
+
 ## 0.1.4 (2025-03-05)
 
 ### Only dependencies have been changed
