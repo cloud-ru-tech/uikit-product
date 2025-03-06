@@ -95,7 +95,6 @@ export function CardProduct({
                   type={type}
                   variant='promo'
                   key={index}
-                  size='xs'
                 />
               ))}
             </div>

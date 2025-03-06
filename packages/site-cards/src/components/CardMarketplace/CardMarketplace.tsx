@@ -109,13 +109,7 @@ export function CardMarketplace({
         </div>
 
         {tag && (
-          <TagPredefined
-            data-test-id={`${dataTestId}__tag`}
-            className={styles.tag}
-            type={tag.type}
-            variant='promo'
-            size='xs'
-          />
+          <TagPredefined data-test-id={`${dataTestId}__tag`} className={styles.tag} type={tag.type} variant='promo' />
         )}
       </div>
     </Card>

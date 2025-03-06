@@ -109,7 +109,6 @@ export function CardCase({
                     type={type}
                     variant='industry'
                     key={index}
-                    size='xs'
                   />
                 ))}
               </div>

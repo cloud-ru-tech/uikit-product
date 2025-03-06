@@ -73,7 +73,7 @@ export function CardInfo({
       <div data-layout-type={layoutType} className={styles.wrapper}>
         {tag &&
           ('variant' in tag ? (
-            <TagPredefined {...tag} size='s' className={styles.tag} data-test-id={`${dataTestId}__tag`} />
+            <TagPredefined {...tag} className={styles.tag} data-test-id={`${dataTestId}__tag`} />
           ) : (
             <PromoTag {...tag} size='s' className={styles.tag} data-test-id={`${dataTestId}__tag`} />
           ))}
