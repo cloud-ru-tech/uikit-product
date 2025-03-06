@@ -79,9 +79,9 @@ export function HeroEvent({
                 )}
 
                 <div className={styles.textWrapper} data-layout-type={layoutType}>
-                  <h2 className={styles.title} data-layout-type={layoutType}>
+                  <h1 className={styles.title} data-layout-type={layoutType}>
                     {title}
-                  </h2>
+                  </h1>
 
                   <p className={styles.coords} data-color={backgroundColor}>
                     <time className={styles.time}>

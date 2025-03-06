@@ -83,7 +83,7 @@ export function HeroMain({
                 )}
 
                 <div className={styles.textWrapper}>
-                  <Typography family='sans' {...getTitleTypographyProps(layoutType)} className={styles.title}>
+                  <Typography tag='h1' family='sans' {...getTitleTypographyProps(layoutType)} className={styles.title}>
                     {title}
                   </Typography>
 
