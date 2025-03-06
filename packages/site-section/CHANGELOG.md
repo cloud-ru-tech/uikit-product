@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-03-06)
+
+
+### Features
+
+* **PDS-1618:** add section social ([2876775](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2876775fd683b999b2df02ed93bb05d5d6dc44ae))
+
+
+
+
+
 ## 0.7.1 (2025-03-06)
 
 ### Only dependencies have been changed

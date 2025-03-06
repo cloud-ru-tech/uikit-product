@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-03-06)
+
+
+### Features
+
+* **PDS-1618:** export helpers for cards ([0bf27cd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0bf27cdd44dd89a00a16dde8b71819a7874c70bc))
+
+
+
+
+
 # 0.3.0 (2025-03-06)
 
 
