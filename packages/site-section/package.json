@@ -42,6 +42,7 @@
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/accordion": "0.10.5",
     "@snack-uikit/button": "0.19.7",
+    "@snack-uikit/card": "0.16.25",
     "@snack-uikit/carousel": "0.4.11",
     "@snack-uikit/pagination": "0.10.2",
     "@snack-uikit/tabs": "0.9.3",

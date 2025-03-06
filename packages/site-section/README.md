@@ -106,10 +106,28 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
 | description | `string` | - | Описание |
+## SectionSocial
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| cards* | `Omit<CardSocialProps, "layoutType">[]` | - |  |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS-класс |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| title | `string` | - | Заголовок |
 ## SectionTable
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| rows* | `Cell[][]` | - |  |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS-класс |
+| title | `string` | - | Заголовок |
+| subtitle | `string` | - | Подзаголовок |
+| description | `string` | - | Описание |
+| withHeader | `boolean` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

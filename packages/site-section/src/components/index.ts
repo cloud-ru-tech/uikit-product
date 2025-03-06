@@ -6,4 +6,5 @@ export * from './SectionExperts';
 export * from './SectionLeading';
 export * from './SectionPersonalManager';
 export * from './SectionPromoList';
+export * from './SectionSocial';
 export * from './SectionTable';
