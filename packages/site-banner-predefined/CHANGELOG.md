@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-03-06)
+
+
+### Features
+
+* **PDS-1801:** add EducationBadge to site-banner-predefined package ([e5d5073](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e5d5073f454b3eee1209d04e78c27f9d1688373f))
+
+
+
+
+
 ## 0.1.2 (2025-03-05)
 
 ### Only dependencies have been changed
