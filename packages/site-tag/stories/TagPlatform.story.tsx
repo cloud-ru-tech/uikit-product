@@ -7,7 +7,6 @@ import { TagPredefined } from '@sbercloud/uikit-product-site-tag';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { SIZE } from '../src/components/constants';
 import { PLATFORM_TYPE, TagPlatformProps } from '../src/components/TagPredefined/helpers';
 import styles from './styles.module.scss';
 
@@ -19,7 +18,6 @@ const meta: Meta = {
 export default meta;
 
 const Template: StoryFn<TagPlatformProps> = ({ ...args }) => {
-  const sizes = Object.values(SIZE);
   const types = Object.values(PLATFORM_TYPE);
   const headerCellClassnames = cn(styles.cell, styles.headerCell);
 
@@ -30,21 +28,13 @@ const Template: StoryFn<TagPlatformProps> = ({ ...args }) => {
         <TagPredefined {...args} variant='platform' />
       </div>
 
-      <div className={styles.table} style={{ '--columns': 3 }}>
-        <div className={headerCellClassnames} />
-        {sizes.map(size => (
-          <div key={size} className={headerCellClassnames}>
-            {size}
-          </div>
-        ))}
+      <div className={styles.table} style={{ '--columns': 2 }}>
         {types.map(type => (
           <Fragment key={type}>
             <div className={headerCellClassnames}>{type}</div>
-            {sizes.map(size => (
-              <div key={size} className={styles.cell}>
-                <TagPredefined variant='platform' type={type} size={size} />
-              </div>
-            ))}
+            <div key={type} className={styles.cell}>
+              <TagPredefined variant='platform' type={type} />
+            </div>
           </Fragment>
         ))}
       </div>
@@ -56,7 +46,6 @@ export const platform: StoryObj<TagPlatformProps> = {
   render: Template,
   args: {
     type: 'evolution',
-    size: 'xs',
   },
   argTypes: {
     type: {

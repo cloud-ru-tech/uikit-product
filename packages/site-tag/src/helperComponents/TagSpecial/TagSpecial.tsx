@@ -8,16 +8,15 @@ import { Tooltip } from '../Tooltip';
 
 export type TagSpecialProps = WithSupportProps<{
   text: string;
-  size: Exclude<PromoTagProps['size'], 'xxs' | undefined>;
   appearance: NonNullable<Exclude<PromoTagProps['appearance'], 'primary'>>;
   tip?: ReactNode;
   className?: string;
 }>;
 
-export function TagSpecial({ text, size, appearance = 'neutral', tip, className, ...rest }: TagSpecialProps) {
+export function TagSpecial({ text, appearance = 'neutral', tip, className, ...rest }: TagSpecialProps) {
   return (
     <PromoTag
-      size={size}
+      size='xs'
       text={text}
       appearance={appearance}
       color='decor'

@@ -13,6 +13,5 @@ export type TagProps =
 
 export type TagPredefinedCommonProps = {
   className?: string;
-  size: TagSpecialProps['size'];
   variant: Variant;
 };

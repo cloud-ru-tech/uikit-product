@@ -6,7 +6,6 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TagPredefined } from '../src';
-import { SIZE } from '../src/components/constants';
 import { FORMAT_TYPE, TagFormatProps } from '../src/components/TagPredefined/helpers';
 import styles from './styles.module.scss';
 
@@ -18,7 +17,6 @@ const meta: Meta = {
 export default meta;
 
 const Template: StoryFn<TagFormatProps> = ({ ...args }) => {
-  const sizes = Object.values(SIZE);
   const types = Object.values(FORMAT_TYPE);
   const headerCellClassnames = cn(styles.cell, styles.headerCell);
 
@@ -29,21 +27,13 @@ const Template: StoryFn<TagFormatProps> = ({ ...args }) => {
         <TagPredefined {...args} variant='format' />
       </div>
 
-      <div className={styles.table} style={{ '--columns': 3 }}>
-        <div className={headerCellClassnames} />
-        {sizes.map(size => (
-          <div key={size} className={headerCellClassnames}>
-            {size}
-          </div>
-        ))}
+      <div className={styles.table} style={{ '--columns': 2 }}>
         {types.map(type => (
           <Fragment key={type}>
             <div className={headerCellClassnames}>{type}</div>
-            {sizes.map(size => (
-              <div key={size} className={styles.cell}>
-                <TagPredefined variant='format' type={type} size={size} />
-              </div>
-            ))}
+            <div key={type} className={styles.cell}>
+              <TagPredefined variant='format' type={type} />
+            </div>
           </Fragment>
         ))}
       </div>
@@ -55,7 +45,6 @@ export const format: StoryObj<TagFormatProps> = {
   render: Template,
   args: {
     type: 'online',
-    size: 'xs',
   },
   argTypes: {
     type: {

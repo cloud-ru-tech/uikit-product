@@ -49,18 +49,10 @@ function getTagProps<T extends Variant>(variant: T, type: TagPropsMap[T]['type']
   }
 }
 
-export function TagPredefined({ variant, size, className, type, ...props }: TagPredefinedProps) {
+export function TagPredefined({ variant, className, type, ...props }: TagPredefinedProps) {
   const tagProps = getTagProps<typeof variant>(variant, type);
 
   if (!tagProps) return null;
 
-  return (
-    <TagSpecial
-      size={size}
-      {...tagProps}
-      appearance={tagProps.appearance ?? 'neutral'}
-      className={className}
-      {...props}
-    />
-  );
+  return <TagSpecial {...tagProps} appearance={tagProps.appearance ?? 'neutral'} className={className} {...props} />;
 }

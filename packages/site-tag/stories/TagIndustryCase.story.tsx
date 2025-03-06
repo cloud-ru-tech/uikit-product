@@ -7,7 +7,6 @@ import { TagPredefined } from '@sbercloud/uikit-product-site-tag';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { SIZE } from '../src/components/constants';
 import { INDUSTRY_CASE_TYPE, TagIndustryCaseProps } from '../src/components/TagPredefined/helpers';
 import styles from './styles.module.scss';
 
@@ -19,7 +18,6 @@ const meta: Meta = {
 export default meta;
 
 const Template: StoryFn<TagIndustryCaseProps> = ({ ...args }) => {
-  const sizes = Object.values(SIZE);
   const types = Object.values(INDUSTRY_CASE_TYPE);
   const headerCellClassnames = cn(styles.cell, styles.headerCell);
 
@@ -30,21 +28,14 @@ const Template: StoryFn<TagIndustryCaseProps> = ({ ...args }) => {
         <TagPredefined {...args} variant='industry' />
       </div>
 
-      <div className={styles.table} style={{ '--columns': 3 }}>
-        <div className={headerCellClassnames} />
-        {sizes.map(size => (
-          <div key={size} className={headerCellClassnames}>
-            {size}
-          </div>
-        ))}
+      <div className={styles.table} style={{ '--columns': 2 }}>
         {types.map(type => (
           <Fragment key={type}>
             <div className={headerCellClassnames}>{type}</div>
-            {sizes.map(size => (
-              <div key={size} className={styles.cell}>
-                <TagPredefined variant='industry' type={type} size={size} />
-              </div>
-            ))}
+
+            <div key={type} className={styles.cell}>
+              <TagPredefined variant='industry' type={type} />
+            </div>
           </Fragment>
         ))}
       </div>
@@ -56,7 +47,6 @@ export const industryCase: StoryObj<TagIndustryCaseProps> = {
   render: Template,
   args: {
     type: 'secure',
-    size: 'xs',
   },
   argTypes: {
     type: {

@@ -6,7 +6,6 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { TagPredefined } from '../src/components';
-import { SIZE } from '../src/components/constants';
 import { MEDIA_TYPE, TagMediaProps } from '../src/components/TagPredefined/helpers';
 import styles from './styles.module.scss';
 
@@ -18,7 +17,6 @@ const meta: Meta = {
 export default meta;
 
 const Template: StoryFn<TagMediaProps> = ({ ...args }) => {
-  const sizes = Object.values(SIZE);
   const types = Object.values(MEDIA_TYPE);
   const headerCellClassnames = cn(styles.cell, styles.headerCell);
 
@@ -29,21 +27,13 @@ const Template: StoryFn<TagMediaProps> = ({ ...args }) => {
         <TagPredefined {...args} variant='media' />
       </div>
 
-      <div className={styles.table} style={{ '--columns': 3 }}>
-        <div className={headerCellClassnames} />
-        {sizes.map(size => (
-          <div key={size} className={headerCellClassnames}>
-            {size}
-          </div>
-        ))}
+      <div className={styles.table} style={{ '--columns': 2 }}>
         {types.map(type => (
           <Fragment key={type}>
             <div className={headerCellClassnames}>{type}</div>
-            {sizes.map(size => (
-              <div key={size} className={styles.cell}>
-                <TagPredefined type={type} size={size} variant='media' />
-              </div>
-            ))}
+            <div key={type} className={styles.cell}>
+              <TagPredefined type={type} variant='media' />
+            </div>
           </Fragment>
         ))}
       </div>
@@ -55,7 +45,6 @@ export const media: StoryObj<TagMediaProps> = {
   render: Template,
   args: {
     type: 'news',
-    size: 'xs',
   },
   argTypes: {
     type: {
