@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-03-06)
+
+
+### Features
+
+* **PDS-1535:** add card-marketplace ([76a6a9f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/76a6a9fc72b858e1f110e62a17618e4ec11b54e5))
+* **PDS-1539:** add CardPartner, add reusable hook useCardInteractions ([120aa7e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/120aa7e90227a9aef8a3f09ca93f94fc7adc8f98))
+
+
+
+
+
 # 0.2.0 (2025-03-05)
 
 
