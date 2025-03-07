@@ -1,31 +1,28 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { WithLayoutType } from '@sbercloud/uikit-product-utils';
-
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { SectionExperts, SectionExpertsProps } from '../src';
-import { ExpertDetails } from '../src/components/SectionExperts/types';
+import { SectionExpertsCarousel, SectionExpertsCarouselProps } from '../src';
+import { ExpertDetails } from '../src/components/SectionExpertsCarousel/types';
 import { SECTION_COLORS } from '../src/constants';
 import sampleExpertImage from './assets/sample-expert.png';
 import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Section/Experts',
-  component: SectionExperts,
+  title: 'Site/Section/Experts Carousel',
+  component: SectionExpertsCarousel,
 };
 
 export default meta;
 
-type StoryProps = SectionExpertsProps &
-  WithLayoutType<{
-    expertsAmount: number;
-  }>;
+type StoryProps = SectionExpertsCarouselProps & {
+  expertsAmount: number;
+};
 
-const createSampleExpert = (index?: number): ExpertDetails => ({
+const createSampleExpert = (index: number): ExpertDetails => ({
   image: sampleExpertImage,
   name: `Имя${index ? ` ${index}` : ''}`,
   surname: 'Фамилия',
@@ -47,7 +44,7 @@ const Template: StoryFn<StoryProps> = ({ id, title, expertsAmount, layoutType, b
 
   return (
     <div className={styles.resizeWrapper}>
-      <SectionExperts
+      <SectionExpertsCarousel
         id={id}
         title={title}
         items={sampleExperts}
@@ -58,7 +55,7 @@ const Template: StoryFn<StoryProps> = ({ id, title, expertsAmount, layoutType, b
   );
 };
 
-export const experts: StoryObj<StoryProps> = {
+export const expertsCarousel: StoryObj<StoryProps> = {
   render: Template,
   args: {
     id: 'section-experts',

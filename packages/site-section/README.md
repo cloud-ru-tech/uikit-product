@@ -60,17 +60,18 @@
 | selectedCategory | `string` | - | Выбранная категория продуктов |
 | onCategorySelect | `(category: string) => void` | - | Колбек смены выбранной категории продуктов |
 | footer | `FooterItem[]` | - | Список элементов для футера в каталоге |
-## SectionExperts
+## SectionExpertsCarousel
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `ExpertDetails[]` | - | Массив айтемов |
-| title | `string` | - | Название секции |
-| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | id | `string` | - | id секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
+| title | `string` | - | Название секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | className | `string` | - | CSS - класснейм |
+| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionLeading
 ### Props
 | name | type | default value | description |
@@ -133,6 +134,56 @@
 | subtitle | `string` | - | Подзаголовок |
 | description | `string` | - | Описание |
 | withHeader | `boolean` | - |  |
+## SectionCaseCarousel
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| items* | `CardPartnerProps[]` | - | Массив айтемов |
+| id | `string` | - | id секции |
+| title | `string` | - | Название секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| className | `string` | - | CSS - класснейм |
+| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+## SectionClientsCarousel
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| items* | `CardClientProps[]` | - | Массив айтемов |
+| id | `string` | - | id секции |
+| title | `string` | - | Название секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| className | `string` | - | CSS - класснейм |
+| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+## SectionMarketplaceCarousel
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| items* | `CardMarketplaceProps[]` | - | Массив айтемов |
+| id | `string` | - | id секции |
+| title | `string` | - | Название секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| className | `string` | - | CSS - класснейм |
+| description | `string` | - | Описание секции |
+| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+## SectionBlogCarousel
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| items* | `BlogCarouselItem[]` | - | Массив айтемов |
+| id | `string` | - | id секции |
+| title | `string` | - | Название секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| className | `string` | - | CSS - класснейм |
+| description | `string` | - | Описание секции |
+| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 
 
 [//]: DOCUMENTATION_SECTION_END

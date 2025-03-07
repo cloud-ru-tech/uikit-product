@@ -2,7 +2,7 @@ import cn from 'classnames';
 
 import { Typography } from '@snack-uikit/typography';
 
-import { ExpertDetails } from '../../components/SectionExperts/types';
+import { ExpertDetails } from '../../components/SectionExpertsCarousel/types';
 import styles from './styles.module.scss';
 
 export type ExpertProps = ExpertDetails & {

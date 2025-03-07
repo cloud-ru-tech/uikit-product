@@ -3,43 +3,32 @@ import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { Carousel } from '@snack-uikit/carousel';
 
 import { SECTION_COLORS } from '../../constants';
-import { Expert, SectionTitle, SectionTitleProps } from '../../helperComponents';
-import { SectionColor } from '../../types';
+import { SectionTitle } from '../SectionTitle';
 import styles from './styles.module.scss';
-import { ExpertDetails } from './types';
+import { SectionCarouselProps } from './types';
 import { calculateAmountOfItemsPerPage } from './utils';
-
-export type SectionExpertsProps = WithSupportProps<
-  WithLayoutType<
-    Pick<SectionTitleProps, 'title' | 'titleTag'> & {
-      /** id секции */
-      id?: string;
-      /** Массив айтемов */
-      items: ExpertDetails[];
-      /** Цвет фона */
-      backgroundColor?: SectionColor;
-      /** CSS - класснейм */
-      className?: string;
-    }
-  >
->;
 
 const MOBILE_LAYOUTS = ['tablet', 'mobile'];
 
-export function SectionExperts({
+export function SectionCarousel({
   id,
   title,
   titleTag,
-  items,
+  titleSectionSize,
+  description,
+  children,
+  itemMinWidth,
+  maxItemsPerPage,
   backgroundColor = SECTION_COLORS.NeutralBackground1Level,
   className,
   layoutType,
+  gap,
   ...rest
-}: SectionExpertsProps) {
+}: SectionCarouselProps) {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [itemsPerPageAmount, setItemsPerPageAmount] = useState<number>(0);
 
@@ -57,21 +46,27 @@ export function SectionExperts({
         return;
       }
 
-      setItemsPerPageAmount(calculateAmountOfItemsPerPage(wrapperWidth));
+      setItemsPerPageAmount(
+        calculateAmountOfItemsPerPage({
+          wrapperWidth,
+          itemMinWidth,
+          maxItemsPerPage,
+        }),
+      );
     };
 
     const observer = new ResizeObserver(debounce(calculateAmountOfItems, 100));
     observer.observe(node);
     return () => observer.disconnect();
-  }, []);
+  }, [itemMinWidth, maxItemsPerPage]);
 
   const showArrows = useMemo(() => {
     if (MOBILE_LAYOUTS.includes(layoutType)) {
       return false;
     }
 
-    return items.length > itemsPerPageAmount;
-  }, [items.length, itemsPerPageAmount, layoutType]);
+    return children.length > itemsPerPageAmount;
+  }, [children.length, itemsPerPageAmount, layoutType]);
 
   return (
     <Layout.SectionWrapper
@@ -81,20 +76,25 @@ export function SectionExperts({
       data-section-background={backgroundColor}
       {...extractSupportProps(rest)}
     >
-      <div ref={wrapperRef} className={styles.siteSectionExperts} data-layout-type={layoutType}>
-        <SectionTitle layoutType={layoutType} title={title} titleTag={titleTag} />
+      <div ref={wrapperRef} className={styles.sectionCarousel} data-layout-type={layoutType}>
+        <SectionTitle
+          layoutType={layoutType}
+          title={title}
+          titleTag={titleTag}
+          titleSectionSize={titleSectionSize}
+          description={description}
+        />
 
         {itemsPerPageAmount > 0 && (
           <Carousel
             state={{ page: currentPage, onChange: setCurrentPage }}
             arrows={showArrows}
             showItems={itemsPerPageAmount}
-            pagination={items.length > itemsPerPageAmount}
-            swipe={items.length > itemsPerPageAmount}
+            pagination={children.length > itemsPerPageAmount}
+            swipe={children.length > itemsPerPageAmount}
+            gap={gap}
           >
-            {items.map(item => (
-              <Expert key={item.name} {...item} />
-            ))}
+            {children}
           </Carousel>
         )}
       </div>
