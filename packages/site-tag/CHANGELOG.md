@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-03-07)
+
+
+### Features
+
+* **PDS-1643:** remove sizes from site-tag ([a107b43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a107b432ec3cca2d55202d8e1b8b5295fe318a49))
+
+
+
+
+
 ## 0.0.4 (2025-02-10)
 
 
