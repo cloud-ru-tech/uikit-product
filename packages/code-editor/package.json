@@ -1,0 +1,38 @@
+{
+  "name": "@sbercloud/uikit-product-code-editor",
+  "title": "Code Editor",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "Продуктовая обертка над snack CodeEditor",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/code-editor",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/code-editor"
+  },
+  "author": "Aleksey Smirnov <alssmirnov@cloud.ru>",
+  "contributors": [
+    "Aleksey Smirnov <alssmirnov@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@snack-uikit/code-editor": "0.6.0",
+    "@snack-uikit/loaders": "0.9.3"
+  }
+}
