@@ -31,6 +31,7 @@
 
 a.logo {
   display: flex;
+  flex-shrink: 0;
   padding: styles-tokens-element.$dimension-1m;
   cursor: pointer;
   border-radius: styles-tokens-element.$dimension-050m;

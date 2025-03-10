@@ -109,3 +109,18 @@ export const THEME_MODE = {
 } as const;
 
 export type ThemeMode = ValueOf<typeof THEME_MODE>;
+
+export const HEADER_LOGO_MODE = {
+  develop: 'develop',
+  stage: 'stage',
+  hybrid: 'hybrid',
+  prod: 'prod',
+} as const;
+
+export type HeaderLogoMode = ValueOf<typeof HEADER_LOGO_MODE>;
+
+export type HeaderLogo = {
+  loading?: boolean;
+  path?: string;
+  mode?: HeaderLogoMode;
+};

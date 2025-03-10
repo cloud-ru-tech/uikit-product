@@ -19,7 +19,16 @@ import { Tag } from '@snack-uikit/tag';
 import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
 
-import { DIVIDER_SETTING_OPTION_ID, Header, HeaderProps, THEME_MODE, ThemeMode } from '../src';
+import {
+  DIVIDER_SETTING_OPTION_ID,
+  Header,
+  HEADER_LOGO_MODE,
+  HeaderLogo,
+  HeaderLogoMode,
+  HeaderProps,
+  THEME_MODE,
+  ThemeMode,
+} from '../src';
 import {
   AdvancedPlatformLogo,
   EnterprisePlatformLogo,
@@ -32,6 +41,7 @@ import styles from './styles.module.scss';
 export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showSelect: boolean;
   customLogo: boolean;
+  logoMode?: HeaderLogoMode;
   showWorkspaces: boolean;
   showMLSpaceAccessRequestButton: boolean;
   showPagePath: boolean;
@@ -315,10 +325,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     const financialMenuButtonValue =
       financialMenuButtonType === 'balance' ? financialMenuBalanceValue : financialMenuBonusesValue;
 
-    const [logo, setLogo] = useState<{
-      path?: string;
-      loading?: boolean;
-    }>({
+    const [logo, setLogo] = useState<HeaderLogo>({
       loading: true,
     });
 
@@ -334,6 +341,8 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
             path: 'https://img.freepik.com/free-photo/beautiful-kitten-with-colorful-clouds_23-2150752964.jpg?w=1060&t=st=1727438409~exp=1727439009~hmac=f5b8aea828125647fb7d35bfab17b918f1ca233ac6f289ff07e3c2b00a834ed6',
           });
         }, 300);
+      } else if (args.logoMode) {
+        setLogo({ mode: args.logoMode });
       } else {
         setLogo({});
       }
@@ -341,7 +350,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       return () => {
         clearTimeout(timeout);
       };
-    }, [args.customLogo]);
+    }, [args.customLogo, args.logoMode]);
 
     const [favoriteItems, setFavoriteItems] = useState<string[]>([]);
 
@@ -512,6 +521,7 @@ export const ARGS: StoryProps = {
   showWorkspaces: false,
   showMLSpaceAccessRequestButton: false,
   customLogo: false,
+  logoMode: 'prod',
   select: {
     platforms: [
       DEFAULT_PLATFORM,
@@ -914,6 +924,7 @@ export const ARGS: StoryProps = {
 
 export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   customLogo: { name: '[Story: show custom logo with loading', type: 'boolean' },
+  logoMode: { name: '[Story]: logo modes', control: { type: 'radio' }, options: Object.values(HEADER_LOGO_MODE) },
   showSelect: { name: '[Story]: show header select', type: 'boolean' },
   select: { table: { disable: true } },
 

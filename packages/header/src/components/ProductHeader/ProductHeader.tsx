@@ -20,7 +20,7 @@ import {
   UserMenu,
   UserMenuProps,
 } from '../../helperComponents';
-import { DIVIDER_SETTING_OPTION_ID, DividerItem } from '../../types';
+import { DIVIDER_SETTING_OPTION_ID, DividerItem, HeaderLogo } from '../../types';
 import { extractAppNameFromId } from '../../utils';
 import styles from './styles.module.scss';
 
@@ -95,10 +95,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'partnerInvites'
       | 'alert'
     >;
-    logo?: {
-      loading?: boolean;
-      path?: string;
-    };
+    logo?: HeaderLogo;
   } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> &
     Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick' | 'showMainMenu' | 'disableMainMenu'>
 >;

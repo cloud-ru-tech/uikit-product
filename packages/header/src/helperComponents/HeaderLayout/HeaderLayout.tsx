@@ -1,10 +1,17 @@
 import { MouseEventHandler, ReactNode, useEffect, useState } from 'react';
 
-import { CloudLogoSVG, MainMenuSVG } from '@sbercloud/uikit-product-icons';
+import {
+  CloudLogoDevSVG,
+  CloudLogoHybridSVG,
+  CloudLogoStageSVG,
+  CloudLogoSVG,
+  MainMenuSVG,
+} from '@sbercloud/uikit-product-icons';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Skeleton } from '@snack-uikit/skeleton';
 
+import { HEADER_LOGO_MODE, HeaderLogo } from '../../types';
 import styles from './styles.module.scss';
 
 export type HeaderLayoutProps = WithSupportProps<{
@@ -12,10 +19,7 @@ export type HeaderLayoutProps = WithSupportProps<{
   homePageUrl: string;
   onLogoClick?: MouseEventHandler<HTMLAnchorElement>;
   toolbar: ReactNode;
-  logo?: {
-    loading?: boolean;
-    path?: string;
-  };
+  logo?: HeaderLogo;
   path?: ReactNode;
   onMainMenuClick(): void;
   pathFooter?: boolean;
@@ -23,7 +27,7 @@ export type HeaderLayoutProps = WithSupportProps<{
   disableMainMenu?: boolean;
 }>;
 
-function LogoWithFallBack({ path, loading }: { path?: string; loading?: boolean }) {
+function LogoWithFallBack({ path, loading, mode }: HeaderLogo) {
   const [error, setError] = useState<boolean>(false);
 
   useEffect(() => {
@@ -50,6 +54,18 @@ function LogoWithFallBack({ path, loading }: { path?: string; loading?: boolean 
         />
       </>
     );
+  }
+
+  if (mode === HEADER_LOGO_MODE.develop) {
+    return <CloudLogoDevSVG size={64} />;
+  }
+
+  if (mode === HEADER_LOGO_MODE.stage) {
+    return <CloudLogoStageSVG size={74} />;
+  }
+
+  if (mode === HEADER_LOGO_MODE.hybrid) {
+    return <CloudLogoHybridSVG size={78} />;
   }
 
   return <CloudLogoSVG size={24} />;
