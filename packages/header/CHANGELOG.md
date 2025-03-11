@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.37.0 (2025-03-11)
+
+
+### Features
+
+* **LKP-1479:** change text for referral banner ([cdbc58b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cdbc58bc6668a3c989b03bce8b129b106b367a73))
+
+
+
+
+
 ## 2.36.2 (2025-03-05)
 
 ### Only dependencies have been changed
