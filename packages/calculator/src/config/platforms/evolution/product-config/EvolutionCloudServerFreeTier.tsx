@@ -53,13 +53,10 @@ export const EVOLUTION_CLOUD_SERVER_FREE_TIER_FORM_CONFIG: FormConfig = {
       type: CONTROL.Segmented,
       accessorKey: 'vCpuCoreCount',
       defaultValue: '2',
-      items: generateCpuItems([1, 2, 4, 8]),
+      items: generateCpuItems([2]),
       decoratorProps: {
         label: 'Количество ядер vCPU',
         labelTooltip: 'Количество ядер vCPU',
-      },
-      uiProps: {
-        disabled: true,
       },
     },
 
