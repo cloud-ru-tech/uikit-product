@@ -17,7 +17,7 @@ const THROTTLE_TIMEOUT = 100;
 export function useLinksScrollToSelected({ searchValue, setSearchValue, links }: UseScrollProps) {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
   const scrollRef = useRef<HTMLElement>(null);
-  const [selectedLink, setSelectedLink] = useState(links?.[0].id);
+  const [selectedLink, setSelectedLink] = useState(links?.[0]?.id);
 
   const handleScroll = useEventHandler(
     throttle(() => {

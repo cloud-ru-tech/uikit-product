@@ -118,7 +118,7 @@ export function Notifications({
     if (!hasMore || !fetchMore || chipFilter === 'unread') return;
 
     const handleObserver = (entities: IntersectionObserverEntry[]) => {
-      const target = entities[0];
+      const target = entities?.[0];
 
       if (target.isIntersecting && !isLoadingMore) {
         setLoadingMore(true);
