@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.37.1 (2025-03-11)
+
+
+### Bug Fixes
+
+* **FF-6306:** fix unhandled error undefined ([14bdfdd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/14bdfddc0f0528360e797b66e60bd752683d1c1b))
+
+
+
+
+
 # 2.37.0 (2025-03-11)
 
 
