@@ -61,6 +61,7 @@ export const fieldPhone: StoryObj<StoryProps> = {
     showCopyButton: true,
     showClearButton: true,
     onlyOneMask: false,
+    scrollList: false,
   },
   argTypes: {
     labelTooltip: {

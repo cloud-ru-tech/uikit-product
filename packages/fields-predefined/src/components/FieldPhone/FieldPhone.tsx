@@ -23,6 +23,8 @@ export type FieldPhoneProps = Omit<
   | 'button'
   | 'maxLength'
 > & {
+  /** Включить скролл для основной части списка стран */
+  scrollList?: boolean;
   options: FieldPhoneOptionsProps[];
   onChange?(value: string): void;
   searchPlaceholder?: string;
@@ -40,6 +42,7 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
       searchPlaceholder,
       onPaste,
       className,
+      scrollList,
       ...rest
     },
     ref,
@@ -163,6 +166,7 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
           isOnlyOneCountryAvailable
             ? undefined
             : {
+                scroll: scrollList,
                 variant: 'before',
                 content: country?.beforeContent,
                 items,
