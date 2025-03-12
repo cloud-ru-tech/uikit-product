@@ -11,12 +11,13 @@ import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-
 import { ButtonFunction } from '@snack-uikit/button';
 import { Skeleton } from '@snack-uikit/skeleton';
 
-import { HEADER_LOGO_MODE, HeaderLogo } from '../../types';
+import { HEADER_LOGO_MODE, HeaderLogo, VendorLogo } from '../../types';
 import styles from './styles.module.scss';
 
 export type HeaderLayoutProps = WithSupportProps<{
   className?: string;
   homePageUrl: string;
+  vendorLogo?: VendorLogo;
   onLogoClick?: MouseEventHandler<HTMLAnchorElement>;
   toolbar: ReactNode;
   logo?: HeaderLogo;
@@ -82,6 +83,7 @@ export function HeaderLayout({
   pathFooter,
   showMainMenu,
   disableMainMenu,
+  vendorLogo,
   ...rest
 }: HeaderLayoutProps) {
   return (
@@ -101,6 +103,18 @@ export function HeaderLayout({
           <a className={styles.logo} href={homePageUrl} tabIndex={0} onClick={onLogoClick} data-test-id='header__logo'>
             <LogoWithFallBack {...logo} />
           </a>
+
+          {vendorLogo && (
+            <a
+              className={styles.logo}
+              href={vendorLogo.pageUrl}
+              tabIndex={0}
+              onClick={vendorLogo.onClick}
+              data-test-id='header__vendor-logo'
+            >
+              <LogoWithFallBack path={vendorLogo.path} loading={vendorLogo.loading} />
+            </a>
+          )}
 
           {!pathFooter && Boolean(path) && <div className={styles.path}>{path}</div>}
         </div>

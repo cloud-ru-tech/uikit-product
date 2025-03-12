@@ -1,7 +1,7 @@
 import { useArgs, useState } from '@storybook/preview-api';
 import { ArgTypes } from '@storybook/react';
 import { StarterGrant } from 'header/src/helperComponents/FinancialMenu/types';
-import { useEffect, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 
 import {
   CostControlSVG,
@@ -42,6 +42,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showSelect: boolean;
   customLogo: boolean;
   logoMode?: HeaderLogoMode;
+  showVendorLogo: boolean;
   showWorkspaces: boolean;
   showMLSpaceAccessRequestButton: boolean;
   showPagePath: boolean;
@@ -70,6 +71,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showNotifications: boolean;
   showNotificationError: boolean;
   showUserMenu: boolean;
+  showCustomUserMenu: boolean;
   showUserMenuManagement: boolean;
 
   showUserMenuWhatsNew: boolean;
@@ -194,6 +196,28 @@ const DEFAULT_NOTIFICATION = {
   ],
 };
 
+const CUSTOM_USER_MENU_ITEMS = [
+  {
+    type: 'group',
+    items: [
+      {
+        content: { option: 'Перейти в профиль' },
+        onClick: () => {
+          toaster.userAction.success({ label: 'Go to profile clicked' });
+        },
+        id: '1',
+      },
+      {
+        content: { option: 'Выйти из аккаунта' },
+        onClick: () => {
+          toaster.userAction.success({ label: 'Logout clicked' });
+        },
+        id: '2',
+      },
+    ],
+  },
+];
+
 function generateCards(amount: number, addUnread?: boolean) {
   return Array.from({ length: amount }).map((_, i) => ({
     ...DEFAULT_NOTIFICATION,
@@ -206,6 +230,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
   return function ({
     showSelect,
     showPagePath,
+    showVendorLogo,
 
     showFinancialMenu,
 
@@ -236,6 +261,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showHelpMenu,
     showNotifications,
     showUserMenu,
+    showCustomUserMenu,
     showUserMenuManagement,
 
     showUserMenuWhatsNew,
@@ -269,10 +295,15 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 
     const [{ showOrganizationInvitePopover, showPartnerOrganizationPopover }, setArgs] = useArgs<StoryProps>();
 
-    const closeInvitesPopover = () =>
-      setArgs({ showOrganizationInvitePopover: false, showPartnerOrganizationPopover: false });
+    const closeInvitesPopover = useCallback(
+      () => setArgs({ showOrganizationInvitePopover: false, showPartnerOrganizationPopover: false }),
+      [setArgs],
+    );
 
-    const closePartnerOrganizationPopover = () => setArgs({ showPartnerOrganizationPopover: false });
+    const closePartnerOrganizationPopover = useCallback(
+      () => setArgs({ showPartnerOrganizationPopover: false }),
+      [setArgs],
+    );
 
     const [balanceVisible, setBalanceVisible] = useState(true);
 
@@ -362,6 +393,67 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       }
     };
 
+    const userMenuParams = useMemo(() => {
+      if (showUserMenu && userMenu) {
+        const baseProps = {
+          user: userMenu.user ?? DEFAULT_USER,
+          indicator: userMenu.indicator,
+          onAvatarClick: closeInvitesPopover,
+          invites: showOrganizationInvite
+            ? {
+                count: 1,
+                showPopover: showOrganizationInvitePopover,
+                onOpenButtonClick: closeInvitesPopover,
+              }
+            : undefined,
+        };
+
+        if (showCustomUserMenu) {
+          return {
+            ...baseProps,
+            customMenuItems: CUSTOM_USER_MENU_ITEMS,
+          };
+        }
+
+        return {
+          ...baseProps,
+          onProfileManagementClick:
+            'onProfileManagementClick' in userMenu && showUserMenuManagement
+              ? userMenu.onProfileManagementClick
+              : undefined,
+          onWhatsNewClick: 'onWhatsNewClick' in userMenu && showUserMenuWhatsNew ? userMenu.onWhatsNewClick : undefined,
+          onLogout: 'onLogout' in userMenu && showUserMenuLogout ? userMenu.onLogout : undefined,
+          partnerInvites: showPartnerOrganization
+            ? {
+                count: 1,
+                showPopover: showPartnerOrganizationPopover,
+                onCloseClick: closePartnerOrganizationPopover,
+              }
+            : undefined,
+          themeMode: {
+            value: themeMode,
+            onChange: setThemeMode,
+          },
+          alert: 'alert' in userMenu && showUserMenuAlert ? userMenu.alert : undefined,
+        };
+      }
+    }, [
+      closeInvitesPopover,
+      closePartnerOrganizationPopover,
+      showCustomUserMenu,
+      showOrganizationInvite,
+      showOrganizationInvitePopover,
+      showPartnerOrganization,
+      showPartnerOrganizationPopover,
+      showUserMenu,
+      showUserMenuAlert,
+      showUserMenuLogout,
+      showUserMenuManagement,
+      showUserMenuWhatsNew,
+      themeMode,
+      userMenu,
+    ]);
+
     return (
       <div className={styles.fullPageHeight}>
         <Header
@@ -372,6 +464,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
           select={showSelect ? args.select : undefined}
           pagePath={showPagePath ? args.pagePath : undefined}
           logo={logo}
+          vendorLogo={showVendorLogo ? args.vendorLogo : undefined}
           financialMenu={
             showFinancialMenu
               ? {
@@ -433,37 +526,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                 }
               : undefined
           }
-          userMenu={
-            showUserMenu && userMenu
-              ? {
-                  user: userMenu.user ?? DEFAULT_USER,
-                  indicator: userMenu.indicator,
-                  onProfileManagementClick: showUserMenuManagement ? userMenu.onProfileManagementClick : undefined,
-                  onWhatsNewClick: showUserMenuWhatsNew ? userMenu.onWhatsNewClick : undefined,
-                  onLogout: showUserMenuLogout ? userMenu.onLogout : undefined,
-                  onAvatarClick: closeInvitesPopover,
-                  invites: showOrganizationInvite
-                    ? {
-                        count: 1,
-                        showPopover: showOrganizationInvitePopover,
-                        onOpenButtonClick: closeInvitesPopover,
-                      }
-                    : undefined,
-                  partnerInvites: showPartnerOrganization
-                    ? {
-                        count: 1,
-                        showPopover: showPartnerOrganizationPopover,
-                        onCloseClick: closePartnerOrganizationPopover,
-                      }
-                    : undefined,
-                  themeMode: {
-                    value: themeMode,
-                    onChange: setThemeMode,
-                  },
-                  alert: showUserMenuAlert ? userMenu.alert : undefined,
-                }
-              : undefined
-          }
+          userMenu={userMenuParams}
           organizations={orgs}
           onOrganizationAdd={showAddOrganization ? args.onOrganizationAdd : undefined}
           drawerMenu={{
@@ -519,6 +582,14 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 export const ARGS: StoryProps = {
   showSelect: true,
   showWorkspaces: false,
+
+  showVendorLogo: false,
+  vendorLogo: {
+    path: 'https://img.freepik.com/free-photo/beautiful-kitten-with-colorful-clouds_23-2150752964.jpg?w=1060&t=st=1727438409~exp=1727439009~hmac=f5b8aea828125647fb7d35bfab17b918f1ca233ac6f289ff07e3c2b00a834ed6',
+    onClick: EMPTY_ON_CLICK,
+    pageUrl: EMPTY_HREF,
+  },
+
   showMLSpaceAccessRequestButton: false,
   customLogo: false,
   logoMode: 'prod',
@@ -695,6 +766,7 @@ export const ARGS: StoryProps = {
   },
 
   showUserMenu: true,
+  showCustomUserMenu: false,
   showUserMenuManagement: true,
 
   showUserMenuWhatsNew: true,
@@ -925,6 +997,13 @@ export const ARGS: StoryProps = {
 export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   customLogo: { name: '[Story: show custom logo with loading', type: 'boolean' },
   logoMode: { name: '[Story]: logo modes', control: { type: 'radio' }, options: Object.values(HEADER_LOGO_MODE) },
+
+  showVendorLogo: { name: '[Story]: show vendor logo', type: 'boolean' },
+  vendorLogo: {
+    name: 'vendorLogo',
+    if: { arg: 'showVendorLogo', eq: true },
+  },
+
   showSelect: { name: '[Story]: show header select', type: 'boolean' },
   select: { table: { disable: true } },
 
@@ -948,6 +1027,11 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   notifications: { table: { disable: true } },
 
   showUserMenu: { name: '[Story]: show user menu', type: 'boolean' },
+  showCustomUserMenu: {
+    name: '[Story]: show user menu -> custom user menu',
+    type: 'boolean',
+    if: { arg: 'showUserMenu', eq: true },
+  },
   userMenu: { table: { disable: true } },
   showUserMenuManagement: {
     name: '[Story]: show user menu -> profile management',

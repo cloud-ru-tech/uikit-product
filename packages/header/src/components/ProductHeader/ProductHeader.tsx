@@ -18,9 +18,10 @@ import {
   Select,
   SelectProps,
   UserMenu,
+  UserMenuCustom,
   UserMenuProps,
 } from '../../helperComponents';
-import { DIVIDER_SETTING_OPTION_ID, DividerItem, HeaderLogo } from '../../types';
+import { DIVIDER_SETTING_OPTION_ID, DividerItem, HeaderLogo, VendorLogo } from '../../types';
 import { extractAppNameFromId } from '../../utils';
 import styles from './styles.module.scss';
 
@@ -81,21 +82,9 @@ export type ProductHeaderProps = WithSupportProps<
     onMainMenuClick?(): void;
     notifications?: NotificationsProps;
     financialMenu?: FinancialMenuProps;
-    userMenu?: Pick<
-      UserMenuProps,
-      | 'user'
-      | 'indicator'
-      | 'invites'
-      | 'onAvatarClick'
-      | 'onProfileManagementClick'
-      | 'onWhatsNewClick'
-      | 'onLogout'
-      | 'themeMode'
-      | 'profileItemWrapRender'
-      | 'partnerInvites'
-      | 'alert'
-    >;
+    userMenu?: UserMenuProps;
     logo?: HeaderLogo;
+    vendorLogo?: VendorLogo;
   } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> &
     Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick' | 'showMainMenu' | 'disableMainMenu'>
 >;
@@ -286,15 +275,18 @@ export function ProductHeader({
 
             {notifications && <NotificationsPopover notifications={notifications} />}
 
-            {userMenu && (
-              <UserMenu
-                {...userMenu}
-                organizations={organizations}
-                selectedOrganization={selectedOrganization}
-                onOrganizationAdd={onOrganizationAdd}
-                onOrganizationChange={onOrganizationChange}
-              />
-            )}
+            {userMenu &&
+              ('customMenuItems' in userMenu ? (
+                <UserMenuCustom {...userMenu} />
+              ) : (
+                <UserMenu
+                  {...userMenu}
+                  organizations={organizations}
+                  selectedOrganization={selectedOrganization}
+                  onOrganizationAdd={onOrganizationAdd}
+                  onOrganizationChange={onOrganizationChange}
+                />
+              ))}
           </>
         }
       />

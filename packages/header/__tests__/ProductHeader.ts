@@ -2,12 +2,13 @@ import { fixture, Selector, test } from 'testcafe';
 
 import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
 
-const HEADER_TEST_ID = 'product-header';
+const HEADER_TEST_ID = 'header';
 
 function getPage(props: Record<string, unknown> = {}) {
   return getTestcafeUrl({
     category: 'console',
-    name: 'product-header',
+    name: 'header-desktop',
+    story: 'desktop',
     globals: { brand: 'Cloud' },
     props: { ...props, 'data-test-id': HEADER_TEST_ID },
   });
@@ -25,8 +26,16 @@ function getBreadcrumbs() {
   return Selector(dataTestIdSelector('header__breadcrumbs'));
 }
 
+function getVendorLogo() {
+  return Selector(dataTestIdSelector('header__vendor-logo'));
+}
+
+function getLogo() {
+  return Selector(dataTestIdSelector('header__logo'));
+}
+
 function getSettingsButton() {
-  return Selector(dataTestIdSelector('header__settings-menu-button'));
+  return Selector(dataTestIdSelector('header__settings__menu-button'));
 }
 
 function getFinancialMenuButton() {
@@ -42,7 +51,7 @@ function getNotificationButton() {
 }
 
 function getUserMenuButton() {
-  return Selector(dataTestIdSelector('header__user-menu-button'));
+  return Selector(dataTestIdSelector('header__user-menu__button'));
 }
 
 function getUserMenuManageProfile() {
@@ -50,7 +59,7 @@ function getUserMenuManageProfile() {
 }
 
 function getUserMenuOrganization() {
-  return Selector(dataTestIdSelector('header__user-menu-organization'));
+  return Selector(dataTestIdSelector('header__user-menu__organization'));
 }
 
 function getUserMenuOrganizationOption(index: number) {
@@ -58,15 +67,15 @@ function getUserMenuOrganizationOption(index: number) {
 }
 
 function getUserMenuAddOrganization() {
-  return Selector(dataTestIdSelector('header__user-menu-add-organization'));
+  return Selector(dataTestIdSelector('header__user-menu__add-organization'));
 }
 
 function getUserMenuSwitchTheme() {
-  return Selector(dataTestIdSelector('header__user-menu-switch-theme'));
+  return Selector(dataTestIdSelector('header__user-menu__theme-mode'));
 }
 
 function getUserMenuLogout() {
-  return Selector(dataTestIdSelector('header__user-menu-logout'));
+  return Selector(dataTestIdSelector('header__user-menu__logout'));
 }
 
 function getSelectGroupOrganization() {
@@ -265,7 +274,7 @@ test.page(
     showHelpMenu: true,
     showNotifications: true,
     showUserMenu: true,
-    showBudget: true,
+    showFinancialMenu: true,
   }),
 )('renders basic elements', async t => {
   await t.expect(getHeader().exists).ok('header is missing');
@@ -281,12 +290,36 @@ test.page(
 test.page(
   getPage({
     showSelect: false,
+    showPagePath: true,
+    showSettings: true,
+    showHelpMenu: true,
+    showNotifications: false,
+    showUserMenu: true,
+    showFinancialMenu: false,
+    showVendorLogo: true,
+  }),
+)('renders basic elements with vendor logo', async t => {
+  await t.expect(getHeader().exists).ok('header is missing');
+  await t.expect(getLogo().exists).ok('logo is missing');
+  await t.expect(getVendorLogo().exists).ok('vendor logo is missing');
+  await t.expect(getSelect().exists).notOk('select is present');
+  await t.expect(getBreadcrumbs().exists).ok('breadcrumbs is missing');
+  await t.expect(getFinancialMenuButton().exists).notOk('budget is present');
+  await t.expect(getSettingsButton().exists).ok('settings button is missing');
+  await t.expect(getHelpButton().exists).ok('help button is missing');
+  await t.expect(getNotificationButton().exists).notOk('notification button is present');
+  await t.expect(getUserMenuButton().exists).ok('user menu is missing');
+});
+
+test.page(
+  getPage({
+    showSelect: false,
     showPagePath: false,
     showSettings: false,
     showHelpMenu: false,
     showNotifications: false,
     showUserMenu: false,
-    showBudget: false,
+    showFinancialMenu: false,
   }),
 )('renders with hidden basic elements', async t => {
   await t.expect(getSelect().exists).notOk('select is present');
@@ -302,7 +335,6 @@ test.page(
   getPage({
     showUserMenu: true,
     showUserMenuManagement: true,
-    showUserMenuThemeSwitch: true,
     showUserMenuLogout: true,
     showAddOrganization: true,
   }),
@@ -322,8 +354,22 @@ test.page(
 test.page(
   getPage({
     showUserMenu: true,
+    showCustomUserMenu: true,
+  }),
+)('renders with custom user menu', async t => {
+  await t.click(getUserMenuButton());
+
+  await t.expect(getUserMenuManageProfile().exists).notOk('user menu -> manage profile is missing');
+  // await t.expect(getUserMenuOrganization().exists).notOk('user menu -> organization is missing');
+  await t.expect(getUserMenuAddOrganization().exists).notOk('user menu -> add organization is missing');
+  await t.expect(getUserMenuSwitchTheme().exists).notOk('user menu -> switch theme is missing');
+  await t.expect(getUserMenuLogout().exists).notOk('user menu -> logout is missing');
+});
+
+test.page(
+  getPage({
+    showUserMenu: true,
     showUserMenuManagement: false,
-    showUserMenuThemeSwitch: false,
     showUserMenuLogout: false,
     showAddOrganization: false,
   }),

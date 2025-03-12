@@ -1,24 +1,5 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
-.select {
-  display: flex;
-  align-items: center;
-  gap: styles-tokens-element.$dimension-050m;
-  color: styles-tokens-element.$sys-neutral-text-light;
-  cursor: pointer;
-}
-
-.selectGroup {
-  padding: 0 16px 16px;
-  box-sizing: border-box;
-}
-
-.breadcrumbs {
-  > div {
-    width: auto;
-  }
-}
-
 .notificationsDrawer {
   & [data-test-id='drawer__close-button'] {
     /* stylelint-disable-next-line declaration-property-value-allowed-list */

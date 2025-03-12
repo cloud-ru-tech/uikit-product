@@ -124,3 +124,8 @@ export type HeaderLogo = {
   path?: string;
   mode?: HeaderLogoMode;
 };
+
+export type VendorLogo = HeaderLogo & {
+  pageUrl: string;
+  onClick: MouseEventHandler<HTMLAnchorElement>;
+};

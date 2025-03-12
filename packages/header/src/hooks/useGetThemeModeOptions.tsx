@@ -3,11 +3,11 @@ import { useMemo } from 'react';
 import { DaySVG, LaptopPhoneSVG, NightSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 
-import { UserMenuProps } from '../helperComponents';
+import { DefaultUserMenuProps } from '../helperComponents';
 import { THEME_MODE } from '../types';
 
 type UseGetThemeModeOptionsProps = {
-  themeMode?: Required<UserMenuProps>['themeMode'];
+  themeMode?: Required<DefaultUserMenuProps>['themeMode'];
 };
 
 export function useGetThemeModeOptions({ themeMode }: UseGetThemeModeOptionsProps) {
