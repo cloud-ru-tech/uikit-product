@@ -37,8 +37,10 @@
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/card": "0.16.19",
     "@snack-uikit/promo-tag": "0.7.1",
-    "@snack-uikit/truncate-string": "0.6.9",
+    "@snack-uikit/truncate-string": "0.6.15",
     "@snack-uikit/typography": "0.8.4",
+    "@sbercloud/uikit-product-icons": "10.6.0",
+    "@snack-uikit/tag": "0.12.7",
     "classnames": "2.5.1"
   }
 }

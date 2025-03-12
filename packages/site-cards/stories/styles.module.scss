@@ -14,3 +14,15 @@
   height: 40px;
   object-fit: cover;
 }
+
+.mediaWrapper {
+  &[data-size='l'] {
+    max-width: 800px;
+  }
+  &[data-size='m'] {
+    max-width: 384px;
+  }
+  &[data-size='s'] {
+    max-width: 200px;
+  }
+}

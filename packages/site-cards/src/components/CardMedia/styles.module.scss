@@ -1,0 +1,157 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+$transition: 0.3s;
+$scale: 1.05;
+
+.title {
+  color: ste.$sys-neutral-text-main;
+
+  a {
+    color: ste.$sys-neutral-text-main;
+    text-decoration: none;
+
+    transition: color $transition ease-in-out;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      color: ste.$sys-primary-accent-hovered;
+    }
+  }
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+  transition: all $transition;
+}
+
+.imgWrapper {
+  overflow: hidden;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  color: ste.$sys-neutral-text-light;
+
+  .left {
+    display: flex;
+    gap: 12px;
+  }
+
+  .icon {
+    color: ste.$sys-neutral-accent-default;
+  }
+
+  .time,
+  .date {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 4px;
+  }
+}
+
+.root {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  &:focus-visible {
+    @include ste.outline-var(ste.$container-focused-m);
+    outline-color: ste.$sys-primary-decor-activated;
+    outline-offset: 2px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    .img {
+      scale: $scale;
+    }
+  }
+
+  &[data-disabled='true'] {
+    pointer-events: none;
+
+    a {
+      color: ste.$sys-neutral-text-disabled;
+    }
+
+    .img {
+      opacity: 0.5;
+    }
+
+    .title {
+      color: ste.$sys-neutral-text-disabled;
+    }
+  }
+
+  &[data-size='s'] {
+    gap: 8px;
+
+    .imgWrapper {
+      height: 138px;
+    }
+
+    .left {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &[data-size='m'] {
+    .imgWrapper {
+      aspect-ratio: 16 / 11;
+      max-height: 264px;
+    }
+  }
+
+  &[data-size='l'] {
+    .imgWrapper {
+      max-height: 350px;
+      aspect-ratio: 16 / 7;
+    }
+  }
+
+  &[data-size='m'][data-layout-type='tablet'] {
+    .imgWrapper {
+      aspect-ratio: 164 / 113;
+      max-height: 226px;
+    }
+  }
+
+  &[data-size='m'][data-layout-type='mobile'] {
+    .imgWrapper {
+      height: 226px;
+    }
+  }
+
+  &[data-size='l'][data-layout-type='tablet'] {
+    .imgWrapper {
+      aspect-ratio: 16 / 7;
+      max-height: 308px;
+    }
+  }
+
+  &[data-size='l'][data-layout-type='mobile'] {
+    .imgWrapper {
+      height: 226px;
+    }
+  }
+}
