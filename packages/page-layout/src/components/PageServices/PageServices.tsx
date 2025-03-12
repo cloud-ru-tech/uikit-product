@@ -13,6 +13,7 @@ export type PageServicesProps = WithSupportProps<
     Pick<HeadlineProps, 'title' | 'actions' | 'subHeader' | 'afterHeadline' | 'beforeHeadline' | 'truncateTitle'> & {
       className?: string;
       sidebar?: PageSidebarProps;
+      autoHeight?: boolean;
     }
   >
 >;
@@ -21,12 +22,26 @@ const GLOBAL_CONTAINER_ID = 'single-spa-wrapper';
 
 export const PageServices = forwardRef<HTMLDivElement, PageServicesProps>(
   (
-    { children, title, actions, className, sidebar, beforeHeadline, subHeader, afterHeadline, truncateTitle, ...rest },
+    {
+      children,
+      title,
+      actions,
+      className,
+      sidebar,
+      beforeHeadline,
+      subHeader,
+      afterHeadline,
+      truncateTitle,
+      autoHeight,
+      ...rest
+    },
     ref,
   ) => {
     const [height, setHeight] = useState(0);
 
     useEffect(() => {
+      if (autoHeight) return;
+
       const container = document.getElementById(GLOBAL_CONTAINER_ID);
 
       if (container) {
@@ -43,10 +58,14 @@ export const PageServices = forwardRef<HTMLDivElement, PageServicesProps>(
 
         return () => observer.disconnect();
       }
-    }, []);
+    }, [autoHeight]);
 
     return (
-      <div className={cn(styles.wrapper, className)} style={{ height }} {...extractSupportProps(rest)}>
+      <div
+        className={cn(styles.wrapper, className)}
+        {...(!autoHeight && { style: { height } })}
+        {...extractSupportProps(rest)}
+      >
         <div className={styles.tempContainer} ref={ref}>
           <div className={styles.container}>
             <Headline
