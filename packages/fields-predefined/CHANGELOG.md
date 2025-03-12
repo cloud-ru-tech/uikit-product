@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-03-12)
+
+
+### Features
+
+* **IAM-5041:** add scroll list countries prop ([0e6a52a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0e6a52a75a243ebe12f039fafacc421884ed3b7f))
+
+
+
+
+
 ## 0.1.4 (2025-03-05)
 
 ### Only dependencies have been changed
