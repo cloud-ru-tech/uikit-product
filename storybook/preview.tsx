@@ -13,9 +13,9 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { useDarkMode } from 'storybook-dark-mode';
 
 import { Sprite, SpriteSystemSVG } from '@sbercloud/uikit-product-icons';
+import { LocaleProvider } from '@sbercloud/uikit-product-locale';
 import { Alert } from '@snack-uikit/alert';
 import { Link } from '@snack-uikit/link';
-import { LocaleProvider } from '@snack-uikit/locale';
 
 import { ConfigProvider } from '../packages/utils/src';
 import {
@@ -38,6 +38,7 @@ const decorators: Preview['decorators'] = [
     const isDark = useDarkMode();
     const mode = isDark ? Mode.Dark : Mode.Light;
     const normalizedBrand = Object.values(Brand).includes(brand) ? (brand as Brand) : Brand.Cloud;
+    const languageCode = locale || LanguageCodeType.ruRU;
 
     const methods = useForm({
       mode: 'onSubmit',
@@ -71,11 +72,11 @@ const decorators: Preview['decorators'] = [
             </>
           )}
 
-          <LocaleProvider lang={locale || LanguageCodeType.ruRU}>
+          <LocaleProvider lang={languageCode}>
             <ConfigProvider
               theme={BRAND_TO_THEME_MAP[normalizedBrand][mode] || ConfigProvider.themes.Purple}
               brand={BRAND_TO_BRAND_MODE_MAP[normalizedBrand][mode] || ConfigProvider.brand.Cloud}
-              languageCode={locale || LanguageCodeType.ruRU}
+              languageCode={languageCode}
             >
               <Story />
             </ConfigProvider>
