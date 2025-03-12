@@ -2,13 +2,12 @@ import cn from 'classnames';
 import { Fragment, MouseEventHandler } from 'react';
 
 import { formatNumber } from '@sbercloud/ft-formatters';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Divider } from '@snack-uikit/divider';
 import { Link } from '@snack-uikit/link';
 import { SkeletonText } from '@snack-uikit/skeleton';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../../../helpers';
 import { PopoverContentProps } from '../../types';
 import { EyeButton } from '../EyeButton';
 import { StarterGrant } from '../StarterGrant';
@@ -28,7 +27,7 @@ export function PopoverContent({
   agreement,
   isMobile,
 }: PopoverContentProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   const handleLinkClick: MouseEventHandler<HTMLAnchorElement> = event => {
     link?.onClick?.(event);
@@ -41,19 +40,19 @@ export function PopoverContent({
   };
 
   const balanceValue = formatNumber(balance.value, { type: formatNumber.types.Currency });
-  const balanceActionButtonText = textProvider(languageCode, Texts.FinancialMenuBalanceAction);
+  const balanceActionButtonText = t('financialMenuBalanceAction');
 
   const bonusGrantValue: string = formatNumber(bonuses.value, {
     type: formatNumber.types.DigitSpaces,
-    unit: textProvider(languageCode, Texts.FinancialMenuBonusSign),
+    unit: t('financialMenuBonusSign'),
   });
-  let bonusGrantsDesc = bonuses.description || textProvider(languageCode, Texts.FinancialMenuNoGrants);
+  let bonusGrantsDesc = bonuses.description || t('financialMenuNoGrants');
 
   if (bonusGrants.length !== 0) {
     bonusGrantsDesc = '';
   }
-  const bonusGrantActionButtonText = textProvider(languageCode, Texts.FinancialMenuBonusesAction);
-  const toSectionLink = agreement || textProvider(languageCode, Texts.FinancialMenuToSection);
+  const bonusGrantActionButtonText = t('financialMenuBonusesAction');
+  const toSectionLink = agreement || t('financialMenuToSection');
 
   return (
     <SkeletonText lines={6} loading={loading}>
@@ -75,7 +74,7 @@ export function PopoverContent({
         ) : (
           <>
             <div className={styles.titleLine}>
-              <Typography.SansBodyL>{textProvider(languageCode, Texts.FinancialMenuTitle)}</Typography.SansBodyL>
+              <Typography.SansBodyL>{t('financialMenuTitle')}</Typography.SansBodyL>
 
               <EyeButton {...eyeButton} />
             </div>
@@ -111,7 +110,7 @@ export function PopoverContent({
           value={bonusGrantValue}
           actionButtonText={bonusGrantActionButtonText}
           description={bonusGrantsDesc}
-          buttonTip={textProvider(languageCode, Texts.FinancialMenuBonusesDisabledTip)}
+          buttonTip={t('financialMenuBonusesDisabledTip')}
           isMobile={isMobile}
         />
 

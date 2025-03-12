@@ -1,9 +1,8 @@
 import { formatDate, formatNumber } from '@sbercloud/ft-formatters';
-import { LanguageCodeType, useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { StatusIndicator, StatusIndicatorProps } from '@snack-uikit/status';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
-import { textProvider, Texts } from '../../../../../../helpers';
 import { DAYS_OF_CHANGE_STATUS_COLOR, INDEFINITE_GRANT_CUTOFF_DATE } from './constants';
 import styles from './styles.module.scss';
 
@@ -29,40 +28,40 @@ export type GrantProps = {
 };
 
 export function Grant({ name, beginAt, expireAt, initialAmount, currentAmount, status, isMobile }: GrantProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t, lang } = useLocale('Header');
 
   const currentGrantAmount = formatNumber(Math.round(Number(currentAmount)), {
     type: formatNumber.types.DigitSpaces,
-    unit: textProvider(languageCode, Texts.FinancialMenuBonusSign),
+    unit: t('financialMenuBonusSign'),
   });
 
   const initialGrantAmount = formatNumber(initialAmount, {
     type: formatNumber.types.DigitSpaces,
-    unit: textProvider(languageCode, Texts.FinancialMenuBonusSign),
+    unit: t('financialMenuBonusSign'),
   });
 
-  const locale = languageCode === LanguageCodeType.ruRU ? { code: 'ru' } : undefined;
+  const locale = lang === 'ru-RU' ? { code: 'ru' } : undefined;
   const beginAtFormatted = formatDate(beginAt, formatDate.formatters.DateShortMonth, locale);
 
   const expireAtFormatted =
     expireAt > INDEFINITE_GRANT_CUTOFF_DATE
-      ? textProvider(languageCode, Texts.FinancialMenuGrantInfinity)
+      ? t('financialMenuGrantInfinity')
       : formatDate(expireAt, formatDate.formatters.DateShortMonth, locale);
 
   const isDisableAppearance = status === 'BONUS_GRANT_STATUS_NOT_STARTED' || undefined;
 
-  let statusTextId;
+  let statusTextId: string | undefined;
   let statusDateColor: StatusIndicatorProps['appearance'] = 'neutral';
 
   switch (status) {
     case 'BONUS_GRANT_STATUS_NOT_STARTED': {
-      statusTextId = Texts.FinancialMenuGrantStatusNotStart;
+      statusTextId = t('financialMenuGrantStatusNotStart');
       break;
     }
 
     case 'BONUS_GRANT_STATUS_READY': {
       const isSpending = currentAmount !== initialAmount;
-      statusTextId = isSpending ? Texts.FinancialMenuGrantStatusSpending : Texts.FinancialMenuGrantStatusNotSpending;
+      statusTextId = isSpending ? t('financialMenuGrantStatusSpending') : t('financialMenuGrantStatusNotSpending');
 
       const isChangeStatusColor = Date.now() >= new Date(expireAt).getTime() - DAYS_OF_CHANGE_STATUS_COLOR;
       statusDateColor = isChangeStatusColor ? 'yellow' : 'green';
@@ -83,7 +82,7 @@ export function Grant({ name, beginAt, expireAt, initialAmount, currentAmount, s
             <div className={styles.initialAmount}>{`(${initialGrantAmount})`}</div>
           </div>
 
-          {statusTextId && <div className={styles.status}>{textProvider(languageCode, statusTextId)}</div>}
+          {statusTextId && <div className={styles.status}>{statusTextId}</div>}
         </div>
 
         <div className={styles.amountWithDate} data-disabled={isDisableAppearance}>
@@ -109,7 +108,7 @@ export function Grant({ name, beginAt, expireAt, initialAmount, currentAmount, s
           {name} <span className={styles.initialAmount}>{`(${initialGrantAmount})`}</span>
         </div>
 
-        {statusTextId && <div className={styles.status}>{textProvider(languageCode, statusTextId)}</div>}
+        {statusTextId && <div className={styles.status}>{statusTextId}</div>}
       </div>
 
       <div className={styles.amount} data-disabled={isDisableAppearance}>

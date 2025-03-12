@@ -52,5 +52,8 @@
     "classnames": "2.5.1",
     "lodash.debounce": "4.0.8",
     "uncontrollable": "8.0.4"
+  },
+  "peerDependencies": {
+    "@sbercloud/uikit-product-locale": "*"
   }
 }

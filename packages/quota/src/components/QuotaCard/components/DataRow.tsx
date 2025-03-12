@@ -1,10 +1,9 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
-import { textProvider, Texts } from '../../../helpers';
 import styles from '../styles.module.scss';
 
 type DataRowProps = {
@@ -14,7 +13,7 @@ type DataRowProps = {
 };
 
 export function DataRow({ value, label, className }: DataRowProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Quota');
 
   return (
     <div className={cn(styles.dataRow, className)}>
@@ -24,7 +23,7 @@ export function DataRow({ value, label, className }: DataRowProps) {
 
       {typeof value === 'number' ? (
         <span className={styles.text}>
-          {value} {textProvider(languageCode, Texts.Peace)}
+          {value} {t('peace')}
         </span>
       ) : (
         value

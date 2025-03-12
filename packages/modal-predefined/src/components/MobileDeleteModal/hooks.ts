@@ -1,11 +1,9 @@
 import { useCallback, useRef, useState } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
-
-import { textProvider, Texts } from '../../helpers';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 
 export function useTextFieldValidation(target: string | undefined) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('ModalPredefined');
 
   const ref = useRef<HTMLInputElement>(null);
 
@@ -29,7 +27,7 @@ export function useTextFieldValidation(target: string | undefined) {
     }
 
     return () => {
-      setError(textProvider<string>(languageCode, Texts.InvalidName));
+      setError(t('invalidName'));
       ref.current?.focus();
     };
   };

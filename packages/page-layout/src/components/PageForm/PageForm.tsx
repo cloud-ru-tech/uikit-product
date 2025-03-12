@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { PropsWithChildren, ReactNode, useMemo } from 'react';
 
-import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import {
   ButtonFilled,
   ButtonFilledProps,
@@ -11,30 +11,11 @@ import {
   ButtonSimpleProps,
 } from '@snack-uikit/button';
 import { TooltipProps } from '@snack-uikit/tooltip';
-import { ValueOf } from '@snack-uikit/utils';
 
-import { textProvider, Texts } from '../../helpers/texts-provider';
 import { Headline, HeadlineProps } from '../Headline';
-import { useButtonWithTooltip } from './hooks';
+import { useButtonWithTooltip, useGetButtonLabel } from './hooks';
 import styles from './styles.module.scss';
-
-export const BUTTON_PRIMARY_VARIANT = {
-  Continue: 'continue',
-  Create: 'create',
-  Save: 'save',
-  Rent: 'rent',
-  Send: 'send',
-  Restore: 'restore',
-  Add: 'add',
-} as const;
-
-export const BUTTON_SECONDARY_VARIANT = {
-  Cancel: 'cancel',
-  Back: 'back',
-} as const;
-
-export type ButtonPrimaryVariant = ValueOf<typeof BUTTON_PRIMARY_VARIANT>;
-export type ButtonSecondaryVariant = ValueOf<typeof BUTTON_SECONDARY_VARIANT>;
+import { ButtonPrimaryVariant, ButtonSecondaryVariant } from './types';
 
 export type PageFormProps = WithSupportProps<
   PropsWithChildren<
@@ -95,7 +76,7 @@ export function PageForm({
   priceSummary,
   ...rest
 }: PageFormProps) {
-  const { languageCode } = useLanguage();
+  const getButtonLabel = useGetButtonLabel();
 
   const moreItems = useMemo(
     () => [priceSummary?.content].concat(sideBlock?.map(item => item.content)).filter(Boolean),
@@ -127,7 +108,7 @@ export function PageForm({
                 label={
                   footer.buttonSecondary.variant === 'custom'
                     ? footer.buttonSecondary.label
-                    : textProvider(languageCode, footer.buttonSecondary.variant as unknown as Texts)
+                    : getButtonLabel(footer.buttonSecondary.variant)
                 }
               />
             )}
@@ -141,7 +122,7 @@ export function PageForm({
                 label={
                   footer.buttonPrimary.variant === 'custom'
                     ? footer.buttonPrimary.label
-                    : textProvider(languageCode, footer.buttonPrimary.variant as unknown as Texts)
+                    : getButtonLabel(footer.buttonPrimary.variant)
                 }
               />
             </div>

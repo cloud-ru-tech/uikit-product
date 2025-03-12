@@ -1,10 +1,9 @@
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { DrawerCustom } from '@snack-uikit/drawer';
 import { Dropdown } from '@snack-uikit/dropdown';
 
-import { textProvider, Texts } from '../../helpers';
 import { ButtonFinancial, ButtonFinancialProps, PopoverContent } from './components';
 import styles from './styles.module.scss';
 import { PopoverContentProps } from './types';
@@ -42,7 +41,7 @@ export function FinancialMenu({ button, content, open, onOpenChange }: Financial
 
 export function MobileFinancialMenu({ button, content, open, onOpenChange }: FinancialMenuProps) {
   const [isOpen, setIsOpen] = useUncontrolledProp(open, false, onOpenChange);
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   const handleClose = () => {
     setIsOpen(false);
@@ -60,10 +59,7 @@ export function MobileFinancialMenu({ button, content, open, onOpenChange }: Fin
       />
 
       <DrawerCustom open={isOpen} onClose={handleClose} position='left'>
-        <DrawerCustom.Header
-          title={textProvider(languageCode, Texts.FinancialMenuTitle)}
-          className={styles.nestedHeader}
-        />
+        <DrawerCustom.Header title={t('financialMenuTitle')} className={styles.nestedHeader} />
 
         <div className={styles.mobileContentWrapper}>
           <PopoverContent {...content} onClose={handleClose} isMobile />

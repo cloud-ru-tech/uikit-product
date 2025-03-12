@@ -3,7 +3,7 @@ import { MouseEvent, useCallback, useMemo, useRef, useState } from 'react';
 
 import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
 import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
@@ -15,7 +15,7 @@ import { Scroll } from '@snack-uikit/scroll';
 import { Search } from '@snack-uikit/search';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
-import { getSelectProductListProps, textProvider, Texts } from '../../../../helpers';
+import { getSelectProductListProps } from '../../../../helpers';
 import { extractAppNameFromId } from '../../../../utils';
 import { MarketplaceBannerCard } from '../../../MarketplaceBannerCard';
 import { ReferralBannerCard } from '../../../ReferralBannerCard';
@@ -69,7 +69,7 @@ export function DrawerMenuDesktop({
     [visibleProducts],
   );
 
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   const [isOpen, setIsOpenValue] = useState<boolean>(false);
 
@@ -226,7 +226,7 @@ export function DrawerMenuDesktop({
                     <div className={cn(styles.rightContentItem, styles.searchItem)} ref={searchPanelRef}>
                       <Search
                         size='m'
-                        placeholder={textProvider(languageCode, Texts.SearchByServices)}
+                        placeholder={t('searchByServices')}
                         value={searchValue}
                         onChange={setSearchValue}
                         data-test-id='header__drawer-menu__search'
@@ -238,17 +238,17 @@ export function DrawerMenuDesktop({
                     <div className={styles.bannersWrapper}>
                       {onReferralBannerClick && (
                         <ReferralBannerCard
-                          title={textProvider(languageCode, Texts.ReferralBannerTitle)}
-                          text={textProvider(languageCode, Texts.ReferralBannerText)}
-                          promoBadge={textProvider(languageCode, Texts.ReferralBannerTag)}
+                          title={t('referralBannerTitle')}
+                          text={t('referralBannerText')}
+                          promoBadge={t('referralBannerTag')}
                           onClick={wrappedClick({ onClick: onReferralBannerClick })}
                         />
                       )}
                       {onMarketplaceBannerClick && (
                         <MarketplaceBannerCard
-                          title={textProvider(languageCode, Texts.MkpBannerTitle)}
-                          text={textProvider(languageCode, Texts.MkpBannerText)}
-                          promoBadge={textProvider(languageCode, Texts.MkpBannerCount)}
+                          title={t('mkpBannerTitle')}
+                          text={t('mkpBannerText')}
+                          promoBadge={t('mkpBannerCount')}
                           onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
                         />
                       )}
@@ -296,7 +296,7 @@ export function DrawerMenuDesktop({
                   {rightSectionLinks?.length === 0 && (
                     <div className={styles.rightContentItem}>
                       <div className={styles.noData} data-test-id='header__drawer-menu__no-data'>
-                        {textProvider(languageCode, Texts.NoData)}
+                        {t('noData')}
                       </div>
                     </div>
                   )}

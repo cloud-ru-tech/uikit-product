@@ -50,6 +50,6 @@
     "uncontrollable": "8.0.4"
   },
   "peerDependencies": {
-    "@snack-uikit/locale": "*"
+    "@sbercloud/uikit-product-locale": "*"
   }
 }

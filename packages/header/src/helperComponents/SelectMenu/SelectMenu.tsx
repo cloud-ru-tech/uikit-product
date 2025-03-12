@@ -1,14 +1,13 @@
 import cn from 'classnames';
 
 import { ChevronDownSVG, ChevronUpSVG, LockInterfaceSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { ListProps } from '@snack-uikit/list';
 import { SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
-import { textProvider, Texts } from '../../helpers';
 import { Organization, Platform, Project, Workspace } from '../../types';
 import { GroupSection, ItemsGroup } from '../GroupSection';
 import styles from './styles.module.scss';
@@ -96,7 +95,7 @@ export function SelectMenu({
 
   mobile,
 }: SelectMenuProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   return (
     <>
@@ -104,12 +103,12 @@ export function SelectMenu({
         <GroupSection
           virtualized
           className={styles.organizations}
-          title={textProvider(languageCode, Texts.Organizations)}
+          title={t('organizations')}
           groups={[{ id: '1', items: organizations }]}
           truncateVariant='middle'
           onItemChange={val => onOrganizationChange?.(val, 'select')}
           selectedItem={selectedOrganization}
-          addItem={{ label: textProvider(languageCode, Texts.AddOrganization), handler: onOrganizationAdd }}
+          addItem={{ label: t('addOrganization'), handler: onOrganizationAdd }}
           closeDropdown={closeDropdown}
           data-test-id='header__select-group-organization'
           avatarAppearance='red'
@@ -124,11 +123,11 @@ export function SelectMenu({
           <GroupSection
             virtualized
             className={styles.projects}
-            title={textProvider(languageCode, Texts.Projects)}
+            title={t('projects')}
             searchable
             searchActive={projectsSearchActive}
             onSearchActiveChange={onProjectsSearchActiveChange}
-            searchPlaceholder={textProvider(languageCode, Texts.SearchProjectsPlaceholder)}
+            searchPlaceholder={t('searchProjectsPlaceholder')}
             groups={projects}
             truncateVariant='middle'
             onItemChange={onProjectChange}
@@ -136,7 +135,7 @@ export function SelectMenu({
             noDataState={projectsEmptyState}
             addItem={
               projectAddButton && {
-                label: textProvider(languageCode, Texts.AddProject),
+                label: t('addProject'),
                 handler: projectAddButton.onClick,
                 tooltip: projectAddButton.tooltip,
                 disabled: projectAddButton.disabled,
@@ -157,7 +156,7 @@ export function SelectMenu({
 
           <GroupSection
             className={styles.platforms}
-            title={textProvider(languageCode, Texts.Platforms)}
+            title={t('platforms')}
             groups={[{ id: '1', items: platforms }]}
             onItemChange={onPlatformChange}
             selectedItem={selectedPlatform}
@@ -175,7 +174,7 @@ export function SelectMenu({
           <GroupSection
             virtualized
             className={styles.workspaces}
-            title={textProvider(languageCode, Texts.Workspaces)}
+            title={t('workspaces')}
             groups={workspaces.list.length > 0 ? [{ id: '1', items: workspaces.list }] : []}
             onItemChange={workspaces.onWorkspaceChange}
             selectedItem={workspaces.selectedWorkspace}
@@ -185,18 +184,18 @@ export function SelectMenu({
                 ? {
                     footer: (
                       <ButtonFilled
-                        label={textProvider(languageCode, Texts.RequestAccessWorkspacesLabel)}
+                        label={t('requestAccessWorkspacesLabel')}
                         icon={<PlusSVG />}
                         onClick={onAccessRequestClick}
                       />
                     ),
-                    description: textProvider(languageCode, Texts.RequestAccessWorkspaces),
+                    description: t('requestAccessWorkspaces'),
                     icon: { icon: LockInterfaceSVG, appearance: 'neutral' },
                   }
                 : workspaces.emptyState
             }
             addItem={{
-              label: textProvider(languageCode, Texts.AddWorkspace),
+              label: t('addWorkspace'),
               handler: workspaces.onWorkspaceAdd,
               tooltip: workspaces.tooltip,
               disabled: workspaces.disabled,
@@ -206,7 +205,7 @@ export function SelectMenu({
             searchable
             searchActive={workspaces.searchActive}
             onSearchActiveChange={workspaces.onSearchActiveChange}
-            searchPlaceholder={textProvider(languageCode, Texts.SearchWorkspacesPlaceholder)}
+            searchPlaceholder={t('searchWorkspacesPlaceholder')}
             mobile={mobile}
           />
         </>
@@ -243,12 +242,9 @@ export function SelectMenuTrigger({
   nameClassName?: string;
   entityClassName?: string;
 }) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
   const name = selectedWorkspace?.name ?? selectedProject?.name ?? '';
-  const entity =
-    (selectedWorkspace?.name && textProvider(languageCode, Texts.Workspace)) ||
-    (selectedProject?.name && textProvider(languageCode, Texts.Project)) ||
-    '';
+  const entity = (selectedWorkspace?.name && t('workspace')) || (selectedProject?.name && t('project')) || '';
 
   return (
     <WithSkeleton skeleton={<SelectMenuTriggerSkeleton />} loading={loading}>

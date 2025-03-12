@@ -1,12 +1,13 @@
 import cn from 'classnames';
 
 import { InfoFilledSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { LinkProps } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';
 
-import { formatCurrency, textProvider, Texts } from '../../helpers';
+import { formatCurrency } from '../../helpers';
 import { ContentBlock, ContentBlockProps } from '../ContentBlock';
 import styles from './styles.module.scss';
 
@@ -30,11 +31,11 @@ export function PriceSummarySmall({
   className,
   ...rest
 }: PriceSummarySmallProps) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('PriceSummary');
 
   return (
     <div className={cn(styles.priceSummarySmall, className)} {...extractSupportProps(rest)}>
-      <Typography.SansBodyM>{textProvider(languageCode, Texts.Total)}</Typography.SansBodyM>
+      <Typography.SansBodyM>{t('total')}</Typography.SansBodyM>
 
       <ContentBlock loading={loading} dataError={dataError} onRetry={onRetry}>
         <div className={styles.value}>
@@ -44,12 +45,7 @@ export function PriceSummarySmall({
         </div>
 
         {docsLink?.href && (
-          <ButtonFunction
-            size='xs'
-            label={docsLink.text || textProvider(languageCode, Texts.CostLink)}
-            href={docsLink.href}
-            target='_blank'
-          />
+          <ButtonFunction size='xs' label={docsLink.text || t('costLink')} href={docsLink.href} target='_blank' />
         )}
       </ContentBlock>
     </div>

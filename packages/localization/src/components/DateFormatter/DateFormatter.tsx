@@ -1,4 +1,4 @@
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 
 type DateFormatterProps = {
   value: Date;
@@ -6,12 +6,12 @@ type DateFormatterProps = {
 };
 
 export function DateFormatter({ value, showTime = true }: DateFormatterProps) {
-  const { languageCode } = useLanguage();
+  const { lang } = useLocale();
 
   if (!showTime) {
     return (
       <>
-        {new Intl.DateTimeFormat(languageCode, {
+        {new Intl.DateTimeFormat(lang, {
           year: 'numeric',
           month: 'short',
           day: 'numeric',
@@ -22,7 +22,7 @@ export function DateFormatter({ value, showTime = true }: DateFormatterProps) {
 
   return (
     <>
-      {new Intl.DateTimeFormat(languageCode, {
+      {new Intl.DateTimeFormat(lang, {
         year: 'numeric',
         month: 'short',
         day: 'numeric',

@@ -44,6 +44,6 @@
     "classnames": "2.5.1"
   },
   "peerDependencies": {
-    "@snack-uikit/locale": "*"
+    "@sbercloud/uikit-product-locale": "*"
   }
 }

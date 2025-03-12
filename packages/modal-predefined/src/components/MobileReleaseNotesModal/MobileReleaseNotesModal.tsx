@@ -1,7 +1,7 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
 
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Carousel } from '@snack-uikit/carousel';
 import { WithSkeleton } from '@snack-uikit/skeleton';
@@ -10,7 +10,6 @@ import { Typography } from '@snack-uikit/typography';
 import { DataErrorInfoBlock, NoDataInfoBlock } from '../../helperComponents';
 import { NoteItemMobile, NoteItemMobileSkeleton } from '../../helperComponents/NoteItemMobile';
 import { NoteSliderControls } from '../../helperComponents/NoteSliderControls';
-import { textProvider, Texts } from '../../helpers';
 import { useReleaseNotesModal } from '../../hooks';
 import { ReleaseNotesModalProps } from '../../types';
 import styles from './styles.module.scss';
@@ -24,7 +23,7 @@ export function MobileReleaseNotesModal({
   dataError,
   onDataErrorRetryClick,
 }: Omit<ReleaseNotesModalProps, 'layoutType'>) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('ModalPredefined');
   const {
     onCloseInner,
     onReadLaterClickInner,
@@ -89,7 +88,7 @@ export function MobileReleaseNotesModal({
 
   return (
     <MobileModalCustom open={open} onClose={onCloseInner} size='full' closeButtonEnabled>
-      <MobileModalCustom.Header title={textProvider<string>(languageCode, Texts.WhatsNew)} />
+      <MobileModalCustom.Header title={t('whatsNew')} />
 
       <MobileModalCustom.Body className={loading ? undefined : styles.mobileBody} content={content} />
 
@@ -100,7 +99,7 @@ export function MobileReleaseNotesModal({
               <div>
                 {onReadLaterClick && (
                   <ButtonFunction
-                    label={textProvider<string>(languageCode, Texts.ReadLater)}
+                    label={t('readLater')}
                     onClick={onReadLaterClickInner}
                     size='m'
                     appearance='destructive'
@@ -113,7 +112,7 @@ export function MobileReleaseNotesModal({
               {items.length > 1 && (
                 <div className={styles.footerRight}>
                   <Typography.SansBodyM className={styles.pageCounter}>
-                    {readablePageNumber} {textProvider<string>(languageCode, Texts.OutOf)} {items.length}
+                    {readablePageNumber} {t('outOf')} {items.length}
                   </Typography.SansBodyM>
                   <NoteSliderControls
                     page={readablePageNumber}

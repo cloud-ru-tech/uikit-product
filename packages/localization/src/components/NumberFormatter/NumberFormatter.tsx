@@ -1,11 +1,11 @@
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 
 type NumberFormatterProps = {
   value: number;
 };
 
 export function NumberFormatter({ value }: NumberFormatterProps) {
-  const { languageCode } = useLanguage();
+  const { lang } = useLocale();
 
-  return <>{new Intl.NumberFormat(languageCode).format(value)}</>;
+  return <>{new Intl.NumberFormat(lang).format(value)}</>;
 }

@@ -2,14 +2,15 @@ import cn from 'classnames';
 import { useMemo } from 'react';
 
 import { CloudFullLogoSVG, MailInterfaceSVG, MlSpaceFullLogoSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
 import { Tag } from '@snack-uikit/tag';
 import { isBrowser } from '@snack-uikit/utils';
 
-import { textProvider, Texts } from '../helpers/texts-provider';
-import { COLORS, ErrorType, getButtonPropsByErrorType, getContentByErrorType, LogoVariant } from './constants';
+import { COLORS, ErrorType, LogoVariant } from './constants';
+import { useGetButtonPropsByErrorType, useGetContentByErrorType } from './hooks';
 import styles from './styles.module.scss';
 
 export type ErrorPageProps = WithSupportProps<{
@@ -28,10 +29,9 @@ export function ErrorPage({
   errorType = ErrorType.FrontendError,
   ...rest
 }: ErrorPageProps) {
-  const { languageCode } = useLanguage();
-
-  const content = getContentByErrorType(errorType);
-  const button = getButtonPropsByErrorType(errorType, mainPageUrl);
+  const { t } = useLocale('ErrorPage');
+  const content = useGetContentByErrorType(errorType);
+  const button = useGetButtonPropsByErrorType(errorType, mainPageUrl);
 
   const hasMainPageLink = [ErrorType.FrontendError].includes(errorType);
   const hasBackLink = [ErrorType.FrontendError, ErrorType.PageUnavailable].includes(errorType);
@@ -63,7 +63,7 @@ export function ErrorPage({
           {logo}
 
           <h1 className={styles.title} data-user>
-            {textProvider(languageCode, content.title)}
+            {content.title}
 
             {content.statusCode && (
               <Tag className={styles.statusCode} appearance='neutral' size='s' label={String(content.statusCode)} />
@@ -71,24 +71,17 @@ export function ErrorPage({
           </h1>
 
           <div className={styles.actionWrapper}>
-            <span className={styles.actionsTitle}>{textProvider(languageCode, content.text)}</span>
+            <span className={styles.actionsTitle}>{content.text}</span>
 
             <div className={styles.actionsLink}>
-              {hasMainPageLink && (
-                <Link
-                  size='m'
-                  href={mainPageUrl}
-                  target={'_self'}
-                  text={textProvider(languageCode, Texts.MainPageLink)}
-                />
-              )}
+              {hasMainPageLink && <Link size='m' href={mainPageUrl} target={'_self'} text={t('mainPageLink')} />}
 
               {hasBackLink && (
                 <Link
                   size='m'
                   onClick={() => isBrowser() && window.history.back()}
                   target={'_self'}
-                  text={textProvider(languageCode, Texts.BackLink)}
+                  text={t('backLink')}
                 />
               )}
             </div>
@@ -100,7 +93,7 @@ export function ErrorPage({
             <ButtonOutline
               size='m'
               className={styles.button}
-              label={textProvider(languageCode, Texts.SupportCenterButton)}
+              label={t('supportCenterButton')}
               onClick={onSupportCenterClick}
               icon={<MailInterfaceSVG />}
             />
@@ -109,7 +102,7 @@ export function ErrorPage({
           <ButtonFilled
             size='m'
             className={styles.button}
-            label={textProvider(languageCode, button.text)}
+            label={button.text}
             href={button.href}
             target={button.href && '_self'}
             onClick={button.onClick}

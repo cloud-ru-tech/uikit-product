@@ -1,15 +1,15 @@
 import { memo, useCallback, useMemo } from 'react';
 
 import { PlusSVG } from '@sbercloud/uikit-product-icons';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { AdaptiveDrawer, AdaptiveModal, DrawerProps, ModalProps } from '@sbercloud/uikit-product-mobile-modal';
-import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { FieldSelect, FieldSelectProps } from '@snack-uikit/fields';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 
 import { useOpen } from '../../hooks';
 import { SelectFooter } from './SelectFooter';
-import { textProvider, Texts } from './textsProvider';
 import { EntityName, LayoutProps } from './types';
 import { useSelectDataStates } from './useSelectDataStates';
 
@@ -44,7 +44,7 @@ export const SelectCreate = memo(function SelectCreate({
   entityIcon,
   ...rest
 }: SelectCreateProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('FieldsPredefined');
   const { onClose, onOpen, isOpen } = useOpen();
   const selectDataStates = useSelectDataStates({ entityName, entityIcon, onRefetch });
   const selectSize: FieldSelectProps['size'] = selectProps.size || 'm';
@@ -62,10 +62,10 @@ export const SelectCreate = memo(function SelectCreate({
 
   const buttons = useMemo<Pick<ModalProps, 'approveButton' | 'cancelButton'>>(
     () => ({
-      approveButton: { label: textProvider(languageCode, Texts.ButtonCreate), onClick: handleCreate },
-      cancelButton: { label: textProvider(languageCode, Texts.ButtonCancel), onClick: onClose },
+      approveButton: { label: t('SelectCreate.buttonCreate'), onClick: handleCreate },
+      cancelButton: { label: t('SelectCreate.buttonCancel'), onClick: onClose },
     }),
-    [languageCode, handleCreate, onClose],
+    [t, handleCreate, onClose],
   );
 
   const formLayout = useMemo(() => {
@@ -78,12 +78,12 @@ export const SelectCreate = memo(function SelectCreate({
     );
   }, [createLayoutProps, buttons, isOpen, handleClose, createLayoutType]);
 
-  const createBtnLabel = `${textProvider(languageCode, Texts.ButtonCreate)} ${entityName.single.toLocaleLowerCase()}`;
+  const createBtnLabel = `${t('SelectCreate.buttonCreate')} ${entityName.single.toLocaleLowerCase()}`;
 
   return (
     <div className={className} {...extractSupportProps(rest)} data-test-id='select-create__wrapper'>
       <FieldSelect
-        placeholder={textProvider(languageCode, Texts.SelectPlaceholder)}
+        placeholder={t('SelectCreate.selectPlaceholder')}
         {...selectDataStates}
         {...selectProps}
         size={selectSize}

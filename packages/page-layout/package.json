@@ -46,5 +46,8 @@
     "@snack-uikit/utils": "3.7.0",
     "classnames": "2.5.1",
     "uncontrollable": "8.0.4"
+  },
+  "peerDependencies": {
+    "@sbercloud/uikit-product-locale": "*"
   }
 }

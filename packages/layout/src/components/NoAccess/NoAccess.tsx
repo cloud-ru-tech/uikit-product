@@ -1,10 +1,10 @@
 import cn from 'classnames';
 
 import { LockSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { InfoBlock } from '@snack-uikit/info-block';
 
-import { textProvider, Texts } from '../../helpers/texts-provider';
 import { BlockBasic } from '../BlockBasic';
 import styles from './styles.module.scss';
 
@@ -14,7 +14,7 @@ export type NoAccessProps = WithSupportProps<{
 }>;
 
 export function NoAccess({ serviceName, className, ...rest }: NoAccessProps) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('Layout');
 
   return (
     <div {...extractSupportProps(rest)} className={cn(styles.wrapper, className)}>
@@ -24,11 +24,11 @@ export function NoAccess({ serviceName, className, ...rest }: NoAccessProps) {
         <InfoBlock
           size='m'
           icon={{ icon: LockSVG }}
-          title={textProvider(languageCode, Texts.NoAccessTitle)}
+          title={t('noAccessTitle')}
           description={
             <div className={styles.description}>
-              <div className={styles.text}>{textProvider(languageCode, Texts.NoAccessSubtitle)}</div>
-              <div className={styles.text}>{textProvider(languageCode, Texts.NoAccessText)}</div>
+              <div className={styles.text}>{t('noAccessSubtitle')}</div>
+              <div className={styles.text}>{t('noAccessText')}</div>
             </div>
           }
         />

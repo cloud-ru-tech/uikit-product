@@ -1,12 +1,12 @@
 import { ReactNode, useMemo, useState } from 'react';
 
 import { ArrowLeftSVG, ArrowRightSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Carousel } from '@snack-uikit/carousel';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../helpers';
 import { COLUMN_SIZE, MOBILE_COLUMN_SIZE, MOBILE_ROW_SIZE, ROW_SIZE } from './constants';
 import styles from './styles.module.scss';
 import { getLoadingCards } from './utils/getLoadingCards';
@@ -27,7 +27,7 @@ export function ProductsWidget({
   rowSize: rowSizeProp = ROW_SIZE,
   ...rest
 }: WithLayoutType<ProductsWidgetProps>) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Widget');
   const isMobile = layoutType === 'mobile';
   const columnSize = isMobile ? MOBILE_COLUMN_SIZE : columnSizeProp;
   const rowSize = isMobile ? MOBILE_ROW_SIZE : rowSizeProp;
@@ -44,7 +44,7 @@ export function ProductsWidget({
   return (
     <div className={styles.wrapper} {...extractSupportProps(rest)}>
       <div className={styles.headerWrapper}>
-        <Typography.SansTitleL tag='h5'>{textProvider(languageCode, Texts.ProductsWidgetTitle)}</Typography.SansTitleL>
+        <Typography.SansTitleL tag='h5'>{t('Products.title')}</Typography.SansTitleL>
 
         {isMobile && (
           <div className={styles.arrowWrapper} style={{ display: 'flex' }}>

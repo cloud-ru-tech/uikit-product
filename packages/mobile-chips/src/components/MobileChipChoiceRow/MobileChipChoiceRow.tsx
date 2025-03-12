@@ -3,11 +3,11 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
 import { CrossSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { MobileDroplist, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
 import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
-import { useLocale } from '@snack-uikit/locale';
 import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 
 import { CHIP_CHOICE_ROW_IDS } from '../../constants';

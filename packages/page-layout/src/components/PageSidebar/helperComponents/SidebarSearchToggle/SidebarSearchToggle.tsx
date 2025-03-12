@@ -1,15 +1,14 @@
 import { SearchSVG, VerticalMenuRightCloseSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { useSearchContext } from '../../contexts';
-import { textProvider, Texts } from '../../helpers/texts-provider';
 
 export function SidebarSearchToggle() {
   const { searchOpened, setSearchValue, setSearchOpened } = useSearchContext();
 
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('PageLayout');
 
   const toggle = () => {
     setSearchValue('');
@@ -17,9 +16,7 @@ export function SidebarSearchToggle() {
   };
 
   return (
-    <Tooltip
-      tip={searchOpened ? textProvider(languageCode, Texts.CloseSearch) : textProvider(languageCode, Texts.OpenSearch)}
-    >
+    <Tooltip tip={searchOpened ? t('PageSidebar.closeSearch') : t('PageSidebar.openSearch')}>
       <ButtonFunction size='s' onClick={toggle} icon={searchOpened ? <VerticalMenuRightCloseSVG /> : <SearchSVG />} />
     </Tooltip>
   );

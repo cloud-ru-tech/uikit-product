@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { AlarmFilledSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import {
   NotificationCard,
   NotificationCardProps,
@@ -10,7 +10,6 @@ import {
   NotificationPanelProps,
 } from '@snack-uikit/notification';
 
-import { textProvider, Texts } from '../../helpers';
 import styles from './styles.module.scss';
 
 type ChipFilter = 'all' | 'unread';
@@ -55,7 +54,7 @@ export function Notifications({
 }: NotificationsComponentProps) {
   const { hasMore, fetchMore } = loadCards || {};
 
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   const scrollRef = useRef<HTMLDivElement>(null);
   const scrollRefObserver = useRef<IntersectionObserver>();
@@ -80,10 +79,10 @@ export function Notifications({
 
   const chips = useMemo<{ value: ChipFilter; label: string }[]>(
     () => [
-      { value: 'all', label: textProvider(languageCode, Texts.NotificationsAll) },
-      { value: 'unread', label: textProvider(languageCode, Texts.NotificationsUnread) },
+      { value: 'all', label: t('notificationsAll') },
+      { value: 'unread', label: t('notificationsUnread') },
     ],
-    [languageCode],
+    [t],
   );
 
   const cards = useMemo(
@@ -146,7 +145,7 @@ export function Notifications({
       scrollEndRef={scrollRef}
       loading={loading || isLoadingMore}
       skeletonsAmount={isLoadingMore ? 1 : undefined}
-      title={textProvider(languageCode, Texts.Notifications)}
+      title={t('notifications')}
       chips={
         showError
           ? undefined
@@ -162,13 +161,13 @@ export function Notifications({
         showCards && chipFilter === 'all'
           ? {
               onClick: readAll,
-              label: textProvider(languageCode, Texts.MarkAllAsRead),
+              label: t('markAllAsRead'),
             }
           : undefined
       }
       footerButton={
         onFooterButtonClick && {
-          label: textProvider(languageCode, Texts.NotificationsFooterButton),
+          label: t('notificationsFooterButton'),
           onClick: onFooterButtonClick,
         }
       }
@@ -181,16 +180,16 @@ export function Notifications({
                 icon: CrossSVG,
                 appearance: 'neutral',
               }}
-              title={textProvider(languageCode, Texts.NotificationsErrorTitle)}
-              description={textProvider(languageCode, Texts.NotificationsErrorDescription)}
+              title={t('notificationsErrorTitle')}
+              description={t('notificationsErrorDescription')}
             />
           )}
 
           {showBlank && (
             <NotificationPanel.Blank
               icon={{ icon: AlarmFilledSVG }}
-              title={textProvider(languageCode, Texts.NoNotificationsTitle)}
-              description={textProvider(languageCode, Texts.NoNotificationsDescription)}
+              title={t('noNotificationsTitle')}
+              description={t('noNotificationsDescription')}
             />
           )}
 
@@ -202,9 +201,7 @@ export function Notifications({
 
               {chipFilter === 'all' && (
                 <>
-                  {cards.unread.length > 0 && (
-                    <NotificationPanel.Divider text={textProvider(languageCode, Texts.NotificationsDivider)} />
-                  )}
+                  {cards.unread.length > 0 && <NotificationPanel.Divider text={t('notificationsDivider')} />}
 
                   {cards.read.map(card => (
                     <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} />

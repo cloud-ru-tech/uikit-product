@@ -1,9 +1,9 @@
 import { ReactNode, useCallback, useRef } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { MobileDropdown } from '@sbercloud/uikit-product-mobile-dropdown';
 import { Calendar } from '@snack-uikit/calendar';
-import { useLocale } from '@snack-uikit/locale';
 
 import { CHIP_CHOICE_TEST_IDS, DEFAULT_EMPTY_VALUE, SIZE } from '../../../constants';
 import { useHandleOnKeyDown } from '../hooks';

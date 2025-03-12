@@ -1,14 +1,14 @@
 import { ReactNode } from 'react';
 
 import { PlusSVG } from '@sbercloud/uikit-product-icons';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { AdaptiveTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
-import { LAYOUT_TYPE, useLanguage } from '@sbercloud/uikit-product-utils';
+import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
 import { ButtonTonal } from '@snack-uikit/button';
 import { Link } from '@snack-uikit/link';
 import { QuestionTooltip } from '@snack-uikit/tooltip';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../../../../../helpers';
 import { FinanceInfoRowType } from '../../../../types';
 import styles from './styles.module.scss';
 
@@ -32,7 +32,7 @@ export function FinanceInfoRow({
   buttonTip,
   isMobile,
 }: FinanceInfoRowProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   const plusButton = (
     <ButtonTonal
@@ -57,7 +57,7 @@ export function FinanceInfoRow({
                   <div className={styles.tipMoreButtonLink}>
                     <Link
                       href={tipMoreButtonLink}
-                      text={textProvider(languageCode, Texts.FinancialMenuTooltipMoreButton)}
+                      text={t('financialMenuTooltipMoreButton')}
                       appearance='primary'
                       textMode='on-accent'
                     />

@@ -1,9 +1,10 @@
 import { Fragment } from 'react';
 
-import { useLanguage, WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
-import { formatCurrency, textProvider, Texts } from '../../../../helpers';
+import { formatCurrency } from '../../../../helpers';
 import { DiscountDetails } from '../../../../types';
 import { DiscountPercentCell } from '../DiscountPercentCell';
 import styles from './styles.module.scss';
@@ -13,12 +14,12 @@ export type DiscountBlockProps = WithLayoutType<{
 }>;
 
 export function DiscountBlock({ value, layoutType }: DiscountBlockProps) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('PriceSummary');
 
   return (
     <>
       <div className={styles.discountGrid}>
-        <Typography.SansBodyS tag='div'>{textProvider(languageCode, Texts.BasePrice)}</Typography.SansBodyS>
+        <Typography.SansBodyS tag='div'>{t('basePrice')}</Typography.SansBodyS>
 
         <Typography.SansLabelM tag='div' className={styles.priceCell}>
           {formatCurrency(value.price)}

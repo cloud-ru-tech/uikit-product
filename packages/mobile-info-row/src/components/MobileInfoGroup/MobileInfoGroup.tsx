@@ -1,16 +1,14 @@
-import { useLanguage } from '@sbercloud/uikit-product-utils';
-
 import { MobileInfoRow } from '../MobileInfoRow';
 import { DataType, MobileInfoGroupProps } from './types';
-import { getContent } from './utils';
+import { useGetContent } from './utils';
 
 export function MobileInfoGroup<T extends DataType>({ data, items, className, loading }: MobileInfoGroupProps<T>) {
-  const { languageCode } = useLanguage();
+  const getContent = useGetContent();
 
   return (
     <div className={className}>
       {items.map(({ label, accessorKey, render, ...rest }, index) => {
-        const content = getContent<T>({ data, render, accessorKey, languageCode });
+        const content = getContent<T>({ data, render, accessorKey });
 
         return (
           <MobileInfoRow

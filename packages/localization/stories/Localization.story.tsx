@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { ConfigProvider, useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { ConfigProvider } from '@sbercloud/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -20,12 +21,13 @@ type StoryProps = {
 };
 
 function Template({ showTime }: StoryProps) {
-  const { languageCode } = useLanguage();
+  const { lang } = useLocale();
+
   return (
     <>
       <div className={styles.wrapper}>
         <Typography.SansHeadlineM>
-          <strong>HooksCode:</strong> {languageCode}
+          <strong>HooksCode:</strong> {lang}
         </Typography.SansHeadlineM>
       </div>
       <div className={styles.wrapper}>

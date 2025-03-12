@@ -1,16 +1,16 @@
 import cn from 'classnames';
 import { MouseEvent, ReactNode, useState } from 'react';
 
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { AdaptiveFieldSelect, FieldSelectProps } from '@sbercloud/uikit-product-mobile-fields';
 import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonOutline } from '@snack-uikit/button';
 import { Pagination, PaginationProps } from '@snack-uikit/pagination';
 import { Tabs } from '@snack-uikit/tabs';
 
 import { SECTION_COLORS } from '../../constants';
 import { SectionTitle, SectionTitleProps } from '../../helperComponents';
-import { textProvider, Texts } from '../../helpers';
 import { SectionColor } from '../../types';
 import styles from './styles.module.scss';
 
@@ -71,7 +71,7 @@ export function SectionBasic({
   ...rest
 }: SectionBasicProps) {
   const [currentTab, setCurrentTab] = useState<string | undefined>(getInitialTab(tabBarItems));
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('SiteSection');
   const showFooter = Boolean(pagination || onLoadMoreClick);
 
   return (
@@ -125,7 +125,7 @@ export function SectionBasic({
             {onLoadMoreClick && (
               <ButtonOutline
                 className={styles.showMoreButton}
-                label={textProvider<string>(languageCode, Texts.ShowMore)}
+                label={t('Basic.showMore')}
                 onClick={onLoadMoreClick}
                 appearance='neutral'
                 size='l'

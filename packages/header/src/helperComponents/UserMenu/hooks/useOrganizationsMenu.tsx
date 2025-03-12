@@ -1,12 +1,11 @@
 import { useMemo } from 'react';
 
 import { PlusSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Avatar } from '@snack-uikit/avatar';
 import { GroupItemProps, ItemProps } from '@snack-uikit/list';
 import { PromoTag } from '@snack-uikit/promo-tag';
 
-import { textProvider, Texts } from '../../../helpers';
 import { Organization } from '../../../types';
 
 type UseOrganizationProps = {
@@ -22,7 +21,7 @@ export function useOrganizationsMenu({
   onOrganizationChange,
   closeUserMenu,
 }: UseOrganizationProps): ItemProps[] {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   return useMemo(() => {
     const groupItem: GroupItemProps = {
@@ -38,13 +37,9 @@ export function useOrganizationsMenu({
         beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols shape='square' />,
         afterContent: (
           <>
-            {organization.new && (
-              <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
-            )}
+            {organization.new && <PromoTag text={t('organizationNewBadge')} appearance='green' />}
 
-            {organization.partner && (
-              <PromoTag text={textProvider(languageCode, Texts.PartnerOrganizationBadge)} appearance='blue' />
-            )}
+            {organization.partner && <PromoTag text={t('partnerOrganizationBadge')} appearance='blue' />}
           </>
         ),
         content: {
@@ -61,7 +56,7 @@ export function useOrganizationsMenu({
     if (onOrganizationAdd) {
       groupItem.items.push({
         content: {
-          option: textProvider(languageCode, Texts.AddOrganization),
+          option: t('addOrganization'),
         },
         beforeContent: <PlusSVG />,
         onClick: () => {
@@ -74,5 +69,5 @@ export function useOrganizationsMenu({
     }
 
     return [groupItem];
-  }, [closeUserMenu, languageCode, onOrganizationAdd, onOrganizationChange, organizations]);
+  }, [closeUserMenu, t, onOrganizationAdd, onOrganizationChange, organizations]);
 }

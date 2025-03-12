@@ -1,11 +1,10 @@
 import { MouseEventHandler, useState } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Popover } from '@snack-uikit/popover';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../helpers';
 import styles from './styles.module.scss';
 
 export type PartnerPopoverProps = {
@@ -13,7 +12,7 @@ export type PartnerPopoverProps = {
 };
 
 export function PartnerPopover({ onCloseClick }: PartnerPopoverProps) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('Header');
 
   const [isOpen, setOpen] = useState(true);
 
@@ -34,12 +33,10 @@ export function PartnerPopover({ onCloseClick }: PartnerPopoverProps) {
         tip={
           <div className={styles.partnerPopoverContent}>
             <div className={styles.partnerPopoverTexts}>
-              <Typography.SansTitleS>{textProvider(languageCode, Texts.PartnerPopoverTitle)}</Typography.SansTitleS>
+              <Typography.SansTitleS>{t('partnerPopoverTitle')}</Typography.SansTitleS>
 
-              <Typography.LightLabelM>{textProvider(languageCode, Texts.PartnerPopoverText)}</Typography.LightLabelM>
-              <Typography.LightLabelM>
-                {textProvider(languageCode, Texts.PartnerPopoverDescription)}
-              </Typography.LightLabelM>
+              <Typography.LightLabelM>{t('partnerPopoverText')}</Typography.LightLabelM>
+              <Typography.LightLabelM>{t('partnerPopoverDescription')}</Typography.LightLabelM>
             </div>
 
             <div className={styles.partnerPopoverButton}>
@@ -47,7 +44,7 @@ export function PartnerPopover({ onCloseClick }: PartnerPopoverProps) {
                 size='s'
                 appearance='neutral'
                 onClick={handleCloseClick}
-                label={textProvider(languageCode, Texts.PartnerPopoverCancelButton)}
+                label={t('partnerPopoverCancelButton')}
               />
             </div>
           </div>

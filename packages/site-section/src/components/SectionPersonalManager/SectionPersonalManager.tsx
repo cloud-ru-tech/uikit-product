@@ -2,12 +2,12 @@ import cn from 'classnames';
 import { useMemo } from 'react';
 
 import { CloudMoveSVG, HeadphonesSVG, UsersSVG } from '@sbercloud/uikit-product-icons';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { CardBasic, CardBasicProps } from '@sbercloud/uikit-product-site-cards';
-import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../helpers';
 import { SectionBasic } from '../SectionBasic';
 import styles from './styles.module.scss';
 import { getCardTitleTypographyProps } from './utils';
@@ -49,7 +49,7 @@ export function SectionPersonalManager({
   onGetConsultationClick,
   ...rest
 }: SectionPersonalManagerProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('SiteSection');
 
   const benefitsCards = useMemo<SectionPersonalManagerProps['benefits']>(() => {
     if (benefits) {
@@ -58,25 +58,25 @@ export function SectionPersonalManager({
 
     return [
       {
-        title: textProvider<string>(languageCode, Texts.ArgumentAmountOfExperts),
+        title: t('PersonalManager.argumentAmountOfExperts'),
         icon: UsersSVG,
       },
       {
-        title: textProvider<string>(languageCode, Texts.ArgumentMethodologies),
+        title: t('PersonalManager.argumentMethodologies'),
         icon: CloudMoveSVG,
       },
       {
-        title: textProvider<string>(languageCode, Texts.ArgumentPersonalManager),
+        title: t('PersonalManager.argumentPersonalManager'),
         icon: HeadphonesSVG,
       },
     ];
-  }, [benefits, languageCode]);
+  }, [benefits, t]);
 
   return (
     <SectionBasic
       id={id}
-      title={title || textProvider<string>(languageCode, Texts.PersonalManagerTitle)}
-      description={description || textProvider<string>(languageCode, Texts.PersonalManagerSubtitle)}
+      title={title || t('PersonalManager.title')}
+      description={description || t('PersonalManager.subtitle')}
       backgroundColor='neutral-background1-level'
       layoutType={layoutType}
       className={cn(className, styles.sectionPersonalManager)}
@@ -87,17 +87,17 @@ export function SectionPersonalManager({
           <div className={styles.approachTextWrapper}>
             <div className={styles.cardTextContent}>
               <Typography family='sans' {...getCardTitleTypographyProps(layoutType)}>
-                {manager.title || textProvider<string>(languageCode, Texts.IndividualApproachTitle)}
+                {manager.title || t('PersonalManager.individualApproachTitle')}
               </Typography>
               <Typography family='sans' purpose='body' size='l'>
-                {manager.text || textProvider<string>(languageCode, Texts.IndividualApproachDescription)}
+                {manager.text || t('PersonalManager.individualApproachDescription')}
               </Typography>
             </div>
             <ButtonFilled
               className={styles.consultationButton}
               size='l'
               appearance='primary'
-              label={textProvider<string>(languageCode, Texts.ConsultationButton)}
+              label={t('PersonalManager.consultationButton')}
               onClick={onGetConsultationClick}
               data-layout-type={layoutType}
               data-test-id='personal-manager_get-consultation-button'
@@ -115,10 +115,10 @@ export function SectionPersonalManager({
         </div>
         <div className={cn(styles.card, styles.cardTextContent)}>
           <Typography family='sans' {...getCardTitleTypographyProps(layoutType)}>
-            {card?.title || textProvider<string>(languageCode, Texts.AllDaySupportTitle)}
+            {card?.title || t('PersonalManager.allDaySupportTitle')}
           </Typography>
           <Typography family='sans' purpose='body' size='l'>
-            {card?.text || textProvider<string>(languageCode, Texts.AllDaySupportDescription)}
+            {card?.text || t('PersonalManager.allDaySupportDescription')}
           </Typography>
         </div>
       </div>

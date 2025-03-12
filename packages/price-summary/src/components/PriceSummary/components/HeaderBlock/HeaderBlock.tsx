@@ -1,8 +1,7 @@
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../../../helpers';
 import { PeriodDropdown, PeriodDropdownProps } from '../PeriodDropdown';
 import styles from './styles.module.scss';
 
@@ -11,7 +10,7 @@ export type HeaderBlockProps = PeriodDropdownProps & {
 };
 
 export function HeaderBlock({ period, onPeriodChanged, periodOptions, promoBadge }: HeaderBlockProps) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('PriceSummary');
 
   return (
     <>
@@ -24,7 +23,7 @@ export function HeaderBlock({ period, onPeriodChanged, periodOptions, promoBadge
       <div className={styles.headline}>
         <PeriodDropdown period={period} onPeriodChanged={onPeriodChanged} periodOptions={periodOptions} />
 
-        <Typography.SansBodyM className={styles.vat}>{textProvider(languageCode, Texts.Vat)}</Typography.SansBodyM>
+        <Typography.SansBodyM className={styles.vat}>{t('vat')}</Typography.SansBodyM>
       </div>
     </>
   );

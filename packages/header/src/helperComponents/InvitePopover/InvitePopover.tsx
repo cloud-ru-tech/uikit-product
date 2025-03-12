@@ -1,11 +1,10 @@
 import { MouseEventHandler, useState } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
 import { Popover } from '@snack-uikit/popover';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../helpers';
 import styles from './styles.module.scss';
 
 export type InvitePopoverProps = {
@@ -13,7 +12,7 @@ export type InvitePopoverProps = {
 };
 
 export function InvitePopover({ onOpenButtonClick }: InvitePopoverProps) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('Header');
 
   const [isOpen, setOpen] = useState(true);
 
@@ -40,9 +39,9 @@ export function InvitePopover({ onOpenButtonClick }: InvitePopoverProps) {
         tip={
           <div className={styles.invitePopoverContent}>
             <div className={styles.invitePopoverTexts}>
-              <Typography.SansTitleS>{textProvider(languageCode, Texts.InvitePopoverTitle)}</Typography.SansTitleS>
+              <Typography.SansTitleS>{t('invitePopoverTitle')}</Typography.SansTitleS>
 
-              <Typography.LightLabelM>{textProvider(languageCode, Texts.InvitePopoverText)}</Typography.LightLabelM>
+              <Typography.LightLabelM>{t('invitePopoverText')}</Typography.LightLabelM>
             </div>
 
             <div className={styles.invitePopoverButtons}>
@@ -50,14 +49,14 @@ export function InvitePopover({ onOpenButtonClick }: InvitePopoverProps) {
                 size='s'
                 appearance='neutral'
                 onClick={handleCloseClick}
-                label={textProvider(languageCode, Texts.InvitePopoverCancelButton)}
+                label={t('invitePopoverCancelButton')}
               />
 
               <ButtonFilled
                 size='s'
                 appearance='neutral'
                 onClick={handleAcceptClick}
-                label={textProvider(languageCode, Texts.InvitePopoverAcceptButton)}
+                label={t('invitePopoverAcceptButton')}
               />
             </div>
           </div>

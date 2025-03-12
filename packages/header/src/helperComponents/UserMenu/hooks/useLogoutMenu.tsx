@@ -1,10 +1,8 @@
 import { useMemo } from 'react';
 
 import { ExitSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { GroupItemProps, ItemProps } from '@snack-uikit/list';
-
-import { textProvider, Texts } from '../../../helpers';
 
 type UseLogoutItemsProps = {
   closeUserMenu(): void;
@@ -12,7 +10,7 @@ type UseLogoutItemsProps = {
 };
 
 export function useLogoutMenu({ onLogout, closeUserMenu }: UseLogoutItemsProps): ItemProps[] {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   return useMemo(() => {
     const groupItem: GroupItemProps = {
@@ -25,7 +23,7 @@ export function useLogoutMenu({ onLogout, closeUserMenu }: UseLogoutItemsProps):
     if (onLogout) {
       groupItem.items.push({
         content: {
-          option: textProvider(languageCode, Texts.Logout),
+          option: t('logout'),
         },
         beforeContent: <ExitSVG />,
         onClick: () => {
@@ -38,5 +36,5 @@ export function useLogoutMenu({ onLogout, closeUserMenu }: UseLogoutItemsProps):
     }
 
     return [groupItem];
-  }, [closeUserMenu, languageCode, onLogout]);
+  }, [closeUserMenu, t, onLogout]);
 }

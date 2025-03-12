@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
 
 import { ChevronRightSVG, FeaturedSVG, ThemeContrastSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { GroupItemProps, ItemProps } from '@snack-uikit/list';
 
-import { getThemeModeOptions, textProvider, Texts } from '../../../helpers';
+import { useGetThemeModeOptions } from '../../../hooks';
 import { ThemeMode } from '../../../types';
 
 type UseWhatNewMenu = {
@@ -23,7 +23,8 @@ export function useGeneralMenu({
   onWhatsNewClick,
   closeUserMenu,
 }: UseWhatNewMenu): ItemProps[] {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
+  const themeModeOptions = useGetThemeModeOptions({ themeMode });
 
   return useMemo(() => {
     const groupItem: GroupItemProps = {
@@ -33,23 +34,23 @@ export function useGeneralMenu({
       hidden: !(themeMode || onWhatsNewClick || onThemeSelectorClick),
     };
 
-    if (themeMode) {
+    if (themeModeOptions) {
       groupItem.items.push({
         type: 'next-list',
         content: {
-          option: textProvider(languageCode, Texts.ThemeModeLabel),
+          option: t('themeModeLabel'),
         },
         placement: 'left-start',
         beforeContent: <ThemeContrastSVG />,
         'data-test-id': 'header__user-menu__theme-mode',
-        items: getThemeModeOptions({ themeMode, languageCode }),
+        items: themeModeOptions,
       });
     }
 
     if (onThemeSelectorClick) {
       groupItem.items.push({
         content: {
-          option: textProvider(languageCode, Texts.ThemeModeLabel),
+          option: t('themeModeLabel'),
         },
         onClick: onThemeSelectorClick,
         afterContent: <ChevronRightSVG />,
@@ -61,7 +62,7 @@ export function useGeneralMenu({
     if (onWhatsNewClick) {
       groupItem.items.push({
         content: {
-          option: textProvider(languageCode, Texts.WhatsNew),
+          option: t('whatsNew'),
         },
         beforeContent: <FeaturedSVG />,
         onClick: () => {
@@ -74,5 +75,5 @@ export function useGeneralMenu({
     }
 
     return [groupItem];
-  }, [closeUserMenu, languageCode, onThemeSelectorClick, onWhatsNewClick, themeMode]);
+  }, [closeUserMenu, onThemeSelectorClick, onWhatsNewClick, t, themeMode, themeModeOptions]);
 }

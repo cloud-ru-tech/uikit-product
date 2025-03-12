@@ -1,11 +1,12 @@
 import { ReactNode } from 'react';
 
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { MobileModalCustom, MobileModalCustomProps } from '@sbercloud/uikit-product-mobile-modal';
-import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 
 import { InputConfirm } from '../../helperComponents';
-import { DictionaryPropertyAsFn, isDefined, textProvider, Texts } from '../../helpers';
+import { isDefined } from '../../helpers';
 import { useTextFieldValidation } from './hooks';
 import styles from './styles.module.scss';
 
@@ -44,7 +45,7 @@ export function MobileDeleteModal({
   deleting,
   ...restProps
 }: MobileDeleteModalProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('ModalPredefined');
 
   const withInputConfirmation = isDefined(confirmText);
 
@@ -67,7 +68,7 @@ export function MobileDeleteModal({
   return (
     <MobileModalCustom {...restProps} open={open} onClose={handleClose}>
       <MobileModalCustom.Header
-        title={textProvider<DictionaryPropertyAsFn>(languageCode, Texts.Title)(objectType ?? '')}
+        title={`${t('title')} ${objectType ?? ''}`}
         titleTooltip={titleTooltip}
         subtitle={subtitle}
       />
@@ -81,27 +82,21 @@ export function MobileDeleteModal({
               <InputConfirm
                 confirmText={confirmText}
                 hideConfirmCopyButton={hideConfirmCopyButton}
-                labelText={Texts.FieldLabel}
+                labelText={t('fieldLabel')}
                 {...inputProps}
               />
             )}
 
             <div className={styles.footerActions}>
               <ButtonFilled
-                label={textProvider<string>(languageCode, Texts.Delete)}
+                label={t('delete')}
                 loading={deleting}
                 onClick={handleDelete}
                 size='m'
                 appearance='destructive'
                 fullWidth
               />
-              <ButtonOutline
-                label={textProvider<string>(languageCode, Texts.Cancel)}
-                onClick={handleCancel}
-                appearance='neutral'
-                size='m'
-                fullWidth
-              />
+              <ButtonOutline label={t('cancel')} onClick={handleCancel} appearance='neutral' size='m' fullWidth />
             </div>
           </div>
         }

@@ -2,7 +2,8 @@ import cn from 'classnames';
 import { createRef, KeyboardEvent, RefObject, useCallback, useMemo } from 'react';
 
 import { SearchSVG, VerticalMenuRightCloseSVG } from '@sbercloud/uikit-product-icons';
-import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { List, ListProps } from '@snack-uikit/list';
@@ -11,7 +12,6 @@ import { SearchPrivate } from '@snack-uikit/search-private';
 import { Tooltip } from '@snack-uikit/tooltip';
 import { TruncateStringProps } from '@snack-uikit/truncate-string';
 
-import { textProvider, Texts } from '../../helpers';
 import { GroupSectionFooterButton, GroupSectionItemDroplist } from './components';
 import { GroupSectionSkeletonItem } from './components/GroupSectionSkeletonItem';
 import { useSearch } from './hooks';
@@ -73,7 +73,7 @@ export function GroupSection({
   virtualized,
   ...rest
 }: GroupSectionProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
   const itemRefs: Record<string, RefObject<HTMLElement>> = useMemo(() => ({}), []);
   const itemTestIdPrefix = rest['data-test-id'] || 'header__select-group';
 
@@ -152,13 +152,9 @@ export function GroupSection({
             ),
             afterContent: (
               <>
-                {item.new && (
-                  <PromoTag text={textProvider(languageCode, Texts.OrganizationNewBadge)} appearance='green' />
-                )}
+                {item.new && <PromoTag text={t('organizationNewBadge')} appearance='green' />}
 
-                {item.partner && (
-                  <PromoTag text={textProvider(languageCode, Texts.PartnerOrganizationBadge)} appearance='blue' />
-                )}
+                {item.partner && <PromoTag text={t('partnerOrganizationBadge')} appearance='blue' />}
 
                 {item?.tag}
 
@@ -186,7 +182,7 @@ export function GroupSection({
       getItemRef,
       handleItemMouseDown,
       itemTestIdPrefix,
-      languageCode,
+      t,
       navigateOutside,
       truncateVariant,
     ],
@@ -208,14 +204,14 @@ export function GroupSection({
                 <SearchPrivate
                   tabIndex={searchInputTabIndex}
                   size='m'
-                  placeholder={searchPlaceholder ?? textProvider(languageCode, Texts.Search)}
+                  placeholder={searchPlaceholder ?? t('search')}
                   value={searchValue}
                   onChange={setSearchValue}
                   ref={searchRef}
                   data-test-id='header__select-group-section-search-input'
                 />
 
-                <Tooltip tip={textProvider(languageCode, Texts.SearchCloseButton)} open={mobile ? false : undefined}>
+                <Tooltip tip={t('searchCloseButton')} open={mobile ? false : undefined}>
                   <ButtonFunction
                     size='xs'
                     className={styles.searchButton}
@@ -228,7 +224,7 @@ export function GroupSection({
               </div>
 
               {!animationState.isMounted && (
-                <Tooltip tip={textProvider(languageCode, Texts.SearchOpenButton)} open={mobile ? false : undefined}>
+                <Tooltip tip={t('searchOpenButton')} open={mobile ? false : undefined}>
                   <ButtonFunction
                     size='xs'
                     icon={<SearchSVG />}
@@ -257,11 +253,11 @@ export function GroupSection({
           selection={selectedItem?.id ? { mode: 'single', value: selectedItem.id } : undefined}
           dataFiltered={searchValue.length > 0}
           noDataState={{
-            description: textProvider(languageCode, Texts.NoData),
+            description: t('noData'),
             ...noDataState,
           }}
           noResultsState={{
-            description: textProvider(languageCode, Texts.NoDataFound),
+            description: t('noDataFound'),
           }}
           items={items}
           footer={addItem?.handler ? <GroupSectionFooterButton {...addItem} /> : undefined}

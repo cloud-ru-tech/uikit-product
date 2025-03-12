@@ -1,11 +1,10 @@
 import { forwardRef } from 'react';
 
 import { CopyButton } from '@sbercloud/uikit-product-copy-line';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { FieldText } from '@snack-uikit/fields';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
-import { textProvider, Texts } from '../../helpers';
 import styles from './styles.module.scss';
 
 export type InputConfirmProps = {
@@ -13,18 +12,18 @@ export type InputConfirmProps = {
   hideConfirmCopyButton?: boolean;
   value: string;
   error: string;
-  labelText: Texts;
+  labelText: string;
   onChange: (newValue: string) => void;
 };
 
 export const InputConfirm = forwardRef<HTMLInputElement, InputConfirmProps>(
   ({ confirmText, value, error, onChange, hideConfirmCopyButton, labelText }, ref) => {
-    const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+    const { t } = useLocale('ModalPredefined');
 
     return (
       <div className={styles.wrapper}>
         <div className={styles.textFieldDescription}>
-          <span className={styles.content}>{textProvider<string>(languageCode, labelText)}</span>
+          <span className={styles.content}>{labelText}</span>
 
           <div className={styles.copyValue}>
             <TruncateString text={confirmText} variant='middle' />
@@ -37,7 +36,7 @@ export const InputConfirm = forwardRef<HTMLInputElement, InputConfirmProps>(
           ref={ref}
           required
           size='m'
-          placeholder={textProvider<string>(languageCode, Texts.EnterName)}
+          placeholder={t('enterName')}
           value={value}
           onChange={onChange}
           hint={error}

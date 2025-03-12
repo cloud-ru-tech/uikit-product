@@ -1,7 +1,7 @@
 import { MouseEvent, ReactNode, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { BurgerSVG, ChevronRightSVG, QuestionSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Breadcrumbs } from '@snack-uikit/breadcrumbs';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Counter } from '@snack-uikit/counter';
@@ -26,7 +26,7 @@ import {
   useOrganizationsMenu,
   useProfileMenu,
 } from '../../helperComponents';
-import { getThemeModeOptions, textProvider, Texts } from '../../helpers';
+import { useGetThemeModeOptions } from '../../hooks';
 import { DIVIDER_SETTING_OPTION_ID, Platform, ProductOption, Workspace } from '../../types';
 import { extractAppNameFromId } from '../../utils';
 import { isDividerItem, ProductHeaderProps } from '../ProductHeader';
@@ -66,8 +66,7 @@ export function ProductHeaderMobile({
     projectsEmptyState,
     onAccessRequestClick,
   } = select ?? {};
-
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   const visibleSettings = useMemo(
     () => settings?.filter(item => !item.hidden && item.id !== DIVIDER_SETTING_OPTION_ID),
@@ -79,6 +78,8 @@ export function ProductHeaderMobile({
   const [isProjectMenuOpen, setIsProjectMenuOpen] = useState(false);
   const [isThemeModeMenuOpen, setIsThemeModeMenuOpen] = useState(false);
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+
+  const themeModeOptions = useGetThemeModeOptions({ themeMode: userMenu?.themeMode });
 
   const handleProjectMenuOpen = useCallback(
     (isOpen: boolean) => {
@@ -342,10 +343,7 @@ export function ProductHeaderMobile({
         nestedDrawer={
           <>
             <DrawerCustom open={isProjectMenuOpen} onClose={closeProjectMenu} position='left'>
-              <DrawerCustom.Header
-                title={textProvider(languageCode, Texts.Platforms)}
-                className={styles.nestedHeader}
-              />
+              <DrawerCustom.Header title={t('platforms')} className={styles.nestedHeader} />
               <Scroll>
                 {select && (
                   <div className={styles.selectGroup}>
@@ -370,18 +368,12 @@ export function ProductHeaderMobile({
                 )}
               </Scroll>
             </DrawerCustom>
-            {userMenu?.themeMode && (
+            {themeModeOptions && (
               <DrawerCustom open={isThemeModeMenuOpen} onClose={() => setIsThemeModeMenuOpen(false)} position='left'>
-                <DrawerCustom.Header
-                  title={textProvider(languageCode, Texts.ThemeModeLabel)}
-                  className={styles.nestedHeader}
-                />
+                <DrawerCustom.Header title={t('themeModeLabel')} className={styles.nestedHeader} />
                 <Scroll>
                   <div className={styles.selectGroup}>
-                    <List
-                      items={getThemeModeOptions({ themeMode: userMenu.themeMode, languageCode })}
-                      selection={{ mode: 'single' }}
-                    />
+                    <List items={themeModeOptions} selection={{ mode: 'single' }} />
                   </div>
                 </Scroll>
               </DrawerCustom>
@@ -389,7 +381,7 @@ export function ProductHeaderMobile({
           </>
         }
       >
-        <DrawerCustom.Header title={textProvider(languageCode, Texts.Menu)} className={styles.nestedHeader} />
+        <DrawerCustom.Header title={t('menu')} className={styles.nestedHeader} />
 
         <Scroll>
           <div className={styles.selectGroup}>

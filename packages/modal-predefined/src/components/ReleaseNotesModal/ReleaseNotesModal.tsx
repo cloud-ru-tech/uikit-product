@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Carousel } from '@snack-uikit/carousel';
 import { ModalCustom } from '@snack-uikit/modal';
@@ -10,7 +10,6 @@ import { WithSkeleton } from '@snack-uikit/skeleton';
 import { DataErrorInfoBlock, NoDataInfoBlock } from '../../helperComponents';
 import { NoteItem, NoteItemSkeleton } from '../../helperComponents/NoteItem';
 import { NoteSliderControls } from '../../helperComponents/NoteSliderControls';
-import { textProvider, Texts } from '../../helpers';
 import { useReleaseNotesModal } from '../../hooks';
 import { ReleaseNotesModalProps } from '../../types';
 import styles from './styles.module.scss';
@@ -24,7 +23,7 @@ export function ReleaseNotesModal({
   dataError,
   onDataErrorRetryClick,
 }: Omit<ReleaseNotesModalProps, 'layoutType'>) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('ModalPredefined');
   const {
     onCloseInner,
     onReadLaterClickInner,
@@ -70,7 +69,7 @@ export function ReleaseNotesModal({
 
   return (
     <ModalCustom open={open} onClose={onCloseInner} size='m'>
-      <ModalCustom.Header title={textProvider<string>(languageCode, Texts.WhatsNew)} />
+      <ModalCustom.Header title={t('whatsNew')} />
       <ModalCustom.Body content={content} />
       {showFooter && (
         <ModalCustom.Footer
@@ -79,7 +78,7 @@ export function ReleaseNotesModal({
               <div className={styles.footerLeft}>
                 {onReadLaterClick && (
                   <ButtonFunction
-                    label={textProvider<string>(languageCode, Texts.ReadLater)}
+                    label={t('readLater')}
                     onClick={onReadLaterClickInner}
                     size='m'
                     appearance='neutral'

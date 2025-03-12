@@ -1,12 +1,11 @@
 import { PropsWithChildren } from 'react';
 
 import { RepeatSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Sun } from '@snack-uikit/loaders';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../helpers';
 import styles from './styles.module.scss';
 
 export type ContentBlockProps = {
@@ -16,7 +15,7 @@ export type ContentBlockProps = {
 };
 
 export function ContentBlock({ loading, dataError, onRetry, children }: PropsWithChildren<ContentBlockProps>) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('PriceSummary');
 
   if (loading) {
     return (
@@ -31,7 +30,7 @@ export function ContentBlock({ loading, dataError, onRetry, children }: PropsWit
       <div className={styles.dataErrorBlock}>
         {onRetry && <ButtonFunction icon={<RepeatSVG />} onClick={onRetry} />}
 
-        <Typography.SansBodyS>{textProvider(languageCode, Texts.DataError)}</Typography.SansBodyS>
+        <Typography.SansBodyS>{t('dataError')}</Typography.SansBodyS>
       </div>
     );
   }

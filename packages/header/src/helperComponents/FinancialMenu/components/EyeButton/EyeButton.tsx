@@ -1,11 +1,9 @@
 import { MouseEventHandler } from 'react';
 
 import { EyeClosedSVG, EyeSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Tooltip } from '@snack-uikit/tooltip';
-
-import { textProvider, Texts } from '../../../../helpers';
 
 type EyeButtonType = {
   dataVisible: boolean;
@@ -13,13 +11,10 @@ type EyeButtonType = {
 };
 
 export function EyeButton({ onClick, dataVisible }: EyeButtonType) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
 
   const icon = dataVisible ? <EyeClosedSVG /> : <EyeSVG />;
-  const tip = textProvider(
-    languageCode,
-    dataVisible ? Texts.FinancialMenuEyeButtonDataVisibleTip : Texts.FinancialMenuEyeButtonDataHiddenTip,
-  );
+  const tip = t(dataVisible ? 'financialMenuEyeButtonDataVisibleTip' : 'financialMenuEyeButtonDataHiddenTip');
 
   return (
     <Tooltip tip={tip} placement='top'>

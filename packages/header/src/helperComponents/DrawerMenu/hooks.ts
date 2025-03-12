@@ -1,10 +1,9 @@
 import debounce from 'lodash.debounce';
 import { MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { isBrowser } from '@snack-uikit/utils';
 
-import { textProvider, Texts } from '../../helpers';
 import { InnerLink, LinksGroup } from '../../types';
 import { DrawerMenuProps } from './types';
 import { filterHiddenLinks } from './utils';
@@ -133,7 +132,7 @@ export function useLinksScrollToSelected({ setSearchValue, drawerOpen, highlight
 }
 
 export const useWithFavorites = ({ links, favorites }: Pick<DrawerMenuProps, 'links' | 'favorites'>) => {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
   const favoriteItemIds = useMemo(() => favorites?.value ?? [], [favorites?.value]);
 
   const favoriteItems = useMemo(() => {
@@ -159,12 +158,12 @@ export const useWithFavorites = ({ links, favorites }: Pick<DrawerMenuProps, 'li
 
     return [
       {
-        label: { text: textProvider(languageCode, Texts.Favorite) },
+        label: { text: t('favorite') },
         id: 'favorite',
         items: favouriteItems,
       },
     ];
-  }, [favoriteItemIds, languageCode, links]);
+  }, [favoriteItemIds, t, links]);
 
   return useMemo(() => (links ? [...favoriteItems, ...links] : undefined), [favoriteItems, links]);
 };

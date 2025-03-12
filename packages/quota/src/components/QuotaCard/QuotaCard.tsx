@@ -1,7 +1,7 @@
-import { extractSupportProps, useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Link, LinkProps } from '@snack-uikit/link';
 
-import { textProvider, Texts } from '../../helpers';
 import { DataRow, NoData, QuotaCardLayout } from './components';
 import styles from './styles.module.scss';
 
@@ -18,7 +18,7 @@ export function QuotaCard({ loading, title, limit, created, increaseLink, onRetr
   const available = (limit ?? 0) - (created ?? 0);
   const exceeded = available <= 0;
 
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Quota');
 
   const noData = limit === undefined || created === undefined;
 
@@ -32,26 +32,20 @@ export function QuotaCard({ loading, title, limit, created, increaseLink, onRetr
 
   return (
     <QuotaCardLayout title={title} exceeded={exceeded} loading={loading} {...extractSupportProps(rest)}>
-      <DataRow label={textProvider(languageCode, Texts.Created)} value={created} className={styles.created} />
+      <DataRow label={t('created')} value={created} className={styles.created} />
 
       {exceeded ? (
         <DataRow
-          label={textProvider(languageCode, Texts.Exceeded)}
+          label={t('exceeded')}
           value={
             increaseLink ? (
-              <Link
-                textMode='accent'
-                text={textProvider(languageCode, Texts.Increase)}
-                size='s'
-                appearance='red'
-                {...increaseLink}
-              />
+              <Link textMode='accent' text={t('increase')} size='s' appearance='red' {...increaseLink} />
             ) : undefined
           }
           className={styles.available}
         />
       ) : (
-        <DataRow label={textProvider(languageCode, Texts.Available)} value={available} className={styles.available} />
+        <DataRow label={t('available')} value={available} className={styles.available} />
       )}
     </QuotaCardLayout>
   );

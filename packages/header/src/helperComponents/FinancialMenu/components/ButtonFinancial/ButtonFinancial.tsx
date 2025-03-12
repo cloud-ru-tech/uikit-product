@@ -1,10 +1,9 @@
 import { formatNumber } from '@sbercloud/ft-formatters';
 import { CostControlSVG } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { HotSpot } from '@snack-uikit/hot-spot';
 import { Spinner } from '@snack-uikit/loaders';
 
-import { textProvider, Texts } from '../../../../helpers';
 import { CURRENCY_MAP } from '../../constants';
 import styles from './styles.module.scss';
 
@@ -27,7 +26,7 @@ export function ButtonFinancial({
   isLoading,
   onClick,
 }: ButtonFinancialProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
   let content = null;
 
   if (valueVisible) {
@@ -37,7 +36,7 @@ export function ButtonFinancial({
       <>
         <div className={styles.label}>{formatNumber(value, { type: formatNumber.types.DigitSpaces })}</div>
 
-        <div>{type === 'bonuses' ? textProvider(languageCode, Texts.FinancialMenuBonusSign) : CURRENCY_MAP.ruble}</div>
+        <div>{type === 'bonuses' ? t('financialMenuBonusSign') : CURRENCY_MAP.ruble}</div>
       </>
     );
   }

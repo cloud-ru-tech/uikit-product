@@ -1,7 +1,7 @@
 import { MouseEvent, useCallback, useMemo, useState } from 'react';
 
 import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { DrawerCustom } from '@snack-uikit/drawer';
@@ -9,7 +9,7 @@ import { List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { Search } from '@snack-uikit/search';
 
-import { getSelectProductListProps, textProvider, Texts } from '../../../../helpers';
+import { getSelectProductListProps } from '../../../../helpers';
 import { ProductOption } from '../../../../types';
 import { extractAppNameFromId } from '../../../../utils';
 import { MarketplaceBannerCard } from '../../../MarketplaceBannerCard';
@@ -37,7 +37,7 @@ export function DrawerMenuMobile({
   hideProductSelect = false,
   ...rest
 }: DrawerMenuProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Header');
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
   const { searchValue, setSearchValue, rightSectionLinks, leftSectionLinks } = useLinks({ links, favorites });
@@ -100,7 +100,7 @@ export function DrawerMenuMobile({
         push={{ distance: 8 }}
         nestedDrawer={
           <DrawerCustom open={innerOpen} onClose={toggleInnerDrawer} position='left'>
-            <DrawerCustom.Header title={textProvider(languageCode, Texts.Platforms)} className={styles.nestedHeader} />
+            <DrawerCustom.Header title={t('platforms')} className={styles.nestedHeader} />
 
             <List
               {...getSelectProductListProps({
@@ -114,7 +114,7 @@ export function DrawerMenuMobile({
           </DrawerCustom>
         }
       >
-        <DrawerCustom.Header title={textProvider(languageCode, Texts.Navigation)} className={styles.nestedHeader} />
+        <DrawerCustom.Header title={t('navigation')} className={styles.nestedHeader} />
 
         <Scroll>
           <div className={styles.content}>
@@ -130,7 +130,7 @@ export function DrawerMenuMobile({
             {leftSectionLinks && (
               <Search
                 size='m'
-                placeholder={textProvider(languageCode, Texts.SearchByServices)}
+                placeholder={t('searchByServices')}
                 value={searchValue}
                 onChange={setSearchValue}
                 data-test-id='header__drawer-menu__search'
@@ -141,16 +141,16 @@ export function DrawerMenuMobile({
               <>
                 {onMarketplaceBannerClick && (
                   <MarketplaceBannerCard
-                    title={textProvider(languageCode, Texts.MkpBannerTitle)}
-                    promoBadge={textProvider(languageCode, Texts.MkpBannerCount)}
+                    title={t('mkpBannerTitle')}
+                    promoBadge={t('mkpBannerCount')}
                     onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
                     isMobile
                   />
                 )}
                 {onReferralBannerClick && (
                   <ReferralBannerCard
-                    title={textProvider(languageCode, Texts.ReferralBannerTitle)}
-                    promoBadge={textProvider(languageCode, Texts.ReferralBannerTag)}
+                    title={t('referralBannerTitle')}
+                    promoBadge={t('referralBannerTag')}
                     onClick={wrappedClick({ onClick: onReferralBannerClick })}
                     isMobile
                   />
@@ -190,7 +190,7 @@ export function DrawerMenuMobile({
 
             {rightSectionLinks?.length === 0 && (
               <div className={styles.noData} data-test-id='header__drawer-menu__no-data'>
-                {textProvider(languageCode, Texts.NoData)}
+                {t('noData')}
               </div>
             )}
 

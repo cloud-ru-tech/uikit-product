@@ -1,11 +1,12 @@
 import { ReactNode } from 'react';
 
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { MobileModalCustom, MobileModalCustomProps } from '@sbercloud/uikit-product-mobile-modal';
-import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 
 import { InputConfirm } from '../../helperComponents';
-import { isDefined, textProvider, Texts } from '../../helpers';
+import { isDefined } from '../../helpers';
 import { useTextFieldValidation } from './hooks';
 import styles from './styles.module.scss';
 
@@ -41,7 +42,7 @@ export function MobileRecallModal({
   loading,
   ...restProps
 }: MobileRecallProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('ModalPredefined');
 
   const withInputConfirmation = isDefined(confirmText);
 
@@ -63,11 +64,7 @@ export function MobileRecallModal({
 
   return (
     <MobileModalCustom {...restProps} open={open} onClose={handleClose}>
-      <MobileModalCustom.Header
-        title={textProvider<string>(languageCode, Texts.RecallTitle)}
-        titleTooltip={titleTooltip}
-        subtitle={subtitle}
-      />
+      <MobileModalCustom.Header title={t('recallTitle')} titleTooltip={titleTooltip} subtitle={subtitle} />
 
       <MobileModalCustom.Body content={<div className={styles.description}>{description}</div>} />
 
@@ -78,27 +75,21 @@ export function MobileRecallModal({
               <InputConfirm
                 confirmText={confirmText}
                 hideConfirmCopyButton={hideConfirmCopyButton}
-                labelText={Texts.RecallFieldLabel}
+                labelText={t('recallFieldLabel')}
                 {...inputProps}
               />
             )}
 
             <div className={styles.footerActions}>
               <ButtonFilled
-                label={textProvider<string>(languageCode, Texts.Recall)}
+                label={t('recall')}
                 loading={loading}
                 onClick={handleDelete}
                 size='m'
                 appearance='destructive'
                 fullWidth
               />
-              <ButtonOutline
-                label={textProvider<string>(languageCode, Texts.Cancel)}
-                onClick={handleCancel}
-                appearance='neutral'
-                size='m'
-                fullWidth
-              />
+              <ButtonOutline label={t('cancel')} onClick={handleCancel} appearance='neutral' size='m' fullWidth />
             </div>
           </div>
         }

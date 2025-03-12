@@ -11,107 +11,95 @@ import {
   TajikistanSVG,
   UzbekistanSVG,
 } from '@sbercloud/uikit-product-icons';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
-
-import { textProvider, Texts } from './textsProvider';
-import { FieldPhoneOptionsProps } from './types';
-
-const DEFAULT_COUNTRY_CODES: FieldPhoneOptionsProps[] = [
-  {
-    id: 'Russia',
-    mask: 'XXX XXX-XX-XX',
-    content: {
-      option: Texts.Russia,
-      caption: '+7',
-    },
-    beforeContent: <RussiaSVG size={24} />,
-  },
-  {
-    id: 'Belarus',
-    mask: 'XXX XXX-XX-XX',
-    content: {
-      option: Texts.Belarus,
-      caption: '+375',
-    },
-    beforeContent: <BelarusSVG size={24} />,
-  },
-  {
-    id: 'Kazakhstan',
-    mask: 'XXX XXX-XX-XX',
-    content: {
-      option: Texts.Kazakhstan,
-      caption: '+7',
-    },
-    beforeContent: <KazakhstanSVG size={24} />,
-  },
-  {
-    id: 'Armenia',
-    mask: 'XX XXX-XXX',
-    content: {
-      option: Texts.Armenia,
-      caption: '+374',
-    },
-    beforeContent: <ArmeniaSVG size={24} />,
-  },
-  {
-    id: 'Kyrgyzstan',
-    mask: 'XXX XXX-XXX',
-    content: {
-      option: Texts.Kyrgyzstan,
-      caption: '+996',
-    },
-    beforeContent: <KyrgyzstanSVG size={24} />,
-  },
-  {
-    id: 'Uzbekistan',
-    mask: 'XX XXX-XX-XX',
-    content: {
-      option: Texts.Uzbekistan,
-      caption: '+998',
-    },
-    beforeContent: <UzbekistanSVG size={24} />,
-  },
-  {
-    id: 'Azerbaijan',
-    mask: 'XX XXX-XX-XX',
-    content: {
-      option: Texts.Azerbaijan,
-      caption: '+994',
-    },
-    beforeContent: <AzerbaijanSVG size={24} />,
-  },
-  {
-    id: 'Tajikistan',
-    mask: 'XXX XX-XX-XX',
-    content: {
-      option: Texts.Tajikistan,
-      caption: '+992',
-    },
-    beforeContent: <TajikistanSVG size={24} />,
-  },
-  {
-    id: 'Georgia',
-    mask: 'XXX XXX-XXX',
-    content: {
-      option: Texts.Georgia,
-      caption: '+995',
-    },
-    beforeContent: <GeorgiaSVG size={24} />,
-  },
-];
+import { useLocale } from '@sbercloud/uikit-product-locale';
 
 export function usePredefinedPhoneMasks() {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('FieldsPredefined');
 
   return useMemo(
-    () =>
-      DEFAULT_COUNTRY_CODES.map(opt => ({
-        ...opt,
+    () => [
+      {
+        id: 'Russia',
+        mask: 'XXX XXX-XX-XX',
         content: {
-          ...opt.content,
-          option: textProvider(languageCode, opt.content.option as Texts),
+          option: t(`FieldPhone.russia`),
+          caption: '+7',
         },
-      })),
-    [languageCode],
+        beforeContent: <RussiaSVG size={24} />,
+      },
+      {
+        id: 'Belarus',
+        mask: 'XXX XXX-XX-XX',
+        content: {
+          option: t(`FieldPhone.belarus`),
+          caption: '+375',
+        },
+        beforeContent: <BelarusSVG size={24} />,
+      },
+      {
+        id: 'Kazakhstan',
+        mask: 'XXX XXX-XX-XX',
+        content: {
+          option: t(`FieldPhone.kazakhstan`),
+          caption: '+7',
+        },
+        beforeContent: <KazakhstanSVG size={24} />,
+      },
+      {
+        id: 'Armenia',
+        mask: 'XX XXX-XXX',
+        content: {
+          option: t(`FieldPhone.armenia`),
+          caption: '+374',
+        },
+        beforeContent: <ArmeniaSVG size={24} />,
+      },
+      {
+        id: 'Kyrgyzstan',
+        mask: 'XXX XXX-XXX',
+        content: {
+          option: t(`FieldPhone.kyrgyzstan`),
+          caption: '+996',
+        },
+        beforeContent: <KyrgyzstanSVG size={24} />,
+      },
+      {
+        id: 'Uzbekistan',
+        mask: 'XX XXX-XX-XX',
+        content: {
+          option: t(`FieldPhone.uzbekistan`),
+          caption: '+998',
+        },
+        beforeContent: <UzbekistanSVG size={24} />,
+      },
+      {
+        id: 'Azerbaijan',
+        mask: 'XX XXX-XX-XX',
+        content: {
+          option: t(`FieldPhone.azerbaijan`),
+          caption: '+994',
+        },
+        beforeContent: <AzerbaijanSVG size={24} />,
+      },
+      {
+        id: 'Tajikistan',
+        mask: 'XXX XX-XX-XX',
+        content: {
+          option: t(`FieldPhone.tajikistan`),
+          caption: '+992',
+        },
+        beforeContent: <TajikistanSVG size={24} />,
+      },
+      {
+        id: 'Georgia',
+        mask: 'XXX XXX-XXX',
+        content: {
+          option: t(`FieldPhone.georgia`),
+          caption: '+995',
+        },
+        beforeContent: <GeorgiaSVG size={24} />,
+      },
+    ],
+    [t],
   );
 }

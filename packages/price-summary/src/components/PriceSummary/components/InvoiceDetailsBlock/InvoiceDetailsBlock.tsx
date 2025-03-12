@@ -1,7 +1,8 @@
-import { useLanguage, WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
-import { formatCurrency, formatQuantity, textProvider, Texts } from '../../../../helpers';
+import { formatCurrency, formatQuantity } from '../../../../helpers';
 import { InvoiceDetails } from '../../../../types';
 import { Divider } from '../Divider';
 import { InvoiceItemBlock } from '../InvoiceItemBlock';
@@ -12,7 +13,7 @@ export type InvoiceDetailsBlockProps = WithLayoutType<{
 }>;
 
 export function InvoiceDetailsBlock({ invoice, layoutType }: InvoiceDetailsBlockProps) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('PriceSummary');
 
   return (
     <div className={styles.main}>
@@ -37,7 +38,7 @@ export function InvoiceDetailsBlock({ invoice, layoutType }: InvoiceDetailsBlock
 
           <div className={styles.footer}>
             <Typography.SansLabelM>
-              {textProvider(languageCode, Texts.Price)}: {formatCurrency(invoice.price)}
+              {t('price')}: {formatCurrency(invoice.price)}
             </Typography.SansLabelM>
           </div>
         </>

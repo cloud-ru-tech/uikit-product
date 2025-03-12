@@ -1,8 +1,8 @@
 import { ButtonDropdown } from '@sbercloud/uikit-product-button-predefined';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Typography } from '@snack-uikit/typography';
 
-import { formatPeriod, textProvider, Texts } from '../../../../helpers';
+import { usePeriodFormat } from '../../../../hooks';
 import { PricePeriod } from '../../../../types';
 import styles from './styles.module.scss';
 
@@ -13,27 +13,28 @@ export type PeriodDropdownProps = {
 };
 
 export function PeriodDropdown({ period, onPeriodChanged = () => {}, periodOptions }: PeriodDropdownProps) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('PriceSummary');
+  const formatPeriod = usePeriodFormat();
 
   const actions = periodOptions
     .filter(item => item !== period)
     .map(item => ({
-      content: { option: formatPeriod(languageCode, item) },
+      content: { option: formatPeriod(item) },
       onClick: () => onPeriodChanged(item),
     }));
 
   return (
     <div className={styles.period} data-single={actions.length === 0 ? true : undefined}>
-      <Typography.SansBodyM>{textProvider(languageCode, Texts.Total)}</Typography.SansBodyM>
+      <Typography.SansBodyM>{t('total')}</Typography.SansBodyM>
 
       {actions.length === 0 && (
         <div className={styles.single}>
-          <Typography.SansBodyM>{formatPeriod(languageCode, period)}</Typography.SansBodyM>
+          <Typography.SansBodyM>{formatPeriod(period)}</Typography.SansBodyM>
         </div>
       )}
 
       {actions.length > 0 && (
-        <ButtonDropdown size='s' label={formatPeriod(languageCode, period)} items={actions} closeDroplistOnItemClick />
+        <ButtonDropdown size='s' label={formatPeriod(period)} items={actions} closeDroplistOnItemClick />
       )}
     </div>
   );

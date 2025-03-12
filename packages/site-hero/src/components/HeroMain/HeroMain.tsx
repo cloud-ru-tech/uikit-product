@@ -1,16 +1,16 @@
 import cn from 'classnames';
 import { Fragment } from 'react';
 
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { SiteNavbar, SiteNavbarProps } from '@sbercloud/uikit-product-site-navbar';
 import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
-import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { ButtonFilled, ButtonFilledProps, ButtonOutline, ButtonOutlineProps } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 
 import { PlatformLink, PlatformLinkProps } from '../../helperComponents';
-import { textProvider, Texts } from '../../helpers';
 import { HeroColor } from '../../types';
 import styles from './styles.module.scss';
 import { getTitleTypographyProps } from './utils';
@@ -57,7 +57,7 @@ export function HeroMain({
   className,
   ...rest
 }: HeroMainProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('SiteHero');
 
   return (
     <>
@@ -91,7 +91,7 @@ export function HeroMain({
 
                   {platforms && platforms.length > 0 && handlePlatformClick && (
                     <Typography.SansBodyL tag='p' className={styles.platforms}>
-                      {textProvider<string>(languageCode, Texts.Platforms)}:{' '}
+                      {t('Main.platforms')}:{' '}
                       {platforms.map((platform, index) => (
                         <Fragment key={platform}>
                           <PlatformLink key={platform} platform={platform} handlePlatformClick={handlePlatformClick} />

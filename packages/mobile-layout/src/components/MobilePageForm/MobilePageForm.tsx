@@ -5,13 +5,12 @@ import { ChevronRightSVG, KebabSVG } from '@sbercloud/uikit-product-icons';
 import { MobileDropdown, MobileDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
 import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
 import { PageFormProps } from '@sbercloud/uikit-product-page-layout';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonFunction, ButtonOutline, ButtonSimple } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 import { extractSupportProps, ValueOf } from '@snack-uikit/utils';
 
 import { Headline } from '../../helperComponents';
-import { textProvider, Texts } from '../../helpers/texts-provider';
+import { useGetButtonLabel } from '../../helpers';
 import { useButtonWithTooltip } from './hooks';
 import styles from './styles.module.scss';
 
@@ -44,8 +43,6 @@ export function MobilePageForm({
   sideBlock,
   ...rest
 }: PageFormProps) {
-  const { languageCode } = useLanguage();
-
   const PrimaryButton = useButtonWithTooltip({ Button: ButtonFilled, tooltip: footer?.buttonPrimary.tooltip });
   const SecondaryButton = useButtonWithTooltip({ Button: ButtonOutline, tooltip: footer?.buttonSecondary?.tooltip });
   const AdditionalButton = useButtonWithTooltip({ Button: ButtonSimple, tooltip: footer?.buttonAdditional?.tooltip });
@@ -53,6 +50,8 @@ export function MobilePageForm({
   const [openPriceSummary, setOpenPriceSummary] = useState<boolean>(false);
   const [openMore, setOpenMore] = useState<boolean>(false);
   const [openMoreContentIndex, setOpenMoreContentIndex] = useState<number | undefined>(undefined);
+
+  const getButtonLabel = useGetButtonLabel();
 
   return (
     <div className={cn(styles.container, className)} {...extractSupportProps(rest)}>
@@ -128,7 +127,7 @@ export function MobilePageForm({
                   label={
                     footer.buttonSecondary.variant === 'custom'
                       ? footer.buttonSecondary.label
-                      : textProvider(languageCode, footer.buttonSecondary.variant as unknown as Texts)
+                      : getButtonLabel(footer.buttonSecondary.variant)
                   }
                 />
               )}
@@ -140,7 +139,7 @@ export function MobilePageForm({
                 label={
                   footer.buttonPrimary.variant === 'custom'
                     ? footer.buttonPrimary.label
-                    : textProvider(languageCode, footer.buttonPrimary.variant as unknown as Texts)
+                    : getButtonLabel(footer.buttonPrimary.variant)
                 }
               />
             </div>

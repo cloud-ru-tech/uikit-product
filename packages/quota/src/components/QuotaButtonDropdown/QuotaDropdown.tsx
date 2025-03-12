@@ -1,9 +1,9 @@
 import { ReactNode, useState } from 'react';
 
 import { ButtonDropdown, ButtonDropdownProps } from '@sbercloud/uikit-product-button-predefined';
-import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
-import { textProvider, Texts } from '../../helpers';
 import { QuotaDropdownContent } from './components';
 
 export type QuotaDropdownProps = WithSupportProps<{
@@ -26,14 +26,14 @@ export type QuotaDropdownProps = WithSupportProps<{
 
 export function QuotaDropdown({ placement = 'bottom-end', className, ...props }: QuotaDropdownProps) {
   const [open, setOpen] = useState<boolean>(false);
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Quota');
 
   return (
     <ButtonDropdown
       open={open}
       placement={placement}
       onOpenChange={setOpen}
-      label={textProvider(languageCode, Texts.Quotas)}
+      label={t('quotas')}
       className={className}
       content={<QuotaDropdownContent {...props} />}
     />

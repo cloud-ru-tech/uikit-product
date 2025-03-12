@@ -1,9 +1,9 @@
 import FuzzySearch from 'fuzzy-search';
 import { KeyboardEvent, KeyboardEventHandler, useCallback, useMemo } from 'react';
 
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ItemId, MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
-import { useLocale } from '@snack-uikit/locale';
 
 import { CHIP_CHOICE_TEST_IDS } from '../../constants';
 import styles from './styles.module.scss';

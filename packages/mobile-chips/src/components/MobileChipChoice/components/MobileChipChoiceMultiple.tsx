@@ -1,14 +1,12 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ItemId, MobileDroplist, SelectionSingleValueType } from '@sbercloud/uikit-product-mobile-dropdown';
-import { useLanguage } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonFunction } from '@snack-uikit/button';
-import { useLocale } from '@snack-uikit/locale';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { CHIP_CHOICE_TEST_IDS, SIZE } from '../../../constants';
-import { textProvider, Texts } from '../../../helpers/texts-provider';
 import { useAutoApplyFooter, useHandleOnKeyDown, useOptionSearch } from '../hooks';
 import { ContentRenderProps, MobileChipChoiceMultipleProps } from '../types';
 import { FlattenOption, kindFlattenOptions } from '../utils';
@@ -56,7 +54,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
   onCancel,
   ...rest
 }: MobileChipChoiceMultipleProps<T>) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale();
 
   const [value, setValue] = useValueControl<SelectionSingleValueType[]>({
     value: valueProp,
@@ -78,8 +76,6 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
 
   const [searchValue = '', setSearchValue] = useState<string>('');
 
-  const { t } = useLocale('Chips');
-
   const [open, setOpen] = useUncontrolledProp(openProp, false, onOpenChange);
   const handleOnKeyDown = useHandleOnKeyDown({ setOpen });
 
@@ -97,7 +93,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
     : defaultMultiValueLabelFormatter({
         value: selectedOptions ?? [],
         total: Object.keys(flattenOptions).length,
-        allLabel: t('allLabel'),
+        allLabel: t('Chips.allLabel'),
       });
 
   const optionSearch = useOptionSearch({ options, flatMapOptions, disableFuzzySearch });
@@ -181,11 +177,9 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
       footer={
         <div className={styles.footer}>
           <div className={styles.footerTopLine}>
-            <span className={styles.counter}>{`${textProvider(languageCode, Texts.SelectedN)}${
-              value?.length || 0
-            }`}</span>
+            <span className={styles.counter}>{`${t('MobileChips.selectedN')}${value?.length || 0}`}</span>
             <ButtonFunction
-              label={textProvider(languageCode, Texts.ResetAll)}
+              label={t('MobileChips.resetAll')}
               onClick={() => {
                 handleSelectionChange([]);
               }}
@@ -196,7 +190,7 @@ export function MobileChipChoiceMultiple<T extends ContentRenderProps = ContentR
           {autoApply ? (
             <ButtonFilled
               fullWidth
-              label={textProvider(languageCode, Texts.Select)}
+              label={t('MobileChips.select')}
               onClick={() => {
                 setOpen(false);
               }}

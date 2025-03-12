@@ -1,1 +1,1 @@
-export { getContent } from './getContent';
+export * from './useGetContent';

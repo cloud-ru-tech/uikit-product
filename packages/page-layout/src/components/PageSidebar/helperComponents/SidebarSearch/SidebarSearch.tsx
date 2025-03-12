@@ -1,10 +1,9 @@
 import { useEffect, useRef } from 'react';
 
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Search } from '@snack-uikit/search';
 
 import { useSearchContext } from '../../contexts';
-import { textProvider, Texts } from '../../helpers/texts-provider';
 import styles from './styles.module.scss';
 
 export function SidebarSearch() {
@@ -12,7 +11,7 @@ export function SidebarSearch() {
 
   const ref = useRef<HTMLInputElement>(null);
 
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('PageLayout');
 
   useEffect(() => {
     if (searchOpened) {
@@ -27,7 +26,7 @@ export function SidebarSearch() {
       ref={ref}
       className={styles.searchItem}
       size='m'
-      placeholder={textProvider(languageCode, Texts.SearchByServices)}
+      placeholder={t('PageSidebar.searchByServices')}
       value={searchValue}
       onChange={setSearchValue}
     />

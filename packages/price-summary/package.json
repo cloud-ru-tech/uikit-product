@@ -45,5 +45,8 @@
     "@snack-uikit/truncate-string": "0.6.9",
     "@snack-uikit/typography": "0.8.4",
     "classnames": "2.5.1"
+  },
+  "peerDependencies": {
+    "@sbercloud/uikit-product-locale": "*"
   }
 }

@@ -1,12 +1,13 @@
 import { ReactNode } from 'react';
 
-import { useLanguage, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { ModalCustom, ModalCustomProps } from '@snack-uikit/modal';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { InputConfirm } from '../../helperComponents';
-import { DictionaryPropertyAsFn, isDefined, textProvider, Texts } from '../../helpers';
+import { isDefined } from '../../helpers';
 import { useTextFieldValidation } from './hooks';
 import styles from './styles.module.scss';
 
@@ -45,7 +46,7 @@ export function DeleteModal({
   subtitle,
   ...restProps
 }: DeleteModalProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('ModalPredefined');
 
   const withInputConfirmation = isDefined(confirmText);
 
@@ -68,12 +69,7 @@ export function DeleteModal({
   return (
     <ModalCustom {...restProps} open={open} onClose={handleClose}>
       <ModalCustom.Header
-        title={
-          <TruncateString
-            text={textProvider<DictionaryPropertyAsFn>(languageCode, Texts.Title)(objectType ?? '')}
-            maxLines={2}
-          />
-        }
+        title={<TruncateString text={`${t('title')} ${objectType ?? ''}`} maxLines={2} />}
         subtitle={subtitle}
         titleTooltip={titleTooltip}
       />
@@ -87,14 +83,14 @@ export function DeleteModal({
               <InputConfirm
                 confirmText={confirmText}
                 hideConfirmCopyButton={hideConfirmCopyButton}
-                labelText={Texts.FieldLabel}
+                labelText={t('fieldLabel')}
                 {...inputProps}
               />
             )}
 
             <div className={styles.footerActions}>
               <ButtonFilled
-                label={textProvider<string>(languageCode, Texts.Delete)}
+                label={t('delete')}
                 loading={deleting}
                 data-test-id='delete-modal__approve-button'
                 onClick={handleDelete}
@@ -102,7 +98,7 @@ export function DeleteModal({
                 appearance='destructive'
               />
               <ButtonOutline
-                label={textProvider<string>(languageCode, Texts.Cancel)}
+                label={t('cancel')}
                 onClick={handleCancel}
                 data-test-id='delete-modal__cancel-button'
                 appearance='neutral'

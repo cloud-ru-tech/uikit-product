@@ -40,5 +40,8 @@
     "@snack-uikit/skeleton": "0.6.2",
     "@snack-uikit/utils": "3.7.0",
     "classnames": "2.5.1"
+  },
+  "peerDependencies": {
+    "@sbercloud/uikit-product-locale": "*"
   }
 }

@@ -39,5 +39,8 @@
     "@snack-uikit/tooltip": "0.16.2",
     "@snack-uikit/truncate-string": "0.6.9",
     "classnames": "2.5.1"
+  },
+  "peerDependencies": {
+    "@sbercloud/uikit-product-locale": "*"
   }
 }

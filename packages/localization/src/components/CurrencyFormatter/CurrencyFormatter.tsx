@@ -1,15 +1,15 @@
-import { useLanguage } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 
 type CurrencyFormatterProps = {
   value: number;
 };
 
 export function CurrencyFormatter({ value }: CurrencyFormatterProps) {
-  const { languageCode } = useLanguage();
+  const { lang } = useLocale();
 
   return (
     <>
-      {new Intl.NumberFormat(languageCode, {
+      {new Intl.NumberFormat(lang, {
         style: 'currency',
         currency: 'RUB',
       }).format(value)}

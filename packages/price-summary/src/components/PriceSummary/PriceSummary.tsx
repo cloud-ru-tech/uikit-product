@@ -1,9 +1,9 @@
 import cn from 'classnames';
 
-import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Link, LinkProps } from '@snack-uikit/link';
 
-import { textProvider, Texts } from '../../helpers';
 import { DiscountDetails, InvoiceDetails } from '../../types';
 import { ContentBlock, ContentBlockProps } from '../ContentBlock';
 import { DiscountBlock } from './components/DiscountBlock';
@@ -47,7 +47,7 @@ export function PriceSummary({
   layoutType,
   ...rest
 }: PriceSummaryProps) {
-  const { languageCode } = useLanguage();
+  const { t } = useLocale('PriceSummary');
 
   return (
     <div className={cn(styles.priceSummary, className)} {...extractSupportProps(rest)}>
@@ -71,7 +71,7 @@ export function PriceSummary({
           <Link
             size='m'
             textMode='default'
-            text={docsLink.text || textProvider(languageCode, Texts.DocsLink)}
+            text={docsLink.text || t('docsLink')}
             href={docsLink.href}
             target='_blank'
           />

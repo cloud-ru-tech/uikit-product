@@ -1,9 +1,9 @@
 import { CardSuggest, CardSuggestProps } from '@sbercloud/uikit-product-card-predefined';
-import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { useLocale } from '@sbercloud/uikit-product-locale';
+import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Link, LinkProps } from '@snack-uikit/link';
 import { Typography } from '@snack-uikit/typography';
 
-import { textProvider, Texts } from '../../helpers';
 import styles from './styles.module.scss';
 
 export type SolutionsWidgetProps = WithLayoutType<
@@ -14,17 +14,17 @@ export type SolutionsWidgetProps = WithLayoutType<
 >;
 
 export function SolutionsWidget({ layoutType, moreLink, cards, ...rest }: SolutionsWidgetProps) {
-  const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
+  const { t } = useLocale('Widget');
   const isMobile = layoutType === 'mobile';
 
   return (
     <div className={styles.wrapper} {...extractSupportProps(rest)}>
       <div className={styles.header}>
-        <Typography.SansTitleL tag='h5'>{textProvider(languageCode, Texts.SolutionsWidgetTitle)}</Typography.SansTitleL>
+        <Typography.SansTitleL tag='h5'>{t('Solutions.title')}</Typography.SansTitleL>
 
         {moreLink && (
           <Link
-            text={textProvider(languageCode, Texts.SolutionsWidgetLink)}
+            text={t('Solutions.link')}
             size='m'
             appearance='neutral'
             onClick={moreLink?.onClick}
