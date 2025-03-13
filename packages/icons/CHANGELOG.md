@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 10.5.1 (2025-03-13)
+
+
+### Dependencies
+
+* **FF-001:** up icons package ([8dc7c14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8dc7c14e56ed88ee92eda0401bee91863fc8d713))
+
+
+
+
+
 # 10.5.0 (2025-03-05)
 
 

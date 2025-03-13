@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.2 (2025-03-13)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-site-banner@0.1.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-banner/CHANGELOG.md)
+
+
+
+
+
 ## 0.2.1 (2025-03-07)
 
 ### Only dependencies have been changed
