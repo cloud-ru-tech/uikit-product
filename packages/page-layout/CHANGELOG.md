@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.18.0 (2025-03-13)
+
+
+### Features
+
+* **PDS-1856:** add autoHeight prop for PageServices ([366ee23](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/366ee23f51256fa3be54b7575deb11967b1fd8d3))
+
+
+
+
+
 ## 0.17.3 (2025-03-05)
 
 ### Only dependencies have been changed
