@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
   gap: styles-theme-variables.$dimension-3m;
-
+  max-width: 800px;
   text-align: justify;
+}
+
+.text {
+  text-align: left;
 }

@@ -20,16 +20,22 @@
 .headline {
   display: flex;
   align-items: center;
-
   justify-content: space-between;
   gap: stv.$dimension-2m;
-
-  padding: 0 stv.$dimension-3m;
-
-  height: 88px;
+  padding: 0 stv.$dimension-4m;
+  height: 104px;
   box-sizing: border-box;
-
   border-bottom: solid 1px stv.$sys-neutral-decor-default;
+
+  &[data-mobile] {
+    height: 76px;
+    padding: 0 stv.$dimension-3m;
+
+    @media (max-width: 440px) {
+      height: 60px;
+      padding: 0 stv.$dimension-2m;
+    }
+  }
 }
 
 .footer {

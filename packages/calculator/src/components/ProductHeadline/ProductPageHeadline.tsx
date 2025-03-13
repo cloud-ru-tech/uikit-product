@@ -10,6 +10,7 @@ import { Typography } from '@snack-uikit/typography';
 import { useCalculatorContext, useProductContext } from '../../contexts';
 import { AnyType, CALCULATOR_TYPE, Product } from '../../types';
 import { getValue, parseKeyToDataTest, setValue } from '../../utils';
+import { HeaderContainer } from '../HeaderContainer';
 import { PriceCount } from './components';
 import styles from './styles.module.scss';
 
@@ -73,7 +74,7 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
   }
 
   return (
-    <div className={styles.header} data-mobile={isMobile || undefined} ref={headerRef}>
+    <HeaderContainer ref={headerRef}>
       <div className={styles.left}>
         <IconPredefined
           icon={icon}
@@ -86,7 +87,7 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
         <TitleComponent data-test-id={parseKeyToDataTest('product', 'title')}>{label}</TitleComponent>
       </div>
 
-      <div className={styles.right}>
+      <div className={styles.right} data-mobile={isMobile || undefined}>
         <PriceCount
           price={price}
           pricePeriod={pricePeriod}
@@ -97,7 +98,11 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
         />
 
         {hasCounter && (
-          <div className={styles.counter} data-test-id={parseKeyToDataTest('product', 'counter')}>
+          <div
+            className={styles.counter}
+            data-mobile={isMobile || undefined}
+            data-test-id={parseKeyToDataTest('product', 'counter')}
+          >
             <FieldStepper
               size='m'
               step={1}
@@ -115,6 +120,6 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
       </div>
 
       {isMobile && <ConnectButton />}
-    </div>
+    </HeaderContainer>
   );
 }

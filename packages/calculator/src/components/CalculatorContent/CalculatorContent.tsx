@@ -16,7 +16,7 @@ export function CalculatorContent({ bgImage }: CalculatorContentProps) {
   if (!selectedProduct) {
     return (
       <>
-        <Welcome bgImage={bgImage} />
+        <Welcome image={bgImage} />
         <Disclaimer className={styles.disclaimer} />
       </>
     );

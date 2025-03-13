@@ -3,7 +3,7 @@ import { useDeferredValue, useMemo, useRef } from 'react';
 
 import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
-import { ButtonTonal } from '@snack-uikit/button';
+import { ButtonFilled, ButtonTonal } from '@snack-uikit/button';
 import { Scroll } from '@snack-uikit/scroll';
 import { Tag } from '@snack-uikit/tag';
 import { TruncateString } from '@snack-uikit/truncate-string';
@@ -18,8 +18,14 @@ import { useScrollListToActiveProduct } from './hooks';
 import styles from './styles.module.scss';
 import { getTotalPrice, transformValueToProductCardData } from './utils';
 
+export enum SummaryAppearance {
+  Welcome = 'welcome',
+  Default = 'default',
+}
+
 type PriceSummaryProps = {
   className?: string;
+  appearance?: SummaryAppearance;
 };
 
 const PlatformSale = {
@@ -28,7 +34,7 @@ const PlatformSale = {
   [PLATFORM.VmWare]: 20,
 };
 
-export function PriceSummary({ className }: PriceSummaryProps) {
+export function PriceSummary({ className, appearance = SummaryAppearance.Default }: PriceSummaryProps) {
   const {
     layoutType,
     pricePeriod,
@@ -67,6 +73,13 @@ export function PriceSummary({ className }: PriceSummaryProps) {
     setCatalogOpen(true);
   };
 
+  const serviceButtonProps = {
+    onClick: handleCatalogOpen,
+    size: 'm',
+    icon: <PlusSVG />,
+    label: 'Добавить сервис',
+  } as const;
+
   return (
     <div
       className={cn(styles.priceSummary, className)}
@@ -75,15 +88,21 @@ export function PriceSummary({ className }: PriceSummaryProps) {
     >
       <div className={styles.headline}>
         <TitleComponent data-test-id={parseKeyToDataTest('price', 'summary-title')}>Расчет</TitleComponent>
-        <ButtonTonal
-          onClick={handleCatalogOpen}
-          size='m'
-          icon={<PlusSVG />}
-          label='Добавить сервис'
-          fullWidth={isMobile}
-          appearance='neutral'
-          data-test-id={parseKeyToDataTest('price', 'summary-button')}
-        />
+        {appearance === SummaryAppearance.Welcome && (
+          <ButtonFilled
+            appearance='primary'
+            data-test-id={parseKeyToDataTest('price', 'summary-button')}
+            {...serviceButtonProps}
+          />
+        )}
+        {appearance === SummaryAppearance.Default && (
+          <ButtonTonal
+            appearance='neutral'
+            fullWidth={isMobile}
+            data-test-id={parseKeyToDataTest('price', 'summary-button')}
+            {...serviceButtonProps}
+          />
+        )}
       </div>
 
       <Scroll className={styles.scroll} ref={scrollRef} data-test-id={parseKeyToDataTest('price', 'summary-products')}>
@@ -136,7 +155,7 @@ export function PriceSummary({ className }: PriceSummaryProps) {
           </div>
         </div>
 
-        <ProductListActions />
+        <ProductListActions disabled={appearance === SummaryAppearance.Welcome} />
       </div>
     </div>
   );

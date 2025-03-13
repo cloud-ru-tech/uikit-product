@@ -22,10 +22,10 @@ export function Disclaimer({ className }: DisclaimerProps) {
       data-test-id={dataTestAttribute}
     >
       {calculatorType !== CALCULATOR_TYPE.Partners && (
-        <Typography family='sans' purpose='body' size={layoutType === 'mobile' ? 's' : 'm'}>
+        <Typography family='sans' purpose='body' size={layoutType === 'mobile' ? 's' : 'm'} className={styles.text}>
           Рассчитываемая Калькулятором стоимость является предварительной, основанной на внесенных пользователем данных,
-          и не может расцениваться как предложение заключить договор по определенной Калькулятором цене (не является
-          офертой).
+          и не может расцениваться как предложение заключить договор по определенной Калькулятором цене
+          (не&nbsp;является офертой).
         </Typography>
       )}
     </div>

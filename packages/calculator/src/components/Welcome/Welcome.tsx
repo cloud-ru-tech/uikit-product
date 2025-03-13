@@ -1,20 +1,33 @@
+import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
+import { FieldStepper } from '@snack-uikit/fields';
 import { Typography } from '@snack-uikit/typography';
 
-import { useCalculatorContext } from '../../contexts';
+import { useCalculatorContext, useProductContext } from '../../contexts';
+import { PRICE_PERIOD } from '../../types';
 import { parseKeyToDataTest } from '../../utils';
+import { HeaderContainer } from '../HeaderContainer';
+import { PriceSummary, SummaryAppearance } from '../PriceSummary';
+import { PriceCount } from '../ProductHeadline/components';
 import styles from './styles.module.scss';
 
-type WelcomeProps = {
-  bgImage?: string;
-};
+const WELCOME_STEPS = [
+  'Нажмите Добавить сервис',
+  'Выберите платформу и продукт',
+  'Настройте конфигурацию',
+  'Подключите сразу или оставьте заявку',
+];
 
-export function Welcome({ bgImage }: WelcomeProps) {
+type WelcomeProps = { image?: string };
+
+export function Welcome({ image }: WelcomeProps) {
   const {
     setCatalogOpen,
     actions: { onStartClick },
   } = useCalculatorContext();
+
+  const { price } = useProductContext();
 
   const handleCatalogOpen = () => {
     onStartClick?.();
@@ -23,29 +36,100 @@ export function Welcome({ bgImage }: WelcomeProps) {
 
   const { layoutType } = useCalculatorContext();
 
-  const isMobile = layoutType !== LAYOUT_TYPE.Desktop && layoutType !== LAYOUT_TYPE.DesktopSmall;
-  const TitleComponent = isMobile ? Typography.SansHeadlineL : Typography.SansDisplayS;
+  const isTablet = layoutType !== LAYOUT_TYPE.Desktop && layoutType !== LAYOUT_TYPE.DesktopSmall;
+  const isMobile = layoutType === LAYOUT_TYPE.Mobile;
+
+  const TitleComponent = isTablet ? Typography.SansTitleL : Typography.SansHeadlineS;
 
   return (
-    <div className={styles.welcome} data-mobile={isMobile || undefined} data-test-id={parseKeyToDataTest('welcome')}>
-      <div className={styles.headline} data-test-id={parseKeyToDataTest('welcome', 'headline')}>
-        <TitleComponent>
-          Калькулятор цен: узнайте, <br /> сколько будет стоить облако
-        </TitleComponent>
+    <div data-test-id={parseKeyToDataTest('welcome')} className={styles.wrapper} data-tablet={isTablet || undefined}>
+      <div
+        className={styles.configurator}
+        data-test-id={parseKeyToDataTest('welcome', 'configurator')}
+        data-tablet={isTablet || undefined}
+      >
+        <HeaderContainer dataTestId={parseKeyToDataTest('welcome', 'header')}>
+          <div className={styles.left}>
+            <TitleComponent data-test-id={parseKeyToDataTest('product', 'title')}>Калькулятор</TitleComponent>
+          </div>
 
-        <Typography.SansBodyL>
-          Соберите свою конфигурацию ресурсов, узнайте ее&nbsp;стоимость <br /> и&nbsp;подключите. Калькулятор предложит
-          бесплатные <br /> конфигурации для экономии на&nbsp;старте
-        </Typography.SansBodyL>
+          <div className={styles.right} data-tablet={isTablet || undefined}>
+            <PriceCount price={price} pricePeriod={PRICE_PERIOD.Month} mobile={isMobile} />
+
+            <div className={styles.counter} data-test-id={parseKeyToDataTest('product', 'counter')}>
+              <FieldStepper size='m' step={1} min={1} max={1} value={1} disabled allowMoreThanLimits={false} />
+            </div>
+
+            {!isTablet && (
+              <ButtonFilled
+                fullWidth={isTablet}
+                label='Подключить'
+                size='m'
+                appearance='primary'
+                onClick={() => {}}
+                disabled
+              />
+            )}
+          </div>
+        </HeaderContainer>
+        <div
+          className={styles.body}
+          data-mobile={isMobile || undefined}
+          data-tablet={isTablet || undefined}
+          data-test-id={parseKeyToDataTest('welcome', 'body')}
+        >
+          <div className={styles.headings}>
+            <div className={styles.headingsText}>
+              <Typography.SansTitleL data-test-id={parseKeyToDataTest('welcome', 'title')}>
+                Узнайте, сколько будет стоить облако
+              </Typography.SansTitleL>
+              <Typography.SansBodyM className={styles.desc} data-test-id={parseKeyToDataTest('welcome', 'desc')}>
+                Соберите свою конфигурацию ресурсов, узнайте ее стоимость
+                <br />и подключите. Калькулятор предложит бесплатные
+                <br />
+                конфигурации для экономии на старте
+              </Typography.SansBodyM>
+            </div>
+            {isTablet && (
+              <ButtonFilled
+                onClick={handleCatalogOpen}
+                size='m'
+                icon={<PlusSVG />}
+                label='Добавить сервис'
+                appearance='primary'
+                data-test-id={parseKeyToDataTest('welcome', 'button')}
+              />
+            )}
+          </div>
+          <div className={styles.steps} data-test-id={parseKeyToDataTest('welcome', 'steps')}>
+            {WELCOME_STEPS.map((item, index) => (
+              <div className={styles.step} key={index} data-test-id={parseKeyToDataTest('welcome', 'step')}>
+                <div className={styles.number}>
+                  <Typography.SansLabelL>{index + 1}</Typography.SansLabelL>
+                </div>
+                <Typography.SansTitleS>{item}</Typography.SansTitleS>
+              </div>
+            ))}
+          </div>
+          {image && (
+            <img
+              className={styles.image}
+              src={image}
+              alt='calculator'
+              data-test-id={parseKeyToDataTest('welcome', 'image')}
+              data-mobile={isMobile || undefined}
+              data-tablet={isTablet || undefined}
+            />
+          )}
+        </div>
       </div>
-
-      <div className={styles.action} data-test-id={parseKeyToDataTest('welcome', 'action')}>
-        <ButtonFilled size='l' onClick={handleCatalogOpen} label='Начать расчет' fullWidth={isMobile} />
+      <div
+        className={styles.priceSummary}
+        data-tablet={isTablet || undefined}
+        data-test-id={parseKeyToDataTest('welcome', 'summary')}
+      >
+        <PriceSummary appearance={SummaryAppearance.Welcome} />
       </div>
-
-      {bgImage && (
-        <img className={styles.image} src={bgImage} alt={''} data-test-id={parseKeyToDataTest('welcome', 'image')} />
-      )}
     </div>
   );
 }

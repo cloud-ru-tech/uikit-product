@@ -8,7 +8,11 @@ import { useCalculatorContext } from '../../../../contexts';
 import { parseKeyToDataTest } from '../../../../utils';
 import styles from './styles.module.scss';
 
-export function ProductListActions() {
+type ProductListActionsProps = {
+  disabled?: boolean;
+};
+
+export function ProductListActions({ disabled }: ProductListActionsProps) {
   const {
     products,
     calculatorType,
@@ -79,6 +83,7 @@ export function ProductListActions() {
             fullWidth
             onClick={handleShareClick}
             data-test-id={parseKeyToDataTest('price', 'summary-footer-copy-link')}
+            disabled={disabled}
           />
         </Tooltip>
       )}
@@ -91,6 +96,7 @@ export function ProductListActions() {
           data-test-id={parseKeyToDataTest('price', 'summary-footer-download')}
           fullWidth
           onClick={handleDownloadFileClick}
+          disabled={disabled}
         />
       </Tooltip>
 
@@ -103,6 +109,7 @@ export function ProductListActions() {
             fullWidth
             onClick={handleRequestConsultationClick}
             data-test-id={parseKeyToDataTest('price', 'summary-footer-consultation')}
+            disabled={disabled}
           />
         </Tooltip>
       )}

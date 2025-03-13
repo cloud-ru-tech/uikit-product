@@ -32,6 +32,7 @@ const Template: StoryFn<CalculatorProps> = ({ ...args }) => (
       style={{
         padding: '8px 0',
         maxWidth: '1248px',
+        width: '100%',
       }}
     >
       <Calculator

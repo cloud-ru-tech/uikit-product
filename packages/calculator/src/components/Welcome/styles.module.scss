@@ -1,64 +1,148 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
 
-.welcome {
+.wrapper {
+  display: flex;
+  gap: 32px;
+
+  &[data-tablet] {
+    flex-direction: column;
+  }
+}
+
+.configurator {
   background-color: stv.$sys-neutral-background1-level;
-
-  /* stylelint-disable-next-line declaration-property-value-allowed-list */
-  z-index: 0;
-
-  padding: stv.$dimension-6m stv.$dimension-3m;
-
-  position: relative;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  flex-shrink: 0;
+  width: 800px;
+  min-height: 569px;
+
+  &[data-tablet] {
+    width: 100%;
+    min-height: auto;
+  }
+}
+
+.priceSummary {
+  width: 384px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 24px;
+
+  &[data-tablet] {
+    display: none;
+  }
+}
+
+.left,
+.right {
+  display: flex;
   align-items: center;
+  flex-direction: row;
+}
 
-  gap: stv.$dimension-3m;
+.left {
+  gap: stv.$dimension-1m;
+}
 
-  min-height: 500px;
+.right {
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: stv.$dimension-2m;
 
-  .image {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    width: 550px;
-    height: 400px;
+  &[data-tablet] {
+    display: none;
   }
+}
 
-  .headline {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.counter {
+  max-width: 140px;
+  min-width: 100px;
+}
 
-    color: stv.$sys-neutral-text-main;
+.body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: stv.$dimension-4m;
+  display: flex;
+  gap: stv.$dimension-4m;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 0;
+  overflow: hidden;
 
-    gap: stv.$dimension-3m;
-  }
+  &[data-tablet] {
+    padding: stv.$dimension-3m;
 
-  .headline,
-  .action {
-    /* stylelint-disable-next-line declaration-property-value-allowed-list */
-    z-index: 1;
+    @media (max-width: 767px) {
+      padding-bottom: 150px;
+    }
   }
 
   &[data-mobile] {
-    justify-content: flex-start;
-
-    padding: stv.$dimension-4m stv.$dimension-3m;
-
-    .action {
-      width: 100%;
-    }
-
-    .image {
-      width: 350px;
-      height: 250px;
-      bottom: 0px;
-      right: 0px;
-    }
+    padding: stv.$dimension-2m;
+    padding-bottom: 150px;
   }
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-3m;
+
+  &Text {
+    gap: stv.$dimension-1m;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: stv.$dimension-2m;
+}
+
+.image {
+  width: 400px;
+  height: 293px;
+  object-fit: cover;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: -1;
+
+  &[data-tablet] {
+    width: 309px;
+    height: 210px;
+  }
+
+  &[data-mobile] {
+    width: 240px;
+    height: 164px;
+  }
+}
+
+.desc {
+  color: stv.$sys-neutral-text-support;
+}
+
+.step {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.number {
+  background-color: stv.$sys-neutral-background;
+  height: 24px;
+  width: 24px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

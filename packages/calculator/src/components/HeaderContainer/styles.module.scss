@@ -1,0 +1,24 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
+
+.header {
+  border-bottom: solid 1px stv.$sys-neutral-decor-default;
+  display: flex;
+  gap: stv.$dimension-2m;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: stv.$dimension-4m;
+  height: 104px;
+
+  &[data-tablet] {
+    flex-direction: column;
+    height: auto;
+    align-items: inherit;
+    justify-content: inherit;
+    padding: stv.$dimension-3m;
+  }
+
+  &[data-mobile] {
+    padding: stv.$dimension-2m;
+  }
+}
