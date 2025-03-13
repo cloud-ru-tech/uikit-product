@@ -86,6 +86,18 @@
 | id | `string` | - | id секции |
 | footerDescription | `string` | - | Описание секции |
 | className | `string` | - | CSS - класснейм |
+## SectionMedia
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| id | `string` | - | id секции |
+| title | `string` | - | Название секции |
+| description | `string` | - | Описание секции |
+| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| video | `ReactNode \| { src: string; poster: string; controls?: boolean; }` | - |  |
+| onPlay | `() => void` | - |  |
+| image | `{ src: string; alt?: string; }` | - |  |
 ## SectionPersonalManager
 ### Props
 | name | type | default value | description |

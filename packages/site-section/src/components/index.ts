@@ -4,6 +4,7 @@ export * from './SectionBenefits';
 export * from './SectionCatalog';
 export * from './SectionExpertsCarousel';
 export * from './SectionLeading';
+export * from './SectionMedia';
 export * from './SectionPersonalManager';
 export * from './SectionPromoList';
 export * from './SectionSocial';
