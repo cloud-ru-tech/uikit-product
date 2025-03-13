@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-03-13)
+
+
+### Features
+
+* **ONB-3437:** new welcome page calculator ([2fd0e6c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2fd0e6c36c5dfb7955b5a87b8fa0cfd95526a25d))
+
+
+
+
+
 ## 0.8.4 (2025-03-13)
 
 ### Only dependencies have been changed
