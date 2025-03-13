@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: row;
   gap: styles-theme-variables.$dimension-1m;
-  height: 400px;
+  height: 380px;
   width: 100%;
 }
 
@@ -17,7 +17,7 @@
 .noteItemIllustration {
   border-radius: styles-theme-variables.$dimension-1m;
   width: 380px;
-  height: 400px;
+  height: 380px;
   object-fit: cover;
   pointer-events: none;
 }
@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: row;
   gap: styles-theme-variables.$dimension-3m;
-  height: 400px;
+  height: 380px;
   width: 100%;
 }
 

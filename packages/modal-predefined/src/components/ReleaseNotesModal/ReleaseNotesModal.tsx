@@ -46,7 +46,12 @@ export function ReleaseNotesModal({
 
     return (
       <WithSkeleton loading={loading} skeleton={<NoteItemSkeleton />}>
-        <Carousel arrows={false} pagination={false} state={{ page: pageIndex, onChange: setPage }}>
+        <Carousel
+          className={styles.carousel}
+          arrows={false}
+          pagination={false}
+          state={{ page: pageIndex, onChange: setPage }}
+        >
           {items.map(item => (
             <NoteItem key={item.title} {...item} />
           ))}

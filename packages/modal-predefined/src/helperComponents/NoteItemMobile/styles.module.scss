@@ -2,7 +2,7 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-drawer';
 
 .noteItemWrapper {
-  margin-right: calc(-1 * styles-tokens-drawer.$dimension-1m);
+  margin-right: calc(#{styles-tokens-drawer.$dimension-0m} - #{styles-tokens-drawer.$dimension-1m});
   height: 100%;
 }
 
@@ -16,6 +16,8 @@
 .noteItemIllustration {
   width: 100%;
   pointer-events: none;
+  max-width: 380px;
+  align-self: center;
 }
 
 .noteItemSkeletonWrapper {

@@ -11,7 +11,7 @@ export function NoteItemSkeleton() {
         <SkeletonText lines={4} />
       </div>
       <div className={styles.noteItemIllustrationSkeletonWrapper}>
-        <Skeleton width={380} height={400} borderRadius={8} />
+        <Skeleton width={380} height={380} borderRadius={8} />
       </div>
     </div>
   );
