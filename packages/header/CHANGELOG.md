@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.38.0 (2025-03-13)
+
+
+### Features
+
+* **PDS-1852:** add logo dev/stage for header ([61e963b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/61e963b03d49339d7bd74bc0758c420bf0eefb21))
+
+
+
+
+
 ## 2.37.1 (2025-03-11)
 
 
