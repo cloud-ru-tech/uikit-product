@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 10.6.0 (2025-03-14)
+
+
+### Features
+
+* **PDS-441:** pause, play, stop icons ([afe1d54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/afe1d54887e507d989f50e172ec4552d33cfd585))
+
+
+
+
+
 ## 10.5.1 (2025-03-13)
 
 
