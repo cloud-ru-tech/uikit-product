@@ -52,7 +52,7 @@ export const catalog: StoryObj<StoryProps> = {
           {
             title: 'Evolution Managed Kubernetes',
             description: 'Управление контейнерными приложениями в кластере Kubernetes',
-            icon: PlaceholderSVG,
+            icon: { src: 'https://cdn.cloud.ru/backend/products/evo-compute/icon.svg' },
             tags: [{ type: 'legal' }, { type: 'preview' }],
             onClick: onClick('Evolution Managed Kubernetes'),
             href: '#',
