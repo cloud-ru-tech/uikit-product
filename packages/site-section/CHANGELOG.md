@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.6 (2025-03-14)
+
+
+### Bug Fixes
+
+* **PDS-1897:** add outline prop for CardProduct ([ddef9b5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ddef9b52d7be0fc918f016b66fa99a1992fb126a))
+
+
+
+
+
 ## 0.8.5 (2025-03-14)
 
 ### Only dependencies have been changed

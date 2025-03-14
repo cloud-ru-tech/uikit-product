@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2025-03-14)
+
+
+### Bug Fixes
+
+* **PDS-1897:** add outline prop for CardProduct ([ddef9b5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ddef9b52d7be0fc918f016b66fa99a1992fb126a))
+
+
+### Features
+
+* **PDS-1897:** add img as icon in CardProduct icon, disabled text-decoration on link ([7e4fbc7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7e4fbc73dcdcedccbe22781f07bbef82ab959f53))
+
+
+
+
+
 # 0.5.0 (2025-03-14)
 
 
