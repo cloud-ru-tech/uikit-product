@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.35 (2025-03-14)
+
+
+### Bug Fixes
+
+* **FF-6322:** make size 380px for release note illustration ([f126c6c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f126c6c21f2253b4919d3571de6e211fce4f1deb))
+
+
+
+
+
 ## 0.5.34 (2025-03-14)
 
 ### Only dependencies have been changed
