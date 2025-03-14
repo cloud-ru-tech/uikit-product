@@ -1,29 +1,24 @@
-import cn from 'classnames';
 import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Carousel } from '@snack-uikit/carousel';
 import { Typography } from '@snack-uikit/typography';
 
-import { SECTION_COLORS } from '../../constants';
-import { CardLeading, CardLeadingItem, SectionTitle, SectionTitleProps } from '../../helperComponents';
-import { SectionColor } from '../../types';
+import { CardLeading, CardLeadingItem } from '../../helperComponents';
+import { SectionBasic, SectionBasicProps } from '../SectionBasic';
 import styles from './styles.module.scss';
 import { calculateAmountOfItemsPerPage } from './utils';
 
 export type SectionLeadingProps = WithSupportProps<
   WithLayoutType<
-    Pick<SectionTitleProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag'> & {
+    Pick<SectionBasicProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag' | 'backgroundColor'> & {
       /** id секции */
       id?: string;
       /** Массив айтемов */
       items: CardLeadingItem[];
       /** Описание секции */
       footerDescription?: string;
-      /** Цвет фона */
-      backgroundColor?: SectionColor;
       /** CSS - класснейм */
       className?: string;
     }
@@ -40,7 +35,7 @@ export function SectionLeading({
   titleTag,
   items,
   footerDescription,
-  backgroundColor = SECTION_COLORS.NeutralBackground1Level,
+  backgroundColor,
   className,
   layoutType,
   ...rest
@@ -79,22 +74,18 @@ export function SectionLeading({
   }, [items.length, itemsPerPageAmount, layoutType]);
 
   return (
-    <Layout.SectionWrapper
+    <SectionBasic
       id={id}
       layoutType={layoutType}
-      className={cn(className, styles.wrapper)}
-      data-section-background={backgroundColor}
+      className={className}
+      backgroundColor={backgroundColor}
+      title={title}
+      description={description}
+      titleSectionSize={titleSectionSize}
+      titleTag={titleTag}
       {...extractSupportProps(rest)}
     >
       <div ref={wrapperRef} className={styles.leadingSection} data-layout-type={layoutType}>
-        <SectionTitle
-          layoutType={layoutType}
-          title={title}
-          description={description}
-          titleSectionSize={titleSectionSize}
-          titleTag={titleTag}
-        />
-
         {itemsPerPageAmount > 0 && (
           <Carousel
             state={{ page: currentPage, onChange: setCurrentPage }}
@@ -115,6 +106,6 @@ export function SectionLeading({
           </div>
         )}
       </div>
-    </Layout.SectionWrapper>
+    </SectionBasic>
   );
 }

@@ -78,12 +78,12 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardLeadingItem[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | id | `string` | - | id секции |
 | footerDescription | `string` | - | Описание секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS - класснейм |
 ## SectionPersonalManager
 ### Props
