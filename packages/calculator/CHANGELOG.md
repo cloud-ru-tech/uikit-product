@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.1 (2025-03-14)
+
+
+### Bug Fixes
+
+* **ONB-3437:** pass analytic props to welcome page ([830547e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/830547e553c283b6492fc6138db145c5e6be5dd3))
+
+
+
+
+
 # 0.9.0 (2025-03-13)
 
 
