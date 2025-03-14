@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2025-03-14)
+
+
+### Features
+
+* **PDS-1531:** add card media ([4c8824c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4c8824c346ae274432af3221589db99d548847d5))
+
+
+
+
+
 ## 0.4.1 (2025-03-07)
 
 
