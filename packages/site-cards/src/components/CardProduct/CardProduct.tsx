@@ -24,6 +24,7 @@ export type CardProductProps = WithSupportProps<
     onClick?: CardProps['onClick'];
     tags?: TagProps[];
     className?: string;
+    outline?: boolean;
   }>
 >;
 
@@ -38,6 +39,7 @@ export function CardProduct({
   onClick,
   disabled,
   tags,
+  outline,
   'data-test-id': dataTestId = 'card-product',
   ...rest
 }: CardProductProps) {
@@ -58,6 +60,7 @@ export function CardProduct({
       data-test-id={dataTestId}
       onClick={handleCardClick}
       onKeyDown={handleCardKeyDown}
+      outline={outline}
       {...extractSupportProps(rest)}
     >
       <div className={styles.wrapper}>

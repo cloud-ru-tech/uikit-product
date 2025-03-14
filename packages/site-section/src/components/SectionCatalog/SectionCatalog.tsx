@@ -59,6 +59,8 @@ export function SectionCatalog({
 
   const isDesktop = ['desktop', 'desktopSmall'].includes(layoutType);
 
+  const isOutlineCard = backgroundColor === 'neutral-background1-level';
+
   return (
     <SectionBasic
       id={id}
@@ -89,7 +91,7 @@ export function SectionCatalog({
             <Tabs.TabContent key={id} value={id} className={styles.tabContent}>
               <Grid columnsConfig={GRID_CONFIG} gap='s' layoutType={layoutType}>
                 {items.map(item => (
-                  <CardProduct key={item.title} layoutType={layoutType} {...item} />
+                  <CardProduct key={item.title} layoutType={layoutType} outline={isOutlineCard} {...item} />
                 ))}
               </Grid>
             </Tabs.TabContent>
