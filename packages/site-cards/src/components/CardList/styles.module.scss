@@ -40,7 +40,7 @@ $scale: 1.05;
 
   &[data-layout-type='mobile'] {
     .imgWrapper {
-      aspect-ratio: none;
+      aspect-ratio: unset;
       width: 100%;
       height: auto;
     }

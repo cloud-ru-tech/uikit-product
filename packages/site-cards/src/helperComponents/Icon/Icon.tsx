@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 export type IconElement = JSXElementConstructor<{ size?: number; className?: string }>;
 
 export type IconProps = {
-  icon: ReactNode | IconElement;
+  icon: ReactNode | IconElement | { src: string; alt?: string };
   size: 'm' | 'l';
   'data-test-id'?: string;
   decor?: boolean;
@@ -16,14 +16,16 @@ const isElementConstructor = (icon: IconProps['icon']): icon is IconElement =>
 
 export function Icon({ icon: Icon, size = 'm', 'data-test-id': dataTestId, decor }: IconProps) {
   const isIcon = isElementConstructor(Icon);
+  const isImg = !isIcon && typeof Icon === 'object' && Icon !== null && 'src' in Icon;
 
-  if (isIcon) {
+  if (isIcon || isImg) {
     return (
       <div className={styles.icon} data-size={size} data-test-id={dataTestId} data-decor={decor || undefined}>
-        <Icon />
+        {isIcon && <Icon />}
+        {isImg && <img src={Icon.src} alt={Icon.alt} />}
       </div>
     );
   }
 
-  return Icon;
+  return Icon as ReactNode;
 }
