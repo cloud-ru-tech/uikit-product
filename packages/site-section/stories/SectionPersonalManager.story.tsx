@@ -4,7 +4,6 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { SectionPersonalManager, SectionPersonalManagerProps } from '../src';
-import sampleManager from './assets/personal-manager.png';
 import { LAYOUT_TYPE } from './constants';
 import styles from './styles.module.scss';
 
@@ -19,11 +18,13 @@ type StoryProps = SectionPersonalManagerProps;
 
 const handleClick = () => window.alert('Button clicked!');
 
-const Template: StoryFn<StoryProps> = ({ id, layoutType, image }) => (
+const Template: StoryFn<StoryProps> = ({ id, title, description, layoutType, manager }) => (
   <div className={styles.resizeWrapper}>
     <SectionPersonalManager
       id={id}
-      image={image ?? sampleManager}
+      title={title}
+      description={description}
+      manager={manager}
       onGetConsultationClick={handleClick}
       layoutType={layoutType}
     />
@@ -35,6 +36,9 @@ export const personalManager: StoryObj<StoryProps> = {
   args: {
     id: 'section-personal-manager',
     layoutType: 'desktop',
+    manager: {
+      img: 'https://cdn.cloud.ru/backend/images/personal_manager.png',
+    },
   },
   argTypes: {
     layoutType: {

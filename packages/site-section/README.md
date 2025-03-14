@@ -91,8 +91,13 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onGetConsultationClick* | `() => void` | - | Хэндлер клика по кнопке "Получить консультацию" |
-| image* | `string` | - | Ссылка на изображение |
+| manager* | `{ img: string; title?: string; text?: string; }` | - |  |
 | id | `string` | - | id секции |
+| title | `string` | - |  |
+| description | `string` | - |  |
+| card | `{ title: string; text: string; }` | - |  |
+| benefits | `Pick<CardBasicProps, "title" \| "icon">[]` | - |  |
+| withoutBenefits | `boolean` | - |  |
 | className | `string` | - | CSS-класс |
 ## SectionPromoList
 ### Props
@@ -120,14 +125,6 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| rows* | `Cell[][]` | - |  |
-| id | `string` | - | id секции |
-| className | `string` | - | CSS-класс |
-| title | `string` | - | Заголовок |
-| subtitle | `string` | - | Подзаголовок |
-| description | `string` | - | Описание |
-| withHeader | `boolean` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

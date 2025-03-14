@@ -83,12 +83,12 @@
   display: flex;
   justify-content: center;
   position: relative;
+  max-width: 288px;
 
   &[data-layout-type='tablet'] {
     overflow: hidden;
 
     width: 100%;
-    max-width: 288px;
   }
 
   &[data-layout-type='mobile'] {
@@ -108,4 +108,5 @@
   position: relative;
   object-fit: cover;
   pointer-events: none;
+  width: 100%;
 }

@@ -1,7 +1,8 @@
 import cn from 'classnames';
+import { useMemo } from 'react';
 
 import { CloudMoveSVG, HeadphonesSVG, UsersSVG } from '@sbercloud/uikit-product-icons';
-import { CardBasic } from '@sbercloud/uikit-product-site-cards';
+import { CardBasic, CardBasicProps } from '@sbercloud/uikit-product-site-cards';
 import { extractSupportProps, useLanguage, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
@@ -15,8 +16,19 @@ export type SectionPersonalManagerProps = WithSupportProps<
   WithLayoutType<{
     /** id секции */
     id?: string;
-    /** Ссылка на изображение */
-    image: string;
+    title?: string;
+    description?: string;
+    manager: {
+      img: string;
+      title?: string;
+      text?: string;
+    };
+    card?: {
+      title: string;
+      text: string;
+    };
+    benefits?: Pick<CardBasicProps, 'title' | 'icon'>[];
+    withoutBenefits?: boolean;
     /** CSS-класс */
     className?: string;
     /** Хэндлер клика по кнопке "Получить консультацию" */
@@ -27,18 +39,44 @@ export type SectionPersonalManagerProps = WithSupportProps<
 export function SectionPersonalManager({
   id,
   layoutType,
-  image,
+  title,
+  description,
+  manager,
+  card,
+  benefits,
+  withoutBenefits,
   className,
   onGetConsultationClick,
   ...rest
 }: SectionPersonalManagerProps) {
   const { languageCode } = useLanguage({ onlyEnabledLanguage: true });
 
+  const benefitsCards = useMemo<SectionPersonalManagerProps['benefits']>(() => {
+    if (benefits) {
+      return benefits;
+    }
+
+    return [
+      {
+        title: textProvider<string>(languageCode, Texts.ArgumentAmountOfExperts),
+        icon: UsersSVG,
+      },
+      {
+        title: textProvider<string>(languageCode, Texts.ArgumentMethodologies),
+        icon: CloudMoveSVG,
+      },
+      {
+        title: textProvider<string>(languageCode, Texts.ArgumentPersonalManager),
+        icon: HeadphonesSVG,
+      },
+    ];
+  }, [benefits, languageCode]);
+
   return (
     <SectionBasic
       id={id}
-      title={textProvider<string>(languageCode, Texts.PersonalManagerTitle)}
-      description={textProvider<string>(languageCode, Texts.PersonalManagerSubtitle)}
+      title={title || textProvider<string>(languageCode, Texts.PersonalManagerTitle)}
+      description={description || textProvider<string>(languageCode, Texts.PersonalManagerSubtitle)}
       backgroundColor='neutral-background1-level'
       layoutType={layoutType}
       className={cn(className, styles.sectionPersonalManager)}
@@ -49,10 +87,10 @@ export function SectionPersonalManager({
           <div className={styles.approachTextWrapper}>
             <div className={styles.cardTextContent}>
               <Typography family='sans' {...getCardTitleTypographyProps(layoutType)}>
-                {textProvider<string>(languageCode, Texts.IndividualApproachTitle)}
+                {manager.title || textProvider<string>(languageCode, Texts.IndividualApproachTitle)}
               </Typography>
               <Typography family='sans' purpose='body' size='l'>
-                {textProvider<string>(languageCode, Texts.IndividualApproachDescription)}
+                {manager.text || textProvider<string>(languageCode, Texts.IndividualApproachDescription)}
               </Typography>
             </div>
             <ButtonFilled
@@ -67,35 +105,31 @@ export function SectionPersonalManager({
           </div>
           <div className={styles.imageWrapper} data-layout-type={layoutType}>
             <div className={styles.imageBackground}></div>
-            <img src={image} alt='personal_manager' className={styles.approachManager} data-layout-type={layoutType} />
+            <img
+              src={manager.img}
+              alt='personal_manager'
+              className={styles.approachManager}
+              data-layout-type={layoutType}
+            />
           </div>
         </div>
         <div className={cn(styles.card, styles.cardTextContent)}>
           <Typography family='sans' {...getCardTitleTypographyProps(layoutType)}>
-            {textProvider<string>(languageCode, Texts.AllDaySupportTitle)}
+            {card?.title || textProvider<string>(languageCode, Texts.AllDaySupportTitle)}
           </Typography>
           <Typography family='sans' purpose='body' size='l'>
-            {textProvider<string>(languageCode, Texts.AllDaySupportDescription)}
+            {card?.text || textProvider<string>(languageCode, Texts.AllDaySupportDescription)}
           </Typography>
         </div>
       </div>
-      <div className={styles.expertiseCards} data-layout-type={layoutType}>
-        <CardBasic
-          title={textProvider<string>(languageCode, Texts.ArgumentAmountOfExperts)}
-          icon={UsersSVG}
-          layoutType={layoutType}
-        />
-        <CardBasic
-          title={textProvider<string>(languageCode, Texts.ArgumentMethodologies)}
-          icon={CloudMoveSVG}
-          layoutType={layoutType}
-        />
-        <CardBasic
-          title={textProvider<string>(languageCode, Texts.ArgumentPersonalManager)}
-          icon={HeadphonesSVG}
-          layoutType={layoutType}
-        />
-      </div>
+
+      {!withoutBenefits && (
+        <div className={styles.expertiseCards} data-layout-type={layoutType}>
+          {benefitsCards?.map(card => (
+            <CardBasic key={card.title} title={card.title} icon={card.icon} layoutType={layoutType} />
+          ))}
+        </div>
+      )}
     </SectionBasic>
   );
 }
