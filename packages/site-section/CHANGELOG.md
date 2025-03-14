@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.3 (2025-03-14)
+
+
+### Bug Fixes
+
+* **PDS-1883:** add props to SectionPersonalManager ([22747ba](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/22747ba816ff5f9b9cc046ec80e2f397f692a80f))
+* **PDS-1888:** wrap SectionLeading into SectionBasic ([d277a50](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d277a507ebf8f8d7de2adfc2584d8f4fc1cadb2c))
+
+
+
+
+
 ## 0.8.2 (2025-03-13)
 
 ### Only dependencies have been changed
