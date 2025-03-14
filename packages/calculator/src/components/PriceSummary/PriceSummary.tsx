@@ -43,7 +43,7 @@ export function PriceSummary({ className, appearance = SummaryAppearance.Default
     selectedProduct,
     products,
     config: { products: productsProp, platforms },
-    actions: { onCatalogOpen },
+    actions: { onCatalogOpen, onStartClick },
   } = useCalculatorContext();
   const isMobile = layoutType !== LAYOUT_TYPE.Desktop && layoutType !== LAYOUT_TYPE.DesktopSmall;
   const isPartners = calculatorType === 'partners';
@@ -73,11 +73,16 @@ export function PriceSummary({ className, appearance = SummaryAppearance.Default
     setCatalogOpen(true);
   };
 
+  const handleStartCatalog = () => {
+    onStartClick?.();
+    setCatalogOpen(true);
+  };
+
   const serviceButtonProps = {
-    onClick: handleCatalogOpen,
     size: 'm',
     icon: <PlusSVG />,
     label: 'Добавить сервис',
+    'data-test-id': parseKeyToDataTest('price', 'summary-button'),
   } as const;
 
   return (
@@ -89,19 +94,10 @@ export function PriceSummary({ className, appearance = SummaryAppearance.Default
       <div className={styles.headline}>
         <TitleComponent data-test-id={parseKeyToDataTest('price', 'summary-title')}>Расчет</TitleComponent>
         {appearance === SummaryAppearance.Welcome && (
-          <ButtonFilled
-            appearance='primary'
-            data-test-id={parseKeyToDataTest('price', 'summary-button')}
-            {...serviceButtonProps}
-          />
+          <ButtonFilled appearance='primary' onClick={handleStartCatalog} {...serviceButtonProps} />
         )}
         {appearance === SummaryAppearance.Default && (
-          <ButtonTonal
-            appearance='neutral'
-            fullWidth={isMobile}
-            data-test-id={parseKeyToDataTest('price', 'summary-button')}
-            {...serviceButtonProps}
-          />
+          <ButtonTonal appearance='neutral' fullWidth={isMobile} onClick={handleCatalogOpen} {...serviceButtonProps} />
         )}
       </div>
 
