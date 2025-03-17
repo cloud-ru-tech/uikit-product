@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2025-03-17)
+
+
+### Features
+
+* **ONB-3437:** fix price summary block ([e4474b7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e4474b7696c99c17d221795c00e4fa87577360ec))
+
+
+
+
+
 ## 0.9.2 (2025-03-14)
 
 ### Only dependencies have been changed
