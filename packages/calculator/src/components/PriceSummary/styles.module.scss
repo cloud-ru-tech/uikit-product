@@ -1,7 +1,8 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as stv;
 
 .scroll {
-  height: 320px;
+  min-height: 320px;
+  height: 100%;
   padding: stv.$dimension-3m;
 }
 
