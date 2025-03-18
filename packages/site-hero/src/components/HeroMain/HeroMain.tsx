@@ -135,7 +135,7 @@ export function HeroMain({
       {navbar && navbar.items.length > 0 && (
         <Layout.SectionWrapper
           layoutType={layoutType}
-          className={styles.sectionWrapper}
+          className={cn(styles.sectionWrapper, styles.navbarWrapper)}
           data-sticky={true}
           data-section-background={backgroundColor}
         >

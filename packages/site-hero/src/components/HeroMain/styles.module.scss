@@ -142,5 +142,6 @@
 }
 
 .navbarWrapper {
-  width: 100%;
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 5;
 }
