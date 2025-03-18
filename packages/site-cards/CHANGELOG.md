@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.2 (2025-03-18)
+
+
+### Bug Fixes
+
+* **PDS-1903:** add truncate to card product description ([fd20ae4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fd20ae446bd19185371aa5df927f52041da59fcf))
+
+
+
+
+
 ## 0.6.1 (2025-03-18)
 
 ### Only dependencies have been changed

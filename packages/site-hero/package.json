@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-hero",
   "title": "Site Hero",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "sideEffects": [
     "*.css",
     "*.woff",

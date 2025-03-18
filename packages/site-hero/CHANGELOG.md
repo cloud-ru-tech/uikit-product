@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.11 (2025-03-18)
+
+
+### Bug Fixes
+
+* **PDS-1903:** update z-index for hero main ([e74b444](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e74b4443cb4ff655f6337cf5472a61bb83980df8))
+
+
+
+
+
 ## 0.1.10 (2025-03-18)
 
 ### Only dependencies have been changed
