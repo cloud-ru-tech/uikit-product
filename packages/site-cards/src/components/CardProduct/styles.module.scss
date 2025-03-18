@@ -46,6 +46,8 @@
 }
 
 .description {
+  @include ste.composite-var(ste.$sans-body-m);
+
   color: ste.$sys-neutral-text-support;
   word-break: break-word;
 }

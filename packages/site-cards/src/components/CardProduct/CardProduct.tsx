@@ -3,7 +3,7 @@ import { AnchorHTMLAttributes } from 'react';
 import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Card, CardProps } from '@snack-uikit/card';
-import { Typography } from '@snack-uikit/typography';
+import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { Icon, IconProps } from '../../helperComponents/Icon';
 import { useCardInteractions } from '../../hooks';
@@ -85,9 +85,12 @@ export function CardProduct({
           </Title>
 
           {description && (
-            <Typography.SansBodyM data-test-id={`${dataTestId}__description`} className={styles.description}>
-              {description}
-            </Typography.SansBodyM>
+            <TruncateString
+              data-test-id={`${dataTestId}__description`}
+              text={description}
+              className={styles.description}
+              maxLines={3}
+            />
           )}
 
           {tags && tags.length > 0 && (
