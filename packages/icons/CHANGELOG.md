@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 10.7.0 (2025-03-18)
+
+
+### Features
+
+* **PDS-1876:** up service icons ([cc08e58](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cc08e58b2d0be90b9a0cb450a1be5712f3e4d504))
+
+
+
+
+
 # 10.6.0 (2025-03-14)
 
 
