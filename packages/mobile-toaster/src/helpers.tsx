@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Id, toast, ToastOptions as RtToastOptions } from 'react-toastify';
 
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
-import { dismissToast, openToast, toaster, updateToast } from '@snack-uikit/toaster';
+import { dismissToast, openToast, toaster, ToastUpload, ToastUploadProps, updateToast } from '@snack-uikit/toaster';
 import { isBrowser } from '@snack-uikit/utils';
 
 import {
@@ -31,6 +31,7 @@ import {
   ToasterType,
   ToastOptions,
   UpdateToast,
+  UploadOptions,
   UserActionOptions,
 } from './types';
 
@@ -100,6 +101,8 @@ function getToastComponent<T extends keyof ToasterPropsMap>({
       return <MobileToastUserAction {...(toasterProps as MobileToastUserActionProps)} />;
     case TOASTER_TYPE.SystemEvent:
       return <MobileToastSystemEvent {...(toasterProps as MobileToastSystemEventProps)} />;
+    case TOASTER_TYPE.Upload:
+      return <ToastUpload {...(toasterProps as ToastUploadProps)} />;
     default:
       return undefined;
   }
@@ -340,9 +343,38 @@ const systemEvent = {
   },
 };
 
+const upload = {
+  startOrUpdate({ id, ...options }: UploadOptions) {
+    const toastId = id || TOASTER_TYPE.Upload;
+
+    if (toast.isActive(toastId)) {
+      return updateToast(toastId, {
+        type: TOASTER_TYPE.Upload,
+        toasterProps: { ...options },
+      });
+    }
+
+    return openToast({
+      type: TOASTER_TYPE.Upload,
+      toasterProps: {
+        ...options,
+      },
+      toastOptions: {
+        id: toastId,
+        onClose: options.onClose,
+      },
+    });
+  },
+
+  dismiss(id?: ToasterId) {
+    return toast.dismiss(id);
+  },
+};
+
 export const mobileToaster: Toaster = {
   userAction,
   systemEvent,
+  upload,
 };
 
 export function adaptiveToaster({ layoutType }: WithLayoutType<unknown>): Toaster {

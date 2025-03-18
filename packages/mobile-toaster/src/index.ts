@@ -7,6 +7,7 @@ export {
   openMobileToast,
   updateMobileToast,
   dismissMobileToast,
+  isToastActive,
 } from './helpers';
 export type {
   MobileToastSystemEventProps,
@@ -21,5 +22,12 @@ export type {
   SystemEventOptions,
   ToasterId,
   ToastOptions,
+  UploadOptions,
 } from './types';
 export { TOASTER_TYPE } from './constants';
+export type {
+  ToastSystemEventProps,
+  ToastUserActionProps,
+  ToasterContainerProps,
+  ToastUploadProps,
+} from '@snack-uikit/toaster';
