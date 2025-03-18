@@ -2,6 +2,8 @@ import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useEffect } from 'react';
 
+import { Layout } from '@sbercloud/uikit-product-site-layout';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
@@ -10,7 +12,6 @@ import { EridProps } from '../src/helperComponents';
 import { APPEARANCE_ERID } from '../src/helperComponents/Erid/constants';
 import rectangle from './assets/rectangle.webp';
 import square from './assets/square.webp';
-import styles from './styles.module.scss';
 
 const meta: Meta = {
   title: 'Site/Banner/Primary',
@@ -69,9 +70,9 @@ const Template: StoryFn<StoryProps> = ({ withTags, withErid, imgType, ...args })
       : {};
 
   return (
-    <div className={styles.wrapper}>
+    <Layout>
       <BannerPrimary {...args} {...imgProps} tags={tags} {...eridProps} />
-    </div>
+    </Layout>
   );
 };
 
