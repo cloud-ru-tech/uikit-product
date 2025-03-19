@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 
+import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
@@ -39,7 +40,11 @@ export function SectionTitle({
               {title}
             </Typography>
           )}
-          {description && <Typography.SansBodyL className={styles.description}>{description}</Typography.SansBodyL>}
+          {description && (
+            <Typography.SansBodyL className={styles.description}>
+              <RichText richText={description} />
+            </Typography.SansBodyL>
+          )}
         </div>
       )}
     </>
