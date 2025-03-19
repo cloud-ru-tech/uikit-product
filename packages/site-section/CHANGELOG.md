@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2025-03-19)
+
+
+### Features
+
+* **PDS-1503:** add SectionMedia ([5393f4f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5393f4f509b0acbc621d194ad192e191df7ff58e))
+
+
+
+
+
 # 0.9.0 (2025-03-19)
 
 
