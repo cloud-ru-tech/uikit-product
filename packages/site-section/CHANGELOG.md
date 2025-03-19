@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.1 (2025-03-19)
+
+
+### Bug Fixes
+
+* **PDS-1933:** add richText for description in SectionTitle ([5a2991f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5a2991fa25dc586f5d9ac13ad2ebacd9cfa34c6b))
+
+
+
+
+
 # 0.10.0 (2025-03-19)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.1 (2025-03-19)
+
+
+### Bug Fixes
+
+* **PDS-1932:** add richText for title in CardInfo and CardBasic ([f423d6d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f423d6d7244e9fdeca23b285c95f2f7f99d8f079))
+
+
+
+
+
 # 0.7.0 (2025-03-19)
 
 
