@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-03-19)
+
+
+### Features
+
+* **PDS-1827:** remove banner ([97cfb43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/97cfb4370be126ead6e9265f1d6af87d95019d74))
+
+
+
+
+
 ## 0.2.4 (2025-03-18)
 
 ### Only dependencies have been changed
