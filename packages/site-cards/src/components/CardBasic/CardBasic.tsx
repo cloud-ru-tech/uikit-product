@@ -49,7 +49,7 @@ export function CardBasic({
           data-test-id={`${dataTestId}__title`}
           className={styles.title}
         >
-          {title}
+          <RichText richText={title} />
         </Typography>
 
         {description && (

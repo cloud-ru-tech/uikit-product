@@ -98,10 +98,10 @@ export function CardInfo({
                 onClick={handleLinkClick}
                 data-test-id={`${dataTestId}__title-link`}
               >
-                {title}
+                <RichText richText={title} />
               </a>
             ) : (
-              title
+              <RichText richText={title} />
             )}
           </Typography>
 
