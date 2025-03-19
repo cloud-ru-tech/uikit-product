@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-03-19)
+
+
+### Features
+
+* **PDS-1513:** section carousel, case, clients, marketplace ([c849d32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c849d32ce17cebc69c9aed2f926fdb2021b40a83))
+
+
+
+
+
 ## 0.6.2 (2025-03-18)
 
 
