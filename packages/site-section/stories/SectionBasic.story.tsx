@@ -64,6 +64,7 @@ const Template: StoryFn<StoryProps> = ({
   layoutType,
   titleSectionSize,
   backgroundColor,
+  ...args
 }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
 
@@ -80,6 +81,7 @@ const Template: StoryFn<StoryProps> = ({
   return (
     <div className={styles.resizeWrapper}>
       <SectionBasic
+        {...args}
         id={id}
         title={showTitle ? title : undefined}
         description={showTitle ? description : undefined}

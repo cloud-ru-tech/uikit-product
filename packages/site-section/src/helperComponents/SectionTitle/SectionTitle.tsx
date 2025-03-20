@@ -17,6 +17,8 @@ export type SectionTitleProps = WithLayoutType<{
   titleSectionSize?: Size;
   /** Тег заголовка */
   titleTag?: SectionTag;
+  /** Выравнивание текста */
+  titleAlign?: 'left' | 'center';
 }>;
 
 export function SectionTitle({
@@ -25,6 +27,7 @@ export function SectionTitle({
   titleSectionSize = 'm',
   titleTag = 'h2',
   layoutType,
+  titleAlign = 'left',
 }: SectionTitleProps) {
   const titleProps = useMemo(
     () => getTitleTypographyProps({ titleSectionSize, layoutType }),
@@ -34,7 +37,7 @@ export function SectionTitle({
   return (
     <>
       {(title || description) && (
-        <div className={styles.sectionTitle}>
+        <div className={styles.sectionTitle} data-align={titleAlign}>
           {title && (
             <Typography family='sans' {...titleProps} tag={titleTag} className={styles.title}>
               <RichText richText={title} />

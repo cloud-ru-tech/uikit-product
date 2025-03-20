@@ -25,7 +25,7 @@ type TabBarItem = WithSupportProps<{
 
 export type SectionBasicProps = WithLayoutType<
   WithSupportProps<
-    Pick<SectionTitleProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag'> & {
+    Pick<SectionTitleProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag' | 'titleAlign'> & {
       /** id секции */
       id?: string;
       children: ReactNode;
@@ -68,6 +68,7 @@ export function SectionBasic({
   pagination,
   backgroundColor = SECTION_COLORS.NeutralBackground1Level,
   layoutType,
+  titleAlign,
   ...rest
 }: SectionBasicProps) {
   const [currentTab, setCurrentTab] = useState<string | undefined>(getInitialTab(tabBarItems));
@@ -89,6 +90,7 @@ export function SectionBasic({
           description={description}
           titleSectionSize={titleSectionSize}
           titleTag={titleTag}
+          titleAlign={titleAlign}
         />
 
         {tabBarItems?.length && (

@@ -5,22 +5,24 @@ import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sberclou
 
 import { CardSocial, CardSocialProps } from '../../helperComponents';
 import { SectionColor } from '../../types';
-import { SectionBasic } from '../SectionBasic';
+import { SectionBasic, SectionBasicProps } from '../SectionBasic';
 import { GRID_CONFIG } from './constants';
 import styles from './styles.module.scss';
 
 export type SectionSocialProps = WithSupportProps<
-  WithLayoutType<{
-    /** id секции */
-    id?: string;
-    /** CSS-класс */
-    className?: string;
-    /** Цвет фона */
-    backgroundColor?: SectionColor;
-    /** Заголовок */
-    title?: string;
-    cards: Omit<CardSocialProps, 'layoutType'>[];
-  }>
+  WithLayoutType<
+    Pick<SectionBasicProps, 'title' | 'titleAlign'> & {
+      /** id секции */
+      id?: string;
+      /** CSS-класс */
+      className?: string;
+      /** Цвет фона */
+      backgroundColor?: SectionColor;
+      /** Заголовок */
+      title?: string;
+      cards: Omit<CardSocialProps, 'layoutType'>[];
+    }
+  >
 >;
 
 export function SectionSocial({
@@ -30,12 +32,14 @@ export function SectionSocial({
   backgroundColor,
   className,
   cards,
+  titleAlign,
   ...rest
 }: SectionSocialProps) {
   return (
     <SectionBasic
       id={id}
       title={title}
+      titleAlign={titleAlign}
       backgroundColor={backgroundColor}
       layoutType={layoutType}
       className={cn(className, styles.sectionSocial)}

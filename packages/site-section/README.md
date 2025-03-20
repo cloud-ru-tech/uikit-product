@@ -27,6 +27,7 @@
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | tabBarItems | `TabBarItem[]` | - | Массив табов |
 | filterItems | `FieldSelectProps[]` | - | Массив фильтров |
@@ -72,6 +73,7 @@
 | className | `string` | - | CSS - класснейм |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| titleAlign | "left" \| "center" | - | Выравнивание текста |
 ## SectionLeading
 ### Props
 | name | type | default value | description |
@@ -95,8 +97,8 @@
 | title | `string` | - | Название секции |
 | description | `string` | - | Описание секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
-| video | `any` | - |  |
-| onPlay | `any` | - |  |
+| video | `ReactNode \| VideoPlayerProps` | - |  |
+| onPlay | `() => void` | - |  |
 | image | `{ src: string; alt?: string; }` | - |  |
 ## SectionPersonalManager
 ### Props
@@ -130,10 +132,11 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | cards* | `Omit<CardSocialProps, "layoutType">[]` | - |  |
+| title | `string` | - | Название секции Заголовок |
+| titleAlign | "left" \| "center" | - | Выравнивание текста |
 | id | `string` | - | id секции |
 | className | `string` | - | CSS-класс |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| title | `string` | - | Заголовок |
 ## SectionTable
 ### Props
 | name | type | default value | description |
@@ -158,6 +161,7 @@
 | className | `string` | - | CSS - класснейм |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| titleAlign | "left" \| "center" | - | Выравнивание текста |
 ## SectionClientsCarousel
 ### Props
 | name | type | default value | description |
@@ -170,6 +174,7 @@
 | className | `string` | - | CSS - класснейм |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| titleAlign | "left" \| "center" | - | Выравнивание текста |
 ## SectionMarketplaceCarousel
 ### Props
 | name | type | default value | description |
@@ -183,6 +188,7 @@
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| titleAlign | "left" \| "center" | - | Выравнивание текста |
 ## SectionBlogCarousel
 ### Props
 | name | type | default value | description |
@@ -196,6 +202,7 @@
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| titleAlign | "left" \| "center" | - | Выравнивание текста |
 
 
 [//]: DOCUMENTATION_SECTION_END

@@ -63,13 +63,18 @@
 .text {
   display: flex;
   flex-direction: column;
-  gap: calc(var.$dimension-1m + var.$dimension-050m);
+  gap: calc(#{var.$dimension-1m + var.$dimension-050m});
   max-width: 800px;
+  text-align: left;
 
   &[data-layout-type='tablet'],
   &[data-layout-type='mobile']{
     gap: var.$dimension-1m;
     max-width: unset;
+  }
+
+  &[data-align='center'] {
+    text-align: center;
   }
 }
 

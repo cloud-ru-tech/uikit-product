@@ -1,6 +1,7 @@
 import cn from 'classnames';
 
 import { Layout } from '@sbercloud/uikit-product-site-layout';
+import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, Item } from '@snack-uikit/breadcrumbs';
 import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
@@ -25,6 +26,8 @@ export type HeroZeroProps = WithSupportProps<
     showBottomPadding?: boolean;
     /** Цвет фона */
     backgroundColor?: HeroColor;
+    /** Выравнивание текста */
+    textAlign?: 'left' | 'center';
     /** CSS - класснейм */
     className?: string;
   }>
@@ -39,6 +42,7 @@ export function HeroZero({
   className,
   backgroundColor = HERO_COLORS.NeutralBackground,
   showBottomPadding = true,
+  textAlign = 'left',
   ...rest
 }: HeroZeroProps) {
   return (
@@ -53,14 +57,14 @@ export function HeroZero({
           <div className={styles.contentText} data-layout-type={layoutType}>
             <Breadcrumbs items={breadcrumbs} size='xs' />
 
-            <div className={styles.text} data-layout-type={layoutType}>
+            <div className={styles.text} data-layout-type={layoutType} data-align={textAlign}>
               <Typography family='sans' tag='h1' className={styles.title} {...getTitleTypographyProps(layoutType)}>
                 {title}
               </Typography>
 
               {description && (
                 <Typography.SansBodyL tag='p' className={styles.description}>
-                  {description}
+                  <RichText richText={description} />
                 </Typography.SansBodyL>
               )}
             </div>

@@ -34,6 +34,7 @@ Hero blocks for Site
 | buttons | `[ButtonFilledProps, ButtonFilledProps?]` | - | Массив с настройками кнопок ButtonFilled |
 | showBottomPadding | `boolean` | true | Наличие нижнего паддинга |
 | backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background | Цвет фона |
+| textAlign | "left" \| "center" | left | Выравнивание текста |
 | className | `string` | - | CSS - класснейм |
 ## HeroMain
 ### Props
