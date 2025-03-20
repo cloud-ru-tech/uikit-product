@@ -48,8 +48,8 @@ svgs
 
 1. Выделяем в Figma все иконки на странице, экспортируем в формате .svg, получаем .zip архив со структурой `someName/{IconName}.svg` ("корневая папка" в текущем примере слева –"someName")
 2. Переименовываем корневую папку в target folder, например `service-icons`, чтобы получилось `service-icons/{IconName}.svg`
-3. Очищаем директорию `./packages/icons/import` или убеждаемся, что в ней не осталось папок с прошлого импорта
-4. Копируем корневую папку в `./packages/icons/import`, чтобы получилось `./packages/icons/import/interface-icons-product`
+3. Очищаем директорию `./packages/icons/scripts/import` или убеждаемся, что в ней не осталось папок с прошлого импорта
+4. Копируем корневую папку в `./packages/icons/scripts/import`, чтобы получилось `./packages/icons/scripts/import/service-icons`
 5. Запускаем скрипт `import:icons` из `./packages/icons/package.json`
 6. Готово
 
