@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.0.0 (2025-03-20)
+
+
+### BREAKING CHANGES
+
+
+* **PDS-1926:** update icons for Key Management, Secret Management & fix contribution guide ([b9e1863](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b9e1863b4db4f498bcf207b2185f1b515a3c2fa4))
+
+
+
+
 # 10.7.0 (2025-03-18)
 
 
