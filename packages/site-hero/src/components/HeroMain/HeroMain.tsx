@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { SiteNavbar, SiteNavbarProps } from '@sbercloud/uikit-product-site-navbar';
+import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
@@ -50,7 +51,7 @@ export function HeroMain({
   tags = [],
   platforms = [],
   handlePlatformClick,
-  backgroundColor,
+  backgroundColor = 'neutral-background1-level',
   buttons,
   navbar,
   layoutType,
@@ -84,10 +85,12 @@ export function HeroMain({
 
                 <div className={styles.textWrapper}>
                   <Typography tag='h1' family='sans' {...getTitleTypographyProps(layoutType)} className={styles.title}>
-                    {title}
+                    <RichText richText={title} />
                   </Typography>
 
-                  <Typography.SansBodyL className={styles.description}>{description}</Typography.SansBodyL>
+                  <Typography.SansBodyL className={styles.description}>
+                    <RichText richText={description} />
+                  </Typography.SansBodyL>
 
                   {platforms && platforms.length > 0 && handlePlatformClick && (
                     <Typography.SansBodyL tag='p' className={styles.platforms}>
