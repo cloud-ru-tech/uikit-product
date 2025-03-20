@@ -5,7 +5,7 @@ import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { SiteNavbar, SiteNavbarProps } from '@sbercloud/uikit-product-site-navbar';
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
+import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { ButtonFilled, ButtonFilledProps, ButtonOutline, ButtonOutlineProps } from '@snack-uikit/button';
@@ -27,7 +27,7 @@ export type HeroMainProps = WithSupportProps<
     /** Хлебные крошки для продукта */
     breadcrumbs: BreadcrumbsProps['items'];
     /** Тэги */
-    tags?: Pick<TagPredefinedProps, 'variant' | 'type'>[];
+    tags?: Pick<TagSpecialProps, 'text' | 'appearance' | 'tip'>[];
     /** Платформы */
     platforms?: Array<PlatformLinkProps['platform']>;
     /** Обработка клика по платформе */
@@ -75,10 +75,8 @@ export function HeroMain({
 
                 {tags.length > 0 && (
                   <div className={styles.tagRow} data-layout-type={layoutType}>
-                    {tags.map(({ variant, type }) => (
-                      // eslint-disable-next-line
-                      // @ts-ignore
-                      <TagPredefined key={type} size='xs' variant={variant} type={type} />
+                    {tags.map(({ text, tip, appearance }) => (
+                      <TagSpecial key={text} text={text} tip={tip} appearance={appearance} />
                     ))}
                   </div>
                 )}

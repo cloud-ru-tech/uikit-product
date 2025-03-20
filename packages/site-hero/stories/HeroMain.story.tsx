@@ -70,20 +70,22 @@ const NAVBAR_ITEMS: NonNullable<HeroMainProps['navbar']>['items'] = [
 
 const TAGS: HeroMainProps['tags'] = [
   {
-    variant: 'promo',
-    type: 'legal',
+    text: 'Только для юрлиц',
+    appearance: 'violet',
   },
   {
-    variant: 'promo',
-    type: 'free-configuration',
+    text: 'Бесплатная конфигурация',
+    appearance: 'blue',
+    tip: 'При бесплатном использовании ресурсы предоставляются исключительно для тестирования в рамках рекламной кампании. Не подразумевается безвозмездное предоставление ресурсов по смыслу пп. 4 п.1 ст. 575 ГК РФ.',
   },
   {
-    variant: 'promo',
-    type: 'free-start',
+    text: 'Бесплатный старт',
+    appearance: 'blue',
+    tip: 'При бесплатном использовании ресурсы предоставляются исключительно для тестирования в рамках рекламной кампании. Не подразумевается безвозмездное предоставление ресурсов по смыслу пп. 4 п.1 ст. 575 ГК РФ.',
   },
   {
-    variant: 'promo',
-    type: 'preview',
+    text: 'Акция действует до 30.04.2025',
+    appearance: 'neutral',
   },
 ];
 

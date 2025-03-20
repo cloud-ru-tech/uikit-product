@@ -44,7 +44,7 @@ Hero blocks for Site
 | image* | `string` | - | Ссылка на изображение |
 | description* | `string` | - | Описание продукта |
 | title* | `string` | - | Заголовок продукта |
-| tags | `Pick<TagPredefinedProps, "type" \| "variant">[]` | [] | Тэги |
+| tags | `Pick<TagSpecialProps, "text" \| "appearance" \| "tip">[]` | [] | Тэги |
 | platforms | `Platform[]` | [] | Платформы |
 | handlePlatformClick | `() => void` | - | Обработка клика по платформе |
 | backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвета фона |
