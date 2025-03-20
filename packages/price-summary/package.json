@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-price-summary",
   "title": "Price Summary",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "sideEffects": [
     "*.css",
     "*.woff",

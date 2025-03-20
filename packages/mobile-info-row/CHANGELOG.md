@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.28 (2025-03-20)
+
+
+### Bug Fixes
+
+* **FF-6326:** changed translation flow ([b3b6bb4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b3b6bb4349103a63ce328f6f77d36daed0a7fc6b))
+
+
+
+
+
 ## 0.5.27 (2025-03-20)
 
 ### Only dependencies have been changed

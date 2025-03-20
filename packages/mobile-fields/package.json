@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-fields",
   "title": "Mobile Fields",
-  "version": "0.6.32",
+  "version": "0.6.33",
   "sideEffects": [
     "*.css",
     "*.woff",
