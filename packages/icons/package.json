@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "@sbercloud/uikit-product-utils": "3.8.8",
-    "@snack-uikit/icons": "0.26.0"
+    "@snack-uikit/icons": "0.26.2"
   },
   "devDependencies": {
     "@sbercloud/ft-download-file": "3.0.1",
