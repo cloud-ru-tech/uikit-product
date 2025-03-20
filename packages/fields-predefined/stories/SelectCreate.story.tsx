@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
-import { KeyManagerSVG } from '@sbercloud/uikit-product-icons';
+import { KeyManagementSVG } from '@sbercloud/uikit-product-icons';
 import { useAdaptive } from '@sbercloud/uikit-product-utils';
 import { FieldSelectProps } from '@snack-uikit/fields';
 
@@ -62,7 +62,7 @@ export const selectCreate: StoryObj<SelectCreateProps> = {
     createLayoutType: 'drawer',
     onRefetch: undefined,
     entityName: { single: 'Ключ', plural: 'Ключи' },
-    entityIcon: KeyManagerSVG,
+    entityIcon: KeyManagementSVG,
   },
   argTypes: {
     createLayoutType: {
