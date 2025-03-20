@@ -95,8 +95,8 @@
 | title | `string` | - | Название секции |
 | description | `string` | - | Описание секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
-| video | `ReactNode \| { src: string; poster: string; controls?: boolean; }` | - |  |
-| onPlay | `() => void` | - |  |
+| video | `any` | - |  |
+| onPlay | `any` | - |  |
 | image | `{ src: string; alt?: string; }` | - |  |
 ## SectionPersonalManager
 ### Props

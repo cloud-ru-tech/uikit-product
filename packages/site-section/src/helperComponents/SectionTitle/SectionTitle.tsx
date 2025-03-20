@@ -37,7 +37,7 @@ export function SectionTitle({
         <div className={styles.sectionTitle}>
           {title && (
             <Typography family='sans' {...titleProps} tag={titleTag} className={styles.title}>
-              {title}
+              <RichText richText={title} />
             </Typography>
           )}
           {description && (
