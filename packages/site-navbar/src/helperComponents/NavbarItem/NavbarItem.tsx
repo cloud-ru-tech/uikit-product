@@ -15,13 +15,13 @@ const KEYS = ['Space', 'Enter'];
 
 type Props = NavbarItemProps & {
   active?: boolean;
-  onClick(id: string): void;
+  onClick(id: string, text: string): void;
 };
 
 export function NavbarItem({ id, text, icon, onClick, active = false, disabled = false }: Props) {
   const handleClick = useCallback(() => {
-    onClick(id);
-  }, [id, onClick]);
+    onClick(id, text);
+  }, [id, onClick, text]);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {

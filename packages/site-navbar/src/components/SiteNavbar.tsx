@@ -9,7 +9,7 @@ import styles from './styles.module.scss';
 
 export type SiteNavbarProps = WithSupportProps<{
   items: NavbarItemProps[];
-  onItemClick(id: string): void;
+  onItemClick(id: string, text: string): void;
   active?: string;
   className?: string;
 }>;
