@@ -50,7 +50,7 @@ Hero blocks for Site
 | backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвета фона |
 | buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<ButtonOutlineProps, "size" \| "appearance">?]` | - | Массив с настройками кнопок ButtonFilled |
 | className | `string` | - | CSS - класснейм |
-| navbar | `Pick<SiteNavbarProps, "items" \| "active" \| "onItemClick">` | - | Navbar |
+| navbar | `Pick<SiteNavbarProps, "items" \| "active" \| "onItemClick" \| "topPosition">` | - | Navbar |
 
 
 [//]: DOCUMENTATION_SECTION_END

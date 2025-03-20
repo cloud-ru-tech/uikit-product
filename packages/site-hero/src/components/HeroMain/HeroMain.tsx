@@ -38,7 +38,7 @@ export type HeroMainProps = WithSupportProps<
     /** CSS - класснейм */
     className?: string;
     /** Navbar */
-    navbar?: Pick<SiteNavbarProps, 'items' | 'active' | 'onItemClick'>;
+    navbar?: Pick<SiteNavbarProps, 'items' | 'active' | 'onItemClick' | 'topPosition'>;
   }>
 >;
 

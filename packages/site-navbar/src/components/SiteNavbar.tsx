@@ -12,11 +12,16 @@ export type SiteNavbarProps = WithSupportProps<{
   onItemClick(id: string, text: string): void;
   active?: string;
   className?: string;
+  topPosition?: number;
 }>;
 
-export function SiteNavbar({ items, className, onItemClick, active, ...rest }: SiteNavbarProps) {
+export function SiteNavbar({ items, className, onItemClick, active, topPosition, ...rest }: SiteNavbarProps) {
   return (
-    <div className={cn(styles.navbar, className)} {...extractSupportProps(rest)}>
+    <div
+      className={cn(styles.navbar, className)}
+      style={topPosition ? { top: `${topPosition}px` } : undefined}
+      {...extractSupportProps(rest)}
+    >
       <Divider />
       <ScrollContainer className={styles.navbarItemsWrapper}>
         {items.map(item => (
