@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.15 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1946:** contentAlign for HeroZero ([e71ca72](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e71ca72b762f567a74445c2c42897856a7112c15))
+
+
+
+
+
 ## 0.1.14 (2025-03-21)
 
 
