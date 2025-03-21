@@ -1,8 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 import { useMemo } from 'react';
 
-import { LayoutType } from '@sbercloud/uikit-product-utils';
-
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
@@ -23,28 +21,29 @@ type StoryProps = SectionCaseCarouselProps & {
   partnersAmount: number;
 };
 
-const createSamplePartner = (index: number, layoutType: LayoutType): CaseItem => ({
-  layoutType,
+const createSamplePartner = (index: number): CaseItem => ({
   logo: {
     src: samplePartnerImage as unknown as string,
     alt: 'dodo',
   },
   description:
-    'Handgloves Description Sample Description Sample Description Handgloves Sample Description Sample Handgloves Description',
+    index === 0
+      ? 'Handgloves Description Sample'
+      : 'Handgloves Description Sample Description Sample Description Handgloves Sample Description Sample Handgloves Description',
 });
 
-const generatePartners = (amount: number, layoutType: LayoutType): CaseItem[] => {
+const generatePartners = (amount: number): CaseItem[] => {
   const partners: CaseItem[] = [];
 
   for (let i = 0; i < amount; i++) {
-    partners.push(createSamplePartner(i + 1, layoutType));
+    partners.push(createSamplePartner(i));
   }
 
   return partners;
 };
 
 const Template: StoryFn<StoryProps> = ({ id, title, partnersAmount, layoutType, backgroundColor }) => {
-  const sampleCases = useMemo(() => generatePartners(partnersAmount, layoutType), [layoutType, partnersAmount]);
+  const sampleCases = useMemo(() => generatePartners(partnersAmount), [partnersAmount]);
 
   return (
     <div className={styles.resizeWrapper}>

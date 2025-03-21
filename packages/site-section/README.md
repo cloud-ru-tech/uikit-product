@@ -154,7 +154,7 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| items* | `CardPartnerProps[]` | - | Массив айтемов |
+| items* | `CaseItem[]` | - | Массив айтемов |
 | id | `string` | - | id секции |
 | title | `string` | - | Название секции |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
