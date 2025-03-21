@@ -203,6 +203,17 @@
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+## SectionBenefitsBanner
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| backgroundImage* | `string` | - | Фоновая картинка |
+| items* | `[ItemProps, ...ItemProps[]]` | - | Выгоды |
+| title | `string` | - | Заголовок |
+| titleTag | enum Tag: `"span"`, `"h1"`, `"h2"`, `"h3"`, `"h4"`, `"h5"`, `"h6"`, `"div"`, `"label"`, `"p"` | h3 | Тэг заголовка |
+| description | `string` | - | Описание под баннером |
+| className | `string` | - | CSS класс |
 
 
 [//]: DOCUMENTATION_SECTION_END

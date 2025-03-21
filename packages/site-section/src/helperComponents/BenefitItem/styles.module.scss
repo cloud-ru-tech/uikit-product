@@ -1,0 +1,23 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.benefitItem {
+  display: flex;
+  color: ste.$sys-graphite-text-main;
+
+  flex-direction: column;
+  gap: ste.$dimension-1m;
+  max-width: 215px;
+
+  &[data-layout-type='tablet'] {
+    flex-direction: row;
+    gap: calc(#{ste.$dimension-1m} + #{ste.$dimension-050m});
+    max-width: unset;
+
+    align-items: center;
+  }
+
+  &[data-layout-type='mobile'] {
+    gap: unset;
+    max-width: unset;
+  }
+}

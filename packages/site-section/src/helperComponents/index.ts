@@ -6,3 +6,4 @@ export * from './SectionCatalogFooter';
 export * from './SectionTitle';
 export * from './SectionCarousel';
 export * from './CardClient';
+export * from './BenefitItem';

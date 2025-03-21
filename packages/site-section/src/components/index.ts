@@ -13,3 +13,4 @@ export * from './SectionCaseCarousel';
 export * from './SectionClientsCarousel';
 export * from './SectionMarketplaceCarousel';
 export * from './SectionBlogCarousel';
+export * from './SectionBenefitsBanner';

@@ -1,0 +1,84 @@
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.bannerWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: ste.$dimension-4m;
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    gap: ste.$dimension-3m;
+  }
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+  background-color: ste.$sys-primary-accent-default;
+
+  padding: ste.$dimension-5m;
+
+  &[data-layout-type='tablet'] {
+    padding: ste.$dimension-4m;
+  }
+
+  &[data-layout-type='mobile'] {
+    // 24px 24px 100px
+    padding: ste.$dimension-3m ste.$dimension-3m calc(#{ste.$dimension-10m} + #{ste.$dimension-2m} + #{ste.$dimension-050m});
+  }
+}
+
+.contentWrapper {
+  position: relative;
+
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: ste.$dimension-4m;
+
+  color: ste.$sys-graphite-text-main;
+}
+
+.benefitItems {
+  display: flex;
+
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: calc(#{ste.$dimension-6m} + #{ste.$dimension-025m});
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    flex-direction: column;
+    gap: ste.$dimension-4m;
+  }
+}
+
+.description {
+  color: ste.$sys-neutral-text-support;
+}
+
+.illustration {
+  position: absolute;
+  pointer-events: none;
+
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 0;
+
+  width: 640px;
+  right: -72px;
+  bottom: -49px;
+
+  &[data-layout-type='tablet'] {
+    width: 583px;
+    right: -170px;
+    bottom: 0;
+  }
+
+  &[data-layout-type='mobile'] {
+    width: 462px;
+    bottom: -95px;
+    right: -100px;
+  }
+}
