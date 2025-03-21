@@ -75,6 +75,7 @@
 
   &[data-align='center'] {
     text-align: center;
+    align-self: center;
   }
 }
 
@@ -95,6 +96,10 @@
   &[data-layout-type='mobile'] {
     flex-direction: column;
     gap: var.$dimension-1m;
+  }
+
+  &[data-align='center'] {
+    justify-content: center;
   }
 }
 

@@ -27,7 +27,7 @@ export type HeroZeroProps = WithSupportProps<
     /** Цвет фона */
     backgroundColor?: HeroColor;
     /** Выравнивание текста */
-    textAlign?: 'left' | 'center';
+    contentAlign?: 'left' | 'center';
     /** CSS - класснейм */
     className?: string;
   }>
@@ -42,7 +42,7 @@ export function HeroZero({
   className,
   backgroundColor = HERO_COLORS.NeutralBackground,
   showBottomPadding = true,
-  textAlign = 'left',
+  contentAlign = 'left',
   ...rest
 }: HeroZeroProps) {
   return (
@@ -57,7 +57,7 @@ export function HeroZero({
           <div className={styles.contentText} data-layout-type={layoutType}>
             <Breadcrumbs items={breadcrumbs} size='xs' />
 
-            <div className={styles.text} data-layout-type={layoutType} data-align={textAlign}>
+            <div className={styles.text} data-layout-type={layoutType} data-align={contentAlign}>
               <Typography family='sans' tag='h1' className={styles.title} {...getTitleTypographyProps(layoutType)}>
                 {title}
               </Typography>
@@ -71,7 +71,7 @@ export function HeroZero({
           </div>
 
           {buttons && buttons.length > 0 && (
-            <div className={styles.buttons} data-layout-type={layoutType}>
+            <div className={styles.buttons} data-layout-type={layoutType} data-align={contentAlign}>
               {buttons.map((props, index) => (
                 <ButtonFilled key={index} className={styles.button} {...props} data-layout-type={layoutType} />
               ))}
