@@ -37,3 +37,5 @@ deps-report.json
 /testcafe/coverage
 .nyc_output
 /public
+
+/reports/unit

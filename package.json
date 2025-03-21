@@ -29,7 +29,8 @@
     "test:ci": "ts-node scripts/run-tests",
     "test:testcafe": "testcafe firefox --config-file testcafe.config.js --live",
     "test:testcafe:local": "cross-env TEST_LOCAL=true npm run test:testcafe",
-    "test:testcafe:branch": "cross-env TEST_ON_BRANCH=true npm run test:testcafe"
+    "test:testcafe:branch": "cross-env TEST_ON_BRANCH=true npm run test:testcafe",
+    "test:unit": "vitest run"
   },
   "devDependencies": {
     "@babel/cli": "7.25.9",
@@ -52,6 +53,7 @@
     "@sbercloud/figma-tokens-mlspace": "17.4.0",
     "@sbercloud/figma-tokens-web": "17.4.0",
     "@sbercloud/ft-all-linters-pack": "4.1.14",
+    "@sbercloud/ft-config-vitest": "3.1.0",
     "@sbercloud/ft-copy-to-clipboard": "3.0.1",
     "@sbercloud/ft-storybook-deps-table-addon": "0.1.4",
     "@snack-uikit/alert": "0.15.12",
