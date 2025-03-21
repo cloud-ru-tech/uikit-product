@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1946:** replace predefined tags in HeroMain with TagSpecial ([8912e09](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8912e099402df87b35c485c3d456e2904205f8c7))
+
+
+
+
+
 # 0.1.0 (2025-03-07)
 
 

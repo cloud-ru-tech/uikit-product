@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 11.0.1 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1946:** update snack icons ([ddf791c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ddf791c108ac004af56b3bcdb497bcc879edc5a4))
+
+
+
+
+
 # 11.0.0 (2025-03-20)
 
 

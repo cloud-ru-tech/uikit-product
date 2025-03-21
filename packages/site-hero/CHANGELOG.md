@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.14 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1946:** add prop for text alignment ([1ed765a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ed765a1c4488093299e4d70c95d5a44487f4119))
+* **PDS-1946:** add topPosition prop in SiteNavbar ([b63ad37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b63ad37335454c46868af5bd9151c7384832e309))
+* **PDS-1946:** default backgroundColor, richText for title and description in HeroMain ([b100148](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b100148cf283067e04132e37aea9fc3a2cc30d96))
+* **PDS-1946:** replace predefined tags in HeroMain with TagSpecial ([8912e09](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8912e099402df87b35c485c3d456e2904205f8c7))
+
+
+
+
+
 ## 0.1.13 (2025-03-20)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.4 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1946:** add prop for text alignment ([1ed765a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1ed765a1c4488093299e4d70c95d5a44487f4119))
+* **PDS-1946:** add richText for title in SectionBasic ([0b13b4e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0b13b4e8c28fb0a0ee78a23ba66ac249642641a4))
+
+
+
+
+
 ## 0.10.3 (2025-03-20)
 
 

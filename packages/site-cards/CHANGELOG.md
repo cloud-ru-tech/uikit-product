@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.3 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1946:** optional href prop for cardInfo ([e99b662](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e99b6626317d302ecbf5fcc80c77d76d88a4b17c))
+
+
+
+
+
 ## 0.7.2 (2025-03-20)
 
 ### Only dependencies have been changed

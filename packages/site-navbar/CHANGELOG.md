@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.1 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1946:** add topPosition prop in SiteNavbar ([b63ad37](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b63ad37335454c46868af5bd9151c7384832e309))
+* **PDS-1946:** return text in onItemClick handler for SiteNavbar ([149f53a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/149f53a66d8444edf2a8aa762ab10850380cad37))
+
+
+
+
+
 # 0.2.0 (2025-02-20)
 
 
