@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.8 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1831:** remove min-width ([c6c63c6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c6c63c6b2becb10019b460004d3a665c78cefbe7))
+
+
+
+
+
 ## 0.1.7 (2025-03-20)
 
 ### Only dependencies have been changed
