@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.4 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1946:** cardPartner image size ([515e551](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/515e551bf9dbb5d42abf1e956801b9ea501193c6))
+
+
+
+
+
 ## 0.7.3 (2025-03-21)
 
 

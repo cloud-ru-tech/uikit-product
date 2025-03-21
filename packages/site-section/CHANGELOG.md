@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.5 (2025-03-21)
+
+
+### Bug Fixes
+
+* **PDS-1946:** omit layoutType props for card in SectionCaseCarousel, card 100% height ([9b3799a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9b3799af0a898b098e3ca94786a24c27bcb658b0))
+* **PDS-1946:** use RichText in PromoList ([b54260b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b54260b03e9a69f28ca36ac02c53f7c1f4e9c743))
+
+
+
+
+
 ## 0.10.4 (2025-03-21)
 
 
