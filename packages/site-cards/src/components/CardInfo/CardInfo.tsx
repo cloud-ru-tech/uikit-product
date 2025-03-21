@@ -21,7 +21,7 @@ export type CardInfoProps = WithSupportProps<
     /** Описание карточки */
     description?: string;
     /** Ссылка */
-    href: string;
+    href?: string;
     /** HTML-аттрибут target */
     target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
     /** Колбек клика*/
