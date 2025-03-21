@@ -1,3 +1,4 @@
+import { enTranslations } from '@sbercloud/common-translations';
 import { Dictionary } from '@snack-uikit/locale';
 
 export const en_GB = {
@@ -175,7 +176,7 @@ export const en_GB = {
     enterName: 'Enter a name',
     required: 'Field must be filled',
     invalidName: 'Invalid name',
-    cancel: 'Cancel',
+    cancel: enTranslations.buttons.cancel,
     delete: 'Delete',
     recall: 'Recall',
     whatsNew: "What's new",
@@ -189,14 +190,14 @@ export const en_GB = {
   },
   PageLayout: {
     PageForm: {
-      continue: 'Continue',
-      create: 'Create',
-      save: 'Save',
-      cancel: 'Cancel',
-      back: 'Back',
-      rent: 'Rent',
-      send: 'Send',
-      restore: 'Restore',
+      continue: enTranslations.buttons.continue,
+      create: enTranslations.buttons.create,
+      save: enTranslations.buttons.save,
+      cancel: enTranslations.buttons.cancel,
+      back: enTranslations.buttons.back,
+      rent: enTranslations.buttons.rent,
+      send: enTranslations.buttons.send,
+      restore: enTranslations.buttons.restore,
       add: 'Add',
     },
     PageSidebar: {

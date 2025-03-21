@@ -1,3 +1,5 @@
+import { ruTranslations } from '@sbercloud/common-translations';
+
 import { en_GB } from './en_GB';
 
 export const ru_RU: typeof en_GB = {
@@ -176,7 +178,7 @@ export const ru_RU: typeof en_GB = {
     enterName: 'Введите название',
     required: 'Поле должно быть заполнено',
     invalidName: 'Неверное название',
-    cancel: 'Отмена',
+    cancel: ruTranslations.buttons.cancel,
     delete: 'Удалить',
     recall: 'Отозвать',
     whatsNew: 'Что нового',
@@ -190,14 +192,14 @@ export const ru_RU: typeof en_GB = {
   },
   PageLayout: {
     PageForm: {
-      continue: 'Продолжить',
-      create: 'Создать',
-      save: 'Сохранить',
-      cancel: 'Отмена',
-      back: 'Назад',
-      rent: 'Арендовать',
-      send: 'Отправить',
-      restore: 'Восстановить',
+      continue: ruTranslations.buttons.continue,
+      create: ruTranslations.buttons.create,
+      save: ruTranslations.buttons.save,
+      cancel: ruTranslations.buttons.cancel,
+      back: ruTranslations.buttons.back,
+      rent: ruTranslations.buttons.rent,
+      send: ruTranslations.buttons.send,
+      restore: ruTranslations.buttons.restore,
       add: 'Добавить',
     },
     PageSidebar: {

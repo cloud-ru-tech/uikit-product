@@ -9,16 +9,40 @@ import {
   useLocale as snackUseLocale,
 } from '@snack-uikit/locale';
 
+import { AdditionalTranslations } from '../helpers';
 import { UIKIT_PRODUCT_LOCALES } from '../locales';
+import { resolveCommonTranslations } from '../locales/resolveCommonTranslations';
 import { GetLocaleText, LocaleComponentName, UIKitProductDictionary } from './types';
 
-export function LocaleProvider<D extends Dictionary>({
+export type ProductLocaleProviderProps<
+  D extends Dictionary,
+  AT extends AdditionalTranslations,
+> = LocaleProviderProps<D> & {
+  /**
+   * Общий словарь переводов из @sbercloud/spa-core/bootstrap
+   * @example import { additionalTranslationsResources } from "@sbercloud/spa-core/bootstrap"
+   */
+  additionalTranslationsResources: AT;
+};
+
+export function LocaleProvider<D extends Dictionary, AT extends AdditionalTranslations>({
   children,
   overrideLocales,
   lang,
   fallbackLang = 'ru-RU',
-}: LocaleProviderProps<D>) {
-  const memoizedLocales = useMemo(() => merge({}, UIKIT_PRODUCT_LOCALES, overrideLocales), [overrideLocales]);
+  additionalTranslationsResources,
+}: ProductLocaleProviderProps<D, AT>) {
+  const memoizedLocales = useMemo(
+    () =>
+      merge(
+        {},
+        UIKIT_PRODUCT_LOCALES,
+        /* Тип обязывает прокинуть доп. переводы, но если это не сделать, ничего не упадет */
+        additionalTranslationsResources ? resolveCommonTranslations(additionalTranslationsResources) : {},
+        overrideLocales,
+      ),
+    [overrideLocales, additionalTranslationsResources],
+  );
 
   return (
     <SnackLocaleProvider lang={lang} overrideLocales={memoizedLocales} fallbackLang={fallbackLang}>

@@ -32,10 +32,15 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
+    "@sbercloud/common-translations": "1.2.0",
     "@snack-uikit/locale": "0.14.0",
-    "lodash.merge": "4.6.2"
+    "lodash.get": "4.4.2",
+    "lodash.merge": "4.6.2",
+    "lodash.set": "4.3.2"
   },
   "devDependencies": {
-    "@types/lodash.merge": "4.6.9"
+    "@types/lodash.get": "4.4.9",
+    "@types/lodash.merge": "4.6.9",
+    "@types/lodash.set": "4.3.9"
   }
 }

@@ -72,7 +72,12 @@ const decorators: Preview['decorators'] = [
             </>
           )}
 
-          <LocaleProvider lang={languageCode}>
+          <LocaleProvider
+            lang={languageCode}
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-ignore
+            additionalTranslationsResources={undefined}
+          >
             <ConfigProvider
               theme={BRAND_TO_THEME_MAP[normalizedBrand][mode] || ConfigProvider.themes.Purple}
               brand={BRAND_TO_BRAND_MODE_MAP[normalizedBrand][mode] || ConfigProvider.brand.Cloud}

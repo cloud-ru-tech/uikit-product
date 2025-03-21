@@ -1,0 +1,41 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`getTranslationResolver > should create translations locale object 1`] = `
+{
+  "en-GB": {
+    "PageLayout": {
+      "PageForm": {
+        "cancel": "Cancel",
+        "save": "Save",
+      },
+    },
+  },
+  "ru-RU": {
+    "PageLayout": {
+      "PageForm": {
+        "cancel": "Отмена",
+        "save": "Сохранить",
+      },
+    },
+  },
+}
+`;
+
+exports[`getTranslationResolver > should skip undefined key 1`] = `
+{
+  "en-GB": {
+    "PageLayout": {
+      "PageForm": {
+        "save": "Save",
+      },
+    },
+  },
+  "ru-RU": {
+    "PageLayout": {
+      "PageForm": {
+        "save": "Сохранить",
+      },
+    },
+  },
+}
+`;
