@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-03-21)
+
+
+### Features
+
+* **PDS-441:** toaster upload ([e292bb9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e292bb911845f2d958358a92db71bd3c129bdff9))
+
+
+
+
+
 ## 0.0.9 (2025-02-10)
 
 
