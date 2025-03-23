@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.39.0 (2025-03-23)
+
+
+### Features
+
+* **PDS-1716:** vendor logo & custom user menu for vendors services ([f26fb05](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f26fb057072d1f2658356a2332ace65957becfd7))
+
+
+
+
+
 ## 2.38.6 (2025-03-21)
 
 ### Only dependencies have been changed
