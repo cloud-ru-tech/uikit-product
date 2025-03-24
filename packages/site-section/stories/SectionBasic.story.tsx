@@ -88,7 +88,7 @@ const Template: StoryFn<StoryProps> = ({
         tabBarItems={showTabs ? tabsConfig : undefined}
         filterItems={showFilters ? filtersConfig : undefined}
         pagination={showPagination ? paginationConfig : undefined}
-        onLoadMoreClick={showLoadMoreButton ? handleShowMoreButtonClick : undefined}
+        moreButton={showLoadMoreButton ? { onClick: handleShowMoreButtonClick } : undefined}
         layoutType={layoutType}
         titleSectionSize={titleSectionSize}
         backgroundColor={backgroundColor}
@@ -146,7 +146,7 @@ export const basic: StoryObj<StoryProps> = {
     tabBarItems: { table: { disable: true } },
     filterItems: { table: { disable: true } },
     pagination: { table: { disable: true } },
-    onLoadMoreClick: { table: { disable: true } },
+    moreButton: { table: { disable: true } },
   },
   parameters: {
     readme: {

@@ -36,7 +36,7 @@
 | pagination | `PaginationProps` | - | Настройки пагинации |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS-класс |
-| onLoadMoreClick | `() => void` | - | Колбек на клик по кнопке "Показать ещё" |
+| moreButton | `{ label?: string; onClick: MouseEventHandler<HTMLElement>; }` | - | Кнопка внизу секции |
 ## SectionBenefits
 ### Props
 | name | type | default value | description |

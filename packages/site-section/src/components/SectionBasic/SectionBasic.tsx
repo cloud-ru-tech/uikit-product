@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { MouseEvent, ReactNode, useState } from 'react';
+import { MouseEvent, MouseEventHandler, ReactNode, useState } from 'react';
 
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { AdaptiveFieldSelect, FieldSelectProps } from '@sbercloud/uikit-product-mobile-fields';
@@ -39,8 +39,11 @@ export type SectionBasicProps = WithLayoutType<
       backgroundColor?: SectionColor;
       /** CSS-класс */
       className?: string;
-      /** Колбек на клик по кнопке "Показать ещё" */
-      onLoadMoreClick?(): void;
+      /** Кнопка внизу секции */
+      moreButton?: {
+        label?: string;
+        onClick: MouseEventHandler<HTMLElement>;
+      };
     }
   >
 >;
@@ -63,7 +66,7 @@ export function SectionBasic({
   titleTag,
   tabBarItems,
   filterItems,
-  onLoadMoreClick,
+  moreButton,
   className,
   pagination,
   backgroundColor = SECTION_COLORS.NeutralBackground1Level,
@@ -73,7 +76,7 @@ export function SectionBasic({
 }: SectionBasicProps) {
   const [currentTab, setCurrentTab] = useState<string | undefined>(getInitialTab(tabBarItems));
   const { t } = useLocale('SiteSection');
-  const showFooter = Boolean(pagination || onLoadMoreClick);
+  const showFooter = Boolean(pagination || moreButton);
 
   return (
     <Layout.SectionWrapper
@@ -124,11 +127,11 @@ export function SectionBasic({
         {showFooter && (
           <div className={styles.footer} data-layout-type={layoutType}>
             {pagination && <Pagination {...pagination} />}
-            {onLoadMoreClick && (
+            {moreButton && (
               <ButtonOutline
                 className={styles.showMoreButton}
-                label={t('Basic.showMore')}
-                onClick={onLoadMoreClick}
+                label={moreButton.label ?? t('Basic.showMore')}
+                onClick={moreButton.onClick}
                 appearance='neutral'
                 size='l'
                 type='button'
