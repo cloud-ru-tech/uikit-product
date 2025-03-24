@@ -13,8 +13,10 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `AccordionItem[]` | - | Массив айтемов |
 | title* | `string` | - | Название секции |
+| selectionMode | "single" \| "multiple" | multiple |  |
+| expandedDefault | `string \| string[]` | - |  |
+| onExpandedChange | `((value?: string) => void) \| ((value?: string[]) => void)` | - |  |
 | id | `string` | - | id секции |
-| selectionMode | "single" \| "multiple" | - | Режим работы аккордиона |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | outline | `boolean` | - | Внешний бордер для блоков |
 | className | `string` | - | CSS-класс |
@@ -67,13 +69,13 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `ExpertDetails[]` | - | Массив айтемов |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| className | `string` | - | CSS - класснейм |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS - класснейм |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 ## SectionLeading
 ### Props
 | name | type | default value | description |
@@ -81,10 +83,10 @@
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardLeadingItem[]` | - | Массив айтемов |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | id | `string` | - | id секции |
 | footerDescription | `string` | - | Описание секции |
 | className | `string` | - | CSS - класснейм |
@@ -93,10 +95,10 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
 | description | `string` | - | Описание секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
+| id | `string` | - | id секции |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
 | image | `{ src: string; alt?: string; }` | - |  |
@@ -155,54 +157,54 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CaseItem[]` | - | Массив айтемов |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| className | `string` | - | CSS - класснейм |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS - класснейм |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 ## SectionClientsCarousel
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardClientProps[]` | - | Массив айтемов |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| className | `string` | - | CSS - класснейм |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS - класснейм |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 ## SectionMarketplaceCarousel
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardMarketplaceProps[]` | - | Массив айтемов |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| className | `string` | - | CSS - класснейм |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS - класснейм |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 ## SectionBlogCarousel
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `BlogCarouselItem[]` | - | Массив айтемов |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| className | `string` | - | CSS - класснейм |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS - класснейм |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 ## SectionBenefitsBanner
 ### Props
 | name | type | default value | description |
