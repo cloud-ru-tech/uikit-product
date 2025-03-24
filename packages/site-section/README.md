@@ -36,7 +36,7 @@
 | pagination | `PaginationProps` | - | Настройки пагинации |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | className | `string` | - | CSS-класс |
-| moreButton | `{ label?: string; onClick: MouseEventHandler<HTMLElement>; }` | - | Кнопка внизу секции |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionBenefits
 ### Props
 | name | type | default value | description |
@@ -76,6 +76,7 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionLeading
 ### Props
 | name | type | default value | description |
@@ -164,6 +165,7 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionClientsCarousel
 ### Props
 | name | type | default value | description |
@@ -177,6 +179,7 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionMarketplaceCarousel
 ### Props
 | name | type | default value | description |
@@ -191,6 +194,7 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionBlogCarousel
 ### Props
 | name | type | default value | description |
@@ -205,6 +209,7 @@
 | id | `string` | - | id секции |
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionBenefitsBanner
 ### Props
 | name | type | default value | description |

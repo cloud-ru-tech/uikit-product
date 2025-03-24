@@ -19,6 +19,7 @@ export default meta;
 
 type StoryProps = SectionCaseCarouselProps & {
   partnersAmount: number;
+  showMoreButton?: boolean;
 };
 
 const createSamplePartner = (index: number): CaseItem => ({
@@ -42,7 +43,7 @@ const generatePartners = (amount: number): CaseItem[] => {
   return partners;
 };
 
-const Template: StoryFn<StoryProps> = ({ id, title, partnersAmount, layoutType, backgroundColor }) => {
+const Template: StoryFn<StoryProps> = ({ id, title, partnersAmount, layoutType, backgroundColor, showMoreButton }) => {
   const sampleCases = useMemo(() => generatePartners(partnersAmount), [partnersAmount]);
 
   return (
@@ -53,6 +54,13 @@ const Template: StoryFn<StoryProps> = ({ id, title, partnersAmount, layoutType, 
         items={sampleCases}
         layoutType={layoutType}
         backgroundColor={backgroundColor}
+        moreButton={
+          showMoreButton
+            ? {
+                onClick() {},
+              }
+            : undefined
+        }
       />
     </div>
   );
@@ -71,6 +79,15 @@ export const caseCarousel: StoryObj<StoryProps> = {
     backgroundColor: { control: { type: 'select' } },
     partnersAmount: {
       name: '[Story]: Amount of sample partners',
+    },
+    showMoreButton: {
+      name: '[Story]: Show more button in section footer',
+      control: { type: 'boolean' },
+    },
+    moreButton: {
+      table: {
+        disable: true,
+      },
     },
     layoutType: {
       name: '[Story]: Layout type',

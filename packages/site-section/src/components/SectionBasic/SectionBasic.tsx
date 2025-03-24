@@ -42,7 +42,9 @@ export type SectionBasicProps = WithLayoutType<
       /** Кнопка внизу секции */
       moreButton?: {
         label?: string;
+        href?: string;
         onClick: MouseEventHandler<HTMLElement>;
+        'data-test-id'?: string;
       };
     }
   >
@@ -132,6 +134,8 @@ export function SectionBasic({
                 className={styles.showMoreButton}
                 label={moreButton.label ?? t('Basic.showMore')}
                 onClick={moreButton.onClick}
+                href={moreButton.href}
+                data-test-id={moreButton['data-test-id'] ?? 'section__more-btn'}
                 appearance='neutral'
                 size='l'
                 type='button'

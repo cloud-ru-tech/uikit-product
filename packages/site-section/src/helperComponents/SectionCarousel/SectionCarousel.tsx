@@ -1,13 +1,11 @@
-import cn from 'classnames';
 import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { Carousel } from '@snack-uikit/carousel';
 
+import { SectionBasic } from '../../components';
 import { SECTION_COLORS } from '../../constants';
-import { SectionTitle } from '../SectionTitle';
 import styles from './styles.module.scss';
 import { SectionCarouselProps } from './types';
 import { calculateAmountOfItemsPerPage } from './utils';
@@ -27,6 +25,7 @@ export function SectionCarousel({
   className,
   layoutType,
   gap,
+  moreButton,
   ...rest
 }: SectionCarouselProps) {
   const [currentPage, setCurrentPage] = useState<number>(0);
@@ -69,22 +68,20 @@ export function SectionCarousel({
   }, [children.length, itemsPerPageAmount, layoutType]);
 
   return (
-    <Layout.SectionWrapper
+    <SectionBasic
       id={id}
       layoutType={layoutType}
-      className={cn(className, styles.wrapper)}
+      className={className}
       data-section-background={backgroundColor}
+      title={title}
+      titleTag={titleTag}
+      titleSectionSize={titleSectionSize}
+      description={description}
+      backgroundColor={backgroundColor}
+      moreButton={moreButton}
       {...extractSupportProps(rest)}
     >
       <div ref={wrapperRef} className={styles.sectionCarousel} data-layout-type={layoutType}>
-        <SectionTitle
-          layoutType={layoutType}
-          title={title}
-          titleTag={titleTag}
-          titleSectionSize={titleSectionSize}
-          description={description}
-        />
-
         {itemsPerPageAmount > 0 && (
           <Carousel
             state={{ page: currentPage, onChange: setCurrentPage }}
@@ -98,6 +95,6 @@ export function SectionCarousel({
           </Carousel>
         )}
       </div>
-    </Layout.SectionWrapper>
+    </SectionBasic>
   );
 }

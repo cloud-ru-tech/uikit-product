@@ -3,6 +3,7 @@ import { ReactElement } from 'react';
 import { WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { CarouselProps } from '@snack-uikit/carousel';
 
+import { SectionBasicProps } from '../../components';
 import { SectionColor } from '../../types';
 import { SectionTitleProps } from '../SectionTitle';
 
@@ -25,7 +26,8 @@ export type SectionCarouselProps = WithSupportProps<
         backgroundColor?: SectionColor;
         /** CSS - класснейм */
         className?: string;
-      } & Pick<CarouselProps, 'gap'>
+      } & Pick<CarouselProps, 'gap'> &
+      Pick<SectionBasicProps, 'moreButton'>
   >
 >;
 
