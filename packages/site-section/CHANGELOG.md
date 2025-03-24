@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2025-03-24)
+
+
+### Features
+
+* **PDS-1591:** benefits banner section ([ae6b010](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ae6b01019dd2fac0460b8b88ff5283f3209d277f))
+
+
+
+
+
 ## 0.10.5 (2025-03-21)
 
 
