@@ -4,15 +4,21 @@ import { SectionBasicProps } from '../SectionBasic';
 
 type CardBasicArray = Omit<CardBasicProps, 'layoutType'>[];
 type CardInfoArray = Omit<CardInfoProps, 'layoutType'>[];
+type CardNumericArray = Omit<CardInfoProps, 'layoutType' | 'icon'>[];
 
 type ContentBasicTab = {
   tabValue: string;
-  cardBasicItems: CardBasicArray;
+  cards: CardBasicArray;
 };
 
 type ContentInfoTab = {
   tabValue: string;
-  cardInfoItems: CardInfoArray;
+  cards: CardInfoArray;
+};
+
+type ContentNumericTab = {
+  tabValue: string;
+  cards: CardNumericArray;
 };
 
 type ContentBasicWithoutTabs = {
@@ -25,6 +31,20 @@ type ContentBasicWithoutTabs = {
 type ContentBasicWithTabs = {
   type: 'basic';
   content: ContentBasicTab[];
+
+  tabBarItems: NonNullable<SectionBasicProps['tabBarItems']>;
+};
+
+type ContentNumericWithoutTabs = {
+  type: 'numeric';
+  content: CardNumericArray;
+
+  tabBarItems?: never;
+};
+
+type ContentNumericWithTabs = {
+  type: 'numeric';
+  content: ContentNumericTab[];
 
   tabBarItems: NonNullable<SectionBasicProps['tabBarItems']>;
 };
@@ -45,3 +65,4 @@ type ContentInfoWithTabs = {
 
 export type ContentBasic = ContentBasicWithTabs | ContentBasicWithoutTabs;
 export type ContentInfo = ContentInfoWithTabs | ContentInfoWithoutTabs;
+export type ContentNumeric = ContentNumericWithTabs | ContentNumericWithoutTabs;

@@ -41,14 +41,15 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| content* | `ContentBasicTab[] \| CardBasicArray \| ContentInfoTab[] \| CardInfoArray` | - |  |
-| type* | "basic" \| "info" | - |  |
+| content* | `ContentBasicTab[] \| CardBasicArray \| ContentInfoTab[] \| CardInfoArray \| ContentNumericTab[] \| CardNumericArray` | - |  |
+| type* | "basic" \| "info" \| "numeric" | - |  |
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | columnsConfig* | `ColumnsConfig` | - | Конфигурация настройки колонок для разных layoutType |
 | id | `string` | - | id секции |
 | title | `string` | - | Название секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | description | `string` | - | Описание секции |
+| buttons | `{ label: string; href?: string; target?: HTMLAttributeAnchorTarget; onClick?: MouseEventHandler<HTMLElement>; }[]` | - |  |
 | tabBarItems | `TabBarItem[]` | - |  |
 ## SectionCatalog
 ### Props

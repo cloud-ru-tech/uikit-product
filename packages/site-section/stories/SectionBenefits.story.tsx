@@ -1,4 +1,5 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { useMemo } from 'react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { CardInfoProps } from '@sbercloud/uikit-product-site-cards';
@@ -28,7 +29,7 @@ const CARD_BASIC_ITEMS = Array.from({ length: 8 }, (_, i) => ({
 
 const CONTENT_BASIC = Array.from({ length: 3 }, (_, i) => ({
   tabValue: i.toString(),
-  cardBasicItems: CARD_BASIC_ITEMS,
+  cards: CARD_BASIC_ITEMS,
 }));
 
 const CARD_INFO_ITEMS = Array.from({ length: 8 }, (_, i) => ({
@@ -44,11 +45,12 @@ const CARD_INFO_ITEMS = Array.from({ length: 8 }, (_, i) => ({
 
 const CONTENT_INFO = Array.from({ length: 3 }, (_, i) => ({
   tabValue: i.toString(),
-  cardInfoItems: CARD_INFO_ITEMS,
+  cards: CARD_INFO_ITEMS,
 }));
 
 type StoryProps = SectionBenefitsProps & {
   withTabs: boolean;
+  buttonsExample?: 'buttons' | 'links';
 };
 
 const Template: StoryFn<StoryProps> = ({
@@ -60,6 +62,7 @@ const Template: StoryFn<StoryProps> = ({
   description,
   columnsConfig,
   withTabs,
+  buttonsExample,
 }) => {
   const contentBasicWithTabs = {
     tabBarItems: TABS,
@@ -80,6 +83,34 @@ const Template: StoryFn<StoryProps> = ({
   const contentBasic = withTabs ? contentBasicWithTabs : contentBasicWithoutTabs;
   const contentInfo = withTabs ? contentInfoWithTabs : contentInfoWithoutTabs;
 
+  const buttons: SectionBenefitsProps['buttons'] = useMemo(() => {
+    switch (buttonsExample) {
+      case 'buttons':
+        return [
+          {
+            label: 'Button example 1',
+          },
+          {
+            label: 'Button example 2',
+          },
+        ];
+      case 'links': {
+        return [
+          {
+            label: 'Link example 1',
+            href: '#',
+          },
+          {
+            label: 'Link example 2',
+            href: '#',
+          },
+        ];
+      }
+      default:
+        return undefined;
+    }
+  }, [buttonsExample]);
+
   if (type === 'basic') {
     return (
       <SectionBenefits
@@ -91,6 +122,7 @@ const Template: StoryFn<StoryProps> = ({
         layoutType={layoutType}
         columnsConfig={columnsConfig}
         {...contentBasic}
+        buttons={buttons}
       />
     );
   }
@@ -101,10 +133,11 @@ const Template: StoryFn<StoryProps> = ({
       title={title}
       titleTag={titleTag}
       description={description}
-      type={type}
+      type={type as 'info'}
       layoutType={layoutType}
       columnsConfig={columnsConfig}
       {...contentInfo}
+      buttons={buttons}
     />
   );
 };
@@ -128,6 +161,18 @@ export const benefits: StoryObj<StoryProps> = {
   argTypes: {
     withTabs: {
       name: '[Story]: With tabs',
+    },
+    buttonsExample: {
+      name: '[Story]: Footer button or link example',
+      options: ['buttons', 'links', undefined],
+      control: {
+        type: 'select',
+      },
+    },
+    buttons: {
+      table: {
+        disable: true,
+      },
     },
   },
   parameters: {

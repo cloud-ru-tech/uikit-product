@@ -1,0 +1,6 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+
+.number {
+  color: var.$sys-neutral-text-main;
+  min-width: 20px;
+}
