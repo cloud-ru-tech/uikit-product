@@ -1,26 +1,12 @@
-import { SiteVideo, SiteVideoProps } from '@sbercloud/uikit-product-site-video';
+import { SiteVideo } from '@sbercloud/uikit-product-site-video';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
+import { MediaContentProps } from '../../types';
 import { SectionBasic, SectionBasicProps } from '../SectionBasic';
 import styles from './styles.module.scss';
 
-type SectionMediaVideoProps = Pick<SiteVideoProps, 'video' | 'onPlay'> & {
-  image?: never;
-};
-
-type SectionMediaImageProps = {
-  video?: never;
-  onPlay?: never;
-  image: {
-    src: string;
-    alt?: string;
-  };
-};
-
-type SectionMediaContentProps = SectionMediaImageProps | SectionMediaVideoProps;
-
 export type SectionMediaProps = WithLayoutType<
-  WithSupportProps<Pick<SectionBasicProps, 'id' | 'title' | 'titleTag' | 'description'> & SectionMediaContentProps>
+  WithSupportProps<Pick<SectionBasicProps, 'id' | 'title' | 'titleTag' | 'description'> & MediaContentProps>
 >;
 
 export function SectionMedia({

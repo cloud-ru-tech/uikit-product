@@ -7,7 +7,7 @@ import { getCarouselProps } from './utils';
 
 export type BlogCarouselItem = Omit<CardMediaProps, 'size' | 'layoutType'>;
 
-export type SectionBlogCarouselProps = Omit<LimitedSectionCarouselProps<BlogCarouselItem>, 'gap'>;
+export type SectionBlogCarouselProps = Omit<LimitedSectionCarouselProps<BlogCarouselItem>, 'gap' | 'titleLink'>;
 
 export function SectionBlogCarousel({ items, ...props }: SectionBlogCarouselProps) {
   const carouselProps = useMemo(() => getCarouselProps(props.layoutType), [props.layoutType]);

@@ -45,7 +45,7 @@
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/card": "0.16.25",
     "@snack-uikit/carousel": "0.4.11",
-    "@snack-uikit/link": "0.16.5",
+    "@snack-uikit/link": "0.17.0",
     "@snack-uikit/pagination": "0.10.2",
     "@snack-uikit/tabs": "0.9.3",
     "@snack-uikit/typography": "0.8.4",

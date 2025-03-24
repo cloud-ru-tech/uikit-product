@@ -8,7 +8,7 @@ import { getCarouselProps } from './utils';
 
 export type CaseItem = Omit<CardPartnerProps, 'layoutType'>;
 
-export type SectionCaseCarouselProps = Omit<LimitedSectionCarouselProps<CaseItem>, 'description' | 'gap'>;
+export type SectionCaseCarouselProps = Omit<LimitedSectionCarouselProps<CaseItem>, 'description' | 'gap' | 'titleLink'>;
 
 export function SectionCaseCarousel({ items, layoutType, ...props }: SectionCaseCarouselProps) {
   const carouselProps = useMemo(() => getCarouselProps(layoutType), [layoutType]);
