@@ -43,9 +43,11 @@ export function SiteVideo({
             disablePictureInPicture
             controlsList='nodownload noplaybackrate'
             controls={isVideoPlayed && video.controls}
-            autoPlay={false}
+            autoPlay={video.autoPlay}
             playsInline
             onContextMenu={preventDefault}
+            muted={video.muted}
+            loop={video.loop}
           />
 
           {!isVideoPlayed && video.controls && (

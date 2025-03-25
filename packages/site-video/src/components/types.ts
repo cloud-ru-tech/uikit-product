@@ -6,6 +6,9 @@ export type VideoPlayerProps = {
   src: string;
   poster: string;
   controls?: boolean;
+  autoPlay?: boolean;
+  muted?: boolean;
+  loop?: boolean;
 };
 
 export type SiteVideoProps = WithSupportProps<{
