@@ -41,7 +41,7 @@
     "@sbercloud/uikit-product-site-table": "0.1.0",
     "@sbercloud/uikit-product-site-video": "0.1.2",
     "@sbercloud/uikit-product-utils": "3.8.8",
-    "@snack-uikit/accordion": "0.10.5",
+    "@snack-uikit/accordion": "0.11.0",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/card": "0.16.25",
     "@snack-uikit/carousel": "0.4.11",

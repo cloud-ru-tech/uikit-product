@@ -68,27 +68,29 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `BlogCarouselItem[]` | - | Массив айтемов |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| className | `string` | - | CSS - класснейм |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS - класснейм |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionCaseCarousel
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CaseItem[]` | - | Массив айтемов |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| className | `string` | - | CSS - класснейм |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS - класснейм |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionCatalog
 ### Props
 | name | type | default value | description |
@@ -108,13 +110,14 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardClientProps[]` | - | Массив айтемов |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| className | `string` | - | CSS - класснейм |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS - класснейм |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionContent
 ### Props
 | name | type | default value | description |
@@ -195,14 +198,15 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | items* | `CardMarketplaceProps[]` | - | Массив айтемов |
-| id | `string` | - | id секции |
 | title | `string` | - | Название секции |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| className | `string` | - | CSS - класснейм |
 | description | `string` | - | Описание секции |
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | titleAlign | "left" \| "center" | - | Выравнивание текста |
+| id | `string` | - | id секции |
+| className | `string` | - | CSS - класснейм |
+| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
 ## SectionMedia
 ### Props
 | name | type | default value | description |
@@ -264,75 +268,6 @@
 | subtitle | `string` | - | Подзаголовок |
 | description | `string` | - | Описание |
 | withHeader | `boolean` | - |  |
-## SectionCaseCarousel
-### Props
-| name | type | default value | description |
-|------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| items* | `CaseItem[]` | - | Массив айтемов |
-| title | `string` | - | Название секции |
-| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
-| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
-| titleAlign | "left" \| "center" | - | Выравнивание текста |
-| id | `string` | - | id секции |
-| className | `string` | - | CSS - класснейм |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
-## SectionClientsCarousel
-### Props
-| name | type | default value | description |
-|------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| items* | `CardClientProps[]` | - | Массив айтемов |
-| title | `string` | - | Название секции |
-| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
-| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
-| titleAlign | "left" \| "center" | - | Выравнивание текста |
-| id | `string` | - | id секции |
-| className | `string` | - | CSS - класснейм |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
-## SectionMarketplaceCarousel
-### Props
-| name | type | default value | description |
-|------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| items* | `CardMarketplaceProps[]` | - | Массив айтемов |
-| title | `string` | - | Название секции |
-| description | `string` | - | Описание секции |
-| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
-| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
-| titleAlign | "left" \| "center" | - | Выравнивание текста |
-| id | `string` | - | id секции |
-| className | `string` | - | CSS - класснейм |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
-## SectionBlogCarousel
-### Props
-| name | type | default value | description |
-|------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| items* | `BlogCarouselItem[]` | - | Массив айтемов |
-| title | `string` | - | Название секции |
-| description | `string` | - | Описание секции |
-| titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | - | Размер шрифтов заголовка и подзаголовка |
-| titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
-| titleAlign | "left" \| "center" | - | Выравнивание текста |
-| id | `string` | - | id секции |
-| className | `string` | - | CSS - класснейм |
-| backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
-| moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
-## SectionBenefitsBanner
-### Props
-| name | type | default value | description |
-|------|------|---------------|-------------|
-| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| backgroundImage* | `string` | - | Фоновая картинка |
-| items* | `[ItemProps, ...ItemProps[]]` | - | Выгоды |
-| title | `string` | - | Заголовок |
-| titleTag | enum Tag: `"span"`, `"h1"`, `"h2"`, `"h3"`, `"h4"`, `"h5"`, `"h6"`, `"div"`, `"label"`, `"p"` | h3 | Тэг заголовка |
-| description | `string` | - | Описание под баннером |
-| className | `string` | - | CSS класс |
 
 
 [//]: DOCUMENTATION_SECTION_END

@@ -68,7 +68,7 @@ export function SectionAccordion({
         onExpandedChange={onExpandedChange}
         className={styles.accordion}
       >
-        {items.map(({ title, description }, index) => (
+        {items.map(({ title, description, onClick }, index) => (
           <AccordionPrimary.CollapseBlock
             key={index}
             id={index.toString()}
@@ -80,6 +80,7 @@ export function SectionAccordion({
             className={className}
             removeContentFromDOM={false}
             outline={outline}
+            onClick={onClick}
           >
             <Typography
               family='sans'
@@ -88,7 +89,7 @@ export function SectionAccordion({
               size={getBlockDescriptionSize(layoutType)}
               className={styles.description}
             >
-              <RichText richText={description} />
+              {typeof description === 'string' ? <RichText richText={description} /> : description}
             </Typography>
           </AccordionPrimary.CollapseBlock>
         ))}
