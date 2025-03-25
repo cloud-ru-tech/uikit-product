@@ -57,10 +57,10 @@
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | backgroundImage* | `string` | - | Фоновая картинка |
-| items* | `[ItemProps, ...ItemProps[]]` | - | Выгоды |
+| items* | `ItemProps[]` | - | Выгоды |
 | title | `string` | - | Заголовок |
 | titleTag | enum Tag: `"span"`, `"h1"`, `"h2"`, `"h3"`, `"h4"`, `"h5"`, `"h6"`, `"div"`, `"label"`, `"p"` | h3 | Тэг заголовка |
-| description | `string` | - | Описание под баннером |
+| description | `string \| string[]` | - | Описание под баннером |
 | className | `string` | - | CSS класс |
 ## SectionBlogCarousel
 ### Props

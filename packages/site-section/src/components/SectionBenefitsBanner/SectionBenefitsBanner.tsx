@@ -16,11 +16,11 @@ export type SectionBenefitsBannerProps = WithSupportProps<
     /** Тэг заголовка */
     titleTag?: TypographyProps['tag'];
     /** Выгоды */
-    items: [ItemProps, ...ItemProps[]];
+    items: ItemProps[];
     /** Фоновая картинка */
     backgroundImage: string;
     /** Описание под баннером */
-    description?: string;
+    description?: string[] | string;
     /** CSS класс */
     className?: string;
   }>
@@ -62,7 +62,11 @@ export function SectionBenefitsBanner({
         {description && (
           <div className={styles.description} data-attribute='no_search_index'>
             <Typography family='sans' purpose='body' size='m'>
-              <RichText richText={description} />
+              {Array.isArray(description) ? (
+                description.map(item => <RichText key={item} richText={item} />)
+              ) : (
+                <RichText richText={description} />
+              )}
             </Typography>
           </div>
         )}
