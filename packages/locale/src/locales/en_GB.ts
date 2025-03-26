@@ -243,10 +243,6 @@ export const en_GB = {
   SiteHero: {
     Main: {
       platforms: 'Platforms',
-      evolution: 'Evolution',
-      vmware: 'VMware',
-      advanced: 'Advanced',
-      mlspace: 'ML Space',
     },
   },
   SiteSection: {

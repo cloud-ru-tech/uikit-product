@@ -47,7 +47,7 @@ Hero blocks for Site
 | title* | `string` | - | Заголовок продукта |
 | tags | `Pick<TagSpecialProps, "text" \| "appearance" \| "tip">[]` | [] | Тэги |
 | platforms | `Platform[]` | [] | Платформы |
-| handlePlatformClick | `() => void` | - | Обработка клика по платформе |
+| handlePlatformClick | `(e: MouseEvent<HTMLAnchorElement, MouseEvent>, platform: Platform) => void` | - | Обработка клика по платформе |
 | backgroundColor | enum HeroColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвета фона |
 | buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<ButtonOutlineProps, "size" \| "appearance">?]` | - | Массив с настройками кнопок ButtonFilled |
 | className | `string` | - | CSS - класснейм |

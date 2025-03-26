@@ -245,10 +245,6 @@ export const ru_RU: typeof en_GB = {
   SiteHero: {
     Main: {
       platforms: 'Платформы',
-      evolution: 'Evolution',
-      vmware: 'Облако VMware',
-      advanced: 'Advanced',
-      mlspace: 'ML Space',
     },
   },
   SiteSection: {

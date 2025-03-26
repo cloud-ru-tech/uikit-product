@@ -31,7 +31,23 @@ const BREADCRUMBS = [
   { id: 'product', label: 'Title' },
 ];
 
-const PLATFORMS: HeroMainProps['platforms'] = ['advanced', 'mlspace', 'evolution'];
+const PLATFORMS: HeroMainProps['platforms'] = [
+  {
+    id: 'advanced',
+    title: 'Advanced',
+    href: '/advanced',
+  },
+  {
+    id: 'mlspace',
+    title: 'ML Space',
+    href: '/mlspace',
+  },
+  {
+    id: 'evolution',
+    title: 'Evolution',
+    href: '/evolution',
+  },
+];
 
 const NAVBAR_ITEMS: NonNullable<HeroMainProps['navbar']>['items'] = [
   {

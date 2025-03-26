@@ -11,8 +11,8 @@ import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
 import { ButtonFilled, ButtonFilledProps, ButtonOutline, ButtonOutlineProps } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 
-import { PlatformLink, PlatformLinkProps } from '../../helperComponents';
 import { HeroColor } from '../../types';
+import { PlatformLink, PlatformLinkProps } from './components';
 import styles from './styles.module.scss';
 import { getTitleTypographyProps } from './utils';
 
@@ -94,8 +94,8 @@ export function HeroMain({
                     <Typography.SansBodyL tag='p' className={styles.platforms}>
                       {t('Main.platforms')}:{' '}
                       {platforms.map((platform, index) => (
-                        <Fragment key={platform}>
-                          <PlatformLink key={platform} platform={platform} handlePlatformClick={handlePlatformClick} />
+                        <Fragment key={platform.id || platform.title}>
+                          <PlatformLink platform={platform} handlePlatformClick={handlePlatformClick} />
                           {platforms.length - 1 !== index && ', '}
                         </Fragment>
                       ))}
