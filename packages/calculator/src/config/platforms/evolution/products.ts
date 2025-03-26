@@ -1,4 +1,5 @@
 import {
+  ArenadataDbSVG,
   BareMetalSVG,
   ContainerAppsSVG,
   ElasticCloudServerWithGpuSVG,
@@ -12,6 +13,7 @@ import { PLATFORM } from '../../../constants';
 import { CatalogConfig } from '../../../types';
 import { EVOLUTION_PRODUCT } from './constants';
 import {
+  EVOLUTION_ARENADATA_DB_FORM_CONFIG,
   EVOLUTION_BARE_METAL_FORM_CONFIG,
   EVOLUTION_CLOUD_SERVER_FORM_CONFIG,
   EVOLUTION_CLOUD_SERVER_FREE_TIER_FORM_CONFIG,
@@ -139,5 +141,19 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     freeTier: true,
     disabledProductQuantity: true,
     enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionArenadataDB]: {
+    id: EVOLUTION_PRODUCT.EvolutionArenadataDB,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Managed Arenadata DB',
+    caption: 'Управляемые инстансы базы данных Greenplum',
+    icon: ArenadataDbSVG,
+    formConfig: EVOLUTION_ARENADATA_DB_FORM_CONFIG,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionArenadataDB,
+    enableChangeProductQuantity: true,
+    enableConnectToConsole: false,
+    productQuantityValues: {
+      max: 3,
+    },
   },
 };

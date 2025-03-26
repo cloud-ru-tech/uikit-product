@@ -42,7 +42,12 @@ export function Control({ formControl }: ControlProps) {
       onChangeProp(valueProp);
     };
 
+    // Если в разных продуктах есть поля с одинаковыми названиями ключа,
+    // то в formControl может возникнуть конфликт с определением и изменением значений этих полей.
+    // Попробуйте поменять название поля на другое уникальное значение.
+
     formControl?.onChangePeriod?.(pricePeriod, setValueFn);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pricePeriod]);
 

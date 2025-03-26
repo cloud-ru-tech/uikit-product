@@ -56,7 +56,7 @@ const getMaxWorkingHoursAmount = (period: WorkingHoursSpecification) => {
 };
 
 export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
-  ui: ['serviceAlert', ['config'], 'workingHours'],
+  ui: ['serviceAlert', ['config'], ['workingHours', 'workingHoursSpecification']],
   controls: {
     serviceAlert: {
       type: CONTROL.Alert,
@@ -75,56 +75,49 @@ export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
       },
     },
     workingHours: {
-      type: CONTROL.Object,
-      ui: [['space', 'specification']],
-      controls: {
-        space: {
-          type: CONTROL.Stepper,
-          accessorKey: 'workingHours',
-          defaultValue: 1,
+      type: CONTROL.Stepper,
+      accessorKey: 'workingHours',
+      defaultValue: 1,
+      uiProps: {
+        min: 1,
+        max: 1,
+        postfix: 'час',
+      },
+      decoratorProps: {
+        label: 'Время работы',
+      },
+      watchedControls: { period: 'workingHoursSpecification', workingHours: 'workingHours' },
+      relateFn: ({ period, workingHours }) => {
+        const maxWorkingHours = getMaxWorkingHoursAmount(period);
+        const isStepperDisabled = maxWorkingHours === 1;
+
+        return {
           uiProps: {
             min: 1,
-            max: 1,
-            postfix: 'час',
+            max: maxWorkingHours,
+            showHint: !isStepperDisabled,
+            disabled: isStepperDisabled,
+            postfix: getNumeralWord(workingHours, ['час', 'часа', 'часов']),
           },
-          decoratorProps: {
-            label: 'Время работы',
-          },
-          watchedControls: { period: 'workingHoursSpecification', workingHours: 'workingHours' },
-          relateFn: ({ period, workingHours }) => {
-            const maxWorkingHours = getMaxWorkingHoursAmount(period);
-            const isStepperDisabled = maxWorkingHours === 1;
-
-            return {
-              uiProps: {
-                min: 1,
-                max: maxWorkingHours,
-                showHint: !isStepperDisabled,
-                disabled: isStepperDisabled,
-                postfix: getNumeralWord(workingHours, ['час', 'часа', 'часов']),
-              },
-            };
-          },
-        },
-        // не учитывается в рассчете
-        specification: {
-          type: CONTROL.SelectSingle,
-          accessorKey: 'workingHoursSpecification',
-          defaultValue: WorkingHoursSpecification.Hour,
-          items: workingHoursItems,
-          uiProps: {
-            showClearButton: false,
-            searchable: false,
-          },
-          decoratorProps: {
-            label: 'Период',
-          },
-          onChangePeriod: (period, setValue) => {
-            setValue([['workingHoursSpecification', period]]);
-          },
-          canChangeWholePricePeriod: true,
-        },
+        };
       },
+    },
+    workingHoursSpecification: {
+      type: CONTROL.SelectSingle,
+      accessorKey: 'workingHoursSpecification',
+      defaultValue: WorkingHoursSpecification.Hour,
+      items: workingHoursItems,
+      uiProps: {
+        showClearButton: false,
+        searchable: false,
+      },
+      decoratorProps: {
+        label: 'Период',
+      },
+      onChangePeriod: (period, setValue) => {
+        setValue([['workingHoursSpecification', period]]);
+      },
+      canChangeWholePricePeriod: true,
     },
   },
 };

@@ -9,4 +9,5 @@ export const EVOLUTION_PRODUCT = {
   EvolutionBareMetal: 'evolutionBareMetal',
   EvolutionContainerApps: 'evolutionContainerApps',
   EvolutionContainerAppsFreeTier: 'evolutionContainerAppsFreeTier',
+  EvolutionArenadataDB: 'evolutionArenadataDB',
 } as const;
