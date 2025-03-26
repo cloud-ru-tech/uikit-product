@@ -12,6 +12,7 @@ export const VM_WARE_CATALOG: CatalogConfig['catalog'] = {
         VM_WARE_PRODUCT.VmWareVirtualDataCenter,
         VM_WARE_PRODUCT.VmWareCloudBackup,
         VM_WARE_PRODUCT.VmWareVirtualMachinesBackup,
+        VM_WARE_PRODUCT.VmWareVirtualWorkspaces,
       ],
     },
   ],

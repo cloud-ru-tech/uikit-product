@@ -19,6 +19,8 @@ type StepperUiProps = Pick<
    * Например: надо реальное значение это 3 млн, а отображать надо как 3
    */
   multiplier?: number;
+  /** Массив допустимых значений. Если указан, то step игнорируется */
+  allowedValues?: number[];
 };
 
 export type StepperControl = {
@@ -43,6 +45,7 @@ export function StepperControlUi({
   accessorKey,
 }: StepperControlUiProps) {
   const [innerValue, setInnerValue] = useState<number>(value ?? 0);
+  const [selectedIdx, setSelectedIdx] = useState<number>(0);
 
   const dataTestAttribute = parseKeyToDataTest('stepper', accessorKey);
 
@@ -55,7 +58,14 @@ export function StepperControlUi({
     [relateFn, watchedValues],
   );
 
-  const { min, max, multiplier = 1, step = 1 } = { ...uiProps, ...relatedUiProps };
+  const { min, max, multiplier = 1, step = 1, allowedValues } = { ...uiProps, ...relatedUiProps };
+
+  useEffect(() => {
+    if (allowedValues) {
+      const idx = allowedValues.findIndex(item => item === value);
+      setSelectedIdx(idx >= 0 ? idx : 0);
+    }
+  }, [allowedValues, value]);
 
   useEffect(() => {
     if (min && Number((value ?? 0) / multiplier) < min) {
@@ -77,17 +87,20 @@ export function StepperControlUi({
   const handleValueChange = (rawInnerValue?: number) => {
     const innerValue = Number(rawInnerValue ?? 0);
 
+    if (allowedValues) {
+      onChange?.(innerValue);
+      return;
+    }
+
     if (min && innerValue / multiplier <= min) {
       onChange?.(min * multiplier);
       setInnerValue(min);
-
       return;
     }
 
     if (max && innerValue / multiplier >= max) {
       onChange?.(max * multiplier);
       setInnerValue(max);
-
       return;
     }
 
@@ -104,7 +117,21 @@ export function StepperControlUi({
         <FieldStepper
           size='m'
           value={(innerValue ?? 0) / multiplier}
+          postfix={uiProps.postfix}
           onChange={value => {
+            if (allowedValues) {
+              const currentIdx = selectedIdx;
+              const isIncrement = value > innerValue / multiplier;
+
+              const newIdx = isIncrement
+                ? Math.min(currentIdx + 1, allowedValues.length - 1)
+                : Math.max(currentIdx - 1, 0);
+
+              setSelectedIdx(newIdx);
+              handleValueChange(allowedValues[newIdx] * multiplier);
+              return;
+            }
+
             if (Math.abs(value - innerValue / multiplier) === step) {
               handleValueChange?.(value * multiplier);
               return;

@@ -12,4 +12,5 @@ export const CONTROL = {
   Alert: 'alert',
   Table: 'table',
   Slider: 'slider',
+  StepperWithValues: 'stepper-with-values',
 } as const;

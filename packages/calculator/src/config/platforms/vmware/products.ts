@@ -1,4 +1,4 @@
-import { VmBackupSVG, VmManagerSVG, VMwareBackupServerSVG } from '@sbercloud/uikit-product-icons';
+import { BoxSVG, VmBackupSVG, VmManagerSVG, VMwareBackupServerSVG } from '@sbercloud/uikit-product-icons';
 
 import { PLATFORM } from '../../../constants';
 import { CatalogConfig } from '../../../types';
@@ -7,6 +7,7 @@ import {
   VIRTUAL_DATA_CENTER_FORM_CONFIG,
   VM_WARE_CLOUD_BACKUP_FORM_CONFIG,
   VM_WARE_VIRTUAL_MACHINES_BACKUP_FORM_CONFIG,
+  VM_WARE_VIRTUAL_WORKSPACES_FORM_CONFIG,
 } from './product-config';
 
 export const VM_WARE_PRODUCTS: CatalogConfig['products'] = {
@@ -40,6 +41,17 @@ export const VM_WARE_PRODUCTS: CatalogConfig['products'] = {
     caption: 'Сервис по созданию резервных копий, восстановлению виртуальных машин и отдельных файлов',
     formConfig: VM_WARE_VIRTUAL_MACHINES_BACKUP_FORM_CONFIG,
     icon: VmBackupSVG,
+    enableChangeProductQuantity: false,
+    hasPayaGo: true,
+  },
+  [VM_WARE_PRODUCT.VmWareVirtualWorkspaces]: {
+    id: VM_WARE_PRODUCT.VmWareVirtualWorkspaces,
+    platform: PLATFORM.VmWare,
+    dataTestId: VM_WARE_PRODUCT.VmWareVirtualWorkspaces,
+    label: 'VMware: Удаленные рабочие столы (VDI)',
+    caption: 'Виртуальные рабочие столы на платформе Облако VMware',
+    formConfig: VM_WARE_VIRTUAL_WORKSPACES_FORM_CONFIG,
+    icon: BoxSVG,
     enableChangeProductQuantity: false,
     hasPayaGo: true,
   },

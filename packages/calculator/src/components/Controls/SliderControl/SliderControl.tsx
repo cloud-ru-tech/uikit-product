@@ -9,7 +9,7 @@ import { BaseControlWithItems } from '../types';
 
 type SliderUiProps = Pick<
   FieldSliderProps,
-  'step' | 'className' | 'showScaleBar' | 'tipFormatter' | 'postfixIcon' | 'disabled'
+  'step' | 'className' | 'showScaleBar' | 'tipFormatter' | 'postfixIcon' | 'disabled' | 'postfix'
 >;
 
 export type SliderControl = {
@@ -21,6 +21,7 @@ export type SliderControl = {
 export type SliderControlUiProps = SliderControl & {
   onChange?(value: string): void;
   watchedValues?: FormValues;
+  value?: string;
 };
 
 export function SliderControlUi({
@@ -31,6 +32,7 @@ export function SliderControlUi({
   watchedValues,
   relateFn,
   accessorKey,
+  value,
 }: SliderControlUiProps) {
   const {
     items: relatedItems,
@@ -64,10 +66,13 @@ export function SliderControlUi({
     return null;
   }
 
+  const currentValue = value ? items.findIndex(item => String(item) === value) + 1 : 1;
+
   return (
     <FieldSlider
       range={false}
       size='m'
+      value={currentValue}
       onChange={newValue => {
         const valueByKey = String(marks[newValue as number]);
         onChange?.(valueByKey);

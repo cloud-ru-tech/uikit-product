@@ -126,7 +126,7 @@ export function Control({ formControl }: ControlProps) {
       return <AlertControlUi {...formControl} watchedValues={watchedValues} />;
     }
     case CONTROL.Slider: {
-      return <SliderControlUi {...formControl} onChange={onChange} watchedValues={watchedValues} />;
+      return <SliderControlUi {...formControl} value={value} onChange={onChange} watchedValues={watchedValues} />;
     }
     default:
       throw new Error('not reachable');
