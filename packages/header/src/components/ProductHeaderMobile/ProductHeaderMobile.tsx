@@ -12,7 +12,6 @@ import {
   DrawerMenuProps,
   HeaderLayout,
   InvitePopover,
-  MobileFinancialMenu,
   Notifications,
   NotificationsTrigger,
   PartnerPopover,
@@ -30,7 +29,7 @@ export function ProductHeaderMobile({
   selectedOrganization,
   onOrganizationChange,
   onOrganizationAdd: onOrganizationAddProp,
-  financialMenu,
+  financeButton,
   pagePath,
   settings,
   onHelpMenuClick,
@@ -108,8 +107,7 @@ export function ProductHeaderMobile({
         onLogoClick={onLogoClick}
         toolbar={
           <>
-            {financialMenu && <MobileFinancialMenu {...financialMenu} />}
-
+            {financeButton}
             {onHelpMenuClick && (
               <ButtonFunction
                 data-test-id='header__help-menu-button'

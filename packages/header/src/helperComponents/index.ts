@@ -7,5 +7,4 @@ export * from './DrawerMenu';
 export * from './Select';
 export * from './SelectMenu';
 export * from './InvitePopover';
-export * from './FinancialMenu';
 export * from './PartnerPopover';

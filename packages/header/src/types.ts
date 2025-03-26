@@ -4,7 +4,7 @@ import { CardServiceSmallProps } from '@sbercloud/uikit-product-card-predefined'
 import { HotSpotProps } from '@snack-uikit/hot-spot';
 import { BaseItemProps } from '@snack-uikit/list';
 
-export type { NotificationsProps, FinancialMenuProps, DrawerMenuProps } from './helperComponents';
+export type { NotificationsProps, DrawerMenuProps } from './helperComponents';
 
 export type User = {
   name: string;

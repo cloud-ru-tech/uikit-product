@@ -9,8 +9,6 @@ import { Droplist } from '@snack-uikit/list';
 import {
   DrawerMenuDesktop,
   DrawerMenuProps,
-  FinancialMenu,
-  FinancialMenuProps,
   HeaderLayout,
   HeaderLayoutProps,
   NotificationsPopover,
@@ -81,7 +79,7 @@ export type ProductHeaderProps = WithSupportProps<
     onHelpMenuClick?(): void;
     onMainMenuClick?(): void;
     notifications?: NotificationsProps;
-    financialMenu?: FinancialMenuProps;
+    financeButton?: ReactNode;
     userMenu?: UserMenuProps;
     logo?: HeaderLogo;
     vendorLogo?: VendorLogo;
@@ -117,7 +115,7 @@ export function ProductHeader({
   onOrganizationAdd,
 
   pagePath,
-  financialMenu,
+  financeButton,
   settings,
   onHelpMenuClick,
   notifications,
@@ -248,8 +246,7 @@ export function ProductHeader({
         }
         toolbar={
           <>
-            {financialMenu && <FinancialMenu {...financialMenu} />}
-
+            {financeButton}
             {visibleSettings && (
               <Droplist
                 size='s'

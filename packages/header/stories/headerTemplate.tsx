@@ -1,6 +1,5 @@
 import { useArgs, useState } from '@storybook/preview-api';
 import { ArgTypes } from '@storybook/react';
-import { StarterGrant } from 'header/src/helperComponents/FinancialMenu/types';
 import { useCallback, useEffect, useMemo } from 'react';
 
 import {
@@ -33,7 +32,6 @@ import {
   AdvancedPlatformLogo,
   EnterprisePlatformLogo,
   EvolutionPlatformLogo,
-  FinancialMenuProps,
   MLSpacePlatformLogo,
 } from '../src/helperComponents';
 import styles from './styles.module.scss';
@@ -46,26 +44,6 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showWorkspaces: boolean;
   showMLSpaceAccessRequestButton: boolean;
   showPagePath: boolean;
-  showFinancialMenu: boolean;
-  financialMenuHotSpot: 'none' | NonNullable<FinancialMenuProps['button']>['hotSpot'];
-  financialMenuButtonType: NonNullable<FinancialMenuProps['button']>['type'];
-  financialMenuButtonStatus: NonNullable<FinancialMenuProps['button']>['status'];
-  financialMenuLoading: boolean;
-  financialMenuAgreement: string;
-  financialMenuBalanceVisible: boolean;
-  financialMenuBalanceValue: number;
-  financialMenuBalanceTip: string;
-  financialMenuBalanceLabel: string;
-  financialMenuBalanceDescription: string;
-  financialMenuBalanceStatus: NonNullable<FinancialMenuProps['content']>['balance']['status'];
-  financialMenuBonusesValue: number;
-  financialMenuBonusesTip: string;
-  financialMenuBonusesTipMoreButtonLink: string;
-  financialMenuBonusesLabel: string;
-  financialMenuBonusesDescription: string;
-  financialMenuBonusesIsButtonDisabled: boolean;
-  financialMenuBonusGrants: NonNullable<FinancialMenuProps['content']>['bonusGrants'];
-  financialMenuStarterGrant: StarterGrant;
   showSettings: boolean;
   showHelpMenu: boolean;
   showNotifications: boolean;
@@ -232,31 +210,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showPagePath,
     showVendorLogo,
 
-    showFinancialMenu,
-
-    financialMenuHotSpot,
-    financialMenuButtonType,
-    financialMenuButtonStatus,
-
-    financialMenuLoading,
-    financialMenuAgreement,
-
-    financialMenuBalanceVisible,
-    financialMenuBalanceValue,
-    financialMenuBalanceTip,
-    financialMenuBalanceLabel,
-    financialMenuBalanceDescription,
-    financialMenuBalanceStatus,
-
-    financialMenuBonusesValue,
-    financialMenuBonusesTip,
-    financialMenuBonusesTipMoreButtonLink,
-    financialMenuBonusesLabel,
-    financialMenuBonusesDescription,
-    financialMenuBonusesIsButtonDisabled,
-    financialMenuBonusGrants,
-    financialMenuStarterGrant,
-
     showSettings,
     showHelpMenu,
     showNotifications,
@@ -305,12 +258,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       [setArgs],
     );
 
-    const [balanceVisible, setBalanceVisible] = useState(true);
-
-    const eyeButtonOnClick = () => {
-      setBalanceVisible(!balanceVisible);
-    };
-
     useEffect(() => {
       if (!showOrganizationInvite && showOrganizationInvitePopover) {
         closeInvitesPopover();
@@ -352,9 +299,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     }, [organizations, showOrganizationInvite, showPartnerOrganization]);
 
     const [themeMode, setThemeMode] = useState<ThemeMode>(THEME_MODE.Light);
-
-    const financialMenuButtonValue =
-      financialMenuButtonType === 'balance' ? financialMenuBalanceValue : financialMenuBonusesValue;
 
     const [logo, setLogo] = useState<HeaderLogo>({
       loading: true,
@@ -465,44 +409,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
           pagePath={showPagePath ? args.pagePath : undefined}
           logo={logo}
           vendorLogo={showVendorLogo ? args.vendorLogo : undefined}
-          financialMenu={
-            showFinancialMenu
-              ? {
-                  button: {
-                    hotSpot: financialMenuHotSpot === 'none' ? undefined : financialMenuHotSpot,
-                    value: financialMenuButtonValue,
-                    type: financialMenuButtonType,
-                    status: financialMenuButtonStatus,
-                  },
-                  content: {
-                    loading: financialMenuLoading,
-                    eyeButton: { dataVisible: balanceVisible, onClick: eyeButtonOnClick },
-                    link: { onClick: () => {}, href: '#' },
-                    agreement: financialMenuAgreement,
-                    balance: {
-                      visible: financialMenuBalanceVisible,
-                      label: financialMenuBalanceLabel,
-                      onAddClick: () => toaster.userAction.success({ label: 'balance add click' }),
-                      value: financialMenuBalanceValue,
-                      tip: financialMenuBalanceTip,
-                      description: financialMenuBalanceDescription,
-                      status: financialMenuBalanceStatus,
-                    },
-                    bonuses: {
-                      label: financialMenuBonusesLabel,
-                      onAddClick: () => toaster.userAction.success({ label: 'bonuses add click' }),
-                      value: financialMenuBonusesValue,
-                      tip: financialMenuBonusesTip,
-                      tipMoreButtonLink: financialMenuBonusesTipMoreButtonLink,
-                      description: financialMenuBonusesDescription,
-                      isButtonDisabled: financialMenuBonusesIsButtonDisabled,
-                    },
-                    bonusGrants: financialMenuBonusGrants,
-                    starterGrant: financialMenuStarterGrant,
-                  },
-                }
-              : undefined
-          }
           settings={showSettings ? args.settings : undefined}
           onHelpMenuClick={showHelpMenu ? args.onHelpMenuClick : undefined}
           notifications={
@@ -647,63 +553,7 @@ export const ARGS: StoryProps = {
     },
   ],
 
-  showFinancialMenu: true,
-  financialMenuHotSpot: true,
-  financialMenuButtonType: 'bonuses',
-  financialMenuButtonStatus: 'default',
-  financialMenuLoading: false,
-  financialMenuAgreement: 'Договор Д/Д-СМ/55123/24 от 10.06.2024',
-  financialMenuBalanceVisible: true,
-  financialMenuBalanceValue: 142911.6903025,
-  financialMenuBalanceTip: 'Баланс по договору с учетом текущего потребления',
-  financialMenuBalanceLabel: 'Баланс',
-  financialMenuBalanceDescription: '',
-  financialMenuBalanceStatus: 'default',
-  financialMenuBonusesValue: 12345,
-  financialMenuBonusesTip:
-    'Грант – это бонусы, которые можно потратить на сервисы из условий гранта. У грантов может быть разный срок действия.',
-  financialMenuBonusesTipMoreButtonLink: 'https://cloud.ru/docs/billing/ug/topics/concepts__billing_bonus.html',
-  financialMenuBonusesLabel: 'Гранты',
-  financialMenuBonusesDescription: 'Расходуется до 31 марта',
-  financialMenuBonusesIsButtonDisabled: false,
-  financialMenuBonusGrants: [
-    {
-      id: 'c267609c-cb9b-4ced-ab9f-462557b9b0bd',
-      name: 'Бессрочный_грант',
-      beginAt: '2024-10-03T21:00:00Z',
-      expireAt: '2031-10-19T20:59:00Z',
-      initialAmount: '15000',
-      currentAmount: '15000',
-      spentAmount: '',
-      status: 'BONUS_GRANT_STATUS_READY',
-    },
-    {
-      id: 'f0bd923b-8f92-4da3-9247-ecf93c66c977',
-      name: 'Грант_со_сроком',
-      beginAt: '2024-10-03T21:00:00Z',
-      expireAt: '2024-12-04T20:59:59.900Z',
-      initialAmount: '10000',
-      currentAmount: '9000',
-      spentAmount: '1000',
-      status: 'BONUS_GRANT_STATUS_READY',
-    },
-    {
-      id: '76b038cc-9ff4-4222-bd03-86ddda9dd1d7',
-      name: 'Грант_не_активированный и очень длинное название из маркетплейса',
-      beginAt: '2024-11-30T21:00:00Z',
-      expireAt: '2025-02-06T20:59:59.900Z',
-      initialAmount: '12000',
-      currentAmount: '12000',
-      spentAmount: '',
-      status: 'BONUS_GRANT_STATUS_NOT_STARTED',
-    },
-  ],
-  financialMenuStarterGrant: {
-    isAvailable: true,
-    inProcess: false,
-    onGetGrantClick: () => {},
-  },
-
+  financeButton: <PlaceholderSVG />,
   showSettings: true,
 
   settings: [
@@ -1070,108 +920,6 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   },
   showPartnerOrganizationPopover: {
     name: '[Story]: show partner organization popover',
-  },
-
-  showFinancialMenu: { name: '[Story]: show financial menu', type: 'boolean' },
-  financialMenu: { table: { disable: true } },
-  financialMenuHotSpot: {
-    name: '[Story]: financial menu -> hot spot',
-    control: { type: 'boolean' },
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuButtonType: {
-    name: '[Story]: financial menu -> button type',
-    control: { type: 'radio' },
-    options: ['balance', 'bonuses'],
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuButtonStatus: {
-    name: '[Story]: financial menu -> button status',
-    control: { type: 'radio' },
-    options: ['default', 'attention'],
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-
-  financialMenuLoading: {
-    name: '[Story]: financial menu -> loading',
-    type: 'boolean',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuAgreement: {
-    name: '[Story]: financial menu -> agreement',
-    type: 'string',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-
-  financialMenuBalanceVisible: {
-    name: '[Story]: financial menu -> balance visible',
-    type: 'boolean',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBalanceValue: {
-    name: '[Story]: financial menu -> balance value',
-    type: 'number',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBalanceTip: {
-    name: '[Story]: financial menu -> balance tip',
-    type: 'string',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBalanceLabel: {
-    name: '[Story]: financial menu -> balance label',
-    type: 'string',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBalanceDescription: {
-    name: '[Story]: financial menu -> balance description',
-    type: 'string',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBalanceStatus: {
-    name: '[Story]: financial menu -> balance status',
-    control: { type: 'radio' },
-    options: ['default', 'attention'],
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-
-  financialMenuBonusesValue: {
-    name: '[Story]: financial menu -> bonuses value',
-    type: 'number',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBonusesTip: {
-    name: '[Story]: financial menu -> bonuses tip',
-    type: 'string',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBonusesTipMoreButtonLink: {
-    name: '[Story]: financial menu -> bonuses tip more link',
-    type: 'string',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBonusesLabel: {
-    name: '[Story]: financial menu -> bonuses label',
-    type: 'string',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBonusesDescription: {
-    name: '[Story]: financial menu -> bonuses description',
-    type: 'string',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBonusesIsButtonDisabled: {
-    name: '[Story]: financial menu -> bonuses isButtonDisabled',
-    type: 'boolean',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuBonusGrants: {
-    name: '[Story]: financial menu -> grants list',
-    if: { arg: 'showFinancialMenu', eq: true },
-  },
-  financialMenuStarterGrant: {
-    name: '[Story]: financial menu -> starter grant',
-    if: { arg: 'showFinancialMenu', eq: true },
   },
 
   organizations: { table: { disable: true } },
