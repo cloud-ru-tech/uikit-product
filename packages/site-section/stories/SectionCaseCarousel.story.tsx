@@ -30,7 +30,7 @@ const createSamplePartner = (index: number): CaseItem => ({
   description:
     index === 0
       ? 'Handgloves Description Sample'
-      : 'Handgloves Description Sample Description Sample Description Handgloves Sample Description Sample Handgloves Description',
+      : '<p>Handgloves Description Sample Description Sample Description Handgloves Sample Description Sample Handgloves Description Handgloves Description Sample Description Sample Description Handgloves Sample Description Sample Handgloves Description</p>',
 });
 
 const generatePartners = (amount: number): CaseItem[] => {

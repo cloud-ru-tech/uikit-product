@@ -4,11 +4,30 @@
   position: relative;
 }
 
+.description {
+  @include ste.composite-var(ste.$sans-body-l);
+
+  color: ste.$sys-neutral-text-main;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  max-width: 100%;
+  text-overflow: ellipsis;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
+
+  &[data-layout-type='mobile'] {
+    .description {
+      -webkit-line-clamp: 4;
+    }
+  }
 }
 
 .logo {
@@ -38,10 +57,4 @@
     max-width: 100%;
     object-fit: contain;
   }
-}
-
-.description {
-  @include ste.composite-var(ste.$sans-body-l);
-
-  color: ste.$sys-neutral-text-main;
 }

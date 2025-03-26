@@ -1,9 +1,9 @@
 import cn from 'classnames';
-import { AnchorHTMLAttributes, MouseEvent, useMemo } from 'react';
+import { AnchorHTMLAttributes, MouseEvent } from 'react';
 
+import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Card } from '@snack-uikit/card';
-import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { useCardInteractions } from '../../hooks';
 import styles from './styles.module.scss';
@@ -54,15 +54,6 @@ export function CardPartner({
     disabled,
   });
 
-  const descriptionMaxLines = useMemo(() => {
-    switch (layoutType) {
-      case 'mobile':
-        return 4;
-      default:
-        return 2;
-    }
-  }, [layoutType]);
-
   return (
     <Card
       {...extractSupportProps(rest)}
@@ -74,7 +65,7 @@ export function CardPartner({
       outline={outline}
       data-test-id={dataTestId}
     >
-      <div className={styles.wrapper}>
+      <div className={styles.wrapper} data-layout-type={layoutType}>
         <div className={styles.logo}>
           {href ? (
             <a
@@ -92,12 +83,7 @@ export function CardPartner({
           )}
         </div>
 
-        <TruncateString
-          text={description}
-          maxLines={descriptionMaxLines}
-          className={styles.description}
-          data-test-id={`${dataTestId}__description`}
-        />
+        <RichText richText={description} className={styles.description} data-test-id={`${dataTestId}__description`} />
       </div>
     </Card>
   );
