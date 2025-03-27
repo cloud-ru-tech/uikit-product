@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-03-27)
+
+
+### Features
+
+* **PDS-1393:** add autoplay, muted, loop props ([029a7d8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/029a7d878914461f7ff11f1baaa4896b4da31e92))
+
+
+
+
+
 ## 0.1.2 (2025-03-21)
 
 ### Only dependencies have been changed

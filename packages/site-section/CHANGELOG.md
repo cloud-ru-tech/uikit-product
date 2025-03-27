@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2025-03-27)
+
+
+### Bug Fixes
+
+* **PDS-1961:** add props for SectionAccordion ([aaf4bb8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aaf4bb81e8e0538dd3efc9384b28c4d0d2c6d80c))
+* **PDS-1962:** type for items and description in SectionBenefitsBanner ([cef0922](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cef092222b07824a710ceaea48cf19d34f5c8419))
+* **PDS-2007:** rich-text in CardPartner description ([39da8ba](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/39da8baccfccf445ac2fcc6ba60239f2bc3b2046))
+
+
+### Features
+
+* **PDS-1393:** add section-content, section-content-list, section-content-tabs ([131a1ca](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/131a1caf01a298fbfeef8971c5e1be267f54407f))
+* **PDS-1961:** add moreButton to SectionCarousel ([a3e0a08](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a3e0a08b35c851314ddc76ff817a203419e2f305))
+* **PDS-1961:** replace props onLoadMoreClick with moreButton in SectionBasic ([0774d14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0774d148559774306bac63c1a2428bdd229c627a))
+* **PDS-1962:** add numeric type for SectionBenefits, add buttons prop ([79ae95e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/79ae95e842438c97036facb31008f529cd143cee))
+* **PDS-1962:** pass onClick to SectionAccordion items, change item description type ([659f2a4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/659f2a4345ad0acff8d4236474e0f709172d8dab))
+
+
+
+
+
 # 0.11.0 (2025-03-24)
 
 

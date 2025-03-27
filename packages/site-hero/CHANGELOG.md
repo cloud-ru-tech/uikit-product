@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-03-27)
+
+
+### Features
+
+* **PDS-2014:** change platforms prop in HeroMain ([044dc14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/044dc143bd2da308d9643a7fb3b748bffdd74a3a))
+
+
+
+
+
 ## 0.1.15 (2025-03-21)
 
 

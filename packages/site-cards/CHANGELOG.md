@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.5 (2025-03-27)
+
+
+### Bug Fixes
+
+* **PDS-2007:** rich-text in CardPartner description ([39da8ba](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/39da8baccfccf445ac2fcc6ba60239f2bc3b2046))
+
+
+
+
+
 ## 0.7.4 (2025-03-21)
 
 
