@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.1.0 (2025-03-27)
+
+
+### Features
+
+* **PDS-1953:** add new service icons ([5c72279](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5c722796dd5fbe005adfaa18737d6df549e87618))
+
+
+
+
+
 ## 11.0.1 (2025-03-21)
 
 
