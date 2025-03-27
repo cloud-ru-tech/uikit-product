@@ -148,7 +148,11 @@ export function ProductHeaderMobile({
           </>
         }
         pathFooter
-        path={pagePath && <Breadcrumbs items={pagePath ?? []} separator='/' size='xs' />}
+        path={
+          pagePath && (
+            <Breadcrumbs items={pagePath ?? []} inactiveLastItem={pagePath.length > 1} separator='/' size='xs' />
+          )
+        }
         showMainMenu={showMainMenu}
         disableMainMenu={disableMainMenu}
         onMainMenuClick={() => {
