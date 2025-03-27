@@ -1,3 +1,4 @@
-import { CodeEditorProps } from '@snack-uikit/code-editor';
+import type { CodeEditorProps, JsonSchema as Scheme } from '@snack-uikit/code-editor';
 
 export type ProductCodeEditorProps = CodeEditorProps;
+export type EditorJsonSchema = Scheme;
