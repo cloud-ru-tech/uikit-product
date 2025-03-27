@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.1 (2025-03-27)
+
+
+### Bug Fixes
+
+* **FF-6299:** Re-export code editor jsonschema type. ([b2a867b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b2a867bb855ae6a12630d23db9a28ef5753574ea))
+
+
+
+
+
 # 0.2.0 (2025-03-27)
 
 
