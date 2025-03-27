@@ -1,5 +1,6 @@
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
+import { useMemo } from 'react';
 
 import { PricePeriod } from '@sbercloud/uikit-product-price-summary';
 
@@ -14,19 +15,97 @@ const meta: Meta = {
 };
 export default meta;
 
-const Template: StoryFn<PriceSummaryProps> = ({ ...args }) => {
+type StoryProps = PriceSummaryProps & {
+  showSingleGroup: boolean;
+};
+
+const INVOICE_SAMPLE = [
+  {
+    title: 'Label detalization list',
+    quantity: 5,
+    price: 9999999.99,
+    items: [
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+      },
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+      },
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        primary: false,
+        bottomDivider: true,
+      },
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+        primary: true,
+      },
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        primary: true,
+        topDivider: true,
+      },
+    ],
+  },
+  {
+    items: [
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+      },
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
+      },
+      {
+        label: 'Label',
+        quantity: 1,
+        price: 9999999.99,
+        primary: false,
+      },
+    ],
+  },
+];
+
+const Template: StoryFn<StoryProps> = ({ showSingleGroup, ...args }) => {
   const [_, setArgs] = useArgs();
+
+  const invoice = useMemo(() => {
+    if (!showSingleGroup) {
+      return INVOICE_SAMPLE;
+    }
+
+    return [INVOICE_SAMPLE[0]];
+  }, [showSingleGroup]);
 
   return (
     <div style={{ maxWidth: 304 }}>
-      <PriceSummary {...args} onPeriodChanged={period => setArgs({ ...args, period })} />
+      <PriceSummary {...args} onPeriodChanged={period => setArgs({ ...args, period })} invoice={invoice} />
     </div>
   );
 };
 
-export const priceSummary: StoryObj<PriceSummaryProps> = {
+export const priceSummary: StoryObj<StoryProps> = {
   render: Template,
   args: {
+    showSingleGroup: false,
     value: 9999999.99,
     hint: 'Стоимость зависит от потребления',
     period: PricePeriod.Month,
@@ -34,83 +113,19 @@ export const priceSummary: StoryObj<PriceSummaryProps> = {
     promoBadge: {
       text: 'Promo Label',
     },
-    discount: {
-      price: 9999999.99,
-      discounts: [
-        { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-        { value: -1000, percent: -9, tooltip: 'Скидка -9%' },
-      ],
-    },
-    invoice: [
-      {
-        title: 'Label detalization list',
-        quantity: 5,
-        price: 9999999.99,
-        items: [
-          {
-            label: 'Label',
-            quantity: 1,
-            price: 9999999.99,
-            discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-          },
-          {
-            label: 'Label',
-            quantity: 1,
-            price: 9999999.99,
-            discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-          },
-          {
-            label: 'Label',
-            quantity: 1,
-            price: 9999999.99,
-            primary: false,
-            bottomDivider: true,
-          },
-          {
-            label: 'Label',
-            quantity: 1,
-            price: 9999999.99,
-            discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-            primary: true,
-          },
-          {
-            label: 'Label',
-            quantity: 1,
-            price: 9999999.99,
-            primary: true,
-            topDivider: true,
-          },
-        ],
-      },
-      {
-        items: [
-          {
-            label: 'Label',
-            quantity: 1,
-            price: 9999999.99,
-            discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-          },
-          {
-            label: 'Label',
-            quantity: 1,
-            price: 9999999.99,
-            discount: { value: 1000, percent: 9, tooltip: 'Скидка -9%' },
-          },
-          {
-            label: 'Label',
-            quantity: 1,
-            price: 9999999.99,
-            primary: false,
-          },
-        ],
-      },
-    ],
     docsLink: {
       href: 'https://cloud.ru/documents/tariffs/index.html',
     },
     layoutType: 'desktop',
   },
-  argTypes: {},
+  argTypes: {
+    showSingleGroup: {
+      name: '[Stories]: show single group',
+      control: {
+        type: 'boolean',
+      },
+    },
+  },
   parameters: {
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
