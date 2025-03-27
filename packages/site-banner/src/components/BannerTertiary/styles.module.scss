@@ -1,0 +1,35 @@
+.root {
+  position: relative;
+}
+
+.content {
+  gap: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  [data-layout-type=tablet] &,
+  [data-layout-type=mobile] & {
+    flex-direction: column;
+  }
+}
+
+.image {
+  max-width: 105px;
+  max-height: 72px;
+}
+
+.texts {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 4px;
+}
+
+.erid {
+  position: absolute;
+  right: 0;
+  top: 0;
+}

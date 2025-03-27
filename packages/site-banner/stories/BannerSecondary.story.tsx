@@ -7,21 +7,19 @@ import { Layout } from '@sbercloud/uikit-product-site-layout';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { BannerPrimary, BannerPrimaryProps } from '../src';
+import { BannerSecondary, BannerSecondaryProps } from '../src';
 import { EridProps } from '../src/helperComponents';
 import { Color } from '../src/helperComponents/BannerCommon/constants';
 import { APPEARANCE_ERID } from '../src/helperComponents/Erid/constants';
 import rectangle from './assets/rectangle.webp';
-import square from './assets/square.webp';
 
 const meta: Meta = {
-  title: 'Site/Banner/Primary',
-  component: BannerPrimary,
+  title: 'Site/Banner/Secondary',
+  component: BannerSecondary,
 };
 export default meta;
 
-type StoryProps = BannerPrimaryProps & {
-  withTags: boolean;
+type StoryProps = BannerSecondaryProps & {
   withErid: boolean;
   enableSecondButton: boolean;
   eridAppearance: EridProps['appearance'];
@@ -39,7 +37,7 @@ const BUTTONS = [
   },
 ];
 
-const Template: StoryFn<StoryProps> = ({ withTags, withErid, imgType, ...args }) => {
+const Template: StoryFn<StoryProps> = ({ withErid, ...args }) => {
   const [{ enableSecondButton }, updateArgs] = useArgs();
 
   useEffect(() => {
@@ -47,19 +45,6 @@ const Template: StoryFn<StoryProps> = ({ withTags, withErid, imgType, ...args })
       buttons: enableSecondButton ? BUTTONS : [BUTTONS[0]],
     });
   }, [args.buttons, enableSecondButton, updateArgs]);
-
-  const imgProps =
-    imgType === 'square'
-      ? {
-          img: args.img ? args.img : square,
-          imgType: 'square' as const,
-        }
-      : {
-          img: args.img ? args.img : rectangle,
-          imgType: 'rectangle' as const,
-        };
-
-  const tags = withTags ? args.tags : undefined;
 
   const eridProps =
     withErid && args.eridTip
@@ -73,20 +58,20 @@ const Template: StoryFn<StoryProps> = ({ withTags, withErid, imgType, ...args })
 
   return (
     <Layout>
-      <BannerPrimary {...args} {...imgProps} tags={tags} {...eridProps} />
+      <BannerSecondary {...args} {...eridProps} />
     </Layout>
   );
 };
 
-export const primary: StoryObj<StoryProps> = {
+export const secondary: StoryObj<StoryProps> = {
   render: Template,
   args: {
     id: 'banner-primary',
     'data-test-id': 'banner-primary',
     title: 'Title',
     description: 'description',
-    imgType: 'rectangle',
     enableSecondButton: true,
+    img: rectangle,
     buttons: [
       {
         label: 'Label text',
@@ -97,14 +82,6 @@ export const primary: StoryObj<StoryProps> = {
         href: 'https://cloud.ru',
       },
     ],
-    withTags: true,
-    expirationDate: 'ДД.ММ.ГГГГ',
-    tags: [
-      {
-        appearance: 'pink',
-        text: 'Только для юрлиц',
-      },
-    ],
     withErid: true,
     eridTip: 'Реклама от Cloud.ru. erid: 1234567890',
     eridAppearance: APPEARANCE_ERID.Neutral,
@@ -113,9 +90,6 @@ export const primary: StoryObj<StoryProps> = {
     layoutType: 'desktop',
   },
   argTypes: {
-    withTags: {
-      name: '[Story]: Enable/Disable tags',
-    },
     withErid: {
       name: '[Story]: Enable/Disable erid',
     },

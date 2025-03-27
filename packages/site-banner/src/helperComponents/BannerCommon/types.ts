@@ -4,7 +4,7 @@ import { Appearance, Color } from './constants';
 
 type ColorType = ValueOf<typeof Color>;
 
-type AppearanceType = ValueOf<typeof Appearance>;
+export type AppearanceType = ValueOf<typeof Appearance>;
 
 export type WithColor = {
   appearance: Exclude<AppearanceType, 'brand' | 'graphite'>;
