@@ -1,14 +1,16 @@
 import cn from 'classnames';
 import { Fragment } from 'react';
 
+import { ButtonPromoOutline, ButtonPromoOutlineProps } from '@sbercloud/uikit-product-button-predefined';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { SiteNavbar, SiteNavbarProps } from '@sbercloud/uikit-product-site-navbar';
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
+import { SiteVideo, SiteVideoProps } from '@sbercloud/uikit-product-site-video';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Breadcrumbs, BreadcrumbsProps } from '@snack-uikit/breadcrumbs';
-import { ButtonFilled, ButtonFilledProps, ButtonOutline, ButtonOutlineProps } from '@snack-uikit/button';
+import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
 import { Typography } from '@snack-uikit/typography';
 
 import { HeroColor } from '../../types';
@@ -23,7 +25,9 @@ export type HeroMainProps = WithSupportProps<
     /** Описание продукта */
     description: string;
     /** Ссылка на изображение */
-    image: string;
+    image?: string;
+    /** Видео */
+    video?: SiteVideoProps['video'];
     /** Хлебные крошки для продукта */
     breadcrumbs: BreadcrumbsProps['items'];
     /** Тэги */
@@ -35,7 +39,7 @@ export type HeroMainProps = WithSupportProps<
     /** Цвета фона */
     backgroundColor?: HeroColor;
     /** Массив с настройками кнопок ButtonFilled */
-    buttons?: [Omit<ButtonFilledProps, 'size' | 'appearance'>, Omit<ButtonOutlineProps, 'size' | 'appearance'>?];
+    buttons?: [Omit<ButtonFilledProps, 'size' | 'appearance'>, Omit<ButtonPromoOutlineProps, 'size' | 'appearance'>?];
     /** CSS - класснейм */
     className?: string;
     /** Navbar */
@@ -47,6 +51,7 @@ export function HeroMain({
   title,
   description,
   image,
+  video,
   breadcrumbs,
   tags = [],
   platforms = [],
@@ -59,6 +64,8 @@ export function HeroMain({
   ...rest
 }: HeroMainProps) {
   const { t } = useLocale('SiteHero');
+
+  const isAdaptive = ['mobile', 'tablet'].includes(layoutType);
 
   return (
     <>
@@ -86,7 +93,7 @@ export function HeroMain({
                     <RichText richText={title} />
                   </Typography>
 
-                  <Typography.SansBodyL className={styles.description}>
+                  <Typography.SansBodyL tag='div' className={styles.description}>
                     <RichText richText={description} />
                   </Typography.SansBodyL>
 
@@ -107,19 +114,19 @@ export function HeroMain({
               {buttons && buttons.length > 0 && (
                 <div className={styles.buttons} data-layout-type={layoutType}>
                   <ButtonFilled
-                    className={styles.buttonPrimary}
                     {...buttons[0]}
                     data-layout-type={layoutType}
                     size='l'
                     appearance='primary'
+                    fullWidth={isAdaptive}
                   />
                   {buttons.length > 1 && (
-                    <ButtonOutline
-                      className={styles.buttonOutline}
+                    <ButtonPromoOutline
                       {...buttons[1]}
                       data-layout-type={layoutType}
                       size='l'
-                      appearance='neutral'
+                      appearance='secondary'
+                      fullWidth={isAdaptive}
                     />
                   )}
                 </div>
@@ -127,7 +134,11 @@ export function HeroMain({
             </div>
 
             <div className={styles.imageWrapper} data-layout-type={layoutType}>
-              <img className={styles.image} alt='hero_img' src={image} data-layout-type={layoutType} />
+              <div className={styles.media} data-layout-type={layoutType}>
+                {image && <img alt='hero_img' src={image} />}
+
+                {!image && video && <SiteVideo className={styles.video} video={video} />}
+              </div>
             </div>
           </div>
         </div>

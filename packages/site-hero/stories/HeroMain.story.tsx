@@ -21,6 +21,7 @@ type StoryProps = HeroMainProps & {
   showSecondaryButton: boolean;
   showNavbar: boolean;
   showPlaceholderImage: boolean;
+  showVideo: boolean;
 };
 
 const stubClick = () => window.alert('Clicked!');
@@ -111,6 +112,8 @@ const Template: StoryFn<StoryProps> = ({
   showButtons,
   showSecondaryButton,
   showNavbar,
+  showVideo,
+  image,
   ...args
 }) => {
   const buttons = useMemo(() => {
@@ -136,6 +139,18 @@ const Template: StoryFn<StoryProps> = ({
       <div className={styles.wrapper}>
         <HeroMain
           {...args}
+          image={showVideo ? undefined : image}
+          video={
+            showVideo
+              ? {
+                  src: 'https://cdn-video.cloud.ru/backend/video/about-page/hero.mp4',
+                  poster: 'https://cdn.cloud.ru/backend/images/about/preview.png',
+                  controls: false,
+                  autoPlay: true,
+                  loop: true,
+                }
+              : undefined
+          }
           breadcrumbs={BREADCRUMBS}
           platforms={showPlatforms ? PLATFORMS : undefined}
           handlePlatformClick={showPlatforms ? stubClick : undefined}
@@ -162,6 +177,7 @@ export const heroMain: StoryObj<StoryProps> = {
     showButtons: true,
     showSecondaryButton: true,
     showNavbar: true,
+    showVideo: false,
   },
   argTypes: {
     layoutType: { control: { type: 'select' } },
@@ -186,6 +202,15 @@ export const heroMain: StoryObj<StoryProps> = {
     showNavbar: {
       name: '[Story]: Show navbar',
       control: { type: 'boolean' },
+    },
+    showVideo: {
+      name: '[Story]: Show video instead of image',
+      control: { type: 'boolean' },
+    },
+    video: {
+      table: {
+        disable: true,
+      },
     },
   },
   parameters: {
