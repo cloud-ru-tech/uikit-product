@@ -78,6 +78,8 @@
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| autoSwipe | `number` | - | Автоматическое переключение слайдов в секундах |
+| infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionCaseCarousel
 ### Props
 | name | type | default value | description |
@@ -92,6 +94,8 @@
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| autoSwipe | `number` | - | Автоматическое переключение слайдов в секундах |
+| infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionCatalog
 ### Props
 | name | type | default value | description |
@@ -119,6 +123,8 @@
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| autoSwipe | `number` | - | Автоматическое переключение слайдов в секундах |
+| infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionContent
 ### Props
 | name | type | default value | description |
@@ -179,6 +185,8 @@
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| autoSwipe | `number` | - | Автоматическое переключение слайдов в секундах |
+| infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionLeading
 ### Props
 | name | type | default value | description |
@@ -190,6 +198,7 @@
 | titleSectionSize | enum Size: `"s"`, `"m"`, `"l"` | m | Размер шрифтов заголовка и подзаголовка |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
+| autoSwipe | `number` | 9 | Автоматическое переключение слайдов в секундах |
 | id | `string` | - | id секции |
 | footerDescription | `string` | - | Описание секции |
 | className | `string` | - | CSS - класснейм |
@@ -208,6 +217,8 @@
 | className | `string` | - | CSS - класснейм |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | moreButton | `{ label?: string; href?: string; onClick: MouseEventHandler<HTMLElement>; 'data-test-id'?: string; }` | - | Кнопка внизу секции |
+| autoSwipe | `number` | - | Автоматическое переключение слайдов в секундах |
+| infiniteScroll | `boolean` | false | Цикличная прокрутка |
 ## SectionMedia
 ### Props
 | name | type | default value | description |

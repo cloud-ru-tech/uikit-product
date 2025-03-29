@@ -26,6 +26,8 @@ export function SectionCarousel({
   layoutType,
   gap,
   moreButton,
+  autoSwipe = 9,
+  infiniteScroll = true,
   ...rest
 }: SectionCarouselProps) {
   const [currentPage, setCurrentPage] = useState<number>(0);
@@ -90,6 +92,8 @@ export function SectionCarousel({
             pagination={children.length > itemsPerPageAmount}
             swipe={children.length > itemsPerPageAmount}
             gap={gap}
+            autoSwipe={infiniteScroll ? autoSwipe : undefined}
+            infiniteScroll={infiniteScroll}
           >
             {children}
           </Carousel>

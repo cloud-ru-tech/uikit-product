@@ -14,7 +14,7 @@ export function SectionClientsCarousel({ items, ...props }: SectionClientsCarous
   const carouselProps = useMemo(() => getCarouselProps(props.layoutType), [props.layoutType]);
 
   return (
-    <SectionCarousel {...props} {...carouselProps} gap={themeVars.dimension['1m']}>
+    <SectionCarousel autoSwipe={0} {...props} {...carouselProps} gap={themeVars.dimension['1m']}>
       {items.map(item => (
         <CardClient key={item.alt} {...item} />
       ))}

@@ -26,7 +26,7 @@ export type SectionCarouselProps = WithSupportProps<
         backgroundColor?: SectionColor;
         /** CSS - класснейм */
         className?: string;
-      } & Pick<CarouselProps, 'gap'> &
+      } & Pick<CarouselProps, 'gap' | 'autoSwipe' | 'infiniteScroll'> &
       Pick<SectionBasicProps, 'moreButton'>
   >
 >;

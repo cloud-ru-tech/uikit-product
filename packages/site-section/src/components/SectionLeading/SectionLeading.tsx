@@ -2,7 +2,7 @@ import debounce from 'lodash.debounce';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
-import { Carousel } from '@snack-uikit/carousel';
+import { Carousel, CarouselProps } from '@snack-uikit/carousel';
 import { Typography } from '@snack-uikit/typography';
 
 import { CardLeading, CardLeadingItem } from '../../helperComponents';
@@ -12,16 +12,17 @@ import { calculateAmountOfItemsPerPage } from './utils';
 
 export type SectionLeadingProps = WithSupportProps<
   WithLayoutType<
-    Pick<SectionBasicProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag' | 'backgroundColor'> & {
-      /** id секции */
-      id?: string;
-      /** Массив айтемов */
-      items: CardLeadingItem[];
-      /** Описание секции */
-      footerDescription?: string;
-      /** CSS - класснейм */
-      className?: string;
-    }
+    Pick<SectionBasicProps, 'title' | 'description' | 'titleSectionSize' | 'titleTag' | 'backgroundColor'> &
+      Pick<CarouselProps, 'autoSwipe'> & {
+        /** id секции */
+        id?: string;
+        /** Массив айтемов */
+        items: CardLeadingItem[];
+        /** Описание секции */
+        footerDescription?: string;
+        /** CSS - класснейм */
+        className?: string;
+      }
   >
 >;
 
@@ -38,6 +39,7 @@ export function SectionLeading({
   backgroundColor,
   className,
   layoutType,
+  autoSwipe = 9,
   ...rest
 }: SectionLeadingProps) {
   const [currentPage, setCurrentPage] = useState<number>(0);
@@ -93,6 +95,8 @@ export function SectionLeading({
             showItems={itemsPerPageAmount}
             pagination={items.length > itemsPerPageAmount}
             swipe={items.length > itemsPerPageAmount}
+            autoSwipe={autoSwipe}
+            infiniteScroll
           >
             {items.map(item => (
               <CardLeading key={item.label} {...item} layoutType={layoutType} data-test-id={item['data-test-id']} />
