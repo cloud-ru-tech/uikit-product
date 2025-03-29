@@ -46,7 +46,7 @@ export function SiteVideo({
             autoPlay={video.autoPlay}
             playsInline
             onContextMenu={preventDefault}
-            muted={video.muted}
+            muted={video.muted || video.autoPlay}
             loop={video.loop}
           />
 
