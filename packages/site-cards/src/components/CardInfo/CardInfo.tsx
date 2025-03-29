@@ -107,6 +107,7 @@ export function CardInfo({
 
           {description && (
             <Typography
+              tag='div'
               family='sans'
               purpose='body'
               size={getTypographySize(layoutType)}
