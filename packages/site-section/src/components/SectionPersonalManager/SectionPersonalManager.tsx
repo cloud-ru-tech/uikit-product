@@ -84,12 +84,12 @@ export function SectionPersonalManager({
     >
       <div className={styles.content} data-layout-type={layoutType}>
         <div className={cn(styles.card, styles.leftSide)} data-layout-type={layoutType}>
-          <div className={styles.approachTextWrapper}>
+          <div className={styles.approachTextWrapper} data-layout-type={layoutType}>
             <div className={styles.cardTextContent}>
               <Typography family='sans' {...getCardTitleTypographyProps(layoutType)}>
                 {manager.title || t('PersonalManager.individualApproachTitle')}
               </Typography>
-              <Typography family='sans' purpose='body' size='l'>
+              <Typography family='sans' purpose='body' size='l' className={styles.cardDescription}>
                 {manager.text || t('PersonalManager.individualApproachDescription')}
               </Typography>
             </div>
@@ -113,11 +113,11 @@ export function SectionPersonalManager({
             />
           </div>
         </div>
-        <div className={cn(styles.card, styles.cardTextContent)}>
+        <div className={cn(styles.card, styles.cardTextContent, styles.rightSide)} data-layout-type={layoutType}>
           <Typography family='sans' {...getCardTitleTypographyProps(layoutType)}>
             {card?.title || t('PersonalManager.allDaySupportTitle')}
           </Typography>
-          <Typography family='sans' purpose='body' size='l'>
+          <Typography family='sans' purpose='body' size='l' className={styles.cardDescription}>
             {card?.text || t('PersonalManager.allDaySupportDescription')}
           </Typography>
         </div>

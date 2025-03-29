@@ -2,10 +2,12 @@
 
 .sectionPersonalManager {
   width: 100%;
+  box-sizing: border-box;
 }
 
 .content {
   display: flex;
+  box-sizing: border-box;
 
   flex-direction: row;
   gap: var.$dimension-4m;
@@ -22,6 +24,7 @@
 }
 
 .card {
+  box-sizing: border-box;
   background-color: var.$sys-neutral-background;
 
   padding: var.$dimension-4m;
@@ -32,16 +35,23 @@
   }
 }
 
+.cardDescription {
+  color: var.$sys-neutral-text-support;
+}
+
 .cardTextContent {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: var.$dimension-2m;
 }
 
 .leftSide {
+  box-sizing: border-box;
   display: flex;
   gap: var.$dimension-3m;
 
+  align-items: flex-start;
   flex-direction: row;
 
   &[data-layout-type='tablet'] {
@@ -53,11 +63,27 @@
   }
 }
 
+.rightSide {
+  box-sizing: border-box;
+
+  &[data-layout-type='desktop'],
+  &[data-layout-type='desktopSmall'] {
+    max-width: 384px;
+    flex-shrink: 0;
+  }
+}
+
 .approachTextWrapper {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: var.$dimension-3m;
+
+  &[data-layout-type='desktop'],
+  &[data-layout-type='desktopSmall'] {
+    max-width: 472px;
+  }
 }
 
 .consultationButton {
@@ -67,6 +93,7 @@
 }
 
 .expertiseCards {
+  box-sizing: border-box;
   display: flex;
 
   flex-direction: row;
@@ -80,13 +107,20 @@
 }
 
 .imageWrapper {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   position: relative;
   max-width: 288px;
 
+  &[data-layout-type='desktop'],
+  &[data-layout-type='desktopSmall'] {
+    min-width: 216px;
+  }
+
   &[data-layout-type='tablet'] {
     overflow: hidden;
+    min-width: 196px;
 
     width: 100%;
   }
