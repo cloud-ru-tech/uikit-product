@@ -89,7 +89,7 @@ export function SectionAccordion({
               size={getBlockDescriptionSize(layoutType)}
               className={styles.description}
             >
-              {typeof description === 'string' ? <RichText richText={description} /> : description}
+              <RichText richText={description} />
             </Typography>
           </AccordionPrimary.CollapseBlock>
         ))}
