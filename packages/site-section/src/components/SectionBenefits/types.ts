@@ -51,6 +51,7 @@ type ContentNumericWithTabs = {
 
 type ContentInfoWithoutTabs = {
   type: 'info';
+  outline?: boolean;
   content: CardInfoArray;
 
   tabBarItems?: never;
@@ -58,6 +59,7 @@ type ContentInfoWithoutTabs = {
 
 type ContentInfoWithTabs = {
   type: 'info';
+  outline?: boolean;
   content: ContentInfoTab[];
 
   tabBarItems: NonNullable<SectionBasicProps['tabBarItems']>;

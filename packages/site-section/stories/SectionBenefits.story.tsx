@@ -63,6 +63,7 @@ const Template: StoryFn<StoryProps> = ({
   columnsConfig,
   withTabs,
   buttonsExample,
+  ...rest
 }) => {
   const contentBasicWithTabs = {
     tabBarItems: TABS,
@@ -82,6 +83,8 @@ const Template: StoryFn<StoryProps> = ({
 
   const contentBasic = withTabs ? contentBasicWithTabs : contentBasicWithoutTabs;
   const contentInfo = withTabs ? contentInfoWithTabs : contentInfoWithoutTabs;
+
+  const propsForTypeInfo = rest as SectionBenefitsProps & { type: 'info' };
 
   const buttons: SectionBenefitsProps['buttons'] = useMemo(() => {
     switch (buttonsExample) {
@@ -136,6 +139,7 @@ const Template: StoryFn<StoryProps> = ({
       type={type as 'info'}
       layoutType={layoutType}
       columnsConfig={columnsConfig}
+      outline={propsForTypeInfo.outline}
       {...contentInfo}
       buttons={buttons}
     />
@@ -159,6 +163,9 @@ export const benefits: StoryObj<StoryProps> = {
     withTabs: true,
   },
   argTypes: {
+    outline: {
+      if: { arg: 'type', eq: 'info' },
+    },
     withTabs: {
       name: '[Story]: With tabs',
     },

@@ -51,6 +51,7 @@
 | description | `string` | - | Описание секции |
 | buttons | `{ label: string; href?: string; target?: HTMLAttributeAnchorTarget; onClick?: MouseEventHandler<HTMLElement>; }[]` | - |  |
 | tabBarItems | `TabBarItem[]` | - |  |
+| outline | `boolean` | - |  |
 ## SectionBenefitsBanner
 ### Props
 | name | type | default value | description |

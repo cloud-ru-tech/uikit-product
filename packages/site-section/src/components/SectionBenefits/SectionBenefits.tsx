@@ -62,8 +62,9 @@ export function SectionBenefits({
     [tabBarItems],
   );
 
+  const outline = (rest as ContentInfo).outline;
   const gap = type === 'basic' ? 'l' : 's';
-  const backgroundColor = type === 'basic' ? 'neutral-background1-level' : 'neutral-background';
+  const backgroundColor = type === 'basic' || outline ? 'neutral-background1-level' : 'neutral-background';
 
   return (
     <SectionBasic
@@ -78,7 +79,8 @@ export function SectionBenefits({
     >
       {!tabBarItems && (
         <Grid layoutType={layoutType} columnsConfig={columnsConfig} gap={gap}>
-          {type === 'info' && content.map((item, index) => <CardInfo key={index} {...item} layoutType={layoutType} />)}
+          {type === 'info' &&
+            content.map((item, index) => <CardInfo key={index} {...item} outline={outline} layoutType={layoutType} />)}
 
           {type === 'numeric' &&
             content.map((item, index) => (
@@ -95,7 +97,11 @@ export function SectionBenefits({
           {type === 'info' &&
             content
               .filter(({ tabValue }) => tabValue === activeTab)
-              .map(({ cards }) => cards.map((card, key) => <CardInfo key={key} layoutType={layoutType} {...card} />))}
+              .map(({ cards }) =>
+                cards.map((card, index) => (
+                  <CardInfo key={index} layoutType={layoutType} {...card} outline={outline} />
+                )),
+              )}
 
           {type === 'numeric' &&
             content
@@ -109,7 +115,9 @@ export function SectionBenefits({
           {type === 'basic' &&
             content
               .filter(({ tabValue }) => tabValue === activeTab)
-              .map(({ cards }) => cards.map((card, key) => <CardBasic key={key} layoutType={layoutType} {...card} />))}
+              .map(({ cards }) =>
+                cards.map((card, index) => <CardBasic key={index} layoutType={layoutType} {...card} />),
+              )}
         </Grid>
       )}
 
