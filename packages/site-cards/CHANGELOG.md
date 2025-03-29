@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.7 (2025-03-29)
+
+
+### Bug Fixes
+
+* **PDS-2016:** add outline prop to CardInfo ([51a6f5d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/51a6f5deeae1a3b2438a8239badc5ac4c7cea556))
+* **PDS-2016:** tag div for description in CardInfo and CardBasic ([b5e167e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5e167e087646de00a513ebb2fc9f58ad0b98a3c))
+
+
+
+
+
 ## 0.7.6 (2025-03-27)
 
 ### Only dependencies have been changed

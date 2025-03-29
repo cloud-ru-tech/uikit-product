@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2025-03-29)
+
+
+### Bug Fixes
+
+* **PDS-2016:** add outline prop to SectionBenefits with type info ([9f4f169](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9f4f169da445adebc64970b3576b3e8f50b7c28f))
+* **PDS-2016:** hide subtitle in SectionTable if not passed ([9c7292f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9c7292f6c75af7ce5dda9b46539cca747d74de96))
+* **PDS-2016:** richText always in SectionAccordion item description ([2b69d15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2b69d157319cb6bd43ee8f6ad8cf4de510f0417e))
+
+
+### Features
+
+* **PDS-2049:** personal manager image and text size ([9693e54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9693e5415b8a5403f75e7c10e188507a4673759d))
+
+
+
+
+
 ## 0.12.1 (2025-03-27)
 
 ### Only dependencies have been changed

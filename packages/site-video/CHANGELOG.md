@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.2 (2025-03-29)
+
+
+### Bug Fixes
+
+* **PDS-2016:** video muted if autoplay passed ([53bfc38](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/53bfc38b268369172ab1f46b7d9562f83ec9c3d1))
+
+
+
+
+
 ## 0.2.1 (2025-03-27)
 
 ### Only dependencies have been changed

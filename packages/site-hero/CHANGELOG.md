@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-03-29)
+
+
+### Features
+
+* **PDS-2016:** add video in HeroMain ([f371dd1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f371dd1841b515df2faf92ac00ef47ae098d712f))
+
+
+
+
+
 ## 0.2.1 (2025-03-27)
 
 ### Only dependencies have been changed
