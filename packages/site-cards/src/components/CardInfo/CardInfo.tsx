@@ -35,6 +35,8 @@ export type CardInfoProps = WithSupportProps<
      * @default false
      */
     disabled?: boolean;
+    /** Наличие обводки */
+    outline?: boolean;
     /** CSS-класс */
     className?: string;
   }>
@@ -51,6 +53,7 @@ export function CardInfo({
   disabled = false,
   className,
   layoutType,
+  outline,
   'data-test-id': dataTestId = 'card-info',
   ...rest
 }: CardInfoProps) {
@@ -66,6 +69,7 @@ export function CardInfo({
       size='m'
       className={cn(styles.card, className)}
       disabled={disabled}
+      outline={outline}
       onClick={handleCardClick}
       onKeyDown={handleCardKeyDown}
       data-test-id={dataTestId}
