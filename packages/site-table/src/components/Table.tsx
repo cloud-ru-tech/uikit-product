@@ -12,6 +12,7 @@ type Cell = {
   content: ReactNode;
   rowSpan?: number;
   colSpan?: number;
+  className?: string;
 };
 
 export type TableProps = WithSupportProps<{
@@ -29,10 +30,10 @@ export function Table({ withHeader = true, rows, ...rest }: TableProps) {
         {header && (
           <thead>
             <tr className={cn(styles.row, styles.rowHeader)}>
-              {header.map(({ id, content, colSpan, rowSpan }, index) => (
+              {header.map(({ id, content, colSpan, rowSpan, className }, index) => (
                 <td
                   key={id ?? index}
-                  className={cn(styles.cell, styles.cellHeader)}
+                  className={cn(styles.cell, styles.cellHeader, className)}
                   colSpan={colSpan}
                   rowSpan={rowSpan}
                 >
@@ -47,10 +48,10 @@ export function Table({ withHeader = true, rows, ...rest }: TableProps) {
           <tbody>
             {body.map((row, index) => (
               <tr key={index} className={cn(styles.row, styles.rowBody)}>
-                {row.map(({ id, content, rowSpan, colSpan }, index) => (
+                {row.map(({ id, content, rowSpan, colSpan, className }, index) => (
                   <td
                     key={id ?? index}
-                    className={cn(styles.cell, styles.cellBody)}
+                    className={cn(styles.cell, styles.cellBody, className)}
                     rowSpan={rowSpan}
                     colSpan={colSpan}
                   >
