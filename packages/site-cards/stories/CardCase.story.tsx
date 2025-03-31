@@ -31,6 +31,7 @@ export const cardCase: StoryObj<StoryProps> = {
       src: logoSrc,
       alt: 'dodo-logo',
     },
+    outline: false,
     href: '#',
     target: '_blank',
     'data-test-id': 'card-case',

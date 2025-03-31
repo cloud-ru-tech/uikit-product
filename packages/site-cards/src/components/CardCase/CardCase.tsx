@@ -40,6 +40,8 @@ export type CardCaseProps = WithSupportProps<
     disabled?: boolean;
     /** CSS-класс */
     className?: string;
+    /** Управление состоянием наличия обводки */
+    outline?: boolean;
   }>
 >;
 
@@ -54,6 +56,7 @@ export function CardCase({
   disabled = false,
   className,
   layoutType,
+  outline,
   ...rest
 }: CardCaseProps) {
   const dataTestId = rest['data-test-id'] ?? 'card-case';
@@ -73,6 +76,7 @@ export function CardCase({
       onClick={handleCardClick}
       onKeyDown={handleCardKeyDown}
       data-test-id={dataTestId}
+      outline={outline}
     >
       <div data-layout-type={layoutType} className={styles.wrapper}>
         <div className={styles.header}>
