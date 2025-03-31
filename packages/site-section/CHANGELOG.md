@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.15.0 (2025-03-31)
+
+
+### Features
+
+* **PDS-2065:** add rich-text ([3c4f230](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3c4f2306e81e9c04f4cf858b2cb3b7948b4d7385))
+
+
+
+
+
 # 0.14.0 (2025-03-31)
 
 

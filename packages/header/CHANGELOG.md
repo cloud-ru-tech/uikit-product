@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.39.2 (2025-03-31)
+
+
+### Bug Fixes
+
+* **PDS-2028:** inconsistent last header breadcrumb behavior fixed ([15fd15f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/15fd15f9b3013b1eacd4d6476ebda30ffd5d0543))
+
+
+
+
+
 ## 2.39.1 (2025-03-27)
 
 ### Only dependencies have been changed
