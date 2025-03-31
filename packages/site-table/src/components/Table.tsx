@@ -1,6 +1,7 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
+import { RichText } from '@sbercloud/uikit-product-site-rich-text';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Scroll } from '@snack-uikit/scroll';
 
@@ -35,7 +36,7 @@ export function Table({ withHeader = true, rows, ...rest }: TableProps) {
                   colSpan={colSpan}
                   rowSpan={rowSpan}
                 >
-                  {content}
+                  <RichText richText={content} />
                 </td>
               ))}
             </tr>
@@ -53,7 +54,7 @@ export function Table({ withHeader = true, rows, ...rest }: TableProps) {
                     rowSpan={rowSpan}
                     colSpan={colSpan}
                   >
-                    {content}
+                    <RichText richText={content} />
                   </td>
                 ))}
               </tr>

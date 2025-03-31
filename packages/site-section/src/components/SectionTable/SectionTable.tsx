@@ -34,11 +34,7 @@ export function SectionTable({ id, layoutType, className, title, subtitle, descr
       className={cn(className, styles.sectionTable)}
       {...extractSupportProps(rest)}
     >
-      {subtitle && (
-        <div className={styles.subtitle} data-test-id='section-table__subtitle'>
-          {subtitle}
-        </div>
-      )}
+      {subtitle && <RichText richText={subtitle} className={styles.subtitle} data-test-id='section-table__subtitle' />}
 
       <Table {...rest} data-test-id='section-table__table' />
 
