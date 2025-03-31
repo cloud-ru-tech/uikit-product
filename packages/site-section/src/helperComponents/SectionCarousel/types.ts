@@ -26,6 +26,11 @@ export type SectionCarouselProps = WithSupportProps<
         backgroundColor?: SectionColor;
         /** CSS - класснейм */
         className?: string;
+        /**
+         * Автоматическое переключение слайдов в секундах
+         * @default 9
+         */
+        autoSwipe?: number;
       } & Pick<CarouselProps, 'gap' | 'autoSwipe' | 'infiniteScroll'> &
       Pick<SectionBasicProps, 'moreButton'>
   >
