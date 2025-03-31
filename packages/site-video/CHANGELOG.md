@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-03-31)
+
+
+### Features
+
+* **PDS-2064:** add onError prop to site-video and SectionMedia ([5b7d735](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5b7d73573ce7c67c2c47679c7c95d944ebd490c2))
+
+
+
+
+
 ## 0.2.2 (2025-03-29)
 
 

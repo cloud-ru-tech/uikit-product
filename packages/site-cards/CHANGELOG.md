@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-03-31)
+
+
+### Features
+
+* **PDS-2066:** add outline to case card ([e365118](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3651187b0eabdd11a01d73ce0de519ee6c7091b))
+
+
+
+
+
 ## 0.7.7 (2025-03-29)
 
 

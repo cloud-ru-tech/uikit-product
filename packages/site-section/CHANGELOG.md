@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.14.0 (2025-03-31)
+
+
+### Features
+
+* **PDS-2064:** add onError prop to site-video and SectionMedia ([5b7d735](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5b7d73573ce7c67c2c47679c7c95d944ebd490c2))
+* **PDS-2064:** autoSwipe and infiniteScroll for carousels ([da61996](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/da619967bb2e64d1d56e3adf040023617d4cecd8))
+* **PDS-2064:** export SectionCarousel, upd readme ([8b98ca0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8b98ca0cab81609cf599b895321474b3d5eb85ae))
+
+
+
+
+
 # 0.13.0 (2025-03-29)
 
 
