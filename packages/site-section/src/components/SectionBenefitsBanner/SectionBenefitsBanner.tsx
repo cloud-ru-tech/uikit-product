@@ -61,7 +61,7 @@ export function SectionBenefitsBanner({
         </div>
         {description && (
           <div className={styles.description} data-attribute='no_search_index'>
-            <Typography family='sans' purpose='body' size='m'>
+            <Typography family='sans' purpose='body' size='m' tag='div'>
               {Array.isArray(description) ? (
                 description.map(item => <RichText key={item} richText={item} />)
               ) : (

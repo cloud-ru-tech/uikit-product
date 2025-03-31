@@ -13,10 +13,10 @@ export type BenefitItemProps = WithLayoutType<{
 export function BenefitItem({ value, description, layoutType }: BenefitItemProps) {
   return (
     <div className={styles.benefitItem} data-layout-type={layoutType}>
-      <Typography family='sans' tag='span' {...getValueTypographyProps(layoutType)}>
+      <Typography family='sans' tag='div' {...getValueTypographyProps(layoutType)}>
         <RichText richText={value} />
       </Typography>
-      <Typography family='sans' tag='p' purpose='title' size='m'>
+      <Typography family='sans' tag='div' purpose='title' size='m'>
         <RichText richText={description} />
       </Typography>
     </div>

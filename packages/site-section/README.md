@@ -139,7 +139,7 @@
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
-| onError | `unknown` | - |  |
+| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentList
@@ -156,7 +156,7 @@
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
-| onError | `unknown` | - |  |
+| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentTabs
@@ -232,7 +232,7 @@
 | id | `string` | - | id секции |
 | video | `ReactNode \| VideoPlayerProps` | - |  |
 | onPlay | `() => void` | - |  |
-| onError | `unknown` | - |  |
+| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 ## SectionPersonalManager
 ### Props
