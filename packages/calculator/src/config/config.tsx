@@ -21,6 +21,7 @@ export const CATALOG_CONFIG: CatalogConfig = {
   },
 };
 
-export type ProductType = ValueOf<typeof ADVANCED_PRODUCT> &
-  ValueOf<typeof VM_WARE_PRODUCT> &
-  ValueOf<typeof EVOLUTION_PRODUCT>;
+export type ProductType =
+  | ValueOf<typeof ADVANCED_PRODUCT>
+  | ValueOf<typeof VM_WARE_PRODUCT>
+  | ValueOf<typeof EVOLUTION_PRODUCT>;
