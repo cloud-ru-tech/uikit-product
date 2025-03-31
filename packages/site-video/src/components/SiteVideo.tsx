@@ -12,6 +12,7 @@ import { isVideoPlayerContent, preventDefault } from './utils';
 export function SiteVideo({
   video,
   onPlay,
+  onError,
   'data-test-id': dataTestId = 'site-video',
   className,
   ...rest
@@ -48,6 +49,7 @@ export function SiteVideo({
             onContextMenu={preventDefault}
             muted={video.muted || video.autoPlay}
             loop={video.loop}
+            onError={onError}
           />
 
           {!isVideoPlayed && video.controls && (

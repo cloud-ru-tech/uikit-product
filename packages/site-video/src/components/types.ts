@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactEventHandler, ReactNode } from 'react';
 
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
@@ -14,5 +14,6 @@ export type VideoPlayerProps = {
 export type SiteVideoProps = WithSupportProps<{
   video: VideoPlayerProps | ReactNode;
   onPlay?(): void;
+  onError?: ReactEventHandler<HTMLVideoElement>;
   className?: string;
 }>;
