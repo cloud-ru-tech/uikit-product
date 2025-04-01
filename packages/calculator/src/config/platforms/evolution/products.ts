@@ -125,7 +125,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     productQuantityValues: {
       max: 5,
     },
-    enableConnectToConsole: false,
+    enableConnectToConsole: true,
   },
   [EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier]: {
     id: EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier,
@@ -136,11 +136,8 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_CONTAINER_APPS_FREE_TIER_CONFIG,
     dataTestId: EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier,
     enableChangeProductQuantity: true,
-    productQuantityValues: {
-      max: 1,
-    },
     freeTier: true,
     disabledProductQuantity: true,
-    enableConnectToConsole: false,
+    enableConnectToConsole: true,
   },
 };
