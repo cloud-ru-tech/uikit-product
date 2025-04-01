@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.15.4 (2025-04-01)
+
+
+### Bug Fixes
+
+* **PDS-2079:** disable truncate for links in SectionBenefits ([9062ba3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9062ba3086e9a8361dec529a7a63fb424cb2e923))
+
+
+
+
+
 ## 0.15.3 (2025-04-01)
 
 ### Only dependencies have been changed

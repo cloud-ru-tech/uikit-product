@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.2 (2025-04-01)
+
+
+### Bug Fixes
+
+* **PDS-2079:** yellow tag tooltip icon color ([76c9cf9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/76c9cf9b5b1b3465816086c56323e2d6f261e86b))
+
+
+
+
+
 ## 0.1.1 (2025-03-21)
 
 
