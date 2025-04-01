@@ -125,7 +125,7 @@ export function SectionBenefits({
         <div className={styles.buttons}>
           {buttons.map(button =>
             button.href ? (
-              <Link key={button.label} {...button} text={button.label} size='l' />
+              <Link key={button.label} {...button} text={button.label} size='l' insideText />
             ) : (
               <ButtonFilled size='l' key={button.label} {...button} />
             ),
