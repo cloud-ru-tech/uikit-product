@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.2 (2025-04-01)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-button-predefined@0.4.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/button-predefined/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@11.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-video@0.3.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-video/CHANGELOG.md)
+
+
+
+
+
 ## 0.3.1 (2025-03-31)
 
 ### Only dependencies have been changed

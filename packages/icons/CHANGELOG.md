@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.2.0 (2025-04-01)
+
+
+### Features
+
+* **PDS-2079:** add gitVerse and networkCard interface icons, update gpu icon ([74e8506](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74e8506bb96c011639448f756c6557931404eb6a))
+* **PDS-2079:** add record icon ([3e1bf76](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3e1bf762b463f8cf2f53e241352e7cfb21d3cc31))
+
+
+
+
+
 # 11.1.0 (2025-03-27)
 
 

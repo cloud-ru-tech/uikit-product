@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.1 (2025-04-01)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@11.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-accordion@0.3.28](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-accordion/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-dropdown@0.6.35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-fields@0.6.36](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-modal@0.7.33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 # 0.11.0 (2025-04-01)
 
 

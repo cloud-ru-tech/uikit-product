@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.26 (2025-04-01)
+
+
+### Bug Fixes
+
+* **FF-00:** improved price summary story ([4e775d6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4e775d68fad8d699ff1916d21c1cb63877eea614))
+
+
+
+
+
 ## 0.0.25 (2025-03-27)
 
 ### Only dependencies have been changed
