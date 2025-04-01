@@ -111,7 +111,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_CLOUD_SERVER_GPU_FORM_CONFIG,
     dataTestId: EVOLUTION_PRODUCT.EvolutionCloudServerGpu,
     enableChangeProductQuantity: true,
-    enableConnectToConsole: false,
+    enableConnectToConsole: true,
   },
   [EVOLUTION_PRODUCT.EvolutionContainerApps]: {
     id: EVOLUTION_PRODUCT.EvolutionContainerApps,
