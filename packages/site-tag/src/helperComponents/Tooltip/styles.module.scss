@@ -14,16 +14,24 @@ $colors: 'neutral', 'violet', 'blue', 'green', 'yellow', 'orange', 'red', 'pink'
           color: ste.$sys-neutral-text-support;
         }
       } @else {
-        color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-light');
-
-        &:hover,
-        &:focus-visible {
+        @if $color == 'yellow' {
           color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-support');
+
+          &:hover,
+          &:focus-visible {
+            color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-light');
+          }
+        } @else {
+          color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-light');
+
+          &:hover,
+          &:focus-visible {
+            color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-support');
+          }
         }
 
         &:active,
         &[data-opened='true'] {
-          color: ste.$sys-violet-text-main;
           color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-main');
         }
       }
