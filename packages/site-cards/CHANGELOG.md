@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-04-01)
+
+
+### Features
+
+* **PDS-2067:** set card media time prop optional ([8a695ad](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8a695ade6db51cc75f15d9f09bbcd3989f647172))
+
+
+
+
+
 # 0.8.0 (2025-03-31)
 
 

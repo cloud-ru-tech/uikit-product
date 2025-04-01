@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.15.1 (2025-04-01)
+
+
+### Bug Fixes
+
+* **PDS-1591:** section benefits banner conflicting typography tag fixed ([bf0f7b5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bf0f7b5dfdcdcfa40f264947328feba4429cc49c))
+
+
+
+
+
 # 0.15.0 (2025-03-31)
 
 

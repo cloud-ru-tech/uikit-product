@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2025-04-01)
+
+
+### Features
+
+* **ONB-0000:** fix types ([afc489c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/afc489c0e8e8765d64115a1ec43880df2dffb70d))
+
+
+
+
+
 ## 0.10.5 (2025-03-27)
 
 ### Only dependencies have been changed
