@@ -5,6 +5,7 @@ import { ButtonFilled } from '@snack-uikit/button';
 import { FieldStepper } from '@snack-uikit/fields';
 import { IconPredefined } from '@snack-uikit/icon-predefined';
 import { Tooltip } from '@snack-uikit/tooltip';
+import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 
 import { useCalculatorContext, useProductContext } from '../../contexts';
@@ -84,7 +85,14 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
           data-test-id={parseKeyToDataTest('product', 'icon')}
         />
 
-        <TitleComponent data-test-id={parseKeyToDataTest('product', 'title')}>{label}</TitleComponent>
+        <TitleComponent>
+          <TruncateString
+            data-test-id={parseKeyToDataTest('product', 'title')}
+            variant='end'
+            text={label}
+            maxLines={2}
+          />
+        </TitleComponent>
       </div>
 
       <div className={styles.right} data-mobile={isMobile || undefined}>
