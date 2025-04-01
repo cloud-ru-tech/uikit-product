@@ -24,7 +24,7 @@ export type CardMediaProps = WithSupportProps<
     /** Тег */
     tag: Pick<TagProps, 'label' | 'appearance'>;
     /** Время чтения */
-    time: string;
+    time?: string;
     /** Дата публикации */
     date: string;
     /** Ссылка */
@@ -84,10 +84,12 @@ export function CardMedia({
         <div className={styles.left}>
           <Tag size='xs' {...tag} />
 
-          <span className={styles.time}>
-            <WatchSVG className={styles.icon} size={16} />
-            <Typography.SansBodyM className={styles.minutes}>{`${time} мин`}</Typography.SansBodyM>
-          </span>
+          {time && (
+            <span className={styles.time}>
+              <WatchSVG className={styles.icon} size={16} />
+              <Typography.SansBodyM className={styles.minutes}>{`${time} мин`}</Typography.SansBodyM>
+            </span>
+          )}
         </div>
 
         {size !== 's' && <Typography.SansBodyM className={styles.date}>{date}</Typography.SansBodyM>}
