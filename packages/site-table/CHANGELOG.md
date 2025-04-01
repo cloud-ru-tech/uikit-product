@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.1 (2025-04-01)
+
+
+### Bug Fixes
+
+* **PDS-2065:** remove break-word style ([c6574fd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c6574fd34f8463c68aaca5367a5ed827a3d48383))
+
+
+
+
+
 # 0.2.0 (2025-03-31)
 
 
