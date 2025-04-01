@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-04-01)
+
+
+### BREAKING CHANGES
+
+
+* **PDS-1391:** add BannerSecondary and BannerTertiary ([1c1ee33](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1c1ee3362aa9b5fbb29ae3e5a99961d5fea4a78c))
+
+
+
+
 ## 0.1.10 (2025-03-27)
 
 ### Only dependencies have been changed
