@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
-import { ButtonFilled } from '@snack-uikit/button';
+import { ButtonTonal } from '@snack-uikit/button';
 import { FieldStepper } from '@snack-uikit/fields';
 import { IconPredefined } from '@snack-uikit/icon-predefined';
 import { Tooltip } from '@snack-uikit/tooltip';
@@ -62,11 +62,10 @@ export function ProductPageHeadline({ product }: ProductPageHeadlineProps) {
         hoverDelayOpen={600}
         tip='Вы будете перенаправлены в личный кабинет для подключения выбранной конфигурации'
       >
-        <ButtonFilled
+        <ButtonTonal
           fullWidth={isMobile}
           label='Подключить'
           size='m'
-          appearance='primary'
           onClick={() => onConnectClick?.(product.id, valueProp)}
           data-test-id={dataTestAttribute}
         />

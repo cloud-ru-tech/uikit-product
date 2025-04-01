@@ -3,7 +3,7 @@ import { useDeferredValue, useMemo, useRef } from 'react';
 
 import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
-import { ButtonFilled, ButtonTonal } from '@snack-uikit/button';
+import { ButtonFilled } from '@snack-uikit/button';
 import { Scroll } from '@snack-uikit/scroll';
 import { Tag } from '@snack-uikit/tag';
 import { TruncateString } from '@snack-uikit/truncate-string';
@@ -97,7 +97,7 @@ export function PriceSummary({ className, appearance = SummaryAppearance.Default
           <ButtonFilled appearance='primary' onClick={handleStartCatalog} {...serviceButtonProps} />
         )}
         {appearance === SummaryAppearance.Default && (
-          <ButtonTonal appearance='neutral' fullWidth={isMobile} onClick={handleCatalogOpen} {...serviceButtonProps} />
+          <ButtonFilled appearance='primary' fullWidth={isMobile} onClick={handleCatalogOpen} {...serviceButtonProps} />
         )}
       </div>
 
