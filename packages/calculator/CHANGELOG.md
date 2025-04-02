@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2025-04-02)
+
+
+### Features
+
+* **ONB-3307:** add truncated title of product ([68f0476](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/68f0476a41309ab2e9343ad3ff6314d380be7bdf))
+
+
+
+
+
 ## 0.11.1 (2025-04-01)
 
 ### Only dependencies have been changed
