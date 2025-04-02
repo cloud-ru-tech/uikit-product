@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.14.0 (2025-04-02)
+
+
+### Features
+
+* **ONB-3495:** add ability to connect evo cloud server gpu to console ([4ef98d7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4ef98d77c17ae28ad40a7a30726ec4f2332b697e))
+
+
+
+
+
 # 0.13.0 (2025-04-02)
 
 
