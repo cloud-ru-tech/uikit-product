@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.13.0 (2025-04-02)
+
+
+### Features
+
+* **ONB-2882:** add ability to connect evo container apps to console ([5c7d87b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5c7d87bd666ec762acf4eba25b2477c7d406d7ee))
+
+
+
+
+
 # 0.12.0 (2025-04-02)
 
 
