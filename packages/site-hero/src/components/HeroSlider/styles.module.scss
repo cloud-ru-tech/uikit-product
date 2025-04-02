@@ -1,0 +1,41 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+$decor: 'decor';
+$graphite: 'graphite';
+$brand: 'brand';
+
+.root {
+  position: relative;
+  touch-action: none;
+}
+
+.heroCarousel {
+ & > div > div {
+   padding: 0;
+   margin: 0;
+ }
+}
+
+.paginationWrapper {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+
+  &[data-appearance='#{$brand}'] {
+    button[data-activated="true"] > div {
+      /* stylelint-disable-next-line declaration-no-important */
+      background-color: var.$sys-neutral-accent-default !important;
+
+      &:hover,
+      &:focus-visible,
+      &:active {
+        /* stylelint-disable-next-line declaration-no-important */
+        background-color: var.$sys-neutral-accent-hovered !important;
+      }
+    }
+  }
+}

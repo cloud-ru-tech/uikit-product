@@ -1,0 +1,164 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as var;
+
+$colors: (
+  neutral: var.$sys-neutral-background,
+  white: var.$sys-neutral-background1-level,
+  violet: var.$sys-violet-decor-default,
+  blue: var.$sys-blue-decor-default,
+);
+
+$decor: 'decor';
+$graphite: 'graphite';
+$brand: 'brand';
+
+$rectangle: 'rectangle';
+$square: 'square';
+
+@mixin decor-background-colors {
+  @each $color, $value in $colors {
+    &[data-color='#{$color}'][data-appearance='#{$decor}'] {
+      background-color: $value;
+    }
+  }
+}
+
+@mixin appearance {
+  &[data-appearance='#{$graphite}'] {
+    background-color: var.$sys-graphite-accent-default;
+
+    .text {
+      color: var.$sys-invert-neutral-text-main;
+    }
+  }
+
+  &[data-appearance='#{$brand}'] {
+    background-color: var.$sys-primary-accent-default;
+
+    .text {
+      color: var.$sys-graphite-text-main;
+    }
+  }
+
+  &[data-appearance='#{$decor}'] {
+    .text {
+      color: var.$sys-graphite-text-main;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  background-color: var.$sys-neutral-background;
+
+  height: 368px;
+
+  @include decor-background-colors;
+  @include appearance;
+}
+
+.sectionWrapper {
+  height: 100%;
+
+  & > div[data-layout-type='tablet'] {
+    padding-right: 0;
+  }
+}
+
+.erid {
+  position: absolute;
+  right: var.$dimension-025m;
+  top: var.$dimension-025m;
+}
+
+.slideContentWrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  justify-content: space-between;
+
+  &[data-layout-type='mobile'] {
+    justify-content: center;
+  }
+
+  &[data-image-format='#{$rectangle}'] {
+    &[data-layout-type='desktop'] {
+      gap: var.$dimension-4m;
+    }
+
+    &[data-layout-type='desktopSmall'] {
+      gap: var.$dimension-3m;
+    }
+  }
+
+  &[data-image-format='#{$square}'] {
+    gap: var.$dimension-2m;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: var.$dimension-7m 0;
+
+  &[data-layout-type='tablet'] {
+    max-width: unset;
+    padding: var.$dimension-4m 0 var.$dimension-7m;
+  }
+
+  &[data-layout-type='mobile'] {
+    max-width: unset;
+    padding: var.$dimension-3m 0 var.$dimension-7m;
+
+    width: 100%;
+  }
+
+  &[data-image-format='#{$rectangle}'] {
+    &[data-layout-type='desktopSmall'] {
+      max-width: 650px;
+      flex-shrink: 0;
+    }
+
+    &[data-layout-type='tablet'] {
+      max-width: 388px;
+    }
+  }
+
+  &[data-image-format='#{$square}'] {
+    max-width: 800px;
+    flex-shrink: 0;
+
+    &[data-layout-type='tablet'],
+    &[data-layout-type='mobile'] {
+      max-width: unset;
+      flex: initial;
+    }
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+
+  gap: var.$dimension-2m;
+
+  &[data-layout-type='mobile'] {
+    br {
+      display: none;
+    }
+  }
+}
+
+.buttonWrapper {
+  &[data-layout-type='mobile'] {
+    .button {
+      width: 100%;
+    }
+  }
+}
+
+

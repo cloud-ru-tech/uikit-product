@@ -53,6 +53,17 @@ Hero blocks for Site
 | buttons | `[Omit<ButtonFilledProps, "size" \| "appearance">, Omit<ButtonPromoOutlineProps, "size" \| "appearance">?]` | - | Массив с настройками кнопок ButtonFilled |
 | className | `string` | - | CSS - класснейм |
 | navbar | `Pick<SiteNavbarProps, "items" \| "active" \| "onItemClick" \| "topPosition">` | - | Navbar |
+## HeroSlider
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| items* | `HeroSlideProps[]` | - | Слайды карусели |
+| id | `string` | - |  |
+| className | `string` | - | CSS-класс |
+| pagination | `boolean` | true | Использовать пагинацию для переключения страниц |
+| state | `{ page: number; onChange(page: number): void; }` | - | Управление состоянием извне |
+| autoSwipe | `number` | - | Автоматическое переключение слайдов в секундах |
 
 
 [//]: DOCUMENTATION_SECTION_END
