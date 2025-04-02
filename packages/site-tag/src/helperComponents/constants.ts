@@ -6,7 +6,6 @@ export const APPEARANCE = {
   Violet: 'violet',
   Blue: 'blue',
   Green: 'green',
-  Yellow: 'yellow',
   Orange: 'orange',
   Red: 'red',
   Pink: 'pink',
@@ -22,5 +21,4 @@ export const APPEARANCE_TO_COLOR_MAP: Record<ValueOf<typeof APPEARANCE>, NonNull
   [APPEARANCE.Pink]: 'pink',
   [APPEARANCE.Red]: 'red',
   [APPEARANCE.Violet]: 'violet',
-  [APPEARANCE.Yellow]: 'yellow',
 } as const;
