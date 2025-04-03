@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2025-04-03)
+
+
+### Features
+
+* **PDS-2079:** remove TagPredefined and usage ([d0f8d2f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0f8d2f590c09da1bf113b89372d0642ccf8b20d))
+
+
+
+
+
 ## 0.9.2 (2025-04-01)
 
 ### Only dependencies have been changed

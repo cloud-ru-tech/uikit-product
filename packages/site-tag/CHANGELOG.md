@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-04-03)
+
+
+### Bug Fixes
+
+* **PDS-2079:** remove yellow appearance from TagSpecial in site-tag ([ae9b220](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ae9b2206d9f76891b263bea098fcf0a6096d8050))
+
+
+### Features
+
+* **PDS-2079:** remove TagPredefined and usage ([d0f8d2f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d0f8d2f590c09da1bf113b89372d0642ccf8b20d))
+
+
+
+
+
 ## 0.1.2 (2025-04-01)
 
 
