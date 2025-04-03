@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.16.0 (2025-04-03)
+
+
+### Features
+
+* **ONB-3742:** new product vdi ([20c6f79](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/20c6f79e58c0bd1f6b06045f1697bebb644f370f))
+
+
+
+
+
 # 0.15.0 (2025-04-03)
 
 
