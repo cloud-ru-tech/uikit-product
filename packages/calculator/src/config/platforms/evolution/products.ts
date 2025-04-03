@@ -6,6 +6,7 @@ import {
   EvolutionComputeSVG,
   ManagedKubernetesSVG,
   ManagedPostgreSqlSVG,
+  MlInferenceSVG,
   S3StorageSVG,
 } from '@sbercloud/uikit-product-icons';
 
@@ -21,6 +22,7 @@ import {
   EVOLUTION_CONTAINER_APPS_CONFIG,
   EVOLUTION_CONTAINER_APPS_FREE_TIER_CONFIG,
   EVOLUTION_KUBERNETES_FORM_CONFIG,
+  EVOLUTION_ML_INFERENCE_FORM_CONFIG,
   EVOLUTION_POSTGRE_SQL_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FREE_TIER_FORM_CONFIG,
@@ -155,5 +157,17 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     productQuantityValues: {
       max: 3,
     },
+  },
+  [EVOLUTION_PRODUCT.EvolutionMlInference]: {
+    id: EVOLUTION_PRODUCT.EvolutionMlInference,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution ML Inference',
+    caption:
+      'Cервис для запуска и развертывания моделей машинного (ML) и глубокого обучения (DL) из библиотеки Hugging Face на облачных GPU',
+    icon: MlInferenceSVG,
+    formConfig: EVOLUTION_ML_INFERENCE_FORM_CONFIG,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionMlInference,
+    enableChangeProductQuantity: true,
+    enableConnectToConsole: true,
   },
 };

@@ -9,3 +9,4 @@ export * from './EvolutionCloudServerGpu';
 export * from './EvolutionContainerApps';
 export * from './EvolutionContainerAppsFreeTier';
 export * from './EvolutionArenadataDb';
+export * from './EvolutionMlInference';

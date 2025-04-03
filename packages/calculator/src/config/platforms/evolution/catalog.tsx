@@ -83,5 +83,11 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       dataTestId: 'database',
       visibleProducts: [EVOLUTION_PRODUCT.EvolutionManagedPostgreSQL, EVOLUTION_PRODUCT.EvolutionArenadataDb],
     },
+    {
+      id: CATEGORY.ML,
+      label: 'ML/AI Инструменты',
+      dataTestId: 'ml',
+      visibleProducts: [EVOLUTION_PRODUCT.EvolutionMlInference],
+    },
   ],
 };

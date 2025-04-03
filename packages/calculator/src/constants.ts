@@ -27,8 +27,30 @@ export const CATEGORY = {
   Database: 'database',
   Development: 'development',
   Analytic: 'analytic',
+  ML: 'ml-ai-tools',
 } as const;
 
 export const DEFAULT_CATEGORY = CATEGORY.Popular;
 
 export const CALCULATOR_DATA_TEST_ID = 'calculator';
+
+export enum WorkingHoursSpecification {
+  Hour = 'hour',
+  Day = 'day',
+  Month = 'month',
+}
+
+export const WORKING_HOURS_ITEMS = [
+  {
+    value: WorkingHoursSpecification.Month,
+    label: 'Месяц',
+  },
+  {
+    value: WorkingHoursSpecification.Day,
+    label: 'День',
+  },
+  {
+    value: WorkingHoursSpecification.Hour,
+    label: 'Час',
+  },
+];

@@ -1,5 +1,6 @@
 import { CONTROL, FormConfig } from '../../../../components';
-import { generateInstanceConfigItems } from '../../../utils';
+import { WORKING_HOURS_ITEMS, WorkingHoursSpecification } from '../../../../constants';
+import { generateInstanceConfigItems, getMaxWorkingHoursAmount, getNumeralWord } from '../../../utils';
 
 const configItems = generateInstanceConfigItems(
   [
@@ -10,50 +11,6 @@ const configItems = generateInstanceConfigItems(
   ],
   ['vCPU', 'МБ RAM'],
 );
-
-enum WorkingHoursSpecification {
-  Hour = 'hour',
-  Day = 'day',
-  Month = 'month',
-}
-
-const workingHoursItems = [
-  {
-    value: WorkingHoursSpecification.Month,
-    label: 'Месяц',
-  },
-  {
-    value: WorkingHoursSpecification.Day,
-    label: 'День',
-  },
-  {
-    value: WorkingHoursSpecification.Hour,
-    label: 'Час',
-  },
-];
-
-const getNumeralWord = (value: number, words: string[]) => {
-  const newValue = Math.abs(value) % 100;
-  const num = value % 10;
-
-  if (newValue > 10 && newValue < 20) return words[2];
-  if (num > 1 && num < 5) return words[1];
-  if (num === 1) return words[0];
-  return words[2];
-};
-
-const getMaxWorkingHoursAmount = (period: WorkingHoursSpecification) => {
-  switch (period) {
-    case WorkingHoursSpecification.Hour:
-      return 1;
-    case WorkingHoursSpecification.Day:
-      return 24;
-    case WorkingHoursSpecification.Month:
-      return 744;
-    default:
-      return 1;
-  }
-};
 
 export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
   ui: ['serviceAlert', ['config'], ['workingHours', 'workingHoursSpecification']],
@@ -88,7 +45,11 @@ export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
       },
       watchedControls: { period: 'workingHoursSpecification', workingHours: 'workingHours' },
       relateFn: ({ period, workingHours }) => {
-        const maxWorkingHours = getMaxWorkingHoursAmount(period);
+        const maxWorkingHours = getMaxWorkingHoursAmount(period, {
+          hour: 1,
+          day: 24,
+          month: 744,
+        });
         const isStepperDisabled = maxWorkingHours === 1;
 
         return {
@@ -106,7 +67,7 @@ export const EVOLUTION_CONTAINER_APPS_CONFIG: FormConfig = {
       type: CONTROL.SelectSingle,
       accessorKey: 'workingHoursSpecification',
       defaultValue: WorkingHoursSpecification.Hour,
-      items: workingHoursItems,
+      items: WORKING_HOURS_ITEMS,
       uiProps: {
         showClearButton: false,
         searchable: false,
