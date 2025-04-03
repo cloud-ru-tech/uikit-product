@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.15.0 (2025-04-03)
+
+
+### Features
+
+* **ONB-3656:** new product arenadata evl ([d00afeb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d00afebcb3591a0ef46b817b34f3643756656e21))
+
+
+
+
+
 # 0.14.0 (2025-04-02)
 
 
