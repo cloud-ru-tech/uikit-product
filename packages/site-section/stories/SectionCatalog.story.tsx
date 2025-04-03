@@ -1,6 +1,7 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { EvolutionComputeSVG, PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
 import { toaster } from '@snack-uikit/toaster';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -25,14 +26,19 @@ const Template: StoryFn<StoryProps> = ({ id, layoutType, ...rest }) => (
   </div>
 );
 
+const TAGS: TagSpecialProps[] = [
+  { text: 'legal', appearance: 'neutral' },
+  { text: 'preview', appearance: 'blue' },
+];
+
 const onClick = (item: string) => () => toaster.userAction.success({ label: `"${item}" clicked!` });
 
-const getProducts = (products: string[]) =>
+const getProducts = (products: string[]): SectionCatalogProps['categories'][number]['items'] =>
   products.map(title => ({
     title,
     description: 'Описание',
     icon: PlaceholderSVG,
-    tags: [{ type: 'legal' as const }, { type: 'preview' as const }],
+    tags: TAGS,
     onClick: onClick(title),
     href: '#',
   }));
@@ -53,7 +59,7 @@ export const catalog: StoryObj<StoryProps> = {
             title: 'Evolution Managed Kubernetes',
             description: 'Управление контейнерными приложениями в кластере Kubernetes',
             icon: { src: 'https://cdn.cloud.ru/backend/products/evo-compute/icon.svg' },
-            tags: [{ type: 'legal' }, { type: 'preview' }],
+            tags: TAGS,
             onClick: onClick('Evolution Managed Kubernetes'),
             href: '#',
           },
@@ -61,7 +67,7 @@ export const catalog: StoryObj<StoryProps> = {
             title: 'Evolution Compute',
             description: 'Виртуальные машины для развертывания сервисов и приложений',
             icon: EvolutionComputeSVG,
-            tags: [{ type: 'preview' }],
+            tags: [TAGS[0]],
             onClick: onClick('Evolution Compute'),
             href: '#',
           },

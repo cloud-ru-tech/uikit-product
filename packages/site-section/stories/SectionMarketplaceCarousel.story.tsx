@@ -34,7 +34,8 @@ const createSampleCard = (index: number, layoutType: LayoutType): CardMarketplac
   },
   layoutType,
   tag: {
-    type: 'free',
+    text: 'free',
+    appearance: 'blue',
   },
 });
 

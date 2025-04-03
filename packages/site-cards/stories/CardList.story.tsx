@@ -1,8 +1,6 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
-import { QuestionSVG } from '@snack-uikit/icons';
-import { Tooltip } from '@snack-uikit/tooltip';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -31,11 +29,7 @@ export const cardList: StoryObj<CardListProps> = {
       {
         text: 'Advanced',
         appearance: 'neutral',
-        afterContent: (
-          <Tooltip tip={'tip'}>
-            <QuestionSVG />
-          </Tooltip>
-        ),
+        tip: 'tip',
       },
     ],
     img: 'https://cdn.cloud.ru/backend/webinars-images/kuber4.png',

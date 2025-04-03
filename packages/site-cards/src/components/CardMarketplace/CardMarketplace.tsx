@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { AnchorHTMLAttributes, MouseEvent } from 'react';
 
-import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
+import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Card } from '@snack-uikit/card';
 import { TruncateString } from '@snack-uikit/truncate-string';
@@ -10,9 +10,6 @@ import { Typography } from '@snack-uikit/typography';
 import { useCardInteractions } from '../../hooks';
 import { getTypographySize } from '../utils';
 import styles from './styles.module.scss';
-
-type GetPromoTagProps<T> = T extends TagPredefinedProps & { variant: 'promo' } ? T : never;
-type TagProps = Omit<GetPromoTagProps<TagPredefinedProps>, 'variant' | 'size'>;
 
 export type CardMarketplaceProps = WithSupportProps<
   WithLayoutType<{
@@ -32,7 +29,7 @@ export type CardMarketplaceProps = WithSupportProps<
       alt?: string;
     };
     /** Тег */
-    tag?: TagProps;
+    tag?: Omit<TagSpecialProps, 'className'>;
     /**
      * Является ли деактивированным
      * @default false
@@ -108,9 +105,7 @@ export function CardMarketplace({
           )}
         </div>
 
-        {tag && (
-          <TagPredefined data-test-id={`${dataTestId}__tag`} className={styles.tag} type={tag.type} variant='promo' />
-        )}
+        {tag && <TagSpecial data-test-id={`${dataTestId}__tag`} className={styles.tag} {...tag} />}
       </div>
     </Card>
   );

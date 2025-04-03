@@ -5,34 +5,35 @@ import { Fragment } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { TagPredefined } from '../src';
-import { FORMAT_TYPE, TagFormatProps } from '../src/components/TagPredefined/helpers';
+import { TagSpecial, TagSpecialProps } from '../src';
+import { Appearance } from '../src/types';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Tag Predefined/Format',
-  component: TagPredefined,
+  title: 'Site/Tag Special',
+  component: TagSpecial,
 };
 
 export default meta;
 
-const Template: StoryFn<TagFormatProps> = ({ ...args }) => {
-  const types = Object.values(FORMAT_TYPE);
+const APPEARANCE: Appearance[] = ['neutral', 'blue', 'green', 'orange', 'violet', 'pink', 'red'];
+
+const Template: StoryFn<TagSpecialProps> = ({ ...args }) => {
   const headerCellClassnames = cn(styles.cell, styles.headerCell);
 
   return (
     <>
       <div className={styles.wrapper}>
         Controlled:
-        <TagPredefined {...args} variant='format' />
+        <TagSpecial {...args} />
       </div>
 
       <div className={styles.table} style={{ '--columns': 2 }}>
-        {types.map(type => (
-          <Fragment key={type}>
-            <div className={headerCellClassnames}>{type}</div>
-            <div key={type} className={styles.cell}>
-              <TagPredefined variant='format' type={type} />
+        {APPEARANCE.map(appearance => (
+          <Fragment key={appearance}>
+            <div className={headerCellClassnames}>{appearance}</div>
+            <div className={styles.cell}>
+              <TagSpecial appearance={appearance} text={appearance} />
             </div>
           </Fragment>
         ))}
@@ -41,21 +42,14 @@ const Template: StoryFn<TagFormatProps> = ({ ...args }) => {
   );
 };
 
-export const format: StoryObj<TagFormatProps> = {
+export const tagSpecial: StoryObj<TagSpecialProps> = {
   render: Template,
   args: {
-    type: 'online',
+    text: 'Free',
+    appearance: 'blue',
+    tip: 'tooltip text',
   },
-  argTypes: {
-    type: {
-      options: Object.values(FORMAT_TYPE),
-    },
-    variant: {
-      table: {
-        disable: true,
-      },
-    },
-  },
+  argTypes: {},
   parameters: {
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],
@@ -64,7 +58,7 @@ export const format: StoryObj<TagFormatProps> = {
     design: {
       name: 'Figma',
       type: 'figma',
-      url: 'https://www.figma.com/design/pCLrU1Wg1VsoMQGLmH1J8t/%5BLIB%5D%5BSITE%5D-Product-UI-Kit?node-id=3629-93713&m=dev',
+      url: 'https://www.figma.com/design/pCLrU1Wg1VsoMQGLmH1J8t/%5BLIB%5D%5BSITE%5D-Product-UI-Kit?node-id=3221-25743&m=dev',
     },
   },
 };

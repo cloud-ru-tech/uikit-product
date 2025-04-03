@@ -1,6 +1,6 @@
 import { AnchorHTMLAttributes } from 'react';
 
-import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
+import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Card, CardProps } from '@snack-uikit/card';
 import { TruncateString } from '@snack-uikit/truncate-string';
@@ -9,9 +9,6 @@ import { Icon, IconProps } from '../../helperComponents/Icon';
 import { useCardInteractions } from '../../hooks';
 import { MapLayoutToTitleTypography } from './constants';
 import styles from './styles.module.scss';
-
-type GetPromoTagProps<T> = T extends TagPredefinedProps & { variant: 'promo' } ? T : never;
-type TagProps = Omit<GetPromoTagProps<TagPredefinedProps>, 'variant' | 'size'>;
 
 export type CardProductProps = WithSupportProps<
   WithLayoutType<{
@@ -22,7 +19,7 @@ export type CardProductProps = WithSupportProps<
     target?: AnchorHTMLAttributes<HTMLAnchorElement>['target'];
     disabled?: boolean;
     onClick?: CardProps['onClick'];
-    tags?: TagProps[];
+    tags?: TagSpecialProps[];
     className?: string;
     outline?: boolean;
   }>
@@ -95,13 +92,8 @@ export function CardProduct({
 
           {tags && tags.length > 0 && (
             <div className={styles.tagList}>
-              {tags.map(({ type }, index) => (
-                <TagPredefined
-                  data-test-id={`${dataTestId}__tag-${index + 1}`}
-                  type={type}
-                  variant='promo'
-                  key={index}
-                />
+              {tags.map((tag, index) => (
+                <TagSpecial data-test-id={`${dataTestId}__tag-${index + 1}`} key={index} {...tag} />
               ))}
             </div>
           )}

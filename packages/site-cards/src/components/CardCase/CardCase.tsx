@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { AnchorHTMLAttributes, MouseEvent } from 'react';
 
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
+import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Card } from '@snack-uikit/card';
 import { Typography } from '@snack-uikit/typography';
@@ -10,9 +10,6 @@ import { Typography } from '@snack-uikit/typography';
 import { useCardInteractions } from '../../hooks';
 import { getTypographySize } from '../utils';
 import styles from './styles.module.scss';
-
-type GetPromoTagProps<T> = T extends TagPredefinedProps & { variant: 'industry' } ? T : never;
-type TagProps = Omit<GetPromoTagProps<TagPredefinedProps>, 'variant' | 'size'>;
 
 export type CardCaseProps = WithSupportProps<
   WithLayoutType<{
@@ -32,7 +29,7 @@ export type CardCaseProps = WithSupportProps<
       alt: string;
     };
     /** Тег */
-    tags?: TagProps[];
+    tags?: Omit<TagSpecialProps, 'className'>[];
     /**
      * Является ли деактивированным
      * @default false
@@ -107,13 +104,8 @@ export function CardCase({
 
             {tags && tags.length > 0 && (
               <div className={styles.tagRow}>
-                {tags.map(({ type }, index) => (
-                  <TagPredefined
-                    data-test-id={`${dataTestId}__tag-${type}`}
-                    type={type}
-                    variant='industry'
-                    key={index}
-                  />
+                {tags.map((tag, index) => (
+                  <TagSpecial data-test-id={`${dataTestId}__tag`} {...tag} key={index} />
                 ))}
               </div>
             )}

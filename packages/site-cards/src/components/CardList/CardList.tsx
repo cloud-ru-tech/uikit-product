@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import { AnchorHTMLAttributes, MouseEvent } from 'react';
 
+import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
-import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
 import { TruncateString } from '@snack-uikit/truncate-string';
 import { Typography } from '@snack-uikit/typography';
 
@@ -14,7 +14,7 @@ export type CardListProps = WithSupportProps<
     /** Изображение */
     img: string;
     /** Теги */
-    tags: Omit<PromoTagProps, 'size' | 'className'>[];
+    tags: Omit<TagSpecialProps, 'size' | 'className'>[];
     /** Ссылка */
     href: string;
     /** HTML-аттрибут target */
@@ -67,7 +67,7 @@ export function CardList({
       <div className={styles.content}>
         <div className={styles.tagRow}>
           {tags.map((tag, idx) => (
-            <PromoTag {...tag} key={idx} size='xs' color='decor' />
+            <TagSpecial {...tag} key={idx} />
           ))}
         </div>
 

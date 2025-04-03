@@ -38,8 +38,8 @@ const CARD_INFO_ITEMS = Array.from({ length: 8 }, (_, i) => ({
   icon: PlaceholderSVG,
   href: '#',
   tag: {
-    type: 'free',
-    variant: 'promo',
+    text: 'free',
+    appearance: 'blue',
   } as CardInfoProps['tag'],
 }));
 

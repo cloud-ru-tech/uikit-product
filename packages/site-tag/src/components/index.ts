@@ -1,1 +1,1 @@
-export * from './TagPredefined';
+export * from './TagSpecial';

@@ -26,7 +26,10 @@ export const cardCase: StoryObj<StoryProps> = {
     description:
       'Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample Description Sample ',
     showTags: true,
-    tags: [{ type: 'food-industry' }, { type: 'secure' }],
+    tags: [
+      { text: 'free', appearance: 'blue' },
+      { text: 'secure', appearance: 'orange' },
+    ],
     logo: {
       src: logoSrc,
       alt: 'dodo-logo',

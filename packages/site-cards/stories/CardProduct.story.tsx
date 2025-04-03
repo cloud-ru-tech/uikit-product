@@ -13,10 +13,13 @@ const meta: Meta = {
   component: CardProduct,
 };
 
-const tagsValues = {
+const tagsValues: Record<number, CardProductProps['tags']> = {
   0: undefined,
-  1: [{ type: 'free' }],
-  2: [{ type: 'free' }, { type: 'available' }],
+  1: [{ text: 'free', appearance: 'blue' }],
+  2: [
+    { text: 'free', appearance: 'blue' },
+    { text: 'available', appearance: 'neutral' },
+  ],
 };
 
 type StoryProps = CardProductProps & CommonCardStoryProps;
@@ -35,7 +38,7 @@ export const cardProduct: StoryObj<StoryProps> = {
     href: '#',
     'data-test-id': 'card-product',
     layoutType: LAYOUT_TYPE.Desktop,
-    tags: [{ type: 'free' }, { type: 'available' }],
+    tags: tagsValues['2'],
     disabled: false,
     ...COMMON_CARD_STORY_ARGS,
   },

@@ -2,17 +2,15 @@ import cn from 'classnames';
 import { AnchorHTMLAttributes, MouseEvent } from 'react';
 
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { TagPredefined, TagPredefinedProps } from '@sbercloud/uikit-product-site-tag';
+import { TagSpecial, TagSpecialProps } from '@sbercloud/uikit-product-site-tag';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Card } from '@snack-uikit/card';
-import { PromoTag, PromoTagProps } from '@snack-uikit/promo-tag';
 import { Typography } from '@snack-uikit/typography';
 
 import { Icon, IconProps } from '../../helperComponents/Icon';
 import { useCardInteractions } from '../../hooks';
 import { getTypographySize } from '../utils';
 import styles from './styles.module.scss';
-import { BetterOmit } from './utilsTypes';
 
 export type CardInfoProps = WithSupportProps<
   WithLayoutType<{
@@ -29,7 +27,7 @@ export type CardInfoProps = WithSupportProps<
     /** Слот под иконку/кастомную ноду */
     icon?: IconProps['icon'];
     /** Тег */
-    tag?: BetterOmit<TagPredefinedProps, 'size'> | Pick<PromoTagProps, 'text' | 'appearance'>;
+    tag?: Pick<TagSpecialProps, 'text' | 'appearance'>;
     /**
      * Является ли деактивированным
      * @default false
@@ -75,12 +73,7 @@ export function CardInfo({
       data-test-id={dataTestId}
     >
       <div data-layout-type={layoutType} className={styles.wrapper}>
-        {tag &&
-          ('variant' in tag ? (
-            <TagPredefined {...tag} className={styles.tag} data-test-id={`${dataTestId}__tag`} />
-          ) : (
-            <PromoTag {...tag} size='s' className={styles.tag} data-test-id={`${dataTestId}__tag`} />
-          ))}
+        {tag && <TagSpecial {...tag} className={styles.tag} data-test-id={`${dataTestId}__tag`} />}
 
         {icon && <Icon size='m' data-test-id={`${dataTestId}__icon`} icon={icon} />}
 

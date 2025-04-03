@@ -1,14 +1,13 @@
 import { ReactNode } from 'react';
 
 import { QuestionTooltip } from '@snack-uikit/tooltip';
-import { ValueOf } from '@snack-uikit/utils';
 
-import { APPEARANCE } from '../constants';
+import { Appearance } from '../../types';
 import styles from './styles.module.scss';
 
 export type TooltipProps = {
   tip?: ReactNode;
-  appearance: ValueOf<typeof APPEARANCE>;
+  appearance: Appearance;
 };
 
 export function Tooltip({ tip, appearance }: TooltipProps) {

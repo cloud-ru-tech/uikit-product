@@ -21,27 +21,15 @@ const Template: StoryFn<StoryProps> = ({ iconMode, storyIcon, imgSrc, ...args })
   return <CardInfo {...args} icon={cardIcon} onClick={undefined} />;
 };
 
-const TAGS: Record<string, NonNullable<CardInfoProps['tag']>> = {
-  tagCustom: {
-    text: 'CustomPromoTag',
-    appearance: 'orange',
-  },
-  tagPredefinedPromo: {
-    variant: 'promo',
-    type: 'free',
-  },
-  tagPredefinedFormat: {
-    variant: 'format',
-    type: 'online',
-  },
-};
-
 export const cardInfo: StoryObj<StoryProps> = {
   render: Template,
   args: {
     title: 'Title',
     description: 'description',
-    tag: TAGS.tagPredefinedPromo,
+    tag: {
+      text: 'free',
+      appearance: 'blue',
+    },
     href: '#',
     target: '_blank',
     'data-test-id': 'card-info',
@@ -50,14 +38,6 @@ export const cardInfo: StoryObj<StoryProps> = {
   },
   argTypes: {
     ...COMMON_CARD_STORY_ARG_TYPES,
-    tag: {
-      control: 'select',
-      options: ['Unset', ...Object.keys(TAGS)],
-      mapping: {
-        Unset: undefined,
-        ...TAGS,
-      },
-    },
     target: {
       control: 'select',
       options: ['_self', '_blank', '_parent', '_top'],

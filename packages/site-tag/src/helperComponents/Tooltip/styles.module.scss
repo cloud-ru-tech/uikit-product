@@ -1,6 +1,6 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
 
-$colors: 'neutral', 'violet', 'blue', 'green', 'yellow', 'orange', 'red', 'pink';
+$colors: 'neutral', 'violet', 'blue', 'green', 'orange', 'red', 'pink';
 
 .tooltip {
   @each $color in $colors {
@@ -14,20 +14,11 @@ $colors: 'neutral', 'violet', 'blue', 'green', 'yellow', 'orange', 'red', 'pink'
           color: ste.$sys-neutral-text-support;
         }
       } @else {
-        @if $color == 'yellow' {
+        color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-light');
+
+        &:hover,
+        &:focus-visible {
           color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-support');
-
-          &:hover,
-          &:focus-visible {
-            color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-light');
-          }
-        } @else {
-          color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-light');
-
-          &:hover,
-          &:focus-visible {
-            color: ste.simple-var(ste.$theme-variables, 'sys', $color, 'text-support');
-          }
         }
 
         &:active,
