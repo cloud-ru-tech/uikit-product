@@ -8,4 +8,4 @@ export * from './EvolutionStorageS3FreeTier';
 export * from './EvolutionCloudServerGpu';
 export * from './EvolutionContainerApps';
 export * from './EvolutionContainerAppsFreeTier';
-export * from './EvolutionArenadataDB';
+export * from './EvolutionArenadataDb';

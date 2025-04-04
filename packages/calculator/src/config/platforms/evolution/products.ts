@@ -142,14 +142,14 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     disabledProductQuantity: true,
     enableConnectToConsole: true,
   },
-  [EVOLUTION_PRODUCT.EvolutionArenadataDB]: {
-    id: EVOLUTION_PRODUCT.EvolutionArenadataDB,
+  [EVOLUTION_PRODUCT.EvolutionArenadataDb]: {
+    id: EVOLUTION_PRODUCT.EvolutionArenadataDb,
     platform: PLATFORM.Evolution,
     label: 'Evolution Managed Arenadata DB',
     caption: 'Управляемые инстансы базы данных Greenplum',
     icon: ArenadataDbSVG,
     formConfig: EVOLUTION_ARENADATA_DB_FORM_CONFIG,
-    dataTestId: EVOLUTION_PRODUCT.EvolutionArenadataDB,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionArenadataDb,
     enableChangeProductQuantity: true,
     enableConnectToConsole: false,
     productQuantityValues: {
