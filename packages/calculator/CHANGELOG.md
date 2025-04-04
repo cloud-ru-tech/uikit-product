@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.16.1 (2025-04-04)
+
+
+### Bug Fixes
+
+* **ONB-3564:** change button color ([9fc9941](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9fc9941f276c6b8a8c46b46181a144d9ace7dee1))
+
+
+
+
+
 # 0.16.0 (2025-04-03)
 
 
