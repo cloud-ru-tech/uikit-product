@@ -10,7 +10,7 @@ import { Appearance } from '../src/types';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Site/Tag Special',
+  title: 'Site/Tag/Tag Special',
   component: TagSpecial,
 };
 
