@@ -2,10 +2,10 @@ import cn from 'classnames';
 import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react';
 
 import { ButtonPromoProps } from '@sbercloud/uikit-product-button-predefined';
+import { EridProps } from '@sbercloud/uikit-product-site-tag';
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { AppearanceType, WithColor, WithoutColor } from '../BannerCommon/types';
-import { EridProps } from '../Erid';
 import styles from './styles.module.scss';
 
 type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;

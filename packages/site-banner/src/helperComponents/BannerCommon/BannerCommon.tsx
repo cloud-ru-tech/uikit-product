@@ -8,11 +8,11 @@ import {
   ButtonPromoProps,
 } from '@sbercloud/uikit-product-button-predefined';
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
+import { Erid, EridProps } from '@sbercloud/uikit-product-site-tag';
 import { WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import { ColorWrapper, ColorWrapperProps } from '../ColorWrapper';
-import { Erid, EridProps } from '../Erid';
 import styles from './styles.module.scss';
 import { getBlockTitleProps } from './util';
 

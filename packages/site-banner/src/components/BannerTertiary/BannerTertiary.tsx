@@ -2,10 +2,10 @@ import cn from 'classnames';
 
 import { ButtonPromo, ButtonPromoProps } from '@sbercloud/uikit-product-button-predefined';
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
+import { Erid, EridProps } from '@sbercloud/uikit-product-site-tag';
 import { LAYOUT_TYPE, LayoutType, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { Typography, TypographyProps } from '@snack-uikit/typography';
 
-import { Erid, EridProps } from '../../helperComponents';
 import { ColorWrapper, ColorWrapperProps } from '../../helperComponents/ColorWrapper';
 import styles from './styles.module.scss';
 

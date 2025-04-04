@@ -1,14 +1,13 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
 import { Layout } from '@sbercloud/uikit-product-site-layout';
+import { APPEARANCE_ERID, EridProps } from '@sbercloud/uikit-product-site-tag';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { BannerTertiary, BannerTertiaryProps } from '../src';
-import { EridProps } from '../src/helperComponents';
 import { Color } from '../src/helperComponents/BannerCommon/constants';
-import { APPEARANCE_ERID } from '../src/helperComponents/Erid/constants';
 import rectangle from './assets/rectangle.webp';
 
 const meta: Meta = {
