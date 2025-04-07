@@ -45,7 +45,7 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
-| selectProps* | `Pick<FieldSelectProps, "value" \| "onChange"> & FieldSelectProps` | - | Пропсы прокидываемые в селект |
+| selectProps* | `FieldSelectProps` | - | Пропсы прокидываемые в селект |
 | submitHandler* | `() => Promise<string \| void>` | - | Коллбек создания новой опции, при успешном выполнении возвращает value новой опции |
 | entityName* | `EntityName` | - | Тип объекта для создания новой опции (в единственном числе вин.падеже для кнопки Создать <entityName> и множественном числе) |
 | createLayoutProps* | `CreateLayoutModalProps \| CreateLayoutDrawerProps` | - | Пропсы передаваемые в модалку или дровер создания новой опции |

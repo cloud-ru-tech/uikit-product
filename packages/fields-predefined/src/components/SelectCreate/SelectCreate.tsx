@@ -5,12 +5,12 @@ import { useLocale } from '@sbercloud/uikit-product-locale';
 import { AdaptiveDrawer, AdaptiveModal, DrawerProps, ModalProps } from '@sbercloud/uikit-product-mobile-modal';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
-import { FieldSelect, FieldSelectProps } from '@snack-uikit/fields';
+import { FieldSelect } from '@snack-uikit/fields';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 
 import { useOpen } from '../../hooks';
 import { SelectFooter } from './SelectFooter';
-import { EntityName, LayoutProps } from './types';
+import { EntityName, FieldSelectProps, LayoutProps } from './types';
 import { useSelectDataStates } from './useSelectDataStates';
 
 export type SelectCreateProps = WithSupportProps<
@@ -20,8 +20,7 @@ export type SelectCreateProps = WithSupportProps<
     /** Коллбек создания новой опции, при успешном выполнении возвращает value новой опции */
     submitHandler: () => Promise<string | void>;
     /** Пропсы прокидываемые в селект */
-    selectProps: Pick<FieldSelectProps, 'value' | 'onChange'> &
-      Exclude<FieldSelectProps, 'footer' | 'noResultState' | 'noDataState' | 'errorDataState'>;
+    selectProps: FieldSelectProps;
     /** Коллбек рефетча запроса на получение списка опций в случае ошибки (при передаче dataError в selectProps). */
     onRefetch?: VoidFunction;
     className?: string;

@@ -1,8 +1,11 @@
+import { ReactNode } from 'react';
+
 import { DrawerProps, ModalProps } from '@sbercloud/uikit-product-mobile-modal';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+import { FieldSelectMultipleProps, FieldSelectSingleProps } from '@snack-uikit/fields';
 
 type CommonModalDrawerProps = 'open' | 'onClose' | 'approveButton' | 'cancelButton';
-type CreateLayoutModalProps = WithLayoutType<Omit<ModalProps, CommonModalDrawerProps>>;
+type CreateLayoutModalProps = WithLayoutType<Omit<ModalProps, CommonModalDrawerProps> & { content: ReactNode }>;
 type CreateLayoutDrawerProps = WithLayoutType<Omit<DrawerProps, CommonModalDrawerProps>>;
 
 export type LayoutProps =
@@ -21,3 +24,13 @@ export type EntityName = {
   plural: string;
   single: string;
 };
+
+export type OmittedSelectProps = 'footer' | 'noResultState' | 'noDataState' | 'errorDataState';
+
+export type FieldSelectProps =
+  | (Omit<FieldSelectSingleProps, OmittedSelectProps> & {
+      selection?: 'single';
+    })
+  | (Omit<FieldSelectMultipleProps, OmittedSelectProps> & {
+      selection: 'multiple';
+    });
