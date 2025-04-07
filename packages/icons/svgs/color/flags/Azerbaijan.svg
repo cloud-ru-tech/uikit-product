@@ -1,19 +1,20 @@
 <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1202_3115)">
-<g clip-path="url(#clip1_1202_3115)">
-<path d="M21.7143 0H2.28571C1.02335 0 0 1.07452 0 2.4V15.6C0 16.9255 1.02335 18 2.28571 18H21.7143C22.9767 18 24 16.9255 24 15.6V2.4C24 1.07452 22.9767 0 21.7143 0Z" fill="#F93939"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 12H24V18H0V12Z" fill="#249F58"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M13.7142 8.40001H14.8571V9.60001H13.7142V8.40001Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M14.2856 10.8C13.7645 11.5284 12.9348 12 11.9999 12C10.4228 12 9.14279 10.656 9.14279 9C9.14279 7.344 10.4228 6 11.9999 6C12.9348 6 13.7645 6.4716 14.2856 7.2H12.5714C11.6251 7.2 10.8571 8.0064 10.8571 9C10.8571 9.9936 11.6251 10.8 12.5714 10.8H14.2856Z" fill="white"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H24V6H0V0Z" fill="#3ECBF8"/>
+<g clip-path="url(#clip0_1002_21)">
+<g clip-path="url(#clip1_1002_21)">
+<path d="M0 0H24V18H0V0Z" fill="#3F9C35"/>
+<path d="M0 0H24V12H0V0Z" fill="#ED2939"/>
+<path d="M0 0H24V6H0V0Z" fill="#00B9E4"/>
+<path d="M11.3968 11.7C12.8879 11.7 14.0968 10.4912 14.0968 9.00005C14.0968 7.50888 12.8879 6.30005 11.3968 6.30005C9.90561 6.30005 8.69678 7.50888 8.69678 9.00005C8.69678 10.4912 9.90561 11.7 11.3968 11.7Z" fill="white"/>
+<path d="M11.9956 11.25C13.2382 11.25 14.2456 10.2426 14.2456 9C14.2456 7.75736 13.2382 6.75 11.9956 6.75C10.753 6.75 9.74561 7.75736 9.74561 9C9.74561 10.2426 10.753 11.25 11.9956 11.25Z" fill="#ED2939"/>
+<path d="M14.3965 7.5L14.6852 8.30625L15.4577 7.93875L15.0902 8.715L15.8965 9L15.0902 9.28875L15.4577 10.0612L14.6852 9.69375L14.3965 10.5L14.1077 9.69375L13.3352 10.0612L13.7027 9.28875L12.8965 9L13.7027 8.71125L13.3352 7.93875L14.1077 8.30625L14.3965 7.5Z" fill="white"/>
 </g>
 </g>
-<rect x="0.25" y="0.25" width="23.5" height="17.5" rx="1.75" stroke="#DFE2EC" stroke-width="0.5" fill-opacity="0" style="fill-opacity:0"/>
+<rect x="0.25" y="0.25" width="23.5" height="17.5" rx="1.75" stroke="#DDE0EA" stroke-width="0.5" style="fill-opacity:0"/>
 <defs>
-<clipPath id="clip0_1202_3115">
+<clipPath id="clip0_1002_21">
 <rect width="24" height="18" rx="2" fill="white"/>
 </clipPath>
-<clipPath id="clip1_1202_3115">
+<clipPath id="clip1_1002_21">
 <rect width="24" height="18" fill="white"/>
 </clipPath>
 </defs>
