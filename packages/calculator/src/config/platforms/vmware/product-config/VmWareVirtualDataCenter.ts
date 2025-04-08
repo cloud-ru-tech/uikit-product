@@ -85,7 +85,7 @@ export const VIRTUAL_DATA_CENTER_FORM_CONFIG: FormConfig = {
       decoratorProps: {
         label: 'Pay As You Allocate',
         labelTooltip: payAsYouAllocateTooltip,
-        tooltipPlacement: 'right',
+        labelTooltipPlacement: 'right',
       },
       accessorKey: 'instancePaya',
       defaultValue: {

@@ -18,7 +18,7 @@ export type SwitchRowProps = {
   loading?: boolean;
   onChange(checked: boolean): void;
   labelTooltip?: ReactNode;
-  tooltipPlacement?: TooltipPlacement;
+  labelTooltipPlacement?: TooltipPlacement;
   disabledToggleTip?: ReactNode;
   className?: string;
   disableTitleTruncate?: boolean;
@@ -32,7 +32,7 @@ export function SwitchRow({
   disabled,
   onChange,
   labelTooltip,
-  tooltipPlacement,
+  labelTooltipPlacement,
   className,
   disabledToggleTip,
   loading,
@@ -77,7 +77,7 @@ export function SwitchRow({
       <div className={styles.headline}>
         <div className={styles.titleLayout}>
           <div className={styles.titleWrapper} data-test-id={parseKeyToDataTest('toggle', 'title')}>
-            <ObjectDecorator label={label} labelTooltip={labelTooltip} tooltipPlacement={tooltipPlacement} />
+            <ObjectDecorator label={label} labelTooltip={labelTooltip} labelTooltipPlacement={labelTooltipPlacement} />
           </div>
         </div>
 

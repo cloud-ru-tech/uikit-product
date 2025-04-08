@@ -85,7 +85,7 @@ const nameFlavourItems = [
 ];
 
 export const EVOLUTION_BARE_METAL_FORM_CONFIG: FormConfig = {
-  ui: [['osName', 'osVersion'], 'nameFlavour', 'eipAlert', 'eip'],
+  ui: [['osName', 'osVersion'], 'nameFlavour', ['networkDisk'], 'eipAlert', 'eip'],
   controls: {
     osName: {
       type: CONTROL.SelectSingle,
@@ -123,6 +123,31 @@ export const EVOLUTION_BARE_METAL_FORM_CONFIG: FormConfig = {
       items: nameFlavourItems,
       decoratorProps: {
         label: 'Конфигурация',
+      },
+    },
+    networkDisk: {
+      type: CONTROL.Array,
+      max: 1,
+      accessorKey: 'networkDisk',
+      defaultValue: [],
+      addText: 'Добавить диск',
+      ui: ['disk'],
+      controls: {
+        disk: {
+          type: CONTROL.Stepper,
+          decoratorProps: {
+            label: 'Сетевой диск',
+            labelTooltip: 'Дополнительное хранилище, которое можно подключить к серверу',
+            labelTooltipPlacement: 'right',
+          },
+          accessorKey: 'diskSpace',
+          defaultValue: 1,
+          uiProps: {
+            min: 1,
+            max: 4_096,
+            postfix: 'ГБ',
+          },
+        },
       },
     },
     eipAlert: {

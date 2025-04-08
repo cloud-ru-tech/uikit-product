@@ -48,6 +48,7 @@ export function ArrayControlUi({
   const { isMobile } = useAdaptive();
 
   const value: AnyType[] = getValue(valueProp, accessorKey);
+
   const onChange = (newValue: AnyType) => {
     setValue(valueProp, accessorKey, newValue);
 

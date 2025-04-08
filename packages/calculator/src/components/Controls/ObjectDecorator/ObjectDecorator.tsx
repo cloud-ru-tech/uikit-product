@@ -7,15 +7,15 @@ import styles from './styles.module.scss';
 export function ObjectDecorator({
   label,
   labelTooltip,
-  tooltipPlacement,
-}: Pick<BaseDecoratorProps, 'label' | 'labelTooltip' | 'tooltipPlacement'>) {
+  labelTooltipPlacement,
+}: Pick<BaseDecoratorProps, 'label' | 'labelTooltip' | 'labelTooltipPlacement'>) {
   return (
     <span className={styles.title}>
       <Typography.SansTitleM>{label}</Typography.SansTitleM>
 
       {labelTooltip && (
         <span className={styles.tipWrapperInline}>
-          <QuestionTooltip placement={tooltipPlacement} data-pointer tip={labelTooltip} size='s' tabIndex={-1} />
+          <QuestionTooltip placement={labelTooltipPlacement} data-pointer tip={labelTooltip} size='s' tabIndex={-1} />
         </span>
       )}
     </span>

@@ -19,7 +19,7 @@ import styles from './styles.module.scss';
 type TableRow = {
   label: string;
   labelTooltip?: ReactNode;
-  tooltipPlacement?: TooltipPlacement;
+  labelTooltipPlacement?: TooltipPlacement;
   accessorKey: string;
   priceAccessorKey?: string;
 
@@ -33,7 +33,7 @@ export type TableControl = {
   defaultValue?: FormValues;
   accessorKey: string;
 
-  decoratorProps?: Pick<BaseDecoratorProps, 'label' | 'labelTooltip' | 'tooltipPlacement'>;
+  decoratorProps?: Pick<BaseDecoratorProps, 'label' | 'labelTooltip' | 'labelTooltipPlacement'>;
   counter?: {
     accessorKey: string;
     label: string;
@@ -103,7 +103,7 @@ export function TableControlUi({
             <div className={styles.cell}>Стоимость в месяц</div>
           </div>
 
-          {rows.map(({ accessorKey, label, labelTooltip, tooltipPlacement, uiProps, allowedValues }) => (
+          {rows.map(({ accessorKey, label, labelTooltip, labelTooltipPlacement, uiProps, allowedValues }) => (
             <div className={styles.row} key={accessorKey}>
               <div className={styles.cell}>
                 <span>
@@ -113,7 +113,7 @@ export function TableControlUi({
                       <QuestionTooltip
                         data-pointer
                         tip={labelTooltip}
-                        placement={tooltipPlacement}
+                        placement={labelTooltipPlacement}
                         size='xs'
                         tabIndex={-1}
                       />

@@ -180,13 +180,13 @@ function getNodeConfig(props: GetNodeConfigProps): ObjectControl {
 type GetToggleNodeConfigProps = GetNodeConfigProps & {
   label: string;
   labelTooltip: string;
-  tooltipPlacement?: TooltipPlacement;
+  labelTooltipPlacement?: TooltipPlacement;
 };
 
 function getToggleNodeConfig({
   label,
   labelTooltip,
-  tooltipPlacement,
+  labelTooltipPlacement,
   ...rest
 }: GetToggleNodeConfigProps): ToggleObjectControl {
   return {
@@ -194,7 +194,7 @@ function getToggleNodeConfig({
     decoratorProps: {
       label,
       labelTooltip,
-      tooltipPlacement,
+      labelTooltipPlacement,
     },
     switchKey: `${rest.prefix}.isIncluded`,
     control: getNodeConfig(rest),

@@ -37,7 +37,7 @@ export type BaseDecoratorProps = {
   /** Вспомогательный тултип */
   labelTooltip?: ReactNode;
   /** Расположение тултипа */
-  tooltipPlacement?: TooltipPlacement;
+  labelTooltipPlacement?: TooltipPlacement;
   /** Дополтительный текст сверху */
   caption?: string;
   /** Флаг обязательное поле или нет */
