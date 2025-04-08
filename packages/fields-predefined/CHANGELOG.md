@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.9 (2025-04-08)
+
+
+### Bug Fixes
+
+* **IAM-5156:** update types ([f1f4231](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f1f4231b75e4fbf1b86c13994dd4096b0e573863))
+
+
+
+
+
 ## 0.2.8 (2025-04-01)
 
 ### Only dependencies have been changed
