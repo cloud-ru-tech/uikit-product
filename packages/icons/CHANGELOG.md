@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.3.0 (2025-04-09)
+
+
+### Features
+
+* **LK-5625:** add cloud status icon ([1f9c827](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1f9c82717af15c57311d61aa5a245da9048694ab))
+
+
+
+
+
 # 11.2.0 (2025-04-01)
 
 
