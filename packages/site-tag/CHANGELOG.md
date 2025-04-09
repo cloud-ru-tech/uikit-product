@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-04-09)
+
+
+### Features
+
+* **FF-6220:** added Erid tag to site-tag ([a257f70](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a257f700ddf9e0ebd2b65da146eb8d3f84b8df2e))
+
+
+
+
+
 # 0.2.0 (2025-04-03)
 
 

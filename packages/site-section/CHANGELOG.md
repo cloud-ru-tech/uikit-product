@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.16.1 (2025-04-09)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-site-cards@0.10.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-cards/CHANGELOG.md)
+
+
+
+
+
 # 0.16.0 (2025-04-03)
 
 

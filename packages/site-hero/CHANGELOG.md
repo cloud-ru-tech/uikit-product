@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-04-09)
+
+
+### Features
+
+* **FF-6220:** hero slider ([c255bbc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c255bbc349a0fbbe866c45ed5de978abd488ebc3))
+
+
+
+
+
 ## 0.3.4 (2025-04-03)
 
 ### Only dependencies have been changed

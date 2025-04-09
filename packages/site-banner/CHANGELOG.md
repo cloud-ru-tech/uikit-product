@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.4 (2025-04-09)
+
+
+### Bug Fixes
+
+* **FF-6220:** replaced site-banner local erid with the one from site-tag package ([8a956bd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8a956bd64088ba99229b565595b89d964485e3c7))
+
+
+
+
+
 ## 0.2.3 (2025-04-03)
 
 ### Only dependencies have been changed
