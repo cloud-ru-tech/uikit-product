@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.17.0 (2025-04-09)
+
+
+### Features
+
+* **ONB-3764:** calc ml inference ([dac517b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dac517b88696acad3ccc70326bceb1126c44495b))
+
+
+
+
+
 ## 0.16.2 (2025-04-04)
 
 
