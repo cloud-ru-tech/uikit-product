@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-04-10)
+
+
+### Features
+
+* **FF-6220:** site-video change play button, add layoutType ([b3a81c0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b3a81c058d792cbe6cd2c4860def0e526b220592))
+
+
+
+
+
 ## 0.3.2 (2025-04-09)
 
 ### Only dependencies have been changed

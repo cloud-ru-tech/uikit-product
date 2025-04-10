@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.2 (2025-04-10)
+
+
+### Bug Fixes
+
+* **FF-6220:** pass layoutType to site-video ([1b13377](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1b1337745b7c9c15295a2910a037a75399a23de7))
+
+
+
+
+
 ## 0.4.1 (2025-04-09)
 
 ### Only dependencies have been changed

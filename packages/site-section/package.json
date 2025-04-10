@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-section",
   "title": "Site Section",
-  "version": "0.16.2",
+  "version": "0.16.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -39,7 +39,7 @@
     "@sbercloud/uikit-product-site-layout": "0.1.0",
     "@sbercloud/uikit-product-site-rich-text": "0.2.0",
     "@sbercloud/uikit-product-site-table": "0.2.1",
-    "@sbercloud/uikit-product-site-video": "0.3.2",
+    "@sbercloud/uikit-product-site-video": "0.4.0",
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/accordion": "0.11.0",
     "@snack-uikit/button": "0.19.7",
