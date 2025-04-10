@@ -42,7 +42,15 @@ export function SectionMedia({
           />
         )}
 
-        {video && <SiteVideo video={video} onPlay={onPlay} onError={onError} data-test-id={`${dataTestId}__video`} />}
+        {video && (
+          <SiteVideo
+            video={video}
+            onPlay={onPlay}
+            onError={onError}
+            layoutType={layoutType}
+            data-test-id={`${dataTestId}__video`}
+          />
+        )}
       </div>
     </SectionBasic>
   );

@@ -127,7 +127,14 @@ export function SectionContentTabs({
                 </div>
               )}
 
-              {video && <SiteVideo video={video} onPlay={onPlay} data-test-id={`${dataTestId}__video`} />}
+              {video && (
+                <SiteVideo
+                  video={video}
+                  onPlay={onPlay}
+                  layoutType={layoutType}
+                  data-test-id={`${dataTestId}__video`}
+                />
+              )}
 
               {/* TODO: избавиться от title/subtitle после обновления cms-ки */}
               {(mediaTitle || mediaSubtitle) && (

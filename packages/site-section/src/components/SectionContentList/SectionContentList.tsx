@@ -72,7 +72,9 @@ export function SectionContentList({
             />
           )}
 
-          {video && <SiteVideo video={video} onPlay={onPlay} data-test-id={`${dataTestId}__video`} />}
+          {video && (
+            <SiteVideo video={video} onPlay={onPlay} layoutType={layoutType} data-test-id={`${dataTestId}__video`} />
+          )}
         </div>
 
         {items && items.length > 0 && (

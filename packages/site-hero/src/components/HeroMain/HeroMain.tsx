@@ -137,7 +137,7 @@ export function HeroMain({
               <div className={styles.media} data-layout-type={layoutType}>
                 {image && <img alt='hero_img' src={image} />}
 
-                {!image && video && <SiteVideo className={styles.video} video={video} />}
+                {!image && video && <SiteVideo className={styles.video} video={video} layoutType={layoutType} />}
               </div>
             </div>
           </div>

@@ -10,11 +10,12 @@ export type HeroSlideVideoBgProps = {
   previewImage: string;
 };
 
-export function HeroSlideVideoBg({ link, previewImage }: WithLayoutType<HeroSlideVideoBgProps>) {
+export function HeroSlideVideoBg({ link, previewImage, layoutType }: WithLayoutType<HeroSlideVideoBgProps>) {
   return (
     <>
       <HTMLComment text='noindex' />
       <SiteVideo
+        layoutType={layoutType}
         video={{
           src: link,
           poster: previewImage,

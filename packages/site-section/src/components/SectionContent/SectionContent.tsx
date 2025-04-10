@@ -88,7 +88,9 @@ export function SectionContent({
             />
           )}
 
-          {video && <SiteVideo video={video} onPlay={onPlay} data-test-id={`${dataTestId}__video`} />}
+          {video && (
+            <SiteVideo video={video} onPlay={onPlay} layoutType={layoutType} data-test-id={`${dataTestId}__video`} />
+          )}
         </div>
       </div>
     </Layout.SectionWrapper>
