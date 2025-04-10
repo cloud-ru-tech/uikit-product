@@ -70,6 +70,7 @@ export const video: StoryObj<StoryProps> = {
       poster: 'https://cdn.cloud.ru/backend/images/video-player/preview_default.png',
     },
     showControls: true,
+    layoutType: 'desktop',
   },
   argTypes: {
     customVideoPlayer: {

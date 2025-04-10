@@ -3,7 +3,7 @@ import { isValidElement, useCallback, useRef, useState } from 'react';
 
 import { PlaySVG } from '@sbercloud/uikit-product-icons';
 import { extractSupportProps } from '@sbercloud/uikit-product-utils';
-import { ButtonElevated } from '@snack-uikit/button';
+import { IconPredefined } from '@snack-uikit/icon-predefined';
 
 import styles from './styles.module.scss';
 import { SiteVideoProps } from './types';
@@ -15,6 +15,7 @@ export function SiteVideo({
   onError,
   'data-test-id': dataTestId = 'site-video',
   className,
+  layoutType,
   ...rest
 }: SiteVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -55,7 +56,14 @@ export function SiteVideo({
           {!isVideoPlayed && video.controls && (
             // eslint-disable-next-line jsx-a11y/no-static-element-interactions
             <div className={styles.videoOverlay} onClick={handleVideoPlay}>
-              <ButtonElevated size='m' icon={<PlaySVG />} data-test-id={`${dataTestId}__play-button`} />
+              <IconPredefined
+                size={layoutType === 'mobile' ? 'm' : 'l'}
+                shape='square'
+                appearance='neutral'
+                icon={PlaySVG}
+                className={styles.playButton}
+                data-test-id={`${dataTestId}__play-button`}
+              />
             </div>
           )}
         </>

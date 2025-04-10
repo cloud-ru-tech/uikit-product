@@ -1,6 +1,6 @@
 import { ReactEventHandler, ReactNode } from 'react';
 
-import { WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type VideoPlayerProps = {
   src: string;
@@ -11,9 +11,11 @@ export type VideoPlayerProps = {
   loop?: boolean;
 };
 
-export type SiteVideoProps = WithSupportProps<{
-  video: VideoPlayerProps | ReactNode;
-  onPlay?(): void;
-  onError?: ReactEventHandler<HTMLVideoElement>;
-  className?: string;
-}>;
+export type SiteVideoProps = WithLayoutType<
+  WithSupportProps<{
+    video: VideoPlayerProps | ReactNode;
+    onPlay?(): void;
+    onError?: ReactEventHandler<HTMLVideoElement>;
+    className?: string;
+  }>
+>;
