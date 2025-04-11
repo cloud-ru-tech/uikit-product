@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.0.0 (2025-04-11)
+
+
+### BREAKING CHANGES
+
+
+* **RM-2108:** Remove financialMenu prop in the header component, add new financeButton prop with ReactNode type ([5cb005a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5cb005ae79734df4b7982474ac9f777fafd73399))
+
+
+
+
 ## 2.39.4 (2025-04-09)
 
 ### Only dependencies have been changed
