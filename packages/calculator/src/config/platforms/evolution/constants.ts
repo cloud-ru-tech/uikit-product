@@ -11,4 +11,6 @@ export const EVOLUTION_PRODUCT = {
   EvolutionContainerAppsFreeTier: 'evolutionContainerAppsFreeTier',
   EvolutionArenadataDb: 'evolutionArenadataDb',
   EvolutionMlInference: 'evolutionMlInference',
+  EvolutionSnatGateway: 'evolutionSnatGateway',
+  EvolutionPublicIp: 'evolutionPublicIp',
 } as const;

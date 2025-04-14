@@ -9,6 +9,8 @@ import { Calculator, CALCULATOR_TYPE, CalculatorProps, CATALOG_CONFIG } from '..
 import { getFetcherFn, getOnDownloadFileClick, getOnShareClick } from '../src/services';
 import src from './bg.webp';
 
+const DEFAULT_BACKEND_HOST = 'https://api.cloud.ru';
+
 const meta: Meta = {
   title: 'Console/Calculator',
   component: Calculator,
@@ -16,46 +18,54 @@ const meta: Meta = {
 export default meta;
 
 const onShareClick = getOnShareClick();
-const fetcherFn = getFetcherFn();
 const onDownloadFileClick = getOnDownloadFileClick();
 
-const Template: StoryFn<CalculatorProps> = ({ ...args }) => (
-  <div
-    style={{
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '8px 0',
-    }}
-  >
+const Template: StoryFn<CalculatorProps & { backendHost: string }> = ({ ...args }) => {
+  const fetcherFn = getFetcherFn(args.backendHost);
+
+  return (
     <div
       style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         padding: '8px 0',
-        maxWidth: '1248px',
-        width: '100%',
       }}
     >
-      <Calculator
-        {...args}
-        config={CATALOG_CONFIG}
-        fetcherFn={fetcherFn}
-        actions={{
-          onDownloadFileClick,
-          onShareClick,
+      <div
+        style={{
+          padding: '8px 0',
+          maxWidth: '1248px',
+          width: '100%',
         }}
-      />
+      >
+        <Calculator
+          {...args}
+          config={CATALOG_CONFIG}
+          fetcherFn={fetcherFn}
+          actions={{
+            onDownloadFileClick,
+            onShareClick,
+          }}
+        />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
-export const calculator: StoryObj<CalculatorProps> = {
+export const calculator: StoryObj<CalculatorProps & { backendHost: string }> = {
   render: Template,
   args: {
     calculatorType: CALCULATOR_TYPE.Main,
     layoutType: LAYOUT_TYPE.Desktop,
     bgImage: src,
+    backendHost: DEFAULT_BACKEND_HOST,
   },
-  argTypes: {},
+  argTypes: {
+    backendHost: {
+      description: 'URL используемый для запросов на цены в калькуляторе',
+    },
+  },
   parameters: {
     readme: {
       sidebar: [`Latest version: ${componentPackage.version}`, componentReadme, componentChangelog],

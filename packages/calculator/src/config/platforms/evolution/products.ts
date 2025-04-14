@@ -7,7 +7,9 @@ import {
   ManagedKubernetesSVG,
   ManagedPostgreSqlSVG,
   MlInferenceSVG,
+  PublicIpSVG,
   S3StorageSVG,
+  SnatSVG,
 } from '@sbercloud/uikit-product-icons';
 
 import { PLATFORM } from '../../../constants';
@@ -24,6 +26,8 @@ import {
   EVOLUTION_KUBERNETES_FORM_CONFIG,
   EVOLUTION_ML_INFERENCE_FORM_CONFIG,
   EVOLUTION_POSTGRE_SQL_FORM_CONFIG,
+  EVOLUTION_PUBLIC_IP_FORM_CONFIG,
+  EVOLUTION_SNAT_GATEWAY_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FREE_TIER_FORM_CONFIG,
 } from './product-config';
@@ -167,6 +171,28 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     icon: MlInferenceSVG,
     formConfig: EVOLUTION_ML_INFERENCE_FORM_CONFIG,
     dataTestId: EVOLUTION_PRODUCT.EvolutionMlInference,
+    enableChangeProductQuantity: true,
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionSnatGateway]: {
+    id: EVOLUTION_PRODUCT.EvolutionSnatGateway,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution SNAT Gateway',
+    caption: 'Доступ виртуальных машин и серверов к внешним ресурсам',
+    icon: SnatSVG,
+    formConfig: EVOLUTION_SNAT_GATEWAY_FORM_CONFIG,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionSnatGateway,
+    enableChangeProductQuantity: true,
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionPublicIp]: {
+    id: EVOLUTION_PRODUCT.EvolutionPublicIp,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Public IP',
+    caption: 'Управление публичными IP-адресами для облачных ресурсов',
+    icon: PublicIpSVG,
+    formConfig: EVOLUTION_PUBLIC_IP_FORM_CONFIG,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionPublicIp,
     enableChangeProductQuantity: true,
     enableConnectToConsole: true,
   },

@@ -62,6 +62,12 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       ],
     },
     {
+      id: CATEGORY.Network,
+      label: 'Сети',
+      dataTestId: 'network',
+      visibleProducts: [EVOLUTION_PRODUCT.EvolutionSnatGateway, EVOLUTION_PRODUCT.EvolutionPublicIp],
+    },
+    {
       id: CATEGORY.Storage,
       label: 'Хранение и резервное копирование',
       dataTestId: 'storage',
