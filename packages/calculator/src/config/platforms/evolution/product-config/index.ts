@@ -12,3 +12,4 @@ export * from './EvolutionArenadataDb';
 export * from './EvolutionMlInference';
 export * from './EvolutionSnatGateway';
 export * from './EvolutionPublicIp';
+export * from './EvolutionArtifactRegistry';

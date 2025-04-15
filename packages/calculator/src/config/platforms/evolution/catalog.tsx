@@ -81,6 +81,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
         EVOLUTION_PRODUCT.EvolutionKubernetes,
         EVOLUTION_PRODUCT.EvolutionContainerApps,
         EVOLUTION_PRODUCT.EvolutionContainerAppsFreeTier,
+        EVOLUTION_PRODUCT.EvolutionArtifactRegistry,
       ],
     },
     {

@@ -13,4 +13,5 @@ export const EVOLUTION_PRODUCT = {
   EvolutionMlInference: 'evolutionMlInference',
   EvolutionSnatGateway: 'evolutionSnatGateway',
   EvolutionPublicIp: 'evolutionPublicIp',
+  EvolutionArtifactRegistry: 'evolutionArtifactRegistry',
 } as const;

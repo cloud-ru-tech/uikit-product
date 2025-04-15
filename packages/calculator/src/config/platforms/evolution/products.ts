@@ -1,5 +1,6 @@
 import {
   ArenadataDbSVG,
+  ArtifactRegistrySVG,
   BareMetalSVG,
   ContainerAppsSVG,
   ElasticCloudServerWithGpuSVG,
@@ -17,6 +18,7 @@ import { CatalogConfig } from '../../../types';
 import { EVOLUTION_PRODUCT } from './constants';
 import {
   EVOLUTION_ARENADATA_DB_FORM_CONFIG,
+  EVOLUTION_ARTIFACT_REGISTRY,
   EVOLUTION_BARE_METAL_FORM_CONFIG,
   EVOLUTION_CLOUD_SERVER_FORM_CONFIG,
   EVOLUTION_CLOUD_SERVER_FREE_TIER_FORM_CONFIG,
@@ -195,5 +197,16 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     dataTestId: EVOLUTION_PRODUCT.EvolutionPublicIp,
     enableChangeProductQuantity: true,
     enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionArtifactRegistry]: {
+    id: EVOLUTION_PRODUCT.EvolutionArtifactRegistry,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Artifact Registry',
+    caption: 'Реестр для хранения OCI-артефактов',
+    icon: ArtifactRegistrySVG,
+    formConfig: EVOLUTION_ARTIFACT_REGISTRY,
+    dataTestId: EVOLUTION_PRODUCT.EvolutionArtifactRegistry,
+    enableChangeProductQuantity: true,
+    enableConnectToConsole: false,
   },
 };
