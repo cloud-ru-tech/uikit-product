@@ -50,6 +50,7 @@ export function ReleaseNotesModal({
           arrows={false}
           pagination={false}
           state={{ page: pageIndex, onChange: setPage }}
+          swipe={items.length > 1}
         >
           {items.map(item => (
             <NoteItem key={item.title} {...item} />

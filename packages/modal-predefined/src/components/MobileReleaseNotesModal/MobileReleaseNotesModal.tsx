@@ -60,7 +60,7 @@ export function MobileReleaseNotesModal({
         <Carousel
           arrows={false}
           pagination={false}
-          swipe
+          swipe={items.length > 1}
           state={{ page: pageIndex, onChange: setPage }}
           className={styles.mobileCarousel}
         >
