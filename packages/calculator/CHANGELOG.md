@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.18.0 (2025-04-15)
+
+
+### Features
+
+* **ONB-3282:** add network disk to evo bare metal ([1e584f8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1e584f85dcea879cf6b45d1575e9235f958b5291))
+
+
+
+
+
 ## 0.17.2 (2025-04-15)
 
 ### Only dependencies have been changed
