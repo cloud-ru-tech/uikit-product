@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.4.0 (2025-04-15)
+
+
+### Features
+
+* **LK-5409:** add more flags ([7771987](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/77719875703a7e45564d04bb54fa2201f7d06c0d))
+
+
+
+
+
 # 11.3.0 (2025-04-09)
 
 
