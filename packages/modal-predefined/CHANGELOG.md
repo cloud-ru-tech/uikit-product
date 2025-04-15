@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.43 (2025-04-15)
+
+
+### Bug Fixes
+
+* **FF-6529:** disable swipe if only one slide available in ReleaseNotesModal ([7c3d626](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7c3d6269076820eb0b1624e65f18375950bc0869))
+
+
+
+
+
 ## 0.5.42 (2025-04-09)
 
 ### Only dependencies have been changed
