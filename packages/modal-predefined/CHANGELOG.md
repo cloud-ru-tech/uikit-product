@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2025-04-16)
+
+
+### Features
+
+* **FF-6536:** add onSlideChange prop to ReleaseNotesModal ([310ce2f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/310ce2fecc910b94cd1825e0dcc5a2154f58060d))
+
+
+
+
+
 ## 0.5.44 (2025-04-15)
 
 ### Only dependencies have been changed
