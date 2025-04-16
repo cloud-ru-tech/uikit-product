@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.1 (2025-04-16)
+
+
+### Bug Fixes
+
+* **FF-6536:** pass onSlideChange to other controls in ReleaseNotesModal ([74fb1ba](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/74fb1ba39d0ece1e6eda1c5873918bcc72474852))
+
+
+
+
+
 # 0.6.0 (2025-04-16)
 
 
