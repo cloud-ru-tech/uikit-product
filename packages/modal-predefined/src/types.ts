@@ -16,5 +16,7 @@ export type ReleaseNotesModalProps = WithLayoutType<
       dataError?: boolean;
       /** Действие при клике по кнопке "Перезагрузить" на экране ошибки */
       onDataErrorRetryClick?(): void;
+      /** Действие при переключении слайда */
+      onSlideChange?(slide: number): void;
     }>
 >;

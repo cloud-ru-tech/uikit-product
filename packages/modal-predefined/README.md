@@ -118,6 +118,7 @@
 | onReadLaterClick | `() => void` | - | Действие при клике по кнопке Ознакомиться позже |
 | dataError | `boolean` | - | Состояние ошибки получения данных |
 | onDataErrorRetryClick | `() => void` | - | Действие при клике по кнопке "Перезагрузить" на экране ошибки |
+| onSlideChange | `(slide: number) => void` | - | Действие при переключении слайда |
 ## MobileReleaseNotesModal
 ### Props
 | name | type | default value | description |
@@ -129,6 +130,7 @@
 | onReadLaterClick | `() => void` | - | Действие при клике по кнопке Ознакомиться позже |
 | dataError | `boolean` | - | Состояние ошибки получения данных |
 | onDataErrorRetryClick | `() => void` | - | Действие при клике по кнопке "Перезагрузить" на экране ошибки |
+| onSlideChange | `(slide: number) => void` | - | Действие при переключении слайда |
 ## AdaptiveReleaseNotesModal
 ### Props
 | name | type | default value | description |
@@ -141,6 +143,7 @@
 | onReadLaterClick | `() => void` | - | Действие при клике по кнопке Ознакомиться позже |
 | dataError | `boolean` | - | Состояние ошибки получения данных |
 | onDataErrorRetryClick | `() => void` | - | Действие при клике по кнопке "Перезагрузить" на экране ошибки |
+| onSlideChange | `(slide: number) => void` | - | Действие при переключении слайда |
 
 
 [//]: DOCUMENTATION_SECTION_END

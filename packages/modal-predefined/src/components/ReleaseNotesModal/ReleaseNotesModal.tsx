@@ -22,6 +22,7 @@ export function ReleaseNotesModal({
   onReadLaterClick,
   dataError,
   onDataErrorRetryClick,
+  onSlideChange,
 }: Omit<ReleaseNotesModalProps, 'layoutType'>) {
   const { t } = useLocale('ModalPredefined');
   const {
@@ -49,7 +50,13 @@ export function ReleaseNotesModal({
           className={styles.carousel}
           arrows={false}
           pagination={false}
-          state={{ page: pageIndex, onChange: setPage }}
+          state={{
+            page: pageIndex,
+            onChange: slide => {
+              setPage(slide);
+              onSlideChange?.(slide);
+            },
+          }}
           swipe={items.length > 1}
         >
           {items.map(item => (
@@ -58,7 +65,7 @@ export function ReleaseNotesModal({
         </Carousel>
       </WithSkeleton>
     );
-  }, [dataError, items, loading, onDataErrorRetryClick, pageIndex, setPage]);
+  }, [dataError, items, loading, onDataErrorRetryClick, onSlideChange, pageIndex, setPage]);
 
   const showFooter = useMemo(() => {
     if (loading) {
