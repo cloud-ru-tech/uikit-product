@@ -2,9 +2,9 @@ import { useCallback, useState } from 'react';
 
 import { ReleaseNotesModalProps } from './types';
 
-type Props = Pick<ReleaseNotesModalProps, 'onClose' | 'onReadLaterClick'>;
+type Props = Pick<ReleaseNotesModalProps, 'onClose' | 'onReadLaterClick' | 'onSlideChange'>;
 
-export function useReleaseNotesModal({ onClose, onReadLaterClick }: Props) {
+export function useReleaseNotesModal({ onClose, onReadLaterClick, onSlideChange }: Props) {
   const [page, setPage] = useState(0);
 
   const onCloseInner = useCallback(() => {
@@ -21,9 +21,23 @@ export function useReleaseNotesModal({ onClose, onReadLaterClick }: Props) {
     onReadLaterClick();
   }, [onReadLaterClick]);
 
-  const onNextPageClick = useCallback(() => setPage(prevPageIndex => prevPageIndex + 1), []);
+  const onNextPageClick = useCallback(() => {
+    setPage(prevPageIndex => {
+      const newPage = prevPageIndex + 1;
+      onSlideChange?.(newPage);
 
-  const onPrevPageClick = useCallback(() => setPage(prevPageIndex => prevPageIndex - 1), []);
+      return newPage;
+    });
+  }, [onSlideChange]);
+
+  const onPrevPageClick = useCallback(() => {
+    setPage(prevPageIndex => {
+      const newPage = prevPageIndex - 1;
+      onSlideChange?.(newPage);
+
+      return newPage;
+    });
+  }, [onSlideChange]);
 
   return {
     onCloseInner,

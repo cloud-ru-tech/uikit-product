@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
@@ -33,7 +33,16 @@ export function ReleaseNotesModal({
     onNextPageClick,
     onPrevPageClick,
     setPage,
-  } = useReleaseNotesModal({ onClose, onReadLaterClick });
+  } = useReleaseNotesModal({ onClose, onReadLaterClick, onSlideChange });
+
+  const handleSlideChange = useCallback(
+    (slide: number) => {
+      setPage(slide);
+
+      onSlideChange?.(slide);
+    },
+    [onSlideChange, setPage],
+  );
 
   const content = useMemo(() => {
     if (dataError) {
@@ -52,10 +61,7 @@ export function ReleaseNotesModal({
           pagination={false}
           state={{
             page: pageIndex,
-            onChange: slide => {
-              setPage(slide);
-              onSlideChange?.(slide);
-            },
+            onChange: handleSlideChange,
           }}
           swipe={items.length > 1}
         >
@@ -65,7 +71,7 @@ export function ReleaseNotesModal({
         </Carousel>
       </WithSkeleton>
     );
-  }, [dataError, items, loading, onDataErrorRetryClick, onSlideChange, pageIndex, setPage]);
+  }, [dataError, handleSlideChange, items, loading, onDataErrorRetryClick, pageIndex]);
 
   const showFooter = useMemo(() => {
     if (loading) {
@@ -100,7 +106,7 @@ export function ReleaseNotesModal({
                     <div className={styles.footerCenter}>
                       <PaginationSlider
                         page={readablePageNumber}
-                        onChange={page => setPage(page - 1)}
+                        onChange={page => handleSlideChange(page - 1)}
                         total={items.length}
                       />
                     </div>
