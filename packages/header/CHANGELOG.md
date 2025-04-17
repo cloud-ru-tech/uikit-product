@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 3.0.2 (2025-04-17)
+
+
+### Bug Fixes
+
+* **MKP-2025:** remove promoTag from MKP banner ([481d4dd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/481d4ddbd4c35887b749b9b7ec816d0d86bd6abf))
+
+
+
+
+
 ## 3.0.1 (2025-04-15)
 
 ### Only dependencies have been changed
