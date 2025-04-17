@@ -22,6 +22,7 @@ export type SwitchRowProps = {
   className?: string;
   disableTitleTruncate?: boolean;
   type?: SwitchRowType;
+  name?: string;
 };
 
 export function SwitchRow({
@@ -36,6 +37,7 @@ export function SwitchRow({
   loading,
   disableTitleTruncate = false,
   type = SWITCH_ROW_TYPES.Block,
+  name,
   ...rest
 }: SwitchRowProps) {
   const handleChange = () => !disabled && onChange(!checked);
@@ -56,6 +58,7 @@ export function SwitchRow({
       showIcon
       tabIndex={-1}
       loading={loading}
+      name={name}
     />
   );
 
