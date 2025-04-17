@@ -12,6 +12,7 @@ export type ToggleCardProps = WithSupportProps<{
   className?: string;
   disabled?: boolean;
   size?: CardProps['size'];
+  name?: string;
 }>;
 
 export function ToggleCard({
@@ -24,6 +25,7 @@ export function ToggleCard({
   value,
   promoBadge,
   truncate,
+  name,
   ...rest
 }: ToggleCardProps) {
   const { isChecked, handleClick } = useToggleGroup({ value });
@@ -37,6 +39,7 @@ export function ToggleCard({
       size={size}
       outline
       promoBadge={promoBadge}
+      name={name}
       header={
         <Card.Header
           title={title}
