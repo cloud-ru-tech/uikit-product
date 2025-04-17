@@ -142,7 +142,6 @@ export function DrawerMenuMobile({
                 {onMarketplaceBannerClick && (
                   <MarketplaceBannerCard
                     title={t('mkpBannerTitle')}
-                    promoBadge={t('mkpBannerCount')}
                     onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
                     isMobile
                   />

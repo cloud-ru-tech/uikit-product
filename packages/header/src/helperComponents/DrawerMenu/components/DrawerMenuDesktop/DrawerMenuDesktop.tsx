@@ -248,7 +248,6 @@ export function DrawerMenuDesktop({
                         <MarketplaceBannerCard
                           title={t('mkpBannerTitle')}
                           text={t('mkpBannerText')}
-                          promoBadge={t('mkpBannerCount')}
                           onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
                         />
                       )}

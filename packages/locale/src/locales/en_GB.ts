@@ -108,7 +108,6 @@ export const en_GB = {
 
     mkpBannerTitle: 'Marketplace',
     mkpBannerText: 'For development, data analysis and other tasks.',
-    mkpBannerCount: '120+ services',
 
     referralBannerTitle: 'Referral program',
     referralBannerText: 'Earn up to 20% on recommendations of Cloud.ru services',

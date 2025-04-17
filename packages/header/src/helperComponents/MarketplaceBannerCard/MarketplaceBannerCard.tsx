@@ -9,13 +9,11 @@ import {
   UbuntuLogoSVG,
 } from '@sbercloud/uikit-product-icons';
 import { Card, CardProps } from '@snack-uikit/card';
-import { PromoTag } from '@snack-uikit/promo-tag';
 import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';
 
 export type MarketplaceBannerCardProps = Pick<CardProps, 'onClick'> & {
-  promoBadge: string;
   title: string;
   text?: string;
   isMobile?: boolean;
@@ -24,13 +22,10 @@ export type MarketplaceBannerCardProps = Pick<CardProps, 'onClick'> & {
 export function MarketplaceBannerCard(props: MarketplaceBannerCardProps) {
   return (
     <div className={cn(!props.isMobile && styles.card)} data-test-id='header__drawer-menu__marketplace-banner'>
-      <Card size={'m'} onClick={props.onClick} {...(!props.isMobile && { promoBadge: props.promoBadge })}>
+      <Card size={'m'} onClick={props.onClick}>
         <div className={cn(styles.wrapper, props.isMobile && styles.mobile)}>
           <div className={styles.left}>
-            <Typography.SansTitleS className={styles.title}>
-              {props.title}
-              {props.isMobile && <PromoTag text={props.promoBadge as string} />}
-            </Typography.SansTitleS>
+            <Typography.SansTitleS className={styles.title}>{props.title}</Typography.SansTitleS>
 
             {props.text && <Typography.SansBodyS className={styles.text}>{props.text}</Typography.SansBodyS>}
           </div>

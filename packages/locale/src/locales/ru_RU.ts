@@ -109,7 +109,6 @@ export const ru_RU: typeof en_GB = {
 
     mkpBannerTitle: 'Маркетплейс',
     mkpBannerText: 'Для разработки, анализа данных и других задач.',
-    mkpBannerCount: '120+ сервисов',
 
     referralBannerTitle: 'Реферальная программа',
     referralBannerText: 'Зарабатывайте до 20% на рекомендациях сервисов Cloud.ru',
