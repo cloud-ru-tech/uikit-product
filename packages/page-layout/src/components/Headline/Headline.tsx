@@ -24,6 +24,10 @@ export function Headline({
   truncateTitle,
   ...rest
 }: HeadlineProps) {
+  const needsRender = Boolean(title || beforeHeadline || afterHeadline || subHeader || actions);
+
+  if (!needsRender) return null;
+
   return (
     <div className={styles.headline} {...extractSupportProps(rest)}>
       <div className={styles.headlineLayout}>
