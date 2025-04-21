@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.2 (2025-04-21)
+
+
+### Dependencies
+
+* **PDS-2163:** Update code-editor deps. ([fd0ef18](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fd0ef1818e1b3e19c989e009445e9882788b4961))
+
+
+
+
+
 ## 0.2.1 (2025-03-27)
 
 
