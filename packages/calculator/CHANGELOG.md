@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.19.0 (2025-04-21)
+
+
+### Features
+
+* **ONB-3694:** articfact registry calc ([a9a4cc9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a9a4cc97e8b8716e41e047e18436ca88157bfc4f))
+* **ONB-3760:** new calculators snat and publicIp ([4b1b393](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4b1b393f177a8a911f01dc54446adbf90d12a99f))
+
+
+
+
+
 # 0.18.0 (2025-04-15)
 
 
