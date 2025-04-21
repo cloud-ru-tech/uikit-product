@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.18.11 (2025-04-21)
+
+
+### Bug Fixes
+
+* **FF-5152:** no render empty divs if no props passed to Headline in PageLayout ([733d476](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/733d476d55903fe5765534effeaf3e5b8f6fade6))
+
+
+
+
+
 ## 0.18.10 (2025-04-15)
 
 ### Only dependencies have been changed
