@@ -37,15 +37,22 @@ export function Welcome({ image }: WelcomeProps) {
   const { layoutType } = useCalculatorContext();
 
   const isTablet = layoutType !== LAYOUT_TYPE.Desktop && layoutType !== LAYOUT_TYPE.DesktopSmall;
+  const isDesctopSmall = layoutType === LAYOUT_TYPE.DesktopSmall;
   const isMobile = layoutType === LAYOUT_TYPE.Mobile;
 
   const TitleComponent = isTablet ? Typography.SansTitleL : Typography.SansHeadlineS;
 
   return (
-    <div data-test-id={parseKeyToDataTest('welcome')} className={styles.wrapper} data-tablet={isTablet || undefined}>
+    <div
+      data-test-id={parseKeyToDataTest('welcome')}
+      className={styles.wrapper}
+      data-desktop-small={isDesctopSmall || undefined}
+      data-tablet={isTablet || undefined}
+    >
       <div
         className={styles.configurator}
         data-test-id={parseKeyToDataTest('welcome', 'configurator')}
+        data-desktop-small={isDesctopSmall || undefined}
         data-tablet={isTablet || undefined}
       >
         <HeaderContainer dataTestId={parseKeyToDataTest('welcome', 'header')}>
@@ -90,7 +97,7 @@ export function Welcome({ image }: WelcomeProps) {
                 конфигурации для экономии на старте
               </Typography.SansBodyM>
             </div>
-            {isTablet && (
+            {(isTablet || isDesctopSmall) && (
               <ButtonFilled
                 onClick={handleCatalogOpen}
                 size='m'
@@ -125,6 +132,7 @@ export function Welcome({ image }: WelcomeProps) {
       </div>
       <div
         className={styles.priceSummary}
+        data-desktop-small={isDesctopSmall || undefined}
         data-tablet={isTablet || undefined}
         data-test-id={parseKeyToDataTest('welcome', 'summary')}
       >

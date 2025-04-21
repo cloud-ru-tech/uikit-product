@@ -207,6 +207,6 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_ARTIFACT_REGISTRY,
     dataTestId: EVOLUTION_PRODUCT.EvolutionArtifactRegistry,
     enableChangeProductQuantity: true,
-    enableConnectToConsole: false,
+    enableConnectToConsole: true,
   },
 };

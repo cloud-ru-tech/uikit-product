@@ -4,6 +4,10 @@
   display: flex;
   gap: 32px;
 
+  &[data-desktop-small] {
+    flex-direction: column;
+  }
+
   &[data-tablet] {
     flex-direction: column;
   }
@@ -17,6 +21,11 @@
   width: 800px;
   min-height: 569px;
 
+  &[data-desktop-small] {
+    width: 100%;
+    min-height: auto;
+  }
+
   &[data-tablet] {
     width: 100%;
     min-height: auto;
@@ -28,6 +37,10 @@
   flex-shrink: 0;
   position: sticky;
   top: 24px;
+
+  &[data-desktop-small] {
+    display: none;
+  }
 
   &[data-tablet] {
     display: none;
