@@ -223,7 +223,7 @@ export function DrawerMenuDesktop({
               <Scroll ref={scrollRef} barHideStrategy='never'>
                 <div className={styles.rightContent} ref={rightContentRef}>
                   {leftSectionLinks && (
-                    <div className={cn(styles.rightContentItem, styles.searchItem)} ref={searchPanelRef}>
+                    <div className={cn(styles.searchItem)} ref={searchPanelRef}>
                       <Search
                         size='m'
                         placeholder={t('searchByServices')}

@@ -13,8 +13,6 @@
 
 .cardWrapper {
   flex: 1;
-  margin-top: styles-theme-variables.$dimension-4m;
-  margin-bottom: calc(#{styles-theme-variables.$dimension-2m} * -1);
   padding-top: 1px; // fixes border on hover
 }
 

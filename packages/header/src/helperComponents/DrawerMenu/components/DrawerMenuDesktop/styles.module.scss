@@ -84,18 +84,8 @@
 .rightContent {
   display: flex;
   flex-direction: column;
-  gap:0;
-  padding: 0 styles-tokens-element.$dimension-4m 0 styles-tokens-element.$dimension-2m;
-}
-
-.rightContentItem {
-  padding-top: styles-tokens-element.$dimension-4m;
-  margin-bottom: calc(#{styles-tokens-element.$dimension-2m} * -1);
-
-  &:last-child {
-    margin-bottom: 0;
-    padding-bottom: styles-tokens-element.$dimension-4m;
-  }
+  gap: 8px;
+  padding: 0 styles-tokens-element.$dimension-4m styles-tokens-element.$dimension-4m styles-tokens-element.$dimension-2m;
 }
 
 .searchItem {
@@ -104,8 +94,8 @@
   z-index: 1;
   top: 0;
   background-color: styles-tokens-element.$sys-neutral-background;
-  padding-bottom: styles-tokens-element.$dimension-2m;
-  margin-bottom: calc(#{styles-tokens-element.$dimension-4m} * -1);
+  padding-top: styles-tokens-element.$dimension-4m;
+  padding-bottom: styles-tokens-element.$dimension-1m;
 }
 
 .noData {
@@ -160,7 +150,8 @@
 }
 
 .droplist {
-  padding: styles-tokens-element.$dimension-1m calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element.$dimension-050m});
+  padding: styles-tokens-element.$dimension-1m
+    calc(#{styles-tokens-element.$dimension-1m} + #{styles-tokens-element.$dimension-050m});
 }
 
 .selectedSection {
@@ -193,13 +184,27 @@
 }
 
 @keyframes shake-animation {
-  0% { transform:translate(0,0) }
-  18% { transform:translate(5px,0) }
-  35% { transform:translate(0,0) }
-  53% { transform:translate(5px,0) }
-  71% { transform:translate(0,0) }
-  89% { transform:translate(3px,0) }
-  100% { transform:translate(0,0) }
+  0% {
+    transform: translate(0, 0);
+  }
+  18% {
+    transform: translate(5px, 0);
+  }
+  35% {
+    transform: translate(0, 0);
+  }
+  53% {
+    transform: translate(5px, 0);
+  }
+  71% {
+    transform: translate(0, 0);
+  }
+  89% {
+    transform: translate(3px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
 .bannersWrapper {

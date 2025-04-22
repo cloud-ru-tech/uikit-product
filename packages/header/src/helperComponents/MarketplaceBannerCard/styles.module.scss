@@ -24,8 +24,6 @@
 
 .card {
   flex: 1;
-  margin-top: styles-tokens-element.$dimension-4m;
-  margin-bottom: calc(#{styles-tokens-element.$dimension-2m} * -1);
   padding-top: 1px; // fixes border on hover
 }
 
