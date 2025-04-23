@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.20.0 (2025-04-23)
+
+
+### Features
+
+* **ONB-3854:** calculator welcome screen small desktop media queries ([ac6b85d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ac6b85ddded104965e88c1250cd814b3811d0992))
+
+
+
+
+
 # 0.19.0 (2025-04-21)
 
 
