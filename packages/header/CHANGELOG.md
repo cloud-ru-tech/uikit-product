@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.1.0 (2025-04-23)
+
+
+### Features
+
+* **PDS-2101:** changed space ([03efeed](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/03efeedfe269446e16f7ea1994deef9d32cb13fb))
+
+
+
+
+
 ## 3.0.2 (2025-04-17)
 
 
