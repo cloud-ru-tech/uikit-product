@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-04-23)
+
+
+### Features
+
+* **PDS-2086:** add nonceId for overlayscrollbars ([827a753](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/827a75357160288542ac1570311cfaa49eaebda1))
+
+
+
+
+
 ## 0.2.11 (2025-04-15)
 
 ### Only dependencies have been changed
