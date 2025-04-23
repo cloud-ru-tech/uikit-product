@@ -1,0 +1,20 @@
+@use '@sbercloud/figma-tokens-cloud-platform//build/scss/components/styles-tokens-markdown';
+
+.wrapper {
+  @include styles-tokens-markdown.composite-var(styles-tokens-markdown.$markdown-syntax-quote);
+
+  .blockquote > p {
+    padding-top: 0;
+  }
+}
+
+.blockquote {
+  @include styles-tokens-markdown.composite-var(styles-tokens-markdown.$markdown-quote-container);
+
+  box-sizing: border-box;
+  margin: 0;
+
+  background-color: styles-tokens-markdown.$sys-neutral-background;
+  border-left-color: styles-tokens-markdown.$sys-neutral-decor-default;
+  border-left-style: solid;
+}

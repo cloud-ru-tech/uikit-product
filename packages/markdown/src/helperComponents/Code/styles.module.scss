@@ -1,0 +1,17 @@
+@use '@sbercloud/figma-tokens-cloud-platform//build/scss/components/styles-tokens-markdown';
+
+.wrapper {
+  @include styles-tokens-markdown.composite-var(styles-tokens-markdown.$markdown-syntax-code-editor);
+
+  display: flex;
+  max-height: 200px;
+}
+
+.code {
+  @include styles-tokens-markdown.composite-var(styles-tokens-markdown.$markdown-inline-code-container);
+  @include styles-tokens-markdown.composite-var(styles-tokens-markdown.$mono-body-s);
+
+  color: styles-tokens-markdown.$sys-neutral-text-support;
+  text-shadow: none;
+  background-color: styles-tokens-markdown.$sys-neutral-background;
+}
