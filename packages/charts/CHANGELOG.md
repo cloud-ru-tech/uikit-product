@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.13.2 (2025-04-24)
+
+
+### Bug Fixes
+
+* **FF-5152:** PieChart title color ([fe1cdca](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fe1cdca1b01c9a3b53480ee8b1d54c26f995704b))
+
+
+
+
+
 ## 0.13.1 (2025-03-20)
 
 ### Only dependencies have been changed

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-modal",
   "title": "Mobile Modal",
-  "version": "0.7.35",
+  "version": "0.7.36",
   "sideEffects": [
     "*.css",
     "*.woff",

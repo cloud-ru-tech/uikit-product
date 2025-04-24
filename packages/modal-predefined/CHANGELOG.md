@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.2 (2025-04-24)
+
+
+### Bug Fixes
+
+* **FF-5152:** upd modal package ([7ae7bb8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7ae7bb804c600cba52929dd2523bdc305b5bca70))
+
+
+
+
+
 ## 0.6.1 (2025-04-16)
 
 

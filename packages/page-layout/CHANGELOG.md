@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.18.12 (2025-04-24)
+
+
+### Bug Fixes
+
+* **FF-5152:** pageForm title color ([7ac3410](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7ac34107828c6279e7a2160b1c169b2936112bbd))
+
+
+
+
+
 ## 0.18.11 (2025-04-21)
 
 
