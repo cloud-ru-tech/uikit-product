@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.5 (2025-04-24)
+
+
+### Bug Fixes
+
+* **SITE-9165:** HeroSlide image width ([2b11dd1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2b11dd1bbb2b82b707e47917e3f811851c7e03b3))
+
+
+
+
+
 ## 0.4.4 (2025-04-24)
 
 
