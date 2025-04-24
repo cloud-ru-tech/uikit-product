@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.4 (2025-04-24)
+
+
+### Bug Fixes
+
+* **SITE-9133:** HeroZero fix tag ([6746d44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6746d44ca0a1aead0a44c03295fe33a3d96967e7))
+
+
+
+
+
 ## 0.4.3 (2025-04-15)
 
 ### Only dependencies have been changed
