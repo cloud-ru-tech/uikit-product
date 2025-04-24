@@ -21,7 +21,7 @@ $square: 'square';
   pointer-events: none;
 
   &[data-image-format='#{$rectangle}'] {
-    width: 100%;
+    width: auto;
     max-height: 328px;
   }
 
