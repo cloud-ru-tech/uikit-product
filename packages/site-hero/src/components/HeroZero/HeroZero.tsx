@@ -63,7 +63,7 @@ export function HeroZero({
               </Typography>
 
               {description && (
-                <Typography.SansBodyL tag='p' className={styles.description}>
+                <Typography.SansBodyL tag='div' className={styles.description}>
                   <RichText richText={description} />
                 </Typography.SansBodyL>
               )}
