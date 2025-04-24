@@ -13,6 +13,7 @@
 
 .title {
   padding-bottom: 24px;
+  color: styles-theme-variables.$sys-neutral-text-main;
 }
 
 .contentWrapper {
@@ -43,6 +44,7 @@
   font-size: 5px;
   word-break: break-all;
   white-space: nowrap;
+  fill: styles-theme-variables.$sys-neutral-text-main;
 
   &[data-hovered] {
     visibility: visible;
