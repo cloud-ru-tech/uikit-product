@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-markdown",
   "title": "Markdown",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -42,7 +42,5 @@
     "classnames": "2.5.1",
     "react-markdown": "7.1.1",
     "remark-gfm": "3.0.1"
-  },
-  "devDependencies": {},
-  "peerDependencies": {}
+  }
 }

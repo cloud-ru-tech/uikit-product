@@ -1,3 +1,19 @@
+# Change Log
+
+All notable changes to this project will be documented in this file.
+See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+# 0.1.0 (2025-04-25)
+
+
+### Features
+
+* **FF-6422:** add markdown ([c7c8074](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c7c80741094bdf1ec99d2fe063f3581215f55fd2))
+
+
+
+
+
 ## CHANGELOG
 
 ### v0.0.0
