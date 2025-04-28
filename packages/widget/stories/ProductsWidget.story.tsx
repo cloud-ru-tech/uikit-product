@@ -36,6 +36,8 @@ export const productsWidget: StoryObj<StoryProps> = {
     rowSize: 4,
     cards: CARDS,
     loading: false,
+    arrows: true,
+    pagination: true,
   },
 
   argTypes: {},
