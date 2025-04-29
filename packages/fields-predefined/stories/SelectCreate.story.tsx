@@ -63,11 +63,13 @@ export const selectCreate: StoryObj<SelectCreateProps> = {
     onRefetch: undefined,
     entityName: { single: 'Ключ', plural: 'Ключи' },
     entityIcon: KeyManagementSVG,
+    permission: 'canCreate',
   },
   argTypes: {
     createLayoutType: {
       control: { type: 'radio', options: ['modal', 'drawer'] },
     },
+    permission: { control: { type: 'radio', options: ['none', 'canRead', 'canCreate'] } },
   },
   parameters: {
     readme: {

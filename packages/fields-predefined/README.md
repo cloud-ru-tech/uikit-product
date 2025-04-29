@@ -54,6 +54,7 @@
 | className | `string` | - | CSS-класс |
 | afterClose | `VoidFunction` | - | Коллбек после закрытия модального окна/дровера |
 | entityIcon | `JSXElementConstructor<{ size?: number; className?: string; }>` | - | Иконка сервиса |
+| permission | "none" \| "canRead" \| "canCreate" | - | Управление состоянием компонента в зависимости от прав пользователя (по дефолту permission = 'canCreate') |
 
 
 [//]: DOCUMENTATION_SECTION_END

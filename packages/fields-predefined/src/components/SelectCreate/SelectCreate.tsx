@@ -7,6 +7,7 @@ import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sberclou
 import { ButtonFunction } from '@snack-uikit/button';
 import { FieldSelect } from '@snack-uikit/fields';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
+import { TooltipProps, WithTooltip } from '@snack-uikit/tooltip';
 
 import { useOpen } from '../../hooks';
 import { SelectFooter } from './SelectFooter';
@@ -28,6 +29,8 @@ export type SelectCreateProps = WithSupportProps<
     afterClose?: VoidFunction;
     /** Иконка сервиса */
     entityIcon?: IconPredefinedProps['icon'];
+    /** Управление состоянием компонента в зависимости от прав пользователя (по дефолту permission = 'canCreate') */
+    permission?: 'none' | 'canRead' | 'canCreate';
   }
 >;
 
@@ -41,6 +44,7 @@ export const SelectCreate = memo(function SelectCreate({
   className,
   afterClose,
   entityIcon,
+  permission = 'canCreate',
   ...rest
 }: SelectCreateProps) {
   const { t } = useLocale('FieldsPredefined');
@@ -79,23 +83,36 @@ export const SelectCreate = memo(function SelectCreate({
 
   const createBtnLabel = `${t('SelectCreate.buttonCreate')} ${entityName.single.toLocaleLowerCase()}`;
 
+  const tooltipProps: TooltipProps = {
+    tip: t('SelectCreate.noPermission'),
+    placement: 'top',
+  };
+
   return (
     <div className={className} {...extractSupportProps(rest)} data-test-id='select-create__wrapper'>
-      <FieldSelect
-        placeholder={t('SelectCreate.selectPlaceholder')}
-        {...selectDataStates}
-        {...selectProps}
-        size={selectSize}
-        footer={<SelectFooter onClick={onOpen} createButtonLabel={createBtnLabel} />}
-      />
-      <ButtonFunction
-        label={createBtnLabel}
-        icon={<PlusSVG />}
-        iconPosition='before'
-        onClick={onOpen}
-        size={selectSize}
-        data-test-id='select-create__create-button'
-      />
+      <WithTooltip tooltip={permission === 'none' ? tooltipProps : undefined}>
+        <FieldSelect
+          placeholder={t('SelectCreate.selectPlaceholder')}
+          {...selectDataStates}
+          {...selectProps}
+          size={selectSize}
+          footer={
+            <SelectFooter onClick={onOpen} createButtonLabel={createBtnLabel} canCreate={permission === 'canCreate'} />
+          }
+          disabled={permission === 'none'}
+        />
+        <WithTooltip tooltip={permission === 'canRead' ? tooltipProps : undefined}>
+          <ButtonFunction
+            label={createBtnLabel}
+            icon={<PlusSVG />}
+            iconPosition='before'
+            onClick={onOpen}
+            size={selectSize}
+            data-test-id='select-create__create-button'
+            disabled={permission !== 'canCreate'}
+          />
+        </WithTooltip>
+      </WithTooltip>
       {formLayout}
     </div>
   );
