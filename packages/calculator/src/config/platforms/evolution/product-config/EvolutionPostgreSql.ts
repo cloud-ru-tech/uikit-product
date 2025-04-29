@@ -53,14 +53,12 @@ const vCpuMap: MapType<number[]> = {
 const ramMap: MapType<Record<string, number[]>> = {
   [DeploymentMode.Standard]: {
     [ClusterType.Single]: {
-      '0.5': [1, 2, 4],
       '1': [2, 4, 8],
       '2': [4, 8, 16],
       '4': [8, 16],
       '8': [32],
     },
     [ClusterType.Master_Replica]: {
-      '0.5': [1, 2, 4],
       '1': [2, 4, 8],
       '2': [4, 8, 16],
       '4': [8],
@@ -86,7 +84,7 @@ const ramMap: MapType<Record<string, number[]>> = {
   },
 };
 
-const ramAmount = generateRamItems([1, 2, 4, 8, 16, 32]);
+const ramAmount = generateRamItems([2, 4, 8, 16, 32]);
 
 const getMinMaxDiskSize = ({ deploymentMode }: { deploymentMode: DeploymentMode }) => {
   switch (deploymentMode) {
@@ -145,7 +143,7 @@ export const EVOLUTION_POSTGRE_SQL_FORM_CONFIG: FormConfig = {
         vCpu: {
           type: CONTROL.Slider,
           accessorKey: 'flavorConfig.vCpu',
-          defaultValue: '0.5',
+          defaultValue: '1',
           items: [],
           decoratorProps: {
             label: 'Количество ядер vCPU',
@@ -166,7 +164,7 @@ export const EVOLUTION_POSTGRE_SQL_FORM_CONFIG: FormConfig = {
         ram: {
           type: CONTROL.Segmented,
           accessorKey: 'flavorConfig.ram',
-          defaultValue: '1',
+          defaultValue: '2',
           items: ramAmount.slice(0, 3),
           decoratorProps: {
             label: 'Количество оперативной памяти (RAM)',
