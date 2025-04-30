@@ -27,6 +27,7 @@ export const en_GB = {
       noResult: 'not found',
       loadError: 'Error occurred while loading',
       changeRequest: 'Change request or create',
+      noPermission: 'Unavailable for your role',
     },
     FieldPhone: {
       russia: 'Russia',

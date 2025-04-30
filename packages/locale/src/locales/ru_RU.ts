@@ -28,6 +28,7 @@ export const ru_RU: typeof en_GB = {
       noResult: 'не найдены',
       loadError: 'Измените запрос или создайте',
       changeRequest: 'Не удалось загрузить',
+      noPermission: 'Недоступно для вашей роли',
     },
     FieldPhone: {
       russia: 'Россия',
