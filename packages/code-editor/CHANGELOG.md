@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-04-30)
+
+
+### Features
+
+* **PDS-2207:** Opportunity to get a shared monaco-editor ([836b609](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/836b6099b91e3abc428d0e0e9c3ade355de4d51e))
+
+
+
+
+
 ## 0.2.2 (2025-04-21)
 
 
