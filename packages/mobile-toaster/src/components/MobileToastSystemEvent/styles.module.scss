@@ -31,7 +31,7 @@
 
 .buttonClose {
   @include styles-theme-variables.composite-var(
-    styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toast-button-button-close
+    styles-tokens-toaster-toasterSystemEvent.$toaster-system-event-toast-button-button-neutral
   );
 
   cursor: pointer;
