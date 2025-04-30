@@ -55,4 +55,8 @@ const MyComponent = (props: LazyProductCodeEditorProps) => {
 
 3. **preloadMonacoEditor**
 
-Async функция, которая выполнит предзагрузку `monaco-editor` браузером, если известно, что он потребуется
+Async функция, которая выполнит предзагрузку `monaco-editor` браузером, если известно, что он потребуется.
+
+```tsx
+const monaco = await preloadMonacoEditor();
+```

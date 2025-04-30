@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@snack-uikit/code-editor": "0.6.1",
+    "@snack-uikit/code-editor": "^0.6.2",
     "@snack-uikit/loaders": "0.9.3"
   }
 }

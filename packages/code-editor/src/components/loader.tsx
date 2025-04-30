@@ -16,6 +16,4 @@ export const loadMonacoEditor = async () => {
 /**
  * Подгрузить 'monaco-editor'
  */
-export const preloadMonacoEditor = async () => {
-  await loadMonacoEditor();
-};
+export const preloadMonacoEditor = async () => loadMonacoEditor();
