@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.5.0 (2025-04-30)
+
+
+### Features
+
+* **PDS-2113:** add icon for Evolution LoRa ([f5bb058](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f5bb058aaff86bc2131dedd59bbd1bd00e29e5f6))
+
+
+
+
+
 # 11.4.0 (2025-04-15)
 
 

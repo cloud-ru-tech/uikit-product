@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-04-30)
+
+
+### Features
+
+* **PDS-2199:** add carousel props arrow and pagination ([cf39f89](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cf39f898ba4de4359868d8f34394b9e60b081ae1))
+
+
+
+
+
 ## 0.6.32 (2025-04-15)
 
 ### Only dependencies have been changed
