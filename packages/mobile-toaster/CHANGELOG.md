@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2025-04-30)
+
+
+### Bug Fixes
+
+* **FF-6589:** update deps in order to fix vulnerability ([906ed2c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/906ed2c63ff40dcfec6770fb9a19769909a6dac9))
+
+
+
+
+
 # 0.1.0 (2025-03-21)
 
 
