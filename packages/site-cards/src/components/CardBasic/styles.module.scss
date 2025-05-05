@@ -23,6 +23,11 @@
     }
   }
 
+  .isEmptyDescription {
+    align-items: center;
+    justify-content: center;
+  }
+
   &[data-layout-type='tablet'],
   &[data-layout-type='mobile'] {
     flex-direction: column;
@@ -30,6 +35,11 @@
 
     .content {
       gap: ste.$dimension-050m;
+    }
+
+    .isEmptyDescription {
+      align-items: stretch;
+      justify-content: normal;
     }
   }
 }

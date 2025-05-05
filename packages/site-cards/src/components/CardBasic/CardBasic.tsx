@@ -40,7 +40,12 @@ export function CardBasic({
     >
       {icon && <Icon icon={icon} size={getIconSize(layoutType)} data-test-id={`${dataTestId}__icon`} />}
 
-      <div className={styles.content} data-test-id={`${dataTestId}__content`}>
+      <div
+        className={cn(styles.content, {
+          [styles.isEmptyDescription]: !description,
+        })}
+        data-test-id={`${dataTestId}__content`}
+      >
         <Typography
           tag='h3'
           family='sans'
