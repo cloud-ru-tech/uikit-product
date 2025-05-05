@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.20.3 (2025-05-05)
+
+
+### Bug Fixes
+
+* **ONB-3904:** postgres config fix ([9d18f10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d18f10586fa4d580ab231b8f96543eaf5e101b8))
+
+
+
+
+
 ## 0.20.2 (2025-04-30)
 
 ### Only dependencies have been changed
