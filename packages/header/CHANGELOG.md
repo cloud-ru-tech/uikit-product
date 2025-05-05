@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 3.2.0 (2025-05-05)
+
+
+### Features
+
+* **FF-6590:** add search metric ([5a1723e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5a1723e2d6f5def843ecbd98c4097e7c2ea57aab))
+
+
+
+
+
 ## 3.1.1 (2025-04-30)
 
 ### Only dependencies have been changed
