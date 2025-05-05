@@ -16,6 +16,7 @@ export type DrawerMenuProps = {
   links?: LinksGroup[];
   selectedLink?: string;
   onLinkChange?(value: string): void;
+  onSearchChange?(value: string): void;
   footerLinks?: FooterLink[];
   favorites?: {
     value: string[];

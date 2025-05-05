@@ -77,6 +77,7 @@ export type ProductHeaderProps = WithSupportProps<
     pagePath?: BreadcrumbsProps['items'];
     settings?: SettingOption[];
     onHelpMenuClick?(): void;
+    onSearchChange?(value: string): void;
     onMainMenuClick?(): void;
     notifications?: NotificationsProps;
     financeButton?: ReactNode;
@@ -92,6 +93,7 @@ export function ProductHeader({
   homePageUrl,
   onLogoClick,
   onMainMenuClick,
+  onSearchChange,
   drawerMenu: {
     links,
     favorites,
@@ -298,6 +300,7 @@ export function ProductHeader({
           onReferralBannerClick={onReferralBannerClick}
           selectedLink={selectedLink}
           onLinkChange={onLinkChange}
+          onSearchChange={onSearchChange}
           allProducts={allProducts}
           selectedProduct={selectedProduct}
           onProductChange={onProductChange}

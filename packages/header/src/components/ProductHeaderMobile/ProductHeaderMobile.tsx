@@ -28,6 +28,7 @@ export function ProductHeaderMobile({
   organizations,
   selectedOrganization,
   onOrganizationChange,
+  onSearchChange,
   onOrganizationAdd: onOrganizationAddProp,
   financeButton,
   pagePath,
@@ -179,6 +180,7 @@ export function ProductHeaderMobile({
       {showMainMenu && (
         <DrawerMenuMobile
           open={isMainMenuOpen}
+          onSearchChange={onSearchChange}
           onClose={closeMainMenu}
           onProductChange={onProductChange}
           favorites={drawerMenuProps.favorites}

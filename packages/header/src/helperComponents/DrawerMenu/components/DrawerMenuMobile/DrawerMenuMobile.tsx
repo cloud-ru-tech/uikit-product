@@ -34,6 +34,7 @@ export function DrawerMenuMobile({
   favorites,
   onMarketplaceBannerClick,
   onReferralBannerClick,
+  onSearchChange,
   hideProductSelect = false,
   ...rest
 }: DrawerMenuProps) {
@@ -62,6 +63,14 @@ export function DrawerMenuMobile({
       }
       return !prev;
     });
+
+  const searchChangeHandler = useCallback(
+    (value: string) => {
+      setSearchValue(value);
+      onSearchChange?.(value);
+    },
+    [onSearchChange, setSearchValue],
+  );
 
   const wrappedClick = useCallback(
     ({ disabled, onClick }: { disabled?: boolean; onClick?(e?: MouseEvent<HTMLElement>): void }, cb?: () => void) =>
@@ -132,7 +141,7 @@ export function DrawerMenuMobile({
                 size='m'
                 placeholder={t('searchByServices')}
                 value={searchValue}
-                onChange={setSearchValue}
+                onChange={searchChangeHandler}
                 data-test-id='header__drawer-menu__search'
               />
             )}

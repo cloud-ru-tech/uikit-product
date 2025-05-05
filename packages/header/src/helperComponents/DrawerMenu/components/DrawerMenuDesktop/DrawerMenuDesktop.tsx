@@ -43,6 +43,7 @@ export function DrawerMenuDesktop({
   onLinkChange,
   favorites,
   onMarketplaceBannerClick,
+  onSearchChange,
   onReferralBannerClick,
   hideProductSelect = false,
 }: DrawerMenuProps) {
@@ -67,6 +68,14 @@ export function DrawerMenuDesktop({
   const hasChoice = useMemo(
     () => visibleProducts.reduce((acc, group) => acc + group.items.length, 0) > 1,
     [visibleProducts],
+  );
+
+  const searchChangeHandler = useCallback(
+    (value: string) => {
+      setSearchValue(value);
+      onSearchChange?.(value);
+    },
+    [onSearchChange, setSearchValue],
   );
 
   const { t } = useLocale('Header');
@@ -228,7 +237,7 @@ export function DrawerMenuDesktop({
                         size='m'
                         placeholder={t('searchByServices')}
                         value={searchValue}
-                        onChange={setSearchValue}
+                        onChange={searchChangeHandler}
                         data-test-id='header__drawer-menu__search'
                       />
                     </div>
