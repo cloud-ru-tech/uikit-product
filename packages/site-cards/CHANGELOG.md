@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.5 (2025-05-05)
+
+
+### Bug Fixes
+
+* **SITE-9175:** update CardBasic ([28fa632](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/28fa6324d2c10ee8ee510edfceb4102e97ba1daf))
+
+
+
+
+
 ## 0.10.4 (2025-04-30)
 
 ### Only dependencies have been changed
