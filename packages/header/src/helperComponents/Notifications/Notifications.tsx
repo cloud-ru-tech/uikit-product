@@ -3,20 +3,15 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { AlarmFilledSVG, CrossSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
-import {
-  NotificationCard,
-  NotificationCardProps,
-  NotificationPanel,
-  NotificationPanelProps,
-} from '@snack-uikit/notification';
+import { NotificationPanel, NotificationPanelProps } from '@snack-uikit/notification';
 
+import { NotificationCards } from './NotificationCards';
 import styles from './styles.module.scss';
-
-type ChipFilter = 'all' | 'unread';
+import { ChipFilter, NotificationItem } from './types';
 
 export type NotificationsProps = {
   count: number;
-  items: Omit<NotificationCardProps, 'onVisible'>[];
+  items: NotificationItem[];
   loading?: boolean;
   error?: boolean;
   loadCards?: {
@@ -81,6 +76,7 @@ export function Notifications({
     () => [
       { value: 'all', label: t('notificationsAll') },
       { value: 'unread', label: t('notificationsUnread') },
+      { value: 'system', label: t('notificationsSystem') },
     ],
     [t],
   );
@@ -89,6 +85,7 @@ export function Notifications({
     () => ({
       unread: items.filter(card => card.unread),
       read: items.filter(card => !card.unread),
+      system: items,
     }),
     [items],
   );
@@ -108,7 +105,7 @@ export function Notifications({
   }, [onCardsRead, open, visibleCardIds]);
 
   useEffect(() => {
-    if (!open && chipFilter === 'unread') {
+    if (!open && chipFilter !== 'all') {
       handleTabChange('all');
     }
   }, [chipFilter, handleTabChange, open]);
@@ -192,23 +189,8 @@ export function Notifications({
               description={t('noNotificationsDescription')}
             />
           )}
-
           {showCards && (
-            <>
-              {cards.unread.map(card => (
-                <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} />
-              ))}
-
-              {chipFilter === 'all' && (
-                <>
-                  {cards.unread.length > 0 && <NotificationPanel.Divider text={t('notificationsDivider')} />}
-
-                  {cards.read.map(card => (
-                    <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} />
-                  ))}
-                </>
-              )}
-            </>
+            <NotificationCards cards={cards} handleCardVisible={handleCardVisible} chipFilter={chipFilter} />
           )}
         </>
       }

@@ -56,6 +56,7 @@ export const en_GB = {
     notifications: 'Notifications',
     notificationsAll: 'All',
     notificationsUnread: 'Unread',
+    notificationsSystem: 'System',
     markAllAsRead: 'Mark all as read',
     noNotificationsTitle: 'No notifications',
     noNotificationsDescription: "This is where you'll see new event notifications when something happens",

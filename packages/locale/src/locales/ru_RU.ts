@@ -57,6 +57,7 @@ export const ru_RU: typeof en_GB = {
     notifications: 'Уведомления',
     notificationsAll: 'Все',
     notificationsUnread: 'Новые',
+    notificationsSystem: 'Системные',
     markAllAsRead: 'Отметить все как прочитанное',
     noNotificationsTitle: 'Нет уведомлений',
     noNotificationsDescription: 'Здесь вы увидите новые уведомления о событиях, когда что-то произойдет',
