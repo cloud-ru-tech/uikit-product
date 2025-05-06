@@ -38,7 +38,7 @@
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/calendar": "0.11.22",
-    "@snack-uikit/chips": "0.25.2",
+    "@snack-uikit/chips": "0.27.0",
     "@snack-uikit/divider": "3.2.3",
     "@snack-uikit/loaders": "0.9.4",
     "@snack-uikit/scroll": "0.9.3",

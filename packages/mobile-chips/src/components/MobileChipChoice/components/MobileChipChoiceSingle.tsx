@@ -151,7 +151,7 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
       }}
       label={label}
       virtualized={virtualized}
-      footer={<div className={styles.footer}>{!autoApply && autoApplyFooter}</div>}
+      footer={!autoApply && autoApplyFooter ? <div className={styles.footer}>{autoApplyFooter}</div> : undefined}
     >
       <ChipChoiceBase
         {...rest}
