@@ -43,13 +43,13 @@ export const en_GB = {
   },
   Header: {
     headerProjectSelectorCreateProject: 'Create project',
-    headerProjectSelectorCreateWorkspace: 'Create workspace',
     headerProjectSelectorEditOption: 'Edit',
 
     noDataFound: 'Nothing found',
 
     // ЛК 2.0
     menu: 'Menu',
+    user: 'User',
     navigation: 'Navigation',
     searchByServices: 'Search by service',
     noData: 'No data',
@@ -80,22 +80,41 @@ export const en_GB = {
     projects: 'Projects',
     addProject: 'Add projects',
     platforms: 'Platforms',
+    services: 'Services',
     manageProfile: 'Manage profile',
     switchTheme: 'Switch theme',
     logout: 'Logout',
     whatsNew: "What's new",
-    workspaces: 'Workspaces',
-    requestAccessWorkspaces: 'No access to project workspaces',
-    requestAccessWorkspacesLabel: 'Request',
-    addWorkspace: 'Add workspace',
     favorite: 'Favorite',
 
+    sort: {
+      withoutGrouping: 'Without grouping',
+      withGrouping: 'With grouping',
+      dateDesc: {
+        option: 'By create date',
+        caption: 'descending',
+      },
+      dateAsc: {
+        option: 'By create date',
+        caption: 'ascending',
+      },
+      alphabeticalDesc: {
+        option: 'Alphabetical',
+        caption: 'A—Z (A—Я)',
+      },
+      alphabeticalAsc: {
+        option: 'Alphabetical',
+        caption: 'Z—A (Я—А)',
+      },
+      byCatalogs: {
+        option: 'By catalogs',
+      },
+    },
+
     project: 'Project',
-    workspace: 'Workspace',
     organization: 'Organization',
 
     searchProjectsPlaceholder: 'Search by projects',
-    searchWorkspacesPlaceholder: 'Search by workspaces',
 
     themeModeLight: 'Light',
     themeModeDark: 'Dark',

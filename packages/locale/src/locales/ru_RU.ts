@@ -44,13 +44,13 @@ export const ru_RU: typeof en_GB = {
   },
   Header: {
     headerProjectSelectorCreateProject: 'Создать проект',
-    headerProjectSelectorCreateWorkspace: 'Создать workspace',
     headerProjectSelectorEditOption: 'Редактировать',
 
     noDataFound: 'Ничего не найдено',
 
     // ЛК 2.0
     menu: 'Меню',
+    user: 'Пользователь',
     navigation: 'Навигация',
     searchByServices: 'Поиск по сервисам',
     noData: 'Нет данных',
@@ -81,22 +81,41 @@ export const ru_RU: typeof en_GB = {
     projects: 'Проекты',
     addProject: 'Добавить проект',
     platforms: 'Платформы',
+    services: 'Сервисы',
     manageProfile: 'Управление профилем',
     switchTheme: 'Переключить тему',
     logout: 'Выйти из аккаунта',
     whatsNew: 'Что нового',
-    workspaces: 'Воркспейсы',
-    requestAccessWorkspaces: 'Нет доступа к воркспейсам проекта',
-    requestAccessWorkspacesLabel: 'Запросить',
-    addWorkspace: 'Добавить воркспейс',
     favorite: 'Избранное',
 
+    sort: {
+      withoutGrouping: 'Без группировки',
+      withGrouping: 'С группировкой',
+      dateDesc: {
+        option: 'По дате создания',
+        caption: 'сначала новые',
+      },
+      dateAsc: {
+        option: 'По дате создания',
+        caption: 'сначала старые',
+      },
+      alphabeticalDesc: {
+        option: 'По алфавиту',
+        caption: 'A—Я (A—Z)',
+      },
+      alphabeticalAsc: {
+        option: 'По алфавиту',
+        caption: 'Я—А (Z—A)',
+      },
+      byCatalogs: {
+        option: 'По каталогам',
+      },
+    },
+
     project: 'Проект',
-    workspace: 'Воркспейс',
     organization: 'Организация',
 
     searchProjectsPlaceholder: 'Поиск по проектам',
-    searchWorkspacesPlaceholder: 'Поиск по воркспейсам',
 
     themeModeLight: 'Светлая',
     themeModeDark: 'Темная',
