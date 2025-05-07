@@ -1,90 +1,36 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
 
 .drawer {
   /* stylelint-disable-next-line declaration-no-important */
-  background-color: styles-theme-variables.$sys-neutral-background !important;
+  background-color: ste.$sys-neutral-background !important;
 
   svg {
     fill: currentColor;
   }
 }
 
-.drawerBody {
-  flex: 1 1 auto;
-  box-sizing: border-box;
-  min-height: styles-theme-variables.$dimension-2m;
-  color: styles-theme-variables.$sys-neutral-text-main;
-}
-
-.menu {
-  display: flex;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.leftWrapper {
-  display: flex;
-  gap: styles-theme-variables.$dimension-2m;
-  padding: styles-theme-variables.$dimension-4m 0;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-}
-
-.leftTop {
-  display: flex;
-  flex-direction: column;
-  gap: styles-theme-variables.$dimension-1m;
-  flex-grow: 1;
-}
-
 .footerLinks {
   display: flex;
   flex-direction: column;
-  padding-left: styles-theme-variables.$dimension-050m;
+  padding-left: ste.$dimension-050m;
 }
 
 .footerLinksDivider {
-  padding: styles-theme-variables.$dimension-1m 0;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: styles-theme-variables.$dimension-2m;
-  padding-left: styles-theme-variables.$dimension-050m;
-  padding-top: styles-theme-variables.$dimension-1m;
-}
-
-.right {
-  display: flex;
-  flex-direction: column;
-  gap: styles-theme-variables.$dimension-2m;
-  flex-grow: 1;
-  min-width: 0;
-}
-
-.rightContent {
-  display: flex;
-  flex-direction: column;
-  gap: styles-theme-variables.$dimension-2m;
-  padding: styles-theme-variables.$dimension-4m styles-theme-variables.$dimension-4m styles-theme-variables.$dimension-4m styles-theme-variables.$dimension-2m;
+  padding: ste.$dimension-1m 0;
 }
 
 .noData {
-  @include styles-theme-variables.composite-var(styles-theme-variables.$sans-body-l);
+  @include ste.composite-var(ste.$sans-body-l);
 
-  color: styles-theme-variables.$sys-neutral-text-light;
+  color: ste.$sys-neutral-text-light;
   display: flex;
   justify-content: center;
-  padding: styles-theme-variables.$dimension-2m;
+  padding: ste.$dimension-2m;
 }
 
 .content {
-  padding: 0 16px 16px;
-  background-color: styles-theme-variables.$sys-neutral-background;
+  padding: 2px 16px 16px;
+  background-color: ste.$sys-neutral-background;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -100,6 +46,48 @@ div.trigger {
   }
 }
 
-.nestedList {
-  padding: 0 8px;
+$vPadding: calc(#{ste.$dimension-1m} + #{ste.$size-button-m});
+
+.searchWrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: ste.$sys-neutral-text-main;
+}
+
+.search {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+  transition-duration: 300ms;
+
+  width: 100%;
+  max-width: ste.$size-button-m;
+  box-sizing: border-box;
+
+  opacity: 0;
+
+  &[data-transition-status='entering'],
+  &[data-transition-status='entered'] {
+    max-width: calc(100% - #{$vPadding});
+    right: $vPadding;
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+.searchButton {
+  // TODO: почему-то сломался порядок стилей при интеграции компонента в сервис хедера
+  &[data-appearance='primary'] {
+    background-color: ste.$sys-neutral-background2-level;
+  }
 }

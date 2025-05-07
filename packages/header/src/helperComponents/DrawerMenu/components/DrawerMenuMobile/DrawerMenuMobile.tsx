@@ -1,26 +1,37 @@
 import { MouseEvent, useCallback, useMemo, useState } from 'react';
 
 import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
+import { SearchSVG, VerticalMenuRightCloseSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
-import { ButtonFunction } from '@snack-uikit/button';
+import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { ButtonElevated, ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { DrawerCustom } from '@snack-uikit/drawer';
 import { List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { Search } from '@snack-uikit/search';
+import { Typography } from '@snack-uikit/typography';
 
 import { getSelectProductListProps } from '../../../../helpers';
-import { ProductOption } from '../../../../types';
+import { Organization, ProductOption } from '../../../../types';
 import { extractAppNameFromId } from '../../../../utils';
 import { MarketplaceBannerCard } from '../../../MarketplaceBannerCard';
 import { ReferralBannerCard } from '../../../ReferralBannerCard';
+import { SelectMenu, SelectProps } from '../../../SelectMenu';
 import { useLinks } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
 import { ProductSelectTrigger } from '../ProductSelectTrigger';
-import { useLinksScrollToSelected } from './hooks';
+import { useLinksScrollToSelected, useSearchAnimation } from './hooks';
 import styles from './styles.module.scss';
+
+type DrawerMenuMobileProps = DrawerMenuProps & {
+  isProjectMenuOpen: boolean;
+  handleProjectMenuOpen(open: boolean): void;
+  select?: Pick<SelectProps, 'projects' | 'onProjectChange' | 'selectedProject' | 'closeDropdown' | 'onOpenChange'>;
+  organizations?: Organization[];
+};
 
 export function DrawerMenuMobile({
   open,
@@ -36,8 +47,12 @@ export function DrawerMenuMobile({
   onReferralBannerClick,
   onSearchChange,
   hideProductSelect = false,
+  handleProjectMenuOpen,
+  isProjectMenuOpen,
+  select,
+  organizations,
   ...rest
-}: DrawerMenuProps) {
+}: DrawerMenuMobileProps) {
   const { t } = useLocale('Header');
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
@@ -49,20 +64,24 @@ export function DrawerMenuMobile({
     setSearchValue,
   });
 
+  const { searchRef, animationState, toggleSearchActive, isSearchActive, searchInputTabIndex } = useSearchAnimation();
+
   const hasChoice = useMemo(
     () => visibleProducts.reduce((acc, group) => acc + group.items.length, 0) > 1,
     [visibleProducts],
   );
 
-  const [innerOpen, setInnerOpen] = useState(false);
+  const [platformSelectOpen, setPlatformSelectOpen] = useState(false);
 
-  const toggleInnerDrawer = () =>
-    setInnerOpen(prev => {
+  const togglePlatformSelect = () =>
+    setPlatformSelectOpen(prev => {
       if (!prev && !hasChoice) {
         return false;
       }
       return !prev;
     });
+
+  const toggleProjectSelect = () => handleProjectMenuOpen(!isProjectMenuOpen);
 
   const searchChangeHandler = useCallback(
     (value: string) => {
@@ -92,11 +111,17 @@ export function DrawerMenuMobile({
 
   const onProductChange = useCallback(
     (product: ProductOption) => {
-      setInnerOpen(false);
+      setPlatformSelectOpen(false);
       onProductChangeProp(product);
     },
     [onProductChangeProp],
   );
+
+  const onSelectOpenChange = (open: boolean) => {
+    if (!open) {
+      toggleProjectSelect();
+    }
+  };
 
   return (
     <>
@@ -107,21 +132,6 @@ export function DrawerMenuMobile({
         position='left'
         size='s'
         push={{ distance: 8 }}
-        nestedDrawer={
-          <DrawerCustom open={innerOpen} onClose={toggleInnerDrawer} position='left'>
-            <DrawerCustom.Header title={t('platforms')} className={styles.nestedHeader} />
-
-            <List
-              {...getSelectProductListProps({
-                ...rest,
-                allProducts: visibleProducts,
-                onProductChange,
-              })}
-              className={styles.nestedList}
-              size='m'
-            />
-          </DrawerCustom>
-        }
       >
         <DrawerCustom.Header title={t('navigation')} className={styles.nestedHeader} />
 
@@ -131,19 +141,52 @@ export function DrawerMenuMobile({
               <ProductSelectTrigger
                 selectedProduct={rest.selectedProduct}
                 className={styles.trigger}
-                onClick={toggleInnerDrawer}
+                onClick={togglePlatformSelect}
                 hasChoice={hasChoice}
               />
             )}
 
-            {leftSectionLinks && (
-              <Search
-                size='m'
-                placeholder={t('searchByServices')}
-                value={searchValue}
-                onChange={searchChangeHandler}
-                data-test-id='header__drawer-menu__search'
+            {select && (
+              <ProductSelectTrigger
+                selectedProduct={{
+                  id: select.selectedProject?.id ?? '',
+                  name: select.selectedProject?.name ?? '',
+                  category: t('project'),
+                }}
+                className={styles.trigger}
+                onClick={toggleProjectSelect}
+                hasChoice
               />
+            )}
+
+            {leftSectionLinks && (
+              <div className={styles.searchWrap}>
+                <Typography.SansTitleM>{t('services')}</Typography.SansTitleM>
+
+                <div
+                  className={styles.search}
+                  data-transition-status={animationState.status}
+                  data-is-mounted={animationState.isMounted || undefined}
+                >
+                  <Search
+                    size='m'
+                    placeholder={t('searchByServices')}
+                    value={searchValue}
+                    onChange={searchChangeHandler}
+                    data-test-id='header__drawer-menu__search'
+                    ref={searchRef}
+                    tabIndex={searchInputTabIndex}
+                  />
+                </div>
+
+                <ButtonElevated
+                  size='m'
+                  className={styles.searchButton}
+                  icon={isSearchActive ? <VerticalMenuRightCloseSVG /> : <SearchSVG />}
+                  onClick={toggleSearchActive}
+                  data-test-id='header__drawer-menu__close-search-icon'
+                />
+              </div>
             )}
 
             {!searchValue && (
@@ -155,6 +198,7 @@ export function DrawerMenuMobile({
                     isMobile
                   />
                 )}
+
                 {onReferralBannerClick && (
                   <ReferralBannerCard
                     title={t('referralBannerTitle')}
@@ -223,6 +267,24 @@ export function DrawerMenuMobile({
           </div>
         </Scroll>
       </DrawerCustom>
+
+      <MobileModalCustom open={platformSelectOpen} onClose={togglePlatformSelect} closeButtonEnabled>
+        <MobileModalCustom.Header title={t('platforms')} />
+
+        <List
+          {...getSelectProductListProps({
+            ...rest,
+            allProducts: visibleProducts,
+            onProductChange,
+          })}
+          // className={styles.nestedList}
+          size='l'
+        />
+      </MobileModalCustom>
+
+      <MobileModalCustom open={isProjectMenuOpen} onClose={toggleProjectSelect}>
+        <SelectMenu mobile organizations={organizations} {...select} onOpenChange={onSelectOpenChange} />
+      </MobileModalCustom>
     </>
   );
 }

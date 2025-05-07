@@ -15,6 +15,7 @@ export type Organization = {
   id: string;
   name: string;
   new?: boolean;
+  type: string;
   partner?: boolean;
   actions?: BaseItemProps[];
 };
@@ -22,6 +23,7 @@ export type Organization = {
 export type Project = {
   id: string;
   name: string;
+  createdAt: string;
   onEdit?(): void;
   actions?: BaseItemProps[];
 };
@@ -92,12 +94,6 @@ export type Platform = {
   name: string;
   logo: ReactElement;
   hidden?: boolean;
-};
-
-export type Workspace = {
-  id: string;
-  name: string;
-  tag?: ReactElement;
 };
 
 type ValueOf<T> = T[keyof T];

@@ -9,8 +9,8 @@ import { ThemeMode } from '../../../types';
 
 type UseWhatNewMenu = {
   closeUserMenu(): void;
-  onWhatsNewClick: (() => void) | undefined;
-  onThemeSelectorClick?: () => void;
+  onWhatsNewClick?(): void;
+  onThemeSelectorClick?(): void;
   themeMode?: {
     value: ThemeMode;
     onChange(value: ThemeMode): void;

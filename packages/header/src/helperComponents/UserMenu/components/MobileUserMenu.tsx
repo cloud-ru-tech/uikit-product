@@ -1,68 +1,35 @@
 import { MouseEvent, ReactNode, useCallback, useMemo, useState } from 'react';
 
-import { ChevronRightSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
-import { DrawerCustom } from '@snack-uikit/drawer';
+import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
 import { ItemProps, List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 
 import { isDividerItem, ProductHeaderProps } from '../../../components/ProductHeader';
 import { useGetThemeModeOptions } from '../../../hooks';
-import { DIVIDER_SETTING_OPTION_ID, Platform, ProductOption, Workspace } from '../../../types';
+import { DIVIDER_SETTING_OPTION_ID } from '../../../types';
 import { extractAppNameFromId } from '../../../utils';
-import { SelectMenu, SelectMenuTrigger } from '../../SelectMenu';
 import { useAlertMenu, useGeneralMenu, useLogoutMenu, useOrganizationsMenu, useProfileMenu } from '../hooks';
 import styles from '../styles.module.scss';
-import { UserMenuProps } from '../types';
+import { DefaultUserMenuProps, UserMenuProps } from '../types';
 import { getPatchedListItems } from '../utils';
 import { MobileUserMenuDrawer } from './MobileUserMenuDrawer';
 
-type DefaultMobileUserMenuProps = Pick<
-  ProductHeaderProps,
-  | 'select'
-  | 'organizations'
-  | 'selectedOrganization'
-  | 'onOrganizationChange'
-  | 'onOrganizationAdd'
-  | 'onSelectOpenChange'
-  | 'settings'
-> & {
+type DefaultMobileUserMenuProps = Pick<ProductHeaderProps, 'organizations' | 'settings'> & {
   userMenu: UserMenuProps;
-  setIsOpenUserMenu: (v: boolean) => void;
+  setIsOpenUserMenu(v: boolean): void;
   isUserMenuOpen: boolean;
   closeMainMenu: () => void;
-  isProjectMenuOpen: boolean;
-  setIsProjectMenuOpen: (v: boolean) => void;
 };
 
 export function DefaultMobileUserMenu({
-  select,
   organizations,
-  selectedOrganization,
-  onOrganizationChange,
-  onOrganizationAdd: onOrganizationAddProp,
   userMenu,
   settings,
   setIsOpenUserMenu,
   isUserMenuOpen,
   closeMainMenu,
-  setIsProjectMenuOpen,
-  isProjectMenuOpen,
-  onSelectOpenChange,
 }: DefaultMobileUserMenuProps) {
-  const {
-    platforms,
-    selectedProject,
-    onPlatformChange,
-    onProjectChange,
-    selectedPlatform,
-    projectAddButton: projectAddButtonProp,
-    projects,
-    workspaces,
-    projectsEmptyState,
-    onAccessRequestClick,
-  } = select ?? {};
-
   const { t } = useLocale('Header');
   const isCustomItemsMode = 'customMenuItems' in userMenu;
 
@@ -75,14 +42,6 @@ export function DefaultMobileUserMenu({
 
   const [isThemeModeMenuOpen, setIsThemeModeMenuOpen] = useState(false);
 
-  const handleProjectMenuOpen = useCallback(
-    (isOpen: boolean) => {
-      setIsProjectMenuOpen(isOpen);
-      onSelectOpenChange?.(isOpen);
-    },
-    [onSelectOpenChange, setIsProjectMenuOpen],
-  );
-
   const onThemeSelectorClick = useCallback(() => {
     setIsThemeModeMenuOpen(true);
   }, []);
@@ -92,47 +51,17 @@ export function DefaultMobileUserMenu({
   });
 
   const onOrganizationAdd = useMemo(() => {
-    if (!onOrganizationAddProp) return undefined;
+    if (!(userMenu as DefaultUserMenuProps).onOrganizationAdd) return undefined;
 
     return () => {
       closeMainMenu();
       closeUserMenu();
-      onOrganizationAddProp();
+      (userMenu as DefaultUserMenuProps).onOrganizationAdd?.();
     };
-  }, [closeMainMenu, closeUserMenu, onOrganizationAddProp]);
+  }, [closeMainMenu, closeUserMenu, userMenu]);
 
-  const workspacesOptions = useMemo(
-    () =>
-      workspaces
-        ? {
-            ...workspaces,
-            onWorkspaceChange(value: Workspace) {
-              closeMainMenu();
-              closeUserMenu();
-              workspaces.onWorkspaceChange?.(value);
-            },
-            onWorkspaceAdd() {
-              closeMainMenu();
-              closeUserMenu();
-              workspaces.onWorkspaceAdd?.();
-            },
-          }
-        : undefined,
-    [closeMainMenu, closeUserMenu, workspaces],
-  );
-
-  const projectAddButton = useMemo(() => {
-    if (!projectAddButtonProp) return undefined;
-
-    return {
-      ...projectAddButtonProp,
-      onClick() {
-        closeMainMenu();
-        closeUserMenu();
-        projectAddButtonProp.onClick();
-      },
-    };
-  }, [closeMainMenu, closeUserMenu, projectAddButtonProp]);
+  const topAlertMenu = useAlertMenu('topAlert' in userMenu ? userMenu?.topAlert : undefined, false);
+  const bottomAlertMenu = useAlertMenu('bottomAlert' in userMenu ? userMenu?.bottomAlert : undefined);
 
   const profileMenu = useProfileMenu({
     user: userMenu?.user,
@@ -140,7 +69,7 @@ export function DefaultMobileUserMenu({
     onProfileManagementClick: 'onProfileManagementClick' in userMenu ? userMenu?.onProfileManagementClick : undefined,
     profileItemWrapRender: 'profileItemWrapRender' in userMenu ? userMenu?.profileItemWrapRender : undefined,
     closeUserMenu,
-    hasDivider: Boolean(select),
+    hasDivider: Boolean(topAlertMenu?.length),
   });
 
   const generalMenu = useGeneralMenu({
@@ -152,11 +81,9 @@ export function DefaultMobileUserMenu({
   const organizationMenu = useOrganizationsMenu({
     organizations,
     onOrganizationAdd,
-    onOrganizationChange,
+    onOrganizationChange: (userMenu as DefaultUserMenuProps).onOrganizationChange,
     closeUserMenu,
   });
-
-  const alertMenu = useAlertMenu('alert' in userMenu ? userMenu?.alert : undefined);
 
   const logoutMenu = useLogoutMenu({
     onLogout: 'onLogout' in userMenu ? userMenu?.onLogout : undefined,
@@ -166,36 +93,21 @@ export function DefaultMobileUserMenu({
   const items = useMemo(() => {
     const items: ItemProps[] = [];
 
-    if (select) {
-      const { selectedProject } = select;
-
-      items.push({
-        content: (
-          <div className={styles.select} data-test-id='header__select'>
-            <SelectMenuTrigger selectedProject={selectedProject} open={isProjectMenuOpen} showIcon={false} />
-          </div>
-        ),
-        onClick: () => {
-          handleProjectMenuOpen(true);
-        },
-        afterContent: <ChevronRightSVG />,
-        className: styles.breadcrumbs,
-      });
-    }
-
     if (isCustomItemsMode) {
       items.push({
         type: 'group',
         divider: Boolean(items.length),
         items: getPatchedListItems({ items: userMenu.customMenuItems, callback: closeUserMenu }),
       });
+
       return items;
     }
 
+    items.push(...topAlertMenu);
     items.push(...profileMenu);
     items.push(...generalMenu);
     items.push(...organizationMenu);
-    items.push(...alertMenu);
+    items.push(...bottomAlertMenu);
     items.push(...logoutMenu);
 
     if (visibleSettings && visibleSettings.length > 0) {
@@ -238,67 +150,35 @@ export function DefaultMobileUserMenu({
 
     return items;
   }, [
-    select,
     isCustomItemsMode,
     profileMenu,
     generalMenu,
     organizationMenu,
-    alertMenu,
+    topAlertMenu,
+    bottomAlertMenu,
     logoutMenu,
     visibleSettings,
-    isProjectMenuOpen,
-    handleProjectMenuOpen,
     userMenu,
     closeUserMenu,
   ]);
 
   return (
-    <MobileUserMenuDrawer
-      selection={isCustomItemsMode ? undefined : { mode: 'single', value: selectedOrganization?.id }}
-      setIsOpen={setIsOpenUserMenu}
-      items={items}
-      isOpen={isUserMenuOpen}
-      nestedDrawer={
-        <>
-          <DrawerCustom open={isProjectMenuOpen} onClose={() => setIsProjectMenuOpen(false)} position='left'>
-            <DrawerCustom.Header title={t('platforms')} className={styles.nestedHeader} />
-            <Scroll>
-              {select && (
-                <div className={styles.selectGroup}>
-                  <SelectMenu
-                    organizations={organizations}
-                    selectedOrganization={selectedOrganization}
-                    onOrganizationChange={item => onOrganizationChange?.(item, 'select')}
-                    onOrganizationAdd={onOrganizationAdd}
-                    projects={projects}
-                    selectedProject={selectedProject ?? ({} as ProductOption)}
-                    onProjectChange={onProjectChange}
-                    projectAddButton={projectAddButton}
-                    platforms={platforms}
-                    selectedPlatform={selectedPlatform ?? ({} as Platform)}
-                    onPlatformChange={onPlatformChange}
-                    workspaces={workspacesOptions}
-                    onAccessRequestClick={onAccessRequestClick}
-                    projectsEmptyState={projectsEmptyState}
-                    mobile
-                  />
-                </div>
-              )}
-            </Scroll>
-          </DrawerCustom>
+    <>
+      <MobileUserMenuDrawer
+        selection={isCustomItemsMode ? undefined : { mode: 'single', value: userMenu.selectedOrganization?.id }}
+        setIsOpen={setIsOpenUserMenu}
+        items={items}
+        isOpen={isUserMenuOpen}
+      />
 
-          {'themeMode' in userMenu && themeModeOptions && (
-            <DrawerCustom open={isThemeModeMenuOpen} onClose={() => setIsThemeModeMenuOpen(false)} position='left'>
-              <DrawerCustom.Header title={t('themeModeLabel')} className={styles.nestedHeader} />
-              <Scroll>
-                <div className={styles.selectGroup}>
-                  <List items={themeModeOptions} selection={{ mode: 'single' }} />
-                </div>
-              </Scroll>
-            </DrawerCustom>
-          )}
-        </>
-      }
-    />
+      {'themeMode' in userMenu && themeModeOptions && (
+        <MobileModalCustom open={isThemeModeMenuOpen} onClose={() => setIsThemeModeMenuOpen(false)} closeButtonEnabled>
+          <MobileModalCustom.Header title={t('themeModeLabel')} className={styles.nestedHeader} />
+          <Scroll>
+            <List items={themeModeOptions} size='l' selection={{ mode: 'single' }} />
+          </Scroll>
+        </MobileModalCustom>
+      )}
+    </>
   );
 }

@@ -4,7 +4,7 @@ import { MouseEvent, useRef, useState } from 'react';
 import { useEventHandler } from '@sbercloud/uikit-product-utils';
 import { isBrowser } from '@snack-uikit/utils';
 
-import { LinksGroup } from '../../../../types';
+import { LinksGroup } from '../../../../../types';
 
 type UseScrollProps = {
   links?: LinksGroup[];

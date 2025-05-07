@@ -14,11 +14,12 @@ import {
 import { PageServices } from '@sbercloud/uikit-product-page-layout';
 import { LayoutType } from '@sbercloud/uikit-product-utils';
 import { HotSpotProps } from '@snack-uikit/hot-spot';
-import { Tag } from '@snack-uikit/tag';
+import { InfoFilledSVG } from '@snack-uikit/icons';
 import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import {
+  DefaultUserMenuProps,
   DIVIDER_SETTING_OPTION_ID,
   Header,
   HEADER_LOGO_MODE,
@@ -41,8 +42,6 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   customLogo: boolean;
   logoMode?: HeaderLogoMode;
   showVendorLogo: boolean;
-  showWorkspaces: boolean;
-  showMLSpaceAccessRequestButton: boolean;
   showPagePath: boolean;
   showSettings: boolean;
   showHelpMenu: boolean;
@@ -63,8 +62,6 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
 
   showAddOrganization: boolean;
 
-  showPlatformsLoading: boolean;
-
   showLinks: boolean;
   showFooterLinks: boolean;
   showMarketplaceBanner: boolean;
@@ -73,6 +70,9 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showSinglePlatform: boolean;
 
   showProductSelect: boolean;
+
+  projectsCatalogAmount: number;
+  showProjectsLoading: boolean;
 };
 
 const EMPTY_ON_CLICK = () => {};
@@ -93,27 +93,59 @@ const PROJECT_ACTIONS = [
   },
 ];
 
-const DEFAULT_PROJECT = { id: '1_1', name: 'Проект 1', actions: PROJECT_ACTIONS };
+const DEFAULT_PROJECT = { id: '1_1', name: 'Проект 1', actions: PROJECT_ACTIONS, createdAt: new Date().toString() };
+const PROJECTS = [
+  {
+    id: '1',
+    heading: 'Folder 1',
+    items: [
+      DEFAULT_PROJECT,
+      { id: '1_2', name: 'Проект 2', onEdit: () => {}, actions: PROJECT_ACTIONS, createdAt: new Date().toString() },
+    ],
+  },
+  {
+    id: '2',
+    heading: 'Folder 2',
+    items: [
+      { id: '2_1', name: 'Проект 3', actions: PROJECT_ACTIONS, createdAt: new Date().toString() },
+      {
+        id: '2_2',
+        name: 'W'.repeat(26),
+        actions: PROJECT_ACTIONS,
+        onEdit: () => {},
+        createdAt: new Date().toString(),
+      },
+    ],
+  },
+  {
+    id: '3',
+    heading: 'Long Long Long Long Long Long Long Long Long Long name of the Folder',
+    items: [
+      { id: '3_1', name: 'Проект 5', actions: PROJECT_ACTIONS, createdAt: new Date().toString() },
+      {
+        id: '3_2',
+        name: 'Проект 6 с очень очень очень очень длинным названием',
+        actions: PROJECT_ACTIONS,
+        createdAt: new Date().toString(),
+      },
+      {
+        id: '3_3',
+        name: 'Проект 7 с очень длинным названием',
+        actions: PROJECT_ACTIONS,
+        createdAt: new Date().toString(),
+      },
+    ],
+  },
+  {
+    id: '4',
+    heading: 'Large group',
+    items: new Array(10000)
+      .fill(0)
+      .map((_, index) => ({ id: `4_${index}`, name: `Проект 4_${index}`, createdAt: new Date().toString() })),
+  },
+];
+
 const DEFAULT_PLATFORM = { id: '1', name: 'Evolution', logo: <EvolutionPlatformLogo /> };
-const WORKSPACES = {
-  selectedWorkspace: { id: '1', name: 'Workspace 1' },
-  list: [
-    {
-      id: '1',
-      name: 'Workspace 1',
-      tag: (
-        <Tooltip tip='This workspace is deprecated'>
-          <Tag label='Deprecated' appearance='neutral' />
-        </Tooltip>
-      ),
-    },
-    { id: '2', name: 'Workspace 2' },
-    { id: '3', name: 'Workspace 3' },
-    { id: '4', name: 'W'.repeat(16) },
-  ],
-  onWorkspaceChange: () => {},
-  onWorkspaceAdd: () => {},
-};
 const DEFAULT_PRODUCT = { ...DEFAULT_PLATFORM, category: 'Облачная платформа' };
 
 const PRODUCT_HOT_SPOT: HotSpotProps = { enabled: true, pulse: true, appearance: 'primary' };
@@ -223,25 +255,22 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showNotificationError,
     userMenu,
     organizations,
-    showAddOrganization,
     showOrganizationInvite,
     showPartnerOrganization,
     showLinks,
     showFooterLinks,
     showMarketplaceBanner,
     showReferralBanner,
-    showPlatformsLoading,
     showSinglePlatform,
     showProductSelect,
+
+    projectsCatalogAmount,
+    showProjectsLoading,
     ...args
   }: StoryProps) {
-    const [organization, setOrganization] = useState(args.selectedOrganization);
+    const [organization, setOrganization] = useState((userMenu as DefaultUserMenuProps).selectedOrganization);
     const [project, setProject] = useState(args.select?.selectedProject ?? DEFAULT_PROJECT);
-    const [platform, setPlatform] = useState(args.select?.selectedPlatform ?? DEFAULT_PLATFORM);
     const [product, setProduct] = useState(args.drawerMenu.selectedProduct);
-    const [workspace, setWorkspace] = useState(
-      args.select?.workspaces?.selectedWorkspace ?? WORKSPACES.selectedWorkspace,
-    );
     const [selectedLink, setSelectedLink] = useState(args.drawerMenu.selectedLink);
 
     const [notifyCards, setCards] = useState(args.notifications?.items || []);
@@ -268,18 +297,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     if (args.select) {
       args.select.selectedProject = project;
       args.select.onProjectChange = setProject;
-      args.select.selectedPlatform = platform;
-      args.select.onPlatformChange = setPlatform;
-      args.select.platformsLoading = showPlatformsLoading;
-      args.select.onAccessRequestClick = args.showMLSpaceAccessRequestButton ? () => {} : undefined;
-      args.select.workspaces = args.showWorkspaces
-        ? {
-            list: args.showMLSpaceAccessRequestButton ? [] : WORKSPACES.list,
-            selectedWorkspace: workspace,
-            onWorkspaceChange: setWorkspace,
-            onWorkspaceAdd: () => {},
-          }
-        : undefined;
     }
 
     args.drawerMenu.allProducts = showSinglePlatform ? ALL_PRODUCTS_SINGLE : ALL_PRODUCTS_MULTI;
@@ -288,11 +305,11 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       const allOrganizations = [...(organizations ?? [])];
 
       if (showOrganizationInvite) {
-        allOrganizations.push({ id: '4', name: 'ООО Инвайт', new: true });
+        allOrganizations.push({ id: '4', name: 'ООО Инвайт', new: true, type: 'CUSTOMER_TYPE_LEGAL' });
       }
 
       if (showPartnerOrganization) {
-        allOrganizations.push({ id: '5', name: 'ИП Реферал', partner: true });
+        allOrganizations.push({ id: '5', name: 'ИП Реферал', partner: true, type: 'CUSTOMER_TYPE_LEGAL' });
       }
 
       return allOrganizations;
@@ -350,6 +367,9 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                 onOpenButtonClick: closeInvitesPopover,
               }
             : undefined,
+          onOrganizationChange: setOrganization,
+          selectedOrganization: organization,
+          organizations,
         };
 
         if (showCustomUserMenu) {
@@ -378,12 +398,15 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
             value: themeMode,
             onChange: setThemeMode,
           },
-          alert: 'alert' in userMenu && showUserMenuAlert ? userMenu.alert : undefined,
+          topAlert: 'topAlert' in userMenu && showUserMenuAlert ? userMenu.topAlert : undefined,
+          bottomAlert: 'bottomAlert' in userMenu && showUserMenuAlert ? userMenu.bottomAlert : undefined,
         };
       }
     }, [
       closeInvitesPopover,
       closePartnerOrganizationPopover,
+      organization,
+      organizations,
       showCustomUserMenu,
       showOrganizationInvite,
       showOrganizationInvitePopover,
@@ -398,14 +421,29 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       userMenu,
     ]);
 
+    const projects = useMemo(() => {
+      if (projectsCatalogAmount === 0) {
+        return [];
+      }
+
+      return args.select?.projects?.slice(0, projectsCatalogAmount);
+    }, [args.select?.projects, projectsCatalogAmount]);
+
     return (
       <div className={styles.fullPageHeight}>
         <Header
           {...args}
           layoutType={layoutType}
-          selectedOrganization={organization}
-          onOrganizationChange={setOrganization}
-          select={showSelect ? args.select : undefined}
+          select={
+            showSelect
+              ? {
+                  ...args.select,
+                  projects,
+                  selectedOrganization: organization,
+                  projectsLoading: showProjectsLoading,
+                }
+              : undefined
+          }
           pagePath={showPagePath ? args.pagePath : undefined}
           logo={logo}
           vendorLogo={showVendorLogo ? args.vendorLogo : undefined}
@@ -434,7 +472,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
           }
           userMenu={userMenuParams}
           organizations={orgs}
-          onOrganizationAdd={showAddOrganization ? args.onOrganizationAdd : undefined}
           drawerMenu={{
             ...args.drawerMenu,
             selectedLink,
@@ -487,7 +524,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 
 export const ARGS: StoryProps = {
   showSelect: true,
-  showWorkspaces: false,
 
   showVendorLogo: false,
   vendorLogo: {
@@ -496,49 +532,25 @@ export const ARGS: StoryProps = {
     pageUrl: EMPTY_HREF,
   },
 
-  showMLSpaceAccessRequestButton: false,
   customLogo: false,
   logoMode: 'prod',
+  projectsCatalogAmount: PROJECTS.length,
+  showProjectsLoading: false,
   select: {
-    platforms: [
-      DEFAULT_PLATFORM,
-      { id: '2', name: 'Advanced', logo: <AdvancedPlatformLogo /> },
-      { id: '3', name: 'MLSpace', logo: <MLSpacePlatformLogo /> },
-      { id: '4', name: 'Enterprise', logo: <EnterprisePlatformLogo /> },
-    ],
-    selectedPlatform: DEFAULT_PLATFORM,
-    projects: [
-      {
-        id: '1',
-        heading: 'Folder 1',
-        items: [DEFAULT_PROJECT, { id: '1_2', name: 'Проект 2', onEdit: () => {}, actions: PROJECT_ACTIONS }],
-      },
-      {
-        id: '2',
-        heading: 'Folder 2',
-        items: [
-          { id: '2_1', name: 'Проект 3', actions: PROJECT_ACTIONS },
-          { id: '2_2', name: 'W'.repeat(26), actions: PROJECT_ACTIONS, onEdit: () => {} },
-        ],
-      },
-      {
-        id: '3',
-        heading: 'Long Long Long Long Long Long Long Long Long Long name of the Folder',
-        items: [
-          { id: '3_1', name: 'Проект 5', actions: PROJECT_ACTIONS },
-          { id: '3_2', name: 'Проект 6 с очень очень очень очень длинным названием', actions: PROJECT_ACTIONS },
-          { id: '3_3', name: 'Проект 7 с очень длинным названием', actions: PROJECT_ACTIONS },
-        ],
-      },
-      {
-        id: '4',
-        heading: 'Large group',
-        items: new Array(10000).fill(0).map((_, index) => ({ id: `4_${index}`, name: `Проект 4_${index}` })),
-      },
-    ],
+    projects: PROJECTS,
     selectedProject: DEFAULT_PROJECT,
     projectAddButton: {
-      onClick: () => {},
+      onClick: () => {
+        window.alert('PROJECT_ADD');
+      },
+    },
+    projectsEmptyState: {
+      icon: {
+        icon: InfoFilledSVG,
+        decor: true,
+        appearance: 'primary',
+      },
+      description: `Здесь появятся проекты, как только администратор организации предоставит вам к ним доступ.\n\nКонтакты администратора: <контакты>`,
     },
   },
 
@@ -626,7 +638,6 @@ export const ARGS: StoryProps = {
   showOrganizationInvitePopover: false,
   showPartnerOrganization: false,
   showPartnerOrganizationPopover: false,
-  showPlatformsLoading: false,
   userMenu: {
     user: DEFAULT_USER,
     indicator: 'green',
@@ -639,7 +650,7 @@ export const ARGS: StoryProps = {
     onLogout: () => {
       toaster.userAction.success({ label: 'Logout clicked' });
     },
-    alert: {
+    bottomAlert: {
       size: 's',
       appearance: 'info',
       icon: false,
@@ -653,18 +664,29 @@ export const ARGS: StoryProps = {
         },
       },
     },
+    topAlert: {
+      size: 's',
+      appearance: 'info',
+      icon: true,
+      description: 'Теперь проекты переключаются в меню навигации слева в шапке консоли',
+      onClose: () => {},
+    },
+    selectedOrganization: {
+      id: '1',
+      name: 'Облачные технологии',
+      type: 'CUSTOMER_TYPE_LEGAL',
+    },
+    onOrganizationAdd: () => {
+      toaster.userAction.success({ label: 'Organization add clicked' });
+    },
   },
 
   showAddOrganization: true,
   organizations: [
-    { id: '1', name: 'Облачные технологии', actions: PROJECT_ACTIONS },
-    { id: '2', name: 'ИП Иванов И.И.' },
-    { id: '3', name: 'Очень-очень длинное название очень большой организации' },
+    { id: '1', name: 'Облачные технологии', actions: PROJECT_ACTIONS, type: 'CUSTOMER_TYPE_LEGAL' },
+    { id: '2', name: 'ИП Иванов И.И.', type: 'CUSTOMER_TYPE_LEGAL' },
+    { id: '3', name: 'Очень-очень длинное название очень большой организации', type: 'CUSTOMER_TYPE_LEGAL' },
   ],
-  selectedOrganization: { id: '1', name: 'Облачные технологии' },
-  onOrganizationAdd: () => {
-    toaster.userAction.success({ label: 'Organization add clicked' });
-  },
 
   showLinks: true,
   showFooterLinks: true,
@@ -857,10 +879,16 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   showSelect: { name: '[Story]: show header select', type: 'boolean' },
   select: { table: { disable: true } },
 
-  showPlatformsLoading: { name: '[Story]: show skeleton for platforms', type: 'boolean' },
+  projectsCatalogAmount: {
+    name: '[Story]: projects catalogs amount',
+    type: 'number',
+    control: { type: 'range', min: 0, max: PROJECTS.length },
+  },
 
-  showWorkspaces: { name: '[Story]: show workspaces', type: 'boolean' },
-  showMLSpaceAccessRequestButton: { name: '[Story]: show mlspace access request button', type: 'boolean' },
+  showProjectsLoading: {
+    name: '[Story]: projects loading state',
+    type: 'boolean',
+  },
 
   showNotificationError: { name: '[Story]: show notifications -> show error', type: 'boolean' },
 
@@ -923,9 +951,6 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   },
 
   organizations: { table: { disable: true } },
-  onOrganizationAdd: { table: { disable: true } },
-  onOrganizationChange: { table: { disable: true } },
-  selectedOrganization: { table: { disable: true } },
 
   showLinks: { name: '[Story]: show drawer -> links', type: 'boolean' },
   showFooterLinks: { name: '[Story]: show drawer -> footer links', type: 'boolean' },

@@ -1,0 +1,7 @@
+.footerButtonWrap {
+  padding: 0 10px;
+
+  &[data-mobile] {
+    padding: 0 12px;
+  }
+}

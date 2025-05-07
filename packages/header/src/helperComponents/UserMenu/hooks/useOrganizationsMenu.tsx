@@ -10,8 +10,8 @@ import { Organization } from '../../../types';
 
 type UseOrganizationProps = {
   organizations: Organization[] | undefined;
-  onOrganizationChange: ((value: Organization, source: 'user-menu' | 'select') => void) | undefined;
-  onOrganizationAdd: (() => void) | undefined;
+  onOrganizationChange?: (value: Organization, source: 'user-menu' | 'select') => void;
+  onOrganizationAdd?(): void;
   closeUserMenu(): void;
 };
 
@@ -26,32 +26,34 @@ export function useOrganizationsMenu({
   return useMemo(() => {
     const groupItem: GroupItemProps = {
       type: 'group',
-      items: [],
+      label: t('organizations'),
       divider: true,
       hidden: !(organizations?.length || onOrganizationAdd),
+      items:
+        organizations?.reduce<GroupItemProps['items']>((acc, organization) => {
+          acc.push({
+            'data-test-id': `header__user-menu__organization-${organization.id}`,
+            beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols shape='square' />,
+            afterContent: (
+              <>
+                {organization.new && <PromoTag text={t('organizationNewBadge')} appearance='green' />}
+
+                {organization.partner && <PromoTag text={t('partnerOrganizationBadge')} appearance='blue' />}
+              </>
+            ),
+            content: {
+              option: organization.name,
+            },
+            onClick: () => {
+              onOrganizationChange?.(organization, 'user-menu');
+              closeUserMenu();
+            },
+            id: organization.id,
+          });
+
+          return acc;
+        }, []) ?? [],
     };
-
-    organizations?.forEach(organization => {
-      groupItem.items.push({
-        'data-test-id': `header__user-menu__organization-${organization.id}`,
-        beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols shape='square' />,
-        afterContent: (
-          <>
-            {organization.new && <PromoTag text={t('organizationNewBadge')} appearance='green' />}
-
-            {organization.partner && <PromoTag text={t('partnerOrganizationBadge')} appearance='blue' />}
-          </>
-        ),
-        content: {
-          option: organization.name,
-        },
-        onClick: () => {
-          onOrganizationChange?.(organization, 'user-menu');
-          closeUserMenu();
-        },
-        id: organization.id,
-      });
-    });
 
     if (onOrganizationAdd) {
       groupItem.items.push({

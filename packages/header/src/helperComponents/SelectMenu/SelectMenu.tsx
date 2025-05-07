@@ -1,216 +1,305 @@
 import cn from 'classnames';
+import { createRef, RefObject, useCallback, useEffect, useMemo } from 'react';
 
-import { ChevronDownSVG, ChevronUpSVG, LockInterfaceSVG, PlusSVG } from '@sbercloud/uikit-product-icons';
+import { ArrowLeftSVG, ChevronDownSVG, ChevronUpSVG, OrganizationSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
-import { ButtonFilled } from '@snack-uikit/button';
+import { useAdaptiveChipChoice } from '@sbercloud/uikit-product-mobile-chips';
+import { Avatar } from '@snack-uikit/avatar';
+import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
-import { ListProps } from '@snack-uikit/list';
+import { BaseItemProps, List, ListProps } from '@snack-uikit/list';
+import { PromoTag } from '@snack-uikit/promo-tag';
+import { SearchPrivate } from '@snack-uikit/search-private';
 import { SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
-import { Organization, Platform, Project, Workspace } from '../../types';
-import { GroupSection, ItemsGroup } from '../GroupSection';
+import { useLocalStorage } from '../../hooks';
+import { Organization, Project } from '../../types';
+import {
+  SelectMenuFooterButton,
+  SelectMenuFooterButtonProps,
+  SelectMenuItemDroplist,
+  SelectMenuSkeletonItem,
+  SelectMenuSort,
+  SortVariant,
+} from './components';
+import { useSearch } from './hooks';
 import styles from './styles.module.scss';
+import { Item, ItemsGroup } from './types';
 
 export type SelectProps = {
   organizations?: Organization[];
   selectedOrganization?: Organization;
-  onOrganizationChange?(value: Organization, source: 'user-menu' | 'select'): void;
-  onOrganizationAdd?(): void;
+  onOrganizationChange?(value: Organization | undefined, source: 'user-menu' | 'select'): void;
 
   onOpenChange?(open: boolean): void;
 
   projects?: ItemsGroup<Project>[];
   projectsLoading?: boolean;
-  projectsSearchActive?: boolean;
-  onProjectsSearchActiveChange?(value: boolean): void;
   selectedProject?: Project;
   onProjectChange?(value: Project): void;
-  projectAddButton?: {
-    onClick(): void;
-    tooltip?: string;
-    disabled?: boolean;
-  };
+  projectAddButton?: Omit<SelectMenuFooterButtonProps, 'label'>;
 
   projectsEmptyState?: ListProps['noDataState'];
 
-  platforms?: Platform[];
-  selectedPlatform?: Platform;
-  onPlatformChange?(value: Platform): void;
-  platformsLoading?: boolean;
-
-  workspaces?: {
-    list: Workspace[];
-    selectedWorkspace?: Workspace;
-    loading?: boolean;
-    onWorkspaceChange(value: Workspace): void;
-    onWorkspaceAdd(): void;
-    emptyState?: ListProps['noDataState'];
-    searchActive?: boolean;
-    onSearchActiveChange?(value: boolean): void;
-    tooltip?: string;
-    disabled?: boolean;
-  };
-  onAccessRequestClick?(): void;
-
-  onClose?(): void;
-
   closeDropdown?(): void;
 };
-
-const divider = (
-  <div>
-    <Divider orientation='vertical' />
-  </div>
-);
 
 type SelectMenuProps = SelectProps & {
   mobile: boolean;
 };
 
 export function SelectMenu({
-  organizations,
+  organizations: organizationsProp,
   selectedOrganization,
   onOrganizationChange,
-  onOrganizationAdd,
 
   projects,
   selectedProject,
-  onProjectChange,
+  onProjectChange: onProjectChangeProp,
   projectsLoading,
   projectAddButton,
   projectsEmptyState,
-  projectsSearchActive,
-  onProjectsSearchActiveChange,
-
-  platforms,
-  selectedPlatform,
-  onPlatformChange,
-  platformsLoading,
-
-  workspaces,
-  onAccessRequestClick,
 
   closeDropdown,
 
   mobile,
+  onOpenChange,
 }: SelectMenuProps) {
   const { t } = useLocale('Header');
 
+  const AdaptiveChipChoice = useAdaptiveChipChoice({ layoutType: mobile ? 'mobile' : 'desktop' });
+
+  const itemRefs: Record<string, RefObject<HTMLElement>> = useMemo(() => ({}), []);
+
+  const noCatalogsInSort = projects && projects.length <= 1;
+
+  const [sort, setSort] = useLocalStorage<SortVariant>(
+    'header_projects_sort',
+    noCatalogsInSort ? SortVariant.DateDesc : SortVariant.ByCatalogs,
+  );
+
+  const organizations = useMemo(() => organizationsProp?.filter(org => !org.new), [organizationsProp]);
+
+  const { searchRef, searchValue, setSearchValue, filteredGroups } = useSearch({
+    groups: projects ?? [],
+    searchable: true,
+  });
+
+  useEffect(() => {
+    if (!mobile) {
+      searchRef.current?.focus();
+    }
+  }, [mobile, searchRef]);
+
+  const onProjectChange = useCallback(
+    (item: Item) => {
+      onProjectChangeProp?.(item);
+      closeDropdown?.();
+    },
+    [onProjectChangeProp, closeDropdown],
+  );
+
+  const handleItemMouseDown = useCallback(
+    ({ item }: { item: Item }) =>
+      () => {
+        onProjectChange?.(item);
+
+        if (searchValue.length > 0) {
+          setSearchValue('');
+
+          setTimeout(() => {
+            const selectedItem = itemRefs[item.id]?.current;
+            selectedItem?.scrollIntoView({ block: 'center' });
+          }, 0);
+        }
+      },
+    [itemRefs, onProjectChange, searchValue.length, setSearchValue],
+  );
+
+  const getItemRef = useCallback(
+    (id: string) => {
+      if (!itemRefs[id]) {
+        itemRefs[id] = createRef();
+      }
+
+      return itemRefs[id];
+    },
+    [itemRefs],
+  );
+
+  const mapProjectToListItem = useCallback(
+    (item: Item): BaseItemProps => {
+      const dataTestId = `header__select-group__item-${item.id}`;
+
+      return {
+        content: {
+          option: item.name,
+          truncate: { variant: 'middle' },
+        },
+        beforeContent: item.logo ?? (
+          <Avatar appearance='neutral' size='xs' name={item.name} showTwoSymbols shape='square' />
+        ),
+        afterContent: (
+          <>
+            {item.new && <PromoTag text={t('organizationNewBadge')} appearance='green' />}
+
+            {item.partner && <PromoTag text={t('partnerOrganizationBadge')} appearance='blue' />}
+
+            {item?.tag}
+
+            {item.actions && item.actions.length > 0 ? (
+              <SelectMenuItemDroplist actions={item.actions} dataTestId={dataTestId} onItemClick={closeDropdown} />
+            ) : undefined}
+          </>
+        ),
+        id: item.id,
+        onMouseDown: handleItemMouseDown({ item }),
+        'data-test-id': dataTestId,
+        itemRef: getItemRef(item.id),
+      };
+    },
+    [closeDropdown, getItemRef, handleItemMouseDown, t],
+  );
+
+  const items: ListProps['items'] = useMemo(() => {
+    if (sort === SortVariant.ByCatalogs) {
+      return filteredGroups.map(group => ({
+        label: filteredGroups.length > 1 ? group.heading : undefined,
+        truncate: { variant: 'middle' },
+        mode: 'secondary',
+        type: 'group',
+        items: group.items.map(mapProjectToListItem),
+      }));
+    }
+
+    let listItems = filteredGroups.flatMap(group => group.items);
+
+    switch (sort) {
+      case SortVariant.AlphabeticalDesc: {
+        listItems = listItems.toSorted((a, b) => a.name.localeCompare(b.name));
+        break;
+      }
+      case SortVariant.AlphabeticalAsc: {
+        listItems = listItems.toSorted((a, b) => b.name.localeCompare(a.name));
+        break;
+      }
+      case SortVariant.DateDesc: {
+        listItems = listItems.toSorted((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
+        break;
+      }
+      case SortVariant.DateAsc: {
+        listItems = listItems.toSorted((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+
+    return listItems.map(mapProjectToListItem);
+  }, [filteredGroups, mapProjectToListItem, sort]);
+
+  const organizationsOptions = useMemo(
+    () => organizations?.map(org => ({ value: org.id, label: org.name })),
+    [organizations],
+  );
+
+  const handleOrganizationChange = (value: string) => {
+    const organization = organizations?.find(org => org.id === value);
+
+    onOrganizationChange?.(organization, 'select');
+  };
+
+  const handleCloseMenu = () => onOpenChange?.(false);
+
+  if (!projects) return null;
+
   return (
-    <>
-      {organizations && (
-        <GroupSection
-          virtualized
-          className={styles.organizations}
-          title={t('organizations')}
-          groups={[{ id: '1', items: organizations }]}
-          truncateVariant='middle'
-          onItemChange={val => onOrganizationChange?.(val, 'select')}
-          selectedItem={selectedOrganization}
-          addItem={{ label: t('addOrganization'), handler: onOrganizationAdd }}
-          closeDropdown={closeDropdown}
-          data-test-id='header__select-group-organization'
-          avatarAppearance='red'
-          mobile={mobile}
+    <div
+      className={styles.section}
+      data-auto-height={items.length > 5 || false}
+      data-mobile={mobile || undefined}
+      data-test-id='header__select-project'
+    >
+      <div className={styles.headline} data-mobile={mobile || undefined}>
+        {mobile && <ButtonFunction icon={<ArrowLeftSVG />} size='l' onClick={handleCloseMenu} />}
+
+        <SearchPrivate
+          size={mobile ? 'l' : 'm'}
+          placeholder={t('searchProjectsPlaceholder')}
+          value={searchValue}
+          onChange={setSearchValue}
+          ref={searchRef}
+          data-test-id='header__select-project__search-input'
         />
-      )}
 
-      {projects && (
-        <>
-          {organizations && divider}
+        <SelectMenuSort
+          noCatalogs={noCatalogsInSort}
+          value={sort}
+          onChange={setSort}
+          mobile={mobile}
+          projectsLoading={projectsLoading}
+        />
+      </div>
 
-          <GroupSection
-            virtualized
-            className={styles.projects}
-            title={t('projects')}
-            searchable
-            searchActive={projectsSearchActive}
-            onSearchActiveChange={onProjectsSearchActiveChange}
-            searchPlaceholder={t('searchProjectsPlaceholder')}
-            groups={projects}
-            truncateVariant='middle'
-            onItemChange={onProjectChange}
-            selectedItem={selectedProject}
-            noDataState={projectsEmptyState}
-            addItem={
-              projectAddButton && {
-                label: t('addProject'),
-                handler: projectAddButton.onClick,
-                tooltip: projectAddButton.tooltip,
-                disabled: projectAddButton.disabled,
-              }
-            }
+      {organizationsOptions && organizationsOptions.length > 1 && (
+        <div className={styles.functionBar}>
+          <AdaptiveChipChoice.Single
+            icon={<OrganizationSVG />}
+            value={selectedOrganization?.id}
+            onChange={handleOrganizationChange}
+            options={organizationsOptions}
+            size={mobile ? 'm' : 's'}
             loading={projectsLoading}
-            closeDropdown={closeDropdown}
-            data-test-id='header__select-group-project'
-            avatarAppearance='neutral'
-            mobile={mobile}
           />
-        </>
+        </div>
       )}
 
-      {platforms && (
-        <>
-          {divider}
+      <Divider className={styles.divider} />
 
-          <GroupSection
-            className={styles.platforms}
-            title={t('platforms')}
-            groups={[{ id: '1', items: platforms }]}
-            onItemChange={onPlatformChange}
-            selectedItem={selectedPlatform}
-            loading={platformsLoading}
-            data-test-id='header__select-group-platform'
-            mobile={mobile}
-          />
+      {projectsLoading ? (
+        <>
+          <SelectMenuSkeletonItem />
+          <SelectMenuSkeletonItem />
+          <SelectMenuSkeletonItem />
         </>
-      )}
-
-      {workspaces && (
+      ) : (
         <>
-          {divider}
-
-          <GroupSection
+          <List
+            className={cn({ [styles.list]: mobile })}
             virtualized
-            className={styles.workspaces}
-            title={t('workspaces')}
-            groups={workspaces.list.length > 0 ? [{ id: '1', items: workspaces.list }] : []}
-            onItemChange={workspaces.onWorkspaceChange}
-            selectedItem={workspaces.selectedWorkspace}
-            loading={workspaces.loading}
-            noDataState={
-              onAccessRequestClick
-                ? {
-                    footer: (
-                      <ButtonFilled
-                        label={t('requestAccessWorkspacesLabel')}
-                        icon={<PlusSVG />}
-                        onClick={onAccessRequestClick}
-                      />
-                    ),
-                    description: t('requestAccessWorkspaces'),
-                    icon: { icon: LockInterfaceSVG, appearance: 'neutral' },
-                  }
-                : workspaces.emptyState
-            }
-            addItem={{
-              label: t('addWorkspace'),
-              handler: workspaces.onWorkspaceAdd,
-              tooltip: workspaces.tooltip,
-              disabled: workspaces.disabled,
+            scroll
+            scrollToSelectedItem
+            marker
+            size={mobile ? 'l' : 'm'}
+            selection={selectedProject?.id ? { mode: 'single', value: selectedProject.id } : undefined}
+            dataFiltered={searchValue.length > 0}
+            noDataState={{
+              description: t('noData'),
+              ...projectsEmptyState,
+              className: styles.noDataState,
             }}
-            data-test-id='header__select-group-workspace'
-            avatarAppearance='blue'
-            searchable
-            searchActive={workspaces.searchActive}
-            onSearchActiveChange={workspaces.onSearchActiveChange}
-            searchPlaceholder={t('searchWorkspacesPlaceholder')}
-            mobile={mobile}
+            noResultsState={{
+              description: t('noDataFound'),
+              className: styles.emptySearch,
+            }}
+            items={items}
+            pinBottom={
+              projectAddButton
+                ? [
+                    {
+                      content: <SelectMenuFooterButton {...projectAddButton} mobile={mobile} label={t('addProject')} />,
+                      className: styles.pinBottom,
+                      onClick: projectAddButton.onClick,
+                    },
+                  ]
+                : undefined
+            }
           />
         </>
       )}
-    </>
+    </div>
   );
 }
 
@@ -227,7 +316,6 @@ function SelectMenuTriggerSkeleton() {
 
 export function SelectMenuTrigger({
   selectedProject,
-  selectedWorkspace,
   open,
   showIcon = true,
   loading,
@@ -235,7 +323,6 @@ export function SelectMenuTrigger({
   entityClassName,
 }: {
   selectedProject?: Project;
-  selectedWorkspace?: Workspace;
   open: boolean;
   showIcon: boolean;
   loading?: boolean;
@@ -243,8 +330,8 @@ export function SelectMenuTrigger({
   entityClassName?: string;
 }) {
   const { t } = useLocale('Header');
-  const name = selectedWorkspace?.name ?? selectedProject?.name ?? '';
-  const entity = (selectedWorkspace?.name && t('workspace')) || (selectedProject?.name && t('project')) || '';
+  const name = selectedProject?.name ?? '';
+  const entity = (selectedProject?.name && t('project')) || '';
 
   return (
     <WithSkeleton skeleton={<SelectMenuTriggerSkeleton />} loading={loading}>

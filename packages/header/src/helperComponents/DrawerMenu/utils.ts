@@ -1,5 +1,5 @@
 import { FooterLink, InnerLink, LinksGroup, ProductOption } from '../../types';
-import { ItemsGroup } from '../GroupSection';
+import { ItemsGroup } from '../SelectMenu';
 
 export function filterHidden(item: FooterLink | InnerLink | ProductOption) {
   return !item.hidden;

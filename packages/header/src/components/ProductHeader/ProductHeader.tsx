@@ -41,7 +41,6 @@ export function isDividerItem<T extends object>(item: T | DividerItem): item is 
 export type ProductHeaderProps = WithSupportProps<
   {
     className?: string;
-    onSelectOpenChange?(open: boolean): void;
     drawerMenu: Pick<
       DrawerMenuProps,
       | 'links'
@@ -58,21 +57,16 @@ export type ProductHeaderProps = WithSupportProps<
     > & { onClose?(): void };
     select?: Pick<
       SelectProps,
-      | 'platforms'
-      | 'selectedPlatform'
-      | 'onPlatformChange'
-      | 'platformsLoading'
       | 'projects'
       | 'selectedProject'
       | 'projectsLoading'
-      | 'projectsSearchActive'
-      | 'onProjectsSearchActiveChange'
       | 'projectsEmptyState'
       | 'onProjectChange'
       | 'projectAddButton'
-      | 'workspaces'
-      | 'onAccessRequestClick'
-      | 'onClose'
+      | 'organizations'
+      | 'onOrganizationChange'
+      | 'selectedOrganization'
+      | 'onOpenChange'
     >;
     pagePath?: BreadcrumbsProps['items'];
     settings?: SettingOption[];
@@ -84,7 +78,7 @@ export type ProductHeaderProps = WithSupportProps<
     userMenu?: UserMenuProps;
     logo?: HeaderLogo;
     vendorLogo?: VendorLogo;
-  } & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> &
+  } & Pick<SelectProps, 'organizations'> &
     Pick<HeaderLayoutProps, 'homePageUrl' | 'onLogoClick' | 'showMainMenu' | 'disableMainMenu'>
 >;
 
@@ -110,11 +104,7 @@ export function ProductHeader({
   },
 
   select,
-  onSelectOpenChange,
   organizations,
-  selectedOrganization,
-  onOrganizationChange,
-  onOrganizationAdd,
 
   pagePath,
   financeButton,
@@ -223,16 +213,7 @@ export function ProductHeader({
         logo={logo}
         path={
           <>
-            {select && (
-              <Select
-                {...select}
-                onOpenChange={onSelectOpenChange}
-                organizations={organizations}
-                selectedOrganization={selectedOrganization}
-                onOrganizationChange={onOrganizationChange}
-                onOrganizationAdd={onOrganizationAdd}
-              />
-            )}
+            {select && <Select {...select} organizations={organizations} />}
 
             {pagePath && (
               <Breadcrumbs
@@ -278,13 +259,7 @@ export function ProductHeader({
               ('customMenuItems' in userMenu ? (
                 <UserMenuCustom {...userMenu} />
               ) : (
-                <UserMenu
-                  {...userMenu}
-                  organizations={organizations}
-                  selectedOrganization={selectedOrganization}
-                  onOrganizationAdd={onOrganizationAdd}
-                  onOrganizationChange={onOrganizationChange}
-                />
+                <UserMenu {...userMenu} organizations={organizations} />
               ))}
           </>
         }

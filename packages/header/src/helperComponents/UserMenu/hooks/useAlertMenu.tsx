@@ -5,21 +5,21 @@ import { GroupItemProps } from '@snack-uikit/list';
 
 export type UseAlertMenuProps = AlertProps | undefined;
 
-export function useAlertMenu(alertProps: UseAlertMenuProps) {
+export function useAlertMenu(alertProps: UseAlertMenuProps, divider = true) {
   return useMemo(() => {
+    if (!alertProps) return [];
+
     const groupItem: GroupItemProps = {
       type: 'group',
-      items: [],
-      divider: true,
-      hidden: !alertProps,
+      items: [
+        {
+          inactive: true,
+          content: <Alert {...alertProps} />,
+        },
+      ],
+      divider,
     };
 
-    if (alertProps) {
-      groupItem.items.push({
-        inactive: true,
-        content: <Alert {...alertProps} />,
-      });
-    }
     return [groupItem];
-  }, [alertProps]);
+  }, [alertProps, divider]);
 }

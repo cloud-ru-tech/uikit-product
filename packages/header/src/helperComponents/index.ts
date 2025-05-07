@@ -1,5 +1,4 @@
 export * from './icons';
-export * from './GroupSection';
 export * from './HeaderLayout';
 export * from './Notifications';
 export * from './UserMenu';

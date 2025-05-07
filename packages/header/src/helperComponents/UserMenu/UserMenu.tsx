@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 import { InvitePopover } from '../InvitePopover';
 import { PartnerPopover } from '../PartnerPopover';
@@ -22,10 +22,10 @@ export function UserMenu({
   profileItemWrapRender,
   partnerInvites,
   onWhatsNewClick,
-  alert,
+  bottomAlert,
 }: DefaultUserMenuProps) {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
-  const closeUserMenu = () => setIsUserMenuOpen(false);
+  const closeUserMenu = useCallback(() => setIsUserMenuOpen(false), []);
 
   const profileMenu = useProfileMenu({
     user,
@@ -44,7 +44,7 @@ export function UserMenu({
     closeUserMenu,
   });
 
-  const alertMenu = useAlertMenu(alert);
+  const alertMenu = useAlertMenu(bottomAlert);
 
   const logoutMenu = useLogoutMenu({ onLogout, closeUserMenu });
 

@@ -11,6 +11,7 @@ export type Item = {
   actions?: BaseItemProps[];
   new?: boolean;
   partner?: boolean;
+  createdAt: string;
 };
 
 export type ItemsGroup<T> = {

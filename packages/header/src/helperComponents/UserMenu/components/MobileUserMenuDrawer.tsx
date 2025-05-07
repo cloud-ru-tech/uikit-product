@@ -17,11 +17,11 @@ export function MobileUserMenuDrawer({ isOpen, setIsOpen, items, selection, nest
     <DrawerCustom
       open={isOpen}
       onClose={() => setIsOpen(false)}
-      position='left'
+      position='right'
       push={{ distance: 8 }}
       nestedDrawer={nestedDrawer}
     >
-      <DrawerCustom.Header title={t('menu')} className={styles.nestedHeader} />
+      <DrawerCustom.Header title={t('user')} className={styles.nestedHeader} />
 
       <Scroll>
         <div className={styles.selectGroup}>

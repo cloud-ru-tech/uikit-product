@@ -1,7 +1,7 @@
 import { MouseEvent } from 'react';
 
 import { FooterLink, LinksGroup, ProductOption } from '../../types';
-import { ItemsGroup } from '../GroupSection';
+import { ItemsGroup } from '../SelectMenu';
 
 export type SelectProductsProps = {
   allProducts: ItemsGroup<ProductOption>[];

@@ -7,14 +7,14 @@
   }
 }
 
-.nestedHeader {
-  > div {
-    padding: 16px;
-  }
-}
-
 .userMenuButtonWrap {
   position: relative;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .userMenuAvatarCounter {

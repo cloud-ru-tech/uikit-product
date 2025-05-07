@@ -19,6 +19,7 @@ export type DefaultUserMenuProps = CommonUserMenuProps & {
   onProfileManagementClick?(): void;
   onLogout?(): void;
   onWhatsNewClick?(): void;
+  onOrganizationAdd?(): void;
   invites?: {
     count?: number;
     showPopover?: boolean;
@@ -27,18 +28,22 @@ export type DefaultUserMenuProps = CommonUserMenuProps & {
     count?: number;
     showPopover?: boolean;
   } & Pick<PartnerPopoverProps, 'onCloseClick'>;
-} & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange' | 'onOrganizationAdd'> & {
+} & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange'> & {
     themeMode?: {
       value: ThemeMode;
       onChange(value: ThemeMode): void;
     };
     profileItemWrapRender?(item: ReactNode): ReactNode;
   } & {
-    alert?: UseAlertMenuProps;
+    bottomAlert?: UseAlertMenuProps;
+    topAlert?: UseAlertMenuProps;
   };
 
 export type CustomUserMenuProps = CommonUserMenuProps & { customMenuItems: DroplistProps['items'] };
 
 export type UserMenuProps = DefaultUserMenuProps | CustomUserMenuProps;
 
-export type CommonMobileUserMenuProps = { isOpen: boolean; setIsOpen: (open: boolean) => void };
+export type CommonMobileUserMenuProps = {
+  isOpen: boolean;
+  setIsOpen(open: boolean): void;
+};

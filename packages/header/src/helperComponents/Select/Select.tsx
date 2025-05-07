@@ -1,46 +1,29 @@
-import { KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { KeyboardEvent, useCallback, useEffect, useRef, useState } from 'react';
 
 import { Dropdown } from '@snack-uikit/dropdown';
 import { Scroll } from '@snack-uikit/scroll';
 
-import { Workspace } from '../../types';
 import { SelectMenu, SelectMenuTrigger, SelectProps } from '../SelectMenu';
 import styles from './styles.module.scss';
 
 export function Select({
-  organizations: organizationsProp,
+  organizations,
   selectedOrganization,
   onOrganizationChange,
-  onOrganizationAdd: onOrganizationAddProp,
 
   projects,
   selectedProject,
   onProjectChange,
-  projectAddButton: projectAddButtonProp,
+  projectAddButton,
   projectsLoading,
-  projectsSearchActive,
-  onProjectsSearchActiveChange,
   projectsEmptyState,
 
-  platforms: platformsProp,
-  selectedPlatform,
-  onPlatformChange,
-  platformsLoading,
-
-  workspaces,
-  onAccessRequestClick,
   onOpenChange,
-
-  onClose,
 }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [enableOutsideClick, setEnableOutsideClick] = useState(true);
   const navigateInsideRef = useRef<HTMLDivElement>(null);
   const navigateOutsideRef = useRef<HTMLDivElement>(null);
-
-  const organizations = useMemo(() => organizationsProp?.filter(org => !org.new), [organizationsProp]);
-
-  const platforms = useMemo(() => platformsProp?.filter(platform => !platform.hidden), [platformsProp]);
 
   useEffect(() => {
     const openListener = () => {
@@ -69,69 +52,25 @@ export function Select({
     }
   };
 
-  const toggleOpen = (open: boolean) => {
-    setIsOpen(open);
+  const handleOpenChange = useCallback(
+    (open: boolean) => {
+      setIsOpen(open);
 
-    if (!open) {
-      onClose?.();
-    }
-  };
+      onOpenChange?.(open);
+    },
+    [onOpenChange],
+  );
 
   const closeDropdown = useCallback(() => {
-    setIsOpen(false);
-    onClose?.();
-  }, [onClose]);
-
-  const onOrganizationAdd = useMemo(() => {
-    if (onOrganizationAddProp) {
-      return () => {
-        closeDropdown();
-        onOrganizationAddProp();
-      };
-    }
-
-    return undefined;
-  }, [closeDropdown, onOrganizationAddProp]);
-
-  const projectAddButton = useMemo(() => {
-    if (projectAddButtonProp) {
-      return {
-        ...projectAddButtonProp,
-        onClick() {
-          projectAddButtonProp.onClick();
-        },
-      };
-    }
-
-    return undefined;
-  }, [projectAddButtonProp]);
-
-  const workspacesOptions = useMemo(
-    () =>
-      workspaces
-        ? {
-            ...workspaces,
-            onWorkspaceChange(value: Workspace) {
-              closeDropdown();
-              workspaces?.onWorkspaceChange(value);
-            },
-            onWorkspaceAdd() {
-              closeDropdown();
-              workspaces.onWorkspaceAdd();
-            },
-          }
-        : undefined,
-    [closeDropdown, workspaces],
-  );
+    handleOpenChange(false);
+  }, [handleOpenChange]);
 
   return (
     <Dropdown
       open={isOpen}
-      onOpenChange={open => {
-        toggleOpen(open);
-        onOpenChange?.(open);
-      }}
+      onOpenChange={handleOpenChange}
       outsideClick={enableOutsideClick}
+      className={styles.selectWrap}
       content={
         <div className={styles.selectGroup}>
           <Scroll barHideStrategy='never'>
@@ -140,22 +79,13 @@ export function Select({
                 organizations={organizations}
                 selectedOrganization={selectedOrganization}
                 onOrganizationChange={onOrganizationChange}
-                onOrganizationAdd={onOrganizationAdd}
                 projects={projects}
                 selectedProject={selectedProject}
                 projectsLoading={projectsLoading}
-                projectsSearchActive={projectsSearchActive}
-                onProjectsSearchActiveChange={onProjectsSearchActiveChange}
                 onProjectChange={onProjectChange}
                 projectAddButton={projectAddButton}
                 projectsEmptyState={projectsEmptyState}
-                platforms={platforms}
-                selectedPlatform={selectedPlatform}
-                platformsLoading={platformsLoading}
-                onPlatformChange={onPlatformChange}
                 closeDropdown={closeDropdown}
-                workspaces={workspacesOptions}
-                onAccessRequestClick={onAccessRequestClick}
                 mobile={false}
               />
             </div>
@@ -177,7 +107,6 @@ export function Select({
       >
         <SelectMenuTrigger
           selectedProject={selectedProject}
-          selectedWorkspace={workspaces?.selectedWorkspace}
           open={isOpen}
           showIcon
           loading={projectsLoading}
