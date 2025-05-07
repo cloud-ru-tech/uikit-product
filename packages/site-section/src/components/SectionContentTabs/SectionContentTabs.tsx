@@ -2,8 +2,8 @@ import cn from 'classnames';
 import { ReactNode } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
+import { SiteVideo } from '@sbercloud/uikit-product-site-media';
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
-import { SiteVideo } from '@sbercloud/uikit-product-site-video';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
 import { Tabs } from '@snack-uikit/tabs';

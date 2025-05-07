@@ -1,4 +1,4 @@
-import { SiteVideo } from '@sbercloud/uikit-product-site-video';
+import { SiteVideo } from '@sbercloud/uikit-product-site-media';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { MediaContentProps } from '../../types';

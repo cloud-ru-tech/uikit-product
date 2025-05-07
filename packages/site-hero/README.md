@@ -45,7 +45,7 @@ Hero blocks for Site
 | description* | `string` | - | Описание продукта |
 | title* | `string` | - | Заголовок продукта |
 | image | `string` | - | Ссылка на изображение |
-| video | `VideoPlayerProps \| ReactNode` | - | Видео |
+| video | `SiteVideoProps` | - | Видео |
 | tags | `Pick<TagSpecialProps, "text" \| "appearance" \| "tip">[]` | [] | Тэги |
 | platforms | `Platform[]` | [] | Платформы |
 | handlePlatformClick | `(e: MouseEvent<HTMLAnchorElement, MouseEvent>, platform: Platform) => void` | - | Обработка клика по платформе |

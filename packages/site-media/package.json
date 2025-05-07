@@ -1,7 +1,7 @@
 {
-  "name": "@sbercloud/uikit-product-site-video",
-  "title": "Site Video",
-  "version": "0.4.2",
+  "name": "@sbercloud/uikit-product-site-media",
+  "title": "Site Media",
+  "version": "0.0.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -19,11 +19,11 @@
     "src",
     "./CHANGELOG.md"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-video",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-media",
   "repository": {
     "type": "git",
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
-    "directory": "packages/site-video"
+    "directory": "packages/site-media"
   },
   "author": "Белов Алексей <anbelov@cloud.ru>",
   "contributors": [

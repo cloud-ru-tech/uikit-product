@@ -7,7 +7,7 @@ import componentReadme from '../README.md';
 import { isVideoPlayerContent, SiteVideo, SiteVideoProps } from '../src';
 
 const meta: Meta = {
-  title: 'Site/Video',
+  title: 'Site/Media/Video',
   component: SiteVideo,
 };
 export default meta;

@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
 import { Layout } from '@sbercloud/uikit-product-site-layout';
-import { SiteVideo } from '@sbercloud/uikit-product-site-video';
+import { SiteVideo } from '@sbercloud/uikit-product-site-media';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonFilledProps } from '@snack-uikit/button';
 

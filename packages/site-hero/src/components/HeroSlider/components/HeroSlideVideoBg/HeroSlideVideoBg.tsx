@@ -1,4 +1,4 @@
-import { SiteVideo } from '@sbercloud/uikit-product-site-video';
+import { SiteVideo } from '@sbercloud/uikit-product-site-media';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 
 import { HTMLComment } from './HTMLComment';
