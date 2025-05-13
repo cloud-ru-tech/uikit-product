@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.1 (2025-05-13)
+
+
+### Dependencies
+
+* **FF-6240:** update loaders ([b56f38f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b56f38f22bcacbf3d879a39eeaa0ac8ca2578d3d))
+
+
+
+
+
 # 0.3.0 (2025-04-30)
 
 

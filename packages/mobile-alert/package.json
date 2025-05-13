@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-alert",
   "title": "Mobile Alert",
-  "version": "0.4.29",
+  "version": "0.4.30",
   "sideEffects": [
     "*.css",
     "*.woff",
