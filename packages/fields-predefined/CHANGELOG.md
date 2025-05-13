@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-05-13)
+
+
+### Features
+
+* **IAM-2109:** add permissions for Select Create ([ea7d23b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ea7d23b1117205966b7397ecf575505bca9a197c))
+
+
+
+
+
 ## 0.3.2 (2025-04-30)
 
 ### Only dependencies have been changed
