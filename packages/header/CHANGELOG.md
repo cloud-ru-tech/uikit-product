@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2025-05-14)
+
+
+### BREAKING CHANGES
+
+
+* **FF-6490:** new navigation ([ac61101](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ac611013d65a7a9012c61a27a8c603c44e28cba2))
+
+
+
+
 ## 3.3.1 (2025-05-14)
 
 ### Only dependencies have been changed

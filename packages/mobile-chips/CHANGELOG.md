@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.15 (2025-05-14)
+
+
+### Bug Fixes
+
+* **FF-6490:** hide modal footer in MobileChipChoiceSingle ([f3b4f14](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f3b4f14880f73a37f8d023743ff15012e32efd2d))
+
+
+
+
+
 ## 0.7.14 (2025-05-14)
 
 ### Only dependencies have been changed

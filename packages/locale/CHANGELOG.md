@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.1 (2025-05-14)
+
+
+### Bug Fixes
+
+* **FF-6490:** updated texts for Header ([5aaa2a9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5aaa2a919aef39eab950f3175b50d00e6cb95118))
+
+
+
+
+
 # 0.6.0 (2025-05-13)
 
 

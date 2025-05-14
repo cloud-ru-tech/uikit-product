@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.0.23 (2025-05-14)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-chips@0.7.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+
+
+
+
+
 ## 0.0.22 (2025-05-14)
 
 ### Only dependencies have been changed
