@@ -24,6 +24,12 @@ const IGNORED_FILES = ['.gitignore', '.DS_Store'];
 
     for (const fileName of iconsFilesNames) {
       const [name, extension] = fileName.split('.');
+
+      if (extension.toLowerCase() !== 'svg') {
+        console.log(`File "${fileName}" does not look like svg file. It was ignored.`);
+        continue;
+      }
+
       const camelcaseFileName = capitalize(normalizeName(name));
 
       await fs.copyFile(
