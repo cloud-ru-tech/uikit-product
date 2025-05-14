@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2025-05-14)
+
+
+### Features
+
+* **PDS-2240:** rename the site-video package to site-media ([a00fe35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a00fe3542164d33ff10467f990f7abfe45b451d4))
+
+
+
+
+
 ## 0.4.7 (2025-05-13)
 
 ### Only dependencies have been changed

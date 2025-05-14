@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.6.0 (2025-05-14)
+
+
+### Features
+
+* **PDS-2170:** add icons ([dd8cfb3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/dd8cfb376803ad2c226c5ee7743c563fc4c362b1))
+
+
+
+
+
 # 11.5.0 (2025-04-30)
 
 
