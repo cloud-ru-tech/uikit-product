@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 import { InfoFilledSVG } from '@sbercloud/uikit-product-icons';
 import { AlarmFilledSVG, CrossFilledSVG, QuestionSVG } from '@snack-uikit/icons';
 import { Link } from '@snack-uikit/link';
@@ -9,7 +11,7 @@ import { formatCurrency } from '../../../../helpers';
 import styles from './styles.module.scss';
 
 export const APPEARANCE_STATE = {
-  Default: 'Default',
+  Default: 'default',
   UserError: 'userError',
   SystemError: 'systemError',
   Warning: 'warning',
@@ -20,9 +22,9 @@ export type AppearanceState = ValueOf<typeof APPEARANCE_STATE>;
 export type TotalValueBlockProps = {
   value?: number;
   hint?: string;
-  hintAppearance: AppearanceState;
+  hintAppearance?: AppearanceState;
   showHintTooltip?: boolean;
-  hintTooltipText?: string;
+  hintTooltipText?: ReactNode;
   hintLink?: {
     href?: string;
     text: string;
@@ -55,7 +57,7 @@ function getAppearanceIcon(appearance: string) {
 export function TotalValueBlock({
   value,
   hint,
-  hintAppearance,
+  hintAppearance = APPEARANCE_STATE.Default,
   showHintTooltip,
   hintTooltipText,
   hintLink,

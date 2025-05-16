@@ -9,7 +9,7 @@ import { ContentBlock, ContentBlockProps } from '../ContentBlock';
 import { DiscountBlock } from './components/DiscountBlock';
 import { HeaderBlock, HeaderBlockProps } from './components/HeaderBlock';
 import { InvoiceBlock } from './components/InvoiceBlock';
-import { APPEARANCE_STATE, TotalValueBlock, TotalValueBlockProps } from './components/TotalValueBlock';
+import { TotalValueBlock, TotalValueBlockProps } from './components/TotalValueBlock';
 import styles from './styles.module.scss';
 
 export type PriceSummaryProps = WithLayoutType<
@@ -45,7 +45,7 @@ export function PriceSummary({
   docsLink,
   className,
   layoutType,
-  hintAppearance = APPEARANCE_STATE.Default,
+  hintAppearance,
   showHintTooltip = false,
   hintTooltipText,
   hintLink,

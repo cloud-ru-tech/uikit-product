@@ -24,6 +24,7 @@ export type InvoiceItem = {
   labelMaxLines?: number;
   quantity?: string | number;
   price?: number;
+  hidePrice?: boolean;
   discount?: DiscountItem;
   primary?: boolean;
   topDivider?: boolean;
