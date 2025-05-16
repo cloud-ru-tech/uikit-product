@@ -8,6 +8,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { PriceSummary, PriceSummaryProps } from '../src/components';
+import { APPEARANCE_STATE } from '../src/components/PriceSummary/components/TotalValueBlock';
 
 const meta: Meta = {
   title: 'Console/Price Summary/Price Summary',
@@ -117,6 +118,14 @@ export const priceSummary: StoryObj<StoryProps> = {
       href: 'https://cloud.ru/documents/tariffs/index.html',
     },
     layoutType: 'desktop',
+    hintAppearance: APPEARANCE_STATE.Default,
+    showHintTooltip: false,
+    hintTooltipText: '',
+    hintLink: {
+      text: 'hint link',
+      href: '',
+    },
+    showHintLink: true,
   },
   argTypes: {
     showSingleGroup: {
@@ -124,6 +133,13 @@ export const priceSummary: StoryObj<StoryProps> = {
       control: {
         type: 'boolean',
       },
+    },
+    hintAppearance: {
+      name: '[Stories]: hintAppearance',
+      control: {
+        type: 'select',
+      },
+      options: ['default', 'warning', 'userError', 'systemError'],
     },
   },
   parameters: {

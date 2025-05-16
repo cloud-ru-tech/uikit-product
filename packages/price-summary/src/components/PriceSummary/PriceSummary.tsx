@@ -9,7 +9,7 @@ import { ContentBlock, ContentBlockProps } from '../ContentBlock';
 import { DiscountBlock } from './components/DiscountBlock';
 import { HeaderBlock, HeaderBlockProps } from './components/HeaderBlock';
 import { InvoiceBlock } from './components/InvoiceBlock';
-import { TotalValueBlock, TotalValueBlockProps } from './components/TotalValueBlock';
+import { APPEARANCE_STATE, TotalValueBlock, TotalValueBlockProps } from './components/TotalValueBlock';
 import styles from './styles.module.scss';
 
 export type PriceSummaryProps = WithLayoutType<
@@ -45,10 +45,14 @@ export function PriceSummary({
   docsLink,
   className,
   layoutType,
+  hintAppearance = APPEARANCE_STATE.Default,
+  showHintTooltip = false,
+  hintTooltipText,
+  hintLink,
+  showHintLink,
   ...rest
 }: PriceSummaryProps) {
   const { t } = useLocale('PriceSummary');
-
   return (
     <div className={cn(styles.priceSummary, className)} {...extractSupportProps(rest)}>
       <HeaderBlock
@@ -61,7 +65,15 @@ export function PriceSummary({
       <ContentBlock loading={loading} dataError={dataError} onRetry={onRetry}>
         {discount && <DiscountBlock value={discount} layoutType={layoutType} />}
 
-        <TotalValueBlock value={value} hint={hint} />
+        <TotalValueBlock
+          value={value}
+          hint={hint}
+          hintAppearance={hintAppearance}
+          showHintTooltip={showHintTooltip}
+          hintTooltipText={hintTooltipText}
+          hintLink={hintLink}
+          showHintLink={showHintLink}
+        />
 
         {invoice?.length && (
           <InvoiceBlock invoice={invoice} invoiceExpandedDefault={invoiceExpandedDefault} layoutType={layoutType} />

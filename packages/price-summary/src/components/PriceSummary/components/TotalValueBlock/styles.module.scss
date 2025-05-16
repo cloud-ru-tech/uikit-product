@@ -4,15 +4,60 @@
   display: flex;
   flex-direction: column;
   text-align: start;
+
+  &[data-appearance='userError'] {
+    color: styles-theme-variables.$sys-red-text-main;
+  }
+
+  &[data-appearance='warning'] {
+    color: styles-theme-variables.$sys-yellow-text-main;
+  }
+
+  &[data-appearance='systemError'] {
+    color: styles-theme-variables.$sys-neutral-text-disabled;
+  }
 }
 
 .hint {
   display: flex;
   align-items: center;
-  gap: 2px;
+  gap: styles-theme-variables.$dimension-025m;
   color: styles-theme-variables.$sys-neutral-text-light;
+
+  &[data-appearance='userError'] {
+    color: styles-theme-variables.$sys-red-text-main;
+  }
+
+  &[data-appearance='warning'] {
+    color: styles-theme-variables.$sys-yellow-text-main;
+  }
+
+  &[data-appearance='systemError'] {
+    color: styles-theme-variables.$sys-neutral-text-disabled;
+  }
 }
 
-.icon {
+.hintIcon {
   flex-shrink: 0;
+  box-sizing: content-box;
+
+  &[data-appearance='default'] {
+    color: styles-theme-variables.$sys-neutral-accent-default;
+  }
+
+  &[data-appearance='userError'] {
+    color: styles-theme-variables.$sys-red-accent-default;
+  }
+
+  &[data-appearance='warning'] {
+    color: styles-theme-variables.$sys-yellow-accent-default;
+  }
+
+  &[data-appearance='systemError'] {
+    color: styles-theme-variables.$sys-neutral-text-disabled;
+  }
+}
+
+.link {
+  margin-left: 18px;
 }
