@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.7.0 (2025-05-16)
+
+
+### Features
+
+* **PDS-2265:** added clean icon ([f63ff54](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f63ff54a96f49f652dabdd5394a5038b5d5ce833))
+
+
+
+
+
 # 11.6.0 (2025-05-14)
 
 
