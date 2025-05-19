@@ -1,22 +1,25 @@
 import { KebabSVG } from '@sbercloud/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
-import { Droplist } from '@snack-uikit/list';
+import { BaseItemProps, Droplist } from '@snack-uikit/list';
 
-import { stopPropagationClick } from '../../../utils';
-import styles from '../styles.module.scss';
-import { Item } from '../types';
+import { stopPropagationClick } from '../../utils';
+import styles from './styles.module.scss';
 
-type SelectMenuItemDroplistProps = {
-  actions: NonNullable<Item['actions']>;
+export type ItemDroplistProps = {
+  actions: BaseItemProps[];
   onItemClick?(): void;
   dataTestId: string;
+  open?: boolean;
+  onOpenChange?(open: boolean): void;
 };
 
-export function SelectMenuItemDroplist({ actions, onItemClick, dataTestId }: SelectMenuItemDroplistProps) {
+export function ItemDroplist({ open, onOpenChange, actions, onItemClick, dataTestId }: ItemDroplistProps) {
   return (
     // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <div onMouseDown={stopPropagationClick} className={styles.droplistTriggerWrap}>
       <Droplist
+        open={open}
+        onOpenChange={onOpenChange}
         items={actions.map(action => ({
           ...action,
           onClick(e) {

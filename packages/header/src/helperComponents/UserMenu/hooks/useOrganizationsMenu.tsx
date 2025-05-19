@@ -4,9 +4,9 @@ import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { Avatar } from '@snack-uikit/avatar';
 import { GroupItemProps, ItemProps } from '@snack-uikit/list';
-import { PromoTag } from '@snack-uikit/promo-tag';
 
 import { Organization } from '../../../types';
+import { UserMenuItemAfterContent } from '../components';
 
 type UseOrganizationProps = {
   organizations: Organization[] | undefined;
@@ -31,15 +31,17 @@ export function useOrganizationsMenu({
       hidden: !(organizations?.length || onOrganizationAdd),
       items:
         organizations?.reduce<GroupItemProps['items']>((acc, organization) => {
+          const dataTestId = `header__user-menu__organization-${organization.id}`;
+
           acc.push({
-            'data-test-id': `header__user-menu__organization-${organization.id}`,
+            'data-test-id': dataTestId,
             beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols shape='square' />,
             afterContent: (
-              <>
-                {organization.new && <PromoTag text={t('organizationNewBadge')} appearance='green' />}
-
-                {organization.partner && <PromoTag text={t('partnerOrganizationBadge')} appearance='blue' />}
-              </>
+              <UserMenuItemAfterContent
+                organization={organization}
+                dataTestId={dataTestId}
+                onItemClick={closeUserMenu}
+              />
             ),
             content: {
               option: organization.name,

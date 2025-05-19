@@ -15,10 +15,10 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { useLocalStorage } from '../../hooks';
 import { Organization, Project } from '../../types';
+import { ItemDroplist } from '../ItemDroplist';
 import {
   SelectMenuFooterButton,
   SelectMenuFooterButtonProps,
-  SelectMenuItemDroplist,
   SelectMenuSkeletonItem,
   SelectMenuSort,
   SortVariant,
@@ -149,7 +149,7 @@ export function SelectMenu({
             {item?.tag}
 
             {item.actions && item.actions.length > 0 ? (
-              <SelectMenuItemDroplist actions={item.actions} dataTestId={dataTestId} onItemClick={closeDropdown} />
+              <ItemDroplist actions={item.actions} dataTestId={dataTestId} onItemClick={closeDropdown} />
             ) : undefined}
           </>
         ),

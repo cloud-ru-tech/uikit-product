@@ -56,6 +56,12 @@
   right: 0;
 }
 
+.userMenuItemAfterContent {
+  display: flex;
+  gap: inherit;
+  align-items: center;
+}
+
 .settingIcon {
   color: styles-tokens-element.$sys-neutral-text-light;
 }
