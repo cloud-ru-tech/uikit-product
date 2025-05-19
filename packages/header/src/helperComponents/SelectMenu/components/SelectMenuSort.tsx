@@ -72,8 +72,14 @@ export function SelectMenuSort({ value, onChange, mobile, noCatalogs, projectsLo
         onChange,
         defaultValue: '',
       }}
+      data-test-id='header__select-project__sort-menu'
     >
-      <ButtonFunction disabled={projectsLoading} icon={<SortSVG />} size={mobile ? 'l' : 'm'} />
+      <ButtonFunction
+        disabled={projectsLoading}
+        icon={<SortSVG />}
+        size={mobile ? 'l' : 'm'}
+        data-test-id='header__select-project__sort-button'
+      />
     </Droplist>
   );
 }

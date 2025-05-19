@@ -28,12 +28,13 @@ export function ItemDroplist({ open, onOpenChange, actions, onItemClick, dataTes
           },
         }))}
         placement='bottom-end'
+        data-test-id={`${dataTestId}__droplist`}
       >
         <ButtonFunction
           size='xs'
           icon={<KebabSVG />}
           onClick={stopPropagationClick}
-          data-test-id={`${dataTestId}-droplist-trigger`}
+          data-test-id={`${dataTestId}__droplist-trigger`}
         />
       </Droplist>
     </div>

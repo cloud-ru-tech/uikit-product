@@ -239,6 +239,7 @@ export function ProductHeader({
                 placement='bottom-end'
                 trigger='clickAndFocusVisible'
                 className={styles.settingsDroplist}
+                data-test-id='header__settings'
               >
                 <ButtonFunction data-test-id='header__settings__menu-button' size='m' icon={<SettingsSVG />} />
               </Droplist>

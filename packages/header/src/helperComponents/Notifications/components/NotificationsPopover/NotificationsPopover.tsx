@@ -31,6 +31,7 @@ export function NotificationsPopover({ notifications }: NotificationsPopoverProp
       trigger='click'
       onOpenChange={handleOpenChange}
       open={isOpen}
+      data-test-id='header__notifications'
       content={<Notifications {...notifications} open={localOpen} className={styles.notifications} />}
     >
       <NotificationsTrigger count={notifications.count} onClick={notifications.onNotifyTriggerClick} />

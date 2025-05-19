@@ -21,6 +21,8 @@ type Props = {
   handleCardVisible(id: string): void;
 };
 
+const CARD_DATA_TEST_ID = 'header__notifications__card';
+
 export function NotificationCards({ cards, chipFilter, handleCardVisible }: Props) {
   const { t } = useLocale('Header');
 
@@ -29,7 +31,7 @@ export function NotificationCards({ cards, chipFilter, handleCardVisible }: Prop
       {chipFilter === 'all' && (
         <>
           {cards.unread.map(card => (
-            <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} />
+            <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} data-test-id={CARD_DATA_TEST_ID} />
           ))}
 
           {
@@ -37,7 +39,12 @@ export function NotificationCards({ cards, chipFilter, handleCardVisible }: Prop
               {cards.unread.length > 0 && <NotificationPanel.Divider text={t('notificationsDivider')} />}
 
               {cards.read.map(card => (
-                <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} />
+                <NotificationCard
+                  {...card}
+                  key={card.id}
+                  onVisible={handleCardVisible}
+                  data-test-id={CARD_DATA_TEST_ID}
+                />
               ))}
             </>
           }
@@ -47,7 +54,7 @@ export function NotificationCards({ cards, chipFilter, handleCardVisible }: Prop
       {chipFilter === 'unread' && (
         <>
           {cards.unread.map(card => (
-            <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} />
+            <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} data-test-id={CARD_DATA_TEST_ID} />
           ))}
         </>
       )}
@@ -55,7 +62,7 @@ export function NotificationCards({ cards, chipFilter, handleCardVisible }: Prop
       {chipFilter === 'system' && (
         <>
           {cards.system.map(card => (
-            <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} />
+            <NotificationCard {...card} key={card.id} onVisible={handleCardVisible} data-test-id={CARD_DATA_TEST_ID} />
           ))}
         </>
       )}

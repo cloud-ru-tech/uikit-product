@@ -69,6 +69,7 @@ export function UserMenu({
           mode: 'single',
           value: selectedOrganization?.id,
         }}
+        data-test-id='header__user-menu'
       />
 
       {(partnerInvites?.showPopover && <PartnerPopover onCloseClick={partnerInvites?.onCloseClick} />) ||

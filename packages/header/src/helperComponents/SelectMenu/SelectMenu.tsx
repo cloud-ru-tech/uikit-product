@@ -252,6 +252,7 @@ export function SelectMenu({
             options={organizationsOptions}
             size={mobile ? 'm' : 's'}
             loading={projectsLoading}
+            data-test-id='header__select-project__organization-filter'
           />
         </div>
       )}
@@ -337,11 +338,11 @@ export function SelectMenuTrigger({
     <WithSkeleton skeleton={<SelectMenuTriggerSkeleton />} loading={loading}>
       <div className={styles.contentLayout}>
         <div className={styles.textWrapper}>
-          <span className={cn(styles.name, nameClassName)} data-test-id='header__select-project-value'>
+          <span className={cn(styles.name, nameClassName)} data-test-id='header__select-project__value'>
             <TruncateString text={name} variant='middle' />
           </span>
 
-          <span className={cn(styles.entity, entityClassName)} data-test-id='header__select-project-entity'>
+          <span className={cn(styles.entity, entityClassName)} data-test-id='header__select-project__entity'>
             <TruncateString text={entity} variant='middle' />
           </span>
         </div>
