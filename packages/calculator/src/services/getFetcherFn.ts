@@ -25,12 +25,16 @@ function prepareProductType(productName: string) {
 
 const CALCULATOR_PRICES_URL = '/calculator/v2/prices/';
 
+type GetFetcherFnParams = {
+  headers?: HeadersInit;
+};
+
 /**
  *
  * Функция для отправки запросов на цены
  * @function helper
  */
-export function getFetcherFn(backendHost: string = DEFAULT_BACKEND_HOST) {
+export function getFetcherFn(backendHost: string = DEFAULT_BACKEND_HOST, params: GetFetcherFnParams = {}) {
   return async function fetcherFn({ formData, productId, calculatorType }: FetcherFnProps) {
     if (!formData) return undefined;
 
@@ -41,7 +45,7 @@ export function getFetcherFn(backendHost: string = DEFAULT_BACKEND_HOST) {
 
     const res = await fetch(url, {
       method: 'POST',
-      headers: DEFAULT_HEADERS,
+      headers: { ...DEFAULT_HEADERS, ...params.headers },
       body: formData,
     });
 
