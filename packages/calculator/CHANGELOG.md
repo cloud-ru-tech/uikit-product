@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.21.0 (2025-05-20)
+
+
+### Features
+
+* **FF-6484:** add custom headers to calculator getFetcherFn ([9c00800](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9c00800bc85cdb16dd850d10aeb622c5ea131337))
+
+
+
+
+
 ## 0.20.5 (2025-05-16)
 
 ### Only dependencies have been changed
