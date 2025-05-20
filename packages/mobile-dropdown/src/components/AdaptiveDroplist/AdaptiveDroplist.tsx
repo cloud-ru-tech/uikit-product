@@ -6,29 +6,16 @@ import { MobileDroplist, MobileDroplistProps } from '../MobileDroplist';
 
 export function AdaptiveDroplist({
   layoutType,
-  open,
-  onOpenChange,
-  items,
-  selection,
   children,
   ...rest
 }: WithLayoutType<Omit<DroplistProps, 'children'> & Pick<MobileDroplistProps, 'children'>>) {
   const isMobile = layoutType === 'mobile';
+  const dropListProps = { ...rest, ...extractSupportProps(rest) };
 
   return isMobile ? (
-    <MobileDroplist
-      open={open}
-      onOpenChange={onOpenChange}
-      items={items}
-      selection={selection}
-      {...extractSupportProps(rest)}
-    >
-      {children}
-    </MobileDroplist>
+    <MobileDroplist {...dropListProps}>{children}</MobileDroplist>
   ) : (
-    <Droplist open={open} onOpenChange={onOpenChange} items={items} selection={selection} {...rest}>
-      {children}
-    </Droplist>
+    <Droplist {...dropListProps}>{children}</Droplist>
   );
 }
 

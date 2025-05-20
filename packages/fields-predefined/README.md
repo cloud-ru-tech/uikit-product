@@ -10,6 +10,7 @@
 ### Props
 | name | type | default value | description |
 |------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | options* | `FieldPhoneOptionsProps[]` | - |  |
 | value | `string` | - | Значение input |
 | onChange | `((value: string, e?: ChangeEvent<HTMLInputElement>) => void) & ((value: string) => void)` | - | Колбек смены значения |
@@ -21,6 +22,7 @@
 | onBlur | `FocusEventHandler<HTMLInputElement>` | - | Колбек обработки потери фокуса |
 | autoComplete | `string \| boolean` | false | Включен ли автокомплит для поля |
 | onPaste | `ClipboardEventHandler<HTMLInputElement>` | - | Колбек обработки вставки значения |
+| spellCheck | `boolean` | true | Значение атрибута spellcheck (проверка орфографии) |
 | className | `string` | - | CSS-класс |
 | label | `string` | - | Лейбл |
 | labelTooltip | `ReactNode` | - | Всплывающая подсказка лейбла |

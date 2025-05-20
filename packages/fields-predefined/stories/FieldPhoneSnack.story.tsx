@@ -16,9 +16,10 @@ export default meta;
 
 type StoryProps = FieldPhoneProps & {
   onlyOneMask?: boolean;
+  mobileView: boolean;
 };
 
-const Template = ({ size, value, onlyOneMask, ...args }: StoryProps) => {
+const Template = ({ size, value, onlyOneMask, layoutType, mobileView, ...args }: StoryProps) => {
   const [, setCountry] = useState<FieldPhoneOptionsProps>();
 
   const masks = usePredefinedPhoneMasks();
@@ -27,6 +28,7 @@ const Template = ({ size, value, onlyOneMask, ...args }: StoryProps) => {
     <div className={styles.wrapper} data-size={size || 's'}>
       <FieldPhone
         {...args}
+        layoutType={layoutType ?? (mobileView ? 'mobile' : 'desktop')}
         options={onlyOneMask ? [masks[0]] : masks}
         value={value}
         size={size}
@@ -62,6 +64,7 @@ export const fieldPhone: StoryObj<StoryProps> = {
     showClearButton: true,
     onlyOneMask: false,
     scrollList: false,
+    mobileView: false,
   },
   argTypes: {
     labelTooltip: {
@@ -73,6 +76,10 @@ export const fieldPhone: StoryObj<StoryProps> = {
     },
     value: {
       type: 'string',
+    },
+    mobileView: {
+      name: '[Story] apply mobile mode',
+      type: 'boolean',
     },
   },
   parameters: {

@@ -3,6 +3,8 @@ import mergeRefs from 'merge-refs';
 import { ClipboardEventHandler, forwardRef, useEffect, useMemo, useRef, useState } from 'react';
 import { useIMask } from 'react-imask';
 
+import { AdaptiveDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { FieldText, FieldTextProps } from '@snack-uikit/fields';
 import { useValueControl } from '@snack-uikit/utils';
 
@@ -10,30 +12,33 @@ import { PLACEHOLDER_CHAR } from './constants';
 import styles from './styles.module.scss';
 import { FieldPhoneOptionsProps, MaskOptions } from './types';
 
-export type FieldPhoneProps = Omit<
-  FieldTextProps,
-  | 'prefix'
-  | 'prefixIcon'
-  | 'postfix'
-  | 'placeholder'
-  | 'autocomplete'
-  | 'decoratorRef'
-  | 'allowMoreThanMaxLength'
-  | 'onKeyDown'
-  | 'button'
-  | 'maxLength'
-> & {
-  /** Включить скролл для основной части списка стран */
-  scrollList?: boolean;
-  options: FieldPhoneOptionsProps[];
-  onChange?(value: string): void;
-  searchPlaceholder?: string;
-  onChangeCountry?(country: FieldPhoneOptionsProps): void;
-};
+export type FieldPhoneProps = WithLayoutType<
+  Omit<
+    FieldTextProps,
+    | 'prefix'
+    | 'prefixIcon'
+    | 'postfix'
+    | 'placeholder'
+    | 'autocomplete'
+    | 'decoratorRef'
+    | 'allowMoreThanMaxLength'
+    | 'onKeyDown'
+    | 'button'
+    | 'maxLength'
+  > & {
+    /** Включить скролл для основной части списка стран */
+    scrollList?: boolean;
+    options: FieldPhoneOptionsProps[];
+    onChange?(value: string): void;
+    searchPlaceholder?: string;
+    onChangeCountry?(country: FieldPhoneOptionsProps): void;
+  }
+>;
 
 export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
   (
     {
+      layoutType,
       options,
       value: valueProp,
       onChangeCountry,
@@ -47,6 +52,8 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
     },
     ref,
   ) => {
+    const [open, setOpen] = useState(false);
+
     const localRef = useRef<HTMLInputElement>(null);
 
     const isOnlyOneCountryAvailable = options.length === 1;
@@ -136,7 +143,7 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
         setCountry(selectedCountry);
       }
 
-      localRef.current?.focus();
+      setTimeout(() => localRef.current?.focus(), 500);
     };
 
     const handleChange = (value: string) => {
@@ -166,16 +173,29 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
           isOnlyOneCountryAvailable
             ? undefined
             : {
-                scroll: scrollList,
                 variant: 'before',
+                hasArrow: true,
+                arrowOpen: open,
+                wrapper: button => (
+                  <div role='presentation' onClick={e => e.stopPropagation()}>
+                    <AdaptiveDroplist
+                      onOpenChange={setOpen}
+                      closeDroplistOnItemClick
+                      layoutType={layoutType}
+                      items={items}
+                      selection={{ mode: 'single', onChange: handleChangeSelection, value: country?.id }}
+                      scroll={scrollList}
+                      search={{
+                        value: dropdownSearch,
+                        onChange: setDropDownSearch,
+                        placeholder: searchPlaceholder,
+                      }}
+                    >
+                      {button}
+                    </AdaptiveDroplist>
+                  </div>
+                ),
                 content: country?.beforeContent,
-                items,
-                selection: { onChange: handleChangeSelection, value: country?.id },
-                search: {
-                  value: dropdownSearch,
-                  onChange: setDropDownSearch,
-                  placeholder: searchPlaceholder,
-                },
               }
         }
       />

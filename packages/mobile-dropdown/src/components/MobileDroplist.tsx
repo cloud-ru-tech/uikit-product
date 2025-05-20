@@ -1,13 +1,14 @@
 import { cloneElement, isValidElement, useMemo, useRef } from 'react';
 
 import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
-import { List, ListProps } from '@snack-uikit/list';
+import { DroplistProps, List, ListProps } from '@snack-uikit/list';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { MobileDropdownProps } from './MobileDropdown';
 import styles from './styles.module.scss';
 
 export type MobileDroplistProps = Omit<MobileDropdownProps, 'content'> &
+  Pick<DroplistProps, 'closeDroplistOnItemClick'> &
   ListProps & {
     label?: string;
     virtualized?: boolean;
@@ -23,6 +24,7 @@ export function MobileDroplist({
   label,
   footer,
   virtualized,
+  closeDroplistOnItemClick,
   ...rest
 }: MobileDroplistProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -30,11 +32,23 @@ export function MobileDroplist({
 
   const searchable = search;
 
+  const needCloseOnSelectItem = selection?.mode !== 'multiple' && closeDroplistOnItemClick;
+
+  const handleClose = () => setIsOpen(false);
+
+  const handleSelectItem: NonNullable<typeof selection>['onChange'] = selectedItem => {
+    if (needCloseOnSelectItem) {
+      handleClose();
+    }
+
+    selection?.onChange?.(selectedItem);
+  };
+
   const listJsx = (
     <div className={styles.listWrapper} data-virtualized={virtualized || undefined}>
       <List
         items={items}
-        selection={selection}
+        selection={selection && { ...selection, onChange: handleSelectItem }}
         size='l'
         search={searchable ? search : undefined}
         scrollRef={searchable || virtualized ? scrollRef : undefined}
@@ -44,8 +58,6 @@ export function MobileDroplist({
       />
     </div>
   );
-
-  const handleClose = () => setIsOpen(false);
 
   const trigger = useMemo(() => {
     const handleOpen = () => setIsOpen(true);
