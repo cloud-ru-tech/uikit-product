@@ -1,0 +1,13 @@
+.fieldChat {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  &[data-layout-type='mobile'] {
+    gap: 7px;
+  }
+}
+
+.uploadTooltip {
+  display: flex;
+}

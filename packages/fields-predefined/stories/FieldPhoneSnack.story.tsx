@@ -1,5 +1,6 @@
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryObj } from '@storybook/react';
+import cn from 'classnames';
 import { useState } from 'react';
 
 import componentChangelog from '../CHANGELOG.md';
@@ -25,7 +26,7 @@ const Template = ({ size, value, onlyOneMask, layoutType, mobileView, ...args }:
   const masks = usePredefinedPhoneMasks();
 
   return (
-    <div className={styles.wrapper} data-size={size || 's'}>
+    <div className={cn(styles.wrapper, styles.fieldPhoneWrapper)} data-size={size || 's'} data-background='light'>
       <FieldPhone
         {...args}
         layoutType={layoutType ?? (mobileView ? 'mobile' : 'desktop')}

@@ -1,0 +1,23 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.checkItem {
+  display: inline-flex;
+  gap: 10px;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: ste.$sys-neutral-decor-default;
+
+  &[data-checked='true'] {
+    color: ste.$sys-primary-decor-activated;
+  }
+}
+
+.label {
+  color: ste.$sys-neutral-text-light;
+
+  &[data-checked='true'] {
+    color: ste.$sys-primary-text-light;
+  }
+}

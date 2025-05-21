@@ -57,6 +57,70 @@
 | afterClose | `VoidFunction` | - | Коллбек после закрытия модального окна/дровера |
 | entityIcon | `JSXElementConstructor<{ size?: number; className?: string; }>` | - | Иконка сервиса |
 | permission | "none" \| "canRead" \| "canCreate" | - | Управление состоянием компонента в зависимости от прав пользователя (по дефолту permission = 'canCreate') |
+## FieldAi
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| supportUrl* | `string` | - | Ссылка на чат поддержки |
+| handleSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
+| value | `string` | - | HTML-аттрибут value |
+| onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
+| id | `string` | - | HTML-аттрибут id |
+| name | `string` | - | HTML-аттрибут name |
+| maxLength | `number` | - | Максимальное кол-во символов |
+| disabled | `boolean` | - | Является ли поле деактивированным |
+| readonly | `boolean` | - | Является ли поле доступным только на чтение |
+| onFocus | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек получения фокуса |
+| onBlur | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек потери фокуса |
+| onKeyDown | `KeyboardEventHandler<HTMLTextAreaElement>` | - | Колбек нажатия клавиши клавиатуры |
+| className | `string` | - | CSS-класс |
+| caption | `string` | - | Подпись справа от лейбла |
+| hint | `string` | - | Подсказка внизу |
+| showHintIcon | `boolean` | - | Отображать иконку подсказки |
+| validationState | enum ValidationState: `"error"`, `"default"`, `"warning"`, `"success"` | - | Состояние валидации |
+| labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
+| error | `string` | - |  |
+| allowMoreThanMaxLength | `boolean` | - | Можно ли вводить больше разрешённого кол-ва символов |
+| showCopyButton | `boolean` | - | Отображение кнопки Копировать для поля (актуально только для `readonly = true`) |
+| onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
+| showClearButton | `boolean` | true | Отображение кнопки очистки поля |
+| minRows | `number` | 3 | Минимальное кол-во строк, до которого размер поля может быть увеличен |
+| maxRows | `number` | 1000 | Максимальное кол-во строк, до которого размер поля может быть увеличен |
+| resizable | `boolean` | - | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
+| secure | `boolean \| "password"` | - | Режим ввода sensitive данных (пароля, API ключей, токенов, etc) |
+| handleSupportUrlClick | `(e: MouseEvent<Element, MouseEvent>) => void` | - | Действие при клике по ссылке на чат поддержки |
+| handleResetContextClick | `() => void` | - | Действие при клике по кнопке сброса контекста |
+## FieldChat
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
+| handleSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
+| value | `string` | - | HTML-аттрибут value |
+| onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
+| id | `string` | - | HTML-аттрибут id |
+| name | `string` | - | HTML-аттрибут name |
+| maxLength | `number` | - | Максимальное кол-во символов |
+| disabled | `boolean` | - | Является ли поле деактивированным |
+| readonly | `boolean` | - | Является ли поле доступным только на чтение |
+| onFocus | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек получения фокуса |
+| onBlur | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек потери фокуса |
+| onKeyDown | `KeyboardEventHandler<HTMLTextAreaElement>` | - | Колбек нажатия клавиши клавиатуры |
+| className | `string` | - | CSS-класс |
+| caption | `string` | - | Подпись справа от лейбла |
+| showHintIcon | `boolean` | - | Отображать иконку подсказки |
+| validationState | enum ValidationState: `"error"`, `"default"`, `"warning"`, `"success"` | - | Состояние валидации |
+| labelTooltipPlacement | enum Placement: `"left"`, `"left-start"`, `"left-end"`, `"right"`, `"right-start"`, `"right-end"`, `"top"`, `"top-start"`, `"top-end"`, `"bottom"`, `"bottom-start"`, `"bottom-end"` | top | Расположение подсказки лейбла |
+| error | `string` | - |  |
+| allowMoreThanMaxLength | `boolean` | - | Можно ли вводить больше разрешённого кол-ва символов |
+| showCopyButton | `boolean` | - | Отображение кнопки Копировать для поля (актуально только для `readonly = true`) |
+| onCopyButtonClick | `() => void` | - | Колбек клика по кнопке Копировать для поля |
+| showClearButton | `boolean` | true | Отображение кнопки очистки поля |
+| minRows | `number` | 3 | Минимальное кол-во строк, до которого размер поля может быть увеличен |
+| maxRows | `number` | 1000 | Максимальное кол-во строк, до которого размер поля может быть увеличен |
+| resizable | `boolean` | - | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
+| attachment | `Pick<FileUploadProps, "onFilesUpload" \| "accept"> & { files?: File[]; onFileDelete: (file?: File) => void; }` | - |  |
 
 
 [//]: DOCUMENTATION_SECTION_END

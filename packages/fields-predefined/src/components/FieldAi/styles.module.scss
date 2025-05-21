@@ -1,0 +1,28 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: ste.$dimension-050m;
+}
+
+.secured {
+  textarea {
+    -webkit-text-security: disc;
+    /* stylelint-disable-next-line property-no-unknown */
+    text-security: disc;
+  }
+}
+
+.footerText {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: ste.$dimension-050m;
+
+  color: ste.$sys-neutral-text-light;
+}
+
+.tooltip {
+  max-width: 258px;
+}
