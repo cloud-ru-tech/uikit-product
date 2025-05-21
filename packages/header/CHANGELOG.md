@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.1.0 (2025-05-21)
+
+
+### Bug Fixes
+
+* **FF-6613:** header elements data-test-id ([c6e2596](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c6e2596876557b950ac3d3cb83c9d8815b26a277))
+
+
+### Features
+
+* **FF-6613:** header organizations actions ([b3f8859](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b3f885915bfbaefce6dca279a45e03aefde604bc))
+
+
+
+
+
 ## 4.0.1 (2025-05-16)
 
 ### Only dependencies have been changed
