@@ -169,6 +169,7 @@ export function SelectMenu({
         truncate: { variant: 'middle' },
         mode: 'secondary',
         type: 'group',
+        'data-test-id': `header__select-group-item-${group.id}`,
         items: group.items.map(mapProjectToListItem),
       }));
     }

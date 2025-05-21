@@ -143,6 +143,7 @@ export function DrawerMenuMobile({
                 className={styles.trigger}
                 onClick={togglePlatformSelect}
                 hasChoice={hasChoice}
+                dataTestIdPostfix={'platform'}
               />
             )}
 
@@ -156,6 +157,7 @@ export function DrawerMenuMobile({
                 className={styles.trigger}
                 onClick={toggleProjectSelect}
                 hasChoice
+                dataTestIdPostfix={'project'}
               />
             )}
 

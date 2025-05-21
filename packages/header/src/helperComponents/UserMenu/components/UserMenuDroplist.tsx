@@ -9,7 +9,11 @@ import { CommonUserMenuProps } from '../types';
 import { getPatchedListItems } from '../utils';
 
 type UserMenuDroplistProps = Pick<CommonUserMenuProps, 'user' | 'indicator' | 'onAvatarClick'> &
-  Pick<DroplistProps, 'items' | 'selection'> & { count?: number; isOpen: boolean; setIsOpen: (open: boolean) => void };
+  Pick<DroplistProps, 'items' | 'selection' | 'data-test-id'> & {
+    count?: number;
+    isOpen: boolean;
+    setIsOpen: (open: boolean) => void;
+  };
 
 export function UserMenuDroplist({
   user,
@@ -20,6 +24,7 @@ export function UserMenuDroplist({
   selection,
   isOpen,
   setIsOpen,
+  'data-test-id': dataTestId,
 }: UserMenuDroplistProps) {
   const closeUserMenu = () => setIsOpen(false);
 
@@ -33,6 +38,7 @@ export function UserMenuDroplist({
       open={isOpen}
       onOpenChange={setIsOpen}
       placement='bottom-end'
+      data-test-id={dataTestId}
       items={patchedItems}
       selection={selection}
       triggerElemRef={triggerRef}

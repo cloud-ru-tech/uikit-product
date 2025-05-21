@@ -45,6 +45,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
   showPagePath: boolean;
   showSettings: boolean;
   showHelpMenu: boolean;
+  leaveOneOrganization: boolean;
   showNotifications: boolean;
   showNotificationError: boolean;
   showUserMenu: boolean;
@@ -254,6 +255,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     showUserMenuLogout,
     showNotificationError,
     userMenu,
+    leaveOneOrganization,
     organizations,
     showOrganizationInvite,
     showPartnerOrganization,
@@ -304,6 +306,15 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     const orgs = useMemo(() => {
       const allOrganizations = [...(organizations ?? [])];
 
+      if (!leaveOneOrganization) {
+        allOrganizations.push(
+          ...[
+            { id: '2', name: 'ИП Иванов И.И.', type: 'CUSTOMER_TYPE_LEGAL' },
+            { id: '3', name: 'Очень-очень длинное название очень большой организации', type: 'CUSTOMER_TYPE_LEGAL' },
+          ],
+        );
+      }
+
       if (showOrganizationInvite) {
         allOrganizations.push({ id: '4', name: 'ООО Инвайт', new: true, type: 'CUSTOMER_TYPE_LEGAL' });
       }
@@ -313,7 +324,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       }
 
       return allOrganizations;
-    }, [organizations, showOrganizationInvite, showPartnerOrganization]);
+    }, [organizations, showOrganizationInvite, showPartnerOrganization, leaveOneOrganization]);
 
     const [themeMode, setThemeMode] = useState<ThemeMode>(THEME_MODE.Light);
 
@@ -441,6 +452,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                   projects,
                   selectedOrganization: organization,
                   projectsLoading: showProjectsLoading,
+                  onOrganizationChange: setOrganization,
                 }
               : undefined
           }
@@ -524,6 +536,8 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 
 export const ARGS: StoryProps = {
   showSelect: true,
+
+  leaveOneOrganization: false,
 
   showVendorLogo: false,
   vendorLogo: {
@@ -682,11 +696,7 @@ export const ARGS: StoryProps = {
   },
 
   showAddOrganization: true,
-  organizations: [
-    { id: '1', name: 'Облачные технологии', actions: PROJECT_ACTIONS, type: 'CUSTOMER_TYPE_LEGAL' },
-    { id: '2', name: 'ИП Иванов И.И.', type: 'CUSTOMER_TYPE_LEGAL' },
-    { id: '3', name: 'Очень-очень длинное название очень большой организации', type: 'CUSTOMER_TYPE_LEGAL' },
-  ],
+  organizations: [{ id: '1', name: 'Облачные технологии', actions: PROJECT_ACTIONS, type: 'CUSTOMER_TYPE_LEGAL' }],
 
   showLinks: true,
   showFooterLinks: true,
@@ -871,6 +881,7 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
   logoMode: { name: '[Story]: logo modes', control: { type: 'radio' }, options: Object.values(HEADER_LOGO_MODE) },
 
   showVendorLogo: { name: '[Story]: show vendor logo', type: 'boolean' },
+
   vendorLogo: {
     name: 'vendorLogo',
     if: { arg: 'showVendorLogo', eq: true },
@@ -894,6 +905,8 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
 
   showPagePath: { name: '[Story]: show page path', type: 'boolean' },
   pagePath: { table: { disable: true } },
+
+  leaveOneOrganization: { name: '[Story]: Leave one organization ', type: 'boolean' },
 
   showSettings: { name: '[Story]: show settings menu', type: 'boolean' },
   settings: { table: { disable: true } },

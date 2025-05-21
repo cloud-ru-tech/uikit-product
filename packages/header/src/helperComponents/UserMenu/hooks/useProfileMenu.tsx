@@ -59,7 +59,7 @@ export function useProfileMenu({
               closeUserMenu();
             },
             id: 'header__user-menu__button',
-            'data-test-id': 'header__user-menu__button',
+            'data-test-id': 'header__user-menu__manage-profile',
             className: styles.userMenuInfoItem,
           },
         ],

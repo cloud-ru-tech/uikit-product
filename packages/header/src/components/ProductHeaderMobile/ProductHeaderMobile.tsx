@@ -37,7 +37,9 @@ export function ProductHeaderMobile({
   showMainMenu = true,
   disableMainMenu,
   logo,
+  onMainMenuClick,
   vendorLogo,
+  ...rest
 }: ProductHeaderProps) {
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
@@ -98,6 +100,7 @@ export function ProductHeaderMobile({
   return (
     <>
       <HeaderLayout
+        {...rest}
         logo={logo}
         vendorLogo={vendorLogo}
         homePageUrl={homePageUrl}
@@ -153,13 +156,20 @@ export function ProductHeaderMobile({
         pathFooter
         path={
           pagePath && (
-            <Breadcrumbs items={pagePath ?? []} inactiveLastItem={pagePath.length > 1} separator='/' size='xs' />
+            <Breadcrumbs
+              data-test-id='header__breadcrumbs'
+              items={pagePath ?? []}
+              inactiveLastItem={pagePath.length > 1}
+              separator='/'
+              size='xs'
+            />
           )
         }
         showMainMenu={showMainMenu}
         disableMainMenu={disableMainMenu}
         onMainMenuClick={() => {
           setIsMainMenuOpen(true);
+          onMainMenuClick?.();
         }}
       />
 

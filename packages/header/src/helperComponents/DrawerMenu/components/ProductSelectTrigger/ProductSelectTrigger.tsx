@@ -13,6 +13,7 @@ type ProductSelectTriggerProps = {
   onClick?(): void;
   className?: string;
   hasChoice: boolean;
+  dataTestIdPostfix: string;
 };
 
 export function ProductSelectTrigger({
@@ -21,6 +22,7 @@ export function ProductSelectTrigger({
   onClick,
   className,
   hasChoice,
+  dataTestIdPostfix,
 }: ProductSelectTriggerProps) {
   return (
     <div
@@ -28,7 +30,7 @@ export function ProductSelectTrigger({
       tabIndex={0}
       role={'menu'}
       data-open={isOpen || undefined}
-      data-test-id='header__drawer-menu__select'
+      data-test-id={`header__drawer-menu__select-${dataTestIdPostfix}`}
       onClick={onClick}
       data-active={hasChoice}
     >
@@ -41,7 +43,7 @@ export function ProductSelectTrigger({
           {selectedProduct.category}
         </div>
 
-        <div className={styles.selectedOption} data-test-id='header__drawer-menu__select-product-name'>
+        <div className={styles.selectedOption} data-test-id='header__drawer-menu__select__product-name'>
           <TruncateString text={selectedProduct.name} hideTooltip />
         </div>
       </div>
