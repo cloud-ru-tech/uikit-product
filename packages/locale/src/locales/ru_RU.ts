@@ -41,6 +41,39 @@ export const ru_RU: typeof en_GB = {
       tajikistan: 'Таджикистан',
       georgia: 'Грузия',
     },
+    FieldAi: {
+      regular: {
+        placeholder: 'Спросите про облачные технологии и сервисы Cloud.ru',
+      },
+      secret: {
+        placeholder: 'Введите пароль',
+        passwordTooltip: {
+          title: 'Требования к паролю',
+          minLength: 'не менее 8 символов',
+          hasCapitalLetter: 'минимум 1 заглавная буква',
+          hasLowerCaseLetter: 'минимум 1 строчная буква',
+          hasNumber: 'минимум 1 цифра',
+          hasSymbol: 'минимум 1 спецсимвол: !, @, #, % и т.д.',
+          noSpaces: 'без пробелов',
+        },
+      },
+      hint: {
+        text: 'Клаудия может ошибаться и рекомендует проверять ответы',
+        tooltip: 'Если засомневаетесь в ответе Клаудии, можете уточнить информацию ',
+        tooltipLink: 'в чате поддержки',
+      },
+      submit: {
+        tooltip: 'Отправить',
+      },
+      resetContext: {
+        label: 'Сбросить сценарий',
+        tooltip: 'Сброс контекста: предыдущие сообщения не будут учитываться в новом диалоге.',
+      },
+    },
+    FieldChat: {
+      placeholder: 'Новое сообщение',
+      attachFileTooltip: 'Прикрепить файл',
+    },
   },
   Header: {
     headerProjectSelectorCreateProject: 'Создать проект',

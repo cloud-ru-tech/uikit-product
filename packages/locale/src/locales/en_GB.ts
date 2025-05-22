@@ -40,6 +40,39 @@ export const en_GB = {
       tajikistan: 'Tajikistan',
       georgia: 'Georgia',
     },
+    FieldAi: {
+      regular: {
+        placeholder: 'Ask about cloud technologies and services Cloud.ru',
+      },
+      secret: {
+        placeholder: 'Enter password',
+        passwordTooltip: {
+          title: 'Password requirements',
+          minLength: 'at least 8 characters',
+          hasCapitalLetter: 'at least 1 uppercase letter',
+          hasLowerCaseLetter: 'at least 1 lowercase letter',
+          hasNumber: 'at least 1 number',
+          hasSymbol: 'at least 1 special character: !, @, #, % etc.',
+          noSpaces: 'no spaces',
+        },
+      },
+      hint: {
+        text: 'Claudia may be wrong and recommends checking the answers',
+        tooltip: "If in doubt about Claudia's answer, you can clarify the information in ",
+        tooltipLink: 'the support chat',
+      },
+      submit: {
+        tooltip: 'Submit',
+      },
+      resetContext: {
+        label: 'Reset scenario',
+        tooltip: 'Reset context: previous messages will not be taken into account in the new conversation',
+      },
+    },
+    FieldChat: {
+      placeholder: 'New message',
+      attachFileTooltip: 'Select file',
+    },
   },
   Header: {
     headerProjectSelectorCreateProject: 'Create project',
