@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react';
+import { MouseEvent, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { QuestionSVG } from '@sbercloud/uikit-product-icons';
 import { Avatar } from '@snack-uikit/avatar';
@@ -83,6 +83,23 @@ export function ProductHeaderMobile({
     setIsUserMenuOpen(false);
     closeProjectMenu();
   }, [closeProjectMenu]);
+
+  const notificationItemsWithCustomLink = useMemo(
+    () =>
+      notifications?.items.map(item => ({
+        ...item,
+        link: item.link
+          ? {
+              ...item.link,
+              onClick: (event: MouseEvent<HTMLAnchorElement>) => {
+                item?.link?.onClick?.(event);
+                setIsNotificationsOpen(false);
+              },
+            }
+          : undefined,
+      })) || [],
+    [notifications],
+  );
 
   const onProductChange = useCallback<DrawerMenuProps['onProductChange']>(
     item => {
@@ -216,7 +233,12 @@ export function ProductHeaderMobile({
           className={styles.notificationsDrawer}
           position='right'
         >
-          <Notifications {...notifications} open={isNotificationsOpen} isMobile />
+          <Notifications
+            {...notifications}
+            items={notificationItemsWithCustomLink}
+            open={isNotificationsOpen}
+            isMobile
+          />
         </DrawerCustom>
       )}
     </>
