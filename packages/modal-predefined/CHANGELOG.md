@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.6 (2025-05-22)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-switch-row@0.6.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/switch-row/CHANGELOG.md)
+* [@sbercloud/uikit-product-toggles-predefined@0.8.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/toggles-predefined/CHANGELOG.md)
+
+
+
+
+
 ## 0.6.5 (2025-05-16)
 
 ### Only dependencies have been changed

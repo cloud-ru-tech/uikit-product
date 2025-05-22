@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-05-22)
+
+
+### Features
+
+* **FF-6410:** add name prop to toggle card ([d72116f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d72116f2c7dcfbea7fad264c73716fef343440a4))
+
+
+
+
+
 ## 0.7.11 (2025-02-10)
 
 
