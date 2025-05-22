@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.1.1 (2025-05-22)
+
+
+### Bug Fixes
+
+* **FF-6556:** add tests for header ([174ee24](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/174ee2444eb50811278990ff0bee12bd73988dc3))
+* **FF-6556:** close mobile notification panel on link click ([f7dc510](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f7dc5108da1d6209f1222c721e12974343cb18fd))
+
+
+
+
+
 # 4.1.0 (2025-05-21)
 
 
