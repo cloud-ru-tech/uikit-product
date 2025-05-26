@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2025-05-26)
+
+
+### BREAKING CHANGES
+
+
+* **PDS-1899:** add hint appearance, hint link, no price changes ([0d1623b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0d1623b422e1e961fd79177b083ac2558498fac1))
+
+
+
+
 ## 0.0.32 (2025-05-16)
 
 ### Only dependencies have been changed
