@@ -1,5 +1,0 @@
-@use '@sbercloud/figma-tokens-cloud-platform//build/scss/components/styles-tokens-markdown';
-
-.wrapper {
-  @include styles-tokens-markdown.composite-var(styles-tokens-markdown.$markdown-syntax-divider);
-}

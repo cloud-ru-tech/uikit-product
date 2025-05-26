@@ -4,9 +4,14 @@ import { LazyProductCodeEditor } from '@sbercloud/uikit-product-code-editor';
 
 import styles from './styles.module.scss';
 
-type CodeProps = { inline?: boolean; className?: string; children: ReactNode & ReactNode[] };
+type CodeProps = {
+  inline?: boolean;
+  className?: string;
+  children: ReactNode & ReactNode[];
+  onCopyClick?(): void;
+};
 
-export function Code({ inline, className, children }: CodeProps) {
+export function Code({ inline, className, children, onCopyClick }: CodeProps) {
   const language = /language-(\w+)/.exec(className || '')?.[1];
 
   if (!inline) {
@@ -14,6 +19,8 @@ export function Code({ inline, className, children }: CodeProps) {
       <LazyProductCodeEditor
         className={styles.wrapper}
         height={200}
+        hasHeader
+        onCopyClick={onCopyClick}
         language={language}
         value={String(children).replace(/\n$/, '')}
         options={{
