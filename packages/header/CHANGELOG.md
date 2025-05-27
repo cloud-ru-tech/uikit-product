@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.2.0 (2025-05-27)
+
+
+### Features
+
+* **FF-6743:** add callback for projectsSortChange ([16cf873](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/16cf873e4746d8fd0d3dd7f373fcac459a85f4ac))
+
+
+
+
+
 ## 4.1.1 (2025-05-22)
 
 
