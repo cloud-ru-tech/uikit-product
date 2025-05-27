@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.17.2 (2025-05-27)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-fields@0.6.43](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+
+
+
+
+
 ## 0.17.1 (2025-05-16)
 
 ### Only dependencies have been changed
