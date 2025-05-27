@@ -38,6 +38,7 @@ export type SelectProps = {
   projectsLoading?: boolean;
   selectedProject?: Project;
   onProjectChange?(value: Project): void;
+  onProjectsSortChange?(sort: SortVariant): void;
   projectAddButton?: Omit<SelectMenuFooterButtonProps, 'label'>;
 
   projectsEmptyState?: ListProps['noDataState'];
@@ -57,6 +58,7 @@ export function SelectMenu({
   projects,
   selectedProject,
   onProjectChange: onProjectChangeProp,
+  onProjectsSortChange,
   projectsLoading,
   projectAddButton,
   projectsEmptyState,
@@ -78,6 +80,11 @@ export function SelectMenu({
     'header_projects_sort',
     noCatalogsInSort ? SortVariant.DateDesc : SortVariant.ByCatalogs,
   );
+
+  const handleSortChange = (newSort: SortVariant) => {
+    setSort(newSort);
+    onProjectsSortChange?.(newSort);
+  };
 
   const organizations = useMemo(() => organizationsProp?.filter(org => !org.new), [organizationsProp]);
 
@@ -238,7 +245,7 @@ export function SelectMenu({
         <SelectMenuSort
           noCatalogs={noCatalogsInSort}
           value={sort}
-          onChange={setSort}
+          onChange={handleSortChange}
           mobile={mobile}
           projectsLoading={projectsLoading}
         />

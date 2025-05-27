@@ -17,6 +17,7 @@ export function Select({
   projectAddButton,
   projectsLoading,
   projectsEmptyState,
+  onProjectsSortChange,
 
   onOpenChange,
 }: SelectProps) {
@@ -85,6 +86,7 @@ export function Select({
                 onProjectChange={onProjectChange}
                 projectAddButton={projectAddButton}
                 projectsEmptyState={projectsEmptyState}
+                onProjectsSortChange={onProjectsSortChange}
                 closeDropdown={closeDropdown}
                 mobile={false}
               />

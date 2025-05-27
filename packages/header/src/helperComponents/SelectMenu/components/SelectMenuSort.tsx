@@ -5,14 +5,6 @@ import { useLocale } from '@sbercloud/uikit-product-locale';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Droplist, DroplistProps } from '@snack-uikit/list';
 
-type SelectMenuSortProps = {
-  value: string;
-  onChange(value: string): void;
-  mobile: boolean;
-  noCatalogs?: boolean;
-  projectsLoading?: boolean;
-};
-
 export enum SortVariant {
   DateAsc = 'dateAsc',
   DateDesc = 'dateDesc',
@@ -20,6 +12,14 @@ export enum SortVariant {
   AlphabeticalDesc = 'alphabeticalDesc',
   ByCatalogs = 'byCatalogs',
 }
+
+type SelectMenuSortProps = {
+  value: SortVariant;
+  onChange(value: SortVariant): void;
+  mobile: boolean;
+  noCatalogs?: boolean;
+  projectsLoading?: boolean;
+};
 
 export function SelectMenuSort({ value, onChange, mobile, noCatalogs, projectsLoading }: SelectMenuSortProps) {
   const { t } = useLocale('Header');
