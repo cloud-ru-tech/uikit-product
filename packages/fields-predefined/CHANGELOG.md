@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2025-05-28)
+
+
+### Features
+
+* **PDS-2225:** FieldAI and FieldChat ([7656767](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/76567674678d6003230e80e7e5968d29c34bf2ac))
+
+
+
+
+
 # 0.5.0 (2025-05-27)
 
 

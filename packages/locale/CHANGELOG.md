@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.3 (2025-05-28)
+
+
+### Bug Fixes
+
+* **PDS-2225:** fields predefined locales ([0606265](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/06062659ca11d70da2f95ba12c66a63bd0d2c171))
+
+
+
+
+
 ## 0.6.2 (2025-05-28)
 
 

@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-dropdown",
   "title": "Mobile Dropdown",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-mobile-modal": "0.7.39",
+    "@sbercloud/uikit-product-mobile-modal": "0.7.40",
     "@sbercloud/uikit-product-utils": "3.8.8",
     "@snack-uikit/list": "0.26.0",
     "@snack-uikit/utils": "3.7.0",

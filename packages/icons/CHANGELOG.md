@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.8.0 (2025-05-28)
+
+
+### Features
+
+* **PDS-2225:** add attachment icon ([7c073c9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7c073c93a9c4415236502c2927efd1ec0a84a359))
+
+
+
+
+
 # 11.7.0 (2025-05-16)
 
 
