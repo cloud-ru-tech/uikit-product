@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import useTransition from 'react-transition-state';
 
+import { SEARCH_TRANSITION_TIMEOUT } from '../constants';
+
 export function useSearchAnimation() {
   const searchRef = useRef<HTMLInputElement>(null);
 
@@ -12,7 +14,7 @@ export function useSearchAnimation() {
     mountOnEnter: true,
     unmountOnExit: true,
     initialEntered: isSearchActive,
-    timeout: { enter: 300, exit: 300 },
+    timeout: SEARCH_TRANSITION_TIMEOUT,
   });
 
   useEffect(() => toggle(isSearchActive), [isSearchActive]);

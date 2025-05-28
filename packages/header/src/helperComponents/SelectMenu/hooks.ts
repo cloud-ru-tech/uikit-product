@@ -21,11 +21,6 @@ export function useSearch({ groups, searchable }: UseSearchProps) {
     () =>
       searchable && searchValue.length > 0
         ? groups.reduce((result, group) => {
-            if (group.heading && matchSearchString(group.heading, searchValue)) {
-              result.push(group);
-              return result;
-            }
-
             const items = group.items.filter(item => matchSearchString(item.name, searchValue));
 
             if (items.length > 0) {

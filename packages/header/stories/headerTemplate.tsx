@@ -19,22 +19,20 @@ import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import {
+  AdvancedPlatformLogo,
   DefaultUserMenuProps,
   DIVIDER_SETTING_OPTION_ID,
+  EnterprisePlatformLogo,
+  EvolutionPlatformLogo,
   Header,
   HEADER_LOGO_MODE,
   HeaderLogo,
   HeaderLogoMode,
   HeaderProps,
+  MLSpacePlatformLogo,
   THEME_MODE,
   ThemeMode,
 } from '../src';
-import {
-  AdvancedPlatformLogo,
-  EnterprisePlatformLogo,
-  EvolutionPlatformLogo,
-  MLSpacePlatformLogo,
-} from '../src/helperComponents';
 import styles from './styles.module.scss';
 
 export type StoryProps = Omit<HeaderProps, 'layoutType'> & {

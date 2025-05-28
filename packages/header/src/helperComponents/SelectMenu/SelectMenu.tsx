@@ -185,19 +185,23 @@ export function SelectMenu({
 
     switch (sort) {
       case SortVariant.AlphabeticalDesc: {
-        listItems = listItems.toSorted((a, b) => a.name.localeCompare(b.name));
+        listItems = listItems.toSorted((a, b) =>
+          a.name.trim().toLowerCase().localeCompare(b.name.trim().toLowerCase()),
+        );
         break;
       }
       case SortVariant.AlphabeticalAsc: {
-        listItems = listItems.toSorted((a, b) => b.name.localeCompare(a.name));
+        listItems = listItems.toSorted((a, b) =>
+          b.name.trim().toLowerCase().localeCompare(a.name.trim().toLowerCase()),
+        );
         break;
       }
       case SortVariant.DateDesc: {
-        listItems = listItems.toSorted((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
+        listItems = listItems.toSorted((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
         break;
       }
       case SortVariant.DateAsc: {
-        listItems = listItems.toSorted((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+        listItems = listItems.toSorted((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
         break;
       }
       default: {
@@ -254,6 +258,7 @@ export function SelectMenu({
       {organizationsOptions && organizationsOptions.length > 1 && (
         <div className={styles.functionBar}>
           <AdaptiveChipChoice.Single
+            className={styles.organizationsChip}
             icon={<OrganizationSVG />}
             value={selectedOrganization?.id}
             onChange={handleOrganizationChange}
@@ -301,6 +306,7 @@ export function SelectMenu({
                       content: <SelectMenuFooterButton {...projectAddButton} mobile={mobile} label={t('addProject')} />,
                       className: styles.pinBottom,
                       onClick: projectAddButton.onClick,
+                      disabled: projectAddButton.disabled,
                     },
                   ]
                 : undefined

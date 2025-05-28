@@ -23,6 +23,7 @@ import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
 import { ProductSelectTrigger } from '../ProductSelectTrigger';
+import { SEARCH_TRANSITION_TIMEOUT } from './constants';
 import { useLinksScrollToSelected, useSearchAnimation } from './hooks';
 import styles from './styles.module.scss';
 
@@ -162,7 +163,13 @@ export function DrawerMenuMobile({
             )}
 
             {leftSectionLinks && (
-              <div className={styles.searchWrap}>
+              <div
+                className={styles.searchWrap}
+                style={{
+                  '--sc-header-animation-enter': SEARCH_TRANSITION_TIMEOUT.enter,
+                  '--sc-header-animation-exit': SEARCH_TRANSITION_TIMEOUT.exit,
+                }}
+              >
                 <Typography.SansTitleM>{t('services')}</Typography.SansTitleM>
 
                 <div
@@ -279,7 +286,6 @@ export function DrawerMenuMobile({
             allProducts: visibleProducts,
             onProductChange,
           })}
-          // className={styles.nestedList}
           size='l'
         />
       </MobileModalCustom>
