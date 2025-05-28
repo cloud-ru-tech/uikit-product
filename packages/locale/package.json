@@ -33,7 +33,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/common-translations": "1.2.0",
-    "@snack-uikit/locale": "0.15.0",
+    "@snack-uikit/locale": "0.15.1",
     "lodash.get": "4.4.2",
     "lodash.merge": "4.6.2",
     "lodash.set": "4.3.2"

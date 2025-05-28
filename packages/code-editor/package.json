@@ -32,10 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@snack-uikit/code-editor": "0.7.0",
+    "@snack-uikit/code-editor": "0.7.2",
     "@snack-uikit/loaders": "0.9.4"
-  },
-  "peerDependencies": {
-    "@sbercloud/uikit-product-locale": "*"
   }
 }
