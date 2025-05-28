@@ -102,23 +102,30 @@ export function MobileChipChoiceSingle<T extends ContentRenderProps = ContentRen
         } else {
           setDeferredValue(newValue);
         }
+
+        return;
+      }
+
+      if (autoApply) {
+        setOpen(false);
       }
     },
     [autoApply, setOpen, setValue, setDeferredValue],
   );
-  const handleOnCancelClick = () => {
+
+  const handleOnCancelClick = useCallback(() => {
     onCancel?.();
 
     setDeferredValue(value);
     setOpen(false);
-  };
+  }, [onCancel, setDeferredValue, setOpen, value]);
 
-  const handleOnApproveClick = () => {
+  const handleOnApproveClick = useCallback(() => {
     onApprove?.();
 
     setValue(deferredValue);
     setOpen(false);
-  };
+  }, [deferredValue, onApprove, setOpen, setValue]);
 
   const autoApplyFooter = useAutoApplyFooter({
     autoApply,
