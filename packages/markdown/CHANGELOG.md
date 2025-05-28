@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.3 (2025-05-28)
+
+
+### Bug Fixes
+
+* **PDS-2227:** markdown editor to snack ([2dfe69c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2dfe69c34011ff2ba1a5bc3c73b0cb12d61deaef))
+
+
+
+
+
 ## 0.1.2 (2025-05-13)
 
 ### Only dependencies have been changed
