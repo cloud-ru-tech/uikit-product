@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-header",
   "title": "Header",
-  "version": "4.2.2",
+  "version": "4.2.3",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -35,7 +35,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-card-predefined": "0.7.34",
     "@sbercloud/uikit-product-icons": "11.8.0",
-    "@sbercloud/uikit-product-mobile-chips": "0.7.18",
+    "@sbercloud/uikit-product-mobile-chips": "0.7.19",
     "@sbercloud/uikit-product-mobile-modal": "0.7.40",
     "@sbercloud/uikit-product-title-clickable": "0.0.18",
     "@sbercloud/uikit-product-utils": "3.8.8",

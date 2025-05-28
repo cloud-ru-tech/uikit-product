@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.2.3 (2025-05-28)
+
+
+### Bug Fixes
+
+* **FF-6613:** projects sort fix, search animation timing, disable project search by catalog ([5926712](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/59267121cffa84ff3c366461867055c38b62b6a7))
+
+
+
+
+
 ## 4.2.2 (2025-05-28)
 
 ### Only dependencies have been changed

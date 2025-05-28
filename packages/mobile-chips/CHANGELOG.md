@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.19 (2025-05-28)
+
+
+### Bug Fixes
+
+* **FF-6613:** close MobileChipChoiceSingle if clicked on selected element ([0690b05](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0690b05fea8e710e1e4c643fd1c56ab7f7aa770c))
+
+
+
+
+
 ## 0.7.18 (2025-05-28)
 
 ### Only dependencies have been changed
