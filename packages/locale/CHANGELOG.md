@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.4 (2025-05-29)
+
+
+### Bug Fixes
+
+* **PDS-2227:** remove codeEditor copy tooltip ([b9614dc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b9614dceeb9b646b144ca2fcff4b0be07379086f))
+
+
+
+
+
 ## 0.6.3 (2025-05-28)
 
 
