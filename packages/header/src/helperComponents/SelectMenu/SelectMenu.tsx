@@ -81,7 +81,12 @@ export function SelectMenu({
     noCatalogsInSort ? SortVariant.DateDesc : SortVariant.ByCatalogs,
   );
 
-  const handleSortChange = (newSort: SortVariant) => {
+  const handleSortChange = (newSort?: SortVariant) => {
+    // undefined returns if selected same element
+    if (!newSort) {
+      return;
+    }
+
     setSort(newSort);
     onProjectsSortChange?.(newSort);
   };
