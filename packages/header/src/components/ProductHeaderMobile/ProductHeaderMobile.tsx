@@ -1,4 +1,4 @@
-import { MouseEvent, useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { QuestionSVG } from '@sbercloud/uikit-product-icons';
 import { Avatar } from '@snack-uikit/avatar';
@@ -17,6 +17,7 @@ import {
   NotificationsTrigger,
   PartnerPopover,
 } from '../../helperComponents';
+import { useNotifications } from '../../hooks/useNotifications';
 import { ProductHeaderProps } from '../ProductHeader';
 import styles from './styles.module.scss';
 
@@ -32,7 +33,7 @@ export function ProductHeaderMobile({
   pagePath,
   settings,
   onHelpMenuClick,
-  notifications,
+  notifications: notificationsProps,
   userMenu,
   showMainMenu = true,
   disableMainMenu,
@@ -44,8 +45,7 @@ export function ProductHeaderMobile({
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [isProjectMenuOpen, setIsProjectMenuOpen] = useState(false);
-
-  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const notifications = useNotifications(notificationsProps);
 
   const onSelectOpenChange = select?.onOpenChange;
 
@@ -83,23 +83,6 @@ export function ProductHeaderMobile({
     setIsUserMenuOpen(false);
     closeProjectMenu();
   }, [closeProjectMenu]);
-
-  const notificationItemsWithCustomLink = useMemo(
-    () =>
-      notifications?.items.map(item => ({
-        ...item,
-        link: item.link
-          ? {
-              ...item.link,
-              onClick: (event: MouseEvent<HTMLAnchorElement>) => {
-                item?.link?.onClick?.(event);
-                setIsNotificationsOpen(false);
-              },
-            }
-          : undefined,
-      })) || [],
-    [notifications],
-  );
 
   const onProductChange = useCallback<DrawerMenuProps['onProductChange']>(
     item => {
@@ -140,7 +123,6 @@ export function ProductHeaderMobile({
                 onClick={() => {
                   notifications.onNotifyTriggerClick?.();
                   notifications.onOpenChange?.(true);
-                  setIsNotificationsOpen(true);
                 }}
               />
             )}
@@ -225,20 +207,14 @@ export function ProductHeaderMobile({
 
       {notifications && (
         <DrawerCustom
-          open={isNotificationsOpen}
+          open={notifications.open}
           onClose={() => {
             notifications.onOpenChange?.(false);
-            setIsNotificationsOpen(false);
           }}
           className={styles.notificationsDrawer}
           position='right'
         >
-          <Notifications
-            {...notifications}
-            items={notificationItemsWithCustomLink}
-            open={isNotificationsOpen}
-            isMobile
-          />
+          <Notifications {...notifications} open={notifications?.open || false} isMobile />
         </DrawerCustom>
       )}
     </>

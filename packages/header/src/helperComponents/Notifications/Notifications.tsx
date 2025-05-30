@@ -9,7 +9,7 @@ import { NotificationCards } from './NotificationCards';
 import styles from './styles.module.scss';
 import { ChipFilter, NotificationItem } from './types';
 
-export type NotificationsProps = {
+type BaseNotificationsProps = {
   count: number;
   items: NotificationItem[];
   loading?: boolean;
@@ -23,9 +23,20 @@ export type NotificationsProps = {
   onTabChange?(tab: ChipFilter): void;
   onFooterButtonClick?(): void;
   onNotifyTriggerClick?(): void;
-  onOpenChange?(open: boolean): void;
   settings?: NotificationPanelProps['settings'];
 };
+
+export type WithOpenControlNotificationsProps = BaseNotificationsProps & {
+  open: boolean;
+  onOpenChange(open: boolean): void;
+};
+
+type WithoutOpenControlNotificationsProps = BaseNotificationsProps & {
+  open?: never;
+  onOpenChange?: never;
+};
+
+export type NotificationsProps = WithOpenControlNotificationsProps | WithoutOpenControlNotificationsProps;
 
 type NotificationsComponentProps = NotificationsProps & {
   open: boolean;

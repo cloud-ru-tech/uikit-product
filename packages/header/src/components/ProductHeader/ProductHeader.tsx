@@ -19,6 +19,7 @@ import {
   UserMenuCustom,
   UserMenuProps,
 } from '../../helperComponents';
+import { useNotifications } from '../../hooks/useNotifications';
 import { DIVIDER_SETTING_OPTION_ID, DividerItem, HeaderLogo, VendorLogo } from '../../types';
 import { extractAppNameFromId } from '../../utils';
 import styles from './styles.module.scss';
@@ -111,7 +112,7 @@ export function ProductHeader({
   financeButton,
   settings,
   onHelpMenuClick,
-  notifications,
+  notifications: notificationsProp,
   userMenu,
   showMainMenu = true,
   disableMainMenu = false,
@@ -120,6 +121,7 @@ export function ProductHeader({
 }: ProductHeaderProps) {
   const [isMainMenuOpen, setIsMainMenuOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+  const notifications = useNotifications(notificationsProp);
 
   useEffect(() => {
     const openListener = () => setIsMainMenuOpen(true);
