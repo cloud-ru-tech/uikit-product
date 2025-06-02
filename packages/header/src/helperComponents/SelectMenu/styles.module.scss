@@ -73,8 +73,11 @@
 }
 
 .divider {
-  margin: 4px 0;
-  flex-shrink: 0;
+  // небольшой хак, чтобы повысить специфичность стиля
+  &[data-weight="regular"] {
+    margin: 4px 0;
+    flex-shrink: 0;
+  }
 }
 
 .droplistTriggerWrap {
