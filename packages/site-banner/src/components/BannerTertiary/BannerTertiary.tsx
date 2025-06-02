@@ -46,6 +46,8 @@ export function BannerTertiary({
   className,
   ...rest
 }: BannerTertiaryProps) {
+  const isMobile = layoutType === 'mobile';
+
   return (
     <ColorWrapper {...rest} className={cn(className, styles.root)} data-layout-type={layoutType}>
       {erid && (
@@ -75,6 +77,7 @@ export function BannerTertiary({
           {...button}
           size='l'
           appearance={ColorWrapper.getButtonAppearance(rest.appearance)}
+          fullWidth={isMobile}
         />
       </div>
     </ColorWrapper>

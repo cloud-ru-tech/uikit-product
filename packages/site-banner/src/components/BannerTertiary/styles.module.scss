@@ -9,8 +9,7 @@
   flex-direction: row;
   align-items: center;
 
-  [data-layout-type=tablet] &,
-  [data-layout-type=mobile] & {
+  [data-layout-type='mobile'] & {
     flex-direction: column;
   }
 }
