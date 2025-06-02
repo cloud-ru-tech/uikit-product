@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.2.5 (2025-06-02)
+
+
+### Bug Fixes
+
+* **FF-6687:** project selector divider style order ([b9654f5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b9654f5e25253314de04a4001cfe41b835542c05))
+* **FF-6687:** project sort ignore undefined ([d48d17b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d48d17bc5a60cd9ed3ccf2f5bdefdcb258858fdb))
+
+
+
+
+
 ## 4.2.4 (2025-05-29)
 
 ### Only dependencies have been changed
