@@ -34,6 +34,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-copy-line": "0.7.33",
     "@sbercloud/uikit-product-icons": "11.8.0",
+    "@sbercloud/uikit-product-markdown": "0.1.4",
     "@sbercloud/uikit-product-mobile-modal": "0.7.40",
     "@sbercloud/uikit-product-switch-row": "0.6.0",
     "@sbercloud/uikit-product-toggles-predefined": "0.8.0",
@@ -42,7 +43,6 @@
     "@snack-uikit/carousel": "0.4.11",
     "@snack-uikit/fields": "0.39.3",
     "@snack-uikit/info-block": "0.6.13",
-    "@snack-uikit/markdown": "0.3.32",
     "@snack-uikit/modal": "0.16.1",
     "@snack-uikit/pagination": "0.10.2",
     "@snack-uikit/scroll": "0.9.3",

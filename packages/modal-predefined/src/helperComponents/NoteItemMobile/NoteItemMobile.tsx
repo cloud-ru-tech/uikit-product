@@ -1,6 +1,6 @@
 import { RefObject } from 'react';
 
-import { Markdown } from '@snack-uikit/markdown';
+import { Markdown } from '@sbercloud/uikit-product-markdown';
 import { Scroll } from '@snack-uikit/scroll';
 import { Typography } from '@snack-uikit/typography';
 
