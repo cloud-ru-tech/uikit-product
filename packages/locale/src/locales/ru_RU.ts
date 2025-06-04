@@ -236,6 +236,14 @@ export const ru_RU: typeof en_GB = {
     sort: {
       withoutGrouping: 'Без группировки',
       withGrouping: 'С группировкой',
+      lastVisitedDesc: {
+        option: 'По дате посещения',
+        caption: 'сначала недавние',
+      },
+      lastVisitedAsc: {
+        option: 'По дате посещения',
+        caption: 'сначала старые',
+      },
       dateDesc: {
         option: 'По дате создания',
         caption: 'сначала новые',

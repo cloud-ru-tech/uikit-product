@@ -235,13 +235,21 @@ export const en_GB = {
     sort: {
       withoutGrouping: 'Without grouping',
       withGrouping: 'With grouping',
+      lastVisitedDesc: {
+        option: 'By visit date',
+        caption: 'recent first',
+      },
+      lastVisitedAsc: {
+        option: 'By visit date',
+        caption: 'old first',
+      },
       dateDesc: {
-        option: 'By create date',
-        caption: 'descending',
+        option: 'By creation date',
+        caption: 'new first',
       },
       dateAsc: {
-        option: 'By create date',
-        caption: 'ascending',
+        option: 'By creation date',
+        caption: 'old first',
       },
       alphabeticalDesc: {
         option: 'Alphabetical',
