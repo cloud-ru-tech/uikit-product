@@ -40,6 +40,7 @@ export type InnerLink = {
   disabled?: boolean;
   hidden?: boolean;
   badge?: CardServiceSmallProps['promoBadge'];
+  aliases: string[];
 };
 
 type TitleStatic = {

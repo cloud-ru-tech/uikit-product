@@ -63,6 +63,7 @@
     "@snack-uikit/typography": "0.8.6",
     "@snack-uikit/utils": "3.8.1",
     "classnames": "2.5.1",
+    "fuse.js": "7.1.0",
     "lodash.debounce": "4.0.8",
     "lodash.throttle": "4.1.1",
     "react-transition-state": "2.1.3",

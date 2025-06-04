@@ -4,7 +4,6 @@ import { NotificationTabs, SortVariant } from './constants';
 import {
   getDrawerMenuFavouriteItem,
   getDrawerMenuItem,
-  getDrawerMenuSearchResultByText,
   getFavouriteButton,
   getNotificationTab,
   getSortItem,
@@ -72,44 +71,6 @@ export function basic(getPage: (props: Record<string, unknown>) => string) {
 
     await t.click(notificationButton);
     await t.expect(getNotificationTab(NotificationTabs.All).getAttribute('data-checked')).eql('true');
-  });
-}
-
-export function searchTests(openSearchSelector?: Selector) {
-  test('drawer menu > search should work by group title', async t => {
-    const { drawerMenuButton, drawerSearchInput } = selectors;
-
-    const searchValue = 'devtools';
-    await t.click(drawerMenuButton);
-
-    if (openSearchSelector) {
-      await t.click(openSearchSelector);
-    }
-
-    await t.typeText(drawerSearchInput, searchValue);
-
-    await t.expect(getDrawerMenuSearchResultByText('Devtools').exists).ok('Card is missing');
-
-    await t.typeText(drawerSearchInput, searchValue.toUpperCase(), { replace: true });
-    await t.expect(getDrawerMenuSearchResultByText('Devtools').exists).ok('Card is missing');
-  });
-
-  test('drawer menu > search should work by items title', async t => {
-    const { drawerMenuButton, drawerSearchInput } = selectors;
-
-    const searchValue = 'vpc';
-    await t.click(drawerMenuButton);
-
-    if (openSearchSelector) {
-      await t.click(openSearchSelector);
-    }
-
-    await t.typeText(drawerSearchInput, searchValue);
-
-    await t.expect(getDrawerMenuSearchResultByText('VPC').exists).ok('Item is missing');
-
-    await t.typeText(drawerSearchInput, searchValue.toUpperCase(), { replace: true });
-    await t.expect(getDrawerMenuSearchResultByText('VPC').exists).ok('Item is missing');
   });
 }
 

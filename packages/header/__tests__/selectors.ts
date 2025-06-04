@@ -32,6 +32,9 @@ export const selectors = {
   selectPlatformValue: Selector(dataTestIdSelector('header__drawer-menu__select__product-name')),
   searchInput: Selector(dataTestIdSelector('header__select-project__search-input')),
   drawerSearchInput: Selector(dataTestIdSelector('header__drawer-menu__search')),
+  drawerSearchClearButton: Selector(dataTestIdSelector('header__drawer-menu__search')).find(
+    dataTestIdSelector('button-clear-value'),
+  ),
   mobileSearchTriggerButton: Selector(dataTestIdSelector('header__drawer-menu__close-search-icon')),
   drawerMenuButton: Selector(dataTestIdSelector('header__drawer-menu-button')),
   drawerCardsList: Selector(dataTestIdSelector('header__drawer-menu__group-cards-list')),
@@ -88,9 +91,14 @@ export function getFavouriteButton(id: string) {
   return getDrawerMenuItem(id).find(dataTestIdSelector(`card-service-small__favorite-native-input`));
 }
 
-export function getDrawerMenuSearchResultByText(text: string) {
+export function getDrawerMenuSearchResultGroupByText(text: string) {
   return Selector('[data-test-id^="header__drawer-menu__group-card-"]').withText(text);
 }
+
+export function getDrawerMenuSearchResultLinkByText(text: string) {
+  return Selector('[data-test-id^="header__drawer-menu__link-"]').withText(text);
+}
+
 export function getSortItem(id: string) {
   return Selector(dataTestIdSelector(`list__base-item_${id}`));
 }

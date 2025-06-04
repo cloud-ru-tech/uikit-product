@@ -1,3 +1,4 @@
+import Fuse from 'fuse.js';
 import debounce from 'lodash.debounce';
 import { MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
 
@@ -5,8 +6,9 @@ import { useLocale } from '@sbercloud/uikit-product-locale';
 import { isBrowser } from '@snack-uikit/utils';
 
 import { InnerLink, LinksGroup } from '../../types';
+import { SearchGroupsAccessor } from './constants';
 import { DrawerMenuProps } from './types';
-import { filterHiddenLinks } from './utils';
+import { filterHiddenLinks, toggleLayout } from './utils';
 
 type UseSearchProps = {
   links?: LinksGroup[];
@@ -20,9 +22,7 @@ type UseScrollProps = {
   highlightClassName: string;
 };
 
-function matchSearchString(value: string, search: string) {
-  return value.trim().toLowerCase().includes(search.trim().toLowerCase());
-}
+const DEBOUNCE_DELAY_MS = 80;
 
 export function useHighlight(className: string) {
   const element = useRef<HTMLElement>();
@@ -39,7 +39,7 @@ export function useHighlight(className: string) {
           300,
           { trailing: false },
         );
-      }, 80);
+      }, DEBOUNCE_DELAY_MS);
 
       return (elementToHighlight?: HTMLElement | null) => {
         if (elementToHighlight) {
@@ -55,30 +55,112 @@ export function useHighlight(className: string) {
   return highlight;
 }
 
-export function useSearch({ links }: UseSearchProps) {
+const prepareItemAccessorKey = (groupId: string, alias: string): string => `${groupId}-${alias}`;
+
+type ItemsMap = Record<string, InnerLink>;
+
+function createItemsMap(links: LinksGroup[]): ItemsMap {
+  const itemsMap: ItemsMap = {};
+
+  links.forEach(group => {
+    group.items.forEach(item => {
+      item.aliases.forEach(alias => {
+        const key = prepareItemAccessorKey(group.id, alias);
+        itemsMap[key] = item;
+      });
+    });
+  });
+
+  return itemsMap;
+}
+
+export function useSearch({ links = [] }: UseSearchProps) {
   const [searchValue, setSearchValue] = useState('');
 
-  const filteredLinks = useMemo(
+  const itemsMap = useMemo(() => createItemsMap(links), [links]);
+  const linksFuse = useMemo(
     () =>
-      links && searchValue.length > 0
-        ? links.reduce((result, group) => {
-            if (group.label && matchSearchString(group.label.text, searchValue)) {
-              result.push(group);
-              return result;
-            }
-
-            const items = group.items.filter(item => matchSearchString(item.label, searchValue));
-
-            if (items.length > 0) {
-              result.push({ ...group, items });
-              return result;
-            }
-
-            return result;
-          }, [] as LinksGroup[])
-        : links,
-    [links, searchValue],
+      new Fuse(links, {
+        keys: Object.values(SearchGroupsAccessor),
+        includeMatches: true,
+        threshold: 0.4,
+      }),
+    [links],
   );
+
+  const filteredLinks = useMemo(() => {
+    let fuseSearchResults = linksFuse.search(searchValue);
+
+    if (fuseSearchResults.length < 1) {
+      const fixedLayoutValue = toggleLayout(searchValue);
+      fuseSearchResults = linksFuse.search(fixedLayoutValue);
+    }
+
+    return fuseSearchResults.reduce((accResult, fuseResult) => {
+      if (!fuseResult.matches) {
+        return accResult;
+      }
+
+      const isMatchByGroup = fuseResult.matches.find(match => match.key === SearchGroupsAccessor.GroupLabelText);
+      if (isMatchByGroup) {
+        accResult.push(fuseResult.item);
+        return accResult;
+      }
+
+      const group = fuseResult.item;
+
+      const originalGroupIndex = fuseResult.refIndex;
+      const itemsInnerMap: Record<string, InnerLink> = {};
+      const items: InnerLink[] = [];
+
+      fuseResult.matches.forEach(match => {
+        if (match.refIndex === undefined) {
+          return;
+        }
+
+        switch (match.key) {
+          case SearchGroupsAccessor.ItemLabelText: {
+            const item = links[originalGroupIndex].items[match.refIndex];
+            if (item && !itemsInnerMap[item.id]) {
+              itemsInnerMap[item.id] = item;
+              items.push(item);
+            }
+            break;
+          }
+
+          case SearchGroupsAccessor.ItemAliases: {
+            if (!match.value) {
+              break;
+            }
+
+            const groupId = fuseResult.item.id;
+            const alias = match.value;
+            const key = prepareItemAccessorKey(groupId, alias);
+
+            const item = itemsMap[key];
+            if (item && !itemsInnerMap[item.id]) {
+              itemsInnerMap[item.id] = item;
+              items.push(item);
+            }
+            break;
+          }
+
+          case SearchGroupsAccessor.GroupLabelText:
+          default:
+            return;
+        }
+      });
+
+      if (items.length > 0) {
+        accResult.push({
+          ...group,
+          items,
+        });
+      }
+
+      return accResult;
+    }, [] as LinksGroup[]);
+  }, [itemsMap, links, linksFuse, searchValue]);
 
   return {
     searchValue,

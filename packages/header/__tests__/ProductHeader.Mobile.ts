@@ -1,8 +1,9 @@
 import { fixture, test } from 'testcafe';
 
 import { getTestcafeUrl } from '../../../testcafe/utils';
-import { basic, searchTests, sortTests } from './basic';
+import { basic, sortTests } from './basic';
 import { HEADER_TEST_ID } from './constants';
+import { searchTests } from './search';
 import {
   getSelectPlatformOption,
   getSelectPlatformOptionLabel,
