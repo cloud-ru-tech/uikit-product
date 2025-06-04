@@ -1,31 +1,31 @@
 import cn from 'classnames';
-import { createRef, RefObject, useCallback, useEffect, useMemo } from 'react';
+import { createRef, ReactElement, RefObject, useCallback, useEffect, useMemo } from 'react';
 
 import { ArrowLeftSVG, ChevronDownSVG, ChevronUpSVG, OrganizationSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
-import { useAdaptiveChipChoice } from '@sbercloud/uikit-product-mobile-chips';
+import { FilterOption, useAdaptiveChipChoice } from '@sbercloud/uikit-product-mobile-chips';
 import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { BaseItemProps, List, ListProps } from '@snack-uikit/list';
-import { PromoTag } from '@snack-uikit/promo-tag';
 import { SearchPrivate } from '@snack-uikit/search-private';
 import { SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { useLocalStorage } from '../../hooks';
 import { Organization, Project } from '../../types';
-import { ItemDroplist } from '../ItemDroplist';
 import {
+  ProjectAfterContent,
   SelectMenuFooterButton,
   SelectMenuFooterButtonProps,
+  SelectMenuProjectPlatformsProps,
   SelectMenuSkeletonItem,
   SelectMenuSort,
   SortVariant,
 } from './components';
 import { useSearch } from './hooks';
 import styles from './styles.module.scss';
-import { Item, ItemsGroup } from './types';
+import { ItemsGroup } from './types';
 
 export type SelectProps = {
   organizations?: Organization[];
@@ -44,6 +44,12 @@ export type SelectProps = {
   projectsEmptyState?: ListProps['noDataState'];
 
   closeDropdown?(): void;
+
+  platforms?: Pick<SelectMenuProjectPlatformsProps, 'onPlatformChange'> & {
+    filterOptions: { label: string; value: string; caption?: string; icon: ReactElement }[];
+    onFilterChange(platforms: string[]): void;
+    filterValue: string[];
+  };
 };
 
 type SelectMenuProps = SelectProps & {
@@ -65,10 +71,13 @@ export function SelectMenu({
 
   closeDropdown,
 
+  platforms,
+
   mobile,
   onOpenChange,
 }: SelectMenuProps) {
   const { t } = useLocale('Header');
+  const { t: chipsT } = useLocale('Chips');
 
   const AdaptiveChipChoice = useAdaptiveChipChoice({ layoutType: mobile ? 'mobile' : 'desktop' });
 
@@ -78,7 +87,7 @@ export function SelectMenu({
 
   const [sort, setSort] = useLocalStorage<SortVariant>(
     'header_projects_sort',
-    noCatalogsInSort ? SortVariant.DateDesc : SortVariant.ByCatalogs,
+    noCatalogsInSort ? SortVariant.LastVisitedDesc : SortVariant.ByCatalogs,
   );
 
   const handleSortChange = (newSort?: SortVariant) => {
@@ -105,7 +114,7 @@ export function SelectMenu({
   }, [mobile, searchRef]);
 
   const onProjectChange = useCallback(
-    (item: Item) => {
+    (item: Project) => {
       onProjectChangeProp?.(item);
       closeDropdown?.();
     },
@@ -113,7 +122,7 @@ export function SelectMenu({
   );
 
   const handleItemMouseDown = useCallback(
-    ({ item }: { item: Item }) =>
+    ({ item }: { item: Project }) =>
       () => {
         onProjectChange?.(item);
 
@@ -140,8 +149,10 @@ export function SelectMenu({
     [itemRefs],
   );
 
+  const onPlatformChange = platforms?.onPlatformChange;
+
   const mapProjectToListItem = useCallback(
-    (item: Item): BaseItemProps => {
+    (item: Project): BaseItemProps => {
       const dataTestId = `header__select-group__item-${item.id}`;
 
       return {
@@ -149,21 +160,15 @@ export function SelectMenu({
           option: item.name,
           truncate: { variant: 'middle' },
         },
-        beforeContent: item.logo ?? (
-          <Avatar appearance='neutral' size='xs' name={item.name} showTwoSymbols shape='square' />
-        ),
+        beforeContent: <Avatar appearance='neutral' size='xs' name={item.name} showTwoSymbols shape='square' />,
         afterContent: (
-          <>
-            {item.new && <PromoTag text={t('organizationNewBadge')} appearance='green' />}
-
-            {item.partner && <PromoTag text={t('partnerOrganizationBadge')} appearance='blue' />}
-
-            {item?.tag}
-
-            {item.actions && item.actions.length > 0 ? (
-              <ItemDroplist actions={item.actions} dataTestId={dataTestId} onItemClick={closeDropdown} />
-            ) : undefined}
-          </>
+          <ProjectAfterContent
+            mobile={mobile}
+            dataTestId={dataTestId}
+            project={item}
+            closeDropdown={closeDropdown}
+            onPlatformChange={onPlatformChange}
+          />
         ),
         id: item.id,
         onMouseDown: handleItemMouseDown({ item }),
@@ -171,7 +176,7 @@ export function SelectMenu({
         itemRef: getItemRef(item.id),
       };
     },
-    [closeDropdown, getItemRef, handleItemMouseDown, t],
+    [closeDropdown, getItemRef, handleItemMouseDown, mobile, onPlatformChange],
   );
 
   const items: ListProps['items'] = useMemo(() => {
@@ -209,6 +214,18 @@ export function SelectMenu({
         listItems = listItems.toSorted((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
         break;
       }
+      case SortVariant.LastVisitedDesc: {
+        listItems = listItems.toSorted(
+          (a, b) => new Date(b.lastVisitedAt).getTime() - new Date(a.lastVisitedAt).getTime(),
+        );
+        break;
+      }
+      case SortVariant.LastVisitedAsc: {
+        listItems = listItems.toSorted(
+          (a, b) => new Date(a.lastVisitedAt).getTime() - new Date(b.lastVisitedAt).getTime(),
+        );
+        break;
+      }
       default: {
         break;
       }
@@ -221,6 +238,41 @@ export function SelectMenu({
     () => organizations?.map(org => ({ value: org.id, label: org.name })),
     [organizations],
   );
+
+  const platformsOptions = useMemo<FilterOption[]>(() => {
+    if (!platforms?.filterOptions.length) {
+      return [];
+    }
+
+    return platforms.filterOptions.map(option => ({
+      ...option,
+      beforeContent: option.icon,
+      contentRenderProps: {
+        caption: option?.caption,
+      },
+    }));
+  }, [platforms?.filterOptions]);
+
+  const platformChipValueRender = useCallback(() => {
+    if (!platforms?.filterOptions) {
+      return '';
+    }
+
+    const filterValueLength = platforms.filterValue.length;
+
+    if (!filterValueLength || filterValueLength === platforms.filterOptions.length) {
+      return chipsT('allLabel');
+    }
+
+    const [first, ...rest] = platforms.filterValue;
+    const firstLabel = platforms.filterOptions.find(option => option.value === first)?.label ?? first;
+
+    if (!rest.length) {
+      return firstLabel;
+    }
+
+    return `${firstLabel}, +${rest.length}`;
+  }, [platforms?.filterValue, platforms?.filterOptions, chipsT]);
 
   const handleOrganizationChange = (value: string) => {
     const organization = organizations?.find(org => org.id === value);
@@ -260,8 +312,8 @@ export function SelectMenu({
         />
       </div>
 
-      {organizationsOptions && organizationsOptions.length > 1 && (
-        <div className={styles.functionBar}>
+      <div className={styles.functionBar}>
+        {organizationsOptions && organizationsOptions.length > 1 && (
           <AdaptiveChipChoice.Single
             className={styles.organizationsChip}
             icon={<OrganizationSVG />}
@@ -272,8 +324,29 @@ export function SelectMenu({
             loading={projectsLoading}
             data-test-id='header__select-project__organization-filter'
           />
-        </div>
-      )}
+        )}
+
+        {platforms && platformsOptions.length > 0 && (
+          <AdaptiveChipChoice.Multiple
+            className={styles.platformsChip}
+            label={t('platforms')}
+            value={platforms.filterValue}
+            onChange={platforms.onFilterChange}
+            valueRender={platformChipValueRender}
+            options={[
+              {
+                type: 'group-select',
+                label: t('platforms'),
+                options: platformsOptions,
+              },
+            ]}
+            size={mobile ? 'm' : 's'}
+            loading={projectsLoading}
+            data-test-id='header__select-project__platform-filter'
+            dropDownClassName={styles.platformsChipDropdown}
+          />
+        )}
+      </div>
 
       <Divider className={styles.divider} />
 

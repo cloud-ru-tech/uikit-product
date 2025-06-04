@@ -3,13 +3,17 @@ import { ArgTypes } from '@storybook/react';
 import { useCallback, useEffect, useMemo } from 'react';
 
 import {
+  AdvancedSVG,
   CostControlSVG,
   DetalisationSVG,
   EmailSVG,
+  EvolutionSVG,
   FileSVG,
+  MlSpaceSVG,
   PlaceholderSVG,
   SettingsSVG,
   UsersSVG,
+  VmwareSVG,
 } from '@sbercloud/uikit-product-icons';
 import { PageServices } from '@sbercloud/uikit-product-page-layout';
 import { LayoutType } from '@sbercloud/uikit-product-utils';
@@ -30,9 +34,11 @@ import {
   HeaderLogoMode,
   HeaderProps,
   MLSpacePlatformLogo,
+  Project,
   THEME_MODE,
   ThemeMode,
 } from '../src';
+import { ItemsGroup } from '../src/helperComponents';
 import styles from './styles.module.scss';
 
 export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
@@ -92,27 +98,73 @@ const PROJECT_ACTIONS = [
   },
 ];
 
-const DEFAULT_PROJECT = { id: '1_1', name: 'Проект 1', actions: PROJECT_ACTIONS, createdAt: new Date().toString() };
-const PROJECTS = [
+const PROJECT_PLATFORMS = [
+  {
+    id: 'evolution',
+    label: 'Evolution',
+    icon: <EvolutionSVG />,
+    value: 'evolution',
+    tip: 'Перейти в Evolution',
+  },
+  {
+    id: 'advanced',
+    label: 'Advanced',
+    icon: <AdvancedSVG />,
+    value: 'advanced',
+    tip: 'Перейти в Advanced',
+  },
+  {
+    id: 'vmware',
+    label: 'Vmware',
+    icon: <VmwareSVG />,
+    value: 'vmware',
+    tip: 'Перейти в Облако VMware',
+  },
+];
+
+const DEFAULT_PROJECT = {
+  id: '1_1',
+  name: 'Проект 1',
+  actions: PROJECT_ACTIONS,
+  platforms: PROJECT_PLATFORMS,
+  createdAt: new Date().toString(),
+  lastVisitedAt: new Date('2025-05-01').toString(),
+};
+
+const PROJECTS: ItemsGroup<Project>[] = [
   {
     id: '1',
     heading: 'Folder 1',
     items: [
       DEFAULT_PROJECT,
-      { id: '1_2', name: 'Проект 2', onEdit: () => {}, actions: PROJECT_ACTIONS, createdAt: new Date().toString() },
+      {
+        id: '1_2',
+        name: 'Проект 2',
+        onEdit: () => {},
+        createdAt: new Date().toString(),
+        lastVisitedAt: new Date('2025-06-01').toString(),
+        platforms: PROJECT_PLATFORMS,
+      },
     ],
   },
   {
     id: '2',
     heading: 'Folder 2',
     items: [
-      { id: '2_1', name: 'Проект 3', actions: PROJECT_ACTIONS, createdAt: new Date().toString() },
+      {
+        id: '2_1',
+        name: 'Проект 3',
+        actions: PROJECT_ACTIONS,
+        createdAt: new Date().toString(),
+        lastVisitedAt: new Date('2025-06-02').toString(),
+      },
       {
         id: '2_2',
         name: 'W'.repeat(26),
         actions: PROJECT_ACTIONS,
         onEdit: () => {},
         createdAt: new Date().toString(),
+        lastVisitedAt: new Date('2025-06-03').toString(),
       },
     ],
   },
@@ -120,27 +172,38 @@ const PROJECTS = [
     id: '3',
     heading: 'Long Long Long Long Long Long Long Long Long Long name of the Folder',
     items: [
-      { id: '3_1', name: 'Проект 5', actions: PROJECT_ACTIONS, createdAt: new Date().toString() },
+      {
+        id: '3_1',
+        name: 'Проект 5',
+        actions: PROJECT_ACTIONS,
+        createdAt: new Date().toString(),
+        lastVisitedAt: new Date().toString(),
+      },
       {
         id: '3_2',
         name: 'Проект 6 с очень очень очень очень длинным названием',
         actions: PROJECT_ACTIONS,
         createdAt: new Date().toString(),
+        lastVisitedAt: new Date().toString(),
       },
       {
         id: '3_3',
         name: 'Проект 7 с очень длинным названием',
         actions: PROJECT_ACTIONS,
         createdAt: new Date().toString(),
+        lastVisitedAt: new Date().toString(),
       },
     ],
   },
   {
     id: '4',
     heading: 'Large group',
-    items: new Array(10000)
-      .fill(0)
-      .map((_, index) => ({ id: `4_${index}`, name: `Проект 4_${index}`, createdAt: new Date().toString() })),
+    items: new Array(10000).fill(0).map((_, index) => ({
+      id: `4_${index}`,
+      name: `Проект 4_${index}`,
+      createdAt: new Date().toString(),
+      lastVisitedAt: new Date().toString(),
+    })),
   },
 ];
 
@@ -273,6 +336,8 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     const [product, setProduct] = useState(args.drawerMenu.selectedProduct);
     const [selectedLink, setSelectedLink] = useState(args.drawerMenu.selectedLink);
 
+    const [platformsFilter, setPlatformsFilter] = useState(args.select?.platforms?.filterValue ?? []);
+
     const [notifyCards, setCards] = useState(args.notifications?.items || []);
 
     const [{ showOrganizationInvitePopover, showPartnerOrganizationPopover }, setArgs] = useArgs<StoryProps>();
@@ -297,6 +362,11 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     if (args.select) {
       args.select.selectedProject = project;
       args.select.onProjectChange = setProject;
+
+      if (args.select.platforms) {
+        args.select.platforms.onFilterChange = setPlatformsFilter;
+        args.select.platforms.filterValue = platformsFilter;
+      }
     }
 
     args.drawerMenu.allProducts = showSinglePlatform ? ALL_PRODUCTS_SINGLE : ALL_PRODUCTS_MULTI;
@@ -563,6 +633,37 @@ export const ARGS: StoryProps = {
         appearance: 'primary',
       },
       description: `Здесь появятся проекты, как только администратор организации предоставит вам к ним доступ.\n\nКонтакты администратора: <контакты>`,
+    },
+    platforms: {
+      onPlatformChange() {},
+      onFilterChange() {},
+      filterValue: [],
+      filterOptions: [
+        {
+          label: 'Evolution',
+          value: 'Evolution',
+          icon: <EvolutionSVG />,
+          caption: '1',
+        },
+        {
+          label: 'Advanced',
+          value: 'Advanced',
+          icon: <AdvancedSVG />,
+          caption: '1',
+        },
+        {
+          label: 'Облако VMware',
+          value: 'VMware',
+          icon: <VmwareSVG />,
+          caption: '1',
+        },
+        {
+          label: 'ML Space',
+          value: 'mlspace',
+          icon: <MlSpaceSVG />,
+          caption: '1',
+        },
+      ],
     },
   },
 

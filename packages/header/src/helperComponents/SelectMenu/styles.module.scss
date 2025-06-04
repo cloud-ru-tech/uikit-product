@@ -61,6 +61,9 @@
 }
 
 .functionBar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   padding: 0 6px;
 
   &[data-mobile] {
@@ -70,6 +73,15 @@
 
 .organizationsChip {
   max-width: 100%;
+}
+
+.platformsChip {
+  flex-shrink: 0;
+}
+
+.platformsChipDropdown {
+  // FIXME: временная затычка, требует фикса со стороны snack-uikit/chips
+  --divider-height: 0.5px;
 }
 
 .divider {

@@ -67,6 +67,10 @@ export function getSelectProjectOptionActions(id: string) {
   return Selector(dataTestIdSelector(`header__select-group__item-${id}__droplist-trigger`));
 }
 
+export function getSelectProjectOptionDroplist(id: string) {
+  return Selector(dataTestIdSelector(`header__select-group__item-${id}__droplist`));
+}
+
 export function getSelectPlatformOption(id: string) {
   return Selector(dataTestIdSelector(`header__select-group-platform__item-${id}`));
 }

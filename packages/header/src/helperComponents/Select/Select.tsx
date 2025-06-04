@@ -19,6 +19,8 @@ export function Select({
   projectsEmptyState,
   onProjectsSortChange,
 
+  platforms,
+
   onOpenChange,
 }: SelectProps) {
   const [isOpen, setIsOpen] = useState(false);
@@ -87,6 +89,7 @@ export function Select({
                 projectAddButton={projectAddButton}
                 projectsEmptyState={projectsEmptyState}
                 onProjectsSortChange={onProjectsSortChange}
+                platforms={platforms}
                 closeDropdown={closeDropdown}
                 mobile={false}
               />

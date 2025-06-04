@@ -8,6 +8,8 @@ import { Droplist, DroplistProps } from '@snack-uikit/list';
 export enum SortVariant {
   DateAsc = 'dateAsc',
   DateDesc = 'dateDesc',
+  LastVisitedAsc = 'lastVisitedAsc',
+  LastVisitedDesc = 'lastVisitedDesc',
   AlphabeticalAsc = 'alphabeticalAsc',
   AlphabeticalDesc = 'alphabeticalDesc',
   ByCatalogs = 'byCatalogs',
@@ -26,6 +28,14 @@ export function SelectMenuSort({ value, onChange, mobile, noCatalogs, projectsLo
 
   const items = useMemo<DroplistProps['items']>(() => {
     const itemsWithoutGrouping = [
+      {
+        id: SortVariant.LastVisitedDesc,
+        content: { option: t('sort.lastVisitedDesc.option'), caption: t('sort.lastVisitedDesc.caption') },
+      },
+      {
+        id: SortVariant.LastVisitedAsc,
+        content: { option: t('sort.lastVisitedAsc.option'), caption: t('sort.lastVisitedAsc.caption') },
+      },
       {
         id: SortVariant.DateDesc,
         content: { option: t('sort.dateDesc.option'), caption: t('sort.dateDesc.caption') },

@@ -20,11 +20,22 @@ export type Organization = {
   actions?: BaseItemProps[];
 };
 
+export type ProjectPlatform = {
+  id: string;
+  value: string;
+  label: string;
+  tip: string;
+  icon: ReactElement;
+  hidden?: boolean;
+};
+
 export type Project = {
   id: string;
   name: string;
   createdAt: string;
+  lastVisitedAt: string;
   onEdit?(): void;
+  platforms?: ProjectPlatform[];
   actions?: BaseItemProps[];
 };
 

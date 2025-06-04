@@ -69,6 +69,7 @@ export type ProductHeaderProps = WithSupportProps<
       | 'selectedOrganization'
       | 'onOpenChange'
       | 'onProjectsSortChange'
+      | 'platforms'
     >;
     pagePath?: BreadcrumbsProps['items'];
     settings?: SettingOption[];

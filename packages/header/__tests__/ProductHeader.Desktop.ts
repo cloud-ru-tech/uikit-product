@@ -10,6 +10,7 @@ import {
   getSelectPlatformOptionLabel,
   getSelectProjectOption,
   getSelectProjectOptionActions,
+  getSelectProjectOptionDroplist,
   getSelectProjectOptionLabel,
   getUserMenuOrganizationOption,
   selectors,
@@ -203,11 +204,13 @@ test('should show actions on click options', async t => {
 
   await t.click(select);
 
-  await t.expect(getSelectProjectOptionActions('1_2').exists).ok('actions are missing');
+  const projectActionsDroplistTrigger = getSelectProjectOptionActions('1_1');
 
-  await t.click(getSelectProjectOptionActions('1_2'));
+  await t.expect(projectActionsDroplistTrigger.exists).ok('actions are missing');
 
-  await t.expect(getSelectProjectOptionActions('1_2').exists).ok('action list is missing');
+  await t.click(projectActionsDroplistTrigger);
+
+  await t.expect(getSelectProjectOptionDroplist('1_1').exists).ok('action list is missing');
 });
 
 test('should select platform', async t => {

@@ -1,9 +1,10 @@
 import { useMemo, useRef, useState } from 'react';
 
-import { Item, ItemsGroup } from './types';
+import { Project } from '../../types';
+import { ItemsGroup } from './types';
 
 type UseSearchProps = {
-  groups: ItemsGroup<Item>[];
+  groups: ItemsGroup<Project>[];
   searchable?: boolean;
   active?: boolean;
   onActiveChange?(value?: boolean): void;
@@ -29,7 +30,7 @@ export function useSearch({ groups, searchable }: UseSearchProps) {
             }
 
             return result;
-          }, [] as ItemsGroup<Item>[])
+          }, [] as ItemsGroup<Project>[])
         : groups,
     [groups, searchValue, searchable],
   );
