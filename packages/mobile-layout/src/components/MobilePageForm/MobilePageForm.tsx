@@ -70,7 +70,7 @@ export function MobilePageForm({
                   option: label,
                 },
                 onClick: () => {
-                  setOpenMoreContentIndex(idx), setOpenMore(false);
+                  (setOpenMoreContentIndex(idx), setOpenMore(false));
                 },
               }))}
             >

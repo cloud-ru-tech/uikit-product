@@ -1,14 +1,16 @@
 import path from 'path';
 
-import { StorybookConfig } from '@storybook/react-webpack5';
+import { StorybookConfig } from '@storybook/react-vite';
+import vitePluginReact from '@vitejs/plugin-react';
 import { globSync } from 'glob';
-import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
-import { RuleSetRule } from 'webpack';
+import { defineConfig } from 'vite';
+import svgr from 'vite-plugin-svgr';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 import { getDependenciesLinks } from './utils/getDependenciesLinks';
 import { getPackagesStatistics } from './utils/getPackagesStatistics';
 
-const PACKAGES_STATISTICS = getPackagesStatistics();
+const PACKAGES_STATISTICS = getPackagesStatistics() || '';
 const DEPENDENCIES_LINKS = getDependenciesLinks();
 
 const STORIES = globSync(`packages/${process.env.STORYBOOK_PACKAGE_NAME || '*'}/stories/**/*.story.{ts,tsx}`)
@@ -57,77 +59,56 @@ const mainConfig: StorybookConfig = {
     'storybook-dark-mode',
     '@cloud-ru/ft-storybook-deps-graph-addon',
     '@sbercloud/ft-storybook-deps-table-addon',
-    '@storybook/addon-webpack5-compiler-babel',
   ],
   staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
-  framework: '@storybook/react-webpack5',
-  typescript: {
-    check: true,
-    reactDocgen: 'react-docgen-typescript',
-    checkOptions: {},
-  },
+  framework: '@storybook/react-vite',
   core: {
     disableTelemetry: true,
   },
+  typescript: {
+    check: true,
+    reactDocgen: 'react-docgen-typescript',
+  },
+
   babel: (base: StorybookConfig['babel']) => ({
     ...base,
     plugins: [...(base.plugins || []), ...(isTestServer ? ['istanbul'] : [])],
   }),
   env: config => ({
     ...config,
-    PACKAGES_STATISTICS: PACKAGES_STATISTICS as unknown as string,
     DEPENDENCIES_LINKS: DEPENDENCIES_LINKS as unknown as string,
-    DEPS_URL: (process.env.DEPS_URL || '') as unknown as string,
+    DEPS_URL: process.env.DEPS_URL || '',
+    CUSTOM_STORYBOOK_ADDONS: (process.env.CUSTOM_STORYBOOK_ADDONS || '') as string,
+    PACKAGES_STATISTICS: PACKAGES_STATISTICS as unknown as string,
   }),
-  webpackFinal: async config => {
-    isTestServer && (config.watch = false);
-    isTestServer &&
-      (config.watchOptions = {
-        ignored: /.*/,
-      });
-    isTestServer && (config.mode = 'production');
-    isTestServer && (config.devtool = false);
-
-    if (config.resolve) {
-      config.resolve.fallback = {
-        ...(config.resolve?.fallback || {}),
-        stream: require.resolve('stream-browserify'),
-      };
-
-      if (!config.resolve.plugins) {
-        config.resolve.plugins = [];
-      }
-
-      config.resolve.plugins.push(
-        new TsconfigPathsPlugin({
-          configFile: './tsconfig.json',
-          logLevel: 'INFO',
-          extensions: ['.ts', '.tsx', '.json', '.svg', '.png'],
-        }),
-      );
-    }
-
-    const SVG_SPRITE_EXPRESSION = /\.symbol.svg$/;
-
-    const fileLoaderRule = config.module?.rules?.find(rule => {
-      if (typeof rule !== 'object') {
-        return false;
-      }
-
-      return rule?.test?.toString().includes('svg');
-    }) as RuleSetRule;
-
-    if (fileLoaderRule) {
-      fileLoaderRule.exclude = SVG_SPRITE_EXPRESSION;
-    }
-
-    config.module?.rules?.push({
-      test: SVG_SPRITE_EXPRESSION,
-      use: 'svg-inline-loader',
-    });
-
-    return config;
-  },
+  viteFinal: async viteConfig =>
+    defineConfig({
+      ...viteConfig,
+      plugins: [
+        ...(viteConfig.plugins || []),
+        tsconfigPaths(),
+        vitePluginReact(),
+        svgr(),
+        {
+          name: 'markdown-loader',
+          transform(code, id) {
+            if (id.slice(-3) === '.md') {
+              return `export default ${JSON.stringify(code)};`;
+            }
+          },
+        },
+      ],
+      define: {
+        'process.env': {
+          ...viteConfig.define?.['process.env'],
+          DEPENDENCIES_LINKS,
+          DEPS_URL: process.env.DEPS_URL || '',
+          CUSTOM_STORYBOOK_ADDONS: process.env.CUSTOM_STORYBOOK_ADDONS || '',
+          TEST_SERVER: isTestServer || 'false',
+          PACKAGES_STATISTICS,
+        },
+      },
+    }),
 };
 
 // eslint-disable-next-line import/no-default-export

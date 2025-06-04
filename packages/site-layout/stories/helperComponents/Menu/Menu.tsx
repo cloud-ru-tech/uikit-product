@@ -3,7 +3,7 @@ import { Dispatch, SetStateAction } from 'react';
 
 import { Typography } from '@snack-uikit/typography';
 
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 export function Menu({
   items,

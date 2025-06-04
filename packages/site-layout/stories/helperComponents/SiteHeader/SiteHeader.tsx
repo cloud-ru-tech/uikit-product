@@ -9,7 +9,7 @@ import { Menu } from '../Menu';
 import { BurgerButton, HeaderSearchInput, SubHeader } from './components';
 import { consoleRedirectUrl, HEADER_DESKTOP_WIDTH, MENU_ITEMS } from './constants';
 import { useFormatConsoleUrl, useHeaderPosition, useWindowWidth } from './hooks';
-import styles from './styles.modules.scss';
+import styles from './styles.module.scss';
 
 type HeaderProps = WithLayoutType<{
   className?: string;

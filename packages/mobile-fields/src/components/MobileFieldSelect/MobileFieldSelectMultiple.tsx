@@ -24,17 +24,12 @@ import { extractSupportProps, isBrowser, useLayoutEffect, useValueControl } from
 
 import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
 import { usePostfix, usePrefix } from '../../hooks';
+import { getValidationState } from '../../utils/getValidationState';
 import { useButtons, useHandleDeleteItem, useHandleOnKeyDown, useSearchInput } from './hooks';
 import { useSearch } from './legacy';
 import styles from './styles.module.scss';
 import { ItemWithId, MobileFieldSelectMultipleProps, SelectedOptionFormatter } from './types';
-import {
-  extractFieldDecoratorProps,
-  extractListProps,
-  getArrowIcon,
-  getValidationState,
-  updateMultipleItems,
-} from './utils';
+import { extractFieldDecoratorProps, extractListProps, getArrowIcon, updateMultipleItems } from './utils';
 
 const defaultSelectedOptionFormatter: SelectedOptionFormatter = item =>
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

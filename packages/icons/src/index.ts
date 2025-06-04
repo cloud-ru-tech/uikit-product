@@ -9,4 +9,4 @@ export * from './components/interface-icons-product';
 export * from './components/interface-icons-system';
 export * from './components/service-icons';
 
-export { default as SpriteSystemSVG } from './sprite/svg/sprite-system.symbol.svg';
+export { default as SpriteSystemSVG } from './sprite/svg/sprite-system.symbol.svg?raw';

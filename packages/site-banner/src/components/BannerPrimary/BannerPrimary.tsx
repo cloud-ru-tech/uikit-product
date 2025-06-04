@@ -33,7 +33,9 @@ export function BannerPrimary({ tags, imgType, layoutType, expirationDate, ...pr
               <PromoTag size='xs' text={`Действует до ${expirationDate}`} appearance='neutral' color='decor' />
             )}
 
-            {tags?.map((props, index) => <TagSpecial key={index} {...props} />)}
+            {tags?.map((props, index) => (
+              <TagSpecial key={index} {...props} />
+            ))}
           </div>
         )
       }

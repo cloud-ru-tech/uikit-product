@@ -5,3 +5,5 @@ export declare global {
     __coverage__: CoverageMapData;
   }
 }
+
+declare module '*.md';

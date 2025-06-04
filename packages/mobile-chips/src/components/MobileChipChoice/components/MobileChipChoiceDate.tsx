@@ -50,7 +50,7 @@ export function MobileChipChoiceDate({
 }: MobileChipChoiceDateProps) {
   const [selectedValue, setSelectedValue] = useValueControl<Date>({ value, defaultValue, onChange });
 
-  const showSeconds = mode === 'date-time' ? (rest as ChipChoiceDateWithSeconds).showSeconds ?? true : undefined;
+  const showSeconds = mode === 'date-time' ? ((rest as ChipChoiceDateWithSeconds).showSeconds ?? true) : undefined;
 
   const localRef = useRef<HTMLDivElement>(null);
 

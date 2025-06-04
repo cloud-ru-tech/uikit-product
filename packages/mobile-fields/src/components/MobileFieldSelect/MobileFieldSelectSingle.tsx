@@ -22,11 +22,12 @@ import { extractSupportProps, isBrowser, useLayoutEffect, useValueControl } from
 
 import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
 import { usePostfix, usePrefix } from '../../hooks';
+import { getValidationState } from '../../utils/getValidationState';
 import { useButtons, useHandleOnKeyDown, useSearchInput } from './hooks';
 import { useSearch } from './legacy';
 import styles from './styles.module.scss';
 import { ItemWithId, MobileFieldSelectSingleProps, SelectedOptionFormatter } from './types';
-import { extractFieldDecoratorProps, extractListProps, getArrowIcon, getValidationState, updateItems } from './utils';
+import { extractFieldDecoratorProps, extractListProps, getArrowIcon, updateItems } from './utils';
 
 const defaultSelectedOptionFormatter: SelectedOptionFormatter = item =>
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

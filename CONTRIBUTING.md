@@ -2,7 +2,7 @@
 
 ## Общие положения
 
-- **ВСЕ НЕОБХОДИМЫЕ КОМАНДЫ ИМЕЮТСЯ В NPM SCRIPTS**.
+- **ВСЕ НЕОБХОДИМЫЕ КОМАНДЫ ИМЕЮТСЯ В SCRIPTS**.
 - Если вы все делаете правильно, поднятие и обновление зависимостей пакетов/пакетами происходит в автоматическом режиме, ровно как и changelog.
 - Мы исходим из того, что любые изменения в данном репозитории вносятся согласно [Conventional Commits](https://conventionalcommits.org).
 
@@ -20,10 +20,10 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 ```
 
 - Любые изменения внесенные в удаленный репозиторий не мог быть перетерты через `git push --force` или аналогичные команды.
-- Используется только пакетный менеджер `NPM`.
+- Используется только пакетный менеджер `PNPM`, что бы установить его глобально выполните команду `npm install -g pnpm@latest-10`, для локальной установки выполните команду `npm i pnpm@latest-10`.
 - Правило: один коммит - один пакет.
 
-## NPM Scripts
+## Scripts
 
 - `add-package` - создание нового пакета в рамках монорепозитория
 - `build:storybook` - сборка исходников сторибука для *CI/CD*
@@ -32,8 +32,6 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 - `clean:all` - вызывает **clean:dist** и **clean:modules**
 - `clean:dist` - удаляет **dist** в пакетах
 - `clean:modules` - удаляет **node_modules** в пакетах
-- `deps:all` - вызывает **deps:global** и **deps:packages**
-- `deps:global` - устанавливает корневые зависимости и линкует пакеты между собой
 - `deps:packages` - устанавливает зависимости внутри пакетов
 - `deps:reinstall` - переустанавливает все зависимости начисто
 - `storybook:all` - запуск локальной версии сторибука со *всеми* пакетами
@@ -75,28 +73,28 @@ packages
 
 ### Начало работы с репозиторием
 
-1. `npm ci` для получения всех уже объявленных зависимостей
-2. `npm run build:packages` для сборки пакетов
+1. `pnpm install` для получения всех уже объявленных зависимостей
+2. `pnpm build:packages` для сборки пакетов
 
 ### Запуск локального storybook
 
-1. `npm run build:packages`
+1. `pnpm build:packages`
 2. Для запуска storybook
-   - со всеми пакетами `npm run storybook:all`
-   - с определенными пакетами `npm run storybook:partial`
+   - со всеми пакетами `pnpm storybook:all`
+   - с определенными пакетами `pnpm storybook:partial`
 
 ### Создание нового пакета
 
 1. Создайте feature ветку от последнего master
-2. Запустите команду `npm run build:packages`
-3. Запустите команду `npm run add-package`
+2. Запустите команду `pnpm build:packages`
+3. Запустите команду `pnpm add-package`
 4. Реализуйте необходимый компонент или утилиту согласно Conventional commit approach
 5. Создайте pull request
 6. Получите аппрув
 7. `git pull -r origin master`, если это необходимо
 8. для релиза первой стабильной версии необходимо
    - `git fetch --all --prune --prune-tags `
-   - запустить `npm run changelog`
+   - запустить `pnpm changelog`
    - В сгенерированном диффе поправить версии на необходимые
    - сделать коммит
    - запустить `lerna version --exact --message "Version bump"`
@@ -106,7 +104,7 @@ packages
 ### Внесение изменений в существующий пакет
 
 1. Создайте feature или bugfix ветку от последнего master
-2. Запустите команду `npm run build:packages`
+2. Запустите команду `pnpm build:packages`
 3. Внесите необходимые изменения согласно Conventional commit approach
 4. Создайте pull request
 5. Получите аппрув
@@ -115,7 +113,7 @@ packages
 
 ### Docker Image
 
-1. Запустите команду `npm run deps:all && npm run build:packages`
+1. Запустите команду `pnpm deps:all && pnpm build:packages`
 2. `docker build -t uikit:0.0.1 .`
 3. `docker run -t -p 8080:80 uikit:0.0.1`
 4. Откройте `http://localhost:8080/`

@@ -94,8 +94,8 @@ export function ProductHeaderMobile({
   );
 
   const count =
-    (userMenu && 'invites' in userMenu ? userMenu?.invites?.count ?? 0 : 0) +
-    (userMenu && 'partnerInvites' in userMenu ? userMenu?.partnerInvites?.count ?? 0 : 0);
+    (userMenu && 'invites' in userMenu ? (userMenu?.invites?.count ?? 0) : 0) +
+    (userMenu && 'partnerInvites' in userMenu ? (userMenu?.partnerInvites?.count ?? 0) : 0);
 
   return (
     <>

@@ -116,7 +116,7 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
     const showAdditionalButton = Boolean(valueProp && !disabled);
     const showClearButton = showClearButtonProp && showAdditionalButton && !readonly;
     const showCopyButton = showCopyButtonProp && showAdditionalButton && readonly;
-    const showSeconds = mode === 'date-time' ? (rest as FieldDateWithSeconds).showSeconds ?? true : undefined;
+    const showSeconds = mode === 'date-time' ? ((rest as FieldDateWithSeconds).showSeconds ?? true) : undefined;
     const fieldValidationState = getValidationState({ validationState, error });
 
     const navigationStartRef: CalendarProps['navigationStartRef'] = useRef(null);
