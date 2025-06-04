@@ -24,6 +24,7 @@ type Props = MobileTableProps<StubData, Filters>;
 type StoryProps = Props & {
   rowsAmount: number;
   showActionsColumn?: boolean;
+  initialColumnFiltersOpen: boolean;
 };
 
 const renderHeader = (ctx: HeaderContext<StubData, unknown>) => `Table column №${ctx.column.id}`;
@@ -96,7 +97,7 @@ const columnFilters: Props['columnFilters'] = {
       label: 'Time',
     },
   ],
-};
+} as const;
 
 const columnDefinitions: Props['columnDefinitions'] = [
   {
@@ -178,7 +179,15 @@ const columnDefinitions: Props['columnDefinitions'] = [
   },
 ];
 
-function Template({ rowsAmount, columnDefinitions, showActionsColumn, className, ...args }: StoryProps) {
+function Template({
+  rowsAmount,
+  columnDefinitions,
+  showActionsColumn,
+  className,
+  columnFilters,
+  initialColumnFiltersOpen,
+  ...args
+}: StoryProps) {
   const data = useMemo(() => generateRows(rowsAmount), [rowsAmount]);
 
   const columns = useMemo(() => {
@@ -232,7 +241,20 @@ function Template({ rowsAmount, columnDefinitions, showActionsColumn, className,
     return colDefs;
   }, [columnDefinitions, showActionsColumn]);
 
-  return <MobileTable {...args} columnDefinitions={columns} data={data} className={className} />;
+  const filters = useMemo(
+    () =>
+      columnFilters
+        ? {
+            ...columnFilters,
+            initialOpen: initialColumnFiltersOpen,
+          }
+        : undefined,
+    [columnFilters, initialColumnFiltersOpen],
+  );
+
+  return (
+    <MobileTable {...args} columnDefinitions={columns} data={data} className={className} columnFilters={filters} />
+  );
 }
 
 export const table: StoryObj<StoryProps> = {
@@ -245,6 +267,7 @@ export const table: StoryObj<StoryProps> = {
     columnDefinitions,
     columnFilters,
     showActionsColumn: true,
+    initialColumnFiltersOpen: false,
   },
 
   argTypes: {
@@ -263,6 +286,10 @@ export const table: StoryObj<StoryProps> = {
       control: {
         type: 'boolean',
       },
+    },
+    initialColumnFiltersOpen: {
+      name: '[Stories]: Initial show column filters state value',
+      controls: { type: 'boolean' },
     },
   },
 

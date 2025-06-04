@@ -48,5 +48,6 @@ export type DefaultToolbarProps = CommonToolbarProps &
 
 export type FilterRow<TState extends FiltersState> = Omit<MobileChipChoiceRowProps<TState>, 'size' | 'data-test-id'> & {
   open?: boolean;
+  initialOpen?: boolean;
   onOpenChange?(isOpen: boolean): void;
 };

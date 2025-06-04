@@ -18,10 +18,14 @@ type UseFiltersReturnType<TState extends FiltersState> = {
 export function useFilters<TState extends FiltersState>({
   filterRow,
 }: UseFiltersProps<TState>): UseFiltersReturnType<TState> {
-  const [filtersOpen, setFiltersOpen] = useUncontrolledProp<boolean>(filterRow?.open, false, newValue => {
-    const result = typeof newValue === 'function' ? newValue(filtersOpen) : newValue;
-    filterRow?.onOpenChange?.(result);
-  });
+  const [filtersOpen, setFiltersOpen] = useUncontrolledProp<boolean>(
+    filterRow?.open,
+    filterRow?.initialOpen || false,
+    newValue => {
+      const result = typeof newValue === 'function' ? newValue(filtersOpen) : newValue;
+      filterRow?.onOpenChange?.(result);
+    },
+  );
 
   const [value, setValue] = useUncontrolledProp<TState>(
     filterRow?.value,
