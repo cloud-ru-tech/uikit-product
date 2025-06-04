@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.12 (2025-06-04)
+
+
+### Bug Fixes
+
+* **SITE-9316:** BannerTertiary tablet layout styles ([7625399](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/76253995ea2b89ac5822608421ea733c65809c74))
+
+
+
+
+
 ## 0.2.11 (2025-05-28)
 
 ### Only dependencies have been changed
