@@ -152,10 +152,9 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
 
     const handleSelectionChange = useCallback(
       (newValue?: SelectionSingleValueType) => {
+        localRef.current?.focus();
+        setOpen(false);
         if (newValue !== undefined) {
-          localRef.current?.focus();
-
-          setOpen(false);
           setValue(newValue);
         }
       },
