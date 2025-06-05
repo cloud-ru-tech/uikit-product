@@ -118,6 +118,12 @@ type FiledSelectCommonProps = WithSupportProps<{
 
   search?: SearchState;
 
+  /**
+   * Включить нечеткий поиск
+   * @default true
+   */
+  enableFuzzySearch?: boolean;
+
   autocomplete?: boolean;
 
   addOptionByEnter?: boolean;

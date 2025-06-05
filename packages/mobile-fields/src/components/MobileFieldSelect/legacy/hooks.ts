@@ -1,14 +1,17 @@
 import FuzzySearch from 'fuzzy-search';
+import get from 'lodash/get';
 import { useCallback, useMemo } from 'react';
 
 import { ItemProps, kindFlattenItems } from '@snack-uikit/list';
 
 const DEFAULT_MIN_SEARCH_INPUT_LENGTH = 1;
 
+const COMMON_FIELDS_TO_SEARCH = ['content.option', 'content.caption', 'content.description'];
+
 /**
- * Нечеткий поиск среди айтемов по полям 'content.option', 'content.caption', 'content.description', 'label'
+ * Поиск среди айтемов по полям 'content.option', 'content.caption', 'content.description', 'label'
  */
-export function useFuzzySearch(items: ItemProps[], minSearchInputLength?: number): (value: string) => ItemProps[] {
+export function useSearch(items: ItemProps[], enableFuzzySearch: boolean): (value: string) => ItemProps[] {
   const flattenItems = useMemo(() => {
     const { flattenItems } = kindFlattenItems({ items });
 
@@ -17,12 +20,19 @@ export function useFuzzySearch(items: ItemProps[], minSearchInputLength?: number
 
   return useCallback(
     (search: string) => {
-      const searcher = new FuzzySearch(flattenItems, ['content.option', 'content.caption', 'content.description'], {});
+      if (!enableFuzzySearch) {
+        return flattenItems.filter(item =>
+          COMMON_FIELDS_TO_SEARCH.some(key => {
+            const value: string | undefined = get(item, key);
+            return value?.toLowerCase().includes(search.toLowerCase());
+          }),
+        );
+      }
 
-      return search.length >= (minSearchInputLength ?? DEFAULT_MIN_SEARCH_INPUT_LENGTH)
-        ? searcher.search(search)
-        : items;
+      const searcher = new FuzzySearch(flattenItems, COMMON_FIELDS_TO_SEARCH, {});
+
+      return search.length >= DEFAULT_MIN_SEARCH_INPUT_LENGTH ? searcher.search(search) : items;
     },
-    [flattenItems, items, minSearchInputLength],
+    [enableFuzzySearch, flattenItems, items],
   );
 }

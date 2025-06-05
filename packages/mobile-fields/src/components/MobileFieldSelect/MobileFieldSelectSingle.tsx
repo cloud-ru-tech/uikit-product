@@ -23,7 +23,7 @@ import { extractSupportProps, isBrowser, useLayoutEffect, useValueControl } from
 import { FieldContainerPrivate, ItemContent, ItemContentProps } from '../../helperComponents';
 import { usePostfix, usePrefix } from '../../hooks';
 import { useButtons, useHandleOnKeyDown, useSearchInput } from './hooks';
-import { useFuzzySearch } from './legacy';
+import { useSearch } from './legacy';
 import styles from './styles.module.scss';
 import { ItemWithId, MobileFieldSelectSingleProps, SelectedOptionFormatter } from './types';
 import { extractFieldDecoratorProps, extractListProps, getArrowIcon, getValidationState, updateItems } from './utils';
@@ -55,6 +55,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       required = false,
       validationState = 'default',
       search,
+      enableFuzzySearch = true,
       autocomplete = false,
       prefixIcon,
       prefix,
@@ -188,11 +189,11 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       }
     };
 
-    const fuzzySearch = useFuzzySearch(items);
+    const searcher = useSearch(items, enableFuzzySearch);
     const result =
       autocomplete || !searchable || selectedOptionFormatter(selectedItem) === inputValue
         ? items
-        : fuzzySearch(inputValue);
+        : searcher(inputValue);
 
     const fieldValidationState = getValidationState({ validationState, error: rest.error });
 
