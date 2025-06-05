@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-06-05)
+
+
+### Bug Fixes
+
+* **PDS-2417:** close drower by taping on selected item ([601feac](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/601feac9b9a4e926897e9c0175d86f41d8feb566))
+
+
+### Features
+
+* **PDS-2417:** add fuzzySearchEnable prop ([7c19538](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7c1953805d5dae995b189d750e31cc4768465288))
+
+
+
+
+
 ## 0.6.44 (2025-05-28)
 
 ### Only dependencies have been changed
