@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-06-05)
+
+
+### Features
+
+* **FF-6788:** add initialOpen prop ([e7e7712](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e7e7712f87c8b4348e95a8d4350213ae461023ad))
+
+
+
+
+
 # 0.1.0 (2025-05-29)
 
 
