@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 11.9.0 (2025-06-06)
+
+
+### Features
+
+* **PDS-2428:** add distributed train icon ([c8ab07c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c8ab07c8defdf8cc361a5e39973672e5dcb07019))
+
+
+
+
+
 # 11.8.0 (2025-05-28)
 
 
