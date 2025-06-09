@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-06-09)
+
+
+### Features
+
+* **HYCL-4391:** support for list virtualization in fields select ([9be879e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9be879ec4b8558366c9f654c73cd68400e3302d2))
+
+
+
+
+
 ## 0.7.1 (2025-06-06)
 
 ### Only dependencies have been changed
