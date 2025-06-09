@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.1 (2025-06-09)
+
+
+### Dependencies
+
+* **PDS-2368:** up @snack-uikit/fields ([36e12c6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/36e12c6e4af4810efea97171006c08cb2c4d1a7d))
+
+
+
+
+
 # 0.8.0 (2025-06-09)
 
 
