@@ -114,6 +114,11 @@ type FiledSelectCommonProps = WithSupportProps<{
 
   footer?: DroplistProps['footer'];
 
+  /**
+   * Включить виртуализацию на компоненты списка. Рекомендуется если у вас от 1к элементов списка
+   */
+  virtualized?: boolean;
+
   widthStrategy?: DroplistProps['widthStrategy'];
 
   search?: SearchState;

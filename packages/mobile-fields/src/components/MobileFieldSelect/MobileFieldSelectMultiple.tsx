@@ -51,6 +51,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       placeholder,
       size = 's',
       options,
+      virtualized,
       value: valueProp,
       defaultValue,
       onChange: onChangeProp,
@@ -200,6 +201,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
           items={result}
           size='l'
           scroll
+          virtualized={virtualized}
           search={
             searchable
               ? {

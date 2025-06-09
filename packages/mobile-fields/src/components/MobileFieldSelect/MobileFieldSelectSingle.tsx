@@ -43,6 +43,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
       placeholder,
       size = 's',
       options,
+      virtualized,
       value: valueProp,
       defaultValue,
       onChange: onChangeProp,
@@ -202,6 +203,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
         <List
           {...extractListProps(rest)}
           size='l'
+          virtualized={virtualized}
           items={result}
           contentRender={({ content, ...rest }) => {
             if (typeof content !== 'function') {
