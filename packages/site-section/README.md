@@ -137,9 +137,9 @@
 | button | `Omit<ButtonFilledProps, "size" \| "fullWidth">` | - | Кнопка действия |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | neutral-background1-level | Цвет фона |
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
-| video | `any` | - |  |
-| onPlay | `any` | - |  |
-| onError | `any` | - |  |
+| video | `ReactNode \| VideoPlayerProps` | - |  |
+| onPlay | `() => void` | - |  |
+| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentList
@@ -154,9 +154,9 @@
 | items | `Item[]` | - | Список элементов |
 | backgroundColor | enum SectionColor: `"neutral-background1-level"`, `"neutral-background"` | - | Цвет фона |
 | contentPosition | "left" \| "right" | left | Местоположение контента в секции |
-| video | `any` | - |  |
-| onPlay | `any` | - |  |
-| onError | `any` | - |  |
+| video | `ReactNode \| VideoPlayerProps` | - |  |
+| onPlay | `() => void` | - |  |
+| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 ## SectionContentTabs
@@ -230,9 +230,9 @@
 | description | `string` | - | Описание секции |
 | titleTag | enum SectionTag: `"h2"`, `"h3"`, `"h4"` | - | Тег заголовка |
 | id | `string` | - | id секции |
-| video | `any` | - |  |
-| onPlay | `any` | - |  |
-| onError | `any` | - |  |
+| video | `ReactNode \| VideoPlayerProps` | - |  |
+| onPlay | `() => void` | - |  |
+| onError | `ReactEventHandler<HTMLVideoElement>` | - |  |
 | image | `{ src: string; alt?: string; }` | - | Ссылка на изображение |
 ## SectionPersonalManager
 ### Props
