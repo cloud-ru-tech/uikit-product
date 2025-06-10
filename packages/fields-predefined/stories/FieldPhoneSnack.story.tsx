@@ -3,10 +3,22 @@ import { Meta, StoryObj } from '@storybook/react';
 import cn from 'classnames';
 import { useState } from 'react';
 
+import { LayoutType } from '@sbercloud/uikit-product-utils';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { FieldPhone, FieldPhoneOptionsProps, FieldPhoneProps, usePredefinedPhoneMasks } from '../src/components';
+import {
+  ABKHAZIA_COUNTRY_CODE,
+  AUSTRALIA_COUNTRY_CODE,
+  BELARUS_COUNTRY_CODE,
+  FieldPhone,
+  FieldPhoneOptionsProps,
+  FieldPhoneProps,
+  RUSSIA_COUNTRY_CODE,
+  useCountries,
+} from '../src/components';
+import { Country, CountrySettings } from '../src/components/FieldPhone/types';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -15,22 +27,44 @@ const meta: Meta = {
 };
 export default meta;
 
-type StoryProps = FieldPhoneProps & {
+type StoryProps = Omit<FieldPhoneProps, 'layoutType'> & {
+  layoutType?: LayoutType;
   onlyOneMask?: boolean;
   mobileView: boolean;
+  excludedCountries: Country[];
+  includedCountries: Country[];
+  filterCountriesMode: 'exclude' | 'include' | 'none';
 };
 
-const Template = ({ size, value, onlyOneMask, layoutType, mobileView, ...args }: StoryProps) => {
+const Template = ({
+  size,
+  value,
+  onlyOneMask,
+  layoutType,
+  mobileView,
+  excludedCountries,
+  includedCountries,
+  ...args
+}: StoryProps) => {
   const [, setCountry] = useState<FieldPhoneOptionsProps>();
 
-  const masks = usePredefinedPhoneMasks();
+  const masks = useCountries();
+  const overriddenOptions = onlyOneMask ? [masks[0]] : masks;
+
+  const exampleWithIncludeOrExclude = args.filterCountriesMode !== 'none';
 
   return (
     <div className={cn(styles.wrapper, styles.fieldPhoneWrapper)} data-size={size || 's'} data-background='light'>
       <FieldPhone
         {...args}
         layoutType={layoutType ?? (mobileView ? 'mobile' : 'desktop')}
-        options={onlyOneMask ? [masks[0]] : masks}
+        options={
+          {
+            overriddenOptions: exampleWithIncludeOrExclude ? undefined : overriddenOptions,
+            excludedCountries,
+            includedCountries,
+          } as unknown as CountrySettings
+        }
         value={value}
         size={size}
         onChangeCountry={setCountry}
@@ -64,8 +98,11 @@ export const fieldPhone: StoryObj<StoryProps> = {
     showCopyButton: true,
     showClearButton: true,
     onlyOneMask: false,
-    scrollList: false,
+    scrollList: true,
     mobileView: false,
+    excludedCountries: [ABKHAZIA_COUNTRY_CODE, AUSTRALIA_COUNTRY_CODE],
+    includedCountries: [RUSSIA_COUNTRY_CODE, BELARUS_COUNTRY_CODE],
+    filterCountriesMode: 'none',
   },
   argTypes: {
     labelTooltip: {
@@ -81,6 +118,28 @@ export const fieldPhone: StoryObj<StoryProps> = {
     mobileView: {
       name: '[Story] apply mobile mode',
       type: 'boolean',
+    },
+
+    filterCountriesMode: {
+      name: '[Stories] Filter countries mode',
+      control: { type: 'radio' },
+      options: ['none', 'include', 'exclude'],
+    },
+
+    excludedCountries: {
+      name: '[Stories]: Exclude Abkhazia and Australia',
+      if: {
+        arg: 'filterCountriesMode',
+        eq: 'exclude',
+      },
+    },
+
+    includedCountries: {
+      name: '[Stories]: Include Russia and Belarus',
+      if: {
+        arg: 'filterCountriesMode',
+        eq: 'include',
+      },
     },
   },
   parameters: {

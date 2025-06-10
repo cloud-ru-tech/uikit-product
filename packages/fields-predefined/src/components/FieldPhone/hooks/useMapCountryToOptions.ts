@@ -1,0 +1,24 @@
+import { useCallback } from 'react';
+
+import { useLocale } from '@sbercloud/uikit-product-locale';
+
+import { Country, FieldPhoneOptionsProps } from '../types';
+
+export function useMapCountryToOptions() {
+  const { t } = useLocale('FieldsPredefined');
+
+  const mapCountryToOption = useCallback(
+    ({ value: id, mask, caption, beforeContent }: Country): FieldPhoneOptionsProps => ({
+      id,
+      mask,
+      content: {
+        option: t(`FieldPhone.${id}`),
+        caption: caption,
+      },
+      beforeContent,
+    }),
+    [t],
+  );
+
+  return mapCountryToOption;
+}

@@ -1,5 +1,7 @@
 export * from './FieldPhone';
 
-export type { FieldPhoneOptionsProps } from './types';
+export type { FieldPhoneOptionsProps, CountrySettings } from './types';
 
-export * from './usePredefinedPhoneMasks';
+export * from './countries';
+export * from './hooks';
+export { formatPhoneNumber } from './utils';

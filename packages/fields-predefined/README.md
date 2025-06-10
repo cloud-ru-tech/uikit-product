@@ -11,7 +11,6 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| options* | `FieldPhoneOptionsProps[]` | - |  |
 | value | `string` | - | Значение input |
 | onChange | `((value: string, e?: ChangeEvent<HTMLInputElement>) => void) & ((value: string) => void)` | - | Колбек смены значения |
 | id | `string` | - | Значение html-атрибута id |
@@ -41,8 +40,16 @@
 | scrollList | `boolean` | - | Включить скролл для основной части списка стран |
 | searchPlaceholder | `string` | - |  |
 | onChangeCountry | `(country: FieldPhoneOptionsProps) => void` | - |  |
+| options | `CountrySettings` | - | options — объект конфигурации для изменения стандартного списка стран |
 | ref | `LegacyRef<HTMLInputElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
 | key | `Key` | - |  |
+## useCountries
+### Props
+| name | type | default value | description |
+|------|------|---------------|-------------|
+| overriddenOptions | `FieldPhoneOptionsProps[]` | - | Список элементов выпадающего списка со странами, который будет передан в селект-компонент и переопределит список объявленных стран внутри пакета |
+| includedCountries | `({ readonly value: "russia"; readonly mask: "XXX XXX-XX-XX"; readonly caption: "+7"; readonly beforeContent: Element; readonly enabled: true; } \| { readonly value: "abkhazia"; readonly caption: "+7"; readonly mask: "XXX XXX-XX-XX"; readonly beforeContent: Element; readonly enabled: true; } \| ... 118 more ... \| { ......` | - | Список стран, которые должны отображаться в селекторе (будут выбраны из перечня стран, объявленных внутри пакета) |
+| excludedCountries | `({ readonly value: "russia"; readonly mask: "XXX XXX-XX-XX"; readonly caption: "+7"; readonly beforeContent: Element; readonly enabled: true; } \| { readonly value: "abkhazia"; readonly caption: "+7"; readonly mask: "XXX XXX-XX-XX"; readonly beforeContent: Element; readonly enabled: true; } \| ... 118 more ... \| { ......` | - | Список стран, которые будут исключены из списка объявленных стран внутри пакета |
 ## SelectCreate
 ### Props
 | name | type | default value | description |

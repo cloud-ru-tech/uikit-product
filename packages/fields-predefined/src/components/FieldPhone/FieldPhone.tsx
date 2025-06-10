@@ -9,8 +9,9 @@ import { FieldText, FieldTextProps } from '@snack-uikit/fields';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { PLACEHOLDER_CHAR } from './constants';
+import { useCountries } from './hooks';
 import styles from './styles.module.scss';
-import { FieldPhoneOptionsProps, MaskOptions } from './types';
+import { CountrySettings, FieldPhoneOptionsProps, MaskOptions } from './types';
 
 export type FieldPhoneProps = WithLayoutType<
   Omit<
@@ -28,10 +29,12 @@ export type FieldPhoneProps = WithLayoutType<
   > & {
     /** Включить скролл для основной части списка стран */
     scrollList?: boolean;
-    options: FieldPhoneOptionsProps[];
     onChange?(value: string): void;
     searchPlaceholder?: string;
     onChangeCountry?(country: FieldPhoneOptionsProps): void;
+  } & {
+    /** options — объект конфигурации для изменения стандартного списка стран */
+    options?: CountrySettings;
   }
 >;
 
@@ -39,7 +42,6 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
   (
     {
       layoutType,
-      options,
       value: valueProp,
       onChangeCountry,
       onChange: onChangeProp,
@@ -48,6 +50,7 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
       onPaste,
       className,
       scrollList,
+      options: optionsProp,
       ...rest
     },
     ref,
@@ -56,6 +59,7 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
 
     const localRef = useRef<HTMLInputElement>(null);
 
+    const options = useCountries(optionsProp);
     const isOnlyOneCountryAvailable = options.length === 1;
 
     const [country, setCountry] = useValueControl<FieldPhoneOptionsProps>({
