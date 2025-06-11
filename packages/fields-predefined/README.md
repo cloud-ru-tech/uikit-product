@@ -98,6 +98,8 @@
 | secure | `boolean \| "password"` | - | Режим ввода sensitive данных (пароля, API ключей, токенов, etc) |
 | handleSupportUrlClick | `(e: MouseEvent<Element, MouseEvent>) => void` | - | Действие при клике по ссылке на чат поддержки |
 | handleResetContextClick | `() => void` | - | Действие при клике по кнопке сброса контекста |
+| ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |
+| key | `Key` | - |  |
 ## FieldChat
 ### Props
 | name | type | default value | description |

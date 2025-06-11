@@ -65,6 +65,13 @@ export const fieldAI: StoryObj<StoryProps> = {
     showResetContextButton: {
       name: '[Stories]: Enable reset context button',
     },
+    secure: {
+      options: [false, true, 'password'],
+      defaultValue: false,
+      control: {
+        type: 'radio',
+      },
+    },
   },
   parameters: {
     readme: {

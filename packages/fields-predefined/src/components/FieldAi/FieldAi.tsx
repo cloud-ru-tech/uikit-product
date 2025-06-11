@@ -1,4 +1,4 @@
-import { KeyboardEventHandler, MouseEvent, useMemo, useState } from 'react';
+import { forwardRef, KeyboardEventHandler, MouseEvent, useMemo, useState } from 'react';
 
 import { EyeClosedSVG, EyeSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
@@ -30,102 +30,118 @@ export type FieldAiProps = WithLayoutType<
   }
 >;
 
-export function FieldAi({
-  secure = false,
-  handleSubmit: handleSubmitProp,
-  value,
-  supportUrl,
-  handleSupportUrlClick,
-  handleResetContextClick,
-  layoutType,
-  ...props
-}: FieldAiProps) {
-  const { t } = useLocale('FieldsPredefined');
+export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
+  (
+    {
+      secure = false,
+      handleSubmit: handleSubmitProp,
+      value,
+      supportUrl,
+      handleSupportUrlClick,
+      handleResetContextClick,
+      layoutType,
+      disabled,
+      ...props
+    },
+    ref,
+  ) => {
+    const { t } = useLocale('FieldsPredefined');
 
-  const [isValueHidden, setIsValueHidden] = useState<boolean>(true);
+    const [isValueHidden, setIsValueHidden] = useState<boolean>(true);
 
-  const isValueValid = typeof value === 'string' && value.trim().length > 0;
-  const isPasswordMode = secure === 'password';
+    const isValueValid = typeof value === 'string' && value.trim().length > 0;
+    const isPasswordMode = secure === 'password';
 
-  const passwordValidation = useMemo(() => getValidationPassword(value), [value]);
+    const passwordValidation = useMemo(() => getValidationPassword(value), [value]);
 
-  const handleSubmit = () => {
-    const isPasswordValid = isPasswordMode ? Object.values(passwordValidation).every(Boolean) : true;
+    const handleSubmit = () => {
+      const isPasswordValid = isPasswordMode ? Object.values(passwordValidation).every(Boolean) : true;
 
-    if (isValueValid && isPasswordValid) {
-      handleSubmitProp(value);
-    }
-  };
+      if (isValueValid && isPasswordValid) {
+        handleSubmitProp(value);
+      }
+    };
 
-  const handleKeyDown: KeyboardEventHandler<HTMLTextAreaElement> = e => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
-      handleSubmit();
-      return;
-    }
-  };
+    const handleKeyDown: KeyboardEventHandler<HTMLTextAreaElement> = e => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
 
-  return (
-    <div className={styles.wrapper}>
-      <WithPasswordTooltip showTooltip={isPasswordMode} passwordValidation={passwordValidation} layoutType={layoutType}>
-        <FieldTextArea
-          {...props}
-          size='m'
-          minRows={1}
-          maxRows={4}
-          placeholder={secure ? t('FieldAi.secret.placeholder') : t('FieldAi.regular.placeholder')}
-          className={secure && isValueHidden ? styles.secured : undefined}
-          onKeyDown={handleKeyDown}
-          spellCheck={!secure}
-          footer={
-            <TextAreaActionsFooter
-              left={
-                secure && (
-                  <ButtonFunction
-                    size='xs'
-                    icon={isValueHidden ? <EyeSVG /> : <EyeClosedSVG />}
-                    onClick={() => setIsValueHidden(prev => !prev)}
-                  />
-                )
-              }
-              right={
-                <>
-                  {secure && handleResetContextClick && (
-                    <Tooltip tip={t('FieldAi.resetContext.tooltip')} hoverDelayOpen={600}>
-                      <ButtonOutline
-                        size='xs'
-                        label={t('FieldAi.resetContext.label')}
-                        onClick={handleResetContextClick}
-                        appearance='destructive'
-                      />
-                    </Tooltip>
-                  )}
-                  <FieldSubmitButton active={isValueValid} handleClick={handleSubmit} />
-                </>
-              }
-            />
-          }
-        />
-      </WithPasswordTooltip>
-      <div className={styles.footerText}>
-        <Typography.SansBodyS>{t('FieldAi.hint.text')}</Typography.SansBodyS>
-        <QuestionTooltip
-          size='xs'
-          tooltipClassname={styles.tooltip}
-          tip={
-            <>
-              <Typography.SansBodyS>{t('FieldAi.hint.tooltip')}</Typography.SansBodyS>
-              <Link
-                text={t('FieldAi.hint.tooltipLink')}
-                href={supportUrl}
-                onClick={handleSupportUrlClick}
-                appearance='invert-neutral'
-                textMode='accent'
+        if (!disabled) {
+          handleSubmit();
+        }
+
+        return;
+      }
+    };
+
+    return (
+      <div className={styles.wrapper}>
+        <WithPasswordTooltip
+          showTooltip={isPasswordMode}
+          passwordValidation={passwordValidation}
+          layoutType={layoutType}
+        >
+          <FieldTextArea
+            {...props}
+            ref={ref}
+            value={value}
+            size='m'
+            minRows={secure ? 1 : 2}
+            maxRows={secure ? 1 : 4}
+            placeholder={secure ? t('FieldAi.secret.placeholder') : t('FieldAi.regular.placeholder')}
+            className={secure && isValueHidden ? styles.secured : undefined}
+            onKeyDown={handleKeyDown}
+            spellCheck={!secure}
+            footer={
+              <TextAreaActionsFooter
+                left={
+                  secure && (
+                    <ButtonFunction
+                      size='xs'
+                      icon={isValueHidden ? <EyeSVG /> : <EyeClosedSVG />}
+                      onClick={() => setIsValueHidden(prev => !prev)}
+                    />
+                  )
+                }
+                right={
+                  <>
+                    {secure && handleResetContextClick && (
+                      <Tooltip tip={t('FieldAi.resetContext.tooltip')} hoverDelayOpen={600}>
+                        <ButtonOutline
+                          size='xs'
+                          label={t('FieldAi.resetContext.label')}
+                          onClick={handleResetContextClick}
+                          appearance='destructive'
+                        />
+                      </Tooltip>
+                    )}
+                    <FieldSubmitButton active={isValueValid && !disabled} handleClick={handleSubmit} />
+                  </>
+                }
               />
-            </>
-          }
-        />
+            }
+          />
+        </WithPasswordTooltip>
+        <div className={styles.footerText}>
+          <Typography.SansBodyS>{t('FieldAi.hint.text')}</Typography.SansBodyS>
+          <QuestionTooltip
+            size='xs'
+            tooltipClassname={styles.tooltip}
+            tip={
+              <>
+                <Typography.SansBodyS>{t('FieldAi.hint.tooltip')}</Typography.SansBodyS>
+                <Link
+                  text={t('FieldAi.hint.tooltipLink')}
+                  href={supportUrl}
+                  onClick={handleSupportUrlClick}
+                  appearance='invert-neutral'
+                  textMode='accent'
+                />
+              </>
+            }
+          />
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  },
+);
