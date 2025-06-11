@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.3.0 (2025-06-11)
+
+
+### Features
+
+* **PDS-2197:** improved header items search ([cb702f4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cb702f469005468a9488360433cb8ea90245cbb7))
+
+
+
+
+
 ## 4.2.7 (2025-06-06)
 
 ### Only dependencies have been changed

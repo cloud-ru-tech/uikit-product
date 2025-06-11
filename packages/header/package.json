@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-header",
   "title": "Header",
-  "version": "4.2.7",
+  "version": "4.3.0",
   "sideEffects": [
     "*.css",
     "*.woff",
