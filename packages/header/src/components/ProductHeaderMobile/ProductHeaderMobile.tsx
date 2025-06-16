@@ -85,10 +85,10 @@ export function ProductHeaderMobile({
   }, [closeProjectMenu]);
 
   const onProductChange = useCallback<DrawerMenuProps['onProductChange']>(
-    item => {
+    (item, e) => {
       closeMainMenu();
       closeUserMenu();
-      onProductChangeProp(item);
+      onProductChangeProp(item, e);
     },
     [closeMainMenu, closeUserMenu, onProductChangeProp],
   );

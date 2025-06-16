@@ -1,9 +1,15 @@
+import { MouseEvent } from 'react';
+
 import { KebabSVG } from '@sbercloud/uikit-product-icons';
 import { ButtonFunction } from '@snack-uikit/button';
 import { BaseItemProps, Droplist, GroupItemProps } from '@snack-uikit/list';
 
-import { stopPropagationClick } from '../../utils';
 import styles from './styles.module.scss';
+
+const preventDefaultAndPropagationClick = (e: MouseEvent) => {
+  e.stopPropagation();
+  e.preventDefault();
+};
 
 export type ItemDroplistProps = {
   actions: BaseItemProps[];
@@ -16,8 +22,7 @@ export type ItemDroplistProps = {
 
 export function ItemDroplist({ open, onOpenChange, actions, onItemClick, pinTop, dataTestId }: ItemDroplistProps) {
   return (
-    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
-    <div onMouseDown={stopPropagationClick} className={styles.droplistTriggerWrap}>
+    <div className={styles.droplistTriggerWrap}>
       <Droplist
         open={open}
         onOpenChange={onOpenChange}
@@ -35,7 +40,7 @@ export function ItemDroplist({ open, onOpenChange, actions, onItemClick, pinTop,
         <ButtonFunction
           size='xs'
           icon={<KebabSVG />}
-          onClick={stopPropagationClick}
+          onClick={preventDefaultAndPropagationClick}
           data-test-id={`${dataTestId}__droplist-trigger`}
         />
       </Droplist>

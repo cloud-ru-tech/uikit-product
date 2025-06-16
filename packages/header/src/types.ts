@@ -18,6 +18,7 @@ export type Organization = {
   type: string;
   partner?: boolean;
   actions?: BaseItemProps[];
+  href: string;
 };
 
 export type ProjectPlatform = {
@@ -37,6 +38,7 @@ export type Project = {
   onEdit?(): void;
   platforms?: ProjectPlatform[];
   actions?: BaseItemProps[];
+  href: string;
 };
 
 export type InnerLink = {
@@ -78,7 +80,7 @@ export type ProductOption = {
   name: string;
   category: string;
   logo?: ReactElement;
-  href?: string;
+  href: string;
   hidden?: boolean;
   hotSpot?: HotSpotProps;
 };

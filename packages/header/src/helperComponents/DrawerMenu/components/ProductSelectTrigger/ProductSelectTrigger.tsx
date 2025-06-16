@@ -8,7 +8,7 @@ import { ProductOption } from '../../../../types';
 import styles from './styles.module.scss';
 
 type ProductSelectTriggerProps = {
-  selectedProduct: ProductOption;
+  selectedProduct: Omit<ProductOption, 'href'>;
   isOpen?: boolean;
   onClick?(): void;
   className?: string;

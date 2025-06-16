@@ -41,9 +41,9 @@ export function DrawerMenuDesktop({
   selectedLink,
   onLinkChange,
   favorites,
-  onMarketplaceBannerClick,
+  marketplaceBanner,
+  referralBanner,
   onSearchChange,
-  onReferralBannerClick,
   hideProductSelect = false,
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
@@ -58,7 +58,7 @@ export function DrawerMenuDesktop({
     highlightClassName: styles.highlight,
   });
 
-  const showRightSection = leftSectionLinks?.length || onMarketplaceBannerClick || onReferralBannerClick;
+  const showRightSection = leftSectionLinks?.length || marketplaceBanner || referralBanner;
 
   const rightContainerRef = useRef<HTMLDivElement>(null);
   const rightContentRef = useRef<HTMLDivElement>(null);
@@ -95,13 +95,15 @@ export function DrawerMenuDesktop({
   const wrappedClick = useCallback(
     ({ disabled, onClick }: { disabled?: boolean; onClick?(e?: MouseEvent<HTMLElement>): void }, cb?: () => void) =>
       (e?: MouseEvent<HTMLElement>) => {
-        e?.preventDefault();
-
         if (disabled) {
+          e?.preventDefault();
           return;
         }
 
-        onClose();
+        if (!e?.metaKey) {
+          e?.preventDefault();
+          onClose();
+        }
 
         onClick?.(e);
 
@@ -248,19 +250,22 @@ export function DrawerMenuDesktop({
 
                   {!searchValue && (
                     <div className={styles.bannersWrapper}>
-                      {onReferralBannerClick && (
+                      {referralBanner && (
                         <ReferralBannerCard
                           title={t('referralBannerTitle')}
                           text={t('referralBannerText')}
                           promoBadge={t('referralBannerTag')}
-                          onClick={wrappedClick({ onClick: onReferralBannerClick })}
+                          href={referralBanner.href}
+                          onClick={wrappedClick({ onClick: referralBanner.onClick })}
                         />
                       )}
-                      {onMarketplaceBannerClick && (
+
+                      {marketplaceBanner && (
                         <MarketplaceBannerCard
                           title={t('mkpBannerTitle')}
                           text={t('mkpBannerText')}
-                          onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
+                          href={marketplaceBanner.href}
+                          onClick={wrappedClick({ onClick: marketplaceBanner.onClick })}
                         />
                       )}
                     </div>

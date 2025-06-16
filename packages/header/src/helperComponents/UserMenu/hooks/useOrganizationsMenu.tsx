@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { MouseEvent, MouseEventHandler, useMemo } from 'react';
 
 import { PlusSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
@@ -8,9 +8,9 @@ import { GroupItemProps, ItemProps } from '@snack-uikit/list';
 import { Organization } from '../../../types';
 import { UserMenuItemAfterContent } from '../components';
 
-type UseOrganizationProps = {
+export type UseOrganizationProps = {
   organizations: Organization[] | undefined;
-  onOrganizationChange?: (value: Organization, source: 'user-menu' | 'select') => void;
+  onOrganizationChange?(value: Organization, e: MouseEvent<HTMLAnchorElement>): void;
   onOrganizationAdd?(): void;
   closeUserMenu(): void;
 };
@@ -33,6 +33,15 @@ export function useOrganizationsMenu({
         organizations?.reduce<GroupItemProps['items']>((acc, organization) => {
           const dataTestId = `header__user-menu__organization-${organization.id}`;
 
+          const onItemClick: MouseEventHandler<HTMLAnchorElement> = e => {
+            onOrganizationChange?.(organization, e);
+
+            if (!e.metaKey) {
+              e.preventDefault();
+              closeUserMenu();
+            }
+          };
+
           acc.push({
             'data-test-id': dataTestId,
             beforeContent: <Avatar size='xs' name={organization.name} showTwoSymbols shape='square' />,
@@ -46,11 +55,12 @@ export function useOrganizationsMenu({
             content: {
               option: organization.name,
             },
-            onClick: () => {
-              onOrganizationChange?.(organization, 'user-menu');
-              closeUserMenu();
-            },
             id: organization.id,
+            itemWrapRender: item => (
+              <a href={organization.href} target='_blank' onClick={onItemClick} rel='noreferrer'>
+                {item}
+              </a>
+            ),
           });
 
           return acc;

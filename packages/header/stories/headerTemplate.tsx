@@ -129,6 +129,7 @@ const DEFAULT_PROJECT = {
   platforms: PROJECT_PLATFORMS,
   createdAt: new Date().toString(),
   lastVisitedAt: new Date('2025-05-01').toString(),
+  href: '/',
 };
 
 const PROJECTS: ItemsGroup<Project>[] = [
@@ -144,6 +145,7 @@ const PROJECTS: ItemsGroup<Project>[] = [
         createdAt: new Date().toString(),
         lastVisitedAt: new Date('2025-06-01').toString(),
         platforms: PROJECT_PLATFORMS,
+        href: '/',
       },
     ],
   },
@@ -157,6 +159,7 @@ const PROJECTS: ItemsGroup<Project>[] = [
         actions: PROJECT_ACTIONS,
         createdAt: new Date().toString(),
         lastVisitedAt: new Date('2025-06-02').toString(),
+        href: '/',
       },
       {
         id: '2_2',
@@ -165,6 +168,7 @@ const PROJECTS: ItemsGroup<Project>[] = [
         onEdit: () => {},
         createdAt: new Date().toString(),
         lastVisitedAt: new Date('2025-06-03').toString(),
+        href: '/',
       },
     ],
   },
@@ -178,6 +182,7 @@ const PROJECTS: ItemsGroup<Project>[] = [
         actions: PROJECT_ACTIONS,
         createdAt: new Date().toString(),
         lastVisitedAt: new Date().toString(),
+        href: '/',
       },
       {
         id: '3_2',
@@ -185,6 +190,7 @@ const PROJECTS: ItemsGroup<Project>[] = [
         actions: PROJECT_ACTIONS,
         createdAt: new Date().toString(),
         lastVisitedAt: new Date().toString(),
+        href: '/',
       },
       {
         id: '3_3',
@@ -192,6 +198,7 @@ const PROJECTS: ItemsGroup<Project>[] = [
         actions: PROJECT_ACTIONS,
         createdAt: new Date().toString(),
         lastVisitedAt: new Date().toString(),
+        href: '/',
       },
     ],
   },
@@ -203,12 +210,13 @@ const PROJECTS: ItemsGroup<Project>[] = [
       name: `Проект 4_${index}`,
       createdAt: new Date().toString(),
       lastVisitedAt: new Date().toString(),
+      href: '/',
     })),
   },
 ];
 
 const DEFAULT_PLATFORM = { id: '1', name: 'Evolution', logo: <EvolutionPlatformLogo /> };
-const DEFAULT_PRODUCT = { ...DEFAULT_PLATFORM, category: 'Облачная платформа' };
+const DEFAULT_PRODUCT = { ...DEFAULT_PLATFORM, category: 'Облачная платформа', href: '/' };
 
 const PRODUCT_HOT_SPOT: HotSpotProps = { enabled: true, pulse: true, appearance: 'primary' };
 
@@ -218,9 +226,9 @@ const ALL_PRODUCTS_MULTI = [
     heading: 'Облачные платформы',
     items: [
       DEFAULT_PRODUCT,
-      { id: '2', name: 'Advanced', logo: <AdvancedPlatformLogo />, category: 'Облачная платформа' },
-      { id: '3', name: 'MLSpace', logo: <MLSpacePlatformLogo />, category: 'Облачная платформа' },
-      { id: '4', name: 'Enterprise', logo: <EnterprisePlatformLogo />, category: 'Облачная платформа' },
+      { id: '2', href: '/', name: 'Advanced', logo: <AdvancedPlatformLogo />, category: 'Облачная платформа' },
+      { id: '3', href: '/', name: 'MLSpace', logo: <MLSpacePlatformLogo />, category: 'Облачная платформа' },
+      { id: '4', href: '/', name: 'Enterprise', logo: <EnterprisePlatformLogo />, category: 'Облачная платформа' },
     ],
   },
   {
@@ -232,8 +240,9 @@ const ALL_PRODUCTS_MULTI = [
         name: 'Партнёрский кабинет',
         category: 'Другой продукт',
         hotSpot: PRODUCT_HOT_SPOT,
+        href: '/',
       },
-      { id: 'admin', name: 'Административная панель', category: 'Другой продукт' },
+      { id: 'admin', name: 'Административная панель', category: 'Другой продукт', href: '/' },
     ],
   },
 ];
@@ -361,7 +370,11 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 
     if (args.select) {
       args.select.selectedProject = project;
-      args.select.onProjectChange = setProject;
+      args.select.onProjectChange = (proj, e) => {
+        if (!e.metaKey) {
+          setProject(proj);
+        }
+      };
 
       if (args.select.platformsFilter) {
         args.select.platformsFilter.onChange = setPlatformsFilter;
@@ -376,21 +389,22 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 
       if (!leaveOneOrganization) {
         allOrganizations.push(
-          { id: '2', name: 'ИП Иванов И.И.', type: 'CUSTOMER_TYPE_LEGAL' },
+          { id: '2', name: 'ИП Иванов И.И.', type: 'CUSTOMER_TYPE_LEGAL', href: '/' },
           {
             id: '3',
             name: 'Очень-очень длинное название очень большой организации',
             type: 'CUSTOMER_TYPE_LEGAL',
+            href: '/',
           },
         );
       }
 
       if (showOrganizationInvite) {
-        allOrganizations.push({ id: '4', name: 'ООО Инвайт', new: true, type: 'CUSTOMER_TYPE_LEGAL' });
+        allOrganizations.push({ id: '4', name: 'ООО Инвайт', new: true, type: 'CUSTOMER_TYPE_LEGAL', href: '/' });
       }
 
       if (showPartnerOrganization) {
-        allOrganizations.push({ id: '5', name: 'ИП Реферал', partner: true, type: 'CUSTOMER_TYPE_LEGAL' });
+        allOrganizations.push({ id: '5', name: 'ИП Реферал', partner: true, type: 'CUSTOMER_TYPE_LEGAL', href: '/' });
       }
 
       return allOrganizations;
@@ -448,9 +462,16 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                 onOpenButtonClick: closeInvitesPopover,
               }
             : undefined,
-          onOrganizationChange: setOrganization,
+          onOrganizationChange: (org, e) => {
+            if (e.metaKey) {
+              toaster.userAction.success({ label: `Organization open in new tab` });
+              return;
+            }
+
+            setOrganization(org);
+            toaster.userAction.success({ label: `Organization changed to ${org.name}` });
+          },
           selectedOrganization: organization,
-          organizations,
         };
 
         if (showCustomUserMenu) {
@@ -487,7 +508,6 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       closeInvitesPopover,
       closePartnerOrganizationPopover,
       organization,
-      organizations,
       showCustomUserMenu,
       showOrganizationInvite,
       showOrganizationInvitePopover,
@@ -564,8 +584,13 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
             onLinkChange: setSelectedLink,
             links: showLinks ? args.drawerMenu.links : undefined,
             footerLinks: showFooterLinks ? args.drawerMenu.footerLinks : undefined,
-            onMarketplaceBannerClick: showMarketplaceBanner ? () => undefined : undefined,
-            onReferralBannerClick: showReferralBanner ? () => undefined : undefined,
+            marketplaceBanner: showMarketplaceBanner
+              ? {
+                  onClick: () => undefined,
+                  href: '/',
+                }
+              : undefined,
+            referralBanner: showReferralBanner ? { onClick: () => undefined, href: '/' } : undefined,
             favorites: {
               value: favoriteItems,
               onChange: onFavoriteChange,
@@ -798,10 +823,13 @@ export const ARGS: StoryProps = {
     onOrganizationAdd: () => {
       toaster.userAction.success({ label: 'Organization add clicked' });
     },
+    onOrganizationChange() {},
   },
 
   showAddOrganization: true,
-  organizations: [{ id: '1', name: 'Облачные технологии', actions: PROJECT_ACTIONS, type: 'CUSTOMER_TYPE_LEGAL' }],
+  organizations: [
+    { id: '1', name: 'Облачные технологии', actions: PROJECT_ACTIONS, type: 'CUSTOMER_TYPE_LEGAL', href: '/' },
+  ],
 
   showLinks: true,
   showFooterLinks: true,

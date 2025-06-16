@@ -6,7 +6,7 @@ import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';
 
-export type ReferralBannerCardProps = Pick<CardProps, 'onClick'> & {
+export type ReferralBannerCardProps = Pick<CardProps, 'onClick' | 'href'> & {
   promoBadge: string;
   title: string;
   text?: string;
@@ -20,6 +20,7 @@ export function ReferralBannerCard(props: ReferralBannerCardProps) {
         size={'m'}
         className={styles.card}
         onClick={props.onClick}
+        href={props.href}
         {...(!props.isMobile && { promoBadge: props.promoBadge })}
       >
         <div className={cn(styles.wrapper, props.isMobile && styles.mobile)}>

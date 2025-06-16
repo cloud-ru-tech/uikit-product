@@ -13,7 +13,7 @@ import { Search } from '@snack-uikit/search';
 import { Typography } from '@snack-uikit/typography';
 
 import { getSelectProductListProps } from '../../../../helpers';
-import { Organization, ProductOption } from '../../../../types';
+import { Organization } from '../../../../types';
 import { extractAppNameFromId } from '../../../../utils';
 import { MarketplaceBannerCard } from '../../../MarketplaceBannerCard';
 import { ReferralBannerCard } from '../../../ReferralBannerCard';
@@ -47,8 +47,8 @@ export function DrawerMenuMobile({
   selectedLink,
   onLinkChange,
   favorites,
-  onMarketplaceBannerClick,
-  onReferralBannerClick,
+  marketplaceBanner,
+  referralBanner,
   onSearchChange,
   hideProductSelect = false,
   handleProjectMenuOpen,
@@ -113,10 +113,10 @@ export function DrawerMenuMobile({
     [onClose],
   );
 
-  const onProductChange = useCallback(
-    (product: ProductOption) => {
+  const onProductChange: NonNullable<DrawerMenuProps['onProductChange']> = useCallback(
+    (product, e) => {
       setPlatformSelectOpen(false);
-      onProductChangeProp(product);
+      onProductChangeProp(product, e);
     },
     [onProductChangeProp],
   );
@@ -204,19 +204,21 @@ export function DrawerMenuMobile({
 
             {!searchValue && (
               <>
-                {onMarketplaceBannerClick && (
+                {marketplaceBanner && (
                   <MarketplaceBannerCard
                     title={t('mkpBannerTitle')}
-                    onClick={wrappedClick({ onClick: onMarketplaceBannerClick })}
+                    href={marketplaceBanner.href}
+                    onClick={wrappedClick({ onClick: marketplaceBanner.onClick })}
                     isMobile
                   />
                 )}
 
-                {onReferralBannerClick && (
+                {referralBanner && (
                   <ReferralBannerCard
                     title={t('referralBannerTitle')}
                     promoBadge={t('referralBannerTag')}
-                    onClick={wrappedClick({ onClick: onReferralBannerClick })}
+                    href={referralBanner.href}
+                    onClick={wrappedClick({ onClick: referralBanner.onClick })}
                     isMobile
                   />
                 )}

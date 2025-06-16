@@ -13,7 +13,7 @@ import { Typography } from '@snack-uikit/typography';
 
 import styles from './styles.module.scss';
 
-export type MarketplaceBannerCardProps = Pick<CardProps, 'onClick'> & {
+export type MarketplaceBannerCardProps = Pick<CardProps, 'onClick' | 'href'> & {
   title: string;
   text?: string;
   isMobile?: boolean;
@@ -22,7 +22,7 @@ export type MarketplaceBannerCardProps = Pick<CardProps, 'onClick'> & {
 export function MarketplaceBannerCard(props: MarketplaceBannerCardProps) {
   return (
     <div className={cn(!props.isMobile && styles.card)} data-test-id='header__drawer-menu__marketplace-banner'>
-      <Card size={'m'} onClick={props.onClick}>
+      <Card size={'m'} onClick={props.onClick} href={props.href}>
         <div className={cn(styles.wrapper, props.isMobile && styles.mobile)}>
           <div className={styles.left}>
             <Typography.SansTitleS className={styles.title}>{props.title}</Typography.SansTitleS>

@@ -3,9 +3,18 @@ import { useCallback, useMemo, useState } from 'react';
 import { InvitePopover } from '../InvitePopover';
 import { PartnerPopover } from '../PartnerPopover';
 import { UserMenuDroplist } from './components';
-import { useAlertMenu, useGeneralMenu, useLogoutMenu, useOrganizationsMenu, useProfileMenu } from './hooks';
+import {
+  useAlertMenu,
+  useGeneralMenu,
+  useLogoutMenu,
+  UseOrganizationProps,
+  useOrganizationsMenu,
+  useProfileMenu,
+} from './hooks';
 import styles from './styles.module.scss';
 import { DefaultUserMenuProps } from './types';
+
+type UserMenuProps = DefaultUserMenuProps & Pick<UseOrganizationProps, 'organizations'>;
 
 export function UserMenu({
   user,
@@ -23,7 +32,7 @@ export function UserMenu({
   partnerInvites,
   onWhatsNewClick,
   bottomAlert,
-}: DefaultUserMenuProps) {
+}: UserMenuProps) {
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const closeUserMenu = useCallback(() => setIsUserMenuOpen(false), []);
 

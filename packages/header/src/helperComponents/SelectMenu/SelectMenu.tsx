@@ -1,5 +1,14 @@
 import cn from 'classnames';
-import { createRef, ReactElement, RefObject, useCallback, useEffect, useMemo } from 'react';
+import {
+  createRef,
+  MouseEvent,
+  MouseEventHandler,
+  ReactElement,
+  RefObject,
+  useCallback,
+  useEffect,
+  useMemo,
+} from 'react';
 
 import { ArrowLeftSVG, ChevronDownSVG, ChevronUpSVG, OrganizationSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
@@ -29,15 +38,15 @@ import { ItemsGroup } from './types';
 
 export type SelectProps = {
   organizations?: Organization[];
-  selectedOrganization?: Organization;
-  onOrganizationChange?(value: Organization | undefined, source: 'user-menu' | 'select'): void;
+  selectedOrganization?: Omit<Organization, 'href'>;
+  onOrganizationChange?(value: Organization): void;
 
   onOpenChange?(open: boolean): void;
 
   projects?: ItemsGroup<Project>[];
   projectsLoading?: boolean;
-  selectedProject?: Project;
-  onProjectChange?(value: Project): void;
+  selectedProject?: Omit<Project, 'href'>;
+  onProjectChange?(value: Omit<Project, 'href'>, e: MouseEvent<HTMLAnchorElement>): void;
   onProjectsSortChange?(sort: SortVariant): void;
   projectAddButton?: Omit<SelectMenuFooterButtonProps, 'label'>;
 
@@ -120,28 +129,31 @@ export function SelectMenu({
     }
   }, [mobile, searchRef]);
 
-  const onProjectChange = useCallback(
-    (item: Project) => {
-      onProjectChangeProp?.(item);
-      closeDropdown?.();
+  const onProjectChange: NonNullable<SelectProps['onProjectChange']> = useCallback(
+    (item, e) => {
+      onProjectChangeProp?.(item, e);
+
+      if (!e.metaKey) {
+        e.preventDefault();
+        closeDropdown?.();
+      }
     },
     [onProjectChangeProp, closeDropdown],
   );
 
   const handleItemMouseDown = useCallback(
-    ({ item }: { item: Project }) =>
-      () => {
-        onProjectChange?.(item);
+    ({ item }: { item: Project }, e: MouseEvent<HTMLAnchorElement>) => {
+      onProjectChange?.(item, e);
 
-        if (searchValue.length > 0) {
-          setSearchValue('');
+      if (searchValue.length > 0) {
+        setSearchValue('');
 
-          setTimeout(() => {
-            const selectedItem = itemRefs[item.id]?.current;
-            selectedItem?.scrollIntoView({ block: 'center' });
-          }, 0);
-        }
-      },
+        setTimeout(() => {
+          const selectedItem = itemRefs[item.id]?.current;
+          selectedItem?.scrollIntoView({ block: 'center' });
+        }, 0);
+      }
+    },
     [itemRefs, onProjectChange, searchValue.length, setSearchValue],
   );
 
@@ -168,6 +180,8 @@ export function SelectMenu({
     (item: Project): BaseItemProps => {
       const dataTestId = `header__select-group__item-${item.id}`;
 
+      const onItemClick: MouseEventHandler<HTMLAnchorElement> = e => handleItemMouseDown({ item }, e);
+
       return {
         content: {
           option: item.name,
@@ -184,9 +198,15 @@ export function SelectMenu({
           />
         ),
         id: item.id,
-        onMouseDown: handleItemMouseDown({ item }),
         'data-test-id': dataTestId,
         itemRef: getItemRef(item.id),
+        itemWrapRender(itemInner) {
+          return (
+            <a onClick={onItemClick} href={item.href}>
+              {itemInner}
+            </a>
+          );
+        },
       };
     },
     [closeDropdown, getItemRef, handleItemMouseDown, mobile, onPlatformChange],
@@ -290,7 +310,9 @@ export function SelectMenu({
   const handleOrganizationChange = (value: string) => {
     const organization = organizations?.find(org => org.id === value);
 
-    onOrganizationChange?.(organization, 'select');
+    if (organization) {
+      onOrganizationChange?.(organization);
+    }
   };
 
   const handleCloseMenu = () => onOpenChange?.(false);
@@ -428,7 +450,7 @@ export function SelectMenuTrigger({
   nameClassName,
   entityClassName,
 }: {
-  selectedProject?: Project;
+  selectedProject?: Omit<Project, 'href'>;
   open: boolean;
   showIcon: boolean;
   loading?: boolean;

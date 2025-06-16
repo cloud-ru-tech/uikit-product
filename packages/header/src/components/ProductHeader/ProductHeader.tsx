@@ -52,8 +52,8 @@ export type ProductHeaderProps = WithSupportProps<
       | 'selectedLink'
       | 'onLinkChange'
       | 'favorites'
-      | 'onMarketplaceBannerClick'
-      | 'onReferralBannerClick'
+      | 'marketplaceBanner'
+      | 'referralBanner'
       | 'hideProductSelect'
     > & { onClose?(): void };
     select?: Pick<
@@ -95,8 +95,8 @@ export function ProductHeader({
   drawerMenu: {
     links,
     favorites,
-    onMarketplaceBannerClick,
-    onReferralBannerClick,
+    marketplaceBanner,
+    referralBanner,
     footerLinks,
     allProducts,
     selectedProduct,
@@ -277,8 +277,8 @@ export function ProductHeader({
           onClose={handleCloseMainMenu}
           links={links}
           favorites={favorites}
-          onMarketplaceBannerClick={onMarketplaceBannerClick}
-          onReferralBannerClick={onReferralBannerClick}
+          marketplaceBanner={marketplaceBanner}
+          referralBanner={referralBanner}
           selectedLink={selectedLink}
           onLinkChange={onLinkChange}
           onSearchChange={onSearchChange}

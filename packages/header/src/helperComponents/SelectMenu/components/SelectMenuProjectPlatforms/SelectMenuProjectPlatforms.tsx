@@ -24,6 +24,7 @@ export function SelectMenuProjectPlatforms({ platforms, onPlatformChange, projec
           data-test-id='header__select-project__platform-button'
           onClick={e => {
             e.stopPropagation();
+            e.preventDefault();
             onPlatformChange({ platform, project });
           }}
         />

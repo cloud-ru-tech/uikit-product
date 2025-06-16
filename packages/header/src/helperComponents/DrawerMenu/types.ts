@@ -5,7 +5,7 @@ import { ItemsGroup } from '../SelectMenu';
 
 export type SelectProductsProps = {
   allProducts: ItemsGroup<ProductOption>[];
-  onProductChange(product: ProductOption): void;
+  onProductChange(product: ProductOption, e: MouseEvent<HTMLAnchorElement>): void;
   selectedProduct: ProductOption;
   closeDropList?(): void;
 };
@@ -22,7 +22,13 @@ export type DrawerMenuProps = {
     value: string[];
     onChange(id: string): (value: boolean) => void;
   };
-  onMarketplaceBannerClick?(e?: MouseEvent<HTMLElement>): void;
-  onReferralBannerClick?(e?: MouseEvent<HTMLElement>): void;
+  marketplaceBanner?: {
+    onClick(e?: MouseEvent<HTMLElement>): void;
+    href: string;
+  };
+  referralBanner?: {
+    onClick?(e?: MouseEvent<HTMLElement>): void;
+    href: string;
+  };
   hideProductSelect?: boolean;
 } & SelectProductsProps;

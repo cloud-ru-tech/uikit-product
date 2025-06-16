@@ -1,3 +1,5 @@
+import { MouseEventHandler } from 'react';
+
 import { Avatar } from '@snack-uikit/avatar';
 import { HotSpot } from '@snack-uikit/hot-spot';
 import { ListProps } from '@snack-uikit/list';
@@ -32,10 +34,21 @@ export function getSelectProductListProps({
         ...(item.hotSpot ? { afterContent: <HotSpot {...item.hotSpot} /> } : {}),
 
         id: item.id,
+        itemWrapRender(itemInner) {
+          const handleClick: MouseEventHandler<HTMLAnchorElement> = e => {
+            if (!e.metaKey) {
+              e.preventDefault();
+              closeDropList?.();
+            }
 
-        onClick: () => {
-          onProductChange(item);
-          closeDropList?.();
+            onProductChange(item, e);
+          };
+
+          return (
+            <a target='_blank' href={item.href} rel='noreferrer' onClick={handleClick}>
+              {itemInner}
+            </a>
+          );
         },
         'data-test-id': `header__select-group-platform__item-${item.id}`,
       })),

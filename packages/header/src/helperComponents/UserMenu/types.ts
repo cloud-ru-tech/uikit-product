@@ -7,7 +7,7 @@ import { ThemeMode } from '../../types';
 import { InvitePopoverProps } from '../InvitePopover';
 import { PartnerPopoverProps } from '../PartnerPopover';
 import { SelectProps } from '../SelectMenu';
-import { UseAlertMenuProps, User } from './hooks';
+import { UseAlertMenuProps, UseOrganizationProps, User } from './hooks';
 
 export type CommonUserMenuProps = {
   user: User;
@@ -28,7 +28,8 @@ export type DefaultUserMenuProps = CommonUserMenuProps & {
     count?: number;
     showPopover?: boolean;
   } & Pick<PartnerPopoverProps, 'onCloseClick'>;
-} & Pick<SelectProps, 'organizations' | 'selectedOrganization' | 'onOrganizationChange'> & {
+} & Pick<UseOrganizationProps, 'onOrganizationChange'> &
+  Pick<SelectProps, 'selectedOrganization'> & {
     themeMode?: {
       value: ThemeMode;
       onChange(value: ThemeMode): void;
