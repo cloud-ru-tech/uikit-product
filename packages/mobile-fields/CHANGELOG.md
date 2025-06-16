@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-06-16)
+
+
+### Features
+
+* **GIGAID-164:** pass "inputMode" for MobileFieldDate ([5fb8f6c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5fb8f6cc959a2c0d143cab75ca1010db76c410a2))
+
+
+
+
+
 ## 0.8.1 (2025-06-09)
 
 
