@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-06-16)
+
+
+### Features
+
+* **PDS-2401:** extend countries, add phone filter settings ([d36aeb3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d36aeb39412df10f46e2ab4c11086b6121a4ace9))
+
+
+
+
+
 ## 0.6.4 (2025-05-29)
 
 
