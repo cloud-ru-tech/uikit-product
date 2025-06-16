@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.1 (2025-06-16)
+
+
+### Bug Fixes
+
+* **FF-6784:** update header locales ([853313c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/853313c3a5722890298bb0ab0a5b19a7de3ae26c))
+
+
+
+
+
 # 0.7.0 (2025-06-16)
 
 

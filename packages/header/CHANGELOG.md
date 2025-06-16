@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.4.0 (2025-06-16)
+
+
+### Features
+
+* **FF-6784:** add new sort and platforms in project selector ([61320b2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/61320b236324dc08142fbbf285c7d57a08cda823))
+
+
+
+
+
 # 4.3.0 (2025-06-11)
 
 
