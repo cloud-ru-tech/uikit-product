@@ -359,6 +359,7 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
               readonly={readonly}
               tabIndex={inputTabIndex}
               type='text'
+              inputMode='numeric'
               id={id}
               name={name}
               data-test-id='field-date__input'
