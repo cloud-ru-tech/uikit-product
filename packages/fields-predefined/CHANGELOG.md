@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.1 (2025-06-16)
+
+
+### Bug Fixes
+
+* **LK-5807:** added value prop to textarea, used forwardref, changed max and min rows, updated disabled prop usage ([3f6211b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3f6211b7b08df44154aea7508e3c86bfc034c672))
+
+
+
+
+
 # 0.7.0 (2025-06-16)
 
 

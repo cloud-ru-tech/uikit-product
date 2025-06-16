@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-fields-predefined",
   "title": "Fields Predefined",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "sideEffects": [
     "*.css",
     "*.woff",
