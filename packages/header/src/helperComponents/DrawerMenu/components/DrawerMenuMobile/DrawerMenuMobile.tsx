@@ -158,6 +158,7 @@ export function DrawerMenuMobile({
                 className={styles.trigger}
                 onClick={toggleProjectSelect}
                 hasChoice
+                appearance='neutral'
                 dataTestIdPostfix={'project'}
               />
             )}

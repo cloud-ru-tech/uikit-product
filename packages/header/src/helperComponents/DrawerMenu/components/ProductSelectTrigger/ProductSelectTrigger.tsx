@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
 import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { Avatar } from '@snack-uikit/avatar';
+import { Avatar, AvatarProps } from '@snack-uikit/avatar';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { ProductOption } from '../../../../types';
@@ -13,6 +13,7 @@ type ProductSelectTriggerProps = {
   onClick?(): void;
   className?: string;
   hasChoice: boolean;
+  appearance?: AvatarProps['appearance'];
   dataTestIdPostfix: string;
 };
 
@@ -22,6 +23,7 @@ export function ProductSelectTrigger({
   onClick,
   className,
   hasChoice,
+  appearance,
   dataTestIdPostfix,
 }: ProductSelectTriggerProps) {
   return (
@@ -35,7 +37,9 @@ export function ProductSelectTrigger({
       data-active={hasChoice}
     >
       <div className={styles.logo}>
-        {selectedProduct.logo ?? <Avatar size='xs' name={selectedProduct.name} showTwoSymbols shape='square' />}
+        {selectedProduct.logo ?? (
+          <Avatar size='xs' name={selectedProduct.name} showTwoSymbols shape='square' appearance={appearance} />
+        )}
       </div>
 
       <div className={styles.selectedSection}>
