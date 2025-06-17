@@ -336,7 +336,7 @@ export function SelectMenu({
             options={[
               {
                 type: 'group-select',
-                label: t('platforms'),
+                label: mobile ? undefined : t('platforms'),
                 options: platformsOptions,
               },
             ]}
