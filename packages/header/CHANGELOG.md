@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.5.1 (2025-06-17)
+
+
+### Bug Fixes
+
+* **FF-6784:** change projects sort to last visited if only one catalog available ([2b67c8a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2b67c8a616fa81192199785e28b4b340801d52ce))
+
+
+
+
+
 # 4.5.0 (2025-06-17)
 
 
