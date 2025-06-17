@@ -26,7 +26,7 @@ export function WithPasswordTooltip({
   if (showTooltip) {
     return (
       <AdaptiveTooltip
-        placement='top'
+        placement='left-end'
         layoutType={layoutType}
         tip={
           <div className={styles.validationItemsContainer}>
