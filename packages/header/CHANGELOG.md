@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.5.0 (2025-06-17)
+
+
+### Features
+
+* **FF-6790:** hide platforms filter label on mobile ([c0d9ad4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c0d9ad47fcdf685c82acb07e60b8988c0d4ff35e))
+
+
+
+
+
 ## 4.4.1 (2025-06-17)
 
 
