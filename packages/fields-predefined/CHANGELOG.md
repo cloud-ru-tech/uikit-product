@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-06-17)
+
+
+### Features
+
+* **LK-5773:** ai password field tooltip position changed ([de44eeb](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/de44eebf12bd776e9cee93180ad65e113933f7b4))
+
+
+
+
+
 ## 0.7.1 (2025-06-16)
 
 
