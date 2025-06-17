@@ -90,6 +90,12 @@ export function SelectMenu({
     noCatalogsInSort ? SortVariant.LastVisitedDesc : SortVariant.ByCatalogs,
   );
 
+  useEffect(() => {
+    if (selectedOrganization?.id && noCatalogsInSort && sort === SortVariant.ByCatalogs) {
+      setSort(SortVariant.LastVisitedDesc);
+    }
+  }, [noCatalogsInSort, selectedOrganization?.id, setSort, sort]);
+
   const handleSortChange = (newSort?: SortVariant) => {
     // undefined returns if selected same element
     if (!newSort) {

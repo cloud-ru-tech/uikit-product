@@ -38,7 +38,7 @@ import {
   THEME_MODE,
   ThemeMode,
 } from '../src';
-import { ItemsGroup } from '../src/helperComponents';
+import { ItemsGroup, UserMenuProps } from '../src/helperComponents';
 import styles from './styles.module.scss';
 
 export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
@@ -376,10 +376,12 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 
       if (!leaveOneOrganization) {
         allOrganizations.push(
-          ...[
-            { id: '2', name: 'ИП Иванов И.И.', type: 'CUSTOMER_TYPE_LEGAL' },
-            { id: '3', name: 'Очень-очень длинное название очень большой организации', type: 'CUSTOMER_TYPE_LEGAL' },
-          ],
+          { id: '2', name: 'ИП Иванов И.И.', type: 'CUSTOMER_TYPE_LEGAL' },
+          {
+            id: '3',
+            name: 'Очень-очень длинное название очень большой организации',
+            type: 'CUSTOMER_TYPE_LEGAL',
+          },
         );
       }
 
@@ -433,9 +435,9 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       }
     };
 
-    const userMenuParams = useMemo(() => {
+    const userMenuParams = useMemo<UserMenuProps | undefined>(() => {
       if (showUserMenu && userMenu) {
-        const baseProps = {
+        const baseProps: DefaultUserMenuProps = {
           user: userMenu.user ?? DEFAULT_USER,
           indicator: userMenu.indicator,
           onAvatarClick: closeInvitesPopover,
@@ -505,8 +507,12 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
         return [];
       }
 
+      if (organization?.id === '2') {
+        return PROJECTS.slice(0, 1);
+      }
+
       return args.select?.projects?.slice(0, projectsCatalogAmount);
-    }, [args.select?.projects, projectsCatalogAmount]);
+    }, [args.select?.projects, organization?.id, projectsCatalogAmount]);
 
     return (
       <div className={styles.fullPageHeight}>
@@ -804,31 +810,7 @@ export const ARGS: StoryProps = {
   showSinglePlatform: false,
   showProductSelect: true,
   drawerMenu: {
-    allProducts: [
-      {
-        id: '1',
-        heading: 'Облачные платформы',
-        items: [
-          DEFAULT_PRODUCT,
-          { id: '2', name: 'Advanced', logo: <AdvancedPlatformLogo />, category: 'Облачная платформа' },
-          { id: '3', name: 'MLSpace', logo: <MLSpacePlatformLogo />, category: 'Облачная платформа' },
-          { id: '4', name: 'Enterprise', logo: <EnterprisePlatformLogo />, category: 'Облачная платформа' },
-        ],
-      },
-      {
-        id: '2',
-        heading: 'Другие продукты',
-        items: [
-          {
-            id: 'lkp',
-            name: 'Партнёрский кабинет',
-            category: 'Другой продукт',
-            hotSpot: PRODUCT_HOT_SPOT,
-          },
-          { id: 'admin', name: 'Административная панель', category: 'Другой продукт' },
-        ],
-      },
-    ],
+    allProducts: ALL_PRODUCTS_MULTI,
     selectedProduct: DEFAULT_PRODUCT,
     onProductChange: () => {},
     footerLinks: [
