@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.4.1 (2025-06-17)
+
+
+### Bug Fixes
+
+* **FF-6725:** project selector avatar color ([e6dc03f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e6dc03f728f21ca7d620dfe2fe0a5bd9d2c998ec))
+
+
+
+
+
 # 4.4.0 (2025-06-16)
 
 
