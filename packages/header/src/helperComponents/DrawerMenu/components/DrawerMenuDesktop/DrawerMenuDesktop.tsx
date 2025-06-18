@@ -1,4 +1,3 @@
-import cn from 'classnames';
 import { MouseEvent, useCallback, useMemo, useRef, useState } from 'react';
 
 import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
@@ -230,9 +229,13 @@ export function DrawerMenuDesktop({
           {showRightSection && (
             <div className={styles.right} ref={rightContainerRef} data-test-id='header__drawer-menu__right'>
               <Scroll ref={scrollRef} barHideStrategy='never'>
-                <div className={styles.rightContent} ref={rightContentRef}>
+                <div
+                  className={styles.rightContent}
+                  data-padding-top={!leftSectionLinks || undefined}
+                  ref={rightContentRef}
+                >
                   {leftSectionLinks && (
-                    <div className={cn(styles.searchItem)} ref={searchPanelRef}>
+                    <div className={styles.searchItem} ref={searchPanelRef}>
                       <Search
                         size='m'
                         placeholder={t('searchByServices')}

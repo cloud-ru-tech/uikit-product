@@ -155,7 +155,16 @@ export function SelectMenu({
     [itemRefs],
   );
 
-  const onPlatformChange = platforms?.onPlatformChange;
+  const onPlatformChange: SelectMenuProjectPlatformsProps['onPlatformChange'] | undefined = useMemo(
+    () =>
+      platforms?.onPlatformChange
+        ? params => {
+            platforms.onPlatformChange(params);
+            closeDropdown?.();
+          }
+        : undefined,
+    [closeDropdown, platforms],
+  );
 
   const mapProjectToListItem = useCallback(
     (item: Project): BaseItemProps => {

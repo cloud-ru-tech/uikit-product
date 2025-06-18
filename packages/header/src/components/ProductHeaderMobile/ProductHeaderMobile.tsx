@@ -192,14 +192,18 @@ export function ProductHeaderMobile({
           favorites={drawerMenuProps.favorites}
           isProjectMenuOpen={isProjectMenuOpen}
           handleProjectMenuOpen={handleProjectMenuOpen}
-          select={{
-            ...select,
-            onOpenChange: onSelectOpenChange,
-            closeDropdown: () => {
-              closeProjectMenu();
-              closeMainMenu();
-            },
-          }}
+          select={
+            select
+              ? {
+                  ...select,
+                  onOpenChange: onSelectOpenChange,
+                  closeDropdown: () => {
+                    closeProjectMenu();
+                    closeMainMenu();
+                  },
+                }
+              : undefined
+          }
           organizations={organizations}
           {...drawerMenuProps}
         />

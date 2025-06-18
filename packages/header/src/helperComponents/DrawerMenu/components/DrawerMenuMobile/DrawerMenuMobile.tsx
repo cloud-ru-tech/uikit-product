@@ -291,9 +291,11 @@ export function DrawerMenuMobile({
         />
       </MobileModalCustom>
 
-      <MobileModalCustom open={isProjectMenuOpen} onClose={toggleProjectSelect}>
-        <SelectMenu mobile organizations={organizations} {...select} onOpenChange={onSelectOpenChange} />
-      </MobileModalCustom>
+      {select && (
+        <MobileModalCustom open={isProjectMenuOpen} onClose={toggleProjectSelect}>
+          <SelectMenu mobile organizations={organizations} {...select} onOpenChange={onSelectOpenChange} />
+        </MobileModalCustom>
+      )}
     </>
   );
 }
