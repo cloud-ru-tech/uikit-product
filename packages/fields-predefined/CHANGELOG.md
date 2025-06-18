@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.1 (2025-06-18)
+
+
+### Bug Fixes
+
+* **FF-6795:** hide support tooltip if not provided ([1a0bda5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1a0bda577a6a8839b7075dc2bd027619406eb764))
+
+
+
+
+
 # 0.8.0 (2025-06-17)
 
 
