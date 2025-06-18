@@ -69,7 +69,6 @@
 | name | type | default value | description |
 |------|------|---------------|-------------|
 | layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
-| supportUrl* | `string` | - | Ссылка на чат поддержки |
 | handleSubmit* | `(value: string) => void` | - | Колбек действия при отправке |
 | value | `string` | - | HTML-аттрибут value |
 | onChange | `(value: string, e?: ChangeEvent<HTMLTextAreaElement>) => void` | - | Колбек смены значения |
@@ -96,6 +95,7 @@
 | maxRows | `number` | 1000 | Максимальное кол-во строк, до которого размер поля может быть увеличен |
 | resizable | `boolean` | - | Может ли ли пользователь изменять размеры поля (если св-во не включено, поле автоматически меняет свой размер) |
 | secure | `boolean \| "password"` | - | Режим ввода sensitive данных (пароля, API ключей, токенов, etc) |
+| supportUrl | `string` | - | Ссылка на чат поддержки |
 | handleSupportUrlClick | `(e: MouseEvent<Element, MouseEvent>) => void` | - | Действие при клике по ссылке на чат поддержки |
 | handleResetContextClick | `() => void` | - | Действие при клике по кнопке сброса контекста |
 | ref | `LegacyRef<HTMLTextAreaElement>` | - | Allows getting a ref to the component instance. Once the component unmounts, React will set `ref.current` to `null` (or call the ref with `null` if you passed a callback ref). @see {@link https://react.dev/learn/referencing-values-with-refs#refs-and-the-dom React Docs} |

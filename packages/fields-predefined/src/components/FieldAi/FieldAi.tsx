@@ -22,7 +22,7 @@ export type FieldAiProps = WithLayoutType<
     /** Колбек действия при отправке */
     handleSubmit(value: string): void;
     /** Ссылка на чат поддержки */
-    supportUrl: string;
+    supportUrl?: string;
     /** Действие при клике по ссылке на чат поддержки */
     handleSupportUrlClick?(e: MouseEvent): void;
     /** Действие при клике по кнопке сброса контекста */
@@ -124,22 +124,25 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
         </WithPasswordTooltip>
         <div className={styles.footerText}>
           <Typography.SansBodyS>{t('FieldAi.hint.text')}</Typography.SansBodyS>
-          <QuestionTooltip
-            size='xs'
-            tooltipClassname={styles.tooltip}
-            tip={
-              <>
-                <Typography.SansBodyS>{t('FieldAi.hint.tooltip')}</Typography.SansBodyS>
-                <Link
-                  text={t('FieldAi.hint.tooltipLink')}
-                  href={supportUrl}
-                  onClick={handleSupportUrlClick}
-                  appearance='invert-neutral'
-                  textMode='accent'
-                />
-              </>
-            }
-          />
+
+          {supportUrl && (
+            <QuestionTooltip
+              size='xs'
+              tooltipClassname={styles.tooltip}
+              tip={
+                <>
+                  <Typography.SansBodyS>{t('FieldAi.hint.tooltip')}</Typography.SansBodyS>
+                  <Link
+                    text={t('FieldAi.hint.tooltipLink')}
+                    href={supportUrl}
+                    onClick={handleSupportUrlClick}
+                    appearance='invert-neutral'
+                    textMode='accent'
+                  />
+                </>
+              }
+            />
+          )}
         </div>
       </div>
     );
