@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.6.0 (2025-06-18)
+
+
+### Bug Fixes
+
+* **FF-6771:** closeDropdown onPlatformChange on mobile, drawer links padding, hide project select if not passed ([cd8e4a9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/cd8e4a9922bfa2f1e70d281aa0ba82f6b269f579))
+
+
+### Features
+
+* **FF-6725:** split platform props ([0d39384](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0d393845e2f37086e53def7e7b3d0348c35bc838))
+
+
+
+
+
 ## 4.5.1 (2025-06-17)
 
 
