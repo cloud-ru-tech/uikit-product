@@ -7,7 +7,7 @@ import { Project } from '../../../../types';
 import { ItemDroplist } from '../../../ItemDroplist';
 import { SelectMenuProjectPlatforms, SelectMenuProjectPlatformsProps } from '../SelectMenuProjectPlatforms';
 
-type ProjectAfterContentProps = Partial<Pick<SelectMenuProjectPlatformsProps, 'onPlatformChange'>> & {
+type ProjectAfterContentProps = Pick<SelectMenuProjectPlatformsProps, 'onPlatformChange'> & {
   mobile: boolean;
   closeDropdown?(): void;
   dataTestId: string;
@@ -69,7 +69,7 @@ export function ProjectAfterContent({
         <SelectMenuProjectPlatforms
           platforms={filteredPlatforms}
           onPlatformChange={params => {
-            onPlatformChange?.(params);
+            onPlatformChange(params);
             closeDropdown?.();
           }}
           project={project}

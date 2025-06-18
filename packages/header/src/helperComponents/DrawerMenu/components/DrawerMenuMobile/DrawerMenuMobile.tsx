@@ -30,7 +30,10 @@ import styles from './styles.module.scss';
 type DrawerMenuMobileProps = DrawerMenuProps & {
   isProjectMenuOpen: boolean;
   handleProjectMenuOpen(open: boolean): void;
-  select?: Pick<SelectProps, 'projects' | 'onProjectChange' | 'selectedProject' | 'closeDropdown' | 'onOpenChange'>;
+  select?: Pick<
+    SelectProps,
+    'projects' | 'onProjectChange' | 'selectedProject' | 'closeDropdown' | 'onOpenChange' | 'onPlatformChange'
+  >;
   organizations?: Organization[];
 };
 

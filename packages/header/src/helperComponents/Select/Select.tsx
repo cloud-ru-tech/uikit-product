@@ -19,7 +19,8 @@ export function Select({
   projectsEmptyState,
   onProjectsSortChange,
 
-  platforms,
+  platformsFilter,
+  onPlatformChange,
 
   onOpenChange,
 }: SelectProps) {
@@ -89,7 +90,8 @@ export function Select({
                 projectAddButton={projectAddButton}
                 projectsEmptyState={projectsEmptyState}
                 onProjectsSortChange={onProjectsSortChange}
-                platforms={platforms}
+                platformsFilter={platformsFilter}
+                onPlatformChange={onPlatformChange}
                 closeDropdown={closeDropdown}
                 mobile={false}
               />

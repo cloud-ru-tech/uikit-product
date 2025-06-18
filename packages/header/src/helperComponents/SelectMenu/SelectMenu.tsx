@@ -45,12 +45,12 @@ export type SelectProps = {
 
   closeDropdown?(): void;
 
-  platforms?: Pick<SelectMenuProjectPlatformsProps, 'onPlatformChange'> & {
-    filterOptions: { label: string; value: string; caption?: string; icon: ReactElement }[];
-    onFilterChange(platforms: string[]): void;
-    filterValue: string[];
+  platformsFilter?: {
+    options: { label: string; value: string; caption?: string; icon: ReactElement }[];
+    onChange(platforms: string[]): void;
+    value: string[];
   };
-};
+} & Pick<SelectMenuProjectPlatformsProps, 'onPlatformChange'>;
 
 type SelectMenuProps = SelectProps & {
   mobile: boolean;
@@ -71,7 +71,8 @@ export function SelectMenu({
 
   closeDropdown,
 
-  platforms,
+  platformsFilter,
+  onPlatformChange: onPlatformChangeProp,
 
   mobile,
   onOpenChange,
@@ -155,15 +156,12 @@ export function SelectMenu({
     [itemRefs],
   );
 
-  const onPlatformChange: SelectMenuProjectPlatformsProps['onPlatformChange'] | undefined = useMemo(
-    () =>
-      platforms?.onPlatformChange
-        ? params => {
-            platforms.onPlatformChange(params);
-            closeDropdown?.();
-          }
-        : undefined,
-    [closeDropdown, platforms],
+  const onPlatformChange: SelectMenuProjectPlatformsProps['onPlatformChange'] = useCallback(
+    params => {
+      onPlatformChangeProp(params);
+      closeDropdown?.();
+    },
+    [closeDropdown, onPlatformChangeProp],
   );
 
   const mapProjectToListItem = useCallback(
@@ -255,39 +253,39 @@ export function SelectMenu({
   );
 
   const platformsOptions = useMemo<FilterOption[]>(() => {
-    if (!platforms?.filterOptions.length) {
+    if (!platformsFilter?.options.length) {
       return [];
     }
 
-    return platforms.filterOptions.map(option => ({
+    return platformsFilter.options.map(option => ({
       ...option,
       beforeContent: option.icon,
       contentRenderProps: {
         caption: option?.caption,
       },
     }));
-  }, [platforms?.filterOptions]);
+  }, [platformsFilter?.options]);
 
   const platformChipValueRender = useCallback(() => {
-    if (!platforms?.filterOptions) {
+    if (!platformsFilter?.options) {
       return '';
     }
 
-    const filterValueLength = platforms.filterValue.length;
+    const filterValueLength = platformsFilter.value.length;
 
-    if (!filterValueLength || filterValueLength === platforms.filterOptions.length) {
+    if (!filterValueLength || filterValueLength === platformsFilter.options.length) {
       return chipsT('allLabel');
     }
 
-    const [first, ...rest] = platforms.filterValue;
-    const firstLabel = platforms.filterOptions.find(option => option.value === first)?.label ?? first;
+    const [first, ...rest] = platformsFilter.value;
+    const firstLabel = platformsFilter.options.find(option => option.value === first)?.label ?? first;
 
     if (!rest.length) {
       return firstLabel;
     }
 
     return `${firstLabel}, +${rest.length}`;
-  }, [platforms?.filterValue, platforms?.filterOptions, chipsT]);
+  }, [chipsT, platformsFilter?.options, platformsFilter?.value]);
 
   const handleOrganizationChange = (value: string) => {
     const organization = organizations?.find(org => org.id === value);
@@ -341,12 +339,12 @@ export function SelectMenu({
           />
         )}
 
-        {platforms && platformsOptions.length > 0 && (
+        {platformsFilter && platformsOptions.length > 0 && (
           <AdaptiveChipChoice.Multiple
             className={styles.platformsChip}
             label={t('platforms')}
-            value={platforms.filterValue}
-            onChange={platforms.onFilterChange}
+            value={platformsFilter.value}
+            onChange={platformsFilter.onChange}
             valueRender={platformChipValueRender}
             options={[
               {

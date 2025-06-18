@@ -336,7 +336,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
     const [product, setProduct] = useState(args.drawerMenu.selectedProduct);
     const [selectedLink, setSelectedLink] = useState(args.drawerMenu.selectedLink);
 
-    const [platformsFilter, setPlatformsFilter] = useState(args.select?.platforms?.filterValue ?? []);
+    const [platformsFilter, setPlatformsFilter] = useState(args.select?.platformsFilter?.value ?? []);
 
     const [notifyCards, setCards] = useState(args.notifications?.items || []);
 
@@ -363,9 +363,9 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
       args.select.selectedProject = project;
       args.select.onProjectChange = setProject;
 
-      if (args.select.platforms) {
-        args.select.platforms.onFilterChange = setPlatformsFilter;
-        args.select.platforms.filterValue = platformsFilter;
+      if (args.select.platformsFilter) {
+        args.select.platformsFilter.onChange = setPlatformsFilter;
+        args.select.platformsFilter.value = platformsFilter;
       }
     }
 
@@ -520,7 +520,7 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
           {...args}
           layoutType={layoutType}
           select={
-            showSelect
+            showSelect && args.select
               ? {
                   ...args.select,
                   projects,
@@ -640,11 +640,11 @@ export const ARGS: StoryProps = {
       },
       description: `Здесь появятся проекты, как только администратор организации предоставит вам к ним доступ.\n\nКонтакты администратора: <контакты>`,
     },
-    platforms: {
-      onPlatformChange() {},
-      onFilterChange() {},
-      filterValue: [],
-      filterOptions: [
+    onPlatformChange() {},
+    platformsFilter: {
+      onChange() {},
+      value: [],
+      options: [
         {
           label: 'Evolution',
           value: 'Evolution',
