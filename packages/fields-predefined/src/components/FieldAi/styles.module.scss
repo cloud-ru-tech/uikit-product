@@ -26,3 +26,12 @@
 .tooltip {
   max-width: 258px;
 }
+
+.hintText {
+  @include ste.composite-var(ste.$sans-body-s);
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    @include ste.composite-var(ste.$light-label-s);
+  }
+}

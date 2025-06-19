@@ -123,7 +123,9 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
           />
         </WithPasswordTooltip>
         <div className={styles.footerText}>
-          <Typography.SansBodyS>{t('FieldAi.hint.text')}</Typography.SansBodyS>
+          <span className={styles.hintText} data-layout-type={layoutType}>
+            {t('FieldAi.hint.text')}
+          </span>
 
           {supportUrl && (
             <QuestionTooltip
