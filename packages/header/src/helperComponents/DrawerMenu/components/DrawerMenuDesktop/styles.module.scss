@@ -100,6 +100,10 @@
   background-color: styles-tokens-element.$sys-neutral-background;
   padding-top: styles-tokens-element.$dimension-4m;
   padding-bottom: styles-tokens-element.$dimension-1m;
+
+  display: flex;
+  flex-direction: column;
+  gap: styles-tokens-element.$dimension-1m;
 }
 
 .noData {
@@ -143,4 +147,8 @@
 .bannersWrapper {
   display: flex;
   gap: styles-tokens-element.$dimension-1m;
+}
+
+.search {
+  position: relative;
 }

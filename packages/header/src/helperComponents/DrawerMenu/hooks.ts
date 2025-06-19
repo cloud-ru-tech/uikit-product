@@ -1,17 +1,24 @@
 import Fuse from 'fuse.js';
 import debounce from 'lodash.debounce';
-import { MouseEvent, useEffect, useMemo, useRef, useState } from 'react';
+import { MouseEvent, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { isBrowser } from '@snack-uikit/utils';
 
 import { InnerLink, LinksGroup } from '../../types';
+import { SearchSettings } from './components/SearchSettingsChips';
 import { SearchGroupsAccessor } from './constants';
 import { DrawerMenuProps } from './types';
-import { filterHiddenLinks, toggleLayout } from './utils';
+import {
+  filterHiddenLinks,
+  getSearchSettingsFromLocalStorage,
+  saveSearchSettingsToLocalStorage,
+  toggleLayout,
+} from './utils';
 
 type UseSearchProps = {
   links?: LinksGroup[];
+  searchSettings: SearchSettings;
 };
 
 type UseScrollProps = {
@@ -22,7 +29,9 @@ type UseScrollProps = {
   highlightClassName: string;
 };
 
-const DEBOUNCE_DELAY_MS = 80;
+function matchSearchString(value: string, search: string) {
+  return value.trim().toLowerCase().includes(search.trim().toLowerCase());
+}
 
 export function useHighlight(className: string) {
   const element = useRef<HTMLElement>();
@@ -39,7 +48,7 @@ export function useHighlight(className: string) {
           300,
           { trailing: false },
         );
-      }, DEBOUNCE_DELAY_MS);
+      }, 80);
 
       return (elementToHighlight?: HTMLElement | null) => {
         if (elementToHighlight) {
@@ -74,7 +83,7 @@ function createItemsMap(links: LinksGroup[]): ItemsMap {
   return itemsMap;
 }
 
-export function useSearch({ links = [] }: UseSearchProps) {
+export function useSearch({ links = [], searchSettings }: UseSearchProps) {
   const [searchValue, setSearchValue] = useState('');
 
   const itemsMap = useMemo(() => createItemsMap(links), [links]);
@@ -88,79 +97,115 @@ export function useSearch({ links = [] }: UseSearchProps) {
     [links],
   );
 
-  const filteredLinks = useMemo(() => {
-    let fuseSearchResults = linksFuse.search(searchValue);
+  const filterFuzzy = useCallback(
+    (searchValue: string, links: LinksGroup[]) => {
+      let fuseSearchResults = linksFuse.search(searchValue);
 
-    if (fuseSearchResults.length < 1) {
-      const fixedLayoutValue = toggleLayout(searchValue);
-      fuseSearchResults = linksFuse.search(fixedLayoutValue);
-    }
-
-    return fuseSearchResults.reduce((accResult, fuseResult) => {
-      if (!fuseResult.matches) {
-        return accResult;
+      if (fuseSearchResults.length < 1) {
+        const fixedLayoutValue = toggleLayout(searchValue);
+        fuseSearchResults = linksFuse.search(fixedLayoutValue);
       }
 
-      const isMatchByGroup = fuseResult.matches.find(match => match.key === SearchGroupsAccessor.GroupLabelText);
-      if (isMatchByGroup) {
-        accResult.push(fuseResult.item);
-        return accResult;
-      }
-
-      const group = fuseResult.item;
-
-      const originalGroupIndex = fuseResult.refIndex;
-      const itemsInnerMap: Record<string, InnerLink> = {};
-      const items: InnerLink[] = [];
-
-      fuseResult.matches.forEach(match => {
-        if (match.refIndex === undefined) {
-          return;
+      return fuseSearchResults.reduce((accResult, fuseResult) => {
+        if (!fuseResult.matches) {
+          return accResult;
         }
 
-        switch (match.key) {
-          case SearchGroupsAccessor.ItemLabelText: {
-            const item = links[originalGroupIndex].items[match.refIndex];
-            if (item && !itemsInnerMap[item.id]) {
-              itemsInnerMap[item.id] = item;
-              items.push(item);
-            }
-            break;
+        const isMatchByGroup = fuseResult.matches.find(match => match.key === SearchGroupsAccessor.GroupLabelText);
+        if (isMatchByGroup) {
+          accResult.push(fuseResult.item);
+          return accResult;
+        }
+
+        const group = fuseResult.item;
+
+        const originalGroupIndex = fuseResult.refIndex;
+        const itemsInnerMap: Record<string, InnerLink> = {};
+        const items: InnerLink[] = [];
+
+        fuseResult.matches.forEach(match => {
+          if (match.refIndex === undefined) {
+            return;
           }
 
-          case SearchGroupsAccessor.ItemAliases: {
-            if (!match.value) {
+          switch (match.key) {
+            case SearchGroupsAccessor.ItemLabelText: {
+              const item = links[originalGroupIndex].items[match.refIndex];
+              if (item && !itemsInnerMap[item.id]) {
+                itemsInnerMap[item.id] = item;
+                items.push(item);
+              }
               break;
             }
 
-            const groupId = fuseResult.item.id;
-            const alias = match.value;
-            const key = prepareItemAccessorKey(groupId, alias);
+            case SearchGroupsAccessor.ItemAliases: {
+              if (!match.value) {
+                break;
+              }
 
-            const item = itemsMap[key];
-            if (item && !itemsInnerMap[item.id]) {
-              itemsInnerMap[item.id] = item;
-              items.push(item);
+              const groupId = fuseResult.item.id;
+              const alias = match.value;
+              const key = prepareItemAccessorKey(groupId, alias);
+
+              const item = itemsMap[key];
+              if (item && !itemsInnerMap[item.id]) {
+                itemsInnerMap[item.id] = item;
+                items.push(item);
+              }
+              break;
             }
-            break;
+
+            case SearchGroupsAccessor.GroupLabelText:
+            default:
+              return;
           }
-
-          case SearchGroupsAccessor.GroupLabelText:
-          default:
-            return;
-        }
-      });
-
-      if (items.length > 0) {
-        accResult.push({
-          ...group,
-          items,
         });
+
+        if (items.length > 0) {
+          accResult.push({
+            ...group,
+            items,
+          });
+        }
+
+        return accResult;
+      }, [] as LinksGroup[]);
+    },
+    [itemsMap, linksFuse],
+  );
+
+  const filterPrecise = useCallback((searchValue: string, links: LinksGroup[]) => {
+    if (!searchValue || links.length < 1) {
+      return links;
+    }
+
+    return links.reduce((result, group) => {
+      if (group.label && matchSearchString(group.label.text, searchValue)) {
+        result.push(group);
+        return result;
       }
 
-      return accResult;
+      const items = group.items.filter(item => matchSearchString(item.label, searchValue));
+
+      if (items.length > 0) {
+        result.push({ ...group, items });
+        return result;
+      }
+
+      return result;
     }, [] as LinksGroup[]);
-  }, [itemsMap, links, linksFuse, searchValue]);
+  }, []);
+
+  const filteredLinks = useMemo(() => {
+    switch (searchSettings.precision) {
+      case 'fuzzy':
+        return filterFuzzy(searchValue, links);
+
+      case 'precise':
+      default:
+        return filterPrecise(searchValue, links);
+    }
+  }, [filterFuzzy, filterPrecise, links, searchSettings.precision, searchValue]);
 
   return {
     searchValue,
@@ -250,10 +295,19 @@ export const useWithFavorites = ({ links, favorites }: Pick<DrawerMenuProps, 'li
   return useMemo(() => (links ? [...favoriteItems, ...links] : undefined), [favoriteItems, links]);
 };
 
+const debouncedSaveSearchSettings = debounce(saveSearchSettingsToLocalStorage, 500);
+
 export function useLinks({ links, favorites }: Pick<DrawerMenuProps, 'links' | 'favorites'>) {
+  const [searchSettings, setSearchSettings] = useState<SearchSettings>(() => getSearchSettingsFromLocalStorage()); // () => JSON.parse(lsSearchSettings)
+  const [areSearchSettingsVisible, setAreSearchSettingsVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    debouncedSaveSearchSettings(searchSettings);
+  }, [searchSettings]);
+
   const visibleLinks = useMemo(() => filterHiddenLinks(links), [links]);
   const visibleLinksWithFavorites = useWithFavorites({ links: visibleLinks, favorites });
-  const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks });
+  const { searchValue, setSearchValue, filteredLinks } = useSearch({ links: visibleLinks, searchSettings });
 
   const shownLinks = searchValue.length > 0 ? filteredLinks : visibleLinksWithFavorites;
 
@@ -262,5 +316,9 @@ export function useLinks({ links, favorites }: Pick<DrawerMenuProps, 'links' | '
     setSearchValue,
     rightSectionLinks: shownLinks,
     leftSectionLinks: visibleLinksWithFavorites,
+    searchSettings,
+    setSearchSettings,
+    areSearchSettingsVisible,
+    setAreSearchSettingsVisible,
   };
 }

@@ -46,8 +46,6 @@ div.trigger {
   }
 }
 
-$vPadding: calc(#{ste.$dimension-1m} + #{ste.$size-button-m});
-
 .searchWrap {
   position: relative;
   display: flex;
@@ -78,8 +76,8 @@ $vPadding: calc(#{ste.$dimension-1m} + #{ste.$size-button-m});
 
   &[data-transition-status='entering'],
   &[data-transition-status='entered'] {
-    max-width: calc(100% - #{$vPadding});
-    right: $vPadding;
+    max-width: 100%;
+    right: 0;
     width: 100%;
     opacity: 1;
     transition-duration: calc(var(--sc-header-animation-exit) * 1ms);
@@ -91,4 +89,12 @@ $vPadding: calc(#{ste.$dimension-1m} + #{ste.$size-button-m});
   &[data-appearance='primary'] {
     background-color: ste.$sys-neutral-background2-level;
   }
+
+  &[data-search-active] {
+    visibility: hidden;
+  }
+}
+
+.searchSettingsMobileOptions {
+  padding: ste.$dimension-2m 0;
 }

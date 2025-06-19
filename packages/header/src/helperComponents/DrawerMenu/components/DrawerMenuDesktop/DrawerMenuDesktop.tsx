@@ -20,6 +20,8 @@ import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
 import { ProductSelectTrigger } from '../ProductSelectTrigger';
+import { SearchSettingsButton } from '../SearchSettingsButton';
+import { SearchSettingsChips } from '../SearchSettingsChips';
 import styles from './styles.module.scss';
 
 /**
@@ -46,7 +48,16 @@ export function DrawerMenuDesktop({
 }: DrawerMenuProps) {
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
-  const { searchValue, setSearchValue, rightSectionLinks, leftSectionLinks } = useLinks({ links, favorites });
+  const {
+    searchValue,
+    setSearchValue,
+    rightSectionLinks,
+    leftSectionLinks,
+    searchSettings,
+    setSearchSettings,
+    areSearchSettingsVisible,
+    setAreSearchSettingsVisible,
+  } = useLinks({ links, favorites });
 
   const { cardsRef, scrollRef, searchPanelRef, handleLinkClick } = useLinksScrollToSelected({
     links: leftSectionLinks,
@@ -211,7 +222,17 @@ export function DrawerMenuDesktop({
                         value={searchValue}
                         onChange={searchChangeHandler}
                         data-test-id='header__drawer-menu__search'
+                        className={styles.search}
+                        postfix={
+                          <SearchSettingsButton
+                            onClick={() => setAreSearchSettingsVisible(prevOpen => !prevOpen)}
+                            showHotSpot
+                          />
+                        }
                       />
+                      {areSearchSettingsVisible && (
+                        <SearchSettingsChips settings={searchSettings} onSettingsChange={setSearchSettings} />
+                      )}
                     </div>
                   )}
 

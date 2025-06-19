@@ -35,9 +35,15 @@ export const selectors = {
   drawerSearchClearButton: Selector(dataTestIdSelector('header__drawer-menu__search')).find(
     dataTestIdSelector('button-clear-value'),
   ),
+  drawerSearchSettingsButton: Selector(dataTestIdSelector('header__drawer-menu__search')).find(
+    dataTestIdSelector('header__drawer-menu__search-config-button'),
+  ),
+  drawerSearchSettingsFuzzyOption: Selector(dataTestIdSelector('header__drawer-menu__search-option-fuzzy')),
+  drawerSearchSettingsPreciseOption: Selector(dataTestIdSelector('header__drawer-menu__search-option-precise')),
   mobileSearchTriggerButton: Selector(dataTestIdSelector('header__drawer-menu__close-search-icon')),
   drawerMenuButton: Selector(dataTestIdSelector('header__drawer-menu-button')),
   drawerCardsList: Selector(dataTestIdSelector('header__drawer-menu__group-cards-list')),
+  drawerMenuNoItemsResults: Selector(dataTestIdSelector('header__drawer-menu__no-data')),
 };
 
 export function getSortOption(sortType: SortVariant) {

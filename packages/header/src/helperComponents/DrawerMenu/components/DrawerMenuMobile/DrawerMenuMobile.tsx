@@ -1,13 +1,13 @@
-import { MouseEvent, useCallback, useMemo, useState } from 'react';
+import { MouseEvent, useCallback, useEffect, useMemo, useState } from 'react';
 
 import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
-import { SearchSVG, VerticalMenuRightCloseSVG } from '@sbercloud/uikit-product-icons';
+import { SearchSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
 import { ButtonElevated, ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { DrawerCustom } from '@snack-uikit/drawer';
-import { List } from '@snack-uikit/list';
+import { ItemProps, List } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { Search } from '@snack-uikit/search';
 import { Typography } from '@snack-uikit/typography';
@@ -23,6 +23,9 @@ import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
 import { ProductSelectTrigger } from '../ProductSelectTrigger';
+import { SearchSettingsButton } from '../SearchSettingsButton';
+import { SearchSettings } from '../SearchSettingsChips';
+import { SEARCH_PRECISION } from '../SearchSettingsChips/constants';
 import { SEARCH_TRANSITION_TIMEOUT } from './constants';
 import { useLinksScrollToSelected, useSearchAnimation } from './hooks';
 import styles from './styles.module.scss';
@@ -60,7 +63,16 @@ export function DrawerMenuMobile({
   const { t } = useLocale('Header');
   const visibleFooterLinks = useMemo(() => footerLinks?.filter(filterHidden), [footerLinks]);
   const visibleProducts = useMemo(() => filterHiddenLinks(allProducts) ?? [], [allProducts]);
-  const { searchValue, setSearchValue, rightSectionLinks, leftSectionLinks } = useLinks({ links, favorites });
+  const {
+    searchValue,
+    setSearchValue,
+    rightSectionLinks,
+    leftSectionLinks,
+    searchSettings,
+    setSearchSettings,
+    areSearchSettingsVisible,
+    setAreSearchSettingsVisible,
+  } = useLinks({ links, favorites });
 
   const { cardsRef } = useLinksScrollToSelected({
     links: leftSectionLinks,
@@ -76,6 +88,20 @@ export function DrawerMenuMobile({
   );
 
   const [platformSelectOpen, setPlatformSelectOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      return;
+    }
+
+    return () => {
+      setSearchValue('');
+      setAreSearchSettingsVisible(false);
+      if (isSearchActive) {
+        toggleSearchActive();
+      }
+    };
+  }, [isSearchActive, open, setSearchValue, toggleSearchActive, setAreSearchSettingsVisible]);
 
   const togglePlatformSelect = () =>
     setPlatformSelectOpen(prev => {
@@ -126,6 +152,35 @@ export function DrawerMenuMobile({
       toggleProjectSelect();
     }
   };
+
+  const searchSettingsOptions: ItemProps[] = useMemo(() => {
+    const handlePrecisionChange = (precision: SearchSettings['precision']) => () => {
+      setSearchSettings(prevSettings => ({
+        ...prevSettings,
+        precision,
+      }));
+      setAreSearchSettingsVisible(false);
+    };
+
+    return [
+      {
+        content: {
+          option: t('searchSettingsFuzzyChipLabel'),
+        },
+        checked: searchSettings.precision === SEARCH_PRECISION.Fuzzy,
+        onClick: handlePrecisionChange(SEARCH_PRECISION.Fuzzy),
+        'data-test-id': 'header__drawer-menu__search-option-fuzzy',
+      },
+      {
+        content: {
+          option: t('searchSettingsPreciseChipLabel'),
+        },
+        checked: searchSettings.precision === SEARCH_PRECISION.Precise,
+        onClick: handlePrecisionChange(SEARCH_PRECISION.Precise),
+        'data-test-id': 'header__drawer-menu__search-option-precise',
+      },
+    ];
+  }, [searchSettings.precision, setAreSearchSettingsVisible, setSearchSettings, t]);
 
   return (
     <>
@@ -189,15 +244,17 @@ export function DrawerMenuMobile({
                     data-test-id='header__drawer-menu__search'
                     ref={searchRef}
                     tabIndex={searchInputTabIndex}
+                    postfix={<SearchSettingsButton onClick={() => setAreSearchSettingsVisible(true)} />}
                   />
                 </div>
 
                 <ButtonElevated
                   size='m'
                   className={styles.searchButton}
-                  icon={isSearchActive ? <VerticalMenuRightCloseSVG /> : <SearchSVG />}
+                  icon={<SearchSVG />}
                   onClick={toggleSearchActive}
                   data-test-id='header__drawer-menu__close-search-icon'
+                  data-search-active={isSearchActive || undefined}
                 />
               </div>
             )}
@@ -293,6 +350,16 @@ export function DrawerMenuMobile({
             onProductChange,
           })}
           size='l'
+        />
+      </MobileModalCustom>
+
+      <MobileModalCustom open={areSearchSettingsVisible} onClose={() => setAreSearchSettingsVisible(false)}>
+        <MobileModalCustom.Header title={t('searchSettingsMobileModalHeader')} />
+        <List
+          className={styles.searchSettingsMobileOptions}
+          items={searchSettingsOptions}
+          size='l'
+          selection={{ mode: 'single' }}
         />
       </MobileModalCustom>
 

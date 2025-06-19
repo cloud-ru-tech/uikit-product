@@ -149,5 +149,5 @@ test.page(
 });
 
 basic(getPage);
-searchTests(selectors.mobileSearchTriggerButton);
+searchTests({ openSearchSelector: selectors.mobileSearchTriggerButton, isMobile: true });
 sortTests(selectors.drawerMenuButton, getPage, selectors.drawerMenuSelectProject);
