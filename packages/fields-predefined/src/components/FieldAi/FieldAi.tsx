@@ -1,3 +1,4 @@
+import cn from 'classnames';
 import { forwardRef, KeyboardEventHandler, MouseEvent, useMemo, useState } from 'react';
 
 import { EyeClosedSVG, EyeSVG } from '@sbercloud/uikit-product-icons';
@@ -11,7 +12,7 @@ import { Typography } from '@snack-uikit/typography';
 
 import { FieldSubmitButton } from '../../helperComponents/FieldSubmitButton';
 import { TextAreaActionsFooter } from '../../helperComponents/TextAreaActionsFooter';
-import { WithPasswordTooltip } from './components/WithPasswordTooltip';
+import { WithPasswordValidation } from './components/WithPasswordValidation';
 import styles from './styles.module.scss';
 import { getValidationPassword } from './utils';
 
@@ -41,6 +42,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
       handleResetContextClick,
       layoutType,
       disabled,
+      className,
       ...props
     },
     ref,
@@ -75,9 +77,9 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
     };
 
     return (
-      <div className={styles.wrapper}>
-        <WithPasswordTooltip
-          showTooltip={isPasswordMode}
+      <div className={cn(styles.wrapper, className)}>
+        <WithPasswordValidation
+          showValidation={isPasswordMode}
           passwordValidation={passwordValidation}
           layoutType={layoutType}
         >
@@ -122,11 +124,14 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
               />
             }
           />
-        </WithPasswordTooltip>
+        </WithPasswordValidation>
+
         <div className={styles.footerText}>
-          <span className={styles.hintText} data-layout-type={layoutType}>
-            {t('FieldAi.hint.text')}
-          </span>
+          {!isPasswordMode && (
+            <span className={styles.hintText} data-layout-type={layoutType}>
+              {t('FieldAi.hint.text')}
+            </span>
+          )}
 
           {supportUrl && (
             <QuestionTooltip

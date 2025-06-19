@@ -3,14 +3,19 @@
 .checkItem {
   display: inline-flex;
   gap: 10px;
+
+  &[data-layout-type='mobile'],
+  &[data-layout-type='tablet'] {
+    gap: 8px;
+  }
 }
 
 .icon {
   flex-shrink: 0;
-  color: ste.$sys-neutral-decor-default;
+  color: ste.$sys-neutral-accent-default;
 
   &[data-checked='true'] {
-    color: ste.$sys-primary-decor-activated;
+    color: ste.$sys-primary-text-light;
   }
 }
 

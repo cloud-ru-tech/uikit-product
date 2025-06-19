@@ -1,0 +1,32 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.tooltipText {
+  display: flex;
+  flex-direction: column;
+}
+
+.validationList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.validationItemsContainer {
+  @include ste.composite-var(ste.$sans-body-m);
+  color: ste.$sys-neutral-text-main;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &[data-layout-type='mobile'],
+  &[data-layout-type='tablet'] {
+    gap: 8px;
+    @include ste.composite-var(ste.$sans-body-s);
+
+    .validationList {
+      gap: 2px;
+    }
+  }
+}
+

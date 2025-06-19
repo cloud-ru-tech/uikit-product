@@ -160,7 +160,7 @@ export const ru_RU: typeof en_GB = {
       secret: {
         placeholder: 'Введите пароль',
         passwordTooltip: {
-          title: 'Требования к паролю',
+          titleSuccess: 'Все требования к паролю соблюдены',
           onlyLatin: 'Только латинские буквы, цифры и допустимые спецсимволы',
           minLength: 'Минимальная длина — 8 символов',
           hasLetterCases: 'Минимум одна заглавная и одна строчная буква',

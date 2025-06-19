@@ -159,7 +159,7 @@ export const en_GB = {
       secret: {
         placeholder: 'Enter password',
         passwordTooltip: {
-          title: 'Password requirements',
+          titleSuccess: 'All password requirements are met',
           onlyLatin: 'Only Latin letters, numbers and allowed special characters',
           minLength: 'Minimum length — 8 characters',
           hasLetterCases: 'Minimum 1 uppercase and 1 lowercase letter',
