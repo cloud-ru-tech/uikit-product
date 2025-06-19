@@ -78,6 +78,7 @@ export type StoryProps = Omit<HeaderProps, 'layoutType'> & {
 
   projectsCatalogAmount: number;
   showProjectsLoading: boolean;
+  defaultProjectId?: string;
 };
 
 const EMPTY_ON_CLICK = () => {};
@@ -122,7 +123,7 @@ const PROJECT_PLATFORMS = [
   },
 ];
 
-const DEFAULT_PROJECT = {
+const DEFAULT_PROJECT: Project = {
   id: '1_1',
   name: 'Проект 1',
   actions: PROJECT_ACTIONS,
@@ -212,6 +213,21 @@ const PROJECTS: ItemsGroup<Project>[] = [
       lastVisitedAt: new Date().toString(),
       href: '/',
     })),
+  },
+  {
+    id: '5',
+    heading: 'Folder 5',
+    items: [
+      {
+        id: '5_1',
+        name: 'Проект 5 для центрирования скролла',
+        actions: PROJECT_ACTIONS,
+        platforms: PROJECT_PLATFORMS,
+        createdAt: new Date().toString(),
+        lastVisitedAt: new Date('2025-05-01').toString(),
+        href: '/',
+      },
+    ],
   },
 ];
 
@@ -307,6 +323,17 @@ function generateCards(amount: number, addUnread?: boolean) {
   }));
 }
 
+function getDefaultSelectedProject(defaultSelectedProjectId?: string): Project {
+  if (!defaultSelectedProjectId) {
+    return DEFAULT_PROJECT;
+  }
+
+  const selectedProject = PROJECTS.flatMap(group => group.items).find(
+    project => project.id === defaultSelectedProjectId,
+  );
+  return selectedProject || DEFAULT_PROJECT;
+}
+
 export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
   return function ({
     showSelect,
@@ -338,10 +365,13 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
 
     projectsCatalogAmount,
     showProjectsLoading,
+    defaultProjectId,
     ...args
   }: StoryProps) {
     const [organization, setOrganization] = useState((userMenu as DefaultUserMenuProps).selectedOrganization);
-    const [project, setProject] = useState(args.select?.selectedProject ?? DEFAULT_PROJECT);
+    const [project, setProject] = useState<Project | Omit<Project, 'href'>>(() =>
+      getDefaultSelectedProject(defaultProjectId),
+    );
     const [product, setProduct] = useState(args.drawerMenu.selectedProduct);
     const [selectedLink, setSelectedLink] = useState(args.drawerMenu.selectedLink);
 
@@ -697,6 +727,7 @@ export const ARGS: StoryProps = {
       ],
     },
   },
+  defaultProjectId: DEFAULT_PROJECT.id,
 
   showPagePath: true,
   pagePath: [
@@ -1283,7 +1314,7 @@ export const ARGS: StoryProps = {
         ],
       },
       {
-        label: { text: 'ML/AI инструменты' },
+        label: { text: 'Управление' },
         id: 'svpManagement',
         items: [
           {
@@ -1390,6 +1421,11 @@ export const ARG_TYPES: Partial<ArgTypes<StoryProps>> = {
 
   showSelect: { name: '[Story]: show header select', type: 'boolean' },
   select: { table: { disable: true } },
+  defaultProjectId: {
+    name: '[Story]: Default project id',
+    type: 'string',
+    if: { arg: 'showSelect', eq: true },
+  },
 
   projectsCatalogAmount: {
     name: '[Story]: projects catalogs amount',

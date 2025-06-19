@@ -199,6 +199,36 @@ test('should search & select project', async t => {
   await t.expect(selectProjectValue.textContent).eql(expectedSelectedProject);
 });
 
+test.page(
+  getPage({
+    defaultProjectId: '5_1',
+  }),
+)('should automatically scroll down to selected project', async t => {
+  const { select, selectProjectValue, searchInput } = selectors;
+
+  await t.click(select);
+  const option = getSelectProjectOption('5_1');
+  const expectedSelectedProject = await option.find(dataTestIdSelector('full-text')).textContent;
+
+  await verifySelectedProject({ t, options: ['4_9997', '4_9998', '4_9999', '5_1'], selected: '5_1' });
+  await t.expect(selectProjectValue.textContent).eql(expectedSelectedProject);
+
+  await t.typeText(searchInput, '4');
+  await verifyFilteredProject({
+    t,
+    presentOptions: ['4_9995', '4_9996', '4_9997', '4_9998', '4_9999'],
+    hiddenOptions: ['5_1'],
+  });
+
+  await t.typeText(searchInput, 'Проект 5', { replace: true });
+  await verifyFilteredProject({
+    t,
+    presentOptions: ['3_1', '5_1'],
+    hiddenOptions: ['4_9995', '4_9996', '4_9997', '4_9998', '4_9999'],
+  });
+  await verifySelectedProject({ t, options: ['3_1', '5_1'], selected: '5_1' });
+});
+
 test('should show actions on click options', async t => {
   const { select } = selectors;
 
