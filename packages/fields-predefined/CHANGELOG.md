@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.2 (2025-06-19)
+
+
+### Bug Fixes
+
+* **FF-6795:** change hint text size for touch devices ([6c98d87](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6c98d87caaabd02acdd0ba826d550bfdd9e3995b))
+
+
+
+
+
 ## 0.8.1 (2025-06-18)
 
 
