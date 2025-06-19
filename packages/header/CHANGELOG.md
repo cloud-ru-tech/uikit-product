@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.7.0 (2025-06-19)
+
+
+### Features
+
+* **FF-6790:** native anchors in header lists ([680dfb5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/680dfb5411fe8f40c24ef0405a4c6530557de587))
+
+
+
+
+
 # 4.6.0 (2025-06-18)
 
 
