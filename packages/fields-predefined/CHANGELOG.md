@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.4 (2025-06-20)
+
+
+### Bug Fixes
+
+* **ONB-3885:** update package versions and props edit ([ed6471e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ed6471e108401fc1aa09ac2eee851707ab0ae340))
+
+
+
+
+
 ## 0.8.3 (2025-06-20)
 
 ### Only dependencies have been changed

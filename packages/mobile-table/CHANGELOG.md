@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.3 (2025-06-20)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-chips@0.8.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-dropdown@0.7.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-dropdown/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-toolbar@0.2.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-toolbar/CHANGELOG.md)
+
+
+
+
+
 ## 0.7.2 (2025-06-20)
 
 ### Only dependencies have been changed
