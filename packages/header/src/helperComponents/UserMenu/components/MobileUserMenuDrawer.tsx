@@ -20,6 +20,7 @@ export function MobileUserMenuDrawer({ isOpen, setIsOpen, items, selection, nest
       position='right'
       push={{ distance: 8 }}
       nestedDrawer={nestedDrawer}
+      data-test-id='header__user-menu-mobile'
     >
       <DrawerCustom.Header title={t('user')} className={styles.nestedHeader} />
 
