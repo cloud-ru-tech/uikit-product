@@ -1,87 +1,5 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
 
-.drawer {
-  & [data-test-id='drawer__close-button'] {
-    display: none;
-  }
-}
-
-.drawerBody {
-  flex: 1 1 auto;
-  box-sizing: border-box;
-  min-height: styles-tokens-element.$dimension-2m;
-  color: styles-tokens-element.$sys-neutral-text-main;
-  /* stylelint-disable-next-line declaration-no-important */
-  background-color: styles-tokens-element.$sys-neutral-background !important;
-  padding-left: calc(#{styles-tokens-element.$dimension-4m} - #{styles-tokens-element.$dimension-050m});
-}
-
-.menu {
-  display: flex;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-.leftWrapper {
-  display: flex;
-  gap: styles-tokens-element.$dimension-2m;
-  padding: styles-tokens-element.$dimension-4m 0;
-}
-
-.left {
-  display: flex;
-  flex-direction: column;
-}
-
-.leftTop {
-  display: flex;
-  flex-direction: column;
-  gap: styles-tokens-element.$dimension-1m;
-  flex-grow: 1;
-}
-
-.footerLinks {
-  display: flex;
-  flex-direction: column;
-  padding-left: styles-tokens-element.$dimension-050m;
-}
-
-.footerLinksDivider {
-  padding: styles-tokens-element.$dimension-1m 0;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: styles-tokens-element.$dimension-2m;
-  padding-left: styles-tokens-element.$dimension-050m;
-  padding-top: styles-tokens-element.$dimension-1m;
-}
-
-.right {
-  display: flex;
-  flex-direction: column;
-  gap: styles-tokens-element.$dimension-2m;
-  flex-grow: 1;
-  min-width: 0;
-}
-
-.rightContent {
-  display: flex;
-  flex-direction: column;
-  gap: styles-tokens-element.$dimension-2m;
-  padding: styles-tokens-element.$dimension-4m styles-tokens-element.$dimension-4m styles-tokens-element.$dimension-4m styles-tokens-element.$dimension-2m;
-}
-
-.noData {
-  @include styles-tokens-element.composite-var(styles-tokens-element.$sans-body-l);
-
-  color: styles-tokens-element.$sys-neutral-text-light;
-  display: flex;
-  justify-content: center;
-  padding: styles-tokens-element.$dimension-2m;
-}
-
 .select {
   display: flex;
   box-sizing: border-box;
@@ -93,9 +11,11 @@
   width: 224px;
   height: styles-tokens-element.$dimension-7m;
   border-radius: styles-tokens-element.$dimension-050m;
+  flex-shrink: 0;
 
   &[data-active] {
     cursor: pointer;
+
     &:hover {
       box-shadow: styles-tokens-element.$box-shadow-elevation-level2;
     }

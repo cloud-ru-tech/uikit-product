@@ -1,9 +1,7 @@
 import { MouseEvent, useCallback, useMemo, useRef, useState } from 'react';
 
 import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
-import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
-import { Avatar } from '@snack-uikit/avatar';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Divider } from '@snack-uikit/divider';
 import { DrawerCustom } from '@snack-uikit/drawer';
@@ -12,7 +10,6 @@ import { Link } from '@snack-uikit/link';
 import { Droplist } from '@snack-uikit/list';
 import { Scroll } from '@snack-uikit/scroll';
 import { Search } from '@snack-uikit/search';
-import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { getSelectProductListProps } from '../../../../helpers';
 import { extractAppNameFromId } from '../../../../utils';
@@ -22,6 +19,7 @@ import { useLinks, useLinksScrollToSelected } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
 import { GroupCard } from '../GroupCard';
+import { ProductSelectTrigger } from '../ProductSelectTrigger';
 import styles from './styles.module.scss';
 
 /**
@@ -142,44 +140,13 @@ export function DrawerMenuDesktop({
                     widthStrategy='gte'
                     triggerElemRef={triggerRef}
                   >
-                    <div
+                    <ProductSelectTrigger
                       ref={triggerRef}
-                      className={styles.select}
-                      tabIndex={hasChoice ? 0 : -1}
-                      role={'menu'}
-                      data-open={isOpen || undefined}
-                      data-active={hasChoice || undefined}
-                      data-test-id='header__drawer-menu__select'
-                    >
-                      <div className={styles.logo}>
-                        {selectedProduct.logo ?? (
-                          <Avatar
-                            size='xs'
-                            name={selectedProduct.name}
-                            showTwoSymbols
-                            shape='square'
-                            appearance='neutral'
-                          />
-                        )}
-                      </div>
-
-                      <div className={styles.selectedSection}>
-                        <div
-                          className={styles.selectedHeading}
-                          data-test-id='header__drawer-menu__select__product-category'
-                        >
-                          {selectedProduct.category}
-                        </div>
-
-                        <div className={styles.selectedOption} data-test-id='header__drawer-menu__select__product-name'>
-                          <TruncateString text={selectedProduct.name} hideTooltip />
-                        </div>
-                      </div>
-
-                      {hasChoice && (
-                        <div className={styles.chevron}>{isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}</div>
-                      )}
-                    </div>
+                      isOpen={isOpen}
+                      selectedProduct={selectedProduct}
+                      hasChoice={hasChoice}
+                      dataTestIdPostfix='platform'
+                    />
                   </Droplist>
                 )}
 

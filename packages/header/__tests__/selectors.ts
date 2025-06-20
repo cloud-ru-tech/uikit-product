@@ -28,8 +28,8 @@ export const selectors = {
   selectProjectValue: Selector(dataTestIdSelector('header__select-project__value')).find(
     dataTestIdSelector(`full-text`),
   ),
-  headerDrawerMenuSelect: Selector(dataTestIdSelector('header__drawer-menu__select')),
-  selectPlatformValue: Selector(dataTestIdSelector('header__drawer-menu__select__product-name')),
+  headerDrawerMenuSelect: Selector(dataTestIdSelector('header__drawer-menu__select-platform')),
+  selectPlatformValue: Selector(dataTestIdSelector('header__drawer-menu__select-platform__name')),
   searchInput: Selector(dataTestIdSelector('header__select-project__search-input')),
   drawerSearchInput: Selector(dataTestIdSelector('header__drawer-menu__search')),
   drawerSearchClearButton: Selector(dataTestIdSelector('header__drawer-menu__search')).find(
