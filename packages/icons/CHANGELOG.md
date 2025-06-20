@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 12.0.0 (2025-06-20)
+
+
+### Features
+
+* **PDS-2397:** add new icons ([2d892df](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2d892df3b86e013201b00d7b8582f511fb73c953))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2397:** remame icons brige -> bridge, mindmigration -> migration ([f589c57](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f589c5707b83337f3c25dbf8c276f9cba98a7ad4))
+
+
+
+
 # 11.9.0 (2025-06-06)
 
 
