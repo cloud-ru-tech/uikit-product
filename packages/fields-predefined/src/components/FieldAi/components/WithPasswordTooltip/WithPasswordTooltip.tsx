@@ -28,11 +28,13 @@ export function WithPasswordTooltip({
       <AdaptiveTooltip
         placement='left-end'
         layoutType={layoutType}
+        offset={8}
         tip={
           <div className={styles.validationItemsContainer}>
             <Typography.SansTitleS>{t('FieldAi.secret.passwordTooltip.title')}</Typography.SansTitleS>
 
             <CheckItem checked={passwordValidation.minLength} label={t('FieldAi.secret.passwordTooltip.minLength')} />
+            <CheckItem checked={passwordValidation.onlyLatin} label={t('FieldAi.secret.passwordTooltip.onlyLatin')} />
             <CheckItem
               checked={passwordValidation.hasCapitalLetter}
               label={t('FieldAi.secret.passwordTooltip.hasCapitalLetter')}

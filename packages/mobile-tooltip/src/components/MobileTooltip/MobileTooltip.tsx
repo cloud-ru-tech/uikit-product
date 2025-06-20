@@ -16,6 +16,7 @@ export type MobileTooltipProps = WithSupportProps<
     PopoverPrivateProps,
     | 'className'
     | 'triggerClassName'
+    | 'offset'
     | 'open'
     | 'onOpenChange'
     | 'hoverDelayOpen'

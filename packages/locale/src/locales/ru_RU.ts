@@ -161,6 +161,7 @@ export const ru_RU: typeof en_GB = {
         placeholder: 'Введите пароль',
         passwordTooltip: {
           title: 'Требования к паролю',
+          onlyLatin: 'только латинские буквы',
           minLength: 'не менее 8 символов',
           hasCapitalLetter: 'минимум 1 заглавная буква',
           hasLowerCaseLetter: 'минимум 1 строчная буква',

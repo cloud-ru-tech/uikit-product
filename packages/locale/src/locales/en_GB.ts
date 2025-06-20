@@ -160,6 +160,7 @@ export const en_GB = {
         placeholder: 'Enter password',
         passwordTooltip: {
           title: 'Password requirements',
+          onlyLatin: 'only Latin letters',
           minLength: 'at least 8 characters',
           hasCapitalLetter: 'at least 1 uppercase letter',
           hasLowerCaseLetter: 'at least 1 lowercase letter',

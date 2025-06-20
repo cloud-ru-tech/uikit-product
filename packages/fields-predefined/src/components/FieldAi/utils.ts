@@ -1,4 +1,5 @@
 export type ValidationPassword = {
+  onlyLatin: boolean;
   minLength: boolean;
   hasCapitalLetter: boolean;
   hasLowerCaseLetter: boolean;
@@ -13,8 +14,10 @@ const CAPITAL_REGEX = /\p{Lu}/u;
 const LOWER_REGEX = /\p{Ll}/u;
 const SYMBOLS_REGEX = /[\p{P}\p{S}]/u;
 const NO_SPACES = /^\S*$/u;
+const LATIN_REGEX = /^[a-zA-Z0-9\p{P}\p{S}]+$/u;
 
 export const getValidationPassword = (password: string = ''): ValidationPassword => ({
+  onlyLatin: LATIN_REGEX.test(password),
   minLength: password.length >= MIN_PASSWORD_LENGTH,
   hasCapitalLetter: CAPITAL_REGEX.test(password),
   hasLowerCaseLetter: LOWER_REGEX.test(password),
