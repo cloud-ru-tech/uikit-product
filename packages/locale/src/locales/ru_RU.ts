@@ -199,6 +199,12 @@ export const ru_RU: typeof en_GB = {
     user: 'Пользователь',
     navigation: 'Навигация',
     searchByServices: 'Поиск по сервисам',
+    searchSettingsFuzzyChipLabel: 'С синонимами',
+    searchSettingsPreciseChipLabel: 'Точный',
+    searchSettingsMobileModalHeader: 'Настройки поиска',
+    searchSettingsPopoverHeader: 'Поиск стал умнее',
+    searchSettingsPopoverDescription:
+      'Теперь он понимает даже не совсем точные запросы и быстрее находит нужное. Если привыкли к старому поиску его можно включить в настройках поиска.',
     noData: 'Нет данных',
     notifications: 'Уведомления',
     notificationsAll: 'Все',

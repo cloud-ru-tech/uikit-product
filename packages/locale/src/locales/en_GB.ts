@@ -198,6 +198,12 @@ export const en_GB = {
     user: 'User',
     navigation: 'Navigation',
     searchByServices: 'Search by service',
+    searchSettingsFuzzyChipLabel: 'Fuzzy',
+    searchSettingsPreciseChipLabel: 'Precise',
+    searchSettingsMobileModalHeader: 'Search Settings',
+    searchSettingsPopoverHeader: 'Search has become smarter',
+    searchSettingsPopoverDescription:
+      'Now it understands even not very precise queries and finds what you need faster. If you are used to the old search, you can enable it in the search settings.',
     noData: 'No data',
     notifications: 'Notifications',
     notificationsAll: 'All',
