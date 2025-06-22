@@ -3,6 +3,7 @@ import { ReactNode } from 'react';
 import { AdaptiveTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 
+import { isTouchDevice } from '../../../../helpers';
 import { ValidationPassword } from '../../utils';
 import { PasswordValidation } from '../PasswordValidation';
 import styles from './styles.module.scss';
@@ -19,7 +20,7 @@ export function WithPasswordValidation({
   layoutType,
   children,
 }: WithPasswordTooltipProps) {
-  if (['mobile', 'tablet'].includes(layoutType)) {
+  if (isTouchDevice(layoutType)) {
     if (showValidation) {
       return (
         <div className={styles.validationContainer}>

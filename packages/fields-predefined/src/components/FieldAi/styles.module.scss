@@ -1,4 +1,4 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields' as ste;
 
 .wrapper {
   display: flex;
@@ -14,24 +14,20 @@
   }
 }
 
-.footerText {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  gap: ste.$dimension-050m;
+.mobileSubmitButton {
+  /* stylelint-disable-next-line declaration-no-important */
+  position: relative !important;
+  /* stylelint-disable-next-line declaration-no-important */
+  flex-shrink: 0 !important;
 
-  color: ste.$sys-neutral-text-light;
-}
-
-.tooltip {
-  max-width: 258px;
-}
-
-.hintText {
-  @include ste.composite-var(ste.$sans-body-s);
-
-  &[data-layout-type='tablet'],
-  &[data-layout-type='mobile'] {
-    @include ste.composite-var(ste.$light-label-s);
+  &:after {
+    content: '';
+    display: flex;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

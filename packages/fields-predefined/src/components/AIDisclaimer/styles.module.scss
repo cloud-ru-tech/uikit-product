@@ -1,0 +1,23 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields' as ste;
+
+.disclaimer {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: ste.$dimension-050m;
+
+  color: ste.$sys-neutral-text-light;
+}
+
+.tooltip {
+  max-width: 258px;
+}
+
+.hintText {
+  @include ste.composite-var(ste.$sans-body-s);
+
+  &[data-layout-type='tablet'],
+  &[data-layout-type='mobile'] {
+    @include ste.composite-var(ste.$light-label-s);
+  }
+}

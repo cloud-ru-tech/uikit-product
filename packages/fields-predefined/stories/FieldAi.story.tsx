@@ -3,10 +3,15 @@ import { Meta, StoryObj } from '@storybook/react';
 import cn from 'classnames';
 import { MouseEvent, useEffect, useState } from 'react';
 
+import { MobileDrawerCustom } from '@sbercloud/uikit-product-mobile-drawer';
+import { ButtonFilled } from '@snack-uikit/button';
+import { Divider } from '@snack-uikit/divider';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { FieldAi, FieldAiProps } from '../src';
+import { isTouchDevice } from '../src/helpers';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -19,8 +24,8 @@ type StoryProps = FieldAiProps & {
   showResetContextButton?: boolean;
 };
 
-const handleSubmit = (value: string) => window.alert(`Submitted: ${value}`);
-const handleSupportUrlClick = (e: MouseEvent) => {
+const onSubmit = (value: string) => window.alert(`Submitted: ${value}`);
+const onSupportLinkClick = (e: MouseEvent) => {
   e.preventDefault();
   window.alert(`Support URL clicked!`);
 };
@@ -28,20 +33,71 @@ const handleResetContextClick = () => window.alert('Context has been reset succe
 
 const Template = ({ value: valueProp, showResetContextButton, ...args }: StoryProps) => {
   const [value, setValue] = useState(valueProp);
+  const [aiChatOpened, setAiChatOpened] = useState(false);
 
   useEffect(() => {
-    setValue(value);
-  }, [value]);
+    setValue(valueProp);
+  }, [valueProp]);
+
+  if (isTouchDevice(args.layoutType)) {
+    return (
+      <>
+        <ButtonFilled label='Open' onClick={() => setAiChatOpened(true)}></ButtonFilled>
+        <MobileDrawerCustom
+          open={aiChatOpened}
+          onClose={() => setAiChatOpened(false)}
+          size='100%'
+          position='bottom'
+          hasBorderRadius={true}
+          swipeEnabled={true}
+          closeButtonEnabled={false}
+        >
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'flex-end',
+              boxSizing: 'border-box',
+            }}
+          >
+            <Divider />
+
+            <div
+              style={{
+                padding: '8px 16px',
+                paddingRight: '6px',
+              }}
+            >
+              <FieldAi
+                {...args}
+                value={value}
+                onChange={setValue}
+                onSubmit={onSubmit}
+                onSupportLinkClick={onSupportLinkClick}
+                onResetContextClick={showResetContextButton ? handleResetContextClick : undefined}
+              />
+            </div>
+          </div>
+        </MobileDrawerCustom>
+      </>
+    );
+  }
 
   return (
-    <div className={cn(styles.wrapper, styles.fieldAiWrapper)}>
+    <div
+      className={cn(styles.wrapper, styles.fieldAiWrapper, {
+        [styles.mobileWrapper]: isTouchDevice(args.layoutType),
+      })}
+    >
       <FieldAi
         {...args}
         value={value}
         onChange={setValue}
-        handleSubmit={handleSubmit}
-        handleSupportUrlClick={handleSupportUrlClick}
-        handleResetContextClick={showResetContextButton ? handleResetContextClick : undefined}
+        onSubmit={onSubmit}
+        onSupportLinkClick={onSupportLinkClick}
+        onResetContextClick={showResetContextButton ? handleResetContextClick : undefined}
       />
     </div>
   );

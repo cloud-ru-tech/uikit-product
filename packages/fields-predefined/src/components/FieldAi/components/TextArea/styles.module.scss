@@ -1,0 +1,35 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+
+.textarea {
+  resize: none;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: ste.simple-var(ste.$sys-neutral-text-main);
+
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  outline: 0;
+
+  &::placeholder {
+    color: ste.simple-var(ste.$sys-neutral-text-disabled);
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    max-width: 0;
+  }
+
+  &:read-only {
+    color: ste.simple-var(ste.$sys-neutral-text-support);
+  }
+
+  &[disabled] {
+    color: ste.simple-var(ste.$sys-neutral-text-disabled);
+  }
+}

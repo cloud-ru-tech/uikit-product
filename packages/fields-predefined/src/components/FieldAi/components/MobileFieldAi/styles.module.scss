@@ -1,0 +1,81 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-fields' as ste;
+
+$padding-right: (
+  's': ste.$fields-buttons-s,
+  'm': ste.$fields-buttons-m,
+  'l': ste.$fields-buttons-m,
+);
+$scroll-bar-heights: (
+  's': ste.$dimension-050m,
+  'm': calc(#{ste.$dimension-025m} + #{ste.$dimension-050m}),
+  'l': ste.$dimension-1m,
+);
+$sizes: 's', 'm', 'l';
+
+.scrollContainer {
+  border-radius: 4px;
+  padding: 6px 0;
+
+  [data-overlayscrollbars-contents] {
+    display: flex;
+  }
+}
+
+.textarea {
+  overflow: hidden;
+}
+
+.mobileInputWrapper {
+  --max-rows: 1000;
+  --min-rows: 3;
+
+  display: flex;
+  position: relative;
+  gap: 8px;
+
+  .scrollContainer {
+    min-height: calc(var(--min-rows) * var(--row-height) + var(--horizontal-scroll-bar-height));
+    max-height: calc(var(--max-rows) * var(--row-height) + var(--horizontal-scroll-bar-height));
+  }
+
+  @each $size in $sizes {
+    &[data-size='#{$size}'] {
+      --row-height: #{ste.simple-var(ste.$theme-variables, 'sans', 'body', $size, 'line-height')};
+      --horizontal-scroll-bar-height: #{ste.simple-var($scroll-bar-heights, $size)};
+
+      .textarea {
+        @include ste.composite-var(ste.$theme-variables, 'sans', 'body', $size);
+
+        padding-right: calc(42px + ste.simple-var(ste.$fields-scroll-bar-width, 'width'));
+      }
+    }
+  }
+}
+
+.mobileSubmitButtonWrapper {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-shrink: 0;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+}
+
+.mobileSubmitButton {
+  /* stylelint-disable-next-line declaration-no-important */
+  position: relative !important;
+  /* stylelint-disable-next-line declaration-no-important */
+  flex-shrink: 0 !important;
+
+  &:after {
+    content: '';
+    display: flex;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -3,6 +3,7 @@ import { useMemo } from 'react';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 
+import { isTouchDevice as isTouchDeviceHelper } from '../../../../helpers';
 import { ValidationPassword } from '../../utils';
 import { CheckItem } from '../CheckItem';
 import styles from './styles.module.scss';
@@ -15,7 +16,7 @@ export function PasswordValidation({ passwordValidation, layoutType }: WithPassw
   const { t } = useLocale('FieldsPredefined');
 
   const allCriteriaMet = useMemo(() => Object.values(passwordValidation).every(item => item), [passwordValidation]);
-  const isTouchDevice = ['mobile', 'tablet'].includes(layoutType);
+  const isTouchDevice = isTouchDeviceHelper(layoutType);
 
   if (isTouchDevice) {
     if (allCriteriaMet) {

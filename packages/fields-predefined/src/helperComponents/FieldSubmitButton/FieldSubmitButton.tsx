@@ -7,18 +7,36 @@ export type FieldSubmitButtonProps = {
   active: boolean;
   handleClick(): void;
   size?: 'xs' | 's';
+  className?: string;
+  fullWidth?: boolean;
+  showTooltip?: boolean;
 };
 
-export function FieldSubmitButton({ active, handleClick, size = 'xs' }: FieldSubmitButtonProps) {
+export function FieldSubmitButton({
+  active,
+  handleClick,
+  size = 'xs',
+  className,
+  fullWidth,
+  showTooltip = true,
+}: FieldSubmitButtonProps) {
   const { t } = useLocale('FieldsPredefined');
 
   if (active) {
     return (
-      <Tooltip tip={t('FieldAi.submit.tooltip')} hoverDelayOpen={600}>
-        <ButtonFilled icon={<ArrowUpSVG />} size={size} appearance='primary' type='submit' onClick={handleClick} />
+      <Tooltip tip={t('FieldAi.submit.tooltip')} hoverDelayOpen={600} open={showTooltip ? undefined : false}>
+        <ButtonFilled
+          fullWidth={fullWidth}
+          icon={<ArrowUpSVG />}
+          size={size}
+          appearance='primary'
+          type='submit'
+          onClick={handleClick}
+          className={className}
+        />
       </Tooltip>
     );
   }
 
-  return <ButtonFilled icon={<ArrowUpSVG />} size={size} disabled />;
+  return <ButtonFilled icon={<ArrowUpSVG />} size={size} disabled className={className} fullWidth={fullWidth} />;
 }
