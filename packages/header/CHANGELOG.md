@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.8.0 (2025-06-23)
+
+
+### Features
+
+* **FF-6844:** header search filter precision setting ([89a5700](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/89a5700b5d42011c68207496ad4ea4584a7d73e8))
+
+
+
+
+
 ## 4.7.5 (2025-06-23)
 
 

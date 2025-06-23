@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-locale",
   "title": "Locale",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "sideEffects": [
     "*.css",
     "*.woff",

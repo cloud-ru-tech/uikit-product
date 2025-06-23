@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.4 (2025-06-23)
+
+
+### Bug Fixes
+
+* **FF-6844:** added translations for header to locale package ([94b36a5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/94b36a57f0a12184affbccf49e629f8e2dd56682))
+
+
+
+
+
 ## 0.7.3 (2025-06-23)
 
 
