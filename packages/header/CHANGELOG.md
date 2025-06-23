@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.7.4 (2025-06-23)
+
+
+### Bug Fixes
+
+* **PDS-2461:** header current project is visible by default in selector ([34dea75](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/34dea75dffbc1526224f81152ef1a32e5ab48a3f))
+
+
+
+
+
 ## 4.7.3 (2025-06-20)
 
 ### Only dependencies have been changed
