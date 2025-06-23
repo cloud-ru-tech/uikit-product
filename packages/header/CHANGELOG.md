@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.7.5 (2025-06-23)
+
+
+### Bug Fixes
+
+* **FF-6726:** add data-test-ids ([ba3acef](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ba3aceffde0c16ac0a0bf062a86a8c46232d0688))
+* **FF-6726:** reuse ProductSelectTrigger component in DrawerMenuDesktop ([236bb51](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/236bb5108c5b47d8712cf9d0db2abefd1f852a56))
+
+
+
+
+
 ## 4.7.4 (2025-06-23)
 
 
