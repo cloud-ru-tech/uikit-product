@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-06-23)
+
+
+### Bug Fixes
+
+* **FF-6795:** fix password tooltip for mobile ([fd025dc](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fd025dcbfda95dd8dc251130c6fda1223dddb073))
+
+
+### Features
+
+* **FF-6795:** new mobile field-ai ([9602b4d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9602b4dc4faa1052387ef2f6cd2f481308ce670c))
+
+
+
+
+
 ## 0.8.6 (2025-06-23)
 
 
