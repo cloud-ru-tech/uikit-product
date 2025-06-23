@@ -36,12 +36,8 @@ export function WithPasswordTooltip({
             <CheckItem checked={passwordValidation.minLength} label={t('FieldAi.secret.passwordTooltip.minLength')} />
             <CheckItem checked={passwordValidation.onlyLatin} label={t('FieldAi.secret.passwordTooltip.onlyLatin')} />
             <CheckItem
-              checked={passwordValidation.hasCapitalLetter}
-              label={t('FieldAi.secret.passwordTooltip.hasCapitalLetter')}
-            />
-            <CheckItem
-              checked={passwordValidation.hasLowerCaseLetter}
-              label={t('FieldAi.secret.passwordTooltip.hasLowerCaseLetter')}
+              checked={passwordValidation.hasLetterCases}
+              label={t('FieldAi.secret.passwordTooltip.hasLetterCases')}
             />
             <CheckItem checked={passwordValidation.hasNumber} label={t('FieldAi.secret.passwordTooltip.hasNumber')} />
             <CheckItem checked={passwordValidation.hasSymbol} label={t('FieldAi.secret.passwordTooltip.hasSymbol')} />

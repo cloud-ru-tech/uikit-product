@@ -22,6 +22,8 @@
 | autoComplete | `string \| boolean` | false | Включен ли автокомплит для поля |
 | onPaste | `ClipboardEventHandler<HTMLInputElement>` | - | Колбек обработки вставки значения |
 | spellCheck | `boolean` | true | Значение атрибута spellcheck (проверка орфографии) |
+| inputMode | enum InputMode: `"text"`, `"decimal"`, `"numeric"`, `"tel"`, `"search"`, `"email"`, `"url"` | - | Режим работы экранной клавиатуры |
+| pattern | `string` | - | Регулярное выражение валидного инпута |
 | className | `string` | - | CSS-класс |
 | label | `string` | - | Лейбл |
 | labelTooltip | `ReactNode` | - | Всплывающая подсказка лейбла |

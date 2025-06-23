@@ -53,10 +53,10 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
     const isPasswordMode = secure === 'password';
 
     const passwordValidation = useMemo(() => getValidationPassword(value), [value]);
+    const isPasswordValid = isPasswordMode ? Object.values(passwordValidation).every(Boolean) : true;
+    const showPasswordError = !isPasswordValid && secure && value;
 
     const handleSubmit = () => {
-      const isPasswordValid = isPasswordMode ? Object.values(passwordValidation).every(Boolean) : true;
-
       if (isValueValid && isPasswordValid) {
         handleSubmitProp(value);
       }
@@ -92,6 +92,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
             className={secure && isValueHidden ? styles.secured : undefined}
             onKeyDown={handleKeyDown}
             spellCheck={!secure}
+            error={showPasswordError ? t('FieldAi.secret.error') : props.error}
             footer={
               <TextAreaActionsFooter
                 left={
