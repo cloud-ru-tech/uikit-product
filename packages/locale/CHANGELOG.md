@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.3 (2025-06-23)
+
+
+### Bug Fixes
+
+* **ONB-3885:** show field error and tooltip text edit ([8e6d718](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8e6d718a2a654537e01b846913288dfa7d5aa7ba))
+
+
+
+
+
 ## 0.7.2 (2025-06-20)
 
 
