@@ -1830,6 +1830,33 @@ importers:
         specifier: 2.5.1
         version: 2.5.1
 
+  packages/site-header:
+    dependencies:
+      '@sbercloud/figma-tokens-web':
+        specifier: '*'
+        version: 17.7.6
+      '@sbercloud/uikit-product-icons':
+        specifier: 13.0.3
+        version: link:../icons
+      '@sbercloud/uikit-product-mobile-modal':
+        specifier: 0.7.48
+        version: link:../mobile-modal
+      '@sbercloud/uikit-product-site-layout':
+        specifier: 0.1.1
+        version: link:../site-layout
+      '@sbercloud/uikit-product-utils':
+        specifier: 4.0.0
+        version: link:../utils
+      '@snack-uikit/dropdown':
+        specifier: 0.4.8
+        version: 0.4.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/typography':
+        specifier: 0.8.4
+        version: 0.8.4(react@18.2.0)
+      classnames:
+        specifier: 2.3.2
+        version: 2.3.2
+
   packages/site-hero:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':

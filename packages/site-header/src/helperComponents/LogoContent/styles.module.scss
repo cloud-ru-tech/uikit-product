@@ -1,0 +1,26 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.logoContentContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.linkLogo {
+  text-decoration: none;
+  color: ste.$sys-graphite-accent-default;
+}
+
+.slash {
+  color: styles-theme-variables.$sys-neutral-text-disabled;
+}
+
+.subLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}

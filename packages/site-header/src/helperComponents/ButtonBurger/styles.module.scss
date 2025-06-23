@@ -1,0 +1,27 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+
+@use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
+
+.icon {
+  flex: none;
+  color: ste.$sys-graphite-accent-default;
+}
+
+.buttonBurger {
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  padding: 0;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid ste.$sys-graphite-decor-default;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}

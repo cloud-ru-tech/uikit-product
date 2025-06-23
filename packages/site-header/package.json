@@ -1,0 +1,45 @@
+{
+  "name": "@sbercloud/uikit-product-site-header",
+  "title": "Siteheader",
+  "version": "0.0.1",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "SiteHeader",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-header",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/site-header"
+  },
+  "author": "daparfirov <daparfirov@cloud.ru>",
+  "contributors": [
+    "daparfirov <daparfirov@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@sbercloud/uikit-product-icons": "13.0.3",
+    "@sbercloud/uikit-product-mobile-modal": "0.7.48",
+    "@sbercloud/uikit-product-site-layout": "0.1.1",
+    "@sbercloud/uikit-product-utils": "4.0.0",
+    "@snack-uikit/dropdown": "0.4.8",
+    "@snack-uikit/typography": "0.8.4",
+    "classnames": "2.3.2"
+  },
+  "peerDependencies": {
+    "@sbercloud/figma-tokens-web": "*"
+  }
+}
