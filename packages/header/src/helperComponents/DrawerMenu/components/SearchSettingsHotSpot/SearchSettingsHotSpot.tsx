@@ -18,6 +18,7 @@ export function SearchSettingsHotSpot() {
       }
       trigger='hover'
       placement='bottom-end'
+      hoverDelayOpen={100}
     >
       <HotSpot enabled pulse placement='right-top' />
     </Popover>
