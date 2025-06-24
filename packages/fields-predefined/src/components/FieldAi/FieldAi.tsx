@@ -112,7 +112,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
             className={secure && isValueHidden ? styles.secured : undefined}
             onKeyDown={handleKeyDown}
             spellCheck={!secure}
-            error={showPasswordError ? t('FieldAi.secret.error') : props.error}
+            validationState={showPasswordError ? 'error' : props.validationState}
             footer={
               <TextAreaActionsFooter
                 left={
@@ -139,7 +139,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
                     <FieldSubmitButton
                       showTooltip={!isTouchDevice}
                       className={isTouchDevice ? styles.mobileSubmitButton : undefined}
-                      active={isValueValid && !disabled}
+                      active={isValueValid && !disabled && isPasswordValid}
                       handleClick={handleSubmit}
                       size={isTouchDevice ? 's' : 'xs'}
                     />
