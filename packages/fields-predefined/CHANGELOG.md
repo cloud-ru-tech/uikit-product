@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.9.1 (2025-06-24)
+
+
+### Bug Fixes
+
+* **ONB-3885:** hide password text error and disable button ([b111c79](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b111c79ddd2bf467ec44ef0a54edf97fe05e6503))
+
+
+
+
+
 # 0.9.0 (2025-06-23)
 
 
