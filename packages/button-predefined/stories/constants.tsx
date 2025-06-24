@@ -81,3 +81,37 @@ export const COMMON_ARG_TYPES: ArgTypes = {
     },
   },
 };
+
+export const COMMON_ARG_TYPES_CLAUDIA_BUTTON: ArgTypes = {
+  type: {
+    options: Object.values(HTML_TYPE),
+    control: {
+      type: 'radio',
+    },
+  },
+  size: {
+    options: Object.values(SIZE),
+    control: {
+      type: 'radio',
+    },
+  },
+  icon: {
+    name: '[Stories]: Show icon examples',
+    options: Object.keys(ICONS),
+    mapping: ICONS,
+    control: {
+      type: 'select',
+    },
+  },
+  testMode: {
+    name: '[Stories]: Show onClick counter',
+    control: {
+      type: 'boolean',
+    },
+  },
+  onClick: {
+    table: {
+      disable: true,
+    },
+  },
+};
