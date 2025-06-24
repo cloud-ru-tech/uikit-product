@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2025-06-24)
+
+
+### Features
+
+* **ONB-4044:** add claudia button ([7e78d1b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7e78d1ba0b4f4c7c29c2cdb25d07c0aa489dfcf8))
+
+
+
+
+
 ## 0.4.20 (2025-06-20)
 
 ### Only dependencies have been changed
