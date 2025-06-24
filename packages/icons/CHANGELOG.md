@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 13.0.0 (2025-06-24)
+
+
+### BREAKING CHANGES
+
+
+* **FF-00:** rename service icon Quotas -> Quota ([7b36f3c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7b36f3c69e2ca656753274bdd7569ea79271c14b))
+
+
+
+
 # 12.1.0 (2025-06-20)
 
 

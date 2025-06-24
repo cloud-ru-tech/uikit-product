@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.8.1 (2025-06-24)
+
+
+### Bug Fixes
+
+* **FF-00:** add search hot-spot open delay ([e3c608e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3c608e2071bd63a4c7bb7d0f7006c0b4be194a1))
+
+
+
+
+
 # 4.8.0 (2025-06-23)
 
 
