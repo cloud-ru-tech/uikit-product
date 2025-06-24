@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.2 (2025-06-24)
+
+
+### Bug Fixes
+
+* **ONB-0000:** button css specificity fix ([191bdbe](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/191bdbe133a343e6ad8e43dceb5cd97cc247dec8))
+
+
+
+
+
 ## 0.5.1 (2025-06-24)
 
 ### Only dependencies have been changed
