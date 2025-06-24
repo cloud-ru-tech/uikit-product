@@ -19,7 +19,7 @@ export const ButtonClaudia = forwardRef<HTMLButtonElement | HTMLAnchorElement, B
     <ButtonPrivate
       {...extractSupportProps(rest)}
       {...extractCommonButtonProps(rest)}
-      className={cn(styles.button, className)}
+      className={cn(styles.button, styles.specificityX2, className)}
       iconClassName={styles.icon}
       labelClassName={styles.label}
       size={size}

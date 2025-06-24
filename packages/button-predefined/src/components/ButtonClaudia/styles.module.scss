@@ -66,7 +66,7 @@ $typography: (
   }
 }
 
-.button {
+.button.specificityX2 {
   @include styles.button-anatomy-styles(buttonFilled.$button-filled, $sizes, $variants, $typography);
   @include styles.loading-label-only(buttonFilled.$button-filled);
   @include claudia-button-colors-styles;
