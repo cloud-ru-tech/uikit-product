@@ -3,7 +3,7 @@ import { KeyboardEvent, useCallback, useEffect, useRef, useState } from 'react';
 import { Dropdown } from '@snack-uikit/dropdown';
 import { Scroll } from '@snack-uikit/scroll';
 
-import { SelectMenu, SelectMenuTrigger, SelectProps } from '../SelectMenu';
+import { SelectMenu, SelectMenuTrigger, SelectProps, useProjectsSort } from '../SelectMenu';
 import styles from './styles.module.scss';
 
 export function Select({
@@ -69,6 +69,8 @@ export function Select({
     handleOpenChange(false);
   }, [handleOpenChange]);
 
+  const { sort, setSort } = useProjectsSort({ projects, selectedOrganization });
+
   return (
     <Dropdown
       open={isOpen}
@@ -94,6 +96,8 @@ export function Select({
                 onPlatformChange={onPlatformChange}
                 closeDropdown={closeDropdown}
                 mobile={false}
+                sort={sort}
+                setSort={setSort}
               />
             </div>
           </Scroll>

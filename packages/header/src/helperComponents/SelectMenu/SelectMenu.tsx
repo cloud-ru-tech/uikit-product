@@ -21,7 +21,6 @@ import { SearchPrivate } from '@snack-uikit/search-private';
 import { SkeletonText, WithSkeleton } from '@snack-uikit/skeleton';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
-import { useLocalStorage } from '../../hooks';
 import { Organization, Project } from '../../types';
 import {
   ProjectAfterContent,
@@ -63,6 +62,8 @@ export type SelectProps = {
 
 type SelectMenuProps = SelectProps & {
   mobile: boolean;
+  sort: SortVariant;
+  setSort(sort: SortVariant): void;
 };
 
 export function SelectMenu({
@@ -85,6 +86,9 @@ export function SelectMenu({
 
   mobile,
   onOpenChange,
+
+  sort,
+  setSort,
 }: SelectMenuProps) {
   const { t } = useLocale('Header');
   const { t: chipsT } = useLocale('Chips');
@@ -94,17 +98,6 @@ export function SelectMenu({
   const itemRefs: Record<string, RefObject<HTMLElement>> = useMemo(() => ({}), []);
 
   const noCatalogsInSort = projects && projects.length <= 1;
-
-  const [sort, setSort] = useLocalStorage<SortVariant>(
-    'header_projects_sort',
-    noCatalogsInSort ? SortVariant.LastVisitedDesc : SortVariant.ByCatalogs,
-  );
-
-  useEffect(() => {
-    if (selectedOrganization?.id && noCatalogsInSort && sort === SortVariant.ByCatalogs) {
-      setSort(SortVariant.LastVisitedDesc);
-    }
-  }, [noCatalogsInSort, selectedOrganization?.id, setSort, sort]);
 
   const handleSortChange = (newSort?: SortVariant) => {
     // undefined returns if selected same element

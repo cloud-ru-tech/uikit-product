@@ -17,7 +17,7 @@ import { Organization } from '../../../../types';
 import { extractAppNameFromId } from '../../../../utils';
 import { MarketplaceBannerCard } from '../../../MarketplaceBannerCard';
 import { ReferralBannerCard } from '../../../ReferralBannerCard';
-import { SelectMenu, SelectProps } from '../../../SelectMenu';
+import { SelectMenu, SelectProps, useProjectsSort } from '../../../SelectMenu';
 import { useLinks } from '../../hooks';
 import { DrawerMenuProps } from '../../types';
 import { filterHidden, filterHiddenLinks } from '../../utils';
@@ -35,7 +35,13 @@ type DrawerMenuMobileProps = DrawerMenuProps & {
   handleProjectMenuOpen(open: boolean): void;
   select?: Pick<
     SelectProps,
-    'projects' | 'onProjectChange' | 'selectedProject' | 'closeDropdown' | 'onOpenChange' | 'onPlatformChange'
+    | 'projects'
+    | 'onProjectChange'
+    | 'selectedProject'
+    | 'closeDropdown'
+    | 'onOpenChange'
+    | 'onPlatformChange'
+    | 'selectedOrganization'
   >;
   organizations?: Organization[];
 };
@@ -181,6 +187,11 @@ export function DrawerMenuMobile({
       },
     ];
   }, [searchSettings.precision, setAreSearchSettingsVisible, setSearchSettings, t]);
+
+  const { sort, setSort } = useProjectsSort({
+    projects: select?.projects,
+    selectedOrganization: select?.selectedOrganization,
+  });
 
   return (
     <>
@@ -365,7 +376,14 @@ export function DrawerMenuMobile({
 
       {select && (
         <MobileModalCustom open={isProjectMenuOpen} onClose={toggleProjectSelect}>
-          <SelectMenu mobile organizations={organizations} {...select} onOpenChange={onSelectOpenChange} />
+          <SelectMenu
+            mobile
+            organizations={organizations}
+            {...select}
+            onOpenChange={onSelectOpenChange}
+            sort={sort}
+            setSort={setSort}
+          />
         </MobileModalCustom>
       )}
     </>

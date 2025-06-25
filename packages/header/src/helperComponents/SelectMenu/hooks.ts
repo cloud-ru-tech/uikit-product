@@ -1,6 +1,8 @@
-import { useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 
-import { Project } from '../../types';
+import { useLocalStorage } from '../../hooks';
+import { Organization, Project } from '../../types';
+import { SortVariant } from './components';
 import { ItemsGroup } from './types';
 
 type UseSearchProps = {
@@ -41,4 +43,27 @@ export function useSearch({ groups, searchable }: UseSearchProps) {
     setSearchValue,
     filteredGroups,
   };
+}
+
+export function useProjectsSort({
+  projects,
+  selectedOrganization,
+}: {
+  projects?: ItemsGroup<Project>[];
+  selectedOrganization?: Omit<Organization, 'href'>;
+}) {
+  const noCatalogsInSort = projects && projects.length <= 1;
+
+  const [sort, setSort] = useLocalStorage<SortVariant>(
+    'header_projects_sort',
+    noCatalogsInSort ? SortVariant.LastVisitedDesc : SortVariant.ByCatalogs,
+  );
+
+  useEffect(() => {
+    if (selectedOrganization?.id && noCatalogsInSort && sort === SortVariant.ByCatalogs) {
+      setSort(SortVariant.LastVisitedDesc);
+    }
+  }, [noCatalogsInSort, selectedOrganization?.id, setSort, sort]);
+
+  return { sort, setSort };
 }
