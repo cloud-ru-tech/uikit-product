@@ -6,6 +6,7 @@ import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 import { ModalCustom, ModalCustomProps } from '@snack-uikit/modal';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
+import { TEST_IDS } from '../../constants';
 import { InputConfirm } from '../../helperComponents';
 import { isDefined } from '../../helpers';
 import { useTextFieldValidation } from './hooks';
@@ -92,7 +93,7 @@ export function DeleteModal({
               <ButtonFilled
                 label={t('delete')}
                 loading={deleting}
-                data-test-id='delete-modal__approve-button'
+                data-test-id={TEST_IDS.approveButton}
                 onClick={handleDelete}
                 size='m'
                 appearance='destructive'
@@ -100,7 +101,7 @@ export function DeleteModal({
               <ButtonOutline
                 label={t('cancel')}
                 onClick={handleCancel}
-                data-test-id='delete-modal__cancel-button'
+                data-test-id={TEST_IDS.closeButton}
                 appearance='neutral'
                 size='m'
               />

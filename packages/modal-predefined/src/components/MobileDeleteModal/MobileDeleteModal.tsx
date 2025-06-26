@@ -5,6 +5,7 @@ import { MobileModalCustom, MobileModalCustomProps } from '@sbercloud/uikit-prod
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonFilled, ButtonOutline } from '@snack-uikit/button';
 
+import { TEST_IDS } from '../../constants';
 import { InputConfirm } from '../../helperComponents';
 import { isDefined } from '../../helpers';
 import { useTextFieldValidation } from './hooks';
@@ -89,14 +90,22 @@ export function MobileDeleteModal({
 
             <div className={styles.footerActions}>
               <ButtonFilled
+                size='m'
+                fullWidth
                 label={t('delete')}
                 loading={deleting}
                 onClick={handleDelete}
-                size='m'
                 appearance='destructive'
-                fullWidth
+                data-test-id={TEST_IDS.approveButton}
               />
-              <ButtonOutline label={t('cancel')} onClick={handleCancel} appearance='neutral' size='m' fullWidth />
+              <ButtonOutline
+                size='m'
+                fullWidth
+                appearance='neutral'
+                label={t('cancel')}
+                onClick={handleCancel}
+                data-test-id={TEST_IDS.closeButton}
+              />
             </div>
           </div>
         }
