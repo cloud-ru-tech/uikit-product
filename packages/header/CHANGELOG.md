@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.8.2 (2025-06-26)
+
+
+### Bug Fixes
+
+* **FF-6687:** raise sort state to avoid state conflicts with multiple tabs ([2e9fbc0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2e9fbc0493398c31bb231fa140833ee383ac5317))
+
+
+
+
+
 ## 4.8.1 (2025-06-24)
 
 
