@@ -19,12 +19,20 @@ const INITIAL_QUERIES_VALUE = {
   [QueriesTitle.IsLarge]: false,
 };
 
-const MEDIA_QUERIES = Object.values(QueriesTitle).reduce(
-  (acc, key) => ({ ...acc, [key]: isBrowser() ? globalThis.matchMedia(QUERIES[key]) : undefined }),
-  {} as Record<QueriesTitle, MediaQueryList>,
-);
+const getMediaQueries = () =>
+  Object.values(QueriesTitle).reduce(
+    (acc, key) => ({ ...acc, [key]: isBrowser() ? globalThis.matchMedia(QUERIES[key]) : undefined }),
+    {} as Record<QueriesTitle, MediaQueryList>,
+  );
 
-export const MEDIA_QUERY_LIST = Object.entries(MEDIA_QUERIES) as Array<[QueriesTitle, MediaQueryList]>;
+let mediaQueryListCache: Array<[QueriesTitle, MediaQueryList]>;
+export const getMediaQueryList = () => {
+  if (!mediaQueryListCache) {
+    mediaQueryListCache = Object.entries(getMediaQueries()) as Array<[QueriesTitle, MediaQueryList]>;
+  }
+
+  return mediaQueryListCache;
+};
 
 export const getMatchMedia = (): MatchMedia =>
-  MEDIA_QUERY_LIST.reduce((acc, [key, q]) => ({ ...acc, [key]: q?.matches || false }), INITIAL_QUERIES_VALUE);
+  getMediaQueryList().reduce((acc, [key, q]) => ({ ...acc, [key]: q?.matches || false }), INITIAL_QUERIES_VALUE);

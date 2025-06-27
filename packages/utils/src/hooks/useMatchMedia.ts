@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useLayoutEffect } from '@snack-uikit/utils';
 
 import { MatchMedia } from '../types/adaptive';
-import { getMatchMedia, MEDIA_QUERY_LIST } from '../utils';
+import { getMatchMedia, getMediaQueryList } from '../utils';
 
 export const useMatchMedia = (): MatchMedia => {
   const [value, setValue] = useState(getMatchMedia);
@@ -11,9 +11,11 @@ export const useMatchMedia = (): MatchMedia => {
   useLayoutEffect(() => {
     const handler = () => setValue(getMatchMedia);
 
-    MEDIA_QUERY_LIST.forEach(([, mql]) => mql.addEventListener('change', handler));
+    const mediaQueryList = getMediaQueryList();
 
-    return (): void => MEDIA_QUERY_LIST.forEach(([, mql]) => mql.removeEventListener('change', handler));
+    mediaQueryList.forEach(([, mql]) => mql.addEventListener('change', handler));
+
+    return (): void => mediaQueryList.forEach(([, mql]) => mql.removeEventListener('change', handler));
   }, []);
 
   return value;
