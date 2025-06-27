@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 4.0.0 (2025-06-27)
+
+
+### BREAKING CHANGES
+
+
+* **EVODNS-1479:** clean utils export ([c7183c1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c7183c1e987fd9e0f57c46a76313d6258914624b))
+
+
+
+
 ## <small>3.8.8 (2025-02-05)</small>
 
 * feat(PDS-1181): add text provider hook ([c897d17](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c897d17))
