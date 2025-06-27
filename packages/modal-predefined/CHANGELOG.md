@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-06-27)
+
+
+### Features
+
+* **HYCL-000:** synchronized the data-test-id with the desktop version ([b26c585](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b26c5852479fc9ea376b7224f0233f9c5bfd3dfa))
+
+
+
+
+
 ## 0.6.14 (2025-06-24)
 
 ### Only dependencies have been changed
