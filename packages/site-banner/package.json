@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-banner",
   "title": "Site Banner",
-  "version": "0.2.19",
+  "version": "0.2.20",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-button-predefined": "0.5.3",
+    "@sbercloud/uikit-product-button-predefined": "0.5.4",
     "@sbercloud/uikit-product-site-rich-text": "0.2.1",
     "@sbercloud/uikit-product-site-tag": "0.3.1",
     "@sbercloud/uikit-product-utils": "4.0.0",

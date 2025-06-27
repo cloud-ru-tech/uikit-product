@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 13.0.2 (2025-06-27)
+
+
+### Dependencies
+
+* **FF-6683:** up @snack-uikti/icons ([ea156bd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ea156bd027e317d5024b48072f624e6f39814f8c))
+
+
+
+
+
 ## 13.0.1 (2025-06-27)
 
 ### Only dependencies have been changed
