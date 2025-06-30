@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2025-06-30)
+
+
+### Features
+
+* **HYCL-000:** add test-id to mobile field select ([db17f2d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/db17f2df0cd0fa528051f653b10563223cd445f0))
+
+
+
+
+
 ## 0.9.6 (2025-06-27)
 
 ### Only dependencies have been changed
