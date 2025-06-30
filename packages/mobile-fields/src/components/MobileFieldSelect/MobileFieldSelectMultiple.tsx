@@ -309,9 +309,20 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
               <div className={styles.footer}>
                 <div className={styles.footerTopLine}>
                   <span className={styles.counter}>{`${t('selectedN')}${selectedItems?.length || 0}`}</span>
-                  <ButtonFunction label={t('resetAll')} onClick={onClear} size='m' />
+                  <ButtonFunction
+                    size='m'
+                    label={t('resetAll')}
+                    onClick={onClear}
+                    data-test-id='field-select__reset-all-button'
+                  />
                 </div>
-                <ButtonFilled fullWidth label={t('select')} onClick={handleApplyChange} size='l' />
+                <ButtonFilled
+                  fullWidth
+                  label={t('select')}
+                  data-test-id='field-select__approve-button'
+                  onClick={handleApplyChange}
+                  size='l'
+                />
               </div>
             }
           />
