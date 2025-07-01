@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.8.5 (2025-07-01)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-card-predefined@0.7.41](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/card-predefined/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@13.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-chips@0.8.8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-chips/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-modal@0.7.48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+* [@sbercloud/uikit-product-title-clickable@0.0.25](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/title-clickable/CHANGELOG.md)
+
+
+
+
+
 ## 4.8.4 (2025-06-27)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.3 (2025-07-01)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-copy-line@0.7.40](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/copy-line/CHANGELOG.md)
+* [@sbercloud/uikit-product-icons@13.0.3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-modal@0.7.48](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-modal/CHANGELOG.md)
+
+
+
+
+
 ## 0.7.2 (2025-06-27)
 
 ### Only dependencies have been changed
