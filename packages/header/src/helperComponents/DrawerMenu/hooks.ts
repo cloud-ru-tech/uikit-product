@@ -92,7 +92,7 @@ export function useSearch({ links = [], searchSettings }: UseSearchProps) {
       new Fuse(links, {
         keys: Object.values(SearchGroupsAccessor),
         includeMatches: true,
-        threshold: 0.4,
+        threshold: 0.3,
       }),
     [links],
   );
