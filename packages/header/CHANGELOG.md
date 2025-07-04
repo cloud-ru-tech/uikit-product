@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.8.6 (2025-07-04)
+
+
+### Bug Fixes
+
+* **FF-6964:** down fuzzy threshold ([ac29483](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ac29483beeab95a5b5d5320b79822fa6cb9d8d7a))
+
+
+
+
+
 ## 4.8.5 (2025-07-01)
 
 ### Only dependencies have been changed
