@@ -1,11 +1,4 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
-
 @use '@sbercloud/figma-tokens-web/build/scss/components/styles-tokens-element' as ste;
-
-.icon {
-  flex: none;
-  color: ste.$sys-graphite-accent-default;
-}
 
 .buttonBurger {
   background-color: transparent;
@@ -19,6 +12,7 @@
   justify-content: center;
   box-sizing: border-box;
   border: 2px solid ste.$sys-graphite-decor-default;
+  color: ste.$sys-neutral-accent-default;
 
   &:active,
   &:focus {

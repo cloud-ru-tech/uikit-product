@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { useState } from 'react';
 
 import { MoreSVG } from '@sbercloud/uikit-product-icons';
 import { Dropdown } from '@snack-uikit/dropdown';
@@ -13,9 +14,19 @@ type MoreButtonProps = {
 };
 
 export function MoreButton({ linkItemsArray, activeItemId }: MoreButtonProps) {
+  const [open, setOpen] = useState(false);
+  const onClickOpen = () => {
+    setOpen(prev => !prev);
+  };
+
   return (
     <Dropdown
       placement='bottom-start'
+      open={open}
+      outsideClick={() => {
+        onClickOpen();
+        return false;
+      }}
       content={
         <div className={styles.tagRowDropListScroll}>
           {linkItemsArray.map(item => (
@@ -26,13 +37,21 @@ export function MoreButton({ linkItemsArray, activeItemId }: MoreButtonProps) {
                 [styles.active]: item.id === activeItemId && !item.href,
               })}
             >
-              <LinkItemHeader label={item.label} onClick={item.onClick} href={item.href} withoutHover />
+              <LinkItemHeader
+                label={item.label}
+                onClick={() => {
+                  item.onClick && item.onClick();
+                  onClickOpen();
+                }}
+                href={item.href}
+                withoutHover
+              />
             </div>
           ))}
         </div>
       }
     >
-      <button className={styles.button}>
+      <button className={styles.button} onClick={onClickOpen}>
         <MoreSVG />
       </button>
     </Dropdown>
