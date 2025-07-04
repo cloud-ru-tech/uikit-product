@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1 (2025-07-04)
+
+
+### Bug Fixes
+
+* **SITE-9402:** fix Site Header ([f2226cf](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f2226cf968c6e94e0bf0790345ce2c764a4bf3e5))
+
+
+
+
+
 # 0.1.0 (2025-07-02)
 
 
