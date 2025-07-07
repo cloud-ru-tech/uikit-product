@@ -2193,21 +2193,15 @@ importers:
       '@sbercloud/uikit-product-card-predefined':
         specifier: 0.7.41
         version: link:../card-predefined
-      '@sbercloud/uikit-product-icons':
-        specifier: 13.0.3
-        version: link:../icons
       '@sbercloud/uikit-product-locale':
         specifier: '*'
         version: link:../locale
+      '@sbercloud/uikit-product-mobile-carousel':
+        specifier: 0.0.0
+        version: link:../mobile-carousel
       '@sbercloud/uikit-product-utils':
         specifier: 4.0.0
         version: link:../utils
-      '@snack-uikit/button':
-        specifier: 0.19.7
-        version: 0.19.7(react@18.2.0)
-      '@snack-uikit/carousel':
-        specifier: 0.4.11
-        version: 0.4.11(@types/react@18.2.79)(react@18.2.0)
       '@snack-uikit/icon-predefined':
         specifier: 0.7.3
         version: 0.7.3(react@18.2.0)

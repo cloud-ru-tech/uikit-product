@@ -1,10 +1,8 @@
-import { ReactNode, useMemo, useState } from 'react';
+import { ReactNode, useMemo } from 'react';
 
-import { ArrowLeftSVG, ArrowRightSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
+import { AdaptiveCarousel, CarouselProps } from '@sbercloud/uikit-product-mobile-carousel';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
-import { ButtonFunction } from '@snack-uikit/button';
-import { Carousel, CarouselProps } from '@snack-uikit/carousel';
 import { Typography } from '@snack-uikit/typography';
 
 import { COLUMN_SIZE, MOBILE_COLUMN_SIZE, MOBILE_ROW_SIZE, ROW_SIZE } from './constants';
@@ -12,13 +10,16 @@ import styles from './styles.module.scss';
 import { getLoadingCards } from './utils/getLoadingCards';
 import { getProductColumns } from './utils/getProductColumns';
 
-export type ProductsWidgetProps = Pick<CarouselProps, 'arrows' | 'pagination'> &
-  WithSupportProps<{
-    loading?: boolean;
-    cards: ReactNode[];
-    columnSize?: number;
-    rowSize?: number;
-  }>;
+export type ProductsWidgetProps = WithLayoutType<
+  Pick<CarouselProps, 'arrows' | 'pagination'> &
+    WithSupportProps<{
+      loading?: boolean;
+      cards: ReactNode[];
+      columnSize?: number;
+      rowSize?: number;
+    }>
+>;
+
 export function ProductsWidget({
   layoutType,
   cards = [],
@@ -28,57 +29,38 @@ export function ProductsWidget({
   arrows = true,
   pagination = true,
   ...rest
-}: WithLayoutType<ProductsWidgetProps>) {
+}: ProductsWidgetProps) {
   const { t } = useLocale('Widget');
   const isMobile = layoutType === 'mobile';
   const columnSize = isMobile ? MOBILE_COLUMN_SIZE : columnSizeProp;
   const rowSize = isMobile ? MOBILE_ROW_SIZE : rowSizeProp;
-
-  const [page, setPage] = useState(0);
 
   const productsCards = useMemo(
     () => (loading ? getLoadingCards({ columnSize, rowSize }) : getProductColumns({ cards, columnSize, rowSize })),
     [columnSize, loading, cards, rowSize],
   );
 
-  const totalPages = productsCards.length;
-
   return (
     <div className={styles.wrapper} {...extractSupportProps(rest)}>
       <div className={styles.headerWrapper}>
         <Typography.SansTitleL tag='h5'>{t('Products.title')}</Typography.SansTitleL>
-
-        {isMobile && (
-          <div className={styles.arrowWrapper} style={{ display: 'flex' }}>
-            <span className={styles.pageNumber}>{page + 1}</span>
-
-            <span className={styles.pageNumber}>/{totalPages}</span>
-
-            <ButtonFunction
-              icon={<ArrowLeftSVG />}
-              onClick={() => setPage(page - 1 >= 0 ? page - 1 : totalPages - 1)}
-            />
-            <ButtonFunction icon={<ArrowRightSVG />} onClick={() => setPage(page + 1 < totalPages ? page + 1 : 0)} />
-          </div>
-        )}
       </div>
 
-      <Carousel
+      <AdaptiveCarousel
+        layoutType={layoutType}
         gap='8px'
         infiniteScroll
-        swipe={isMobile}
+        swipe={false}
         showItems={rowSize}
-        scrollBy={rowSize}
-        arrows={!isMobile && arrows}
-        pagination={!isMobile && pagination}
-        state={{ page, onChange: setPage }}
+        arrows={arrows}
+        pagination={pagination}
       >
         {productsCards.map((d, index) => (
           <div className={styles.column} key={index}>
             {d}
           </div>
         ))}
-      </Carousel>
+      </AdaptiveCarousel>
     </div>
   );
 }

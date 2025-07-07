@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { ReactNode } from 'react';
 
 import { CardServiceSmall } from '@sbercloud/uikit-product-card-predefined';
-import { useAdaptive } from '@sbercloud/uikit-product-utils';
 
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
@@ -24,8 +23,7 @@ const CARDS = Array.from({ length: 24 }).fill(
 type StoryProps = ProductsWidgetProps;
 
 function Template({ ...args }: StoryProps) {
-  const { layoutType } = useAdaptive();
-  return <ProductsWidget {...args} layoutType={layoutType} />;
+  return <ProductsWidget {...args} />;
 }
 
 export const productsWidget: StoryObj<StoryProps> = {
