@@ -21,6 +21,10 @@
   color: styles-theme-variables.$sys-neutral-text-main;
 }
 
+.title {
+  min-width: 0;
+}
+
 .prefixButtonWrapper {
   display: flex;
   align-items: center;

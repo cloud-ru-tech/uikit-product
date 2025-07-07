@@ -33,7 +33,7 @@ export function Headline({
       <div className={styles.headlineLayout}>
         <div className={styles.titleLayout}>
           {beforeHeadline && <div className={styles.prefixButtonWrapper}>{beforeHeadline}</div>}
-          <Typography.SansHeadlineM tag='h1'>
+          <Typography.SansHeadlineM tag='h1' className={styles.title}>
             {truncateTitle ? <TruncateString variant='end' text={title} maxLines={1} /> : title}
           </Typography.SansHeadlineM>
 
