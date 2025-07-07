@@ -1,4 +1,4 @@
 packages:
   - "packages/*"
 onlyBuiltDependencies:
-  - '@cloud-ru/ft-config-husky'
+  - '@sbercloud/ft-config-husky'
