@@ -11,6 +11,7 @@ export type MobileDropdownProps = PropsWithChildren<
     open?: boolean;
     onOpenChange?(value: boolean): void;
     content: ReactNode;
+    closeOnPopstate?: boolean;
   }>
 >;
 

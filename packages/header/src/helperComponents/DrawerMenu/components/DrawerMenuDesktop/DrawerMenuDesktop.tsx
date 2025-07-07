@@ -131,6 +131,7 @@ export function DrawerMenuDesktop({
       rootClassName={styles.drawerRoot}
       data-small={!showRightSection || undefined}
       data-test-id='header__drawer-menu'
+      closeOnPopstate
     >
       <div className={styles.drawerBody}>
         <div className={styles.menu}>

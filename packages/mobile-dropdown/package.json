@@ -34,7 +34,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-mobile-modal": "0.7.48",
     "@sbercloud/uikit-product-utils": "4.0.0",
-    "@snack-uikit/list": "0.26.0",
+    "@snack-uikit/list": "0.31.1",
     "@snack-uikit/utils": "3.7.0",
     "uncontrollable": "8.0.4"
   }

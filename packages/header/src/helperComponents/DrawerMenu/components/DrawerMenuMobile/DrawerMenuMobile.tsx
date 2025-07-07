@@ -202,6 +202,7 @@ export function DrawerMenuMobile({
         position='left'
         size='s'
         push={{ distance: 8 }}
+        closeOnPopstate
       >
         <DrawerCustom.Header title={t('navigation')} className={styles.nestedHeader} />
 
@@ -351,7 +352,7 @@ export function DrawerMenuMobile({
         </Scroll>
       </DrawerCustom>
 
-      <MobileModalCustom open={platformSelectOpen} onClose={togglePlatformSelect} closeButtonEnabled>
+      <MobileModalCustom open={platformSelectOpen} onClose={togglePlatformSelect} closeButtonEnabled closeOnPopstate>
         <MobileModalCustom.Header title={t('platforms')} />
 
         <List
@@ -364,7 +365,11 @@ export function DrawerMenuMobile({
         />
       </MobileModalCustom>
 
-      <MobileModalCustom open={areSearchSettingsVisible} onClose={() => setAreSearchSettingsVisible(false)}>
+      <MobileModalCustom
+        open={areSearchSettingsVisible}
+        onClose={() => setAreSearchSettingsVisible(false)}
+        closeOnPopstate
+      >
         <MobileModalCustom.Header title={t('searchSettingsMobileModalHeader')} />
         <List
           className={styles.searchSettingsMobileOptions}
@@ -375,7 +380,7 @@ export function DrawerMenuMobile({
       </MobileModalCustom>
 
       {select && (
-        <MobileModalCustom open={isProjectMenuOpen} onClose={toggleProjectSelect}>
+        <MobileModalCustom open={isProjectMenuOpen} onClose={toggleProjectSelect} closeOnPopstate>
           <SelectMenu
             mobile
             organizations={organizations}

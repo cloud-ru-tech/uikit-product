@@ -245,6 +245,7 @@ export function ProductHeader({
                 trigger='clickAndFocusVisible'
                 className={styles.settingsDroplist}
                 data-test-id='header__settings'
+                closeOnPopstate
               >
                 <ButtonFunction data-test-id='header__settings__menu-button' size='m' icon={<SettingsSVG />} />
               </Droplist>

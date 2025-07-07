@@ -218,6 +218,7 @@ export function ProductHeaderMobile({
           className={styles.notificationsDrawer}
           position='right'
           data-test-id='header__notifications-drawer'
+          closeOnPopstate
         >
           <Notifications {...notifications} open={notifications?.open || false} isMobile />
         </DrawerCustom>

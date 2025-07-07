@@ -31,6 +31,7 @@ export function NotificationsPopover({ notifications }: NotificationsPopoverProp
       open={notifications.open}
       data-test-id='header__notifications'
       content={<Notifications {...notifications} open={localOpen} className={styles.notifications} />}
+      closeOnPopstate
     >
       <NotificationsTrigger count={notifications.count} onClick={notifications.onNotifyTriggerClick} />
     </NotificationPanelPopover>

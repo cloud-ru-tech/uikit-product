@@ -5,7 +5,7 @@ import RcDrawer from 'rc-drawer';
 import { PropsWithChildren, useEffect } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
+import { extractSupportProps, usePopstateSubscription, WithSupportProps } from '@snack-uikit/utils';
 
 import { MODAL_MODE, POSITION, SIZE, SIZE_AS_VALUES } from '../../constants';
 import {
@@ -54,6 +54,8 @@ export type MobileDrawerCustomProps = WithSupportProps<
     swipeEnabled?: boolean;
     /** Показывать ли кнопку закрытия */
     closeButtonEnabled?: boolean;
+    /** Закрывать при перемещении по истории браузера */
+    closeOnPopstate?: boolean;
   }>
 >;
 
@@ -70,6 +72,7 @@ export function MobileDrawerCustom({
   swipeEnabled = true,
   modalMode = MODAL_MODE.Regular,
   closeButtonEnabled = true,
+  closeOnPopstate,
   ...rest
 }: MobileDrawerCustomProps) {
   const isPredefinedSize = typeof size === 'string' && SIZE_AS_VALUES.includes(size);
@@ -81,6 +84,8 @@ export function MobileDrawerCustom({
     setOpen(false);
     onClose();
   };
+
+  usePopstateSubscription(() => open && handleClose(), Boolean(closeOnPopstate));
 
   const { swipeRef, drawerStyles, maskStyles, drawerMotionProps, swipeProps, showPointer } = useSwipeProps({
     position,

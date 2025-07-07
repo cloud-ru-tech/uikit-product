@@ -172,7 +172,12 @@ export function DefaultMobileUserMenu({
       />
 
       {'themeMode' in userMenu && themeModeOptions && (
-        <MobileModalCustom open={isThemeModeMenuOpen} onClose={() => setIsThemeModeMenuOpen(false)} closeButtonEnabled>
+        <MobileModalCustom
+          open={isThemeModeMenuOpen}
+          onClose={() => setIsThemeModeMenuOpen(false)}
+          closeButtonEnabled
+          closeOnPopstate
+        >
           <MobileModalCustom.Header title={t('themeModeLabel')} className={styles.nestedHeader} />
           <Scroll>
             <List items={themeModeOptions} size='l' selection={{ mode: 'single' }} />

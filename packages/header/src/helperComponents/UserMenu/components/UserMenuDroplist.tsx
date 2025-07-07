@@ -44,6 +44,7 @@ export function UserMenuDroplist({
       triggerElemRef={triggerRef}
       trigger='click'
       className={styles.userMenuDroplist}
+      closeOnPopstate
     >
       <div
         className={styles.userMenu}

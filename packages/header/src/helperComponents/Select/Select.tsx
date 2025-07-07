@@ -77,6 +77,7 @@ export function Select({
       onOpenChange={handleOpenChange}
       outsideClick={enableOutsideClick}
       className={styles.selectWrap}
+      closeOnPopstate
       content={
         <div className={styles.selectGroup}>
           <Scroll barHideStrategy='never'>
