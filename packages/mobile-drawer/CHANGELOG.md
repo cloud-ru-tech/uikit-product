@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2025-07-07)
+
+
+### Features
+
+* **PDS-2556:** add closeOnPopstate prop ([f6d2000](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f6d2000a7f29c976732ac53b759cbd342bde6bd7))
+
+
+
+
+
 ## 0.6.45 (2025-07-01)
 
 ### Only dependencies have been changed

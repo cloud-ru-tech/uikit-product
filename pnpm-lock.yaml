@@ -396,13 +396,13 @@ importers:
         specifier: 0.3.42
         version: link:../mobile-accordion
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.7.9
+        specifier: 0.8.0
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.10.1
+        specifier: 0.10.2
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.7.48
+        specifier: 0.8.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
         specifier: 4.0.0
@@ -659,10 +659,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.7.9
+        specifier: 0.8.0
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.7.48
+        specifier: 0.8.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.41
@@ -729,10 +729,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.8
+        specifier: 0.8.9
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.7.48
+        specifier: 0.8.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-title-clickable':
         specifier: 0.0.25
@@ -1075,7 +1075,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.7.9
+        specifier: 0.8.0
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.41
@@ -1160,7 +1160,7 @@ importers:
   packages/mobile-dropdown:
     dependencies:
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.7.48
+        specifier: 0.8.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
         specifier: 4.0.0
@@ -1184,10 +1184,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.7.9
+        specifier: 0.8.0
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.7.48
+        specifier: 0.8.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
         specifier: 4.0.0
@@ -1287,10 +1287,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.7.9
+        specifier: 0.8.0
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.7.48
+        specifier: 0.8.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.41
@@ -1326,7 +1326,7 @@ importers:
   packages/mobile-modal:
     dependencies:
       '@sbercloud/uikit-product-mobile-drawer':
-        specifier: 0.6.45
+        specifier: 0.7.0
         version: link:../mobile-drawer
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.41
@@ -1389,13 +1389,13 @@ importers:
         specifier: 13.0.3
         version: link:../icons
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.8
+        specifier: 0.8.9
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.7.9
+        specifier: 0.8.0
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-toolbar':
-        specifier: 0.2.8
+        specifier: 0.2.9
         version: link:../mobile-toolbar
       '@sbercloud/uikit-product-utils':
         specifier: 4.0.0
@@ -1476,10 +1476,10 @@ importers:
         specifier: 13.0.3
         version: link:../icons
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.8
+        specifier: 0.8.9
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.7.9
+        specifier: 0.8.0
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.41
@@ -1548,7 +1548,7 @@ importers:
         specifier: 0.1.4
         version: link:../markdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.7.48
+        specifier: 0.8.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-switch-row':
         specifier: 0.6.1
@@ -1834,12 +1834,12 @@ importers:
     dependencies:
       '@sbercloud/figma-tokens-web':
         specifier: '*'
-        version: 17.7.8
+        version: 17.7.6
       '@sbercloud/uikit-product-icons':
         specifier: 13.0.3
         version: link:../icons
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.7.48
+        specifier: 0.8.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-site-layout':
         specifier: 0.1.1
@@ -1974,7 +1974,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.10.1
+        specifier: 0.10.2
         version: link:../mobile-fields
       '@sbercloud/uikit-product-site-cards':
         specifier: 0.10.15
@@ -2131,13 +2131,13 @@ importers:
         version: 17.1.0
       '@sbercloud/figma-tokens-cloud-platform':
         specifier: '*'
-        version: 17.7.8
+        version: 17.7.6
       '@sbercloud/figma-tokens-mlspace':
         specifier: '*'
-        version: 17.7.4
+        version: 17.7.3
       '@sbercloud/figma-tokens-web':
         specifier: '*'
-        version: 17.7.8
+        version: 17.7.6
       '@sbercloud/ft-debug-mode':
         specifier: 4.1.0
         version: 4.1.0
@@ -4268,20 +4268,11 @@ packages:
   '@sbercloud/figma-tokens-cloud-platform@17.7.6':
     resolution: {integrity: sha512-NF5vHF3sLQBnyRge6cukG72cGWfa+SFWz15T3HA+RlOuJWk6oMrMX1s9rGGLG7E6w3ym3ZDtU1tZW+f3MhqRcA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-cloud-platform/-/@sbercloud/figma-tokens-cloud-platform-17.7.6.tgz}
 
-  '@sbercloud/figma-tokens-cloud-platform@17.7.8':
-    resolution: {integrity: sha512-n2ByrsilQidMi6BpEBfPyyKtjl6lbG4HtiU0KMwGah5DUyAjDnBHU9psCscOdLcAyMqjSLoOWGebeNRaGIib8g==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-cloud-platform/-/@sbercloud/figma-tokens-cloud-platform-17.7.8.tgz}
-
   '@sbercloud/figma-tokens-mlspace@17.7.3':
     resolution: {integrity: sha512-T9ZNJ0uolgGByg0RRKJ8giflRI5Gn/D2zgsh7w+CCGrMk3WfCyOEUE0dLLoix2Hdqif+SUjfcNK6eqeoCMu0JQ==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-mlspace/-/@sbercloud/figma-tokens-mlspace-17.7.3.tgz}
 
-  '@sbercloud/figma-tokens-mlspace@17.7.4':
-    resolution: {integrity: sha512-fhqkaEMXA+CDLQ9E19R8LBjojn3KFmswo4bAN7qeEvJhf4CxMX0P3xVa+CTVzpCuzQWj0JZKsOXHO8zOkiXFSA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-mlspace/-/@sbercloud/figma-tokens-mlspace-17.7.4.tgz}
-
   '@sbercloud/figma-tokens-web@17.7.6':
     resolution: {integrity: sha512-fJgXv3uKNzJnQbJjjzdNwgq8yqTT+uKqCgmIw8b/amlxt2348GCSr5EVWK+dJLFDRv7E8cCu0U79js5JGqPAaA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-web/-/@sbercloud/figma-tokens-web-17.7.6.tgz}
-
-  '@sbercloud/figma-tokens-web@17.7.8':
-    resolution: {integrity: sha512-LATazE8cSUBA67og7YUofB/YqO/GlNpxX+6WoRq4KjuN5sdsr4vyhRYpngzF7rV+VGCSJQ5CUYEHDIq1B6CrOg==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-web/-/@sbercloud/figma-tokens-web-17.7.8.tgz}
 
   '@sbercloud/ft-all-linters-pack@4.1.18':
     resolution: {integrity: sha512-/475nb4+60QPXZLTKXN2jgn0GabRE7YNwzV08KDkH+meeHuWg55pf7dk31yu3/RTAAKzU3kkRAocwgthD4XBFA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/ft-all-linters-pack/-/@sbercloud/ft-all-linters-pack-4.1.18.tgz}
@@ -15676,15 +15667,9 @@ snapshots:
 
   '@sbercloud/figma-tokens-cloud-platform@17.7.6': {}
 
-  '@sbercloud/figma-tokens-cloud-platform@17.7.8': {}
-
   '@sbercloud/figma-tokens-mlspace@17.7.3': {}
 
-  '@sbercloud/figma-tokens-mlspace@17.7.4': {}
-
   '@sbercloud/figma-tokens-web@17.7.6': {}
-
-  '@sbercloud/figma-tokens-web@17.7.8': {}
 
   '@sbercloud/ft-all-linters-pack@4.1.18(@types/eslint@9.6.1)(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(@typescript-eslint/utils@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0)(lint-staged@15.2.5)(postcss@8.5.6)(prettier@3.6.2)(typescript@5.5.4)(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.8.1)(jsdom@26.1.0)(less@4.3.0)(sass@1.80.4)(stylus@0.62.0)(terser@5.43.1)(yaml@2.8.0))':
     dependencies:
