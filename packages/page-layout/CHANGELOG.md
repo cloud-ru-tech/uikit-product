@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.18.25 (2025-07-07)
+
+
+### Bug Fixes
+
+* **FF-01:** pageServices title truncate ([a45467f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a45467f5279843bfc8940b7d3b627334af87071e))
+
+
+
+
+
 ## 0.18.24 (2025-07-01)
 
 ### Only dependencies have been changed
