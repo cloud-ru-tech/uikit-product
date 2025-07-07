@@ -1,0 +1,27 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-carousel';
+
+.carouselBase {
+  position: relative;
+
+  display: flex;
+
+  box-sizing: border-box;
+  width: 100%;
+
+  outline: none;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.pagination {
+  @include styles-tokens-carousel.composite-var(styles-tokens-carousel.$carousel-sliders-wrap);
+
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}

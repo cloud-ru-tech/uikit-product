@@ -1066,6 +1066,24 @@ importers:
         specifier: 2.5.1
         version: 2.5.1
 
+  packages/mobile-carousel:
+    dependencies:
+      '@sbercloud/uikit-product-utils':
+        specifier: 4.0.0
+        version: link:../utils
+      '@snack-uikit/carousel':
+        specifier: 0.6.0
+        version: 0.6.0(@types/react@18.2.79)(react@18.2.0)
+      '@snack-uikit/pagination':
+        specifier: 0.10.13
+        version: 0.10.13(react@18.2.0)
+      classnames:
+        specifier: 2.5.1
+        version: 2.5.1
+      lodash.debounce:
+        specifier: 4.0.8
+        version: 4.0.8
+
   packages/mobile-chips:
     dependencies:
       '@sbercloud/uikit-product-icons':
@@ -4458,6 +4476,9 @@ packages:
   '@snack-uikit/carousel@0.5.1':
     resolution: {integrity: sha512-uzmUB4oAd20gYD/bB4ask7Ipd43CGADEfgeoOj+jmTBuZzfpsFA6TZFPuCmdLGtV7S2nxSPWH5LtLqa2dkDVyA==}
 
+  '@snack-uikit/carousel@0.6.0':
+    resolution: {integrity: sha512-FH0gmVQXrpixYqTqYE653RzM+dMbkE3L37nB8NRHIgvoAxxM8HDLzCoXomFhSmQIE/XszMLxgChR/KJC8YqTDw==}
+
   '@snack-uikit/chips@0.19.0':
     resolution: {integrity: sha512-tJFAWv//1ETHGewRHoc3A8YbGbve8jcybP51XDjcjBXNIg4iELPjVeZi/ygzEd91+dAYd/9sEeIn1DzuTHFiPA==}
     peerDependencies:
@@ -4817,6 +4838,12 @@ packages:
 
   '@snack-uikit/pagination@0.10.11':
     resolution: {integrity: sha512-ArXOGxsJsNDctPbuwotdckjbc38EdKgNMWB8rnpGZOTFisj+z1T4foH20lfp1V6vkJ6XjuVSTI7U0CqpvELxIg==}
+
+  '@snack-uikit/pagination@0.10.13':
+    resolution: {integrity: sha512-jWpS3HDEIUJBWFw/tDxu/v3MI+eeWFMkKHQl26iQO5+3vGhIgXDu5kXgZr1cOOZXfG/2x9NLTWCdmujBPHuVnQ==}
+
+  '@snack-uikit/pagination@0.10.14':
+    resolution: {integrity: sha512-KV5uT9yXh1FltO1uzPmBO45jMzlacPWuK1HvAXUZzwmYeI/00yIv1CDjVlMTbD8hdvP4eCnuKQlFGgsca6+3mQ==}
 
   '@snack-uikit/pagination@0.10.2':
     resolution: {integrity: sha512-GcJMMTLKo+EwflmFkWOPj8NgZ1/y+vTMB21SQD5NQFYq42kK8iRgca69vFFzSkMEruX5OEtm7NmdUw6IEaQ6QQ==}
@@ -16290,6 +16317,19 @@ snapshots:
       - '@types/react'
       - react
 
+  '@snack-uikit/carousel@0.6.0(@types/react@18.2.79)(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/icons': 0.27.1(react@18.2.0)
+      '@snack-uikit/pagination': 0.10.14(react@18.2.0)
+      '@snack-uikit/utils': 3.9.0(react@18.2.0)
+      classnames: 2.5.1
+      lodash.debounce: 4.0.8
+      merge-refs: 1.3.0(@types/react@18.2.79)
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - react
+
   '@snack-uikit/chips@0.19.0(@snack-uikit/locale@0.14.0)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       '@snack-uikit/button': 0.19.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -17526,6 +17566,22 @@ snapshots:
       '@snack-uikit/button': 0.19.11(react@18.2.0)
       '@snack-uikit/icons': 0.26.3(react@18.2.0)
       '@snack-uikit/utils': 3.8.2(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+
+  '@snack-uikit/pagination@0.10.13(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/button': 0.19.11(react@18.2.0)
+      '@snack-uikit/icons': 0.27.0(react@18.2.0)
+      '@snack-uikit/utils': 3.8.2(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+
+  '@snack-uikit/pagination@0.10.14(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/button': 0.19.12(react@18.2.0)
+      '@snack-uikit/icons': 0.27.1(react@18.2.0)
+      '@snack-uikit/utils': 3.9.0(react@18.2.0)
     transitivePeerDependencies:
       - react
 

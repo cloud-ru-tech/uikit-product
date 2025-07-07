@@ -1,0 +1,15 @@
+@use '@snack-uikit/figma-tokens/build/scss/components/styles-tokens-carousel';
+
+.wrapper {
+  padding: styles-tokens-carousel.$dimension-3m;
+  background-color: styles-tokens-carousel.$sys-neutral-background1-level;
+}
+
+.hiddenPageCounter {
+  position: absolute;
+  opacity: 0;
+}
+
+html {
+  overflow-x: hidden;
+}

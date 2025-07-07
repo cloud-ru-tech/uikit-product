@@ -1,0 +1,31 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-carousel';
+
+.itemList {
+  --mobile-carousel--list-gap: #{styles-tokens-carousel.$dimension-2m};
+
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+
+  overflow-x: scroll;
+
+  @include styles-tokens-carousel.composite-var(styles-tokens-carousel.$carousel-content-layout);
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: none;
+  flex-flow: row nowrap;
+  gap: var(--mobile-carousel--list-gap, styles-tokens-carousel.$dimension-2m);
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.itemContainer {
+  scroll-snap-align: start;
+  flex: none;
+  width: calc(100% - 1px);
+  margin: 1px;
+}
