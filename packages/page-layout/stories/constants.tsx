@@ -1,5 +1,7 @@
 import * as Icons from '@sbercloud/uikit-product-icons';
 
+import { PageSidebarProps } from '../src/components';
+
 export const ICONS = Object.fromEntries(
   (Object.keys(Icons) as Array<keyof typeof Icons>).map(key => {
     const Icon = Icons[key];
@@ -8,10 +10,15 @@ export const ICONS = Object.fromEntries(
   }),
 );
 
-export const Items = [
+export const Items: PageSidebarProps['items'] = [
   { id: 0, label: 'Инстансы' },
   { id: 1, label: 'Мониторинг', disabledReason: 'У вас нет прав, чтобы зайти сюда' },
-  { id: 2, label: 'Администрирование' },
+  {
+    id: 2,
+    label: 'Администрирование',
+    disabledReason: 'У вас нет прав, чтобы зайти сюда',
+    disabledReasonPlacement: 'right',
+  },
   { id: 5, label: 'Мониторинг' },
   { id: 6, label: 'Администрирование' },
   { id: 7, label: 'Сеть' },

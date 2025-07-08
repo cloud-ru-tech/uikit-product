@@ -8,7 +8,7 @@ const getItemsContent = (
   items: SidebarItem[],
   onSelect?: (id: string | number) => void,
 ): MobileDroplistProps['items'] =>
-  items.map(({ id, label, href, onClick, afterContent, disabledReason, items: newItems }) => {
+  items.map(({ id, label, href, onClick, afterContent, disabledReason, disabledReasonPlacement, items: newItems }) => {
     const clickHandler = (event: MouseEvent<HTMLElement>) => {
       onClick?.(event);
       if (!items.length) {
@@ -33,7 +33,12 @@ const getItemsContent = (
         }
 
         return (
-          <MobileTooltip hoverDelayOpen={500} open={disabledReason ? undefined : false} tip={disabledReason}>
+          <MobileTooltip
+            hoverDelayOpen={500}
+            open={disabledReason ? undefined : false}
+            tip={disabledReason}
+            placement={disabledReasonPlacement}
+          >
             {item}
           </MobileTooltip>
         );

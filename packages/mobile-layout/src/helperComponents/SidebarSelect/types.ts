@@ -1,5 +1,7 @@
 import { MouseEvent, ReactNode } from 'react';
 
+import { MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
+
 export type SidebarItem = {
   id: string | number;
   label: string;
@@ -8,5 +10,6 @@ export type SidebarItem = {
   href?: string;
   afterContent?: ReactNode;
   disabledReason?: ReactNode;
+  disabledReasonPlacement?: MobileTooltipProps['placement'];
   items?: SidebarItem[];
 };

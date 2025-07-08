@@ -56,7 +56,17 @@ export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | n
   return useMemo(() => {
     const getItemsContent = (items: SidebarItem[], onSelect?: (id: string | number) => void) =>
       items.map(
-        ({ id, label, beforeContent, href, onClick, afterContent, disabledReason, items: newItems }): ItemProps => {
+        ({
+          id,
+          label,
+          beforeContent,
+          href,
+          onClick,
+          afterContent,
+          disabledReason,
+          disabledReasonPlacement,
+          items: newItems,
+        }): ItemProps => {
           const clickHandler = (event: MouseEvent<HTMLElement>) => {
             onClick?.(event);
             onSelect?.(id);
@@ -77,7 +87,12 @@ export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | n
               }
 
               return (
-                <Tooltip hoverDelayOpen={500} open={disabledReason ? undefined : false} tip={disabledReason}>
+                <Tooltip
+                  hoverDelayOpen={500}
+                  open={disabledReason ? undefined : false}
+                  tip={disabledReason}
+                  placement={disabledReasonPlacement}
+                >
                   {item}
                 </Tooltip>
               );

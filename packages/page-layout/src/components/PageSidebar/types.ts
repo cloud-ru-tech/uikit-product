@@ -1,6 +1,7 @@
 import { AnchorHTMLAttributes, MouseEvent, MouseEventHandler, ReactNode } from 'react';
 
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
+import { TooltipProps } from '@snack-uikit/tooltip';
 
 export type SidebarItem = {
   id: string | number;
@@ -10,6 +11,7 @@ export type SidebarItem = {
   href?: string;
   afterContent?: ReactNode;
   disabledReason?: ReactNode;
+  disabledReasonPlacement?: TooltipProps['placement'];
   items?: SidebarItem[];
   beforeContent?: ReactNode;
 };
