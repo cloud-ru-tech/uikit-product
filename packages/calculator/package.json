@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-calculator",
   "title": "Calculator",
-  "version": "0.21.16",
+  "version": "0.21.17",
   "sideEffects": [
     "*.css",
     "*.woff",

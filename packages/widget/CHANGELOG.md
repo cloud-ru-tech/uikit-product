@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-07-08)
+
+
+### Features
+
+* **FF-6881:** use mobile carousel ([f03ecc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f03ecc66c58dd2372a0c6994aa4cae353b550ab6))
+
+
+
+
+
 ## 0.7.10 (2025-07-01)
 
 ### Only dependencies have been changed

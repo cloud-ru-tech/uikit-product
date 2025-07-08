@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.17.18 (2025-07-08)
+
+
+### Dependencies
+
+* **FF-6881:** up carousel ([8b15ad2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8b15ad20732fa5ed739ed28eeeca6a088386d810))
+
+
+
+
+
 ## 0.17.17 (2025-07-07)
 
 ### Only dependencies have been changed
