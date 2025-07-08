@@ -92,6 +92,7 @@ export function SectionLeading({
           <Carousel
             state={{ page: currentPage, onChange: setCurrentPage }}
             arrows={showArrows}
+            controlsVisibility='always'
             showItems={itemsPerPageAmount}
             pagination={items.length > itemsPerPageAmount}
             swipe={items.length > itemsPerPageAmount}

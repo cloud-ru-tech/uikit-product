@@ -42,7 +42,7 @@
     "@sbercloud/uikit-product-utils": "4.0.0",
     "@snack-uikit/breadcrumbs": "0.10.24",
     "@snack-uikit/button": "0.19.7",
-    "@snack-uikit/carousel": "0.5.1",
+    "@snack-uikit/carousel": "0.6.0",
     "@snack-uikit/link": "0.15.9",
     "@snack-uikit/pagination": "0.10.9",
     "@snack-uikit/promo-tag": "0.7.1",

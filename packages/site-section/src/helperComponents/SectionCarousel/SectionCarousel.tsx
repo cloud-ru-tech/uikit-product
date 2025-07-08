@@ -88,6 +88,7 @@ export function SectionCarousel({
           <Carousel
             state={{ page: currentPage, onChange: setCurrentPage }}
             arrows={showArrows}
+            controlsVisibility='always'
             showItems={itemsPerPageAmount}
             pagination={children.length > itemsPerPageAmount}
             swipe={children.length > itemsPerPageAmount}

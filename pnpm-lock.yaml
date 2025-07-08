@@ -417,8 +417,8 @@ importers:
         specifier: 0.16.19
         version: 0.16.19(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/carousel':
-        specifier: 0.4.11
-        version: 0.4.11(@types/react@18.2.79)(react@18.2.0)
+        specifier: 0.6.0
+        version: 0.6.0(@types/react@18.2.79)(react@18.2.0)
       '@snack-uikit/chips':
         specifier: 0.25.2
         version: 0.25.2(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -1581,8 +1581,8 @@ importers:
         specifier: 0.19.7
         version: 0.19.7(react@18.2.0)
       '@snack-uikit/carousel':
-        specifier: 0.4.11
-        version: 0.4.11(@types/react@18.2.79)(react@18.2.0)
+        specifier: 0.6.0
+        version: 0.6.0(@types/react@18.2.79)(react@18.2.0)
       '@snack-uikit/fields':
         specifier: 0.48.7
         version: 0.48.7(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -1911,8 +1911,8 @@ importers:
         specifier: 0.19.7
         version: 0.19.7(react@18.2.0)
       '@snack-uikit/carousel':
-        specifier: 0.5.1
-        version: 0.5.1(@types/react@18.2.79)(react@18.2.0)
+        specifier: 0.6.0
+        version: 0.6.0(@types/react@18.2.79)(react@18.2.0)
       '@snack-uikit/link':
         specifier: 0.15.9
         version: 0.15.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -2025,8 +2025,8 @@ importers:
         specifier: 0.16.25
         version: 0.16.25(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/carousel':
-        specifier: 0.5.0
-        version: 0.5.0(@types/react@18.2.79)(react@18.2.0)
+        specifier: 0.6.0
+        version: 0.6.0(@types/react@18.2.79)(react@18.2.0)
       '@snack-uikit/link':
         specifier: 0.17.0
         version: 0.17.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -4460,15 +4460,6 @@ packages:
 
   '@snack-uikit/card@0.19.5':
     resolution: {integrity: sha512-gdQG6q1V+O0S41uUWkeKzHNOmEcdmJnuPnxfj6NHmhPJW85n9K2d/pb929M8XDdBFa+pfhpIqQakaXQopN1ZSw==}
-
-  '@snack-uikit/carousel@0.4.11':
-    resolution: {integrity: sha512-fzWnDe6Ly4krjshkb8LTtaQ83DM6tzBc2OoimjTzhAUMX+B36DeRsC7hQN0LWUHjKFwEsBTPFf+V3x5Q+Wnm6A==}
-
-  '@snack-uikit/carousel@0.5.0':
-    resolution: {integrity: sha512-F28OZWq6UgmHa+b4OYFLzC8ekqKo+dZZNjbMO4QzR1rwnVzHyJol8ui0psoGKaE1KVYOpSOdmDnPK7nEcXDZyQ==}
-
-  '@snack-uikit/carousel@0.5.1':
-    resolution: {integrity: sha512-uzmUB4oAd20gYD/bB4ask7Ipd43CGADEfgeoOj+jmTBuZzfpsFA6TZFPuCmdLGtV7S2nxSPWH5LtLqa2dkDVyA==}
 
   '@snack-uikit/carousel@0.6.0':
     resolution: {integrity: sha512-FH0gmVQXrpixYqTqYE653RzM+dMbkE3L37nB8NRHIgvoAxxM8HDLzCoXomFhSmQIE/XszMLxgChR/KJC8YqTDw==}
@@ -16271,45 +16262,6 @@ snapshots:
       - '@types/react'
       - react
       - react-dom
-
-  '@snack-uikit/carousel@0.4.11(@types/react@18.2.79)(react@18.2.0)':
-    dependencies:
-      '@snack-uikit/icons': 0.24.2(react@18.2.0)
-      '@snack-uikit/pagination': 0.10.2(react@18.2.0)
-      '@snack-uikit/utils': 3.7.0(react@18.2.0)
-      classnames: 2.5.1
-      lodash.debounce: 4.0.8
-      merge-refs: 1.3.0(@types/react@18.2.79)
-      uncontrollable: 8.0.4(react@18.2.0)
-    transitivePeerDependencies:
-      - '@types/react'
-      - react
-
-  '@snack-uikit/carousel@0.5.0(@types/react@18.2.79)(react@18.2.0)':
-    dependencies:
-      '@snack-uikit/icons': 0.26.2(react@18.2.0)
-      '@snack-uikit/pagination': 0.10.9(react@18.2.0)
-      '@snack-uikit/utils': 3.8.1(react@18.2.0)
-      classnames: 2.5.1
-      lodash.debounce: 4.0.8
-      merge-refs: 1.3.0(@types/react@18.2.79)
-      uncontrollable: 8.0.4(react@18.2.0)
-    transitivePeerDependencies:
-      - '@types/react'
-      - react
-
-  '@snack-uikit/carousel@0.5.1(@types/react@18.2.79)(react@18.2.0)':
-    dependencies:
-      '@snack-uikit/icons': 0.26.2(react@18.2.0)
-      '@snack-uikit/pagination': 0.10.9(react@18.2.0)
-      '@snack-uikit/utils': 3.8.1(react@18.2.0)
-      classnames: 2.5.1
-      lodash.debounce: 4.0.8
-      merge-refs: 1.3.0(@types/react@18.2.79)
-      uncontrollable: 8.0.4(react@18.2.0)
-    transitivePeerDependencies:
-      - '@types/react'
-      - react
 
   '@snack-uikit/carousel@0.6.0(@types/react@18.2.79)(react@18.2.0)':
     dependencies:

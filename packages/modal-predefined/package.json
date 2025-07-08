@@ -40,7 +40,7 @@
     "@sbercloud/uikit-product-toggles-predefined": "0.8.1",
     "@sbercloud/uikit-product-utils": "4.0.0",
     "@snack-uikit/button": "0.19.7",
-    "@snack-uikit/carousel": "0.4.11",
+    "@snack-uikit/carousel": "0.6.0",
     "@snack-uikit/fields": "0.48.7",
     "@snack-uikit/info-block": "0.6.13",
     "@snack-uikit/modal": "0.16.1",
