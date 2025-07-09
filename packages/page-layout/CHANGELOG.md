@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.19.0 (2025-07-09)
+
+
+### Features
+
+* **EVODBAAS-4061:** add placement prop for tooltips in page sidebar ([9f28e67](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9f28e673b9b42948d65f9923b25454591346be43))
+
+
+
+
+
 ## 0.18.25 (2025-07-07)
 
 
