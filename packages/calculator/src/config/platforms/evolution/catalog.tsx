@@ -88,7 +88,11 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
       id: CATEGORY.Database,
       label: 'Платформы данных',
       dataTestId: 'database',
-      visibleProducts: [EVOLUTION_PRODUCT.EvolutionManagedPostgreSQL, EVOLUTION_PRODUCT.EvolutionArenadataDb],
+      visibleProducts: [
+        EVOLUTION_PRODUCT.EvolutionManagedPostgreSQL,
+        EVOLUTION_PRODUCT.EvolutionArenadataDb,
+        EVOLUTION_PRODUCT.EvolutionManagedTrino,
+      ],
     },
     {
       id: CATEGORY.ML,

@@ -11,6 +11,7 @@ import {
   PublicIpSVG,
   S3StorageSVG,
   SnatSVG,
+  TrinoSVG,
 } from '@sbercloud/uikit-product-icons';
 
 import { PLATFORM } from '../../../constants';
@@ -26,6 +27,7 @@ import {
   EVOLUTION_CONTAINER_APPS_CONFIG,
   EVOLUTION_CONTAINER_APPS_FREE_TIER_CONFIG,
   EVOLUTION_KUBERNETES_FORM_CONFIG,
+  EVOLUTION_MANAGED_TRINO_CONFIG,
   EVOLUTION_ML_INFERENCE_FORM_CONFIG,
   EVOLUTION_POSTGRE_SQL_FORM_CONFIG,
   EVOLUTION_PUBLIC_IP_FORM_CONFIG,
@@ -77,6 +79,16 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     icon: S3StorageSVG,
     dataTestId: 'evolutionStorageS3FreeTier',
     freeTier: true,
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionManagedTrino]: {
+    id: EVOLUTION_PRODUCT.EvolutionManagedTrino,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Managed Trino',
+    caption: 'Аналитический SQL-движок Trino',
+    formConfig: EVOLUTION_MANAGED_TRINO_CONFIG,
+    icon: TrinoSVG,
+    dataTestId: 'evolutionManagedTrino',
     enableConnectToConsole: true,
   },
   [EVOLUTION_PRODUCT.EvolutionStorageS3]: {

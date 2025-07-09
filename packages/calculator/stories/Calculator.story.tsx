@@ -9,7 +9,7 @@ import { Calculator, CALCULATOR_TYPE, CalculatorProps, CATALOG_CONFIG } from '..
 import { getFetcherFn, getOnDownloadFileClick, getOnShareClick } from '../src/services';
 import src from './bg.webp';
 
-const DEFAULT_BACKEND_HOST = 'https://api.cloud.ru';
+const DEFAULT_BACKEND_HOST = 'https://api.dev.site.sbercloud.dev';
 
 const meta: Meta = {
   title: 'Console/Calculator',

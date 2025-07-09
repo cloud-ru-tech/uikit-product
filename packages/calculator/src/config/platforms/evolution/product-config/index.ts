@@ -13,3 +13,4 @@ export * from './EvolutionMlInference';
 export * from './EvolutionSnatGateway';
 export * from './EvolutionPublicIp';
 export * from './EvolutionArtifactRegistry';
+export * from './EvolutionManagedTrino';
