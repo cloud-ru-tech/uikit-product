@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.23.0 (2025-07-10)
+
+
+### Features
+
+* **SITE-9523:** add new calculator metastore ([3428da0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3428da0ec6ae339d800bbf954568b5d45ee60ac4))
+
+
+
+
+
 # 0.22.0 (2025-07-10)
 
 
