@@ -1,4 +1,14 @@
+shamefullyHoist: true
+sideEffectsCache: false
+linkWorkspacePackages: true
+saveWorkspaceProtocol: false
 packages:
   - "packages/*"
 onlyBuiltDependencies:
-  - '@sbercloud/ft-config-husky'
+  - "@sbercloud/ft-config-husky"
+  - "@parcel/watcher"
+  - "core-js"
+  - "core-js-pure"
+  - "ejs"
+  - "esbuild"
+  - "nx"

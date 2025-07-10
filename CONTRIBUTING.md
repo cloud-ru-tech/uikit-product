@@ -32,7 +32,7 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 - `clean:all` - вызывает **clean:dist** и **clean:modules**
 - `clean:dist` - удаляет **dist** в пакетах
 - `clean:modules` - удаляет **node_modules** в пакетах
-- `deps:packages` - устанавливает зависимости внутри пакетов
+- `deps:all` - устанавливает зависимости
 - `deps:reinstall` - переустанавливает все зависимости начисто
 - `storybook:all` - запуск локальной версии сторибука со *всеми* пакетами
 - `storybook:ci` - запуск сторибука на *CI/CD*
