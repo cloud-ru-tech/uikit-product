@@ -2197,7 +2197,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-carousel':
-        specifier: 0.1.0
+        specifier: 0.1.1
         version: link:../mobile-carousel
       '@sbercloud/uikit-product-utils':
         specifier: 4.0.0
