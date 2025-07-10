@@ -1,0 +1,7 @@
+.chipsToggleIndicator {
+  &[data-size='s'] {
+    > span[class] {
+      border-radius: 12px;
+    }
+  }
+}

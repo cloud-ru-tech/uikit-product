@@ -1,0 +1,42 @@
+{
+  "name": "@sbercloud/uikit-product-chips-predefined",
+  "title": "Chips Predefined",
+  "version": "0.0.0",
+  "sideEffects": [
+    "*.css",
+    "*.woff",
+    "*.woff2"
+  ],
+  "description": "",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/index.js",
+    "require": "./dist/cjs/index.js"
+  },
+  "files": [
+    "dist/esm",
+    "dist/cjs",
+    "src",
+    "./CHANGELOG.md"
+  ],
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/chips-predefined",
+  "repository": {
+    "type": "git",
+    "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
+    "directory": "packages/chips-predefined"
+  },
+  "author": "Nikita Bogdanov <nibogdanov@cloud.ru>",
+  "contributors": [
+    "Nikita Bogdanov <nibogdanov@cloud.ru>"
+  ],
+  "license": "UNLICENSED",
+  "scripts": {},
+  "dependencies": {
+    "@snack-uikit/chips": "0.27.16",
+    "@snack-uikit/tooltip": "0.18.1",
+    "@snack-uikit/status": "0.8.6",
+    "@snack-uikit/utils": "3.9.0"
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
