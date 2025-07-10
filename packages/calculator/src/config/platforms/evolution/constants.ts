@@ -12,6 +12,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionArenadataDb: 'evolutionArenadataDb',
   EvolutionMlInference: 'evolutionMlInference',
   EvolutionSnatGateway: 'evolutionSnatGateway',
+  EvolutionManagedMetastore: 'evolutionManagedMetastore',
   EvolutionPublicIp: 'evolutionPublicIp',
   EvolutionArtifactRegistry: 'evolutionArtifactRegistry',
   EvolutionManagedTrino: 'evolutionManagedTrino',
