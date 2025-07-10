@@ -79,7 +79,7 @@ export function ItemList({
   }, [computedValues.itemWidth, showItems]);
 
   useEffect(() => {
-    if (!(autoSwipe && infiniteScroll)) {
+    if (!autoSwipe) {
       return;
     }
 
@@ -99,7 +99,7 @@ export function ItemList({
     timerRef.current = setInterval(() => handleAutoSwipe(), autoSwipe * 1000);
 
     return () => clearInterval(timerRef.current);
-  }, [autoSwipe, computedValues.itemWidth, infiniteScroll, scrollBy, scrollLeft]);
+  }, [autoSwipe, computedValues.itemWidth, scrollBy, scrollLeft]);
 
   const handleScroll: UIEventHandler<HTMLDivElement> = event => {
     const newScrollLeft = event.currentTarget.scrollLeft;

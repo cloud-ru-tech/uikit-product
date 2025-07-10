@@ -49,7 +49,7 @@ export function ProductsWidget({
       <AdaptiveCarousel
         layoutType={layoutType}
         gap='8px'
-        infiniteScroll
+        infiniteScroll={!isMobile}
         swipe={false}
         showItems={rowSize}
         arrows={arrows}
