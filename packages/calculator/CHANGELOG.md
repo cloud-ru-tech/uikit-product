@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.22.0 (2025-07-10)
+
+
+### Features
+
+* **SITE-9519:** add new calculator evo trino ([0f0e45c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0f0e45cbd0400208ffba7e8dba515452a0c43ce7))
+
+
+
+
+
 ## 0.21.17 (2025-07-08)
 
 
