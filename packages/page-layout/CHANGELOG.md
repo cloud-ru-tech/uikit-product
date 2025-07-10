@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.19.1 (2025-07-10)
+
+
+### Bug Fixes
+
+* **PDS-2595:** upd button component to fix styles order ([29d1948](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/29d19485ff6d1922e248e75ca7cd588a9ad7d131))
+
+
+
+
+
 # 0.19.0 (2025-07-09)
 
 
