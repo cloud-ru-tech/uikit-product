@@ -22,7 +22,6 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
     "plugins": [
       {
         "name": "typescript-plugin-css-modules",

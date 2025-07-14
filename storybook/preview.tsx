@@ -1,4 +1,4 @@
-import './global.scss';
+import './styles.module.scss';
 
 import {
   PARAM_CAN_ADD_CUSTOM_BRAND_KEY,
