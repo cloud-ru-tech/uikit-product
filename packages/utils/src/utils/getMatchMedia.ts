@@ -1,38 +1,38 @@
 import { isBrowser } from '@snack-uikit/utils';
 
-import { CSS_BREAKPOINTS, QueriesTitle } from '../constants/adaptive';
-import { MatchMedia } from '../types';
+import { ADAPTIVE_QUERIES, INITIAL_ADAPTIVE_QUERIES_VALUE } from '../constants/adaptive';
+import { DISPLAY_MODE_QUERIES, INITIAL_DISPLAY_MODE_QUERIES_VALUE } from '../constants/displayMode';
+import { MatchMediaGeneric } from '../types';
 
-const QUERIES: Record<QueriesTitle, string> = {
-  [QueriesTitle.IsMobile]: CSS_BREAKPOINTS.mobile,
-  [QueriesTitle.IsTablet]: CSS_BREAKPOINTS.tablet,
-  [QueriesTitle.IsSmallDesktop]: CSS_BREAKPOINTS.smallDesktop,
-  [QueriesTitle.IsDesktop]: CSS_BREAKPOINTS.desktop,
-  [QueriesTitle.IsLarge]: CSS_BREAKPOINTS.large,
-};
-
-const INITIAL_QUERIES_VALUE = {
-  [QueriesTitle.IsMobile]: false,
-  [QueriesTitle.IsTablet]: false,
-  [QueriesTitle.IsSmallDesktop]: false,
-  [QueriesTitle.IsDesktop]: false,
-  [QueriesTitle.IsLarge]: false,
-};
-
-const getMediaQueries = () =>
-  Object.values(QueriesTitle).reduce(
-    (acc, key) => ({ ...acc, [key]: isBrowser() ? globalThis.matchMedia(QUERIES[key]) : undefined }),
-    {} as Record<QueriesTitle, MediaQueryList>,
+function getMediaQueries<T extends string>({ queryValues }: { queryValues: Record<T, string> }) {
+  return Object.keys(queryValues).reduce(
+    (acc, key) => ({
+      ...acc,
+      [key]: isBrowser() ? globalThis.matchMedia(queryValues[key as T]) : undefined,
+    }),
+    {} as Record<T, MediaQueryList>,
   );
+}
 
-let mediaQueryListCache: Array<[QueriesTitle, MediaQueryList]>;
-export const getMediaQueryList = () => {
-  if (!mediaQueryListCache) {
-    mediaQueryListCache = Object.entries(getMediaQueries()) as Array<[QueriesTitle, MediaQueryList]>;
-  }
+export function getMediaQueryListGeneric<T extends string>({ queryValues }: { queryValues: Record<T, string> }) {
+  return Object.entries(getMediaQueries({ queryValues })) as Array<[T, MediaQueryList]>;
+}
 
-  return mediaQueryListCache;
-};
+export function getMatchMediaGeneric<T extends string>({
+  queryValues,
+  initialValues,
+}: {
+  queryValues: Record<T, string>;
+  initialValues: MatchMediaGeneric<T>;
+}) {
+  return getMediaQueryListGeneric<T>({ queryValues }).reduce(
+    (acc, [key, q]) => ({ ...acc, [key]: q?.matches || false }),
+    initialValues,
+  );
+}
 
-export const getMatchMedia = (): MatchMedia =>
-  getMediaQueryList().reduce((acc, [key, q]) => ({ ...acc, [key]: q?.matches || false }), INITIAL_QUERIES_VALUE);
+export const getAdaptiveMatchMedia = () =>
+  getMatchMediaGeneric({ queryValues: ADAPTIVE_QUERIES, initialValues: INITIAL_ADAPTIVE_QUERIES_VALUE });
+
+export const getDisplayModeMatchMedia = () =>
+  getMatchMediaGeneric({ queryValues: DISPLAY_MODE_QUERIES, initialValues: INITIAL_DISPLAY_MODE_QUERIES_VALUE });

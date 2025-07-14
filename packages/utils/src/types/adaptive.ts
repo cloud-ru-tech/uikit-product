@@ -1,8 +1,8 @@
 import { ValueOf } from '@snack-uikit/utils';
 
-import { LAYOUT_TYPE, QueriesTitle } from '../constants/adaptive';
+import { LAYOUT_TYPE } from '../constants/adaptive';
 
-export type MatchMedia = Record<QueriesTitle, boolean>;
+export type MatchMediaGeneric<T extends string> = Record<T, boolean>;
 
 export type LayoutType = ValueOf<typeof LAYOUT_TYPE>;
 

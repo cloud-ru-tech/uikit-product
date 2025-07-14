@@ -5,6 +5,7 @@ export * from './extractDataProps';
 export * from './extractDataTestProps';
 export * from './extractSupportProps';
 export * from './getAdaptive';
+export * from './getDisplayMode';
 export * from './getMatchMedia';
 export * from './getUserAgentInfo';
 export * from './keyboardSelectHandler';

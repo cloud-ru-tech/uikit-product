@@ -1,7 +1,8 @@
-import { LayoutType, MatchMedia } from '../types/adaptive';
+import { AdaptiveQueriesTitle } from '../constants/adaptive';
+import { LayoutType, MatchMediaGeneric } from '../types/adaptive';
 import { getUserAgentInfo } from './getUserAgentInfo';
 
-export function getAdaptive({ isMobile }: MatchMedia) {
+export function getAdaptive({ isMobile }: MatchMediaGeneric<AdaptiveQueriesTitle>) {
   const { device } = getUserAgentInfo();
 
   let layoutType: LayoutType;

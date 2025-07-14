@@ -13,7 +13,14 @@ export const CSS_BREAKPOINTS = {
   large: `(min-width: ${Adaptive.desktop + 1}px)`,
 };
 
-export enum QueriesTitle {
+export const LAYOUT_TYPE = {
+  Mobile: 'mobile',
+  Tablet: 'tablet',
+  Desktop: 'desktop',
+  DesktopSmall: 'desktopSmall',
+} as const;
+
+export enum AdaptiveQueriesTitle {
   IsMobile = 'isMobile',
   IsTablet = 'isTablet',
   IsSmallDesktop = 'isSmallDesktop',
@@ -21,9 +28,18 @@ export enum QueriesTitle {
   IsLarge = 'isLarge',
 }
 
-export const LAYOUT_TYPE = {
-  Mobile: 'mobile',
-  Tablet: 'tablet',
-  Desktop: 'desktop',
-  DesktopSmall: 'desktopSmall',
-} as const;
+export const ADAPTIVE_QUERIES: Record<AdaptiveQueriesTitle, string> = {
+  [AdaptiveQueriesTitle.IsMobile]: CSS_BREAKPOINTS.mobile,
+  [AdaptiveQueriesTitle.IsTablet]: CSS_BREAKPOINTS.tablet,
+  [AdaptiveQueriesTitle.IsSmallDesktop]: CSS_BREAKPOINTS.smallDesktop,
+  [AdaptiveQueriesTitle.IsDesktop]: CSS_BREAKPOINTS.desktop,
+  [AdaptiveQueriesTitle.IsLarge]: CSS_BREAKPOINTS.large,
+};
+
+export const INITIAL_ADAPTIVE_QUERIES_VALUE = {
+  [AdaptiveQueriesTitle.IsMobile]: false,
+  [AdaptiveQueriesTitle.IsTablet]: false,
+  [AdaptiveQueriesTitle.IsSmallDesktop]: false,
+  [AdaptiveQueriesTitle.IsDesktop]: false,
+  [AdaptiveQueriesTitle.IsLarge]: false,
+};
