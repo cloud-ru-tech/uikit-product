@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-chips",
   "title": "Mobile Chips",
-  "version": "0.8.9",
+  "version": "0.8.10",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,9 +32,9 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "13.0.3",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.8.0",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.4.41",
+    "@sbercloud/uikit-product-icons": "13.0.4",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.8.1",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.4.42",
     "@sbercloud/uikit-product-utils": "4.0.0",
     "@snack-uikit/button": "0.19.11",
     "@snack-uikit/calendar": "0.12.5",
