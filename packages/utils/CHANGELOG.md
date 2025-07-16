@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.0.0 (2025-07-16)
+
+
+### BREAKING CHANGES
+
+
+* **FF-6924:** getMatchMedia renamed to getAdaptiveMatchMedia; useMatchMedia renamed to useAdaptiveMatchMedia; add getMatchMediaGeneric, useMatchMediaGeneric, getDisplayMode, useDisplayMode ([7a094b9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7a094b99a7b7f98691f936019a2231dc1529fa2b))
+
+
+
+
 # 4.0.0 (2025-06-27)
 
 

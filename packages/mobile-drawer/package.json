@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-drawer",
   "title": "Mobile Drawer",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,8 +32,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "13.0.4",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.4.42",
+    "@sbercloud/uikit-product-icons": "13.0.5",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.4.43",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/scroll": "0.9.3",
     "@snack-uikit/typography": "0.8.4",

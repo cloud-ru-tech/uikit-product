@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-utils",
   "title": "Utils",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "sideEffects": [
     "*.css",
     "*.woff",
