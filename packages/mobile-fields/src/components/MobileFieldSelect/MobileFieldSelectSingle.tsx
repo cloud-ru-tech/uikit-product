@@ -100,7 +100,8 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
 
     const { flattenItems } = useMemo(() => kindFlattenItems({ items }), [items]);
 
-    const searchable = (searchableProp && Object.values(flattenItems).length > 5) || autocomplete;
+    const searchable =
+      (searchableProp && Object.values(flattenItems).length > 5) || autocomplete || Boolean(addOptionByEnter);
 
     useEffect(() => {
       if (
@@ -219,6 +220,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
               ? {
                   value: inputValue,
                   onChange: setInputValue,
+                  onKeyDown: handleOnKeyDown(),
                 }
               : undefined
           }
@@ -273,7 +275,6 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
               value={selectedOptionFormatter(selectedItem)}
               readonly
               data-test-id='field-select__input'
-              onKeyDown={handleOnKeyDown()}
               onBlur={handleBlur}
               className={styles.readonlyCursor}
             />
