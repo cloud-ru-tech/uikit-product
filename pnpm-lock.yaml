@@ -1168,8 +1168,8 @@ importers:
         specifier: 0.8.4
         version: 0.8.4(react@18.2.0)
       '@snack-uikit/utils':
-        specifier: 3.9.0
-        version: 3.9.0(react@18.2.0)
+        specifier: 3.10.1
+        version: 3.10.1(react@18.2.0)
       classnames:
         specifier: 2.5.1
         version: 2.5.1
@@ -5201,6 +5201,9 @@ packages:
 
   '@snack-uikit/utils@3.10.0':
     resolution: {integrity: sha512-uq5v68ygYev3McN3cAwXyS9hVnxeCRLz4rK1KJdCTiUeJJJuLurZeRFOGBD8mzBNIvbDc2RaDcrvRrBe/zAizw==}
+
+  '@snack-uikit/utils@3.10.1':
+    resolution: {integrity: sha512-xAoxHrVi4O8/4z5ge1fCBuMdEQFsdeOSk38Ng+stgaj/lPiTJze+zdUN7fFXDIOgxvEqtHlWXdwzNcviktfk9Q==}
 
   '@snack-uikit/utils@3.4.0':
     resolution: {integrity: sha512-wvrtKmfYBZTZouXVHoSUYIEyRP5uY1gSbj3BEMtT+3IpO5Hroq3010ViqfUKykTmEhBc2ilJFjRUBEBdyCVesg==}
@@ -18946,6 +18949,13 @@ snapshots:
       - react
 
   '@snack-uikit/utils@3.10.0(react@18.2.0)':
+    dependencies:
+      react-swipeable: 7.0.2(react@18.2.0)
+      uncontrollable: 8.0.4(react@18.2.0)
+    transitivePeerDependencies:
+      - react
+
+  '@snack-uikit/utils@3.10.1(react@18.2.0)':
     dependencies:
       react-swipeable: 7.0.2(react@18.2.0)
       uncontrollable: 8.0.4(react@18.2.0)

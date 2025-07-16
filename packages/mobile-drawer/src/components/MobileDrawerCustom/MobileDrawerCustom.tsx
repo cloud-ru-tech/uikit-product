@@ -5,7 +5,7 @@ import RcDrawer from 'rc-drawer';
 import { PropsWithChildren, useEffect } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { extractSupportProps, usePopstateSubscription, WithSupportProps } from '@snack-uikit/utils';
+import { extractSupportProps, useModalOpenState, WithSupportProps } from '@snack-uikit/utils';
 
 import { MODAL_MODE, POSITION, SIZE, SIZE_AS_VALUES } from '../../constants';
 import {
@@ -85,7 +85,9 @@ export function MobileDrawerCustom({
     onClose();
   };
 
-  usePopstateSubscription(() => open && handleClose(), Boolean(closeOnPopstate));
+  useModalOpenState(open, () => hasSwipe && handleClose(), {
+    closeOnPopstate,
+  });
 
   const { swipeRef, drawerStyles, maskStyles, drawerMotionProps, swipeProps, showPointer } = useSwipeProps({
     position,
