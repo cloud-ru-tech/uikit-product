@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-header",
   "title": "Siteheader",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@sbercloud/uikit-product-icons": "13.0.5",
-    "@sbercloud/uikit-product-mobile-modal": "0.8.2",
+    "@sbercloud/uikit-product-mobile-modal": "0.8.3",
     "@sbercloud/uikit-product-site-layout": "0.1.2",
     "@sbercloud/uikit-product-utils": "5.0.0",
     "@snack-uikit/dropdown": "0.4.8",

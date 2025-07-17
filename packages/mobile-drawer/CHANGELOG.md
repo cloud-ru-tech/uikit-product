@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-07-17)
+
+
+### Features
+
+* **PDS-2594:** add closeWatcher ([a3c5cae](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a3c5caeb57bb7e94771454bfff6fad91808c752d))
+
+
+
+
+
 ## 0.7.2 (2025-07-16)
 
 ### Only dependencies have been changed
