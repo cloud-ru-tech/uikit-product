@@ -13,8 +13,8 @@ export function getDisplayMode(matchMedia: MatchMediaGeneric<keyof typeof DISPLA
       return DISPLAY_MODES.Browser;
     }
 
-    if (matchMedia.isStandalone) {
-      return DISPLAY_MODES.Standalone;
+    if (matchMedia.isPwa) {
+      return DISPLAY_MODES.Pwa;
     }
 
     if (matchMedia.isFullscreen) {
