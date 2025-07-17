@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-navbar",
   "title": "Site Navbar",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -31,7 +31,7 @@
   ],
   "license": "UNLICENSED",
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "5.0.0",
+    "@sbercloud/uikit-product-utils": "5.0.1",
     "@snack-uikit/divider": "3.2.3",
     "@snack-uikit/typography": "0.8.4",
     "classnames": "2.5.1",

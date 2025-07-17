@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.1 (2025-07-17)
+
+
+### Bug Fixes
+
+* **FF-6924:** rename standalone mode to pwa ([330528d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/330528de63df47f2a72dfa269337d3714b1176c1))
+
+
+
+
+
 # 5.0.0 (2025-07-16)
 
 
