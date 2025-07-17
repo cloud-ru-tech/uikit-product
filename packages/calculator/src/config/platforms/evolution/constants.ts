@@ -16,6 +16,7 @@ export const EVOLUTION_PRODUCT = {
   EvolutionPublicIp: 'evolutionPublicIp',
   EvolutionArtifactRegistry: 'evolutionArtifactRegistry',
   EvolutionManagedTrino: 'evolutionManagedTrino',
+  EvolutionManagedRedis: 'evolutionManagedRedis',
 } as const;
 
 const GuaranteedPartItem = {
@@ -58,3 +59,21 @@ export const guaranteedPartVCpuToRamMap: Record<string, Record<string, number[]>
     '64': [128, 256],
   },
 };
+
+export enum DeploymentMode {
+  Standard = 'standart',
+  Business = 'business',
+}
+
+export const deploymentModes = [
+  {
+    label: 'Стандарт',
+    value: DeploymentMode.Standard,
+    description: 'Для тестирования и несложных приложений',
+  },
+  {
+    label: 'Бизнес',
+    value: DeploymentMode.Business,
+    description: 'Для высоконагруженных сервисов',
+  },
+];

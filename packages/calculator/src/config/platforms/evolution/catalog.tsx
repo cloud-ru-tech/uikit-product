@@ -93,6 +93,7 @@ export const EVOLUTION_CATALOG: CatalogConfig['catalog'] = {
         EVOLUTION_PRODUCT.EvolutionArenadataDb,
         EVOLUTION_PRODUCT.EvolutionManagedTrino,
         EVOLUTION_PRODUCT.EvolutionManagedMetastore,
+        EVOLUTION_PRODUCT.EvolutionManagedRedis,
       ],
     },
     {

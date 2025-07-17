@@ -10,6 +10,7 @@ import {
   MetastoreSVG,
   MlInferenceSVG,
   PublicIpSVG,
+  RedisSVG,
   S3StorageSVG,
   SnatSVG,
   TrinoSVG,
@@ -37,6 +38,7 @@ import {
   EVOLUTION_STORAGE_S3_FORM_CONFIG,
   EVOLUTION_STORAGE_S3_FREE_TIER_FORM_CONFIG,
 } from './product-config';
+import { EVOLUTION_MANAGED_REDIS_CONFIG } from './product-config/EvolutionManagedRedis';
 
 export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
   [EVOLUTION_PRODUCT.EvolutionCloudServer]: {
@@ -101,6 +103,16 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_MANAGED_TRINO_CONFIG,
     icon: TrinoSVG,
     dataTestId: 'evolutionManagedTrino',
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionManagedRedis]: {
+    id: EVOLUTION_PRODUCT.EvolutionManagedRedis,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Managed Redis®',
+    caption: 'Управляемая база данных Redis®',
+    formConfig: EVOLUTION_MANAGED_REDIS_CONFIG,
+    icon: RedisSVG,
+    dataTestId: 'EvolutionManagedRedis',
     enableConnectToConsole: true,
   },
   [EVOLUTION_PRODUCT.EvolutionStorageS3]: {

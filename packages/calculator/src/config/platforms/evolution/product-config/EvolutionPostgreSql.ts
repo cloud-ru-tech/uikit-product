@@ -1,23 +1,6 @@
 import { CONTROL, FormConfig } from '../../../../components';
 import { generateRamItems } from '../../../utils';
-
-enum DeploymentMode {
-  Standard = 'standart',
-  Business = 'business',
-}
-
-const deploymentModes = [
-  {
-    label: 'Стандарт',
-    value: DeploymentMode.Standard,
-    description: 'Для тестирования и несложных приложений',
-  },
-  {
-    label: 'Бизнес',
-    value: DeploymentMode.Business,
-    description: 'Для высоконагруженных сервисов',
-  },
-];
+import { DeploymentMode, deploymentModes } from '../constants';
 
 enum ClusterType {
   Single = 'single',
