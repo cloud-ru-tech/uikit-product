@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.7 (2025-07-18)
+
+
+### Bug Fixes
+
+* **PDS-2121:** fix addOptionByEnter prop ([8c6a0df](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8c6a0df31037a74e758823213c1b80cc7e3ed23e))
+
+
+
+
+
 ## 0.10.6 (2025-07-17)
 
 ### Only dependencies have been changed
