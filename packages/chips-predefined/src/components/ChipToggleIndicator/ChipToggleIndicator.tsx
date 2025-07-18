@@ -7,7 +7,7 @@ import { WithSupportProps } from '@snack-uikit/utils';
 
 import styles from './styles.module.scss';
 
-export type ChipsToggleIndicatorProps = WithSupportProps<
+export type ChipToggleIndicatorProps = WithSupportProps<
   Pick<ChipToggleProps, 'label' | 'onChange' | 'checked' | 'className' | 'disabled'> & {
     available?: boolean;
     availableTip?: ReactNode;
@@ -15,13 +15,13 @@ export type ChipsToggleIndicatorProps = WithSupportProps<
   }
 >;
 
-export function ChipsToggleIndicator({
+export function ChipToggleIndicator({
   available,
   availableTip,
   disabledTip,
   disabled,
   ...props
-}: ChipsToggleIndicatorProps) {
+}: ChipToggleIndicatorProps) {
   const tipConfig = useMemo(() => {
     const isOpen = (available && availableTip) || (disabled && disabledTip);
 
@@ -36,7 +36,7 @@ export function ChipsToggleIndicator({
     <Tooltip {...tipConfig}>
       <ChipToggle
         {...props}
-        className={styles.chipsToggleIndicator}
+        className={styles.chipToggleIndicator}
         icon={available ? <StatusIndicator size='xs' appearance='primary' /> : undefined}
         size='s'
         disabled={disabled}

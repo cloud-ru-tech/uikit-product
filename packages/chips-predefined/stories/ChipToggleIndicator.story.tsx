@@ -4,11 +4,11 @@ import { useState } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ChipsToggleIndicator, ChipsToggleIndicatorProps } from '../src';
+import { ChipToggleIndicator, ChipToggleIndicatorProps } from '../src';
 
 const meta: Meta = {
-  title: 'Console/Chips Predefined',
-  component: ChipsToggleIndicator,
+  title: 'Console/Chips Predefined/Chip Toggle Indicator',
+  component: ChipToggleIndicator,
 };
 export default meta;
 
@@ -21,7 +21,7 @@ const tipProps = {
   ),
 };
 
-const Template: StoryFn<ChipsToggleIndicatorProps> = ({ ...args }) => {
+const Template: StoryFn<ChipToggleIndicatorProps> = ({ ...args }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
@@ -34,15 +34,15 @@ const Template: StoryFn<ChipsToggleIndicatorProps> = ({ ...args }) => {
         gap: '4px',
       }}
     >
-      <ChipsToggleIndicator {...args} checked={isChecked} onChange={setIsChecked} />
-      <ChipsToggleIndicator label='24' onChange={() => {}} checked={true} {...tipProps} available />
-      <ChipsToggleIndicator label='32' onChange={() => {}} checked={false} {...tipProps} />
-      <ChipsToggleIndicator label='64-256' onChange={() => {}} checked={false} {...tipProps} disabled />
+      <ChipToggleIndicator {...args} checked={isChecked} onChange={setIsChecked} />
+      <ChipToggleIndicator label='24' onChange={() => {}} checked={true} {...tipProps} available />
+      <ChipToggleIndicator label='32' onChange={() => {}} checked={false} {...tipProps} />
+      <ChipToggleIndicator label='64-256' onChange={() => {}} checked={false} {...tipProps} disabled />
     </div>
   );
 };
 
-export const chipsPredefined: StoryObj<ChipsToggleIndicatorProps> = {
+export const chipToggleIndicator: StoryObj<ChipToggleIndicatorProps> = {
   render: Template,
   args: {
     label: '16',
