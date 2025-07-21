@@ -30,6 +30,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "13.0.6",
     "@sbercloud/uikit-product-mobile-dropdown": "0.8.4",
+    "@sbercloud/uikit-product-mobile-fields": "0.10.7",
     "@sbercloud/uikit-product-mobile-modal": "0.8.4",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.44",
     "@sbercloud/uikit-product-utils": "5.0.1",

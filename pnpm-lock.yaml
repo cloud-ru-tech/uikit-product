@@ -673,6 +673,9 @@ importers:
       '@sbercloud/uikit-product-mobile-dropdown':
         specifier: 0.8.4
         version: link:../mobile-dropdown
+      '@sbercloud/uikit-product-mobile-fields':
+        specifier: 0.10.7
+        version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
         specifier: 0.8.4
         version: link:../mobile-modal
