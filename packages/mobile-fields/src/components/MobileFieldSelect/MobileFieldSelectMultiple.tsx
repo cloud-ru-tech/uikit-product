@@ -59,6 +59,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
       search,
       enableFuzzySearch = true,
       autocomplete = false,
+      autoFocus,
       prefixIcon,
       prefix,
       postfix,
@@ -282,6 +283,7 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
                     data-test-id='field-select__input'
                     onBlur={handleBlur}
                     className={styles.readonlyCursor}
+                    autoFocus={autoFocus}
                   />
                 </div>
               </div>

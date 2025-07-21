@@ -20,9 +20,10 @@
 | onFocus | `FocusEventHandler<HTMLInputElement>` | - | Колбек обработки получения фокуса |
 | onBlur | `FocusEventHandler<HTMLInputElement>` | - | Колбек обработки потери фокуса |
 | autoComplete | `string \| boolean` | false | Включен ли автокомплит для поля |
+| autoFocus | `boolean` | false | Включен ли авто-фокус для поля |
 | onPaste | `ClipboardEventHandler<HTMLInputElement>` | - | Колбек обработки вставки значения |
 | spellCheck | `boolean` | true | Значение атрибута spellcheck (проверка орфографии) |
-| inputMode | enum InputMode: `"text"`, `"decimal"`, `"numeric"`, `"tel"`, `"search"`, `"email"`, `"url"` | - | Режим работы экранной клавиатуры |
+| inputMode | enum InputMode: `"text"`, `"decimal"`, `"numeric"`, `"tel"`, `"search"`, `"email"`, `"url"`, `"none"` | - | Режим работы экранной клавиатуры |
 | pattern | `string` | - | Регулярное выражение валидного инпута |
 | className | `string` | - | CSS-класс |
 | label | `string` | - | Лейбл |
@@ -81,6 +82,7 @@
 | readonly | `boolean` | - | Является ли поле доступным только на чтение |
 | onFocus | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек получения фокуса |
 | onBlur | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек потери фокуса |
+| autoFocus | `boolean` | - | Включен ли авто-фокус |
 | onKeyDown | `KeyboardEventHandler<HTMLTextAreaElement>` | - | Колбек нажатия клавиши клавиатуры |
 | className | `string` | - | CSS-класс |
 | caption | `string` | - | Подпись справа от лейбла |
@@ -117,6 +119,7 @@
 | readonly | `boolean` | - | Является ли поле доступным только на чтение |
 | onFocus | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек получения фокуса |
 | onBlur | `FocusEventHandler<HTMLTextAreaElement>` | - | Колбек потери фокуса |
+| autoFocus | `boolean` | - | Включен ли авто-фокус |
 | onKeyDown | `KeyboardEventHandler<HTMLTextAreaElement>` | - | Колбек нажатия клавиши клавиатуры |
 | className | `string` | - | CSS-класс |
 | caption | `string` | - | Подпись справа от лейбла |

@@ -26,7 +26,7 @@ import { useCopyButton, useDateField, useFocusHandlers, useHandlers } from '../.
 import { getValidationState } from '../../utils/getValidationState';
 import styles from './styles.module.scss';
 
-type InputProps = Pick<InputPrivateProps, 'id' | 'name' | 'disabled' | 'readonly' | 'onFocus' | 'onBlur'>;
+type InputProps = Pick<InputPrivateProps, 'id' | 'name' | 'disabled' | 'readonly' | 'onFocus' | 'onBlur' | 'autoFocus'>;
 
 type WrapperProps = Pick<
   FieldDecoratorProps,
@@ -102,6 +102,7 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
       buildCellProps,
       error,
       mode,
+      autoFocus,
       ...rest
     },
     ref,
@@ -362,6 +363,7 @@ export const MobileFieldDate = forwardRef<HTMLInputElement, MobileFieldDateProps
               inputMode='numeric'
               id={id}
               name={name}
+              autoFocus={autoFocus}
               data-test-id='field-date__input'
             />
           </FieldContainerPrivate>
