@@ -404,7 +404,10 @@ export const en_GB = {
   },
   Quota: {
     peace: 'pcs.',
+    gb: 'GB',
+    unlimited: 'Unlimited',
     created: 'Created',
+    filled: 'Filled',
     available: 'Available by quota',
     exceeded: 'Quota exhausted',
     increase: 'Increase',

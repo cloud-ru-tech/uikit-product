@@ -7,7 +7,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { QuotaCard, QuotaDropdown, QuotaDropdownProps } from '../src';
-import { QUOTA_CARD_DEFAULT_PROPS } from './contants';
+import { QUOTA_CARD_DEFAULT_PROPS } from './constants';
 import styles from './styles.module.scss';
 
 const meta: Meta = {
@@ -41,6 +41,7 @@ function Template({ cardsCounter, ...args }: StoryProps) {
               {...QUOTA_CARD_DEFAULT_PROPS}
               key={idx}
               loading={idx % 3 === 0}
+              type={idx % 2 === 0 ? 'instances' : 'value'}
               limit={idx % 3 === 2 ? 0 : QUOTA_CARD_DEFAULT_PROPS.limit}
               increaseLink={{
                 href: '#',
@@ -56,8 +57,7 @@ export const quotaDropdown: StoryObj<StoryProps> = {
   render: Template,
 
   args: {
-    title: 'Title quota',
-    tip: 'tip',
+    title: 'В текущем проекте',
     description: 'current-project-name',
     dataError: false,
     placement: 'bottom-end',
@@ -67,9 +67,6 @@ export const quotaDropdown: StoryObj<StoryProps> = {
   argTypes: {
     cardsCounter: {
       name: '[Stories]: demo quota cards count',
-    },
-    tip: {
-      type: 'string',
     },
   },
 

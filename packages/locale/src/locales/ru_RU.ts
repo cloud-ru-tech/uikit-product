@@ -405,7 +405,10 @@ export const ru_RU: typeof en_GB = {
   },
   Quota: {
     peace: 'шт.',
+    gb: 'ГБ',
     created: 'Создано',
+    filled: 'Занято',
+    unlimited: 'Неограниченно',
     available: 'Доступно по квоте',
     exceeded: 'Квота исчерпана',
     increase: 'Увеличить',

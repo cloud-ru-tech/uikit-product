@@ -1,9 +1,11 @@
-import { ReactNode, useState } from 'react';
+import { Children, isValidElement, ReactNode, useMemo, useState } from 'react';
 
 import { ButtonDropdown, ButtonDropdownProps } from '@sbercloud/uikit-product-button-predefined';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { WithSupportProps } from '@sbercloud/uikit-product-utils';
 
+import { checkExceeded } from '../../utils';
+import { QuotaCardProps } from '../QuotaCard';
 import { QuotaDropdownContent } from './components';
 
 export type QuotaDropdownProps = WithSupportProps<{
@@ -11,9 +13,7 @@ export type QuotaDropdownProps = WithSupportProps<{
   title: string;
   /** Описание */
   description?: string;
-  /** Тултип */
-  tip?: ReactNode;
-  /** Тултип */
+  /** Quota cards */
   children: ReactNode;
   /** Флаг наличия ошибки при загрузке квот */
   dataError?: boolean;
@@ -28,6 +28,23 @@ export function QuotaDropdown({ placement = 'bottom-end', className, ...props }:
   const [open, setOpen] = useState<boolean>(false);
   const { t } = useLocale('Quota');
 
+  const quotaExceededCount = useMemo(
+    () =>
+      Children.toArray(props.children).reduce<number>(
+        (count, child) =>
+          isValidElement<QuotaCardProps>(child) &&
+          !child?.props?.loading &&
+          !child?.props?.unlimited &&
+          checkExceeded((child?.props?.limit ?? 0) - (child?.props?.created ?? 0))
+            ? count + 1
+            : count,
+        0,
+      ),
+    [props.children],
+  );
+
+  const isQuotaExceededCountVisible = !props.dataError && quotaExceededCount > 0;
+
   return (
     <ButtonDropdown
       open={open}
@@ -35,6 +52,7 @@ export function QuotaDropdown({ placement = 'bottom-end', className, ...props }:
       onOpenChange={setOpen}
       label={t('quotas')}
       className={className}
+      counter={isQuotaExceededCountVisible ? { appearance: 'red', value: quotaExceededCount } : undefined}
       content={<QuotaDropdownContent {...props} />}
     />
   );
