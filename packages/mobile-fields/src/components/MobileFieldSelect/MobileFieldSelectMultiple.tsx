@@ -278,8 +278,8 @@ export const MobileFieldSelectMultiple: ForwardRefExoticComponent<
                     placeholder={!selectedItems || !selectedItems.length ? placeholder : undefined}
                     ref={mergeRefs(ref, localRef)}
                     onChange={undefined}
-                    value={''}
-                    readonly
+                    value=''
+                    inputMode='none'
                     data-test-id='field-select__input'
                     onBlur={handleBlur}
                     className={styles.readonlyCursor}

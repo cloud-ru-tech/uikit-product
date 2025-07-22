@@ -274,7 +274,7 @@ export const MobileFieldSelectSingle: ForwardRefExoticComponent<
               ref={mergeRefs(ref, localRef)}
               onChange={undefined}
               value={selectedOptionFormatter(selectedItem)}
-              readonly
+              inputMode='none'
               data-test-id='field-select__input'
               onBlur={handleBlur}
               className={styles.readonlyCursor}

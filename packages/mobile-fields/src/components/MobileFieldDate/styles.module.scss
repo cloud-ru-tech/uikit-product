@@ -24,6 +24,11 @@ $icons-sizes: (
   padding-bottom: 8px;
 }
 
+input.readonlyCursor {
+  cursor: pointer;
+  caret-color: transparent;
+}
+
 .calendarWrapper {
   width: 100%;
 
