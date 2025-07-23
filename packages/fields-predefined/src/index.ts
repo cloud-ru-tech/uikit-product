@@ -1,2 +1,2 @@
 export * from './components';
-export { setNonce } from '@snack-uikit/fields';
+export { setNonce } from '@sbercloud/uikit-product-mobile-fields';

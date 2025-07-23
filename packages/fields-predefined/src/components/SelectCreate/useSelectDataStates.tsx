@@ -2,8 +2,8 @@ import { useMemo } from 'react';
 
 import { SearchSVG, UpdateSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
+import { FieldSelectProps } from '@sbercloud/uikit-product-mobile-fields';
 import { ButtonTonal } from '@snack-uikit/button';
-import { FieldSelectProps } from '@snack-uikit/fields';
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 
 import { capitalize } from '../../helpers';

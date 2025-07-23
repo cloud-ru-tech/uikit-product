@@ -2,11 +2,11 @@ import { KeyboardEventHandler, useMemo } from 'react';
 
 import { AttachmentSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
+import { AdaptiveFieldTextArea, FieldTextAreaProps } from '@sbercloud/uikit-product-mobile-fields';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { AttachmentSquareProps } from '@snack-uikit/attachment';
 import { ButtonFunction } from '@snack-uikit/button';
 import { FileUpload, FileUploadProps } from '@snack-uikit/drop-zone';
-import { FieldTextArea, FieldTextAreaProps } from '@snack-uikit/fields';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { FieldSubmitButton } from '../../helperComponents/FieldSubmitButton';
@@ -64,8 +64,9 @@ export function FieldChat({ handleSubmit: handleSubmitProp, value, layoutType, a
     <div className={styles.fieldChat} data-layout-type={layoutType}>
       {isMobile && <Attachments files={files} isMobile={isMobile} />}
 
-      <FieldTextArea
+      <AdaptiveFieldTextArea
         {...props}
+        layoutType={layoutType}
         size={isMobile ? 'l' : 'm'}
         minRows={1}
         maxRows={4}

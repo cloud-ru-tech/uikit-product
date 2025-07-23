@@ -3,9 +3,13 @@ import { forwardRef, KeyboardEventHandler, MouseEvent, useMemo, useState } from 
 
 import { EyeClosedSVG, EyeSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
+import {
+  AdaptiveFieldTextArea,
+  FieldTextAreaProps,
+  getAdaptiveFieldProps,
+} from '@sbercloud/uikit-product-mobile-fields';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction, ButtonOutline } from '@snack-uikit/button';
-import { FieldTextArea, FieldTextAreaProps } from '@snack-uikit/fields';
 import { Tooltip } from '@snack-uikit/tooltip';
 
 import { FieldSubmitButton } from '../../helperComponents/FieldSubmitButton';
@@ -41,13 +45,13 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
       supportUrl,
       onSupportLinkClick,
       onResetContextClick,
-      layoutType,
       disabled,
       className,
       ...props
     },
     ref,
   ) => {
+    const { layoutType, validationState } = props;
     const { t } = useLocale('FieldsPredefined');
     const isTouchDevice = isTouchDeviceHelper(layoutType);
 
@@ -86,6 +90,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
       return (
         <MobileFieldAi
           {...props}
+          {...getAdaptiveFieldProps(props)}
           onSubmit={handleSubmit}
           submitEnabled={isValueValid && !disabled}
           ref={ref}
@@ -101,7 +106,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
           passwordValidation={passwordValidation}
           layoutType={layoutType}
         >
-          <FieldTextArea
+          <AdaptiveFieldTextArea
             {...props}
             ref={ref}
             value={value}
@@ -112,7 +117,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
             className={secure && isValueHidden ? styles.secured : undefined}
             onKeyDown={handleKeyDown}
             spellCheck={!secure}
-            validationState={showPasswordError ? 'error' : props.validationState}
+            validationState={showPasswordError ? 'error' : validationState}
             footer={
               <TextAreaActionsFooter
                 left={

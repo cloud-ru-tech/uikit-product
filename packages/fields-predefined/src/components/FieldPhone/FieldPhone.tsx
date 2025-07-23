@@ -4,8 +4,8 @@ import { ClipboardEventHandler, forwardRef, useEffect, useMemo, useRef, useState
 import { useIMask } from 'react-imask';
 
 import { AdaptiveDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { AdaptiveFieldText, FieldTextProps } from '@sbercloud/uikit-product-mobile-fields';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
-import { FieldText, FieldTextProps } from '@snack-uikit/fields';
 import { useValueControl } from '@snack-uikit/utils';
 
 import { PLACEHOLDER_CHAR } from './constants';
@@ -41,7 +41,6 @@ export type FieldPhoneProps = WithLayoutType<
 export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
   (
     {
-      layoutType,
       value: valueProp,
       onChangeCountry,
       onChange: onChangeProp,
@@ -161,9 +160,9 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
     const showClear = showClearButton && Boolean(unmaskedValue);
 
     return (
-      <FieldText
-        data-test-id='field-phone'
+      <AdaptiveFieldText
         {...rest}
+        data-test-id='field-phone'
         type='tel'
         ref={mergeRefs(ref, localRef, iMaskRef)}
         className={cn(className, styles.fieldPhone)}
@@ -185,7 +184,7 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
                     <AdaptiveDroplist
                       onOpenChange={setOpen}
                       closeDroplistOnItemClick
-                      layoutType={layoutType}
+                      layoutType={rest.layoutType}
                       items={items}
                       selection={{ mode: 'single', onChange: handleChangeSelection, value: country?.id }}
                       scroll={scrollList}
