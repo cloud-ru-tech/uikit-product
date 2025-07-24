@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2025-07-24)
+
+
+### Features
+
+* **FF-6921:** add adaptive versions of all fields ([5ff131f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5ff131f8c815c8dac4459ae6939af5a6ac1bca06))
+* **FF-6921:** add autoFocus property ([093e729](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/093e7296b0a23c53d032f1fdec20fa3a5f1db78f))
+
+
+### BREAKING CHANGES
+
+
+* **FF-6921:** remove inputMode prop from FieldPhone ([6eb84ae](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/6eb84ae12f53a69cb1a03049eb1660e5774f08d3))
+* **FF-6921:** extract layoutType property to the top level ([fafda71](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fafda71bb5a1ee751ffe86dd1a97878c1383e57e))
+
+
+
+
 ## 0.9.10 (2025-07-17)
 
 ### Only dependencies have been changed

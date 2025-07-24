@@ -397,7 +397,7 @@ importers:
         specifier: 0.8.4
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.10.7
+        specifier: 0.11.0
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
         specifier: 0.8.4
@@ -675,7 +675,7 @@ importers:
         specifier: 0.8.4
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.10.7
+        specifier: 0.11.0
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
         specifier: 0.8.4
@@ -2005,7 +2005,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.10.7
+        specifier: 0.11.0
         version: link:../mobile-fields
       '@sbercloud/uikit-product-site-cards':
         specifier: 0.10.18

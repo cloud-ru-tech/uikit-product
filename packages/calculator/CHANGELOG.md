@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.24.0 (2025-07-24)
+
+
+### Features
+
+* **SITE-9532:** add new calculator redis ([e0b9dae](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e0b9daed88474faa390a03c6509604138598f7da))
+
+
+
+
+
 ## 0.23.5 (2025-07-18)
 
 ### Only dependencies have been changed

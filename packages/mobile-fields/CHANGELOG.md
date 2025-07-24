@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.11.0 (2025-07-24)
+
+
+### Bug Fixes
+
+* **FF-6921:** enhance mobile ux ([fd023fe](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fd023fe20b8ebad5e30dabe6a2db57ef96d4b5a7))
+
+
+### Features
+
+* **FF-6921:** add adaptive versions of all fields ([5ff131f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5ff131f8c815c8dac4459ae6939af5a6ac1bca06))
+* **FF-6921:** add autoFocus property ([093e729](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/093e7296b0a23c53d032f1fdec20fa3a5f1db78f))
+
+
+
+
+
 ## 0.10.7 (2025-07-18)
 
 
