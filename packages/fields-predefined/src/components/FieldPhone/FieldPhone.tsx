@@ -26,6 +26,7 @@ export type FieldPhoneProps = WithLayoutType<
     | 'onKeyDown'
     | 'button'
     | 'maxLength'
+    | 'inputMode'
   > & {
     /** Включить скролл для основной части списка стран */
     scrollList?: boolean;

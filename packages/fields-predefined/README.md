@@ -23,7 +23,6 @@
 | autoFocus | `boolean` | false | Включен ли авто-фокус для поля |
 | onPaste | `ClipboardEventHandler<HTMLInputElement>` | - | Колбек обработки вставки значения |
 | spellCheck | `boolean` | true | Значение атрибута spellcheck (проверка орфографии) |
-| inputMode | enum InputMode: `"text"`, `"decimal"`, `"numeric"`, `"tel"`, `"search"`, `"email"`, `"url"`, `"none"` | - | Режим работы экранной клавиатуры |
 | pattern | `string` | - | Регулярное выражение валидного инпута |
 | className | `string` | - | CSS-класс |
 | label | `string` | - | Лейбл |
@@ -62,6 +61,7 @@
 | entityName* | `EntityName` | - | Тип объекта для создания новой опции (в единственном числе вин.падеже для кнопки Создать <entityName> и множественном числе) |
 | createLayoutProps* | `CreateLayoutModalProps \| CreateLayoutDrawerProps` | - | Пропсы передаваемые в модалку или дровер создания новой опции |
 | createLayoutType* | "modal" \| "drawer" | - | По клику на кнопку создания открывать модальное окно или дровер |
+| layoutType* | enum LayoutType: `"mobile"`, `"tablet"`, `"desktop"`, `"desktopSmall"` | - |  |
 | onRefetch | `VoidFunction` | - | Коллбек рефетча запроса на получение списка опций в случае ошибки (при передаче dataError в selectProps). |
 | className | `string` | - | CSS-класс |
 | afterClose | `VoidFunction` | - | Коллбек после закрытия модального окна/дровера |
