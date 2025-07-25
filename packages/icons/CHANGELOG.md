@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 14.0.0 (2025-07-25)
+
+
+### Features
+
+* **PDS-2627:** add new interface icons - cloudFolder, expandWindow, faultTolerantCloud, fullScreen, minimizeWindow, normalScreen, pausePlayer, rewind, rewindAhead, scalebleLeft, soundOff, soundOn ([edbfa80](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/edbfa80359df89778f95d9436c986d09d50379a1))
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2627:** add new icons - CloudFirewall, CloudTable, EnterpriseRouter; icon EvolutionLoRa renamed to EvolutionMlFinetuning ([0bb7321](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0bb732193497951d6b444aaf02714534b4034b7a))
+
+
+
+
 ## 13.0.6 (2025-07-17)
 
 ### Only dependencies have been changed
