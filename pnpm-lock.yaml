@@ -357,6 +357,9 @@ importers:
       '@sbercloud/uikit-product-icons':
         specifier: 14.0.0
         version: link:../icons
+      '@sbercloud/uikit-product-mobile-dropdown':
+        specifier: 0.8.5
+        version: link:../mobile-dropdown
       '@sbercloud/uikit-product-utils':
         specifier: 5.0.1
         version: link:../utils
@@ -1196,6 +1199,9 @@ importers:
       '@sbercloud/uikit-product-utils':
         specifier: 5.0.1
         version: link:../utils
+      '@snack-uikit/dropdown':
+        specifier: 0.5.2
+        version: 0.5.2(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/list':
         specifier: 0.31.1
         version: 0.31.1(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)

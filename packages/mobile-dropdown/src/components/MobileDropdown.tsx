@@ -1,18 +1,20 @@
 import { cloneElement, isValidElement, MouseEvent, PropsWithChildren, ReactNode, useMemo } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
-import { MobileModalCustom } from '@sbercloud/uikit-product-mobile-modal';
+import { MobileModalCustom, MobileModalCustomProps } from '@sbercloud/uikit-product-mobile-modal';
 import { WithSupportProps } from '@snack-uikit/utils';
 
 import styles from './styles.module.scss';
 
 export type MobileDropdownProps = PropsWithChildren<
-  WithSupportProps<{
-    open?: boolean;
-    onOpenChange?(value: boolean): void;
-    content: ReactNode;
-    closeOnPopstate?: boolean;
-  }>
+  WithSupportProps<
+    {
+      open?: boolean;
+      onOpenChange?(value: boolean): void;
+      content: ReactNode;
+      closeOnPopstate?: boolean;
+    } & Pick<MobileModalCustomProps, 'size'>
+  >
 >;
 
 export function MobileDropdown({ open, onOpenChange, children, content, ...rest }: MobileDropdownProps) {

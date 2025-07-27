@@ -1,17 +1,20 @@
 import { ReactNode } from 'react';
 
 import { ChevronDownSVG, ChevronUpSVG } from '@sbercloud/uikit-product-icons';
-import { excludeSupportProps, extractSupportProps } from '@sbercloud/uikit-product-utils';
+import { AdaptiveDropdown, AdaptiveDroplist } from '@sbercloud/uikit-product-mobile-dropdown';
+import { excludeSupportProps, extractSupportProps, WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction, ButtonFunctionProps } from '@snack-uikit/button';
-import { Dropdown, DropdownProps } from '@snack-uikit/dropdown';
-import { Droplist, DroplistProps } from '@snack-uikit/list';
+import { DropdownProps } from '@snack-uikit/dropdown';
+import { DroplistProps } from '@snack-uikit/list';
 
 import { useValueControl } from '../../hooks';
 
-export type ButtonDropdownProps = Omit<ButtonFunctionProps, 'icon' | 'iconPosition'> &
-  (Omit<DropdownProps, 'children'> | Omit<DroplistProps, 'children' | 'size'>);
+export type ButtonDropdownProps = WithLayoutType<
+  Omit<ButtonFunctionProps, 'icon' | 'iconPosition'> &
+    (Omit<DropdownProps, 'children'> | Omit<DroplistProps, 'children' | 'size'>)
+>;
 
-function isDroplistProps(props: ButtonDropdownProps): props is DroplistProps {
+function isDroplistProps(props: ButtonDropdownProps): props is WithLayoutType<DroplistProps> {
   return 'items' in props;
 }
 
@@ -32,20 +35,26 @@ export function ButtonDropdown({
 
   if (isDroplistProps(props)) {
     return (
-      <Droplist
+      <AdaptiveDroplist
         {...(excludeSupportProps(props) as DroplistProps)}
         open={open}
         onOpenChange={onOpenChange}
         size={size === 'xs' ? 's' : size}
+        layoutType={props.layoutType}
       >
         <ButtonFunction size={size} {...props} className={className} {...extractSupportProps(props)} icon={<Icon />} />
-      </Droplist>
+      </AdaptiveDroplist>
     );
   }
 
   return (
-    <Dropdown {...(excludeSupportProps(props) as ContentfulDropdownProps)} open={open} onOpenChange={onOpenChange}>
+    <AdaptiveDropdown
+      {...(excludeSupportProps(props) as ContentfulDropdownProps)}
+      open={open}
+      onOpenChange={onOpenChange}
+      layoutType={props.layoutType}
+    >
       <ButtonFunction size={size} {...props} className={className} {...extractSupportProps(props)} icon={<Icon />} />
-    </Dropdown>
+    </AdaptiveDropdown>
   );
 }
