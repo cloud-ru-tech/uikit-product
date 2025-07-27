@@ -50,26 +50,27 @@ export function SidebarSelect({
     setIsOpen(false);
   };
 
+  const allItems = useMemo(() => [...list, ...footerList], [list, footerList]);
+
+  const shouldShowSearch = allItems.length > 5 || searchValue;
+
   return (
-    <>
-      <MobileDroplist
-        selection={{ mode: 'single', value: selected, onChange: handleSelect }}
-        items={[...list, ...footerList]}
-        open={isOpen}
-        onOpenChange={setIsOpen}
-        collapse={searchValue ? searchCollapseState : collapse || selectedCollapsedState}
-        search={{ value: searchValue, onChange: setSearchValue }}
-        virtualized
-        scrollToSelectedItem
-      >
-        <MobileBlockBasic className={cn(styles.wrapper, className)} {...extractSupportProps(otherProps)}>
-          <TruncateString className={styles.triggerText} text={selectedItem.item?.label || ''} />
+    <MobileDroplist
+      selection={{ mode: 'single', value: selected, onChange: handleSelect }}
+      items={allItems}
+      open={isOpen}
+      onOpenChange={setIsOpen}
+      collapse={searchValue ? searchCollapseState : collapse || selectedCollapsedState}
+      search={shouldShowSearch ? { value: searchValue, onChange: setSearchValue } : undefined}
+      scrollToSelectedItem
+    >
+      <MobileBlockBasic className={cn(styles.wrapper, className)} {...extractSupportProps(otherProps)}>
+        <TruncateString className={styles.triggerText} text={selectedItem.item?.label || ''} />
 
-          {selectedItem.item?.afterContent}
+        {selectedItem.item?.afterContent}
 
-          {isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}
-        </MobileBlockBasic>
-      </MobileDroplist>
-    </>
+        {isOpen ? <ChevronUpSVG /> : <ChevronDownSVG />}
+      </MobileBlockBasic>
+    </MobileDroplist>
   );
 }
