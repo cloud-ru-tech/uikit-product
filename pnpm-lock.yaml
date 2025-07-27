@@ -1032,6 +1032,9 @@ importers:
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.45
         version: link:../mobile-tooltip
+      '@sbercloud/uikit-product-utils':
+        specifier: 5.0.1
+        version: link:../utils
       '@snack-uikit/accordion':
         specifier: 0.10.5
         version: 0.10.5(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)

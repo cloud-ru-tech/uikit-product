@@ -34,6 +34,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "14.0.0",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.45",
+    "@sbercloud/uikit-product-utils": "5.0.1",
     "@snack-uikit/accordion": "0.10.5",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/toggles": "0.13.5",
