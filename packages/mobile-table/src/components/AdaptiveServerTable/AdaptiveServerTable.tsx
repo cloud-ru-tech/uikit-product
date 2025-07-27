@@ -13,8 +13,13 @@ import { useStateControl } from '../hooks';
 import { MobileTable, MobileTableProps } from '../MobileTable';
 import { onSearchDebounced } from '../utils';
 
-type ServerTableProps<TData extends object, TFilters extends FiltersState> = DesktopServerTableProps<TData, TFilters> &
-  Omit<MobileTableProps<TData, TFilters>, 'data'>;
+type ServerTableProps<TData extends object, TFilters extends FiltersState> = Omit<
+  DesktopServerTableProps<TData, TFilters>,
+  'columnsSettings'
+> &
+  Omit<MobileTableProps<TData, TFilters>, 'data'> & {
+    columnsSettings?: DesktopServerTableProps<TData, TFilters>['columnsSettings'];
+  };
 
 export function AdaptiveServerTable<TData extends object, TFilters extends FiltersState>({
   layoutType,
@@ -91,4 +96,4 @@ export function AdaptiveServerTable<TData extends object, TFilters extends Filte
   );
 }
 
-export type { ServerTableProps };
+export type { ServerTableProps, FiltersState };
