@@ -30,9 +30,13 @@ export const AdaptiveAccordionPrimary =
     CollapseBlock: typeof AdaptiveCollapseBlockPrimaryComponent;
     CollapseBlockHeader: typeof CollapseBlockHeader;
   };
+AdaptiveAccordionPrimary.CollapseBlock = AdaptiveCollapseBlockPrimaryComponent;
+AdaptiveAccordionPrimary.CollapseBlockHeader = CollapseBlockHeader;
 
 export const AdaptiveAccordionSecondary =
   AdaptiveAccordionSecondaryComponent as typeof AdaptiveAccordionSecondaryComponent & {
     CollapseBlock: typeof AdaptiveCollapseBlockSecondaryComponent;
     CollapseBlockHeader: typeof CollapseBlockHeader;
   };
+AdaptiveAccordionSecondary.CollapseBlock = AdaptiveCollapseBlockSecondaryComponent;
+AdaptiveAccordionSecondary.CollapseBlockHeader = CollapseBlockHeader;
