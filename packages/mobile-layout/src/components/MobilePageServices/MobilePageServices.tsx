@@ -19,6 +19,7 @@ export type MobilePageServicesProps = WithSupportProps<
       className?: string;
       sidebar?: SidebarSelectProps;
       actions?: ActionsProps['items'];
+      maxVisibleActionsItems?: ActionsProps['maxVisibleItems'];
     }
   >
 >;
@@ -32,6 +33,7 @@ export function MobilePageServices({
   afterHeadline,
   subHeader,
   beforeHeadline,
+  maxVisibleActionsItems,
   ...rest
 }: MobilePageServicesProps) {
   return (
@@ -40,7 +42,7 @@ export function MobilePageServices({
 
       {sidebar && <SidebarSelect {...sidebar} />}
 
-      {actions.length > 0 && <Actions items={actions} />}
+      {actions.length > 0 && <Actions items={actions} maxVisibleItems={maxVisibleActionsItems} />}
 
       <div className={styles.childWrapper}>{children}</div>
     </div>

@@ -21,4 +21,5 @@ type Action = {
 
 export type ActionsProps = {
   items: Action[];
+  maxVisibleItems?: number;
 };

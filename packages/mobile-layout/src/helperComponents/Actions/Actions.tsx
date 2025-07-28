@@ -10,11 +10,11 @@ import { BUTTON_TYPE } from './constants';
 import styles from './styles.module.scss';
 import { ActionsProps } from './types';
 
-export function Actions({ items }: ActionsProps) {
+export function Actions({ items, maxVisibleItems }: ActionsProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const [isOpen, setIsOpen] = useState(false);
-  const { visibleItems, hiddenItems } = useDynamicList({ parentContainerRef: containerRef, items });
+  const { visibleItems, hiddenItems } = useDynamicList({ parentContainerRef: containerRef, items, maxVisibleItems });
 
   return (
     <div className={styles.actionsWrapper} ref={containerRef}>
