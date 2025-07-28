@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-accordion",
   "title": "Mobile Accordion",
-  "version": "0.3.46",
+  "version": "0.4.0",
   "sideEffects": [
     "*.css",
     "*.woff",

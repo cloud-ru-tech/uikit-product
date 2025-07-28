@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2025-07-28)
+
+
+### Features
+
+* **FF-6923:** add AdaptiveAccordionPrimary AdaptiveAccordionSecondary ([0c46f34](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0c46f34c2d7c1cffb2736c7c7c443bb038cbc2d0))
+* **FF-6923:** add AdaptiveInfoGroup ([8bfbf8b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8bfbf8bb8a88f86d2547233c1d18c5218fd96c1f))
+
+
+
+
+
 ## 0.3.46 (2025-07-25)
 
 ### Only dependencies have been changed

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.14.0 (2025-07-28)
+
+
+### Bug Fixes
+
+* **FF-6923:** disabling search for less then 5 items in mobile sidebar ([70aa56f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/70aa56fdc0107c5532ce021f1bf730f3b1a7e99f))
+
+
+### Features
+
+* **FF-6923:** add maxVisibleItems for mobile actions on page services ([f91e7d5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f91e7d55325da06dd9c9afdfaf06453ed3cbc6db))
+
+
+
+
+
 ## 0.13.6 (2025-07-25)
 
 ### Only dependencies have been changed

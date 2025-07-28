@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.15 (2025-07-28)
+
+
+### Bug Fixes
+
+* **FF-6923:** typings ([bdddcb2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bdddcb257758b4d4f3a23a4f8792ca2f6159b31c))
+
+
+
+
+
 ## 0.7.14 (2025-07-25)
 
 ### Only dependencies have been changed

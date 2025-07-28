@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.6.0 (2025-07-28)
+
+
+### Features
+
+* **FF-6923:** add AdaptiveInfoGroup ([8bfbf8b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8bfbf8bb8a88f86d2547233c1d18c5218fd96c1f))
+
+
+
+
+
 ## 0.5.49 (2025-07-25)
 
 ### Only dependencies have been changed

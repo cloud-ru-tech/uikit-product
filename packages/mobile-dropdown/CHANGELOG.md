@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-07-28)
+
+
+### Features
+
+* **FF-6923:** add mobile adaptivity ([336583e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/336583ed16eb0d42e1649a350c32cf33a54a3ac9))
+
+
+
+
+
 ## 0.8.5 (2025-07-25)
 
 ### Only dependencies have been changed
