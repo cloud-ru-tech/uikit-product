@@ -27,6 +27,7 @@
 | confirmText | `string` | - | Текст для подтверждения удаления |
 | hideConfirmCopyButton | `boolean` | - | Скрыть кнопку копирования для текста подтверждения |
 | subtitle | `ReactNode` | - | Подзаголовок |
+| confirmTextVariant | "text" \| "name" | name | Тип текста подтверждения |
 ## MobileDeleteModal
 ### Props
 | name | type | default value | description |
@@ -42,6 +43,7 @@
 | confirmText | `string` | - | Текст для подтверждения удаления |
 | hideConfirmCopyButton | `boolean` | - | Скрыть кнопку копирования для текста подтверждения |
 | subtitle | `ReactNode` | - | Подзаголовок |
+| confirmTextVariant | "text" \| "name" | name | Тип текста подтверждения |
 ## AdaptiveDeleteModal
 ### Props
 | name | type | default value | description |
@@ -58,6 +60,7 @@
 | confirmText | `string` | - | Текст для подтверждения удаления |
 | hideConfirmCopyButton | `boolean` | - | Скрыть кнопку копирования для текста подтверждения |
 | subtitle | `ReactNode` | - | Подзаголовок |
+| confirmTextVariant | "text" \| "name" | - | Тип текста подтверждения |
 ## DefaultRecallModalBody
 ### Props
 | name | type | default value | description |

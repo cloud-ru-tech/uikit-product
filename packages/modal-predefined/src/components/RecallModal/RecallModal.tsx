@@ -81,6 +81,7 @@ export function RecallModal({
                 confirmText={confirmText}
                 hideConfirmCopyButton={hideConfirmCopyButton}
                 labelText={t('recallFieldLabel')}
+                placeholder={t(`enterText.name`)}
                 {...inputProps}
               />
             )}

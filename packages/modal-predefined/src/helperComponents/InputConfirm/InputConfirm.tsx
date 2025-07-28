@@ -1,7 +1,6 @@
 import { forwardRef } from 'react';
 
 import { CopyButton } from '@sbercloud/uikit-product-copy-line';
-import { useLocale } from '@sbercloud/uikit-product-locale';
 import { FieldText } from '@snack-uikit/fields';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
@@ -13,36 +12,33 @@ export type InputConfirmProps = {
   value: string;
   error: string;
   labelText: string;
+  placeholder: string;
   onChange: (newValue: string) => void;
 };
 
 export const InputConfirm = forwardRef<HTMLInputElement, InputConfirmProps>(
-  ({ confirmText, value, error, onChange, hideConfirmCopyButton, labelText }, ref) => {
-    const { t } = useLocale('ModalPredefined');
+  ({ confirmText, value, error, onChange, hideConfirmCopyButton, labelText, placeholder }, ref) => (
+    <div className={styles.wrapper}>
+      <div className={styles.textFieldDescription}>
+        <span className={styles.content}>{labelText}</span>
 
-    return (
-      <div className={styles.wrapper}>
-        <div className={styles.textFieldDescription}>
-          <span className={styles.content}>{labelText}</span>
+        <div className={styles.copyValue}>
+          <TruncateString text={confirmText} variant='middle' />
 
-          <div className={styles.copyValue}>
-            <TruncateString text={confirmText} variant='middle' />
-
-            {!hideConfirmCopyButton && <CopyButton valueToCopy={confirmText} />}
-          </div>
+          {!hideConfirmCopyButton && <CopyButton valueToCopy={confirmText} />}
         </div>
-
-        <FieldText
-          ref={ref}
-          required
-          size='m'
-          placeholder={t('enterName')}
-          value={value}
-          onChange={onChange}
-          hint={error}
-          validationState={error ? 'error' : 'default'}
-        />
       </div>
-    );
-  },
+
+      <FieldText
+        ref={ref}
+        required
+        size='m'
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        hint={error}
+        validationState={error ? 'error' : 'default'}
+      />
+    </div>
+  ),
 );
