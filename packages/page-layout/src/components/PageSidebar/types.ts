@@ -3,18 +3,27 @@ import { AnchorHTMLAttributes, MouseEvent, MouseEventHandler, ReactNode } from '
 import { IconPredefinedProps } from '@snack-uikit/icon-predefined';
 import { TooltipProps } from '@snack-uikit/tooltip';
 
-export type SidebarItem = {
+export type SidebarItemBase = {
   id: string | number;
   label: string;
   'data-test-id'?: string;
   onClick?(e: MouseEvent<HTMLElement>): void;
-  href?: string;
   afterContent?: ReactNode;
   disabledReason?: ReactNode;
   disabledReasonPlacement?: TooltipProps['placement'];
-  items?: SidebarItem[];
   beforeContent?: ReactNode;
 };
+
+export type SidebarItemWithHref = SidebarItemBase & {
+  href: string;
+};
+
+export type SidebarItemWithItems = SidebarItemBase & {
+  // eslint-disable-next-line no-use-before-define
+  items: SidebarItem[];
+};
+
+export type SidebarItem = SidebarItemWithHref | SidebarItemWithItems;
 
 export type Icon = IconPredefinedProps['icon'];
 

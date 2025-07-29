@@ -60,14 +60,21 @@ export function useItemsContent(items: SidebarItem[], onSelect?: (id: string | n
           id,
           label,
           beforeContent,
-          href,
           onClick,
           afterContent,
           disabledReason,
           disabledReasonPlacement,
-          items: newItems,
+          ...rest
         }): ItemProps => {
+          const href = 'href' in rest ? rest.href : undefined;
+          const newItems = 'items' in rest ? rest.items : undefined;
+
           const clickHandler = (event: MouseEvent<HTMLElement>) => {
+            if (href && event?.metaKey) {
+              return;
+            }
+
+            event.preventDefault();
             onClick?.(event);
             onSelect?.(id);
           };
