@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { HeaderContext } from '@tanstack/react-table';
-import { useMemo } from 'react';
+import { HeaderContext, RowSelectionState } from '@tanstack/react-table';
+import { useEffect, useMemo, useState } from 'react';
 
 import { TagRow, TagRowProps } from '@snack-uikit/tag';
 import { toaster } from '@snack-uikit/toaster';
@@ -25,6 +25,7 @@ type StoryProps = Props & {
   rowsAmount: number;
   showActionsColumn?: boolean;
   initialColumnFiltersOpen: boolean;
+  rowSelectionMode?: 'single' | 'multi';
 };
 
 const renderHeader = (ctx: HeaderContext<StubData, unknown>) => `Table column №${ctx.column.id}`;
@@ -186,6 +187,7 @@ function Template({
   className,
   columnFilters,
   initialColumnFiltersOpen,
+  rowSelectionMode,
   ...args
 }: StoryProps) {
   const data = useMemo(() => generateRows(rowsAmount), [rowsAmount]);
@@ -252,8 +254,29 @@ function Template({
     [columnFilters, initialColumnFiltersOpen],
   );
 
+  const [_selectedState, setSelectedState] = useState<RowSelectionState>({});
+
+  useEffect(() => {
+    setSelectedState({});
+  }, [rowSelectionMode]);
+
   return (
-    <MobileTable {...args} columnDefinitions={columns} data={data} className={className} columnFilters={filters} />
+    <MobileTable
+      {...args}
+      columnDefinitions={columns}
+      data={data}
+      className={className}
+      columnFilters={filters}
+      rowSelection={
+        rowSelectionMode
+          ? {
+              multiRow: rowSelectionMode === 'multi',
+              enable: true,
+              onChange: setSelectedState,
+            }
+          : undefined
+      }
+    />
   );
 }
 
@@ -268,6 +291,11 @@ export const table: StoryObj<StoryProps> = {
     columnFilters,
     showActionsColumn: true,
     initialColumnFiltersOpen: false,
+    rowSelection: {
+      enable: true,
+      multiRow: true,
+    },
+    rowSelectionMode: 'multi',
   },
 
   argTypes: {
@@ -290,6 +318,20 @@ export const table: StoryObj<StoryProps> = {
     initialColumnFiltersOpen: {
       name: '[Stories]: Initial show column filters state value',
       controls: { type: 'boolean' },
+    },
+    rowSelection: {
+      name: 'rowSelection',
+      description: 'Disabled for storybook and tests purpose',
+      control: {
+        disable: true,
+      },
+    },
+    rowSelectionMode: {
+      name: '[Stories]: Choose row selection mode',
+      options: [undefined, 'multi', 'single'],
+      control: {
+        type: 'select',
+      },
     },
   },
 

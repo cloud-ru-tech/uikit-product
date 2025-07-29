@@ -1,5 +1,15 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
+.selectionController {
+  position: absolute;
+  bottom: styles-theme-variables.$dimension-2m;
+  right: styles-theme-variables.$dimension-2m;
+}
+
+.content {
+  position: relative;
+}
+
 .card {
   position: relative;
   box-sizing: border-box;
@@ -10,6 +20,25 @@
 
   &:not(:last-child) {
     border-bottom: styles-theme-variables.$border-width-general-xs solid styles-theme-variables.$sys-neutral-decor-default;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    opacity: 0;
+    background-color: styles-theme-variables.$sys-primary-background1-level;
+  }
+
+  &[data-selection-mode='multi'],
+  &[data-selection-mode='single'] {
+    &[data-is-selected=true]::before {
+      opacity: 1;
+    }
   }
 }
 
