@@ -1,0 +1,37 @@
+@use '@sbercloud/figma-tokens-web/build/scss/styles-theme-variables' as ste;
+
+.root {
+  background: ste.$sys-neutral-background2-level;
+  padding: 0 16px;
+
+  &[data-layout-type='mobile'] {
+    padding: 0;
+  }
+}
+
+.subHeaderContainer {
+  max-width: 1248px;
+  margin: 0 auto;
+  height: 36px;
+}
+
+.closeIcon {
+  cursor: pointer;
+}
+
+.green {
+  background-color: ste.$sys-green-accent-default;
+}
+
+.yellow {
+  background-color: ste.$sys-yellow-accent-default;
+}
+
+.blue {
+  background-color: ste.$sys-blue-accent-default;
+}
+
+.link {
+  text-decoration: underline;
+  color: ste.$sys-graphite-text-main;
+}

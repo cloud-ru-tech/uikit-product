@@ -37,6 +37,7 @@
     "@sbercloud/uikit-product-utils": "5.0.1",
     "@snack-uikit/dropdown": "0.4.8",
     "@snack-uikit/typography": "0.8.4",
+    "@snack-uikit/alert": "0.16.17",
     "classnames": "2.3.2"
   },
   "peerDependencies": {
