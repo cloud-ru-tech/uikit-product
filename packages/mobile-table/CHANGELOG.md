@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-07-29)
+
+
+### Features
+
+* **PDS-2651:** add row selection ([b90f82f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b90f82fc34bcb5546b05d43bf0e398040e288a09))
+
+
+
+
+
 ## 0.7.15 (2025-07-28)
 
 
