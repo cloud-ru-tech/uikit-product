@@ -1,31 +1,34 @@
 import { CloudFullLogoSVG } from '@sbercloud/uikit-product-icons';
 import { Typography } from '@snack-uikit/typography';
 
+import { AdditionalLogoText, Logo } from '../../components/SiteHeaderBasic/SiteHeaderBasic';
 import styles from './styles.module.scss';
 
 export type LogoContentProps = {
-  logoContentText?: string;
-  logoLink: string;
+  additionalLogoText?: AdditionalLogoText;
+  logo: Logo;
   isMobile?: boolean;
 };
 
-export function LogoContent({ logoContentText, isMobile, logoLink }: LogoContentProps) {
+export function LogoContent({ additionalLogoText, isMobile, logo }: LogoContentProps) {
   const heightIconSizeProp = isMobile ? 102 : 130;
   return (
-    <a href={logoLink} className={styles.linkLogo}>
-      <div className={styles.logoContentContainer}>
+    <div className={styles.logoContentContainer}>
+      <a href={logo.logoLink} onClick={logo.onClick} className={styles.logoLink}>
         <CloudFullLogoSVG size={heightIconSizeProp} width='60px' />
-        {logoContentText && (
-          <div className={styles.subLogo}>
-            <Typography className={styles.slash} size='m' purpose='title' family='sans'>
-              /
-            </Typography>
+      </a>
+      {additionalLogoText && (
+        <div className={styles.subLogo}>
+          <Typography className={styles.slash} size='m' purpose='title' family='sans'>
+            /
+          </Typography>
+          <a href={additionalLogoText.link} onClick={additionalLogoText.onClick} className={styles.link}>
             <Typography size='m' purpose='title' family='sans'>
-              {logoContentText}
+              {additionalLogoText.text}
             </Typography>
-          </div>
-        )}
-      </div>
-    </a>
+          </a>
+        </div>
+      )}
+    </div>
   );
 }

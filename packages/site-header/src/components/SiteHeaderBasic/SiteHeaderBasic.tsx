@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { ReactNode, useRef } from 'react';
+import { MouseEvent, ReactNode, useRef } from 'react';
 
 import { Layout } from '@sbercloud/uikit-product-site-layout';
 import { extractSupportProps, WithLayoutType, WithSupportProps } from '@sbercloud/uikit-product-utils';
@@ -8,16 +8,32 @@ import { ButtonBurger, LogoContent, MobileMenu } from '../../helperComponents';
 import { useHeaderPosition } from '../../hooks';
 import styles from './styles.module.scss';
 
+export type AdditionalLogoText = {
+  /** Дополнительный текст Логотипа */
+  text?: string;
+  /** Переход по ссылке по дополнительному тексту Логотипа */
+  link?: string;
+  /** Коллбэк по клику на дополнительный текс Логотипа */
+  onClick?(event?: MouseEvent<HTMLAnchorElement>): void;
+};
+
+export type Logo = {
+  /** Переход по ссылке Логотипа */
+  logoLink?: string;
+  /** Коллбэк по клику на Логотип */
+  onClick?(event?: MouseEvent<HTMLAnchorElement>): void;
+};
+
 export type HeaderProps = WithSupportProps<
   WithLayoutType<{
-    /** Тест справа от Лого */
-    logoContentText?: string;
+    /** Настройки текста справа Логотипа */
+    additionalLogoText?: AdditionalLogoText;
     /** className root блока */
     className?: string;
     /** Флаг открытия мобильного меню */
     mobileMenuOpen: boolean;
-    /** Ссылка по нажатию логотипа с текстом */
-    logoLink: string;
+    /** Настройки Логотипа */
+    logo: Logo;
     /** Функция изменения флаг открытия мобильного меню */
     onSetMobileMenuOpen: (open: boolean) => void;
     /** Контент посередине (между логотипом и правым блоком) */
@@ -39,7 +55,7 @@ const HEIGHT_SUBHEADER = 25;
 
 export function SiteHeaderBasic({
   className,
-  logoContentText,
+  additionalLogoText,
   middleContent,
   rightContent,
   mobileMenuContent,
@@ -49,7 +65,7 @@ export function SiteHeaderBasic({
   mobileConsultationButton,
   mobileMenuOpen,
   onSetMobileMenuOpen,
-  logoLink,
+  logo,
   ...rest
 }: HeaderProps) {
   const refHeader = useRef<HTMLDivElement>(null);
@@ -73,7 +89,7 @@ export function SiteHeaderBasic({
           {fullWidthContent ?? (
             <>
               <div className={styles.leftPart} data-layout-type={layoutType}>
-                <LogoContent logoContentText={logoContentText} isMobile={isMobile} logoLink={logoLink} />
+                <LogoContent additionalLogoText={additionalLogoText} isMobile={isMobile} logo={logo} />
               </div>
               <div className={styles.middlePart}>{middleContent}</div>
               <div className={styles.rightPart}>

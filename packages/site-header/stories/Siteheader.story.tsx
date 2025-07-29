@@ -1,9 +1,11 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
+import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
+
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { HeaderItemProps, HeaderItems, HeaderProps, LinkItem, SiteHeaderBasic } from '../src';
+import { HeaderItemProps, HeaderItems, HeaderProps, LinkItem, SiteHeaderBasic, SubHeader } from '../src';
 
 const meta: Meta = {
   title: 'Site/Header',
@@ -11,27 +13,30 @@ const meta: Meta = {
 };
 export default meta;
 
-const Template: StoryFn<HeaderProps> = ({ ...args }) => <SiteHeaderBasic {...args} />;
+const Template: StoryFn<HeaderProps> = ({ ...args }) => (
+  <SiteHeaderBasic
+    {...args}
+    subHeader={
+      <SubHeader
+        bannerInfo={{
+          title: 'Информационная строка',
+          color: 'yellow',
+          link: 'https://cloud.ru',
+        }}
+        layoutType={args.layoutType}
+        onCloseSubHeader={() => {}}
+      />
+    }
+  />
+);
 
 export const header: StoryObj<HeaderProps> = {
   render: Template,
   args: {
-    logoContentText: 'PARTNERS',
-    logoLink: '/',
+    additionalLogoText: { link: '/', text: 'PARTNERS' },
     mobileMenuContent: <div>Меню мобильной версии</div>,
     rightContent: <div>Правый контент</div>,
-    layoutType: 'desktop',
-    subHeader: (
-      <div
-        style={{
-          height: '20px',
-          width: '100%',
-          background: 'yellow',
-        }}
-      >
-        Инфострока
-      </div>
-    ),
+    layoutType: LAYOUT_TYPE.Desktop,
   },
   parameters: {
     readme: {

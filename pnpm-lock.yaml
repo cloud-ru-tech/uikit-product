@@ -1893,6 +1893,9 @@ importers:
       '@sbercloud/uikit-product-utils':
         specifier: 5.0.1
         version: link:../utils
+      '@snack-uikit/alert':
+        specifier: 0.16.17
+        version: 0.16.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/dropdown':
         specifier: 0.4.8
         version: 0.4.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -4324,6 +4327,9 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0
 
+  '@sbercloud/uikit-product-locale@0.9.0':
+    resolution: {integrity: sha512-dvVOu/Nb1gTCLY5sBVN5RPm0dfVDe0SnLXfp4Tqnz0eHoe900U7cTMmrgtBhU/jQo1VUf9BXaKKfv0c8fxUesw==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/uikit-product-locale/-/@sbercloud/uikit-product-locale-0.9.0.tgz}
+
   '@sigstore/bundle@2.3.2':
     resolution: {integrity: sha512-wueKWDk70QixNLB363yHc2D2ItTgYiMTdPwK8D9dKQMR3ZQ0c35IxP5xnwQ8cNLoCgCRcHf14kE+CLIvNX1zmA==}
     engines: {node: ^16.14.0 || >=18.0.0}
@@ -4366,6 +4372,9 @@ packages:
 
   '@snack-uikit/alert@0.16.11':
     resolution: {integrity: sha512-umQ+ebrXYX8MpDqOXtrZ1u3t2rtYtwkpks8bA9FV8yTMZ5rVHtyihT/frcNgoIVG9ttWHsSN8YHqGiNzeMksJQ==}
+
+  '@snack-uikit/alert@0.16.17':
+    resolution: {integrity: sha512-qj68gaClYOiTThjfLq1vPzM8eA++z+kC5a8L8Gi9pcQh25wB9LaqmdJ+9vMSKUFz5NtyENEeDfjrJ9HypP7z4A==}
 
   '@snack-uikit/attachment@0.4.10':
     resolution: {integrity: sha512-SgdnulJejQ4Y6hmFuoIsPqJ6KzYEdXsMSVi//p2bCCUSoH67mZRAqlk2LRjOZINpNedwktQlHJzqkr7hyb9Kfw==}
@@ -4785,6 +4794,9 @@ packages:
 
   '@snack-uikit/link@0.17.5':
     resolution: {integrity: sha512-tOYlmRqyhvZNFNivwdY0gt9OUdkZRFJjjjGuoqJDgLXVex8eH9nZMImlvF5R8RIN0T/8f+dsyaaPpGDqLtI8ig==}
+
+  '@snack-uikit/link@0.17.9':
+    resolution: {integrity: sha512-MytGOKi30/udy8OfmOyhJeZtfsfRvschUW44dGvGuvlwhTvHqgt1O85NLV+a3OdWW6/ahNDzJlRd5JNtBmGmLg==}
 
   '@snack-uikit/list@0.21.0':
     resolution: {integrity: sha512-bxfThdmmqUQNE4zY80iqdZl0afio9asE7y00qmYD0FL5OrjQWa2AR+f979bPvd5zObXdAz1htgNuxNrbv9QwXw==}
@@ -15995,6 +16007,16 @@ snapshots:
       - '@types/react'
       - storybook
 
+  '@sbercloud/uikit-product-locale@0.9.0(@sbercloud/ft-config-i18n@4.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))':
+    dependencies:
+      '@sbercloud/common-translations': 1.2.0(@sbercloud/ft-config-i18n@4.0.2(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(typescript@5.5.4))
+      '@snack-uikit/locale': 0.15.1
+      lodash.get: 4.4.2
+      lodash.merge: 4.6.2
+      lodash.set: 4.3.2
+    transitivePeerDependencies:
+      - '@sbercloud/ft-config-i18n'
+
   '@sigstore/bundle@2.3.2':
     dependencies:
       '@sigstore/protobuf-specs': 0.3.3
@@ -16082,6 +16104,18 @@ snapshots:
       '@snack-uikit/loaders': 0.9.5(react@18.2.0)
       '@snack-uikit/truncate-string': 0.6.21(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/utils': 3.8.2(react@18.2.0)
+      classnames: 2.5.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@snack-uikit/alert@0.16.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/icons': 0.27.2
+      '@snack-uikit/link': 0.17.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/loaders': 0.9.8(react@18.2.0)
+      '@snack-uikit/truncate-string': 0.7.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 3.10.1(react@18.2.0)
       classnames: 2.5.1
     transitivePeerDependencies:
       - react
@@ -17512,6 +17546,15 @@ snapshots:
     dependencies:
       '@snack-uikit/truncate-string': 0.6.23(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/utils': 3.9.0(react@18.2.0)
+      classnames: 2.5.1
+    transitivePeerDependencies:
+      - react
+      - react-dom
+
+  '@snack-uikit/link@0.17.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+    dependencies:
+      '@snack-uikit/truncate-string': 0.7.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/utils': 3.10.1(react@18.2.0)
       classnames: 2.5.1
     transitivePeerDependencies:
       - react
