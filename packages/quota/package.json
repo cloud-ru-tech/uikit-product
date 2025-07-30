@@ -36,11 +36,8 @@
     "@sbercloud/uikit-product-icons": "14.0.0",
     "@sbercloud/uikit-product-utils": "5.0.1",
     "@snack-uikit/button": "0.19.7",
-    "@snack-uikit/counter": "0.8.9",
-    "@snack-uikit/link": "0.15.9",
     "@snack-uikit/scroll": "0.9.3",
     "@snack-uikit/skeleton": "0.6.2",
-    "@snack-uikit/tooltip": "0.16.2",
     "@snack-uikit/truncate-string": "0.6.9",
     "classnames": "2.5.1"
   },

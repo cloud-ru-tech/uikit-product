@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
 
+import { CrossFilledSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { ButtonTonal, ButtonTonalProps } from '@snack-uikit/button';
-import { CrossFilledSVG } from '@snack-uikit/icons';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { QuotaUnitType } from '../../types';
