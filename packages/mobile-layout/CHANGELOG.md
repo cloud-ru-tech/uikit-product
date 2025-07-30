@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.15.1 (2025-07-30)
+
+
+### Bug Fixes
+
+* **PDS-2121:** add mousewheel condition into click on links in sidebar ([a694671](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a694671c5dd07cf393ef68340f5b23747b34e87e))
+
+
+
+
+
 # 0.15.0 (2025-07-30)
 
 

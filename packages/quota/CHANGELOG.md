@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2025-07-30)
+
+
+### Bug Fixes
+
+* **PDS-2121:** proper package for icons, remove unused ([70ab7f2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/70ab7f2ccf209831da9417c04f9e7f87ecd9a215))
+
+
+
+
+
 # 0.4.0 (2025-07-29)
 
 
