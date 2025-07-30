@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2025-07-29)
+
+
+### Features
+
+* **PDS-1095:** update quota component ([a19c746](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a19c7468fbdd5f8dd82042ba2c2ff97c8ba3eede))
+
+
+
+
+
+# 0.9.0 (2025-07-29)
+
+
+### Features
+
+* **UIIAAS-904:** added translations for deleteModalPredefined confirmText ([5387e15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5387e1571781d508f7062148ec422fd20b4efe50))
+
+
+
+
+
 # 0.8.0 (2025-06-23)
 
 

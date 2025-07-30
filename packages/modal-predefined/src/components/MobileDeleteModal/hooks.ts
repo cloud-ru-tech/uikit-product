@@ -1,10 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 
-import { useLocale } from '@sbercloud/uikit-product-locale';
-
-export function useTextFieldValidation(target: string | undefined) {
-  const { t } = useLocale('ModalPredefined');
-
+export function useTextFieldValidation({ target, errorText }: { target: string | undefined; errorText: string }) {
   const ref = useRef<HTMLInputElement>(null);
 
   const [value, setValue] = useState<string>('');
@@ -27,7 +23,7 @@ export function useTextFieldValidation(target: string | undefined) {
     }
 
     return () => {
-      setError(t('invalidName'));
+      setError(errorText);
       ref.current?.focus();
     };
   };

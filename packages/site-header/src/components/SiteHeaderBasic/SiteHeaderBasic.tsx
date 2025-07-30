@@ -35,7 +35,7 @@ export type HeaderProps = WithSupportProps<
     /** Настройки Логотипа */
     logo: Logo;
     /** Функция изменения флаг открытия мобильного меню */
-    onSetMobileMenuOpen: (open: boolean) => void;
+    onSetMobileMenuOpen(open: boolean): void;
     /** Контент посередине (между логотипом и правым блоком) */
     middleContent?: ReactNode;
     /** Контент занимающий всю возможную ширину хэдера */

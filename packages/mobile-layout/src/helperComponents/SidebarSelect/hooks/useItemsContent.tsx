@@ -2,15 +2,25 @@ import { MouseEvent, ReactNode, useMemo } from 'react';
 
 import { MobileDroplistProps } from '@sbercloud/uikit-product-mobile-dropdown';
 import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
-import { SidebarItem } from '@sbercloud/uikit-product-page-layout';
+
+import { SidebarItem } from '../types';
 
 const getItemsContent = (
   items: SidebarItem[],
   onSelect?: (id: string | number) => void,
 ): MobileDroplistProps['items'] =>
-  items.map(({ id, label, href, onClick, afterContent, disabledReason, disabledReasonPlacement, items: newItems }) => {
+  items.map(({ id, label, onClick, afterContent, beforeContent, disabledReason, disabledReasonPlacement, ...rest }) => {
+    const href = 'href' in rest ? rest.href : undefined;
+    const newItems = 'items' in rest ? rest.items : undefined;
+
     const clickHandler = (event: MouseEvent<HTMLElement>) => {
+      if (href && event?.metaKey) {
+        return;
+      }
+
+      event.preventDefault();
       onClick?.(event);
+
       if (!items.length) {
         onSelect?.(id);
       }
@@ -46,6 +56,7 @@ const getItemsContent = (
 
       onClick: href ? undefined : clickHandler,
       afterContent,
+      beforeContent,
       disabled: Boolean(disabledReason),
     };
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-07-29)
+
+
+### Features
+
+* **UIIAAS-904:** added confirmText variant in deleteModalPredefined ([ec9a72e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ec9a72eb647eae193fb2049956ad478ff82a0842))
+
+
+
+
+
 ## 0.7.10 (2025-07-25)
 
 ### Only dependencies have been changed

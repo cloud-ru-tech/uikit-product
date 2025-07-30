@@ -336,9 +336,18 @@ export const ru_RU: typeof en_GB = {
     recallTitle: 'Отзыв заявки',
     fieldLabel: 'Чтобы разрешить удаление, введите:',
     recallFieldLabel: 'Чтобы отозвать заявку, введите:',
+    // TODO: deprecated - UIIAAS-968
     enterName: 'Введите название',
-    required: 'Поле должно быть заполнено',
     invalidName: 'Неверное название',
+    enterText: {
+      name: 'Введите название',
+      text: 'Введите текст подтверждения',
+    },
+    invalidText: {
+      name: 'Неверное название',
+      text: 'Неверный текст подтверждения',
+    },
+    required: 'Поле должно быть заполнено',
     cancel: ruTranslations.buttons.cancel,
     delete: 'Удалить',
     recall: 'Отозвать',
@@ -396,7 +405,10 @@ export const ru_RU: typeof en_GB = {
   },
   Quota: {
     peace: 'шт.',
+    gb: 'ГБ',
     created: 'Создано',
+    filled: 'Занято',
+    unlimited: 'Неограниченно',
     available: 'Доступно по квоте',
     exceeded: 'Квота исчерпана',
     increase: 'Увеличить',

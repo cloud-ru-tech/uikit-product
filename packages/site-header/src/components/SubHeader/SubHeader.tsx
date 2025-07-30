@@ -24,7 +24,7 @@ type SubHeaderProps = WithLayoutType<{
   /** Объект для отображения данных на баннере */
   bannerInfo: BannerInfo;
   /** Функция закрытия SubHeader */
-  onCloseSubHeader?: () => void;
+  onCloseSubHeader?(): void;
 }>;
 
 export function SubHeader({ bannerInfo, onCloseSubHeader, layoutType }: SubHeaderProps) {

@@ -1,11 +1,10 @@
 import { Scroll } from '@snack-uikit/scroll';
-import { QuestionTooltip } from '@snack-uikit/tooltip';
 import { TruncateString } from '@snack-uikit/truncate-string';
 
 import { QuotaDropdownProps } from '../QuotaDropdown';
 import styles from '../styles.module.scss';
 
-export function QuotaDropdownLayout({ title, description, tip, children }: QuotaDropdownProps) {
+export function QuotaDropdownLayout({ title, description, children }: QuotaDropdownProps) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
@@ -13,7 +12,6 @@ export function QuotaDropdownLayout({ title, description, tip, children }: Quota
           <div className={styles.title}>
             <TruncateString text={title} maxLines={1} />
           </div>
-          {tip && <QuestionTooltip tip={tip} size='xs' />}
         </div>
         {description && (
           <div className={styles.description}>

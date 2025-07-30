@@ -3,6 +3,8 @@ import {
   getFilteredRowModel,
   getPaginationRowModel,
   getSortedRowModel,
+  Row,
+  RowSelectionState,
   SortingState,
   useReactTable,
 } from '@tanstack/react-table';
@@ -54,6 +56,7 @@ export type MobileTableProps<TData extends object, TFilters extends FiltersState
   | 'manualPagination'
   | 'manualSorting'
   | 'getRowId'
+  | 'rowSelection'
 > &
   WithSupportProps<{
     headlineId?: string;
@@ -89,6 +92,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
   manualPagination = false,
   manualFiltering = false,
   getRowId,
+  rowSelection: rowSelectionProp,
   ...rest
 }: MobileTableProps<TData, TFilters>) {
   const defaultPaginationState = useMemo(() => ({ pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE }), []);
@@ -100,6 +104,25 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     defaultPaginationState,
   );
 
+  const { state: rowSelection, onStateChange: onRowSelectionChange } = useStateControl<RowSelectionState>(
+    rowSelectionProp,
+    {},
+  );
+
+  const enableRowSelection = useCallback(
+    (row: Row<TData>) => {
+      const parent = row.getParentRow();
+      const isParentSelected = parent ? parent.getCanSelect() : true;
+      let isCurrentRowSelected = true;
+      if (rowSelectionProp?.enable !== undefined) {
+        isCurrentRowSelected =
+          typeof rowSelectionProp.enable === 'boolean' ? rowSelectionProp.enable : rowSelectionProp.enable(row);
+      }
+      return isParentSelected && isCurrentRowSelected;
+    },
+    [rowSelectionProp],
+  );
+
   const table = useReactTable<TData>({
     data,
     columns: columnDefinitions,
@@ -108,7 +131,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     getFilteredRowModel: getFilteredRowModel(),
     getSortedRowModel: getSortedRowModel(),
 
-    state: { pagination, globalFilter, sorting },
+    state: { pagination, globalFilter, sorting, rowSelection },
     pageCount,
     onPaginationChange,
     onSortingChange,
@@ -119,9 +142,15 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     manualPagination,
     manualFiltering,
     getRowId,
+
+    onRowSelectionChange,
+    enableGrouping: true,
+    enableRowSelection,
+    enableMultiRowSelection: rowSelectionProp?.enable && rowSelectionProp?.multiRow,
+    enableSubRowSelection: true,
   });
 
-  const { loadingTable } = useLoadingTable({
+  const { loadingTable } = useLoadingTable<TData, TFilters>({
     pageSize: DEFAULT_PAGE_SIZE,
     columnDefinitions,
   });
@@ -136,6 +165,8 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     table.resetRowSelection();
     onRefresh?.();
   }, [onRefresh, table]);
+
+  const selectionMode = rowSelectionProp?.multiRow ? 'multi' : 'single';
 
   return (
     <div className={cn(styles.tableWrapper, className)} {...extractSupportProps(rest)}>
@@ -165,13 +196,19 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
         {loading ? (
           <SkeletonContextProvider loading>
             {loadingTableRows.map((row, index) => (
-              <TableCard key={index} headlineId={headlineId} row={row} table={loadingTable} />
+              <TableCard key={index} headlineId={headlineId} row={row} table={loadingTable} selection='none' />
             ))}
           </SkeletonContextProvider>
         ) : (
           <>
             {tableRows.map((row, index) => (
-              <TableCard key={index} headlineId={headlineId} row={row} table={table} />
+              <TableCard
+                key={index}
+                headlineId={headlineId}
+                row={row}
+                table={table}
+                selection={rowSelectionProp?.enable ? selectionMode : 'none'}
+              />
             ))}
 
             <TableEmptyState

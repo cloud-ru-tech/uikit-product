@@ -27,7 +27,7 @@ export function useTextFieldValidation(target: string | undefined) {
     }
 
     return () => {
-      setError(t('invalidName'));
+      setError(t('invalidText.name'));
       ref.current?.focus();
     };
   };

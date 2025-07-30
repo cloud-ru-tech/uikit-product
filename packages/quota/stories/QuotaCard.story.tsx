@@ -51,9 +51,8 @@ export const quotaCard: StoryObj<StoryProps> = {
     loading: false,
     showExceedLimit: false,
     showNoData: false,
+    type: 'instances',
   },
-
-  argTypes: {},
 
   parameters: {
     readme: {

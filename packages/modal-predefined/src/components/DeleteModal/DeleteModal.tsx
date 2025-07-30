@@ -32,6 +32,8 @@ export type DeleteModalProps = Pick<ModalCustomProps, 'open' | 'onClose' | 'mode
     hideConfirmCopyButton?: boolean;
     /** Подзаголовок */
     subtitle?: ReactNode;
+    /** Тип текста подтверждения */
+    confirmTextVariant?: 'name' | 'text';
   }>;
 
 export function DeleteModal({
@@ -45,13 +47,17 @@ export function DeleteModal({
   open,
   deleting,
   subtitle,
+  confirmTextVariant = 'name',
   ...restProps
 }: DeleteModalProps) {
   const { t } = useLocale('ModalPredefined');
 
   const withInputConfirmation = isDefined(confirmText);
 
-  const { reset, handleSubmit, ...inputProps } = useTextFieldValidation(confirmText);
+  const { reset, handleSubmit, ...inputProps } = useTextFieldValidation({
+    target: confirmText,
+    errorText: t(`invalidText.${confirmTextVariant}`),
+  });
 
   const handleClose = () => {
     onClose();
@@ -85,6 +91,7 @@ export function DeleteModal({
                 confirmText={confirmText}
                 hideConfirmCopyButton={hideConfirmCopyButton}
                 labelText={t('fieldLabel')}
+                placeholder={t(`enterText.${confirmTextVariant}`)}
                 {...inputProps}
               />
             )}

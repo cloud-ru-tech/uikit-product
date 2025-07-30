@@ -335,9 +335,18 @@ export const en_GB = {
     recallTitle: 'Withdrawal of application',
     fieldLabel: 'To do this, enter:',
     recallFieldLabel: 'To withdraw your request, enter:',
+    // TODO: deprecated - UIIAAS-968
     enterName: 'Enter a name',
-    required: 'Field must be filled',
     invalidName: 'Invalid name',
+    enterText: {
+      name: 'Enter a name',
+      text: 'Enter confirmation text',
+    },
+    invalidText: {
+      name: 'Invalid name',
+      text: 'Invalid confirmation text',
+    },
+    required: 'Field must be filled',
     cancel: enTranslations.buttons.cancel,
     delete: 'Delete',
     recall: 'Recall',
@@ -395,7 +404,10 @@ export const en_GB = {
   },
   Quota: {
     peace: 'pcs.',
+    gb: 'GB',
+    unlimited: 'Unlimited',
     created: 'Created',
+    filled: 'Filled',
     available: 'Available by quota',
     exceeded: 'Quota exhausted',
     increase: 'Increase',
