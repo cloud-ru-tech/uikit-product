@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-07-30)
+
+
+### Features
+
+* **SITE-9632:** add new component for Header and improve logic header site ([82ddbe8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/82ddbe873bf967fa597411fba337ac9530531b6b))
+* **SITE-9632:** add new component for Header and improve logic header site ([5969da7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5969da75fb780e4bf63b3bd52ebb46d405d9819c))
+
+
+
+
+
 ## 0.1.7 (2025-07-25)
 
 ### Only dependencies have been changed
