@@ -14,7 +14,7 @@ const getItemsContent = (
     const newItems = 'items' in rest ? rest.items : undefined;
 
     const clickHandler = (event: MouseEvent<HTMLElement>) => {
-      if (href && event?.metaKey) {
+      if (href && (event?.metaKey || event?.button === 1)) {
         return;
       }
 
