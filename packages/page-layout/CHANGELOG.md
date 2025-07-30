@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.20.0 (2025-07-30)
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2121:** open link on new window with cmd, href is required ([9d280d9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d280d9881d444150a10e175da6fedb3b88b1da3))
+
+
+
+
 ## 0.19.5 (2025-07-25)
 
 ### Only dependencies have been changed

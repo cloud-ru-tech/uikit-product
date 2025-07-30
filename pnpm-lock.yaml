@@ -1336,7 +1336,7 @@ importers:
         specifier: 0.4.45
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-page-layout':
-        specifier: 0.19.5
+        specifier: 0.20.0
         version: link:../page-layout
       '@sbercloud/uikit-product-utils':
         specifier: 5.0.1
