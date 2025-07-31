@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { HeaderContext, RowSelectionState } from '@tanstack/react-table';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
+import { TrashSVG } from '@sbercloud/uikit-product-icons';
 import { TagRow, TagRowProps } from '@snack-uikit/tag';
 import { toaster } from '@snack-uikit/toaster';
 
@@ -25,7 +26,7 @@ type StoryProps = Props & {
   rowsAmount: number;
   showActionsColumn?: boolean;
   initialColumnFiltersOpen: boolean;
-  rowSelectionMode?: 'single' | 'multi';
+  rowSelectionMode?: 'single' | 'multiple';
 };
 
 const renderHeader = (ctx: HeaderContext<StubData, unknown>) => `Table column №${ctx.column.id}`;
@@ -192,6 +193,12 @@ function Template({
 }: StoryProps) {
   const data = useMemo(() => generateRows(rowsAmount), [rowsAmount]);
 
+  const [filteredData, setFilteredData] = useState(data);
+
+  useEffect(() => {
+    setFilteredData(data);
+  }, [data]);
+
   const columns = useMemo(() => {
     const colDefs = [...columnDefinitions];
 
@@ -256,6 +263,14 @@ function Template({
 
   const [_selectedState, setSelectedState] = useState<RowSelectionState>({});
 
+  const onDelete = useCallback(
+    (rowSelectionState: RowSelectionState, resetRowSelection: (defaultState?: boolean) => void) => {
+      setFilteredData(data => data.filter((_, index) => !rowSelectionState?.[index]));
+      resetRowSelection();
+    },
+    [],
+  );
+
   useEffect(() => {
     setSelectedState({});
   }, [rowSelectionMode]);
@@ -264,18 +279,25 @@ function Template({
     <MobileTable
       {...args}
       columnDefinitions={columns}
-      data={data}
+      data={filteredData}
       className={className}
       columnFilters={filters}
       rowSelection={
         rowSelectionMode
           ? {
-              multiRow: rowSelectionMode === 'multi',
+              multiRow: rowSelectionMode === 'multiple',
               enable: true,
               onChange: setSelectedState,
             }
           : undefined
       }
+      bulkActions={[
+        {
+          label: 'Delete',
+          icon: TrashSVG,
+          onClick: onDelete,
+        },
+      ]}
     />
   );
 }
@@ -295,7 +317,7 @@ export const table: StoryObj<StoryProps> = {
       enable: true,
       multiRow: true,
     },
-    rowSelectionMode: 'multi',
+    rowSelectionMode: 'multiple',
   },
 
   argTypes: {
@@ -328,7 +350,7 @@ export const table: StoryObj<StoryProps> = {
     },
     rowSelectionMode: {
       name: '[Stories]: Choose row selection mode',
-      options: [undefined, 'multi', 'single'],
+      options: [undefined, 'multiple', 'single'],
       control: {
         type: 'select',
       },

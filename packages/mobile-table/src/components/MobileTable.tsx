@@ -12,7 +12,7 @@ import cn from 'classnames';
 import { useCallback, useMemo } from 'react';
 
 import { FiltersState, MobileChipChoiceRowProps } from '@sbercloud/uikit-product-mobile-chips';
-import { MobileToolbar } from '@sbercloud/uikit-product-mobile-toolbar';
+import { MobileToolbar, MobileToolbarProps } from '@sbercloud/uikit-product-mobile-toolbar';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 import { useLocale } from '@snack-uikit/locale';
 import { SkeletonContextProvider } from '@snack-uikit/skeleton';
@@ -57,6 +57,7 @@ export type MobileTableProps<TData extends object, TFilters extends FiltersState
   | 'manualSorting'
   | 'getRowId'
   | 'rowSelection'
+  | 'bulkActions'
 > &
   WithSupportProps<{
     headlineId?: string;
@@ -93,6 +94,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
   manualFiltering = false,
   getRowId,
   rowSelection: rowSelectionProp,
+  bulkActions: bulkActionsProp,
   ...rest
 }: MobileTableProps<TData, TFilters>) {
   const defaultPaginationState = useMemo(() => ({ pageIndex: 0, pageSize: DEFAULT_PAGE_SIZE }), []);
@@ -166,7 +168,42 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
     onRefresh?.();
   }, [onRefresh, table]);
 
-  const selectionMode = rowSelectionProp?.multiRow ? 'multi' : 'single';
+  const enableSelection = Boolean(rowSelectionProp?.enable);
+
+  const bulkActions: MobileToolbarProps<TFilters>['bulkActions'] = useMemo(
+    () =>
+      enableSelection
+        ? bulkActionsProp?.map(action => ({
+            ...action,
+            onClick: () => action.onClick?.(table.getState().rowSelection, table.resetRowSelection),
+          }))
+        : undefined,
+    [bulkActionsProp, enableSelection, table],
+  );
+  const handleOnToolbarCheck = useCallback(() => {
+    if (!loading && table.getTopRows().length) {
+      const centerRows = table.getCenterRows();
+      const isSomeRowsSelected = table.getIsSomePageRowsSelected();
+      const isAllCenterRowsSelected = centerRows.every(row => row.getIsSelected());
+
+      if (isAllCenterRowsSelected) {
+        table.resetRowSelection();
+        return;
+      }
+
+      centerRows.forEach(row => row.toggleSelected(isSomeRowsSelected ? true : undefined));
+      return;
+    }
+
+    if (!loading && rowSelectionProp?.multiRow) {
+      table.toggleAllPageRowsSelected();
+      return;
+    }
+  }, [loading, rowSelectionProp?.multiRow, table]);
+
+  const selectionMode: MobileToolbarProps<TFilters>['selectionMode'] = rowSelectionProp?.multiRow
+    ? 'multiple'
+    : 'single';
 
   return (
     <div className={cn(styles.tableWrapper, className)} {...extractSupportProps(rest)}>
@@ -188,6 +225,11 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
             filterRow={columnFilters}
             after={toolbarAfter}
             moreActions={moreActions}
+            bulkActions={bulkActions}
+            selectionMode={selectionMode}
+            onCheck={enableSelection ? handleOnToolbarCheck : undefined}
+            checked={table.getIsAllPageRowsSelected()}
+            indeterminate={table.getIsSomePageRowsSelected()}
           />
         </div>
       )}
@@ -207,7 +249,7 @@ export function MobileTable<TData extends object, TFilters extends FiltersState 
                 headlineId={headlineId}
                 row={row}
                 table={table}
-                selection={rowSelectionProp?.enable ? selectionMode : 'none'}
+                selection={enableSelection ? selectionMode : 'none'}
               />
             ))}
 

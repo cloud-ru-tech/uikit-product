@@ -34,7 +34,7 @@
     background-color: styles-theme-variables.$sys-primary-background1-level;
   }
 
-  &[data-selection-mode='multi'],
+  &[data-selection-mode='multiple'],
   &[data-selection-mode='single'] {
     &[data-is-selected=true]::before {
       opacity: 1;

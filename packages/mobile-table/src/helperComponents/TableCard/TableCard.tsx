@@ -10,7 +10,7 @@ type TableCardProps<TData extends object> = {
   headlineId?: string;
   row: Row<TData>;
   table: Table<TData>;
-  selection: 'multi' | 'single' | 'none';
+  selection: 'multiple' | 'single' | 'none';
 };
 
 export function TableCard<TData extends object>({ headlineId, table, row, selection }: TableCardProps<TData>) {
@@ -26,7 +26,7 @@ export function TableCard<TData extends object>({ headlineId, table, row, select
 
   const handleSelection = useCallback(() => {
     if (selection === 'single') row.toggleSelected(true);
-    if (selection === 'multi') row.toggleSelected(!isSelected);
+    if (selection === 'multiple') row.toggleSelected(!isSelected);
   }, [isSelected, row, selection]);
 
   return (
@@ -66,7 +66,7 @@ export function TableCard<TData extends object>({ headlineId, table, row, select
       </div>
 
       {selection === 'single' && <Radio size='m' className={styles.selectionController} checked={isSelected} />}
-      {selection === 'multi' && <Checkbox size='m' className={styles.selectionController} checked={isSelected} />}
+      {selection === 'multiple' && <Checkbox size='m' className={styles.selectionController} checked={isSelected} />}
       {actionsCell && actionsColumn && (
         <div className={styles.button}>{flexRender(actionsColumn.column.columnDef.cell, actionsCell.getContext())}</div>
       )}
