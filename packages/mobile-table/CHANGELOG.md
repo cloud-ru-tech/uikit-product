@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-07-31)
+
+
+### Features
+
+* **PDS-2651:** fix selectionMode multiple name, add bulkActions ([e3445fe](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/e3445fea9d0bd96140c52b7391f0fd0263b29643))
+
+
+
+
+
 # 0.8.0 (2025-07-29)
 
 
