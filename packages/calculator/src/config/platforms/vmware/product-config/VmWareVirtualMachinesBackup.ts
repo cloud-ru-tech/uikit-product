@@ -42,6 +42,16 @@ export const VM_WARE_VIRTUAL_MACHINES_BACKUP_FORM_CONFIG: FormConfig = {
           labelTooltip:
             'Резервные копии хранятся на площадке, удаленной от основного ЦОДа. Рекомендуется выбирать удаленный репозиторий для повышения уровня безопасности',
         },
+        {
+          label: 'Неудаляемое хранилище',
+          accessorKey: 'unremovableStorage',
+          uiProps: {
+            min: 0,
+            max: 1_999_000,
+            postfix: 'ГБ',
+          },
+          labelTooltip: 'Неудаляемое хранение резервных копий (Immutable Storage)',
+        },
       ],
     },
   },
