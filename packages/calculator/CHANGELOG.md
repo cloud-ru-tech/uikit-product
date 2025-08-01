@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.25.0 (2025-08-01)
+
+
+### Features
+
+* **SITE-9691:** update vmWareVirtualMachinesBackup calculator ([285dac5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/285dac552f9ecf6a92ad2b859c2e97a96235c010))
+
+
+
+
+
 ## 0.24.2 (2025-07-28)
 
 ### Only dependencies have been changed
