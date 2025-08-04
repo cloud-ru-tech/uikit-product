@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-info-row",
   "title": "Info Row",
-  "version": "0.8.18",
+  "version": "0.8.19",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,7 +32,7 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-utils": "6.0.0",
+    "@sbercloud/uikit-product-utils": "6.0.1",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/divider": "3.2.3",
     "@snack-uikit/skeleton": "0.6.2",

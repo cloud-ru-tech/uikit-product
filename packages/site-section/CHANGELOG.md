@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.17.28 (2025-08-04)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-icons@14.0.2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/icons/CHANGELOG.md)
+* [@sbercloud/uikit-product-mobile-fields@0.11.4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-fields/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-cards@0.10.21](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-cards/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-grid@0.0.10](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-grid/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-layout@0.1.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-layout/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-media@0.1.15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-media/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-rich-text@0.2.5](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-rich-text/CHANGELOG.md)
+* [@sbercloud/uikit-product-site-table@0.2.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/site-table/CHANGELOG.md)
+* [@sbercloud/uikit-product-utils@6.0.1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
+
+
+
+
+
 ## 0.17.27 (2025-08-04)
 
 ### Only dependencies have been changed

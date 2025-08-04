@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 6.0.1 (2025-08-04)
+
+
+### Bug Fixes
+
+* **FF-7076:** missing constant usage ([307581a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/307581a22bc5f3b4829ce947f203c055bb1873fd))
+
+
+
+
+
 # 6.0.0 (2025-08-04)
 
 
