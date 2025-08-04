@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.0.0 (2025-08-04)
+
+
+### BREAKING CHANGES
+
+
+* **FF-7076:** extract all data and aria attributes with single helper, remove unused helpers ([2c9e8c4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/2c9e8c446c05b6dcc933e1e3987608ee815b5175))
+
+
+
+
 ## 5.0.1 (2025-07-17)
 
 

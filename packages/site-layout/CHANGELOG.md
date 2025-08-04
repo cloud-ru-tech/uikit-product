@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.4 (2025-08-04)
+
+
+### Bug Fixes
+
+* **FF-7076:** remove unnecessary extractDataProps usage ([d6b87c7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d6b87c77c0b24309dfe1e1abd7834197fd5a1abe))
+
+
+
+
+
 ## 0.1.3 (2025-07-17)
 
 ### Only dependencies have been changed
