@@ -1,6 +1,6 @@
 import { CSSProperties, ReactNode } from 'react';
 
-import { extractDataProps, extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 export type HeaderProps = WithSupportProps<{
   children: ReactNode;
@@ -10,7 +10,7 @@ export type HeaderProps = WithSupportProps<{
 
 export function Header({ children, className, style, ...rest }: HeaderProps) {
   return (
-    <header className={className} {...extractSupportProps(rest)} {...extractDataProps(rest)} style={style}>
+    <header className={className} {...extractSupportProps(rest)} style={style}>
       {children}
     </header>
   );
