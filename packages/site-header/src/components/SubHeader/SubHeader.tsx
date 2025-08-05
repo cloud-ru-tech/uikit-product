@@ -9,8 +9,8 @@ type BannerInfo = {
   /** Цвет фона SubHeader */
   color: 'yellow' | 'blue' | 'green';
   /** Ссылка на текст SubHeader */
-  link: string;
-  /** Текст SubHeader */
+  link?: string;
+  /** Текст SubHeader, может передаваться без ссылки */
   title: string;
 };
 
@@ -32,10 +32,15 @@ export function SubHeader({ bannerInfo, onCloseSubHeader, layoutType }: SubHeade
     <div className={cn(styles.root, styles[bannerInfo.color])} data-layout-type={layoutType}>
       <AlertTop
         className={styles.subHeaderContainer}
-        link={{
-          text: bannerInfo.title,
-          href: bannerInfo.link,
-        }}
+        title={!bannerInfo.link ? bannerInfo.title : undefined}
+        link={
+          bannerInfo.link
+            ? {
+                text: bannerInfo.title,
+                href: bannerInfo.link,
+              }
+            : undefined
+        }
         description=''
         icon={false}
         appearance={APPEARANCE_ALERT[bannerInfo.color]}

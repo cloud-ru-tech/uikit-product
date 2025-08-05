@@ -19,7 +19,7 @@ export type AdditionalLogoText = {
 
 export type Logo = {
   /** Переход по ссылке Логотипа */
-  logoLink?: string;
+  logoLink: string;
   /** Коллбэк по клику на Логотип */
   onClick?(event?: MouseEvent<HTMLAnchorElement>): void;
 };

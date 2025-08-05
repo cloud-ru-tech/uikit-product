@@ -34,6 +34,10 @@ export const header: StoryObj<HeaderProps> = {
   render: Template,
   args: {
     additionalLogoText: { link: '/', text: 'PARTNERS' },
+    logo: {
+      logoLink: '/',
+      onClick: () => {},
+    },
     mobileMenuContent: <div>Меню мобильной версии</div>,
     rightContent: <div>Правый контент</div>,
     layoutType: LAYOUT_TYPE.Desktop,
