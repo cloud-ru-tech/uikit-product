@@ -24,14 +24,19 @@ type ModalStoryProps = MobileModalProps & {
   icon: IconPredefinedProps['icon'];
   showImage: boolean;
   showIcon: boolean;
+  customLoadingState: boolean;
 };
 
-function Template({ open: openProp, ...args }: ModalStoryProps) {
+const SampleCustomLoader = <div data-test-id='modal__custom-loader'>Custom Loading...</div>;
+
+function Template({ open: openProp, customLoadingState, ...args }: ModalStoryProps) {
   const [open, setOpen] = useState(false);
   const [open2, setOpen2] = useState(false);
 
   const closeModal = () => setOpen(false);
   const closeModal2 = () => setOpen2(false);
+
+  const loadingState = customLoadingState ? SampleCustomLoader : undefined;
 
   return (
     <div>
@@ -55,6 +60,7 @@ function Template({ open: openProp, ...args }: ModalStoryProps) {
             <Slider min={1} max={10} step={1} marks={{ 1: 1, 4: 4, 7: 7, 10: 10 }} />
           </div>
         }
+        loadingState={loadingState}
       />
 
       <MobileModal
@@ -116,6 +122,7 @@ function Template({ open: openProp, ...args }: ModalStoryProps) {
             24 px
           </>
         }
+        loadingState={loadingState}
       />
     </div>
   );
@@ -176,6 +183,8 @@ export const modal: StoryObj<ModalStoryProps> = {
         px
       </>
     ),
+    loading: false,
+    customLoadingState: false,
     size: SIZE.Auto,
     align: ALIGN.Default,
     mode: MODE.Regular,
@@ -200,7 +209,17 @@ export const modal: StoryObj<ModalStoryProps> = {
     },
   },
 
-  argTypes: {},
+  argTypes: {
+    customLoadingState: {
+      if: {
+        arg: 'loading',
+        eq: true,
+      },
+      name: '[Stories] Custom loading state',
+      type: 'boolean',
+    },
+    loadingState: { table: { disable: true } },
+  },
 
   parameters: {
     readme: {

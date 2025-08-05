@@ -157,7 +157,6 @@
       "stylus": "file:./stylus"
     }
   },
-  "packageManager": "pnpm@10.10.0",
   "engines": {
     "pnpm": "^10.10.0"
   }

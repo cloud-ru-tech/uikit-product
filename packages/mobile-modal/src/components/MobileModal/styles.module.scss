@@ -1,3 +1,5 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-modal';
+
 .modalFooter {
   &[data-align='vertical'] {
     .footerButton {
@@ -13,4 +15,13 @@
 
 .modalHeader {
   margin-bottom: 24px;
+}
+
+.loaderWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: styles-tokens-modal.$space-modal-body-top-bottom;
+  padding-bottom: styles-tokens-modal.$space-modal-footer-bottom;
 }

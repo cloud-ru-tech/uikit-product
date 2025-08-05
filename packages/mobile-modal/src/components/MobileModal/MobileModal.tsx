@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { ReactNode, useMemo } from 'react';
 
 import {
   ButtonFilled,
@@ -9,6 +10,7 @@ import {
   ButtonSimpleProps,
 } from '@snack-uikit/button';
 import { Link, LinkProps } from '@snack-uikit/link';
+import { Spinner } from '@snack-uikit/loaders';
 import { Typography } from '@snack-uikit/typography';
 
 import { ALIGN, TEST_IDS } from '../../constants';
@@ -52,6 +54,10 @@ export type MobileModalProps = Omit<MobileModalCustomProps, 'children'> & {
     title?: number;
     subtitle?: number;
   };
+  /** Управление состоянием загрузки */
+  loading?: boolean;
+  /** Содержимое состояния загрузки вместо спиннера по умолчанию */
+  loadingState?: ReactNode;
 };
 
 export function MobileModal({
@@ -64,12 +70,39 @@ export function MobileModal({
   additionalButton,
   disclaimer,
   align = ALIGN.Default,
+  loading,
+  loadingState,
   ...rest
 }: MobileModalProps) {
   const aligns = getAlignProps({ align });
   const buttonsSize = getButtonsSize();
-  const needFooter =
-    Boolean(approveButton) || Boolean(cancelButton) || Boolean(additionalButton) || Boolean(disclaimer);
+  const showFooter =
+    !loading && (Boolean(approveButton) || Boolean(cancelButton) || Boolean(additionalButton) || Boolean(disclaimer));
+
+  const body = useMemo(() => {
+    if (loading) {
+      if (loadingState) {
+        return <MobileModalCustom.Body content={loadingState} align={aligns.body} />;
+      }
+
+      return (
+        <MobileModalCustom.Body
+          content={
+            <div className={styles.loaderWrapper}>
+              <Spinner size='m' data-test-id={TEST_IDS.loadingSpinner} />
+            </div>
+          }
+          align={aligns.body}
+        />
+      );
+    }
+
+    if (content) {
+      return <MobileModalCustom.Body className={styles.modalBody} content={content} align={aligns.body} />;
+    }
+
+    return null;
+  }, [aligns.body, content, loading, loadingState]);
 
   return (
     <MobileModalCustom {...rest}>
@@ -81,10 +114,9 @@ export function MobileModal({
         align={aligns.header}
       />
 
-      {Boolean(content) && (
-        <MobileModalCustom.Body className={styles.modalBody} content={content} align={aligns.body} />
-      )}
-      {needFooter && (
+      {body}
+
+      {showFooter && (
         <MobileModalCustom.Footer
           actions={
             <>
