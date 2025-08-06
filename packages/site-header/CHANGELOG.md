@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-08-06)
+
+
+### Features
+
+* **SITE-9662:** fix subheader ([3db6870](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3db6870d6c06ca8a1f6c89c6786af9380fe10279))
+
+
+
+
+
 ## 0.2.2 (2025-08-04)
 
 ### Only dependencies have been changed
