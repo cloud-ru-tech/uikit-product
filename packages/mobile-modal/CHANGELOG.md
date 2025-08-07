@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-08-07)
+
+
+### Features
+
+* **PDS-1559:** loading and custom loading state for mobile modal ([1865e4d](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1865e4d53fa02dd17780fc4d34125418d9436eb6))
+
+
+
+
+
 ## 0.8.7 (2025-08-04)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.3 (2025-08-07)
+
+
+### Bug Fixes
+
+* **PDS-1559:** up deps for modal-predefined ([da89c96](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/da89c969098035fc3f2770b0260ec37e1860595e))
+
+
+
+
+
 ## 0.8.2 (2025-08-04)
 
 ### Only dependencies have been changed

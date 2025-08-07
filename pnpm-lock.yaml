@@ -358,7 +358,7 @@ importers:
         specifier: 14.0.2
         version: link:../icons
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.2
+        specifier: 0.9.3
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-utils':
         specifier: 6.0.1
@@ -397,13 +397,13 @@ importers:
         specifier: 0.4.2
         version: link:../mobile-accordion
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.2
+        specifier: 0.9.3
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.11.4
+        specifier: 0.11.5
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.8.7
+        specifier: 0.9.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
         specifier: 6.0.1
@@ -675,13 +675,13 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.2
+        specifier: 0.9.3
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.11.4
+        specifier: 0.11.5
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.8.7
+        specifier: 0.9.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.47
@@ -745,10 +745,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.17
+        specifier: 0.8.18
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.8.7
+        specifier: 0.9.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-title-clickable':
         specifier: 0.0.31
@@ -1112,7 +1112,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.2
+        specifier: 0.9.3
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.47
@@ -1197,7 +1197,7 @@ importers:
   packages/mobile-dropdown:
     dependencies:
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.8.7
+        specifier: 0.9.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
         specifier: 6.0.1
@@ -1224,10 +1224,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.2
+        specifier: 0.9.3
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.8.7
+        specifier: 0.9.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-utils':
         specifier: 6.0.1
@@ -1327,10 +1327,10 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.2
+        specifier: 0.9.3
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.8.7
+        specifier: 0.9.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.47
@@ -1432,13 +1432,13 @@ importers:
         specifier: 14.0.2
         version: link:../icons
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.17
+        specifier: 0.8.18
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.2
+        specifier: 0.9.3
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-toolbar':
-        specifier: 0.2.17
+        specifier: 0.2.18
         version: link:../mobile-toolbar
       '@sbercloud/uikit-product-utils':
         specifier: 6.0.1
@@ -1522,10 +1522,10 @@ importers:
         specifier: 14.0.2
         version: link:../icons
       '@sbercloud/uikit-product-mobile-chips':
-        specifier: 0.8.17
+        specifier: 0.8.18
         version: link:../mobile-chips
       '@sbercloud/uikit-product-mobile-dropdown':
-        specifier: 0.9.2
+        specifier: 0.9.3
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-tooltip':
         specifier: 0.4.47
@@ -1594,7 +1594,7 @@ importers:
         specifier: 0.1.4
         version: link:../markdown
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.8.7
+        specifier: 0.9.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-switch-row':
         specifier: 0.6.5
@@ -1690,7 +1690,7 @@ importers:
         specifier: 3.4.3
         version: 3.4.3
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.6.2
+        specifier: 0.6.3
         version: link:../button-predefined
       '@sbercloud/uikit-product-icons':
         specifier: 14.0.2
@@ -1756,7 +1756,7 @@ importers:
   packages/quota:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.6.2
+        specifier: 0.6.3
         version: link:../button-predefined
       '@sbercloud/uikit-product-icons':
         specifier: 14.0.2
@@ -1798,7 +1798,7 @@ importers:
   packages/site-banner:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.6.2
+        specifier: 0.6.3
         version: link:../button-predefined
       '@sbercloud/uikit-product-site-rich-text':
         specifier: 0.2.5
@@ -1825,7 +1825,7 @@ importers:
   packages/site-banner-predefined:
     dependencies:
       '@sbercloud/uikit-product-site-banner':
-        specifier: 0.2.28
+        specifier: 0.2.29
         version: link:../site-banner
       '@sbercloud/uikit-product-utils':
         specifier: 6.0.1
@@ -1879,7 +1879,7 @@ importers:
         specifier: 14.0.2
         version: link:../icons
       '@sbercloud/uikit-product-mobile-modal':
-        specifier: 0.8.7
+        specifier: 0.9.0
         version: link:../mobile-modal
       '@sbercloud/uikit-product-site-layout':
         specifier: 0.1.5
@@ -1903,7 +1903,7 @@ importers:
   packages/site-hero:
     dependencies:
       '@sbercloud/uikit-product-button-predefined':
-        specifier: 0.6.2
+        specifier: 0.6.3
         version: link:../button-predefined
       '@sbercloud/uikit-product-icons':
         specifier: 14.0.2
@@ -2017,7 +2017,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.11.4
+        specifier: 0.11.5
         version: link:../mobile-fields
       '@sbercloud/uikit-product-site-cards':
         specifier: 0.10.21
@@ -3973,42 +3973,36 @@ packages:
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-arm-musl@2.5.1':
     resolution: {integrity: sha512-6E+m/Mm1t1yhB8X412stiKFG3XykmgdIOqhjWj+VL8oHkKABfu/gjFj8DvLrYVHSBNC+/u5PeNrujiSQ1zwd1Q==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-linux-arm64-glibc@2.5.1':
     resolution: {integrity: sha512-LrGp+f02yU3BN9A+DGuY3v3bmnFUggAITBGriZHUREfNEzZh/GO06FF5u2kx8x+GBEUYfyTGamol4j3m9ANe8w==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-arm64-musl@2.5.1':
     resolution: {integrity: sha512-cFOjABi92pMYRXS7AcQv9/M1YuKRw8SZniCDw0ssQb/noPkRzA+HBDkwmyOJYp5wXcsTrhxO0zq1U11cK9jsFg==}
     engines: {node: '>= 10.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-linux-x64-glibc@2.5.1':
     resolution: {integrity: sha512-GcESn8NZySmfwlTsIur+49yDqSny2IhPeZfXunQi48DMugKeZ7uy1FX83pO0X22sHntJ4Ub+9k34XQCX+oHt2A==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@parcel/watcher-linux-x64-musl@2.5.1':
     resolution: {integrity: sha512-n0E2EQbatQ3bXhcH2D1XIAANAcTZkQICBPVaxMeaCVBtOpBZpWJuf7LwyWPSBDITb7In8mqQgJ7gH8CILCURXg==}
     engines: {node: '>= 10.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@parcel/watcher-win32-arm64@2.5.1':
     resolution: {integrity: sha512-RFzklRvmc3PkjKjry3hLF9wD7ppR4AKcWNzH7kXR7GUe0Igb3Nz8fyPwtZCSquGrhU5HhUNDr/mKBqj7tqA2Vw==}
