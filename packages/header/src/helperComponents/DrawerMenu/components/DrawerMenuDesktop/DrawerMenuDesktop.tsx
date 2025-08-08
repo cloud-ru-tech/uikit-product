@@ -163,7 +163,7 @@ export function DrawerMenuDesktop({
                 )}
 
                 <Scroll>
-                  {leftSectionLinks && leftSectionLinks.length && (
+                  {leftSectionLinks && leftSectionLinks.length > 0 && (
                     <div className={styles.links}>
                       {leftSectionLinks.map(link => (
                         <Link

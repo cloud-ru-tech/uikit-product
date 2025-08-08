@@ -644,14 +644,17 @@ export function getTemplate({ layoutType }: { layoutType: LayoutType }) {
                   {
                     label: 'item 1',
                     id: '1',
+                    href: '#',
                   },
                   {
                     label: 'item 2',
                     id: '2',
+                    href: '#',
                   },
                   {
                     label: 'item 3',
                     id: '3',
+                    href: '#',
                   },
                 ],
               }}
