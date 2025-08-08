@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.9.10 (2025-08-08)
+
+
+### Bug Fixes
+
+* **FF-7011:** condition to remove 0 when no cards available in drawer ([02fd642](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/02fd642f27ab617938492f86adaff35d2afb2fdb))
+
+
+
+
+
 ## 4.9.9 (2025-08-07)
 
 ### Only dependencies have been changed
