@@ -763,8 +763,8 @@ importers:
         specifier: 0.8.8
         version: 0.8.8(react@18.2.0)
       '@snack-uikit/breadcrumbs':
-        specifier: 0.11.8
-        version: 0.11.8(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        specifier: 0.11.21
+        version: 0.11.21(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/button':
         specifier: 0.19.11
         version: 0.19.11(react@18.2.0)
@@ -4379,8 +4379,8 @@ packages:
   '@snack-uikit/breadcrumbs@0.10.24':
     resolution: {integrity: sha512-cnrqitEeX6RVpcw24wvjpS/Pet51s/5JbOEiJhsWyxaXuhE8bpoPspzOp0VJxzlhN5fWaFIKG+ii9Pf6OsopOQ==}
 
-  '@snack-uikit/breadcrumbs@0.11.8':
-    resolution: {integrity: sha512-4w28d/oXEVFh4cyNOP2jqwi/WVdXOTcF86xXygmBlu2BHOudMCO8JW/knwPfxWJH1MsvFgnEs23VEwqDn5ljlw==}
+  '@snack-uikit/breadcrumbs@0.11.21':
+    resolution: {integrity: sha512-j+UGJFKinfqaL/MOi7j9mFWKG0p9PWiZVT6va1fz5eOuu3QjZwJC5VmkBpdyyh/5tZbUQ4nlViLAeoP4X06jjw==}
 
   '@snack-uikit/button@0.19.1':
     resolution: {integrity: sha512-wrihMc2YoU9HbELuM6vCCoqTMns4gGTjomENOrqaxz2i4Dw78iPk+jOPRPT/X+kou++GLSghyYjJdMMecAsimA==}
@@ -16144,11 +16144,11 @@ snapshots:
       - react
       - react-dom
 
-  '@snack-uikit/breadcrumbs@0.11.8(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
+  '@snack-uikit/breadcrumbs@0.11.21(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
-      '@snack-uikit/list': 0.29.6(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@snack-uikit/typography': 0.8.7(react@18.2.0)
-      '@snack-uikit/utils': 3.8.2(react@18.2.0)
+      '@snack-uikit/list': 0.32.1(@snack-uikit/locale@0.15.1)(@types/react@18.2.79)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@snack-uikit/typography': 0.8.10(react@18.2.0)
+      '@snack-uikit/utils': 3.10.1(react@18.2.0)
       classnames: 2.5.1
       lodash.debounce: 4.0.8
     transitivePeerDependencies:

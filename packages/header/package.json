@@ -41,7 +41,7 @@
     "@sbercloud/uikit-product-utils": "6.0.1",
     "@snack-uikit/alert": "0.16.11",
     "@snack-uikit/avatar": "0.8.8",
-    "@snack-uikit/breadcrumbs": "0.11.8",
+    "@snack-uikit/breadcrumbs": "0.11.21",
     "@snack-uikit/button": "0.19.11",
     "@snack-uikit/card": "0.19.5",
     "@snack-uikit/chips": "0.27.8",
