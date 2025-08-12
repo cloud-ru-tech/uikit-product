@@ -1,4 +1,4 @@
-import { MobileTooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
+import { TooltipProps } from '@sbercloud/uikit-product-mobile-tooltip';
 import {
   ButtonFilledProps,
   ButtonFunctionProps,
@@ -9,8 +9,9 @@ import {
 
 import { BUTTON_TYPE } from './constants';
 
-type Action = {
-  tooltip?: MobileTooltipProps;
+export type Action = {
+  tooltip?: TooltipProps;
+  hidden?: boolean;
 } & (
   | ({ variant?: typeof BUTTON_TYPE.Filled } & ButtonFilledProps)
   | ({ variant: typeof BUTTON_TYPE.Outline } & ButtonOutlineProps)

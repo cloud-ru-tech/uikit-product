@@ -1,6 +1,15 @@
 @use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
 
-.actionsWrapper {
+.desktopActionsWrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-shrink: 0;
+  gap: styles-theme-variables.$dimension-1m;
+  height: 100%;
+}
+
+.mobileActionsWrapper {
   display: flex;
   gap: 8px;
   flex-shrink: 0;
@@ -10,8 +19,8 @@
   flex-direction: row-reverse;
 
   /* Hide scrollbar */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 
   &::-webkit-scrollbar {
     display: none; /* Chrome, Safari and Opera */
@@ -21,12 +30,12 @@
 .button {
   white-space: nowrap;
 
-  &[data-full-width]:not([data-variant="icon-only"]) {
+  &[data-full-width]:not([data-variant='icon-only']) {
     flex-shrink: 0;
     width: auto;
   }
 
-  &[data-variant="icon-only"] {
+  &[data-variant='icon-only'] {
     flex-grow: 0;
     flex-shrink: 0;
   }

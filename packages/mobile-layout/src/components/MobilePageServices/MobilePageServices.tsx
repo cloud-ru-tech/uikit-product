@@ -4,10 +4,10 @@ import React, { PropsWithChildren } from 'react';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import {
-  Actions,
   ActionsProps,
   Headline,
   HeadlineProps,
+  MobileActions,
   SidebarSelect,
   SidebarSelectProps,
 } from '../../helperComponents';
@@ -42,7 +42,7 @@ export function MobilePageServices({
 
       {sidebar && <SidebarSelect {...sidebar} />}
 
-      {actions.length > 0 && <Actions items={actions} maxVisibleItems={maxVisibleActionsItems} />}
+      {actions.length > 0 && <MobileActions items={actions} maxVisibleItems={maxVisibleActionsItems} />}
 
       <div className={styles.childWrapper}>{children}</div>
     </div>
