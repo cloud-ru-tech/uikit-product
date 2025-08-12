@@ -23,7 +23,7 @@ export function ReleaseNotesModal({
   dataError,
   onDataErrorRetryClick,
   onSlideChange,
-}: Omit<ReleaseNotesModalProps, 'layoutType'>) {
+}: ReleaseNotesModalProps) {
   const { t } = useLocale('ModalPredefined');
   const {
     onCloseInner,

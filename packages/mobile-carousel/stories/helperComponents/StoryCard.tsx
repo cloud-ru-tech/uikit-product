@@ -1,5 +1,5 @@
+import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { Card } from '@snack-uikit/card';
-import { PlaceholderSVG } from '@snack-uikit/icons';
 
 import imageBackground from '../assets/ImageProdContentBackground.jpg';
 import { PROMO_FOOTER } from './constants';

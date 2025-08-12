@@ -4,12 +4,16 @@ import { QuestionTooltip, QuestionTooltipProps, Tooltip, TooltipProps } from '@s
 import { MobileQuestionTooltip } from '../MobileQuestionTooltip';
 import { MobileTooltip } from '../MobileTooltip';
 
-export function AdaptiveTooltip({ layoutType, ...props }: WithLayoutType<TooltipProps>) {
+export type AdaptiveTooltipProps = WithLayoutType<TooltipProps>;
+
+export function AdaptiveTooltip({ layoutType, ...props }: AdaptiveTooltipProps) {
   const isMobile = layoutType === 'mobile';
   return isMobile ? <MobileTooltip {...props} /> : <Tooltip {...props} />;
 }
 
-export function AdaptiveQuestionTooltip({ layoutType, ...props }: WithLayoutType<QuestionTooltipProps>) {
+export type AdaptiveQuestionTooltipProps = WithLayoutType<QuestionTooltipProps>;
+
+export function AdaptiveQuestionTooltip({ layoutType, ...props }: AdaptiveQuestionTooltipProps) {
   const isMobile = layoutType === 'mobile';
   return isMobile ? <MobileQuestionTooltip {...props} /> : <QuestionTooltip {...props} />;
 }

@@ -35,10 +35,10 @@
     "@sbercloud/uikit-product-info-row": "0.8.19",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.47",
     "@sbercloud/uikit-product-utils": "6.0.1",
-    "@snack-uikit/button": "0.19.7",
-    "@snack-uikit/divider": "3.2.3",
-    "@snack-uikit/skeleton": "0.6.2",
-    "@snack-uikit/utils": "3.7.0",
+    "@snack-uikit/button": "0.19.15",
+    "@snack-uikit/divider": "3.2.9",
+    "@snack-uikit/skeleton": "0.6.8",
+    "@snack-uikit/utils": "3.10.1",
     "classnames": "2.5.1"
   },
   "peerDependencies": {

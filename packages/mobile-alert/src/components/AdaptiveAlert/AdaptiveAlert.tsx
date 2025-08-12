@@ -3,12 +3,16 @@ import { Alert, AlertProps, AlertTop, AlertTopProps } from '@snack-uikit/alert';
 
 import { MobileAlertTop } from '../MobileAlertTop';
 
-export function AdaptiveAlert({ layoutType, ...props }: WithLayoutType<AlertProps>) {
+export type AdaptiveAlertProps = WithLayoutType<AlertProps>;
+
+export function AdaptiveAlert({ layoutType, ...props }: AdaptiveAlertProps) {
   const isMobile = layoutType === 'mobile';
   return <Alert truncate={isMobile ? { title: 2 } : undefined} {...props} />;
 }
 
-export function AdaptiveAlertTop({ layoutType, ...props }: WithLayoutType<AlertTopProps>) {
+export type AdaptiveAlertTopProps = WithLayoutType<AlertTopProps>;
+
+export function AdaptiveAlertTop({ layoutType, ...props }: AdaptiveAlertTopProps) {
   const isMobile = layoutType === 'mobile';
   return isMobile ? <MobileAlertTop {...props} /> : <AlertTop {...props} />;
 }

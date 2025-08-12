@@ -1,8 +1,12 @@
+import { WithLayoutType } from '@sbercloud/uikit-product-utils';
+
 import { ReleaseNotesModalProps } from '../../types';
 import { MobileReleaseNotesModal } from '../MobileReleaseNotesModal';
 import { ReleaseNotesModal } from '../ReleaseNotesModal';
 
-export function AdaptiveReleaseNotesModal({ layoutType, ...props }: ReleaseNotesModalProps) {
+export type AdaptiveReleaseNotesModalProps = WithLayoutType<ReleaseNotesModalProps>;
+
+export function AdaptiveReleaseNotesModal({ layoutType, ...props }: AdaptiveReleaseNotesModalProps) {
   const isMobile = layoutType === 'mobile';
   return isMobile ? <MobileReleaseNotesModal {...props} /> : <ReleaseNotesModal {...props} />;
 }

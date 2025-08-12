@@ -22,7 +22,7 @@ export function MobileReleaseNotesModal({
   onReadLaterClick,
   dataError,
   onDataErrorRetryClick,
-}: Omit<ReleaseNotesModalProps, 'layoutType'>) {
+}: ReleaseNotesModalProps) {
   const { t } = useLocale('ModalPredefined');
   const {
     onCloseInner,

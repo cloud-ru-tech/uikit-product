@@ -32,7 +32,7 @@ export type MobileChipChoiceDateProps = ChipChoiceCommonProps & {
 } & (
     | ChipChoiceDateWithSeconds
     | {
-        mode?: 'date' | 'month';
+        mode?: 'date' | 'month' | 'year';
       }
   );
 
