@@ -102,7 +102,9 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
       onAccept: (_: string, maskRef) => {
         const unmasked = maskRef.unmaskedValue;
 
-        const value = unmasked.length ? `${country?.content.caption}${unmasked}` : '';
+        const requiredSymbols = country?.mask.replace(/[\D]/g, '');
+
+        const value = unmasked.length ? `${country?.content.caption}${requiredSymbols}${unmasked}` : '';
 
         if (value !== valueProp) {
           onChangeProp?.(value);
@@ -111,7 +113,8 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
     });
 
     useEffect(() => {
-      const normalizedValue = valueProp?.replace(country?.content.caption ?? '', '');
+      const requiredSymbols = country?.mask.replace(/[\D]/g, '');
+      const normalizedValue = valueProp?.replace((country?.content.caption ?? '') + requiredSymbols, '');
 
       if (normalizedValue !== undefined && normalizedValue !== unmaskedValue) {
         setValue(normalizedValue);

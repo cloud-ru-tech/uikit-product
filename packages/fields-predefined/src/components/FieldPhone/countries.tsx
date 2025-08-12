@@ -1,5 +1,6 @@
 import {
   AbkhaziaSVG,
+  AfghanistanSVG,
   AlbaniaSVG,
   AlgeriaSVG,
   AndorraSVG,
@@ -17,18 +18,27 @@ import {
   BelarusSVG,
   BelgiumSVG,
   BelizeSVG,
+  BeninSVG,
   BhutanSVG,
   BosniaAndHerzegovinaSVG,
   BotswanaSVG,
   BrazilSVG,
+  CambodiaSVG,
+  CameroonSVG,
   CaymanIslandsSVG,
   CentralAfricanRepublicSVG,
+  ChadSVG,
+  ChileSVG,
   ColombiaSVG,
+  CongoSVG,
+  CostaRicaSVG,
+  CoteDIvoireSVG,
   CroatiaSVG,
   CyprusSVG,
   DenmarkSVG,
   DjiboutiSVG,
   DominicanRepublicSVG,
+  EcuadorSVG,
   EgyptSVG,
   EstoniaSVG,
   EthiopiaSVG,
@@ -38,15 +48,20 @@ import {
   FrenchPolynesiaSVG,
   GeorgiaSVG,
   GermanySVG,
+  GhanaSVG,
   GibraltarSVG,
   GreeceSVG,
   GuatemalaSVG,
   GuernseySVG,
+  GuineaSVG,
   GuyanaSVG,
+  HaitiSVG,
   HondurasSVG,
+  HongKongSVG,
   HungarySVG,
   IcelandSVG,
   IndiaSVG,
+  IndonesiaSVG,
   IranSVG,
   IraqSVG,
   IrelandSVG,
@@ -54,17 +69,21 @@ import {
   IsraelSVG,
   ItalySVG,
   JapanSVG,
+  JordanSVG,
   KazakhstanSVG,
+  KenyaSVG,
   KiribatiSVG,
   KosovoSVG,
   KyrgyzstanSVG,
   LatviaSVG,
   LebanonSVG,
   LesothoSVG,
+  LibyaSVG,
   LiechtensteinSVG,
   LithuaniaSVG,
   LuxembourgSVG,
   MadagascarSVG,
+  MalaysiaSVG,
   MaldivesSVG,
   MaliSVG,
   MaltaSVG,
@@ -81,19 +100,27 @@ import {
   NetherlandsSVG,
   NewCaledoniaSVG,
   NewZealandSVG,
+  NicaraguaSVG,
+  NigeriaSVG,
   NigerSVG,
   NorfolkIslandSVG,
   NorthMacedoniaSVG,
+  NorwaySVG,
   OmanSVG,
+  PalestineSVG,
+  ParaguaySVG,
   PeruSVG,
   PolandSVG,
   PortugalSVG,
+  QatarSVG,
   RomaniaSVG,
   RussiaSVG,
+  RwandaSVG,
   SaintPierreAndMiquelonSVG,
   SanMarinoSVG,
   SaoTomeAndPrincipeSVG,
   SaudiArabiaSVG,
+  SenegalSVG,
   SerbiaSVG,
   SierraLeoneSVG,
   SingaporeSVG,
@@ -104,21 +131,31 @@ import {
   SouthKoreaSVG,
   SouthSudanSVG,
   SpainSVG,
+  SriLankaSVG,
+  SudanSVG,
   SurinameSVG,
+  SwedenSVG,
   SwitzerlandSVG,
   SyriaSVG,
+  TaiwanSVG,
   TajikistanSVG,
+  TanzaniaSVG,
+  ThailandSVG,
   TongaSVG,
   TransnistriaSVG,
   TurkeySVG,
   TurkmenistanSVG,
   TuvaluSVG,
+  UgandaSVG,
   UkraineSVG,
   UnitedArabEmiratesSVG,
   UruguaySVG,
   UzbekistanSVG,
   VanuatuSVG,
+  VenezuelaSVG,
+  VietnamSVG,
   WallisAndFutunaSVG,
+  YemenSVG,
   ZimbabweSVG,
 } from '@sbercloud/uikit-product-icons';
 
@@ -199,14 +236,6 @@ export const ANTIGUA_AND_BARBUDA_COUNTRY_CODE = {
   caption: '+1',
   mask: '268 XXX-XXXX',
   beforeContent: <AntiguaAndBarbudaSVG size={24} />,
-  enabled: true,
-} as const;
-
-export const ARGENTINA_COUNTRY_CODE = {
-  value: 'argentina',
-  caption: '+54',
-  mask: 'XXX XXX-XXX',
-  beforeContent: <ArgentinaSVG size={24} />,
   enabled: true,
 } as const;
 
@@ -658,14 +687,6 @@ export const MOROCCO_COUNTRY_CODE = {
   enabled: true,
 } as const;
 
-export const MOZAMBIQUE_COUNTRY_CODE = {
-  value: 'mozambique',
-  caption: '+258',
-  mask: 'XX XXX-XXX',
-  beforeContent: <MozambiqueSVG size={24} />,
-  enabled: true,
-} as const;
-
 export const MOLDOVA_COUNTRY_CODE = {
   value: 'moldova',
   mask: 'XXXX XXXX',
@@ -1090,6 +1111,326 @@ export const JAPAN_COUNTRY_CODE = {
   enabled: true,
 } as const;
 
+export const TAIWAN_COUNTRY_CODE = {
+  value: 'taiwan',
+  caption: '+886',
+  mask: 'XXX XXX XXX',
+  beforeContent: <TaiwanSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const NIGERIA_COUNTRY_CODE = {
+  value: 'nigeria',
+  caption: '+234',
+  mask: 'XXX XXX XXXX',
+  beforeContent: <NigeriaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const BENIN_COUNTRY_CODE = {
+  value: 'benin',
+  caption: '+229',
+  mask: 'XX XX XX XX',
+  beforeContent: <BeninSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const CAMEROON_COUNTRY_CODE = {
+  value: 'cameroon',
+  caption: '+237',
+  mask: 'XXX XX XX XX',
+  beforeContent: <CameroonSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const GHANA_COUNTRY_CODE = {
+  value: 'ghana',
+  caption: '+233',
+  mask: 'XX XXX XXXX',
+  beforeContent: <GhanaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const RWANDA_COUNTRY_CODE = {
+  value: 'rwanda',
+  caption: '+250',
+  mask: 'XX XXX XXXX',
+  beforeContent: <RwandaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const ZAMBIA_COUNTRY_CODE = {
+  value: 'zambia',
+  caption: '+260',
+  mask: 'XX XXX XXXX',
+  beforeContent: <RwandaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const COTE_D_IVOIRE_COUNTRY_CODE = {
+  value: 'coteDIvoire',
+  caption: '+225',
+  mask: 'XX XX XX XX XX',
+  beforeContent: <CoteDIvoireSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const UGANDA_COUNTRY_CODE = {
+  value: 'uganda',
+  caption: '+256',
+  mask: '7X XXX XXXX',
+  beforeContent: <UgandaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const CONGO_COUNTRY_CODE = {
+  value: 'congo',
+  caption: '+242',
+  mask: 'XX XXX XXXX',
+  beforeContent: <CongoSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const GUINEA_COUNTRY_CODE = {
+  value: 'guinea',
+  caption: '+224',
+  mask: '6XX XX XX XX',
+  beforeContent: <GuineaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const SUDAN_COUNTRY_CODE = {
+  value: 'sudan',
+  caption: '+249',
+  mask: 'XX XXX XXXX',
+  beforeContent: <SudanSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const KENYA_COUNTRY_CODE = {
+  value: 'kenya',
+  caption: '+254',
+  mask: 'XXX XXX XXX',
+  beforeContent: <KenyaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const JORDAN_COUNTRY_CODE = {
+  value: 'jordan',
+  caption: '+962',
+  mask: '7X XXX XXXX',
+  beforeContent: <JordanSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const LIBYA_COUNTRY_CODE = {
+  value: 'libya',
+  caption: '+218',
+  mask: '9X XXX XXXX',
+  beforeContent: <LibyaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const SWEDEN_COUNTRY_CODE = {
+  value: 'sweden',
+  caption: '+46',
+  mask: '7X XXX XX XX',
+  beforeContent: <SwedenSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const CHAD_COUNTRY_CODE = {
+  value: 'chad',
+  caption: '+235',
+  mask: 'XX XX XX XX',
+  beforeContent: <ChadSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const NORWAY_COUNTRY_CODE = {
+  value: 'norway',
+  caption: '+47',
+  mask: 'XXX XX XXX',
+  beforeContent: <NorwaySVG size={24} />,
+  enabled: true,
+} as const;
+
+export const HONG_KONG_COUNTRY_CODE = {
+  value: 'hongKong',
+  caption: '+852',
+  mask: 'XXXX XXXX',
+  beforeContent: <HongKongSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const COSTA_RICA_COUNTRY_CODE = {
+  value: 'costaRica',
+  caption: '+506',
+  mask: 'XXXX XXXX',
+  beforeContent: <CostaRicaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const CHILE_COUNTRY_CODE = {
+  value: 'chile',
+  caption: '+56',
+  mask: '9 XXXX XXXX',
+  beforeContent: <ChileSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const ARGENTINA_COUNTRY_CODE = {
+  value: 'argentina',
+  caption: '+54',
+  mask: '9 XX XXXX XXXX',
+  beforeContent: <ArgentinaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const ECUADOR_COUNTRY_CODE = {
+  value: 'ecuador',
+  caption: '+593',
+  mask: '9X XXX XXXX',
+  beforeContent: <EcuadorSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const MALAYSIA_COUNTRY_CODE = {
+  value: 'malaysia',
+  caption: '+60',
+  mask: '1X XXX[X] XXXX',
+  beforeContent: <MalaysiaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const PARAGUAY_COUNTRY_CODE = {
+  value: 'paraguay',
+  caption: '+595',
+  mask: '9XX XXXXXX',
+  beforeContent: <ParaguaySVG size={24} />,
+  enabled: true,
+} as const;
+
+export const YEMEN_COUNTRY_CODE = {
+  value: 'yemen',
+  caption: '+967',
+  mask: '7X XXX XXXX',
+  beforeContent: <YemenSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const HAITI_COUNTRY_CODE = {
+  value: 'haiti',
+  caption: '+509',
+  mask: 'XXXX XXXX',
+  beforeContent: <HaitiSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const MOZAMBIQUE_COUNTRY_CODE = {
+  value: 'mozambique',
+  caption: '+258',
+  mask: '8X[X] XXX XXXX',
+  beforeContent: <MozambiqueSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const NICARAGUA_COUNTRY_CODE = {
+  value: 'nicaragua',
+  caption: '+505',
+  mask: 'XXXX XXXX',
+  beforeContent: <NicaraguaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const SENEGAL_COUNTRY_CODE = {
+  value: 'senegal',
+  caption: '+221',
+  mask: 'XX XXX XX XX',
+  beforeContent: <SenegalSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const VENEZUELA_COUNTRY_CODE = {
+  value: 'venezuela',
+  caption: '+58',
+  mask: 'XXX XXXXXXX',
+  beforeContent: <VenezuelaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const AFGHANISTAN_COUNTRY_CODE = {
+  value: 'afghanistan',
+  caption: '+93',
+  mask: 'XX XXX XXXX',
+  beforeContent: <AfghanistanSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const SRI_LANKA_COUNTRY_CODE = {
+  value: 'sriLanka',
+  caption: '+94',
+  mask: 'XX XXX XXXX',
+  beforeContent: <SriLankaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const VIETNAM_COUNTRY_CODE = {
+  value: 'vietnam',
+  caption: '+84',
+  mask: 'XX XXX[X] XXXX',
+  beforeContent: <VietnamSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const THAILAND_COUNTRY_CODE = {
+  value: 'thailand',
+  caption: '+66',
+  mask: 'XX XXX XXXX',
+  beforeContent: <ThailandSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const INDONESIA_COUNTRY_CODE = {
+  value: 'indonesia',
+  caption: '+62',
+  mask: '8XX XXXX XXX[XX]',
+  beforeContent: <IndonesiaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const TANZANIA_COUNTRY_CODE = {
+  value: 'tanzania',
+  caption: '+255',
+  mask: 'XX XXX XXXX',
+  beforeContent: <TanzaniaSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const QATAR_COUNTRY_CODE = {
+  value: 'qatar',
+  caption: '+974',
+  mask: 'XXXX XXXX',
+  beforeContent: <QatarSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const PALESTINE_COUNTRY_CODE = {
+  value: 'palestine',
+  caption: '+970',
+  mask: '5X XXX XXXX',
+  beforeContent: <PalestineSVG size={24} />,
+  enabled: true,
+} as const;
+
+export const CAMBODIA_COUNTRY_CODE = {
+  value: 'cambodia',
+  caption: '+855',
+  mask: 'XX XXX XXX[X]',
+  beforeContent: <CambodiaSVG size={24} />,
+  enabled: true,
+} as const;
+
 export const ALL_COUNTRY_CODES = [
   RUSSIA_COUNTRY_CODE,
   ABKHAZIA_COUNTRY_CODE,
@@ -1103,6 +1444,7 @@ export const ALL_COUNTRY_CODES = [
   ANTIGUA_AND_BARBUDA_COUNTRY_CODE,
   ARGENTINA_COUNTRY_CODE,
   ARMENIA_COUNTRY_CODE,
+  AFGHANISTAN_COUNTRY_CODE,
   BAHAMAS_COUNTRY_CODE,
   BANGLADESH_COUNTRY_CODE,
   BARBADOS_COUNTRY_CODE,
@@ -1110,43 +1452,61 @@ export const ALL_COUNTRY_CODES = [
   BELARUS_COUNTRY_CODE,
   BELIZE_COUNTRY_CODE,
   BELGIUM_COUNTRY_CODE,
+  BENIN_COUNTRY_CODE,
   BOSNIA_AND_HERZEGOVINA_COUNTRY_CODE,
   BOTSWANA_COUNTRY_CODE,
   BRAZIL_COUNTRY_CODE,
   BHUTAN_COUNTRY_CODE,
   VANUATU_COUNTRY_CODE,
   HUNGARY_COUNTRY_CODE,
+  VENEZUELA_COUNTRY_CODE,
+  VIETNAM_COUNTRY_CODE,
+  HAITI_COUNTRY_CODE,
   GUYANA_COUNTRY_CODE,
+  GHANA_COUNTRY_CODE,
   GUATEMALA_COUNTRY_CODE,
+  GUINEA_COUNTRY_CODE,
   GERMANY_COUNTRY_CODE,
   GUERNSEY_COUNTRY_CODE,
   GIBRALTAR_COUNTRY_CODE,
   HONDURAS_COUNTRY_CODE,
+  HONG_KONG_COUNTRY_CODE,
   GREECE_COUNTRY_CODE,
   GEORGIA_COUNTRY_CODE,
   DENMARK_COUNTRY_CODE,
   DJIBOUTI_COUNTRY_CODE,
   DOMINICAN_REPUBLIC_COUNTRY_CODE,
   EGYPT_COUNTRY_CODE,
+  ZAMBIA_COUNTRY_CODE,
   ZIMBABWE_COUNTRY_CODE,
   ISRAEL_COUNTRY_CODE,
   INDIA_COUNTRY_CODE,
+  INDONESIA_COUNTRY_CODE,
+  JORDAN_COUNTRY_CODE,
   IRAQ_COUNTRY_CODE,
   IRAN_COUNTRY_CODE,
   IRELAND_COUNTRY_CODE,
   ICELAND_COUNTRY_CODE,
   SPAIN_COUNTRY_CODE,
   ITALY_COUNTRY_CODE,
+  YEMEN_COUNTRY_CODE,
   KAZAKHSTAN_COUNTRY_CODE,
   CAYMAN_ISLANDS_COUNTRY_CODE,
+  CAMBODIA_COUNTRY_CODE,
+  CAMEROON_COUNTRY_CODE,
+  QATAR_COUNTRY_CODE,
+  KENYA_COUNTRY_CODE,
   CYPRUS_COUNTRY_CODE,
   KIRIBATI_COUNTRY_CODE,
   COLOMBIA_COUNTRY_CODE,
+  COSTA_RICA_COUNTRY_CODE,
+  COTE_D_IVOIRE_COUNTRY_CODE,
   KOSOVO_COUNTRY_CODE,
   KYRGYZSTAN_COUNTRY_CODE,
   LATVIA_COUNTRY_CODE,
   LESOTHO_COUNTRY_CODE,
   LEBANON_COUNTRY_CODE,
+  LIBYA_COUNTRY_CODE,
   LITHUANIA_COUNTRY_CODE,
   LIECHTENSTEIN_COUNTRY_CODE,
   LUXEMBOURG_COUNTRY_CODE,
@@ -1154,6 +1514,7 @@ export const ALL_COUNTRY_CODES = [
   MAURITANIA_COUNTRY_CODE,
   MADAGASCAR_COUNTRY_CODE,
   MAYOTTE_COUNTRY_CODE,
+  MALAYSIA_COUNTRY_CODE,
   MALI_COUNTRY_CODE,
   MALDIVES_COUNTRY_CODE,
   MALTA_COUNTRY_CODE,
@@ -1164,37 +1525,50 @@ export const ALL_COUNTRY_CODES = [
   MYANMAR_COUNTRY_CODE,
   NAMIBIA_COUNTRY_CODE,
   NIGER_COUNTRY_CODE,
+  NIGERIA_COUNTRY_CODE,
   NETHERLANDS_COUNTRY_CODE,
+  NICARAGUA_COUNTRY_CODE,
   NEW_ZEALAND_COUNTRY_CODE,
   NEW_CALEDONIA_COUNTRY_CODE,
+  NORWAY_COUNTRY_CODE,
   UNITED_ARAB_EMIRATES_COUNTRY_CODE,
   OMAN_COUNTRY_CODE,
   ISLE_OF_MAN_COUNTRY_CODE,
   NORFOLK_ISLAND_COUNTRY_CODE,
   WALLIS_AND_FUTUNA_ISLANDS_COUNTRY_CODE,
+  PALESTINE_COUNTRY_CODE,
+  PARAGUAY_COUNTRY_CODE,
   PERU_COUNTRY_CODE,
   POLAND_COUNTRY_CODE,
   PORTUGAL_COUNTRY_CODE,
   TRANSNISTRIA_COUNTRY_CODE,
+  CONGO_COUNTRY_CODE,
+  RWANDA_COUNTRY_CODE,
   ROMANIA_COUNTRY_CODE,
   SAN_MARINO_COUNTRY_CODE,
   SAO_TOME_AND_PRINCIPE_COUNTRY_CODE,
   SAUDI_ARABIA_COUNTRY_CODE,
   NORTH_MACEDONIA_COUNTRY_CODE,
   SAINT_PIERRE_AND_MIQUELON_COUNTRY_CODE,
+  SENEGAL_COUNTRY_CODE,
   SERBIA_COUNTRY_CODE,
   SINGAPORE_COUNTRY_CODE,
   SINT_MAARTEN_COUNTRY_CODE,
   SYRIA_COUNTRY_CODE,
   SLOVAKIA_COUNTRY_CODE,
   SOMALILAND_COUNTRY_CODE,
+  SUDAN_COUNTRY_CODE,
   SURINAME_COUNTRY_CODE,
   SIERRA_LEONE_COUNTRY_CODE,
   TAJIKISTAN_COUNTRY_CODE,
+  THAILAND_COUNTRY_CODE,
+  TAIWAN_COUNTRY_CODE,
+  TANZANIA_COUNTRY_CODE,
   TONGA_COUNTRY_CODE,
   TUVALU_COUNTRY_CODE,
   TURKMENISTAN_COUNTRY_CODE,
   TURKEY_COUNTRY_CODE,
+  UGANDA_COUNTRY_CODE,
   UZBEKISTAN_COUNTRY_CODE,
   UKRAINE_COUNTRY_CODE,
   URUGUAY_COUNTRY_CODE,
@@ -1204,8 +1578,13 @@ export const ALL_COUNTRY_CODES = [
   FRENCH_POLYNESIA_COUNTRY_CODE,
   CROATIA_COUNTRY_CODE,
   CENTRAL_AFRICAN_REPUBLIC_COUNTRY_CODE,
+  CHAD_COUNTRY_CODE,
   MONTENEGRO_COUNTRY_CODE,
+  CHILE_COUNTRY_CODE,
   SWITZERLAND_COUNTRY_CODE,
+  SWEDEN_COUNTRY_CODE,
+  SRI_LANKA_COUNTRY_CODE,
+  ECUADOR_COUNTRY_CODE,
   ESTONIA_COUNTRY_CODE,
   ETHIOPIA_COUNTRY_CODE,
   SOUTH_AFRICA_COUNTRY_CODE,
