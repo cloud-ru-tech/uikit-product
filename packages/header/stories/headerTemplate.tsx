@@ -9,6 +9,7 @@ import {
   EmailSVG,
   EvolutionSVG,
   FileSVG,
+  InfoFilledSVG,
   MlSpaceSVG,
   PlaceholderSVG,
   SettingsSVG,
@@ -18,7 +19,6 @@ import {
 import { PageServices } from '@sbercloud/uikit-product-page-layout';
 import { LayoutType } from '@sbercloud/uikit-product-utils';
 import { HotSpotProps } from '@snack-uikit/hot-spot';
-import { InfoFilledSVG } from '@snack-uikit/icons';
 import { toaster } from '@snack-uikit/toaster';
 import { Tooltip } from '@snack-uikit/tooltip';
 

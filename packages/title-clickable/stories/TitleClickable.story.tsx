@@ -1,7 +1,7 @@
 import { Meta, StoryFn, StoryObj } from '@storybook/react';
 
+import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { Counter } from '@snack-uikit/counter';
-import { PlaceholderSVG } from '@snack-uikit/icons';
 import { Tag } from '@snack-uikit/tag';
 import { ValueOf } from '@snack-uikit/utils';
 
