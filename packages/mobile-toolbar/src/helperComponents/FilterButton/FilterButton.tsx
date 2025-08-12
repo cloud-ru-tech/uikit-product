@@ -1,7 +1,7 @@
 import { FilterSVG } from '@sbercloud/uikit-product-icons';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { MobileTooltip } from '@sbercloud/uikit-product-mobile-tooltip';
 import { ButtonFunction } from '@snack-uikit/button';
-import { useLocale } from '@snack-uikit/locale';
 
 import { TEST_IDS } from '../../constants';
 

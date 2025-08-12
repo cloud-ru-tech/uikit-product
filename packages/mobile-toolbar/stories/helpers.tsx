@@ -1,5 +1,5 @@
+import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
 import { FiltersState } from '@snack-uikit/chips';
-import { PlaceholderSVG } from '@snack-uikit/icons';
 import { toaster } from '@snack-uikit/toaster';
 
 import { MobileToolbarProps } from '../src';

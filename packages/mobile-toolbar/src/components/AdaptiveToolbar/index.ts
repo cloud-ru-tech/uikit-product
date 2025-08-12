@@ -1,2 +1,1 @@
 export * from './AdaptiveToolbar';
-export * from './MobileToolbar';
