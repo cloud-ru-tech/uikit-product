@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 
 import { CrossSVG, SearchSVG } from '@sbercloud/uikit-product-icons';
-import { useLocale } from '@snack-uikit/locale';
+import { useLocale } from '@sbercloud/uikit-product-locale';
 
 import { EmptyStateProps } from './types';
 

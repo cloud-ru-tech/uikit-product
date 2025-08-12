@@ -11,10 +11,10 @@ import {
 import cn from 'classnames';
 import { useCallback, useMemo } from 'react';
 
+import { useLocale } from '@sbercloud/uikit-product-locale';
 import { FiltersState, MobileChipChoiceRowProps } from '@sbercloud/uikit-product-mobile-chips';
 import { MobileToolbar, MobileToolbarProps } from '@sbercloud/uikit-product-mobile-toolbar';
 import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
-import { useLocale } from '@snack-uikit/locale';
 import { SkeletonContextProvider } from '@snack-uikit/skeleton';
 import { PaginationState, TableProps } from '@snack-uikit/table';
 

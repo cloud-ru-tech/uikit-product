@@ -2,29 +2,25 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { FiltersState } from '@sbercloud/uikit-product-mobile-chips';
 import { WithLayoutType } from '@sbercloud/uikit-product-utils';
-import {
-  PaginationState,
-  ServerTable as DesktopTable,
-  ServerTableProps as DesktopServerTableProps,
-} from '@snack-uikit/table';
+import { PaginationState, ServerTable as DesktopTable, ServerTableProps } from '@snack-uikit/table';
 
 import { DEFAULT_PAGE_SIZE, DEFAULT_PAGINATION_LIMIT } from '../constants';
 import { useStateControl } from '../hooks';
 import { MobileTable, MobileTableProps } from '../MobileTable';
 import { onSearchDebounced } from '../utils';
 
-type ServerTableProps<TData extends object, TFilters extends FiltersState> = Omit<
-  DesktopServerTableProps<TData, TFilters>,
+export type AdaptiveServerTableProps<TData extends object, TFilters extends FiltersState> = Omit<
+  ServerTableProps<TData, TFilters>,
   'columnsSettings'
 > &
   Omit<MobileTableProps<TData, TFilters>, 'data'> & {
-    columnsSettings?: DesktopServerTableProps<TData, TFilters>['columnsSettings'];
+    columnsSettings?: ServerTableProps<TData, TFilters>['columnsSettings'];
   };
 
 export function AdaptiveServerTable<TData extends object, TFilters extends FiltersState>({
   layoutType,
   ...props
-}: WithLayoutType<ServerTableProps<TData, TFilters>>) {
+}: WithLayoutType<AdaptiveServerTableProps<TData, TFilters>>) {
   const isMobile = layoutType === 'mobile';
 
   const {
