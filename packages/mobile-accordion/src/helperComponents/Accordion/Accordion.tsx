@@ -1,6 +1,6 @@
+import { extractSupportProps } from '@sbercloud/uikit-product-utils';
 import { AccordionProps } from '@snack-uikit/accordion';
 import { ToggleGroup } from '@snack-uikit/toggles';
-import { extractSupportProps } from '@snack-uikit/utils';
 
 export function Accordion({
   children,

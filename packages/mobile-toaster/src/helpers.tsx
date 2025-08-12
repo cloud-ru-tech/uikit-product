@@ -377,25 +377,25 @@ export const mobileToaster: Toaster = {
   upload,
 };
 
-export function adaptiveToaster({ layoutType }: WithLayoutType<unknown>): Toaster {
+export function adaptiveToaster({ layoutType }: WithLayoutType): Toaster {
   const isMobile = layoutType === 'mobile';
 
   return isMobile ? mobileToaster : toaster;
 }
 
-export function adaptiveOpenToast({ layoutType }: WithLayoutType<unknown>): OpenToast {
+export function adaptiveOpenToast({ layoutType }: WithLayoutType): OpenToast {
   const isMobile = layoutType === 'mobile';
 
   return isMobile ? openMobileToast : openToast;
 }
 
-export function adaptiveUpdateToast({ layoutType }: WithLayoutType<unknown>): UpdateToast {
+export function adaptiveUpdateToast({ layoutType }: WithLayoutType): UpdateToast {
   const isMobile = layoutType === 'mobile';
 
   return isMobile ? updateMobileToast : updateToast;
 }
 
-export function adaptiveDismissToast({ layoutType }: WithLayoutType<unknown>): (params?: Id) => void {
+export function adaptiveDismissToast({ layoutType }: WithLayoutType): (params?: Id) => void {
   const isMobile = layoutType === 'mobile';
 
   return isMobile ? dismissMobileToast : dismissToast;

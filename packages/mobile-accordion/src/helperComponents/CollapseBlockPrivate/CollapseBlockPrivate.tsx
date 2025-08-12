@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { ReactNode } from 'react';
 
-import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
+import { extractSupportProps, WithSupportProps } from '@sbercloud/uikit-product-utils';
 
 import { TEST_IDS } from '../../testIds';
 import styles from './styles.module.scss';
