@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 4.9.11 (2025-08-13)
+
+
+### Bug Fixes
+
+* **VMWDEV-2712:** breadcrumbs state racing ([fd45dc2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fd45dc22acd9eed809ac7031942fbd6012b253ae))
+
+
+
+
+
 ## 4.9.10 (2025-08-08)
 
 
