@@ -9,7 +9,7 @@ import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
 import { MobileDrawerCustom, MobileDrawerCustomProps } from '../src';
-import { MODAL_MODE, POSITION, SIZE } from '../src/constants';
+import { MODAL_MODE, MODE, POSITION, SIZE } from '../src/constants';
 import { Size } from '../src/types';
 import styles from './styles.module.scss';
 
@@ -78,9 +78,11 @@ export const drawerCustom: StoryObj<DrawerCustomStoryProps> = {
     sizePredefined: SIZE.S,
     sizeCustom: undefined,
     position: POSITION.Left,
+    mode: MODE.Regular,
     modalMode: MODAL_MODE.Regular,
     swipeEnabled: true,
     closeButtonEnabled: true,
+    outline: false,
   },
 
   argTypes: {

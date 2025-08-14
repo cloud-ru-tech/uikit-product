@@ -7,7 +7,7 @@ import { useUncontrolledProp } from 'uncontrollable';
 
 import { extractSupportProps, useModalOpenState, WithSupportProps } from '@snack-uikit/utils';
 
-import { MODAL_MODE, POSITION, SIZE, SIZE_AS_VALUES } from '../../constants';
+import { MODAL_MODE, MODE, POSITION, SIZE, SIZE_AS_VALUES } from '../../constants';
 import {
   ButtonClose,
   DrawerBody,
@@ -50,6 +50,8 @@ export type MobileDrawerCustomProps = WithSupportProps<
     container?: string | HTMLElement;
     /** Есть ли радиус у дровера */
     hasBorderRadius?: boolean;
+    /** Есть ли бордер у дровера */
+    outline?: boolean;
     /** Работает ли закрытие на свайп */
     swipeEnabled?: boolean;
     /** Показывать ли кнопку закрытия */
@@ -61,6 +63,7 @@ export type MobileDrawerCustomProps = WithSupportProps<
 
 export function MobileDrawerCustom({
   open: openProp,
+  mode = MODE.Regular,
   position = POSITION.Left,
   onClose,
   rootClassName,
@@ -69,13 +72,16 @@ export function MobileDrawerCustom({
   container,
   children,
   hasBorderRadius = false,
+  outline = false,
   swipeEnabled = true,
   modalMode = MODAL_MODE.Regular,
   closeButtonEnabled = true,
   closeOnPopstate,
   ...rest
 }: MobileDrawerCustomProps) {
+  const isRegular = mode === MODE.Regular;
   const isPredefinedSize = typeof size === 'string' && SIZE_AS_VALUES.includes(size);
+
   const [open, setOpen] = useUncontrolledProp(openProp, false);
   const hasBlur = ([MODAL_MODE.Forced, MODAL_MODE.Aggressive] as ModalMode[]).includes(modalMode);
   const hasSwipe = ([MODAL_MODE.Regular, MODAL_MODE.Aggressive] as ModalMode[]).includes(modalMode);
@@ -112,9 +118,9 @@ export function MobileDrawerCustom({
 
   return (
     <RcDrawer
-      mask={true}
-      maskClosable={true}
-      keyboard={true}
+      mask={isRegular}
+      maskClosable={isRegular}
+      keyboard={isRegular}
       maskClassName={cn(styles.mask, {
         [styles.maskBlur]: hasBlur,
       })}
@@ -137,8 +143,9 @@ export function MobileDrawerCustom({
       data-content-wrapper={true}
       data-blur={hasBlur || undefined}
       data-border-radius={hasBorderRadius || undefined}
+      data-outline={outline || undefined}
       data-size={isPredefinedSize ? size : undefined}
-      data-mode='regular'
+      data-mode={mode}
       data-position={position}
       contentWrapperStyle={drawerStyles}
       maskStyle={maskStyles}

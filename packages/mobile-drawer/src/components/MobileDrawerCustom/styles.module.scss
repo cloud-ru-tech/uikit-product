@@ -29,7 +29,8 @@ $drawer-background-color: (
 .drawerRoot {
   z-index: initial !important; /* stylelint-disable-line declaration-no-important */
 
-  &, & * {
+  &,
+  & * {
     overscroll-behavior-y: contain;
   }
 
@@ -66,6 +67,10 @@ $drawer-background-color: (
         border-bottom-right-radius: 12px;
         border-top-right-radius: 12px;
       }
+
+      &[data-outline] {
+        border-right: 1px solid styles-tokens-drawer.$sys-neutral-decor-default;
+      }
     }
 
     &[data-position='right'] {
@@ -74,6 +79,10 @@ $drawer-background-color: (
       &[data-border-radius] {
         border-bottom-left-radius: 12px;
         border-top-left-radius: 12px;
+      }
+
+      &[data-outline] {
+        border-left: 1px solid styles-tokens-drawer.$sys-neutral-decor-default;
       }
     }
 
@@ -104,6 +113,10 @@ $drawer-background-color: (
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
       }
+
+      &[data-outline] {
+        border-top: 1px solid styles-tokens-drawer.$sys-neutral-decor-default;
+      }
     }
 
     &[data-position='top'] {
@@ -112,6 +125,10 @@ $drawer-background-color: (
       &[data-border-radius] {
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
+      }
+
+      &[data-outline] {
+        border-bottom: 1px solid styles-tokens-drawer.$sys-neutral-decor-default;
       }
     }
 
