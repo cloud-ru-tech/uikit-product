@@ -8,6 +8,7 @@ import { ButtonOutline } from '@snack-uikit/button';
 import { useDynamicList } from '@snack-uikit/utils';
 
 import { ActionView } from './ActionView';
+import { hasVisibleActions } from './helpers';
 import styles from './styles.module.scss';
 import { ActionsProps } from './types';
 
@@ -16,6 +17,10 @@ export function MobileActions({ items, maxVisibleItems }: ActionsProps) {
 
   const [isOpen, setIsOpen] = useState(false);
   const { visibleItems, hiddenItems } = useDynamicList({ parentContainerRef: containerRef, items, maxVisibleItems });
+
+  if (!hasVisibleActions(items)) {
+    return null;
+  }
 
   return (
     <div className={styles.mobileActionsWrapper} ref={containerRef}>
