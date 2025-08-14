@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.16.0 (2025-08-14)
+
+
+### Features
+
+* **PDS-2643:** add AdaptivePageServices component ([3fbdcc7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/3fbdcc7d61139a8b243840b447ed8e09a37ecbab))
+
+
+
+
+
 ## 0.15.4 (2025-08-07)
 
 ### Only dependencies have been changed

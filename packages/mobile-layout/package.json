@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-mobile-layout",
   "title": "Mobile Layout",
-  "version": "0.15.4",
+  "version": "0.16.0",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -35,9 +35,9 @@
     "@sbercloud/uikit-product-card-predefined": "0.7.47",
     "@sbercloud/uikit-product-icons": "14.0.2",
     "@sbercloud/uikit-product-layout": "0.19.46",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.9.3",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.0",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.4.47",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.4",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.1",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.4.48",
     "@sbercloud/uikit-product-page-layout": "0.20.3",
     "@sbercloud/uikit-product-utils": "6.0.1",
     "@snack-uikit/button": "0.19.7",

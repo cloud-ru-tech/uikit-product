@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.10.0 (2025-08-14)
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2643:** rename types - TableProps -> AdaptiveTableProps, ServerTableProps -> AdaptiveServerTableProps; up snack deps, export desktop typings for table & server table ([b5fe447](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b5fe447165b96612353557dd544e1a8868b19e19))
+
+
+
+
 ## 0.9.3 (2025-08-07)
 
 ### Only dependencies have been changed

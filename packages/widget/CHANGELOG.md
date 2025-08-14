@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.8 (2025-08-14)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-carousel@0.1.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-carousel/CHANGELOG.md)
+
+
+
+
+
 ## 0.8.7 (2025-08-04)
 
 ### Only dependencies have been changed

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.6 (2025-08-14)
+
+
+### Dependencies
+
+* **PDS-2643:** up snack deps ([fa8ff9c](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fa8ff9c0cdd79346185f219073c34872cc0fdfb7))
+
+
+
+
+
 ## 0.11.5 (2025-08-07)
 
 ### Only dependencies have been changed

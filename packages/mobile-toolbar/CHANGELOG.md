@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-08-14)
+
+
+### Features
+
+* **PDS-2643:** add AdaptiveToolbar component ([5606e63](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5606e63adeaffc837c3bfe89dfe95de46b3c945c))
+
+
+
+
+
 ## 0.2.18 (2025-08-07)
 
 ### Only dependencies have been changed

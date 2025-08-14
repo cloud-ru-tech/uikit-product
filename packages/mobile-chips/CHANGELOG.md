@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.19 (2025-08-14)
+
+
+### Bug Fixes
+
+* **PDS-2643:** up snack deps, export prop typings for adaptive components ([62193bd](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/62193bddb7eff923cae48de90206374d82dc80a3))
+
+
+
+
+
 ## 0.8.18 (2025-08-07)
 
 ### Only dependencies have been changed
