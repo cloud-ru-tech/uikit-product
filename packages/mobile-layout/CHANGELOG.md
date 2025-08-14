@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.16.1 (2025-08-14)
+
+
+### Bug Fixes
+
+* **PDS-2643:** remove actions container if all of them are hidden ([54b2cf2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/54b2cf2d08503219e4354c8c6b2c8f639d38468a))
+
+
+
+
+
 # 0.16.0 (2025-08-14)
 
 
