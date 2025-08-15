@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-fields-predefined",
   "title": "Fields Predefined",
-  "version": "0.10.6",
+  "version": "0.10.7",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -28,11 +28,11 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "14.0.2",
-    "@sbercloud/uikit-product-mobile-dropdown": "0.9.4",
-    "@sbercloud/uikit-product-mobile-fields": "0.11.6",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.1",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.4.48",
+    "@sbercloud/uikit-product-icons": "14.1.0",
+    "@sbercloud/uikit-product-mobile-dropdown": "0.9.5",
+    "@sbercloud/uikit-product-mobile-fields": "0.11.7",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.2",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.4.49",
     "@sbercloud/uikit-product-utils": "6.0.1",
     "@snack-uikit/attachment": "0.4.10",
     "@snack-uikit/button": "0.19.11",

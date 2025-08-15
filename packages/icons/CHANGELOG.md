@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 14.1.0 (2025-08-15)
+
+
+### Features
+
+* **FF-7141:** add forgotten icons ([4f73c92](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/4f73c92cc8b203aea863b9d97fe08fb490f111e1))
+* **PDS-2698:** add new icons ([aa51759](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/aa51759ca18a3c4fef6dbfc57125329655e88060))
+
+
+
+
+
 ## 14.0.2 (2025-08-04)
 
 ### Only dependencies have been changed
