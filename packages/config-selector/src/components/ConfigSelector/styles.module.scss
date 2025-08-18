@@ -1,0 +1,156 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-chips-chipToggle';
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
+
+$size: 's';
+
+@mixin chip-anatomy-styles() {
+  .label {
+    @include styles-theme-variables.composite-var(styles-theme-variables.$sans-label-m);
+  }
+
+  .labelLayout {
+    @include styles-tokens-chips-chipToggle.composite-var(styles-tokens-chips-chipToggle.$chip-toggle, 'label-layout', $size);
+
+    display: inline-flex;
+    align-items: center;
+    min-width: 0;
+  }
+
+  .configSelectorContent {
+    height: styles-theme-variables.$size-chips-s;
+    padding-left: styles-theme-variables.$space-chips-container-padding-s;
+    padding-right: styles-theme-variables.$space-chips-container-padding-s;
+  }
+}
+
+.configSelectorContent {
+  cursor: pointer;
+
+  position: relative;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  width: max-content;
+  min-width: styles-theme-variables.$dimension-6m;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  text-transform: none;
+
+  border-style: solid;
+  outline: 0;
+  outline-offset: 0;
+
+  border-radius: 12px;
+  border-width: 2px;
+
+  color: styles-theme-variables.$sys-neutral-text-support;
+  background-color: styles-theme-variables.$sys-neutral-background1-level;
+  border-color: styles-theme-variables.$sys-neutral-decor-default;
+
+  &:hover {
+    color: styles-theme-variables.$sys-neutral-text-main;
+    background-color: styles-theme-variables.$sys-neutral-background1-level;
+    border-color: styles-theme-variables.$sys-neutral-decor-hovered;
+  }
+
+  &:active {
+    color: styles-theme-variables.$sys-neutral-text-main;
+    background-color: styles-theme-variables.$sys-neutral-background2-level;
+    border-color: styles-theme-variables.$sys-neutral-decor-activated;
+  }
+
+  &[data-disabled] {
+    cursor: not-allowed;
+    color: styles-theme-variables.$sys-neutral-text-light;
+    background-color: styles-theme-variables.$sys-neutral-background;
+    border-color: transparent;
+  }
+
+  &[data-available] {
+    border-color: styles-theme-variables.$sys-primary-accent-default;
+
+    &:hover {
+      border-color: styles-theme-variables.$sys-primary-accent-hovered;
+    }
+
+    &:active {
+      border-color: styles-theme-variables.$sys-primary-accent-pressed;
+    }
+  }
+
+  &[data-checked] {
+    color: styles-theme-variables.$sys-neutral-background2-level;
+    background-color: styles-theme-variables.$sys-primary-accent-default;
+    border-color: transparent;
+    
+    &:hover {
+      background-color: styles-theme-variables.$sys-primary-accent-hovered;
+    }
+
+    &:active {
+      background-color: styles-theme-variables.$sys-primary-accent-pressed;
+    }
+  }
+}
+
+.configSelectorInput {
+  pointer-events: none;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 0;
+
+  opacity: 0;
+
+  &:focus-visible + .configSelectorContent {
+    @include styles-theme-variables.outline-var(styles-tokens-element.$container-focused-s);
+
+    outline-color: styles-theme-variables.$sys-available-complementary;
+    outline-offset: styles-theme-variables.$spacing-state-focus-offset;
+
+    color: styles-theme-variables.$sys-neutral-text-main;
+    background-color: styles-theme-variables.$sys-neutral-background2-level;
+    border-color: styles-theme-variables.$sys-neutral-decor-hovered;
+  }
+}
+
+.configSelector {
+  @include chip-anatomy-styles();
+
+  position: relative;
+
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: 0;
+  outline-offset: 0;
+
+  &[data-available] {
+    .configSelectorInput {
+      &:focus-visible + .configSelectorContent {
+        border-color: styles-theme-variables.$sys-primary-accent-hovered;
+      }
+    }
+  }
+
+  &[data-checked] {
+    .configSelectorInput {
+      &:focus-visible + .configSelectorContent {
+        color: styles-theme-variables.$sys-neutral-background2-level;
+        background-color: styles-theme-variables.$sys-primary-accent-hovered;
+      }
+    }
+  }
+}

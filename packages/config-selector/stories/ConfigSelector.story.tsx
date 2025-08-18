@@ -4,11 +4,12 @@ import { useState } from 'react';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { ChipToggleIndicator, ChipToggleIndicatorProps } from '../src';
+import { ConfigSelector, ConfigSelectorProps } from '../src';
+import styles from './styles.module.scss';
 
 const meta: Meta = {
-  title: 'Console/Chips Predefined/Chip Toggle Indicator',
-  component: ChipToggleIndicator,
+  title: 'Console/Config Selector',
+  component: ConfigSelector,
 };
 export default meta;
 
@@ -21,28 +22,21 @@ const tipProps = {
   ),
 };
 
-const Template: StoryFn<ChipToggleIndicatorProps> = ({ ...args }) => {
+const Template: StoryFn<ConfigSelectorProps> = ({ ...args }) => {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        height: '200px',
-        gap: '4px',
-      }}
-    >
-      <ChipToggleIndicator {...args} checked={isChecked} onChange={setIsChecked} />
-      <ChipToggleIndicator label='24' onChange={() => {}} checked={true} {...tipProps} available />
-      <ChipToggleIndicator label='32' onChange={() => {}} checked={false} {...tipProps} />
-      <ChipToggleIndicator label='64-256' onChange={() => {}} checked={false} {...tipProps} disabled />
+    <div className={styles.wrapper}>
+      <ConfigSelector {...args} checked={isChecked} onChange={setIsChecked} />
+      <ConfigSelector label='24' onChange={() => {}} checked={true} {...tipProps} available />
+      <ConfigSelector label='32' onChange={() => {}} checked={false} {...tipProps} />
+      <ConfigSelector label='64' onChange={() => {}} checked={false} {...tipProps} available />
+      <ConfigSelector label='128-2048' onChange={() => {}} checked={false} {...tipProps} disabled />
     </div>
   );
 };
 
-export const chipToggleIndicator: StoryObj<ChipToggleIndicatorProps> = {
+export const configSelector: StoryObj<ConfigSelectorProps> = {
   render: Template,
   args: {
     label: '16',
