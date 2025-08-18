@@ -23,12 +23,14 @@ export function getUserAgentInfo() {
   const parser = new UAParser(globalThis.navigator.userAgent);
   const device = parser.getDevice();
   const browser = parser.getBrowser();
+  const os = parser.getOS();
 
   return {
     device: {
       model: device.model,
       type: getDeviceType(device.type),
     },
+    os,
     browser,
   };
 }
