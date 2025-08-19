@@ -9,6 +9,7 @@ overrides:
   react-dom: 18.2.0
   testcafe-browser-tools: 2.0.23
   stylus: file:./stylus
+  xlsx: https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz
 
 importers:
 
@@ -13353,8 +13354,8 @@ packages:
   xhr@2.6.0:
     resolution: {integrity: sha512-/eCGLb5rxjx5e3mF1A7s+pLlR6CGyqWN91fv1JgER5mVWg1MZmlhBvy9kjcsOdRk8RrIujotWyJamfyrp+WIcA==}
 
-  xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz:
-    resolution: {tarball: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz}
+  xlsx@https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz:
+    resolution: {tarball: https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz}
     version: 0.20.3
     engines: {node: '>=0.8'}
     hasBin: true
@@ -18395,7 +18396,7 @@ snapshots:
       copy-to-clipboard: 3.3.3
       lodash.debounce: 4.0.8
       uncontrollable: 8.0.0(react@18.2.0)
-      xlsx: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+      xlsx: https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -18429,7 +18430,7 @@ snapshots:
       copy-to-clipboard: 3.3.3
       lodash.debounce: 4.0.8
       uncontrollable: 8.0.4(react@18.2.0)
-      xlsx: https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz
+      xlsx: https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz
     transitivePeerDependencies:
       - '@types/react'
       - react
@@ -29110,7 +29111,7 @@ snapshots:
       parse-headers: 2.0.6
       xtend: 4.0.2
 
-  xlsx@https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz: {}
+  xlsx@https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz: {}
 
   xml-name-validator@5.0.0: {}
 
