@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.1.0 (2025-08-19)
+
+
+### Features
+
+* **FF-7104:** provide os info in getUserAgentInfo ([d988a08](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d988a08a181f081874be9ec924342481ed39f1e1))
+
+
+
+
+
 ## 6.0.1 (2025-08-04)
 
 

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.9.0 (2025-08-19)
+
+
+### Features
+
+* **FF-7104:** enable mode prop, add outline prop ([0b9bc15](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0b9bc15e9925197bb035e834922c707d50890f61))
+
+
+
+
+
 ## 0.8.6 (2025-08-15)
 
 ### Only dependencies have been changed
