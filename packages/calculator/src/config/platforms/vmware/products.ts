@@ -1,4 +1,9 @@
-import { BoxSVG, VmBackupSVG, VmManagerSVG, VMwareBackupServerSVG } from '@sbercloud/uikit-product-icons';
+import {
+  BackupSVG,
+  VirtualDataCenterWithGpuSVG,
+  VirtualDesktopInfrastructureSVG,
+  VmBackupSVG,
+} from '@sbercloud/uikit-product-icons';
 
 import { PLATFORM } from '../../../constants';
 import { CatalogConfig } from '../../../types';
@@ -18,7 +23,7 @@ export const VM_WARE_PRODUCTS: CatalogConfig['products'] = {
     label: 'VMware: Виртуальный ЦОД',
     caption: 'Публичное облако на базе VMware',
     formConfig: VIRTUAL_DATA_CENTER_FORM_CONFIG,
-    icon: VmManagerSVG,
+    icon: VirtualDataCenterWithGpuSVG,
     enableChangeProductQuantity: false,
     hasPayaGo: true,
   },
@@ -29,7 +34,7 @@ export const VM_WARE_PRODUCTS: CatalogConfig['products'] = {
     label: 'VMware: резервное копирование в облако',
     caption: 'Защита от потери данных, кибератак и сбоев приложений',
     formConfig: VM_WARE_CLOUD_BACKUP_FORM_CONFIG,
-    icon: VMwareBackupServerSVG,
+    icon: BackupSVG,
     enableChangeProductQuantity: false,
     hasPayaGo: true,
   },
@@ -51,7 +56,7 @@ export const VM_WARE_PRODUCTS: CatalogConfig['products'] = {
     label: 'VMware: Удаленные рабочие столы (VDI)',
     caption: 'Виртуальные рабочие столы на платформе Облако VMware',
     formConfig: VM_WARE_VIRTUAL_WORKSPACES_FORM_CONFIG,
-    icon: BoxSVG,
+    icon: VirtualDesktopInfrastructureSVG,
     enableChangeProductQuantity: false,
     hasPayaGo: true,
   },
