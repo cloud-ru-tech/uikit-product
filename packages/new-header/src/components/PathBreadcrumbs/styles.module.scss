@@ -1,0 +1,10 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+
+.breadcrumbs {
+  /* stylelint-disable-next-line declaration-no-important */
+  padding: ste.$dimension-1m !important;
+  /* stylelint-disable-next-line declaration-no-important */
+  margin: calc(0px - #{ste.$dimension-1m}) 0 !important;
+
+  min-width: 0;
+}

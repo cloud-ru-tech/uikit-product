@@ -245,6 +245,7 @@ export const ru_RU: typeof en_GB = {
     searchSettingsPopoverDescription:
       'Теперь он понимает даже не совсем точные запросы и быстрее находит нужное. Если привыкли к старому поиску его можно включить в настройках поиска.',
     noData: 'Нет данных',
+    notFound: 'Ничего не найдено',
     notifications: 'Уведомления',
     notificationsAll: 'Все',
     notificationsUnread: 'Новые',

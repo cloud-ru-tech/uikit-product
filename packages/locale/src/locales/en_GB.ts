@@ -244,6 +244,7 @@ export const en_GB = {
     searchSettingsPopoverDescription:
       'Now it understands even not very precise queries and finds what you need faster. If you are used to the old search, you can enable it in the search settings.',
     noData: 'No data',
+    notFound: 'No data found',
     notifications: 'Notifications',
     notificationsAll: 'All',
     notificationsUnread: 'Unread',

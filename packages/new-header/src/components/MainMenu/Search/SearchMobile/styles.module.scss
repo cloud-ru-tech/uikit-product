@@ -1,0 +1,72 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+
+.searchItem {
+  position: sticky;
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 1;
+  top: -0.5px;
+  background-color: ste.$sys-neutral-background;
+
+  display: flex;
+  flex-direction: column;
+  gap: ste.$dimension-1m;
+
+  padding: 0;
+  padding-bottom: ste.$dimension-1m;
+  padding-top: 1px;
+  margin-top: 7px;
+}
+
+.searchWrap {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: ste.$sys-neutral-text-main;
+}
+
+.searchMobile {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  right: 0;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  transition-timing-function: ease-in-out;
+  transition-property: all;
+  transition-duration: calc(var(--sc-header-animation-enter) * 1ms);
+
+  width: 100%;
+  max-width: ste.$size-button-m;
+  box-sizing: border-box;
+
+  opacity: 0;
+
+  &[data-transition-status='entering'],
+  &[data-transition-status='entered'] {
+    max-width: 100%;
+    right: 0;
+    width: 100%;
+    opacity: 1;
+    transition-duration: calc(var(--sc-header-animation-exit) * 1ms);
+  }
+}
+
+.searchButton {
+  // TODO: почему-то сломался порядок стилей при интеграции компонента в сервис хедера
+  &[data-appearance='primary'] {
+    background-color: ste.$sys-neutral-background2-level;
+  }
+
+  &[data-search-active] {
+    visibility: hidden;
+  }
+}
+
+.searchModalBody {
+  padding: ste.$dimension-2m 0;
+}
