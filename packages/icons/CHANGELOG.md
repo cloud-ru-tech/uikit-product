@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 14.1.2 (2025-08-20)
+
+
+### Bug Fixes
+
+* **FF-1234:** fix user search, user invitation, user laptop icons ([a64ec11](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/a64ec11a73ce22c05b3f7ae318c098ce101eebc0))
+
+
+
+
+
 ## 14.1.1 (2025-08-19)
 
 ### Only dependencies have been changed
