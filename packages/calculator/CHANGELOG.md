@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.25.8 (2025-08-21)
+
+
+### Bug Fixes
+
+* **SITE-9684:** update icons ([fff9d35](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fff9d35b0eb758d4d1d7b869a53e5f71c3f9026a))
+
+
+
+
+
 ## 0.25.7 (2025-08-20)
 
 ### Only dependencies have been changed
