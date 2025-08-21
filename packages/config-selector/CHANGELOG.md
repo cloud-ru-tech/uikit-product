@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2025-08-21)
+
+
+### Features
+
+* **PDS-2668:** Config Selector redesign ([d381e02](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d381e02955aad9081ff1518b8959a0e2cfd1a568))
+
+
+
+
+
 ## 0.1.1 (2025-07-21)
 
 
