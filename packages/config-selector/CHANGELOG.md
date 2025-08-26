@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.1 (2025-08-26)
+
+
+### Bug Fixes
+
+* **PDS-2668:** fixed configSelector minWidth ([f7cd4f1](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/f7cd4f1b295807a3daaf1349890580bc2bb61922))
+
+
+
+
+
 # 1.1.0 (2025-08-21)
 
 
