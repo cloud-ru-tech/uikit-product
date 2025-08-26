@@ -1,8 +1,29 @@
 import { CONTROL, FormConfig } from '../../../../components';
 
 export const EVOLUTION_ARTIFACT_REGISTRY: FormConfig = {
-  ui: [['storageSize', 'outgoingTraffic']],
+  ui: ['tariffType', ['storageSize', 'outgoingTraffic']],
   controls: {
+    tariffType: {
+      type: CONTROL.Carousel,
+      defaultValue: 'basic',
+      accessorKey: 'tariff',
+      items: [
+        {
+          value: 'basic',
+          label: 'Базовый',
+          description: 'В рамках этого тарифа Artifact Registry обеспечивает хранение и скачивание артефактов',
+        },
+        {
+          value: 'premium',
+          label: 'Премиум',
+          description:
+            'Этот тариф включает хранение и скачивание артефактов, сканирование образов на уязвимости, карантин и настройку политики удаления артефактов',
+        },
+      ],
+      decoratorProps: {
+        label: 'Тариф',
+      },
+    },
     storageSize: {
       type: CONTROL.Stepper,
       decoratorProps: {
@@ -24,10 +45,10 @@ export const EVOLUTION_ARTIFACT_REGISTRY: FormConfig = {
         labelTooltip: 'Бесплатно до 100 ГБ',
       },
       accessorKey: 'outgoingTraffic',
-      defaultValue: 0,
+      defaultValue: 1,
       uiProps: {
         showHint: false,
-        min: 0,
+        min: 1,
         max: 9_999_999_999,
         postfix: 'ГБ',
       },
