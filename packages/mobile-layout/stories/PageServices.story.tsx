@@ -2,6 +2,8 @@ import { Meta, StoryObj } from '@storybook/react';
 import { useMemo, useState } from 'react';
 
 import { PlaceholderSVG } from '@sbercloud/uikit-product-icons';
+import { QuotaCard } from '@sbercloud/uikit-product-quota';
+import { LAYOUT_TYPE } from '@sbercloud/uikit-product-utils';
 import { ButtonFunction } from '@snack-uikit/button';
 import { Status } from '@snack-uikit/status';
 import { Typography } from '@snack-uikit/typography';
@@ -9,7 +11,7 @@ import { Typography } from '@snack-uikit/typography';
 import componentChangelog from '../CHANGELOG.md';
 import componentPackage from '../package.json';
 import componentReadme from '../README.md';
-import { MobilePageServices, MobilePageServicesProps } from '../src';
+import { AdaptivePageServices, AdaptivePageServicesProps, MobilePageServices } from '../src';
 import { SIDEBAR_ITEMS } from './constants';
 import styles from './styles.module.scss';
 
@@ -25,13 +27,13 @@ const getSidebarProps = ({
 }: {
   selected: number;
   setSelected: (id: number) => void;
-}): MobilePageServicesProps['sidebar'] => ({
+}): AdaptivePageServicesProps['sidebar'] => ({
   selected,
   onSelect: setSelected,
   items: SIDEBAR_ITEMS,
 });
 
-type PageServicesStoryProps = MobilePageServicesProps & {
+type PageServicesStoryProps = AdaptivePageServicesProps & {
   showSidebar: boolean;
   showActions: boolean;
   showBeforeHeadline: boolean;
@@ -53,7 +55,7 @@ function Template({
 
   return (
     <div id='single-spa-wrapper' className={styles.fullPageHeight}>
-      <MobilePageServices
+      <AdaptivePageServices
         {...args}
         sidebar={showSidebar ? sidebar : undefined}
         actions={showActions ? args.actions : undefined}
@@ -62,7 +64,7 @@ function Template({
         subHeader={showSubheader ? args.subHeader : undefined}
       >
         {args.children}
-      </MobilePageServices>
+      </AdaptivePageServices>
     </div>
   );
 }
@@ -73,6 +75,24 @@ export const pageServices: StoryObj<PageServicesStoryProps> = {
   args: {
     title: 'Lorem ipsum dolor',
     actions: [
+      {
+        variant: 'kebab',
+        list: {
+          closeDroplistOnItemClick: true,
+          items: [
+            {
+              content: {
+                option: 'Kebab action 1',
+              },
+            },
+            {
+              content: {
+                option: 'Kebab action 2',
+              },
+            },
+          ],
+        },
+      },
       {
         variant: 'filled',
         label: 'Primary action',
@@ -87,6 +107,49 @@ export const pageServices: StoryObj<PageServicesStoryProps> = {
         variant: 'outline',
         label: 'Third action',
         icon: <PlaceholderSVG />,
+      },
+      {
+        variant: 'droplist',
+        button: {
+          label: 'Documentation',
+        },
+        list: {
+          closeDroplistOnItemClick: true,
+          items: [
+            {
+              content: {
+                option: 'Link 1',
+              },
+            },
+            {
+              content: {
+                option: 'Link 2',
+              },
+            },
+          ],
+        },
+      },
+      {
+        variant: 'dropdown',
+        button: {
+          label: 'Dropdown',
+        },
+        dropdown: {
+          content: (
+            <div
+              style={{
+                width: 200,
+                height: 200,
+                background: 'red',
+              }}
+            ></div>
+          ),
+        },
+      },
+      {
+        variant: 'quota',
+        title: 'Квоты',
+        children: <QuotaCard title='Виртуальные машины' />,
       },
     ],
     beforeHeadline: <ButtonFunction icon={<PlaceholderSVG />} />,
@@ -105,9 +168,18 @@ export const pageServices: StoryObj<PageServicesStoryProps> = {
     showAfterHeadline: true,
     showActions: true,
     showSubheader: true,
+    layoutType: LAYOUT_TYPE.Mobile,
   },
 
   argTypes: {
+    layoutType: {
+      name: 'Layout Type',
+      options: Object.keys(LAYOUT_TYPE),
+      mapping: LAYOUT_TYPE,
+      control: {
+        type: 'select',
+      },
+    },
     showActions: { name: '[Stories]: show headline actions' },
     showBeforeHeadline: { name: '[Stories]: show before headline' },
     showAfterHeadline: { name: '[Stories]: show after headline' },

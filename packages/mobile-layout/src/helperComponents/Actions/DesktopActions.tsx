@@ -1,5 +1,3 @@
-import cn from 'classnames';
-
 import { ActionView } from './ActionView';
 import { hasVisibleActions } from './helpers';
 import styles from './styles.module.scss';
@@ -13,7 +11,14 @@ export function DesktopActions({ items }: Pick<ActionsProps, 'items'>) {
   return (
     <div className={styles.desktopActionsWrapper}>
       {items.map((action, index) => (
-        <ActionView {...action} key={index} layoutType='desktop' className={cn(styles.button, action.className)} />
+        <ActionView
+          {...action}
+          key={index}
+          layoutType='desktop'
+          commonProps={{
+            className: styles.button,
+          }}
+        />
       ))}
     </div>
   );

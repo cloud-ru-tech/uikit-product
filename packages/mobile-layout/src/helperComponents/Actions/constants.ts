@@ -4,4 +4,8 @@ export const BUTTON_TYPE = {
   Tonal: 'tonal',
   Function: 'function',
   Simple: 'simple',
+  Dropdown: 'dropdown',
+  Droplist: 'droplist',
+  Quota: 'quota',
+  Kebab: 'kebab',
 } as const;
