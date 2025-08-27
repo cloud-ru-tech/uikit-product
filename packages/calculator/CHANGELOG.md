@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.25.9 (2025-08-27)
+
+
+### Bug Fixes
+
+* **SITE-9760:** update calculator ([947662a](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/947662ad87aad401fafa2dc10f98c18038d47c91))
+
+
+
+
+
 ## 0.25.8 (2025-08-21)
 
 
