@@ -242,7 +242,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     icon: ArtifactRegistrySVG,
     formConfig: EVOLUTION_ARTIFACT_REGISTRY,
     dataTestId: EVOLUTION_PRODUCT.EvolutionArtifactRegistry,
-    enableChangeProductQuantity: true,
+    enableChangeProductQuantity: false,
     enableConnectToConsole: true,
   },
 };

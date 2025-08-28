@@ -45,10 +45,10 @@ export const EVOLUTION_ARTIFACT_REGISTRY: FormConfig = {
         labelTooltip: 'Бесплатно до 100 ГБ',
       },
       accessorKey: 'outgoingTraffic',
-      defaultValue: 1,
+      defaultValue: 0,
       uiProps: {
         showHint: false,
-        min: 1,
+        min: 0,
         max: 9_999_999_999,
         postfix: 'ГБ',
       },
