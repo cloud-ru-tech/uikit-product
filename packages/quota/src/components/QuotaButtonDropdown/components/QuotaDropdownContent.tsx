@@ -2,7 +2,12 @@ import { QuotaDropdownProps } from '../QuotaDropdown';
 import { NoData } from './NoData';
 import { QuotaDropdownLayout } from './QuotaDropdownLayout';
 
-export function QuotaDropdownContent({ onRetry, dataError, children, ...rest }: QuotaDropdownProps) {
+export function QuotaDropdownContent({
+  onRetry,
+  dataError,
+  children,
+  ...rest
+}: Omit<QuotaDropdownProps, 'layoutType'>) {
   if (!dataError) {
     return <QuotaDropdownLayout {...rest}>{children}</QuotaDropdownLayout>;
   }

@@ -4,7 +4,7 @@ import { TruncateString } from '@snack-uikit/truncate-string';
 import { QuotaDropdownProps } from '../QuotaDropdown';
 import styles from '../styles.module.scss';
 
-export function QuotaDropdownLayout({ title, description, children }: QuotaDropdownProps) {
+export function QuotaDropdownLayout({ title, description, children }: Omit<QuotaDropdownProps, 'layoutType'>) {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>

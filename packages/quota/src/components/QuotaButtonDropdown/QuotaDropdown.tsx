@@ -21,10 +21,21 @@ export type QuotaDropdownProps = WithSupportProps<{
   onRetry?(): void;
   /** Расположение выпадающего меню */
   placement?: ButtonDropdownProps['placement'];
+
+  size?: ButtonDropdownProps['size'];
+
+  layoutType: ButtonDropdownProps['layoutType'];
+
   className?: string;
 }>;
 
-export function QuotaDropdown({ placement = 'bottom-end', className, ...props }: QuotaDropdownProps) {
+export function QuotaDropdown({
+  placement = 'bottom-end',
+  layoutType = 'desktop',
+  className,
+  size,
+  ...props
+}: QuotaDropdownProps) {
   const [open, setOpen] = useState<boolean>(false);
   const { t } = useLocale('Quota');
 
@@ -52,6 +63,8 @@ export function QuotaDropdown({ placement = 'bottom-end', className, ...props }:
       onOpenChange={setOpen}
       label={t('quotas')}
       className={className}
+      layoutType={layoutType}
+      size={size}
       counter={isQuotaExceededCountVisible ? { appearance: 'red', value: quotaExceededCount } : undefined}
       content={<QuotaDropdownContent {...props} />}
     />
