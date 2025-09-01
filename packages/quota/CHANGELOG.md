@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.5.0 (2025-09-01)
+
+
+### BREAKING CHANGES
+
+
+* **FF-6958:** add layoutType; add export utils & QuotaContent ([045e306](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/045e306495f7c7bdd46ab279b87f7121880b2cfb))
+
+
+
+
 ## 0.4.8 (2025-08-20)
 
 ### Only dependencies have been changed

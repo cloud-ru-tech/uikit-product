@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.17.0 (2025-09-01)
+
+
+### BREAKING CHANGES
+
+
+* **FF-6958:** add dropdown/droplist/kebab/quota action variant; move to right side kebab action on mobile ([d26f391](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/d26f3910b7107c24b9a3fb02141d6c20718625e4))
+
+
+
+
 ## 0.16.4 (2025-08-20)
 
 ### Only dependencies have been changed
