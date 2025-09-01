@@ -1,5 +1,4 @@
-import { CONTROL, FormConfig } from '@sbercloud/uikit-product-calculator';
-
+import { CONTROL, FormConfig } from '../../../../components';
 import { generateRamItems } from '../../../utils';
 
 const VCPU_CORE_ITEMS_WITHOUT_GPU = [4, 8, 16];

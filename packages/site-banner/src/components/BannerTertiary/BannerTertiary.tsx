@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { ReactNode } from 'react';
 
 import { ButtonPromo, ButtonPromoProps } from '@sbercloud/uikit-product-button-predefined';
 import { RichText } from '@sbercloud/uikit-product-site-rich-text';
@@ -21,6 +22,8 @@ export type BannerTertiaryProps = WithSupportProps<
     button?: Omit<ButtonPromoProps, 'size' | 'appearance'>;
     /** Ссылка на картинку */
     img: string;
+    /** элемент в правом верхнем углу */
+    topRightCornerSlot?: ReactNode;
     /** Плашка рекламы с tooltip */
     erid?: Pick<EridProps, 'tip'>;
     /** css-класс */
@@ -44,24 +47,28 @@ export function BannerTertiary({
   button,
   erid,
   className,
+  topRightCornerSlot,
   ...rest
 }: BannerTertiaryProps) {
   const isMobile = layoutType === 'mobile';
 
   return (
     <ColorWrapper {...rest} className={cn(className, styles.root)} data-layout-type={layoutType}>
-      {erid && (
-        <Erid className={styles.erid} tip={erid.tip} appearance={ColorWrapper.getEridAppearance(rest.appearance)} />
+      {(topRightCornerSlot || erid) && (
+        <div className={styles.topRightCorner}>
+          {erid && (
+            <Erid className={styles.erid} tip={erid.tip} appearance={ColorWrapper.getEridAppearance(rest.appearance)} />
+          )}
+          {topRightCornerSlot}
+        </div>
       )}
 
       <div className={styles.content}>
         <img className={styles.image} src={img} alt={title} />
-
         <div data-color-wrapper-role='text' className={styles.texts}>
           <Typography size={MAP_LAYOUT_TO_TEXT_SIZE[layoutType]} className={styles.title} purpose='title' family='sans'>
             <RichText richText={title} />
           </Typography>
-
           <Typography
             size={MAP_LAYOUT_TO_TEXT_SIZE[layoutType]}
             className={styles.description}
@@ -71,7 +78,6 @@ export function BannerTertiary({
             <RichText richText={description} />
           </Typography>
         </div>
-
         <ButtonPromo
           target='_self'
           {...button}
