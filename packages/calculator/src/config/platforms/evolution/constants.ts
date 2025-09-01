@@ -17,12 +17,14 @@ export const EVOLUTION_PRODUCT = {
   EvolutionArtifactRegistry: 'evolutionArtifactRegistry',
   EvolutionManagedTrino: 'evolutionManagedTrino',
   EvolutionManagedRedis: 'evolutionManagedRedis',
+  EvolutionManagedSpark: 'evolutionManagedSpark',
 } as const;
 
 const GuaranteedPartItem = {
   '10': '10',
   '30': '30',
   '100': '100',
+  '120': '120',
 };
 
 export const guaranteedPartToVCpuMap = {
@@ -47,7 +49,6 @@ export const guaranteedPartVCpuToRamMap: Record<string, Record<string, number[]>
     '24': [48],
     '32': [64],
   },
-
   [GuaranteedPartItem[100]]: {
     '1': [1, 2],
     '2': [4],

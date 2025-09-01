@@ -13,6 +13,7 @@ import {
   RedisSVG,
   S3StorageSVG,
   SnatSVG,
+  SparkSVG,
   TrinoSVG,
 } from '@sbercloud/uikit-product-icons';
 
@@ -39,6 +40,7 @@ import {
   EVOLUTION_STORAGE_S3_FREE_TIER_FORM_CONFIG,
 } from './product-config';
 import { EVOLUTION_MANAGED_REDIS_CONFIG } from './product-config/EvolutionManagedRedis';
+import { EVOLUTION_MANAGED_SPARK_CONFIG } from './product-config/EvolutionManagedSpark';
 
 export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
   [EVOLUTION_PRODUCT.EvolutionCloudServer]: {
@@ -103,6 +105,16 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     formConfig: EVOLUTION_MANAGED_TRINO_CONFIG,
     icon: TrinoSVG,
     dataTestId: 'evolutionManagedTrino',
+    enableConnectToConsole: true,
+  },
+  [EVOLUTION_PRODUCT.EvolutionManagedSpark]: {
+    id: EVOLUTION_PRODUCT.EvolutionManagedSpark,
+    platform: PLATFORM.Evolution,
+    label: 'Evolution Managed Spark',
+    caption: 'Аналитический SQL-движок Trino',
+    formConfig: EVOLUTION_MANAGED_SPARK_CONFIG,
+    icon: SparkSVG,
+    dataTestId: 'evolutionManagedSpark',
     enableConnectToConsole: true,
   },
   [EVOLUTION_PRODUCT.EvolutionManagedRedis]: {
