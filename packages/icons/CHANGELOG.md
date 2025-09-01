@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 14.2.0 (2025-09-01)
+
+
+### Features
+
+* **LK-5603:** add flag icons ([5729e4b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/5729e4baec27a7b65675ec77bcf3d11a44c862a6))
+
+
+
+
+
 ## 14.1.2 (2025-08-20)
 
 

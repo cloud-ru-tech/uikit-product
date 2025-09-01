@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-header",
   "title": "Siteheader",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -31,8 +31,8 @@
   ],
   "license": "UNLICENSED",
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "14.1.2",
-    "@sbercloud/uikit-product-mobile-modal": "0.9.4",
+    "@sbercloud/uikit-product-icons": "14.2.0",
+    "@sbercloud/uikit-product-mobile-modal": "0.9.5",
     "@sbercloud/uikit-product-site-layout": "0.1.6",
     "@sbercloud/uikit-product-utils": "6.1.0",
     "@snack-uikit/alert": "0.16.17",
