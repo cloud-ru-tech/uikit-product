@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-price-summary",
   "title": "Price Summary",
-  "version": "0.1.24",
+  "version": "0.1.25",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,9 +33,9 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-formatters": "3.4.3",
-    "@sbercloud/uikit-product-button-predefined": "0.6.8",
-    "@sbercloud/uikit-product-icons": "14.2.0",
-    "@sbercloud/uikit-product-mobile-tooltip": "0.4.52",
+    "@sbercloud/uikit-product-button-predefined": "0.6.9",
+    "@sbercloud/uikit-product-icons": "14.3.0",
+    "@sbercloud/uikit-product-mobile-tooltip": "0.4.53",
     "@sbercloud/uikit-product-utils": "6.1.0",
     "@snack-uikit/accordion": "0.10.5",
     "@snack-uikit/button": "0.19.7",

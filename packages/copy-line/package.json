@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-copy-line",
   "title": "Copy Line",
-  "version": "0.7.50",
+  "version": "0.7.51",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,7 +33,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/ft-copy-to-clipboard": "3.0.1",
-    "@sbercloud/uikit-product-icons": "14.2.0",
+    "@sbercloud/uikit-product-icons": "14.3.0",
     "@sbercloud/uikit-product-utils": "6.1.0",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/truncate-string": "0.6.9",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 14.3.0 (2025-09-02)
+
+
+### Features
+
+* **COMDSGN-4068:** Update icon logos. ([fdde01f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/fdde01f2a3234a0abf7a0b55f45825831e5c19dc))
+
+
+
+
+
 # 14.2.0 (2025-09-01)
 
 
