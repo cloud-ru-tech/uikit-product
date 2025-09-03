@@ -1,0 +1,19 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.likeDislikeBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.icon {
+  color: ste.$sys-neutral-accent-default;
+}
+
+.iconDisabled {
+  cursor: not-allowed;
+}
+
+.iconHover {
+  cursor: pointer;
+}

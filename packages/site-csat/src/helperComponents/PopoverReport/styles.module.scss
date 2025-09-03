@@ -1,0 +1,33 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.popoverContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 280px;
+}
+
+.popoverTitleBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.popoverTitleDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.iconClose {
+  color: ste.$sys-neutral-accent-default;
+  cursor: pointer;
+}
+
+.popoverTitle {
+  color: ste.$sys-neutral-text-main;
+}
+
+.popoverDescription {
+  color: ste.$sys-neutral-text-support;
+}

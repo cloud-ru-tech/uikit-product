@@ -1,0 +1,25 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+
+.siteCsatPopoverBlock {
+  max-width: 334px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  color: ste.$sys-neutral-text-support;
+}
+
+.likeDislikeBlock {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.spinner {
+  display: flex;
+  justify-content: end;
+  width: 64px;
+}
