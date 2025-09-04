@@ -19,7 +19,8 @@
 
 .bottom {
   height: 32px;
-  border-top: ste.$border-width-012m ste.$border-styles-solid ste.$sys-neutral-decor-default;
+  box-sizing: border-box;
+  border-bottom: ste.$border-width-012m ste.$border-styles-solid ste.$sys-neutral-decor-default;
   display: flex;
   align-items: center;
   overflow: hidden;
