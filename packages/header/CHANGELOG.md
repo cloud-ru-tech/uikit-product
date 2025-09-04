@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.1 (2025-09-04)
+
+
+### Bug Fixes
+
+* **FF-11:** fix border style ([ef16ea4](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ef16ea4c0b6fc55a91a4657f96fe8682a02876aa))
+
+
+
+
+
 # 5.0.0 (2025-09-04)
 
 
