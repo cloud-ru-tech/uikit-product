@@ -4,7 +4,6 @@
   box-sizing: border-box;
 
   background-color: ste.$sys-neutral-background;
-  border-bottom: ste.$border-width-012m ste.$border-styles-solid ste.$sys-neutral-decor-default;
 }
 
 .top {
@@ -15,6 +14,7 @@
   height: ste.$dimension-6m;
   gap: ste.$dimension-2m;
   justify-content: space-between;
+  border-bottom: ste.$border-width-012m ste.$border-styles-solid ste.$sys-neutral-decor-default;
 }
 
 .bottom {

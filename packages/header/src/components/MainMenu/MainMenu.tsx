@@ -17,7 +17,8 @@ export function MainMenu({
   search,
   isMobile,
   onLinkChange,
-}: MainMenuProps) {
+  disabled,
+}: MainMenuProps & { disabled?: boolean }) {
   const [open = false, setOpen] = useValueControl<boolean>({ value: openProp, onChange: setOpenProp });
 
   const MenuComponent = isMobile ? MenuMobile : MenuDesktop;
@@ -25,6 +26,7 @@ export function MainMenu({
   return (
     <>
       <ButtonFunction
+        disabled={disabled}
         size='m'
         icon={<MainMenuSVG />}
         onClick={() => {
