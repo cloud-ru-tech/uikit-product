@@ -1,0 +1,21 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+
+.userMenuDroplist {
+  width: 272px;
+}
+
+.mobileList {
+  padding: 16px;
+  padding-top: 0;
+}
+
+.settingIcon {
+  color: ste.$sys-neutral-text-light;
+}
+
+.userMenuInfoItem {
+  [data-test-id='list__base-item-option'] {
+    // TODO: подумать как "нормально" прокидывать стили/типографику
+    @include ste.composite-var(ste.$sans-label-m);
+  }
+}

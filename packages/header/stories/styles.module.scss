@@ -1,0 +1,47 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as var;
+.select {
+  border: solid 1px var.$sys-neutral-decor-default;
+
+  border-top: none;
+  border-bottom: none;
+
+  height: var.$dimension-6m;
+  width: 176px;
+
+  padding: 0 var.$dimension-1m;
+
+  display: flex;
+
+  align-items: center;
+
+  .title {
+    @include var.composite-var(var.$light-label-m);
+
+    color: var.$sys-neutral-text-support;
+  }
+}
+
+.wrapper {
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.plug {
+  @include var.composite-var(var.$light-label-m);
+  color: var.$sys-neutral-text-support;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var.$sys-primary-decor-default;
+  border: solid 1px var.$sys-neutral-decor-default;
+
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  padding: 8px;
+}

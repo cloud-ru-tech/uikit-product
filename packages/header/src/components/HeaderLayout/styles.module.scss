@@ -1,0 +1,37 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+
+.header {
+  box-sizing: border-box;
+
+  background-color: ste.$sys-neutral-background;
+  border-bottom: ste.$border-width-012m ste.$border-styles-solid ste.$sys-neutral-decor-default;
+}
+
+.top {
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 0 ste.$dimension-1m 0 0;
+  height: ste.$dimension-6m;
+  gap: ste.$dimension-2m;
+  justify-content: space-between;
+}
+
+.bottom {
+  height: 32px;
+  border-top: ste.$border-width-012m ste.$border-styles-solid ste.$sys-neutral-decor-default;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.left {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}

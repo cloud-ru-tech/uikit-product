@@ -1,0 +1,21 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element' as ste;
+
+.searchItem {
+  position: sticky;
+  /* stylelint-disable-next-line declaration-property-value-allowed-list */
+  z-index: 1;
+  top: 0;
+  background-color: ste.$sys-neutral-background;
+  padding: 4px;
+  padding-bottom: ste.$dimension-1m;
+
+  display: flex;
+  flex-direction: column;
+  gap: ste.$dimension-1m;
+}
+
+.searchSettingsChips {
+  display: flex;
+  flex-direction: row;
+  gap: ste.$dimension-050m;
+}
