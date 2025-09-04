@@ -56,9 +56,15 @@ export function useMenuItems({ search, serviceGroups, favorite }: UseMenuItemsPr
       return serviceGroups;
     }
 
-    const favoriteServices = serviceGroups
-      .reduce((acc, cur) => acc.concat(cur.items), [] as InnerLink[])
-      .filter(service => favorite.value.includes(service.id));
+    const flatMapItems = serviceGroups.flatMap(serviceGroup => serviceGroup.items);
+
+    const favoriteServices = favorite.value.reduce((acc, cur) => {
+      const item = flatMapItems.find(item => item.id === cur);
+      if (item) {
+        acc.push(item);
+      }
+      return acc;
+    }, [] as InnerLink[]);
 
     return [
       {
