@@ -1,7 +1,0 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
-
-.searchSettingsChips {
-  display: flex;
-  flex-direction: row;
-  gap: styles-tokens-element.$dimension-050m;
-}

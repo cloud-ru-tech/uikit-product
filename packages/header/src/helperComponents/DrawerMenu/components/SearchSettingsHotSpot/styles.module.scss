@@ -1,8 +1,0 @@
-@use '@sbercloud/figma-tokens-cloud-platform/build/scss/components/styles-tokens-element';
-
-.searchSettingsPopoverContent {
-  display: flex;
-  flex-direction: column;
-  gap: styles-tokens-element.$dimension-1m;
-  max-width: 245px;
-}
