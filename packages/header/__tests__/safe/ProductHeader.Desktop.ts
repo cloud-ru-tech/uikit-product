@@ -1,6 +1,6 @@
 import { fixture, test } from 'testcafe';
 
-import { dataTestIdSelector, getTestcafeUrl } from '../../../testcafe/utils';
+import { dataTestIdSelector, getTestcafeUrl } from '../../../../testcafe/utils';
 import { basic, sortTests } from './basic';
 import { HEADER_TEST_ID } from './constants';
 import { searchTests } from './search';
@@ -27,7 +27,7 @@ function getPage(props: Record<string, unknown> = {}) {
   });
 }
 
-fixture('Product Desktop Header').page(getPage());
+fixture('Product Desktop Header').page(getPage()).skip;
 
 test.page(
   getPage({

@@ -1,6 +1,6 @@
 import { Selector } from 'testcafe';
 
-import { dataTestIdSelector } from '../../../testcafe/utils';
+import { dataTestIdSelector } from '../../../../testcafe/utils';
 import { HEADER_TEST_ID, NotificationTabs, SortVariant } from './constants';
 
 export const selectors = {

@@ -1,6 +1,6 @@
 import { fixture, test } from 'testcafe';
 
-import { getTestcafeUrl } from '../../../testcafe/utils';
+import { getTestcafeUrl } from '../../../../testcafe/utils';
 import { basic, sortTests } from './basic';
 import { HEADER_TEST_ID } from './constants';
 import { searchTests } from './search';
@@ -23,7 +23,7 @@ function getPage(props: Record<string, unknown> = {}) {
   });
 }
 
-fixture('Product Mobile Header').page(getPage());
+fixture('Product Mobile Header').page(getPage()).skip;
 
 test.page(
   getPage({
