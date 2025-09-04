@@ -227,9 +227,6 @@ export const en_GB = {
     },
   },
   Header: {
-    headerProjectSelectorCreateProject: 'Create project',
-    headerProjectSelectorEditOption: 'Edit',
-
     noDataFound: 'Nothing found',
 
     // ЛК 2.0
@@ -240,99 +237,19 @@ export const en_GB = {
     searchSettingsFuzzyChipLabel: 'Fuzzy',
     searchSettingsPreciseChipLabel: 'Precise',
     searchSettingsMobileModalHeader: 'Search Settings',
-    searchSettingsPopoverHeader: 'Search has become smarter',
-    searchSettingsPopoverDescription:
-      'Now it understands even not very precise queries and finds what you need faster. If you are used to the old search, you can enable it in the search settings.',
-    noData: 'No data',
-    notFound: 'No data found',
-    notifications: 'Notifications',
-    notificationsAll: 'All',
-    notificationsUnread: 'Unread',
-    notificationsSystem: 'System',
-    markAllAsRead: 'Mark all as read',
-    noNotificationsTitle: 'No notifications',
-    noNotificationsDescription: "This is where you'll see new event notifications when something happens",
-    notificationsErrorTitle: "We're already fixing it",
-    notificationsErrorDescription: 'Your notifications will appear here soon',
-    notificationsDivider: 'Already read',
-    notificationsFooterButton: 'All events',
 
-    search: 'Search',
-    searchCloseButton: 'Close search',
-    searchOpenButton: 'Open search',
-    edit: 'Edit',
-    organizations: 'Organizations',
-    addOrganization: 'Add organization',
-    organizationNewBadge: 'New',
-    partnerOrganizationBadge: 'Partner',
-    invitePopoverTitle: 'A different organization is now available to you',
-    invitePopoverText: 'You can change your organization by clicking on your profile',
-    invitePopoverAcceptButton: 'Change now',
-    invitePopoverCancelButton: 'Cancel',
-    projects: 'Projects',
-    addProject: 'Add projects',
-    platforms: 'Platforms',
+    noData: 'No data',
     services: 'Services',
     manageProfile: 'Manage profile',
     switchTheme: 'Switch theme',
     logout: 'Logout',
-    whatsNew: "What's new",
+
     favorite: 'Favorite',
-
-    sort: {
-      withoutGrouping: 'Without grouping',
-      withGrouping: 'With grouping',
-      lastVisitedDesc: {
-        option: 'By visit date',
-        caption: 'recent first',
-      },
-      lastVisitedAsc: {
-        option: 'By visit date',
-        caption: 'old first',
-      },
-      dateDesc: {
-        option: 'By creation date',
-        caption: 'new first',
-      },
-      dateAsc: {
-        option: 'By creation date',
-        caption: 'old first',
-      },
-      alphabeticalDesc: {
-        option: 'Alphabetical',
-        caption: 'A—Z (A—Я)',
-      },
-      alphabeticalAsc: {
-        option: 'Alphabetical',
-        caption: 'Z—A (Я—А)',
-      },
-      byCatalogs: {
-        option: 'By catalogs',
-      },
-    },
-
-    project: 'Project',
-    organization: 'Organization',
-
-    searchProjectsPlaceholder: 'Search by projects',
 
     themeModeLight: 'Light',
     themeModeDark: 'Dark',
     themeModeSystem: 'System',
     themeModeLabel: 'Interface Theme',
-
-    partnerPopoverTitle: 'New organization available',
-    partnerPopoverText: 'The application for participation in the referral program has been approved',
-    partnerPopoverDescription:
-      'Switch to this organization to start working in the partner account. You can switch between organizations in your profile or in the project selection menu.',
-    partnerPopoverCancelButton: `Don't show again`,
-
-    mkpBannerTitle: 'Marketplace',
-    mkpBannerText: 'For development, data analysis and other tasks.',
-
-    referralBannerTitle: 'Referral program',
-    referralBannerText: 'Earn up to 20% on recommendations of Cloud.ru services',
-    referralBannerTag: '20%',
   },
   InfoRow: {
     booleanValueTrue: 'Yes',

@@ -228,9 +228,6 @@ export const ru_RU: typeof en_GB = {
     },
   },
   Header: {
-    headerProjectSelectorCreateProject: 'Создать проект',
-    headerProjectSelectorEditOption: 'Редактировать',
-
     noDataFound: 'Ничего не найдено',
 
     // ЛК 2.0
@@ -241,99 +238,19 @@ export const ru_RU: typeof en_GB = {
     searchSettingsFuzzyChipLabel: 'С синонимами',
     searchSettingsPreciseChipLabel: 'Точный',
     searchSettingsMobileModalHeader: 'Настройки поиска',
-    searchSettingsPopoverHeader: 'Поиск стал умнее',
-    searchSettingsPopoverDescription:
-      'Теперь он понимает даже не совсем точные запросы и быстрее находит нужное. Если привыкли к старому поиску его можно включить в настройках поиска.',
-    noData: 'Нет данных',
-    notFound: 'Ничего не найдено',
-    notifications: 'Уведомления',
-    notificationsAll: 'Все',
-    notificationsUnread: 'Новые',
-    notificationsSystem: 'Системные',
-    markAllAsRead: 'Отметить все как прочитанное',
-    noNotificationsTitle: 'Нет уведомлений',
-    noNotificationsDescription: 'Здесь вы увидите новые уведомления о событиях, когда что-то произойдет',
-    notificationsErrorTitle: 'Уже чиним',
-    notificationsErrorDescription: 'Скоро здесь появятся ваши уведомления',
-    notificationsDivider: 'Прочитанные',
-    notificationsFooterButton: 'Все события',
 
-    search: 'Поиск',
-    searchCloseButton: 'Закрыть поиск',
-    searchOpenButton: 'Открыть поиск',
-    edit: 'Редактировать',
-    organizations: 'Организации',
-    addOrganization: 'Добавить организацию',
-    organizationNewBadge: 'Новая',
-    partnerOrganizationBadge: 'Партнер',
-    invitePopoverTitle: 'Теперь вам доступна другая организация',
-    invitePopoverText: 'Сменить организацию можно нажав на профиль',
-    invitePopoverAcceptButton: 'Сменить сейчас',
-    invitePopoverCancelButton: 'Закрыть',
-    projects: 'Проекты',
-    addProject: 'Добавить проект',
-    platforms: 'Платформы',
+    noData: 'Нет данных',
+
     services: 'Сервисы',
     manageProfile: 'Управление профилем',
     switchTheme: 'Переключить тему',
     logout: 'Выйти из аккаунта',
-    whatsNew: 'Что нового',
     favorite: 'Избранное',
-
-    sort: {
-      withoutGrouping: 'Без группировки',
-      withGrouping: 'С группировкой',
-      lastVisitedDesc: {
-        option: 'По дате посещения',
-        caption: 'сначала недавние',
-      },
-      lastVisitedAsc: {
-        option: 'По дате посещения',
-        caption: 'сначала старые',
-      },
-      dateDesc: {
-        option: 'По дате создания',
-        caption: 'сначала новые',
-      },
-      dateAsc: {
-        option: 'По дате создания',
-        caption: 'сначала старые',
-      },
-      alphabeticalDesc: {
-        option: 'По алфавиту',
-        caption: 'A—Я (A—Z)',
-      },
-      alphabeticalAsc: {
-        option: 'По алфавиту',
-        caption: 'Я—А (Z—A)',
-      },
-      byCatalogs: {
-        option: 'По каталогам',
-      },
-    },
-
-    project: 'Проект',
-    organization: 'Организация',
-
-    searchProjectsPlaceholder: 'Поиск по проектам',
 
     themeModeLight: 'Светлая',
     themeModeDark: 'Темная',
     themeModeSystem: 'Системная',
     themeModeLabel: 'Тема интерфейса',
-
-    partnerPopoverTitle: 'Доступна новая организация',
-    partnerPopoverText: 'Для нее одобрена заявка на участие в реферальной программе.',
-    partnerPopoverDescription:
-      'Переключитесь на эту организацию, чтобы начать работу в партнерском кабинете. Переключаться между организациями можно в профиле или в меню выбора проекта.',
-    partnerPopoverCancelButton: 'Больше не показывать',
-
-    mkpBannerTitle: 'Маркетплейс',
-    mkpBannerText: 'Для разработки, анализа данных и других задач.',
-
-    referralBannerTitle: 'Реферальная программа',
-    referralBannerText: 'Зарабатывайте до 20% на рекомендациях сервисов Cloud.ru',
-    referralBannerTag: '20%',
   },
   InfoRow: {
     booleanValueTrue: 'Да',
