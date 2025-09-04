@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 5.0.0 (2025-09-04)
+
+
+### Bug Fixes
+
+* **FF-6875:** fix favorite order ([19b64e7](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/19b64e75c9eb458b9b2244a0744e50fe96b1758f))
+* **FF-6875:** fix header height ([574dd9f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/574dd9f02ed48074da3cf2de495c47e31bfa95b0))
+
+
+### Features
+
+* remove old package ([11648f3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/11648f3e383070f1bd18a2cea480af15280b3a0f))
+
+
+### BREAKING CHANGES
+
+
+* **FF-6875:** refactor header ([1f5344b](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/1f5344b142c9725d63b19962a688a4400d4ae015))
+
+
+
+
 ## 4.9.17 (2025-09-02)
 
 ### Only dependencies have been changed

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2025-09-04)
+
+
+### Features
+
+* **FF-6875:** new header ([7ee5fe9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/7ee5fe9d1230f57ba439f59bab059c4a936ccddd))
+
+
+### BREAKING CHANGES
+
+
+* **FF-6875:** remove useless Header translations ([c9beb32](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/c9beb32cfa364bc20220c82f37ed10407e460134))
+
+
+
+
 # 0.11.0 (2025-09-01)
 
 
