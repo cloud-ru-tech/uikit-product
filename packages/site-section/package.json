@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-site-section",
   "title": "Site Section",
-  "version": "0.17.35",
+  "version": "0.17.36",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -33,7 +33,7 @@
   "scripts": {},
   "dependencies": {
     "@sbercloud/uikit-product-icons": "14.3.0",
-    "@sbercloud/uikit-product-mobile-fields": "0.11.11",
+    "@sbercloud/uikit-product-mobile-fields": "0.11.12",
     "@sbercloud/uikit-product-site-cards": "0.10.26",
     "@sbercloud/uikit-product-site-grid": "0.0.11",
     "@sbercloud/uikit-product-site-layout": "0.1.6",

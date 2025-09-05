@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.6 (2025-09-05)
+
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-mobile-toolbar@0.3.6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/mobile-toolbar/CHANGELOG.md)
+
+
+
+
+
 ## 0.10.5 (2025-09-02)
 
 ### Only dependencies have been changed

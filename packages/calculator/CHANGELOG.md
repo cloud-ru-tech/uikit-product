@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.25.13 (2025-09-05)
+
+
+### Dependencies
+
+* **FF-7117:** up snack field deps ([465eb49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
+
+
+
+
+
 ## 0.25.12 (2025-09-02)
 
 ### Only dependencies have been changed

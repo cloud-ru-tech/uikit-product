@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-fields-predefined",
   "title": "Fields Predefined",
-  "version": "0.11.1",
+  "version": "0.11.2",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -30,7 +30,7 @@
   "dependencies": {
     "@sbercloud/uikit-product-icons": "14.3.0",
     "@sbercloud/uikit-product-mobile-dropdown": "0.9.9",
-    "@sbercloud/uikit-product-mobile-fields": "0.11.11",
+    "@sbercloud/uikit-product-mobile-fields": "0.11.12",
     "@sbercloud/uikit-product-mobile-modal": "0.9.6",
     "@sbercloud/uikit-product-mobile-tooltip": "0.4.53",
     "@sbercloud/uikit-product-utils": "6.1.0",

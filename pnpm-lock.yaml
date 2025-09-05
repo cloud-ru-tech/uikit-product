@@ -394,7 +394,7 @@ importers:
         specifier: 0.9.9
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.11.11
+        specifier: 0.11.12
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
         specifier: 0.9.6
@@ -672,7 +672,7 @@ importers:
         specifier: 0.9.9
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.11.11
+        specifier: 0.11.12
         version: link:../mobile-fields
       '@sbercloud/uikit-product-mobile-modal':
         specifier: 0.9.6
@@ -1282,7 +1282,7 @@ importers:
         specifier: 0.4.53
         version: link:../mobile-tooltip
       '@sbercloud/uikit-product-page-layout':
-        specifier: 0.20.8
+        specifier: 0.20.9
         version: link:../page-layout
       '@sbercloud/uikit-product-quota':
         specifier: 0.5.2
@@ -1393,7 +1393,7 @@ importers:
         specifier: 0.9.9
         version: link:../mobile-dropdown
       '@sbercloud/uikit-product-mobile-toolbar':
-        specifier: 0.3.5
+        specifier: 0.3.6
         version: link:../mobile-toolbar
       '@sbercloud/uikit-product-utils':
         specifier: 6.1.0
@@ -1975,7 +1975,7 @@ importers:
         specifier: '*'
         version: link:../locale
       '@sbercloud/uikit-product-mobile-fields':
-        specifier: 0.11.11
+        specifier: 0.11.12
         version: link:../mobile-fields
       '@sbercloud/uikit-product-site-cards':
         specifier: 0.10.26
@@ -11152,6 +11152,7 @@ packages:
     engines: {node: '>=0.6.0', teleport: '>=0.2.0'}
     deprecated: |-
       You or someone you depend on is using Q, the JavaScript Promise library that gave JavaScript developers strong feelings about promises. They can almost certainly migrate to the native JavaScript promise now. Thank you literally everyone for joining me in this bet against the odds. Be excellent to each other.
+
       (For a CapTP with native promises, see @endo/eventual-send and @endo/captp)
 
   qrcode-terminal@0.10.0:
@@ -14282,8 +14283,8 @@ snapshots:
       '@vitest/eslint-plugin': 1.1.43(@typescript-eslint/utils@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0)(typescript@5.5.4)(vitest@3.1.2(@types/debug@4.1.12)(@types/node@22.8.1)(jsdom@26.1.0)(less@4.4.0)(sass@1.80.4)(stylus@0.62.0)(terser@5.43.1)(yaml@2.8.1))
       eslint: 9.17.0
       eslint-config-prettier: 9.1.0(eslint@9.17.0)
-      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.17.0)
       eslint-plugin-no-only-tests: 3.3.0
       eslint-plugin-prettier: 5.2.1(@types/eslint@9.6.1)(eslint-config-prettier@9.1.0(eslint@9.17.0))(eslint@9.17.0)(prettier@3.6.2)
@@ -21899,7 +21900,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0):
+  eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.1
@@ -21911,7 +21912,7 @@ snapshots:
       is-glob: 4.0.3
       stable-hash: 0.0.4
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -21925,14 +21926,14 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
       '@typescript-eslint/parser': 8.18.1(eslint@9.17.0)(typescript@5.5.4)
       eslint: 9.17.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -21949,7 +21950,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.9
@@ -21960,7 +21961,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 9.17.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint@9.17.0))(eslint@9.17.0))(eslint@9.17.0)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.18.1(eslint@9.17.0)(typescript@5.5.4))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
