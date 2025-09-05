@@ -30,6 +30,7 @@ export const InputConfirm = forwardRef<HTMLInputElement, InputConfirmProps>(
       </div>
 
       <FieldText
+        inputMode='text'
         ref={ref}
         required
         size='m'

@@ -39,7 +39,7 @@
     "@snack-uikit/icon-predefined": "0.7.3",
     "@snack-uikit/list": "0.26.0",
     "@snack-uikit/loaders": "0.9.4",
-    "@snack-uikit/search": "0.10.23",
+    "@snack-uikit/search": "0.12.13",
     "@snack-uikit/tooltip": "0.16.2",
     "@snack-uikit/truncate-string": "0.6.9",
     "@snack-uikit/typography": "0.8.4",

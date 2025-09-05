@@ -118,9 +118,10 @@ export function getTemplate(MonochromeIcons: IconDictionary, ThemedIcons?: IconD
                     label='Import'
                     value={`import { ${selectedIcon.iconName} } from '@sbercloud/uikit-product-icons';`}
                     readonly
+                    inputMode='text'
                   />
 
-                  <FieldText label={'data-test-id'} value={selectedIcon.dataAttribute} readonly />
+                  <FieldText label={'data-test-id'} value={selectedIcon.dataAttribute} readonly inputMode='text' />
                 </div>
               }
               approveButton={{

@@ -1,3 +1,7 @@
+/**
+ * Возвращает кол-во символов для маски - со скобками и без
+ * @function helper
+ */
 export function getSymbolsRangeFromMask(mask: string = '') {
   // Считаем все 'X' и цифры в строке
   const maxNumberLength = (mask.match(/[X\d]/g) || []).length;
