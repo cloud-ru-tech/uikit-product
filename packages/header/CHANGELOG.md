@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 5.0.3 (2025-09-08)
+
+
+### Bug Fixes
+
+* **FF-6875:** add missed data-test-id ([b9a5d49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/b9a5d49dd260f3527ed9e3fbd7fc4ce223184730))
+
+
+
+
+
 ## 5.0.2 (2025-09-05)
 
 
