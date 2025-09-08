@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { useMemo } from 'react';
 
 import { DrawerCustom } from '@snack-uikit/drawer';
 import { isBaseItemProps, List } from '@snack-uikit/list';
@@ -38,6 +39,15 @@ export function MenuDesktop({
     className: styles.item,
   }));
 
+  const groupItemsWithClass = useMemo(
+    () =>
+      groupItems.map(item => ({
+        ...item,
+        className: styles.item,
+      })),
+    [groupItems],
+  );
+
   return (
     <DrawerCustom
       open={open}
@@ -52,15 +62,12 @@ export function MenuDesktop({
       data-small={!isNeedRightBlock || undefined}
     >
       <div className={styles.menu}>
-        <div className={styles.left}>
+        <div className={styles.left} data-test-id='header__drawer-menu__left'>
           {leftTop && <div className={styles.leftTop}>{leftTop}</div>}
 
           {!isInitialEmptyCards && (
             <List
-              items={groupItems.map(item => ({
-                ...item,
-                className: styles.item,
-              }))}
+              items={groupItemsWithClass}
               pinBottom={settingItemsWithClassName}
               scroll
               size='m'
@@ -86,7 +93,7 @@ export function MenuDesktop({
         </div>
 
         {isNeedRightBlock && (
-          <div className={styles.right}>
+          <div className={styles.right} data-test-id='header__drawer-menu__right'>
             <Scroll paddingAbsolute className={styles.scroll} ref={scrollRef} barHideStrategy='never'>
               {isInitialEmptyCards && rightTop && <div className={styles.bannersWrap}>{rightTop}</div>}
 
