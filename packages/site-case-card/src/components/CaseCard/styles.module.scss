@@ -1,0 +1,59 @@
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables.scss' as ste;
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 216px;
+  background: ste.$sys-neutral-background2-level;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  &[data-layout-type='tablet'] {
+    height: 232px;
+  }
+
+  &[data-layout-type='mobile'] {
+    height: 192px;
+  }
+}
+
+.image {
+  height: 46px;
+
+  &[data-layout-type='mobile'] {
+    height: 42px;
+  }
+}
+
+.categoryGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+
+.category {
+  color: ste.$sys-neutral-text-support;
+
+  &:not(:last-child)::after {
+    content: '·';
+    margin-left: 4px;
+    color: ste.$sys-neutral-text-support;
+  }
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.description {
+  color: ste.$sys-neutral-text-main;
+
+  mark {
+    color: ste.$sys-primary-text-light;
+    background-color: unset;
+  }
+}
