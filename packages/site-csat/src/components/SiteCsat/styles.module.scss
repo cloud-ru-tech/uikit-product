@@ -1,4 +1,4 @@
-@use '../../../node_modules/@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
+@use '@sbercloud/figma-tokens-cloud-platform/build/scss/styles-theme-variables' as ste;
 
 .siteCsatBlock {
   box-sizing: border-box;
@@ -19,7 +19,6 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  height: 32px;
 }
 
 .reportSendBlock {
@@ -35,4 +34,8 @@
 
 .textSupport {
   color: ste.$sys-neutral-text-support;
+}
+
+.classNameChipContainer {
+  justify-content: center;
 }

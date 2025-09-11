@@ -1,17 +1,25 @@
 import { CloseInterfaceSVG } from '@sbercloud/uikit-product-icons';
 import { Typography } from '@snack-uikit/typography';
 
+import { onSubmitVariables } from '../../types';
 import { ContentDislikeCsat } from '../ContentDislikeCsat';
 import styles from './styles.module.scss';
 
 type PopoverReportProps = {
-  onSubmit: (textComment: string) => void;
+  onSubmit({ textComment, selectedChips }: onSubmitVariables): void;
+  onCheckChips?(titleChip: string): void;
   loadingButton?: boolean;
   onOpenClosePopover: () => void;
   onClickForm?: () => void;
 };
 
-export function PopoverReportContent({ onSubmit, onOpenClosePopover, loadingButton, onClickForm }: PopoverReportProps) {
+export function PopoverReportContent({
+  onSubmit,
+  onOpenClosePopover,
+  loadingButton,
+  onClickForm,
+  onCheckChips,
+}: PopoverReportProps) {
   return (
     <div className={styles.popoverContent}>
       <div className={styles.popoverTitleBlock}>
@@ -23,7 +31,16 @@ export function PopoverReportContent({ onSubmit, onOpenClosePopover, loadingButt
         </div>
         <CloseInterfaceSVG className={styles.iconClose} onClick={onOpenClosePopover} />
       </div>
-      <ContentDislikeCsat onClickForm={onClickForm} loadingButton={loadingButton} onSubmit={onSubmit} />
+      <ContentDislikeCsat
+        onClickForm={onClickForm}
+        loadingButton={loadingButton}
+        onSubmit={onSubmit}
+        onCheckChips={onCheckChips}
+        buttonSubmit={{
+          fullWidth: true,
+          size: 's',
+        }}
+      />
     </div>
   );
 }

@@ -7,6 +7,7 @@ import { Popover } from '@snack-uikit/popover';
 import { Typography } from '@snack-uikit/typography';
 
 import { ContentDislikeCsat, LikeDislikeBlock, PopoverReportContent } from '../../helperComponents';
+import { onSubmitVariables } from '../../types';
 import styles from './styles.module.scss';
 
 export type SiteCsatPopoverProps = WithLayoutType<{
@@ -22,7 +23,8 @@ export type SiteCsatPopoverProps = WithLayoutType<{
     dislikeEnabled: boolean;
     loadingButton?: boolean;
     onClickForm(): void;
-    onSubmit(textComment: string): void;
+    onCheckChips?(titleChip: string): void;
+    onSubmit({ textComment, selectedChips }: onSubmitVariables): void;
   };
 }>;
 
@@ -69,6 +71,7 @@ export function SiteCsatPopover({
             onClickForm={dislikeCommentForm.onClickForm}
             loadingButton={dislikeCommentForm.loadingButton}
             onSubmit={dislikeCommentForm.onSubmit}
+            onCheckChips={dislikeCommentForm.onCheckChips}
             buttonSubmit={{
               size: 'm',
               fullWidth: true,

@@ -4,6 +4,7 @@ import { Spinner } from '@snack-uikit/loaders';
 import { Typography } from '@snack-uikit/typography';
 
 import { ContentDislikeCsat, LikeDislikeBlock } from '../../helperComponents';
+import { onSubmitVariables } from '../../types';
 import styles from './styles.module.scss';
 
 export type SiteCsatProps = WithLayoutType<{
@@ -16,7 +17,8 @@ export type SiteCsatProps = WithLayoutType<{
     dislikeEnabled?: boolean;
     loadingButton?: boolean;
     onClickForm(): void;
-    onSubmit(textComment: string): void;
+    onSubmit({ textComment, selectedChips }: onSubmitVariables): void;
+    onCheckChips?(titleChip: string): void;
   };
 }>;
 
@@ -43,6 +45,8 @@ export function SiteCsat({ isLoading, like, onSetLike, layoutType, label, dislik
       </div>
       {like === false && !isLoading && dislikeCommentForm && dislikeCommentForm.open && (
         <ContentDislikeCsat
+          classNameChipContainer={styles.classNameChipContainer}
+          onCheckChips={dislikeCommentForm.onCheckChips}
           onClickForm={dislikeCommentForm.onClickForm}
           loadingButton={dislikeCommentForm.loadingButton}
           onSubmit={dislikeCommentForm.onSubmit}

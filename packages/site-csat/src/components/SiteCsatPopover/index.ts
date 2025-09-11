@@ -1,1 +1,1 @@
-export * from './SiteCsatPopoverProps';
+export * from './SiteCsatPopover';

@@ -1,6 +1,6 @@
 {
-  "name": "@sbercloud/uikit-product-sitecsat",
-  "title": "Sitecsat",
+  "name": "@sbercloud/uikit-product-site-csat",
+  "title": "Site Csat",
   "version": "0.0.0",
   "sideEffects": [
     "*.css",
@@ -19,11 +19,11 @@
     "src",
     "./CHANGELOG.md"
   ],
-  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/sitecsat",
+  "homepage": "https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/tree/master/packages/site-csat",
   "repository": {
     "type": "git",
     "url": "https://git.sbercloud.tech/sbercloud-ui/uikit-product.git",
-    "directory": "packages/sitecsat"
+    "directory": "packages/site-csat"
   },
   "author": "daparfirov <daparfirov@cloud.ru>",
   "contributors": [
@@ -36,12 +36,13 @@
     "@sbercloud/uikit-product-mobile-modal": "0.9.6",
     "@sbercloud/uikit-product-utils": "6.1.0",
     "@snack-uikit/button": "0.19.15",
+    "@snack-uikit/chips": "0.28.4",
     "@snack-uikit/fields": "0.48.7",
+    "@snack-uikit/icons": "0.27.0",
     "@snack-uikit/loaders": "0.9.9",
     "@snack-uikit/popover": "0.10.0",
     "@snack-uikit/toggles": "0.13.21",
     "@snack-uikit/typography": "0.8.11",
-    "@snack-uikit/icons": "0.27.0",
     "classnames": "2.5.1"
   },
   "devDependencies": {
