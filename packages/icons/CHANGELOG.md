@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 14.3.1 (2025-09-11)
+
+
+### Bug Fixes
+
+* **COMDSGN-4068:** fix NginxIngressLogo & K8sgptLogoLight ([ce3fb97](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ce3fb97c518cd55c97e2f6a28bcad8518d385ef5))
+
+
+### Dependencies
+
+* **FF-7117:** up snack field deps ([465eb49](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/465eb49b46a72ebb8a43d851f101cb7c0827e151))
+
+
+
+
+
 # 14.3.0 (2025-09-02)
 
 
