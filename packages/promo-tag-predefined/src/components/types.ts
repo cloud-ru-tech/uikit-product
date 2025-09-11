@@ -1,5 +1,7 @@
 import { ValueOf } from '@snack-uikit/utils';
 
-import { PREVIEW_PROMO_TAG_CONTEXT } from './constants';
+import { PREVIEW_CONTEXT, VARIANTS } from './constants';
 
-export type PreviewPromoTagContext = ValueOf<typeof PREVIEW_PROMO_TAG_CONTEXT>;
+export type PreviewContext = ValueOf<typeof PREVIEW_CONTEXT>;
+
+export type Variant = ValueOf<typeof VARIANTS>;

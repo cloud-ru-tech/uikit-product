@@ -351,11 +351,17 @@ export const en_GB = {
     costLink: 'More about the cost',
   },
   PromoTagPredefined: {
+    connecting: 'Connecting',
+    partner: 'Partner',
     preview: 'Preview',
-    tooltipService:
-      'The service is at the Preview stage. Quota increase is not available for it and the terms of billing, service SLA and support do not apply.',
-    tooltipFunctional:
-      'The functionality is at the Preview stage. Billing, service SLA and support conditions do not apply to it.',
+    tooltipConnecting:
+      'The service is connecting and will be available soon. If it takes too long, please contact support.',
+    tooltipPartner:
+      'A vendor partner service. It is subject to unique pricing conditions, the partner defines the service and support SLA.',
+    tooltipPreviewService:
+      'The service is in the Preview stage. It cannot be increased by quota and the pricing conditions, service and support SLA do not apply.',
+    tooltipPreviewFunctional:
+      'The functionality is in the Preview stage. It is not subject to pricing conditions, service and support SLA.',
   },
   Quota: {
     peace: 'pcs.',

@@ -1,1 +1,1 @@
-export * from './PreviewPromoTag';
+export * from './PromoTagPredefined';
