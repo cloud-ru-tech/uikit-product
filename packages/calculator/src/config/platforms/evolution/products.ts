@@ -111,7 +111,7 @@ export const EVOLUTION_PRODUCTS: CatalogConfig['products'] = {
     id: EVOLUTION_PRODUCT.EvolutionManagedSpark,
     platform: PLATFORM.Evolution,
     label: 'Evolution Managed Spark',
-    caption: 'Аналитический SQL-движок Trino',
+    caption: 'Распределенная обработка данных в Spark',
     formConfig: EVOLUTION_MANAGED_SPARK_CONFIG,
     icon: SparkSVG,
     dataTestId: 'evolutionManagedSpark',

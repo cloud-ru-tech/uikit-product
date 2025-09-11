@@ -1,8 +1,15 @@
-import { CONTROL, FormConfig, guaranteedPartVCpuToRamMap } from '@sbercloud/uikit-product-calculator';
+import { CONTROL, FormConfig } from '@sbercloud/uikit-product-calculator';
 
 import { generateRamItems } from '../../../utils';
 
-const VCPU_CORE_ITEMS_WITHOUT_GPU = [2, 4, 8, 16, 32, 64];
+const VCPU_CORE_ITEMS_WITHOUT_GPU = [4, 8, 16];
+
+const VCPU_NO_MODEL_GPU: { [key: string]: number[] } = {
+  '4': [8, 16, 32, 64],
+  '8': [16, 32, 64, 128],
+  '16': [32, 64],
+  '24': [32],
+};
 
 const NVIDIA_H100_NVLINK_ITEM = {
   value: 'NVIDIA H100 NVLink',
@@ -24,16 +31,16 @@ const NVIDIA_A100_WITHOUT = {
   label: 'NVIDIA A100 80Гб PCI без NVLink',
 };
 
-const MODEL_ITEMS = [NVIDIA_H100_NVLINK_ITEM_WITHOUT, NVIDIA_V100, NVIDIA_A100_WITHOUT];
+const MODEL_ITEMS = [NVIDIA_H100_NVLINK_ITEM_WITHOUT, NVIDIA_V100, NVIDIA_H100_NVLINK_ITEM, NVIDIA_A100_WITHOUT];
 
-const GPU_BY_MODEL: { [key: string]: number[] } = {
+const GPU_BY_MODEL: { [model: string]: number[] } = {
   [NVIDIA_H100_NVLINK_ITEM.value]: [1, 2, 3, 4, 5, 6, 7, 8],
   [NVIDIA_H100_NVLINK_ITEM_WITHOUT.value]: [1, 2, 3, 4, 5, 6, 7, 8],
   [NVIDIA_V100.value]: [1, 2, 4, 8, 16],
   [NVIDIA_A100_WITHOUT.value]: [1, 2, 3, 4, 5, 6, 7, 8],
 };
 
-const CPU_BY_MODEL_AND_GPU: { [key: string]: { [key: string]: number[] } } = {
+const CPU_BY_MODEL_AND_GPU: { [model: string]: { [gpu: string]: number[] } } = {
   [NVIDIA_H100_NVLINK_ITEM.value]: {
     '1': [20],
     '2': [40],
@@ -73,7 +80,7 @@ const CPU_BY_MODEL_AND_GPU: { [key: string]: { [key: string]: number[] } } = {
   },
 };
 
-const RAM_BY_MODEL_AND_CPU: { [key: string]: { [key: string]: number[] } } = {
+const RAM_BY_MODEL_AND_CPU: { [model: string]: { [cpu: string]: number[] } } = {
   [NVIDIA_H100_NVLINK_ITEM.value]: {
     '20': [186],
     '40': [372],
@@ -110,6 +117,97 @@ const RAM_BY_MODEL_AND_CPU: { [key: string]: { [key: string]: number[] } } = {
     '120': [750],
     '140': [875],
     '160': [1000],
+  },
+};
+const MAX_SIZE_NODE_COUNT_WITH_GPU: {
+  [gpuModel: string]: {
+    [vcpu: string]: {
+      [ram: string]: number;
+    };
+  };
+} = {
+  [NVIDIA_H100_NVLINK_ITEM.value]: {
+    '20': {
+      '186': 7,
+    },
+    '40': {
+      '372': 7,
+    },
+    '60': {
+      '558': 7,
+    },
+    '100': {
+      '930': 7,
+    },
+    '120': {
+      '1116': 7,
+    },
+    '140': {
+      '1302': 7,
+    },
+    '160': {
+      '1488': 7,
+    },
+  },
+  [NVIDIA_H100_NVLINK_ITEM_WITHOUT.value]: {
+    '20': {
+      '125': 7,
+    },
+    '40': {
+      '250': 7,
+    },
+    '60': {
+      '375': 7,
+    },
+    '80': {
+      '500': 7,
+    },
+    '100': {
+      '625': 7,
+    },
+    '120': {
+      '750': 7,
+    },
+    '140': {
+      '875': 7,
+    },
+    '160': {
+      '1000': 7,
+    },
+  },
+  [NVIDIA_V100.value]: {
+    '4': {
+      '64': 7,
+    },
+    '8': {
+      '128': 7,
+    },
+    '16': {
+      '256': 7,
+    },
+    '32': {
+      '512': 7,
+    },
+    '64': {
+      '1024': 7,
+    },
+  },
+  [NVIDIA_A100_WITHOUT.value]: {
+    '20': {
+      '125': 7,
+    },
+    '40': {
+      '250': 7,
+    },
+    '60': {
+      '375': 7,
+    },
+    '80': {
+      '500': 7,
+    },
+    '100': {
+      '625': 7,
+    },
   },
 };
 
@@ -170,7 +268,7 @@ export const EVOLUTION_MANAGED_SPARK_CONFIG: FormConfig = {
     vCpuCoreCount: {
       type: CONTROL.Slider,
       accessorKey: 'vCpuCoreCount',
-      defaultValue: '2',
+      defaultValue: '4',
       items: VCPU_CORE_ITEMS_WITHOUT_GPU,
       decoratorProps: {
         label: 'Количество ядер vCPU',
@@ -194,7 +292,7 @@ export const EVOLUTION_MANAGED_SPARK_CONFIG: FormConfig = {
         label: 'Количество оперативной памяти (RAM)',
       },
       defaultValue: '1',
-      items: generateRamItems(guaranteedPartVCpuToRamMap['100']['1']),
+      items: generateRamItems(VCPU_NO_MODEL_GPU['4']),
       accessorKey: 'ramAmount',
       watchedControls: {
         vCpuCoreCount: 'vCpuCoreCount',
@@ -203,9 +301,9 @@ export const EVOLUTION_MANAGED_SPARK_CONFIG: FormConfig = {
       },
       relateFn: ({ vCpuCoreCount, hasGpu, gpuModel }) => {
         if (!hasGpu) {
-          const ramWithoutGPU = guaranteedPartVCpuToRamMap?.['100']?.[vCpuCoreCount];
+          const ramWithoutGPU = VCPU_NO_MODEL_GPU[vCpuCoreCount];
           if (!ramWithoutGPU) {
-            const defaultItems = Object.values(guaranteedPartVCpuToRamMap?.['100'])[0];
+            const defaultItems = Object.values(VCPU_NO_MODEL_GPU)[0];
             return {
               items: generateRamItems(defaultItems),
             };
@@ -237,6 +335,26 @@ export const EVOLUTION_MANAGED_SPARK_CONFIG: FormConfig = {
         min: 1,
         max: 10,
         postfix: 'Шт',
+      },
+      watchedControls: {
+        vCpuCoreCount: 'vCpuCoreCount',
+        hasGpu: 'hasGpu',
+        gpuModel: 'gpuModel',
+        ramAmount: 'ramAmount',
+      },
+      relateFn: ({ vCpuCoreCount, hasGpu, gpuModel, ramAmount }) => {
+        if (!hasGpu) {
+          return {
+            uiProps: {
+              max: 10,
+            },
+          };
+        }
+        return {
+          uiProps: {
+            max: MAX_SIZE_NODE_COUNT_WITH_GPU?.[gpuModel]?.[vCpuCoreCount]?.[ramAmount] ?? 10,
+          },
+        };
       },
     },
   },
