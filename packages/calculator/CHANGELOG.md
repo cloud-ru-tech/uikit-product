@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.26.0 (2025-09-12)
+
+
+### Bug Fixes
+
+* **SITE-9911:** fix calculator spark ([608844f](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/608844f99b7d0103166e0aab43c059c6c9095a42))
+
+
+### Features
+
+* **SITE-9757:** add new calculator ([9d640a2](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/9d640a2d2cfcf089d0b11d088b1a5af328667bde))
+* **SITE-9757:** add new calculator ([0009025](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/0009025c70305fe90b4200777f05cd553109f38d))
+
+
+
+
+
 ## 0.25.14 (2025-09-11)
 
 ### Only dependencies have been changed
