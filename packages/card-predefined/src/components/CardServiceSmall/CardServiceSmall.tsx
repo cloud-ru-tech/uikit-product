@@ -2,6 +2,7 @@ import cn from 'classnames';
 import { JSXElementConstructor, KeyboardEventHandler, MouseEventHandler, useRef } from 'react';
 import { useUncontrolledProp } from 'uncontrollable';
 
+import { PromoTagPredefined, PromoTagPredefinedProps } from '@sbercloud/uikit-product-promo-tag-predefined';
 import { Card, CardProps } from '@snack-uikit/card';
 import { PromoTag } from '@snack-uikit/promo-tag';
 import { Favorite } from '@snack-uikit/toggles';
@@ -12,7 +13,7 @@ import { extractSupportProps, WithSupportProps } from '@snack-uikit/utils';
 import styles from './styles.module.scss';
 
 export type CardServiceSmallProps = WithSupportProps<
-  Pick<CardProps, 'promoBadge' | 'onClick' | 'className' | 'disabled' | 'outline' | 'href' | 'checked'> &
+  Pick<CardProps, 'onClick' | 'className' | 'disabled' | 'outline' | 'href' | 'checked'> &
     Required<Pick<Card.HeaderProps, 'title' | 'emblem'>> & {
       truncate?: Pick<NonNullable<Card.HeaderProps['truncate']>, 'title'>;
       favorite?: {
@@ -21,6 +22,7 @@ export type CardServiceSmallProps = WithSupportProps<
         checked?: boolean;
         onChange?(value: boolean): void;
       };
+      promoBadge?: PromoTagPredefinedProps | CardProps['promoBadge'];
     }
 >;
 
@@ -122,10 +124,15 @@ export function CardServiceSmall({
 
       {promoBadge && (
         <div className={styles.promoTagWrapper}>
-          <PromoTag
-            {...(typeof promoBadge === 'string' ? { text: promoBadge } : promoBadge)}
-            data-test-id='card-service-small__promo-badge'
-          />
+          {typeof promoBadge === 'object' && 'variant' in promoBadge ? (
+            <PromoTagPredefined data-test-id='card-service-small__promo-badge' {...promoBadge} />
+          ) : (
+            <PromoTag
+              color='decor'
+              {...(typeof promoBadge === 'string' ? { text: promoBadge, appearance: 'primary' } : promoBadge)}
+              data-test-id='card-service-small__promo-badge'
+            />
+          )}
         </div>
       )}
     </div>

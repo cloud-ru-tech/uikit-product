@@ -484,6 +484,9 @@ importers:
       '@sbercloud/uikit-product-icons':
         specifier: 14.3.1
         version: link:../icons
+      '@sbercloud/uikit-product-promo-tag-predefined':
+        specifier: 0.1.2
+        version: link:../promo-tag-predefined
       '@snack-uikit/button':
         specifier: 0.19.7
         version: 0.19.7(react@18.2.0)

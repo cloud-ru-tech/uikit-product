@@ -19,10 +19,10 @@ function getPage(props?: Record<string, unknown>) {
 
 fixture('Card Service Small');
 
-test.page(getPage({ title: 'Super title', description: 'Super description', promoBadge: 'badge' }))(
+test.page(getPage({ title: 'Super title', description: 'Super description', promoBadgeMode: 'preview' }))(
   'Rendered',
   async t => {
     await t.expect(Selector(dataTestIdSelector('card-service-small__title')).textContent).eql('Super title');
-    await t.expect(Selector(dataTestIdSelector('card-service-small__promo-badge')).textContent).eql('badge');
+    await t.expect(Selector(dataTestIdSelector('card-service-small__promo-badge')).textContent).eql('Preview');
   },
 );
