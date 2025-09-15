@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.4 (2025-09-15)
+
+
+### Bug Fixes
+
+* **GIGAID-314:** paste country detection ([abc9633](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/abc9633cee7e62cc4f5bb82287adf9a1f565ee0a))
+
+
+
+
+
 ## 0.11.3 (2025-09-11)
 
 ### Only dependencies have been changed
