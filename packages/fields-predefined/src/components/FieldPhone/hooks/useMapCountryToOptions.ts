@@ -8,7 +8,7 @@ export function useMapCountryToOptions() {
   const { t } = useLocale('FieldsPredefined');
 
   const mapCountryToOption = useCallback(
-    ({ value: id, mask, caption, beforeContent }: Country): FieldPhoneOptionsProps => ({
+    ({ value: id, mask, caption, beforeContent, iso2 }: Country): FieldPhoneOptionsProps => ({
       id,
       mask,
       content: {
@@ -16,6 +16,7 @@ export function useMapCountryToOptions() {
         caption: caption,
       },
       beforeContent,
+      iso2,
     }),
     [t],
   );

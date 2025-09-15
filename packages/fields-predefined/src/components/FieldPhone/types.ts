@@ -11,6 +11,7 @@ export type FieldPhoneOptionsProps = {
     caption: string;
   };
   mask: string;
+  iso2: string;
 };
 
 export type MaskOptions = Parameters<typeof useIMask>[0];

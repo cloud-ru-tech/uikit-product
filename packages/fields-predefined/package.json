@@ -44,6 +44,7 @@
     "@snack-uikit/tooltip": "0.17.4",
     "@snack-uikit/typography": "0.8.7",
     "@snack-uikit/utils": "3.7.0",
+    "awesome-phonenumber": "7.5.0",
     "classnames": "2.5.1",
     "merge-refs": "1.2.2",
     "react-imask": "7.6.1",

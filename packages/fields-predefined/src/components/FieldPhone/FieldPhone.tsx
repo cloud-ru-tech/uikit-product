@@ -12,6 +12,7 @@ import { PLACEHOLDER_CHAR } from './constants';
 import { useCountries } from './hooks';
 import styles from './styles.module.scss';
 import { CountrySettings, FieldPhoneOptionsProps, MaskOptions } from './types';
+import { detectCountryByPhone } from './utils';
 
 export type FieldPhoneProps = WithLayoutType<
   Omit<
@@ -123,23 +124,36 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [valueProp]);
 
+    const updateMaskView = (value?: string) => {
+      setValue(value?.replaceAll(/\w/g, ' ') ?? '');
+    };
+
     const handlePaste: ClipboardEventHandler<HTMLInputElement> = e => {
       e.preventDefault();
 
       const text = e.clipboardData?.getData('text') || '';
 
-      const prefixNumber = (country?.content.caption ?? '').replace('+', '');
+      const newCountry = detectCountryByPhone(text, options);
+      const isCountryChanged = newCountry && newCountry.id !== country?.id;
+
+      const currentCountry = isCountryChanged ? newCountry : country;
+
+      const prefixNumber = (currentCountry?.content.caption ?? '').replace('+', '');
       const prefixNumberWithOptionalPlus = RegExp(`^(\\+?${prefixNumber})`);
       const valueWithoutPrefix = text.replace(prefixNumberWithOptionalPlus, '');
 
       // костыль, чтобы всегда срабатывала маска
-      setValue(`+${valueWithoutPrefix}`);
+      const newValue = `+${valueWithoutPrefix}`;
+      if (isCountryChanged) {
+        setCountry(newCountry);
+        updateMaskView(newCountry.mask);
+
+        setTimeout(() => setValue(newValue), 0);
+      } else {
+        setValue(newValue);
+      }
 
       onPaste?.(e);
-    };
-
-    const updateMaskView = (value?: string) => {
-      setValue(value?.replaceAll(/\w/g, ' ') ?? '');
     };
 
     const handleChangeSelection = (selectedOption: string) => {
