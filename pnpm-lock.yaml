@@ -698,9 +698,6 @@ importers:
       '@snack-uikit/input-private':
         specifier: 4.8.1
         version: 4.8.1(react@18.2.0)
-      '@snack-uikit/link':
-        specifier: 0.15.9
-        version: 0.15.9(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@snack-uikit/scroll':
         specifier: 0.10.1
         version: 0.10.1(react@18.2.0)

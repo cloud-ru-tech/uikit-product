@@ -192,8 +192,7 @@ export const en_GB = {
     },
     FieldAi: {
       regular: {
-        placeholder: 'Ask about cloud technologies and services Cloud.ru',
-        shortPlaceholder: 'Ask about services',
+        placeholder: 'Ask something...',
       },
       secret: {
         placeholder: 'Enter password',

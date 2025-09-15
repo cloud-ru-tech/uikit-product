@@ -36,7 +36,7 @@ export const MobileFieldAi = forwardRef<HTMLTextAreaElement, MobileFieldAiProps>
             ref={ref}
             value={value}
             minRows={MIN_ROWS}
-            placeholder={t('FieldAi.regular.shortPlaceholder')}
+            placeholder={t('FieldAi.regular.placeholder')}
             spellCheck={true}
           />
         </Scroll>

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import { forwardRef, KeyboardEventHandler, MouseEvent, useMemo, useState } from 'react';
+import { forwardRef, KeyboardEventHandler, useMemo, useState } from 'react';
 
 import { EyeClosedSVG, EyeSVG } from '@sbercloud/uikit-product-icons';
 import { useLocale } from '@sbercloud/uikit-product-locale';
@@ -27,30 +27,13 @@ export type FieldAiProps = WithLayoutType<
     secure?: boolean | 'password';
     /** Колбек действия при отправке */
     onSubmit(value: string): void;
-    /** Ссылка на чат поддержки */
-    supportUrl?: string;
-    /** Действие при клике по ссылке на чат поддержки */
-    onSupportLinkClick?(e: MouseEvent): void;
     /** Действие при клике по кнопке сброса контекста */
     onResetContextClick?(): void;
   }
 >;
 
 export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
-  (
-    {
-      secure = false,
-      onSubmit: handleSubmitProp,
-      value,
-      supportUrl,
-      onSupportLinkClick,
-      onResetContextClick,
-      disabled,
-      className,
-      ...props
-    },
-    ref,
-  ) => {
+  ({ secure = false, onSubmit: handleSubmitProp, value, onResetContextClick, disabled, className, ...props }, ref) => {
     const { layoutType, validationState } = props;
     const { t } = useLocale('FieldsPredefined');
     const isTouchDevice = isTouchDeviceHelper(layoutType);
@@ -155,9 +138,7 @@ export const FieldAi = forwardRef<HTMLTextAreaElement, FieldAiProps>(
           />
         </WithPasswordValidation>
 
-        {!isPasswordMode && (
-          <AIDisclaimer layoutType={layoutType} supportUrl={supportUrl} onSupportLinkClick={onSupportLinkClick} />
-        )}
+        {!isPasswordMode && <AIDisclaimer layoutType={layoutType} />}
       </div>
     );
   },
