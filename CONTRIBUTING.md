@@ -26,7 +26,8 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 ## Scripts
 
 - `add-package` - создание нового пакета в рамках монорепозитория
-- `build:storybook` - сборка исходников сторибука для *CI/CD*
+- `build:storybook` - сборка исходников сторибука для *CI/CD* (на фича-ветках только изменные пакеты, на master-ветке полная сборка)
+- `build:storybook:all` - сборка исходников сторибука для локального запуска (полная сборка)
 - `build:packages:esm` - сборка ESM версии пакетов
 - `build:packages:cjs` - сборка CommonJS версии пакетов
 - `compile:packages` - компиляция пакетов через lerna
@@ -39,7 +40,7 @@ footers other than BREAKING CHANGE: <description> may be provided and follow a c
 - `clean:buildinfo` - удаляет **.tsbuildinfo** файлы
 - `clean:empty` - удаляет пустые пакеты
 - `docgen` - генерация документации для всех пакетов
-- `deps:all` - устанавливает зависимости
+- `deps` - устанавливает зависимости
 - `deps:reinstall` - переустанавливает все зависимости начисто
 - `storybook:all` - запуск локальной версии сторибука со *всеми* пакетами
 - `storybook:partial` - запуск локальной версии сторибука с *определенными* пакетами

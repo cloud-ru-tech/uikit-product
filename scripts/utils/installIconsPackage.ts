@@ -9,10 +9,11 @@ export const installIconsPackage = () => {
 
   shell.exec('rm -rf ./packages/icons');
   shell.exec(`pnpm add @sbercloud/uikit-product-icons@${iconsPackageVersion} -w -D`);
+  shell.exec('pnpm install --frozen-lockfile=false');
 
   return () => {
     shell.exec('git checkout ./packages/icons');
     shell.exec('git checkout pnpm-lock.yaml');
-    shell.exec('git checkout packages.json');
+    shell.exec('git checkout package.json');
   };
 };

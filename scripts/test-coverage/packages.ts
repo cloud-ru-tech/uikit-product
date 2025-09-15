@@ -2,7 +2,7 @@ import path from 'path';
 
 import { getAllPackageFolders } from '../utils/getAllPackageFolders';
 import { getChangedPackages } from '../utils/getChangedPackages';
-import { shouldRunAllTests } from '../utils/shouldRunAllTests';
+import { isMainBranch } from '../utils/isMainBranch';
 
 // need this file if a group of changed tests is empty
 const DEFAULT_ENTRY = 'storybook/preview.tsx';
@@ -16,7 +16,7 @@ function toPattern(basename: string) {
 }
 
 function getPackageEntries() {
-  const runAllTests = shouldRunAllTests();
+  const runAllTests = isMainBranch();
 
   const paths = runAllTests ? getAllPackageFolders() : getChangedPackages();
 

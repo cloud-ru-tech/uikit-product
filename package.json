@@ -9,7 +9,8 @@
   "license": "Apache-2.0",
   "scripts": {
     "add-package": "ts-node scripts/npm-init",
-    "build:storybook": "cross-env TEST_SERVER=true storybook build -c storybook",
+    "build:storybook": "ts-node scripts/build-storybook-changed",
+    "build:storybook:all": "cross-env TEST_SERVER=true storybook build -c storybook",
     "build:packages:esm": "tspc -b ./packages/tsconfig.esm.json",
     "build:packages:cjs": "tspc -b ./packages/tsconfig.cjs.json",
     "compile:packages": "lerna run compile",
@@ -22,8 +23,8 @@
     "clean:buildinfo": "rimraf --glob ./packages/**/*.tsbuildinfo ./packages/npm-package.tsconfig.tsbuildinfo",
     "clean:empty": "ts-node scripts/removeEmptyPackages.ts",
     "docgen": "ts-node scripts/docgen/docgenForAllPackages",
-    "deps:all": "pnpm install",
-    "deps:reinstall": "pnpm clean:all && rm -rf node_modules pnpm-lock.yaml && pnpm store prune && pnpm deps:all",
+    "deps": "pnpm install",
+    "deps:reinstall": "pnpm clean:all && rm -rf node_modules pnpm-lock.yaml && pnpm store prune && pnpm deps",
     "storybook:all": "storybook dev -c storybook -p 6006 --https --ssl-cert ../cert.crt --ssl-key ../cert.key",
     "storybook:partial": "ts-node scripts/start-storybook-partially",
     "test:coverage-all": "ts-node scripts/test-coverage-all-packages",
@@ -146,8 +147,5 @@
       "testcafe-browser-tools": "2.0.23",
       "xlsx": "https://pkg.sbercloud.tech/artifactory/api/npm/proxies-sheetjs/xlsx-0.20.3/xlsx-0.20.3.tgz"
     }
-  },
-  "engines": {
-    "pnpm": "^10.10.0"
   }
 }

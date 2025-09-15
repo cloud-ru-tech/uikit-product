@@ -33,6 +33,12 @@ export default [
     },
   },
   {
+    files: ['**/scripts/**/*.ts'],
+    rules: {
+      '@cloud-ru/ssr-safe-react/domApi': 'off',
+    },
+  },
+  {
     files: ['packages/*/stories/**/*', 'storybook/stories/**/*'],
     rules: {
       'react/function-component-definition': 'off',

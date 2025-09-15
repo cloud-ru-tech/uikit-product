@@ -21,6 +21,8 @@ const WELCOME = path.resolve(__dirname, './welcome/stories/Welcome.story.tsx');
 const STATISTICS = path.resolve(__dirname, './welcome/stories/Statistics.story.tsx');
 const isTestServer = Boolean(process.env.TEST_SERVER);
 
+const needToCompileIcons = process.env.STORYBOOK_PACKAGE_NAME?.includes('icons');
+
 const mainConfig: StorybookConfig = {
   stories: [WELCOME, STATISTICS, ...STORIES],
   addons: [
@@ -50,7 +52,9 @@ const mainConfig: StorybookConfig = {
     '@cloud-ru/ft-storybook-deps-graph-addon',
     '@sbercloud/ft-storybook-deps-table-addon',
   ],
-  staticDirs: [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }],
+  staticDirs: needToCompileIcons
+    ? [{ from: '../packages/icons/svgs/color/logos', to: '/packages/icons/svgs/color/logos' }]
+    : [],
   framework: '@storybook/react-webpack5',
   typescript: {
     check: true,
@@ -80,7 +84,6 @@ const mainConfig: StorybookConfig = {
         ...(config.resolve?.fallback || {}),
         stream: require.resolve('stream-browserify'),
       };
-
       if (!config.resolve.plugins) {
         config.resolve.plugins = [];
       }
