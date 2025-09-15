@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.12.0 (2025-09-15)
+
+
+### Features
+
+* **PDS-2689:** updated FieldAi placeholder, removed FieldAi tooltip ([37614a8](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/37614a88c6fb674ed0124787553b3aeaba732fdd))
+
+
+
+
+
 ## 0.11.4 (2025-09-15)
 
 
