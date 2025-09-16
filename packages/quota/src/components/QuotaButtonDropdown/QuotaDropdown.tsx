@@ -21,11 +21,11 @@ export type QuotaDropdownProps = WithSupportProps<{
   onRetry?(): void;
   /** Расположение выпадающего меню */
   placement?: ButtonDropdownProps['placement'];
-
+  /** Размер кнопки */
   size?: ButtonDropdownProps['size'];
-
-  layoutType: ButtonDropdownProps['layoutType'];
-
+  /** Тип макета */
+  layoutType?: ButtonDropdownProps['layoutType'];
+  /** CSS класс */
   className?: string;
 }>;
 
