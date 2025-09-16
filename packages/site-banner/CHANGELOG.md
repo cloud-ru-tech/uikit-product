@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.3.0 (2025-09-16)
+
+
+### Features
+
+* **DOCDEV-1330:** added erid right section props for BannerTertiary ([bd3ca8e](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/bd3ca8e7a3ee6a374e16d01abf75a05e7bced683))
+
+
+
+
+
 ## 0.2.36 (2025-09-11)
 
 ### Only dependencies have been changed
