@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.8.0 (2025-09-16)
+
+
+### Features
+
+* **PDS-2672:** add ability to pass predefined promo tag to card-service-small ([efeb1c3](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/efeb1c318289fb1ea2587a044c035890e200763d))
+
+
+
+
+
 ## 0.7.53 (2025-09-11)
 
 ### Only dependencies have been changed

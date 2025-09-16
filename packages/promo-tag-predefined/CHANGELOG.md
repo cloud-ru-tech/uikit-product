@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2025-09-16)
+
+
+### BREAKING CHANGES
+
+
+* **PDS-2672:** remove PreviewPromoTag, add PromoTagPredefined component ([380be44](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/380be447e379f99272f186365c187c4952c749b0))
+
+
+
+
 ## 0.1.2 (2025-03-20)
 
 
