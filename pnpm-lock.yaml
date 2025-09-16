@@ -1288,7 +1288,7 @@ importers:
         specifier: 0.20.10
         version: link:../page-layout
       '@sbercloud/uikit-product-quota':
-        specifier: 0.5.3
+        specifier: 0.5.4
         version: link:../quota
       '@sbercloud/uikit-product-utils':
         specifier: 6.1.0

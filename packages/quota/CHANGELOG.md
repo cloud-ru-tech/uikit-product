@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.5.4 (2025-09-16)
+
+
+### Bug Fixes
+
+* **FF-6958:** update props quota dropdown ([ab39dc6](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/ab39dc6f8e4b8a4e1029f39f36822f45146546c3))
+
+
+
+
+
 ## 0.5.3 (2025-09-11)
 
 ### Only dependencies have been changed
