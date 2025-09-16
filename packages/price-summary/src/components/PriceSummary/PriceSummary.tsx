@@ -60,6 +60,7 @@ export function PriceSummary({
         onPeriodChanged={onPeriodChanged}
         periodOptions={periodOptions}
         promoBadge={promoBadge}
+        layoutType={layoutType}
       />
 
       <ContentBlock loading={loading} dataError={dataError} onRetry={onRetry}>

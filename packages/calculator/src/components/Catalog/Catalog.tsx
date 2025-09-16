@@ -204,6 +204,8 @@ export function Catalog() {
                 mode: 'single',
               }}
               label='Категории'
+              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+              // @ts-ignore
               size='l'
             >
               <div className={styles.categoriesWrapper}>

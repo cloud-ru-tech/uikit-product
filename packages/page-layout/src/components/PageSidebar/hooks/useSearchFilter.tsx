@@ -15,7 +15,7 @@ const filterService = (servicesList: SidebarItem[], searchValue: string): Sideba
       return result;
     }
 
-    if (service.items && service.items.length > 0) {
+    if ('items' in service && service.items?.length) {
       const items = filterService(service.items, searchValue);
 
       if (items.length) {
@@ -33,7 +33,7 @@ const getSidebarItemIds = (list: SidebarItem[]): (string | number)[] =>
   list.reduce(
     (result, el) => {
       result.push(el.id);
-      if (el.items?.length) {
+      if ('items' in el && el.items?.length) {
         const childItems = getSidebarItemIds(el.items);
         result.push(...childItems);
       }

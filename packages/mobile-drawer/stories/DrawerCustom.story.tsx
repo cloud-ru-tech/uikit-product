@@ -25,7 +25,7 @@ type DrawerCustomStoryProps = Omit<MobileDrawerCustomProps, 'size' | 'nestedDraw
 };
 
 const tabsData = [
-  { value: 'tab1', label: 'Tab one', disabled: false, counter: 12 },
+  { value: 'tab1', label: 'Tab one', disabled: false, counter: { label: 12 } },
   { value: 'tab2', label: 'Second', disabled: false },
   { value: 'tab3', label: 'Disabled', disabled: true },
   { value: 'tab4', label: 'Very very long name of tab', disabled: false },

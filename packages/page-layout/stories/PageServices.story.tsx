@@ -45,7 +45,7 @@ const getSidebarProps = ({
         selected,
         onSelect: setSelected,
         items: Items,
-        footerItems: [{ id: 17, label: 'Документация' }],
+        footerItems: [{ id: 17, label: 'Документация', href: '' }],
         pageContainerId: 'pageContainer',
       }
     : undefined;

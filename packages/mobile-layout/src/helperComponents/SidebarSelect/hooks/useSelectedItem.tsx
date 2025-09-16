@@ -15,7 +15,7 @@ function findSelectedItem(items: SidebarItem[], selected: string | number | unde
         return { ...result, item: el };
       }
 
-      if (el.items?.length) {
+      if ('items' in el && el.items?.length) {
         const child = findSelectedItem(el.items, selected);
 
         if (child.item) {

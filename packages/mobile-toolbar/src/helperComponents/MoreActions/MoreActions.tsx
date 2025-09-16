@@ -25,6 +25,8 @@ export function MoreActions({ moreActions }: MoreActionsProps) {
       data-test-id={TEST_IDS.droplist}
       onOpenChange={setIsOpen}
       scroll
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       size='l'
       items={moreActions.map(item => ({
         onClick: e => {

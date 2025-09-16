@@ -1,7 +1,7 @@
 import { useArgs } from '@storybook/preview-api';
 import { Meta, StoryObj } from '@storybook/react';
 import cn from 'classnames';
-import { MouseEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { MobileDrawerCustom } from '@sbercloud/uikit-product-mobile-drawer';
 import { ButtonFilled } from '@snack-uikit/button';
@@ -25,10 +25,6 @@ type StoryProps = FieldAiProps & {
 };
 
 const onSubmit = (value: string) => window.alert(`Submitted: ${value}`);
-const onSupportLinkClick = (e: MouseEvent) => {
-  e.preventDefault();
-  window.alert(`Support URL clicked!`);
-};
 const handleResetContextClick = () => window.alert('Context has been reset successfully!');
 
 const Template = ({ value: valueProp, showResetContextButton, ...args }: StoryProps) => {
@@ -75,7 +71,6 @@ const Template = ({ value: valueProp, showResetContextButton, ...args }: StoryPr
                 value={value}
                 onChange={setValue}
                 onSubmit={onSubmit}
-                onSupportLinkClick={onSupportLinkClick}
                 onResetContextClick={showResetContextButton ? handleResetContextClick : undefined}
               />
             </div>
@@ -96,7 +91,6 @@ const Template = ({ value: valueProp, showResetContextButton, ...args }: StoryPr
         value={value}
         onChange={setValue}
         onSubmit={onSubmit}
-        onSupportLinkClick={onSupportLinkClick}
         onResetContextClick={showResetContextButton ? handleResetContextClick : undefined}
       />
     </div>
@@ -114,7 +108,6 @@ export const fieldAI: StoryObj<StoryProps> = {
     return <Template {...props} onChange={onChange} value={args.value} />;
   },
   args: {
-    supportUrl: 'https://cloud.ru',
     showResetContextButton: false,
   },
   argTypes: {

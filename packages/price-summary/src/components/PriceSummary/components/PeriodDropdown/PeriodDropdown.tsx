@@ -1,18 +1,19 @@
 import { ButtonDropdown } from '@sbercloud/uikit-product-button-predefined';
 import { useLocale } from '@sbercloud/uikit-product-locale';
+import { WithLayoutType } from '@sbercloud/uikit-product-utils';
 import { Typography } from '@snack-uikit/typography';
 
 import { usePeriodFormat } from '../../../../hooks';
 import { PricePeriod } from '../../../../types';
 import styles from './styles.module.scss';
 
-export type PeriodDropdownProps = {
+export type PeriodDropdownProps = WithLayoutType<{
   period: PricePeriod;
   periodOptions: PricePeriod[];
   onPeriodChanged?: (period: PricePeriod) => void;
-};
+}>;
 
-export function PeriodDropdown({ period, onPeriodChanged = () => {}, periodOptions }: PeriodDropdownProps) {
+export function PeriodDropdown({ period, onPeriodChanged = () => {}, periodOptions, layoutType }: PeriodDropdownProps) {
   const { t } = useLocale('PriceSummary');
   const formatPeriod = usePeriodFormat();
 
@@ -34,7 +35,13 @@ export function PeriodDropdown({ period, onPeriodChanged = () => {}, periodOptio
       )}
 
       {actions.length > 0 && (
-        <ButtonDropdown size='s' label={formatPeriod(period)} items={actions} closeDroplistOnItemClick />
+        <ButtonDropdown
+          size='s'
+          label={formatPeriod(period)}
+          items={actions}
+          closeDroplistOnItemClick
+          layoutType={layoutType}
+        />
       )}
     </div>
   );

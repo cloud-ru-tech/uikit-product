@@ -180,6 +180,7 @@ export const FieldPhone = forwardRef<HTMLInputElement, FieldPhoneProps>(
     return (
       <AdaptiveFieldText
         {...rest}
+        inputMode='tel'
         data-test-id='field-phone'
         type='tel'
         ref={mergeRefs(ref, localRef, iMaskRef)}
