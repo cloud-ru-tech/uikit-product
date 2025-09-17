@@ -18,10 +18,12 @@ const BRAND_MAP: Record<Brand, { [key: string]: CSSProperties }> = {
   [Brand.MLSpace]: light,
   [Brand.Admin]: light,
   [Brand.Site]: light,
+  [Brand.GigaId]: light,
   [Brand.CloudDark]: dark,
   [Brand.MLSpaceDark]: dark,
   [Brand.AdminDark]: dark,
   [Brand.SiteDark]: dark,
+  [Brand.GigaIdDark]: dark,
 };
 
 export function Markdown(props: MarkdownProps) {

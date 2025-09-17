@@ -7,7 +7,7 @@ type UseForThemeModeParams<L, D> = {
 };
 
 const DARK_THEMES = [Themes.GreenDark, Themes.PurpleDark];
-const DARK_BRANDS = [Brand.CloudDark, Brand.MLSpaceDark, Brand.AdminDark, Brand.SiteDark];
+const DARK_BRANDS = [Brand.CloudDark, Brand.MLSpaceDark, Brand.AdminDark, Brand.SiteDark, Brand.GigaIdDark];
 
 export function useForThemeMode<L, D>({ light, dark }: UseForThemeModeParams<L, D>): L | D {
   const { theme } = useTheme();

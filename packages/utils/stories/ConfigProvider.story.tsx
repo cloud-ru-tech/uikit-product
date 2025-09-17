@@ -58,6 +58,8 @@ function Template({ ...args }: ConfigProviderProps) {
           <ButtonFilled onClick={() => changeBrand(Brand.AdminDark)} label='Admin Dark' />
           <ButtonFilled onClick={() => changeBrand(Brand.Site)} label='Site' />
           <ButtonFilled onClick={() => changeBrand(Brand.SiteDark)} label='Site Dark' />
+          <ButtonFilled onClick={() => changeBrand(Brand.GigaId)} label='GigaId' />
+          <ButtonFilled onClick={() => changeBrand(Brand.GigaIdDark)} label='GigaId Dark' />
         </div>
       </div>
 

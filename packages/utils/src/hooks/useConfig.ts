@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 
 import AdminBrandThemes from '@sbercloud/figma-tokens-admin/build/css/brand.module.css';
 import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
+import GigaIdBrandThemes from '@sbercloud/figma-tokens-giga-id/build/css/brand.module.css';
 import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
 import SiteBrandThemes from '@sbercloud/figma-tokens-web/build/css/brand.module.css';
 import { isBrowser, useLayoutEffect } from '@snack-uikit/utils';
@@ -33,6 +34,8 @@ const brandMap = {
   [Brand.AdminDark]: AdminBrandThemes.dark,
   [Brand.Site]: SiteBrandThemes.light,
   [Brand.SiteDark]: SiteBrandThemes.dark,
+  [Brand.GigaId]: GigaIdBrandThemes.light,
+  [Brand.GigaIdDark]: GigaIdBrandThemes.dark,
 };
 
 export function useConfig({ languageCode, theme, brand }: UseConfigProps) {

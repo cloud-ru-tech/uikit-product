@@ -184,6 +184,11 @@ const globalTypes: GlobalTypes = {
     description: '',
     defaultValue: DEFAULT_BRAND_MAP[Brand.Site],
   },
+  [Brand.GigaId]: {
+    name: 'Brand GigaId',
+    description: '',
+    defaultValue: DEFAULT_BRAND_MAP[Brand.GigaId],
+  },
 };
 
 const preview: Preview = {

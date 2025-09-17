@@ -16,6 +16,7 @@ const options = {
     '@sbercloud/figma-tokens-mlspace',
     '@sbercloud/figma-tokens-admin',
     '@sbercloud/figma-tokens-web',
+    '@sbercloud/figma-tokens-giga-id',
   ],
 };
 

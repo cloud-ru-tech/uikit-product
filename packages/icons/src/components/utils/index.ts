@@ -11,7 +11,7 @@ export function useThemeModification() {
 export function useBrandModification() {
   const { brand } = useBrand();
   const isDarkBrand = useMemo(
-    () => [Brand.CloudDark, Brand.MLSpaceDark, Brand.AdminDark, Brand.SiteDark].includes(brand),
+    () => [Brand.CloudDark, Brand.MLSpaceDark, Brand.AdminDark, Brand.SiteDark, Brand.GigaIdDark].includes(brand),
     [brand],
   );
 

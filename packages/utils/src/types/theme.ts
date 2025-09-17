@@ -14,4 +14,6 @@ export enum Brand {
   SiteDark = 'SiteDark',
   Admin = 'Admin',
   AdminDark = 'AdminDark',
+  GigaId = 'GigaId',
+  GigaIdDark = 'GigaIdDark',
 }

@@ -1,6 +1,7 @@
 import { BADGE as Badges } from '@geometricpanda/storybook-addon-badges';
 
 import CloudBrandThemes from '@sbercloud/figma-tokens-cloud-platform/build/css/brand.module.css';
+import GigaIdBrandThemes from '@sbercloud/figma-tokens-giga-id/build/css/brand.module.css';
 import MLSpaceBrandThemes from '@sbercloud/figma-tokens-mlspace/build/css/brand.module.css';
 import SiteBrandThemes from '@sbercloud/figma-tokens-web/build/css/brand.module.css';
 import { Brand as UtilsBrand, Themes } from '@sbercloud/uikit-product-utils';
@@ -15,6 +16,7 @@ export enum Brand {
   Cloud = 'Cloud',
   MLSpace = 'MLSpace',
   Site = 'Site',
+  GigaId = 'GigaId',
 }
 
 export enum Mode {
@@ -35,6 +37,10 @@ export const BRAND_TO_THEME_MAP: Record<Brand, Record<Mode, Themes>> = {
     [Mode.Light]: Themes.Green,
     [Mode.Dark]: Themes.GreenDark,
   },
+  [Brand.GigaId]: {
+    [Mode.Light]: Themes.Green,
+    [Mode.Dark]: Themes.GreenDark,
+  },
 };
 
 export const BRAND_TO_BRAND_MODE_MAP: Record<Brand, Record<Mode, UtilsBrand>> = {
@@ -50,16 +56,22 @@ export const BRAND_TO_BRAND_MODE_MAP: Record<Brand, Record<Mode, UtilsBrand>> = 
     [Mode.Light]: UtilsBrand.Site,
     [Mode.Dark]: UtilsBrand.SiteDark,
   },
+  [Brand.GigaId]: {
+    [Mode.Light]: UtilsBrand.GigaId,
+    [Mode.Dark]: UtilsBrand.GigaIdDark,
+  },
 };
 
 export const DEFAULT_BRAND_MAP = {
   [Brand.Cloud]: CloudBrandThemes,
   [Brand.MLSpace]: MLSpaceBrandThemes,
   [Brand.Site]: SiteBrandThemes,
+  [Brand.GigaId]: GigaIdBrandThemes,
 };
 
 export const DEFAULT_BRAND_COLORS_MAP = {
   [Brand.Cloud]: '#06b877',
   [Brand.MLSpace]: '#5558fa',
   [Brand.Site]: '#26d07c',
+  [Brand.GigaId]: '#393a45',
 };

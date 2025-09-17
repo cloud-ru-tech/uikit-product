@@ -2198,6 +2198,9 @@ importers:
       '@sbercloud/figma-tokens-cloud-platform':
         specifier: '*'
         version: 17.7.6
+      '@sbercloud/figma-tokens-giga-id':
+        specifier: '*'
+        version: 18.0.1
       '@sbercloud/figma-tokens-mlspace':
         specifier: '*'
         version: 17.7.3
@@ -4291,6 +4294,9 @@ packages:
 
   '@sbercloud/figma-tokens-cloud-platform@17.7.6':
     resolution: {integrity: sha512-NF5vHF3sLQBnyRge6cukG72cGWfa+SFWz15T3HA+RlOuJWk6oMrMX1s9rGGLG7E6w3ym3ZDtU1tZW+f3MhqRcA==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-cloud-platform/-/@sbercloud/figma-tokens-cloud-platform-17.7.6.tgz}
+
+  '@sbercloud/figma-tokens-giga-id@18.0.1':
+    resolution: {integrity: sha512-IYnaC14U6FPiUbChIFatH/+AtbPT18lBLrA86yJ3rkRRccVY6xtZmIWR7wApJj8lGA0K7p+lo0TWn0t9GxBPvw==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-giga-id/-/@sbercloud/figma-tokens-giga-id-18.0.1.tgz}
 
   '@sbercloud/figma-tokens-mlspace@17.7.3':
     resolution: {integrity: sha512-T9ZNJ0uolgGByg0RRKJ8giflRI5Gn/D2zgsh7w+CCGrMk3WfCyOEUE0dLLoix2Hdqif+SUjfcNK6eqeoCMu0JQ==, tarball: https://pkg.sbercloud.tech/artifactory/api/npm/sc-uikit-npm/@sbercloud/figma-tokens-mlspace/-/@sbercloud/figma-tokens-mlspace-17.7.3.tgz}
@@ -15856,6 +15862,8 @@ snapshots:
   '@sbercloud/figma-tokens-admin@17.1.0': {}
 
   '@sbercloud/figma-tokens-cloud-platform@17.7.6': {}
+
+  '@sbercloud/figma-tokens-giga-id@18.0.1': {}
 
   '@sbercloud/figma-tokens-mlspace@17.7.3': {}
 

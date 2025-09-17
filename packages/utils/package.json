@@ -43,6 +43,7 @@
   "peerDependencies": {
     "@sbercloud/figma-tokens-admin": "*",
     "@sbercloud/figma-tokens-cloud-platform": "*",
+    "@sbercloud/figma-tokens-giga-id": "*",
     "@sbercloud/figma-tokens-mlspace": "*",
     "@sbercloud/figma-tokens-web": "*"
   }
