@@ -52,6 +52,7 @@ export function SiteCsatPopover({
           onClickForm={dislikeCommentForm.onClickForm}
           onOpenClosePopover={handleOpenClosePopover}
           onSubmit={dislikeCommentForm.onSubmit}
+          onCheckChips={dislikeCommentForm.onCheckChips}
           loadingButton={dislikeCommentForm.loadingButton}
         />
       }
