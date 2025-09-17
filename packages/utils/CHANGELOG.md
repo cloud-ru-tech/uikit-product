@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 6.2.0 (2025-09-17)
+
+
+### Features
+
+* **PDS-2823:** add gigaid theme ([8462ec9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8462ec987bc53db6c16fc3624e5d593845f2119c))
+
+
+
+
+
 # 6.1.0 (2025-08-19)
 
 

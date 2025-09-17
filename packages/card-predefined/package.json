@@ -1,7 +1,7 @@
 {
   "name": "@sbercloud/uikit-product-card-predefined",
   "title": "Card Predefined",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "sideEffects": [
     "*.css",
     "*.woff",
@@ -32,8 +32,8 @@
   "license": "UNLICENSED",
   "scripts": {},
   "dependencies": {
-    "@sbercloud/uikit-product-icons": "14.3.1",
-    "@sbercloud/uikit-product-promo-tag-predefined": "0.2.0",
+    "@sbercloud/uikit-product-icons": "14.4.0",
+    "@sbercloud/uikit-product-promo-tag-predefined": "0.2.1",
     "@snack-uikit/button": "0.19.7",
     "@snack-uikit/card": "0.16.19",
     "@snack-uikit/promo-tag": "0.7.1",

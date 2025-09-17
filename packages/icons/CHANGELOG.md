@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 14.4.0 (2025-09-17)
+
+
+### Features
+
+* **PDS-2823:** add gigaid theme ([8462ec9](https://git.sbercloud.tech/sbercloud-ui/uikit-product/commits/8462ec987bc53db6c16fc3624e5d593845f2119c))
+
+
+
+
+
 ## 14.3.1 (2025-09-11)
 
 
@@ -127,7 +138,8 @@ See [Conventional Commits](https://conventionalcommits.org) for commit guideline
 
 ## 13.0.4 (2025-07-15)
 
-**Note:** Version bump only for package @sbercloud/uikit-product-icons
+### Only dependencies have been changed
+* [@sbercloud/uikit-product-utils@6.2.0](https://git.sbercloud.tech/sbercloud-ui/uikit-product/-/blob/master/packages/utils/CHANGELOG.md)
 
 
 
